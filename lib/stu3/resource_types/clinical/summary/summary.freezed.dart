@@ -586,7 +586,7 @@ class __$AdverseEventCopyWithImpl<$Res> extends _$AdverseEventCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_AdverseEvent implements _AdverseEvent {
-  const _$_AdverseEvent(
+  _$_AdverseEvent(
       {@required
       @JsonKey(required: true, defaultValue: 'AdverseEvent')
           this.resourceType,
@@ -814,7 +814,7 @@ class _$_AdverseEvent implements _AdverseEvent {
 }
 
 abstract class _AdverseEvent implements AdverseEvent {
-  const factory _AdverseEvent(
+  factory _AdverseEvent(
       {@required
       @JsonKey(required: true, defaultValue: 'AdverseEvent')
           String resourceType,
@@ -1221,7 +1221,7 @@ class __$AdverseEventSuspectEntityCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_AdverseEventSuspectEntity implements _AdverseEventSuspectEntity {
-  const _$_AdverseEventSuspectEntity(
+  _$_AdverseEventSuspectEntity(
       {@JsonKey(required: true)
           this.instance,
       @JsonKey(unknownEnumValue: SuspectEntityCausality.unknown)
@@ -1330,7 +1330,7 @@ class _$_AdverseEventSuspectEntity implements _AdverseEventSuspectEntity {
 }
 
 abstract class _AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
-  const factory _AdverseEventSuspectEntity(
+  factory _AdverseEventSuspectEntity(
           {@JsonKey(required: true)
               Reference instance,
           @JsonKey(unknownEnumValue: SuspectEntityCausality.unknown)
@@ -2177,7 +2177,7 @@ class __$AllergyIntoleranceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_AllergyIntolerance implements _AllergyIntolerance {
-  const _$_AllergyIntolerance(
+  _$_AllergyIntolerance(
       {@required
       @JsonKey(required: true, defaultValue: 'AllergyIntolerance')
           this.resourceType,
@@ -2471,7 +2471,7 @@ class _$_AllergyIntolerance implements _AllergyIntolerance {
 }
 
 abstract class _AllergyIntolerance implements AllergyIntolerance {
-  const factory _AllergyIntolerance(
+  factory _AllergyIntolerance(
       {@required
       @JsonKey(required: true, defaultValue: 'AllergyIntolerance')
           String resourceType,
@@ -2906,7 +2906,7 @@ class __$AllergyIntoleranceReactionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_AllergyIntoleranceReaction implements _AllergyIntoleranceReaction {
-  const _$_AllergyIntoleranceReaction(
+  _$_AllergyIntoleranceReaction(
       {this.substance,
       @JsonKey(required: true) this.manifestation,
       this.description,
@@ -3013,7 +3013,7 @@ class _$_AllergyIntoleranceReaction implements _AllergyIntoleranceReaction {
 
 abstract class _AllergyIntoleranceReaction
     implements AllergyIntoleranceReaction {
-  const factory _AllergyIntoleranceReaction(
+  factory _AllergyIntoleranceReaction(
       {CodeableConcept substance,
       @JsonKey(required: true)
           List<CodeableConcept> manifestation,
@@ -3753,7 +3753,7 @@ class __$ClinicalImpressionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClinicalImpression implements _ClinicalImpression {
-  const _$_ClinicalImpression(
+  _$_ClinicalImpression(
       {@required
       @JsonKey(required: true, defaultValue: 'ClinicalImpression')
           this.resourceType,
@@ -4025,7 +4025,7 @@ class _$_ClinicalImpression implements _ClinicalImpression {
 }
 
 abstract class _ClinicalImpression implements ClinicalImpression {
-  const factory _ClinicalImpression(
+  factory _ClinicalImpression(
       {@required
       @JsonKey(required: true, defaultValue: 'ClinicalImpression')
           String resourceType,
@@ -4273,7 +4273,7 @@ class __$ClinicalImpressionInvestigationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ClinicalImpressionInvestigation
     implements _ClinicalImpressionInvestigation {
-  const _$_ClinicalImpressionInvestigation(
+  _$_ClinicalImpressionInvestigation(
       {@JsonKey(required: true) this.code, this.item});
 
   factory _$_ClinicalImpressionInvestigation.fromJson(
@@ -4320,7 +4320,7 @@ class _$_ClinicalImpressionInvestigation
 
 abstract class _ClinicalImpressionInvestigation
     implements ClinicalImpressionInvestigation {
-  const factory _ClinicalImpressionInvestigation(
+  factory _ClinicalImpressionInvestigation(
       {@JsonKey(required: true) CodeableConcept code,
       List<Reference> item}) = _$_ClinicalImpressionInvestigation;
 
@@ -4503,7 +4503,7 @@ class __$ClinicalImpressionFindingCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClinicalImpressionFinding implements _ClinicalImpressionFinding {
-  const _$_ClinicalImpressionFinding(
+  _$_ClinicalImpressionFinding(
       {this.itemCodeableConcept,
       this.itemReference,
       this.basis,
@@ -4565,7 +4565,7 @@ class _$_ClinicalImpressionFinding implements _ClinicalImpressionFinding {
 }
 
 abstract class _ClinicalImpressionFinding implements ClinicalImpressionFinding {
-  const factory _ClinicalImpressionFinding(
+  factory _ClinicalImpressionFinding(
           {CodeableConcept itemCodeableConcept,
           Reference itemReference,
           String basis,
@@ -5484,7 +5484,7 @@ class __$ConditionCopyWithImpl<$Res> extends _$ConditionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Condition implements _Condition {
-  const _$_Condition(
+  _$_Condition(
       {@required
       @JsonKey(required: true, defaultValue: 'Condition')
           this.resourceType,
@@ -5795,7 +5795,7 @@ class _$_Condition implements _Condition {
 }
 
 abstract class _Condition implements Condition {
-  const factory _Condition(
+  factory _Condition(
       {@required
       @JsonKey(required: true, defaultValue: 'Condition')
           String resourceType,
@@ -6060,7 +6060,7 @@ class __$ConditionStageCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConditionStage implements _ConditionStage {
-  const _$_ConditionStage({this.summary, this.assessment});
+  _$_ConditionStage({this.summary, this.assessment});
 
   factory _$_ConditionStage.fromJson(Map<String, dynamic> json) =>
       _$_$_ConditionStageFromJson(json);
@@ -6104,7 +6104,7 @@ class _$_ConditionStage implements _ConditionStage {
 }
 
 abstract class _ConditionStage implements ConditionStage {
-  const factory _ConditionStage(
+  factory _ConditionStage(
       {CodeableConcept summary,
       List<Reference> assessment}) = _$_ConditionStage;
 
@@ -6206,7 +6206,7 @@ class __$ConditionEvidenceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConditionEvidence implements _ConditionEvidence {
-  const _$_ConditionEvidence({this.code, this.detail});
+  _$_ConditionEvidence({this.code, this.detail});
 
   factory _$_ConditionEvidence.fromJson(Map<String, dynamic> json) =>
       _$_$_ConditionEvidenceFromJson(json);
@@ -6248,7 +6248,7 @@ class _$_ConditionEvidence implements _ConditionEvidence {
 }
 
 abstract class _ConditionEvidence implements ConditionEvidence {
-  const factory _ConditionEvidence(
+  factory _ConditionEvidence(
       {List<CodeableConcept> code,
       List<Reference> detail}) = _$_ConditionEvidence;
 
@@ -6792,7 +6792,7 @@ class __$DetectedIssueCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DetectedIssue implements _DetectedIssue {
-  const _$_DetectedIssue(
+  _$_DetectedIssue(
       {@required
       @JsonKey(required: true, defaultValue: 'DetectedIssue')
           this.resourceType,
@@ -7010,7 +7010,7 @@ class _$_DetectedIssue implements _DetectedIssue {
 }
 
 abstract class _DetectedIssue implements DetectedIssue {
-  const factory _DetectedIssue(
+  factory _DetectedIssue(
       {@required
       @JsonKey(required: true, defaultValue: 'DetectedIssue')
           String resourceType,
@@ -7268,7 +7268,7 @@ class __$DetectedIssueMitigationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DetectedIssueMitigation implements _DetectedIssueMitigation {
-  const _$_DetectedIssueMitigation(
+  _$_DetectedIssueMitigation(
       {@JsonKey(required: true) this.action,
       this.date,
       this.author,
@@ -7328,7 +7328,7 @@ class _$_DetectedIssueMitigation implements _DetectedIssueMitigation {
 }
 
 abstract class _DetectedIssueMitigation implements DetectedIssueMitigation {
-  const factory _DetectedIssueMitigation(
+  factory _DetectedIssueMitigation(
           {@JsonKey(required: true) CodeableConcept action,
           FhirDateTime date,
           Reference author,
@@ -8328,7 +8328,7 @@ class __$FamilyMemberHistoryCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_FamilyMemberHistory implements _FamilyMemberHistory {
-  const _$_FamilyMemberHistory(
+  _$_FamilyMemberHistory(
       {@required
       @JsonKey(required: true, defaultValue: 'FamilyMemberHistory')
           this.resourceType,
@@ -8677,7 +8677,7 @@ class _$_FamilyMemberHistory implements _FamilyMemberHistory {
 }
 
 abstract class _FamilyMemberHistory implements FamilyMemberHistory {
-  const factory _FamilyMemberHistory(
+  factory _FamilyMemberHistory(
       {@required
       @JsonKey(required: true, defaultValue: 'FamilyMemberHistory')
           String resourceType,
@@ -9108,7 +9108,7 @@ class __$FamilyMemberHistoryConditionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_FamilyMemberHistoryCondition implements _FamilyMemberHistoryCondition {
-  const _$_FamilyMemberHistoryCondition(
+  _$_FamilyMemberHistoryCondition(
       {@JsonKey(required: true) this.code,
       this.outcome,
       this.onsetAge,
@@ -9198,7 +9198,7 @@ class _$_FamilyMemberHistoryCondition implements _FamilyMemberHistoryCondition {
 
 abstract class _FamilyMemberHistoryCondition
     implements FamilyMemberHistoryCondition {
-  const factory _FamilyMemberHistoryCondition(
+  factory _FamilyMemberHistoryCondition(
           {@JsonKey(required: true) CodeableConcept code,
           CodeableConcept outcome,
           Age onsetAge,
@@ -9931,7 +9931,7 @@ class __$ProcedureCopyWithImpl<$Res> extends _$ProcedureCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Procedure implements _Procedure {
-  const _$_Procedure(
+  _$_Procedure(
       {@required
       @JsonKey(required: true, defaultValue: 'Procedure')
           this.resourceType,
@@ -10215,7 +10215,7 @@ class _$_Procedure implements _Procedure {
 }
 
 abstract class _Procedure implements Procedure {
-  const factory _Procedure(
+  factory _Procedure(
       {@required
       @JsonKey(required: true, defaultValue: 'Procedure')
           String resourceType,
@@ -10499,7 +10499,7 @@ class __$ProcedurePerformerCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ProcedurePerformer implements _ProcedurePerformer {
-  const _$_ProcedurePerformer(
+  _$_ProcedurePerformer(
       {this.role, @JsonKey(required: true) this.actor, this.onBehalfOf});
 
   factory _$_ProcedurePerformer.fromJson(Map<String, dynamic> json) =>
@@ -10549,7 +10549,7 @@ class _$_ProcedurePerformer implements _ProcedurePerformer {
 }
 
 abstract class _ProcedurePerformer implements ProcedurePerformer {
-  const factory _ProcedurePerformer(
+  factory _ProcedurePerformer(
       {CodeableConcept role,
       @JsonKey(required: true) Reference actor,
       Reference onBehalfOf}) = _$_ProcedurePerformer;
@@ -10691,7 +10691,7 @@ class __$ProcedureFocalDeviceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ProcedureFocalDevice implements _ProcedureFocalDevice {
-  const _$_ProcedureFocalDevice(
+  _$_ProcedureFocalDevice(
       {this.action, @JsonKey(required: true) this.manipulated});
 
   factory _$_ProcedureFocalDevice.fromJson(Map<String, dynamic> json) =>
@@ -10737,7 +10737,7 @@ class _$_ProcedureFocalDevice implements _ProcedureFocalDevice {
 }
 
 abstract class _ProcedureFocalDevice implements ProcedureFocalDevice {
-  const factory _ProcedureFocalDevice(
+  factory _ProcedureFocalDevice(
           {CodeableConcept action,
           @JsonKey(required: true) Reference manipulated}) =
       _$_ProcedureFocalDevice;

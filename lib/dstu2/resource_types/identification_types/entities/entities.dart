@@ -9,7 +9,7 @@ part 'entities.g.dart';
 
 @freezed
 abstract class Substance with _$Substance implements Resource {
-  const factory Substance({
+  factory Substance({
     @JsonKey(defaultValue: 'Substance') String resourceType,
     Id id,
     Meta meta,
@@ -36,7 +36,7 @@ abstract class Substance with _$Substance implements Resource {
 
 @freezed
 abstract class Location with _$Location implements Resource {
-  const factory Location({
+  factory Location({
     @JsonKey(defaultValue: 'Location') String resourceType,
     Id id,
     Meta meta,
@@ -72,7 +72,7 @@ abstract class Location with _$Location implements Resource {
 
 @freezed
 abstract class Person with _$Person implements Resource {
-  const factory Person({
+  factory Person({
     @JsonKey(defaultValue: 'Person') String resourceType,
     Id id,
     Meta meta,
@@ -104,7 +104,7 @@ abstract class Person with _$Person implements Resource {
 
 @freezed
 abstract class SubstanceInstance with _$SubstanceInstance {
-  const factory SubstanceInstance({
+  factory SubstanceInstance({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -120,7 +120,7 @@ abstract class SubstanceInstance with _$SubstanceInstance {
 
 @freezed
 abstract class SubstanceIngredient with _$SubstanceIngredient {
-  const factory SubstanceIngredient({
+  factory SubstanceIngredient({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -134,7 +134,7 @@ abstract class SubstanceIngredient with _$SubstanceIngredient {
 
 @freezed
 abstract class LocationPosition with _$LocationPosition {
-  const factory LocationPosition({
+  factory LocationPosition({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -152,7 +152,7 @@ abstract class LocationPosition with _$LocationPosition {
 
 @freezed
 abstract class PersonLink with _$PersonLink {
-  const factory PersonLink({
+  factory PersonLink({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -167,7 +167,7 @@ abstract class PersonLink with _$PersonLink {
 
 @freezed
 abstract class TermActor with _$TermActor {
-  const factory TermActor({
+  factory TermActor({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -181,7 +181,7 @@ abstract class TermActor with _$TermActor {
 
 @freezed
 abstract class Contract with _$Contract implements Resource {
-  const factory Contract({
+  factory Contract({
     @JsonKey(defaultValue: 'Contract') String resourceType,
     Id id,
     Meta meta,
@@ -221,7 +221,7 @@ abstract class Contract with _$Contract implements Resource {
 
 @freezed
 abstract class ContractActor with _$ContractActor {
-  const factory ContractActor({
+  factory ContractActor({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -235,7 +235,7 @@ abstract class ContractActor with _$ContractActor {
 
 @freezed
 abstract class ContractValuedItem with _$ContractValuedItem {
-  const factory ContractValuedItem({
+  factory ContractValuedItem({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -260,7 +260,7 @@ abstract class ContractValuedItem with _$ContractValuedItem {
 
 @freezed
 abstract class ContractSigner with _$ContractSigner {
-  const factory ContractSigner({
+  factory ContractSigner({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -275,7 +275,7 @@ abstract class ContractSigner with _$ContractSigner {
 
 @freezed
 abstract class ContractTerm with _$ContractTerm {
-  const factory ContractTerm({
+  factory ContractTerm({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -301,7 +301,7 @@ abstract class ContractTerm with _$ContractTerm {
 
 @freezed
 abstract class ContractFriendly with _$ContractFriendly {
-  const factory ContractFriendly({
+  factory ContractFriendly({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -315,7 +315,7 @@ abstract class ContractFriendly with _$ContractFriendly {
 
 @freezed
 abstract class ContractLegal with _$ContractLegal {
-  const factory ContractLegal({
+  factory ContractLegal({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -329,7 +329,7 @@ abstract class ContractLegal with _$ContractLegal {
 
 @freezed
 abstract class ContractRule with _$ContractRule {
-  const factory ContractRule({
+  factory ContractRule({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,

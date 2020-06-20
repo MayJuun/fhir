@@ -1349,7 +1349,7 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Measure implements _Measure {
-  const _$_Measure(
+  _$_Measure(
       {@required
       @JsonKey(required: true, defaultValue: 'Measure')
           this.resourceType,
@@ -1826,7 +1826,7 @@ class _$_Measure implements _Measure {
 }
 
 abstract class _Measure implements Measure {
-  const factory _Measure(
+  factory _Measure(
       {@required
       @JsonKey(required: true, defaultValue: 'Measure')
           String resourceType,
@@ -2293,7 +2293,7 @@ class __$MeasureGroupCopyWithImpl<$Res> extends _$MeasureGroupCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MeasureGroup implements _MeasureGroup {
-  const _$_MeasureGroup(
+  _$_MeasureGroup(
       {@JsonKey(required: true) this.identifier,
       this.name,
       this.description,
@@ -2376,7 +2376,7 @@ class _$_MeasureGroup implements _MeasureGroup {
 }
 
 abstract class _MeasureGroup implements MeasureGroup {
-  const factory _MeasureGroup(
+  factory _MeasureGroup(
           {@JsonKey(required: true) Identifier identifier,
           String name,
           String description,
@@ -2640,7 +2640,7 @@ class __$MeasurePopulationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MeasurePopulation implements _MeasurePopulation {
-  const _$_MeasurePopulation(
+  _$_MeasurePopulation(
       {this.identifier,
       this.code,
       this.name,
@@ -2729,7 +2729,7 @@ class _$_MeasurePopulation implements _MeasurePopulation {
 }
 
 abstract class _MeasurePopulation implements MeasurePopulation {
-  const factory _MeasurePopulation(
+  factory _MeasurePopulation(
           {Identifier identifier,
           CodeableConcept code,
           String name,
@@ -2936,7 +2936,7 @@ class __$MeasureStratifierCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MeasureStratifier implements _MeasureStratifier {
-  const _$_MeasureStratifier(
+  _$_MeasureStratifier(
       {this.identifier,
       this.criteria,
       this.path,
@@ -3004,7 +3004,7 @@ class _$_MeasureStratifier implements _MeasureStratifier {
 }
 
 abstract class _MeasureStratifier implements MeasureStratifier {
-  const factory _MeasureStratifier(
+  factory _MeasureStratifier(
       {Identifier identifier,
       String criteria,
       String path,
@@ -3211,7 +3211,7 @@ class __$MeasureSupplementalDataCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MeasureSupplementalData implements _MeasureSupplementalData {
-  const _$_MeasureSupplementalData(
+  _$_MeasureSupplementalData(
       {this.identifier,
       this.usage,
       this.criteria,
@@ -3286,7 +3286,7 @@ class _$_MeasureSupplementalData implements _MeasureSupplementalData {
 }
 
 abstract class _MeasureSupplementalData implements MeasureSupplementalData {
-  const factory _MeasureSupplementalData(
+  factory _MeasureSupplementalData(
           {Identifier identifier,
           List<CodeableConcept> usage,
           String criteria,
@@ -3808,7 +3808,7 @@ class __$MeasureReportCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MeasureReport implements _MeasureReport {
-  const _$_MeasureReport(
+  _$_MeasureReport(
       {@required
       @JsonKey(required: true, defaultValue: 'MeasureReport')
           this.resourceType,
@@ -4006,7 +4006,7 @@ class _$_MeasureReport implements _MeasureReport {
 }
 
 abstract class _MeasureReport implements MeasureReport {
-  const factory _MeasureReport(
+  factory _MeasureReport(
       {@required
       @JsonKey(required: true, defaultValue: 'MeasureReport')
           String resourceType,
@@ -4267,7 +4267,7 @@ class __$MeasureReportGroupCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MeasureReportGroup implements _MeasureReportGroup {
-  const _$_MeasureReportGroup(
+  _$_MeasureReportGroup(
       {@JsonKey(required: true) this.identifier,
       this.population,
       this.measureScore,
@@ -4336,7 +4336,7 @@ class _$_MeasureReportGroup implements _MeasureReportGroup {
 }
 
 abstract class _MeasureReportGroup implements MeasureReportGroup {
-  const factory _MeasureReportGroup(
+  factory _MeasureReportGroup(
           {@JsonKey(required: true) Identifier identifier,
           List<MeasureReportPopulation> population,
           Decimal measureScore,
@@ -4545,7 +4545,7 @@ class __$MeasureReportPopulationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MeasureReportPopulation implements _MeasureReportPopulation {
-  const _$_MeasureReportPopulation(
+  _$_MeasureReportPopulation(
       {this.identifier,
       this.code,
       this.count,
@@ -4612,7 +4612,7 @@ class _$_MeasureReportPopulation implements _MeasureReportPopulation {
 }
 
 abstract class _MeasureReportPopulation implements MeasureReportPopulation {
-  const factory _MeasureReportPopulation(
+  factory _MeasureReportPopulation(
           {Identifier identifier,
           CodeableConcept code,
           Integer count,
@@ -4748,7 +4748,7 @@ class __$MeasureReportStratifierCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MeasureReportStratifier implements _MeasureReportStratifier {
-  const _$_MeasureReportStratifier({this.identifier, this.stratum});
+  _$_MeasureReportStratifier({this.identifier, this.stratum});
 
   factory _$_MeasureReportStratifier.fromJson(Map<String, dynamic> json) =>
       _$_$_MeasureReportStratifierFromJson(json);
@@ -4792,7 +4792,7 @@ class _$_MeasureReportStratifier implements _MeasureReportStratifier {
 }
 
 abstract class _MeasureReportStratifier implements MeasureReportStratifier {
-  const factory _MeasureReportStratifier(
+  factory _MeasureReportStratifier(
       {Identifier identifier,
       List<MeasureReportStratum> stratum}) = _$_MeasureReportStratifier;
 
@@ -4972,7 +4972,7 @@ class __$MeasureReportStratumCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MeasureReportStratum implements _MeasureReportStratum {
-  const _$_MeasureReportStratum(
+  _$_MeasureReportStratum(
       {this.value,
       this.population,
       this.measureScore,
@@ -5041,7 +5041,7 @@ class _$_MeasureReportStratum implements _MeasureReportStratum {
 }
 
 abstract class _MeasureReportStratum implements MeasureReportStratum {
-  const factory _MeasureReportStratum(
+  factory _MeasureReportStratum(
           {String value,
           List<MeasureReportPopulation1> population,
           Decimal measureScore,
@@ -5250,7 +5250,7 @@ class __$MeasureReportPopulation1CopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MeasureReportPopulation1 implements _MeasureReportPopulation1 {
-  const _$_MeasureReportPopulation1(
+  _$_MeasureReportPopulation1(
       {this.identifier,
       this.code,
       this.count,
@@ -5317,7 +5317,7 @@ class _$_MeasureReportPopulation1 implements _MeasureReportPopulation1 {
 }
 
 abstract class _MeasureReportPopulation1 implements MeasureReportPopulation1 {
-  const factory _MeasureReportPopulation1(
+  factory _MeasureReportPopulation1(
           {Identifier identifier,
           CodeableConcept code,
           Integer count,

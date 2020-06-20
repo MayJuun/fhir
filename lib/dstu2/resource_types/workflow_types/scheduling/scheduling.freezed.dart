@@ -654,7 +654,7 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Appointment implements _Appointment {
-  const _$_Appointment(
+  _$_Appointment(
       {@JsonKey(defaultValue: 'Appointment')
           this.resourceType,
       this.id,
@@ -909,7 +909,7 @@ class _$_Appointment implements _Appointment {
 }
 
 abstract class _Appointment implements Appointment {
-  const factory _Appointment(
+  factory _Appointment(
       {@JsonKey(defaultValue: 'Appointment')
           String resourceType,
       Id id,
@@ -1558,7 +1558,7 @@ class __$SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Slot implements _Slot {
-  const _$_Slot(
+  _$_Slot(
       {@JsonKey(defaultValue: 'Slot')
           this.resourceType,
       this.id,
@@ -1777,7 +1777,7 @@ class _$_Slot implements _Slot {
 }
 
 abstract class _Slot implements Slot {
-  const factory _Slot(
+  factory _Slot(
       {@JsonKey(defaultValue: 'Slot')
           String resourceType,
       Id id,
@@ -2408,7 +2408,7 @@ class __$AppointmentResponseCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_AppointmentResponse implements _AppointmentResponse {
-  const _$_AppointmentResponse(
+  _$_AppointmentResponse(
       {@JsonKey(defaultValue: 'AppointmentResponse')
           this.resourceType,
       this.id,
@@ -2624,7 +2624,7 @@ class _$_AppointmentResponse implements _AppointmentResponse {
 }
 
 abstract class _AppointmentResponse implements AppointmentResponse {
-  const factory _AppointmentResponse(
+  factory _AppointmentResponse(
       {@JsonKey(defaultValue: 'AppointmentResponse')
           String resourceType,
       Id id,
@@ -3097,7 +3097,7 @@ class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Schedule implements _Schedule {
-  const _$_Schedule(
+  _$_Schedule(
       {@JsonKey(defaultValue: 'Schedule') this.resourceType,
       this.id,
       this.meta,
@@ -3250,7 +3250,7 @@ class _$_Schedule implements _Schedule {
 }
 
 abstract class _Schedule implements Schedule {
-  const factory _Schedule(
+  factory _Schedule(
       {@JsonKey(defaultValue: 'Schedule') String resourceType,
       Id id,
       Meta meta,
@@ -3566,7 +3566,7 @@ class __$AppointmentParticipantCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_AppointmentParticipant implements _AppointmentParticipant {
-  const _$_AppointmentParticipant(
+  _$_AppointmentParticipant(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -3670,7 +3670,7 @@ class _$_AppointmentParticipant implements _AppointmentParticipant {
 }
 
 abstract class _AppointmentParticipant implements AppointmentParticipant {
-  const factory _AppointmentParticipant(
+  factory _AppointmentParticipant(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,

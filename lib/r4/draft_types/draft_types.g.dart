@@ -277,6 +277,7 @@ _$_SubstanceAmount _$_$_SubstanceAmountFromJson(Map<String, dynamic> json) {
     amountRange: json['amountRange'] == null
         ? null
         : Range.fromJson(json['amountRange'] as Map<String, dynamic>),
+    amountString: json['amountString'] as String,
     amountStringElement: json['_amountString'] == null
         ? null
         : Element.fromJson(json['_amountString'] as Map<String, dynamic>),
@@ -310,6 +311,7 @@ Map<String, dynamic> _$_$_SubstanceAmountToJson(_$_SubstanceAmount instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('amountQuantity', instance.amountQuantity?.toJson());
   writeNotNull('amountRange', instance.amountRange?.toJson());
+  writeNotNull('amountString', instance.amountString);
   writeNotNull('_amountString', instance.amountStringElement?.toJson());
   writeNotNull('amountType', instance.amountType?.toJson());
   writeNotNull('amountText', instance.amountText);

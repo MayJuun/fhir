@@ -1213,6 +1213,9 @@ _$_EvidenceVariableCharacteristic _$_$_EvidenceVariableCharacteristicFromJson(
         ? null
         : Reference.fromJson(
             json['definitionReference'] as Map<String, dynamic>),
+    definitionCanonical: json['definitionCanonical'] == null
+        ? null
+        : Canonical.fromJson(json['definitionCanonical'] as String),
     definitionCanonicalElement: json['_definitionCanonical'] == null
         ? null
         : Element.fromJson(
@@ -1241,6 +1244,9 @@ _$_EvidenceVariableCharacteristic _$_$_EvidenceVariableCharacteristicFromJson(
     excludeElement: json['_exclude'] == null
         ? null
         : Element.fromJson(json['_exclude'] as Map<String, dynamic>),
+    participantEffectiveDateTime: json['participantEffectiveDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['participantEffectiveDateTime'] as String),
     participantEffectiveDateTimeElement:
         json['_participantEffectiveDateTime'] == null
             ? null
@@ -1289,6 +1295,7 @@ Map<String, dynamic> _$_$_EvidenceVariableCharacteristicToJson(
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('definitionReference', instance.definitionReference?.toJson());
+  writeNotNull('definitionCanonical', instance.definitionCanonical?.toJson());
   writeNotNull(
       '_definitionCanonical', instance.definitionCanonicalElement?.toJson());
   writeNotNull('definitionCodeableConcept',
@@ -1302,6 +1309,8 @@ Map<String, dynamic> _$_$_EvidenceVariableCharacteristicToJson(
       'usageContext', instance.usageContext?.map((e) => e?.toJson())?.toList());
   writeNotNull('exclude', instance.exclude?.toJson());
   writeNotNull('_exclude', instance.excludeElement?.toJson());
+  writeNotNull('participantEffectiveDateTime',
+      instance.participantEffectiveDateTime?.toJson());
   writeNotNull('_participantEffectiveDateTime',
       instance.participantEffectiveDateTimeElement?.toJson());
   writeNotNull('participantEffectivePeriod',
@@ -1954,6 +1963,9 @@ _$_ResearchElementDefinitionCharacteristic
         ? null
         : CodeableConcept.fromJson(
             json['definitionCodeableConcept'] as Map<String, dynamic>),
+    definitionCanonical: json['definitionCanonical'] == null
+        ? null
+        : Canonical.fromJson(json['definitionCanonical'] as String),
     definitionCanonicalElement: json['_definitionCanonical'] == null
         ? null
         : Element.fromJson(
@@ -1983,6 +1995,9 @@ _$_ResearchElementDefinitionCharacteristic
         ? null
         : Element.fromJson(
             json['_studyEffectiveDescription'] as Map<String, dynamic>),
+    studyEffectiveDateTime: json['studyEffectiveDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['studyEffectiveDateTime'] as String),
     studyEffectiveDateTimeElement: json['_studyEffectiveDateTime'] == null
         ? null
         : Element.fromJson(
@@ -2019,6 +2034,9 @@ _$_ResearchElementDefinitionCharacteristic
             ? null
             : Element.fromJson(json['_participantEffectiveDescription']
                 as Map<String, dynamic>),
+    participantEffectiveDateTime: json['participantEffectiveDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['participantEffectiveDateTime'] as String),
     participantEffectiveDateTimeElement:
         json['_participantEffectiveDateTime'] == null
             ? null
@@ -2072,6 +2090,7 @@ Map<String, dynamic> _$_$_ResearchElementDefinitionCharacteristicToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('definitionCodeableConcept',
       instance.definitionCodeableConcept?.toJson());
+  writeNotNull('definitionCanonical', instance.definitionCanonical?.toJson());
   writeNotNull(
       '_definitionCanonical', instance.definitionCanonicalElement?.toJson());
   writeNotNull('definitionExpression', instance.definitionExpression?.toJson());
@@ -2085,6 +2104,8 @@ Map<String, dynamic> _$_$_ResearchElementDefinitionCharacteristicToJson(
   writeNotNull('studyEffectiveDescription', instance.studyEffectiveDescription);
   writeNotNull('_studyEffectiveDescription',
       instance.studyEffectiveDescriptionElement?.toJson());
+  writeNotNull(
+      'studyEffectiveDateTime', instance.studyEffectiveDateTime?.toJson());
   writeNotNull('_studyEffectiveDateTime',
       instance.studyEffectiveDateTimeElement?.toJson());
   writeNotNull('studyEffectivePeriod', instance.studyEffectivePeriod?.toJson());
@@ -2103,6 +2124,8 @@ Map<String, dynamic> _$_$_ResearchElementDefinitionCharacteristicToJson(
       instance.participantEffectiveDescription);
   writeNotNull('_participantEffectiveDescription',
       instance.participantEffectiveDescriptionElement?.toJson());
+  writeNotNull('participantEffectiveDateTime',
+      instance.participantEffectiveDateTime?.toJson());
   writeNotNull('_participantEffectiveDateTime',
       instance.participantEffectiveDateTimeElement?.toJson());
   writeNotNull('participantEffectivePeriod',

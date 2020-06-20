@@ -285,6 +285,9 @@ _$_DataRequirementDateFilter _$_$_DataRequirementDateFilterFromJson(
     searchParamElement: json['_searchParam'] == null
         ? null
         : Element.fromJson(json['_searchParam'] as Map<String, dynamic>),
+    valueDateTime: json['valueDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['valueDateTime'] as String),
     valueDateTimeElement: json['_valueDateTime'] == null
         ? null
         : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
@@ -316,6 +319,7 @@ Map<String, dynamic> _$_$_DataRequirementDateFilterToJson(
   writeNotNull('_path', instance.pathElement?.toJson());
   writeNotNull('searchParam', instance.searchParam);
   writeNotNull('_searchParam', instance.searchParamElement?.toJson());
+  writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
   writeNotNull('_valueDateTime', instance.valueDateTimeElement?.toJson());
   writeNotNull('valuePeriod', instance.valuePeriod?.toJson());
   writeNotNull('valueDuration', instance.valueDuration?.toJson());
@@ -548,9 +552,15 @@ _$_TriggerDefinition _$_$_TriggerDefinitionFromJson(Map<String, dynamic> json) {
     timingReference: json['timingReference'] == null
         ? null
         : Reference.fromJson(json['timingReference'] as Map<String, dynamic>),
+    timingDate: json['timingDate'] == null
+        ? null
+        : Date.fromJson(json['timingDate'] as String),
     timingDateElement: json['_timingDate'] == null
         ? null
         : Element.fromJson(json['_timingDate'] as Map<String, dynamic>),
+    timingDateTime: json['timingDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['timingDateTime'] as String),
     timingDateTimeElement: json['_timingDateTime'] == null
         ? null
         : Element.fromJson(json['_timingDateTime'] as Map<String, dynamic>),
@@ -584,7 +594,9 @@ Map<String, dynamic> _$_$_TriggerDefinitionToJson(
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('timingTiming', instance.timingTiming?.toJson());
   writeNotNull('timingReference', instance.timingReference?.toJson());
+  writeNotNull('timingDate', instance.timingDate?.toJson());
   writeNotNull('_timingDate', instance.timingDateElement?.toJson());
+  writeNotNull('timingDateTime', instance.timingDateTime?.toJson());
   writeNotNull('_timingDateTime', instance.timingDateTimeElement?.toJson());
   writeNotNull('data', instance.data?.map((e) => e?.toJson())?.toList());
   writeNotNull('condition', instance.condition?.toJson());

@@ -185,6 +185,7 @@ abstract class $CoverageCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get type;
   $ReferenceCopyWith<$Res> get policyHolder;
   $ReferenceCopyWith<$Res> get subscriber;
+  $IdentifierCopyWith<$Res> get subscriberId;
   $ReferenceCopyWith<$Res> get beneficiary;
   $ElementCopyWith<$Res> get dependentElement;
   $CodeableConceptCopyWith<$Res> get relationship;
@@ -393,6 +394,16 @@ class _$CoverageCopyWithImpl<$Res> implements $CoverageCopyWith<$Res> {
   }
 
   @override
+  $IdentifierCopyWith<$Res> get subscriberId {
+    if (_value.subscriberId == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.subscriberId, (value) {
+      return _then(_value.copyWith(subscriberId: value));
+    });
+  }
+
+  @override
   $ReferenceCopyWith<$Res> get beneficiary {
     if (_value.beneficiary == null) {
       return null;
@@ -518,6 +529,8 @@ abstract class _$CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get policyHolder;
   @override
   $ReferenceCopyWith<$Res> get subscriber;
+  @override
+  $IdentifierCopyWith<$Res> get subscriberId;
   @override
   $ReferenceCopyWith<$Res> get beneficiary;
   @override
@@ -1948,6 +1961,7 @@ class _$CoverageEligibilityRequestTearOff {
       List<CoverageEligibilityRequestPurpose> purpose,
       @JsonKey(name: '_purpose') Element purposeElement,
       @required Reference patient,
+      Date servicedDate,
       @JsonKey(name: '_servicedDate') Element servicedDateElement,
       Period servicedPeriod,
       FhirDateTime created,
@@ -1978,6 +1992,7 @@ class _$CoverageEligibilityRequestTearOff {
       purpose: purpose,
       purposeElement: purposeElement,
       patient: patient,
+      servicedDate: servicedDate,
       servicedDateElement: servicedDateElement,
       servicedPeriod: servicedPeriod,
       created: created,
@@ -2021,6 +2036,7 @@ mixin _$CoverageEligibilityRequest {
   @JsonKey(name: '_purpose')
   Element get purposeElement;
   Reference get patient;
+  Date get servicedDate;
   @JsonKey(name: '_servicedDate')
   Element get servicedDateElement;
   Period get servicedPeriod;
@@ -2062,6 +2078,7 @@ abstract class $CoverageEligibilityRequestCopyWith<$Res> {
       List<CoverageEligibilityRequestPurpose> purpose,
       @JsonKey(name: '_purpose') Element purposeElement,
       Reference patient,
+      Date servicedDate,
       @JsonKey(name: '_servicedDate') Element servicedDateElement,
       Period servicedPeriod,
       FhirDateTime created,
@@ -2119,6 +2136,7 @@ class _$CoverageEligibilityRequestCopyWithImpl<$Res>
     Object purpose = freezed,
     Object purposeElement = freezed,
     Object patient = freezed,
+    Object servicedDate = freezed,
     Object servicedDateElement = freezed,
     Object servicedPeriod = freezed,
     Object created = freezed,
@@ -2172,6 +2190,8 @@ class _$CoverageEligibilityRequestCopyWithImpl<$Res>
           ? _value.purposeElement
           : purposeElement as Element,
       patient: patient == freezed ? _value.patient : patient as Reference,
+      servicedDate:
+          servicedDate == freezed ? _value.servicedDate : servicedDate as Date,
       servicedDateElement: servicedDateElement == freezed
           ? _value.servicedDateElement
           : servicedDateElement as Element,
@@ -2375,6 +2395,7 @@ abstract class _$CoverageEligibilityRequestCopyWith<$Res>
       List<CoverageEligibilityRequestPurpose> purpose,
       @JsonKey(name: '_purpose') Element purposeElement,
       Reference patient,
+      Date servicedDate,
       @JsonKey(name: '_servicedDate') Element servicedDateElement,
       Period servicedPeriod,
       FhirDateTime created,
@@ -2450,6 +2471,7 @@ class __$CoverageEligibilityRequestCopyWithImpl<$Res>
     Object purpose = freezed,
     Object purposeElement = freezed,
     Object patient = freezed,
+    Object servicedDate = freezed,
     Object servicedDateElement = freezed,
     Object servicedPeriod = freezed,
     Object created = freezed,
@@ -2503,6 +2525,8 @@ class __$CoverageEligibilityRequestCopyWithImpl<$Res>
           ? _value.purposeElement
           : purposeElement as Element,
       patient: patient == freezed ? _value.patient : patient as Reference,
+      servicedDate:
+          servicedDate == freezed ? _value.servicedDate : servicedDate as Date,
       servicedDateElement: servicedDateElement == freezed
           ? _value.servicedDateElement
           : servicedDateElement as Element,
@@ -2551,6 +2575,7 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
       this.purpose,
       @JsonKey(name: '_purpose') this.purposeElement,
       @required this.patient,
+      this.servicedDate,
       @JsonKey(name: '_servicedDate') this.servicedDateElement,
       this.servicedPeriod,
       this.created,
@@ -2613,6 +2638,8 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   @override
   final Reference patient;
   @override
+  final Date servicedDate;
+  @override
   @JsonKey(name: '_servicedDate')
   final Element servicedDateElement;
   @override
@@ -2639,7 +2666,7 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
 
   @override
   String toString() {
-    return 'CoverageEligibilityRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, priority: $priority, purpose: $purpose, purposeElement: $purposeElement, patient: $patient, servicedDateElement: $servicedDateElement, servicedPeriod: $servicedPeriod, created: $created, createdElement: $createdElement, enterer: $enterer, provider: $provider, insurer: $insurer, facility: $facility, supportingInfo: $supportingInfo, insurance: $insurance, item: $item)';
+    return 'CoverageEligibilityRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, priority: $priority, purpose: $purpose, purposeElement: $purposeElement, patient: $patient, servicedDate: $servicedDate, servicedDateElement: $servicedDateElement, servicedPeriod: $servicedPeriod, created: $created, createdElement: $createdElement, enterer: $enterer, provider: $provider, insurer: $insurer, facility: $facility, supportingInfo: $supportingInfo, insurance: $insurance, item: $item)';
   }
 
   @override
@@ -2696,6 +2723,9 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
             (identical(other.patient, patient) ||
                 const DeepCollectionEquality()
                     .equals(other.patient, patient)) &&
+            (identical(other.servicedDate, servicedDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.servicedDate, servicedDate)) &&
             (identical(other.servicedDateElement, servicedDateElement) ||
                 const DeepCollectionEquality()
                     .equals(other.servicedDateElement, servicedDateElement)) &&
@@ -2709,10 +2739,8 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
                 const DeepCollectionEquality()
                     .equals(other.createdElement, createdElement)) &&
             (identical(other.enterer, enterer) ||
-                const DeepCollectionEquality()
-                    .equals(other.enterer, enterer)) &&
-            (identical(other.provider, provider) ||
-                const DeepCollectionEquality().equals(other.provider, provider)) &&
+                const DeepCollectionEquality().equals(other.enterer, enterer)) &&
+            (identical(other.provider, provider) || const DeepCollectionEquality().equals(other.provider, provider)) &&
             (identical(other.insurer, insurer) || const DeepCollectionEquality().equals(other.insurer, insurer)) &&
             (identical(other.facility, facility) || const DeepCollectionEquality().equals(other.facility, facility)) &&
             (identical(other.supportingInfo, supportingInfo) || const DeepCollectionEquality().equals(other.supportingInfo, supportingInfo)) &&
@@ -2741,6 +2769,7 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
       const DeepCollectionEquality().hash(purpose) ^
       const DeepCollectionEquality().hash(purposeElement) ^
       const DeepCollectionEquality().hash(patient) ^
+      const DeepCollectionEquality().hash(servicedDate) ^
       const DeepCollectionEquality().hash(servicedDateElement) ^
       const DeepCollectionEquality().hash(servicedPeriod) ^
       const DeepCollectionEquality().hash(created) ^
@@ -2785,6 +2814,7 @@ abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
           List<CoverageEligibilityRequestPurpose> purpose,
           @JsonKey(name: '_purpose') Element purposeElement,
           @required Reference patient,
+          Date servicedDate,
           @JsonKey(name: '_servicedDate') Element servicedDateElement,
           Period servicedPeriod,
           FhirDateTime created,
@@ -2843,6 +2873,8 @@ abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
   Element get purposeElement;
   @override
   Reference get patient;
+  @override
+  Date get servicedDate;
   @override
   @JsonKey(name: '_servicedDate')
   Element get servicedDateElement;
@@ -4446,6 +4478,7 @@ class _$CoverageEligibilityResponseTearOff {
           Element purposeElement,
       @required
           Reference patient,
+      Date servicedDate,
       @JsonKey(name: '_servicedDate')
           Element servicedDateElement,
       Period servicedPeriod,
@@ -4488,6 +4521,7 @@ class _$CoverageEligibilityResponseTearOff {
       purpose: purpose,
       purposeElement: purposeElement,
       patient: patient,
+      servicedDate: servicedDate,
       servicedDateElement: servicedDateElement,
       servicedPeriod: servicedPeriod,
       created: created,
@@ -4535,6 +4569,7 @@ mixin _$CoverageEligibilityResponse {
   @JsonKey(name: '_purpose')
   Element get purposeElement;
   Reference get patient;
+  Date get servicedDate;
   @JsonKey(name: '_servicedDate')
   Element get servicedDateElement;
   Period get servicedPeriod;
@@ -4592,6 +4627,7 @@ abstract class $CoverageEligibilityResponseCopyWith<$Res> {
       @JsonKey(name: '_purpose')
           Element purposeElement,
       Reference patient,
+      Date servicedDate,
       @JsonKey(name: '_servicedDate')
           Element servicedDateElement,
       Period servicedPeriod,
@@ -4661,6 +4697,7 @@ class _$CoverageEligibilityResponseCopyWithImpl<$Res>
     Object purpose = freezed,
     Object purposeElement = freezed,
     Object patient = freezed,
+    Object servicedDate = freezed,
     Object servicedDateElement = freezed,
     Object servicedPeriod = freezed,
     Object created = freezed,
@@ -4717,6 +4754,8 @@ class _$CoverageEligibilityResponseCopyWithImpl<$Res>
           ? _value.purposeElement
           : purposeElement as Element,
       patient: patient == freezed ? _value.patient : patient as Reference,
+      servicedDate:
+          servicedDate == freezed ? _value.servicedDate : servicedDate as Date,
       servicedDateElement: servicedDateElement == freezed
           ? _value.servicedDateElement
           : servicedDateElement as Element,
@@ -4959,6 +4998,7 @@ abstract class _$CoverageEligibilityResponseCopyWith<$Res>
       @JsonKey(name: '_purpose')
           Element purposeElement,
       Reference patient,
+      Date servicedDate,
       @JsonKey(name: '_servicedDate')
           Element servicedDateElement,
       Period servicedPeriod,
@@ -5049,6 +5089,7 @@ class __$CoverageEligibilityResponseCopyWithImpl<$Res>
     Object purpose = freezed,
     Object purposeElement = freezed,
     Object patient = freezed,
+    Object servicedDate = freezed,
     Object servicedDateElement = freezed,
     Object servicedPeriod = freezed,
     Object created = freezed,
@@ -5105,6 +5146,8 @@ class __$CoverageEligibilityResponseCopyWithImpl<$Res>
           ? _value.purposeElement
           : purposeElement as Element,
       patient: patient == freezed ? _value.patient : patient as Reference,
+      servicedDate:
+          servicedDate == freezed ? _value.servicedDate : servicedDate as Date,
       servicedDateElement: servicedDateElement == freezed
           ? _value.servicedDateElement
           : servicedDateElement as Element,
@@ -5174,6 +5217,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
           this.purposeElement,
       @required
           this.patient,
+      this.servicedDate,
       @JsonKey(name: '_servicedDate')
           this.servicedDateElement,
       this.servicedPeriod,
@@ -5248,6 +5292,8 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   @override
   final Reference patient;
   @override
+  final Date servicedDate;
+  @override
   @JsonKey(name: '_servicedDate')
   final Element servicedDateElement;
   @override
@@ -5288,7 +5334,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
 
   @override
   String toString() {
-    return 'CoverageEligibilityResponse(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, purpose: $purpose, purposeElement: $purposeElement, patient: $patient, servicedDateElement: $servicedDateElement, servicedPeriod: $servicedPeriod, created: $created, createdElement: $createdElement, requestor: $requestor, request: $request, outcome: $outcome, outcomeElement: $outcomeElement, disposition: $disposition, dispositionElement: $dispositionElement, insurer: $insurer, insurance: $insurance, preAuthRef: $preAuthRef, preAuthRefElement: $preAuthRefElement, form: $form, error: $error)';
+    return 'CoverageEligibilityResponse(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, purpose: $purpose, purposeElement: $purposeElement, patient: $patient, servicedDate: $servicedDate, servicedDateElement: $servicedDateElement, servicedPeriod: $servicedPeriod, created: $created, createdElement: $createdElement, requestor: $requestor, request: $request, outcome: $outcome, outcomeElement: $outcomeElement, disposition: $disposition, dispositionElement: $dispositionElement, insurer: $insurer, insurance: $insurance, preAuthRef: $preAuthRef, preAuthRefElement: $preAuthRefElement, form: $form, error: $error)';
   }
 
   @override
@@ -5342,6 +5388,9 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
             (identical(other.patient, patient) ||
                 const DeepCollectionEquality()
                     .equals(other.patient, patient)) &&
+            (identical(other.servicedDate, servicedDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.servicedDate, servicedDate)) &&
             (identical(other.servicedDateElement, servicedDateElement) ||
                 const DeepCollectionEquality()
                     .equals(other.servicedDateElement, servicedDateElement)) &&
@@ -5358,10 +5407,8 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
                 const DeepCollectionEquality()
                     .equals(other.requestor, requestor)) &&
             (identical(other.request, request) ||
-                const DeepCollectionEquality()
-                    .equals(other.request, request)) &&
-            (identical(other.outcome, outcome) ||
-                const DeepCollectionEquality().equals(other.outcome, outcome)) &&
+                const DeepCollectionEquality().equals(other.request, request)) &&
+            (identical(other.outcome, outcome) || const DeepCollectionEquality().equals(other.outcome, outcome)) &&
             (identical(other.outcomeElement, outcomeElement) || const DeepCollectionEquality().equals(other.outcomeElement, outcomeElement)) &&
             (identical(other.disposition, disposition) || const DeepCollectionEquality().equals(other.disposition, disposition)) &&
             (identical(other.dispositionElement, dispositionElement) || const DeepCollectionEquality().equals(other.dispositionElement, dispositionElement)) &&
@@ -5393,6 +5440,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
       const DeepCollectionEquality().hash(purpose) ^
       const DeepCollectionEquality().hash(purposeElement) ^
       const DeepCollectionEquality().hash(patient) ^
+      const DeepCollectionEquality().hash(servicedDate) ^
       const DeepCollectionEquality().hash(servicedDateElement) ^
       const DeepCollectionEquality().hash(servicedPeriod) ^
       const DeepCollectionEquality().hash(created) ^
@@ -5450,6 +5498,7 @@ abstract class _CoverageEligibilityResponse
               Element purposeElement,
           @required
               Reference patient,
+          Date servicedDate,
           @JsonKey(name: '_servicedDate')
               Element servicedDateElement,
           Period servicedPeriod,
@@ -5519,6 +5568,8 @@ abstract class _CoverageEligibilityResponse
   Element get purposeElement;
   @override
   Reference get patient;
+  @override
+  Date get servicedDate;
   @override
   @JsonKey(name: '_servicedDate')
   Element get servicedDateElement;
@@ -6717,10 +6768,14 @@ class _$CoverageEligibilityResponseBenefitTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @required CodeableConcept type,
+      UnsignedInt allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt') Element allowedUnsignedIntElement,
+      String allowedString,
       @JsonKey(name: '_allowedString') Element allowedStringElement,
       Money allowedMoney,
+      UnsignedInt usedUnsignedInt,
       @JsonKey(name: '_usedUnsignedInt') Element usedUnsignedIntElement,
+      String usedString,
       @JsonKey(name: '_usedString') Element usedStringElement,
       Money usedMoney}) {
     return _CoverageEligibilityResponseBenefit(
@@ -6728,10 +6783,14 @@ class _$CoverageEligibilityResponseBenefitTearOff {
       extension_: extension_,
       modifierExtension: modifierExtension,
       type: type,
+      allowedUnsignedInt: allowedUnsignedInt,
       allowedUnsignedIntElement: allowedUnsignedIntElement,
+      allowedString: allowedString,
       allowedStringElement: allowedStringElement,
       allowedMoney: allowedMoney,
+      usedUnsignedInt: usedUnsignedInt,
       usedUnsignedIntElement: usedUnsignedIntElement,
+      usedString: usedString,
       usedStringElement: usedStringElement,
       usedMoney: usedMoney,
     );
@@ -6748,13 +6807,17 @@ mixin _$CoverageEligibilityResponseBenefit {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   CodeableConcept get type;
+  UnsignedInt get allowedUnsignedInt;
   @JsonKey(name: '_allowedUnsignedInt')
   Element get allowedUnsignedIntElement;
+  String get allowedString;
   @JsonKey(name: '_allowedString')
   Element get allowedStringElement;
   Money get allowedMoney;
+  UnsignedInt get usedUnsignedInt;
   @JsonKey(name: '_usedUnsignedInt')
   Element get usedUnsignedIntElement;
+  String get usedString;
   @JsonKey(name: '_usedString')
   Element get usedStringElement;
   Money get usedMoney;
@@ -6774,10 +6837,14 @@ abstract class $CoverageEligibilityResponseBenefitCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept type,
+      UnsignedInt allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt') Element allowedUnsignedIntElement,
+      String allowedString,
       @JsonKey(name: '_allowedString') Element allowedStringElement,
       Money allowedMoney,
+      UnsignedInt usedUnsignedInt,
       @JsonKey(name: '_usedUnsignedInt') Element usedUnsignedIntElement,
+      String usedString,
       @JsonKey(name: '_usedString') Element usedStringElement,
       Money usedMoney});
 
@@ -6804,10 +6871,14 @@ class _$CoverageEligibilityResponseBenefitCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object type = freezed,
+    Object allowedUnsignedInt = freezed,
     Object allowedUnsignedIntElement = freezed,
+    Object allowedString = freezed,
     Object allowedStringElement = freezed,
     Object allowedMoney = freezed,
+    Object usedUnsignedInt = freezed,
     Object usedUnsignedIntElement = freezed,
+    Object usedString = freezed,
     Object usedStringElement = freezed,
     Object usedMoney = freezed,
   }) {
@@ -6820,17 +6891,28 @@ class _$CoverageEligibilityResponseBenefitCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       type: type == freezed ? _value.type : type as CodeableConcept,
+      allowedUnsignedInt: allowedUnsignedInt == freezed
+          ? _value.allowedUnsignedInt
+          : allowedUnsignedInt as UnsignedInt,
       allowedUnsignedIntElement: allowedUnsignedIntElement == freezed
           ? _value.allowedUnsignedIntElement
           : allowedUnsignedIntElement as Element,
+      allowedString: allowedString == freezed
+          ? _value.allowedString
+          : allowedString as String,
       allowedStringElement: allowedStringElement == freezed
           ? _value.allowedStringElement
           : allowedStringElement as Element,
       allowedMoney:
           allowedMoney == freezed ? _value.allowedMoney : allowedMoney as Money,
+      usedUnsignedInt: usedUnsignedInt == freezed
+          ? _value.usedUnsignedInt
+          : usedUnsignedInt as UnsignedInt,
       usedUnsignedIntElement: usedUnsignedIntElement == freezed
           ? _value.usedUnsignedIntElement
           : usedUnsignedIntElement as Element,
+      usedString:
+          usedString == freezed ? _value.usedString : usedString as String,
       usedStringElement: usedStringElement == freezed
           ? _value.usedStringElement
           : usedStringElement as Element,
@@ -6921,10 +7003,14 @@ abstract class _$CoverageEligibilityResponseBenefitCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept type,
+      UnsignedInt allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt') Element allowedUnsignedIntElement,
+      String allowedString,
       @JsonKey(name: '_allowedString') Element allowedStringElement,
       Money allowedMoney,
+      UnsignedInt usedUnsignedInt,
       @JsonKey(name: '_usedUnsignedInt') Element usedUnsignedIntElement,
+      String usedString,
       @JsonKey(name: '_usedString') Element usedStringElement,
       Money usedMoney});
 
@@ -6962,10 +7048,14 @@ class __$CoverageEligibilityResponseBenefitCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object type = freezed,
+    Object allowedUnsignedInt = freezed,
     Object allowedUnsignedIntElement = freezed,
+    Object allowedString = freezed,
     Object allowedStringElement = freezed,
     Object allowedMoney = freezed,
+    Object usedUnsignedInt = freezed,
     Object usedUnsignedIntElement = freezed,
+    Object usedString = freezed,
     Object usedStringElement = freezed,
     Object usedMoney = freezed,
   }) {
@@ -6978,17 +7068,28 @@ class __$CoverageEligibilityResponseBenefitCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       type: type == freezed ? _value.type : type as CodeableConcept,
+      allowedUnsignedInt: allowedUnsignedInt == freezed
+          ? _value.allowedUnsignedInt
+          : allowedUnsignedInt as UnsignedInt,
       allowedUnsignedIntElement: allowedUnsignedIntElement == freezed
           ? _value.allowedUnsignedIntElement
           : allowedUnsignedIntElement as Element,
+      allowedString: allowedString == freezed
+          ? _value.allowedString
+          : allowedString as String,
       allowedStringElement: allowedStringElement == freezed
           ? _value.allowedStringElement
           : allowedStringElement as Element,
       allowedMoney:
           allowedMoney == freezed ? _value.allowedMoney : allowedMoney as Money,
+      usedUnsignedInt: usedUnsignedInt == freezed
+          ? _value.usedUnsignedInt
+          : usedUnsignedInt as UnsignedInt,
       usedUnsignedIntElement: usedUnsignedIntElement == freezed
           ? _value.usedUnsignedIntElement
           : usedUnsignedIntElement as Element,
+      usedString:
+          usedString == freezed ? _value.usedString : usedString as String,
       usedStringElement: usedStringElement == freezed
           ? _value.usedStringElement
           : usedStringElement as Element,
@@ -7005,10 +7106,14 @@ class _$_CoverageEligibilityResponseBenefit
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @required this.type,
+      this.allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt') this.allowedUnsignedIntElement,
+      this.allowedString,
       @JsonKey(name: '_allowedString') this.allowedStringElement,
       this.allowedMoney,
+      this.usedUnsignedInt,
       @JsonKey(name: '_usedUnsignedInt') this.usedUnsignedIntElement,
+      this.usedString,
       @JsonKey(name: '_usedString') this.usedStringElement,
       this.usedMoney})
       : assert(type != null),
@@ -7028,16 +7133,24 @@ class _$_CoverageEligibilityResponseBenefit
   @override
   final CodeableConcept type;
   @override
+  final UnsignedInt allowedUnsignedInt;
+  @override
   @JsonKey(name: '_allowedUnsignedInt')
   final Element allowedUnsignedIntElement;
+  @override
+  final String allowedString;
   @override
   @JsonKey(name: '_allowedString')
   final Element allowedStringElement;
   @override
   final Money allowedMoney;
   @override
+  final UnsignedInt usedUnsignedInt;
+  @override
   @JsonKey(name: '_usedUnsignedInt')
   final Element usedUnsignedIntElement;
+  @override
+  final String usedString;
   @override
   @JsonKey(name: '_usedString')
   final Element usedStringElement;
@@ -7046,7 +7159,7 @@ class _$_CoverageEligibilityResponseBenefit
 
   @override
   String toString() {
-    return 'CoverageEligibilityResponseBenefit(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, allowedUnsignedIntElement: $allowedUnsignedIntElement, allowedStringElement: $allowedStringElement, allowedMoney: $allowedMoney, usedUnsignedIntElement: $usedUnsignedIntElement, usedStringElement: $usedStringElement, usedMoney: $usedMoney)';
+    return 'CoverageEligibilityResponseBenefit(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, allowedUnsignedInt: $allowedUnsignedInt, allowedUnsignedIntElement: $allowedUnsignedIntElement, allowedString: $allowedString, allowedStringElement: $allowedStringElement, allowedMoney: $allowedMoney, usedUnsignedInt: $usedUnsignedInt, usedUnsignedIntElement: $usedUnsignedIntElement, usedString: $usedString, usedStringElement: $usedStringElement, usedMoney: $usedMoney)';
   }
 
   @override
@@ -7063,20 +7176,32 @@ class _$_CoverageEligibilityResponseBenefit
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)) &&
+            (identical(other.allowedUnsignedInt, allowedUnsignedInt) ||
+                const DeepCollectionEquality()
+                    .equals(other.allowedUnsignedInt, allowedUnsignedInt)) &&
             (identical(other.allowedUnsignedIntElement,
                     allowedUnsignedIntElement) ||
                 const DeepCollectionEquality().equals(
                     other.allowedUnsignedIntElement,
                     allowedUnsignedIntElement)) &&
+            (identical(other.allowedString, allowedString) ||
+                const DeepCollectionEquality()
+                    .equals(other.allowedString, allowedString)) &&
             (identical(other.allowedStringElement, allowedStringElement) ||
                 const DeepCollectionEquality().equals(
                     other.allowedStringElement, allowedStringElement)) &&
             (identical(other.allowedMoney, allowedMoney) ||
                 const DeepCollectionEquality()
                     .equals(other.allowedMoney, allowedMoney)) &&
+            (identical(other.usedUnsignedInt, usedUnsignedInt) ||
+                const DeepCollectionEquality()
+                    .equals(other.usedUnsignedInt, usedUnsignedInt)) &&
             (identical(other.usedUnsignedIntElement, usedUnsignedIntElement) ||
                 const DeepCollectionEquality().equals(
                     other.usedUnsignedIntElement, usedUnsignedIntElement)) &&
+            (identical(other.usedString, usedString) ||
+                const DeepCollectionEquality()
+                    .equals(other.usedString, usedString)) &&
             (identical(other.usedStringElement, usedStringElement) ||
                 const DeepCollectionEquality()
                     .equals(other.usedStringElement, usedStringElement)) &&
@@ -7092,10 +7217,14 @@ class _$_CoverageEligibilityResponseBenefit
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(type) ^
+      const DeepCollectionEquality().hash(allowedUnsignedInt) ^
       const DeepCollectionEquality().hash(allowedUnsignedIntElement) ^
+      const DeepCollectionEquality().hash(allowedString) ^
       const DeepCollectionEquality().hash(allowedStringElement) ^
       const DeepCollectionEquality().hash(allowedMoney) ^
+      const DeepCollectionEquality().hash(usedUnsignedInt) ^
       const DeepCollectionEquality().hash(usedUnsignedIntElement) ^
+      const DeepCollectionEquality().hash(usedString) ^
       const DeepCollectionEquality().hash(usedStringElement) ^
       const DeepCollectionEquality().hash(usedMoney);
 
@@ -7119,10 +7248,14 @@ abstract class _CoverageEligibilityResponseBenefit
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @required CodeableConcept type,
+      UnsignedInt allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt') Element allowedUnsignedIntElement,
+      String allowedString,
       @JsonKey(name: '_allowedString') Element allowedStringElement,
       Money allowedMoney,
+      UnsignedInt usedUnsignedInt,
       @JsonKey(name: '_usedUnsignedInt') Element usedUnsignedIntElement,
+      String usedString,
       @JsonKey(name: '_usedString') Element usedStringElement,
       Money usedMoney}) = _$_CoverageEligibilityResponseBenefit;
 
@@ -7140,16 +7273,24 @@ abstract class _CoverageEligibilityResponseBenefit
   @override
   CodeableConcept get type;
   @override
+  UnsignedInt get allowedUnsignedInt;
+  @override
   @JsonKey(name: '_allowedUnsignedInt')
   Element get allowedUnsignedIntElement;
+  @override
+  String get allowedString;
   @override
   @JsonKey(name: '_allowedString')
   Element get allowedStringElement;
   @override
   Money get allowedMoney;
   @override
+  UnsignedInt get usedUnsignedInt;
+  @override
   @JsonKey(name: '_usedUnsignedInt')
   Element get usedUnsignedIntElement;
+  @override
+  String get usedString;
   @override
   @JsonKey(name: '_usedString')
   Element get usedStringElement;

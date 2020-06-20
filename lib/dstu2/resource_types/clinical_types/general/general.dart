@@ -9,7 +9,7 @@ part 'general.g.dart';
 
 @freezed
 abstract class Condition with _$Condition implements Resource {
-  const factory Condition({
+  factory Condition({
     @JsonKey(defaultValue: 'Condition') String resourceType,
     Id id,
     Meta meta,
@@ -63,7 +63,7 @@ abstract class Condition with _$Condition implements Resource {
 
 @freezed
 abstract class DetectedIssue with _$DetectedIssue implements Resource {
-  const factory DetectedIssue({
+  factory DetectedIssue({
     @JsonKey(defaultValue: 'DetectedIssue') String resourceType,
     Id id,
     Meta meta,
@@ -99,7 +99,7 @@ abstract class DetectedIssue with _$DetectedIssue implements Resource {
 abstract class FamilyMemberHistory
     with _$FamilyMemberHistory
     implements Resource {
-  const factory FamilyMemberHistory({
+  factory FamilyMemberHistory({
     @JsonKey(defaultValue: 'FamilyMemberHistory') String resourceType,
     Id id,
     Meta meta,
@@ -152,7 +152,7 @@ abstract class FamilyMemberHistory
 
 @freezed
 abstract class Procedure with _$Procedure implements Resource {
-  const factory Procedure({
+  factory Procedure({
     @JsonKey(defaultValue: 'Procedure') String resourceType,
     Id id,
     Meta meta,
@@ -201,7 +201,7 @@ abstract class Procedure with _$Procedure implements Resource {
 abstract class ClinicalImpression
     with _$ClinicalImpression
     implements Resource {
-  const factory ClinicalImpression({
+  factory ClinicalImpression({
     @JsonKey(defaultValue: 'ClinicalImpression') String resourceType,
     Id id,
     Meta meta,
@@ -246,7 +246,7 @@ abstract class ClinicalImpression
 
 @freezed
 abstract class RiskAssessment with _$RiskAssessment implements Resource {
-  const factory RiskAssessment({
+  factory RiskAssessment({
     @JsonKey(defaultValue: 'RiskAssessment') String resourceType,
     Id id,
     Meta meta,
@@ -279,7 +279,7 @@ abstract class RiskAssessment with _$RiskAssessment implements Resource {
 abstract class AllergyIntolerance
     with _$AllergyIntolerance
     implements Resource {
-  const factory AllergyIntolerance({
+  factory AllergyIntolerance({
     @JsonKey(defaultValue: 'AllergyIntolerance') String resourceType,
     Id id,
     Meta meta,
@@ -323,7 +323,7 @@ abstract class AllergyIntolerance
 
 @freezed
 abstract class ConditionStage with _$ConditionStage {
-  const factory ConditionStage({
+  factory ConditionStage({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     @JsonKey(name: 'fhir_comments') List<String> fhirComments,
@@ -338,7 +338,7 @@ abstract class ConditionStage with _$ConditionStage {
 
 @freezed
 abstract class ConditionEvidence with _$ConditionEvidence {
-  const factory ConditionEvidence({
+  factory ConditionEvidence({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -353,7 +353,7 @@ abstract class ConditionEvidence with _$ConditionEvidence {
 
 @freezed
 abstract class DetectedIssueMitigation with _$DetectedIssueMitigation {
-  const factory DetectedIssueMitigation({
+  factory DetectedIssueMitigation({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -369,7 +369,7 @@ abstract class DetectedIssueMitigation with _$DetectedIssueMitigation {
 @freezed
 abstract class FamilyMemberHistoryCondition
     with _$FamilyMemberHistoryCondition {
-  const factory FamilyMemberHistoryCondition({
+  factory FamilyMemberHistoryCondition({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -389,7 +389,7 @@ abstract class FamilyMemberHistoryCondition
 
 @freezed
 abstract class ProcedurePerformer with _$ProcedurePerformer {
-  const factory ProcedurePerformer({
+  factory ProcedurePerformer({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -404,7 +404,7 @@ abstract class ProcedurePerformer with _$ProcedurePerformer {
 
 @freezed
 abstract class ProcedureFocalDevice with _$ProcedureFocalDevice {
-  const factory ProcedureFocalDevice({
+  factory ProcedureFocalDevice({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -419,7 +419,7 @@ abstract class ProcedureFocalDevice with _$ProcedureFocalDevice {
 @freezed
 abstract class ClinicalImpressionInvestigations
     with _$ClinicalImpressionInvestigations {
-  const factory ClinicalImpressionInvestigations({
+  factory ClinicalImpressionInvestigations({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -434,7 +434,7 @@ abstract class ClinicalImpressionInvestigations
 
 @freezed
 abstract class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
-  const factory ClinicalImpressionFinding({
+  factory ClinicalImpressionFinding({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -448,7 +448,7 @@ abstract class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
 
 @freezed
 abstract class ClinicalImpressionRuledOut with _$ClinicalImpressionRuledOut {
-  const factory ClinicalImpressionRuledOut({
+  factory ClinicalImpressionRuledOut({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -462,7 +462,7 @@ abstract class ClinicalImpressionRuledOut with _$ClinicalImpressionRuledOut {
 
 @freezed
 abstract class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
-  const factory RiskAssessmentPrediction({
+  factory RiskAssessmentPrediction({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -485,7 +485,7 @@ abstract class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
 
 @freezed
 abstract class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
-  const factory AllergyIntoleranceReaction({
+  factory AllergyIntoleranceReaction({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,

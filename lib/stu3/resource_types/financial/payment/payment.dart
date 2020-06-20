@@ -7,11 +7,10 @@ part 'payment.g.dart';
 
 @freezed
 abstract class PaymentNotice with _$PaymentNotice implements Resource {
-  const factory PaymentNotice({
+  factory PaymentNotice({
     @JsonKey(required: true, defaultValue: 'PaymentNotice')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -42,11 +41,10 @@ abstract class PaymentNotice with _$PaymentNotice implements Resource {
 abstract class PaymentReconciliation
     with _$PaymentReconciliation
     implements Resource {
-  const factory PaymentReconciliation({
+  factory PaymentReconciliation({
     @JsonKey(required: true, defaultValue: 'PaymentReconciliation')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -79,7 +77,7 @@ abstract class PaymentReconciliation
 
 @freezed
 abstract class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
-  const factory PaymentReconciliationDetail({
+  factory PaymentReconciliationDetail({
     @JsonKey(required: true) CodeableConcept type,
     Reference request,
     Reference response,
@@ -96,7 +94,7 @@ abstract class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
 @freezed
 abstract class PaymentReconciliationProcessNote
     with _$PaymentReconciliationProcessNote {
-  const factory PaymentReconciliationProcessNote({
+  factory PaymentReconciliationProcessNote({
     CodeableConcept type,
     String text,
     @JsonKey(name: '_text') Element textElement,

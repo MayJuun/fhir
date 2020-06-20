@@ -9,7 +9,7 @@ part 'billing.g.dart';
 
 @freezed
 abstract class Account with _$Account implements Resource {
-  const factory Account({
+  factory Account({
     @JsonKey(defaultValue: 'Account') String resourceType,
     Id id,
     Meta meta,
@@ -43,7 +43,7 @@ abstract class Account with _$Account implements Resource {
 
 @freezed
 abstract class Claim with _$Claim implements Resource {
-  const factory Claim({
+  factory Claim({
     @JsonKey(defaultValue: 'Claim') String resourceType,
     Id id,
     Meta meta,
@@ -95,7 +95,7 @@ abstract class Claim with _$Claim implements Resource {
 
 @freezed
 abstract class ClaimPayee with _$ClaimPayee {
-  const factory ClaimPayee({
+  factory ClaimPayee({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -111,7 +111,7 @@ abstract class ClaimPayee with _$ClaimPayee {
 
 @freezed
 abstract class ClaimDiagnosis with _$ClaimDiagnosis {
-  const factory ClaimDiagnosis({
+  factory ClaimDiagnosis({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -126,7 +126,7 @@ abstract class ClaimDiagnosis with _$ClaimDiagnosis {
 
 @freezed
 abstract class ClaimCoverage with _$ClaimCoverage {
-  const factory ClaimCoverage({
+  factory ClaimCoverage({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -146,7 +146,7 @@ abstract class ClaimCoverage with _$ClaimCoverage {
 
 @freezed
 abstract class ClaimItem with _$ClaimItem {
-  const factory ClaimItem({
+  factory ClaimItem({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -178,7 +178,7 @@ abstract class ClaimItem with _$ClaimItem {
 
 @freezed
 abstract class ClaimDetail with _$ClaimDetail {
-  const factory ClaimDetail({
+  factory ClaimDetail({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -202,7 +202,7 @@ abstract class ClaimDetail with _$ClaimDetail {
 
 @freezed
 abstract class ClaimSubDetail with _$ClaimSubDetail {
-  const factory ClaimSubDetail({
+  factory ClaimSubDetail({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -225,7 +225,7 @@ abstract class ClaimSubDetail with _$ClaimSubDetail {
 
 @freezed
 abstract class ClaimProsthesis with _$ClaimProsthesis {
-  const factory ClaimProsthesis({
+  factory ClaimProsthesis({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -240,7 +240,7 @@ abstract class ClaimProsthesis with _$ClaimProsthesis {
 
 @freezed
 abstract class ClaimMissingTeeth with _$ClaimMissingTeeth {
-  const factory ClaimMissingTeeth({
+  factory ClaimMissingTeeth({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -255,7 +255,7 @@ abstract class ClaimMissingTeeth with _$ClaimMissingTeeth {
 
 @freezed
 abstract class ClaimResponse with _$ClaimResponse implements Resource {
-  const factory ClaimResponse({
+  factory ClaimResponse({
     @JsonKey(defaultValue: 'ClaimResponse') String resourceType,
     Id id,
     Meta meta,
@@ -306,7 +306,7 @@ abstract class ClaimResponse with _$ClaimResponse implements Resource {
 
 @freezed
 abstract class ClaimResponseItem with _$ClaimResponseItem {
-  const factory ClaimResponseItem({
+  factory ClaimResponseItem({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -324,7 +324,7 @@ abstract class ClaimResponseItem with _$ClaimResponseItem {
 
 @freezed
 abstract class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
-  const factory ClaimResponseAdjudication({
+  factory ClaimResponseAdjudication({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -340,7 +340,7 @@ abstract class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
 
 @freezed
 abstract class ItemDetail with _$ItemDetail {
-  const factory ItemDetail({
+  factory ItemDetail({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -355,7 +355,7 @@ abstract class ItemDetail with _$ItemDetail {
 
 @freezed
 abstract class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
-  const factory ClaimResponseSubDetail({
+  factory ClaimResponseSubDetail({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -369,7 +369,7 @@ abstract class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
 
 @freezed
 abstract class ClaimResponseAddItem with _$ClaimResponseAddItem {
-  const factory ClaimResponseAddItem({
+  factory ClaimResponseAddItem({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -387,7 +387,7 @@ abstract class ClaimResponseAddItem with _$ClaimResponseAddItem {
 
 @freezed
 abstract class AddItemDetail with _$AddItemDetail {
-  const factory AddItemDetail({
+  factory AddItemDetail({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -402,7 +402,7 @@ abstract class AddItemDetail with _$AddItemDetail {
 
 @freezed
 abstract class ClaimResponseError with _$ClaimResponseError {
-  const factory ClaimResponseError({
+  factory ClaimResponseError({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -418,7 +418,7 @@ abstract class ClaimResponseError with _$ClaimResponseError {
 
 @freezed
 abstract class ClaimResponseNote with _$ClaimResponseNote {
-  const factory ClaimResponseNote({
+  factory ClaimResponseNote({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -436,7 +436,7 @@ abstract class ClaimResponseNote with _$ClaimResponseNote {
 
 @freezed
 abstract class ClaimResponseCoverage with _$ClaimResponseCoverage {
-  const factory ClaimResponseCoverage({
+  factory ClaimResponseCoverage({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,

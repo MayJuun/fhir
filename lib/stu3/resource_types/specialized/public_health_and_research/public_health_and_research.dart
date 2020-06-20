@@ -8,11 +8,10 @@ part 'public_health_and_research.g.dart';
 
 @freezed
 abstract class ResearchStudy with _$ResearchStudy implements Resource {
-  const factory ResearchStudy({
+  factory ResearchStudy({
     @JsonKey(required: true, defaultValue: 'ResearchStudy')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -52,7 +51,7 @@ abstract class ResearchStudy with _$ResearchStudy implements Resource {
 
 @freezed
 abstract class ResearchStudyArm with _$ResearchStudyArm {
-  const factory ResearchStudyArm({
+  factory ResearchStudyArm({
     String name,
     CodeableConcept code,
     String description,
@@ -65,11 +64,10 @@ abstract class ResearchStudyArm with _$ResearchStudyArm {
 
 @freezed
 abstract class ResearchSubject with _$ResearchSubject implements Resource {
-  const factory ResearchSubject({
+  factory ResearchSubject({
     @JsonKey(required: true, defaultValue: 'ResearchSubject')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

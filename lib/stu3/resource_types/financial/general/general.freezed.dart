@@ -492,7 +492,7 @@ class __$AccountCopyWithImpl<$Res> extends _$AccountCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Account implements _Account {
-  const _$_Account(
+  _$_Account(
       {@required
       @JsonKey(required: true, defaultValue: 'Account')
           this.resourceType,
@@ -697,7 +697,7 @@ class _$_Account implements _Account {
 }
 
 abstract class _Account implements Account {
-  const factory _Account(
+  factory _Account(
       {@required
       @JsonKey(required: true, defaultValue: 'Account')
           String resourceType,
@@ -925,7 +925,7 @@ class __$AccountCoverageCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_AccountCoverage implements _AccountCoverage {
-  const _$_AccountCoverage(
+  _$_AccountCoverage(
       {@JsonKey(required: true) this.coverage,
       this.priority,
       @JsonKey(name: '_priority') this.priorityElement});
@@ -980,7 +980,7 @@ class _$_AccountCoverage implements _AccountCoverage {
 }
 
 abstract class _AccountCoverage implements AccountCoverage {
-  const factory _AccountCoverage(
+  factory _AccountCoverage(
           {@JsonKey(required: true) Reference coverage,
           PositiveInt priority,
           @JsonKey(name: '_priority') Element priorityElement}) =
@@ -1158,7 +1158,7 @@ class __$AccountGuarantorCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_AccountGuarantor implements _AccountGuarantor {
-  const _$_AccountGuarantor(
+  _$_AccountGuarantor(
       {@JsonKey(required: true) this.party,
       this.onHold,
       this.period,
@@ -1217,7 +1217,7 @@ class _$_AccountGuarantor implements _AccountGuarantor {
 }
 
 abstract class _AccountGuarantor implements AccountGuarantor {
-  const factory _AccountGuarantor(
+  factory _AccountGuarantor(
       {@JsonKey(required: true) Reference party,
       Boolean onHold,
       Period period,
@@ -2063,7 +2063,7 @@ class __$ChargeItemCopyWithImpl<$Res> extends _$ChargeItemCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ChargeItem implements _ChargeItem {
-  const _$_ChargeItem(
+  _$_ChargeItem(
       {@required
       @JsonKey(required: true, defaultValue: 'ChargeItem')
           this.resourceType,
@@ -2361,7 +2361,7 @@ class _$_ChargeItem implements _ChargeItem {
 }
 
 abstract class _ChargeItem implements ChargeItem {
-  const factory _ChargeItem(
+  factory _ChargeItem(
       {@required
       @JsonKey(required: true, defaultValue: 'ChargeItem')
           String resourceType,
@@ -2630,8 +2630,7 @@ class __$ChargeItemParticipantCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ChargeItemParticipant implements _ChargeItemParticipant {
-  const _$_ChargeItemParticipant(
-      {this.role, @JsonKey(required: true) this.actor});
+  _$_ChargeItemParticipant({this.role, @JsonKey(required: true) this.actor});
 
   factory _$_ChargeItemParticipant.fromJson(Map<String, dynamic> json) =>
       _$_$_ChargeItemParticipantFromJson(json);
@@ -2675,7 +2674,7 @@ class _$_ChargeItemParticipant implements _ChargeItemParticipant {
 }
 
 abstract class _ChargeItemParticipant implements ChargeItemParticipant {
-  const factory _ChargeItemParticipant(
+  factory _ChargeItemParticipant(
       {CodeableConcept role,
       @JsonKey(required: true) Reference actor}) = _$_ChargeItemParticipant;
 
@@ -3300,7 +3299,7 @@ class __$ContractCopyWithImpl<$Res> extends _$ContractCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Contract implements _Contract {
-  const _$_Contract(
+  _$_Contract(
       {@required
       @JsonKey(required: true, defaultValue: 'Contract')
           this.resourceType,
@@ -3560,7 +3559,7 @@ class _$_Contract implements _Contract {
 }
 
 abstract class _Contract implements Contract {
-  const factory _Contract(
+  factory _Contract(
       {@required
       @JsonKey(required: true, defaultValue: 'Contract')
           String resourceType,
@@ -3787,7 +3786,7 @@ class __$ContractAgentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ContractAgent implements _ContractAgent {
-  const _$_ContractAgent({@JsonKey(required: true) this.actor, this.role});
+  _$_ContractAgent({@JsonKey(required: true) this.actor, this.role});
 
   factory _$_ContractAgent.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractAgentFromJson(json);
@@ -3830,7 +3829,7 @@ class _$_ContractAgent implements _ContractAgent {
 }
 
 abstract class _ContractAgent implements ContractAgent {
-  const factory _ContractAgent(
+  factory _ContractAgent(
       {@JsonKey(required: true) Reference actor,
       List<CodeableConcept> role}) = _$_ContractAgent;
 
@@ -3982,7 +3981,7 @@ class __$ContractSignerCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ContractSigner implements _ContractSigner {
-  const _$_ContractSigner(
+  _$_ContractSigner(
       {@JsonKey(required: true) this.type,
       @JsonKey(required: true) this.party,
       @JsonKey(required: true) this.signature});
@@ -4036,7 +4035,7 @@ class _$_ContractSigner implements _ContractSigner {
 }
 
 abstract class _ContractSigner implements ContractSigner {
-  const factory _ContractSigner(
+  factory _ContractSigner(
       {@JsonKey(required: true) Coding type,
       @JsonKey(required: true) Reference party,
       @JsonKey(required: true) List<Signature> signature}) = _$_ContractSigner;
@@ -4388,7 +4387,7 @@ class __$ContractValuedItemCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ContractValuedItem implements _ContractValuedItem {
-  const _$_ContractValuedItem(
+  _$_ContractValuedItem(
       {this.entityCodeableConcept,
       this.entityReference,
       this.identifier,
@@ -4504,7 +4503,7 @@ class _$_ContractValuedItem implements _ContractValuedItem {
 }
 
 abstract class _ContractValuedItem implements ContractValuedItem {
-  const factory _ContractValuedItem(
+  factory _ContractValuedItem(
       {CodeableConcept entityCodeableConcept,
       Reference entityReference,
       Identifier identifier,
@@ -4863,7 +4862,7 @@ class __$ContractTermCopyWithImpl<$Res> extends _$ContractTermCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ContractTerm implements _ContractTerm {
-  const _$_ContractTerm(
+  _$_ContractTerm(
       {this.identifier,
       this.issued,
       this.applies,
@@ -4995,7 +4994,7 @@ class _$_ContractTerm implements _ContractTerm {
 }
 
 abstract class _ContractTerm implements ContractTerm {
-  const factory _ContractTerm(
+  factory _ContractTerm(
       {Identifier identifier,
       FhirDateTime issued,
       Period applies,
@@ -5156,7 +5155,7 @@ class __$ContractAgent1CopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ContractAgent1 implements _ContractAgent1 {
-  const _$_ContractAgent1({@JsonKey(required: true) this.actor, this.role});
+  _$_ContractAgent1({@JsonKey(required: true) this.actor, this.role});
 
   factory _$_ContractAgent1.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractAgent1FromJson(json);
@@ -5199,7 +5198,7 @@ class _$_ContractAgent1 implements _ContractAgent1 {
 }
 
 abstract class _ContractAgent1 implements ContractAgent1 {
-  const factory _ContractAgent1(
+  factory _ContractAgent1(
       {@JsonKey(required: true) Reference actor,
       List<CodeableConcept> role}) = _$_ContractAgent1;
 
@@ -5546,7 +5545,7 @@ class __$ContractValuedItem1CopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ContractValuedItem1 implements _ContractValuedItem1 {
-  const _$_ContractValuedItem1(
+  _$_ContractValuedItem1(
       {this.entityCodeableConcept,
       this.entityReference,
       this.identifier,
@@ -5663,7 +5662,7 @@ class _$_ContractValuedItem1 implements _ContractValuedItem1 {
 }
 
 abstract class _ContractValuedItem1 implements ContractValuedItem1 {
-  const factory _ContractValuedItem1(
+  factory _ContractValuedItem1(
           {CodeableConcept entityCodeableConcept,
           Reference entityReference,
           Identifier identifier,
@@ -5835,7 +5834,7 @@ class __$ContractFriendlyCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ContractFriendly implements _ContractFriendly {
-  const _$_ContractFriendly({this.contentAttachment, this.contentReference});
+  _$_ContractFriendly({this.contentAttachment, this.contentReference});
 
   factory _$_ContractFriendly.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractFriendlyFromJson(json);
@@ -5879,7 +5878,7 @@ class _$_ContractFriendly implements _ContractFriendly {
 }
 
 abstract class _ContractFriendly implements ContractFriendly {
-  const factory _ContractFriendly(
+  factory _ContractFriendly(
       {Attachment contentAttachment,
       Reference contentReference}) = _$_ContractFriendly;
 
@@ -6017,7 +6016,7 @@ class __$ContractLegalCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ContractLegal implements _ContractLegal {
-  const _$_ContractLegal({this.contentAttachment, this.contentReference});
+  _$_ContractLegal({this.contentAttachment, this.contentReference});
 
   factory _$_ContractLegal.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractLegalFromJson(json);
@@ -6061,7 +6060,7 @@ class _$_ContractLegal implements _ContractLegal {
 }
 
 abstract class _ContractLegal implements ContractLegal {
-  const factory _ContractLegal(
+  factory _ContractLegal(
       {Attachment contentAttachment,
       Reference contentReference}) = _$_ContractLegal;
 
@@ -6197,7 +6196,7 @@ class __$ContractRuleCopyWithImpl<$Res> extends _$ContractRuleCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ContractRule implements _ContractRule {
-  const _$_ContractRule({this.contentAttachment, this.contentReference});
+  _$_ContractRule({this.contentAttachment, this.contentReference});
 
   factory _$_ContractRule.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractRuleFromJson(json);
@@ -6241,7 +6240,7 @@ class _$_ContractRule implements _ContractRule {
 }
 
 abstract class _ContractRule implements ContractRule {
-  const factory _ContractRule(
+  factory _ContractRule(
       {Attachment contentAttachment,
       Reference contentReference}) = _$_ContractRule;
 
@@ -7355,7 +7354,7 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ExplanationOfBenefit implements _ExplanationOfBenefit {
-  const _$_ExplanationOfBenefit(
+  _$_ExplanationOfBenefit(
       {@required
       @JsonKey(required: true, defaultValue: 'ExplanationOfBenefit')
           this.resourceType,
@@ -7707,7 +7706,7 @@ class _$_ExplanationOfBenefit implements _ExplanationOfBenefit {
 }
 
 abstract class _ExplanationOfBenefit implements ExplanationOfBenefit {
-  const factory _ExplanationOfBenefit(
+  factory _ExplanationOfBenefit(
       {@required
       @JsonKey(required: true, defaultValue: 'ExplanationOfBenefit')
           String resourceType,
@@ -8035,7 +8034,7 @@ class __$ExplanationOfBenefitRelatedCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ExplanationOfBenefitRelated implements _ExplanationOfBenefitRelated {
-  const _$_ExplanationOfBenefitRelated(
+  _$_ExplanationOfBenefitRelated(
       {this.claim, this.relationship, this.reference});
 
   factory _$_ExplanationOfBenefitRelated.fromJson(Map<String, dynamic> json) =>
@@ -8087,7 +8086,7 @@ class _$_ExplanationOfBenefitRelated implements _ExplanationOfBenefitRelated {
 
 abstract class _ExplanationOfBenefitRelated
     implements ExplanationOfBenefitRelated {
-  const factory _ExplanationOfBenefitRelated(
+  factory _ExplanationOfBenefitRelated(
       {Reference claim,
       CodeableConcept relationship,
       Identifier reference}) = _$_ExplanationOfBenefitRelated;
@@ -8362,7 +8361,7 @@ class __$ExplanationOfBenefitPayeeCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ExplanationOfBenefitPayee implements _ExplanationOfBenefitPayee {
-  const _$_ExplanationOfBenefitPayee(
+  _$_ExplanationOfBenefitPayee(
       {this.type,
       @required
       @JsonKey(required: true, defaultValue: 'ExplanationOfBenefitPayee')
@@ -8474,7 +8473,7 @@ class _$_ExplanationOfBenefitPayee implements _ExplanationOfBenefitPayee {
 }
 
 abstract class _ExplanationOfBenefitPayee implements ExplanationOfBenefitPayee {
-  const factory _ExplanationOfBenefitPayee(
+  factory _ExplanationOfBenefitPayee(
       {CodeableConcept type,
       @required
       @JsonKey(required: true, defaultValue: 'ExplanationOfBenefitPayee')
@@ -8890,7 +8889,7 @@ class __$ExplanationOfBenefitInformationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ExplanationOfBenefitInformation
     implements _ExplanationOfBenefitInformation {
-  const _$_ExplanationOfBenefitInformation(
+  _$_ExplanationOfBenefitInformation(
       {this.sequence,
       @JsonKey(required: true) this.category,
       this.code,
@@ -9018,7 +9017,7 @@ class _$_ExplanationOfBenefitInformation
 
 abstract class _ExplanationOfBenefitInformation
     implements ExplanationOfBenefitInformation {
-  const factory _ExplanationOfBenefitInformation(
+  factory _ExplanationOfBenefitInformation(
           {PositiveInt sequence,
           @JsonKey(required: true) CodeableConcept category,
           CodeableConcept code,
@@ -9299,7 +9298,7 @@ class __$ExplanationOfBenefitCareTeamCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ExplanationOfBenefitCareTeam implements _ExplanationOfBenefitCareTeam {
-  const _$_ExplanationOfBenefitCareTeam(
+  _$_ExplanationOfBenefitCareTeam(
       {this.sequence,
       @JsonKey(required: true) this.provider,
       this.responsible,
@@ -9384,7 +9383,7 @@ class _$_ExplanationOfBenefitCareTeam implements _ExplanationOfBenefitCareTeam {
 
 abstract class _ExplanationOfBenefitCareTeam
     implements ExplanationOfBenefitCareTeam {
-  const factory _ExplanationOfBenefitCareTeam(
+  factory _ExplanationOfBenefitCareTeam(
           {PositiveInt sequence,
           @JsonKey(required: true) Reference provider,
           Boolean responsible,
@@ -9626,7 +9625,7 @@ class __$ExplanationOfBenefitDiagnosisCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ExplanationOfBenefitDiagnosis
     implements _ExplanationOfBenefitDiagnosis {
-  const _$_ExplanationOfBenefitDiagnosis(
+  _$_ExplanationOfBenefitDiagnosis(
       {this.sequence,
       this.diagnosisCodeableConcept,
       this.diagnosisReference,
@@ -9705,7 +9704,7 @@ class _$_ExplanationOfBenefitDiagnosis
 
 abstract class _ExplanationOfBenefitDiagnosis
     implements ExplanationOfBenefitDiagnosis {
-  const factory _ExplanationOfBenefitDiagnosis(
+  factory _ExplanationOfBenefitDiagnosis(
           {PositiveInt sequence,
           CodeableConcept diagnosisCodeableConcept,
           Reference diagnosisReference,
@@ -9941,7 +9940,7 @@ class __$ExplanationOfBenefitProcedureCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ExplanationOfBenefitProcedure
     implements _ExplanationOfBenefitProcedure {
-  const _$_ExplanationOfBenefitProcedure(
+  _$_ExplanationOfBenefitProcedure(
       {this.sequence,
       this.date,
       this.procedureCodeableConcept,
@@ -10021,7 +10020,7 @@ class _$_ExplanationOfBenefitProcedure
 
 abstract class _ExplanationOfBenefitProcedure
     implements ExplanationOfBenefitProcedure {
-  const factory _ExplanationOfBenefitProcedure(
+  factory _ExplanationOfBenefitProcedure(
           {PositiveInt sequence,
           FhirDateTime date,
           CodeableConcept procedureCodeableConcept,
@@ -10197,7 +10196,7 @@ class __$ExplanationOfBenefitInsuranceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ExplanationOfBenefitInsurance
     implements _ExplanationOfBenefitInsurance {
-  const _$_ExplanationOfBenefitInsurance(
+  _$_ExplanationOfBenefitInsurance(
       {this.coverage,
       this.preAuthRef,
       @JsonKey(name: '_preAuthRef') this.preAuthRefElement});
@@ -10254,7 +10253,7 @@ class _$_ExplanationOfBenefitInsurance
 
 abstract class _ExplanationOfBenefitInsurance
     implements ExplanationOfBenefitInsurance {
-  const factory _ExplanationOfBenefitInsurance(
+  factory _ExplanationOfBenefitInsurance(
           {Reference coverage,
           List<String> preAuthRef,
           @JsonKey(name: '_preAuthRef') Element preAuthRefElement}) =
@@ -10465,7 +10464,7 @@ class __$ExplanationOfBenefitAccidentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ExplanationOfBenefitAccident implements _ExplanationOfBenefitAccident {
-  const _$_ExplanationOfBenefitAccident(
+  _$_ExplanationOfBenefitAccident(
       {this.date,
       this.type,
       this.locationAddress,
@@ -10533,7 +10532,7 @@ class _$_ExplanationOfBenefitAccident implements _ExplanationOfBenefitAccident {
 
 abstract class _ExplanationOfBenefitAccident
     implements ExplanationOfBenefitAccident {
-  const factory _ExplanationOfBenefitAccident(
+  factory _ExplanationOfBenefitAccident(
           {Date date,
           CodeableConcept type,
           Address locationAddress,
@@ -11298,7 +11297,7 @@ class __$ExplanationOfBenefitItemCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ExplanationOfBenefitItem implements _ExplanationOfBenefitItem {
-  const _$_ExplanationOfBenefitItem(
+  _$_ExplanationOfBenefitItem(
       {this.sequence,
       this.careTeamLinkId,
       this.diagnosisLinkId,
@@ -11549,7 +11548,7 @@ class _$_ExplanationOfBenefitItem implements _ExplanationOfBenefitItem {
 }
 
 abstract class _ExplanationOfBenefitItem implements ExplanationOfBenefitItem {
-  const factory _ExplanationOfBenefitItem(
+  factory _ExplanationOfBenefitItem(
           {PositiveInt sequence,
           List<PositiveInt> careTeamLinkId,
           List<PositiveInt> diagnosisLinkId,
@@ -11858,7 +11857,7 @@ class __$ExplanationOfBenefitAdjudicationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ExplanationOfBenefitAdjudication
     implements _ExplanationOfBenefitAdjudication {
-  const _$_ExplanationOfBenefitAdjudication(
+  _$_ExplanationOfBenefitAdjudication(
       {@JsonKey(required: true) this.category,
       this.reason,
       this.amount,
@@ -11927,7 +11926,7 @@ class _$_ExplanationOfBenefitAdjudication
 
 abstract class _ExplanationOfBenefitAdjudication
     implements ExplanationOfBenefitAdjudication {
-  const factory _ExplanationOfBenefitAdjudication(
+  factory _ExplanationOfBenefitAdjudication(
           {@JsonKey(required: true) CodeableConcept category,
           CodeableConcept reason,
           Money amount,
@@ -12364,7 +12363,7 @@ class __$ExplanationOfBenefitDetailCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ExplanationOfBenefitDetail implements _ExplanationOfBenefitDetail {
-  const _$_ExplanationOfBenefitDetail(
+  _$_ExplanationOfBenefitDetail(
       {this.sequence,
       @JsonKey(required: true) this.type,
       this.revenue,
@@ -12524,7 +12523,7 @@ class _$_ExplanationOfBenefitDetail implements _ExplanationOfBenefitDetail {
 
 abstract class _ExplanationOfBenefitDetail
     implements ExplanationOfBenefitDetail {
-  const factory _ExplanationOfBenefitDetail(
+  factory _ExplanationOfBenefitDetail(
           {PositiveInt sequence,
           @JsonKey(required: true) CodeableConcept type,
           CodeableConcept revenue,
@@ -12993,7 +12992,7 @@ class __$ExplanationOfBenefitSubDetailCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ExplanationOfBenefitSubDetail
     implements _ExplanationOfBenefitSubDetail {
-  const _$_ExplanationOfBenefitSubDetail(
+  _$_ExplanationOfBenefitSubDetail(
       {this.sequence,
       @JsonKey(required: true) this.type,
       this.revenue,
@@ -13147,7 +13146,7 @@ class _$_ExplanationOfBenefitSubDetail
 
 abstract class _ExplanationOfBenefitSubDetail
     implements ExplanationOfBenefitSubDetail {
-  const factory _ExplanationOfBenefitSubDetail(
+  factory _ExplanationOfBenefitSubDetail(
           {PositiveInt sequence,
           @JsonKey(required: true) CodeableConcept type,
           CodeableConcept revenue,
@@ -13504,7 +13503,7 @@ class __$ExplanationOfBenefitAddItemCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ExplanationOfBenefitAddItem implements _ExplanationOfBenefitAddItem {
-  const _$_ExplanationOfBenefitAddItem(
+  _$_ExplanationOfBenefitAddItem(
       {this.sequenceLinkId,
       this.revenue,
       this.category,
@@ -13615,7 +13614,7 @@ class _$_ExplanationOfBenefitAddItem implements _ExplanationOfBenefitAddItem {
 
 abstract class _ExplanationOfBenefitAddItem
     implements ExplanationOfBenefitAddItem {
-  const factory _ExplanationOfBenefitAddItem(
+  factory _ExplanationOfBenefitAddItem(
           {List<PositiveInt> sequenceLinkId,
           CodeableConcept revenue,
           CodeableConcept category,
@@ -13899,7 +13898,7 @@ class __$ExplanationOfBenefitDetail1CopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ExplanationOfBenefitDetail1 implements _ExplanationOfBenefitDetail1 {
-  const _$_ExplanationOfBenefitDetail1(
+  _$_ExplanationOfBenefitDetail1(
       {this.revenue,
       this.category,
       this.service,
@@ -13989,7 +13988,7 @@ class _$_ExplanationOfBenefitDetail1 implements _ExplanationOfBenefitDetail1 {
 
 abstract class _ExplanationOfBenefitDetail1
     implements ExplanationOfBenefitDetail1 {
-  const factory _ExplanationOfBenefitDetail1(
+  factory _ExplanationOfBenefitDetail1(
           {CodeableConcept revenue,
           CodeableConcept category,
           CodeableConcept service,
@@ -14259,7 +14258,7 @@ class __$ExplanationOfBenefitPaymentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ExplanationOfBenefitPayment implements _ExplanationOfBenefitPayment {
-  const _$_ExplanationOfBenefitPayment(
+  _$_ExplanationOfBenefitPayment(
       {this.type,
       this.adjustment,
       this.adjustmentReason,
@@ -14340,7 +14339,7 @@ class _$_ExplanationOfBenefitPayment implements _ExplanationOfBenefitPayment {
 
 abstract class _ExplanationOfBenefitPayment
     implements ExplanationOfBenefitPayment {
-  const factory _ExplanationOfBenefitPayment(
+  factory _ExplanationOfBenefitPayment(
           {CodeableConcept type,
           Money adjustment,
           CodeableConcept adjustmentReason,
@@ -14573,7 +14572,7 @@ class __$ExplanationOfBenefitProcessNoteCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ExplanationOfBenefitProcessNote
     implements _ExplanationOfBenefitProcessNote {
-  const _$_ExplanationOfBenefitProcessNote(
+  _$_ExplanationOfBenefitProcessNote(
       {this.number,
       this.type,
       this.text,
@@ -14649,7 +14648,7 @@ class _$_ExplanationOfBenefitProcessNote
 
 abstract class _ExplanationOfBenefitProcessNote
     implements ExplanationOfBenefitProcessNote {
-  const factory _ExplanationOfBenefitProcessNote(
+  factory _ExplanationOfBenefitProcessNote(
           {PositiveInt number,
           CodeableConcept type,
           String text,
@@ -15002,7 +15001,7 @@ class __$ExplanationOfBenefitBenefitBalanceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ExplanationOfBenefitBenefitBalance
     implements _ExplanationOfBenefitBenefitBalance {
-  const _$_ExplanationOfBenefitBenefitBalance(
+  _$_ExplanationOfBenefitBenefitBalance(
       {@JsonKey(required: true) this.category,
       this.subCategory,
       this.excluded,
@@ -15123,7 +15122,7 @@ class _$_ExplanationOfBenefitBenefitBalance
 
 abstract class _ExplanationOfBenefitBenefitBalance
     implements ExplanationOfBenefitBenefitBalance {
-  const factory _ExplanationOfBenefitBenefitBalance(
+  factory _ExplanationOfBenefitBenefitBalance(
           {@JsonKey(required: true) CodeableConcept category,
           CodeableConcept subCategory,
           Boolean excluded,
@@ -15447,7 +15446,7 @@ class __$ExplanationOfBenefitFinancialCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ExplanationOfBenefitFinancial
     implements _ExplanationOfBenefitFinancial {
-  const _$_ExplanationOfBenefitFinancial(
+  _$_ExplanationOfBenefitFinancial(
       {@JsonKey(required: true) this.type,
       this.allowedUnsignedInt,
       this.allowedString,
@@ -15550,7 +15549,7 @@ class _$_ExplanationOfBenefitFinancial
 
 abstract class _ExplanationOfBenefitFinancial
     implements ExplanationOfBenefitFinancial {
-  const factory _ExplanationOfBenefitFinancial(
+  factory _ExplanationOfBenefitFinancial(
       {@JsonKey(required: true)
           CodeableConcept type,
       UnsignedInt allowedUnsignedInt,

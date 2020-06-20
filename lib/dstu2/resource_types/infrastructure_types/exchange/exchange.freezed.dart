@@ -315,7 +315,7 @@ class __$OperationOutcomeCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_OperationOutcome implements _OperationOutcome {
-  const _$_OperationOutcome(
+  _$_OperationOutcome(
       {@JsonKey(defaultValue: 'OperationOutcome') this.resourceType,
       this.id,
       this.meta,
@@ -441,7 +441,7 @@ class _$_OperationOutcome implements _OperationOutcome {
 }
 
 abstract class _OperationOutcome implements OperationOutcome {
-  const factory _OperationOutcome(
+  factory _OperationOutcome(
           {@JsonKey(defaultValue: 'OperationOutcome') String resourceType,
           Id id,
           Meta meta,
@@ -1033,7 +1033,7 @@ class __$SubscriptionCopyWithImpl<$Res> extends _$SubscriptionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Subscription implements _Subscription {
-  const _$_Subscription(
+  _$_Subscription(
       {@JsonKey(defaultValue: 'Subscription')
           this.resourceType,
       this.id,
@@ -1259,7 +1259,7 @@ class _$_Subscription implements _Subscription {
 }
 
 abstract class _Subscription implements Subscription {
-  const factory _Subscription(
+  factory _Subscription(
       {@JsonKey(defaultValue: 'Subscription')
           String resourceType,
       Id id,
@@ -1858,7 +1858,7 @@ class __$MessageHeaderCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MessageHeader implements _MessageHeader {
-  const _$_MessageHeader(
+  _$_MessageHeader(
       {@JsonKey(defaultValue: 'MessageHeader') this.resourceType,
       this.id,
       this.meta,
@@ -2046,7 +2046,7 @@ class _$_MessageHeader implements _MessageHeader {
 }
 
 abstract class _MessageHeader implements MessageHeader {
-  const factory _MessageHeader(
+  factory _MessageHeader(
       {@JsonKey(defaultValue: 'MessageHeader') String resourceType,
       Id id,
       Meta meta,
@@ -2335,7 +2335,7 @@ class __$ParametersCopyWithImpl<$Res> extends _$ParametersCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Parameters implements _Parameters {
-  const _$_Parameters(
+  _$_Parameters(
       {@JsonKey(defaultValue: 'Parameters') this.resourceType,
       this.id,
       this.meta,
@@ -2424,7 +2424,7 @@ class _$_Parameters implements _Parameters {
 }
 
 abstract class _Parameters implements Parameters {
-  const factory _Parameters(
+  factory _Parameters(
       {@JsonKey(defaultValue: 'Parameters') String resourceType,
       Id id,
       Meta meta,
@@ -3354,7 +3354,7 @@ class __$ParametersParameterCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ParametersParameter implements _ParametersParameter {
-  const _$_ParametersParameter(
+  _$_ParametersParameter(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3644,7 +3644,7 @@ class _$_ParametersParameter implements _ParametersParameter {
 }
 
 abstract class _ParametersParameter implements ParametersParameter {
-  const factory _ParametersParameter(
+  factory _ParametersParameter(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -4050,7 +4050,7 @@ class __$OperationOutcomeIssueCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_OperationOutcomeIssue implements _OperationOutcomeIssue {
-  const _$_OperationOutcomeIssue(
+  _$_OperationOutcomeIssue(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -4165,7 +4165,7 @@ class _$_OperationOutcomeIssue implements _OperationOutcomeIssue {
 }
 
 abstract class _OperationOutcomeIssue implements OperationOutcomeIssue {
-  const factory _OperationOutcomeIssue(
+  factory _OperationOutcomeIssue(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -4495,7 +4495,7 @@ class __$SubscriptionChannelCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_SubscriptionChannel implements _SubscriptionChannel {
-  const _$_SubscriptionChannel(
+  _$_SubscriptionChannel(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -4620,7 +4620,7 @@ class _$_SubscriptionChannel implements _SubscriptionChannel {
 }
 
 abstract class _SubscriptionChannel implements SubscriptionChannel {
-  const factory _SubscriptionChannel(
+  factory _SubscriptionChannel(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -4915,7 +4915,7 @@ class __$MessageHeaderResponseCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MessageHeaderResponse implements _MessageHeaderResponse {
-  const _$_MessageHeaderResponse(
+  _$_MessageHeaderResponse(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -5016,7 +5016,7 @@ class _$_MessageHeaderResponse implements _MessageHeaderResponse {
 }
 
 abstract class _MessageHeaderResponse implements MessageHeaderResponse {
-  const factory _MessageHeaderResponse(
+  factory _MessageHeaderResponse(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -5351,7 +5351,7 @@ class __$MessageHeaderSourceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MessageHeaderSource implements _MessageHeaderSource {
-  const _$_MessageHeaderSource(
+  _$_MessageHeaderSource(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -5473,7 +5473,7 @@ class _$_MessageHeaderSource implements _MessageHeaderSource {
 }
 
 abstract class _MessageHeaderSource implements MessageHeaderSource {
-  const factory _MessageHeaderSource(
+  factory _MessageHeaderSource(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -5745,7 +5745,7 @@ class __$MessageHeaderDestinationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MessageHeaderDestination implements _MessageHeaderDestination {
-  const _$_MessageHeaderDestination(
+  _$_MessageHeaderDestination(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -5836,7 +5836,7 @@ class _$_MessageHeaderDestination implements _MessageHeaderDestination {
 }
 
 abstract class _MessageHeaderDestination implements MessageHeaderDestination {
-  const factory _MessageHeaderDestination(
+  factory _MessageHeaderDestination(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,

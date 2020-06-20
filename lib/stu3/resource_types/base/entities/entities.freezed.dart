@@ -670,7 +670,7 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Device implements _Device {
-  const _$_Device(
+  _$_Device(
       {@required
       @JsonKey(required: true, defaultValue: 'Device')
           this.resourceType,
@@ -939,7 +939,7 @@ class _$_Device implements _Device {
 }
 
 abstract class _Device implements Device {
-  const factory _Device(
+  factory _Device(
       {@required
       @JsonKey(required: true, defaultValue: 'Device')
           String resourceType,
@@ -1408,7 +1408,7 @@ class __$DeviceUdiCopyWithImpl<$Res> extends _$DeviceUdiCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DeviceUdi implements _DeviceUdi {
-  const _$_DeviceUdi(
+  _$_DeviceUdi(
       {this.deviceIdentifier,
       this.name,
       this.jurisdiction,
@@ -1545,7 +1545,7 @@ class _$_DeviceUdi implements _DeviceUdi {
 }
 
 abstract class _DeviceUdi implements DeviceUdi {
-  const factory _DeviceUdi(
+  factory _DeviceUdi(
       {String deviceIdentifier,
       String name,
       String jurisdiction,
@@ -2082,7 +2082,7 @@ class __$DeviceComponentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DeviceComponent implements _DeviceComponent {
-  const _$_DeviceComponent(
+  _$_DeviceComponent(
       {@required
       @JsonKey(required: true, defaultValue: 'DeviceComponent')
           this.resourceType,
@@ -2273,7 +2273,7 @@ class _$_DeviceComponent implements _DeviceComponent {
 }
 
 abstract class _DeviceComponent implements DeviceComponent {
-  const factory _DeviceComponent(
+  factory _DeviceComponent(
       {@required
       @JsonKey(required: true, defaultValue: 'DeviceComponent')
           String resourceType,
@@ -2536,7 +2536,7 @@ class __$DeviceComponentProductionSpecificationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_DeviceComponentProductionSpecification
     implements _DeviceComponentProductionSpecification {
-  const _$_DeviceComponentProductionSpecification(
+  _$_DeviceComponentProductionSpecification(
       {this.specType,
       this.componentId,
       this.productionSpec,
@@ -2601,7 +2601,7 @@ class _$_DeviceComponentProductionSpecification
 
 abstract class _DeviceComponentProductionSpecification
     implements DeviceComponentProductionSpecification {
-  const factory _DeviceComponentProductionSpecification(
+  factory _DeviceComponentProductionSpecification(
           {CodeableConcept specType,
           Identifier componentId,
           String productionSpec,
@@ -3130,7 +3130,7 @@ class __$DeviceMetricCopyWithImpl<$Res> extends _$DeviceMetricCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DeviceMetric implements _DeviceMetric {
-  const _$_DeviceMetric(
+  _$_DeviceMetric(
       {@required
       @JsonKey(required: true, defaultValue: 'DeviceMetric')
           this.resourceType,
@@ -3332,7 +3332,7 @@ class _$_DeviceMetric implements _DeviceMetric {
 }
 
 abstract class _DeviceMetric implements DeviceMetric {
-  const factory _DeviceMetric(
+  factory _DeviceMetric(
       {@required
       @JsonKey(required: true, defaultValue: 'DeviceMetric')
           String resourceType,
@@ -3627,7 +3627,7 @@ class __$DeviceMetricCalibrationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DeviceMetricCalibration implements _DeviceMetricCalibration {
-  const _$_DeviceMetricCalibration(
+  _$_DeviceMetricCalibration(
       {@JsonKey(unknownEnumValue: CalibrationType.unknown) this.type,
       @JsonKey(unknownEnumValue: CalibrationState.unknown) this.state,
       this.time,
@@ -3704,7 +3704,7 @@ class _$_DeviceMetricCalibration implements _DeviceMetricCalibration {
 }
 
 abstract class _DeviceMetricCalibration implements DeviceMetricCalibration {
-  const factory _DeviceMetricCalibration(
+  factory _DeviceMetricCalibration(
       {@JsonKey(unknownEnumValue: CalibrationType.unknown)
           CalibrationType type,
       @JsonKey(unknownEnumValue: CalibrationState.unknown)
@@ -4245,7 +4245,7 @@ class __$EndpointCopyWithImpl<$Res> extends _$EndpointCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Endpoint implements _Endpoint {
-  const _$_Endpoint(
+  _$_Endpoint(
       {@required
       @JsonKey(required: true, defaultValue: 'Endpoint')
           this.resourceType,
@@ -4466,7 +4466,7 @@ class _$_Endpoint implements _Endpoint {
 }
 
 abstract class _Endpoint implements Endpoint {
-  const factory _Endpoint(
+  factory _Endpoint(
       {@required
       @JsonKey(required: true, defaultValue: 'Endpoint')
           String resourceType,
@@ -5353,7 +5353,7 @@ class __$HealthcareServiceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_HealthcareService implements _HealthcareService {
-  const _$_HealthcareService(
+  _$_HealthcareService(
       {@required
       @JsonKey(required: true, defaultValue: 'HealthcareService')
           this.resourceType,
@@ -5654,7 +5654,7 @@ class _$_HealthcareService implements _HealthcareService {
 }
 
 abstract class _HealthcareService implements HealthcareService {
-  const factory _HealthcareService(
+  factory _HealthcareService(
       {@required
       @JsonKey(required: true, defaultValue: 'HealthcareService')
           String resourceType,
@@ -6047,7 +6047,7 @@ class __$HealthcareServiceAvailableTimeCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_HealthcareServiceAvailableTime
     implements _HealthcareServiceAvailableTime {
-  const _$_HealthcareServiceAvailableTime(
+  _$_HealthcareServiceAvailableTime(
       {this.daysOfWeek,
       this.allDay,
       this.availableStartTime,
@@ -6144,7 +6144,7 @@ class _$_HealthcareServiceAvailableTime
 
 abstract class _HealthcareServiceAvailableTime
     implements HealthcareServiceAvailableTime {
-  const factory _HealthcareServiceAvailableTime(
+  factory _HealthcareServiceAvailableTime(
       {List<AvailableTimeDaysOfWeek> daysOfWeek,
       Boolean allDay,
       Time availableStartTime,
@@ -6329,7 +6329,7 @@ class __$HealthcareServiceNotAvailableCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_HealthcareServiceNotAvailable
     implements _HealthcareServiceNotAvailable {
-  const _$_HealthcareServiceNotAvailable(
+  _$_HealthcareServiceNotAvailable(
       {this.description,
       this.during,
       @JsonKey(name: '_description') this.descriptionElement});
@@ -6385,7 +6385,7 @@ class _$_HealthcareServiceNotAvailable
 
 abstract class _HealthcareServiceNotAvailable
     implements HealthcareServiceNotAvailable {
-  const factory _HealthcareServiceNotAvailable(
+  factory _HealthcareServiceNotAvailable(
           {String description,
           Period during,
           @JsonKey(name: '_description') Element descriptionElement}) =
@@ -6996,7 +6996,7 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Location implements _Location {
-  const _$_Location(
+  _$_Location(
       {@required
       @JsonKey(required: true, defaultValue: 'Location')
           this.resourceType,
@@ -7236,7 +7236,7 @@ class _$_Location implements _Location {
 }
 
 abstract class _Location implements Location {
-  const factory _Location(
+  factory _Location(
       {@required
       @JsonKey(required: true, defaultValue: 'Location')
           String resourceType,
@@ -7534,7 +7534,7 @@ class __$LocationPositionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_LocationPosition implements _LocationPosition {
-  const _$_LocationPosition(
+  _$_LocationPosition(
       {this.longitude,
       this.latitude,
       this.altitude,
@@ -7611,7 +7611,7 @@ class _$_LocationPosition implements _LocationPosition {
 }
 
 abstract class _LocationPosition implements LocationPosition {
-  const factory _LocationPosition(
+  factory _LocationPosition(
           {Decimal longitude,
           Decimal latitude,
           Decimal altitude,
@@ -8053,7 +8053,7 @@ class __$OrganizationCopyWithImpl<$Res> extends _$OrganizationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Organization implements _Organization {
-  const _$_Organization(
+  _$_Organization(
       {@required
       @JsonKey(required: true, defaultValue: 'Organization')
           this.resourceType,
@@ -8243,7 +8243,7 @@ class _$_Organization implements _Organization {
 }
 
 abstract class _Organization implements Organization {
-  const factory _Organization(
+  factory _Organization(
       {@required
       @JsonKey(required: true, defaultValue: 'Organization')
           String resourceType,
@@ -8482,8 +8482,7 @@ class __$OrganizationContactCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_OrganizationContact implements _OrganizationContact {
-  const _$_OrganizationContact(
-      {this.purpose, this.name, this.telecom, this.address});
+  _$_OrganizationContact({this.purpose, this.name, this.telecom, this.address});
 
   factory _$_OrganizationContact.fromJson(Map<String, dynamic> json) =>
       _$_$_OrganizationContactFromJson(json);
@@ -8538,7 +8537,7 @@ class _$_OrganizationContact implements _OrganizationContact {
 }
 
 abstract class _OrganizationContact implements OrganizationContact {
-  const factory _OrganizationContact(
+  factory _OrganizationContact(
       {CodeableConcept purpose,
       HumanName name,
       List<ContactPoint> telecom,
@@ -8914,7 +8913,7 @@ class __$SubstanceCopyWithImpl<$Res> extends _$SubstanceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Substance implements _Substance {
-  const _$_Substance(
+  _$_Substance(
       {@required
       @JsonKey(required: true, defaultValue: 'Substance')
           this.resourceType,
@@ -9081,7 +9080,7 @@ class _$_Substance implements _Substance {
 }
 
 abstract class _Substance implements Substance {
-  const factory _Substance(
+  factory _Substance(
       {@required
       @JsonKey(required: true, defaultValue: 'Substance')
           String resourceType,
@@ -9315,7 +9314,7 @@ class __$SubstanceInstanceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_SubstanceInstance implements _SubstanceInstance {
-  const _$_SubstanceInstance(
+  _$_SubstanceInstance(
       {this.identifier,
       this.expiry,
       this.quantity,
@@ -9375,7 +9374,7 @@ class _$_SubstanceInstance implements _SubstanceInstance {
 }
 
 abstract class _SubstanceInstance implements SubstanceInstance {
-  const factory _SubstanceInstance(
+  factory _SubstanceInstance(
       {Identifier identifier,
       FhirDateTime expiry,
       Quantity quantity,
@@ -9548,7 +9547,7 @@ class __$SubstanceIngredientCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_SubstanceIngredient implements _SubstanceIngredient {
-  const _$_SubstanceIngredient(
+  _$_SubstanceIngredient(
       {this.quantity, this.substanceCodeableConcept, this.substanceReference});
 
   factory _$_SubstanceIngredient.fromJson(Map<String, dynamic> json) =>
@@ -9602,7 +9601,7 @@ class _$_SubstanceIngredient implements _SubstanceIngredient {
 }
 
 abstract class _SubstanceIngredient implements SubstanceIngredient {
-  const factory _SubstanceIngredient(
+  factory _SubstanceIngredient(
       {Ratio quantity,
       CodeableConcept substanceCodeableConcept,
       Reference substanceReference}) = _$_SubstanceIngredient;

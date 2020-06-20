@@ -9,11 +9,10 @@ part 'testing.g.dart';
 
 @freezed
 abstract class TestReport with _$TestReport implements Resource {
-  const factory TestReport({
+  factory TestReport({
     @JsonKey(required: true, defaultValue: 'TestReport')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -49,7 +48,7 @@ abstract class TestReport with _$TestReport implements Resource {
 
 @freezed
 abstract class TestReportParticipant with _$TestReportParticipant {
-  const factory TestReportParticipant({
+  factory TestReportParticipant({
     @JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
         TestReportParticipantType type,
     String uri,
@@ -64,7 +63,7 @@ abstract class TestReportParticipant with _$TestReportParticipant {
 
 @freezed
 abstract class TestReportSetup with _$TestReportSetup {
-  const factory TestReportSetup({
+  factory TestReportSetup({
     @JsonKey(required: true) List<TestReportAction> action,
   }) = _TestReportSetup;
   factory TestReportSetup.fromJson(Map<String, dynamic> json) =>
@@ -73,7 +72,7 @@ abstract class TestReportSetup with _$TestReportSetup {
 
 @freezed
 abstract class TestReportAction with _$TestReportAction {
-  const factory TestReportAction({
+  factory TestReportAction({
     TestReportOperation operation,
     @JsonKey(name: 'assert') TestReportAssert assert_,
   }) = _TestReportAction;
@@ -83,7 +82,7 @@ abstract class TestReportAction with _$TestReportAction {
 
 @freezed
 abstract class TestReportOperation with _$TestReportOperation {
-  const factory TestReportOperation({
+  factory TestReportOperation({
     @JsonKey(unknownEnumValue: Result.unknown) Result result,
     String message,
     String detail,
@@ -97,7 +96,7 @@ abstract class TestReportOperation with _$TestReportOperation {
 
 @freezed
 abstract class TestReportAssert with _$TestReportAssert {
-  const factory TestReportAssert({
+  factory TestReportAssert({
     @JsonKey(unknownEnumValue: Result.unknown) Result result,
     String message,
     String detail,
@@ -111,7 +110,7 @@ abstract class TestReportAssert with _$TestReportAssert {
 
 @freezed
 abstract class TestReportTest with _$TestReportTest {
-  const factory TestReportTest({
+  factory TestReportTest({
     String name,
     String description,
     @JsonKey(required: true) List<TestReportAction1> action,
@@ -124,7 +123,7 @@ abstract class TestReportTest with _$TestReportTest {
 
 @freezed
 abstract class TestReportAction1 with _$TestReportAction1 {
-  const factory TestReportAction1({
+  factory TestReportAction1({
     TestReportOperation operation,
     @JsonKey(name: 'assert') TestReportAssert assert_,
   }) = _TestReportAction1;
@@ -134,7 +133,7 @@ abstract class TestReportAction1 with _$TestReportAction1 {
 
 @freezed
 abstract class TestReportTeardown with _$TestReportTeardown {
-  const factory TestReportTeardown({
+  factory TestReportTeardown({
     @JsonKey(required: true) List<TestReportAction2> action,
   }) = _TestReportTeardown;
   factory TestReportTeardown.fromJson(Map<String, dynamic> json) =>
@@ -143,7 +142,7 @@ abstract class TestReportTeardown with _$TestReportTeardown {
 
 @freezed
 abstract class TestReportAction2 with _$TestReportAction2 {
-  const factory TestReportAction2({
+  factory TestReportAction2({
     @JsonKey(required: true) TestReportOperation operation,
   }) = _TestReportAction2;
   factory TestReportAction2.fromJson(Map<String, dynamic> json) =>
@@ -152,11 +151,10 @@ abstract class TestReportAction2 with _$TestReportAction2 {
 
 @freezed
 abstract class TestScript with _$TestScript implements Resource {
-  const factory TestScript({
+  factory TestScript({
     @JsonKey(required: true, defaultValue: 'TestScript')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -209,7 +207,7 @@ abstract class TestScript with _$TestScript implements Resource {
 
 @freezed
 abstract class TestScriptOrigin with _$TestScriptOrigin {
-  const factory TestScriptOrigin({
+  factory TestScriptOrigin({
     Integer index,
     @JsonKey(required: true) Coding profile,
     @JsonKey(name: '_index') Element indexElement,
@@ -220,7 +218,7 @@ abstract class TestScriptOrigin with _$TestScriptOrigin {
 
 @freezed
 abstract class TestScriptDestination with _$TestScriptDestination {
-  const factory TestScriptDestination({
+  factory TestScriptDestination({
     Integer index,
     @JsonKey(required: true) Coding profile,
     @JsonKey(name: '_index') Element indexElement,
@@ -231,7 +229,7 @@ abstract class TestScriptDestination with _$TestScriptDestination {
 
 @freezed
 abstract class TestScriptMetadata with _$TestScriptMetadata {
-  const factory TestScriptMetadata({
+  factory TestScriptMetadata({
     List<TestScriptLink> link,
     @JsonKey(required: true) List<TestScriptCapability> capability,
   }) = _TestScriptMetadata;
@@ -241,7 +239,7 @@ abstract class TestScriptMetadata with _$TestScriptMetadata {
 
 @freezed
 abstract class TestScriptLink with _$TestScriptLink {
-  const factory TestScriptLink({
+  factory TestScriptLink({
     String url,
     String description,
     @JsonKey(name: '_url') Element urlElement,
@@ -253,7 +251,7 @@ abstract class TestScriptLink with _$TestScriptLink {
 
 @freezed
 abstract class TestScriptCapability with _$TestScriptCapability {
-  const factory TestScriptCapability({
+  factory TestScriptCapability({
     Boolean required,
     Boolean validated,
     String description,
@@ -274,7 +272,7 @@ abstract class TestScriptCapability with _$TestScriptCapability {
 
 @freezed
 abstract class TestScriptFixture with _$TestScriptFixture {
-  const factory TestScriptFixture({
+  factory TestScriptFixture({
     Boolean autocreate,
     Boolean autodelete,
     Reference resource,
@@ -287,7 +285,7 @@ abstract class TestScriptFixture with _$TestScriptFixture {
 
 @freezed
 abstract class TestScriptVariable with _$TestScriptVariable {
-  const factory TestScriptVariable({
+  factory TestScriptVariable({
     String name,
     String defaultValue,
     String description,
@@ -311,7 +309,7 @@ abstract class TestScriptVariable with _$TestScriptVariable {
 
 @freezed
 abstract class TestScriptRule with _$TestScriptRule {
-  const factory TestScriptRule({
+  factory TestScriptRule({
     @JsonKey(required: true) Reference resource,
     List<TestScriptParam> param,
   }) = _TestScriptRule;
@@ -321,7 +319,7 @@ abstract class TestScriptRule with _$TestScriptRule {
 
 @freezed
 abstract class TestScriptParam with _$TestScriptParam {
-  const factory TestScriptParam({
+  factory TestScriptParam({
     String name,
     String value,
     @JsonKey(name: '_name') Element nameElement,
@@ -333,7 +331,7 @@ abstract class TestScriptParam with _$TestScriptParam {
 
 @freezed
 abstract class TestScriptRuleset with _$TestScriptRuleset {
-  const factory TestScriptRuleset({
+  factory TestScriptRuleset({
     @JsonKey(required: true) Reference resource,
     @JsonKey(required: true) List<TestScriptRule1> rule,
   }) = _TestScriptRuleset;
@@ -343,7 +341,7 @@ abstract class TestScriptRuleset with _$TestScriptRuleset {
 
 @freezed
 abstract class TestScriptRule1 with _$TestScriptRule1 {
-  const factory TestScriptRule1({
+  factory TestScriptRule1({
     Id ruleId,
     List<TestScriptParam1> param,
     @JsonKey(name: '_ruleId') Element ruleIdElement,
@@ -354,7 +352,7 @@ abstract class TestScriptRule1 with _$TestScriptRule1 {
 
 @freezed
 abstract class TestScriptParam1 with _$TestScriptParam1 {
-  const factory TestScriptParam1({
+  factory TestScriptParam1({
     String name,
     String value,
     @JsonKey(name: '_name') Element nameElement,
@@ -366,7 +364,7 @@ abstract class TestScriptParam1 with _$TestScriptParam1 {
 
 @freezed
 abstract class TestScriptSetup with _$TestScriptSetup {
-  const factory TestScriptSetup({
+  factory TestScriptSetup({
     @JsonKey(required: true) List<TestScriptAction> action,
   }) = _TestScriptSetup;
   factory TestScriptSetup.fromJson(Map<String, dynamic> json) =>
@@ -375,7 +373,7 @@ abstract class TestScriptSetup with _$TestScriptSetup {
 
 @freezed
 abstract class TestScriptAction with _$TestScriptAction {
-  const factory TestScriptAction({
+  factory TestScriptAction({
     TestScriptOperation operation,
     @JsonKey(name: 'assert') TestScriptAssert assert_,
   }) = _TestScriptAction;
@@ -385,7 +383,7 @@ abstract class TestScriptAction with _$TestScriptAction {
 
 @freezed
 abstract class TestScriptOperation with _$TestScriptOperation {
-  const factory TestScriptOperation({
+  factory TestScriptOperation({
     Coding type,
     Code resource,
     String label,
@@ -423,7 +421,7 @@ abstract class TestScriptOperation with _$TestScriptOperation {
 
 @freezed
 abstract class TestScriptRequestHeader with _$TestScriptRequestHeader {
-  const factory TestScriptRequestHeader({
+  factory TestScriptRequestHeader({
     String field,
     String value,
     @JsonKey(name: '_field') Element fieldElement,
@@ -435,7 +433,7 @@ abstract class TestScriptRequestHeader with _$TestScriptRequestHeader {
 
 @freezed
 abstract class TestScriptAssert with _$TestScriptAssert {
-  const factory TestScriptAssert({
+  factory TestScriptAssert({
     String label,
     String description,
     @JsonKey(unknownEnumValue: AssertDirection.unknown)
@@ -493,7 +491,7 @@ abstract class TestScriptAssert with _$TestScriptAssert {
 
 @freezed
 abstract class TestScriptRule2 with _$TestScriptRule2 {
-  const factory TestScriptRule2({
+  factory TestScriptRule2({
     Id ruleId,
     List<TestScriptParam2> param,
     @JsonKey(name: '_ruleId') Element ruleIdElement,
@@ -504,7 +502,7 @@ abstract class TestScriptRule2 with _$TestScriptRule2 {
 
 @freezed
 abstract class TestScriptParam2 with _$TestScriptParam2 {
-  const factory TestScriptParam2({
+  factory TestScriptParam2({
     String name,
     String value,
     @JsonKey(name: '_name') Element nameElement,
@@ -516,7 +514,7 @@ abstract class TestScriptParam2 with _$TestScriptParam2 {
 
 @freezed
 abstract class TestScriptRuleset1 with _$TestScriptRuleset1 {
-  const factory TestScriptRuleset1({
+  factory TestScriptRuleset1({
     Id rulesetId,
     List<TestScriptRule3> rule,
     @JsonKey(name: '_rulesetId') Element rulesetIdElement,
@@ -527,7 +525,7 @@ abstract class TestScriptRuleset1 with _$TestScriptRuleset1 {
 
 @freezed
 abstract class TestScriptRule3 with _$TestScriptRule3 {
-  const factory TestScriptRule3({
+  factory TestScriptRule3({
     Id ruleId,
     List<TestScriptParam3> param,
     @JsonKey(name: '_ruleId') Element ruleIdElement,
@@ -538,7 +536,7 @@ abstract class TestScriptRule3 with _$TestScriptRule3 {
 
 @freezed
 abstract class TestScriptParam3 with _$TestScriptParam3 {
-  const factory TestScriptParam3({
+  factory TestScriptParam3({
     String name,
     String value,
     @JsonKey(name: '_name') Element nameElement,
@@ -550,7 +548,7 @@ abstract class TestScriptParam3 with _$TestScriptParam3 {
 
 @freezed
 abstract class TestScriptTest with _$TestScriptTest {
-  const factory TestScriptTest({
+  factory TestScriptTest({
     String name,
     String description,
     @JsonKey(required: true) List<TestScriptAction1> action,
@@ -563,7 +561,7 @@ abstract class TestScriptTest with _$TestScriptTest {
 
 @freezed
 abstract class TestScriptAction1 with _$TestScriptAction1 {
-  const factory TestScriptAction1({
+  factory TestScriptAction1({
     TestScriptOperation operation,
     @JsonKey(name: 'assert') TestScriptAssert assert_,
   }) = _TestScriptAction1;
@@ -573,7 +571,7 @@ abstract class TestScriptAction1 with _$TestScriptAction1 {
 
 @freezed
 abstract class TestScriptTeardown with _$TestScriptTeardown {
-  const factory TestScriptTeardown({
+  factory TestScriptTeardown({
     @JsonKey(required: true) List<TestScriptAction2> action,
   }) = _TestScriptTeardown;
   factory TestScriptTeardown.fromJson(Map<String, dynamic> json) =>
@@ -582,7 +580,7 @@ abstract class TestScriptTeardown with _$TestScriptTeardown {
 
 @freezed
 abstract class TestScriptAction2 with _$TestScriptAction2 {
-  const factory TestScriptAction2({
+  factory TestScriptAction2({
     @JsonKey(required: true) TestScriptOperation operation,
   }) = _TestScriptAction2;
   factory TestScriptAction2.fromJson(Map<String, dynamic> json) =>

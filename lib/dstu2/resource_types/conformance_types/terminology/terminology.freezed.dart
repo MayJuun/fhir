@@ -894,7 +894,7 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ValueSet implements _ValueSet {
-  const _$_ValueSet(
+  _$_ValueSet(
       {@JsonKey(defaultValue: 'ValueSet')
           this.resourceType,
       this.id,
@@ -1215,7 +1215,7 @@ class _$_ValueSet implements _ValueSet {
 }
 
 abstract class _ValueSet implements ValueSet {
-  const factory _ValueSet(
+  factory _ValueSet(
       {@JsonKey(defaultValue: 'ValueSet')
           String resourceType,
       Id id,
@@ -1543,7 +1543,7 @@ class __$ValueSetContactCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ValueSetContact implements _ValueSetContact {
-  const _$_ValueSetContact(
+  _$_ValueSetContact(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -1616,7 +1616,7 @@ class _$_ValueSetContact implements _ValueSetContact {
 }
 
 abstract class _ValueSetContact implements ValueSetContact {
-  const factory _ValueSetContact(
+  factory _ValueSetContact(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -1911,7 +1911,7 @@ class __$ValueSetCodeSystemCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ValueSetCodeSystem implements _ValueSetCodeSystem {
-  const _$_ValueSetCodeSystem(
+  _$_ValueSetCodeSystem(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -2027,7 +2027,7 @@ class _$_ValueSetCodeSystem implements _ValueSetCodeSystem {
 }
 
 abstract class _ValueSetCodeSystem implements ValueSetCodeSystem {
-  const factory _ValueSetCodeSystem(
+  factory _ValueSetCodeSystem(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -2321,7 +2321,7 @@ class __$ValueSetConceptCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ValueSetConcept implements _ValueSetConcept {
-  const _$_ValueSetConcept(
+  _$_ValueSetConcept(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -2442,7 +2442,7 @@ class _$_ValueSetConcept implements _ValueSetConcept {
 }
 
 abstract class _ValueSetConcept implements ValueSetConcept {
-  const factory _ValueSetConcept(
+  factory _ValueSetConcept(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
@@ -2713,7 +2713,7 @@ class __$ValueSetDesignationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ValueSetDesignation implements _ValueSetDesignation {
-  const _$_ValueSetDesignation(
+  _$_ValueSetDesignation(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -2804,7 +2804,7 @@ class _$_ValueSetDesignation implements _ValueSetDesignation {
 }
 
 abstract class _ValueSetDesignation implements ValueSetDesignation {
-  const factory _ValueSetDesignation(
+  factory _ValueSetDesignation(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -3011,7 +3011,7 @@ class __$ValueSetComposeCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ValueSetCompose implements _ValueSetCompose {
-  const _$_ValueSetCompose(
+  _$_ValueSetCompose(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3091,7 +3091,7 @@ class _$_ValueSetCompose implements _ValueSetCompose {
 }
 
 abstract class _ValueSetCompose implements ValueSetCompose {
-  const factory _ValueSetCompose(
+  factory _ValueSetCompose(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -3361,7 +3361,7 @@ class __$IncludeExcludeCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_IncludeExclude implements _IncludeExclude {
-  const _$_IncludeExclude(
+  _$_IncludeExclude(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3466,7 +3466,7 @@ class _$_IncludeExclude implements _IncludeExclude {
 }
 
 abstract class _IncludeExclude implements IncludeExclude {
-  const factory _IncludeExclude(
+  factory _IncludeExclude(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -3734,7 +3734,7 @@ class __$IncludeExcludeConceptCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_IncludeExcludeConcept implements _IncludeExcludeConcept {
-  const _$_IncludeExcludeConcept(
+  _$_IncludeExcludeConcept(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3834,7 +3834,7 @@ class _$_IncludeExcludeConcept implements _IncludeExcludeConcept {
 }
 
 abstract class _IncludeExcludeConcept implements IncludeExcludeConcept {
-  const factory _IncludeExcludeConcept(
+  factory _IncludeExcludeConcept(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -4133,7 +4133,7 @@ class __$IncludeExcludeFilterCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_IncludeExcludeFilter implements _IncludeExcludeFilter {
-  const _$_IncludeExcludeFilter(
+  _$_IncludeExcludeFilter(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -4255,7 +4255,7 @@ class _$_IncludeExcludeFilter implements _IncludeExcludeFilter {
 }
 
 abstract class _IncludeExcludeFilter implements IncludeExcludeFilter {
-  const factory _IncludeExcludeFilter(
+  factory _IncludeExcludeFilter(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -4628,7 +4628,7 @@ class __$ValueSetExpansionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ValueSetExpansion implements _ValueSetExpansion {
-  const _$_ValueSetExpansion(
+  _$_ValueSetExpansion(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -4765,7 +4765,7 @@ class _$_ValueSetExpansion implements _ValueSetExpansion {
 }
 
 abstract class _ValueSetExpansion implements ValueSetExpansion {
-  const factory _ValueSetExpansion(
+  factory _ValueSetExpansion(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -5228,7 +5228,7 @@ class __$ValueSetParameterCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ValueSetParameter implements _ValueSetParameter {
-  const _$_ValueSetParameter(
+  _$_ValueSetParameter(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -5395,7 +5395,7 @@ class _$_ValueSetParameter implements _ValueSetParameter {
 }
 
 abstract class _ValueSetParameter implements ValueSetParameter {
-  const factory _ValueSetParameter(
+  factory _ValueSetParameter(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -5800,7 +5800,7 @@ class __$ValueSetContainsCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ValueSetContains implements _ValueSetContains {
-  const _$_ValueSetContains(
+  _$_ValueSetContains(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -5942,7 +5942,7 @@ class _$_ValueSetContains implements _ValueSetContains {
 }
 
 abstract class _ValueSetContains implements ValueSetContains {
-  const factory _ValueSetContains(
+  factory _ValueSetContains(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -6704,7 +6704,7 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_NamingSystem implements _NamingSystem {
-  const _$_NamingSystem(
+  _$_NamingSystem(
       {@JsonKey(defaultValue: 'NamingSystem')
           this.resourceType,
       this.id,
@@ -6983,7 +6983,7 @@ class _$_NamingSystem implements _NamingSystem {
 }
 
 abstract class _NamingSystem implements NamingSystem {
-  const factory _NamingSystem(
+  factory _NamingSystem(
       {@JsonKey(defaultValue: 'NamingSystem')
           String resourceType,
       Id id,
@@ -7968,7 +7968,7 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConceptMap implements _ConceptMap {
-  const _$_ConceptMap(
+  _$_ConceptMap(
       {@JsonKey(defaultValue: 'ConceptMap')
           this.resourceType,
       this.id,
@@ -8277,7 +8277,7 @@ class _$_ConceptMap implements _ConceptMap {
 }
 
 abstract class _ConceptMap implements ConceptMap {
-  const factory _ConceptMap(
+  factory _ConceptMap(
       {@JsonKey(defaultValue: 'ConceptMap')
           String resourceType,
       Id id,
@@ -8584,7 +8584,7 @@ class __$NamingSystemContactCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_NamingSystemContact implements _NamingSystemContact {
-  const _$_NamingSystemContact(
+  _$_NamingSystemContact(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -8650,7 +8650,7 @@ class _$_NamingSystemContact implements _NamingSystemContact {
 }
 
 abstract class _NamingSystemContact implements NamingSystemContact {
-  const factory _NamingSystemContact(
+  factory _NamingSystemContact(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -8950,7 +8950,7 @@ class __$NamingSystemUniqueIdCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_NamingSystemUniqueId implements _NamingSystemUniqueId {
-  const _$_NamingSystemUniqueId(
+  _$_NamingSystemUniqueId(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -9065,7 +9065,7 @@ class _$_NamingSystemUniqueId implements _NamingSystemUniqueId {
 }
 
 abstract class _NamingSystemUniqueId implements NamingSystemUniqueId {
-  const factory _NamingSystemUniqueId(
+  factory _NamingSystemUniqueId(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -9263,7 +9263,7 @@ class __$ConceptMapContactCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConceptMapContact implements _ConceptMapContact {
-  const _$_ConceptMapContact(
+  _$_ConceptMapContact(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -9328,7 +9328,7 @@ class _$_ConceptMapContact implements _ConceptMapContact {
 }
 
 abstract class _ConceptMapContact implements ConceptMapContact {
-  const factory _ConceptMapContact(
+  factory _ConceptMapContact(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -9534,7 +9534,7 @@ class __$ConceptMapElementCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConceptMapElement implements _ConceptMapElement {
-  const _$_ConceptMapElement(
+  _$_ConceptMapElement(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -9614,7 +9614,7 @@ class _$_ConceptMapElement implements _ConceptMapElement {
 }
 
 abstract class _ConceptMapElement implements ConceptMapElement {
-  const factory _ConceptMapElement(
+  factory _ConceptMapElement(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -9935,7 +9935,7 @@ class __$ConceptMapTargetCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConceptMapTarget implements _ConceptMapTarget {
-  const _$_ConceptMapTarget(
+  _$_ConceptMapTarget(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -10061,7 +10061,7 @@ class _$_ConceptMapTarget implements _ConceptMapTarget {
 }
 
 abstract class _ConceptMapTarget implements ConceptMapTarget {
-  const factory _ConceptMapTarget(
+  factory _ConceptMapTarget(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -10274,7 +10274,7 @@ class __$ConceptMapDependsOnCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConceptMapDependsOn implements _ConceptMapDependsOn {
-  const _$_ConceptMapDependsOn(
+  _$_ConceptMapDependsOn(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -10354,7 +10354,7 @@ class _$_ConceptMapDependsOn implements _ConceptMapDependsOn {
 }
 
 abstract class _ConceptMapDependsOn implements ConceptMapDependsOn {
-  const factory _ConceptMapDependsOn(
+  factory _ConceptMapDependsOn(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,

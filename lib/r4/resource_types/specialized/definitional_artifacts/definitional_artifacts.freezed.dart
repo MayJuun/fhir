@@ -108,6 +108,7 @@ class _$ActivityDefinitionTearOff {
       @JsonKey(name: '_doNotPerform')
           Element doNotPerformElement,
       Timing timingTiming,
+      FhirDateTime timingDateTime,
       @JsonKey(name: '_timingDateTime')
           Element timingDateTimeElement,
       Age timingAge,
@@ -193,6 +194,7 @@ class _$ActivityDefinitionTearOff {
       doNotPerform: doNotPerform,
       doNotPerformElement: doNotPerformElement,
       timingTiming: timingTiming,
+      timingDateTime: timingDateTime,
       timingDateTimeElement: timingDateTimeElement,
       timingAge: timingAge,
       timingPeriod: timingPeriod,
@@ -309,6 +311,7 @@ mixin _$ActivityDefinition {
   @JsonKey(name: '_doNotPerform')
   Element get doNotPerformElement;
   Timing get timingTiming;
+  FhirDateTime get timingDateTime;
   @JsonKey(name: '_timingDateTime')
   Element get timingDateTimeElement;
   Age get timingAge;
@@ -428,6 +431,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       @JsonKey(name: '_doNotPerform')
           Element doNotPerformElement,
       Timing timingTiming,
+      FhirDateTime timingDateTime,
       @JsonKey(name: '_timingDateTime')
           Element timingDateTimeElement,
       Age timingAge,
@@ -562,6 +566,7 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
     Object doNotPerform = freezed,
     Object doNotPerformElement = freezed,
     Object timingTiming = freezed,
+    Object timingDateTime = freezed,
     Object timingDateTimeElement = freezed,
     Object timingAge = freezed,
     Object timingPeriod = freezed,
@@ -727,6 +732,9 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
       timingTiming: timingTiming == freezed
           ? _value.timingTiming
           : timingTiming as Timing,
+      timingDateTime: timingDateTime == freezed
+          ? _value.timingDateTime
+          : timingDateTime as FhirDateTime,
       timingDateTimeElement: timingDateTimeElement == freezed
           ? _value.timingDateTimeElement
           : timingDateTimeElement as Element,
@@ -1242,6 +1250,7 @@ abstract class _$ActivityDefinitionCopyWith<$Res>
       @JsonKey(name: '_doNotPerform')
           Element doNotPerformElement,
       Timing timingTiming,
+      FhirDateTime timingDateTime,
       @JsonKey(name: '_timingDateTime')
           Element timingDateTimeElement,
       Age timingAge,
@@ -1415,6 +1424,7 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
     Object doNotPerform = freezed,
     Object doNotPerformElement = freezed,
     Object timingTiming = freezed,
+    Object timingDateTime = freezed,
     Object timingDateTimeElement = freezed,
     Object timingAge = freezed,
     Object timingPeriod = freezed,
@@ -1580,6 +1590,9 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
       timingTiming: timingTiming == freezed
           ? _value.timingTiming
           : timingTiming as Timing,
+      timingDateTime: timingDateTime == freezed
+          ? _value.timingDateTime
+          : timingDateTime as FhirDateTime,
       timingDateTimeElement: timingDateTimeElement == freezed
           ? _value.timingDateTimeElement
           : timingDateTimeElement as Element,
@@ -1694,6 +1707,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
       this.doNotPerform,
       @JsonKey(name: '_doNotPerform') this.doNotPerformElement,
       this.timingTiming,
+      this.timingDateTime,
       @JsonKey(name: '_timingDateTime') this.timingDateTimeElement,
       this.timingAge,
       this.timingPeriod,
@@ -1875,6 +1889,8 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   @override
   final Timing timingTiming;
   @override
+  final FhirDateTime timingDateTime;
+  @override
   @JsonKey(name: '_timingDateTime')
   final Element timingDateTimeElement;
   @override
@@ -1912,7 +1928,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
 
   @override
   String toString() {
-    return 'ActivityDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, subtitle: $subtitle, subtitleElement: $subtitleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, usage: $usage, usageElement: $usageElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, library_: $library_, kind: $kind, kindElement: $kindElement, profile: $profile, code: $code, intent: $intent, intentElement: $intentElement, priority: $priority, priorityElement: $priorityElement, doNotPerform: $doNotPerform, doNotPerformElement: $doNotPerformElement, timingTiming: $timingTiming, timingDateTimeElement: $timingDateTimeElement, timingAge: $timingAge, timingPeriod: $timingPeriod, timingRange: $timingRange, timingDuration: $timingDuration, location: $location, participant: $participant, productReference: $productReference, productCodeableConcept: $productCodeableConcept, quantity: $quantity, dosage: $dosage, bodySite: $bodySite, specimenRequirement: $specimenRequirement, observationRequirement: $observationRequirement, observationResultRequirement: $observationResultRequirement, transform: $transform, dynamicValue: $dynamicValue)';
+    return 'ActivityDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, subtitle: $subtitle, subtitleElement: $subtitleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, usage: $usage, usageElement: $usageElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, library_: $library_, kind: $kind, kindElement: $kindElement, profile: $profile, code: $code, intent: $intent, intentElement: $intentElement, priority: $priority, priorityElement: $priorityElement, doNotPerform: $doNotPerform, doNotPerformElement: $doNotPerformElement, timingTiming: $timingTiming, timingDateTime: $timingDateTime, timingDateTimeElement: $timingDateTimeElement, timingAge: $timingAge, timingPeriod: $timingPeriod, timingRange: $timingRange, timingDuration: $timingDuration, location: $location, participant: $participant, productReference: $productReference, productCodeableConcept: $productCodeableConcept, quantity: $quantity, dosage: $dosage, bodySite: $bodySite, specimenRequirement: $specimenRequirement, observationRequirement: $observationRequirement, observationResultRequirement: $observationResultRequirement, transform: $transform, dynamicValue: $dynamicValue)';
   }
 
   @override
@@ -2028,6 +2044,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
             (identical(other.doNotPerform, doNotPerform) || const DeepCollectionEquality().equals(other.doNotPerform, doNotPerform)) &&
             (identical(other.doNotPerformElement, doNotPerformElement) || const DeepCollectionEquality().equals(other.doNotPerformElement, doNotPerformElement)) &&
             (identical(other.timingTiming, timingTiming) || const DeepCollectionEquality().equals(other.timingTiming, timingTiming)) &&
+            (identical(other.timingDateTime, timingDateTime) || const DeepCollectionEquality().equals(other.timingDateTime, timingDateTime)) &&
             (identical(other.timingDateTimeElement, timingDateTimeElement) || const DeepCollectionEquality().equals(other.timingDateTimeElement, timingDateTimeElement)) &&
             (identical(other.timingAge, timingAge) || const DeepCollectionEquality().equals(other.timingAge, timingAge)) &&
             (identical(other.timingPeriod, timingPeriod) || const DeepCollectionEquality().equals(other.timingPeriod, timingPeriod)) &&
@@ -2116,6 +2133,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
       const DeepCollectionEquality().hash(doNotPerform) ^
       const DeepCollectionEquality().hash(doNotPerformElement) ^
       const DeepCollectionEquality().hash(timingTiming) ^
+      const DeepCollectionEquality().hash(timingDateTime) ^
       const DeepCollectionEquality().hash(timingDateTimeElement) ^
       const DeepCollectionEquality().hash(timingAge) ^
       const DeepCollectionEquality().hash(timingPeriod) ^
@@ -2239,6 +2257,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
           @JsonKey(name: '_doNotPerform')
               Element doNotPerformElement,
           Timing timingTiming,
+          FhirDateTime timingDateTime,
           @JsonKey(name: '_timingDateTime')
               Element timingDateTimeElement,
           Age timingAge,
@@ -2419,6 +2438,8 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   Element get doNotPerformElement;
   @override
   Timing get timingTiming;
+  @override
+  FhirDateTime get timingDateTime;
   @override
   @JsonKey(name: '_timingDateTime')
   Element get timingDateTimeElement;
@@ -3049,6 +3070,7 @@ class _$DeviceDefinitionTearOff {
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+      String manufacturerString,
       @JsonKey(name: '_manufacturerString') Element manufacturerStringElement,
       Reference manufacturerReference,
       List<DeviceDefinitionDeviceName> deviceName,
@@ -3088,6 +3110,7 @@ class _$DeviceDefinitionTearOff {
       modifierExtension: modifierExtension,
       identifier: identifier,
       udiDeviceIdentifier: udiDeviceIdentifier,
+      manufacturerString: manufacturerString,
       manufacturerStringElement: manufacturerStringElement,
       manufacturerReference: manufacturerReference,
       deviceName: deviceName,
@@ -3138,6 +3161,7 @@ mixin _$DeviceDefinition {
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
   List<DeviceDefinitionUdiDeviceIdentifier> get udiDeviceIdentifier;
+  String get manufacturerString;
   @JsonKey(name: '_manufacturerString')
   Element get manufacturerStringElement;
   Reference get manufacturerReference;
@@ -3191,6 +3215,7 @@ abstract class $DeviceDefinitionCopyWith<$Res> {
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+      String manufacturerString,
       @JsonKey(name: '_manufacturerString') Element manufacturerStringElement,
       Reference manufacturerReference,
       List<DeviceDefinitionDeviceName> deviceName,
@@ -3257,6 +3282,7 @@ class _$DeviceDefinitionCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object udiDeviceIdentifier = freezed,
+    Object manufacturerString = freezed,
     Object manufacturerStringElement = freezed,
     Object manufacturerReference = freezed,
     Object deviceName = freezed,
@@ -3314,6 +3340,9 @@ class _$DeviceDefinitionCopyWithImpl<$Res>
       udiDeviceIdentifier: udiDeviceIdentifier == freezed
           ? _value.udiDeviceIdentifier
           : udiDeviceIdentifier as List<DeviceDefinitionUdiDeviceIdentifier>,
+      manufacturerString: manufacturerString == freezed
+          ? _value.manufacturerString
+          : manufacturerString as String,
       manufacturerStringElement: manufacturerStringElement == freezed
           ? _value.manufacturerStringElement
           : manufacturerStringElement as Element,
@@ -3548,6 +3577,7 @@ abstract class _$DeviceDefinitionCopyWith<$Res>
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+      String manufacturerString,
       @JsonKey(name: '_manufacturerString') Element manufacturerStringElement,
       Reference manufacturerReference,
       List<DeviceDefinitionDeviceName> deviceName,
@@ -3631,6 +3661,7 @@ class __$DeviceDefinitionCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object udiDeviceIdentifier = freezed,
+    Object manufacturerString = freezed,
     Object manufacturerStringElement = freezed,
     Object manufacturerReference = freezed,
     Object deviceName = freezed,
@@ -3688,6 +3719,9 @@ class __$DeviceDefinitionCopyWithImpl<$Res>
       udiDeviceIdentifier: udiDeviceIdentifier == freezed
           ? _value.udiDeviceIdentifier
           : udiDeviceIdentifier as List<DeviceDefinitionUdiDeviceIdentifier>,
+      manufacturerString: manufacturerString == freezed
+          ? _value.manufacturerString
+          : manufacturerString as String,
       manufacturerStringElement: manufacturerStringElement == freezed
           ? _value.manufacturerStringElement
           : manufacturerStringElement as Element,
@@ -3767,6 +3801,7 @@ class _$_DeviceDefinition extends _DeviceDefinition {
       this.modifierExtension,
       this.identifier,
       this.udiDeviceIdentifier,
+      this.manufacturerString,
       @JsonKey(name: '_manufacturerString') this.manufacturerStringElement,
       this.manufacturerReference,
       this.deviceName,
@@ -3829,6 +3864,8 @@ class _$_DeviceDefinition extends _DeviceDefinition {
   @override
   final List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier;
   @override
+  final String manufacturerString;
+  @override
   @JsonKey(name: '_manufacturerString')
   final Element manufacturerStringElement;
   @override
@@ -3886,7 +3923,7 @@ class _$_DeviceDefinition extends _DeviceDefinition {
 
   @override
   String toString() {
-    return 'DeviceDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, udiDeviceIdentifier: $udiDeviceIdentifier, manufacturerStringElement: $manufacturerStringElement, manufacturerReference: $manufacturerReference, deviceName: $deviceName, modelNumber: $modelNumber, modelNumberElement: $modelNumberElement, type: $type, specialization: $specialization, version: $version, versionElement: $versionElement, safety: $safety, shelfLifeStorage: $shelfLifeStorage, physicalCharacteristics: $physicalCharacteristics, languageCode: $languageCode, capability: $capability, property: $property, owner: $owner, contact: $contact, url: $url, urlElement: $urlElement, onlineInformation: $onlineInformation, onlineInformationElement: $onlineInformationElement, note: $note, quantity: $quantity, parentDevice: $parentDevice, material: $material)';
+    return 'DeviceDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, udiDeviceIdentifier: $udiDeviceIdentifier, manufacturerString: $manufacturerString, manufacturerStringElement: $manufacturerStringElement, manufacturerReference: $manufacturerReference, deviceName: $deviceName, modelNumber: $modelNumber, modelNumberElement: $modelNumberElement, type: $type, specialization: $specialization, version: $version, versionElement: $versionElement, safety: $safety, shelfLifeStorage: $shelfLifeStorage, physicalCharacteristics: $physicalCharacteristics, languageCode: $languageCode, capability: $capability, property: $property, owner: $owner, contact: $contact, url: $url, urlElement: $urlElement, onlineInformation: $onlineInformation, onlineInformationElement: $onlineInformationElement, note: $note, quantity: $quantity, parentDevice: $parentDevice, material: $material)';
   }
 
   @override
@@ -3929,6 +3966,9 @@ class _$_DeviceDefinition extends _DeviceDefinition {
             (identical(other.udiDeviceIdentifier, udiDeviceIdentifier) ||
                 const DeepCollectionEquality()
                     .equals(other.udiDeviceIdentifier, udiDeviceIdentifier)) &&
+            (identical(other.manufacturerString, manufacturerString) ||
+                const DeepCollectionEquality()
+                    .equals(other.manufacturerString, manufacturerString)) &&
             (identical(other.manufacturerStringElement, manufacturerStringElement) ||
                 const DeepCollectionEquality().equals(
                     other.manufacturerStringElement,
@@ -3951,10 +3991,8 @@ class _$_DeviceDefinition extends _DeviceDefinition {
                 const DeepCollectionEquality()
                     .equals(other.specialization, specialization)) &&
             (identical(other.version, version) ||
-                const DeepCollectionEquality()
-                    .equals(other.version, version)) &&
-            (identical(other.versionElement, versionElement) ||
-                const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
+                const DeepCollectionEquality().equals(other.version, version)) &&
+            (identical(other.versionElement, versionElement) || const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
             (identical(other.safety, safety) || const DeepCollectionEquality().equals(other.safety, safety)) &&
             (identical(other.shelfLifeStorage, shelfLifeStorage) || const DeepCollectionEquality().equals(other.shelfLifeStorage, shelfLifeStorage)) &&
             (identical(other.physicalCharacteristics, physicalCharacteristics) || const DeepCollectionEquality().equals(other.physicalCharacteristics, physicalCharacteristics)) &&
@@ -3989,6 +4027,7 @@ class _$_DeviceDefinition extends _DeviceDefinition {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(udiDeviceIdentifier) ^
+      const DeepCollectionEquality().hash(manufacturerString) ^
       const DeepCollectionEquality().hash(manufacturerStringElement) ^
       const DeepCollectionEquality().hash(manufacturerReference) ^
       const DeepCollectionEquality().hash(deviceName) ^
@@ -4041,6 +4080,7 @@ abstract class _DeviceDefinition extends DeviceDefinition {
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+      String manufacturerString,
       @JsonKey(name: '_manufacturerString') Element manufacturerStringElement,
       Reference manufacturerReference,
       List<DeviceDefinitionDeviceName> deviceName,
@@ -4100,6 +4140,8 @@ abstract class _DeviceDefinition extends DeviceDefinition {
   List<Identifier> get identifier;
   @override
   List<DeviceDefinitionUdiDeviceIdentifier> get udiDeviceIdentifier;
+  @override
+  String get manufacturerString;
   @override
   @JsonKey(name: '_manufacturerString')
   Element get manufacturerStringElement;
@@ -12206,6 +12248,7 @@ class _$PlanDefinitionActionTearOff {
       List<DataRequirement> input,
       List<DataRequirement> output,
       List<PlanDefinitionRelatedAction> relatedAction,
+      FhirDateTime timingDateTime,
       @JsonKey(name: '_timingDateTime')
           Element timingDateTimeElement,
       Age timingAge,
@@ -12235,8 +12278,10 @@ class _$PlanDefinitionActionTearOff {
           PlanDefinitionActionCardinalityBehavior cardinalityBehavior,
       @JsonKey(name: '_cardinalityBehavior')
           Element cardinalityBehaviorElement,
+      Canonical definitionCanonical,
       @JsonKey(name: '_definitionCanonical')
           Element definitionCanonicalElement,
+      FhirUri definitionUri,
       @JsonKey(name: '_definitionUri')
           Element definitionUriElement,
       Canonical transform,
@@ -12268,6 +12313,7 @@ class _$PlanDefinitionActionTearOff {
       input: input,
       output: output,
       relatedAction: relatedAction,
+      timingDateTime: timingDateTime,
       timingDateTimeElement: timingDateTimeElement,
       timingAge: timingAge,
       timingPeriod: timingPeriod,
@@ -12286,7 +12332,9 @@ class _$PlanDefinitionActionTearOff {
       precheckBehaviorElement: precheckBehaviorElement,
       cardinalityBehavior: cardinalityBehavior,
       cardinalityBehaviorElement: cardinalityBehaviorElement,
+      definitionCanonical: definitionCanonical,
       definitionCanonicalElement: definitionCanonicalElement,
+      definitionUri: definitionUri,
       definitionUriElement: definitionUriElement,
       transform: transform,
       dynamicValue: dynamicValue,
@@ -12331,6 +12379,7 @@ mixin _$PlanDefinitionAction {
   List<DataRequirement> get input;
   List<DataRequirement> get output;
   List<PlanDefinitionRelatedAction> get relatedAction;
+  FhirDateTime get timingDateTime;
   @JsonKey(name: '_timingDateTime')
   Element get timingDateTimeElement;
   Age get timingAge;
@@ -12360,8 +12409,10 @@ mixin _$PlanDefinitionAction {
   PlanDefinitionActionCardinalityBehavior get cardinalityBehavior;
   @JsonKey(name: '_cardinalityBehavior')
   Element get cardinalityBehaviorElement;
+  Canonical get definitionCanonical;
   @JsonKey(name: '_definitionCanonical')
   Element get definitionCanonicalElement;
+  FhirUri get definitionUri;
   @JsonKey(name: '_definitionUri')
   Element get definitionUriElement;
   Canonical get transform;
@@ -12409,6 +12460,7 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
       List<DataRequirement> input,
       List<DataRequirement> output,
       List<PlanDefinitionRelatedAction> relatedAction,
+      FhirDateTime timingDateTime,
       @JsonKey(name: '_timingDateTime')
           Element timingDateTimeElement,
       Age timingAge,
@@ -12438,8 +12490,10 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
           PlanDefinitionActionCardinalityBehavior cardinalityBehavior,
       @JsonKey(name: '_cardinalityBehavior')
           Element cardinalityBehaviorElement,
+      Canonical definitionCanonical,
       @JsonKey(name: '_definitionCanonical')
           Element definitionCanonicalElement,
+      FhirUri definitionUri,
       @JsonKey(name: '_definitionUri')
           Element definitionUriElement,
       Canonical transform,
@@ -12505,6 +12559,7 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
     Object input = freezed,
     Object output = freezed,
     Object relatedAction = freezed,
+    Object timingDateTime = freezed,
     Object timingDateTimeElement = freezed,
     Object timingAge = freezed,
     Object timingPeriod = freezed,
@@ -12523,7 +12578,9 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
     Object precheckBehaviorElement = freezed,
     Object cardinalityBehavior = freezed,
     Object cardinalityBehaviorElement = freezed,
+    Object definitionCanonical = freezed,
     Object definitionCanonicalElement = freezed,
+    Object definitionUri = freezed,
     Object definitionUriElement = freezed,
     Object transform = freezed,
     Object dynamicValue = freezed,
@@ -12588,6 +12645,9 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
       relatedAction: relatedAction == freezed
           ? _value.relatedAction
           : relatedAction as List<PlanDefinitionRelatedAction>,
+      timingDateTime: timingDateTime == freezed
+          ? _value.timingDateTime
+          : timingDateTime as FhirDateTime,
       timingDateTimeElement: timingDateTimeElement == freezed
           ? _value.timingDateTimeElement
           : timingDateTimeElement as Element,
@@ -12637,9 +12697,15 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
       cardinalityBehaviorElement: cardinalityBehaviorElement == freezed
           ? _value.cardinalityBehaviorElement
           : cardinalityBehaviorElement as Element,
+      definitionCanonical: definitionCanonical == freezed
+          ? _value.definitionCanonical
+          : definitionCanonical as Canonical,
       definitionCanonicalElement: definitionCanonicalElement == freezed
           ? _value.definitionCanonicalElement
           : definitionCanonicalElement as Element,
+      definitionUri: definitionUri == freezed
+          ? _value.definitionUri
+          : definitionUri as FhirUri,
       definitionUriElement: definitionUriElement == freezed
           ? _value.definitionUriElement
           : definitionUriElement as Element,
@@ -12915,6 +12981,7 @@ abstract class _$PlanDefinitionActionCopyWith<$Res>
       List<DataRequirement> input,
       List<DataRequirement> output,
       List<PlanDefinitionRelatedAction> relatedAction,
+      FhirDateTime timingDateTime,
       @JsonKey(name: '_timingDateTime')
           Element timingDateTimeElement,
       Age timingAge,
@@ -12944,8 +13011,10 @@ abstract class _$PlanDefinitionActionCopyWith<$Res>
           PlanDefinitionActionCardinalityBehavior cardinalityBehavior,
       @JsonKey(name: '_cardinalityBehavior')
           Element cardinalityBehaviorElement,
+      Canonical definitionCanonical,
       @JsonKey(name: '_definitionCanonical')
           Element definitionCanonicalElement,
+      FhirUri definitionUri,
       @JsonKey(name: '_definitionUri')
           Element definitionUriElement,
       Canonical transform,
@@ -13035,6 +13104,7 @@ class __$PlanDefinitionActionCopyWithImpl<$Res>
     Object input = freezed,
     Object output = freezed,
     Object relatedAction = freezed,
+    Object timingDateTime = freezed,
     Object timingDateTimeElement = freezed,
     Object timingAge = freezed,
     Object timingPeriod = freezed,
@@ -13053,7 +13123,9 @@ class __$PlanDefinitionActionCopyWithImpl<$Res>
     Object precheckBehaviorElement = freezed,
     Object cardinalityBehavior = freezed,
     Object cardinalityBehaviorElement = freezed,
+    Object definitionCanonical = freezed,
     Object definitionCanonicalElement = freezed,
+    Object definitionUri = freezed,
     Object definitionUriElement = freezed,
     Object transform = freezed,
     Object dynamicValue = freezed,
@@ -13118,6 +13190,9 @@ class __$PlanDefinitionActionCopyWithImpl<$Res>
       relatedAction: relatedAction == freezed
           ? _value.relatedAction
           : relatedAction as List<PlanDefinitionRelatedAction>,
+      timingDateTime: timingDateTime == freezed
+          ? _value.timingDateTime
+          : timingDateTime as FhirDateTime,
       timingDateTimeElement: timingDateTimeElement == freezed
           ? _value.timingDateTimeElement
           : timingDateTimeElement as Element,
@@ -13167,9 +13242,15 @@ class __$PlanDefinitionActionCopyWithImpl<$Res>
       cardinalityBehaviorElement: cardinalityBehaviorElement == freezed
           ? _value.cardinalityBehaviorElement
           : cardinalityBehaviorElement as Element,
+      definitionCanonical: definitionCanonical == freezed
+          ? _value.definitionCanonical
+          : definitionCanonical as Canonical,
       definitionCanonicalElement: definitionCanonicalElement == freezed
           ? _value.definitionCanonicalElement
           : definitionCanonicalElement as Element,
+      definitionUri: definitionUri == freezed
+          ? _value.definitionUri
+          : definitionUri as FhirUri,
       definitionUriElement: definitionUriElement == freezed
           ? _value.definitionUriElement
           : definitionUriElement as Element,
@@ -13220,6 +13301,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
       this.input,
       this.output,
       this.relatedAction,
+      this.timingDateTime,
       @JsonKey(name: '_timingDateTime')
           this.timingDateTimeElement,
       this.timingAge,
@@ -13249,8 +13331,10 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
           this.cardinalityBehavior,
       @JsonKey(name: '_cardinalityBehavior')
           this.cardinalityBehaviorElement,
+      this.definitionCanonical,
       @JsonKey(name: '_definitionCanonical')
           this.definitionCanonicalElement,
+      this.definitionUri,
       @JsonKey(name: '_definitionUri')
           this.definitionUriElement,
       this.transform,
@@ -13319,6 +13403,8 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
   @override
   final List<PlanDefinitionRelatedAction> relatedAction;
   @override
+  final FhirDateTime timingDateTime;
+  @override
   @JsonKey(name: '_timingDateTime')
   final Element timingDateTimeElement;
   @override
@@ -13366,8 +13452,12 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
   @JsonKey(name: '_cardinalityBehavior')
   final Element cardinalityBehaviorElement;
   @override
+  final Canonical definitionCanonical;
+  @override
   @JsonKey(name: '_definitionCanonical')
   final Element definitionCanonicalElement;
+  @override
+  final FhirUri definitionUri;
   @override
   @JsonKey(name: '_definitionUri')
   final Element definitionUriElement;
@@ -13380,7 +13470,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
 
   @override
   String toString() {
-    return 'PlanDefinitionAction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, prefix: $prefix, prefixElement: $prefixElement, title: $title, titleElement: $titleElement, description: $description, descriptionElement: $descriptionElement, textEquivalent: $textEquivalent, textEquivalentElement: $textEquivalentElement, priority: $priority, priorityElement: $priorityElement, code: $code, reason: $reason, documentation: $documentation, goalId: $goalId, goalIdElement: $goalIdElement, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, trigger: $trigger, condition: $condition, input: $input, output: $output, relatedAction: $relatedAction, timingDateTimeElement: $timingDateTimeElement, timingAge: $timingAge, timingPeriod: $timingPeriod, timingDuration: $timingDuration, timingRange: $timingRange, timingTiming: $timingTiming, participant: $participant, type: $type, groupingBehavior: $groupingBehavior, groupingBehaviorElement: $groupingBehaviorElement, selectionBehavior: $selectionBehavior, selectionBehaviorElement: $selectionBehaviorElement, requiredBehavior: $requiredBehavior, requiredBehaviorElement: $requiredBehaviorElement, precheckBehavior: $precheckBehavior, precheckBehaviorElement: $precheckBehaviorElement, cardinalityBehavior: $cardinalityBehavior, cardinalityBehaviorElement: $cardinalityBehaviorElement, definitionCanonicalElement: $definitionCanonicalElement, definitionUriElement: $definitionUriElement, transform: $transform, dynamicValue: $dynamicValue, action: $action)';
+    return 'PlanDefinitionAction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, prefix: $prefix, prefixElement: $prefixElement, title: $title, titleElement: $titleElement, description: $description, descriptionElement: $descriptionElement, textEquivalent: $textEquivalent, textEquivalentElement: $textEquivalentElement, priority: $priority, priorityElement: $priorityElement, code: $code, reason: $reason, documentation: $documentation, goalId: $goalId, goalIdElement: $goalIdElement, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, trigger: $trigger, condition: $condition, input: $input, output: $output, relatedAction: $relatedAction, timingDateTime: $timingDateTime, timingDateTimeElement: $timingDateTimeElement, timingAge: $timingAge, timingPeriod: $timingPeriod, timingDuration: $timingDuration, timingRange: $timingRange, timingTiming: $timingTiming, participant: $participant, type: $type, groupingBehavior: $groupingBehavior, groupingBehaviorElement: $groupingBehaviorElement, selectionBehavior: $selectionBehavior, selectionBehaviorElement: $selectionBehaviorElement, requiredBehavior: $requiredBehavior, requiredBehaviorElement: $requiredBehaviorElement, precheckBehavior: $precheckBehavior, precheckBehaviorElement: $precheckBehaviorElement, cardinalityBehavior: $cardinalityBehavior, cardinalityBehaviorElement: $cardinalityBehaviorElement, definitionCanonical: $definitionCanonical, definitionCanonicalElement: $definitionCanonicalElement, definitionUri: $definitionUri, definitionUriElement: $definitionUriElement, transform: $transform, dynamicValue: $dynamicValue, action: $action)';
   }
 
   @override
@@ -13454,6 +13544,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
             (identical(other.relatedAction, relatedAction) ||
                 const DeepCollectionEquality()
                     .equals(other.relatedAction, relatedAction)) &&
+            (identical(other.timingDateTime, timingDateTime) || const DeepCollectionEquality().equals(other.timingDateTime, timingDateTime)) &&
             (identical(other.timingDateTimeElement, timingDateTimeElement) || const DeepCollectionEquality().equals(other.timingDateTimeElement, timingDateTimeElement)) &&
             (identical(other.timingAge, timingAge) || const DeepCollectionEquality().equals(other.timingAge, timingAge)) &&
             (identical(other.timingPeriod, timingPeriod) || const DeepCollectionEquality().equals(other.timingPeriod, timingPeriod)) &&
@@ -13472,7 +13563,9 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
             (identical(other.precheckBehaviorElement, precheckBehaviorElement) || const DeepCollectionEquality().equals(other.precheckBehaviorElement, precheckBehaviorElement)) &&
             (identical(other.cardinalityBehavior, cardinalityBehavior) || const DeepCollectionEquality().equals(other.cardinalityBehavior, cardinalityBehavior)) &&
             (identical(other.cardinalityBehaviorElement, cardinalityBehaviorElement) || const DeepCollectionEquality().equals(other.cardinalityBehaviorElement, cardinalityBehaviorElement)) &&
+            (identical(other.definitionCanonical, definitionCanonical) || const DeepCollectionEquality().equals(other.definitionCanonical, definitionCanonical)) &&
             (identical(other.definitionCanonicalElement, definitionCanonicalElement) || const DeepCollectionEquality().equals(other.definitionCanonicalElement, definitionCanonicalElement)) &&
+            (identical(other.definitionUri, definitionUri) || const DeepCollectionEquality().equals(other.definitionUri, definitionUri)) &&
             (identical(other.definitionUriElement, definitionUriElement) || const DeepCollectionEquality().equals(other.definitionUriElement, definitionUriElement)) &&
             (identical(other.transform, transform) || const DeepCollectionEquality().equals(other.transform, transform)) &&
             (identical(other.dynamicValue, dynamicValue) || const DeepCollectionEquality().equals(other.dynamicValue, dynamicValue)) &&
@@ -13507,6 +13600,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
       const DeepCollectionEquality().hash(input) ^
       const DeepCollectionEquality().hash(output) ^
       const DeepCollectionEquality().hash(relatedAction) ^
+      const DeepCollectionEquality().hash(timingDateTime) ^
       const DeepCollectionEquality().hash(timingDateTimeElement) ^
       const DeepCollectionEquality().hash(timingAge) ^
       const DeepCollectionEquality().hash(timingPeriod) ^
@@ -13525,7 +13619,9 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
       const DeepCollectionEquality().hash(precheckBehaviorElement) ^
       const DeepCollectionEquality().hash(cardinalityBehavior) ^
       const DeepCollectionEquality().hash(cardinalityBehaviorElement) ^
+      const DeepCollectionEquality().hash(definitionCanonical) ^
       const DeepCollectionEquality().hash(definitionCanonicalElement) ^
+      const DeepCollectionEquality().hash(definitionUri) ^
       const DeepCollectionEquality().hash(definitionUriElement) ^
       const DeepCollectionEquality().hash(transform) ^
       const DeepCollectionEquality().hash(dynamicValue) ^
@@ -13577,6 +13673,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
       List<DataRequirement> input,
       List<DataRequirement> output,
       List<PlanDefinitionRelatedAction> relatedAction,
+      FhirDateTime timingDateTime,
       @JsonKey(name: '_timingDateTime')
           Element timingDateTimeElement,
       Age timingAge,
@@ -13606,8 +13703,10 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
           PlanDefinitionActionCardinalityBehavior cardinalityBehavior,
       @JsonKey(name: '_cardinalityBehavior')
           Element cardinalityBehaviorElement,
+      Canonical definitionCanonical,
       @JsonKey(name: '_definitionCanonical')
           Element definitionCanonicalElement,
+      FhirUri definitionUri,
       @JsonKey(name: '_definitionUri')
           Element definitionUriElement,
       Canonical transform,
@@ -13675,6 +13774,8 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
   @override
   List<PlanDefinitionRelatedAction> get relatedAction;
   @override
+  FhirDateTime get timingDateTime;
+  @override
   @JsonKey(name: '_timingDateTime')
   Element get timingDateTimeElement;
   @override
@@ -13722,8 +13823,12 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
   @JsonKey(name: '_cardinalityBehavior')
   Element get cardinalityBehaviorElement;
   @override
+  Canonical get definitionCanonical;
+  @override
   @JsonKey(name: '_definitionCanonical')
   Element get definitionCanonicalElement;
+  @override
+  FhirUri get definitionUri;
   @override
   @JsonKey(name: '_definitionUri')
   Element get definitionUriElement;
@@ -17457,18 +17562,25 @@ class _$QuestionnaireEnableWhenTearOff {
           QuestionnaireEnableWhenOperator operator,
       @JsonKey(name: '_operator')
           Element operatorElement,
+      Boolean answerBoolean,
       @JsonKey(name: '_answerBoolean')
           Element answerBooleanElement,
+      Decimal answerDecimal,
       @JsonKey(name: '_answerDecimal')
           Element answerDecimalElement,
+      Integer answerInteger,
       @JsonKey(name: '_answerInteger')
           Element answerIntegerElement,
+      Date answerDate,
       @JsonKey(name: '_answerDate')
           Element answerDateElement,
+      FhirDateTime answerDateTime,
       @JsonKey(name: '_answerDateTime')
           Element answerDateTimeElement,
+      Time answerTime,
       @JsonKey(name: '_answerTime')
           Element answerTimeElement,
+      String answerString,
       @JsonKey(name: '_answerString')
           Element answerStringElement,
       Coding answerCoding,
@@ -17482,12 +17594,19 @@ class _$QuestionnaireEnableWhenTearOff {
       questionElement: questionElement,
       operator: operator,
       operatorElement: operatorElement,
+      answerBoolean: answerBoolean,
       answerBooleanElement: answerBooleanElement,
+      answerDecimal: answerDecimal,
       answerDecimalElement: answerDecimalElement,
+      answerInteger: answerInteger,
       answerIntegerElement: answerIntegerElement,
+      answerDate: answerDate,
       answerDateElement: answerDateElement,
+      answerDateTime: answerDateTime,
       answerDateTimeElement: answerDateTimeElement,
+      answerTime: answerTime,
       answerTimeElement: answerTimeElement,
+      answerString: answerString,
       answerStringElement: answerStringElement,
       answerCoding: answerCoding,
       answerQuantity: answerQuantity,
@@ -17511,18 +17630,25 @@ mixin _$QuestionnaireEnableWhen {
   QuestionnaireEnableWhenOperator get operator;
   @JsonKey(name: '_operator')
   Element get operatorElement;
+  Boolean get answerBoolean;
   @JsonKey(name: '_answerBoolean')
   Element get answerBooleanElement;
+  Decimal get answerDecimal;
   @JsonKey(name: '_answerDecimal')
   Element get answerDecimalElement;
+  Integer get answerInteger;
   @JsonKey(name: '_answerInteger')
   Element get answerIntegerElement;
+  Date get answerDate;
   @JsonKey(name: '_answerDate')
   Element get answerDateElement;
+  FhirDateTime get answerDateTime;
   @JsonKey(name: '_answerDateTime')
   Element get answerDateTimeElement;
+  Time get answerTime;
   @JsonKey(name: '_answerTime')
   Element get answerTimeElement;
+  String get answerString;
   @JsonKey(name: '_answerString')
   Element get answerStringElement;
   Coding get answerCoding;
@@ -17549,18 +17675,25 @@ abstract class $QuestionnaireEnableWhenCopyWith<$Res> {
           QuestionnaireEnableWhenOperator operator,
       @JsonKey(name: '_operator')
           Element operatorElement,
+      Boolean answerBoolean,
       @JsonKey(name: '_answerBoolean')
           Element answerBooleanElement,
+      Decimal answerDecimal,
       @JsonKey(name: '_answerDecimal')
           Element answerDecimalElement,
+      Integer answerInteger,
       @JsonKey(name: '_answerInteger')
           Element answerIntegerElement,
+      Date answerDate,
       @JsonKey(name: '_answerDate')
           Element answerDateElement,
+      FhirDateTime answerDateTime,
       @JsonKey(name: '_answerDateTime')
           Element answerDateTimeElement,
+      Time answerTime,
       @JsonKey(name: '_answerTime')
           Element answerTimeElement,
+      String answerString,
       @JsonKey(name: '_answerString')
           Element answerStringElement,
       Coding answerCoding,
@@ -17598,12 +17731,19 @@ class _$QuestionnaireEnableWhenCopyWithImpl<$Res>
     Object questionElement = freezed,
     Object operator = freezed,
     Object operatorElement = freezed,
+    Object answerBoolean = freezed,
     Object answerBooleanElement = freezed,
+    Object answerDecimal = freezed,
     Object answerDecimalElement = freezed,
+    Object answerInteger = freezed,
     Object answerIntegerElement = freezed,
+    Object answerDate = freezed,
     Object answerDateElement = freezed,
+    Object answerDateTime = freezed,
     Object answerDateTimeElement = freezed,
+    Object answerTime = freezed,
     Object answerTimeElement = freezed,
+    Object answerString = freezed,
     Object answerStringElement = freezed,
     Object answerCoding = freezed,
     Object answerQuantity = freezed,
@@ -17627,24 +17767,43 @@ class _$QuestionnaireEnableWhenCopyWithImpl<$Res>
       operatorElement: operatorElement == freezed
           ? _value.operatorElement
           : operatorElement as Element,
+      answerBoolean: answerBoolean == freezed
+          ? _value.answerBoolean
+          : answerBoolean as Boolean,
       answerBooleanElement: answerBooleanElement == freezed
           ? _value.answerBooleanElement
           : answerBooleanElement as Element,
+      answerDecimal: answerDecimal == freezed
+          ? _value.answerDecimal
+          : answerDecimal as Decimal,
       answerDecimalElement: answerDecimalElement == freezed
           ? _value.answerDecimalElement
           : answerDecimalElement as Element,
+      answerInteger: answerInteger == freezed
+          ? _value.answerInteger
+          : answerInteger as Integer,
       answerIntegerElement: answerIntegerElement == freezed
           ? _value.answerIntegerElement
           : answerIntegerElement as Element,
+      answerDate:
+          answerDate == freezed ? _value.answerDate : answerDate as Date,
       answerDateElement: answerDateElement == freezed
           ? _value.answerDateElement
           : answerDateElement as Element,
+      answerDateTime: answerDateTime == freezed
+          ? _value.answerDateTime
+          : answerDateTime as FhirDateTime,
       answerDateTimeElement: answerDateTimeElement == freezed
           ? _value.answerDateTimeElement
           : answerDateTimeElement as Element,
+      answerTime:
+          answerTime == freezed ? _value.answerTime : answerTime as Time,
       answerTimeElement: answerTimeElement == freezed
           ? _value.answerTimeElement
           : answerTimeElement as Element,
+      answerString: answerString == freezed
+          ? _value.answerString
+          : answerString as String,
       answerStringElement: answerStringElement == freezed
           ? _value.answerStringElement
           : answerStringElement as Element,
@@ -17799,18 +17958,25 @@ abstract class _$QuestionnaireEnableWhenCopyWith<$Res>
           QuestionnaireEnableWhenOperator operator,
       @JsonKey(name: '_operator')
           Element operatorElement,
+      Boolean answerBoolean,
       @JsonKey(name: '_answerBoolean')
           Element answerBooleanElement,
+      Decimal answerDecimal,
       @JsonKey(name: '_answerDecimal')
           Element answerDecimalElement,
+      Integer answerInteger,
       @JsonKey(name: '_answerInteger')
           Element answerIntegerElement,
+      Date answerDate,
       @JsonKey(name: '_answerDate')
           Element answerDateElement,
+      FhirDateTime answerDateTime,
       @JsonKey(name: '_answerDateTime')
           Element answerDateTimeElement,
+      Time answerTime,
       @JsonKey(name: '_answerTime')
           Element answerTimeElement,
+      String answerString,
       @JsonKey(name: '_answerString')
           Element answerStringElement,
       Coding answerCoding,
@@ -17863,12 +18029,19 @@ class __$QuestionnaireEnableWhenCopyWithImpl<$Res>
     Object questionElement = freezed,
     Object operator = freezed,
     Object operatorElement = freezed,
+    Object answerBoolean = freezed,
     Object answerBooleanElement = freezed,
+    Object answerDecimal = freezed,
     Object answerDecimalElement = freezed,
+    Object answerInteger = freezed,
     Object answerIntegerElement = freezed,
+    Object answerDate = freezed,
     Object answerDateElement = freezed,
+    Object answerDateTime = freezed,
     Object answerDateTimeElement = freezed,
+    Object answerTime = freezed,
     Object answerTimeElement = freezed,
+    Object answerString = freezed,
     Object answerStringElement = freezed,
     Object answerCoding = freezed,
     Object answerQuantity = freezed,
@@ -17892,24 +18065,43 @@ class __$QuestionnaireEnableWhenCopyWithImpl<$Res>
       operatorElement: operatorElement == freezed
           ? _value.operatorElement
           : operatorElement as Element,
+      answerBoolean: answerBoolean == freezed
+          ? _value.answerBoolean
+          : answerBoolean as Boolean,
       answerBooleanElement: answerBooleanElement == freezed
           ? _value.answerBooleanElement
           : answerBooleanElement as Element,
+      answerDecimal: answerDecimal == freezed
+          ? _value.answerDecimal
+          : answerDecimal as Decimal,
       answerDecimalElement: answerDecimalElement == freezed
           ? _value.answerDecimalElement
           : answerDecimalElement as Element,
+      answerInteger: answerInteger == freezed
+          ? _value.answerInteger
+          : answerInteger as Integer,
       answerIntegerElement: answerIntegerElement == freezed
           ? _value.answerIntegerElement
           : answerIntegerElement as Element,
+      answerDate:
+          answerDate == freezed ? _value.answerDate : answerDate as Date,
       answerDateElement: answerDateElement == freezed
           ? _value.answerDateElement
           : answerDateElement as Element,
+      answerDateTime: answerDateTime == freezed
+          ? _value.answerDateTime
+          : answerDateTime as FhirDateTime,
       answerDateTimeElement: answerDateTimeElement == freezed
           ? _value.answerDateTimeElement
           : answerDateTimeElement as Element,
+      answerTime:
+          answerTime == freezed ? _value.answerTime : answerTime as Time,
       answerTimeElement: answerTimeElement == freezed
           ? _value.answerTimeElement
           : answerTimeElement as Element,
+      answerString: answerString == freezed
+          ? _value.answerString
+          : answerString as String,
       answerStringElement: answerStringElement == freezed
           ? _value.answerStringElement
           : answerStringElement as Element,
@@ -17940,18 +18132,25 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
           this.operator,
       @JsonKey(name: '_operator')
           this.operatorElement,
+      this.answerBoolean,
       @JsonKey(name: '_answerBoolean')
           this.answerBooleanElement,
+      this.answerDecimal,
       @JsonKey(name: '_answerDecimal')
           this.answerDecimalElement,
+      this.answerInteger,
       @JsonKey(name: '_answerInteger')
           this.answerIntegerElement,
+      this.answerDate,
       @JsonKey(name: '_answerDate')
           this.answerDateElement,
+      this.answerDateTime,
       @JsonKey(name: '_answerDateTime')
           this.answerDateTimeElement,
+      this.answerTime,
       @JsonKey(name: '_answerTime')
           this.answerTimeElement,
+      this.answerString,
       @JsonKey(name: '_answerString')
           this.answerStringElement,
       this.answerCoding,
@@ -17981,23 +18180,37 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
   @JsonKey(name: '_operator')
   final Element operatorElement;
   @override
+  final Boolean answerBoolean;
+  @override
   @JsonKey(name: '_answerBoolean')
   final Element answerBooleanElement;
+  @override
+  final Decimal answerDecimal;
   @override
   @JsonKey(name: '_answerDecimal')
   final Element answerDecimalElement;
   @override
+  final Integer answerInteger;
+  @override
   @JsonKey(name: '_answerInteger')
   final Element answerIntegerElement;
+  @override
+  final Date answerDate;
   @override
   @JsonKey(name: '_answerDate')
   final Element answerDateElement;
   @override
+  final FhirDateTime answerDateTime;
+  @override
   @JsonKey(name: '_answerDateTime')
   final Element answerDateTimeElement;
   @override
+  final Time answerTime;
+  @override
   @JsonKey(name: '_answerTime')
   final Element answerTimeElement;
+  @override
+  final String answerString;
   @override
   @JsonKey(name: '_answerString')
   final Element answerStringElement;
@@ -18010,7 +18223,7 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
 
   @override
   String toString() {
-    return 'QuestionnaireEnableWhen(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, question: $question, questionElement: $questionElement, operator: $operator, operatorElement: $operatorElement, answerBooleanElement: $answerBooleanElement, answerDecimalElement: $answerDecimalElement, answerIntegerElement: $answerIntegerElement, answerDateElement: $answerDateElement, answerDateTimeElement: $answerDateTimeElement, answerTimeElement: $answerTimeElement, answerStringElement: $answerStringElement, answerCoding: $answerCoding, answerQuantity: $answerQuantity, answerReference: $answerReference)';
+    return 'QuestionnaireEnableWhen(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, question: $question, questionElement: $questionElement, operator: $operator, operatorElement: $operatorElement, answerBoolean: $answerBoolean, answerBooleanElement: $answerBooleanElement, answerDecimal: $answerDecimal, answerDecimalElement: $answerDecimalElement, answerInteger: $answerInteger, answerIntegerElement: $answerIntegerElement, answerDate: $answerDate, answerDateElement: $answerDateElement, answerDateTime: $answerDateTime, answerDateTimeElement: $answerDateTimeElement, answerTime: $answerTime, answerTimeElement: $answerTimeElement, answerString: $answerString, answerStringElement: $answerStringElement, answerCoding: $answerCoding, answerQuantity: $answerQuantity, answerReference: $answerReference)';
   }
 
   @override
@@ -18037,36 +18250,52 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
             (identical(other.operatorElement, operatorElement) ||
                 const DeepCollectionEquality()
                     .equals(other.operatorElement, operatorElement)) &&
+            (identical(other.answerBoolean, answerBoolean) ||
+                const DeepCollectionEquality()
+                    .equals(other.answerBoolean, answerBoolean)) &&
             (identical(other.answerBooleanElement, answerBooleanElement) ||
                 const DeepCollectionEquality().equals(
                     other.answerBooleanElement, answerBooleanElement)) &&
+            (identical(other.answerDecimal, answerDecimal) ||
+                const DeepCollectionEquality()
+                    .equals(other.answerDecimal, answerDecimal)) &&
             (identical(other.answerDecimalElement, answerDecimalElement) ||
                 const DeepCollectionEquality().equals(
                     other.answerDecimalElement, answerDecimalElement)) &&
+            (identical(other.answerInteger, answerInteger) ||
+                const DeepCollectionEquality()
+                    .equals(other.answerInteger, answerInteger)) &&
             (identical(other.answerIntegerElement, answerIntegerElement) ||
                 const DeepCollectionEquality().equals(
                     other.answerIntegerElement, answerIntegerElement)) &&
+            (identical(other.answerDate, answerDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.answerDate, answerDate)) &&
             (identical(other.answerDateElement, answerDateElement) ||
                 const DeepCollectionEquality()
                     .equals(other.answerDateElement, answerDateElement)) &&
+            (identical(other.answerDateTime, answerDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.answerDateTime, answerDateTime)) &&
             (identical(other.answerDateTimeElement, answerDateTimeElement) ||
                 const DeepCollectionEquality().equals(
                     other.answerDateTimeElement, answerDateTimeElement)) &&
+            (identical(other.answerTime, answerTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.answerTime, answerTime)) &&
             (identical(other.answerTimeElement, answerTimeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.answerTimeElement, answerTimeElement)) &&
+            (identical(other.answerString, answerString) ||
+                const DeepCollectionEquality()
+                    .equals(other.answerString, answerString)) &&
             (identical(other.answerStringElement, answerStringElement) ||
                 const DeepCollectionEquality()
                     .equals(other.answerStringElement, answerStringElement)) &&
             (identical(other.answerCoding, answerCoding) ||
-                const DeepCollectionEquality()
-                    .equals(other.answerCoding, answerCoding)) &&
-            (identical(other.answerQuantity, answerQuantity) ||
-                const DeepCollectionEquality()
-                    .equals(other.answerQuantity, answerQuantity)) &&
-            (identical(other.answerReference, answerReference) ||
-                const DeepCollectionEquality()
-                    .equals(other.answerReference, answerReference)));
+                const DeepCollectionEquality().equals(other.answerCoding, answerCoding)) &&
+            (identical(other.answerQuantity, answerQuantity) || const DeepCollectionEquality().equals(other.answerQuantity, answerQuantity)) &&
+            (identical(other.answerReference, answerReference) || const DeepCollectionEquality().equals(other.answerReference, answerReference)));
   }
 
   @override
@@ -18079,12 +18308,19 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
       const DeepCollectionEquality().hash(questionElement) ^
       const DeepCollectionEquality().hash(operator) ^
       const DeepCollectionEquality().hash(operatorElement) ^
+      const DeepCollectionEquality().hash(answerBoolean) ^
       const DeepCollectionEquality().hash(answerBooleanElement) ^
+      const DeepCollectionEquality().hash(answerDecimal) ^
       const DeepCollectionEquality().hash(answerDecimalElement) ^
+      const DeepCollectionEquality().hash(answerInteger) ^
       const DeepCollectionEquality().hash(answerIntegerElement) ^
+      const DeepCollectionEquality().hash(answerDate) ^
       const DeepCollectionEquality().hash(answerDateElement) ^
+      const DeepCollectionEquality().hash(answerDateTime) ^
       const DeepCollectionEquality().hash(answerDateTimeElement) ^
+      const DeepCollectionEquality().hash(answerTime) ^
       const DeepCollectionEquality().hash(answerTimeElement) ^
+      const DeepCollectionEquality().hash(answerString) ^
       const DeepCollectionEquality().hash(answerStringElement) ^
       const DeepCollectionEquality().hash(answerCoding) ^
       const DeepCollectionEquality().hash(answerQuantity) ^
@@ -18115,18 +18351,25 @@ abstract class _QuestionnaireEnableWhen extends QuestionnaireEnableWhen {
           QuestionnaireEnableWhenOperator operator,
       @JsonKey(name: '_operator')
           Element operatorElement,
+      Boolean answerBoolean,
       @JsonKey(name: '_answerBoolean')
           Element answerBooleanElement,
+      Decimal answerDecimal,
       @JsonKey(name: '_answerDecimal')
           Element answerDecimalElement,
+      Integer answerInteger,
       @JsonKey(name: '_answerInteger')
           Element answerIntegerElement,
+      Date answerDate,
       @JsonKey(name: '_answerDate')
           Element answerDateElement,
+      FhirDateTime answerDateTime,
       @JsonKey(name: '_answerDateTime')
           Element answerDateTimeElement,
+      Time answerTime,
       @JsonKey(name: '_answerTime')
           Element answerTimeElement,
+      String answerString,
       @JsonKey(name: '_answerString')
           Element answerStringElement,
       Coding answerCoding,
@@ -18155,23 +18398,37 @@ abstract class _QuestionnaireEnableWhen extends QuestionnaireEnableWhen {
   @JsonKey(name: '_operator')
   Element get operatorElement;
   @override
+  Boolean get answerBoolean;
+  @override
   @JsonKey(name: '_answerBoolean')
   Element get answerBooleanElement;
+  @override
+  Decimal get answerDecimal;
   @override
   @JsonKey(name: '_answerDecimal')
   Element get answerDecimalElement;
   @override
+  Integer get answerInteger;
+  @override
   @JsonKey(name: '_answerInteger')
   Element get answerIntegerElement;
+  @override
+  Date get answerDate;
   @override
   @JsonKey(name: '_answerDate')
   Element get answerDateElement;
   @override
+  FhirDateTime get answerDateTime;
+  @override
   @JsonKey(name: '_answerDateTime')
   Element get answerDateTimeElement;
   @override
+  Time get answerTime;
+  @override
   @JsonKey(name: '_answerTime')
   Element get answerTimeElement;
+  @override
+  String get answerString;
   @override
   @JsonKey(name: '_answerString')
   Element get answerStringElement;
@@ -18197,9 +18454,13 @@ class _$QuestionnaireAnswerOptionTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      Time valueTime,
       @JsonKey(name: '_valueTime') Element valueTimeElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
       Coding valueCoding,
       Reference valueReference,
@@ -18209,9 +18470,13 @@ class _$QuestionnaireAnswerOptionTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      valueInteger: valueInteger,
       valueIntegerElement: valueIntegerElement,
+      valueDate: valueDate,
       valueDateElement: valueDateElement,
+      valueTime: valueTime,
       valueTimeElement: valueTimeElement,
+      valueString: valueString,
       valueStringElement: valueStringElement,
       valueCoding: valueCoding,
       valueReference: valueReference,
@@ -18229,12 +18494,16 @@ mixin _$QuestionnaireAnswerOption {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
+  Integer get valueInteger;
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
+  Date get valueDate;
   @JsonKey(name: '_valueDate')
   Element get valueDateElement;
+  Time get valueTime;
   @JsonKey(name: '_valueTime')
   Element get valueTimeElement;
+  String get valueString;
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
   Coding get valueCoding;
@@ -18255,9 +18524,13 @@ abstract class $QuestionnaireAnswerOptionCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      Time valueTime,
       @JsonKey(name: '_valueTime') Element valueTimeElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
       Coding valueCoding,
       Reference valueReference,
@@ -18286,9 +18559,13 @@ class _$QuestionnaireAnswerOptionCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object valueInteger = freezed,
     Object valueIntegerElement = freezed,
+    Object valueDate = freezed,
     Object valueDateElement = freezed,
+    Object valueTime = freezed,
     Object valueTimeElement = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
     Object valueCoding = freezed,
     Object valueReference = freezed,
@@ -18303,15 +18580,22 @@ class _$QuestionnaireAnswerOptionCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger as Integer,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement as Element,
+      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateElement: valueDateElement == freezed
           ? _value.valueDateElement
           : valueDateElement as Element,
+      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueTimeElement: valueTimeElement == freezed
           ? _value.valueTimeElement
           : valueTimeElement as Element,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
@@ -18410,9 +18694,13 @@ abstract class _$QuestionnaireAnswerOptionCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      Time valueTime,
       @JsonKey(name: '_valueTime') Element valueTimeElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
       Coding valueCoding,
       Reference valueReference,
@@ -18451,9 +18739,13 @@ class __$QuestionnaireAnswerOptionCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object valueInteger = freezed,
     Object valueIntegerElement = freezed,
+    Object valueDate = freezed,
     Object valueDateElement = freezed,
+    Object valueTime = freezed,
     Object valueTimeElement = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
     Object valueCoding = freezed,
     Object valueReference = freezed,
@@ -18468,15 +18760,22 @@ class __$QuestionnaireAnswerOptionCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger as Integer,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement as Element,
+      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateElement: valueDateElement == freezed
           ? _value.valueDateElement
           : valueDateElement as Element,
+      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueTimeElement: valueTimeElement == freezed
           ? _value.valueTimeElement
           : valueTimeElement as Element,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
@@ -18501,9 +18800,13 @@ class _$_QuestionnaireAnswerOption extends _QuestionnaireAnswerOption {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      this.valueInteger,
       @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+      this.valueDate,
       @JsonKey(name: '_valueDate') this.valueDateElement,
+      this.valueTime,
       @JsonKey(name: '_valueTime') this.valueTimeElement,
+      this.valueString,
       @JsonKey(name: '_valueString') this.valueStringElement,
       this.valueCoding,
       this.valueReference,
@@ -18522,14 +18825,22 @@ class _$_QuestionnaireAnswerOption extends _QuestionnaireAnswerOption {
   @override
   final List<FhirExtension> modifierExtension;
   @override
+  final Integer valueInteger;
+  @override
   @JsonKey(name: '_valueInteger')
   final Element valueIntegerElement;
+  @override
+  final Date valueDate;
   @override
   @JsonKey(name: '_valueDate')
   final Element valueDateElement;
   @override
+  final Time valueTime;
+  @override
   @JsonKey(name: '_valueTime')
   final Element valueTimeElement;
+  @override
+  final String valueString;
   @override
   @JsonKey(name: '_valueString')
   final Element valueStringElement;
@@ -18545,7 +18856,7 @@ class _$_QuestionnaireAnswerOption extends _QuestionnaireAnswerOption {
 
   @override
   String toString() {
-    return 'QuestionnaireAnswerOption(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, valueIntegerElement: $valueIntegerElement, valueDateElement: $valueDateElement, valueTimeElement: $valueTimeElement, valueStringElement: $valueStringElement, valueCoding: $valueCoding, valueReference: $valueReference, initialSelected: $initialSelected, initialSelectedElement: $initialSelectedElement)';
+    return 'QuestionnaireAnswerOption(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueString: $valueString, valueStringElement: $valueStringElement, valueCoding: $valueCoding, valueReference: $valueReference, initialSelected: $initialSelected, initialSelectedElement: $initialSelectedElement)';
   }
 
   @override
@@ -18560,15 +18871,27 @@ class _$_QuestionnaireAnswerOption extends _QuestionnaireAnswerOption {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.valueInteger, valueInteger) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueInteger, valueInteger)) &&
             (identical(other.valueIntegerElement, valueIntegerElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueIntegerElement, valueIntegerElement)) &&
+            (identical(other.valueDate, valueDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDate, valueDate)) &&
             (identical(other.valueDateElement, valueDateElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueDateElement, valueDateElement)) &&
+            (identical(other.valueTime, valueTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueTime, valueTime)) &&
             (identical(other.valueTimeElement, valueTimeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueTimeElement, valueTimeElement)) &&
+            (identical(other.valueString, valueString) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueString, valueString)) &&
             (identical(other.valueStringElement, valueStringElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueStringElement, valueStringElement)) &&
@@ -18592,9 +18915,13 @@ class _$_QuestionnaireAnswerOption extends _QuestionnaireAnswerOption {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(valueInteger) ^
       const DeepCollectionEquality().hash(valueIntegerElement) ^
+      const DeepCollectionEquality().hash(valueDate) ^
       const DeepCollectionEquality().hash(valueDateElement) ^
+      const DeepCollectionEquality().hash(valueTime) ^
       const DeepCollectionEquality().hash(valueTimeElement) ^
+      const DeepCollectionEquality().hash(valueString) ^
       const DeepCollectionEquality().hash(valueStringElement) ^
       const DeepCollectionEquality().hash(valueCoding) ^
       const DeepCollectionEquality().hash(valueReference) ^
@@ -18619,9 +18946,13 @@ abstract class _QuestionnaireAnswerOption extends QuestionnaireAnswerOption {
           {String id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
+          Integer valueInteger,
           @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+          Date valueDate,
           @JsonKey(name: '_valueDate') Element valueDateElement,
+          Time valueTime,
           @JsonKey(name: '_valueTime') Element valueTimeElement,
+          String valueString,
           @JsonKey(name: '_valueString') Element valueStringElement,
           Coding valueCoding,
           Reference valueReference,
@@ -18640,14 +18971,22 @@ abstract class _QuestionnaireAnswerOption extends QuestionnaireAnswerOption {
   @override
   List<FhirExtension> get modifierExtension;
   @override
+  Integer get valueInteger;
+  @override
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
+  @override
+  Date get valueDate;
   @override
   @JsonKey(name: '_valueDate')
   Element get valueDateElement;
   @override
+  Time get valueTime;
+  @override
   @JsonKey(name: '_valueTime')
   Element get valueTimeElement;
+  @override
+  String get valueString;
   @override
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
@@ -18675,13 +19014,21 @@ class _$QuestionnaireInitialTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      Time valueTime,
       @JsonKey(name: '_valueTime') Element valueTimeElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      FhirUri valueUri,
       @JsonKey(name: '_valueUri') Element valueUriElement,
       Attachment valueAttachment,
       Coding valueCoding,
@@ -18691,13 +19038,21 @@ class _$QuestionnaireInitialTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      valueBoolean: valueBoolean,
       valueBooleanElement: valueBooleanElement,
+      valueDecimal: valueDecimal,
       valueDecimalElement: valueDecimalElement,
+      valueInteger: valueInteger,
       valueIntegerElement: valueIntegerElement,
+      valueDate: valueDate,
       valueDateElement: valueDateElement,
+      valueDateTime: valueDateTime,
       valueDateTimeElement: valueDateTimeElement,
+      valueTime: valueTime,
       valueTimeElement: valueTimeElement,
+      valueString: valueString,
       valueStringElement: valueStringElement,
+      valueUri: valueUri,
       valueUriElement: valueUriElement,
       valueAttachment: valueAttachment,
       valueCoding: valueCoding,
@@ -18715,20 +19070,28 @@ mixin _$QuestionnaireInitial {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
+  Boolean get valueBoolean;
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
+  Decimal get valueDecimal;
   @JsonKey(name: '_valueDecimal')
   Element get valueDecimalElement;
+  Integer get valueInteger;
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
+  Date get valueDate;
   @JsonKey(name: '_valueDate')
   Element get valueDateElement;
+  FhirDateTime get valueDateTime;
   @JsonKey(name: '_valueDateTime')
   Element get valueDateTimeElement;
+  Time get valueTime;
   @JsonKey(name: '_valueTime')
   Element get valueTimeElement;
+  String get valueString;
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
+  FhirUri get valueUri;
   @JsonKey(name: '_valueUri')
   Element get valueUriElement;
   Attachment get valueAttachment;
@@ -18748,13 +19111,21 @@ abstract class $QuestionnaireInitialCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      Time valueTime,
       @JsonKey(name: '_valueTime') Element valueTimeElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      FhirUri valueUri,
       @JsonKey(name: '_valueUri') Element valueUriElement,
       Attachment valueAttachment,
       Coding valueCoding,
@@ -18788,13 +19159,21 @@ class _$QuestionnaireInitialCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
+    Object valueDecimal = freezed,
     Object valueDecimalElement = freezed,
+    Object valueInteger = freezed,
     Object valueIntegerElement = freezed,
+    Object valueDate = freezed,
     Object valueDateElement = freezed,
+    Object valueDateTime = freezed,
     Object valueDateTimeElement = freezed,
+    Object valueTime = freezed,
     Object valueTimeElement = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueUri = freezed,
     Object valueUriElement = freezed,
     Object valueAttachment = freezed,
     Object valueCoding = freezed,
@@ -18809,27 +19188,44 @@ class _$QuestionnaireInitialCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
+      valueDecimal: valueDecimal == freezed
+          ? _value.valueDecimal
+          : valueDecimal as Decimal,
       valueDecimalElement: valueDecimalElement == freezed
           ? _value.valueDecimalElement
           : valueDecimalElement as Element,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger as Integer,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement as Element,
+      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateElement: valueDateElement == freezed
           ? _value.valueDateElement
           : valueDateElement as Element,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime as FhirDateTime,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement as Element,
+      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueTimeElement: valueTimeElement == freezed
           ? _value.valueTimeElement
           : valueTimeElement as Element,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueUri: valueUri == freezed ? _value.valueUri : valueUri as FhirUri,
       valueUriElement: valueUriElement == freezed
           ? _value.valueUriElement
           : valueUriElement as Element,
@@ -18978,13 +19374,21 @@ abstract class _$QuestionnaireInitialCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      Time valueTime,
       @JsonKey(name: '_valueTime') Element valueTimeElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      FhirUri valueUri,
       @JsonKey(name: '_valueUri') Element valueUriElement,
       Attachment valueAttachment,
       Coding valueCoding,
@@ -19032,13 +19436,21 @@ class __$QuestionnaireInitialCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
+    Object valueDecimal = freezed,
     Object valueDecimalElement = freezed,
+    Object valueInteger = freezed,
     Object valueIntegerElement = freezed,
+    Object valueDate = freezed,
     Object valueDateElement = freezed,
+    Object valueDateTime = freezed,
     Object valueDateTimeElement = freezed,
+    Object valueTime = freezed,
     Object valueTimeElement = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueUri = freezed,
     Object valueUriElement = freezed,
     Object valueAttachment = freezed,
     Object valueCoding = freezed,
@@ -19053,27 +19465,44 @@ class __$QuestionnaireInitialCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
+      valueDecimal: valueDecimal == freezed
+          ? _value.valueDecimal
+          : valueDecimal as Decimal,
       valueDecimalElement: valueDecimalElement == freezed
           ? _value.valueDecimalElement
           : valueDecimalElement as Element,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger as Integer,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement as Element,
+      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateElement: valueDateElement == freezed
           ? _value.valueDateElement
           : valueDateElement as Element,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime as FhirDateTime,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement as Element,
+      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueTimeElement: valueTimeElement == freezed
           ? _value.valueTimeElement
           : valueTimeElement as Element,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueUri: valueUri == freezed ? _value.valueUri : valueUri as FhirUri,
       valueUriElement: valueUriElement == freezed
           ? _value.valueUriElement
           : valueUriElement as Element,
@@ -19098,13 +19527,21 @@ class _$_QuestionnaireInitial extends _QuestionnaireInitial {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      this.valueBoolean,
       @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+      this.valueDecimal,
       @JsonKey(name: '_valueDecimal') this.valueDecimalElement,
+      this.valueInteger,
       @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+      this.valueDate,
       @JsonKey(name: '_valueDate') this.valueDateElement,
+      this.valueDateTime,
       @JsonKey(name: '_valueDateTime') this.valueDateTimeElement,
+      this.valueTime,
       @JsonKey(name: '_valueTime') this.valueTimeElement,
+      this.valueString,
       @JsonKey(name: '_valueString') this.valueStringElement,
+      this.valueUri,
       @JsonKey(name: '_valueUri') this.valueUriElement,
       this.valueAttachment,
       this.valueCoding,
@@ -19123,26 +19560,42 @@ class _$_QuestionnaireInitial extends _QuestionnaireInitial {
   @override
   final List<FhirExtension> modifierExtension;
   @override
+  final Boolean valueBoolean;
+  @override
   @JsonKey(name: '_valueBoolean')
   final Element valueBooleanElement;
+  @override
+  final Decimal valueDecimal;
   @override
   @JsonKey(name: '_valueDecimal')
   final Element valueDecimalElement;
   @override
+  final Integer valueInteger;
+  @override
   @JsonKey(name: '_valueInteger')
   final Element valueIntegerElement;
+  @override
+  final Date valueDate;
   @override
   @JsonKey(name: '_valueDate')
   final Element valueDateElement;
   @override
+  final FhirDateTime valueDateTime;
+  @override
   @JsonKey(name: '_valueDateTime')
   final Element valueDateTimeElement;
+  @override
+  final Time valueTime;
   @override
   @JsonKey(name: '_valueTime')
   final Element valueTimeElement;
   @override
+  final String valueString;
+  @override
   @JsonKey(name: '_valueString')
   final Element valueStringElement;
+  @override
+  final FhirUri valueUri;
   @override
   @JsonKey(name: '_valueUri')
   final Element valueUriElement;
@@ -19157,7 +19610,7 @@ class _$_QuestionnaireInitial extends _QuestionnaireInitial {
 
   @override
   String toString() {
-    return 'QuestionnaireInitial(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, valueBooleanElement: $valueBooleanElement, valueDecimalElement: $valueDecimalElement, valueIntegerElement: $valueIntegerElement, valueDateElement: $valueDateElement, valueDateTimeElement: $valueDateTimeElement, valueTimeElement: $valueTimeElement, valueStringElement: $valueStringElement, valueUriElement: $valueUriElement, valueAttachment: $valueAttachment, valueCoding: $valueCoding, valueQuantity: $valueQuantity, valueReference: $valueReference)';
+    return 'QuestionnaireInitial(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueString: $valueString, valueStringElement: $valueStringElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueAttachment: $valueAttachment, valueCoding: $valueCoding, valueQuantity: $valueQuantity, valueReference: $valueReference)';
   }
 
   @override
@@ -19172,27 +19625,51 @@ class _$_QuestionnaireInitial extends _QuestionnaireInitial {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.valueBoolean, valueBoolean) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBoolean, valueBoolean)) &&
             (identical(other.valueBooleanElement, valueBooleanElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueBooleanElement, valueBooleanElement)) &&
+            (identical(other.valueDecimal, valueDecimal) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDecimal, valueDecimal)) &&
             (identical(other.valueDecimalElement, valueDecimalElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueDecimalElement, valueDecimalElement)) &&
+            (identical(other.valueInteger, valueInteger) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueInteger, valueInteger)) &&
             (identical(other.valueIntegerElement, valueIntegerElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueIntegerElement, valueIntegerElement)) &&
+            (identical(other.valueDate, valueDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDate, valueDate)) &&
             (identical(other.valueDateElement, valueDateElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueDateElement, valueDateElement)) &&
+            (identical(other.valueDateTime, valueDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDateTime, valueDateTime)) &&
             (identical(other.valueDateTimeElement, valueDateTimeElement) ||
                 const DeepCollectionEquality().equals(
                     other.valueDateTimeElement, valueDateTimeElement)) &&
+            (identical(other.valueTime, valueTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueTime, valueTime)) &&
             (identical(other.valueTimeElement, valueTimeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueTimeElement, valueTimeElement)) &&
+            (identical(other.valueString, valueString) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueString, valueString)) &&
             (identical(other.valueStringElement, valueStringElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueStringElement, valueStringElement)) &&
+            (identical(other.valueUri, valueUri) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueUri, valueUri)) &&
             (identical(other.valueUriElement, valueUriElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueUriElement, valueUriElement)) &&
@@ -19205,9 +19682,7 @@ class _$_QuestionnaireInitial extends _QuestionnaireInitial {
             (identical(other.valueQuantity, valueQuantity) ||
                 const DeepCollectionEquality()
                     .equals(other.valueQuantity, valueQuantity)) &&
-            (identical(other.valueReference, valueReference) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueReference, valueReference)));
+            (identical(other.valueReference, valueReference) || const DeepCollectionEquality().equals(other.valueReference, valueReference)));
   }
 
   @override
@@ -19216,13 +19691,21 @@ class _$_QuestionnaireInitial extends _QuestionnaireInitial {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(valueBoolean) ^
       const DeepCollectionEquality().hash(valueBooleanElement) ^
+      const DeepCollectionEquality().hash(valueDecimal) ^
       const DeepCollectionEquality().hash(valueDecimalElement) ^
+      const DeepCollectionEquality().hash(valueInteger) ^
       const DeepCollectionEquality().hash(valueIntegerElement) ^
+      const DeepCollectionEquality().hash(valueDate) ^
       const DeepCollectionEquality().hash(valueDateElement) ^
+      const DeepCollectionEquality().hash(valueDateTime) ^
       const DeepCollectionEquality().hash(valueDateTimeElement) ^
+      const DeepCollectionEquality().hash(valueTime) ^
       const DeepCollectionEquality().hash(valueTimeElement) ^
+      const DeepCollectionEquality().hash(valueString) ^
       const DeepCollectionEquality().hash(valueStringElement) ^
+      const DeepCollectionEquality().hash(valueUri) ^
       const DeepCollectionEquality().hash(valueUriElement) ^
       const DeepCollectionEquality().hash(valueAttachment) ^
       const DeepCollectionEquality().hash(valueCoding) ^
@@ -19246,13 +19729,21 @@ abstract class _QuestionnaireInitial extends QuestionnaireInitial {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      Time valueTime,
       @JsonKey(name: '_valueTime') Element valueTimeElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      FhirUri valueUri,
       @JsonKey(name: '_valueUri') Element valueUriElement,
       Attachment valueAttachment,
       Coding valueCoding,
@@ -19270,26 +19761,42 @@ abstract class _QuestionnaireInitial extends QuestionnaireInitial {
   @override
   List<FhirExtension> get modifierExtension;
   @override
+  Boolean get valueBoolean;
+  @override
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
+  @override
+  Decimal get valueDecimal;
   @override
   @JsonKey(name: '_valueDecimal')
   Element get valueDecimalElement;
   @override
+  Integer get valueInteger;
+  @override
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
+  @override
+  Date get valueDate;
   @override
   @JsonKey(name: '_valueDate')
   Element get valueDateElement;
   @override
+  FhirDateTime get valueDateTime;
+  @override
   @JsonKey(name: '_valueDateTime')
   Element get valueDateTimeElement;
+  @override
+  Time get valueTime;
   @override
   @JsonKey(name: '_valueTime')
   Element get valueTimeElement;
   @override
+  String get valueString;
+  @override
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
+  @override
+  FhirUri get valueUri;
   @override
   @JsonKey(name: '_valueUri')
   Element get valueUriElement;
@@ -20493,6 +21000,7 @@ class _$SpecimenDefinitionContainerTearOff {
       @JsonKey(name: '_description') Element descriptionElement,
       Quantity capacity,
       Quantity minimumVolumeQuantity,
+      String minimumVolumeString,
       @JsonKey(name: '_minimumVolumeString') Element minimumVolumeStringElement,
       List<SpecimenDefinitionAdditive> additive,
       String preparation,
@@ -20508,6 +21016,7 @@ class _$SpecimenDefinitionContainerTearOff {
       descriptionElement: descriptionElement,
       capacity: capacity,
       minimumVolumeQuantity: minimumVolumeQuantity,
+      minimumVolumeString: minimumVolumeString,
       minimumVolumeStringElement: minimumVolumeStringElement,
       additive: additive,
       preparation: preparation,
@@ -20532,6 +21041,7 @@ mixin _$SpecimenDefinitionContainer {
   Element get descriptionElement;
   Quantity get capacity;
   Quantity get minimumVolumeQuantity;
+  String get minimumVolumeString;
   @JsonKey(name: '_minimumVolumeString')
   Element get minimumVolumeStringElement;
   List<SpecimenDefinitionAdditive> get additive;
@@ -20560,6 +21070,7 @@ abstract class $SpecimenDefinitionContainerCopyWith<$Res> {
       @JsonKey(name: '_description') Element descriptionElement,
       Quantity capacity,
       Quantity minimumVolumeQuantity,
+      String minimumVolumeString,
       @JsonKey(name: '_minimumVolumeString') Element minimumVolumeStringElement,
       List<SpecimenDefinitionAdditive> additive,
       String preparation,
@@ -20595,6 +21106,7 @@ class _$SpecimenDefinitionContainerCopyWithImpl<$Res>
     Object descriptionElement = freezed,
     Object capacity = freezed,
     Object minimumVolumeQuantity = freezed,
+    Object minimumVolumeString = freezed,
     Object minimumVolumeStringElement = freezed,
     Object additive = freezed,
     Object preparation = freezed,
@@ -20621,6 +21133,9 @@ class _$SpecimenDefinitionContainerCopyWithImpl<$Res>
       minimumVolumeQuantity: minimumVolumeQuantity == freezed
           ? _value.minimumVolumeQuantity
           : minimumVolumeQuantity as Quantity,
+      minimumVolumeString: minimumVolumeString == freezed
+          ? _value.minimumVolumeString
+          : minimumVolumeString as String,
       minimumVolumeStringElement: minimumVolumeStringElement == freezed
           ? _value.minimumVolumeStringElement
           : minimumVolumeStringElement as Element,
@@ -20734,6 +21249,7 @@ abstract class _$SpecimenDefinitionContainerCopyWith<$Res>
       @JsonKey(name: '_description') Element descriptionElement,
       Quantity capacity,
       Quantity minimumVolumeQuantity,
+      String minimumVolumeString,
       @JsonKey(name: '_minimumVolumeString') Element minimumVolumeStringElement,
       List<SpecimenDefinitionAdditive> additive,
       String preparation,
@@ -20781,6 +21297,7 @@ class __$SpecimenDefinitionContainerCopyWithImpl<$Res>
     Object descriptionElement = freezed,
     Object capacity = freezed,
     Object minimumVolumeQuantity = freezed,
+    Object minimumVolumeString = freezed,
     Object minimumVolumeStringElement = freezed,
     Object additive = freezed,
     Object preparation = freezed,
@@ -20807,6 +21324,9 @@ class __$SpecimenDefinitionContainerCopyWithImpl<$Res>
       minimumVolumeQuantity: minimumVolumeQuantity == freezed
           ? _value.minimumVolumeQuantity
           : minimumVolumeQuantity as Quantity,
+      minimumVolumeString: minimumVolumeString == freezed
+          ? _value.minimumVolumeString
+          : minimumVolumeString as String,
       minimumVolumeStringElement: minimumVolumeStringElement == freezed
           ? _value.minimumVolumeStringElement
           : minimumVolumeStringElement as Element,
@@ -20835,6 +21355,7 @@ class _$_SpecimenDefinitionContainer extends _SpecimenDefinitionContainer {
       @JsonKey(name: '_description') this.descriptionElement,
       this.capacity,
       this.minimumVolumeQuantity,
+      this.minimumVolumeString,
       @JsonKey(name: '_minimumVolumeString') this.minimumVolumeStringElement,
       this.additive,
       this.preparation,
@@ -20867,6 +21388,8 @@ class _$_SpecimenDefinitionContainer extends _SpecimenDefinitionContainer {
   @override
   final Quantity minimumVolumeQuantity;
   @override
+  final String minimumVolumeString;
+  @override
   @JsonKey(name: '_minimumVolumeString')
   final Element minimumVolumeStringElement;
   @override
@@ -20879,7 +21402,7 @@ class _$_SpecimenDefinitionContainer extends _SpecimenDefinitionContainer {
 
   @override
   String toString() {
-    return 'SpecimenDefinitionContainer(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, material: $material, type: $type, cap: $cap, description: $description, descriptionElement: $descriptionElement, capacity: $capacity, minimumVolumeQuantity: $minimumVolumeQuantity, minimumVolumeStringElement: $minimumVolumeStringElement, additive: $additive, preparation: $preparation, preparationElement: $preparationElement)';
+    return 'SpecimenDefinitionContainer(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, material: $material, type: $type, cap: $cap, description: $description, descriptionElement: $descriptionElement, capacity: $capacity, minimumVolumeQuantity: $minimumVolumeQuantity, minimumVolumeString: $minimumVolumeString, minimumVolumeStringElement: $minimumVolumeStringElement, additive: $additive, preparation: $preparation, preparationElement: $preparationElement)';
   }
 
   @override
@@ -20913,6 +21436,9 @@ class _$_SpecimenDefinitionContainer extends _SpecimenDefinitionContainer {
             (identical(other.minimumVolumeQuantity, minimumVolumeQuantity) ||
                 const DeepCollectionEquality().equals(
                     other.minimumVolumeQuantity, minimumVolumeQuantity)) &&
+            (identical(other.minimumVolumeString, minimumVolumeString) ||
+                const DeepCollectionEquality()
+                    .equals(other.minimumVolumeString, minimumVolumeString)) &&
             (identical(other.minimumVolumeStringElement,
                     minimumVolumeStringElement) ||
                 const DeepCollectionEquality().equals(
@@ -20942,6 +21468,7 @@ class _$_SpecimenDefinitionContainer extends _SpecimenDefinitionContainer {
       const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(capacity) ^
       const DeepCollectionEquality().hash(minimumVolumeQuantity) ^
+      const DeepCollectionEquality().hash(minimumVolumeString) ^
       const DeepCollectionEquality().hash(minimumVolumeStringElement) ^
       const DeepCollectionEquality().hash(additive) ^
       const DeepCollectionEquality().hash(preparation) ^
@@ -20974,6 +21501,7 @@ abstract class _SpecimenDefinitionContainer
           Element descriptionElement,
       Quantity capacity,
       Quantity minimumVolumeQuantity,
+      String minimumVolumeString,
       @JsonKey(name: '_minimumVolumeString')
           Element minimumVolumeStringElement,
       List<SpecimenDefinitionAdditive> additive,
@@ -21006,6 +21534,8 @@ abstract class _SpecimenDefinitionContainer
   Quantity get capacity;
   @override
   Quantity get minimumVolumeQuantity;
+  @override
+  String get minimumVolumeString;
   @override
   @JsonKey(name: '_minimumVolumeString')
   Element get minimumVolumeStringElement;

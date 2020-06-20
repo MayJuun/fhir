@@ -9,7 +9,7 @@ part 'general_types.g.dart';
 
 @freezed
 abstract class Annotation with _$Annotation {
-  const factory Annotation({
+  factory Annotation({
     Reference authorReference,
     String authorString,
     FhirDateTime time,
@@ -24,7 +24,7 @@ abstract class Annotation with _$Annotation {
 
 @freezed
 abstract class Attachment with _$Attachment {
-  const factory Attachment({
+  factory Attachment({
     Code contentType,
     Code language,
     String data,
@@ -48,7 +48,7 @@ abstract class Attachment with _$Attachment {
 
 @freezed
 abstract class Identifier with _$Identifier {
-  const factory Identifier({
+  factory Identifier({
     @JsonKey(unknownEnumValue: IdentifierUse.unknown) IdentifierUse use,
     CodeableConcept type,
     String system,
@@ -65,7 +65,7 @@ abstract class Identifier with _$Identifier {
 
 @freezed
 abstract class CodeableConcept with _$CodeableConcept {
-  const factory CodeableConcept({
+  factory CodeableConcept({
     List<Coding> coding,
     String text,
     @JsonKey(name: '_text') Element textElement,
@@ -76,7 +76,7 @@ abstract class CodeableConcept with _$CodeableConcept {
 
 @freezed
 abstract class Coding with _$Coding {
-  const factory Coding({
+  factory Coding({
     String system,
     String version,
     Code code,
@@ -93,7 +93,7 @@ abstract class Coding with _$Coding {
 
 @freezed
 abstract class Quantity with _$Quantity {
-  const factory Quantity({
+  factory Quantity({
     Decimal value,
     @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
     String unit,
@@ -111,7 +111,7 @@ abstract class Quantity with _$Quantity {
 
 @freezed
 abstract class Duration with _$Duration {
-  const factory Duration({
+  factory Duration({
     Decimal value,
     @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
     String unit,
@@ -124,7 +124,7 @@ abstract class Duration with _$Duration {
 
 @freezed
 abstract class Distance with _$Distance {
-  const factory Distance({
+  factory Distance({
     Decimal value,
     @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
     String unit,
@@ -137,7 +137,7 @@ abstract class Distance with _$Distance {
 
 @freezed
 abstract class Count with _$Count {
-  const factory Count({
+  factory Count({
     Decimal value,
     @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
     String unit,
@@ -149,7 +149,7 @@ abstract class Count with _$Count {
 
 @freezed
 abstract class Money with _$Money {
-  const factory Money({
+  factory Money({
     Decimal value,
     @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
     String unit,
@@ -161,7 +161,7 @@ abstract class Money with _$Money {
 
 @freezed
 abstract class Age with _$Age {
-  const factory Age({
+  factory Age({
     Decimal value,
     @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
     String unit,
@@ -173,7 +173,7 @@ abstract class Age with _$Age {
 
 @freezed
 abstract class Range with _$Range {
-  const factory Range({
+  factory Range({
     Quantity low,
     Quantity high,
   }) = _Range;
@@ -182,7 +182,7 @@ abstract class Range with _$Range {
 
 @freezed
 abstract class Period with _$Period {
-  const factory Period({
+  factory Period({
     FhirDateTime start,
     FhirDateTime end,
     @JsonKey(name: '_start') Element startElement,
@@ -193,7 +193,7 @@ abstract class Period with _$Period {
 
 @freezed
 abstract class Ratio with _$Ratio {
-  const factory Ratio({
+  factory Ratio({
     Quantity numerator,
     Quantity denominator,
   }) = _Ratio;
@@ -202,7 +202,7 @@ abstract class Ratio with _$Ratio {
 
 @freezed
 abstract class SampledData with _$SampledData {
-  const factory SampledData({
+  factory SampledData({
     @JsonKey(required: true) Quantity origin,
     Decimal period,
     Decimal factor,
@@ -223,7 +223,7 @@ abstract class SampledData with _$SampledData {
 
 @freezed
 abstract class Signature with _$Signature {
-  const factory Signature({
+  factory Signature({
     @JsonKey(required: true) List<Coding> type,
     String when,
     String whoUri,
@@ -244,7 +244,7 @@ abstract class Signature with _$Signature {
 
 @freezed
 abstract class HumanName with _$HumanName {
-  const factory HumanName({
+  factory HumanName({
     @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
     String text,
     String family,
@@ -265,7 +265,7 @@ abstract class HumanName with _$HumanName {
 
 @freezed
 abstract class Address with _$Address {
-  const factory Address({
+  factory Address({
     @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
     @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
     String text,
@@ -292,7 +292,7 @@ abstract class Address with _$Address {
 
 @freezed
 abstract class ContactPoint with _$ContactPoint {
-  const factory ContactPoint({
+  factory ContactPoint({
     @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
         ContactPointSystem system,
     String value,
@@ -310,7 +310,7 @@ abstract class ContactPoint with _$ContactPoint {
 
 @freezed
 abstract class Timing with _$Timing {
-  const factory Timing({
+  factory Timing({
     List<FhirDateTime> event,
     TimingRepeat repeat,
     CodeableConcept code,
@@ -321,7 +321,7 @@ abstract class Timing with _$Timing {
 
 @freezed
 abstract class TimingRepeat with _$TimingRepeat {
-  const factory TimingRepeat({
+  factory TimingRepeat({
     Duration boundsDuration,
     Range boundsRange,
     Period boundsPeriod,

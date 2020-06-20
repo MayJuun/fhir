@@ -373,7 +373,7 @@ class __$OrderResponseCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_OrderResponse implements _OrderResponse {
-  const _$_OrderResponse(
+  _$_OrderResponse(
       {@JsonKey(defaultValue: 'OrderResponse')
           this.resourceType,
       this.id,
@@ -533,7 +533,7 @@ class _$_OrderResponse implements _OrderResponse {
 }
 
 abstract class _OrderResponse implements OrderResponse {
-  const factory _OrderResponse(
+  factory _OrderResponse(
       {@JsonKey(defaultValue: 'OrderResponse')
           String resourceType,
       Id id,
@@ -988,7 +988,7 @@ class __$OrderCopyWithImpl<$Res> extends _$OrderCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Order implements _Order {
-  const _$_Order(
+  _$_Order(
       {@JsonKey(defaultValue: 'Order') this.resourceType,
       this.id,
       this.meta,
@@ -1142,7 +1142,7 @@ class _$_Order implements _Order {
 }
 
 abstract class _Order implements Order {
-  const factory _Order(
+  factory _Order(
       {@JsonKey(defaultValue: 'Order') String resourceType,
       Id id,
       Meta meta,
@@ -1849,7 +1849,7 @@ class __$DeviceUseRequestCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DeviceUseRequest implements _DeviceUseRequest {
-  const _$_DeviceUseRequest(
+  _$_DeviceUseRequest(
       {@JsonKey(defaultValue: 'DeviceUseRequest')
           this.resourceType,
       this.id,
@@ -2086,7 +2086,7 @@ class _$_DeviceUseRequest implements _DeviceUseRequest {
 }
 
 abstract class _DeviceUseRequest implements DeviceUseRequest {
-  const factory _DeviceUseRequest(
+  factory _DeviceUseRequest(
       {@JsonKey(defaultValue: 'DeviceUseRequest')
           String resourceType,
       Id id,
@@ -2762,7 +2762,7 @@ class __$DeviceUseStatementCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DeviceUseStatement implements _DeviceUseStatement {
-  const _$_DeviceUseStatement(
+  _$_DeviceUseStatement(
       {@JsonKey(defaultValue: 'DeviceUseStatement') this.resourceType,
       this.id,
       this.meta,
@@ -2965,7 +2965,7 @@ class _$_DeviceUseStatement implements _DeviceUseStatement {
 }
 
 abstract class _DeviceUseStatement implements DeviceUseStatement {
-  const factory _DeviceUseStatement(
+  factory _DeviceUseStatement(
           {@JsonKey(defaultValue: 'DeviceUseStatement') String resourceType,
           Id id,
           Meta meta,
@@ -3683,7 +3683,7 @@ class __$CommunicationRequestCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CommunicationRequest implements _CommunicationRequest {
-  const _$_CommunicationRequest(
+  _$_CommunicationRequest(
       {@JsonKey(defaultValue: 'CommunicationRequest')
           this.resourceType,
       this.id,
@@ -3913,7 +3913,7 @@ class _$_CommunicationRequest implements _CommunicationRequest {
 }
 
 abstract class _CommunicationRequest implements CommunicationRequest {
-  const factory _CommunicationRequest(
+  factory _CommunicationRequest(
       {@JsonKey(defaultValue: 'CommunicationRequest')
           String resourceType,
       Id id,
@@ -4198,7 +4198,7 @@ class __$OrderWhenCopyWithImpl<$Res> extends _$OrderWhenCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_OrderWhen implements _OrderWhen {
-  const _$_OrderWhen(
+  _$_OrderWhen(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -4272,7 +4272,7 @@ class _$_OrderWhen implements _OrderWhen {
 }
 
 abstract class _OrderWhen implements OrderWhen {
-  const factory _OrderWhen(
+  factory _OrderWhen(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -4524,7 +4524,7 @@ class __$CommunicationRequestPayloadCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CommunicationRequestPayload implements _CommunicationRequestPayload {
-  const _$_CommunicationRequestPayload(
+  _$_CommunicationRequestPayload(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -4608,7 +4608,7 @@ class _$_CommunicationRequestPayload implements _CommunicationRequestPayload {
 
 abstract class _CommunicationRequestPayload
     implements CommunicationRequestPayload {
-  const factory _CommunicationRequestPayload(
+  factory _CommunicationRequestPayload(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,

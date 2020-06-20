@@ -11,7 +11,7 @@ part 'misc.g.dart';
 abstract class ImplementationGuide
     with _$ImplementationGuide
     implements Resource {
-  const factory ImplementationGuide({
+  factory ImplementationGuide({
     @JsonKey(defaultValue: 'ImplementationGuide') String resourceType,
     Id id,
     Meta meta,
@@ -61,7 +61,7 @@ abstract class ImplementationGuide
 
 @freezed
 abstract class ImplementationGuideContact with _$ImplementationGuideContact {
-  const factory ImplementationGuideContact({
+  factory ImplementationGuideContact({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -76,7 +76,7 @@ abstract class ImplementationGuideContact with _$ImplementationGuideContact {
 @freezed
 abstract class ImplementationGuideDependency
     with _$ImplementationGuideDependency {
-  const factory ImplementationGuideDependency({
+  factory ImplementationGuideDependency({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -93,7 +93,7 @@ abstract class ImplementationGuideDependency
 
 @freezed
 abstract class ImplementationGuidePackage with _$ImplementationGuidePackage {
-  const factory ImplementationGuidePackage({
+  factory ImplementationGuidePackage({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -110,7 +110,7 @@ abstract class ImplementationGuidePackage with _$ImplementationGuidePackage {
 
 @freezed
 abstract class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
-  const factory ImplementationGuideGlobal({
+  factory ImplementationGuideGlobal({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -125,7 +125,7 @@ abstract class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
 
 @freezed
 abstract class ImplementationGuidePage with _$ImplementationGuidePage {
-  const factory ImplementationGuidePage({
+  factory ImplementationGuidePage({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -146,7 +146,7 @@ abstract class ImplementationGuidePage with _$ImplementationGuidePage {
 
 @freezed
 abstract class ImplementationGuideResource with _$ImplementationGuideResource {
-  const factory ImplementationGuideResource({
+  factory ImplementationGuideResource({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -168,7 +168,7 @@ abstract class ImplementationGuideResource with _$ImplementationGuideResource {
 
 @freezed
 abstract class TestScript with _$TestScript implements Resource {
-  const factory TestScript({
+  factory TestScript({
     @JsonKey(defaultValue: 'TestScript') String resourceType,
     Id id,
     Meta meta,
@@ -219,7 +219,7 @@ abstract class TestScript with _$TestScript implements Resource {
 
 @freezed
 abstract class TestScriptContact with _$TestScriptContact {
-  const factory TestScriptContact({
+  factory TestScriptContact({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -233,7 +233,7 @@ abstract class TestScriptContact with _$TestScriptContact {
 
 @freezed
 abstract class TestScriptMetadata with _$TestScriptMetadata {
-  const factory TestScriptMetadata({
+  factory TestScriptMetadata({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -247,7 +247,7 @@ abstract class TestScriptMetadata with _$TestScriptMetadata {
 
 @freezed
 abstract class TestScriptLink with _$TestScriptLink {
-  const factory TestScriptLink({
+  factory TestScriptLink({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -263,7 +263,7 @@ abstract class TestScriptLink with _$TestScriptLink {
 
 @freezed
 abstract class TestScriptCapability with _$TestScriptCapability {
-  const factory TestScriptCapability({
+  factory TestScriptCapability({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -286,7 +286,7 @@ abstract class TestScriptCapability with _$TestScriptCapability {
 
 @freezed
 abstract class TestScriptFixture with _$TestScriptFixture {
-  const factory TestScriptFixture({
+  factory TestScriptFixture({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -303,7 +303,7 @@ abstract class TestScriptFixture with _$TestScriptFixture {
 
 @freezed
 abstract class TestScriptVariable with _$TestScriptVariable {
-  const factory TestScriptVariable({
+  factory TestScriptVariable({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -323,7 +323,7 @@ abstract class TestScriptVariable with _$TestScriptVariable {
 
 @freezed
 abstract class TestScriptSetup with _$TestScriptSetup {
-  const factory TestScriptSetup({
+  factory TestScriptSetup({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -337,7 +337,7 @@ abstract class TestScriptSetup with _$TestScriptSetup {
 
 @freezed
 abstract class SetupAction with _$SetupAction {
-  const factory SetupAction({
+  factory SetupAction({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -352,7 +352,7 @@ abstract class SetupAction with _$SetupAction {
 
 @freezed
 abstract class ActionOperation with _$ActionOperation {
-  const factory ActionOperation({
+  factory ActionOperation({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -392,7 +392,7 @@ abstract class ActionOperation with _$ActionOperation {
 
 @freezed
 abstract class ActionAssert with _$ActionAssert {
-  const factory ActionAssert({
+  factory ActionAssert({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -442,7 +442,7 @@ abstract class ActionAssert with _$ActionAssert {
 
 @freezed
 abstract class TestScriptRequestHeader with _$TestScriptRequestHeader {
-  const factory TestScriptRequestHeader({
+  factory TestScriptRequestHeader({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtensio,
@@ -458,7 +458,7 @@ abstract class TestScriptRequestHeader with _$TestScriptRequestHeader {
 
 @freezed
 abstract class TestScriptTest with _$TestScriptTest {
-  const factory TestScriptTest({
+  factory TestScriptTest({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -476,7 +476,7 @@ abstract class TestScriptTest with _$TestScriptTest {
 
 @freezed
 abstract class TestScriptTeardown with _$TestScriptTeardown {
-  const factory TestScriptTeardown({
+  factory TestScriptTeardown({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -489,7 +489,7 @@ abstract class TestScriptTeardown with _$TestScriptTeardown {
 
 @freezed
 abstract class TeardownAction with _$TeardownAction {
-  const factory TeardownAction({
+  factory TeardownAction({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,

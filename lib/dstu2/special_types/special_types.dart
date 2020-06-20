@@ -9,7 +9,7 @@ part 'special_types.g.dart';
 
 @freezed
 abstract class FhirExtension with _$FhirExtension {
-  const factory FhirExtension({
+  factory FhirExtension({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     @JsonKey(required: true) @required FhirUri url,
@@ -56,7 +56,7 @@ abstract class FhirExtension with _$FhirExtension {
 
 @freezed
 abstract class Meta with _$Meta {
-  const factory Meta({
+  factory Meta({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     @JsonKey(name: 'fhir_comments') List<String> fhirComments,
@@ -74,7 +74,7 @@ abstract class Meta with _$Meta {
 
 @freezed
 abstract class Reference with _$Reference {
-  const factory Reference({
+  factory Reference({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     @JsonKey(name: 'fhir_comments') List<String> fhirComments,
@@ -90,7 +90,7 @@ abstract class Reference with _$Reference {
 
 @freezed
 abstract class Element with _$Element {
-  const factory Element({
+  factory Element({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     @JsonKey(name: 'fhir_comments') List<String> fhirComments,
@@ -102,7 +102,7 @@ abstract class Element with _$Element {
 
 @freezed
 abstract class ElementDefinition with _$ElementDefinition {
-  const factory ElementDefinition({
+  factory ElementDefinition({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     @JsonKey(required: true) @required String path,
@@ -344,7 +344,7 @@ abstract class ElementDefinition with _$ElementDefinition {
 
 @freezed
 abstract class Narrative with _$Narrative {
-  const factory Narrative({
+  factory Narrative({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     @JsonKey(name: 'fhir_comments') List<String> fhirComments,
@@ -361,7 +361,7 @@ abstract class Narrative with _$Narrative {
 
 @freezed
 abstract class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
-  const factory ElementDefinitionSlicing({
+  factory ElementDefinitionSlicing({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<String> discriminator,
@@ -381,7 +381,7 @@ abstract class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
 
 @freezed
 abstract class ElementDefinitionBase with _$ElementDefinitionBase {
-  const factory ElementDefinitionBase({
+  factory ElementDefinitionBase({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     @JsonKey(required: true) @required String path,
@@ -398,7 +398,7 @@ abstract class ElementDefinitionBase with _$ElementDefinitionBase {
 
 @freezed
 abstract class ElementDefinitionType with _$ElementDefinitionType {
-  const factory ElementDefinitionType({
+  factory ElementDefinitionType({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     Code code,
@@ -415,7 +415,7 @@ abstract class ElementDefinitionType with _$ElementDefinitionType {
 
 @freezed
 abstract class TypeCodeExtension with _$TypeCodeExtension {
-  const factory TypeCodeExtension({
+  factory TypeCodeExtension({
     @JsonKey(name: "extension") List<FhirExtension> extension_,
   }) = _TypeCodeExtension;
 
@@ -425,7 +425,7 @@ abstract class TypeCodeExtension with _$TypeCodeExtension {
 
 @freezed
 abstract class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
-  const factory ElementDefinitionConstraint({
+  factory ElementDefinitionConstraint({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     @JsonKey(required: true) @required Id key,
@@ -448,7 +448,7 @@ abstract class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
 
 @freezed
 abstract class ElementDefinitionBinding with _$ElementDefinitionBinding {
-  const factory ElementDefinitionBinding({
+  factory ElementDefinitionBinding({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
@@ -467,7 +467,7 @@ abstract class ElementDefinitionBinding with _$ElementDefinitionBinding {
 
 @freezed
 abstract class ElementDefinitionMapping with _$ElementDefinitionMapping {
-  const factory ElementDefinitionMapping({
+  factory ElementDefinitionMapping({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     @JsonKey(name: 'fhir_comments') List<String> fhirComments,
@@ -485,7 +485,7 @@ abstract class ElementDefinitionMapping with _$ElementDefinitionMapping {
 
 @freezed
 abstract class BackboneElement with _$BackboneElement {
-  const factory BackboneElement({
+  factory BackboneElement({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,

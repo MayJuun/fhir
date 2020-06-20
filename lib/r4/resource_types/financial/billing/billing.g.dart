@@ -424,15 +424,22 @@ _$_ClaimSupportingInfo _$_$_ClaimSupportingInfoFromJson(
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+    timingDate: json['timingDate'] == null
+        ? null
+        : Date.fromJson(json['timingDate'] as String),
     timingDateElement: json['_timingDate'] == null
         ? null
         : Element.fromJson(json['_timingDate'] as Map<String, dynamic>),
     timingPeriod: json['timingPeriod'] == null
         ? null
         : Period.fromJson(json['timingPeriod'] as Map<String, dynamic>),
+    valueBoolean: json['valueBoolean'] == null
+        ? null
+        : Boolean.fromJson(json['valueBoolean']),
     valueBooleanElement: json['_valueBoolean'] == null
         ? null
         : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
+    valueString: json['valueString'] as String,
     valueStringElement: json['_valueString'] == null
         ? null
         : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
@@ -470,9 +477,12 @@ Map<String, dynamic> _$_$_ClaimSupportingInfoToJson(
   writeNotNull('_sequence', instance.sequenceElement?.toJson());
   writeNotNull('category', instance.category?.toJson());
   writeNotNull('code', instance.code?.toJson());
+  writeNotNull('timingDate', instance.timingDate?.toJson());
   writeNotNull('_timingDate', instance.timingDateElement?.toJson());
   writeNotNull('timingPeriod', instance.timingPeriod?.toJson());
+  writeNotNull('valueBoolean', instance.valueBoolean?.toJson());
   writeNotNull('_valueBoolean', instance.valueBooleanElement?.toJson());
+  writeNotNull('valueString', instance.valueString);
   writeNotNull('_valueString', instance.valueStringElement?.toJson());
   writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
   writeNotNull('valueAttachment', instance.valueAttachment?.toJson());
@@ -806,6 +816,9 @@ _$_ClaimItem _$_$_ClaimItemFromJson(Map<String, dynamic> json) {
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    servicedDate: json['servicedDate'] == null
+        ? null
+        : Date.fromJson(json['servicedDate'] as String),
     servicedDateElement: json['_servicedDate'] == null
         ? null
         : Element.fromJson(json['_servicedDate'] as Map<String, dynamic>),
@@ -896,6 +909,7 @@ Map<String, dynamic> _$_$_ClaimItemToJson(_$_ClaimItem instance) {
       'modifier', instance.modifier?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'programCode', instance.programCode?.map((e) => e?.toJson())?.toList());
+  writeNotNull('servicedDate', instance.servicedDate?.toJson());
   writeNotNull('_servicedDate', instance.servicedDateElement?.toJson());
   writeNotNull('servicedPeriod', instance.servicedPeriod?.toJson());
   writeNotNull(
@@ -1611,6 +1625,9 @@ _$_ClaimResponseAddItem _$_$_ClaimResponseAddItemFromJson(
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    servicedDate: json['servicedDate'] == null
+        ? null
+        : Date.fromJson(json['servicedDate'] as String),
     servicedDateElement: json['_servicedDate'] == null
         ? null
         : Element.fromJson(json['_servicedDate'] as Map<String, dynamic>),
@@ -1699,6 +1716,7 @@ Map<String, dynamic> _$_$_ClaimResponseAddItemToJson(
       'modifier', instance.modifier?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'programCode', instance.programCode?.map((e) => e?.toJson())?.toList());
+  writeNotNull('servicedDate', instance.servicedDate?.toJson());
   writeNotNull('_servicedDate', instance.servicedDateElement?.toJson());
   writeNotNull('servicedPeriod', instance.servicedPeriod?.toJson());
   writeNotNull(

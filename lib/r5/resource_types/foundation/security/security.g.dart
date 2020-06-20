@@ -493,9 +493,13 @@ _$_AuditEventDetail _$_$_AuditEventDetailFromJson(Map<String, dynamic> json) {
     typeElement: json['_type'] == null
         ? null
         : Element.fromJson(json['_type'] as Map<String, dynamic>),
+    valueString: json['valueString'] as String,
     valueStringElement: json['_valueString'] == null
         ? null
         : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
+    valueBase64Binary: json['valueBase64Binary'] == null
+        ? null
+        : Base64Binary.fromJson(json['valueBase64Binary'] as String),
     valueBase64BinaryElement: json['_valueBase64Binary'] == null
         ? null
         : Element.fromJson(json['_valueBase64Binary'] as Map<String, dynamic>),
@@ -518,7 +522,9 @@ Map<String, dynamic> _$_$_AuditEventDetailToJson(_$_AuditEventDetail instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('type', instance.type);
   writeNotNull('_type', instance.typeElement?.toJson());
+  writeNotNull('valueString', instance.valueString);
   writeNotNull('_valueString', instance.valueStringElement?.toJson());
+  writeNotNull('valueBase64Binary', instance.valueBase64Binary?.toJson());
   writeNotNull(
       '_valueBase64Binary', instance.valueBase64BinaryElement?.toJson());
   return val;
@@ -1024,6 +1030,9 @@ _$_Provenance _$_$_ProvenanceFromJson(Map<String, dynamic> json) {
     occurredPeriod: json['occurredPeriod'] == null
         ? null
         : Period.fromJson(json['occurredPeriod'] as Map<String, dynamic>),
+    occurredDateTime: json['occurredDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['occurredDateTime'] as String),
     occurredDateTimeElement: json['_occurredDateTime'] == null
         ? null
         : Element.fromJson(json['_occurredDateTime'] as Map<String, dynamic>),
@@ -1092,6 +1101,7 @@ Map<String, dynamic> _$_$_ProvenanceToJson(_$_Provenance instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('target', instance.target?.map((e) => e?.toJson())?.toList());
   writeNotNull('occurredPeriod', instance.occurredPeriod?.toJson());
+  writeNotNull('occurredDateTime', instance.occurredDateTime?.toJson());
   writeNotNull('_occurredDateTime', instance.occurredDateTimeElement?.toJson());
   writeNotNull('recorded', instance.recorded?.toJson());
   writeNotNull('_recorded', instance.recordedElement?.toJson());

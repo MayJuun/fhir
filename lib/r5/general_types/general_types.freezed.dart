@@ -201,6 +201,7 @@ class _$AnnotationTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       Reference authorReference,
+      String authorString,
       @JsonKey(name: '_authorString') Element authorStringElement,
       FhirDateTime time,
       @JsonKey(name: '_time') Element timeElement,
@@ -210,6 +211,7 @@ class _$AnnotationTearOff {
       id: id,
       extension_: extension_,
       authorReference: authorReference,
+      authorString: authorString,
       authorStringElement: authorStringElement,
       time: time,
       timeElement: timeElement,
@@ -227,6 +229,7 @@ mixin _$Annotation {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   Reference get authorReference;
+  String get authorString;
   @JsonKey(name: '_authorString')
   Element get authorStringElement;
   FhirDateTime get time;
@@ -248,6 +251,7 @@ abstract class $AnnotationCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       Reference authorReference,
+      String authorString,
       @JsonKey(name: '_authorString') Element authorStringElement,
       FhirDateTime time,
       @JsonKey(name: '_time') Element timeElement,
@@ -272,6 +276,7 @@ class _$AnnotationCopyWithImpl<$Res> implements $AnnotationCopyWith<$Res> {
     Object id = freezed,
     Object extension_ = freezed,
     Object authorReference = freezed,
+    Object authorString = freezed,
     Object authorStringElement = freezed,
     Object time = freezed,
     Object timeElement = freezed,
@@ -286,6 +291,9 @@ class _$AnnotationCopyWithImpl<$Res> implements $AnnotationCopyWith<$Res> {
       authorReference: authorReference == freezed
           ? _value.authorReference
           : authorReference as Reference,
+      authorString: authorString == freezed
+          ? _value.authorString
+          : authorString as String,
       authorStringElement: authorStringElement == freezed
           ? _value.authorStringElement
           : authorStringElement as Element,
@@ -348,6 +356,7 @@ abstract class _$AnnotationCopyWith<$Res> implements $AnnotationCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       Reference authorReference,
+      String authorString,
       @JsonKey(name: '_authorString') Element authorStringElement,
       FhirDateTime time,
       @JsonKey(name: '_time') Element timeElement,
@@ -378,6 +387,7 @@ class __$AnnotationCopyWithImpl<$Res> extends _$AnnotationCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object authorReference = freezed,
+    Object authorString = freezed,
     Object authorStringElement = freezed,
     Object time = freezed,
     Object timeElement = freezed,
@@ -392,6 +402,9 @@ class __$AnnotationCopyWithImpl<$Res> extends _$AnnotationCopyWithImpl<$Res>
       authorReference: authorReference == freezed
           ? _value.authorReference
           : authorReference as Reference,
+      authorString: authorString == freezed
+          ? _value.authorString
+          : authorString as String,
       authorStringElement: authorStringElement == freezed
           ? _value.authorStringElement
           : authorStringElement as Element,
@@ -411,6 +424,7 @@ class _$_Annotation extends _Annotation {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.authorReference,
+      this.authorString,
       @JsonKey(name: '_authorString') this.authorStringElement,
       this.time,
       @JsonKey(name: '_time') this.timeElement,
@@ -429,6 +443,8 @@ class _$_Annotation extends _Annotation {
   @override
   final Reference authorReference;
   @override
+  final String authorString;
+  @override
   @JsonKey(name: '_authorString')
   final Element authorStringElement;
   @override
@@ -444,7 +460,7 @@ class _$_Annotation extends _Annotation {
 
   @override
   String toString() {
-    return 'Annotation(id: $id, extension_: $extension_, authorReference: $authorReference, authorStringElement: $authorStringElement, time: $time, timeElement: $timeElement, text: $text, textElement: $textElement)';
+    return 'Annotation(id: $id, extension_: $extension_, authorReference: $authorReference, authorString: $authorString, authorStringElement: $authorStringElement, time: $time, timeElement: $timeElement, text: $text, textElement: $textElement)';
   }
 
   @override
@@ -459,6 +475,9 @@ class _$_Annotation extends _Annotation {
             (identical(other.authorReference, authorReference) ||
                 const DeepCollectionEquality()
                     .equals(other.authorReference, authorReference)) &&
+            (identical(other.authorString, authorString) ||
+                const DeepCollectionEquality()
+                    .equals(other.authorString, authorString)) &&
             (identical(other.authorStringElement, authorStringElement) ||
                 const DeepCollectionEquality()
                     .equals(other.authorStringElement, authorStringElement)) &&
@@ -480,6 +499,7 @@ class _$_Annotation extends _Annotation {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(authorReference) ^
+      const DeepCollectionEquality().hash(authorString) ^
       const DeepCollectionEquality().hash(authorStringElement) ^
       const DeepCollectionEquality().hash(time) ^
       const DeepCollectionEquality().hash(timeElement) ^
@@ -502,6 +522,7 @@ abstract class _Annotation extends Annotation {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       Reference authorReference,
+      String authorString,
       @JsonKey(name: '_authorString') Element authorStringElement,
       FhirDateTime time,
       @JsonKey(name: '_time') Element timeElement,
@@ -518,6 +539,8 @@ abstract class _Annotation extends Annotation {
   List<FhirExtension> get extension_;
   @override
   Reference get authorReference;
+  @override
+  String get authorString;
   @override
   @JsonKey(name: '_authorString')
   Element get authorStringElement;

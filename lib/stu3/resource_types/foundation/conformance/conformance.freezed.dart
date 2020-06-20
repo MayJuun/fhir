@@ -1084,7 +1084,7 @@ class __$CapabilityStatementCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CapabilityStatement implements _CapabilityStatement {
-  const _$_CapabilityStatement(
+  _$_CapabilityStatement(
       {@required
       @JsonKey(required: true, defaultValue: 'CapabilityStatement')
           this.resourceType,
@@ -1478,7 +1478,7 @@ class _$_CapabilityStatement implements _CapabilityStatement {
 }
 
 abstract class _CapabilityStatement implements CapabilityStatement {
-  const factory _CapabilityStatement(
+  factory _CapabilityStatement(
       {@required
       @JsonKey(required: true, defaultValue: 'CapabilityStatement')
           String resourceType,
@@ -1888,7 +1888,7 @@ class __$CapabilityStatementSoftwareCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CapabilityStatementSoftware implements _CapabilityStatementSoftware {
-  const _$_CapabilityStatementSoftware(
+  _$_CapabilityStatementSoftware(
       {this.name,
       this.version,
       this.releaseDate,
@@ -1966,7 +1966,7 @@ class _$_CapabilityStatementSoftware implements _CapabilityStatementSoftware {
 
 abstract class _CapabilityStatementSoftware
     implements CapabilityStatementSoftware {
-  const factory _CapabilityStatementSoftware(
+  factory _CapabilityStatementSoftware(
           {String name,
           String version,
           FhirDateTime releaseDate,
@@ -2154,7 +2154,7 @@ class __$CapabilityStatementImplementationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CapabilityStatementImplementation
     implements _CapabilityStatementImplementation {
-  const _$_CapabilityStatementImplementation(
+  _$_CapabilityStatementImplementation(
       {this.description,
       this.url,
       @JsonKey(name: '_description') this.descriptionElement,
@@ -2219,7 +2219,7 @@ class _$_CapabilityStatementImplementation
 
 abstract class _CapabilityStatementImplementation
     implements CapabilityStatementImplementation {
-  const factory _CapabilityStatementImplementation(
+  factory _CapabilityStatementImplementation(
           {String description,
           String url,
           @JsonKey(name: '_description') Element descriptionElement,
@@ -2516,7 +2516,7 @@ class __$CapabilityStatementRestCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CapabilityStatementRest implements _CapabilityStatementRest {
-  const _$_CapabilityStatementRest(
+  _$_CapabilityStatementRest(
       {@JsonKey(unknownEnumValue: RestMode.unknown) this.mode,
       this.documentation,
       this.security,
@@ -2629,7 +2629,7 @@ class _$_CapabilityStatementRest implements _CapabilityStatementRest {
 }
 
 abstract class _CapabilityStatementRest implements CapabilityStatementRest {
-  const factory _CapabilityStatementRest(
+  factory _CapabilityStatementRest(
           {@JsonKey(unknownEnumValue: RestMode.unknown) RestMode mode,
           String documentation,
           CapabilityStatementSecurity security,
@@ -2856,7 +2856,7 @@ class __$CapabilityStatementSecurityCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CapabilityStatementSecurity implements _CapabilityStatementSecurity {
-  const _$_CapabilityStatementSecurity(
+  _$_CapabilityStatementSecurity(
       {this.cors,
       this.service,
       this.description,
@@ -2933,7 +2933,7 @@ class _$_CapabilityStatementSecurity implements _CapabilityStatementSecurity {
 
 abstract class _CapabilityStatementSecurity
     implements CapabilityStatementSecurity {
-  const factory _CapabilityStatementSecurity(
+  factory _CapabilityStatementSecurity(
           {Boolean cors,
           List<CodeableConcept> service,
           String description,
@@ -3116,7 +3116,7 @@ class __$CapabilityStatementCertificateCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CapabilityStatementCertificate
     implements _CapabilityStatementCertificate {
-  const _$_CapabilityStatementCertificate(
+  _$_CapabilityStatementCertificate(
       {this.type,
       this.blob,
       @JsonKey(name: '_type') this.typeElement,
@@ -3179,7 +3179,7 @@ class _$_CapabilityStatementCertificate
 
 abstract class _CapabilityStatementCertificate
     implements CapabilityStatementCertificate {
-  const factory _CapabilityStatementCertificate(
+  factory _CapabilityStatementCertificate(
           {Code type,
           String blob,
           @JsonKey(name: '_type') Element typeElement,
@@ -3858,7 +3858,7 @@ class __$CapabilityStatementResourceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CapabilityStatementResource implements _CapabilityStatementResource {
-  const _$_CapabilityStatementResource(
+  _$_CapabilityStatementResource(
       {this.type,
       this.profile,
       this.documentation,
@@ -4101,7 +4101,7 @@ class _$_CapabilityStatementResource implements _CapabilityStatementResource {
 
 abstract class _CapabilityStatementResource
     implements CapabilityStatementResource {
-  const factory _CapabilityStatementResource(
+  factory _CapabilityStatementResource(
       {Code type,
       Reference profile,
       String documentation,
@@ -4383,7 +4383,7 @@ class __$CapabilityStatementInteractionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CapabilityStatementInteraction
     implements _CapabilityStatementInteraction {
-  const _$_CapabilityStatementInteraction(
+  _$_CapabilityStatementInteraction(
       {@JsonKey(unknownEnumValue: InteractionCode.unknown) this.code,
       this.documentation,
       @JsonKey(name: '_code') this.codeElement,
@@ -4448,7 +4448,7 @@ class _$_CapabilityStatementInteraction
 
 abstract class _CapabilityStatementInteraction
     implements CapabilityStatementInteraction {
-  const factory _CapabilityStatementInteraction(
+  factory _CapabilityStatementInteraction(
       {@JsonKey(unknownEnumValue: InteractionCode.unknown)
           InteractionCode code,
       String documentation,
@@ -4722,7 +4722,7 @@ class __$CapabilityStatementSearchParamCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CapabilityStatementSearchParam
     implements _CapabilityStatementSearchParam {
-  const _$_CapabilityStatementSearchParam(
+  _$_CapabilityStatementSearchParam(
       {this.name,
       this.definition,
       @JsonKey(unknownEnumValue: ParameterSearchType.unknown) this.type,
@@ -4816,7 +4816,7 @@ class _$_CapabilityStatementSearchParam
 
 abstract class _CapabilityStatementSearchParam
     implements CapabilityStatementSearchParam {
-  const factory _CapabilityStatementSearchParam(
+  factory _CapabilityStatementSearchParam(
       {String name,
       String definition,
       @JsonKey(unknownEnumValue: ParameterSearchType.unknown)
@@ -5028,7 +5028,7 @@ class __$CapabilityStatementInteraction1CopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CapabilityStatementInteraction1
     implements _CapabilityStatementInteraction1 {
-  const _$_CapabilityStatementInteraction1(
+  _$_CapabilityStatementInteraction1(
       {@JsonKey(unknownEnumValue: Interaction1Code.unknown) this.code,
       this.documentation,
       @JsonKey(name: '_code') this.codeElement,
@@ -5093,7 +5093,7 @@ class _$_CapabilityStatementInteraction1
 
 abstract class _CapabilityStatementInteraction1
     implements CapabilityStatementInteraction1 {
-  const factory _CapabilityStatementInteraction1(
+  factory _CapabilityStatementInteraction1(
       {@JsonKey(unknownEnumValue: Interaction1Code.unknown)
           Interaction1Code code,
       String documentation,
@@ -5262,7 +5262,7 @@ class __$CapabilityStatementOperationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CapabilityStatementOperation implements _CapabilityStatementOperation {
-  const _$_CapabilityStatementOperation(
+  _$_CapabilityStatementOperation(
       {this.name,
       @JsonKey(required: true) this.definition,
       @JsonKey(name: '_name') this.nameElement});
@@ -5318,7 +5318,7 @@ class _$_CapabilityStatementOperation implements _CapabilityStatementOperation {
 
 abstract class _CapabilityStatementOperation
     implements CapabilityStatementOperation {
-  const factory _CapabilityStatementOperation(
+  factory _CapabilityStatementOperation(
           {String name,
           @JsonKey(required: true) Reference definition,
           @JsonKey(name: '_name') Element nameElement}) =
@@ -5541,7 +5541,7 @@ class __$CapabilityStatementMessagingCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CapabilityStatementMessaging implements _CapabilityStatementMessaging {
-  const _$_CapabilityStatementMessaging(
+  _$_CapabilityStatementMessaging(
       {this.endpoint,
       this.reliableCache,
       this.documentation,
@@ -5625,7 +5625,7 @@ class _$_CapabilityStatementMessaging implements _CapabilityStatementMessaging {
 
 abstract class _CapabilityStatementMessaging
     implements CapabilityStatementMessaging {
-  const factory _CapabilityStatementMessaging(
+  factory _CapabilityStatementMessaging(
           {List<CapabilityStatementEndpoint> endpoint,
           UnsignedInt reliableCache,
           String documentation,
@@ -5800,7 +5800,7 @@ class __$CapabilityStatementEndpointCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CapabilityStatementEndpoint implements _CapabilityStatementEndpoint {
-  const _$_CapabilityStatementEndpoint(
+  _$_CapabilityStatementEndpoint(
       {@JsonKey(required: true) this.protocol,
       this.address,
       @JsonKey(name: '_address') this.addressElement});
@@ -5857,7 +5857,7 @@ class _$_CapabilityStatementEndpoint implements _CapabilityStatementEndpoint {
 
 abstract class _CapabilityStatementEndpoint
     implements CapabilityStatementEndpoint {
-  const factory _CapabilityStatementEndpoint(
+  factory _CapabilityStatementEndpoint(
           {@JsonKey(required: true) Coding protocol,
           String address,
           @JsonKey(name: '_address') Element addressElement}) =
@@ -6023,7 +6023,7 @@ class __$CapabilityStatementSupportedMessageCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CapabilityStatementSupportedMessage
     implements _CapabilityStatementSupportedMessage {
-  const _$_CapabilityStatementSupportedMessage(
+  _$_CapabilityStatementSupportedMessage(
       {@JsonKey(unknownEnumValue: Mode.unknown) this.mode,
       @JsonKey(required: true) this.definition,
       @JsonKey(name: '_mode') this.modeElement});
@@ -6082,7 +6082,7 @@ class _$_CapabilityStatementSupportedMessage
 
 abstract class _CapabilityStatementSupportedMessage
     implements CapabilityStatementSupportedMessage {
-  const factory _CapabilityStatementSupportedMessage(
+  factory _CapabilityStatementSupportedMessage(
           {@JsonKey(unknownEnumValue: Mode.unknown) Mode mode,
           @JsonKey(required: true) Reference definition,
           @JsonKey(name: '_mode') Element modeElement}) =
@@ -6403,7 +6403,7 @@ class __$CapabilityStatementEventCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CapabilityStatementEvent implements _CapabilityStatementEvent {
-  const _$_CapabilityStatementEvent(
+  _$_CapabilityStatementEvent(
       {@JsonKey(required: true) this.code,
       @JsonKey(unknownEnumValue: EventCategory.unknown) this.category,
       @JsonKey(unknownEnumValue: Mode.unknown) this.mode,
@@ -6519,7 +6519,7 @@ class _$_CapabilityStatementEvent implements _CapabilityStatementEvent {
 }
 
 abstract class _CapabilityStatementEvent implements CapabilityStatementEvent {
-  const factory _CapabilityStatementEvent(
+  factory _CapabilityStatementEvent(
       {@JsonKey(required: true)
           Coding code,
       @JsonKey(unknownEnumValue: EventCategory.unknown)
@@ -6759,7 +6759,7 @@ class __$CapabilityStatementDocumentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CapabilityStatementDocument implements _CapabilityStatementDocument {
-  const _$_CapabilityStatementDocument(
+  _$_CapabilityStatementDocument(
       {@JsonKey(unknownEnumValue: DocumentMode.unknown) this.mode,
       this.documentation,
       @JsonKey(required: true) this.profile,
@@ -6831,7 +6831,7 @@ class _$_CapabilityStatementDocument implements _CapabilityStatementDocument {
 
 abstract class _CapabilityStatementDocument
     implements CapabilityStatementDocument {
-  const factory _CapabilityStatementDocument(
+  factory _CapabilityStatementDocument(
           {@JsonKey(unknownEnumValue: DocumentMode.unknown) DocumentMode mode,
           String documentation,
           @JsonKey(required: true) Reference profile,
@@ -7557,7 +7557,7 @@ class __$CompartmentDefinitionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CompartmentDefinition implements _CompartmentDefinition {
-  const _$_CompartmentDefinition(
+  _$_CompartmentDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'CompartmentDefinition')
           this.resourceType,
@@ -7840,7 +7840,7 @@ class _$_CompartmentDefinition implements _CompartmentDefinition {
 }
 
 abstract class _CompartmentDefinition implements CompartmentDefinition {
-  const factory _CompartmentDefinition(
+  factory _CompartmentDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'CompartmentDefinition')
           String resourceType,
@@ -8178,7 +8178,7 @@ class __$CompartmentDefinitionResourceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CompartmentDefinitionResource
     implements _CompartmentDefinitionResource {
-  const _$_CompartmentDefinitionResource(
+  _$_CompartmentDefinitionResource(
       {this.code,
       this.param,
       this.documentation,
@@ -8256,7 +8256,7 @@ class _$_CompartmentDefinitionResource
 
 abstract class _CompartmentDefinitionResource
     implements CompartmentDefinitionResource {
-  const factory _CompartmentDefinitionResource(
+  factory _CompartmentDefinitionResource(
           {Code code,
           List<String> param,
           String documentation,
@@ -8976,7 +8976,7 @@ class __$DataElementCopyWithImpl<$Res> extends _$DataElementCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DataElement implements _DataElement {
-  const _$_DataElement(
+  _$_DataElement(
       {@required
       @JsonKey(required: true, defaultValue: 'DataElement')
           this.resourceType,
@@ -9258,7 +9258,7 @@ class _$_DataElement implements _DataElement {
 }
 
 abstract class _DataElement implements DataElement {
-  const factory _DataElement(
+  factory _DataElement(
       {@required
       @JsonKey(required: true, defaultValue: 'DataElement')
           String resourceType,
@@ -9619,7 +9619,7 @@ class __$DataElementMappingCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DataElementMapping implements _DataElementMapping {
-  const _$_DataElementMapping(
+  _$_DataElementMapping(
       {this.identity,
       this.uri,
       this.name,
@@ -9709,7 +9709,7 @@ class _$_DataElementMapping implements _DataElementMapping {
 }
 
 abstract class _DataElementMapping implements DataElementMapping {
-  const factory _DataElementMapping(
+  factory _DataElementMapping(
           {Id identity,
           String uri,
           String name,
@@ -10436,7 +10436,7 @@ class __$GraphDefinitionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_GraphDefinition implements _GraphDefinition {
-  const _$_GraphDefinition(
+  _$_GraphDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'GraphDefinition')
           this.resourceType,
@@ -10716,7 +10716,7 @@ class _$_GraphDefinition implements _GraphDefinition {
 }
 
 abstract class _GraphDefinition implements GraphDefinition {
-  const factory _GraphDefinition(
+  factory _GraphDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'GraphDefinition')
           String resourceType,
@@ -11125,7 +11125,7 @@ class __$GraphDefinitionLinkCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_GraphDefinitionLink implements _GraphDefinitionLink {
-  const _$_GraphDefinitionLink(
+  _$_GraphDefinitionLink(
       {this.path,
       this.sliceName,
       this.min,
@@ -11237,7 +11237,7 @@ class _$_GraphDefinitionLink implements _GraphDefinitionLink {
 }
 
 abstract class _GraphDefinitionLink implements GraphDefinitionLink {
-  const factory _GraphDefinitionLink(
+  factory _GraphDefinitionLink(
           {String path,
           String sliceName,
           Integer min,
@@ -11455,7 +11455,7 @@ class __$GraphDefinitionTargetCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_GraphDefinitionTarget implements _GraphDefinitionTarget {
-  const _$_GraphDefinitionTarget(
+  _$_GraphDefinitionTarget(
       {this.type,
       this.profile,
       this.compartment,
@@ -11530,7 +11530,7 @@ class _$_GraphDefinitionTarget implements _GraphDefinitionTarget {
 }
 
 abstract class _GraphDefinitionTarget implements GraphDefinitionTarget {
-  const factory _GraphDefinitionTarget(
+  factory _GraphDefinitionTarget(
           {Code type,
           String profile,
           List<GraphDefinitionCompartment> compartment,
@@ -11784,7 +11784,7 @@ class __$GraphDefinitionCompartmentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_GraphDefinitionCompartment implements _GraphDefinitionCompartment {
-  const _$_GraphDefinitionCompartment(
+  _$_GraphDefinitionCompartment(
       {this.code,
       @JsonKey(unknownEnumValue: CompartmentRule.unknown) this.rule,
       this.expression,
@@ -11877,7 +11877,7 @@ class _$_GraphDefinitionCompartment implements _GraphDefinitionCompartment {
 
 abstract class _GraphDefinitionCompartment
     implements GraphDefinitionCompartment {
-  const factory _GraphDefinitionCompartment(
+  factory _GraphDefinitionCompartment(
       {Code code,
       @JsonKey(unknownEnumValue: CompartmentRule.unknown)
           CompartmentRule rule,
@@ -12664,7 +12664,7 @@ class __$ImplementationGuideCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImplementationGuide implements _ImplementationGuide {
-  const _$_ImplementationGuide(
+  _$_ImplementationGuide(
       {@required
       @JsonKey(required: true, defaultValue: 'ImplementationGuide')
           this.resourceType,
@@ -12960,7 +12960,7 @@ class _$_ImplementationGuide implements _ImplementationGuide {
 }
 
 abstract class _ImplementationGuide implements ImplementationGuide {
-  const factory _ImplementationGuide(
+  factory _ImplementationGuide(
       {@required
       @JsonKey(required: true, defaultValue: 'ImplementationGuide')
           String resourceType,
@@ -13264,7 +13264,7 @@ class __$ImplementationGuideDependencyCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ImplementationGuideDependency
     implements _ImplementationGuideDependency {
-  const _$_ImplementationGuideDependency(
+  _$_ImplementationGuideDependency(
       {@JsonKey(unknownEnumValue: DependencyType.unknown) this.type,
       this.uri,
       @JsonKey(name: '_type') this.typeElement,
@@ -13328,7 +13328,7 @@ class _$_ImplementationGuideDependency
 
 abstract class _ImplementationGuideDependency
     implements ImplementationGuideDependency {
-  const factory _ImplementationGuideDependency(
+  factory _ImplementationGuideDependency(
       {@JsonKey(unknownEnumValue: DependencyType.unknown)
           DependencyType type,
       String uri,
@@ -13521,7 +13521,7 @@ class __$ImplementationGuidePackageCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImplementationGuidePackage implements _ImplementationGuidePackage {
-  const _$_ImplementationGuidePackage(
+  _$_ImplementationGuidePackage(
       {this.name,
       this.description,
       @JsonKey(required: true) this.resource,
@@ -13592,7 +13592,7 @@ class _$_ImplementationGuidePackage implements _ImplementationGuidePackage {
 
 abstract class _ImplementationGuidePackage
     implements ImplementationGuidePackage {
-  const factory _ImplementationGuidePackage(
+  factory _ImplementationGuidePackage(
           {String name,
           String description,
           @JsonKey(required: true) List<ImplementationGuideResource> resource,
@@ -13933,7 +13933,7 @@ class __$ImplementationGuideResourceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImplementationGuideResource implements _ImplementationGuideResource {
-  const _$_ImplementationGuideResource(
+  _$_ImplementationGuideResource(
       {this.example,
       this.name,
       this.description,
@@ -14055,7 +14055,7 @@ class _$_ImplementationGuideResource implements _ImplementationGuideResource {
 
 abstract class _ImplementationGuideResource
     implements ImplementationGuideResource {
-  const factory _ImplementationGuideResource(
+  factory _ImplementationGuideResource(
           {Boolean example,
           String name,
           String description,
@@ -14242,7 +14242,7 @@ class __$ImplementationGuideGlobalCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImplementationGuideGlobal implements _ImplementationGuideGlobal {
-  const _$_ImplementationGuideGlobal(
+  _$_ImplementationGuideGlobal(
       {this.type,
       @JsonKey(required: true) this.profile,
       @JsonKey(name: '_type') this.typeElement});
@@ -14298,7 +14298,7 @@ class _$_ImplementationGuideGlobal implements _ImplementationGuideGlobal {
 }
 
 abstract class _ImplementationGuideGlobal implements ImplementationGuideGlobal {
-  const factory _ImplementationGuideGlobal(
+  factory _ImplementationGuideGlobal(
           {Code type,
           @JsonKey(required: true) Reference profile,
           @JsonKey(name: '_type') Element typeElement}) =
@@ -14621,7 +14621,7 @@ class __$ImplementationGuidePageCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImplementationGuidePage implements _ImplementationGuidePage {
-  const _$_ImplementationGuidePage(
+  _$_ImplementationGuidePage(
       {this.source,
       this.title,
       @JsonKey(unknownEnumValue: PageKind.unknown) this.kind,
@@ -14746,7 +14746,7 @@ class _$_ImplementationGuidePage implements _ImplementationGuidePage {
 }
 
 abstract class _ImplementationGuidePage implements ImplementationGuidePage {
-  const factory _ImplementationGuidePage(
+  factory _ImplementationGuidePage(
           {String source,
           String title,
           @JsonKey(unknownEnumValue: PageKind.unknown) PageKind kind,
@@ -15682,7 +15682,7 @@ class __$MessageDefinitionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MessageDefinition implements _MessageDefinition {
-  const _$_MessageDefinition(
+  _$_MessageDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'MessageDefinition')
           this.resourceType,
@@ -16018,7 +16018,7 @@ class _$_MessageDefinition implements _MessageDefinition {
 }
 
 abstract class _MessageDefinition implements MessageDefinition {
-  const factory _MessageDefinition(
+  factory _MessageDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'MessageDefinition')
           String resourceType,
@@ -16398,7 +16398,7 @@ class __$MessageDefinitionFocusCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MessageDefinitionFocus implements _MessageDefinitionFocus {
-  const _$_MessageDefinitionFocus(
+  _$_MessageDefinitionFocus(
       {this.code,
       this.profile,
       this.min,
@@ -16480,7 +16480,7 @@ class _$_MessageDefinitionFocus implements _MessageDefinitionFocus {
 }
 
 abstract class _MessageDefinitionFocus implements MessageDefinitionFocus {
-  const factory _MessageDefinitionFocus(
+  factory _MessageDefinitionFocus(
       {Code code,
       Reference profile,
       UnsignedInt min,
@@ -16656,7 +16656,7 @@ class __$MessageDefinitionAllowedResponseCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MessageDefinitionAllowedResponse
     implements _MessageDefinitionAllowedResponse {
-  const _$_MessageDefinitionAllowedResponse(
+  _$_MessageDefinitionAllowedResponse(
       {@JsonKey(required: true) this.message,
       this.situation,
       @JsonKey(name: '_situation') this.situationElement});
@@ -16714,7 +16714,7 @@ class _$_MessageDefinitionAllowedResponse
 
 abstract class _MessageDefinitionAllowedResponse
     implements MessageDefinitionAllowedResponse {
-  const factory _MessageDefinitionAllowedResponse(
+  factory _MessageDefinitionAllowedResponse(
           {@JsonKey(required: true) Reference message,
           String situation,
           @JsonKey(name: '_situation') Element situationElement}) =
@@ -17698,7 +17698,7 @@ class __$OperationDefinitionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_OperationDefinition implements _OperationDefinition {
-  const _$_OperationDefinition(
+  _$_OperationDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'OperationDefinition')
           this.resourceType,
@@ -18063,7 +18063,7 @@ class _$_OperationDefinition implements _OperationDefinition {
 }
 
 abstract class _OperationDefinition implements OperationDefinition {
-  const factory _OperationDefinition(
+  factory _OperationDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'OperationDefinition')
           String resourceType,
@@ -18684,7 +18684,7 @@ class __$OperationDefinitionParameterCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_OperationDefinitionParameter implements _OperationDefinitionParameter {
-  const _$_OperationDefinitionParameter(
+  _$_OperationDefinitionParameter(
       {this.name,
       @JsonKey(unknownEnumValue: ParameterUse.unknown) this.use,
       this.min,
@@ -18840,7 +18840,7 @@ class _$_OperationDefinitionParameter implements _OperationDefinitionParameter {
 
 abstract class _OperationDefinitionParameter
     implements OperationDefinitionParameter {
-  const factory _OperationDefinitionParameter(
+  factory _OperationDefinitionParameter(
       {Code name,
       @JsonKey(unknownEnumValue: ParameterUse.unknown)
           ParameterUse use,
@@ -19110,7 +19110,7 @@ class __$OperationDefinitionBindingCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_OperationDefinitionBinding implements _OperationDefinitionBinding {
-  const _$_OperationDefinitionBinding(
+  _$_OperationDefinitionBinding(
       {@JsonKey(unknownEnumValue: BindingStrength.unknown) this.strength,
       this.valueSetUri,
       this.valueSetReference,
@@ -19182,7 +19182,7 @@ class _$_OperationDefinitionBinding implements _OperationDefinitionBinding {
 
 abstract class _OperationDefinitionBinding
     implements OperationDefinitionBinding {
-  const factory _OperationDefinitionBinding(
+  factory _OperationDefinitionBinding(
       {@JsonKey(unknownEnumValue: BindingStrength.unknown)
           BindingStrength strength,
       String valueSetUri,
@@ -19371,7 +19371,7 @@ class __$OperationDefinitionOverloadCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_OperationDefinitionOverload implements _OperationDefinitionOverload {
-  const _$_OperationDefinitionOverload(
+  _$_OperationDefinitionOverload(
       {this.parameterName,
       this.comment,
       @JsonKey(name: '_parameterName') this.parameterNameElement,
@@ -19435,7 +19435,7 @@ class _$_OperationDefinitionOverload implements _OperationDefinitionOverload {
 
 abstract class _OperationDefinitionOverload
     implements OperationDefinitionOverload {
-  const factory _OperationDefinitionOverload(
+  factory _OperationDefinitionOverload(
           {List<String> parameterName,
           String comment,
           @JsonKey(name: '_parameterName') Element parameterNameElement,
@@ -20522,7 +20522,7 @@ class __$SearchParameterCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_SearchParameter implements _SearchParameter {
-  const _$_SearchParameter(
+  _$_SearchParameter(
       {@required
       @JsonKey(required: true, defaultValue: 'SearchParameter')
           this.resourceType,
@@ -20914,7 +20914,7 @@ class _$_SearchParameter implements _SearchParameter {
 }
 
 abstract class _SearchParameter implements SearchParameter {
-  const factory _SearchParameter(
+  factory _SearchParameter(
       {@required
       @JsonKey(required: true, defaultValue: 'SearchParameter')
           String resourceType,
@@ -21274,7 +21274,7 @@ class __$SearchParameterComponentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_SearchParameterComponent implements _SearchParameterComponent {
-  const _$_SearchParameterComponent(
+  _$_SearchParameterComponent(
       {@JsonKey(required: true) this.definition,
       this.expression,
       @JsonKey(name: '_expression') this.expressionElement});
@@ -21330,7 +21330,7 @@ class _$_SearchParameterComponent implements _SearchParameterComponent {
 }
 
 abstract class _SearchParameterComponent implements SearchParameterComponent {
-  const factory _SearchParameterComponent(
+  factory _SearchParameterComponent(
           {@JsonKey(required: true) Reference definition,
           String expression,
           @JsonKey(name: '_expression') Element expressionElement}) =
@@ -22500,7 +22500,7 @@ class __$StructureDefinitionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_StructureDefinition implements _StructureDefinition {
-  const _$_StructureDefinition(
+  _$_StructureDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'StructureDefinition')
           this.resourceType,
@@ -22917,7 +22917,7 @@ class _$_StructureDefinition implements _StructureDefinition {
 }
 
 abstract class _StructureDefinition implements StructureDefinition {
-  const factory _StructureDefinition(
+  factory _StructureDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'StructureDefinition')
           String resourceType,
@@ -23371,7 +23371,7 @@ class __$StructureDefinitionMappingCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_StructureDefinitionMapping implements _StructureDefinitionMapping {
-  const _$_StructureDefinitionMapping(
+  _$_StructureDefinitionMapping(
       {this.identity,
       this.uri,
       this.name,
@@ -23463,7 +23463,7 @@ class _$_StructureDefinitionMapping implements _StructureDefinitionMapping {
 
 abstract class _StructureDefinitionMapping
     implements StructureDefinitionMapping {
-  const factory _StructureDefinitionMapping(
+  factory _StructureDefinitionMapping(
           {Id identity,
           String uri,
           String name,
@@ -23594,7 +23594,7 @@ class __$StructureDefinitionSnapshotCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_StructureDefinitionSnapshot implements _StructureDefinitionSnapshot {
-  const _$_StructureDefinitionSnapshot({@JsonKey(required: true) this.element});
+  _$_StructureDefinitionSnapshot({@JsonKey(required: true) this.element});
 
   factory _$_StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =>
       _$_$_StructureDefinitionSnapshotFromJson(json);
@@ -23633,7 +23633,7 @@ class _$_StructureDefinitionSnapshot implements _StructureDefinitionSnapshot {
 
 abstract class _StructureDefinitionSnapshot
     implements StructureDefinitionSnapshot {
-  const factory _StructureDefinitionSnapshot(
+  factory _StructureDefinitionSnapshot(
           {@JsonKey(required: true) List<ElementDefinition> element}) =
       _$_StructureDefinitionSnapshot;
 
@@ -23742,8 +23742,7 @@ class __$StructureDefinitionDifferentialCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_StructureDefinitionDifferential
     implements _StructureDefinitionDifferential {
-  const _$_StructureDefinitionDifferential(
-      {@JsonKey(required: true) this.element});
+  _$_StructureDefinitionDifferential({@JsonKey(required: true) this.element});
 
   factory _$_StructureDefinitionDifferential.fromJson(
           Map<String, dynamic> json) =>
@@ -23783,7 +23782,7 @@ class _$_StructureDefinitionDifferential
 
 abstract class _StructureDefinitionDifferential
     implements StructureDefinitionDifferential {
-  const factory _StructureDefinitionDifferential(
+  factory _StructureDefinitionDifferential(
           {@JsonKey(required: true) List<ElementDefinition> element}) =
       _$_StructureDefinitionDifferential;
 
@@ -24554,7 +24553,7 @@ class __$StructureMapCopyWithImpl<$Res> extends _$StructureMapCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_StructureMap implements _StructureMap {
-  const _$_StructureMap(
+  _$_StructureMap(
       {@required
       @JsonKey(required: true, defaultValue: 'StructureMap')
           this.resourceType,
@@ -24858,7 +24857,7 @@ class _$_StructureMap implements _StructureMap {
 }
 
 abstract class _StructureMap implements StructureMap {
-  const factory _StructureMap(
+  factory _StructureMap(
       {@required
       @JsonKey(required: true, defaultValue: 'StructureMap')
           String resourceType,
@@ -25239,7 +25238,7 @@ class __$StructureMapStructureCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_StructureMapStructure implements _StructureMapStructure {
-  const _$_StructureMapStructure(
+  _$_StructureMapStructure(
       {this.url,
       @JsonKey(unknownEnumValue: StructureMode.unknown) this.mode,
       this.alias,
@@ -25330,7 +25329,7 @@ class _$_StructureMapStructure implements _StructureMapStructure {
 }
 
 abstract class _StructureMapStructure implements StructureMapStructure {
-  const factory _StructureMapStructure(
+  factory _StructureMapStructure(
           {String url,
           @JsonKey(unknownEnumValue: StructureMode.unknown) StructureMode mode,
           String alias,
@@ -25615,7 +25614,7 @@ class __$StructureMapGroupCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_StructureMapGroup implements _StructureMapGroup {
-  const _$_StructureMapGroup(
+  _$_StructureMapGroup(
       {this.name,
       @JsonKey(name: 'extends') this.extends_,
       @JsonKey(unknownEnumValue: GroupTypeMode.unknown) this.typeMode,
@@ -25722,7 +25721,7 @@ class _$_StructureMapGroup implements _StructureMapGroup {
 }
 
 abstract class _StructureMapGroup implements StructureMapGroup {
-  const factory _StructureMapGroup(
+  factory _StructureMapGroup(
       {Id name,
       @JsonKey(name: 'extends')
           Id extends_,
@@ -25996,7 +25995,7 @@ class __$StructureMapInputCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_StructureMapInput implements _StructureMapInput {
-  const _$_StructureMapInput(
+  _$_StructureMapInput(
       {this.name,
       this.type,
       @JsonKey(unknownEnumValue: InputMode.unknown) this.mode,
@@ -26086,7 +26085,7 @@ class _$_StructureMapInput implements _StructureMapInput {
 }
 
 abstract class _StructureMapInput implements StructureMapInput {
-  const factory _StructureMapInput(
+  factory _StructureMapInput(
           {Id name,
           String type,
           @JsonKey(unknownEnumValue: InputMode.unknown) InputMode mode,
@@ -26324,7 +26323,7 @@ class __$StructureMapRuleCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_StructureMapRule implements _StructureMapRule {
-  const _$_StructureMapRule(
+  _$_StructureMapRule(
       {this.name,
       @JsonKey(required: true) this.source,
       this.target,
@@ -26411,7 +26410,7 @@ class _$_StructureMapRule implements _StructureMapRule {
 }
 
 abstract class _StructureMapRule implements StructureMapRule {
-  const factory _StructureMapRule(
+  factory _StructureMapRule(
           {Id name,
           @JsonKey(required: true) List<StructureMapSource> source,
           List<StructureMapTarget> target,
@@ -28559,7 +28558,7 @@ class __$StructureMapSourceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_StructureMapSource implements _StructureMapSource {
-  const _$_StructureMapSource(
+  _$_StructureMapSource(
       {this.context,
       this.min,
       this.max,
@@ -29120,7 +29119,7 @@ class _$_StructureMapSource implements _StructureMapSource {
 }
 
 abstract class _StructureMapSource implements StructureMapSource {
-  const factory _StructureMapSource(
+  factory _StructureMapSource(
       {Id context,
       Integer min,
       String max,
@@ -29829,7 +29828,7 @@ class __$StructureMapTargetCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_StructureMapTarget implements _StructureMapTarget {
-  const _$_StructureMapTarget(
+  _$_StructureMapTarget(
       {this.context,
       @JsonKey(unknownEnumValue: TargetContextType.unknown) this.contextType,
       this.element,
@@ -29975,7 +29974,7 @@ class _$_StructureMapTarget implements _StructureMapTarget {
 }
 
 abstract class _StructureMapTarget implements StructureMapTarget {
-  const factory _StructureMapTarget(
+  factory _StructureMapTarget(
       {Id context,
       @JsonKey(unknownEnumValue: TargetContextType.unknown)
           TargetContextType contextType,
@@ -30318,7 +30317,7 @@ class __$StructureMapParameterCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_StructureMapParameter implements _StructureMapParameter {
-  const _$_StructureMapParameter(
+  _$_StructureMapParameter(
       {this.valueId,
       this.valueString,
       this.valueBoolean,
@@ -30426,7 +30425,7 @@ class _$_StructureMapParameter implements _StructureMapParameter {
 }
 
 abstract class _StructureMapParameter implements StructureMapParameter {
-  const factory _StructureMapParameter(
+  factory _StructureMapParameter(
           {Id valueId,
           String valueString,
           Boolean valueBoolean,
@@ -30620,7 +30619,7 @@ class __$StructureMapDependentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_StructureMapDependent implements _StructureMapDependent {
-  const _$_StructureMapDependent(
+  _$_StructureMapDependent(
       {this.name,
       this.variable,
       @JsonKey(name: '_name') this.nameElement,
@@ -30682,7 +30681,7 @@ class _$_StructureMapDependent implements _StructureMapDependent {
 }
 
 abstract class _StructureMapDependent implements StructureMapDependent {
-  const factory _StructureMapDependent(
+  factory _StructureMapDependent(
           {Id name,
           List<String> variable,
           @JsonKey(name: '_name') Element nameElement,

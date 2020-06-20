@@ -18,6 +18,7 @@ var reserved = [
   'for',
   'final',
   'required',
+  'case',
 ];
 
 String getPattern(String name, String pattern) {
@@ -32,8 +33,8 @@ String getPattern(String name, String pattern) {
   if (name.contains('Url')) return 'FhirUrl';
   if (name.contains('Id')) return 'Id';
   if (name.contains('Instant')) return 'Instant';
-  if (name.contains('Integer')) return 'Integer';
   if (name.contains('Integer64')) return 'Integer64';
+  if (name.contains('Integer')) return 'Integer';
   if (name.contains('Markdown')) return 'Markdown';
   if (name.contains('Oid')) return 'Oid';
   if (name.contains('PositiveInt')) return 'PositiveInt';

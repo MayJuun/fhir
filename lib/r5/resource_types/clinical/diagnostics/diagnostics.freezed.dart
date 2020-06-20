@@ -742,6 +742,7 @@ class _$DiagnosticReportTearOff {
           CodeableConcept code,
       Reference subject,
       Reference encounter,
+      FhirDateTime effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
           Element effectiveDateTimeElement,
       Period effectivePeriod,
@@ -779,6 +780,7 @@ class _$DiagnosticReportTearOff {
       code: code,
       subject: subject,
       encounter: encounter,
+      effectiveDateTime: effectiveDateTime,
       effectiveDateTimeElement: effectiveDateTimeElement,
       effectivePeriod: effectivePeriod,
       issued: issued,
@@ -826,6 +828,7 @@ mixin _$DiagnosticReport {
   CodeableConcept get code;
   Reference get subject;
   Reference get encounter;
+  FhirDateTime get effectiveDateTime;
   @JsonKey(name: '_effectiveDateTime')
   Element get effectiveDateTimeElement;
   Period get effectivePeriod;
@@ -878,6 +881,7 @@ abstract class $DiagnosticReportCopyWith<$Res> {
       CodeableConcept code,
       Reference subject,
       Reference encounter,
+      FhirDateTime effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
           Element effectiveDateTimeElement,
       Period effectivePeriod,
@@ -939,6 +943,7 @@ class _$DiagnosticReportCopyWithImpl<$Res>
     Object code = freezed,
     Object subject = freezed,
     Object encounter = freezed,
+    Object effectiveDateTime = freezed,
     Object effectiveDateTimeElement = freezed,
     Object effectivePeriod = freezed,
     Object issued = freezed,
@@ -995,6 +1000,9 @@ class _$DiagnosticReportCopyWithImpl<$Res>
       subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
+      effectiveDateTime: effectiveDateTime == freezed
+          ? _value.effectiveDateTime
+          : effectiveDateTime as FhirDateTime,
       effectiveDateTimeElement: effectiveDateTimeElement == freezed
           ? _value.effectiveDateTimeElement
           : effectiveDateTimeElement as Element,
@@ -1187,6 +1195,7 @@ abstract class _$DiagnosticReportCopyWith<$Res>
       CodeableConcept code,
       Reference subject,
       Reference encounter,
+      FhirDateTime effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
           Element effectiveDateTimeElement,
       Period effectivePeriod,
@@ -1262,6 +1271,7 @@ class __$DiagnosticReportCopyWithImpl<$Res>
     Object code = freezed,
     Object subject = freezed,
     Object encounter = freezed,
+    Object effectiveDateTime = freezed,
     Object effectiveDateTimeElement = freezed,
     Object effectivePeriod = freezed,
     Object issued = freezed,
@@ -1318,6 +1328,9 @@ class __$DiagnosticReportCopyWithImpl<$Res>
       subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
+      effectiveDateTime: effectiveDateTime == freezed
+          ? _value.effectiveDateTime
+          : effectiveDateTime as FhirDateTime,
       effectiveDateTimeElement: effectiveDateTimeElement == freezed
           ? _value.effectiveDateTimeElement
           : effectiveDateTimeElement as Element,
@@ -1380,6 +1393,7 @@ class _$_DiagnosticReport extends _DiagnosticReport {
       @required this.code,
       this.subject,
       this.encounter,
+      this.effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime') this.effectiveDateTimeElement,
       this.effectivePeriod,
       this.issued,
@@ -1446,6 +1460,8 @@ class _$_DiagnosticReport extends _DiagnosticReport {
   @override
   final Reference encounter;
   @override
+  final FhirDateTime effectiveDateTime;
+  @override
   @JsonKey(name: '_effectiveDateTime')
   final Element effectiveDateTimeElement;
   @override
@@ -1479,7 +1495,7 @@ class _$_DiagnosticReport extends _DiagnosticReport {
 
   @override
   String toString() {
-    return 'DiagnosticReport(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, basedOn: $basedOn, status: $status, statusElement: $statusElement, category: $category, code: $code, subject: $subject, encounter: $encounter, effectiveDateTimeElement: $effectiveDateTimeElement, effectivePeriod: $effectivePeriod, issued: $issued, issuedElement: $issuedElement, performer: $performer, resultsInterpreter: $resultsInterpreter, specimen: $specimen, result: $result, imagingStudy: $imagingStudy, media: $media, conclusion: $conclusion, conclusionElement: $conclusionElement, conclusionCode: $conclusionCode, presentedForm: $presentedForm)';
+    return 'DiagnosticReport(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, basedOn: $basedOn, status: $status, statusElement: $statusElement, category: $category, code: $code, subject: $subject, encounter: $encounter, effectiveDateTime: $effectiveDateTime, effectiveDateTimeElement: $effectiveDateTimeElement, effectivePeriod: $effectivePeriod, issued: $issued, issuedElement: $issuedElement, performer: $performer, resultsInterpreter: $resultsInterpreter, specimen: $specimen, result: $result, imagingStudy: $imagingStudy, media: $media, conclusion: $conclusion, conclusionElement: $conclusionElement, conclusionCode: $conclusionCode, presentedForm: $presentedForm)';
   }
 
   @override
@@ -1538,6 +1554,9 @@ class _$_DiagnosticReport extends _DiagnosticReport {
             (identical(other.encounter, encounter) ||
                 const DeepCollectionEquality()
                     .equals(other.encounter, encounter)) &&
+            (identical(other.effectiveDateTime, effectiveDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.effectiveDateTime, effectiveDateTime)) &&
             (identical(other.effectiveDateTimeElement, effectiveDateTimeElement) ||
                 const DeepCollectionEquality().equals(
                     other.effectiveDateTimeElement,
@@ -1548,10 +1567,8 @@ class _$_DiagnosticReport extends _DiagnosticReport {
             (identical(other.issued, issued) ||
                 const DeepCollectionEquality().equals(other.issued, issued)) &&
             (identical(other.issuedElement, issuedElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.issuedElement, issuedElement)) &&
-            (identical(other.performer, performer) ||
-                const DeepCollectionEquality().equals(other.performer, performer)) &&
+                const DeepCollectionEquality().equals(other.issuedElement, issuedElement)) &&
+            (identical(other.performer, performer) || const DeepCollectionEquality().equals(other.performer, performer)) &&
             (identical(other.resultsInterpreter, resultsInterpreter) || const DeepCollectionEquality().equals(other.resultsInterpreter, resultsInterpreter)) &&
             (identical(other.specimen, specimen) || const DeepCollectionEquality().equals(other.specimen, specimen)) &&
             (identical(other.result, result) || const DeepCollectionEquality().equals(other.result, result)) &&
@@ -1585,6 +1602,7 @@ class _$_DiagnosticReport extends _DiagnosticReport {
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(subject) ^
       const DeepCollectionEquality().hash(encounter) ^
+      const DeepCollectionEquality().hash(effectiveDateTime) ^
       const DeepCollectionEquality().hash(effectiveDateTimeElement) ^
       const DeepCollectionEquality().hash(effectivePeriod) ^
       const DeepCollectionEquality().hash(issued) ^
@@ -1640,6 +1658,7 @@ abstract class _DiagnosticReport extends DiagnosticReport {
           CodeableConcept code,
       Reference subject,
       Reference encounter,
+      FhirDateTime effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
           Element effectiveDateTimeElement,
       Period effectivePeriod,
@@ -1705,6 +1724,8 @@ abstract class _DiagnosticReport extends DiagnosticReport {
   Reference get subject;
   @override
   Reference get encounter;
+  @override
+  FhirDateTime get effectiveDateTime;
   @override
   @JsonKey(name: '_effectiveDateTime')
   Element get effectiveDateTimeElement;
@@ -10150,10 +10171,12 @@ class _$ObservationTearOff {
       Reference subject,
       List<Reference> focus,
       Reference encounter,
+      FhirDateTime effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
           Element effectiveDateTimeElement,
       Period effectivePeriod,
       Timing effectiveTiming,
+      Instant effectiveInstant,
       @JsonKey(name: '_effectiveInstant')
           Element effectiveInstantElement,
       Instant issued,
@@ -10162,17 +10185,22 @@ class _$ObservationTearOff {
       List<Reference> performer,
       Quantity valueQuantity,
       CodeableConcept valueCodeableConcept,
+      String valueString,
       @JsonKey(name: '_valueString')
           Element valueStringElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean')
           Element valueBooleanElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger')
           Element valueIntegerElement,
       Range valueRange,
       Ratio valueRatio,
       SampledData valueSampledData,
+      Time valueTime,
       @JsonKey(name: '_valueTime')
           Element valueTimeElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime')
           Element valueDateTimeElement,
       Period valuePeriod,
@@ -10210,22 +10238,29 @@ class _$ObservationTearOff {
       subject: subject,
       focus: focus,
       encounter: encounter,
+      effectiveDateTime: effectiveDateTime,
       effectiveDateTimeElement: effectiveDateTimeElement,
       effectivePeriod: effectivePeriod,
       effectiveTiming: effectiveTiming,
+      effectiveInstant: effectiveInstant,
       effectiveInstantElement: effectiveInstantElement,
       issued: issued,
       issuedElement: issuedElement,
       performer: performer,
       valueQuantity: valueQuantity,
       valueCodeableConcept: valueCodeableConcept,
+      valueString: valueString,
       valueStringElement: valueStringElement,
+      valueBoolean: valueBoolean,
       valueBooleanElement: valueBooleanElement,
+      valueInteger: valueInteger,
       valueIntegerElement: valueIntegerElement,
       valueRange: valueRange,
       valueRatio: valueRatio,
       valueSampledData: valueSampledData,
+      valueTime: valueTime,
       valueTimeElement: valueTimeElement,
+      valueDateTime: valueDateTime,
       valueDateTimeElement: valueDateTimeElement,
       valuePeriod: valuePeriod,
       valueAttachment: valueAttachment,
@@ -10275,10 +10310,12 @@ mixin _$Observation {
   Reference get subject;
   List<Reference> get focus;
   Reference get encounter;
+  FhirDateTime get effectiveDateTime;
   @JsonKey(name: '_effectiveDateTime')
   Element get effectiveDateTimeElement;
   Period get effectivePeriod;
   Timing get effectiveTiming;
+  Instant get effectiveInstant;
   @JsonKey(name: '_effectiveInstant')
   Element get effectiveInstantElement;
   Instant get issued;
@@ -10287,17 +10324,22 @@ mixin _$Observation {
   List<Reference> get performer;
   Quantity get valueQuantity;
   CodeableConcept get valueCodeableConcept;
+  String get valueString;
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
+  Boolean get valueBoolean;
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
+  Integer get valueInteger;
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
   Range get valueRange;
   Ratio get valueRatio;
   SampledData get valueSampledData;
+  Time get valueTime;
   @JsonKey(name: '_valueTime')
   Element get valueTimeElement;
+  FhirDateTime get valueDateTime;
   @JsonKey(name: '_valueDateTime')
   Element get valueDateTimeElement;
   Period get valuePeriod;
@@ -10350,10 +10392,12 @@ abstract class $ObservationCopyWith<$Res> {
       Reference subject,
       List<Reference> focus,
       Reference encounter,
+      FhirDateTime effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
           Element effectiveDateTimeElement,
       Period effectivePeriod,
       Timing effectiveTiming,
+      Instant effectiveInstant,
       @JsonKey(name: '_effectiveInstant')
           Element effectiveInstantElement,
       Instant issued,
@@ -10362,17 +10406,22 @@ abstract class $ObservationCopyWith<$Res> {
       List<Reference> performer,
       Quantity valueQuantity,
       CodeableConcept valueCodeableConcept,
+      String valueString,
       @JsonKey(name: '_valueString')
           Element valueStringElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean')
           Element valueBooleanElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger')
           Element valueIntegerElement,
       Range valueRange,
       Ratio valueRatio,
       SampledData valueSampledData,
+      Time valueTime,
       @JsonKey(name: '_valueTime')
           Element valueTimeElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime')
           Element valueDateTimeElement,
       Period valuePeriod,
@@ -10451,22 +10500,29 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
     Object subject = freezed,
     Object focus = freezed,
     Object encounter = freezed,
+    Object effectiveDateTime = freezed,
     Object effectiveDateTimeElement = freezed,
     Object effectivePeriod = freezed,
     Object effectiveTiming = freezed,
+    Object effectiveInstant = freezed,
     Object effectiveInstantElement = freezed,
     Object issued = freezed,
     Object issuedElement = freezed,
     Object performer = freezed,
     Object valueQuantity = freezed,
     Object valueCodeableConcept = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
+    Object valueInteger = freezed,
     Object valueIntegerElement = freezed,
     Object valueRange = freezed,
     Object valueRatio = freezed,
     Object valueSampledData = freezed,
+    Object valueTime = freezed,
     Object valueTimeElement = freezed,
+    Object valueDateTime = freezed,
     Object valueDateTimeElement = freezed,
     Object valuePeriod = freezed,
     Object valueAttachment = freezed,
@@ -10524,6 +10580,9 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
       focus: focus == freezed ? _value.focus : focus as List<Reference>,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
+      effectiveDateTime: effectiveDateTime == freezed
+          ? _value.effectiveDateTime
+          : effectiveDateTime as FhirDateTime,
       effectiveDateTimeElement: effectiveDateTimeElement == freezed
           ? _value.effectiveDateTimeElement
           : effectiveDateTimeElement as Element,
@@ -10533,6 +10592,9 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
       effectiveTiming: effectiveTiming == freezed
           ? _value.effectiveTiming
           : effectiveTiming as Timing,
+      effectiveInstant: effectiveInstant == freezed
+          ? _value.effectiveInstant
+          : effectiveInstant as Instant,
       effectiveInstantElement: effectiveInstantElement == freezed
           ? _value.effectiveInstantElement
           : effectiveInstantElement as Element,
@@ -10549,12 +10611,20 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
           : valueCodeableConcept as CodeableConcept,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger as Integer,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement as Element,
@@ -10565,9 +10635,13 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
       valueSampledData: valueSampledData == freezed
           ? _value.valueSampledData
           : valueSampledData as SampledData,
+      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueTimeElement: valueTimeElement == freezed
           ? _value.valueTimeElement
           : valueTimeElement as Element,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime as FhirDateTime,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement as Element,
@@ -10938,10 +11012,12 @@ abstract class _$ObservationCopyWith<$Res>
       Reference subject,
       List<Reference> focus,
       Reference encounter,
+      FhirDateTime effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
           Element effectiveDateTimeElement,
       Period effectivePeriod,
       Timing effectiveTiming,
+      Instant effectiveInstant,
       @JsonKey(name: '_effectiveInstant')
           Element effectiveInstantElement,
       Instant issued,
@@ -10950,17 +11026,22 @@ abstract class _$ObservationCopyWith<$Res>
       List<Reference> performer,
       Quantity valueQuantity,
       CodeableConcept valueCodeableConcept,
+      String valueString,
       @JsonKey(name: '_valueString')
           Element valueStringElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean')
           Element valueBooleanElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger')
           Element valueIntegerElement,
       Range valueRange,
       Ratio valueRatio,
       SampledData valueSampledData,
+      Time valueTime,
       @JsonKey(name: '_valueTime')
           Element valueTimeElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime')
           Element valueDateTimeElement,
       Period valuePeriod,
@@ -11071,22 +11152,29 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
     Object subject = freezed,
     Object focus = freezed,
     Object encounter = freezed,
+    Object effectiveDateTime = freezed,
     Object effectiveDateTimeElement = freezed,
     Object effectivePeriod = freezed,
     Object effectiveTiming = freezed,
+    Object effectiveInstant = freezed,
     Object effectiveInstantElement = freezed,
     Object issued = freezed,
     Object issuedElement = freezed,
     Object performer = freezed,
     Object valueQuantity = freezed,
     Object valueCodeableConcept = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
+    Object valueInteger = freezed,
     Object valueIntegerElement = freezed,
     Object valueRange = freezed,
     Object valueRatio = freezed,
     Object valueSampledData = freezed,
+    Object valueTime = freezed,
     Object valueTimeElement = freezed,
+    Object valueDateTime = freezed,
     Object valueDateTimeElement = freezed,
     Object valuePeriod = freezed,
     Object valueAttachment = freezed,
@@ -11144,6 +11232,9 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
       focus: focus == freezed ? _value.focus : focus as List<Reference>,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
+      effectiveDateTime: effectiveDateTime == freezed
+          ? _value.effectiveDateTime
+          : effectiveDateTime as FhirDateTime,
       effectiveDateTimeElement: effectiveDateTimeElement == freezed
           ? _value.effectiveDateTimeElement
           : effectiveDateTimeElement as Element,
@@ -11153,6 +11244,9 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
       effectiveTiming: effectiveTiming == freezed
           ? _value.effectiveTiming
           : effectiveTiming as Timing,
+      effectiveInstant: effectiveInstant == freezed
+          ? _value.effectiveInstant
+          : effectiveInstant as Instant,
       effectiveInstantElement: effectiveInstantElement == freezed
           ? _value.effectiveInstantElement
           : effectiveInstantElement as Element,
@@ -11169,12 +11263,20 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
           : valueCodeableConcept as CodeableConcept,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger as Integer,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement as Element,
@@ -11185,9 +11287,13 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
       valueSampledData: valueSampledData == freezed
           ? _value.valueSampledData
           : valueSampledData as SampledData,
+      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueTimeElement: valueTimeElement == freezed
           ? _value.valueTimeElement
           : valueTimeElement as Element,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime as FhirDateTime,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement as Element,
@@ -11248,22 +11354,29 @@ class _$_Observation extends _Observation {
       this.subject,
       this.focus,
       this.encounter,
+      this.effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime') this.effectiveDateTimeElement,
       this.effectivePeriod,
       this.effectiveTiming,
+      this.effectiveInstant,
       @JsonKey(name: '_effectiveInstant') this.effectiveInstantElement,
       this.issued,
       @JsonKey(name: '_issued') this.issuedElement,
       this.performer,
       this.valueQuantity,
       this.valueCodeableConcept,
+      this.valueString,
       @JsonKey(name: '_valueString') this.valueStringElement,
+      this.valueBoolean,
       @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+      this.valueInteger,
       @JsonKey(name: '_valueInteger') this.valueIntegerElement,
       this.valueRange,
       this.valueRatio,
       this.valueSampledData,
+      this.valueTime,
       @JsonKey(name: '_valueTime') this.valueTimeElement,
+      this.valueDateTime,
       @JsonKey(name: '_valueDateTime') this.valueDateTimeElement,
       this.valuePeriod,
       this.valueAttachment,
@@ -11334,12 +11447,16 @@ class _$_Observation extends _Observation {
   @override
   final Reference encounter;
   @override
+  final FhirDateTime effectiveDateTime;
+  @override
   @JsonKey(name: '_effectiveDateTime')
   final Element effectiveDateTimeElement;
   @override
   final Period effectivePeriod;
   @override
   final Timing effectiveTiming;
+  @override
+  final Instant effectiveInstant;
   @override
   @JsonKey(name: '_effectiveInstant')
   final Element effectiveInstantElement;
@@ -11355,11 +11472,17 @@ class _$_Observation extends _Observation {
   @override
   final CodeableConcept valueCodeableConcept;
   @override
+  final String valueString;
+  @override
   @JsonKey(name: '_valueString')
   final Element valueStringElement;
   @override
+  final Boolean valueBoolean;
+  @override
   @JsonKey(name: '_valueBoolean')
   final Element valueBooleanElement;
+  @override
+  final Integer valueInteger;
   @override
   @JsonKey(name: '_valueInteger')
   final Element valueIntegerElement;
@@ -11370,8 +11493,12 @@ class _$_Observation extends _Observation {
   @override
   final SampledData valueSampledData;
   @override
+  final Time valueTime;
+  @override
   @JsonKey(name: '_valueTime')
   final Element valueTimeElement;
+  @override
+  final FhirDateTime valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
   final Element valueDateTimeElement;
@@ -11404,7 +11531,7 @@ class _$_Observation extends _Observation {
 
   @override
   String toString() {
-    return 'Observation(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, basedOn: $basedOn, partOf: $partOf, status: $status, statusElement: $statusElement, category: $category, code: $code, subject: $subject, focus: $focus, encounter: $encounter, effectiveDateTimeElement: $effectiveDateTimeElement, effectivePeriod: $effectivePeriod, effectiveTiming: $effectiveTiming, effectiveInstantElement: $effectiveInstantElement, issued: $issued, issuedElement: $issuedElement, performer: $performer, valueQuantity: $valueQuantity, valueCodeableConcept: $valueCodeableConcept, valueStringElement: $valueStringElement, valueBooleanElement: $valueBooleanElement, valueIntegerElement: $valueIntegerElement, valueRange: $valueRange, valueRatio: $valueRatio, valueSampledData: $valueSampledData, valueTimeElement: $valueTimeElement, valueDateTimeElement: $valueDateTimeElement, valuePeriod: $valuePeriod, valueAttachment: $valueAttachment, dataAbsentReason: $dataAbsentReason, interpretation: $interpretation, note: $note, bodySite: $bodySite, method: $method, specimen: $specimen, device: $device, referenceRange: $referenceRange, hasMember: $hasMember, derivedFrom: $derivedFrom, component: $component)';
+    return 'Observation(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, basedOn: $basedOn, partOf: $partOf, status: $status, statusElement: $statusElement, category: $category, code: $code, subject: $subject, focus: $focus, encounter: $encounter, effectiveDateTime: $effectiveDateTime, effectiveDateTimeElement: $effectiveDateTimeElement, effectivePeriod: $effectivePeriod, effectiveTiming: $effectiveTiming, effectiveInstant: $effectiveInstant, effectiveInstantElement: $effectiveInstantElement, issued: $issued, issuedElement: $issuedElement, performer: $performer, valueQuantity: $valueQuantity, valueCodeableConcept: $valueCodeableConcept, valueString: $valueString, valueStringElement: $valueStringElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueRange: $valueRange, valueRatio: $valueRatio, valueSampledData: $valueSampledData, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valuePeriod: $valuePeriod, valueAttachment: $valueAttachment, dataAbsentReason: $dataAbsentReason, interpretation: $interpretation, note: $note, bodySite: $bodySite, method: $method, specimen: $specimen, device: $device, referenceRange: $referenceRange, hasMember: $hasMember, derivedFrom: $derivedFrom, component: $component)';
   }
 
   @override
@@ -11467,6 +11594,9 @@ class _$_Observation extends _Observation {
             (identical(other.encounter, encounter) ||
                 const DeepCollectionEquality()
                     .equals(other.encounter, encounter)) &&
+            (identical(other.effectiveDateTime, effectiveDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.effectiveDateTime, effectiveDateTime)) &&
             (identical(other.effectiveDateTimeElement, effectiveDateTimeElement) ||
                 const DeepCollectionEquality().equals(
                     other.effectiveDateTimeElement,
@@ -11474,22 +11604,26 @@ class _$_Observation extends _Observation {
             (identical(other.effectivePeriod, effectivePeriod) ||
                 const DeepCollectionEquality()
                     .equals(other.effectivePeriod, effectivePeriod)) &&
-            (identical(other.effectiveTiming, effectiveTiming) ||
-                const DeepCollectionEquality()
-                    .equals(other.effectiveTiming, effectiveTiming)) &&
+            (identical(other.effectiveTiming, effectiveTiming) || const DeepCollectionEquality().equals(other.effectiveTiming, effectiveTiming)) &&
+            (identical(other.effectiveInstant, effectiveInstant) || const DeepCollectionEquality().equals(other.effectiveInstant, effectiveInstant)) &&
             (identical(other.effectiveInstantElement, effectiveInstantElement) || const DeepCollectionEquality().equals(other.effectiveInstantElement, effectiveInstantElement)) &&
             (identical(other.issued, issued) || const DeepCollectionEquality().equals(other.issued, issued)) &&
             (identical(other.issuedElement, issuedElement) || const DeepCollectionEquality().equals(other.issuedElement, issuedElement)) &&
             (identical(other.performer, performer) || const DeepCollectionEquality().equals(other.performer, performer)) &&
             (identical(other.valueQuantity, valueQuantity) || const DeepCollectionEquality().equals(other.valueQuantity, valueQuantity)) &&
             (identical(other.valueCodeableConcept, valueCodeableConcept) || const DeepCollectionEquality().equals(other.valueCodeableConcept, valueCodeableConcept)) &&
+            (identical(other.valueString, valueString) || const DeepCollectionEquality().equals(other.valueString, valueString)) &&
             (identical(other.valueStringElement, valueStringElement) || const DeepCollectionEquality().equals(other.valueStringElement, valueStringElement)) &&
+            (identical(other.valueBoolean, valueBoolean) || const DeepCollectionEquality().equals(other.valueBoolean, valueBoolean)) &&
             (identical(other.valueBooleanElement, valueBooleanElement) || const DeepCollectionEquality().equals(other.valueBooleanElement, valueBooleanElement)) &&
+            (identical(other.valueInteger, valueInteger) || const DeepCollectionEquality().equals(other.valueInteger, valueInteger)) &&
             (identical(other.valueIntegerElement, valueIntegerElement) || const DeepCollectionEquality().equals(other.valueIntegerElement, valueIntegerElement)) &&
             (identical(other.valueRange, valueRange) || const DeepCollectionEquality().equals(other.valueRange, valueRange)) &&
             (identical(other.valueRatio, valueRatio) || const DeepCollectionEquality().equals(other.valueRatio, valueRatio)) &&
             (identical(other.valueSampledData, valueSampledData) || const DeepCollectionEquality().equals(other.valueSampledData, valueSampledData)) &&
+            (identical(other.valueTime, valueTime) || const DeepCollectionEquality().equals(other.valueTime, valueTime)) &&
             (identical(other.valueTimeElement, valueTimeElement) || const DeepCollectionEquality().equals(other.valueTimeElement, valueTimeElement)) &&
+            (identical(other.valueDateTime, valueDateTime) || const DeepCollectionEquality().equals(other.valueDateTime, valueDateTime)) &&
             (identical(other.valueDateTimeElement, valueDateTimeElement) || const DeepCollectionEquality().equals(other.valueDateTimeElement, valueDateTimeElement)) &&
             (identical(other.valuePeriod, valuePeriod) || const DeepCollectionEquality().equals(other.valuePeriod, valuePeriod)) &&
             (identical(other.valueAttachment, valueAttachment) || const DeepCollectionEquality().equals(other.valueAttachment, valueAttachment)) &&
@@ -11530,22 +11664,29 @@ class _$_Observation extends _Observation {
       const DeepCollectionEquality().hash(subject) ^
       const DeepCollectionEquality().hash(focus) ^
       const DeepCollectionEquality().hash(encounter) ^
+      const DeepCollectionEquality().hash(effectiveDateTime) ^
       const DeepCollectionEquality().hash(effectiveDateTimeElement) ^
       const DeepCollectionEquality().hash(effectivePeriod) ^
       const DeepCollectionEquality().hash(effectiveTiming) ^
+      const DeepCollectionEquality().hash(effectiveInstant) ^
       const DeepCollectionEquality().hash(effectiveInstantElement) ^
       const DeepCollectionEquality().hash(issued) ^
       const DeepCollectionEquality().hash(issuedElement) ^
       const DeepCollectionEquality().hash(performer) ^
       const DeepCollectionEquality().hash(valueQuantity) ^
       const DeepCollectionEquality().hash(valueCodeableConcept) ^
+      const DeepCollectionEquality().hash(valueString) ^
       const DeepCollectionEquality().hash(valueStringElement) ^
+      const DeepCollectionEquality().hash(valueBoolean) ^
       const DeepCollectionEquality().hash(valueBooleanElement) ^
+      const DeepCollectionEquality().hash(valueInteger) ^
       const DeepCollectionEquality().hash(valueIntegerElement) ^
       const DeepCollectionEquality().hash(valueRange) ^
       const DeepCollectionEquality().hash(valueRatio) ^
       const DeepCollectionEquality().hash(valueSampledData) ^
+      const DeepCollectionEquality().hash(valueTime) ^
       const DeepCollectionEquality().hash(valueTimeElement) ^
+      const DeepCollectionEquality().hash(valueDateTime) ^
       const DeepCollectionEquality().hash(valueDateTimeElement) ^
       const DeepCollectionEquality().hash(valuePeriod) ^
       const DeepCollectionEquality().hash(valueAttachment) ^
@@ -11603,10 +11744,12 @@ abstract class _Observation extends Observation {
       Reference subject,
       List<Reference> focus,
       Reference encounter,
+      FhirDateTime effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
           Element effectiveDateTimeElement,
       Period effectivePeriod,
       Timing effectiveTiming,
+      Instant effectiveInstant,
       @JsonKey(name: '_effectiveInstant')
           Element effectiveInstantElement,
       Instant issued,
@@ -11615,17 +11758,22 @@ abstract class _Observation extends Observation {
       List<Reference> performer,
       Quantity valueQuantity,
       CodeableConcept valueCodeableConcept,
+      String valueString,
       @JsonKey(name: '_valueString')
           Element valueStringElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean')
           Element valueBooleanElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger')
           Element valueIntegerElement,
       Range valueRange,
       Ratio valueRatio,
       SampledData valueSampledData,
+      Time valueTime,
       @JsonKey(name: '_valueTime')
           Element valueTimeElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime')
           Element valueDateTimeElement,
       Period valuePeriod,
@@ -11694,12 +11842,16 @@ abstract class _Observation extends Observation {
   @override
   Reference get encounter;
   @override
+  FhirDateTime get effectiveDateTime;
+  @override
   @JsonKey(name: '_effectiveDateTime')
   Element get effectiveDateTimeElement;
   @override
   Period get effectivePeriod;
   @override
   Timing get effectiveTiming;
+  @override
+  Instant get effectiveInstant;
   @override
   @JsonKey(name: '_effectiveInstant')
   Element get effectiveInstantElement;
@@ -11715,11 +11867,17 @@ abstract class _Observation extends Observation {
   @override
   CodeableConcept get valueCodeableConcept;
   @override
+  String get valueString;
+  @override
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
   @override
+  Boolean get valueBoolean;
+  @override
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
+  @override
+  Integer get valueInteger;
   @override
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
@@ -11730,8 +11888,12 @@ abstract class _Observation extends Observation {
   @override
   SampledData get valueSampledData;
   @override
+  Time get valueTime;
+  @override
   @JsonKey(name: '_valueTime')
   Element get valueTimeElement;
+  @override
+  FhirDateTime get valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
   Element get valueDateTimeElement;
@@ -12172,13 +12334,18 @@ class _$ObservationComponentTearOff {
       @required CodeableConcept code,
       Quantity valueQuantity,
       CodeableConcept valueCodeableConcept,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
       Range valueRange,
       Ratio valueRatio,
       SampledData valueSampledData,
+      Time valueTime,
       @JsonKey(name: '_valueTime') Element valueTimeElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
       Period valuePeriod,
       Attachment valueAttachment,
@@ -12192,13 +12359,18 @@ class _$ObservationComponentTearOff {
       code: code,
       valueQuantity: valueQuantity,
       valueCodeableConcept: valueCodeableConcept,
+      valueString: valueString,
       valueStringElement: valueStringElement,
+      valueBoolean: valueBoolean,
       valueBooleanElement: valueBooleanElement,
+      valueInteger: valueInteger,
       valueIntegerElement: valueIntegerElement,
       valueRange: valueRange,
       valueRatio: valueRatio,
       valueSampledData: valueSampledData,
+      valueTime: valueTime,
       valueTimeElement: valueTimeElement,
+      valueDateTime: valueDateTime,
       valueDateTimeElement: valueDateTimeElement,
       valuePeriod: valuePeriod,
       valueAttachment: valueAttachment,
@@ -12220,17 +12392,22 @@ mixin _$ObservationComponent {
   CodeableConcept get code;
   Quantity get valueQuantity;
   CodeableConcept get valueCodeableConcept;
+  String get valueString;
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
+  Boolean get valueBoolean;
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
+  Integer get valueInteger;
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
   Range get valueRange;
   Ratio get valueRatio;
   SampledData get valueSampledData;
+  Time get valueTime;
   @JsonKey(name: '_valueTime')
   Element get valueTimeElement;
+  FhirDateTime get valueDateTime;
   @JsonKey(name: '_valueDateTime')
   Element get valueDateTimeElement;
   Period get valuePeriod;
@@ -12254,13 +12431,18 @@ abstract class $ObservationComponentCopyWith<$Res> {
       CodeableConcept code,
       Quantity valueQuantity,
       CodeableConcept valueCodeableConcept,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
       Range valueRange,
       Ratio valueRatio,
       SampledData valueSampledData,
+      Time valueTime,
       @JsonKey(name: '_valueTime') Element valueTimeElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
       Period valuePeriod,
       Attachment valueAttachment,
@@ -12300,13 +12482,18 @@ class _$ObservationComponentCopyWithImpl<$Res>
     Object code = freezed,
     Object valueQuantity = freezed,
     Object valueCodeableConcept = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
+    Object valueInteger = freezed,
     Object valueIntegerElement = freezed,
     Object valueRange = freezed,
     Object valueRatio = freezed,
     Object valueSampledData = freezed,
+    Object valueTime = freezed,
     Object valueTimeElement = freezed,
+    Object valueDateTime = freezed,
     Object valueDateTimeElement = freezed,
     Object valuePeriod = freezed,
     Object valueAttachment = freezed,
@@ -12329,12 +12516,20 @@ class _$ObservationComponentCopyWithImpl<$Res>
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
           : valueCodeableConcept as CodeableConcept,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger as Integer,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement as Element,
@@ -12345,9 +12540,13 @@ class _$ObservationComponentCopyWithImpl<$Res>
       valueSampledData: valueSampledData == freezed
           ? _value.valueSampledData
           : valueSampledData as SampledData,
+      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueTimeElement: valueTimeElement == freezed
           ? _value.valueTimeElement
           : valueTimeElement as Element,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime as FhirDateTime,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement as Element,
@@ -12522,13 +12721,18 @@ abstract class _$ObservationComponentCopyWith<$Res>
       CodeableConcept code,
       Quantity valueQuantity,
       CodeableConcept valueCodeableConcept,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
       Range valueRange,
       Ratio valueRatio,
       SampledData valueSampledData,
+      Time valueTime,
       @JsonKey(name: '_valueTime') Element valueTimeElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
       Period valuePeriod,
       Attachment valueAttachment,
@@ -12584,13 +12788,18 @@ class __$ObservationComponentCopyWithImpl<$Res>
     Object code = freezed,
     Object valueQuantity = freezed,
     Object valueCodeableConcept = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
+    Object valueInteger = freezed,
     Object valueIntegerElement = freezed,
     Object valueRange = freezed,
     Object valueRatio = freezed,
     Object valueSampledData = freezed,
+    Object valueTime = freezed,
     Object valueTimeElement = freezed,
+    Object valueDateTime = freezed,
     Object valueDateTimeElement = freezed,
     Object valuePeriod = freezed,
     Object valueAttachment = freezed,
@@ -12613,12 +12822,20 @@ class __$ObservationComponentCopyWithImpl<$Res>
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
           : valueCodeableConcept as CodeableConcept,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger as Integer,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement as Element,
@@ -12629,9 +12846,13 @@ class __$ObservationComponentCopyWithImpl<$Res>
       valueSampledData: valueSampledData == freezed
           ? _value.valueSampledData
           : valueSampledData as SampledData,
+      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueTimeElement: valueTimeElement == freezed
           ? _value.valueTimeElement
           : valueTimeElement as Element,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime as FhirDateTime,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement as Element,
@@ -12662,13 +12883,18 @@ class _$_ObservationComponent extends _ObservationComponent {
       @required this.code,
       this.valueQuantity,
       this.valueCodeableConcept,
+      this.valueString,
       @JsonKey(name: '_valueString') this.valueStringElement,
+      this.valueBoolean,
       @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+      this.valueInteger,
       @JsonKey(name: '_valueInteger') this.valueIntegerElement,
       this.valueRange,
       this.valueRatio,
       this.valueSampledData,
+      this.valueTime,
       @JsonKey(name: '_valueTime') this.valueTimeElement,
+      this.valueDateTime,
       @JsonKey(name: '_valueDateTime') this.valueDateTimeElement,
       this.valuePeriod,
       this.valueAttachment,
@@ -12695,11 +12921,17 @@ class _$_ObservationComponent extends _ObservationComponent {
   @override
   final CodeableConcept valueCodeableConcept;
   @override
+  final String valueString;
+  @override
   @JsonKey(name: '_valueString')
   final Element valueStringElement;
   @override
+  final Boolean valueBoolean;
+  @override
   @JsonKey(name: '_valueBoolean')
   final Element valueBooleanElement;
+  @override
+  final Integer valueInteger;
   @override
   @JsonKey(name: '_valueInteger')
   final Element valueIntegerElement;
@@ -12710,8 +12942,12 @@ class _$_ObservationComponent extends _ObservationComponent {
   @override
   final SampledData valueSampledData;
   @override
+  final Time valueTime;
+  @override
   @JsonKey(name: '_valueTime')
   final Element valueTimeElement;
+  @override
+  final FhirDateTime valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
   final Element valueDateTimeElement;
@@ -12728,7 +12964,7 @@ class _$_ObservationComponent extends _ObservationComponent {
 
   @override
   String toString() {
-    return 'ObservationComponent(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, valueQuantity: $valueQuantity, valueCodeableConcept: $valueCodeableConcept, valueStringElement: $valueStringElement, valueBooleanElement: $valueBooleanElement, valueIntegerElement: $valueIntegerElement, valueRange: $valueRange, valueRatio: $valueRatio, valueSampledData: $valueSampledData, valueTimeElement: $valueTimeElement, valueDateTimeElement: $valueDateTimeElement, valuePeriod: $valuePeriod, valueAttachment: $valueAttachment, dataAbsentReason: $dataAbsentReason, interpretation: $interpretation, referenceRange: $referenceRange)';
+    return 'ObservationComponent(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, valueQuantity: $valueQuantity, valueCodeableConcept: $valueCodeableConcept, valueString: $valueString, valueStringElement: $valueStringElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueRange: $valueRange, valueRatio: $valueRatio, valueSampledData: $valueSampledData, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valuePeriod: $valuePeriod, valueAttachment: $valueAttachment, dataAbsentReason: $dataAbsentReason, interpretation: $interpretation, referenceRange: $referenceRange)';
   }
 
   @override
@@ -12751,12 +12987,21 @@ class _$_ObservationComponent extends _ObservationComponent {
             (identical(other.valueCodeableConcept, valueCodeableConcept) ||
                 const DeepCollectionEquality().equals(
                     other.valueCodeableConcept, valueCodeableConcept)) &&
+            (identical(other.valueString, valueString) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueString, valueString)) &&
             (identical(other.valueStringElement, valueStringElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueStringElement, valueStringElement)) &&
+            (identical(other.valueBoolean, valueBoolean) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBoolean, valueBoolean)) &&
             (identical(other.valueBooleanElement, valueBooleanElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueBooleanElement, valueBooleanElement)) &&
+            (identical(other.valueInteger, valueInteger) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueInteger, valueInteger)) &&
             (identical(other.valueIntegerElement, valueIntegerElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueIntegerElement, valueIntegerElement)) &&
@@ -12769,9 +13014,15 @@ class _$_ObservationComponent extends _ObservationComponent {
             (identical(other.valueSampledData, valueSampledData) ||
                 const DeepCollectionEquality()
                     .equals(other.valueSampledData, valueSampledData)) &&
+            (identical(other.valueTime, valueTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueTime, valueTime)) &&
             (identical(other.valueTimeElement, valueTimeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueTimeElement, valueTimeElement)) &&
+            (identical(other.valueDateTime, valueDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDateTime, valueDateTime)) &&
             (identical(other.valueDateTimeElement, valueDateTimeElement) ||
                 const DeepCollectionEquality().equals(
                     other.valueDateTimeElement, valueDateTimeElement)) &&
@@ -12784,12 +13035,8 @@ class _$_ObservationComponent extends _ObservationComponent {
             (identical(other.dataAbsentReason, dataAbsentReason) ||
                 const DeepCollectionEquality()
                     .equals(other.dataAbsentReason, dataAbsentReason)) &&
-            (identical(other.interpretation, interpretation) ||
-                const DeepCollectionEquality()
-                    .equals(other.interpretation, interpretation)) &&
-            (identical(other.referenceRange, referenceRange) ||
-                const DeepCollectionEquality()
-                    .equals(other.referenceRange, referenceRange)));
+            (identical(other.interpretation, interpretation) || const DeepCollectionEquality().equals(other.interpretation, interpretation)) &&
+            (identical(other.referenceRange, referenceRange) || const DeepCollectionEquality().equals(other.referenceRange, referenceRange)));
   }
 
   @override
@@ -12801,13 +13048,18 @@ class _$_ObservationComponent extends _ObservationComponent {
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(valueQuantity) ^
       const DeepCollectionEquality().hash(valueCodeableConcept) ^
+      const DeepCollectionEquality().hash(valueString) ^
       const DeepCollectionEquality().hash(valueStringElement) ^
+      const DeepCollectionEquality().hash(valueBoolean) ^
       const DeepCollectionEquality().hash(valueBooleanElement) ^
+      const DeepCollectionEquality().hash(valueInteger) ^
       const DeepCollectionEquality().hash(valueIntegerElement) ^
       const DeepCollectionEquality().hash(valueRange) ^
       const DeepCollectionEquality().hash(valueRatio) ^
       const DeepCollectionEquality().hash(valueSampledData) ^
+      const DeepCollectionEquality().hash(valueTime) ^
       const DeepCollectionEquality().hash(valueTimeElement) ^
+      const DeepCollectionEquality().hash(valueDateTime) ^
       const DeepCollectionEquality().hash(valueDateTimeElement) ^
       const DeepCollectionEquality().hash(valuePeriod) ^
       const DeepCollectionEquality().hash(valueAttachment) ^
@@ -12835,13 +13087,18 @@ abstract class _ObservationComponent extends ObservationComponent {
           @required CodeableConcept code,
           Quantity valueQuantity,
           CodeableConcept valueCodeableConcept,
+          String valueString,
           @JsonKey(name: '_valueString') Element valueStringElement,
+          Boolean valueBoolean,
           @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+          Integer valueInteger,
           @JsonKey(name: '_valueInteger') Element valueIntegerElement,
           Range valueRange,
           Ratio valueRatio,
           SampledData valueSampledData,
+          Time valueTime,
           @JsonKey(name: '_valueTime') Element valueTimeElement,
+          FhirDateTime valueDateTime,
           @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
           Period valuePeriod,
           Attachment valueAttachment,
@@ -12867,11 +13124,17 @@ abstract class _ObservationComponent extends ObservationComponent {
   @override
   CodeableConcept get valueCodeableConcept;
   @override
+  String get valueString;
+  @override
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
   @override
+  Boolean get valueBoolean;
+  @override
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
+  @override
+  Integer get valueInteger;
   @override
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
@@ -12882,8 +13145,12 @@ abstract class _ObservationComponent extends ObservationComponent {
   @override
   SampledData get valueSampledData;
   @override
+  Time get valueTime;
+  @override
   @JsonKey(name: '_valueTime')
   Element get valueTimeElement;
+  @override
+  FhirDateTime get valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
   Element get valueDateTimeElement;
@@ -13052,6 +13319,7 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
+  $IdentifierCopyWith<$Res> get identifier;
   $ElementCopyWith<$Res> get statusElement;
   $ReferenceCopyWith<$Res> get subject;
   $ReferenceCopyWith<$Res> get encounter;
@@ -13190,6 +13458,16 @@ class _$QuestionnaireResponseCopyWithImpl<$Res>
   }
 
   @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res> get statusElement {
     if (_value.statusElement == null) {
       return null;
@@ -13297,6 +13575,8 @@ abstract class _$QuestionnaireResponseCopyWith<$Res>
   $ElementCopyWith<$Res> get languageElement;
   @override
   $NarrativeCopyWith<$Res> get text;
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
   @override
   $ElementCopyWith<$Res> get statusElement;
   @override
@@ -14130,13 +14410,21 @@ class _$QuestionnaireResponseAnswerTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      Time valueTime,
       @JsonKey(name: '_valueTime') Element valueTimeElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      FhirUri valueUri,
       @JsonKey(name: '_valueUri') Element valueUriElement,
       Attachment valueAttachment,
       Coding valueCoding,
@@ -14147,13 +14435,21 @@ class _$QuestionnaireResponseAnswerTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      valueBoolean: valueBoolean,
       valueBooleanElement: valueBooleanElement,
+      valueDecimal: valueDecimal,
       valueDecimalElement: valueDecimalElement,
+      valueInteger: valueInteger,
       valueIntegerElement: valueIntegerElement,
+      valueDate: valueDate,
       valueDateElement: valueDateElement,
+      valueDateTime: valueDateTime,
       valueDateTimeElement: valueDateTimeElement,
+      valueTime: valueTime,
       valueTimeElement: valueTimeElement,
+      valueString: valueString,
       valueStringElement: valueStringElement,
+      valueUri: valueUri,
       valueUriElement: valueUriElement,
       valueAttachment: valueAttachment,
       valueCoding: valueCoding,
@@ -14172,20 +14468,28 @@ mixin _$QuestionnaireResponseAnswer {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
+  Boolean get valueBoolean;
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
+  Decimal get valueDecimal;
   @JsonKey(name: '_valueDecimal')
   Element get valueDecimalElement;
+  Integer get valueInteger;
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
+  Date get valueDate;
   @JsonKey(name: '_valueDate')
   Element get valueDateElement;
+  FhirDateTime get valueDateTime;
   @JsonKey(name: '_valueDateTime')
   Element get valueDateTimeElement;
+  Time get valueTime;
   @JsonKey(name: '_valueTime')
   Element get valueTimeElement;
+  String get valueString;
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
+  FhirUri get valueUri;
   @JsonKey(name: '_valueUri')
   Element get valueUriElement;
   Attachment get valueAttachment;
@@ -14208,13 +14512,21 @@ abstract class $QuestionnaireResponseAnswerCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      Time valueTime,
       @JsonKey(name: '_valueTime') Element valueTimeElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      FhirUri valueUri,
       @JsonKey(name: '_valueUri') Element valueUriElement,
       Attachment valueAttachment,
       Coding valueCoding,
@@ -14249,13 +14561,21 @@ class _$QuestionnaireResponseAnswerCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
+    Object valueDecimal = freezed,
     Object valueDecimalElement = freezed,
+    Object valueInteger = freezed,
     Object valueIntegerElement = freezed,
+    Object valueDate = freezed,
     Object valueDateElement = freezed,
+    Object valueDateTime = freezed,
     Object valueDateTimeElement = freezed,
+    Object valueTime = freezed,
     Object valueTimeElement = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueUri = freezed,
     Object valueUriElement = freezed,
     Object valueAttachment = freezed,
     Object valueCoding = freezed,
@@ -14271,27 +14591,44 @@ class _$QuestionnaireResponseAnswerCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
+      valueDecimal: valueDecimal == freezed
+          ? _value.valueDecimal
+          : valueDecimal as Decimal,
       valueDecimalElement: valueDecimalElement == freezed
           ? _value.valueDecimalElement
           : valueDecimalElement as Element,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger as Integer,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement as Element,
+      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateElement: valueDateElement == freezed
           ? _value.valueDateElement
           : valueDateElement as Element,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime as FhirDateTime,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement as Element,
+      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueTimeElement: valueTimeElement == freezed
           ? _value.valueTimeElement
           : valueTimeElement as Element,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueUri: valueUri == freezed ? _value.valueUri : valueUri as FhirUri,
       valueUriElement: valueUriElement == freezed
           ? _value.valueUriElement
           : valueUriElement as Element,
@@ -14444,13 +14781,21 @@ abstract class _$QuestionnaireResponseAnswerCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      Time valueTime,
       @JsonKey(name: '_valueTime') Element valueTimeElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      FhirUri valueUri,
       @JsonKey(name: '_valueUri') Element valueUriElement,
       Attachment valueAttachment,
       Coding valueCoding,
@@ -14501,13 +14846,21 @@ class __$QuestionnaireResponseAnswerCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
+    Object valueDecimal = freezed,
     Object valueDecimalElement = freezed,
+    Object valueInteger = freezed,
     Object valueIntegerElement = freezed,
+    Object valueDate = freezed,
     Object valueDateElement = freezed,
+    Object valueDateTime = freezed,
     Object valueDateTimeElement = freezed,
+    Object valueTime = freezed,
     Object valueTimeElement = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueUri = freezed,
     Object valueUriElement = freezed,
     Object valueAttachment = freezed,
     Object valueCoding = freezed,
@@ -14523,27 +14876,44 @@ class __$QuestionnaireResponseAnswerCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
+      valueDecimal: valueDecimal == freezed
+          ? _value.valueDecimal
+          : valueDecimal as Decimal,
       valueDecimalElement: valueDecimalElement == freezed
           ? _value.valueDecimalElement
           : valueDecimalElement as Element,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger as Integer,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement as Element,
+      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateElement: valueDateElement == freezed
           ? _value.valueDateElement
           : valueDateElement as Element,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime as FhirDateTime,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement as Element,
+      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueTimeElement: valueTimeElement == freezed
           ? _value.valueTimeElement
           : valueTimeElement as Element,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueUri: valueUri == freezed ? _value.valueUri : valueUri as FhirUri,
       valueUriElement: valueUriElement == freezed
           ? _value.valueUriElement
           : valueUriElement as Element,
@@ -14571,13 +14941,21 @@ class _$_QuestionnaireResponseAnswer extends _QuestionnaireResponseAnswer {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      this.valueBoolean,
       @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+      this.valueDecimal,
       @JsonKey(name: '_valueDecimal') this.valueDecimalElement,
+      this.valueInteger,
       @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+      this.valueDate,
       @JsonKey(name: '_valueDate') this.valueDateElement,
+      this.valueDateTime,
       @JsonKey(name: '_valueDateTime') this.valueDateTimeElement,
+      this.valueTime,
       @JsonKey(name: '_valueTime') this.valueTimeElement,
+      this.valueString,
       @JsonKey(name: '_valueString') this.valueStringElement,
+      this.valueUri,
       @JsonKey(name: '_valueUri') this.valueUriElement,
       this.valueAttachment,
       this.valueCoding,
@@ -14597,26 +14975,42 @@ class _$_QuestionnaireResponseAnswer extends _QuestionnaireResponseAnswer {
   @override
   final List<FhirExtension> modifierExtension;
   @override
+  final Boolean valueBoolean;
+  @override
   @JsonKey(name: '_valueBoolean')
   final Element valueBooleanElement;
+  @override
+  final Decimal valueDecimal;
   @override
   @JsonKey(name: '_valueDecimal')
   final Element valueDecimalElement;
   @override
+  final Integer valueInteger;
+  @override
   @JsonKey(name: '_valueInteger')
   final Element valueIntegerElement;
+  @override
+  final Date valueDate;
   @override
   @JsonKey(name: '_valueDate')
   final Element valueDateElement;
   @override
+  final FhirDateTime valueDateTime;
+  @override
   @JsonKey(name: '_valueDateTime')
   final Element valueDateTimeElement;
+  @override
+  final Time valueTime;
   @override
   @JsonKey(name: '_valueTime')
   final Element valueTimeElement;
   @override
+  final String valueString;
+  @override
   @JsonKey(name: '_valueString')
   final Element valueStringElement;
+  @override
+  final FhirUri valueUri;
   @override
   @JsonKey(name: '_valueUri')
   final Element valueUriElement;
@@ -14633,7 +15027,7 @@ class _$_QuestionnaireResponseAnswer extends _QuestionnaireResponseAnswer {
 
   @override
   String toString() {
-    return 'QuestionnaireResponseAnswer(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, valueBooleanElement: $valueBooleanElement, valueDecimalElement: $valueDecimalElement, valueIntegerElement: $valueIntegerElement, valueDateElement: $valueDateElement, valueDateTimeElement: $valueDateTimeElement, valueTimeElement: $valueTimeElement, valueStringElement: $valueStringElement, valueUriElement: $valueUriElement, valueAttachment: $valueAttachment, valueCoding: $valueCoding, valueQuantity: $valueQuantity, valueReference: $valueReference, item: $item)';
+    return 'QuestionnaireResponseAnswer(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueString: $valueString, valueStringElement: $valueStringElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueAttachment: $valueAttachment, valueCoding: $valueCoding, valueQuantity: $valueQuantity, valueReference: $valueReference, item: $item)';
   }
 
   @override
@@ -14648,27 +15042,51 @@ class _$_QuestionnaireResponseAnswer extends _QuestionnaireResponseAnswer {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.valueBoolean, valueBoolean) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBoolean, valueBoolean)) &&
             (identical(other.valueBooleanElement, valueBooleanElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueBooleanElement, valueBooleanElement)) &&
+            (identical(other.valueDecimal, valueDecimal) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDecimal, valueDecimal)) &&
             (identical(other.valueDecimalElement, valueDecimalElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueDecimalElement, valueDecimalElement)) &&
+            (identical(other.valueInteger, valueInteger) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueInteger, valueInteger)) &&
             (identical(other.valueIntegerElement, valueIntegerElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueIntegerElement, valueIntegerElement)) &&
+            (identical(other.valueDate, valueDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDate, valueDate)) &&
             (identical(other.valueDateElement, valueDateElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueDateElement, valueDateElement)) &&
+            (identical(other.valueDateTime, valueDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDateTime, valueDateTime)) &&
             (identical(other.valueDateTimeElement, valueDateTimeElement) ||
                 const DeepCollectionEquality().equals(
                     other.valueDateTimeElement, valueDateTimeElement)) &&
+            (identical(other.valueTime, valueTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueTime, valueTime)) &&
             (identical(other.valueTimeElement, valueTimeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueTimeElement, valueTimeElement)) &&
+            (identical(other.valueString, valueString) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueString, valueString)) &&
             (identical(other.valueStringElement, valueStringElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueStringElement, valueStringElement)) &&
+            (identical(other.valueUri, valueUri) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueUri, valueUri)) &&
             (identical(other.valueUriElement, valueUriElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueUriElement, valueUriElement)) &&
@@ -14681,11 +15099,8 @@ class _$_QuestionnaireResponseAnswer extends _QuestionnaireResponseAnswer {
             (identical(other.valueQuantity, valueQuantity) ||
                 const DeepCollectionEquality()
                     .equals(other.valueQuantity, valueQuantity)) &&
-            (identical(other.valueReference, valueReference) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueReference, valueReference)) &&
-            (identical(other.item, item) ||
-                const DeepCollectionEquality().equals(other.item, item)));
+            (identical(other.valueReference, valueReference) || const DeepCollectionEquality().equals(other.valueReference, valueReference)) &&
+            (identical(other.item, item) || const DeepCollectionEquality().equals(other.item, item)));
   }
 
   @override
@@ -14694,13 +15109,21 @@ class _$_QuestionnaireResponseAnswer extends _QuestionnaireResponseAnswer {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(valueBoolean) ^
       const DeepCollectionEquality().hash(valueBooleanElement) ^
+      const DeepCollectionEquality().hash(valueDecimal) ^
       const DeepCollectionEquality().hash(valueDecimalElement) ^
+      const DeepCollectionEquality().hash(valueInteger) ^
       const DeepCollectionEquality().hash(valueIntegerElement) ^
+      const DeepCollectionEquality().hash(valueDate) ^
       const DeepCollectionEquality().hash(valueDateElement) ^
+      const DeepCollectionEquality().hash(valueDateTime) ^
       const DeepCollectionEquality().hash(valueDateTimeElement) ^
+      const DeepCollectionEquality().hash(valueTime) ^
       const DeepCollectionEquality().hash(valueTimeElement) ^
+      const DeepCollectionEquality().hash(valueString) ^
       const DeepCollectionEquality().hash(valueStringElement) ^
+      const DeepCollectionEquality().hash(valueUri) ^
       const DeepCollectionEquality().hash(valueUriElement) ^
       const DeepCollectionEquality().hash(valueAttachment) ^
       const DeepCollectionEquality().hash(valueCoding) ^
@@ -14726,13 +15149,21 @@ abstract class _QuestionnaireResponseAnswer
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      Time valueTime,
       @JsonKey(name: '_valueTime') Element valueTimeElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      FhirUri valueUri,
       @JsonKey(name: '_valueUri') Element valueUriElement,
       Attachment valueAttachment,
       Coding valueCoding,
@@ -14751,26 +15182,42 @@ abstract class _QuestionnaireResponseAnswer
   @override
   List<FhirExtension> get modifierExtension;
   @override
+  Boolean get valueBoolean;
+  @override
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
+  @override
+  Decimal get valueDecimal;
   @override
   @JsonKey(name: '_valueDecimal')
   Element get valueDecimalElement;
   @override
+  Integer get valueInteger;
+  @override
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
+  @override
+  Date get valueDate;
   @override
   @JsonKey(name: '_valueDate')
   Element get valueDateElement;
   @override
+  FhirDateTime get valueDateTime;
+  @override
   @JsonKey(name: '_valueDateTime')
   Element get valueDateTimeElement;
+  @override
+  Time get valueTime;
   @override
   @JsonKey(name: '_valueTime')
   Element get valueTimeElement;
   @override
+  String get valueString;
+  @override
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
+  @override
+  FhirUri get valueUri;
   @override
   @JsonKey(name: '_valueUri')
   Element get valueUriElement;
@@ -14931,6 +15378,7 @@ abstract class $SpecimenCopyWith<$Res> {
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
+  $IdentifierCopyWith<$Res> get accessionIdentifier;
   $ElementCopyWith<$Res> get statusElement;
   $CodeableConceptCopyWith<$Res> get type;
   $ReferenceCopyWith<$Res> get subject;
@@ -15076,6 +15524,16 @@ class _$SpecimenCopyWithImpl<$Res> implements $SpecimenCopyWith<$Res> {
   }
 
   @override
+  $IdentifierCopyWith<$Res> get accessionIdentifier {
+    if (_value.accessionIdentifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.accessionIdentifier, (value) {
+      return _then(_value.copyWith(accessionIdentifier: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res> get statusElement {
     if (_value.statusElement == null) {
       return null;
@@ -15166,6 +15624,8 @@ abstract class _$SpecimenCopyWith<$Res> implements $SpecimenCopyWith<$Res> {
   $ElementCopyWith<$Res> get languageElement;
   @override
   $NarrativeCopyWith<$Res> get text;
+  @override
+  $IdentifierCopyWith<$Res> get accessionIdentifier;
   @override
   $ElementCopyWith<$Res> get statusElement;
   @override
@@ -15599,6 +16059,7 @@ class _$SpecimenCollectionTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Reference collector,
+      FhirDateTime collectedDateTime,
       @JsonKey(name: '_collectedDateTime') Element collectedDateTimeElement,
       Period collectedPeriod,
       Duration duration,
@@ -15612,6 +16073,7 @@ class _$SpecimenCollectionTearOff {
       extension_: extension_,
       modifierExtension: modifierExtension,
       collector: collector,
+      collectedDateTime: collectedDateTime,
       collectedDateTimeElement: collectedDateTimeElement,
       collectedPeriod: collectedPeriod,
       duration: duration,
@@ -15633,6 +16095,7 @@ mixin _$SpecimenCollection {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   Reference get collector;
+  FhirDateTime get collectedDateTime;
   @JsonKey(name: '_collectedDateTime')
   Element get collectedDateTimeElement;
   Period get collectedPeriod;
@@ -15656,6 +16119,7 @@ abstract class $SpecimenCollectionCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Reference collector,
+      FhirDateTime collectedDateTime,
       @JsonKey(name: '_collectedDateTime') Element collectedDateTimeElement,
       Period collectedPeriod,
       Duration duration,
@@ -15690,6 +16154,7 @@ class _$SpecimenCollectionCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object collector = freezed,
+    Object collectedDateTime = freezed,
     Object collectedDateTimeElement = freezed,
     Object collectedPeriod = freezed,
     Object duration = freezed,
@@ -15709,6 +16174,9 @@ class _$SpecimenCollectionCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension>,
       collector:
           collector == freezed ? _value.collector : collector as Reference,
+      collectedDateTime: collectedDateTime == freezed
+          ? _value.collectedDateTime
+          : collectedDateTime as FhirDateTime,
       collectedDateTimeElement: collectedDateTimeElement == freezed
           ? _value.collectedDateTimeElement
           : collectedDateTimeElement as Element,
@@ -15832,6 +16300,7 @@ abstract class _$SpecimenCollectionCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Reference collector,
+      FhirDateTime collectedDateTime,
       @JsonKey(name: '_collectedDateTime') Element collectedDateTimeElement,
       Period collectedPeriod,
       Duration duration,
@@ -15877,6 +16346,7 @@ class __$SpecimenCollectionCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object collector = freezed,
+    Object collectedDateTime = freezed,
     Object collectedDateTimeElement = freezed,
     Object collectedPeriod = freezed,
     Object duration = freezed,
@@ -15896,6 +16366,9 @@ class __$SpecimenCollectionCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension>,
       collector:
           collector == freezed ? _value.collector : collector as Reference,
+      collectedDateTime: collectedDateTime == freezed
+          ? _value.collectedDateTime
+          : collectedDateTime as FhirDateTime,
       collectedDateTimeElement: collectedDateTimeElement == freezed
           ? _value.collectedDateTimeElement
           : collectedDateTimeElement as Element,
@@ -15924,6 +16397,7 @@ class _$_SpecimenCollection extends _SpecimenCollection {
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.collector,
+      this.collectedDateTime,
       @JsonKey(name: '_collectedDateTime') this.collectedDateTimeElement,
       this.collectedPeriod,
       this.duration,
@@ -15947,6 +16421,8 @@ class _$_SpecimenCollection extends _SpecimenCollection {
   @override
   final Reference collector;
   @override
+  final FhirDateTime collectedDateTime;
+  @override
   @JsonKey(name: '_collectedDateTime')
   final Element collectedDateTimeElement;
   @override
@@ -15966,7 +16442,7 @@ class _$_SpecimenCollection extends _SpecimenCollection {
 
   @override
   String toString() {
-    return 'SpecimenCollection(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, collector: $collector, collectedDateTimeElement: $collectedDateTimeElement, collectedPeriod: $collectedPeriod, duration: $duration, quantity: $quantity, method: $method, bodySite: $bodySite, fastingStatusCodeableConcept: $fastingStatusCodeableConcept, fastingStatusDuration: $fastingStatusDuration)';
+    return 'SpecimenCollection(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, collector: $collector, collectedDateTime: $collectedDateTime, collectedDateTimeElement: $collectedDateTimeElement, collectedPeriod: $collectedPeriod, duration: $duration, quantity: $quantity, method: $method, bodySite: $bodySite, fastingStatusCodeableConcept: $fastingStatusCodeableConcept, fastingStatusDuration: $fastingStatusDuration)';
   }
 
   @override
@@ -15984,6 +16460,9 @@ class _$_SpecimenCollection extends _SpecimenCollection {
             (identical(other.collector, collector) ||
                 const DeepCollectionEquality()
                     .equals(other.collector, collector)) &&
+            (identical(other.collectedDateTime, collectedDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.collectedDateTime, collectedDateTime)) &&
             (identical(
                     other.collectedDateTimeElement, collectedDateTimeElement) ||
                 const DeepCollectionEquality().equals(
@@ -16020,6 +16499,7 @@ class _$_SpecimenCollection extends _SpecimenCollection {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(collector) ^
+      const DeepCollectionEquality().hash(collectedDateTime) ^
       const DeepCollectionEquality().hash(collectedDateTimeElement) ^
       const DeepCollectionEquality().hash(collectedPeriod) ^
       const DeepCollectionEquality().hash(duration) ^
@@ -16046,6 +16526,7 @@ abstract class _SpecimenCollection extends SpecimenCollection {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Reference collector,
+      FhirDateTime collectedDateTime,
       @JsonKey(name: '_collectedDateTime') Element collectedDateTimeElement,
       Period collectedPeriod,
       Duration duration,
@@ -16067,6 +16548,8 @@ abstract class _SpecimenCollection extends SpecimenCollection {
   List<FhirExtension> get modifierExtension;
   @override
   Reference get collector;
+  @override
+  FhirDateTime get collectedDateTime;
   @override
   @JsonKey(name: '_collectedDateTime')
   Element get collectedDateTimeElement;
@@ -16103,6 +16586,7 @@ class _$SpecimenProcessingTearOff {
       @JsonKey(name: '_description') Element descriptionElement,
       CodeableConcept procedure,
       List<Reference> additive,
+      FhirDateTime timeDateTime,
       @JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
       Period timePeriod}) {
     return _SpecimenProcessing(
@@ -16113,6 +16597,7 @@ class _$SpecimenProcessingTearOff {
       descriptionElement: descriptionElement,
       procedure: procedure,
       additive: additive,
+      timeDateTime: timeDateTime,
       timeDateTimeElement: timeDateTimeElement,
       timePeriod: timePeriod,
     );
@@ -16132,6 +16617,7 @@ mixin _$SpecimenProcessing {
   Element get descriptionElement;
   CodeableConcept get procedure;
   List<Reference> get additive;
+  FhirDateTime get timeDateTime;
   @JsonKey(name: '_timeDateTime')
   Element get timeDateTimeElement;
   Period get timePeriod;
@@ -16152,6 +16638,7 @@ abstract class $SpecimenProcessingCopyWith<$Res> {
       @JsonKey(name: '_description') Element descriptionElement,
       CodeableConcept procedure,
       List<Reference> additive,
+      FhirDateTime timeDateTime,
       @JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
       Period timePeriod});
 
@@ -16178,6 +16665,7 @@ class _$SpecimenProcessingCopyWithImpl<$Res>
     Object descriptionElement = freezed,
     Object procedure = freezed,
     Object additive = freezed,
+    Object timeDateTime = freezed,
     Object timeDateTimeElement = freezed,
     Object timePeriod = freezed,
   }) {
@@ -16199,6 +16687,9 @@ class _$SpecimenProcessingCopyWithImpl<$Res>
           : procedure as CodeableConcept,
       additive:
           additive == freezed ? _value.additive : additive as List<Reference>,
+      timeDateTime: timeDateTime == freezed
+          ? _value.timeDateTime
+          : timeDateTime as FhirDateTime,
       timeDateTimeElement: timeDateTimeElement == freezed
           ? _value.timeDateTimeElement
           : timeDateTimeElement as Element,
@@ -16262,6 +16753,7 @@ abstract class _$SpecimenProcessingCopyWith<$Res>
       @JsonKey(name: '_description') Element descriptionElement,
       CodeableConcept procedure,
       List<Reference> additive,
+      FhirDateTime timeDateTime,
       @JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
       Period timePeriod});
 
@@ -16294,6 +16786,7 @@ class __$SpecimenProcessingCopyWithImpl<$Res>
     Object descriptionElement = freezed,
     Object procedure = freezed,
     Object additive = freezed,
+    Object timeDateTime = freezed,
     Object timeDateTimeElement = freezed,
     Object timePeriod = freezed,
   }) {
@@ -16315,6 +16808,9 @@ class __$SpecimenProcessingCopyWithImpl<$Res>
           : procedure as CodeableConcept,
       additive:
           additive == freezed ? _value.additive : additive as List<Reference>,
+      timeDateTime: timeDateTime == freezed
+          ? _value.timeDateTime
+          : timeDateTime as FhirDateTime,
       timeDateTimeElement: timeDateTimeElement == freezed
           ? _value.timeDateTimeElement
           : timeDateTimeElement as Element,
@@ -16334,6 +16830,7 @@ class _$_SpecimenProcessing extends _SpecimenProcessing {
       @JsonKey(name: '_description') this.descriptionElement,
       this.procedure,
       this.additive,
+      this.timeDateTime,
       @JsonKey(name: '_timeDateTime') this.timeDateTimeElement,
       this.timePeriod})
       : super._();
@@ -16358,6 +16855,8 @@ class _$_SpecimenProcessing extends _SpecimenProcessing {
   @override
   final List<Reference> additive;
   @override
+  final FhirDateTime timeDateTime;
+  @override
   @JsonKey(name: '_timeDateTime')
   final Element timeDateTimeElement;
   @override
@@ -16365,7 +16864,7 @@ class _$_SpecimenProcessing extends _SpecimenProcessing {
 
   @override
   String toString() {
-    return 'SpecimenProcessing(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, procedure: $procedure, additive: $additive, timeDateTimeElement: $timeDateTimeElement, timePeriod: $timePeriod)';
+    return 'SpecimenProcessing(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, procedure: $procedure, additive: $additive, timeDateTime: $timeDateTime, timeDateTimeElement: $timeDateTimeElement, timePeriod: $timePeriod)';
   }
 
   @override
@@ -16392,6 +16891,9 @@ class _$_SpecimenProcessing extends _SpecimenProcessing {
             (identical(other.additive, additive) ||
                 const DeepCollectionEquality()
                     .equals(other.additive, additive)) &&
+            (identical(other.timeDateTime, timeDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.timeDateTime, timeDateTime)) &&
             (identical(other.timeDateTimeElement, timeDateTimeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.timeDateTimeElement, timeDateTimeElement)) &&
@@ -16410,6 +16912,7 @@ class _$_SpecimenProcessing extends _SpecimenProcessing {
       const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(procedure) ^
       const DeepCollectionEquality().hash(additive) ^
+      const DeepCollectionEquality().hash(timeDateTime) ^
       const DeepCollectionEquality().hash(timeDateTimeElement) ^
       const DeepCollectionEquality().hash(timePeriod);
 
@@ -16433,6 +16936,7 @@ abstract class _SpecimenProcessing extends SpecimenProcessing {
       @JsonKey(name: '_description') Element descriptionElement,
       CodeableConcept procedure,
       List<Reference> additive,
+      FhirDateTime timeDateTime,
       @JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
       Period timePeriod}) = _$_SpecimenProcessing;
 
@@ -16455,6 +16959,8 @@ abstract class _SpecimenProcessing extends SpecimenProcessing {
   CodeableConcept get procedure;
   @override
   List<Reference> get additive;
+  @override
+  FhirDateTime get timeDateTime;
   @override
   @JsonKey(name: '_timeDateTime')
   Element get timeDateTimeElement;

@@ -9,11 +9,10 @@ part 'management.g.dart';
 
 @freezed
 abstract class Encounter with _$Encounter implements Resource {
-  const factory Encounter({
+  factory Encounter({
     @JsonKey(required: true, defaultValue: 'Encounter')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -51,7 +50,7 @@ abstract class Encounter with _$Encounter implements Resource {
 
 @freezed
 abstract class EncounterStatusHistory with _$EncounterStatusHistory {
-  const factory EncounterStatusHistory({
+  factory EncounterStatusHistory({
     @JsonKey(unknownEnumValue: EncounterStatus.unknown) EncounterStatus status,
     @JsonKey(required: true) Period period,
     @JsonKey(name: '_status') Element statusElement,
@@ -62,7 +61,7 @@ abstract class EncounterStatusHistory with _$EncounterStatusHistory {
 
 @freezed
 abstract class EncounterClassHistory with _$EncounterClassHistory {
-  const factory EncounterClassHistory({
+  factory EncounterClassHistory({
     @JsonKey(required: true, name: 'class') Coding class_,
     @JsonKey(required: true) Period period,
   }) = _EncounterClassHistory;
@@ -72,7 +71,7 @@ abstract class EncounterClassHistory with _$EncounterClassHistory {
 
 @freezed
 abstract class EncounterParticipant with _$EncounterParticipant {
-  const factory EncounterParticipant({
+  factory EncounterParticipant({
     List<CodeableConcept> type,
     Period period,
     Reference individual,
@@ -83,7 +82,7 @@ abstract class EncounterParticipant with _$EncounterParticipant {
 
 @freezed
 abstract class EncounterDiagnosis with _$EncounterDiagnosis {
-  const factory EncounterDiagnosis({
+  factory EncounterDiagnosis({
     @JsonKey(required: true) Reference condition,
     CodeableConcept role,
     PositiveInt rank,
@@ -95,7 +94,7 @@ abstract class EncounterDiagnosis with _$EncounterDiagnosis {
 
 @freezed
 abstract class EncounterHospitalization with _$EncounterHospitalization {
-  const factory EncounterHospitalization({
+  factory EncounterHospitalization({
     Identifier preAdmissionIdentifier,
     Reference origin,
     CodeableConcept admitSource,
@@ -112,7 +111,7 @@ abstract class EncounterHospitalization with _$EncounterHospitalization {
 
 @freezed
 abstract class EncounterLocation with _$EncounterLocation {
-  const factory EncounterLocation({
+  factory EncounterLocation({
     @JsonKey(required: true) Reference location,
     @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
         EncounterLocationStatus status,
@@ -125,11 +124,10 @@ abstract class EncounterLocation with _$EncounterLocation {
 
 @freezed
 abstract class EpisodeOfCare with _$EpisodeOfCare implements Resource {
-  const factory EpisodeOfCare({
+  factory EpisodeOfCare({
     @JsonKey(required: true, defaultValue: 'EpisodeOfCare')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -159,7 +157,7 @@ abstract class EpisodeOfCare with _$EpisodeOfCare implements Resource {
 
 @freezed
 abstract class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
-  const factory EpisodeOfCareStatusHistory({
+  factory EpisodeOfCareStatusHistory({
     @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
         EpisodeOfCareStatus status,
     @JsonKey(required: true) Period period,
@@ -171,7 +169,7 @@ abstract class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
 
 @freezed
 abstract class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
-  const factory EpisodeOfCareDiagnosis({
+  factory EpisodeOfCareDiagnosis({
     @JsonKey(required: true) Reference condition,
     CodeableConcept role,
     PositiveInt rank,
@@ -183,11 +181,10 @@ abstract class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
 
 @freezed
 abstract class Flag with _$Flag implements Resource {
-  const factory Flag({
+  factory Flag({
     @JsonKey(required: true, defaultValue: 'Flag')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -211,11 +208,10 @@ abstract class Flag with _$Flag implements Resource {
 
 @freezed
 abstract class Library with _$Library implements Resource {
-  const factory Library({
+  factory Library({
     @JsonKey(required: true, defaultValue: 'Library')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -271,11 +267,10 @@ abstract class Library with _$Library implements Resource {
 
 @freezed
 abstract class List_ with _$List_ implements Resource {
-  const factory List_({
+  factory List_({
     @JsonKey(required: true, defaultValue: 'List')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -307,7 +302,7 @@ abstract class List_ with _$List_ implements Resource {
 
 @freezed
 abstract class ListEntry with _$ListEntry {
-  const factory ListEntry({
+  factory ListEntry({
     CodeableConcept flag,
     Boolean deleted,
     FhirDateTime date,

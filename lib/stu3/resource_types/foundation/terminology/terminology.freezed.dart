@@ -1045,7 +1045,7 @@ class __$CodeSystemCopyWithImpl<$Res> extends _$CodeSystemCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CodeSystem implements _CodeSystem {
-  const _$_CodeSystem(
+  _$_CodeSystem(
       {@required
       @JsonKey(required: true, defaultValue: 'CodeSystem')
           this.resourceType,
@@ -1428,7 +1428,7 @@ class _$_CodeSystem implements _CodeSystem {
 }
 
 abstract class _CodeSystem implements CodeSystem {
-  const factory _CodeSystem(
+  factory _CodeSystem(
       {@required
       @JsonKey(required: true, defaultValue: 'CodeSystem')
           String resourceType,
@@ -1863,7 +1863,7 @@ class __$CodeSystemFilterCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CodeSystemFilter implements _CodeSystemFilter {
-  const _$_CodeSystemFilter(
+  _$_CodeSystemFilter(
       {this.code,
       this.description,
       @JsonKey(name: 'operator') this.operator_,
@@ -1954,7 +1954,7 @@ class _$_CodeSystemFilter implements _CodeSystemFilter {
 }
 
 abstract class _CodeSystemFilter implements CodeSystemFilter {
-  const factory _CodeSystemFilter(
+  factory _CodeSystemFilter(
       {Code code,
       String description,
       @JsonKey(name: 'operator') List<Code> operator_,
@@ -2209,7 +2209,7 @@ class __$CodeSystemPropertyCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CodeSystemProperty implements _CodeSystemProperty {
-  const _$_CodeSystemProperty(
+  _$_CodeSystemProperty(
       {this.code,
       this.uri,
       this.description,
@@ -2299,7 +2299,7 @@ class _$_CodeSystemProperty implements _CodeSystemProperty {
 }
 
 abstract class _CodeSystemProperty implements CodeSystemProperty {
-  const factory _CodeSystemProperty(
+  factory _CodeSystemProperty(
       {Code code,
       String uri,
       String description,
@@ -2560,7 +2560,7 @@ class __$CodeSystemConceptCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CodeSystemConcept implements _CodeSystemConcept {
-  const _$_CodeSystemConcept(
+  _$_CodeSystemConcept(
       {this.code,
       this.display,
       this.definition,
@@ -2657,7 +2657,7 @@ class _$_CodeSystemConcept implements _CodeSystemConcept {
 }
 
 abstract class _CodeSystemConcept implements CodeSystemConcept {
-  const factory _CodeSystemConcept(
+  factory _CodeSystemConcept(
           {Code code,
           String display,
           String definition,
@@ -2868,7 +2868,7 @@ class __$CodeSystemDesignationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CodeSystemDesignation implements _CodeSystemDesignation {
-  const _$_CodeSystemDesignation(
+  _$_CodeSystemDesignation(
       {this.language,
       this.use,
       this.value,
@@ -2936,7 +2936,7 @@ class _$_CodeSystemDesignation implements _CodeSystemDesignation {
 }
 
 abstract class _CodeSystemDesignation implements CodeSystemDesignation {
-  const factory _CodeSystemDesignation(
+  factory _CodeSystemDesignation(
           {Code language,
           Coding use,
           String value,
@@ -3291,7 +3291,7 @@ class __$CodeSystemProperty1CopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CodeSystemProperty1 implements _CodeSystemProperty1 {
-  const _$_CodeSystemProperty1(
+  _$_CodeSystemProperty1(
       {this.code,
       this.valueCode,
       this.valueCoding,
@@ -3420,7 +3420,7 @@ class _$_CodeSystemProperty1 implements _CodeSystemProperty1 {
 }
 
 abstract class _CodeSystemProperty1 implements CodeSystemProperty1 {
-  const factory _CodeSystemProperty1(
+  factory _CodeSystemProperty1(
           {Code code,
           Code valueCode,
           Coding valueCoding,
@@ -4283,7 +4283,7 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConceptMap implements _ConceptMap {
-  const _$_ConceptMap(
+  _$_ConceptMap(
       {@required
       @JsonKey(required: true, defaultValue: 'ConceptMap')
           this.resourceType,
@@ -4602,7 +4602,7 @@ class _$_ConceptMap implements _ConceptMap {
 }
 
 abstract class _ConceptMap implements ConceptMap {
-  const factory _ConceptMap(
+  factory _ConceptMap(
       {@required
       @JsonKey(required: true, defaultValue: 'ConceptMap')
           String resourceType,
@@ -5038,7 +5038,7 @@ class __$ConceptMapGroupCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConceptMapGroup implements _ConceptMapGroup {
-  const _$_ConceptMapGroup(
+  _$_ConceptMapGroup(
       {this.source,
       this.sourceVersion,
       this.target,
@@ -5143,7 +5143,7 @@ class _$_ConceptMapGroup implements _ConceptMapGroup {
 }
 
 abstract class _ConceptMapGroup implements ConceptMapGroup {
-  const factory _ConceptMapGroup(
+  factory _ConceptMapGroup(
           {String source,
           String sourceVersion,
           String target,
@@ -5345,7 +5345,7 @@ class __$ConceptMapElementCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConceptMapElement implements _ConceptMapElement {
-  const _$_ConceptMapElement(
+  _$_ConceptMapElement(
       {this.code,
       this.display,
       this.target,
@@ -5412,7 +5412,7 @@ class _$_ConceptMapElement implements _ConceptMapElement {
 }
 
 abstract class _ConceptMapElement implements ConceptMapElement {
-  const factory _ConceptMapElement(
+  factory _ConceptMapElement(
           {Code code,
           String display,
           List<ConceptMapTarget> target,
@@ -5703,7 +5703,7 @@ class __$ConceptMapTargetCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConceptMapTarget implements _ConceptMapTarget {
-  const _$_ConceptMapTarget(
+  _$_ConceptMapTarget(
       {this.code,
       this.display,
       @JsonKey(unknownEnumValue: TargetEquivalence.unknown) this.equivalence,
@@ -5809,7 +5809,7 @@ class _$_ConceptMapTarget implements _ConceptMapTarget {
 }
 
 abstract class _ConceptMapTarget implements ConceptMapTarget {
-  const factory _ConceptMapTarget(
+  factory _ConceptMapTarget(
       {Code code,
       String display,
       @JsonKey(unknownEnumValue: TargetEquivalence.unknown)
@@ -6076,7 +6076,7 @@ class __$ConceptMapDependsOnCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConceptMapDependsOn implements _ConceptMapDependsOn {
-  const _$_ConceptMapDependsOn(
+  _$_ConceptMapDependsOn(
       {this.property,
       this.system,
       this.code,
@@ -6167,7 +6167,7 @@ class _$_ConceptMapDependsOn implements _ConceptMapDependsOn {
 }
 
 abstract class _ConceptMapDependsOn implements ConceptMapDependsOn {
-  const factory _ConceptMapDependsOn(
+  factory _ConceptMapDependsOn(
           {String property,
           String system,
           String code,
@@ -6420,7 +6420,7 @@ class __$ConceptMapUnmappedCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConceptMapUnmapped implements _ConceptMapUnmapped {
-  const _$_ConceptMapUnmapped(
+  _$_ConceptMapUnmapped(
       {@JsonKey(unknownEnumValue: UnmappedMode.unknown) this.mode,
       this.code,
       this.display,
@@ -6510,7 +6510,7 @@ class _$_ConceptMapUnmapped implements _ConceptMapUnmapped {
 }
 
 abstract class _ConceptMapUnmapped implements ConceptMapUnmapped {
-  const factory _ConceptMapUnmapped(
+  factory _ConceptMapUnmapped(
       {@JsonKey(unknownEnumValue: UnmappedMode.unknown) UnmappedMode mode,
       Code code,
       String display,
@@ -7545,7 +7545,7 @@ class __$ExpansionProfileCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ExpansionProfile implements _ExpansionProfile {
-  const _$_ExpansionProfile(
+  _$_ExpansionProfile(
       {@required
       @JsonKey(required: true, defaultValue: 'ExpansionProfile')
           this.resourceType,
@@ -7900,7 +7900,7 @@ class _$_ExpansionProfile implements _ExpansionProfile {
 }
 
 abstract class _ExpansionProfile implements ExpansionProfile {
-  const factory _ExpansionProfile(
+  factory _ExpansionProfile(
       {@required
       @JsonKey(required: true, defaultValue: 'ExpansionProfile')
           String resourceType,
@@ -8293,7 +8293,7 @@ class __$ExpansionProfileFixedVersionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ExpansionProfileFixedVersion implements _ExpansionProfileFixedVersion {
-  const _$_ExpansionProfileFixedVersion(
+  _$_ExpansionProfileFixedVersion(
       {this.system,
       this.version,
       @JsonKey(unknownEnumValue: FixedVersionMode.unknown) this.mode,
@@ -8371,7 +8371,7 @@ class _$_ExpansionProfileFixedVersion implements _ExpansionProfileFixedVersion {
 
 abstract class _ExpansionProfileFixedVersion
     implements ExpansionProfileFixedVersion {
-  const factory _ExpansionProfileFixedVersion(
+  factory _ExpansionProfileFixedVersion(
       {String system,
       String version,
       @JsonKey(unknownEnumValue: FixedVersionMode.unknown)
@@ -8563,7 +8563,7 @@ class __$ExpansionProfileExcludedSystemCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ExpansionProfileExcludedSystem
     implements _ExpansionProfileExcludedSystem {
-  const _$_ExpansionProfileExcludedSystem(
+  _$_ExpansionProfileExcludedSystem(
       {this.system,
       this.version,
       @JsonKey(name: '_system') this.systemElement,
@@ -8627,7 +8627,7 @@ class _$_ExpansionProfileExcludedSystem
 
 abstract class _ExpansionProfileExcludedSystem
     implements ExpansionProfileExcludedSystem {
-  const factory _ExpansionProfileExcludedSystem(
+  factory _ExpansionProfileExcludedSystem(
           {String system,
           String version,
           @JsonKey(name: '_system') Element systemElement,
@@ -8813,7 +8813,7 @@ class __$ExpansionProfileDesignationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ExpansionProfileDesignation implements _ExpansionProfileDesignation {
-  const _$_ExpansionProfileDesignation(
+  _$_ExpansionProfileDesignation(
       {this.include,
       this.exclude,
       @JsonKey(name: '_language') this.languageElement});
@@ -8869,7 +8869,7 @@ class _$_ExpansionProfileDesignation implements _ExpansionProfileDesignation {
 
 abstract class _ExpansionProfileDesignation
     implements ExpansionProfileDesignation {
-  const factory _ExpansionProfileDesignation(
+  factory _ExpansionProfileDesignation(
           {ExpansionProfileInclude include,
           ExpansionProfileExclude exclude,
           @JsonKey(name: '_language') Element languageElement}) =
@@ -8977,7 +8977,7 @@ class __$ExpansionProfileIncludeCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ExpansionProfileInclude implements _ExpansionProfileInclude {
-  const _$_ExpansionProfileInclude({this.designation});
+  _$_ExpansionProfileInclude({this.designation});
 
   factory _$_ExpansionProfileInclude.fromJson(Map<String, dynamic> json) =>
       _$_$_ExpansionProfileIncludeFromJson(json);
@@ -9015,7 +9015,7 @@ class _$_ExpansionProfileInclude implements _ExpansionProfileInclude {
 }
 
 abstract class _ExpansionProfileInclude implements ExpansionProfileInclude {
-  const factory _ExpansionProfileInclude(
+  factory _ExpansionProfileInclude(
           {List<ExpansionProfileDesignation1> designation}) =
       _$_ExpansionProfileInclude;
 
@@ -9135,7 +9135,7 @@ class __$ExpansionProfileDesignation1CopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ExpansionProfileDesignation1 implements _ExpansionProfileDesignation1 {
-  const _$_ExpansionProfileDesignation1({this.language, this.use});
+  _$_ExpansionProfileDesignation1({this.language, this.use});
 
   factory _$_ExpansionProfileDesignation1.fromJson(Map<String, dynamic> json) =>
       _$_$_ExpansionProfileDesignation1FromJson(json);
@@ -9180,7 +9180,7 @@ class _$_ExpansionProfileDesignation1 implements _ExpansionProfileDesignation1 {
 
 abstract class _ExpansionProfileDesignation1
     implements ExpansionProfileDesignation1 {
-  const factory _ExpansionProfileDesignation1({Code language, Coding use}) =
+  factory _ExpansionProfileDesignation1({Code language, Coding use}) =
       _$_ExpansionProfileDesignation1;
 
   factory _ExpansionProfileDesignation1.fromJson(Map<String, dynamic> json) =
@@ -9282,7 +9282,7 @@ class __$ExpansionProfileExcludeCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ExpansionProfileExclude implements _ExpansionProfileExclude {
-  const _$_ExpansionProfileExclude({this.designation});
+  _$_ExpansionProfileExclude({this.designation});
 
   factory _$_ExpansionProfileExclude.fromJson(Map<String, dynamic> json) =>
       _$_$_ExpansionProfileExcludeFromJson(json);
@@ -9320,7 +9320,7 @@ class _$_ExpansionProfileExclude implements _ExpansionProfileExclude {
 }
 
 abstract class _ExpansionProfileExclude implements ExpansionProfileExclude {
-  const factory _ExpansionProfileExclude(
+  factory _ExpansionProfileExclude(
           {List<ExpansionProfileDesignation2> designation}) =
       _$_ExpansionProfileExclude;
 
@@ -9473,7 +9473,7 @@ class __$ExpansionProfileDesignation2CopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ExpansionProfileDesignation2 implements _ExpansionProfileDesignation2 {
-  const _$_ExpansionProfileDesignation2(
+  _$_ExpansionProfileDesignation2(
       {this.language,
       this.use,
       @JsonKey(name: '_language') this.languageElement});
@@ -9528,7 +9528,7 @@ class _$_ExpansionProfileDesignation2 implements _ExpansionProfileDesignation2 {
 
 abstract class _ExpansionProfileDesignation2
     implements ExpansionProfileDesignation2 {
-  const factory _ExpansionProfileDesignation2(
+  factory _ExpansionProfileDesignation2(
           {Code language,
           Coding use,
           @JsonKey(name: '_language') Element languageElement}) =
@@ -10175,7 +10175,7 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_NamingSystem implements _NamingSystem {
-  const _$_NamingSystem(
+  _$_NamingSystem(
       {@required
       @JsonKey(required: true, defaultValue: 'NamingSystem')
           this.resourceType,
@@ -10433,7 +10433,7 @@ class _$_NamingSystem implements _NamingSystem {
 }
 
 abstract class _NamingSystem implements NamingSystem {
-  const factory _NamingSystem(
+  factory _NamingSystem(
       {@required
       @JsonKey(required: true, defaultValue: 'NamingSystem')
           String resourceType,
@@ -10803,7 +10803,7 @@ class __$NamingSystemUniqueIdCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_NamingSystemUniqueId implements _NamingSystemUniqueId {
-  const _$_NamingSystemUniqueId(
+  _$_NamingSystemUniqueId(
       {@JsonKey(unknownEnumValue: UniqueIdType.unknown) this.type,
       this.value,
       this.preferred,
@@ -10901,7 +10901,7 @@ class _$_NamingSystemUniqueId implements _NamingSystemUniqueId {
 }
 
 abstract class _NamingSystemUniqueId implements NamingSystemUniqueId {
-  const factory _NamingSystemUniqueId(
+  factory _NamingSystemUniqueId(
           {@JsonKey(unknownEnumValue: UniqueIdType.unknown) UniqueIdType type,
           String value,
           Boolean preferred,
@@ -11726,7 +11726,7 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ValueSet implements _ValueSet {
-  const _$_ValueSet(
+  _$_ValueSet(
       {@required
       @JsonKey(required: true, defaultValue: 'ValueSet')
           this.resourceType,
@@ -12040,7 +12040,7 @@ class _$_ValueSet implements _ValueSet {
 }
 
 abstract class _ValueSet implements ValueSet {
-  const factory _ValueSet(
+  factory _ValueSet(
       {@required
       @JsonKey(required: true, defaultValue: 'ValueSet')
           String resourceType,
@@ -12381,7 +12381,7 @@ class __$ValueSetComposeCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ValueSetCompose implements _ValueSetCompose {
-  const _$_ValueSetCompose(
+  _$_ValueSetCompose(
       {this.lockedDate,
       this.inactive,
       @JsonKey(required: true) this.include,
@@ -12458,7 +12458,7 @@ class _$_ValueSetCompose implements _ValueSetCompose {
 }
 
 abstract class _ValueSetCompose implements ValueSetCompose {
-  const factory _ValueSetCompose(
+  factory _ValueSetCompose(
           {Date lockedDate,
           Boolean inactive,
           @JsonKey(required: true) List<ValueSetInclude> include,
@@ -12699,7 +12699,7 @@ class __$ValueSetIncludeCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ValueSetInclude implements _ValueSetInclude {
-  const _$_ValueSetInclude(
+  _$_ValueSetInclude(
       {this.system,
       this.version,
       this.concept,
@@ -12788,7 +12788,7 @@ class _$_ValueSetInclude implements _ValueSetInclude {
 }
 
 abstract class _ValueSetInclude implements ValueSetInclude {
-  const factory _ValueSetInclude(
+  factory _ValueSetInclude(
           {String system,
           String version,
           List<ValueSetConcept> concept,
@@ -12984,7 +12984,7 @@ class __$ValueSetConceptCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ValueSetConcept implements _ValueSetConcept {
-  const _$_ValueSetConcept(
+  _$_ValueSetConcept(
       {this.code,
       this.display,
       this.designation,
@@ -13052,7 +13052,7 @@ class _$_ValueSetConcept implements _ValueSetConcept {
 }
 
 abstract class _ValueSetConcept implements ValueSetConcept {
-  const factory _ValueSetConcept(
+  factory _ValueSetConcept(
       {Code code,
       String display,
       List<ValueSetDesignation> designation,
@@ -13248,7 +13248,7 @@ class __$ValueSetDesignationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ValueSetDesignation implements _ValueSetDesignation {
-  const _$_ValueSetDesignation(
+  _$_ValueSetDesignation(
       {this.language,
       this.use,
       this.value,
@@ -13316,7 +13316,7 @@ class _$_ValueSetDesignation implements _ValueSetDesignation {
 }
 
 abstract class _ValueSetDesignation implements ValueSetDesignation {
-  const factory _ValueSetDesignation(
+  factory _ValueSetDesignation(
       {Code language,
       Coding use,
       String value,
@@ -13523,7 +13523,7 @@ class __$ValueSetFilterCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ValueSetFilter implements _ValueSetFilter {
-  const _$_ValueSetFilter(
+  _$_ValueSetFilter(
       {this.property,
       @JsonKey(unknownEnumValue: FilterOp.unknown) this.op,
       this.value,
@@ -13599,7 +13599,7 @@ class _$_ValueSetFilter implements _ValueSetFilter {
 }
 
 abstract class _ValueSetFilter implements ValueSetFilter {
-  const factory _ValueSetFilter(
+  factory _ValueSetFilter(
       {Code property,
       @JsonKey(unknownEnumValue: FilterOp.unknown) FilterOp op,
       Code value,
@@ -13880,7 +13880,7 @@ class __$ValueSetExpansionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ValueSetExpansion implements _ValueSetExpansion {
-  const _$_ValueSetExpansion(
+  _$_ValueSetExpansion(
       {this.identifier,
       this.timestamp,
       this.total,
@@ -13984,7 +13984,7 @@ class _$_ValueSetExpansion implements _ValueSetExpansion {
 }
 
 abstract class _ValueSetExpansion implements ValueSetExpansion {
-  const factory _ValueSetExpansion(
+  factory _ValueSetExpansion(
       {String identifier,
       FhirDateTime timestamp,
       Integer total,
@@ -14367,7 +14367,7 @@ class __$ValueSetParameterCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ValueSetParameter implements _ValueSetParameter {
-  const _$_ValueSetParameter(
+  _$_ValueSetParameter(
       {this.name,
       this.valueString,
       this.valueBoolean,
@@ -14503,7 +14503,7 @@ class _$_ValueSetParameter implements _ValueSetParameter {
 }
 
 abstract class _ValueSetParameter implements ValueSetParameter {
-  const factory _ValueSetParameter(
+  factory _ValueSetParameter(
           {String name,
           String valueString,
           Boolean valueBoolean,
@@ -14879,7 +14879,7 @@ class __$ValueSetContainsCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ValueSetContains implements _ValueSetContains {
-  const _$_ValueSetContains(
+  _$_ValueSetContains(
       {this.system,
       @JsonKey(name: 'abstract') this.abstract_,
       this.inactive,
@@ -15014,7 +15014,7 @@ class _$_ValueSetContains implements _ValueSetContains {
 }
 
 abstract class _ValueSetContains implements ValueSetContains {
-  const factory _ValueSetContains(
+  factory _ValueSetContains(
       {String system,
       @JsonKey(name: 'abstract') Boolean abstract_,
       Boolean inactive,

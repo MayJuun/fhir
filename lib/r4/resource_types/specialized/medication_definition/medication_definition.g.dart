@@ -747,6 +747,9 @@ _$_MedicinalProductAuthorizationProcedure
     datePeriod: json['datePeriod'] == null
         ? null
         : Period.fromJson(json['datePeriod'] as Map<String, dynamic>),
+    dateDateTime: json['dateDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['dateDateTime'] as String),
     dateDateTimeElement: json['_dateDateTime'] == null
         ? null
         : Element.fromJson(json['_dateDateTime'] as Map<String, dynamic>),
@@ -777,6 +780,7 @@ Map<String, dynamic> _$_$_MedicinalProductAuthorizationProcedureToJson(
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('datePeriod', instance.datePeriod?.toJson());
+  writeNotNull('dateDateTime', instance.dateDateTime?.toJson());
   writeNotNull('_dateDateTime', instance.dateDateTimeElement?.toJson());
   writeNotNull(
       'application', instance.application?.map((e) => e?.toJson())?.toList());
@@ -3591,6 +3595,7 @@ _$_SubstanceReferenceInformationTarget
     amountRange: json['amountRange'] == null
         ? null
         : Range.fromJson(json['amountRange'] as Map<String, dynamic>),
+    amountString: json['amountString'] as String,
     amountStringElement: json['_amountString'] == null
         ? null
         : Element.fromJson(json['_amountString'] as Map<String, dynamic>),
@@ -3626,6 +3631,7 @@ Map<String, dynamic> _$_$_SubstanceReferenceInformationTargetToJson(
   writeNotNull('organismType', instance.organismType?.toJson());
   writeNotNull('amountQuantity', instance.amountQuantity?.toJson());
   writeNotNull('amountRange', instance.amountRange?.toJson());
+  writeNotNull('amountString', instance.amountString);
   writeNotNull('_amountString', instance.amountStringElement?.toJson());
   writeNotNull('amountType', instance.amountType?.toJson());
   writeNotNull('source', instance.source?.map((e) => e?.toJson())?.toList());
@@ -4325,6 +4331,7 @@ _$_SubstanceSpecificationMoiety _$_$_SubstanceSpecificationMoietyFromJson(
     amountQuantity: json['amountQuantity'] == null
         ? null
         : Quantity.fromJson(json['amountQuantity'] as Map<String, dynamic>),
+    amountString: json['amountString'] as String,
     amountStringElement: json['_amountString'] == null
         ? null
         : Element.fromJson(json['_amountString'] as Map<String, dynamic>),
@@ -4355,6 +4362,7 @@ Map<String, dynamic> _$_$_SubstanceSpecificationMoietyToJson(
   writeNotNull('molecularFormula', instance.molecularFormula);
   writeNotNull('_molecularFormula', instance.molecularFormulaElement?.toJson());
   writeNotNull('amountQuantity', instance.amountQuantity?.toJson());
+  writeNotNull('amountString', instance.amountString);
   writeNotNull('_amountString', instance.amountStringElement?.toJson());
   return val;
 }
@@ -4395,6 +4403,7 @@ _$_SubstanceSpecificationProperty _$_$_SubstanceSpecificationPropertyFromJson(
     amountQuantity: json['amountQuantity'] == null
         ? null
         : Quantity.fromJson(json['amountQuantity'] as Map<String, dynamic>),
+    amountString: json['amountString'] as String,
     amountStringElement: json['_amountString'] == null
         ? null
         : Element.fromJson(json['_amountString'] as Map<String, dynamic>),
@@ -4425,6 +4434,7 @@ Map<String, dynamic> _$_$_SubstanceSpecificationPropertyToJson(
   writeNotNull('definingSubstanceCodeableConcept',
       instance.definingSubstanceCodeableConcept?.toJson());
   writeNotNull('amountQuantity', instance.amountQuantity?.toJson());
+  writeNotNull('amountString', instance.amountString);
   writeNotNull('_amountString', instance.amountStringElement?.toJson());
   return val;
 }
@@ -4923,6 +4933,7 @@ _$_SubstanceSpecificationRelationship
     amountRatio: json['amountRatio'] == null
         ? null
         : Ratio.fromJson(json['amountRatio'] as Map<String, dynamic>),
+    amountString: json['amountString'] as String,
     amountStringElement: json['_amountString'] == null
         ? null
         : Element.fromJson(json['_amountString'] as Map<String, dynamic>),
@@ -4963,6 +4974,7 @@ Map<String, dynamic> _$_$_SubstanceSpecificationRelationshipToJson(
   writeNotNull('amountQuantity', instance.amountQuantity?.toJson());
   writeNotNull('amountRange', instance.amountRange?.toJson());
   writeNotNull('amountRatio', instance.amountRatio?.toJson());
+  writeNotNull('amountString', instance.amountString);
   writeNotNull('_amountString', instance.amountStringElement?.toJson());
   writeNotNull('amountRatioLowLimit', instance.amountRatioLowLimit?.toJson());
   writeNotNull('amountType', instance.amountType?.toJson());

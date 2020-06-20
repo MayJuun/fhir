@@ -2657,7 +2657,9 @@ class _$AuditEventDetailTearOff {
       List<FhirExtension> modifierExtension,
       String type,
       @JsonKey(name: '_type') Element typeElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Base64Binary valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement}) {
     return _AuditEventDetail(
       id: id,
@@ -2665,7 +2667,9 @@ class _$AuditEventDetailTearOff {
       modifierExtension: modifierExtension,
       type: type,
       typeElement: typeElement,
+      valueString: valueString,
       valueStringElement: valueStringElement,
+      valueBase64Binary: valueBase64Binary,
       valueBase64BinaryElement: valueBase64BinaryElement,
     );
   }
@@ -2682,8 +2686,10 @@ mixin _$AuditEventDetail {
   String get type;
   @JsonKey(name: '_type')
   Element get typeElement;
+  String get valueString;
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
+  Base64Binary get valueBase64Binary;
   @JsonKey(name: '_valueBase64Binary')
   Element get valueBase64BinaryElement;
 
@@ -2701,7 +2707,9 @@ abstract class $AuditEventDetailCopyWith<$Res> {
       List<FhirExtension> modifierExtension,
       String type,
       @JsonKey(name: '_type') Element typeElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Base64Binary valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement});
 
   $ElementCopyWith<$Res> get typeElement;
@@ -2724,7 +2732,9 @@ class _$AuditEventDetailCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object type = freezed,
     Object typeElement = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueBase64Binary = freezed,
     Object valueBase64BinaryElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -2738,9 +2748,14 @@ class _$AuditEventDetailCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as String,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueBase64Binary: valueBase64Binary == freezed
+          ? _value.valueBase64Binary
+          : valueBase64Binary as Base64Binary,
       valueBase64BinaryElement: valueBase64BinaryElement == freezed
           ? _value.valueBase64BinaryElement
           : valueBase64BinaryElement as Element,
@@ -2790,7 +2805,9 @@ abstract class _$AuditEventDetailCopyWith<$Res>
       List<FhirExtension> modifierExtension,
       String type,
       @JsonKey(name: '_type') Element typeElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Base64Binary valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement});
 
   @override
@@ -2818,7 +2835,9 @@ class __$AuditEventDetailCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object type = freezed,
     Object typeElement = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueBase64Binary = freezed,
     Object valueBase64BinaryElement = freezed,
   }) {
     return _then(_AuditEventDetail(
@@ -2832,9 +2851,14 @@ class __$AuditEventDetailCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as String,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueBase64Binary: valueBase64Binary == freezed
+          ? _value.valueBase64Binary
+          : valueBase64Binary as Base64Binary,
       valueBase64BinaryElement: valueBase64BinaryElement == freezed
           ? _value.valueBase64BinaryElement
           : valueBase64BinaryElement as Element,
@@ -2850,7 +2874,9 @@ class _$_AuditEventDetail extends _AuditEventDetail {
       this.modifierExtension,
       this.type,
       @JsonKey(name: '_type') this.typeElement,
+      this.valueString,
       @JsonKey(name: '_valueString') this.valueStringElement,
+      this.valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') this.valueBase64BinaryElement})
       : super._();
 
@@ -2870,15 +2896,19 @@ class _$_AuditEventDetail extends _AuditEventDetail {
   @JsonKey(name: '_type')
   final Element typeElement;
   @override
+  final String valueString;
+  @override
   @JsonKey(name: '_valueString')
   final Element valueStringElement;
+  @override
+  final Base64Binary valueBase64Binary;
   @override
   @JsonKey(name: '_valueBase64Binary')
   final Element valueBase64BinaryElement;
 
   @override
   String toString() {
-    return 'AuditEventDetail(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, typeElement: $typeElement, valueStringElement: $valueStringElement, valueBase64BinaryElement: $valueBase64BinaryElement)';
+    return 'AuditEventDetail(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, typeElement: $typeElement, valueString: $valueString, valueStringElement: $valueStringElement, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement)';
   }
 
   @override
@@ -2898,9 +2928,15 @@ class _$_AuditEventDetail extends _AuditEventDetail {
             (identical(other.typeElement, typeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.typeElement, typeElement)) &&
+            (identical(other.valueString, valueString) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueString, valueString)) &&
             (identical(other.valueStringElement, valueStringElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueStringElement, valueStringElement)) &&
+            (identical(other.valueBase64Binary, valueBase64Binary) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBase64Binary, valueBase64Binary)) &&
             (identical(
                     other.valueBase64BinaryElement, valueBase64BinaryElement) ||
                 const DeepCollectionEquality().equals(
@@ -2915,7 +2951,9 @@ class _$_AuditEventDetail extends _AuditEventDetail {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(typeElement) ^
+      const DeepCollectionEquality().hash(valueString) ^
       const DeepCollectionEquality().hash(valueStringElement) ^
+      const DeepCollectionEquality().hash(valueBase64Binary) ^
       const DeepCollectionEquality().hash(valueBase64BinaryElement);
 
   @override
@@ -2938,8 +2976,10 @@ abstract class _AuditEventDetail extends AuditEventDetail {
       String type,
       @JsonKey(name: '_type')
           Element typeElement,
+      String valueString,
       @JsonKey(name: '_valueString')
           Element valueStringElement,
+      Base64Binary valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary')
           Element valueBase64BinaryElement}) = _$_AuditEventDetail;
 
@@ -2959,8 +2999,12 @@ abstract class _AuditEventDetail extends AuditEventDetail {
   @JsonKey(name: '_type')
   Element get typeElement;
   @override
+  String get valueString;
+  @override
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
+  @override
+  Base64Binary get valueBase64Binary;
   @override
   @JsonKey(name: '_valueBase64Binary')
   Element get valueBase64BinaryElement;
@@ -5577,6 +5621,7 @@ class _$ProvenanceTearOff {
       List<FhirExtension> modifierExtension,
       @required List<Reference> target,
       Period occurredPeriod,
+      FhirDateTime occurredDateTime,
       @JsonKey(name: '_occurredDateTime') Element occurredDateTimeElement,
       Instant recorded,
       @JsonKey(name: '_recorded') Element recordedElement,
@@ -5602,6 +5647,7 @@ class _$ProvenanceTearOff {
       modifierExtension: modifierExtension,
       target: target,
       occurredPeriod: occurredPeriod,
+      occurredDateTime: occurredDateTime,
       occurredDateTimeElement: occurredDateTimeElement,
       recorded: recorded,
       recordedElement: recordedElement,
@@ -5638,6 +5684,7 @@ mixin _$Provenance {
   List<FhirExtension> get modifierExtension;
   List<Reference> get target;
   Period get occurredPeriod;
+  FhirDateTime get occurredDateTime;
   @JsonKey(name: '_occurredDateTime')
   Element get occurredDateTimeElement;
   Instant get recorded;
@@ -5675,6 +5722,7 @@ abstract class $ProvenanceCopyWith<$Res> {
       List<FhirExtension> modifierExtension,
       List<Reference> target,
       Period occurredPeriod,
+      FhirDateTime occurredDateTime,
       @JsonKey(name: '_occurredDateTime') Element occurredDateTimeElement,
       Instant recorded,
       @JsonKey(name: '_recorded') Element recordedElement,
@@ -5721,6 +5769,7 @@ class _$ProvenanceCopyWithImpl<$Res> implements $ProvenanceCopyWith<$Res> {
     Object modifierExtension = freezed,
     Object target = freezed,
     Object occurredPeriod = freezed,
+    Object occurredDateTime = freezed,
     Object occurredDateTimeElement = freezed,
     Object recorded = freezed,
     Object recordedElement = freezed,
@@ -5762,6 +5811,9 @@ class _$ProvenanceCopyWithImpl<$Res> implements $ProvenanceCopyWith<$Res> {
       occurredPeriod: occurredPeriod == freezed
           ? _value.occurredPeriod
           : occurredPeriod as Period,
+      occurredDateTime: occurredDateTime == freezed
+          ? _value.occurredDateTime
+          : occurredDateTime as FhirDateTime,
       occurredDateTimeElement: occurredDateTimeElement == freezed
           ? _value.occurredDateTimeElement
           : occurredDateTimeElement as Element,
@@ -5907,6 +5959,7 @@ abstract class _$ProvenanceCopyWith<$Res> implements $ProvenanceCopyWith<$Res> {
       List<FhirExtension> modifierExtension,
       List<Reference> target,
       Period occurredPeriod,
+      FhirDateTime occurredDateTime,
       @JsonKey(name: '_occurredDateTime') Element occurredDateTimeElement,
       Instant recorded,
       @JsonKey(name: '_recorded') Element recordedElement,
@@ -5965,6 +6018,7 @@ class __$ProvenanceCopyWithImpl<$Res> extends _$ProvenanceCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object target = freezed,
     Object occurredPeriod = freezed,
+    Object occurredDateTime = freezed,
     Object occurredDateTimeElement = freezed,
     Object recorded = freezed,
     Object recordedElement = freezed,
@@ -6006,6 +6060,9 @@ class __$ProvenanceCopyWithImpl<$Res> extends _$ProvenanceCopyWithImpl<$Res>
       occurredPeriod: occurredPeriod == freezed
           ? _value.occurredPeriod
           : occurredPeriod as Period,
+      occurredDateTime: occurredDateTime == freezed
+          ? _value.occurredDateTime
+          : occurredDateTime as FhirDateTime,
       occurredDateTimeElement: occurredDateTimeElement == freezed
           ? _value.occurredDateTimeElement
           : occurredDateTimeElement as Element,
@@ -6048,6 +6105,7 @@ class _$_Provenance extends _Provenance {
       this.modifierExtension,
       @required this.target,
       this.occurredPeriod,
+      this.occurredDateTime,
       @JsonKey(name: '_occurredDateTime') this.occurredDateTimeElement,
       this.recorded,
       @JsonKey(name: '_recorded') this.recordedElement,
@@ -6098,6 +6156,8 @@ class _$_Provenance extends _Provenance {
   @override
   final Period occurredPeriod;
   @override
+  final FhirDateTime occurredDateTime;
+  @override
   @JsonKey(name: '_occurredDateTime')
   final Element occurredDateTimeElement;
   @override
@@ -6125,7 +6185,7 @@ class _$_Provenance extends _Provenance {
 
   @override
   String toString() {
-    return 'Provenance(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, target: $target, occurredPeriod: $occurredPeriod, occurredDateTimeElement: $occurredDateTimeElement, recorded: $recorded, recordedElement: $recordedElement, policy: $policy, policyElement: $policyElement, location: $location, reason: $reason, activity: $activity, agent: $agent, entity: $entity, signature: $signature)';
+    return 'Provenance(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, target: $target, occurredPeriod: $occurredPeriod, occurredDateTime: $occurredDateTime, occurredDateTimeElement: $occurredDateTimeElement, recorded: $recorded, recordedElement: $recordedElement, policy: $policy, policyElement: $policyElement, location: $location, reason: $reason, activity: $activity, agent: $agent, entity: $entity, signature: $signature)';
   }
 
   @override
@@ -6167,6 +6227,9 @@ class _$_Provenance extends _Provenance {
             (identical(other.occurredPeriod, occurredPeriod) ||
                 const DeepCollectionEquality()
                     .equals(other.occurredPeriod, occurredPeriod)) &&
+            (identical(other.occurredDateTime, occurredDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.occurredDateTime, occurredDateTime)) &&
             (identical(other.occurredDateTimeElement, occurredDateTimeElement) ||
                 const DeepCollectionEquality().equals(
                     other.occurredDateTimeElement, occurredDateTimeElement)) &&
@@ -6193,8 +6256,7 @@ class _$_Provenance extends _Provenance {
                 const DeepCollectionEquality().equals(other.agent, agent)) &&
             (identical(other.entity, entity) ||
                 const DeepCollectionEquality().equals(other.entity, entity)) &&
-            (identical(other.signature, signature) ||
-                const DeepCollectionEquality().equals(other.signature, signature)));
+            (identical(other.signature, signature) || const DeepCollectionEquality().equals(other.signature, signature)));
   }
 
   @override
@@ -6213,6 +6275,7 @@ class _$_Provenance extends _Provenance {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(target) ^
       const DeepCollectionEquality().hash(occurredPeriod) ^
+      const DeepCollectionEquality().hash(occurredDateTime) ^
       const DeepCollectionEquality().hash(occurredDateTimeElement) ^
       const DeepCollectionEquality().hash(recorded) ^
       const DeepCollectionEquality().hash(recordedElement) ^
@@ -6251,6 +6314,7 @@ abstract class _Provenance extends Provenance {
       List<FhirExtension> modifierExtension,
       @required List<Reference> target,
       Period occurredPeriod,
+      FhirDateTime occurredDateTime,
       @JsonKey(name: '_occurredDateTime') Element occurredDateTimeElement,
       Instant recorded,
       @JsonKey(name: '_recorded') Element recordedElement,
@@ -6296,6 +6360,8 @@ abstract class _Provenance extends Provenance {
   List<Reference> get target;
   @override
   Period get occurredPeriod;
+  @override
+  FhirDateTime get occurredDateTime;
   @override
   @JsonKey(name: '_occurredDateTime')
   Element get occurredDateTimeElement;

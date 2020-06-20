@@ -9,7 +9,7 @@ part 'payment.g.dart';
 
 @freezed
 abstract class PaymentNotice with _$PaymentNotice implements Resource {
-  const factory PaymentNotice({
+  factory PaymentNotice({
     @JsonKey(defaultValue: 'PaymentNotice') String resourceType,
     Id id,
     Meta meta,
@@ -42,7 +42,7 @@ abstract class PaymentNotice with _$PaymentNotice implements Resource {
 abstract class PaymentReconciliation
     with _$PaymentReconciliation
     implements Resource {
-  const factory PaymentReconciliation({
+  factory PaymentReconciliation({
     @JsonKey(defaultValue: 'PaymentReconciliation') String resourceType,
     Id id,
     Meta meta,
@@ -81,7 +81,7 @@ abstract class PaymentReconciliation
 
 @freezed
 abstract class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
-  const factory PaymentReconciliationDetail({
+  factory PaymentReconciliationDetail({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -101,7 +101,7 @@ abstract class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
 
 @freezed
 abstract class PaymentReconciliationNote with _$PaymentReconciliationNote {
-  const factory PaymentReconciliationNote({
+  factory PaymentReconciliationNote({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,

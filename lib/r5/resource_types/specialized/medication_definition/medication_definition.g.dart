@@ -152,12 +152,19 @@ _$_AdministrableProductDefinitionCharacteristic
     valueQuantity: json['valueQuantity'] == null
         ? null
         : Quantity.fromJson(json['valueQuantity'] as Map<String, dynamic>),
+    valueString: json['valueString'] as String,
     valueStringElement: json['_valueString'] == null
         ? null
         : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
+    valueDate: json['valueDate'] == null
+        ? null
+        : Date.fromJson(json['valueDate'] as String),
     valueDateElement: json['_valueDate'] == null
         ? null
         : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
+    valueBoolean: json['valueBoolean'] == null
+        ? null
+        : Boolean.fromJson(json['valueBoolean']),
     valueBooleanElement: json['_valueBoolean'] == null
         ? null
         : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
@@ -188,8 +195,11 @@ Map<String, dynamic> _$_$_AdministrableProductDefinitionCharacteristicToJson(
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('valueCoding', instance.valueCoding?.toJson());
   writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
+  writeNotNull('valueString', instance.valueString);
   writeNotNull('_valueString', instance.valueStringElement?.toJson());
+  writeNotNull('valueDate', instance.valueDate?.toJson());
   writeNotNull('_valueDate', instance.valueDateElement?.toJson());
+  writeNotNull('valueBoolean', instance.valueBoolean?.toJson());
   writeNotNull('_valueBoolean', instance.valueBooleanElement?.toJson());
   writeNotNull('valueAttachment', instance.valueAttachment?.toJson());
   writeNotNull('status', instance.status?.toJson());
@@ -1354,12 +1364,19 @@ _$_ManufacturedItemDefinitionCharacteristic
     valueQuantity: json['valueQuantity'] == null
         ? null
         : Quantity.fromJson(json['valueQuantity'] as Map<String, dynamic>),
+    valueString: json['valueString'] as String,
     valueStringElement: json['_valueString'] == null
         ? null
         : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
+    valueDate: json['valueDate'] == null
+        ? null
+        : Date.fromJson(json['valueDate'] as String),
     valueDateElement: json['_valueDate'] == null
         ? null
         : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
+    valueBoolean: json['valueBoolean'] == null
+        ? null
+        : Boolean.fromJson(json['valueBoolean']),
     valueBooleanElement: json['_valueBoolean'] == null
         ? null
         : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
@@ -1387,8 +1404,11 @@ Map<String, dynamic> _$_$_ManufacturedItemDefinitionCharacteristicToJson(
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('valueCoding', instance.valueCoding?.toJson());
   writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
+  writeNotNull('valueString', instance.valueString);
   writeNotNull('_valueString', instance.valueStringElement?.toJson());
+  writeNotNull('valueDate', instance.valueDate?.toJson());
   writeNotNull('_valueDate', instance.valueDateElement?.toJson());
+  writeNotNull('valueBoolean', instance.valueBoolean?.toJson());
   writeNotNull('_valueBoolean', instance.valueBooleanElement?.toJson());
   writeNotNull('valueAttachment', instance.valueAttachment?.toJson());
   return val;
@@ -2229,12 +2249,19 @@ _$_PackagedProductDefinitionCharacteristic
     valueQuantity: json['valueQuantity'] == null
         ? null
         : Quantity.fromJson(json['valueQuantity'] as Map<String, dynamic>),
+    valueString: json['valueString'] as String,
     valueStringElement: json['_valueString'] == null
         ? null
         : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
+    valueDate: json['valueDate'] == null
+        ? null
+        : Date.fromJson(json['valueDate'] as String),
     valueDateElement: json['_valueDate'] == null
         ? null
         : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
+    valueBoolean: json['valueBoolean'] == null
+        ? null
+        : Boolean.fromJson(json['valueBoolean']),
     valueBooleanElement: json['_valueBoolean'] == null
         ? null
         : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
@@ -2262,8 +2289,11 @@ Map<String, dynamic> _$_$_PackagedProductDefinitionCharacteristicToJson(
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('valueCoding', instance.valueCoding?.toJson());
   writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
+  writeNotNull('valueString', instance.valueString);
   writeNotNull('_valueString', instance.valueStringElement?.toJson());
+  writeNotNull('valueDate', instance.valueDate?.toJson());
   writeNotNull('_valueDate', instance.valueDateElement?.toJson());
+  writeNotNull('valueBoolean', instance.valueBoolean?.toJson());
   writeNotNull('_valueBoolean', instance.valueBooleanElement?.toJson());
   writeNotNull('valueAttachment', instance.valueAttachment?.toJson());
   return val;
@@ -2291,6 +2321,9 @@ _$_PackagedProductDefinitionContainedItem
     amountQuantity: json['amountQuantity'] == null
         ? null
         : Quantity.fromJson(json['amountQuantity'] as Map<String, dynamic>),
+    amountInteger: json['amountInteger'] == null
+        ? null
+        : Integer.fromJson(json['amountInteger']),
     amountIntegerElement: json['_amountInteger'] == null
         ? null
         : Element.fromJson(json['_amountInteger'] as Map<String, dynamic>),
@@ -2314,6 +2347,7 @@ Map<String, dynamic> _$_$_PackagedProductDefinitionContainedItemToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('item', instance.item?.map((e) => e?.toJson())?.toList());
   writeNotNull('amountQuantity', instance.amountQuantity?.toJson());
+  writeNotNull('amountInteger', instance.amountInteger?.toJson());
   writeNotNull('_amountInteger', instance.amountIntegerElement?.toJson());
   return val;
 }
@@ -2479,6 +2513,9 @@ _$_RegulatedAuthorizationRelatedDate
     datePeriod: json['datePeriod'] == null
         ? null
         : Period.fromJson(json['datePeriod'] as Map<String, dynamic>),
+    dateDateTime: json['dateDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['dateDateTime'] as String),
     dateDateTimeElement: json['_dateDateTime'] == null
         ? null
         : Element.fromJson(json['_dateDateTime'] as Map<String, dynamic>),
@@ -2504,6 +2541,7 @@ Map<String, dynamic> _$_$_RegulatedAuthorizationRelatedDateToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('datePeriod', instance.datePeriod?.toJson());
+  writeNotNull('dateDateTime', instance.dateDateTime?.toJson());
   writeNotNull('_dateDateTime', instance.dateDateTimeElement?.toJson());
   writeNotNull('type', instance.type?.toJson());
   return val;
@@ -2535,6 +2573,9 @@ _$_RegulatedAuthorizationCase _$_$_RegulatedAuthorizationCaseFromJson(
     datePeriod: json['datePeriod'] == null
         ? null
         : Period.fromJson(json['datePeriod'] as Map<String, dynamic>),
+    dateDateTime: json['dateDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['dateDateTime'] as String),
     dateDateTimeElement: json['_dateDateTime'] == null
         ? null
         : Element.fromJson(json['_dateDateTime'] as Map<String, dynamic>),
@@ -2565,6 +2606,7 @@ Map<String, dynamic> _$_$_RegulatedAuthorizationCaseToJson(
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('datePeriod', instance.datePeriod?.toJson());
+  writeNotNull('dateDateTime', instance.dateDateTime?.toJson());
   writeNotNull('_dateDateTime', instance.dateDateTimeElement?.toJson());
   writeNotNull(
       'application', instance.application?.map((e) => e?.toJson())?.toList());
@@ -2796,6 +2838,7 @@ _$_SubstanceDefinitionMoiety _$_$_SubstanceDefinitionMoietyFromJson(
     amountQuantity: json['amountQuantity'] == null
         ? null
         : Quantity.fromJson(json['amountQuantity'] as Map<String, dynamic>),
+    amountString: json['amountString'] as String,
     amountStringElement: json['_amountString'] == null
         ? null
         : Element.fromJson(json['_amountString'] as Map<String, dynamic>),
@@ -2829,6 +2872,7 @@ Map<String, dynamic> _$_$_SubstanceDefinitionMoietyToJson(
   writeNotNull('molecularFormula', instance.molecularFormula);
   writeNotNull('_molecularFormula', instance.molecularFormulaElement?.toJson());
   writeNotNull('amountQuantity', instance.amountQuantity?.toJson());
+  writeNotNull('amountString', instance.amountString);
   writeNotNull('_amountString', instance.amountStringElement?.toJson());
   writeNotNull('amountType', instance.amountType?.toJson());
   return val;
@@ -2870,6 +2914,7 @@ _$_SubstanceDefinitionProperty _$_$_SubstanceDefinitionPropertyFromJson(
     amountQuantity: json['amountQuantity'] == null
         ? null
         : Quantity.fromJson(json['amountQuantity'] as Map<String, dynamic>),
+    amountString: json['amountString'] as String,
     amountStringElement: json['_amountString'] == null
         ? null
         : Element.fromJson(json['_amountString'] as Map<String, dynamic>),
@@ -2907,6 +2952,7 @@ Map<String, dynamic> _$_$_SubstanceDefinitionPropertyToJson(
   writeNotNull('definingSubstanceCodeableConcept',
       instance.definingSubstanceCodeableConcept?.toJson());
   writeNotNull('amountQuantity', instance.amountQuantity?.toJson());
+  writeNotNull('amountString', instance.amountString);
   writeNotNull('_amountString', instance.amountStringElement?.toJson());
   writeNotNull('referenceRange', instance.referenceRange?.toJson());
   writeNotNull('source', instance.source?.map((e) => e?.toJson())?.toList());
@@ -3411,6 +3457,7 @@ _$_SubstanceDefinitionRelationship _$_$_SubstanceDefinitionRelationshipFromJson(
     amountRatio: json['amountRatio'] == null
         ? null
         : Ratio.fromJson(json['amountRatio'] as Map<String, dynamic>),
+    amountString: json['amountString'] as String,
     amountStringElement: json['_amountString'] == null
         ? null
         : Element.fromJson(json['_amountString'] as Map<String, dynamic>),
@@ -3452,6 +3499,7 @@ Map<String, dynamic> _$_$_SubstanceDefinitionRelationshipToJson(
   writeNotNull('amountQuantity', instance.amountQuantity?.toJson());
   writeNotNull('amountRange', instance.amountRange?.toJson());
   writeNotNull('amountRatio', instance.amountRatio?.toJson());
+  writeNotNull('amountString', instance.amountString);
   writeNotNull('_amountString', instance.amountStringElement?.toJson());
   writeNotNull('amountRatioHighLimit', instance.amountRatioHighLimit?.toJson());
   writeNotNull('amountType', instance.amountType?.toJson());
@@ -4641,6 +4689,7 @@ _$_SubstanceReferenceInformationTarget
     amountRange: json['amountRange'] == null
         ? null
         : Range.fromJson(json['amountRange'] as Map<String, dynamic>),
+    amountString: json['amountString'] as String,
     amountStringElement: json['_amountString'] == null
         ? null
         : Element.fromJson(json['_amountString'] as Map<String, dynamic>),
@@ -4676,6 +4725,7 @@ Map<String, dynamic> _$_$_SubstanceReferenceInformationTargetToJson(
   writeNotNull('organismType', instance.organismType?.toJson());
   writeNotNull('amountQuantity', instance.amountQuantity?.toJson());
   writeNotNull('amountRange', instance.amountRange?.toJson());
+  writeNotNull('amountString', instance.amountString);
   writeNotNull('_amountString', instance.amountStringElement?.toJson());
   writeNotNull('amountType', instance.amountType?.toJson());
   writeNotNull('source', instance.source?.map((e) => e?.toJson())?.toList());

@@ -11,7 +11,7 @@ part 'content.g.dart';
 abstract class StructureDefinition
     with _$StructureDefinition
     implements Resource {
-  const factory StructureDefinition({
+  factory StructureDefinition({
     @JsonKey(defaultValue: 'StructureDefinition') String resourceType,
     Id id,
     Meta meta,
@@ -75,7 +75,7 @@ abstract class StructureDefinition
 
 @freezed
 abstract class DataElement with _$DataElement implements Resource {
-  const factory DataElement({
+  factory DataElement({
     @JsonKey(defaultValue: 'DataElement') String resourceType,
     Id id,
     Meta meta,
@@ -110,7 +110,7 @@ abstract class DataElement with _$DataElement implements Resource {
 
 @freezed
 abstract class StructureDefinitionContact with _$StructureDefinitionContact {
-  const factory StructureDefinitionContact({
+  factory StructureDefinitionContact({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -124,7 +124,7 @@ abstract class StructureDefinitionContact with _$StructureDefinitionContact {
 
 @freezed
 abstract class StructureDefinitionMapping with _$StructureDefinitionMapping {
-  const factory StructureDefinitionMapping({
+  factory StructureDefinitionMapping({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -145,7 +145,7 @@ abstract class StructureDefinitionMapping with _$StructureDefinitionMapping {
 
 @freezed
 abstract class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
-  const factory StructureDefinitionSnapshot({
+  factory StructureDefinitionSnapshot({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -159,7 +159,7 @@ abstract class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
 @freezed
 abstract class StructureDefinitionDifferential
     with _$StructureDefinitionDifferential {
-  const factory StructureDefinitionDifferential({
+  factory StructureDefinitionDifferential({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -172,7 +172,7 @@ abstract class StructureDefinitionDifferential
 
 @freezed
 abstract class DataElementContact with _$DataElementContact {
-  const factory DataElementContact({
+  factory DataElementContact({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -186,7 +186,7 @@ abstract class DataElementContact with _$DataElementContact {
 
 @freezed
 abstract class DataElementMapping with _$DataElementMapping {
-  const factory DataElementMapping({
+  factory DataElementMapping({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,

@@ -599,7 +599,7 @@ class __$ConformanceCopyWithImpl<$Res> extends _$ConformanceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Conformance implements _Conformance {
-  const _$_Conformance(
+  _$_Conformance(
       {@JsonKey(defaultValue: 'Conformance')
           this.resourceType,
       this.id,
@@ -871,7 +871,7 @@ class _$_Conformance implements _Conformance {
 }
 
 abstract class _Conformance implements Conformance {
-  const factory _Conformance(
+  factory _Conformance(
       {@JsonKey(defaultValue: 'Conformance')
           String resourceType,
       Id id,
@@ -1466,7 +1466,7 @@ class __$OperationDefinitionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_OperationDefinition implements _OperationDefinition {
-  const _$_OperationDefinition(
+  _$_OperationDefinition(
       {@JsonKey(defaultValue: 'OperationDefinition')
           this.resourceType,
       this.id,
@@ -1710,7 +1710,7 @@ class _$_OperationDefinition implements _OperationDefinition {
 }
 
 abstract class _OperationDefinition implements OperationDefinition {
-  const factory _OperationDefinition(
+  factory _OperationDefinition(
       {@JsonKey(defaultValue: 'OperationDefinition')
           String resourceType,
       Id id,
@@ -2260,7 +2260,7 @@ class __$SearchParameterCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_SearchParameter implements _SearchParameter {
-  const _$_SearchParameter(
+  _$_SearchParameter(
       {@JsonKey(defaultValue: 'SearchParameter')
           this.resourceType,
       this.id,
@@ -2481,7 +2481,7 @@ class _$_SearchParameter implements _SearchParameter {
 }
 
 abstract class _SearchParameter implements SearchParameter {
-  const factory _SearchParameter(
+  factory _SearchParameter(
       {@JsonKey(defaultValue: 'SearchParameter')
           String resourceType,
       Id id,
@@ -2732,7 +2732,7 @@ class __$ConformanceContactCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConformanceContact implements _ConformanceContact {
-  const _$_ConformanceContact(
+  _$_ConformanceContact(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -2797,7 +2797,7 @@ class _$_ConformanceContact implements _ConformanceContact {
 }
 
 abstract class _ConformanceContact implements ConformanceContact {
-  const factory _ConformanceContact(
+  factory _ConformanceContact(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -2979,7 +2979,7 @@ class __$ConformanceSoftwareCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConformanceSoftware implements _ConformanceSoftware {
-  const _$_ConformanceSoftware(
+  _$_ConformanceSoftware(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3055,7 +3055,7 @@ class _$_ConformanceSoftware implements _ConformanceSoftware {
 }
 
 abstract class _ConformanceSoftware implements ConformanceSoftware {
-  const factory _ConformanceSoftware(
+  factory _ConformanceSoftware(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -3232,7 +3232,7 @@ class __$ConformanceImplementationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConformanceImplementation implements _ConformanceImplementation {
-  const _$_ConformanceImplementation(
+  _$_ConformanceImplementation(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3302,7 +3302,7 @@ class _$_ConformanceImplementation implements _ConformanceImplementation {
 }
 
 abstract class _ConformanceImplementation implements ConformanceImplementation {
-  const factory _ConformanceImplementation(
+  factory _ConformanceImplementation(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -3641,7 +3641,7 @@ class __$ConformanceRestCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConformanceRest implements _ConformanceRest {
-  const _$_ConformanceRest(
+  _$_ConformanceRest(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -3785,7 +3785,7 @@ class _$_ConformanceRest implements _ConformanceRest {
 }
 
 abstract class _ConformanceRest implements ConformanceRest {
-  const factory _ConformanceRest(
+  factory _ConformanceRest(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -4038,7 +4038,7 @@ class __$ConformanceMessagingCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConformanceMessaging implements _ConformanceMessaging {
-  const _$_ConformanceMessaging(
+  _$_ConformanceMessaging(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -4129,7 +4129,7 @@ class _$_ConformanceMessaging implements _ConformanceMessaging {
 }
 
 abstract class _ConformanceMessaging implements ConformanceMessaging {
-  const factory _ConformanceMessaging(
+  factory _ConformanceMessaging(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -4365,7 +4365,7 @@ class __$ConformanceDocumentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConformanceDocument implements _ConformanceDocument {
-  const _$_ConformanceDocument(
+  _$_ConformanceDocument(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -4456,7 +4456,7 @@ class _$_ConformanceDocument implements _ConformanceDocument {
 }
 
 abstract class _ConformanceDocument implements ConformanceDocument {
-  const factory _ConformanceDocument(
+  factory _ConformanceDocument(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -4644,7 +4644,7 @@ class __$OperationDefinitionContactCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_OperationDefinitionContact implements _OperationDefinitionContact {
-  const _$_OperationDefinitionContact(
+  _$_OperationDefinitionContact(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -4711,7 +4711,7 @@ class _$_OperationDefinitionContact implements _OperationDefinitionContact {
 
 abstract class _OperationDefinitionContact
     implements OperationDefinitionContact {
-  const factory _OperationDefinitionContact(
+  factory _OperationDefinitionContact(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -5027,7 +5027,7 @@ class __$OperationDefinitionParameterCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_OperationDefinitionParameter implements _OperationDefinitionParameter {
-  const _$_OperationDefinitionParameter(
+  _$_OperationDefinitionParameter(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -5165,7 +5165,7 @@ class _$_OperationDefinitionParameter implements _OperationDefinitionParameter {
 
 abstract class _OperationDefinitionParameter
     implements OperationDefinitionParameter {
-  const factory _OperationDefinitionParameter(
+  factory _OperationDefinitionParameter(
           {Id id,
           @JsonKey(name: 'extension')
               List<FhirExtension> extension_,
@@ -5377,7 +5377,7 @@ class __$SearchParameterContactCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_SearchParameterContact implements _SearchParameterContact {
-  const _$_SearchParameterContact(
+  _$_SearchParameterContact(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -5443,7 +5443,7 @@ class _$_SearchParameterContact implements _SearchParameterContact {
 }
 
 abstract class _SearchParameterContact implements SearchParameterContact {
-  const factory _SearchParameterContact(
+  factory _SearchParameterContact(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -5664,7 +5664,7 @@ class __$ConformanceSecurityCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConformanceSecurity implements _ConformanceSecurity {
-  const _$_ConformanceSecurity(
+  _$_ConformanceSecurity(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -5753,7 +5753,7 @@ class _$_ConformanceSecurity implements _ConformanceSecurity {
 }
 
 abstract class _ConformanceSecurity implements ConformanceSecurity {
-  const factory _ConformanceSecurity(
+  factory _ConformanceSecurity(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -6228,7 +6228,7 @@ class __$ConformanceResourceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConformanceResource implements _ConformanceResource {
-  const _$_ConformanceResource(
+  _$_ConformanceResource(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -6426,7 +6426,7 @@ class _$_ConformanceResource implements _ConformanceResource {
 }
 
 abstract class _ConformanceResource implements ConformanceResource {
-  const factory _ConformanceResource(
+  factory _ConformanceResource(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -6680,7 +6680,7 @@ class __$ConformanceResourceInteractionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ConformanceResourceInteraction
     implements _ConformanceResourceInteraction {
-  const _$_ConformanceResourceInteraction(
+  _$_ConformanceResourceInteraction(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -6754,7 +6754,7 @@ class _$_ConformanceResourceInteraction
 
 abstract class _ConformanceResourceInteraction
     implements ConformanceResourceInteraction {
-  const factory _ConformanceResourceInteraction(
+  factory _ConformanceResourceInteraction(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -6958,7 +6958,7 @@ class __$ConformanceOperationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConformanceOperation implements _ConformanceOperation {
-  const _$_ConformanceOperation(
+  _$_ConformanceOperation(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -7037,7 +7037,7 @@ class _$_ConformanceOperation implements _ConformanceOperation {
 }
 
 abstract class _ConformanceOperation implements ConformanceOperation {
-  const factory _ConformanceOperation(
+  factory _ConformanceOperation(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -7254,7 +7254,7 @@ class __$ConformanceEndpointCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConformanceEndpoint implements _ConformanceEndpoint {
-  const _$_ConformanceEndpoint(
+  _$_ConformanceEndpoint(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -7334,7 +7334,7 @@ class _$_ConformanceEndpoint implements _ConformanceEndpoint {
 }
 
 abstract class _ConformanceEndpoint implements ConformanceEndpoint {
-  const factory _ConformanceEndpoint(
+  factory _ConformanceEndpoint(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -7659,7 +7659,7 @@ class __$ConformanceEventCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConformanceEvent implements _ConformanceEvent {
-  const _$_ConformanceEvent(
+  _$_ConformanceEvent(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -7790,7 +7790,7 @@ class _$_ConformanceEvent implements _ConformanceEvent {
 }
 
 abstract class _ConformanceEvent implements ConformanceEvent {
-  const factory _ConformanceEvent(
+  factory _ConformanceEvent(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -8041,7 +8041,7 @@ class __$OperationDefinitionBindingCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_OperationDefinitionBinding implements _OperationDefinitionBinding {
-  const _$_OperationDefinitionBinding(
+  _$_OperationDefinitionBinding(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -8124,7 +8124,7 @@ class _$_OperationDefinitionBinding implements _OperationDefinitionBinding {
 
 abstract class _OperationDefinitionBinding
     implements OperationDefinitionBinding {
-  const factory _OperationDefinitionBinding(
+  factory _OperationDefinitionBinding(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -8328,7 +8328,7 @@ class __$ConformanceCertificateCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConformanceCertificate implements _ConformanceCertificate {
-  const _$_ConformanceCertificate(
+  _$_ConformanceCertificate(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -8402,7 +8402,7 @@ class _$_ConformanceCertificate implements _ConformanceCertificate {
 }
 
 abstract class _ConformanceCertificate implements ConformanceCertificate {
-  const factory _ConformanceCertificate(
+  factory _ConformanceCertificate(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -8589,7 +8589,7 @@ class __$ConformanceRestInteractionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConformanceRestInteraction implements _ConformanceRestInteraction {
-  const _$_ConformanceRestInteraction(
+  _$_ConformanceRestInteraction(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -8662,7 +8662,7 @@ class _$_ConformanceRestInteraction implements _ConformanceRestInteraction {
 
 abstract class _ConformanceRestInteraction
     implements ConformanceRestInteraction {
-  const factory _ConformanceRestInteraction(
+  factory _ConformanceRestInteraction(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -8921,7 +8921,7 @@ class __$ConformanceSearchParamCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConformanceSearchParam implements _ConformanceSearchParam {
-  const _$_ConformanceSearchParam(
+  _$_ConformanceSearchParam(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -9038,7 +9038,7 @@ class _$_ConformanceSearchParam implements _ConformanceSearchParam {
 }
 
 abstract class _ConformanceSearchParam implements ConformanceSearchParam {
-  const factory _ConformanceSearchParam(
+  factory _ConformanceSearchParam(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,

@@ -214,6 +214,9 @@ _$_BiologicallyDerivedProductCollection
     source: json['source'] == null
         ? null
         : Reference.fromJson(json['source'] as Map<String, dynamic>),
+    collectedDateTime: json['collectedDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['collectedDateTime'] as String),
     collectedDateTimeElement: json['_collectedDateTime'] == null
         ? null
         : Element.fromJson(json['_collectedDateTime'] as Map<String, dynamic>),
@@ -240,6 +243,7 @@ Map<String, dynamic> _$_$_BiologicallyDerivedProductCollectionToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('collector', instance.collector?.toJson());
   writeNotNull('source', instance.source?.toJson());
+  writeNotNull('collectedDateTime', instance.collectedDateTime?.toJson());
   writeNotNull(
       '_collectedDateTime', instance.collectedDateTimeElement?.toJson());
   writeNotNull('collectedPeriod', instance.collectedPeriod?.toJson());
@@ -271,6 +275,9 @@ _$_BiologicallyDerivedProductProcessing
     additive: json['additive'] == null
         ? null
         : Reference.fromJson(json['additive'] as Map<String, dynamic>),
+    timeDateTime: json['timeDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['timeDateTime'] as String),
     timeDateTimeElement: json['_timeDateTime'] == null
         ? null
         : Element.fromJson(json['_timeDateTime'] as Map<String, dynamic>),
@@ -299,6 +306,7 @@ Map<String, dynamic> _$_$_BiologicallyDerivedProductProcessingToJson(
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('procedure', instance.procedure?.toJson());
   writeNotNull('additive', instance.additive?.toJson());
+  writeNotNull('timeDateTime', instance.timeDateTime?.toJson());
   writeNotNull('_timeDateTime', instance.timeDateTimeElement?.toJson());
   writeNotNull('timePeriod', instance.timePeriod?.toJson());
   return val;
@@ -323,6 +331,9 @@ _$_BiologicallyDerivedProductManipulation
     descriptionElement: json['_description'] == null
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
+    timeDateTime: json['timeDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['timeDateTime'] as String),
     timeDateTimeElement: json['_timeDateTime'] == null
         ? null
         : Element.fromJson(json['_timeDateTime'] as Map<String, dynamic>),
@@ -349,6 +360,7 @@ Map<String, dynamic> _$_$_BiologicallyDerivedProductManipulationToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
+  writeNotNull('timeDateTime', instance.timeDateTime?.toJson());
   writeNotNull('_timeDateTime', instance.timeDateTimeElement?.toJson());
   writeNotNull('timePeriod', instance.timePeriod?.toJson());
   return val;

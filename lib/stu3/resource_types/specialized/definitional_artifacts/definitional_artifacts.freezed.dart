@@ -1241,7 +1241,7 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ActivityDefinition implements _ActivityDefinition {
-  const _$_ActivityDefinition(
+  _$_ActivityDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'ActivityDefinition')
           this.resourceType,
@@ -1671,7 +1671,7 @@ class _$_ActivityDefinition implements _ActivityDefinition {
 }
 
 abstract class _ActivityDefinition implements ActivityDefinition {
-  const factory _ActivityDefinition(
+  factory _ActivityDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'ActivityDefinition')
           String resourceType,
@@ -2047,7 +2047,7 @@ class __$ActivityDefinitionParticipantCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ActivityDefinitionParticipant
     implements _ActivityDefinitionParticipant {
-  const _$_ActivityDefinitionParticipant(
+  _$_ActivityDefinitionParticipant(
       {this.type, this.role, @JsonKey(name: '_type') this.typeElement});
 
   factory _$_ActivityDefinitionParticipant.fromJson(
@@ -2100,7 +2100,7 @@ class _$_ActivityDefinitionParticipant
 
 abstract class _ActivityDefinitionParticipant
     implements ActivityDefinitionParticipant {
-  const factory _ActivityDefinitionParticipant(
+  factory _ActivityDefinitionParticipant(
           {Code type,
           CodeableConcept role,
           @JsonKey(name: '_type') Element typeElement}) =
@@ -2351,7 +2351,7 @@ class __$ActivityDefinitionDynamicValueCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ActivityDefinitionDynamicValue
     implements _ActivityDefinitionDynamicValue {
-  const _$_ActivityDefinitionDynamicValue(
+  _$_ActivityDefinitionDynamicValue(
       {this.description,
       this.path,
       this.language,
@@ -2445,7 +2445,7 @@ class _$_ActivityDefinitionDynamicValue
 
 abstract class _ActivityDefinitionDynamicValue
     implements ActivityDefinitionDynamicValue {
-  const factory _ActivityDefinitionDynamicValue(
+  factory _ActivityDefinitionDynamicValue(
           {String description,
           String path,
           String language,
@@ -3414,7 +3414,7 @@ class __$PlanDefinitionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_PlanDefinition implements _PlanDefinition {
-  const _$_PlanDefinition(
+  _$_PlanDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'PlanDefinition')
           this.resourceType,
@@ -3770,7 +3770,7 @@ class _$_PlanDefinition implements _PlanDefinition {
 }
 
 abstract class _PlanDefinition implements PlanDefinition {
-  const factory _PlanDefinition(
+  factory _PlanDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'PlanDefinition')
           String resourceType,
@@ -4173,7 +4173,7 @@ class __$PlanDefinitionGoalCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_PlanDefinitionGoal implements _PlanDefinitionGoal {
-  const _$_PlanDefinitionGoal(
+  _$_PlanDefinitionGoal(
       {this.category,
       @JsonKey(required: true) this.description,
       this.priority,
@@ -4253,7 +4253,7 @@ class _$_PlanDefinitionGoal implements _PlanDefinitionGoal {
 }
 
 abstract class _PlanDefinitionGoal implements PlanDefinitionGoal {
-  const factory _PlanDefinitionGoal(
+  factory _PlanDefinitionGoal(
       {CodeableConcept category,
       @JsonKey(required: true) CodeableConcept description,
       CodeableConcept priority,
@@ -4481,7 +4481,7 @@ class __$PlanDefinitionTargetCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_PlanDefinitionTarget implements _PlanDefinitionTarget {
-  const _$_PlanDefinitionTarget(
+  _$_PlanDefinitionTarget(
       {this.measure,
       this.detailQuantity,
       this.detailRange,
@@ -4548,7 +4548,7 @@ class _$_PlanDefinitionTarget implements _PlanDefinitionTarget {
 }
 
 abstract class _PlanDefinitionTarget implements PlanDefinitionTarget {
-  const factory _PlanDefinitionTarget(
+  factory _PlanDefinitionTarget(
       {CodeableConcept measure,
       Quantity detailQuantity,
       Range detailRange,
@@ -5430,7 +5430,7 @@ class __$PlanDefinitionActionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_PlanDefinitionAction implements _PlanDefinitionAction {
-  const _$_PlanDefinitionAction(
+  _$_PlanDefinitionAction(
       {this.label,
       this.title,
       this.description,
@@ -5738,7 +5738,7 @@ class _$_PlanDefinitionAction implements _PlanDefinitionAction {
 }
 
 abstract class _PlanDefinitionAction implements PlanDefinitionAction {
-  const factory _PlanDefinitionAction(
+  factory _PlanDefinitionAction(
       {String label,
       String title,
       String description,
@@ -6124,7 +6124,7 @@ class __$PlanDefinitionConditionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_PlanDefinitionCondition implements _PlanDefinitionCondition {
-  const _$_PlanDefinitionCondition(
+  _$_PlanDefinitionCondition(
       {@JsonKey(unknownEnumValue: ConditionKind.unknown) this.kind,
       this.description,
       this.language,
@@ -6217,7 +6217,7 @@ class _$_PlanDefinitionCondition implements _PlanDefinitionCondition {
 }
 
 abstract class _PlanDefinitionCondition implements PlanDefinitionCondition {
-  const factory _PlanDefinitionCondition(
+  factory _PlanDefinitionCondition(
           {@JsonKey(unknownEnumValue: ConditionKind.unknown) ConditionKind kind,
           String description,
           String language,
@@ -6474,7 +6474,7 @@ class __$PlanDefinitionRelatedActionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_PlanDefinitionRelatedAction implements _PlanDefinitionRelatedAction {
-  const _$_PlanDefinitionRelatedAction(
+  _$_PlanDefinitionRelatedAction(
       {this.actionId,
       @JsonKey(unknownEnumValue: RelatedActionRelationship.unknown)
           this.relationship,
@@ -6556,7 +6556,7 @@ class _$_PlanDefinitionRelatedAction implements _PlanDefinitionRelatedAction {
 
 abstract class _PlanDefinitionRelatedAction
     implements PlanDefinitionRelatedAction {
-  const factory _PlanDefinitionRelatedAction(
+  factory _PlanDefinitionRelatedAction(
       {Id actionId,
       @JsonKey(unknownEnumValue: RelatedActionRelationship.unknown)
           RelatedActionRelationship relationship,
@@ -6733,7 +6733,7 @@ class __$PlanDefinitionParticipantCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_PlanDefinitionParticipant implements _PlanDefinitionParticipant {
-  const _$_PlanDefinitionParticipant(
+  _$_PlanDefinitionParticipant(
       {@JsonKey(unknownEnumValue: PlanDefinitionParticipantType.unknown)
           this.type,
       this.role,
@@ -6790,7 +6790,7 @@ class _$_PlanDefinitionParticipant implements _PlanDefinitionParticipant {
 }
 
 abstract class _PlanDefinitionParticipant implements PlanDefinitionParticipant {
-  const factory _PlanDefinitionParticipant(
+  factory _PlanDefinitionParticipant(
       {@JsonKey(unknownEnumValue: PlanDefinitionParticipantType.unknown)
           PlanDefinitionParticipantType type,
       CodeableConcept role,
@@ -7037,7 +7037,7 @@ class __$PlanDefinitionDynamicValueCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_PlanDefinitionDynamicValue implements _PlanDefinitionDynamicValue {
-  const _$_PlanDefinitionDynamicValue(
+  _$_PlanDefinitionDynamicValue(
       {this.description,
       this.path,
       this.language,
@@ -7130,7 +7130,7 @@ class _$_PlanDefinitionDynamicValue implements _PlanDefinitionDynamicValue {
 
 abstract class _PlanDefinitionDynamicValue
     implements PlanDefinitionDynamicValue {
-  const factory _PlanDefinitionDynamicValue(
+  factory _PlanDefinitionDynamicValue(
           {String description,
           String path,
           String language,
@@ -8033,7 +8033,7 @@ class __$QuestionnaireCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Questionnaire implements _Questionnaire {
-  const _$_Questionnaire(
+  _$_Questionnaire(
       {@required
       @JsonKey(required: true, defaultValue: 'Questionnaire')
           this.resourceType,
@@ -8364,7 +8364,7 @@ class _$_Questionnaire implements _Questionnaire {
 }
 
 abstract class _Questionnaire implements Questionnaire {
-  const factory _Questionnaire(
+  factory _Questionnaire(
       {@required
       @JsonKey(required: true, defaultValue: 'Questionnaire')
           String resourceType,
@@ -9477,7 +9477,7 @@ class __$QuestionnaireItemCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_QuestionnaireItem implements _QuestionnaireItem {
-  const _$_QuestionnaireItem(
+  _$_QuestionnaireItem(
       {this.linkId,
       this.definition,
       this.code,
@@ -9785,7 +9785,7 @@ class _$_QuestionnaireItem implements _QuestionnaireItem {
 }
 
 abstract class _QuestionnaireItem implements QuestionnaireItem {
-  const factory _QuestionnaireItem(
+  factory _QuestionnaireItem(
       {String linkId,
       String definition,
       List<Coding> code,
@@ -10525,7 +10525,7 @@ class __$QuestionnaireEnableWhenCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_QuestionnaireEnableWhen implements _QuestionnaireEnableWhen {
-  const _$_QuestionnaireEnableWhen(
+  _$_QuestionnaireEnableWhen(
       {this.question,
       this.hasAnswer,
       this.answerBoolean,
@@ -10730,7 +10730,7 @@ class _$_QuestionnaireEnableWhen implements _QuestionnaireEnableWhen {
 }
 
 abstract class _QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
-  const factory _QuestionnaireEnableWhen(
+  factory _QuestionnaireEnableWhen(
           {String question,
           Boolean hasAnswer,
           Boolean answerBoolean,
@@ -11072,7 +11072,7 @@ class __$QuestionnaireOptionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_QuestionnaireOption implements _QuestionnaireOption {
-  const _$_QuestionnaireOption(
+  _$_QuestionnaireOption(
       {this.valueInteger,
       this.valueDate,
       this.valueTime,
@@ -11172,7 +11172,7 @@ class _$_QuestionnaireOption implements _QuestionnaireOption {
 }
 
 abstract class _QuestionnaireOption implements QuestionnaireOption {
-  const factory _QuestionnaireOption(
+  factory _QuestionnaireOption(
           {Integer valueInteger,
           Date valueDate,
           Time valueTime,
@@ -12142,7 +12142,7 @@ class __$ServiceDefinitionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ServiceDefinition implements _ServiceDefinition {
-  const _$_ServiceDefinition(
+  _$_ServiceDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'ServiceDefinition')
           this.resourceType,
@@ -12493,7 +12493,7 @@ class _$_ServiceDefinition implements _ServiceDefinition {
 }
 
 abstract class _ServiceDefinition implements ServiceDefinition {
-  const factory _ServiceDefinition(
+  factory _ServiceDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'ServiceDefinition')
           String resourceType,

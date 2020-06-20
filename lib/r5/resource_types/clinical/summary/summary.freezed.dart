@@ -45,6 +45,7 @@ class _$AdverseEventTearOff {
       @required
           Reference subject,
       Reference encounter,
+      FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           Element occurrenceDateTimeElement,
       Period occurrencePeriod,
@@ -88,6 +89,7 @@ class _$AdverseEventTearOff {
       code: code,
       subject: subject,
       encounter: encounter,
+      occurrenceDateTime: occurrenceDateTime,
       occurrenceDateTimeElement: occurrenceDateTimeElement,
       occurrencePeriod: occurrencePeriod,
       occurrenceTiming: occurrenceTiming,
@@ -142,6 +144,7 @@ mixin _$AdverseEvent {
   CodeableConcept get code;
   Reference get subject;
   Reference get encounter;
+  FhirDateTime get occurrenceDateTime;
   @JsonKey(name: '_occurrenceDateTime')
   Element get occurrenceDateTimeElement;
   Period get occurrencePeriod;
@@ -201,6 +204,7 @@ abstract class $AdverseEventCopyWith<$Res> {
       CodeableConcept code,
       Reference subject,
       Reference encounter,
+      FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           Element occurrenceDateTimeElement,
       Period occurrencePeriod,
@@ -273,6 +277,7 @@ class _$AdverseEventCopyWithImpl<$Res> implements $AdverseEventCopyWith<$Res> {
     Object code = freezed,
     Object subject = freezed,
     Object encounter = freezed,
+    Object occurrenceDateTime = freezed,
     Object occurrenceDateTimeElement = freezed,
     Object occurrencePeriod = freezed,
     Object occurrenceTiming = freezed,
@@ -338,6 +343,9 @@ class _$AdverseEventCopyWithImpl<$Res> implements $AdverseEventCopyWith<$Res> {
       subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
+      occurrenceDateTime: occurrenceDateTime == freezed
+          ? _value.occurrenceDateTime
+          : occurrenceDateTime as FhirDateTime,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement as Element,
@@ -604,6 +612,7 @@ abstract class _$AdverseEventCopyWith<$Res>
       CodeableConcept code,
       Reference subject,
       Reference encounter,
+      FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           Element occurrenceDateTimeElement,
       Period occurrencePeriod,
@@ -696,6 +705,7 @@ class __$AdverseEventCopyWithImpl<$Res> extends _$AdverseEventCopyWithImpl<$Res>
     Object code = freezed,
     Object subject = freezed,
     Object encounter = freezed,
+    Object occurrenceDateTime = freezed,
     Object occurrenceDateTimeElement = freezed,
     Object occurrencePeriod = freezed,
     Object occurrenceTiming = freezed,
@@ -761,6 +771,9 @@ class __$AdverseEventCopyWithImpl<$Res> extends _$AdverseEventCopyWithImpl<$Res>
       subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
+      occurrenceDateTime: occurrenceDateTime == freezed
+          ? _value.occurrenceDateTime
+          : occurrenceDateTime as FhirDateTime,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement as Element,
@@ -836,6 +849,7 @@ class _$_AdverseEvent extends _AdverseEvent {
       this.code,
       @required this.subject,
       this.encounter,
+      this.occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') this.occurrenceDateTimeElement,
       this.occurrencePeriod,
       this.occurrenceTiming,
@@ -910,6 +924,8 @@ class _$_AdverseEvent extends _AdverseEvent {
   @override
   final Reference encounter;
   @override
+  final FhirDateTime occurrenceDateTime;
+  @override
   @JsonKey(name: '_occurrenceDateTime')
   final Element occurrenceDateTimeElement;
   @override
@@ -953,7 +969,7 @@ class _$_AdverseEvent extends _AdverseEvent {
 
   @override
   String toString() {
-    return 'AdverseEvent(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, actuality: $actuality, actualityElement: $actualityElement, category: $category, code: $code, subject: $subject, encounter: $encounter, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrencePeriod: $occurrencePeriod, occurrenceTiming: $occurrenceTiming, detected: $detected, detectedElement: $detectedElement, recordedDate: $recordedDate, recordedDateElement: $recordedDateElement, resultingCondition: $resultingCondition, location: $location, seriousness: $seriousness, outcome: $outcome, recorder: $recorder, participant: $participant, suspectEntity: $suspectEntity, contributingFactor: $contributingFactor, preventiveAction: $preventiveAction, mitigatingAction: $mitigatingAction, supportingInfo: $supportingInfo, study: $study)';
+    return 'AdverseEvent(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, actuality: $actuality, actualityElement: $actualityElement, category: $category, code: $code, subject: $subject, encounter: $encounter, occurrenceDateTime: $occurrenceDateTime, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrencePeriod: $occurrencePeriod, occurrenceTiming: $occurrenceTiming, detected: $detected, detectedElement: $detectedElement, recordedDate: $recordedDate, recordedDateElement: $recordedDateElement, resultingCondition: $resultingCondition, location: $location, seriousness: $seriousness, outcome: $outcome, recorder: $recorder, participant: $participant, suspectEntity: $suspectEntity, contributingFactor: $contributingFactor, preventiveAction: $preventiveAction, mitigatingAction: $mitigatingAction, supportingInfo: $supportingInfo, study: $study)';
   }
 
   @override
@@ -1015,6 +1031,9 @@ class _$_AdverseEvent extends _AdverseEvent {
             (identical(other.encounter, encounter) ||
                 const DeepCollectionEquality()
                     .equals(other.encounter, encounter)) &&
+            (identical(other.occurrenceDateTime, occurrenceDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.occurrenceDateTime, occurrenceDateTime)) &&
             (identical(other.occurrenceDateTimeElement, occurrenceDateTimeElement) ||
                 const DeepCollectionEquality().equals(
                     other.occurrenceDateTimeElement,
@@ -1022,9 +1041,7 @@ class _$_AdverseEvent extends _AdverseEvent {
             (identical(other.occurrencePeriod, occurrencePeriod) ||
                 const DeepCollectionEquality()
                     .equals(other.occurrencePeriod, occurrencePeriod)) &&
-            (identical(other.occurrenceTiming, occurrenceTiming) ||
-                const DeepCollectionEquality()
-                    .equals(other.occurrenceTiming, occurrenceTiming)) &&
+            (identical(other.occurrenceTiming, occurrenceTiming) || const DeepCollectionEquality().equals(other.occurrenceTiming, occurrenceTiming)) &&
             (identical(other.detected, detected) || const DeepCollectionEquality().equals(other.detected, detected)) &&
             (identical(other.detectedElement, detectedElement) || const DeepCollectionEquality().equals(other.detectedElement, detectedElement)) &&
             (identical(other.recordedDate, recordedDate) || const DeepCollectionEquality().equals(other.recordedDate, recordedDate)) &&
@@ -1066,6 +1083,7 @@ class _$_AdverseEvent extends _AdverseEvent {
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(subject) ^
       const DeepCollectionEquality().hash(encounter) ^
+      const DeepCollectionEquality().hash(occurrenceDateTime) ^
       const DeepCollectionEquality().hash(occurrenceDateTimeElement) ^
       const DeepCollectionEquality().hash(occurrencePeriod) ^
       const DeepCollectionEquality().hash(occurrenceTiming) ^
@@ -1128,6 +1146,7 @@ abstract class _AdverseEvent extends AdverseEvent {
       @required
           Reference subject,
       Reference encounter,
+      FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           Element occurrenceDateTimeElement,
       Period occurrencePeriod,
@@ -1201,6 +1220,8 @@ abstract class _AdverseEvent extends AdverseEvent {
   Reference get subject;
   @override
   Reference get encounter;
+  @override
+  FhirDateTime get occurrenceDateTime;
   @override
   @JsonKey(name: '_occurrenceDateTime')
   Element get occurrenceDateTimeElement;
@@ -3201,11 +3222,13 @@ class _$AllergyIntoleranceTearOff {
       @required
           Reference patient,
       Reference encounter,
+      FhirDateTime onsetDateTime,
       @JsonKey(name: '_onsetDateTime')
           Element onsetDateTimeElement,
       Age onsetAge,
       Period onsetPeriod,
       Range onsetRange,
+      String onsetString,
       @JsonKey(name: '_onsetString')
           Element onsetStringElement,
       FhirDateTime recordedDate,
@@ -3242,10 +3265,12 @@ class _$AllergyIntoleranceTearOff {
       code: code,
       patient: patient,
       encounter: encounter,
+      onsetDateTime: onsetDateTime,
       onsetDateTimeElement: onsetDateTimeElement,
       onsetAge: onsetAge,
       onsetPeriod: onsetPeriod,
       onsetRange: onsetRange,
+      onsetString: onsetString,
       onsetStringElement: onsetStringElement,
       recordedDate: recordedDate,
       recordedDateElement: recordedDateElement,
@@ -3295,11 +3320,13 @@ mixin _$AllergyIntolerance {
   CodeableConcept get code;
   Reference get patient;
   Reference get encounter;
+  FhirDateTime get onsetDateTime;
   @JsonKey(name: '_onsetDateTime')
   Element get onsetDateTimeElement;
   Age get onsetAge;
   Period get onsetPeriod;
   Range get onsetRange;
+  String get onsetString;
   @JsonKey(name: '_onsetString')
   Element get onsetStringElement;
   FhirDateTime get recordedDate;
@@ -3354,11 +3381,13 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
       CodeableConcept code,
       Reference patient,
       Reference encounter,
+      FhirDateTime onsetDateTime,
       @JsonKey(name: '_onsetDateTime')
           Element onsetDateTimeElement,
       Age onsetAge,
       Period onsetPeriod,
       Range onsetRange,
+      String onsetString,
       @JsonKey(name: '_onsetString')
           Element onsetStringElement,
       FhirDateTime recordedDate,
@@ -3428,10 +3457,12 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
     Object code = freezed,
     Object patient = freezed,
     Object encounter = freezed,
+    Object onsetDateTime = freezed,
     Object onsetDateTimeElement = freezed,
     Object onsetAge = freezed,
     Object onsetPeriod = freezed,
     Object onsetRange = freezed,
+    Object onsetString = freezed,
     Object onsetStringElement = freezed,
     Object recordedDate = freezed,
     Object recordedDateElement = freezed,
@@ -3495,6 +3526,9 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
       patient: patient == freezed ? _value.patient : patient as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
+      onsetDateTime: onsetDateTime == freezed
+          ? _value.onsetDateTime
+          : onsetDateTime as FhirDateTime,
       onsetDateTimeElement: onsetDateTimeElement == freezed
           ? _value.onsetDateTimeElement
           : onsetDateTimeElement as Element,
@@ -3503,6 +3537,8 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
           onsetPeriod == freezed ? _value.onsetPeriod : onsetPeriod as Period,
       onsetRange:
           onsetRange == freezed ? _value.onsetRange : onsetRange as Range,
+      onsetString:
+          onsetString == freezed ? _value.onsetString : onsetString as String,
       onsetStringElement: onsetStringElement == freezed
           ? _value.onsetStringElement
           : onsetStringElement as Element,
@@ -3777,11 +3813,13 @@ abstract class _$AllergyIntoleranceCopyWith<$Res>
       CodeableConcept code,
       Reference patient,
       Reference encounter,
+      FhirDateTime onsetDateTime,
       @JsonKey(name: '_onsetDateTime')
           Element onsetDateTimeElement,
       Age onsetAge,
       Period onsetPeriod,
       Range onsetRange,
+      String onsetString,
       @JsonKey(name: '_onsetString')
           Element onsetStringElement,
       FhirDateTime recordedDate,
@@ -3874,10 +3912,12 @@ class __$AllergyIntoleranceCopyWithImpl<$Res>
     Object code = freezed,
     Object patient = freezed,
     Object encounter = freezed,
+    Object onsetDateTime = freezed,
     Object onsetDateTimeElement = freezed,
     Object onsetAge = freezed,
     Object onsetPeriod = freezed,
     Object onsetRange = freezed,
+    Object onsetString = freezed,
     Object onsetStringElement = freezed,
     Object recordedDate = freezed,
     Object recordedDateElement = freezed,
@@ -3941,6 +3981,9 @@ class __$AllergyIntoleranceCopyWithImpl<$Res>
       patient: patient == freezed ? _value.patient : patient as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
+      onsetDateTime: onsetDateTime == freezed
+          ? _value.onsetDateTime
+          : onsetDateTime as FhirDateTime,
       onsetDateTimeElement: onsetDateTimeElement == freezed
           ? _value.onsetDateTimeElement
           : onsetDateTimeElement as Element,
@@ -3949,6 +3992,8 @@ class __$AllergyIntoleranceCopyWithImpl<$Res>
           onsetPeriod == freezed ? _value.onsetPeriod : onsetPeriod as Period,
       onsetRange:
           onsetRange == freezed ? _value.onsetRange : onsetRange as Range,
+      onsetString:
+          onsetString == freezed ? _value.onsetString : onsetString as String,
       onsetStringElement: onsetStringElement == freezed
           ? _value.onsetStringElement
           : onsetStringElement as Element,
@@ -4011,11 +4056,13 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
       @required
           this.patient,
       this.encounter,
+      this.onsetDateTime,
       @JsonKey(name: '_onsetDateTime')
           this.onsetDateTimeElement,
       this.onsetAge,
       this.onsetPeriod,
       this.onsetRange,
+      this.onsetString,
       @JsonKey(name: '_onsetString')
           this.onsetStringElement,
       this.recordedDate,
@@ -4091,6 +4138,8 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
   @override
   final Reference encounter;
   @override
+  final FhirDateTime onsetDateTime;
+  @override
   @JsonKey(name: '_onsetDateTime')
   final Element onsetDateTimeElement;
   @override
@@ -4099,6 +4148,8 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
   final Period onsetPeriod;
   @override
   final Range onsetRange;
+  @override
+  final String onsetString;
   @override
   @JsonKey(name: '_onsetString')
   final Element onsetStringElement;
@@ -4123,7 +4174,7 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
 
   @override
   String toString() {
-    return 'AllergyIntolerance(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, clinicalStatus: $clinicalStatus, verificationStatus: $verificationStatus, type: $type, typeElement: $typeElement, category: $category, categoryElement: $categoryElement, criticality: $criticality, criticalityElement: $criticalityElement, code: $code, patient: $patient, encounter: $encounter, onsetDateTimeElement: $onsetDateTimeElement, onsetAge: $onsetAge, onsetPeriod: $onsetPeriod, onsetRange: $onsetRange, onsetStringElement: $onsetStringElement, recordedDate: $recordedDate, recordedDateElement: $recordedDateElement, recorder: $recorder, asserter: $asserter, lastOccurrence: $lastOccurrence, lastOccurrenceElement: $lastOccurrenceElement, note: $note, reaction: $reaction)';
+    return 'AllergyIntolerance(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, clinicalStatus: $clinicalStatus, verificationStatus: $verificationStatus, type: $type, typeElement: $typeElement, category: $category, categoryElement: $categoryElement, criticality: $criticality, criticalityElement: $criticalityElement, code: $code, patient: $patient, encounter: $encounter, onsetDateTime: $onsetDateTime, onsetDateTimeElement: $onsetDateTimeElement, onsetAge: $onsetAge, onsetPeriod: $onsetPeriod, onsetRange: $onsetRange, onsetString: $onsetString, onsetStringElement: $onsetStringElement, recordedDate: $recordedDate, recordedDateElement: $recordedDateElement, recorder: $recorder, asserter: $asserter, lastOccurrence: $lastOccurrence, lastOccurrenceElement: $lastOccurrenceElement, note: $note, reaction: $reaction)';
   }
 
   @override
@@ -4194,12 +4245,14 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
             (identical(other.encounter, encounter) ||
                 const DeepCollectionEquality()
                     .equals(other.encounter, encounter)) &&
-            (identical(other.onsetDateTimeElement, onsetDateTimeElement) ||
+            (identical(other.onsetDateTime, onsetDateTime) ||
                 const DeepCollectionEquality()
-                    .equals(other.onsetDateTimeElement, onsetDateTimeElement)) &&
+                    .equals(other.onsetDateTime, onsetDateTime)) &&
+            (identical(other.onsetDateTimeElement, onsetDateTimeElement) || const DeepCollectionEquality().equals(other.onsetDateTimeElement, onsetDateTimeElement)) &&
             (identical(other.onsetAge, onsetAge) || const DeepCollectionEquality().equals(other.onsetAge, onsetAge)) &&
             (identical(other.onsetPeriod, onsetPeriod) || const DeepCollectionEquality().equals(other.onsetPeriod, onsetPeriod)) &&
             (identical(other.onsetRange, onsetRange) || const DeepCollectionEquality().equals(other.onsetRange, onsetRange)) &&
+            (identical(other.onsetString, onsetString) || const DeepCollectionEquality().equals(other.onsetString, onsetString)) &&
             (identical(other.onsetStringElement, onsetStringElement) || const DeepCollectionEquality().equals(other.onsetStringElement, onsetStringElement)) &&
             (identical(other.recordedDate, recordedDate) || const DeepCollectionEquality().equals(other.recordedDate, recordedDate)) &&
             (identical(other.recordedDateElement, recordedDateElement) || const DeepCollectionEquality().equals(other.recordedDateElement, recordedDateElement)) &&
@@ -4237,10 +4290,12 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(patient) ^
       const DeepCollectionEquality().hash(encounter) ^
+      const DeepCollectionEquality().hash(onsetDateTime) ^
       const DeepCollectionEquality().hash(onsetDateTimeElement) ^
       const DeepCollectionEquality().hash(onsetAge) ^
       const DeepCollectionEquality().hash(onsetPeriod) ^
       const DeepCollectionEquality().hash(onsetRange) ^
+      const DeepCollectionEquality().hash(onsetString) ^
       const DeepCollectionEquality().hash(onsetStringElement) ^
       const DeepCollectionEquality().hash(recordedDate) ^
       const DeepCollectionEquality().hash(recordedDateElement) ^
@@ -4298,11 +4353,13 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
       @required
           Reference patient,
       Reference encounter,
+      FhirDateTime onsetDateTime,
       @JsonKey(name: '_onsetDateTime')
           Element onsetDateTimeElement,
       Age onsetAge,
       Period onsetPeriod,
       Range onsetRange,
+      String onsetString,
       @JsonKey(name: '_onsetString')
           Element onsetStringElement,
       FhirDateTime recordedDate,
@@ -4375,6 +4432,8 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
   @override
   Reference get encounter;
   @override
+  FhirDateTime get onsetDateTime;
+  @override
   @JsonKey(name: '_onsetDateTime')
   Element get onsetDateTimeElement;
   @override
@@ -4383,6 +4442,8 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
   Period get onsetPeriod;
   @override
   Range get onsetRange;
+  @override
+  String get onsetString;
   @override
   @JsonKey(name: '_onsetString')
   Element get onsetStringElement;
@@ -4950,6 +5011,7 @@ class _$ClinicalImpressionTearOff {
       @JsonKey(name: '_description') Element descriptionElement,
       @required Reference subject,
       Reference encounter,
+      FhirDateTime effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
       Period effectivePeriod,
       FhirDateTime date,
@@ -4986,6 +5048,7 @@ class _$ClinicalImpressionTearOff {
       descriptionElement: descriptionElement,
       subject: subject,
       encounter: encounter,
+      effectiveDateTime: effectiveDateTime,
       effectiveDateTimeElement: effectiveDateTimeElement,
       effectivePeriod: effectivePeriod,
       date: date,
@@ -5035,6 +5098,7 @@ mixin _$ClinicalImpression {
   Element get descriptionElement;
   Reference get subject;
   Reference get encounter;
+  FhirDateTime get effectiveDateTime;
   @JsonKey(name: '_effectiveDateTime')
   Element get effectiveDateTimeElement;
   Period get effectivePeriod;
@@ -5084,6 +5148,7 @@ abstract class $ClinicalImpressionCopyWith<$Res> {
       @JsonKey(name: '_description') Element descriptionElement,
       Reference subject,
       Reference encounter,
+      FhirDateTime effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
       Period effectivePeriod,
       FhirDateTime date,
@@ -5148,6 +5213,7 @@ class _$ClinicalImpressionCopyWithImpl<$Res>
     Object descriptionElement = freezed,
     Object subject = freezed,
     Object encounter = freezed,
+    Object effectiveDateTime = freezed,
     Object effectiveDateTimeElement = freezed,
     Object effectivePeriod = freezed,
     Object date = freezed,
@@ -5208,6 +5274,9 @@ class _$ClinicalImpressionCopyWithImpl<$Res>
       subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
+      effectiveDateTime: effectiveDateTime == freezed
+          ? _value.effectiveDateTime
+          : effectiveDateTime as FhirDateTime,
       effectiveDateTimeElement: effectiveDateTimeElement == freezed
           ? _value.effectiveDateTimeElement
           : effectiveDateTimeElement as Element,
@@ -5433,6 +5502,7 @@ abstract class _$ClinicalImpressionCopyWith<$Res>
       @JsonKey(name: '_description') Element descriptionElement,
       Reference subject,
       Reference encounter,
+      FhirDateTime effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
       Period effectivePeriod,
       FhirDateTime date,
@@ -5515,6 +5585,7 @@ class __$ClinicalImpressionCopyWithImpl<$Res>
     Object descriptionElement = freezed,
     Object subject = freezed,
     Object encounter = freezed,
+    Object effectiveDateTime = freezed,
     Object effectiveDateTimeElement = freezed,
     Object effectivePeriod = freezed,
     Object date = freezed,
@@ -5575,6 +5646,9 @@ class __$ClinicalImpressionCopyWithImpl<$Res>
       subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
+      effectiveDateTime: effectiveDateTime == freezed
+          ? _value.effectiveDateTime
+          : effectiveDateTime as FhirDateTime,
       effectiveDateTimeElement: effectiveDateTimeElement == freezed
           ? _value.effectiveDateTimeElement
           : effectiveDateTimeElement as Element,
@@ -5636,6 +5710,7 @@ class _$_ClinicalImpression extends _ClinicalImpression {
       @JsonKey(name: '_description') this.descriptionElement,
       @required this.subject,
       this.encounter,
+      this.effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime') this.effectiveDateTimeElement,
       this.effectivePeriod,
       this.date,
@@ -5704,6 +5779,8 @@ class _$_ClinicalImpression extends _ClinicalImpression {
   @override
   final Reference encounter;
   @override
+  final FhirDateTime effectiveDateTime;
+  @override
   @JsonKey(name: '_effectiveDateTime')
   final Element effectiveDateTimeElement;
   @override
@@ -5742,7 +5819,7 @@ class _$_ClinicalImpression extends _ClinicalImpression {
 
   @override
   String toString() {
-    return 'ClinicalImpression(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, statusReason: $statusReason, description: $description, descriptionElement: $descriptionElement, subject: $subject, encounter: $encounter, effectiveDateTimeElement: $effectiveDateTimeElement, effectivePeriod: $effectivePeriod, date: $date, dateElement: $dateElement, performer: $performer, previous: $previous, problem: $problem, protocol: $protocol, protocolElement: $protocolElement, summary: $summary, summaryElement: $summaryElement, finding: $finding, prognosisCodeableConcept: $prognosisCodeableConcept, prognosisReference: $prognosisReference, supportingInfo: $supportingInfo, note: $note)';
+    return 'ClinicalImpression(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, statusReason: $statusReason, description: $description, descriptionElement: $descriptionElement, subject: $subject, encounter: $encounter, effectiveDateTime: $effectiveDateTime, effectiveDateTimeElement: $effectiveDateTimeElement, effectivePeriod: $effectivePeriod, date: $date, dateElement: $dateElement, performer: $performer, previous: $previous, problem: $problem, protocol: $protocol, protocolElement: $protocolElement, summary: $summary, summaryElement: $summaryElement, finding: $finding, prognosisCodeableConcept: $prognosisCodeableConcept, prognosisReference: $prognosisReference, supportingInfo: $supportingInfo, note: $note)';
   }
 
   @override
@@ -5802,6 +5879,9 @@ class _$_ClinicalImpression extends _ClinicalImpression {
             (identical(other.encounter, encounter) ||
                 const DeepCollectionEquality()
                     .equals(other.encounter, encounter)) &&
+            (identical(other.effectiveDateTime, effectiveDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.effectiveDateTime, effectiveDateTime)) &&
             (identical(other.effectiveDateTimeElement, effectiveDateTimeElement) ||
                 const DeepCollectionEquality().equals(
                     other.effectiveDateTimeElement,
@@ -5811,9 +5891,7 @@ class _$_ClinicalImpression extends _ClinicalImpression {
                     .equals(other.effectivePeriod, effectivePeriod)) &&
             (identical(other.date, date) ||
                 const DeepCollectionEquality().equals(other.date, date)) &&
-            (identical(other.dateElement, dateElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.dateElement, dateElement)) &&
+            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
             (identical(other.performer, performer) || const DeepCollectionEquality().equals(other.performer, performer)) &&
             (identical(other.previous, previous) || const DeepCollectionEquality().equals(other.previous, previous)) &&
             (identical(other.problem, problem) || const DeepCollectionEquality().equals(other.problem, problem)) &&
@@ -5850,6 +5928,7 @@ class _$_ClinicalImpression extends _ClinicalImpression {
       const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(subject) ^
       const DeepCollectionEquality().hash(encounter) ^
+      const DeepCollectionEquality().hash(effectiveDateTime) ^
       const DeepCollectionEquality().hash(effectiveDateTimeElement) ^
       const DeepCollectionEquality().hash(effectivePeriod) ^
       const DeepCollectionEquality().hash(date) ^
@@ -5899,6 +5978,7 @@ abstract class _ClinicalImpression extends ClinicalImpression {
       @JsonKey(name: '_description') Element descriptionElement,
       @required Reference subject,
       Reference encounter,
+      FhirDateTime effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
       Period effectivePeriod,
       FhirDateTime date,
@@ -5963,6 +6043,8 @@ abstract class _ClinicalImpression extends ClinicalImpression {
   Reference get subject;
   @override
   Reference get encounter;
+  @override
+  FhirDateTime get effectiveDateTime;
   @override
   @JsonKey(name: '_effectiveDateTime')
   Element get effectiveDateTimeElement;
@@ -6310,15 +6392,19 @@ class _$ConditionTearOff {
       List<CodeableConcept> bodySite,
       @required Reference subject,
       Reference encounter,
+      FhirDateTime onsetDateTime,
       @JsonKey(name: '_onsetDateTime') Element onsetDateTimeElement,
       Age onsetAge,
       Period onsetPeriod,
       Range onsetRange,
+      String onsetString,
       @JsonKey(name: '_onsetString') Element onsetStringElement,
+      FhirDateTime abatementDateTime,
       @JsonKey(name: '_abatementDateTime') Element abatementDateTimeElement,
       Age abatementAge,
       Period abatementPeriod,
       Range abatementRange,
+      String abatementString,
       @JsonKey(name: '_abatementString') Element abatementStringElement,
       FhirDateTime recordedDate,
       @JsonKey(name: '_recordedDate') Element recordedDateElement,
@@ -6348,15 +6434,19 @@ class _$ConditionTearOff {
       bodySite: bodySite,
       subject: subject,
       encounter: encounter,
+      onsetDateTime: onsetDateTime,
       onsetDateTimeElement: onsetDateTimeElement,
       onsetAge: onsetAge,
       onsetPeriod: onsetPeriod,
       onsetRange: onsetRange,
+      onsetString: onsetString,
       onsetStringElement: onsetStringElement,
+      abatementDateTime: abatementDateTime,
       abatementDateTimeElement: abatementDateTimeElement,
       abatementAge: abatementAge,
       abatementPeriod: abatementPeriod,
       abatementRange: abatementRange,
+      abatementString: abatementString,
       abatementStringElement: abatementStringElement,
       recordedDate: recordedDate,
       recordedDateElement: recordedDateElement,
@@ -6397,18 +6487,22 @@ mixin _$Condition {
   List<CodeableConcept> get bodySite;
   Reference get subject;
   Reference get encounter;
+  FhirDateTime get onsetDateTime;
   @JsonKey(name: '_onsetDateTime')
   Element get onsetDateTimeElement;
   Age get onsetAge;
   Period get onsetPeriod;
   Range get onsetRange;
+  String get onsetString;
   @JsonKey(name: '_onsetString')
   Element get onsetStringElement;
+  FhirDateTime get abatementDateTime;
   @JsonKey(name: '_abatementDateTime')
   Element get abatementDateTimeElement;
   Age get abatementAge;
   Period get abatementPeriod;
   Range get abatementRange;
+  String get abatementString;
   @JsonKey(name: '_abatementString')
   Element get abatementStringElement;
   FhirDateTime get recordedDate;
@@ -6448,15 +6542,19 @@ abstract class $ConditionCopyWith<$Res> {
       List<CodeableConcept> bodySite,
       Reference subject,
       Reference encounter,
+      FhirDateTime onsetDateTime,
       @JsonKey(name: '_onsetDateTime') Element onsetDateTimeElement,
       Age onsetAge,
       Period onsetPeriod,
       Range onsetRange,
+      String onsetString,
       @JsonKey(name: '_onsetString') Element onsetStringElement,
+      FhirDateTime abatementDateTime,
       @JsonKey(name: '_abatementDateTime') Element abatementDateTimeElement,
       Age abatementAge,
       Period abatementPeriod,
       Range abatementRange,
+      String abatementString,
       @JsonKey(name: '_abatementString') Element abatementStringElement,
       FhirDateTime recordedDate,
       @JsonKey(name: '_recordedDate') Element recordedDateElement,
@@ -6520,15 +6618,19 @@ class _$ConditionCopyWithImpl<$Res> implements $ConditionCopyWith<$Res> {
     Object bodySite = freezed,
     Object subject = freezed,
     Object encounter = freezed,
+    Object onsetDateTime = freezed,
     Object onsetDateTimeElement = freezed,
     Object onsetAge = freezed,
     Object onsetPeriod = freezed,
     Object onsetRange = freezed,
+    Object onsetString = freezed,
     Object onsetStringElement = freezed,
+    Object abatementDateTime = freezed,
     Object abatementDateTimeElement = freezed,
     Object abatementAge = freezed,
     Object abatementPeriod = freezed,
     Object abatementRange = freezed,
+    Object abatementString = freezed,
     Object abatementStringElement = freezed,
     Object recordedDate = freezed,
     Object recordedDateElement = freezed,
@@ -6584,6 +6686,9 @@ class _$ConditionCopyWithImpl<$Res> implements $ConditionCopyWith<$Res> {
       subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
+      onsetDateTime: onsetDateTime == freezed
+          ? _value.onsetDateTime
+          : onsetDateTime as FhirDateTime,
       onsetDateTimeElement: onsetDateTimeElement == freezed
           ? _value.onsetDateTimeElement
           : onsetDateTimeElement as Element,
@@ -6592,9 +6697,14 @@ class _$ConditionCopyWithImpl<$Res> implements $ConditionCopyWith<$Res> {
           onsetPeriod == freezed ? _value.onsetPeriod : onsetPeriod as Period,
       onsetRange:
           onsetRange == freezed ? _value.onsetRange : onsetRange as Range,
+      onsetString:
+          onsetString == freezed ? _value.onsetString : onsetString as String,
       onsetStringElement: onsetStringElement == freezed
           ? _value.onsetStringElement
           : onsetStringElement as Element,
+      abatementDateTime: abatementDateTime == freezed
+          ? _value.abatementDateTime
+          : abatementDateTime as FhirDateTime,
       abatementDateTimeElement: abatementDateTimeElement == freezed
           ? _value.abatementDateTimeElement
           : abatementDateTimeElement as Element,
@@ -6606,6 +6716,9 @@ class _$ConditionCopyWithImpl<$Res> implements $ConditionCopyWith<$Res> {
       abatementRange: abatementRange == freezed
           ? _value.abatementRange
           : abatementRange as Range,
+      abatementString: abatementString == freezed
+          ? _value.abatementString
+          : abatementString as String,
       abatementStringElement: abatementStringElement == freezed
           ? _value.abatementStringElement
           : abatementStringElement as Element,
@@ -6882,15 +6995,19 @@ abstract class _$ConditionCopyWith<$Res> implements $ConditionCopyWith<$Res> {
       List<CodeableConcept> bodySite,
       Reference subject,
       Reference encounter,
+      FhirDateTime onsetDateTime,
       @JsonKey(name: '_onsetDateTime') Element onsetDateTimeElement,
       Age onsetAge,
       Period onsetPeriod,
       Range onsetRange,
+      String onsetString,
       @JsonKey(name: '_onsetString') Element onsetStringElement,
+      FhirDateTime abatementDateTime,
       @JsonKey(name: '_abatementDateTime') Element abatementDateTimeElement,
       Age abatementAge,
       Period abatementPeriod,
       Range abatementRange,
+      String abatementString,
       @JsonKey(name: '_abatementString') Element abatementStringElement,
       FhirDateTime recordedDate,
       @JsonKey(name: '_recordedDate') Element recordedDateElement,
@@ -6978,15 +7095,19 @@ class __$ConditionCopyWithImpl<$Res> extends _$ConditionCopyWithImpl<$Res>
     Object bodySite = freezed,
     Object subject = freezed,
     Object encounter = freezed,
+    Object onsetDateTime = freezed,
     Object onsetDateTimeElement = freezed,
     Object onsetAge = freezed,
     Object onsetPeriod = freezed,
     Object onsetRange = freezed,
+    Object onsetString = freezed,
     Object onsetStringElement = freezed,
+    Object abatementDateTime = freezed,
     Object abatementDateTimeElement = freezed,
     Object abatementAge = freezed,
     Object abatementPeriod = freezed,
     Object abatementRange = freezed,
+    Object abatementString = freezed,
     Object abatementStringElement = freezed,
     Object recordedDate = freezed,
     Object recordedDateElement = freezed,
@@ -7042,6 +7163,9 @@ class __$ConditionCopyWithImpl<$Res> extends _$ConditionCopyWithImpl<$Res>
       subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
+      onsetDateTime: onsetDateTime == freezed
+          ? _value.onsetDateTime
+          : onsetDateTime as FhirDateTime,
       onsetDateTimeElement: onsetDateTimeElement == freezed
           ? _value.onsetDateTimeElement
           : onsetDateTimeElement as Element,
@@ -7050,9 +7174,14 @@ class __$ConditionCopyWithImpl<$Res> extends _$ConditionCopyWithImpl<$Res>
           onsetPeriod == freezed ? _value.onsetPeriod : onsetPeriod as Period,
       onsetRange:
           onsetRange == freezed ? _value.onsetRange : onsetRange as Range,
+      onsetString:
+          onsetString == freezed ? _value.onsetString : onsetString as String,
       onsetStringElement: onsetStringElement == freezed
           ? _value.onsetStringElement
           : onsetStringElement as Element,
+      abatementDateTime: abatementDateTime == freezed
+          ? _value.abatementDateTime
+          : abatementDateTime as FhirDateTime,
       abatementDateTimeElement: abatementDateTimeElement == freezed
           ? _value.abatementDateTimeElement
           : abatementDateTimeElement as Element,
@@ -7064,6 +7193,9 @@ class __$ConditionCopyWithImpl<$Res> extends _$ConditionCopyWithImpl<$Res>
       abatementRange: abatementRange == freezed
           ? _value.abatementRange
           : abatementRange as Range,
+      abatementString: abatementString == freezed
+          ? _value.abatementString
+          : abatementString as String,
       abatementStringElement: abatementStringElement == freezed
           ? _value.abatementStringElement
           : abatementStringElement as Element,
@@ -7107,15 +7239,19 @@ class _$_Condition extends _Condition {
       this.bodySite,
       @required this.subject,
       this.encounter,
+      this.onsetDateTime,
       @JsonKey(name: '_onsetDateTime') this.onsetDateTimeElement,
       this.onsetAge,
       this.onsetPeriod,
       this.onsetRange,
+      this.onsetString,
       @JsonKey(name: '_onsetString') this.onsetStringElement,
+      this.abatementDateTime,
       @JsonKey(name: '_abatementDateTime') this.abatementDateTimeElement,
       this.abatementAge,
       this.abatementPeriod,
       this.abatementRange,
+      this.abatementString,
       @JsonKey(name: '_abatementString') this.abatementStringElement,
       this.recordedDate,
       @JsonKey(name: '_recordedDate') this.recordedDateElement,
@@ -7176,6 +7312,8 @@ class _$_Condition extends _Condition {
   @override
   final Reference encounter;
   @override
+  final FhirDateTime onsetDateTime;
+  @override
   @JsonKey(name: '_onsetDateTime')
   final Element onsetDateTimeElement;
   @override
@@ -7185,8 +7323,12 @@ class _$_Condition extends _Condition {
   @override
   final Range onsetRange;
   @override
+  final String onsetString;
+  @override
   @JsonKey(name: '_onsetString')
   final Element onsetStringElement;
+  @override
+  final FhirDateTime abatementDateTime;
   @override
   @JsonKey(name: '_abatementDateTime')
   final Element abatementDateTimeElement;
@@ -7196,6 +7338,8 @@ class _$_Condition extends _Condition {
   final Period abatementPeriod;
   @override
   final Range abatementRange;
+  @override
+  final String abatementString;
   @override
   @JsonKey(name: '_abatementString')
   final Element abatementStringElement;
@@ -7217,7 +7361,7 @@ class _$_Condition extends _Condition {
 
   @override
   String toString() {
-    return 'Condition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, clinicalStatus: $clinicalStatus, verificationStatus: $verificationStatus, category: $category, severity: $severity, code: $code, bodySite: $bodySite, subject: $subject, encounter: $encounter, onsetDateTimeElement: $onsetDateTimeElement, onsetAge: $onsetAge, onsetPeriod: $onsetPeriod, onsetRange: $onsetRange, onsetStringElement: $onsetStringElement, abatementDateTimeElement: $abatementDateTimeElement, abatementAge: $abatementAge, abatementPeriod: $abatementPeriod, abatementRange: $abatementRange, abatementStringElement: $abatementStringElement, recordedDate: $recordedDate, recordedDateElement: $recordedDateElement, recorder: $recorder, asserter: $asserter, stage: $stage, evidence: $evidence, note: $note)';
+    return 'Condition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, clinicalStatus: $clinicalStatus, verificationStatus: $verificationStatus, category: $category, severity: $severity, code: $code, bodySite: $bodySite, subject: $subject, encounter: $encounter, onsetDateTime: $onsetDateTime, onsetDateTimeElement: $onsetDateTimeElement, onsetAge: $onsetAge, onsetPeriod: $onsetPeriod, onsetRange: $onsetRange, onsetString: $onsetString, onsetStringElement: $onsetStringElement, abatementDateTime: $abatementDateTime, abatementDateTimeElement: $abatementDateTimeElement, abatementAge: $abatementAge, abatementPeriod: $abatementPeriod, abatementRange: $abatementRange, abatementString: $abatementString, abatementStringElement: $abatementStringElement, recordedDate: $recordedDate, recordedDateElement: $recordedDateElement, recorder: $recorder, asserter: $asserter, stage: $stage, evidence: $evidence, note: $note)';
   }
 
   @override
@@ -7280,21 +7424,25 @@ class _$_Condition extends _Condition {
             (identical(other.encounter, encounter) ||
                 const DeepCollectionEquality()
                     .equals(other.encounter, encounter)) &&
+            (identical(other.onsetDateTime, onsetDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.onsetDateTime, onsetDateTime)) &&
             (identical(other.onsetDateTimeElement, onsetDateTimeElement) ||
                 const DeepCollectionEquality().equals(
                     other.onsetDateTimeElement, onsetDateTimeElement)) &&
             (identical(other.onsetAge, onsetAge) ||
                 const DeepCollectionEquality()
                     .equals(other.onsetAge, onsetAge)) &&
-            (identical(other.onsetPeriod, onsetPeriod) ||
-                const DeepCollectionEquality()
-                    .equals(other.onsetPeriod, onsetPeriod)) &&
+            (identical(other.onsetPeriod, onsetPeriod) || const DeepCollectionEquality().equals(other.onsetPeriod, onsetPeriod)) &&
             (identical(other.onsetRange, onsetRange) || const DeepCollectionEquality().equals(other.onsetRange, onsetRange)) &&
+            (identical(other.onsetString, onsetString) || const DeepCollectionEquality().equals(other.onsetString, onsetString)) &&
             (identical(other.onsetStringElement, onsetStringElement) || const DeepCollectionEquality().equals(other.onsetStringElement, onsetStringElement)) &&
+            (identical(other.abatementDateTime, abatementDateTime) || const DeepCollectionEquality().equals(other.abatementDateTime, abatementDateTime)) &&
             (identical(other.abatementDateTimeElement, abatementDateTimeElement) || const DeepCollectionEquality().equals(other.abatementDateTimeElement, abatementDateTimeElement)) &&
             (identical(other.abatementAge, abatementAge) || const DeepCollectionEquality().equals(other.abatementAge, abatementAge)) &&
             (identical(other.abatementPeriod, abatementPeriod) || const DeepCollectionEquality().equals(other.abatementPeriod, abatementPeriod)) &&
             (identical(other.abatementRange, abatementRange) || const DeepCollectionEquality().equals(other.abatementRange, abatementRange)) &&
+            (identical(other.abatementString, abatementString) || const DeepCollectionEquality().equals(other.abatementString, abatementString)) &&
             (identical(other.abatementStringElement, abatementStringElement) || const DeepCollectionEquality().equals(other.abatementStringElement, abatementStringElement)) &&
             (identical(other.recordedDate, recordedDate) || const DeepCollectionEquality().equals(other.recordedDate, recordedDate)) &&
             (identical(other.recordedDateElement, recordedDateElement) || const DeepCollectionEquality().equals(other.recordedDateElement, recordedDateElement)) &&
@@ -7328,15 +7476,19 @@ class _$_Condition extends _Condition {
       const DeepCollectionEquality().hash(bodySite) ^
       const DeepCollectionEquality().hash(subject) ^
       const DeepCollectionEquality().hash(encounter) ^
+      const DeepCollectionEquality().hash(onsetDateTime) ^
       const DeepCollectionEquality().hash(onsetDateTimeElement) ^
       const DeepCollectionEquality().hash(onsetAge) ^
       const DeepCollectionEquality().hash(onsetPeriod) ^
       const DeepCollectionEquality().hash(onsetRange) ^
+      const DeepCollectionEquality().hash(onsetString) ^
       const DeepCollectionEquality().hash(onsetStringElement) ^
+      const DeepCollectionEquality().hash(abatementDateTime) ^
       const DeepCollectionEquality().hash(abatementDateTimeElement) ^
       const DeepCollectionEquality().hash(abatementAge) ^
       const DeepCollectionEquality().hash(abatementPeriod) ^
       const DeepCollectionEquality().hash(abatementRange) ^
+      const DeepCollectionEquality().hash(abatementString) ^
       const DeepCollectionEquality().hash(abatementStringElement) ^
       const DeepCollectionEquality().hash(recordedDate) ^
       const DeepCollectionEquality().hash(recordedDateElement) ^
@@ -7379,15 +7531,19 @@ abstract class _Condition extends Condition {
       List<CodeableConcept> bodySite,
       @required Reference subject,
       Reference encounter,
+      FhirDateTime onsetDateTime,
       @JsonKey(name: '_onsetDateTime') Element onsetDateTimeElement,
       Age onsetAge,
       Period onsetPeriod,
       Range onsetRange,
+      String onsetString,
       @JsonKey(name: '_onsetString') Element onsetStringElement,
+      FhirDateTime abatementDateTime,
       @JsonKey(name: '_abatementDateTime') Element abatementDateTimeElement,
       Age abatementAge,
       Period abatementPeriod,
       Range abatementRange,
+      String abatementString,
       @JsonKey(name: '_abatementString') Element abatementStringElement,
       FhirDateTime recordedDate,
       @JsonKey(name: '_recordedDate') Element recordedDateElement,
@@ -7445,6 +7601,8 @@ abstract class _Condition extends Condition {
   @override
   Reference get encounter;
   @override
+  FhirDateTime get onsetDateTime;
+  @override
   @JsonKey(name: '_onsetDateTime')
   Element get onsetDateTimeElement;
   @override
@@ -7454,8 +7612,12 @@ abstract class _Condition extends Condition {
   @override
   Range get onsetRange;
   @override
+  String get onsetString;
+  @override
   @JsonKey(name: '_onsetString')
   Element get onsetStringElement;
+  @override
+  FhirDateTime get abatementDateTime;
   @override
   @JsonKey(name: '_abatementDateTime')
   Element get abatementDateTimeElement;
@@ -7465,6 +7627,8 @@ abstract class _Condition extends Condition {
   Period get abatementPeriod;
   @override
   Range get abatementRange;
+  @override
+  String get abatementString;
   @override
   @JsonKey(name: '_abatementString')
   Element get abatementStringElement;
@@ -8013,6 +8177,7 @@ class _$DetectedIssueTearOff {
       @JsonKey(name: '_severity')
           Element severityElement,
       Reference patient,
+      FhirDateTime identifiedDateTime,
       @JsonKey(name: '_identifiedDateTime')
           Element identifiedDateTimeElement,
       Period identifiedPeriod,
@@ -8045,6 +8210,7 @@ class _$DetectedIssueTearOff {
       severity: severity,
       severityElement: severityElement,
       patient: patient,
+      identifiedDateTime: identifiedDateTime,
       identifiedDateTimeElement: identifiedDateTimeElement,
       identifiedPeriod: identifiedPeriod,
       author: author,
@@ -8088,6 +8254,7 @@ mixin _$DetectedIssue {
   @JsonKey(name: '_severity')
   Element get severityElement;
   Reference get patient;
+  FhirDateTime get identifiedDateTime;
   @JsonKey(name: '_identifiedDateTime')
   Element get identifiedDateTimeElement;
   Period get identifiedPeriod;
@@ -8136,6 +8303,7 @@ abstract class $DetectedIssueCopyWith<$Res> {
       @JsonKey(name: '_severity')
           Element severityElement,
       Reference patient,
+      FhirDateTime identifiedDateTime,
       @JsonKey(name: '_identifiedDateTime')
           Element identifiedDateTimeElement,
       Period identifiedPeriod,
@@ -8193,6 +8361,7 @@ class _$DetectedIssueCopyWithImpl<$Res>
     Object severity = freezed,
     Object severityElement = freezed,
     Object patient = freezed,
+    Object identifiedDateTime = freezed,
     Object identifiedDateTimeElement = freezed,
     Object identifiedPeriod = freezed,
     Object author = freezed,
@@ -8244,6 +8413,9 @@ class _$DetectedIssueCopyWithImpl<$Res>
           ? _value.severityElement
           : severityElement as Element,
       patient: patient == freezed ? _value.patient : patient as Reference,
+      identifiedDateTime: identifiedDateTime == freezed
+          ? _value.identifiedDateTime
+          : identifiedDateTime as FhirDateTime,
       identifiedDateTimeElement: identifiedDateTimeElement == freezed
           ? _value.identifiedDateTimeElement
           : identifiedDateTimeElement as Element,
@@ -8434,6 +8606,7 @@ abstract class _$DetectedIssueCopyWith<$Res>
       @JsonKey(name: '_severity')
           Element severityElement,
       Reference patient,
+      FhirDateTime identifiedDateTime,
       @JsonKey(name: '_identifiedDateTime')
           Element identifiedDateTimeElement,
       Period identifiedPeriod,
@@ -8506,6 +8679,7 @@ class __$DetectedIssueCopyWithImpl<$Res>
     Object severity = freezed,
     Object severityElement = freezed,
     Object patient = freezed,
+    Object identifiedDateTime = freezed,
     Object identifiedDateTimeElement = freezed,
     Object identifiedPeriod = freezed,
     Object author = freezed,
@@ -8557,6 +8731,9 @@ class __$DetectedIssueCopyWithImpl<$Res>
           ? _value.severityElement
           : severityElement as Element,
       patient: patient == freezed ? _value.patient : patient as Reference,
+      identifiedDateTime: identifiedDateTime == freezed
+          ? _value.identifiedDateTime
+          : identifiedDateTime as FhirDateTime,
       identifiedDateTimeElement: identifiedDateTimeElement == freezed
           ? _value.identifiedDateTimeElement
           : identifiedDateTimeElement as Element,
@@ -8606,6 +8783,7 @@ class _$_DetectedIssue extends _DetectedIssue {
       @JsonKey(unknownEnumValue: DetectedIssueSeverity.unknown) this.severity,
       @JsonKey(name: '_severity') this.severityElement,
       this.patient,
+      this.identifiedDateTime,
       @JsonKey(name: '_identifiedDateTime') this.identifiedDateTimeElement,
       this.identifiedPeriod,
       this.author,
@@ -8666,6 +8844,8 @@ class _$_DetectedIssue extends _DetectedIssue {
   @override
   final Reference patient;
   @override
+  final FhirDateTime identifiedDateTime;
+  @override
   @JsonKey(name: '_identifiedDateTime')
   final Element identifiedDateTimeElement;
   @override
@@ -8691,7 +8871,7 @@ class _$_DetectedIssue extends _DetectedIssue {
 
   @override
   String toString() {
-    return 'DetectedIssue(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, code: $code, severity: $severity, severityElement: $severityElement, patient: $patient, identifiedDateTimeElement: $identifiedDateTimeElement, identifiedPeriod: $identifiedPeriod, author: $author, implicated: $implicated, evidence: $evidence, detail: $detail, detailElement: $detailElement, reference: $reference, referenceElement: $referenceElement, mitigation: $mitigation)';
+    return 'DetectedIssue(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, code: $code, severity: $severity, severityElement: $severityElement, patient: $patient, identifiedDateTime: $identifiedDateTime, identifiedDateTimeElement: $identifiedDateTimeElement, identifiedPeriod: $identifiedPeriod, author: $author, implicated: $implicated, evidence: $evidence, detail: $detail, detailElement: $detailElement, reference: $reference, referenceElement: $referenceElement, mitigation: $mitigation)';
   }
 
   @override
@@ -8747,6 +8927,9 @@ class _$_DetectedIssue extends _DetectedIssue {
             (identical(other.patient, patient) ||
                 const DeepCollectionEquality()
                     .equals(other.patient, patient)) &&
+            (identical(other.identifiedDateTime, identifiedDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.identifiedDateTime, identifiedDateTime)) &&
             (identical(other.identifiedDateTimeElement, identifiedDateTimeElement) ||
                 const DeepCollectionEquality().equals(
                     other.identifiedDateTimeElement,
@@ -8760,10 +8943,8 @@ class _$_DetectedIssue extends _DetectedIssue {
                 const DeepCollectionEquality()
                     .equals(other.implicated, implicated)) &&
             (identical(other.evidence, evidence) ||
-                const DeepCollectionEquality()
-                    .equals(other.evidence, evidence)) &&
-            (identical(other.detail, detail) ||
-                const DeepCollectionEquality().equals(other.detail, detail)) &&
+                const DeepCollectionEquality().equals(other.evidence, evidence)) &&
+            (identical(other.detail, detail) || const DeepCollectionEquality().equals(other.detail, detail)) &&
             (identical(other.detailElement, detailElement) || const DeepCollectionEquality().equals(other.detailElement, detailElement)) &&
             (identical(other.reference, reference) || const DeepCollectionEquality().equals(other.reference, reference)) &&
             (identical(other.referenceElement, referenceElement) || const DeepCollectionEquality().equals(other.referenceElement, referenceElement)) &&
@@ -8791,6 +8972,7 @@ class _$_DetectedIssue extends _DetectedIssue {
       const DeepCollectionEquality().hash(severity) ^
       const DeepCollectionEquality().hash(severityElement) ^
       const DeepCollectionEquality().hash(patient) ^
+      const DeepCollectionEquality().hash(identifiedDateTime) ^
       const DeepCollectionEquality().hash(identifiedDateTimeElement) ^
       const DeepCollectionEquality().hash(identifiedPeriod) ^
       const DeepCollectionEquality().hash(author) ^
@@ -8841,6 +9023,7 @@ abstract class _DetectedIssue extends DetectedIssue {
       @JsonKey(name: '_severity')
           Element severityElement,
       Reference patient,
+      FhirDateTime identifiedDateTime,
       @JsonKey(name: '_identifiedDateTime')
           Element identifiedDateTimeElement,
       Period identifiedPeriod,
@@ -8901,6 +9084,8 @@ abstract class _DetectedIssue extends DetectedIssue {
   Element get severityElement;
   @override
   Reference get patient;
+  @override
+  FhirDateTime get identifiedDateTime;
   @override
   @JsonKey(name: '_identifiedDateTime')
   Element get identifiedDateTimeElement;
@@ -9503,23 +9688,29 @@ class _$FamilyMemberHistoryTearOff {
           CodeableConcept relationship,
       CodeableConcept sex,
       Period bornPeriod,
+      Date bornDate,
       @JsonKey(name: '_bornDate')
           Element bornDateElement,
+      String bornString,
       @JsonKey(name: '_bornString')
           Element bornStringElement,
       Age ageAge,
       Range ageRange,
+      String ageString,
       @JsonKey(name: '_ageString')
           Element ageStringElement,
       Boolean estimatedAge,
       @JsonKey(name: '_estimatedAge')
           Element estimatedAgeElement,
+      Boolean deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean')
           Element deceasedBooleanElement,
       Age deceasedAge,
       Range deceasedRange,
+      Date deceasedDate,
       @JsonKey(name: '_deceasedDate')
           Element deceasedDateElement,
+      String deceasedString,
       @JsonKey(name: '_deceasedString')
           Element deceasedStringElement,
       List<CodeableReference> reason,
@@ -9553,17 +9744,23 @@ class _$FamilyMemberHistoryTearOff {
       relationship: relationship,
       sex: sex,
       bornPeriod: bornPeriod,
+      bornDate: bornDate,
       bornDateElement: bornDateElement,
+      bornString: bornString,
       bornStringElement: bornStringElement,
       ageAge: ageAge,
       ageRange: ageRange,
+      ageString: ageString,
       ageStringElement: ageStringElement,
       estimatedAge: estimatedAge,
       estimatedAgeElement: estimatedAgeElement,
+      deceasedBoolean: deceasedBoolean,
       deceasedBooleanElement: deceasedBooleanElement,
       deceasedAge: deceasedAge,
       deceasedRange: deceasedRange,
+      deceasedDate: deceasedDate,
       deceasedDateElement: deceasedDateElement,
+      deceasedString: deceasedString,
       deceasedStringElement: deceasedStringElement,
       reason: reason,
       note: note,
@@ -9612,23 +9809,29 @@ mixin _$FamilyMemberHistory {
   CodeableConcept get relationship;
   CodeableConcept get sex;
   Period get bornPeriod;
+  Date get bornDate;
   @JsonKey(name: '_bornDate')
   Element get bornDateElement;
+  String get bornString;
   @JsonKey(name: '_bornString')
   Element get bornStringElement;
   Age get ageAge;
   Range get ageRange;
+  String get ageString;
   @JsonKey(name: '_ageString')
   Element get ageStringElement;
   Boolean get estimatedAge;
   @JsonKey(name: '_estimatedAge')
   Element get estimatedAgeElement;
+  Boolean get deceasedBoolean;
   @JsonKey(name: '_deceasedBoolean')
   Element get deceasedBooleanElement;
   Age get deceasedAge;
   Range get deceasedRange;
+  Date get deceasedDate;
   @JsonKey(name: '_deceasedDate')
   Element get deceasedDateElement;
+  String get deceasedString;
   @JsonKey(name: '_deceasedString')
   Element get deceasedStringElement;
   List<CodeableReference> get reason;
@@ -9680,23 +9883,29 @@ abstract class $FamilyMemberHistoryCopyWith<$Res> {
       CodeableConcept relationship,
       CodeableConcept sex,
       Period bornPeriod,
+      Date bornDate,
       @JsonKey(name: '_bornDate')
           Element bornDateElement,
+      String bornString,
       @JsonKey(name: '_bornString')
           Element bornStringElement,
       Age ageAge,
       Range ageRange,
+      String ageString,
       @JsonKey(name: '_ageString')
           Element ageStringElement,
       Boolean estimatedAge,
       @JsonKey(name: '_estimatedAge')
           Element estimatedAgeElement,
+      Boolean deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean')
           Element deceasedBooleanElement,
       Age deceasedAge,
       Range deceasedRange,
+      Date deceasedDate,
       @JsonKey(name: '_deceasedDate')
           Element deceasedDateElement,
+      String deceasedString,
       @JsonKey(name: '_deceasedString')
           Element deceasedStringElement,
       List<CodeableReference> reason,
@@ -9766,17 +9975,23 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res>
     Object relationship = freezed,
     Object sex = freezed,
     Object bornPeriod = freezed,
+    Object bornDate = freezed,
     Object bornDateElement = freezed,
+    Object bornString = freezed,
     Object bornStringElement = freezed,
     Object ageAge = freezed,
     Object ageRange = freezed,
+    Object ageString = freezed,
     Object ageStringElement = freezed,
     Object estimatedAge = freezed,
     Object estimatedAgeElement = freezed,
+    Object deceasedBoolean = freezed,
     Object deceasedBooleanElement = freezed,
     Object deceasedAge = freezed,
     Object deceasedRange = freezed,
+    Object deceasedDate = freezed,
     Object deceasedDateElement = freezed,
+    Object deceasedString = freezed,
     Object deceasedStringElement = freezed,
     Object reason = freezed,
     Object note = freezed,
@@ -9842,14 +10057,18 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res>
       sex: sex == freezed ? _value.sex : sex as CodeableConcept,
       bornPeriod:
           bornPeriod == freezed ? _value.bornPeriod : bornPeriod as Period,
+      bornDate: bornDate == freezed ? _value.bornDate : bornDate as Date,
       bornDateElement: bornDateElement == freezed
           ? _value.bornDateElement
           : bornDateElement as Element,
+      bornString:
+          bornString == freezed ? _value.bornString : bornString as String,
       bornStringElement: bornStringElement == freezed
           ? _value.bornStringElement
           : bornStringElement as Element,
       ageAge: ageAge == freezed ? _value.ageAge : ageAge as Age,
       ageRange: ageRange == freezed ? _value.ageRange : ageRange as Range,
+      ageString: ageString == freezed ? _value.ageString : ageString as String,
       ageStringElement: ageStringElement == freezed
           ? _value.ageStringElement
           : ageStringElement as Element,
@@ -9859,6 +10078,9 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res>
       estimatedAgeElement: estimatedAgeElement == freezed
           ? _value.estimatedAgeElement
           : estimatedAgeElement as Element,
+      deceasedBoolean: deceasedBoolean == freezed
+          ? _value.deceasedBoolean
+          : deceasedBoolean as Boolean,
       deceasedBooleanElement: deceasedBooleanElement == freezed
           ? _value.deceasedBooleanElement
           : deceasedBooleanElement as Element,
@@ -9867,9 +10089,14 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res>
       deceasedRange: deceasedRange == freezed
           ? _value.deceasedRange
           : deceasedRange as Range,
+      deceasedDate:
+          deceasedDate == freezed ? _value.deceasedDate : deceasedDate as Date,
       deceasedDateElement: deceasedDateElement == freezed
           ? _value.deceasedDateElement
           : deceasedDateElement as Element,
+      deceasedString: deceasedString == freezed
+          ? _value.deceasedString
+          : deceasedString as String,
       deceasedStringElement: deceasedStringElement == freezed
           ? _value.deceasedStringElement
           : deceasedStringElement as Element,
@@ -10168,23 +10395,29 @@ abstract class _$FamilyMemberHistoryCopyWith<$Res>
       CodeableConcept relationship,
       CodeableConcept sex,
       Period bornPeriod,
+      Date bornDate,
       @JsonKey(name: '_bornDate')
           Element bornDateElement,
+      String bornString,
       @JsonKey(name: '_bornString')
           Element bornStringElement,
       Age ageAge,
       Range ageRange,
+      String ageString,
       @JsonKey(name: '_ageString')
           Element ageStringElement,
       Boolean estimatedAge,
       @JsonKey(name: '_estimatedAge')
           Element estimatedAgeElement,
+      Boolean deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean')
           Element deceasedBooleanElement,
       Age deceasedAge,
       Range deceasedRange,
+      Date deceasedDate,
       @JsonKey(name: '_deceasedDate')
           Element deceasedDateElement,
+      String deceasedString,
       @JsonKey(name: '_deceasedString')
           Element deceasedStringElement,
       List<CodeableReference> reason,
@@ -10280,17 +10513,23 @@ class __$FamilyMemberHistoryCopyWithImpl<$Res>
     Object relationship = freezed,
     Object sex = freezed,
     Object bornPeriod = freezed,
+    Object bornDate = freezed,
     Object bornDateElement = freezed,
+    Object bornString = freezed,
     Object bornStringElement = freezed,
     Object ageAge = freezed,
     Object ageRange = freezed,
+    Object ageString = freezed,
     Object ageStringElement = freezed,
     Object estimatedAge = freezed,
     Object estimatedAgeElement = freezed,
+    Object deceasedBoolean = freezed,
     Object deceasedBooleanElement = freezed,
     Object deceasedAge = freezed,
     Object deceasedRange = freezed,
+    Object deceasedDate = freezed,
     Object deceasedDateElement = freezed,
+    Object deceasedString = freezed,
     Object deceasedStringElement = freezed,
     Object reason = freezed,
     Object note = freezed,
@@ -10356,14 +10595,18 @@ class __$FamilyMemberHistoryCopyWithImpl<$Res>
       sex: sex == freezed ? _value.sex : sex as CodeableConcept,
       bornPeriod:
           bornPeriod == freezed ? _value.bornPeriod : bornPeriod as Period,
+      bornDate: bornDate == freezed ? _value.bornDate : bornDate as Date,
       bornDateElement: bornDateElement == freezed
           ? _value.bornDateElement
           : bornDateElement as Element,
+      bornString:
+          bornString == freezed ? _value.bornString : bornString as String,
       bornStringElement: bornStringElement == freezed
           ? _value.bornStringElement
           : bornStringElement as Element,
       ageAge: ageAge == freezed ? _value.ageAge : ageAge as Age,
       ageRange: ageRange == freezed ? _value.ageRange : ageRange as Range,
+      ageString: ageString == freezed ? _value.ageString : ageString as String,
       ageStringElement: ageStringElement == freezed
           ? _value.ageStringElement
           : ageStringElement as Element,
@@ -10373,6 +10616,9 @@ class __$FamilyMemberHistoryCopyWithImpl<$Res>
       estimatedAgeElement: estimatedAgeElement == freezed
           ? _value.estimatedAgeElement
           : estimatedAgeElement as Element,
+      deceasedBoolean: deceasedBoolean == freezed
+          ? _value.deceasedBoolean
+          : deceasedBoolean as Boolean,
       deceasedBooleanElement: deceasedBooleanElement == freezed
           ? _value.deceasedBooleanElement
           : deceasedBooleanElement as Element,
@@ -10381,9 +10627,14 @@ class __$FamilyMemberHistoryCopyWithImpl<$Res>
       deceasedRange: deceasedRange == freezed
           ? _value.deceasedRange
           : deceasedRange as Range,
+      deceasedDate:
+          deceasedDate == freezed ? _value.deceasedDate : deceasedDate as Date,
       deceasedDateElement: deceasedDateElement == freezed
           ? _value.deceasedDateElement
           : deceasedDateElement as Element,
+      deceasedString: deceasedString == freezed
+          ? _value.deceasedString
+          : deceasedString as String,
       deceasedStringElement: deceasedStringElement == freezed
           ? _value.deceasedStringElement
           : deceasedStringElement as Element,
@@ -10429,17 +10680,23 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
       @required this.relationship,
       this.sex,
       this.bornPeriod,
+      this.bornDate,
       @JsonKey(name: '_bornDate') this.bornDateElement,
+      this.bornString,
       @JsonKey(name: '_bornString') this.bornStringElement,
       this.ageAge,
       this.ageRange,
+      this.ageString,
       @JsonKey(name: '_ageString') this.ageStringElement,
       this.estimatedAge,
       @JsonKey(name: '_estimatedAge') this.estimatedAgeElement,
+      this.deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean') this.deceasedBooleanElement,
       this.deceasedAge,
       this.deceasedRange,
+      this.deceasedDate,
       @JsonKey(name: '_deceasedDate') this.deceasedDateElement,
+      this.deceasedString,
       @JsonKey(name: '_deceasedString') this.deceasedStringElement,
       this.reason,
       this.note,
@@ -10515,8 +10772,12 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
   @override
   final Period bornPeriod;
   @override
+  final Date bornDate;
+  @override
   @JsonKey(name: '_bornDate')
   final Element bornDateElement;
+  @override
+  final String bornString;
   @override
   @JsonKey(name: '_bornString')
   final Element bornStringElement;
@@ -10524,6 +10785,8 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
   final Age ageAge;
   @override
   final Range ageRange;
+  @override
+  final String ageString;
   @override
   @JsonKey(name: '_ageString')
   final Element ageStringElement;
@@ -10533,6 +10796,8 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
   @JsonKey(name: '_estimatedAge')
   final Element estimatedAgeElement;
   @override
+  final Boolean deceasedBoolean;
+  @override
   @JsonKey(name: '_deceasedBoolean')
   final Element deceasedBooleanElement;
   @override
@@ -10540,8 +10805,12 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
   @override
   final Range deceasedRange;
   @override
+  final Date deceasedDate;
+  @override
   @JsonKey(name: '_deceasedDate')
   final Element deceasedDateElement;
+  @override
+  final String deceasedString;
   @override
   @JsonKey(name: '_deceasedString')
   final Element deceasedStringElement;
@@ -10556,7 +10825,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
 
   @override
   String toString() {
-    return 'FamilyMemberHistory(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, instantiatesUriElement: $instantiatesUriElement, status: $status, statusElement: $statusElement, dataAbsentReason: $dataAbsentReason, patient: $patient, date: $date, dateElement: $dateElement, name: $name, nameElement: $nameElement, relationship: $relationship, sex: $sex, bornPeriod: $bornPeriod, bornDateElement: $bornDateElement, bornStringElement: $bornStringElement, ageAge: $ageAge, ageRange: $ageRange, ageStringElement: $ageStringElement, estimatedAge: $estimatedAge, estimatedAgeElement: $estimatedAgeElement, deceasedBooleanElement: $deceasedBooleanElement, deceasedAge: $deceasedAge, deceasedRange: $deceasedRange, deceasedDateElement: $deceasedDateElement, deceasedStringElement: $deceasedStringElement, reason: $reason, note: $note, condition: $condition, procedure: $procedure)';
+    return 'FamilyMemberHistory(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, instantiatesUriElement: $instantiatesUriElement, status: $status, statusElement: $statusElement, dataAbsentReason: $dataAbsentReason, patient: $patient, date: $date, dateElement: $dateElement, name: $name, nameElement: $nameElement, relationship: $relationship, sex: $sex, bornPeriod: $bornPeriod, bornDate: $bornDate, bornDateElement: $bornDateElement, bornString: $bornString, bornStringElement: $bornStringElement, ageAge: $ageAge, ageRange: $ageRange, ageString: $ageString, ageStringElement: $ageStringElement, estimatedAge: $estimatedAge, estimatedAgeElement: $estimatedAgeElement, deceasedBoolean: $deceasedBoolean, deceasedBooleanElement: $deceasedBooleanElement, deceasedAge: $deceasedAge, deceasedRange: $deceasedRange, deceasedDate: $deceasedDate, deceasedDateElement: $deceasedDateElement, deceasedString: $deceasedString, deceasedStringElement: $deceasedStringElement, reason: $reason, note: $note, condition: $condition, procedure: $procedure)';
   }
 
   @override
@@ -10631,17 +10900,23 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
                     .equals(other.relationship, relationship)) &&
             (identical(other.sex, sex) || const DeepCollectionEquality().equals(other.sex, sex)) &&
             (identical(other.bornPeriod, bornPeriod) || const DeepCollectionEquality().equals(other.bornPeriod, bornPeriod)) &&
+            (identical(other.bornDate, bornDate) || const DeepCollectionEquality().equals(other.bornDate, bornDate)) &&
             (identical(other.bornDateElement, bornDateElement) || const DeepCollectionEquality().equals(other.bornDateElement, bornDateElement)) &&
+            (identical(other.bornString, bornString) || const DeepCollectionEquality().equals(other.bornString, bornString)) &&
             (identical(other.bornStringElement, bornStringElement) || const DeepCollectionEquality().equals(other.bornStringElement, bornStringElement)) &&
             (identical(other.ageAge, ageAge) || const DeepCollectionEquality().equals(other.ageAge, ageAge)) &&
             (identical(other.ageRange, ageRange) || const DeepCollectionEquality().equals(other.ageRange, ageRange)) &&
+            (identical(other.ageString, ageString) || const DeepCollectionEquality().equals(other.ageString, ageString)) &&
             (identical(other.ageStringElement, ageStringElement) || const DeepCollectionEquality().equals(other.ageStringElement, ageStringElement)) &&
             (identical(other.estimatedAge, estimatedAge) || const DeepCollectionEquality().equals(other.estimatedAge, estimatedAge)) &&
             (identical(other.estimatedAgeElement, estimatedAgeElement) || const DeepCollectionEquality().equals(other.estimatedAgeElement, estimatedAgeElement)) &&
+            (identical(other.deceasedBoolean, deceasedBoolean) || const DeepCollectionEquality().equals(other.deceasedBoolean, deceasedBoolean)) &&
             (identical(other.deceasedBooleanElement, deceasedBooleanElement) || const DeepCollectionEquality().equals(other.deceasedBooleanElement, deceasedBooleanElement)) &&
             (identical(other.deceasedAge, deceasedAge) || const DeepCollectionEquality().equals(other.deceasedAge, deceasedAge)) &&
             (identical(other.deceasedRange, deceasedRange) || const DeepCollectionEquality().equals(other.deceasedRange, deceasedRange)) &&
+            (identical(other.deceasedDate, deceasedDate) || const DeepCollectionEquality().equals(other.deceasedDate, deceasedDate)) &&
             (identical(other.deceasedDateElement, deceasedDateElement) || const DeepCollectionEquality().equals(other.deceasedDateElement, deceasedDateElement)) &&
+            (identical(other.deceasedString, deceasedString) || const DeepCollectionEquality().equals(other.deceasedString, deceasedString)) &&
             (identical(other.deceasedStringElement, deceasedStringElement) || const DeepCollectionEquality().equals(other.deceasedStringElement, deceasedStringElement)) &&
             (identical(other.reason, reason) || const DeepCollectionEquality().equals(other.reason, reason)) &&
             (identical(other.note, note) || const DeepCollectionEquality().equals(other.note, note)) &&
@@ -10678,17 +10953,23 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
       const DeepCollectionEquality().hash(relationship) ^
       const DeepCollectionEquality().hash(sex) ^
       const DeepCollectionEquality().hash(bornPeriod) ^
+      const DeepCollectionEquality().hash(bornDate) ^
       const DeepCollectionEquality().hash(bornDateElement) ^
+      const DeepCollectionEquality().hash(bornString) ^
       const DeepCollectionEquality().hash(bornStringElement) ^
       const DeepCollectionEquality().hash(ageAge) ^
       const DeepCollectionEquality().hash(ageRange) ^
+      const DeepCollectionEquality().hash(ageString) ^
       const DeepCollectionEquality().hash(ageStringElement) ^
       const DeepCollectionEquality().hash(estimatedAge) ^
       const DeepCollectionEquality().hash(estimatedAgeElement) ^
+      const DeepCollectionEquality().hash(deceasedBoolean) ^
       const DeepCollectionEquality().hash(deceasedBooleanElement) ^
       const DeepCollectionEquality().hash(deceasedAge) ^
       const DeepCollectionEquality().hash(deceasedRange) ^
+      const DeepCollectionEquality().hash(deceasedDate) ^
       const DeepCollectionEquality().hash(deceasedDateElement) ^
+      const DeepCollectionEquality().hash(deceasedString) ^
       const DeepCollectionEquality().hash(deceasedStringElement) ^
       const DeepCollectionEquality().hash(reason) ^
       const DeepCollectionEquality().hash(note) ^
@@ -10747,23 +11028,29 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
           CodeableConcept relationship,
       CodeableConcept sex,
       Period bornPeriod,
+      Date bornDate,
       @JsonKey(name: '_bornDate')
           Element bornDateElement,
+      String bornString,
       @JsonKey(name: '_bornString')
           Element bornStringElement,
       Age ageAge,
       Range ageRange,
+      String ageString,
       @JsonKey(name: '_ageString')
           Element ageStringElement,
       Boolean estimatedAge,
       @JsonKey(name: '_estimatedAge')
           Element estimatedAgeElement,
+      Boolean deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean')
           Element deceasedBooleanElement,
       Age deceasedAge,
       Range deceasedRange,
+      Date deceasedDate,
       @JsonKey(name: '_deceasedDate')
           Element deceasedDateElement,
+      String deceasedString,
       @JsonKey(name: '_deceasedString')
           Element deceasedStringElement,
       List<CodeableReference> reason,
@@ -10836,8 +11123,12 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
   @override
   Period get bornPeriod;
   @override
+  Date get bornDate;
+  @override
   @JsonKey(name: '_bornDate')
   Element get bornDateElement;
+  @override
+  String get bornString;
   @override
   @JsonKey(name: '_bornString')
   Element get bornStringElement;
@@ -10845,6 +11136,8 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
   Age get ageAge;
   @override
   Range get ageRange;
+  @override
+  String get ageString;
   @override
   @JsonKey(name: '_ageString')
   Element get ageStringElement;
@@ -10854,6 +11147,8 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
   @JsonKey(name: '_estimatedAge')
   Element get estimatedAgeElement;
   @override
+  Boolean get deceasedBoolean;
+  @override
   @JsonKey(name: '_deceasedBoolean')
   Element get deceasedBooleanElement;
   @override
@@ -10861,8 +11156,12 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
   @override
   Range get deceasedRange;
   @override
+  Date get deceasedDate;
+  @override
   @JsonKey(name: '_deceasedDate')
   Element get deceasedDateElement;
+  @override
+  String get deceasedString;
   @override
   @JsonKey(name: '_deceasedString')
   Element get deceasedStringElement;
@@ -10897,6 +11196,7 @@ class _$FamilyMemberHistoryConditionTearOff {
       Age onsetAge,
       Range onsetRange,
       Period onsetPeriod,
+      String onsetString,
       @JsonKey(name: '_onsetString') Element onsetStringElement,
       List<Annotation> note}) {
     return _FamilyMemberHistoryCondition(
@@ -10910,6 +11210,7 @@ class _$FamilyMemberHistoryConditionTearOff {
       onsetAge: onsetAge,
       onsetRange: onsetRange,
       onsetPeriod: onsetPeriod,
+      onsetString: onsetString,
       onsetStringElement: onsetStringElement,
       note: note,
     );
@@ -10932,6 +11233,7 @@ mixin _$FamilyMemberHistoryCondition {
   Age get onsetAge;
   Range get onsetRange;
   Period get onsetPeriod;
+  String get onsetString;
   @JsonKey(name: '_onsetString')
   Element get onsetStringElement;
   List<Annotation> get note;
@@ -10957,6 +11259,7 @@ abstract class $FamilyMemberHistoryConditionCopyWith<$Res> {
       Age onsetAge,
       Range onsetRange,
       Period onsetPeriod,
+      String onsetString,
       @JsonKey(name: '_onsetString') Element onsetStringElement,
       List<Annotation> note});
 
@@ -10989,6 +11292,7 @@ class _$FamilyMemberHistoryConditionCopyWithImpl<$Res>
     Object onsetAge = freezed,
     Object onsetRange = freezed,
     Object onsetPeriod = freezed,
+    Object onsetString = freezed,
     Object onsetStringElement = freezed,
     Object note = freezed,
   }) {
@@ -11013,6 +11317,8 @@ class _$FamilyMemberHistoryConditionCopyWithImpl<$Res>
           onsetRange == freezed ? _value.onsetRange : onsetRange as Range,
       onsetPeriod:
           onsetPeriod == freezed ? _value.onsetPeriod : onsetPeriod as Period,
+      onsetString:
+          onsetString == freezed ? _value.onsetString : onsetString as String,
       onsetStringElement: onsetStringElement == freezed
           ? _value.onsetStringElement
           : onsetStringElement as Element,
@@ -11109,6 +11415,7 @@ abstract class _$FamilyMemberHistoryConditionCopyWith<$Res>
       Age onsetAge,
       Range onsetRange,
       Period onsetPeriod,
+      String onsetString,
       @JsonKey(name: '_onsetString') Element onsetStringElement,
       List<Annotation> note});
 
@@ -11152,6 +11459,7 @@ class __$FamilyMemberHistoryConditionCopyWithImpl<$Res>
     Object onsetAge = freezed,
     Object onsetRange = freezed,
     Object onsetPeriod = freezed,
+    Object onsetString = freezed,
     Object onsetStringElement = freezed,
     Object note = freezed,
   }) {
@@ -11176,6 +11484,8 @@ class __$FamilyMemberHistoryConditionCopyWithImpl<$Res>
           onsetRange == freezed ? _value.onsetRange : onsetRange as Range,
       onsetPeriod:
           onsetPeriod == freezed ? _value.onsetPeriod : onsetPeriod as Period,
+      onsetString:
+          onsetString == freezed ? _value.onsetString : onsetString as String,
       onsetStringElement: onsetStringElement == freezed
           ? _value.onsetStringElement
           : onsetStringElement as Element,
@@ -11197,6 +11507,7 @@ class _$_FamilyMemberHistoryCondition extends _FamilyMemberHistoryCondition {
       this.onsetAge,
       this.onsetRange,
       this.onsetPeriod,
+      this.onsetString,
       @JsonKey(name: '_onsetString') this.onsetStringElement,
       this.note})
       : assert(code != null),
@@ -11228,6 +11539,8 @@ class _$_FamilyMemberHistoryCondition extends _FamilyMemberHistoryCondition {
   @override
   final Period onsetPeriod;
   @override
+  final String onsetString;
+  @override
   @JsonKey(name: '_onsetString')
   final Element onsetStringElement;
   @override
@@ -11235,7 +11548,7 @@ class _$_FamilyMemberHistoryCondition extends _FamilyMemberHistoryCondition {
 
   @override
   String toString() {
-    return 'FamilyMemberHistoryCondition(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, outcome: $outcome, contributedToDeath: $contributedToDeath, contributedToDeathElement: $contributedToDeathElement, onsetAge: $onsetAge, onsetRange: $onsetRange, onsetPeriod: $onsetPeriod, onsetStringElement: $onsetStringElement, note: $note)';
+    return 'FamilyMemberHistoryCondition(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, outcome: $outcome, contributedToDeath: $contributedToDeath, contributedToDeathElement: $contributedToDeathElement, onsetAge: $onsetAge, onsetRange: $onsetRange, onsetPeriod: $onsetPeriod, onsetString: $onsetString, onsetStringElement: $onsetStringElement, note: $note)';
   }
 
   @override
@@ -11272,6 +11585,9 @@ class _$_FamilyMemberHistoryCondition extends _FamilyMemberHistoryCondition {
             (identical(other.onsetPeriod, onsetPeriod) ||
                 const DeepCollectionEquality()
                     .equals(other.onsetPeriod, onsetPeriod)) &&
+            (identical(other.onsetString, onsetString) ||
+                const DeepCollectionEquality()
+                    .equals(other.onsetString, onsetString)) &&
             (identical(other.onsetStringElement, onsetStringElement) ||
                 const DeepCollectionEquality()
                     .equals(other.onsetStringElement, onsetStringElement)) &&
@@ -11292,6 +11608,7 @@ class _$_FamilyMemberHistoryCondition extends _FamilyMemberHistoryCondition {
       const DeepCollectionEquality().hash(onsetAge) ^
       const DeepCollectionEquality().hash(onsetRange) ^
       const DeepCollectionEquality().hash(onsetPeriod) ^
+      const DeepCollectionEquality().hash(onsetString) ^
       const DeepCollectionEquality().hash(onsetStringElement) ^
       const DeepCollectionEquality().hash(note);
 
@@ -11320,6 +11637,7 @@ abstract class _FamilyMemberHistoryCondition
       Age onsetAge,
       Range onsetRange,
       Period onsetPeriod,
+      String onsetString,
       @JsonKey(name: '_onsetString') Element onsetStringElement,
       List<Annotation> note}) = _$_FamilyMemberHistoryCondition;
 
@@ -11349,6 +11667,8 @@ abstract class _FamilyMemberHistoryCondition
   @override
   Period get onsetPeriod;
   @override
+  String get onsetString;
+  @override
   @JsonKey(name: '_onsetString')
   Element get onsetStringElement;
   @override
@@ -11377,7 +11697,9 @@ class _$FamilyMemberHistoryProcedureTearOff {
       Age performedAge,
       Range performedRange,
       Period performedPeriod,
+      String performedString,
       @JsonKey(name: '_performedString') Element performedStringElement,
+      FhirDateTime performedDateTime,
       @JsonKey(name: '_performedDateTime') Element performedDateTimeElement,
       List<Annotation> note}) {
     return _FamilyMemberHistoryProcedure(
@@ -11391,7 +11713,9 @@ class _$FamilyMemberHistoryProcedureTearOff {
       performedAge: performedAge,
       performedRange: performedRange,
       performedPeriod: performedPeriod,
+      performedString: performedString,
       performedStringElement: performedStringElement,
+      performedDateTime: performedDateTime,
       performedDateTimeElement: performedDateTimeElement,
       note: note,
     );
@@ -11414,8 +11738,10 @@ mixin _$FamilyMemberHistoryProcedure {
   Age get performedAge;
   Range get performedRange;
   Period get performedPeriod;
+  String get performedString;
   @JsonKey(name: '_performedString')
   Element get performedStringElement;
+  FhirDateTime get performedDateTime;
   @JsonKey(name: '_performedDateTime')
   Element get performedDateTimeElement;
   List<Annotation> get note;
@@ -11441,7 +11767,9 @@ abstract class $FamilyMemberHistoryProcedureCopyWith<$Res> {
       Age performedAge,
       Range performedRange,
       Period performedPeriod,
+      String performedString,
       @JsonKey(name: '_performedString') Element performedStringElement,
+      FhirDateTime performedDateTime,
       @JsonKey(name: '_performedDateTime') Element performedDateTimeElement,
       List<Annotation> note});
 
@@ -11475,7 +11803,9 @@ class _$FamilyMemberHistoryProcedureCopyWithImpl<$Res>
     Object performedAge = freezed,
     Object performedRange = freezed,
     Object performedPeriod = freezed,
+    Object performedString = freezed,
     Object performedStringElement = freezed,
+    Object performedDateTime = freezed,
     Object performedDateTimeElement = freezed,
     Object note = freezed,
   }) {
@@ -11503,9 +11833,15 @@ class _$FamilyMemberHistoryProcedureCopyWithImpl<$Res>
       performedPeriod: performedPeriod == freezed
           ? _value.performedPeriod
           : performedPeriod as Period,
+      performedString: performedString == freezed
+          ? _value.performedString
+          : performedString as String,
       performedStringElement: performedStringElement == freezed
           ? _value.performedStringElement
           : performedStringElement as Element,
+      performedDateTime: performedDateTime == freezed
+          ? _value.performedDateTime
+          : performedDateTime as FhirDateTime,
       performedDateTimeElement: performedDateTimeElement == freezed
           ? _value.performedDateTimeElement
           : performedDateTimeElement as Element,
@@ -11612,7 +11948,9 @@ abstract class _$FamilyMemberHistoryProcedureCopyWith<$Res>
       Age performedAge,
       Range performedRange,
       Period performedPeriod,
+      String performedString,
       @JsonKey(name: '_performedString') Element performedStringElement,
+      FhirDateTime performedDateTime,
       @JsonKey(name: '_performedDateTime') Element performedDateTimeElement,
       List<Annotation> note});
 
@@ -11658,7 +11996,9 @@ class __$FamilyMemberHistoryProcedureCopyWithImpl<$Res>
     Object performedAge = freezed,
     Object performedRange = freezed,
     Object performedPeriod = freezed,
+    Object performedString = freezed,
     Object performedStringElement = freezed,
+    Object performedDateTime = freezed,
     Object performedDateTimeElement = freezed,
     Object note = freezed,
   }) {
@@ -11686,9 +12026,15 @@ class __$FamilyMemberHistoryProcedureCopyWithImpl<$Res>
       performedPeriod: performedPeriod == freezed
           ? _value.performedPeriod
           : performedPeriod as Period,
+      performedString: performedString == freezed
+          ? _value.performedString
+          : performedString as String,
       performedStringElement: performedStringElement == freezed
           ? _value.performedStringElement
           : performedStringElement as Element,
+      performedDateTime: performedDateTime == freezed
+          ? _value.performedDateTime
+          : performedDateTime as FhirDateTime,
       performedDateTimeElement: performedDateTimeElement == freezed
           ? _value.performedDateTimeElement
           : performedDateTimeElement as Element,
@@ -11710,7 +12056,9 @@ class _$_FamilyMemberHistoryProcedure extends _FamilyMemberHistoryProcedure {
       this.performedAge,
       this.performedRange,
       this.performedPeriod,
+      this.performedString,
       @JsonKey(name: '_performedString') this.performedStringElement,
+      this.performedDateTime,
       @JsonKey(name: '_performedDateTime') this.performedDateTimeElement,
       this.note})
       : assert(code != null),
@@ -11742,8 +12090,12 @@ class _$_FamilyMemberHistoryProcedure extends _FamilyMemberHistoryProcedure {
   @override
   final Period performedPeriod;
   @override
+  final String performedString;
+  @override
   @JsonKey(name: '_performedString')
   final Element performedStringElement;
+  @override
+  final FhirDateTime performedDateTime;
   @override
   @JsonKey(name: '_performedDateTime')
   final Element performedDateTimeElement;
@@ -11752,7 +12104,7 @@ class _$_FamilyMemberHistoryProcedure extends _FamilyMemberHistoryProcedure {
 
   @override
   String toString() {
-    return 'FamilyMemberHistoryProcedure(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, outcome: $outcome, contributedToDeath: $contributedToDeath, contributedToDeathElement: $contributedToDeathElement, performedAge: $performedAge, performedRange: $performedRange, performedPeriod: $performedPeriod, performedStringElement: $performedStringElement, performedDateTimeElement: $performedDateTimeElement, note: $note)';
+    return 'FamilyMemberHistoryProcedure(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, outcome: $outcome, contributedToDeath: $contributedToDeath, contributedToDeathElement: $contributedToDeathElement, performedAge: $performedAge, performedRange: $performedRange, performedPeriod: $performedPeriod, performedString: $performedString, performedStringElement: $performedStringElement, performedDateTime: $performedDateTime, performedDateTimeElement: $performedDateTimeElement, note: $note)';
   }
 
   @override
@@ -11789,9 +12141,15 @@ class _$_FamilyMemberHistoryProcedure extends _FamilyMemberHistoryProcedure {
             (identical(other.performedPeriod, performedPeriod) ||
                 const DeepCollectionEquality()
                     .equals(other.performedPeriod, performedPeriod)) &&
+            (identical(other.performedString, performedString) ||
+                const DeepCollectionEquality()
+                    .equals(other.performedString, performedString)) &&
             (identical(other.performedStringElement, performedStringElement) ||
                 const DeepCollectionEquality().equals(
                     other.performedStringElement, performedStringElement)) &&
+            (identical(other.performedDateTime, performedDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.performedDateTime, performedDateTime)) &&
             (identical(
                     other.performedDateTimeElement, performedDateTimeElement) ||
                 const DeepCollectionEquality().equals(
@@ -11814,7 +12172,9 @@ class _$_FamilyMemberHistoryProcedure extends _FamilyMemberHistoryProcedure {
       const DeepCollectionEquality().hash(performedAge) ^
       const DeepCollectionEquality().hash(performedRange) ^
       const DeepCollectionEquality().hash(performedPeriod) ^
+      const DeepCollectionEquality().hash(performedString) ^
       const DeepCollectionEquality().hash(performedStringElement) ^
+      const DeepCollectionEquality().hash(performedDateTime) ^
       const DeepCollectionEquality().hash(performedDateTimeElement) ^
       const DeepCollectionEquality().hash(note);
 
@@ -11843,7 +12203,9 @@ abstract class _FamilyMemberHistoryProcedure
       Age performedAge,
       Range performedRange,
       Period performedPeriod,
+      String performedString,
       @JsonKey(name: '_performedString') Element performedStringElement,
+      FhirDateTime performedDateTime,
       @JsonKey(name: '_performedDateTime') Element performedDateTimeElement,
       List<Annotation> note}) = _$_FamilyMemberHistoryProcedure;
 
@@ -11873,8 +12235,12 @@ abstract class _FamilyMemberHistoryProcedure
   @override
   Period get performedPeriod;
   @override
+  String get performedString;
+  @override
   @JsonKey(name: '_performedString')
   Element get performedStringElement;
+  @override
+  FhirDateTime get performedDateTime;
   @override
   @JsonKey(name: '_performedDateTime')
   Element get performedDateTimeElement;
@@ -11917,8 +12283,10 @@ class _$ProcedureTearOff {
       CodeableConcept code,
       @required Reference subject,
       Reference encounter,
+      FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
       Period occurrencePeriod,
+      String occurrenceString,
       @JsonKey(name: '_occurrenceString') Element occurrenceStringElement,
       Age occurrenceAge,
       Range occurrenceRange,
@@ -11926,6 +12294,7 @@ class _$ProcedureTearOff {
       FhirDateTime recorded,
       @JsonKey(name: '_recorded') Element recordedElement,
       Reference recorder,
+      Boolean reportedBoolean,
       @JsonKey(name: '_reportedBoolean') Element reportedBooleanElement,
       Reference reportedReference,
       List<ProcedurePerformer> performer,
@@ -11965,8 +12334,10 @@ class _$ProcedureTearOff {
       code: code,
       subject: subject,
       encounter: encounter,
+      occurrenceDateTime: occurrenceDateTime,
       occurrenceDateTimeElement: occurrenceDateTimeElement,
       occurrencePeriod: occurrencePeriod,
+      occurrenceString: occurrenceString,
       occurrenceStringElement: occurrenceStringElement,
       occurrenceAge: occurrenceAge,
       occurrenceRange: occurrenceRange,
@@ -11974,6 +12345,7 @@ class _$ProcedureTearOff {
       recorded: recorded,
       recordedElement: recordedElement,
       recorder: recorder,
+      reportedBoolean: reportedBoolean,
       reportedBooleanElement: reportedBooleanElement,
       reportedReference: reportedReference,
       performer: performer,
@@ -12026,9 +12398,11 @@ mixin _$Procedure {
   CodeableConcept get code;
   Reference get subject;
   Reference get encounter;
+  FhirDateTime get occurrenceDateTime;
   @JsonKey(name: '_occurrenceDateTime')
   Element get occurrenceDateTimeElement;
   Period get occurrencePeriod;
+  String get occurrenceString;
   @JsonKey(name: '_occurrenceString')
   Element get occurrenceStringElement;
   Age get occurrenceAge;
@@ -12038,6 +12412,7 @@ mixin _$Procedure {
   @JsonKey(name: '_recorded')
   Element get recordedElement;
   Reference get recorder;
+  Boolean get reportedBoolean;
   @JsonKey(name: '_reportedBoolean')
   Element get reportedBooleanElement;
   Reference get reportedReference;
@@ -12086,8 +12461,10 @@ abstract class $ProcedureCopyWith<$Res> {
       CodeableConcept code,
       Reference subject,
       Reference encounter,
+      FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
       Period occurrencePeriod,
+      String occurrenceString,
       @JsonKey(name: '_occurrenceString') Element occurrenceStringElement,
       Age occurrenceAge,
       Range occurrenceRange,
@@ -12095,6 +12472,7 @@ abstract class $ProcedureCopyWith<$Res> {
       FhirDateTime recorded,
       @JsonKey(name: '_recorded') Element recordedElement,
       Reference recorder,
+      Boolean reportedBoolean,
       @JsonKey(name: '_reportedBoolean') Element reportedBooleanElement,
       Reference reportedReference,
       List<ProcedurePerformer> performer,
@@ -12167,8 +12545,10 @@ class _$ProcedureCopyWithImpl<$Res> implements $ProcedureCopyWith<$Res> {
     Object code = freezed,
     Object subject = freezed,
     Object encounter = freezed,
+    Object occurrenceDateTime = freezed,
     Object occurrenceDateTimeElement = freezed,
     Object occurrencePeriod = freezed,
+    Object occurrenceString = freezed,
     Object occurrenceStringElement = freezed,
     Object occurrenceAge = freezed,
     Object occurrenceRange = freezed,
@@ -12176,6 +12556,7 @@ class _$ProcedureCopyWithImpl<$Res> implements $ProcedureCopyWith<$Res> {
     Object recorded = freezed,
     Object recordedElement = freezed,
     Object recorder = freezed,
+    Object reportedBoolean = freezed,
     Object reportedBooleanElement = freezed,
     Object reportedReference = freezed,
     Object performer = freezed,
@@ -12244,12 +12625,18 @@ class _$ProcedureCopyWithImpl<$Res> implements $ProcedureCopyWith<$Res> {
       subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
+      occurrenceDateTime: occurrenceDateTime == freezed
+          ? _value.occurrenceDateTime
+          : occurrenceDateTime as FhirDateTime,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement as Element,
       occurrencePeriod: occurrencePeriod == freezed
           ? _value.occurrencePeriod
           : occurrencePeriod as Period,
+      occurrenceString: occurrenceString == freezed
+          ? _value.occurrenceString
+          : occurrenceString as String,
       occurrenceStringElement: occurrenceStringElement == freezed
           ? _value.occurrenceStringElement
           : occurrenceStringElement as Element,
@@ -12268,6 +12655,9 @@ class _$ProcedureCopyWithImpl<$Res> implements $ProcedureCopyWith<$Res> {
           ? _value.recordedElement
           : recordedElement as Element,
       recorder: recorder == freezed ? _value.recorder : recorder as Reference,
+      reportedBoolean: reportedBoolean == freezed
+          ? _value.reportedBoolean
+          : reportedBoolean as Boolean,
       reportedBooleanElement: reportedBooleanElement == freezed
           ? _value.reportedBooleanElement
           : reportedBooleanElement as Element,
@@ -12553,8 +12943,10 @@ abstract class _$ProcedureCopyWith<$Res> implements $ProcedureCopyWith<$Res> {
       CodeableConcept code,
       Reference subject,
       Reference encounter,
+      FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
       Period occurrencePeriod,
+      String occurrenceString,
       @JsonKey(name: '_occurrenceString') Element occurrenceStringElement,
       Age occurrenceAge,
       Range occurrenceRange,
@@ -12562,6 +12954,7 @@ abstract class _$ProcedureCopyWith<$Res> implements $ProcedureCopyWith<$Res> {
       FhirDateTime recorded,
       @JsonKey(name: '_recorded') Element recordedElement,
       Reference recorder,
+      Boolean reportedBoolean,
       @JsonKey(name: '_reportedBoolean') Element reportedBooleanElement,
       Reference reportedReference,
       List<ProcedurePerformer> performer,
@@ -12657,8 +13050,10 @@ class __$ProcedureCopyWithImpl<$Res> extends _$ProcedureCopyWithImpl<$Res>
     Object code = freezed,
     Object subject = freezed,
     Object encounter = freezed,
+    Object occurrenceDateTime = freezed,
     Object occurrenceDateTimeElement = freezed,
     Object occurrencePeriod = freezed,
+    Object occurrenceString = freezed,
     Object occurrenceStringElement = freezed,
     Object occurrenceAge = freezed,
     Object occurrenceRange = freezed,
@@ -12666,6 +13061,7 @@ class __$ProcedureCopyWithImpl<$Res> extends _$ProcedureCopyWithImpl<$Res>
     Object recorded = freezed,
     Object recordedElement = freezed,
     Object recorder = freezed,
+    Object reportedBoolean = freezed,
     Object reportedBooleanElement = freezed,
     Object reportedReference = freezed,
     Object performer = freezed,
@@ -12734,12 +13130,18 @@ class __$ProcedureCopyWithImpl<$Res> extends _$ProcedureCopyWithImpl<$Res>
       subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
+      occurrenceDateTime: occurrenceDateTime == freezed
+          ? _value.occurrenceDateTime
+          : occurrenceDateTime as FhirDateTime,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement as Element,
       occurrencePeriod: occurrencePeriod == freezed
           ? _value.occurrencePeriod
           : occurrencePeriod as Period,
+      occurrenceString: occurrenceString == freezed
+          ? _value.occurrenceString
+          : occurrenceString as String,
       occurrenceStringElement: occurrenceStringElement == freezed
           ? _value.occurrenceStringElement
           : occurrenceStringElement as Element,
@@ -12758,6 +13160,9 @@ class __$ProcedureCopyWithImpl<$Res> extends _$ProcedureCopyWithImpl<$Res>
           ? _value.recordedElement
           : recordedElement as Element,
       recorder: recorder == freezed ? _value.recorder : recorder as Reference,
+      reportedBoolean: reportedBoolean == freezed
+          ? _value.reportedBoolean
+          : reportedBoolean as Boolean,
       reportedBooleanElement: reportedBooleanElement == freezed
           ? _value.reportedBooleanElement
           : reportedBooleanElement as Element,
@@ -12820,8 +13225,10 @@ class _$_Procedure extends _Procedure {
       this.code,
       @required this.subject,
       this.encounter,
+      this.occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') this.occurrenceDateTimeElement,
       this.occurrencePeriod,
+      this.occurrenceString,
       @JsonKey(name: '_occurrenceString') this.occurrenceStringElement,
       this.occurrenceAge,
       this.occurrenceRange,
@@ -12829,6 +13236,7 @@ class _$_Procedure extends _Procedure {
       this.recorded,
       @JsonKey(name: '_recorded') this.recordedElement,
       this.recorder,
+      this.reportedBoolean,
       @JsonKey(name: '_reportedBoolean') this.reportedBooleanElement,
       this.reportedReference,
       this.performer,
@@ -12905,10 +13313,14 @@ class _$_Procedure extends _Procedure {
   @override
   final Reference encounter;
   @override
+  final FhirDateTime occurrenceDateTime;
+  @override
   @JsonKey(name: '_occurrenceDateTime')
   final Element occurrenceDateTimeElement;
   @override
   final Period occurrencePeriod;
+  @override
+  final String occurrenceString;
   @override
   @JsonKey(name: '_occurrenceString')
   final Element occurrenceStringElement;
@@ -12925,6 +13337,8 @@ class _$_Procedure extends _Procedure {
   final Element recordedElement;
   @override
   final Reference recorder;
+  @override
+  final Boolean reportedBoolean;
   @override
   @JsonKey(name: '_reportedBoolean')
   final Element reportedBooleanElement;
@@ -12957,7 +13371,7 @@ class _$_Procedure extends _Procedure {
 
   @override
   String toString() {
-    return 'Procedure(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, instantiatesUriElement: $instantiatesUriElement, basedOn: $basedOn, partOf: $partOf, status: $status, statusElement: $statusElement, statusReason: $statusReason, category: $category, code: $code, subject: $subject, encounter: $encounter, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrencePeriod: $occurrencePeriod, occurrenceStringElement: $occurrenceStringElement, occurrenceAge: $occurrenceAge, occurrenceRange: $occurrenceRange, occurrenceTiming: $occurrenceTiming, recorded: $recorded, recordedElement: $recordedElement, recorder: $recorder, reportedBooleanElement: $reportedBooleanElement, reportedReference: $reportedReference, performer: $performer, location: $location, reason: $reason, bodySite: $bodySite, outcome: $outcome, report: $report, complication: $complication, complicationDetail: $complicationDetail, followUp: $followUp, note: $note, focalDevice: $focalDevice, used: $used)';
+    return 'Procedure(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, instantiatesUriElement: $instantiatesUriElement, basedOn: $basedOn, partOf: $partOf, status: $status, statusElement: $statusElement, statusReason: $statusReason, category: $category, code: $code, subject: $subject, encounter: $encounter, occurrenceDateTime: $occurrenceDateTime, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrencePeriod: $occurrencePeriod, occurrenceString: $occurrenceString, occurrenceStringElement: $occurrenceStringElement, occurrenceAge: $occurrenceAge, occurrenceRange: $occurrenceRange, occurrenceTiming: $occurrenceTiming, recorded: $recorded, recordedElement: $recordedElement, recorder: $recorder, reportedBoolean: $reportedBoolean, reportedBooleanElement: $reportedBooleanElement, reportedReference: $reportedReference, performer: $performer, location: $location, reason: $reason, bodySite: $bodySite, outcome: $outcome, report: $report, complication: $complication, complicationDetail: $complicationDetail, followUp: $followUp, note: $note, focalDevice: $focalDevice, used: $used)';
   }
 
   @override
@@ -13030,8 +13444,10 @@ class _$_Procedure extends _Procedure {
             (identical(other.encounter, encounter) ||
                 const DeepCollectionEquality()
                     .equals(other.encounter, encounter)) &&
+            (identical(other.occurrenceDateTime, occurrenceDateTime) || const DeepCollectionEquality().equals(other.occurrenceDateTime, occurrenceDateTime)) &&
             (identical(other.occurrenceDateTimeElement, occurrenceDateTimeElement) || const DeepCollectionEquality().equals(other.occurrenceDateTimeElement, occurrenceDateTimeElement)) &&
             (identical(other.occurrencePeriod, occurrencePeriod) || const DeepCollectionEquality().equals(other.occurrencePeriod, occurrencePeriod)) &&
+            (identical(other.occurrenceString, occurrenceString) || const DeepCollectionEquality().equals(other.occurrenceString, occurrenceString)) &&
             (identical(other.occurrenceStringElement, occurrenceStringElement) || const DeepCollectionEquality().equals(other.occurrenceStringElement, occurrenceStringElement)) &&
             (identical(other.occurrenceAge, occurrenceAge) || const DeepCollectionEquality().equals(other.occurrenceAge, occurrenceAge)) &&
             (identical(other.occurrenceRange, occurrenceRange) || const DeepCollectionEquality().equals(other.occurrenceRange, occurrenceRange)) &&
@@ -13039,6 +13455,7 @@ class _$_Procedure extends _Procedure {
             (identical(other.recorded, recorded) || const DeepCollectionEquality().equals(other.recorded, recorded)) &&
             (identical(other.recordedElement, recordedElement) || const DeepCollectionEquality().equals(other.recordedElement, recordedElement)) &&
             (identical(other.recorder, recorder) || const DeepCollectionEquality().equals(other.recorder, recorder)) &&
+            (identical(other.reportedBoolean, reportedBoolean) || const DeepCollectionEquality().equals(other.reportedBoolean, reportedBoolean)) &&
             (identical(other.reportedBooleanElement, reportedBooleanElement) || const DeepCollectionEquality().equals(other.reportedBooleanElement, reportedBooleanElement)) &&
             (identical(other.reportedReference, reportedReference) || const DeepCollectionEquality().equals(other.reportedReference, reportedReference)) &&
             (identical(other.performer, performer) || const DeepCollectionEquality().equals(other.performer, performer)) &&
@@ -13082,8 +13499,10 @@ class _$_Procedure extends _Procedure {
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(subject) ^
       const DeepCollectionEquality().hash(encounter) ^
+      const DeepCollectionEquality().hash(occurrenceDateTime) ^
       const DeepCollectionEquality().hash(occurrenceDateTimeElement) ^
       const DeepCollectionEquality().hash(occurrencePeriod) ^
+      const DeepCollectionEquality().hash(occurrenceString) ^
       const DeepCollectionEquality().hash(occurrenceStringElement) ^
       const DeepCollectionEquality().hash(occurrenceAge) ^
       const DeepCollectionEquality().hash(occurrenceRange) ^
@@ -13091,6 +13510,7 @@ class _$_Procedure extends _Procedure {
       const DeepCollectionEquality().hash(recorded) ^
       const DeepCollectionEquality().hash(recordedElement) ^
       const DeepCollectionEquality().hash(recorder) ^
+      const DeepCollectionEquality().hash(reportedBoolean) ^
       const DeepCollectionEquality().hash(reportedBooleanElement) ^
       const DeepCollectionEquality().hash(reportedReference) ^
       const DeepCollectionEquality().hash(performer) ^
@@ -13143,8 +13563,10 @@ abstract class _Procedure extends Procedure {
       CodeableConcept code,
       @required Reference subject,
       Reference encounter,
+      FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
       Period occurrencePeriod,
+      String occurrenceString,
       @JsonKey(name: '_occurrenceString') Element occurrenceStringElement,
       Age occurrenceAge,
       Range occurrenceRange,
@@ -13152,6 +13574,7 @@ abstract class _Procedure extends Procedure {
       FhirDateTime recorded,
       @JsonKey(name: '_recorded') Element recordedElement,
       Reference recorder,
+      Boolean reportedBoolean,
       @JsonKey(name: '_reportedBoolean') Element reportedBooleanElement,
       Reference reportedReference,
       List<ProcedurePerformer> performer,
@@ -13225,10 +13648,14 @@ abstract class _Procedure extends Procedure {
   @override
   Reference get encounter;
   @override
+  FhirDateTime get occurrenceDateTime;
+  @override
   @JsonKey(name: '_occurrenceDateTime')
   Element get occurrenceDateTimeElement;
   @override
   Period get occurrencePeriod;
+  @override
+  String get occurrenceString;
   @override
   @JsonKey(name: '_occurrenceString')
   Element get occurrenceStringElement;
@@ -13245,6 +13672,8 @@ abstract class _Procedure extends Procedure {
   Element get recordedElement;
   @override
   Reference get recorder;
+  @override
+  Boolean get reportedBoolean;
   @override
   @JsonKey(name: '_reportedBoolean')
   Element get reportedBooleanElement;

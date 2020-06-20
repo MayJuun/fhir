@@ -1657,6 +1657,7 @@ abstract class $CompositionCopyWith<$Res> {
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
+  $IdentifierCopyWith<$Res> get identifier;
   $ElementCopyWith<$Res> get statusElement;
   $CodeableConceptCopyWith<$Res> get type;
   $ReferenceCopyWith<$Res> get subject;
@@ -1815,6 +1816,16 @@ class _$CompositionCopyWithImpl<$Res> implements $CompositionCopyWith<$Res> {
   }
 
   @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res> get statusElement {
     if (_value.statusElement == null) {
       return null;
@@ -1950,6 +1961,8 @@ abstract class _$CompositionCopyWith<$Res>
   $ElementCopyWith<$Res> get languageElement;
   @override
   $NarrativeCopyWith<$Res> get text;
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
   @override
   $ElementCopyWith<$Res> get statusElement;
   @override
@@ -2844,6 +2857,7 @@ abstract class $CompositionRelatesToCopyWith<$Res> {
       Reference targetReference});
 
   $ElementCopyWith<$Res> get codeElement;
+  $IdentifierCopyWith<$Res> get targetIdentifier;
   $ReferenceCopyWith<$Res> get targetReference;
 }
 
@@ -2896,6 +2910,16 @@ class _$CompositionRelatesToCopyWithImpl<$Res>
   }
 
   @override
+  $IdentifierCopyWith<$Res> get targetIdentifier {
+    if (_value.targetIdentifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.targetIdentifier, (value) {
+      return _then(_value.copyWith(targetIdentifier: value));
+    });
+  }
+
+  @override
   $ReferenceCopyWith<$Res> get targetReference {
     if (_value.targetReference == null) {
       return null;
@@ -2923,6 +2947,8 @@ abstract class _$CompositionRelatesToCopyWith<$Res>
 
   @override
   $ElementCopyWith<$Res> get codeElement;
+  @override
+  $IdentifierCopyWith<$Res> get targetIdentifier;
   @override
   $ReferenceCopyWith<$Res> get targetReference;
 }
@@ -4029,6 +4055,7 @@ abstract class $DocumentManifestCopyWith<$Res> {
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
+  $IdentifierCopyWith<$Res> get masterIdentifier;
   $ElementCopyWith<$Res> get statusElement;
   $CodeableConceptCopyWith<$Res> get type;
   $ReferenceCopyWith<$Res> get subject;
@@ -4178,6 +4205,16 @@ class _$DocumentManifestCopyWithImpl<$Res>
   }
 
   @override
+  $IdentifierCopyWith<$Res> get masterIdentifier {
+    if (_value.masterIdentifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.masterIdentifier, (value) {
+      return _then(_value.copyWith(masterIdentifier: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res> get statusElement {
     if (_value.statusElement == null) {
       return null;
@@ -4290,6 +4327,8 @@ abstract class _$DocumentManifestCopyWith<$Res>
   $ElementCopyWith<$Res> get languageElement;
   @override
   $NarrativeCopyWith<$Res> get text;
+  @override
+  $IdentifierCopyWith<$Res> get masterIdentifier;
   @override
   $ElementCopyWith<$Res> get statusElement;
   @override
@@ -4792,6 +4831,7 @@ abstract class $DocumentManifestRelatedCopyWith<$Res> {
       Identifier identifier,
       Reference ref});
 
+  $IdentifierCopyWith<$Res> get identifier;
   $ReferenceCopyWith<$Res> get ref;
 }
 
@@ -4826,6 +4866,16 @@ class _$DocumentManifestRelatedCopyWithImpl<$Res>
   }
 
   @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
   $ReferenceCopyWith<$Res> get ref {
     if (_value.ref == null) {
       return null;
@@ -4849,6 +4899,8 @@ abstract class _$DocumentManifestRelatedCopyWith<$Res>
       Identifier identifier,
       Reference ref});
 
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
   @override
   $ReferenceCopyWith<$Res> get ref;
 }
@@ -5168,6 +5220,7 @@ abstract class $DocumentReferenceCopyWith<$Res> {
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
+  $IdentifierCopyWith<$Res> get masterIdentifier;
   $ElementCopyWith<$Res> get statusElement;
   $ElementCopyWith<$Res> get docStatusElement;
   $CodeableConceptCopyWith<$Res> get type;
@@ -5336,6 +5389,16 @@ class _$DocumentReferenceCopyWithImpl<$Res>
   }
 
   @override
+  $IdentifierCopyWith<$Res> get masterIdentifier {
+    if (_value.masterIdentifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.masterIdentifier, (value) {
+      return _then(_value.copyWith(masterIdentifier: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res> get statusElement {
     if (_value.statusElement == null) {
       return null;
@@ -5482,6 +5545,8 @@ abstract class _$DocumentReferenceCopyWith<$Res>
   $ElementCopyWith<$Res> get languageElement;
   @override
   $NarrativeCopyWith<$Res> get text;
+  @override
+  $IdentifierCopyWith<$Res> get masterIdentifier;
   @override
   $ElementCopyWith<$Res> get statusElement;
   @override

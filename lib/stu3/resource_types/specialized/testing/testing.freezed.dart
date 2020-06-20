@@ -577,7 +577,7 @@ class __$TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestReport implements _TestReport {
-  const _$_TestReport(
+  _$_TestReport(
       {@required
       @JsonKey(required: true, defaultValue: 'TestReport')
           this.resourceType,
@@ -811,7 +811,7 @@ class _$_TestReport implements _TestReport {
 }
 
 abstract class _TestReport implements TestReport {
-  const factory _TestReport(
+  factory _TestReport(
       {@required
       @JsonKey(required: true, defaultValue: 'TestReport')
           String resourceType,
@@ -1118,7 +1118,7 @@ class __$TestReportParticipantCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestReportParticipant implements _TestReportParticipant {
-  const _$_TestReportParticipant(
+  _$_TestReportParticipant(
       {@JsonKey(unknownEnumValue: TestReportParticipantType.unknown) this.type,
       this.uri,
       this.display,
@@ -1195,7 +1195,7 @@ class _$_TestReportParticipant implements _TestReportParticipant {
 }
 
 abstract class _TestReportParticipant implements TestReportParticipant {
-  const factory _TestReportParticipant(
+  factory _TestReportParticipant(
       {@JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
           TestReportParticipantType type,
       String uri,
@@ -1314,7 +1314,7 @@ class __$TestReportSetupCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestReportSetup implements _TestReportSetup {
-  const _$_TestReportSetup({@JsonKey(required: true) this.action});
+  _$_TestReportSetup({@JsonKey(required: true) this.action});
 
   factory _$_TestReportSetup.fromJson(Map<String, dynamic> json) =>
       _$_$_TestReportSetupFromJson(json);
@@ -1351,7 +1351,7 @@ class _$_TestReportSetup implements _TestReportSetup {
 }
 
 abstract class _TestReportSetup implements TestReportSetup {
-  const factory _TestReportSetup(
+  factory _TestReportSetup(
           {@JsonKey(required: true) List<TestReportAction> action}) =
       _$_TestReportSetup;
 
@@ -1492,8 +1492,7 @@ class __$TestReportActionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestReportAction implements _TestReportAction {
-  const _$_TestReportAction(
-      {this.operation, @JsonKey(name: 'assert') this.assert_});
+  _$_TestReportAction({this.operation, @JsonKey(name: 'assert') this.assert_});
 
   factory _$_TestReportAction.fromJson(Map<String, dynamic> json) =>
       _$_$_TestReportActionFromJson(json);
@@ -1537,7 +1536,7 @@ class _$_TestReportAction implements _TestReportAction {
 }
 
 abstract class _TestReportAction implements TestReportAction {
-  const factory _TestReportAction(
+  factory _TestReportAction(
       {TestReportOperation operation,
       @JsonKey(name: 'assert') TestReportAssert assert_}) = _$_TestReportAction;
 
@@ -1738,7 +1737,7 @@ class __$TestReportOperationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestReportOperation implements _TestReportOperation {
-  const _$_TestReportOperation(
+  _$_TestReportOperation(
       {@JsonKey(unknownEnumValue: Result.unknown) this.result,
       this.message,
       this.detail,
@@ -1815,7 +1814,7 @@ class _$_TestReportOperation implements _TestReportOperation {
 }
 
 abstract class _TestReportOperation implements TestReportOperation {
-  const factory _TestReportOperation(
+  factory _TestReportOperation(
           {@JsonKey(unknownEnumValue: Result.unknown) Result result,
           String message,
           String detail,
@@ -2032,7 +2031,7 @@ class __$TestReportAssertCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestReportAssert implements _TestReportAssert {
-  const _$_TestReportAssert(
+  _$_TestReportAssert(
       {@JsonKey(unknownEnumValue: Result.unknown) this.result,
       this.message,
       this.detail,
@@ -2108,7 +2107,7 @@ class _$_TestReportAssert implements _TestReportAssert {
 }
 
 abstract class _TestReportAssert implements TestReportAssert {
-  const factory _TestReportAssert(
+  factory _TestReportAssert(
       {@JsonKey(unknownEnumValue: Result.unknown) Result result,
       String message,
       String detail,
@@ -2299,7 +2298,7 @@ class __$TestReportTestCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestReportTest implements _TestReportTest {
-  const _$_TestReportTest(
+  _$_TestReportTest(
       {this.name,
       this.description,
       @JsonKey(required: true) this.action,
@@ -2367,7 +2366,7 @@ class _$_TestReportTest implements _TestReportTest {
 }
 
 abstract class _TestReportTest implements TestReportTest {
-  const factory _TestReportTest(
+  factory _TestReportTest(
           {String name,
           String description,
           @JsonKey(required: true) List<TestReportAction1> action,
@@ -2522,8 +2521,7 @@ class __$TestReportAction1CopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestReportAction1 implements _TestReportAction1 {
-  const _$_TestReportAction1(
-      {this.operation, @JsonKey(name: 'assert') this.assert_});
+  _$_TestReportAction1({this.operation, @JsonKey(name: 'assert') this.assert_});
 
   factory _$_TestReportAction1.fromJson(Map<String, dynamic> json) =>
       _$_$_TestReportAction1FromJson(json);
@@ -2567,7 +2565,7 @@ class _$_TestReportAction1 implements _TestReportAction1 {
 }
 
 abstract class _TestReportAction1 implements TestReportAction1 {
-  const factory _TestReportAction1(
+  factory _TestReportAction1(
           {TestReportOperation operation,
           @JsonKey(name: 'assert') TestReportAssert assert_}) =
       _$_TestReportAction1;
@@ -2668,7 +2666,7 @@ class __$TestReportTeardownCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestReportTeardown implements _TestReportTeardown {
-  const _$_TestReportTeardown({@JsonKey(required: true) this.action});
+  _$_TestReportTeardown({@JsonKey(required: true) this.action});
 
   factory _$_TestReportTeardown.fromJson(Map<String, dynamic> json) =>
       _$_$_TestReportTeardownFromJson(json);
@@ -2705,7 +2703,7 @@ class _$_TestReportTeardown implements _TestReportTeardown {
 }
 
 abstract class _TestReportTeardown implements TestReportTeardown {
-  const factory _TestReportTeardown(
+  factory _TestReportTeardown(
           {@JsonKey(required: true) List<TestReportAction2> action}) =
       _$_TestReportTeardown;
 
@@ -2820,7 +2818,7 @@ class __$TestReportAction2CopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestReportAction2 implements _TestReportAction2 {
-  const _$_TestReportAction2({@JsonKey(required: true) this.operation});
+  _$_TestReportAction2({@JsonKey(required: true) this.operation});
 
   factory _$_TestReportAction2.fromJson(Map<String, dynamic> json) =>
       _$_$_TestReportAction2FromJson(json);
@@ -2858,7 +2856,7 @@ class _$_TestReportAction2 implements _TestReportAction2 {
 }
 
 abstract class _TestReportAction2 implements TestReportAction2 {
-  const factory _TestReportAction2(
+  factory _TestReportAction2(
           {@JsonKey(required: true) TestReportOperation operation}) =
       _$_TestReportAction2;
 
@@ -3709,7 +3707,7 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScript implements _TestScript {
-  const _$_TestScript(
+  _$_TestScript(
       {@required
       @JsonKey(required: true, defaultValue: 'TestScript')
           this.resourceType,
@@ -4044,7 +4042,7 @@ class _$_TestScript implements _TestScript {
 }
 
 abstract class _TestScript implements TestScript {
-  const factory _TestScript(
+  factory _TestScript(
       {@required
       @JsonKey(required: true, defaultValue: 'TestScript')
           String resourceType,
@@ -4355,7 +4353,7 @@ class __$TestScriptOriginCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptOrigin implements _TestScriptOrigin {
-  const _$_TestScriptOrigin(
+  _$_TestScriptOrigin(
       {this.index,
       @JsonKey(required: true) this.profile,
       @JsonKey(name: '_index') this.indexElement});
@@ -4409,7 +4407,7 @@ class _$_TestScriptOrigin implements _TestScriptOrigin {
 }
 
 abstract class _TestScriptOrigin implements TestScriptOrigin {
-  const factory _TestScriptOrigin(
+  factory _TestScriptOrigin(
       {Integer index,
       @JsonKey(required: true) Coding profile,
       @JsonKey(name: '_index') Element indexElement}) = _$_TestScriptOrigin;
@@ -4565,7 +4563,7 @@ class __$TestScriptDestinationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptDestination implements _TestScriptDestination {
-  const _$_TestScriptDestination(
+  _$_TestScriptDestination(
       {this.index,
       @JsonKey(required: true) this.profile,
       @JsonKey(name: '_index') this.indexElement});
@@ -4620,7 +4618,7 @@ class _$_TestScriptDestination implements _TestScriptDestination {
 }
 
 abstract class _TestScriptDestination implements TestScriptDestination {
-  const factory _TestScriptDestination(
+  factory _TestScriptDestination(
           {Integer index,
           @JsonKey(required: true) Coding profile,
           @JsonKey(name: '_index') Element indexElement}) =
@@ -4738,8 +4736,7 @@ class __$TestScriptMetadataCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptMetadata implements _TestScriptMetadata {
-  const _$_TestScriptMetadata(
-      {this.link, @JsonKey(required: true) this.capability});
+  _$_TestScriptMetadata({this.link, @JsonKey(required: true) this.capability});
 
   factory _$_TestScriptMetadata.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptMetadataFromJson(json);
@@ -4783,7 +4780,7 @@ class _$_TestScriptMetadata implements _TestScriptMetadata {
 }
 
 abstract class _TestScriptMetadata implements TestScriptMetadata {
-  const factory _TestScriptMetadata(
+  factory _TestScriptMetadata(
           {List<TestScriptLink> link,
           @JsonKey(required: true) List<TestScriptCapability> capability}) =
       _$_TestScriptMetadata;
@@ -4948,7 +4945,7 @@ class __$TestScriptLinkCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptLink implements _TestScriptLink {
-  const _$_TestScriptLink(
+  _$_TestScriptLink(
       {this.url,
       this.description,
       @JsonKey(name: '_url') this.urlElement,
@@ -5009,7 +5006,7 @@ class _$_TestScriptLink implements _TestScriptLink {
 }
 
 abstract class _TestScriptLink implements TestScriptLink {
-  const factory _TestScriptLink(
+  factory _TestScriptLink(
           {String url,
           String description,
           @JsonKey(name: '_url') Element urlElement,
@@ -5354,7 +5351,7 @@ class __$TestScriptCapabilityCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptCapability implements _TestScriptCapability {
-  const _$_TestScriptCapability(
+  _$_TestScriptCapability(
       {this.required,
       this.validated,
       this.description,
@@ -5483,7 +5480,7 @@ class _$_TestScriptCapability implements _TestScriptCapability {
 }
 
 abstract class _TestScriptCapability implements TestScriptCapability {
-  const factory _TestScriptCapability(
+  factory _TestScriptCapability(
       {Boolean required,
       Boolean validated,
       String description,
@@ -5712,7 +5709,7 @@ class __$TestScriptFixtureCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptFixture implements _TestScriptFixture {
-  const _$_TestScriptFixture(
+  _$_TestScriptFixture(
       {this.autocreate,
       this.autodelete,
       this.resource,
@@ -5781,7 +5778,7 @@ class _$_TestScriptFixture implements _TestScriptFixture {
 }
 
 abstract class _TestScriptFixture implements TestScriptFixture {
-  const factory _TestScriptFixture(
+  factory _TestScriptFixture(
           {Boolean autocreate,
           Boolean autodelete,
           Reference resource,
@@ -6176,7 +6173,7 @@ class __$TestScriptVariableCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptVariable implements _TestScriptVariable {
-  const _$_TestScriptVariable(
+  _$_TestScriptVariable(
       {this.name,
       this.defaultValue,
       this.description,
@@ -6325,7 +6322,7 @@ class _$_TestScriptVariable implements _TestScriptVariable {
 }
 
 abstract class _TestScriptVariable implements TestScriptVariable {
-  const factory _TestScriptVariable(
+  factory _TestScriptVariable(
           {String name,
           String defaultValue,
           String description,
@@ -6499,7 +6496,7 @@ class __$TestScriptRuleCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptRule implements _TestScriptRule {
-  const _$_TestScriptRule({@JsonKey(required: true) this.resource, this.param});
+  _$_TestScriptRule({@JsonKey(required: true) this.resource, this.param});
 
   factory _$_TestScriptRule.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptRuleFromJson(json);
@@ -6543,7 +6540,7 @@ class _$_TestScriptRule implements _TestScriptRule {
 }
 
 abstract class _TestScriptRule implements TestScriptRule {
-  const factory _TestScriptRule(
+  factory _TestScriptRule(
       {@JsonKey(required: true) Reference resource,
       List<TestScriptParam> param}) = _$_TestScriptRule;
 
@@ -6705,7 +6702,7 @@ class __$TestScriptParamCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptParam implements _TestScriptParam {
-  const _$_TestScriptParam(
+  _$_TestScriptParam(
       {this.name,
       this.value,
       @JsonKey(name: '_name') this.nameElement,
@@ -6765,7 +6762,7 @@ class _$_TestScriptParam implements _TestScriptParam {
 }
 
 abstract class _TestScriptParam implements TestScriptParam {
-  const factory _TestScriptParam(
+  factory _TestScriptParam(
       {String name,
       String value,
       @JsonKey(name: '_name') Element nameElement,
@@ -6897,7 +6894,7 @@ class __$TestScriptRulesetCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptRuleset implements _TestScriptRuleset {
-  const _$_TestScriptRuleset(
+  _$_TestScriptRuleset(
       {@JsonKey(required: true) this.resource,
       @JsonKey(required: true) this.rule});
 
@@ -6944,7 +6941,7 @@ class _$_TestScriptRuleset implements _TestScriptRuleset {
 }
 
 abstract class _TestScriptRuleset implements TestScriptRuleset {
-  const factory _TestScriptRuleset(
+  factory _TestScriptRuleset(
           {@JsonKey(required: true) Reference resource,
           @JsonKey(required: true) List<TestScriptRule1> rule}) =
       _$_TestScriptRuleset;
@@ -7083,7 +7080,7 @@ class __$TestScriptRule1CopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptRule1 implements _TestScriptRule1 {
-  const _$_TestScriptRule1(
+  _$_TestScriptRule1(
       {this.ruleId, this.param, @JsonKey(name: '_ruleId') this.ruleIdElement});
 
   factory _$_TestScriptRule1.fromJson(Map<String, dynamic> json) =>
@@ -7133,7 +7130,7 @@ class _$_TestScriptRule1 implements _TestScriptRule1 {
 }
 
 abstract class _TestScriptRule1 implements TestScriptRule1 {
-  const factory _TestScriptRule1(
+  factory _TestScriptRule1(
       {Id ruleId,
       List<TestScriptParam1> param,
       @JsonKey(name: '_ruleId') Element ruleIdElement}) = _$_TestScriptRule1;
@@ -7298,7 +7295,7 @@ class __$TestScriptParam1CopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptParam1 implements _TestScriptParam1 {
-  const _$_TestScriptParam1(
+  _$_TestScriptParam1(
       {this.name,
       this.value,
       @JsonKey(name: '_name') this.nameElement,
@@ -7358,7 +7355,7 @@ class _$_TestScriptParam1 implements _TestScriptParam1 {
 }
 
 abstract class _TestScriptParam1 implements TestScriptParam1 {
-  const factory _TestScriptParam1(
+  factory _TestScriptParam1(
       {String name,
       String value,
       @JsonKey(name: '_name') Element nameElement,
@@ -7465,7 +7462,7 @@ class __$TestScriptSetupCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptSetup implements _TestScriptSetup {
-  const _$_TestScriptSetup({@JsonKey(required: true) this.action});
+  _$_TestScriptSetup({@JsonKey(required: true) this.action});
 
   factory _$_TestScriptSetup.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptSetupFromJson(json);
@@ -7502,7 +7499,7 @@ class _$_TestScriptSetup implements _TestScriptSetup {
 }
 
 abstract class _TestScriptSetup implements TestScriptSetup {
-  const factory _TestScriptSetup(
+  factory _TestScriptSetup(
           {@JsonKey(required: true) List<TestScriptAction> action}) =
       _$_TestScriptSetup;
 
@@ -7643,8 +7640,7 @@ class __$TestScriptActionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptAction implements _TestScriptAction {
-  const _$_TestScriptAction(
-      {this.operation, @JsonKey(name: 'assert') this.assert_});
+  _$_TestScriptAction({this.operation, @JsonKey(name: 'assert') this.assert_});
 
   factory _$_TestScriptAction.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptActionFromJson(json);
@@ -7688,7 +7684,7 @@ class _$_TestScriptAction implements _TestScriptAction {
 }
 
 abstract class _TestScriptAction implements TestScriptAction {
-  const factory _TestScriptAction(
+  factory _TestScriptAction(
       {TestScriptOperation operation,
       @JsonKey(name: 'assert') TestScriptAssert assert_}) = _$_TestScriptAction;
 
@@ -8331,7 +8327,7 @@ class __$TestScriptOperationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptOperation implements _TestScriptOperation {
-  const _$_TestScriptOperation(
+  _$_TestScriptOperation(
       {this.type,
       this.resource,
       this.label,
@@ -8572,7 +8568,7 @@ class _$_TestScriptOperation implements _TestScriptOperation {
 }
 
 abstract class _TestScriptOperation implements TestScriptOperation {
-  const factory _TestScriptOperation(
+  factory _TestScriptOperation(
       {Coding type,
       Code resource,
       String label,
@@ -8837,7 +8833,7 @@ class __$TestScriptRequestHeaderCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptRequestHeader implements _TestScriptRequestHeader {
-  const _$_TestScriptRequestHeader(
+  _$_TestScriptRequestHeader(
       {this.field,
       this.value,
       @JsonKey(name: '_field') this.fieldElement,
@@ -8898,7 +8894,7 @@ class _$_TestScriptRequestHeader implements _TestScriptRequestHeader {
 }
 
 abstract class _TestScriptRequestHeader implements TestScriptRequestHeader {
-  const factory _TestScriptRequestHeader(
+  factory _TestScriptRequestHeader(
           {String field,
           String value,
           @JsonKey(name: '_field') Element fieldElement,
@@ -9973,7 +9969,7 @@ class __$TestScriptAssertCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptAssert implements _TestScriptAssert {
-  const _$_TestScriptAssert(
+  _$_TestScriptAssert(
       {this.label,
       this.description,
       @JsonKey(unknownEnumValue: AssertDirection.unknown)
@@ -10324,7 +10320,7 @@ class _$_TestScriptAssert implements _TestScriptAssert {
 }
 
 abstract class _TestScriptAssert implements TestScriptAssert {
-  const factory _TestScriptAssert(
+  factory _TestScriptAssert(
       {String label,
       String description,
       @JsonKey(unknownEnumValue: AssertDirection.unknown)
@@ -10646,7 +10642,7 @@ class __$TestScriptRule2CopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptRule2 implements _TestScriptRule2 {
-  const _$_TestScriptRule2(
+  _$_TestScriptRule2(
       {this.ruleId, this.param, @JsonKey(name: '_ruleId') this.ruleIdElement});
 
   factory _$_TestScriptRule2.fromJson(Map<String, dynamic> json) =>
@@ -10696,7 +10692,7 @@ class _$_TestScriptRule2 implements _TestScriptRule2 {
 }
 
 abstract class _TestScriptRule2 implements TestScriptRule2 {
-  const factory _TestScriptRule2(
+  factory _TestScriptRule2(
       {Id ruleId,
       List<TestScriptParam2> param,
       @JsonKey(name: '_ruleId') Element ruleIdElement}) = _$_TestScriptRule2;
@@ -10861,7 +10857,7 @@ class __$TestScriptParam2CopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptParam2 implements _TestScriptParam2 {
-  const _$_TestScriptParam2(
+  _$_TestScriptParam2(
       {this.name,
       this.value,
       @JsonKey(name: '_name') this.nameElement,
@@ -10921,7 +10917,7 @@ class _$_TestScriptParam2 implements _TestScriptParam2 {
 }
 
 abstract class _TestScriptParam2 implements TestScriptParam2 {
-  const factory _TestScriptParam2(
+  factory _TestScriptParam2(
       {String name,
       String value,
       @JsonKey(name: '_name') Element nameElement,
@@ -11065,7 +11061,7 @@ class __$TestScriptRuleset1CopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptRuleset1 implements _TestScriptRuleset1 {
-  const _$_TestScriptRuleset1(
+  _$_TestScriptRuleset1(
       {this.rulesetId,
       this.rule,
       @JsonKey(name: '_rulesetId') this.rulesetIdElement});
@@ -11118,7 +11114,7 @@ class _$_TestScriptRuleset1 implements _TestScriptRuleset1 {
 }
 
 abstract class _TestScriptRuleset1 implements TestScriptRuleset1 {
-  const factory _TestScriptRuleset1(
+  factory _TestScriptRuleset1(
           {Id rulesetId,
           List<TestScriptRule3> rule,
           @JsonKey(name: '_rulesetId') Element rulesetIdElement}) =
@@ -11259,7 +11255,7 @@ class __$TestScriptRule3CopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptRule3 implements _TestScriptRule3 {
-  const _$_TestScriptRule3(
+  _$_TestScriptRule3(
       {this.ruleId, this.param, @JsonKey(name: '_ruleId') this.ruleIdElement});
 
   factory _$_TestScriptRule3.fromJson(Map<String, dynamic> json) =>
@@ -11309,7 +11305,7 @@ class _$_TestScriptRule3 implements _TestScriptRule3 {
 }
 
 abstract class _TestScriptRule3 implements TestScriptRule3 {
-  const factory _TestScriptRule3(
+  factory _TestScriptRule3(
       {Id ruleId,
       List<TestScriptParam3> param,
       @JsonKey(name: '_ruleId') Element ruleIdElement}) = _$_TestScriptRule3;
@@ -11474,7 +11470,7 @@ class __$TestScriptParam3CopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptParam3 implements _TestScriptParam3 {
-  const _$_TestScriptParam3(
+  _$_TestScriptParam3(
       {this.name,
       this.value,
       @JsonKey(name: '_name') this.nameElement,
@@ -11534,7 +11530,7 @@ class _$_TestScriptParam3 implements _TestScriptParam3 {
 }
 
 abstract class _TestScriptParam3 implements TestScriptParam3 {
-  const factory _TestScriptParam3(
+  factory _TestScriptParam3(
       {String name,
       String value,
       @JsonKey(name: '_name') Element nameElement,
@@ -11717,7 +11713,7 @@ class __$TestScriptTestCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptTest implements _TestScriptTest {
-  const _$_TestScriptTest(
+  _$_TestScriptTest(
       {this.name,
       this.description,
       @JsonKey(required: true) this.action,
@@ -11785,7 +11781,7 @@ class _$_TestScriptTest implements _TestScriptTest {
 }
 
 abstract class _TestScriptTest implements TestScriptTest {
-  const factory _TestScriptTest(
+  factory _TestScriptTest(
           {String name,
           String description,
           @JsonKey(required: true) List<TestScriptAction1> action,
@@ -11940,8 +11936,7 @@ class __$TestScriptAction1CopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptAction1 implements _TestScriptAction1 {
-  const _$_TestScriptAction1(
-      {this.operation, @JsonKey(name: 'assert') this.assert_});
+  _$_TestScriptAction1({this.operation, @JsonKey(name: 'assert') this.assert_});
 
   factory _$_TestScriptAction1.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptAction1FromJson(json);
@@ -11985,7 +11980,7 @@ class _$_TestScriptAction1 implements _TestScriptAction1 {
 }
 
 abstract class _TestScriptAction1 implements TestScriptAction1 {
-  const factory _TestScriptAction1(
+  factory _TestScriptAction1(
           {TestScriptOperation operation,
           @JsonKey(name: 'assert') TestScriptAssert assert_}) =
       _$_TestScriptAction1;
@@ -12086,7 +12081,7 @@ class __$TestScriptTeardownCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptTeardown implements _TestScriptTeardown {
-  const _$_TestScriptTeardown({@JsonKey(required: true) this.action});
+  _$_TestScriptTeardown({@JsonKey(required: true) this.action});
 
   factory _$_TestScriptTeardown.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptTeardownFromJson(json);
@@ -12123,7 +12118,7 @@ class _$_TestScriptTeardown implements _TestScriptTeardown {
 }
 
 abstract class _TestScriptTeardown implements TestScriptTeardown {
-  const factory _TestScriptTeardown(
+  factory _TestScriptTeardown(
           {@JsonKey(required: true) List<TestScriptAction2> action}) =
       _$_TestScriptTeardown;
 
@@ -12238,7 +12233,7 @@ class __$TestScriptAction2CopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptAction2 implements _TestScriptAction2 {
-  const _$_TestScriptAction2({@JsonKey(required: true) this.operation});
+  _$_TestScriptAction2({@JsonKey(required: true) this.operation});
 
   factory _$_TestScriptAction2.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptAction2FromJson(json);
@@ -12276,7 +12271,7 @@ class _$_TestScriptAction2 implements _TestScriptAction2 {
 }
 
 abstract class _TestScriptAction2 implements TestScriptAction2 {
-  const factory _TestScriptAction2(
+  factory _TestScriptAction2(
           {@JsonKey(required: true) TestScriptOperation operation}) =
       _$_TestScriptAction2;
 

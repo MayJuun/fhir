@@ -556,7 +556,7 @@ class __$AccountCopyWithImpl<$Res> extends _$AccountCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Account implements _Account {
-  const _$_Account(
+  _$_Account(
       {@JsonKey(defaultValue: 'Account') this.resourceType,
       this.id,
       this.meta,
@@ -764,7 +764,7 @@ class _$_Account implements _Account {
 }
 
 abstract class _Account implements Account {
-  const factory _Account(
+  factory _Account(
       {@JsonKey(defaultValue: 'Account') String resourceType,
       Id id,
       Meta meta,
@@ -1711,7 +1711,7 @@ class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Claim implements _Claim {
-  const _$_Claim(
+  _$_Claim(
       {@JsonKey(defaultValue: 'Claim')
           this.resourceType,
       this.id,
@@ -2017,7 +2017,7 @@ class _$_Claim implements _Claim {
 }
 
 abstract class _Claim implements Claim {
-  const factory _Claim(
+  factory _Claim(
       {@JsonKey(defaultValue: 'Claim')
           String resourceType,
       Id id,
@@ -2385,7 +2385,7 @@ class __$ClaimPayeeCopyWithImpl<$Res> extends _$ClaimPayeeCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimPayee implements _ClaimPayee {
-  const _$_ClaimPayee(
+  _$_ClaimPayee(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -2464,7 +2464,7 @@ class _$_ClaimPayee implements _ClaimPayee {
 }
 
 abstract class _ClaimPayee implements ClaimPayee {
-  const factory _ClaimPayee(
+  factory _ClaimPayee(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -2680,7 +2680,7 @@ class __$ClaimDiagnosisCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimDiagnosis implements _ClaimDiagnosis {
-  const _$_ClaimDiagnosis(
+  _$_ClaimDiagnosis(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -2759,7 +2759,7 @@ class _$_ClaimDiagnosis implements _ClaimDiagnosis {
 }
 
 abstract class _ClaimDiagnosis implements ClaimDiagnosis {
-  const factory _ClaimDiagnosis(
+  factory _ClaimDiagnosis(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -3063,7 +3063,7 @@ class __$ClaimCoverageCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimCoverage implements _ClaimCoverage {
-  const _$_ClaimCoverage(
+  _$_ClaimCoverage(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3179,7 +3179,7 @@ class _$_ClaimCoverage implements _ClaimCoverage {
 }
 
 abstract class _ClaimCoverage implements ClaimCoverage {
-  const factory _ClaimCoverage(
+  factory _ClaimCoverage(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -3714,7 +3714,7 @@ class __$ClaimItemCopyWithImpl<$Res> extends _$ClaimItemCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimItem implements _ClaimItem {
-  const _$_ClaimItem(
+  _$_ClaimItem(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3910,7 +3910,7 @@ class _$_ClaimItem implements _ClaimItem {
 }
 
 abstract class _ClaimItem implements ClaimItem {
-  const factory _ClaimItem(
+  factory _ClaimItem(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -4349,7 +4349,7 @@ class __$ClaimDetailCopyWithImpl<$Res> extends _$ClaimDetailCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimDetail implements _ClaimDetail {
-  const _$_ClaimDetail(
+  _$_ClaimDetail(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -4489,7 +4489,7 @@ class _$_ClaimDetail implements _ClaimDetail {
 }
 
 abstract class _ClaimDetail implements ClaimDetail {
-  const factory _ClaimDetail(
+  factory _ClaimDetail(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -4892,7 +4892,7 @@ class __$ClaimSubDetailCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimSubDetail implements _ClaimSubDetail {
-  const _$_ClaimSubDetail(
+  _$_ClaimSubDetail(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -5025,7 +5025,7 @@ class _$_ClaimSubDetail implements _ClaimSubDetail {
 }
 
 abstract class _ClaimSubDetail implements ClaimSubDetail {
-  const factory _ClaimSubDetail(
+  factory _ClaimSubDetail(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -5251,7 +5251,7 @@ class __$ClaimProsthesisCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimProsthesis implements _ClaimProsthesis {
-  const _$_ClaimProsthesis(
+  _$_ClaimProsthesis(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -5325,7 +5325,7 @@ class _$_ClaimProsthesis implements _ClaimProsthesis {
 }
 
 abstract class _ClaimProsthesis implements ClaimProsthesis {
-  const factory _ClaimProsthesis(
+  factory _ClaimProsthesis(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -5536,7 +5536,7 @@ class __$ClaimMissingTeethCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimMissingTeeth implements _ClaimMissingTeeth {
-  const _$_ClaimMissingTeeth(
+  _$_ClaimMissingTeeth(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -5610,7 +5610,7 @@ class _$_ClaimMissingTeeth implements _ClaimMissingTeeth {
 }
 
 abstract class _ClaimMissingTeeth implements ClaimMissingTeeth {
-  const factory _ClaimMissingTeeth(
+  factory _ClaimMissingTeeth(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -6547,7 +6547,7 @@ class __$ClaimResponseCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimResponse implements _ClaimResponse {
-  const _$_ClaimResponse(
+  _$_ClaimResponse(
       {@JsonKey(defaultValue: 'ClaimResponse') this.resourceType,
       this.id,
       this.meta,
@@ -6836,7 +6836,7 @@ class _$_ClaimResponse implements _ClaimResponse {
 }
 
 abstract class _ClaimResponse implements ClaimResponse {
-  const factory _ClaimResponse(
+  factory _ClaimResponse(
       {@JsonKey(defaultValue: 'ClaimResponse')
           String resourceType,
       Id id,
@@ -7188,7 +7188,7 @@ class __$ClaimResponseItemCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimResponseItem implements _ClaimResponseItem {
-  const _$_ClaimResponseItem(
+  _$_ClaimResponseItem(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -7286,7 +7286,7 @@ class _$_ClaimResponseItem implements _ClaimResponseItem {
 }
 
 abstract class _ClaimResponseItem implements ClaimResponseItem {
-  const factory _ClaimResponseItem(
+  factory _ClaimResponseItem(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -7535,7 +7535,7 @@ class __$ClaimResponseAdjudicationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimResponseAdjudication implements _ClaimResponseAdjudication {
-  const _$_ClaimResponseAdjudication(
+  _$_ClaimResponseAdjudication(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -7618,7 +7618,7 @@ class _$_ClaimResponseAdjudication implements _ClaimResponseAdjudication {
 }
 
 abstract class _ClaimResponseAdjudication implements ClaimResponseAdjudication {
-  const factory _ClaimResponseAdjudication(
+  factory _ClaimResponseAdjudication(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -7814,7 +7814,7 @@ class __$ItemDetailCopyWithImpl<$Res> extends _$ItemDetailCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ItemDetail implements _ItemDetail {
-  const _$_ItemDetail(
+  _$_ItemDetail(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -7890,7 +7890,7 @@ class _$_ItemDetail implements _ItemDetail {
 }
 
 abstract class _ItemDetail implements ItemDetail {
-  const factory _ItemDetail(
+  factory _ItemDetail(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -8072,7 +8072,7 @@ class __$ClaimResponseSubDetailCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimResponseSubDetail implements _ClaimResponseSubDetail {
-  const _$_ClaimResponseSubDetail(
+  _$_ClaimResponseSubDetail(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -8142,7 +8142,7 @@ class _$_ClaimResponseSubDetail implements _ClaimResponseSubDetail {
 }
 
 abstract class _ClaimResponseSubDetail implements ClaimResponseSubDetail {
-  const factory _ClaimResponseSubDetail(
+  factory _ClaimResponseSubDetail(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -8400,7 +8400,7 @@ class __$ClaimResponseAddItemCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimResponseAddItem implements _ClaimResponseAddItem {
-  const _$_ClaimResponseAddItem(
+  _$_ClaimResponseAddItem(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -8496,7 +8496,7 @@ class _$_ClaimResponseAddItem implements _ClaimResponseAddItem {
 }
 
 abstract class _ClaimResponseAddItem implements ClaimResponseAddItem {
-  const factory _ClaimResponseAddItem(
+  factory _ClaimResponseAddItem(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -8717,7 +8717,7 @@ class __$AddItemDetailCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_AddItemDetail implements _AddItemDetail {
-  const _$_AddItemDetail(
+  _$_AddItemDetail(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -8792,7 +8792,7 @@ class _$_AddItemDetail implements _AddItemDetail {
 }
 
 abstract class _AddItemDetail implements AddItemDetail {
-  const factory _AddItemDetail(
+  factory _AddItemDetail(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -9008,7 +9008,7 @@ class __$ClaimResponseErrorCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimResponseError implements _ClaimResponseError {
-  const _$_ClaimResponseError(
+  _$_ClaimResponseError(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -9091,7 +9091,7 @@ class _$_ClaimResponseError implements _ClaimResponseError {
 }
 
 abstract class _ClaimResponseError implements ClaimResponseError {
-  const factory _ClaimResponseError(
+  factory _ClaimResponseError(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -9365,7 +9365,7 @@ class __$ClaimResponseNoteCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimResponseNote implements _ClaimResponseNote {
-  const _$_ClaimResponseNote(
+  _$_ClaimResponseNote(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -9460,7 +9460,7 @@ class _$_ClaimResponseNote implements _ClaimResponseNote {
 }
 
 abstract class _ClaimResponseNote implements ClaimResponseNote {
-  const factory _ClaimResponseNote(
+  factory _ClaimResponseNote(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -9774,7 +9774,7 @@ class __$ClaimResponseCoverageCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimResponseCoverage implements _ClaimResponseCoverage {
-  const _$_ClaimResponseCoverage(
+  _$_ClaimResponseCoverage(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -9891,7 +9891,7 @@ class _$_ClaimResponseCoverage implements _ClaimResponseCoverage {
 }
 
 abstract class _ClaimResponseCoverage implements ClaimResponseCoverage {
-  const factory _ClaimResponseCoverage(
+  factory _ClaimResponseCoverage(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,

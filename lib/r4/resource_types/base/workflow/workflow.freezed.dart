@@ -5798,24 +5798,43 @@ class _$TaskInputTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @required CodeableConcept type,
+      Base64Binary valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Canonical valueCanonical,
       @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
+      Code valueCode,
       @JsonKey(name: '_valueCode') Element valueCodeElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      Id valueId,
       @JsonKey(name: '_valueId') Element valueIdElement,
+      Instant valueInstant,
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Markdown valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
+      Oid valueOid,
       @JsonKey(name: '_valueOid') Element valueOidElement,
+      PositiveInt valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Time valueTime,
       @JsonKey(name: '_valueTime') Element valueTimeElement,
+      UnsignedInt valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
+      FhirUri valueUri,
       @JsonKey(name: '_valueUri') Element valueUriElement,
+      FhirUrl valueUrl,
       @JsonKey(name: '_valueUrl') Element valueUrlElement,
+      Uuid valueUuid,
       @JsonKey(name: '_valueUuid') Element valueUuidElement,
       Address valueAddress,
       Age valueAge,
@@ -5853,24 +5872,43 @@ class _$TaskInputTearOff {
       extension_: extension_,
       modifierExtension: modifierExtension,
       type: type,
+      valueBase64Binary: valueBase64Binary,
       valueBase64BinaryElement: valueBase64BinaryElement,
+      valueBoolean: valueBoolean,
       valueBooleanElement: valueBooleanElement,
+      valueCanonical: valueCanonical,
       valueCanonicalElement: valueCanonicalElement,
+      valueCode: valueCode,
       valueCodeElement: valueCodeElement,
+      valueDate: valueDate,
       valueDateElement: valueDateElement,
+      valueDateTime: valueDateTime,
       valueDateTimeElement: valueDateTimeElement,
+      valueDecimal: valueDecimal,
       valueDecimalElement: valueDecimalElement,
+      valueId: valueId,
       valueIdElement: valueIdElement,
+      valueInstant: valueInstant,
       valueInstantElement: valueInstantElement,
+      valueInteger: valueInteger,
       valueIntegerElement: valueIntegerElement,
+      valueMarkdown: valueMarkdown,
       valueMarkdownElement: valueMarkdownElement,
+      valueOid: valueOid,
       valueOidElement: valueOidElement,
+      valuePositiveInt: valuePositiveInt,
       valuePositiveIntElement: valuePositiveIntElement,
+      valueString: valueString,
       valueStringElement: valueStringElement,
+      valueTime: valueTime,
       valueTimeElement: valueTimeElement,
+      valueUnsignedInt: valueUnsignedInt,
       valueUnsignedIntElement: valueUnsignedIntElement,
+      valueUri: valueUri,
       valueUriElement: valueUriElement,
+      valueUrl: valueUrl,
       valueUrlElement: valueUrlElement,
+      valueUuid: valueUuid,
       valueUuidElement: valueUuidElement,
       valueAddress: valueAddress,
       valueAge: valueAge,
@@ -5916,42 +5954,61 @@ mixin _$TaskInput {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   CodeableConcept get type;
+  Base64Binary get valueBase64Binary;
   @JsonKey(name: '_valueBase64Binary')
   Element get valueBase64BinaryElement;
+  Boolean get valueBoolean;
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
+  Canonical get valueCanonical;
   @JsonKey(name: '_valueCanonical')
   Element get valueCanonicalElement;
+  Code get valueCode;
   @JsonKey(name: '_valueCode')
   Element get valueCodeElement;
+  Date get valueDate;
   @JsonKey(name: '_valueDate')
   Element get valueDateElement;
+  FhirDateTime get valueDateTime;
   @JsonKey(name: '_valueDateTime')
   Element get valueDateTimeElement;
+  Decimal get valueDecimal;
   @JsonKey(name: '_valueDecimal')
   Element get valueDecimalElement;
+  Id get valueId;
   @JsonKey(name: '_valueId')
   Element get valueIdElement;
+  Instant get valueInstant;
   @JsonKey(name: '_valueInstant')
   Element get valueInstantElement;
+  Integer get valueInteger;
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
+  Markdown get valueMarkdown;
   @JsonKey(name: '_valueMarkdown')
   Element get valueMarkdownElement;
+  Oid get valueOid;
   @JsonKey(name: '_valueOid')
   Element get valueOidElement;
+  PositiveInt get valuePositiveInt;
   @JsonKey(name: '_valuePositiveInt')
   Element get valuePositiveIntElement;
+  String get valueString;
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
+  Time get valueTime;
   @JsonKey(name: '_valueTime')
   Element get valueTimeElement;
+  UnsignedInt get valueUnsignedInt;
   @JsonKey(name: '_valueUnsignedInt')
   Element get valueUnsignedIntElement;
+  FhirUri get valueUri;
   @JsonKey(name: '_valueUri')
   Element get valueUriElement;
+  FhirUrl get valueUrl;
   @JsonKey(name: '_valueUrl')
   Element get valueUrlElement;
+  Uuid get valueUuid;
   @JsonKey(name: '_valueUuid')
   Element get valueUuidElement;
   Address get valueAddress;
@@ -5998,24 +6055,43 @@ abstract class $TaskInputCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept type,
+      Base64Binary valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Canonical valueCanonical,
       @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
+      Code valueCode,
       @JsonKey(name: '_valueCode') Element valueCodeElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      Id valueId,
       @JsonKey(name: '_valueId') Element valueIdElement,
+      Instant valueInstant,
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Markdown valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
+      Oid valueOid,
       @JsonKey(name: '_valueOid') Element valueOidElement,
+      PositiveInt valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Time valueTime,
       @JsonKey(name: '_valueTime') Element valueTimeElement,
+      UnsignedInt valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
+      FhirUri valueUri,
       @JsonKey(name: '_valueUri') Element valueUriElement,
+      FhirUrl valueUrl,
       @JsonKey(name: '_valueUrl') Element valueUrlElement,
+      Uuid valueUuid,
       @JsonKey(name: '_valueUuid') Element valueUuidElement,
       Address valueAddress,
       Age valueAge,
@@ -6115,24 +6191,43 @@ class _$TaskInputCopyWithImpl<$Res> implements $TaskInputCopyWith<$Res> {
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object type = freezed,
+    Object valueBase64Binary = freezed,
     Object valueBase64BinaryElement = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
+    Object valueCanonical = freezed,
     Object valueCanonicalElement = freezed,
+    Object valueCode = freezed,
     Object valueCodeElement = freezed,
+    Object valueDate = freezed,
     Object valueDateElement = freezed,
+    Object valueDateTime = freezed,
     Object valueDateTimeElement = freezed,
+    Object valueDecimal = freezed,
     Object valueDecimalElement = freezed,
+    Object valueId = freezed,
     Object valueIdElement = freezed,
+    Object valueInstant = freezed,
     Object valueInstantElement = freezed,
+    Object valueInteger = freezed,
     Object valueIntegerElement = freezed,
+    Object valueMarkdown = freezed,
     Object valueMarkdownElement = freezed,
+    Object valueOid = freezed,
     Object valueOidElement = freezed,
+    Object valuePositiveInt = freezed,
     Object valuePositiveIntElement = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueTime = freezed,
     Object valueTimeElement = freezed,
+    Object valueUnsignedInt = freezed,
     Object valueUnsignedIntElement = freezed,
+    Object valueUri = freezed,
     Object valueUriElement = freezed,
+    Object valueUrl = freezed,
     Object valueUrlElement = freezed,
+    Object valueUuid = freezed,
     Object valueUuidElement = freezed,
     Object valueAddress = freezed,
     Object valueAge = freezed,
@@ -6175,60 +6270,100 @@ class _$TaskInputCopyWithImpl<$Res> implements $TaskInputCopyWith<$Res> {
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       type: type == freezed ? _value.type : type as CodeableConcept,
+      valueBase64Binary: valueBase64Binary == freezed
+          ? _value.valueBase64Binary
+          : valueBase64Binary as Base64Binary,
       valueBase64BinaryElement: valueBase64BinaryElement == freezed
           ? _value.valueBase64BinaryElement
           : valueBase64BinaryElement as Element,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
+      valueCanonical: valueCanonical == freezed
+          ? _value.valueCanonical
+          : valueCanonical as Canonical,
       valueCanonicalElement: valueCanonicalElement == freezed
           ? _value.valueCanonicalElement
           : valueCanonicalElement as Element,
+      valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
       valueCodeElement: valueCodeElement == freezed
           ? _value.valueCodeElement
           : valueCodeElement as Element,
+      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateElement: valueDateElement == freezed
           ? _value.valueDateElement
           : valueDateElement as Element,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime as FhirDateTime,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement as Element,
+      valueDecimal: valueDecimal == freezed
+          ? _value.valueDecimal
+          : valueDecimal as Decimal,
       valueDecimalElement: valueDecimalElement == freezed
           ? _value.valueDecimalElement
           : valueDecimalElement as Element,
+      valueId: valueId == freezed ? _value.valueId : valueId as Id,
       valueIdElement: valueIdElement == freezed
           ? _value.valueIdElement
           : valueIdElement as Element,
+      valueInstant: valueInstant == freezed
+          ? _value.valueInstant
+          : valueInstant as Instant,
       valueInstantElement: valueInstantElement == freezed
           ? _value.valueInstantElement
           : valueInstantElement as Element,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger as Integer,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement as Element,
+      valueMarkdown: valueMarkdown == freezed
+          ? _value.valueMarkdown
+          : valueMarkdown as Markdown,
       valueMarkdownElement: valueMarkdownElement == freezed
           ? _value.valueMarkdownElement
           : valueMarkdownElement as Element,
+      valueOid: valueOid == freezed ? _value.valueOid : valueOid as Oid,
       valueOidElement: valueOidElement == freezed
           ? _value.valueOidElement
           : valueOidElement as Element,
+      valuePositiveInt: valuePositiveInt == freezed
+          ? _value.valuePositiveInt
+          : valuePositiveInt as PositiveInt,
       valuePositiveIntElement: valuePositiveIntElement == freezed
           ? _value.valuePositiveIntElement
           : valuePositiveIntElement as Element,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueTimeElement: valueTimeElement == freezed
           ? _value.valueTimeElement
           : valueTimeElement as Element,
+      valueUnsignedInt: valueUnsignedInt == freezed
+          ? _value.valueUnsignedInt
+          : valueUnsignedInt as UnsignedInt,
       valueUnsignedIntElement: valueUnsignedIntElement == freezed
           ? _value.valueUnsignedIntElement
           : valueUnsignedIntElement as Element,
+      valueUri: valueUri == freezed ? _value.valueUri : valueUri as FhirUri,
       valueUriElement: valueUriElement == freezed
           ? _value.valueUriElement
           : valueUriElement as Element,
+      valueUrl: valueUrl == freezed ? _value.valueUrl : valueUrl as FhirUrl,
       valueUrlElement: valueUrlElement == freezed
           ? _value.valueUrlElement
           : valueUrlElement as Element,
+      valueUuid: valueUuid == freezed ? _value.valueUuid : valueUuid as Uuid,
       valueUuidElement: valueUuidElement == freezed
           ? _value.valueUuidElement
           : valueUuidElement as Element,
@@ -6839,24 +6974,43 @@ abstract class _$TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept type,
+      Base64Binary valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Canonical valueCanonical,
       @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
+      Code valueCode,
       @JsonKey(name: '_valueCode') Element valueCodeElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      Id valueId,
       @JsonKey(name: '_valueId') Element valueIdElement,
+      Instant valueInstant,
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Markdown valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
+      Oid valueOid,
       @JsonKey(name: '_valueOid') Element valueOidElement,
+      PositiveInt valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Time valueTime,
       @JsonKey(name: '_valueTime') Element valueTimeElement,
+      UnsignedInt valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
+      FhirUri valueUri,
       @JsonKey(name: '_valueUri') Element valueUriElement,
+      FhirUrl valueUrl,
       @JsonKey(name: '_valueUrl') Element valueUrlElement,
+      Uuid valueUuid,
       @JsonKey(name: '_valueUuid') Element valueUuidElement,
       Address valueAddress,
       Age valueAge,
@@ -7008,24 +7162,43 @@ class __$TaskInputCopyWithImpl<$Res> extends _$TaskInputCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object type = freezed,
+    Object valueBase64Binary = freezed,
     Object valueBase64BinaryElement = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
+    Object valueCanonical = freezed,
     Object valueCanonicalElement = freezed,
+    Object valueCode = freezed,
     Object valueCodeElement = freezed,
+    Object valueDate = freezed,
     Object valueDateElement = freezed,
+    Object valueDateTime = freezed,
     Object valueDateTimeElement = freezed,
+    Object valueDecimal = freezed,
     Object valueDecimalElement = freezed,
+    Object valueId = freezed,
     Object valueIdElement = freezed,
+    Object valueInstant = freezed,
     Object valueInstantElement = freezed,
+    Object valueInteger = freezed,
     Object valueIntegerElement = freezed,
+    Object valueMarkdown = freezed,
     Object valueMarkdownElement = freezed,
+    Object valueOid = freezed,
     Object valueOidElement = freezed,
+    Object valuePositiveInt = freezed,
     Object valuePositiveIntElement = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueTime = freezed,
     Object valueTimeElement = freezed,
+    Object valueUnsignedInt = freezed,
     Object valueUnsignedIntElement = freezed,
+    Object valueUri = freezed,
     Object valueUriElement = freezed,
+    Object valueUrl = freezed,
     Object valueUrlElement = freezed,
+    Object valueUuid = freezed,
     Object valueUuidElement = freezed,
     Object valueAddress = freezed,
     Object valueAge = freezed,
@@ -7068,60 +7241,100 @@ class __$TaskInputCopyWithImpl<$Res> extends _$TaskInputCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       type: type == freezed ? _value.type : type as CodeableConcept,
+      valueBase64Binary: valueBase64Binary == freezed
+          ? _value.valueBase64Binary
+          : valueBase64Binary as Base64Binary,
       valueBase64BinaryElement: valueBase64BinaryElement == freezed
           ? _value.valueBase64BinaryElement
           : valueBase64BinaryElement as Element,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
+      valueCanonical: valueCanonical == freezed
+          ? _value.valueCanonical
+          : valueCanonical as Canonical,
       valueCanonicalElement: valueCanonicalElement == freezed
           ? _value.valueCanonicalElement
           : valueCanonicalElement as Element,
+      valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
       valueCodeElement: valueCodeElement == freezed
           ? _value.valueCodeElement
           : valueCodeElement as Element,
+      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateElement: valueDateElement == freezed
           ? _value.valueDateElement
           : valueDateElement as Element,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime as FhirDateTime,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement as Element,
+      valueDecimal: valueDecimal == freezed
+          ? _value.valueDecimal
+          : valueDecimal as Decimal,
       valueDecimalElement: valueDecimalElement == freezed
           ? _value.valueDecimalElement
           : valueDecimalElement as Element,
+      valueId: valueId == freezed ? _value.valueId : valueId as Id,
       valueIdElement: valueIdElement == freezed
           ? _value.valueIdElement
           : valueIdElement as Element,
+      valueInstant: valueInstant == freezed
+          ? _value.valueInstant
+          : valueInstant as Instant,
       valueInstantElement: valueInstantElement == freezed
           ? _value.valueInstantElement
           : valueInstantElement as Element,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger as Integer,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement as Element,
+      valueMarkdown: valueMarkdown == freezed
+          ? _value.valueMarkdown
+          : valueMarkdown as Markdown,
       valueMarkdownElement: valueMarkdownElement == freezed
           ? _value.valueMarkdownElement
           : valueMarkdownElement as Element,
+      valueOid: valueOid == freezed ? _value.valueOid : valueOid as Oid,
       valueOidElement: valueOidElement == freezed
           ? _value.valueOidElement
           : valueOidElement as Element,
+      valuePositiveInt: valuePositiveInt == freezed
+          ? _value.valuePositiveInt
+          : valuePositiveInt as PositiveInt,
       valuePositiveIntElement: valuePositiveIntElement == freezed
           ? _value.valuePositiveIntElement
           : valuePositiveIntElement as Element,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueTimeElement: valueTimeElement == freezed
           ? _value.valueTimeElement
           : valueTimeElement as Element,
+      valueUnsignedInt: valueUnsignedInt == freezed
+          ? _value.valueUnsignedInt
+          : valueUnsignedInt as UnsignedInt,
       valueUnsignedIntElement: valueUnsignedIntElement == freezed
           ? _value.valueUnsignedIntElement
           : valueUnsignedIntElement as Element,
+      valueUri: valueUri == freezed ? _value.valueUri : valueUri as FhirUri,
       valueUriElement: valueUriElement == freezed
           ? _value.valueUriElement
           : valueUriElement as Element,
+      valueUrl: valueUrl == freezed ? _value.valueUrl : valueUrl as FhirUrl,
       valueUrlElement: valueUrlElement == freezed
           ? _value.valueUrlElement
           : valueUrlElement as Element,
+      valueUuid: valueUuid == freezed ? _value.valueUuid : valueUuid as Uuid,
       valueUuidElement: valueUuidElement == freezed
           ? _value.valueUuidElement
           : valueUuidElement as Element,
@@ -7217,24 +7430,43 @@ class _$_TaskInput extends _TaskInput {
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @required this.type,
+      this.valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') this.valueBase64BinaryElement,
+      this.valueBoolean,
       @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+      this.valueCanonical,
       @JsonKey(name: '_valueCanonical') this.valueCanonicalElement,
+      this.valueCode,
       @JsonKey(name: '_valueCode') this.valueCodeElement,
+      this.valueDate,
       @JsonKey(name: '_valueDate') this.valueDateElement,
+      this.valueDateTime,
       @JsonKey(name: '_valueDateTime') this.valueDateTimeElement,
+      this.valueDecimal,
       @JsonKey(name: '_valueDecimal') this.valueDecimalElement,
+      this.valueId,
       @JsonKey(name: '_valueId') this.valueIdElement,
+      this.valueInstant,
       @JsonKey(name: '_valueInstant') this.valueInstantElement,
+      this.valueInteger,
       @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+      this.valueMarkdown,
       @JsonKey(name: '_valueMarkdown') this.valueMarkdownElement,
+      this.valueOid,
       @JsonKey(name: '_valueOid') this.valueOidElement,
+      this.valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') this.valuePositiveIntElement,
+      this.valueString,
       @JsonKey(name: '_valueString') this.valueStringElement,
+      this.valueTime,
       @JsonKey(name: '_valueTime') this.valueTimeElement,
+      this.valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') this.valueUnsignedIntElement,
+      this.valueUri,
       @JsonKey(name: '_valueUri') this.valueUriElement,
+      this.valueUrl,
       @JsonKey(name: '_valueUrl') this.valueUrlElement,
+      this.valueUuid,
       @JsonKey(name: '_valueUuid') this.valueUuidElement,
       this.valueAddress,
       this.valueAge,
@@ -7283,59 +7515,97 @@ class _$_TaskInput extends _TaskInput {
   @override
   final CodeableConcept type;
   @override
+  final Base64Binary valueBase64Binary;
+  @override
   @JsonKey(name: '_valueBase64Binary')
   final Element valueBase64BinaryElement;
+  @override
+  final Boolean valueBoolean;
   @override
   @JsonKey(name: '_valueBoolean')
   final Element valueBooleanElement;
   @override
+  final Canonical valueCanonical;
+  @override
   @JsonKey(name: '_valueCanonical')
   final Element valueCanonicalElement;
+  @override
+  final Code valueCode;
   @override
   @JsonKey(name: '_valueCode')
   final Element valueCodeElement;
   @override
+  final Date valueDate;
+  @override
   @JsonKey(name: '_valueDate')
   final Element valueDateElement;
+  @override
+  final FhirDateTime valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
   final Element valueDateTimeElement;
   @override
+  final Decimal valueDecimal;
+  @override
   @JsonKey(name: '_valueDecimal')
   final Element valueDecimalElement;
+  @override
+  final Id valueId;
   @override
   @JsonKey(name: '_valueId')
   final Element valueIdElement;
   @override
+  final Instant valueInstant;
+  @override
   @JsonKey(name: '_valueInstant')
   final Element valueInstantElement;
+  @override
+  final Integer valueInteger;
   @override
   @JsonKey(name: '_valueInteger')
   final Element valueIntegerElement;
   @override
+  final Markdown valueMarkdown;
+  @override
   @JsonKey(name: '_valueMarkdown')
   final Element valueMarkdownElement;
+  @override
+  final Oid valueOid;
   @override
   @JsonKey(name: '_valueOid')
   final Element valueOidElement;
   @override
+  final PositiveInt valuePositiveInt;
+  @override
   @JsonKey(name: '_valuePositiveInt')
   final Element valuePositiveIntElement;
+  @override
+  final String valueString;
   @override
   @JsonKey(name: '_valueString')
   final Element valueStringElement;
   @override
+  final Time valueTime;
+  @override
   @JsonKey(name: '_valueTime')
   final Element valueTimeElement;
+  @override
+  final UnsignedInt valueUnsignedInt;
   @override
   @JsonKey(name: '_valueUnsignedInt')
   final Element valueUnsignedIntElement;
   @override
+  final FhirUri valueUri;
+  @override
   @JsonKey(name: '_valueUri')
   final Element valueUriElement;
   @override
+  final FhirUrl valueUrl;
+  @override
   @JsonKey(name: '_valueUrl')
   final Element valueUrlElement;
+  @override
+  final Uuid valueUuid;
   @override
   @JsonKey(name: '_valueUuid')
   final Element valueUuidElement;
@@ -7404,7 +7674,7 @@ class _$_TaskInput extends _TaskInput {
 
   @override
   String toString() {
-    return 'TaskInput(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, valueBase64BinaryElement: $valueBase64BinaryElement, valueBooleanElement: $valueBooleanElement, valueCanonicalElement: $valueCanonicalElement, valueCodeElement: $valueCodeElement, valueDateElement: $valueDateElement, valueDateTimeElement: $valueDateTimeElement, valueDecimalElement: $valueDecimalElement, valueIdElement: $valueIdElement, valueInstantElement: $valueInstantElement, valueIntegerElement: $valueIntegerElement, valueMarkdownElement: $valueMarkdownElement, valueOidElement: $valueOidElement, valuePositiveIntElement: $valuePositiveIntElement, valueStringElement: $valueStringElement, valueTimeElement: $valueTimeElement, valueUnsignedIntElement: $valueUnsignedIntElement, valueUriElement: $valueUriElement, valueUrlElement: $valueUrlElement, valueUuidElement: $valueUuidElement, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueMeta: $valueMeta)';
+    return 'TaskInput(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueCanonical: $valueCanonical, valueCanonicalElement: $valueCanonicalElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueId: $valueId, valueIdElement: $valueIdElement, valueInstant: $valueInstant, valueInstantElement: $valueInstantElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueMarkdown: $valueMarkdown, valueMarkdownElement: $valueMarkdownElement, valueOid: $valueOid, valueOidElement: $valueOidElement, valuePositiveInt: $valuePositiveInt, valuePositiveIntElement: $valuePositiveIntElement, valueString: $valueString, valueStringElement: $valueStringElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueUnsignedInt: $valueUnsignedInt, valueUnsignedIntElement: $valueUnsignedIntElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueUrl: $valueUrl, valueUrlElement: $valueUrlElement, valueUuid: $valueUuid, valueUuidElement: $valueUuidElement, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueMeta: $valueMeta)';
   }
 
   @override
@@ -7421,51 +7691,70 @@ class _$_TaskInput extends _TaskInput {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)) &&
+            (identical(other.valueBase64Binary, valueBase64Binary) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBase64Binary, valueBase64Binary)) &&
             (identical(other.valueBase64BinaryElement, valueBase64BinaryElement) ||
                 const DeepCollectionEquality().equals(
                     other.valueBase64BinaryElement,
                     valueBase64BinaryElement)) &&
+            (identical(other.valueBoolean, valueBoolean) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBoolean, valueBoolean)) &&
             (identical(other.valueBooleanElement, valueBooleanElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueBooleanElement, valueBooleanElement)) &&
+            (identical(other.valueCanonical, valueCanonical) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueCanonical, valueCanonical)) &&
             (identical(other.valueCanonicalElement, valueCanonicalElement) ||
                 const DeepCollectionEquality().equals(
                     other.valueCanonicalElement, valueCanonicalElement)) &&
+            (identical(other.valueCode, valueCode) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueCode, valueCode)) &&
             (identical(other.valueCodeElement, valueCodeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueCodeElement, valueCodeElement)) &&
+            (identical(other.valueDate, valueDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDate, valueDate)) &&
             (identical(other.valueDateElement, valueDateElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueDateElement, valueDateElement)) &&
+            (identical(other.valueDateTime, valueDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDateTime, valueDateTime)) &&
             (identical(other.valueDateTimeElement, valueDateTimeElement) ||
                 const DeepCollectionEquality().equals(
                     other.valueDateTimeElement, valueDateTimeElement)) &&
-            (identical(other.valueDecimalElement, valueDecimalElement) ||
+            (identical(other.valueDecimal, valueDecimal) ||
                 const DeepCollectionEquality()
-                    .equals(other.valueDecimalElement, valueDecimalElement)) &&
-            (identical(other.valueIdElement, valueIdElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueIdElement, valueIdElement)) &&
-            (identical(other.valueInstantElement, valueInstantElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueInstantElement, valueInstantElement)) &&
-            (identical(other.valueIntegerElement, valueIntegerElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueIntegerElement, valueIntegerElement)) &&
-            (identical(other.valueMarkdownElement, valueMarkdownElement) ||
-                const DeepCollectionEquality().equals(
-                    other.valueMarkdownElement, valueMarkdownElement)) &&
-            (identical(other.valueOidElement, valueOidElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueOidElement, valueOidElement)) &&
-            (identical(other.valuePositiveIntElement, valuePositiveIntElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.valuePositiveIntElement, valuePositiveIntElement)) &&
+                    .equals(other.valueDecimal, valueDecimal)) &&
+            (identical(other.valueDecimalElement, valueDecimalElement) || const DeepCollectionEquality().equals(other.valueDecimalElement, valueDecimalElement)) &&
+            (identical(other.valueId, valueId) || const DeepCollectionEquality().equals(other.valueId, valueId)) &&
+            (identical(other.valueIdElement, valueIdElement) || const DeepCollectionEquality().equals(other.valueIdElement, valueIdElement)) &&
+            (identical(other.valueInstant, valueInstant) || const DeepCollectionEquality().equals(other.valueInstant, valueInstant)) &&
+            (identical(other.valueInstantElement, valueInstantElement) || const DeepCollectionEquality().equals(other.valueInstantElement, valueInstantElement)) &&
+            (identical(other.valueInteger, valueInteger) || const DeepCollectionEquality().equals(other.valueInteger, valueInteger)) &&
+            (identical(other.valueIntegerElement, valueIntegerElement) || const DeepCollectionEquality().equals(other.valueIntegerElement, valueIntegerElement)) &&
+            (identical(other.valueMarkdown, valueMarkdown) || const DeepCollectionEquality().equals(other.valueMarkdown, valueMarkdown)) &&
+            (identical(other.valueMarkdownElement, valueMarkdownElement) || const DeepCollectionEquality().equals(other.valueMarkdownElement, valueMarkdownElement)) &&
+            (identical(other.valueOid, valueOid) || const DeepCollectionEquality().equals(other.valueOid, valueOid)) &&
+            (identical(other.valueOidElement, valueOidElement) || const DeepCollectionEquality().equals(other.valueOidElement, valueOidElement)) &&
+            (identical(other.valuePositiveInt, valuePositiveInt) || const DeepCollectionEquality().equals(other.valuePositiveInt, valuePositiveInt)) &&
+            (identical(other.valuePositiveIntElement, valuePositiveIntElement) || const DeepCollectionEquality().equals(other.valuePositiveIntElement, valuePositiveIntElement)) &&
+            (identical(other.valueString, valueString) || const DeepCollectionEquality().equals(other.valueString, valueString)) &&
             (identical(other.valueStringElement, valueStringElement) || const DeepCollectionEquality().equals(other.valueStringElement, valueStringElement)) &&
+            (identical(other.valueTime, valueTime) || const DeepCollectionEquality().equals(other.valueTime, valueTime)) &&
             (identical(other.valueTimeElement, valueTimeElement) || const DeepCollectionEquality().equals(other.valueTimeElement, valueTimeElement)) &&
+            (identical(other.valueUnsignedInt, valueUnsignedInt) || const DeepCollectionEquality().equals(other.valueUnsignedInt, valueUnsignedInt)) &&
             (identical(other.valueUnsignedIntElement, valueUnsignedIntElement) || const DeepCollectionEquality().equals(other.valueUnsignedIntElement, valueUnsignedIntElement)) &&
+            (identical(other.valueUri, valueUri) || const DeepCollectionEquality().equals(other.valueUri, valueUri)) &&
             (identical(other.valueUriElement, valueUriElement) || const DeepCollectionEquality().equals(other.valueUriElement, valueUriElement)) &&
+            (identical(other.valueUrl, valueUrl) || const DeepCollectionEquality().equals(other.valueUrl, valueUrl)) &&
             (identical(other.valueUrlElement, valueUrlElement) || const DeepCollectionEquality().equals(other.valueUrlElement, valueUrlElement)) &&
+            (identical(other.valueUuid, valueUuid) || const DeepCollectionEquality().equals(other.valueUuid, valueUuid)) &&
             (identical(other.valueUuidElement, valueUuidElement) || const DeepCollectionEquality().equals(other.valueUuidElement, valueUuidElement)) &&
             (identical(other.valueAddress, valueAddress) || const DeepCollectionEquality().equals(other.valueAddress, valueAddress)) &&
             (identical(other.valueAge, valueAge) || const DeepCollectionEquality().equals(other.valueAge, valueAge)) &&
@@ -7507,24 +7796,43 @@ class _$_TaskInput extends _TaskInput {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(type) ^
+      const DeepCollectionEquality().hash(valueBase64Binary) ^
       const DeepCollectionEquality().hash(valueBase64BinaryElement) ^
+      const DeepCollectionEquality().hash(valueBoolean) ^
       const DeepCollectionEquality().hash(valueBooleanElement) ^
+      const DeepCollectionEquality().hash(valueCanonical) ^
       const DeepCollectionEquality().hash(valueCanonicalElement) ^
+      const DeepCollectionEquality().hash(valueCode) ^
       const DeepCollectionEquality().hash(valueCodeElement) ^
+      const DeepCollectionEquality().hash(valueDate) ^
       const DeepCollectionEquality().hash(valueDateElement) ^
+      const DeepCollectionEquality().hash(valueDateTime) ^
       const DeepCollectionEquality().hash(valueDateTimeElement) ^
+      const DeepCollectionEquality().hash(valueDecimal) ^
       const DeepCollectionEquality().hash(valueDecimalElement) ^
+      const DeepCollectionEquality().hash(valueId) ^
       const DeepCollectionEquality().hash(valueIdElement) ^
+      const DeepCollectionEquality().hash(valueInstant) ^
       const DeepCollectionEquality().hash(valueInstantElement) ^
+      const DeepCollectionEquality().hash(valueInteger) ^
       const DeepCollectionEquality().hash(valueIntegerElement) ^
+      const DeepCollectionEquality().hash(valueMarkdown) ^
       const DeepCollectionEquality().hash(valueMarkdownElement) ^
+      const DeepCollectionEquality().hash(valueOid) ^
       const DeepCollectionEquality().hash(valueOidElement) ^
+      const DeepCollectionEquality().hash(valuePositiveInt) ^
       const DeepCollectionEquality().hash(valuePositiveIntElement) ^
+      const DeepCollectionEquality().hash(valueString) ^
       const DeepCollectionEquality().hash(valueStringElement) ^
+      const DeepCollectionEquality().hash(valueTime) ^
       const DeepCollectionEquality().hash(valueTimeElement) ^
+      const DeepCollectionEquality().hash(valueUnsignedInt) ^
       const DeepCollectionEquality().hash(valueUnsignedIntElement) ^
+      const DeepCollectionEquality().hash(valueUri) ^
       const DeepCollectionEquality().hash(valueUriElement) ^
+      const DeepCollectionEquality().hash(valueUrl) ^
       const DeepCollectionEquality().hash(valueUrlElement) ^
+      const DeepCollectionEquality().hash(valueUuid) ^
       const DeepCollectionEquality().hash(valueUuidElement) ^
       const DeepCollectionEquality().hash(valueAddress) ^
       const DeepCollectionEquality().hash(valueAge) ^
@@ -7575,24 +7883,43 @@ abstract class _TaskInput extends TaskInput {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @required CodeableConcept type,
+      Base64Binary valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Canonical valueCanonical,
       @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
+      Code valueCode,
       @JsonKey(name: '_valueCode') Element valueCodeElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      Id valueId,
       @JsonKey(name: '_valueId') Element valueIdElement,
+      Instant valueInstant,
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Markdown valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
+      Oid valueOid,
       @JsonKey(name: '_valueOid') Element valueOidElement,
+      PositiveInt valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Time valueTime,
       @JsonKey(name: '_valueTime') Element valueTimeElement,
+      UnsignedInt valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
+      FhirUri valueUri,
       @JsonKey(name: '_valueUri') Element valueUriElement,
+      FhirUrl valueUrl,
       @JsonKey(name: '_valueUrl') Element valueUrlElement,
+      Uuid valueUuid,
       @JsonKey(name: '_valueUuid') Element valueUuidElement,
       Address valueAddress,
       Age valueAge,
@@ -7639,59 +7966,97 @@ abstract class _TaskInput extends TaskInput {
   @override
   CodeableConcept get type;
   @override
+  Base64Binary get valueBase64Binary;
+  @override
   @JsonKey(name: '_valueBase64Binary')
   Element get valueBase64BinaryElement;
+  @override
+  Boolean get valueBoolean;
   @override
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
   @override
+  Canonical get valueCanonical;
+  @override
   @JsonKey(name: '_valueCanonical')
   Element get valueCanonicalElement;
+  @override
+  Code get valueCode;
   @override
   @JsonKey(name: '_valueCode')
   Element get valueCodeElement;
   @override
+  Date get valueDate;
+  @override
   @JsonKey(name: '_valueDate')
   Element get valueDateElement;
+  @override
+  FhirDateTime get valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
   Element get valueDateTimeElement;
   @override
+  Decimal get valueDecimal;
+  @override
   @JsonKey(name: '_valueDecimal')
   Element get valueDecimalElement;
+  @override
+  Id get valueId;
   @override
   @JsonKey(name: '_valueId')
   Element get valueIdElement;
   @override
+  Instant get valueInstant;
+  @override
   @JsonKey(name: '_valueInstant')
   Element get valueInstantElement;
+  @override
+  Integer get valueInteger;
   @override
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
   @override
+  Markdown get valueMarkdown;
+  @override
   @JsonKey(name: '_valueMarkdown')
   Element get valueMarkdownElement;
+  @override
+  Oid get valueOid;
   @override
   @JsonKey(name: '_valueOid')
   Element get valueOidElement;
   @override
+  PositiveInt get valuePositiveInt;
+  @override
   @JsonKey(name: '_valuePositiveInt')
   Element get valuePositiveIntElement;
+  @override
+  String get valueString;
   @override
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
   @override
+  Time get valueTime;
+  @override
   @JsonKey(name: '_valueTime')
   Element get valueTimeElement;
+  @override
+  UnsignedInt get valueUnsignedInt;
   @override
   @JsonKey(name: '_valueUnsignedInt')
   Element get valueUnsignedIntElement;
   @override
+  FhirUri get valueUri;
+  @override
   @JsonKey(name: '_valueUri')
   Element get valueUriElement;
   @override
+  FhirUrl get valueUrl;
+  @override
   @JsonKey(name: '_valueUrl')
   Element get valueUrlElement;
+  @override
+  Uuid get valueUuid;
   @override
   @JsonKey(name: '_valueUuid')
   Element get valueUuidElement;
@@ -7773,24 +8138,43 @@ class _$TaskOutputTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @required CodeableConcept type,
+      Base64Binary valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Canonical valueCanonical,
       @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
+      Code valueCode,
       @JsonKey(name: '_valueCode') Element valueCodeElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      Id valueId,
       @JsonKey(name: '_valueId') Element valueIdElement,
+      Instant valueInstant,
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Markdown valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
+      Oid valueOid,
       @JsonKey(name: '_valueOid') Element valueOidElement,
+      PositiveInt valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Time valueTime,
       @JsonKey(name: '_valueTime') Element valueTimeElement,
+      UnsignedInt valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
+      FhirUri valueUri,
       @JsonKey(name: '_valueUri') Element valueUriElement,
+      FhirUrl valueUrl,
       @JsonKey(name: '_valueUrl') Element valueUrlElement,
+      Uuid valueUuid,
       @JsonKey(name: '_valueUuid') Element valueUuidElement,
       Address valueAddress,
       Age valueAge,
@@ -7828,24 +8212,43 @@ class _$TaskOutputTearOff {
       extension_: extension_,
       modifierExtension: modifierExtension,
       type: type,
+      valueBase64Binary: valueBase64Binary,
       valueBase64BinaryElement: valueBase64BinaryElement,
+      valueBoolean: valueBoolean,
       valueBooleanElement: valueBooleanElement,
+      valueCanonical: valueCanonical,
       valueCanonicalElement: valueCanonicalElement,
+      valueCode: valueCode,
       valueCodeElement: valueCodeElement,
+      valueDate: valueDate,
       valueDateElement: valueDateElement,
+      valueDateTime: valueDateTime,
       valueDateTimeElement: valueDateTimeElement,
+      valueDecimal: valueDecimal,
       valueDecimalElement: valueDecimalElement,
+      valueId: valueId,
       valueIdElement: valueIdElement,
+      valueInstant: valueInstant,
       valueInstantElement: valueInstantElement,
+      valueInteger: valueInteger,
       valueIntegerElement: valueIntegerElement,
+      valueMarkdown: valueMarkdown,
       valueMarkdownElement: valueMarkdownElement,
+      valueOid: valueOid,
       valueOidElement: valueOidElement,
+      valuePositiveInt: valuePositiveInt,
       valuePositiveIntElement: valuePositiveIntElement,
+      valueString: valueString,
       valueStringElement: valueStringElement,
+      valueTime: valueTime,
       valueTimeElement: valueTimeElement,
+      valueUnsignedInt: valueUnsignedInt,
       valueUnsignedIntElement: valueUnsignedIntElement,
+      valueUri: valueUri,
       valueUriElement: valueUriElement,
+      valueUrl: valueUrl,
       valueUrlElement: valueUrlElement,
+      valueUuid: valueUuid,
       valueUuidElement: valueUuidElement,
       valueAddress: valueAddress,
       valueAge: valueAge,
@@ -7891,42 +8294,61 @@ mixin _$TaskOutput {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   CodeableConcept get type;
+  Base64Binary get valueBase64Binary;
   @JsonKey(name: '_valueBase64Binary')
   Element get valueBase64BinaryElement;
+  Boolean get valueBoolean;
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
+  Canonical get valueCanonical;
   @JsonKey(name: '_valueCanonical')
   Element get valueCanonicalElement;
+  Code get valueCode;
   @JsonKey(name: '_valueCode')
   Element get valueCodeElement;
+  Date get valueDate;
   @JsonKey(name: '_valueDate')
   Element get valueDateElement;
+  FhirDateTime get valueDateTime;
   @JsonKey(name: '_valueDateTime')
   Element get valueDateTimeElement;
+  Decimal get valueDecimal;
   @JsonKey(name: '_valueDecimal')
   Element get valueDecimalElement;
+  Id get valueId;
   @JsonKey(name: '_valueId')
   Element get valueIdElement;
+  Instant get valueInstant;
   @JsonKey(name: '_valueInstant')
   Element get valueInstantElement;
+  Integer get valueInteger;
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
+  Markdown get valueMarkdown;
   @JsonKey(name: '_valueMarkdown')
   Element get valueMarkdownElement;
+  Oid get valueOid;
   @JsonKey(name: '_valueOid')
   Element get valueOidElement;
+  PositiveInt get valuePositiveInt;
   @JsonKey(name: '_valuePositiveInt')
   Element get valuePositiveIntElement;
+  String get valueString;
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
+  Time get valueTime;
   @JsonKey(name: '_valueTime')
   Element get valueTimeElement;
+  UnsignedInt get valueUnsignedInt;
   @JsonKey(name: '_valueUnsignedInt')
   Element get valueUnsignedIntElement;
+  FhirUri get valueUri;
   @JsonKey(name: '_valueUri')
   Element get valueUriElement;
+  FhirUrl get valueUrl;
   @JsonKey(name: '_valueUrl')
   Element get valueUrlElement;
+  Uuid get valueUuid;
   @JsonKey(name: '_valueUuid')
   Element get valueUuidElement;
   Address get valueAddress;
@@ -7974,24 +8396,43 @@ abstract class $TaskOutputCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept type,
+      Base64Binary valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Canonical valueCanonical,
       @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
+      Code valueCode,
       @JsonKey(name: '_valueCode') Element valueCodeElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      Id valueId,
       @JsonKey(name: '_valueId') Element valueIdElement,
+      Instant valueInstant,
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Markdown valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
+      Oid valueOid,
       @JsonKey(name: '_valueOid') Element valueOidElement,
+      PositiveInt valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Time valueTime,
       @JsonKey(name: '_valueTime') Element valueTimeElement,
+      UnsignedInt valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
+      FhirUri valueUri,
       @JsonKey(name: '_valueUri') Element valueUriElement,
+      FhirUrl valueUrl,
       @JsonKey(name: '_valueUrl') Element valueUrlElement,
+      Uuid valueUuid,
       @JsonKey(name: '_valueUuid') Element valueUuidElement,
       Address valueAddress,
       Age valueAge,
@@ -8091,24 +8532,43 @@ class _$TaskOutputCopyWithImpl<$Res> implements $TaskOutputCopyWith<$Res> {
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object type = freezed,
+    Object valueBase64Binary = freezed,
     Object valueBase64BinaryElement = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
+    Object valueCanonical = freezed,
     Object valueCanonicalElement = freezed,
+    Object valueCode = freezed,
     Object valueCodeElement = freezed,
+    Object valueDate = freezed,
     Object valueDateElement = freezed,
+    Object valueDateTime = freezed,
     Object valueDateTimeElement = freezed,
+    Object valueDecimal = freezed,
     Object valueDecimalElement = freezed,
+    Object valueId = freezed,
     Object valueIdElement = freezed,
+    Object valueInstant = freezed,
     Object valueInstantElement = freezed,
+    Object valueInteger = freezed,
     Object valueIntegerElement = freezed,
+    Object valueMarkdown = freezed,
     Object valueMarkdownElement = freezed,
+    Object valueOid = freezed,
     Object valueOidElement = freezed,
+    Object valuePositiveInt = freezed,
     Object valuePositiveIntElement = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueTime = freezed,
     Object valueTimeElement = freezed,
+    Object valueUnsignedInt = freezed,
     Object valueUnsignedIntElement = freezed,
+    Object valueUri = freezed,
     Object valueUriElement = freezed,
+    Object valueUrl = freezed,
     Object valueUrlElement = freezed,
+    Object valueUuid = freezed,
     Object valueUuidElement = freezed,
     Object valueAddress = freezed,
     Object valueAge = freezed,
@@ -8151,60 +8611,100 @@ class _$TaskOutputCopyWithImpl<$Res> implements $TaskOutputCopyWith<$Res> {
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       type: type == freezed ? _value.type : type as CodeableConcept,
+      valueBase64Binary: valueBase64Binary == freezed
+          ? _value.valueBase64Binary
+          : valueBase64Binary as Base64Binary,
       valueBase64BinaryElement: valueBase64BinaryElement == freezed
           ? _value.valueBase64BinaryElement
           : valueBase64BinaryElement as Element,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
+      valueCanonical: valueCanonical == freezed
+          ? _value.valueCanonical
+          : valueCanonical as Canonical,
       valueCanonicalElement: valueCanonicalElement == freezed
           ? _value.valueCanonicalElement
           : valueCanonicalElement as Element,
+      valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
       valueCodeElement: valueCodeElement == freezed
           ? _value.valueCodeElement
           : valueCodeElement as Element,
+      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateElement: valueDateElement == freezed
           ? _value.valueDateElement
           : valueDateElement as Element,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime as FhirDateTime,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement as Element,
+      valueDecimal: valueDecimal == freezed
+          ? _value.valueDecimal
+          : valueDecimal as Decimal,
       valueDecimalElement: valueDecimalElement == freezed
           ? _value.valueDecimalElement
           : valueDecimalElement as Element,
+      valueId: valueId == freezed ? _value.valueId : valueId as Id,
       valueIdElement: valueIdElement == freezed
           ? _value.valueIdElement
           : valueIdElement as Element,
+      valueInstant: valueInstant == freezed
+          ? _value.valueInstant
+          : valueInstant as Instant,
       valueInstantElement: valueInstantElement == freezed
           ? _value.valueInstantElement
           : valueInstantElement as Element,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger as Integer,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement as Element,
+      valueMarkdown: valueMarkdown == freezed
+          ? _value.valueMarkdown
+          : valueMarkdown as Markdown,
       valueMarkdownElement: valueMarkdownElement == freezed
           ? _value.valueMarkdownElement
           : valueMarkdownElement as Element,
+      valueOid: valueOid == freezed ? _value.valueOid : valueOid as Oid,
       valueOidElement: valueOidElement == freezed
           ? _value.valueOidElement
           : valueOidElement as Element,
+      valuePositiveInt: valuePositiveInt == freezed
+          ? _value.valuePositiveInt
+          : valuePositiveInt as PositiveInt,
       valuePositiveIntElement: valuePositiveIntElement == freezed
           ? _value.valuePositiveIntElement
           : valuePositiveIntElement as Element,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueTimeElement: valueTimeElement == freezed
           ? _value.valueTimeElement
           : valueTimeElement as Element,
+      valueUnsignedInt: valueUnsignedInt == freezed
+          ? _value.valueUnsignedInt
+          : valueUnsignedInt as UnsignedInt,
       valueUnsignedIntElement: valueUnsignedIntElement == freezed
           ? _value.valueUnsignedIntElement
           : valueUnsignedIntElement as Element,
+      valueUri: valueUri == freezed ? _value.valueUri : valueUri as FhirUri,
       valueUriElement: valueUriElement == freezed
           ? _value.valueUriElement
           : valueUriElement as Element,
+      valueUrl: valueUrl == freezed ? _value.valueUrl : valueUrl as FhirUrl,
       valueUrlElement: valueUrlElement == freezed
           ? _value.valueUrlElement
           : valueUrlElement as Element,
+      valueUuid: valueUuid == freezed ? _value.valueUuid : valueUuid as Uuid,
       valueUuidElement: valueUuidElement == freezed
           ? _value.valueUuidElement
           : valueUuidElement as Element,
@@ -8815,24 +9315,43 @@ abstract class _$TaskOutputCopyWith<$Res> implements $TaskOutputCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept type,
+      Base64Binary valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Canonical valueCanonical,
       @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
+      Code valueCode,
       @JsonKey(name: '_valueCode') Element valueCodeElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      Id valueId,
       @JsonKey(name: '_valueId') Element valueIdElement,
+      Instant valueInstant,
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Markdown valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
+      Oid valueOid,
       @JsonKey(name: '_valueOid') Element valueOidElement,
+      PositiveInt valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Time valueTime,
       @JsonKey(name: '_valueTime') Element valueTimeElement,
+      UnsignedInt valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
+      FhirUri valueUri,
       @JsonKey(name: '_valueUri') Element valueUriElement,
+      FhirUrl valueUrl,
       @JsonKey(name: '_valueUrl') Element valueUrlElement,
+      Uuid valueUuid,
       @JsonKey(name: '_valueUuid') Element valueUuidElement,
       Address valueAddress,
       Age valueAge,
@@ -8985,24 +9504,43 @@ class __$TaskOutputCopyWithImpl<$Res> extends _$TaskOutputCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object type = freezed,
+    Object valueBase64Binary = freezed,
     Object valueBase64BinaryElement = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
+    Object valueCanonical = freezed,
     Object valueCanonicalElement = freezed,
+    Object valueCode = freezed,
     Object valueCodeElement = freezed,
+    Object valueDate = freezed,
     Object valueDateElement = freezed,
+    Object valueDateTime = freezed,
     Object valueDateTimeElement = freezed,
+    Object valueDecimal = freezed,
     Object valueDecimalElement = freezed,
+    Object valueId = freezed,
     Object valueIdElement = freezed,
+    Object valueInstant = freezed,
     Object valueInstantElement = freezed,
+    Object valueInteger = freezed,
     Object valueIntegerElement = freezed,
+    Object valueMarkdown = freezed,
     Object valueMarkdownElement = freezed,
+    Object valueOid = freezed,
     Object valueOidElement = freezed,
+    Object valuePositiveInt = freezed,
     Object valuePositiveIntElement = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueTime = freezed,
     Object valueTimeElement = freezed,
+    Object valueUnsignedInt = freezed,
     Object valueUnsignedIntElement = freezed,
+    Object valueUri = freezed,
     Object valueUriElement = freezed,
+    Object valueUrl = freezed,
     Object valueUrlElement = freezed,
+    Object valueUuid = freezed,
     Object valueUuidElement = freezed,
     Object valueAddress = freezed,
     Object valueAge = freezed,
@@ -9045,60 +9583,100 @@ class __$TaskOutputCopyWithImpl<$Res> extends _$TaskOutputCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       type: type == freezed ? _value.type : type as CodeableConcept,
+      valueBase64Binary: valueBase64Binary == freezed
+          ? _value.valueBase64Binary
+          : valueBase64Binary as Base64Binary,
       valueBase64BinaryElement: valueBase64BinaryElement == freezed
           ? _value.valueBase64BinaryElement
           : valueBase64BinaryElement as Element,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
+      valueCanonical: valueCanonical == freezed
+          ? _value.valueCanonical
+          : valueCanonical as Canonical,
       valueCanonicalElement: valueCanonicalElement == freezed
           ? _value.valueCanonicalElement
           : valueCanonicalElement as Element,
+      valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
       valueCodeElement: valueCodeElement == freezed
           ? _value.valueCodeElement
           : valueCodeElement as Element,
+      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateElement: valueDateElement == freezed
           ? _value.valueDateElement
           : valueDateElement as Element,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime as FhirDateTime,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement as Element,
+      valueDecimal: valueDecimal == freezed
+          ? _value.valueDecimal
+          : valueDecimal as Decimal,
       valueDecimalElement: valueDecimalElement == freezed
           ? _value.valueDecimalElement
           : valueDecimalElement as Element,
+      valueId: valueId == freezed ? _value.valueId : valueId as Id,
       valueIdElement: valueIdElement == freezed
           ? _value.valueIdElement
           : valueIdElement as Element,
+      valueInstant: valueInstant == freezed
+          ? _value.valueInstant
+          : valueInstant as Instant,
       valueInstantElement: valueInstantElement == freezed
           ? _value.valueInstantElement
           : valueInstantElement as Element,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger as Integer,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement as Element,
+      valueMarkdown: valueMarkdown == freezed
+          ? _value.valueMarkdown
+          : valueMarkdown as Markdown,
       valueMarkdownElement: valueMarkdownElement == freezed
           ? _value.valueMarkdownElement
           : valueMarkdownElement as Element,
+      valueOid: valueOid == freezed ? _value.valueOid : valueOid as Oid,
       valueOidElement: valueOidElement == freezed
           ? _value.valueOidElement
           : valueOidElement as Element,
+      valuePositiveInt: valuePositiveInt == freezed
+          ? _value.valuePositiveInt
+          : valuePositiveInt as PositiveInt,
       valuePositiveIntElement: valuePositiveIntElement == freezed
           ? _value.valuePositiveIntElement
           : valuePositiveIntElement as Element,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueTimeElement: valueTimeElement == freezed
           ? _value.valueTimeElement
           : valueTimeElement as Element,
+      valueUnsignedInt: valueUnsignedInt == freezed
+          ? _value.valueUnsignedInt
+          : valueUnsignedInt as UnsignedInt,
       valueUnsignedIntElement: valueUnsignedIntElement == freezed
           ? _value.valueUnsignedIntElement
           : valueUnsignedIntElement as Element,
+      valueUri: valueUri == freezed ? _value.valueUri : valueUri as FhirUri,
       valueUriElement: valueUriElement == freezed
           ? _value.valueUriElement
           : valueUriElement as Element,
+      valueUrl: valueUrl == freezed ? _value.valueUrl : valueUrl as FhirUrl,
       valueUrlElement: valueUrlElement == freezed
           ? _value.valueUrlElement
           : valueUrlElement as Element,
+      valueUuid: valueUuid == freezed ? _value.valueUuid : valueUuid as Uuid,
       valueUuidElement: valueUuidElement == freezed
           ? _value.valueUuidElement
           : valueUuidElement as Element,
@@ -9194,24 +9772,43 @@ class _$_TaskOutput extends _TaskOutput {
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @required this.type,
+      this.valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') this.valueBase64BinaryElement,
+      this.valueBoolean,
       @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+      this.valueCanonical,
       @JsonKey(name: '_valueCanonical') this.valueCanonicalElement,
+      this.valueCode,
       @JsonKey(name: '_valueCode') this.valueCodeElement,
+      this.valueDate,
       @JsonKey(name: '_valueDate') this.valueDateElement,
+      this.valueDateTime,
       @JsonKey(name: '_valueDateTime') this.valueDateTimeElement,
+      this.valueDecimal,
       @JsonKey(name: '_valueDecimal') this.valueDecimalElement,
+      this.valueId,
       @JsonKey(name: '_valueId') this.valueIdElement,
+      this.valueInstant,
       @JsonKey(name: '_valueInstant') this.valueInstantElement,
+      this.valueInteger,
       @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+      this.valueMarkdown,
       @JsonKey(name: '_valueMarkdown') this.valueMarkdownElement,
+      this.valueOid,
       @JsonKey(name: '_valueOid') this.valueOidElement,
+      this.valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') this.valuePositiveIntElement,
+      this.valueString,
       @JsonKey(name: '_valueString') this.valueStringElement,
+      this.valueTime,
       @JsonKey(name: '_valueTime') this.valueTimeElement,
+      this.valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') this.valueUnsignedIntElement,
+      this.valueUri,
       @JsonKey(name: '_valueUri') this.valueUriElement,
+      this.valueUrl,
       @JsonKey(name: '_valueUrl') this.valueUrlElement,
+      this.valueUuid,
       @JsonKey(name: '_valueUuid') this.valueUuidElement,
       this.valueAddress,
       this.valueAge,
@@ -9260,59 +9857,97 @@ class _$_TaskOutput extends _TaskOutput {
   @override
   final CodeableConcept type;
   @override
+  final Base64Binary valueBase64Binary;
+  @override
   @JsonKey(name: '_valueBase64Binary')
   final Element valueBase64BinaryElement;
+  @override
+  final Boolean valueBoolean;
   @override
   @JsonKey(name: '_valueBoolean')
   final Element valueBooleanElement;
   @override
+  final Canonical valueCanonical;
+  @override
   @JsonKey(name: '_valueCanonical')
   final Element valueCanonicalElement;
+  @override
+  final Code valueCode;
   @override
   @JsonKey(name: '_valueCode')
   final Element valueCodeElement;
   @override
+  final Date valueDate;
+  @override
   @JsonKey(name: '_valueDate')
   final Element valueDateElement;
+  @override
+  final FhirDateTime valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
   final Element valueDateTimeElement;
   @override
+  final Decimal valueDecimal;
+  @override
   @JsonKey(name: '_valueDecimal')
   final Element valueDecimalElement;
+  @override
+  final Id valueId;
   @override
   @JsonKey(name: '_valueId')
   final Element valueIdElement;
   @override
+  final Instant valueInstant;
+  @override
   @JsonKey(name: '_valueInstant')
   final Element valueInstantElement;
+  @override
+  final Integer valueInteger;
   @override
   @JsonKey(name: '_valueInteger')
   final Element valueIntegerElement;
   @override
+  final Markdown valueMarkdown;
+  @override
   @JsonKey(name: '_valueMarkdown')
   final Element valueMarkdownElement;
+  @override
+  final Oid valueOid;
   @override
   @JsonKey(name: '_valueOid')
   final Element valueOidElement;
   @override
+  final PositiveInt valuePositiveInt;
+  @override
   @JsonKey(name: '_valuePositiveInt')
   final Element valuePositiveIntElement;
+  @override
+  final String valueString;
   @override
   @JsonKey(name: '_valueString')
   final Element valueStringElement;
   @override
+  final Time valueTime;
+  @override
   @JsonKey(name: '_valueTime')
   final Element valueTimeElement;
+  @override
+  final UnsignedInt valueUnsignedInt;
   @override
   @JsonKey(name: '_valueUnsignedInt')
   final Element valueUnsignedIntElement;
   @override
+  final FhirUri valueUri;
+  @override
   @JsonKey(name: '_valueUri')
   final Element valueUriElement;
   @override
+  final FhirUrl valueUrl;
+  @override
   @JsonKey(name: '_valueUrl')
   final Element valueUrlElement;
+  @override
+  final Uuid valueUuid;
   @override
   @JsonKey(name: '_valueUuid')
   final Element valueUuidElement;
@@ -9381,7 +10016,7 @@ class _$_TaskOutput extends _TaskOutput {
 
   @override
   String toString() {
-    return 'TaskOutput(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, valueBase64BinaryElement: $valueBase64BinaryElement, valueBooleanElement: $valueBooleanElement, valueCanonicalElement: $valueCanonicalElement, valueCodeElement: $valueCodeElement, valueDateElement: $valueDateElement, valueDateTimeElement: $valueDateTimeElement, valueDecimalElement: $valueDecimalElement, valueIdElement: $valueIdElement, valueInstantElement: $valueInstantElement, valueIntegerElement: $valueIntegerElement, valueMarkdownElement: $valueMarkdownElement, valueOidElement: $valueOidElement, valuePositiveIntElement: $valuePositiveIntElement, valueStringElement: $valueStringElement, valueTimeElement: $valueTimeElement, valueUnsignedIntElement: $valueUnsignedIntElement, valueUriElement: $valueUriElement, valueUrlElement: $valueUrlElement, valueUuidElement: $valueUuidElement, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueMeta: $valueMeta)';
+    return 'TaskOutput(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueCanonical: $valueCanonical, valueCanonicalElement: $valueCanonicalElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueId: $valueId, valueIdElement: $valueIdElement, valueInstant: $valueInstant, valueInstantElement: $valueInstantElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueMarkdown: $valueMarkdown, valueMarkdownElement: $valueMarkdownElement, valueOid: $valueOid, valueOidElement: $valueOidElement, valuePositiveInt: $valuePositiveInt, valuePositiveIntElement: $valuePositiveIntElement, valueString: $valueString, valueStringElement: $valueStringElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueUnsignedInt: $valueUnsignedInt, valueUnsignedIntElement: $valueUnsignedIntElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueUrl: $valueUrl, valueUrlElement: $valueUrlElement, valueUuid: $valueUuid, valueUuidElement: $valueUuidElement, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueMeta: $valueMeta)';
   }
 
   @override
@@ -9398,51 +10033,70 @@ class _$_TaskOutput extends _TaskOutput {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)) &&
+            (identical(other.valueBase64Binary, valueBase64Binary) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBase64Binary, valueBase64Binary)) &&
             (identical(other.valueBase64BinaryElement, valueBase64BinaryElement) ||
                 const DeepCollectionEquality().equals(
                     other.valueBase64BinaryElement,
                     valueBase64BinaryElement)) &&
+            (identical(other.valueBoolean, valueBoolean) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBoolean, valueBoolean)) &&
             (identical(other.valueBooleanElement, valueBooleanElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueBooleanElement, valueBooleanElement)) &&
+            (identical(other.valueCanonical, valueCanonical) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueCanonical, valueCanonical)) &&
             (identical(other.valueCanonicalElement, valueCanonicalElement) ||
                 const DeepCollectionEquality().equals(
                     other.valueCanonicalElement, valueCanonicalElement)) &&
+            (identical(other.valueCode, valueCode) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueCode, valueCode)) &&
             (identical(other.valueCodeElement, valueCodeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueCodeElement, valueCodeElement)) &&
+            (identical(other.valueDate, valueDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDate, valueDate)) &&
             (identical(other.valueDateElement, valueDateElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueDateElement, valueDateElement)) &&
+            (identical(other.valueDateTime, valueDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDateTime, valueDateTime)) &&
             (identical(other.valueDateTimeElement, valueDateTimeElement) ||
                 const DeepCollectionEquality().equals(
                     other.valueDateTimeElement, valueDateTimeElement)) &&
-            (identical(other.valueDecimalElement, valueDecimalElement) ||
+            (identical(other.valueDecimal, valueDecimal) ||
                 const DeepCollectionEquality()
-                    .equals(other.valueDecimalElement, valueDecimalElement)) &&
-            (identical(other.valueIdElement, valueIdElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueIdElement, valueIdElement)) &&
-            (identical(other.valueInstantElement, valueInstantElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueInstantElement, valueInstantElement)) &&
-            (identical(other.valueIntegerElement, valueIntegerElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueIntegerElement, valueIntegerElement)) &&
-            (identical(other.valueMarkdownElement, valueMarkdownElement) ||
-                const DeepCollectionEquality().equals(
-                    other.valueMarkdownElement, valueMarkdownElement)) &&
-            (identical(other.valueOidElement, valueOidElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueOidElement, valueOidElement)) &&
-            (identical(other.valuePositiveIntElement, valuePositiveIntElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.valuePositiveIntElement, valuePositiveIntElement)) &&
+                    .equals(other.valueDecimal, valueDecimal)) &&
+            (identical(other.valueDecimalElement, valueDecimalElement) || const DeepCollectionEquality().equals(other.valueDecimalElement, valueDecimalElement)) &&
+            (identical(other.valueId, valueId) || const DeepCollectionEquality().equals(other.valueId, valueId)) &&
+            (identical(other.valueIdElement, valueIdElement) || const DeepCollectionEquality().equals(other.valueIdElement, valueIdElement)) &&
+            (identical(other.valueInstant, valueInstant) || const DeepCollectionEquality().equals(other.valueInstant, valueInstant)) &&
+            (identical(other.valueInstantElement, valueInstantElement) || const DeepCollectionEquality().equals(other.valueInstantElement, valueInstantElement)) &&
+            (identical(other.valueInteger, valueInteger) || const DeepCollectionEquality().equals(other.valueInteger, valueInteger)) &&
+            (identical(other.valueIntegerElement, valueIntegerElement) || const DeepCollectionEquality().equals(other.valueIntegerElement, valueIntegerElement)) &&
+            (identical(other.valueMarkdown, valueMarkdown) || const DeepCollectionEquality().equals(other.valueMarkdown, valueMarkdown)) &&
+            (identical(other.valueMarkdownElement, valueMarkdownElement) || const DeepCollectionEquality().equals(other.valueMarkdownElement, valueMarkdownElement)) &&
+            (identical(other.valueOid, valueOid) || const DeepCollectionEquality().equals(other.valueOid, valueOid)) &&
+            (identical(other.valueOidElement, valueOidElement) || const DeepCollectionEquality().equals(other.valueOidElement, valueOidElement)) &&
+            (identical(other.valuePositiveInt, valuePositiveInt) || const DeepCollectionEquality().equals(other.valuePositiveInt, valuePositiveInt)) &&
+            (identical(other.valuePositiveIntElement, valuePositiveIntElement) || const DeepCollectionEquality().equals(other.valuePositiveIntElement, valuePositiveIntElement)) &&
+            (identical(other.valueString, valueString) || const DeepCollectionEquality().equals(other.valueString, valueString)) &&
             (identical(other.valueStringElement, valueStringElement) || const DeepCollectionEquality().equals(other.valueStringElement, valueStringElement)) &&
+            (identical(other.valueTime, valueTime) || const DeepCollectionEquality().equals(other.valueTime, valueTime)) &&
             (identical(other.valueTimeElement, valueTimeElement) || const DeepCollectionEquality().equals(other.valueTimeElement, valueTimeElement)) &&
+            (identical(other.valueUnsignedInt, valueUnsignedInt) || const DeepCollectionEquality().equals(other.valueUnsignedInt, valueUnsignedInt)) &&
             (identical(other.valueUnsignedIntElement, valueUnsignedIntElement) || const DeepCollectionEquality().equals(other.valueUnsignedIntElement, valueUnsignedIntElement)) &&
+            (identical(other.valueUri, valueUri) || const DeepCollectionEquality().equals(other.valueUri, valueUri)) &&
             (identical(other.valueUriElement, valueUriElement) || const DeepCollectionEquality().equals(other.valueUriElement, valueUriElement)) &&
+            (identical(other.valueUrl, valueUrl) || const DeepCollectionEquality().equals(other.valueUrl, valueUrl)) &&
             (identical(other.valueUrlElement, valueUrlElement) || const DeepCollectionEquality().equals(other.valueUrlElement, valueUrlElement)) &&
+            (identical(other.valueUuid, valueUuid) || const DeepCollectionEquality().equals(other.valueUuid, valueUuid)) &&
             (identical(other.valueUuidElement, valueUuidElement) || const DeepCollectionEquality().equals(other.valueUuidElement, valueUuidElement)) &&
             (identical(other.valueAddress, valueAddress) || const DeepCollectionEquality().equals(other.valueAddress, valueAddress)) &&
             (identical(other.valueAge, valueAge) || const DeepCollectionEquality().equals(other.valueAge, valueAge)) &&
@@ -9484,24 +10138,43 @@ class _$_TaskOutput extends _TaskOutput {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(type) ^
+      const DeepCollectionEquality().hash(valueBase64Binary) ^
       const DeepCollectionEquality().hash(valueBase64BinaryElement) ^
+      const DeepCollectionEquality().hash(valueBoolean) ^
       const DeepCollectionEquality().hash(valueBooleanElement) ^
+      const DeepCollectionEquality().hash(valueCanonical) ^
       const DeepCollectionEquality().hash(valueCanonicalElement) ^
+      const DeepCollectionEquality().hash(valueCode) ^
       const DeepCollectionEquality().hash(valueCodeElement) ^
+      const DeepCollectionEquality().hash(valueDate) ^
       const DeepCollectionEquality().hash(valueDateElement) ^
+      const DeepCollectionEquality().hash(valueDateTime) ^
       const DeepCollectionEquality().hash(valueDateTimeElement) ^
+      const DeepCollectionEquality().hash(valueDecimal) ^
       const DeepCollectionEquality().hash(valueDecimalElement) ^
+      const DeepCollectionEquality().hash(valueId) ^
       const DeepCollectionEquality().hash(valueIdElement) ^
+      const DeepCollectionEquality().hash(valueInstant) ^
       const DeepCollectionEquality().hash(valueInstantElement) ^
+      const DeepCollectionEquality().hash(valueInteger) ^
       const DeepCollectionEquality().hash(valueIntegerElement) ^
+      const DeepCollectionEquality().hash(valueMarkdown) ^
       const DeepCollectionEquality().hash(valueMarkdownElement) ^
+      const DeepCollectionEquality().hash(valueOid) ^
       const DeepCollectionEquality().hash(valueOidElement) ^
+      const DeepCollectionEquality().hash(valuePositiveInt) ^
       const DeepCollectionEquality().hash(valuePositiveIntElement) ^
+      const DeepCollectionEquality().hash(valueString) ^
       const DeepCollectionEquality().hash(valueStringElement) ^
+      const DeepCollectionEquality().hash(valueTime) ^
       const DeepCollectionEquality().hash(valueTimeElement) ^
+      const DeepCollectionEquality().hash(valueUnsignedInt) ^
       const DeepCollectionEquality().hash(valueUnsignedIntElement) ^
+      const DeepCollectionEquality().hash(valueUri) ^
       const DeepCollectionEquality().hash(valueUriElement) ^
+      const DeepCollectionEquality().hash(valueUrl) ^
       const DeepCollectionEquality().hash(valueUrlElement) ^
+      const DeepCollectionEquality().hash(valueUuid) ^
       const DeepCollectionEquality().hash(valueUuidElement) ^
       const DeepCollectionEquality().hash(valueAddress) ^
       const DeepCollectionEquality().hash(valueAge) ^
@@ -9552,24 +10225,43 @@ abstract class _TaskOutput extends TaskOutput {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @required CodeableConcept type,
+      Base64Binary valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Canonical valueCanonical,
       @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
+      Code valueCode,
       @JsonKey(name: '_valueCode') Element valueCodeElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      Id valueId,
       @JsonKey(name: '_valueId') Element valueIdElement,
+      Instant valueInstant,
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Markdown valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
+      Oid valueOid,
       @JsonKey(name: '_valueOid') Element valueOidElement,
+      PositiveInt valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Time valueTime,
       @JsonKey(name: '_valueTime') Element valueTimeElement,
+      UnsignedInt valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
+      FhirUri valueUri,
       @JsonKey(name: '_valueUri') Element valueUriElement,
+      FhirUrl valueUrl,
       @JsonKey(name: '_valueUrl') Element valueUrlElement,
+      Uuid valueUuid,
       @JsonKey(name: '_valueUuid') Element valueUuidElement,
       Address valueAddress,
       Age valueAge,
@@ -9616,59 +10308,97 @@ abstract class _TaskOutput extends TaskOutput {
   @override
   CodeableConcept get type;
   @override
+  Base64Binary get valueBase64Binary;
+  @override
   @JsonKey(name: '_valueBase64Binary')
   Element get valueBase64BinaryElement;
+  @override
+  Boolean get valueBoolean;
   @override
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
   @override
+  Canonical get valueCanonical;
+  @override
   @JsonKey(name: '_valueCanonical')
   Element get valueCanonicalElement;
+  @override
+  Code get valueCode;
   @override
   @JsonKey(name: '_valueCode')
   Element get valueCodeElement;
   @override
+  Date get valueDate;
+  @override
   @JsonKey(name: '_valueDate')
   Element get valueDateElement;
+  @override
+  FhirDateTime get valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
   Element get valueDateTimeElement;
   @override
+  Decimal get valueDecimal;
+  @override
   @JsonKey(name: '_valueDecimal')
   Element get valueDecimalElement;
+  @override
+  Id get valueId;
   @override
   @JsonKey(name: '_valueId')
   Element get valueIdElement;
   @override
+  Instant get valueInstant;
+  @override
   @JsonKey(name: '_valueInstant')
   Element get valueInstantElement;
+  @override
+  Integer get valueInteger;
   @override
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
   @override
+  Markdown get valueMarkdown;
+  @override
   @JsonKey(name: '_valueMarkdown')
   Element get valueMarkdownElement;
+  @override
+  Oid get valueOid;
   @override
   @JsonKey(name: '_valueOid')
   Element get valueOidElement;
   @override
+  PositiveInt get valuePositiveInt;
+  @override
   @JsonKey(name: '_valuePositiveInt')
   Element get valuePositiveIntElement;
+  @override
+  String get valueString;
   @override
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
   @override
+  Time get valueTime;
+  @override
   @JsonKey(name: '_valueTime')
   Element get valueTimeElement;
+  @override
+  UnsignedInt get valueUnsignedInt;
   @override
   @JsonKey(name: '_valueUnsignedInt')
   Element get valueUnsignedIntElement;
   @override
+  FhirUri get valueUri;
+  @override
   @JsonKey(name: '_valueUri')
   Element get valueUriElement;
   @override
+  FhirUrl get valueUrl;
+  @override
   @JsonKey(name: '_valueUrl')
   Element get valueUrlElement;
+  @override
+  Uuid get valueUuid;
   @override
   @JsonKey(name: '_valueUuid')
   Element get valueUuidElement;

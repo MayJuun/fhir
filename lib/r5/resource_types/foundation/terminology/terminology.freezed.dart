@@ -3325,12 +3325,18 @@ class _$CodeSystemProperty1TearOff {
       List<FhirExtension> modifierExtension,
       Code code,
       @JsonKey(name: '_code') Element codeElement,
+      Code valueCode,
       @JsonKey(name: '_valueCode') Element valueCodeElement,
       Coding valueCoding,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement}) {
     return _CodeSystemProperty1(
       id: id,
@@ -3338,12 +3344,18 @@ class _$CodeSystemProperty1TearOff {
       modifierExtension: modifierExtension,
       code: code,
       codeElement: codeElement,
+      valueCode: valueCode,
       valueCodeElement: valueCodeElement,
       valueCoding: valueCoding,
+      valueString: valueString,
       valueStringElement: valueStringElement,
+      valueInteger: valueInteger,
       valueIntegerElement: valueIntegerElement,
+      valueBoolean: valueBoolean,
       valueBooleanElement: valueBooleanElement,
+      valueDateTime: valueDateTime,
       valueDateTimeElement: valueDateTimeElement,
+      valueDecimal: valueDecimal,
       valueDecimalElement: valueDecimalElement,
     );
   }
@@ -3360,17 +3372,23 @@ mixin _$CodeSystemProperty1 {
   Code get code;
   @JsonKey(name: '_code')
   Element get codeElement;
+  Code get valueCode;
   @JsonKey(name: '_valueCode')
   Element get valueCodeElement;
   Coding get valueCoding;
+  String get valueString;
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
+  Integer get valueInteger;
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
+  Boolean get valueBoolean;
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
+  FhirDateTime get valueDateTime;
   @JsonKey(name: '_valueDateTime')
   Element get valueDateTimeElement;
+  Decimal get valueDecimal;
   @JsonKey(name: '_valueDecimal')
   Element get valueDecimalElement;
 
@@ -3388,12 +3406,18 @@ abstract class $CodeSystemProperty1CopyWith<$Res> {
       List<FhirExtension> modifierExtension,
       Code code,
       @JsonKey(name: '_code') Element codeElement,
+      Code valueCode,
       @JsonKey(name: '_valueCode') Element valueCodeElement,
       Coding valueCoding,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement});
 
   $ElementCopyWith<$Res> get codeElement;
@@ -3421,12 +3445,18 @@ class _$CodeSystemProperty1CopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object code = freezed,
     Object codeElement = freezed,
+    Object valueCode = freezed,
     Object valueCodeElement = freezed,
     Object valueCoding = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueInteger = freezed,
     Object valueIntegerElement = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
+    Object valueDateTime = freezed,
     Object valueDateTimeElement = freezed,
+    Object valueDecimal = freezed,
     Object valueDecimalElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -3440,23 +3470,38 @@ class _$CodeSystemProperty1CopyWithImpl<$Res>
       code: code == freezed ? _value.code : code as Code,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
+      valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
       valueCodeElement: valueCodeElement == freezed
           ? _value.valueCodeElement
           : valueCodeElement as Element,
       valueCoding:
           valueCoding == freezed ? _value.valueCoding : valueCoding as Coding,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger as Integer,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement as Element,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime as FhirDateTime,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement as Element,
+      valueDecimal: valueDecimal == freezed
+          ? _value.valueDecimal
+          : valueDecimal as Decimal,
       valueDecimalElement: valueDecimalElement == freezed
           ? _value.valueDecimalElement
           : valueDecimalElement as Element,
@@ -3556,12 +3601,18 @@ abstract class _$CodeSystemProperty1CopyWith<$Res>
       List<FhirExtension> modifierExtension,
       Code code,
       @JsonKey(name: '_code') Element codeElement,
+      Code valueCode,
       @JsonKey(name: '_valueCode') Element valueCodeElement,
       Coding valueCoding,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement});
 
   @override
@@ -3599,12 +3650,18 @@ class __$CodeSystemProperty1CopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object code = freezed,
     Object codeElement = freezed,
+    Object valueCode = freezed,
     Object valueCodeElement = freezed,
     Object valueCoding = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueInteger = freezed,
     Object valueIntegerElement = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
+    Object valueDateTime = freezed,
     Object valueDateTimeElement = freezed,
+    Object valueDecimal = freezed,
     Object valueDecimalElement = freezed,
   }) {
     return _then(_CodeSystemProperty1(
@@ -3618,23 +3675,38 @@ class __$CodeSystemProperty1CopyWithImpl<$Res>
       code: code == freezed ? _value.code : code as Code,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
+      valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
       valueCodeElement: valueCodeElement == freezed
           ? _value.valueCodeElement
           : valueCodeElement as Element,
       valueCoding:
           valueCoding == freezed ? _value.valueCoding : valueCoding as Coding,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger as Integer,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement as Element,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime as FhirDateTime,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement as Element,
+      valueDecimal: valueDecimal == freezed
+          ? _value.valueDecimal
+          : valueDecimal as Decimal,
       valueDecimalElement: valueDecimalElement == freezed
           ? _value.valueDecimalElement
           : valueDecimalElement as Element,
@@ -3650,12 +3722,18 @@ class _$_CodeSystemProperty1 extends _CodeSystemProperty1 {
       this.modifierExtension,
       this.code,
       @JsonKey(name: '_code') this.codeElement,
+      this.valueCode,
       @JsonKey(name: '_valueCode') this.valueCodeElement,
       this.valueCoding,
+      this.valueString,
       @JsonKey(name: '_valueString') this.valueStringElement,
+      this.valueInteger,
       @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+      this.valueBoolean,
       @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+      this.valueDateTime,
       @JsonKey(name: '_valueDateTime') this.valueDateTimeElement,
+      this.valueDecimal,
       @JsonKey(name: '_valueDecimal') this.valueDecimalElement})
       : super._();
 
@@ -3675,29 +3753,41 @@ class _$_CodeSystemProperty1 extends _CodeSystemProperty1 {
   @JsonKey(name: '_code')
   final Element codeElement;
   @override
+  final Code valueCode;
+  @override
   @JsonKey(name: '_valueCode')
   final Element valueCodeElement;
   @override
   final Coding valueCoding;
   @override
+  final String valueString;
+  @override
   @JsonKey(name: '_valueString')
   final Element valueStringElement;
+  @override
+  final Integer valueInteger;
   @override
   @JsonKey(name: '_valueInteger')
   final Element valueIntegerElement;
   @override
+  final Boolean valueBoolean;
+  @override
   @JsonKey(name: '_valueBoolean')
   final Element valueBooleanElement;
   @override
+  final FhirDateTime valueDateTime;
+  @override
   @JsonKey(name: '_valueDateTime')
   final Element valueDateTimeElement;
+  @override
+  final Decimal valueDecimal;
   @override
   @JsonKey(name: '_valueDecimal')
   final Element valueDecimalElement;
 
   @override
   String toString() {
-    return 'CodeSystemProperty1(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, codeElement: $codeElement, valueCodeElement: $valueCodeElement, valueCoding: $valueCoding, valueStringElement: $valueStringElement, valueIntegerElement: $valueIntegerElement, valueBooleanElement: $valueBooleanElement, valueDateTimeElement: $valueDateTimeElement, valueDecimalElement: $valueDecimalElement)';
+    return 'CodeSystemProperty1(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, codeElement: $codeElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueCoding: $valueCoding, valueString: $valueString, valueStringElement: $valueStringElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement)';
   }
 
   @override
@@ -3717,24 +3807,42 @@ class _$_CodeSystemProperty1 extends _CodeSystemProperty1 {
             (identical(other.codeElement, codeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.codeElement, codeElement)) &&
+            (identical(other.valueCode, valueCode) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueCode, valueCode)) &&
             (identical(other.valueCodeElement, valueCodeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueCodeElement, valueCodeElement)) &&
             (identical(other.valueCoding, valueCoding) ||
                 const DeepCollectionEquality()
                     .equals(other.valueCoding, valueCoding)) &&
+            (identical(other.valueString, valueString) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueString, valueString)) &&
             (identical(other.valueStringElement, valueStringElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueStringElement, valueStringElement)) &&
+            (identical(other.valueInteger, valueInteger) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueInteger, valueInteger)) &&
             (identical(other.valueIntegerElement, valueIntegerElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueIntegerElement, valueIntegerElement)) &&
+            (identical(other.valueBoolean, valueBoolean) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBoolean, valueBoolean)) &&
             (identical(other.valueBooleanElement, valueBooleanElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueBooleanElement, valueBooleanElement)) &&
+            (identical(other.valueDateTime, valueDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDateTime, valueDateTime)) &&
             (identical(other.valueDateTimeElement, valueDateTimeElement) ||
                 const DeepCollectionEquality().equals(
                     other.valueDateTimeElement, valueDateTimeElement)) &&
+            (identical(other.valueDecimal, valueDecimal) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDecimal, valueDecimal)) &&
             (identical(other.valueDecimalElement, valueDecimalElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueDecimalElement, valueDecimalElement)));
@@ -3748,12 +3856,18 @@ class _$_CodeSystemProperty1 extends _CodeSystemProperty1 {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(codeElement) ^
+      const DeepCollectionEquality().hash(valueCode) ^
       const DeepCollectionEquality().hash(valueCodeElement) ^
       const DeepCollectionEquality().hash(valueCoding) ^
+      const DeepCollectionEquality().hash(valueString) ^
       const DeepCollectionEquality().hash(valueStringElement) ^
+      const DeepCollectionEquality().hash(valueInteger) ^
       const DeepCollectionEquality().hash(valueIntegerElement) ^
+      const DeepCollectionEquality().hash(valueBoolean) ^
       const DeepCollectionEquality().hash(valueBooleanElement) ^
+      const DeepCollectionEquality().hash(valueDateTime) ^
       const DeepCollectionEquality().hash(valueDateTimeElement) ^
+      const DeepCollectionEquality().hash(valueDecimal) ^
       const DeepCollectionEquality().hash(valueDecimalElement);
 
   @override
@@ -3775,12 +3889,18 @@ abstract class _CodeSystemProperty1 extends CodeSystemProperty1 {
           List<FhirExtension> modifierExtension,
           Code code,
           @JsonKey(name: '_code') Element codeElement,
+          Code valueCode,
           @JsonKey(name: '_valueCode') Element valueCodeElement,
           Coding valueCoding,
+          String valueString,
           @JsonKey(name: '_valueString') Element valueStringElement,
+          Integer valueInteger,
           @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+          Boolean valueBoolean,
           @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+          FhirDateTime valueDateTime,
           @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+          Decimal valueDecimal,
           @JsonKey(name: '_valueDecimal') Element valueDecimalElement}) =
       _$_CodeSystemProperty1;
 
@@ -3800,22 +3920,34 @@ abstract class _CodeSystemProperty1 extends CodeSystemProperty1 {
   @JsonKey(name: '_code')
   Element get codeElement;
   @override
+  Code get valueCode;
+  @override
   @JsonKey(name: '_valueCode')
   Element get valueCodeElement;
   @override
   Coding get valueCoding;
   @override
+  String get valueString;
+  @override
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
+  @override
+  Integer get valueInteger;
   @override
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
   @override
+  Boolean get valueBoolean;
+  @override
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
   @override
+  FhirDateTime get valueDateTime;
+  @override
   @JsonKey(name: '_valueDateTime')
   Element get valueDateTimeElement;
+  @override
+  Decimal get valueDecimal;
   @override
   @JsonKey(name: '_valueDecimal')
   Element get valueDecimalElement;
@@ -3885,12 +4017,16 @@ class _$ConceptMapTearOff {
       Markdown copyright,
       @JsonKey(name: '_copyright')
           Element copyrightElement,
+      FhirUri sourceUri,
       @JsonKey(name: '_sourceUri')
           Element sourceUriElement,
+      Canonical sourceCanonical,
       @JsonKey(name: '_sourceCanonical')
           Element sourceCanonicalElement,
+      FhirUri targetUri,
       @JsonKey(name: '_targetUri')
           Element targetUriElement,
+      Canonical targetCanonical,
       @JsonKey(name: '_targetCanonical')
           Element targetCanonicalElement,
       List<ConceptMapGroup> group}) {
@@ -3932,9 +4068,13 @@ class _$ConceptMapTearOff {
       purposeElement: purposeElement,
       copyright: copyright,
       copyrightElement: copyrightElement,
+      sourceUri: sourceUri,
       sourceUriElement: sourceUriElement,
+      sourceCanonical: sourceCanonical,
       sourceCanonicalElement: sourceCanonicalElement,
+      targetUri: targetUri,
       targetUriElement: targetUriElement,
+      targetCanonical: targetCanonical,
       targetCanonicalElement: targetCanonicalElement,
       group: group,
     );
@@ -3998,12 +4138,16 @@ mixin _$ConceptMap {
   Markdown get copyright;
   @JsonKey(name: '_copyright')
   Element get copyrightElement;
+  FhirUri get sourceUri;
   @JsonKey(name: '_sourceUri')
   Element get sourceUriElement;
+  Canonical get sourceCanonical;
   @JsonKey(name: '_sourceCanonical')
   Element get sourceCanonicalElement;
+  FhirUri get targetUri;
   @JsonKey(name: '_targetUri')
   Element get targetUriElement;
+  Canonical get targetCanonical;
   @JsonKey(name: '_targetCanonical')
   Element get targetCanonicalElement;
   List<ConceptMapGroup> get group;
@@ -4070,12 +4214,16 @@ abstract class $ConceptMapCopyWith<$Res> {
       Markdown copyright,
       @JsonKey(name: '_copyright')
           Element copyrightElement,
+      FhirUri sourceUri,
       @JsonKey(name: '_sourceUri')
           Element sourceUriElement,
+      Canonical sourceCanonical,
       @JsonKey(name: '_sourceCanonical')
           Element sourceCanonicalElement,
+      FhirUri targetUri,
       @JsonKey(name: '_targetUri')
           Element targetUriElement,
+      Canonical targetCanonical,
       @JsonKey(name: '_targetCanonical')
           Element targetCanonicalElement,
       List<ConceptMapGroup> group});
@@ -4085,6 +4233,7 @@ abstract class $ConceptMapCopyWith<$Res> {
   $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
   $ElementCopyWith<$Res> get urlElement;
+  $IdentifierCopyWith<$Res> get identifier;
   $ElementCopyWith<$Res> get versionElement;
   $ElementCopyWith<$Res> get nameElement;
   $ElementCopyWith<$Res> get titleElement;
@@ -4147,9 +4296,13 @@ class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
     Object purposeElement = freezed,
     Object copyright = freezed,
     Object copyrightElement = freezed,
+    Object sourceUri = freezed,
     Object sourceUriElement = freezed,
+    Object sourceCanonical = freezed,
     Object sourceCanonicalElement = freezed,
+    Object targetUri = freezed,
     Object targetUriElement = freezed,
+    Object targetCanonical = freezed,
     Object targetCanonicalElement = freezed,
     Object group = freezed,
   }) {
@@ -4233,15 +4386,23 @@ class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
           : copyrightElement as Element,
+      sourceUri: sourceUri == freezed ? _value.sourceUri : sourceUri as FhirUri,
       sourceUriElement: sourceUriElement == freezed
           ? _value.sourceUriElement
           : sourceUriElement as Element,
+      sourceCanonical: sourceCanonical == freezed
+          ? _value.sourceCanonical
+          : sourceCanonical as Canonical,
       sourceCanonicalElement: sourceCanonicalElement == freezed
           ? _value.sourceCanonicalElement
           : sourceCanonicalElement as Element,
+      targetUri: targetUri == freezed ? _value.targetUri : targetUri as FhirUri,
       targetUriElement: targetUriElement == freezed
           ? _value.targetUriElement
           : targetUriElement as Element,
+      targetCanonical: targetCanonical == freezed
+          ? _value.targetCanonical
+          : targetCanonical as Canonical,
       targetCanonicalElement: targetCanonicalElement == freezed
           ? _value.targetCanonicalElement
           : targetCanonicalElement as Element,
@@ -4296,6 +4457,16 @@ class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
     }
     return $ElementCopyWith<$Res>(_value.urlElement, (value) {
       return _then(_value.copyWith(urlElement: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
     });
   }
 
@@ -4499,12 +4670,16 @@ abstract class _$ConceptMapCopyWith<$Res> implements $ConceptMapCopyWith<$Res> {
       Markdown copyright,
       @JsonKey(name: '_copyright')
           Element copyrightElement,
+      FhirUri sourceUri,
       @JsonKey(name: '_sourceUri')
           Element sourceUriElement,
+      Canonical sourceCanonical,
       @JsonKey(name: '_sourceCanonical')
           Element sourceCanonicalElement,
+      FhirUri targetUri,
       @JsonKey(name: '_targetUri')
           Element targetUriElement,
+      Canonical targetCanonical,
       @JsonKey(name: '_targetCanonical')
           Element targetCanonicalElement,
       List<ConceptMapGroup> group});
@@ -4519,6 +4694,8 @@ abstract class _$ConceptMapCopyWith<$Res> implements $ConceptMapCopyWith<$Res> {
   $NarrativeCopyWith<$Res> get text;
   @override
   $ElementCopyWith<$Res> get urlElement;
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
   @override
   $ElementCopyWith<$Res> get versionElement;
   @override
@@ -4597,9 +4774,13 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
     Object purposeElement = freezed,
     Object copyright = freezed,
     Object copyrightElement = freezed,
+    Object sourceUri = freezed,
     Object sourceUriElement = freezed,
+    Object sourceCanonical = freezed,
     Object sourceCanonicalElement = freezed,
+    Object targetUri = freezed,
     Object targetUriElement = freezed,
+    Object targetCanonical = freezed,
     Object targetCanonicalElement = freezed,
     Object group = freezed,
   }) {
@@ -4683,15 +4864,23 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
           : copyrightElement as Element,
+      sourceUri: sourceUri == freezed ? _value.sourceUri : sourceUri as FhirUri,
       sourceUriElement: sourceUriElement == freezed
           ? _value.sourceUriElement
           : sourceUriElement as Element,
+      sourceCanonical: sourceCanonical == freezed
+          ? _value.sourceCanonical
+          : sourceCanonical as Canonical,
       sourceCanonicalElement: sourceCanonicalElement == freezed
           ? _value.sourceCanonicalElement
           : sourceCanonicalElement as Element,
+      targetUri: targetUri == freezed ? _value.targetUri : targetUri as FhirUri,
       targetUriElement: targetUriElement == freezed
           ? _value.targetUriElement
           : targetUriElement as Element,
+      targetCanonical: targetCanonical == freezed
+          ? _value.targetCanonical
+          : targetCanonical as Canonical,
       targetCanonicalElement: targetCanonicalElement == freezed
           ? _value.targetCanonicalElement
           : targetCanonicalElement as Element,
@@ -4740,9 +4929,13 @@ class _$_ConceptMap extends _ConceptMap {
       @JsonKey(name: '_purpose') this.purposeElement,
       this.copyright,
       @JsonKey(name: '_copyright') this.copyrightElement,
+      this.sourceUri,
       @JsonKey(name: '_sourceUri') this.sourceUriElement,
+      this.sourceCanonical,
       @JsonKey(name: '_sourceCanonical') this.sourceCanonicalElement,
+      this.targetUri,
       @JsonKey(name: '_targetUri') this.targetUriElement,
+      this.targetCanonical,
       @JsonKey(name: '_targetCanonical') this.targetCanonicalElement,
       this.group})
       : assert(resourceType != null),
@@ -4842,14 +5035,22 @@ class _$_ConceptMap extends _ConceptMap {
   @JsonKey(name: '_copyright')
   final Element copyrightElement;
   @override
+  final FhirUri sourceUri;
+  @override
   @JsonKey(name: '_sourceUri')
   final Element sourceUriElement;
+  @override
+  final Canonical sourceCanonical;
   @override
   @JsonKey(name: '_sourceCanonical')
   final Element sourceCanonicalElement;
   @override
+  final FhirUri targetUri;
+  @override
   @JsonKey(name: '_targetUri')
   final Element targetUriElement;
+  @override
+  final Canonical targetCanonical;
   @override
   @JsonKey(name: '_targetCanonical')
   final Element targetCanonicalElement;
@@ -4858,7 +5059,7 @@ class _$_ConceptMap extends _ConceptMap {
 
   @override
   String toString() {
-    return 'ConceptMap(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, sourceUriElement: $sourceUriElement, sourceCanonicalElement: $sourceCanonicalElement, targetUriElement: $targetUriElement, targetCanonicalElement: $targetCanonicalElement, group: $group)';
+    return 'ConceptMap(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, sourceUri: $sourceUri, sourceUriElement: $sourceUriElement, sourceCanonical: $sourceCanonical, sourceCanonicalElement: $sourceCanonicalElement, targetUri: $targetUri, targetUriElement: $targetUriElement, targetCanonical: $targetCanonical, targetCanonicalElement: $targetCanonicalElement, group: $group)';
   }
 
   @override
@@ -4945,9 +5146,13 @@ class _$_ConceptMap extends _ConceptMap {
             (identical(other.purposeElement, purposeElement) || const DeepCollectionEquality().equals(other.purposeElement, purposeElement)) &&
             (identical(other.copyright, copyright) || const DeepCollectionEquality().equals(other.copyright, copyright)) &&
             (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)) &&
+            (identical(other.sourceUri, sourceUri) || const DeepCollectionEquality().equals(other.sourceUri, sourceUri)) &&
             (identical(other.sourceUriElement, sourceUriElement) || const DeepCollectionEquality().equals(other.sourceUriElement, sourceUriElement)) &&
+            (identical(other.sourceCanonical, sourceCanonical) || const DeepCollectionEquality().equals(other.sourceCanonical, sourceCanonical)) &&
             (identical(other.sourceCanonicalElement, sourceCanonicalElement) || const DeepCollectionEquality().equals(other.sourceCanonicalElement, sourceCanonicalElement)) &&
+            (identical(other.targetUri, targetUri) || const DeepCollectionEquality().equals(other.targetUri, targetUri)) &&
             (identical(other.targetUriElement, targetUriElement) || const DeepCollectionEquality().equals(other.targetUriElement, targetUriElement)) &&
+            (identical(other.targetCanonical, targetCanonical) || const DeepCollectionEquality().equals(other.targetCanonical, targetCanonical)) &&
             (identical(other.targetCanonicalElement, targetCanonicalElement) || const DeepCollectionEquality().equals(other.targetCanonicalElement, targetCanonicalElement)) &&
             (identical(other.group, group) || const DeepCollectionEquality().equals(other.group, group)));
   }
@@ -4992,9 +5197,13 @@ class _$_ConceptMap extends _ConceptMap {
       const DeepCollectionEquality().hash(purposeElement) ^
       const DeepCollectionEquality().hash(copyright) ^
       const DeepCollectionEquality().hash(copyrightElement) ^
+      const DeepCollectionEquality().hash(sourceUri) ^
       const DeepCollectionEquality().hash(sourceUriElement) ^
+      const DeepCollectionEquality().hash(sourceCanonical) ^
       const DeepCollectionEquality().hash(sourceCanonicalElement) ^
+      const DeepCollectionEquality().hash(targetUri) ^
       const DeepCollectionEquality().hash(targetUriElement) ^
+      const DeepCollectionEquality().hash(targetCanonical) ^
       const DeepCollectionEquality().hash(targetCanonicalElement) ^
       const DeepCollectionEquality().hash(group);
 
@@ -5065,12 +5274,16 @@ abstract class _ConceptMap extends ConceptMap {
       Markdown copyright,
       @JsonKey(name: '_copyright')
           Element copyrightElement,
+      FhirUri sourceUri,
       @JsonKey(name: '_sourceUri')
           Element sourceUriElement,
+      Canonical sourceCanonical,
       @JsonKey(name: '_sourceCanonical')
           Element sourceCanonicalElement,
+      FhirUri targetUri,
       @JsonKey(name: '_targetUri')
           Element targetUriElement,
+      Canonical targetCanonical,
       @JsonKey(name: '_targetCanonical')
           Element targetCanonicalElement,
       List<ConceptMapGroup> group}) = _$_ConceptMap;
@@ -5169,14 +5382,22 @@ abstract class _ConceptMap extends ConceptMap {
   @JsonKey(name: '_copyright')
   Element get copyrightElement;
   @override
+  FhirUri get sourceUri;
+  @override
   @JsonKey(name: '_sourceUri')
   Element get sourceUriElement;
+  @override
+  Canonical get sourceCanonical;
   @override
   @JsonKey(name: '_sourceCanonical')
   Element get sourceCanonicalElement;
   @override
+  FhirUri get targetUri;
+  @override
   @JsonKey(name: '_targetUri')
   Element get targetUriElement;
+  @override
+  Canonical get targetCanonical;
   @override
   @JsonKey(name: '_targetCanonical')
   Element get targetCanonicalElement;
@@ -17670,12 +17891,19 @@ class _$ValueSetParameterTearOff {
       List<FhirExtension> modifierExtension,
       String name,
       @JsonKey(name: '_name') Element nameElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      FhirUri valueUri,
       @JsonKey(name: '_valueUri') Element valueUriElement,
+      Code valueCode,
       @JsonKey(name: '_valueCode') Element valueCodeElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement}) {
     return _ValueSetParameter(
       id: id,
@@ -17683,12 +17911,19 @@ class _$ValueSetParameterTearOff {
       modifierExtension: modifierExtension,
       name: name,
       nameElement: nameElement,
+      valueString: valueString,
       valueStringElement: valueStringElement,
+      valueBoolean: valueBoolean,
       valueBooleanElement: valueBooleanElement,
+      valueInteger: valueInteger,
       valueIntegerElement: valueIntegerElement,
+      valueDecimal: valueDecimal,
       valueDecimalElement: valueDecimalElement,
+      valueUri: valueUri,
       valueUriElement: valueUriElement,
+      valueCode: valueCode,
       valueCodeElement: valueCodeElement,
+      valueDateTime: valueDateTime,
       valueDateTimeElement: valueDateTimeElement,
     );
   }
@@ -17705,18 +17940,25 @@ mixin _$ValueSetParameter {
   String get name;
   @JsonKey(name: '_name')
   Element get nameElement;
+  String get valueString;
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
+  Boolean get valueBoolean;
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
+  Integer get valueInteger;
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
+  Decimal get valueDecimal;
   @JsonKey(name: '_valueDecimal')
   Element get valueDecimalElement;
+  FhirUri get valueUri;
   @JsonKey(name: '_valueUri')
   Element get valueUriElement;
+  Code get valueCode;
   @JsonKey(name: '_valueCode')
   Element get valueCodeElement;
+  FhirDateTime get valueDateTime;
   @JsonKey(name: '_valueDateTime')
   Element get valueDateTimeElement;
 
@@ -17734,12 +17976,19 @@ abstract class $ValueSetParameterCopyWith<$Res> {
       List<FhirExtension> modifierExtension,
       String name,
       @JsonKey(name: '_name') Element nameElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      FhirUri valueUri,
       @JsonKey(name: '_valueUri') Element valueUriElement,
+      Code valueCode,
       @JsonKey(name: '_valueCode') Element valueCodeElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement});
 
   $ElementCopyWith<$Res> get nameElement;
@@ -17767,12 +18016,19 @@ class _$ValueSetParameterCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object name = freezed,
     Object nameElement = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
+    Object valueInteger = freezed,
     Object valueIntegerElement = freezed,
+    Object valueDecimal = freezed,
     Object valueDecimalElement = freezed,
+    Object valueUri = freezed,
     Object valueUriElement = freezed,
+    Object valueCode = freezed,
     Object valueCodeElement = freezed,
+    Object valueDateTime = freezed,
     Object valueDateTimeElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -17786,24 +18042,40 @@ class _$ValueSetParameterCopyWithImpl<$Res>
       name: name == freezed ? _value.name : name as String,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger as Integer,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement as Element,
+      valueDecimal: valueDecimal == freezed
+          ? _value.valueDecimal
+          : valueDecimal as Decimal,
       valueDecimalElement: valueDecimalElement == freezed
           ? _value.valueDecimalElement
           : valueDecimalElement as Element,
+      valueUri: valueUri == freezed ? _value.valueUri : valueUri as FhirUri,
       valueUriElement: valueUriElement == freezed
           ? _value.valueUriElement
           : valueUriElement as Element,
+      valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
       valueCodeElement: valueCodeElement == freezed
           ? _value.valueCodeElement
           : valueCodeElement as Element,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime as FhirDateTime,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement as Element,
@@ -17903,12 +18175,19 @@ abstract class _$ValueSetParameterCopyWith<$Res>
       List<FhirExtension> modifierExtension,
       String name,
       @JsonKey(name: '_name') Element nameElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      FhirUri valueUri,
       @JsonKey(name: '_valueUri') Element valueUriElement,
+      Code valueCode,
       @JsonKey(name: '_valueCode') Element valueCodeElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement});
 
   @override
@@ -17946,12 +18225,19 @@ class __$ValueSetParameterCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object name = freezed,
     Object nameElement = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
+    Object valueInteger = freezed,
     Object valueIntegerElement = freezed,
+    Object valueDecimal = freezed,
     Object valueDecimalElement = freezed,
+    Object valueUri = freezed,
     Object valueUriElement = freezed,
+    Object valueCode = freezed,
     Object valueCodeElement = freezed,
+    Object valueDateTime = freezed,
     Object valueDateTimeElement = freezed,
   }) {
     return _then(_ValueSetParameter(
@@ -17965,24 +18251,40 @@ class __$ValueSetParameterCopyWithImpl<$Res>
       name: name == freezed ? _value.name : name as String,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger as Integer,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement as Element,
+      valueDecimal: valueDecimal == freezed
+          ? _value.valueDecimal
+          : valueDecimal as Decimal,
       valueDecimalElement: valueDecimalElement == freezed
           ? _value.valueDecimalElement
           : valueDecimalElement as Element,
+      valueUri: valueUri == freezed ? _value.valueUri : valueUri as FhirUri,
       valueUriElement: valueUriElement == freezed
           ? _value.valueUriElement
           : valueUriElement as Element,
+      valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
       valueCodeElement: valueCodeElement == freezed
           ? _value.valueCodeElement
           : valueCodeElement as Element,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime as FhirDateTime,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement as Element,
@@ -17998,12 +18300,19 @@ class _$_ValueSetParameter extends _ValueSetParameter {
       this.modifierExtension,
       this.name,
       @JsonKey(name: '_name') this.nameElement,
+      this.valueString,
       @JsonKey(name: '_valueString') this.valueStringElement,
+      this.valueBoolean,
       @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+      this.valueInteger,
       @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+      this.valueDecimal,
       @JsonKey(name: '_valueDecimal') this.valueDecimalElement,
+      this.valueUri,
       @JsonKey(name: '_valueUri') this.valueUriElement,
+      this.valueCode,
       @JsonKey(name: '_valueCode') this.valueCodeElement,
+      this.valueDateTime,
       @JsonKey(name: '_valueDateTime') this.valueDateTimeElement})
       : super._();
 
@@ -18023,30 +18332,44 @@ class _$_ValueSetParameter extends _ValueSetParameter {
   @JsonKey(name: '_name')
   final Element nameElement;
   @override
+  final String valueString;
+  @override
   @JsonKey(name: '_valueString')
   final Element valueStringElement;
+  @override
+  final Boolean valueBoolean;
   @override
   @JsonKey(name: '_valueBoolean')
   final Element valueBooleanElement;
   @override
+  final Integer valueInteger;
+  @override
   @JsonKey(name: '_valueInteger')
   final Element valueIntegerElement;
+  @override
+  final Decimal valueDecimal;
   @override
   @JsonKey(name: '_valueDecimal')
   final Element valueDecimalElement;
   @override
+  final FhirUri valueUri;
+  @override
   @JsonKey(name: '_valueUri')
   final Element valueUriElement;
   @override
+  final Code valueCode;
+  @override
   @JsonKey(name: '_valueCode')
   final Element valueCodeElement;
+  @override
+  final FhirDateTime valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
   final Element valueDateTimeElement;
 
   @override
   String toString() {
-    return 'ValueSetParameter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, valueStringElement: $valueStringElement, valueBooleanElement: $valueBooleanElement, valueIntegerElement: $valueIntegerElement, valueDecimalElement: $valueDecimalElement, valueUriElement: $valueUriElement, valueCodeElement: $valueCodeElement, valueDateTimeElement: $valueDateTimeElement)';
+    return 'ValueSetParameter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, valueString: $valueString, valueStringElement: $valueStringElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement)';
   }
 
   @override
@@ -18066,24 +18389,45 @@ class _$_ValueSetParameter extends _ValueSetParameter {
             (identical(other.nameElement, nameElement) ||
                 const DeepCollectionEquality()
                     .equals(other.nameElement, nameElement)) &&
+            (identical(other.valueString, valueString) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueString, valueString)) &&
             (identical(other.valueStringElement, valueStringElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueStringElement, valueStringElement)) &&
+            (identical(other.valueBoolean, valueBoolean) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBoolean, valueBoolean)) &&
             (identical(other.valueBooleanElement, valueBooleanElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueBooleanElement, valueBooleanElement)) &&
+            (identical(other.valueInteger, valueInteger) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueInteger, valueInteger)) &&
             (identical(other.valueIntegerElement, valueIntegerElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueIntegerElement, valueIntegerElement)) &&
+            (identical(other.valueDecimal, valueDecimal) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDecimal, valueDecimal)) &&
             (identical(other.valueDecimalElement, valueDecimalElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueDecimalElement, valueDecimalElement)) &&
+            (identical(other.valueUri, valueUri) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueUri, valueUri)) &&
             (identical(other.valueUriElement, valueUriElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueUriElement, valueUriElement)) &&
+            (identical(other.valueCode, valueCode) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueCode, valueCode)) &&
             (identical(other.valueCodeElement, valueCodeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueCodeElement, valueCodeElement)) &&
+            (identical(other.valueDateTime, valueDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDateTime, valueDateTime)) &&
             (identical(other.valueDateTimeElement, valueDateTimeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueDateTimeElement, valueDateTimeElement)));
@@ -18097,12 +18441,19 @@ class _$_ValueSetParameter extends _ValueSetParameter {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(valueString) ^
       const DeepCollectionEquality().hash(valueStringElement) ^
+      const DeepCollectionEquality().hash(valueBoolean) ^
       const DeepCollectionEquality().hash(valueBooleanElement) ^
+      const DeepCollectionEquality().hash(valueInteger) ^
       const DeepCollectionEquality().hash(valueIntegerElement) ^
+      const DeepCollectionEquality().hash(valueDecimal) ^
       const DeepCollectionEquality().hash(valueDecimalElement) ^
+      const DeepCollectionEquality().hash(valueUri) ^
       const DeepCollectionEquality().hash(valueUriElement) ^
+      const DeepCollectionEquality().hash(valueCode) ^
       const DeepCollectionEquality().hash(valueCodeElement) ^
+      const DeepCollectionEquality().hash(valueDateTime) ^
       const DeepCollectionEquality().hash(valueDateTimeElement);
 
   @override
@@ -18123,12 +18474,19 @@ abstract class _ValueSetParameter extends ValueSetParameter {
           List<FhirExtension> modifierExtension,
           String name,
           @JsonKey(name: '_name') Element nameElement,
+          String valueString,
           @JsonKey(name: '_valueString') Element valueStringElement,
+          Boolean valueBoolean,
           @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+          Integer valueInteger,
           @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+          Decimal valueDecimal,
           @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+          FhirUri valueUri,
           @JsonKey(name: '_valueUri') Element valueUriElement,
+          Code valueCode,
           @JsonKey(name: '_valueCode') Element valueCodeElement,
+          FhirDateTime valueDateTime,
           @JsonKey(name: '_valueDateTime') Element valueDateTimeElement}) =
       _$_ValueSetParameter;
 
@@ -18148,23 +18506,37 @@ abstract class _ValueSetParameter extends ValueSetParameter {
   @JsonKey(name: '_name')
   Element get nameElement;
   @override
+  String get valueString;
+  @override
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
+  @override
+  Boolean get valueBoolean;
   @override
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
   @override
+  Integer get valueInteger;
+  @override
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
+  @override
+  Decimal get valueDecimal;
   @override
   @JsonKey(name: '_valueDecimal')
   Element get valueDecimalElement;
   @override
+  FhirUri get valueUri;
+  @override
   @JsonKey(name: '_valueUri')
   Element get valueUriElement;
   @override
+  Code get valueCode;
+  @override
   @JsonKey(name: '_valueCode')
   Element get valueCodeElement;
+  @override
+  FhirDateTime get valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
   Element get valueDateTimeElement;
@@ -19083,12 +19455,18 @@ class _$ValueSetProperty1TearOff {
       List<FhirExtension> modifierExtension,
       Code code,
       @JsonKey(name: '_code') Element codeElement,
+      Code valueCode,
       @JsonKey(name: '_valueCode') Element valueCodeElement,
       Coding valueCoding,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement}) {
     return _ValueSetProperty1(
       id: id,
@@ -19096,12 +19474,18 @@ class _$ValueSetProperty1TearOff {
       modifierExtension: modifierExtension,
       code: code,
       codeElement: codeElement,
+      valueCode: valueCode,
       valueCodeElement: valueCodeElement,
       valueCoding: valueCoding,
+      valueString: valueString,
       valueStringElement: valueStringElement,
+      valueInteger: valueInteger,
       valueIntegerElement: valueIntegerElement,
+      valueBoolean: valueBoolean,
       valueBooleanElement: valueBooleanElement,
+      valueDateTime: valueDateTime,
       valueDateTimeElement: valueDateTimeElement,
+      valueDecimal: valueDecimal,
       valueDecimalElement: valueDecimalElement,
     );
   }
@@ -19118,17 +19502,23 @@ mixin _$ValueSetProperty1 {
   Code get code;
   @JsonKey(name: '_code')
   Element get codeElement;
+  Code get valueCode;
   @JsonKey(name: '_valueCode')
   Element get valueCodeElement;
   Coding get valueCoding;
+  String get valueString;
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
+  Integer get valueInteger;
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
+  Boolean get valueBoolean;
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
+  FhirDateTime get valueDateTime;
   @JsonKey(name: '_valueDateTime')
   Element get valueDateTimeElement;
+  Decimal get valueDecimal;
   @JsonKey(name: '_valueDecimal')
   Element get valueDecimalElement;
 
@@ -19146,12 +19536,18 @@ abstract class $ValueSetProperty1CopyWith<$Res> {
       List<FhirExtension> modifierExtension,
       Code code,
       @JsonKey(name: '_code') Element codeElement,
+      Code valueCode,
       @JsonKey(name: '_valueCode') Element valueCodeElement,
       Coding valueCoding,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement});
 
   $ElementCopyWith<$Res> get codeElement;
@@ -19179,12 +19575,18 @@ class _$ValueSetProperty1CopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object code = freezed,
     Object codeElement = freezed,
+    Object valueCode = freezed,
     Object valueCodeElement = freezed,
     Object valueCoding = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueInteger = freezed,
     Object valueIntegerElement = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
+    Object valueDateTime = freezed,
     Object valueDateTimeElement = freezed,
+    Object valueDecimal = freezed,
     Object valueDecimalElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -19198,23 +19600,38 @@ class _$ValueSetProperty1CopyWithImpl<$Res>
       code: code == freezed ? _value.code : code as Code,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
+      valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
       valueCodeElement: valueCodeElement == freezed
           ? _value.valueCodeElement
           : valueCodeElement as Element,
       valueCoding:
           valueCoding == freezed ? _value.valueCoding : valueCoding as Coding,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger as Integer,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement as Element,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime as FhirDateTime,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement as Element,
+      valueDecimal: valueDecimal == freezed
+          ? _value.valueDecimal
+          : valueDecimal as Decimal,
       valueDecimalElement: valueDecimalElement == freezed
           ? _value.valueDecimalElement
           : valueDecimalElement as Element,
@@ -19314,12 +19731,18 @@ abstract class _$ValueSetProperty1CopyWith<$Res>
       List<FhirExtension> modifierExtension,
       Code code,
       @JsonKey(name: '_code') Element codeElement,
+      Code valueCode,
       @JsonKey(name: '_valueCode') Element valueCodeElement,
       Coding valueCoding,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement});
 
   @override
@@ -19357,12 +19780,18 @@ class __$ValueSetProperty1CopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object code = freezed,
     Object codeElement = freezed,
+    Object valueCode = freezed,
     Object valueCodeElement = freezed,
     Object valueCoding = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueInteger = freezed,
     Object valueIntegerElement = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
+    Object valueDateTime = freezed,
     Object valueDateTimeElement = freezed,
+    Object valueDecimal = freezed,
     Object valueDecimalElement = freezed,
   }) {
     return _then(_ValueSetProperty1(
@@ -19376,23 +19805,38 @@ class __$ValueSetProperty1CopyWithImpl<$Res>
       code: code == freezed ? _value.code : code as Code,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
+      valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
       valueCodeElement: valueCodeElement == freezed
           ? _value.valueCodeElement
           : valueCodeElement as Element,
       valueCoding:
           valueCoding == freezed ? _value.valueCoding : valueCoding as Coding,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger as Integer,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement as Element,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime as FhirDateTime,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement as Element,
+      valueDecimal: valueDecimal == freezed
+          ? _value.valueDecimal
+          : valueDecimal as Decimal,
       valueDecimalElement: valueDecimalElement == freezed
           ? _value.valueDecimalElement
           : valueDecimalElement as Element,
@@ -19408,12 +19852,18 @@ class _$_ValueSetProperty1 extends _ValueSetProperty1 {
       this.modifierExtension,
       this.code,
       @JsonKey(name: '_code') this.codeElement,
+      this.valueCode,
       @JsonKey(name: '_valueCode') this.valueCodeElement,
       this.valueCoding,
+      this.valueString,
       @JsonKey(name: '_valueString') this.valueStringElement,
+      this.valueInteger,
       @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+      this.valueBoolean,
       @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+      this.valueDateTime,
       @JsonKey(name: '_valueDateTime') this.valueDateTimeElement,
+      this.valueDecimal,
       @JsonKey(name: '_valueDecimal') this.valueDecimalElement})
       : super._();
 
@@ -19433,29 +19883,41 @@ class _$_ValueSetProperty1 extends _ValueSetProperty1 {
   @JsonKey(name: '_code')
   final Element codeElement;
   @override
+  final Code valueCode;
+  @override
   @JsonKey(name: '_valueCode')
   final Element valueCodeElement;
   @override
   final Coding valueCoding;
   @override
+  final String valueString;
+  @override
   @JsonKey(name: '_valueString')
   final Element valueStringElement;
+  @override
+  final Integer valueInteger;
   @override
   @JsonKey(name: '_valueInteger')
   final Element valueIntegerElement;
   @override
+  final Boolean valueBoolean;
+  @override
   @JsonKey(name: '_valueBoolean')
   final Element valueBooleanElement;
   @override
+  final FhirDateTime valueDateTime;
+  @override
   @JsonKey(name: '_valueDateTime')
   final Element valueDateTimeElement;
+  @override
+  final Decimal valueDecimal;
   @override
   @JsonKey(name: '_valueDecimal')
   final Element valueDecimalElement;
 
   @override
   String toString() {
-    return 'ValueSetProperty1(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, codeElement: $codeElement, valueCodeElement: $valueCodeElement, valueCoding: $valueCoding, valueStringElement: $valueStringElement, valueIntegerElement: $valueIntegerElement, valueBooleanElement: $valueBooleanElement, valueDateTimeElement: $valueDateTimeElement, valueDecimalElement: $valueDecimalElement)';
+    return 'ValueSetProperty1(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, codeElement: $codeElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueCoding: $valueCoding, valueString: $valueString, valueStringElement: $valueStringElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement)';
   }
 
   @override
@@ -19475,24 +19937,42 @@ class _$_ValueSetProperty1 extends _ValueSetProperty1 {
             (identical(other.codeElement, codeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.codeElement, codeElement)) &&
+            (identical(other.valueCode, valueCode) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueCode, valueCode)) &&
             (identical(other.valueCodeElement, valueCodeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueCodeElement, valueCodeElement)) &&
             (identical(other.valueCoding, valueCoding) ||
                 const DeepCollectionEquality()
                     .equals(other.valueCoding, valueCoding)) &&
+            (identical(other.valueString, valueString) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueString, valueString)) &&
             (identical(other.valueStringElement, valueStringElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueStringElement, valueStringElement)) &&
+            (identical(other.valueInteger, valueInteger) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueInteger, valueInteger)) &&
             (identical(other.valueIntegerElement, valueIntegerElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueIntegerElement, valueIntegerElement)) &&
+            (identical(other.valueBoolean, valueBoolean) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBoolean, valueBoolean)) &&
             (identical(other.valueBooleanElement, valueBooleanElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueBooleanElement, valueBooleanElement)) &&
+            (identical(other.valueDateTime, valueDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDateTime, valueDateTime)) &&
             (identical(other.valueDateTimeElement, valueDateTimeElement) ||
                 const DeepCollectionEquality().equals(
                     other.valueDateTimeElement, valueDateTimeElement)) &&
+            (identical(other.valueDecimal, valueDecimal) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDecimal, valueDecimal)) &&
             (identical(other.valueDecimalElement, valueDecimalElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueDecimalElement, valueDecimalElement)));
@@ -19506,12 +19986,18 @@ class _$_ValueSetProperty1 extends _ValueSetProperty1 {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(codeElement) ^
+      const DeepCollectionEquality().hash(valueCode) ^
       const DeepCollectionEquality().hash(valueCodeElement) ^
       const DeepCollectionEquality().hash(valueCoding) ^
+      const DeepCollectionEquality().hash(valueString) ^
       const DeepCollectionEquality().hash(valueStringElement) ^
+      const DeepCollectionEquality().hash(valueInteger) ^
       const DeepCollectionEquality().hash(valueIntegerElement) ^
+      const DeepCollectionEquality().hash(valueBoolean) ^
       const DeepCollectionEquality().hash(valueBooleanElement) ^
+      const DeepCollectionEquality().hash(valueDateTime) ^
       const DeepCollectionEquality().hash(valueDateTimeElement) ^
+      const DeepCollectionEquality().hash(valueDecimal) ^
       const DeepCollectionEquality().hash(valueDecimalElement);
 
   @override
@@ -19532,12 +20018,18 @@ abstract class _ValueSetProperty1 extends ValueSetProperty1 {
           List<FhirExtension> modifierExtension,
           Code code,
           @JsonKey(name: '_code') Element codeElement,
+          Code valueCode,
           @JsonKey(name: '_valueCode') Element valueCodeElement,
           Coding valueCoding,
+          String valueString,
           @JsonKey(name: '_valueString') Element valueStringElement,
+          Integer valueInteger,
           @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+          Boolean valueBoolean,
           @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+          FhirDateTime valueDateTime,
           @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+          Decimal valueDecimal,
           @JsonKey(name: '_valueDecimal') Element valueDecimalElement}) =
       _$_ValueSetProperty1;
 
@@ -19557,22 +20049,34 @@ abstract class _ValueSetProperty1 extends ValueSetProperty1 {
   @JsonKey(name: '_code')
   Element get codeElement;
   @override
+  Code get valueCode;
+  @override
   @JsonKey(name: '_valueCode')
   Element get valueCodeElement;
   @override
   Coding get valueCoding;
   @override
+  String get valueString;
+  @override
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
+  @override
+  Integer get valueInteger;
   @override
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
   @override
+  Boolean get valueBoolean;
+  @override
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
   @override
+  FhirDateTime get valueDateTime;
+  @override
   @JsonKey(name: '_valueDateTime')
   Element get valueDateTimeElement;
+  @override
+  Decimal get valueDecimal;
   @override
   @JsonKey(name: '_valueDecimal')
   Element get valueDecimalElement;

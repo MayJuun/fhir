@@ -7,11 +7,10 @@ part 'support.g.dart';
 
 @freezed
 abstract class Coverage with _$Coverage implements Resource {
-  const factory Coverage({
+  factory Coverage({
     @JsonKey(required: true, defaultValue: 'Coverage')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -49,7 +48,7 @@ abstract class Coverage with _$Coverage implements Resource {
 
 @freezed
 abstract class CoverageGrouping with _$CoverageGrouping {
-  const factory CoverageGrouping({
+  factory CoverageGrouping({
     String group,
     String groupDisplay,
     String subGroup,
@@ -83,11 +82,10 @@ abstract class CoverageGrouping with _$CoverageGrouping {
 abstract class EligibilityRequest
     with _$EligibilityRequest
     implements Resource {
-  const factory EligibilityRequest({
+  factory EligibilityRequest({
     @JsonKey(required: true, defaultValue: 'EligibilityRequest')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -125,11 +123,10 @@ abstract class EligibilityRequest
 abstract class EligibilityResponse
     with _$EligibilityResponse
     implements Resource {
-  const factory EligibilityResponse({
+  factory EligibilityResponse({
     @JsonKey(required: true, defaultValue: 'EligibilityResponse')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -163,7 +160,7 @@ abstract class EligibilityResponse
 @freezed
 abstract class EligibilityResponseInsurance
     with _$EligibilityResponseInsurance {
-  const factory EligibilityResponseInsurance({
+  factory EligibilityResponseInsurance({
     Reference coverage,
     Reference contract,
     List<EligibilityResponseBenefitBalance> benefitBalance,
@@ -175,7 +172,7 @@ abstract class EligibilityResponseInsurance
 @freezed
 abstract class EligibilityResponseBenefitBalance
     with _$EligibilityResponseBenefitBalance {
-  const factory EligibilityResponseBenefitBalance({
+  factory EligibilityResponseBenefitBalance({
     @JsonKey(required: true) CodeableConcept category,
     CodeableConcept subCategory,
     Boolean excluded,
@@ -197,7 +194,7 @@ abstract class EligibilityResponseBenefitBalance
 @freezed
 abstract class EligibilityResponseFinancial
     with _$EligibilityResponseFinancial {
-  const factory EligibilityResponseFinancial({
+  factory EligibilityResponseFinancial({
     @JsonKey(required: true) CodeableConcept type,
     UnsignedInt allowedUnsignedInt,
     String allowedString,
@@ -214,7 +211,7 @@ abstract class EligibilityResponseFinancial
 
 @freezed
 abstract class EligibilityResponseError with _$EligibilityResponseError {
-  const factory EligibilityResponseError({
+  factory EligibilityResponseError({
     @JsonKey(required: true) CodeableConcept code,
   }) = _EligibilityResponseError;
   factory EligibilityResponseError.fromJson(Map<String, dynamic> json) =>
@@ -223,11 +220,10 @@ abstract class EligibilityResponseError with _$EligibilityResponseError {
 
 @freezed
 abstract class EnrollmentRequest with _$EnrollmentRequest implements Resource {
-  const factory EnrollmentRequest({
+  factory EnrollmentRequest({
     @JsonKey(required: true, defaultValue: 'EnrollmentRequest')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -255,11 +251,10 @@ abstract class EnrollmentRequest with _$EnrollmentRequest implements Resource {
 abstract class EnrollmentResponse
     with _$EnrollmentResponse
     implements Resource {
-  const factory EnrollmentResponse({
+  factory EnrollmentResponse({
     @JsonKey(required: true, defaultValue: 'EnrollmentResponse')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

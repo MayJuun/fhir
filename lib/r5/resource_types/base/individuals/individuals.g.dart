@@ -193,6 +193,9 @@ _$_GroupCharacteristic _$_$_GroupCharacteristicFromJson(
         ? null
         : CodeableConcept.fromJson(
             json['valueCodeableConcept'] as Map<String, dynamic>),
+    valueBoolean: json['valueBoolean'] == null
+        ? null
+        : Boolean.fromJson(json['valueBoolean']),
     valueBooleanElement: json['_valueBoolean'] == null
         ? null
         : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
@@ -232,6 +235,7 @@ Map<String, dynamic> _$_$_GroupCharacteristicToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('valueCodeableConcept', instance.valueCodeableConcept?.toJson());
+  writeNotNull('valueBoolean', instance.valueBoolean?.toJson());
   writeNotNull('_valueBoolean', instance.valueBooleanElement?.toJson());
   writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
   writeNotNull('valueRange', instance.valueRange?.toJson());
@@ -353,9 +357,15 @@ _$_Patient _$_$_PatientFromJson(Map<String, dynamic> json) {
     birthDateElement: json['_birthDate'] == null
         ? null
         : Element.fromJson(json['_birthDate'] as Map<String, dynamic>),
+    deceasedBoolean: json['deceasedBoolean'] == null
+        ? null
+        : Boolean.fromJson(json['deceasedBoolean']),
     deceasedBooleanElement: json['_deceasedBoolean'] == null
         ? null
         : Element.fromJson(json['_deceasedBoolean'] as Map<String, dynamic>),
+    deceasedDateTime: json['deceasedDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['deceasedDateTime'] as String),
     deceasedDateTimeElement: json['_deceasedDateTime'] == null
         ? null
         : Element.fromJson(json['_deceasedDateTime'] as Map<String, dynamic>),
@@ -367,10 +377,16 @@ _$_Patient _$_$_PatientFromJson(Map<String, dynamic> json) {
         ? null
         : CodeableConcept.fromJson(
             json['maritalStatus'] as Map<String, dynamic>),
+    multipleBirthBoolean: json['multipleBirthBoolean'] == null
+        ? null
+        : Boolean.fromJson(json['multipleBirthBoolean']),
     multipleBirthBooleanElement: json['_multipleBirthBoolean'] == null
         ? null
         : Element.fromJson(
             json['_multipleBirthBoolean'] as Map<String, dynamic>),
+    multipleBirthInteger: json['multipleBirthInteger'] == null
+        ? null
+        : Integer.fromJson(json['multipleBirthInteger']),
     multipleBirthIntegerElement: json['_multipleBirthInteger'] == null
         ? null
         : Element.fromJson(
@@ -437,12 +453,16 @@ Map<String, dynamic> _$_$_PatientToJson(_$_Patient instance) {
   writeNotNull('_gender', instance.genderElement?.toJson());
   writeNotNull('birthDate', instance.birthDate?.toJson());
   writeNotNull('_birthDate', instance.birthDateElement?.toJson());
+  writeNotNull('deceasedBoolean', instance.deceasedBoolean?.toJson());
   writeNotNull('_deceasedBoolean', instance.deceasedBooleanElement?.toJson());
+  writeNotNull('deceasedDateTime', instance.deceasedDateTime?.toJson());
   writeNotNull('_deceasedDateTime', instance.deceasedDateTimeElement?.toJson());
   writeNotNull('address', instance.address?.map((e) => e?.toJson())?.toList());
   writeNotNull('maritalStatus', instance.maritalStatus?.toJson());
+  writeNotNull('multipleBirthBoolean', instance.multipleBirthBoolean?.toJson());
   writeNotNull(
       '_multipleBirthBoolean', instance.multipleBirthBooleanElement?.toJson());
+  writeNotNull('multipleBirthInteger', instance.multipleBirthInteger?.toJson());
   writeNotNull(
       '_multipleBirthInteger', instance.multipleBirthIntegerElement?.toJson());
   writeNotNull('photo', instance.photo?.map((e) => e?.toJson())?.toList());

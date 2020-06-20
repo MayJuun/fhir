@@ -846,6 +846,7 @@ class _$GroupCharacteristicTearOff {
       List<FhirExtension> modifierExtension,
       @required CodeableConcept code,
       CodeableConcept valueCodeableConcept,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
       Quantity valueQuantity,
       Range valueRange,
@@ -859,6 +860,7 @@ class _$GroupCharacteristicTearOff {
       modifierExtension: modifierExtension,
       code: code,
       valueCodeableConcept: valueCodeableConcept,
+      valueBoolean: valueBoolean,
       valueBooleanElement: valueBooleanElement,
       valueQuantity: valueQuantity,
       valueRange: valueRange,
@@ -880,6 +882,7 @@ mixin _$GroupCharacteristic {
   List<FhirExtension> get modifierExtension;
   CodeableConcept get code;
   CodeableConcept get valueCodeableConcept;
+  Boolean get valueBoolean;
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
   Quantity get valueQuantity;
@@ -904,6 +907,7 @@ abstract class $GroupCharacteristicCopyWith<$Res> {
       List<FhirExtension> modifierExtension,
       CodeableConcept code,
       CodeableConcept valueCodeableConcept,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
       Quantity valueQuantity,
       Range valueRange,
@@ -937,6 +941,7 @@ class _$GroupCharacteristicCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object code = freezed,
     Object valueCodeableConcept = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
     Object valueQuantity = freezed,
     Object valueRange = freezed,
@@ -957,6 +962,9 @@ class _$GroupCharacteristicCopyWithImpl<$Res>
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
           : valueCodeableConcept as CodeableConcept,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
@@ -1069,6 +1077,7 @@ abstract class _$GroupCharacteristicCopyWith<$Res>
       List<FhirExtension> modifierExtension,
       CodeableConcept code,
       CodeableConcept valueCodeableConcept,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
       Quantity valueQuantity,
       Range valueRange,
@@ -1112,6 +1121,7 @@ class __$GroupCharacteristicCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object code = freezed,
     Object valueCodeableConcept = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
     Object valueQuantity = freezed,
     Object valueRange = freezed,
@@ -1132,6 +1142,9 @@ class __$GroupCharacteristicCopyWithImpl<$Res>
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
           : valueCodeableConcept as CodeableConcept,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
@@ -1160,6 +1173,7 @@ class _$_GroupCharacteristic extends _GroupCharacteristic {
       this.modifierExtension,
       @required this.code,
       this.valueCodeableConcept,
+      this.valueBoolean,
       @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
       this.valueQuantity,
       this.valueRange,
@@ -1185,6 +1199,8 @@ class _$_GroupCharacteristic extends _GroupCharacteristic {
   @override
   final CodeableConcept valueCodeableConcept;
   @override
+  final Boolean valueBoolean;
+  @override
   @JsonKey(name: '_valueBoolean')
   final Element valueBooleanElement;
   @override
@@ -1203,7 +1219,7 @@ class _$_GroupCharacteristic extends _GroupCharacteristic {
 
   @override
   String toString() {
-    return 'GroupCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, valueCodeableConcept: $valueCodeableConcept, valueBooleanElement: $valueBooleanElement, valueQuantity: $valueQuantity, valueRange: $valueRange, valueReference: $valueReference, exclude: $exclude, excludeElement: $excludeElement, period: $period)';
+    return 'GroupCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, valueCodeableConcept: $valueCodeableConcept, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueQuantity: $valueQuantity, valueRange: $valueRange, valueReference: $valueReference, exclude: $exclude, excludeElement: $excludeElement, period: $period)';
   }
 
   @override
@@ -1223,6 +1239,9 @@ class _$_GroupCharacteristic extends _GroupCharacteristic {
             (identical(other.valueCodeableConcept, valueCodeableConcept) ||
                 const DeepCollectionEquality().equals(
                     other.valueCodeableConcept, valueCodeableConcept)) &&
+            (identical(other.valueBoolean, valueBoolean) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBoolean, valueBoolean)) &&
             (identical(other.valueBooleanElement, valueBooleanElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueBooleanElement, valueBooleanElement)) &&
@@ -1253,6 +1272,7 @@ class _$_GroupCharacteristic extends _GroupCharacteristic {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(valueCodeableConcept) ^
+      const DeepCollectionEquality().hash(valueBoolean) ^
       const DeepCollectionEquality().hash(valueBooleanElement) ^
       const DeepCollectionEquality().hash(valueQuantity) ^
       const DeepCollectionEquality().hash(valueRange) ^
@@ -1280,6 +1300,7 @@ abstract class _GroupCharacteristic extends GroupCharacteristic {
       List<FhirExtension> modifierExtension,
       @required CodeableConcept code,
       CodeableConcept valueCodeableConcept,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
       Quantity valueQuantity,
       Range valueRange,
@@ -1302,6 +1323,8 @@ abstract class _GroupCharacteristic extends GroupCharacteristic {
   CodeableConcept get code;
   @override
   CodeableConcept get valueCodeableConcept;
+  @override
+  Boolean get valueBoolean;
   @override
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
@@ -1664,14 +1687,18 @@ class _$PatientTearOff {
       Date birthDate,
       @JsonKey(name: '_birthDate')
           Element birthDateElement,
+      Boolean deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean')
           Element deceasedBooleanElement,
+      FhirDateTime deceasedDateTime,
       @JsonKey(name: '_deceasedDateTime')
           Element deceasedDateTimeElement,
       List<Address> address,
       CodeableConcept maritalStatus,
+      Boolean multipleBirthBoolean,
       @JsonKey(name: '_multipleBirthBoolean')
           Element multipleBirthBooleanElement,
+      Integer multipleBirthInteger,
       @JsonKey(name: '_multipleBirthInteger')
           Element multipleBirthIntegerElement,
       List<Attachment> photo,
@@ -1701,11 +1728,15 @@ class _$PatientTearOff {
       genderElement: genderElement,
       birthDate: birthDate,
       birthDateElement: birthDateElement,
+      deceasedBoolean: deceasedBoolean,
       deceasedBooleanElement: deceasedBooleanElement,
+      deceasedDateTime: deceasedDateTime,
       deceasedDateTimeElement: deceasedDateTimeElement,
       address: address,
       maritalStatus: maritalStatus,
+      multipleBirthBoolean: multipleBirthBoolean,
       multipleBirthBooleanElement: multipleBirthBooleanElement,
+      multipleBirthInteger: multipleBirthInteger,
       multipleBirthIntegerElement: multipleBirthIntegerElement,
       photo: photo,
       contact: contact,
@@ -1749,14 +1780,18 @@ mixin _$Patient {
   Date get birthDate;
   @JsonKey(name: '_birthDate')
   Element get birthDateElement;
+  Boolean get deceasedBoolean;
   @JsonKey(name: '_deceasedBoolean')
   Element get deceasedBooleanElement;
+  FhirDateTime get deceasedDateTime;
   @JsonKey(name: '_deceasedDateTime')
   Element get deceasedDateTimeElement;
   List<Address> get address;
   CodeableConcept get maritalStatus;
+  Boolean get multipleBirthBoolean;
   @JsonKey(name: '_multipleBirthBoolean')
   Element get multipleBirthBooleanElement;
+  Integer get multipleBirthInteger;
   @JsonKey(name: '_multipleBirthInteger')
   Element get multipleBirthIntegerElement;
   List<Attachment> get photo;
@@ -1802,14 +1837,18 @@ abstract class $PatientCopyWith<$Res> {
       Date birthDate,
       @JsonKey(name: '_birthDate')
           Element birthDateElement,
+      Boolean deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean')
           Element deceasedBooleanElement,
+      FhirDateTime deceasedDateTime,
       @JsonKey(name: '_deceasedDateTime')
           Element deceasedDateTimeElement,
       List<Address> address,
       CodeableConcept maritalStatus,
+      Boolean multipleBirthBoolean,
       @JsonKey(name: '_multipleBirthBoolean')
           Element multipleBirthBooleanElement,
+      Integer multipleBirthInteger,
       @JsonKey(name: '_multipleBirthInteger')
           Element multipleBirthIntegerElement,
       List<Attachment> photo,
@@ -1863,11 +1902,15 @@ class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
     Object genderElement = freezed,
     Object birthDate = freezed,
     Object birthDateElement = freezed,
+    Object deceasedBoolean = freezed,
     Object deceasedBooleanElement = freezed,
+    Object deceasedDateTime = freezed,
     Object deceasedDateTimeElement = freezed,
     Object address = freezed,
     Object maritalStatus = freezed,
+    Object multipleBirthBoolean = freezed,
     Object multipleBirthBooleanElement = freezed,
+    Object multipleBirthInteger = freezed,
     Object multipleBirthIntegerElement = freezed,
     Object photo = freezed,
     Object contact = freezed,
@@ -1919,9 +1962,15 @@ class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
       birthDateElement: birthDateElement == freezed
           ? _value.birthDateElement
           : birthDateElement as Element,
+      deceasedBoolean: deceasedBoolean == freezed
+          ? _value.deceasedBoolean
+          : deceasedBoolean as Boolean,
       deceasedBooleanElement: deceasedBooleanElement == freezed
           ? _value.deceasedBooleanElement
           : deceasedBooleanElement as Element,
+      deceasedDateTime: deceasedDateTime == freezed
+          ? _value.deceasedDateTime
+          : deceasedDateTime as FhirDateTime,
       deceasedDateTimeElement: deceasedDateTimeElement == freezed
           ? _value.deceasedDateTimeElement
           : deceasedDateTimeElement as Element,
@@ -1929,9 +1978,15 @@ class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
       maritalStatus: maritalStatus == freezed
           ? _value.maritalStatus
           : maritalStatus as CodeableConcept,
+      multipleBirthBoolean: multipleBirthBoolean == freezed
+          ? _value.multipleBirthBoolean
+          : multipleBirthBoolean as Boolean,
       multipleBirthBooleanElement: multipleBirthBooleanElement == freezed
           ? _value.multipleBirthBooleanElement
           : multipleBirthBooleanElement as Element,
+      multipleBirthInteger: multipleBirthInteger == freezed
+          ? _value.multipleBirthInteger
+          : multipleBirthInteger as Integer,
       multipleBirthIntegerElement: multipleBirthIntegerElement == freezed
           ? _value.multipleBirthIntegerElement
           : multipleBirthIntegerElement as Element,
@@ -2115,14 +2170,18 @@ abstract class _$PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
       Date birthDate,
       @JsonKey(name: '_birthDate')
           Element birthDateElement,
+      Boolean deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean')
           Element deceasedBooleanElement,
+      FhirDateTime deceasedDateTime,
       @JsonKey(name: '_deceasedDateTime')
           Element deceasedDateTimeElement,
       List<Address> address,
       CodeableConcept maritalStatus,
+      Boolean multipleBirthBoolean,
       @JsonKey(name: '_multipleBirthBoolean')
           Element multipleBirthBooleanElement,
+      Integer multipleBirthInteger,
       @JsonKey(name: '_multipleBirthInteger')
           Element multipleBirthIntegerElement,
       List<Attachment> photo,
@@ -2190,11 +2249,15 @@ class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
     Object genderElement = freezed,
     Object birthDate = freezed,
     Object birthDateElement = freezed,
+    Object deceasedBoolean = freezed,
     Object deceasedBooleanElement = freezed,
+    Object deceasedDateTime = freezed,
     Object deceasedDateTimeElement = freezed,
     Object address = freezed,
     Object maritalStatus = freezed,
+    Object multipleBirthBoolean = freezed,
     Object multipleBirthBooleanElement = freezed,
+    Object multipleBirthInteger = freezed,
     Object multipleBirthIntegerElement = freezed,
     Object photo = freezed,
     Object contact = freezed,
@@ -2246,9 +2309,15 @@ class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
       birthDateElement: birthDateElement == freezed
           ? _value.birthDateElement
           : birthDateElement as Element,
+      deceasedBoolean: deceasedBoolean == freezed
+          ? _value.deceasedBoolean
+          : deceasedBoolean as Boolean,
       deceasedBooleanElement: deceasedBooleanElement == freezed
           ? _value.deceasedBooleanElement
           : deceasedBooleanElement as Element,
+      deceasedDateTime: deceasedDateTime == freezed
+          ? _value.deceasedDateTime
+          : deceasedDateTime as FhirDateTime,
       deceasedDateTimeElement: deceasedDateTimeElement == freezed
           ? _value.deceasedDateTimeElement
           : deceasedDateTimeElement as Element,
@@ -2256,9 +2325,15 @@ class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
       maritalStatus: maritalStatus == freezed
           ? _value.maritalStatus
           : maritalStatus as CodeableConcept,
+      multipleBirthBoolean: multipleBirthBoolean == freezed
+          ? _value.multipleBirthBoolean
+          : multipleBirthBoolean as Boolean,
       multipleBirthBooleanElement: multipleBirthBooleanElement == freezed
           ? _value.multipleBirthBooleanElement
           : multipleBirthBooleanElement as Element,
+      multipleBirthInteger: multipleBirthInteger == freezed
+          ? _value.multipleBirthInteger
+          : multipleBirthInteger as Integer,
       multipleBirthIntegerElement: multipleBirthIntegerElement == freezed
           ? _value.multipleBirthIntegerElement
           : multipleBirthIntegerElement as Element,
@@ -2302,11 +2377,15 @@ class _$_Patient extends _Patient {
       @JsonKey(name: '_gender') this.genderElement,
       this.birthDate,
       @JsonKey(name: '_birthDate') this.birthDateElement,
+      this.deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean') this.deceasedBooleanElement,
+      this.deceasedDateTime,
       @JsonKey(name: '_deceasedDateTime') this.deceasedDateTimeElement,
       this.address,
       this.maritalStatus,
+      this.multipleBirthBoolean,
       @JsonKey(name: '_multipleBirthBoolean') this.multipleBirthBooleanElement,
+      this.multipleBirthInteger,
       @JsonKey(name: '_multipleBirthInteger') this.multipleBirthIntegerElement,
       this.photo,
       this.contact,
@@ -2369,8 +2448,12 @@ class _$_Patient extends _Patient {
   @JsonKey(name: '_birthDate')
   final Element birthDateElement;
   @override
+  final Boolean deceasedBoolean;
+  @override
   @JsonKey(name: '_deceasedBoolean')
   final Element deceasedBooleanElement;
+  @override
+  final FhirDateTime deceasedDateTime;
   @override
   @JsonKey(name: '_deceasedDateTime')
   final Element deceasedDateTimeElement;
@@ -2379,8 +2462,12 @@ class _$_Patient extends _Patient {
   @override
   final CodeableConcept maritalStatus;
   @override
+  final Boolean multipleBirthBoolean;
+  @override
   @JsonKey(name: '_multipleBirthBoolean')
   final Element multipleBirthBooleanElement;
+  @override
+  final Integer multipleBirthInteger;
   @override
   @JsonKey(name: '_multipleBirthInteger')
   final Element multipleBirthIntegerElement;
@@ -2399,7 +2486,7 @@ class _$_Patient extends _Patient {
 
   @override
   String toString() {
-    return 'Patient(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, activeElement: $activeElement, name: $name, telecom: $telecom, gender: $gender, genderElement: $genderElement, birthDate: $birthDate, birthDateElement: $birthDateElement, deceasedBooleanElement: $deceasedBooleanElement, deceasedDateTimeElement: $deceasedDateTimeElement, address: $address, maritalStatus: $maritalStatus, multipleBirthBooleanElement: $multipleBirthBooleanElement, multipleBirthIntegerElement: $multipleBirthIntegerElement, photo: $photo, contact: $contact, communication: $communication, generalPractitioner: $generalPractitioner, managingOrganization: $managingOrganization, link: $link)';
+    return 'Patient(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, activeElement: $activeElement, name: $name, telecom: $telecom, gender: $gender, genderElement: $genderElement, birthDate: $birthDate, birthDateElement: $birthDateElement, deceasedBoolean: $deceasedBoolean, deceasedBooleanElement: $deceasedBooleanElement, deceasedDateTime: $deceasedDateTime, deceasedDateTimeElement: $deceasedDateTimeElement, address: $address, maritalStatus: $maritalStatus, multipleBirthBoolean: $multipleBirthBoolean, multipleBirthBooleanElement: $multipleBirthBooleanElement, multipleBirthInteger: $multipleBirthInteger, multipleBirthIntegerElement: $multipleBirthIntegerElement, photo: $photo, contact: $contact, communication: $communication, generalPractitioner: $generalPractitioner, managingOrganization: $managingOrganization, link: $link)';
   }
 
   @override
@@ -2460,19 +2547,23 @@ class _$_Patient extends _Patient {
             (identical(other.birthDateElement, birthDateElement) ||
                 const DeepCollectionEquality()
                     .equals(other.birthDateElement, birthDateElement)) &&
+            (identical(other.deceasedBoolean, deceasedBoolean) ||
+                const DeepCollectionEquality()
+                    .equals(other.deceasedBoolean, deceasedBoolean)) &&
             (identical(other.deceasedBooleanElement, deceasedBooleanElement) ||
                 const DeepCollectionEquality().equals(
                     other.deceasedBooleanElement, deceasedBooleanElement)) &&
+            (identical(other.deceasedDateTime, deceasedDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.deceasedDateTime, deceasedDateTime)) &&
             (identical(other.deceasedDateTimeElement, deceasedDateTimeElement) ||
                 const DeepCollectionEquality().equals(
                     other.deceasedDateTimeElement, deceasedDateTimeElement)) &&
-            (identical(other.address, address) ||
-                const DeepCollectionEquality()
-                    .equals(other.address, address)) &&
-            (identical(other.maritalStatus, maritalStatus) ||
-                const DeepCollectionEquality()
-                    .equals(other.maritalStatus, maritalStatus)) &&
+            (identical(other.address, address) || const DeepCollectionEquality().equals(other.address, address)) &&
+            (identical(other.maritalStatus, maritalStatus) || const DeepCollectionEquality().equals(other.maritalStatus, maritalStatus)) &&
+            (identical(other.multipleBirthBoolean, multipleBirthBoolean) || const DeepCollectionEquality().equals(other.multipleBirthBoolean, multipleBirthBoolean)) &&
             (identical(other.multipleBirthBooleanElement, multipleBirthBooleanElement) || const DeepCollectionEquality().equals(other.multipleBirthBooleanElement, multipleBirthBooleanElement)) &&
+            (identical(other.multipleBirthInteger, multipleBirthInteger) || const DeepCollectionEquality().equals(other.multipleBirthInteger, multipleBirthInteger)) &&
             (identical(other.multipleBirthIntegerElement, multipleBirthIntegerElement) || const DeepCollectionEquality().equals(other.multipleBirthIntegerElement, multipleBirthIntegerElement)) &&
             (identical(other.photo, photo) || const DeepCollectionEquality().equals(other.photo, photo)) &&
             (identical(other.contact, contact) || const DeepCollectionEquality().equals(other.contact, contact)) &&
@@ -2505,11 +2596,15 @@ class _$_Patient extends _Patient {
       const DeepCollectionEquality().hash(genderElement) ^
       const DeepCollectionEquality().hash(birthDate) ^
       const DeepCollectionEquality().hash(birthDateElement) ^
+      const DeepCollectionEquality().hash(deceasedBoolean) ^
       const DeepCollectionEquality().hash(deceasedBooleanElement) ^
+      const DeepCollectionEquality().hash(deceasedDateTime) ^
       const DeepCollectionEquality().hash(deceasedDateTimeElement) ^
       const DeepCollectionEquality().hash(address) ^
       const DeepCollectionEquality().hash(maritalStatus) ^
+      const DeepCollectionEquality().hash(multipleBirthBoolean) ^
       const DeepCollectionEquality().hash(multipleBirthBooleanElement) ^
+      const DeepCollectionEquality().hash(multipleBirthInteger) ^
       const DeepCollectionEquality().hash(multipleBirthIntegerElement) ^
       const DeepCollectionEquality().hash(photo) ^
       const DeepCollectionEquality().hash(contact) ^
@@ -2560,14 +2655,18 @@ abstract class _Patient extends Patient {
       Date birthDate,
       @JsonKey(name: '_birthDate')
           Element birthDateElement,
+      Boolean deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean')
           Element deceasedBooleanElement,
+      FhirDateTime deceasedDateTime,
       @JsonKey(name: '_deceasedDateTime')
           Element deceasedDateTimeElement,
       List<Address> address,
       CodeableConcept maritalStatus,
+      Boolean multipleBirthBoolean,
       @JsonKey(name: '_multipleBirthBoolean')
           Element multipleBirthBooleanElement,
+      Integer multipleBirthInteger,
       @JsonKey(name: '_multipleBirthInteger')
           Element multipleBirthIntegerElement,
       List<Attachment> photo,
@@ -2628,8 +2727,12 @@ abstract class _Patient extends Patient {
   @JsonKey(name: '_birthDate')
   Element get birthDateElement;
   @override
+  Boolean get deceasedBoolean;
+  @override
   @JsonKey(name: '_deceasedBoolean')
   Element get deceasedBooleanElement;
+  @override
+  FhirDateTime get deceasedDateTime;
   @override
   @JsonKey(name: '_deceasedDateTime')
   Element get deceasedDateTimeElement;
@@ -2638,8 +2741,12 @@ abstract class _Patient extends Patient {
   @override
   CodeableConcept get maritalStatus;
   @override
+  Boolean get multipleBirthBoolean;
+  @override
   @JsonKey(name: '_multipleBirthBoolean')
   Element get multipleBirthBooleanElement;
+  @override
+  Integer get multipleBirthInteger;
   @override
   @JsonKey(name: '_multipleBirthInteger')
   Element get multipleBirthIntegerElement;

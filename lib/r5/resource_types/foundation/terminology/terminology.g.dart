@@ -576,24 +576,40 @@ _$_CodeSystemProperty1 _$_$_CodeSystemProperty1FromJson(
     codeElement: json['_code'] == null
         ? null
         : Element.fromJson(json['_code'] as Map<String, dynamic>),
+    valueCode: json['valueCode'] == null
+        ? null
+        : Code.fromJson(json['valueCode'] as String),
     valueCodeElement: json['_valueCode'] == null
         ? null
         : Element.fromJson(json['_valueCode'] as Map<String, dynamic>),
     valueCoding: json['valueCoding'] == null
         ? null
         : Coding.fromJson(json['valueCoding'] as Map<String, dynamic>),
+    valueString: json['valueString'] as String,
     valueStringElement: json['_valueString'] == null
         ? null
         : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
+    valueInteger: json['valueInteger'] == null
+        ? null
+        : Integer.fromJson(json['valueInteger']),
     valueIntegerElement: json['_valueInteger'] == null
         ? null
         : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
+    valueBoolean: json['valueBoolean'] == null
+        ? null
+        : Boolean.fromJson(json['valueBoolean']),
     valueBooleanElement: json['_valueBoolean'] == null
         ? null
         : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
+    valueDateTime: json['valueDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['valueDateTime'] as String),
     valueDateTimeElement: json['_valueDateTime'] == null
         ? null
         : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
+    valueDecimal: json['valueDecimal'] == null
+        ? null
+        : Decimal.fromJson(json['valueDecimal']),
     valueDecimalElement: json['_valueDecimal'] == null
         ? null
         : Element.fromJson(json['_valueDecimal'] as Map<String, dynamic>),
@@ -617,12 +633,18 @@ Map<String, dynamic> _$_$_CodeSystemProperty1ToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('_code', instance.codeElement?.toJson());
+  writeNotNull('valueCode', instance.valueCode?.toJson());
   writeNotNull('_valueCode', instance.valueCodeElement?.toJson());
   writeNotNull('valueCoding', instance.valueCoding?.toJson());
+  writeNotNull('valueString', instance.valueString);
   writeNotNull('_valueString', instance.valueStringElement?.toJson());
+  writeNotNull('valueInteger', instance.valueInteger?.toJson());
   writeNotNull('_valueInteger', instance.valueIntegerElement?.toJson());
+  writeNotNull('valueBoolean', instance.valueBoolean?.toJson());
   writeNotNull('_valueBoolean', instance.valueBooleanElement?.toJson());
+  writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
   writeNotNull('_valueDateTime', instance.valueDateTimeElement?.toJson());
+  writeNotNull('valueDecimal', instance.valueDecimal?.toJson());
   writeNotNull('_valueDecimal', instance.valueDecimalElement?.toJson());
   return val;
 }
@@ -735,15 +757,27 @@ _$_ConceptMap _$_$_ConceptMapFromJson(Map<String, dynamic> json) {
     copyrightElement: json['_copyright'] == null
         ? null
         : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
+    sourceUri: json['sourceUri'] == null
+        ? null
+        : FhirUri.fromJson(json['sourceUri'] as String),
     sourceUriElement: json['_sourceUri'] == null
         ? null
         : Element.fromJson(json['_sourceUri'] as Map<String, dynamic>),
+    sourceCanonical: json['sourceCanonical'] == null
+        ? null
+        : Canonical.fromJson(json['sourceCanonical'] as String),
     sourceCanonicalElement: json['_sourceCanonical'] == null
         ? null
         : Element.fromJson(json['_sourceCanonical'] as Map<String, dynamic>),
+    targetUri: json['targetUri'] == null
+        ? null
+        : FhirUri.fromJson(json['targetUri'] as String),
     targetUriElement: json['_targetUri'] == null
         ? null
         : Element.fromJson(json['_targetUri'] as Map<String, dynamic>),
+    targetCanonical: json['targetCanonical'] == null
+        ? null
+        : Canonical.fromJson(json['targetCanonical'] as String),
     targetCanonicalElement: json['_targetCanonical'] == null
         ? null
         : Element.fromJson(json['_targetCanonical'] as Map<String, dynamic>),
@@ -806,9 +840,13 @@ Map<String, dynamic> _$_$_ConceptMapToJson(_$_ConceptMap instance) {
   writeNotNull('_purpose', instance.purposeElement?.toJson());
   writeNotNull('copyright', instance.copyright?.toJson());
   writeNotNull('_copyright', instance.copyrightElement?.toJson());
+  writeNotNull('sourceUri', instance.sourceUri?.toJson());
   writeNotNull('_sourceUri', instance.sourceUriElement?.toJson());
+  writeNotNull('sourceCanonical', instance.sourceCanonical?.toJson());
   writeNotNull('_sourceCanonical', instance.sourceCanonicalElement?.toJson());
+  writeNotNull('targetUri', instance.targetUri?.toJson());
   writeNotNull('_targetUri', instance.targetUriElement?.toJson());
+  writeNotNull('targetCanonical', instance.targetCanonical?.toJson());
   writeNotNull('_targetCanonical', instance.targetCanonicalElement?.toJson());
   writeNotNull('group', instance.group?.map((e) => e?.toJson())?.toList());
   return val;
@@ -2799,24 +2837,43 @@ _$_ValueSetParameter _$_$_ValueSetParameterFromJson(Map<String, dynamic> json) {
     nameElement: json['_name'] == null
         ? null
         : Element.fromJson(json['_name'] as Map<String, dynamic>),
+    valueString: json['valueString'] as String,
     valueStringElement: json['_valueString'] == null
         ? null
         : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
+    valueBoolean: json['valueBoolean'] == null
+        ? null
+        : Boolean.fromJson(json['valueBoolean']),
     valueBooleanElement: json['_valueBoolean'] == null
         ? null
         : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
+    valueInteger: json['valueInteger'] == null
+        ? null
+        : Integer.fromJson(json['valueInteger']),
     valueIntegerElement: json['_valueInteger'] == null
         ? null
         : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
+    valueDecimal: json['valueDecimal'] == null
+        ? null
+        : Decimal.fromJson(json['valueDecimal']),
     valueDecimalElement: json['_valueDecimal'] == null
         ? null
         : Element.fromJson(json['_valueDecimal'] as Map<String, dynamic>),
+    valueUri: json['valueUri'] == null
+        ? null
+        : FhirUri.fromJson(json['valueUri'] as String),
     valueUriElement: json['_valueUri'] == null
         ? null
         : Element.fromJson(json['_valueUri'] as Map<String, dynamic>),
+    valueCode: json['valueCode'] == null
+        ? null
+        : Code.fromJson(json['valueCode'] as String),
     valueCodeElement: json['_valueCode'] == null
         ? null
         : Element.fromJson(json['_valueCode'] as Map<String, dynamic>),
+    valueDateTime: json['valueDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['valueDateTime'] as String),
     valueDateTimeElement: json['_valueDateTime'] == null
         ? null
         : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
@@ -2840,12 +2897,19 @@ Map<String, dynamic> _$_$_ValueSetParameterToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('name', instance.name);
   writeNotNull('_name', instance.nameElement?.toJson());
+  writeNotNull('valueString', instance.valueString);
   writeNotNull('_valueString', instance.valueStringElement?.toJson());
+  writeNotNull('valueBoolean', instance.valueBoolean?.toJson());
   writeNotNull('_valueBoolean', instance.valueBooleanElement?.toJson());
+  writeNotNull('valueInteger', instance.valueInteger?.toJson());
   writeNotNull('_valueInteger', instance.valueIntegerElement?.toJson());
+  writeNotNull('valueDecimal', instance.valueDecimal?.toJson());
   writeNotNull('_valueDecimal', instance.valueDecimalElement?.toJson());
+  writeNotNull('valueUri', instance.valueUri?.toJson());
   writeNotNull('_valueUri', instance.valueUriElement?.toJson());
+  writeNotNull('valueCode', instance.valueCode?.toJson());
   writeNotNull('_valueCode', instance.valueCodeElement?.toJson());
+  writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
   writeNotNull('_valueDateTime', instance.valueDateTimeElement?.toJson());
   return val;
 }
@@ -3006,24 +3070,40 @@ _$_ValueSetProperty1 _$_$_ValueSetProperty1FromJson(Map<String, dynamic> json) {
     codeElement: json['_code'] == null
         ? null
         : Element.fromJson(json['_code'] as Map<String, dynamic>),
+    valueCode: json['valueCode'] == null
+        ? null
+        : Code.fromJson(json['valueCode'] as String),
     valueCodeElement: json['_valueCode'] == null
         ? null
         : Element.fromJson(json['_valueCode'] as Map<String, dynamic>),
     valueCoding: json['valueCoding'] == null
         ? null
         : Coding.fromJson(json['valueCoding'] as Map<String, dynamic>),
+    valueString: json['valueString'] as String,
     valueStringElement: json['_valueString'] == null
         ? null
         : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
+    valueInteger: json['valueInteger'] == null
+        ? null
+        : Integer.fromJson(json['valueInteger']),
     valueIntegerElement: json['_valueInteger'] == null
         ? null
         : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
+    valueBoolean: json['valueBoolean'] == null
+        ? null
+        : Boolean.fromJson(json['valueBoolean']),
     valueBooleanElement: json['_valueBoolean'] == null
         ? null
         : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
+    valueDateTime: json['valueDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['valueDateTime'] as String),
     valueDateTimeElement: json['_valueDateTime'] == null
         ? null
         : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
+    valueDecimal: json['valueDecimal'] == null
+        ? null
+        : Decimal.fromJson(json['valueDecimal']),
     valueDecimalElement: json['_valueDecimal'] == null
         ? null
         : Element.fromJson(json['_valueDecimal'] as Map<String, dynamic>),
@@ -3047,12 +3127,18 @@ Map<String, dynamic> _$_$_ValueSetProperty1ToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('_code', instance.codeElement?.toJson());
+  writeNotNull('valueCode', instance.valueCode?.toJson());
   writeNotNull('_valueCode', instance.valueCodeElement?.toJson());
   writeNotNull('valueCoding', instance.valueCoding?.toJson());
+  writeNotNull('valueString', instance.valueString);
   writeNotNull('_valueString', instance.valueStringElement?.toJson());
+  writeNotNull('valueInteger', instance.valueInteger?.toJson());
   writeNotNull('_valueInteger', instance.valueIntegerElement?.toJson());
+  writeNotNull('valueBoolean', instance.valueBoolean?.toJson());
   writeNotNull('_valueBoolean', instance.valueBooleanElement?.toJson());
+  writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
   writeNotNull('_valueDateTime', instance.valueDateTimeElement?.toJson());
+  writeNotNull('valueDecimal', instance.valueDecimal?.toJson());
   writeNotNull('_valueDecimal', instance.valueDecimalElement?.toJson());
   return val;
 }

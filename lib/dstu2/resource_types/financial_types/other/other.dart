@@ -11,7 +11,7 @@ part 'other.g.dart';
 abstract class ExplanationOfBenefit
     with _$ExplanationOfBenefit
     implements Resource {
-  const factory ExplanationOfBenefit({
+  factory ExplanationOfBenefit({
     @JsonKey(defaultValue: 'ExplanationOfBenefit') String resourceType,
     Id id,
     Meta meta,

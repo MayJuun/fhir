@@ -34,7 +34,9 @@ class _$ImmunizationTearOff {
       @required CodeableConcept vaccineCode,
       @required Reference patient,
       Reference encounter,
+      FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+      String occurrenceString,
       @JsonKey(name: '_occurrenceString') Element occurrenceStringElement,
       FhirDateTime recorded,
       @JsonKey(name: '_recorded') Element recordedElement,
@@ -81,7 +83,9 @@ class _$ImmunizationTearOff {
       vaccineCode: vaccineCode,
       patient: patient,
       encounter: encounter,
+      occurrenceDateTime: occurrenceDateTime,
       occurrenceDateTimeElement: occurrenceDateTimeElement,
+      occurrenceString: occurrenceString,
       occurrenceStringElement: occurrenceStringElement,
       recorded: recorded,
       recordedElement: recordedElement,
@@ -140,8 +144,10 @@ mixin _$Immunization {
   CodeableConcept get vaccineCode;
   Reference get patient;
   Reference get encounter;
+  FhirDateTime get occurrenceDateTime;
   @JsonKey(name: '_occurrenceDateTime')
   Element get occurrenceDateTimeElement;
+  String get occurrenceString;
   @JsonKey(name: '_occurrenceString')
   Element get occurrenceStringElement;
   FhirDateTime get recorded;
@@ -203,7 +209,9 @@ abstract class $ImmunizationCopyWith<$Res> {
       CodeableConcept vaccineCode,
       Reference patient,
       Reference encounter,
+      FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+      String occurrenceString,
       @JsonKey(name: '_occurrenceString') Element occurrenceStringElement,
       FhirDateTime recorded,
       @JsonKey(name: '_recorded') Element recordedElement,
@@ -285,7 +293,9 @@ class _$ImmunizationCopyWithImpl<$Res> implements $ImmunizationCopyWith<$Res> {
     Object vaccineCode = freezed,
     Object patient = freezed,
     Object encounter = freezed,
+    Object occurrenceDateTime = freezed,
     Object occurrenceDateTimeElement = freezed,
+    Object occurrenceString = freezed,
     Object occurrenceStringElement = freezed,
     Object recorded = freezed,
     Object recordedElement = freezed,
@@ -355,9 +365,15 @@ class _$ImmunizationCopyWithImpl<$Res> implements $ImmunizationCopyWith<$Res> {
       patient: patient == freezed ? _value.patient : patient as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
+      occurrenceDateTime: occurrenceDateTime == freezed
+          ? _value.occurrenceDateTime
+          : occurrenceDateTime as FhirDateTime,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement as Element,
+      occurrenceString: occurrenceString == freezed
+          ? _value.occurrenceString
+          : occurrenceString as String,
       occurrenceStringElement: occurrenceStringElement == freezed
           ? _value.occurrenceStringElement
           : occurrenceStringElement as Element,
@@ -697,7 +713,9 @@ abstract class _$ImmunizationCopyWith<$Res>
       CodeableConcept vaccineCode,
       Reference patient,
       Reference encounter,
+      FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+      String occurrenceString,
       @JsonKey(name: '_occurrenceString') Element occurrenceStringElement,
       FhirDateTime recorded,
       @JsonKey(name: '_recorded') Element recordedElement,
@@ -805,7 +823,9 @@ class __$ImmunizationCopyWithImpl<$Res> extends _$ImmunizationCopyWithImpl<$Res>
     Object vaccineCode = freezed,
     Object patient = freezed,
     Object encounter = freezed,
+    Object occurrenceDateTime = freezed,
     Object occurrenceDateTimeElement = freezed,
+    Object occurrenceString = freezed,
     Object occurrenceStringElement = freezed,
     Object recorded = freezed,
     Object recordedElement = freezed,
@@ -875,9 +895,15 @@ class __$ImmunizationCopyWithImpl<$Res> extends _$ImmunizationCopyWithImpl<$Res>
       patient: patient == freezed ? _value.patient : patient as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
+      occurrenceDateTime: occurrenceDateTime == freezed
+          ? _value.occurrenceDateTime
+          : occurrenceDateTime as FhirDateTime,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement as Element,
+      occurrenceString: occurrenceString == freezed
+          ? _value.occurrenceString
+          : occurrenceString as String,
       occurrenceStringElement: occurrenceStringElement == freezed
           ? _value.occurrenceStringElement
           : occurrenceStringElement as Element,
@@ -972,7 +998,9 @@ class _$_Immunization extends _Immunization {
       @required this.vaccineCode,
       @required this.patient,
       this.encounter,
+      this.occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') this.occurrenceDateTimeElement,
+      this.occurrenceString,
       @JsonKey(name: '_occurrenceString') this.occurrenceStringElement,
       this.recorded,
       @JsonKey(name: '_recorded') this.recordedElement,
@@ -1050,8 +1078,12 @@ class _$_Immunization extends _Immunization {
   @override
   final Reference encounter;
   @override
+  final FhirDateTime occurrenceDateTime;
+  @override
   @JsonKey(name: '_occurrenceDateTime')
   final Element occurrenceDateTimeElement;
+  @override
+  final String occurrenceString;
   @override
   @JsonKey(name: '_occurrenceString')
   final Element occurrenceStringElement;
@@ -1115,7 +1147,7 @@ class _$_Immunization extends _Immunization {
 
   @override
   String toString() {
-    return 'Immunization(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, statusReason: $statusReason, vaccineCode: $vaccineCode, patient: $patient, encounter: $encounter, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrenceStringElement: $occurrenceStringElement, recorded: $recorded, recordedElement: $recordedElement, primarySource: $primarySource, primarySourceElement: $primarySourceElement, informationSourceCodeableConcept: $informationSourceCodeableConcept, informationSourceReference: $informationSourceReference, location: $location, manufacturer: $manufacturer, lotNumber: $lotNumber, lotNumberElement: $lotNumberElement, expirationDate: $expirationDate, expirationDateElement: $expirationDateElement, site: $site, route: $route, doseQuantity: $doseQuantity, performer: $performer, note: $note, reason: $reason, isSubpotent: $isSubpotent, isSubpotentElement: $isSubpotentElement, subpotentReason: $subpotentReason, education: $education, programEligibility: $programEligibility, fundingSource: $fundingSource, reaction: $reaction, protocolApplied: $protocolApplied)';
+    return 'Immunization(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, statusReason: $statusReason, vaccineCode: $vaccineCode, patient: $patient, encounter: $encounter, occurrenceDateTime: $occurrenceDateTime, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrenceString: $occurrenceString, occurrenceStringElement: $occurrenceStringElement, recorded: $recorded, recordedElement: $recordedElement, primarySource: $primarySource, primarySourceElement: $primarySourceElement, informationSourceCodeableConcept: $informationSourceCodeableConcept, informationSourceReference: $informationSourceReference, location: $location, manufacturer: $manufacturer, lotNumber: $lotNumber, lotNumberElement: $lotNumberElement, expirationDate: $expirationDate, expirationDateElement: $expirationDateElement, site: $site, route: $route, doseQuantity: $doseQuantity, performer: $performer, note: $note, reason: $reason, isSubpotent: $isSubpotent, isSubpotentElement: $isSubpotentElement, subpotentReason: $subpotentReason, education: $education, programEligibility: $programEligibility, fundingSource: $fundingSource, reaction: $reaction, protocolApplied: $protocolApplied)';
   }
 
   @override
@@ -1172,19 +1204,22 @@ class _$_Immunization extends _Immunization {
             (identical(other.encounter, encounter) ||
                 const DeepCollectionEquality()
                     .equals(other.encounter, encounter)) &&
+            (identical(other.occurrenceDateTime, occurrenceDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.occurrenceDateTime, occurrenceDateTime)) &&
             (identical(other.occurrenceDateTimeElement, occurrenceDateTimeElement) ||
                 const DeepCollectionEquality().equals(
                     other.occurrenceDateTimeElement,
                     occurrenceDateTimeElement)) &&
+            (identical(other.occurrenceString, occurrenceString) ||
+                const DeepCollectionEquality()
+                    .equals(other.occurrenceString, occurrenceString)) &&
             (identical(other.occurrenceStringElement, occurrenceStringElement) ||
                 const DeepCollectionEquality().equals(
                     other.occurrenceStringElement, occurrenceStringElement)) &&
             (identical(other.recorded, recorded) ||
-                const DeepCollectionEquality()
-                    .equals(other.recorded, recorded)) &&
-            (identical(other.recordedElement, recordedElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.recordedElement, recordedElement)) &&
+                const DeepCollectionEquality().equals(other.recorded, recorded)) &&
+            (identical(other.recordedElement, recordedElement) || const DeepCollectionEquality().equals(other.recordedElement, recordedElement)) &&
             (identical(other.primarySource, primarySource) || const DeepCollectionEquality().equals(other.primarySource, primarySource)) &&
             (identical(other.primarySourceElement, primarySourceElement) || const DeepCollectionEquality().equals(other.primarySourceElement, primarySourceElement)) &&
             (identical(other.informationSourceCodeableConcept, informationSourceCodeableConcept) || const DeepCollectionEquality().equals(other.informationSourceCodeableConcept, informationSourceCodeableConcept)) &&
@@ -1232,7 +1267,9 @@ class _$_Immunization extends _Immunization {
       const DeepCollectionEquality().hash(vaccineCode) ^
       const DeepCollectionEquality().hash(patient) ^
       const DeepCollectionEquality().hash(encounter) ^
+      const DeepCollectionEquality().hash(occurrenceDateTime) ^
       const DeepCollectionEquality().hash(occurrenceDateTimeElement) ^
+      const DeepCollectionEquality().hash(occurrenceString) ^
       const DeepCollectionEquality().hash(occurrenceStringElement) ^
       const DeepCollectionEquality().hash(recorded) ^
       const DeepCollectionEquality().hash(recordedElement) ^
@@ -1292,7 +1329,9 @@ abstract class _Immunization extends Immunization {
       @required CodeableConcept vaccineCode,
       @required Reference patient,
       Reference encounter,
+      FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+      String occurrenceString,
       @JsonKey(name: '_occurrenceString') Element occurrenceStringElement,
       FhirDateTime recorded,
       @JsonKey(name: '_recorded') Element recordedElement,
@@ -1366,8 +1405,12 @@ abstract class _Immunization extends Immunization {
   @override
   Reference get encounter;
   @override
+  FhirDateTime get occurrenceDateTime;
+  @override
   @JsonKey(name: '_occurrenceDateTime')
   Element get occurrenceDateTimeElement;
+  @override
+  String get occurrenceString;
   @override
   @JsonKey(name: '_occurrenceString')
   Element get occurrenceStringElement;
@@ -2474,12 +2517,16 @@ class _$ImmunizationProtocolAppliedTearOff {
           Element seriesElement,
       Reference authority,
       List<CodeableConcept> targetDisease,
+      PositiveInt doseNumberPositiveInt,
       @JsonKey(name: '_doseNumberPositiveInt')
           Element doseNumberPositiveIntElement,
+      String doseNumberString,
       @JsonKey(name: '_doseNumberString')
           Element doseNumberStringElement,
+      PositiveInt seriesDosesPositiveInt,
       @JsonKey(name: '_seriesDosesPositiveInt')
           Element seriesDosesPositiveIntElement,
+      String seriesDosesString,
       @JsonKey(name: '_seriesDosesString')
           Element seriesDosesStringElement}) {
     return _ImmunizationProtocolApplied(
@@ -2490,9 +2537,13 @@ class _$ImmunizationProtocolAppliedTearOff {
       seriesElement: seriesElement,
       authority: authority,
       targetDisease: targetDisease,
+      doseNumberPositiveInt: doseNumberPositiveInt,
       doseNumberPositiveIntElement: doseNumberPositiveIntElement,
+      doseNumberString: doseNumberString,
       doseNumberStringElement: doseNumberStringElement,
+      seriesDosesPositiveInt: seriesDosesPositiveInt,
       seriesDosesPositiveIntElement: seriesDosesPositiveIntElement,
+      seriesDosesString: seriesDosesString,
       seriesDosesStringElement: seriesDosesStringElement,
     );
   }
@@ -2511,12 +2562,16 @@ mixin _$ImmunizationProtocolApplied {
   Element get seriesElement;
   Reference get authority;
   List<CodeableConcept> get targetDisease;
+  PositiveInt get doseNumberPositiveInt;
   @JsonKey(name: '_doseNumberPositiveInt')
   Element get doseNumberPositiveIntElement;
+  String get doseNumberString;
   @JsonKey(name: '_doseNumberString')
   Element get doseNumberStringElement;
+  PositiveInt get seriesDosesPositiveInt;
   @JsonKey(name: '_seriesDosesPositiveInt')
   Element get seriesDosesPositiveIntElement;
+  String get seriesDosesString;
   @JsonKey(name: '_seriesDosesString')
   Element get seriesDosesStringElement;
 
@@ -2540,12 +2595,16 @@ abstract class $ImmunizationProtocolAppliedCopyWith<$Res> {
           Element seriesElement,
       Reference authority,
       List<CodeableConcept> targetDisease,
+      PositiveInt doseNumberPositiveInt,
       @JsonKey(name: '_doseNumberPositiveInt')
           Element doseNumberPositiveIntElement,
+      String doseNumberString,
       @JsonKey(name: '_doseNumberString')
           Element doseNumberStringElement,
+      PositiveInt seriesDosesPositiveInt,
       @JsonKey(name: '_seriesDosesPositiveInt')
           Element seriesDosesPositiveIntElement,
+      String seriesDosesString,
       @JsonKey(name: '_seriesDosesString')
           Element seriesDosesStringElement});
 
@@ -2574,9 +2633,13 @@ class _$ImmunizationProtocolAppliedCopyWithImpl<$Res>
     Object seriesElement = freezed,
     Object authority = freezed,
     Object targetDisease = freezed,
+    Object doseNumberPositiveInt = freezed,
     Object doseNumberPositiveIntElement = freezed,
+    Object doseNumberString = freezed,
     Object doseNumberStringElement = freezed,
+    Object seriesDosesPositiveInt = freezed,
     Object seriesDosesPositiveIntElement = freezed,
+    Object seriesDosesString = freezed,
     Object seriesDosesStringElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -2596,15 +2659,27 @@ class _$ImmunizationProtocolAppliedCopyWithImpl<$Res>
       targetDisease: targetDisease == freezed
           ? _value.targetDisease
           : targetDisease as List<CodeableConcept>,
+      doseNumberPositiveInt: doseNumberPositiveInt == freezed
+          ? _value.doseNumberPositiveInt
+          : doseNumberPositiveInt as PositiveInt,
       doseNumberPositiveIntElement: doseNumberPositiveIntElement == freezed
           ? _value.doseNumberPositiveIntElement
           : doseNumberPositiveIntElement as Element,
+      doseNumberString: doseNumberString == freezed
+          ? _value.doseNumberString
+          : doseNumberString as String,
       doseNumberStringElement: doseNumberStringElement == freezed
           ? _value.doseNumberStringElement
           : doseNumberStringElement as Element,
+      seriesDosesPositiveInt: seriesDosesPositiveInt == freezed
+          ? _value.seriesDosesPositiveInt
+          : seriesDosesPositiveInt as PositiveInt,
       seriesDosesPositiveIntElement: seriesDosesPositiveIntElement == freezed
           ? _value.seriesDosesPositiveIntElement
           : seriesDosesPositiveIntElement as Element,
+      seriesDosesString: seriesDosesString == freezed
+          ? _value.seriesDosesString
+          : seriesDosesString as String,
       seriesDosesStringElement: seriesDosesStringElement == freezed
           ? _value.seriesDosesStringElement
           : seriesDosesStringElement as Element,
@@ -2690,12 +2765,16 @@ abstract class _$ImmunizationProtocolAppliedCopyWith<$Res>
           Element seriesElement,
       Reference authority,
       List<CodeableConcept> targetDisease,
+      PositiveInt doseNumberPositiveInt,
       @JsonKey(name: '_doseNumberPositiveInt')
           Element doseNumberPositiveIntElement,
+      String doseNumberString,
       @JsonKey(name: '_doseNumberString')
           Element doseNumberStringElement,
+      PositiveInt seriesDosesPositiveInt,
       @JsonKey(name: '_seriesDosesPositiveInt')
           Element seriesDosesPositiveIntElement,
+      String seriesDosesString,
       @JsonKey(name: '_seriesDosesString')
           Element seriesDosesStringElement});
 
@@ -2734,9 +2813,13 @@ class __$ImmunizationProtocolAppliedCopyWithImpl<$Res>
     Object seriesElement = freezed,
     Object authority = freezed,
     Object targetDisease = freezed,
+    Object doseNumberPositiveInt = freezed,
     Object doseNumberPositiveIntElement = freezed,
+    Object doseNumberString = freezed,
     Object doseNumberStringElement = freezed,
+    Object seriesDosesPositiveInt = freezed,
     Object seriesDosesPositiveIntElement = freezed,
+    Object seriesDosesString = freezed,
     Object seriesDosesStringElement = freezed,
   }) {
     return _then(_ImmunizationProtocolApplied(
@@ -2756,15 +2839,27 @@ class __$ImmunizationProtocolAppliedCopyWithImpl<$Res>
       targetDisease: targetDisease == freezed
           ? _value.targetDisease
           : targetDisease as List<CodeableConcept>,
+      doseNumberPositiveInt: doseNumberPositiveInt == freezed
+          ? _value.doseNumberPositiveInt
+          : doseNumberPositiveInt as PositiveInt,
       doseNumberPositiveIntElement: doseNumberPositiveIntElement == freezed
           ? _value.doseNumberPositiveIntElement
           : doseNumberPositiveIntElement as Element,
+      doseNumberString: doseNumberString == freezed
+          ? _value.doseNumberString
+          : doseNumberString as String,
       doseNumberStringElement: doseNumberStringElement == freezed
           ? _value.doseNumberStringElement
           : doseNumberStringElement as Element,
+      seriesDosesPositiveInt: seriesDosesPositiveInt == freezed
+          ? _value.seriesDosesPositiveInt
+          : seriesDosesPositiveInt as PositiveInt,
       seriesDosesPositiveIntElement: seriesDosesPositiveIntElement == freezed
           ? _value.seriesDosesPositiveIntElement
           : seriesDosesPositiveIntElement as Element,
+      seriesDosesString: seriesDosesString == freezed
+          ? _value.seriesDosesString
+          : seriesDosesString as String,
       seriesDosesStringElement: seriesDosesStringElement == freezed
           ? _value.seriesDosesStringElement
           : seriesDosesStringElement as Element,
@@ -2784,12 +2879,16 @@ class _$_ImmunizationProtocolApplied extends _ImmunizationProtocolApplied {
           this.seriesElement,
       this.authority,
       this.targetDisease,
+      this.doseNumberPositiveInt,
       @JsonKey(name: '_doseNumberPositiveInt')
           this.doseNumberPositiveIntElement,
+      this.doseNumberString,
       @JsonKey(name: '_doseNumberString')
           this.doseNumberStringElement,
+      this.seriesDosesPositiveInt,
       @JsonKey(name: '_seriesDosesPositiveInt')
           this.seriesDosesPositiveIntElement,
+      this.seriesDosesString,
       @JsonKey(name: '_seriesDosesString')
           this.seriesDosesStringElement})
       : super._();
@@ -2814,21 +2913,29 @@ class _$_ImmunizationProtocolApplied extends _ImmunizationProtocolApplied {
   @override
   final List<CodeableConcept> targetDisease;
   @override
+  final PositiveInt doseNumberPositiveInt;
+  @override
   @JsonKey(name: '_doseNumberPositiveInt')
   final Element doseNumberPositiveIntElement;
+  @override
+  final String doseNumberString;
   @override
   @JsonKey(name: '_doseNumberString')
   final Element doseNumberStringElement;
   @override
+  final PositiveInt seriesDosesPositiveInt;
+  @override
   @JsonKey(name: '_seriesDosesPositiveInt')
   final Element seriesDosesPositiveIntElement;
+  @override
+  final String seriesDosesString;
   @override
   @JsonKey(name: '_seriesDosesString')
   final Element seriesDosesStringElement;
 
   @override
   String toString() {
-    return 'ImmunizationProtocolApplied(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, series: $series, seriesElement: $seriesElement, authority: $authority, targetDisease: $targetDisease, doseNumberPositiveIntElement: $doseNumberPositiveIntElement, doseNumberStringElement: $doseNumberStringElement, seriesDosesPositiveIntElement: $seriesDosesPositiveIntElement, seriesDosesStringElement: $seriesDosesStringElement)';
+    return 'ImmunizationProtocolApplied(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, series: $series, seriesElement: $seriesElement, authority: $authority, targetDisease: $targetDisease, doseNumberPositiveInt: $doseNumberPositiveInt, doseNumberPositiveIntElement: $doseNumberPositiveIntElement, doseNumberString: $doseNumberString, doseNumberStringElement: $doseNumberStringElement, seriesDosesPositiveInt: $seriesDosesPositiveInt, seriesDosesPositiveIntElement: $seriesDosesPositiveIntElement, seriesDosesString: $seriesDosesString, seriesDosesStringElement: $seriesDosesStringElement)';
   }
 
   @override
@@ -2854,22 +2961,31 @@ class _$_ImmunizationProtocolApplied extends _ImmunizationProtocolApplied {
             (identical(other.targetDisease, targetDisease) ||
                 const DeepCollectionEquality()
                     .equals(other.targetDisease, targetDisease)) &&
-            (identical(other.doseNumberPositiveIntElement,
-                    doseNumberPositiveIntElement) ||
+            (identical(other.doseNumberPositiveInt, doseNumberPositiveInt) ||
+                const DeepCollectionEquality().equals(
+                    other.doseNumberPositiveInt, doseNumberPositiveInt)) &&
+            (identical(other.doseNumberPositiveIntElement, doseNumberPositiveIntElement) ||
                 const DeepCollectionEquality().equals(
                     other.doseNumberPositiveIntElement,
                     doseNumberPositiveIntElement)) &&
-            (identical(
-                    other.doseNumberStringElement, doseNumberStringElement) ||
+            (identical(other.doseNumberString, doseNumberString) ||
+                const DeepCollectionEquality()
+                    .equals(other.doseNumberString, doseNumberString)) &&
+            (identical(other.doseNumberStringElement, doseNumberStringElement) ||
                 const DeepCollectionEquality().equals(
                     other.doseNumberStringElement, doseNumberStringElement)) &&
+            (identical(other.seriesDosesPositiveInt, seriesDosesPositiveInt) ||
+                const DeepCollectionEquality().equals(
+                    other.seriesDosesPositiveInt, seriesDosesPositiveInt)) &&
             (identical(other.seriesDosesPositiveIntElement,
                     seriesDosesPositiveIntElement) ||
                 const DeepCollectionEquality().equals(
                     other.seriesDosesPositiveIntElement,
                     seriesDosesPositiveIntElement)) &&
-            (identical(
-                    other.seriesDosesStringElement, seriesDosesStringElement) ||
+            (identical(other.seriesDosesString, seriesDosesString) ||
+                const DeepCollectionEquality()
+                    .equals(other.seriesDosesString, seriesDosesString)) &&
+            (identical(other.seriesDosesStringElement, seriesDosesStringElement) ||
                 const DeepCollectionEquality().equals(
                     other.seriesDosesStringElement, seriesDosesStringElement)));
   }
@@ -2884,9 +3000,13 @@ class _$_ImmunizationProtocolApplied extends _ImmunizationProtocolApplied {
       const DeepCollectionEquality().hash(seriesElement) ^
       const DeepCollectionEquality().hash(authority) ^
       const DeepCollectionEquality().hash(targetDisease) ^
+      const DeepCollectionEquality().hash(doseNumberPositiveInt) ^
       const DeepCollectionEquality().hash(doseNumberPositiveIntElement) ^
+      const DeepCollectionEquality().hash(doseNumberString) ^
       const DeepCollectionEquality().hash(doseNumberStringElement) ^
+      const DeepCollectionEquality().hash(seriesDosesPositiveInt) ^
       const DeepCollectionEquality().hash(seriesDosesPositiveIntElement) ^
+      const DeepCollectionEquality().hash(seriesDosesString) ^
       const DeepCollectionEquality().hash(seriesDosesStringElement);
 
   @override
@@ -2913,12 +3033,16 @@ abstract class _ImmunizationProtocolApplied
           Element seriesElement,
       Reference authority,
       List<CodeableConcept> targetDisease,
+      PositiveInt doseNumberPositiveInt,
       @JsonKey(name: '_doseNumberPositiveInt')
           Element doseNumberPositiveIntElement,
+      String doseNumberString,
       @JsonKey(name: '_doseNumberString')
           Element doseNumberStringElement,
+      PositiveInt seriesDosesPositiveInt,
       @JsonKey(name: '_seriesDosesPositiveInt')
           Element seriesDosesPositiveIntElement,
+      String seriesDosesString,
       @JsonKey(name: '_seriesDosesString')
           Element seriesDosesStringElement}) = _$_ImmunizationProtocolApplied;
 
@@ -2942,14 +3066,22 @@ abstract class _ImmunizationProtocolApplied
   @override
   List<CodeableConcept> get targetDisease;
   @override
+  PositiveInt get doseNumberPositiveInt;
+  @override
   @JsonKey(name: '_doseNumberPositiveInt')
   Element get doseNumberPositiveIntElement;
+  @override
+  String get doseNumberString;
   @override
   @JsonKey(name: '_doseNumberString')
   Element get doseNumberStringElement;
   @override
+  PositiveInt get seriesDosesPositiveInt;
+  @override
   @JsonKey(name: '_seriesDosesPositiveInt')
   Element get seriesDosesPositiveIntElement;
+  @override
+  String get seriesDosesString;
   @override
   @JsonKey(name: '_seriesDosesString')
   Element get seriesDosesStringElement;
@@ -3006,12 +3138,16 @@ class _$ImmunizationEvaluationTearOff {
       String series,
       @JsonKey(name: '_series')
           Element seriesElement,
+      PositiveInt doseNumberPositiveInt,
       @JsonKey(name: '_doseNumberPositiveInt')
           Element doseNumberPositiveIntElement,
+      String doseNumberString,
       @JsonKey(name: '_doseNumberString')
           Element doseNumberStringElement,
+      PositiveInt seriesDosesPositiveInt,
       @JsonKey(name: '_seriesDosesPositiveInt')
           Element seriesDosesPositiveIntElement,
+      String seriesDosesString,
       @JsonKey(name: '_seriesDosesString')
           Element seriesDosesStringElement}) {
     return _ImmunizationEvaluation(
@@ -3041,9 +3177,13 @@ class _$ImmunizationEvaluationTearOff {
       descriptionElement: descriptionElement,
       series: series,
       seriesElement: seriesElement,
+      doseNumberPositiveInt: doseNumberPositiveInt,
       doseNumberPositiveIntElement: doseNumberPositiveIntElement,
+      doseNumberString: doseNumberString,
       doseNumberStringElement: doseNumberStringElement,
+      seriesDosesPositiveInt: seriesDosesPositiveInt,
       seriesDosesPositiveIntElement: seriesDosesPositiveIntElement,
+      seriesDosesString: seriesDosesString,
       seriesDosesStringElement: seriesDosesStringElement,
     );
   }
@@ -3087,12 +3227,16 @@ mixin _$ImmunizationEvaluation {
   String get series;
   @JsonKey(name: '_series')
   Element get seriesElement;
+  PositiveInt get doseNumberPositiveInt;
   @JsonKey(name: '_doseNumberPositiveInt')
   Element get doseNumberPositiveIntElement;
+  String get doseNumberString;
   @JsonKey(name: '_doseNumberString')
   Element get doseNumberStringElement;
+  PositiveInt get seriesDosesPositiveInt;
   @JsonKey(name: '_seriesDosesPositiveInt')
   Element get seriesDosesPositiveIntElement;
+  String get seriesDosesString;
   @JsonKey(name: '_seriesDosesString')
   Element get seriesDosesStringElement;
 
@@ -3139,12 +3283,16 @@ abstract class $ImmunizationEvaluationCopyWith<$Res> {
       String series,
       @JsonKey(name: '_series')
           Element seriesElement,
+      PositiveInt doseNumberPositiveInt,
       @JsonKey(name: '_doseNumberPositiveInt')
           Element doseNumberPositiveIntElement,
+      String doseNumberString,
       @JsonKey(name: '_doseNumberString')
           Element doseNumberStringElement,
+      PositiveInt seriesDosesPositiveInt,
       @JsonKey(name: '_seriesDosesPositiveInt')
           Element seriesDosesPositiveIntElement,
+      String seriesDosesString,
       @JsonKey(name: '_seriesDosesString')
           Element seriesDosesStringElement});
 
@@ -3203,9 +3351,13 @@ class _$ImmunizationEvaluationCopyWithImpl<$Res>
     Object descriptionElement = freezed,
     Object series = freezed,
     Object seriesElement = freezed,
+    Object doseNumberPositiveInt = freezed,
     Object doseNumberPositiveIntElement = freezed,
+    Object doseNumberString = freezed,
     Object doseNumberStringElement = freezed,
+    Object seriesDosesPositiveInt = freezed,
     Object seriesDosesPositiveIntElement = freezed,
+    Object seriesDosesString = freezed,
     Object seriesDosesStringElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -3267,15 +3419,27 @@ class _$ImmunizationEvaluationCopyWithImpl<$Res>
       seriesElement: seriesElement == freezed
           ? _value.seriesElement
           : seriesElement as Element,
+      doseNumberPositiveInt: doseNumberPositiveInt == freezed
+          ? _value.doseNumberPositiveInt
+          : doseNumberPositiveInt as PositiveInt,
       doseNumberPositiveIntElement: doseNumberPositiveIntElement == freezed
           ? _value.doseNumberPositiveIntElement
           : doseNumberPositiveIntElement as Element,
+      doseNumberString: doseNumberString == freezed
+          ? _value.doseNumberString
+          : doseNumberString as String,
       doseNumberStringElement: doseNumberStringElement == freezed
           ? _value.doseNumberStringElement
           : doseNumberStringElement as Element,
+      seriesDosesPositiveInt: seriesDosesPositiveInt == freezed
+          ? _value.seriesDosesPositiveInt
+          : seriesDosesPositiveInt as PositiveInt,
       seriesDosesPositiveIntElement: seriesDosesPositiveIntElement == freezed
           ? _value.seriesDosesPositiveIntElement
           : seriesDosesPositiveIntElement as Element,
+      seriesDosesString: seriesDosesString == freezed
+          ? _value.seriesDosesString
+          : seriesDosesString as String,
       seriesDosesStringElement: seriesDosesStringElement == freezed
           ? _value.seriesDosesStringElement
           : seriesDosesStringElement as Element,
@@ -3495,12 +3659,16 @@ abstract class _$ImmunizationEvaluationCopyWith<$Res>
       String series,
       @JsonKey(name: '_series')
           Element seriesElement,
+      PositiveInt doseNumberPositiveInt,
       @JsonKey(name: '_doseNumberPositiveInt')
           Element doseNumberPositiveIntElement,
+      String doseNumberString,
       @JsonKey(name: '_doseNumberString')
           Element doseNumberStringElement,
+      PositiveInt seriesDosesPositiveInt,
       @JsonKey(name: '_seriesDosesPositiveInt')
           Element seriesDosesPositiveIntElement,
+      String seriesDosesString,
       @JsonKey(name: '_seriesDosesString')
           Element seriesDosesStringElement});
 
@@ -3578,9 +3746,13 @@ class __$ImmunizationEvaluationCopyWithImpl<$Res>
     Object descriptionElement = freezed,
     Object series = freezed,
     Object seriesElement = freezed,
+    Object doseNumberPositiveInt = freezed,
     Object doseNumberPositiveIntElement = freezed,
+    Object doseNumberString = freezed,
     Object doseNumberStringElement = freezed,
+    Object seriesDosesPositiveInt = freezed,
     Object seriesDosesPositiveIntElement = freezed,
+    Object seriesDosesString = freezed,
     Object seriesDosesStringElement = freezed,
   }) {
     return _then(_ImmunizationEvaluation(
@@ -3642,15 +3814,27 @@ class __$ImmunizationEvaluationCopyWithImpl<$Res>
       seriesElement: seriesElement == freezed
           ? _value.seriesElement
           : seriesElement as Element,
+      doseNumberPositiveInt: doseNumberPositiveInt == freezed
+          ? _value.doseNumberPositiveInt
+          : doseNumberPositiveInt as PositiveInt,
       doseNumberPositiveIntElement: doseNumberPositiveIntElement == freezed
           ? _value.doseNumberPositiveIntElement
           : doseNumberPositiveIntElement as Element,
+      doseNumberString: doseNumberString == freezed
+          ? _value.doseNumberString
+          : doseNumberString as String,
       doseNumberStringElement: doseNumberStringElement == freezed
           ? _value.doseNumberStringElement
           : doseNumberStringElement as Element,
+      seriesDosesPositiveInt: seriesDosesPositiveInt == freezed
+          ? _value.seriesDosesPositiveInt
+          : seriesDosesPositiveInt as PositiveInt,
       seriesDosesPositiveIntElement: seriesDosesPositiveIntElement == freezed
           ? _value.seriesDosesPositiveIntElement
           : seriesDosesPositiveIntElement as Element,
+      seriesDosesString: seriesDosesString == freezed
+          ? _value.seriesDosesString
+          : seriesDosesString as String,
       seriesDosesStringElement: seriesDosesStringElement == freezed
           ? _value.seriesDosesStringElement
           : seriesDosesStringElement as Element,
@@ -3700,12 +3884,16 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
       this.series,
       @JsonKey(name: '_series')
           this.seriesElement,
+      this.doseNumberPositiveInt,
       @JsonKey(name: '_doseNumberPositiveInt')
           this.doseNumberPositiveIntElement,
+      this.doseNumberString,
       @JsonKey(name: '_doseNumberString')
           this.doseNumberStringElement,
+      this.seriesDosesPositiveInt,
       @JsonKey(name: '_seriesDosesPositiveInt')
           this.seriesDosesPositiveIntElement,
+      this.seriesDosesString,
       @JsonKey(name: '_seriesDosesString')
           this.seriesDosesStringElement})
       : assert(resourceType != null),
@@ -3779,21 +3967,29 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
   @JsonKey(name: '_series')
   final Element seriesElement;
   @override
+  final PositiveInt doseNumberPositiveInt;
+  @override
   @JsonKey(name: '_doseNumberPositiveInt')
   final Element doseNumberPositiveIntElement;
+  @override
+  final String doseNumberString;
   @override
   @JsonKey(name: '_doseNumberString')
   final Element doseNumberStringElement;
   @override
+  final PositiveInt seriesDosesPositiveInt;
+  @override
   @JsonKey(name: '_seriesDosesPositiveInt')
   final Element seriesDosesPositiveIntElement;
+  @override
+  final String seriesDosesString;
   @override
   @JsonKey(name: '_seriesDosesString')
   final Element seriesDosesStringElement;
 
   @override
   String toString() {
-    return 'ImmunizationEvaluation(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, patient: $patient, date: $date, dateElement: $dateElement, authority: $authority, targetDisease: $targetDisease, immunizationEvent: $immunizationEvent, doseStatus: $doseStatus, doseStatusReason: $doseStatusReason, description: $description, descriptionElement: $descriptionElement, series: $series, seriesElement: $seriesElement, doseNumberPositiveIntElement: $doseNumberPositiveIntElement, doseNumberStringElement: $doseNumberStringElement, seriesDosesPositiveIntElement: $seriesDosesPositiveIntElement, seriesDosesStringElement: $seriesDosesStringElement)';
+    return 'ImmunizationEvaluation(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, patient: $patient, date: $date, dateElement: $dateElement, authority: $authority, targetDisease: $targetDisease, immunizationEvent: $immunizationEvent, doseStatus: $doseStatus, doseStatusReason: $doseStatusReason, description: $description, descriptionElement: $descriptionElement, series: $series, seriesElement: $seriesElement, doseNumberPositiveInt: $doseNumberPositiveInt, doseNumberPositiveIntElement: $doseNumberPositiveIntElement, doseNumberString: $doseNumberString, doseNumberStringElement: $doseNumberStringElement, seriesDosesPositiveInt: $seriesDosesPositiveInt, seriesDosesPositiveIntElement: $seriesDosesPositiveIntElement, seriesDosesString: $seriesDosesString, seriesDosesStringElement: $seriesDosesStringElement)';
   }
 
   @override
@@ -3869,9 +4065,13 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
                     .equals(other.descriptionElement, descriptionElement)) &&
             (identical(other.series, series) || const DeepCollectionEquality().equals(other.series, series)) &&
             (identical(other.seriesElement, seriesElement) || const DeepCollectionEquality().equals(other.seriesElement, seriesElement)) &&
+            (identical(other.doseNumberPositiveInt, doseNumberPositiveInt) || const DeepCollectionEquality().equals(other.doseNumberPositiveInt, doseNumberPositiveInt)) &&
             (identical(other.doseNumberPositiveIntElement, doseNumberPositiveIntElement) || const DeepCollectionEquality().equals(other.doseNumberPositiveIntElement, doseNumberPositiveIntElement)) &&
+            (identical(other.doseNumberString, doseNumberString) || const DeepCollectionEquality().equals(other.doseNumberString, doseNumberString)) &&
             (identical(other.doseNumberStringElement, doseNumberStringElement) || const DeepCollectionEquality().equals(other.doseNumberStringElement, doseNumberStringElement)) &&
+            (identical(other.seriesDosesPositiveInt, seriesDosesPositiveInt) || const DeepCollectionEquality().equals(other.seriesDosesPositiveInt, seriesDosesPositiveInt)) &&
             (identical(other.seriesDosesPositiveIntElement, seriesDosesPositiveIntElement) || const DeepCollectionEquality().equals(other.seriesDosesPositiveIntElement, seriesDosesPositiveIntElement)) &&
+            (identical(other.seriesDosesString, seriesDosesString) || const DeepCollectionEquality().equals(other.seriesDosesString, seriesDosesString)) &&
             (identical(other.seriesDosesStringElement, seriesDosesStringElement) || const DeepCollectionEquality().equals(other.seriesDosesStringElement, seriesDosesStringElement)));
   }
 
@@ -3904,9 +4104,13 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
       const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(series) ^
       const DeepCollectionEquality().hash(seriesElement) ^
+      const DeepCollectionEquality().hash(doseNumberPositiveInt) ^
       const DeepCollectionEquality().hash(doseNumberPositiveIntElement) ^
+      const DeepCollectionEquality().hash(doseNumberString) ^
       const DeepCollectionEquality().hash(doseNumberStringElement) ^
+      const DeepCollectionEquality().hash(seriesDosesPositiveInt) ^
       const DeepCollectionEquality().hash(seriesDosesPositiveIntElement) ^
+      const DeepCollectionEquality().hash(seriesDosesString) ^
       const DeepCollectionEquality().hash(seriesDosesStringElement);
 
   @override
@@ -3962,12 +4166,16 @@ abstract class _ImmunizationEvaluation extends ImmunizationEvaluation {
       String series,
       @JsonKey(name: '_series')
           Element seriesElement,
+      PositiveInt doseNumberPositiveInt,
       @JsonKey(name: '_doseNumberPositiveInt')
           Element doseNumberPositiveIntElement,
+      String doseNumberString,
       @JsonKey(name: '_doseNumberString')
           Element doseNumberStringElement,
+      PositiveInt seriesDosesPositiveInt,
       @JsonKey(name: '_seriesDosesPositiveInt')
           Element seriesDosesPositiveIntElement,
+      String seriesDosesString,
       @JsonKey(name: '_seriesDosesString')
           Element seriesDosesStringElement}) = _$_ImmunizationEvaluation;
 
@@ -4035,14 +4243,22 @@ abstract class _ImmunizationEvaluation extends ImmunizationEvaluation {
   @JsonKey(name: '_series')
   Element get seriesElement;
   @override
+  PositiveInt get doseNumberPositiveInt;
+  @override
   @JsonKey(name: '_doseNumberPositiveInt')
   Element get doseNumberPositiveIntElement;
+  @override
+  String get doseNumberString;
   @override
   @JsonKey(name: '_doseNumberString')
   Element get doseNumberStringElement;
   @override
+  PositiveInt get seriesDosesPositiveInt;
+  @override
   @JsonKey(name: '_seriesDosesPositiveInt')
   Element get seriesDosesPositiveIntElement;
+  @override
+  String get seriesDosesString;
   @override
   @JsonKey(name: '_seriesDosesString')
   Element get seriesDosesStringElement;
@@ -4684,12 +4900,16 @@ class _$ImmunizationRecommendationRecommendationTearOff {
       String series,
       @JsonKey(name: '_series')
           Element seriesElement,
+      PositiveInt doseNumberPositiveInt,
       @JsonKey(name: '_doseNumberPositiveInt')
           Element doseNumberPositiveIntElement,
+      String doseNumberString,
       @JsonKey(name: '_doseNumberString')
           Element doseNumberStringElement,
+      PositiveInt seriesDosesPositiveInt,
       @JsonKey(name: '_seriesDosesPositiveInt')
           Element seriesDosesPositiveIntElement,
+      String seriesDosesString,
       @JsonKey(name: '_seriesDosesString')
           Element seriesDosesStringElement,
       List<Reference> supportingImmunization,
@@ -4708,9 +4928,13 @@ class _$ImmunizationRecommendationRecommendationTearOff {
       descriptionElement: descriptionElement,
       series: series,
       seriesElement: seriesElement,
+      doseNumberPositiveInt: doseNumberPositiveInt,
       doseNumberPositiveIntElement: doseNumberPositiveIntElement,
+      doseNumberString: doseNumberString,
       doseNumberStringElement: doseNumberStringElement,
+      seriesDosesPositiveInt: seriesDosesPositiveInt,
       seriesDosesPositiveIntElement: seriesDosesPositiveIntElement,
+      seriesDosesString: seriesDosesString,
       seriesDosesStringElement: seriesDosesStringElement,
       supportingImmunization: supportingImmunization,
       supportingPatientInformation: supportingPatientInformation,
@@ -4739,12 +4963,16 @@ mixin _$ImmunizationRecommendationRecommendation {
   String get series;
   @JsonKey(name: '_series')
   Element get seriesElement;
+  PositiveInt get doseNumberPositiveInt;
   @JsonKey(name: '_doseNumberPositiveInt')
   Element get doseNumberPositiveIntElement;
+  String get doseNumberString;
   @JsonKey(name: '_doseNumberString')
   Element get doseNumberStringElement;
+  PositiveInt get seriesDosesPositiveInt;
   @JsonKey(name: '_seriesDosesPositiveInt')
   Element get seriesDosesPositiveIntElement;
+  String get seriesDosesString;
   @JsonKey(name: '_seriesDosesString')
   Element get seriesDosesStringElement;
   List<Reference> get supportingImmunization;
@@ -4777,12 +5005,16 @@ abstract class $ImmunizationRecommendationRecommendationCopyWith<$Res> {
       String series,
       @JsonKey(name: '_series')
           Element seriesElement,
+      PositiveInt doseNumberPositiveInt,
       @JsonKey(name: '_doseNumberPositiveInt')
           Element doseNumberPositiveIntElement,
+      String doseNumberString,
       @JsonKey(name: '_doseNumberString')
           Element doseNumberStringElement,
+      PositiveInt seriesDosesPositiveInt,
       @JsonKey(name: '_seriesDosesPositiveInt')
           Element seriesDosesPositiveIntElement,
+      String seriesDosesString,
       @JsonKey(name: '_seriesDosesString')
           Element seriesDosesStringElement,
       List<Reference> supportingImmunization,
@@ -4821,9 +5053,13 @@ class _$ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
     Object descriptionElement = freezed,
     Object series = freezed,
     Object seriesElement = freezed,
+    Object doseNumberPositiveInt = freezed,
     Object doseNumberPositiveIntElement = freezed,
+    Object doseNumberString = freezed,
     Object doseNumberStringElement = freezed,
+    Object seriesDosesPositiveInt = freezed,
     Object seriesDosesPositiveIntElement = freezed,
+    Object seriesDosesString = freezed,
     Object seriesDosesStringElement = freezed,
     Object supportingImmunization = freezed,
     Object supportingPatientInformation = freezed,
@@ -4863,15 +5099,27 @@ class _$ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
       seriesElement: seriesElement == freezed
           ? _value.seriesElement
           : seriesElement as Element,
+      doseNumberPositiveInt: doseNumberPositiveInt == freezed
+          ? _value.doseNumberPositiveInt
+          : doseNumberPositiveInt as PositiveInt,
       doseNumberPositiveIntElement: doseNumberPositiveIntElement == freezed
           ? _value.doseNumberPositiveIntElement
           : doseNumberPositiveIntElement as Element,
+      doseNumberString: doseNumberString == freezed
+          ? _value.doseNumberString
+          : doseNumberString as String,
       doseNumberStringElement: doseNumberStringElement == freezed
           ? _value.doseNumberStringElement
           : doseNumberStringElement as Element,
+      seriesDosesPositiveInt: seriesDosesPositiveInt == freezed
+          ? _value.seriesDosesPositiveInt
+          : seriesDosesPositiveInt as PositiveInt,
       seriesDosesPositiveIntElement: seriesDosesPositiveIntElement == freezed
           ? _value.seriesDosesPositiveIntElement
           : seriesDosesPositiveIntElement as Element,
+      seriesDosesString: seriesDosesString == freezed
+          ? _value.seriesDosesString
+          : seriesDosesString as String,
       seriesDosesStringElement: seriesDosesStringElement == freezed
           ? _value.seriesDosesStringElement
           : seriesDosesStringElement as Element,
@@ -4980,12 +5228,16 @@ abstract class _$ImmunizationRecommendationRecommendationCopyWith<$Res>
       String series,
       @JsonKey(name: '_series')
           Element seriesElement,
+      PositiveInt doseNumberPositiveInt,
       @JsonKey(name: '_doseNumberPositiveInt')
           Element doseNumberPositiveIntElement,
+      String doseNumberString,
       @JsonKey(name: '_doseNumberString')
           Element doseNumberStringElement,
+      PositiveInt seriesDosesPositiveInt,
       @JsonKey(name: '_seriesDosesPositiveInt')
           Element seriesDosesPositiveIntElement,
+      String seriesDosesString,
       @JsonKey(name: '_seriesDosesString')
           Element seriesDosesStringElement,
       List<Reference> supportingImmunization,
@@ -5035,9 +5287,13 @@ class __$ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
     Object descriptionElement = freezed,
     Object series = freezed,
     Object seriesElement = freezed,
+    Object doseNumberPositiveInt = freezed,
     Object doseNumberPositiveIntElement = freezed,
+    Object doseNumberString = freezed,
     Object doseNumberStringElement = freezed,
+    Object seriesDosesPositiveInt = freezed,
     Object seriesDosesPositiveIntElement = freezed,
+    Object seriesDosesString = freezed,
     Object seriesDosesStringElement = freezed,
     Object supportingImmunization = freezed,
     Object supportingPatientInformation = freezed,
@@ -5077,15 +5333,27 @@ class __$ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
       seriesElement: seriesElement == freezed
           ? _value.seriesElement
           : seriesElement as Element,
+      doseNumberPositiveInt: doseNumberPositiveInt == freezed
+          ? _value.doseNumberPositiveInt
+          : doseNumberPositiveInt as PositiveInt,
       doseNumberPositiveIntElement: doseNumberPositiveIntElement == freezed
           ? _value.doseNumberPositiveIntElement
           : doseNumberPositiveIntElement as Element,
+      doseNumberString: doseNumberString == freezed
+          ? _value.doseNumberString
+          : doseNumberString as String,
       doseNumberStringElement: doseNumberStringElement == freezed
           ? _value.doseNumberStringElement
           : doseNumberStringElement as Element,
+      seriesDosesPositiveInt: seriesDosesPositiveInt == freezed
+          ? _value.seriesDosesPositiveInt
+          : seriesDosesPositiveInt as PositiveInt,
       seriesDosesPositiveIntElement: seriesDosesPositiveIntElement == freezed
           ? _value.seriesDosesPositiveIntElement
           : seriesDosesPositiveIntElement as Element,
+      seriesDosesString: seriesDosesString == freezed
+          ? _value.seriesDosesString
+          : seriesDosesString as String,
       seriesDosesStringElement: seriesDosesStringElement == freezed
           ? _value.seriesDosesStringElement
           : seriesDosesStringElement as Element,
@@ -5120,12 +5388,16 @@ class _$_ImmunizationRecommendationRecommendation
       this.series,
       @JsonKey(name: '_series')
           this.seriesElement,
+      this.doseNumberPositiveInt,
       @JsonKey(name: '_doseNumberPositiveInt')
           this.doseNumberPositiveIntElement,
+      this.doseNumberString,
       @JsonKey(name: '_doseNumberString')
           this.doseNumberStringElement,
+      this.seriesDosesPositiveInt,
       @JsonKey(name: '_seriesDosesPositiveInt')
           this.seriesDosesPositiveIntElement,
+      this.seriesDosesString,
       @JsonKey(name: '_seriesDosesString')
           this.seriesDosesStringElement,
       this.supportingImmunization,
@@ -5167,14 +5439,22 @@ class _$_ImmunizationRecommendationRecommendation
   @JsonKey(name: '_series')
   final Element seriesElement;
   @override
+  final PositiveInt doseNumberPositiveInt;
+  @override
   @JsonKey(name: '_doseNumberPositiveInt')
   final Element doseNumberPositiveIntElement;
+  @override
+  final String doseNumberString;
   @override
   @JsonKey(name: '_doseNumberString')
   final Element doseNumberStringElement;
   @override
+  final PositiveInt seriesDosesPositiveInt;
+  @override
   @JsonKey(name: '_seriesDosesPositiveInt')
   final Element seriesDosesPositiveIntElement;
+  @override
+  final String seriesDosesString;
   @override
   @JsonKey(name: '_seriesDosesString')
   final Element seriesDosesStringElement;
@@ -5185,7 +5465,7 @@ class _$_ImmunizationRecommendationRecommendation
 
   @override
   String toString() {
-    return 'ImmunizationRecommendationRecommendation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, vaccineCode: $vaccineCode, targetDisease: $targetDisease, contraindicatedVaccineCode: $contraindicatedVaccineCode, forecastStatus: $forecastStatus, forecastReason: $forecastReason, dateCriterion: $dateCriterion, description: $description, descriptionElement: $descriptionElement, series: $series, seriesElement: $seriesElement, doseNumberPositiveIntElement: $doseNumberPositiveIntElement, doseNumberStringElement: $doseNumberStringElement, seriesDosesPositiveIntElement: $seriesDosesPositiveIntElement, seriesDosesStringElement: $seriesDosesStringElement, supportingImmunization: $supportingImmunization, supportingPatientInformation: $supportingPatientInformation)';
+    return 'ImmunizationRecommendationRecommendation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, vaccineCode: $vaccineCode, targetDisease: $targetDisease, contraindicatedVaccineCode: $contraindicatedVaccineCode, forecastStatus: $forecastStatus, forecastReason: $forecastReason, dateCriterion: $dateCriterion, description: $description, descriptionElement: $descriptionElement, series: $series, seriesElement: $seriesElement, doseNumberPositiveInt: $doseNumberPositiveInt, doseNumberPositiveIntElement: $doseNumberPositiveIntElement, doseNumberString: $doseNumberString, doseNumberStringElement: $doseNumberStringElement, seriesDosesPositiveInt: $seriesDosesPositiveInt, seriesDosesPositiveIntElement: $seriesDosesPositiveIntElement, seriesDosesString: $seriesDosesString, seriesDosesStringElement: $seriesDosesStringElement, supportingImmunization: $supportingImmunization, supportingPatientInformation: $supportingPatientInformation)';
   }
 
   @override
@@ -5230,17 +5510,22 @@ class _$_ImmunizationRecommendationRecommendation
             (identical(other.seriesElement, seriesElement) ||
                 const DeepCollectionEquality()
                     .equals(other.seriesElement, seriesElement)) &&
+            (identical(other.doseNumberPositiveInt, doseNumberPositiveInt) ||
+                const DeepCollectionEquality().equals(
+                    other.doseNumberPositiveInt, doseNumberPositiveInt)) &&
             (identical(other.doseNumberPositiveIntElement, doseNumberPositiveIntElement) ||
                 const DeepCollectionEquality().equals(
                     other.doseNumberPositiveIntElement,
                     doseNumberPositiveIntElement)) &&
+            (identical(other.doseNumberString, doseNumberString) ||
+                const DeepCollectionEquality()
+                    .equals(other.doseNumberString, doseNumberString)) &&
             (identical(other.doseNumberStringElement, doseNumberStringElement) ||
                 const DeepCollectionEquality().equals(
                     other.doseNumberStringElement, doseNumberStringElement)) &&
-            (identical(other.seriesDosesPositiveIntElement, seriesDosesPositiveIntElement) ||
-                const DeepCollectionEquality().equals(
-                    other.seriesDosesPositiveIntElement,
-                    seriesDosesPositiveIntElement)) &&
+            (identical(other.seriesDosesPositiveInt, seriesDosesPositiveInt) || const DeepCollectionEquality().equals(other.seriesDosesPositiveInt, seriesDosesPositiveInt)) &&
+            (identical(other.seriesDosesPositiveIntElement, seriesDosesPositiveIntElement) || const DeepCollectionEquality().equals(other.seriesDosesPositiveIntElement, seriesDosesPositiveIntElement)) &&
+            (identical(other.seriesDosesString, seriesDosesString) || const DeepCollectionEquality().equals(other.seriesDosesString, seriesDosesString)) &&
             (identical(other.seriesDosesStringElement, seriesDosesStringElement) || const DeepCollectionEquality().equals(other.seriesDosesStringElement, seriesDosesStringElement)) &&
             (identical(other.supportingImmunization, supportingImmunization) || const DeepCollectionEquality().equals(other.supportingImmunization, supportingImmunization)) &&
             (identical(other.supportingPatientInformation, supportingPatientInformation) || const DeepCollectionEquality().equals(other.supportingPatientInformation, supportingPatientInformation)));
@@ -5262,9 +5547,13 @@ class _$_ImmunizationRecommendationRecommendation
       const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(series) ^
       const DeepCollectionEquality().hash(seriesElement) ^
+      const DeepCollectionEquality().hash(doseNumberPositiveInt) ^
       const DeepCollectionEquality().hash(doseNumberPositiveIntElement) ^
+      const DeepCollectionEquality().hash(doseNumberString) ^
       const DeepCollectionEquality().hash(doseNumberStringElement) ^
+      const DeepCollectionEquality().hash(seriesDosesPositiveInt) ^
       const DeepCollectionEquality().hash(seriesDosesPositiveIntElement) ^
+      const DeepCollectionEquality().hash(seriesDosesString) ^
       const DeepCollectionEquality().hash(seriesDosesStringElement) ^
       const DeepCollectionEquality().hash(supportingImmunization) ^
       const DeepCollectionEquality().hash(supportingPatientInformation);
@@ -5302,12 +5591,16 @@ abstract class _ImmunizationRecommendationRecommendation
           String series,
           @JsonKey(name: '_series')
               Element seriesElement,
+          PositiveInt doseNumberPositiveInt,
           @JsonKey(name: '_doseNumberPositiveInt')
               Element doseNumberPositiveIntElement,
+          String doseNumberString,
           @JsonKey(name: '_doseNumberString')
               Element doseNumberStringElement,
+          PositiveInt seriesDosesPositiveInt,
           @JsonKey(name: '_seriesDosesPositiveInt')
               Element seriesDosesPositiveIntElement,
+          String seriesDosesString,
           @JsonKey(name: '_seriesDosesString')
               Element seriesDosesStringElement,
           List<Reference> supportingImmunization,
@@ -5348,14 +5641,22 @@ abstract class _ImmunizationRecommendationRecommendation
   @JsonKey(name: '_series')
   Element get seriesElement;
   @override
+  PositiveInt get doseNumberPositiveInt;
+  @override
   @JsonKey(name: '_doseNumberPositiveInt')
   Element get doseNumberPositiveIntElement;
+  @override
+  String get doseNumberString;
   @override
   @JsonKey(name: '_doseNumberString')
   Element get doseNumberStringElement;
   @override
+  PositiveInt get seriesDosesPositiveInt;
+  @override
   @JsonKey(name: '_seriesDosesPositiveInt')
   Element get seriesDosesPositiveIntElement;
+  @override
+  String get seriesDosesString;
   @override
   @JsonKey(name: '_seriesDosesString')
   Element get seriesDosesStringElement;
@@ -7109,6 +7410,7 @@ class _$MedicationAdministrationTearOff {
       @required Reference subject,
       Reference encounter,
       List<Reference> supportingInformation,
+      FhirDateTime occurenceDateTime,
       @JsonKey(name: '_occurenceDateTime') Element occurenceDateTimeElement,
       Period occurencePeriod,
       FhirDateTime recorded,
@@ -7147,6 +7449,7 @@ class _$MedicationAdministrationTearOff {
       subject: subject,
       encounter: encounter,
       supportingInformation: supportingInformation,
+      occurenceDateTime: occurenceDateTime,
       occurenceDateTimeElement: occurenceDateTimeElement,
       occurencePeriod: occurencePeriod,
       recorded: recorded,
@@ -7198,6 +7501,7 @@ mixin _$MedicationAdministration {
   Reference get subject;
   Reference get encounter;
   List<Reference> get supportingInformation;
+  FhirDateTime get occurenceDateTime;
   @JsonKey(name: '_occurenceDateTime')
   Element get occurenceDateTimeElement;
   Period get occurencePeriod;
@@ -7247,6 +7551,7 @@ abstract class $MedicationAdministrationCopyWith<$Res> {
       Reference subject,
       Reference encounter,
       List<Reference> supportingInformation,
+      FhirDateTime occurenceDateTime,
       @JsonKey(name: '_occurenceDateTime') Element occurenceDateTimeElement,
       Period occurencePeriod,
       FhirDateTime recorded,
@@ -7312,6 +7617,7 @@ class _$MedicationAdministrationCopyWithImpl<$Res>
     Object subject = freezed,
     Object encounter = freezed,
     Object supportingInformation = freezed,
+    Object occurenceDateTime = freezed,
     Object occurenceDateTimeElement = freezed,
     Object occurencePeriod = freezed,
     Object recorded = freezed,
@@ -7385,6 +7691,9 @@ class _$MedicationAdministrationCopyWithImpl<$Res>
       supportingInformation: supportingInformation == freezed
           ? _value.supportingInformation
           : supportingInformation as List<Reference>,
+      occurenceDateTime: occurenceDateTime == freezed
+          ? _value.occurenceDateTime
+          : occurenceDateTime as FhirDateTime,
       occurenceDateTimeElement: occurenceDateTimeElement == freezed
           ? _value.occurenceDateTimeElement
           : occurenceDateTimeElement as Element,
@@ -7599,6 +7908,7 @@ abstract class _$MedicationAdministrationCopyWith<$Res>
       Reference subject,
       Reference encounter,
       List<Reference> supportingInformation,
+      FhirDateTime occurenceDateTime,
       @JsonKey(name: '_occurenceDateTime') Element occurenceDateTimeElement,
       Period occurencePeriod,
       FhirDateTime recorded,
@@ -7682,6 +7992,7 @@ class __$MedicationAdministrationCopyWithImpl<$Res>
     Object subject = freezed,
     Object encounter = freezed,
     Object supportingInformation = freezed,
+    Object occurenceDateTime = freezed,
     Object occurenceDateTimeElement = freezed,
     Object occurencePeriod = freezed,
     Object recorded = freezed,
@@ -7755,6 +8066,9 @@ class __$MedicationAdministrationCopyWithImpl<$Res>
       supportingInformation: supportingInformation == freezed
           ? _value.supportingInformation
           : supportingInformation as List<Reference>,
+      occurenceDateTime: occurenceDateTime == freezed
+          ? _value.occurenceDateTime
+          : occurenceDateTime as FhirDateTime,
       occurenceDateTimeElement: occurenceDateTimeElement == freezed
           ? _value.occurenceDateTimeElement
           : occurenceDateTimeElement as Element,
@@ -7813,6 +8127,7 @@ class _$_MedicationAdministration extends _MedicationAdministration {
       @required this.subject,
       this.encounter,
       this.supportingInformation,
+      this.occurenceDateTime,
       @JsonKey(name: '_occurenceDateTime') this.occurenceDateTimeElement,
       this.occurencePeriod,
       this.recorded,
@@ -7890,6 +8205,8 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   @override
   final List<Reference> supportingInformation;
   @override
+  final FhirDateTime occurenceDateTime;
+  @override
   @JsonKey(name: '_occurenceDateTime')
   final Element occurenceDateTimeElement;
   @override
@@ -7916,7 +8233,7 @@ class _$_MedicationAdministration extends _MedicationAdministration {
 
   @override
   String toString() {
-    return 'MedicationAdministration(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, instantiatesUriElement: $instantiatesUriElement, basedOn: $basedOn, partOf: $partOf, status: $status, statusElement: $statusElement, statusReason: $statusReason, category: $category, medicationCodeableConcept: $medicationCodeableConcept, medicationReference: $medicationReference, subject: $subject, encounter: $encounter, supportingInformation: $supportingInformation, occurenceDateTimeElement: $occurenceDateTimeElement, occurencePeriod: $occurencePeriod, recorded: $recorded, recordedElement: $recordedElement, performer: $performer, reason: $reason, request: $request, device: $device, note: $note, dosage: $dosage, eventHistory: $eventHistory)';
+    return 'MedicationAdministration(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, instantiatesUriElement: $instantiatesUriElement, basedOn: $basedOn, partOf: $partOf, status: $status, statusElement: $statusElement, statusReason: $statusReason, category: $category, medicationCodeableConcept: $medicationCodeableConcept, medicationReference: $medicationReference, subject: $subject, encounter: $encounter, supportingInformation: $supportingInformation, occurenceDateTime: $occurenceDateTime, occurenceDateTimeElement: $occurenceDateTimeElement, occurencePeriod: $occurencePeriod, recorded: $recorded, recordedElement: $recordedElement, performer: $performer, reason: $reason, request: $request, device: $device, note: $note, dosage: $dosage, eventHistory: $eventHistory)';
   }
 
   @override
@@ -7990,6 +8307,7 @@ class _$_MedicationAdministration extends _MedicationAdministration {
             (identical(other.subject, subject) || const DeepCollectionEquality().equals(other.subject, subject)) &&
             (identical(other.encounter, encounter) || const DeepCollectionEquality().equals(other.encounter, encounter)) &&
             (identical(other.supportingInformation, supportingInformation) || const DeepCollectionEquality().equals(other.supportingInformation, supportingInformation)) &&
+            (identical(other.occurenceDateTime, occurenceDateTime) || const DeepCollectionEquality().equals(other.occurenceDateTime, occurenceDateTime)) &&
             (identical(other.occurenceDateTimeElement, occurenceDateTimeElement) || const DeepCollectionEquality().equals(other.occurenceDateTimeElement, occurenceDateTimeElement)) &&
             (identical(other.occurencePeriod, occurencePeriod) || const DeepCollectionEquality().equals(other.occurencePeriod, occurencePeriod)) &&
             (identical(other.recorded, recorded) || const DeepCollectionEquality().equals(other.recorded, recorded)) &&
@@ -8032,6 +8350,7 @@ class _$_MedicationAdministration extends _MedicationAdministration {
       const DeepCollectionEquality().hash(subject) ^
       const DeepCollectionEquality().hash(encounter) ^
       const DeepCollectionEquality().hash(supportingInformation) ^
+      const DeepCollectionEquality().hash(occurenceDateTime) ^
       const DeepCollectionEquality().hash(occurenceDateTimeElement) ^
       const DeepCollectionEquality().hash(occurencePeriod) ^
       const DeepCollectionEquality().hash(recorded) ^
@@ -8084,6 +8403,7 @@ abstract class _MedicationAdministration extends MedicationAdministration {
       @required Reference subject,
       Reference encounter,
       List<Reference> supportingInformation,
+      FhirDateTime occurenceDateTime,
       @JsonKey(name: '_occurenceDateTime') Element occurenceDateTimeElement,
       Period occurencePeriod,
       FhirDateTime recorded,
@@ -8157,6 +8477,8 @@ abstract class _MedicationAdministration extends MedicationAdministration {
   Reference get encounter;
   @override
   List<Reference> get supportingInformation;
+  @override
+  FhirDateTime get occurenceDateTime;
   @override
   @JsonKey(name: '_occurenceDateTime')
   Element get occurenceDateTimeElement;
@@ -15041,8 +15363,10 @@ class _$MedicationKnowledgeDrugCharacteristicTearOff {
       List<FhirExtension> modifierExtension,
       CodeableConcept type,
       CodeableConcept valueCodeableConcept,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
       Quantity valueQuantity,
+      Base64Binary valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
       Attachment valueAttachment}) {
     return _MedicationKnowledgeDrugCharacteristic(
@@ -15051,8 +15375,10 @@ class _$MedicationKnowledgeDrugCharacteristicTearOff {
       modifierExtension: modifierExtension,
       type: type,
       valueCodeableConcept: valueCodeableConcept,
+      valueString: valueString,
       valueStringElement: valueStringElement,
       valueQuantity: valueQuantity,
+      valueBase64Binary: valueBase64Binary,
       valueBase64BinaryElement: valueBase64BinaryElement,
       valueAttachment: valueAttachment,
     );
@@ -15070,9 +15396,11 @@ mixin _$MedicationKnowledgeDrugCharacteristic {
   List<FhirExtension> get modifierExtension;
   CodeableConcept get type;
   CodeableConcept get valueCodeableConcept;
+  String get valueString;
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
   Quantity get valueQuantity;
+  Base64Binary get valueBase64Binary;
   @JsonKey(name: '_valueBase64Binary')
   Element get valueBase64BinaryElement;
   Attachment get valueAttachment;
@@ -15093,8 +15421,10 @@ abstract class $MedicationKnowledgeDrugCharacteristicCopyWith<$Res> {
       List<FhirExtension> modifierExtension,
       CodeableConcept type,
       CodeableConcept valueCodeableConcept,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
       Quantity valueQuantity,
+      Base64Binary valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
       Attachment valueAttachment});
 
@@ -15121,8 +15451,10 @@ class _$MedicationKnowledgeDrugCharacteristicCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object type = freezed,
     Object valueCodeableConcept = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
     Object valueQuantity = freezed,
+    Object valueBase64Binary = freezed,
     Object valueBase64BinaryElement = freezed,
     Object valueAttachment = freezed,
   }) {
@@ -15138,12 +15470,17 @@ class _$MedicationKnowledgeDrugCharacteristicCopyWithImpl<$Res>
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
           : valueCodeableConcept as CodeableConcept,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
           : valueQuantity as Quantity,
+      valueBase64Binary: valueBase64Binary == freezed
+          ? _value.valueBase64Binary
+          : valueBase64Binary as Base64Binary,
       valueBase64BinaryElement: valueBase64BinaryElement == freezed
           ? _value.valueBase64BinaryElement
           : valueBase64BinaryElement as Element,
@@ -15227,8 +15564,10 @@ abstract class _$MedicationKnowledgeDrugCharacteristicCopyWith<$Res>
       List<FhirExtension> modifierExtension,
       CodeableConcept type,
       CodeableConcept valueCodeableConcept,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
       Quantity valueQuantity,
+      Base64Binary valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
       Attachment valueAttachment});
 
@@ -15266,8 +15605,10 @@ class __$MedicationKnowledgeDrugCharacteristicCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object type = freezed,
     Object valueCodeableConcept = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
     Object valueQuantity = freezed,
+    Object valueBase64Binary = freezed,
     Object valueBase64BinaryElement = freezed,
     Object valueAttachment = freezed,
   }) {
@@ -15283,12 +15624,17 @@ class __$MedicationKnowledgeDrugCharacteristicCopyWithImpl<$Res>
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
           : valueCodeableConcept as CodeableConcept,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
           : valueQuantity as Quantity,
+      valueBase64Binary: valueBase64Binary == freezed
+          ? _value.valueBase64Binary
+          : valueBase64Binary as Base64Binary,
       valueBase64BinaryElement: valueBase64BinaryElement == freezed
           ? _value.valueBase64BinaryElement
           : valueBase64BinaryElement as Element,
@@ -15308,8 +15654,10 @@ class _$_MedicationKnowledgeDrugCharacteristic
       this.modifierExtension,
       this.type,
       this.valueCodeableConcept,
+      this.valueString,
       @JsonKey(name: '_valueString') this.valueStringElement,
       this.valueQuantity,
+      this.valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') this.valueBase64BinaryElement,
       this.valueAttachment})
       : super._();
@@ -15330,10 +15678,14 @@ class _$_MedicationKnowledgeDrugCharacteristic
   @override
   final CodeableConcept valueCodeableConcept;
   @override
+  final String valueString;
+  @override
   @JsonKey(name: '_valueString')
   final Element valueStringElement;
   @override
   final Quantity valueQuantity;
+  @override
+  final Base64Binary valueBase64Binary;
   @override
   @JsonKey(name: '_valueBase64Binary')
   final Element valueBase64BinaryElement;
@@ -15342,7 +15694,7 @@ class _$_MedicationKnowledgeDrugCharacteristic
 
   @override
   String toString() {
-    return 'MedicationKnowledgeDrugCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, valueCodeableConcept: $valueCodeableConcept, valueStringElement: $valueStringElement, valueQuantity: $valueQuantity, valueBase64BinaryElement: $valueBase64BinaryElement, valueAttachment: $valueAttachment)';
+    return 'MedicationKnowledgeDrugCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, valueCodeableConcept: $valueCodeableConcept, valueString: $valueString, valueStringElement: $valueStringElement, valueQuantity: $valueQuantity, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueAttachment: $valueAttachment)';
   }
 
   @override
@@ -15362,12 +15714,18 @@ class _$_MedicationKnowledgeDrugCharacteristic
             (identical(other.valueCodeableConcept, valueCodeableConcept) ||
                 const DeepCollectionEquality().equals(
                     other.valueCodeableConcept, valueCodeableConcept)) &&
+            (identical(other.valueString, valueString) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueString, valueString)) &&
             (identical(other.valueStringElement, valueStringElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueStringElement, valueStringElement)) &&
             (identical(other.valueQuantity, valueQuantity) ||
                 const DeepCollectionEquality()
                     .equals(other.valueQuantity, valueQuantity)) &&
+            (identical(other.valueBase64Binary, valueBase64Binary) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBase64Binary, valueBase64Binary)) &&
             (identical(
                     other.valueBase64BinaryElement, valueBase64BinaryElement) ||
                 const DeepCollectionEquality().equals(
@@ -15386,8 +15744,10 @@ class _$_MedicationKnowledgeDrugCharacteristic
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(valueCodeableConcept) ^
+      const DeepCollectionEquality().hash(valueString) ^
       const DeepCollectionEquality().hash(valueStringElement) ^
       const DeepCollectionEquality().hash(valueQuantity) ^
+      const DeepCollectionEquality().hash(valueBase64Binary) ^
       const DeepCollectionEquality().hash(valueBase64BinaryElement) ^
       const DeepCollectionEquality().hash(valueAttachment);
 
@@ -15412,8 +15772,10 @@ abstract class _MedicationKnowledgeDrugCharacteristic
       List<FhirExtension> modifierExtension,
       CodeableConcept type,
       CodeableConcept valueCodeableConcept,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
       Quantity valueQuantity,
+      Base64Binary valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
       Attachment valueAttachment}) = _$_MedicationKnowledgeDrugCharacteristic;
 
@@ -15433,10 +15795,14 @@ abstract class _MedicationKnowledgeDrugCharacteristic
   @override
   CodeableConcept get valueCodeableConcept;
   @override
+  String get valueString;
+  @override
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
   @override
   Quantity get valueQuantity;
+  @override
+  Base64Binary get valueBase64Binary;
   @override
   @JsonKey(name: '_valueBase64Binary')
   Element get valueBase64BinaryElement;
@@ -16920,6 +17286,7 @@ abstract class $MedicationRequestCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get performerType;
   $ReferenceCopyWith<$Res> get recorder;
   $ElementCopyWith<$Res> get instantiatesUriElement;
+  $IdentifierCopyWith<$Res> get groupIdentifier;
   $CodeableConceptCopyWith<$Res> get courseOfTherapyType;
   $ElementCopyWith<$Res> get renderedDosageInstructionElement;
   $MedicationRequestDispenseRequestCopyWith<$Res> get dispenseRequest;
@@ -17338,6 +17705,16 @@ class _$MedicationRequestCopyWithImpl<$Res>
   }
 
   @override
+  $IdentifierCopyWith<$Res> get groupIdentifier {
+    if (_value.groupIdentifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.groupIdentifier, (value) {
+      return _then(_value.copyWith(groupIdentifier: value));
+    });
+  }
+
+  @override
   $CodeableConceptCopyWith<$Res> get courseOfTherapyType {
     if (_value.courseOfTherapyType == null) {
       return null;
@@ -17506,6 +17883,8 @@ abstract class _$MedicationRequestCopyWith<$Res>
   $ReferenceCopyWith<$Res> get recorder;
   @override
   $ElementCopyWith<$Res> get instantiatesUriElement;
+  @override
+  $IdentifierCopyWith<$Res> get groupIdentifier;
   @override
   $CodeableConceptCopyWith<$Res> get courseOfTherapyType;
   @override
@@ -19041,6 +19420,7 @@ class _$MedicationRequestSubstitutionTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
+      Boolean allowedBoolean,
       @JsonKey(name: '_allowedBoolean') Element allowedBooleanElement,
       CodeableConcept allowedCodeableConcept,
       CodeableConcept reason}) {
@@ -19048,6 +19428,7 @@ class _$MedicationRequestSubstitutionTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      allowedBoolean: allowedBoolean,
       allowedBooleanElement: allowedBooleanElement,
       allowedCodeableConcept: allowedCodeableConcept,
       reason: reason,
@@ -19063,6 +19444,7 @@ mixin _$MedicationRequestSubstitution {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
+  Boolean get allowedBoolean;
   @JsonKey(name: '_allowedBoolean')
   Element get allowedBooleanElement;
   CodeableConcept get allowedCodeableConcept;
@@ -19082,6 +19464,7 @@ abstract class $MedicationRequestSubstitutionCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
+      Boolean allowedBoolean,
       @JsonKey(name: '_allowedBoolean') Element allowedBooleanElement,
       CodeableConcept allowedCodeableConcept,
       CodeableConcept reason});
@@ -19104,6 +19487,7 @@ class _$MedicationRequestSubstitutionCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object allowedBoolean = freezed,
     Object allowedBooleanElement = freezed,
     Object allowedCodeableConcept = freezed,
     Object reason = freezed,
@@ -19116,6 +19500,9 @@ class _$MedicationRequestSubstitutionCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
+      allowedBoolean: allowedBoolean == freezed
+          ? _value.allowedBoolean
+          : allowedBoolean as Boolean,
       allowedBooleanElement: allowedBooleanElement == freezed
           ? _value.allowedBooleanElement
           : allowedBooleanElement as Element,
@@ -19169,6 +19556,7 @@ abstract class _$MedicationRequestSubstitutionCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
+      Boolean allowedBoolean,
       @JsonKey(name: '_allowedBoolean') Element allowedBooleanElement,
       CodeableConcept allowedCodeableConcept,
       CodeableConcept reason});
@@ -19198,6 +19586,7 @@ class __$MedicationRequestSubstitutionCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object allowedBoolean = freezed,
     Object allowedBooleanElement = freezed,
     Object allowedCodeableConcept = freezed,
     Object reason = freezed,
@@ -19210,6 +19599,9 @@ class __$MedicationRequestSubstitutionCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
+      allowedBoolean: allowedBoolean == freezed
+          ? _value.allowedBoolean
+          : allowedBoolean as Boolean,
       allowedBooleanElement: allowedBooleanElement == freezed
           ? _value.allowedBooleanElement
           : allowedBooleanElement as Element,
@@ -19227,6 +19619,7 @@ class _$_MedicationRequestSubstitution extends _MedicationRequestSubstitution {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      this.allowedBoolean,
       @JsonKey(name: '_allowedBoolean') this.allowedBooleanElement,
       this.allowedCodeableConcept,
       this.reason})
@@ -19244,6 +19637,8 @@ class _$_MedicationRequestSubstitution extends _MedicationRequestSubstitution {
   @override
   final List<FhirExtension> modifierExtension;
   @override
+  final Boolean allowedBoolean;
+  @override
   @JsonKey(name: '_allowedBoolean')
   final Element allowedBooleanElement;
   @override
@@ -19253,7 +19648,7 @@ class _$_MedicationRequestSubstitution extends _MedicationRequestSubstitution {
 
   @override
   String toString() {
-    return 'MedicationRequestSubstitution(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, allowedBooleanElement: $allowedBooleanElement, allowedCodeableConcept: $allowedCodeableConcept, reason: $reason)';
+    return 'MedicationRequestSubstitution(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, allowedBoolean: $allowedBoolean, allowedBooleanElement: $allowedBooleanElement, allowedCodeableConcept: $allowedCodeableConcept, reason: $reason)';
   }
 
   @override
@@ -19268,6 +19663,9 @@ class _$_MedicationRequestSubstitution extends _MedicationRequestSubstitution {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.allowedBoolean, allowedBoolean) ||
+                const DeepCollectionEquality()
+                    .equals(other.allowedBoolean, allowedBoolean)) &&
             (identical(other.allowedBooleanElement, allowedBooleanElement) ||
                 const DeepCollectionEquality().equals(
                     other.allowedBooleanElement, allowedBooleanElement)) &&
@@ -19284,6 +19682,7 @@ class _$_MedicationRequestSubstitution extends _MedicationRequestSubstitution {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(allowedBoolean) ^
       const DeepCollectionEquality().hash(allowedBooleanElement) ^
       const DeepCollectionEquality().hash(allowedCodeableConcept) ^
       const DeepCollectionEquality().hash(reason);
@@ -19306,6 +19705,7 @@ abstract class _MedicationRequestSubstitution
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
+      Boolean allowedBoolean,
       @JsonKey(name: '_allowedBoolean') Element allowedBooleanElement,
       CodeableConcept allowedCodeableConcept,
       CodeableConcept reason}) = _$_MedicationRequestSubstitution;
@@ -19320,6 +19720,8 @@ abstract class _MedicationRequestSubstitution
   List<FhirExtension> get extension_;
   @override
   List<FhirExtension> get modifierExtension;
+  @override
+  Boolean get allowedBoolean;
   @override
   @JsonKey(name: '_allowedBoolean')
   Element get allowedBooleanElement;
@@ -19369,6 +19771,7 @@ class _$MedicationUsageTearOff {
       @required
           Reference subject,
       Reference encounter,
+      FhirDateTime effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
           Element effectiveDateTimeElement,
       Period effectivePeriod,
@@ -19409,6 +19812,7 @@ class _$MedicationUsageTearOff {
       medicationReference: medicationReference,
       subject: subject,
       encounter: encounter,
+      effectiveDateTime: effectiveDateTime,
       effectiveDateTimeElement: effectiveDateTimeElement,
       effectivePeriod: effectivePeriod,
       dateAsserted: dateAsserted,
@@ -19457,6 +19861,7 @@ mixin _$MedicationUsage {
   Reference get medicationReference;
   Reference get subject;
   Reference get encounter;
+  FhirDateTime get effectiveDateTime;
   @JsonKey(name: '_effectiveDateTime')
   Element get effectiveDateTimeElement;
   Period get effectivePeriod;
@@ -19511,6 +19916,7 @@ abstract class $MedicationUsageCopyWith<$Res> {
       Reference medicationReference,
       Reference subject,
       Reference encounter,
+      FhirDateTime effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
           Element effectiveDateTimeElement,
       Period effectivePeriod,
@@ -19578,6 +19984,7 @@ class _$MedicationUsageCopyWithImpl<$Res>
     Object medicationReference = freezed,
     Object subject = freezed,
     Object encounter = freezed,
+    Object effectiveDateTime = freezed,
     Object effectiveDateTimeElement = freezed,
     Object effectivePeriod = freezed,
     Object dateAsserted = freezed,
@@ -19641,6 +20048,9 @@ class _$MedicationUsageCopyWithImpl<$Res>
       subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
+      effectiveDateTime: effectiveDateTime == freezed
+          ? _value.effectiveDateTime
+          : effectiveDateTime as FhirDateTime,
       effectiveDateTimeElement: effectiveDateTimeElement == freezed
           ? _value.effectiveDateTimeElement
           : effectiveDateTimeElement as Element,
@@ -19866,6 +20276,7 @@ abstract class _$MedicationUsageCopyWith<$Res>
       Reference medicationReference,
       Reference subject,
       Reference encounter,
+      FhirDateTime effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
           Element effectiveDateTimeElement,
       Period effectivePeriod,
@@ -19950,6 +20361,7 @@ class __$MedicationUsageCopyWithImpl<$Res>
     Object medicationReference = freezed,
     Object subject = freezed,
     Object encounter = freezed,
+    Object effectiveDateTime = freezed,
     Object effectiveDateTimeElement = freezed,
     Object effectivePeriod = freezed,
     Object dateAsserted = freezed,
@@ -20013,6 +20425,9 @@ class __$MedicationUsageCopyWithImpl<$Res>
       subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
+      effectiveDateTime: effectiveDateTime == freezed
+          ? _value.effectiveDateTime
+          : effectiveDateTime as FhirDateTime,
       effectiveDateTimeElement: effectiveDateTimeElement == freezed
           ? _value.effectiveDateTimeElement
           : effectiveDateTimeElement as Element,
@@ -20084,6 +20499,7 @@ class _$_MedicationUsage extends _MedicationUsage {
       @required
           this.subject,
       this.encounter,
+      this.effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
           this.effectiveDateTimeElement,
       this.effectivePeriod,
@@ -20158,6 +20574,8 @@ class _$_MedicationUsage extends _MedicationUsage {
   @override
   final Reference encounter;
   @override
+  final FhirDateTime effectiveDateTime;
+  @override
   @JsonKey(name: '_effectiveDateTime')
   final Element effectiveDateTimeElement;
   @override
@@ -20190,7 +20608,7 @@ class _$_MedicationUsage extends _MedicationUsage {
 
   @override
   String toString() {
-    return 'MedicationUsage(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, basedOn: $basedOn, partOf: $partOf, status: $status, statusElement: $statusElement, statusReason: $statusReason, category: $category, medicationCodeableConcept: $medicationCodeableConcept, medicationReference: $medicationReference, subject: $subject, encounter: $encounter, effectiveDateTimeElement: $effectiveDateTimeElement, effectivePeriod: $effectivePeriod, dateAsserted: $dateAsserted, dateAssertedElement: $dateAssertedElement, informationSource: $informationSource, derivedFrom: $derivedFrom, reason: $reason, note: $note, renderedDosageInstruction: $renderedDosageInstruction, renderedDosageInstructionElement: $renderedDosageInstructionElement, dosage: $dosage, takenAsOrdered: $takenAsOrdered, takenAsOrderedElement: $takenAsOrderedElement)';
+    return 'MedicationUsage(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, basedOn: $basedOn, partOf: $partOf, status: $status, statusElement: $statusElement, statusReason: $statusReason, category: $category, medicationCodeableConcept: $medicationCodeableConcept, medicationReference: $medicationReference, subject: $subject, encounter: $encounter, effectiveDateTime: $effectiveDateTime, effectiveDateTimeElement: $effectiveDateTimeElement, effectivePeriod: $effectivePeriod, dateAsserted: $dateAsserted, dateAssertedElement: $dateAssertedElement, informationSource: $informationSource, derivedFrom: $derivedFrom, reason: $reason, note: $note, renderedDosageInstruction: $renderedDosageInstruction, renderedDosageInstructionElement: $renderedDosageInstructionElement, dosage: $dosage, takenAsOrdered: $takenAsOrdered, takenAsOrderedElement: $takenAsOrderedElement)';
   }
 
   @override
@@ -20259,9 +20677,10 @@ class _$_MedicationUsage extends _MedicationUsage {
             (identical(other.encounter, encounter) ||
                 const DeepCollectionEquality()
                     .equals(other.encounter, encounter)) &&
-            (identical(other.effectiveDateTimeElement, effectiveDateTimeElement) ||
+            (identical(other.effectiveDateTime, effectiveDateTime) ||
                 const DeepCollectionEquality()
-                    .equals(other.effectiveDateTimeElement, effectiveDateTimeElement)) &&
+                    .equals(other.effectiveDateTime, effectiveDateTime)) &&
+            (identical(other.effectiveDateTimeElement, effectiveDateTimeElement) || const DeepCollectionEquality().equals(other.effectiveDateTimeElement, effectiveDateTimeElement)) &&
             (identical(other.effectivePeriod, effectivePeriod) || const DeepCollectionEquality().equals(other.effectivePeriod, effectivePeriod)) &&
             (identical(other.dateAsserted, dateAsserted) || const DeepCollectionEquality().equals(other.dateAsserted, dateAsserted)) &&
             (identical(other.dateAssertedElement, dateAssertedElement) || const DeepCollectionEquality().equals(other.dateAssertedElement, dateAssertedElement)) &&
@@ -20301,6 +20720,7 @@ class _$_MedicationUsage extends _MedicationUsage {
       const DeepCollectionEquality().hash(medicationReference) ^
       const DeepCollectionEquality().hash(subject) ^
       const DeepCollectionEquality().hash(encounter) ^
+      const DeepCollectionEquality().hash(effectiveDateTime) ^
       const DeepCollectionEquality().hash(effectiveDateTimeElement) ^
       const DeepCollectionEquality().hash(effectivePeriod) ^
       const DeepCollectionEquality().hash(dateAsserted) ^
@@ -20357,6 +20777,7 @@ abstract class _MedicationUsage extends MedicationUsage {
       @required
           Reference subject,
       Reference encounter,
+      FhirDateTime effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
           Element effectiveDateTimeElement,
       Period effectivePeriod,
@@ -20427,6 +20848,8 @@ abstract class _MedicationUsage extends MedicationUsage {
   Reference get subject;
   @override
   Reference get encounter;
+  @override
+  FhirDateTime get effectiveDateTime;
   @override
   @JsonKey(name: '_effectiveDateTime')
   Element get effectiveDateTimeElement;

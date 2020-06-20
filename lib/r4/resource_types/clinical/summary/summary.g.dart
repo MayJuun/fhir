@@ -396,6 +396,9 @@ _$_AllergyIntolerance _$_$_AllergyIntoleranceFromJson(
     encounter: json['encounter'] == null
         ? null
         : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
+    onsetDateTime: json['onsetDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['onsetDateTime'] as String),
     onsetDateTimeElement: json['_onsetDateTime'] == null
         ? null
         : Element.fromJson(json['_onsetDateTime'] as Map<String, dynamic>),
@@ -408,6 +411,7 @@ _$_AllergyIntolerance _$_$_AllergyIntoleranceFromJson(
     onsetRange: json['onsetRange'] == null
         ? null
         : Range.fromJson(json['onsetRange'] as Map<String, dynamic>),
+    onsetString: json['onsetString'] as String,
     onsetStringElement: json['_onsetString'] == null
         ? null
         : Element.fromJson(json['_onsetString'] as Map<String, dynamic>),
@@ -483,10 +487,12 @@ Map<String, dynamic> _$_$_AllergyIntoleranceToJson(
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('encounter', instance.encounter?.toJson());
+  writeNotNull('onsetDateTime', instance.onsetDateTime?.toJson());
   writeNotNull('_onsetDateTime', instance.onsetDateTimeElement?.toJson());
   writeNotNull('onsetAge', instance.onsetAge?.toJson());
   writeNotNull('onsetPeriod', instance.onsetPeriod?.toJson());
   writeNotNull('onsetRange', instance.onsetRange?.toJson());
+  writeNotNull('onsetString', instance.onsetString);
   writeNotNull('_onsetString', instance.onsetStringElement?.toJson());
   writeNotNull('recordedDate', instance.recordedDate?.toJson());
   writeNotNull('_recordedDate', instance.recordedDateElement?.toJson());
@@ -670,6 +676,9 @@ _$_ClinicalImpression _$_$_ClinicalImpressionFromJson(
     encounter: json['encounter'] == null
         ? null
         : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
+    effectiveDateTime: json['effectiveDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['effectiveDateTime'] as String),
     effectiveDateTimeElement: json['_effectiveDateTime'] == null
         ? null
         : Element.fromJson(json['_effectiveDateTime'] as Map<String, dynamic>),
@@ -767,6 +776,7 @@ Map<String, dynamic> _$_$_ClinicalImpressionToJson(
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('encounter', instance.encounter?.toJson());
+  writeNotNull('effectiveDateTime', instance.effectiveDateTime?.toJson());
   writeNotNull(
       '_effectiveDateTime', instance.effectiveDateTimeElement?.toJson());
   writeNotNull('effectivePeriod', instance.effectivePeriod?.toJson());
@@ -957,6 +967,9 @@ _$_Condition _$_$_ConditionFromJson(Map<String, dynamic> json) {
     encounter: json['encounter'] == null
         ? null
         : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
+    onsetDateTime: json['onsetDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['onsetDateTime'] as String),
     onsetDateTimeElement: json['_onsetDateTime'] == null
         ? null
         : Element.fromJson(json['_onsetDateTime'] as Map<String, dynamic>),
@@ -969,9 +982,13 @@ _$_Condition _$_$_ConditionFromJson(Map<String, dynamic> json) {
     onsetRange: json['onsetRange'] == null
         ? null
         : Range.fromJson(json['onsetRange'] as Map<String, dynamic>),
+    onsetString: json['onsetString'] as String,
     onsetStringElement: json['_onsetString'] == null
         ? null
         : Element.fromJson(json['_onsetString'] as Map<String, dynamic>),
+    abatementDateTime: json['abatementDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['abatementDateTime'] as String),
     abatementDateTimeElement: json['_abatementDateTime'] == null
         ? null
         : Element.fromJson(json['_abatementDateTime'] as Map<String, dynamic>),
@@ -984,6 +1001,7 @@ _$_Condition _$_$_ConditionFromJson(Map<String, dynamic> json) {
     abatementRange: json['abatementRange'] == null
         ? null
         : Range.fromJson(json['abatementRange'] as Map<String, dynamic>),
+    abatementString: json['abatementString'] as String,
     abatementStringElement: json['_abatementString'] == null
         ? null
         : Element.fromJson(json['_abatementString'] as Map<String, dynamic>),
@@ -1051,16 +1069,20 @@ Map<String, dynamic> _$_$_ConditionToJson(_$_Condition instance) {
       'bodySite', instance.bodySite?.map((e) => e?.toJson())?.toList());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('encounter', instance.encounter?.toJson());
+  writeNotNull('onsetDateTime', instance.onsetDateTime?.toJson());
   writeNotNull('_onsetDateTime', instance.onsetDateTimeElement?.toJson());
   writeNotNull('onsetAge', instance.onsetAge?.toJson());
   writeNotNull('onsetPeriod', instance.onsetPeriod?.toJson());
   writeNotNull('onsetRange', instance.onsetRange?.toJson());
+  writeNotNull('onsetString', instance.onsetString);
   writeNotNull('_onsetString', instance.onsetStringElement?.toJson());
+  writeNotNull('abatementDateTime', instance.abatementDateTime?.toJson());
   writeNotNull(
       '_abatementDateTime', instance.abatementDateTimeElement?.toJson());
   writeNotNull('abatementAge', instance.abatementAge?.toJson());
   writeNotNull('abatementPeriod', instance.abatementPeriod?.toJson());
   writeNotNull('abatementRange', instance.abatementRange?.toJson());
+  writeNotNull('abatementString', instance.abatementString);
   writeNotNull('_abatementString', instance.abatementStringElement?.toJson());
   writeNotNull('recordedDate', instance.recordedDate?.toJson());
   writeNotNull('_recordedDate', instance.recordedDateElement?.toJson());
@@ -1222,6 +1244,9 @@ _$_DetectedIssue _$_$_DetectedIssueFromJson(Map<String, dynamic> json) {
     patient: json['patient'] == null
         ? null
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
+    identifiedDateTime: json['identifiedDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['identifiedDateTime'] as String),
     identifiedDateTimeElement: json['_identifiedDateTime'] == null
         ? null
         : Element.fromJson(json['_identifiedDateTime'] as Map<String, dynamic>),
@@ -1289,6 +1314,7 @@ Map<String, dynamic> _$_$_DetectedIssueToJson(_$_DetectedIssue instance) {
   writeNotNull('severity', _$DetectedIssueSeverityEnumMap[instance.severity]);
   writeNotNull('_severity', instance.severityElement?.toJson());
   writeNotNull('patient', instance.patient?.toJson());
+  writeNotNull('identifiedDateTime', instance.identifiedDateTime?.toJson());
   writeNotNull(
       '_identifiedDateTime', instance.identifiedDateTimeElement?.toJson());
   writeNotNull('identifiedPeriod', instance.identifiedPeriod?.toJson());
@@ -1493,9 +1519,13 @@ _$_FamilyMemberHistory _$_$_FamilyMemberHistoryFromJson(
     bornPeriod: json['bornPeriod'] == null
         ? null
         : Period.fromJson(json['bornPeriod'] as Map<String, dynamic>),
+    bornDate: json['bornDate'] == null
+        ? null
+        : Date.fromJson(json['bornDate'] as String),
     bornDateElement: json['_bornDate'] == null
         ? null
         : Element.fromJson(json['_bornDate'] as Map<String, dynamic>),
+    bornString: json['bornString'] as String,
     bornStringElement: json['_bornString'] == null
         ? null
         : Element.fromJson(json['_bornString'] as Map<String, dynamic>),
@@ -1505,6 +1535,7 @@ _$_FamilyMemberHistory _$_$_FamilyMemberHistoryFromJson(
     ageRange: json['ageRange'] == null
         ? null
         : Range.fromJson(json['ageRange'] as Map<String, dynamic>),
+    ageString: json['ageString'] as String,
     ageStringElement: json['_ageString'] == null
         ? null
         : Element.fromJson(json['_ageString'] as Map<String, dynamic>),
@@ -1514,6 +1545,9 @@ _$_FamilyMemberHistory _$_$_FamilyMemberHistoryFromJson(
     estimatedAgeElement: json['_estimatedAge'] == null
         ? null
         : Element.fromJson(json['_estimatedAge'] as Map<String, dynamic>),
+    deceasedBoolean: json['deceasedBoolean'] == null
+        ? null
+        : Boolean.fromJson(json['deceasedBoolean']),
     deceasedBooleanElement: json['_deceasedBoolean'] == null
         ? null
         : Element.fromJson(json['_deceasedBoolean'] as Map<String, dynamic>),
@@ -1523,9 +1557,13 @@ _$_FamilyMemberHistory _$_$_FamilyMemberHistoryFromJson(
     deceasedRange: json['deceasedRange'] == null
         ? null
         : Range.fromJson(json['deceasedRange'] as Map<String, dynamic>),
+    deceasedDate: json['deceasedDate'] == null
+        ? null
+        : Date.fromJson(json['deceasedDate'] as String),
     deceasedDateElement: json['_deceasedDate'] == null
         ? null
         : Element.fromJson(json['_deceasedDate'] as Map<String, dynamic>),
+    deceasedString: json['deceasedString'] as String,
     deceasedStringElement: json['_deceasedString'] == null
         ? null
         : Element.fromJson(json['_deceasedString'] as Map<String, dynamic>),
@@ -1592,17 +1630,23 @@ Map<String, dynamic> _$_$_FamilyMemberHistoryToJson(
   writeNotNull('relationship', instance.relationship?.toJson());
   writeNotNull('sex', instance.sex?.toJson());
   writeNotNull('bornPeriod', instance.bornPeriod?.toJson());
+  writeNotNull('bornDate', instance.bornDate?.toJson());
   writeNotNull('_bornDate', instance.bornDateElement?.toJson());
+  writeNotNull('bornString', instance.bornString);
   writeNotNull('_bornString', instance.bornStringElement?.toJson());
   writeNotNull('ageAge', instance.ageAge?.toJson());
   writeNotNull('ageRange', instance.ageRange?.toJson());
+  writeNotNull('ageString', instance.ageString);
   writeNotNull('_ageString', instance.ageStringElement?.toJson());
   writeNotNull('estimatedAge', instance.estimatedAge?.toJson());
   writeNotNull('_estimatedAge', instance.estimatedAgeElement?.toJson());
+  writeNotNull('deceasedBoolean', instance.deceasedBoolean?.toJson());
   writeNotNull('_deceasedBoolean', instance.deceasedBooleanElement?.toJson());
   writeNotNull('deceasedAge', instance.deceasedAge?.toJson());
   writeNotNull('deceasedRange', instance.deceasedRange?.toJson());
+  writeNotNull('deceasedDate', instance.deceasedDate?.toJson());
   writeNotNull('_deceasedDate', instance.deceasedDateElement?.toJson());
+  writeNotNull('deceasedString', instance.deceasedString);
   writeNotNull('_deceasedString', instance.deceasedStringElement?.toJson());
   writeNotNull(
       'reasonCode', instance.reasonCode?.map((e) => e?.toJson())?.toList());
@@ -1657,6 +1701,7 @@ _$_FamilyMemberHistoryCondition _$_$_FamilyMemberHistoryConditionFromJson(
     onsetPeriod: json['onsetPeriod'] == null
         ? null
         : Period.fromJson(json['onsetPeriod'] as Map<String, dynamic>),
+    onsetString: json['onsetString'] as String,
     onsetStringElement: json['_onsetString'] == null
         ? null
         : Element.fromJson(json['_onsetString'] as Map<String, dynamic>),
@@ -1690,6 +1735,7 @@ Map<String, dynamic> _$_$_FamilyMemberHistoryConditionToJson(
   writeNotNull('onsetAge', instance.onsetAge?.toJson());
   writeNotNull('onsetRange', instance.onsetRange?.toJson());
   writeNotNull('onsetPeriod', instance.onsetPeriod?.toJson());
+  writeNotNull('onsetString', instance.onsetString);
   writeNotNull('_onsetString', instance.onsetStringElement?.toJson());
   writeNotNull('note', instance.note?.map((e) => e?.toJson())?.toList());
   return val;
@@ -1773,12 +1819,16 @@ _$_Procedure _$_$_ProcedureFromJson(Map<String, dynamic> json) {
     encounter: json['encounter'] == null
         ? null
         : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
+    performedDateTime: json['performedDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['performedDateTime'] as String),
     performedDateTimeElement: json['_performedDateTime'] == null
         ? null
         : Element.fromJson(json['_performedDateTime'] as Map<String, dynamic>),
     performedPeriod: json['performedPeriod'] == null
         ? null
         : Period.fromJson(json['performedPeriod'] as Map<String, dynamic>),
+    performedString: json['performedString'] as String,
     performedStringElement: json['_performedString'] == null
         ? null
         : Element.fromJson(json['_performedString'] as Map<String, dynamic>),
@@ -1897,9 +1947,11 @@ Map<String, dynamic> _$_$_ProcedureToJson(_$_Procedure instance) {
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('encounter', instance.encounter?.toJson());
+  writeNotNull('performedDateTime', instance.performedDateTime?.toJson());
   writeNotNull(
       '_performedDateTime', instance.performedDateTimeElement?.toJson());
   writeNotNull('performedPeriod', instance.performedPeriod?.toJson());
+  writeNotNull('performedString', instance.performedString);
   writeNotNull('_performedString', instance.performedStringElement?.toJson());
   writeNotNull('performedAge', instance.performedAge?.toJson());
   writeNotNull('performedRange', instance.performedRange?.toJson());

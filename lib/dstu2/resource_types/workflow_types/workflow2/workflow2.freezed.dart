@@ -497,7 +497,7 @@ class __$ProcessRequestCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ProcessRequest implements _ProcessRequest {
-  const _$_ProcessRequest(
+  _$_ProcessRequest(
       {@JsonKey(defaultValue: 'ProcessRequest')
           this.resourceType,
       this.id,
@@ -705,7 +705,7 @@ class _$_ProcessRequest implements _ProcessRequest {
 }
 
 abstract class _ProcessRequest implements ProcessRequest {
-  const factory _ProcessRequest(
+  factory _ProcessRequest(
       {@JsonKey(defaultValue: 'ProcessRequest')
           String resourceType,
       Id id,
@@ -1333,7 +1333,7 @@ class __$SupplyDeliveryCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_SupplyDelivery implements _SupplyDelivery {
-  const _$_SupplyDelivery(
+  _$_SupplyDelivery(
       {@JsonKey(defaultValue: 'SupplyDelivery') this.resourceType,
       this.id,
       this.meta,
@@ -1526,7 +1526,7 @@ class _$_SupplyDelivery implements _SupplyDelivery {
 }
 
 abstract class _SupplyDelivery implements SupplyDelivery {
-  const factory _SupplyDelivery(
+  factory _SupplyDelivery(
       {@JsonKey(defaultValue: 'SupplyDelivery')
           String resourceType,
       Id id,
@@ -2077,7 +2077,7 @@ class __$ProcessResponseCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ProcessResponse implements _ProcessResponse {
-  const _$_ProcessResponse(
+  _$_ProcessResponse(
       {@JsonKey(defaultValue: 'ProcessResponse') this.resourceType,
       this.id,
       this.meta,
@@ -2259,7 +2259,7 @@ class _$_ProcessResponse implements _ProcessResponse {
 }
 
 abstract class _ProcessResponse implements ProcessResponse {
-  const factory _ProcessResponse(
+  factory _ProcessResponse(
       {@JsonKey(defaultValue: 'ProcessResponse') String resourceType,
       Id id,
       Meta meta,
@@ -2872,7 +2872,7 @@ class __$SupplyRequestCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_SupplyRequest implements _SupplyRequest {
-  const _$_SupplyRequest(
+  _$_SupplyRequest(
       {@JsonKey(defaultValue: 'SupplyRequest') this.resourceType,
       this.id,
       this.meta,
@@ -3063,7 +3063,7 @@ class _$_SupplyRequest implements _SupplyRequest {
 }
 
 abstract class _SupplyRequest implements SupplyRequest {
-  const factory _SupplyRequest(
+  factory _SupplyRequest(
       {@JsonKey(defaultValue: 'SupplyRequest')
           String resourceType,
       Id id,
@@ -3292,7 +3292,7 @@ class __$ProcessRequestItemCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ProcessRequestItem implements _ProcessRequestItem {
-  const _$_ProcessRequestItem(
+  _$_ProcessRequestItem(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3354,7 +3354,7 @@ class _$_ProcessRequestItem implements _ProcessRequestItem {
 }
 
 abstract class _ProcessRequestItem implements ProcessRequestItem {
-  const factory _ProcessRequestItem(
+  factory _ProcessRequestItem(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -3534,7 +3534,7 @@ class __$ProcessResponseNotesCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ProcessResponseNotes implements _ProcessResponseNotes {
-  const _$_ProcessResponseNotes(
+  _$_ProcessResponseNotes(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3600,7 +3600,7 @@ class _$_ProcessResponseNotes implements _ProcessResponseNotes {
 }
 
 abstract class _ProcessResponseNotes implements ProcessResponseNotes {
-  const factory _ProcessResponseNotes(
+  factory _ProcessResponseNotes(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -3794,7 +3794,7 @@ class __$SupplyRequestWhenCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_SupplyRequestWhen implements _SupplyRequestWhen {
-  const _$_SupplyRequestWhen(
+  _$_SupplyRequestWhen(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3860,7 +3860,7 @@ class _$_SupplyRequestWhen implements _SupplyRequestWhen {
 }
 
 abstract class _SupplyRequestWhen implements SupplyRequestWhen {
-  const factory _SupplyRequestWhen(
+  factory _SupplyRequestWhen(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,

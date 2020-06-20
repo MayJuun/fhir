@@ -171,7 +171,7 @@ class __$DomainResourceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DomainResource implements _DomainResource {
-  const _$_DomainResource(
+  _$_DomainResource(
       {@required @JsonKey(required: true) this.id,
       this.meta,
       this.implicitRules,
@@ -244,7 +244,7 @@ class _$_DomainResource implements _DomainResource {
 }
 
 abstract class _DomainResource implements DomainResource {
-  const factory _DomainResource(
+  factory _DomainResource(
       {@required @JsonKey(required: true) Id id,
       Meta meta,
       FhirUri implicitRules,

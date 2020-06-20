@@ -8,7 +8,7 @@ part 'clinical_decision_support.g.dart';
 
 @freezed
 abstract class GuidanceResponse with _$GuidanceResponse implements Resource {
-  const factory GuidanceResponse({
+  factory GuidanceResponse({
     @JsonKey(required: true, defaultValue: 'GuidanceResponse')
     @required
         String resourceType,
@@ -46,7 +46,7 @@ abstract class GuidanceResponse with _$GuidanceResponse implements Resource {
 
 @freezed
 abstract class Contributor with _$Contributor implements Resource {
-  const factory Contributor({
+  factory Contributor({
     @JsonKey(defaultValue: 'Contributor') String resourceType,
     Id id,
     Meta meta,

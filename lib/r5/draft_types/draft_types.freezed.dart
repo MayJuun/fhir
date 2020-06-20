@@ -415,6 +415,7 @@ abstract class $ProductShelfLifeCopyWith<$Res> {
       Quantity period,
       List<CodeableConcept> specialPrecautionsForStorage});
 
+  $IdentifierCopyWith<$Res> get identifier;
   $CodeableConceptCopyWith<$Res> get type;
   $QuantityCopyWith<$Res> get period;
 }
@@ -456,6 +457,16 @@ class _$ProductShelfLifeCopyWithImpl<$Res>
   }
 
   @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
   $CodeableConceptCopyWith<$Res> get type {
     if (_value.type == null) {
       return null;
@@ -491,6 +502,8 @@ abstract class _$ProductShelfLifeCopyWith<$Res>
       Quantity period,
       List<CodeableConcept> specialPrecautionsForStorage});
 
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
   @override
   $CodeableConceptCopyWith<$Res> get type;
   @override
@@ -1654,6 +1667,7 @@ class _$SubstanceAmountTearOff {
       List<FhirExtension> modifierExtension,
       Quantity amountQuantity,
       Range amountRange,
+      String amountString,
       @JsonKey(name: '_amountString') Element amountStringElement,
       CodeableConcept amountType,
       String amountText,
@@ -1665,6 +1679,7 @@ class _$SubstanceAmountTearOff {
       modifierExtension: modifierExtension,
       amountQuantity: amountQuantity,
       amountRange: amountRange,
+      amountString: amountString,
       amountStringElement: amountStringElement,
       amountType: amountType,
       amountText: amountText,
@@ -1684,6 +1699,7 @@ mixin _$SubstanceAmount {
   List<FhirExtension> get modifierExtension;
   Quantity get amountQuantity;
   Range get amountRange;
+  String get amountString;
   @JsonKey(name: '_amountString')
   Element get amountStringElement;
   CodeableConcept get amountType;
@@ -1706,6 +1722,7 @@ abstract class $SubstanceAmountCopyWith<$Res> {
       List<FhirExtension> modifierExtension,
       Quantity amountQuantity,
       Range amountRange,
+      String amountString,
       @JsonKey(name: '_amountString') Element amountStringElement,
       CodeableConcept amountType,
       String amountText,
@@ -1735,6 +1752,7 @@ class _$SubstanceAmountCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object amountQuantity = freezed,
     Object amountRange = freezed,
+    Object amountString = freezed,
     Object amountStringElement = freezed,
     Object amountType = freezed,
     Object amountText = freezed,
@@ -1754,6 +1772,9 @@ class _$SubstanceAmountCopyWithImpl<$Res>
           : amountQuantity as Quantity,
       amountRange:
           amountRange == freezed ? _value.amountRange : amountRange as Range,
+      amountString: amountString == freezed
+          ? _value.amountString
+          : amountString as String,
       amountStringElement: amountStringElement == freezed
           ? _value.amountStringElement
           : amountStringElement as Element,
@@ -1845,6 +1866,7 @@ abstract class _$SubstanceAmountCopyWith<$Res>
       List<FhirExtension> modifierExtension,
       Quantity amountQuantity,
       Range amountRange,
+      String amountString,
       @JsonKey(name: '_amountString') Element amountStringElement,
       CodeableConcept amountType,
       String amountText,
@@ -1882,6 +1904,7 @@ class __$SubstanceAmountCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object amountQuantity = freezed,
     Object amountRange = freezed,
+    Object amountString = freezed,
     Object amountStringElement = freezed,
     Object amountType = freezed,
     Object amountText = freezed,
@@ -1901,6 +1924,9 @@ class __$SubstanceAmountCopyWithImpl<$Res>
           : amountQuantity as Quantity,
       amountRange:
           amountRange == freezed ? _value.amountRange : amountRange as Range,
+      amountString: amountString == freezed
+          ? _value.amountString
+          : amountString as String,
       amountStringElement: amountStringElement == freezed
           ? _value.amountStringElement
           : amountStringElement as Element,
@@ -1927,6 +1953,7 @@ class _$_SubstanceAmount extends _SubstanceAmount {
       this.modifierExtension,
       this.amountQuantity,
       this.amountRange,
+      this.amountString,
       @JsonKey(name: '_amountString') this.amountStringElement,
       this.amountType,
       this.amountText,
@@ -1949,6 +1976,8 @@ class _$_SubstanceAmount extends _SubstanceAmount {
   @override
   final Range amountRange;
   @override
+  final String amountString;
+  @override
   @JsonKey(name: '_amountString')
   final Element amountStringElement;
   @override
@@ -1963,7 +1992,7 @@ class _$_SubstanceAmount extends _SubstanceAmount {
 
   @override
   String toString() {
-    return 'SubstanceAmount(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, amountQuantity: $amountQuantity, amountRange: $amountRange, amountStringElement: $amountStringElement, amountType: $amountType, amountText: $amountText, amountTextElement: $amountTextElement, referenceRange: $referenceRange)';
+    return 'SubstanceAmount(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, amountQuantity: $amountQuantity, amountRange: $amountRange, amountString: $amountString, amountStringElement: $amountStringElement, amountType: $amountType, amountText: $amountText, amountTextElement: $amountTextElement, referenceRange: $referenceRange)';
   }
 
   @override
@@ -1984,6 +2013,9 @@ class _$_SubstanceAmount extends _SubstanceAmount {
             (identical(other.amountRange, amountRange) ||
                 const DeepCollectionEquality()
                     .equals(other.amountRange, amountRange)) &&
+            (identical(other.amountString, amountString) ||
+                const DeepCollectionEquality()
+                    .equals(other.amountString, amountString)) &&
             (identical(other.amountStringElement, amountStringElement) ||
                 const DeepCollectionEquality()
                     .equals(other.amountStringElement, amountStringElement)) &&
@@ -2009,6 +2041,7 @@ class _$_SubstanceAmount extends _SubstanceAmount {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(amountQuantity) ^
       const DeepCollectionEquality().hash(amountRange) ^
+      const DeepCollectionEquality().hash(amountString) ^
       const DeepCollectionEquality().hash(amountStringElement) ^
       const DeepCollectionEquality().hash(amountType) ^
       const DeepCollectionEquality().hash(amountText) ^
@@ -2033,6 +2066,7 @@ abstract class _SubstanceAmount extends SubstanceAmount {
       List<FhirExtension> modifierExtension,
       Quantity amountQuantity,
       Range amountRange,
+      String amountString,
       @JsonKey(name: '_amountString') Element amountStringElement,
       CodeableConcept amountType,
       String amountText,
@@ -2053,6 +2087,8 @@ abstract class _SubstanceAmount extends SubstanceAmount {
   Quantity get amountQuantity;
   @override
   Range get amountRange;
+  @override
+  String get amountString;
   @override
   @JsonKey(name: '_amountString')
   Element get amountStringElement;

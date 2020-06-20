@@ -1497,6 +1497,7 @@ class _$CarePlanDetailTearOff {
           Element doNotPerformElement,
       Timing scheduledTiming,
       Period scheduledPeriod,
+      String scheduledString,
       @JsonKey(name: '_scheduledString')
           Element scheduledStringElement,
       Reference location,
@@ -1528,6 +1529,7 @@ class _$CarePlanDetailTearOff {
       doNotPerformElement: doNotPerformElement,
       scheduledTiming: scheduledTiming,
       scheduledPeriod: scheduledPeriod,
+      scheduledString: scheduledString,
       scheduledStringElement: scheduledStringElement,
       location: location,
       performer: performer,
@@ -1570,6 +1572,7 @@ mixin _$CarePlanDetail {
   Element get doNotPerformElement;
   Timing get scheduledTiming;
   Period get scheduledPeriod;
+  String get scheduledString;
   @JsonKey(name: '_scheduledString')
   Element get scheduledStringElement;
   Reference get location;
@@ -1616,6 +1619,7 @@ abstract class $CarePlanDetailCopyWith<$Res> {
           Element doNotPerformElement,
       Timing scheduledTiming,
       Period scheduledPeriod,
+      String scheduledString,
       @JsonKey(name: '_scheduledString')
           Element scheduledStringElement,
       Reference location,
@@ -1674,6 +1678,7 @@ class _$CarePlanDetailCopyWithImpl<$Res>
     Object doNotPerformElement = freezed,
     Object scheduledTiming = freezed,
     Object scheduledPeriod = freezed,
+    Object scheduledString = freezed,
     Object scheduledStringElement = freezed,
     Object location = freezed,
     Object performer = freezed,
@@ -1732,6 +1737,9 @@ class _$CarePlanDetailCopyWithImpl<$Res>
       scheduledPeriod: scheduledPeriod == freezed
           ? _value.scheduledPeriod
           : scheduledPeriod as Period,
+      scheduledString: scheduledString == freezed
+          ? _value.scheduledString
+          : scheduledString as String,
       scheduledStringElement: scheduledStringElement == freezed
           ? _value.scheduledStringElement
           : scheduledStringElement as Element,
@@ -1940,6 +1948,7 @@ abstract class _$CarePlanDetailCopyWith<$Res>
           Element doNotPerformElement,
       Timing scheduledTiming,
       Period scheduledPeriod,
+      String scheduledString,
       @JsonKey(name: '_scheduledString')
           Element scheduledStringElement,
       Reference location,
@@ -2015,6 +2024,7 @@ class __$CarePlanDetailCopyWithImpl<$Res>
     Object doNotPerformElement = freezed,
     Object scheduledTiming = freezed,
     Object scheduledPeriod = freezed,
+    Object scheduledString = freezed,
     Object scheduledStringElement = freezed,
     Object location = freezed,
     Object performer = freezed,
@@ -2073,6 +2083,9 @@ class __$CarePlanDetailCopyWithImpl<$Res>
       scheduledPeriod: scheduledPeriod == freezed
           ? _value.scheduledPeriod
           : scheduledPeriod as Period,
+      scheduledString: scheduledString == freezed
+          ? _value.scheduledString
+          : scheduledString as String,
       scheduledStringElement: scheduledStringElement == freezed
           ? _value.scheduledStringElement
           : scheduledStringElement as Element,
@@ -2120,6 +2133,7 @@ class _$_CarePlanDetail extends _CarePlanDetail {
       @JsonKey(name: '_doNotPerform') this.doNotPerformElement,
       this.scheduledTiming,
       this.scheduledPeriod,
+      this.scheduledString,
       @JsonKey(name: '_scheduledString') this.scheduledStringElement,
       this.location,
       this.performer,
@@ -2179,6 +2193,8 @@ class _$_CarePlanDetail extends _CarePlanDetail {
   @override
   final Period scheduledPeriod;
   @override
+  final String scheduledString;
+  @override
   @JsonKey(name: '_scheduledString')
   final Element scheduledStringElement;
   @override
@@ -2201,7 +2217,7 @@ class _$_CarePlanDetail extends _CarePlanDetail {
 
   @override
   String toString() {
-    return 'CarePlanDetail(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, kind: $kind, kindElement: $kindElement, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, instantiatesUriElement: $instantiatesUriElement, code: $code, reasonCode: $reasonCode, reasonReference: $reasonReference, goal: $goal, status: $status, statusElement: $statusElement, statusReason: $statusReason, doNotPerform: $doNotPerform, doNotPerformElement: $doNotPerformElement, scheduledTiming: $scheduledTiming, scheduledPeriod: $scheduledPeriod, scheduledStringElement: $scheduledStringElement, location: $location, performer: $performer, productCodeableConcept: $productCodeableConcept, productReference: $productReference, dailyAmount: $dailyAmount, quantity: $quantity, description: $description, descriptionElement: $descriptionElement)';
+    return 'CarePlanDetail(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, kind: $kind, kindElement: $kindElement, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, instantiatesUriElement: $instantiatesUriElement, code: $code, reasonCode: $reasonCode, reasonReference: $reasonReference, goal: $goal, status: $status, statusElement: $statusElement, statusReason: $statusReason, doNotPerform: $doNotPerform, doNotPerformElement: $doNotPerformElement, scheduledTiming: $scheduledTiming, scheduledPeriod: $scheduledPeriod, scheduledString: $scheduledString, scheduledStringElement: $scheduledStringElement, location: $location, performer: $performer, productCodeableConcept: $productCodeableConcept, productReference: $productReference, dailyAmount: $dailyAmount, quantity: $quantity, description: $description, descriptionElement: $descriptionElement)';
   }
 
   @override
@@ -2260,6 +2276,9 @@ class _$_CarePlanDetail extends _CarePlanDetail {
             (identical(other.scheduledPeriod, scheduledPeriod) ||
                 const DeepCollectionEquality()
                     .equals(other.scheduledPeriod, scheduledPeriod)) &&
+            (identical(other.scheduledString, scheduledString) ||
+                const DeepCollectionEquality()
+                    .equals(other.scheduledString, scheduledString)) &&
             (identical(other.scheduledStringElement, scheduledStringElement) ||
                 const DeepCollectionEquality().equals(
                     other.scheduledStringElement, scheduledStringElement)) &&
@@ -2270,8 +2289,7 @@ class _$_CarePlanDetail extends _CarePlanDetail {
                 const DeepCollectionEquality()
                     .equals(other.performer, performer)) &&
             (identical(other.productCodeableConcept, productCodeableConcept) ||
-                const DeepCollectionEquality().equals(
-                    other.productCodeableConcept, productCodeableConcept)) &&
+                const DeepCollectionEquality().equals(other.productCodeableConcept, productCodeableConcept)) &&
             (identical(other.productReference, productReference) || const DeepCollectionEquality().equals(other.productReference, productReference)) &&
             (identical(other.dailyAmount, dailyAmount) || const DeepCollectionEquality().equals(other.dailyAmount, dailyAmount)) &&
             (identical(other.quantity, quantity) || const DeepCollectionEquality().equals(other.quantity, quantity)) &&
@@ -2301,6 +2319,7 @@ class _$_CarePlanDetail extends _CarePlanDetail {
       const DeepCollectionEquality().hash(doNotPerformElement) ^
       const DeepCollectionEquality().hash(scheduledTiming) ^
       const DeepCollectionEquality().hash(scheduledPeriod) ^
+      const DeepCollectionEquality().hash(scheduledString) ^
       const DeepCollectionEquality().hash(scheduledStringElement) ^
       const DeepCollectionEquality().hash(location) ^
       const DeepCollectionEquality().hash(performer) ^
@@ -2349,6 +2368,7 @@ abstract class _CarePlanDetail extends CarePlanDetail {
           Element doNotPerformElement,
       Timing scheduledTiming,
       Period scheduledPeriod,
+      String scheduledString,
       @JsonKey(name: '_scheduledString')
           Element scheduledStringElement,
       Reference location,
@@ -2408,6 +2428,8 @@ abstract class _CarePlanDetail extends CarePlanDetail {
   Timing get scheduledTiming;
   @override
   Period get scheduledPeriod;
+  @override
+  String get scheduledString;
   @override
   @JsonKey(name: '_scheduledString')
   Element get scheduledStringElement;
@@ -3564,6 +3586,7 @@ class _$GoalTearOff {
           CodeableConcept description,
       @required
           Reference subject,
+      Date startDate,
       @JsonKey(name: '_startDate')
           Element startDateElement,
       CodeableConcept startCodeableConcept,
@@ -3599,6 +3622,7 @@ class _$GoalTearOff {
       priority: priority,
       description: description,
       subject: subject,
+      startDate: startDate,
       startDateElement: startDateElement,
       startCodeableConcept: startCodeableConcept,
       target: target,
@@ -3644,6 +3668,7 @@ mixin _$Goal {
   CodeableConcept get priority;
   CodeableConcept get description;
   Reference get subject;
+  Date get startDate;
   @JsonKey(name: '_startDate')
   Element get startDateElement;
   CodeableConcept get startCodeableConcept;
@@ -3693,6 +3718,7 @@ abstract class $GoalCopyWith<$Res> {
       CodeableConcept priority,
       CodeableConcept description,
       Reference subject,
+      Date startDate,
       @JsonKey(name: '_startDate')
           Element startDateElement,
       CodeableConcept startCodeableConcept,
@@ -3753,6 +3779,7 @@ class _$GoalCopyWithImpl<$Res> implements $GoalCopyWith<$Res> {
     Object priority = freezed,
     Object description = freezed,
     Object subject = freezed,
+    Object startDate = freezed,
     Object startDateElement = freezed,
     Object startCodeableConcept = freezed,
     Object target = freezed,
@@ -3812,6 +3839,7 @@ class _$GoalCopyWithImpl<$Res> implements $GoalCopyWith<$Res> {
           ? _value.description
           : description as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
+      startDate: startDate == freezed ? _value.startDate : startDate as Date,
       startDateElement: startDateElement == freezed
           ? _value.startDateElement
           : startDateElement as Element,
@@ -4017,6 +4045,7 @@ abstract class _$GoalCopyWith<$Res> implements $GoalCopyWith<$Res> {
       CodeableConcept priority,
       CodeableConcept description,
       Reference subject,
+      Date startDate,
       @JsonKey(name: '_startDate')
           Element startDateElement,
       CodeableConcept startCodeableConcept,
@@ -4092,6 +4121,7 @@ class __$GoalCopyWithImpl<$Res> extends _$GoalCopyWithImpl<$Res>
     Object priority = freezed,
     Object description = freezed,
     Object subject = freezed,
+    Object startDate = freezed,
     Object startDateElement = freezed,
     Object startCodeableConcept = freezed,
     Object target = freezed,
@@ -4151,6 +4181,7 @@ class __$GoalCopyWithImpl<$Res> extends _$GoalCopyWithImpl<$Res>
           ? _value.description
           : description as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
+      startDate: startDate == freezed ? _value.startDate : startDate as Date,
       startDateElement: startDateElement == freezed
           ? _value.startDateElement
           : startDateElement as Element,
@@ -4217,6 +4248,7 @@ class _$_Goal extends _Goal {
           this.description,
       @required
           this.subject,
+      this.startDate,
       @JsonKey(name: '_startDate')
           this.startDateElement,
       this.startCodeableConcept,
@@ -4285,6 +4317,8 @@ class _$_Goal extends _Goal {
   @override
   final Reference subject;
   @override
+  final Date startDate;
+  @override
   @JsonKey(name: '_startDate')
   final Element startDateElement;
   @override
@@ -4314,7 +4348,7 @@ class _$_Goal extends _Goal {
 
   @override
   String toString() {
-    return 'Goal(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, lifecycleStatus: $lifecycleStatus, lifecycleStatusElement: $lifecycleStatusElement, achievementStatus: $achievementStatus, category: $category, priority: $priority, description: $description, subject: $subject, startDateElement: $startDateElement, startCodeableConcept: $startCodeableConcept, target: $target, statusDate: $statusDate, statusDateElement: $statusDateElement, statusReason: $statusReason, statusReasonElement: $statusReasonElement, expressedBy: $expressedBy, addresses: $addresses, note: $note, outcomeCode: $outcomeCode, outcomeReference: $outcomeReference)';
+    return 'Goal(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, lifecycleStatus: $lifecycleStatus, lifecycleStatusElement: $lifecycleStatusElement, achievementStatus: $achievementStatus, category: $category, priority: $priority, description: $description, subject: $subject, startDate: $startDate, startDateElement: $startDateElement, startCodeableConcept: $startCodeableConcept, target: $target, statusDate: $statusDate, statusDateElement: $statusDateElement, statusReason: $statusReason, statusReasonElement: $statusReasonElement, expressedBy: $expressedBy, addresses: $addresses, note: $note, outcomeCode: $outcomeCode, outcomeReference: $outcomeReference)';
   }
 
   @override
@@ -4375,6 +4409,9 @@ class _$_Goal extends _Goal {
             (identical(other.subject, subject) ||
                 const DeepCollectionEquality()
                     .equals(other.subject, subject)) &&
+            (identical(other.startDate, startDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.startDate, startDate)) &&
             (identical(other.startDateElement, startDateElement) ||
                 const DeepCollectionEquality()
                     .equals(other.startDateElement, startDateElement)) &&
@@ -4383,9 +4420,7 @@ class _$_Goal extends _Goal {
                     other.startCodeableConcept, startCodeableConcept)) &&
             (identical(other.target, target) ||
                 const DeepCollectionEquality().equals(other.target, target)) &&
-            (identical(other.statusDate, statusDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusDate, statusDate)) &&
+            (identical(other.statusDate, statusDate) || const DeepCollectionEquality().equals(other.statusDate, statusDate)) &&
             (identical(other.statusDateElement, statusDateElement) || const DeepCollectionEquality().equals(other.statusDateElement, statusDateElement)) &&
             (identical(other.statusReason, statusReason) || const DeepCollectionEquality().equals(other.statusReason, statusReason)) &&
             (identical(other.statusReasonElement, statusReasonElement) || const DeepCollectionEquality().equals(other.statusReasonElement, statusReasonElement)) &&
@@ -4418,6 +4453,7 @@ class _$_Goal extends _Goal {
       const DeepCollectionEquality().hash(priority) ^
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(subject) ^
+      const DeepCollectionEquality().hash(startDate) ^
       const DeepCollectionEquality().hash(startDateElement) ^
       const DeepCollectionEquality().hash(startCodeableConcept) ^
       const DeepCollectionEquality().hash(target) ^
@@ -4472,6 +4508,7 @@ abstract class _Goal extends Goal {
           CodeableConcept description,
       @required
           Reference subject,
+      Date startDate,
       @JsonKey(name: '_startDate')
           Element startDateElement,
       CodeableConcept startCodeableConcept,
@@ -4535,6 +4572,8 @@ abstract class _Goal extends Goal {
   @override
   Reference get subject;
   @override
+  Date get startDate;
+  @override
   @JsonKey(name: '_startDate')
   Element get startDateElement;
   @override
@@ -4580,10 +4619,14 @@ class _$GoalTargetTearOff {
       Quantity detailQuantity,
       Range detailRange,
       CodeableConcept detailCodeableConcept,
+      String detailString,
       @JsonKey(name: '_detailString') Element detailStringElement,
+      Boolean detailBoolean,
       @JsonKey(name: '_detailBoolean') Element detailBooleanElement,
+      Integer detailInteger,
       @JsonKey(name: '_detailInteger') Element detailIntegerElement,
       Ratio detailRatio,
+      Date dueDate,
       @JsonKey(name: '_dueDate') Element dueDateElement,
       Duration dueDuration}) {
     return _GoalTarget(
@@ -4594,10 +4637,14 @@ class _$GoalTargetTearOff {
       detailQuantity: detailQuantity,
       detailRange: detailRange,
       detailCodeableConcept: detailCodeableConcept,
+      detailString: detailString,
       detailStringElement: detailStringElement,
+      detailBoolean: detailBoolean,
       detailBooleanElement: detailBooleanElement,
+      detailInteger: detailInteger,
       detailIntegerElement: detailIntegerElement,
       detailRatio: detailRatio,
+      dueDate: dueDate,
       dueDateElement: dueDateElement,
       dueDuration: dueDuration,
     );
@@ -4616,13 +4663,17 @@ mixin _$GoalTarget {
   Quantity get detailQuantity;
   Range get detailRange;
   CodeableConcept get detailCodeableConcept;
+  String get detailString;
   @JsonKey(name: '_detailString')
   Element get detailStringElement;
+  Boolean get detailBoolean;
   @JsonKey(name: '_detailBoolean')
   Element get detailBooleanElement;
+  Integer get detailInteger;
   @JsonKey(name: '_detailInteger')
   Element get detailIntegerElement;
   Ratio get detailRatio;
+  Date get dueDate;
   @JsonKey(name: '_dueDate')
   Element get dueDateElement;
   Duration get dueDuration;
@@ -4643,10 +4694,14 @@ abstract class $GoalTargetCopyWith<$Res> {
       Quantity detailQuantity,
       Range detailRange,
       CodeableConcept detailCodeableConcept,
+      String detailString,
       @JsonKey(name: '_detailString') Element detailStringElement,
+      Boolean detailBoolean,
       @JsonKey(name: '_detailBoolean') Element detailBooleanElement,
+      Integer detailInteger,
       @JsonKey(name: '_detailInteger') Element detailIntegerElement,
       Ratio detailRatio,
+      Date dueDate,
       @JsonKey(name: '_dueDate') Element dueDateElement,
       Duration dueDuration});
 
@@ -4678,10 +4733,14 @@ class _$GoalTargetCopyWithImpl<$Res> implements $GoalTargetCopyWith<$Res> {
     Object detailQuantity = freezed,
     Object detailRange = freezed,
     Object detailCodeableConcept = freezed,
+    Object detailString = freezed,
     Object detailStringElement = freezed,
+    Object detailBoolean = freezed,
     Object detailBooleanElement = freezed,
+    Object detailInteger = freezed,
     Object detailIntegerElement = freezed,
     Object detailRatio = freezed,
+    Object dueDate = freezed,
     Object dueDateElement = freezed,
     Object dueDuration = freezed,
   }) {
@@ -4702,17 +4761,27 @@ class _$GoalTargetCopyWithImpl<$Res> implements $GoalTargetCopyWith<$Res> {
       detailCodeableConcept: detailCodeableConcept == freezed
           ? _value.detailCodeableConcept
           : detailCodeableConcept as CodeableConcept,
+      detailString: detailString == freezed
+          ? _value.detailString
+          : detailString as String,
       detailStringElement: detailStringElement == freezed
           ? _value.detailStringElement
           : detailStringElement as Element,
+      detailBoolean: detailBoolean == freezed
+          ? _value.detailBoolean
+          : detailBoolean as Boolean,
       detailBooleanElement: detailBooleanElement == freezed
           ? _value.detailBooleanElement
           : detailBooleanElement as Element,
+      detailInteger: detailInteger == freezed
+          ? _value.detailInteger
+          : detailInteger as Integer,
       detailIntegerElement: detailIntegerElement == freezed
           ? _value.detailIntegerElement
           : detailIntegerElement as Element,
       detailRatio:
           detailRatio == freezed ? _value.detailRatio : detailRatio as Ratio,
+      dueDate: dueDate == freezed ? _value.dueDate : dueDate as Date,
       dueDateElement: dueDateElement == freezed
           ? _value.dueDateElement
           : dueDateElement as Element,
@@ -4836,10 +4905,14 @@ abstract class _$GoalTargetCopyWith<$Res> implements $GoalTargetCopyWith<$Res> {
       Quantity detailQuantity,
       Range detailRange,
       CodeableConcept detailCodeableConcept,
+      String detailString,
       @JsonKey(name: '_detailString') Element detailStringElement,
+      Boolean detailBoolean,
       @JsonKey(name: '_detailBoolean') Element detailBooleanElement,
+      Integer detailInteger,
       @JsonKey(name: '_detailInteger') Element detailIntegerElement,
       Ratio detailRatio,
+      Date dueDate,
       @JsonKey(name: '_dueDate') Element dueDateElement,
       Duration dueDuration});
 
@@ -4883,10 +4956,14 @@ class __$GoalTargetCopyWithImpl<$Res> extends _$GoalTargetCopyWithImpl<$Res>
     Object detailQuantity = freezed,
     Object detailRange = freezed,
     Object detailCodeableConcept = freezed,
+    Object detailString = freezed,
     Object detailStringElement = freezed,
+    Object detailBoolean = freezed,
     Object detailBooleanElement = freezed,
+    Object detailInteger = freezed,
     Object detailIntegerElement = freezed,
     Object detailRatio = freezed,
+    Object dueDate = freezed,
     Object dueDateElement = freezed,
     Object dueDuration = freezed,
   }) {
@@ -4907,17 +4984,27 @@ class __$GoalTargetCopyWithImpl<$Res> extends _$GoalTargetCopyWithImpl<$Res>
       detailCodeableConcept: detailCodeableConcept == freezed
           ? _value.detailCodeableConcept
           : detailCodeableConcept as CodeableConcept,
+      detailString: detailString == freezed
+          ? _value.detailString
+          : detailString as String,
       detailStringElement: detailStringElement == freezed
           ? _value.detailStringElement
           : detailStringElement as Element,
+      detailBoolean: detailBoolean == freezed
+          ? _value.detailBoolean
+          : detailBoolean as Boolean,
       detailBooleanElement: detailBooleanElement == freezed
           ? _value.detailBooleanElement
           : detailBooleanElement as Element,
+      detailInteger: detailInteger == freezed
+          ? _value.detailInteger
+          : detailInteger as Integer,
       detailIntegerElement: detailIntegerElement == freezed
           ? _value.detailIntegerElement
           : detailIntegerElement as Element,
       detailRatio:
           detailRatio == freezed ? _value.detailRatio : detailRatio as Ratio,
+      dueDate: dueDate == freezed ? _value.dueDate : dueDate as Date,
       dueDateElement: dueDateElement == freezed
           ? _value.dueDateElement
           : dueDateElement as Element,
@@ -4937,10 +5024,14 @@ class _$_GoalTarget extends _GoalTarget {
       this.detailQuantity,
       this.detailRange,
       this.detailCodeableConcept,
+      this.detailString,
       @JsonKey(name: '_detailString') this.detailStringElement,
+      this.detailBoolean,
       @JsonKey(name: '_detailBoolean') this.detailBooleanElement,
+      this.detailInteger,
       @JsonKey(name: '_detailInteger') this.detailIntegerElement,
       this.detailRatio,
+      this.dueDate,
       @JsonKey(name: '_dueDate') this.dueDateElement,
       this.dueDuration})
       : super._();
@@ -4964,16 +5055,24 @@ class _$_GoalTarget extends _GoalTarget {
   @override
   final CodeableConcept detailCodeableConcept;
   @override
+  final String detailString;
+  @override
   @JsonKey(name: '_detailString')
   final Element detailStringElement;
   @override
+  final Boolean detailBoolean;
+  @override
   @JsonKey(name: '_detailBoolean')
   final Element detailBooleanElement;
+  @override
+  final Integer detailInteger;
   @override
   @JsonKey(name: '_detailInteger')
   final Element detailIntegerElement;
   @override
   final Ratio detailRatio;
+  @override
+  final Date dueDate;
   @override
   @JsonKey(name: '_dueDate')
   final Element dueDateElement;
@@ -4982,7 +5081,7 @@ class _$_GoalTarget extends _GoalTarget {
 
   @override
   String toString() {
-    return 'GoalTarget(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, measure: $measure, detailQuantity: $detailQuantity, detailRange: $detailRange, detailCodeableConcept: $detailCodeableConcept, detailStringElement: $detailStringElement, detailBooleanElement: $detailBooleanElement, detailIntegerElement: $detailIntegerElement, detailRatio: $detailRatio, dueDateElement: $dueDateElement, dueDuration: $dueDuration)';
+    return 'GoalTarget(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, measure: $measure, detailQuantity: $detailQuantity, detailRange: $detailRange, detailCodeableConcept: $detailCodeableConcept, detailString: $detailString, detailStringElement: $detailStringElement, detailBoolean: $detailBoolean, detailBooleanElement: $detailBooleanElement, detailInteger: $detailInteger, detailIntegerElement: $detailIntegerElement, detailRatio: $detailRatio, dueDate: $dueDate, dueDateElement: $dueDateElement, dueDuration: $dueDuration)';
   }
 
   @override
@@ -5009,18 +5108,30 @@ class _$_GoalTarget extends _GoalTarget {
             (identical(other.detailCodeableConcept, detailCodeableConcept) ||
                 const DeepCollectionEquality().equals(
                     other.detailCodeableConcept, detailCodeableConcept)) &&
+            (identical(other.detailString, detailString) ||
+                const DeepCollectionEquality()
+                    .equals(other.detailString, detailString)) &&
             (identical(other.detailStringElement, detailStringElement) ||
                 const DeepCollectionEquality()
                     .equals(other.detailStringElement, detailStringElement)) &&
+            (identical(other.detailBoolean, detailBoolean) ||
+                const DeepCollectionEquality()
+                    .equals(other.detailBoolean, detailBoolean)) &&
             (identical(other.detailBooleanElement, detailBooleanElement) ||
                 const DeepCollectionEquality().equals(
                     other.detailBooleanElement, detailBooleanElement)) &&
+            (identical(other.detailInteger, detailInteger) ||
+                const DeepCollectionEquality()
+                    .equals(other.detailInteger, detailInteger)) &&
             (identical(other.detailIntegerElement, detailIntegerElement) ||
                 const DeepCollectionEquality().equals(
                     other.detailIntegerElement, detailIntegerElement)) &&
             (identical(other.detailRatio, detailRatio) ||
                 const DeepCollectionEquality()
                     .equals(other.detailRatio, detailRatio)) &&
+            (identical(other.dueDate, dueDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.dueDate, dueDate)) &&
             (identical(other.dueDateElement, dueDateElement) ||
                 const DeepCollectionEquality()
                     .equals(other.dueDateElement, dueDateElement)) &&
@@ -5039,10 +5150,14 @@ class _$_GoalTarget extends _GoalTarget {
       const DeepCollectionEquality().hash(detailQuantity) ^
       const DeepCollectionEquality().hash(detailRange) ^
       const DeepCollectionEquality().hash(detailCodeableConcept) ^
+      const DeepCollectionEquality().hash(detailString) ^
       const DeepCollectionEquality().hash(detailStringElement) ^
+      const DeepCollectionEquality().hash(detailBoolean) ^
       const DeepCollectionEquality().hash(detailBooleanElement) ^
+      const DeepCollectionEquality().hash(detailInteger) ^
       const DeepCollectionEquality().hash(detailIntegerElement) ^
       const DeepCollectionEquality().hash(detailRatio) ^
+      const DeepCollectionEquality().hash(dueDate) ^
       const DeepCollectionEquality().hash(dueDateElement) ^
       const DeepCollectionEquality().hash(dueDuration);
 
@@ -5066,10 +5181,14 @@ abstract class _GoalTarget extends GoalTarget {
       Quantity detailQuantity,
       Range detailRange,
       CodeableConcept detailCodeableConcept,
+      String detailString,
       @JsonKey(name: '_detailString') Element detailStringElement,
+      Boolean detailBoolean,
       @JsonKey(name: '_detailBoolean') Element detailBooleanElement,
+      Integer detailInteger,
       @JsonKey(name: '_detailInteger') Element detailIntegerElement,
       Ratio detailRatio,
+      Date dueDate,
       @JsonKey(name: '_dueDate') Element dueDateElement,
       Duration dueDuration}) = _$_GoalTarget;
 
@@ -5092,16 +5211,24 @@ abstract class _GoalTarget extends GoalTarget {
   @override
   CodeableConcept get detailCodeableConcept;
   @override
+  String get detailString;
+  @override
   @JsonKey(name: '_detailString')
   Element get detailStringElement;
   @override
+  Boolean get detailBoolean;
+  @override
   @JsonKey(name: '_detailBoolean')
   Element get detailBooleanElement;
+  @override
+  Integer get detailInteger;
   @override
   @JsonKey(name: '_detailInteger')
   Element get detailIntegerElement;
   @override
   Ratio get detailRatio;
+  @override
+  Date get dueDate;
   @override
   @JsonKey(name: '_dueDate')
   Element get dueDateElement;
@@ -9476,6 +9603,7 @@ class _$RequestGroupActionTearOff {
       List<RelatedArtifact> documentation,
       List<RequestGroupCondition> condition,
       List<RequestGroupRelatedAction> relatedAction,
+      FhirDateTime timingDateTime,
       @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
       Age timingAge,
       Period timingPeriod,
@@ -9514,6 +9642,7 @@ class _$RequestGroupActionTearOff {
       documentation: documentation,
       condition: condition,
       relatedAction: relatedAction,
+      timingDateTime: timingDateTime,
       timingDateTimeElement: timingDateTimeElement,
       timingAge: timingAge,
       timingPeriod: timingPeriod,
@@ -9565,6 +9694,7 @@ mixin _$RequestGroupAction {
   List<RelatedArtifact> get documentation;
   List<RequestGroupCondition> get condition;
   List<RequestGroupRelatedAction> get relatedAction;
+  FhirDateTime get timingDateTime;
   @JsonKey(name: '_timingDateTime')
   Element get timingDateTimeElement;
   Age get timingAge;
@@ -9618,6 +9748,7 @@ abstract class $RequestGroupActionCopyWith<$Res> {
       List<RelatedArtifact> documentation,
       List<RequestGroupCondition> condition,
       List<RequestGroupRelatedAction> relatedAction,
+      FhirDateTime timingDateTime,
       @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
       Age timingAge,
       Period timingPeriod,
@@ -9686,6 +9817,7 @@ class _$RequestGroupActionCopyWithImpl<$Res>
     Object documentation = freezed,
     Object condition = freezed,
     Object relatedAction = freezed,
+    Object timingDateTime = freezed,
     Object timingDateTimeElement = freezed,
     Object timingAge = freezed,
     Object timingPeriod = freezed,
@@ -9748,6 +9880,9 @@ class _$RequestGroupActionCopyWithImpl<$Res>
       relatedAction: relatedAction == freezed
           ? _value.relatedAction
           : relatedAction as List<RequestGroupRelatedAction>,
+      timingDateTime: timingDateTime == freezed
+          ? _value.timingDateTime
+          : timingDateTime as FhirDateTime,
       timingDateTimeElement: timingDateTimeElement == freezed
           ? _value.timingDateTimeElement
           : timingDateTimeElement as Element,
@@ -10009,6 +10144,7 @@ abstract class _$RequestGroupActionCopyWith<$Res>
       List<RelatedArtifact> documentation,
       List<RequestGroupCondition> condition,
       List<RequestGroupRelatedAction> relatedAction,
+      FhirDateTime timingDateTime,
       @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
       Age timingAge,
       Period timingPeriod,
@@ -10097,6 +10233,7 @@ class __$RequestGroupActionCopyWithImpl<$Res>
     Object documentation = freezed,
     Object condition = freezed,
     Object relatedAction = freezed,
+    Object timingDateTime = freezed,
     Object timingDateTimeElement = freezed,
     Object timingAge = freezed,
     Object timingPeriod = freezed,
@@ -10159,6 +10296,9 @@ class __$RequestGroupActionCopyWithImpl<$Res>
       relatedAction: relatedAction == freezed
           ? _value.relatedAction
           : relatedAction as List<RequestGroupRelatedAction>,
+      timingDateTime: timingDateTime == freezed
+          ? _value.timingDateTime
+          : timingDateTime as FhirDateTime,
       timingDateTimeElement: timingDateTimeElement == freezed
           ? _value.timingDateTimeElement
           : timingDateTimeElement as Element,
@@ -10236,6 +10376,7 @@ class _$_RequestGroupAction extends _RequestGroupAction {
       this.documentation,
       this.condition,
       this.relatedAction,
+      this.timingDateTime,
       @JsonKey(name: '_timingDateTime') this.timingDateTimeElement,
       this.timingAge,
       this.timingPeriod,
@@ -10302,6 +10443,8 @@ class _$_RequestGroupAction extends _RequestGroupAction {
   @override
   final List<RequestGroupRelatedAction> relatedAction;
   @override
+  final FhirDateTime timingDateTime;
+  @override
   @JsonKey(name: '_timingDateTime')
   final Element timingDateTimeElement;
   @override
@@ -10350,7 +10493,7 @@ class _$_RequestGroupAction extends _RequestGroupAction {
 
   @override
   String toString() {
-    return 'RequestGroupAction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, prefix: $prefix, prefixElement: $prefixElement, title: $title, titleElement: $titleElement, description: $description, descriptionElement: $descriptionElement, textEquivalent: $textEquivalent, textEquivalentElement: $textEquivalentElement, priority: $priority, priorityElement: $priorityElement, code: $code, documentation: $documentation, condition: $condition, relatedAction: $relatedAction, timingDateTimeElement: $timingDateTimeElement, timingAge: $timingAge, timingPeriod: $timingPeriod, timingDuration: $timingDuration, timingRange: $timingRange, timingTiming: $timingTiming, participant: $participant, type: $type, groupingBehavior: $groupingBehavior, groupingBehaviorElement: $groupingBehaviorElement, selectionBehavior: $selectionBehavior, selectionBehaviorElement: $selectionBehaviorElement, requiredBehavior: $requiredBehavior, requiredBehaviorElement: $requiredBehaviorElement, precheckBehavior: $precheckBehavior, precheckBehaviorElement: $precheckBehaviorElement, cardinalityBehavior: $cardinalityBehavior, cardinalityBehaviorElement: $cardinalityBehaviorElement, resource: $resource, action: $action)';
+    return 'RequestGroupAction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, prefix: $prefix, prefixElement: $prefixElement, title: $title, titleElement: $titleElement, description: $description, descriptionElement: $descriptionElement, textEquivalent: $textEquivalent, textEquivalentElement: $textEquivalentElement, priority: $priority, priorityElement: $priorityElement, code: $code, documentation: $documentation, condition: $condition, relatedAction: $relatedAction, timingDateTime: $timingDateTime, timingDateTimeElement: $timingDateTimeElement, timingAge: $timingAge, timingPeriod: $timingPeriod, timingDuration: $timingDuration, timingRange: $timingRange, timingTiming: $timingTiming, participant: $participant, type: $type, groupingBehavior: $groupingBehavior, groupingBehaviorElement: $groupingBehaviorElement, selectionBehavior: $selectionBehavior, selectionBehaviorElement: $selectionBehaviorElement, requiredBehavior: $requiredBehavior, requiredBehaviorElement: $requiredBehaviorElement, precheckBehavior: $precheckBehavior, precheckBehaviorElement: $precheckBehaviorElement, cardinalityBehavior: $cardinalityBehavior, cardinalityBehaviorElement: $cardinalityBehaviorElement, resource: $resource, action: $action)';
   }
 
   @override
@@ -10404,6 +10547,9 @@ class _$_RequestGroupAction extends _RequestGroupAction {
             (identical(other.relatedAction, relatedAction) ||
                 const DeepCollectionEquality()
                     .equals(other.relatedAction, relatedAction)) &&
+            (identical(other.timingDateTime, timingDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.timingDateTime, timingDateTime)) &&
             (identical(other.timingDateTimeElement, timingDateTimeElement) ||
                 const DeepCollectionEquality().equals(
                     other.timingDateTimeElement, timingDateTimeElement)) &&
@@ -10419,9 +10565,7 @@ class _$_RequestGroupAction extends _RequestGroupAction {
             (identical(other.timingRange, timingRange) ||
                 const DeepCollectionEquality()
                     .equals(other.timingRange, timingRange)) &&
-            (identical(other.timingTiming, timingTiming) ||
-                const DeepCollectionEquality()
-                    .equals(other.timingTiming, timingTiming)) &&
+            (identical(other.timingTiming, timingTiming) || const DeepCollectionEquality().equals(other.timingTiming, timingTiming)) &&
             (identical(other.participant, participant) || const DeepCollectionEquality().equals(other.participant, participant)) &&
             (identical(other.type, type) || const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.groupingBehavior, groupingBehavior) || const DeepCollectionEquality().equals(other.groupingBehavior, groupingBehavior)) &&
@@ -10458,6 +10602,7 @@ class _$_RequestGroupAction extends _RequestGroupAction {
       const DeepCollectionEquality().hash(documentation) ^
       const DeepCollectionEquality().hash(condition) ^
       const DeepCollectionEquality().hash(relatedAction) ^
+      const DeepCollectionEquality().hash(timingDateTime) ^
       const DeepCollectionEquality().hash(timingDateTimeElement) ^
       const DeepCollectionEquality().hash(timingAge) ^
       const DeepCollectionEquality().hash(timingPeriod) ^
@@ -10509,6 +10654,7 @@ abstract class _RequestGroupAction extends RequestGroupAction {
       List<RelatedArtifact> documentation,
       List<RequestGroupCondition> condition,
       List<RequestGroupRelatedAction> relatedAction,
+      FhirDateTime timingDateTime,
       @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
       Age timingAge,
       Period timingPeriod,
@@ -10573,6 +10719,8 @@ abstract class _RequestGroupAction extends RequestGroupAction {
   List<RequestGroupCondition> get condition;
   @override
   List<RequestGroupRelatedAction> get relatedAction;
+  @override
+  FhirDateTime get timingDateTime;
   @override
   @JsonKey(name: '_timingDateTime')
   Element get timingDateTimeElement;
@@ -11306,6 +11454,7 @@ class _$RiskAssessmentTearOff {
       CodeableConcept code,
       @required Reference subject,
       Reference encounter,
+      FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
       Period occurrencePeriod,
       Reference condition,
@@ -11338,6 +11487,7 @@ class _$RiskAssessmentTearOff {
       code: code,
       subject: subject,
       encounter: encounter,
+      occurrenceDateTime: occurrenceDateTime,
       occurrenceDateTimeElement: occurrenceDateTimeElement,
       occurrencePeriod: occurrencePeriod,
       condition: condition,
@@ -11382,6 +11532,7 @@ mixin _$RiskAssessment {
   CodeableConcept get code;
   Reference get subject;
   Reference get encounter;
+  FhirDateTime get occurrenceDateTime;
   @JsonKey(name: '_occurrenceDateTime')
   Element get occurrenceDateTimeElement;
   Period get occurrencePeriod;
@@ -11425,6 +11576,7 @@ abstract class $RiskAssessmentCopyWith<$Res> {
       CodeableConcept code,
       Reference subject,
       Reference encounter,
+      FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
       Period occurrencePeriod,
       Reference condition,
@@ -11485,6 +11637,7 @@ class _$RiskAssessmentCopyWithImpl<$Res>
     Object code = freezed,
     Object subject = freezed,
     Object encounter = freezed,
+    Object occurrenceDateTime = freezed,
     Object occurrenceDateTimeElement = freezed,
     Object occurrencePeriod = freezed,
     Object condition = freezed,
@@ -11536,6 +11689,9 @@ class _$RiskAssessmentCopyWithImpl<$Res>
       subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
+      occurrenceDateTime: occurrenceDateTime == freezed
+          ? _value.occurrenceDateTime
+          : occurrenceDateTime as FhirDateTime,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement as Element,
@@ -11753,6 +11909,7 @@ abstract class _$RiskAssessmentCopyWith<$Res>
       CodeableConcept code,
       Reference subject,
       Reference encounter,
+      FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
       Period occurrencePeriod,
       Reference condition,
@@ -11831,6 +11988,7 @@ class __$RiskAssessmentCopyWithImpl<$Res>
     Object code = freezed,
     Object subject = freezed,
     Object encounter = freezed,
+    Object occurrenceDateTime = freezed,
     Object occurrenceDateTimeElement = freezed,
     Object occurrencePeriod = freezed,
     Object condition = freezed,
@@ -11882,6 +12040,9 @@ class __$RiskAssessmentCopyWithImpl<$Res>
       subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
+      occurrenceDateTime: occurrenceDateTime == freezed
+          ? _value.occurrenceDateTime
+          : occurrenceDateTime as FhirDateTime,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement as Element,
@@ -11935,6 +12096,7 @@ class _$_RiskAssessment extends _RiskAssessment {
       this.code,
       @required this.subject,
       this.encounter,
+      this.occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') this.occurrenceDateTimeElement,
       this.occurrencePeriod,
       this.condition,
@@ -11999,6 +12161,8 @@ class _$_RiskAssessment extends _RiskAssessment {
   @override
   final Reference encounter;
   @override
+  final FhirDateTime occurrenceDateTime;
+  @override
   @JsonKey(name: '_occurrenceDateTime')
   final Element occurrenceDateTimeElement;
   @override
@@ -12025,7 +12189,7 @@ class _$_RiskAssessment extends _RiskAssessment {
 
   @override
   String toString() {
-    return 'RiskAssessment(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, basedOn: $basedOn, parent: $parent, status: $status, statusElement: $statusElement, method: $method, code: $code, subject: $subject, encounter: $encounter, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrencePeriod: $occurrencePeriod, condition: $condition, performer: $performer, reasonCode: $reasonCode, reasonReference: $reasonReference, basis: $basis, prediction: $prediction, mitigation: $mitigation, mitigationElement: $mitigationElement, note: $note)';
+    return 'RiskAssessment(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, basedOn: $basedOn, parent: $parent, status: $status, statusElement: $statusElement, method: $method, code: $code, subject: $subject, encounter: $encounter, occurrenceDateTime: $occurrenceDateTime, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrencePeriod: $occurrencePeriod, condition: $condition, performer: $performer, reasonCode: $reasonCode, reasonReference: $reasonReference, basis: $basis, prediction: $prediction, mitigation: $mitigation, mitigationElement: $mitigationElement, note: $note)';
   }
 
   @override
@@ -12085,6 +12249,9 @@ class _$_RiskAssessment extends _RiskAssessment {
             (identical(other.encounter, encounter) ||
                 const DeepCollectionEquality()
                     .equals(other.encounter, encounter)) &&
+            (identical(other.occurrenceDateTime, occurrenceDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.occurrenceDateTime, occurrenceDateTime)) &&
             (identical(other.occurrenceDateTimeElement, occurrenceDateTimeElement) ||
                 const DeepCollectionEquality().equals(
                     other.occurrenceDateTimeElement,
@@ -12095,9 +12262,7 @@ class _$_RiskAssessment extends _RiskAssessment {
             (identical(other.condition, condition) ||
                 const DeepCollectionEquality()
                     .equals(other.condition, condition)) &&
-            (identical(other.performer, performer) ||
-                const DeepCollectionEquality()
-                    .equals(other.performer, performer)) &&
+            (identical(other.performer, performer) || const DeepCollectionEquality().equals(other.performer, performer)) &&
             (identical(other.reasonCode, reasonCode) || const DeepCollectionEquality().equals(other.reasonCode, reasonCode)) &&
             (identical(other.reasonReference, reasonReference) || const DeepCollectionEquality().equals(other.reasonReference, reasonReference)) &&
             (identical(other.basis, basis) || const DeepCollectionEquality().equals(other.basis, basis)) &&
@@ -12130,6 +12295,7 @@ class _$_RiskAssessment extends _RiskAssessment {
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(subject) ^
       const DeepCollectionEquality().hash(encounter) ^
+      const DeepCollectionEquality().hash(occurrenceDateTime) ^
       const DeepCollectionEquality().hash(occurrenceDateTimeElement) ^
       const DeepCollectionEquality().hash(occurrencePeriod) ^
       const DeepCollectionEquality().hash(condition) ^
@@ -12175,6 +12341,7 @@ abstract class _RiskAssessment extends RiskAssessment {
       CodeableConcept code,
       @required Reference subject,
       Reference encounter,
+      FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
       Period occurrencePeriod,
       Reference condition,
@@ -12236,6 +12403,8 @@ abstract class _RiskAssessment extends RiskAssessment {
   @override
   Reference get encounter;
   @override
+  FhirDateTime get occurrenceDateTime;
+  @override
   @JsonKey(name: '_occurrenceDateTime')
   Element get occurrenceDateTimeElement;
   @override
@@ -12276,6 +12445,7 @@ class _$RiskAssessmentPredictionTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept outcome,
+      Decimal probabilityDecimal,
       @JsonKey(name: '_probabilityDecimal') Element probabilityDecimalElement,
       Range probabilityRange,
       CodeableConcept qualitativeRisk,
@@ -12290,6 +12460,7 @@ class _$RiskAssessmentPredictionTearOff {
       extension_: extension_,
       modifierExtension: modifierExtension,
       outcome: outcome,
+      probabilityDecimal: probabilityDecimal,
       probabilityDecimalElement: probabilityDecimalElement,
       probabilityRange: probabilityRange,
       qualitativeRisk: qualitativeRisk,
@@ -12312,6 +12483,7 @@ mixin _$RiskAssessmentPrediction {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   CodeableConcept get outcome;
+  Decimal get probabilityDecimal;
   @JsonKey(name: '_probabilityDecimal')
   Element get probabilityDecimalElement;
   Range get probabilityRange;
@@ -12338,6 +12510,7 @@ abstract class $RiskAssessmentPredictionCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept outcome,
+      Decimal probabilityDecimal,
       @JsonKey(name: '_probabilityDecimal') Element probabilityDecimalElement,
       Range probabilityRange,
       CodeableConcept qualitativeRisk,
@@ -12372,6 +12545,7 @@ class _$RiskAssessmentPredictionCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object outcome = freezed,
+    Object probabilityDecimal = freezed,
     Object probabilityDecimalElement = freezed,
     Object probabilityRange = freezed,
     Object qualitativeRisk = freezed,
@@ -12391,6 +12565,9 @@ class _$RiskAssessmentPredictionCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       outcome: outcome == freezed ? _value.outcome : outcome as CodeableConcept,
+      probabilityDecimal: probabilityDecimal == freezed
+          ? _value.probabilityDecimal
+          : probabilityDecimal as Decimal,
       probabilityDecimalElement: probabilityDecimalElement == freezed
           ? _value.probabilityDecimalElement
           : probabilityDecimalElement as Element,
@@ -12508,6 +12685,7 @@ abstract class _$RiskAssessmentPredictionCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept outcome,
+      Decimal probabilityDecimal,
       @JsonKey(name: '_probabilityDecimal') Element probabilityDecimalElement,
       Range probabilityRange,
       CodeableConcept qualitativeRisk,
@@ -12553,6 +12731,7 @@ class __$RiskAssessmentPredictionCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object outcome = freezed,
+    Object probabilityDecimal = freezed,
     Object probabilityDecimalElement = freezed,
     Object probabilityRange = freezed,
     Object qualitativeRisk = freezed,
@@ -12572,6 +12751,9 @@ class __$RiskAssessmentPredictionCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       outcome: outcome == freezed ? _value.outcome : outcome as CodeableConcept,
+      probabilityDecimal: probabilityDecimal == freezed
+          ? _value.probabilityDecimal
+          : probabilityDecimal as Decimal,
       probabilityDecimalElement: probabilityDecimalElement == freezed
           ? _value.probabilityDecimalElement
           : probabilityDecimalElement as Element,
@@ -12605,6 +12787,7 @@ class _$_RiskAssessmentPrediction extends _RiskAssessmentPrediction {
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.outcome,
+      this.probabilityDecimal,
       @JsonKey(name: '_probabilityDecimal') this.probabilityDecimalElement,
       this.probabilityRange,
       this.qualitativeRisk,
@@ -12629,6 +12812,8 @@ class _$_RiskAssessmentPrediction extends _RiskAssessmentPrediction {
   @override
   final CodeableConcept outcome;
   @override
+  final Decimal probabilityDecimal;
+  @override
   @JsonKey(name: '_probabilityDecimal')
   final Element probabilityDecimalElement;
   @override
@@ -12652,7 +12837,7 @@ class _$_RiskAssessmentPrediction extends _RiskAssessmentPrediction {
 
   @override
   String toString() {
-    return 'RiskAssessmentPrediction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, outcome: $outcome, probabilityDecimalElement: $probabilityDecimalElement, probabilityRange: $probabilityRange, qualitativeRisk: $qualitativeRisk, relativeRisk: $relativeRisk, relativeRiskElement: $relativeRiskElement, whenPeriod: $whenPeriod, whenRange: $whenRange, rationale: $rationale, rationaleElement: $rationaleElement)';
+    return 'RiskAssessmentPrediction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, outcome: $outcome, probabilityDecimal: $probabilityDecimal, probabilityDecimalElement: $probabilityDecimalElement, probabilityRange: $probabilityRange, qualitativeRisk: $qualitativeRisk, relativeRisk: $relativeRisk, relativeRiskElement: $relativeRiskElement, whenPeriod: $whenPeriod, whenRange: $whenRange, rationale: $rationale, rationaleElement: $rationaleElement)';
   }
 
   @override
@@ -12670,6 +12855,9 @@ class _$_RiskAssessmentPrediction extends _RiskAssessmentPrediction {
             (identical(other.outcome, outcome) ||
                 const DeepCollectionEquality()
                     .equals(other.outcome, outcome)) &&
+            (identical(other.probabilityDecimal, probabilityDecimal) ||
+                const DeepCollectionEquality()
+                    .equals(other.probabilityDecimal, probabilityDecimal)) &&
             (identical(other.probabilityDecimalElement,
                     probabilityDecimalElement) ||
                 const DeepCollectionEquality().equals(
@@ -12708,6 +12896,7 @@ class _$_RiskAssessmentPrediction extends _RiskAssessmentPrediction {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(outcome) ^
+      const DeepCollectionEquality().hash(probabilityDecimal) ^
       const DeepCollectionEquality().hash(probabilityDecimalElement) ^
       const DeepCollectionEquality().hash(probabilityRange) ^
       const DeepCollectionEquality().hash(qualitativeRisk) ^
@@ -12737,6 +12926,7 @@ abstract class _RiskAssessmentPrediction extends RiskAssessmentPrediction {
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept outcome,
+      Decimal probabilityDecimal,
       @JsonKey(name: '_probabilityDecimal')
           Element probabilityDecimalElement,
       Range probabilityRange,
@@ -12762,6 +12952,8 @@ abstract class _RiskAssessmentPrediction extends RiskAssessmentPrediction {
   List<FhirExtension> get modifierExtension;
   @override
   CodeableConcept get outcome;
+  @override
+  Decimal get probabilityDecimal;
   @override
   @JsonKey(name: '_probabilityDecimal')
   Element get probabilityDecimalElement;
@@ -12829,9 +13021,11 @@ class _$ServiceRequestTearOff {
       Range quantityRange,
       @required Reference subject,
       Reference encounter,
+      FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
       Period occurrencePeriod,
       Timing occurrenceTiming,
+      Boolean asNeededBoolean,
       @JsonKey(name: '_asNeededBoolean') Element asNeededBooleanElement,
       CodeableConcept asNeededCodeableConcept,
       FhirDateTime authoredOn,
@@ -12886,9 +13080,11 @@ class _$ServiceRequestTearOff {
       quantityRange: quantityRange,
       subject: subject,
       encounter: encounter,
+      occurrenceDateTime: occurrenceDateTime,
       occurrenceDateTimeElement: occurrenceDateTimeElement,
       occurrencePeriod: occurrencePeriod,
       occurrenceTiming: occurrenceTiming,
+      asNeededBoolean: asNeededBoolean,
       asNeededBooleanElement: asNeededBooleanElement,
       asNeededCodeableConcept: asNeededCodeableConcept,
       authoredOn: authoredOn,
@@ -12959,10 +13155,12 @@ mixin _$ServiceRequest {
   Range get quantityRange;
   Reference get subject;
   Reference get encounter;
+  FhirDateTime get occurrenceDateTime;
   @JsonKey(name: '_occurrenceDateTime')
   Element get occurrenceDateTimeElement;
   Period get occurrencePeriod;
   Timing get occurrenceTiming;
+  Boolean get asNeededBoolean;
   @JsonKey(name: '_asNeededBoolean')
   Element get asNeededBooleanElement;
   CodeableConcept get asNeededCodeableConcept;
@@ -13029,9 +13227,11 @@ abstract class $ServiceRequestCopyWith<$Res> {
       Range quantityRange,
       Reference subject,
       Reference encounter,
+      FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
       Period occurrencePeriod,
       Timing occurrenceTiming,
+      Boolean asNeededBoolean,
       @JsonKey(name: '_asNeededBoolean') Element asNeededBooleanElement,
       CodeableConcept asNeededCodeableConcept,
       FhirDateTime authoredOn,
@@ -13123,9 +13323,11 @@ class _$ServiceRequestCopyWithImpl<$Res>
     Object quantityRange = freezed,
     Object subject = freezed,
     Object encounter = freezed,
+    Object occurrenceDateTime = freezed,
     Object occurrenceDateTimeElement = freezed,
     Object occurrencePeriod = freezed,
     Object occurrenceTiming = freezed,
+    Object asNeededBoolean = freezed,
     Object asNeededBooleanElement = freezed,
     Object asNeededCodeableConcept = freezed,
     Object authoredOn = freezed,
@@ -13226,6 +13428,9 @@ class _$ServiceRequestCopyWithImpl<$Res>
       subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
+      occurrenceDateTime: occurrenceDateTime == freezed
+          ? _value.occurrenceDateTime
+          : occurrenceDateTime as FhirDateTime,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement as Element,
@@ -13235,6 +13440,9 @@ class _$ServiceRequestCopyWithImpl<$Res>
       occurrenceTiming: occurrenceTiming == freezed
           ? _value.occurrenceTiming
           : occurrenceTiming as Timing,
+      asNeededBoolean: asNeededBoolean == freezed
+          ? _value.asNeededBoolean
+          : asNeededBoolean as Boolean,
       asNeededBooleanElement: asNeededBooleanElement == freezed
           ? _value.asNeededBooleanElement
           : asNeededBooleanElement as Element,
@@ -13584,9 +13792,11 @@ abstract class _$ServiceRequestCopyWith<$Res>
       Range quantityRange,
       Reference subject,
       Reference encounter,
+      FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
       Period occurrencePeriod,
       Timing occurrenceTiming,
+      Boolean asNeededBoolean,
       @JsonKey(name: '_asNeededBoolean') Element asNeededBooleanElement,
       CodeableConcept asNeededCodeableConcept,
       FhirDateTime authoredOn,
@@ -13705,9 +13915,11 @@ class __$ServiceRequestCopyWithImpl<$Res>
     Object quantityRange = freezed,
     Object subject = freezed,
     Object encounter = freezed,
+    Object occurrenceDateTime = freezed,
     Object occurrenceDateTimeElement = freezed,
     Object occurrencePeriod = freezed,
     Object occurrenceTiming = freezed,
+    Object asNeededBoolean = freezed,
     Object asNeededBooleanElement = freezed,
     Object asNeededCodeableConcept = freezed,
     Object authoredOn = freezed,
@@ -13808,6 +14020,9 @@ class __$ServiceRequestCopyWithImpl<$Res>
       subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
+      occurrenceDateTime: occurrenceDateTime == freezed
+          ? _value.occurrenceDateTime
+          : occurrenceDateTime as FhirDateTime,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement as Element,
@@ -13817,6 +14032,9 @@ class __$ServiceRequestCopyWithImpl<$Res>
       occurrenceTiming: occurrenceTiming == freezed
           ? _value.occurrenceTiming
           : occurrenceTiming as Timing,
+      asNeededBoolean: asNeededBoolean == freezed
+          ? _value.asNeededBoolean
+          : asNeededBoolean as Boolean,
       asNeededBooleanElement: asNeededBooleanElement == freezed
           ? _value.asNeededBooleanElement
           : asNeededBooleanElement as Element,
@@ -13911,9 +14129,11 @@ class _$_ServiceRequest extends _ServiceRequest {
       this.quantityRange,
       @required this.subject,
       this.encounter,
+      this.occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') this.occurrenceDateTimeElement,
       this.occurrencePeriod,
       this.occurrenceTiming,
+      this.asNeededBoolean,
       @JsonKey(name: '_asNeededBoolean') this.asNeededBooleanElement,
       this.asNeededCodeableConcept,
       this.authoredOn,
@@ -14018,12 +14238,16 @@ class _$_ServiceRequest extends _ServiceRequest {
   @override
   final Reference encounter;
   @override
+  final FhirDateTime occurrenceDateTime;
+  @override
   @JsonKey(name: '_occurrenceDateTime')
   final Element occurrenceDateTimeElement;
   @override
   final Period occurrencePeriod;
   @override
   final Timing occurrenceTiming;
+  @override
+  final Boolean asNeededBoolean;
   @override
   @JsonKey(name: '_asNeededBoolean')
   final Element asNeededBooleanElement;
@@ -14068,7 +14292,7 @@ class _$_ServiceRequest extends _ServiceRequest {
 
   @override
   String toString() {
-    return 'ServiceRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, instantiatesUriElement: $instantiatesUriElement, basedOn: $basedOn, replaces: $replaces, requisition: $requisition, status: $status, statusElement: $statusElement, intent: $intent, intentElement: $intentElement, category: $category, priority: $priority, priorityElement: $priorityElement, doNotPerform: $doNotPerform, doNotPerformElement: $doNotPerformElement, code: $code, orderDetail: $orderDetail, quantityQuantity: $quantityQuantity, quantityRatio: $quantityRatio, quantityRange: $quantityRange, subject: $subject, encounter: $encounter, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrencePeriod: $occurrencePeriod, occurrenceTiming: $occurrenceTiming, asNeededBooleanElement: $asNeededBooleanElement, asNeededCodeableConcept: $asNeededCodeableConcept, authoredOn: $authoredOn, authoredOnElement: $authoredOnElement, requester: $requester, performerType: $performerType, performer: $performer, locationCode: $locationCode, locationReference: $locationReference, reasonCode: $reasonCode, reasonReference: $reasonReference, insurance: $insurance, supportingInfo: $supportingInfo, specimen: $specimen, bodySite: $bodySite, note: $note, patientInstruction: $patientInstruction, patientInstructionElement: $patientInstructionElement, relevantHistory: $relevantHistory)';
+    return 'ServiceRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, instantiatesUriElement: $instantiatesUriElement, basedOn: $basedOn, replaces: $replaces, requisition: $requisition, status: $status, statusElement: $statusElement, intent: $intent, intentElement: $intentElement, category: $category, priority: $priority, priorityElement: $priorityElement, doNotPerform: $doNotPerform, doNotPerformElement: $doNotPerformElement, code: $code, orderDetail: $orderDetail, quantityQuantity: $quantityQuantity, quantityRatio: $quantityRatio, quantityRange: $quantityRange, subject: $subject, encounter: $encounter, occurrenceDateTime: $occurrenceDateTime, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrencePeriod: $occurrencePeriod, occurrenceTiming: $occurrenceTiming, asNeededBoolean: $asNeededBoolean, asNeededBooleanElement: $asNeededBooleanElement, asNeededCodeableConcept: $asNeededCodeableConcept, authoredOn: $authoredOn, authoredOnElement: $authoredOnElement, requester: $requester, performerType: $performerType, performer: $performer, locationCode: $locationCode, locationReference: $locationReference, reasonCode: $reasonCode, reasonReference: $reasonReference, insurance: $insurance, supportingInfo: $supportingInfo, specimen: $specimen, bodySite: $bodySite, note: $note, patientInstruction: $patientInstruction, patientInstructionElement: $patientInstructionElement, relevantHistory: $relevantHistory)';
   }
 
   @override
@@ -14151,9 +14375,11 @@ class _$_ServiceRequest extends _ServiceRequest {
             (identical(other.quantityRange, quantityRange) || const DeepCollectionEquality().equals(other.quantityRange, quantityRange)) &&
             (identical(other.subject, subject) || const DeepCollectionEquality().equals(other.subject, subject)) &&
             (identical(other.encounter, encounter) || const DeepCollectionEquality().equals(other.encounter, encounter)) &&
+            (identical(other.occurrenceDateTime, occurrenceDateTime) || const DeepCollectionEquality().equals(other.occurrenceDateTime, occurrenceDateTime)) &&
             (identical(other.occurrenceDateTimeElement, occurrenceDateTimeElement) || const DeepCollectionEquality().equals(other.occurrenceDateTimeElement, occurrenceDateTimeElement)) &&
             (identical(other.occurrencePeriod, occurrencePeriod) || const DeepCollectionEquality().equals(other.occurrencePeriod, occurrencePeriod)) &&
             (identical(other.occurrenceTiming, occurrenceTiming) || const DeepCollectionEquality().equals(other.occurrenceTiming, occurrenceTiming)) &&
+            (identical(other.asNeededBoolean, asNeededBoolean) || const DeepCollectionEquality().equals(other.asNeededBoolean, asNeededBoolean)) &&
             (identical(other.asNeededBooleanElement, asNeededBooleanElement) || const DeepCollectionEquality().equals(other.asNeededBooleanElement, asNeededBooleanElement)) &&
             (identical(other.asNeededCodeableConcept, asNeededCodeableConcept) || const DeepCollectionEquality().equals(other.asNeededCodeableConcept, asNeededCodeableConcept)) &&
             (identical(other.authoredOn, authoredOn) || const DeepCollectionEquality().equals(other.authoredOn, authoredOn)) &&
@@ -14212,9 +14438,11 @@ class _$_ServiceRequest extends _ServiceRequest {
       const DeepCollectionEquality().hash(quantityRange) ^
       const DeepCollectionEquality().hash(subject) ^
       const DeepCollectionEquality().hash(encounter) ^
+      const DeepCollectionEquality().hash(occurrenceDateTime) ^
       const DeepCollectionEquality().hash(occurrenceDateTimeElement) ^
       const DeepCollectionEquality().hash(occurrencePeriod) ^
       const DeepCollectionEquality().hash(occurrenceTiming) ^
+      const DeepCollectionEquality().hash(asNeededBoolean) ^
       const DeepCollectionEquality().hash(asNeededBooleanElement) ^
       const DeepCollectionEquality().hash(asNeededCodeableConcept) ^
       const DeepCollectionEquality().hash(authoredOn) ^
@@ -14282,9 +14510,11 @@ abstract class _ServiceRequest extends ServiceRequest {
       Range quantityRange,
       @required Reference subject,
       Reference encounter,
+      FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
       Period occurrencePeriod,
       Timing occurrenceTiming,
+      Boolean asNeededBoolean,
       @JsonKey(name: '_asNeededBoolean') Element asNeededBooleanElement,
       CodeableConcept asNeededCodeableConcept,
       FhirDateTime authoredOn,
@@ -14386,12 +14616,16 @@ abstract class _ServiceRequest extends ServiceRequest {
   @override
   Reference get encounter;
   @override
+  FhirDateTime get occurrenceDateTime;
+  @override
   @JsonKey(name: '_occurrenceDateTime')
   Element get occurrenceDateTimeElement;
   @override
   Period get occurrencePeriod;
   @override
   Timing get occurrenceTiming;
+  @override
+  Boolean get asNeededBoolean;
   @override
   @JsonKey(name: '_asNeededBoolean')
   Element get asNeededBooleanElement;

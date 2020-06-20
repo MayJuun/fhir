@@ -221,6 +221,7 @@ _$_CommunicationPayload _$_$_CommunicationPayloadFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    contentString: json['contentString'] as String,
     contentStringElement: json['_contentString'] == null
         ? null
         : Element.fromJson(json['_contentString'] as Map<String, dynamic>),
@@ -249,6 +250,7 @@ Map<String, dynamic> _$_$_CommunicationPayloadToJson(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('contentString', instance.contentString);
   writeNotNull('_contentString', instance.contentStringElement?.toJson());
   writeNotNull('contentAttachment', instance.contentAttachment?.toJson());
   writeNotNull('contentReference', instance.contentReference?.toJson());
@@ -353,6 +355,9 @@ _$_CommunicationRequest _$_$_CommunicationRequestFromJson(
             ? null
             : CommunicationRequestPayload.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    occurrenceDateTime: json['occurrenceDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['occurrenceDateTime'] as String),
     occurrenceDateTimeElement: json['_occurrenceDateTime'] == null
         ? null
         : Element.fromJson(json['_occurrenceDateTime'] as Map<String, dynamic>),
@@ -435,6 +440,7 @@ Map<String, dynamic> _$_$_CommunicationRequestToJson(
   writeNotNull('about', instance.about?.map((e) => e?.toJson())?.toList());
   writeNotNull('encounter', instance.encounter?.toJson());
   writeNotNull('payload', instance.payload?.map((e) => e?.toJson())?.toList());
+  writeNotNull('occurrenceDateTime', instance.occurrenceDateTime?.toJson());
   writeNotNull(
       '_occurrenceDateTime', instance.occurrenceDateTimeElement?.toJson());
   writeNotNull('occurrencePeriod', instance.occurrencePeriod?.toJson());
@@ -466,6 +472,7 @@ _$_CommunicationRequestPayload _$_$_CommunicationRequestPayloadFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    contentString: json['contentString'] as String,
     contentStringElement: json['_contentString'] == null
         ? null
         : Element.fromJson(json['_contentString'] as Map<String, dynamic>),
@@ -494,6 +501,7 @@ Map<String, dynamic> _$_$_CommunicationRequestPayloadToJson(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('contentString', instance.contentString);
   writeNotNull('_contentString', instance.contentStringElement?.toJson());
   writeNotNull('contentAttachment', instance.contentAttachment?.toJson());
   writeNotNull('contentReference', instance.contentReference?.toJson());
@@ -594,6 +602,9 @@ _$_DeviceRequest _$_$_DeviceRequestFromJson(Map<String, dynamic> json) {
     encounter: json['encounter'] == null
         ? null
         : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
+    occurrenceDateTime: json['occurrenceDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['occurrenceDateTime'] as String),
     occurrenceDateTimeElement: json['_occurrenceDateTime'] == null
         ? null
         : Element.fromJson(json['_occurrenceDateTime'] as Map<String, dynamic>),
@@ -693,6 +704,7 @@ Map<String, dynamic> _$_$_DeviceRequestToJson(_$_DeviceRequest instance) {
       'parameter', instance.parameter?.map((e) => e?.toJson())?.toList());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('encounter', instance.encounter?.toJson());
+  writeNotNull('occurrenceDateTime', instance.occurrenceDateTime?.toJson());
   writeNotNull(
       '_occurrenceDateTime', instance.occurrenceDateTimeElement?.toJson());
   writeNotNull('occurrencePeriod', instance.occurrencePeriod?.toJson());
@@ -743,6 +755,9 @@ _$_DeviceRequestParameter _$_$_DeviceRequestParameterFromJson(
     valueRange: json['valueRange'] == null
         ? null
         : Range.fromJson(json['valueRange'] as Map<String, dynamic>),
+    valueBoolean: json['valueBoolean'] == null
+        ? null
+        : Boolean.fromJson(json['valueBoolean']),
     valueBooleanElement: json['_valueBoolean'] == null
         ? null
         : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
@@ -768,6 +783,7 @@ Map<String, dynamic> _$_$_DeviceRequestParameterToJson(
   writeNotNull('valueCodeableConcept', instance.valueCodeableConcept?.toJson());
   writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
   writeNotNull('valueRange', instance.valueRange?.toJson());
+  writeNotNull('valueBoolean', instance.valueBoolean?.toJson());
   writeNotNull('_valueBoolean', instance.valueBooleanElement?.toJson());
   return val;
 }
@@ -836,6 +852,9 @@ _$_DeviceUseStatement _$_$_DeviceUseStatementFromJson(
     timingPeriod: json['timingPeriod'] == null
         ? null
         : Period.fromJson(json['timingPeriod'] as Map<String, dynamic>),
+    timingDateTime: json['timingDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['timingDateTime'] as String),
     timingDateTimeElement: json['_timingDateTime'] == null
         ? null
         : Element.fromJson(json['_timingDateTime'] as Map<String, dynamic>),
@@ -904,6 +923,7 @@ Map<String, dynamic> _$_$_DeviceUseStatementToJson(
       'derivedFrom', instance.derivedFrom?.map((e) => e?.toJson())?.toList());
   writeNotNull('timingTiming', instance.timingTiming?.toJson());
   writeNotNull('timingPeriod', instance.timingPeriod?.toJson());
+  writeNotNull('timingDateTime', instance.timingDateTime?.toJson());
   writeNotNull('_timingDateTime', instance.timingDateTimeElement?.toJson());
   writeNotNull('recordedOn', instance.recordedOn?.toJson());
   writeNotNull('_recordedOn', instance.recordedOnElement?.toJson());
@@ -1004,9 +1024,15 @@ _$_GuidanceResponse _$_$_GuidanceResponseFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    moduleUri: json['moduleUri'] == null
+        ? null
+        : FhirUri.fromJson(json['moduleUri'] as String),
     moduleUriElement: json['_moduleUri'] == null
         ? null
         : Element.fromJson(json['_moduleUri'] as Map<String, dynamic>),
+    moduleCanonical: json['moduleCanonical'] == null
+        ? null
+        : Canonical.fromJson(json['moduleCanonical'] as String),
     moduleCanonicalElement: json['_moduleCanonical'] == null
         ? null
         : Element.fromJson(json['_moduleCanonical'] as Map<String, dynamic>),
@@ -1092,7 +1118,9 @@ Map<String, dynamic> _$_$_GuidanceResponseToJson(_$_GuidanceResponse instance) {
   writeNotNull('requestIdentifier', instance.requestIdentifier?.toJson());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('moduleUri', instance.moduleUri?.toJson());
   writeNotNull('_moduleUri', instance.moduleUriElement?.toJson());
+  writeNotNull('moduleCanonical', instance.moduleCanonical?.toJson());
   writeNotNull('_moduleCanonical', instance.moduleCanonicalElement?.toJson());
   writeNotNull(
       'moduleCodeableConcept', instance.moduleCodeableConcept?.toJson());
@@ -1191,6 +1219,9 @@ _$_SupplyDelivery _$_$_SupplyDeliveryFromJson(Map<String, dynamic> json) {
         ? null
         : SupplyDeliverySuppliedItem.fromJson(
             json['suppliedItem'] as Map<String, dynamic>),
+    occurrenceDateTime: json['occurrenceDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['occurrenceDateTime'] as String),
     occurrenceDateTimeElement: json['_occurrenceDateTime'] == null
         ? null
         : Element.fromJson(json['_occurrenceDateTime'] as Map<String, dynamic>),
@@ -1245,6 +1276,7 @@ Map<String, dynamic> _$_$_SupplyDeliveryToJson(_$_SupplyDelivery instance) {
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('suppliedItem', instance.suppliedItem?.toJson());
+  writeNotNull('occurrenceDateTime', instance.occurrenceDateTime?.toJson());
   writeNotNull(
       '_occurrenceDateTime', instance.occurrenceDateTimeElement?.toJson());
   writeNotNull('occurrencePeriod', instance.occurrencePeriod?.toJson());
@@ -1381,6 +1413,9 @@ _$_SupplyRequest _$_$_SupplyRequestFromJson(Map<String, dynamic> json) {
             ? null
             : SupplyRequestParameter.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    occurrenceDateTime: json['occurrenceDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['occurrenceDateTime'] as String),
     occurrenceDateTimeElement: json['_occurrenceDateTime'] == null
         ? null
         : Element.fromJson(json['_occurrenceDateTime'] as Map<String, dynamic>),
@@ -1456,6 +1491,7 @@ Map<String, dynamic> _$_$_SupplyRequestToJson(_$_SupplyRequest instance) {
   writeNotNull('quantity', instance.quantity?.toJson());
   writeNotNull(
       'parameter', instance.parameter?.map((e) => e?.toJson())?.toList());
+  writeNotNull('occurrenceDateTime', instance.occurrenceDateTime?.toJson());
   writeNotNull(
       '_occurrenceDateTime', instance.occurrenceDateTimeElement?.toJson());
   writeNotNull('occurrencePeriod', instance.occurrencePeriod?.toJson());
@@ -1511,6 +1547,9 @@ _$_SupplyRequestParameter _$_$_SupplyRequestParameterFromJson(
     valueRange: json['valueRange'] == null
         ? null
         : Range.fromJson(json['valueRange'] as Map<String, dynamic>),
+    valueBoolean: json['valueBoolean'] == null
+        ? null
+        : Boolean.fromJson(json['valueBoolean']),
     valueBooleanElement: json['_valueBoolean'] == null
         ? null
         : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
@@ -1536,6 +1575,7 @@ Map<String, dynamic> _$_$_SupplyRequestParameterToJson(
   writeNotNull('valueCodeableConcept', instance.valueCodeableConcept?.toJson());
   writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
   writeNotNull('valueRange', instance.valueRange?.toJson());
+  writeNotNull('valueBoolean', instance.valueBoolean?.toJson());
   writeNotNull('_valueBoolean', instance.valueBooleanElement?.toJson());
   return val;
 }

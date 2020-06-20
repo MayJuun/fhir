@@ -575,7 +575,7 @@ class __$CarePlanCopyWithImpl<$Res> extends _$CarePlanCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CarePlan implements _CarePlan {
-  const _$_CarePlan(
+  _$_CarePlan(
       {@required
       @JsonKey(required: true, defaultValue: 'CarePlan')
           this.resourceType,
@@ -835,7 +835,7 @@ class _$_CarePlan implements _CarePlan {
 }
 
 abstract class _CarePlan implements CarePlan {
-  const factory _CarePlan(
+  factory _CarePlan(
       {@required
       @JsonKey(required: true, defaultValue: 'CarePlan')
           String resourceType,
@@ -1120,7 +1120,7 @@ class __$CarePlanActivityCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CarePlanActivity implements _CarePlanActivity {
-  const _$_CarePlanActivity(
+  _$_CarePlanActivity(
       {this.outcomeCodeableConcept,
       this.outcomeReference,
       this.progress,
@@ -1186,7 +1186,7 @@ class _$_CarePlanActivity implements _CarePlanActivity {
 }
 
 abstract class _CarePlanActivity implements CarePlanActivity {
-  const factory _CarePlanActivity(
+  factory _CarePlanActivity(
       {List<CodeableConcept> outcomeCodeableConcept,
       List<Reference> outcomeReference,
       List<Annotation> progress,
@@ -1790,7 +1790,7 @@ class __$CarePlanDetailCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CarePlanDetail implements _CarePlanDetail {
-  const _$_CarePlanDetail(
+  _$_CarePlanDetail(
       {this.category,
       this.definition,
       this.code,
@@ -1991,7 +1991,7 @@ class _$_CarePlanDetail implements _CarePlanDetail {
 }
 
 abstract class _CarePlanDetail implements CarePlanDetail {
-  const factory _CarePlanDetail(
+  factory _CarePlanDetail(
       {CodeableConcept category,
       Reference definition,
       CodeableConcept code,
@@ -2511,7 +2511,7 @@ class __$CareTeamCopyWithImpl<$Res> extends _$CareTeamCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CareTeam implements _CareTeam {
-  const _$_CareTeam(
+  _$_CareTeam(
       {@required
       @JsonKey(required: true, defaultValue: 'CareTeam')
           this.resourceType,
@@ -2709,7 +2709,7 @@ class _$_CareTeam implements _CareTeam {
 }
 
 abstract class _CareTeam implements CareTeam {
-  const factory _CareTeam(
+  factory _CareTeam(
       {@required
       @JsonKey(required: true, defaultValue: 'CareTeam')
           String resourceType,
@@ -2963,7 +2963,7 @@ class __$CareTeamParticipantCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CareTeamParticipant implements _CareTeamParticipant {
-  const _$_CareTeamParticipant(
+  _$_CareTeamParticipant(
       {this.role, this.member, this.onBehalfOf, this.period});
 
   factory _$_CareTeamParticipant.fromJson(Map<String, dynamic> json) =>
@@ -3018,7 +3018,7 @@ class _$_CareTeamParticipant implements _CareTeamParticipant {
 }
 
 abstract class _CareTeamParticipant implements CareTeamParticipant {
-  const factory _CareTeamParticipant(
+  factory _CareTeamParticipant(
       {CodeableConcept role,
       Reference member,
       Reference onBehalfOf,
@@ -3617,7 +3617,7 @@ class __$GoalCopyWithImpl<$Res> extends _$GoalCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Goal implements _Goal {
-  const _$_Goal(
+  _$_Goal(
       {@required
       @JsonKey(required: true, defaultValue: 'Goal')
           this.resourceType,
@@ -3855,7 +3855,7 @@ class _$_Goal implements _Goal {
 }
 
 abstract class _Goal implements Goal {
-  const factory _Goal(
+  factory _Goal(
       {@required
       @JsonKey(required: true, defaultValue: 'Goal')
           String resourceType,
@@ -4199,7 +4199,7 @@ class __$GoalTargetCopyWithImpl<$Res> extends _$GoalTargetCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_GoalTarget implements _GoalTarget {
-  const _$_GoalTarget(
+  _$_GoalTarget(
       {this.measure,
       this.detailQuantity,
       this.detailRange,
@@ -4281,7 +4281,7 @@ class _$_GoalTarget implements _GoalTarget {
 }
 
 abstract class _GoalTarget implements GoalTarget {
-  const factory _GoalTarget(
+  factory _GoalTarget(
       {CodeableConcept measure,
       Quantity detailQuantity,
       Range detailRange,
@@ -4798,7 +4798,7 @@ class __$NutritionOrderCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_NutritionOrder implements _NutritionOrder {
-  const _$_NutritionOrder(
+  _$_NutritionOrder(
       {@required
       @JsonKey(required: true, defaultValue: 'NutritionOrder')
           this.resourceType,
@@ -5001,7 +5001,7 @@ class _$_NutritionOrder implements _NutritionOrder {
 }
 
 abstract class _NutritionOrder implements NutritionOrder {
-  const factory _NutritionOrder(
+  factory _NutritionOrder(
       {@required
       @JsonKey(required: true, defaultValue: 'NutritionOrder')
           String resourceType,
@@ -5266,7 +5266,7 @@ class __$NutritionOrderOralDietCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_NutritionOrderOralDiet implements _NutritionOrderOralDiet {
-  const _$_NutritionOrderOralDiet(
+  _$_NutritionOrderOralDiet(
       {this.type,
       this.schedule,
       this.nutrient,
@@ -5348,7 +5348,7 @@ class _$_NutritionOrderOralDiet implements _NutritionOrderOralDiet {
 }
 
 abstract class _NutritionOrderOralDiet implements NutritionOrderOralDiet {
-  const factory _NutritionOrderOralDiet(
+  factory _NutritionOrderOralDiet(
           {List<CodeableConcept> type,
           List<Timing> schedule,
           List<NutritionOrderNutrient> nutrient,
@@ -5497,7 +5497,7 @@ class __$NutritionOrderNutrientCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_NutritionOrderNutrient implements _NutritionOrderNutrient {
-  const _$_NutritionOrderNutrient({this.modifier, this.amount});
+  _$_NutritionOrderNutrient({this.modifier, this.amount});
 
   factory _$_NutritionOrderNutrient.fromJson(Map<String, dynamic> json) =>
       _$_$_NutritionOrderNutrientFromJson(json);
@@ -5541,8 +5541,8 @@ class _$_NutritionOrderNutrient implements _NutritionOrderNutrient {
 }
 
 abstract class _NutritionOrderNutrient implements NutritionOrderNutrient {
-  const factory _NutritionOrderNutrient(
-      {CodeableConcept modifier, Quantity amount}) = _$_NutritionOrderNutrient;
+  factory _NutritionOrderNutrient({CodeableConcept modifier, Quantity amount}) =
+      _$_NutritionOrderNutrient;
 
   factory _NutritionOrderNutrient.fromJson(Map<String, dynamic> json) =
       _$_NutritionOrderNutrient.fromJson;
@@ -5675,7 +5675,7 @@ class __$NutritionOrderTextureCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_NutritionOrderTexture implements _NutritionOrderTexture {
-  const _$_NutritionOrderTexture({this.modifier, this.foodType});
+  _$_NutritionOrderTexture({this.modifier, this.foodType});
 
   factory _$_NutritionOrderTexture.fromJson(Map<String, dynamic> json) =>
       _$_$_NutritionOrderTextureFromJson(json);
@@ -5720,7 +5720,7 @@ class _$_NutritionOrderTexture implements _NutritionOrderTexture {
 }
 
 abstract class _NutritionOrderTexture implements NutritionOrderTexture {
-  const factory _NutritionOrderTexture(
+  factory _NutritionOrderTexture(
       {CodeableConcept modifier,
       CodeableConcept foodType}) = _$_NutritionOrderTexture;
 
@@ -5944,7 +5944,7 @@ class __$NutritionOrderSupplementCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_NutritionOrderSupplement implements _NutritionOrderSupplement {
-  const _$_NutritionOrderSupplement(
+  _$_NutritionOrderSupplement(
       {this.type,
       this.productName,
       this.schedule,
@@ -6027,7 +6027,7 @@ class _$_NutritionOrderSupplement implements _NutritionOrderSupplement {
 }
 
 abstract class _NutritionOrderSupplement implements NutritionOrderSupplement {
-  const factory _NutritionOrderSupplement(
+  factory _NutritionOrderSupplement(
           {CodeableConcept type,
           String productName,
           List<Timing> schedule,
@@ -6419,7 +6419,7 @@ class __$NutritionOrderEnteralFormulaCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_NutritionOrderEnteralFormula implements _NutritionOrderEnteralFormula {
-  const _$_NutritionOrderEnteralFormula(
+  _$_NutritionOrderEnteralFormula(
       {this.baseFormulaType,
       this.baseFormulaProductName,
       this.additiveType,
@@ -6549,7 +6549,7 @@ class _$_NutritionOrderEnteralFormula implements _NutritionOrderEnteralFormula {
 
 abstract class _NutritionOrderEnteralFormula
     implements NutritionOrderEnteralFormula {
-  const factory _NutritionOrderEnteralFormula(
+  factory _NutritionOrderEnteralFormula(
           {CodeableConcept baseFormulaType,
           String baseFormulaProductName,
           CodeableConcept additiveType,
@@ -6776,7 +6776,7 @@ class __$NutritionOrderAdministrationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_NutritionOrderAdministration implements _NutritionOrderAdministration {
-  const _$_NutritionOrderAdministration(
+  _$_NutritionOrderAdministration(
       {this.schedule, this.quantity, this.rateSimpleQuantity, this.rateRatio});
 
   factory _$_NutritionOrderAdministration.fromJson(Map<String, dynamic> json) =>
@@ -6835,7 +6835,7 @@ class _$_NutritionOrderAdministration implements _NutritionOrderAdministration {
 
 abstract class _NutritionOrderAdministration
     implements NutritionOrderAdministration {
-  const factory _NutritionOrderAdministration(
+  factory _NutritionOrderAdministration(
       {Timing schedule,
       Quantity quantity,
       Quantity rateSimpleQuantity,
@@ -7755,7 +7755,7 @@ class __$ProcedureRequestCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ProcedureRequest implements _ProcedureRequest {
-  const _$_ProcedureRequest(
+  _$_ProcedureRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'ProcedureRequest')
           this.resourceType,
@@ -8079,7 +8079,7 @@ class _$_ProcedureRequest implements _ProcedureRequest {
 }
 
 abstract class _ProcedureRequest implements ProcedureRequest {
-  const factory _ProcedureRequest(
+  factory _ProcedureRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'ProcedureRequest')
           String resourceType,
@@ -8366,7 +8366,7 @@ class __$ProcedureRequestRequesterCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ProcedureRequestRequester implements _ProcedureRequestRequester {
-  const _$_ProcedureRequestRequester(
+  _$_ProcedureRequestRequester(
       {@JsonKey(required: true) this.agent, this.onBehalfOf});
 
   factory _$_ProcedureRequestRequester.fromJson(Map<String, dynamic> json) =>
@@ -8413,7 +8413,7 @@ class _$_ProcedureRequestRequester implements _ProcedureRequestRequester {
 }
 
 abstract class _ProcedureRequestRequester implements ProcedureRequestRequester {
-  const factory _ProcedureRequestRequester(
+  factory _ProcedureRequestRequester(
       {@JsonKey(required: true) Reference agent,
       Reference onBehalfOf}) = _$_ProcedureRequestRequester;
 
@@ -9190,7 +9190,7 @@ class __$ReferralRequestCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ReferralRequest implements _ReferralRequest {
-  const _$_ReferralRequest(
+  _$_ReferralRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'ReferralRequest')
           this.resourceType,
@@ -9480,7 +9480,7 @@ class _$_ReferralRequest implements _ReferralRequest {
 }
 
 abstract class _ReferralRequest implements ReferralRequest {
-  const factory _ReferralRequest(
+  factory _ReferralRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'ReferralRequest')
           String resourceType,
@@ -9745,7 +9745,7 @@ class __$ReferralRequestRequesterCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ReferralRequestRequester implements _ReferralRequestRequester {
-  const _$_ReferralRequestRequester(
+  _$_ReferralRequestRequester(
       {@JsonKey(required: true) this.agent, this.onBehalfOf});
 
   factory _$_ReferralRequestRequester.fromJson(Map<String, dynamic> json) =>
@@ -9791,7 +9791,7 @@ class _$_ReferralRequestRequester implements _ReferralRequestRequester {
 }
 
 abstract class _ReferralRequestRequester implements ReferralRequestRequester {
-  const factory _ReferralRequestRequester(
+  factory _ReferralRequestRequester(
       {@JsonKey(required: true) Reference agent,
       Reference onBehalfOf}) = _$_ReferralRequestRequester;
 
@@ -10388,7 +10388,7 @@ class __$RequestGroupCopyWithImpl<$Res> extends _$RequestGroupCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_RequestGroup implements _RequestGroup {
-  const _$_RequestGroup(
+  _$_RequestGroup(
       {@required
       @JsonKey(required: true, defaultValue: 'RequestGroup')
           this.resourceType,
@@ -10621,7 +10621,7 @@ class _$_RequestGroup implements _RequestGroup {
 }
 
 abstract class _RequestGroup implements RequestGroup {
-  const factory _RequestGroup(
+  factory _RequestGroup(
       {@required
       @JsonKey(required: true, defaultValue: 'RequestGroup')
           String resourceType,
@@ -11446,7 +11446,7 @@ class __$RequestGroupActionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_RequestGroupAction implements _RequestGroupAction {
-  const _$_RequestGroupAction(
+  _$_RequestGroupAction(
       {this.label,
       this.title,
       this.description,
@@ -11691,7 +11691,7 @@ class _$_RequestGroupAction implements _RequestGroupAction {
 }
 
 abstract class _RequestGroupAction implements RequestGroupAction {
-  const factory _RequestGroupAction(
+  factory _RequestGroupAction(
       {String label,
       String title,
       String description,
@@ -12039,7 +12039,7 @@ class __$RequestGroupConditionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_RequestGroupCondition implements _RequestGroupCondition {
-  const _$_RequestGroupCondition(
+  _$_RequestGroupCondition(
       {this.kind,
       this.description,
       this.language,
@@ -12131,7 +12131,7 @@ class _$_RequestGroupCondition implements _RequestGroupCondition {
 }
 
 abstract class _RequestGroupCondition implements RequestGroupCondition {
-  const factory _RequestGroupCondition(
+  factory _RequestGroupCondition(
           {Code kind,
           String description,
           String language,
@@ -12371,7 +12371,7 @@ class __$RequestGroupRelatedActionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_RequestGroupRelatedAction implements _RequestGroupRelatedAction {
-  const _$_RequestGroupRelatedAction(
+  _$_RequestGroupRelatedAction(
       {this.actionId,
       this.relationship,
       this.offsetDuration,
@@ -12449,7 +12449,7 @@ class _$_RequestGroupRelatedAction implements _RequestGroupRelatedAction {
 }
 
 abstract class _RequestGroupRelatedAction implements RequestGroupRelatedAction {
-  const factory _RequestGroupRelatedAction(
+  factory _RequestGroupRelatedAction(
           {Id actionId,
           Code relationship,
           Duration offsetDuration,
@@ -13156,7 +13156,7 @@ class __$RiskAssessmentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_RiskAssessment implements _RiskAssessment {
-  const _$_RiskAssessment(
+  _$_RiskAssessment(
       {@required
       @JsonKey(required: true, defaultValue: 'RiskAssessment')
           this.resourceType,
@@ -13400,7 +13400,7 @@ class _$_RiskAssessment implements _RiskAssessment {
 }
 
 abstract class _RiskAssessment implements RiskAssessment {
-  const factory _RiskAssessment(
+  factory _RiskAssessment(
       {@required
       @JsonKey(required: true, defaultValue: 'RiskAssessment')
           String resourceType,
@@ -13830,7 +13830,7 @@ class __$RiskAssessmentPredictionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_RiskAssessmentPrediction implements _RiskAssessmentPrediction {
-  const _$_RiskAssessmentPrediction(
+  _$_RiskAssessmentPrediction(
       {@JsonKey(required: true) this.outcome,
       this.probabilityDecimal,
       this.probabilityRange,
@@ -13946,7 +13946,7 @@ class _$_RiskAssessmentPrediction implements _RiskAssessmentPrediction {
 }
 
 abstract class _RiskAssessmentPrediction implements RiskAssessmentPrediction {
-  const factory _RiskAssessmentPrediction(
+  factory _RiskAssessmentPrediction(
       {@JsonKey(required: true)
           CodeableConcept outcome,
       Decimal probabilityDecimal,
@@ -14437,7 +14437,7 @@ class __$VisionPrescriptionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_VisionPrescription implements _VisionPrescription {
-  const _$_VisionPrescription(
+  _$_VisionPrescription(
       {@required
       @JsonKey(required: true, defaultValue: 'VisionPrescription')
           this.resourceType,
@@ -14615,7 +14615,7 @@ class _$_VisionPrescription implements _VisionPrescription {
 }
 
 abstract class _VisionPrescription implements VisionPrescription {
-  const factory _VisionPrescription(
+  factory _VisionPrescription(
       {@required
       @JsonKey(required: true, defaultValue: 'VisionPrescription')
           String resourceType,
@@ -15251,7 +15251,7 @@ class __$VisionPrescriptionDispenseCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_VisionPrescriptionDispense implements _VisionPrescriptionDispense {
-  const _$_VisionPrescriptionDispense(
+  _$_VisionPrescriptionDispense(
       {this.product,
       @JsonKey(unknownEnumValue: DispenseEye.unknown) this.eye,
       this.sphere,
@@ -15477,7 +15477,7 @@ class _$_VisionPrescriptionDispense implements _VisionPrescriptionDispense {
 
 abstract class _VisionPrescriptionDispense
     implements VisionPrescriptionDispense {
-  const factory _VisionPrescriptionDispense(
+  factory _VisionPrescriptionDispense(
           {CodeableConcept product,
           @JsonKey(unknownEnumValue: DispenseEye.unknown) DispenseEye eye,
           Decimal sphere,

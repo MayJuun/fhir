@@ -9,7 +9,7 @@ part 'terminology.g.dart';
 
 @freezed
 abstract class ValueSet with _$ValueSet implements Resource {
-  const factory ValueSet({
+  factory ValueSet({
     @JsonKey(defaultValue: 'ValueSet') String resourceType,
     Id id,
     Meta meta,
@@ -62,7 +62,7 @@ abstract class ValueSet with _$ValueSet implements Resource {
 
 @freezed
 abstract class ValueSetContact with _$ValueSetContact {
-  const factory ValueSetContact({
+  factory ValueSetContact({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -77,7 +77,7 @@ abstract class ValueSetContact with _$ValueSetContact {
 
 @freezed
 abstract class ValueSetCodeSystem with _$ValueSetCodeSystem {
-  const factory ValueSetCodeSystem({
+  factory ValueSetCodeSystem({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -97,7 +97,7 @@ abstract class ValueSetCodeSystem with _$ValueSetCodeSystem {
 
 @freezed
 abstract class ValueSetConcept with _$ValueSetConcept {
-  const factory ValueSetConcept({
+  factory ValueSetConcept({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
@@ -118,7 +118,7 @@ abstract class ValueSetConcept with _$ValueSetConcept {
 
 @freezed
 abstract class ValueSetDesignation with _$ValueSetDesignation {
-  const factory ValueSetDesignation({
+  factory ValueSetDesignation({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -135,7 +135,7 @@ abstract class ValueSetDesignation with _$ValueSetDesignation {
 
 @freezed
 abstract class ValueSetCompose with _$ValueSetCompose {
-  const factory ValueSetCompose({
+  factory ValueSetCompose({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -151,7 +151,7 @@ abstract class ValueSetCompose with _$ValueSetCompose {
 
 @freezed
 abstract class IncludeExclude with _$IncludeExclude {
-  const factory IncludeExclude({
+  factory IncludeExclude({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -170,7 +170,7 @@ abstract class IncludeExclude with _$IncludeExclude {
 
 @freezed
 abstract class IncludeExcludeConcept with _$IncludeExcludeConcept {
-  const factory IncludeExcludeConcept({
+  factory IncludeExcludeConcept({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -188,7 +188,7 @@ abstract class IncludeExcludeConcept with _$IncludeExcludeConcept {
 
 @freezed
 abstract class IncludeExcludeFilter with _$IncludeExcludeFilter {
-  const factory IncludeExcludeFilter({
+  factory IncludeExcludeFilter({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -209,7 +209,7 @@ abstract class IncludeExcludeFilter with _$IncludeExcludeFilter {
 
 @freezed
 abstract class ValueSetExpansion with _$ValueSetExpansion {
-  const factory ValueSetExpansion({
+  factory ValueSetExpansion({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -232,7 +232,7 @@ abstract class ValueSetExpansion with _$ValueSetExpansion {
 
 @freezed
 abstract class ValueSetParameter with _$ValueSetParameter {
-  const factory ValueSetParameter({
+  factory ValueSetParameter({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -259,11 +259,10 @@ abstract class ValueSetParameter with _$ValueSetParameter {
 
 @freezed
 abstract class ValueSetContains with _$ValueSetContains {
-  const factory ValueSetContains({
+  factory ValueSetContains({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
-
     @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     FhirUri system,
     @JsonKey(name: 'abstract') Boolean abstract_,
@@ -284,7 +283,7 @@ abstract class ValueSetContains with _$ValueSetContains {
 
 @freezed
 abstract class NamingSystem with _$NamingSystem implements Resource {
-  const factory NamingSystem({
+  factory NamingSystem({
     @JsonKey(defaultValue: 'NamingSystem') String resourceType,
     Id id,
     Meta meta,
@@ -329,7 +328,7 @@ abstract class NamingSystem with _$NamingSystem implements Resource {
 
 @freezed
 abstract class ConceptMap with _$ConceptMap implements Resource {
-  const factory ConceptMap({
+  factory ConceptMap({
     @JsonKey(defaultValue: 'ConceptMap') String resourceType,
     Id id,
     Meta meta,
@@ -380,7 +379,7 @@ abstract class ConceptMap with _$ConceptMap implements Resource {
 
 @freezed
 abstract class NamingSystemContact with _$NamingSystemContact {
-  const factory NamingSystemContact({
+  factory NamingSystemContact({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -394,7 +393,7 @@ abstract class NamingSystemContact with _$NamingSystemContact {
 
 @freezed
 abstract class NamingSystemUniqueId with _$NamingSystemUniqueId {
-  const factory NamingSystemUniqueId({
+  factory NamingSystemUniqueId({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -415,7 +414,7 @@ abstract class NamingSystemUniqueId with _$NamingSystemUniqueId {
 
 @freezed
 abstract class ConceptMapContact with _$ConceptMapContact {
-  const factory ConceptMapContact({
+  factory ConceptMapContact({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -429,7 +428,7 @@ abstract class ConceptMapContact with _$ConceptMapContact {
 
 @freezed
 abstract class ConceptMapElement with _$ConceptMapElement {
-  const factory ConceptMapElement({
+  factory ConceptMapElement({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -445,7 +444,7 @@ abstract class ConceptMapElement with _$ConceptMapElement {
 
 @freezed
 abstract class ConceptMapTarget with _$ConceptMapTarget {
-  const factory ConceptMapTarget({
+  factory ConceptMapTarget({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -468,7 +467,7 @@ abstract class ConceptMapTarget with _$ConceptMapTarget {
 
 @freezed
 abstract class ConceptMapDependsOn with _$ConceptMapDependsOn {
-  const factory ConceptMapDependsOn({
+  factory ConceptMapDependsOn({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,

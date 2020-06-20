@@ -1391,6 +1391,7 @@ class _$DataRequirementDateFilterTearOff {
       @JsonKey(name: '_path') Element pathElement,
       String searchParam,
       @JsonKey(name: '_searchParam') Element searchParamElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
       Period valuePeriod,
       Duration valueDuration}) {
@@ -1402,6 +1403,7 @@ class _$DataRequirementDateFilterTearOff {
       pathElement: pathElement,
       searchParam: searchParam,
       searchParamElement: searchParamElement,
+      valueDateTime: valueDateTime,
       valueDateTimeElement: valueDateTimeElement,
       valuePeriod: valuePeriod,
       valueDuration: valueDuration,
@@ -1423,6 +1425,7 @@ mixin _$DataRequirementDateFilter {
   String get searchParam;
   @JsonKey(name: '_searchParam')
   Element get searchParamElement;
+  FhirDateTime get valueDateTime;
   @JsonKey(name: '_valueDateTime')
   Element get valueDateTimeElement;
   Period get valuePeriod;
@@ -1444,6 +1447,7 @@ abstract class $DataRequirementDateFilterCopyWith<$Res> {
       @JsonKey(name: '_path') Element pathElement,
       String searchParam,
       @JsonKey(name: '_searchParam') Element searchParamElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
       Period valuePeriod,
       Duration valueDuration});
@@ -1472,6 +1476,7 @@ class _$DataRequirementDateFilterCopyWithImpl<$Res>
     Object pathElement = freezed,
     Object searchParam = freezed,
     Object searchParamElement = freezed,
+    Object valueDateTime = freezed,
     Object valueDateTimeElement = freezed,
     Object valuePeriod = freezed,
     Object valueDuration = freezed,
@@ -1492,6 +1497,9 @@ class _$DataRequirementDateFilterCopyWithImpl<$Res>
       searchParamElement: searchParamElement == freezed
           ? _value.searchParamElement
           : searchParamElement as Element,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime as FhirDateTime,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement as Element,
@@ -1568,6 +1576,7 @@ abstract class _$DataRequirementDateFilterCopyWith<$Res>
       @JsonKey(name: '_path') Element pathElement,
       String searchParam,
       @JsonKey(name: '_searchParam') Element searchParamElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
       Period valuePeriod,
       Duration valueDuration});
@@ -1604,6 +1613,7 @@ class __$DataRequirementDateFilterCopyWithImpl<$Res>
     Object pathElement = freezed,
     Object searchParam = freezed,
     Object searchParamElement = freezed,
+    Object valueDateTime = freezed,
     Object valueDateTimeElement = freezed,
     Object valuePeriod = freezed,
     Object valueDuration = freezed,
@@ -1624,6 +1634,9 @@ class __$DataRequirementDateFilterCopyWithImpl<$Res>
       searchParamElement: searchParamElement == freezed
           ? _value.searchParamElement
           : searchParamElement as Element,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime as FhirDateTime,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement as Element,
@@ -1646,6 +1659,7 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
       @JsonKey(name: '_path') this.pathElement,
       this.searchParam,
       @JsonKey(name: '_searchParam') this.searchParamElement,
+      this.valueDateTime,
       @JsonKey(name: '_valueDateTime') this.valueDateTimeElement,
       this.valuePeriod,
       this.valueDuration})
@@ -1672,6 +1686,8 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
   @JsonKey(name: '_searchParam')
   final Element searchParamElement;
   @override
+  final FhirDateTime valueDateTime;
+  @override
   @JsonKey(name: '_valueDateTime')
   final Element valueDateTimeElement;
   @override
@@ -1681,7 +1697,7 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
 
   @override
   String toString() {
-    return 'DataRequirementDateFilter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, path: $path, pathElement: $pathElement, searchParam: $searchParam, searchParamElement: $searchParamElement, valueDateTimeElement: $valueDateTimeElement, valuePeriod: $valuePeriod, valueDuration: $valueDuration)';
+    return 'DataRequirementDateFilter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, path: $path, pathElement: $pathElement, searchParam: $searchParam, searchParamElement: $searchParamElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valuePeriod: $valuePeriod, valueDuration: $valueDuration)';
   }
 
   @override
@@ -1707,6 +1723,9 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
             (identical(other.searchParamElement, searchParamElement) ||
                 const DeepCollectionEquality()
                     .equals(other.searchParamElement, searchParamElement)) &&
+            (identical(other.valueDateTime, valueDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDateTime, valueDateTime)) &&
             (identical(other.valueDateTimeElement, valueDateTimeElement) ||
                 const DeepCollectionEquality().equals(
                     other.valueDateTimeElement, valueDateTimeElement)) &&
@@ -1728,6 +1747,7 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
       const DeepCollectionEquality().hash(pathElement) ^
       const DeepCollectionEquality().hash(searchParam) ^
       const DeepCollectionEquality().hash(searchParamElement) ^
+      const DeepCollectionEquality().hash(valueDateTime) ^
       const DeepCollectionEquality().hash(valueDateTimeElement) ^
       const DeepCollectionEquality().hash(valuePeriod) ^
       const DeepCollectionEquality().hash(valueDuration);
@@ -1754,6 +1774,7 @@ abstract class _DataRequirementDateFilter extends DataRequirementDateFilter {
       @JsonKey(name: '_path') Element pathElement,
       String searchParam,
       @JsonKey(name: '_searchParam') Element searchParamElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
       Period valuePeriod,
       Duration valueDuration}) = _$_DataRequirementDateFilter;
@@ -1778,6 +1799,8 @@ abstract class _DataRequirementDateFilter extends DataRequirementDateFilter {
   @override
   @JsonKey(name: '_searchParam')
   Element get searchParamElement;
+  @override
+  FhirDateTime get valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
   Element get valueDateTimeElement;
@@ -3183,8 +3206,10 @@ class _$TriggerDefinitionTearOff {
           Element nameElement,
       Timing timingTiming,
       Reference timingReference,
+      Date timingDate,
       @JsonKey(name: '_timingDate')
           Element timingDateElement,
+      FhirDateTime timingDateTime,
       @JsonKey(name: '_timingDateTime')
           Element timingDateTimeElement,
       List<DataRequirement> data,
@@ -3198,7 +3223,9 @@ class _$TriggerDefinitionTearOff {
       nameElement: nameElement,
       timingTiming: timingTiming,
       timingReference: timingReference,
+      timingDate: timingDate,
       timingDateElement: timingDateElement,
+      timingDateTime: timingDateTime,
       timingDateTimeElement: timingDateTimeElement,
       data: data,
       condition: condition,
@@ -3222,8 +3249,10 @@ mixin _$TriggerDefinition {
   Element get nameElement;
   Timing get timingTiming;
   Reference get timingReference;
+  Date get timingDate;
   @JsonKey(name: '_timingDate')
   Element get timingDateElement;
+  FhirDateTime get timingDateTime;
   @JsonKey(name: '_timingDateTime')
   Element get timingDateTimeElement;
   List<DataRequirement> get data;
@@ -3250,8 +3279,10 @@ abstract class $TriggerDefinitionCopyWith<$Res> {
           Element nameElement,
       Timing timingTiming,
       Reference timingReference,
+      Date timingDate,
       @JsonKey(name: '_timingDate')
           Element timingDateElement,
+      FhirDateTime timingDateTime,
       @JsonKey(name: '_timingDateTime')
           Element timingDateTimeElement,
       List<DataRequirement> data,
@@ -3284,7 +3315,9 @@ class _$TriggerDefinitionCopyWithImpl<$Res>
     Object nameElement = freezed,
     Object timingTiming = freezed,
     Object timingReference = freezed,
+    Object timingDate = freezed,
     Object timingDateElement = freezed,
+    Object timingDateTime = freezed,
     Object timingDateTimeElement = freezed,
     Object data = freezed,
     Object condition = freezed,
@@ -3306,9 +3339,14 @@ class _$TriggerDefinitionCopyWithImpl<$Res>
       timingReference: timingReference == freezed
           ? _value.timingReference
           : timingReference as Reference,
+      timingDate:
+          timingDate == freezed ? _value.timingDate : timingDate as Date,
       timingDateElement: timingDateElement == freezed
           ? _value.timingDateElement
           : timingDateElement as Element,
+      timingDateTime: timingDateTime == freezed
+          ? _value.timingDateTime
+          : timingDateTime as FhirDateTime,
       timingDateTimeElement: timingDateTimeElement == freezed
           ? _value.timingDateTimeElement
           : timingDateTimeElement as Element,
@@ -3408,8 +3446,10 @@ abstract class _$TriggerDefinitionCopyWith<$Res>
           Element nameElement,
       Timing timingTiming,
       Reference timingReference,
+      Date timingDate,
       @JsonKey(name: '_timingDate')
           Element timingDateElement,
+      FhirDateTime timingDateTime,
       @JsonKey(name: '_timingDateTime')
           Element timingDateTimeElement,
       List<DataRequirement> data,
@@ -3451,7 +3491,9 @@ class __$TriggerDefinitionCopyWithImpl<$Res>
     Object nameElement = freezed,
     Object timingTiming = freezed,
     Object timingReference = freezed,
+    Object timingDate = freezed,
     Object timingDateElement = freezed,
+    Object timingDateTime = freezed,
     Object timingDateTimeElement = freezed,
     Object data = freezed,
     Object condition = freezed,
@@ -3473,9 +3515,14 @@ class __$TriggerDefinitionCopyWithImpl<$Res>
       timingReference: timingReference == freezed
           ? _value.timingReference
           : timingReference as Reference,
+      timingDate:
+          timingDate == freezed ? _value.timingDate : timingDate as Date,
       timingDateElement: timingDateElement == freezed
           ? _value.timingDateElement
           : timingDateElement as Element,
+      timingDateTime: timingDateTime == freezed
+          ? _value.timingDateTime
+          : timingDateTime as FhirDateTime,
       timingDateTimeElement: timingDateTimeElement == freezed
           ? _value.timingDateTimeElement
           : timingDateTimeElement as Element,
@@ -3497,7 +3544,9 @@ class _$_TriggerDefinition extends _TriggerDefinition {
       @JsonKey(name: '_name') this.nameElement,
       this.timingTiming,
       this.timingReference,
+      this.timingDate,
       @JsonKey(name: '_timingDate') this.timingDateElement,
+      this.timingDateTime,
       @JsonKey(name: '_timingDateTime') this.timingDateTimeElement,
       this.data,
       this.condition})
@@ -3527,8 +3576,12 @@ class _$_TriggerDefinition extends _TriggerDefinition {
   @override
   final Reference timingReference;
   @override
+  final Date timingDate;
+  @override
   @JsonKey(name: '_timingDate')
   final Element timingDateElement;
+  @override
+  final FhirDateTime timingDateTime;
   @override
   @JsonKey(name: '_timingDateTime')
   final Element timingDateTimeElement;
@@ -3539,7 +3592,7 @@ class _$_TriggerDefinition extends _TriggerDefinition {
 
   @override
   String toString() {
-    return 'TriggerDefinition(id: $id, extension_: $extension_, type: $type, typeElement: $typeElement, name: $name, nameElement: $nameElement, timingTiming: $timingTiming, timingReference: $timingReference, timingDateElement: $timingDateElement, timingDateTimeElement: $timingDateTimeElement, data: $data, condition: $condition)';
+    return 'TriggerDefinition(id: $id, extension_: $extension_, type: $type, typeElement: $typeElement, name: $name, nameElement: $nameElement, timingTiming: $timingTiming, timingReference: $timingReference, timingDate: $timingDate, timingDateElement: $timingDateElement, timingDateTime: $timingDateTime, timingDateTimeElement: $timingDateTimeElement, data: $data, condition: $condition)';
   }
 
   @override
@@ -3567,9 +3620,15 @@ class _$_TriggerDefinition extends _TriggerDefinition {
             (identical(other.timingReference, timingReference) ||
                 const DeepCollectionEquality()
                     .equals(other.timingReference, timingReference)) &&
+            (identical(other.timingDate, timingDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.timingDate, timingDate)) &&
             (identical(other.timingDateElement, timingDateElement) ||
                 const DeepCollectionEquality()
                     .equals(other.timingDateElement, timingDateElement)) &&
+            (identical(other.timingDateTime, timingDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.timingDateTime, timingDateTime)) &&
             (identical(other.timingDateTimeElement, timingDateTimeElement) ||
                 const DeepCollectionEquality().equals(
                     other.timingDateTimeElement, timingDateTimeElement)) &&
@@ -3591,7 +3650,9 @@ class _$_TriggerDefinition extends _TriggerDefinition {
       const DeepCollectionEquality().hash(nameElement) ^
       const DeepCollectionEquality().hash(timingTiming) ^
       const DeepCollectionEquality().hash(timingReference) ^
+      const DeepCollectionEquality().hash(timingDate) ^
       const DeepCollectionEquality().hash(timingDateElement) ^
+      const DeepCollectionEquality().hash(timingDateTime) ^
       const DeepCollectionEquality().hash(timingDateTimeElement) ^
       const DeepCollectionEquality().hash(data) ^
       const DeepCollectionEquality().hash(condition);
@@ -3621,8 +3682,10 @@ abstract class _TriggerDefinition extends TriggerDefinition {
           Element nameElement,
       Timing timingTiming,
       Reference timingReference,
+      Date timingDate,
       @JsonKey(name: '_timingDate')
           Element timingDateElement,
+      FhirDateTime timingDateTime,
       @JsonKey(name: '_timingDateTime')
           Element timingDateTimeElement,
       List<DataRequirement> data,
@@ -3652,8 +3715,12 @@ abstract class _TriggerDefinition extends TriggerDefinition {
   @override
   Reference get timingReference;
   @override
+  Date get timingDate;
+  @override
   @JsonKey(name: '_timingDate')
   Element get timingDateElement;
+  @override
+  FhirDateTime get timingDateTime;
   @override
   @JsonKey(name: '_timingDateTime')
   Element get timingDateTimeElement;

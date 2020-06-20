@@ -2305,6 +2305,7 @@ abstract class $EncounterHospitalizationCopyWith<$Res> {
       Reference destination,
       CodeableConcept dischargeDisposition});
 
+  $IdentifierCopyWith<$Res> get preAdmissionIdentifier;
   $ReferenceCopyWith<$Res> get origin;
   $CodeableConceptCopyWith<$Res> get admitSource;
   $CodeableConceptCopyWith<$Res> get reAdmission;
@@ -2369,6 +2370,16 @@ class _$EncounterHospitalizationCopyWithImpl<$Res>
           ? _value.dischargeDisposition
           : dischargeDisposition as CodeableConcept,
     ));
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get preAdmissionIdentifier {
+    if (_value.preAdmissionIdentifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.preAdmissionIdentifier, (value) {
+      return _then(_value.copyWith(preAdmissionIdentifier: value));
+    });
   }
 
   @override
@@ -2442,6 +2453,8 @@ abstract class _$EncounterHospitalizationCopyWith<$Res>
       Reference destination,
       CodeableConcept dischargeDisposition});
 
+  @override
+  $IdentifierCopyWith<$Res> get preAdmissionIdentifier;
   @override
   $ReferenceCopyWith<$Res> get origin;
   @override

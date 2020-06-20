@@ -367,6 +367,9 @@ _$_CoverageEligibilityRequest _$_$_CoverageEligibilityRequestFromJson(
     patient: json['patient'] == null
         ? null
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
+    servicedDate: json['servicedDate'] == null
+        ? null
+        : Date.fromJson(json['servicedDate'] as String),
     servicedDateElement: json['_servicedDate'] == null
         ? null
         : Element.fromJson(json['_servicedDate'] as Map<String, dynamic>),
@@ -448,6 +451,7 @@ Map<String, dynamic> _$_$_CoverageEligibilityRequestToJson(
           ?.toList());
   writeNotNull('_purpose', instance.purposeElement?.toJson());
   writeNotNull('patient', instance.patient?.toJson());
+  writeNotNull('servicedDate', instance.servicedDate?.toJson());
   writeNotNull('_servicedDate', instance.servicedDateElement?.toJson());
   writeNotNull('servicedPeriod', instance.servicedPeriod?.toJson());
   writeNotNull('created', instance.created?.toJson());
@@ -808,6 +812,9 @@ _$_CoverageEligibilityResponse _$_$_CoverageEligibilityResponseFromJson(
     patient: json['patient'] == null
         ? null
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
+    servicedDate: json['servicedDate'] == null
+        ? null
+        : Date.fromJson(json['servicedDate'] as String),
     servicedDateElement: json['_servicedDate'] == null
         ? null
         : Element.fromJson(json['_servicedDate'] as Map<String, dynamic>),
@@ -896,6 +903,7 @@ Map<String, dynamic> _$_$_CoverageEligibilityResponseToJson(
           ?.toList());
   writeNotNull('_purpose', instance.purposeElement?.toJson());
   writeNotNull('patient', instance.patient?.toJson());
+  writeNotNull('servicedDate', instance.servicedDate?.toJson());
   writeNotNull('_servicedDate', instance.servicedDateElement?.toJson());
   writeNotNull('servicedPeriod', instance.servicedPeriod?.toJson());
   writeNotNull('created', instance.created?.toJson());
@@ -1126,18 +1134,26 @@ _$_CoverageEligibilityResponseBenefit
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+    allowedUnsignedInt: json['allowedUnsignedInt'] == null
+        ? null
+        : UnsignedInt.fromJson(json['allowedUnsignedInt']),
     allowedUnsignedIntElement: json['_allowedUnsignedInt'] == null
         ? null
         : Element.fromJson(json['_allowedUnsignedInt'] as Map<String, dynamic>),
+    allowedString: json['allowedString'] as String,
     allowedStringElement: json['_allowedString'] == null
         ? null
         : Element.fromJson(json['_allowedString'] as Map<String, dynamic>),
     allowedMoney: json['allowedMoney'] == null
         ? null
         : Money.fromJson(json['allowedMoney'] as Map<String, dynamic>),
+    usedUnsignedInt: json['usedUnsignedInt'] == null
+        ? null
+        : UnsignedInt.fromJson(json['usedUnsignedInt']),
     usedUnsignedIntElement: json['_usedUnsignedInt'] == null
         ? null
         : Element.fromJson(json['_usedUnsignedInt'] as Map<String, dynamic>),
+    usedString: json['usedString'] as String,
     usedStringElement: json['_usedString'] == null
         ? null
         : Element.fromJson(json['_usedString'] as Map<String, dynamic>),
@@ -1163,11 +1179,15 @@ Map<String, dynamic> _$_$_CoverageEligibilityResponseBenefitToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('type', instance.type?.toJson());
+  writeNotNull('allowedUnsignedInt', instance.allowedUnsignedInt?.toJson());
   writeNotNull(
       '_allowedUnsignedInt', instance.allowedUnsignedIntElement?.toJson());
+  writeNotNull('allowedString', instance.allowedString);
   writeNotNull('_allowedString', instance.allowedStringElement?.toJson());
   writeNotNull('allowedMoney', instance.allowedMoney?.toJson());
+  writeNotNull('usedUnsignedInt', instance.usedUnsignedInt?.toJson());
   writeNotNull('_usedUnsignedInt', instance.usedUnsignedIntElement?.toJson());
+  writeNotNull('usedString', instance.usedString);
   writeNotNull('_usedString', instance.usedStringElement?.toJson());
   writeNotNull('usedMoney', instance.usedMoney?.toJson());
   return val;

@@ -210,6 +210,9 @@ _$_ActivityDefinition _$_$_ActivityDefinitionFromJson(
     timingTiming: json['timingTiming'] == null
         ? null
         : Timing.fromJson(json['timingTiming'] as Map<String, dynamic>),
+    timingDateTime: json['timingDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['timingDateTime'] as String),
     timingDateTimeElement: json['_timingDateTime'] == null
         ? null
         : Element.fromJson(json['_timingDateTime'] as Map<String, dynamic>),
@@ -362,6 +365,7 @@ Map<String, dynamic> _$_$_ActivityDefinitionToJson(
   writeNotNull('doNotPerform', instance.doNotPerform?.toJson());
   writeNotNull('_doNotPerform', instance.doNotPerformElement?.toJson());
   writeNotNull('timingTiming', instance.timingTiming?.toJson());
+  writeNotNull('timingDateTime', instance.timingDateTime?.toJson());
   writeNotNull('_timingDateTime', instance.timingDateTimeElement?.toJson());
   writeNotNull('timingAge', instance.timingAge?.toJson());
   writeNotNull('timingPeriod', instance.timingPeriod?.toJson());
@@ -1104,6 +1108,7 @@ _$_DeviceDefinition _$_$_DeviceDefinitionFromJson(Map<String, dynamic> json) {
             : DeviceDefinitionUdiDeviceIdentifier.fromJson(
                 e as Map<String, dynamic>))
         ?.toList(),
+    manufacturerString: json['manufacturerString'] as String,
     manufacturerStringElement: json['_manufacturerString'] == null
         ? null
         : Element.fromJson(json['_manufacturerString'] as Map<String, dynamic>),
@@ -1224,6 +1229,7 @@ Map<String, dynamic> _$_$_DeviceDefinitionToJson(_$_DeviceDefinition instance) {
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('udiDeviceIdentifier',
       instance.udiDeviceIdentifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('manufacturerString', instance.manufacturerString);
   writeNotNull(
       '_manufacturerString', instance.manufacturerStringElement?.toJson());
   writeNotNull(
@@ -2910,6 +2916,9 @@ _$_PlanDefinitionAction _$_$_PlanDefinitionActionFromJson(
             ? null
             : PlanDefinitionRelatedAction.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    timingDateTime: json['timingDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['timingDateTime'] as String),
     timingDateTimeElement: json['_timingDateTime'] == null
         ? null
         : Element.fromJson(json['_timingDateTime'] as Map<String, dynamic>),
@@ -2969,10 +2978,16 @@ _$_PlanDefinitionAction _$_$_PlanDefinitionActionFromJson(
         ? null
         : Element.fromJson(
             json['_cardinalityBehavior'] as Map<String, dynamic>),
+    definitionCanonical: json['definitionCanonical'] == null
+        ? null
+        : Canonical.fromJson(json['definitionCanonical'] as String),
     definitionCanonicalElement: json['_definitionCanonical'] == null
         ? null
         : Element.fromJson(
             json['_definitionCanonical'] as Map<String, dynamic>),
+    definitionUri: json['definitionUri'] == null
+        ? null
+        : FhirUri.fromJson(json['definitionUri'] as String),
     definitionUriElement: json['_definitionUri'] == null
         ? null
         : Element.fromJson(json['_definitionUri'] as Map<String, dynamic>),
@@ -3033,6 +3048,7 @@ Map<String, dynamic> _$_$_PlanDefinitionActionToJson(
   writeNotNull('output', instance.output?.map((e) => e?.toJson())?.toList());
   writeNotNull('relatedAction',
       instance.relatedAction?.map((e) => e?.toJson())?.toList());
+  writeNotNull('timingDateTime', instance.timingDateTime?.toJson());
   writeNotNull('_timingDateTime', instance.timingDateTimeElement?.toJson());
   writeNotNull('timingAge', instance.timingAge?.toJson());
   writeNotNull('timingPeriod', instance.timingPeriod?.toJson());
@@ -3063,8 +3079,10 @@ Map<String, dynamic> _$_$_PlanDefinitionActionToJson(
           instance.cardinalityBehavior]);
   writeNotNull(
       '_cardinalityBehavior', instance.cardinalityBehaviorElement?.toJson());
+  writeNotNull('definitionCanonical', instance.definitionCanonical?.toJson());
   writeNotNull(
       '_definitionCanonical', instance.definitionCanonicalElement?.toJson());
+  writeNotNull('definitionUri', instance.definitionUri?.toJson());
   writeNotNull('_definitionUri', instance.definitionUriElement?.toJson());
   writeNotNull('transform', instance.transform?.toJson());
   writeNotNull(
@@ -3746,24 +3764,43 @@ _$_QuestionnaireEnableWhen _$_$_QuestionnaireEnableWhenFromJson(
     operatorElement: json['_operator'] == null
         ? null
         : Element.fromJson(json['_operator'] as Map<String, dynamic>),
+    answerBoolean: json['answerBoolean'] == null
+        ? null
+        : Boolean.fromJson(json['answerBoolean']),
     answerBooleanElement: json['_answerBoolean'] == null
         ? null
         : Element.fromJson(json['_answerBoolean'] as Map<String, dynamic>),
+    answerDecimal: json['answerDecimal'] == null
+        ? null
+        : Decimal.fromJson(json['answerDecimal']),
     answerDecimalElement: json['_answerDecimal'] == null
         ? null
         : Element.fromJson(json['_answerDecimal'] as Map<String, dynamic>),
+    answerInteger: json['answerInteger'] == null
+        ? null
+        : Integer.fromJson(json['answerInteger']),
     answerIntegerElement: json['_answerInteger'] == null
         ? null
         : Element.fromJson(json['_answerInteger'] as Map<String, dynamic>),
+    answerDate: json['answerDate'] == null
+        ? null
+        : Date.fromJson(json['answerDate'] as String),
     answerDateElement: json['_answerDate'] == null
         ? null
         : Element.fromJson(json['_answerDate'] as Map<String, dynamic>),
+    answerDateTime: json['answerDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['answerDateTime'] as String),
     answerDateTimeElement: json['_answerDateTime'] == null
         ? null
         : Element.fromJson(json['_answerDateTime'] as Map<String, dynamic>),
+    answerTime: json['answerTime'] == null
+        ? null
+        : Time.fromJson(json['answerTime'] as String),
     answerTimeElement: json['_answerTime'] == null
         ? null
         : Element.fromJson(json['_answerTime'] as Map<String, dynamic>),
+    answerString: json['answerString'] as String,
     answerStringElement: json['_answerString'] == null
         ? null
         : Element.fromJson(json['_answerString'] as Map<String, dynamic>),
@@ -3799,12 +3836,19 @@ Map<String, dynamic> _$_$_QuestionnaireEnableWhenToJson(
   writeNotNull(
       'operator', _$QuestionnaireEnableWhenOperatorEnumMap[instance.operator]);
   writeNotNull('_operator', instance.operatorElement?.toJson());
+  writeNotNull('answerBoolean', instance.answerBoolean?.toJson());
   writeNotNull('_answerBoolean', instance.answerBooleanElement?.toJson());
+  writeNotNull('answerDecimal', instance.answerDecimal?.toJson());
   writeNotNull('_answerDecimal', instance.answerDecimalElement?.toJson());
+  writeNotNull('answerInteger', instance.answerInteger?.toJson());
   writeNotNull('_answerInteger', instance.answerIntegerElement?.toJson());
+  writeNotNull('answerDate', instance.answerDate?.toJson());
   writeNotNull('_answerDate', instance.answerDateElement?.toJson());
+  writeNotNull('answerDateTime', instance.answerDateTime?.toJson());
   writeNotNull('_answerDateTime', instance.answerDateTimeElement?.toJson());
+  writeNotNull('answerTime', instance.answerTime?.toJson());
   writeNotNull('_answerTime', instance.answerTimeElement?.toJson());
+  writeNotNull('answerString', instance.answerString);
   writeNotNull('_answerString', instance.answerStringElement?.toJson());
   writeNotNull('answerCoding', instance.answerCoding?.toJson());
   writeNotNull('answerQuantity', instance.answerQuantity?.toJson());
@@ -3837,15 +3881,25 @@ _$_QuestionnaireAnswerOption _$_$_QuestionnaireAnswerOptionFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    valueInteger: json['valueInteger'] == null
+        ? null
+        : Integer.fromJson(json['valueInteger']),
     valueIntegerElement: json['_valueInteger'] == null
         ? null
         : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
+    valueDate: json['valueDate'] == null
+        ? null
+        : Date.fromJson(json['valueDate'] as String),
     valueDateElement: json['_valueDate'] == null
         ? null
         : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
+    valueTime: json['valueTime'] == null
+        ? null
+        : Time.fromJson(json['valueTime'] as String),
     valueTimeElement: json['_valueTime'] == null
         ? null
         : Element.fromJson(json['_valueTime'] as Map<String, dynamic>),
+    valueString: json['valueString'] as String,
     valueStringElement: json['_valueString'] == null
         ? null
         : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
@@ -3879,9 +3933,13 @@ Map<String, dynamic> _$_$_QuestionnaireAnswerOptionToJson(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('valueInteger', instance.valueInteger?.toJson());
   writeNotNull('_valueInteger', instance.valueIntegerElement?.toJson());
+  writeNotNull('valueDate', instance.valueDate?.toJson());
   writeNotNull('_valueDate', instance.valueDateElement?.toJson());
+  writeNotNull('valueTime', instance.valueTime?.toJson());
   writeNotNull('_valueTime', instance.valueTimeElement?.toJson());
+  writeNotNull('valueString', instance.valueString);
   writeNotNull('_valueString', instance.valueStringElement?.toJson());
   writeNotNull('valueCoding', instance.valueCoding?.toJson());
   writeNotNull('valueReference', instance.valueReference?.toJson());
@@ -3904,27 +3962,49 @@ _$_QuestionnaireInitial _$_$_QuestionnaireInitialFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    valueBoolean: json['valueBoolean'] == null
+        ? null
+        : Boolean.fromJson(json['valueBoolean']),
     valueBooleanElement: json['_valueBoolean'] == null
         ? null
         : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
+    valueDecimal: json['valueDecimal'] == null
+        ? null
+        : Decimal.fromJson(json['valueDecimal']),
     valueDecimalElement: json['_valueDecimal'] == null
         ? null
         : Element.fromJson(json['_valueDecimal'] as Map<String, dynamic>),
+    valueInteger: json['valueInteger'] == null
+        ? null
+        : Integer.fromJson(json['valueInteger']),
     valueIntegerElement: json['_valueInteger'] == null
         ? null
         : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
+    valueDate: json['valueDate'] == null
+        ? null
+        : Date.fromJson(json['valueDate'] as String),
     valueDateElement: json['_valueDate'] == null
         ? null
         : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
+    valueDateTime: json['valueDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['valueDateTime'] as String),
     valueDateTimeElement: json['_valueDateTime'] == null
         ? null
         : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
+    valueTime: json['valueTime'] == null
+        ? null
+        : Time.fromJson(json['valueTime'] as String),
     valueTimeElement: json['_valueTime'] == null
         ? null
         : Element.fromJson(json['_valueTime'] as Map<String, dynamic>),
+    valueString: json['valueString'] as String,
     valueStringElement: json['_valueString'] == null
         ? null
         : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
+    valueUri: json['valueUri'] == null
+        ? null
+        : FhirUri.fromJson(json['valueUri'] as String),
     valueUriElement: json['_valueUri'] == null
         ? null
         : Element.fromJson(json['_valueUri'] as Map<String, dynamic>),
@@ -3958,13 +4038,21 @@ Map<String, dynamic> _$_$_QuestionnaireInitialToJson(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('valueBoolean', instance.valueBoolean?.toJson());
   writeNotNull('_valueBoolean', instance.valueBooleanElement?.toJson());
+  writeNotNull('valueDecimal', instance.valueDecimal?.toJson());
   writeNotNull('_valueDecimal', instance.valueDecimalElement?.toJson());
+  writeNotNull('valueInteger', instance.valueInteger?.toJson());
   writeNotNull('_valueInteger', instance.valueIntegerElement?.toJson());
+  writeNotNull('valueDate', instance.valueDate?.toJson());
   writeNotNull('_valueDate', instance.valueDateElement?.toJson());
+  writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
   writeNotNull('_valueDateTime', instance.valueDateTimeElement?.toJson());
+  writeNotNull('valueTime', instance.valueTime?.toJson());
   writeNotNull('_valueTime', instance.valueTimeElement?.toJson());
+  writeNotNull('valueString', instance.valueString);
   writeNotNull('_valueString', instance.valueStringElement?.toJson());
+  writeNotNull('valueUri', instance.valueUri?.toJson());
   writeNotNull('_valueUri', instance.valueUriElement?.toJson());
   writeNotNull('valueAttachment', instance.valueAttachment?.toJson());
   writeNotNull('valueCoding', instance.valueCoding?.toJson());
@@ -4346,6 +4434,7 @@ _$_SpecimenDefinitionContainer _$_$_SpecimenDefinitionContainerFromJson(
         ? null
         : Quantity.fromJson(
             json['minimumVolumeQuantity'] as Map<String, dynamic>),
+    minimumVolumeString: json['minimumVolumeString'] as String,
     minimumVolumeStringElement: json['_minimumVolumeString'] == null
         ? null
         : Element.fromJson(
@@ -4385,6 +4474,7 @@ Map<String, dynamic> _$_$_SpecimenDefinitionContainerToJson(
   writeNotNull('capacity', instance.capacity?.toJson());
   writeNotNull(
       'minimumVolumeQuantity', instance.minimumVolumeQuantity?.toJson());
+  writeNotNull('minimumVolumeString', instance.minimumVolumeString);
   writeNotNull(
       '_minimumVolumeString', instance.minimumVolumeStringElement?.toJson());
   writeNotNull(

@@ -9,11 +9,10 @@ part 'summary.g.dart';
 
 @freezed
 abstract class AdverseEvent with _$AdverseEvent implements Resource {
-  const factory AdverseEvent({
+  factory AdverseEvent({
     @JsonKey(required: true, defaultValue: 'AdverseEvent')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -39,9 +38,9 @@ abstract class AdverseEvent with _$AdverseEvent implements Resource {
     List<Reference> subjectMedicalHistory,
     List<Reference> referenceDocument,
     List<Reference> study,
-@JsonKey(name: '_category') Element categoryElement,
-@JsonKey(name: '_date') Element dateElement,
-@JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_category') Element categoryElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _AdverseEvent;
   factory AdverseEvent.fromJson(Map<String, dynamic> json) =>
       _$AdverseEventFromJson(json);
@@ -49,7 +48,7 @@ abstract class AdverseEvent with _$AdverseEvent implements Resource {
 
 @freezed
 abstract class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
-  const factory AdverseEventSuspectEntity({
+  factory AdverseEventSuspectEntity({
     @JsonKey(required: true) Reference instance,
     @JsonKey(unknownEnumValue: SuspectEntityCausality.unknown)
         SuspectEntityCausality causality,
@@ -57,9 +56,10 @@ abstract class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
     String causalityProductRelatedness,
     CodeableConcept causalityMethod,
     Reference causalityAuthor,
-    CodeableConcept causalityResult,@JsonKey(name: '_causality') Element causalityElement,
-@JsonKey(name: '_causalityProductRelatedness') Element causalityProductRelatednessElement,
-
+    CodeableConcept causalityResult,
+    @JsonKey(name: '_causality') Element causalityElement,
+    @JsonKey(name: '_causalityProductRelatedness')
+        Element causalityProductRelatednessElement,
   }) = _AdverseEventSuspectEntity;
   factory AdverseEventSuspectEntity.fromJson(Map<String, dynamic> json) =>
       _$AdverseEventSuspectEntityFromJson(json);
@@ -69,11 +69,10 @@ abstract class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
 abstract class AllergyIntolerance
     with _$AllergyIntolerance
     implements Resource {
-  const factory AllergyIntolerance({
+  factory AllergyIntolerance({
     @JsonKey(required: true, defaultValue: 'AllergyIntolerance')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -104,15 +103,16 @@ abstract class AllergyIntolerance
     Reference asserter,
     FhirDateTime lastOccurrence,
     List<Annotation> note,
-    List<AllergyIntoleranceReaction> reaction,@JsonKey(name: '_clinicalStatus') Element clinicalStatusElement,
-@JsonKey(name: '_verificationStatus') Element verificationStatusElement,
-@JsonKey(name: '_type') Element typeElement,
-@JsonKey(name: '_category') Element categoryElement,
-@JsonKey(name: '_criticality') Element criticalityElement,
-@JsonKey(name: '_onsetDateTime') Element onsetDateTimeElement,
-@JsonKey(name: '_onsetString') Element onsetStringElement,
-@JsonKey(name: '_assertedDate') Element assertedDateElement,
-@JsonKey(name: '_lastOccurrence') Element lastOccurrenceElement,
+    List<AllergyIntoleranceReaction> reaction,
+    @JsonKey(name: '_clinicalStatus') Element clinicalStatusElement,
+    @JsonKey(name: '_verificationStatus') Element verificationStatusElement,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_category') Element categoryElement,
+    @JsonKey(name: '_criticality') Element criticalityElement,
+    @JsonKey(name: '_onsetDateTime') Element onsetDateTimeElement,
+    @JsonKey(name: '_onsetString') Element onsetStringElement,
+    @JsonKey(name: '_assertedDate') Element assertedDateElement,
+    @JsonKey(name: '_lastOccurrence') Element lastOccurrenceElement,
   }) = _AllergyIntolerance;
   factory AllergyIntolerance.fromJson(Map<String, dynamic> json) =>
       _$AllergyIntoleranceFromJson(json);
@@ -120,7 +120,7 @@ abstract class AllergyIntolerance
 
 @freezed
 abstract class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
-  const factory AllergyIntoleranceReaction({
+  factory AllergyIntoleranceReaction({
     CodeableConcept substance,
     @JsonKey(required: true) List<CodeableConcept> manifestation,
     String description,
@@ -129,9 +129,9 @@ abstract class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
         ReactionSeverity severity,
     CodeableConcept exposureRoute,
     List<Annotation> note,
-@JsonKey(name: '_description') Element descriptionElement,
-@JsonKey(name: '_onset') Element onsetElement,
-@JsonKey(name: '_severity') Element severityElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_onset') Element onsetElement,
+    @JsonKey(name: '_severity') Element severityElement,
   }) = _AllergyIntoleranceReaction;
   factory AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =>
       _$AllergyIntoleranceReactionFromJson(json);
@@ -141,11 +141,10 @@ abstract class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
 abstract class ClinicalImpression
     with _$ClinicalImpression
     implements Resource {
-  const factory ClinicalImpression({
+  factory ClinicalImpression({
     @JsonKey(required: true, defaultValue: 'ClinicalImpression')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -175,12 +174,12 @@ abstract class ClinicalImpression
     List<Reference> prognosisReference,
     List<Reference> action,
     List<Annotation> note,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_description') Element descriptionElement,
-@JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
-@JsonKey(name: '_date') Element dateElement,
-@JsonKey(name: '_protocol') Element protocolElement,
-@JsonKey(name: '_summary') Element summaryElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_protocol') Element protocolElement,
+    @JsonKey(name: '_summary') Element summaryElement,
   }) = _ClinicalImpression;
   factory ClinicalImpression.fromJson(Map<String, dynamic> json) =>
       _$ClinicalImpressionFromJson(json);
@@ -189,7 +188,7 @@ abstract class ClinicalImpression
 @freezed
 abstract class ClinicalImpressionInvestigation
     with _$ClinicalImpressionInvestigation {
-  const factory ClinicalImpressionInvestigation({
+  factory ClinicalImpressionInvestigation({
     @JsonKey(required: true) CodeableConcept code,
     List<Reference> item,
   }) = _ClinicalImpressionInvestigation;
@@ -199,11 +198,11 @@ abstract class ClinicalImpressionInvestigation
 
 @freezed
 abstract class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
-  const factory ClinicalImpressionFinding({
+  factory ClinicalImpressionFinding({
     CodeableConcept itemCodeableConcept,
     Reference itemReference,
     String basis,
-@JsonKey(name: '_basis') Element basisElement,
+    @JsonKey(name: '_basis') Element basisElement,
   }) = _ClinicalImpressionFinding;
   factory ClinicalImpressionFinding.fromJson(Map<String, dynamic> json) =>
       _$ClinicalImpressionFindingFromJson(json);
@@ -211,11 +210,10 @@ abstract class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
 
 @freezed
 abstract class Condition with _$Condition implements Resource {
-  const factory Condition({
+  factory Condition({
     @JsonKey(required: true, defaultValue: 'Condition')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -250,14 +248,14 @@ abstract class Condition with _$Condition implements Resource {
     ConditionStage stage,
     List<ConditionEvidence> evidence,
     List<Annotation> note,
-@JsonKey(name: '_clinicalStatus') Element clinicalStatusElement,
-@JsonKey(name: '_verificationStatus') Element verificationStatusElement,
-@JsonKey(name: '_onsetDateTime') Element onsetDateTimeElement,
-@JsonKey(name: '_onsetString') Element onsetStringElement,
-@JsonKey(name: '_abatementDateTime') Element abatementDateTimeElement,
-@JsonKey(name: '_abatementBoolean') Element abatementBooleanElement,
-@JsonKey(name: '_abatementString') Element abatementStringElement,
-@JsonKey(name: '_assertedDate') Element assertedDateElement,
+    @JsonKey(name: '_clinicalStatus') Element clinicalStatusElement,
+    @JsonKey(name: '_verificationStatus') Element verificationStatusElement,
+    @JsonKey(name: '_onsetDateTime') Element onsetDateTimeElement,
+    @JsonKey(name: '_onsetString') Element onsetStringElement,
+    @JsonKey(name: '_abatementDateTime') Element abatementDateTimeElement,
+    @JsonKey(name: '_abatementBoolean') Element abatementBooleanElement,
+    @JsonKey(name: '_abatementString') Element abatementStringElement,
+    @JsonKey(name: '_assertedDate') Element assertedDateElement,
   }) = _Condition;
   factory Condition.fromJson(Map<String, dynamic> json) =>
       _$ConditionFromJson(json);
@@ -265,7 +263,7 @@ abstract class Condition with _$Condition implements Resource {
 
 @freezed
 abstract class ConditionStage with _$ConditionStage {
-  const factory ConditionStage({
+  factory ConditionStage({
     CodeableConcept summary,
     List<Reference> assessment,
   }) = _ConditionStage;
@@ -275,7 +273,7 @@ abstract class ConditionStage with _$ConditionStage {
 
 @freezed
 abstract class ConditionEvidence with _$ConditionEvidence {
-  const factory ConditionEvidence({
+  factory ConditionEvidence({
     List<CodeableConcept> code,
     List<Reference> detail,
   }) = _ConditionEvidence;
@@ -285,11 +283,10 @@ abstract class ConditionEvidence with _$ConditionEvidence {
 
 @freezed
 abstract class DetectedIssue with _$DetectedIssue implements Resource {
-  const factory DetectedIssue({
+  factory DetectedIssue({
     @JsonKey(required: true, defaultValue: 'DetectedIssue')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -310,11 +307,11 @@ abstract class DetectedIssue with _$DetectedIssue implements Resource {
     String detail,
     String reference,
     List<DetectedIssueMitigation> mitigation,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_severity') Element severityElement,
-@JsonKey(name: '_date') Element dateElement,
-@JsonKey(name: '_detail') Element detailElement,
-@JsonKey(name: '_reference') Element referenceElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_severity') Element severityElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_detail') Element detailElement,
+    @JsonKey(name: '_reference') Element referenceElement,
   }) = _DetectedIssue;
   factory DetectedIssue.fromJson(Map<String, dynamic> json) =>
       _$DetectedIssueFromJson(json);
@@ -322,11 +319,11 @@ abstract class DetectedIssue with _$DetectedIssue implements Resource {
 
 @freezed
 abstract class DetectedIssueMitigation with _$DetectedIssueMitigation {
-  const factory DetectedIssueMitigation({
+  factory DetectedIssueMitigation({
     @JsonKey(required: true) CodeableConcept action,
     FhirDateTime date,
     Reference author,
-@JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_date') Element dateElement,
   }) = _DetectedIssueMitigation;
   factory DetectedIssueMitigation.fromJson(Map<String, dynamic> json) =>
       _$DetectedIssueMitigationFromJson(json);
@@ -336,11 +333,10 @@ abstract class DetectedIssueMitigation with _$DetectedIssueMitigation {
 abstract class FamilyMemberHistory
     with _$FamilyMemberHistory
     implements Resource {
-  const factory FamilyMemberHistory({
+  factory FamilyMemberHistory({
     @JsonKey(required: true, defaultValue: 'FamilyMemberHistory')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -376,18 +372,18 @@ abstract class FamilyMemberHistory
     List<Reference> reasonReference,
     List<Annotation> note,
     List<FamilyMemberHistoryCondition> condition,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_notDone') Element notDoneElement,
-@JsonKey(name: '_date') Element dateElement,
-@JsonKey(name: '_name') Element nameElement,
-@JsonKey(name: '_gender') Element genderElement,
-@JsonKey(name: '_bornDate') Element bornDateElement,
-@JsonKey(name: '_bornString') Element bornStringElement,
-@JsonKey(name: '_ageString') Element ageStringElement,
-@JsonKey(name: '_estimatedAge') Element estimatedAgeElement,
-@JsonKey(name: '_deceasedBoolean') Element deceasedBooleanElement,
-@JsonKey(name: '_deceasedDate') Element deceasedDateElement,
-@JsonKey(name: '_deceasedString') Element deceasedStringElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_notDone') Element notDoneElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_gender') Element genderElement,
+    @JsonKey(name: '_bornDate') Element bornDateElement,
+    @JsonKey(name: '_bornString') Element bornStringElement,
+    @JsonKey(name: '_ageString') Element ageStringElement,
+    @JsonKey(name: '_estimatedAge') Element estimatedAgeElement,
+    @JsonKey(name: '_deceasedBoolean') Element deceasedBooleanElement,
+    @JsonKey(name: '_deceasedDate') Element deceasedDateElement,
+    @JsonKey(name: '_deceasedString') Element deceasedStringElement,
   }) = _FamilyMemberHistory;
   factory FamilyMemberHistory.fromJson(Map<String, dynamic> json) =>
       _$FamilyMemberHistoryFromJson(json);
@@ -396,7 +392,7 @@ abstract class FamilyMemberHistory
 @freezed
 abstract class FamilyMemberHistoryCondition
     with _$FamilyMemberHistoryCondition {
-  const factory FamilyMemberHistoryCondition({
+  factory FamilyMemberHistoryCondition({
     @JsonKey(required: true) CodeableConcept code,
     CodeableConcept outcome,
     Age onsetAge,
@@ -404,7 +400,7 @@ abstract class FamilyMemberHistoryCondition
     Period onsetPeriod,
     String onsetString,
     List<Annotation> note,
-@JsonKey(name: '_onsetString') Element onsetStringElement,
+    @JsonKey(name: '_onsetString') Element onsetStringElement,
   }) = _FamilyMemberHistoryCondition;
   factory FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json) =>
       _$FamilyMemberHistoryConditionFromJson(json);
@@ -412,11 +408,10 @@ abstract class FamilyMemberHistoryCondition
 
 @freezed
 abstract class Procedure with _$Procedure implements Resource {
-  const factory Procedure({
+  factory Procedure({
     @JsonKey(required: true, defaultValue: 'Procedure')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -452,11 +447,9 @@ abstract class Procedure with _$Procedure implements Resource {
     List<ProcedureFocalDevice> focalDevice,
     List<Reference> usedReference,
     List<CodeableConcept> usedCode,
-
     @JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_notDone') Element notDoneElement,
-@JsonKey(name: '_performedDateTime') Element performedDateTimeElement,
-
+    @JsonKey(name: '_notDone') Element notDoneElement,
+    @JsonKey(name: '_performedDateTime') Element performedDateTimeElement,
   }) = _Procedure;
   factory Procedure.fromJson(Map<String, dynamic> json) =>
       _$ProcedureFromJson(json);
@@ -464,7 +457,7 @@ abstract class Procedure with _$Procedure implements Resource {
 
 @freezed
 abstract class ProcedurePerformer with _$ProcedurePerformer {
-  const factory ProcedurePerformer({
+  factory ProcedurePerformer({
     CodeableConcept role,
     @JsonKey(required: true) Reference actor,
     Reference onBehalfOf,
@@ -475,7 +468,7 @@ abstract class ProcedurePerformer with _$ProcedurePerformer {
 
 @freezed
 abstract class ProcedureFocalDevice with _$ProcedureFocalDevice {
-  const factory ProcedureFocalDevice({
+  factory ProcedureFocalDevice({
     CodeableConcept action,
     @JsonKey(required: true) Reference manipulated,
   }) = _ProcedureFocalDevice;

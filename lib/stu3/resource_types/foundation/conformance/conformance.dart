@@ -11,7 +11,7 @@ part 'conformance.g.dart';
 abstract class CapabilityStatement
     with _$CapabilityStatement
     implements Resource {
-  const factory CapabilityStatement({
+  factory CapabilityStatement({
     @JsonKey(required: true, defaultValue: 'CapabilityStatement')
     @required
         String resourceType,
@@ -77,7 +77,7 @@ abstract class CapabilityStatement
 
 @freezed
 abstract class CapabilityStatementSoftware with _$CapabilityStatementSoftware {
-  const factory CapabilityStatementSoftware({
+  factory CapabilityStatementSoftware({
     String name,
     String version,
     FhirDateTime releaseDate,
@@ -92,7 +92,7 @@ abstract class CapabilityStatementSoftware with _$CapabilityStatementSoftware {
 @freezed
 abstract class CapabilityStatementImplementation
     with _$CapabilityStatementImplementation {
-  const factory CapabilityStatementImplementation({
+  factory CapabilityStatementImplementation({
     String description,
     String url,
     @JsonKey(name: '_description') Element descriptionElement,
@@ -105,7 +105,7 @@ abstract class CapabilityStatementImplementation
 
 @freezed
 abstract class CapabilityStatementRest with _$CapabilityStatementRest {
-  const factory CapabilityStatementRest({
+  factory CapabilityStatementRest({
     @JsonKey(unknownEnumValue: RestMode.unknown) RestMode mode,
     String documentation,
     CapabilityStatementSecurity security,
@@ -124,7 +124,7 @@ abstract class CapabilityStatementRest with _$CapabilityStatementRest {
 
 @freezed
 abstract class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
-  const factory CapabilityStatementSecurity({
+  factory CapabilityStatementSecurity({
     Boolean cors,
     List<CodeableConcept> service,
     String description,
@@ -139,7 +139,7 @@ abstract class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
 @freezed
 abstract class CapabilityStatementCertificate
     with _$CapabilityStatementCertificate {
-  const factory CapabilityStatementCertificate({
+  factory CapabilityStatementCertificate({
     Code type,
     String blob,
     @JsonKey(name: '_type') Element typeElement,
@@ -151,7 +151,7 @@ abstract class CapabilityStatementCertificate
 
 @freezed
 abstract class CapabilityStatementResource with _$CapabilityStatementResource {
-  const factory CapabilityStatementResource({
+  factory CapabilityStatementResource({
     Code type,
     Reference profile,
     String documentation,
@@ -190,7 +190,7 @@ abstract class CapabilityStatementResource with _$CapabilityStatementResource {
 @freezed
 abstract class CapabilityStatementInteraction
     with _$CapabilityStatementInteraction {
-  const factory CapabilityStatementInteraction({
+  factory CapabilityStatementInteraction({
     @JsonKey(unknownEnumValue: InteractionCode.unknown) InteractionCode code,
     String documentation,
     @JsonKey(name: '_code') Element codeElement,
@@ -203,7 +203,7 @@ abstract class CapabilityStatementInteraction
 @freezed
 abstract class CapabilityStatementSearchParam
     with _$CapabilityStatementSearchParam {
-  const factory CapabilityStatementSearchParam({
+  factory CapabilityStatementSearchParam({
     String name,
     String definition,
     @JsonKey(unknownEnumValue: ParameterSearchType.unknown)
@@ -221,7 +221,7 @@ abstract class CapabilityStatementSearchParam
 @freezed
 abstract class CapabilityStatementInteraction1
     with _$CapabilityStatementInteraction1 {
-  const factory CapabilityStatementInteraction1({
+  factory CapabilityStatementInteraction1({
     @JsonKey(unknownEnumValue: Interaction1Code.unknown) Interaction1Code code,
     String documentation,
     @JsonKey(name: '_code') Element codeElement,
@@ -234,7 +234,7 @@ abstract class CapabilityStatementInteraction1
 @freezed
 abstract class CapabilityStatementOperation
     with _$CapabilityStatementOperation {
-  const factory CapabilityStatementOperation({
+  factory CapabilityStatementOperation({
     String name,
     @JsonKey(required: true) Reference definition,
     @JsonKey(name: '_name') Element nameElement,
@@ -246,7 +246,7 @@ abstract class CapabilityStatementOperation
 @freezed
 abstract class CapabilityStatementMessaging
     with _$CapabilityStatementMessaging {
-  const factory CapabilityStatementMessaging({
+  factory CapabilityStatementMessaging({
     List<CapabilityStatementEndpoint> endpoint,
     UnsignedInt reliableCache,
     String documentation,
@@ -261,7 +261,7 @@ abstract class CapabilityStatementMessaging
 
 @freezed
 abstract class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
-  const factory CapabilityStatementEndpoint({
+  factory CapabilityStatementEndpoint({
     @JsonKey(required: true) Coding protocol,
     String address,
     @JsonKey(name: '_address') Element addressElement,
@@ -273,7 +273,7 @@ abstract class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
 @freezed
 abstract class CapabilityStatementSupportedMessage
     with _$CapabilityStatementSupportedMessage {
-  const factory CapabilityStatementSupportedMessage({
+  factory CapabilityStatementSupportedMessage({
     @JsonKey(unknownEnumValue: Mode.unknown) Mode mode,
     @JsonKey(required: true) Reference definition,
     @JsonKey(name: '_mode') Element modeElement,
@@ -285,7 +285,7 @@ abstract class CapabilityStatementSupportedMessage
 
 @freezed
 abstract class CapabilityStatementEvent with _$CapabilityStatementEvent {
-  const factory CapabilityStatementEvent({
+  factory CapabilityStatementEvent({
     @JsonKey(required: true) Coding code,
     @JsonKey(unknownEnumValue: EventCategory.unknown) EventCategory category,
     @JsonKey(unknownEnumValue: Mode.unknown) Mode mode,
@@ -304,7 +304,7 @@ abstract class CapabilityStatementEvent with _$CapabilityStatementEvent {
 
 @freezed
 abstract class CapabilityStatementDocument with _$CapabilityStatementDocument {
-  const factory CapabilityStatementDocument({
+  factory CapabilityStatementDocument({
     @JsonKey(unknownEnumValue: DocumentMode.unknown) DocumentMode mode,
     String documentation,
     @JsonKey(required: true) Reference profile,
@@ -319,7 +319,7 @@ abstract class CapabilityStatementDocument with _$CapabilityStatementDocument {
 abstract class CompartmentDefinition
     with _$CompartmentDefinition
     implements Resource {
-  const factory CompartmentDefinition({
+  factory CompartmentDefinition({
     @JsonKey(required: true, defaultValue: 'CompartmentDefinition')
     @required
         String resourceType,
@@ -366,7 +366,7 @@ abstract class CompartmentDefinition
 @freezed
 abstract class CompartmentDefinitionResource
     with _$CompartmentDefinitionResource {
-  const factory CompartmentDefinitionResource({
+  factory CompartmentDefinitionResource({
     Code code,
     List<String> param,
     String documentation,
@@ -380,7 +380,7 @@ abstract class CompartmentDefinitionResource
 
 @freezed
 abstract class DataElement with _$DataElement implements Resource {
-  const factory DataElement({
+  factory DataElement({
     @JsonKey(required: true, defaultValue: 'DataElement')
     @required
         String resourceType,
@@ -426,7 +426,7 @@ abstract class DataElement with _$DataElement implements Resource {
 
 @freezed
 abstract class DataElementMapping with _$DataElementMapping {
-  const factory DataElementMapping({
+  factory DataElementMapping({
     Id identity,
     String uri,
     String name,
@@ -442,7 +442,7 @@ abstract class DataElementMapping with _$DataElementMapping {
 
 @freezed
 abstract class GraphDefinition with _$GraphDefinition implements Resource {
-  const factory GraphDefinition({
+  factory GraphDefinition({
     @JsonKey(required: true, defaultValue: 'GraphDefinition')
     @required
         String resourceType,
@@ -487,7 +487,7 @@ abstract class GraphDefinition with _$GraphDefinition implements Resource {
 
 @freezed
 abstract class GraphDefinitionLink with _$GraphDefinitionLink {
-  const factory GraphDefinitionLink({
+  factory GraphDefinitionLink({
     String path,
     String sliceName,
     Integer min,
@@ -506,7 +506,7 @@ abstract class GraphDefinitionLink with _$GraphDefinitionLink {
 
 @freezed
 abstract class GraphDefinitionTarget with _$GraphDefinitionTarget {
-  const factory GraphDefinitionTarget({
+  factory GraphDefinitionTarget({
     Code type,
     String profile,
     List<GraphDefinitionCompartment> compartment,
@@ -520,7 +520,7 @@ abstract class GraphDefinitionTarget with _$GraphDefinitionTarget {
 
 @freezed
 abstract class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
-  const factory GraphDefinitionCompartment({
+  factory GraphDefinitionCompartment({
     Code code,
     @JsonKey(unknownEnumValue: CompartmentRule.unknown) CompartmentRule rule,
     String expression,
@@ -538,7 +538,7 @@ abstract class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
 abstract class ImplementationGuide
     with _$ImplementationGuide
     implements Resource {
-  const factory ImplementationGuide({
+  factory ImplementationGuide({
     @JsonKey(required: true, defaultValue: 'ImplementationGuide')
     @required
         String resourceType,
@@ -587,7 +587,7 @@ abstract class ImplementationGuide
 @freezed
 abstract class ImplementationGuideDependency
     with _$ImplementationGuideDependency {
-  const factory ImplementationGuideDependency({
+  factory ImplementationGuideDependency({
     @JsonKey(unknownEnumValue: DependencyType.unknown) DependencyType type,
     String uri,
     @JsonKey(name: '_type') Element typeElement,
@@ -599,7 +599,7 @@ abstract class ImplementationGuideDependency
 
 @freezed
 abstract class ImplementationGuidePackage with _$ImplementationGuidePackage {
-  const factory ImplementationGuidePackage({
+  factory ImplementationGuidePackage({
     String name,
     String description,
     @JsonKey(required: true) List<ImplementationGuideResource> resource,
@@ -612,7 +612,7 @@ abstract class ImplementationGuidePackage with _$ImplementationGuidePackage {
 
 @freezed
 abstract class ImplementationGuideResource with _$ImplementationGuideResource {
-  const factory ImplementationGuideResource({
+  factory ImplementationGuideResource({
     Boolean example,
     String name,
     String description,
@@ -632,7 +632,7 @@ abstract class ImplementationGuideResource with _$ImplementationGuideResource {
 
 @freezed
 abstract class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
-  const factory ImplementationGuideGlobal({
+  factory ImplementationGuideGlobal({
     Code type,
     @JsonKey(required: true) Reference profile,
     @JsonKey(name: '_type') Element typeElement,
@@ -643,7 +643,7 @@ abstract class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
 
 @freezed
 abstract class ImplementationGuidePage with _$ImplementationGuidePage {
-  const factory ImplementationGuidePage({
+  factory ImplementationGuidePage({
     String source,
     String title,
     @JsonKey(unknownEnumValue: PageKind.unknown) PageKind kind,
@@ -664,7 +664,7 @@ abstract class ImplementationGuidePage with _$ImplementationGuidePage {
 
 @freezed
 abstract class MessageDefinition with _$MessageDefinition implements Resource {
-  const factory MessageDefinition({
+  factory MessageDefinition({
     @JsonKey(required: true, defaultValue: 'MessageDefinition')
     @required
         String resourceType,
@@ -719,7 +719,7 @@ abstract class MessageDefinition with _$MessageDefinition implements Resource {
 
 @freezed
 abstract class MessageDefinitionFocus with _$MessageDefinitionFocus {
-  const factory MessageDefinitionFocus({
+  factory MessageDefinitionFocus({
     Code code,
     Reference profile,
     UnsignedInt min,
@@ -735,7 +735,7 @@ abstract class MessageDefinitionFocus with _$MessageDefinitionFocus {
 @freezed
 abstract class MessageDefinitionAllowedResponse
     with _$MessageDefinitionAllowedResponse {
-  const factory MessageDefinitionAllowedResponse({
+  factory MessageDefinitionAllowedResponse({
     @JsonKey(required: true) Reference message,
     String situation,
     @JsonKey(name: '_situation') Element situationElement,
@@ -749,7 +749,7 @@ abstract class MessageDefinitionAllowedResponse
 abstract class OperationDefinition
     with _$OperationDefinition
     implements Resource {
-  const factory OperationDefinition({
+  factory OperationDefinition({
     @JsonKey(required: true, defaultValue: 'OperationDefinition')
     @required
         String resourceType,
@@ -810,7 +810,7 @@ abstract class OperationDefinition
 @freezed
 abstract class OperationDefinitionParameter
     with _$OperationDefinitionParameter {
-  const factory OperationDefinitionParameter({
+  factory OperationDefinitionParameter({
     Code name,
     @JsonKey(unknownEnumValue: ParameterUse.unknown) ParameterUse use,
     Integer min,
@@ -836,7 +836,7 @@ abstract class OperationDefinitionParameter
 
 @freezed
 abstract class OperationDefinitionBinding with _$OperationDefinitionBinding {
-  const factory OperationDefinitionBinding({
+  factory OperationDefinitionBinding({
     @JsonKey(unknownEnumValue: BindingStrength.unknown)
         BindingStrength strength,
     String valueSetUri,
@@ -850,7 +850,7 @@ abstract class OperationDefinitionBinding with _$OperationDefinitionBinding {
 
 @freezed
 abstract class OperationDefinitionOverload with _$OperationDefinitionOverload {
-  const factory OperationDefinitionOverload({
+  factory OperationDefinitionOverload({
     List<String> parameterName,
     String comment,
     @JsonKey(name: '_parameterName') Element parameterNameElement,
@@ -862,7 +862,7 @@ abstract class OperationDefinitionOverload with _$OperationDefinitionOverload {
 
 @freezed
 abstract class SearchParameter with _$SearchParameter implements Resource {
-  const factory SearchParameter({
+  factory SearchParameter({
     @JsonKey(required: true, defaultValue: 'SearchParameter')
     @required
         String resourceType,
@@ -927,7 +927,7 @@ abstract class SearchParameter with _$SearchParameter implements Resource {
 
 @freezed
 abstract class SearchParameterComponent with _$SearchParameterComponent {
-  const factory SearchParameterComponent({
+  factory SearchParameterComponent({
     @JsonKey(required: true) Reference definition,
     String expression,
     @JsonKey(name: '_expression') Element expressionElement,
@@ -940,7 +940,7 @@ abstract class SearchParameterComponent with _$SearchParameterComponent {
 abstract class StructureDefinition
     with _$StructureDefinition
     implements Resource {
-  const factory StructureDefinition({
+  factory StructureDefinition({
     @JsonKey(required: true, defaultValue: 'StructureDefinition')
     @required
         String resourceType,
@@ -1010,7 +1010,7 @@ abstract class StructureDefinition
 
 @freezed
 abstract class StructureDefinitionMapping with _$StructureDefinitionMapping {
-  const factory StructureDefinitionMapping({
+  factory StructureDefinitionMapping({
     Id identity,
     String uri,
     String name,
@@ -1026,7 +1026,7 @@ abstract class StructureDefinitionMapping with _$StructureDefinitionMapping {
 
 @freezed
 abstract class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
-  const factory StructureDefinitionSnapshot({
+  factory StructureDefinitionSnapshot({
     @JsonKey(required: true) List<ElementDefinition> element,
   }) = _StructureDefinitionSnapshot;
   factory StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =>
@@ -1036,7 +1036,7 @@ abstract class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
 @freezed
 abstract class StructureDefinitionDifferential
     with _$StructureDefinitionDifferential {
-  const factory StructureDefinitionDifferential({
+  factory StructureDefinitionDifferential({
     @JsonKey(required: true) List<ElementDefinition> element,
   }) = _StructureDefinitionDifferential;
   factory StructureDefinitionDifferential.fromJson(Map<String, dynamic> json) =>
@@ -1045,7 +1045,7 @@ abstract class StructureDefinitionDifferential
 
 @freezed
 abstract class StructureMap with _$StructureMap implements Resource {
-  const factory StructureMap({
+  factory StructureMap({
     @JsonKey(required: true, defaultValue: 'StructureMap')
     @required
         String resourceType,
@@ -1094,7 +1094,7 @@ abstract class StructureMap with _$StructureMap implements Resource {
 
 @freezed
 abstract class StructureMapStructure with _$StructureMapStructure {
-  const factory StructureMapStructure({
+  factory StructureMapStructure({
     String url,
     @JsonKey(unknownEnumValue: StructureMode.unknown) StructureMode mode,
     String alias,
@@ -1110,7 +1110,7 @@ abstract class StructureMapStructure with _$StructureMapStructure {
 
 @freezed
 abstract class StructureMapGroup with _$StructureMapGroup {
-  const factory StructureMapGroup({
+  factory StructureMapGroup({
     Id name,
     @JsonKey(name: 'extends') Id extends_,
     @JsonKey(unknownEnumValue: GroupTypeMode.unknown) GroupTypeMode typeMode,
@@ -1128,7 +1128,7 @@ abstract class StructureMapGroup with _$StructureMapGroup {
 
 @freezed
 abstract class StructureMapInput with _$StructureMapInput {
-  const factory StructureMapInput({
+  factory StructureMapInput({
     Id name,
     String type,
     @JsonKey(unknownEnumValue: InputMode.unknown) InputMode mode,
@@ -1144,7 +1144,7 @@ abstract class StructureMapInput with _$StructureMapInput {
 
 @freezed
 abstract class StructureMapRule with _$StructureMapRule {
-  const factory StructureMapRule({
+  factory StructureMapRule({
     Id name,
     @JsonKey(required: true) List<StructureMapSource> source,
     List<StructureMapTarget> target,
@@ -1160,7 +1160,7 @@ abstract class StructureMapRule with _$StructureMapRule {
 
 @freezed
 abstract class StructureMapSource with _$StructureMapSource {
-  const factory StructureMapSource({
+  factory StructureMapSource({
     Id context,
     Integer min,
     String max,
@@ -1259,7 +1259,7 @@ abstract class StructureMapSource with _$StructureMapSource {
 
 @freezed
 abstract class StructureMapTarget with _$StructureMapTarget {
-  const factory StructureMapTarget({
+  factory StructureMapTarget({
     Id context,
     @JsonKey(unknownEnumValue: TargetContextType.unknown)
         TargetContextType contextType,
@@ -1284,7 +1284,7 @@ abstract class StructureMapTarget with _$StructureMapTarget {
 
 @freezed
 abstract class StructureMapParameter with _$StructureMapParameter {
-  const factory StructureMapParameter({
+  factory StructureMapParameter({
     Id valueId,
     String valueString,
     Boolean valueBoolean,
@@ -1302,7 +1302,7 @@ abstract class StructureMapParameter with _$StructureMapParameter {
 
 @freezed
 abstract class StructureMapDependent with _$StructureMapDependent {
-  const factory StructureMapDependent({
+  factory StructureMapDependent({
     Id name,
     List<String> variable,
     @JsonKey(name: '_name') Element nameElement,

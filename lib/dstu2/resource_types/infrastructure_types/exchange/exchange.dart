@@ -9,7 +9,7 @@ part 'exchange.g.dart';
 
 @freezed
 abstract class OperationOutcome with _$OperationOutcome implements Resource {
-  const factory OperationOutcome({
+  factory OperationOutcome({
     @JsonKey(defaultValue: 'OperationOutcome') String resourceType,
     Id id,
     Meta meta,
@@ -31,7 +31,7 @@ abstract class OperationOutcome with _$OperationOutcome implements Resource {
 
 @freezed
 abstract class Subscription with _$Subscription implements Resource {
-  const factory Subscription({
+  factory Subscription({
     @JsonKey(defaultValue: 'Subscription') String resourceType,
     Id id,
     Meta meta,
@@ -66,7 +66,7 @@ abstract class Subscription with _$Subscription implements Resource {
 
 @freezed
 abstract class MessageHeader with _$MessageHeader implements Resource {
-  const factory MessageHeader({
+  factory MessageHeader({
     @JsonKey(defaultValue: 'MessageHeader') String resourceType,
     Id id,
     Meta meta,
@@ -97,7 +97,7 @@ abstract class MessageHeader with _$MessageHeader implements Resource {
 
 @freezed
 abstract class Parameters with _$Parameters implements Resource {
-  const factory Parameters({
+  factory Parameters({
     @JsonKey(defaultValue: 'Parameters') String resourceType,
     Id id,
     Meta meta,
@@ -114,7 +114,7 @@ abstract class Parameters with _$Parameters implements Resource {
 
 @freezed
 abstract class ParametersParameter with _$ParametersParameter {
-  const factory ParametersParameter({
+  factory ParametersParameter({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -163,7 +163,7 @@ abstract class ParametersParameter with _$ParametersParameter {
 
 @freezed
 abstract class OperationOutcomeIssue with _$OperationOutcomeIssue {
-  const factory OperationOutcomeIssue({
+  factory OperationOutcomeIssue({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -184,7 +184,7 @@ abstract class OperationOutcomeIssue with _$OperationOutcomeIssue {
 
 @freezed
 abstract class SubscriptionChannel with _$SubscriptionChannel {
-  const factory SubscriptionChannel({
+  factory SubscriptionChannel({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -206,7 +206,7 @@ abstract class SubscriptionChannel with _$SubscriptionChannel {
 
 @freezed
 abstract class MessageHeaderResponse with _$MessageHeaderResponse {
-  const factory MessageHeaderResponse({
+  factory MessageHeaderResponse({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -225,7 +225,7 @@ abstract class MessageHeaderResponse with _$MessageHeaderResponse {
 
 @freezed
 abstract class MessageHeaderSource with _$MessageHeaderSource {
-  const factory MessageHeaderSource({
+  factory MessageHeaderSource({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -246,7 +246,7 @@ abstract class MessageHeaderSource with _$MessageHeaderSource {
 
 @freezed
 abstract class MessageHeaderDestination with _$MessageHeaderDestination {
-  const factory MessageHeaderDestination({
+  factory MessageHeaderDestination({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,

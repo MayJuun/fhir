@@ -9,7 +9,7 @@ part 'information_tracking.g.dart';
 
 @freezed
 abstract class Questionnaire with _$Questionnaire implements Resource {
-  const factory Questionnaire({
+  factory Questionnaire({
     @JsonKey(defaultValue: 'Questionnaire') String resourceType,
     Id id,
     Meta meta,
@@ -45,7 +45,7 @@ abstract class Questionnaire with _$Questionnaire implements Resource {
 
 @freezed
 abstract class Provenance with _$Provenance implements Resource {
-  const factory Provenance({
+  factory Provenance({
     @JsonKey(defaultValue: 'Provenance') String resourceType,
     Id id,
     Meta meta,
@@ -79,7 +79,7 @@ abstract class Provenance with _$Provenance implements Resource {
 abstract class QuestionnaireResponse
     with _$QuestionnaireResponse
     implements Resource {
-  const factory QuestionnaireResponse({
+  factory QuestionnaireResponse({
     @JsonKey(defaultValue: 'QuestionnaireResponse') String resourceType,
     Id id,
     Meta meta,
@@ -114,7 +114,7 @@ abstract class QuestionnaireResponse
 
 @freezed
 abstract class AuditEvent with _$AuditEvent implements Resource {
-  const factory AuditEvent({
+  factory AuditEvent({
     @JsonKey(defaultValue: 'AuditEvent') String resourceType,
     Id id,
     Meta meta,
@@ -138,7 +138,7 @@ abstract class AuditEvent with _$AuditEvent implements Resource {
 
 @freezed
 abstract class QuestionnaireGroup with _$QuestionnaireGroup {
-  const factory QuestionnaireGroup({
+  factory QuestionnaireGroup({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -161,7 +161,7 @@ abstract class QuestionnaireGroup with _$QuestionnaireGroup {
 
 @freezed
 abstract class ProvenanceAgent with _$ProvenanceAgent {
-  const factory ProvenanceAgent({
+  factory ProvenanceAgent({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -178,7 +178,7 @@ abstract class ProvenanceAgent with _$ProvenanceAgent {
 
 @freezed
 abstract class ProvenanceEntity with _$ProvenanceEntity {
-  const factory ProvenanceEntity({
+  factory ProvenanceEntity({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -200,7 +200,7 @@ abstract class ProvenanceEntity with _$ProvenanceEntity {
 
 @freezed
 abstract class QuestionnaireResponseGroup with _$QuestionnaireResponseGroup {
-  const factory QuestionnaireResponseGroup({
+  factory QuestionnaireResponseGroup({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -221,7 +221,7 @@ abstract class QuestionnaireResponseGroup with _$QuestionnaireResponseGroup {
 
 @freezed
 abstract class AuditEventEvent with _$AuditEventEvent {
-  const factory AuditEventEvent({
+  factory AuditEventEvent({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -240,7 +240,7 @@ abstract class AuditEventEvent with _$AuditEventEvent {
 
 @freezed
 abstract class AuditEventParticipant with _$AuditEventParticipant {
-  const factory AuditEventParticipant({
+  factory AuditEventParticipant({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -264,7 +264,7 @@ abstract class AuditEventParticipant with _$AuditEventParticipant {
 
 @freezed
 abstract class AuditEventSource with _$AuditEventSource {
-  const factory AuditEventSource({
+  factory AuditEventSource({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -280,7 +280,7 @@ abstract class AuditEventSource with _$AuditEventSource {
 
 @freezed
 abstract class AuditEventObject with _$AuditEventObject {
-  const factory AuditEventObject({
+  factory AuditEventObject({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -303,7 +303,7 @@ abstract class AuditEventObject with _$AuditEventObject {
 
 @freezed
 abstract class QuestionnaireQuestion with _$QuestionnaireQuestion {
-  const factory QuestionnaireQuestion({
+  factory QuestionnaireQuestion({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -326,7 +326,7 @@ abstract class QuestionnaireQuestion with _$QuestionnaireQuestion {
 
 @freezed
 abstract class ProvenanceRelatedAgent with _$ProvenanceRelatedAgent {
-  const factory ProvenanceRelatedAgent({
+  factory ProvenanceRelatedAgent({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -341,7 +341,7 @@ abstract class ProvenanceRelatedAgent with _$ProvenanceRelatedAgent {
 @freezed
 abstract class QuestionnaireResponseQuestion
     with _$QuestionnaireResponseQuestion {
-  const factory QuestionnaireResponseQuestion({
+  factory QuestionnaireResponseQuestion({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -358,7 +358,7 @@ abstract class QuestionnaireResponseQuestion
 
 @freezed
 abstract class AuditEventNetwork with _$AuditEventNetwork {
-  const factory AuditEventNetwork({
+  factory AuditEventNetwork({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -374,7 +374,7 @@ abstract class AuditEventNetwork with _$AuditEventNetwork {
 
 @freezed
 abstract class AuditEventDetail with _$AuditEventDetail {
-  const factory AuditEventDetail({
+  factory AuditEventDetail({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -389,7 +389,7 @@ abstract class AuditEventDetail with _$AuditEventDetail {
 
 @freezed
 abstract class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
-  const factory QuestionnaireResponseAnswer({
+  factory QuestionnaireResponseAnswer({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,

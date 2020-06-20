@@ -92,7 +92,7 @@ class __$BackboneElementCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_BackboneElement implements _BackboneElement {
-  const _$_BackboneElement({this.modifierExtension});
+  _$_BackboneElement({this.modifierExtension});
 
   factory _$_BackboneElement.fromJson(Map<String, dynamic> json) =>
       _$_$_BackboneElementFromJson(json);
@@ -130,7 +130,7 @@ class _$_BackboneElement implements _BackboneElement {
 }
 
 abstract class _BackboneElement implements BackboneElement {
-  const factory _BackboneElement({List<FhirExtension> modifierExtension}) =
+  factory _BackboneElement({List<FhirExtension> modifierExtension}) =
       _$_BackboneElement;
 
   factory _BackboneElement.fromJson(Map<String, dynamic> json) =
@@ -269,7 +269,7 @@ class __$NarrativeCopyWithImpl<$Res> extends _$NarrativeCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Narrative implements _Narrative {
-  const _$_Narrative(
+  _$_Narrative(
       {@JsonKey(unknownEnumValue: NarrativeStatus.unknown) this.status,
       @JsonKey(required: true) this.div,
       @JsonKey(name: '_status') this.statusElement});
@@ -323,7 +323,7 @@ class _$_Narrative implements _Narrative {
 }
 
 abstract class _Narrative implements Narrative {
-  const factory _Narrative(
+  factory _Narrative(
       {@JsonKey(unknownEnumValue: NarrativeStatus.unknown)
           NarrativeStatus status,
       @JsonKey(required: true)
@@ -514,7 +514,7 @@ class __$ReferenceCopyWithImpl<$Res> extends _$ReferenceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Reference implements _Reference {
-  const _$_Reference(
+  _$_Reference(
       {this.reference,
       this.identifier,
       this.display,
@@ -583,7 +583,7 @@ class _$_Reference implements _Reference {
 }
 
 abstract class _Reference implements Reference {
-  const factory _Reference(
+  factory _Reference(
       {String reference,
       Identifier identifier,
       String display,
@@ -809,7 +809,7 @@ class __$MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Meta implements _Meta {
-  const _$_Meta(
+  _$_Meta(
       {this.versionId,
       this.lastUpdated,
       this.profile,
@@ -899,7 +899,7 @@ class _$_Meta implements _Meta {
 }
 
 abstract class _Meta implements Meta {
-  const factory _Meta(
+  factory _Meta(
       {Id versionId,
       String lastUpdated,
       List<String> profile,
@@ -1035,7 +1035,7 @@ class __$ElementCopyWithImpl<$Res> extends _$ElementCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Element implements _Element {
-  const _$_Element(
+  _$_Element(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       @JsonKey(name: '_id') this.idElement});
@@ -1089,7 +1089,7 @@ class _$_Element implements _Element {
 }
 
 abstract class _Element implements Element {
-  const factory _Element(
+  factory _Element(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(name: '_id') Element idElement}) = _$_Element;
@@ -7710,7 +7710,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ElementDefinition implements _ElementDefinition {
-  const _$_ElementDefinition(
+  _$_ElementDefinition(
       {this.path,
       this.representation,
       this.sliceName,
@@ -9406,7 +9406,7 @@ class _$_ElementDefinition implements _ElementDefinition {
 }
 
 abstract class _ElementDefinition implements ElementDefinition {
-  const factory _ElementDefinition(
+  factory _ElementDefinition(
       {String path,
       List<ElementDefinitionRepresentation> representation,
       String sliceName,
@@ -10659,7 +10659,7 @@ class __$ElementDefinitionSlicingCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ElementDefinitionSlicing implements _ElementDefinitionSlicing {
-  const _$_ElementDefinitionSlicing(
+  _$_ElementDefinitionSlicing(
       {this.discriminator,
       this.description,
       this.ordered,
@@ -10744,7 +10744,7 @@ class _$_ElementDefinitionSlicing implements _ElementDefinitionSlicing {
 }
 
 abstract class _ElementDefinitionSlicing implements ElementDefinitionSlicing {
-  const factory _ElementDefinitionSlicing(
+  factory _ElementDefinitionSlicing(
           {List<ElementDefinitionDiscriminator> discriminator,
           String description,
           Boolean ordered,
@@ -10941,7 +10941,7 @@ class __$ElementDefinitionDiscriminatorCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ElementDefinitionDiscriminator
     implements _ElementDefinitionDiscriminator {
-  const _$_ElementDefinitionDiscriminator(
+  _$_ElementDefinitionDiscriminator(
       {@JsonKey(unknownEnumValue: DiscriminatorType.unknown) this.type,
       this.path,
       @JsonKey(name: '_type') this.typeElement,
@@ -11005,7 +11005,7 @@ class _$_ElementDefinitionDiscriminator
 
 abstract class _ElementDefinitionDiscriminator
     implements ElementDefinitionDiscriminator {
-  const factory _ElementDefinitionDiscriminator(
+  factory _ElementDefinitionDiscriminator(
       {@JsonKey(unknownEnumValue: DiscriminatorType.unknown)
           DiscriminatorType type,
       String path,
@@ -11212,7 +11212,7 @@ class __$ElementDefinitionBaseCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ElementDefinitionBase implements _ElementDefinitionBase {
-  const _$_ElementDefinitionBase(
+  _$_ElementDefinitionBase(
       {this.path,
       this.min,
       this.max,
@@ -11287,7 +11287,7 @@ class _$_ElementDefinitionBase implements _ElementDefinitionBase {
 }
 
 abstract class _ElementDefinitionBase implements ElementDefinitionBase {
-  const factory _ElementDefinitionBase(
+  factory _ElementDefinitionBase(
       {String path,
       UnsignedInt min,
       String max,
@@ -11603,7 +11603,7 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ElementDefinitionType implements _ElementDefinitionType {
-  const _$_ElementDefinitionType(
+  _$_ElementDefinitionType(
       {this.code,
       this.profile,
       this.targetProfile,
@@ -11711,7 +11711,7 @@ class _$_ElementDefinitionType implements _ElementDefinitionType {
 }
 
 abstract class _ElementDefinitionType implements ElementDefinitionType {
-  const factory _ElementDefinitionType(
+  factory _ElementDefinitionType(
       {String code,
       String profile,
       String targetProfile,
@@ -13441,7 +13441,7 @@ class __$ElementDefinitionExampleCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ElementDefinitionExample implements _ElementDefinitionExample {
-  const _$_ElementDefinitionExample(
+  _$_ElementDefinitionExample(
       {this.label,
       this.valueBoolean,
       this.valueInteger,
@@ -13895,7 +13895,7 @@ class _$_ElementDefinitionExample implements _ElementDefinitionExample {
 }
 
 abstract class _ElementDefinitionExample implements ElementDefinitionExample {
-  const factory _ElementDefinitionExample(
+  factory _ElementDefinitionExample(
           {String label,
           Boolean valueBoolean,
           Integer valueInteger,
@@ -14506,7 +14506,7 @@ class __$ElementDefinitionConstraintCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ElementDefinitionConstraint implements _ElementDefinitionConstraint {
-  const _$_ElementDefinitionConstraint(
+  _$_ElementDefinitionConstraint(
       {this.key,
       this.requirements,
       @JsonKey(unknownEnumValue: ConstraintSeverity.unknown) this.severity,
@@ -14642,7 +14642,7 @@ class _$_ElementDefinitionConstraint implements _ElementDefinitionConstraint {
 
 abstract class _ElementDefinitionConstraint
     implements ElementDefinitionConstraint {
-  const factory _ElementDefinitionConstraint(
+  factory _ElementDefinitionConstraint(
       {Id key,
       String requirements,
       @JsonKey(unknownEnumValue: ConstraintSeverity.unknown)
@@ -14941,7 +14941,7 @@ class __$ElementDefinitionBindingCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ElementDefinitionBinding implements _ElementDefinitionBinding {
-  const _$_ElementDefinitionBinding(
+  _$_ElementDefinitionBinding(
       {@JsonKey(unknownEnumValue: BindingStrength.unknown) this.strength,
       this.description,
       this.valueSetUri,
@@ -15027,7 +15027,7 @@ class _$_ElementDefinitionBinding implements _ElementDefinitionBinding {
 }
 
 abstract class _ElementDefinitionBinding implements ElementDefinitionBinding {
-  const factory _ElementDefinitionBinding(
+  factory _ElementDefinitionBinding(
       {@JsonKey(unknownEnumValue: BindingStrength.unknown)
           BindingStrength strength,
       String description,
@@ -15285,7 +15285,7 @@ class __$ElementDefinitionMappingCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ElementDefinitionMapping implements _ElementDefinitionMapping {
-  const _$_ElementDefinitionMapping(
+  _$_ElementDefinitionMapping(
       {this.identity,
       this.language,
       this.map,
@@ -15377,7 +15377,7 @@ class _$_ElementDefinitionMapping implements _ElementDefinitionMapping {
 }
 
 abstract class _ElementDefinitionMapping implements ElementDefinitionMapping {
-  const factory _ElementDefinitionMapping(
+  factory _ElementDefinitionMapping(
           {Id identity,
           Code language,
           String map,
@@ -15959,7 +15959,7 @@ class __$DosageCopyWithImpl<$Res> extends _$DosageCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Dosage implements _Dosage {
-  const _$_Dosage(
+  _$_Dosage(
       {this.sequence,
       this.text,
       this.additionalInstruction,
@@ -16138,7 +16138,7 @@ class _$_Dosage implements _Dosage {
 }
 
 abstract class _Dosage implements Dosage {
-  const factory _Dosage(
+  factory _Dosage(
       {Integer sequence,
       String text,
       List<CodeableConcept> additionalInstruction,

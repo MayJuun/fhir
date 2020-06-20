@@ -27,6 +27,7 @@ abstract class Annotation with Resource implements _$Annotation {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     Reference authorReference,
+    String authorString,
     @JsonKey(name: '_authorString') Element authorStringElement,
     FhirDateTime time,
     @JsonKey(name: '_time') Element timeElement,

@@ -6967,6 +6967,7 @@ class _$EvidenceVariableCharacteristicTearOff {
           @JsonKey(name: '_description')
               Element descriptionElement,
           Reference definitionReference,
+          Canonical definitionCanonical,
           @JsonKey(name: '_definitionCanonical')
               Element definitionCanonicalElement,
           CodeableConcept definitionCodeableConcept,
@@ -6977,6 +6978,7 @@ class _$EvidenceVariableCharacteristicTearOff {
           Boolean exclude,
           @JsonKey(name: '_exclude')
               Element excludeElement,
+          FhirDateTime participantEffectiveDateTime,
           @JsonKey(name: '_participantEffectiveDateTime')
               Element participantEffectiveDateTimeElement,
           Period participantEffectivePeriod,
@@ -6996,6 +6998,7 @@ class _$EvidenceVariableCharacteristicTearOff {
       description: description,
       descriptionElement: descriptionElement,
       definitionReference: definitionReference,
+      definitionCanonical: definitionCanonical,
       definitionCanonicalElement: definitionCanonicalElement,
       definitionCodeableConcept: definitionCodeableConcept,
       definitionExpression: definitionExpression,
@@ -7004,6 +7007,7 @@ class _$EvidenceVariableCharacteristicTearOff {
       usageContext: usageContext,
       exclude: exclude,
       excludeElement: excludeElement,
+      participantEffectiveDateTime: participantEffectiveDateTime,
       participantEffectiveDateTimeElement: participantEffectiveDateTimeElement,
       participantEffectivePeriod: participantEffectivePeriod,
       participantEffectiveDuration: participantEffectiveDuration,
@@ -7028,6 +7032,7 @@ mixin _$EvidenceVariableCharacteristic {
   @JsonKey(name: '_description')
   Element get descriptionElement;
   Reference get definitionReference;
+  Canonical get definitionCanonical;
   @JsonKey(name: '_definitionCanonical')
   Element get definitionCanonicalElement;
   CodeableConcept get definitionCodeableConcept;
@@ -7038,6 +7043,7 @@ mixin _$EvidenceVariableCharacteristic {
   Boolean get exclude;
   @JsonKey(name: '_exclude')
   Element get excludeElement;
+  FhirDateTime get participantEffectiveDateTime;
   @JsonKey(name: '_participantEffectiveDateTime')
   Element get participantEffectiveDateTimeElement;
   Period get participantEffectivePeriod;
@@ -7069,6 +7075,7 @@ abstract class $EvidenceVariableCharacteristicCopyWith<$Res> {
           @JsonKey(name: '_description')
               Element descriptionElement,
           Reference definitionReference,
+          Canonical definitionCanonical,
           @JsonKey(name: '_definitionCanonical')
               Element definitionCanonicalElement,
           CodeableConcept definitionCodeableConcept,
@@ -7079,6 +7086,7 @@ abstract class $EvidenceVariableCharacteristicCopyWith<$Res> {
           Boolean exclude,
           @JsonKey(name: '_exclude')
               Element excludeElement,
+          FhirDateTime participantEffectiveDateTime,
           @JsonKey(name: '_participantEffectiveDateTime')
               Element participantEffectiveDateTimeElement,
           Period participantEffectivePeriod,
@@ -7124,6 +7132,7 @@ class _$EvidenceVariableCharacteristicCopyWithImpl<$Res>
     Object description = freezed,
     Object descriptionElement = freezed,
     Object definitionReference = freezed,
+    Object definitionCanonical = freezed,
     Object definitionCanonicalElement = freezed,
     Object definitionCodeableConcept = freezed,
     Object definitionExpression = freezed,
@@ -7132,6 +7141,7 @@ class _$EvidenceVariableCharacteristicCopyWithImpl<$Res>
     Object usageContext = freezed,
     Object exclude = freezed,
     Object excludeElement = freezed,
+    Object participantEffectiveDateTime = freezed,
     Object participantEffectiveDateTimeElement = freezed,
     Object participantEffectivePeriod = freezed,
     Object participantEffectiveDuration = freezed,
@@ -7156,6 +7166,9 @@ class _$EvidenceVariableCharacteristicCopyWithImpl<$Res>
       definitionReference: definitionReference == freezed
           ? _value.definitionReference
           : definitionReference as Reference,
+      definitionCanonical: definitionCanonical == freezed
+          ? _value.definitionCanonical
+          : definitionCanonical as Canonical,
       definitionCanonicalElement: definitionCanonicalElement == freezed
           ? _value.definitionCanonicalElement
           : definitionCanonicalElement as Element,
@@ -7178,6 +7191,9 @@ class _$EvidenceVariableCharacteristicCopyWithImpl<$Res>
       excludeElement: excludeElement == freezed
           ? _value.excludeElement
           : excludeElement as Element,
+      participantEffectiveDateTime: participantEffectiveDateTime == freezed
+          ? _value.participantEffectiveDateTime
+          : participantEffectiveDateTime as FhirDateTime,
       participantEffectiveDateTimeElement:
           participantEffectiveDateTimeElement == freezed
               ? _value.participantEffectiveDateTimeElement
@@ -7366,6 +7382,7 @@ abstract class _$EvidenceVariableCharacteristicCopyWith<$Res>
           @JsonKey(name: '_description')
               Element descriptionElement,
           Reference definitionReference,
+          Canonical definitionCanonical,
           @JsonKey(name: '_definitionCanonical')
               Element definitionCanonicalElement,
           CodeableConcept definitionCodeableConcept,
@@ -7376,6 +7393,7 @@ abstract class _$EvidenceVariableCharacteristicCopyWith<$Res>
           Boolean exclude,
           @JsonKey(name: '_exclude')
               Element excludeElement,
+          FhirDateTime participantEffectiveDateTime,
           @JsonKey(name: '_participantEffectiveDateTime')
               Element participantEffectiveDateTimeElement,
           Period participantEffectivePeriod,
@@ -7439,6 +7457,7 @@ class __$EvidenceVariableCharacteristicCopyWithImpl<$Res>
     Object description = freezed,
     Object descriptionElement = freezed,
     Object definitionReference = freezed,
+    Object definitionCanonical = freezed,
     Object definitionCanonicalElement = freezed,
     Object definitionCodeableConcept = freezed,
     Object definitionExpression = freezed,
@@ -7447,6 +7466,7 @@ class __$EvidenceVariableCharacteristicCopyWithImpl<$Res>
     Object usageContext = freezed,
     Object exclude = freezed,
     Object excludeElement = freezed,
+    Object participantEffectiveDateTime = freezed,
     Object participantEffectiveDateTimeElement = freezed,
     Object participantEffectivePeriod = freezed,
     Object participantEffectiveDuration = freezed,
@@ -7471,6 +7491,9 @@ class __$EvidenceVariableCharacteristicCopyWithImpl<$Res>
       definitionReference: definitionReference == freezed
           ? _value.definitionReference
           : definitionReference as Reference,
+      definitionCanonical: definitionCanonical == freezed
+          ? _value.definitionCanonical
+          : definitionCanonical as Canonical,
       definitionCanonicalElement: definitionCanonicalElement == freezed
           ? _value.definitionCanonicalElement
           : definitionCanonicalElement as Element,
@@ -7493,6 +7516,9 @@ class __$EvidenceVariableCharacteristicCopyWithImpl<$Res>
       excludeElement: excludeElement == freezed
           ? _value.excludeElement
           : excludeElement as Element,
+      participantEffectiveDateTime: participantEffectiveDateTime == freezed
+          ? _value.participantEffectiveDateTime
+          : participantEffectiveDateTime as FhirDateTime,
       participantEffectiveDateTimeElement:
           participantEffectiveDateTimeElement == freezed
               ? _value.participantEffectiveDateTimeElement
@@ -7531,6 +7557,7 @@ class _$_EvidenceVariableCharacteristic
       @JsonKey(name: '_description')
           this.descriptionElement,
       this.definitionReference,
+      this.definitionCanonical,
       @JsonKey(name: '_definitionCanonical')
           this.definitionCanonicalElement,
       this.definitionCodeableConcept,
@@ -7541,6 +7568,7 @@ class _$_EvidenceVariableCharacteristic
       this.exclude,
       @JsonKey(name: '_exclude')
           this.excludeElement,
+      this.participantEffectiveDateTime,
       @JsonKey(name: '_participantEffectiveDateTime')
           this.participantEffectiveDateTimeElement,
       this.participantEffectivePeriod,
@@ -7572,6 +7600,8 @@ class _$_EvidenceVariableCharacteristic
   @override
   final Reference definitionReference;
   @override
+  final Canonical definitionCanonical;
+  @override
   @JsonKey(name: '_definitionCanonical')
   final Element definitionCanonicalElement;
   @override
@@ -7589,6 +7619,8 @@ class _$_EvidenceVariableCharacteristic
   @override
   @JsonKey(name: '_exclude')
   final Element excludeElement;
+  @override
+  final FhirDateTime participantEffectiveDateTime;
   @override
   @JsonKey(name: '_participantEffectiveDateTime')
   final Element participantEffectiveDateTimeElement;
@@ -7609,7 +7641,7 @@ class _$_EvidenceVariableCharacteristic
 
   @override
   String toString() {
-    return 'EvidenceVariableCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, definitionReference: $definitionReference, definitionCanonicalElement: $definitionCanonicalElement, definitionCodeableConcept: $definitionCodeableConcept, definitionExpression: $definitionExpression, definitionDataRequirement: $definitionDataRequirement, definitionTriggerDefinition: $definitionTriggerDefinition, usageContext: $usageContext, exclude: $exclude, excludeElement: $excludeElement, participantEffectiveDateTimeElement: $participantEffectiveDateTimeElement, participantEffectivePeriod: $participantEffectivePeriod, participantEffectiveDuration: $participantEffectiveDuration, participantEffectiveTiming: $participantEffectiveTiming, timeFromStart: $timeFromStart, groupMeasure: $groupMeasure, groupMeasureElement: $groupMeasureElement)';
+    return 'EvidenceVariableCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, definitionReference: $definitionReference, definitionCanonical: $definitionCanonical, definitionCanonicalElement: $definitionCanonicalElement, definitionCodeableConcept: $definitionCodeableConcept, definitionExpression: $definitionExpression, definitionDataRequirement: $definitionDataRequirement, definitionTriggerDefinition: $definitionTriggerDefinition, usageContext: $usageContext, exclude: $exclude, excludeElement: $excludeElement, participantEffectiveDateTime: $participantEffectiveDateTime, participantEffectiveDateTimeElement: $participantEffectiveDateTimeElement, participantEffectivePeriod: $participantEffectivePeriod, participantEffectiveDuration: $participantEffectiveDuration, participantEffectiveTiming: $participantEffectiveTiming, timeFromStart: $timeFromStart, groupMeasure: $groupMeasure, groupMeasureElement: $groupMeasureElement)';
   }
 
   @override
@@ -7633,6 +7665,9 @@ class _$_EvidenceVariableCharacteristic
             (identical(other.definitionReference, definitionReference) ||
                 const DeepCollectionEquality()
                     .equals(other.definitionReference, definitionReference)) &&
+            (identical(other.definitionCanonical, definitionCanonical) ||
+                const DeepCollectionEquality()
+                    .equals(other.definitionCanonical, definitionCanonical)) &&
             (identical(other.definitionCanonicalElement, definitionCanonicalElement) ||
                 const DeepCollectionEquality().equals(
                     other.definitionCanonicalElement,
@@ -7659,8 +7694,8 @@ class _$_EvidenceVariableCharacteristic
                 const DeepCollectionEquality()
                     .equals(other.exclude, exclude)) &&
             (identical(other.excludeElement, excludeElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.excludeElement, excludeElement)) &&
+                const DeepCollectionEquality().equals(other.excludeElement, excludeElement)) &&
+            (identical(other.participantEffectiveDateTime, participantEffectiveDateTime) || const DeepCollectionEquality().equals(other.participantEffectiveDateTime, participantEffectiveDateTime)) &&
             (identical(other.participantEffectiveDateTimeElement, participantEffectiveDateTimeElement) || const DeepCollectionEquality().equals(other.participantEffectiveDateTimeElement, participantEffectiveDateTimeElement)) &&
             (identical(other.participantEffectivePeriod, participantEffectivePeriod) || const DeepCollectionEquality().equals(other.participantEffectivePeriod, participantEffectivePeriod)) &&
             (identical(other.participantEffectiveDuration, participantEffectiveDuration) || const DeepCollectionEquality().equals(other.participantEffectiveDuration, participantEffectiveDuration)) &&
@@ -7679,6 +7714,7 @@ class _$_EvidenceVariableCharacteristic
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(definitionReference) ^
+      const DeepCollectionEquality().hash(definitionCanonical) ^
       const DeepCollectionEquality().hash(definitionCanonicalElement) ^
       const DeepCollectionEquality().hash(definitionCodeableConcept) ^
       const DeepCollectionEquality().hash(definitionExpression) ^
@@ -7687,6 +7723,7 @@ class _$_EvidenceVariableCharacteristic
       const DeepCollectionEquality().hash(usageContext) ^
       const DeepCollectionEquality().hash(exclude) ^
       const DeepCollectionEquality().hash(excludeElement) ^
+      const DeepCollectionEquality().hash(participantEffectiveDateTime) ^
       const DeepCollectionEquality().hash(participantEffectiveDateTimeElement) ^
       const DeepCollectionEquality().hash(participantEffectivePeriod) ^
       const DeepCollectionEquality().hash(participantEffectiveDuration) ^
@@ -7718,6 +7755,7 @@ abstract class _EvidenceVariableCharacteristic
       @JsonKey(name: '_description')
           Element descriptionElement,
       Reference definitionReference,
+      Canonical definitionCanonical,
       @JsonKey(name: '_definitionCanonical')
           Element definitionCanonicalElement,
       CodeableConcept definitionCodeableConcept,
@@ -7728,6 +7766,7 @@ abstract class _EvidenceVariableCharacteristic
       Boolean exclude,
       @JsonKey(name: '_exclude')
           Element excludeElement,
+      FhirDateTime participantEffectiveDateTime,
       @JsonKey(name: '_participantEffectiveDateTime')
           Element participantEffectiveDateTimeElement,
       Period participantEffectivePeriod,
@@ -7757,6 +7796,8 @@ abstract class _EvidenceVariableCharacteristic
   @override
   Reference get definitionReference;
   @override
+  Canonical get definitionCanonical;
+  @override
   @JsonKey(name: '_definitionCanonical')
   Element get definitionCanonicalElement;
   @override
@@ -7774,6 +7815,8 @@ abstract class _EvidenceVariableCharacteristic
   @override
   @JsonKey(name: '_exclude')
   Element get excludeElement;
+  @override
+  FhirDateTime get participantEffectiveDateTime;
   @override
   @JsonKey(name: '_participantEffectiveDateTime')
   Element get participantEffectiveDateTimeElement;
@@ -11712,6 +11755,7 @@ class _$ResearchElementDefinitionCharacteristicTearOff {
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept definitionCodeableConcept,
+      Canonical definitionCanonical,
       @JsonKey(name: '_definitionCanonical')
           Element definitionCanonicalElement,
       Expression definitionExpression,
@@ -11724,6 +11768,7 @@ class _$ResearchElementDefinitionCharacteristicTearOff {
       String studyEffectiveDescription,
       @JsonKey(name: '_studyEffectiveDescription')
           Element studyEffectiveDescriptionElement,
+      FhirDateTime studyEffectiveDateTime,
       @JsonKey(name: '_studyEffectiveDateTime')
           Element studyEffectiveDateTimeElement,
       Period studyEffectivePeriod,
@@ -11741,6 +11786,7 @@ class _$ResearchElementDefinitionCharacteristicTearOff {
       String participantEffectiveDescription,
       @JsonKey(name: '_participantEffectiveDescription')
           Element participantEffectiveDescriptionElement,
+      FhirDateTime participantEffectiveDateTime,
       @JsonKey(name: '_participantEffectiveDateTime')
           Element participantEffectiveDateTimeElement,
       Period participantEffectivePeriod,
@@ -11760,6 +11806,7 @@ class _$ResearchElementDefinitionCharacteristicTearOff {
       extension_: extension_,
       modifierExtension: modifierExtension,
       definitionCodeableConcept: definitionCodeableConcept,
+      definitionCanonical: definitionCanonical,
       definitionCanonicalElement: definitionCanonicalElement,
       definitionExpression: definitionExpression,
       definitionDataRequirement: definitionDataRequirement,
@@ -11769,6 +11816,7 @@ class _$ResearchElementDefinitionCharacteristicTearOff {
       unitOfMeasure: unitOfMeasure,
       studyEffectiveDescription: studyEffectiveDescription,
       studyEffectiveDescriptionElement: studyEffectiveDescriptionElement,
+      studyEffectiveDateTime: studyEffectiveDateTime,
       studyEffectiveDateTimeElement: studyEffectiveDateTimeElement,
       studyEffectivePeriod: studyEffectivePeriod,
       studyEffectiveDuration: studyEffectiveDuration,
@@ -11779,6 +11827,7 @@ class _$ResearchElementDefinitionCharacteristicTearOff {
       participantEffectiveDescription: participantEffectiveDescription,
       participantEffectiveDescriptionElement:
           participantEffectiveDescriptionElement,
+      participantEffectiveDateTime: participantEffectiveDateTime,
       participantEffectiveDateTimeElement: participantEffectiveDateTimeElement,
       participantEffectivePeriod: participantEffectivePeriod,
       participantEffectiveDuration: participantEffectiveDuration,
@@ -11801,6 +11850,7 @@ mixin _$ResearchElementDefinitionCharacteristic {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   CodeableConcept get definitionCodeableConcept;
+  Canonical get definitionCanonical;
   @JsonKey(name: '_definitionCanonical')
   Element get definitionCanonicalElement;
   Expression get definitionExpression;
@@ -11813,6 +11863,7 @@ mixin _$ResearchElementDefinitionCharacteristic {
   String get studyEffectiveDescription;
   @JsonKey(name: '_studyEffectiveDescription')
   Element get studyEffectiveDescriptionElement;
+  FhirDateTime get studyEffectiveDateTime;
   @JsonKey(name: '_studyEffectiveDateTime')
   Element get studyEffectiveDateTimeElement;
   Period get studyEffectivePeriod;
@@ -11830,6 +11881,7 @@ mixin _$ResearchElementDefinitionCharacteristic {
   String get participantEffectiveDescription;
   @JsonKey(name: '_participantEffectiveDescription')
   Element get participantEffectiveDescriptionElement;
+  FhirDateTime get participantEffectiveDateTime;
   @JsonKey(name: '_participantEffectiveDateTime')
   Element get participantEffectiveDateTimeElement;
   Period get participantEffectivePeriod;
@@ -11861,6 +11913,7 @@ abstract class $ResearchElementDefinitionCharacteristicCopyWith<$Res> {
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept definitionCodeableConcept,
+      Canonical definitionCanonical,
       @JsonKey(name: '_definitionCanonical')
           Element definitionCanonicalElement,
       Expression definitionExpression,
@@ -11873,6 +11926,7 @@ abstract class $ResearchElementDefinitionCharacteristicCopyWith<$Res> {
       String studyEffectiveDescription,
       @JsonKey(name: '_studyEffectiveDescription')
           Element studyEffectiveDescriptionElement,
+      FhirDateTime studyEffectiveDateTime,
       @JsonKey(name: '_studyEffectiveDateTime')
           Element studyEffectiveDateTimeElement,
       Period studyEffectivePeriod,
@@ -11890,6 +11944,7 @@ abstract class $ResearchElementDefinitionCharacteristicCopyWith<$Res> {
       String participantEffectiveDescription,
       @JsonKey(name: '_participantEffectiveDescription')
           Element participantEffectiveDescriptionElement,
+      FhirDateTime participantEffectiveDateTime,
       @JsonKey(name: '_participantEffectiveDateTime')
           Element participantEffectiveDateTimeElement,
       Period participantEffectivePeriod,
@@ -11942,6 +11997,7 @@ class _$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object definitionCodeableConcept = freezed,
+    Object definitionCanonical = freezed,
     Object definitionCanonicalElement = freezed,
     Object definitionExpression = freezed,
     Object definitionDataRequirement = freezed,
@@ -11951,6 +12007,7 @@ class _$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
     Object unitOfMeasure = freezed,
     Object studyEffectiveDescription = freezed,
     Object studyEffectiveDescriptionElement = freezed,
+    Object studyEffectiveDateTime = freezed,
     Object studyEffectiveDateTimeElement = freezed,
     Object studyEffectivePeriod = freezed,
     Object studyEffectiveDuration = freezed,
@@ -11960,6 +12017,7 @@ class _$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
     Object studyEffectiveGroupMeasureElement = freezed,
     Object participantEffectiveDescription = freezed,
     Object participantEffectiveDescriptionElement = freezed,
+    Object participantEffectiveDateTime = freezed,
     Object participantEffectiveDateTimeElement = freezed,
     Object participantEffectivePeriod = freezed,
     Object participantEffectiveDuration = freezed,
@@ -11979,6 +12037,9 @@ class _$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
       definitionCodeableConcept: definitionCodeableConcept == freezed
           ? _value.definitionCodeableConcept
           : definitionCodeableConcept as CodeableConcept,
+      definitionCanonical: definitionCanonical == freezed
+          ? _value.definitionCanonical
+          : definitionCanonical as Canonical,
       definitionCanonicalElement: definitionCanonicalElement == freezed
           ? _value.definitionCanonicalElement
           : definitionCanonicalElement as Element,
@@ -12005,6 +12066,9 @@ class _$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
           studyEffectiveDescriptionElement == freezed
               ? _value.studyEffectiveDescriptionElement
               : studyEffectiveDescriptionElement as Element,
+      studyEffectiveDateTime: studyEffectiveDateTime == freezed
+          ? _value.studyEffectiveDateTime
+          : studyEffectiveDateTime as FhirDateTime,
       studyEffectiveDateTimeElement: studyEffectiveDateTimeElement == freezed
           ? _value.studyEffectiveDateTimeElement
           : studyEffectiveDateTimeElement as Element,
@@ -12036,6 +12100,9 @@ class _$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
           participantEffectiveDescriptionElement == freezed
               ? _value.participantEffectiveDescriptionElement
               : participantEffectiveDescriptionElement as Element,
+      participantEffectiveDateTime: participantEffectiveDateTime == freezed
+          ? _value.participantEffectiveDateTime
+          : participantEffectiveDateTime as FhirDateTime,
       participantEffectiveDateTimeElement:
           participantEffectiveDateTimeElement == freezed
               ? _value.participantEffectiveDateTimeElement
@@ -12291,6 +12358,7 @@ abstract class _$ResearchElementDefinitionCharacteristicCopyWith<$Res>
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept definitionCodeableConcept,
+      Canonical definitionCanonical,
       @JsonKey(name: '_definitionCanonical')
           Element definitionCanonicalElement,
       Expression definitionExpression,
@@ -12303,6 +12371,7 @@ abstract class _$ResearchElementDefinitionCharacteristicCopyWith<$Res>
       String studyEffectiveDescription,
       @JsonKey(name: '_studyEffectiveDescription')
           Element studyEffectiveDescriptionElement,
+      FhirDateTime studyEffectiveDateTime,
       @JsonKey(name: '_studyEffectiveDateTime')
           Element studyEffectiveDateTimeElement,
       Period studyEffectivePeriod,
@@ -12320,6 +12389,7 @@ abstract class _$ResearchElementDefinitionCharacteristicCopyWith<$Res>
       String participantEffectiveDescription,
       @JsonKey(name: '_participantEffectiveDescription')
           Element participantEffectiveDescriptionElement,
+      FhirDateTime participantEffectiveDateTime,
       @JsonKey(name: '_participantEffectiveDateTime')
           Element participantEffectiveDateTimeElement,
       Period participantEffectivePeriod,
@@ -12396,6 +12466,7 @@ class __$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object definitionCodeableConcept = freezed,
+    Object definitionCanonical = freezed,
     Object definitionCanonicalElement = freezed,
     Object definitionExpression = freezed,
     Object definitionDataRequirement = freezed,
@@ -12405,6 +12476,7 @@ class __$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
     Object unitOfMeasure = freezed,
     Object studyEffectiveDescription = freezed,
     Object studyEffectiveDescriptionElement = freezed,
+    Object studyEffectiveDateTime = freezed,
     Object studyEffectiveDateTimeElement = freezed,
     Object studyEffectivePeriod = freezed,
     Object studyEffectiveDuration = freezed,
@@ -12414,6 +12486,7 @@ class __$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
     Object studyEffectiveGroupMeasureElement = freezed,
     Object participantEffectiveDescription = freezed,
     Object participantEffectiveDescriptionElement = freezed,
+    Object participantEffectiveDateTime = freezed,
     Object participantEffectiveDateTimeElement = freezed,
     Object participantEffectivePeriod = freezed,
     Object participantEffectiveDuration = freezed,
@@ -12433,6 +12506,9 @@ class __$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
       definitionCodeableConcept: definitionCodeableConcept == freezed
           ? _value.definitionCodeableConcept
           : definitionCodeableConcept as CodeableConcept,
+      definitionCanonical: definitionCanonical == freezed
+          ? _value.definitionCanonical
+          : definitionCanonical as Canonical,
       definitionCanonicalElement: definitionCanonicalElement == freezed
           ? _value.definitionCanonicalElement
           : definitionCanonicalElement as Element,
@@ -12459,6 +12535,9 @@ class __$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
           studyEffectiveDescriptionElement == freezed
               ? _value.studyEffectiveDescriptionElement
               : studyEffectiveDescriptionElement as Element,
+      studyEffectiveDateTime: studyEffectiveDateTime == freezed
+          ? _value.studyEffectiveDateTime
+          : studyEffectiveDateTime as FhirDateTime,
       studyEffectiveDateTimeElement: studyEffectiveDateTimeElement == freezed
           ? _value.studyEffectiveDateTimeElement
           : studyEffectiveDateTimeElement as Element,
@@ -12490,6 +12569,9 @@ class __$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
           participantEffectiveDescriptionElement == freezed
               ? _value.participantEffectiveDescriptionElement
               : participantEffectiveDescriptionElement as Element,
+      participantEffectiveDateTime: participantEffectiveDateTime == freezed
+          ? _value.participantEffectiveDateTime
+          : participantEffectiveDateTime as FhirDateTime,
       participantEffectiveDateTimeElement:
           participantEffectiveDateTimeElement == freezed
               ? _value.participantEffectiveDateTimeElement
@@ -12529,6 +12611,7 @@ class _$_ResearchElementDefinitionCharacteristic
           this.extension_,
       this.modifierExtension,
       this.definitionCodeableConcept,
+      this.definitionCanonical,
       @JsonKey(name: '_definitionCanonical')
           this.definitionCanonicalElement,
       this.definitionExpression,
@@ -12541,6 +12624,7 @@ class _$_ResearchElementDefinitionCharacteristic
       this.studyEffectiveDescription,
       @JsonKey(name: '_studyEffectiveDescription')
           this.studyEffectiveDescriptionElement,
+      this.studyEffectiveDateTime,
       @JsonKey(name: '_studyEffectiveDateTime')
           this.studyEffectiveDateTimeElement,
       this.studyEffectivePeriod,
@@ -12557,6 +12641,7 @@ class _$_ResearchElementDefinitionCharacteristic
       this.participantEffectiveDescription,
       @JsonKey(name: '_participantEffectiveDescription')
           this.participantEffectiveDescriptionElement,
+      this.participantEffectiveDateTime,
       @JsonKey(name: '_participantEffectiveDateTime')
           this.participantEffectiveDateTimeElement,
       this.participantEffectivePeriod,
@@ -12586,6 +12671,8 @@ class _$_ResearchElementDefinitionCharacteristic
   @override
   final CodeableConcept definitionCodeableConcept;
   @override
+  final Canonical definitionCanonical;
+  @override
   @JsonKey(name: '_definitionCanonical')
   final Element definitionCanonicalElement;
   @override
@@ -12606,6 +12693,8 @@ class _$_ResearchElementDefinitionCharacteristic
   @override
   @JsonKey(name: '_studyEffectiveDescription')
   final Element studyEffectiveDescriptionElement;
+  @override
+  final FhirDateTime studyEffectiveDateTime;
   @override
   @JsonKey(name: '_studyEffectiveDateTime')
   final Element studyEffectiveDateTimeElement;
@@ -12633,6 +12722,8 @@ class _$_ResearchElementDefinitionCharacteristic
   @JsonKey(name: '_participantEffectiveDescription')
   final Element participantEffectiveDescriptionElement;
   @override
+  final FhirDateTime participantEffectiveDateTime;
+  @override
   @JsonKey(name: '_participantEffectiveDateTime')
   final Element participantEffectiveDateTimeElement;
   @override
@@ -12656,7 +12747,7 @@ class _$_ResearchElementDefinitionCharacteristic
 
   @override
   String toString() {
-    return 'ResearchElementDefinitionCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, definitionCodeableConcept: $definitionCodeableConcept, definitionCanonicalElement: $definitionCanonicalElement, definitionExpression: $definitionExpression, definitionDataRequirement: $definitionDataRequirement, usageContext: $usageContext, exclude: $exclude, excludeElement: $excludeElement, unitOfMeasure: $unitOfMeasure, studyEffectiveDescription: $studyEffectiveDescription, studyEffectiveDescriptionElement: $studyEffectiveDescriptionElement, studyEffectiveDateTimeElement: $studyEffectiveDateTimeElement, studyEffectivePeriod: $studyEffectivePeriod, studyEffectiveDuration: $studyEffectiveDuration, studyEffectiveTiming: $studyEffectiveTiming, studyEffectiveTimeFromStart: $studyEffectiveTimeFromStart, studyEffectiveGroupMeasure: $studyEffectiveGroupMeasure, studyEffectiveGroupMeasureElement: $studyEffectiveGroupMeasureElement, participantEffectiveDescription: $participantEffectiveDescription, participantEffectiveDescriptionElement: $participantEffectiveDescriptionElement, participantEffectiveDateTimeElement: $participantEffectiveDateTimeElement, participantEffectivePeriod: $participantEffectivePeriod, participantEffectiveDuration: $participantEffectiveDuration, participantEffectiveTiming: $participantEffectiveTiming, participantEffectiveTimeFromStart: $participantEffectiveTimeFromStart, participantEffectiveGroupMeasure: $participantEffectiveGroupMeasure, participantEffectiveGroupMeasureElement: $participantEffectiveGroupMeasureElement)';
+    return 'ResearchElementDefinitionCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, definitionCodeableConcept: $definitionCodeableConcept, definitionCanonical: $definitionCanonical, definitionCanonicalElement: $definitionCanonicalElement, definitionExpression: $definitionExpression, definitionDataRequirement: $definitionDataRequirement, usageContext: $usageContext, exclude: $exclude, excludeElement: $excludeElement, unitOfMeasure: $unitOfMeasure, studyEffectiveDescription: $studyEffectiveDescription, studyEffectiveDescriptionElement: $studyEffectiveDescriptionElement, studyEffectiveDateTime: $studyEffectiveDateTime, studyEffectiveDateTimeElement: $studyEffectiveDateTimeElement, studyEffectivePeriod: $studyEffectivePeriod, studyEffectiveDuration: $studyEffectiveDuration, studyEffectiveTiming: $studyEffectiveTiming, studyEffectiveTimeFromStart: $studyEffectiveTimeFromStart, studyEffectiveGroupMeasure: $studyEffectiveGroupMeasure, studyEffectiveGroupMeasureElement: $studyEffectiveGroupMeasureElement, participantEffectiveDescription: $participantEffectiveDescription, participantEffectiveDescriptionElement: $participantEffectiveDescriptionElement, participantEffectiveDateTime: $participantEffectiveDateTime, participantEffectiveDateTimeElement: $participantEffectiveDateTimeElement, participantEffectivePeriod: $participantEffectivePeriod, participantEffectiveDuration: $participantEffectiveDuration, participantEffectiveTiming: $participantEffectiveTiming, participantEffectiveTimeFromStart: $participantEffectiveTimeFromStart, participantEffectiveGroupMeasure: $participantEffectiveGroupMeasure, participantEffectiveGroupMeasureElement: $participantEffectiveGroupMeasureElement)';
   }
 
   @override
@@ -12675,6 +12766,9 @@ class _$_ResearchElementDefinitionCharacteristic
                 const DeepCollectionEquality().equals(
                     other.definitionCodeableConcept,
                     definitionCodeableConcept)) &&
+            (identical(other.definitionCanonical, definitionCanonical) ||
+                const DeepCollectionEquality()
+                    .equals(other.definitionCanonical, definitionCanonical)) &&
             (identical(other.definitionCanonicalElement, definitionCanonicalElement) ||
                 const DeepCollectionEquality().equals(
                     other.definitionCanonicalElement,
@@ -12700,10 +12794,9 @@ class _$_ResearchElementDefinitionCharacteristic
                     .equals(other.unitOfMeasure, unitOfMeasure)) &&
             (identical(other.studyEffectiveDescription, studyEffectiveDescription) ||
                 const DeepCollectionEquality().equals(
-                    other.studyEffectiveDescription,
-                    studyEffectiveDescription)) &&
-            (identical(other.studyEffectiveDescriptionElement, studyEffectiveDescriptionElement) ||
-                const DeepCollectionEquality().equals(other.studyEffectiveDescriptionElement, studyEffectiveDescriptionElement)) &&
+                    other.studyEffectiveDescription, studyEffectiveDescription)) &&
+            (identical(other.studyEffectiveDescriptionElement, studyEffectiveDescriptionElement) || const DeepCollectionEquality().equals(other.studyEffectiveDescriptionElement, studyEffectiveDescriptionElement)) &&
+            (identical(other.studyEffectiveDateTime, studyEffectiveDateTime) || const DeepCollectionEquality().equals(other.studyEffectiveDateTime, studyEffectiveDateTime)) &&
             (identical(other.studyEffectiveDateTimeElement, studyEffectiveDateTimeElement) || const DeepCollectionEquality().equals(other.studyEffectiveDateTimeElement, studyEffectiveDateTimeElement)) &&
             (identical(other.studyEffectivePeriod, studyEffectivePeriod) || const DeepCollectionEquality().equals(other.studyEffectivePeriod, studyEffectivePeriod)) &&
             (identical(other.studyEffectiveDuration, studyEffectiveDuration) || const DeepCollectionEquality().equals(other.studyEffectiveDuration, studyEffectiveDuration)) &&
@@ -12713,6 +12806,7 @@ class _$_ResearchElementDefinitionCharacteristic
             (identical(other.studyEffectiveGroupMeasureElement, studyEffectiveGroupMeasureElement) || const DeepCollectionEquality().equals(other.studyEffectiveGroupMeasureElement, studyEffectiveGroupMeasureElement)) &&
             (identical(other.participantEffectiveDescription, participantEffectiveDescription) || const DeepCollectionEquality().equals(other.participantEffectiveDescription, participantEffectiveDescription)) &&
             (identical(other.participantEffectiveDescriptionElement, participantEffectiveDescriptionElement) || const DeepCollectionEquality().equals(other.participantEffectiveDescriptionElement, participantEffectiveDescriptionElement)) &&
+            (identical(other.participantEffectiveDateTime, participantEffectiveDateTime) || const DeepCollectionEquality().equals(other.participantEffectiveDateTime, participantEffectiveDateTime)) &&
             (identical(other.participantEffectiveDateTimeElement, participantEffectiveDateTimeElement) || const DeepCollectionEquality().equals(other.participantEffectiveDateTimeElement, participantEffectiveDateTimeElement)) &&
             (identical(other.participantEffectivePeriod, participantEffectivePeriod) || const DeepCollectionEquality().equals(other.participantEffectivePeriod, participantEffectivePeriod)) &&
             (identical(other.participantEffectiveDuration, participantEffectiveDuration) || const DeepCollectionEquality().equals(other.participantEffectiveDuration, participantEffectiveDuration)) &&
@@ -12729,6 +12823,7 @@ class _$_ResearchElementDefinitionCharacteristic
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(definitionCodeableConcept) ^
+      const DeepCollectionEquality().hash(definitionCanonical) ^
       const DeepCollectionEquality().hash(definitionCanonicalElement) ^
       const DeepCollectionEquality().hash(definitionExpression) ^
       const DeepCollectionEquality().hash(definitionDataRequirement) ^
@@ -12738,6 +12833,7 @@ class _$_ResearchElementDefinitionCharacteristic
       const DeepCollectionEquality().hash(unitOfMeasure) ^
       const DeepCollectionEquality().hash(studyEffectiveDescription) ^
       const DeepCollectionEquality().hash(studyEffectiveDescriptionElement) ^
+      const DeepCollectionEquality().hash(studyEffectiveDateTime) ^
       const DeepCollectionEquality().hash(studyEffectiveDateTimeElement) ^
       const DeepCollectionEquality().hash(studyEffectivePeriod) ^
       const DeepCollectionEquality().hash(studyEffectiveDuration) ^
@@ -12748,6 +12844,7 @@ class _$_ResearchElementDefinitionCharacteristic
       const DeepCollectionEquality().hash(participantEffectiveDescription) ^
       const DeepCollectionEquality()
           .hash(participantEffectiveDescriptionElement) ^
+      const DeepCollectionEquality().hash(participantEffectiveDateTime) ^
       const DeepCollectionEquality().hash(participantEffectiveDateTimeElement) ^
       const DeepCollectionEquality().hash(participantEffectivePeriod) ^
       const DeepCollectionEquality().hash(participantEffectiveDuration) ^
@@ -12778,6 +12875,7 @@ abstract class _ResearchElementDefinitionCharacteristic
               List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
           CodeableConcept definitionCodeableConcept,
+          Canonical definitionCanonical,
           @JsonKey(name: '_definitionCanonical')
               Element definitionCanonicalElement,
           Expression definitionExpression,
@@ -12790,6 +12888,7 @@ abstract class _ResearchElementDefinitionCharacteristic
           String studyEffectiveDescription,
           @JsonKey(name: '_studyEffectiveDescription')
               Element studyEffectiveDescriptionElement,
+          FhirDateTime studyEffectiveDateTime,
           @JsonKey(name: '_studyEffectiveDateTime')
               Element studyEffectiveDateTimeElement,
           Period studyEffectivePeriod,
@@ -12807,6 +12906,7 @@ abstract class _ResearchElementDefinitionCharacteristic
           String participantEffectiveDescription,
           @JsonKey(name: '_participantEffectiveDescription')
               Element participantEffectiveDescriptionElement,
+          FhirDateTime participantEffectiveDateTime,
           @JsonKey(name: '_participantEffectiveDateTime')
               Element participantEffectiveDateTimeElement,
           Period participantEffectivePeriod,
@@ -12837,6 +12937,8 @@ abstract class _ResearchElementDefinitionCharacteristic
   @override
   CodeableConcept get definitionCodeableConcept;
   @override
+  Canonical get definitionCanonical;
+  @override
   @JsonKey(name: '_definitionCanonical')
   Element get definitionCanonicalElement;
   @override
@@ -12857,6 +12959,8 @@ abstract class _ResearchElementDefinitionCharacteristic
   @override
   @JsonKey(name: '_studyEffectiveDescription')
   Element get studyEffectiveDescriptionElement;
+  @override
+  FhirDateTime get studyEffectiveDateTime;
   @override
   @JsonKey(name: '_studyEffectiveDateTime')
   Element get studyEffectiveDateTimeElement;
@@ -12883,6 +12987,8 @@ abstract class _ResearchElementDefinitionCharacteristic
   @override
   @JsonKey(name: '_participantEffectiveDescription')
   Element get participantEffectiveDescriptionElement;
+  @override
+  FhirDateTime get participantEffectiveDateTime;
   @override
   @JsonKey(name: '_participantEffectiveDateTime')
   Element get participantEffectiveDateTimeElement;

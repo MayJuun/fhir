@@ -96,7 +96,7 @@ class __$ElementCopyWithImpl<$Res> extends _$ElementCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Element implements _Element {
-  const _$_Element({this.id, @JsonKey(name: 'extension') this.extension_});
+  _$_Element({this.id, @JsonKey(name: 'extension') this.extension_});
 
   factory _$_Element.fromJson(Map<String, dynamic> json) =>
       _$_$_ElementFromJson(json);
@@ -140,7 +140,7 @@ class _$_Element implements _Element {
 }
 
 abstract class _Element implements Element {
-  const factory _Element(
+  factory _Element(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_}) = _$_Element;
 

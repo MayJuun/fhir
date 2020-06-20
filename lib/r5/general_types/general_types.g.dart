@@ -50,6 +50,7 @@ _$_Annotation _$_$_AnnotationFromJson(Map<String, dynamic> json) {
     authorReference: json['authorReference'] == null
         ? null
         : Reference.fromJson(json['authorReference'] as Map<String, dynamic>),
+    authorString: json['authorString'] as String,
     authorStringElement: json['_authorString'] == null
         ? null
         : Element.fromJson(json['_authorString'] as Map<String, dynamic>),
@@ -80,6 +81,7 @@ Map<String, dynamic> _$_$_AnnotationToJson(_$_Annotation instance) {
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('authorReference', instance.authorReference?.toJson());
+  writeNotNull('authorString', instance.authorString);
   writeNotNull('_authorString', instance.authorStringElement?.toJson());
   writeNotNull('time', instance.time?.toJson());
   writeNotNull('_time', instance.timeElement?.toJson());

@@ -59,7 +59,7 @@ String enumFormat(String oldFormat) {
       return 'three';
     case '5':
       return 'five';
-    case '0BSD':
+    case '0bsd':
       return 'bsd';
   }
   return oldFormat;

@@ -365,7 +365,7 @@ class __$BodySiteCopyWithImpl<$Res> extends _$BodySiteCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_BodySite implements _BodySite {
-  const _$_BodySite(
+  _$_BodySite(
       {@required
       @JsonKey(required: true, defaultValue: 'BodySite')
           this.resourceType,
@@ -529,7 +529,7 @@ class _$_BodySite implements _BodySite {
 }
 
 abstract class _BodySite implements BodySite {
-  const factory _BodySite(
+  factory _BodySite(
       {@required
       @JsonKey(required: true, defaultValue: 'BodySite')
           String resourceType,
@@ -1207,7 +1207,7 @@ class __$DiagnosticReportCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DiagnosticReport implements _DiagnosticReport {
-  const _$_DiagnosticReport(
+  _$_DiagnosticReport(
       {@required
       @JsonKey(required: true, defaultValue: 'DiagnosticReport')
           this.resourceType,
@@ -1455,7 +1455,7 @@ class _$_DiagnosticReport implements _DiagnosticReport {
 }
 
 abstract class _DiagnosticReport implements DiagnosticReport {
-  const factory _DiagnosticReport(
+  factory _DiagnosticReport(
       {@required
       @JsonKey(required: true, defaultValue: 'DiagnosticReport')
           String resourceType,
@@ -1692,7 +1692,7 @@ class __$DiagnosticReportPerformerCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DiagnosticReportPerformer implements _DiagnosticReportPerformer {
-  const _$_DiagnosticReportPerformer(
+  _$_DiagnosticReportPerformer(
       {this.role, @JsonKey(required: true) this.actor});
 
   factory _$_DiagnosticReportPerformer.fromJson(Map<String, dynamic> json) =>
@@ -1738,7 +1738,7 @@ class _$_DiagnosticReportPerformer implements _DiagnosticReportPerformer {
 }
 
 abstract class _DiagnosticReportPerformer implements DiagnosticReportPerformer {
-  const factory _DiagnosticReportPerformer(
+  factory _DiagnosticReportPerformer(
       {CodeableConcept role,
       @JsonKey(required: true) Reference actor}) = _$_DiagnosticReportPerformer;
 
@@ -1890,7 +1890,7 @@ class __$DiagnosticReportImageCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DiagnosticReportImage implements _DiagnosticReportImage {
-  const _$_DiagnosticReportImage(
+  _$_DiagnosticReportImage(
       {this.comment,
       @JsonKey(required: true) this.link,
       @JsonKey(name: '_comment') this.commentElement});
@@ -1945,7 +1945,7 @@ class _$_DiagnosticReportImage implements _DiagnosticReportImage {
 }
 
 abstract class _DiagnosticReportImage implements DiagnosticReportImage {
-  const factory _DiagnosticReportImage(
+  factory _DiagnosticReportImage(
           {String comment,
           @JsonKey(required: true) Reference link,
           @JsonKey(name: '_comment') Element commentElement}) =
@@ -2347,7 +2347,7 @@ class __$ImagingManifestCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImagingManifest implements _ImagingManifest {
-  const _$_ImagingManifest(
+  _$_ImagingManifest(
       {@required
       @JsonKey(required: true, defaultValue: 'ImagingManifest')
           this.resourceType,
@@ -2507,7 +2507,7 @@ class _$_ImagingManifest implements _ImagingManifest {
 }
 
 abstract class _ImagingManifest implements ImagingManifest {
-  const factory _ImagingManifest(
+  factory _ImagingManifest(
       {@required
       @JsonKey(required: true, defaultValue: 'ImagingManifest')
           String resourceType,
@@ -2741,7 +2741,7 @@ class __$ImagingManifestStudyCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImagingManifestStudy implements _ImagingManifestStudy {
-  const _$_ImagingManifestStudy(
+  _$_ImagingManifestStudy(
       {this.uid,
       this.imagingStudy,
       this.endpoint,
@@ -2809,7 +2809,7 @@ class _$_ImagingManifestStudy implements _ImagingManifestStudy {
 }
 
 abstract class _ImagingManifestStudy implements ImagingManifestStudy {
-  const factory _ImagingManifestStudy(
+  factory _ImagingManifestStudy(
       {Oid uid,
       Reference imagingStudy,
       List<Reference> endpoint,
@@ -2971,7 +2971,7 @@ class __$ImagingManifestSeriesCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImagingManifestSeries implements _ImagingManifestSeries {
-  const _$_ImagingManifestSeries(
+  _$_ImagingManifestSeries(
       {this.uid,
       this.endpoint,
       @JsonKey(required: true) this.instance,
@@ -3033,7 +3033,7 @@ class _$_ImagingManifestSeries implements _ImagingManifestSeries {
 }
 
 abstract class _ImagingManifestSeries implements ImagingManifestSeries {
-  const factory _ImagingManifestSeries(
+  factory _ImagingManifestSeries(
       {Oid uid,
       List<Reference> endpoint,
       @JsonKey(required: true) List<ImagingManifestInstance> instance,
@@ -3204,7 +3204,7 @@ class __$ImagingManifestInstanceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImagingManifestInstance implements _ImagingManifestInstance {
-  const _$_ImagingManifestInstance(
+  _$_ImagingManifestInstance(
       {this.sopClass,
       this.uid,
       @JsonKey(name: '_sopClass') this.sopClassElement,
@@ -3266,7 +3266,7 @@ class _$_ImagingManifestInstance implements _ImagingManifestInstance {
 }
 
 abstract class _ImagingManifestInstance implements ImagingManifestInstance {
-  const factory _ImagingManifestInstance(
+  factory _ImagingManifestInstance(
       {Oid sopClass,
       Oid uid,
       @JsonKey(name: '_sopClass') Element sopClassElement,
@@ -3961,7 +3961,7 @@ class __$ImagingStudyCopyWithImpl<$Res> extends _$ImagingStudyCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImagingStudy implements _ImagingStudy {
-  const _$_ImagingStudy(
+  _$_ImagingStudy(
       {@required
       @JsonKey(required: true, defaultValue: 'ImagingStudy')
           this.resourceType,
@@ -4228,7 +4228,7 @@ class _$_ImagingStudy implements _ImagingStudy {
 }
 
 abstract class _ImagingStudy implements ImagingStudy {
-  const factory _ImagingStudy(
+  factory _ImagingStudy(
       {@required
       @JsonKey(required: true, defaultValue: 'ImagingStudy')
           String resourceType,
@@ -4791,7 +4791,7 @@ class __$ImagingStudySeriesCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImagingStudySeries implements _ImagingStudySeries {
-  const _$_ImagingStudySeries(
+  _$_ImagingStudySeries(
       {this.uid,
       this.number,
       @JsonKey(required: true) this.modality,
@@ -4957,7 +4957,7 @@ class _$_ImagingStudySeries implements _ImagingStudySeries {
 }
 
 abstract class _ImagingStudySeries implements ImagingStudySeries {
-  const factory _ImagingStudySeries(
+  factory _ImagingStudySeries(
       {Oid uid,
       UnsignedInt number,
       @JsonKey(required: true)
@@ -5254,7 +5254,7 @@ class __$ImagingStudyInstanceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImagingStudyInstance implements _ImagingStudyInstance {
-  const _$_ImagingStudyInstance(
+  _$_ImagingStudyInstance(
       {this.uid,
       this.number,
       this.sopClass,
@@ -5344,7 +5344,7 @@ class _$_ImagingStudyInstance implements _ImagingStudyInstance {
 }
 
 abstract class _ImagingStudyInstance implements ImagingStudyInstance {
-  const factory _ImagingStudyInstance(
+  factory _ImagingStudyInstance(
       {Oid uid,
       UnsignedInt number,
       Oid sopClass,
@@ -6420,7 +6420,7 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Observation implements _Observation {
-  const _$_Observation(
+  _$_Observation(
       {@required
       @JsonKey(required: true, defaultValue: 'Observation')
           this.resourceType,
@@ -6765,7 +6765,7 @@ class _$_Observation implements _Observation {
 }
 
 abstract class _Observation implements Observation {
-  const factory _Observation(
+  factory _Observation(
       {@required
       @JsonKey(required: true, defaultValue: 'Observation')
           String resourceType,
@@ -7159,7 +7159,7 @@ class __$ObservationReferenceRangeCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ObservationReferenceRange implements _ObservationReferenceRange {
-  const _$_ObservationReferenceRange(
+  _$_ObservationReferenceRange(
       {this.low,
       this.high,
       this.type,
@@ -7238,7 +7238,7 @@ class _$_ObservationReferenceRange implements _ObservationReferenceRange {
 }
 
 abstract class _ObservationReferenceRange implements ObservationReferenceRange {
-  const factory _ObservationReferenceRange(
+  factory _ObservationReferenceRange(
           {Quantity low,
           Quantity high,
           CodeableConcept type,
@@ -7404,7 +7404,7 @@ class __$ObservationRelatedCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ObservationRelated implements _ObservationRelated {
-  const _$_ObservationRelated(
+  _$_ObservationRelated(
       {@JsonKey(unknownEnumValue: RelatedType.unknown) this.type,
       @JsonKey(required: true) this.target,
       @JsonKey(name: '_type') this.typeElement});
@@ -7458,7 +7458,7 @@ class _$_ObservationRelated implements _ObservationRelated {
 }
 
 abstract class _ObservationRelated implements ObservationRelated {
-  const factory _ObservationRelated(
+  factory _ObservationRelated(
       {@JsonKey(unknownEnumValue: RelatedType.unknown) RelatedType type,
       @JsonKey(required: true) Reference target,
       @JsonKey(name: '_type') Element typeElement}) = _$_ObservationRelated;
@@ -7933,7 +7933,7 @@ class __$ObservationComponentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ObservationComponent implements _ObservationComponent {
-  const _$_ObservationComponent(
+  _$_ObservationComponent(
       {@JsonKey(required: true) this.code,
       this.valueQuantity,
       this.valueCodeableConcept,
@@ -8088,7 +8088,7 @@ class _$_ObservationComponent implements _ObservationComponent {
 }
 
 abstract class _ObservationComponent implements ObservationComponent {
-  const factory _ObservationComponent(
+  factory _ObservationComponent(
           {@JsonKey(required: true) CodeableConcept code,
           Quantity valueQuantity,
           CodeableConcept valueCodeableConcept,
@@ -8621,7 +8621,7 @@ class __$QuestionnaireResponseCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_QuestionnaireResponse implements _QuestionnaireResponse {
-  const _$_QuestionnaireResponse(
+  _$_QuestionnaireResponse(
       {@required
       @JsonKey(required: true, defaultValue: 'QuestionnaireResponse')
           this.resourceType,
@@ -8812,7 +8812,7 @@ class _$_QuestionnaireResponse implements _QuestionnaireResponse {
 }
 
 abstract class _QuestionnaireResponse implements QuestionnaireResponse {
-  const factory _QuestionnaireResponse(
+  factory _QuestionnaireResponse(
       {@required
       @JsonKey(required: true, defaultValue: 'QuestionnaireResponse')
           String resourceType,
@@ -9132,7 +9132,7 @@ class __$QuestionnaireResponseItemCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_QuestionnaireResponseItem implements _QuestionnaireResponseItem {
-  const _$_QuestionnaireResponseItem(
+  _$_QuestionnaireResponseItem(
       {this.linkId,
       this.definition,
       this.text,
@@ -9228,7 +9228,7 @@ class _$_QuestionnaireResponseItem implements _QuestionnaireResponseItem {
 }
 
 abstract class _QuestionnaireResponseItem implements QuestionnaireResponseItem {
-  const factory _QuestionnaireResponseItem(
+  factory _QuestionnaireResponseItem(
           {String linkId,
           String definition,
           String text,
@@ -9771,7 +9771,7 @@ class __$QuestionnaireResponseAnswerCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_QuestionnaireResponseAnswer implements _QuestionnaireResponseAnswer {
-  const _$_QuestionnaireResponseAnswer(
+  _$_QuestionnaireResponseAnswer(
       {this.valueBoolean,
       this.valueDecimal,
       this.valueInteger,
@@ -9959,7 +9959,7 @@ class _$_QuestionnaireResponseAnswer implements _QuestionnaireResponseAnswer {
 
 abstract class _QuestionnaireResponseAnswer
     implements QuestionnaireResponseAnswer {
-  const factory _QuestionnaireResponseAnswer(
+  factory _QuestionnaireResponseAnswer(
           {Boolean valueBoolean,
           Decimal valueDecimal,
           Integer valueInteger,
@@ -10598,7 +10598,7 @@ class __$SequenceCopyWithImpl<$Res> extends _$SequenceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Sequence implements _Sequence {
-  const _$_Sequence(
+  _$_Sequence(
       {@required
       @JsonKey(required: true, defaultValue: 'Sequence')
           this.resourceType,
@@ -10829,7 +10829,7 @@ class _$_Sequence implements _Sequence {
 }
 
 abstract class _Sequence implements Sequence {
-  const factory _Sequence(
+  factory _Sequence(
       {@required
       @JsonKey(required: true, defaultValue: 'Sequence')
           String resourceType,
@@ -11278,7 +11278,7 @@ class __$SequenceReferenceSeqCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_SequenceReferenceSeq implements _SequenceReferenceSeq {
-  const _$_SequenceReferenceSeq(
+  _$_SequenceReferenceSeq(
       {this.chromosome,
       this.genomeBuild,
       this.referenceSeqId,
@@ -11408,7 +11408,7 @@ class _$_SequenceReferenceSeq implements _SequenceReferenceSeq {
 }
 
 abstract class _SequenceReferenceSeq implements SequenceReferenceSeq {
-  const factory _SequenceReferenceSeq(
+  factory _SequenceReferenceSeq(
       {CodeableConcept chromosome,
       String genomeBuild,
       CodeableConcept referenceSeqId,
@@ -11754,7 +11754,7 @@ class __$SequenceVariantCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_SequenceVariant implements _SequenceVariant {
-  const _$_SequenceVariant(
+  _$_SequenceVariant(
       {this.start,
       this.end,
       this.observedAllele,
@@ -11865,7 +11865,7 @@ class _$_SequenceVariant implements _SequenceVariant {
 }
 
 abstract class _SequenceVariant implements SequenceVariant {
-  const factory _SequenceVariant(
+  factory _SequenceVariant(
       {Integer start,
       Integer end,
       String observedAllele,
@@ -12449,7 +12449,7 @@ class __$SequenceQualityCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_SequenceQuality implements _SequenceQuality {
-  const _$_SequenceQuality(
+  _$_SequenceQuality(
       {@JsonKey(unknownEnumValue: QualityType.unknown) this.type,
       this.standardSequence,
       this.start,
@@ -12660,7 +12660,7 @@ class _$_SequenceQuality implements _SequenceQuality {
 }
 
 abstract class _SequenceQuality implements SequenceQuality {
-  const factory _SequenceQuality(
+  factory _SequenceQuality(
       {@JsonKey(unknownEnumValue: QualityType.unknown) QualityType type,
       CodeableConcept standardSequence,
       Integer start,
@@ -13047,7 +13047,7 @@ class __$SequenceRepositoryCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_SequenceRepository implements _SequenceRepository {
-  const _$_SequenceRepository(
+  _$_SequenceRepository(
       {@JsonKey(unknownEnumValue: RepositoryType.unknown) this.type,
       this.url,
       this.name,
@@ -13167,7 +13167,7 @@ class _$_SequenceRepository implements _SequenceRepository {
 }
 
 abstract class _SequenceRepository implements SequenceRepository {
-  const factory _SequenceRepository(
+  factory _SequenceRepository(
       {@JsonKey(unknownEnumValue: RepositoryType.unknown)
           RepositoryType type,
       String url,
@@ -13670,7 +13670,7 @@ class __$SpecimenCopyWithImpl<$Res> extends _$SpecimenCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Specimen implements _Specimen {
-  const _$_Specimen(
+  _$_Specimen(
       {@required
       @JsonKey(required: true, defaultValue: 'Specimen')
           this.resourceType,
@@ -13870,7 +13870,7 @@ class _$_Specimen implements _Specimen {
 }
 
 abstract class _Specimen implements Specimen {
-  const factory _Specimen(
+  factory _Specimen(
       {@required
       @JsonKey(required: true, defaultValue: 'Specimen')
           String resourceType,
@@ -14194,7 +14194,7 @@ class __$SpecimenCollectionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_SpecimenCollection implements _SpecimenCollection {
-  const _$_SpecimenCollection(
+  _$_SpecimenCollection(
       {this.collector,
       this.collectedDateTime,
       this.collectedPeriod,
@@ -14276,7 +14276,7 @@ class _$_SpecimenCollection implements _SpecimenCollection {
 }
 
 abstract class _SpecimenCollection implements SpecimenCollection {
-  const factory _SpecimenCollection(
+  factory _SpecimenCollection(
       {Reference collector,
       FhirDateTime collectedDateTime,
       Period collectedPeriod,
@@ -14523,7 +14523,7 @@ class __$SpecimenProcessingCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_SpecimenProcessing implements _SpecimenProcessing {
-  const _$_SpecimenProcessing(
+  _$_SpecimenProcessing(
       {this.description,
       this.procedure,
       this.additive,
@@ -14606,7 +14606,7 @@ class _$_SpecimenProcessing implements _SpecimenProcessing {
 }
 
 abstract class _SpecimenProcessing implements SpecimenProcessing {
-  const factory _SpecimenProcessing(
+  factory _SpecimenProcessing(
           {String description,
           CodeableConcept procedure,
           List<Reference> additive,
@@ -14889,7 +14889,7 @@ class __$SpecimenContainerCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_SpecimenContainer implements _SpecimenContainer {
-  const _$_SpecimenContainer(
+  _$_SpecimenContainer(
       {this.identifier,
       this.description,
       this.type,
@@ -14978,7 +14978,7 @@ class _$_SpecimenContainer implements _SpecimenContainer {
 }
 
 abstract class _SpecimenContainer implements SpecimenContainer {
-  const factory _SpecimenContainer(
+  factory _SpecimenContainer(
           {List<Identifier> identifier,
           String description,
           CodeableConcept type,

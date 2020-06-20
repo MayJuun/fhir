@@ -69,8 +69,8 @@ void main() async {
                   res = '_';
                   reserv = "@JsonKey(name: '$field')";
                 }
-                data += '$reserv $required ';
-                '${getPattern(field, schema['definitions'][obj]['properties'][field]['pattern'])}'
+                data += '$reserv $required '
+                    '${getPattern(field, schema['definitions'][obj]['properties'][field]['pattern'])}'
                     ' $field$res,\n';
               } else if (schema['definitions'][obj]['properties'][field]
                       ['items']

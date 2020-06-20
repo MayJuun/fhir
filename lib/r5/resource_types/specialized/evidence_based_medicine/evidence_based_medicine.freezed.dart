@@ -4760,6 +4760,7 @@ class _$EvidenceVariableCharacteristicTearOff {
           @JsonKey(name: '_description')
               Element descriptionElement,
           Reference definitionReference,
+          Canonical definitionCanonical,
           @JsonKey(name: '_definitionCanonical')
               Element definitionCanonicalElement,
           CodeableConcept definitionCodeableConcept,
@@ -4774,6 +4775,7 @@ class _$EvidenceVariableCharacteristicTearOff {
           Boolean exclude,
           @JsonKey(name: '_exclude')
               Element excludeElement,
+          FhirDateTime participantEffectiveDateTime,
           @JsonKey(name: '_participantEffectiveDateTime')
               Element participantEffectiveDateTimeElement,
           Period participantEffectivePeriod,
@@ -4793,6 +4795,7 @@ class _$EvidenceVariableCharacteristicTearOff {
       description: description,
       descriptionElement: descriptionElement,
       definitionReference: definitionReference,
+      definitionCanonical: definitionCanonical,
       definitionCanonicalElement: definitionCanonicalElement,
       definitionCodeableConcept: definitionCodeableConcept,
       definitionExpression: definitionExpression,
@@ -4804,6 +4807,7 @@ class _$EvidenceVariableCharacteristicTearOff {
       booleanSetElement: booleanSetElement,
       exclude: exclude,
       excludeElement: excludeElement,
+      participantEffectiveDateTime: participantEffectiveDateTime,
       participantEffectiveDateTimeElement: participantEffectiveDateTimeElement,
       participantEffectivePeriod: participantEffectivePeriod,
       participantEffectiveDuration: participantEffectiveDuration,
@@ -4828,6 +4832,7 @@ mixin _$EvidenceVariableCharacteristic {
   @JsonKey(name: '_description')
   Element get descriptionElement;
   Reference get definitionReference;
+  Canonical get definitionCanonical;
   @JsonKey(name: '_definitionCanonical')
   Element get definitionCanonicalElement;
   CodeableConcept get definitionCodeableConcept;
@@ -4842,6 +4847,7 @@ mixin _$EvidenceVariableCharacteristic {
   Boolean get exclude;
   @JsonKey(name: '_exclude')
   Element get excludeElement;
+  FhirDateTime get participantEffectiveDateTime;
   @JsonKey(name: '_participantEffectiveDateTime')
   Element get participantEffectiveDateTimeElement;
   Period get participantEffectivePeriod;
@@ -4873,6 +4879,7 @@ abstract class $EvidenceVariableCharacteristicCopyWith<$Res> {
           @JsonKey(name: '_description')
               Element descriptionElement,
           Reference definitionReference,
+          Canonical definitionCanonical,
           @JsonKey(name: '_definitionCanonical')
               Element definitionCanonicalElement,
           CodeableConcept definitionCodeableConcept,
@@ -4887,6 +4894,7 @@ abstract class $EvidenceVariableCharacteristicCopyWith<$Res> {
           Boolean exclude,
           @JsonKey(name: '_exclude')
               Element excludeElement,
+          FhirDateTime participantEffectiveDateTime,
           @JsonKey(name: '_participantEffectiveDateTime')
               Element participantEffectiveDateTimeElement,
           Period participantEffectivePeriod,
@@ -4935,6 +4943,7 @@ class _$EvidenceVariableCharacteristicCopyWithImpl<$Res>
     Object description = freezed,
     Object descriptionElement = freezed,
     Object definitionReference = freezed,
+    Object definitionCanonical = freezed,
     Object definitionCanonicalElement = freezed,
     Object definitionCodeableConcept = freezed,
     Object definitionExpression = freezed,
@@ -4946,6 +4955,7 @@ class _$EvidenceVariableCharacteristicCopyWithImpl<$Res>
     Object booleanSetElement = freezed,
     Object exclude = freezed,
     Object excludeElement = freezed,
+    Object participantEffectiveDateTime = freezed,
     Object participantEffectiveDateTimeElement = freezed,
     Object participantEffectivePeriod = freezed,
     Object participantEffectiveDuration = freezed,
@@ -4970,6 +4980,9 @@ class _$EvidenceVariableCharacteristicCopyWithImpl<$Res>
       definitionReference: definitionReference == freezed
           ? _value.definitionReference
           : definitionReference as Reference,
+      definitionCanonical: definitionCanonical == freezed
+          ? _value.definitionCanonical
+          : definitionCanonical as Canonical,
       definitionCanonicalElement: definitionCanonicalElement == freezed
           ? _value.definitionCanonicalElement
           : definitionCanonicalElement as Element,
@@ -4997,6 +5010,9 @@ class _$EvidenceVariableCharacteristicCopyWithImpl<$Res>
       excludeElement: excludeElement == freezed
           ? _value.excludeElement
           : excludeElement as Element,
+      participantEffectiveDateTime: participantEffectiveDateTime == freezed
+          ? _value.participantEffectiveDateTime
+          : participantEffectiveDateTime as FhirDateTime,
       participantEffectiveDateTimeElement:
           participantEffectiveDateTimeElement == freezed
               ? _value.participantEffectiveDateTimeElement
@@ -5215,6 +5231,7 @@ abstract class _$EvidenceVariableCharacteristicCopyWith<$Res>
           @JsonKey(name: '_description')
               Element descriptionElement,
           Reference definitionReference,
+          Canonical definitionCanonical,
           @JsonKey(name: '_definitionCanonical')
               Element definitionCanonicalElement,
           CodeableConcept definitionCodeableConcept,
@@ -5229,6 +5246,7 @@ abstract class _$EvidenceVariableCharacteristicCopyWith<$Res>
           Boolean exclude,
           @JsonKey(name: '_exclude')
               Element excludeElement,
+          FhirDateTime participantEffectiveDateTime,
           @JsonKey(name: '_participantEffectiveDateTime')
               Element participantEffectiveDateTimeElement,
           Period participantEffectivePeriod,
@@ -5298,6 +5316,7 @@ class __$EvidenceVariableCharacteristicCopyWithImpl<$Res>
     Object description = freezed,
     Object descriptionElement = freezed,
     Object definitionReference = freezed,
+    Object definitionCanonical = freezed,
     Object definitionCanonicalElement = freezed,
     Object definitionCodeableConcept = freezed,
     Object definitionExpression = freezed,
@@ -5309,6 +5328,7 @@ class __$EvidenceVariableCharacteristicCopyWithImpl<$Res>
     Object booleanSetElement = freezed,
     Object exclude = freezed,
     Object excludeElement = freezed,
+    Object participantEffectiveDateTime = freezed,
     Object participantEffectiveDateTimeElement = freezed,
     Object participantEffectivePeriod = freezed,
     Object participantEffectiveDuration = freezed,
@@ -5333,6 +5353,9 @@ class __$EvidenceVariableCharacteristicCopyWithImpl<$Res>
       definitionReference: definitionReference == freezed
           ? _value.definitionReference
           : definitionReference as Reference,
+      definitionCanonical: definitionCanonical == freezed
+          ? _value.definitionCanonical
+          : definitionCanonical as Canonical,
       definitionCanonicalElement: definitionCanonicalElement == freezed
           ? _value.definitionCanonicalElement
           : definitionCanonicalElement as Element,
@@ -5360,6 +5383,9 @@ class __$EvidenceVariableCharacteristicCopyWithImpl<$Res>
       excludeElement: excludeElement == freezed
           ? _value.excludeElement
           : excludeElement as Element,
+      participantEffectiveDateTime: participantEffectiveDateTime == freezed
+          ? _value.participantEffectiveDateTime
+          : participantEffectiveDateTime as FhirDateTime,
       participantEffectiveDateTimeElement:
           participantEffectiveDateTimeElement == freezed
               ? _value.participantEffectiveDateTimeElement
@@ -5398,6 +5424,7 @@ class _$_EvidenceVariableCharacteristic
       @JsonKey(name: '_description')
           this.descriptionElement,
       this.definitionReference,
+      this.definitionCanonical,
       @JsonKey(name: '_definitionCanonical')
           this.definitionCanonicalElement,
       this.definitionCodeableConcept,
@@ -5412,6 +5439,7 @@ class _$_EvidenceVariableCharacteristic
       this.exclude,
       @JsonKey(name: '_exclude')
           this.excludeElement,
+      this.participantEffectiveDateTime,
       @JsonKey(name: '_participantEffectiveDateTime')
           this.participantEffectiveDateTimeElement,
       this.participantEffectivePeriod,
@@ -5443,6 +5471,8 @@ class _$_EvidenceVariableCharacteristic
   @override
   final Reference definitionReference;
   @override
+  final Canonical definitionCanonical;
+  @override
   @JsonKey(name: '_definitionCanonical')
   final Element definitionCanonicalElement;
   @override
@@ -5468,6 +5498,8 @@ class _$_EvidenceVariableCharacteristic
   @JsonKey(name: '_exclude')
   final Element excludeElement;
   @override
+  final FhirDateTime participantEffectiveDateTime;
+  @override
   @JsonKey(name: '_participantEffectiveDateTime')
   final Element participantEffectiveDateTimeElement;
   @override
@@ -5487,7 +5519,7 @@ class _$_EvidenceVariableCharacteristic
 
   @override
   String toString() {
-    return 'EvidenceVariableCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, definitionReference: $definitionReference, definitionCanonicalElement: $definitionCanonicalElement, definitionCodeableConcept: $definitionCodeableConcept, definitionExpression: $definitionExpression, definitionDataRequirement: $definitionDataRequirement, definitionTriggerDefinition: $definitionTriggerDefinition, method: $method, device: $device, booleanSet: $booleanSet, booleanSetElement: $booleanSetElement, exclude: $exclude, excludeElement: $excludeElement, participantEffectiveDateTimeElement: $participantEffectiveDateTimeElement, participantEffectivePeriod: $participantEffectivePeriod, participantEffectiveDuration: $participantEffectiveDuration, participantEffectiveTiming: $participantEffectiveTiming, timeFromStart: $timeFromStart, groupMeasure: $groupMeasure, groupMeasureElement: $groupMeasureElement)';
+    return 'EvidenceVariableCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, definitionReference: $definitionReference, definitionCanonical: $definitionCanonical, definitionCanonicalElement: $definitionCanonicalElement, definitionCodeableConcept: $definitionCodeableConcept, definitionExpression: $definitionExpression, definitionDataRequirement: $definitionDataRequirement, definitionTriggerDefinition: $definitionTriggerDefinition, method: $method, device: $device, booleanSet: $booleanSet, booleanSetElement: $booleanSetElement, exclude: $exclude, excludeElement: $excludeElement, participantEffectiveDateTime: $participantEffectiveDateTime, participantEffectiveDateTimeElement: $participantEffectiveDateTimeElement, participantEffectivePeriod: $participantEffectivePeriod, participantEffectiveDuration: $participantEffectiveDuration, participantEffectiveTiming: $participantEffectiveTiming, timeFromStart: $timeFromStart, groupMeasure: $groupMeasure, groupMeasureElement: $groupMeasureElement)';
   }
 
   @override
@@ -5511,6 +5543,9 @@ class _$_EvidenceVariableCharacteristic
             (identical(other.definitionReference, definitionReference) ||
                 const DeepCollectionEquality()
                     .equals(other.definitionReference, definitionReference)) &&
+            (identical(other.definitionCanonical, definitionCanonical) ||
+                const DeepCollectionEquality()
+                    .equals(other.definitionCanonical, definitionCanonical)) &&
             (identical(other.definitionCanonicalElement, definitionCanonicalElement) ||
                 const DeepCollectionEquality().equals(
                     other.definitionCanonicalElement,
@@ -5542,6 +5577,7 @@ class _$_EvidenceVariableCharacteristic
                     .equals(other.booleanSetElement, booleanSetElement)) &&
             (identical(other.exclude, exclude) || const DeepCollectionEquality().equals(other.exclude, exclude)) &&
             (identical(other.excludeElement, excludeElement) || const DeepCollectionEquality().equals(other.excludeElement, excludeElement)) &&
+            (identical(other.participantEffectiveDateTime, participantEffectiveDateTime) || const DeepCollectionEquality().equals(other.participantEffectiveDateTime, participantEffectiveDateTime)) &&
             (identical(other.participantEffectiveDateTimeElement, participantEffectiveDateTimeElement) || const DeepCollectionEquality().equals(other.participantEffectiveDateTimeElement, participantEffectiveDateTimeElement)) &&
             (identical(other.participantEffectivePeriod, participantEffectivePeriod) || const DeepCollectionEquality().equals(other.participantEffectivePeriod, participantEffectivePeriod)) &&
             (identical(other.participantEffectiveDuration, participantEffectiveDuration) || const DeepCollectionEquality().equals(other.participantEffectiveDuration, participantEffectiveDuration)) &&
@@ -5560,6 +5596,7 @@ class _$_EvidenceVariableCharacteristic
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(definitionReference) ^
+      const DeepCollectionEquality().hash(definitionCanonical) ^
       const DeepCollectionEquality().hash(definitionCanonicalElement) ^
       const DeepCollectionEquality().hash(definitionCodeableConcept) ^
       const DeepCollectionEquality().hash(definitionExpression) ^
@@ -5571,6 +5608,7 @@ class _$_EvidenceVariableCharacteristic
       const DeepCollectionEquality().hash(booleanSetElement) ^
       const DeepCollectionEquality().hash(exclude) ^
       const DeepCollectionEquality().hash(excludeElement) ^
+      const DeepCollectionEquality().hash(participantEffectiveDateTime) ^
       const DeepCollectionEquality().hash(participantEffectiveDateTimeElement) ^
       const DeepCollectionEquality().hash(participantEffectivePeriod) ^
       const DeepCollectionEquality().hash(participantEffectiveDuration) ^
@@ -5602,6 +5640,7 @@ abstract class _EvidenceVariableCharacteristic
       @JsonKey(name: '_description')
           Element descriptionElement,
       Reference definitionReference,
+      Canonical definitionCanonical,
       @JsonKey(name: '_definitionCanonical')
           Element definitionCanonicalElement,
       CodeableConcept definitionCodeableConcept,
@@ -5616,6 +5655,7 @@ abstract class _EvidenceVariableCharacteristic
       Boolean exclude,
       @JsonKey(name: '_exclude')
           Element excludeElement,
+      FhirDateTime participantEffectiveDateTime,
       @JsonKey(name: '_participantEffectiveDateTime')
           Element participantEffectiveDateTimeElement,
       Period participantEffectivePeriod,
@@ -5645,6 +5685,8 @@ abstract class _EvidenceVariableCharacteristic
   @override
   Reference get definitionReference;
   @override
+  Canonical get definitionCanonical;
+  @override
   @JsonKey(name: '_definitionCanonical')
   Element get definitionCanonicalElement;
   @override
@@ -5669,6 +5711,8 @@ abstract class _EvidenceVariableCharacteristic
   @override
   @JsonKey(name: '_exclude')
   Element get excludeElement;
+  @override
+  FhirDateTime get participantEffectiveDateTime;
   @override
   @JsonKey(name: '_participantEffectiveDateTime')
   Element get participantEffectiveDateTimeElement;

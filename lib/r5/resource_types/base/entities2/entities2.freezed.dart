@@ -900,6 +900,7 @@ class _$BiologicallyDerivedProductCollectionTearOff {
       List<FhirExtension> modifierExtension,
       Reference collector,
       Reference source,
+      FhirDateTime collectedDateTime,
       @JsonKey(name: '_collectedDateTime') Element collectedDateTimeElement,
       Period collectedPeriod}) {
     return _BiologicallyDerivedProductCollection(
@@ -908,6 +909,7 @@ class _$BiologicallyDerivedProductCollectionTearOff {
       modifierExtension: modifierExtension,
       collector: collector,
       source: source,
+      collectedDateTime: collectedDateTime,
       collectedDateTimeElement: collectedDateTimeElement,
       collectedPeriod: collectedPeriod,
     );
@@ -925,6 +927,7 @@ mixin _$BiologicallyDerivedProductCollection {
   List<FhirExtension> get modifierExtension;
   Reference get collector;
   Reference get source;
+  FhirDateTime get collectedDateTime;
   @JsonKey(name: '_collectedDateTime')
   Element get collectedDateTimeElement;
   Period get collectedPeriod;
@@ -945,6 +948,7 @@ abstract class $BiologicallyDerivedProductCollectionCopyWith<$Res> {
       List<FhirExtension> modifierExtension,
       Reference collector,
       Reference source,
+      FhirDateTime collectedDateTime,
       @JsonKey(name: '_collectedDateTime') Element collectedDateTimeElement,
       Period collectedPeriod});
 
@@ -969,6 +973,7 @@ class _$BiologicallyDerivedProductCollectionCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object collector = freezed,
     Object source = freezed,
+    Object collectedDateTime = freezed,
     Object collectedDateTimeElement = freezed,
     Object collectedPeriod = freezed,
   }) {
@@ -983,6 +988,9 @@ class _$BiologicallyDerivedProductCollectionCopyWithImpl<$Res>
       collector:
           collector == freezed ? _value.collector : collector as Reference,
       source: source == freezed ? _value.source : source as Reference,
+      collectedDateTime: collectedDateTime == freezed
+          ? _value.collectedDateTime
+          : collectedDateTime as FhirDateTime,
       collectedDateTimeElement: collectedDateTimeElement == freezed
           ? _value.collectedDateTimeElement
           : collectedDateTimeElement as Element,
@@ -1046,6 +1054,7 @@ abstract class _$BiologicallyDerivedProductCollectionCopyWith<$Res>
       List<FhirExtension> modifierExtension,
       Reference collector,
       Reference source,
+      FhirDateTime collectedDateTime,
       @JsonKey(name: '_collectedDateTime') Element collectedDateTimeElement,
       Period collectedPeriod});
 
@@ -1078,6 +1087,7 @@ class __$BiologicallyDerivedProductCollectionCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object collector = freezed,
     Object source = freezed,
+    Object collectedDateTime = freezed,
     Object collectedDateTimeElement = freezed,
     Object collectedPeriod = freezed,
   }) {
@@ -1092,6 +1102,9 @@ class __$BiologicallyDerivedProductCollectionCopyWithImpl<$Res>
       collector:
           collector == freezed ? _value.collector : collector as Reference,
       source: source == freezed ? _value.source : source as Reference,
+      collectedDateTime: collectedDateTime == freezed
+          ? _value.collectedDateTime
+          : collectedDateTime as FhirDateTime,
       collectedDateTimeElement: collectedDateTimeElement == freezed
           ? _value.collectedDateTimeElement
           : collectedDateTimeElement as Element,
@@ -1111,6 +1124,7 @@ class _$_BiologicallyDerivedProductCollection
       this.modifierExtension,
       this.collector,
       this.source,
+      this.collectedDateTime,
       @JsonKey(name: '_collectedDateTime') this.collectedDateTimeElement,
       this.collectedPeriod})
       : super._();
@@ -1131,6 +1145,8 @@ class _$_BiologicallyDerivedProductCollection
   @override
   final Reference source;
   @override
+  final FhirDateTime collectedDateTime;
+  @override
   @JsonKey(name: '_collectedDateTime')
   final Element collectedDateTimeElement;
   @override
@@ -1138,7 +1154,7 @@ class _$_BiologicallyDerivedProductCollection
 
   @override
   String toString() {
-    return 'BiologicallyDerivedProductCollection(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, collector: $collector, source: $source, collectedDateTimeElement: $collectedDateTimeElement, collectedPeriod: $collectedPeriod)';
+    return 'BiologicallyDerivedProductCollection(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, collector: $collector, source: $source, collectedDateTime: $collectedDateTime, collectedDateTimeElement: $collectedDateTimeElement, collectedPeriod: $collectedPeriod)';
   }
 
   @override
@@ -1158,6 +1174,9 @@ class _$_BiologicallyDerivedProductCollection
                     .equals(other.collector, collector)) &&
             (identical(other.source, source) ||
                 const DeepCollectionEquality().equals(other.source, source)) &&
+            (identical(other.collectedDateTime, collectedDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.collectedDateTime, collectedDateTime)) &&
             (identical(
                     other.collectedDateTimeElement, collectedDateTimeElement) ||
                 const DeepCollectionEquality().equals(
@@ -1176,6 +1195,7 @@ class _$_BiologicallyDerivedProductCollection
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(collector) ^
       const DeepCollectionEquality().hash(source) ^
+      const DeepCollectionEquality().hash(collectedDateTime) ^
       const DeepCollectionEquality().hash(collectedDateTimeElement) ^
       const DeepCollectionEquality().hash(collectedPeriod);
 
@@ -1200,6 +1220,7 @@ abstract class _BiologicallyDerivedProductCollection
       List<FhirExtension> modifierExtension,
       Reference collector,
       Reference source,
+      FhirDateTime collectedDateTime,
       @JsonKey(name: '_collectedDateTime') Element collectedDateTimeElement,
       Period collectedPeriod}) = _$_BiologicallyDerivedProductCollection;
 
@@ -1218,6 +1239,8 @@ abstract class _BiologicallyDerivedProductCollection
   Reference get collector;
   @override
   Reference get source;
+  @override
+  FhirDateTime get collectedDateTime;
   @override
   @JsonKey(name: '_collectedDateTime')
   Element get collectedDateTimeElement;
@@ -1244,6 +1267,7 @@ class _$BiologicallyDerivedProductProcessingTearOff {
       @JsonKey(name: '_description') Element descriptionElement,
       CodeableConcept procedure,
       Reference additive,
+      FhirDateTime timeDateTime,
       @JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
       Period timePeriod}) {
     return _BiologicallyDerivedProductProcessing(
@@ -1254,6 +1278,7 @@ class _$BiologicallyDerivedProductProcessingTearOff {
       descriptionElement: descriptionElement,
       procedure: procedure,
       additive: additive,
+      timeDateTime: timeDateTime,
       timeDateTimeElement: timeDateTimeElement,
       timePeriod: timePeriod,
     );
@@ -1274,6 +1299,7 @@ mixin _$BiologicallyDerivedProductProcessing {
   Element get descriptionElement;
   CodeableConcept get procedure;
   Reference get additive;
+  FhirDateTime get timeDateTime;
   @JsonKey(name: '_timeDateTime')
   Element get timeDateTimeElement;
   Period get timePeriod;
@@ -1296,6 +1322,7 @@ abstract class $BiologicallyDerivedProductProcessingCopyWith<$Res> {
       @JsonKey(name: '_description') Element descriptionElement,
       CodeableConcept procedure,
       Reference additive,
+      FhirDateTime timeDateTime,
       @JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
       Period timePeriod});
 
@@ -1323,6 +1350,7 @@ class _$BiologicallyDerivedProductProcessingCopyWithImpl<$Res>
     Object descriptionElement = freezed,
     Object procedure = freezed,
     Object additive = freezed,
+    Object timeDateTime = freezed,
     Object timeDateTimeElement = freezed,
     Object timePeriod = freezed,
   }) {
@@ -1343,6 +1371,9 @@ class _$BiologicallyDerivedProductProcessingCopyWithImpl<$Res>
           ? _value.procedure
           : procedure as CodeableConcept,
       additive: additive == freezed ? _value.additive : additive as Reference,
+      timeDateTime: timeDateTime == freezed
+          ? _value.timeDateTime
+          : timeDateTime as FhirDateTime,
       timeDateTimeElement: timeDateTimeElement == freezed
           ? _value.timeDateTimeElement
           : timeDateTimeElement as Element,
@@ -1417,6 +1448,7 @@ abstract class _$BiologicallyDerivedProductProcessingCopyWith<$Res>
       @JsonKey(name: '_description') Element descriptionElement,
       CodeableConcept procedure,
       Reference additive,
+      FhirDateTime timeDateTime,
       @JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
       Period timePeriod});
 
@@ -1453,6 +1485,7 @@ class __$BiologicallyDerivedProductProcessingCopyWithImpl<$Res>
     Object descriptionElement = freezed,
     Object procedure = freezed,
     Object additive = freezed,
+    Object timeDateTime = freezed,
     Object timeDateTimeElement = freezed,
     Object timePeriod = freezed,
   }) {
@@ -1473,6 +1506,9 @@ class __$BiologicallyDerivedProductProcessingCopyWithImpl<$Res>
           ? _value.procedure
           : procedure as CodeableConcept,
       additive: additive == freezed ? _value.additive : additive as Reference,
+      timeDateTime: timeDateTime == freezed
+          ? _value.timeDateTime
+          : timeDateTime as FhirDateTime,
       timeDateTimeElement: timeDateTimeElement == freezed
           ? _value.timeDateTimeElement
           : timeDateTimeElement as Element,
@@ -1493,6 +1529,7 @@ class _$_BiologicallyDerivedProductProcessing
       @JsonKey(name: '_description') this.descriptionElement,
       this.procedure,
       this.additive,
+      this.timeDateTime,
       @JsonKey(name: '_timeDateTime') this.timeDateTimeElement,
       this.timePeriod})
       : super._();
@@ -1518,6 +1555,8 @@ class _$_BiologicallyDerivedProductProcessing
   @override
   final Reference additive;
   @override
+  final FhirDateTime timeDateTime;
+  @override
   @JsonKey(name: '_timeDateTime')
   final Element timeDateTimeElement;
   @override
@@ -1525,7 +1564,7 @@ class _$_BiologicallyDerivedProductProcessing
 
   @override
   String toString() {
-    return 'BiologicallyDerivedProductProcessing(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, procedure: $procedure, additive: $additive, timeDateTimeElement: $timeDateTimeElement, timePeriod: $timePeriod)';
+    return 'BiologicallyDerivedProductProcessing(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, procedure: $procedure, additive: $additive, timeDateTime: $timeDateTime, timeDateTimeElement: $timeDateTimeElement, timePeriod: $timePeriod)';
   }
 
   @override
@@ -1552,6 +1591,9 @@ class _$_BiologicallyDerivedProductProcessing
             (identical(other.additive, additive) ||
                 const DeepCollectionEquality()
                     .equals(other.additive, additive)) &&
+            (identical(other.timeDateTime, timeDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.timeDateTime, timeDateTime)) &&
             (identical(other.timeDateTimeElement, timeDateTimeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.timeDateTimeElement, timeDateTimeElement)) &&
@@ -1570,6 +1612,7 @@ class _$_BiologicallyDerivedProductProcessing
       const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(procedure) ^
       const DeepCollectionEquality().hash(additive) ^
+      const DeepCollectionEquality().hash(timeDateTime) ^
       const DeepCollectionEquality().hash(timeDateTimeElement) ^
       const DeepCollectionEquality().hash(timePeriod);
 
@@ -1596,6 +1639,7 @@ abstract class _BiologicallyDerivedProductProcessing
       @JsonKey(name: '_description') Element descriptionElement,
       CodeableConcept procedure,
       Reference additive,
+      FhirDateTime timeDateTime,
       @JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
       Period timePeriod}) = _$_BiologicallyDerivedProductProcessing;
 
@@ -1619,6 +1663,8 @@ abstract class _BiologicallyDerivedProductProcessing
   CodeableConcept get procedure;
   @override
   Reference get additive;
+  @override
+  FhirDateTime get timeDateTime;
   @override
   @JsonKey(name: '_timeDateTime')
   Element get timeDateTimeElement;
@@ -1644,6 +1690,7 @@ class _$BiologicallyDerivedProductManipulationTearOff {
       List<FhirExtension> modifierExtension,
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
+      FhirDateTime timeDateTime,
       @JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
       Period timePeriod}) {
     return _BiologicallyDerivedProductManipulation(
@@ -1652,6 +1699,7 @@ class _$BiologicallyDerivedProductManipulationTearOff {
       modifierExtension: modifierExtension,
       description: description,
       descriptionElement: descriptionElement,
+      timeDateTime: timeDateTime,
       timeDateTimeElement: timeDateTimeElement,
       timePeriod: timePeriod,
     );
@@ -1670,6 +1718,7 @@ mixin _$BiologicallyDerivedProductManipulation {
   String get description;
   @JsonKey(name: '_description')
   Element get descriptionElement;
+  FhirDateTime get timeDateTime;
   @JsonKey(name: '_timeDateTime')
   Element get timeDateTimeElement;
   Period get timePeriod;
@@ -1690,6 +1739,7 @@ abstract class $BiologicallyDerivedProductManipulationCopyWith<$Res> {
       List<FhirExtension> modifierExtension,
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
+      FhirDateTime timeDateTime,
       @JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
       Period timePeriod});
 
@@ -1713,6 +1763,7 @@ class _$BiologicallyDerivedProductManipulationCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object description = freezed,
     Object descriptionElement = freezed,
+    Object timeDateTime = freezed,
     Object timeDateTimeElement = freezed,
     Object timePeriod = freezed,
   }) {
@@ -1729,6 +1780,9 @@ class _$BiologicallyDerivedProductManipulationCopyWithImpl<$Res>
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
+      timeDateTime: timeDateTime == freezed
+          ? _value.timeDateTime
+          : timeDateTime as FhirDateTime,
       timeDateTimeElement: timeDateTimeElement == freezed
           ? _value.timeDateTimeElement
           : timeDateTimeElement as Element,
@@ -1781,6 +1835,7 @@ abstract class _$BiologicallyDerivedProductManipulationCopyWith<$Res>
       List<FhirExtension> modifierExtension,
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
+      FhirDateTime timeDateTime,
       @JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
       Period timePeriod});
 
@@ -1812,6 +1867,7 @@ class __$BiologicallyDerivedProductManipulationCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object description = freezed,
     Object descriptionElement = freezed,
+    Object timeDateTime = freezed,
     Object timeDateTimeElement = freezed,
     Object timePeriod = freezed,
   }) {
@@ -1828,6 +1884,9 @@ class __$BiologicallyDerivedProductManipulationCopyWithImpl<$Res>
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
+      timeDateTime: timeDateTime == freezed
+          ? _value.timeDateTime
+          : timeDateTime as FhirDateTime,
       timeDateTimeElement: timeDateTimeElement == freezed
           ? _value.timeDateTimeElement
           : timeDateTimeElement as Element,
@@ -1846,6 +1905,7 @@ class _$_BiologicallyDerivedProductManipulation
       this.modifierExtension,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
+      this.timeDateTime,
       @JsonKey(name: '_timeDateTime') this.timeDateTimeElement,
       this.timePeriod})
       : super._();
@@ -1867,6 +1927,8 @@ class _$_BiologicallyDerivedProductManipulation
   @JsonKey(name: '_description')
   final Element descriptionElement;
   @override
+  final FhirDateTime timeDateTime;
+  @override
   @JsonKey(name: '_timeDateTime')
   final Element timeDateTimeElement;
   @override
@@ -1874,7 +1936,7 @@ class _$_BiologicallyDerivedProductManipulation
 
   @override
   String toString() {
-    return 'BiologicallyDerivedProductManipulation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, timeDateTimeElement: $timeDateTimeElement, timePeriod: $timePeriod)';
+    return 'BiologicallyDerivedProductManipulation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, timeDateTime: $timeDateTime, timeDateTimeElement: $timeDateTimeElement, timePeriod: $timePeriod)';
   }
 
   @override
@@ -1895,6 +1957,9 @@ class _$_BiologicallyDerivedProductManipulation
             (identical(other.descriptionElement, descriptionElement) ||
                 const DeepCollectionEquality()
                     .equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.timeDateTime, timeDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.timeDateTime, timeDateTime)) &&
             (identical(other.timeDateTimeElement, timeDateTimeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.timeDateTimeElement, timeDateTimeElement)) &&
@@ -1911,6 +1976,7 @@ class _$_BiologicallyDerivedProductManipulation
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(timeDateTime) ^
       const DeepCollectionEquality().hash(timeDateTimeElement) ^
       const DeepCollectionEquality().hash(timePeriod);
 
@@ -1935,6 +2001,7 @@ abstract class _BiologicallyDerivedProductManipulation
       List<FhirExtension> modifierExtension,
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
+      FhirDateTime timeDateTime,
       @JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
       Period timePeriod}) = _$_BiologicallyDerivedProductManipulation;
 
@@ -1954,6 +2021,8 @@ abstract class _BiologicallyDerivedProductManipulation
   @override
   @JsonKey(name: '_description')
   Element get descriptionElement;
+  @override
+  FhirDateTime get timeDateTime;
   @override
   @JsonKey(name: '_timeDateTime')
   Element get timeDateTimeElement;
@@ -5036,6 +5105,7 @@ abstract class $DeviceVersionCopyWith<$Res> {
       @JsonKey(name: '_value') Element valueElement});
 
   $CodeableConceptCopyWith<$Res> get type;
+  $IdentifierCopyWith<$Res> get component;
   $ElementCopyWith<$Res> get valueElement;
 }
 
@@ -5086,6 +5156,16 @@ class _$DeviceVersionCopyWithImpl<$Res>
   }
 
   @override
+  $IdentifierCopyWith<$Res> get component {
+    if (_value.component == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.component, (value) {
+      return _then(_value.copyWith(component: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res> get valueElement {
     if (_value.valueElement == null) {
       return null;
@@ -5113,6 +5193,8 @@ abstract class _$DeviceVersionCopyWith<$Res>
 
   @override
   $CodeableConceptCopyWith<$Res> get type;
+  @override
+  $IdentifierCopyWith<$Res> get component;
   @override
   $ElementCopyWith<$Res> get valueElement;
 }
@@ -7545,6 +7627,7 @@ abstract class $SubstanceInstanceCopyWith<$Res> {
       @JsonKey(name: '_expiry') Element expiryElement,
       Quantity quantity});
 
+  $IdentifierCopyWith<$Res> get identifier;
   $ElementCopyWith<$Res> get expiryElement;
   $QuantityCopyWith<$Res> get quantity;
 }
@@ -7586,6 +7669,16 @@ class _$SubstanceInstanceCopyWithImpl<$Res>
   }
 
   @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res> get expiryElement {
     if (_value.expiryElement == null) {
       return null;
@@ -7621,6 +7714,8 @@ abstract class _$SubstanceInstanceCopyWith<$Res>
       @JsonKey(name: '_expiry') Element expiryElement,
       Quantity quantity});
 
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
   @override
   $ElementCopyWith<$Res> get expiryElement;
   @override

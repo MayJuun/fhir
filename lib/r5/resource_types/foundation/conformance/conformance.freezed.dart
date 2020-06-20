@@ -23408,7 +23408,9 @@ class _$ImplementationGuideResourceTearOff {
       @JsonKey(name: '_name') Element nameElement,
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
+      Boolean exampleBoolean,
       @JsonKey(name: '_exampleBoolean') Element exampleBooleanElement,
+      Canonical exampleCanonical,
       @JsonKey(name: '_exampleCanonical') Element exampleCanonicalElement,
       Id groupingId,
       @JsonKey(name: '_groupingId') Element groupingIdElement}) {
@@ -23423,7 +23425,9 @@ class _$ImplementationGuideResourceTearOff {
       nameElement: nameElement,
       description: description,
       descriptionElement: descriptionElement,
+      exampleBoolean: exampleBoolean,
       exampleBooleanElement: exampleBooleanElement,
+      exampleCanonical: exampleCanonical,
       exampleCanonicalElement: exampleCanonicalElement,
       groupingId: groupingId,
       groupingIdElement: groupingIdElement,
@@ -23449,8 +23453,10 @@ mixin _$ImplementationGuideResource {
   String get description;
   @JsonKey(name: '_description')
   Element get descriptionElement;
+  Boolean get exampleBoolean;
   @JsonKey(name: '_exampleBoolean')
   Element get exampleBooleanElement;
+  Canonical get exampleCanonical;
   @JsonKey(name: '_exampleCanonical')
   Element get exampleCanonicalElement;
   Id get groupingId;
@@ -23478,7 +23484,9 @@ abstract class $ImplementationGuideResourceCopyWith<$Res> {
       @JsonKey(name: '_name') Element nameElement,
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
+      Boolean exampleBoolean,
       @JsonKey(name: '_exampleBoolean') Element exampleBooleanElement,
+      Canonical exampleCanonical,
       @JsonKey(name: '_exampleCanonical') Element exampleCanonicalElement,
       Id groupingId,
       @JsonKey(name: '_groupingId') Element groupingIdElement});
@@ -23512,7 +23520,9 @@ class _$ImplementationGuideResourceCopyWithImpl<$Res>
     Object nameElement = freezed,
     Object description = freezed,
     Object descriptionElement = freezed,
+    Object exampleBoolean = freezed,
     Object exampleBooleanElement = freezed,
+    Object exampleCanonical = freezed,
     Object exampleCanonicalElement = freezed,
     Object groupingId = freezed,
     Object groupingIdElement = freezed,
@@ -23541,9 +23551,15 @@ class _$ImplementationGuideResourceCopyWithImpl<$Res>
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
+      exampleBoolean: exampleBoolean == freezed
+          ? _value.exampleBoolean
+          : exampleBoolean as Boolean,
       exampleBooleanElement: exampleBooleanElement == freezed
           ? _value.exampleBooleanElement
           : exampleBooleanElement as Element,
+      exampleCanonical: exampleCanonical == freezed
+          ? _value.exampleCanonical
+          : exampleCanonical as Canonical,
       exampleCanonicalElement: exampleCanonicalElement == freezed
           ? _value.exampleCanonicalElement
           : exampleCanonicalElement as Element,
@@ -23643,7 +23659,9 @@ abstract class _$ImplementationGuideResourceCopyWith<$Res>
       @JsonKey(name: '_name') Element nameElement,
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
+      Boolean exampleBoolean,
       @JsonKey(name: '_exampleBoolean') Element exampleBooleanElement,
+      Canonical exampleCanonical,
       @JsonKey(name: '_exampleCanonical') Element exampleCanonicalElement,
       Id groupingId,
       @JsonKey(name: '_groupingId') Element groupingIdElement});
@@ -23688,7 +23706,9 @@ class __$ImplementationGuideResourceCopyWithImpl<$Res>
     Object nameElement = freezed,
     Object description = freezed,
     Object descriptionElement = freezed,
+    Object exampleBoolean = freezed,
     Object exampleBooleanElement = freezed,
+    Object exampleCanonical = freezed,
     Object exampleCanonicalElement = freezed,
     Object groupingId = freezed,
     Object groupingIdElement = freezed,
@@ -23717,9 +23737,15 @@ class __$ImplementationGuideResourceCopyWithImpl<$Res>
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
+      exampleBoolean: exampleBoolean == freezed
+          ? _value.exampleBoolean
+          : exampleBoolean as Boolean,
       exampleBooleanElement: exampleBooleanElement == freezed
           ? _value.exampleBooleanElement
           : exampleBooleanElement as Element,
+      exampleCanonical: exampleCanonical == freezed
+          ? _value.exampleCanonical
+          : exampleCanonical as Canonical,
       exampleCanonicalElement: exampleCanonicalElement == freezed
           ? _value.exampleCanonicalElement
           : exampleCanonicalElement as Element,
@@ -23744,7 +23770,9 @@ class _$_ImplementationGuideResource extends _ImplementationGuideResource {
       @JsonKey(name: '_name') this.nameElement,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
+      this.exampleBoolean,
       @JsonKey(name: '_exampleBoolean') this.exampleBooleanElement,
+      this.exampleCanonical,
       @JsonKey(name: '_exampleCanonical') this.exampleCanonicalElement,
       this.groupingId,
       @JsonKey(name: '_groupingId') this.groupingIdElement})
@@ -23779,8 +23807,12 @@ class _$_ImplementationGuideResource extends _ImplementationGuideResource {
   @JsonKey(name: '_description')
   final Element descriptionElement;
   @override
+  final Boolean exampleBoolean;
+  @override
   @JsonKey(name: '_exampleBoolean')
   final Element exampleBooleanElement;
+  @override
+  final Canonical exampleCanonical;
   @override
   @JsonKey(name: '_exampleCanonical')
   final Element exampleCanonicalElement;
@@ -23792,7 +23824,7 @@ class _$_ImplementationGuideResource extends _ImplementationGuideResource {
 
   @override
   String toString() {
-    return 'ImplementationGuideResource(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, reference: $reference, fhirVersion: $fhirVersion, fhirVersionElement: $fhirVersionElement, name: $name, nameElement: $nameElement, description: $description, descriptionElement: $descriptionElement, exampleBooleanElement: $exampleBooleanElement, exampleCanonicalElement: $exampleCanonicalElement, groupingId: $groupingId, groupingIdElement: $groupingIdElement)';
+    return 'ImplementationGuideResource(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, reference: $reference, fhirVersion: $fhirVersion, fhirVersionElement: $fhirVersionElement, name: $name, nameElement: $nameElement, description: $description, descriptionElement: $descriptionElement, exampleBoolean: $exampleBoolean, exampleBooleanElement: $exampleBooleanElement, exampleCanonical: $exampleCanonical, exampleCanonicalElement: $exampleCanonicalElement, groupingId: $groupingId, groupingIdElement: $groupingIdElement)';
   }
 
   @override
@@ -23827,9 +23859,15 @@ class _$_ImplementationGuideResource extends _ImplementationGuideResource {
             (identical(other.descriptionElement, descriptionElement) ||
                 const DeepCollectionEquality()
                     .equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.exampleBoolean, exampleBoolean) ||
+                const DeepCollectionEquality()
+                    .equals(other.exampleBoolean, exampleBoolean)) &&
             (identical(other.exampleBooleanElement, exampleBooleanElement) ||
                 const DeepCollectionEquality().equals(
                     other.exampleBooleanElement, exampleBooleanElement)) &&
+            (identical(other.exampleCanonical, exampleCanonical) ||
+                const DeepCollectionEquality()
+                    .equals(other.exampleCanonical, exampleCanonical)) &&
             (identical(
                     other.exampleCanonicalElement, exampleCanonicalElement) ||
                 const DeepCollectionEquality().equals(
@@ -23855,7 +23893,9 @@ class _$_ImplementationGuideResource extends _ImplementationGuideResource {
       const DeepCollectionEquality().hash(nameElement) ^
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(exampleBoolean) ^
       const DeepCollectionEquality().hash(exampleBooleanElement) ^
+      const DeepCollectionEquality().hash(exampleCanonical) ^
       const DeepCollectionEquality().hash(exampleCanonicalElement) ^
       const DeepCollectionEquality().hash(groupingId) ^
       const DeepCollectionEquality().hash(groupingIdElement);
@@ -23885,7 +23925,9 @@ abstract class _ImplementationGuideResource
           @JsonKey(name: '_name') Element nameElement,
           String description,
           @JsonKey(name: '_description') Element descriptionElement,
+          Boolean exampleBoolean,
           @JsonKey(name: '_exampleBoolean') Element exampleBooleanElement,
+          Canonical exampleCanonical,
           @JsonKey(name: '_exampleCanonical') Element exampleCanonicalElement,
           Id groupingId,
           @JsonKey(name: '_groupingId') Element groupingIdElement}) =
@@ -23919,8 +23961,12 @@ abstract class _ImplementationGuideResource
   @JsonKey(name: '_description')
   Element get descriptionElement;
   @override
+  Boolean get exampleBoolean;
+  @override
   @JsonKey(name: '_exampleBoolean')
   Element get exampleBooleanElement;
+  @override
+  Canonical get exampleCanonical;
   @override
   @JsonKey(name: '_exampleCanonical')
   Element get exampleCanonicalElement;
@@ -23947,6 +23993,7 @@ class _$ImplementationGuidePageTearOff {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
+      FhirUrl nameUrl,
       @JsonKey(name: '_nameUrl')
           Element nameUrlElement,
       Reference nameReference,
@@ -23962,6 +24009,7 @@ class _$ImplementationGuidePageTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      nameUrl: nameUrl,
       nameUrlElement: nameUrlElement,
       nameReference: nameReference,
       title: title,
@@ -23981,6 +24029,7 @@ mixin _$ImplementationGuidePage {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
+  FhirUrl get nameUrl;
   @JsonKey(name: '_nameUrl')
   Element get nameUrlElement;
   Reference get nameReference;
@@ -24006,6 +24055,7 @@ abstract class $ImplementationGuidePageCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
+      FhirUrl nameUrl,
       @JsonKey(name: '_nameUrl')
           Element nameUrlElement,
       Reference nameReference,
@@ -24037,6 +24087,7 @@ class _$ImplementationGuidePageCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object nameUrl = freezed,
     Object nameUrlElement = freezed,
     Object nameReference = freezed,
     Object title = freezed,
@@ -24053,6 +24104,7 @@ class _$ImplementationGuidePageCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
+      nameUrl: nameUrl == freezed ? _value.nameUrl : nameUrl as FhirUrl,
       nameUrlElement: nameUrlElement == freezed
           ? _value.nameUrlElement
           : nameUrlElement as Element,
@@ -24126,6 +24178,7 @@ abstract class _$ImplementationGuidePageCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
+      FhirUrl nameUrl,
       @JsonKey(name: '_nameUrl')
           Element nameUrlElement,
       Reference nameReference,
@@ -24164,6 +24217,7 @@ class __$ImplementationGuidePageCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object nameUrl = freezed,
     Object nameUrlElement = freezed,
     Object nameReference = freezed,
     Object title = freezed,
@@ -24180,6 +24234,7 @@ class __$ImplementationGuidePageCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
+      nameUrl: nameUrl == freezed ? _value.nameUrl : nameUrl as FhirUrl,
       nameUrlElement: nameUrlElement == freezed
           ? _value.nameUrlElement
           : nameUrlElement as Element,
@@ -24209,6 +24264,7 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
       @JsonKey(name: 'extension')
           this.extension_,
       this.modifierExtension,
+      this.nameUrl,
       @JsonKey(name: '_nameUrl')
           this.nameUrlElement,
       this.nameReference,
@@ -24233,6 +24289,8 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
   @override
   final List<FhirExtension> modifierExtension;
   @override
+  final FhirUrl nameUrl;
+  @override
   @JsonKey(name: '_nameUrl')
   final Element nameUrlElement;
   @override
@@ -24253,7 +24311,7 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
 
   @override
   String toString() {
-    return 'ImplementationGuidePage(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, nameUrlElement: $nameUrlElement, nameReference: $nameReference, title: $title, titleElement: $titleElement, generation: $generation, generationElement: $generationElement, page: $page)';
+    return 'ImplementationGuidePage(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, nameUrl: $nameUrl, nameUrlElement: $nameUrlElement, nameReference: $nameReference, title: $title, titleElement: $titleElement, generation: $generation, generationElement: $generationElement, page: $page)';
   }
 
   @override
@@ -24268,6 +24326,9 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.nameUrl, nameUrl) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameUrl, nameUrl)) &&
             (identical(other.nameUrlElement, nameUrlElement) ||
                 const DeepCollectionEquality()
                     .equals(other.nameUrlElement, nameUrlElement)) &&
@@ -24295,6 +24356,7 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(nameUrl) ^
       const DeepCollectionEquality().hash(nameUrlElement) ^
       const DeepCollectionEquality().hash(nameReference) ^
       const DeepCollectionEquality().hash(title) ^
@@ -24321,6 +24383,7 @@ abstract class _ImplementationGuidePage extends ImplementationGuidePage {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
+      FhirUrl nameUrl,
       @JsonKey(name: '_nameUrl')
           Element nameUrlElement,
       Reference nameReference,
@@ -24343,6 +24406,8 @@ abstract class _ImplementationGuidePage extends ImplementationGuidePage {
   List<FhirExtension> get extension_;
   @override
   List<FhirExtension> get modifierExtension;
+  @override
+  FhirUrl get nameUrl;
   @override
   @JsonKey(name: '_nameUrl')
   Element get nameUrlElement;
@@ -25466,7 +25531,9 @@ class _$ImplementationGuideResource1TearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @required Reference reference,
+      Boolean exampleBoolean,
       @JsonKey(name: '_exampleBoolean') Element exampleBooleanElement,
+      Canonical exampleCanonical,
       @JsonKey(name: '_exampleCanonical') Element exampleCanonicalElement,
       FhirUrl relativePath,
       @JsonKey(name: '_relativePath') Element relativePathElement}) {
@@ -25475,7 +25542,9 @@ class _$ImplementationGuideResource1TearOff {
       extension_: extension_,
       modifierExtension: modifierExtension,
       reference: reference,
+      exampleBoolean: exampleBoolean,
       exampleBooleanElement: exampleBooleanElement,
+      exampleCanonical: exampleCanonical,
       exampleCanonicalElement: exampleCanonicalElement,
       relativePath: relativePath,
       relativePathElement: relativePathElement,
@@ -25492,8 +25561,10 @@ mixin _$ImplementationGuideResource1 {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   Reference get reference;
+  Boolean get exampleBoolean;
   @JsonKey(name: '_exampleBoolean')
   Element get exampleBooleanElement;
+  Canonical get exampleCanonical;
   @JsonKey(name: '_exampleCanonical')
   Element get exampleCanonicalElement;
   FhirUrl get relativePath;
@@ -25515,7 +25586,9 @@ abstract class $ImplementationGuideResource1CopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Reference reference,
+      Boolean exampleBoolean,
       @JsonKey(name: '_exampleBoolean') Element exampleBooleanElement,
+      Canonical exampleCanonical,
       @JsonKey(name: '_exampleCanonical') Element exampleCanonicalElement,
       FhirUrl relativePath,
       @JsonKey(name: '_relativePath') Element relativePathElement});
@@ -25540,7 +25613,9 @@ class _$ImplementationGuideResource1CopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object reference = freezed,
+    Object exampleBoolean = freezed,
     Object exampleBooleanElement = freezed,
+    Object exampleCanonical = freezed,
     Object exampleCanonicalElement = freezed,
     Object relativePath = freezed,
     Object relativePathElement = freezed,
@@ -25555,9 +25630,15 @@ class _$ImplementationGuideResource1CopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension>,
       reference:
           reference == freezed ? _value.reference : reference as Reference,
+      exampleBoolean: exampleBoolean == freezed
+          ? _value.exampleBoolean
+          : exampleBoolean as Boolean,
       exampleBooleanElement: exampleBooleanElement == freezed
           ? _value.exampleBooleanElement
           : exampleBooleanElement as Element,
+      exampleCanonical: exampleCanonical == freezed
+          ? _value.exampleCanonical
+          : exampleCanonical as Canonical,
       exampleCanonicalElement: exampleCanonicalElement == freezed
           ? _value.exampleCanonicalElement
           : exampleCanonicalElement as Element,
@@ -25623,7 +25704,9 @@ abstract class _$ImplementationGuideResource1CopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Reference reference,
+      Boolean exampleBoolean,
       @JsonKey(name: '_exampleBoolean') Element exampleBooleanElement,
+      Canonical exampleCanonical,
       @JsonKey(name: '_exampleCanonical') Element exampleCanonicalElement,
       FhirUrl relativePath,
       @JsonKey(name: '_relativePath') Element relativePathElement});
@@ -25656,7 +25739,9 @@ class __$ImplementationGuideResource1CopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object reference = freezed,
+    Object exampleBoolean = freezed,
     Object exampleBooleanElement = freezed,
+    Object exampleCanonical = freezed,
     Object exampleCanonicalElement = freezed,
     Object relativePath = freezed,
     Object relativePathElement = freezed,
@@ -25671,9 +25756,15 @@ class __$ImplementationGuideResource1CopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension>,
       reference:
           reference == freezed ? _value.reference : reference as Reference,
+      exampleBoolean: exampleBoolean == freezed
+          ? _value.exampleBoolean
+          : exampleBoolean as Boolean,
       exampleBooleanElement: exampleBooleanElement == freezed
           ? _value.exampleBooleanElement
           : exampleBooleanElement as Element,
+      exampleCanonical: exampleCanonical == freezed
+          ? _value.exampleCanonical
+          : exampleCanonical as Canonical,
       exampleCanonicalElement: exampleCanonicalElement == freezed
           ? _value.exampleCanonicalElement
           : exampleCanonicalElement as Element,
@@ -25694,7 +25785,9 @@ class _$_ImplementationGuideResource1 extends _ImplementationGuideResource1 {
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @required this.reference,
+      this.exampleBoolean,
       @JsonKey(name: '_exampleBoolean') this.exampleBooleanElement,
+      this.exampleCanonical,
       @JsonKey(name: '_exampleCanonical') this.exampleCanonicalElement,
       this.relativePath,
       @JsonKey(name: '_relativePath') this.relativePathElement})
@@ -25714,8 +25807,12 @@ class _$_ImplementationGuideResource1 extends _ImplementationGuideResource1 {
   @override
   final Reference reference;
   @override
+  final Boolean exampleBoolean;
+  @override
   @JsonKey(name: '_exampleBoolean')
   final Element exampleBooleanElement;
+  @override
+  final Canonical exampleCanonical;
   @override
   @JsonKey(name: '_exampleCanonical')
   final Element exampleCanonicalElement;
@@ -25727,7 +25824,7 @@ class _$_ImplementationGuideResource1 extends _ImplementationGuideResource1 {
 
   @override
   String toString() {
-    return 'ImplementationGuideResource1(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, reference: $reference, exampleBooleanElement: $exampleBooleanElement, exampleCanonicalElement: $exampleCanonicalElement, relativePath: $relativePath, relativePathElement: $relativePathElement)';
+    return 'ImplementationGuideResource1(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, reference: $reference, exampleBoolean: $exampleBoolean, exampleBooleanElement: $exampleBooleanElement, exampleCanonical: $exampleCanonical, exampleCanonicalElement: $exampleCanonicalElement, relativePath: $relativePath, relativePathElement: $relativePathElement)';
   }
 
   @override
@@ -25745,9 +25842,15 @@ class _$_ImplementationGuideResource1 extends _ImplementationGuideResource1 {
             (identical(other.reference, reference) ||
                 const DeepCollectionEquality()
                     .equals(other.reference, reference)) &&
+            (identical(other.exampleBoolean, exampleBoolean) ||
+                const DeepCollectionEquality()
+                    .equals(other.exampleBoolean, exampleBoolean)) &&
             (identical(other.exampleBooleanElement, exampleBooleanElement) ||
                 const DeepCollectionEquality().equals(
                     other.exampleBooleanElement, exampleBooleanElement)) &&
+            (identical(other.exampleCanonical, exampleCanonical) ||
+                const DeepCollectionEquality()
+                    .equals(other.exampleCanonical, exampleCanonical)) &&
             (identical(
                     other.exampleCanonicalElement, exampleCanonicalElement) ||
                 const DeepCollectionEquality().equals(
@@ -25767,7 +25870,9 @@ class _$_ImplementationGuideResource1 extends _ImplementationGuideResource1 {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(reference) ^
+      const DeepCollectionEquality().hash(exampleBoolean) ^
       const DeepCollectionEquality().hash(exampleBooleanElement) ^
+      const DeepCollectionEquality().hash(exampleCanonical) ^
       const DeepCollectionEquality().hash(exampleCanonicalElement) ^
       const DeepCollectionEquality().hash(relativePath) ^
       const DeepCollectionEquality().hash(relativePathElement);
@@ -25791,7 +25896,9 @@ abstract class _ImplementationGuideResource1
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
           @required Reference reference,
+          Boolean exampleBoolean,
           @JsonKey(name: '_exampleBoolean') Element exampleBooleanElement,
+          Canonical exampleCanonical,
           @JsonKey(name: '_exampleCanonical') Element exampleCanonicalElement,
           FhirUrl relativePath,
           @JsonKey(name: '_relativePath') Element relativePathElement}) =
@@ -25810,8 +25917,12 @@ abstract class _ImplementationGuideResource1
   @override
   Reference get reference;
   @override
+  Boolean get exampleBoolean;
+  @override
   @JsonKey(name: '_exampleBoolean')
   Element get exampleBooleanElement;
+  @override
+  Canonical get exampleCanonical;
   @override
   @JsonKey(name: '_exampleCanonical')
   Element get exampleCanonicalElement;
@@ -26250,6 +26361,7 @@ class _$MessageDefinitionTearOff {
       Canonical base,
       List<Canonical> parent,
       Coding eventCoding,
+      FhirUri eventUri,
       @JsonKey(name: '_eventUri')
           Element eventUriElement,
       @JsonKey(unknownEnumValue: MessageDefinitionCategory.unknown)
@@ -26305,6 +26417,7 @@ class _$MessageDefinitionTearOff {
       base: base,
       parent: parent,
       eventCoding: eventCoding,
+      eventUri: eventUri,
       eventUriElement: eventUriElement,
       category: category,
       categoryElement: categoryElement,
@@ -26378,6 +26491,7 @@ mixin _$MessageDefinition {
   Canonical get base;
   List<Canonical> get parent;
   Coding get eventCoding;
+  FhirUri get eventUri;
   @JsonKey(name: '_eventUri')
   Element get eventUriElement;
   @JsonKey(unknownEnumValue: MessageDefinitionCategory.unknown)
@@ -26458,6 +26572,7 @@ abstract class $MessageDefinitionCopyWith<$Res> {
       Canonical base,
       List<Canonical> parent,
       Coding eventCoding,
+      FhirUri eventUri,
       @JsonKey(name: '_eventUri')
           Element eventUriElement,
       @JsonKey(unknownEnumValue: MessageDefinitionCategory.unknown)
@@ -26544,6 +26659,7 @@ class _$MessageDefinitionCopyWithImpl<$Res>
     Object base = freezed,
     Object parent = freezed,
     Object eventCoding = freezed,
+    Object eventUri = freezed,
     Object eventUriElement = freezed,
     Object category = freezed,
     Object categoryElement = freezed,
@@ -26641,6 +26757,7 @@ class _$MessageDefinitionCopyWithImpl<$Res>
       parent: parent == freezed ? _value.parent : parent as List<Canonical>,
       eventCoding:
           eventCoding == freezed ? _value.eventCoding : eventCoding as Coding,
+      eventUri: eventUri == freezed ? _value.eventUri : eventUri as FhirUri,
       eventUriElement: eventUriElement == freezed
           ? _value.eventUriElement
           : eventUriElement as Element,
@@ -26921,6 +27038,7 @@ abstract class _$MessageDefinitionCopyWith<$Res>
       Canonical base,
       List<Canonical> parent,
       Coding eventCoding,
+      FhirUri eventUri,
       @JsonKey(name: '_eventUri')
           Element eventUriElement,
       @JsonKey(unknownEnumValue: MessageDefinitionCategory.unknown)
@@ -27028,6 +27146,7 @@ class __$MessageDefinitionCopyWithImpl<$Res>
     Object base = freezed,
     Object parent = freezed,
     Object eventCoding = freezed,
+    Object eventUri = freezed,
     Object eventUriElement = freezed,
     Object category = freezed,
     Object categoryElement = freezed,
@@ -27125,6 +27244,7 @@ class __$MessageDefinitionCopyWithImpl<$Res>
       parent: parent == freezed ? _value.parent : parent as List<Canonical>,
       eventCoding:
           eventCoding == freezed ? _value.eventCoding : eventCoding as Coding,
+      eventUri: eventUri == freezed ? _value.eventUri : eventUri as FhirUri,
       eventUriElement: eventUriElement == freezed
           ? _value.eventUriElement
           : eventUriElement as Element,
@@ -27212,6 +27332,7 @@ class _$_MessageDefinition extends _MessageDefinition {
       this.base,
       this.parent,
       this.eventCoding,
+      this.eventUri,
       @JsonKey(name: '_eventUri')
           this.eventUriElement,
       @JsonKey(unknownEnumValue: MessageDefinitionCategory.unknown)
@@ -27330,6 +27451,8 @@ class _$_MessageDefinition extends _MessageDefinition {
   @override
   final Coding eventCoding;
   @override
+  final FhirUri eventUri;
+  @override
   @JsonKey(name: '_eventUri')
   final Element eventUriElement;
   @override
@@ -27353,7 +27476,7 @@ class _$_MessageDefinition extends _MessageDefinition {
 
   @override
   String toString() {
-    return 'MessageDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, replaces: $replaces, base: $base, parent: $parent, eventCoding: $eventCoding, eventUriElement: $eventUriElement, category: $category, categoryElement: $categoryElement, focus: $focus, responseRequired: $responseRequired, responseRequiredElement: $responseRequiredElement, allowedResponse: $allowedResponse, graph: $graph)';
+    return 'MessageDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, replaces: $replaces, base: $base, parent: $parent, eventCoding: $eventCoding, eventUri: $eventUri, eventUriElement: $eventUriElement, category: $category, categoryElement: $categoryElement, focus: $focus, responseRequired: $responseRequired, responseRequiredElement: $responseRequiredElement, allowedResponse: $allowedResponse, graph: $graph)';
   }
 
   @override
@@ -27444,6 +27567,7 @@ class _$_MessageDefinition extends _MessageDefinition {
             (identical(other.base, base) || const DeepCollectionEquality().equals(other.base, base)) &&
             (identical(other.parent, parent) || const DeepCollectionEquality().equals(other.parent, parent)) &&
             (identical(other.eventCoding, eventCoding) || const DeepCollectionEquality().equals(other.eventCoding, eventCoding)) &&
+            (identical(other.eventUri, eventUri) || const DeepCollectionEquality().equals(other.eventUri, eventUri)) &&
             (identical(other.eventUriElement, eventUriElement) || const DeepCollectionEquality().equals(other.eventUriElement, eventUriElement)) &&
             (identical(other.category, category) || const DeepCollectionEquality().equals(other.category, category)) &&
             (identical(other.categoryElement, categoryElement) || const DeepCollectionEquality().equals(other.categoryElement, categoryElement)) &&
@@ -27498,6 +27622,7 @@ class _$_MessageDefinition extends _MessageDefinition {
       const DeepCollectionEquality().hash(base) ^
       const DeepCollectionEquality().hash(parent) ^
       const DeepCollectionEquality().hash(eventCoding) ^
+      const DeepCollectionEquality().hash(eventUri) ^
       const DeepCollectionEquality().hash(eventUriElement) ^
       const DeepCollectionEquality().hash(category) ^
       const DeepCollectionEquality().hash(categoryElement) ^
@@ -27578,6 +27703,7 @@ abstract class _MessageDefinition extends MessageDefinition {
       Canonical base,
       List<Canonical> parent,
       Coding eventCoding,
+      FhirUri eventUri,
       @JsonKey(name: '_eventUri')
           Element eventUriElement,
       @JsonKey(unknownEnumValue: MessageDefinitionCategory.unknown)
@@ -27693,6 +27819,8 @@ abstract class _MessageDefinition extends MessageDefinition {
   List<Canonical> get parent;
   @override
   Coding get eventCoding;
+  @override
+  FhirUri get eventUri;
   @override
   @JsonKey(name: '_eventUri')
   Element get eventUriElement;
@@ -40019,44 +40147,64 @@ class _$StructureMapSourceTearOff {
       String type,
       @JsonKey(name: '_type')
           Element typeElement,
+      Base64Binary defaultValueBase64Binary,
       @JsonKey(name: '_defaultValueBase64Binary')
           Element defaultValueBase64BinaryElement,
+      Boolean defaultValueBoolean,
       @JsonKey(name: '_defaultValueBoolean')
           Element defaultValueBooleanElement,
+      Canonical defaultValueCanonical,
       @JsonKey(name: '_defaultValueCanonical')
           Element defaultValueCanonicalElement,
+      Code defaultValueCode,
       @JsonKey(name: '_defaultValueCode')
           Element defaultValueCodeElement,
+      Date defaultValueDate,
       @JsonKey(name: '_defaultValueDate')
           Element defaultValueDateElement,
+      FhirDateTime defaultValueDateTime,
       @JsonKey(name: '_defaultValueDateTime')
           Element defaultValueDateTimeElement,
+      Decimal defaultValueDecimal,
       @JsonKey(name: '_defaultValueDecimal')
           Element defaultValueDecimalElement,
+      Id defaultValueId,
       @JsonKey(name: '_defaultValueId')
           Element defaultValueIdElement,
+      Instant defaultValueInstant,
       @JsonKey(name: '_defaultValueInstant')
           Element defaultValueInstantElement,
+      Integer defaultValueInteger,
       @JsonKey(name: '_defaultValueInteger')
           Element defaultValueIntegerElement,
+      Integer defaultValueInteger64,
       @JsonKey(name: '_defaultValueInteger64')
           Element defaultValueInteger64Element,
+      Markdown defaultValueMarkdown,
       @JsonKey(name: '_defaultValueMarkdown')
           Element defaultValueMarkdownElement,
+      Oid defaultValueOid,
       @JsonKey(name: '_defaultValueOid')
           Element defaultValueOidElement,
+      PositiveInt defaultValuePositiveInt,
       @JsonKey(name: '_defaultValuePositiveInt')
           Element defaultValuePositiveIntElement,
+      String defaultValueString,
       @JsonKey(name: '_defaultValueString')
           Element defaultValueStringElement,
+      Time defaultValueTime,
       @JsonKey(name: '_defaultValueTime')
           Element defaultValueTimeElement,
+      UnsignedInt defaultValueUnsignedInt,
       @JsonKey(name: '_defaultValueUnsignedInt')
           Element defaultValueUnsignedIntElement,
+      FhirUri defaultValueUri,
       @JsonKey(name: '_defaultValueUri')
           Element defaultValueUriElement,
+      FhirUrl defaultValueUrl,
       @JsonKey(name: '_defaultValueUrl')
           Element defaultValueUrlElement,
+      Uuid defaultValueUuid,
       @JsonKey(name: '_defaultValueUuid')
           Element defaultValueUuidElement,
       Address defaultValueAddress,
@@ -40121,25 +40269,45 @@ class _$StructureMapSourceTearOff {
       maxElement: maxElement,
       type: type,
       typeElement: typeElement,
+      defaultValueBase64Binary: defaultValueBase64Binary,
       defaultValueBase64BinaryElement: defaultValueBase64BinaryElement,
+      defaultValueBoolean: defaultValueBoolean,
       defaultValueBooleanElement: defaultValueBooleanElement,
+      defaultValueCanonical: defaultValueCanonical,
       defaultValueCanonicalElement: defaultValueCanonicalElement,
+      defaultValueCode: defaultValueCode,
       defaultValueCodeElement: defaultValueCodeElement,
+      defaultValueDate: defaultValueDate,
       defaultValueDateElement: defaultValueDateElement,
+      defaultValueDateTime: defaultValueDateTime,
       defaultValueDateTimeElement: defaultValueDateTimeElement,
+      defaultValueDecimal: defaultValueDecimal,
       defaultValueDecimalElement: defaultValueDecimalElement,
+      defaultValueId: defaultValueId,
       defaultValueIdElement: defaultValueIdElement,
+      defaultValueInstant: defaultValueInstant,
       defaultValueInstantElement: defaultValueInstantElement,
+      defaultValueInteger: defaultValueInteger,
       defaultValueIntegerElement: defaultValueIntegerElement,
+      defaultValueInteger64: defaultValueInteger64,
       defaultValueInteger64Element: defaultValueInteger64Element,
+      defaultValueMarkdown: defaultValueMarkdown,
       defaultValueMarkdownElement: defaultValueMarkdownElement,
+      defaultValueOid: defaultValueOid,
       defaultValueOidElement: defaultValueOidElement,
+      defaultValuePositiveInt: defaultValuePositiveInt,
       defaultValuePositiveIntElement: defaultValuePositiveIntElement,
+      defaultValueString: defaultValueString,
       defaultValueStringElement: defaultValueStringElement,
+      defaultValueTime: defaultValueTime,
       defaultValueTimeElement: defaultValueTimeElement,
+      defaultValueUnsignedInt: defaultValueUnsignedInt,
       defaultValueUnsignedIntElement: defaultValueUnsignedIntElement,
+      defaultValueUri: defaultValueUri,
       defaultValueUriElement: defaultValueUriElement,
+      defaultValueUrl: defaultValueUrl,
       defaultValueUrlElement: defaultValueUrlElement,
+      defaultValueUuid: defaultValueUuid,
       defaultValueUuidElement: defaultValueUuidElement,
       defaultValueAddress: defaultValueAddress,
       defaultValueAge: defaultValueAge,
@@ -40208,44 +40376,64 @@ mixin _$StructureMapSource {
   String get type;
   @JsonKey(name: '_type')
   Element get typeElement;
+  Base64Binary get defaultValueBase64Binary;
   @JsonKey(name: '_defaultValueBase64Binary')
   Element get defaultValueBase64BinaryElement;
+  Boolean get defaultValueBoolean;
   @JsonKey(name: '_defaultValueBoolean')
   Element get defaultValueBooleanElement;
+  Canonical get defaultValueCanonical;
   @JsonKey(name: '_defaultValueCanonical')
   Element get defaultValueCanonicalElement;
+  Code get defaultValueCode;
   @JsonKey(name: '_defaultValueCode')
   Element get defaultValueCodeElement;
+  Date get defaultValueDate;
   @JsonKey(name: '_defaultValueDate')
   Element get defaultValueDateElement;
+  FhirDateTime get defaultValueDateTime;
   @JsonKey(name: '_defaultValueDateTime')
   Element get defaultValueDateTimeElement;
+  Decimal get defaultValueDecimal;
   @JsonKey(name: '_defaultValueDecimal')
   Element get defaultValueDecimalElement;
+  Id get defaultValueId;
   @JsonKey(name: '_defaultValueId')
   Element get defaultValueIdElement;
+  Instant get defaultValueInstant;
   @JsonKey(name: '_defaultValueInstant')
   Element get defaultValueInstantElement;
+  Integer get defaultValueInteger;
   @JsonKey(name: '_defaultValueInteger')
   Element get defaultValueIntegerElement;
+  Integer get defaultValueInteger64;
   @JsonKey(name: '_defaultValueInteger64')
   Element get defaultValueInteger64Element;
+  Markdown get defaultValueMarkdown;
   @JsonKey(name: '_defaultValueMarkdown')
   Element get defaultValueMarkdownElement;
+  Oid get defaultValueOid;
   @JsonKey(name: '_defaultValueOid')
   Element get defaultValueOidElement;
+  PositiveInt get defaultValuePositiveInt;
   @JsonKey(name: '_defaultValuePositiveInt')
   Element get defaultValuePositiveIntElement;
+  String get defaultValueString;
   @JsonKey(name: '_defaultValueString')
   Element get defaultValueStringElement;
+  Time get defaultValueTime;
   @JsonKey(name: '_defaultValueTime')
   Element get defaultValueTimeElement;
+  UnsignedInt get defaultValueUnsignedInt;
   @JsonKey(name: '_defaultValueUnsignedInt')
   Element get defaultValueUnsignedIntElement;
+  FhirUri get defaultValueUri;
   @JsonKey(name: '_defaultValueUri')
   Element get defaultValueUriElement;
+  FhirUrl get defaultValueUrl;
   @JsonKey(name: '_defaultValueUrl')
   Element get defaultValueUrlElement;
+  Uuid get defaultValueUuid;
   @JsonKey(name: '_defaultValueUuid')
   Element get defaultValueUuidElement;
   Address get defaultValueAddress;
@@ -40324,44 +40512,64 @@ abstract class $StructureMapSourceCopyWith<$Res> {
       String type,
       @JsonKey(name: '_type')
           Element typeElement,
+      Base64Binary defaultValueBase64Binary,
       @JsonKey(name: '_defaultValueBase64Binary')
           Element defaultValueBase64BinaryElement,
+      Boolean defaultValueBoolean,
       @JsonKey(name: '_defaultValueBoolean')
           Element defaultValueBooleanElement,
+      Canonical defaultValueCanonical,
       @JsonKey(name: '_defaultValueCanonical')
           Element defaultValueCanonicalElement,
+      Code defaultValueCode,
       @JsonKey(name: '_defaultValueCode')
           Element defaultValueCodeElement,
+      Date defaultValueDate,
       @JsonKey(name: '_defaultValueDate')
           Element defaultValueDateElement,
+      FhirDateTime defaultValueDateTime,
       @JsonKey(name: '_defaultValueDateTime')
           Element defaultValueDateTimeElement,
+      Decimal defaultValueDecimal,
       @JsonKey(name: '_defaultValueDecimal')
           Element defaultValueDecimalElement,
+      Id defaultValueId,
       @JsonKey(name: '_defaultValueId')
           Element defaultValueIdElement,
+      Instant defaultValueInstant,
       @JsonKey(name: '_defaultValueInstant')
           Element defaultValueInstantElement,
+      Integer defaultValueInteger,
       @JsonKey(name: '_defaultValueInteger')
           Element defaultValueIntegerElement,
+      Integer defaultValueInteger64,
       @JsonKey(name: '_defaultValueInteger64')
           Element defaultValueInteger64Element,
+      Markdown defaultValueMarkdown,
       @JsonKey(name: '_defaultValueMarkdown')
           Element defaultValueMarkdownElement,
+      Oid defaultValueOid,
       @JsonKey(name: '_defaultValueOid')
           Element defaultValueOidElement,
+      PositiveInt defaultValuePositiveInt,
       @JsonKey(name: '_defaultValuePositiveInt')
           Element defaultValuePositiveIntElement,
+      String defaultValueString,
       @JsonKey(name: '_defaultValueString')
           Element defaultValueStringElement,
+      Time defaultValueTime,
       @JsonKey(name: '_defaultValueTime')
           Element defaultValueTimeElement,
+      UnsignedInt defaultValueUnsignedInt,
       @JsonKey(name: '_defaultValueUnsignedInt')
           Element defaultValueUnsignedIntElement,
+      FhirUri defaultValueUri,
       @JsonKey(name: '_defaultValueUri')
           Element defaultValueUriElement,
+      FhirUrl defaultValueUrl,
       @JsonKey(name: '_defaultValueUrl')
           Element defaultValueUrlElement,
+      Uuid defaultValueUuid,
       @JsonKey(name: '_defaultValueUuid')
           Element defaultValueUuidElement,
       Address defaultValueAddress,
@@ -40450,6 +40658,7 @@ abstract class $StructureMapSourceCopyWith<$Res> {
   $DistanceCopyWith<$Res> get defaultValueDistance;
   $DurationCopyWith<$Res> get defaultValueDuration;
   $HumanNameCopyWith<$Res> get defaultValueHumanName;
+  $IdentifierCopyWith<$Res> get defaultValueIdentifier;
   $MoneyCopyWith<$Res> get defaultValueMoney;
   $PeriodCopyWith<$Res> get defaultValuePeriod;
   $QuantityCopyWith<$Res> get defaultValueQuantity;
@@ -40498,25 +40707,45 @@ class _$StructureMapSourceCopyWithImpl<$Res>
     Object maxElement = freezed,
     Object type = freezed,
     Object typeElement = freezed,
+    Object defaultValueBase64Binary = freezed,
     Object defaultValueBase64BinaryElement = freezed,
+    Object defaultValueBoolean = freezed,
     Object defaultValueBooleanElement = freezed,
+    Object defaultValueCanonical = freezed,
     Object defaultValueCanonicalElement = freezed,
+    Object defaultValueCode = freezed,
     Object defaultValueCodeElement = freezed,
+    Object defaultValueDate = freezed,
     Object defaultValueDateElement = freezed,
+    Object defaultValueDateTime = freezed,
     Object defaultValueDateTimeElement = freezed,
+    Object defaultValueDecimal = freezed,
     Object defaultValueDecimalElement = freezed,
+    Object defaultValueId = freezed,
     Object defaultValueIdElement = freezed,
+    Object defaultValueInstant = freezed,
     Object defaultValueInstantElement = freezed,
+    Object defaultValueInteger = freezed,
     Object defaultValueIntegerElement = freezed,
+    Object defaultValueInteger64 = freezed,
     Object defaultValueInteger64Element = freezed,
+    Object defaultValueMarkdown = freezed,
     Object defaultValueMarkdownElement = freezed,
+    Object defaultValueOid = freezed,
     Object defaultValueOidElement = freezed,
+    Object defaultValuePositiveInt = freezed,
     Object defaultValuePositiveIntElement = freezed,
+    Object defaultValueString = freezed,
     Object defaultValueStringElement = freezed,
+    Object defaultValueTime = freezed,
     Object defaultValueTimeElement = freezed,
+    Object defaultValueUnsignedInt = freezed,
     Object defaultValueUnsignedIntElement = freezed,
+    Object defaultValueUri = freezed,
     Object defaultValueUriElement = freezed,
+    Object defaultValueUrl = freezed,
     Object defaultValueUrlElement = freezed,
+    Object defaultValueUuid = freezed,
     Object defaultValueUuidElement = freezed,
     Object defaultValueAddress = freezed,
     Object defaultValueAge = freezed,
@@ -40583,64 +40812,124 @@ class _$StructureMapSourceCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as String,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element,
+      defaultValueBase64Binary: defaultValueBase64Binary == freezed
+          ? _value.defaultValueBase64Binary
+          : defaultValueBase64Binary as Base64Binary,
       defaultValueBase64BinaryElement:
           defaultValueBase64BinaryElement == freezed
               ? _value.defaultValueBase64BinaryElement
               : defaultValueBase64BinaryElement as Element,
+      defaultValueBoolean: defaultValueBoolean == freezed
+          ? _value.defaultValueBoolean
+          : defaultValueBoolean as Boolean,
       defaultValueBooleanElement: defaultValueBooleanElement == freezed
           ? _value.defaultValueBooleanElement
           : defaultValueBooleanElement as Element,
+      defaultValueCanonical: defaultValueCanonical == freezed
+          ? _value.defaultValueCanonical
+          : defaultValueCanonical as Canonical,
       defaultValueCanonicalElement: defaultValueCanonicalElement == freezed
           ? _value.defaultValueCanonicalElement
           : defaultValueCanonicalElement as Element,
+      defaultValueCode: defaultValueCode == freezed
+          ? _value.defaultValueCode
+          : defaultValueCode as Code,
       defaultValueCodeElement: defaultValueCodeElement == freezed
           ? _value.defaultValueCodeElement
           : defaultValueCodeElement as Element,
+      defaultValueDate: defaultValueDate == freezed
+          ? _value.defaultValueDate
+          : defaultValueDate as Date,
       defaultValueDateElement: defaultValueDateElement == freezed
           ? _value.defaultValueDateElement
           : defaultValueDateElement as Element,
+      defaultValueDateTime: defaultValueDateTime == freezed
+          ? _value.defaultValueDateTime
+          : defaultValueDateTime as FhirDateTime,
       defaultValueDateTimeElement: defaultValueDateTimeElement == freezed
           ? _value.defaultValueDateTimeElement
           : defaultValueDateTimeElement as Element,
+      defaultValueDecimal: defaultValueDecimal == freezed
+          ? _value.defaultValueDecimal
+          : defaultValueDecimal as Decimal,
       defaultValueDecimalElement: defaultValueDecimalElement == freezed
           ? _value.defaultValueDecimalElement
           : defaultValueDecimalElement as Element,
+      defaultValueId: defaultValueId == freezed
+          ? _value.defaultValueId
+          : defaultValueId as Id,
       defaultValueIdElement: defaultValueIdElement == freezed
           ? _value.defaultValueIdElement
           : defaultValueIdElement as Element,
+      defaultValueInstant: defaultValueInstant == freezed
+          ? _value.defaultValueInstant
+          : defaultValueInstant as Instant,
       defaultValueInstantElement: defaultValueInstantElement == freezed
           ? _value.defaultValueInstantElement
           : defaultValueInstantElement as Element,
+      defaultValueInteger: defaultValueInteger == freezed
+          ? _value.defaultValueInteger
+          : defaultValueInteger as Integer,
       defaultValueIntegerElement: defaultValueIntegerElement == freezed
           ? _value.defaultValueIntegerElement
           : defaultValueIntegerElement as Element,
+      defaultValueInteger64: defaultValueInteger64 == freezed
+          ? _value.defaultValueInteger64
+          : defaultValueInteger64 as Integer,
       defaultValueInteger64Element: defaultValueInteger64Element == freezed
           ? _value.defaultValueInteger64Element
           : defaultValueInteger64Element as Element,
+      defaultValueMarkdown: defaultValueMarkdown == freezed
+          ? _value.defaultValueMarkdown
+          : defaultValueMarkdown as Markdown,
       defaultValueMarkdownElement: defaultValueMarkdownElement == freezed
           ? _value.defaultValueMarkdownElement
           : defaultValueMarkdownElement as Element,
+      defaultValueOid: defaultValueOid == freezed
+          ? _value.defaultValueOid
+          : defaultValueOid as Oid,
       defaultValueOidElement: defaultValueOidElement == freezed
           ? _value.defaultValueOidElement
           : defaultValueOidElement as Element,
+      defaultValuePositiveInt: defaultValuePositiveInt == freezed
+          ? _value.defaultValuePositiveInt
+          : defaultValuePositiveInt as PositiveInt,
       defaultValuePositiveIntElement: defaultValuePositiveIntElement == freezed
           ? _value.defaultValuePositiveIntElement
           : defaultValuePositiveIntElement as Element,
+      defaultValueString: defaultValueString == freezed
+          ? _value.defaultValueString
+          : defaultValueString as String,
       defaultValueStringElement: defaultValueStringElement == freezed
           ? _value.defaultValueStringElement
           : defaultValueStringElement as Element,
+      defaultValueTime: defaultValueTime == freezed
+          ? _value.defaultValueTime
+          : defaultValueTime as Time,
       defaultValueTimeElement: defaultValueTimeElement == freezed
           ? _value.defaultValueTimeElement
           : defaultValueTimeElement as Element,
+      defaultValueUnsignedInt: defaultValueUnsignedInt == freezed
+          ? _value.defaultValueUnsignedInt
+          : defaultValueUnsignedInt as UnsignedInt,
       defaultValueUnsignedIntElement: defaultValueUnsignedIntElement == freezed
           ? _value.defaultValueUnsignedIntElement
           : defaultValueUnsignedIntElement as Element,
+      defaultValueUri: defaultValueUri == freezed
+          ? _value.defaultValueUri
+          : defaultValueUri as FhirUri,
       defaultValueUriElement: defaultValueUriElement == freezed
           ? _value.defaultValueUriElement
           : defaultValueUriElement as Element,
+      defaultValueUrl: defaultValueUrl == freezed
+          ? _value.defaultValueUrl
+          : defaultValueUrl as FhirUrl,
       defaultValueUrlElement: defaultValueUrlElement == freezed
           ? _value.defaultValueUrlElement
           : defaultValueUrlElement as Element,
+      defaultValueUuid: defaultValueUuid == freezed
+          ? _value.defaultValueUuid
+          : defaultValueUuid as Uuid,
       defaultValueUuidElement: defaultValueUuidElement == freezed
           ? _value.defaultValueUuidElement
           : defaultValueUuidElement as Element,
@@ -41124,6 +41413,16 @@ class _$StructureMapSourceCopyWithImpl<$Res>
   }
 
   @override
+  $IdentifierCopyWith<$Res> get defaultValueIdentifier {
+    if (_value.defaultValueIdentifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.defaultValueIdentifier, (value) {
+      return _then(_value.copyWith(defaultValueIdentifier: value));
+    });
+  }
+
+  @override
   $MoneyCopyWith<$Res> get defaultValueMoney {
     if (_value.defaultValueMoney == null) {
       return null;
@@ -41403,44 +41702,64 @@ abstract class _$StructureMapSourceCopyWith<$Res>
       String type,
       @JsonKey(name: '_type')
           Element typeElement,
+      Base64Binary defaultValueBase64Binary,
       @JsonKey(name: '_defaultValueBase64Binary')
           Element defaultValueBase64BinaryElement,
+      Boolean defaultValueBoolean,
       @JsonKey(name: '_defaultValueBoolean')
           Element defaultValueBooleanElement,
+      Canonical defaultValueCanonical,
       @JsonKey(name: '_defaultValueCanonical')
           Element defaultValueCanonicalElement,
+      Code defaultValueCode,
       @JsonKey(name: '_defaultValueCode')
           Element defaultValueCodeElement,
+      Date defaultValueDate,
       @JsonKey(name: '_defaultValueDate')
           Element defaultValueDateElement,
+      FhirDateTime defaultValueDateTime,
       @JsonKey(name: '_defaultValueDateTime')
           Element defaultValueDateTimeElement,
+      Decimal defaultValueDecimal,
       @JsonKey(name: '_defaultValueDecimal')
           Element defaultValueDecimalElement,
+      Id defaultValueId,
       @JsonKey(name: '_defaultValueId')
           Element defaultValueIdElement,
+      Instant defaultValueInstant,
       @JsonKey(name: '_defaultValueInstant')
           Element defaultValueInstantElement,
+      Integer defaultValueInteger,
       @JsonKey(name: '_defaultValueInteger')
           Element defaultValueIntegerElement,
+      Integer defaultValueInteger64,
       @JsonKey(name: '_defaultValueInteger64')
           Element defaultValueInteger64Element,
+      Markdown defaultValueMarkdown,
       @JsonKey(name: '_defaultValueMarkdown')
           Element defaultValueMarkdownElement,
+      Oid defaultValueOid,
       @JsonKey(name: '_defaultValueOid')
           Element defaultValueOidElement,
+      PositiveInt defaultValuePositiveInt,
       @JsonKey(name: '_defaultValuePositiveInt')
           Element defaultValuePositiveIntElement,
+      String defaultValueString,
       @JsonKey(name: '_defaultValueString')
           Element defaultValueStringElement,
+      Time defaultValueTime,
       @JsonKey(name: '_defaultValueTime')
           Element defaultValueTimeElement,
+      UnsignedInt defaultValueUnsignedInt,
       @JsonKey(name: '_defaultValueUnsignedInt')
           Element defaultValueUnsignedIntElement,
+      FhirUri defaultValueUri,
       @JsonKey(name: '_defaultValueUri')
           Element defaultValueUriElement,
+      FhirUrl defaultValueUrl,
       @JsonKey(name: '_defaultValueUrl')
           Element defaultValueUrlElement,
+      Uuid defaultValueUuid,
       @JsonKey(name: '_defaultValueUuid')
           Element defaultValueUuidElement,
       Address defaultValueAddress,
@@ -41565,6 +41884,8 @@ abstract class _$StructureMapSourceCopyWith<$Res>
   @override
   $HumanNameCopyWith<$Res> get defaultValueHumanName;
   @override
+  $IdentifierCopyWith<$Res> get defaultValueIdentifier;
+  @override
   $MoneyCopyWith<$Res> get defaultValueMoney;
   @override
   $PeriodCopyWith<$Res> get defaultValuePeriod;
@@ -41639,25 +41960,45 @@ class __$StructureMapSourceCopyWithImpl<$Res>
     Object maxElement = freezed,
     Object type = freezed,
     Object typeElement = freezed,
+    Object defaultValueBase64Binary = freezed,
     Object defaultValueBase64BinaryElement = freezed,
+    Object defaultValueBoolean = freezed,
     Object defaultValueBooleanElement = freezed,
+    Object defaultValueCanonical = freezed,
     Object defaultValueCanonicalElement = freezed,
+    Object defaultValueCode = freezed,
     Object defaultValueCodeElement = freezed,
+    Object defaultValueDate = freezed,
     Object defaultValueDateElement = freezed,
+    Object defaultValueDateTime = freezed,
     Object defaultValueDateTimeElement = freezed,
+    Object defaultValueDecimal = freezed,
     Object defaultValueDecimalElement = freezed,
+    Object defaultValueId = freezed,
     Object defaultValueIdElement = freezed,
+    Object defaultValueInstant = freezed,
     Object defaultValueInstantElement = freezed,
+    Object defaultValueInteger = freezed,
     Object defaultValueIntegerElement = freezed,
+    Object defaultValueInteger64 = freezed,
     Object defaultValueInteger64Element = freezed,
+    Object defaultValueMarkdown = freezed,
     Object defaultValueMarkdownElement = freezed,
+    Object defaultValueOid = freezed,
     Object defaultValueOidElement = freezed,
+    Object defaultValuePositiveInt = freezed,
     Object defaultValuePositiveIntElement = freezed,
+    Object defaultValueString = freezed,
     Object defaultValueStringElement = freezed,
+    Object defaultValueTime = freezed,
     Object defaultValueTimeElement = freezed,
+    Object defaultValueUnsignedInt = freezed,
     Object defaultValueUnsignedIntElement = freezed,
+    Object defaultValueUri = freezed,
     Object defaultValueUriElement = freezed,
+    Object defaultValueUrl = freezed,
     Object defaultValueUrlElement = freezed,
+    Object defaultValueUuid = freezed,
     Object defaultValueUuidElement = freezed,
     Object defaultValueAddress = freezed,
     Object defaultValueAge = freezed,
@@ -41724,64 +42065,124 @@ class __$StructureMapSourceCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as String,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element,
+      defaultValueBase64Binary: defaultValueBase64Binary == freezed
+          ? _value.defaultValueBase64Binary
+          : defaultValueBase64Binary as Base64Binary,
       defaultValueBase64BinaryElement:
           defaultValueBase64BinaryElement == freezed
               ? _value.defaultValueBase64BinaryElement
               : defaultValueBase64BinaryElement as Element,
+      defaultValueBoolean: defaultValueBoolean == freezed
+          ? _value.defaultValueBoolean
+          : defaultValueBoolean as Boolean,
       defaultValueBooleanElement: defaultValueBooleanElement == freezed
           ? _value.defaultValueBooleanElement
           : defaultValueBooleanElement as Element,
+      defaultValueCanonical: defaultValueCanonical == freezed
+          ? _value.defaultValueCanonical
+          : defaultValueCanonical as Canonical,
       defaultValueCanonicalElement: defaultValueCanonicalElement == freezed
           ? _value.defaultValueCanonicalElement
           : defaultValueCanonicalElement as Element,
+      defaultValueCode: defaultValueCode == freezed
+          ? _value.defaultValueCode
+          : defaultValueCode as Code,
       defaultValueCodeElement: defaultValueCodeElement == freezed
           ? _value.defaultValueCodeElement
           : defaultValueCodeElement as Element,
+      defaultValueDate: defaultValueDate == freezed
+          ? _value.defaultValueDate
+          : defaultValueDate as Date,
       defaultValueDateElement: defaultValueDateElement == freezed
           ? _value.defaultValueDateElement
           : defaultValueDateElement as Element,
+      defaultValueDateTime: defaultValueDateTime == freezed
+          ? _value.defaultValueDateTime
+          : defaultValueDateTime as FhirDateTime,
       defaultValueDateTimeElement: defaultValueDateTimeElement == freezed
           ? _value.defaultValueDateTimeElement
           : defaultValueDateTimeElement as Element,
+      defaultValueDecimal: defaultValueDecimal == freezed
+          ? _value.defaultValueDecimal
+          : defaultValueDecimal as Decimal,
       defaultValueDecimalElement: defaultValueDecimalElement == freezed
           ? _value.defaultValueDecimalElement
           : defaultValueDecimalElement as Element,
+      defaultValueId: defaultValueId == freezed
+          ? _value.defaultValueId
+          : defaultValueId as Id,
       defaultValueIdElement: defaultValueIdElement == freezed
           ? _value.defaultValueIdElement
           : defaultValueIdElement as Element,
+      defaultValueInstant: defaultValueInstant == freezed
+          ? _value.defaultValueInstant
+          : defaultValueInstant as Instant,
       defaultValueInstantElement: defaultValueInstantElement == freezed
           ? _value.defaultValueInstantElement
           : defaultValueInstantElement as Element,
+      defaultValueInteger: defaultValueInteger == freezed
+          ? _value.defaultValueInteger
+          : defaultValueInteger as Integer,
       defaultValueIntegerElement: defaultValueIntegerElement == freezed
           ? _value.defaultValueIntegerElement
           : defaultValueIntegerElement as Element,
+      defaultValueInteger64: defaultValueInteger64 == freezed
+          ? _value.defaultValueInteger64
+          : defaultValueInteger64 as Integer,
       defaultValueInteger64Element: defaultValueInteger64Element == freezed
           ? _value.defaultValueInteger64Element
           : defaultValueInteger64Element as Element,
+      defaultValueMarkdown: defaultValueMarkdown == freezed
+          ? _value.defaultValueMarkdown
+          : defaultValueMarkdown as Markdown,
       defaultValueMarkdownElement: defaultValueMarkdownElement == freezed
           ? _value.defaultValueMarkdownElement
           : defaultValueMarkdownElement as Element,
+      defaultValueOid: defaultValueOid == freezed
+          ? _value.defaultValueOid
+          : defaultValueOid as Oid,
       defaultValueOidElement: defaultValueOidElement == freezed
           ? _value.defaultValueOidElement
           : defaultValueOidElement as Element,
+      defaultValuePositiveInt: defaultValuePositiveInt == freezed
+          ? _value.defaultValuePositiveInt
+          : defaultValuePositiveInt as PositiveInt,
       defaultValuePositiveIntElement: defaultValuePositiveIntElement == freezed
           ? _value.defaultValuePositiveIntElement
           : defaultValuePositiveIntElement as Element,
+      defaultValueString: defaultValueString == freezed
+          ? _value.defaultValueString
+          : defaultValueString as String,
       defaultValueStringElement: defaultValueStringElement == freezed
           ? _value.defaultValueStringElement
           : defaultValueStringElement as Element,
+      defaultValueTime: defaultValueTime == freezed
+          ? _value.defaultValueTime
+          : defaultValueTime as Time,
       defaultValueTimeElement: defaultValueTimeElement == freezed
           ? _value.defaultValueTimeElement
           : defaultValueTimeElement as Element,
+      defaultValueUnsignedInt: defaultValueUnsignedInt == freezed
+          ? _value.defaultValueUnsignedInt
+          : defaultValueUnsignedInt as UnsignedInt,
       defaultValueUnsignedIntElement: defaultValueUnsignedIntElement == freezed
           ? _value.defaultValueUnsignedIntElement
           : defaultValueUnsignedIntElement as Element,
+      defaultValueUri: defaultValueUri == freezed
+          ? _value.defaultValueUri
+          : defaultValueUri as FhirUri,
       defaultValueUriElement: defaultValueUriElement == freezed
           ? _value.defaultValueUriElement
           : defaultValueUriElement as Element,
+      defaultValueUrl: defaultValueUrl == freezed
+          ? _value.defaultValueUrl
+          : defaultValueUrl as FhirUrl,
       defaultValueUrlElement: defaultValueUrlElement == freezed
           ? _value.defaultValueUrlElement
           : defaultValueUrlElement as Element,
+      defaultValueUuid: defaultValueUuid == freezed
+          ? _value.defaultValueUuid
+          : defaultValueUuid as Uuid,
       defaultValueUuidElement: defaultValueUuidElement == freezed
           ? _value.defaultValueUuidElement
           : defaultValueUuidElement as Element,
@@ -41929,44 +42330,64 @@ class _$_StructureMapSource extends _StructureMapSource {
       this.type,
       @JsonKey(name: '_type')
           this.typeElement,
+      this.defaultValueBase64Binary,
       @JsonKey(name: '_defaultValueBase64Binary')
           this.defaultValueBase64BinaryElement,
+      this.defaultValueBoolean,
       @JsonKey(name: '_defaultValueBoolean')
           this.defaultValueBooleanElement,
+      this.defaultValueCanonical,
       @JsonKey(name: '_defaultValueCanonical')
           this.defaultValueCanonicalElement,
+      this.defaultValueCode,
       @JsonKey(name: '_defaultValueCode')
           this.defaultValueCodeElement,
+      this.defaultValueDate,
       @JsonKey(name: '_defaultValueDate')
           this.defaultValueDateElement,
+      this.defaultValueDateTime,
       @JsonKey(name: '_defaultValueDateTime')
           this.defaultValueDateTimeElement,
+      this.defaultValueDecimal,
       @JsonKey(name: '_defaultValueDecimal')
           this.defaultValueDecimalElement,
+      this.defaultValueId,
       @JsonKey(name: '_defaultValueId')
           this.defaultValueIdElement,
+      this.defaultValueInstant,
       @JsonKey(name: '_defaultValueInstant')
           this.defaultValueInstantElement,
+      this.defaultValueInteger,
       @JsonKey(name: '_defaultValueInteger')
           this.defaultValueIntegerElement,
+      this.defaultValueInteger64,
       @JsonKey(name: '_defaultValueInteger64')
           this.defaultValueInteger64Element,
+      this.defaultValueMarkdown,
       @JsonKey(name: '_defaultValueMarkdown')
           this.defaultValueMarkdownElement,
+      this.defaultValueOid,
       @JsonKey(name: '_defaultValueOid')
           this.defaultValueOidElement,
+      this.defaultValuePositiveInt,
       @JsonKey(name: '_defaultValuePositiveInt')
           this.defaultValuePositiveIntElement,
+      this.defaultValueString,
       @JsonKey(name: '_defaultValueString')
           this.defaultValueStringElement,
+      this.defaultValueTime,
       @JsonKey(name: '_defaultValueTime')
           this.defaultValueTimeElement,
+      this.defaultValueUnsignedInt,
       @JsonKey(name: '_defaultValueUnsignedInt')
           this.defaultValueUnsignedIntElement,
+      this.defaultValueUri,
       @JsonKey(name: '_defaultValueUri')
           this.defaultValueUriElement,
+      this.defaultValueUrl,
       @JsonKey(name: '_defaultValueUrl')
           this.defaultValueUrlElement,
+      this.defaultValueUuid,
       @JsonKey(name: '_defaultValueUuid')
           this.defaultValueUuidElement,
       this.defaultValueAddress,
@@ -42052,62 +42473,102 @@ class _$_StructureMapSource extends _StructureMapSource {
   @JsonKey(name: '_type')
   final Element typeElement;
   @override
+  final Base64Binary defaultValueBase64Binary;
+  @override
   @JsonKey(name: '_defaultValueBase64Binary')
   final Element defaultValueBase64BinaryElement;
+  @override
+  final Boolean defaultValueBoolean;
   @override
   @JsonKey(name: '_defaultValueBoolean')
   final Element defaultValueBooleanElement;
   @override
+  final Canonical defaultValueCanonical;
+  @override
   @JsonKey(name: '_defaultValueCanonical')
   final Element defaultValueCanonicalElement;
+  @override
+  final Code defaultValueCode;
   @override
   @JsonKey(name: '_defaultValueCode')
   final Element defaultValueCodeElement;
   @override
+  final Date defaultValueDate;
+  @override
   @JsonKey(name: '_defaultValueDate')
   final Element defaultValueDateElement;
+  @override
+  final FhirDateTime defaultValueDateTime;
   @override
   @JsonKey(name: '_defaultValueDateTime')
   final Element defaultValueDateTimeElement;
   @override
+  final Decimal defaultValueDecimal;
+  @override
   @JsonKey(name: '_defaultValueDecimal')
   final Element defaultValueDecimalElement;
+  @override
+  final Id defaultValueId;
   @override
   @JsonKey(name: '_defaultValueId')
   final Element defaultValueIdElement;
   @override
+  final Instant defaultValueInstant;
+  @override
   @JsonKey(name: '_defaultValueInstant')
   final Element defaultValueInstantElement;
+  @override
+  final Integer defaultValueInteger;
   @override
   @JsonKey(name: '_defaultValueInteger')
   final Element defaultValueIntegerElement;
   @override
+  final Integer defaultValueInteger64;
+  @override
   @JsonKey(name: '_defaultValueInteger64')
   final Element defaultValueInteger64Element;
+  @override
+  final Markdown defaultValueMarkdown;
   @override
   @JsonKey(name: '_defaultValueMarkdown')
   final Element defaultValueMarkdownElement;
   @override
+  final Oid defaultValueOid;
+  @override
   @JsonKey(name: '_defaultValueOid')
   final Element defaultValueOidElement;
+  @override
+  final PositiveInt defaultValuePositiveInt;
   @override
   @JsonKey(name: '_defaultValuePositiveInt')
   final Element defaultValuePositiveIntElement;
   @override
+  final String defaultValueString;
+  @override
   @JsonKey(name: '_defaultValueString')
   final Element defaultValueStringElement;
+  @override
+  final Time defaultValueTime;
   @override
   @JsonKey(name: '_defaultValueTime')
   final Element defaultValueTimeElement;
   @override
+  final UnsignedInt defaultValueUnsignedInt;
+  @override
   @JsonKey(name: '_defaultValueUnsignedInt')
   final Element defaultValueUnsignedIntElement;
+  @override
+  final FhirUri defaultValueUri;
   @override
   @JsonKey(name: '_defaultValueUri')
   final Element defaultValueUriElement;
   @override
+  final FhirUrl defaultValueUrl;
+  @override
   @JsonKey(name: '_defaultValueUrl')
   final Element defaultValueUrlElement;
+  @override
+  final Uuid defaultValueUuid;
   @override
   @JsonKey(name: '_defaultValueUuid')
   final Element defaultValueUuidElement;
@@ -42207,7 +42668,7 @@ class _$_StructureMapSource extends _StructureMapSource {
 
   @override
   String toString() {
-    return 'StructureMapSource(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, context: $context, contextElement: $contextElement, min: $min, minElement: $minElement, max: $max, maxElement: $maxElement, type: $type, typeElement: $typeElement, defaultValueBase64BinaryElement: $defaultValueBase64BinaryElement, defaultValueBooleanElement: $defaultValueBooleanElement, defaultValueCanonicalElement: $defaultValueCanonicalElement, defaultValueCodeElement: $defaultValueCodeElement, defaultValueDateElement: $defaultValueDateElement, defaultValueDateTimeElement: $defaultValueDateTimeElement, defaultValueDecimalElement: $defaultValueDecimalElement, defaultValueIdElement: $defaultValueIdElement, defaultValueInstantElement: $defaultValueInstantElement, defaultValueIntegerElement: $defaultValueIntegerElement, defaultValueInteger64Element: $defaultValueInteger64Element, defaultValueMarkdownElement: $defaultValueMarkdownElement, defaultValueOidElement: $defaultValueOidElement, defaultValuePositiveIntElement: $defaultValuePositiveIntElement, defaultValueStringElement: $defaultValueStringElement, defaultValueTimeElement: $defaultValueTimeElement, defaultValueUnsignedIntElement: $defaultValueUnsignedIntElement, defaultValueUriElement: $defaultValueUriElement, defaultValueUrlElement: $defaultValueUrlElement, defaultValueUuidElement: $defaultValueUuidElement, defaultValueAddress: $defaultValueAddress, defaultValueAge: $defaultValueAge, defaultValueAnnotation: $defaultValueAnnotation, defaultValueAttachment: $defaultValueAttachment, defaultValueCodeableConcept: $defaultValueCodeableConcept, defaultValueCoding: $defaultValueCoding, defaultValueContactPoint: $defaultValueContactPoint, defaultValueCount: $defaultValueCount, defaultValueDistance: $defaultValueDistance, defaultValueDuration: $defaultValueDuration, defaultValueHumanName: $defaultValueHumanName, defaultValueIdentifier: $defaultValueIdentifier, defaultValueMoney: $defaultValueMoney, defaultValuePeriod: $defaultValuePeriod, defaultValueQuantity: $defaultValueQuantity, defaultValueRange: $defaultValueRange, defaultValueRatio: $defaultValueRatio, defaultValueReference: $defaultValueReference, defaultValueSampledData: $defaultValueSampledData, defaultValueSignature: $defaultValueSignature, defaultValueTiming: $defaultValueTiming, defaultValueContactDetail: $defaultValueContactDetail, defaultValueContributor: $defaultValueContributor, defaultValueDataRequirement: $defaultValueDataRequirement, defaultValueExpression: $defaultValueExpression, defaultValueParameterDefinition: $defaultValueParameterDefinition, defaultValueRelatedArtifact: $defaultValueRelatedArtifact, defaultValueTriggerDefinition: $defaultValueTriggerDefinition, defaultValueUsageContext: $defaultValueUsageContext, defaultValueDosage: $defaultValueDosage, defaultValueMeta: $defaultValueMeta, element: $element, elementElement: $elementElement, listMode: $listMode, listModeElement: $listModeElement, variable: $variable, variableElement: $variableElement, condition: $condition, conditionElement: $conditionElement, check: $check, checkElement: $checkElement, logMessage: $logMessage, logMessageElement: $logMessageElement)';
+    return 'StructureMapSource(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, context: $context, contextElement: $contextElement, min: $min, minElement: $minElement, max: $max, maxElement: $maxElement, type: $type, typeElement: $typeElement, defaultValueBase64Binary: $defaultValueBase64Binary, defaultValueBase64BinaryElement: $defaultValueBase64BinaryElement, defaultValueBoolean: $defaultValueBoolean, defaultValueBooleanElement: $defaultValueBooleanElement, defaultValueCanonical: $defaultValueCanonical, defaultValueCanonicalElement: $defaultValueCanonicalElement, defaultValueCode: $defaultValueCode, defaultValueCodeElement: $defaultValueCodeElement, defaultValueDate: $defaultValueDate, defaultValueDateElement: $defaultValueDateElement, defaultValueDateTime: $defaultValueDateTime, defaultValueDateTimeElement: $defaultValueDateTimeElement, defaultValueDecimal: $defaultValueDecimal, defaultValueDecimalElement: $defaultValueDecimalElement, defaultValueId: $defaultValueId, defaultValueIdElement: $defaultValueIdElement, defaultValueInstant: $defaultValueInstant, defaultValueInstantElement: $defaultValueInstantElement, defaultValueInteger: $defaultValueInteger, defaultValueIntegerElement: $defaultValueIntegerElement, defaultValueInteger64: $defaultValueInteger64, defaultValueInteger64Element: $defaultValueInteger64Element, defaultValueMarkdown: $defaultValueMarkdown, defaultValueMarkdownElement: $defaultValueMarkdownElement, defaultValueOid: $defaultValueOid, defaultValueOidElement: $defaultValueOidElement, defaultValuePositiveInt: $defaultValuePositiveInt, defaultValuePositiveIntElement: $defaultValuePositiveIntElement, defaultValueString: $defaultValueString, defaultValueStringElement: $defaultValueStringElement, defaultValueTime: $defaultValueTime, defaultValueTimeElement: $defaultValueTimeElement, defaultValueUnsignedInt: $defaultValueUnsignedInt, defaultValueUnsignedIntElement: $defaultValueUnsignedIntElement, defaultValueUri: $defaultValueUri, defaultValueUriElement: $defaultValueUriElement, defaultValueUrl: $defaultValueUrl, defaultValueUrlElement: $defaultValueUrlElement, defaultValueUuid: $defaultValueUuid, defaultValueUuidElement: $defaultValueUuidElement, defaultValueAddress: $defaultValueAddress, defaultValueAge: $defaultValueAge, defaultValueAnnotation: $defaultValueAnnotation, defaultValueAttachment: $defaultValueAttachment, defaultValueCodeableConcept: $defaultValueCodeableConcept, defaultValueCoding: $defaultValueCoding, defaultValueContactPoint: $defaultValueContactPoint, defaultValueCount: $defaultValueCount, defaultValueDistance: $defaultValueDistance, defaultValueDuration: $defaultValueDuration, defaultValueHumanName: $defaultValueHumanName, defaultValueIdentifier: $defaultValueIdentifier, defaultValueMoney: $defaultValueMoney, defaultValuePeriod: $defaultValuePeriod, defaultValueQuantity: $defaultValueQuantity, defaultValueRange: $defaultValueRange, defaultValueRatio: $defaultValueRatio, defaultValueReference: $defaultValueReference, defaultValueSampledData: $defaultValueSampledData, defaultValueSignature: $defaultValueSignature, defaultValueTiming: $defaultValueTiming, defaultValueContactDetail: $defaultValueContactDetail, defaultValueContributor: $defaultValueContributor, defaultValueDataRequirement: $defaultValueDataRequirement, defaultValueExpression: $defaultValueExpression, defaultValueParameterDefinition: $defaultValueParameterDefinition, defaultValueRelatedArtifact: $defaultValueRelatedArtifact, defaultValueTriggerDefinition: $defaultValueTriggerDefinition, defaultValueUsageContext: $defaultValueUsageContext, defaultValueDosage: $defaultValueDosage, defaultValueMeta: $defaultValueMeta, element: $element, elementElement: $elementElement, listMode: $listMode, listModeElement: $listModeElement, variable: $variable, variableElement: $variableElement, condition: $condition, conditionElement: $conditionElement, check: $check, checkElement: $checkElement, logMessage: $logMessage, logMessageElement: $logMessageElement)';
   }
 
   @override
@@ -42243,41 +42704,62 @@ class _$_StructureMapSource extends _StructureMapSource {
             (identical(other.typeElement, typeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.typeElement, typeElement)) &&
+            (identical(other.defaultValueBase64Binary, defaultValueBase64Binary) ||
+                const DeepCollectionEquality().equals(
+                    other.defaultValueBase64Binary,
+                    defaultValueBase64Binary)) &&
             (identical(other.defaultValueBase64BinaryElement, defaultValueBase64BinaryElement) ||
                 const DeepCollectionEquality().equals(
                     other.defaultValueBase64BinaryElement,
                     defaultValueBase64BinaryElement)) &&
+            (identical(other.defaultValueBoolean, defaultValueBoolean) ||
+                const DeepCollectionEquality()
+                    .equals(other.defaultValueBoolean, defaultValueBoolean)) &&
             (identical(other.defaultValueBooleanElement, defaultValueBooleanElement) ||
                 const DeepCollectionEquality().equals(
                     other.defaultValueBooleanElement,
                     defaultValueBooleanElement)) &&
+            (identical(other.defaultValueCanonical, defaultValueCanonical) ||
+                const DeepCollectionEquality().equals(
+                    other.defaultValueCanonical, defaultValueCanonical)) &&
             (identical(other.defaultValueCanonicalElement, defaultValueCanonicalElement) ||
                 const DeepCollectionEquality().equals(
                     other.defaultValueCanonicalElement,
                     defaultValueCanonicalElement)) &&
-            (identical(other.defaultValueCodeElement, defaultValueCodeElement) ||
-                const DeepCollectionEquality().equals(
-                    other.defaultValueCodeElement, defaultValueCodeElement)) &&
-            (identical(other.defaultValueDateElement, defaultValueDateElement) ||
-                const DeepCollectionEquality().equals(
-                    other.defaultValueDateElement, defaultValueDateElement)) &&
-            (identical(other.defaultValueDateTimeElement, defaultValueDateTimeElement) ||
-                const DeepCollectionEquality().equals(
-                    other.defaultValueDateTimeElement,
-                    defaultValueDateTimeElement)) &&
+            (identical(other.defaultValueCode, defaultValueCode) ||
+                const DeepCollectionEquality().equals(other.defaultValueCode, defaultValueCode)) &&
+            (identical(other.defaultValueCodeElement, defaultValueCodeElement) || const DeepCollectionEquality().equals(other.defaultValueCodeElement, defaultValueCodeElement)) &&
+            (identical(other.defaultValueDate, defaultValueDate) || const DeepCollectionEquality().equals(other.defaultValueDate, defaultValueDate)) &&
+            (identical(other.defaultValueDateElement, defaultValueDateElement) || const DeepCollectionEquality().equals(other.defaultValueDateElement, defaultValueDateElement)) &&
+            (identical(other.defaultValueDateTime, defaultValueDateTime) || const DeepCollectionEquality().equals(other.defaultValueDateTime, defaultValueDateTime)) &&
+            (identical(other.defaultValueDateTimeElement, defaultValueDateTimeElement) || const DeepCollectionEquality().equals(other.defaultValueDateTimeElement, defaultValueDateTimeElement)) &&
+            (identical(other.defaultValueDecimal, defaultValueDecimal) || const DeepCollectionEquality().equals(other.defaultValueDecimal, defaultValueDecimal)) &&
             (identical(other.defaultValueDecimalElement, defaultValueDecimalElement) || const DeepCollectionEquality().equals(other.defaultValueDecimalElement, defaultValueDecimalElement)) &&
+            (identical(other.defaultValueId, defaultValueId) || const DeepCollectionEquality().equals(other.defaultValueId, defaultValueId)) &&
             (identical(other.defaultValueIdElement, defaultValueIdElement) || const DeepCollectionEquality().equals(other.defaultValueIdElement, defaultValueIdElement)) &&
+            (identical(other.defaultValueInstant, defaultValueInstant) || const DeepCollectionEquality().equals(other.defaultValueInstant, defaultValueInstant)) &&
             (identical(other.defaultValueInstantElement, defaultValueInstantElement) || const DeepCollectionEquality().equals(other.defaultValueInstantElement, defaultValueInstantElement)) &&
+            (identical(other.defaultValueInteger, defaultValueInteger) || const DeepCollectionEquality().equals(other.defaultValueInteger, defaultValueInteger)) &&
             (identical(other.defaultValueIntegerElement, defaultValueIntegerElement) || const DeepCollectionEquality().equals(other.defaultValueIntegerElement, defaultValueIntegerElement)) &&
+            (identical(other.defaultValueInteger64, defaultValueInteger64) || const DeepCollectionEquality().equals(other.defaultValueInteger64, defaultValueInteger64)) &&
             (identical(other.defaultValueInteger64Element, defaultValueInteger64Element) || const DeepCollectionEquality().equals(other.defaultValueInteger64Element, defaultValueInteger64Element)) &&
+            (identical(other.defaultValueMarkdown, defaultValueMarkdown) || const DeepCollectionEquality().equals(other.defaultValueMarkdown, defaultValueMarkdown)) &&
             (identical(other.defaultValueMarkdownElement, defaultValueMarkdownElement) || const DeepCollectionEquality().equals(other.defaultValueMarkdownElement, defaultValueMarkdownElement)) &&
+            (identical(other.defaultValueOid, defaultValueOid) || const DeepCollectionEquality().equals(other.defaultValueOid, defaultValueOid)) &&
             (identical(other.defaultValueOidElement, defaultValueOidElement) || const DeepCollectionEquality().equals(other.defaultValueOidElement, defaultValueOidElement)) &&
+            (identical(other.defaultValuePositiveInt, defaultValuePositiveInt) || const DeepCollectionEquality().equals(other.defaultValuePositiveInt, defaultValuePositiveInt)) &&
             (identical(other.defaultValuePositiveIntElement, defaultValuePositiveIntElement) || const DeepCollectionEquality().equals(other.defaultValuePositiveIntElement, defaultValuePositiveIntElement)) &&
+            (identical(other.defaultValueString, defaultValueString) || const DeepCollectionEquality().equals(other.defaultValueString, defaultValueString)) &&
             (identical(other.defaultValueStringElement, defaultValueStringElement) || const DeepCollectionEquality().equals(other.defaultValueStringElement, defaultValueStringElement)) &&
+            (identical(other.defaultValueTime, defaultValueTime) || const DeepCollectionEquality().equals(other.defaultValueTime, defaultValueTime)) &&
             (identical(other.defaultValueTimeElement, defaultValueTimeElement) || const DeepCollectionEquality().equals(other.defaultValueTimeElement, defaultValueTimeElement)) &&
+            (identical(other.defaultValueUnsignedInt, defaultValueUnsignedInt) || const DeepCollectionEquality().equals(other.defaultValueUnsignedInt, defaultValueUnsignedInt)) &&
             (identical(other.defaultValueUnsignedIntElement, defaultValueUnsignedIntElement) || const DeepCollectionEquality().equals(other.defaultValueUnsignedIntElement, defaultValueUnsignedIntElement)) &&
+            (identical(other.defaultValueUri, defaultValueUri) || const DeepCollectionEquality().equals(other.defaultValueUri, defaultValueUri)) &&
             (identical(other.defaultValueUriElement, defaultValueUriElement) || const DeepCollectionEquality().equals(other.defaultValueUriElement, defaultValueUriElement)) &&
+            (identical(other.defaultValueUrl, defaultValueUrl) || const DeepCollectionEquality().equals(other.defaultValueUrl, defaultValueUrl)) &&
             (identical(other.defaultValueUrlElement, defaultValueUrlElement) || const DeepCollectionEquality().equals(other.defaultValueUrlElement, defaultValueUrlElement)) &&
+            (identical(other.defaultValueUuid, defaultValueUuid) || const DeepCollectionEquality().equals(other.defaultValueUuid, defaultValueUuid)) &&
             (identical(other.defaultValueUuidElement, defaultValueUuidElement) || const DeepCollectionEquality().equals(other.defaultValueUuidElement, defaultValueUuidElement)) &&
             (identical(other.defaultValueAddress, defaultValueAddress) || const DeepCollectionEquality().equals(other.defaultValueAddress, defaultValueAddress)) &&
             (identical(other.defaultValueAge, defaultValueAge) || const DeepCollectionEquality().equals(other.defaultValueAge, defaultValueAge)) &&
@@ -42338,25 +42820,45 @@ class _$_StructureMapSource extends _StructureMapSource {
       const DeepCollectionEquality().hash(maxElement) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(typeElement) ^
+      const DeepCollectionEquality().hash(defaultValueBase64Binary) ^
       const DeepCollectionEquality().hash(defaultValueBase64BinaryElement) ^
+      const DeepCollectionEquality().hash(defaultValueBoolean) ^
       const DeepCollectionEquality().hash(defaultValueBooleanElement) ^
+      const DeepCollectionEquality().hash(defaultValueCanonical) ^
       const DeepCollectionEquality().hash(defaultValueCanonicalElement) ^
+      const DeepCollectionEquality().hash(defaultValueCode) ^
       const DeepCollectionEquality().hash(defaultValueCodeElement) ^
+      const DeepCollectionEquality().hash(defaultValueDate) ^
       const DeepCollectionEquality().hash(defaultValueDateElement) ^
+      const DeepCollectionEquality().hash(defaultValueDateTime) ^
       const DeepCollectionEquality().hash(defaultValueDateTimeElement) ^
+      const DeepCollectionEquality().hash(defaultValueDecimal) ^
       const DeepCollectionEquality().hash(defaultValueDecimalElement) ^
+      const DeepCollectionEquality().hash(defaultValueId) ^
       const DeepCollectionEquality().hash(defaultValueIdElement) ^
+      const DeepCollectionEquality().hash(defaultValueInstant) ^
       const DeepCollectionEquality().hash(defaultValueInstantElement) ^
+      const DeepCollectionEquality().hash(defaultValueInteger) ^
       const DeepCollectionEquality().hash(defaultValueIntegerElement) ^
+      const DeepCollectionEquality().hash(defaultValueInteger64) ^
       const DeepCollectionEquality().hash(defaultValueInteger64Element) ^
+      const DeepCollectionEquality().hash(defaultValueMarkdown) ^
       const DeepCollectionEquality().hash(defaultValueMarkdownElement) ^
+      const DeepCollectionEquality().hash(defaultValueOid) ^
       const DeepCollectionEquality().hash(defaultValueOidElement) ^
+      const DeepCollectionEquality().hash(defaultValuePositiveInt) ^
       const DeepCollectionEquality().hash(defaultValuePositiveIntElement) ^
+      const DeepCollectionEquality().hash(defaultValueString) ^
       const DeepCollectionEquality().hash(defaultValueStringElement) ^
+      const DeepCollectionEquality().hash(defaultValueTime) ^
       const DeepCollectionEquality().hash(defaultValueTimeElement) ^
+      const DeepCollectionEquality().hash(defaultValueUnsignedInt) ^
       const DeepCollectionEquality().hash(defaultValueUnsignedIntElement) ^
+      const DeepCollectionEquality().hash(defaultValueUri) ^
       const DeepCollectionEquality().hash(defaultValueUriElement) ^
+      const DeepCollectionEquality().hash(defaultValueUrl) ^
       const DeepCollectionEquality().hash(defaultValueUrlElement) ^
+      const DeepCollectionEquality().hash(defaultValueUuid) ^
       const DeepCollectionEquality().hash(defaultValueUuidElement) ^
       const DeepCollectionEquality().hash(defaultValueAddress) ^
       const DeepCollectionEquality().hash(defaultValueAge) ^
@@ -42431,44 +42933,64 @@ abstract class _StructureMapSource extends StructureMapSource {
       String type,
       @JsonKey(name: '_type')
           Element typeElement,
+      Base64Binary defaultValueBase64Binary,
       @JsonKey(name: '_defaultValueBase64Binary')
           Element defaultValueBase64BinaryElement,
+      Boolean defaultValueBoolean,
       @JsonKey(name: '_defaultValueBoolean')
           Element defaultValueBooleanElement,
+      Canonical defaultValueCanonical,
       @JsonKey(name: '_defaultValueCanonical')
           Element defaultValueCanonicalElement,
+      Code defaultValueCode,
       @JsonKey(name: '_defaultValueCode')
           Element defaultValueCodeElement,
+      Date defaultValueDate,
       @JsonKey(name: '_defaultValueDate')
           Element defaultValueDateElement,
+      FhirDateTime defaultValueDateTime,
       @JsonKey(name: '_defaultValueDateTime')
           Element defaultValueDateTimeElement,
+      Decimal defaultValueDecimal,
       @JsonKey(name: '_defaultValueDecimal')
           Element defaultValueDecimalElement,
+      Id defaultValueId,
       @JsonKey(name: '_defaultValueId')
           Element defaultValueIdElement,
+      Instant defaultValueInstant,
       @JsonKey(name: '_defaultValueInstant')
           Element defaultValueInstantElement,
+      Integer defaultValueInteger,
       @JsonKey(name: '_defaultValueInteger')
           Element defaultValueIntegerElement,
+      Integer defaultValueInteger64,
       @JsonKey(name: '_defaultValueInteger64')
           Element defaultValueInteger64Element,
+      Markdown defaultValueMarkdown,
       @JsonKey(name: '_defaultValueMarkdown')
           Element defaultValueMarkdownElement,
+      Oid defaultValueOid,
       @JsonKey(name: '_defaultValueOid')
           Element defaultValueOidElement,
+      PositiveInt defaultValuePositiveInt,
       @JsonKey(name: '_defaultValuePositiveInt')
           Element defaultValuePositiveIntElement,
+      String defaultValueString,
       @JsonKey(name: '_defaultValueString')
           Element defaultValueStringElement,
+      Time defaultValueTime,
       @JsonKey(name: '_defaultValueTime')
           Element defaultValueTimeElement,
+      UnsignedInt defaultValueUnsignedInt,
       @JsonKey(name: '_defaultValueUnsignedInt')
           Element defaultValueUnsignedIntElement,
+      FhirUri defaultValueUri,
       @JsonKey(name: '_defaultValueUri')
           Element defaultValueUriElement,
+      FhirUrl defaultValueUrl,
       @JsonKey(name: '_defaultValueUrl')
           Element defaultValueUrlElement,
+      Uuid defaultValueUuid,
       @JsonKey(name: '_defaultValueUuid')
           Element defaultValueUuidElement,
       Address defaultValueAddress,
@@ -42553,62 +43075,102 @@ abstract class _StructureMapSource extends StructureMapSource {
   @JsonKey(name: '_type')
   Element get typeElement;
   @override
+  Base64Binary get defaultValueBase64Binary;
+  @override
   @JsonKey(name: '_defaultValueBase64Binary')
   Element get defaultValueBase64BinaryElement;
+  @override
+  Boolean get defaultValueBoolean;
   @override
   @JsonKey(name: '_defaultValueBoolean')
   Element get defaultValueBooleanElement;
   @override
+  Canonical get defaultValueCanonical;
+  @override
   @JsonKey(name: '_defaultValueCanonical')
   Element get defaultValueCanonicalElement;
+  @override
+  Code get defaultValueCode;
   @override
   @JsonKey(name: '_defaultValueCode')
   Element get defaultValueCodeElement;
   @override
+  Date get defaultValueDate;
+  @override
   @JsonKey(name: '_defaultValueDate')
   Element get defaultValueDateElement;
+  @override
+  FhirDateTime get defaultValueDateTime;
   @override
   @JsonKey(name: '_defaultValueDateTime')
   Element get defaultValueDateTimeElement;
   @override
+  Decimal get defaultValueDecimal;
+  @override
   @JsonKey(name: '_defaultValueDecimal')
   Element get defaultValueDecimalElement;
+  @override
+  Id get defaultValueId;
   @override
   @JsonKey(name: '_defaultValueId')
   Element get defaultValueIdElement;
   @override
+  Instant get defaultValueInstant;
+  @override
   @JsonKey(name: '_defaultValueInstant')
   Element get defaultValueInstantElement;
+  @override
+  Integer get defaultValueInteger;
   @override
   @JsonKey(name: '_defaultValueInteger')
   Element get defaultValueIntegerElement;
   @override
+  Integer get defaultValueInteger64;
+  @override
   @JsonKey(name: '_defaultValueInteger64')
   Element get defaultValueInteger64Element;
+  @override
+  Markdown get defaultValueMarkdown;
   @override
   @JsonKey(name: '_defaultValueMarkdown')
   Element get defaultValueMarkdownElement;
   @override
+  Oid get defaultValueOid;
+  @override
   @JsonKey(name: '_defaultValueOid')
   Element get defaultValueOidElement;
+  @override
+  PositiveInt get defaultValuePositiveInt;
   @override
   @JsonKey(name: '_defaultValuePositiveInt')
   Element get defaultValuePositiveIntElement;
   @override
+  String get defaultValueString;
+  @override
   @JsonKey(name: '_defaultValueString')
   Element get defaultValueStringElement;
+  @override
+  Time get defaultValueTime;
   @override
   @JsonKey(name: '_defaultValueTime')
   Element get defaultValueTimeElement;
   @override
+  UnsignedInt get defaultValueUnsignedInt;
+  @override
   @JsonKey(name: '_defaultValueUnsignedInt')
   Element get defaultValueUnsignedIntElement;
+  @override
+  FhirUri get defaultValueUri;
   @override
   @JsonKey(name: '_defaultValueUri')
   Element get defaultValueUriElement;
   @override
+  FhirUrl get defaultValueUrl;
+  @override
   @JsonKey(name: '_defaultValueUrl')
   Element get defaultValueUrlElement;
+  @override
+  Uuid get defaultValueUuid;
   @override
   @JsonKey(name: '_defaultValueUuid')
   Element get defaultValueUuidElement;
@@ -43404,19 +43966,29 @@ class _$StructureMapParameterTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
+      Id valueId,
       @JsonKey(name: '_valueId') Element valueIdElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement}) {
     return _StructureMapParameter(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      valueId: valueId,
       valueIdElement: valueIdElement,
+      valueString: valueString,
       valueStringElement: valueStringElement,
+      valueBoolean: valueBoolean,
       valueBooleanElement: valueBooleanElement,
+      valueInteger: valueInteger,
       valueIntegerElement: valueIntegerElement,
+      valueDecimal: valueDecimal,
       valueDecimalElement: valueDecimalElement,
     );
   }
@@ -43430,14 +44002,19 @@ mixin _$StructureMapParameter {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
+  Id get valueId;
   @JsonKey(name: '_valueId')
   Element get valueIdElement;
+  String get valueString;
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
+  Boolean get valueBoolean;
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
+  Integer get valueInteger;
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
+  Decimal get valueDecimal;
   @JsonKey(name: '_valueDecimal')
   Element get valueDecimalElement;
 
@@ -43453,10 +44030,15 @@ abstract class $StructureMapParameterCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
+      Id valueId,
       @JsonKey(name: '_valueId') Element valueIdElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement});
 
   $ElementCopyWith<$Res> get valueIdElement;
@@ -43479,10 +44061,15 @@ class _$StructureMapParameterCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object valueId = freezed,
     Object valueIdElement = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
+    Object valueInteger = freezed,
     Object valueIntegerElement = freezed,
+    Object valueDecimal = freezed,
     Object valueDecimalElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -43493,18 +44080,30 @@ class _$StructureMapParameterCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
+      valueId: valueId == freezed ? _value.valueId : valueId as Id,
       valueIdElement: valueIdElement == freezed
           ? _value.valueIdElement
           : valueIdElement as Element,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger as Integer,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement as Element,
+      valueDecimal: valueDecimal == freezed
+          ? _value.valueDecimal
+          : valueDecimal as Decimal,
       valueDecimalElement: valueDecimalElement == freezed
           ? _value.valueDecimalElement
           : valueDecimalElement as Element,
@@ -43572,10 +44171,15 @@ abstract class _$StructureMapParameterCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
+      Id valueId,
       @JsonKey(name: '_valueId') Element valueIdElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement});
 
   @override
@@ -43605,10 +44209,15 @@ class __$StructureMapParameterCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object valueId = freezed,
     Object valueIdElement = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
+    Object valueInteger = freezed,
     Object valueIntegerElement = freezed,
+    Object valueDecimal = freezed,
     Object valueDecimalElement = freezed,
   }) {
     return _then(_StructureMapParameter(
@@ -43619,18 +44228,30 @@ class __$StructureMapParameterCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
+      valueId: valueId == freezed ? _value.valueId : valueId as Id,
       valueIdElement: valueIdElement == freezed
           ? _value.valueIdElement
           : valueIdElement as Element,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger as Integer,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement as Element,
+      valueDecimal: valueDecimal == freezed
+          ? _value.valueDecimal
+          : valueDecimal as Decimal,
       valueDecimalElement: valueDecimalElement == freezed
           ? _value.valueDecimalElement
           : valueDecimalElement as Element,
@@ -43644,10 +44265,15 @@ class _$_StructureMapParameter extends _StructureMapParameter {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      this.valueId,
       @JsonKey(name: '_valueId') this.valueIdElement,
+      this.valueString,
       @JsonKey(name: '_valueString') this.valueStringElement,
+      this.valueBoolean,
       @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+      this.valueInteger,
       @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+      this.valueDecimal,
       @JsonKey(name: '_valueDecimal') this.valueDecimalElement})
       : super._();
 
@@ -43662,24 +44288,34 @@ class _$_StructureMapParameter extends _StructureMapParameter {
   @override
   final List<FhirExtension> modifierExtension;
   @override
+  final Id valueId;
+  @override
   @JsonKey(name: '_valueId')
   final Element valueIdElement;
+  @override
+  final String valueString;
   @override
   @JsonKey(name: '_valueString')
   final Element valueStringElement;
   @override
+  final Boolean valueBoolean;
+  @override
   @JsonKey(name: '_valueBoolean')
   final Element valueBooleanElement;
   @override
+  final Integer valueInteger;
+  @override
   @JsonKey(name: '_valueInteger')
   final Element valueIntegerElement;
+  @override
+  final Decimal valueDecimal;
   @override
   @JsonKey(name: '_valueDecimal')
   final Element valueDecimalElement;
 
   @override
   String toString() {
-    return 'StructureMapParameter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, valueIdElement: $valueIdElement, valueStringElement: $valueStringElement, valueBooleanElement: $valueBooleanElement, valueIntegerElement: $valueIntegerElement, valueDecimalElement: $valueDecimalElement)';
+    return 'StructureMapParameter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, valueId: $valueId, valueIdElement: $valueIdElement, valueString: $valueString, valueStringElement: $valueStringElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement)';
   }
 
   @override
@@ -43694,18 +44330,33 @@ class _$_StructureMapParameter extends _StructureMapParameter {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.valueId, valueId) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueId, valueId)) &&
             (identical(other.valueIdElement, valueIdElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueIdElement, valueIdElement)) &&
+            (identical(other.valueString, valueString) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueString, valueString)) &&
             (identical(other.valueStringElement, valueStringElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueStringElement, valueStringElement)) &&
+            (identical(other.valueBoolean, valueBoolean) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBoolean, valueBoolean)) &&
             (identical(other.valueBooleanElement, valueBooleanElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueBooleanElement, valueBooleanElement)) &&
+            (identical(other.valueInteger, valueInteger) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueInteger, valueInteger)) &&
             (identical(other.valueIntegerElement, valueIntegerElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueIntegerElement, valueIntegerElement)) &&
+            (identical(other.valueDecimal, valueDecimal) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDecimal, valueDecimal)) &&
             (identical(other.valueDecimalElement, valueDecimalElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueDecimalElement, valueDecimalElement)));
@@ -43717,10 +44368,15 @@ class _$_StructureMapParameter extends _StructureMapParameter {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(valueId) ^
       const DeepCollectionEquality().hash(valueIdElement) ^
+      const DeepCollectionEquality().hash(valueString) ^
       const DeepCollectionEquality().hash(valueStringElement) ^
+      const DeepCollectionEquality().hash(valueBoolean) ^
       const DeepCollectionEquality().hash(valueBooleanElement) ^
+      const DeepCollectionEquality().hash(valueInteger) ^
       const DeepCollectionEquality().hash(valueIntegerElement) ^
+      const DeepCollectionEquality().hash(valueDecimal) ^
       const DeepCollectionEquality().hash(valueDecimalElement);
 
   @override
@@ -43740,10 +44396,15 @@ abstract class _StructureMapParameter extends StructureMapParameter {
           {String id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
+          Id valueId,
           @JsonKey(name: '_valueId') Element valueIdElement,
+          String valueString,
           @JsonKey(name: '_valueString') Element valueStringElement,
+          Boolean valueBoolean,
           @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+          Integer valueInteger,
           @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+          Decimal valueDecimal,
           @JsonKey(name: '_valueDecimal') Element valueDecimalElement}) =
       _$_StructureMapParameter;
 
@@ -43758,17 +44419,27 @@ abstract class _StructureMapParameter extends StructureMapParameter {
   @override
   List<FhirExtension> get modifierExtension;
   @override
+  Id get valueId;
+  @override
   @JsonKey(name: '_valueId')
   Element get valueIdElement;
+  @override
+  String get valueString;
   @override
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
   @override
+  Boolean get valueBoolean;
+  @override
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
   @override
+  Integer get valueInteger;
+  @override
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
+  @override
+  Decimal get valueDecimal;
   @override
   @JsonKey(name: '_valueDecimal')
   Element get valueDecimalElement;

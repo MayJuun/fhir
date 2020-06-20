@@ -9,11 +9,10 @@ part 'individuals.g.dart';
 
 @freezed
 abstract class Group with _$Group implements Resource {
-  const factory Group({
+  factory Group({
     @JsonKey(required: true, defaultValue: 'Group')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -42,7 +41,7 @@ abstract class Group with _$Group implements Resource {
 
 @freezed
 abstract class GroupCharacteristic with _$GroupCharacteristic {
-  const factory GroupCharacteristic({
+  factory GroupCharacteristic({
     @JsonKey(required: true) CodeableConcept code,
     CodeableConcept valueCodeableConcept,
     Boolean valueBoolean,
@@ -59,7 +58,7 @@ abstract class GroupCharacteristic with _$GroupCharacteristic {
 
 @freezed
 abstract class GroupMember with _$GroupMember {
-  const factory GroupMember({
+  factory GroupMember({
     @JsonKey(required: true) Reference entity,
     Period period,
     Boolean inactive,
@@ -71,11 +70,10 @@ abstract class GroupMember with _$GroupMember {
 
 @freezed
 abstract class Patient with _$Patient implements Resource {
-  const factory Patient({
+  factory Patient({
     @JsonKey(required: true, defaultValue: 'Patient')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -117,7 +115,7 @@ abstract class Patient with _$Patient implements Resource {
 
 @freezed
 abstract class PatientContact with _$PatientContact {
-  const factory PatientContact({
+  factory PatientContact({
     List<CodeableConcept> relationship,
     HumanName name,
     List<ContactPoint> telecom,
@@ -133,7 +131,7 @@ abstract class PatientContact with _$PatientContact {
 
 @freezed
 abstract class PatientAnimal with _$PatientAnimal {
-  const factory PatientAnimal({
+  factory PatientAnimal({
     @JsonKey(required: true) CodeableConcept species,
     CodeableConcept breed,
     CodeableConcept genderStatus,
@@ -144,7 +142,7 @@ abstract class PatientAnimal with _$PatientAnimal {
 
 @freezed
 abstract class PatientCommunication with _$PatientCommunication {
-  const factory PatientCommunication({
+  factory PatientCommunication({
     @JsonKey(required: true) CodeableConcept language,
     Boolean preferred,
     @JsonKey(name: '_preferred') Element preferredElement,
@@ -155,7 +153,7 @@ abstract class PatientCommunication with _$PatientCommunication {
 
 @freezed
 abstract class PatientLink with _$PatientLink {
-  const factory PatientLink({
+  factory PatientLink({
     @JsonKey(required: true) Reference other,
     @JsonKey(unknownEnumValue: PatientLinkType.unknown) PatientLinkType type,
     @JsonKey(name: '_type') Element typeElement,
@@ -166,11 +164,10 @@ abstract class PatientLink with _$PatientLink {
 
 @freezed
 abstract class Person with _$Person implements Resource {
-  const factory Person({
+  factory Person({
     @JsonKey(required: true, defaultValue: 'Person')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -198,7 +195,7 @@ abstract class Person with _$Person implements Resource {
 
 @freezed
 abstract class PersonLink with _$PersonLink {
-  const factory PersonLink({
+  factory PersonLink({
     @JsonKey(required: true) Reference target,
     @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
         PersonLinkAssurance assurance,
@@ -210,11 +207,10 @@ abstract class PersonLink with _$PersonLink {
 
 @freezed
 abstract class Practitioner with _$Practitioner implements Resource {
-  const factory Practitioner({
+  factory Practitioner({
     @JsonKey(required: true, defaultValue: 'Practitioner')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -243,7 +239,7 @@ abstract class Practitioner with _$Practitioner implements Resource {
 
 @freezed
 abstract class PractitionerQualification with _$PractitionerQualification {
-  const factory PractitionerQualification({
+  factory PractitionerQualification({
     List<Identifier> identifier,
     @JsonKey(required: true) CodeableConcept code,
     Period period,
@@ -255,11 +251,10 @@ abstract class PractitionerQualification with _$PractitionerQualification {
 
 @freezed
 abstract class PractitionerRole with _$PractitionerRole implements Resource {
-  const factory PractitionerRole({
+  factory PractitionerRole({
     @JsonKey(required: true, defaultValue: 'PractitionerRole')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -293,7 +288,7 @@ abstract class PractitionerRole with _$PractitionerRole implements Resource {
 @freezed
 abstract class PractitionerRoleAvailableTime
     with _$PractitionerRoleAvailableTime {
-  const factory PractitionerRoleAvailableTime({
+  factory PractitionerRoleAvailableTime({
     List<Code> daysOfWeek,
     Boolean allDay,
     Time availableStartTime,
@@ -310,7 +305,7 @@ abstract class PractitionerRoleAvailableTime
 @freezed
 abstract class PractitionerRoleNotAvailable
     with _$PractitionerRoleNotAvailable {
-  const factory PractitionerRoleNotAvailable({
+  factory PractitionerRoleNotAvailable({
     String description,
     Period during,
     @JsonKey(name: '_description') Element descriptionElement,
@@ -321,11 +316,10 @@ abstract class PractitionerRoleNotAvailable
 
 @freezed
 abstract class RelatedPerson with _$RelatedPerson implements Resource {
-  const factory RelatedPerson({
+  factory RelatedPerson({
     @JsonKey(required: true, defaultValue: 'RelatedPerson')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

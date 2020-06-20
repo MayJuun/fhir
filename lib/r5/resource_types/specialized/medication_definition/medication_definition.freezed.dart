@@ -704,8 +704,11 @@ class _$AdministrableProductDefinitionCharacteristicTearOff {
       @required CodeableConcept code,
       Coding valueCoding,
       Quantity valueQuantity,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
       Attachment valueAttachment,
       CodeableConcept status}) {
@@ -716,8 +719,11 @@ class _$AdministrableProductDefinitionCharacteristicTearOff {
       code: code,
       valueCoding: valueCoding,
       valueQuantity: valueQuantity,
+      valueString: valueString,
       valueStringElement: valueStringElement,
+      valueDate: valueDate,
       valueDateElement: valueDateElement,
+      valueBoolean: valueBoolean,
       valueBooleanElement: valueBooleanElement,
       valueAttachment: valueAttachment,
       status: status,
@@ -737,10 +743,13 @@ mixin _$AdministrableProductDefinitionCharacteristic {
   CodeableConcept get code;
   Coding get valueCoding;
   Quantity get valueQuantity;
+  String get valueString;
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
+  Date get valueDate;
   @JsonKey(name: '_valueDate')
   Element get valueDateElement;
+  Boolean get valueBoolean;
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
   Attachment get valueAttachment;
@@ -763,8 +772,11 @@ abstract class $AdministrableProductDefinitionCharacteristicCopyWith<$Res> {
       CodeableConcept code,
       Coding valueCoding,
       Quantity valueQuantity,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
       Attachment valueAttachment,
       CodeableConcept status});
@@ -796,8 +808,11 @@ class _$AdministrableProductDefinitionCharacteristicCopyWithImpl<$Res>
     Object code = freezed,
     Object valueCoding = freezed,
     Object valueQuantity = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueDate = freezed,
     Object valueDateElement = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
     Object valueAttachment = freezed,
     Object status = freezed,
@@ -816,12 +831,18 @@ class _$AdministrableProductDefinitionCharacteristicCopyWithImpl<$Res>
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
           : valueQuantity as Quantity,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateElement: valueDateElement == freezed
           ? _value.valueDateElement
           : valueDateElement as Element,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
@@ -927,8 +948,11 @@ abstract class _$AdministrableProductDefinitionCharacteristicCopyWith<$Res>
       CodeableConcept code,
       Coding valueCoding,
       Quantity valueQuantity,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
       Attachment valueAttachment,
       CodeableConcept status});
@@ -972,8 +996,11 @@ class __$AdministrableProductDefinitionCharacteristicCopyWithImpl<$Res>
     Object code = freezed,
     Object valueCoding = freezed,
     Object valueQuantity = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueDate = freezed,
     Object valueDateElement = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
     Object valueAttachment = freezed,
     Object status = freezed,
@@ -992,12 +1019,18 @@ class __$AdministrableProductDefinitionCharacteristicCopyWithImpl<$Res>
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
           : valueQuantity as Quantity,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateElement: valueDateElement == freezed
           ? _value.valueDateElement
           : valueDateElement as Element,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
@@ -1019,8 +1052,11 @@ class _$_AdministrableProductDefinitionCharacteristic
       @required this.code,
       this.valueCoding,
       this.valueQuantity,
+      this.valueString,
       @JsonKey(name: '_valueString') this.valueStringElement,
+      this.valueDate,
       @JsonKey(name: '_valueDate') this.valueDateElement,
+      this.valueBoolean,
       @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
       this.valueAttachment,
       this.status})
@@ -1045,11 +1081,17 @@ class _$_AdministrableProductDefinitionCharacteristic
   @override
   final Quantity valueQuantity;
   @override
+  final String valueString;
+  @override
   @JsonKey(name: '_valueString')
   final Element valueStringElement;
   @override
+  final Date valueDate;
+  @override
   @JsonKey(name: '_valueDate')
   final Element valueDateElement;
+  @override
+  final Boolean valueBoolean;
   @override
   @JsonKey(name: '_valueBoolean')
   final Element valueBooleanElement;
@@ -1060,7 +1102,7 @@ class _$_AdministrableProductDefinitionCharacteristic
 
   @override
   String toString() {
-    return 'AdministrableProductDefinitionCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, valueCoding: $valueCoding, valueQuantity: $valueQuantity, valueStringElement: $valueStringElement, valueDateElement: $valueDateElement, valueBooleanElement: $valueBooleanElement, valueAttachment: $valueAttachment, status: $status)';
+    return 'AdministrableProductDefinitionCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, valueCoding: $valueCoding, valueQuantity: $valueQuantity, valueString: $valueString, valueStringElement: $valueStringElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueAttachment: $valueAttachment, status: $status)';
   }
 
   @override
@@ -1083,12 +1125,21 @@ class _$_AdministrableProductDefinitionCharacteristic
             (identical(other.valueQuantity, valueQuantity) ||
                 const DeepCollectionEquality()
                     .equals(other.valueQuantity, valueQuantity)) &&
+            (identical(other.valueString, valueString) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueString, valueString)) &&
             (identical(other.valueStringElement, valueStringElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueStringElement, valueStringElement)) &&
+            (identical(other.valueDate, valueDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDate, valueDate)) &&
             (identical(other.valueDateElement, valueDateElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueDateElement, valueDateElement)) &&
+            (identical(other.valueBoolean, valueBoolean) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBoolean, valueBoolean)) &&
             (identical(other.valueBooleanElement, valueBooleanElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueBooleanElement, valueBooleanElement)) &&
@@ -1108,8 +1159,11 @@ class _$_AdministrableProductDefinitionCharacteristic
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(valueCoding) ^
       const DeepCollectionEquality().hash(valueQuantity) ^
+      const DeepCollectionEquality().hash(valueString) ^
       const DeepCollectionEquality().hash(valueStringElement) ^
+      const DeepCollectionEquality().hash(valueDate) ^
       const DeepCollectionEquality().hash(valueDateElement) ^
+      const DeepCollectionEquality().hash(valueBoolean) ^
       const DeepCollectionEquality().hash(valueBooleanElement) ^
       const DeepCollectionEquality().hash(valueAttachment) ^
       const DeepCollectionEquality().hash(status);
@@ -1137,8 +1191,11 @@ abstract class _AdministrableProductDefinitionCharacteristic
           @required CodeableConcept code,
           Coding valueCoding,
           Quantity valueQuantity,
+          String valueString,
           @JsonKey(name: '_valueString') Element valueStringElement,
+          Date valueDate,
           @JsonKey(name: '_valueDate') Element valueDateElement,
+          Boolean valueBoolean,
           @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
           Attachment valueAttachment,
           CodeableConcept status}) =
@@ -1162,11 +1219,17 @@ abstract class _AdministrableProductDefinitionCharacteristic
   @override
   Quantity get valueQuantity;
   @override
+  String get valueString;
+  @override
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
   @override
+  Date get valueDate;
+  @override
   @JsonKey(name: '_valueDate')
   Element get valueDateElement;
+  @override
+  Boolean get valueBoolean;
   @override
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
@@ -5145,6 +5208,7 @@ abstract class $IngredientCopyWith<$Res> {
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
+  $IdentifierCopyWith<$Res> get identifier;
   $CodeableConceptCopyWith<$Res> get role;
   $ElementCopyWith<$Res> get allergenicIndicatorElement;
   $IngredientSubstanceCopyWith<$Res> get substance;
@@ -5265,6 +5329,16 @@ class _$IngredientCopyWithImpl<$Res> implements $IngredientCopyWith<$Res> {
   }
 
   @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
   $CodeableConceptCopyWith<$Res> get role {
     if (_value.role == null) {
       return null;
@@ -5328,6 +5402,8 @@ abstract class _$IngredientCopyWith<$Res> implements $IngredientCopyWith<$Res> {
   $ElementCopyWith<$Res> get languageElement;
   @override
   $NarrativeCopyWith<$Res> get text;
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
   @override
   $CodeableConceptCopyWith<$Res> get role;
   @override
@@ -7753,8 +7829,11 @@ class _$ManufacturedItemDefinitionCharacteristicTearOff {
       @required CodeableConcept code,
       Coding valueCoding,
       Quantity valueQuantity,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
       Attachment valueAttachment}) {
     return _ManufacturedItemDefinitionCharacteristic(
@@ -7764,8 +7843,11 @@ class _$ManufacturedItemDefinitionCharacteristicTearOff {
       code: code,
       valueCoding: valueCoding,
       valueQuantity: valueQuantity,
+      valueString: valueString,
       valueStringElement: valueStringElement,
+      valueDate: valueDate,
       valueDateElement: valueDateElement,
+      valueBoolean: valueBoolean,
       valueBooleanElement: valueBooleanElement,
       valueAttachment: valueAttachment,
     );
@@ -7784,10 +7866,13 @@ mixin _$ManufacturedItemDefinitionCharacteristic {
   CodeableConcept get code;
   Coding get valueCoding;
   Quantity get valueQuantity;
+  String get valueString;
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
+  Date get valueDate;
   @JsonKey(name: '_valueDate')
   Element get valueDateElement;
+  Boolean get valueBoolean;
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
   Attachment get valueAttachment;
@@ -7809,8 +7894,11 @@ abstract class $ManufacturedItemDefinitionCharacteristicCopyWith<$Res> {
       CodeableConcept code,
       Coding valueCoding,
       Quantity valueQuantity,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
       Attachment valueAttachment});
 
@@ -7840,8 +7928,11 @@ class _$ManufacturedItemDefinitionCharacteristicCopyWithImpl<$Res>
     Object code = freezed,
     Object valueCoding = freezed,
     Object valueQuantity = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueDate = freezed,
     Object valueDateElement = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
     Object valueAttachment = freezed,
   }) {
@@ -7859,12 +7950,18 @@ class _$ManufacturedItemDefinitionCharacteristicCopyWithImpl<$Res>
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
           : valueQuantity as Quantity,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateElement: valueDateElement == freezed
           ? _value.valueDateElement
           : valueDateElement as Element,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
@@ -7959,8 +8056,11 @@ abstract class _$ManufacturedItemDefinitionCharacteristicCopyWith<$Res>
       CodeableConcept code,
       Coding valueCoding,
       Quantity valueQuantity,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
       Attachment valueAttachment});
 
@@ -8001,8 +8101,11 @@ class __$ManufacturedItemDefinitionCharacteristicCopyWithImpl<$Res>
     Object code = freezed,
     Object valueCoding = freezed,
     Object valueQuantity = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueDate = freezed,
     Object valueDateElement = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
     Object valueAttachment = freezed,
   }) {
@@ -8020,12 +8123,18 @@ class __$ManufacturedItemDefinitionCharacteristicCopyWithImpl<$Res>
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
           : valueQuantity as Quantity,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateElement: valueDateElement == freezed
           ? _value.valueDateElement
           : valueDateElement as Element,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
@@ -8046,8 +8155,11 @@ class _$_ManufacturedItemDefinitionCharacteristic
       @required this.code,
       this.valueCoding,
       this.valueQuantity,
+      this.valueString,
       @JsonKey(name: '_valueString') this.valueStringElement,
+      this.valueDate,
       @JsonKey(name: '_valueDate') this.valueDateElement,
+      this.valueBoolean,
       @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
       this.valueAttachment})
       : assert(code != null),
@@ -8071,11 +8183,17 @@ class _$_ManufacturedItemDefinitionCharacteristic
   @override
   final Quantity valueQuantity;
   @override
+  final String valueString;
+  @override
   @JsonKey(name: '_valueString')
   final Element valueStringElement;
   @override
+  final Date valueDate;
+  @override
   @JsonKey(name: '_valueDate')
   final Element valueDateElement;
+  @override
+  final Boolean valueBoolean;
   @override
   @JsonKey(name: '_valueBoolean')
   final Element valueBooleanElement;
@@ -8084,7 +8202,7 @@ class _$_ManufacturedItemDefinitionCharacteristic
 
   @override
   String toString() {
-    return 'ManufacturedItemDefinitionCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, valueCoding: $valueCoding, valueQuantity: $valueQuantity, valueStringElement: $valueStringElement, valueDateElement: $valueDateElement, valueBooleanElement: $valueBooleanElement, valueAttachment: $valueAttachment)';
+    return 'ManufacturedItemDefinitionCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, valueCoding: $valueCoding, valueQuantity: $valueQuantity, valueString: $valueString, valueStringElement: $valueStringElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueAttachment: $valueAttachment)';
   }
 
   @override
@@ -8107,12 +8225,21 @@ class _$_ManufacturedItemDefinitionCharacteristic
             (identical(other.valueQuantity, valueQuantity) ||
                 const DeepCollectionEquality()
                     .equals(other.valueQuantity, valueQuantity)) &&
+            (identical(other.valueString, valueString) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueString, valueString)) &&
             (identical(other.valueStringElement, valueStringElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueStringElement, valueStringElement)) &&
+            (identical(other.valueDate, valueDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDate, valueDate)) &&
             (identical(other.valueDateElement, valueDateElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueDateElement, valueDateElement)) &&
+            (identical(other.valueBoolean, valueBoolean) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBoolean, valueBoolean)) &&
             (identical(other.valueBooleanElement, valueBooleanElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueBooleanElement, valueBooleanElement)) &&
@@ -8130,8 +8257,11 @@ class _$_ManufacturedItemDefinitionCharacteristic
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(valueCoding) ^
       const DeepCollectionEquality().hash(valueQuantity) ^
+      const DeepCollectionEquality().hash(valueString) ^
       const DeepCollectionEquality().hash(valueStringElement) ^
+      const DeepCollectionEquality().hash(valueDate) ^
       const DeepCollectionEquality().hash(valueDateElement) ^
+      const DeepCollectionEquality().hash(valueBoolean) ^
       const DeepCollectionEquality().hash(valueBooleanElement) ^
       const DeepCollectionEquality().hash(valueAttachment);
 
@@ -8157,8 +8287,11 @@ abstract class _ManufacturedItemDefinitionCharacteristic
           @required CodeableConcept code,
           Coding valueCoding,
           Quantity valueQuantity,
+          String valueString,
           @JsonKey(name: '_valueString') Element valueStringElement,
+          Date valueDate,
           @JsonKey(name: '_valueDate') Element valueDateElement,
+          Boolean valueBoolean,
           @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
           Attachment valueAttachment}) =
       _$_ManufacturedItemDefinitionCharacteristic;
@@ -8181,11 +8314,17 @@ abstract class _ManufacturedItemDefinitionCharacteristic
   @override
   Quantity get valueQuantity;
   @override
+  String get valueString;
+  @override
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
   @override
+  Date get valueDate;
+  @override
   @JsonKey(name: '_valueDate')
   Element get valueDateElement;
+  @override
+  Boolean get valueBoolean;
   @override
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
@@ -10591,6 +10730,7 @@ abstract class $MedicinalProductDefinitionCrossReferenceCopyWith<$Res> {
       Reference productReference,
       Coding type});
 
+  $IdentifierCopyWith<$Res> get productIdentifier;
   $ReferenceCopyWith<$Res> get productReference;
   $CodingCopyWith<$Res> get type;
 }
@@ -10632,6 +10772,16 @@ class _$MedicinalProductDefinitionCrossReferenceCopyWithImpl<$Res>
   }
 
   @override
+  $IdentifierCopyWith<$Res> get productIdentifier {
+    if (_value.productIdentifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.productIdentifier, (value) {
+      return _then(_value.copyWith(productIdentifier: value));
+    });
+  }
+
+  @override
   $ReferenceCopyWith<$Res> get productReference {
     if (_value.productReference == null) {
       return null;
@@ -10667,6 +10817,8 @@ abstract class _$MedicinalProductDefinitionCrossReferenceCopyWith<$Res>
       Reference productReference,
       Coding type});
 
+  @override
+  $IdentifierCopyWith<$Res> get productIdentifier;
   @override
   $ReferenceCopyWith<$Res> get productReference;
   @override
@@ -12060,6 +12212,9 @@ abstract class $PackagedProductDefinitionBatchIdentifierCopyWith<$Res> {
       List<FhirExtension> modifierExtension,
       Identifier outerPackaging,
       Identifier immediatePackaging});
+
+  $IdentifierCopyWith<$Res> get outerPackaging;
+  $IdentifierCopyWith<$Res> get immediatePackaging;
 }
 
 class _$PackagedProductDefinitionBatchIdentifierCopyWithImpl<$Res>
@@ -12095,6 +12250,26 @@ class _$PackagedProductDefinitionBatchIdentifierCopyWithImpl<$Res>
           : immediatePackaging as Identifier,
     ));
   }
+
+  @override
+  $IdentifierCopyWith<$Res> get outerPackaging {
+    if (_value.outerPackaging == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.outerPackaging, (value) {
+      return _then(_value.copyWith(outerPackaging: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get immediatePackaging {
+    if (_value.immediatePackaging == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.immediatePackaging, (value) {
+      return _then(_value.copyWith(immediatePackaging: value));
+    });
+  }
 }
 
 abstract class _$PackagedProductDefinitionBatchIdentifierCopyWith<$Res>
@@ -12110,6 +12285,11 @@ abstract class _$PackagedProductDefinitionBatchIdentifierCopyWith<$Res>
       List<FhirExtension> modifierExtension,
       Identifier outerPackaging,
       Identifier immediatePackaging});
+
+  @override
+  $IdentifierCopyWith<$Res> get outerPackaging;
+  @override
+  $IdentifierCopyWith<$Res> get immediatePackaging;
 }
 
 class __$PackagedProductDefinitionBatchIdentifierCopyWithImpl<$Res>
@@ -12717,8 +12897,11 @@ class _$PackagedProductDefinitionCharacteristicTearOff {
       @required CodeableConcept code,
       Coding valueCoding,
       Quantity valueQuantity,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
       Attachment valueAttachment}) {
     return _PackagedProductDefinitionCharacteristic(
@@ -12728,8 +12911,11 @@ class _$PackagedProductDefinitionCharacteristicTearOff {
       code: code,
       valueCoding: valueCoding,
       valueQuantity: valueQuantity,
+      valueString: valueString,
       valueStringElement: valueStringElement,
+      valueDate: valueDate,
       valueDateElement: valueDateElement,
+      valueBoolean: valueBoolean,
       valueBooleanElement: valueBooleanElement,
       valueAttachment: valueAttachment,
     );
@@ -12748,10 +12934,13 @@ mixin _$PackagedProductDefinitionCharacteristic {
   CodeableConcept get code;
   Coding get valueCoding;
   Quantity get valueQuantity;
+  String get valueString;
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
+  Date get valueDate;
   @JsonKey(name: '_valueDate')
   Element get valueDateElement;
+  Boolean get valueBoolean;
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
   Attachment get valueAttachment;
@@ -12773,8 +12962,11 @@ abstract class $PackagedProductDefinitionCharacteristicCopyWith<$Res> {
       CodeableConcept code,
       Coding valueCoding,
       Quantity valueQuantity,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
       Attachment valueAttachment});
 
@@ -12804,8 +12996,11 @@ class _$PackagedProductDefinitionCharacteristicCopyWithImpl<$Res>
     Object code = freezed,
     Object valueCoding = freezed,
     Object valueQuantity = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueDate = freezed,
     Object valueDateElement = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
     Object valueAttachment = freezed,
   }) {
@@ -12823,12 +13018,18 @@ class _$PackagedProductDefinitionCharacteristicCopyWithImpl<$Res>
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
           : valueQuantity as Quantity,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateElement: valueDateElement == freezed
           ? _value.valueDateElement
           : valueDateElement as Element,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
@@ -12923,8 +13124,11 @@ abstract class _$PackagedProductDefinitionCharacteristicCopyWith<$Res>
       CodeableConcept code,
       Coding valueCoding,
       Quantity valueQuantity,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
       Attachment valueAttachment});
 
@@ -12965,8 +13169,11 @@ class __$PackagedProductDefinitionCharacteristicCopyWithImpl<$Res>
     Object code = freezed,
     Object valueCoding = freezed,
     Object valueQuantity = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueDate = freezed,
     Object valueDateElement = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
     Object valueAttachment = freezed,
   }) {
@@ -12984,12 +13191,18 @@ class __$PackagedProductDefinitionCharacteristicCopyWithImpl<$Res>
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
           : valueQuantity as Quantity,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateElement: valueDateElement == freezed
           ? _value.valueDateElement
           : valueDateElement as Element,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
@@ -13010,8 +13223,11 @@ class _$_PackagedProductDefinitionCharacteristic
       @required this.code,
       this.valueCoding,
       this.valueQuantity,
+      this.valueString,
       @JsonKey(name: '_valueString') this.valueStringElement,
+      this.valueDate,
       @JsonKey(name: '_valueDate') this.valueDateElement,
+      this.valueBoolean,
       @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
       this.valueAttachment})
       : assert(code != null),
@@ -13035,11 +13251,17 @@ class _$_PackagedProductDefinitionCharacteristic
   @override
   final Quantity valueQuantity;
   @override
+  final String valueString;
+  @override
   @JsonKey(name: '_valueString')
   final Element valueStringElement;
   @override
+  final Date valueDate;
+  @override
   @JsonKey(name: '_valueDate')
   final Element valueDateElement;
+  @override
+  final Boolean valueBoolean;
   @override
   @JsonKey(name: '_valueBoolean')
   final Element valueBooleanElement;
@@ -13048,7 +13270,7 @@ class _$_PackagedProductDefinitionCharacteristic
 
   @override
   String toString() {
-    return 'PackagedProductDefinitionCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, valueCoding: $valueCoding, valueQuantity: $valueQuantity, valueStringElement: $valueStringElement, valueDateElement: $valueDateElement, valueBooleanElement: $valueBooleanElement, valueAttachment: $valueAttachment)';
+    return 'PackagedProductDefinitionCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, valueCoding: $valueCoding, valueQuantity: $valueQuantity, valueString: $valueString, valueStringElement: $valueStringElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueAttachment: $valueAttachment)';
   }
 
   @override
@@ -13071,12 +13293,21 @@ class _$_PackagedProductDefinitionCharacteristic
             (identical(other.valueQuantity, valueQuantity) ||
                 const DeepCollectionEquality()
                     .equals(other.valueQuantity, valueQuantity)) &&
+            (identical(other.valueString, valueString) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueString, valueString)) &&
             (identical(other.valueStringElement, valueStringElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueStringElement, valueStringElement)) &&
+            (identical(other.valueDate, valueDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDate, valueDate)) &&
             (identical(other.valueDateElement, valueDateElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueDateElement, valueDateElement)) &&
+            (identical(other.valueBoolean, valueBoolean) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBoolean, valueBoolean)) &&
             (identical(other.valueBooleanElement, valueBooleanElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueBooleanElement, valueBooleanElement)) &&
@@ -13094,8 +13325,11 @@ class _$_PackagedProductDefinitionCharacteristic
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(valueCoding) ^
       const DeepCollectionEquality().hash(valueQuantity) ^
+      const DeepCollectionEquality().hash(valueString) ^
       const DeepCollectionEquality().hash(valueStringElement) ^
+      const DeepCollectionEquality().hash(valueDate) ^
       const DeepCollectionEquality().hash(valueDateElement) ^
+      const DeepCollectionEquality().hash(valueBoolean) ^
       const DeepCollectionEquality().hash(valueBooleanElement) ^
       const DeepCollectionEquality().hash(valueAttachment);
 
@@ -13121,8 +13355,11 @@ abstract class _PackagedProductDefinitionCharacteristic
       @required CodeableConcept code,
       Coding valueCoding,
       Quantity valueQuantity,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
       Attachment valueAttachment}) = _$_PackagedProductDefinitionCharacteristic;
 
@@ -13144,11 +13381,17 @@ abstract class _PackagedProductDefinitionCharacteristic
   @override
   Quantity get valueQuantity;
   @override
+  String get valueString;
+  @override
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
   @override
+  Date get valueDate;
+  @override
   @JsonKey(name: '_valueDate')
   Element get valueDateElement;
+  @override
+  Boolean get valueBoolean;
   @override
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
@@ -13174,6 +13417,7 @@ class _$PackagedProductDefinitionContainedItemTearOff {
       List<FhirExtension> modifierExtension,
       List<Reference> item,
       Quantity amountQuantity,
+      Integer amountInteger,
       @JsonKey(name: '_amountInteger') Element amountIntegerElement}) {
     return _PackagedProductDefinitionContainedItem(
       id: id,
@@ -13181,6 +13425,7 @@ class _$PackagedProductDefinitionContainedItemTearOff {
       modifierExtension: modifierExtension,
       item: item,
       amountQuantity: amountQuantity,
+      amountInteger: amountInteger,
       amountIntegerElement: amountIntegerElement,
     );
   }
@@ -13197,6 +13442,7 @@ mixin _$PackagedProductDefinitionContainedItem {
   List<FhirExtension> get modifierExtension;
   List<Reference> get item;
   Quantity get amountQuantity;
+  Integer get amountInteger;
   @JsonKey(name: '_amountInteger')
   Element get amountIntegerElement;
 
@@ -13216,6 +13462,7 @@ abstract class $PackagedProductDefinitionContainedItemCopyWith<$Res> {
       List<FhirExtension> modifierExtension,
       List<Reference> item,
       Quantity amountQuantity,
+      Integer amountInteger,
       @JsonKey(name: '_amountInteger') Element amountIntegerElement});
 
   $QuantityCopyWith<$Res> get amountQuantity;
@@ -13237,6 +13484,7 @@ class _$PackagedProductDefinitionContainedItemCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object item = freezed,
     Object amountQuantity = freezed,
+    Object amountInteger = freezed,
     Object amountIntegerElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -13251,6 +13499,9 @@ class _$PackagedProductDefinitionContainedItemCopyWithImpl<$Res>
       amountQuantity: amountQuantity == freezed
           ? _value.amountQuantity
           : amountQuantity as Quantity,
+      amountInteger: amountInteger == freezed
+          ? _value.amountInteger
+          : amountInteger as Integer,
       amountIntegerElement: amountIntegerElement == freezed
           ? _value.amountIntegerElement
           : amountIntegerElement as Element,
@@ -13291,6 +13542,7 @@ abstract class _$PackagedProductDefinitionContainedItemCopyWith<$Res>
       List<FhirExtension> modifierExtension,
       List<Reference> item,
       Quantity amountQuantity,
+      Integer amountInteger,
       @JsonKey(name: '_amountInteger') Element amountIntegerElement});
 
   @override
@@ -13319,6 +13571,7 @@ class __$PackagedProductDefinitionContainedItemCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object item = freezed,
     Object amountQuantity = freezed,
+    Object amountInteger = freezed,
     Object amountIntegerElement = freezed,
   }) {
     return _then(_PackagedProductDefinitionContainedItem(
@@ -13333,6 +13586,9 @@ class __$PackagedProductDefinitionContainedItemCopyWithImpl<$Res>
       amountQuantity: amountQuantity == freezed
           ? _value.amountQuantity
           : amountQuantity as Quantity,
+      amountInteger: amountInteger == freezed
+          ? _value.amountInteger
+          : amountInteger as Integer,
       amountIntegerElement: amountIntegerElement == freezed
           ? _value.amountIntegerElement
           : amountIntegerElement as Element,
@@ -13349,6 +13605,7 @@ class _$_PackagedProductDefinitionContainedItem
       this.modifierExtension,
       this.item,
       this.amountQuantity,
+      this.amountInteger,
       @JsonKey(name: '_amountInteger') this.amountIntegerElement})
       : super._();
 
@@ -13368,12 +13625,14 @@ class _$_PackagedProductDefinitionContainedItem
   @override
   final Quantity amountQuantity;
   @override
+  final Integer amountInteger;
+  @override
   @JsonKey(name: '_amountInteger')
   final Element amountIntegerElement;
 
   @override
   String toString() {
-    return 'PackagedProductDefinitionContainedItem(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, item: $item, amountQuantity: $amountQuantity, amountIntegerElement: $amountIntegerElement)';
+    return 'PackagedProductDefinitionContainedItem(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, item: $item, amountQuantity: $amountQuantity, amountInteger: $amountInteger, amountIntegerElement: $amountIntegerElement)';
   }
 
   @override
@@ -13393,6 +13652,9 @@ class _$_PackagedProductDefinitionContainedItem
             (identical(other.amountQuantity, amountQuantity) ||
                 const DeepCollectionEquality()
                     .equals(other.amountQuantity, amountQuantity)) &&
+            (identical(other.amountInteger, amountInteger) ||
+                const DeepCollectionEquality()
+                    .equals(other.amountInteger, amountInteger)) &&
             (identical(other.amountIntegerElement, amountIntegerElement) ||
                 const DeepCollectionEquality()
                     .equals(other.amountIntegerElement, amountIntegerElement)));
@@ -13406,6 +13668,7 @@ class _$_PackagedProductDefinitionContainedItem
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(item) ^
       const DeepCollectionEquality().hash(amountQuantity) ^
+      const DeepCollectionEquality().hash(amountInteger) ^
       const DeepCollectionEquality().hash(amountIntegerElement);
 
   @override
@@ -13429,6 +13692,7 @@ abstract class _PackagedProductDefinitionContainedItem
           List<FhirExtension> modifierExtension,
           List<Reference> item,
           Quantity amountQuantity,
+          Integer amountInteger,
           @JsonKey(name: '_amountInteger') Element amountIntegerElement}) =
       _$_PackagedProductDefinitionContainedItem;
 
@@ -13447,6 +13711,8 @@ abstract class _PackagedProductDefinitionContainedItem
   List<Reference> get item;
   @override
   Quantity get amountQuantity;
+  @override
+  Integer get amountInteger;
   @override
   @JsonKey(name: '_amountInteger')
   Element get amountIntegerElement;
@@ -14344,6 +14610,7 @@ class _$RegulatedAuthorizationRelatedDateTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Period datePeriod,
+      FhirDateTime dateDateTime,
       @JsonKey(name: '_dateDateTime') Element dateDateTimeElement,
       @required CodeableConcept type}) {
     return _RegulatedAuthorizationRelatedDate(
@@ -14351,6 +14618,7 @@ class _$RegulatedAuthorizationRelatedDateTearOff {
       extension_: extension_,
       modifierExtension: modifierExtension,
       datePeriod: datePeriod,
+      dateDateTime: dateDateTime,
       dateDateTimeElement: dateDateTimeElement,
       type: type,
     );
@@ -14367,6 +14635,7 @@ mixin _$RegulatedAuthorizationRelatedDate {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   Period get datePeriod;
+  FhirDateTime get dateDateTime;
   @JsonKey(name: '_dateDateTime')
   Element get dateDateTimeElement;
   CodeableConcept get type;
@@ -14386,6 +14655,7 @@ abstract class $RegulatedAuthorizationRelatedDateCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Period datePeriod,
+      FhirDateTime dateDateTime,
       @JsonKey(name: '_dateDateTime') Element dateDateTimeElement,
       CodeableConcept type});
 
@@ -14408,6 +14678,7 @@ class _$RegulatedAuthorizationRelatedDateCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object datePeriod = freezed,
+    Object dateDateTime = freezed,
     Object dateDateTimeElement = freezed,
     Object type = freezed,
   }) {
@@ -14421,6 +14692,9 @@ class _$RegulatedAuthorizationRelatedDateCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension>,
       datePeriod:
           datePeriod == freezed ? _value.datePeriod : datePeriod as Period,
+      dateDateTime: dateDateTime == freezed
+          ? _value.dateDateTime
+          : dateDateTime as FhirDateTime,
       dateDateTimeElement: dateDateTimeElement == freezed
           ? _value.dateDateTimeElement
           : dateDateTimeElement as Element,
@@ -14471,6 +14745,7 @@ abstract class _$RegulatedAuthorizationRelatedDateCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Period datePeriod,
+      FhirDateTime dateDateTime,
       @JsonKey(name: '_dateDateTime') Element dateDateTimeElement,
       CodeableConcept type});
 
@@ -14500,6 +14775,7 @@ class __$RegulatedAuthorizationRelatedDateCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object datePeriod = freezed,
+    Object dateDateTime = freezed,
     Object dateDateTimeElement = freezed,
     Object type = freezed,
   }) {
@@ -14513,6 +14789,9 @@ class __$RegulatedAuthorizationRelatedDateCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension>,
       datePeriod:
           datePeriod == freezed ? _value.datePeriod : datePeriod as Period,
+      dateDateTime: dateDateTime == freezed
+          ? _value.dateDateTime
+          : dateDateTime as FhirDateTime,
       dateDateTimeElement: dateDateTimeElement == freezed
           ? _value.dateDateTimeElement
           : dateDateTimeElement as Element,
@@ -14529,6 +14808,7 @@ class _$_RegulatedAuthorizationRelatedDate
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.datePeriod,
+      this.dateDateTime,
       @JsonKey(name: '_dateDateTime') this.dateDateTimeElement,
       @required this.type})
       : assert(type != null),
@@ -14548,6 +14828,8 @@ class _$_RegulatedAuthorizationRelatedDate
   @override
   final Period datePeriod;
   @override
+  final FhirDateTime dateDateTime;
+  @override
   @JsonKey(name: '_dateDateTime')
   final Element dateDateTimeElement;
   @override
@@ -14555,7 +14837,7 @@ class _$_RegulatedAuthorizationRelatedDate
 
   @override
   String toString() {
-    return 'RegulatedAuthorizationRelatedDate(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, datePeriod: $datePeriod, dateDateTimeElement: $dateDateTimeElement, type: $type)';
+    return 'RegulatedAuthorizationRelatedDate(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, datePeriod: $datePeriod, dateDateTime: $dateDateTime, dateDateTimeElement: $dateDateTimeElement, type: $type)';
   }
 
   @override
@@ -14573,6 +14855,9 @@ class _$_RegulatedAuthorizationRelatedDate
             (identical(other.datePeriod, datePeriod) ||
                 const DeepCollectionEquality()
                     .equals(other.datePeriod, datePeriod)) &&
+            (identical(other.dateDateTime, dateDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.dateDateTime, dateDateTime)) &&
             (identical(other.dateDateTimeElement, dateDateTimeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.dateDateTimeElement, dateDateTimeElement)) &&
@@ -14587,6 +14872,7 @@ class _$_RegulatedAuthorizationRelatedDate
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(datePeriod) ^
+      const DeepCollectionEquality().hash(dateDateTime) ^
       const DeepCollectionEquality().hash(dateDateTimeElement) ^
       const DeepCollectionEquality().hash(type);
 
@@ -14610,6 +14896,7 @@ abstract class _RegulatedAuthorizationRelatedDate
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Period datePeriod,
+      FhirDateTime dateDateTime,
       @JsonKey(name: '_dateDateTime') Element dateDateTimeElement,
       @required CodeableConcept type}) = _$_RegulatedAuthorizationRelatedDate;
 
@@ -14626,6 +14913,8 @@ abstract class _RegulatedAuthorizationRelatedDate
   List<FhirExtension> get modifierExtension;
   @override
   Period get datePeriod;
+  @override
+  FhirDateTime get dateDateTime;
   @override
   @JsonKey(name: '_dateDateTime')
   Element get dateDateTimeElement;
@@ -14652,6 +14941,7 @@ class _$RegulatedAuthorizationCaseTearOff {
       CodeableConcept type,
       CodeableConcept status,
       Period datePeriod,
+      FhirDateTime dateDateTime,
       @JsonKey(name: '_dateDateTime') Element dateDateTimeElement,
       List<RegulatedAuthorizationCase> application}) {
     return _RegulatedAuthorizationCase(
@@ -14662,6 +14952,7 @@ class _$RegulatedAuthorizationCaseTearOff {
       type: type,
       status: status,
       datePeriod: datePeriod,
+      dateDateTime: dateDateTime,
       dateDateTimeElement: dateDateTimeElement,
       application: application,
     );
@@ -14680,6 +14971,7 @@ mixin _$RegulatedAuthorizationCase {
   CodeableConcept get type;
   CodeableConcept get status;
   Period get datePeriod;
+  FhirDateTime get dateDateTime;
   @JsonKey(name: '_dateDateTime')
   Element get dateDateTimeElement;
   List<RegulatedAuthorizationCase> get application;
@@ -14700,9 +14992,11 @@ abstract class $RegulatedAuthorizationCaseCopyWith<$Res> {
       CodeableConcept type,
       CodeableConcept status,
       Period datePeriod,
+      FhirDateTime dateDateTime,
       @JsonKey(name: '_dateDateTime') Element dateDateTimeElement,
       List<RegulatedAuthorizationCase> application});
 
+  $IdentifierCopyWith<$Res> get identifier;
   $CodeableConceptCopyWith<$Res> get type;
   $CodeableConceptCopyWith<$Res> get status;
   $PeriodCopyWith<$Res> get datePeriod;
@@ -14726,6 +15020,7 @@ class _$RegulatedAuthorizationCaseCopyWithImpl<$Res>
     Object type = freezed,
     Object status = freezed,
     Object datePeriod = freezed,
+    Object dateDateTime = freezed,
     Object dateDateTimeElement = freezed,
     Object application = freezed,
   }) {
@@ -14743,6 +15038,9 @@ class _$RegulatedAuthorizationCaseCopyWithImpl<$Res>
       status: status == freezed ? _value.status : status as CodeableConcept,
       datePeriod:
           datePeriod == freezed ? _value.datePeriod : datePeriod as Period,
+      dateDateTime: dateDateTime == freezed
+          ? _value.dateDateTime
+          : dateDateTime as FhirDateTime,
       dateDateTimeElement: dateDateTimeElement == freezed
           ? _value.dateDateTimeElement
           : dateDateTimeElement as Element,
@@ -14750,6 +15048,16 @@ class _$RegulatedAuthorizationCaseCopyWithImpl<$Res>
           ? _value.application
           : application as List<RegulatedAuthorizationCase>,
     ));
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
   }
 
   @override
@@ -14808,9 +15116,12 @@ abstract class _$RegulatedAuthorizationCaseCopyWith<$Res>
       CodeableConcept type,
       CodeableConcept status,
       Period datePeriod,
+      FhirDateTime dateDateTime,
       @JsonKey(name: '_dateDateTime') Element dateDateTimeElement,
       List<RegulatedAuthorizationCase> application});
 
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
   @override
   $CodeableConceptCopyWith<$Res> get type;
   @override
@@ -14841,6 +15152,7 @@ class __$RegulatedAuthorizationCaseCopyWithImpl<$Res>
     Object type = freezed,
     Object status = freezed,
     Object datePeriod = freezed,
+    Object dateDateTime = freezed,
     Object dateDateTimeElement = freezed,
     Object application = freezed,
   }) {
@@ -14858,6 +15170,9 @@ class __$RegulatedAuthorizationCaseCopyWithImpl<$Res>
       status: status == freezed ? _value.status : status as CodeableConcept,
       datePeriod:
           datePeriod == freezed ? _value.datePeriod : datePeriod as Period,
+      dateDateTime: dateDateTime == freezed
+          ? _value.dateDateTime
+          : dateDateTime as FhirDateTime,
       dateDateTimeElement: dateDateTimeElement == freezed
           ? _value.dateDateTimeElement
           : dateDateTimeElement as Element,
@@ -14878,6 +15193,7 @@ class _$_RegulatedAuthorizationCase extends _RegulatedAuthorizationCase {
       this.type,
       this.status,
       this.datePeriod,
+      this.dateDateTime,
       @JsonKey(name: '_dateDateTime') this.dateDateTimeElement,
       this.application})
       : super._();
@@ -14901,6 +15217,8 @@ class _$_RegulatedAuthorizationCase extends _RegulatedAuthorizationCase {
   @override
   final Period datePeriod;
   @override
+  final FhirDateTime dateDateTime;
+  @override
   @JsonKey(name: '_dateDateTime')
   final Element dateDateTimeElement;
   @override
@@ -14908,7 +15226,7 @@ class _$_RegulatedAuthorizationCase extends _RegulatedAuthorizationCase {
 
   @override
   String toString() {
-    return 'RegulatedAuthorizationCase(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, type: $type, status: $status, datePeriod: $datePeriod, dateDateTimeElement: $dateDateTimeElement, application: $application)';
+    return 'RegulatedAuthorizationCase(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, type: $type, status: $status, datePeriod: $datePeriod, dateDateTime: $dateDateTime, dateDateTimeElement: $dateDateTimeElement, application: $application)';
   }
 
   @override
@@ -14933,6 +15251,9 @@ class _$_RegulatedAuthorizationCase extends _RegulatedAuthorizationCase {
             (identical(other.datePeriod, datePeriod) ||
                 const DeepCollectionEquality()
                     .equals(other.datePeriod, datePeriod)) &&
+            (identical(other.dateDateTime, dateDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.dateDateTime, dateDateTime)) &&
             (identical(other.dateDateTimeElement, dateDateTimeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.dateDateTimeElement, dateDateTimeElement)) &&
@@ -14951,6 +15272,7 @@ class _$_RegulatedAuthorizationCase extends _RegulatedAuthorizationCase {
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(status) ^
       const DeepCollectionEquality().hash(datePeriod) ^
+      const DeepCollectionEquality().hash(dateDateTime) ^
       const DeepCollectionEquality().hash(dateDateTimeElement) ^
       const DeepCollectionEquality().hash(application);
 
@@ -14975,6 +15297,7 @@ abstract class _RegulatedAuthorizationCase extends RegulatedAuthorizationCase {
           CodeableConcept type,
           CodeableConcept status,
           Period datePeriod,
+          FhirDateTime dateDateTime,
           @JsonKey(name: '_dateDateTime') Element dateDateTimeElement,
           List<RegulatedAuthorizationCase> application}) =
       _$_RegulatedAuthorizationCase;
@@ -14997,6 +15320,8 @@ abstract class _RegulatedAuthorizationCase extends RegulatedAuthorizationCase {
   CodeableConcept get status;
   @override
   Period get datePeriod;
+  @override
+  FhirDateTime get dateDateTime;
   @override
   @JsonKey(name: '_dateDateTime')
   Element get dateDateTimeElement;
@@ -15185,6 +15510,7 @@ abstract class $SubstanceDefinitionCopyWith<$Res> {
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
+  $IdentifierCopyWith<$Res> get identifier;
   $ElementCopyWith<$Res> get versionElement;
   $CodeableConceptCopyWith<$Res> get status;
   $CodeableConceptCopyWith<$Res> get category;
@@ -15365,6 +15691,16 @@ class _$SubstanceDefinitionCopyWithImpl<$Res>
   }
 
   @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res> get versionElement {
     if (_value.versionElement == null) {
       return null;
@@ -15527,6 +15863,8 @@ abstract class _$SubstanceDefinitionCopyWith<$Res>
   $ElementCopyWith<$Res> get languageElement;
   @override
   $NarrativeCopyWith<$Res> get text;
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
   @override
   $ElementCopyWith<$Res> get versionElement;
   @override
@@ -16083,6 +16421,7 @@ class _$SubstanceDefinitionMoietyTearOff {
       String molecularFormula,
       @JsonKey(name: '_molecularFormula') Element molecularFormulaElement,
       Quantity amountQuantity,
+      String amountString,
       @JsonKey(name: '_amountString') Element amountStringElement,
       CodeableConcept amountType}) {
     return _SubstanceDefinitionMoiety(
@@ -16098,6 +16437,7 @@ class _$SubstanceDefinitionMoietyTearOff {
       molecularFormula: molecularFormula,
       molecularFormulaElement: molecularFormulaElement,
       amountQuantity: amountQuantity,
+      amountString: amountString,
       amountStringElement: amountStringElement,
       amountType: amountType,
     );
@@ -16123,6 +16463,7 @@ mixin _$SubstanceDefinitionMoiety {
   @JsonKey(name: '_molecularFormula')
   Element get molecularFormulaElement;
   Quantity get amountQuantity;
+  String get amountString;
   @JsonKey(name: '_amountString')
   Element get amountStringElement;
   CodeableConcept get amountType;
@@ -16148,10 +16489,12 @@ abstract class $SubstanceDefinitionMoietyCopyWith<$Res> {
       String molecularFormula,
       @JsonKey(name: '_molecularFormula') Element molecularFormulaElement,
       Quantity amountQuantity,
+      String amountString,
       @JsonKey(name: '_amountString') Element amountStringElement,
       CodeableConcept amountType});
 
   $CodeableConceptCopyWith<$Res> get role;
+  $IdentifierCopyWith<$Res> get identifier;
   $ElementCopyWith<$Res> get nameElement;
   $CodeableConceptCopyWith<$Res> get stereochemistry;
   $CodeableConceptCopyWith<$Res> get opticalActivity;
@@ -16183,6 +16526,7 @@ class _$SubstanceDefinitionMoietyCopyWithImpl<$Res>
     Object molecularFormula = freezed,
     Object molecularFormulaElement = freezed,
     Object amountQuantity = freezed,
+    Object amountString = freezed,
     Object amountStringElement = freezed,
     Object amountType = freezed,
   }) {
@@ -16215,6 +16559,9 @@ class _$SubstanceDefinitionMoietyCopyWithImpl<$Res>
       amountQuantity: amountQuantity == freezed
           ? _value.amountQuantity
           : amountQuantity as Quantity,
+      amountString: amountString == freezed
+          ? _value.amountString
+          : amountString as String,
       amountStringElement: amountStringElement == freezed
           ? _value.amountStringElement
           : amountStringElement as Element,
@@ -16231,6 +16578,16 @@ class _$SubstanceDefinitionMoietyCopyWithImpl<$Res>
     }
     return $CodeableConceptCopyWith<$Res>(_value.role, (value) {
       return _then(_value.copyWith(role: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
     });
   }
 
@@ -16324,11 +16681,14 @@ abstract class _$SubstanceDefinitionMoietyCopyWith<$Res>
       String molecularFormula,
       @JsonKey(name: '_molecularFormula') Element molecularFormulaElement,
       Quantity amountQuantity,
+      String amountString,
       @JsonKey(name: '_amountString') Element amountStringElement,
       CodeableConcept amountType});
 
   @override
   $CodeableConceptCopyWith<$Res> get role;
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
   @override
   $ElementCopyWith<$Res> get nameElement;
   @override
@@ -16370,6 +16730,7 @@ class __$SubstanceDefinitionMoietyCopyWithImpl<$Res>
     Object molecularFormula = freezed,
     Object molecularFormulaElement = freezed,
     Object amountQuantity = freezed,
+    Object amountString = freezed,
     Object amountStringElement = freezed,
     Object amountType = freezed,
   }) {
@@ -16402,6 +16763,9 @@ class __$SubstanceDefinitionMoietyCopyWithImpl<$Res>
       amountQuantity: amountQuantity == freezed
           ? _value.amountQuantity
           : amountQuantity as Quantity,
+      amountString: amountString == freezed
+          ? _value.amountString
+          : amountString as String,
       amountStringElement: amountStringElement == freezed
           ? _value.amountStringElement
           : amountStringElement as Element,
@@ -16427,6 +16791,7 @@ class _$_SubstanceDefinitionMoiety extends _SubstanceDefinitionMoiety {
       this.molecularFormula,
       @JsonKey(name: '_molecularFormula') this.molecularFormulaElement,
       this.amountQuantity,
+      this.amountString,
       @JsonKey(name: '_amountString') this.amountStringElement,
       this.amountType})
       : super._();
@@ -16462,6 +16827,8 @@ class _$_SubstanceDefinitionMoiety extends _SubstanceDefinitionMoiety {
   @override
   final Quantity amountQuantity;
   @override
+  final String amountString;
+  @override
   @JsonKey(name: '_amountString')
   final Element amountStringElement;
   @override
@@ -16469,7 +16836,7 @@ class _$_SubstanceDefinitionMoiety extends _SubstanceDefinitionMoiety {
 
   @override
   String toString() {
-    return 'SubstanceDefinitionMoiety(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, role: $role, identifier: $identifier, name: $name, nameElement: $nameElement, stereochemistry: $stereochemistry, opticalActivity: $opticalActivity, molecularFormula: $molecularFormula, molecularFormulaElement: $molecularFormulaElement, amountQuantity: $amountQuantity, amountStringElement: $amountStringElement, amountType: $amountType)';
+    return 'SubstanceDefinitionMoiety(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, role: $role, identifier: $identifier, name: $name, nameElement: $nameElement, stereochemistry: $stereochemistry, opticalActivity: $opticalActivity, molecularFormula: $molecularFormula, molecularFormulaElement: $molecularFormulaElement, amountQuantity: $amountQuantity, amountString: $amountString, amountStringElement: $amountStringElement, amountType: $amountType)';
   }
 
   @override
@@ -16510,6 +16877,9 @@ class _$_SubstanceDefinitionMoiety extends _SubstanceDefinitionMoiety {
             (identical(other.amountQuantity, amountQuantity) ||
                 const DeepCollectionEquality()
                     .equals(other.amountQuantity, amountQuantity)) &&
+            (identical(other.amountString, amountString) ||
+                const DeepCollectionEquality()
+                    .equals(other.amountString, amountString)) &&
             (identical(other.amountStringElement, amountStringElement) ||
                 const DeepCollectionEquality()
                     .equals(other.amountStringElement, amountStringElement)) &&
@@ -16533,6 +16903,7 @@ class _$_SubstanceDefinitionMoiety extends _SubstanceDefinitionMoiety {
       const DeepCollectionEquality().hash(molecularFormula) ^
       const DeepCollectionEquality().hash(molecularFormulaElement) ^
       const DeepCollectionEquality().hash(amountQuantity) ^
+      const DeepCollectionEquality().hash(amountString) ^
       const DeepCollectionEquality().hash(amountStringElement) ^
       const DeepCollectionEquality().hash(amountType);
 
@@ -16563,6 +16934,7 @@ abstract class _SubstanceDefinitionMoiety extends SubstanceDefinitionMoiety {
       String molecularFormula,
       @JsonKey(name: '_molecularFormula') Element molecularFormulaElement,
       Quantity amountQuantity,
+      String amountString,
       @JsonKey(name: '_amountString') Element amountStringElement,
       CodeableConcept amountType}) = _$_SubstanceDefinitionMoiety;
 
@@ -16597,6 +16969,8 @@ abstract class _SubstanceDefinitionMoiety extends SubstanceDefinitionMoiety {
   @override
   Quantity get amountQuantity;
   @override
+  String get amountString;
+  @override
   @JsonKey(name: '_amountString')
   Element get amountStringElement;
   @override
@@ -16624,6 +16998,7 @@ class _$SubstanceDefinitionPropertyTearOff {
       Reference definingSubstanceReference,
       CodeableConcept definingSubstanceCodeableConcept,
       Quantity amountQuantity,
+      String amountString,
       @JsonKey(name: '_amountString') Element amountStringElement,
       Range referenceRange,
       List<Reference> source}) {
@@ -16638,6 +17013,7 @@ class _$SubstanceDefinitionPropertyTearOff {
       definingSubstanceReference: definingSubstanceReference,
       definingSubstanceCodeableConcept: definingSubstanceCodeableConcept,
       amountQuantity: amountQuantity,
+      amountString: amountString,
       amountStringElement: amountStringElement,
       referenceRange: referenceRange,
       source: source,
@@ -16661,6 +17037,7 @@ mixin _$SubstanceDefinitionProperty {
   Reference get definingSubstanceReference;
   CodeableConcept get definingSubstanceCodeableConcept;
   Quantity get amountQuantity;
+  String get amountString;
   @JsonKey(name: '_amountString')
   Element get amountStringElement;
   Range get referenceRange;
@@ -16687,6 +17064,7 @@ abstract class $SubstanceDefinitionPropertyCopyWith<$Res> {
       Reference definingSubstanceReference,
       CodeableConcept definingSubstanceCodeableConcept,
       Quantity amountQuantity,
+      String amountString,
       @JsonKey(name: '_amountString') Element amountStringElement,
       Range referenceRange,
       List<Reference> source});
@@ -16721,6 +17099,7 @@ class _$SubstanceDefinitionPropertyCopyWithImpl<$Res>
     Object definingSubstanceReference = freezed,
     Object definingSubstanceCodeableConcept = freezed,
     Object amountQuantity = freezed,
+    Object amountString = freezed,
     Object amountStringElement = freezed,
     Object referenceRange = freezed,
     Object source = freezed,
@@ -16751,6 +17130,9 @@ class _$SubstanceDefinitionPropertyCopyWithImpl<$Res>
       amountQuantity: amountQuantity == freezed
           ? _value.amountQuantity
           : amountQuantity as Quantity,
+      amountString: amountString == freezed
+          ? _value.amountString
+          : amountString as String,
       amountStringElement: amountStringElement == freezed
           ? _value.amountStringElement
           : amountStringElement as Element,
@@ -16861,6 +17243,7 @@ abstract class _$SubstanceDefinitionPropertyCopyWith<$Res>
       Reference definingSubstanceReference,
       CodeableConcept definingSubstanceCodeableConcept,
       Quantity amountQuantity,
+      String amountString,
       @JsonKey(name: '_amountString') Element amountStringElement,
       Range referenceRange,
       List<Reference> source});
@@ -16907,6 +17290,7 @@ class __$SubstanceDefinitionPropertyCopyWithImpl<$Res>
     Object definingSubstanceReference = freezed,
     Object definingSubstanceCodeableConcept = freezed,
     Object amountQuantity = freezed,
+    Object amountString = freezed,
     Object amountStringElement = freezed,
     Object referenceRange = freezed,
     Object source = freezed,
@@ -16937,6 +17321,9 @@ class __$SubstanceDefinitionPropertyCopyWithImpl<$Res>
       amountQuantity: amountQuantity == freezed
           ? _value.amountQuantity
           : amountQuantity as Quantity,
+      amountString: amountString == freezed
+          ? _value.amountString
+          : amountString as String,
       amountStringElement: amountStringElement == freezed
           ? _value.amountStringElement
           : amountStringElement as Element,
@@ -16961,6 +17348,7 @@ class _$_SubstanceDefinitionProperty extends _SubstanceDefinitionProperty {
       this.definingSubstanceReference,
       this.definingSubstanceCodeableConcept,
       this.amountQuantity,
+      this.amountString,
       @JsonKey(name: '_amountString') this.amountStringElement,
       this.referenceRange,
       this.source})
@@ -16992,6 +17380,8 @@ class _$_SubstanceDefinitionProperty extends _SubstanceDefinitionProperty {
   @override
   final Quantity amountQuantity;
   @override
+  final String amountString;
+  @override
   @JsonKey(name: '_amountString')
   final Element amountStringElement;
   @override
@@ -17001,7 +17391,7 @@ class _$_SubstanceDefinitionProperty extends _SubstanceDefinitionProperty {
 
   @override
   String toString() {
-    return 'SubstanceDefinitionProperty(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, category: $category, code: $code, parameters: $parameters, parametersElement: $parametersElement, definingSubstanceReference: $definingSubstanceReference, definingSubstanceCodeableConcept: $definingSubstanceCodeableConcept, amountQuantity: $amountQuantity, amountStringElement: $amountStringElement, referenceRange: $referenceRange, source: $source)';
+    return 'SubstanceDefinitionProperty(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, category: $category, code: $code, parameters: $parameters, parametersElement: $parametersElement, definingSubstanceReference: $definingSubstanceReference, definingSubstanceCodeableConcept: $definingSubstanceCodeableConcept, amountQuantity: $amountQuantity, amountString: $amountString, amountStringElement: $amountStringElement, referenceRange: $referenceRange, source: $source)';
   }
 
   @override
@@ -17040,6 +17430,9 @@ class _$_SubstanceDefinitionProperty extends _SubstanceDefinitionProperty {
             (identical(other.amountQuantity, amountQuantity) ||
                 const DeepCollectionEquality()
                     .equals(other.amountQuantity, amountQuantity)) &&
+            (identical(other.amountString, amountString) ||
+                const DeepCollectionEquality()
+                    .equals(other.amountString, amountString)) &&
             (identical(other.amountStringElement, amountStringElement) ||
                 const DeepCollectionEquality()
                     .equals(other.amountStringElement, amountStringElement)) &&
@@ -17063,6 +17456,7 @@ class _$_SubstanceDefinitionProperty extends _SubstanceDefinitionProperty {
       const DeepCollectionEquality().hash(definingSubstanceReference) ^
       const DeepCollectionEquality().hash(definingSubstanceCodeableConcept) ^
       const DeepCollectionEquality().hash(amountQuantity) ^
+      const DeepCollectionEquality().hash(amountString) ^
       const DeepCollectionEquality().hash(amountStringElement) ^
       const DeepCollectionEquality().hash(referenceRange) ^
       const DeepCollectionEquality().hash(source);
@@ -17092,6 +17486,7 @@ abstract class _SubstanceDefinitionProperty
       Reference definingSubstanceReference,
       CodeableConcept definingSubstanceCodeableConcept,
       Quantity amountQuantity,
+      String amountString,
       @JsonKey(name: '_amountString') Element amountStringElement,
       Range referenceRange,
       List<Reference> source}) = _$_SubstanceDefinitionProperty;
@@ -17121,6 +17516,8 @@ abstract class _SubstanceDefinitionProperty
   CodeableConcept get definingSubstanceCodeableConcept;
   @override
   Quantity get amountQuantity;
+  @override
+  String get amountString;
   @override
   @JsonKey(name: '_amountString')
   Element get amountStringElement;
@@ -17736,6 +18133,7 @@ abstract class $SubstanceDefinitionIsotopeCopyWith<$Res> {
       Quantity halfLife,
       SubstanceDefinitionMolecularWeight molecularWeight});
 
+  $IdentifierCopyWith<$Res> get identifier;
   $CodeableConceptCopyWith<$Res> get name;
   $CodeableConceptCopyWith<$Res> get substitution;
   $QuantityCopyWith<$Res> get halfLife;
@@ -17780,6 +18178,16 @@ class _$SubstanceDefinitionIsotopeCopyWithImpl<$Res>
           ? _value.molecularWeight
           : molecularWeight as SubstanceDefinitionMolecularWeight,
     ));
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
   }
 
   @override
@@ -17841,6 +18249,8 @@ abstract class _$SubstanceDefinitionIsotopeCopyWith<$Res>
       Quantity halfLife,
       SubstanceDefinitionMolecularWeight molecularWeight});
 
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
   @override
   $CodeableConceptCopyWith<$Res> get name;
   @override
@@ -19847,6 +20257,7 @@ class _$SubstanceDefinitionRelationshipTearOff {
       Quantity amountQuantity,
       Range amountRange,
       Ratio amountRatio,
+      String amountString,
       @JsonKey(name: '_amountString') Element amountStringElement,
       Ratio amountRatioHighLimit,
       CodeableConcept amountType,
@@ -19863,6 +20274,7 @@ class _$SubstanceDefinitionRelationshipTearOff {
       amountQuantity: amountQuantity,
       amountRange: amountRange,
       amountRatio: amountRatio,
+      amountString: amountString,
       amountStringElement: amountStringElement,
       amountRatioHighLimit: amountRatioHighLimit,
       amountType: amountType,
@@ -19889,6 +20301,7 @@ mixin _$SubstanceDefinitionRelationship {
   Quantity get amountQuantity;
   Range get amountRange;
   Ratio get amountRatio;
+  String get amountString;
   @JsonKey(name: '_amountString')
   Element get amountStringElement;
   Ratio get amountRatioHighLimit;
@@ -19917,6 +20330,7 @@ abstract class $SubstanceDefinitionRelationshipCopyWith<$Res> {
       Quantity amountQuantity,
       Range amountRange,
       Ratio amountRatio,
+      String amountString,
       @JsonKey(name: '_amountString') Element amountStringElement,
       Ratio amountRatioHighLimit,
       CodeableConcept amountType,
@@ -19955,6 +20369,7 @@ class _$SubstanceDefinitionRelationshipCopyWithImpl<$Res>
     Object amountQuantity = freezed,
     Object amountRange = freezed,
     Object amountRatio = freezed,
+    Object amountString = freezed,
     Object amountStringElement = freezed,
     Object amountRatioHighLimit = freezed,
     Object amountType = freezed,
@@ -19988,6 +20403,9 @@ class _$SubstanceDefinitionRelationshipCopyWithImpl<$Res>
           amountRange == freezed ? _value.amountRange : amountRange as Range,
       amountRatio:
           amountRatio == freezed ? _value.amountRatio : amountRatio as Ratio,
+      amountString: amountString == freezed
+          ? _value.amountString
+          : amountString as String,
       amountStringElement: amountStringElement == freezed
           ? _value.amountStringElement
           : amountStringElement as Element,
@@ -20123,6 +20541,7 @@ abstract class _$SubstanceDefinitionRelationshipCopyWith<$Res>
       Quantity amountQuantity,
       Range amountRange,
       Ratio amountRatio,
+      String amountString,
       @JsonKey(name: '_amountString') Element amountStringElement,
       Ratio amountRatioHighLimit,
       CodeableConcept amountType,
@@ -20175,6 +20594,7 @@ class __$SubstanceDefinitionRelationshipCopyWithImpl<$Res>
     Object amountQuantity = freezed,
     Object amountRange = freezed,
     Object amountRatio = freezed,
+    Object amountString = freezed,
     Object amountStringElement = freezed,
     Object amountRatioHighLimit = freezed,
     Object amountType = freezed,
@@ -20208,6 +20628,9 @@ class __$SubstanceDefinitionRelationshipCopyWithImpl<$Res>
           amountRange == freezed ? _value.amountRange : amountRange as Range,
       amountRatio:
           amountRatio == freezed ? _value.amountRatio : amountRatio as Ratio,
+      amountString: amountString == freezed
+          ? _value.amountString
+          : amountString as String,
       amountStringElement: amountStringElement == freezed
           ? _value.amountStringElement
           : amountStringElement as Element,
@@ -20237,6 +20660,7 @@ class _$_SubstanceDefinitionRelationship
       this.amountQuantity,
       this.amountRange,
       this.amountRatio,
+      this.amountString,
       @JsonKey(name: '_amountString') this.amountStringElement,
       this.amountRatioHighLimit,
       this.amountType,
@@ -20272,6 +20696,8 @@ class _$_SubstanceDefinitionRelationship
   @override
   final Ratio amountRatio;
   @override
+  final String amountString;
+  @override
   @JsonKey(name: '_amountString')
   final Element amountStringElement;
   @override
@@ -20283,7 +20709,7 @@ class _$_SubstanceDefinitionRelationship
 
   @override
   String toString() {
-    return 'SubstanceDefinitionRelationship(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, substanceDefinitionReference: $substanceDefinitionReference, substanceDefinitionCodeableConcept: $substanceDefinitionCodeableConcept, type: $type, isDefining: $isDefining, isDefiningElement: $isDefiningElement, amountQuantity: $amountQuantity, amountRange: $amountRange, amountRatio: $amountRatio, amountStringElement: $amountStringElement, amountRatioHighLimit: $amountRatioHighLimit, amountType: $amountType, source: $source)';
+    return 'SubstanceDefinitionRelationship(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, substanceDefinitionReference: $substanceDefinitionReference, substanceDefinitionCodeableConcept: $substanceDefinitionCodeableConcept, type: $type, isDefining: $isDefining, isDefiningElement: $isDefiningElement, amountQuantity: $amountQuantity, amountRange: $amountRange, amountRatio: $amountRatio, amountString: $amountString, amountStringElement: $amountStringElement, amountRatioHighLimit: $amountRatioHighLimit, amountType: $amountType, source: $source)';
   }
 
   @override
@@ -20323,6 +20749,9 @@ class _$_SubstanceDefinitionRelationship
             (identical(other.amountRatio, amountRatio) ||
                 const DeepCollectionEquality()
                     .equals(other.amountRatio, amountRatio)) &&
+            (identical(other.amountString, amountString) ||
+                const DeepCollectionEquality()
+                    .equals(other.amountString, amountString)) &&
             (identical(other.amountStringElement, amountStringElement) ||
                 const DeepCollectionEquality()
                     .equals(other.amountStringElement, amountStringElement)) &&
@@ -20330,10 +20759,8 @@ class _$_SubstanceDefinitionRelationship
                 const DeepCollectionEquality().equals(
                     other.amountRatioHighLimit, amountRatioHighLimit)) &&
             (identical(other.amountType, amountType) ||
-                const DeepCollectionEquality()
-                    .equals(other.amountType, amountType)) &&
-            (identical(other.source, source) ||
-                const DeepCollectionEquality().equals(other.source, source)));
+                const DeepCollectionEquality().equals(other.amountType, amountType)) &&
+            (identical(other.source, source) || const DeepCollectionEquality().equals(other.source, source)));
   }
 
   @override
@@ -20350,6 +20777,7 @@ class _$_SubstanceDefinitionRelationship
       const DeepCollectionEquality().hash(amountQuantity) ^
       const DeepCollectionEquality().hash(amountRange) ^
       const DeepCollectionEquality().hash(amountRatio) ^
+      const DeepCollectionEquality().hash(amountString) ^
       const DeepCollectionEquality().hash(amountStringElement) ^
       const DeepCollectionEquality().hash(amountRatioHighLimit) ^
       const DeepCollectionEquality().hash(amountType) ^
@@ -20381,6 +20809,7 @@ abstract class _SubstanceDefinitionRelationship
       Quantity amountQuantity,
       Range amountRange,
       Ratio amountRatio,
+      String amountString,
       @JsonKey(name: '_amountString') Element amountStringElement,
       Ratio amountRatioHighLimit,
       CodeableConcept amountType,
@@ -20413,6 +20842,8 @@ abstract class _SubstanceDefinitionRelationship
   Range get amountRange;
   @override
   Ratio get amountRatio;
+  @override
+  String get amountString;
   @override
   @JsonKey(name: '_amountString')
   Element get amountStringElement;
@@ -21662,6 +22093,7 @@ abstract class $SubstanceNucleicAcidLinkageCopyWith<$Res> {
       @JsonKey(name: '_residueSite') Element residueSiteElement});
 
   $ElementCopyWith<$Res> get connectivityElement;
+  $IdentifierCopyWith<$Res> get identifier;
   $ElementCopyWith<$Res> get nameElement;
   $ElementCopyWith<$Res> get residueSiteElement;
 }
@@ -21725,6 +22157,16 @@ class _$SubstanceNucleicAcidLinkageCopyWithImpl<$Res>
   }
 
   @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res> get nameElement {
     if (_value.nameElement == null) {
       return null;
@@ -21766,6 +22208,8 @@ abstract class _$SubstanceNucleicAcidLinkageCopyWith<$Res>
 
   @override
   $ElementCopyWith<$Res> get connectivityElement;
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
   @override
   $ElementCopyWith<$Res> get nameElement;
   @override
@@ -22044,6 +22488,7 @@ abstract class $SubstanceNucleicAcidSugarCopyWith<$Res> {
       String residueSite,
       @JsonKey(name: '_residueSite') Element residueSiteElement});
 
+  $IdentifierCopyWith<$Res> get identifier;
   $ElementCopyWith<$Res> get nameElement;
   $ElementCopyWith<$Res> get residueSiteElement;
 }
@@ -22089,6 +22534,16 @@ class _$SubstanceNucleicAcidSugarCopyWithImpl<$Res>
   }
 
   @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res> get nameElement {
     if (_value.nameElement == null) {
       return null;
@@ -22125,6 +22580,8 @@ abstract class _$SubstanceNucleicAcidSugarCopyWith<$Res>
       String residueSite,
       @JsonKey(name: '_residueSite') Element residueSiteElement});
 
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
   @override
   $ElementCopyWith<$Res> get nameElement;
   @override
@@ -25599,7 +26056,9 @@ abstract class $SubstanceProteinSubunitCopyWith<$Res> {
   $ElementCopyWith<$Res> get sequenceElement;
   $ElementCopyWith<$Res> get lengthElement;
   $AttachmentCopyWith<$Res> get sequenceAttachment;
+  $IdentifierCopyWith<$Res> get nTerminalModificationId;
   $ElementCopyWith<$Res> get nTerminalModificationElement;
+  $IdentifierCopyWith<$Res> get cTerminalModificationId;
   $ElementCopyWith<$Res> get cTerminalModificationElement;
 }
 
@@ -25715,12 +26174,32 @@ class _$SubstanceProteinSubunitCopyWithImpl<$Res>
   }
 
   @override
+  $IdentifierCopyWith<$Res> get nTerminalModificationId {
+    if (_value.nTerminalModificationId == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.nTerminalModificationId, (value) {
+      return _then(_value.copyWith(nTerminalModificationId: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res> get nTerminalModificationElement {
     if (_value.nTerminalModificationElement == null) {
       return null;
     }
     return $ElementCopyWith<$Res>(_value.nTerminalModificationElement, (value) {
       return _then(_value.copyWith(nTerminalModificationElement: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get cTerminalModificationId {
+    if (_value.cTerminalModificationId == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.cTerminalModificationId, (value) {
+      return _then(_value.copyWith(cTerminalModificationId: value));
     });
   }
 
@@ -25774,7 +26253,11 @@ abstract class _$SubstanceProteinSubunitCopyWith<$Res>
   @override
   $AttachmentCopyWith<$Res> get sequenceAttachment;
   @override
+  $IdentifierCopyWith<$Res> get nTerminalModificationId;
+  @override
   $ElementCopyWith<$Res> get nTerminalModificationElement;
+  @override
+  $IdentifierCopyWith<$Res> get cTerminalModificationId;
   @override
   $ElementCopyWith<$Res> get cTerminalModificationElement;
 }
@@ -27003,6 +27486,7 @@ abstract class $SubstanceReferenceInformationGeneElementCopyWith<$Res> {
       List<Reference> source});
 
   $CodeableConceptCopyWith<$Res> get type;
+  $IdentifierCopyWith<$Res> get element;
 }
 
 class _$SubstanceReferenceInformationGeneElementCopyWithImpl<$Res>
@@ -27046,6 +27530,16 @@ class _$SubstanceReferenceInformationGeneElementCopyWithImpl<$Res>
       return _then(_value.copyWith(type: value));
     });
   }
+
+  @override
+  $IdentifierCopyWith<$Res> get element {
+    if (_value.element == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.element, (value) {
+      return _then(_value.copyWith(element: value));
+    });
+  }
 }
 
 abstract class _$SubstanceReferenceInformationGeneElementCopyWith<$Res>
@@ -27065,6 +27559,8 @@ abstract class _$SubstanceReferenceInformationGeneElementCopyWith<$Res>
 
   @override
   $CodeableConceptCopyWith<$Res> get type;
+  @override
+  $IdentifierCopyWith<$Res> get element;
 }
 
 class __$SubstanceReferenceInformationGeneElementCopyWithImpl<$Res>
@@ -27546,6 +28042,7 @@ class _$SubstanceReferenceInformationTargetTearOff {
       CodeableConcept organismType,
       Quantity amountQuantity,
       Range amountRange,
+      String amountString,
       @JsonKey(name: '_amountString') Element amountStringElement,
       CodeableConcept amountType,
       List<Reference> source}) {
@@ -27560,6 +28057,7 @@ class _$SubstanceReferenceInformationTargetTearOff {
       organismType: organismType,
       amountQuantity: amountQuantity,
       amountRange: amountRange,
+      amountString: amountString,
       amountStringElement: amountStringElement,
       amountType: amountType,
       source: source,
@@ -27583,6 +28081,7 @@ mixin _$SubstanceReferenceInformationTarget {
   CodeableConcept get organismType;
   Quantity get amountQuantity;
   Range get amountRange;
+  String get amountString;
   @JsonKey(name: '_amountString')
   Element get amountStringElement;
   CodeableConcept get amountType;
@@ -27609,10 +28108,12 @@ abstract class $SubstanceReferenceInformationTargetCopyWith<$Res> {
       CodeableConcept organismType,
       Quantity amountQuantity,
       Range amountRange,
+      String amountString,
       @JsonKey(name: '_amountString') Element amountStringElement,
       CodeableConcept amountType,
       List<Reference> source});
 
+  $IdentifierCopyWith<$Res> get target;
   $CodeableConceptCopyWith<$Res> get type;
   $CodeableConceptCopyWith<$Res> get interaction;
   $CodeableConceptCopyWith<$Res> get organism;
@@ -27643,6 +28144,7 @@ class _$SubstanceReferenceInformationTargetCopyWithImpl<$Res>
     Object organismType = freezed,
     Object amountQuantity = freezed,
     Object amountRange = freezed,
+    Object amountString = freezed,
     Object amountStringElement = freezed,
     Object amountType = freezed,
     Object source = freezed,
@@ -27670,6 +28172,9 @@ class _$SubstanceReferenceInformationTargetCopyWithImpl<$Res>
           : amountQuantity as Quantity,
       amountRange:
           amountRange == freezed ? _value.amountRange : amountRange as Range,
+      amountString: amountString == freezed
+          ? _value.amountString
+          : amountString as String,
       amountStringElement: amountStringElement == freezed
           ? _value.amountStringElement
           : amountStringElement as Element,
@@ -27678,6 +28183,16 @@ class _$SubstanceReferenceInformationTargetCopyWithImpl<$Res>
           : amountType as CodeableConcept,
       source: source == freezed ? _value.source : source as List<Reference>,
     ));
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get target {
+    if (_value.target == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.target, (value) {
+      return _then(_value.copyWith(target: value));
+    });
   }
 
   @override
@@ -27779,10 +28294,13 @@ abstract class _$SubstanceReferenceInformationTargetCopyWith<$Res>
       CodeableConcept organismType,
       Quantity amountQuantity,
       Range amountRange,
+      String amountString,
       @JsonKey(name: '_amountString') Element amountStringElement,
       CodeableConcept amountType,
       List<Reference> source});
 
+  @override
+  $IdentifierCopyWith<$Res> get target;
   @override
   $CodeableConceptCopyWith<$Res> get type;
   @override
@@ -27825,6 +28343,7 @@ class __$SubstanceReferenceInformationTargetCopyWithImpl<$Res>
     Object organismType = freezed,
     Object amountQuantity = freezed,
     Object amountRange = freezed,
+    Object amountString = freezed,
     Object amountStringElement = freezed,
     Object amountType = freezed,
     Object source = freezed,
@@ -27852,6 +28371,9 @@ class __$SubstanceReferenceInformationTargetCopyWithImpl<$Res>
           : amountQuantity as Quantity,
       amountRange:
           amountRange == freezed ? _value.amountRange : amountRange as Range,
+      amountString: amountString == freezed
+          ? _value.amountString
+          : amountString as String,
       amountStringElement: amountStringElement == freezed
           ? _value.amountStringElement
           : amountStringElement as Element,
@@ -27877,6 +28399,7 @@ class _$_SubstanceReferenceInformationTarget
       this.organismType,
       this.amountQuantity,
       this.amountRange,
+      this.amountString,
       @JsonKey(name: '_amountString') this.amountStringElement,
       this.amountType,
       this.source})
@@ -27908,6 +28431,8 @@ class _$_SubstanceReferenceInformationTarget
   @override
   final Range amountRange;
   @override
+  final String amountString;
+  @override
   @JsonKey(name: '_amountString')
   final Element amountStringElement;
   @override
@@ -27917,7 +28442,7 @@ class _$_SubstanceReferenceInformationTarget
 
   @override
   String toString() {
-    return 'SubstanceReferenceInformationTarget(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, target: $target, type: $type, interaction: $interaction, organism: $organism, organismType: $organismType, amountQuantity: $amountQuantity, amountRange: $amountRange, amountStringElement: $amountStringElement, amountType: $amountType, source: $source)';
+    return 'SubstanceReferenceInformationTarget(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, target: $target, type: $type, interaction: $interaction, organism: $organism, organismType: $organismType, amountQuantity: $amountQuantity, amountRange: $amountRange, amountString: $amountString, amountStringElement: $amountStringElement, amountType: $amountType, source: $source)';
   }
 
   @override
@@ -27951,6 +28476,9 @@ class _$_SubstanceReferenceInformationTarget
             (identical(other.amountRange, amountRange) ||
                 const DeepCollectionEquality()
                     .equals(other.amountRange, amountRange)) &&
+            (identical(other.amountString, amountString) ||
+                const DeepCollectionEquality()
+                    .equals(other.amountString, amountString)) &&
             (identical(other.amountStringElement, amountStringElement) ||
                 const DeepCollectionEquality()
                     .equals(other.amountStringElement, amountStringElement)) &&
@@ -27974,6 +28502,7 @@ class _$_SubstanceReferenceInformationTarget
       const DeepCollectionEquality().hash(organismType) ^
       const DeepCollectionEquality().hash(amountQuantity) ^
       const DeepCollectionEquality().hash(amountRange) ^
+      const DeepCollectionEquality().hash(amountString) ^
       const DeepCollectionEquality().hash(amountStringElement) ^
       const DeepCollectionEquality().hash(amountType) ^
       const DeepCollectionEquality().hash(source);
@@ -28004,6 +28533,7 @@ abstract class _SubstanceReferenceInformationTarget
       CodeableConcept organismType,
       Quantity amountQuantity,
       Range amountRange,
+      String amountString,
       @JsonKey(name: '_amountString') Element amountStringElement,
       CodeableConcept amountType,
       List<Reference> source}) = _$_SubstanceReferenceInformationTarget;
@@ -28033,6 +28563,8 @@ abstract class _SubstanceReferenceInformationTarget
   Quantity get amountQuantity;
   @override
   Range get amountRange;
+  @override
+  String get amountString;
   @override
   @JsonKey(name: '_amountString')
   Element get amountStringElement;
@@ -28211,6 +28743,7 @@ abstract class $SubstanceSourceMaterialCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get sourceMaterialClass;
   $CodeableConceptCopyWith<$Res> get sourceMaterialType;
   $CodeableConceptCopyWith<$Res> get sourceMaterialState;
+  $IdentifierCopyWith<$Res> get organismId;
   $ElementCopyWith<$Res> get organismNameElement;
   $ElementCopyWith<$Res> get parentSubstanceNameElement;
   $ElementCopyWith<$Res> get geographicalLocationElement;
@@ -28403,6 +28936,16 @@ class _$SubstanceSourceMaterialCopyWithImpl<$Res>
   }
 
   @override
+  $IdentifierCopyWith<$Res> get organismId {
+    if (_value.organismId == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.organismId, (value) {
+      return _then(_value.copyWith(organismId: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res> get organismNameElement {
     if (_value.organismNameElement == null) {
       return null;
@@ -28510,6 +29053,8 @@ abstract class _$SubstanceSourceMaterialCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get sourceMaterialType;
   @override
   $CodeableConceptCopyWith<$Res> get sourceMaterialState;
+  @override
+  $IdentifierCopyWith<$Res> get organismId;
   @override
   $ElementCopyWith<$Res> get organismNameElement;
   @override

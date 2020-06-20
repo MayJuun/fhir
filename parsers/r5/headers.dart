@@ -176,7 +176,7 @@ var beginnings = {
       '''import 'package:freezed_annotation/freezed_annotation.dart';\n'''
           '''// import 'package:flutter/foundation.dart';\n\n'''
           '''import '../../../../fhir_r5.dart';\n\n'''
-          '''part 'medication_definition.enums.freezed.dart';\n'''
+          '''part 'medication_definition.enums.dart';\n'''
           '''part 'medication_definition.freezed.dart';\n'''
           '''part 'medication_definition.g.dart';\n\n''',
   './lib/r5/resource_types/specialized/public_health_and_research/public_health_and_research.dart':

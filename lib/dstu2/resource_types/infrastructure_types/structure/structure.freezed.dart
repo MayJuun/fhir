@@ -629,7 +629,7 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Media implements _Media {
-  const _$_Media(
+  _$_Media(
       {@JsonKey(defaultValue: 'Media')
           this.resourceType,
       this.id,
@@ -872,7 +872,7 @@ class _$_Media implements _Media {
 }
 
 abstract class _Media implements Media {
-  const factory _Media(
+  factory _Media(
       {@JsonKey(defaultValue: 'Media')
           String resourceType,
       Id id,
@@ -1357,7 +1357,7 @@ class __$BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Basic implements _Basic {
-  const _$_Basic(
+  _$_Basic(
       {@JsonKey(defaultValue: 'Basic') this.resourceType,
       this.id,
       this.meta,
@@ -1510,7 +1510,7 @@ class _$_Basic implements _Basic {
 }
 
 abstract class _Basic implements Basic {
-  const factory _Basic(
+  factory _Basic(
       {@JsonKey(defaultValue: 'Basic') String resourceType,
       Id id,
       Meta meta,
@@ -1813,7 +1813,7 @@ class __$BinaryCopyWithImpl<$Res> extends _$BinaryCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Binary implements _Binary {
-  const _$_Binary(
+  _$_Binary(
       {@JsonKey(defaultValue: 'Binary') this.resourceType,
       this.id,
       this.meta,
@@ -1917,7 +1917,7 @@ class _$_Binary implements _Binary {
 }
 
 abstract class _Binary implements Binary {
-  const factory _Binary(
+  factory _Binary(
       {@JsonKey(defaultValue: 'Binary') String resourceType,
       Id id,
       Meta meta,
@@ -2282,7 +2282,7 @@ class __$BundleCopyWithImpl<$Res> extends _$BundleCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Bundle implements _Bundle {
-  const _$_Bundle(
+  _$_Bundle(
       {@JsonKey(defaultValue: 'Bundle')
           this.resourceType,
       this.id,
@@ -2420,7 +2420,7 @@ class _$_Bundle implements _Bundle {
 }
 
 abstract class _Bundle implements Bundle {
-  const factory _Bundle(
+  factory _Bundle(
       {@JsonKey(defaultValue: 'Bundle')
           String resourceType,
       Id id,
@@ -2691,7 +2691,7 @@ class __$BundleLinkCopyWithImpl<$Res> extends _$BundleLinkCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_BundleLink implements _BundleLink {
-  const _$_BundleLink(
+  _$_BundleLink(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -2785,7 +2785,7 @@ class _$_BundleLink implements _BundleLink {
 }
 
 abstract class _BundleLink implements BundleLink {
-  const factory _BundleLink(
+  factory _BundleLink(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -3083,7 +3083,7 @@ class __$BundleEntryCopyWithImpl<$Res> extends _$BundleEntryCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_BundleEntry implements _BundleEntry {
-  const _$_BundleEntry(
+  _$_BundleEntry(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3192,7 +3192,7 @@ class _$_BundleEntry implements _BundleEntry {
 }
 
 abstract class _BundleEntry implements BundleEntry {
-  const factory _BundleEntry(
+  factory _BundleEntry(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -3445,7 +3445,7 @@ class __$BundleSearchCopyWithImpl<$Res> extends _$BundleSearchCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_BundleSearch implements _BundleSearch {
-  const _$_BundleSearch(
+  _$_BundleSearch(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3535,7 +3535,7 @@ class _$_BundleSearch implements _BundleSearch {
 }
 
 abstract class _BundleSearch implements BundleSearch {
-  const factory _BundleSearch(
+  factory _BundleSearch(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -3968,7 +3968,7 @@ class __$BundleRequestCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_BundleRequest implements _BundleRequest {
-  const _$_BundleRequest(
+  _$_BundleRequest(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -4133,7 +4133,7 @@ class _$_BundleRequest implements _BundleRequest {
 }
 
 abstract class _BundleRequest implements BundleRequest {
-  const factory _BundleRequest(
+  factory _BundleRequest(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -4498,7 +4498,7 @@ class __$BundleResponseCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_BundleResponse implements _BundleResponse {
-  const _$_BundleResponse(
+  _$_BundleResponse(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -4619,7 +4619,7 @@ class _$_BundleResponse implements _BundleResponse {
 }
 
 abstract class _BundleResponse implements BundleResponse {
-  const factory _BundleResponse(
+  factory _BundleResponse(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,

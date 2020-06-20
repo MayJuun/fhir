@@ -448,7 +448,7 @@ class __$GroupCopyWithImpl<$Res> extends _$GroupCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Group implements _Group {
-  const _$_Group(
+  _$_Group(
       {@required
       @JsonKey(required: true, defaultValue: 'Group')
           this.resourceType,
@@ -650,7 +650,7 @@ class _$_Group implements _Group {
 }
 
 abstract class _Group implements Group {
-  const factory _Group(
+  factory _Group(
       {@required
       @JsonKey(required: true, defaultValue: 'Group')
           String resourceType,
@@ -1017,7 +1017,7 @@ class __$GroupCharacteristicCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_GroupCharacteristic implements _GroupCharacteristic {
-  const _$_GroupCharacteristic(
+  _$_GroupCharacteristic(
       {@JsonKey(required: true) this.code,
       this.valueCodeableConcept,
       this.valueBoolean,
@@ -1114,7 +1114,7 @@ class _$_GroupCharacteristic implements _GroupCharacteristic {
 }
 
 abstract class _GroupCharacteristic implements GroupCharacteristic {
-  const factory _GroupCharacteristic(
+  factory _GroupCharacteristic(
           {@JsonKey(required: true) CodeableConcept code,
           CodeableConcept valueCodeableConcept,
           Boolean valueBoolean,
@@ -1309,7 +1309,7 @@ class __$GroupMemberCopyWithImpl<$Res> extends _$GroupMemberCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_GroupMember implements _GroupMember {
-  const _$_GroupMember(
+  _$_GroupMember(
       {@JsonKey(required: true) this.entity,
       this.period,
       this.inactive,
@@ -1369,7 +1369,7 @@ class _$_GroupMember implements _GroupMember {
 }
 
 abstract class _GroupMember implements GroupMember {
-  const factory _GroupMember(
+  factory _GroupMember(
       {@JsonKey(required: true) Reference entity,
       Period period,
       Boolean inactive,
@@ -2060,7 +2060,7 @@ class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Patient implements _Patient {
-  const _$_Patient(
+  _$_Patient(
       {@required
       @JsonKey(required: true, defaultValue: 'Patient')
           this.resourceType,
@@ -2331,7 +2331,7 @@ class _$_Patient implements _Patient {
 }
 
 abstract class _Patient implements Patient {
-  const factory _Patient(
+  factory _Patient(
       {@required
       @JsonKey(required: true, defaultValue: 'Patient')
           String resourceType,
@@ -2694,7 +2694,7 @@ class __$PatientContactCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_PatientContact implements _PatientContact {
-  const _$_PatientContact(
+  _$_PatientContact(
       {this.relationship,
       this.name,
       this.telecom,
@@ -2781,7 +2781,7 @@ class _$_PatientContact implements _PatientContact {
 }
 
 abstract class _PatientContact implements PatientContact {
-  const factory _PatientContact(
+  factory _PatientContact(
       {List<CodeableConcept> relationship,
       HumanName name,
       List<ContactPoint> telecom,
@@ -2963,7 +2963,7 @@ class __$PatientAnimalCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_PatientAnimal implements _PatientAnimal {
-  const _$_PatientAnimal(
+  _$_PatientAnimal(
       {@JsonKey(required: true) this.species, this.breed, this.genderStatus});
 
   factory _$_PatientAnimal.fromJson(Map<String, dynamic> json) =>
@@ -3014,7 +3014,7 @@ class _$_PatientAnimal implements _PatientAnimal {
 }
 
 abstract class _PatientAnimal implements PatientAnimal {
-  const factory _PatientAnimal(
+  factory _PatientAnimal(
       {@JsonKey(required: true) CodeableConcept species,
       CodeableConcept breed,
       CodeableConcept genderStatus}) = _$_PatientAnimal;
@@ -3170,7 +3170,7 @@ class __$PatientCommunicationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_PatientCommunication implements _PatientCommunication {
-  const _$_PatientCommunication(
+  _$_PatientCommunication(
       {@JsonKey(required: true) this.language,
       this.preferred,
       @JsonKey(name: '_preferred') this.preferredElement});
@@ -3226,7 +3226,7 @@ class _$_PatientCommunication implements _PatientCommunication {
 }
 
 abstract class _PatientCommunication implements PatientCommunication {
-  const factory _PatientCommunication(
+  factory _PatientCommunication(
           {@JsonKey(required: true) CodeableConcept language,
           Boolean preferred,
           @JsonKey(name: '_preferred') Element preferredElement}) =
@@ -3379,7 +3379,7 @@ class __$PatientLinkCopyWithImpl<$Res> extends _$PatientLinkCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_PatientLink implements _PatientLink {
-  const _$_PatientLink(
+  _$_PatientLink(
       {@JsonKey(required: true) this.other,
       @JsonKey(unknownEnumValue: PatientLinkType.unknown) this.type,
       @JsonKey(name: '_type') this.typeElement});
@@ -3434,7 +3434,7 @@ class _$_PatientLink implements _PatientLink {
 }
 
 abstract class _PatientLink implements PatientLink {
-  const factory _PatientLink(
+  factory _PatientLink(
       {@JsonKey(required: true) Reference other,
       @JsonKey(unknownEnumValue: PatientLinkType.unknown) PatientLinkType type,
       @JsonKey(name: '_type') Element typeElement}) = _$_PatientLink;
@@ -3867,7 +3867,7 @@ class __$PersonCopyWithImpl<$Res> extends _$PersonCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Person implements _Person {
-  const _$_Person(
+  _$_Person(
       {@required
       @JsonKey(required: true, defaultValue: 'Person')
           this.resourceType,
@@ -4059,7 +4059,7 @@ class _$_Person implements _Person {
 }
 
 abstract class _Person implements Person {
-  const factory _Person(
+  factory _Person(
       {@required
       @JsonKey(required: true, defaultValue: 'Person')
           String resourceType,
@@ -4292,7 +4292,7 @@ class __$PersonLinkCopyWithImpl<$Res> extends _$PersonLinkCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_PersonLink implements _PersonLink {
-  const _$_PersonLink(
+  _$_PersonLink(
       {@JsonKey(required: true) this.target,
       @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown) this.assurance,
       @JsonKey(name: '_assurance') this.assuranceElement});
@@ -4347,7 +4347,7 @@ class _$_PersonLink implements _PersonLink {
 }
 
 abstract class _PersonLink implements PersonLink {
-  const factory _PersonLink(
+  factory _PersonLink(
       {@JsonKey(required: true)
           Reference target,
       @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
@@ -4777,7 +4777,7 @@ class __$PractitionerCopyWithImpl<$Res> extends _$PractitionerCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Practitioner implements _Practitioner {
-  const _$_Practitioner(
+  _$_Practitioner(
       {@required
       @JsonKey(required: true, defaultValue: 'Practitioner')
           this.resourceType,
@@ -4970,7 +4970,7 @@ class _$_Practitioner implements _Practitioner {
 }
 
 abstract class _Practitioner implements Practitioner {
-  const factory _Practitioner(
+  factory _Practitioner(
       {@required
       @JsonKey(required: true, defaultValue: 'Practitioner')
           String resourceType,
@@ -5216,7 +5216,7 @@ class __$PractitionerQualificationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_PractitionerQualification implements _PractitionerQualification {
-  const _$_PractitionerQualification(
+  _$_PractitionerQualification(
       {this.identifier,
       @JsonKey(required: true) this.code,
       this.period,
@@ -5276,7 +5276,7 @@ class _$_PractitionerQualification implements _PractitionerQualification {
 }
 
 abstract class _PractitionerQualification implements PractitionerQualification {
-  const factory _PractitionerQualification(
+  factory _PractitionerQualification(
       {List<Identifier> identifier,
       @JsonKey(required: true) CodeableConcept code,
       Period period,
@@ -5772,7 +5772,7 @@ class __$PractitionerRoleCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_PractitionerRole implements _PractitionerRole {
-  const _$_PractitionerRole(
+  _$_PractitionerRole(
       {@required
       @JsonKey(required: true, defaultValue: 'PractitionerRole')
           this.resourceType,
@@ -5981,7 +5981,7 @@ class _$_PractitionerRole implements _PractitionerRole {
 }
 
 abstract class _PractitionerRole implements PractitionerRole {
-  const factory _PractitionerRole(
+  factory _PractitionerRole(
       {@required
       @JsonKey(required: true, defaultValue: 'PractitionerRole')
           String resourceType,
@@ -6311,7 +6311,7 @@ class __$PractitionerRoleAvailableTimeCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_PractitionerRoleAvailableTime
     implements _PractitionerRoleAvailableTime {
-  const _$_PractitionerRoleAvailableTime(
+  _$_PractitionerRoleAvailableTime(
       {this.daysOfWeek,
       this.allDay,
       this.availableStartTime,
@@ -6408,7 +6408,7 @@ class _$_PractitionerRoleAvailableTime
 
 abstract class _PractitionerRoleAvailableTime
     implements PractitionerRoleAvailableTime {
-  const factory _PractitionerRoleAvailableTime(
+  factory _PractitionerRoleAvailableTime(
       {List<Code> daysOfWeek,
       Boolean allDay,
       Time availableStartTime,
@@ -6592,7 +6592,7 @@ class __$PractitionerRoleNotAvailableCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_PractitionerRoleNotAvailable implements _PractitionerRoleNotAvailable {
-  const _$_PractitionerRoleNotAvailable(
+  _$_PractitionerRoleNotAvailable(
       {this.description,
       this.during,
       @JsonKey(name: '_description') this.descriptionElement});
@@ -6647,7 +6647,7 @@ class _$_PractitionerRoleNotAvailable implements _PractitionerRoleNotAvailable {
 
 abstract class _PractitionerRoleNotAvailable
     implements PractitionerRoleNotAvailable {
-  const factory _PractitionerRoleNotAvailable(
+  factory _PractitionerRoleNotAvailable(
           {String description,
           Period during,
           @JsonKey(name: '_description') Element descriptionElement}) =
@@ -7124,7 +7124,7 @@ class __$RelatedPersonCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_RelatedPerson implements _RelatedPerson {
-  const _$_RelatedPerson(
+  _$_RelatedPerson(
       {@required
       @JsonKey(required: true, defaultValue: 'RelatedPerson')
           this.resourceType,
@@ -7325,7 +7325,7 @@ class _$_RelatedPerson implements _RelatedPerson {
 }
 
 abstract class _RelatedPerson implements RelatedPerson {
-  const factory _RelatedPerson(
+  factory _RelatedPerson(
       {@required
       @JsonKey(required: true, defaultValue: 'RelatedPerson')
           String resourceType,

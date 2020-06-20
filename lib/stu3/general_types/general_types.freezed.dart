@@ -215,7 +215,7 @@ class __$AnnotationCopyWithImpl<$Res> extends _$AnnotationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Annotation implements _Annotation {
-  const _$_Annotation(
+  _$_Annotation(
       {this.authorReference,
       this.authorString,
       this.time,
@@ -297,7 +297,7 @@ class _$_Annotation implements _Annotation {
 }
 
 abstract class _Annotation implements Annotation {
-  const factory _Annotation(
+  factory _Annotation(
       {Reference authorReference,
       String authorString,
       FhirDateTime time,
@@ -687,7 +687,7 @@ class __$AttachmentCopyWithImpl<$Res> extends _$AttachmentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Attachment implements _Attachment {
-  const _$_Attachment(
+  _$_Attachment(
       {this.contentType,
       this.language,
       this.data,
@@ -834,7 +834,7 @@ class _$_Attachment implements _Attachment {
 }
 
 abstract class _Attachment implements Attachment {
-  const factory _Attachment(
+  factory _Attachment(
       {Code contentType,
       Code language,
       String data,
@@ -1145,7 +1145,7 @@ class __$IdentifierCopyWithImpl<$Res> extends _$IdentifierCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Identifier implements _Identifier {
-  const _$_Identifier(
+  _$_Identifier(
       {@JsonKey(unknownEnumValue: IdentifierUse.unknown) this.use,
       this.type,
       this.system,
@@ -1239,7 +1239,7 @@ class _$_Identifier implements _Identifier {
 }
 
 abstract class _Identifier implements Identifier {
-  const factory _Identifier(
+  factory _Identifier(
       {@JsonKey(unknownEnumValue: IdentifierUse.unknown) IdentifierUse use,
       CodeableConcept type,
       String system,
@@ -1398,7 +1398,7 @@ class __$CodeableConceptCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CodeableConcept implements _CodeableConcept {
-  const _$_CodeableConcept(
+  _$_CodeableConcept(
       {this.coding, this.text, @JsonKey(name: '_text') this.textElement});
 
   factory _$_CodeableConcept.fromJson(Map<String, dynamic> json) =>
@@ -1448,7 +1448,7 @@ class _$_CodeableConcept implements _CodeableConcept {
 }
 
 abstract class _CodeableConcept implements CodeableConcept {
-  const factory _CodeableConcept(
+  factory _CodeableConcept(
       {List<Coding> coding,
       String text,
       @JsonKey(name: '_text') Element textElement}) = _$_CodeableConcept;
@@ -1719,7 +1719,7 @@ class __$CodingCopyWithImpl<$Res> extends _$CodingCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Coding implements _Coding {
-  const _$_Coding(
+  _$_Coding(
       {this.system,
       this.version,
       this.code,
@@ -1824,7 +1824,7 @@ class _$_Coding implements _Coding {
 }
 
 abstract class _Coding implements Coding {
-  const factory _Coding(
+  factory _Coding(
       {String system,
       String version,
       Code code,
@@ -2116,7 +2116,7 @@ class __$QuantityCopyWithImpl<$Res> extends _$QuantityCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Quantity implements _Quantity {
-  const _$_Quantity(
+  _$_Quantity(
       {this.value,
       @JsonKey(unknownEnumValue: Comparator.unknown) this.comparator,
       this.unit,
@@ -2220,7 +2220,7 @@ class _$_Quantity implements _Quantity {
 }
 
 abstract class _Quantity implements Quantity {
-  const factory _Quantity(
+  factory _Quantity(
       {Decimal value,
       @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
       String unit,
@@ -2380,7 +2380,7 @@ class __$DurationCopyWithImpl<$Res> extends _$DurationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Duration implements _Duration {
-  const _$_Duration(
+  _$_Duration(
       {this.value,
       @JsonKey(unknownEnumValue: Comparator.unknown) this.comparator,
       this.unit,
@@ -2444,7 +2444,7 @@ class _$_Duration implements _Duration {
 }
 
 abstract class _Duration implements Duration {
-  const factory _Duration(
+  factory _Duration(
       {Decimal value,
       @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
       String unit,
@@ -2584,7 +2584,7 @@ class __$DistanceCopyWithImpl<$Res> extends _$DistanceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Distance implements _Distance {
-  const _$_Distance(
+  _$_Distance(
       {this.value,
       @JsonKey(unknownEnumValue: Comparator.unknown) this.comparator,
       this.unit,
@@ -2648,7 +2648,7 @@ class _$_Distance implements _Distance {
 }
 
 abstract class _Distance implements Distance {
-  const factory _Distance(
+  factory _Distance(
       {Decimal value,
       @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
       String unit,
@@ -2788,7 +2788,7 @@ class __$CountCopyWithImpl<$Res> extends _$CountCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Count implements _Count {
-  const _$_Count(
+  _$_Count(
       {this.value,
       @JsonKey(unknownEnumValue: Comparator.unknown) this.comparator,
       this.unit,
@@ -2852,7 +2852,7 @@ class _$_Count implements _Count {
 }
 
 abstract class _Count implements Count {
-  const factory _Count(
+  factory _Count(
       {Decimal value,
       @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
       String unit,
@@ -2992,7 +2992,7 @@ class __$MoneyCopyWithImpl<$Res> extends _$MoneyCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Money implements _Money {
-  const _$_Money(
+  _$_Money(
       {this.value,
       @JsonKey(unknownEnumValue: Comparator.unknown) this.comparator,
       this.unit,
@@ -3056,7 +3056,7 @@ class _$_Money implements _Money {
 }
 
 abstract class _Money implements Money {
-  const factory _Money(
+  factory _Money(
       {Decimal value,
       @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
       String unit,
@@ -3196,7 +3196,7 @@ class __$AgeCopyWithImpl<$Res> extends _$AgeCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Age implements _Age {
-  const _$_Age(
+  _$_Age(
       {this.value,
       @JsonKey(unknownEnumValue: Comparator.unknown) this.comparator,
       this.unit,
@@ -3259,7 +3259,7 @@ class _$_Age implements _Age {
 }
 
 abstract class _Age implements Age {
-  const factory _Age(
+  factory _Age(
       {Decimal value,
       @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
       String unit,
@@ -3391,7 +3391,7 @@ class __$RangeCopyWithImpl<$Res> extends _$RangeCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Range implements _Range {
-  const _$_Range({this.low, this.high});
+  _$_Range({this.low, this.high});
 
   factory _$_Range.fromJson(Map<String, dynamic> json) =>
       _$_$_RangeFromJson(json);
@@ -3433,7 +3433,7 @@ class _$_Range implements _Range {
 }
 
 abstract class _Range implements Range {
-  const factory _Range({Quantity low, Quantity high}) = _$_Range;
+  factory _Range({Quantity low, Quantity high}) = _$_Range;
 
   factory _Range.fromJson(Map<String, dynamic> json) = _$_Range.fromJson;
 
@@ -3585,7 +3585,7 @@ class __$PeriodCopyWithImpl<$Res> extends _$PeriodCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Period implements _Period {
-  const _$_Period(
+  _$_Period(
       {this.start,
       this.end,
       @JsonKey(name: '_start') this.startElement,
@@ -3645,7 +3645,7 @@ class _$_Period implements _Period {
 }
 
 abstract class _Period implements Period {
-  const factory _Period(
+  factory _Period(
       {FhirDateTime start,
       FhirDateTime end,
       @JsonKey(name: '_start') Element startElement,
@@ -3779,7 +3779,7 @@ class __$RatioCopyWithImpl<$Res> extends _$RatioCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Ratio implements _Ratio {
-  const _$_Ratio({this.numerator, this.denominator});
+  _$_Ratio({this.numerator, this.denominator});
 
   factory _$_Ratio.fromJson(Map<String, dynamic> json) =>
       _$_$_RatioFromJson(json);
@@ -3823,7 +3823,7 @@ class _$_Ratio implements _Ratio {
 }
 
 abstract class _Ratio implements Ratio {
-  const factory _Ratio({Quantity numerator, Quantity denominator}) = _$_Ratio;
+  factory _Ratio({Quantity numerator, Quantity denominator}) = _$_Ratio;
 
   factory _Ratio.fromJson(Map<String, dynamic> json) = _$_Ratio.fromJson;
 
@@ -4152,7 +4152,7 @@ class __$SampledDataCopyWithImpl<$Res> extends _$SampledDataCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_SampledData implements _SampledData {
-  const _$_SampledData(
+  _$_SampledData(
       {@JsonKey(required: true) this.origin,
       this.period,
       this.factor,
@@ -4278,7 +4278,7 @@ class _$_SampledData implements _SampledData {
 }
 
 abstract class _SampledData implements SampledData {
-  const factory _SampledData(
+  factory _SampledData(
       {@JsonKey(required: true) Quantity origin,
       Decimal period,
       Decimal factor,
@@ -4648,7 +4648,7 @@ class __$SignatureCopyWithImpl<$Res> extends _$SignatureCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Signature implements _Signature {
-  const _$_Signature(
+  _$_Signature(
       {@JsonKey(required: true) this.type,
       this.when,
       this.whoUri,
@@ -4773,7 +4773,7 @@ class _$_Signature implements _Signature {
 }
 
 abstract class _Signature implements Signature {
-  const factory _Signature(
+  factory _Signature(
       {@JsonKey(required: true) List<Coding> type,
       String when,
       String whoUri,
@@ -5133,7 +5133,7 @@ class __$HumanNameCopyWithImpl<$Res> extends _$HumanNameCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_HumanName implements _HumanName {
-  const _$_HumanName(
+  _$_HumanName(
       {@JsonKey(unknownEnumValue: HumanNameUse.unknown) this.use,
       this.text,
       this.family,
@@ -5256,7 +5256,7 @@ class _$_HumanName implements _HumanName {
 }
 
 abstract class _HumanName implements HumanName {
-  const factory _HumanName(
+  factory _HumanName(
       {@JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
       String text,
       String family,
@@ -5721,7 +5721,7 @@ class __$AddressCopyWithImpl<$Res> extends _$AddressCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Address implements _Address {
-  const _$_Address(
+  _$_Address(
       {@JsonKey(unknownEnumValue: AddressUse.unknown) this.use,
       @JsonKey(unknownEnumValue: AddressType.unknown) this.type,
       this.text,
@@ -5890,7 +5890,7 @@ class _$_Address implements _Address {
 }
 
 abstract class _Address implements Address {
-  const factory _Address(
+  factory _Address(
       {@JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
       @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
       String text,
@@ -6222,7 +6222,7 @@ class __$ContactPointCopyWithImpl<$Res> extends _$ContactPointCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ContactPoint implements _ContactPoint {
-  const _$_ContactPoint(
+  _$_ContactPoint(
       {@JsonKey(unknownEnumValue: ContactPointSystem.unknown) this.system,
       this.value,
       @JsonKey(unknownEnumValue: ContactPointUse.unknown) this.use,
@@ -6318,7 +6318,7 @@ class _$_ContactPoint implements _ContactPoint {
 }
 
 abstract class _ContactPoint implements ContactPoint {
-  const factory _ContactPoint(
+  factory _ContactPoint(
       {@JsonKey(unknownEnumValue: ContactPointSystem.unknown)
           ContactPointSystem system,
       String value,
@@ -6516,7 +6516,7 @@ class __$TimingCopyWithImpl<$Res> extends _$TimingCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Timing implements _Timing {
-  const _$_Timing(
+  _$_Timing(
       {this.event,
       this.repeat,
       this.code,
@@ -6574,7 +6574,7 @@ class _$_Timing implements _Timing {
 }
 
 abstract class _Timing implements Timing {
-  const factory _Timing(
+  factory _Timing(
       {List<FhirDateTime> event,
       TimingRepeat repeat,
       CodeableConcept code,
@@ -7315,7 +7315,7 @@ class __$TimingRepeatCopyWithImpl<$Res> extends _$TimingRepeatCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TimingRepeat implements _TimingRepeat {
-  const _$_TimingRepeat(
+  _$_TimingRepeat(
       {this.boundsDuration,
       this.boundsRange,
       this.boundsPeriod,
@@ -7577,7 +7577,7 @@ class _$_TimingRepeat implements _TimingRepeat {
 }
 
 abstract class _TimingRepeat implements TimingRepeat {
-  const factory _TimingRepeat(
+  factory _TimingRepeat(
       {Duration boundsDuration,
       Range boundsRange,
       Period boundsPeriod,

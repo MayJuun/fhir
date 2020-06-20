@@ -582,7 +582,7 @@ class __$ResearchStudyCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ResearchStudy implements _ResearchStudy {
-  const _$_ResearchStudy(
+  _$_ResearchStudy(
       {@required
       @JsonKey(required: true, defaultValue: 'ResearchStudy')
           this.resourceType,
@@ -830,7 +830,7 @@ class _$_ResearchStudy implements _ResearchStudy {
 }
 
 abstract class _ResearchStudy implements ResearchStudy {
-  const factory _ResearchStudy(
+  factory _ResearchStudy(
       {@required
       @JsonKey(required: true, defaultValue: 'ResearchStudy')
           String resourceType,
@@ -1118,7 +1118,7 @@ class __$ResearchStudyArmCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ResearchStudyArm implements _ResearchStudyArm {
-  const _$_ResearchStudyArm(
+  _$_ResearchStudyArm(
       {this.name,
       this.code,
       this.description,
@@ -1185,7 +1185,7 @@ class _$_ResearchStudyArm implements _ResearchStudyArm {
 }
 
 abstract class _ResearchStudyArm implements ResearchStudyArm {
-  const factory _ResearchStudyArm(
+  factory _ResearchStudyArm(
           {String name,
           CodeableConcept code,
           String description,
@@ -1669,7 +1669,7 @@ class __$ResearchSubjectCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ResearchSubject implements _ResearchSubject {
-  const _$_ResearchSubject(
+  _$_ResearchSubject(
       {@required
       @JsonKey(required: true, defaultValue: 'ResearchSubject')
           this.resourceType,
@@ -1853,7 +1853,7 @@ class _$_ResearchSubject implements _ResearchSubject {
 }
 
 abstract class _ResearchSubject implements ResearchSubject {
-  const factory _ResearchSubject(
+  factory _ResearchSubject(
       {@required
       @JsonKey(required: true, defaultValue: 'ResearchSubject')
           String resourceType,

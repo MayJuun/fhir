@@ -599,7 +599,7 @@ class __$GuidanceResponseCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_GuidanceResponse implements _GuidanceResponse {
-  const _$_GuidanceResponse(
+  _$_GuidanceResponse(
       {@required
       @JsonKey(required: true, defaultValue: 'GuidanceResponse')
           this.resourceType,
@@ -825,7 +825,7 @@ class _$_GuidanceResponse implements _GuidanceResponse {
 }
 
 abstract class _GuidanceResponse implements GuidanceResponse {
-  const factory _GuidanceResponse(
+  factory _GuidanceResponse(
       {@required
       @JsonKey(required: true, defaultValue: 'GuidanceResponse')
           String resourceType,
@@ -1232,7 +1232,7 @@ class __$ContributorCopyWithImpl<$Res> extends _$ContributorCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Contributor implements _Contributor {
-  const _$_Contributor(
+  _$_Contributor(
       {@JsonKey(defaultValue: 'Contributor')
           this.resourceType,
       this.id,
@@ -1373,7 +1373,7 @@ class _$_Contributor implements _Contributor {
 }
 
 abstract class _Contributor implements Contributor {
-  const factory _Contributor(
+  factory _Contributor(
       {@JsonKey(defaultValue: 'Contributor')
           String resourceType,
       Id id,

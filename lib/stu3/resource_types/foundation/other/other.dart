@@ -8,11 +8,10 @@ part 'other.g.dart';
 
 @freezed
 abstract class Basic with _$Basic implements Resource {
-  const factory Basic({
+  factory Basic({
     @JsonKey(required: true, defaultValue: 'Basic')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -33,11 +32,10 @@ abstract class Basic with _$Basic implements Resource {
 
 @freezed
 abstract class Binary with _$Binary implements Resource {
-  const factory Binary({
+  factory Binary({
     @JsonKey(required: true, defaultValue: 'Binary')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -57,11 +55,10 @@ abstract class Binary with _$Binary implements Resource {
 
 @freezed
 abstract class Bundle with _$Bundle implements Resource {
-  const factory Bundle({
+  factory Bundle({
     @JsonKey(required: true, defaultValue: 'Bundle')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -84,7 +81,7 @@ abstract class Bundle with _$Bundle implements Resource {
 
 @freezed
 abstract class BundleLink with _$BundleLink {
-  const factory BundleLink({
+  factory BundleLink({
     String relation,
     String url,
     @JsonKey(name: '_relation') Element relationElement,
@@ -96,7 +93,7 @@ abstract class BundleLink with _$BundleLink {
 
 @freezed
 abstract class BundleEntry with _$BundleEntry {
-  const factory BundleEntry({
+  factory BundleEntry({
     List<BundleLink> link,
     String fullUrl,
     Resource resource,
@@ -111,7 +108,7 @@ abstract class BundleEntry with _$BundleEntry {
 
 @freezed
 abstract class BundleSearch with _$BundleSearch {
-  const factory BundleSearch({
+  factory BundleSearch({
     @JsonKey(unknownEnumValue: SearchMode.unknown) SearchMode mode,
     Decimal score,
     @JsonKey(name: '_mode') Element modeElement,
@@ -123,7 +120,7 @@ abstract class BundleSearch with _$BundleSearch {
 
 @freezed
 abstract class BundleRequest with _$BundleRequest {
-  const factory BundleRequest({
+  factory BundleRequest({
     @JsonKey(unknownEnumValue: RequestMethod.unknown) RequestMethod method,
     String url,
     String ifNoneMatch,
@@ -143,7 +140,7 @@ abstract class BundleRequest with _$BundleRequest {
 
 @freezed
 abstract class BundleResponse with _$BundleResponse {
-  const factory BundleResponse({
+  factory BundleResponse({
     String status,
     String location,
     String etag,
@@ -160,11 +157,10 @@ abstract class BundleResponse with _$BundleResponse {
 
 @freezed
 abstract class Linkage with _$Linkage implements Resource {
-  const factory Linkage({
+  factory Linkage({
     @JsonKey(required: true, defaultValue: 'Linkage')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -184,7 +180,7 @@ abstract class Linkage with _$Linkage implements Resource {
 
 @freezed
 abstract class LinkageItem with _$LinkageItem {
-  const factory LinkageItem({
+  factory LinkageItem({
     @JsonKey(unknownEnumValue: LinkageItemType.unknown) LinkageItemType type,
     @JsonKey(required: true) Reference resource,
     @JsonKey(name: '_type') Element typeElement,
@@ -195,11 +191,10 @@ abstract class LinkageItem with _$LinkageItem {
 
 @freezed
 abstract class Media with _$Media implements Resource {
-  const factory Media({
+  factory Media({
     @JsonKey(required: true, defaultValue: 'Media')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -239,11 +234,10 @@ abstract class Media with _$Media implements Resource {
 
 @freezed
 abstract class MessageHeader with _$MessageHeader implements Resource {
-  const factory MessageHeader({
+  factory MessageHeader({
     @JsonKey(required: true, defaultValue: 'MessageHeader')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -272,7 +266,7 @@ abstract class MessageHeader with _$MessageHeader implements Resource {
 
 @freezed
 abstract class MessageHeaderDestination with _$MessageHeaderDestination {
-  const factory MessageHeaderDestination({
+  factory MessageHeaderDestination({
     String name,
     Reference target,
     String endpoint,
@@ -285,7 +279,7 @@ abstract class MessageHeaderDestination with _$MessageHeaderDestination {
 
 @freezed
 abstract class MessageHeaderSource with _$MessageHeaderSource {
-  const factory MessageHeaderSource({
+  factory MessageHeaderSource({
     String name,
     String software,
     String version,
@@ -302,7 +296,7 @@ abstract class MessageHeaderSource with _$MessageHeaderSource {
 
 @freezed
 abstract class MessageHeaderResponse with _$MessageHeaderResponse {
-  const factory MessageHeaderResponse({
+  factory MessageHeaderResponse({
     Id identifier,
     @JsonKey(unknownEnumValue: ResponseCode.unknown) ResponseCode code,
     Reference details,
@@ -315,11 +309,10 @@ abstract class MessageHeaderResponse with _$MessageHeaderResponse {
 
 @freezed
 abstract class OperationOutcome with _$OperationOutcome implements Resource {
-  const factory OperationOutcome({
+  factory OperationOutcome({
     @JsonKey(required: true, defaultValue: 'OperationOutcome')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -336,7 +329,7 @@ abstract class OperationOutcome with _$OperationOutcome implements Resource {
 
 @freezed
 abstract class OperationOutcomeIssue with _$OperationOutcomeIssue {
-  const factory OperationOutcomeIssue({
+  factory OperationOutcomeIssue({
     @JsonKey(unknownEnumValue: IssueSeverity.unknown) IssueSeverity severity,
     @JsonKey(unknownEnumValue: IssueCode.unknown) IssueCode code,
     CodeableConcept details,
@@ -355,7 +348,7 @@ abstract class OperationOutcomeIssue with _$OperationOutcomeIssue {
 
 @freezed
 abstract class Parameters with _$Parameters implements Resource {
-  const factory Parameters({
+  factory Parameters({
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -368,7 +361,7 @@ abstract class Parameters with _$Parameters implements Resource {
 
 @freezed
 abstract class ParametersParameter with _$ParametersParameter {
-  const factory ParametersParameter({
+  factory ParametersParameter({
     String name,
     Boolean valueBoolean,
     Integer valueInteger,
@@ -450,11 +443,10 @@ abstract class ParametersParameter with _$ParametersParameter {
 
 @freezed
 abstract class Subscription with _$Subscription implements Resource {
-  const factory Subscription({
+  factory Subscription({
     @JsonKey(required: true, defaultValue: 'Subscription')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -484,7 +476,7 @@ abstract class Subscription with _$Subscription implements Resource {
 
 @freezed
 abstract class SubscriptionChannel with _$SubscriptionChannel {
-  const factory SubscriptionChannel({
+  factory SubscriptionChannel({
     @JsonKey(unknownEnumValue: ChannelType.unknown) ChannelType type,
     String endpoint,
     String payload,

@@ -1432,6 +1432,7 @@ class _$ChargeItemTearOff {
       @required
           Reference subject,
       Reference context,
+      FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           Element occurrenceDateTimeElement,
       Period occurrencePeriod,
@@ -1482,6 +1483,7 @@ class _$ChargeItemTearOff {
       code: code,
       subject: subject,
       context: context,
+      occurrenceDateTime: occurrenceDateTime,
       occurrenceDateTimeElement: occurrenceDateTimeElement,
       occurrencePeriod: occurrencePeriod,
       occurrenceTiming: occurrenceTiming,
@@ -1542,6 +1544,7 @@ mixin _$ChargeItem {
   CodeableConcept get code;
   Reference get subject;
   Reference get context;
+  FhirDateTime get occurrenceDateTime;
   @JsonKey(name: '_occurrenceDateTime')
   Element get occurrenceDateTimeElement;
   Period get occurrencePeriod;
@@ -1608,6 +1611,7 @@ abstract class $ChargeItemCopyWith<$Res> {
       CodeableConcept code,
       Reference subject,
       Reference context,
+      FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           Element occurrenceDateTimeElement,
       Period occurrencePeriod,
@@ -1692,6 +1696,7 @@ class _$ChargeItemCopyWithImpl<$Res> implements $ChargeItemCopyWith<$Res> {
     Object code = freezed,
     Object subject = freezed,
     Object context = freezed,
+    Object occurrenceDateTime = freezed,
     Object occurrenceDateTimeElement = freezed,
     Object occurrencePeriod = freezed,
     Object occurrenceTiming = freezed,
@@ -1762,6 +1767,9 @@ class _$ChargeItemCopyWithImpl<$Res> implements $ChargeItemCopyWith<$Res> {
       code: code == freezed ? _value.code : code as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
       context: context == freezed ? _value.context : context as Reference,
+      occurrenceDateTime: occurrenceDateTime == freezed
+          ? _value.occurrenceDateTime
+          : occurrenceDateTime as FhirDateTime,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement as Element,
@@ -2091,6 +2099,7 @@ abstract class _$ChargeItemCopyWith<$Res> implements $ChargeItemCopyWith<$Res> {
       CodeableConcept code,
       Reference subject,
       Reference context,
+      FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           Element occurrenceDateTimeElement,
       Period occurrencePeriod,
@@ -2200,6 +2209,7 @@ class __$ChargeItemCopyWithImpl<$Res> extends _$ChargeItemCopyWithImpl<$Res>
     Object code = freezed,
     Object subject = freezed,
     Object context = freezed,
+    Object occurrenceDateTime = freezed,
     Object occurrenceDateTimeElement = freezed,
     Object occurrencePeriod = freezed,
     Object occurrenceTiming = freezed,
@@ -2270,6 +2280,9 @@ class __$ChargeItemCopyWithImpl<$Res> extends _$ChargeItemCopyWithImpl<$Res>
       code: code == freezed ? _value.code : code as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
       context: context == freezed ? _value.context : context as Reference,
+      occurrenceDateTime: occurrenceDateTime == freezed
+          ? _value.occurrenceDateTime
+          : occurrenceDateTime as FhirDateTime,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement as Element,
@@ -2358,6 +2371,7 @@ class _$_ChargeItem extends _ChargeItem {
       @required this.code,
       @required this.subject,
       this.context,
+      this.occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') this.occurrenceDateTimeElement,
       this.occurrencePeriod,
       this.occurrenceTiming,
@@ -2440,6 +2454,8 @@ class _$_ChargeItem extends _ChargeItem {
   @override
   final Reference context;
   @override
+  final FhirDateTime occurrenceDateTime;
+  @override
   @JsonKey(name: '_occurrenceDateTime')
   final Element occurrenceDateTimeElement;
   @override
@@ -2494,7 +2510,7 @@ class _$_ChargeItem extends _ChargeItem {
 
   @override
   String toString() {
-    return 'ChargeItem(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, definitionUri: $definitionUri, definitionUriElement: $definitionUriElement, definitionCanonical: $definitionCanonical, status: $status, statusElement: $statusElement, partOf: $partOf, code: $code, subject: $subject, context: $context, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrencePeriod: $occurrencePeriod, occurrenceTiming: $occurrenceTiming, performer: $performer, performingOrganization: $performingOrganization, requestingOrganization: $requestingOrganization, costCenter: $costCenter, quantity: $quantity, bodysite: $bodysite, factorOverride: $factorOverride, factorOverrideElement: $factorOverrideElement, priceOverride: $priceOverride, overrideReason: $overrideReason, overrideReasonElement: $overrideReasonElement, enterer: $enterer, enteredDate: $enteredDate, enteredDateElement: $enteredDateElement, reason: $reason, service: $service, productReference: $productReference, productCodeableConcept: $productCodeableConcept, account: $account, note: $note, supportingInformation: $supportingInformation)';
+    return 'ChargeItem(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, definitionUri: $definitionUri, definitionUriElement: $definitionUriElement, definitionCanonical: $definitionCanonical, status: $status, statusElement: $statusElement, partOf: $partOf, code: $code, subject: $subject, context: $context, occurrenceDateTime: $occurrenceDateTime, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrencePeriod: $occurrencePeriod, occurrenceTiming: $occurrenceTiming, performer: $performer, performingOrganization: $performingOrganization, requestingOrganization: $requestingOrganization, costCenter: $costCenter, quantity: $quantity, bodysite: $bodysite, factorOverride: $factorOverride, factorOverrideElement: $factorOverrideElement, priceOverride: $priceOverride, overrideReason: $overrideReason, overrideReasonElement: $overrideReasonElement, enterer: $enterer, enteredDate: $enteredDate, enteredDateElement: $enteredDateElement, reason: $reason, service: $service, productReference: $productReference, productCodeableConcept: $productCodeableConcept, account: $account, note: $note, supportingInformation: $supportingInformation)';
   }
 
   @override
@@ -2558,15 +2574,16 @@ class _$_ChargeItem extends _ChargeItem {
             (identical(other.context, context) ||
                 const DeepCollectionEquality()
                     .equals(other.context, context)) &&
+            (identical(other.occurrenceDateTime, occurrenceDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.occurrenceDateTime, occurrenceDateTime)) &&
             (identical(other.occurrenceDateTimeElement, occurrenceDateTimeElement) ||
                 const DeepCollectionEquality().equals(
                     other.occurrenceDateTimeElement,
                     occurrenceDateTimeElement)) &&
             (identical(other.occurrencePeriod, occurrencePeriod) ||
-                const DeepCollectionEquality()
-                    .equals(other.occurrencePeriod, occurrencePeriod)) &&
-            (identical(other.occurrenceTiming, occurrenceTiming) ||
-                const DeepCollectionEquality().equals(other.occurrenceTiming, occurrenceTiming)) &&
+                const DeepCollectionEquality().equals(other.occurrencePeriod, occurrencePeriod)) &&
+            (identical(other.occurrenceTiming, occurrenceTiming) || const DeepCollectionEquality().equals(other.occurrenceTiming, occurrenceTiming)) &&
             (identical(other.performer, performer) || const DeepCollectionEquality().equals(other.performer, performer)) &&
             (identical(other.performingOrganization, performingOrganization) || const DeepCollectionEquality().equals(other.performingOrganization, performingOrganization)) &&
             (identical(other.requestingOrganization, requestingOrganization) || const DeepCollectionEquality().equals(other.requestingOrganization, requestingOrganization)) &&
@@ -2614,6 +2631,7 @@ class _$_ChargeItem extends _ChargeItem {
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(subject) ^
       const DeepCollectionEquality().hash(context) ^
+      const DeepCollectionEquality().hash(occurrenceDateTime) ^
       const DeepCollectionEquality().hash(occurrenceDateTimeElement) ^
       const DeepCollectionEquality().hash(occurrencePeriod) ^
       const DeepCollectionEquality().hash(occurrenceTiming) ^
@@ -2683,6 +2701,7 @@ abstract class _ChargeItem extends ChargeItem {
       @required
           Reference subject,
       Reference context,
+      FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           Element occurrenceDateTimeElement,
       Period occurrencePeriod,
@@ -2764,6 +2783,8 @@ abstract class _ChargeItem extends ChargeItem {
   Reference get subject;
   @override
   Reference get context;
+  @override
+  FhirDateTime get occurrenceDateTime;
   @override
   @JsonKey(name: '_occurrenceDateTime')
   Element get occurrenceDateTimeElement;
@@ -7799,6 +7820,7 @@ abstract class $ContractTermCopyWith<$Res> {
       List<ContractAction> action,
       List<ContractTerm> group});
 
+  $IdentifierCopyWith<$Res> get identifier;
   $ElementCopyWith<$Res> get issuedElement;
   $PeriodCopyWith<$Res> get applies;
   $CodeableConceptCopyWith<$Res> get topicCodeableConcept;
@@ -7872,6 +7894,16 @@ class _$ContractTermCopyWithImpl<$Res> implements $ContractTermCopyWith<$Res> {
           action == freezed ? _value.action : action as List<ContractAction>,
       group: group == freezed ? _value.group : group as List<ContractTerm>,
     ));
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
   }
 
   @override
@@ -7981,6 +8013,8 @@ abstract class _$ContractTermCopyWith<$Res>
       List<ContractAction> action,
       List<ContractTerm> group});
 
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
   @override
   $ElementCopyWith<$Res> get issuedElement;
   @override
@@ -9423,13 +9457,21 @@ class _$ContractAnswerTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      Time valueTime,
       @JsonKey(name: '_valueTime') Element valueTimeElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      FhirUri valueUri,
       @JsonKey(name: '_valueUri') Element valueUriElement,
       Attachment valueAttachment,
       Coding valueCoding,
@@ -9439,13 +9481,21 @@ class _$ContractAnswerTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      valueBoolean: valueBoolean,
       valueBooleanElement: valueBooleanElement,
+      valueDecimal: valueDecimal,
       valueDecimalElement: valueDecimalElement,
+      valueInteger: valueInteger,
       valueIntegerElement: valueIntegerElement,
+      valueDate: valueDate,
       valueDateElement: valueDateElement,
+      valueDateTime: valueDateTime,
       valueDateTimeElement: valueDateTimeElement,
+      valueTime: valueTime,
       valueTimeElement: valueTimeElement,
+      valueString: valueString,
       valueStringElement: valueStringElement,
+      valueUri: valueUri,
       valueUriElement: valueUriElement,
       valueAttachment: valueAttachment,
       valueCoding: valueCoding,
@@ -9463,20 +9513,28 @@ mixin _$ContractAnswer {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
+  Boolean get valueBoolean;
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
+  Decimal get valueDecimal;
   @JsonKey(name: '_valueDecimal')
   Element get valueDecimalElement;
+  Integer get valueInteger;
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
+  Date get valueDate;
   @JsonKey(name: '_valueDate')
   Element get valueDateElement;
+  FhirDateTime get valueDateTime;
   @JsonKey(name: '_valueDateTime')
   Element get valueDateTimeElement;
+  Time get valueTime;
   @JsonKey(name: '_valueTime')
   Element get valueTimeElement;
+  String get valueString;
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
+  FhirUri get valueUri;
   @JsonKey(name: '_valueUri')
   Element get valueUriElement;
   Attachment get valueAttachment;
@@ -9496,13 +9554,21 @@ abstract class $ContractAnswerCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      Time valueTime,
       @JsonKey(name: '_valueTime') Element valueTimeElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      FhirUri valueUri,
       @JsonKey(name: '_valueUri') Element valueUriElement,
       Attachment valueAttachment,
       Coding valueCoding,
@@ -9536,13 +9602,21 @@ class _$ContractAnswerCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
+    Object valueDecimal = freezed,
     Object valueDecimalElement = freezed,
+    Object valueInteger = freezed,
     Object valueIntegerElement = freezed,
+    Object valueDate = freezed,
     Object valueDateElement = freezed,
+    Object valueDateTime = freezed,
     Object valueDateTimeElement = freezed,
+    Object valueTime = freezed,
     Object valueTimeElement = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueUri = freezed,
     Object valueUriElement = freezed,
     Object valueAttachment = freezed,
     Object valueCoding = freezed,
@@ -9557,27 +9631,44 @@ class _$ContractAnswerCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
+      valueDecimal: valueDecimal == freezed
+          ? _value.valueDecimal
+          : valueDecimal as Decimal,
       valueDecimalElement: valueDecimalElement == freezed
           ? _value.valueDecimalElement
           : valueDecimalElement as Element,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger as Integer,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement as Element,
+      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateElement: valueDateElement == freezed
           ? _value.valueDateElement
           : valueDateElement as Element,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime as FhirDateTime,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement as Element,
+      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueTimeElement: valueTimeElement == freezed
           ? _value.valueTimeElement
           : valueTimeElement as Element,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueUri: valueUri == freezed ? _value.valueUri : valueUri as FhirUri,
       valueUriElement: valueUriElement == freezed
           ? _value.valueUriElement
           : valueUriElement as Element,
@@ -9726,13 +9817,21 @@ abstract class _$ContractAnswerCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      Time valueTime,
       @JsonKey(name: '_valueTime') Element valueTimeElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      FhirUri valueUri,
       @JsonKey(name: '_valueUri') Element valueUriElement,
       Attachment valueAttachment,
       Coding valueCoding,
@@ -9780,13 +9879,21 @@ class __$ContractAnswerCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
+    Object valueDecimal = freezed,
     Object valueDecimalElement = freezed,
+    Object valueInteger = freezed,
     Object valueIntegerElement = freezed,
+    Object valueDate = freezed,
     Object valueDateElement = freezed,
+    Object valueDateTime = freezed,
     Object valueDateTimeElement = freezed,
+    Object valueTime = freezed,
     Object valueTimeElement = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueUri = freezed,
     Object valueUriElement = freezed,
     Object valueAttachment = freezed,
     Object valueCoding = freezed,
@@ -9801,27 +9908,44 @@ class __$ContractAnswerCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
+      valueDecimal: valueDecimal == freezed
+          ? _value.valueDecimal
+          : valueDecimal as Decimal,
       valueDecimalElement: valueDecimalElement == freezed
           ? _value.valueDecimalElement
           : valueDecimalElement as Element,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger as Integer,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement as Element,
+      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateElement: valueDateElement == freezed
           ? _value.valueDateElement
           : valueDateElement as Element,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime as FhirDateTime,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement as Element,
+      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueTimeElement: valueTimeElement == freezed
           ? _value.valueTimeElement
           : valueTimeElement as Element,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueUri: valueUri == freezed ? _value.valueUri : valueUri as FhirUri,
       valueUriElement: valueUriElement == freezed
           ? _value.valueUriElement
           : valueUriElement as Element,
@@ -9846,13 +9970,21 @@ class _$_ContractAnswer extends _ContractAnswer {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      this.valueBoolean,
       @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+      this.valueDecimal,
       @JsonKey(name: '_valueDecimal') this.valueDecimalElement,
+      this.valueInteger,
       @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+      this.valueDate,
       @JsonKey(name: '_valueDate') this.valueDateElement,
+      this.valueDateTime,
       @JsonKey(name: '_valueDateTime') this.valueDateTimeElement,
+      this.valueTime,
       @JsonKey(name: '_valueTime') this.valueTimeElement,
+      this.valueString,
       @JsonKey(name: '_valueString') this.valueStringElement,
+      this.valueUri,
       @JsonKey(name: '_valueUri') this.valueUriElement,
       this.valueAttachment,
       this.valueCoding,
@@ -9871,26 +10003,42 @@ class _$_ContractAnswer extends _ContractAnswer {
   @override
   final List<FhirExtension> modifierExtension;
   @override
+  final Boolean valueBoolean;
+  @override
   @JsonKey(name: '_valueBoolean')
   final Element valueBooleanElement;
+  @override
+  final Decimal valueDecimal;
   @override
   @JsonKey(name: '_valueDecimal')
   final Element valueDecimalElement;
   @override
+  final Integer valueInteger;
+  @override
   @JsonKey(name: '_valueInteger')
   final Element valueIntegerElement;
+  @override
+  final Date valueDate;
   @override
   @JsonKey(name: '_valueDate')
   final Element valueDateElement;
   @override
+  final FhirDateTime valueDateTime;
+  @override
   @JsonKey(name: '_valueDateTime')
   final Element valueDateTimeElement;
+  @override
+  final Time valueTime;
   @override
   @JsonKey(name: '_valueTime')
   final Element valueTimeElement;
   @override
+  final String valueString;
+  @override
   @JsonKey(name: '_valueString')
   final Element valueStringElement;
+  @override
+  final FhirUri valueUri;
   @override
   @JsonKey(name: '_valueUri')
   final Element valueUriElement;
@@ -9905,7 +10053,7 @@ class _$_ContractAnswer extends _ContractAnswer {
 
   @override
   String toString() {
-    return 'ContractAnswer(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, valueBooleanElement: $valueBooleanElement, valueDecimalElement: $valueDecimalElement, valueIntegerElement: $valueIntegerElement, valueDateElement: $valueDateElement, valueDateTimeElement: $valueDateTimeElement, valueTimeElement: $valueTimeElement, valueStringElement: $valueStringElement, valueUriElement: $valueUriElement, valueAttachment: $valueAttachment, valueCoding: $valueCoding, valueQuantity: $valueQuantity, valueReference: $valueReference)';
+    return 'ContractAnswer(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueString: $valueString, valueStringElement: $valueStringElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueAttachment: $valueAttachment, valueCoding: $valueCoding, valueQuantity: $valueQuantity, valueReference: $valueReference)';
   }
 
   @override
@@ -9920,27 +10068,51 @@ class _$_ContractAnswer extends _ContractAnswer {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.valueBoolean, valueBoolean) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBoolean, valueBoolean)) &&
             (identical(other.valueBooleanElement, valueBooleanElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueBooleanElement, valueBooleanElement)) &&
+            (identical(other.valueDecimal, valueDecimal) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDecimal, valueDecimal)) &&
             (identical(other.valueDecimalElement, valueDecimalElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueDecimalElement, valueDecimalElement)) &&
+            (identical(other.valueInteger, valueInteger) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueInteger, valueInteger)) &&
             (identical(other.valueIntegerElement, valueIntegerElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueIntegerElement, valueIntegerElement)) &&
+            (identical(other.valueDate, valueDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDate, valueDate)) &&
             (identical(other.valueDateElement, valueDateElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueDateElement, valueDateElement)) &&
+            (identical(other.valueDateTime, valueDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDateTime, valueDateTime)) &&
             (identical(other.valueDateTimeElement, valueDateTimeElement) ||
                 const DeepCollectionEquality().equals(
                     other.valueDateTimeElement, valueDateTimeElement)) &&
+            (identical(other.valueTime, valueTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueTime, valueTime)) &&
             (identical(other.valueTimeElement, valueTimeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueTimeElement, valueTimeElement)) &&
+            (identical(other.valueString, valueString) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueString, valueString)) &&
             (identical(other.valueStringElement, valueStringElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueStringElement, valueStringElement)) &&
+            (identical(other.valueUri, valueUri) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueUri, valueUri)) &&
             (identical(other.valueUriElement, valueUriElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueUriElement, valueUriElement)) &&
@@ -9953,9 +10125,7 @@ class _$_ContractAnswer extends _ContractAnswer {
             (identical(other.valueQuantity, valueQuantity) ||
                 const DeepCollectionEquality()
                     .equals(other.valueQuantity, valueQuantity)) &&
-            (identical(other.valueReference, valueReference) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueReference, valueReference)));
+            (identical(other.valueReference, valueReference) || const DeepCollectionEquality().equals(other.valueReference, valueReference)));
   }
 
   @override
@@ -9964,13 +10134,21 @@ class _$_ContractAnswer extends _ContractAnswer {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(valueBoolean) ^
       const DeepCollectionEquality().hash(valueBooleanElement) ^
+      const DeepCollectionEquality().hash(valueDecimal) ^
       const DeepCollectionEquality().hash(valueDecimalElement) ^
+      const DeepCollectionEquality().hash(valueInteger) ^
       const DeepCollectionEquality().hash(valueIntegerElement) ^
+      const DeepCollectionEquality().hash(valueDate) ^
       const DeepCollectionEquality().hash(valueDateElement) ^
+      const DeepCollectionEquality().hash(valueDateTime) ^
       const DeepCollectionEquality().hash(valueDateTimeElement) ^
+      const DeepCollectionEquality().hash(valueTime) ^
       const DeepCollectionEquality().hash(valueTimeElement) ^
+      const DeepCollectionEquality().hash(valueString) ^
       const DeepCollectionEquality().hash(valueStringElement) ^
+      const DeepCollectionEquality().hash(valueUri) ^
       const DeepCollectionEquality().hash(valueUriElement) ^
       const DeepCollectionEquality().hash(valueAttachment) ^
       const DeepCollectionEquality().hash(valueCoding) ^
@@ -9993,13 +10171,21 @@ abstract class _ContractAnswer extends ContractAnswer {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      Time valueTime,
       @JsonKey(name: '_valueTime') Element valueTimeElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      FhirUri valueUri,
       @JsonKey(name: '_valueUri') Element valueUriElement,
       Attachment valueAttachment,
       Coding valueCoding,
@@ -10017,26 +10203,42 @@ abstract class _ContractAnswer extends ContractAnswer {
   @override
   List<FhirExtension> get modifierExtension;
   @override
+  Boolean get valueBoolean;
+  @override
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
+  @override
+  Decimal get valueDecimal;
   @override
   @JsonKey(name: '_valueDecimal')
   Element get valueDecimalElement;
   @override
+  Integer get valueInteger;
+  @override
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
+  @override
+  Date get valueDate;
   @override
   @JsonKey(name: '_valueDate')
   Element get valueDateElement;
   @override
+  FhirDateTime get valueDateTime;
+  @override
   @JsonKey(name: '_valueDateTime')
   Element get valueDateTimeElement;
+  @override
+  Time get valueTime;
   @override
   @JsonKey(name: '_valueTime')
   Element get valueTimeElement;
   @override
+  String get valueString;
+  @override
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
+  @override
+  FhirUri get valueUri;
   @override
   @JsonKey(name: '_valueUri')
   Element get valueUriElement;
@@ -11178,6 +11380,7 @@ abstract class $ContractValuedItemCopyWith<$Res> {
 
   $CodeableConceptCopyWith<$Res> get entityCodeableConcept;
   $ReferenceCopyWith<$Res> get entityReference;
+  $IdentifierCopyWith<$Res> get identifier;
   $ElementCopyWith<$Res> get effectiveTimeElement;
   $QuantityCopyWith<$Res> get quantity;
   $MoneyCopyWith<$Res> get unitPrice;
@@ -11307,6 +11510,16 @@ class _$ContractValuedItemCopyWithImpl<$Res>
     }
     return $ReferenceCopyWith<$Res>(_value.entityReference, (value) {
       return _then(_value.copyWith(entityReference: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
     });
   }
 
@@ -11476,6 +11689,8 @@ abstract class _$ContractValuedItemCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get entityCodeableConcept;
   @override
   $ReferenceCopyWith<$Res> get entityReference;
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
   @override
   $ElementCopyWith<$Res> get effectiveTimeElement;
   @override
@@ -11943,6 +12158,7 @@ class _$ContractActionTearOff {
       List<String> contextLinkId,
       @JsonKey(name: '_contextLinkId')
           Element contextLinkIdElement,
+      FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           Element occurrenceDateTimeElement,
       Period occurrencePeriod,
@@ -11980,6 +12196,7 @@ class _$ContractActionTearOff {
       context: context,
       contextLinkId: contextLinkId,
       contextLinkIdElement: contextLinkIdElement,
+      occurrenceDateTime: occurrenceDateTime,
       occurrenceDateTimeElement: occurrenceDateTimeElement,
       occurrencePeriod: occurrencePeriod,
       occurrenceTiming: occurrenceTiming,
@@ -12023,6 +12240,7 @@ mixin _$ContractAction {
   List<String> get contextLinkId;
   @JsonKey(name: '_contextLinkId')
   Element get contextLinkIdElement;
+  FhirDateTime get occurrenceDateTime;
   @JsonKey(name: '_occurrenceDateTime')
   Element get occurrenceDateTimeElement;
   Period get occurrencePeriod;
@@ -12073,6 +12291,7 @@ abstract class $ContractActionCopyWith<$Res> {
       List<String> contextLinkId,
       @JsonKey(name: '_contextLinkId')
           Element contextLinkIdElement,
+      FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           Element occurrenceDateTimeElement,
       Period occurrencePeriod,
@@ -12138,6 +12357,7 @@ class _$ContractActionCopyWithImpl<$Res>
     Object context = freezed,
     Object contextLinkId = freezed,
     Object contextLinkIdElement = freezed,
+    Object occurrenceDateTime = freezed,
     Object occurrenceDateTimeElement = freezed,
     Object occurrencePeriod = freezed,
     Object occurrenceTiming = freezed,
@@ -12187,6 +12407,9 @@ class _$ContractActionCopyWithImpl<$Res>
       contextLinkIdElement: contextLinkIdElement == freezed
           ? _value.contextLinkIdElement
           : contextLinkIdElement as Element,
+      occurrenceDateTime: occurrenceDateTime == freezed
+          ? _value.occurrenceDateTime
+          : occurrenceDateTime as FhirDateTime,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement as Element,
@@ -12423,6 +12646,7 @@ abstract class _$ContractActionCopyWith<$Res>
       List<String> contextLinkId,
       @JsonKey(name: '_contextLinkId')
           Element contextLinkIdElement,
+      FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           Element occurrenceDateTimeElement,
       Period occurrencePeriod,
@@ -12506,6 +12730,7 @@ class __$ContractActionCopyWithImpl<$Res>
     Object context = freezed,
     Object contextLinkId = freezed,
     Object contextLinkIdElement = freezed,
+    Object occurrenceDateTime = freezed,
     Object occurrenceDateTimeElement = freezed,
     Object occurrencePeriod = freezed,
     Object occurrenceTiming = freezed,
@@ -12555,6 +12780,9 @@ class __$ContractActionCopyWithImpl<$Res>
       contextLinkIdElement: contextLinkIdElement == freezed
           ? _value.contextLinkIdElement
           : contextLinkIdElement as Element,
+      occurrenceDateTime: occurrenceDateTime == freezed
+          ? _value.occurrenceDateTime
+          : occurrenceDateTime as FhirDateTime,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement as Element,
@@ -12623,6 +12851,7 @@ class _$_ContractAction extends _ContractAction {
       this.context,
       this.contextLinkId,
       @JsonKey(name: '_contextLinkId') this.contextLinkIdElement,
+      this.occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') this.occurrenceDateTimeElement,
       this.occurrencePeriod,
       this.occurrenceTiming,
@@ -12681,6 +12910,8 @@ class _$_ContractAction extends _ContractAction {
   @JsonKey(name: '_contextLinkId')
   final Element contextLinkIdElement;
   @override
+  final FhirDateTime occurrenceDateTime;
+  @override
   @JsonKey(name: '_occurrenceDateTime')
   final Element occurrenceDateTimeElement;
   @override
@@ -12722,7 +12953,7 @@ class _$_ContractAction extends _ContractAction {
 
   @override
   String toString() {
-    return 'ContractAction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, doNotPerform: $doNotPerform, doNotPerformElement: $doNotPerformElement, type: $type, subject: $subject, intent: $intent, linkId: $linkId, linkIdElement: $linkIdElement, status: $status, context: $context, contextLinkId: $contextLinkId, contextLinkIdElement: $contextLinkIdElement, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrencePeriod: $occurrencePeriod, occurrenceTiming: $occurrenceTiming, requester: $requester, requesterLinkId: $requesterLinkId, requesterLinkIdElement: $requesterLinkIdElement, performerType: $performerType, performerRole: $performerRole, performer: $performer, performerLinkId: $performerLinkId, performerLinkIdElement: $performerLinkIdElement, reason: $reason, reasonLinkId: $reasonLinkId, reasonLinkIdElement: $reasonLinkIdElement, note: $note, securityLabelNumber: $securityLabelNumber, securityLabelNumberElement: $securityLabelNumberElement)';
+    return 'ContractAction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, doNotPerform: $doNotPerform, doNotPerformElement: $doNotPerformElement, type: $type, subject: $subject, intent: $intent, linkId: $linkId, linkIdElement: $linkIdElement, status: $status, context: $context, contextLinkId: $contextLinkId, contextLinkIdElement: $contextLinkIdElement, occurrenceDateTime: $occurrenceDateTime, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrencePeriod: $occurrencePeriod, occurrenceTiming: $occurrenceTiming, requester: $requester, requesterLinkId: $requesterLinkId, requesterLinkIdElement: $requesterLinkIdElement, performerType: $performerType, performerRole: $performerRole, performer: $performer, performerLinkId: $performerLinkId, performerLinkIdElement: $performerLinkIdElement, reason: $reason, reasonLinkId: $reasonLinkId, reasonLinkIdElement: $reasonLinkIdElement, note: $note, securityLabelNumber: $securityLabelNumber, securityLabelNumberElement: $securityLabelNumberElement)';
   }
 
   @override
@@ -12766,6 +12997,9 @@ class _$_ContractAction extends _ContractAction {
             (identical(other.contextLinkIdElement, contextLinkIdElement) ||
                 const DeepCollectionEquality().equals(
                     other.contextLinkIdElement, contextLinkIdElement)) &&
+            (identical(other.occurrenceDateTime, occurrenceDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.occurrenceDateTime, occurrenceDateTime)) &&
             (identical(other.occurrenceDateTimeElement, occurrenceDateTimeElement) ||
                 const DeepCollectionEquality().equals(
                     other.occurrenceDateTimeElement,
@@ -12788,9 +13022,7 @@ class _$_ContractAction extends _ContractAction {
             (identical(other.performerType, performerType) ||
                 const DeepCollectionEquality()
                     .equals(other.performerType, performerType)) &&
-            (identical(other.performerRole, performerRole) ||
-                const DeepCollectionEquality()
-                    .equals(other.performerRole, performerRole)) &&
+            (identical(other.performerRole, performerRole) || const DeepCollectionEquality().equals(other.performerRole, performerRole)) &&
             (identical(other.performer, performer) || const DeepCollectionEquality().equals(other.performer, performer)) &&
             (identical(other.performerLinkId, performerLinkId) || const DeepCollectionEquality().equals(other.performerLinkId, performerLinkId)) &&
             (identical(other.performerLinkIdElement, performerLinkIdElement) || const DeepCollectionEquality().equals(other.performerLinkIdElement, performerLinkIdElement)) &&
@@ -12819,6 +13051,7 @@ class _$_ContractAction extends _ContractAction {
       const DeepCollectionEquality().hash(context) ^
       const DeepCollectionEquality().hash(contextLinkId) ^
       const DeepCollectionEquality().hash(contextLinkIdElement) ^
+      const DeepCollectionEquality().hash(occurrenceDateTime) ^
       const DeepCollectionEquality().hash(occurrenceDateTimeElement) ^
       const DeepCollectionEquality().hash(occurrencePeriod) ^
       const DeepCollectionEquality().hash(occurrenceTiming) ^
@@ -12871,6 +13104,7 @@ abstract class _ContractAction extends ContractAction {
       List<String> contextLinkId,
       @JsonKey(name: '_contextLinkId')
           Element contextLinkIdElement,
+      FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           Element occurrenceDateTimeElement,
       Period occurrencePeriod,
@@ -12929,6 +13163,8 @@ abstract class _ContractAction extends ContractAction {
   @override
   @JsonKey(name: '_contextLinkId')
   Element get contextLinkIdElement;
+  @override
+  FhirDateTime get occurrenceDateTime;
   @override
   @JsonKey(name: '_occurrenceDateTime')
   Element get occurrenceDateTimeElement;
@@ -16231,6 +16467,7 @@ abstract class $ExplanationOfBenefitRelatedCopyWith<$Res> {
 
   $ReferenceCopyWith<$Res> get claim;
   $CodeableConceptCopyWith<$Res> get relationship;
+  $IdentifierCopyWith<$Res> get reference;
 }
 
 class _$ExplanationOfBenefitRelatedCopyWithImpl<$Res>
@@ -16286,6 +16523,16 @@ class _$ExplanationOfBenefitRelatedCopyWithImpl<$Res>
       return _then(_value.copyWith(relationship: value));
     });
   }
+
+  @override
+  $IdentifierCopyWith<$Res> get reference {
+    if (_value.reference == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.reference, (value) {
+      return _then(_value.copyWith(reference: value));
+    });
+  }
 }
 
 abstract class _$ExplanationOfBenefitRelatedCopyWith<$Res>
@@ -16307,6 +16554,8 @@ abstract class _$ExplanationOfBenefitRelatedCopyWith<$Res>
   $ReferenceCopyWith<$Res> get claim;
   @override
   $CodeableConceptCopyWith<$Res> get relationship;
+  @override
+  $IdentifierCopyWith<$Res> get reference;
 }
 
 class __$ExplanationOfBenefitRelatedCopyWithImpl<$Res>
@@ -17137,9 +17386,12 @@ class _$ExplanationOfBenefitSupportingInfoTearOff {
       @JsonKey(name: '_sequence') Element sequenceElement,
       @required CodeableConcept category,
       CodeableConcept code,
+      Date timingDate,
       @JsonKey(name: '_timingDate') Element timingDateElement,
       Period timingPeriod,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
       Quantity valueQuantity,
       Attachment valueAttachment,
@@ -17153,9 +17405,12 @@ class _$ExplanationOfBenefitSupportingInfoTearOff {
       sequenceElement: sequenceElement,
       category: category,
       code: code,
+      timingDate: timingDate,
       timingDateElement: timingDateElement,
       timingPeriod: timingPeriod,
+      valueBoolean: valueBoolean,
       valueBooleanElement: valueBooleanElement,
+      valueString: valueString,
       valueStringElement: valueStringElement,
       valueQuantity: valueQuantity,
       valueAttachment: valueAttachment,
@@ -17179,11 +17434,14 @@ mixin _$ExplanationOfBenefitSupportingInfo {
   Element get sequenceElement;
   CodeableConcept get category;
   CodeableConcept get code;
+  Date get timingDate;
   @JsonKey(name: '_timingDate')
   Element get timingDateElement;
   Period get timingPeriod;
+  Boolean get valueBoolean;
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
+  String get valueString;
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
   Quantity get valueQuantity;
@@ -17209,9 +17467,12 @@ abstract class $ExplanationOfBenefitSupportingInfoCopyWith<$Res> {
       @JsonKey(name: '_sequence') Element sequenceElement,
       CodeableConcept category,
       CodeableConcept code,
+      Date timingDate,
       @JsonKey(name: '_timingDate') Element timingDateElement,
       Period timingPeriod,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
       Quantity valueQuantity,
       Attachment valueAttachment,
@@ -17248,9 +17509,12 @@ class _$ExplanationOfBenefitSupportingInfoCopyWithImpl<$Res>
     Object sequenceElement = freezed,
     Object category = freezed,
     Object code = freezed,
+    Object timingDate = freezed,
     Object timingDateElement = freezed,
     Object timingPeriod = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
     Object valueQuantity = freezed,
     Object valueAttachment = freezed,
@@ -17272,15 +17536,22 @@ class _$ExplanationOfBenefitSupportingInfoCopyWithImpl<$Res>
       category:
           category == freezed ? _value.category : category as CodeableConcept,
       code: code == freezed ? _value.code : code as CodeableConcept,
+      timingDate:
+          timingDate == freezed ? _value.timingDate : timingDate as Date,
       timingDateElement: timingDateElement == freezed
           ? _value.timingDateElement
           : timingDateElement as Element,
       timingPeriod: timingPeriod == freezed
           ? _value.timingPeriod
           : timingPeriod as Period,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
@@ -17423,9 +17694,12 @@ abstract class _$ExplanationOfBenefitSupportingInfoCopyWith<$Res>
       @JsonKey(name: '_sequence') Element sequenceElement,
       CodeableConcept category,
       CodeableConcept code,
+      Date timingDate,
       @JsonKey(name: '_timingDate') Element timingDateElement,
       Period timingPeriod,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
       Quantity valueQuantity,
       Attachment valueAttachment,
@@ -17477,9 +17751,12 @@ class __$ExplanationOfBenefitSupportingInfoCopyWithImpl<$Res>
     Object sequenceElement = freezed,
     Object category = freezed,
     Object code = freezed,
+    Object timingDate = freezed,
     Object timingDateElement = freezed,
     Object timingPeriod = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
     Object valueQuantity = freezed,
     Object valueAttachment = freezed,
@@ -17501,15 +17778,22 @@ class __$ExplanationOfBenefitSupportingInfoCopyWithImpl<$Res>
       category:
           category == freezed ? _value.category : category as CodeableConcept,
       code: code == freezed ? _value.code : code as CodeableConcept,
+      timingDate:
+          timingDate == freezed ? _value.timingDate : timingDate as Date,
       timingDateElement: timingDateElement == freezed
           ? _value.timingDateElement
           : timingDateElement as Element,
       timingPeriod: timingPeriod == freezed
           ? _value.timingPeriod
           : timingPeriod as Period,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
@@ -17538,9 +17822,12 @@ class _$_ExplanationOfBenefitSupportingInfo
       @JsonKey(name: '_sequence') this.sequenceElement,
       @required this.category,
       this.code,
+      this.timingDate,
       @JsonKey(name: '_timingDate') this.timingDateElement,
       this.timingPeriod,
+      this.valueBoolean,
       @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+      this.valueString,
       @JsonKey(name: '_valueString') this.valueStringElement,
       this.valueQuantity,
       this.valueAttachment,
@@ -17570,13 +17857,19 @@ class _$_ExplanationOfBenefitSupportingInfo
   @override
   final CodeableConcept code;
   @override
+  final Date timingDate;
+  @override
   @JsonKey(name: '_timingDate')
   final Element timingDateElement;
   @override
   final Period timingPeriod;
   @override
+  final Boolean valueBoolean;
+  @override
   @JsonKey(name: '_valueBoolean')
   final Element valueBooleanElement;
+  @override
+  final String valueString;
   @override
   @JsonKey(name: '_valueString')
   final Element valueStringElement;
@@ -17591,7 +17884,7 @@ class _$_ExplanationOfBenefitSupportingInfo
 
   @override
   String toString() {
-    return 'ExplanationOfBenefitSupportingInfo(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, sequence: $sequence, sequenceElement: $sequenceElement, category: $category, code: $code, timingDateElement: $timingDateElement, timingPeriod: $timingPeriod, valueBooleanElement: $valueBooleanElement, valueStringElement: $valueStringElement, valueQuantity: $valueQuantity, valueAttachment: $valueAttachment, valueReference: $valueReference, reason: $reason)';
+    return 'ExplanationOfBenefitSupportingInfo(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, sequence: $sequence, sequenceElement: $sequenceElement, category: $category, code: $code, timingDate: $timingDate, timingDateElement: $timingDateElement, timingPeriod: $timingPeriod, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueString: $valueString, valueStringElement: $valueStringElement, valueQuantity: $valueQuantity, valueAttachment: $valueAttachment, valueReference: $valueReference, reason: $reason)';
   }
 
   @override
@@ -17617,15 +17910,24 @@ class _$_ExplanationOfBenefitSupportingInfo
                     .equals(other.category, category)) &&
             (identical(other.code, code) ||
                 const DeepCollectionEquality().equals(other.code, code)) &&
+            (identical(other.timingDate, timingDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.timingDate, timingDate)) &&
             (identical(other.timingDateElement, timingDateElement) ||
                 const DeepCollectionEquality()
                     .equals(other.timingDateElement, timingDateElement)) &&
             (identical(other.timingPeriod, timingPeriod) ||
                 const DeepCollectionEquality()
                     .equals(other.timingPeriod, timingPeriod)) &&
+            (identical(other.valueBoolean, valueBoolean) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBoolean, valueBoolean)) &&
             (identical(other.valueBooleanElement, valueBooleanElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueBooleanElement, valueBooleanElement)) &&
+            (identical(other.valueString, valueString) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueString, valueString)) &&
             (identical(other.valueStringElement, valueStringElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueStringElement, valueStringElement)) &&
@@ -17652,9 +17954,12 @@ class _$_ExplanationOfBenefitSupportingInfo
       const DeepCollectionEquality().hash(sequenceElement) ^
       const DeepCollectionEquality().hash(category) ^
       const DeepCollectionEquality().hash(code) ^
+      const DeepCollectionEquality().hash(timingDate) ^
       const DeepCollectionEquality().hash(timingDateElement) ^
       const DeepCollectionEquality().hash(timingPeriod) ^
+      const DeepCollectionEquality().hash(valueBoolean) ^
       const DeepCollectionEquality().hash(valueBooleanElement) ^
+      const DeepCollectionEquality().hash(valueString) ^
       const DeepCollectionEquality().hash(valueStringElement) ^
       const DeepCollectionEquality().hash(valueQuantity) ^
       const DeepCollectionEquality().hash(valueAttachment) ^
@@ -17684,9 +17989,12 @@ abstract class _ExplanationOfBenefitSupportingInfo
       @JsonKey(name: '_sequence') Element sequenceElement,
       @required CodeableConcept category,
       CodeableConcept code,
+      Date timingDate,
       @JsonKey(name: '_timingDate') Element timingDateElement,
       Period timingPeriod,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
       Quantity valueQuantity,
       Attachment valueAttachment,
@@ -17714,13 +18022,19 @@ abstract class _ExplanationOfBenefitSupportingInfo
   @override
   CodeableConcept get code;
   @override
+  Date get timingDate;
+  @override
   @JsonKey(name: '_timingDate')
   Element get timingDateElement;
   @override
   Period get timingPeriod;
   @override
+  Boolean get valueBoolean;
+  @override
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
+  @override
+  String get valueString;
   @override
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
@@ -19305,6 +19619,7 @@ class _$ExplanationOfBenefitItemTearOff {
       @required CodeableConcept productOrService,
       List<CodeableConcept> modifier,
       List<CodeableConcept> programCode,
+      Date servicedDate,
       @JsonKey(name: '_servicedDate') Element servicedDateElement,
       Period servicedPeriod,
       CodeableConcept locationCodeableConcept,
@@ -19342,6 +19657,7 @@ class _$ExplanationOfBenefitItemTearOff {
       productOrService: productOrService,
       modifier: modifier,
       programCode: programCode,
+      servicedDate: servicedDate,
       servicedDateElement: servicedDateElement,
       servicedPeriod: servicedPeriod,
       locationCodeableConcept: locationCodeableConcept,
@@ -19392,6 +19708,7 @@ mixin _$ExplanationOfBenefitItem {
   CodeableConcept get productOrService;
   List<CodeableConcept> get modifier;
   List<CodeableConcept> get programCode;
+  Date get servicedDate;
   @JsonKey(name: '_servicedDate')
   Element get servicedDateElement;
   Period get servicedPeriod;
@@ -19441,6 +19758,7 @@ abstract class $ExplanationOfBenefitItemCopyWith<$Res> {
       CodeableConcept productOrService,
       List<CodeableConcept> modifier,
       List<CodeableConcept> programCode,
+      Date servicedDate,
       @JsonKey(name: '_servicedDate') Element servicedDateElement,
       Period servicedPeriod,
       CodeableConcept locationCodeableConcept,
@@ -19509,6 +19827,7 @@ class _$ExplanationOfBenefitItemCopyWithImpl<$Res>
     Object productOrService = freezed,
     Object modifier = freezed,
     Object programCode = freezed,
+    Object servicedDate = freezed,
     Object servicedDateElement = freezed,
     Object servicedPeriod = freezed,
     Object locationCodeableConcept = freezed,
@@ -19576,6 +19895,8 @@ class _$ExplanationOfBenefitItemCopyWithImpl<$Res>
       programCode: programCode == freezed
           ? _value.programCode
           : programCode as List<CodeableConcept>,
+      servicedDate:
+          servicedDate == freezed ? _value.servicedDate : servicedDate as Date,
       servicedDateElement: servicedDateElement == freezed
           ? _value.servicedDateElement
           : servicedDateElement as Element,
@@ -19839,6 +20160,7 @@ abstract class _$ExplanationOfBenefitItemCopyWith<$Res>
       CodeableConcept productOrService,
       List<CodeableConcept> modifier,
       List<CodeableConcept> programCode,
+      Date servicedDate,
       @JsonKey(name: '_servicedDate') Element servicedDateElement,
       Period servicedPeriod,
       CodeableConcept locationCodeableConcept,
@@ -19929,6 +20251,7 @@ class __$ExplanationOfBenefitItemCopyWithImpl<$Res>
     Object productOrService = freezed,
     Object modifier = freezed,
     Object programCode = freezed,
+    Object servicedDate = freezed,
     Object servicedDateElement = freezed,
     Object servicedPeriod = freezed,
     Object locationCodeableConcept = freezed,
@@ -19996,6 +20319,8 @@ class __$ExplanationOfBenefitItemCopyWithImpl<$Res>
       programCode: programCode == freezed
           ? _value.programCode
           : programCode as List<CodeableConcept>,
+      servicedDate:
+          servicedDate == freezed ? _value.servicedDate : servicedDate as Date,
       servicedDateElement: servicedDateElement == freezed
           ? _value.servicedDateElement
           : servicedDateElement as Element,
@@ -20064,6 +20389,7 @@ class _$_ExplanationOfBenefitItem extends _ExplanationOfBenefitItem {
       @required this.productOrService,
       this.modifier,
       this.programCode,
+      this.servicedDate,
       @JsonKey(name: '_servicedDate') this.servicedDateElement,
       this.servicedPeriod,
       this.locationCodeableConcept,
@@ -20131,6 +20457,8 @@ class _$_ExplanationOfBenefitItem extends _ExplanationOfBenefitItem {
   @override
   final List<CodeableConcept> programCode;
   @override
+  final Date servicedDate;
+  @override
   @JsonKey(name: '_servicedDate')
   final Element servicedDateElement;
   @override
@@ -20172,7 +20500,7 @@ class _$_ExplanationOfBenefitItem extends _ExplanationOfBenefitItem {
 
   @override
   String toString() {
-    return 'ExplanationOfBenefitItem(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, sequence: $sequence, sequenceElement: $sequenceElement, careTeamSequence: $careTeamSequence, careTeamSequenceElement: $careTeamSequenceElement, diagnosisSequence: $diagnosisSequence, diagnosisSequenceElement: $diagnosisSequenceElement, procedureSequence: $procedureSequence, procedureSequenceElement: $procedureSequenceElement, informationSequence: $informationSequence, informationSequenceElement: $informationSequenceElement, revenue: $revenue, category: $category, productOrService: $productOrService, modifier: $modifier, programCode: $programCode, servicedDateElement: $servicedDateElement, servicedPeriod: $servicedPeriod, locationCodeableConcept: $locationCodeableConcept, locationAddress: $locationAddress, locationReference: $locationReference, quantity: $quantity, unitPrice: $unitPrice, factor: $factor, factorElement: $factorElement, net: $net, udi: $udi, bodySite: $bodySite, subSite: $subSite, encounter: $encounter, noteNumber: $noteNumber, noteNumberElement: $noteNumberElement, adjudication: $adjudication, detail: $detail)';
+    return 'ExplanationOfBenefitItem(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, sequence: $sequence, sequenceElement: $sequenceElement, careTeamSequence: $careTeamSequence, careTeamSequenceElement: $careTeamSequenceElement, diagnosisSequence: $diagnosisSequence, diagnosisSequenceElement: $diagnosisSequenceElement, procedureSequence: $procedureSequence, procedureSequenceElement: $procedureSequenceElement, informationSequence: $informationSequence, informationSequenceElement: $informationSequenceElement, revenue: $revenue, category: $category, productOrService: $productOrService, modifier: $modifier, programCode: $programCode, servicedDate: $servicedDate, servicedDateElement: $servicedDateElement, servicedPeriod: $servicedPeriod, locationCodeableConcept: $locationCodeableConcept, locationAddress: $locationAddress, locationReference: $locationReference, quantity: $quantity, unitPrice: $unitPrice, factor: $factor, factorElement: $factorElement, net: $net, udi: $udi, bodySite: $bodySite, subSite: $subSite, encounter: $encounter, noteNumber: $noteNumber, noteNumberElement: $noteNumberElement, adjudication: $adjudication, detail: $detail)';
   }
 
   @override
@@ -20228,6 +20556,7 @@ class _$_ExplanationOfBenefitItem extends _ExplanationOfBenefitItem {
             (identical(other.productOrService, productOrService) || const DeepCollectionEquality().equals(other.productOrService, productOrService)) &&
             (identical(other.modifier, modifier) || const DeepCollectionEquality().equals(other.modifier, modifier)) &&
             (identical(other.programCode, programCode) || const DeepCollectionEquality().equals(other.programCode, programCode)) &&
+            (identical(other.servicedDate, servicedDate) || const DeepCollectionEquality().equals(other.servicedDate, servicedDate)) &&
             (identical(other.servicedDateElement, servicedDateElement) || const DeepCollectionEquality().equals(other.servicedDateElement, servicedDateElement)) &&
             (identical(other.servicedPeriod, servicedPeriod) || const DeepCollectionEquality().equals(other.servicedPeriod, servicedPeriod)) &&
             (identical(other.locationCodeableConcept, locationCodeableConcept) || const DeepCollectionEquality().equals(other.locationCodeableConcept, locationCodeableConcept)) &&
@@ -20269,6 +20598,7 @@ class _$_ExplanationOfBenefitItem extends _ExplanationOfBenefitItem {
       const DeepCollectionEquality().hash(productOrService) ^
       const DeepCollectionEquality().hash(modifier) ^
       const DeepCollectionEquality().hash(programCode) ^
+      const DeepCollectionEquality().hash(servicedDate) ^
       const DeepCollectionEquality().hash(servicedDateElement) ^
       const DeepCollectionEquality().hash(servicedPeriod) ^
       const DeepCollectionEquality().hash(locationCodeableConcept) ^
@@ -20320,6 +20650,7 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
       @required CodeableConcept productOrService,
       List<CodeableConcept> modifier,
       List<CodeableConcept> programCode,
+      Date servicedDate,
       @JsonKey(name: '_servicedDate') Element servicedDateElement,
       Period servicedPeriod,
       CodeableConcept locationCodeableConcept,
@@ -20384,6 +20715,8 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
   List<CodeableConcept> get modifier;
   @override
   List<CodeableConcept> get programCode;
+  @override
+  Date get servicedDate;
   @override
   @JsonKey(name: '_servicedDate')
   Element get servicedDateElement;
@@ -22138,6 +22471,7 @@ class _$ExplanationOfBenefitAddItemTearOff {
       @required CodeableConcept productOrService,
       List<CodeableConcept> modifier,
       List<CodeableConcept> programCode,
+      Date servicedDate,
       @JsonKey(name: '_servicedDate') Element servicedDateElement,
       Period servicedPeriod,
       CodeableConcept locationCodeableConcept,
@@ -22168,6 +22502,7 @@ class _$ExplanationOfBenefitAddItemTearOff {
       productOrService: productOrService,
       modifier: modifier,
       programCode: programCode,
+      servicedDate: servicedDate,
       servicedDateElement: servicedDateElement,
       servicedPeriod: servicedPeriod,
       locationCodeableConcept: locationCodeableConcept,
@@ -22209,6 +22544,7 @@ mixin _$ExplanationOfBenefitAddItem {
   CodeableConcept get productOrService;
   List<CodeableConcept> get modifier;
   List<CodeableConcept> get programCode;
+  Date get servicedDate;
   @JsonKey(name: '_servicedDate')
   Element get servicedDateElement;
   Period get servicedPeriod;
@@ -22253,6 +22589,7 @@ abstract class $ExplanationOfBenefitAddItemCopyWith<$Res> {
       CodeableConcept productOrService,
       List<CodeableConcept> modifier,
       List<CodeableConcept> programCode,
+      Date servicedDate,
       @JsonKey(name: '_servicedDate') Element servicedDateElement,
       Period servicedPeriod,
       CodeableConcept locationCodeableConcept,
@@ -22310,6 +22647,7 @@ class _$ExplanationOfBenefitAddItemCopyWithImpl<$Res>
     Object productOrService = freezed,
     Object modifier = freezed,
     Object programCode = freezed,
+    Object servicedDate = freezed,
     Object servicedDateElement = freezed,
     Object servicedPeriod = freezed,
     Object locationCodeableConcept = freezed,
@@ -22364,6 +22702,8 @@ class _$ExplanationOfBenefitAddItemCopyWithImpl<$Res>
       programCode: programCode == freezed
           ? _value.programCode
           : programCode as List<CodeableConcept>,
+      servicedDate:
+          servicedDate == freezed ? _value.servicedDate : servicedDate as Date,
       servicedDateElement: servicedDateElement == freezed
           ? _value.servicedDateElement
           : servicedDateElement as Element,
@@ -22579,6 +22919,7 @@ abstract class _$ExplanationOfBenefitAddItemCopyWith<$Res>
       CodeableConcept productOrService,
       List<CodeableConcept> modifier,
       List<CodeableConcept> programCode,
+      Date servicedDate,
       @JsonKey(name: '_servicedDate') Element servicedDateElement,
       Period servicedPeriod,
       CodeableConcept locationCodeableConcept,
@@ -22655,6 +22996,7 @@ class __$ExplanationOfBenefitAddItemCopyWithImpl<$Res>
     Object productOrService = freezed,
     Object modifier = freezed,
     Object programCode = freezed,
+    Object servicedDate = freezed,
     Object servicedDateElement = freezed,
     Object servicedPeriod = freezed,
     Object locationCodeableConcept = freezed,
@@ -22709,6 +23051,8 @@ class __$ExplanationOfBenefitAddItemCopyWithImpl<$Res>
       programCode: programCode == freezed
           ? _value.programCode
           : programCode as List<CodeableConcept>,
+      servicedDate:
+          servicedDate == freezed ? _value.servicedDate : servicedDate as Date,
       servicedDateElement: servicedDateElement == freezed
           ? _value.servicedDateElement
           : servicedDateElement as Element,
@@ -22768,6 +23112,7 @@ class _$_ExplanationOfBenefitAddItem extends _ExplanationOfBenefitAddItem {
       @required this.productOrService,
       this.modifier,
       this.programCode,
+      this.servicedDate,
       @JsonKey(name: '_servicedDate') this.servicedDateElement,
       this.servicedPeriod,
       this.locationCodeableConcept,
@@ -22821,6 +23166,8 @@ class _$_ExplanationOfBenefitAddItem extends _ExplanationOfBenefitAddItem {
   @override
   final List<CodeableConcept> programCode;
   @override
+  final Date servicedDate;
+  @override
   @JsonKey(name: '_servicedDate')
   final Element servicedDateElement;
   @override
@@ -22858,7 +23205,7 @@ class _$_ExplanationOfBenefitAddItem extends _ExplanationOfBenefitAddItem {
 
   @override
   String toString() {
-    return 'ExplanationOfBenefitAddItem(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, itemSequence: $itemSequence, itemSequenceElement: $itemSequenceElement, detailSequence: $detailSequence, detailSequenceElement: $detailSequenceElement, subDetailSequence: $subDetailSequence, subDetailSequenceElement: $subDetailSequenceElement, provider: $provider, productOrService: $productOrService, modifier: $modifier, programCode: $programCode, servicedDateElement: $servicedDateElement, servicedPeriod: $servicedPeriod, locationCodeableConcept: $locationCodeableConcept, locationAddress: $locationAddress, locationReference: $locationReference, quantity: $quantity, unitPrice: $unitPrice, factor: $factor, factorElement: $factorElement, net: $net, bodySite: $bodySite, subSite: $subSite, noteNumber: $noteNumber, noteNumberElement: $noteNumberElement, adjudication: $adjudication, detail: $detail)';
+    return 'ExplanationOfBenefitAddItem(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, itemSequence: $itemSequence, itemSequenceElement: $itemSequenceElement, detailSequence: $detailSequence, detailSequenceElement: $detailSequenceElement, subDetailSequence: $subDetailSequence, subDetailSequenceElement: $subDetailSequenceElement, provider: $provider, productOrService: $productOrService, modifier: $modifier, programCode: $programCode, servicedDate: $servicedDate, servicedDateElement: $servicedDateElement, servicedPeriod: $servicedPeriod, locationCodeableConcept: $locationCodeableConcept, locationAddress: $locationAddress, locationReference: $locationReference, quantity: $quantity, unitPrice: $unitPrice, factor: $factor, factorElement: $factorElement, net: $net, bodySite: $bodySite, subSite: $subSite, noteNumber: $noteNumber, noteNumberElement: $noteNumberElement, adjudication: $adjudication, detail: $detail)';
   }
 
   @override
@@ -22904,6 +23251,9 @@ class _$_ExplanationOfBenefitAddItem extends _ExplanationOfBenefitAddItem {
             (identical(other.programCode, programCode) ||
                 const DeepCollectionEquality()
                     .equals(other.programCode, programCode)) &&
+            (identical(other.servicedDate, servicedDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.servicedDate, servicedDate)) &&
             (identical(other.servicedDateElement, servicedDateElement) ||
                 const DeepCollectionEquality()
                     .equals(other.servicedDateElement, servicedDateElement)) &&
@@ -22917,8 +23267,7 @@ class _$_ExplanationOfBenefitAddItem extends _ExplanationOfBenefitAddItem {
                 const DeepCollectionEquality()
                     .equals(other.locationAddress, locationAddress)) &&
             (identical(other.locationReference, locationReference) ||
-                const DeepCollectionEquality()
-                    .equals(other.locationReference, locationReference)) &&
+                const DeepCollectionEquality().equals(other.locationReference, locationReference)) &&
             (identical(other.quantity, quantity) || const DeepCollectionEquality().equals(other.quantity, quantity)) &&
             (identical(other.unitPrice, unitPrice) || const DeepCollectionEquality().equals(other.unitPrice, unitPrice)) &&
             (identical(other.factor, factor) || const DeepCollectionEquality().equals(other.factor, factor)) &&
@@ -22948,6 +23297,7 @@ class _$_ExplanationOfBenefitAddItem extends _ExplanationOfBenefitAddItem {
       const DeepCollectionEquality().hash(productOrService) ^
       const DeepCollectionEquality().hash(modifier) ^
       const DeepCollectionEquality().hash(programCode) ^
+      const DeepCollectionEquality().hash(servicedDate) ^
       const DeepCollectionEquality().hash(servicedDateElement) ^
       const DeepCollectionEquality().hash(servicedPeriod) ^
       const DeepCollectionEquality().hash(locationCodeableConcept) ^
@@ -22993,6 +23343,7 @@ abstract class _ExplanationOfBenefitAddItem
           @required CodeableConcept productOrService,
           List<CodeableConcept> modifier,
           List<CodeableConcept> programCode,
+          Date servicedDate,
           @JsonKey(name: '_servicedDate') Element servicedDateElement,
           Period servicedPeriod,
           CodeableConcept locationCodeableConcept,
@@ -23044,6 +23395,8 @@ abstract class _ExplanationOfBenefitAddItem
   List<CodeableConcept> get modifier;
   @override
   List<CodeableConcept> get programCode;
+  @override
+  Date get servicedDate;
   @override
   @JsonKey(name: '_servicedDate')
   Element get servicedDateElement;
@@ -24431,6 +24784,7 @@ abstract class $ExplanationOfBenefitPaymentCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get adjustmentReason;
   $ElementCopyWith<$Res> get dateElement;
   $MoneyCopyWith<$Res> get amount;
+  $IdentifierCopyWith<$Res> get identifier;
 }
 
 class _$ExplanationOfBenefitPaymentCopyWithImpl<$Res>
@@ -24526,6 +24880,16 @@ class _$ExplanationOfBenefitPaymentCopyWithImpl<$Res>
       return _then(_value.copyWith(amount: value));
     });
   }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
 }
 
 abstract class _$ExplanationOfBenefitPaymentCopyWith<$Res>
@@ -24557,6 +24921,8 @@ abstract class _$ExplanationOfBenefitPaymentCopyWith<$Res>
   $ElementCopyWith<$Res> get dateElement;
   @override
   $MoneyCopyWith<$Res> get amount;
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
 }
 
 class __$ExplanationOfBenefitPaymentCopyWithImpl<$Res>
@@ -25726,9 +26092,12 @@ class _$ExplanationOfBenefitFinancialTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @required CodeableConcept type,
+      UnsignedInt allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt') Element allowedUnsignedIntElement,
+      String allowedString,
       @JsonKey(name: '_allowedString') Element allowedStringElement,
       Money allowedMoney,
+      UnsignedInt usedUnsignedInt,
       @JsonKey(name: '_usedUnsignedInt') Element usedUnsignedIntElement,
       Money usedMoney}) {
     return _ExplanationOfBenefitFinancial(
@@ -25736,9 +26105,12 @@ class _$ExplanationOfBenefitFinancialTearOff {
       extension_: extension_,
       modifierExtension: modifierExtension,
       type: type,
+      allowedUnsignedInt: allowedUnsignedInt,
       allowedUnsignedIntElement: allowedUnsignedIntElement,
+      allowedString: allowedString,
       allowedStringElement: allowedStringElement,
       allowedMoney: allowedMoney,
+      usedUnsignedInt: usedUnsignedInt,
       usedUnsignedIntElement: usedUnsignedIntElement,
       usedMoney: usedMoney,
     );
@@ -25754,11 +26126,14 @@ mixin _$ExplanationOfBenefitFinancial {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   CodeableConcept get type;
+  UnsignedInt get allowedUnsignedInt;
   @JsonKey(name: '_allowedUnsignedInt')
   Element get allowedUnsignedIntElement;
+  String get allowedString;
   @JsonKey(name: '_allowedString')
   Element get allowedStringElement;
   Money get allowedMoney;
+  UnsignedInt get usedUnsignedInt;
   @JsonKey(name: '_usedUnsignedInt')
   Element get usedUnsignedIntElement;
   Money get usedMoney;
@@ -25778,9 +26153,12 @@ abstract class $ExplanationOfBenefitFinancialCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept type,
+      UnsignedInt allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt') Element allowedUnsignedIntElement,
+      String allowedString,
       @JsonKey(name: '_allowedString') Element allowedStringElement,
       Money allowedMoney,
+      UnsignedInt usedUnsignedInt,
       @JsonKey(name: '_usedUnsignedInt') Element usedUnsignedIntElement,
       Money usedMoney});
 
@@ -25806,9 +26184,12 @@ class _$ExplanationOfBenefitFinancialCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object type = freezed,
+    Object allowedUnsignedInt = freezed,
     Object allowedUnsignedIntElement = freezed,
+    Object allowedString = freezed,
     Object allowedStringElement = freezed,
     Object allowedMoney = freezed,
+    Object usedUnsignedInt = freezed,
     Object usedUnsignedIntElement = freezed,
     Object usedMoney = freezed,
   }) {
@@ -25821,14 +26202,23 @@ class _$ExplanationOfBenefitFinancialCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       type: type == freezed ? _value.type : type as CodeableConcept,
+      allowedUnsignedInt: allowedUnsignedInt == freezed
+          ? _value.allowedUnsignedInt
+          : allowedUnsignedInt as UnsignedInt,
       allowedUnsignedIntElement: allowedUnsignedIntElement == freezed
           ? _value.allowedUnsignedIntElement
           : allowedUnsignedIntElement as Element,
+      allowedString: allowedString == freezed
+          ? _value.allowedString
+          : allowedString as String,
       allowedStringElement: allowedStringElement == freezed
           ? _value.allowedStringElement
           : allowedStringElement as Element,
       allowedMoney:
           allowedMoney == freezed ? _value.allowedMoney : allowedMoney as Money,
+      usedUnsignedInt: usedUnsignedInt == freezed
+          ? _value.usedUnsignedInt
+          : usedUnsignedInt as UnsignedInt,
       usedUnsignedIntElement: usedUnsignedIntElement == freezed
           ? _value.usedUnsignedIntElement
           : usedUnsignedIntElement as Element,
@@ -25909,9 +26299,12 @@ abstract class _$ExplanationOfBenefitFinancialCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept type,
+      UnsignedInt allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt') Element allowedUnsignedIntElement,
+      String allowedString,
       @JsonKey(name: '_allowedString') Element allowedStringElement,
       Money allowedMoney,
+      UnsignedInt usedUnsignedInt,
       @JsonKey(name: '_usedUnsignedInt') Element usedUnsignedIntElement,
       Money usedMoney});
 
@@ -25947,9 +26340,12 @@ class __$ExplanationOfBenefitFinancialCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object type = freezed,
+    Object allowedUnsignedInt = freezed,
     Object allowedUnsignedIntElement = freezed,
+    Object allowedString = freezed,
     Object allowedStringElement = freezed,
     Object allowedMoney = freezed,
+    Object usedUnsignedInt = freezed,
     Object usedUnsignedIntElement = freezed,
     Object usedMoney = freezed,
   }) {
@@ -25962,14 +26358,23 @@ class __$ExplanationOfBenefitFinancialCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       type: type == freezed ? _value.type : type as CodeableConcept,
+      allowedUnsignedInt: allowedUnsignedInt == freezed
+          ? _value.allowedUnsignedInt
+          : allowedUnsignedInt as UnsignedInt,
       allowedUnsignedIntElement: allowedUnsignedIntElement == freezed
           ? _value.allowedUnsignedIntElement
           : allowedUnsignedIntElement as Element,
+      allowedString: allowedString == freezed
+          ? _value.allowedString
+          : allowedString as String,
       allowedStringElement: allowedStringElement == freezed
           ? _value.allowedStringElement
           : allowedStringElement as Element,
       allowedMoney:
           allowedMoney == freezed ? _value.allowedMoney : allowedMoney as Money,
+      usedUnsignedInt: usedUnsignedInt == freezed
+          ? _value.usedUnsignedInt
+          : usedUnsignedInt as UnsignedInt,
       usedUnsignedIntElement: usedUnsignedIntElement == freezed
           ? _value.usedUnsignedIntElement
           : usedUnsignedIntElement as Element,
@@ -25985,9 +26390,12 @@ class _$_ExplanationOfBenefitFinancial extends _ExplanationOfBenefitFinancial {
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @required this.type,
+      this.allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt') this.allowedUnsignedIntElement,
+      this.allowedString,
       @JsonKey(name: '_allowedString') this.allowedStringElement,
       this.allowedMoney,
+      this.usedUnsignedInt,
       @JsonKey(name: '_usedUnsignedInt') this.usedUnsignedIntElement,
       this.usedMoney})
       : assert(type != null),
@@ -26007,13 +26415,19 @@ class _$_ExplanationOfBenefitFinancial extends _ExplanationOfBenefitFinancial {
   @override
   final CodeableConcept type;
   @override
+  final UnsignedInt allowedUnsignedInt;
+  @override
   @JsonKey(name: '_allowedUnsignedInt')
   final Element allowedUnsignedIntElement;
+  @override
+  final String allowedString;
   @override
   @JsonKey(name: '_allowedString')
   final Element allowedStringElement;
   @override
   final Money allowedMoney;
+  @override
+  final UnsignedInt usedUnsignedInt;
   @override
   @JsonKey(name: '_usedUnsignedInt')
   final Element usedUnsignedIntElement;
@@ -26022,7 +26436,7 @@ class _$_ExplanationOfBenefitFinancial extends _ExplanationOfBenefitFinancial {
 
   @override
   String toString() {
-    return 'ExplanationOfBenefitFinancial(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, allowedUnsignedIntElement: $allowedUnsignedIntElement, allowedStringElement: $allowedStringElement, allowedMoney: $allowedMoney, usedUnsignedIntElement: $usedUnsignedIntElement, usedMoney: $usedMoney)';
+    return 'ExplanationOfBenefitFinancial(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, allowedUnsignedInt: $allowedUnsignedInt, allowedUnsignedIntElement: $allowedUnsignedIntElement, allowedString: $allowedString, allowedStringElement: $allowedStringElement, allowedMoney: $allowedMoney, usedUnsignedInt: $usedUnsignedInt, usedUnsignedIntElement: $usedUnsignedIntElement, usedMoney: $usedMoney)';
   }
 
   @override
@@ -26039,17 +26453,26 @@ class _$_ExplanationOfBenefitFinancial extends _ExplanationOfBenefitFinancial {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)) &&
+            (identical(other.allowedUnsignedInt, allowedUnsignedInt) ||
+                const DeepCollectionEquality()
+                    .equals(other.allowedUnsignedInt, allowedUnsignedInt)) &&
             (identical(other.allowedUnsignedIntElement,
                     allowedUnsignedIntElement) ||
                 const DeepCollectionEquality().equals(
                     other.allowedUnsignedIntElement,
                     allowedUnsignedIntElement)) &&
+            (identical(other.allowedString, allowedString) ||
+                const DeepCollectionEquality()
+                    .equals(other.allowedString, allowedString)) &&
             (identical(other.allowedStringElement, allowedStringElement) ||
                 const DeepCollectionEquality().equals(
                     other.allowedStringElement, allowedStringElement)) &&
             (identical(other.allowedMoney, allowedMoney) ||
                 const DeepCollectionEquality()
                     .equals(other.allowedMoney, allowedMoney)) &&
+            (identical(other.usedUnsignedInt, usedUnsignedInt) ||
+                const DeepCollectionEquality()
+                    .equals(other.usedUnsignedInt, usedUnsignedInt)) &&
             (identical(other.usedUnsignedIntElement, usedUnsignedIntElement) ||
                 const DeepCollectionEquality().equals(
                     other.usedUnsignedIntElement, usedUnsignedIntElement)) &&
@@ -26065,9 +26488,12 @@ class _$_ExplanationOfBenefitFinancial extends _ExplanationOfBenefitFinancial {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(type) ^
+      const DeepCollectionEquality().hash(allowedUnsignedInt) ^
       const DeepCollectionEquality().hash(allowedUnsignedIntElement) ^
+      const DeepCollectionEquality().hash(allowedString) ^
       const DeepCollectionEquality().hash(allowedStringElement) ^
       const DeepCollectionEquality().hash(allowedMoney) ^
+      const DeepCollectionEquality().hash(usedUnsignedInt) ^
       const DeepCollectionEquality().hash(usedUnsignedIntElement) ^
       const DeepCollectionEquality().hash(usedMoney);
 
@@ -26090,9 +26516,12 @@ abstract class _ExplanationOfBenefitFinancial
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @required CodeableConcept type,
+      UnsignedInt allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt') Element allowedUnsignedIntElement,
+      String allowedString,
       @JsonKey(name: '_allowedString') Element allowedStringElement,
       Money allowedMoney,
+      UnsignedInt usedUnsignedInt,
       @JsonKey(name: '_usedUnsignedInt') Element usedUnsignedIntElement,
       Money usedMoney}) = _$_ExplanationOfBenefitFinancial;
 
@@ -26109,13 +26538,19 @@ abstract class _ExplanationOfBenefitFinancial
   @override
   CodeableConcept get type;
   @override
+  UnsignedInt get allowedUnsignedInt;
+  @override
   @JsonKey(name: '_allowedUnsignedInt')
   Element get allowedUnsignedIntElement;
+  @override
+  String get allowedString;
   @override
   @JsonKey(name: '_allowedString')
   Element get allowedStringElement;
   @override
   Money get allowedMoney;
+  @override
+  UnsignedInt get usedUnsignedInt;
   @override
   @JsonKey(name: '_usedUnsignedInt')
   Element get usedUnsignedIntElement;

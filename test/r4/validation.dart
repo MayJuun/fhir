@@ -12,6 +12,7 @@ void main() async {
   for (var file in await dir.list().toList()) {
     var contents = await File(file.path).readAsString();
     var resource = fhir_r4.Resource.fromJson(json.decode(contents));
+    print(file);
     if (resource == null) {
       print(file);
     } else {

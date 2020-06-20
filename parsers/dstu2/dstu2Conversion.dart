@@ -45,7 +45,7 @@ void main() async {
             }
             text +=
                 '\n@freezed\nabstract class $newName with _\$$newName implements Resource {\n'
-                'const factory $newName ({\n';
+                'factory $newName ({\n';
             length = i;
           }
           if (obj['resource']['id'].split('.').length == i - 1 &&
@@ -55,7 +55,7 @@ void main() async {
                 last[0].toUpperCase() +
                 last.substring(1, last.length);
             text += '\n@freezed\nabstract class $newName with _\$$newName {\n'
-                'const factory $newName ({';
+                'factory $newName ({';
             length = i;
           }
           if (obj['resource']['id'].split('.').length == i - 1 &&
@@ -64,7 +64,7 @@ void main() async {
                 obj['resource']['id']
                     .substring(1, obj['resource']['id'].length);
             text += '\n@freezed\nabstract class $newName with _\$$newName {\n'
-                'const factory $newName ({';
+                'factory $newName ({';
             length = i;
           }
           var req = false;
