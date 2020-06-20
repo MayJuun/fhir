@@ -19,113 +19,89 @@ class _$ResearchStudyTearOff {
       {@required
       @JsonKey(defaultValue: 'className')
           String resourceType,
-      Id extension,
-      Meta extension,
-      FhirUri extension,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
-      Code extension,
+      Code language,
       @JsonKey(name: '_language')
           Element languageElement,
-      Narrative extension,
-      List<Resource> extension,
+      Narrative text,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension,
-      @JsonKey(name: 'extension')
-          List<Identifier> extension,
-      @JsonKey(name: 'extension')
-          String extension,
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
+      String title,
       @JsonKey(name: '_title')
           Element titleElement,
-      @JsonKey(name: 'extension')
-          List<Reference> extension,
-      @JsonKey(name: 'extension')
-          List<Reference> extension,
+      List<Reference> protocol,
+      List<Reference> partOf,
       @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
           ResearchStudyStatus status,
       @JsonKey(name: '_status')
           Element statusElement,
-      @JsonKey(name: 'extension')
-          CodeableConcept extension,
-      @JsonKey(name: 'extension')
-          CodeableConcept extension,
-      @JsonKey(name: 'extension')
-          List<CodeableConcept> extension,
-      @JsonKey(name: 'extension')
-          List<CodeableConcept> extension,
-      @JsonKey(name: 'extension')
-          List<CodeableConcept> extension,
-      @JsonKey(name: 'extension')
-          List<ContactDetail> extension,
-      @JsonKey(name: 'extension')
-          List<RelatedArtifact> extension,
-      @JsonKey(name: 'extension')
-          List<CodeableConcept> extension,
-      @JsonKey(name: 'extension')
-          List<CodeableConcept> extension,
-      @JsonKey(name: 'extension')
-          Markdown extension,
+      CodeableConcept primaryPurposeType,
+      CodeableConcept phase,
+      List<CodeableConcept> category,
+      List<CodeableConcept> focus,
+      List<CodeableConcept> condition,
+      List<ContactDetail> contact,
+      List<RelatedArtifact> relatedArtifact,
+      List<CodeableConcept> keyword,
+      List<CodeableConcept> location,
+      Markdown description,
       @JsonKey(name: '_description')
           Element descriptionElement,
-      @JsonKey(name: 'extension')
-          List<Reference> extension,
-      @JsonKey(name: 'extension')
-          Period extension,
-      @JsonKey(name: 'extension')
-          Reference extension,
-      @JsonKey(name: 'extension')
-          Reference extension,
-      @JsonKey(name: 'extension')
-          List<Reference> extension,
-      @JsonKey(name: 'extension')
-          CodeableConcept extension,
-      @JsonKey(name: 'extension')
-          List<Annotation> extension,
-      @JsonKey(name: 'extension')
-          List<ResearchStudyArm> extension,
-      @JsonKey(name: 'extension')
-          List<ResearchStudyObjective> extension}) {
+      List<Reference> enrollment,
+      Period period,
+      Reference sponsor,
+      Reference principalInvestigator,
+      List<Reference> site,
+      CodeableConcept reasonStopped,
+      List<Annotation> note,
+      List<ResearchStudyArm> arm,
+      List<ResearchStudyObjective> objective}) {
     return _ResearchStudy(
       resourceType: resourceType,
-      extension: extension,
-      extension: extension,
-      extension: extension,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
       implicitRulesElement: implicitRulesElement,
-      extension: extension,
+      language: language,
       languageElement: languageElement,
-      extension: extension,
-      extension: extension,
-      extension: extension,
-      extension: extension,
-      extension: extension,
-      extension: extension,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      identifier: identifier,
+      title: title,
       titleElement: titleElement,
-      extension: extension,
-      extension: extension,
+      protocol: protocol,
+      partOf: partOf,
       status: status,
       statusElement: statusElement,
-      extension: extension,
-      extension: extension,
-      extension: extension,
-      extension: extension,
-      extension: extension,
-      extension: extension,
-      extension: extension,
-      extension: extension,
-      extension: extension,
-      extension: extension,
+      primaryPurposeType: primaryPurposeType,
+      phase: phase,
+      category: category,
+      focus: focus,
+      condition: condition,
+      contact: contact,
+      relatedArtifact: relatedArtifact,
+      keyword: keyword,
+      location: location,
+      description: description,
       descriptionElement: descriptionElement,
-      extension: extension,
-      extension: extension,
-      extension: extension,
-      extension: extension,
-      extension: extension,
-      extension: extension,
-      extension: extension,
-      extension: extension,
-      extension: extension,
+      enrollment: enrollment,
+      period: period,
+      sponsor: sponsor,
+      principalInvestigator: principalInvestigator,
+      site: site,
+      reasonStopped: reasonStopped,
+      note: note,
+      arm: arm,
+      objective: objective,
     );
   }
 }
@@ -136,74 +112,50 @@ const $ResearchStudy = _$ResearchStudyTearOff();
 mixin _$ResearchStudy {
   @JsonKey(defaultValue: 'className')
   String get resourceType;
-  Id get extension;
-  Meta get extension;
-  FhirUri get extension;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
   @JsonKey(name: '_implicitRules')
   Element get implicitRulesElement;
-  Code get extension;
+  Code get language;
   @JsonKey(name: '_language')
   Element get languageElement;
-  Narrative get extension;
-  List<Resource> get extension;
+  Narrative get text;
+  List<Resource> get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension;
-  @JsonKey(name: 'extension')
-  List<FhirExtension> get extension;
-  @JsonKey(name: 'extension')
-  List<Identifier> get extension;
-  @JsonKey(name: 'extension')
-  String get extension;
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
+  List<Identifier> get identifier;
+  String get title;
   @JsonKey(name: '_title')
   Element get titleElement;
-  @JsonKey(name: 'extension')
-  List<Reference> get extension;
-  @JsonKey(name: 'extension')
-  List<Reference> get extension;
+  List<Reference> get protocol;
+  List<Reference> get partOf;
   @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
   ResearchStudyStatus get status;
   @JsonKey(name: '_status')
   Element get statusElement;
-  @JsonKey(name: 'extension')
-  CodeableConcept get extension;
-  @JsonKey(name: 'extension')
-  CodeableConcept get extension;
-  @JsonKey(name: 'extension')
-  List<CodeableConcept> get extension;
-  @JsonKey(name: 'extension')
-  List<CodeableConcept> get extension;
-  @JsonKey(name: 'extension')
-  List<CodeableConcept> get extension;
-  @JsonKey(name: 'extension')
-  List<ContactDetail> get extension;
-  @JsonKey(name: 'extension')
-  List<RelatedArtifact> get extension;
-  @JsonKey(name: 'extension')
-  List<CodeableConcept> get extension;
-  @JsonKey(name: 'extension')
-  List<CodeableConcept> get extension;
-  @JsonKey(name: 'extension')
-  Markdown get extension;
+  CodeableConcept get primaryPurposeType;
+  CodeableConcept get phase;
+  List<CodeableConcept> get category;
+  List<CodeableConcept> get focus;
+  List<CodeableConcept> get condition;
+  List<ContactDetail> get contact;
+  List<RelatedArtifact> get relatedArtifact;
+  List<CodeableConcept> get keyword;
+  List<CodeableConcept> get location;
+  Markdown get description;
   @JsonKey(name: '_description')
   Element get descriptionElement;
-  @JsonKey(name: 'extension')
-  List<Reference> get extension;
-  @JsonKey(name: 'extension')
-  Period get extension;
-  @JsonKey(name: 'extension')
-  Reference get extension;
-  @JsonKey(name: 'extension')
-  Reference get extension;
-  @JsonKey(name: 'extension')
-  List<Reference> get extension;
-  @JsonKey(name: 'extension')
-  CodeableConcept get extension;
-  @JsonKey(name: 'extension')
-  List<Annotation> get extension;
-  @JsonKey(name: 'extension')
-  List<ResearchStudyArm> get extension;
-  @JsonKey(name: 'extension')
-  List<ResearchStudyObjective> get extension;
+  List<Reference> get enrollment;
+  Period get period;
+  Reference get sponsor;
+  Reference get principalInvestigator;
+  List<Reference> get site;
+  CodeableConcept get reasonStopped;
+  List<Annotation> get note;
+  List<ResearchStudyArm> get arm;
+  List<ResearchStudyObjective> get objective;
 
   Map<String, dynamic> toJson();
   $ResearchStudyCopyWith<ResearchStudy> get copyWith;
@@ -216,328 +168,64 @@ abstract class $ResearchStudyCopyWith<$Res> {
   $Res call(
       {@JsonKey(defaultValue: 'className')
           String resourceType,
-      Id extension,
-      Meta extension,
-      FhirUri extension,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
-      Code extension,
+      Code language,
       @JsonKey(name: '_language')
           Element languageElement,
-      Narrative extension,
-      List<Resource> extension,
+      Narrative text,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension,
-      @JsonKey(name: 'extension')
-          List<Identifier> extension,
-      @JsonKey(name: 'extension')
-          String extension,
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
+      String title,
       @JsonKey(name: '_title')
           Element titleElement,
-      @JsonKey(name: 'extension')
-          List<Reference> extension,
-      @JsonKey(name: 'extension')
-          List<Reference> extension,
+      List<Reference> protocol,
+      List<Reference> partOf,
       @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
           ResearchStudyStatus status,
       @JsonKey(name: '_status')
           Element statusElement,
-      @JsonKey(name: 'extension')
-          CodeableConcept extension,
-      @JsonKey(name: 'extension')
-          CodeableConcept extension,
-      @JsonKey(name: 'extension')
-          List<CodeableConcept> extension,
-      @JsonKey(name: 'extension')
-          List<CodeableConcept> extension,
-      @JsonKey(name: 'extension')
-          List<CodeableConcept> extension,
-      @JsonKey(name: 'extension')
-          List<ContactDetail> extension,
-      @JsonKey(name: 'extension')
-          List<RelatedArtifact> extension,
-      @JsonKey(name: 'extension')
-          List<CodeableConcept> extension,
-      @JsonKey(name: 'extension')
-          List<CodeableConcept> extension,
-      @JsonKey(name: 'extension')
-          Markdown extension,
+      CodeableConcept primaryPurposeType,
+      CodeableConcept phase,
+      List<CodeableConcept> category,
+      List<CodeableConcept> focus,
+      List<CodeableConcept> condition,
+      List<ContactDetail> contact,
+      List<RelatedArtifact> relatedArtifact,
+      List<CodeableConcept> keyword,
+      List<CodeableConcept> location,
+      Markdown description,
       @JsonKey(name: '_description')
           Element descriptionElement,
-      @JsonKey(name: 'extension')
-          List<Reference> extension,
-      @JsonKey(name: 'extension')
-          Period extension,
-      @JsonKey(name: 'extension')
-          Reference extension,
-      @JsonKey(name: 'extension')
-          Reference extension,
-      @JsonKey(name: 'extension')
-          List<Reference> extension,
-      @JsonKey(name: 'extension')
-          CodeableConcept extension,
-      @JsonKey(name: 'extension')
-          List<Annotation> extension,
-      @JsonKey(name: 'extension')
-          List<ResearchStudyArm> extension,
-      @JsonKey(name: 'extension')
-          List<ResearchStudyObjective> extension});
+      List<Reference> enrollment,
+      Period period,
+      Reference sponsor,
+      Reference principalInvestigator,
+      List<Reference> site,
+      CodeableConcept reasonStopped,
+      List<Annotation> note,
+      List<ResearchStudyArm> arm,
+      List<ResearchStudyObjective> objective});
 
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
+  $MetaCopyWith<$Res> get meta;
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
+  $NarrativeCopyWith<$Res> get text;
   $ElementCopyWith<$Res> get titleElement;
   $ElementCopyWith<$Res> get statusElement;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
+  $CodeableConceptCopyWith<$Res> get primaryPurposeType;
+  $CodeableConceptCopyWith<$Res> get phase;
   $ElementCopyWith<$Res> get descriptionElement;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
+  $PeriodCopyWith<$Res> get period;
+  $ReferenceCopyWith<$Res> get sponsor;
+  $ReferenceCopyWith<$Res> get principalInvestigator;
+  $CodeableConceptCopyWith<$Res> get reasonStopped;
 }
 
 class _$ResearchStudyCopyWithImpl<$Res>
@@ -551,450 +239,137 @@ class _$ResearchStudyCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
     Object implicitRulesElement = freezed,
-    Object extension = freezed,
+    Object language = freezed,
     Object languageElement = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object identifier = freezed,
+    Object title = freezed,
     Object titleElement = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
+    Object protocol = freezed,
+    Object partOf = freezed,
     Object status = freezed,
     Object statusElement = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
+    Object primaryPurposeType = freezed,
+    Object phase = freezed,
+    Object category = freezed,
+    Object focus = freezed,
+    Object condition = freezed,
+    Object contact = freezed,
+    Object relatedArtifact = freezed,
+    Object keyword = freezed,
+    Object location = freezed,
+    Object description = freezed,
     Object descriptionElement = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
+    Object enrollment = freezed,
+    Object period = freezed,
+    Object sponsor = freezed,
+    Object principalInvestigator = freezed,
+    Object site = freezed,
+    Object reasonStopped = freezed,
+    Object note = freezed,
+    Object arm = freezed,
+    Object objective = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
-      extension: extension == freezed ? _value.extension : extension as Id,
-      extension: extension == freezed ? _value.extension : extension as Meta,
-      extension: extension == freezed ? _value.extension : extension as FhirUri,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement as Element,
-      extension: extension == freezed ? _value.extension : extension as Code,
+      language: language == freezed ? _value.language : language as Code,
       languageElement: languageElement == freezed
           ? _value.languageElement
           : languageElement as Element,
-      extension:
-          extension == freezed ? _value.extension : extension as Narrative,
-      extension:
-          extension == freezed ? _value.extension : extension as List<Resource>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<Identifier>,
-      extension: extension == freezed ? _value.extension : extension as String,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
+      title: title == freezed ? _value.title : title as String,
       titleElement: titleElement == freezed
           ? _value.titleElement
           : titleElement as Element,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<Reference>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<Reference>,
+      protocol:
+          protocol == freezed ? _value.protocol : protocol as List<Reference>,
+      partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>,
       status: status == freezed ? _value.status : status as ResearchStudyStatus,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as CodeableConcept,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as CodeableConcept,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<CodeableConcept>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<CodeableConcept>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<CodeableConcept>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<ContactDetail>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<RelatedArtifact>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<CodeableConcept>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<CodeableConcept>,
-      extension:
-          extension == freezed ? _value.extension : extension as Markdown,
+      primaryPurposeType: primaryPurposeType == freezed
+          ? _value.primaryPurposeType
+          : primaryPurposeType as CodeableConcept,
+      phase: phase == freezed ? _value.phase : phase as CodeableConcept,
+      category: category == freezed
+          ? _value.category
+          : category as List<CodeableConcept>,
+      focus: focus == freezed ? _value.focus : focus as List<CodeableConcept>,
+      condition: condition == freezed
+          ? _value.condition
+          : condition as List<CodeableConcept>,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactDetail>,
+      relatedArtifact: relatedArtifact == freezed
+          ? _value.relatedArtifact
+          : relatedArtifact as List<RelatedArtifact>,
+      keyword: keyword == freezed
+          ? _value.keyword
+          : keyword as List<CodeableConcept>,
+      location: location == freezed
+          ? _value.location
+          : location as List<CodeableConcept>,
+      description:
+          description == freezed ? _value.description : description as Markdown,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<Reference>,
-      extension: extension == freezed ? _value.extension : extension as Period,
-      extension:
-          extension == freezed ? _value.extension : extension as Reference,
-      extension:
-          extension == freezed ? _value.extension : extension as Reference,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<Reference>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as CodeableConcept,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<Annotation>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<ResearchStudyArm>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<ResearchStudyObjective>,
+      enrollment: enrollment == freezed
+          ? _value.enrollment
+          : enrollment as List<Reference>,
+      period: period == freezed ? _value.period : period as Period,
+      sponsor: sponsor == freezed ? _value.sponsor : sponsor as Reference,
+      principalInvestigator: principalInvestigator == freezed
+          ? _value.principalInvestigator
+          : principalInvestigator as Reference,
+      site: site == freezed ? _value.site : site as List<Reference>,
+      reasonStopped: reasonStopped == freezed
+          ? _value.reasonStopped
+          : reasonStopped as CodeableConcept,
+      note: note == freezed ? _value.note : note as List<Annotation>,
+      arm: arm == freezed ? _value.arm : arm as List<ResearchStudyArm>,
+      objective: objective == freezed
+          ? _value.objective
+          : objective as List<ResearchStudyObjective>,
     ));
   }
 
   @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
       return null;
     }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
     });
   }
 
@@ -1019,312 +394,12 @@ class _$ResearchStudyCopyWithImpl<$Res>
   }
 
   @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
       return null;
     }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
     });
   }
 
@@ -1349,622 +424,22 @@ class _$ResearchStudyCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
+  $CodeableConceptCopyWith<$Res> get primaryPurposeType {
+    if (_value.primaryPurposeType == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
+    return $CodeableConceptCopyWith<$Res>(_value.primaryPurposeType, (value) {
+      return _then(_value.copyWith(primaryPurposeType: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
+  $CodeableConceptCopyWith<$Res> get phase {
+    if (_value.phase == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
+    return $CodeableConceptCopyWith<$Res>(_value.phase, (value) {
+      return _then(_value.copyWith(phase: value));
     });
   }
 
@@ -1979,1242 +454,42 @@ class _$ResearchStudyCopyWithImpl<$Res>
   }
 
   @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
       return null;
     }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
     });
   }
 
   @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
+  $ReferenceCopyWith<$Res> get sponsor {
+    if (_value.sponsor == null) {
       return null;
     }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
+    return $ReferenceCopyWith<$Res>(_value.sponsor, (value) {
+      return _then(_value.copyWith(sponsor: value));
     });
   }
 
   @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
+  $ReferenceCopyWith<$Res> get principalInvestigator {
+    if (_value.principalInvestigator == null) {
       return null;
     }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
+    return $ReferenceCopyWith<$Res>(_value.principalInvestigator, (value) {
+      return _then(_value.copyWith(principalInvestigator: value));
     });
   }
 
   @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
+  $CodeableConceptCopyWith<$Res> get reasonStopped {
+    if (_value.reasonStopped == null) {
       return null;
     }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
+    return $CodeableConceptCopyWith<$Res>(_value.reasonStopped, (value) {
+      return _then(_value.copyWith(reasonStopped: value));
     });
   }
 }
@@ -3228,101 +503,77 @@ abstract class _$ResearchStudyCopyWith<$Res>
   $Res call(
       {@JsonKey(defaultValue: 'className')
           String resourceType,
-      Id extension,
-      Meta extension,
-      FhirUri extension,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
-      Code extension,
+      Code language,
       @JsonKey(name: '_language')
           Element languageElement,
-      Narrative extension,
-      List<Resource> extension,
+      Narrative text,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension,
-      @JsonKey(name: 'extension')
-          List<Identifier> extension,
-      @JsonKey(name: 'extension')
-          String extension,
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
+      String title,
       @JsonKey(name: '_title')
           Element titleElement,
-      @JsonKey(name: 'extension')
-          List<Reference> extension,
-      @JsonKey(name: 'extension')
-          List<Reference> extension,
+      List<Reference> protocol,
+      List<Reference> partOf,
       @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
           ResearchStudyStatus status,
       @JsonKey(name: '_status')
           Element statusElement,
-      @JsonKey(name: 'extension')
-          CodeableConcept extension,
-      @JsonKey(name: 'extension')
-          CodeableConcept extension,
-      @JsonKey(name: 'extension')
-          List<CodeableConcept> extension,
-      @JsonKey(name: 'extension')
-          List<CodeableConcept> extension,
-      @JsonKey(name: 'extension')
-          List<CodeableConcept> extension,
-      @JsonKey(name: 'extension')
-          List<ContactDetail> extension,
-      @JsonKey(name: 'extension')
-          List<RelatedArtifact> extension,
-      @JsonKey(name: 'extension')
-          List<CodeableConcept> extension,
-      @JsonKey(name: 'extension')
-          List<CodeableConcept> extension,
-      @JsonKey(name: 'extension')
-          Markdown extension,
+      CodeableConcept primaryPurposeType,
+      CodeableConcept phase,
+      List<CodeableConcept> category,
+      List<CodeableConcept> focus,
+      List<CodeableConcept> condition,
+      List<ContactDetail> contact,
+      List<RelatedArtifact> relatedArtifact,
+      List<CodeableConcept> keyword,
+      List<CodeableConcept> location,
+      Markdown description,
       @JsonKey(name: '_description')
           Element descriptionElement,
-      @JsonKey(name: 'extension')
-          List<Reference> extension,
-      @JsonKey(name: 'extension')
-          Period extension,
-      @JsonKey(name: 'extension')
-          Reference extension,
-      @JsonKey(name: 'extension')
-          Reference extension,
-      @JsonKey(name: 'extension')
-          List<Reference> extension,
-      @JsonKey(name: 'extension')
-          CodeableConcept extension,
-      @JsonKey(name: 'extension')
-          List<Annotation> extension,
-      @JsonKey(name: 'extension')
-          List<ResearchStudyArm> extension,
-      @JsonKey(name: 'extension')
-          List<ResearchStudyObjective> extension});
+      List<Reference> enrollment,
+      Period period,
+      Reference sponsor,
+      Reference principalInvestigator,
+      List<Reference> site,
+      CodeableConcept reasonStopped,
+      List<Annotation> note,
+      List<ResearchStudyArm> arm,
+      List<ResearchStudyObjective> objective});
 
   @override
-  $MetaCopyWith<$Res> get extension;
+  $MetaCopyWith<$Res> get meta;
   @override
   $ElementCopyWith<$Res> get implicitRulesElement;
   @override
   $ElementCopyWith<$Res> get languageElement;
   @override
-  $NarrativeCopyWith<$Res> get extension;
+  $NarrativeCopyWith<$Res> get text;
   @override
   $ElementCopyWith<$Res> get titleElement;
   @override
   $ElementCopyWith<$Res> get statusElement;
   @override
-  $CodeableConceptCopyWith<$Res> get extension;
+  $CodeableConceptCopyWith<$Res> get primaryPurposeType;
   @override
-  $CodeableConceptCopyWith<$Res> get extension;
+  $CodeableConceptCopyWith<$Res> get phase;
   @override
   $ElementCopyWith<$Res> get descriptionElement;
   @override
-  $PeriodCopyWith<$Res> get extension;
+  $PeriodCopyWith<$Res> get period;
   @override
-  $ReferenceCopyWith<$Res> get extension;
+  $ReferenceCopyWith<$Res> get sponsor;
   @override
-  $ReferenceCopyWith<$Res> get extension;
+  $ReferenceCopyWith<$Res> get principalInvestigator;
   @override
-  $CodeableConceptCopyWith<$Res> get extension;
+  $CodeableConceptCopyWith<$Res> get reasonStopped;
 }
 
 class __$ResearchStudyCopyWithImpl<$Res>
@@ -3338,140 +589,127 @@ class __$ResearchStudyCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
     Object implicitRulesElement = freezed,
-    Object extension = freezed,
+    Object language = freezed,
     Object languageElement = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object identifier = freezed,
+    Object title = freezed,
     Object titleElement = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
+    Object protocol = freezed,
+    Object partOf = freezed,
     Object status = freezed,
     Object statusElement = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
+    Object primaryPurposeType = freezed,
+    Object phase = freezed,
+    Object category = freezed,
+    Object focus = freezed,
+    Object condition = freezed,
+    Object contact = freezed,
+    Object relatedArtifact = freezed,
+    Object keyword = freezed,
+    Object location = freezed,
+    Object description = freezed,
     Object descriptionElement = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
+    Object enrollment = freezed,
+    Object period = freezed,
+    Object sponsor = freezed,
+    Object principalInvestigator = freezed,
+    Object site = freezed,
+    Object reasonStopped = freezed,
+    Object note = freezed,
+    Object arm = freezed,
+    Object objective = freezed,
   }) {
     return _then(_ResearchStudy(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
-      extension: extension == freezed ? _value.extension : extension as Id,
-      extension: extension == freezed ? _value.extension : extension as Meta,
-      extension: extension == freezed ? _value.extension : extension as FhirUri,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement as Element,
-      extension: extension == freezed ? _value.extension : extension as Code,
+      language: language == freezed ? _value.language : language as Code,
       languageElement: languageElement == freezed
           ? _value.languageElement
           : languageElement as Element,
-      extension:
-          extension == freezed ? _value.extension : extension as Narrative,
-      extension:
-          extension == freezed ? _value.extension : extension as List<Resource>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<Identifier>,
-      extension: extension == freezed ? _value.extension : extension as String,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
+      title: title == freezed ? _value.title : title as String,
       titleElement: titleElement == freezed
           ? _value.titleElement
           : titleElement as Element,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<Reference>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<Reference>,
+      protocol:
+          protocol == freezed ? _value.protocol : protocol as List<Reference>,
+      partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>,
       status: status == freezed ? _value.status : status as ResearchStudyStatus,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as CodeableConcept,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as CodeableConcept,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<CodeableConcept>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<CodeableConcept>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<CodeableConcept>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<ContactDetail>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<RelatedArtifact>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<CodeableConcept>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<CodeableConcept>,
-      extension:
-          extension == freezed ? _value.extension : extension as Markdown,
+      primaryPurposeType: primaryPurposeType == freezed
+          ? _value.primaryPurposeType
+          : primaryPurposeType as CodeableConcept,
+      phase: phase == freezed ? _value.phase : phase as CodeableConcept,
+      category: category == freezed
+          ? _value.category
+          : category as List<CodeableConcept>,
+      focus: focus == freezed ? _value.focus : focus as List<CodeableConcept>,
+      condition: condition == freezed
+          ? _value.condition
+          : condition as List<CodeableConcept>,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactDetail>,
+      relatedArtifact: relatedArtifact == freezed
+          ? _value.relatedArtifact
+          : relatedArtifact as List<RelatedArtifact>,
+      keyword: keyword == freezed
+          ? _value.keyword
+          : keyword as List<CodeableConcept>,
+      location: location == freezed
+          ? _value.location
+          : location as List<CodeableConcept>,
+      description:
+          description == freezed ? _value.description : description as Markdown,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<Reference>,
-      extension: extension == freezed ? _value.extension : extension as Period,
-      extension:
-          extension == freezed ? _value.extension : extension as Reference,
-      extension:
-          extension == freezed ? _value.extension : extension as Reference,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<Reference>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as CodeableConcept,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<Annotation>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<ResearchStudyArm>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<ResearchStudyObjective>,
+      enrollment: enrollment == freezed
+          ? _value.enrollment
+          : enrollment as List<Reference>,
+      period: period == freezed ? _value.period : period as Period,
+      sponsor: sponsor == freezed ? _value.sponsor : sponsor as Reference,
+      principalInvestigator: principalInvestigator == freezed
+          ? _value.principalInvestigator
+          : principalInvestigator as Reference,
+      site: site == freezed ? _value.site : site as List<Reference>,
+      reasonStopped: reasonStopped == freezed
+          ? _value.reasonStopped
+          : reasonStopped as CodeableConcept,
+      note: note == freezed ? _value.note : note as List<Annotation>,
+      arm: arm == freezed ? _value.arm : arm as List<ResearchStudyArm>,
+      objective: objective == freezed
+          ? _value.objective
+          : objective as List<ResearchStudyObjective>,
     ));
   }
 }
@@ -3480,43 +718,43 @@ class __$ResearchStudyCopyWithImpl<$Res>
 class _$_ResearchStudy extends _ResearchStudy {
   _$_ResearchStudy(
       {@required @JsonKey(defaultValue: 'className') this.resourceType,
-      this.extension,
-      this.extension,
-      this.extension,
+      this.id,
+      this.meta,
+      this.implicitRules,
       @JsonKey(name: '_implicitRules') this.implicitRulesElement,
-      this.extension,
+      this.language,
       @JsonKey(name: '_language') this.languageElement,
-      this.extension,
-      this.extension,
-      @JsonKey(name: 'extension') this.extension,
-      @JsonKey(name: 'extension') this.extension,
-      @JsonKey(name: 'extension') this.extension,
-      @JsonKey(name: 'extension') this.extension,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.identifier,
+      this.title,
       @JsonKey(name: '_title') this.titleElement,
-      @JsonKey(name: 'extension') this.extension,
-      @JsonKey(name: 'extension') this.extension,
+      this.protocol,
+      this.partOf,
       @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown) this.status,
       @JsonKey(name: '_status') this.statusElement,
-      @JsonKey(name: 'extension') this.extension,
-      @JsonKey(name: 'extension') this.extension,
-      @JsonKey(name: 'extension') this.extension,
-      @JsonKey(name: 'extension') this.extension,
-      @JsonKey(name: 'extension') this.extension,
-      @JsonKey(name: 'extension') this.extension,
-      @JsonKey(name: 'extension') this.extension,
-      @JsonKey(name: 'extension') this.extension,
-      @JsonKey(name: 'extension') this.extension,
-      @JsonKey(name: 'extension') this.extension,
+      this.primaryPurposeType,
+      this.phase,
+      this.category,
+      this.focus,
+      this.condition,
+      this.contact,
+      this.relatedArtifact,
+      this.keyword,
+      this.location,
+      this.description,
       @JsonKey(name: '_description') this.descriptionElement,
-      @JsonKey(name: 'extension') this.extension,
-      @JsonKey(name: 'extension') this.extension,
-      @JsonKey(name: 'extension') this.extension,
-      @JsonKey(name: 'extension') this.extension,
-      @JsonKey(name: 'extension') this.extension,
-      @JsonKey(name: 'extension') this.extension,
-      @JsonKey(name: 'extension') this.extension,
-      @JsonKey(name: 'extension') this.extension,
-      @JsonKey(name: 'extension') this.extension})
+      this.enrollment,
+      this.period,
+      this.sponsor,
+      this.principalInvestigator,
+      this.site,
+      this.reasonStopped,
+      this.note,
+      this.arm,
+      this.objective})
       : assert(resourceType != null),
         super._();
 
@@ -3527,44 +765,39 @@ class _$_ResearchStudy extends _ResearchStudy {
   @JsonKey(defaultValue: 'className')
   final String resourceType;
   @override
-  final Id extension;
+  final Id id;
   @override
-  final Meta extension;
+  final Meta meta;
   @override
-  final FhirUri extension;
+  final FhirUri implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   final Element implicitRulesElement;
   @override
-  final Code extension;
+  final Code language;
   @override
   @JsonKey(name: '_language')
   final Element languageElement;
   @override
-  final Narrative extension;
+  final Narrative text;
   @override
-  final List<Resource> extension;
-  @override
-  @JsonKey(name: 'extension')
-  final List<FhirExtension> extension;
+  final List<Resource> contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension;
+  final List<FhirExtension> extension_;
   @override
-  @JsonKey(name: 'extension')
-  final List<Identifier> extension;
+  final List<FhirExtension> modifierExtension;
   @override
-  @JsonKey(name: 'extension')
-  final String extension;
+  final List<Identifier> identifier;
+  @override
+  final String title;
   @override
   @JsonKey(name: '_title')
   final Element titleElement;
   @override
-  @JsonKey(name: 'extension')
-  final List<Reference> extension;
+  final List<Reference> protocol;
   @override
-  @JsonKey(name: 'extension')
-  final List<Reference> extension;
+  final List<Reference> partOf;
   @override
   @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
   final ResearchStudyStatus status;
@@ -3572,69 +805,50 @@ class _$_ResearchStudy extends _ResearchStudy {
   @JsonKey(name: '_status')
   final Element statusElement;
   @override
-  @JsonKey(name: 'extension')
-  final CodeableConcept extension;
+  final CodeableConcept primaryPurposeType;
   @override
-  @JsonKey(name: 'extension')
-  final CodeableConcept extension;
+  final CodeableConcept phase;
   @override
-  @JsonKey(name: 'extension')
-  final List<CodeableConcept> extension;
+  final List<CodeableConcept> category;
   @override
-  @JsonKey(name: 'extension')
-  final List<CodeableConcept> extension;
+  final List<CodeableConcept> focus;
   @override
-  @JsonKey(name: 'extension')
-  final List<CodeableConcept> extension;
+  final List<CodeableConcept> condition;
   @override
-  @JsonKey(name: 'extension')
-  final List<ContactDetail> extension;
+  final List<ContactDetail> contact;
   @override
-  @JsonKey(name: 'extension')
-  final List<RelatedArtifact> extension;
+  final List<RelatedArtifact> relatedArtifact;
   @override
-  @JsonKey(name: 'extension')
-  final List<CodeableConcept> extension;
+  final List<CodeableConcept> keyword;
   @override
-  @JsonKey(name: 'extension')
-  final List<CodeableConcept> extension;
+  final List<CodeableConcept> location;
   @override
-  @JsonKey(name: 'extension')
-  final Markdown extension;
+  final Markdown description;
   @override
   @JsonKey(name: '_description')
   final Element descriptionElement;
   @override
-  @JsonKey(name: 'extension')
-  final List<Reference> extension;
+  final List<Reference> enrollment;
   @override
-  @JsonKey(name: 'extension')
-  final Period extension;
+  final Period period;
   @override
-  @JsonKey(name: 'extension')
-  final Reference extension;
+  final Reference sponsor;
   @override
-  @JsonKey(name: 'extension')
-  final Reference extension;
+  final Reference principalInvestigator;
   @override
-  @JsonKey(name: 'extension')
-  final List<Reference> extension;
+  final List<Reference> site;
   @override
-  @JsonKey(name: 'extension')
-  final CodeableConcept extension;
+  final CodeableConcept reasonStopped;
   @override
-  @JsonKey(name: 'extension')
-  final List<Annotation> extension;
+  final List<Annotation> note;
   @override
-  @JsonKey(name: 'extension')
-  final List<ResearchStudyArm> extension;
+  final List<ResearchStudyArm> arm;
   @override
-  @JsonKey(name: 'extension')
-  final List<ResearchStudyObjective> extension;
+  final List<ResearchStudyObjective> objective;
 
   @override
   String toString() {
-    return 'ResearchStudy(resourceType: $resourceType, extension: $extension, extension: $extension, extension: $extension, implicitRulesElement: $implicitRulesElement, extension: $extension, languageElement: $languageElement, extension: $extension, extension: $extension, extension: $extension, extension: $extension, extension: $extension, extension: $extension, titleElement: $titleElement, extension: $extension, extension: $extension, status: $status, statusElement: $statusElement, extension: $extension, extension: $extension, extension: $extension, extension: $extension, extension: $extension, extension: $extension, extension: $extension, extension: $extension, extension: $extension, extension: $extension, descriptionElement: $descriptionElement, extension: $extension, extension: $extension, extension: $extension, extension: $extension, extension: $extension, extension: $extension, extension: $extension, extension: $extension, extension: $extension)';
+    return 'ResearchStudy(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, title: $title, titleElement: $titleElement, protocol: $protocol, partOf: $partOf, status: $status, statusElement: $statusElement, primaryPurposeType: $primaryPurposeType, phase: $phase, category: $category, focus: $focus, condition: $condition, contact: $contact, relatedArtifact: $relatedArtifact, keyword: $keyword, location: $location, description: $description, descriptionElement: $descriptionElement, enrollment: $enrollment, period: $period, sponsor: $sponsor, principalInvestigator: $principalInvestigator, site: $site, reasonStopped: $reasonStopped, note: $note, arm: $arm, objective: $objective)';
   }
 
   @override
@@ -3644,127 +858,127 @@ class _$_ResearchStudy extends _ResearchStudy {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
-            (identical(other.extension, extension) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
-            (identical(other.extension, extension) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.implicitRules, implicitRules)) &&
             (identical(other.implicitRulesElement, implicitRulesElement) ||
                 const DeepCollectionEquality().equals(
                     other.implicitRulesElement, implicitRulesElement)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.language, language) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.language, language)) &&
             (identical(other.languageElement, languageElement) ||
                 const DeepCollectionEquality()
                     .equals(other.languageElement, languageElement)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
-            (identical(other.extension, extension) ||
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
-            (identical(other.extension, extension) ||
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
-            (identical(other.extension, extension) ||
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
-            (identical(other.extension, extension) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
-            (identical(other.extension, extension) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.identifier, identifier)) &&
+            (identical(other.title, title) ||
+                const DeepCollectionEquality().equals(other.title, title)) &&
             (identical(other.titleElement, titleElement) ||
                 const DeepCollectionEquality()
                     .equals(other.titleElement, titleElement)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.protocol, protocol) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
-            (identical(other.extension, extension) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.protocol, protocol)) &&
+            (identical(other.partOf, partOf) ||
+                const DeepCollectionEquality().equals(other.partOf, partOf)) &&
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
             (identical(other.statusElement, statusElement) ||
                 const DeepCollectionEquality()
                     .equals(other.statusElement, statusElement)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.primaryPurposeType, primaryPurposeType) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
-            (identical(other.extension, extension) ||
+                    .equals(other.primaryPurposeType, primaryPurposeType)) &&
+            (identical(other.phase, phase) ||
+                const DeepCollectionEquality().equals(other.phase, phase)) &&
+            (identical(other.category, category) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
-            (identical(other.extension, extension) ||
+                    .equals(other.category, category)) &&
+            (identical(other.focus, focus) ||
+                const DeepCollectionEquality().equals(other.focus, focus)) &&
+            (identical(other.condition, condition) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
-            (identical(other.extension, extension) ||
+                    .equals(other.condition, condition)) &&
+            (identical(other.contact, contact) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
-            (identical(other.extension, extension) || const DeepCollectionEquality().equals(other.extension, extension)) &&
-            (identical(other.extension, extension) || const DeepCollectionEquality().equals(other.extension, extension)) &&
-            (identical(other.extension, extension) || const DeepCollectionEquality().equals(other.extension, extension)) &&
-            (identical(other.extension, extension) || const DeepCollectionEquality().equals(other.extension, extension)) &&
-            (identical(other.extension, extension) || const DeepCollectionEquality().equals(other.extension, extension)) &&
-            (identical(other.extension, extension) || const DeepCollectionEquality().equals(other.extension, extension)) &&
+                    .equals(other.contact, contact)) &&
+            (identical(other.relatedArtifact, relatedArtifact) ||
+                const DeepCollectionEquality()
+                    .equals(other.relatedArtifact, relatedArtifact)) &&
+            (identical(other.keyword, keyword) ||
+                const DeepCollectionEquality().equals(other.keyword, keyword)) &&
+            (identical(other.location, location) || const DeepCollectionEquality().equals(other.location, location)) &&
+            (identical(other.description, description) || const DeepCollectionEquality().equals(other.description, description)) &&
             (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
-            (identical(other.extension, extension) || const DeepCollectionEquality().equals(other.extension, extension)) &&
-            (identical(other.extension, extension) || const DeepCollectionEquality().equals(other.extension, extension)) &&
-            (identical(other.extension, extension) || const DeepCollectionEquality().equals(other.extension, extension)) &&
-            (identical(other.extension, extension) || const DeepCollectionEquality().equals(other.extension, extension)) &&
-            (identical(other.extension, extension) || const DeepCollectionEquality().equals(other.extension, extension)) &&
-            (identical(other.extension, extension) || const DeepCollectionEquality().equals(other.extension, extension)) &&
-            (identical(other.extension, extension) || const DeepCollectionEquality().equals(other.extension, extension)) &&
-            (identical(other.extension, extension) || const DeepCollectionEquality().equals(other.extension, extension)) &&
-            (identical(other.extension, extension) || const DeepCollectionEquality().equals(other.extension, extension)));
+            (identical(other.enrollment, enrollment) || const DeepCollectionEquality().equals(other.enrollment, enrollment)) &&
+            (identical(other.period, period) || const DeepCollectionEquality().equals(other.period, period)) &&
+            (identical(other.sponsor, sponsor) || const DeepCollectionEquality().equals(other.sponsor, sponsor)) &&
+            (identical(other.principalInvestigator, principalInvestigator) || const DeepCollectionEquality().equals(other.principalInvestigator, principalInvestigator)) &&
+            (identical(other.site, site) || const DeepCollectionEquality().equals(other.site, site)) &&
+            (identical(other.reasonStopped, reasonStopped) || const DeepCollectionEquality().equals(other.reasonStopped, reasonStopped)) &&
+            (identical(other.note, note) || const DeepCollectionEquality().equals(other.note, note)) &&
+            (identical(other.arm, arm) || const DeepCollectionEquality().equals(other.arm, arm)) &&
+            (identical(other.objective, objective) || const DeepCollectionEquality().equals(other.objective, objective)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
       const DeepCollectionEquality().hash(implicitRulesElement) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(languageElement) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(identifier) ^
+      const DeepCollectionEquality().hash(title) ^
       const DeepCollectionEquality().hash(titleElement) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(protocol) ^
+      const DeepCollectionEquality().hash(partOf) ^
       const DeepCollectionEquality().hash(status) ^
       const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(primaryPurposeType) ^
+      const DeepCollectionEquality().hash(phase) ^
+      const DeepCollectionEquality().hash(category) ^
+      const DeepCollectionEquality().hash(focus) ^
+      const DeepCollectionEquality().hash(condition) ^
+      const DeepCollectionEquality().hash(contact) ^
+      const DeepCollectionEquality().hash(relatedArtifact) ^
+      const DeepCollectionEquality().hash(keyword) ^
+      const DeepCollectionEquality().hash(location) ^
+      const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(descriptionElement) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension);
+      const DeepCollectionEquality().hash(enrollment) ^
+      const DeepCollectionEquality().hash(period) ^
+      const DeepCollectionEquality().hash(sponsor) ^
+      const DeepCollectionEquality().hash(principalInvestigator) ^
+      const DeepCollectionEquality().hash(site) ^
+      const DeepCollectionEquality().hash(reasonStopped) ^
+      const DeepCollectionEquality().hash(note) ^
+      const DeepCollectionEquality().hash(arm) ^
+      const DeepCollectionEquality().hash(objective);
 
   @override
   _$ResearchStudyCopyWith<_ResearchStudy> get copyWith =>
@@ -3782,74 +996,50 @@ abstract class _ResearchStudy extends ResearchStudy {
       {@required
       @JsonKey(defaultValue: 'className')
           String resourceType,
-      Id extension,
-      Meta extension,
-      FhirUri extension,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
-      Code extension,
+      Code language,
       @JsonKey(name: '_language')
           Element languageElement,
-      Narrative extension,
-      List<Resource> extension,
+      Narrative text,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension,
-      @JsonKey(name: 'extension')
-          List<Identifier> extension,
-      @JsonKey(name: 'extension')
-          String extension,
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
+      String title,
       @JsonKey(name: '_title')
           Element titleElement,
-      @JsonKey(name: 'extension')
-          List<Reference> extension,
-      @JsonKey(name: 'extension')
-          List<Reference> extension,
+      List<Reference> protocol,
+      List<Reference> partOf,
       @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
           ResearchStudyStatus status,
       @JsonKey(name: '_status')
           Element statusElement,
-      @JsonKey(name: 'extension')
-          CodeableConcept extension,
-      @JsonKey(name: 'extension')
-          CodeableConcept extension,
-      @JsonKey(name: 'extension')
-          List<CodeableConcept> extension,
-      @JsonKey(name: 'extension')
-          List<CodeableConcept> extension,
-      @JsonKey(name: 'extension')
-          List<CodeableConcept> extension,
-      @JsonKey(name: 'extension')
-          List<ContactDetail> extension,
-      @JsonKey(name: 'extension')
-          List<RelatedArtifact> extension,
-      @JsonKey(name: 'extension')
-          List<CodeableConcept> extension,
-      @JsonKey(name: 'extension')
-          List<CodeableConcept> extension,
-      @JsonKey(name: 'extension')
-          Markdown extension,
+      CodeableConcept primaryPurposeType,
+      CodeableConcept phase,
+      List<CodeableConcept> category,
+      List<CodeableConcept> focus,
+      List<CodeableConcept> condition,
+      List<ContactDetail> contact,
+      List<RelatedArtifact> relatedArtifact,
+      List<CodeableConcept> keyword,
+      List<CodeableConcept> location,
+      Markdown description,
       @JsonKey(name: '_description')
           Element descriptionElement,
-      @JsonKey(name: 'extension')
-          List<Reference> extension,
-      @JsonKey(name: 'extension')
-          Period extension,
-      @JsonKey(name: 'extension')
-          Reference extension,
-      @JsonKey(name: 'extension')
-          Reference extension,
-      @JsonKey(name: 'extension')
-          List<Reference> extension,
-      @JsonKey(name: 'extension')
-          CodeableConcept extension,
-      @JsonKey(name: 'extension')
-          List<Annotation> extension,
-      @JsonKey(name: 'extension')
-          List<ResearchStudyArm> extension,
-      @JsonKey(name: 'extension')
-          List<ResearchStudyObjective> extension}) = _$_ResearchStudy;
+      List<Reference> enrollment,
+      Period period,
+      Reference sponsor,
+      Reference principalInvestigator,
+      List<Reference> site,
+      CodeableConcept reasonStopped,
+      List<Annotation> note,
+      List<ResearchStudyArm> arm,
+      List<ResearchStudyObjective> objective}) = _$_ResearchStudy;
 
   factory _ResearchStudy.fromJson(Map<String, dynamic> json) =
       _$_ResearchStudy.fromJson;
@@ -3858,44 +1048,39 @@ abstract class _ResearchStudy extends ResearchStudy {
   @JsonKey(defaultValue: 'className')
   String get resourceType;
   @override
-  Id get extension;
+  Id get id;
   @override
-  Meta get extension;
+  Meta get meta;
   @override
-  FhirUri get extension;
+  FhirUri get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   Element get implicitRulesElement;
   @override
-  Code get extension;
+  Code get language;
   @override
   @JsonKey(name: '_language')
   Element get languageElement;
   @override
-  Narrative get extension;
+  Narrative get text;
   @override
-  List<Resource> get extension;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension> get extension;
+  List<Resource> get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension;
+  List<FhirExtension> get extension_;
   @override
-  @JsonKey(name: 'extension')
-  List<Identifier> get extension;
+  List<FhirExtension> get modifierExtension;
   @override
-  @JsonKey(name: 'extension')
-  String get extension;
+  List<Identifier> get identifier;
+  @override
+  String get title;
   @override
   @JsonKey(name: '_title')
   Element get titleElement;
   @override
-  @JsonKey(name: 'extension')
-  List<Reference> get extension;
+  List<Reference> get protocol;
   @override
-  @JsonKey(name: 'extension')
-  List<Reference> get extension;
+  List<Reference> get partOf;
   @override
   @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
   ResearchStudyStatus get status;
@@ -3903,65 +1088,46 @@ abstract class _ResearchStudy extends ResearchStudy {
   @JsonKey(name: '_status')
   Element get statusElement;
   @override
-  @JsonKey(name: 'extension')
-  CodeableConcept get extension;
+  CodeableConcept get primaryPurposeType;
   @override
-  @JsonKey(name: 'extension')
-  CodeableConcept get extension;
+  CodeableConcept get phase;
   @override
-  @JsonKey(name: 'extension')
-  List<CodeableConcept> get extension;
+  List<CodeableConcept> get category;
   @override
-  @JsonKey(name: 'extension')
-  List<CodeableConcept> get extension;
+  List<CodeableConcept> get focus;
   @override
-  @JsonKey(name: 'extension')
-  List<CodeableConcept> get extension;
+  List<CodeableConcept> get condition;
   @override
-  @JsonKey(name: 'extension')
-  List<ContactDetail> get extension;
+  List<ContactDetail> get contact;
   @override
-  @JsonKey(name: 'extension')
-  List<RelatedArtifact> get extension;
+  List<RelatedArtifact> get relatedArtifact;
   @override
-  @JsonKey(name: 'extension')
-  List<CodeableConcept> get extension;
+  List<CodeableConcept> get keyword;
   @override
-  @JsonKey(name: 'extension')
-  List<CodeableConcept> get extension;
+  List<CodeableConcept> get location;
   @override
-  @JsonKey(name: 'extension')
-  Markdown get extension;
+  Markdown get description;
   @override
   @JsonKey(name: '_description')
   Element get descriptionElement;
   @override
-  @JsonKey(name: 'extension')
-  List<Reference> get extension;
+  List<Reference> get enrollment;
   @override
-  @JsonKey(name: 'extension')
-  Period get extension;
+  Period get period;
   @override
-  @JsonKey(name: 'extension')
-  Reference get extension;
+  Reference get sponsor;
   @override
-  @JsonKey(name: 'extension')
-  Reference get extension;
+  Reference get principalInvestigator;
   @override
-  @JsonKey(name: 'extension')
-  List<Reference> get extension;
+  List<Reference> get site;
   @override
-  @JsonKey(name: 'extension')
-  CodeableConcept get extension;
+  CodeableConcept get reasonStopped;
   @override
-  @JsonKey(name: 'extension')
-  List<Annotation> get extension;
+  List<Annotation> get note;
   @override
-  @JsonKey(name: 'extension')
-  List<ResearchStudyArm> get extension;
+  List<ResearchStudyArm> get arm;
   @override
-  @JsonKey(name: 'extension')
-  List<ResearchStudyObjective> get extension;
+  List<ResearchStudyObjective> get objective;
   @override
   _$ResearchStudyCopyWith<_ResearchStudy> get copyWith;
 }
@@ -3974,22 +1140,22 @@ class _$ResearchStudyArmTearOff {
   const _$ResearchStudyArmTearOff();
 
   _ResearchStudyArm call(
-      {String extension,
-      @JsonKey(name: 'extension') List<FhirExtension> extension,
-      @JsonKey(name: 'extension') List<FhirExtension> extension,
-      @JsonKey(name: 'extension') String extension,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      String name,
       @JsonKey(name: '_name') Element nameElement,
-      @JsonKey(name: 'extension') CodeableConcept extension,
-      @JsonKey(name: 'extension') String extension,
+      CodeableConcept type,
+      String description,
       @JsonKey(name: '_description') Element descriptionElement}) {
     return _ResearchStudyArm(
-      extension: extension,
-      extension: extension,
-      extension: extension,
-      extension: extension,
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      name: name,
       nameElement: nameElement,
-      extension: extension,
-      extension: extension,
+      type: type,
+      description: description,
       descriptionElement: descriptionElement,
     );
   }
@@ -3999,19 +1165,15 @@ class _$ResearchStudyArmTearOff {
 const $ResearchStudyArm = _$ResearchStudyArmTearOff();
 
 mixin _$ResearchStudyArm {
-  String get extension;
+  String get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension;
-  @JsonKey(name: 'extension')
-  List<FhirExtension> get extension;
-  @JsonKey(name: 'extension')
-  String get extension;
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
+  String get name;
   @JsonKey(name: '_name')
   Element get nameElement;
-  @JsonKey(name: 'extension')
-  CodeableConcept get extension;
-  @JsonKey(name: 'extension')
-  String get extension;
+  CodeableConcept get type;
+  String get description;
   @JsonKey(name: '_description')
   Element get descriptionElement;
 
@@ -4024,22 +1186,17 @@ abstract class $ResearchStudyArmCopyWith<$Res> {
           ResearchStudyArm value, $Res Function(ResearchStudyArm) then) =
       _$ResearchStudyArmCopyWithImpl<$Res>;
   $Res call(
-      {String extension,
-      @JsonKey(name: 'extension') List<FhirExtension> extension,
-      @JsonKey(name: 'extension') List<FhirExtension> extension,
-      @JsonKey(name: 'extension') String extension,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      String name,
       @JsonKey(name: '_name') Element nameElement,
-      @JsonKey(name: 'extension') CodeableConcept extension,
-      @JsonKey(name: 'extension') String extension,
+      CodeableConcept type,
+      String description,
       @JsonKey(name: '_description') Element descriptionElement});
 
   $ElementCopyWith<$Res> get nameElement;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
+  $CodeableConceptCopyWith<$Res> get type;
   $ElementCopyWith<$Res> get descriptionElement;
 }
 
@@ -4053,30 +1210,29 @@ class _$ResearchStudyArmCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object name = freezed,
     Object nameElement = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
+    Object type = freezed,
+    Object description = freezed,
     Object descriptionElement = freezed,
   }) {
     return _then(_value.copyWith(
-      extension: extension == freezed ? _value.extension : extension as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
-      extension: extension == freezed ? _value.extension : extension as String,
+      id: id == freezed ? _value.id : id as String,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      name: name == freezed ? _value.name : name as String,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as CodeableConcept,
-      extension: extension == freezed ? _value.extension : extension as String,
+      type: type == freezed ? _value.type : type as CodeableConcept,
+      description:
+          description == freezed ? _value.description : description as String,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
@@ -4094,62 +1250,12 @@ class _$ResearchStudyArmCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
     });
   }
 
@@ -4171,19 +1277,19 @@ abstract class _$ResearchStudyArmCopyWith<$Res>
       __$ResearchStudyArmCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String extension,
-      @JsonKey(name: 'extension') List<FhirExtension> extension,
-      @JsonKey(name: 'extension') List<FhirExtension> extension,
-      @JsonKey(name: 'extension') String extension,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      String name,
       @JsonKey(name: '_name') Element nameElement,
-      @JsonKey(name: 'extension') CodeableConcept extension,
-      @JsonKey(name: 'extension') String extension,
+      CodeableConcept type,
+      String description,
       @JsonKey(name: '_description') Element descriptionElement});
 
   @override
   $ElementCopyWith<$Res> get nameElement;
   @override
-  $CodeableConceptCopyWith<$Res> get extension;
+  $CodeableConceptCopyWith<$Res> get type;
   @override
   $ElementCopyWith<$Res> get descriptionElement;
 }
@@ -4200,30 +1306,29 @@ class __$ResearchStudyArmCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object name = freezed,
     Object nameElement = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
+    Object type = freezed,
+    Object description = freezed,
     Object descriptionElement = freezed,
   }) {
     return _then(_ResearchStudyArm(
-      extension: extension == freezed ? _value.extension : extension as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
-      extension: extension == freezed ? _value.extension : extension as String,
+      id: id == freezed ? _value.id : id as String,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      name: name == freezed ? _value.name : name as String,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as CodeableConcept,
-      extension: extension == freezed ? _value.extension : extension as String,
+      type: type == freezed ? _value.type : type as CodeableConcept,
+      description:
+          description == freezed ? _value.description : description as String,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
@@ -4234,13 +1339,13 @@ class __$ResearchStudyArmCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ResearchStudyArm extends _ResearchStudyArm {
   _$_ResearchStudyArm(
-      {this.extension,
-      @JsonKey(name: 'extension') this.extension,
-      @JsonKey(name: 'extension') this.extension,
-      @JsonKey(name: 'extension') this.extension,
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.name,
       @JsonKey(name: '_name') this.nameElement,
-      @JsonKey(name: 'extension') this.extension,
-      @JsonKey(name: 'extension') this.extension,
+      this.type,
+      this.description,
       @JsonKey(name: '_description') this.descriptionElement})
       : super._();
 
@@ -4248,59 +1353,52 @@ class _$_ResearchStudyArm extends _ResearchStudyArm {
       _$_$_ResearchStudyArmFromJson(json);
 
   @override
-  final String extension;
+  final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension;
+  final List<FhirExtension> extension_;
   @override
-  @JsonKey(name: 'extension')
-  final List<FhirExtension> extension;
+  final List<FhirExtension> modifierExtension;
   @override
-  @JsonKey(name: 'extension')
-  final String extension;
+  final String name;
   @override
   @JsonKey(name: '_name')
   final Element nameElement;
   @override
-  @JsonKey(name: 'extension')
-  final CodeableConcept extension;
+  final CodeableConcept type;
   @override
-  @JsonKey(name: 'extension')
-  final String extension;
+  final String description;
   @override
   @JsonKey(name: '_description')
   final Element descriptionElement;
 
   @override
   String toString() {
-    return 'ResearchStudyArm(extension: $extension, extension: $extension, extension: $extension, extension: $extension, nameElement: $nameElement, extension: $extension, extension: $extension, descriptionElement: $descriptionElement)';
+    return 'ResearchStudyArm(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, type: $type, description: $description, descriptionElement: $descriptionElement)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _ResearchStudyArm &&
-            (identical(other.extension, extension) ||
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.extension_, extension_) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
-            (identical(other.extension, extension) ||
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
-            (identical(other.extension, extension) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
-            (identical(other.extension, extension) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.name, name) ||
+                const DeepCollectionEquality().equals(other.name, name)) &&
             (identical(other.nameElement, nameElement) ||
                 const DeepCollectionEquality()
                     .equals(other.nameElement, nameElement)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.type, type) ||
+                const DeepCollectionEquality().equals(other.type, type)) &&
+            (identical(other.description, description) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
-            (identical(other.extension, extension) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.description, description)) &&
             (identical(other.descriptionElement, descriptionElement) ||
                 const DeepCollectionEquality()
                     .equals(other.descriptionElement, descriptionElement)));
@@ -4309,13 +1407,13 @@ class _$_ResearchStudyArm extends _ResearchStudyArm {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(nameElement) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(type) ^
+      const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(descriptionElement);
 
   @override
@@ -4331,13 +1429,13 @@ class _$_ResearchStudyArm extends _ResearchStudyArm {
 abstract class _ResearchStudyArm extends ResearchStudyArm {
   _ResearchStudyArm._() : super._();
   factory _ResearchStudyArm(
-          {String extension,
-          @JsonKey(name: 'extension') List<FhirExtension> extension,
-          @JsonKey(name: 'extension') List<FhirExtension> extension,
-          @JsonKey(name: 'extension') String extension,
+          {String id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          String name,
           @JsonKey(name: '_name') Element nameElement,
-          @JsonKey(name: 'extension') CodeableConcept extension,
-          @JsonKey(name: 'extension') String extension,
+          CodeableConcept type,
+          String description,
           @JsonKey(name: '_description') Element descriptionElement}) =
       _$_ResearchStudyArm;
 
@@ -4345,25 +1443,21 @@ abstract class _ResearchStudyArm extends ResearchStudyArm {
       _$_ResearchStudyArm.fromJson;
 
   @override
-  String get extension;
+  String get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension;
+  List<FhirExtension> get extension_;
   @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension> get extension;
+  List<FhirExtension> get modifierExtension;
   @override
-  @JsonKey(name: 'extension')
-  String get extension;
+  String get name;
   @override
   @JsonKey(name: '_name')
   Element get nameElement;
   @override
-  @JsonKey(name: 'extension')
-  CodeableConcept get extension;
+  CodeableConcept get type;
   @override
-  @JsonKey(name: 'extension')
-  String get extension;
+  String get description;
   @override
   @JsonKey(name: '_description')
   Element get descriptionElement;
@@ -4380,19 +1474,19 @@ class _$ResearchStudyObjectiveTearOff {
   const _$ResearchStudyObjectiveTearOff();
 
   _ResearchStudyObjective call(
-      {String extension,
-      @JsonKey(name: 'extension') List<FhirExtension> extension,
-      @JsonKey(name: 'extension') List<FhirExtension> extension,
-      @JsonKey(name: 'extension') String extension,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      String name,
       @JsonKey(name: '_name') Element nameElement,
-      @JsonKey(name: 'extension') CodeableConcept extension}) {
+      CodeableConcept type}) {
     return _ResearchStudyObjective(
-      extension: extension,
-      extension: extension,
-      extension: extension,
-      extension: extension,
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      name: name,
       nameElement: nameElement,
-      extension: extension,
+      type: type,
     );
   }
 }
@@ -4401,17 +1495,14 @@ class _$ResearchStudyObjectiveTearOff {
 const $ResearchStudyObjective = _$ResearchStudyObjectiveTearOff();
 
 mixin _$ResearchStudyObjective {
-  String get extension;
+  String get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension;
-  @JsonKey(name: 'extension')
-  List<FhirExtension> get extension;
-  @JsonKey(name: 'extension')
-  String get extension;
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
+  String get name;
   @JsonKey(name: '_name')
   Element get nameElement;
-  @JsonKey(name: 'extension')
-  CodeableConcept get extension;
+  CodeableConcept get type;
 
   Map<String, dynamic> toJson();
   $ResearchStudyObjectiveCopyWith<ResearchStudyObjective> get copyWith;
@@ -4422,19 +1513,15 @@ abstract class $ResearchStudyObjectiveCopyWith<$Res> {
           $Res Function(ResearchStudyObjective) then) =
       _$ResearchStudyObjectiveCopyWithImpl<$Res>;
   $Res call(
-      {String extension,
-      @JsonKey(name: 'extension') List<FhirExtension> extension,
-      @JsonKey(name: 'extension') List<FhirExtension> extension,
-      @JsonKey(name: 'extension') String extension,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      String name,
       @JsonKey(name: '_name') Element nameElement,
-      @JsonKey(name: 'extension') CodeableConcept extension});
+      CodeableConcept type});
 
   $ElementCopyWith<$Res> get nameElement;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
-  $CodeableConceptCopyWith<$Res> get extension;
+  $CodeableConceptCopyWith<$Res> get type;
 }
 
 class _$ResearchStudyObjectiveCopyWithImpl<$Res>
@@ -4447,27 +1534,25 @@ class _$ResearchStudyObjectiveCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object name = freezed,
     Object nameElement = freezed,
-    Object extension = freezed,
+    Object type = freezed,
   }) {
     return _then(_value.copyWith(
-      extension: extension == freezed ? _value.extension : extension as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
-      extension: extension == freezed ? _value.extension : extension as String,
+      id: id == freezed ? _value.id : id as String,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      name: name == freezed ? _value.name : name as String,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as CodeableConcept,
+      type: type == freezed ? _value.type : type as CodeableConcept,
     ));
   }
 
@@ -4482,52 +1567,12 @@ class _$ResearchStudyObjectiveCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
     });
   }
 }
@@ -4539,17 +1584,17 @@ abstract class _$ResearchStudyObjectiveCopyWith<$Res>
       __$ResearchStudyObjectiveCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String extension,
-      @JsonKey(name: 'extension') List<FhirExtension> extension,
-      @JsonKey(name: 'extension') List<FhirExtension> extension,
-      @JsonKey(name: 'extension') String extension,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      String name,
       @JsonKey(name: '_name') Element nameElement,
-      @JsonKey(name: 'extension') CodeableConcept extension});
+      CodeableConcept type});
 
   @override
   $ElementCopyWith<$Res> get nameElement;
   @override
-  $CodeableConceptCopyWith<$Res> get extension;
+  $CodeableConceptCopyWith<$Res> get type;
 }
 
 class __$ResearchStudyObjectiveCopyWithImpl<$Res>
@@ -4564,27 +1609,25 @@ class __$ResearchStudyObjectiveCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object name = freezed,
     Object nameElement = freezed,
-    Object extension = freezed,
+    Object type = freezed,
   }) {
     return _then(_ResearchStudyObjective(
-      extension: extension == freezed ? _value.extension : extension as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
-      extension: extension == freezed ? _value.extension : extension as String,
+      id: id == freezed ? _value.id : id as String,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      name: name == freezed ? _value.name : name as String,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as CodeableConcept,
+      type: type == freezed ? _value.type : type as CodeableConcept,
     ));
   }
 }
@@ -4592,73 +1635,67 @@ class __$ResearchStudyObjectiveCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ResearchStudyObjective extends _ResearchStudyObjective {
   _$_ResearchStudyObjective(
-      {this.extension,
-      @JsonKey(name: 'extension') this.extension,
-      @JsonKey(name: 'extension') this.extension,
-      @JsonKey(name: 'extension') this.extension,
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.name,
       @JsonKey(name: '_name') this.nameElement,
-      @JsonKey(name: 'extension') this.extension})
+      this.type})
       : super._();
 
   factory _$_ResearchStudyObjective.fromJson(Map<String, dynamic> json) =>
       _$_$_ResearchStudyObjectiveFromJson(json);
 
   @override
-  final String extension;
+  final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension;
+  final List<FhirExtension> extension_;
   @override
-  @JsonKey(name: 'extension')
-  final List<FhirExtension> extension;
+  final List<FhirExtension> modifierExtension;
   @override
-  @JsonKey(name: 'extension')
-  final String extension;
+  final String name;
   @override
   @JsonKey(name: '_name')
   final Element nameElement;
   @override
-  @JsonKey(name: 'extension')
-  final CodeableConcept extension;
+  final CodeableConcept type;
 
   @override
   String toString() {
-    return 'ResearchStudyObjective(extension: $extension, extension: $extension, extension: $extension, extension: $extension, nameElement: $nameElement, extension: $extension)';
+    return 'ResearchStudyObjective(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, type: $type)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _ResearchStudyObjective &&
-            (identical(other.extension, extension) ||
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.extension_, extension_) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
-            (identical(other.extension, extension) ||
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
-            (identical(other.extension, extension) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
-            (identical(other.extension, extension) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.name, name) ||
+                const DeepCollectionEquality().equals(other.name, name)) &&
             (identical(other.nameElement, nameElement) ||
                 const DeepCollectionEquality()
                     .equals(other.nameElement, nameElement)) &&
-            (identical(other.extension, extension) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension, extension)));
+            (identical(other.type, type) ||
+                const DeepCollectionEquality().equals(other.type, type)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(nameElement) ^
-      const DeepCollectionEquality().hash(extension);
+      const DeepCollectionEquality().hash(type);
 
   @override
   _$ResearchStudyObjectiveCopyWith<_ResearchStudyObjective> get copyWith =>
@@ -4674,34 +1711,30 @@ class _$_ResearchStudyObjective extends _ResearchStudyObjective {
 abstract class _ResearchStudyObjective extends ResearchStudyObjective {
   _ResearchStudyObjective._() : super._();
   factory _ResearchStudyObjective(
-          {String extension,
-          @JsonKey(name: 'extension') List<FhirExtension> extension,
-          @JsonKey(name: 'extension') List<FhirExtension> extension,
-          @JsonKey(name: 'extension') String extension,
-          @JsonKey(name: '_name') Element nameElement,
-          @JsonKey(name: 'extension') CodeableConcept extension}) =
-      _$_ResearchStudyObjective;
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      String name,
+      @JsonKey(name: '_name') Element nameElement,
+      CodeableConcept type}) = _$_ResearchStudyObjective;
 
   factory _ResearchStudyObjective.fromJson(Map<String, dynamic> json) =
       _$_ResearchStudyObjective.fromJson;
 
   @override
-  String get extension;
+  String get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension;
+  List<FhirExtension> get extension_;
   @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension> get extension;
+  List<FhirExtension> get modifierExtension;
   @override
-  @JsonKey(name: 'extension')
-  String get extension;
+  String get name;
   @override
   @JsonKey(name: '_name')
   Element get nameElement;
   @override
-  @JsonKey(name: 'extension')
-  CodeableConcept get extension;
+  CodeableConcept get type;
   @override
   _$ResearchStudyObjectiveCopyWith<_ResearchStudyObjective> get copyWith;
 }
@@ -4717,67 +1750,59 @@ class _$ResearchSubjectTearOff {
       {@required
       @JsonKey(defaultValue: 'className')
           String resourceType,
-      Id extension,
-      Meta extension,
-      FhirUri extension,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
-      Code extension,
+      Code language,
       @JsonKey(name: '_language')
           Element languageElement,
-      Narrative extension,
-      List<Resource> extension,
+      Narrative text,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension,
-      @JsonKey(name: 'extension')
-          List<Identifier> extension,
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
           ResearchSubjectStatus status,
       @JsonKey(name: '_status')
           Element statusElement,
-      @JsonKey(name: 'extension')
-          Period extension,
+      Period period,
       @required
-      @JsonKey(name: 'extension')
-          Reference extension,
+          Reference study,
       @required
-      @JsonKey(name: 'extension')
-          Reference extension,
-      @JsonKey(name: 'extension')
-          String extension,
+          Reference individual,
+      String assignedArm,
       @JsonKey(name: '_assignedArm')
           Element assignedArmElement,
-      @JsonKey(name: 'extension')
-          String extension,
+      String actualArm,
       @JsonKey(name: '_actualArm')
           Element actualArmElement,
-      @JsonKey(name: 'extension')
-          Reference extension}) {
+      Reference consent}) {
     return _ResearchSubject(
       resourceType: resourceType,
-      extension: extension,
-      extension: extension,
-      extension: extension,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
       implicitRulesElement: implicitRulesElement,
-      extension: extension,
+      language: language,
       languageElement: languageElement,
-      extension: extension,
-      extension: extension,
-      extension: extension,
-      extension: extension,
-      extension: extension,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      identifier: identifier,
       status: status,
       statusElement: statusElement,
-      extension: extension,
-      extension: extension,
-      extension: extension,
-      extension: extension,
+      period: period,
+      study: study,
+      individual: individual,
+      assignedArm: assignedArm,
       assignedArmElement: assignedArmElement,
-      extension: extension,
+      actualArm: actualArm,
       actualArmElement: actualArmElement,
-      extension: extension,
+      consent: consent,
     );
   }
 }
@@ -4788,42 +1813,34 @@ const $ResearchSubject = _$ResearchSubjectTearOff();
 mixin _$ResearchSubject {
   @JsonKey(defaultValue: 'className')
   String get resourceType;
-  Id get extension;
-  Meta get extension;
-  FhirUri get extension;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
   @JsonKey(name: '_implicitRules')
   Element get implicitRulesElement;
-  Code get extension;
+  Code get language;
   @JsonKey(name: '_language')
   Element get languageElement;
-  Narrative get extension;
-  List<Resource> get extension;
+  Narrative get text;
+  List<Resource> get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension;
-  @JsonKey(name: 'extension')
-  List<FhirExtension> get extension;
-  @JsonKey(name: 'extension')
-  List<Identifier> get extension;
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
+  List<Identifier> get identifier;
   @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
   ResearchSubjectStatus get status;
   @JsonKey(name: '_status')
   Element get statusElement;
-  @JsonKey(name: 'extension')
-  Period get extension;
-  @JsonKey(name: 'extension')
-  Reference get extension;
-  @JsonKey(name: 'extension')
-  Reference get extension;
-  @JsonKey(name: 'extension')
-  String get extension;
+  Period get period;
+  Reference get study;
+  Reference get individual;
+  String get assignedArm;
   @JsonKey(name: '_assignedArm')
   Element get assignedArmElement;
-  @JsonKey(name: 'extension')
-  String get extension;
+  String get actualArm;
   @JsonKey(name: '_actualArm')
   Element get actualArmElement;
-  @JsonKey(name: 'extension')
-  Reference get extension;
+  Reference get consent;
 
   Map<String, dynamic> toJson();
   $ResearchSubjectCopyWith<ResearchSubject> get copyWith;
@@ -4836,138 +1853,46 @@ abstract class $ResearchSubjectCopyWith<$Res> {
   $Res call(
       {@JsonKey(defaultValue: 'className')
           String resourceType,
-      Id extension,
-      Meta extension,
-      FhirUri extension,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
-      Code extension,
+      Code language,
       @JsonKey(name: '_language')
           Element languageElement,
-      Narrative extension,
-      List<Resource> extension,
+      Narrative text,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension,
-      @JsonKey(name: 'extension')
-          List<Identifier> extension,
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
           ResearchSubjectStatus status,
       @JsonKey(name: '_status')
           Element statusElement,
-      @JsonKey(name: 'extension')
-          Period extension,
-      @JsonKey(name: 'extension')
-          Reference extension,
-      @JsonKey(name: 'extension')
-          Reference extension,
-      @JsonKey(name: 'extension')
-          String extension,
+      Period period,
+      Reference study,
+      Reference individual,
+      String assignedArm,
       @JsonKey(name: '_assignedArm')
           Element assignedArmElement,
-      @JsonKey(name: 'extension')
-          String extension,
+      String actualArm,
       @JsonKey(name: '_actualArm')
           Element actualArmElement,
-      @JsonKey(name: 'extension')
-          Reference extension});
+      Reference consent});
 
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
-  $MetaCopyWith<$Res> get extension;
+  $MetaCopyWith<$Res> get meta;
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
-  $NarrativeCopyWith<$Res> get extension;
+  $NarrativeCopyWith<$Res> get text;
   $ElementCopyWith<$Res> get statusElement;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $PeriodCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
+  $PeriodCopyWith<$Res> get period;
+  $ReferenceCopyWith<$Res> get study;
+  $ReferenceCopyWith<$Res> get individual;
   $ElementCopyWith<$Res> get assignedArmElement;
   $ElementCopyWith<$Res> get actualArmElement;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
-  $ReferenceCopyWith<$Res> get extension;
+  $ReferenceCopyWith<$Res> get consent;
 }
 
 class _$ResearchSubjectCopyWithImpl<$Res>
@@ -4981,225 +1906,85 @@ class _$ResearchSubjectCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
     Object implicitRulesElement = freezed,
-    Object extension = freezed,
+    Object language = freezed,
     Object languageElement = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object identifier = freezed,
     Object status = freezed,
     Object statusElement = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
+    Object period = freezed,
+    Object study = freezed,
+    Object individual = freezed,
+    Object assignedArm = freezed,
     Object assignedArmElement = freezed,
-    Object extension = freezed,
+    Object actualArm = freezed,
     Object actualArmElement = freezed,
-    Object extension = freezed,
+    Object consent = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
-      extension: extension == freezed ? _value.extension : extension as Id,
-      extension: extension == freezed ? _value.extension : extension as Meta,
-      extension: extension == freezed ? _value.extension : extension as FhirUri,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement as Element,
-      extension: extension == freezed ? _value.extension : extension as Code,
+      language: language == freezed ? _value.language : language as Code,
       languageElement: languageElement == freezed
           ? _value.languageElement
           : languageElement as Element,
-      extension:
-          extension == freezed ? _value.extension : extension as Narrative,
-      extension:
-          extension == freezed ? _value.extension : extension as List<Resource>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<Identifier>,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       status:
           status == freezed ? _value.status : status as ResearchSubjectStatus,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element,
-      extension: extension == freezed ? _value.extension : extension as Period,
-      extension:
-          extension == freezed ? _value.extension : extension as Reference,
-      extension:
-          extension == freezed ? _value.extension : extension as Reference,
-      extension: extension == freezed ? _value.extension : extension as String,
+      period: period == freezed ? _value.period : period as Period,
+      study: study == freezed ? _value.study : study as Reference,
+      individual:
+          individual == freezed ? _value.individual : individual as Reference,
+      assignedArm:
+          assignedArm == freezed ? _value.assignedArm : assignedArm as String,
       assignedArmElement: assignedArmElement == freezed
           ? _value.assignedArmElement
           : assignedArmElement as Element,
-      extension: extension == freezed ? _value.extension : extension as String,
+      actualArm: actualArm == freezed ? _value.actualArm : actualArm as String,
       actualArmElement: actualArmElement == freezed
           ? _value.actualArmElement
           : actualArmElement as Element,
-      extension:
-          extension == freezed ? _value.extension : extension as Reference,
+      consent: consent == freezed ? _value.consent : consent as Reference,
     ));
   }
 
   @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
       return null;
     }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
     });
   }
 
@@ -5224,152 +2009,12 @@ class _$ResearchSubjectCopyWithImpl<$Res>
   }
 
   @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
       return null;
     }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
     });
   }
 
@@ -5384,452 +2029,32 @@ class _$ResearchSubjectCopyWithImpl<$Res>
   }
 
   @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
       return null;
     }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
     });
   }
 
   @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
+  $ReferenceCopyWith<$Res> get study {
+    if (_value.study == null) {
       return null;
     }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
+    return $ReferenceCopyWith<$Res>(_value.study, (value) {
+      return _then(_value.copyWith(study: value));
     });
   }
 
   @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
+  $ReferenceCopyWith<$Res> get individual {
+    if (_value.individual == null) {
       return null;
     }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
+    return $ReferenceCopyWith<$Res>(_value.individual, (value) {
+      return _then(_value.copyWith(individual: value));
     });
   }
 
@@ -5854,152 +2079,12 @@ class _$ResearchSubjectCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
+  $ReferenceCopyWith<$Res> get consent {
+    if (_value.consent == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get extension {
-    if (_value.extension == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.extension, (value) {
-      return _then(_value.copyWith(extension: value));
+    return $ReferenceCopyWith<$Res>(_value.consent, (value) {
+      return _then(_value.copyWith(consent: value));
     });
   }
 }
@@ -6013,65 +2098,57 @@ abstract class _$ResearchSubjectCopyWith<$Res>
   $Res call(
       {@JsonKey(defaultValue: 'className')
           String resourceType,
-      Id extension,
-      Meta extension,
-      FhirUri extension,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
-      Code extension,
+      Code language,
       @JsonKey(name: '_language')
           Element languageElement,
-      Narrative extension,
-      List<Resource> extension,
+      Narrative text,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension,
-      @JsonKey(name: 'extension')
-          List<Identifier> extension,
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
           ResearchSubjectStatus status,
       @JsonKey(name: '_status')
           Element statusElement,
-      @JsonKey(name: 'extension')
-          Period extension,
-      @JsonKey(name: 'extension')
-          Reference extension,
-      @JsonKey(name: 'extension')
-          Reference extension,
-      @JsonKey(name: 'extension')
-          String extension,
+      Period period,
+      Reference study,
+      Reference individual,
+      String assignedArm,
       @JsonKey(name: '_assignedArm')
           Element assignedArmElement,
-      @JsonKey(name: 'extension')
-          String extension,
+      String actualArm,
       @JsonKey(name: '_actualArm')
           Element actualArmElement,
-      @JsonKey(name: 'extension')
-          Reference extension});
+      Reference consent});
 
   @override
-  $MetaCopyWith<$Res> get extension;
+  $MetaCopyWith<$Res> get meta;
   @override
   $ElementCopyWith<$Res> get implicitRulesElement;
   @override
   $ElementCopyWith<$Res> get languageElement;
   @override
-  $NarrativeCopyWith<$Res> get extension;
+  $NarrativeCopyWith<$Res> get text;
   @override
   $ElementCopyWith<$Res> get statusElement;
   @override
-  $PeriodCopyWith<$Res> get extension;
+  $PeriodCopyWith<$Res> get period;
   @override
-  $ReferenceCopyWith<$Res> get extension;
+  $ReferenceCopyWith<$Res> get study;
   @override
-  $ReferenceCopyWith<$Res> get extension;
+  $ReferenceCopyWith<$Res> get individual;
   @override
   $ElementCopyWith<$Res> get assignedArmElement;
   @override
   $ElementCopyWith<$Res> get actualArmElement;
   @override
-  $ReferenceCopyWith<$Res> get extension;
+  $ReferenceCopyWith<$Res> get consent;
 }
 
 class __$ResearchSubjectCopyWithImpl<$Res>
@@ -6087,75 +2164,75 @@ class __$ResearchSubjectCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
     Object implicitRulesElement = freezed,
-    Object extension = freezed,
+    Object language = freezed,
     Object languageElement = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object identifier = freezed,
     Object status = freezed,
     Object statusElement = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
-    Object extension = freezed,
+    Object period = freezed,
+    Object study = freezed,
+    Object individual = freezed,
+    Object assignedArm = freezed,
     Object assignedArmElement = freezed,
-    Object extension = freezed,
+    Object actualArm = freezed,
     Object actualArmElement = freezed,
-    Object extension = freezed,
+    Object consent = freezed,
   }) {
     return _then(_ResearchSubject(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
-      extension: extension == freezed ? _value.extension : extension as Id,
-      extension: extension == freezed ? _value.extension : extension as Meta,
-      extension: extension == freezed ? _value.extension : extension as FhirUri,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement as Element,
-      extension: extension == freezed ? _value.extension : extension as Code,
+      language: language == freezed ? _value.language : language as Code,
       languageElement: languageElement == freezed
           ? _value.languageElement
           : languageElement as Element,
-      extension:
-          extension == freezed ? _value.extension : extension as Narrative,
-      extension:
-          extension == freezed ? _value.extension : extension as List<Resource>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<Identifier>,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       status:
           status == freezed ? _value.status : status as ResearchSubjectStatus,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element,
-      extension: extension == freezed ? _value.extension : extension as Period,
-      extension:
-          extension == freezed ? _value.extension : extension as Reference,
-      extension:
-          extension == freezed ? _value.extension : extension as Reference,
-      extension: extension == freezed ? _value.extension : extension as String,
+      period: period == freezed ? _value.period : period as Period,
+      study: study == freezed ? _value.study : study as Reference,
+      individual:
+          individual == freezed ? _value.individual : individual as Reference,
+      assignedArm:
+          assignedArm == freezed ? _value.assignedArm : assignedArm as String,
       assignedArmElement: assignedArmElement == freezed
           ? _value.assignedArmElement
           : assignedArmElement as Element,
-      extension: extension == freezed ? _value.extension : extension as String,
+      actualArm: actualArm == freezed ? _value.actualArm : actualArm as String,
       actualArmElement: actualArmElement == freezed
           ? _value.actualArmElement
           : actualArmElement as Element,
-      extension:
-          extension == freezed ? _value.extension : extension as Reference,
+      consent: consent == freezed ? _value.consent : consent as Reference,
     ));
   }
 }
@@ -6164,30 +2241,30 @@ class __$ResearchSubjectCopyWithImpl<$Res>
 class _$_ResearchSubject extends _ResearchSubject {
   _$_ResearchSubject(
       {@required @JsonKey(defaultValue: 'className') this.resourceType,
-      this.extension,
-      this.extension,
-      this.extension,
+      this.id,
+      this.meta,
+      this.implicitRules,
       @JsonKey(name: '_implicitRules') this.implicitRulesElement,
-      this.extension,
+      this.language,
       @JsonKey(name: '_language') this.languageElement,
-      this.extension,
-      this.extension,
-      @JsonKey(name: 'extension') this.extension,
-      @JsonKey(name: 'extension') this.extension,
-      @JsonKey(name: 'extension') this.extension,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.identifier,
       @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown) this.status,
       @JsonKey(name: '_status') this.statusElement,
-      @JsonKey(name: 'extension') this.extension,
-      @required @JsonKey(name: 'extension') this.extension,
-      @required @JsonKey(name: 'extension') this.extension,
-      @JsonKey(name: 'extension') this.extension,
+      this.period,
+      @required this.study,
+      @required this.individual,
+      this.assignedArm,
       @JsonKey(name: '_assignedArm') this.assignedArmElement,
-      @JsonKey(name: 'extension') this.extension,
+      this.actualArm,
       @JsonKey(name: '_actualArm') this.actualArmElement,
-      @JsonKey(name: 'extension') this.extension})
+      this.consent})
       : assert(resourceType != null),
-        assert(extension != null),
-        assert(extension != null),
+        assert(study != null),
+        assert(individual != null),
         super._();
 
   factory _$_ResearchSubject.fromJson(Map<String, dynamic> json) =>
@@ -6197,32 +2274,30 @@ class _$_ResearchSubject extends _ResearchSubject {
   @JsonKey(defaultValue: 'className')
   final String resourceType;
   @override
-  final Id extension;
+  final Id id;
   @override
-  final Meta extension;
+  final Meta meta;
   @override
-  final FhirUri extension;
+  final FhirUri implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   final Element implicitRulesElement;
   @override
-  final Code extension;
+  final Code language;
   @override
   @JsonKey(name: '_language')
   final Element languageElement;
   @override
-  final Narrative extension;
+  final Narrative text;
   @override
-  final List<Resource> extension;
-  @override
-  @JsonKey(name: 'extension')
-  final List<FhirExtension> extension;
+  final List<Resource> contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension;
+  final List<FhirExtension> extension_;
   @override
-  @JsonKey(name: 'extension')
-  final List<Identifier> extension;
+  final List<FhirExtension> modifierExtension;
+  @override
+  final List<Identifier> identifier;
   @override
   @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
   final ResearchSubjectStatus status;
@@ -6230,33 +2305,27 @@ class _$_ResearchSubject extends _ResearchSubject {
   @JsonKey(name: '_status')
   final Element statusElement;
   @override
-  @JsonKey(name: 'extension')
-  final Period extension;
+  final Period period;
   @override
-  @JsonKey(name: 'extension')
-  final Reference extension;
+  final Reference study;
   @override
-  @JsonKey(name: 'extension')
-  final Reference extension;
+  final Reference individual;
   @override
-  @JsonKey(name: 'extension')
-  final String extension;
+  final String assignedArm;
   @override
   @JsonKey(name: '_assignedArm')
   final Element assignedArmElement;
   @override
-  @JsonKey(name: 'extension')
-  final String extension;
+  final String actualArm;
   @override
   @JsonKey(name: '_actualArm')
   final Element actualArmElement;
   @override
-  @JsonKey(name: 'extension')
-  final Reference extension;
+  final Reference consent;
 
   @override
   String toString() {
-    return 'ResearchSubject(resourceType: $resourceType, extension: $extension, extension: $extension, extension: $extension, implicitRulesElement: $implicitRulesElement, extension: $extension, languageElement: $languageElement, extension: $extension, extension: $extension, extension: $extension, extension: $extension, extension: $extension, status: $status, statusElement: $statusElement, extension: $extension, extension: $extension, extension: $extension, extension: $extension, assignedArmElement: $assignedArmElement, extension: $extension, actualArmElement: $actualArmElement, extension: $extension)';
+    return 'ResearchSubject(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, period: $period, study: $study, individual: $individual, assignedArm: $assignedArm, assignedArmElement: $assignedArmElement, actualArm: $actualArm, actualArmElement: $actualArmElement, consent: $consent)';
   }
 
   @override
@@ -6266,95 +2335,89 @@ class _$_ResearchSubject extends _ResearchSubject {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
-            (identical(other.extension, extension) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
-            (identical(other.extension, extension) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.implicitRules, implicitRules)) &&
             (identical(other.implicitRulesElement, implicitRulesElement) ||
                 const DeepCollectionEquality().equals(
                     other.implicitRulesElement, implicitRulesElement)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.language, language) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.language, language)) &&
             (identical(other.languageElement, languageElement) ||
                 const DeepCollectionEquality()
                     .equals(other.languageElement, languageElement)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
-            (identical(other.extension, extension) ||
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
-            (identical(other.extension, extension) ||
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
-            (identical(other.extension, extension) ||
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
-            (identical(other.extension, extension) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.identifier, identifier)) &&
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
             (identical(other.statusElement, statusElement) ||
                 const DeepCollectionEquality()
                     .equals(other.statusElement, statusElement)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.period, period) ||
+                const DeepCollectionEquality().equals(other.period, period)) &&
+            (identical(other.study, study) ||
+                const DeepCollectionEquality().equals(other.study, study)) &&
+            (identical(other.individual, individual) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
-            (identical(other.extension, extension) ||
+                    .equals(other.individual, individual)) &&
+            (identical(other.assignedArm, assignedArm) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
-            (identical(other.extension, extension) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
-            (identical(other.extension, extension) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.assignedArm, assignedArm)) &&
             (identical(other.assignedArmElement, assignedArmElement) ||
                 const DeepCollectionEquality()
                     .equals(other.assignedArmElement, assignedArmElement)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.actualArm, actualArm) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.actualArm, actualArm)) &&
             (identical(other.actualArmElement, actualArmElement) ||
                 const DeepCollectionEquality()
                     .equals(other.actualArmElement, actualArmElement)) &&
-            (identical(other.extension, extension) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension, extension)));
+            (identical(other.consent, consent) ||
+                const DeepCollectionEquality().equals(other.consent, consent)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
       const DeepCollectionEquality().hash(implicitRulesElement) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(languageElement) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(status) ^
       const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(period) ^
+      const DeepCollectionEquality().hash(study) ^
+      const DeepCollectionEquality().hash(individual) ^
+      const DeepCollectionEquality().hash(assignedArm) ^
       const DeepCollectionEquality().hash(assignedArmElement) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(actualArm) ^
       const DeepCollectionEquality().hash(actualArmElement) ^
-      const DeepCollectionEquality().hash(extension);
+      const DeepCollectionEquality().hash(consent);
 
   @override
   _$ResearchSubjectCopyWith<_ResearchSubject> get copyWith =>
@@ -6372,44 +2435,36 @@ abstract class _ResearchSubject extends ResearchSubject {
       {@required
       @JsonKey(defaultValue: 'className')
           String resourceType,
-      Id extension,
-      Meta extension,
-      FhirUri extension,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
-      Code extension,
+      Code language,
       @JsonKey(name: '_language')
           Element languageElement,
-      Narrative extension,
-      List<Resource> extension,
+      Narrative text,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension,
-      @JsonKey(name: 'extension')
-          List<Identifier> extension,
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
           ResearchSubjectStatus status,
       @JsonKey(name: '_status')
           Element statusElement,
-      @JsonKey(name: 'extension')
-          Period extension,
+      Period period,
       @required
-      @JsonKey(name: 'extension')
-          Reference extension,
+          Reference study,
       @required
-      @JsonKey(name: 'extension')
-          Reference extension,
-      @JsonKey(name: 'extension')
-          String extension,
+          Reference individual,
+      String assignedArm,
       @JsonKey(name: '_assignedArm')
           Element assignedArmElement,
-      @JsonKey(name: 'extension')
-          String extension,
+      String actualArm,
       @JsonKey(name: '_actualArm')
           Element actualArmElement,
-      @JsonKey(name: 'extension')
-          Reference extension}) = _$_ResearchSubject;
+      Reference consent}) = _$_ResearchSubject;
 
   factory _ResearchSubject.fromJson(Map<String, dynamic> json) =
       _$_ResearchSubject.fromJson;
@@ -6418,32 +2473,30 @@ abstract class _ResearchSubject extends ResearchSubject {
   @JsonKey(defaultValue: 'className')
   String get resourceType;
   @override
-  Id get extension;
+  Id get id;
   @override
-  Meta get extension;
+  Meta get meta;
   @override
-  FhirUri get extension;
+  FhirUri get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   Element get implicitRulesElement;
   @override
-  Code get extension;
+  Code get language;
   @override
   @JsonKey(name: '_language')
   Element get languageElement;
   @override
-  Narrative get extension;
+  Narrative get text;
   @override
-  List<Resource> get extension;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension> get extension;
+  List<Resource> get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension;
+  List<FhirExtension> get extension_;
   @override
-  @JsonKey(name: 'extension')
-  List<Identifier> get extension;
+  List<FhirExtension> get modifierExtension;
+  @override
+  List<Identifier> get identifier;
   @override
   @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
   ResearchSubjectStatus get status;
@@ -6451,29 +2504,23 @@ abstract class _ResearchSubject extends ResearchSubject {
   @JsonKey(name: '_status')
   Element get statusElement;
   @override
-  @JsonKey(name: 'extension')
-  Period get extension;
+  Period get period;
   @override
-  @JsonKey(name: 'extension')
-  Reference get extension;
+  Reference get study;
   @override
-  @JsonKey(name: 'extension')
-  Reference get extension;
+  Reference get individual;
   @override
-  @JsonKey(name: 'extension')
-  String get extension;
+  String get assignedArm;
   @override
   @JsonKey(name: '_assignedArm')
   Element get assignedArmElement;
   @override
-  @JsonKey(name: 'extension')
-  String get extension;
+  String get actualArm;
   @override
   @JsonKey(name: '_actualArm')
   Element get actualArmElement;
   @override
-  @JsonKey(name: 'extension')
-  Reference get extension;
+  Reference get consent;
   @override
   _$ResearchSubjectCopyWith<_ResearchSubject> get copyWith;
 }

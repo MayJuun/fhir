@@ -4,6 +4,7 @@ import 'dart:io';
 import 'get_type.dart';
 import 'headers.dart';
 import 'name_to_type.dart';
+import 'write_enums.dart';
 
 void main() async {
   //location of fhir schema
@@ -13,13 +14,12 @@ void main() async {
   var data = '';
   var resource = '';
   var className = '';
-  var reserved = '';
 
   Map schema = json.decode(contents);
   for (var i = 0; i < 2; i++) {
     for (var obj in schema['definitions'].keys) {
       if (schema['definitions'][obj].keys.contains('properties')) {
-        resource = obj.contains('_') ? '' : ', Resource';
+        resource = obj.contains('_') ? '' : 'with Resource ';
         var name = obj.split('_')[0].toLowerCase();
         type = getType(name);
         if (type != 'other') {
@@ -30,7 +30,7 @@ void main() async {
                   ? 'FhirExtension'
                   : obj.replaceAll('_', '');
           data = '@freezed\nabstract class $className '
-              'implements _\$$className $resource {\n'
+              '$resource implements _\$$className {\n'
               '$className._();\nfactory $className({\n';
           for (var field in schema['definitions'][obj]['properties'].keys) {
             var required = schema['definitions'][obj]['required'] == null
@@ -50,23 +50,41 @@ void main() async {
                       ['\$ref']
                   .split('/')
                   .last;
-
-              data += '$required ${whatType(type)} $field,\n';
+              var res = '';
+              var reserv = '';
+              if (reserved.contains(field)) {
+                res = '_';
+                reserv = "@JsonKey(name: '$field')";
+              }
+              data += '$reserv $required ${whatType(type)} $field$res,\n';
             } else if (schema['definitions'][obj]['properties'][field]
                 .keys
                 .contains('type')) {
               if (schema['definitions'][obj]['properties'][field]
                   .keys
                   .contains('pattern')) {
-                data +=
-                    '$required ${getPattern(field, schema['definitions'][obj]['properties'][field]['pattern'])} $field,\n';
+                var res = '';
+                var reserv = '';
+                if (reserved.contains(field)) {
+                  res = '_';
+                  reserv = "@JsonKey(name: '$field')";
+                }
+                data += '$reserv $required ';
+                '${getPattern(field, schema['definitions'][obj]['properties'][field]['pattern'])}'
+                    ' $field$res,\n';
               } else if (schema['definitions'][obj]['properties'][field]
                       ['items']
                   .keys
                   .contains('enum')) {
                 var name =
                     field[0].toUpperCase() + field.substring(1, field.length);
-                data += 'List<$className$name> $field,\n';
+                var res = '';
+                var reserv = '';
+                if (reserved.contains(field)) {
+                  res = '_';
+                  reserv = "@JsonKey(name: '$field')";
+                }
+                data += '$reserv List<$className$name> $field$res,\n';
                 await writeEnums(
                     type,
                     '$className$name',
@@ -76,8 +94,14 @@ void main() async {
               } else {
                 var type = schema['definitions'][obj]['properties'][field]
                     ['items']['\$ref'];
+                var res = '';
+                var reserv = '';
+                if (reserved.contains(field)) {
+                  res = '_';
+                  reserv = "@JsonKey(name: '$field')";
+                }
                 data +=
-                    '$required List<${whatType(type.split('/').last)}> $field,\n';
+                    '$reserv $required List<${whatType(type.split('/').last)}> $field$res,\n';
               }
             } else if (field == 'resourceType') {
               data +=
@@ -111,36 +135,5 @@ void main() async {
             : await File('./lib/r4/$type').writeAsString(beginning);
       }
     }
-  }
-}
-
-Future<void> writeEnums(
-    String type, String name, List<dynamic> enums, int i) async {
-  var dir = './lib/r4/$type'.replaceAll('dart', 'enums.dart');
-  if (i == 0) {
-    var import =
-        "import 'package:freezed_annotation/freezed_annotation.dart';\n\n";
-    await File(dir).writeAsString(import);
-  } else {
-    var file = await File(dir).readAsString();
-    file += '\nenum $name{\n';
-    enums.forEach((entry) {
-      var newItem = entry.replaceAll('-', '_').toLowerCase();
-      var reg = RegExp(r'(?=[0-9]\.)');
-      if (newItem.contains(reg)) {
-        newItem = newItem.replaceFirst(reg, 'v');
-      }
-      newItem = newItem == '>'
-          ? 'gt'
-          : newItem == '>='
-              ? 'ge'
-              : newItem == '<' ? 'lt' : newItem == '<=' ? 'le' : newItem;
-      newItem = newItem.replaceAll('.', '_');
-      newItem = newItem.replaceAll('/', '_');
-      file += "@JsonValue('$entry')\n$newItem,";
-    });
-    if (!enums.contains('unknown')) file += "@JsonValue('unknown')\n  unknown,";
-    file += '}\n\n';
-    await File(dir).writeAsString(file);
   }
 }

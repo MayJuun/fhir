@@ -61,6 +61,12 @@ Either<PrimitiveFailure<String>, String> validateId(String value) =>
         ? right(value)
         : left(PrimitiveFailure.invalidId(failedValue: value));
 
+Either<PrimitiveFailure<String>, int> validateInteger64(dynamic value) =>
+    int.tryParse(value.toString()) != null
+        ? right(int.parse(value.toString()))
+        : left(
+            PrimitiveFailure.invalidInteger64(failedValue: value.toString()));
+
 Either<PrimitiveFailure<String>, int> validateInteger(dynamic value) =>
     int.tryParse(value.toString()) != null
         ? right(int.parse(value.toString()))

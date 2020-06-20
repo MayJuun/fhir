@@ -31,6 +31,9 @@ abstract class PrimitiveFailure<T> with _$PrimitiveFailure<T> {
   const factory PrimitiveFailure.invalidInstant({
     @required T failedValue,
   }) = InvalidInstant<T>;
+  const factory PrimitiveFailure.invalidInteger64({
+    @required T failedValue,
+  }) = InvalidInteger64<T>;
   const factory PrimitiveFailure.invalidInteger({
     @required T failedValue,
   }) = InvalidInteger<T>;

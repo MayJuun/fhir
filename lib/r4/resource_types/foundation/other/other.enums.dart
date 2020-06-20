@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'other.dart';
 
 
 enum BundleType{
@@ -25,7 +25,7 @@ outcome,@JsonValue('unknown')
 
 enum BundleRequestMethod{
 @JsonValue('GET')
-get,@JsonValue('HEAD')
+get_,@JsonValue('HEAD')
 head,@JsonValue('POST')
 post,@JsonValue('PUT')
 put,@JsonValue('DELETE')
@@ -63,7 +63,7 @@ enum OperationOutcomeIssueCode{
 @JsonValue('invalid')
 invalid,@JsonValue('structure')
 structure,@JsonValue('required')
-required,@JsonValue('value')
+required_,@JsonValue('value')
 value,@JsonValue('invariant')
 invariant,@JsonValue('security')
 security,@JsonValue('login')
@@ -80,7 +80,7 @@ not_found,@JsonValue('deleted')
 deleted,@JsonValue('too-long')
 too_long,@JsonValue('code-invalid')
 code_invalid,@JsonValue('extension')
-extension,@JsonValue('too-costly')
+extension_,@JsonValue('too-costly')
 too_costly,@JsonValue('business-rule')
 business_rule,@JsonValue('conflict')
 conflict,@JsonValue('transient')

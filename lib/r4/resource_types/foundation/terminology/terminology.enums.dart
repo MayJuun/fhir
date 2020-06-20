@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'terminology.dart';
 
 
 enum CodeSystemStatus{
@@ -121,12 +121,12 @@ unknown,}
 
 enum ValueSetFilterOp{
 @JsonValue('=')
-=,@JsonValue('is-a')
+eq,@JsonValue('is-a')
 is_a,@JsonValue('descendent-of')
 descendent_of,@JsonValue('is-not-a')
 is_not_a,@JsonValue('regex')
 regex,@JsonValue('in')
-in,@JsonValue('not-in')
+in_,@JsonValue('not-in')
 not_in,@JsonValue('generalizes')
 generalizes,@JsonValue('exists')
 exists,@JsonValue('unknown')

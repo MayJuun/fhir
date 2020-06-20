@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'definitional_artifacts.dart';
 
 
 enum ActivityDefinitionStatus{
@@ -179,8 +179,8 @@ any,@JsonValue('unknown')
 enum QuestionnaireEnableWhenOperator{
 @JsonValue('exists')
 exists,@JsonValue('=')
-=,@JsonValue('!=')
-!=,@JsonValue('>')
+eq,@JsonValue('!=')
+ne,@JsonValue('>')
 gt,@JsonValue('<')
 lt,@JsonValue('>=')
 ge,@JsonValue('<=')

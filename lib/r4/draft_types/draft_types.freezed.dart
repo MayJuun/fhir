@@ -16,14 +16,14 @@ class _$PopulationTearOff {
   const _$PopulationTearOff();
 
   _Population call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) Range ageRange,
-      @JsonKey(name: extension) CodeableConcept ageCodeableConcept,
-      @JsonKey(name: extension) CodeableConcept gender,
-      @JsonKey(name: extension) CodeableConcept race,
-      @JsonKey(name: extension) CodeableConcept physiologicalCondition}) {
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Range ageRange,
+      CodeableConcept ageCodeableConcept,
+      CodeableConcept gender,
+      CodeableConcept race,
+      CodeableConcept physiologicalCondition}) {
     return _Population(
       id: id,
       extension_: extension_,
@@ -41,21 +41,14 @@ class _$PopulationTearOff {
 const $Population = _$PopulationTearOff();
 
 mixin _$Population {
-  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
-  @JsonKey(name: extension)
   Range get ageRange;
-  @JsonKey(name: extension)
   CodeableConcept get ageCodeableConcept;
-  @JsonKey(name: extension)
   CodeableConcept get gender;
-  @JsonKey(name: extension)
   CodeableConcept get race;
-  @JsonKey(name: extension)
   CodeableConcept get physiologicalCondition;
 
   Map<String, dynamic> toJson();
@@ -67,14 +60,14 @@ abstract class $PopulationCopyWith<$Res> {
           Population value, $Res Function(Population) then) =
       _$PopulationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) Range ageRange,
-      @JsonKey(name: extension) CodeableConcept ageCodeableConcept,
-      @JsonKey(name: extension) CodeableConcept gender,
-      @JsonKey(name: extension) CodeableConcept race,
-      @JsonKey(name: extension) CodeableConcept physiologicalCondition});
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Range ageRange,
+      CodeableConcept ageCodeableConcept,
+      CodeableConcept gender,
+      CodeableConcept race,
+      CodeableConcept physiologicalCondition});
 
   $RangeCopyWith<$Res> get ageRange;
   $CodeableConceptCopyWith<$Res> get ageCodeableConcept;
@@ -179,14 +172,14 @@ abstract class _$PopulationCopyWith<$Res> implements $PopulationCopyWith<$Res> {
       __$PopulationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) Range ageRange,
-      @JsonKey(name: extension) CodeableConcept ageCodeableConcept,
-      @JsonKey(name: extension) CodeableConcept gender,
-      @JsonKey(name: extension) CodeableConcept race,
-      @JsonKey(name: extension) CodeableConcept physiologicalCondition});
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Range ageRange,
+      CodeableConcept ageCodeableConcept,
+      CodeableConcept gender,
+      CodeableConcept race,
+      CodeableConcept physiologicalCondition});
 
   @override
   $RangeCopyWith<$Res> get ageRange;
@@ -244,42 +237,35 @@ class __$PopulationCopyWithImpl<$Res> extends _$PopulationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Population extends _Population {
   _$_Population(
-      {@JsonKey(name: extension) this.id,
-      @JsonKey(name: extension) this.extension_,
-      @JsonKey(name: extension) this.modifierExtension,
-      @JsonKey(name: extension) this.ageRange,
-      @JsonKey(name: extension) this.ageCodeableConcept,
-      @JsonKey(name: extension) this.gender,
-      @JsonKey(name: extension) this.race,
-      @JsonKey(name: extension) this.physiologicalCondition})
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.ageRange,
+      this.ageCodeableConcept,
+      this.gender,
+      this.race,
+      this.physiologicalCondition})
       : super._();
 
   factory _$_Population.fromJson(Map<String, dynamic> json) =>
       _$_$_PopulationFromJson(json);
 
   @override
-  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  @JsonKey(name: extension)
   final List<FhirExtension> modifierExtension;
   @override
-  @JsonKey(name: extension)
   final Range ageRange;
   @override
-  @JsonKey(name: extension)
   final CodeableConcept ageCodeableConcept;
   @override
-  @JsonKey(name: extension)
   final CodeableConcept gender;
   @override
-  @JsonKey(name: extension)
   final CodeableConcept race;
   @override
-  @JsonKey(name: extension)
   final CodeableConcept physiologicalCondition;
 
   @override
@@ -339,42 +325,34 @@ class _$_Population extends _Population {
 abstract class _Population extends Population {
   _Population._() : super._();
   factory _Population(
-          {@JsonKey(name: extension) String id,
-          @JsonKey(name: extension) List<FhirExtension> extension_,
-          @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-          @JsonKey(name: extension) Range ageRange,
-          @JsonKey(name: extension) CodeableConcept ageCodeableConcept,
-          @JsonKey(name: extension) CodeableConcept gender,
-          @JsonKey(name: extension) CodeableConcept race,
-          @JsonKey(name: extension) CodeableConcept physiologicalCondition}) =
-      _$_Population;
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Range ageRange,
+      CodeableConcept ageCodeableConcept,
+      CodeableConcept gender,
+      CodeableConcept race,
+      CodeableConcept physiologicalCondition}) = _$_Population;
 
   factory _Population.fromJson(Map<String, dynamic> json) =
       _$_Population.fromJson;
 
   @override
-  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
   @override
-  @JsonKey(name: extension)
   Range get ageRange;
   @override
-  @JsonKey(name: extension)
   CodeableConcept get ageCodeableConcept;
   @override
-  @JsonKey(name: extension)
   CodeableConcept get gender;
   @override
-  @JsonKey(name: extension)
   CodeableConcept get race;
   @override
-  @JsonKey(name: extension)
   CodeableConcept get physiologicalCondition;
   @override
   _$PopulationCopyWith<_Population> get copyWith;
@@ -388,22 +366,13 @@ class _$ProductShelfLifeTearOff {
   const _$ProductShelfLifeTearOff();
 
   _ProductShelfLife call(
-      {@JsonKey(name: extension)
-          String id,
-      @JsonKey(name: extension)
-          List<FhirExtension> extension_,
-      @JsonKey(name: extension)
-          List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension)
-          Identifier identifier,
-      @required
-      @JsonKey(name: extension)
-          CodeableConcept type,
-      @required
-      @JsonKey(name: extension)
-          Quantity period,
-      @JsonKey(name: extension)
-          List<CodeableConcept> specialPrecautionsForStorage}) {
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Identifier identifier,
+      @required CodeableConcept type,
+      @required Quantity period,
+      List<CodeableConcept> specialPrecautionsForStorage}) {
     return _ProductShelfLife(
       id: id,
       extension_: extension_,
@@ -420,19 +389,13 @@ class _$ProductShelfLifeTearOff {
 const $ProductShelfLife = _$ProductShelfLifeTearOff();
 
 mixin _$ProductShelfLife {
-  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
-  @JsonKey(name: extension)
   Identifier get identifier;
-  @JsonKey(name: extension)
   CodeableConcept get type;
-  @JsonKey(name: extension)
   Quantity get period;
-  @JsonKey(name: extension)
   List<CodeableConcept> get specialPrecautionsForStorage;
 
   Map<String, dynamic> toJson();
@@ -444,20 +407,13 @@ abstract class $ProductShelfLifeCopyWith<$Res> {
           ProductShelfLife value, $Res Function(ProductShelfLife) then) =
       _$ProductShelfLifeCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: extension)
-          String id,
-      @JsonKey(name: extension)
-          List<FhirExtension> extension_,
-      @JsonKey(name: extension)
-          List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension)
-          Identifier identifier,
-      @JsonKey(name: extension)
-          CodeableConcept type,
-      @JsonKey(name: extension)
-          Quantity period,
-      @JsonKey(name: extension)
-          List<CodeableConcept> specialPrecautionsForStorage});
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Identifier identifier,
+      CodeableConcept type,
+      Quantity period,
+      List<CodeableConcept> specialPrecautionsForStorage});
 
   $IdentifierCopyWith<$Res> get identifier;
   $CodeableConceptCopyWith<$Res> get type;
@@ -538,20 +494,13 @@ abstract class _$ProductShelfLifeCopyWith<$Res>
       __$ProductShelfLifeCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: extension)
-          String id,
-      @JsonKey(name: extension)
-          List<FhirExtension> extension_,
-      @JsonKey(name: extension)
-          List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension)
-          Identifier identifier,
-      @JsonKey(name: extension)
-          CodeableConcept type,
-      @JsonKey(name: extension)
-          Quantity period,
-      @JsonKey(name: extension)
-          List<CodeableConcept> specialPrecautionsForStorage});
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Identifier identifier,
+      CodeableConcept type,
+      Quantity period,
+      List<CodeableConcept> specialPrecautionsForStorage});
 
   @override
   $IdentifierCopyWith<$Res> get identifier;
@@ -603,13 +552,13 @@ class __$ProductShelfLifeCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ProductShelfLife extends _ProductShelfLife {
   _$_ProductShelfLife(
-      {@JsonKey(name: extension) this.id,
-      @JsonKey(name: extension) this.extension_,
-      @JsonKey(name: extension) this.modifierExtension,
-      @JsonKey(name: extension) this.identifier,
-      @required @JsonKey(name: extension) this.type,
-      @required @JsonKey(name: extension) this.period,
-      @JsonKey(name: extension) this.specialPrecautionsForStorage})
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.identifier,
+      @required this.type,
+      @required this.period,
+      this.specialPrecautionsForStorage})
       : assert(type != null),
         assert(period != null),
         super._();
@@ -618,25 +567,19 @@ class _$_ProductShelfLife extends _ProductShelfLife {
       _$_$_ProductShelfLifeFromJson(json);
 
   @override
-  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  @JsonKey(name: extension)
   final List<FhirExtension> modifierExtension;
   @override
-  @JsonKey(name: extension)
   final Identifier identifier;
   @override
-  @JsonKey(name: extension)
   final CodeableConcept type;
   @override
-  @JsonKey(name: extension)
   final Quantity period;
   @override
-  @JsonKey(name: extension)
   final List<CodeableConcept> specialPrecautionsForStorage;
 
   @override
@@ -694,47 +637,32 @@ class _$_ProductShelfLife extends _ProductShelfLife {
 abstract class _ProductShelfLife extends ProductShelfLife {
   _ProductShelfLife._() : super._();
   factory _ProductShelfLife(
-          {@JsonKey(name: extension)
-              String id,
-          @JsonKey(name: extension)
-              List<FhirExtension> extension_,
-          @JsonKey(name: extension)
-              List<FhirExtension> modifierExtension,
-          @JsonKey(name: extension)
-              Identifier identifier,
-          @required
-          @JsonKey(name: extension)
-              CodeableConcept type,
-          @required
-          @JsonKey(name: extension)
-              Quantity period,
-          @JsonKey(name: extension)
-              List<CodeableConcept> specialPrecautionsForStorage}) =
+          {String id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          Identifier identifier,
+          @required CodeableConcept type,
+          @required Quantity period,
+          List<CodeableConcept> specialPrecautionsForStorage}) =
       _$_ProductShelfLife;
 
   factory _ProductShelfLife.fromJson(Map<String, dynamic> json) =
       _$_ProductShelfLife.fromJson;
 
   @override
-  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
   @override
-  @JsonKey(name: extension)
   Identifier get identifier;
   @override
-  @JsonKey(name: extension)
   CodeableConcept get type;
   @override
-  @JsonKey(name: extension)
   Quantity get period;
   @override
-  @JsonKey(name: extension)
   List<CodeableConcept> get specialPrecautionsForStorage;
   @override
   _$ProductShelfLifeCopyWith<_ProductShelfLife> get copyWith;
@@ -748,23 +676,23 @@ class _$ProdCharacteristicTearOff {
   const _$ProdCharacteristicTearOff();
 
   _ProdCharacteristic call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) Quantity height,
-      @JsonKey(name: extension) Quantity width,
-      @JsonKey(name: extension) Quantity depth,
-      @JsonKey(name: extension) Quantity weight,
-      @JsonKey(name: extension) Quantity nominalVolume,
-      @JsonKey(name: extension) Quantity externalDiameter,
-      @JsonKey(name: extension) String shape,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Quantity height,
+      Quantity width,
+      Quantity depth,
+      Quantity weight,
+      Quantity nominalVolume,
+      Quantity externalDiameter,
+      String shape,
       @JsonKey(name: '_shape') Element shapeElement,
-      @JsonKey(name: extension) List<String> color,
+      List<String> color,
       @JsonKey(name: '_color') Element colorElement,
-      @JsonKey(name: extension) List<String> imprint,
+      List<String> imprint,
       @JsonKey(name: '_imprint') Element imprintElement,
-      @JsonKey(name: extension) List<Attachment> image,
-      @JsonKey(name: extension) CodeableConcept scoring}) {
+      List<Attachment> image,
+      CodeableConcept scoring}) {
     return _ProdCharacteristic(
       id: id,
       extension_: extension_,
@@ -791,39 +719,26 @@ class _$ProdCharacteristicTearOff {
 const $ProdCharacteristic = _$ProdCharacteristicTearOff();
 
 mixin _$ProdCharacteristic {
-  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
-  @JsonKey(name: extension)
   Quantity get height;
-  @JsonKey(name: extension)
   Quantity get width;
-  @JsonKey(name: extension)
   Quantity get depth;
-  @JsonKey(name: extension)
   Quantity get weight;
-  @JsonKey(name: extension)
   Quantity get nominalVolume;
-  @JsonKey(name: extension)
   Quantity get externalDiameter;
-  @JsonKey(name: extension)
   String get shape;
   @JsonKey(name: '_shape')
   Element get shapeElement;
-  @JsonKey(name: extension)
   List<String> get color;
   @JsonKey(name: '_color')
   Element get colorElement;
-  @JsonKey(name: extension)
   List<String> get imprint;
   @JsonKey(name: '_imprint')
   Element get imprintElement;
-  @JsonKey(name: extension)
   List<Attachment> get image;
-  @JsonKey(name: extension)
   CodeableConcept get scoring;
 
   Map<String, dynamic> toJson();
@@ -835,23 +750,23 @@ abstract class $ProdCharacteristicCopyWith<$Res> {
           ProdCharacteristic value, $Res Function(ProdCharacteristic) then) =
       _$ProdCharacteristicCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) Quantity height,
-      @JsonKey(name: extension) Quantity width,
-      @JsonKey(name: extension) Quantity depth,
-      @JsonKey(name: extension) Quantity weight,
-      @JsonKey(name: extension) Quantity nominalVolume,
-      @JsonKey(name: extension) Quantity externalDiameter,
-      @JsonKey(name: extension) String shape,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Quantity height,
+      Quantity width,
+      Quantity depth,
+      Quantity weight,
+      Quantity nominalVolume,
+      Quantity externalDiameter,
+      String shape,
       @JsonKey(name: '_shape') Element shapeElement,
-      @JsonKey(name: extension) List<String> color,
+      List<String> color,
       @JsonKey(name: '_color') Element colorElement,
-      @JsonKey(name: extension) List<String> imprint,
+      List<String> imprint,
       @JsonKey(name: '_imprint') Element imprintElement,
-      @JsonKey(name: extension) List<Attachment> image,
-      @JsonKey(name: extension) CodeableConcept scoring});
+      List<Attachment> image,
+      CodeableConcept scoring});
 
   $QuantityCopyWith<$Res> get height;
   $QuantityCopyWith<$Res> get width;
@@ -1036,23 +951,23 @@ abstract class _$ProdCharacteristicCopyWith<$Res>
       __$ProdCharacteristicCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) Quantity height,
-      @JsonKey(name: extension) Quantity width,
-      @JsonKey(name: extension) Quantity depth,
-      @JsonKey(name: extension) Quantity weight,
-      @JsonKey(name: extension) Quantity nominalVolume,
-      @JsonKey(name: extension) Quantity externalDiameter,
-      @JsonKey(name: extension) String shape,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Quantity height,
+      Quantity width,
+      Quantity depth,
+      Quantity weight,
+      Quantity nominalVolume,
+      Quantity externalDiameter,
+      String shape,
       @JsonKey(name: '_shape') Element shapeElement,
-      @JsonKey(name: extension) List<String> color,
+      List<String> color,
       @JsonKey(name: '_color') Element colorElement,
-      @JsonKey(name: extension) List<String> imprint,
+      List<String> imprint,
       @JsonKey(name: '_imprint') Element imprintElement,
-      @JsonKey(name: extension) List<Attachment> image,
-      @JsonKey(name: extension) CodeableConcept scoring});
+      List<Attachment> image,
+      CodeableConcept scoring});
 
   @override
   $QuantityCopyWith<$Res> get height;
@@ -1145,78 +1060,65 @@ class __$ProdCharacteristicCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ProdCharacteristic extends _ProdCharacteristic {
   _$_ProdCharacteristic(
-      {@JsonKey(name: extension) this.id,
-      @JsonKey(name: extension) this.extension_,
-      @JsonKey(name: extension) this.modifierExtension,
-      @JsonKey(name: extension) this.height,
-      @JsonKey(name: extension) this.width,
-      @JsonKey(name: extension) this.depth,
-      @JsonKey(name: extension) this.weight,
-      @JsonKey(name: extension) this.nominalVolume,
-      @JsonKey(name: extension) this.externalDiameter,
-      @JsonKey(name: extension) this.shape,
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.height,
+      this.width,
+      this.depth,
+      this.weight,
+      this.nominalVolume,
+      this.externalDiameter,
+      this.shape,
       @JsonKey(name: '_shape') this.shapeElement,
-      @JsonKey(name: extension) this.color,
+      this.color,
       @JsonKey(name: '_color') this.colorElement,
-      @JsonKey(name: extension) this.imprint,
+      this.imprint,
       @JsonKey(name: '_imprint') this.imprintElement,
-      @JsonKey(name: extension) this.image,
-      @JsonKey(name: extension) this.scoring})
+      this.image,
+      this.scoring})
       : super._();
 
   factory _$_ProdCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$_$_ProdCharacteristicFromJson(json);
 
   @override
-  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  @JsonKey(name: extension)
   final List<FhirExtension> modifierExtension;
   @override
-  @JsonKey(name: extension)
   final Quantity height;
   @override
-  @JsonKey(name: extension)
   final Quantity width;
   @override
-  @JsonKey(name: extension)
   final Quantity depth;
   @override
-  @JsonKey(name: extension)
   final Quantity weight;
   @override
-  @JsonKey(name: extension)
   final Quantity nominalVolume;
   @override
-  @JsonKey(name: extension)
   final Quantity externalDiameter;
   @override
-  @JsonKey(name: extension)
   final String shape;
   @override
   @JsonKey(name: '_shape')
   final Element shapeElement;
   @override
-  @JsonKey(name: extension)
   final List<String> color;
   @override
   @JsonKey(name: '_color')
   final Element colorElement;
   @override
-  @JsonKey(name: extension)
   final List<String> imprint;
   @override
   @JsonKey(name: '_imprint')
   final Element imprintElement;
   @override
-  @JsonKey(name: extension)
   final List<Attachment> image;
   @override
-  @JsonKey(name: extension)
   final CodeableConcept scoring;
 
   @override
@@ -1306,78 +1208,64 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
 abstract class _ProdCharacteristic extends ProdCharacteristic {
   _ProdCharacteristic._() : super._();
   factory _ProdCharacteristic(
-          {@JsonKey(name: extension) String id,
-          @JsonKey(name: extension) List<FhirExtension> extension_,
-          @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-          @JsonKey(name: extension) Quantity height,
-          @JsonKey(name: extension) Quantity width,
-          @JsonKey(name: extension) Quantity depth,
-          @JsonKey(name: extension) Quantity weight,
-          @JsonKey(name: extension) Quantity nominalVolume,
-          @JsonKey(name: extension) Quantity externalDiameter,
-          @JsonKey(name: extension) String shape,
-          @JsonKey(name: '_shape') Element shapeElement,
-          @JsonKey(name: extension) List<String> color,
-          @JsonKey(name: '_color') Element colorElement,
-          @JsonKey(name: extension) List<String> imprint,
-          @JsonKey(name: '_imprint') Element imprintElement,
-          @JsonKey(name: extension) List<Attachment> image,
-          @JsonKey(name: extension) CodeableConcept scoring}) =
-      _$_ProdCharacteristic;
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Quantity height,
+      Quantity width,
+      Quantity depth,
+      Quantity weight,
+      Quantity nominalVolume,
+      Quantity externalDiameter,
+      String shape,
+      @JsonKey(name: '_shape') Element shapeElement,
+      List<String> color,
+      @JsonKey(name: '_color') Element colorElement,
+      List<String> imprint,
+      @JsonKey(name: '_imprint') Element imprintElement,
+      List<Attachment> image,
+      CodeableConcept scoring}) = _$_ProdCharacteristic;
 
   factory _ProdCharacteristic.fromJson(Map<String, dynamic> json) =
       _$_ProdCharacteristic.fromJson;
 
   @override
-  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
   @override
-  @JsonKey(name: extension)
   Quantity get height;
   @override
-  @JsonKey(name: extension)
   Quantity get width;
   @override
-  @JsonKey(name: extension)
   Quantity get depth;
   @override
-  @JsonKey(name: extension)
   Quantity get weight;
   @override
-  @JsonKey(name: extension)
   Quantity get nominalVolume;
   @override
-  @JsonKey(name: extension)
   Quantity get externalDiameter;
   @override
-  @JsonKey(name: extension)
   String get shape;
   @override
   @JsonKey(name: '_shape')
   Element get shapeElement;
   @override
-  @JsonKey(name: extension)
   List<String> get color;
   @override
   @JsonKey(name: '_color')
   Element get colorElement;
   @override
-  @JsonKey(name: extension)
   List<String> get imprint;
   @override
   @JsonKey(name: '_imprint')
   Element get imprintElement;
   @override
-  @JsonKey(name: extension)
   List<Attachment> get image;
   @override
-  @JsonKey(name: extension)
   CodeableConcept get scoring;
   @override
   _$ProdCharacteristicCopyWith<_ProdCharacteristic> get copyWith;
@@ -1391,14 +1279,14 @@ class _$MarketingStatusTearOff {
   const _$MarketingStatusTearOff();
 
   _MarketingStatus call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @required @JsonKey(name: extension) CodeableConcept country,
-      @JsonKey(name: extension) CodeableConcept jurisdiction,
-      @required @JsonKey(name: extension) CodeableConcept status,
-      @required @JsonKey(name: extension) Period dateRange,
-      @JsonKey(name: extension) FhirDateTime restoreDate,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      @required CodeableConcept country,
+      CodeableConcept jurisdiction,
+      @required CodeableConcept status,
+      @required Period dateRange,
+      FhirDateTime restoreDate,
       @JsonKey(name: '_restoreDate') Element restoreDateElement}) {
     return _MarketingStatus(
       id: id,
@@ -1418,21 +1306,14 @@ class _$MarketingStatusTearOff {
 const $MarketingStatus = _$MarketingStatusTearOff();
 
 mixin _$MarketingStatus {
-  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
-  @JsonKey(name: extension)
   CodeableConcept get country;
-  @JsonKey(name: extension)
   CodeableConcept get jurisdiction;
-  @JsonKey(name: extension)
   CodeableConcept get status;
-  @JsonKey(name: extension)
   Period get dateRange;
-  @JsonKey(name: extension)
   FhirDateTime get restoreDate;
   @JsonKey(name: '_restoreDate')
   Element get restoreDateElement;
@@ -1446,14 +1327,14 @@ abstract class $MarketingStatusCopyWith<$Res> {
           MarketingStatus value, $Res Function(MarketingStatus) then) =
       _$MarketingStatusCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) CodeableConcept country,
-      @JsonKey(name: extension) CodeableConcept jurisdiction,
-      @JsonKey(name: extension) CodeableConcept status,
-      @JsonKey(name: extension) Period dateRange,
-      @JsonKey(name: extension) FhirDateTime restoreDate,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      CodeableConcept country,
+      CodeableConcept jurisdiction,
+      CodeableConcept status,
+      Period dateRange,
+      FhirDateTime restoreDate,
       @JsonKey(name: '_restoreDate') Element restoreDateElement});
 
   $CodeableConceptCopyWith<$Res> get country;
@@ -1564,14 +1445,14 @@ abstract class _$MarketingStatusCopyWith<$Res>
       __$MarketingStatusCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) CodeableConcept country,
-      @JsonKey(name: extension) CodeableConcept jurisdiction,
-      @JsonKey(name: extension) CodeableConcept status,
-      @JsonKey(name: extension) Period dateRange,
-      @JsonKey(name: extension) FhirDateTime restoreDate,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      CodeableConcept country,
+      CodeableConcept jurisdiction,
+      CodeableConcept status,
+      Period dateRange,
+      FhirDateTime restoreDate,
       @JsonKey(name: '_restoreDate') Element restoreDateElement});
 
   @override
@@ -1635,14 +1516,14 @@ class __$MarketingStatusCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MarketingStatus extends _MarketingStatus {
   _$_MarketingStatus(
-      {@JsonKey(name: extension) this.id,
-      @JsonKey(name: extension) this.extension_,
-      @JsonKey(name: extension) this.modifierExtension,
-      @required @JsonKey(name: extension) this.country,
-      @JsonKey(name: extension) this.jurisdiction,
-      @required @JsonKey(name: extension) this.status,
-      @required @JsonKey(name: extension) this.dateRange,
-      @JsonKey(name: extension) this.restoreDate,
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      @required this.country,
+      this.jurisdiction,
+      @required this.status,
+      @required this.dateRange,
+      this.restoreDate,
       @JsonKey(name: '_restoreDate') this.restoreDateElement})
       : assert(country != null),
         assert(status != null),
@@ -1653,28 +1534,21 @@ class _$_MarketingStatus extends _MarketingStatus {
       _$_$_MarketingStatusFromJson(json);
 
   @override
-  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  @JsonKey(name: extension)
   final List<FhirExtension> modifierExtension;
   @override
-  @JsonKey(name: extension)
   final CodeableConcept country;
   @override
-  @JsonKey(name: extension)
   final CodeableConcept jurisdiction;
   @override
-  @JsonKey(name: extension)
   final CodeableConcept status;
   @override
-  @JsonKey(name: extension)
   final Period dateRange;
   @override
-  @JsonKey(name: extension)
   final FhirDateTime restoreDate;
   @override
   @JsonKey(name: '_restoreDate')
@@ -1742,14 +1616,14 @@ class _$_MarketingStatus extends _MarketingStatus {
 abstract class _MarketingStatus extends MarketingStatus {
   _MarketingStatus._() : super._();
   factory _MarketingStatus(
-          {@JsonKey(name: extension) String id,
-          @JsonKey(name: extension) List<FhirExtension> extension_,
-          @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-          @required @JsonKey(name: extension) CodeableConcept country,
-          @JsonKey(name: extension) CodeableConcept jurisdiction,
-          @required @JsonKey(name: extension) CodeableConcept status,
-          @required @JsonKey(name: extension) Period dateRange,
-          @JsonKey(name: extension) FhirDateTime restoreDate,
+          {String id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          @required CodeableConcept country,
+          CodeableConcept jurisdiction,
+          @required CodeableConcept status,
+          @required Period dateRange,
+          FhirDateTime restoreDate,
           @JsonKey(name: '_restoreDate') Element restoreDateElement}) =
       _$_MarketingStatus;
 
@@ -1757,28 +1631,21 @@ abstract class _MarketingStatus extends MarketingStatus {
       _$_MarketingStatus.fromJson;
 
   @override
-  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
   @override
-  @JsonKey(name: extension)
   CodeableConcept get country;
   @override
-  @JsonKey(name: extension)
   CodeableConcept get jurisdiction;
   @override
-  @JsonKey(name: extension)
   CodeableConcept get status;
   @override
-  @JsonKey(name: extension)
   Period get dateRange;
   @override
-  @JsonKey(name: extension)
   FhirDateTime get restoreDate;
   @override
   @JsonKey(name: '_restoreDate')
@@ -1795,24 +1662,22 @@ class _$SubstanceAmountTearOff {
   const _$SubstanceAmountTearOff();
 
   _SubstanceAmount call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) Quantity amountQuantity,
-      @JsonKey(name: extension) Range amountRange,
-      @JsonKey(name: extension) String amountString,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Quantity amountQuantity,
+      Range amountRange,
       @JsonKey(name: '_amountString') Element amountStringElement,
-      @JsonKey(name: extension) CodeableConcept amountType,
-      @JsonKey(name: extension) String amountText,
+      CodeableConcept amountType,
+      String amountText,
       @JsonKey(name: '_amountText') Element amountTextElement,
-      @JsonKey(name: extension) SubstanceAmountReferenceRange referenceRange}) {
+      SubstanceAmountReferenceRange referenceRange}) {
     return _SubstanceAmount(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       amountQuantity: amountQuantity,
       amountRange: amountRange,
-      amountString: amountString,
       amountStringElement: amountStringElement,
       amountType: amountType,
       amountText: amountText,
@@ -1826,27 +1691,18 @@ class _$SubstanceAmountTearOff {
 const $SubstanceAmount = _$SubstanceAmountTearOff();
 
 mixin _$SubstanceAmount {
-  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
-  @JsonKey(name: extension)
   Quantity get amountQuantity;
-  @JsonKey(name: extension)
   Range get amountRange;
-  @JsonKey(name: extension)
-  String get amountString;
   @JsonKey(name: '_amountString')
   Element get amountStringElement;
-  @JsonKey(name: extension)
   CodeableConcept get amountType;
-  @JsonKey(name: extension)
   String get amountText;
   @JsonKey(name: '_amountText')
   Element get amountTextElement;
-  @JsonKey(name: extension)
   SubstanceAmountReferenceRange get referenceRange;
 
   Map<String, dynamic> toJson();
@@ -1858,17 +1714,16 @@ abstract class $SubstanceAmountCopyWith<$Res> {
           SubstanceAmount value, $Res Function(SubstanceAmount) then) =
       _$SubstanceAmountCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) Quantity amountQuantity,
-      @JsonKey(name: extension) Range amountRange,
-      @JsonKey(name: extension) String amountString,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Quantity amountQuantity,
+      Range amountRange,
       @JsonKey(name: '_amountString') Element amountStringElement,
-      @JsonKey(name: extension) CodeableConcept amountType,
-      @JsonKey(name: extension) String amountText,
+      CodeableConcept amountType,
+      String amountText,
       @JsonKey(name: '_amountText') Element amountTextElement,
-      @JsonKey(name: extension) SubstanceAmountReferenceRange referenceRange});
+      SubstanceAmountReferenceRange referenceRange});
 
   $QuantityCopyWith<$Res> get amountQuantity;
   $RangeCopyWith<$Res> get amountRange;
@@ -1893,7 +1748,6 @@ class _$SubstanceAmountCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object amountQuantity = freezed,
     Object amountRange = freezed,
-    Object amountString = freezed,
     Object amountStringElement = freezed,
     Object amountType = freezed,
     Object amountText = freezed,
@@ -1913,9 +1767,6 @@ class _$SubstanceAmountCopyWithImpl<$Res>
           : amountQuantity as Quantity,
       amountRange:
           amountRange == freezed ? _value.amountRange : amountRange as Range,
-      amountString: amountString == freezed
-          ? _value.amountString
-          : amountString as String,
       amountStringElement: amountStringElement == freezed
           ? _value.amountStringElement
           : amountStringElement as Element,
@@ -2002,17 +1853,16 @@ abstract class _$SubstanceAmountCopyWith<$Res>
       __$SubstanceAmountCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) Quantity amountQuantity,
-      @JsonKey(name: extension) Range amountRange,
-      @JsonKey(name: extension) String amountString,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Quantity amountQuantity,
+      Range amountRange,
       @JsonKey(name: '_amountString') Element amountStringElement,
-      @JsonKey(name: extension) CodeableConcept amountType,
-      @JsonKey(name: extension) String amountText,
+      CodeableConcept amountType,
+      String amountText,
       @JsonKey(name: '_amountText') Element amountTextElement,
-      @JsonKey(name: extension) SubstanceAmountReferenceRange referenceRange});
+      SubstanceAmountReferenceRange referenceRange});
 
   @override
   $QuantityCopyWith<$Res> get amountQuantity;
@@ -2045,7 +1895,6 @@ class __$SubstanceAmountCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object amountQuantity = freezed,
     Object amountRange = freezed,
-    Object amountString = freezed,
     Object amountStringElement = freezed,
     Object amountType = freezed,
     Object amountText = freezed,
@@ -2065,9 +1914,6 @@ class __$SubstanceAmountCopyWithImpl<$Res>
           : amountQuantity as Quantity,
       amountRange:
           amountRange == freezed ? _value.amountRange : amountRange as Range,
-      amountString: amountString == freezed
-          ? _value.amountString
-          : amountString as String,
       amountStringElement: amountStringElement == freezed
           ? _value.amountStringElement
           : amountStringElement as Element,
@@ -2089,59 +1935,48 @@ class __$SubstanceAmountCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SubstanceAmount extends _SubstanceAmount {
   _$_SubstanceAmount(
-      {@JsonKey(name: extension) this.id,
-      @JsonKey(name: extension) this.extension_,
-      @JsonKey(name: extension) this.modifierExtension,
-      @JsonKey(name: extension) this.amountQuantity,
-      @JsonKey(name: extension) this.amountRange,
-      @JsonKey(name: extension) this.amountString,
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.amountQuantity,
+      this.amountRange,
       @JsonKey(name: '_amountString') this.amountStringElement,
-      @JsonKey(name: extension) this.amountType,
-      @JsonKey(name: extension) this.amountText,
+      this.amountType,
+      this.amountText,
       @JsonKey(name: '_amountText') this.amountTextElement,
-      @JsonKey(name: extension) this.referenceRange})
+      this.referenceRange})
       : super._();
 
   factory _$_SubstanceAmount.fromJson(Map<String, dynamic> json) =>
       _$_$_SubstanceAmountFromJson(json);
 
   @override
-  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  @JsonKey(name: extension)
   final List<FhirExtension> modifierExtension;
   @override
-  @JsonKey(name: extension)
   final Quantity amountQuantity;
   @override
-  @JsonKey(name: extension)
   final Range amountRange;
-  @override
-  @JsonKey(name: extension)
-  final String amountString;
   @override
   @JsonKey(name: '_amountString')
   final Element amountStringElement;
   @override
-  @JsonKey(name: extension)
   final CodeableConcept amountType;
   @override
-  @JsonKey(name: extension)
   final String amountText;
   @override
   @JsonKey(name: '_amountText')
   final Element amountTextElement;
   @override
-  @JsonKey(name: extension)
   final SubstanceAmountReferenceRange referenceRange;
 
   @override
   String toString() {
-    return 'SubstanceAmount(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, amountQuantity: $amountQuantity, amountRange: $amountRange, amountString: $amountString, amountStringElement: $amountStringElement, amountType: $amountType, amountText: $amountText, amountTextElement: $amountTextElement, referenceRange: $referenceRange)';
+    return 'SubstanceAmount(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, amountQuantity: $amountQuantity, amountRange: $amountRange, amountStringElement: $amountStringElement, amountType: $amountType, amountText: $amountText, amountTextElement: $amountTextElement, referenceRange: $referenceRange)';
   }
 
   @override
@@ -2162,9 +1997,6 @@ class _$_SubstanceAmount extends _SubstanceAmount {
             (identical(other.amountRange, amountRange) ||
                 const DeepCollectionEquality()
                     .equals(other.amountRange, amountRange)) &&
-            (identical(other.amountString, amountString) ||
-                const DeepCollectionEquality()
-                    .equals(other.amountString, amountString)) &&
             (identical(other.amountStringElement, amountStringElement) ||
                 const DeepCollectionEquality()
                     .equals(other.amountStringElement, amountStringElement)) &&
@@ -2190,7 +2022,6 @@ class _$_SubstanceAmount extends _SubstanceAmount {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(amountQuantity) ^
       const DeepCollectionEquality().hash(amountRange) ^
-      const DeepCollectionEquality().hash(amountString) ^
       const DeepCollectionEquality().hash(amountStringElement) ^
       const DeepCollectionEquality().hash(amountType) ^
       const DeepCollectionEquality().hash(amountText) ^
@@ -2210,64 +2041,42 @@ class _$_SubstanceAmount extends _SubstanceAmount {
 abstract class _SubstanceAmount extends SubstanceAmount {
   _SubstanceAmount._() : super._();
   factory _SubstanceAmount(
-      {@JsonKey(name: extension)
-          String id,
-      @JsonKey(name: extension)
-          List<FhirExtension> extension_,
-      @JsonKey(name: extension)
-          List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension)
-          Quantity amountQuantity,
-      @JsonKey(name: extension)
-          Range amountRange,
-      @JsonKey(name: extension)
-          String amountString,
-      @JsonKey(name: '_amountString')
-          Element amountStringElement,
-      @JsonKey(name: extension)
-          CodeableConcept amountType,
-      @JsonKey(name: extension)
-          String amountText,
-      @JsonKey(name: '_amountText')
-          Element amountTextElement,
-      @JsonKey(name: extension)
-          SubstanceAmountReferenceRange referenceRange}) = _$_SubstanceAmount;
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Quantity amountQuantity,
+      Range amountRange,
+      @JsonKey(name: '_amountString') Element amountStringElement,
+      CodeableConcept amountType,
+      String amountText,
+      @JsonKey(name: '_amountText') Element amountTextElement,
+      SubstanceAmountReferenceRange referenceRange}) = _$_SubstanceAmount;
 
   factory _SubstanceAmount.fromJson(Map<String, dynamic> json) =
       _$_SubstanceAmount.fromJson;
 
   @override
-  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
   @override
-  @JsonKey(name: extension)
   Quantity get amountQuantity;
   @override
-  @JsonKey(name: extension)
   Range get amountRange;
-  @override
-  @JsonKey(name: extension)
-  String get amountString;
   @override
   @JsonKey(name: '_amountString')
   Element get amountStringElement;
   @override
-  @JsonKey(name: extension)
   CodeableConcept get amountType;
   @override
-  @JsonKey(name: extension)
   String get amountText;
   @override
   @JsonKey(name: '_amountText')
   Element get amountTextElement;
   @override
-  @JsonKey(name: extension)
   SubstanceAmountReferenceRange get referenceRange;
   @override
   _$SubstanceAmountCopyWith<_SubstanceAmount> get copyWith;
@@ -2282,11 +2091,11 @@ class _$SubstanceAmountReferenceRangeTearOff {
   const _$SubstanceAmountReferenceRangeTearOff();
 
   _SubstanceAmountReferenceRange call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) Quantity lowLimit,
-      @JsonKey(name: extension) Quantity highLimit}) {
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Quantity lowLimit,
+      Quantity highLimit}) {
     return _SubstanceAmountReferenceRange(
       id: id,
       extension_: extension_,
@@ -2301,15 +2110,11 @@ class _$SubstanceAmountReferenceRangeTearOff {
 const $SubstanceAmountReferenceRange = _$SubstanceAmountReferenceRangeTearOff();
 
 mixin _$SubstanceAmountReferenceRange {
-  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
-  @JsonKey(name: extension)
   Quantity get lowLimit;
-  @JsonKey(name: extension)
   Quantity get highLimit;
 
   Map<String, dynamic> toJson();
@@ -2323,11 +2128,11 @@ abstract class $SubstanceAmountReferenceRangeCopyWith<$Res> {
           $Res Function(SubstanceAmountReferenceRange) then) =
       _$SubstanceAmountReferenceRangeCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) Quantity lowLimit,
-      @JsonKey(name: extension) Quantity highLimit});
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Quantity lowLimit,
+      Quantity highLimit});
 
   $QuantityCopyWith<$Res> get lowLimit;
   $QuantityCopyWith<$Res> get highLimit;
@@ -2392,11 +2197,11 @@ abstract class _$SubstanceAmountReferenceRangeCopyWith<$Res>
       __$SubstanceAmountReferenceRangeCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) Quantity lowLimit,
-      @JsonKey(name: extension) Quantity highLimit});
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Quantity lowLimit,
+      Quantity highLimit});
 
   @override
   $QuantityCopyWith<$Res> get lowLimit;
@@ -2442,11 +2247,11 @@ class __$SubstanceAmountReferenceRangeCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SubstanceAmountReferenceRange extends _SubstanceAmountReferenceRange {
   _$_SubstanceAmountReferenceRange(
-      {@JsonKey(name: extension) this.id,
-      @JsonKey(name: extension) this.extension_,
-      @JsonKey(name: extension) this.modifierExtension,
-      @JsonKey(name: extension) this.lowLimit,
-      @JsonKey(name: extension) this.highLimit})
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.lowLimit,
+      this.highLimit})
       : super._();
 
   factory _$_SubstanceAmountReferenceRange.fromJson(
@@ -2454,19 +2259,15 @@ class _$_SubstanceAmountReferenceRange extends _SubstanceAmountReferenceRange {
       _$_$_SubstanceAmountReferenceRangeFromJson(json);
 
   @override
-  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  @JsonKey(name: extension)
   final List<FhirExtension> modifierExtension;
   @override
-  @JsonKey(name: extension)
   final Quantity lowLimit;
   @override
-  @JsonKey(name: extension)
   final Quantity highLimit;
 
   @override
@@ -2518,30 +2319,25 @@ abstract class _SubstanceAmountReferenceRange
     extends SubstanceAmountReferenceRange {
   _SubstanceAmountReferenceRange._() : super._();
   factory _SubstanceAmountReferenceRange(
-          {@JsonKey(name: extension) String id,
-          @JsonKey(name: extension) List<FhirExtension> extension_,
-          @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-          @JsonKey(name: extension) Quantity lowLimit,
-          @JsonKey(name: extension) Quantity highLimit}) =
-      _$_SubstanceAmountReferenceRange;
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Quantity lowLimit,
+      Quantity highLimit}) = _$_SubstanceAmountReferenceRange;
 
   factory _SubstanceAmountReferenceRange.fromJson(Map<String, dynamic> json) =
       _$_SubstanceAmountReferenceRange.fromJson;
 
   @override
-  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
   @override
-  @JsonKey(name: extension)
   Quantity get lowLimit;
   @override
-  @JsonKey(name: extension)
   Quantity get highLimit;
   @override
   _$SubstanceAmountReferenceRangeCopyWith<_SubstanceAmountReferenceRange>

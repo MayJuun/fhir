@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'documents.dart';
 
 
 enum CatalogEntryStatus{
@@ -19,7 +19,7 @@ is_replaced_by,@JsonValue('unknown')
 enum CompositionStatus{
 @JsonValue('preliminary')
 preliminary,@JsonValue('final')
-final,@JsonValue('amended')
+final_,@JsonValue('amended')
 amended,@JsonValue('entered-in-error')
 entered_in_error,@JsonValue('unknown')
   unknown,}

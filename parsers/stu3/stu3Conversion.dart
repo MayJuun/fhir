@@ -7,9 +7,9 @@ void main() async {
   //location of fhir schema
   var file = File('./parsers/stu3/fhir.schema.stu3.json');
   var contents = await file.readAsString();
-  var newObj;
-  var require = <String>[];
-  var isRequired;
+  // var newObj;
+  // var require = <String>[];
+  // var isRequired;
 
   Map schema = json.decode(contents);
   String text = '';

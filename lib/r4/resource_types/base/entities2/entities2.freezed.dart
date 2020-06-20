@@ -21,56 +21,40 @@ class _$BiologicallyDerivedProductTearOff {
           {@required
           @JsonKey(defaultValue: 'className')
               String resourceType,
-          @JsonKey(name: extension)
-              Id id,
-          @JsonKey(name: extension)
-              Meta meta,
-          @JsonKey(name: extension)
-              FhirUri implicitRules,
+          Id id,
+          Meta meta,
+          FhirUri implicitRules,
           @JsonKey(name: '_implicitRules')
               Element implicitRulesElement,
-          @JsonKey(name: extension)
-              Code language,
+          Code language,
           @JsonKey(name: '_language')
               Element languageElement,
-          @JsonKey(name: extension)
-              Narrative text,
-          @JsonKey(name: extension)
-              List<Resource> contained,
-          @JsonKey(name: extension)
+          Narrative text,
+          List<Resource> contained,
+          @JsonKey(name: 'extension')
               List<FhirExtension> extension_,
-          @JsonKey(name: extension)
-              List<FhirExtension> modifierExtension,
-          @JsonKey(name: extension)
-              List<Identifier> identifier,
+          List<FhirExtension> modifierExtension,
+          List<Identifier> identifier,
           @JsonKey(
               unknownEnumValue:
                   BiologicallyDerivedProductProductCategory.unknown)
               BiologicallyDerivedProductProductCategory productCategory,
           @JsonKey(name: '_productCategory')
               Element productCategoryElement,
-          @JsonKey(name: extension)
-              CodeableConcept productCode,
+          CodeableConcept productCode,
           @JsonKey(unknownEnumValue: BiologicallyDerivedProductStatus.unknown)
               BiologicallyDerivedProductStatus status,
           @JsonKey(name: '_status')
               Element statusElement,
-          @JsonKey(name: extension)
-              List<Reference> request,
-          @JsonKey(name: extension)
-              Integer quantity,
+          List<Reference> request,
+          Integer quantity,
           @JsonKey(name: '_quantity')
               Element quantityElement,
-          @JsonKey(name: extension)
-              List<Reference> parent,
-          @JsonKey(name: extension)
-              BiologicallyDerivedProductCollection collection,
-          @JsonKey(name: extension)
-              List<BiologicallyDerivedProductProcessing> processing,
-          @JsonKey(name: extension)
-              BiologicallyDerivedProductManipulation manipulation,
-          @JsonKey(name: extension)
-              List<BiologicallyDerivedProductStorage> storage}) {
+          List<Reference> parent,
+          BiologicallyDerivedProductCollection collection,
+          List<BiologicallyDerivedProductProcessing> processing,
+          BiologicallyDerivedProductManipulation manipulation,
+          List<BiologicallyDerivedProductStorage> storage}) {
     return _BiologicallyDerivedProduct(
       resourceType: resourceType,
       id: id,
@@ -107,53 +91,37 @@ const $BiologicallyDerivedProduct = _$BiologicallyDerivedProductTearOff();
 mixin _$BiologicallyDerivedProduct {
   @JsonKey(defaultValue: 'className')
   String get resourceType;
-  @JsonKey(name: extension)
   Id get id;
-  @JsonKey(name: extension)
   Meta get meta;
-  @JsonKey(name: extension)
   FhirUri get implicitRules;
   @JsonKey(name: '_implicitRules')
   Element get implicitRulesElement;
-  @JsonKey(name: extension)
   Code get language;
   @JsonKey(name: '_language')
   Element get languageElement;
-  @JsonKey(name: extension)
   Narrative get text;
-  @JsonKey(name: extension)
   List<Resource> get contained;
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
-  @JsonKey(name: extension)
   List<Identifier> get identifier;
   @JsonKey(unknownEnumValue: BiologicallyDerivedProductProductCategory.unknown)
   BiologicallyDerivedProductProductCategory get productCategory;
   @JsonKey(name: '_productCategory')
   Element get productCategoryElement;
-  @JsonKey(name: extension)
   CodeableConcept get productCode;
   @JsonKey(unknownEnumValue: BiologicallyDerivedProductStatus.unknown)
   BiologicallyDerivedProductStatus get status;
   @JsonKey(name: '_status')
   Element get statusElement;
-  @JsonKey(name: extension)
   List<Reference> get request;
-  @JsonKey(name: extension)
   Integer get quantity;
   @JsonKey(name: '_quantity')
   Element get quantityElement;
-  @JsonKey(name: extension)
   List<Reference> get parent;
-  @JsonKey(name: extension)
   BiologicallyDerivedProductCollection get collection;
-  @JsonKey(name: extension)
   List<BiologicallyDerivedProductProcessing> get processing;
-  @JsonKey(name: extension)
   BiologicallyDerivedProductManipulation get manipulation;
-  @JsonKey(name: extension)
   List<BiologicallyDerivedProductStorage> get storage;
 
   Map<String, dynamic> toJson();
@@ -168,56 +136,40 @@ abstract class $BiologicallyDerivedProductCopyWith<$Res> {
       call(
           {@JsonKey(defaultValue: 'className')
               String resourceType,
-          @JsonKey(name: extension)
-              Id id,
-          @JsonKey(name: extension)
-              Meta meta,
-          @JsonKey(name: extension)
-              FhirUri implicitRules,
+          Id id,
+          Meta meta,
+          FhirUri implicitRules,
           @JsonKey(name: '_implicitRules')
               Element implicitRulesElement,
-          @JsonKey(name: extension)
-              Code language,
+          Code language,
           @JsonKey(name: '_language')
               Element languageElement,
-          @JsonKey(name: extension)
-              Narrative text,
-          @JsonKey(name: extension)
-              List<Resource> contained,
-          @JsonKey(name: extension)
+          Narrative text,
+          List<Resource> contained,
+          @JsonKey(name: 'extension')
               List<FhirExtension> extension_,
-          @JsonKey(name: extension)
-              List<FhirExtension> modifierExtension,
-          @JsonKey(name: extension)
-              List<Identifier> identifier,
+          List<FhirExtension> modifierExtension,
+          List<Identifier> identifier,
           @JsonKey(
               unknownEnumValue:
                   BiologicallyDerivedProductProductCategory.unknown)
               BiologicallyDerivedProductProductCategory productCategory,
           @JsonKey(name: '_productCategory')
               Element productCategoryElement,
-          @JsonKey(name: extension)
-              CodeableConcept productCode,
+          CodeableConcept productCode,
           @JsonKey(unknownEnumValue: BiologicallyDerivedProductStatus.unknown)
               BiologicallyDerivedProductStatus status,
           @JsonKey(name: '_status')
               Element statusElement,
-          @JsonKey(name: extension)
-              List<Reference> request,
-          @JsonKey(name: extension)
-              Integer quantity,
+          List<Reference> request,
+          Integer quantity,
           @JsonKey(name: '_quantity')
               Element quantityElement,
-          @JsonKey(name: extension)
-              List<Reference> parent,
-          @JsonKey(name: extension)
-              BiologicallyDerivedProductCollection collection,
-          @JsonKey(name: extension)
-              List<BiologicallyDerivedProductProcessing> processing,
-          @JsonKey(name: extension)
-              BiologicallyDerivedProductManipulation manipulation,
-          @JsonKey(name: extension)
-              List<BiologicallyDerivedProductStorage> storage});
+          List<Reference> parent,
+          BiologicallyDerivedProductCollection collection,
+          List<BiologicallyDerivedProductProcessing> processing,
+          BiologicallyDerivedProductManipulation manipulation,
+          List<BiologicallyDerivedProductStorage> storage});
 
   $MetaCopyWith<$Res> get meta;
   $ElementCopyWith<$Res> get implicitRulesElement;
@@ -445,56 +397,40 @@ abstract class _$BiologicallyDerivedProductCopyWith<$Res>
       call(
           {@JsonKey(defaultValue: 'className')
               String resourceType,
-          @JsonKey(name: extension)
-              Id id,
-          @JsonKey(name: extension)
-              Meta meta,
-          @JsonKey(name: extension)
-              FhirUri implicitRules,
+          Id id,
+          Meta meta,
+          FhirUri implicitRules,
           @JsonKey(name: '_implicitRules')
               Element implicitRulesElement,
-          @JsonKey(name: extension)
-              Code language,
+          Code language,
           @JsonKey(name: '_language')
               Element languageElement,
-          @JsonKey(name: extension)
-              Narrative text,
-          @JsonKey(name: extension)
-              List<Resource> contained,
-          @JsonKey(name: extension)
+          Narrative text,
+          List<Resource> contained,
+          @JsonKey(name: 'extension')
               List<FhirExtension> extension_,
-          @JsonKey(name: extension)
-              List<FhirExtension> modifierExtension,
-          @JsonKey(name: extension)
-              List<Identifier> identifier,
+          List<FhirExtension> modifierExtension,
+          List<Identifier> identifier,
           @JsonKey(
               unknownEnumValue:
                   BiologicallyDerivedProductProductCategory.unknown)
               BiologicallyDerivedProductProductCategory productCategory,
           @JsonKey(name: '_productCategory')
               Element productCategoryElement,
-          @JsonKey(name: extension)
-              CodeableConcept productCode,
+          CodeableConcept productCode,
           @JsonKey(unknownEnumValue: BiologicallyDerivedProductStatus.unknown)
               BiologicallyDerivedProductStatus status,
           @JsonKey(name: '_status')
               Element statusElement,
-          @JsonKey(name: extension)
-              List<Reference> request,
-          @JsonKey(name: extension)
-              Integer quantity,
+          List<Reference> request,
+          Integer quantity,
           @JsonKey(name: '_quantity')
               Element quantityElement,
-          @JsonKey(name: extension)
-              List<Reference> parent,
-          @JsonKey(name: extension)
-              BiologicallyDerivedProductCollection collection,
-          @JsonKey(name: extension)
-              List<BiologicallyDerivedProductProcessing> processing,
-          @JsonKey(name: extension)
-              BiologicallyDerivedProductManipulation manipulation,
-          @JsonKey(name: extension)
-              List<BiologicallyDerivedProductStorage> storage});
+          List<Reference> parent,
+          BiologicallyDerivedProductCollection collection,
+          List<BiologicallyDerivedProductProcessing> processing,
+          BiologicallyDerivedProductManipulation manipulation,
+          List<BiologicallyDerivedProductStorage> storage});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -628,54 +564,38 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
       {@required
       @JsonKey(defaultValue: 'className')
           this.resourceType,
-      @JsonKey(name: extension)
-          this.id,
-      @JsonKey(name: extension)
-          this.meta,
-      @JsonKey(name: extension)
-          this.implicitRules,
+      this.id,
+      this.meta,
+      this.implicitRules,
       @JsonKey(name: '_implicitRules')
           this.implicitRulesElement,
-      @JsonKey(name: extension)
-          this.language,
+      this.language,
       @JsonKey(name: '_language')
           this.languageElement,
-      @JsonKey(name: extension)
-          this.text,
-      @JsonKey(name: extension)
-          this.contained,
-      @JsonKey(name: extension)
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
           this.extension_,
-      @JsonKey(name: extension)
-          this.modifierExtension,
-      @JsonKey(name: extension)
-          this.identifier,
+      this.modifierExtension,
+      this.identifier,
       @JsonKey(unknownEnumValue: BiologicallyDerivedProductProductCategory.unknown)
           this.productCategory,
       @JsonKey(name: '_productCategory')
           this.productCategoryElement,
-      @JsonKey(name: extension)
-          this.productCode,
+      this.productCode,
       @JsonKey(unknownEnumValue: BiologicallyDerivedProductStatus.unknown)
           this.status,
       @JsonKey(name: '_status')
           this.statusElement,
-      @JsonKey(name: extension)
-          this.request,
-      @JsonKey(name: extension)
-          this.quantity,
+      this.request,
+      this.quantity,
       @JsonKey(name: '_quantity')
           this.quantityElement,
-      @JsonKey(name: extension)
-          this.parent,
-      @JsonKey(name: extension)
-          this.collection,
-      @JsonKey(name: extension)
-          this.processing,
-      @JsonKey(name: extension)
-          this.manipulation,
-      @JsonKey(name: extension)
-          this.storage})
+      this.parent,
+      this.collection,
+      this.processing,
+      this.manipulation,
+      this.storage})
       : assert(resourceType != null),
         super._();
 
@@ -686,37 +606,29 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   @JsonKey(defaultValue: 'className')
   final String resourceType;
   @override
-  @JsonKey(name: extension)
   final Id id;
   @override
-  @JsonKey(name: extension)
   final Meta meta;
   @override
-  @JsonKey(name: extension)
   final FhirUri implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   final Element implicitRulesElement;
   @override
-  @JsonKey(name: extension)
   final Code language;
   @override
   @JsonKey(name: '_language')
   final Element languageElement;
   @override
-  @JsonKey(name: extension)
   final Narrative text;
   @override
-  @JsonKey(name: extension)
   final List<Resource> contained;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  @JsonKey(name: extension)
   final List<FhirExtension> modifierExtension;
   @override
-  @JsonKey(name: extension)
   final List<Identifier> identifier;
   @override
   @JsonKey(unknownEnumValue: BiologicallyDerivedProductProductCategory.unknown)
@@ -725,7 +637,6 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   @JsonKey(name: '_productCategory')
   final Element productCategoryElement;
   @override
-  @JsonKey(name: extension)
   final CodeableConcept productCode;
   @override
   @JsonKey(unknownEnumValue: BiologicallyDerivedProductStatus.unknown)
@@ -734,28 +645,21 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   @JsonKey(name: '_status')
   final Element statusElement;
   @override
-  @JsonKey(name: extension)
   final List<Reference> request;
   @override
-  @JsonKey(name: extension)
   final Integer quantity;
   @override
   @JsonKey(name: '_quantity')
   final Element quantityElement;
   @override
-  @JsonKey(name: extension)
   final List<Reference> parent;
   @override
-  @JsonKey(name: extension)
   final BiologicallyDerivedProductCollection collection;
   @override
-  @JsonKey(name: extension)
   final List<BiologicallyDerivedProductProcessing> processing;
   @override
-  @JsonKey(name: extension)
   final BiologicallyDerivedProductManipulation manipulation;
   @override
-  @JsonKey(name: extension)
   final List<BiologicallyDerivedProductStorage> storage;
 
   @override
@@ -882,54 +786,38 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
       {@required
       @JsonKey(defaultValue: 'className')
           String resourceType,
-      @JsonKey(name: extension)
-          Id id,
-      @JsonKey(name: extension)
-          Meta meta,
-      @JsonKey(name: extension)
-          FhirUri implicitRules,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
-      @JsonKey(name: extension)
-          Code language,
+      Code language,
       @JsonKey(name: '_language')
           Element languageElement,
-      @JsonKey(name: extension)
-          Narrative text,
-      @JsonKey(name: extension)
-          List<Resource> contained,
-      @JsonKey(name: extension)
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      @JsonKey(name: extension)
-          List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension)
-          List<Identifier> identifier,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       @JsonKey(unknownEnumValue: BiologicallyDerivedProductProductCategory.unknown)
           BiologicallyDerivedProductProductCategory productCategory,
       @JsonKey(name: '_productCategory')
           Element productCategoryElement,
-      @JsonKey(name: extension)
-          CodeableConcept productCode,
+      CodeableConcept productCode,
       @JsonKey(unknownEnumValue: BiologicallyDerivedProductStatus.unknown)
           BiologicallyDerivedProductStatus status,
       @JsonKey(name: '_status')
           Element statusElement,
-      @JsonKey(name: extension)
-          List<Reference> request,
-      @JsonKey(name: extension)
-          Integer quantity,
+      List<Reference> request,
+      Integer quantity,
       @JsonKey(name: '_quantity')
           Element quantityElement,
-      @JsonKey(name: extension)
-          List<Reference> parent,
-      @JsonKey(name: extension)
-          BiologicallyDerivedProductCollection collection,
-      @JsonKey(name: extension)
-          List<BiologicallyDerivedProductProcessing> processing,
-      @JsonKey(name: extension)
-          BiologicallyDerivedProductManipulation manipulation,
-      @JsonKey(name: extension)
-          List<BiologicallyDerivedProductStorage> storage}) = _$_BiologicallyDerivedProduct;
+      List<Reference> parent,
+      BiologicallyDerivedProductCollection collection,
+      List<BiologicallyDerivedProductProcessing> processing,
+      BiologicallyDerivedProductManipulation manipulation,
+      List<BiologicallyDerivedProductStorage> storage}) = _$_BiologicallyDerivedProduct;
 
   factory _BiologicallyDerivedProduct.fromJson(Map<String, dynamic> json) =
       _$_BiologicallyDerivedProduct.fromJson;
@@ -938,37 +826,29 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
   @JsonKey(defaultValue: 'className')
   String get resourceType;
   @override
-  @JsonKey(name: extension)
   Id get id;
   @override
-  @JsonKey(name: extension)
   Meta get meta;
   @override
-  @JsonKey(name: extension)
   FhirUri get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   Element get implicitRulesElement;
   @override
-  @JsonKey(name: extension)
   Code get language;
   @override
   @JsonKey(name: '_language')
   Element get languageElement;
   @override
-  @JsonKey(name: extension)
   Narrative get text;
   @override
-  @JsonKey(name: extension)
   List<Resource> get contained;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
   @override
-  @JsonKey(name: extension)
   List<Identifier> get identifier;
   @override
   @JsonKey(unknownEnumValue: BiologicallyDerivedProductProductCategory.unknown)
@@ -977,7 +857,6 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
   @JsonKey(name: '_productCategory')
   Element get productCategoryElement;
   @override
-  @JsonKey(name: extension)
   CodeableConcept get productCode;
   @override
   @JsonKey(unknownEnumValue: BiologicallyDerivedProductStatus.unknown)
@@ -986,28 +865,21 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
   @JsonKey(name: '_status')
   Element get statusElement;
   @override
-  @JsonKey(name: extension)
   List<Reference> get request;
   @override
-  @JsonKey(name: extension)
   Integer get quantity;
   @override
   @JsonKey(name: '_quantity')
   Element get quantityElement;
   @override
-  @JsonKey(name: extension)
   List<Reference> get parent;
   @override
-  @JsonKey(name: extension)
   BiologicallyDerivedProductCollection get collection;
   @override
-  @JsonKey(name: extension)
   List<BiologicallyDerivedProductProcessing> get processing;
   @override
-  @JsonKey(name: extension)
   BiologicallyDerivedProductManipulation get manipulation;
   @override
-  @JsonKey(name: extension)
   List<BiologicallyDerivedProductStorage> get storage;
   @override
   _$BiologicallyDerivedProductCopyWith<_BiologicallyDerivedProduct>
@@ -1023,21 +895,19 @@ class _$BiologicallyDerivedProductCollectionTearOff {
   const _$BiologicallyDerivedProductCollectionTearOff();
 
   _BiologicallyDerivedProductCollection call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) Reference collector,
-      @JsonKey(name: extension) Reference source,
-      @JsonKey(name: extension) FhirDateTime collectedDateTime,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Reference collector,
+      Reference source,
       @JsonKey(name: '_collectedDateTime') Element collectedDateTimeElement,
-      @JsonKey(name: extension) Period collectedPeriod}) {
+      Period collectedPeriod}) {
     return _BiologicallyDerivedProductCollection(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       collector: collector,
       source: source,
-      collectedDateTime: collectedDateTime,
       collectedDateTimeElement: collectedDateTimeElement,
       collectedPeriod: collectedPeriod,
     );
@@ -1049,21 +919,14 @@ const $BiologicallyDerivedProductCollection =
     _$BiologicallyDerivedProductCollectionTearOff();
 
 mixin _$BiologicallyDerivedProductCollection {
-  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
-  @JsonKey(name: extension)
   Reference get collector;
-  @JsonKey(name: extension)
   Reference get source;
-  @JsonKey(name: extension)
-  FhirDateTime get collectedDateTime;
   @JsonKey(name: '_collectedDateTime')
   Element get collectedDateTimeElement;
-  @JsonKey(name: extension)
   Period get collectedPeriod;
 
   Map<String, dynamic> toJson();
@@ -1077,14 +940,13 @@ abstract class $BiologicallyDerivedProductCollectionCopyWith<$Res> {
           $Res Function(BiologicallyDerivedProductCollection) then) =
       _$BiologicallyDerivedProductCollectionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) Reference collector,
-      @JsonKey(name: extension) Reference source,
-      @JsonKey(name: extension) FhirDateTime collectedDateTime,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Reference collector,
+      Reference source,
       @JsonKey(name: '_collectedDateTime') Element collectedDateTimeElement,
-      @JsonKey(name: extension) Period collectedPeriod});
+      Period collectedPeriod});
 
   $ReferenceCopyWith<$Res> get collector;
   $ReferenceCopyWith<$Res> get source;
@@ -1107,7 +969,6 @@ class _$BiologicallyDerivedProductCollectionCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object collector = freezed,
     Object source = freezed,
-    Object collectedDateTime = freezed,
     Object collectedDateTimeElement = freezed,
     Object collectedPeriod = freezed,
   }) {
@@ -1122,9 +983,6 @@ class _$BiologicallyDerivedProductCollectionCopyWithImpl<$Res>
       collector:
           collector == freezed ? _value.collector : collector as Reference,
       source: source == freezed ? _value.source : source as Reference,
-      collectedDateTime: collectedDateTime == freezed
-          ? _value.collectedDateTime
-          : collectedDateTime as FhirDateTime,
       collectedDateTimeElement: collectedDateTimeElement == freezed
           ? _value.collectedDateTimeElement
           : collectedDateTimeElement as Element,
@@ -1183,14 +1041,13 @@ abstract class _$BiologicallyDerivedProductCollectionCopyWith<$Res>
       __$BiologicallyDerivedProductCollectionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) Reference collector,
-      @JsonKey(name: extension) Reference source,
-      @JsonKey(name: extension) FhirDateTime collectedDateTime,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Reference collector,
+      Reference source,
       @JsonKey(name: '_collectedDateTime') Element collectedDateTimeElement,
-      @JsonKey(name: extension) Period collectedPeriod});
+      Period collectedPeriod});
 
   @override
   $ReferenceCopyWith<$Res> get collector;
@@ -1221,7 +1078,6 @@ class __$BiologicallyDerivedProductCollectionCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object collector = freezed,
     Object source = freezed,
-    Object collectedDateTime = freezed,
     Object collectedDateTimeElement = freezed,
     Object collectedPeriod = freezed,
   }) {
@@ -1236,9 +1092,6 @@ class __$BiologicallyDerivedProductCollectionCopyWithImpl<$Res>
       collector:
           collector == freezed ? _value.collector : collector as Reference,
       source: source == freezed ? _value.source : source as Reference,
-      collectedDateTime: collectedDateTime == freezed
-          ? _value.collectedDateTime
-          : collectedDateTime as FhirDateTime,
       collectedDateTimeElement: collectedDateTimeElement == freezed
           ? _value.collectedDateTimeElement
           : collectedDateTimeElement as Element,
@@ -1253,14 +1106,13 @@ class __$BiologicallyDerivedProductCollectionCopyWithImpl<$Res>
 class _$_BiologicallyDerivedProductCollection
     extends _BiologicallyDerivedProductCollection {
   _$_BiologicallyDerivedProductCollection(
-      {@JsonKey(name: extension) this.id,
-      @JsonKey(name: extension) this.extension_,
-      @JsonKey(name: extension) this.modifierExtension,
-      @JsonKey(name: extension) this.collector,
-      @JsonKey(name: extension) this.source,
-      @JsonKey(name: extension) this.collectedDateTime,
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.collector,
+      this.source,
       @JsonKey(name: '_collectedDateTime') this.collectedDateTimeElement,
-      @JsonKey(name: extension) this.collectedPeriod})
+      this.collectedPeriod})
       : super._();
 
   factory _$_BiologicallyDerivedProductCollection.fromJson(
@@ -1268,33 +1120,25 @@ class _$_BiologicallyDerivedProductCollection
       _$_$_BiologicallyDerivedProductCollectionFromJson(json);
 
   @override
-  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  @JsonKey(name: extension)
   final List<FhirExtension> modifierExtension;
   @override
-  @JsonKey(name: extension)
   final Reference collector;
   @override
-  @JsonKey(name: extension)
   final Reference source;
-  @override
-  @JsonKey(name: extension)
-  final FhirDateTime collectedDateTime;
   @override
   @JsonKey(name: '_collectedDateTime')
   final Element collectedDateTimeElement;
   @override
-  @JsonKey(name: extension)
   final Period collectedPeriod;
 
   @override
   String toString() {
-    return 'BiologicallyDerivedProductCollection(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, collector: $collector, source: $source, collectedDateTime: $collectedDateTime, collectedDateTimeElement: $collectedDateTimeElement, collectedPeriod: $collectedPeriod)';
+    return 'BiologicallyDerivedProductCollection(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, collector: $collector, source: $source, collectedDateTimeElement: $collectedDateTimeElement, collectedPeriod: $collectedPeriod)';
   }
 
   @override
@@ -1314,9 +1158,6 @@ class _$_BiologicallyDerivedProductCollection
                     .equals(other.collector, collector)) &&
             (identical(other.source, source) ||
                 const DeepCollectionEquality().equals(other.source, source)) &&
-            (identical(other.collectedDateTime, collectedDateTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.collectedDateTime, collectedDateTime)) &&
             (identical(
                     other.collectedDateTimeElement, collectedDateTimeElement) ||
                 const DeepCollectionEquality().equals(
@@ -1335,7 +1176,6 @@ class _$_BiologicallyDerivedProductCollection
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(collector) ^
       const DeepCollectionEquality().hash(source) ^
-      const DeepCollectionEquality().hash(collectedDateTime) ^
       const DeepCollectionEquality().hash(collectedDateTimeElement) ^
       const DeepCollectionEquality().hash(collectedPeriod);
 
@@ -1355,43 +1195,33 @@ abstract class _BiologicallyDerivedProductCollection
     extends BiologicallyDerivedProductCollection {
   _BiologicallyDerivedProductCollection._() : super._();
   factory _BiologicallyDerivedProductCollection(
-          {@JsonKey(name: extension) String id,
-          @JsonKey(name: extension) List<FhirExtension> extension_,
-          @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-          @JsonKey(name: extension) Reference collector,
-          @JsonKey(name: extension) Reference source,
-          @JsonKey(name: extension) FhirDateTime collectedDateTime,
-          @JsonKey(name: '_collectedDateTime') Element collectedDateTimeElement,
-          @JsonKey(name: extension) Period collectedPeriod}) =
-      _$_BiologicallyDerivedProductCollection;
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Reference collector,
+      Reference source,
+      @JsonKey(name: '_collectedDateTime') Element collectedDateTimeElement,
+      Period collectedPeriod}) = _$_BiologicallyDerivedProductCollection;
 
   factory _BiologicallyDerivedProductCollection.fromJson(
           Map<String, dynamic> json) =
       _$_BiologicallyDerivedProductCollection.fromJson;
 
   @override
-  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
   @override
-  @JsonKey(name: extension)
   Reference get collector;
   @override
-  @JsonKey(name: extension)
   Reference get source;
-  @override
-  @JsonKey(name: extension)
-  FhirDateTime get collectedDateTime;
   @override
   @JsonKey(name: '_collectedDateTime')
   Element get collectedDateTimeElement;
   @override
-  @JsonKey(name: extension)
   Period get collectedPeriod;
   @override
   _$BiologicallyDerivedProductCollectionCopyWith<
@@ -1407,16 +1237,15 @@ class _$BiologicallyDerivedProductProcessingTearOff {
   const _$BiologicallyDerivedProductProcessingTearOff();
 
   _BiologicallyDerivedProductProcessing call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) String description,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      String description,
       @JsonKey(name: '_description') Element descriptionElement,
-      @JsonKey(name: extension) CodeableConcept procedure,
-      @JsonKey(name: extension) Reference additive,
-      @JsonKey(name: extension) FhirDateTime timeDateTime,
+      CodeableConcept procedure,
+      Reference additive,
       @JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
-      @JsonKey(name: extension) Period timePeriod}) {
+      Period timePeriod}) {
     return _BiologicallyDerivedProductProcessing(
       id: id,
       extension_: extension_,
@@ -1425,7 +1254,6 @@ class _$BiologicallyDerivedProductProcessingTearOff {
       descriptionElement: descriptionElement,
       procedure: procedure,
       additive: additive,
-      timeDateTime: timeDateTime,
       timeDateTimeElement: timeDateTimeElement,
       timePeriod: timePeriod,
     );
@@ -1437,25 +1265,17 @@ const $BiologicallyDerivedProductProcessing =
     _$BiologicallyDerivedProductProcessingTearOff();
 
 mixin _$BiologicallyDerivedProductProcessing {
-  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
-  @JsonKey(name: extension)
   String get description;
   @JsonKey(name: '_description')
   Element get descriptionElement;
-  @JsonKey(name: extension)
   CodeableConcept get procedure;
-  @JsonKey(name: extension)
   Reference get additive;
-  @JsonKey(name: extension)
-  FhirDateTime get timeDateTime;
   @JsonKey(name: '_timeDateTime')
   Element get timeDateTimeElement;
-  @JsonKey(name: extension)
   Period get timePeriod;
 
   Map<String, dynamic> toJson();
@@ -1469,16 +1289,15 @@ abstract class $BiologicallyDerivedProductProcessingCopyWith<$Res> {
           $Res Function(BiologicallyDerivedProductProcessing) then) =
       _$BiologicallyDerivedProductProcessingCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) String description,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      String description,
       @JsonKey(name: '_description') Element descriptionElement,
-      @JsonKey(name: extension) CodeableConcept procedure,
-      @JsonKey(name: extension) Reference additive,
-      @JsonKey(name: extension) FhirDateTime timeDateTime,
+      CodeableConcept procedure,
+      Reference additive,
       @JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
-      @JsonKey(name: extension) Period timePeriod});
+      Period timePeriod});
 
   $ElementCopyWith<$Res> get descriptionElement;
   $CodeableConceptCopyWith<$Res> get procedure;
@@ -1504,7 +1323,6 @@ class _$BiologicallyDerivedProductProcessingCopyWithImpl<$Res>
     Object descriptionElement = freezed,
     Object procedure = freezed,
     Object additive = freezed,
-    Object timeDateTime = freezed,
     Object timeDateTimeElement = freezed,
     Object timePeriod = freezed,
   }) {
@@ -1525,9 +1343,6 @@ class _$BiologicallyDerivedProductProcessingCopyWithImpl<$Res>
           ? _value.procedure
           : procedure as CodeableConcept,
       additive: additive == freezed ? _value.additive : additive as Reference,
-      timeDateTime: timeDateTime == freezed
-          ? _value.timeDateTime
-          : timeDateTime as FhirDateTime,
       timeDateTimeElement: timeDateTimeElement == freezed
           ? _value.timeDateTimeElement
           : timeDateTimeElement as Element,
@@ -1595,16 +1410,15 @@ abstract class _$BiologicallyDerivedProductProcessingCopyWith<$Res>
       __$BiologicallyDerivedProductProcessingCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) String description,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      String description,
       @JsonKey(name: '_description') Element descriptionElement,
-      @JsonKey(name: extension) CodeableConcept procedure,
-      @JsonKey(name: extension) Reference additive,
-      @JsonKey(name: extension) FhirDateTime timeDateTime,
+      CodeableConcept procedure,
+      Reference additive,
       @JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
-      @JsonKey(name: extension) Period timePeriod});
+      Period timePeriod});
 
   @override
   $ElementCopyWith<$Res> get descriptionElement;
@@ -1639,7 +1453,6 @@ class __$BiologicallyDerivedProductProcessingCopyWithImpl<$Res>
     Object descriptionElement = freezed,
     Object procedure = freezed,
     Object additive = freezed,
-    Object timeDateTime = freezed,
     Object timeDateTimeElement = freezed,
     Object timePeriod = freezed,
   }) {
@@ -1660,9 +1473,6 @@ class __$BiologicallyDerivedProductProcessingCopyWithImpl<$Res>
           ? _value.procedure
           : procedure as CodeableConcept,
       additive: additive == freezed ? _value.additive : additive as Reference,
-      timeDateTime: timeDateTime == freezed
-          ? _value.timeDateTime
-          : timeDateTime as FhirDateTime,
       timeDateTimeElement: timeDateTimeElement == freezed
           ? _value.timeDateTimeElement
           : timeDateTimeElement as Element,
@@ -1676,16 +1486,15 @@ class __$BiologicallyDerivedProductProcessingCopyWithImpl<$Res>
 class _$_BiologicallyDerivedProductProcessing
     extends _BiologicallyDerivedProductProcessing {
   _$_BiologicallyDerivedProductProcessing(
-      {@JsonKey(name: extension) this.id,
-      @JsonKey(name: extension) this.extension_,
-      @JsonKey(name: extension) this.modifierExtension,
-      @JsonKey(name: extension) this.description,
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.description,
       @JsonKey(name: '_description') this.descriptionElement,
-      @JsonKey(name: extension) this.procedure,
-      @JsonKey(name: extension) this.additive,
-      @JsonKey(name: extension) this.timeDateTime,
+      this.procedure,
+      this.additive,
       @JsonKey(name: '_timeDateTime') this.timeDateTimeElement,
-      @JsonKey(name: extension) this.timePeriod})
+      this.timePeriod})
       : super._();
 
   factory _$_BiologicallyDerivedProductProcessing.fromJson(
@@ -1693,39 +1502,30 @@ class _$_BiologicallyDerivedProductProcessing
       _$_$_BiologicallyDerivedProductProcessingFromJson(json);
 
   @override
-  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  @JsonKey(name: extension)
   final List<FhirExtension> modifierExtension;
   @override
-  @JsonKey(name: extension)
   final String description;
   @override
   @JsonKey(name: '_description')
   final Element descriptionElement;
   @override
-  @JsonKey(name: extension)
   final CodeableConcept procedure;
   @override
-  @JsonKey(name: extension)
   final Reference additive;
-  @override
-  @JsonKey(name: extension)
-  final FhirDateTime timeDateTime;
   @override
   @JsonKey(name: '_timeDateTime')
   final Element timeDateTimeElement;
   @override
-  @JsonKey(name: extension)
   final Period timePeriod;
 
   @override
   String toString() {
-    return 'BiologicallyDerivedProductProcessing(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, procedure: $procedure, additive: $additive, timeDateTime: $timeDateTime, timeDateTimeElement: $timeDateTimeElement, timePeriod: $timePeriod)';
+    return 'BiologicallyDerivedProductProcessing(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, procedure: $procedure, additive: $additive, timeDateTimeElement: $timeDateTimeElement, timePeriod: $timePeriod)';
   }
 
   @override
@@ -1752,9 +1552,6 @@ class _$_BiologicallyDerivedProductProcessing
             (identical(other.additive, additive) ||
                 const DeepCollectionEquality()
                     .equals(other.additive, additive)) &&
-            (identical(other.timeDateTime, timeDateTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.timeDateTime, timeDateTime)) &&
             (identical(other.timeDateTimeElement, timeDateTimeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.timeDateTimeElement, timeDateTimeElement)) &&
@@ -1773,7 +1570,6 @@ class _$_BiologicallyDerivedProductProcessing
       const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(procedure) ^
       const DeepCollectionEquality().hash(additive) ^
-      const DeepCollectionEquality().hash(timeDateTime) ^
       const DeepCollectionEquality().hash(timeDateTimeElement) ^
       const DeepCollectionEquality().hash(timePeriod);
 
@@ -1793,51 +1589,40 @@ abstract class _BiologicallyDerivedProductProcessing
     extends BiologicallyDerivedProductProcessing {
   _BiologicallyDerivedProductProcessing._() : super._();
   factory _BiologicallyDerivedProductProcessing(
-          {@JsonKey(name: extension) String id,
-          @JsonKey(name: extension) List<FhirExtension> extension_,
-          @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-          @JsonKey(name: extension) String description,
-          @JsonKey(name: '_description') Element descriptionElement,
-          @JsonKey(name: extension) CodeableConcept procedure,
-          @JsonKey(name: extension) Reference additive,
-          @JsonKey(name: extension) FhirDateTime timeDateTime,
-          @JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
-          @JsonKey(name: extension) Period timePeriod}) =
-      _$_BiologicallyDerivedProductProcessing;
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      String description,
+      @JsonKey(name: '_description') Element descriptionElement,
+      CodeableConcept procedure,
+      Reference additive,
+      @JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
+      Period timePeriod}) = _$_BiologicallyDerivedProductProcessing;
 
   factory _BiologicallyDerivedProductProcessing.fromJson(
           Map<String, dynamic> json) =
       _$_BiologicallyDerivedProductProcessing.fromJson;
 
   @override
-  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
   @override
-  @JsonKey(name: extension)
   String get description;
   @override
   @JsonKey(name: '_description')
   Element get descriptionElement;
   @override
-  @JsonKey(name: extension)
   CodeableConcept get procedure;
   @override
-  @JsonKey(name: extension)
   Reference get additive;
-  @override
-  @JsonKey(name: extension)
-  FhirDateTime get timeDateTime;
   @override
   @JsonKey(name: '_timeDateTime')
   Element get timeDateTimeElement;
   @override
-  @JsonKey(name: extension)
   Period get timePeriod;
   @override
   _$BiologicallyDerivedProductProcessingCopyWith<
@@ -1854,21 +1639,19 @@ class _$BiologicallyDerivedProductManipulationTearOff {
   const _$BiologicallyDerivedProductManipulationTearOff();
 
   _BiologicallyDerivedProductManipulation call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) String description,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      String description,
       @JsonKey(name: '_description') Element descriptionElement,
-      @JsonKey(name: extension) FhirDateTime timeDateTime,
       @JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
-      @JsonKey(name: extension) Period timePeriod}) {
+      Period timePeriod}) {
     return _BiologicallyDerivedProductManipulation(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       description: description,
       descriptionElement: descriptionElement,
-      timeDateTime: timeDateTime,
       timeDateTimeElement: timeDateTimeElement,
       timePeriod: timePeriod,
     );
@@ -1880,21 +1663,15 @@ const $BiologicallyDerivedProductManipulation =
     _$BiologicallyDerivedProductManipulationTearOff();
 
 mixin _$BiologicallyDerivedProductManipulation {
-  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
-  @JsonKey(name: extension)
   String get description;
   @JsonKey(name: '_description')
   Element get descriptionElement;
-  @JsonKey(name: extension)
-  FhirDateTime get timeDateTime;
   @JsonKey(name: '_timeDateTime')
   Element get timeDateTimeElement;
-  @JsonKey(name: extension)
   Period get timePeriod;
 
   Map<String, dynamic> toJson();
@@ -1908,14 +1685,13 @@ abstract class $BiologicallyDerivedProductManipulationCopyWith<$Res> {
           $Res Function(BiologicallyDerivedProductManipulation) then) =
       _$BiologicallyDerivedProductManipulationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) String description,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      String description,
       @JsonKey(name: '_description') Element descriptionElement,
-      @JsonKey(name: extension) FhirDateTime timeDateTime,
       @JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
-      @JsonKey(name: extension) Period timePeriod});
+      Period timePeriod});
 
   $ElementCopyWith<$Res> get descriptionElement;
   $ElementCopyWith<$Res> get timeDateTimeElement;
@@ -1937,7 +1713,6 @@ class _$BiologicallyDerivedProductManipulationCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object description = freezed,
     Object descriptionElement = freezed,
-    Object timeDateTime = freezed,
     Object timeDateTimeElement = freezed,
     Object timePeriod = freezed,
   }) {
@@ -1954,9 +1729,6 @@ class _$BiologicallyDerivedProductManipulationCopyWithImpl<$Res>
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
-      timeDateTime: timeDateTime == freezed
-          ? _value.timeDateTime
-          : timeDateTime as FhirDateTime,
       timeDateTimeElement: timeDateTimeElement == freezed
           ? _value.timeDateTimeElement
           : timeDateTimeElement as Element,
@@ -2004,14 +1776,13 @@ abstract class _$BiologicallyDerivedProductManipulationCopyWith<$Res>
       __$BiologicallyDerivedProductManipulationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) String description,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      String description,
       @JsonKey(name: '_description') Element descriptionElement,
-      @JsonKey(name: extension) FhirDateTime timeDateTime,
       @JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
-      @JsonKey(name: extension) Period timePeriod});
+      Period timePeriod});
 
   @override
   $ElementCopyWith<$Res> get descriptionElement;
@@ -2041,7 +1812,6 @@ class __$BiologicallyDerivedProductManipulationCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object description = freezed,
     Object descriptionElement = freezed,
-    Object timeDateTime = freezed,
     Object timeDateTimeElement = freezed,
     Object timePeriod = freezed,
   }) {
@@ -2058,9 +1828,6 @@ class __$BiologicallyDerivedProductManipulationCopyWithImpl<$Res>
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
-      timeDateTime: timeDateTime == freezed
-          ? _value.timeDateTime
-          : timeDateTime as FhirDateTime,
       timeDateTimeElement: timeDateTimeElement == freezed
           ? _value.timeDateTimeElement
           : timeDateTimeElement as Element,
@@ -2074,14 +1841,13 @@ class __$BiologicallyDerivedProductManipulationCopyWithImpl<$Res>
 class _$_BiologicallyDerivedProductManipulation
     extends _BiologicallyDerivedProductManipulation {
   _$_BiologicallyDerivedProductManipulation(
-      {@JsonKey(name: extension) this.id,
-      @JsonKey(name: extension) this.extension_,
-      @JsonKey(name: extension) this.modifierExtension,
-      @JsonKey(name: extension) this.description,
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.description,
       @JsonKey(name: '_description') this.descriptionElement,
-      @JsonKey(name: extension) this.timeDateTime,
       @JsonKey(name: '_timeDateTime') this.timeDateTimeElement,
-      @JsonKey(name: extension) this.timePeriod})
+      this.timePeriod})
       : super._();
 
   factory _$_BiologicallyDerivedProductManipulation.fromJson(
@@ -2089,33 +1855,26 @@ class _$_BiologicallyDerivedProductManipulation
       _$_$_BiologicallyDerivedProductManipulationFromJson(json);
 
   @override
-  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  @JsonKey(name: extension)
   final List<FhirExtension> modifierExtension;
   @override
-  @JsonKey(name: extension)
   final String description;
   @override
   @JsonKey(name: '_description')
   final Element descriptionElement;
   @override
-  @JsonKey(name: extension)
-  final FhirDateTime timeDateTime;
-  @override
   @JsonKey(name: '_timeDateTime')
   final Element timeDateTimeElement;
   @override
-  @JsonKey(name: extension)
   final Period timePeriod;
 
   @override
   String toString() {
-    return 'BiologicallyDerivedProductManipulation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, timeDateTime: $timeDateTime, timeDateTimeElement: $timeDateTimeElement, timePeriod: $timePeriod)';
+    return 'BiologicallyDerivedProductManipulation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, timeDateTimeElement: $timeDateTimeElement, timePeriod: $timePeriod)';
   }
 
   @override
@@ -2136,9 +1895,6 @@ class _$_BiologicallyDerivedProductManipulation
             (identical(other.descriptionElement, descriptionElement) ||
                 const DeepCollectionEquality()
                     .equals(other.descriptionElement, descriptionElement)) &&
-            (identical(other.timeDateTime, timeDateTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.timeDateTime, timeDateTime)) &&
             (identical(other.timeDateTimeElement, timeDateTimeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.timeDateTimeElement, timeDateTimeElement)) &&
@@ -2155,7 +1911,6 @@ class _$_BiologicallyDerivedProductManipulation
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(descriptionElement) ^
-      const DeepCollectionEquality().hash(timeDateTime) ^
       const DeepCollectionEquality().hash(timeDateTimeElement) ^
       const DeepCollectionEquality().hash(timePeriod);
 
@@ -2175,43 +1930,34 @@ abstract class _BiologicallyDerivedProductManipulation
     extends BiologicallyDerivedProductManipulation {
   _BiologicallyDerivedProductManipulation._() : super._();
   factory _BiologicallyDerivedProductManipulation(
-          {@JsonKey(name: extension) String id,
-          @JsonKey(name: extension) List<FhirExtension> extension_,
-          @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-          @JsonKey(name: extension) String description,
-          @JsonKey(name: '_description') Element descriptionElement,
-          @JsonKey(name: extension) FhirDateTime timeDateTime,
-          @JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
-          @JsonKey(name: extension) Period timePeriod}) =
-      _$_BiologicallyDerivedProductManipulation;
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      String description,
+      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
+      Period timePeriod}) = _$_BiologicallyDerivedProductManipulation;
 
   factory _BiologicallyDerivedProductManipulation.fromJson(
           Map<String, dynamic> json) =
       _$_BiologicallyDerivedProductManipulation.fromJson;
 
   @override
-  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
   @override
-  @JsonKey(name: extension)
   String get description;
   @override
   @JsonKey(name: '_description')
   Element get descriptionElement;
   @override
-  @JsonKey(name: extension)
-  FhirDateTime get timeDateTime;
-  @override
   @JsonKey(name: '_timeDateTime')
   Element get timeDateTimeElement;
   @override
-  @JsonKey(name: extension)
   Period get timePeriod;
   @override
   _$BiologicallyDerivedProductManipulationCopyWith<
@@ -2227,26 +1973,21 @@ class _$BiologicallyDerivedProductStorageTearOff {
   const _$BiologicallyDerivedProductStorageTearOff();
 
   _BiologicallyDerivedProductStorage call(
-      {@JsonKey(name: extension)
-          String id,
-      @JsonKey(name: extension)
+      {String id,
+      @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      @JsonKey(name: extension)
-          List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension)
-          String description,
+      List<FhirExtension> modifierExtension,
+      String description,
       @JsonKey(name: '_description')
           Element descriptionElement,
-      @JsonKey(name: extension)
-          Decimal temperature,
+      Decimal temperature,
       @JsonKey(name: '_temperature')
           Element temperatureElement,
       @JsonKey(unknownEnumValue: BiologicallyDerivedProductStorageScale.unknown)
           BiologicallyDerivedProductStorageScale scale,
       @JsonKey(name: '_scale')
           Element scaleElement,
-      @JsonKey(name: extension)
-          Period duration}) {
+      Period duration}) {
     return _BiologicallyDerivedProductStorage(
       id: id,
       extension_: extension_,
@@ -2267,17 +2008,13 @@ const $BiologicallyDerivedProductStorage =
     _$BiologicallyDerivedProductStorageTearOff();
 
 mixin _$BiologicallyDerivedProductStorage {
-  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
-  @JsonKey(name: extension)
   String get description;
   @JsonKey(name: '_description')
   Element get descriptionElement;
-  @JsonKey(name: extension)
   Decimal get temperature;
   @JsonKey(name: '_temperature')
   Element get temperatureElement;
@@ -2285,7 +2022,6 @@ mixin _$BiologicallyDerivedProductStorage {
   BiologicallyDerivedProductStorageScale get scale;
   @JsonKey(name: '_scale')
   Element get scaleElement;
-  @JsonKey(name: extension)
   Period get duration;
 
   Map<String, dynamic> toJson();
@@ -2299,26 +2035,21 @@ abstract class $BiologicallyDerivedProductStorageCopyWith<$Res> {
           $Res Function(BiologicallyDerivedProductStorage) then) =
       _$BiologicallyDerivedProductStorageCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: extension)
-          String id,
-      @JsonKey(name: extension)
+      {String id,
+      @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      @JsonKey(name: extension)
-          List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension)
-          String description,
+      List<FhirExtension> modifierExtension,
+      String description,
       @JsonKey(name: '_description')
           Element descriptionElement,
-      @JsonKey(name: extension)
-          Decimal temperature,
+      Decimal temperature,
       @JsonKey(name: '_temperature')
           Element temperatureElement,
       @JsonKey(unknownEnumValue: BiologicallyDerivedProductStorageScale.unknown)
           BiologicallyDerivedProductStorageScale scale,
       @JsonKey(name: '_scale')
           Element scaleElement,
-      @JsonKey(name: extension)
-          Period duration});
+      Period duration});
 
   $ElementCopyWith<$Res> get descriptionElement;
   $ElementCopyWith<$Res> get temperatureElement;
@@ -2424,26 +2155,21 @@ abstract class _$BiologicallyDerivedProductStorageCopyWith<$Res>
       __$BiologicallyDerivedProductStorageCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: extension)
-          String id,
-      @JsonKey(name: extension)
+      {String id,
+      @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      @JsonKey(name: extension)
-          List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension)
-          String description,
+      List<FhirExtension> modifierExtension,
+      String description,
       @JsonKey(name: '_description')
           Element descriptionElement,
-      @JsonKey(name: extension)
-          Decimal temperature,
+      Decimal temperature,
       @JsonKey(name: '_temperature')
           Element temperatureElement,
       @JsonKey(unknownEnumValue: BiologicallyDerivedProductStorageScale.unknown)
           BiologicallyDerivedProductStorageScale scale,
       @JsonKey(name: '_scale')
           Element scaleElement,
-      @JsonKey(name: extension)
-          Period duration});
+      Period duration});
 
   @override
   $ElementCopyWith<$Res> get descriptionElement;
@@ -2513,26 +2239,21 @@ class __$BiologicallyDerivedProductStorageCopyWithImpl<$Res>
 class _$_BiologicallyDerivedProductStorage
     extends _BiologicallyDerivedProductStorage {
   _$_BiologicallyDerivedProductStorage(
-      {@JsonKey(name: extension)
-          this.id,
-      @JsonKey(name: extension)
+      {this.id,
+      @JsonKey(name: 'extension')
           this.extension_,
-      @JsonKey(name: extension)
-          this.modifierExtension,
-      @JsonKey(name: extension)
-          this.description,
+      this.modifierExtension,
+      this.description,
       @JsonKey(name: '_description')
           this.descriptionElement,
-      @JsonKey(name: extension)
-          this.temperature,
+      this.temperature,
       @JsonKey(name: '_temperature')
           this.temperatureElement,
       @JsonKey(unknownEnumValue: BiologicallyDerivedProductStorageScale.unknown)
           this.scale,
       @JsonKey(name: '_scale')
           this.scaleElement,
-      @JsonKey(name: extension)
-          this.duration})
+      this.duration})
       : super._();
 
   factory _$_BiologicallyDerivedProductStorage.fromJson(
@@ -2540,22 +2261,18 @@ class _$_BiologicallyDerivedProductStorage
       _$_$_BiologicallyDerivedProductStorageFromJson(json);
 
   @override
-  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  @JsonKey(name: extension)
   final List<FhirExtension> modifierExtension;
   @override
-  @JsonKey(name: extension)
   final String description;
   @override
   @JsonKey(name: '_description')
   final Element descriptionElement;
   @override
-  @JsonKey(name: extension)
   final Decimal temperature;
   @override
   @JsonKey(name: '_temperature')
@@ -2567,7 +2284,6 @@ class _$_BiologicallyDerivedProductStorage
   @JsonKey(name: '_scale')
   final Element scaleElement;
   @override
-  @JsonKey(name: extension)
   final Period duration;
 
   @override
@@ -2639,48 +2355,39 @@ abstract class _BiologicallyDerivedProductStorage
     extends BiologicallyDerivedProductStorage {
   _BiologicallyDerivedProductStorage._() : super._();
   factory _BiologicallyDerivedProductStorage(
-      {@JsonKey(name: extension)
-          String id,
-      @JsonKey(name: extension)
+      {String id,
+      @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      @JsonKey(name: extension)
-          List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension)
-          String description,
+      List<FhirExtension> modifierExtension,
+      String description,
       @JsonKey(name: '_description')
           Element descriptionElement,
-      @JsonKey(name: extension)
-          Decimal temperature,
+      Decimal temperature,
       @JsonKey(name: '_temperature')
           Element temperatureElement,
       @JsonKey(unknownEnumValue: BiologicallyDerivedProductStorageScale.unknown)
           BiologicallyDerivedProductStorageScale scale,
       @JsonKey(name: '_scale')
           Element scaleElement,
-      @JsonKey(name: extension)
-          Period duration}) = _$_BiologicallyDerivedProductStorage;
+      Period duration}) = _$_BiologicallyDerivedProductStorage;
 
   factory _BiologicallyDerivedProductStorage.fromJson(
           Map<String, dynamic> json) =
       _$_BiologicallyDerivedProductStorage.fromJson;
 
   @override
-  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
   @override
-  @JsonKey(name: extension)
   String get description;
   @override
   @JsonKey(name: '_description')
   Element get descriptionElement;
   @override
-  @JsonKey(name: extension)
   Decimal get temperature;
   @override
   @JsonKey(name: '_temperature')
@@ -2692,7 +2399,6 @@ abstract class _BiologicallyDerivedProductStorage
   @JsonKey(name: '_scale')
   Element get scaleElement;
   @override
-  @JsonKey(name: extension)
   Period get duration;
   @override
   _$BiologicallyDerivedProductStorageCopyWith<
@@ -2708,52 +2414,52 @@ class _$DeviceTearOff {
 
   _Device call(
       {@required @JsonKey(defaultValue: 'className') String resourceType,
-      @JsonKey(name: extension) Id id,
-      @JsonKey(name: extension) Meta meta,
-      @JsonKey(name: extension) FhirUri implicitRules,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
       @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-      @JsonKey(name: extension) Code language,
+      Code language,
       @JsonKey(name: '_language') Element languageElement,
-      @JsonKey(name: extension) Narrative text,
-      @JsonKey(name: extension) List<Resource> contained,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) List<Identifier> identifier,
-      @JsonKey(name: extension) Reference definition,
-      @JsonKey(name: extension) List<DeviceUdiCarrier> udiCarrier,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
+      Reference definition,
+      List<DeviceUdiCarrier> udiCarrier,
       @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus status,
       @JsonKey(name: '_status') Element statusElement,
-      @JsonKey(name: extension) List<CodeableConcept> statusReason,
-      @JsonKey(name: extension) String distinctIdentifier,
+      List<CodeableConcept> statusReason,
+      String distinctIdentifier,
       @JsonKey(name: '_distinctIdentifier') Element distinctIdentifierElement,
-      @JsonKey(name: extension) String manufacturer,
+      String manufacturer,
       @JsonKey(name: '_manufacturer') Element manufacturerElement,
-      @JsonKey(name: extension) FhirDateTime manufactureDate,
+      FhirDateTime manufactureDate,
       @JsonKey(name: '_manufactureDate') Element manufactureDateElement,
-      @JsonKey(name: extension) FhirDateTime expirationDate,
+      FhirDateTime expirationDate,
       @JsonKey(name: '_expirationDate') Element expirationDateElement,
-      @JsonKey(name: extension) String lotNumber,
+      String lotNumber,
       @JsonKey(name: '_lotNumber') Element lotNumberElement,
-      @JsonKey(name: extension) String serialNumber,
+      String serialNumber,
       @JsonKey(name: '_serialNumber') Element serialNumberElement,
-      @JsonKey(name: extension) List<DeviceDeviceName> deviceName,
-      @JsonKey(name: extension) String modelNumber,
+      List<DeviceDeviceName> deviceName,
+      String modelNumber,
       @JsonKey(name: '_modelNumber') Element modelNumberElement,
-      @JsonKey(name: extension) String partNumber,
+      String partNumber,
       @JsonKey(name: '_partNumber') Element partNumberElement,
-      @JsonKey(name: extension) CodeableConcept type,
-      @JsonKey(name: extension) List<DeviceSpecialization> specialization,
-      @JsonKey(name: extension) List<DeviceVersion> version,
-      @JsonKey(name: extension) List<DeviceProperty> property,
-      @JsonKey(name: extension) Reference patient,
-      @JsonKey(name: extension) Reference owner,
-      @JsonKey(name: extension) List<ContactPoint> contact,
-      @JsonKey(name: extension) Reference location,
-      @JsonKey(name: extension) FhirUri url,
+      CodeableConcept type,
+      List<DeviceSpecialization> specialization,
+      List<DeviceVersion> version,
+      List<DeviceProperty> property,
+      Reference patient,
+      Reference owner,
+      List<ContactPoint> contact,
+      Reference location,
+      FhirUri url,
       @JsonKey(name: '_url') Element urlElement,
-      @JsonKey(name: extension) List<Annotation> note,
-      @JsonKey(name: extension) List<CodeableConcept> safety,
-      @JsonKey(name: extension) Reference parent}) {
+      List<Annotation> note,
+      List<CodeableConcept> safety,
+      Reference parent}) {
     return _Device(
       resourceType: resourceType,
       id: id,
@@ -2812,97 +2518,65 @@ const $Device = _$DeviceTearOff();
 mixin _$Device {
   @JsonKey(defaultValue: 'className')
   String get resourceType;
-  @JsonKey(name: extension)
   Id get id;
-  @JsonKey(name: extension)
   Meta get meta;
-  @JsonKey(name: extension)
   FhirUri get implicitRules;
   @JsonKey(name: '_implicitRules')
   Element get implicitRulesElement;
-  @JsonKey(name: extension)
   Code get language;
   @JsonKey(name: '_language')
   Element get languageElement;
-  @JsonKey(name: extension)
   Narrative get text;
-  @JsonKey(name: extension)
   List<Resource> get contained;
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
-  @JsonKey(name: extension)
   List<Identifier> get identifier;
-  @JsonKey(name: extension)
   Reference get definition;
-  @JsonKey(name: extension)
   List<DeviceUdiCarrier> get udiCarrier;
   @JsonKey(unknownEnumValue: DeviceStatus.unknown)
   DeviceStatus get status;
   @JsonKey(name: '_status')
   Element get statusElement;
-  @JsonKey(name: extension)
   List<CodeableConcept> get statusReason;
-  @JsonKey(name: extension)
   String get distinctIdentifier;
   @JsonKey(name: '_distinctIdentifier')
   Element get distinctIdentifierElement;
-  @JsonKey(name: extension)
   String get manufacturer;
   @JsonKey(name: '_manufacturer')
   Element get manufacturerElement;
-  @JsonKey(name: extension)
   FhirDateTime get manufactureDate;
   @JsonKey(name: '_manufactureDate')
   Element get manufactureDateElement;
-  @JsonKey(name: extension)
   FhirDateTime get expirationDate;
   @JsonKey(name: '_expirationDate')
   Element get expirationDateElement;
-  @JsonKey(name: extension)
   String get lotNumber;
   @JsonKey(name: '_lotNumber')
   Element get lotNumberElement;
-  @JsonKey(name: extension)
   String get serialNumber;
   @JsonKey(name: '_serialNumber')
   Element get serialNumberElement;
-  @JsonKey(name: extension)
   List<DeviceDeviceName> get deviceName;
-  @JsonKey(name: extension)
   String get modelNumber;
   @JsonKey(name: '_modelNumber')
   Element get modelNumberElement;
-  @JsonKey(name: extension)
   String get partNumber;
   @JsonKey(name: '_partNumber')
   Element get partNumberElement;
-  @JsonKey(name: extension)
   CodeableConcept get type;
-  @JsonKey(name: extension)
   List<DeviceSpecialization> get specialization;
-  @JsonKey(name: extension)
   List<DeviceVersion> get version;
-  @JsonKey(name: extension)
   List<DeviceProperty> get property;
-  @JsonKey(name: extension)
   Reference get patient;
-  @JsonKey(name: extension)
   Reference get owner;
-  @JsonKey(name: extension)
   List<ContactPoint> get contact;
-  @JsonKey(name: extension)
   Reference get location;
-  @JsonKey(name: extension)
   FhirUri get url;
   @JsonKey(name: '_url')
   Element get urlElement;
-  @JsonKey(name: extension)
   List<Annotation> get note;
-  @JsonKey(name: extension)
   List<CodeableConcept> get safety;
-  @JsonKey(name: extension)
   Reference get parent;
 
   Map<String, dynamic> toJson();
@@ -2914,52 +2588,52 @@ abstract class $DeviceCopyWith<$Res> {
       _$DeviceCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(defaultValue: 'className') String resourceType,
-      @JsonKey(name: extension) Id id,
-      @JsonKey(name: extension) Meta meta,
-      @JsonKey(name: extension) FhirUri implicitRules,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
       @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-      @JsonKey(name: extension) Code language,
+      Code language,
       @JsonKey(name: '_language') Element languageElement,
-      @JsonKey(name: extension) Narrative text,
-      @JsonKey(name: extension) List<Resource> contained,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) List<Identifier> identifier,
-      @JsonKey(name: extension) Reference definition,
-      @JsonKey(name: extension) List<DeviceUdiCarrier> udiCarrier,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
+      Reference definition,
+      List<DeviceUdiCarrier> udiCarrier,
       @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus status,
       @JsonKey(name: '_status') Element statusElement,
-      @JsonKey(name: extension) List<CodeableConcept> statusReason,
-      @JsonKey(name: extension) String distinctIdentifier,
+      List<CodeableConcept> statusReason,
+      String distinctIdentifier,
       @JsonKey(name: '_distinctIdentifier') Element distinctIdentifierElement,
-      @JsonKey(name: extension) String manufacturer,
+      String manufacturer,
       @JsonKey(name: '_manufacturer') Element manufacturerElement,
-      @JsonKey(name: extension) FhirDateTime manufactureDate,
+      FhirDateTime manufactureDate,
       @JsonKey(name: '_manufactureDate') Element manufactureDateElement,
-      @JsonKey(name: extension) FhirDateTime expirationDate,
+      FhirDateTime expirationDate,
       @JsonKey(name: '_expirationDate') Element expirationDateElement,
-      @JsonKey(name: extension) String lotNumber,
+      String lotNumber,
       @JsonKey(name: '_lotNumber') Element lotNumberElement,
-      @JsonKey(name: extension) String serialNumber,
+      String serialNumber,
       @JsonKey(name: '_serialNumber') Element serialNumberElement,
-      @JsonKey(name: extension) List<DeviceDeviceName> deviceName,
-      @JsonKey(name: extension) String modelNumber,
+      List<DeviceDeviceName> deviceName,
+      String modelNumber,
       @JsonKey(name: '_modelNumber') Element modelNumberElement,
-      @JsonKey(name: extension) String partNumber,
+      String partNumber,
       @JsonKey(name: '_partNumber') Element partNumberElement,
-      @JsonKey(name: extension) CodeableConcept type,
-      @JsonKey(name: extension) List<DeviceSpecialization> specialization,
-      @JsonKey(name: extension) List<DeviceVersion> version,
-      @JsonKey(name: extension) List<DeviceProperty> property,
-      @JsonKey(name: extension) Reference patient,
-      @JsonKey(name: extension) Reference owner,
-      @JsonKey(name: extension) List<ContactPoint> contact,
-      @JsonKey(name: extension) Reference location,
-      @JsonKey(name: extension) FhirUri url,
+      CodeableConcept type,
+      List<DeviceSpecialization> specialization,
+      List<DeviceVersion> version,
+      List<DeviceProperty> property,
+      Reference patient,
+      Reference owner,
+      List<ContactPoint> contact,
+      Reference location,
+      FhirUri url,
       @JsonKey(name: '_url') Element urlElement,
-      @JsonKey(name: extension) List<Annotation> note,
-      @JsonKey(name: extension) List<CodeableConcept> safety,
-      @JsonKey(name: extension) Reference parent});
+      List<Annotation> note,
+      List<CodeableConcept> safety,
+      Reference parent});
 
   $MetaCopyWith<$Res> get meta;
   $ElementCopyWith<$Res> get implicitRulesElement;
@@ -3358,52 +3032,52 @@ abstract class _$DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
   @override
   $Res call(
       {@JsonKey(defaultValue: 'className') String resourceType,
-      @JsonKey(name: extension) Id id,
-      @JsonKey(name: extension) Meta meta,
-      @JsonKey(name: extension) FhirUri implicitRules,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
       @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-      @JsonKey(name: extension) Code language,
+      Code language,
       @JsonKey(name: '_language') Element languageElement,
-      @JsonKey(name: extension) Narrative text,
-      @JsonKey(name: extension) List<Resource> contained,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) List<Identifier> identifier,
-      @JsonKey(name: extension) Reference definition,
-      @JsonKey(name: extension) List<DeviceUdiCarrier> udiCarrier,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
+      Reference definition,
+      List<DeviceUdiCarrier> udiCarrier,
       @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus status,
       @JsonKey(name: '_status') Element statusElement,
-      @JsonKey(name: extension) List<CodeableConcept> statusReason,
-      @JsonKey(name: extension) String distinctIdentifier,
+      List<CodeableConcept> statusReason,
+      String distinctIdentifier,
       @JsonKey(name: '_distinctIdentifier') Element distinctIdentifierElement,
-      @JsonKey(name: extension) String manufacturer,
+      String manufacturer,
       @JsonKey(name: '_manufacturer') Element manufacturerElement,
-      @JsonKey(name: extension) FhirDateTime manufactureDate,
+      FhirDateTime manufactureDate,
       @JsonKey(name: '_manufactureDate') Element manufactureDateElement,
-      @JsonKey(name: extension) FhirDateTime expirationDate,
+      FhirDateTime expirationDate,
       @JsonKey(name: '_expirationDate') Element expirationDateElement,
-      @JsonKey(name: extension) String lotNumber,
+      String lotNumber,
       @JsonKey(name: '_lotNumber') Element lotNumberElement,
-      @JsonKey(name: extension) String serialNumber,
+      String serialNumber,
       @JsonKey(name: '_serialNumber') Element serialNumberElement,
-      @JsonKey(name: extension) List<DeviceDeviceName> deviceName,
-      @JsonKey(name: extension) String modelNumber,
+      List<DeviceDeviceName> deviceName,
+      String modelNumber,
       @JsonKey(name: '_modelNumber') Element modelNumberElement,
-      @JsonKey(name: extension) String partNumber,
+      String partNumber,
       @JsonKey(name: '_partNumber') Element partNumberElement,
-      @JsonKey(name: extension) CodeableConcept type,
-      @JsonKey(name: extension) List<DeviceSpecialization> specialization,
-      @JsonKey(name: extension) List<DeviceVersion> version,
-      @JsonKey(name: extension) List<DeviceProperty> property,
-      @JsonKey(name: extension) Reference patient,
-      @JsonKey(name: extension) Reference owner,
-      @JsonKey(name: extension) List<ContactPoint> contact,
-      @JsonKey(name: extension) Reference location,
-      @JsonKey(name: extension) FhirUri url,
+      CodeableConcept type,
+      List<DeviceSpecialization> specialization,
+      List<DeviceVersion> version,
+      List<DeviceProperty> property,
+      Reference patient,
+      Reference owner,
+      List<ContactPoint> contact,
+      Reference location,
+      FhirUri url,
       @JsonKey(name: '_url') Element urlElement,
-      @JsonKey(name: extension) List<Annotation> note,
-      @JsonKey(name: extension) List<CodeableConcept> safety,
-      @JsonKey(name: extension) Reference parent});
+      List<Annotation> note,
+      List<CodeableConcept> safety,
+      Reference parent});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -3621,52 +3295,52 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
 class _$_Device extends _Device {
   _$_Device(
       {@required @JsonKey(defaultValue: 'className') this.resourceType,
-      @JsonKey(name: extension) this.id,
-      @JsonKey(name: extension) this.meta,
-      @JsonKey(name: extension) this.implicitRules,
+      this.id,
+      this.meta,
+      this.implicitRules,
       @JsonKey(name: '_implicitRules') this.implicitRulesElement,
-      @JsonKey(name: extension) this.language,
+      this.language,
       @JsonKey(name: '_language') this.languageElement,
-      @JsonKey(name: extension) this.text,
-      @JsonKey(name: extension) this.contained,
-      @JsonKey(name: extension) this.extension_,
-      @JsonKey(name: extension) this.modifierExtension,
-      @JsonKey(name: extension) this.identifier,
-      @JsonKey(name: extension) this.definition,
-      @JsonKey(name: extension) this.udiCarrier,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.identifier,
+      this.definition,
+      this.udiCarrier,
       @JsonKey(unknownEnumValue: DeviceStatus.unknown) this.status,
       @JsonKey(name: '_status') this.statusElement,
-      @JsonKey(name: extension) this.statusReason,
-      @JsonKey(name: extension) this.distinctIdentifier,
+      this.statusReason,
+      this.distinctIdentifier,
       @JsonKey(name: '_distinctIdentifier') this.distinctIdentifierElement,
-      @JsonKey(name: extension) this.manufacturer,
+      this.manufacturer,
       @JsonKey(name: '_manufacturer') this.manufacturerElement,
-      @JsonKey(name: extension) this.manufactureDate,
+      this.manufactureDate,
       @JsonKey(name: '_manufactureDate') this.manufactureDateElement,
-      @JsonKey(name: extension) this.expirationDate,
+      this.expirationDate,
       @JsonKey(name: '_expirationDate') this.expirationDateElement,
-      @JsonKey(name: extension) this.lotNumber,
+      this.lotNumber,
       @JsonKey(name: '_lotNumber') this.lotNumberElement,
-      @JsonKey(name: extension) this.serialNumber,
+      this.serialNumber,
       @JsonKey(name: '_serialNumber') this.serialNumberElement,
-      @JsonKey(name: extension) this.deviceName,
-      @JsonKey(name: extension) this.modelNumber,
+      this.deviceName,
+      this.modelNumber,
       @JsonKey(name: '_modelNumber') this.modelNumberElement,
-      @JsonKey(name: extension) this.partNumber,
+      this.partNumber,
       @JsonKey(name: '_partNumber') this.partNumberElement,
-      @JsonKey(name: extension) this.type,
-      @JsonKey(name: extension) this.specialization,
-      @JsonKey(name: extension) this.version,
-      @JsonKey(name: extension) this.property,
-      @JsonKey(name: extension) this.patient,
-      @JsonKey(name: extension) this.owner,
-      @JsonKey(name: extension) this.contact,
-      @JsonKey(name: extension) this.location,
-      @JsonKey(name: extension) this.url,
+      this.type,
+      this.specialization,
+      this.version,
+      this.property,
+      this.patient,
+      this.owner,
+      this.contact,
+      this.location,
+      this.url,
       @JsonKey(name: '_url') this.urlElement,
-      @JsonKey(name: extension) this.note,
-      @JsonKey(name: extension) this.safety,
-      @JsonKey(name: extension) this.parent})
+      this.note,
+      this.safety,
+      this.parent})
       : assert(resourceType != null),
         super._();
 
@@ -3677,43 +3351,33 @@ class _$_Device extends _Device {
   @JsonKey(defaultValue: 'className')
   final String resourceType;
   @override
-  @JsonKey(name: extension)
   final Id id;
   @override
-  @JsonKey(name: extension)
   final Meta meta;
   @override
-  @JsonKey(name: extension)
   final FhirUri implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   final Element implicitRulesElement;
   @override
-  @JsonKey(name: extension)
   final Code language;
   @override
   @JsonKey(name: '_language')
   final Element languageElement;
   @override
-  @JsonKey(name: extension)
   final Narrative text;
   @override
-  @JsonKey(name: extension)
   final List<Resource> contained;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  @JsonKey(name: extension)
   final List<FhirExtension> modifierExtension;
   @override
-  @JsonKey(name: extension)
   final List<Identifier> identifier;
   @override
-  @JsonKey(name: extension)
   final Reference definition;
   @override
-  @JsonKey(name: extension)
   final List<DeviceUdiCarrier> udiCarrier;
   @override
   @JsonKey(unknownEnumValue: DeviceStatus.unknown)
@@ -3722,97 +3386,75 @@ class _$_Device extends _Device {
   @JsonKey(name: '_status')
   final Element statusElement;
   @override
-  @JsonKey(name: extension)
   final List<CodeableConcept> statusReason;
   @override
-  @JsonKey(name: extension)
   final String distinctIdentifier;
   @override
   @JsonKey(name: '_distinctIdentifier')
   final Element distinctIdentifierElement;
   @override
-  @JsonKey(name: extension)
   final String manufacturer;
   @override
   @JsonKey(name: '_manufacturer')
   final Element manufacturerElement;
   @override
-  @JsonKey(name: extension)
   final FhirDateTime manufactureDate;
   @override
   @JsonKey(name: '_manufactureDate')
   final Element manufactureDateElement;
   @override
-  @JsonKey(name: extension)
   final FhirDateTime expirationDate;
   @override
   @JsonKey(name: '_expirationDate')
   final Element expirationDateElement;
   @override
-  @JsonKey(name: extension)
   final String lotNumber;
   @override
   @JsonKey(name: '_lotNumber')
   final Element lotNumberElement;
   @override
-  @JsonKey(name: extension)
   final String serialNumber;
   @override
   @JsonKey(name: '_serialNumber')
   final Element serialNumberElement;
   @override
-  @JsonKey(name: extension)
   final List<DeviceDeviceName> deviceName;
   @override
-  @JsonKey(name: extension)
   final String modelNumber;
   @override
   @JsonKey(name: '_modelNumber')
   final Element modelNumberElement;
   @override
-  @JsonKey(name: extension)
   final String partNumber;
   @override
   @JsonKey(name: '_partNumber')
   final Element partNumberElement;
   @override
-  @JsonKey(name: extension)
   final CodeableConcept type;
   @override
-  @JsonKey(name: extension)
   final List<DeviceSpecialization> specialization;
   @override
-  @JsonKey(name: extension)
   final List<DeviceVersion> version;
   @override
-  @JsonKey(name: extension)
   final List<DeviceProperty> property;
   @override
-  @JsonKey(name: extension)
   final Reference patient;
   @override
-  @JsonKey(name: extension)
   final Reference owner;
   @override
-  @JsonKey(name: extension)
   final List<ContactPoint> contact;
   @override
-  @JsonKey(name: extension)
   final Reference location;
   @override
-  @JsonKey(name: extension)
   final FhirUri url;
   @override
   @JsonKey(name: '_url')
   final Element urlElement;
   @override
-  @JsonKey(name: extension)
   final List<Annotation> note;
   @override
-  @JsonKey(name: extension)
   final List<CodeableConcept> safety;
   @override
-  @JsonKey(name: extension)
   final Reference parent;
 
   @override
@@ -3980,52 +3622,52 @@ abstract class _Device extends Device {
   _Device._() : super._();
   factory _Device(
       {@required @JsonKey(defaultValue: 'className') String resourceType,
-      @JsonKey(name: extension) Id id,
-      @JsonKey(name: extension) Meta meta,
-      @JsonKey(name: extension) FhirUri implicitRules,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
       @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-      @JsonKey(name: extension) Code language,
+      Code language,
       @JsonKey(name: '_language') Element languageElement,
-      @JsonKey(name: extension) Narrative text,
-      @JsonKey(name: extension) List<Resource> contained,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) List<Identifier> identifier,
-      @JsonKey(name: extension) Reference definition,
-      @JsonKey(name: extension) List<DeviceUdiCarrier> udiCarrier,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
+      Reference definition,
+      List<DeviceUdiCarrier> udiCarrier,
       @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus status,
       @JsonKey(name: '_status') Element statusElement,
-      @JsonKey(name: extension) List<CodeableConcept> statusReason,
-      @JsonKey(name: extension) String distinctIdentifier,
+      List<CodeableConcept> statusReason,
+      String distinctIdentifier,
       @JsonKey(name: '_distinctIdentifier') Element distinctIdentifierElement,
-      @JsonKey(name: extension) String manufacturer,
+      String manufacturer,
       @JsonKey(name: '_manufacturer') Element manufacturerElement,
-      @JsonKey(name: extension) FhirDateTime manufactureDate,
+      FhirDateTime manufactureDate,
       @JsonKey(name: '_manufactureDate') Element manufactureDateElement,
-      @JsonKey(name: extension) FhirDateTime expirationDate,
+      FhirDateTime expirationDate,
       @JsonKey(name: '_expirationDate') Element expirationDateElement,
-      @JsonKey(name: extension) String lotNumber,
+      String lotNumber,
       @JsonKey(name: '_lotNumber') Element lotNumberElement,
-      @JsonKey(name: extension) String serialNumber,
+      String serialNumber,
       @JsonKey(name: '_serialNumber') Element serialNumberElement,
-      @JsonKey(name: extension) List<DeviceDeviceName> deviceName,
-      @JsonKey(name: extension) String modelNumber,
+      List<DeviceDeviceName> deviceName,
+      String modelNumber,
       @JsonKey(name: '_modelNumber') Element modelNumberElement,
-      @JsonKey(name: extension) String partNumber,
+      String partNumber,
       @JsonKey(name: '_partNumber') Element partNumberElement,
-      @JsonKey(name: extension) CodeableConcept type,
-      @JsonKey(name: extension) List<DeviceSpecialization> specialization,
-      @JsonKey(name: extension) List<DeviceVersion> version,
-      @JsonKey(name: extension) List<DeviceProperty> property,
-      @JsonKey(name: extension) Reference patient,
-      @JsonKey(name: extension) Reference owner,
-      @JsonKey(name: extension) List<ContactPoint> contact,
-      @JsonKey(name: extension) Reference location,
-      @JsonKey(name: extension) FhirUri url,
+      CodeableConcept type,
+      List<DeviceSpecialization> specialization,
+      List<DeviceVersion> version,
+      List<DeviceProperty> property,
+      Reference patient,
+      Reference owner,
+      List<ContactPoint> contact,
+      Reference location,
+      FhirUri url,
       @JsonKey(name: '_url') Element urlElement,
-      @JsonKey(name: extension) List<Annotation> note,
-      @JsonKey(name: extension) List<CodeableConcept> safety,
-      @JsonKey(name: extension) Reference parent}) = _$_Device;
+      List<Annotation> note,
+      List<CodeableConcept> safety,
+      Reference parent}) = _$_Device;
 
   factory _Device.fromJson(Map<String, dynamic> json) = _$_Device.fromJson;
 
@@ -4033,43 +3675,33 @@ abstract class _Device extends Device {
   @JsonKey(defaultValue: 'className')
   String get resourceType;
   @override
-  @JsonKey(name: extension)
   Id get id;
   @override
-  @JsonKey(name: extension)
   Meta get meta;
   @override
-  @JsonKey(name: extension)
   FhirUri get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   Element get implicitRulesElement;
   @override
-  @JsonKey(name: extension)
   Code get language;
   @override
   @JsonKey(name: '_language')
   Element get languageElement;
   @override
-  @JsonKey(name: extension)
   Narrative get text;
   @override
-  @JsonKey(name: extension)
   List<Resource> get contained;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
   @override
-  @JsonKey(name: extension)
   List<Identifier> get identifier;
   @override
-  @JsonKey(name: extension)
   Reference get definition;
   @override
-  @JsonKey(name: extension)
   List<DeviceUdiCarrier> get udiCarrier;
   @override
   @JsonKey(unknownEnumValue: DeviceStatus.unknown)
@@ -4078,97 +3710,75 @@ abstract class _Device extends Device {
   @JsonKey(name: '_status')
   Element get statusElement;
   @override
-  @JsonKey(name: extension)
   List<CodeableConcept> get statusReason;
   @override
-  @JsonKey(name: extension)
   String get distinctIdentifier;
   @override
   @JsonKey(name: '_distinctIdentifier')
   Element get distinctIdentifierElement;
   @override
-  @JsonKey(name: extension)
   String get manufacturer;
   @override
   @JsonKey(name: '_manufacturer')
   Element get manufacturerElement;
   @override
-  @JsonKey(name: extension)
   FhirDateTime get manufactureDate;
   @override
   @JsonKey(name: '_manufactureDate')
   Element get manufactureDateElement;
   @override
-  @JsonKey(name: extension)
   FhirDateTime get expirationDate;
   @override
   @JsonKey(name: '_expirationDate')
   Element get expirationDateElement;
   @override
-  @JsonKey(name: extension)
   String get lotNumber;
   @override
   @JsonKey(name: '_lotNumber')
   Element get lotNumberElement;
   @override
-  @JsonKey(name: extension)
   String get serialNumber;
   @override
   @JsonKey(name: '_serialNumber')
   Element get serialNumberElement;
   @override
-  @JsonKey(name: extension)
   List<DeviceDeviceName> get deviceName;
   @override
-  @JsonKey(name: extension)
   String get modelNumber;
   @override
   @JsonKey(name: '_modelNumber')
   Element get modelNumberElement;
   @override
-  @JsonKey(name: extension)
   String get partNumber;
   @override
   @JsonKey(name: '_partNumber')
   Element get partNumberElement;
   @override
-  @JsonKey(name: extension)
   CodeableConcept get type;
   @override
-  @JsonKey(name: extension)
   List<DeviceSpecialization> get specialization;
   @override
-  @JsonKey(name: extension)
   List<DeviceVersion> get version;
   @override
-  @JsonKey(name: extension)
   List<DeviceProperty> get property;
   @override
-  @JsonKey(name: extension)
   Reference get patient;
   @override
-  @JsonKey(name: extension)
   Reference get owner;
   @override
-  @JsonKey(name: extension)
   List<ContactPoint> get contact;
   @override
-  @JsonKey(name: extension)
   Reference get location;
   @override
-  @JsonKey(name: extension)
   FhirUri get url;
   @override
   @JsonKey(name: '_url')
   Element get urlElement;
   @override
-  @JsonKey(name: extension)
   List<Annotation> get note;
   @override
-  @JsonKey(name: extension)
   List<CodeableConcept> get safety;
   @override
-  @JsonKey(name: extension)
   Reference get parent;
   @override
   _$DeviceCopyWith<_Device> get copyWith;
@@ -4182,30 +3792,23 @@ class _$DeviceUdiCarrierTearOff {
   const _$DeviceUdiCarrierTearOff();
 
   _DeviceUdiCarrier call(
-      {@JsonKey(name: extension)
-          String id,
-      @JsonKey(name: extension)
+      {String id,
+      @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      @JsonKey(name: extension)
-          List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension)
-          String deviceIdentifier,
+      List<FhirExtension> modifierExtension,
+      String deviceIdentifier,
       @JsonKey(name: '_deviceIdentifier')
           Element deviceIdentifierElement,
-      @JsonKey(name: extension)
-          FhirUri issuer,
+      FhirUri issuer,
       @JsonKey(name: '_issuer')
           Element issuerElement,
-      @JsonKey(name: extension)
-          FhirUri jurisdiction,
+      FhirUri jurisdiction,
       @JsonKey(name: '_jurisdiction')
           Element jurisdictionElement,
-      @JsonKey(name: extension)
-          Base64Binary carrierAIDC,
+      Base64Binary carrierAIDC,
       @JsonKey(name: '_carrierAIDC')
           Element carrierAIDCElement,
-      @JsonKey(name: extension)
-          String carrierHRF,
+      String carrierHRF,
       @JsonKey(name: '_carrierHRF')
           Element carrierHRFElement,
       @JsonKey(unknownEnumValue: DeviceUdiCarrierEntryType.unknown)
@@ -4236,29 +3839,22 @@ class _$DeviceUdiCarrierTearOff {
 const $DeviceUdiCarrier = _$DeviceUdiCarrierTearOff();
 
 mixin _$DeviceUdiCarrier {
-  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
-  @JsonKey(name: extension)
   String get deviceIdentifier;
   @JsonKey(name: '_deviceIdentifier')
   Element get deviceIdentifierElement;
-  @JsonKey(name: extension)
   FhirUri get issuer;
   @JsonKey(name: '_issuer')
   Element get issuerElement;
-  @JsonKey(name: extension)
   FhirUri get jurisdiction;
   @JsonKey(name: '_jurisdiction')
   Element get jurisdictionElement;
-  @JsonKey(name: extension)
   Base64Binary get carrierAIDC;
   @JsonKey(name: '_carrierAIDC')
   Element get carrierAIDCElement;
-  @JsonKey(name: extension)
   String get carrierHRF;
   @JsonKey(name: '_carrierHRF')
   Element get carrierHRFElement;
@@ -4276,30 +3872,23 @@ abstract class $DeviceUdiCarrierCopyWith<$Res> {
           DeviceUdiCarrier value, $Res Function(DeviceUdiCarrier) then) =
       _$DeviceUdiCarrierCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: extension)
-          String id,
-      @JsonKey(name: extension)
+      {String id,
+      @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      @JsonKey(name: extension)
-          List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension)
-          String deviceIdentifier,
+      List<FhirExtension> modifierExtension,
+      String deviceIdentifier,
       @JsonKey(name: '_deviceIdentifier')
           Element deviceIdentifierElement,
-      @JsonKey(name: extension)
-          FhirUri issuer,
+      FhirUri issuer,
       @JsonKey(name: '_issuer')
           Element issuerElement,
-      @JsonKey(name: extension)
-          FhirUri jurisdiction,
+      FhirUri jurisdiction,
       @JsonKey(name: '_jurisdiction')
           Element jurisdictionElement,
-      @JsonKey(name: extension)
-          Base64Binary carrierAIDC,
+      Base64Binary carrierAIDC,
       @JsonKey(name: '_carrierAIDC')
           Element carrierAIDCElement,
-      @JsonKey(name: extension)
-          String carrierHRF,
+      String carrierHRF,
       @JsonKey(name: '_carrierHRF')
           Element carrierHRFElement,
       @JsonKey(unknownEnumValue: DeviceUdiCarrierEntryType.unknown)
@@ -4453,30 +4042,23 @@ abstract class _$DeviceUdiCarrierCopyWith<$Res>
       __$DeviceUdiCarrierCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: extension)
-          String id,
-      @JsonKey(name: extension)
+      {String id,
+      @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      @JsonKey(name: extension)
-          List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension)
-          String deviceIdentifier,
+      List<FhirExtension> modifierExtension,
+      String deviceIdentifier,
       @JsonKey(name: '_deviceIdentifier')
           Element deviceIdentifierElement,
-      @JsonKey(name: extension)
-          FhirUri issuer,
+      FhirUri issuer,
       @JsonKey(name: '_issuer')
           Element issuerElement,
-      @JsonKey(name: extension)
-          FhirUri jurisdiction,
+      FhirUri jurisdiction,
       @JsonKey(name: '_jurisdiction')
           Element jurisdictionElement,
-      @JsonKey(name: extension)
-          Base64Binary carrierAIDC,
+      Base64Binary carrierAIDC,
       @JsonKey(name: '_carrierAIDC')
           Element carrierAIDCElement,
-      @JsonKey(name: extension)
-          String carrierHRF,
+      String carrierHRF,
       @JsonKey(name: '_carrierHRF')
           Element carrierHRFElement,
       @JsonKey(unknownEnumValue: DeviceUdiCarrierEntryType.unknown)
@@ -4574,30 +4156,23 @@ class __$DeviceUdiCarrierCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_DeviceUdiCarrier extends _DeviceUdiCarrier {
   _$_DeviceUdiCarrier(
-      {@JsonKey(name: extension)
-          this.id,
-      @JsonKey(name: extension)
+      {this.id,
+      @JsonKey(name: 'extension')
           this.extension_,
-      @JsonKey(name: extension)
-          this.modifierExtension,
-      @JsonKey(name: extension)
-          this.deviceIdentifier,
+      this.modifierExtension,
+      this.deviceIdentifier,
       @JsonKey(name: '_deviceIdentifier')
           this.deviceIdentifierElement,
-      @JsonKey(name: extension)
-          this.issuer,
+      this.issuer,
       @JsonKey(name: '_issuer')
           this.issuerElement,
-      @JsonKey(name: extension)
-          this.jurisdiction,
+      this.jurisdiction,
       @JsonKey(name: '_jurisdiction')
           this.jurisdictionElement,
-      @JsonKey(name: extension)
-          this.carrierAIDC,
+      this.carrierAIDC,
       @JsonKey(name: '_carrierAIDC')
           this.carrierAIDCElement,
-      @JsonKey(name: extension)
-          this.carrierHRF,
+      this.carrierHRF,
       @JsonKey(name: '_carrierHRF')
           this.carrierHRFElement,
       @JsonKey(unknownEnumValue: DeviceUdiCarrierEntryType.unknown)
@@ -4610,40 +4185,33 @@ class _$_DeviceUdiCarrier extends _DeviceUdiCarrier {
       _$_$_DeviceUdiCarrierFromJson(json);
 
   @override
-  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  @JsonKey(name: extension)
   final List<FhirExtension> modifierExtension;
   @override
-  @JsonKey(name: extension)
   final String deviceIdentifier;
   @override
   @JsonKey(name: '_deviceIdentifier')
   final Element deviceIdentifierElement;
   @override
-  @JsonKey(name: extension)
   final FhirUri issuer;
   @override
   @JsonKey(name: '_issuer')
   final Element issuerElement;
   @override
-  @JsonKey(name: extension)
   final FhirUri jurisdiction;
   @override
   @JsonKey(name: '_jurisdiction')
   final Element jurisdictionElement;
   @override
-  @JsonKey(name: extension)
   final Base64Binary carrierAIDC;
   @override
   @JsonKey(name: '_carrierAIDC')
   final Element carrierAIDCElement;
   @override
-  @JsonKey(name: extension)
   final String carrierHRF;
   @override
   @JsonKey(name: '_carrierHRF')
@@ -4742,30 +4310,23 @@ class _$_DeviceUdiCarrier extends _DeviceUdiCarrier {
 abstract class _DeviceUdiCarrier extends DeviceUdiCarrier {
   _DeviceUdiCarrier._() : super._();
   factory _DeviceUdiCarrier(
-      {@JsonKey(name: extension)
-          String id,
-      @JsonKey(name: extension)
+      {String id,
+      @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      @JsonKey(name: extension)
-          List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension)
-          String deviceIdentifier,
+      List<FhirExtension> modifierExtension,
+      String deviceIdentifier,
       @JsonKey(name: '_deviceIdentifier')
           Element deviceIdentifierElement,
-      @JsonKey(name: extension)
-          FhirUri issuer,
+      FhirUri issuer,
       @JsonKey(name: '_issuer')
           Element issuerElement,
-      @JsonKey(name: extension)
-          FhirUri jurisdiction,
+      FhirUri jurisdiction,
       @JsonKey(name: '_jurisdiction')
           Element jurisdictionElement,
-      @JsonKey(name: extension)
-          Base64Binary carrierAIDC,
+      Base64Binary carrierAIDC,
       @JsonKey(name: '_carrierAIDC')
           Element carrierAIDCElement,
-      @JsonKey(name: extension)
-          String carrierHRF,
+      String carrierHRF,
       @JsonKey(name: '_carrierHRF')
           Element carrierHRFElement,
       @JsonKey(unknownEnumValue: DeviceUdiCarrierEntryType.unknown)
@@ -4777,40 +4338,33 @@ abstract class _DeviceUdiCarrier extends DeviceUdiCarrier {
       _$_DeviceUdiCarrier.fromJson;
 
   @override
-  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
   @override
-  @JsonKey(name: extension)
   String get deviceIdentifier;
   @override
   @JsonKey(name: '_deviceIdentifier')
   Element get deviceIdentifierElement;
   @override
-  @JsonKey(name: extension)
   FhirUri get issuer;
   @override
   @JsonKey(name: '_issuer')
   Element get issuerElement;
   @override
-  @JsonKey(name: extension)
   FhirUri get jurisdiction;
   @override
   @JsonKey(name: '_jurisdiction')
   Element get jurisdictionElement;
   @override
-  @JsonKey(name: extension)
   Base64Binary get carrierAIDC;
   @override
   @JsonKey(name: '_carrierAIDC')
   Element get carrierAIDCElement;
   @override
-  @JsonKey(name: extension)
   String get carrierHRF;
   @override
   @JsonKey(name: '_carrierHRF')
@@ -4833,14 +4387,11 @@ class _$DeviceDeviceNameTearOff {
   const _$DeviceDeviceNameTearOff();
 
   _DeviceDeviceName call(
-      {@JsonKey(name: extension)
-          String id,
-      @JsonKey(name: extension)
+      {String id,
+      @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      @JsonKey(name: extension)
-          List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension)
-          String name,
+      List<FhirExtension> modifierExtension,
+      String name,
       @JsonKey(name: '_name')
           Element nameElement,
       @JsonKey(unknownEnumValue: DeviceDeviceNameType.unknown)
@@ -4863,13 +4414,10 @@ class _$DeviceDeviceNameTearOff {
 const $DeviceDeviceName = _$DeviceDeviceNameTearOff();
 
 mixin _$DeviceDeviceName {
-  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
-  @JsonKey(name: extension)
   String get name;
   @JsonKey(name: '_name')
   Element get nameElement;
@@ -4887,14 +4435,11 @@ abstract class $DeviceDeviceNameCopyWith<$Res> {
           DeviceDeviceName value, $Res Function(DeviceDeviceName) then) =
       _$DeviceDeviceNameCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: extension)
-          String id,
-      @JsonKey(name: extension)
+      {String id,
+      @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      @JsonKey(name: extension)
-          List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension)
-          String name,
+      List<FhirExtension> modifierExtension,
+      String name,
       @JsonKey(name: '_name')
           Element nameElement,
       @JsonKey(unknownEnumValue: DeviceDeviceNameType.unknown)
@@ -4969,14 +4514,11 @@ abstract class _$DeviceDeviceNameCopyWith<$Res>
       __$DeviceDeviceNameCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: extension)
-          String id,
-      @JsonKey(name: extension)
+      {String id,
+      @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      @JsonKey(name: extension)
-          List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension)
-          String name,
+      List<FhirExtension> modifierExtension,
+      String name,
       @JsonKey(name: '_name')
           Element nameElement,
       @JsonKey(unknownEnumValue: DeviceDeviceNameType.unknown)
@@ -5031,10 +4573,10 @@ class __$DeviceDeviceNameCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_DeviceDeviceName extends _DeviceDeviceName {
   _$_DeviceDeviceName(
-      {@JsonKey(name: extension) this.id,
-      @JsonKey(name: extension) this.extension_,
-      @JsonKey(name: extension) this.modifierExtension,
-      @JsonKey(name: extension) this.name,
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.name,
       @JsonKey(name: '_name') this.nameElement,
       @JsonKey(unknownEnumValue: DeviceDeviceNameType.unknown) this.type,
       @JsonKey(name: '_type') this.typeElement})
@@ -5044,16 +4586,13 @@ class _$_DeviceDeviceName extends _DeviceDeviceName {
       _$_$_DeviceDeviceNameFromJson(json);
 
   @override
-  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  @JsonKey(name: extension)
   final List<FhirExtension> modifierExtension;
   @override
-  @JsonKey(name: extension)
   final String name;
   @override
   @JsonKey(name: '_name')
@@ -5118,14 +4657,11 @@ class _$_DeviceDeviceName extends _DeviceDeviceName {
 abstract class _DeviceDeviceName extends DeviceDeviceName {
   _DeviceDeviceName._() : super._();
   factory _DeviceDeviceName(
-      {@JsonKey(name: extension)
-          String id,
-      @JsonKey(name: extension)
+      {String id,
+      @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      @JsonKey(name: extension)
-          List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension)
-          String name,
+      List<FhirExtension> modifierExtension,
+      String name,
       @JsonKey(name: '_name')
           Element nameElement,
       @JsonKey(unknownEnumValue: DeviceDeviceNameType.unknown)
@@ -5137,16 +4673,13 @@ abstract class _DeviceDeviceName extends DeviceDeviceName {
       _$_DeviceDeviceName.fromJson;
 
   @override
-  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
   @override
-  @JsonKey(name: extension)
   String get name;
   @override
   @JsonKey(name: '_name')
@@ -5169,11 +4702,11 @@ class _$DeviceSpecializationTearOff {
   const _$DeviceSpecializationTearOff();
 
   _DeviceSpecialization call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @required @JsonKey(name: extension) CodeableConcept systemType,
-      @JsonKey(name: extension) String version,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      @required CodeableConcept systemType,
+      String version,
       @JsonKey(name: '_version') Element versionElement}) {
     return _DeviceSpecialization(
       id: id,
@@ -5190,15 +4723,11 @@ class _$DeviceSpecializationTearOff {
 const $DeviceSpecialization = _$DeviceSpecializationTearOff();
 
 mixin _$DeviceSpecialization {
-  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
-  @JsonKey(name: extension)
   CodeableConcept get systemType;
-  @JsonKey(name: extension)
   String get version;
   @JsonKey(name: '_version')
   Element get versionElement;
@@ -5212,11 +4741,11 @@ abstract class $DeviceSpecializationCopyWith<$Res> {
           $Res Function(DeviceSpecialization) then) =
       _$DeviceSpecializationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) CodeableConcept systemType,
-      @JsonKey(name: extension) String version,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      CodeableConcept systemType,
+      String version,
       @JsonKey(name: '_version') Element versionElement});
 
   $CodeableConceptCopyWith<$Res> get systemType;
@@ -5286,11 +4815,11 @@ abstract class _$DeviceSpecializationCopyWith<$Res>
       __$DeviceSpecializationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) CodeableConcept systemType,
-      @JsonKey(name: extension) String version,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      CodeableConcept systemType,
+      String version,
       @JsonKey(name: '_version') Element versionElement});
 
   @override
@@ -5340,11 +4869,11 @@ class __$DeviceSpecializationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_DeviceSpecialization extends _DeviceSpecialization {
   _$_DeviceSpecialization(
-      {@JsonKey(name: extension) this.id,
-      @JsonKey(name: extension) this.extension_,
-      @JsonKey(name: extension) this.modifierExtension,
-      @required @JsonKey(name: extension) this.systemType,
-      @JsonKey(name: extension) this.version,
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      @required this.systemType,
+      this.version,
       @JsonKey(name: '_version') this.versionElement})
       : assert(systemType != null),
         super._();
@@ -5353,19 +4882,15 @@ class _$_DeviceSpecialization extends _DeviceSpecialization {
       _$_$_DeviceSpecializationFromJson(json);
 
   @override
-  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  @JsonKey(name: extension)
   final List<FhirExtension> modifierExtension;
   @override
-  @JsonKey(name: extension)
   final CodeableConcept systemType;
   @override
-  @JsonKey(name: extension)
   final String version;
   @override
   @JsonKey(name: '_version')
@@ -5423,11 +4948,11 @@ class _$_DeviceSpecialization extends _DeviceSpecialization {
 abstract class _DeviceSpecialization extends DeviceSpecialization {
   _DeviceSpecialization._() : super._();
   factory _DeviceSpecialization(
-          {@JsonKey(name: extension) String id,
-          @JsonKey(name: extension) List<FhirExtension> extension_,
-          @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-          @required @JsonKey(name: extension) CodeableConcept systemType,
-          @JsonKey(name: extension) String version,
+          {String id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          @required CodeableConcept systemType,
+          String version,
           @JsonKey(name: '_version') Element versionElement}) =
       _$_DeviceSpecialization;
 
@@ -5435,19 +4960,15 @@ abstract class _DeviceSpecialization extends DeviceSpecialization {
       _$_DeviceSpecialization.fromJson;
 
   @override
-  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
   @override
-  @JsonKey(name: extension)
   CodeableConcept get systemType;
   @override
-  @JsonKey(name: extension)
   String get version;
   @override
   @JsonKey(name: '_version')
@@ -5464,12 +4985,12 @@ class _$DeviceVersionTearOff {
   const _$DeviceVersionTearOff();
 
   _DeviceVersion call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) CodeableConcept type,
-      @JsonKey(name: extension) Identifier component,
-      @JsonKey(name: extension) String value,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      CodeableConcept type,
+      Identifier component,
+      String value,
       @JsonKey(name: '_value') Element valueElement}) {
     return _DeviceVersion(
       id: id,
@@ -5487,17 +5008,12 @@ class _$DeviceVersionTearOff {
 const $DeviceVersion = _$DeviceVersionTearOff();
 
 mixin _$DeviceVersion {
-  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
-  @JsonKey(name: extension)
   CodeableConcept get type;
-  @JsonKey(name: extension)
   Identifier get component;
-  @JsonKey(name: extension)
   String get value;
   @JsonKey(name: '_value')
   Element get valueElement;
@@ -5511,12 +5027,12 @@ abstract class $DeviceVersionCopyWith<$Res> {
           DeviceVersion value, $Res Function(DeviceVersion) then) =
       _$DeviceVersionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) CodeableConcept type,
-      @JsonKey(name: extension) Identifier component,
-      @JsonKey(name: extension) String value,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      CodeableConcept type,
+      Identifier component,
+      String value,
       @JsonKey(name: '_value') Element valueElement});
 
   $CodeableConceptCopyWith<$Res> get type;
@@ -5598,12 +5114,12 @@ abstract class _$DeviceVersionCopyWith<$Res>
       __$DeviceVersionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) CodeableConcept type,
-      @JsonKey(name: extension) Identifier component,
-      @JsonKey(name: extension) String value,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      CodeableConcept type,
+      Identifier component,
+      String value,
       @JsonKey(name: '_value') Element valueElement});
 
   @override
@@ -5656,12 +5172,12 @@ class __$DeviceVersionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_DeviceVersion extends _DeviceVersion {
   _$_DeviceVersion(
-      {@JsonKey(name: extension) this.id,
-      @JsonKey(name: extension) this.extension_,
-      @JsonKey(name: extension) this.modifierExtension,
-      @JsonKey(name: extension) this.type,
-      @JsonKey(name: extension) this.component,
-      @JsonKey(name: extension) this.value,
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.type,
+      this.component,
+      this.value,
       @JsonKey(name: '_value') this.valueElement})
       : super._();
 
@@ -5669,22 +5185,17 @@ class _$_DeviceVersion extends _DeviceVersion {
       _$_$_DeviceVersionFromJson(json);
 
   @override
-  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  @JsonKey(name: extension)
   final List<FhirExtension> modifierExtension;
   @override
-  @JsonKey(name: extension)
   final CodeableConcept type;
   @override
-  @JsonKey(name: extension)
   final Identifier component;
   @override
-  @JsonKey(name: extension)
   final String value;
   @override
   @JsonKey(name: '_value')
@@ -5743,34 +5254,29 @@ class _$_DeviceVersion extends _DeviceVersion {
 abstract class _DeviceVersion extends DeviceVersion {
   _DeviceVersion._() : super._();
   factory _DeviceVersion(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) CodeableConcept type,
-      @JsonKey(name: extension) Identifier component,
-      @JsonKey(name: extension) String value,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      CodeableConcept type,
+      Identifier component,
+      String value,
       @JsonKey(name: '_value') Element valueElement}) = _$_DeviceVersion;
 
   factory _DeviceVersion.fromJson(Map<String, dynamic> json) =
       _$_DeviceVersion.fromJson;
 
   @override
-  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
   @override
-  @JsonKey(name: extension)
   CodeableConcept get type;
   @override
-  @JsonKey(name: extension)
   Identifier get component;
   @override
-  @JsonKey(name: extension)
   String get value;
   @override
   @JsonKey(name: '_value')
@@ -5787,12 +5293,12 @@ class _$DevicePropertyTearOff {
   const _$DevicePropertyTearOff();
 
   _DeviceProperty call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @required @JsonKey(name: extension) CodeableConcept type,
-      @JsonKey(name: extension) List<Quantity> valueQuantity,
-      @JsonKey(name: extension) List<CodeableConcept> valueCode}) {
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      @required CodeableConcept type,
+      List<Quantity> valueQuantity,
+      List<CodeableConcept> valueCode}) {
     return _DeviceProperty(
       id: id,
       extension_: extension_,
@@ -5808,17 +5314,12 @@ class _$DevicePropertyTearOff {
 const $DeviceProperty = _$DevicePropertyTearOff();
 
 mixin _$DeviceProperty {
-  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
-  @JsonKey(name: extension)
   CodeableConcept get type;
-  @JsonKey(name: extension)
   List<Quantity> get valueQuantity;
-  @JsonKey(name: extension)
   List<CodeableConcept> get valueCode;
 
   Map<String, dynamic> toJson();
@@ -5830,12 +5331,12 @@ abstract class $DevicePropertyCopyWith<$Res> {
           DeviceProperty value, $Res Function(DeviceProperty) then) =
       _$DevicePropertyCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) CodeableConcept type,
-      @JsonKey(name: extension) List<Quantity> valueQuantity,
-      @JsonKey(name: extension) List<CodeableConcept> valueCode});
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      CodeableConcept type,
+      List<Quantity> valueQuantity,
+      List<CodeableConcept> valueCode});
 
   $CodeableConceptCopyWith<$Res> get type;
 }
@@ -5893,12 +5394,12 @@ abstract class _$DevicePropertyCopyWith<$Res>
       __$DevicePropertyCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) CodeableConcept type,
-      @JsonKey(name: extension) List<Quantity> valueQuantity,
-      @JsonKey(name: extension) List<CodeableConcept> valueCode});
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      CodeableConcept type,
+      List<Quantity> valueQuantity,
+      List<CodeableConcept> valueCode});
 
   @override
   $CodeableConceptCopyWith<$Res> get type;
@@ -5945,12 +5446,12 @@ class __$DevicePropertyCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_DeviceProperty extends _DeviceProperty {
   _$_DeviceProperty(
-      {@JsonKey(name: extension) this.id,
-      @JsonKey(name: extension) this.extension_,
-      @JsonKey(name: extension) this.modifierExtension,
-      @required @JsonKey(name: extension) this.type,
-      @JsonKey(name: extension) this.valueQuantity,
-      @JsonKey(name: extension) this.valueCode})
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      @required this.type,
+      this.valueQuantity,
+      this.valueCode})
       : assert(type != null),
         super._();
 
@@ -5958,22 +5459,17 @@ class _$_DeviceProperty extends _DeviceProperty {
       _$_$_DevicePropertyFromJson(json);
 
   @override
-  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  @JsonKey(name: extension)
   final List<FhirExtension> modifierExtension;
   @override
-  @JsonKey(name: extension)
   final CodeableConcept type;
   @override
-  @JsonKey(name: extension)
   final List<Quantity> valueQuantity;
   @override
-  @JsonKey(name: extension)
   final List<CodeableConcept> valueCode;
 
   @override
@@ -6026,34 +5522,28 @@ class _$_DeviceProperty extends _DeviceProperty {
 abstract class _DeviceProperty extends DeviceProperty {
   _DeviceProperty._() : super._();
   factory _DeviceProperty(
-          {@JsonKey(name: extension) String id,
-          @JsonKey(name: extension) List<FhirExtension> extension_,
-          @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-          @required @JsonKey(name: extension) CodeableConcept type,
-          @JsonKey(name: extension) List<Quantity> valueQuantity,
-          @JsonKey(name: extension) List<CodeableConcept> valueCode}) =
-      _$_DeviceProperty;
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      @required CodeableConcept type,
+      List<Quantity> valueQuantity,
+      List<CodeableConcept> valueCode}) = _$_DeviceProperty;
 
   factory _DeviceProperty.fromJson(Map<String, dynamic> json) =
       _$_DeviceProperty.fromJson;
 
   @override
-  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
   @override
-  @JsonKey(name: extension)
   CodeableConcept get type;
   @override
-  @JsonKey(name: extension)
   List<Quantity> get valueQuantity;
   @override
-  @JsonKey(name: extension)
   List<CodeableConcept> get valueCode;
   @override
   _$DevicePropertyCopyWith<_DeviceProperty> get copyWith;
@@ -6070,37 +5560,25 @@ class _$DeviceMetricTearOff {
       {@required
       @JsonKey(defaultValue: 'className')
           String resourceType,
-      @JsonKey(name: extension)
-          Id id,
-      @JsonKey(name: extension)
-          Meta meta,
-      @JsonKey(name: extension)
-          FhirUri implicitRules,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
-      @JsonKey(name: extension)
-          Code language,
+      Code language,
       @JsonKey(name: '_language')
           Element languageElement,
-      @JsonKey(name: extension)
-          Narrative text,
-      @JsonKey(name: extension)
-          List<Resource> contained,
-      @JsonKey(name: extension)
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      @JsonKey(name: extension)
-          List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension)
-          List<Identifier> identifier,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       @required
-      @JsonKey(name: extension)
           CodeableConcept type,
-      @JsonKey(name: extension)
-          CodeableConcept unit,
-      @JsonKey(name: extension)
-          Reference source,
-      @JsonKey(name: extension)
-          Reference parent,
+      CodeableConcept unit,
+      Reference source,
+      Reference parent,
       @JsonKey(unknownEnumValue: DeviceMetricOperationalStatus.unknown)
           DeviceMetricOperationalStatus operationalStatus,
       @JsonKey(name: '_operationalStatus')
@@ -6113,10 +5591,8 @@ class _$DeviceMetricTearOff {
           DeviceMetricCategory category,
       @JsonKey(name: '_category')
           Element categoryElement,
-      @JsonKey(name: extension)
-          Timing measurementPeriod,
-      @JsonKey(name: extension)
-          List<DeviceMetricCalibration> calibration}) {
+      Timing measurementPeriod,
+      List<DeviceMetricCalibration> calibration}) {
     return _DeviceMetric(
       resourceType: resourceType,
       id: id,
@@ -6152,35 +5628,23 @@ const $DeviceMetric = _$DeviceMetricTearOff();
 mixin _$DeviceMetric {
   @JsonKey(defaultValue: 'className')
   String get resourceType;
-  @JsonKey(name: extension)
   Id get id;
-  @JsonKey(name: extension)
   Meta get meta;
-  @JsonKey(name: extension)
   FhirUri get implicitRules;
   @JsonKey(name: '_implicitRules')
   Element get implicitRulesElement;
-  @JsonKey(name: extension)
   Code get language;
   @JsonKey(name: '_language')
   Element get languageElement;
-  @JsonKey(name: extension)
   Narrative get text;
-  @JsonKey(name: extension)
   List<Resource> get contained;
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
-  @JsonKey(name: extension)
   List<Identifier> get identifier;
-  @JsonKey(name: extension)
   CodeableConcept get type;
-  @JsonKey(name: extension)
   CodeableConcept get unit;
-  @JsonKey(name: extension)
   Reference get source;
-  @JsonKey(name: extension)
   Reference get parent;
   @JsonKey(unknownEnumValue: DeviceMetricOperationalStatus.unknown)
   DeviceMetricOperationalStatus get operationalStatus;
@@ -6194,9 +5658,7 @@ mixin _$DeviceMetric {
   DeviceMetricCategory get category;
   @JsonKey(name: '_category')
   Element get categoryElement;
-  @JsonKey(name: extension)
   Timing get measurementPeriod;
-  @JsonKey(name: extension)
   List<DeviceMetricCalibration> get calibration;
 
   Map<String, dynamic> toJson();
@@ -6210,36 +5672,24 @@ abstract class $DeviceMetricCopyWith<$Res> {
   $Res call(
       {@JsonKey(defaultValue: 'className')
           String resourceType,
-      @JsonKey(name: extension)
-          Id id,
-      @JsonKey(name: extension)
-          Meta meta,
-      @JsonKey(name: extension)
-          FhirUri implicitRules,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
-      @JsonKey(name: extension)
-          Code language,
+      Code language,
       @JsonKey(name: '_language')
           Element languageElement,
-      @JsonKey(name: extension)
-          Narrative text,
-      @JsonKey(name: extension)
-          List<Resource> contained,
-      @JsonKey(name: extension)
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      @JsonKey(name: extension)
-          List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension)
-          List<Identifier> identifier,
-      @JsonKey(name: extension)
-          CodeableConcept type,
-      @JsonKey(name: extension)
-          CodeableConcept unit,
-      @JsonKey(name: extension)
-          Reference source,
-      @JsonKey(name: extension)
-          Reference parent,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
+      CodeableConcept type,
+      CodeableConcept unit,
+      Reference source,
+      Reference parent,
       @JsonKey(unknownEnumValue: DeviceMetricOperationalStatus.unknown)
           DeviceMetricOperationalStatus operationalStatus,
       @JsonKey(name: '_operationalStatus')
@@ -6252,10 +5702,8 @@ abstract class $DeviceMetricCopyWith<$Res> {
           DeviceMetricCategory category,
       @JsonKey(name: '_category')
           Element categoryElement,
-      @JsonKey(name: extension)
-          Timing measurementPeriod,
-      @JsonKey(name: extension)
-          List<DeviceMetricCalibration> calibration});
+      Timing measurementPeriod,
+      List<DeviceMetricCalibration> calibration});
 
   $MetaCopyWith<$Res> get meta;
   $ElementCopyWith<$Res> get implicitRulesElement;
@@ -6492,36 +5940,24 @@ abstract class _$DeviceMetricCopyWith<$Res>
   $Res call(
       {@JsonKey(defaultValue: 'className')
           String resourceType,
-      @JsonKey(name: extension)
-          Id id,
-      @JsonKey(name: extension)
-          Meta meta,
-      @JsonKey(name: extension)
-          FhirUri implicitRules,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
-      @JsonKey(name: extension)
-          Code language,
+      Code language,
       @JsonKey(name: '_language')
           Element languageElement,
-      @JsonKey(name: extension)
-          Narrative text,
-      @JsonKey(name: extension)
-          List<Resource> contained,
-      @JsonKey(name: extension)
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      @JsonKey(name: extension)
-          List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension)
-          List<Identifier> identifier,
-      @JsonKey(name: extension)
-          CodeableConcept type,
-      @JsonKey(name: extension)
-          CodeableConcept unit,
-      @JsonKey(name: extension)
-          Reference source,
-      @JsonKey(name: extension)
-          Reference parent,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
+      CodeableConcept type,
+      CodeableConcept unit,
+      Reference source,
+      Reference parent,
       @JsonKey(unknownEnumValue: DeviceMetricOperationalStatus.unknown)
           DeviceMetricOperationalStatus operationalStatus,
       @JsonKey(name: '_operationalStatus')
@@ -6534,10 +5970,8 @@ abstract class _$DeviceMetricCopyWith<$Res>
           DeviceMetricCategory category,
       @JsonKey(name: '_category')
           Element categoryElement,
-      @JsonKey(name: extension)
-          Timing measurementPeriod,
-      @JsonKey(name: extension)
-          List<DeviceMetricCalibration> calibration});
+      Timing measurementPeriod,
+      List<DeviceMetricCalibration> calibration});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -6665,37 +6099,25 @@ class _$_DeviceMetric extends _DeviceMetric {
       {@required
       @JsonKey(defaultValue: 'className')
           this.resourceType,
-      @JsonKey(name: extension)
-          this.id,
-      @JsonKey(name: extension)
-          this.meta,
-      @JsonKey(name: extension)
-          this.implicitRules,
+      this.id,
+      this.meta,
+      this.implicitRules,
       @JsonKey(name: '_implicitRules')
           this.implicitRulesElement,
-      @JsonKey(name: extension)
-          this.language,
+      this.language,
       @JsonKey(name: '_language')
           this.languageElement,
-      @JsonKey(name: extension)
-          this.text,
-      @JsonKey(name: extension)
-          this.contained,
-      @JsonKey(name: extension)
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
           this.extension_,
-      @JsonKey(name: extension)
-          this.modifierExtension,
-      @JsonKey(name: extension)
-          this.identifier,
+      this.modifierExtension,
+      this.identifier,
       @required
-      @JsonKey(name: extension)
           this.type,
-      @JsonKey(name: extension)
-          this.unit,
-      @JsonKey(name: extension)
-          this.source,
-      @JsonKey(name: extension)
-          this.parent,
+      this.unit,
+      this.source,
+      this.parent,
       @JsonKey(unknownEnumValue: DeviceMetricOperationalStatus.unknown)
           this.operationalStatus,
       @JsonKey(name: '_operationalStatus')
@@ -6708,10 +6130,8 @@ class _$_DeviceMetric extends _DeviceMetric {
           this.category,
       @JsonKey(name: '_category')
           this.categoryElement,
-      @JsonKey(name: extension)
-          this.measurementPeriod,
-      @JsonKey(name: extension)
-          this.calibration})
+      this.measurementPeriod,
+      this.calibration})
       : assert(resourceType != null),
         assert(type != null),
         super._();
@@ -6723,49 +6143,37 @@ class _$_DeviceMetric extends _DeviceMetric {
   @JsonKey(defaultValue: 'className')
   final String resourceType;
   @override
-  @JsonKey(name: extension)
   final Id id;
   @override
-  @JsonKey(name: extension)
   final Meta meta;
   @override
-  @JsonKey(name: extension)
   final FhirUri implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   final Element implicitRulesElement;
   @override
-  @JsonKey(name: extension)
   final Code language;
   @override
   @JsonKey(name: '_language')
   final Element languageElement;
   @override
-  @JsonKey(name: extension)
   final Narrative text;
   @override
-  @JsonKey(name: extension)
   final List<Resource> contained;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  @JsonKey(name: extension)
   final List<FhirExtension> modifierExtension;
   @override
-  @JsonKey(name: extension)
   final List<Identifier> identifier;
   @override
-  @JsonKey(name: extension)
   final CodeableConcept type;
   @override
-  @JsonKey(name: extension)
   final CodeableConcept unit;
   @override
-  @JsonKey(name: extension)
   final Reference source;
   @override
-  @JsonKey(name: extension)
   final Reference parent;
   @override
   @JsonKey(unknownEnumValue: DeviceMetricOperationalStatus.unknown)
@@ -6786,10 +6194,8 @@ class _$_DeviceMetric extends _DeviceMetric {
   @JsonKey(name: '_category')
   final Element categoryElement;
   @override
-  @JsonKey(name: extension)
   final Timing measurementPeriod;
   @override
-  @JsonKey(name: extension)
   final List<DeviceMetricCalibration> calibration;
 
   @override
@@ -6912,37 +6318,25 @@ abstract class _DeviceMetric extends DeviceMetric {
       {@required
       @JsonKey(defaultValue: 'className')
           String resourceType,
-      @JsonKey(name: extension)
-          Id id,
-      @JsonKey(name: extension)
-          Meta meta,
-      @JsonKey(name: extension)
-          FhirUri implicitRules,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
-      @JsonKey(name: extension)
-          Code language,
+      Code language,
       @JsonKey(name: '_language')
           Element languageElement,
-      @JsonKey(name: extension)
-          Narrative text,
-      @JsonKey(name: extension)
-          List<Resource> contained,
-      @JsonKey(name: extension)
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      @JsonKey(name: extension)
-          List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension)
-          List<Identifier> identifier,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       @required
-      @JsonKey(name: extension)
           CodeableConcept type,
-      @JsonKey(name: extension)
-          CodeableConcept unit,
-      @JsonKey(name: extension)
-          Reference source,
-      @JsonKey(name: extension)
-          Reference parent,
+      CodeableConcept unit,
+      Reference source,
+      Reference parent,
       @JsonKey(unknownEnumValue: DeviceMetricOperationalStatus.unknown)
           DeviceMetricOperationalStatus operationalStatus,
       @JsonKey(name: '_operationalStatus')
@@ -6955,10 +6349,8 @@ abstract class _DeviceMetric extends DeviceMetric {
           DeviceMetricCategory category,
       @JsonKey(name: '_category')
           Element categoryElement,
-      @JsonKey(name: extension)
-          Timing measurementPeriod,
-      @JsonKey(name: extension)
-          List<DeviceMetricCalibration> calibration}) = _$_DeviceMetric;
+      Timing measurementPeriod,
+      List<DeviceMetricCalibration> calibration}) = _$_DeviceMetric;
 
   factory _DeviceMetric.fromJson(Map<String, dynamic> json) =
       _$_DeviceMetric.fromJson;
@@ -6967,49 +6359,37 @@ abstract class _DeviceMetric extends DeviceMetric {
   @JsonKey(defaultValue: 'className')
   String get resourceType;
   @override
-  @JsonKey(name: extension)
   Id get id;
   @override
-  @JsonKey(name: extension)
   Meta get meta;
   @override
-  @JsonKey(name: extension)
   FhirUri get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   Element get implicitRulesElement;
   @override
-  @JsonKey(name: extension)
   Code get language;
   @override
   @JsonKey(name: '_language')
   Element get languageElement;
   @override
-  @JsonKey(name: extension)
   Narrative get text;
   @override
-  @JsonKey(name: extension)
   List<Resource> get contained;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
   @override
-  @JsonKey(name: extension)
   List<Identifier> get identifier;
   @override
-  @JsonKey(name: extension)
   CodeableConcept get type;
   @override
-  @JsonKey(name: extension)
   CodeableConcept get unit;
   @override
-  @JsonKey(name: extension)
   Reference get source;
   @override
-  @JsonKey(name: extension)
   Reference get parent;
   @override
   @JsonKey(unknownEnumValue: DeviceMetricOperationalStatus.unknown)
@@ -7030,10 +6410,8 @@ abstract class _DeviceMetric extends DeviceMetric {
   @JsonKey(name: '_category')
   Element get categoryElement;
   @override
-  @JsonKey(name: extension)
   Timing get measurementPeriod;
   @override
-  @JsonKey(name: extension)
   List<DeviceMetricCalibration> get calibration;
   @override
   _$DeviceMetricCopyWith<_DeviceMetric> get copyWith;
@@ -7048,12 +6426,10 @@ class _$DeviceMetricCalibrationTearOff {
   const _$DeviceMetricCalibrationTearOff();
 
   _DeviceMetricCalibration call(
-      {@JsonKey(name: extension)
-          String id,
-      @JsonKey(name: extension)
+      {String id,
+      @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      @JsonKey(name: extension)
-          List<FhirExtension> modifierExtension,
+      List<FhirExtension> modifierExtension,
       @JsonKey(unknownEnumValue: DeviceMetricCalibrationType.unknown)
           DeviceMetricCalibrationType type,
       @JsonKey(name: '_type')
@@ -7062,8 +6438,7 @@ class _$DeviceMetricCalibrationTearOff {
           DeviceMetricCalibrationState state,
       @JsonKey(name: '_state')
           Element stateElement,
-      @JsonKey(name: extension)
-          Instant time,
+      Instant time,
       @JsonKey(name: '_time')
           Element timeElement}) {
     return _DeviceMetricCalibration(
@@ -7084,11 +6459,9 @@ class _$DeviceMetricCalibrationTearOff {
 const $DeviceMetricCalibration = _$DeviceMetricCalibrationTearOff();
 
 mixin _$DeviceMetricCalibration {
-  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
   @JsonKey(unknownEnumValue: DeviceMetricCalibrationType.unknown)
   DeviceMetricCalibrationType get type;
@@ -7098,7 +6471,6 @@ mixin _$DeviceMetricCalibration {
   DeviceMetricCalibrationState get state;
   @JsonKey(name: '_state')
   Element get stateElement;
-  @JsonKey(name: extension)
   Instant get time;
   @JsonKey(name: '_time')
   Element get timeElement;
@@ -7112,12 +6484,10 @@ abstract class $DeviceMetricCalibrationCopyWith<$Res> {
           $Res Function(DeviceMetricCalibration) then) =
       _$DeviceMetricCalibrationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: extension)
-          String id,
-      @JsonKey(name: extension)
+      {String id,
+      @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      @JsonKey(name: extension)
-          List<FhirExtension> modifierExtension,
+      List<FhirExtension> modifierExtension,
       @JsonKey(unknownEnumValue: DeviceMetricCalibrationType.unknown)
           DeviceMetricCalibrationType type,
       @JsonKey(name: '_type')
@@ -7126,8 +6496,7 @@ abstract class $DeviceMetricCalibrationCopyWith<$Res> {
           DeviceMetricCalibrationState state,
       @JsonKey(name: '_state')
           Element stateElement,
-      @JsonKey(name: extension)
-          Instant time,
+      Instant time,
       @JsonKey(name: '_time')
           Element timeElement});
 
@@ -7217,12 +6586,10 @@ abstract class _$DeviceMetricCalibrationCopyWith<$Res>
       __$DeviceMetricCalibrationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: extension)
-          String id,
-      @JsonKey(name: extension)
+      {String id,
+      @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      @JsonKey(name: extension)
-          List<FhirExtension> modifierExtension,
+      List<FhirExtension> modifierExtension,
       @JsonKey(unknownEnumValue: DeviceMetricCalibrationType.unknown)
           DeviceMetricCalibrationType type,
       @JsonKey(name: '_type')
@@ -7231,8 +6598,7 @@ abstract class _$DeviceMetricCalibrationCopyWith<$Res>
           DeviceMetricCalibrationState state,
       @JsonKey(name: '_state')
           Element stateElement,
-      @JsonKey(name: extension)
-          Instant time,
+      Instant time,
       @JsonKey(name: '_time')
           Element timeElement});
 
@@ -7294,12 +6660,10 @@ class __$DeviceMetricCalibrationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
   _$_DeviceMetricCalibration(
-      {@JsonKey(name: extension)
-          this.id,
-      @JsonKey(name: extension)
+      {this.id,
+      @JsonKey(name: 'extension')
           this.extension_,
-      @JsonKey(name: extension)
-          this.modifierExtension,
+      this.modifierExtension,
       @JsonKey(unknownEnumValue: DeviceMetricCalibrationType.unknown)
           this.type,
       @JsonKey(name: '_type')
@@ -7308,8 +6672,7 @@ class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
           this.state,
       @JsonKey(name: '_state')
           this.stateElement,
-      @JsonKey(name: extension)
-          this.time,
+      this.time,
       @JsonKey(name: '_time')
           this.timeElement})
       : super._();
@@ -7318,13 +6681,11 @@ class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
       _$_$_DeviceMetricCalibrationFromJson(json);
 
   @override
-  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  @JsonKey(name: extension)
   final List<FhirExtension> modifierExtension;
   @override
   @JsonKey(unknownEnumValue: DeviceMetricCalibrationType.unknown)
@@ -7339,7 +6700,6 @@ class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
   @JsonKey(name: '_state')
   final Element stateElement;
   @override
-  @JsonKey(name: extension)
   final Instant time;
   @override
   @JsonKey(name: '_time')
@@ -7406,12 +6766,10 @@ class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
 abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
   _DeviceMetricCalibration._() : super._();
   factory _DeviceMetricCalibration(
-      {@JsonKey(name: extension)
-          String id,
-      @JsonKey(name: extension)
+      {String id,
+      @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      @JsonKey(name: extension)
-          List<FhirExtension> modifierExtension,
+      List<FhirExtension> modifierExtension,
       @JsonKey(unknownEnumValue: DeviceMetricCalibrationType.unknown)
           DeviceMetricCalibrationType type,
       @JsonKey(name: '_type')
@@ -7420,8 +6778,7 @@ abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
           DeviceMetricCalibrationState state,
       @JsonKey(name: '_state')
           Element stateElement,
-      @JsonKey(name: extension)
-          Instant time,
+      Instant time,
       @JsonKey(name: '_time')
           Element timeElement}) = _$_DeviceMetricCalibration;
 
@@ -7429,13 +6786,11 @@ abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
       _$_DeviceMetricCalibration.fromJson;
 
   @override
-  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
   @override
   @JsonKey(unknownEnumValue: DeviceMetricCalibrationType.unknown)
@@ -7450,7 +6805,6 @@ abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
   @JsonKey(name: '_state')
   Element get stateElement;
   @override
-  @JsonKey(name: extension)
   Instant get time;
   @override
   @JsonKey(name: '_time')
@@ -7470,45 +6824,32 @@ class _$SubstanceTearOff {
       {@required
       @JsonKey(defaultValue: 'className')
           String resourceType,
-      @JsonKey(name: extension)
-          Id id,
-      @JsonKey(name: extension)
-          Meta meta,
-      @JsonKey(name: extension)
-          FhirUri implicitRules,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
-      @JsonKey(name: extension)
-          Code language,
+      Code language,
       @JsonKey(name: '_language')
           Element languageElement,
-      @JsonKey(name: extension)
-          Narrative text,
-      @JsonKey(name: extension)
-          List<Resource> contained,
-      @JsonKey(name: extension)
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      @JsonKey(name: extension)
-          List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension)
-          List<Identifier> identifier,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       @JsonKey(unknownEnumValue: SubstanceStatus.unknown)
           SubstanceStatus status,
       @JsonKey(name: '_status')
           Element statusElement,
-      @JsonKey(name: extension)
-          List<CodeableConcept> category,
+      List<CodeableConcept> category,
       @required
-      @JsonKey(name: extension)
           CodeableConcept code,
-      @JsonKey(name: extension)
-          String description,
+      String description,
       @JsonKey(name: '_description')
           Element descriptionElement,
-      @JsonKey(name: extension)
-          List<SubstanceInstance> instance,
-      @JsonKey(name: extension)
-          List<SubstanceIngredient> ingredient}) {
+      List<SubstanceInstance> instance,
+      List<SubstanceIngredient> ingredient}) {
     return _Substance(
       resourceType: resourceType,
       id: id,
@@ -7540,43 +6881,30 @@ const $Substance = _$SubstanceTearOff();
 mixin _$Substance {
   @JsonKey(defaultValue: 'className')
   String get resourceType;
-  @JsonKey(name: extension)
   Id get id;
-  @JsonKey(name: extension)
   Meta get meta;
-  @JsonKey(name: extension)
   FhirUri get implicitRules;
   @JsonKey(name: '_implicitRules')
   Element get implicitRulesElement;
-  @JsonKey(name: extension)
   Code get language;
   @JsonKey(name: '_language')
   Element get languageElement;
-  @JsonKey(name: extension)
   Narrative get text;
-  @JsonKey(name: extension)
   List<Resource> get contained;
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
-  @JsonKey(name: extension)
   List<Identifier> get identifier;
   @JsonKey(unknownEnumValue: SubstanceStatus.unknown)
   SubstanceStatus get status;
   @JsonKey(name: '_status')
   Element get statusElement;
-  @JsonKey(name: extension)
   List<CodeableConcept> get category;
-  @JsonKey(name: extension)
   CodeableConcept get code;
-  @JsonKey(name: extension)
   String get description;
   @JsonKey(name: '_description')
   Element get descriptionElement;
-  @JsonKey(name: extension)
   List<SubstanceInstance> get instance;
-  @JsonKey(name: extension)
   List<SubstanceIngredient> get ingredient;
 
   Map<String, dynamic> toJson();
@@ -7589,44 +6917,31 @@ abstract class $SubstanceCopyWith<$Res> {
   $Res call(
       {@JsonKey(defaultValue: 'className')
           String resourceType,
-      @JsonKey(name: extension)
-          Id id,
-      @JsonKey(name: extension)
-          Meta meta,
-      @JsonKey(name: extension)
-          FhirUri implicitRules,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
-      @JsonKey(name: extension)
-          Code language,
+      Code language,
       @JsonKey(name: '_language')
           Element languageElement,
-      @JsonKey(name: extension)
-          Narrative text,
-      @JsonKey(name: extension)
-          List<Resource> contained,
-      @JsonKey(name: extension)
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      @JsonKey(name: extension)
-          List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension)
-          List<Identifier> identifier,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       @JsonKey(unknownEnumValue: SubstanceStatus.unknown)
           SubstanceStatus status,
       @JsonKey(name: '_status')
           Element statusElement,
-      @JsonKey(name: extension)
-          List<CodeableConcept> category,
-      @JsonKey(name: extension)
-          CodeableConcept code,
-      @JsonKey(name: extension)
-          String description,
+      List<CodeableConcept> category,
+      CodeableConcept code,
+      String description,
       @JsonKey(name: '_description')
           Element descriptionElement,
-      @JsonKey(name: extension)
-          List<SubstanceInstance> instance,
-      @JsonKey(name: extension)
-          List<SubstanceIngredient> ingredient});
+      List<SubstanceInstance> instance,
+      List<SubstanceIngredient> ingredient});
 
   $MetaCopyWith<$Res> get meta;
   $ElementCopyWith<$Res> get implicitRulesElement;
@@ -7796,44 +7111,31 @@ abstract class _$SubstanceCopyWith<$Res> implements $SubstanceCopyWith<$Res> {
   $Res call(
       {@JsonKey(defaultValue: 'className')
           String resourceType,
-      @JsonKey(name: extension)
-          Id id,
-      @JsonKey(name: extension)
-          Meta meta,
-      @JsonKey(name: extension)
-          FhirUri implicitRules,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
-      @JsonKey(name: extension)
-          Code language,
+      Code language,
       @JsonKey(name: '_language')
           Element languageElement,
-      @JsonKey(name: extension)
-          Narrative text,
-      @JsonKey(name: extension)
-          List<Resource> contained,
-      @JsonKey(name: extension)
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      @JsonKey(name: extension)
-          List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension)
-          List<Identifier> identifier,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       @JsonKey(unknownEnumValue: SubstanceStatus.unknown)
           SubstanceStatus status,
       @JsonKey(name: '_status')
           Element statusElement,
-      @JsonKey(name: extension)
-          List<CodeableConcept> category,
-      @JsonKey(name: extension)
-          CodeableConcept code,
-      @JsonKey(name: extension)
-          String description,
+      List<CodeableConcept> category,
+      CodeableConcept code,
+      String description,
       @JsonKey(name: '_description')
           Element descriptionElement,
-      @JsonKey(name: extension)
-          List<SubstanceInstance> instance,
-      @JsonKey(name: extension)
-          List<SubstanceIngredient> ingredient});
+      List<SubstanceInstance> instance,
+      List<SubstanceIngredient> ingredient});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -7937,25 +7239,25 @@ class __$SubstanceCopyWithImpl<$Res> extends _$SubstanceCopyWithImpl<$Res>
 class _$_Substance extends _Substance {
   _$_Substance(
       {@required @JsonKey(defaultValue: 'className') this.resourceType,
-      @JsonKey(name: extension) this.id,
-      @JsonKey(name: extension) this.meta,
-      @JsonKey(name: extension) this.implicitRules,
+      this.id,
+      this.meta,
+      this.implicitRules,
       @JsonKey(name: '_implicitRules') this.implicitRulesElement,
-      @JsonKey(name: extension) this.language,
+      this.language,
       @JsonKey(name: '_language') this.languageElement,
-      @JsonKey(name: extension) this.text,
-      @JsonKey(name: extension) this.contained,
-      @JsonKey(name: extension) this.extension_,
-      @JsonKey(name: extension) this.modifierExtension,
-      @JsonKey(name: extension) this.identifier,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.identifier,
       @JsonKey(unknownEnumValue: SubstanceStatus.unknown) this.status,
       @JsonKey(name: '_status') this.statusElement,
-      @JsonKey(name: extension) this.category,
-      @required @JsonKey(name: extension) this.code,
-      @JsonKey(name: extension) this.description,
+      this.category,
+      @required this.code,
+      this.description,
       @JsonKey(name: '_description') this.descriptionElement,
-      @JsonKey(name: extension) this.instance,
-      @JsonKey(name: extension) this.ingredient})
+      this.instance,
+      this.ingredient})
       : assert(resourceType != null),
         assert(code != null),
         super._();
@@ -7967,37 +7269,29 @@ class _$_Substance extends _Substance {
   @JsonKey(defaultValue: 'className')
   final String resourceType;
   @override
-  @JsonKey(name: extension)
   final Id id;
   @override
-  @JsonKey(name: extension)
   final Meta meta;
   @override
-  @JsonKey(name: extension)
   final FhirUri implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   final Element implicitRulesElement;
   @override
-  @JsonKey(name: extension)
   final Code language;
   @override
   @JsonKey(name: '_language')
   final Element languageElement;
   @override
-  @JsonKey(name: extension)
   final Narrative text;
   @override
-  @JsonKey(name: extension)
   final List<Resource> contained;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  @JsonKey(name: extension)
   final List<FhirExtension> modifierExtension;
   @override
-  @JsonKey(name: extension)
   final List<Identifier> identifier;
   @override
   @JsonKey(unknownEnumValue: SubstanceStatus.unknown)
@@ -8006,22 +7300,17 @@ class _$_Substance extends _Substance {
   @JsonKey(name: '_status')
   final Element statusElement;
   @override
-  @JsonKey(name: extension)
   final List<CodeableConcept> category;
   @override
-  @JsonKey(name: extension)
   final CodeableConcept code;
   @override
-  @JsonKey(name: extension)
   final String description;
   @override
   @JsonKey(name: '_description')
   final Element descriptionElement;
   @override
-  @JsonKey(name: extension)
   final List<SubstanceInstance> instance;
   @override
-  @JsonKey(name: extension)
   final List<SubstanceIngredient> ingredient;
 
   @override
@@ -8130,45 +7419,32 @@ abstract class _Substance extends Substance {
       {@required
       @JsonKey(defaultValue: 'className')
           String resourceType,
-      @JsonKey(name: extension)
-          Id id,
-      @JsonKey(name: extension)
-          Meta meta,
-      @JsonKey(name: extension)
-          FhirUri implicitRules,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
-      @JsonKey(name: extension)
-          Code language,
+      Code language,
       @JsonKey(name: '_language')
           Element languageElement,
-      @JsonKey(name: extension)
-          Narrative text,
-      @JsonKey(name: extension)
-          List<Resource> contained,
-      @JsonKey(name: extension)
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      @JsonKey(name: extension)
-          List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension)
-          List<Identifier> identifier,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       @JsonKey(unknownEnumValue: SubstanceStatus.unknown)
           SubstanceStatus status,
       @JsonKey(name: '_status')
           Element statusElement,
-      @JsonKey(name: extension)
-          List<CodeableConcept> category,
+      List<CodeableConcept> category,
       @required
-      @JsonKey(name: extension)
           CodeableConcept code,
-      @JsonKey(name: extension)
-          String description,
+      String description,
       @JsonKey(name: '_description')
           Element descriptionElement,
-      @JsonKey(name: extension)
-          List<SubstanceInstance> instance,
-      @JsonKey(name: extension)
-          List<SubstanceIngredient> ingredient}) = _$_Substance;
+      List<SubstanceInstance> instance,
+      List<SubstanceIngredient> ingredient}) = _$_Substance;
 
   factory _Substance.fromJson(Map<String, dynamic> json) =
       _$_Substance.fromJson;
@@ -8177,37 +7453,29 @@ abstract class _Substance extends Substance {
   @JsonKey(defaultValue: 'className')
   String get resourceType;
   @override
-  @JsonKey(name: extension)
   Id get id;
   @override
-  @JsonKey(name: extension)
   Meta get meta;
   @override
-  @JsonKey(name: extension)
   FhirUri get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   Element get implicitRulesElement;
   @override
-  @JsonKey(name: extension)
   Code get language;
   @override
   @JsonKey(name: '_language')
   Element get languageElement;
   @override
-  @JsonKey(name: extension)
   Narrative get text;
   @override
-  @JsonKey(name: extension)
   List<Resource> get contained;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
   @override
-  @JsonKey(name: extension)
   List<Identifier> get identifier;
   @override
   @JsonKey(unknownEnumValue: SubstanceStatus.unknown)
@@ -8216,22 +7484,17 @@ abstract class _Substance extends Substance {
   @JsonKey(name: '_status')
   Element get statusElement;
   @override
-  @JsonKey(name: extension)
   List<CodeableConcept> get category;
   @override
-  @JsonKey(name: extension)
   CodeableConcept get code;
   @override
-  @JsonKey(name: extension)
   String get description;
   @override
   @JsonKey(name: '_description')
   Element get descriptionElement;
   @override
-  @JsonKey(name: extension)
   List<SubstanceInstance> get instance;
   @override
-  @JsonKey(name: extension)
   List<SubstanceIngredient> get ingredient;
   @override
   _$SubstanceCopyWith<_Substance> get copyWith;
@@ -8245,13 +7508,13 @@ class _$SubstanceInstanceTearOff {
   const _$SubstanceInstanceTearOff();
 
   _SubstanceInstance call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) Identifier identifier,
-      @JsonKey(name: extension) FhirDateTime expiry,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Identifier identifier,
+      FhirDateTime expiry,
       @JsonKey(name: '_expiry') Element expiryElement,
-      @JsonKey(name: extension) Quantity quantity}) {
+      Quantity quantity}) {
     return _SubstanceInstance(
       id: id,
       extension_: extension_,
@@ -8268,19 +7531,14 @@ class _$SubstanceInstanceTearOff {
 const $SubstanceInstance = _$SubstanceInstanceTearOff();
 
 mixin _$SubstanceInstance {
-  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
-  @JsonKey(name: extension)
   Identifier get identifier;
-  @JsonKey(name: extension)
   FhirDateTime get expiry;
   @JsonKey(name: '_expiry')
   Element get expiryElement;
-  @JsonKey(name: extension)
   Quantity get quantity;
 
   Map<String, dynamic> toJson();
@@ -8292,13 +7550,13 @@ abstract class $SubstanceInstanceCopyWith<$Res> {
           SubstanceInstance value, $Res Function(SubstanceInstance) then) =
       _$SubstanceInstanceCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) Identifier identifier,
-      @JsonKey(name: extension) FhirDateTime expiry,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Identifier identifier,
+      FhirDateTime expiry,
       @JsonKey(name: '_expiry') Element expiryElement,
-      @JsonKey(name: extension) Quantity quantity});
+      Quantity quantity});
 
   $IdentifierCopyWith<$Res> get identifier;
   $ElementCopyWith<$Res> get expiryElement;
@@ -8379,13 +7637,13 @@ abstract class _$SubstanceInstanceCopyWith<$Res>
       __$SubstanceInstanceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) Identifier identifier,
-      @JsonKey(name: extension) FhirDateTime expiry,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Identifier identifier,
+      FhirDateTime expiry,
       @JsonKey(name: '_expiry') Element expiryElement,
-      @JsonKey(name: extension) Quantity quantity});
+      Quantity quantity});
 
   @override
   $IdentifierCopyWith<$Res> get identifier;
@@ -8437,38 +7695,33 @@ class __$SubstanceInstanceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SubstanceInstance extends _SubstanceInstance {
   _$_SubstanceInstance(
-      {@JsonKey(name: extension) this.id,
-      @JsonKey(name: extension) this.extension_,
-      @JsonKey(name: extension) this.modifierExtension,
-      @JsonKey(name: extension) this.identifier,
-      @JsonKey(name: extension) this.expiry,
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.identifier,
+      this.expiry,
       @JsonKey(name: '_expiry') this.expiryElement,
-      @JsonKey(name: extension) this.quantity})
+      this.quantity})
       : super._();
 
   factory _$_SubstanceInstance.fromJson(Map<String, dynamic> json) =>
       _$_$_SubstanceInstanceFromJson(json);
 
   @override
-  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  @JsonKey(name: extension)
   final List<FhirExtension> modifierExtension;
   @override
-  @JsonKey(name: extension)
   final Identifier identifier;
   @override
-  @JsonKey(name: extension)
   final FhirDateTime expiry;
   @override
   @JsonKey(name: '_expiry')
   final Element expiryElement;
   @override
-  @JsonKey(name: extension)
   final Quantity quantity;
 
   @override
@@ -8525,37 +7778,32 @@ class _$_SubstanceInstance extends _SubstanceInstance {
 abstract class _SubstanceInstance extends SubstanceInstance {
   _SubstanceInstance._() : super._();
   factory _SubstanceInstance(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) Identifier identifier,
-      @JsonKey(name: extension) FhirDateTime expiry,
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Identifier identifier,
+      FhirDateTime expiry,
       @JsonKey(name: '_expiry') Element expiryElement,
-      @JsonKey(name: extension) Quantity quantity}) = _$_SubstanceInstance;
+      Quantity quantity}) = _$_SubstanceInstance;
 
   factory _SubstanceInstance.fromJson(Map<String, dynamic> json) =
       _$_SubstanceInstance.fromJson;
 
   @override
-  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
   @override
-  @JsonKey(name: extension)
   Identifier get identifier;
   @override
-  @JsonKey(name: extension)
   FhirDateTime get expiry;
   @override
   @JsonKey(name: '_expiry')
   Element get expiryElement;
   @override
-  @JsonKey(name: extension)
   Quantity get quantity;
   @override
   _$SubstanceInstanceCopyWith<_SubstanceInstance> get copyWith;
@@ -8569,12 +7817,12 @@ class _$SubstanceIngredientTearOff {
   const _$SubstanceIngredientTearOff();
 
   _SubstanceIngredient call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) Ratio quantity,
-      @JsonKey(name: extension) CodeableConcept substanceCodeableConcept,
-      @JsonKey(name: extension) Reference substanceReference}) {
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Ratio quantity,
+      CodeableConcept substanceCodeableConcept,
+      Reference substanceReference}) {
     return _SubstanceIngredient(
       id: id,
       extension_: extension_,
@@ -8590,17 +7838,12 @@ class _$SubstanceIngredientTearOff {
 const $SubstanceIngredient = _$SubstanceIngredientTearOff();
 
 mixin _$SubstanceIngredient {
-  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
-  @JsonKey(name: extension)
   Ratio get quantity;
-  @JsonKey(name: extension)
   CodeableConcept get substanceCodeableConcept;
-  @JsonKey(name: extension)
   Reference get substanceReference;
 
   Map<String, dynamic> toJson();
@@ -8612,12 +7855,12 @@ abstract class $SubstanceIngredientCopyWith<$Res> {
           SubstanceIngredient value, $Res Function(SubstanceIngredient) then) =
       _$SubstanceIngredientCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) Ratio quantity,
-      @JsonKey(name: extension) CodeableConcept substanceCodeableConcept,
-      @JsonKey(name: extension) Reference substanceReference});
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Ratio quantity,
+      CodeableConcept substanceCodeableConcept,
+      Reference substanceReference});
 
   $RatioCopyWith<$Res> get quantity;
   $CodeableConceptCopyWith<$Res> get substanceCodeableConcept;
@@ -8698,12 +7941,12 @@ abstract class _$SubstanceIngredientCopyWith<$Res>
       __$SubstanceIngredientCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: extension) String id,
-      @JsonKey(name: extension) List<FhirExtension> extension_,
-      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-      @JsonKey(name: extension) Ratio quantity,
-      @JsonKey(name: extension) CodeableConcept substanceCodeableConcept,
-      @JsonKey(name: extension) Reference substanceReference});
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Ratio quantity,
+      CodeableConcept substanceCodeableConcept,
+      Reference substanceReference});
 
   @override
   $RatioCopyWith<$Res> get quantity;
@@ -8754,34 +7997,29 @@ class __$SubstanceIngredientCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SubstanceIngredient extends _SubstanceIngredient {
   _$_SubstanceIngredient(
-      {@JsonKey(name: extension) this.id,
-      @JsonKey(name: extension) this.extension_,
-      @JsonKey(name: extension) this.modifierExtension,
-      @JsonKey(name: extension) this.quantity,
-      @JsonKey(name: extension) this.substanceCodeableConcept,
-      @JsonKey(name: extension) this.substanceReference})
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.quantity,
+      this.substanceCodeableConcept,
+      this.substanceReference})
       : super._();
 
   factory _$_SubstanceIngredient.fromJson(Map<String, dynamic> json) =>
       _$_$_SubstanceIngredientFromJson(json);
 
   @override
-  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  @JsonKey(name: extension)
   final List<FhirExtension> modifierExtension;
   @override
-  @JsonKey(name: extension)
   final Ratio quantity;
   @override
-  @JsonKey(name: extension)
   final CodeableConcept substanceCodeableConcept;
   @override
-  @JsonKey(name: extension)
   final Reference substanceReference;
 
   @override
@@ -8838,34 +8076,28 @@ class _$_SubstanceIngredient extends _SubstanceIngredient {
 abstract class _SubstanceIngredient extends SubstanceIngredient {
   _SubstanceIngredient._() : super._();
   factory _SubstanceIngredient(
-          {@JsonKey(name: extension) String id,
-          @JsonKey(name: extension) List<FhirExtension> extension_,
-          @JsonKey(name: extension) List<FhirExtension> modifierExtension,
-          @JsonKey(name: extension) Ratio quantity,
-          @JsonKey(name: extension) CodeableConcept substanceCodeableConcept,
-          @JsonKey(name: extension) Reference substanceReference}) =
-      _$_SubstanceIngredient;
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Ratio quantity,
+      CodeableConcept substanceCodeableConcept,
+      Reference substanceReference}) = _$_SubstanceIngredient;
 
   factory _SubstanceIngredient.fromJson(Map<String, dynamic> json) =
       _$_SubstanceIngredient.fromJson;
 
   @override
-  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: extension)
+  @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
   @override
-  @JsonKey(name: extension)
   Ratio get quantity;
   @override
-  @JsonKey(name: extension)
   CodeableConcept get substanceCodeableConcept;
   @override
-  @JsonKey(name: extension)
   Reference get substanceReference;
   @override
   _$SubstanceIngredientCopyWith<_SubstanceIngredient> get copyWith;

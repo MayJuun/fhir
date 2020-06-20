@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'security.dart';
 
 
 enum AuditEventAction{
@@ -13,20 +13,20 @@ e,@JsonValue('unknown')
 
 enum AuditEventOutcome{
 @JsonValue('0')
-0,@JsonValue('4')
-4,@JsonValue('8')
-8,@JsonValue('12')
-12,@JsonValue('unknown')
+zero,@JsonValue('4')
+four,@JsonValue('8')
+eight,@JsonValue('12')
+twelve,@JsonValue('unknown')
   unknown,}
 
 
 enum AuditEventNetworkType{
 @JsonValue('1')
-1,@JsonValue('2')
-2,@JsonValue('3')
-3,@JsonValue('4')
-4,@JsonValue('5')
-5,@JsonValue('unknown')
+one,@JsonValue('2')
+two,@JsonValue('3')
+three,@JsonValue('4')
+four,@JsonValue('5')
+five,@JsonValue('unknown')
   unknown,}
 
 

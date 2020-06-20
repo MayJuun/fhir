@@ -1,111 +1,110 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 // import 'package:flutter/foundation.dart';
 
-import 'metadata_types.enums.dart';
 import '../../fhir_r4.dart';
 
+part 'metadata_types.enums.dart';
 part 'metadata_types.freezed.dart';
 part 'metadata_types.g.dart';
 
 @freezed
-abstract class ContactDetail implements _$ContactDetail , Resource {
+abstract class ContactDetail with Resource  implements _$ContactDetail {
 ContactDetail._();
 factory ContactDetail({
- String id,
- List<FhirExtension> extension,
- String name,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  String name,
   @JsonKey(name: '_name')  Element nameElement,
- List<ContactPoint> telecom,
+  List<ContactPoint> telecom,
 }) = _ContactDetail;
 
  factory ContactDetail.fromJson(Map<String,dynamic> json) => _$ContactDetailFromJson(json);
 }
 
 @freezed
-abstract class Contributor implements _$Contributor , Resource {
+abstract class Contributor with Resource  implements _$Contributor {
 Contributor._();
 factory Contributor({
- String id,
- List<FhirExtension> extension,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
 @JsonKey(unknownEnumValue: ContributorType.unknown) ContributorType type,
   @JsonKey(name: '_type')  Element typeElement,
- String name,
+  String name,
   @JsonKey(name: '_name')  Element nameElement,
- List<ContactDetail> contact,
+  List<ContactDetail> contact,
 }) = _Contributor;
 
  factory Contributor.fromJson(Map<String,dynamic> json) => _$ContributorFromJson(json);
 }
 
 @freezed
-abstract class DataRequirement implements _$DataRequirement , Resource {
+abstract class DataRequirement with Resource  implements _$DataRequirement {
 DataRequirement._();
 factory DataRequirement({
- String id,
- List<FhirExtension> extension,
- Code type,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  Code type,
   @JsonKey(name: '_type')  Element typeElement,
- List<Canonical> profile,
- CodeableConcept subjectCodeableConcept,
- Reference subjectReference,
- List<String> mustSupport,
+  List<Canonical> profile,
+  CodeableConcept subjectCodeableConcept,
+  Reference subjectReference,
+  List<String> mustSupport,
   @JsonKey(name: '_mustSupport')  Element mustSupportElement,
- List<DataRequirementCodeFilter> codeFilter,
- List<DataRequirementDateFilter> dateFilter,
- PositiveInt limit,
+  List<DataRequirementCodeFilter> codeFilter,
+  List<DataRequirementDateFilter> dateFilter,
+  PositiveInt limit,
   @JsonKey(name: '_limit')  Element limitElement,
- List<DataRequirementSort> sort,
+  List<DataRequirementSort> sort,
 }) = _DataRequirement;
 
  factory DataRequirement.fromJson(Map<String,dynamic> json) => _$DataRequirementFromJson(json);
 }
 
 @freezed
-abstract class DataRequirementCodeFilter implements _$DataRequirementCodeFilter  {
+abstract class DataRequirementCodeFilter  implements _$DataRequirementCodeFilter {
 DataRequirementCodeFilter._();
 factory DataRequirementCodeFilter({
- String id,
- List<FhirExtension> extension,
- List<FhirExtension> modifierExtension,
- String path,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  List<FhirExtension> modifierExtension,
+  String path,
   @JsonKey(name: '_path')  Element pathElement,
- String searchParam,
+  String searchParam,
   @JsonKey(name: '_searchParam')  Element searchParamElement,
- Canonical valueSet,
- List<Coding> code,
+  Canonical valueSet,
+  List<Coding> code,
 }) = _DataRequirementCodeFilter;
 
  factory DataRequirementCodeFilter.fromJson(Map<String,dynamic> json) => _$DataRequirementCodeFilterFromJson(json);
 }
 
 @freezed
-abstract class DataRequirementDateFilter implements _$DataRequirementDateFilter  {
+abstract class DataRequirementDateFilter  implements _$DataRequirementDateFilter {
 DataRequirementDateFilter._();
 factory DataRequirementDateFilter({
- String id,
- List<FhirExtension> extension,
- List<FhirExtension> modifierExtension,
- String path,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  List<FhirExtension> modifierExtension,
+  String path,
   @JsonKey(name: '_path')  Element pathElement,
- String searchParam,
+  String searchParam,
   @JsonKey(name: '_searchParam')  Element searchParamElement,
- FhirDateTime valueDateTime,
-  @JsonKey(name: '_valueDateTime')  Element valueDateTimeElement,
- Period valuePeriod,
- Duration valueDuration,
+    @JsonKey(name: '_valueDateTime')  Element valueDateTimeElement,
+  Period valuePeriod,
+  Duration valueDuration,
 }) = _DataRequirementDateFilter;
 
  factory DataRequirementDateFilter.fromJson(Map<String,dynamic> json) => _$DataRequirementDateFilterFromJson(json);
 }
 
 @freezed
-abstract class DataRequirementSort implements _$DataRequirementSort  {
+abstract class DataRequirementSort  implements _$DataRequirementSort {
 DataRequirementSort._();
 factory DataRequirementSort({
- String id,
- List<FhirExtension> extension,
- List<FhirExtension> modifierExtension,
- String path,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  List<FhirExtension> modifierExtension,
+  String path,
   @JsonKey(name: '_path')  Element pathElement,
 @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown) DataRequirementSortDirection direction,
   @JsonKey(name: '_direction')  Element directionElement,
@@ -115,106 +114,104 @@ factory DataRequirementSort({
 }
 
 @freezed
-abstract class ParameterDefinition implements _$ParameterDefinition , Resource {
+abstract class ParameterDefinition with Resource  implements _$ParameterDefinition {
 ParameterDefinition._();
 factory ParameterDefinition({
- String id,
- List<FhirExtension> extension,
- Code name,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  Code name,
   @JsonKey(name: '_name')  Element nameElement,
- Code use,
+  Code use,
   @JsonKey(name: '_use')  Element useElement,
- Integer min,
+  Integer min,
   @JsonKey(name: '_min')  Element minElement,
- String max,
+  String max,
   @JsonKey(name: '_max')  Element maxElement,
- String documentation,
+  String documentation,
   @JsonKey(name: '_documentation')  Element documentationElement,
- Code type,
+  Code type,
   @JsonKey(name: '_type')  Element typeElement,
- Canonical profile,
+  Canonical profile,
 }) = _ParameterDefinition;
 
  factory ParameterDefinition.fromJson(Map<String,dynamic> json) => _$ParameterDefinitionFromJson(json);
 }
 
 @freezed
-abstract class RelatedArtifact implements _$RelatedArtifact , Resource {
+abstract class RelatedArtifact with Resource  implements _$RelatedArtifact {
 RelatedArtifact._();
 factory RelatedArtifact({
- String id,
- List<FhirExtension> extension,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
 @JsonKey(unknownEnumValue: RelatedArtifactType.unknown) RelatedArtifactType type,
   @JsonKey(name: '_type')  Element typeElement,
- String label,
+  String label,
   @JsonKey(name: '_label')  Element labelElement,
- String display,
+  String display,
   @JsonKey(name: '_display')  Element displayElement,
- Markdown citation,
+  Markdown citation,
   @JsonKey(name: '_citation')  Element citationElement,
- FhirUrl url,
+  FhirUrl url,
   @JsonKey(name: '_url')  Element urlElement,
- Attachment document,
- Canonical resource,
+  Attachment document,
+  Canonical resource,
 }) = _RelatedArtifact;
 
  factory RelatedArtifact.fromJson(Map<String,dynamic> json) => _$RelatedArtifactFromJson(json);
 }
 
 @freezed
-abstract class TriggerDefinition implements _$TriggerDefinition , Resource {
+abstract class TriggerDefinition with Resource  implements _$TriggerDefinition {
 TriggerDefinition._();
 factory TriggerDefinition({
- String id,
- List<FhirExtension> extension,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
 @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown) TriggerDefinitionType type,
   @JsonKey(name: '_type')  Element typeElement,
- String name,
+  String name,
   @JsonKey(name: '_name')  Element nameElement,
- Timing timingTiming,
- Reference timingReference,
- Date timingDate,
-  @JsonKey(name: '_timingDate')  Element timingDateElement,
- FhirDateTime timingDateTime,
-  @JsonKey(name: '_timingDateTime')  Element timingDateTimeElement,
- List<DataRequirement> data,
- Expression condition,
+  Timing timingTiming,
+  Reference timingReference,
+    @JsonKey(name: '_timingDate')  Element timingDateElement,
+    @JsonKey(name: '_timingDateTime')  Element timingDateTimeElement,
+  List<DataRequirement> data,
+  Expression condition,
 }) = _TriggerDefinition;
 
  factory TriggerDefinition.fromJson(Map<String,dynamic> json) => _$TriggerDefinitionFromJson(json);
 }
 
 @freezed
-abstract class UsageContext implements _$UsageContext , Resource {
+abstract class UsageContext with Resource  implements _$UsageContext {
 UsageContext._();
 factory UsageContext({
-  String id,
-  List<FhirExtension> extension,
-  @required Coding code,
-  CodeableConcept valueCodeableConcept,
-  Quantity valueQuantity,
-  Range valueRange,
-  Reference valueReference,
+   String id,
+@JsonKey(name: 'extension')   List<FhirExtension> extension_,
+   @required Coding code,
+   CodeableConcept valueCodeableConcept,
+   Quantity valueQuantity,
+   Range valueRange,
+   Reference valueReference,
 }) = _UsageContext;
 
  factory UsageContext.fromJson(Map<String,dynamic> json) => _$UsageContextFromJson(json);
 }
 
 @freezed
-abstract class Expression implements _$Expression , Resource {
+abstract class Expression with Resource  implements _$Expression {
 Expression._();
 factory Expression({
- String id,
- List<FhirExtension> extension,
- String description,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  String description,
   @JsonKey(name: '_description')  Element descriptionElement,
- Id name,
+  Id name,
   @JsonKey(name: '_name')  Element nameElement,
 @JsonKey(unknownEnumValue: ExpressionLanguage.unknown) ExpressionLanguage language,
   @JsonKey(name: '_language')  Element languageElement,
- String expression,
+  String expression,
   @JsonKey(name: '_expression')  Element expressionElement,
- FhirUri reference,
+  FhirUri reference,
   @JsonKey(name: '_reference')  Element referenceElement,
 }) = _Expression;
 

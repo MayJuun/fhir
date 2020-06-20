@@ -66,6 +66,12 @@ class _$PrimitiveFailureTearOff {
     );
   }
 
+  InvalidInteger64<T> invalidInteger64<T>({@required T failedValue}) {
+    return InvalidInteger64<T>(
+      failedValue: failedValue,
+    );
+  }
+
   InvalidInteger<T> invalidInteger<T>({@required T failedValue}) {
     return InvalidInteger<T>(
       failedValue: failedValue,
@@ -144,6 +150,7 @@ mixin _$PrimitiveFailure<T> {
     @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
+    @required Result invalidInteger64(T failedValue),
     @required Result invalidInteger(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
@@ -166,6 +173,7 @@ mixin _$PrimitiveFailure<T> {
     Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
+    Result invalidInteger64(T failedValue),
     Result invalidInteger(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
@@ -189,6 +197,7 @@ mixin _$PrimitiveFailure<T> {
     @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
+    @required Result invalidInteger64(InvalidInteger64<T> value),
     @required Result invalidInteger(InvalidInteger<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
@@ -211,6 +220,7 @@ mixin _$PrimitiveFailure<T> {
     Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
+    Result invalidInteger64(InvalidInteger64<T> value),
     Result invalidInteger(InvalidInteger<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
@@ -325,6 +335,7 @@ class _$InvalidBase64Binary<T> implements InvalidBase64Binary<T> {
     @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
+    @required Result invalidInteger64(T failedValue),
     @required Result invalidInteger(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
@@ -345,6 +356,7 @@ class _$InvalidBase64Binary<T> implements InvalidBase64Binary<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -370,6 +382,7 @@ class _$InvalidBase64Binary<T> implements InvalidBase64Binary<T> {
     Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
+    Result invalidInteger64(T failedValue),
     Result invalidInteger(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
@@ -401,6 +414,7 @@ class _$InvalidBase64Binary<T> implements InvalidBase64Binary<T> {
     @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
+    @required Result invalidInteger64(InvalidInteger64<T> value),
     @required Result invalidInteger(InvalidInteger<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
@@ -421,6 +435,7 @@ class _$InvalidBase64Binary<T> implements InvalidBase64Binary<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -446,6 +461,7 @@ class _$InvalidBase64Binary<T> implements InvalidBase64Binary<T> {
     Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
+    Result invalidInteger64(InvalidInteger64<T> value),
     Result invalidInteger(InvalidInteger<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
@@ -547,6 +563,7 @@ class _$InvalidBoolean<T> implements InvalidBoolean<T> {
     @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
+    @required Result invalidInteger64(T failedValue),
     @required Result invalidInteger(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
@@ -567,6 +584,7 @@ class _$InvalidBoolean<T> implements InvalidBoolean<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -592,6 +610,7 @@ class _$InvalidBoolean<T> implements InvalidBoolean<T> {
     Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
+    Result invalidInteger64(T failedValue),
     Result invalidInteger(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
@@ -623,6 +642,7 @@ class _$InvalidBoolean<T> implements InvalidBoolean<T> {
     @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
+    @required Result invalidInteger64(InvalidInteger64<T> value),
     @required Result invalidInteger(InvalidInteger<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
@@ -643,6 +663,7 @@ class _$InvalidBoolean<T> implements InvalidBoolean<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -668,6 +689,7 @@ class _$InvalidBoolean<T> implements InvalidBoolean<T> {
     Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
+    Result invalidInteger64(InvalidInteger64<T> value),
     Result invalidInteger(InvalidInteger<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
@@ -768,6 +790,7 @@ class _$InvalidCanonical<T> implements InvalidCanonical<T> {
     @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
+    @required Result invalidInteger64(T failedValue),
     @required Result invalidInteger(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
@@ -788,6 +811,7 @@ class _$InvalidCanonical<T> implements InvalidCanonical<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -813,6 +837,7 @@ class _$InvalidCanonical<T> implements InvalidCanonical<T> {
     Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
+    Result invalidInteger64(T failedValue),
     Result invalidInteger(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
@@ -844,6 +869,7 @@ class _$InvalidCanonical<T> implements InvalidCanonical<T> {
     @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
+    @required Result invalidInteger64(InvalidInteger64<T> value),
     @required Result invalidInteger(InvalidInteger<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
@@ -864,6 +890,7 @@ class _$InvalidCanonical<T> implements InvalidCanonical<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -889,6 +916,7 @@ class _$InvalidCanonical<T> implements InvalidCanonical<T> {
     Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
+    Result invalidInteger64(InvalidInteger64<T> value),
     Result invalidInteger(InvalidInteger<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
@@ -990,6 +1018,7 @@ class _$InvalidCode<T> implements InvalidCode<T> {
     @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
+    @required Result invalidInteger64(T failedValue),
     @required Result invalidInteger(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
@@ -1010,6 +1039,7 @@ class _$InvalidCode<T> implements InvalidCode<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -1035,6 +1065,7 @@ class _$InvalidCode<T> implements InvalidCode<T> {
     Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
+    Result invalidInteger64(T failedValue),
     Result invalidInteger(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
@@ -1066,6 +1097,7 @@ class _$InvalidCode<T> implements InvalidCode<T> {
     @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
+    @required Result invalidInteger64(InvalidInteger64<T> value),
     @required Result invalidInteger(InvalidInteger<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
@@ -1086,6 +1118,7 @@ class _$InvalidCode<T> implements InvalidCode<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -1111,6 +1144,7 @@ class _$InvalidCode<T> implements InvalidCode<T> {
     Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
+    Result invalidInteger64(InvalidInteger64<T> value),
     Result invalidInteger(InvalidInteger<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
@@ -1211,6 +1245,7 @@ class _$InvalidDate<T> implements InvalidDate<T> {
     @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
+    @required Result invalidInteger64(T failedValue),
     @required Result invalidInteger(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
@@ -1231,6 +1266,7 @@ class _$InvalidDate<T> implements InvalidDate<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -1256,6 +1292,7 @@ class _$InvalidDate<T> implements InvalidDate<T> {
     Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
+    Result invalidInteger64(T failedValue),
     Result invalidInteger(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
@@ -1287,6 +1324,7 @@ class _$InvalidDate<T> implements InvalidDate<T> {
     @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
+    @required Result invalidInteger64(InvalidInteger64<T> value),
     @required Result invalidInteger(InvalidInteger<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
@@ -1307,6 +1345,7 @@ class _$InvalidDate<T> implements InvalidDate<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -1332,6 +1371,7 @@ class _$InvalidDate<T> implements InvalidDate<T> {
     Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
+    Result invalidInteger64(InvalidInteger64<T> value),
     Result invalidInteger(InvalidInteger<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
@@ -1432,6 +1472,7 @@ class _$InvalidDateTime<T> implements InvalidDateTime<T> {
     @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
+    @required Result invalidInteger64(T failedValue),
     @required Result invalidInteger(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
@@ -1452,6 +1493,7 @@ class _$InvalidDateTime<T> implements InvalidDateTime<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -1477,6 +1519,7 @@ class _$InvalidDateTime<T> implements InvalidDateTime<T> {
     Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
+    Result invalidInteger64(T failedValue),
     Result invalidInteger(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
@@ -1508,6 +1551,7 @@ class _$InvalidDateTime<T> implements InvalidDateTime<T> {
     @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
+    @required Result invalidInteger64(InvalidInteger64<T> value),
     @required Result invalidInteger(InvalidInteger<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
@@ -1528,6 +1572,7 @@ class _$InvalidDateTime<T> implements InvalidDateTime<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -1553,6 +1598,7 @@ class _$InvalidDateTime<T> implements InvalidDateTime<T> {
     Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
+    Result invalidInteger64(InvalidInteger64<T> value),
     Result invalidInteger(InvalidInteger<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
@@ -1654,6 +1700,7 @@ class _$InvalidDecimal<T> implements InvalidDecimal<T> {
     @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
+    @required Result invalidInteger64(T failedValue),
     @required Result invalidInteger(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
@@ -1674,6 +1721,7 @@ class _$InvalidDecimal<T> implements InvalidDecimal<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -1699,6 +1747,7 @@ class _$InvalidDecimal<T> implements InvalidDecimal<T> {
     Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
+    Result invalidInteger64(T failedValue),
     Result invalidInteger(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
@@ -1730,6 +1779,7 @@ class _$InvalidDecimal<T> implements InvalidDecimal<T> {
     @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
+    @required Result invalidInteger64(InvalidInteger64<T> value),
     @required Result invalidInteger(InvalidInteger<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
@@ -1750,6 +1800,7 @@ class _$InvalidDecimal<T> implements InvalidDecimal<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -1775,6 +1826,7 @@ class _$InvalidDecimal<T> implements InvalidDecimal<T> {
     Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
+    Result invalidInteger64(InvalidInteger64<T> value),
     Result invalidInteger(InvalidInteger<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
@@ -1874,6 +1926,7 @@ class _$InvalidId<T> implements InvalidId<T> {
     @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
+    @required Result invalidInteger64(T failedValue),
     @required Result invalidInteger(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
@@ -1894,6 +1947,7 @@ class _$InvalidId<T> implements InvalidId<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -1919,6 +1973,7 @@ class _$InvalidId<T> implements InvalidId<T> {
     Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
+    Result invalidInteger64(T failedValue),
     Result invalidInteger(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
@@ -1950,6 +2005,7 @@ class _$InvalidId<T> implements InvalidId<T> {
     @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
+    @required Result invalidInteger64(InvalidInteger64<T> value),
     @required Result invalidInteger(InvalidInteger<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
@@ -1970,6 +2026,7 @@ class _$InvalidId<T> implements InvalidId<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -1995,6 +2052,7 @@ class _$InvalidId<T> implements InvalidId<T> {
     Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
+    Result invalidInteger64(InvalidInteger64<T> value),
     Result invalidInteger(InvalidInteger<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
@@ -2095,6 +2153,7 @@ class _$InvalidInstant<T> implements InvalidInstant<T> {
     @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
+    @required Result invalidInteger64(T failedValue),
     @required Result invalidInteger(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
@@ -2115,6 +2174,7 @@ class _$InvalidInstant<T> implements InvalidInstant<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -2140,6 +2200,7 @@ class _$InvalidInstant<T> implements InvalidInstant<T> {
     Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
+    Result invalidInteger64(T failedValue),
     Result invalidInteger(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
@@ -2171,6 +2232,7 @@ class _$InvalidInstant<T> implements InvalidInstant<T> {
     @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
+    @required Result invalidInteger64(InvalidInteger64<T> value),
     @required Result invalidInteger(InvalidInteger<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
@@ -2191,6 +2253,7 @@ class _$InvalidInstant<T> implements InvalidInstant<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -2216,6 +2279,7 @@ class _$InvalidInstant<T> implements InvalidInstant<T> {
     Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
+    Result invalidInteger64(InvalidInteger64<T> value),
     Result invalidInteger(InvalidInteger<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
@@ -2243,6 +2307,234 @@ abstract class InvalidInstant<T> implements PrimitiveFailure<T> {
   T get failedValue;
   @override
   $InvalidInstantCopyWith<T, InvalidInstant<T>> get copyWith;
+}
+
+abstract class $InvalidInteger64CopyWith<T, $Res>
+    implements $PrimitiveFailureCopyWith<T, $Res> {
+  factory $InvalidInteger64CopyWith(
+          InvalidInteger64<T> value, $Res Function(InvalidInteger64<T>) then) =
+      _$InvalidInteger64CopyWithImpl<T, $Res>;
+  @override
+  $Res call({T failedValue});
+}
+
+class _$InvalidInteger64CopyWithImpl<T, $Res>
+    extends _$PrimitiveFailureCopyWithImpl<T, $Res>
+    implements $InvalidInteger64CopyWith<T, $Res> {
+  _$InvalidInteger64CopyWithImpl(
+      InvalidInteger64<T> _value, $Res Function(InvalidInteger64<T>) _then)
+      : super(_value, (v) => _then(v as InvalidInteger64<T>));
+
+  @override
+  InvalidInteger64<T> get _value => super._value as InvalidInteger64<T>;
+
+  @override
+  $Res call({
+    Object failedValue = freezed,
+  }) {
+    return _then(InvalidInteger64<T>(
+      failedValue:
+          failedValue == freezed ? _value.failedValue : failedValue as T,
+    ));
+  }
+}
+
+class _$InvalidInteger64<T> implements InvalidInteger64<T> {
+  const _$InvalidInteger64({@required this.failedValue})
+      : assert(failedValue != null);
+
+  @override
+  final T failedValue;
+
+  @override
+  String toString() {
+    return 'PrimitiveFailure<$T>.invalidInteger64(failedValue: $failedValue)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is InvalidInteger64<T> &&
+            (identical(other.failedValue, failedValue) ||
+                const DeepCollectionEquality()
+                    .equals(other.failedValue, failedValue)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
+
+  @override
+  $InvalidInteger64CopyWith<T, InvalidInteger64<T>> get copyWith =>
+      _$InvalidInteger64CopyWithImpl<T, InvalidInteger64<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result invalidBase64Binary(T failedValue),
+    @required Result invalidBoolean(T failedValue),
+    @required Result invalidCanonical(T failedValue),
+    @required Result invalidCode(T failedValue),
+    @required Result invalidDate(T failedValue),
+    @required Result invalidFhirDateTime(T failedValue),
+    @required Result invalidDecimal(T failedValue),
+    @required Result invalidId(T failedValue),
+    @required Result invalidInstant(T failedValue),
+    @required Result invalidInteger64(T failedValue),
+    @required Result invalidInteger(T failedValue),
+    @required Result invalidMarkdown(T failedValue),
+    @required Result invalidOid(T failedValue),
+    @required Result invalidPositiveInt(T failedValue),
+    @required Result invalidTime(T failedValue),
+    @required Result invalidUnsignedInt(T failedValue),
+    @required Result invalidFhirUri(T failedValue),
+    @required Result invalidFhirUrl(T failedValue),
+    @required Result invalidUuid(T failedValue),
+    @required Result invalidEnum(T failedValue),
+  }) {
+    assert(invalidBase64Binary != null);
+    assert(invalidBoolean != null);
+    assert(invalidCanonical != null);
+    assert(invalidCode != null);
+    assert(invalidDate != null);
+    assert(invalidFhirDateTime != null);
+    assert(invalidDecimal != null);
+    assert(invalidId != null);
+    assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
+    assert(invalidInteger != null);
+    assert(invalidMarkdown != null);
+    assert(invalidOid != null);
+    assert(invalidPositiveInt != null);
+    assert(invalidTime != null);
+    assert(invalidUnsignedInt != null);
+    assert(invalidFhirUri != null);
+    assert(invalidFhirUrl != null);
+    assert(invalidUuid != null);
+    assert(invalidEnum != null);
+    return invalidInteger64(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result invalidBase64Binary(T failedValue),
+    Result invalidBoolean(T failedValue),
+    Result invalidCanonical(T failedValue),
+    Result invalidCode(T failedValue),
+    Result invalidDate(T failedValue),
+    Result invalidFhirDateTime(T failedValue),
+    Result invalidDecimal(T failedValue),
+    Result invalidId(T failedValue),
+    Result invalidInstant(T failedValue),
+    Result invalidInteger64(T failedValue),
+    Result invalidInteger(T failedValue),
+    Result invalidMarkdown(T failedValue),
+    Result invalidOid(T failedValue),
+    Result invalidPositiveInt(T failedValue),
+    Result invalidTime(T failedValue),
+    Result invalidUnsignedInt(T failedValue),
+    Result invalidFhirUri(T failedValue),
+    Result invalidFhirUrl(T failedValue),
+    Result invalidUuid(T failedValue),
+    Result invalidEnum(T failedValue),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (invalidInteger64 != null) {
+      return invalidInteger64(failedValue);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result invalidBase64Binary(InvalidBase64Binary<T> value),
+    @required Result invalidBoolean(InvalidBoolean<T> value),
+    @required Result invalidCanonical(InvalidCanonical<T> value),
+    @required Result invalidCode(InvalidCode<T> value),
+    @required Result invalidDate(InvalidDate<T> value),
+    @required Result invalidFhirDateTime(InvalidDateTime<T> value),
+    @required Result invalidDecimal(InvalidDecimal<T> value),
+    @required Result invalidId(InvalidId<T> value),
+    @required Result invalidInstant(InvalidInstant<T> value),
+    @required Result invalidInteger64(InvalidInteger64<T> value),
+    @required Result invalidInteger(InvalidInteger<T> value),
+    @required Result invalidMarkdown(InvalidMarkdown<T> value),
+    @required Result invalidOid(InvalidOid<T> value),
+    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
+    @required Result invalidTime(InvalidTime<T> value),
+    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    @required Result invalidFhirUri(InvalidFhirUri<T> value),
+    @required Result invalidFhirUrl(InvalidFhirUrl<T> value),
+    @required Result invalidUuid(InvalidUuid<T> value),
+    @required Result invalidEnum(InvalidEnum<T> value),
+  }) {
+    assert(invalidBase64Binary != null);
+    assert(invalidBoolean != null);
+    assert(invalidCanonical != null);
+    assert(invalidCode != null);
+    assert(invalidDate != null);
+    assert(invalidFhirDateTime != null);
+    assert(invalidDecimal != null);
+    assert(invalidId != null);
+    assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
+    assert(invalidInteger != null);
+    assert(invalidMarkdown != null);
+    assert(invalidOid != null);
+    assert(invalidPositiveInt != null);
+    assert(invalidTime != null);
+    assert(invalidUnsignedInt != null);
+    assert(invalidFhirUri != null);
+    assert(invalidFhirUrl != null);
+    assert(invalidUuid != null);
+    assert(invalidEnum != null);
+    return invalidInteger64(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result invalidBase64Binary(InvalidBase64Binary<T> value),
+    Result invalidBoolean(InvalidBoolean<T> value),
+    Result invalidCanonical(InvalidCanonical<T> value),
+    Result invalidCode(InvalidCode<T> value),
+    Result invalidDate(InvalidDate<T> value),
+    Result invalidFhirDateTime(InvalidDateTime<T> value),
+    Result invalidDecimal(InvalidDecimal<T> value),
+    Result invalidId(InvalidId<T> value),
+    Result invalidInstant(InvalidInstant<T> value),
+    Result invalidInteger64(InvalidInteger64<T> value),
+    Result invalidInteger(InvalidInteger<T> value),
+    Result invalidMarkdown(InvalidMarkdown<T> value),
+    Result invalidOid(InvalidOid<T> value),
+    Result invalidPositiveInt(InvalidPositiveInt<T> value),
+    Result invalidTime(InvalidTime<T> value),
+    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    Result invalidFhirUri(InvalidFhirUri<T> value),
+    Result invalidFhirUrl(InvalidFhirUrl<T> value),
+    Result invalidUuid(InvalidUuid<T> value),
+    Result invalidEnum(InvalidEnum<T> value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (invalidInteger64 != null) {
+      return invalidInteger64(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class InvalidInteger64<T> implements PrimitiveFailure<T> {
+  const factory InvalidInteger64({@required T failedValue}) =
+      _$InvalidInteger64<T>;
+
+  @override
+  T get failedValue;
+  @override
+  $InvalidInteger64CopyWith<T, InvalidInteger64<T>> get copyWith;
 }
 
 abstract class $InvalidIntegerCopyWith<T, $Res>
@@ -2316,6 +2608,7 @@ class _$InvalidInteger<T> implements InvalidInteger<T> {
     @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
+    @required Result invalidInteger64(T failedValue),
     @required Result invalidInteger(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
@@ -2336,6 +2629,7 @@ class _$InvalidInteger<T> implements InvalidInteger<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -2361,6 +2655,7 @@ class _$InvalidInteger<T> implements InvalidInteger<T> {
     Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
+    Result invalidInteger64(T failedValue),
     Result invalidInteger(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
@@ -2392,6 +2687,7 @@ class _$InvalidInteger<T> implements InvalidInteger<T> {
     @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
+    @required Result invalidInteger64(InvalidInteger64<T> value),
     @required Result invalidInteger(InvalidInteger<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
@@ -2412,6 +2708,7 @@ class _$InvalidInteger<T> implements InvalidInteger<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -2437,6 +2734,7 @@ class _$InvalidInteger<T> implements InvalidInteger<T> {
     Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
+    Result invalidInteger64(InvalidInteger64<T> value),
     Result invalidInteger(InvalidInteger<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
@@ -2537,6 +2835,7 @@ class _$InvalidMarkdown<T> implements InvalidMarkdown<T> {
     @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
+    @required Result invalidInteger64(T failedValue),
     @required Result invalidInteger(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
@@ -2557,6 +2856,7 @@ class _$InvalidMarkdown<T> implements InvalidMarkdown<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -2582,6 +2882,7 @@ class _$InvalidMarkdown<T> implements InvalidMarkdown<T> {
     Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
+    Result invalidInteger64(T failedValue),
     Result invalidInteger(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
@@ -2613,6 +2914,7 @@ class _$InvalidMarkdown<T> implements InvalidMarkdown<T> {
     @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
+    @required Result invalidInteger64(InvalidInteger64<T> value),
     @required Result invalidInteger(InvalidInteger<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
@@ -2633,6 +2935,7 @@ class _$InvalidMarkdown<T> implements InvalidMarkdown<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -2658,6 +2961,7 @@ class _$InvalidMarkdown<T> implements InvalidMarkdown<T> {
     Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
+    Result invalidInteger64(InvalidInteger64<T> value),
     Result invalidInteger(InvalidInteger<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
@@ -2759,6 +3063,7 @@ class _$InvalidOid<T> implements InvalidOid<T> {
     @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
+    @required Result invalidInteger64(T failedValue),
     @required Result invalidInteger(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
@@ -2779,6 +3084,7 @@ class _$InvalidOid<T> implements InvalidOid<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -2804,6 +3110,7 @@ class _$InvalidOid<T> implements InvalidOid<T> {
     Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
+    Result invalidInteger64(T failedValue),
     Result invalidInteger(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
@@ -2835,6 +3142,7 @@ class _$InvalidOid<T> implements InvalidOid<T> {
     @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
+    @required Result invalidInteger64(InvalidInteger64<T> value),
     @required Result invalidInteger(InvalidInteger<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
@@ -2855,6 +3163,7 @@ class _$InvalidOid<T> implements InvalidOid<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -2880,6 +3189,7 @@ class _$InvalidOid<T> implements InvalidOid<T> {
     Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
+    Result invalidInteger64(InvalidInteger64<T> value),
     Result invalidInteger(InvalidInteger<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
@@ -2981,6 +3291,7 @@ class _$InvalidPositiveInt<T> implements InvalidPositiveInt<T> {
     @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
+    @required Result invalidInteger64(T failedValue),
     @required Result invalidInteger(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
@@ -3001,6 +3312,7 @@ class _$InvalidPositiveInt<T> implements InvalidPositiveInt<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -3026,6 +3338,7 @@ class _$InvalidPositiveInt<T> implements InvalidPositiveInt<T> {
     Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
+    Result invalidInteger64(T failedValue),
     Result invalidInteger(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
@@ -3057,6 +3370,7 @@ class _$InvalidPositiveInt<T> implements InvalidPositiveInt<T> {
     @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
+    @required Result invalidInteger64(InvalidInteger64<T> value),
     @required Result invalidInteger(InvalidInteger<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
@@ -3077,6 +3391,7 @@ class _$InvalidPositiveInt<T> implements InvalidPositiveInt<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -3102,6 +3417,7 @@ class _$InvalidPositiveInt<T> implements InvalidPositiveInt<T> {
     Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
+    Result invalidInteger64(InvalidInteger64<T> value),
     Result invalidInteger(InvalidInteger<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
@@ -3203,6 +3519,7 @@ class _$InvalidTime<T> implements InvalidTime<T> {
     @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
+    @required Result invalidInteger64(T failedValue),
     @required Result invalidInteger(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
@@ -3223,6 +3540,7 @@ class _$InvalidTime<T> implements InvalidTime<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -3248,6 +3566,7 @@ class _$InvalidTime<T> implements InvalidTime<T> {
     Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
+    Result invalidInteger64(T failedValue),
     Result invalidInteger(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
@@ -3279,6 +3598,7 @@ class _$InvalidTime<T> implements InvalidTime<T> {
     @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
+    @required Result invalidInteger64(InvalidInteger64<T> value),
     @required Result invalidInteger(InvalidInteger<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
@@ -3299,6 +3619,7 @@ class _$InvalidTime<T> implements InvalidTime<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -3324,6 +3645,7 @@ class _$InvalidTime<T> implements InvalidTime<T> {
     Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
+    Result invalidInteger64(InvalidInteger64<T> value),
     Result invalidInteger(InvalidInteger<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
@@ -3425,6 +3747,7 @@ class _$InvalidUnsignedInt<T> implements InvalidUnsignedInt<T> {
     @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
+    @required Result invalidInteger64(T failedValue),
     @required Result invalidInteger(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
@@ -3445,6 +3768,7 @@ class _$InvalidUnsignedInt<T> implements InvalidUnsignedInt<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -3470,6 +3794,7 @@ class _$InvalidUnsignedInt<T> implements InvalidUnsignedInt<T> {
     Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
+    Result invalidInteger64(T failedValue),
     Result invalidInteger(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
@@ -3501,6 +3826,7 @@ class _$InvalidUnsignedInt<T> implements InvalidUnsignedInt<T> {
     @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
+    @required Result invalidInteger64(InvalidInteger64<T> value),
     @required Result invalidInteger(InvalidInteger<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
@@ -3521,6 +3847,7 @@ class _$InvalidUnsignedInt<T> implements InvalidUnsignedInt<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -3546,6 +3873,7 @@ class _$InvalidUnsignedInt<T> implements InvalidUnsignedInt<T> {
     Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
+    Result invalidInteger64(InvalidInteger64<T> value),
     Result invalidInteger(InvalidInteger<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
@@ -3647,6 +3975,7 @@ class _$InvalidFhirUri<T> implements InvalidFhirUri<T> {
     @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
+    @required Result invalidInteger64(T failedValue),
     @required Result invalidInteger(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
@@ -3667,6 +3996,7 @@ class _$InvalidFhirUri<T> implements InvalidFhirUri<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -3692,6 +4022,7 @@ class _$InvalidFhirUri<T> implements InvalidFhirUri<T> {
     Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
+    Result invalidInteger64(T failedValue),
     Result invalidInteger(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
@@ -3723,6 +4054,7 @@ class _$InvalidFhirUri<T> implements InvalidFhirUri<T> {
     @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
+    @required Result invalidInteger64(InvalidInteger64<T> value),
     @required Result invalidInteger(InvalidInteger<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
@@ -3743,6 +4075,7 @@ class _$InvalidFhirUri<T> implements InvalidFhirUri<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -3768,6 +4101,7 @@ class _$InvalidFhirUri<T> implements InvalidFhirUri<T> {
     Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
+    Result invalidInteger64(InvalidInteger64<T> value),
     Result invalidInteger(InvalidInteger<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
@@ -3868,6 +4202,7 @@ class _$InvalidFhirUrl<T> implements InvalidFhirUrl<T> {
     @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
+    @required Result invalidInteger64(T failedValue),
     @required Result invalidInteger(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
@@ -3888,6 +4223,7 @@ class _$InvalidFhirUrl<T> implements InvalidFhirUrl<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -3913,6 +4249,7 @@ class _$InvalidFhirUrl<T> implements InvalidFhirUrl<T> {
     Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
+    Result invalidInteger64(T failedValue),
     Result invalidInteger(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
@@ -3944,6 +4281,7 @@ class _$InvalidFhirUrl<T> implements InvalidFhirUrl<T> {
     @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
+    @required Result invalidInteger64(InvalidInteger64<T> value),
     @required Result invalidInteger(InvalidInteger<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
@@ -3964,6 +4302,7 @@ class _$InvalidFhirUrl<T> implements InvalidFhirUrl<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -3989,6 +4328,7 @@ class _$InvalidFhirUrl<T> implements InvalidFhirUrl<T> {
     Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
+    Result invalidInteger64(InvalidInteger64<T> value),
     Result invalidInteger(InvalidInteger<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
@@ -4089,6 +4429,7 @@ class _$InvalidUuid<T> implements InvalidUuid<T> {
     @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
+    @required Result invalidInteger64(T failedValue),
     @required Result invalidInteger(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
@@ -4109,6 +4450,7 @@ class _$InvalidUuid<T> implements InvalidUuid<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -4134,6 +4476,7 @@ class _$InvalidUuid<T> implements InvalidUuid<T> {
     Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
+    Result invalidInteger64(T failedValue),
     Result invalidInteger(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
@@ -4165,6 +4508,7 @@ class _$InvalidUuid<T> implements InvalidUuid<T> {
     @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
+    @required Result invalidInteger64(InvalidInteger64<T> value),
     @required Result invalidInteger(InvalidInteger<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
@@ -4185,6 +4529,7 @@ class _$InvalidUuid<T> implements InvalidUuid<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -4210,6 +4555,7 @@ class _$InvalidUuid<T> implements InvalidUuid<T> {
     Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
+    Result invalidInteger64(InvalidInteger64<T> value),
     Result invalidInteger(InvalidInteger<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
@@ -4310,6 +4656,7 @@ class _$InvalidEnum<T> implements InvalidEnum<T> {
     @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
+    @required Result invalidInteger64(T failedValue),
     @required Result invalidInteger(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
@@ -4330,6 +4677,7 @@ class _$InvalidEnum<T> implements InvalidEnum<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -4355,6 +4703,7 @@ class _$InvalidEnum<T> implements InvalidEnum<T> {
     Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
+    Result invalidInteger64(T failedValue),
     Result invalidInteger(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
@@ -4386,6 +4735,7 @@ class _$InvalidEnum<T> implements InvalidEnum<T> {
     @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
+    @required Result invalidInteger64(InvalidInteger64<T> value),
     @required Result invalidInteger(InvalidInteger<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
@@ -4406,6 +4756,7 @@ class _$InvalidEnum<T> implements InvalidEnum<T> {
     assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
+    assert(invalidInteger64 != null);
     assert(invalidInteger != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
@@ -4431,6 +4782,7 @@ class _$InvalidEnum<T> implements InvalidEnum<T> {
     Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
+    Result invalidInteger64(InvalidInteger64<T> value),
     Result invalidInteger(InvalidInteger<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),

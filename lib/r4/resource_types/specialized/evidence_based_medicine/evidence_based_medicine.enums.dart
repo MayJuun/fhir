@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'evidence_based_medicine.dart';
 
 
 enum EffectEvidenceSynthesisStatus{

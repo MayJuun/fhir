@@ -3,188 +3,185 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../fhir_r4.dart';
 
-import 'entities2.enums.dart';
+part 'entities2.enums.dart';
 part 'entities2.freezed.dart';
 part 'entities2.g.dart';
 
 @freezed
-abstract class BiologicallyDerivedProduct implements _$BiologicallyDerivedProduct , Resource {
+abstract class BiologicallyDerivedProduct with Resource  implements _$BiologicallyDerivedProduct {
 BiologicallyDerivedProduct._();
 factory BiologicallyDerivedProduct({
 @JsonKey(defaultValue: 'className') @required String resourceType,
-  Id id,
-  Meta meta,
-  FhirUri implicitRules,
+   Id id,
+   Meta meta,
+   FhirUri implicitRules,
   @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
-  Code language,
+   Code language,
   @JsonKey(name: '_language')   Element languageElement,
-  Narrative text,
-  List<Resource> contained,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  List<Identifier> identifier,
+   Narrative text,
+   List<Resource> contained,
+@JsonKey(name: 'extension')   List<FhirExtension> extension_,
+   List<FhirExtension> modifierExtension,
+   List<Identifier> identifier,
 @JsonKey(unknownEnumValue: BiologicallyDerivedProductProductCategory.unknown) BiologicallyDerivedProductProductCategory productCategory,
   @JsonKey(name: '_productCategory')   Element productCategoryElement,
-  CodeableConcept productCode,
+   CodeableConcept productCode,
 @JsonKey(unknownEnumValue: BiologicallyDerivedProductStatus.unknown) BiologicallyDerivedProductStatus status,
   @JsonKey(name: '_status')   Element statusElement,
-  List<Reference> request,
-  Integer quantity,
+   List<Reference> request,
+   Integer quantity,
   @JsonKey(name: '_quantity')   Element quantityElement,
-  List<Reference> parent,
-  BiologicallyDerivedProductCollection collection,
-  List<BiologicallyDerivedProductProcessing> processing,
-  BiologicallyDerivedProductManipulation manipulation,
-  List<BiologicallyDerivedProductStorage> storage,
+   List<Reference> parent,
+   BiologicallyDerivedProductCollection collection,
+   List<BiologicallyDerivedProductProcessing> processing,
+   BiologicallyDerivedProductManipulation manipulation,
+   List<BiologicallyDerivedProductStorage> storage,
 }) = _BiologicallyDerivedProduct;
 
  factory BiologicallyDerivedProduct.fromJson(Map<String,dynamic> json) => _$BiologicallyDerivedProductFromJson(json);
 }
 
 @freezed
-abstract class BiologicallyDerivedProductCollection implements _$BiologicallyDerivedProductCollection  {
+abstract class BiologicallyDerivedProductCollection  implements _$BiologicallyDerivedProductCollection {
 BiologicallyDerivedProductCollection._();
 factory BiologicallyDerivedProductCollection({
- String id,
- List<FhirExtension> extension,
- List<FhirExtension> modifierExtension,
- Reference collector,
- Reference source,
- FhirDateTime collectedDateTime,
-  @JsonKey(name: '_collectedDateTime')  Element collectedDateTimeElement,
- Period collectedPeriod,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  List<FhirExtension> modifierExtension,
+  Reference collector,
+  Reference source,
+    @JsonKey(name: '_collectedDateTime')  Element collectedDateTimeElement,
+  Period collectedPeriod,
 }) = _BiologicallyDerivedProductCollection;
 
  factory BiologicallyDerivedProductCollection.fromJson(Map<String,dynamic> json) => _$BiologicallyDerivedProductCollectionFromJson(json);
 }
 
 @freezed
-abstract class BiologicallyDerivedProductProcessing implements _$BiologicallyDerivedProductProcessing  {
+abstract class BiologicallyDerivedProductProcessing  implements _$BiologicallyDerivedProductProcessing {
 BiologicallyDerivedProductProcessing._();
 factory BiologicallyDerivedProductProcessing({
- String id,
- List<FhirExtension> extension,
- List<FhirExtension> modifierExtension,
- String description,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  List<FhirExtension> modifierExtension,
+  String description,
   @JsonKey(name: '_description')  Element descriptionElement,
- CodeableConcept procedure,
- Reference additive,
- FhirDateTime timeDateTime,
-  @JsonKey(name: '_timeDateTime')  Element timeDateTimeElement,
- Period timePeriod,
+  CodeableConcept procedure,
+  Reference additive,
+    @JsonKey(name: '_timeDateTime')  Element timeDateTimeElement,
+  Period timePeriod,
 }) = _BiologicallyDerivedProductProcessing;
 
  factory BiologicallyDerivedProductProcessing.fromJson(Map<String,dynamic> json) => _$BiologicallyDerivedProductProcessingFromJson(json);
 }
 
 @freezed
-abstract class BiologicallyDerivedProductManipulation implements _$BiologicallyDerivedProductManipulation  {
+abstract class BiologicallyDerivedProductManipulation  implements _$BiologicallyDerivedProductManipulation {
 BiologicallyDerivedProductManipulation._();
 factory BiologicallyDerivedProductManipulation({
- String id,
- List<FhirExtension> extension,
- List<FhirExtension> modifierExtension,
- String description,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  List<FhirExtension> modifierExtension,
+  String description,
   @JsonKey(name: '_description')  Element descriptionElement,
- FhirDateTime timeDateTime,
-  @JsonKey(name: '_timeDateTime')  Element timeDateTimeElement,
- Period timePeriod,
+    @JsonKey(name: '_timeDateTime')  Element timeDateTimeElement,
+  Period timePeriod,
 }) = _BiologicallyDerivedProductManipulation;
 
  factory BiologicallyDerivedProductManipulation.fromJson(Map<String,dynamic> json) => _$BiologicallyDerivedProductManipulationFromJson(json);
 }
 
 @freezed
-abstract class BiologicallyDerivedProductStorage implements _$BiologicallyDerivedProductStorage  {
+abstract class BiologicallyDerivedProductStorage  implements _$BiologicallyDerivedProductStorage {
 BiologicallyDerivedProductStorage._();
 factory BiologicallyDerivedProductStorage({
- String id,
- List<FhirExtension> extension,
- List<FhirExtension> modifierExtension,
- String description,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  List<FhirExtension> modifierExtension,
+  String description,
   @JsonKey(name: '_description')  Element descriptionElement,
- Decimal temperature,
+  Decimal temperature,
   @JsonKey(name: '_temperature')  Element temperatureElement,
 @JsonKey(unknownEnumValue: BiologicallyDerivedProductStorageScale.unknown) BiologicallyDerivedProductStorageScale scale,
   @JsonKey(name: '_scale')  Element scaleElement,
- Period duration,
+  Period duration,
 }) = _BiologicallyDerivedProductStorage;
 
  factory BiologicallyDerivedProductStorage.fromJson(Map<String,dynamic> json) => _$BiologicallyDerivedProductStorageFromJson(json);
 }
 
 @freezed
-abstract class Device implements _$Device , Resource {
+abstract class Device with Resource  implements _$Device {
 Device._();
 factory Device({
 @JsonKey(defaultValue: 'className') @required String resourceType,
-  Id id,
-  Meta meta,
-  FhirUri implicitRules,
+   Id id,
+   Meta meta,
+   FhirUri implicitRules,
   @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
-  Code language,
+   Code language,
   @JsonKey(name: '_language')   Element languageElement,
-  Narrative text,
-  List<Resource> contained,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  List<Identifier> identifier,
-  Reference definition,
-  List<DeviceUdiCarrier> udiCarrier,
+   Narrative text,
+   List<Resource> contained,
+@JsonKey(name: 'extension')   List<FhirExtension> extension_,
+   List<FhirExtension> modifierExtension,
+   List<Identifier> identifier,
+   Reference definition,
+   List<DeviceUdiCarrier> udiCarrier,
 @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus status,
   @JsonKey(name: '_status')   Element statusElement,
-  List<CodeableConcept> statusReason,
-  String distinctIdentifier,
+   List<CodeableConcept> statusReason,
+   String distinctIdentifier,
   @JsonKey(name: '_distinctIdentifier')   Element distinctIdentifierElement,
-  String manufacturer,
+   String manufacturer,
   @JsonKey(name: '_manufacturer')   Element manufacturerElement,
-  FhirDateTime manufactureDate,
+   FhirDateTime manufactureDate,
   @JsonKey(name: '_manufactureDate')   Element manufactureDateElement,
-  FhirDateTime expirationDate,
+   FhirDateTime expirationDate,
   @JsonKey(name: '_expirationDate')   Element expirationDateElement,
-  String lotNumber,
+   String lotNumber,
   @JsonKey(name: '_lotNumber')   Element lotNumberElement,
-  String serialNumber,
+   String serialNumber,
   @JsonKey(name: '_serialNumber')   Element serialNumberElement,
-  List<DeviceDeviceName> deviceName,
-  String modelNumber,
+   List<DeviceDeviceName> deviceName,
+   String modelNumber,
   @JsonKey(name: '_modelNumber')   Element modelNumberElement,
-  String partNumber,
+   String partNumber,
   @JsonKey(name: '_partNumber')   Element partNumberElement,
-  CodeableConcept type,
-  List<DeviceSpecialization> specialization,
-  List<DeviceVersion> version,
-  List<DeviceProperty> property,
-  Reference patient,
-  Reference owner,
-  List<ContactPoint> contact,
-  Reference location,
-  FhirUri url,
+   CodeableConcept type,
+   List<DeviceSpecialization> specialization,
+   List<DeviceVersion> version,
+   List<DeviceProperty> property,
+   Reference patient,
+   Reference owner,
+   List<ContactPoint> contact,
+   Reference location,
+   FhirUri url,
   @JsonKey(name: '_url')   Element urlElement,
-  List<Annotation> note,
-  List<CodeableConcept> safety,
-  Reference parent,
+   List<Annotation> note,
+   List<CodeableConcept> safety,
+   Reference parent,
 }) = _Device;
 
  factory Device.fromJson(Map<String,dynamic> json) => _$DeviceFromJson(json);
 }
 
 @freezed
-abstract class DeviceUdiCarrier implements _$DeviceUdiCarrier  {
+abstract class DeviceUdiCarrier  implements _$DeviceUdiCarrier {
 DeviceUdiCarrier._();
 factory DeviceUdiCarrier({
- String id,
- List<FhirExtension> extension,
- List<FhirExtension> modifierExtension,
- String deviceIdentifier,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  List<FhirExtension> modifierExtension,
+  String deviceIdentifier,
   @JsonKey(name: '_deviceIdentifier')  Element deviceIdentifierElement,
- FhirUri issuer,
+  FhirUri issuer,
   @JsonKey(name: '_issuer')  Element issuerElement,
- FhirUri jurisdiction,
+  FhirUri jurisdiction,
   @JsonKey(name: '_jurisdiction')  Element jurisdictionElement,
- Base64Binary carrierAIDC,
+  Base64Binary carrierAIDC,
   @JsonKey(name: '_carrierAIDC')  Element carrierAIDCElement,
- String carrierHRF,
+  String carrierHRF,
   @JsonKey(name: '_carrierHRF')  Element carrierHRFElement,
 @JsonKey(unknownEnumValue: DeviceUdiCarrierEntryType.unknown) DeviceUdiCarrierEntryType entryType,
   @JsonKey(name: '_entryType')  Element entryTypeElement,
@@ -194,13 +191,13 @@ factory DeviceUdiCarrier({
 }
 
 @freezed
-abstract class DeviceDeviceName implements _$DeviceDeviceName  {
+abstract class DeviceDeviceName  implements _$DeviceDeviceName {
 DeviceDeviceName._();
 factory DeviceDeviceName({
- String id,
- List<FhirExtension> extension,
- List<FhirExtension> modifierExtension,
- String name,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  List<FhirExtension> modifierExtension,
+  String name,
   @JsonKey(name: '_name')  Element nameElement,
 @JsonKey(unknownEnumValue: DeviceDeviceNameType.unknown) DeviceDeviceNameType type,
   @JsonKey(name: '_type')  Element typeElement,
@@ -210,14 +207,14 @@ factory DeviceDeviceName({
 }
 
 @freezed
-abstract class DeviceSpecialization implements _$DeviceSpecialization  {
+abstract class DeviceSpecialization  implements _$DeviceSpecialization {
 DeviceSpecialization._();
 factory DeviceSpecialization({
-  String id,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  @required CodeableConcept systemType,
-  String version,
+   String id,
+@JsonKey(name: 'extension')   List<FhirExtension> extension_,
+   List<FhirExtension> modifierExtension,
+   @required CodeableConcept systemType,
+   String version,
   @JsonKey(name: '_version')   Element versionElement,
 }) = _DeviceSpecialization;
 
@@ -225,15 +222,15 @@ factory DeviceSpecialization({
 }
 
 @freezed
-abstract class DeviceVersion implements _$DeviceVersion  {
+abstract class DeviceVersion  implements _$DeviceVersion {
 DeviceVersion._();
 factory DeviceVersion({
- String id,
- List<FhirExtension> extension,
- List<FhirExtension> modifierExtension,
- CodeableConcept type,
- Identifier component,
- String value,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  List<FhirExtension> modifierExtension,
+  CodeableConcept type,
+  Identifier component,
+  String value,
   @JsonKey(name: '_value')  Element valueElement,
 }) = _DeviceVersion;
 
@@ -241,65 +238,65 @@ factory DeviceVersion({
 }
 
 @freezed
-abstract class DeviceProperty implements _$DeviceProperty  {
+abstract class DeviceProperty  implements _$DeviceProperty {
 DeviceProperty._();
 factory DeviceProperty({
-  String id,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  @required CodeableConcept type,
-  List<Quantity> valueQuantity,
-  List<CodeableConcept> valueCode,
+   String id,
+@JsonKey(name: 'extension')   List<FhirExtension> extension_,
+   List<FhirExtension> modifierExtension,
+   @required CodeableConcept type,
+   List<Quantity> valueQuantity,
+   List<CodeableConcept> valueCode,
 }) = _DeviceProperty;
 
  factory DeviceProperty.fromJson(Map<String,dynamic> json) => _$DevicePropertyFromJson(json);
 }
 
 @freezed
-abstract class DeviceMetric implements _$DeviceMetric , Resource {
+abstract class DeviceMetric with Resource  implements _$DeviceMetric {
 DeviceMetric._();
 factory DeviceMetric({
 @JsonKey(defaultValue: 'className') @required String resourceType,
-  Id id,
-  Meta meta,
-  FhirUri implicitRules,
+   Id id,
+   Meta meta,
+   FhirUri implicitRules,
   @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
-  Code language,
+   Code language,
   @JsonKey(name: '_language')   Element languageElement,
-  Narrative text,
-  List<Resource> contained,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  List<Identifier> identifier,
-  @required CodeableConcept type,
-  CodeableConcept unit,
-  Reference source,
-  Reference parent,
+   Narrative text,
+   List<Resource> contained,
+@JsonKey(name: 'extension')   List<FhirExtension> extension_,
+   List<FhirExtension> modifierExtension,
+   List<Identifier> identifier,
+   @required CodeableConcept type,
+   CodeableConcept unit,
+   Reference source,
+   Reference parent,
 @JsonKey(unknownEnumValue: DeviceMetricOperationalStatus.unknown) DeviceMetricOperationalStatus operationalStatus,
   @JsonKey(name: '_operationalStatus')   Element operationalStatusElement,
 @JsonKey(unknownEnumValue: DeviceMetricColor.unknown) DeviceMetricColor color,
   @JsonKey(name: '_color')   Element colorElement,
 @JsonKey(unknownEnumValue: DeviceMetricCategory.unknown) DeviceMetricCategory category,
   @JsonKey(name: '_category')   Element categoryElement,
-  Timing measurementPeriod,
-  List<DeviceMetricCalibration> calibration,
+   Timing measurementPeriod,
+   List<DeviceMetricCalibration> calibration,
 }) = _DeviceMetric;
 
  factory DeviceMetric.fromJson(Map<String,dynamic> json) => _$DeviceMetricFromJson(json);
 }
 
 @freezed
-abstract class DeviceMetricCalibration implements _$DeviceMetricCalibration  {
+abstract class DeviceMetricCalibration  implements _$DeviceMetricCalibration {
 DeviceMetricCalibration._();
 factory DeviceMetricCalibration({
- String id,
- List<FhirExtension> extension,
- List<FhirExtension> modifierExtension,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  List<FhirExtension> modifierExtension,
 @JsonKey(unknownEnumValue: DeviceMetricCalibrationType.unknown) DeviceMetricCalibrationType type,
   @JsonKey(name: '_type')  Element typeElement,
 @JsonKey(unknownEnumValue: DeviceMetricCalibrationState.unknown) DeviceMetricCalibrationState state,
   @JsonKey(name: '_state')  Element stateElement,
- Instant time,
+  Instant time,
   @JsonKey(name: '_time')  Element timeElement,
 }) = _DeviceMetricCalibration;
 
@@ -307,60 +304,60 @@ factory DeviceMetricCalibration({
 }
 
 @freezed
-abstract class Substance implements _$Substance , Resource {
+abstract class Substance with Resource  implements _$Substance {
 Substance._();
 factory Substance({
 @JsonKey(defaultValue: 'className') @required String resourceType,
-  Id id,
-  Meta meta,
-  FhirUri implicitRules,
+   Id id,
+   Meta meta,
+   FhirUri implicitRules,
   @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
-  Code language,
+   Code language,
   @JsonKey(name: '_language')   Element languageElement,
-  Narrative text,
-  List<Resource> contained,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  List<Identifier> identifier,
+   Narrative text,
+   List<Resource> contained,
+@JsonKey(name: 'extension')   List<FhirExtension> extension_,
+   List<FhirExtension> modifierExtension,
+   List<Identifier> identifier,
 @JsonKey(unknownEnumValue: SubstanceStatus.unknown) SubstanceStatus status,
   @JsonKey(name: '_status')   Element statusElement,
-  List<CodeableConcept> category,
-  @required CodeableConcept code,
-  String description,
+   List<CodeableConcept> category,
+   @required CodeableConcept code,
+   String description,
   @JsonKey(name: '_description')   Element descriptionElement,
-  List<SubstanceInstance> instance,
-  List<SubstanceIngredient> ingredient,
+   List<SubstanceInstance> instance,
+   List<SubstanceIngredient> ingredient,
 }) = _Substance;
 
  factory Substance.fromJson(Map<String,dynamic> json) => _$SubstanceFromJson(json);
 }
 
 @freezed
-abstract class SubstanceInstance implements _$SubstanceInstance  {
+abstract class SubstanceInstance  implements _$SubstanceInstance {
 SubstanceInstance._();
 factory SubstanceInstance({
- String id,
- List<FhirExtension> extension,
- List<FhirExtension> modifierExtension,
- Identifier identifier,
- FhirDateTime expiry,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  List<FhirExtension> modifierExtension,
+  Identifier identifier,
+  FhirDateTime expiry,
   @JsonKey(name: '_expiry')  Element expiryElement,
- Quantity quantity,
+  Quantity quantity,
 }) = _SubstanceInstance;
 
  factory SubstanceInstance.fromJson(Map<String,dynamic> json) => _$SubstanceInstanceFromJson(json);
 }
 
 @freezed
-abstract class SubstanceIngredient implements _$SubstanceIngredient  {
+abstract class SubstanceIngredient  implements _$SubstanceIngredient {
 SubstanceIngredient._();
 factory SubstanceIngredient({
- String id,
- List<FhirExtension> extension,
- List<FhirExtension> modifierExtension,
- Ratio quantity,
- CodeableConcept substanceCodeableConcept,
- Reference substanceReference,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  List<FhirExtension> modifierExtension,
+  Ratio quantity,
+  CodeableConcept substanceCodeableConcept,
+  Reference substanceReference,
 }) = _SubstanceIngredient;
 
  factory SubstanceIngredient.fromJson(Map<String,dynamic> json) => _$SubstanceIngredientFromJson(json);

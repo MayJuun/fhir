@@ -1,24 +1,23 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 // import 'package:flutter/foundation.dart';
 
-import 'general_types.enums.dart';
 import '../../fhir_r4.dart';
 
+part 'general_types.enums.dart';
 part 'general_types.freezed.dart';
 part 'general_types.g.dart';
 
 @freezed
-abstract class Annotation implements _$Annotation , Resource {
+abstract class Annotation with Resource  implements _$Annotation {
 Annotation._();
 factory Annotation({
- String id,
- List<FhirExtension> extension,
- Reference authorReference,
- String authorString,
-  @JsonKey(name: '_authorString')  Element authorStringElement,
- FhirDateTime time,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  Reference authorReference,
+    @JsonKey(name: '_authorString')  Element authorStringElement,
+  FhirDateTime time,
   @JsonKey(name: '_time')  Element timeElement,
- Markdown text,
+  Markdown text,
   @JsonKey(name: '_text')  Element textElement,
 }) = _Annotation;
 
@@ -26,26 +25,26 @@ factory Annotation({
 }
 
 @freezed
-abstract class Attachment implements _$Attachment , Resource {
+abstract class Attachment with Resource  implements _$Attachment {
 Attachment._();
 factory Attachment({
- String id,
- List<FhirExtension> extension,
- Code contentType,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  Code contentType,
   @JsonKey(name: '_contentType')  Element contentTypeElement,
- Code language,
+  Code language,
   @JsonKey(name: '_language')  Element languageElement,
- Base64Binary data,
+  Base64Binary data,
   @JsonKey(name: '_data')  Element dataElement,
- FhirUrl url,
+  FhirUrl url,
   @JsonKey(name: '_url')  Element urlElement,
- UnsignedInt size,
+  UnsignedInt size,
   @JsonKey(name: '_size')  Element sizeElement,
- Base64Binary hash,
+  Base64Binary hash,
   @JsonKey(name: '_hash')  Element hashElement,
- String title,
+  String title,
   @JsonKey(name: '_title')  Element titleElement,
- FhirDateTime creation,
+  FhirDateTime creation,
   @JsonKey(name: '_creation')  Element creationElement,
 }) = _Attachment;
 
@@ -53,33 +52,33 @@ factory Attachment({
 }
 
 @freezed
-abstract class Identifier implements _$Identifier , Resource {
+abstract class Identifier with Resource  implements _$Identifier {
 Identifier._();
 factory Identifier({
- String id,
- List<FhirExtension> extension,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
 @JsonKey(unknownEnumValue: IdentifierUse.unknown) IdentifierUse use,
   @JsonKey(name: '_use')  Element useElement,
- CodeableConcept type,
- FhirUri system,
+  CodeableConcept type,
+  FhirUri system,
   @JsonKey(name: '_system')  Element systemElement,
- String value,
+  String value,
   @JsonKey(name: '_value')  Element valueElement,
- Period period,
- Reference assigner,
+  Period period,
+  Reference assigner,
 }) = _Identifier;
 
  factory Identifier.fromJson(Map<String,dynamic> json) => _$IdentifierFromJson(json);
 }
 
 @freezed
-abstract class CodeableConcept implements _$CodeableConcept , Resource {
+abstract class CodeableConcept with Resource  implements _$CodeableConcept {
 CodeableConcept._();
 factory CodeableConcept({
- String id,
- List<FhirExtension> extension,
- List<Coding> coding,
- String text,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  List<Coding> coding,
+  String text,
   @JsonKey(name: '_text')  Element textElement,
 }) = _CodeableConcept;
 
@@ -87,20 +86,20 @@ factory CodeableConcept({
 }
 
 @freezed
-abstract class Coding implements _$Coding , Resource {
+abstract class Coding with Resource  implements _$Coding {
 Coding._();
 factory Coding({
- String id,
- List<FhirExtension> extension,
- FhirUri system,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  FhirUri system,
   @JsonKey(name: '_system')  Element systemElement,
- String version,
+  String version,
   @JsonKey(name: '_version')  Element versionElement,
- Code code,
+  Code code,
   @JsonKey(name: '_code')  Element codeElement,
- String display,
+  String display,
   @JsonKey(name: '_display')  Element displayElement,
- Boolean userSelected,
+  Boolean userSelected,
   @JsonKey(name: '_userSelected')  Element userSelectedElement,
 }) = _Coding;
 
@@ -108,20 +107,20 @@ factory Coding({
 }
 
 @freezed
-abstract class Quantity implements _$Quantity , Resource {
+abstract class Quantity with Resource  implements _$Quantity {
 Quantity._();
 factory Quantity({
- String id,
- List<FhirExtension> extension,
- Decimal value,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  Decimal value,
   @JsonKey(name: '_value')  Element valueElement,
 @JsonKey(unknownEnumValue: QuantityComparator.unknown) QuantityComparator comparator,
   @JsonKey(name: '_comparator')  Element comparatorElement,
- String unit,
+  String unit,
   @JsonKey(name: '_unit')  Element unitElement,
- FhirUri system,
+  FhirUri system,
   @JsonKey(name: '_system')  Element systemElement,
- Code code,
+  Code code,
   @JsonKey(name: '_code')  Element codeElement,
 }) = _Quantity;
 
@@ -129,20 +128,20 @@ factory Quantity({
 }
 
 @freezed
-abstract class Duration implements _$Duration , Resource {
+abstract class Duration with Resource  implements _$Duration {
 Duration._();
 factory Duration({
- String id,
- List<FhirExtension> extension,
- Decimal value,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  Decimal value,
   @JsonKey(name: '_value')  Element valueElement,
 @JsonKey(unknownEnumValue: DurationComparator.unknown) DurationComparator comparator,
   @JsonKey(name: '_comparator')  Element comparatorElement,
- String unit,
+  String unit,
   @JsonKey(name: '_unit')  Element unitElement,
- FhirUri system,
+  FhirUri system,
   @JsonKey(name: '_system')  Element systemElement,
- Code code,
+  Code code,
   @JsonKey(name: '_code')  Element codeElement,
 }) = _Duration;
 
@@ -150,20 +149,20 @@ factory Duration({
 }
 
 @freezed
-abstract class Distance implements _$Distance , Resource {
+abstract class Distance with Resource  implements _$Distance {
 Distance._();
 factory Distance({
- String id,
- List<FhirExtension> extension,
- Decimal value,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  Decimal value,
   @JsonKey(name: '_value')  Element valueElement,
 @JsonKey(unknownEnumValue: DistanceComparator.unknown) DistanceComparator comparator,
   @JsonKey(name: '_comparator')  Element comparatorElement,
- String unit,
+  String unit,
   @JsonKey(name: '_unit')  Element unitElement,
- FhirUri system,
+  FhirUri system,
   @JsonKey(name: '_system')  Element systemElement,
- Code code,
+  Code code,
   @JsonKey(name: '_code')  Element codeElement,
 }) = _Distance;
 
@@ -171,20 +170,20 @@ factory Distance({
 }
 
 @freezed
-abstract class Count implements _$Count , Resource {
+abstract class Count with Resource  implements _$Count {
 Count._();
 factory Count({
- String id,
- List<FhirExtension> extension,
- Decimal value,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  Decimal value,
   @JsonKey(name: '_value')  Element valueElement,
 @JsonKey(unknownEnumValue: CountComparator.unknown) CountComparator comparator,
   @JsonKey(name: '_comparator')  Element comparatorElement,
- String unit,
+  String unit,
   @JsonKey(name: '_unit')  Element unitElement,
- FhirUri system,
+  FhirUri system,
   @JsonKey(name: '_system')  Element systemElement,
- Code code,
+  Code code,
   @JsonKey(name: '_code')  Element codeElement,
 }) = _Count;
 
@@ -192,14 +191,14 @@ factory Count({
 }
 
 @freezed
-abstract class Money implements _$Money , Resource {
+abstract class Money with Resource  implements _$Money {
 Money._();
 factory Money({
- String id,
- List<FhirExtension> extension,
- Decimal value,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  Decimal value,
   @JsonKey(name: '_value')  Element valueElement,
- Code currency,
+  Code currency,
   @JsonKey(name: '_currency')  Element currencyElement,
 }) = _Money;
 
@@ -207,20 +206,20 @@ factory Money({
 }
 
 @freezed
-abstract class Age implements _$Age , Resource {
+abstract class Age with Resource  implements _$Age {
 Age._();
 factory Age({
- String id,
- List<FhirExtension> extension,
- Decimal value,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  Decimal value,
   @JsonKey(name: '_value')  Element valueElement,
 @JsonKey(unknownEnumValue: AgeComparator.unknown) AgeComparator comparator,
   @JsonKey(name: '_comparator')  Element comparatorElement,
- String unit,
+  String unit,
   @JsonKey(name: '_unit')  Element unitElement,
- FhirUri system,
+  FhirUri system,
   @JsonKey(name: '_system')  Element systemElement,
- Code code,
+  Code code,
   @JsonKey(name: '_code')  Element codeElement,
 }) = _Age;
 
@@ -228,27 +227,27 @@ factory Age({
 }
 
 @freezed
-abstract class Range implements _$Range , Resource {
+abstract class Range with Resource  implements _$Range {
 Range._();
 factory Range({
- String id,
- List<FhirExtension> extension,
- Quantity low,
- Quantity high,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  Quantity low,
+  Quantity high,
 }) = _Range;
 
  factory Range.fromJson(Map<String,dynamic> json) => _$RangeFromJson(json);
 }
 
 @freezed
-abstract class Period implements _$Period , Resource {
+abstract class Period with Resource  implements _$Period {
 Period._();
 factory Period({
- String id,
- List<FhirExtension> extension,
- FhirDateTime start,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  FhirDateTime start,
   @JsonKey(name: '_start')  Element startElement,
- FhirDateTime end,
+  FhirDateTime end,
   @JsonKey(name: '_end')  Element endElement,
 }) = _Period;
 
@@ -256,36 +255,36 @@ factory Period({
 }
 
 @freezed
-abstract class Ratio implements _$Ratio , Resource {
+abstract class Ratio with Resource  implements _$Ratio {
 Ratio._();
 factory Ratio({
- String id,
- List<FhirExtension> extension,
- Quantity numerator,
- Quantity denominator,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  Quantity numerator,
+  Quantity denominator,
 }) = _Ratio;
 
  factory Ratio.fromJson(Map<String,dynamic> json) => _$RatioFromJson(json);
 }
 
 @freezed
-abstract class SampledData implements _$SampledData , Resource {
+abstract class SampledData with Resource  implements _$SampledData {
 SampledData._();
 factory SampledData({
-  String id,
-  List<FhirExtension> extension,
-  @required Quantity origin,
-  Decimal period,
+   String id,
+@JsonKey(name: 'extension')   List<FhirExtension> extension_,
+   @required Quantity origin,
+   Decimal period,
   @JsonKey(name: '_period')   Element periodElement,
-  Decimal factor,
+   Decimal factor,
   @JsonKey(name: '_factor')   Element factorElement,
-  Decimal lowerLimit,
+   Decimal lowerLimit,
   @JsonKey(name: '_lowerLimit')   Element lowerLimitElement,
-  Decimal upperLimit,
+   Decimal upperLimit,
   @JsonKey(name: '_upperLimit')   Element upperLimitElement,
-  PositiveInt dimensions,
+   PositiveInt dimensions,
   @JsonKey(name: '_dimensions')   Element dimensionsElement,
-  String data,
+   String data,
   @JsonKey(name: '_data')   Element dataElement,
 }) = _SampledData;
 
@@ -293,21 +292,21 @@ factory SampledData({
 }
 
 @freezed
-abstract class Signature implements _$Signature , Resource {
+abstract class Signature with Resource  implements _$Signature {
 Signature._();
 factory Signature({
-  String id,
-  List<FhirExtension> extension,
-  @required List<Coding> type,
-  Instant when,
+   String id,
+@JsonKey(name: 'extension')   List<FhirExtension> extension_,
+   @required List<Coding> type,
+   Instant when,
   @JsonKey(name: '_when')   Element whenElement,
-  @required Reference who,
-  Reference onBehalfOf,
-  Code targetFormat,
+   @required Reference who,
+   Reference onBehalfOf,
+   Code targetFormat,
   @JsonKey(name: '_targetFormat')   Element targetFormatElement,
-  Code sigFormat,
+   Code sigFormat,
   @JsonKey(name: '_sigFormat')   Element sigFormatElement,
-  Base64Binary data,
+   Base64Binary data,
   @JsonKey(name: '_data')   Element dataElement,
 }) = _Signature;
 
@@ -315,132 +314,132 @@ factory Signature({
 }
 
 @freezed
-abstract class HumanName implements _$HumanName , Resource {
+abstract class HumanName with Resource  implements _$HumanName {
 HumanName._();
 factory HumanName({
- String id,
- List<FhirExtension> extension,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
 @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
   @JsonKey(name: '_use')  Element useElement,
- String text,
+  String text,
   @JsonKey(name: '_text')  Element textElement,
- String family,
+  String family,
   @JsonKey(name: '_family')  Element familyElement,
- List<String> given,
+  List<String> given,
   @JsonKey(name: '_given')  Element givenElement,
- List<String> prefix,
+  List<String> prefix,
   @JsonKey(name: '_prefix')  Element prefixElement,
- List<String> suffix,
+  List<String> suffix,
   @JsonKey(name: '_suffix')  Element suffixElement,
- Period period,
+  Period period,
 }) = _HumanName;
 
  factory HumanName.fromJson(Map<String,dynamic> json) => _$HumanNameFromJson(json);
 }
 
 @freezed
-abstract class Address implements _$Address , Resource {
+abstract class Address with Resource  implements _$Address {
 Address._();
 factory Address({
- String id,
- List<FhirExtension> extension,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
 @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
   @JsonKey(name: '_use')  Element useElement,
 @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
   @JsonKey(name: '_type')  Element typeElement,
- String text,
+  String text,
   @JsonKey(name: '_text')  Element textElement,
- List<String> line,
+  List<String> line,
   @JsonKey(name: '_line')  Element lineElement,
- String city,
+  String city,
   @JsonKey(name: '_city')  Element cityElement,
- String district,
+  String district,
   @JsonKey(name: '_district')  Element districtElement,
- String state,
+  String state,
   @JsonKey(name: '_state')  Element stateElement,
- String postalCode,
+  String postalCode,
   @JsonKey(name: '_postalCode')  Element postalCodeElement,
- String country,
+  String country,
   @JsonKey(name: '_country')  Element countryElement,
- Period period,
+  Period period,
 }) = _Address;
 
  factory Address.fromJson(Map<String,dynamic> json) => _$AddressFromJson(json);
 }
 
 @freezed
-abstract class ContactPoint implements _$ContactPoint , Resource {
+abstract class ContactPoint with Resource  implements _$ContactPoint {
 ContactPoint._();
 factory ContactPoint({
- String id,
- List<FhirExtension> extension,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
 @JsonKey(unknownEnumValue: ContactPointSystem.unknown) ContactPointSystem system,
   @JsonKey(name: '_system')  Element systemElement,
- String value,
+  String value,
   @JsonKey(name: '_value')  Element valueElement,
 @JsonKey(unknownEnumValue: ContactPointUse.unknown) ContactPointUse use,
   @JsonKey(name: '_use')  Element useElement,
- PositiveInt rank,
+  PositiveInt rank,
   @JsonKey(name: '_rank')  Element rankElement,
- Period period,
+  Period period,
 }) = _ContactPoint;
 
  factory ContactPoint.fromJson(Map<String,dynamic> json) => _$ContactPointFromJson(json);
 }
 
 @freezed
-abstract class Timing implements _$Timing , Resource {
+abstract class Timing with Resource  implements _$Timing {
 Timing._();
 factory Timing({
- String id,
- List<FhirExtension> extension,
- List<FhirExtension> modifierExtension,
- List<FhirDateTime> event,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  List<FhirExtension> modifierExtension,
+  List<FhirDateTime> event,
   @JsonKey(name: '_event')  Element eventElement,
- TimingRepeat repeat,
- CodeableConcept code,
+  TimingRepeat repeat,
+  CodeableConcept code,
 }) = _Timing;
 
  factory Timing.fromJson(Map<String,dynamic> json) => _$TimingFromJson(json);
 }
 
 @freezed
-abstract class TimingRepeat implements _$TimingRepeat  {
+abstract class TimingRepeat  implements _$TimingRepeat {
 TimingRepeat._();
 factory TimingRepeat({
- String id,
- List<FhirExtension> extension,
- List<FhirExtension> modifierExtension,
- Duration boundsDuration,
- Range boundsRange,
- Period boundsPeriod,
- PositiveInt count,
+  String id,
+@JsonKey(name: 'extension')  List<FhirExtension> extension_,
+  List<FhirExtension> modifierExtension,
+  Duration boundsDuration,
+  Range boundsRange,
+  Period boundsPeriod,
+  PositiveInt count,
   @JsonKey(name: '_count')  Element countElement,
- PositiveInt countMax,
+  PositiveInt countMax,
   @JsonKey(name: '_countMax')  Element countMaxElement,
- Decimal duration,
+  Decimal duration,
   @JsonKey(name: '_duration')  Element durationElement,
- Decimal durationMax,
+  Decimal durationMax,
   @JsonKey(name: '_durationMax')  Element durationMaxElement,
 @JsonKey(unknownEnumValue: TimingRepeatDurationUnit.unknown) TimingRepeatDurationUnit durationUnit,
   @JsonKey(name: '_durationUnit')  Element durationUnitElement,
- PositiveInt frequency,
+  PositiveInt frequency,
   @JsonKey(name: '_frequency')  Element frequencyElement,
- PositiveInt frequencyMax,
+  PositiveInt frequencyMax,
   @JsonKey(name: '_frequencyMax')  Element frequencyMaxElement,
- Decimal period,
+  Decimal period,
   @JsonKey(name: '_period')  Element periodElement,
- Decimal periodMax,
+  Decimal periodMax,
   @JsonKey(name: '_periodMax')  Element periodMaxElement,
 @JsonKey(unknownEnumValue: TimingRepeatPeriodUnit.unknown) TimingRepeatPeriodUnit periodUnit,
   @JsonKey(name: '_periodUnit')  Element periodUnitElement,
- List<Code> dayOfWeek,
+  List<Code> dayOfWeek,
   @JsonKey(name: '_dayOfWeek')  Element dayOfWeekElement,
- List<Time> timeOfDay,
+  List<Time> timeOfDay,
   @JsonKey(name: '_timeOfDay')  Element timeOfDayElement,
-List<TimingRepeatWhen> when,
+ List<TimingRepeatWhen> when,
   @JsonKey(name: '_when')  Element whenElement,
- UnsignedInt offset,
+  UnsignedInt offset,
   @JsonKey(name: '_offset')  Element offsetElement,
 }) = _TimingRepeat;
 

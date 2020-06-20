@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'conformance.dart';
 
 
 enum CapabilityStatementStatus{
@@ -673,7 +673,7 @@ query,@JsonValue('unknown')
 
 enum OperationDefinitionParameterUse{
 @JsonValue('in')
-in,@JsonValue('out')
+in_,@JsonValue('out')
 out,@JsonValue('unknown')
   unknown,}
 
@@ -694,7 +694,7 @@ special,@JsonValue('unknown')
 
 enum OperationDefinitionBindingStrength{
 @JsonValue('required')
-required,@JsonValue('extensible')
+required_,@JsonValue('extensible')
 extensible,@JsonValue('preferred')
 preferred,@JsonValue('example')
 example,@JsonValue('unknown')
@@ -754,7 +754,7 @@ exact,@JsonValue('contains')
 contains,@JsonValue('not')
 not,@JsonValue('text')
 text,@JsonValue('in')
-in,@JsonValue('not-in')
+in_,@JsonValue('not-in')
 not_in,@JsonValue('below')
 below,@JsonValue('above')
 above,@JsonValue('type')
@@ -819,7 +819,7 @@ enum StructureDefinitionContextType{
 @JsonValue('fhirpath')
 fhirpath,@JsonValue('element')
 element,@JsonValue('extension')
-extension,@JsonValue('unknown')
+extension_,@JsonValue('unknown')
   unknown,}
 
 
