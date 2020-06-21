@@ -11,7 +11,7 @@ part 'other.g.dart';
 abstract class Basic with Resource  implements _$Basic {
 Basic._();
 factory Basic({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Basic') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -37,7 +37,7 @@ factory Basic({
 abstract class Binary with Resource  implements _$Binary {
 Binary._();
 factory Binary({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Binary') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -58,7 +58,7 @@ factory Binary({
 abstract class Bundle with Resource  implements _$Bundle {
 Bundle._();
 factory Bundle({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Bundle') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -180,7 +180,7 @@ factory BundleResponse({
 abstract class Linkage with Resource  implements _$Linkage {
 Linkage._();
 factory Linkage({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Linkage') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -219,7 +219,7 @@ factory LinkageItem({
 abstract class MessageHeader with Resource  implements _$MessageHeader {
 MessageHeader._();
 factory MessageHeader({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'MessageHeader') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -308,7 +308,7 @@ factory MessageHeaderResponse({
 abstract class OperationOutcome with Resource  implements _$OperationOutcome {
 OperationOutcome._();
 factory OperationOutcome({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'OperationOutcome') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -352,7 +352,7 @@ factory OperationOutcomeIssue({
 abstract class Parameters with Resource  implements _$Parameters {
 Parameters._();
 factory Parameters({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Parameters') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -454,7 +454,7 @@ factory ParametersParameter({
 abstract class Subscription with Resource  implements _$Subscription {
 Subscription._();
 factory Subscription({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Subscription') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,

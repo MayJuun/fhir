@@ -11,7 +11,7 @@ part 'medication_definition.g.dart';
 abstract class AdministrableProductDefinition with Resource  implements _$AdministrableProductDefinition {
 AdministrableProductDefinition._();
 factory AdministrableProductDefinition({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'AdministrableProductDefinition') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -112,7 +112,7 @@ factory AdministrableProductDefinitionWithdrawalPeriod({
 abstract class ClinicalUseIssue with Resource  implements _$ClinicalUseIssue {
 ClinicalUseIssue._();
 factory ClinicalUseIssue({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'ClinicalUseIssue') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -241,7 +241,7 @@ factory ClinicalUseIssueUndesirableEffect({
 abstract class Ingredient with Resource  implements _$Ingredient {
 Ingredient._();
 factory Ingredient({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Ingredient') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -339,7 +339,7 @@ factory IngredientSubstance({
 abstract class ManufacturedItemDefinition with Resource  implements _$ManufacturedItemDefinition {
 ManufacturedItemDefinition._();
 factory ManufacturedItemDefinition({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'ManufacturedItemDefinition') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -387,7 +387,7 @@ factory ManufacturedItemDefinitionCharacteristic({
 abstract class MedicinalProductDefinition with Resource  implements _$MedicinalProductDefinition {
 MedicinalProductDefinition._();
 factory MedicinalProductDefinition({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'MedicinalProductDefinition') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -528,7 +528,7 @@ factory MedicinalProductDefinitionManufacturingBusinessOperation({
 abstract class PackagedProductDefinition with Resource  implements _$PackagedProductDefinition {
 PackagedProductDefinition._();
 factory PackagedProductDefinition({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'PackagedProductDefinition') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -634,7 +634,7 @@ factory PackagedProductDefinitionContainedItem({
 abstract class RegulatedAuthorization with Resource  implements _$RegulatedAuthorization {
 RegulatedAuthorization._();
 factory RegulatedAuthorization({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'RegulatedAuthorization') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -705,7 +705,7 @@ factory RegulatedAuthorizationCase({
 abstract class SubstanceDefinition with Resource  implements _$SubstanceDefinition {
 SubstanceDefinition._();
 factory SubstanceDefinition({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'SubstanceDefinition') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -951,7 +951,7 @@ factory SubstanceDefinitionRelationship({
 abstract class SubstanceNucleicAcid with Resource  implements _$SubstanceNucleicAcid {
 SubstanceNucleicAcid._();
 factory SubstanceNucleicAcid({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'SubstanceNucleicAcid') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -1037,7 +1037,7 @@ factory SubstanceNucleicAcidSugar({
 abstract class SubstancePolymer with Resource  implements _$SubstancePolymer {
 SubstancePolymer._();
 factory SubstancePolymer({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'SubstancePolymer') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -1161,7 +1161,7 @@ factory SubstancePolymerStructuralRepresentation({
 abstract class SubstanceProtein with Resource  implements _$SubstanceProtein {
 SubstanceProtein._();
 factory SubstanceProtein({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'SubstanceProtein') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -1212,7 +1212,7 @@ factory SubstanceProteinSubunit({
 abstract class SubstanceReferenceInformation with Resource  implements _$SubstanceReferenceInformation {
 SubstanceReferenceInformation._();
 factory SubstanceReferenceInformation({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'SubstanceReferenceInformation') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -1307,7 +1307,7 @@ factory SubstanceReferenceInformationTarget({
 abstract class SubstanceSourceMaterial with Resource  implements _$SubstanceSourceMaterial {
 SubstanceSourceMaterial._();
 factory SubstanceSourceMaterial({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'SubstanceSourceMaterial') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,

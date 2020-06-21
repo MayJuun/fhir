@@ -11,7 +11,7 @@ part 'evidence_based_medicine.g.dart';
 abstract class EffectEvidenceSynthesis with Resource  implements _$EffectEvidenceSynthesis {
 EffectEvidenceSynthesis._();
 factory EffectEvidenceSynthesis({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'EffectEvidenceSynthesis') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -180,7 +180,7 @@ factory EffectEvidenceSynthesisCertaintySubcomponent({
 abstract class Evidence with Resource  implements _$Evidence {
 Evidence._();
 factory Evidence({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Evidence') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -241,7 +241,7 @@ factory Evidence({
 abstract class EvidenceVariable with Resource  implements _$EvidenceVariable {
 EvidenceVariable._();
 factory EvidenceVariable({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'EvidenceVariable') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -334,7 +334,7 @@ factory EvidenceVariableCharacteristic({
 abstract class ResearchDefinition with Resource  implements _$ResearchDefinition {
 ResearchDefinition._();
 factory ResearchDefinition({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'ResearchDefinition') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -406,7 +406,7 @@ factory ResearchDefinition({
 abstract class ResearchElementDefinition with Resource  implements _$ResearchElementDefinition {
 ResearchElementDefinition._();
 factory ResearchElementDefinition({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'ResearchElementDefinition') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -520,7 +520,7 @@ factory ResearchElementDefinitionCharacteristic({
 abstract class RiskEvidenceSynthesis with Resource  implements _$RiskEvidenceSynthesis {
 RiskEvidenceSynthesis._();
 factory RiskEvidenceSynthesis({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'RiskEvidenceSynthesis') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,

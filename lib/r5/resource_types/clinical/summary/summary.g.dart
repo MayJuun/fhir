@@ -8,7 +8,7 @@ part of 'summary.dart';
 
 _$_AdverseEvent _$_$_AdverseEventFromJson(Map<String, dynamic> json) {
   return _$_AdverseEvent(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'AdverseEvent',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -573,7 +573,7 @@ Map<String, dynamic> _$_$_AdverseEventSupportingInfoToJson(
 _$_AllergyIntolerance _$_$_AllergyIntoleranceFromJson(
     Map<String, dynamic> json) {
   return _$_AllergyIntolerance(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'AllergyIntolerance',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -868,7 +868,7 @@ const _$AllergyIntoleranceReactionSeverityEnumMap = {
 _$_ClinicalImpression _$_$_ClinicalImpressionFromJson(
     Map<String, dynamic> json) {
   return _$_ClinicalImpression(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'ClinicalImpression',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1092,7 +1092,7 @@ Map<String, dynamic> _$_$_ClinicalImpressionFindingToJson(
 
 _$_Condition _$_$_ConditionFromJson(Map<String, dynamic> json) {
   return _$_Condition(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Condition',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1382,7 +1382,7 @@ Map<String, dynamic> _$_$_ConditionEvidenceToJson(
 
 _$_DetectedIssue _$_$_DetectedIssueFromJson(Map<String, dynamic> json) {
   return _$_DetectedIssue(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'DetectedIssue',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1632,7 +1632,7 @@ Map<String, dynamic> _$_$_DetectedIssueMitigationToJson(
 _$_FamilyMemberHistory _$_$_FamilyMemberHistoryFromJson(
     Map<String, dynamic> json) {
   return _$_FamilyMemberHistory(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'FamilyMemberHistory',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -2022,7 +2022,7 @@ Map<String, dynamic> _$_$_FamilyMemberHistoryProcedureToJson(
 
 _$_Procedure _$_$_ProcedureFromJson(Map<String, dynamic> json) {
   return _$_Procedure(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Procedure',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null

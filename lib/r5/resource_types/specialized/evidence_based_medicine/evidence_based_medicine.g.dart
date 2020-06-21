@@ -8,7 +8,7 @@ part of 'evidence_based_medicine.dart';
 
 _$_Evidence _$_$_EvidenceFromJson(Map<String, dynamic> json) {
   return _$_Evidence(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Evidence',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -543,7 +543,7 @@ Map<String, dynamic> _$_$_EvidenceCertaintySubcomponentToJson(
 
 _$_EvidenceVariable _$_$_EvidenceVariableFromJson(Map<String, dynamic> json) {
   return _$_EvidenceVariable(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'EvidenceVariable',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null

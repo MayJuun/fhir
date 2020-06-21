@@ -9,7 +9,7 @@ part of 'definitional_artifacts.dart';
 _$_ActivityDefinition _$_$_ActivityDefinitionFromJson(
     Map<String, dynamic> json) {
   return _$_ActivityDefinition(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'ActivityDefinition',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -525,7 +525,7 @@ Map<String, dynamic> _$_$_ActivityDefinitionDynamicValueToJson(
 _$_ConditionDefinition _$_$_ConditionDefinitionFromJson(
     Map<String, dynamic> json) {
   return _$_ConditionDefinition(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'ConditionDefinition',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1066,7 +1066,7 @@ Map<String, dynamic> _$_$_ConditionDefinitionPlanToJson(
 
 _$_DeviceDefinition _$_$_DeviceDefinitionFromJson(Map<String, dynamic> json) {
   return _$_DeviceDefinition(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'DeviceDefinition',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1593,7 +1593,7 @@ Map<String, dynamic> _$_$_DeviceDefinitionMaterialToJson(
 
 _$_EventDefinition _$_$_EventDefinitionFromJson(Map<String, dynamic> json) {
   return _$_EventDefinition(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'EventDefinition',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1855,7 +1855,7 @@ const _$EventDefinitionStatusEnumMap = {
 _$_ObservationDefinition _$_$_ObservationDefinitionFromJson(
     Map<String, dynamic> json) {
   return _$_ObservationDefinition(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'ObservationDefinition',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -2434,7 +2434,7 @@ const _$ObservationDefinitionComponentPermittedDataTypeEnumMap = {
 
 _$_PlanDefinition _$_$_PlanDefinitionFromJson(Map<String, dynamic> json) {
   return _$_PlanDefinition(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'PlanDefinition',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -3369,7 +3369,7 @@ Map<String, dynamic> _$_$_PlanDefinitionDynamicValueToJson(
 
 _$_Questionnaire _$_$_QuestionnaireFromJson(Map<String, dynamic> json) {
   return _$_Questionnaire(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Questionnaire',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -4076,7 +4076,7 @@ Map<String, dynamic> _$_$_QuestionnaireInitialToJson(
 _$_SpecimenDefinition _$_$_SpecimenDefinitionFromJson(
     Map<String, dynamic> json) {
   return _$_SpecimenDefinition(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'SpecimenDefinition',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null

@@ -8,7 +8,7 @@ part of 'support.dart';
 
 _$_Coverage _$_$_CoverageFromJson(Map<String, dynamic> json) {
   return _$_Coverage(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Coverage',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -313,7 +313,8 @@ Map<String, dynamic> _$_$_CoverageExceptionToJson(
 _$_CoverageEligibilityRequest _$_$_CoverageEligibilityRequestFromJson(
     Map<String, dynamic> json) {
   return _$_CoverageEligibilityRequest(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType:
+        json['resourceType'] as String ?? 'CoverageEligibilityRequest',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -766,7 +767,8 @@ Map<String, dynamic> _$_$_CoverageEligibilityRequestDiagnosisToJson(
 _$_CoverageEligibilityResponse _$_$_CoverageEligibilityResponseFromJson(
     Map<String, dynamic> json) {
   return _$_CoverageEligibilityResponse(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType:
+        json['resourceType'] as String ?? 'CoverageEligibilityResponse',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1243,7 +1245,7 @@ Map<String, dynamic> _$_$_CoverageEligibilityResponseErrorToJson(
 
 _$_EnrollmentRequest _$_$_EnrollmentRequestFromJson(Map<String, dynamic> json) {
   return _$_EnrollmentRequest(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'EnrollmentRequest',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1347,7 +1349,7 @@ Map<String, dynamic> _$_$_EnrollmentRequestToJson(
 _$_EnrollmentResponse _$_$_EnrollmentResponseFromJson(
     Map<String, dynamic> json) {
   return _$_EnrollmentResponse(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'EnrollmentResponse',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null

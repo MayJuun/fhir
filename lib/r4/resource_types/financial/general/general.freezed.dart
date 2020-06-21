@@ -16,7 +16,7 @@ class _$AccountTearOff {
   const _$AccountTearOff();
 
   _Account call(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'Account') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -75,7 +75,7 @@ class _$AccountTearOff {
 const $Account = _$AccountTearOff();
 
 mixin _$Account {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Account')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -117,7 +117,7 @@ abstract class $AccountCopyWith<$Res> {
   factory $AccountCopyWith(Account value, $Res Function(Account) then) =
       _$AccountCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'Account') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -363,7 +363,7 @@ abstract class _$AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
       __$AccountCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'Account') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -509,7 +509,7 @@ class __$AccountCopyWithImpl<$Res> extends _$AccountCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Account extends _Account {
   _$_Account(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Account') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -541,7 +541,7 @@ class _$_Account extends _Account {
       _$_$_AccountFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Account')
   final String resourceType;
   @override
   final Id id;
@@ -719,7 +719,7 @@ class _$_Account extends _Account {
 abstract class _Account extends Account {
   _Account._() : super._();
   factory _Account(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'Account') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -748,7 +748,7 @@ abstract class _Account extends Account {
   factory _Account.fromJson(Map<String, dynamic> json) = _$_Account.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Account')
   String get resourceType;
   @override
   Id get id;
@@ -1402,7 +1402,7 @@ class _$ChargeItemTearOff {
 
   _ChargeItem call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'ChargeItem')
           String resourceType,
       Id id,
       Meta meta,
@@ -1516,7 +1516,7 @@ class _$ChargeItemTearOff {
 const $ChargeItem = _$ChargeItemTearOff();
 
 mixin _$ChargeItem {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ChargeItem')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -1583,7 +1583,7 @@ abstract class $ChargeItemCopyWith<$Res> {
           ChargeItem value, $Res Function(ChargeItem) then) =
       _$ChargeItemCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'ChargeItem')
           String resourceType,
       Id id,
       Meta meta,
@@ -2060,7 +2060,7 @@ abstract class _$ChargeItemCopyWith<$Res> implements $ChargeItemCopyWith<$Res> {
       __$ChargeItemCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'ChargeItem')
           String resourceType,
       Id id,
       Meta meta,
@@ -2337,7 +2337,7 @@ class __$ChargeItemCopyWithImpl<$Res> extends _$ChargeItemCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ChargeItem extends _ChargeItem {
   _$_ChargeItem(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'ChargeItem') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -2392,7 +2392,7 @@ class _$_ChargeItem extends _ChargeItem {
       _$_$_ChargeItemFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ChargeItem')
   final String resourceType;
   @override
   final Id id;
@@ -2658,7 +2658,7 @@ abstract class _ChargeItem extends ChargeItem {
   _ChargeItem._() : super._();
   factory _ChargeItem(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'ChargeItem')
           String resourceType,
       Id id,
       Meta meta,
@@ -2722,7 +2722,7 @@ abstract class _ChargeItem extends ChargeItem {
       _$_ChargeItem.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ChargeItem')
   String get resourceType;
   @override
   Id get id;
@@ -3090,7 +3090,7 @@ class _$ChargeItemDefinitionTearOff {
 
   _ChargeItemDefinition call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'ChargeItemDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -3208,7 +3208,7 @@ class _$ChargeItemDefinitionTearOff {
 const $ChargeItemDefinition = _$ChargeItemDefinitionTearOff();
 
 mixin _$ChargeItemDefinition {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ChargeItemDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -3281,7 +3281,7 @@ abstract class $ChargeItemDefinitionCopyWith<$Res> {
           $Res Function(ChargeItemDefinition) then) =
       _$ChargeItemDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'ChargeItemDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -3710,7 +3710,7 @@ abstract class _$ChargeItemDefinitionCopyWith<$Res>
       __$ChargeItemDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'ChargeItemDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -3985,7 +3985,7 @@ class __$ChargeItemDefinitionCopyWithImpl<$Res>
 class _$_ChargeItemDefinition extends _ChargeItemDefinition {
   _$_ChargeItemDefinition(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'ChargeItemDefinition')
           this.resourceType,
       this.id,
       this.meta,
@@ -4055,7 +4055,7 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
       _$_$_ChargeItemDefinitionFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ChargeItemDefinition')
   final String resourceType;
   @override
   final Id id;
@@ -4328,7 +4328,7 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
   _ChargeItemDefinition._() : super._();
   factory _ChargeItemDefinition(
           {@required
-          @JsonKey(defaultValue: 'className')
+          @JsonKey(defaultValue: 'ChargeItemDefinition')
               String resourceType,
           Id id,
           Meta meta,
@@ -4397,7 +4397,7 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
       _$_ChargeItemDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ChargeItemDefinition')
   String get resourceType;
   @override
   Id get id;
@@ -5515,7 +5515,7 @@ class _$ContractTearOff {
   const _$ContractTearOff();
 
   _Contract call(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'Contract') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5634,7 +5634,7 @@ class _$ContractTearOff {
 const $Contract = _$ContractTearOff();
 
 mixin _$Contract {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Contract')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -5711,7 +5711,7 @@ abstract class $ContractCopyWith<$Res> {
   factory $ContractCopyWith(Contract value, $Res Function(Contract) then) =
       _$ContractCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'Contract') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6237,7 +6237,7 @@ abstract class _$ContractCopyWith<$Res> implements $ContractCopyWith<$Res> {
       __$ContractCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'Contract') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6536,7 +6536,7 @@ class __$ContractCopyWithImpl<$Res> extends _$ContractCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Contract extends _Contract {
   _$_Contract(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Contract') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -6598,7 +6598,7 @@ class _$_Contract extends _Contract {
       _$_$_ContractFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Contract')
   final String resourceType;
   @override
   final Id id;
@@ -6901,7 +6901,7 @@ class _$_Contract extends _Contract {
 abstract class _Contract extends Contract {
   _Contract._() : super._();
   factory _Contract(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'Contract') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6960,7 +6960,7 @@ abstract class _Contract extends Contract {
   factory _Contract.fromJson(Map<String, dynamic> json) = _$_Contract.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Contract')
   String get resourceType;
   @override
   Id get id;
@@ -14267,7 +14267,7 @@ class _$ExplanationOfBenefitTearOff {
 
   _ExplanationOfBenefit call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'ExplanationOfBenefit')
           String resourceType,
       Id id,
       Meta meta,
@@ -14415,7 +14415,7 @@ class _$ExplanationOfBenefitTearOff {
 const $ExplanationOfBenefit = _$ExplanationOfBenefitTearOff();
 
 mixin _$ExplanationOfBenefit {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ExplanationOfBenefit')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -14498,7 +14498,7 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
           $Res Function(ExplanationOfBenefit) then) =
       _$ExplanationOfBenefitCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'ExplanationOfBenefit')
           String resourceType,
       Id id,
       Meta meta,
@@ -15154,7 +15154,7 @@ abstract class _$ExplanationOfBenefitCopyWith<$Res>
       __$ExplanationOfBenefitCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'ExplanationOfBenefit')
           String resourceType,
       Id id,
       Meta meta,
@@ -15519,7 +15519,7 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
 class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   _$_ExplanationOfBenefit(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'ExplanationOfBenefit')
           this.resourceType,
       this.id,
       this.meta,
@@ -15609,7 +15609,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
       _$_$_ExplanationOfBenefitFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ExplanationOfBenefit')
   final String resourceType;
   @override
   final Id id;
@@ -15938,7 +15938,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   _ExplanationOfBenefit._() : super._();
   factory _ExplanationOfBenefit(
           {@required
-          @JsonKey(defaultValue: 'className')
+          @JsonKey(defaultValue: 'ExplanationOfBenefit')
               String resourceType,
           Id id,
           Meta meta,
@@ -16022,7 +16022,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
       _$_ExplanationOfBenefit.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ExplanationOfBenefit')
   String get resourceType;
   @override
   Id get id;
@@ -26206,7 +26206,7 @@ class _$InsurancePlanTearOff {
 
   _InsurancePlan call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'InsurancePlan')
           String resourceType,
       Id id,
       Meta meta,
@@ -26279,7 +26279,7 @@ class _$InsurancePlanTearOff {
 const $InsurancePlan = _$InsurancePlanTearOff();
 
 mixin _$InsurancePlan {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'InsurancePlan')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -26325,7 +26325,7 @@ abstract class $InsurancePlanCopyWith<$Res> {
           InsurancePlan value, $Res Function(InsurancePlan) then) =
       _$InsurancePlanCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'InsurancePlan')
           String resourceType,
       Id id,
       Meta meta,
@@ -26571,7 +26571,7 @@ abstract class _$InsurancePlanCopyWith<$Res>
       __$InsurancePlanCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'InsurancePlan')
           String resourceType,
       Id id,
       Meta meta,
@@ -26734,7 +26734,7 @@ class __$InsurancePlanCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_InsurancePlan extends _InsurancePlan {
   _$_InsurancePlan(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'InsurancePlan') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -26769,7 +26769,7 @@ class _$_InsurancePlan extends _InsurancePlan {
       _$_$_InsurancePlanFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'InsurancePlan')
   final String resourceType;
   @override
   final Id id;
@@ -26961,7 +26961,7 @@ abstract class _InsurancePlan extends InsurancePlan {
   _InsurancePlan._() : super._();
   factory _InsurancePlan(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'InsurancePlan')
           String resourceType,
       Id id,
       Meta meta,
@@ -27002,7 +27002,7 @@ abstract class _InsurancePlan extends InsurancePlan {
       _$_InsurancePlan.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'InsurancePlan')
   String get resourceType;
   @override
   Id get id;

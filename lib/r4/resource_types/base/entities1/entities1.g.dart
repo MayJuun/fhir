@@ -8,7 +8,7 @@ part of 'entities1.dart';
 
 _$_Endpoint _$_$_EndpointFromJson(Map<String, dynamic> json) {
   return _$_Endpoint(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Endpoint',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -186,7 +186,7 @@ const _$EndpointStatusEnumMap = {
 
 _$_HealthcareService _$_$_HealthcareServiceFromJson(Map<String, dynamic> json) {
   return _$_HealthcareService(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'HealthcareService',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -585,7 +585,7 @@ Map<String, dynamic> _$_$_HealthcareServiceNotAvailableToJson(
 
 _$_Location _$_$_LocationFromJson(Map<String, dynamic> json) {
   return _$_Location(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Location',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -883,7 +883,7 @@ Map<String, dynamic> _$_$_LocationHoursOfOperationToJson(
 
 _$_Organization _$_$_OrganizationFromJson(Map<String, dynamic> json) {
   return _$_Organization(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Organization',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1059,7 +1059,7 @@ Map<String, dynamic> _$_$_OrganizationContactToJson(
 _$_OrganizationAffiliation _$_$_OrganizationAffiliationFromJson(
     Map<String, dynamic> json) {
   return _$_OrganizationAffiliation(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'OrganizationAffiliation',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null

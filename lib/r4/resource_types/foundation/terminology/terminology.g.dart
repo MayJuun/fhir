@@ -8,7 +8,7 @@ part of 'terminology.dart';
 
 _$_CodeSystem _$_$_CodeSystemFromJson(Map<String, dynamic> json) {
   return _$_CodeSystem(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'CodeSystem',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -653,7 +653,7 @@ Map<String, dynamic> _$_$_CodeSystemProperty1ToJson(
 
 _$_ConceptMap _$_$_ConceptMapFromJson(Map<String, dynamic> json) {
   return _$_ConceptMap(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'ConceptMap',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1195,7 +1195,7 @@ const _$ConceptMapUnmappedModeEnumMap = {
 
 _$_NamingSystem _$_$_NamingSystemFromJson(Map<String, dynamic> json) {
   return _$_NamingSystem(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'NamingSystem',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1432,7 +1432,7 @@ const _$NamingSystemUniqueIdTypeEnumMap = {
 _$_TerminologyCapabilities _$_$_TerminologyCapabilitiesFromJson(
     Map<String, dynamic> json) {
   return _$_TerminologyCapabilities(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'TerminologyCapabilities',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -2200,7 +2200,7 @@ Map<String, dynamic> _$_$_TerminologyCapabilitiesClosureToJson(
 
 _$_ValueSet _$_$_ValueSetFromJson(Map<String, dynamic> json) {
   return _$_ValueSet(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'ValueSet',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null

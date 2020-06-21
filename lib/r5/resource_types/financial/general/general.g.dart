@@ -8,7 +8,7 @@ part of 'general.dart';
 
 _$_Account _$_$_AccountFromJson(Map<String, dynamic> json) {
   return _$_Account(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Account',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -265,7 +265,7 @@ Map<String, dynamic> _$_$_AccountGuarantorToJson(_$_AccountGuarantor instance) {
 
 _$_ChargeItem _$_$_ChargeItemFromJson(Map<String, dynamic> json) {
   return _$_ChargeItem(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'ChargeItem',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -548,7 +548,7 @@ Map<String, dynamic> _$_$_ChargeItemPerformerToJson(
 _$_ChargeItemDefinition _$_$_ChargeItemDefinitionFromJson(
     Map<String, dynamic> json) {
   return _$_ChargeItemDefinition(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'ChargeItemDefinition',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -949,7 +949,7 @@ Map<String, dynamic> _$_$_ChargeItemDefinitionPriceComponentToJson(
 
 _$_Contract _$_$_ContractFromJson(Map<String, dynamic> json) {
   return _$_Contract(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Contract',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -2375,7 +2375,7 @@ Map<String, dynamic> _$_$_ContractRuleToJson(_$_ContractRule instance) {
 _$_ExplanationOfBenefit _$_$_ExplanationOfBenefitFromJson(
     Map<String, dynamic> json) {
   return _$_ExplanationOfBenefit(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'ExplanationOfBenefit',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -4343,7 +4343,7 @@ Map<String, dynamic> _$_$_ExplanationOfBenefitFinancialToJson(
 
 _$_InsurancePlan _$_$_InsurancePlanFromJson(Map<String, dynamic> json) {
   return _$_InsurancePlan(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'InsurancePlan',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null

@@ -18,7 +18,7 @@ class _$EffectEvidenceSynthesisTearOff {
 
   _EffectEvidenceSynthesis call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'EffectEvidenceSynthesis')
           String resourceType,
       Id id,
       Meta meta,
@@ -157,7 +157,7 @@ class _$EffectEvidenceSynthesisTearOff {
 const $EffectEvidenceSynthesis = _$EffectEvidenceSynthesisTearOff();
 
 mixin _$EffectEvidenceSynthesis {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'EffectEvidenceSynthesis')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -238,7 +238,7 @@ abstract class $EffectEvidenceSynthesisCopyWith<$Res> {
           $Res Function(EffectEvidenceSynthesis) then) =
       _$EffectEvidenceSynthesisCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'EffectEvidenceSynthesis')
           String resourceType,
       Id id,
       Meta meta,
@@ -768,7 +768,7 @@ abstract class _$EffectEvidenceSynthesisCopyWith<$Res>
       __$EffectEvidenceSynthesisCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'EffectEvidenceSynthesis')
           String resourceType,
       Id id,
       Meta meta,
@@ -1090,7 +1090,7 @@ class __$EffectEvidenceSynthesisCopyWithImpl<$Res>
 class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
   _$_EffectEvidenceSynthesis(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'EffectEvidenceSynthesis')
           this.resourceType,
       this.id,
       this.meta,
@@ -1176,7 +1176,7 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
       _$_$_EffectEvidenceSynthesisFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'EffectEvidenceSynthesis')
   final String resourceType;
   @override
   final Id id;
@@ -1485,7 +1485,7 @@ abstract class _EffectEvidenceSynthesis extends EffectEvidenceSynthesis {
   _EffectEvidenceSynthesis._() : super._();
   factory _EffectEvidenceSynthesis(
           {@required
-          @JsonKey(defaultValue: 'className')
+          @JsonKey(defaultValue: 'EffectEvidenceSynthesis')
               String resourceType,
           Id id,
           Meta meta,
@@ -1566,7 +1566,7 @@ abstract class _EffectEvidenceSynthesis extends EffectEvidenceSynthesis {
       _$_EffectEvidenceSynthesis.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'EffectEvidenceSynthesis')
   String get resourceType;
   @override
   Id get id;
@@ -3931,7 +3931,7 @@ class _$EvidenceTearOff {
   const _$EvidenceTearOff();
 
   _Evidence call(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'Evidence') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4044,7 +4044,7 @@ class _$EvidenceTearOff {
 const $Evidence = _$EvidenceTearOff();
 
 mixin _$Evidence {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Evidence')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -4123,7 +4123,7 @@ abstract class $EvidenceCopyWith<$Res> {
   factory $EvidenceCopyWith(Evidence value, $Res Function(Evidence) then) =
       _$EvidenceCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'Evidence') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4572,7 +4572,7 @@ abstract class _$EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
       __$EvidenceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'Evidence') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4849,7 +4849,7 @@ class __$EvidenceCopyWithImpl<$Res> extends _$EvidenceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Evidence extends _Evidence {
   _$_Evidence(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Evidence') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -4909,7 +4909,7 @@ class _$_Evidence extends _Evidence {
       _$_$_EvidenceFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Evidence')
   final String resourceType;
   @override
   final Id id;
@@ -5206,7 +5206,7 @@ class _$_Evidence extends _Evidence {
 abstract class _Evidence extends Evidence {
   _Evidence._() : super._();
   factory _Evidence(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'Evidence') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5262,7 +5262,7 @@ abstract class _Evidence extends Evidence {
   factory _Evidence.fromJson(Map<String, dynamic> json) = _$_Evidence.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Evidence')
   String get resourceType;
   @override
   Id get id;
@@ -5396,7 +5396,7 @@ class _$EvidenceVariableTearOff {
 
   _EvidenceVariable call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'EvidenceVariable')
           String resourceType,
       Id id,
       Meta meta,
@@ -5530,7 +5530,7 @@ class _$EvidenceVariableTearOff {
 const $EvidenceVariable = _$EvidenceVariableTearOff();
 
 mixin _$EvidenceVariable {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'EvidenceVariable')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -5612,7 +5612,7 @@ abstract class $EvidenceVariableCopyWith<$Res> {
           EvidenceVariable value, $Res Function(EvidenceVariable) then) =
       _$EvidenceVariableCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'EvidenceVariable')
           String resourceType,
       Id id,
       Meta meta,
@@ -6084,7 +6084,7 @@ abstract class _$EvidenceVariableCopyWith<$Res>
       __$EvidenceVariableCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'EvidenceVariable')
           String resourceType,
       Id id,
       Meta meta,
@@ -6383,7 +6383,7 @@ class __$EvidenceVariableCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_EvidenceVariable extends _EvidenceVariable {
   _$_EvidenceVariable(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'EvidenceVariable') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -6443,7 +6443,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
       _$_$_EvidenceVariableFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'EvidenceVariable')
   final String resourceType;
   @override
   final Id id;
@@ -6743,7 +6743,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   _EvidenceVariable._() : super._();
   factory _EvidenceVariable(
           {@required
-          @JsonKey(defaultValue: 'className')
+          @JsonKey(defaultValue: 'EvidenceVariable')
               String resourceType,
           Id id,
           Meta meta,
@@ -6822,7 +6822,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
       _$_EvidenceVariable.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'EvidenceVariable')
   String get resourceType;
   @override
   Id get id;
@@ -7848,7 +7848,7 @@ class _$ResearchDefinitionTearOff {
 
   _ResearchDefinition call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'ResearchDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -8007,7 +8007,7 @@ class _$ResearchDefinitionTearOff {
 const $ResearchDefinition = _$ResearchDefinitionTearOff();
 
 mixin _$ResearchDefinition {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ResearchDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -8103,7 +8103,7 @@ abstract class $ResearchDefinitionCopyWith<$Res> {
           ResearchDefinition value, $Res Function(ResearchDefinition) then) =
       _$ResearchDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'ResearchDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -8716,7 +8716,7 @@ abstract class _$ResearchDefinitionCopyWith<$Res>
       __$ResearchDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'ResearchDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -9083,7 +9083,7 @@ class __$ResearchDefinitionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ResearchDefinition extends _ResearchDefinition {
   _$_ResearchDefinition(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'ResearchDefinition') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -9154,7 +9154,7 @@ class _$_ResearchDefinition extends _ResearchDefinition {
       _$_$_ResearchDefinitionFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ResearchDefinition')
   final String resourceType;
   @override
   final Id id;
@@ -9501,7 +9501,7 @@ abstract class _ResearchDefinition extends ResearchDefinition {
   _ResearchDefinition._() : super._();
   factory _ResearchDefinition(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'ResearchDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -9593,7 +9593,7 @@ abstract class _ResearchDefinition extends ResearchDefinition {
       _$_ResearchDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ResearchDefinition')
   String get resourceType;
   @override
   Id get id;
@@ -9755,7 +9755,7 @@ class _$ResearchElementDefinitionTearOff {
 
   _ResearchElementDefinition call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'ResearchElementDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -9920,7 +9920,7 @@ class _$ResearchElementDefinitionTearOff {
 const $ResearchElementDefinition = _$ResearchElementDefinitionTearOff();
 
 mixin _$ResearchElementDefinition {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ResearchElementDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -10021,7 +10021,7 @@ abstract class $ResearchElementDefinitionCopyWith<$Res> {
           $Res Function(ResearchElementDefinition) then) =
       _$ResearchElementDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'ResearchElementDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -10624,7 +10624,7 @@ abstract class _$ResearchElementDefinitionCopyWith<$Res>
       __$ResearchElementDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'ResearchElementDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -11001,7 +11001,7 @@ class __$ResearchElementDefinitionCopyWithImpl<$Res>
 class _$_ResearchElementDefinition extends _ResearchElementDefinition {
   _$_ResearchElementDefinition(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'ResearchElementDefinition')
           this.resourceType,
       this.id,
       this.meta,
@@ -11101,7 +11101,7 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
       _$_$_ResearchElementDefinitionFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ResearchElementDefinition')
   final String resourceType;
   @override
   final Id id;
@@ -11458,7 +11458,7 @@ abstract class _ResearchElementDefinition extends ResearchElementDefinition {
   _ResearchElementDefinition._() : super._();
   factory _ResearchElementDefinition(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'ResearchElementDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -11556,7 +11556,7 @@ abstract class _ResearchElementDefinition extends ResearchElementDefinition {
       _$_ResearchElementDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ResearchElementDefinition')
   String get resourceType;
   @override
   Id get id;
@@ -12999,7 +12999,7 @@ class _$RiskEvidenceSynthesisTearOff {
 
   _RiskEvidenceSynthesis call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'RiskEvidenceSynthesis')
           String resourceType,
       Id id,
       Meta meta,
@@ -13132,7 +13132,7 @@ class _$RiskEvidenceSynthesisTearOff {
 const $RiskEvidenceSynthesis = _$RiskEvidenceSynthesisTearOff();
 
 mixin _$RiskEvidenceSynthesis {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'RiskEvidenceSynthesis')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -13211,7 +13211,7 @@ abstract class $RiskEvidenceSynthesisCopyWith<$Res> {
           $Res Function(RiskEvidenceSynthesis) then) =
       _$RiskEvidenceSynthesisCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'RiskEvidenceSynthesis')
           String resourceType,
       Id id,
       Meta meta,
@@ -13732,7 +13732,7 @@ abstract class _$RiskEvidenceSynthesisCopyWith<$Res>
       __$RiskEvidenceSynthesisCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'RiskEvidenceSynthesis')
           String resourceType,
       Id id,
       Meta meta,
@@ -14043,7 +14043,7 @@ class __$RiskEvidenceSynthesisCopyWithImpl<$Res>
 class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
   _$_RiskEvidenceSynthesis(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'RiskEvidenceSynthesis')
           this.resourceType,
       this.id,
       this.meta,
@@ -14123,7 +14123,7 @@ class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
       _$_$_RiskEvidenceSynthesisFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'RiskEvidenceSynthesis')
   final String resourceType;
   @override
   final Id id;
@@ -14424,7 +14424,7 @@ abstract class _RiskEvidenceSynthesis extends RiskEvidenceSynthesis {
   _RiskEvidenceSynthesis._() : super._();
   factory _RiskEvidenceSynthesis(
           {@required
-          @JsonKey(defaultValue: 'className')
+          @JsonKey(defaultValue: 'RiskEvidenceSynthesis')
               String resourceType,
           Id id,
           Meta meta,
@@ -14501,7 +14501,7 @@ abstract class _RiskEvidenceSynthesis extends RiskEvidenceSynthesis {
       _$_RiskEvidenceSynthesis.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'RiskEvidenceSynthesis')
   String get resourceType;
   @override
   Id get id;

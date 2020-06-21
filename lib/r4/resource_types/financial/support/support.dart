@@ -11,7 +11,7 @@ part 'support.g.dart';
 abstract class Coverage with Resource  implements _$Coverage {
 Coverage._();
 factory Coverage({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Coverage') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -101,7 +101,7 @@ factory CoverageException({
 abstract class CoverageEligibilityRequest with Resource  implements _$CoverageEligibilityRequest {
 CoverageEligibilityRequest._();
 factory CoverageEligibilityRequest({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'CoverageEligibilityRequest') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -211,7 +211,7 @@ factory CoverageEligibilityRequestDiagnosis({
 abstract class CoverageEligibilityResponse with Resource  implements _$CoverageEligibilityResponse {
 CoverageEligibilityResponse._();
 factory CoverageEligibilityResponse({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'CoverageEligibilityResponse') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -338,7 +338,7 @@ factory CoverageEligibilityResponseError({
 abstract class EnrollmentRequest with Resource  implements _$EnrollmentRequest {
 EnrollmentRequest._();
 factory EnrollmentRequest({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'EnrollmentRequest') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -367,7 +367,7 @@ factory EnrollmentRequest({
 abstract class EnrollmentResponse with Resource  implements _$EnrollmentResponse {
 EnrollmentResponse._();
 factory EnrollmentResponse({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'EnrollmentResponse') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,

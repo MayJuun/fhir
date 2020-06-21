@@ -16,7 +16,7 @@ class _$PaymentNoticeTearOff {
   const _$PaymentNoticeTearOff();
 
   _PaymentNotice call(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'PaymentNotice') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -77,7 +77,7 @@ class _$PaymentNoticeTearOff {
 const $PaymentNotice = _$PaymentNoticeTearOff();
 
 mixin _$PaymentNotice {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'PaymentNotice')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -120,7 +120,7 @@ abstract class $PaymentNoticeCopyWith<$Res> {
           PaymentNotice value, $Res Function(PaymentNotice) then) =
       _$PaymentNoticeCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'PaymentNotice') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -414,7 +414,7 @@ abstract class _$PaymentNoticeCopyWith<$Res>
       __$PaymentNoticeCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'PaymentNotice') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -571,7 +571,7 @@ class __$PaymentNoticeCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_PaymentNotice extends _PaymentNotice {
   _$_PaymentNotice(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'PaymentNotice') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -607,7 +607,7 @@ class _$_PaymentNotice extends _PaymentNotice {
       _$_$_PaymentNoticeFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'PaymentNotice')
   final String resourceType;
   @override
   final Id id;
@@ -789,7 +789,7 @@ class _$_PaymentNotice extends _PaymentNotice {
 abstract class _PaymentNotice extends PaymentNotice {
   _PaymentNotice._() : super._();
   factory _PaymentNotice(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'PaymentNotice') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -820,7 +820,7 @@ abstract class _PaymentNotice extends PaymentNotice {
       _$_PaymentNotice.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'PaymentNotice')
   String get resourceType;
   @override
   Id get id;
@@ -892,7 +892,7 @@ class _$PaymentReconciliationTearOff {
 
   _PaymentReconciliation call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'PaymentReconciliation')
           String resourceType,
       Id id,
       Meta meta,
@@ -974,7 +974,7 @@ class _$PaymentReconciliationTearOff {
 const $PaymentReconciliation = _$PaymentReconciliationTearOff();
 
 mixin _$PaymentReconciliation {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'PaymentReconciliation')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -1025,7 +1025,7 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
           $Res Function(PaymentReconciliation) then) =
       _$PaymentReconciliationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'PaymentReconciliation')
           String resourceType,
       Id id,
       Meta meta,
@@ -1371,7 +1371,7 @@ abstract class _$PaymentReconciliationCopyWith<$Res>
       __$PaymentReconciliationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'PaymentReconciliation')
           String resourceType,
       Id id,
       Meta meta,
@@ -1572,7 +1572,7 @@ class __$PaymentReconciliationCopyWithImpl<$Res>
 class _$_PaymentReconciliation extends _PaymentReconciliation {
   _$_PaymentReconciliation(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'PaymentReconciliation')
           this.resourceType,
       this.id,
       this.meta,
@@ -1622,7 +1622,7 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
       _$_$_PaymentReconciliationFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'PaymentReconciliation')
   final String resourceType;
   @override
   final Id id;
@@ -1829,7 +1829,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
   _PaymentReconciliation._() : super._();
   factory _PaymentReconciliation(
           {@required
-          @JsonKey(defaultValue: 'className')
+          @JsonKey(defaultValue: 'PaymentReconciliation')
               String resourceType,
           Id id,
           Meta meta,
@@ -1877,7 +1877,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
       _$_PaymentReconciliation.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'PaymentReconciliation')
   String get resourceType;
   @override
   Id get id;

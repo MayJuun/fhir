@@ -16,7 +16,7 @@ class _$ImmunizationTearOff {
   const _$ImmunizationTearOff();
 
   _Immunization call(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'Immunization') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -121,7 +121,7 @@ class _$ImmunizationTearOff {
 const $Immunization = _$ImmunizationTearOff();
 
 mixin _$Immunization {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Immunization')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -191,7 +191,7 @@ abstract class $ImmunizationCopyWith<$Res> {
           Immunization value, $Res Function(Immunization) then) =
       _$ImmunizationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'Immunization') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -695,7 +695,7 @@ abstract class _$ImmunizationCopyWith<$Res>
       __$ImmunizationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'Immunization') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -980,7 +980,7 @@ class __$ImmunizationCopyWithImpl<$Res> extends _$ImmunizationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Immunization extends _Immunization {
   _$_Immunization(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Immunization') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -1037,7 +1037,7 @@ class _$_Immunization extends _Immunization {
       _$_$_ImmunizationFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Immunization')
   final String resourceType;
   @override
   final Id id;
@@ -1311,7 +1311,7 @@ class _$_Immunization extends _Immunization {
 abstract class _Immunization extends Immunization {
   _Immunization._() : super._();
   factory _Immunization(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'Immunization') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1364,7 +1364,7 @@ abstract class _Immunization extends Immunization {
       _$_Immunization.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Immunization')
   String get resourceType;
   @override
   Id get id;
@@ -3100,7 +3100,7 @@ class _$ImmunizationEvaluationTearOff {
 
   _ImmunizationEvaluation call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'ImmunizationEvaluation')
           String resourceType,
       Id id,
       Meta meta,
@@ -3193,7 +3193,7 @@ class _$ImmunizationEvaluationTearOff {
 const $ImmunizationEvaluation = _$ImmunizationEvaluationTearOff();
 
 mixin _$ImmunizationEvaluation {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ImmunizationEvaluation')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -3249,7 +3249,7 @@ abstract class $ImmunizationEvaluationCopyWith<$Res> {
           $Res Function(ImmunizationEvaluation) then) =
       _$ImmunizationEvaluationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'ImmunizationEvaluation')
           String resourceType,
       Id id,
       Meta meta,
@@ -3625,7 +3625,7 @@ abstract class _$ImmunizationEvaluationCopyWith<$Res>
       __$ImmunizationEvaluationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'ImmunizationEvaluation')
           String resourceType,
       Id id,
       Meta meta,
@@ -3846,7 +3846,7 @@ class __$ImmunizationEvaluationCopyWithImpl<$Res>
 class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
   _$_ImmunizationEvaluation(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'ImmunizationEvaluation')
           this.resourceType,
       this.id,
       this.meta,
@@ -3907,7 +3907,7 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
       _$_$_ImmunizationEvaluationFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ImmunizationEvaluation')
   final String resourceType;
   @override
   final Id id;
@@ -4128,7 +4128,7 @@ abstract class _ImmunizationEvaluation extends ImmunizationEvaluation {
   _ImmunizationEvaluation._() : super._();
   factory _ImmunizationEvaluation(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'ImmunizationEvaluation')
           String resourceType,
       Id id,
       Meta meta,
@@ -4183,7 +4183,7 @@ abstract class _ImmunizationEvaluation extends ImmunizationEvaluation {
       _$_ImmunizationEvaluation.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ImmunizationEvaluation')
   String get resourceType;
   @override
   Id get id;
@@ -4276,7 +4276,7 @@ class _$ImmunizationRecommendationTearOff {
 
   _ImmunizationRecommendation call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'ImmunizationRecommendation')
           String resourceType,
       Id id,
       Meta meta,
@@ -4326,7 +4326,7 @@ class _$ImmunizationRecommendationTearOff {
 const $ImmunizationRecommendation = _$ImmunizationRecommendationTearOff();
 
 mixin _$ImmunizationRecommendation {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ImmunizationRecommendation')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -4358,7 +4358,7 @@ abstract class $ImmunizationRecommendationCopyWith<$Res> {
           $Res Function(ImmunizationRecommendation) then) =
       _$ImmunizationRecommendationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'ImmunizationRecommendation') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4532,7 +4532,7 @@ abstract class _$ImmunizationRecommendationCopyWith<$Res>
       __$ImmunizationRecommendationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'ImmunizationRecommendation') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4641,23 +4641,31 @@ class __$ImmunizationRecommendationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
   _$_ImmunizationRecommendation(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required
+      @JsonKey(defaultValue: 'ImmunizationRecommendation')
+          this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
-      @required this.patient,
+      @required
+          this.patient,
       this.date,
-      @JsonKey(name: '_date') this.dateElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
       this.authority,
-      @required this.recommendation})
+      @required
+          this.recommendation})
       : assert(resourceType != null),
         assert(patient != null),
         assert(recommendation != null),
@@ -4667,7 +4675,7 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
       _$_$_ImmunizationRecommendationFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ImmunizationRecommendation')
   final String resourceType;
   @override
   final Id id;
@@ -4800,7 +4808,7 @@ abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
   _ImmunizationRecommendation._() : super._();
   factory _ImmunizationRecommendation(
           {@required
-          @JsonKey(defaultValue: 'className')
+          @JsonKey(defaultValue: 'ImmunizationRecommendation')
               String resourceType,
           Id id,
           Meta meta,
@@ -4830,7 +4838,7 @@ abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
       _$_ImmunizationRecommendation.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ImmunizationRecommendation')
   String get resourceType;
   @override
   Id get id;
@@ -5970,7 +5978,7 @@ class _$MedicationTearOff {
   const _$MedicationTearOff();
 
   _Medication call(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'Medication') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6019,7 +6027,7 @@ class _$MedicationTearOff {
 const $Medication = _$MedicationTearOff();
 
 mixin _$Medication {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Medication')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -6054,7 +6062,7 @@ abstract class $MedicationCopyWith<$Res> {
           Medication value, $Res Function(Medication) then) =
       _$MedicationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'Medication') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6270,7 +6278,7 @@ abstract class _$MedicationCopyWith<$Res> implements $MedicationCopyWith<$Res> {
       __$MedicationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'Medication') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6395,7 +6403,7 @@ class __$MedicationCopyWithImpl<$Res> extends _$MedicationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Medication extends _Medication {
   _$_Medication(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Medication') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -6422,7 +6430,7 @@ class _$_Medication extends _Medication {
       _$_$_MedicationFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Medication')
   final String resourceType;
   @override
   final Id id;
@@ -6568,7 +6576,7 @@ class _$_Medication extends _Medication {
 abstract class _Medication extends Medication {
   _Medication._() : super._();
   factory _Medication(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'Medication') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6593,7 +6601,7 @@ abstract class _Medication extends Medication {
       _$_Medication.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Medication')
   String get resourceType;
   @override
   Id get id;
@@ -7384,37 +7392,47 @@ class _$MedicationAdministrationTearOff {
   const _$MedicationAdministrationTearOff();
 
   _MedicationAdministration call(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required
+      @JsonKey(defaultValue: 'MedicationAdministration')
+          String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
-      @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
+      @JsonKey(name: '_instantiatesUri')
+          List<Element> instantiatesUriElement,
       List<Reference> basedOn,
       List<Reference> partOf,
       Code status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       List<CodeableConcept> statusReason,
       List<CodeableConcept> category,
       CodeableConcept medicationCodeableConcept,
       Reference medicationReference,
-      @required Reference subject,
+      @required
+          Reference subject,
       Reference encounter,
       List<Reference> supportingInformation,
       FhirDateTime occurenceDateTime,
-      @JsonKey(name: '_occurenceDateTime') Element occurenceDateTimeElement,
+      @JsonKey(name: '_occurenceDateTime')
+          Element occurenceDateTimeElement,
       Period occurencePeriod,
       FhirDateTime recorded,
-      @JsonKey(name: '_recorded') Element recordedElement,
+      @JsonKey(name: '_recorded')
+          Element recordedElement,
       List<MedicationAdministrationPerformer> performer,
       List<CodeableReference> reason,
       Reference request,
@@ -7469,7 +7487,7 @@ class _$MedicationAdministrationTearOff {
 const $MedicationAdministration = _$MedicationAdministrationTearOff();
 
 mixin _$MedicationAdministration {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'MedicationAdministration')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -7525,7 +7543,7 @@ abstract class $MedicationAdministrationCopyWith<$Res> {
           $Res Function(MedicationAdministration) then) =
       _$MedicationAdministrationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'MedicationAdministration') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7871,7 +7889,7 @@ abstract class _$MedicationAdministrationCopyWith<$Res>
       __$MedicationAdministrationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'MedicationAdministration') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8088,37 +8106,47 @@ class __$MedicationAdministrationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicationAdministration extends _MedicationAdministration {
   _$_MedicationAdministration(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required
+      @JsonKey(defaultValue: 'MedicationAdministration')
+          this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.instantiatesCanonical,
       this.instantiatesUri,
-      @JsonKey(name: '_instantiatesUri') this.instantiatesUriElement,
+      @JsonKey(name: '_instantiatesUri')
+          this.instantiatesUriElement,
       this.basedOn,
       this.partOf,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.statusReason,
       this.category,
       this.medicationCodeableConcept,
       this.medicationReference,
-      @required this.subject,
+      @required
+          this.subject,
       this.encounter,
       this.supportingInformation,
       this.occurenceDateTime,
-      @JsonKey(name: '_occurenceDateTime') this.occurenceDateTimeElement,
+      @JsonKey(name: '_occurenceDateTime')
+          this.occurenceDateTimeElement,
       this.occurencePeriod,
       this.recorded,
-      @JsonKey(name: '_recorded') this.recordedElement,
+      @JsonKey(name: '_recorded')
+          this.recordedElement,
       this.performer,
       this.reason,
       this.request,
@@ -8134,7 +8162,7 @@ class _$_MedicationAdministration extends _MedicationAdministration {
       _$_$_MedicationAdministrationFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'MedicationAdministration')
   final String resourceType;
   @override
   final Id id;
@@ -8364,37 +8392,47 @@ class _$_MedicationAdministration extends _MedicationAdministration {
 abstract class _MedicationAdministration extends MedicationAdministration {
   _MedicationAdministration._() : super._();
   factory _MedicationAdministration(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required
+      @JsonKey(defaultValue: 'MedicationAdministration')
+          String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
-      @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
+      @JsonKey(name: '_instantiatesUri')
+          List<Element> instantiatesUriElement,
       List<Reference> basedOn,
       List<Reference> partOf,
       Code status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       List<CodeableConcept> statusReason,
       List<CodeableConcept> category,
       CodeableConcept medicationCodeableConcept,
       Reference medicationReference,
-      @required Reference subject,
+      @required
+          Reference subject,
       Reference encounter,
       List<Reference> supportingInformation,
       FhirDateTime occurenceDateTime,
-      @JsonKey(name: '_occurenceDateTime') Element occurenceDateTimeElement,
+      @JsonKey(name: '_occurenceDateTime')
+          Element occurenceDateTimeElement,
       Period occurencePeriod,
       FhirDateTime recorded,
-      @JsonKey(name: '_recorded') Element recordedElement,
+      @JsonKey(name: '_recorded')
+          Element recordedElement,
       List<MedicationAdministrationPerformer> performer,
       List<CodeableReference> reason,
       Reference request,
@@ -8407,7 +8445,7 @@ abstract class _MedicationAdministration extends MedicationAdministration {
       _$_MedicationAdministration.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'MedicationAdministration')
   String get resourceType;
   @override
   Id get id;
@@ -9214,7 +9252,7 @@ class _$MedicationDispenseTearOff {
 
   _MedicationDispense call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'MedicationDispense')
           String resourceType,
       Id id,
       Meta meta,
@@ -9317,7 +9355,7 @@ class _$MedicationDispenseTearOff {
 const $MedicationDispense = _$MedicationDispenseTearOff();
 
 mixin _$MedicationDispense {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'MedicationDispense')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -9378,7 +9416,7 @@ abstract class $MedicationDispenseCopyWith<$Res> {
           MedicationDispense value, $Res Function(MedicationDispense) then) =
       _$MedicationDispenseCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'MedicationDispense')
           String resourceType,
       Id id,
       Meta meta,
@@ -9824,7 +9862,7 @@ abstract class _$MedicationDispenseCopyWith<$Res>
       __$MedicationDispenseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'MedicationDispense')
           String resourceType,
       Id id,
       Meta meta,
@@ -10085,7 +10123,7 @@ class __$MedicationDispenseCopyWithImpl<$Res>
 class _$_MedicationDispense extends _MedicationDispense {
   _$_MedicationDispense(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'MedicationDispense')
           this.resourceType,
       this.id,
       this.meta,
@@ -10143,7 +10181,7 @@ class _$_MedicationDispense extends _MedicationDispense {
       _$_$_MedicationDispenseFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'MedicationDispense')
   final String resourceType;
   @override
   final Id id;
@@ -10392,7 +10430,7 @@ abstract class _MedicationDispense extends MedicationDispense {
   _MedicationDispense._() : super._();
   factory _MedicationDispense(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'MedicationDispense')
           String resourceType,
       Id id,
       Meta meta,
@@ -10448,7 +10486,7 @@ abstract class _MedicationDispense extends MedicationDispense {
       _$_MedicationDispense.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'MedicationDispense')
   String get resourceType;
   @override
   Id get id;
@@ -11161,26 +11199,33 @@ class _$MedicationKnowledgeTearOff {
   const _$MedicationKnowledgeTearOff();
 
   _MedicationKnowledge call(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required
+      @JsonKey(defaultValue: 'MedicationKnowledge')
+          String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       CodeableConcept code,
       Code status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Reference manufacturer,
       CodeableConcept doseForm,
       Quantity amount,
       List<String> synonym,
-      @JsonKey(name: '_synonym') List<Element> synonymElement,
+      @JsonKey(name: '_synonym')
+          List<Element> synonymElement,
       List<MedicationKnowledgeRelatedMedicationKnowledge>
           relatedMedicationKnowledge,
       List<Reference> associatedMedication,
@@ -11189,7 +11234,8 @@ class _$MedicationKnowledgeTearOff {
       List<MedicationKnowledgeIngredient> ingredient,
       List<Reference> device,
       Markdown preparationInstruction,
-      @JsonKey(name: '_preparationInstruction') Element preparationInstructionElement,
+      @JsonKey(name: '_preparationInstruction')
+          Element preparationInstructionElement,
       List<CodeableConcept> intendedRoute,
       List<MedicationKnowledgeCost> cost,
       List<MedicationKnowledgeMonitoringProgram> monitoringProgram,
@@ -11247,7 +11293,7 @@ class _$MedicationKnowledgeTearOff {
 const $MedicationKnowledge = _$MedicationKnowledgeTearOff();
 
 mixin _$MedicationKnowledge {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'MedicationKnowledge')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -11303,7 +11349,7 @@ abstract class $MedicationKnowledgeCopyWith<$Res> {
           MedicationKnowledge value, $Res Function(MedicationKnowledge) then) =
       _$MedicationKnowledgeCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'MedicationKnowledge') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -11626,7 +11672,7 @@ abstract class _$MedicationKnowledgeCopyWith<$Res>
       __$MedicationKnowledgeCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'MedicationKnowledge') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -11847,7 +11893,7 @@ class __$MedicationKnowledgeCopyWithImpl<$Res>
 class _$_MedicationKnowledge extends _MedicationKnowledge {
   _$_MedicationKnowledge(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'MedicationKnowledge')
           this.resourceType,
       this.id,
       this.meta,
@@ -11899,7 +11945,7 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
       _$_$_MedicationKnowledgeFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'MedicationKnowledge')
   final String resourceType;
   @override
   final Id id;
@@ -12131,26 +12177,33 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
 abstract class _MedicationKnowledge extends MedicationKnowledge {
   _MedicationKnowledge._() : super._();
   factory _MedicationKnowledge(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required
+      @JsonKey(defaultValue: 'MedicationKnowledge')
+          String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       CodeableConcept code,
       Code status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Reference manufacturer,
       CodeableConcept doseForm,
       Quantity amount,
       List<String> synonym,
-      @JsonKey(name: '_synonym') List<Element> synonymElement,
+      @JsonKey(name: '_synonym')
+          List<Element> synonymElement,
       List<MedicationKnowledgeRelatedMedicationKnowledge>
           relatedMedicationKnowledge,
       List<Reference> associatedMedication,
@@ -12159,7 +12212,8 @@ abstract class _MedicationKnowledge extends MedicationKnowledge {
       List<MedicationKnowledgeIngredient> ingredient,
       List<Reference> device,
       Markdown preparationInstruction,
-      @JsonKey(name: '_preparationInstruction') Element preparationInstructionElement,
+      @JsonKey(name: '_preparationInstruction')
+          Element preparationInstructionElement,
       List<CodeableConcept> intendedRoute,
       List<MedicationKnowledgeCost> cost,
       List<MedicationKnowledgeMonitoringProgram> monitoringProgram,
@@ -12169,13 +12223,14 @@ abstract class _MedicationKnowledge extends MedicationKnowledge {
       List<MedicationKnowledgeDrugCharacteristic> drugCharacteristic,
       List<Reference> clinicalUseIssue,
       List<MedicationKnowledgeRegulatory> regulatory,
-      List<MedicationKnowledgeKineticCharacteristic> kineticCharacteristic}) = _$_MedicationKnowledge;
+      List<MedicationKnowledgeKineticCharacteristic>
+          kineticCharacteristic}) = _$_MedicationKnowledge;
 
   factory _MedicationKnowledge.fromJson(Map<String, dynamic> json) =
       _$_MedicationKnowledge.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'MedicationKnowledge')
   String get resourceType;
   @override
   Id get id;
@@ -16957,7 +17012,7 @@ class _$MedicationRequestTearOff {
 
   _MedicationRequest call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'MedicationRequest')
           String resourceType,
       Id id,
       Meta meta,
@@ -17085,7 +17140,7 @@ class _$MedicationRequestTearOff {
 const $MedicationRequest = _$MedicationRequestTearOff();
 
 mixin _$MedicationRequest {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'MedicationRequest')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -17160,7 +17215,7 @@ abstract class $MedicationRequestCopyWith<$Res> {
           MedicationRequest value, $Res Function(MedicationRequest) then) =
       _$MedicationRequestCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'MedicationRequest')
           String resourceType,
       Id id,
       Meta meta,
@@ -17725,7 +17780,7 @@ abstract class _$MedicationRequestCopyWith<$Res>
       __$MedicationRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'MedicationRequest')
           String resourceType,
       Id id,
       Meta meta,
@@ -18051,7 +18106,7 @@ class __$MedicationRequestCopyWithImpl<$Res>
 class _$_MedicationRequest extends _MedicationRequest {
   _$_MedicationRequest(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'MedicationRequest')
           this.resourceType,
       this.id,
       this.meta,
@@ -18125,7 +18180,7 @@ class _$_MedicationRequest extends _MedicationRequest {
       _$_$_MedicationRequestFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'MedicationRequest')
   final String resourceType;
   @override
   final Id id;
@@ -18421,7 +18476,7 @@ abstract class _MedicationRequest extends MedicationRequest {
   _MedicationRequest._() : super._();
   factory _MedicationRequest(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'MedicationRequest')
           String resourceType,
       Id id,
       Meta meta,
@@ -18492,7 +18547,7 @@ abstract class _MedicationRequest extends MedicationRequest {
       _$_MedicationRequest.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'MedicationRequest')
   String get resourceType;
   @override
   Id get id;
@@ -19691,7 +19746,7 @@ class _$MedicationUsageTearOff {
 
   _MedicationUsage call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'MedicationUsage')
           String resourceType,
       Id id,
       Meta meta,
@@ -19782,7 +19837,7 @@ class _$MedicationUsageTearOff {
 const $MedicationUsage = _$MedicationUsageTearOff();
 
 mixin _$MedicationUsage {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'MedicationUsage')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -19837,7 +19892,7 @@ abstract class $MedicationUsageCopyWith<$Res> {
           MedicationUsage value, $Res Function(MedicationUsage) then) =
       _$MedicationUsageCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'MedicationUsage')
           String resourceType,
       Id id,
       Meta meta,
@@ -20197,7 +20252,7 @@ abstract class _$MedicationUsageCopyWith<$Res>
       __$MedicationUsageCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'MedicationUsage')
           String resourceType,
       Id id,
       Meta meta,
@@ -20419,7 +20474,7 @@ class __$MedicationUsageCopyWithImpl<$Res>
 class _$_MedicationUsage extends _MedicationUsage {
   _$_MedicationUsage(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'MedicationUsage')
           this.resourceType,
       this.id,
       this.meta,
@@ -20473,7 +20528,7 @@ class _$_MedicationUsage extends _MedicationUsage {
       _$_$_MedicationUsageFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'MedicationUsage')
   final String resourceType;
   @override
   final Id id;
@@ -20697,7 +20752,7 @@ abstract class _MedicationUsage extends MedicationUsage {
   _MedicationUsage._() : super._();
   factory _MedicationUsage(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'MedicationUsage')
           String resourceType,
       Id id,
       Meta meta,
@@ -20748,7 +20803,7 @@ abstract class _MedicationUsage extends MedicationUsage {
       _$_MedicationUsage.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'MedicationUsage')
   String get resourceType;
   @override
   Id get id;

@@ -8,7 +8,7 @@ part of 'security.dart';
 
 _$_AuditEvent _$_$_AuditEventFromJson(Map<String, dynamic> json) {
   return _$_AuditEvent(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'AuditEvent',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -534,7 +534,7 @@ Map<String, dynamic> _$_$_AuditEventDetailToJson(_$_AuditEventDetail instance) {
 
 _$_Consent _$_$_ConsentFromJson(Map<String, dynamic> json) {
   return _$_Consent(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Consent',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -993,7 +993,7 @@ const _$ConsentDataMeaningEnumMap = {
 
 _$_Provenance _$_$_ProvenanceFromJson(Map<String, dynamic> json) {
   return _$_Provenance(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Provenance',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null

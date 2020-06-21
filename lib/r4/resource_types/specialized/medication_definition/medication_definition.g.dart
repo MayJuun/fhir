@@ -8,7 +8,7 @@ part of 'medication_definition.dart';
 
 _$_MedicinalProduct _$_$_MedicinalProductFromJson(Map<String, dynamic> json) {
   return _$_MedicinalProduct(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'MedicinalProduct',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -498,7 +498,8 @@ Map<String, dynamic> _$_$_MedicinalProductSpecialDesignationToJson(
 _$_MedicinalProductAuthorization _$_$_MedicinalProductAuthorizationFromJson(
     Map<String, dynamic> json) {
   return _$_MedicinalProductAuthorization(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType:
+        json['resourceType'] as String ?? 'MedicinalProductAuthorization',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -792,7 +793,8 @@ Map<String, dynamic> _$_$_MedicinalProductAuthorizationProcedureToJson(
 _$_MedicinalProductContraindication
     _$_$_MedicinalProductContraindicationFromJson(Map<String, dynamic> json) {
   return _$_MedicinalProductContraindication(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType:
+        json['resourceType'] as String ?? 'MedicinalProductContraindication',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -953,7 +955,8 @@ Map<String, dynamic> _$_$_MedicinalProductContraindicationOtherTherapyToJson(
 _$_MedicinalProductIndication _$_$_MedicinalProductIndicationFromJson(
     Map<String, dynamic> json) {
   return _$_MedicinalProductIndication(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType:
+        json['resourceType'] as String ?? 'MedicinalProductIndication',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1125,7 +1128,8 @@ Map<String, dynamic> _$_$_MedicinalProductIndicationOtherTherapyToJson(
 _$_MedicinalProductIngredient _$_$_MedicinalProductIngredientFromJson(
     Map<String, dynamic> json) {
   return _$_MedicinalProductIngredient(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType:
+        json['resourceType'] as String ?? 'MedicinalProductIngredient',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1466,7 +1470,8 @@ Map<String, dynamic> _$_$_MedicinalProductIngredientSubstanceToJson(
 _$_MedicinalProductInteraction _$_$_MedicinalProductInteractionFromJson(
     Map<String, dynamic> json) {
   return _$_MedicinalProductInteraction(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType:
+        json['resourceType'] as String ?? 'MedicinalProductInteraction',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1613,7 +1618,8 @@ Map<String, dynamic> _$_$_MedicinalProductInteractionInteractantToJson(
 _$_MedicinalProductManufactured _$_$_MedicinalProductManufacturedFromJson(
     Map<String, dynamic> json) {
   return _$_MedicinalProductManufactured(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType:
+        json['resourceType'] as String ?? 'MedicinalProductManufactured',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1719,7 +1725,7 @@ Map<String, dynamic> _$_$_MedicinalProductManufacturedToJson(
 _$_MedicinalProductPackaged _$_$_MedicinalProductPackagedFromJson(
     Map<String, dynamic> json) {
   return _$_MedicinalProductPackaged(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'MedicinalProductPackaged',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1997,7 +2003,8 @@ Map<String, dynamic> _$_$_MedicinalProductPackagedPackageItemToJson(
 _$_MedicinalProductPharmaceutical _$_$_MedicinalProductPharmaceuticalFromJson(
     Map<String, dynamic> json) {
   return _$_MedicinalProductPharmaceutical(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType:
+        json['resourceType'] as String ?? 'MedicinalProductPharmaceutical',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -2323,7 +2330,8 @@ Map<String, dynamic> _$_$_MedicinalProductPharmaceuticalWithdrawalPeriodToJson(
 _$_MedicinalProductUndesirableEffect
     _$_$_MedicinalProductUndesirableEffectFromJson(Map<String, dynamic> json) {
   return _$_MedicinalProductUndesirableEffect(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType:
+        json['resourceType'] as String ?? 'MedicinalProductUndesirableEffect',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -2418,7 +2426,7 @@ Map<String, dynamic> _$_$_MedicinalProductUndesirableEffectToJson(
 _$_SubstanceNucleicAcid _$_$_SubstanceNucleicAcidFromJson(
     Map<String, dynamic> json) {
   return _$_SubstanceNucleicAcid(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'SubstanceNucleicAcid',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -2702,7 +2710,7 @@ Map<String, dynamic> _$_$_SubstanceNucleicAcidSugarToJson(
 
 _$_SubstancePolymer _$_$_SubstancePolymerFromJson(Map<String, dynamic> json) {
   return _$_SubstancePolymer(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'SubstancePolymer',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -3130,7 +3138,7 @@ Map<String, dynamic> _$_$_SubstancePolymerStructuralRepresentationToJson(
 
 _$_SubstanceProtein _$_$_SubstanceProteinFromJson(Map<String, dynamic> json) {
   return _$_SubstanceProtein(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'SubstanceProtein',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -3310,7 +3318,8 @@ Map<String, dynamic> _$_$_SubstanceProteinSubunitToJson(
 _$_SubstanceReferenceInformation _$_$_SubstanceReferenceInformationFromJson(
     Map<String, dynamic> json) {
   return _$_SubstanceReferenceInformation(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType:
+        json['resourceType'] as String ?? 'SubstanceReferenceInformation',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -3647,7 +3656,7 @@ Map<String, dynamic> _$_$_SubstanceReferenceInformationTargetToJson(
 _$_SubstanceSourceMaterial _$_$_SubstanceSourceMaterialFromJson(
     Map<String, dynamic> json) {
   return _$_SubstanceSourceMaterial(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'SubstanceSourceMaterial',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -4133,7 +4142,7 @@ Map<String, dynamic> _$_$_SubstanceSourceMaterialPartDescriptionToJson(
 _$_SubstanceSpecification _$_$_SubstanceSpecificationFromJson(
     Map<String, dynamic> json) {
   return _$_SubstanceSpecification(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'SubstanceSpecification',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null

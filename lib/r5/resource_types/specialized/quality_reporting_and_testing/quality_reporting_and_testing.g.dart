@@ -8,7 +8,7 @@ part of 'quality_reporting_and_testing.dart';
 
 _$_Measure _$_$_MeasureFromJson(Map<String, dynamic> json) {
   return _$_Measure(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Measure',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -653,7 +653,7 @@ Map<String, dynamic> _$_$_MeasureSupplementalDataToJson(
 
 _$_MeasureReport _$_$_MeasureReportFromJson(Map<String, dynamic> json) {
   return _$_MeasureReport(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'MeasureReport',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1096,7 +1096,7 @@ Map<String, dynamic> _$_$_MeasureReportPopulation1ToJson(
 
 _$_TestReport _$_$_TestReportFromJson(Map<String, dynamic> json) {
   return _$_TestReport(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'TestReport',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1694,7 +1694,7 @@ Map<String, dynamic> _$_$_TestReportAction2ToJson(
 
 _$_TestScript _$_$_TestScriptFromJson(Map<String, dynamic> json) {
   return _$_TestScript(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'TestScript',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null

@@ -11,7 +11,7 @@ part 'summary.g.dart';
 abstract class AdverseEvent with Resource  implements _$AdverseEvent {
 AdverseEvent._();
 factory AdverseEvent({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'AdverseEvent') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -160,7 +160,7 @@ factory AdverseEventSupportingInfo({
 abstract class AllergyIntolerance with Resource  implements _$AllergyIntolerance {
 AllergyIntolerance._();
 factory AllergyIntolerance({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'AllergyIntolerance') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -229,7 +229,7 @@ factory AllergyIntoleranceReaction({
 abstract class ClinicalImpression with Resource  implements _$ClinicalImpression {
 ClinicalImpression._();
 factory ClinicalImpression({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'ClinicalImpression') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -289,7 +289,7 @@ factory ClinicalImpressionFinding({
 abstract class Condition with Resource  implements _$Condition {
 Condition._();
 factory Condition({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Condition') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -368,7 +368,7 @@ factory ConditionEvidence({
 abstract class DetectedIssue with Resource  implements _$DetectedIssue {
 DetectedIssue._();
 factory DetectedIssue({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'DetectedIssue') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -436,7 +436,7 @@ factory DetectedIssueMitigation({
 abstract class FamilyMemberHistory with Resource  implements _$FamilyMemberHistory {
 FamilyMemberHistory._();
 factory FamilyMemberHistory({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'FamilyMemberHistory') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -539,7 +539,7 @@ factory FamilyMemberHistoryProcedure({
 abstract class Procedure with Resource  implements _$Procedure {
 Procedure._();
 factory Procedure({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Procedure') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,

@@ -9,7 +9,7 @@ part of 'conformance.dart';
 _$_CapabilityStatement _$_$_CapabilityStatementFromJson(
     Map<String, dynamic> json) {
   return _$_CapabilityStatement(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'CapabilityStatement',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1279,7 +1279,7 @@ const _$CapabilityStatementDocumentModeEnumMap = {
 _$_CompartmentDefinition _$_$_CompartmentDefinitionFromJson(
     Map<String, dynamic> json) {
   return _$_CompartmentDefinition(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'CompartmentDefinition',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1512,7 +1512,7 @@ Map<String, dynamic> _$_$_CompartmentDefinitionResourceToJson(
 
 _$_ExampleScenario _$_$_ExampleScenarioFromJson(Map<String, dynamic> json) {
   return _$_ExampleScenario(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'ExampleScenario',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -2221,7 +2221,7 @@ Map<String, dynamic> _$_$_ExampleScenarioAlternativeToJson(
 
 _$_GraphDefinition _$_$_GraphDefinitionFromJson(Map<String, dynamic> json) {
   return _$_GraphDefinition(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'GraphDefinition',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -2611,7 +2611,7 @@ const _$GraphDefinitionCompartmentRuleEnumMap = {
 _$_ImplementationGuide _$_$_ImplementationGuideFromJson(
     Map<String, dynamic> json) {
   return _$_ImplementationGuide(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'ImplementationGuide',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -3920,7 +3920,7 @@ Map<String, dynamic> _$_$_ImplementationGuidePage1ToJson(
 
 _$_MessageDefinition _$_$_MessageDefinitionFromJson(Map<String, dynamic> json) {
   return _$_MessageDefinition(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'MessageDefinition',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -4277,7 +4277,7 @@ Map<String, dynamic> _$_$_MessageDefinitionAllowedResponseToJson(
 _$_OperationDefinition _$_$_OperationDefinitionFromJson(
     Map<String, dynamic> json) {
   return _$_OperationDefinition(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'OperationDefinition',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -4808,7 +4808,7 @@ Map<String, dynamic> _$_$_OperationDefinitionOverloadToJson(
 
 _$_SearchParameter _$_$_SearchParameterFromJson(Map<String, dynamic> json) {
   return _$_SearchParameter(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'SearchParameter',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -5177,7 +5177,7 @@ Map<String, dynamic> _$_$_SearchParameterComponentToJson(
 _$_StructureDefinition _$_$_StructureDefinitionFromJson(
     Map<String, dynamic> json) {
   return _$_StructureDefinition(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'StructureDefinition',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -5329,6 +5329,9 @@ _$_StructureDefinition _$_$_StructureDefinitionFromJson(
     baseDefinition: json['baseDefinition'] == null
         ? null
         : Canonical.fromJson(json['baseDefinition'] as String),
+    baseDefinitionElement: json['_baseDefinition'] == null
+        ? null
+        : Element.fromJson(json['_baseDefinition'] as Map<String, dynamic>),
     derivation: _$enumDecodeNullable(
         _$StructureDefinitionDerivationEnumMap, json['derivation'],
         unknownValue: StructureDefinitionDerivation.unknown),
@@ -5415,6 +5418,7 @@ Map<String, dynamic> _$_$_StructureDefinitionToJson(
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('baseDefinition', instance.baseDefinition?.toJson());
+  writeNotNull('_baseDefinition', instance.baseDefinitionElement?.toJson());
   writeNotNull('derivation',
       _$StructureDefinitionDerivationEnumMap[instance.derivation]);
   writeNotNull('_derivation', instance.derivationElement?.toJson());
@@ -5671,7 +5675,7 @@ Map<String, dynamic> _$_$_StructureDefinitionDifferentialToJson(
 
 _$_StructureMap _$_$_StructureMapFromJson(Map<String, dynamic> json) {
   return _$_StructureMap(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'StructureMap',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null

@@ -112,7 +112,7 @@ void main() async {
               }
             } else if (field == 'resourceType') {
               data +=
-                  "@JsonKey(defaultValue: 'className') @required String resourceType,\n";
+                  "@JsonKey(defaultValue: '$className') @required String resourceType,\n";
             } else if (schema['definitions'][obj]['properties'][field]
                 .keys
                 .contains('enum')) {

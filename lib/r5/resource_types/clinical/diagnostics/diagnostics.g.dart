@@ -8,7 +8,7 @@ part of 'diagnostics.dart';
 
 _$_BodyStructure _$_$_BodyStructureFromJson(Map<String, dynamic> json) {
   return _$_BodyStructure(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'BodyStructure',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -115,7 +115,7 @@ Map<String, dynamic> _$_$_BodyStructureToJson(_$_BodyStructure instance) {
 
 _$_DiagnosticReport _$_$_DiagnosticReportFromJson(Map<String, dynamic> json) {
   return _$_DiagnosticReport(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'DiagnosticReport',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -383,7 +383,7 @@ Map<String, dynamic> _$_$_DiagnosticReportMediaToJson(
 
 _$_ImagingStudy _$_$_ImagingStudyFromJson(Map<String, dynamic> json) {
   return _$_ImagingStudy(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'ImagingStudy',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -817,7 +817,7 @@ Map<String, dynamic> _$_$_ImagingStudyInstanceToJson(
 
 _$_MolecularSequence _$_$_MolecularSequenceFromJson(Map<String, dynamic> json) {
   return _$_MolecularSequence(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'MolecularSequence',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1630,7 +1630,7 @@ Map<String, dynamic> _$_$_MolecularSequenceInnerToJson(
 
 _$_Observation _$_$_ObservationFromJson(Map<String, dynamic> json) {
   return _$_Observation(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Observation',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -2110,7 +2110,7 @@ Map<String, dynamic> _$_$_ObservationComponentToJson(
 _$_QuestionnaireResponse _$_$_QuestionnaireResponseFromJson(
     Map<String, dynamic> json) {
   return _$_QuestionnaireResponse(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'QuestionnaireResponse',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -2427,7 +2427,7 @@ Map<String, dynamic> _$_$_QuestionnaireResponseAnswerToJson(
 
 _$_Specimen _$_$_SpecimenFromJson(Map<String, dynamic> json) {
   return _$_Specimen(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Specimen',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null

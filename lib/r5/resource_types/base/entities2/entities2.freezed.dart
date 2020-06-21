@@ -19,7 +19,7 @@ class _$BiologicallyDerivedProductTearOff {
   _BiologicallyDerivedProduct
       call(
           {@required
-          @JsonKey(defaultValue: 'className')
+          @JsonKey(defaultValue: 'BiologicallyDerivedProduct')
               String resourceType,
           Id id,
           Meta meta,
@@ -89,7 +89,7 @@ class _$BiologicallyDerivedProductTearOff {
 const $BiologicallyDerivedProduct = _$BiologicallyDerivedProductTearOff();
 
 mixin _$BiologicallyDerivedProduct {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'BiologicallyDerivedProduct')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -134,7 +134,7 @@ abstract class $BiologicallyDerivedProductCopyWith<$Res> {
       _$BiologicallyDerivedProductCopyWithImpl<$Res>;
   $Res
       call(
-          {@JsonKey(defaultValue: 'className')
+          {@JsonKey(defaultValue: 'BiologicallyDerivedProduct')
               String resourceType,
           Id id,
           Meta meta,
@@ -395,7 +395,7 @@ abstract class _$BiologicallyDerivedProductCopyWith<$Res>
   @override
   $Res
       call(
-          {@JsonKey(defaultValue: 'className')
+          {@JsonKey(defaultValue: 'BiologicallyDerivedProduct')
               String resourceType,
           Id id,
           Meta meta,
@@ -562,7 +562,7 @@ class __$BiologicallyDerivedProductCopyWithImpl<$Res>
 class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   _$_BiologicallyDerivedProduct(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'BiologicallyDerivedProduct')
           this.resourceType,
       this.id,
       this.meta,
@@ -603,7 +603,7 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
       _$_$_BiologicallyDerivedProductFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'BiologicallyDerivedProduct')
   final String resourceType;
   @override
   final Id id;
@@ -784,7 +784,7 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
   _BiologicallyDerivedProduct._() : super._();
   factory _BiologicallyDerivedProduct(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'BiologicallyDerivedProduct')
           String resourceType,
       Id id,
       Meta meta,
@@ -823,7 +823,7 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
       _$_BiologicallyDerivedProduct.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'BiologicallyDerivedProduct')
   String get resourceType;
   @override
   Id get id;
@@ -2482,7 +2482,7 @@ class _$DeviceTearOff {
   const _$DeviceTearOff();
 
   _Device call(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'Device') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2585,7 +2585,7 @@ class _$DeviceTearOff {
 const $Device = _$DeviceTearOff();
 
 mixin _$Device {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Device')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -2656,7 +2656,7 @@ abstract class $DeviceCopyWith<$Res> {
   factory $DeviceCopyWith(Device value, $Res Function(Device) then) =
       _$DeviceCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'Device') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3100,7 +3100,7 @@ abstract class _$DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
       __$DeviceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'Device') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3363,7 +3363,7 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Device extends _Device {
   _$_Device(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Device') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -3417,7 +3417,7 @@ class _$_Device extends _Device {
       _$_$_DeviceFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Device')
   final String resourceType;
   @override
   final Id id;
@@ -3690,7 +3690,7 @@ class _$_Device extends _Device {
 abstract class _Device extends Device {
   _Device._() : super._();
   factory _Device(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'Device') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3741,7 +3741,7 @@ abstract class _Device extends Device {
   factory _Device.fromJson(Map<String, dynamic> json) = _$_Device.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Device')
   String get resourceType;
   @override
   Id get id;
@@ -5627,7 +5627,7 @@ class _$DeviceMetricTearOff {
 
   _DeviceMetric call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'DeviceMetric')
           String resourceType,
       Id id,
       Meta meta,
@@ -5695,7 +5695,7 @@ class _$DeviceMetricTearOff {
 const $DeviceMetric = _$DeviceMetricTearOff();
 
 mixin _$DeviceMetric {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'DeviceMetric')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -5739,7 +5739,7 @@ abstract class $DeviceMetricCopyWith<$Res> {
           DeviceMetric value, $Res Function(DeviceMetric) then) =
       _$DeviceMetricCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'DeviceMetric')
           String resourceType,
       Id id,
       Meta meta,
@@ -6007,7 +6007,7 @@ abstract class _$DeviceMetricCopyWith<$Res>
       __$DeviceMetricCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'DeviceMetric')
           String resourceType,
       Id id,
       Meta meta,
@@ -6166,7 +6166,7 @@ class __$DeviceMetricCopyWithImpl<$Res> extends _$DeviceMetricCopyWithImpl<$Res>
 class _$_DeviceMetric extends _DeviceMetric {
   _$_DeviceMetric(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'DeviceMetric')
           this.resourceType,
       this.id,
       this.meta,
@@ -6209,7 +6209,7 @@ class _$_DeviceMetric extends _DeviceMetric {
       _$_$_DeviceMetricFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'DeviceMetric')
   final String resourceType;
   @override
   final Id id;
@@ -6385,7 +6385,7 @@ abstract class _DeviceMetric extends DeviceMetric {
   _DeviceMetric._() : super._();
   factory _DeviceMetric(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'DeviceMetric')
           String resourceType,
       Id id,
       Meta meta,
@@ -6425,7 +6425,7 @@ abstract class _DeviceMetric extends DeviceMetric {
       _$_DeviceMetric.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'DeviceMetric')
   String get resourceType;
   @override
   Id get id;
@@ -6891,7 +6891,7 @@ class _$SubstanceTearOff {
 
   _Substance call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'Substance')
           String resourceType,
       Id id,
       Meta meta,
@@ -6948,7 +6948,7 @@ class _$SubstanceTearOff {
 const $Substance = _$SubstanceTearOff();
 
 mixin _$Substance {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Substance')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -6984,7 +6984,7 @@ abstract class $SubstanceCopyWith<$Res> {
   factory $SubstanceCopyWith(Substance value, $Res Function(Substance) then) =
       _$SubstanceCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'Substance')
           String resourceType,
       Id id,
       Meta meta,
@@ -7178,7 +7178,7 @@ abstract class _$SubstanceCopyWith<$Res> implements $SubstanceCopyWith<$Res> {
       __$SubstanceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'Substance')
           String resourceType,
       Id id,
       Meta meta,
@@ -7307,7 +7307,7 @@ class __$SubstanceCopyWithImpl<$Res> extends _$SubstanceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Substance extends _Substance {
   _$_Substance(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Substance') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -7335,7 +7335,7 @@ class _$_Substance extends _Substance {
       _$_$_SubstanceFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Substance')
   final String resourceType;
   @override
   final Id id;
@@ -7486,7 +7486,7 @@ abstract class _Substance extends Substance {
   _Substance._() : super._();
   factory _Substance(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'Substance')
           String resourceType,
       Id id,
       Meta meta,
@@ -7519,7 +7519,7 @@ abstract class _Substance extends Substance {
       _$_Substance.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Substance')
   String get resourceType;
   @override
   Id get id;

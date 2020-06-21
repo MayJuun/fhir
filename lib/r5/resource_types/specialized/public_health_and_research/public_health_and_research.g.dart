@@ -8,7 +8,7 @@ part of 'public_health_and_research.dart';
 
 _$_ResearchStudy _$_$_ResearchStudyFromJson(Map<String, dynamic> json) {
   return _$_ResearchStudy(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'ResearchStudy',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -358,7 +358,7 @@ Map<String, dynamic> _$_$_ResearchStudyObjectiveToJson(
 
 _$_ResearchSubject _$_$_ResearchSubjectFromJson(Map<String, dynamic> json) {
   return _$_ResearchSubject(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'ResearchSubject',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null

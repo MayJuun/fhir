@@ -10,7 +10,7 @@ part 'medications.g.dart';
 abstract class Immunization with Resource  implements _$Immunization {
 Immunization._();
 factory Immunization({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Immunization') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -142,7 +142,7 @@ factory ImmunizationProtocolApplied({
 abstract class ImmunizationEvaluation with Resource  implements _$ImmunizationEvaluation {
 ImmunizationEvaluation._();
 factory ImmunizationEvaluation({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'ImmunizationEvaluation') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -185,7 +185,7 @@ factory ImmunizationEvaluation({
 abstract class ImmunizationRecommendation with Resource  implements _$ImmunizationRecommendation {
 ImmunizationRecommendation._();
 factory ImmunizationRecommendation({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'ImmunizationRecommendation') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -258,7 +258,7 @@ factory ImmunizationRecommendationDateCriterion({
 abstract class Medication with Resource  implements _$Medication {
 Medication._();
 factory Medication({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Medication') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -322,7 +322,7 @@ factory MedicationBatch({
 abstract class MedicationAdministration with Resource  implements _$MedicationAdministration {
 MedicationAdministration._();
 factory MedicationAdministration({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'MedicationAdministration') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -403,7 +403,7 @@ factory MedicationAdministrationDosage({
 abstract class MedicationDispense with Resource  implements _$MedicationDispense {
 MedicationDispense._();
 factory MedicationDispense({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'MedicationDispense') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -486,7 +486,7 @@ factory MedicationDispenseSubstitution({
 abstract class MedicationKnowledge with Resource  implements _$MedicationKnowledge {
 MedicationKnowledge._();
 factory MedicationKnowledge({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'MedicationKnowledge') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -768,7 +768,7 @@ factory MedicationKnowledgeKineticCharacteristic({
 abstract class MedicationRequest with Resource  implements _$MedicationRequest {
 MedicationRequest._();
 factory MedicationRequest({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'MedicationRequest') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -880,7 +880,7 @@ factory MedicationRequestSubstitution({
 abstract class MedicationUsage with Resource  implements _$MedicationUsage {
 MedicationUsage._();
 factory MedicationUsage({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'MedicationUsage') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,

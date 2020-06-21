@@ -9,7 +9,7 @@ part of 'evidence_based_medicine.dart';
 _$_EffectEvidenceSynthesis _$_$_EffectEvidenceSynthesisFromJson(
     Map<String, dynamic> json) {
   return _$_EffectEvidenceSynthesis(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'EffectEvidenceSynthesis',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -686,7 +686,7 @@ Map<String, dynamic> _$_$_EffectEvidenceSynthesisCertaintySubcomponentToJson(
 
 _$_Evidence _$_$_EvidenceFromJson(Map<String, dynamic> json) {
   return _$_Evidence(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Evidence',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -936,7 +936,7 @@ const _$EvidenceStatusEnumMap = {
 
 _$_EvidenceVariable _$_$_EvidenceVariableFromJson(Map<String, dynamic> json) {
   return _$_EvidenceVariable(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'EvidenceVariable',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1342,7 +1342,7 @@ const _$EvidenceVariableCharacteristicGroupMeasureEnumMap = {
 _$_ResearchDefinition _$_$_ResearchDefinitionFromJson(
     Map<String, dynamic> json) {
   return _$_ResearchDefinition(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'ResearchDefinition',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1635,7 +1635,7 @@ const _$ResearchDefinitionStatusEnumMap = {
 _$_ResearchElementDefinition _$_$_ResearchElementDefinitionFromJson(
     Map<String, dynamic> json) {
   return _$_ResearchElementDefinition(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'ResearchElementDefinition',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -2188,7 +2188,7 @@ const _$ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasureE
 _$_RiskEvidenceSynthesis _$_$_RiskEvidenceSynthesisFromJson(
     Map<String, dynamic> json) {
   return _$_RiskEvidenceSynthesis(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'RiskEvidenceSynthesis',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null

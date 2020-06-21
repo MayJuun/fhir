@@ -17,7 +17,7 @@ class _$AuditEventTearOff {
 
   _AuditEvent call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'AuditEvent')
           String resourceType,
       Id id,
       Meta meta,
@@ -97,7 +97,7 @@ class _$AuditEventTearOff {
 const $AuditEvent = _$AuditEventTearOff();
 
 mixin _$AuditEvent {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'AuditEvent')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -147,7 +147,7 @@ abstract class $AuditEventCopyWith<$Res> {
           AuditEvent value, $Res Function(AuditEvent) then) =
       _$AuditEventCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'AuditEvent')
           String resourceType,
       Id id,
       Meta meta,
@@ -429,7 +429,7 @@ abstract class _$AuditEventCopyWith<$Res> implements $AuditEventCopyWith<$Res> {
       __$AuditEventCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'AuditEvent')
           String resourceType,
       Id id,
       Meta meta,
@@ -602,7 +602,7 @@ class __$AuditEventCopyWithImpl<$Res> extends _$AuditEventCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_AuditEvent extends _AuditEvent {
   _$_AuditEvent(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'AuditEvent') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -640,7 +640,7 @@ class _$_AuditEvent extends _AuditEvent {
       _$_$_AuditEventFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'AuditEvent')
   final String resourceType;
   @override
   final Id id;
@@ -836,7 +836,7 @@ abstract class _AuditEvent extends AuditEvent {
   _AuditEvent._() : super._();
   factory _AuditEvent(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'AuditEvent')
           String resourceType,
       Id id,
       Meta meta,
@@ -884,7 +884,7 @@ abstract class _AuditEvent extends AuditEvent {
       _$_AuditEvent.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'AuditEvent')
   String get resourceType;
   @override
   Id get id;
@@ -3007,7 +3007,7 @@ class _$ConsentTearOff {
   const _$ConsentTearOff();
 
   _Consent call(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'Consent') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3070,7 +3070,7 @@ class _$ConsentTearOff {
 const $Consent = _$ConsentTearOff();
 
 mixin _$Consent {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Consent')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -3113,7 +3113,7 @@ abstract class $ConsentCopyWith<$Res> {
   factory $ConsentCopyWith(Consent value, $Res Function(Consent) then) =
       _$ConsentCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'Consent') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3363,7 +3363,7 @@ abstract class _$ConsentCopyWith<$Res> implements $ConsentCopyWith<$Res> {
       __$ConsentCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'Consent') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3522,7 +3522,7 @@ class __$ConsentCopyWithImpl<$Res> extends _$ConsentCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Consent extends _Consent {
   _$_Consent(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Consent') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -3558,7 +3558,7 @@ class _$_Consent extends _Consent {
       _$_$_ConsentFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Consent')
   final String resourceType;
   @override
   final Id id;
@@ -3744,7 +3744,7 @@ class _$_Consent extends _Consent {
 abstract class _Consent extends Consent {
   _Consent._() : super._();
   factory _Consent(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'Consent') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3775,7 +3775,7 @@ abstract class _Consent extends Consent {
   factory _Consent.fromJson(Map<String, dynamic> json) = _$_Consent.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Consent')
   String get resourceType;
   @override
   Id get id;
@@ -5591,7 +5591,7 @@ class _$ProvenanceTearOff {
   const _$ProvenanceTearOff();
 
   _Provenance call(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'Provenance') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5650,7 +5650,7 @@ class _$ProvenanceTearOff {
 const $Provenance = _$ProvenanceTearOff();
 
 mixin _$Provenance {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Provenance')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -5692,7 +5692,7 @@ abstract class $ProvenanceCopyWith<$Res> {
           Provenance value, $Res Function(Provenance) then) =
       _$ProvenanceCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'Provenance') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5918,7 +5918,7 @@ abstract class _$ProvenanceCopyWith<$Res> implements $ProvenanceCopyWith<$Res> {
       __$ProvenanceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'Provenance') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6062,7 +6062,7 @@ class __$ProvenanceCopyWithImpl<$Res> extends _$ProvenanceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Provenance extends _Provenance {
   _$_Provenance(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Provenance') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -6096,7 +6096,7 @@ class _$_Provenance extends _Provenance {
       _$_$_ProvenanceFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Provenance')
   final String resourceType;
   @override
   final Id id;
@@ -6271,7 +6271,7 @@ class _$_Provenance extends _Provenance {
 abstract class _Provenance extends Provenance {
   _Provenance._() : super._();
   factory _Provenance(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'Provenance') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6301,7 +6301,7 @@ abstract class _Provenance extends Provenance {
       _$_Provenance.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Provenance')
   String get resourceType;
   @override
   Id get id;

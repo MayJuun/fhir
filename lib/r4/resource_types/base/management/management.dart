@@ -11,7 +11,7 @@ part 'management.g.dart';
 abstract class Encounter with Resource  implements _$Encounter {
 Encounter._();
 factory Encounter({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Encounter') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -153,7 +153,7 @@ factory EncounterLocation({
 abstract class EpisodeOfCare with Resource  implements _$EpisodeOfCare {
 EpisodeOfCare._();
 factory EpisodeOfCare({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'EpisodeOfCare') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -217,7 +217,7 @@ factory EpisodeOfCareDiagnosis({
 abstract class Flag with Resource  implements _$Flag {
 Flag._();
 factory Flag({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Flag') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -246,7 +246,7 @@ factory Flag({
 abstract class Library with Resource  implements _$Library {
 Library._();
 factory Library({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Library') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -313,7 +313,7 @@ factory Library({
 abstract class List_ with Resource  implements _$List_ {
 List_._();
 factory List_({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'List_') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,

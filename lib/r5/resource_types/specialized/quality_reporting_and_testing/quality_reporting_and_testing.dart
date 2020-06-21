@@ -11,7 +11,7 @@ part 'quality_reporting_and_testing.g.dart';
 abstract class Measure with Resource  implements _$Measure {
 Measure._();
 factory Measure({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Measure') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -178,7 +178,7 @@ factory MeasureSupplementalData({
 abstract class MeasureReport with Resource  implements _$MeasureReport {
 MeasureReport._();
 factory MeasureReport({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'MeasureReport') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -304,7 +304,7 @@ factory MeasureReportPopulation1({
 abstract class TestReport with Resource  implements _$TestReport {
 TestReport._();
 factory TestReport({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'TestReport') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -480,7 +480,7 @@ factory TestReportAction2({
 abstract class TestScript with Resource  implements _$TestScript {
 TestScript._();
 factory TestScript({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'TestScript') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,

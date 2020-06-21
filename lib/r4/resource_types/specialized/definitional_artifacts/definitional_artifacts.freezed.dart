@@ -17,7 +17,7 @@ class _$ActivityDefinitionTearOff {
 
   _ActivityDefinition call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'ActivityDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -220,7 +220,7 @@ class _$ActivityDefinitionTearOff {
 const $ActivityDefinition = _$ActivityDefinitionTearOff();
 
 mixin _$ActivityDefinition {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ActivityDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -340,7 +340,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
           ActivityDefinition value, $Res Function(ActivityDefinition) then) =
       _$ActivityDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'ActivityDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -1159,7 +1159,7 @@ abstract class _$ActivityDefinitionCopyWith<$Res>
       __$ActivityDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'ActivityDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -1641,7 +1641,7 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ActivityDefinition extends _ActivityDefinition {
   _$_ActivityDefinition(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'ActivityDefinition') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -1732,7 +1732,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
       _$_$_ActivityDefinitionFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ActivityDefinition')
   final String resourceType;
   @override
   final Id id;
@@ -2166,7 +2166,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   _ActivityDefinition._() : super._();
   factory _ActivityDefinition(
           {@required
-          @JsonKey(defaultValue: 'className')
+          @JsonKey(defaultValue: 'ActivityDefinition')
               String resourceType,
           Id id,
           Meta meta,
@@ -2282,7 +2282,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
       _$_ActivityDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ActivityDefinition')
   String get resourceType;
   @override
   Id get id;
@@ -3057,7 +3057,7 @@ class _$DeviceDefinitionTearOff {
   const _$DeviceDefinitionTearOff();
 
   _DeviceDefinition call(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'DeviceDefinition') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3144,7 +3144,7 @@ class _$DeviceDefinitionTearOff {
 const $DeviceDefinition = _$DeviceDefinitionTearOff();
 
 mixin _$DeviceDefinition {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'DeviceDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -3202,7 +3202,7 @@ abstract class $DeviceDefinitionCopyWith<$Res> {
           DeviceDefinition value, $Res Function(DeviceDefinition) then) =
       _$DeviceDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'DeviceDefinition') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3553,7 +3553,7 @@ abstract class _$DeviceDefinitionCopyWith<$Res>
       __$DeviceDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'DeviceDefinition') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3775,7 +3775,7 @@ class __$DeviceDefinitionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_DeviceDefinition extends _DeviceDefinition {
   _$_DeviceDefinition(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'DeviceDefinition') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -3821,7 +3821,7 @@ class _$_DeviceDefinition extends _DeviceDefinition {
       _$_$_DeviceDefinitionFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'DeviceDefinition')
   final String resourceType;
   @override
   final Id id;
@@ -4054,7 +4054,7 @@ class _$_DeviceDefinition extends _DeviceDefinition {
 abstract class _DeviceDefinition extends DeviceDefinition {
   _DeviceDefinition._() : super._();
   factory _DeviceDefinition(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'DeviceDefinition') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4098,7 +4098,7 @@ abstract class _DeviceDefinition extends DeviceDefinition {
       _$_DeviceDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'DeviceDefinition')
   String get resourceType;
   @override
   Id get id;
@@ -6100,7 +6100,7 @@ class _$EventDefinitionTearOff {
 
   _EventDefinition call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'EventDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -6240,7 +6240,7 @@ class _$EventDefinitionTearOff {
 const $EventDefinition = _$EventDefinitionTearOff();
 
 mixin _$EventDefinition {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'EventDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -6325,7 +6325,7 @@ abstract class $EventDefinitionCopyWith<$Res> {
           EventDefinition value, $Res Function(EventDefinition) then) =
       _$EventDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'EventDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -6848,7 +6848,7 @@ abstract class _$EventDefinitionCopyWith<$Res>
       __$EventDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'EventDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -7170,7 +7170,7 @@ class __$EventDefinitionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_EventDefinition extends _EventDefinition {
   _$_EventDefinition(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'EventDefinition') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -7233,7 +7233,7 @@ class _$_EventDefinition extends _EventDefinition {
       _$_$_EventDefinitionFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'EventDefinition')
   final String resourceType;
   @override
   final Id id;
@@ -7545,7 +7545,7 @@ abstract class _EventDefinition extends EventDefinition {
   _EventDefinition._() : super._();
   factory _EventDefinition(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'EventDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -7626,7 +7626,7 @@ abstract class _EventDefinition extends EventDefinition {
       _$_EventDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'EventDefinition')
   String get resourceType;
   @override
   Id get id;
@@ -7769,7 +7769,7 @@ class _$ObservationDefinitionTearOff {
 
   _ObservationDefinition call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'ObservationDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -7840,7 +7840,7 @@ class _$ObservationDefinitionTearOff {
 const $ObservationDefinition = _$ObservationDefinitionTearOff();
 
 mixin _$ObservationDefinition {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ObservationDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -7884,7 +7884,7 @@ abstract class $ObservationDefinitionCopyWith<$Res> {
           $Res Function(ObservationDefinition) then) =
       _$ObservationDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'ObservationDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -8186,7 +8186,7 @@ abstract class _$ObservationDefinitionCopyWith<$Res>
       __$ObservationDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'ObservationDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -8367,7 +8367,7 @@ class __$ObservationDefinitionCopyWithImpl<$Res>
 class _$_ObservationDefinition extends _ObservationDefinition {
   _$_ObservationDefinition(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'ObservationDefinition')
           this.resourceType,
       this.id,
       this.meta,
@@ -8410,7 +8410,7 @@ class _$_ObservationDefinition extends _ObservationDefinition {
       _$_$_ObservationDefinitionFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ObservationDefinition')
   final String resourceType;
   @override
   final Id id;
@@ -8594,7 +8594,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
   _ObservationDefinition._() : super._();
   factory _ObservationDefinition(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'ObservationDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -8634,7 +8634,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
       _$_ObservationDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ObservationDefinition')
   String get resourceType;
   @override
   Id get id;
@@ -9706,7 +9706,7 @@ class _$PlanDefinitionTearOff {
 
   _PlanDefinition call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'PlanDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -9852,7 +9852,7 @@ class _$PlanDefinitionTearOff {
 const $PlanDefinition = _$PlanDefinitionTearOff();
 
 mixin _$PlanDefinition {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'PlanDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -9941,7 +9941,7 @@ abstract class $PlanDefinitionCopyWith<$Res> {
           PlanDefinition value, $Res Function(PlanDefinition) then) =
       _$PlanDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'PlanDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -10486,7 +10486,7 @@ abstract class _$PlanDefinitionCopyWith<$Res>
       __$PlanDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'PlanDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -10821,7 +10821,7 @@ class __$PlanDefinitionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_PlanDefinition extends _PlanDefinition {
   _$_PlanDefinition(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'PlanDefinition') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -10886,7 +10886,7 @@ class _$_PlanDefinition extends _PlanDefinition {
       _$_$_PlanDefinitionFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'PlanDefinition')
   final String resourceType;
   @override
   final Id id;
@@ -11211,7 +11211,7 @@ abstract class _PlanDefinition extends PlanDefinition {
   _PlanDefinition._() : super._();
   factory _PlanDefinition(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'PlanDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -11295,7 +11295,7 @@ abstract class _PlanDefinition extends PlanDefinition {
       _$_PlanDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'PlanDefinition')
   String get resourceType;
   @override
   Id get id;
@@ -15089,7 +15089,7 @@ class _$QuestionnaireTearOff {
 
   _Questionnaire call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'Questionnaire')
           String resourceType,
       Id id,
       Meta meta,
@@ -15211,7 +15211,7 @@ class _$QuestionnaireTearOff {
 const $Questionnaire = _$QuestionnaireTearOff();
 
 mixin _$Questionnaire {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Questionnaire')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -15287,7 +15287,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
           Questionnaire value, $Res Function(Questionnaire) then) =
       _$QuestionnaireCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'Questionnaire')
           String resourceType,
       Id id,
       Meta meta,
@@ -15729,7 +15729,7 @@ abstract class _$QuestionnaireCopyWith<$Res>
       __$QuestionnaireCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'Questionnaire')
           String resourceType,
       Id id,
       Meta meta,
@@ -16007,7 +16007,7 @@ class __$QuestionnaireCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Questionnaire extends _Questionnaire {
   _$_Questionnaire(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Questionnaire') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -16061,7 +16061,7 @@ class _$_Questionnaire extends _Questionnaire {
       _$_$_QuestionnaireFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Questionnaire')
   final String resourceType;
   @override
   final Id id;
@@ -16340,7 +16340,7 @@ abstract class _Questionnaire extends Questionnaire {
   _Questionnaire._() : super._();
   factory _Questionnaire(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'Questionnaire')
           String resourceType,
       Id id,
       Meta meta,
@@ -16411,7 +16411,7 @@ abstract class _Questionnaire extends Questionnaire {
       _$_Questionnaire.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Questionnaire')
   String get resourceType;
   @override
   Id get id;
@@ -19768,22 +19768,28 @@ class _$SpecimenDefinitionTearOff {
   const _$SpecimenDefinitionTearOff();
 
   _SpecimenDefinition call(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required
+      @JsonKey(defaultValue: 'SpecimenDefinition')
+          String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       CodeableConcept typeCollected,
       List<CodeableConcept> patientPreparation,
       String timeAspect,
-      @JsonKey(name: '_timeAspect') Element timeAspectElement,
+      @JsonKey(name: '_timeAspect')
+          Element timeAspectElement,
       List<CodeableConcept> collection,
       List<SpecimenDefinitionTypeTested> typeTested}) {
     return _SpecimenDefinition(
@@ -19813,7 +19819,7 @@ class _$SpecimenDefinitionTearOff {
 const $SpecimenDefinition = _$SpecimenDefinitionTearOff();
 
 mixin _$SpecimenDefinition {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'SpecimenDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -19846,7 +19852,7 @@ abstract class $SpecimenDefinitionCopyWith<$Res> {
           SpecimenDefinition value, $Res Function(SpecimenDefinition) then) =
       _$SpecimenDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'SpecimenDefinition') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -20028,7 +20034,7 @@ abstract class _$SpecimenDefinitionCopyWith<$Res>
       __$SpecimenDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'SpecimenDefinition') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -20145,7 +20151,7 @@ class __$SpecimenDefinitionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SpecimenDefinition extends _SpecimenDefinition {
   _$_SpecimenDefinition(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'SpecimenDefinition') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -20170,7 +20176,7 @@ class _$_SpecimenDefinition extends _SpecimenDefinition {
       _$_$_SpecimenDefinitionFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'SpecimenDefinition')
   final String resourceType;
   @override
   final Id id;
@@ -20308,22 +20314,28 @@ class _$_SpecimenDefinition extends _SpecimenDefinition {
 abstract class _SpecimenDefinition extends SpecimenDefinition {
   _SpecimenDefinition._() : super._();
   factory _SpecimenDefinition(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required
+      @JsonKey(defaultValue: 'SpecimenDefinition')
+          String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       CodeableConcept typeCollected,
       List<CodeableConcept> patientPreparation,
       String timeAspect,
-      @JsonKey(name: '_timeAspect') Element timeAspectElement,
+      @JsonKey(name: '_timeAspect')
+          Element timeAspectElement,
       List<CodeableConcept> collection,
       List<SpecimenDefinitionTypeTested> typeTested}) = _$_SpecimenDefinition;
 
@@ -20331,7 +20343,7 @@ abstract class _SpecimenDefinition extends SpecimenDefinition {
       _$_SpecimenDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'SpecimenDefinition')
   String get resourceType;
   @override
   Id get id;

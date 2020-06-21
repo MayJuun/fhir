@@ -8,7 +8,7 @@ part of 'billing.dart';
 
 _$_Claim _$_$_ClaimFromJson(Map<String, dynamic> json) {
   return _$_Claim(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Claim',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1127,7 +1127,7 @@ Map<String, dynamic> _$_$_ClaimSubDetailToJson(_$_ClaimSubDetail instance) {
 
 _$_ClaimResponse _$_$_ClaimResponseFromJson(Map<String, dynamic> json) {
   return _$_ClaimResponse(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'ClaimResponse',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -2234,7 +2234,7 @@ Map<String, dynamic> _$_$_ClaimResponseErrorToJson(
 
 _$_Invoice _$_$_InvoiceFromJson(Map<String, dynamic> json) {
   return _$_Invoice(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Invoice',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null

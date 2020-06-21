@@ -8,7 +8,7 @@ part of 'payment.dart';
 
 _$_PaymentNotice _$_$_PaymentNoticeFromJson(Map<String, dynamic> json) {
   return _$_PaymentNotice(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'PaymentNotice',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -136,7 +136,7 @@ Map<String, dynamic> _$_$_PaymentNoticeToJson(_$_PaymentNotice instance) {
 _$_PaymentReconciliation _$_$_PaymentReconciliationFromJson(
     Map<String, dynamic> json) {
   return _$_PaymentReconciliation(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'PaymentReconciliation',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null

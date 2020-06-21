@@ -11,7 +11,7 @@ part 'request_and_response.g.dart';
 abstract class Communication with Resource  implements _$Communication {
 Communication._();
 factory Communication({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Communication') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -75,7 +75,7 @@ factory CommunicationPayload({
 abstract class CommunicationRequest with Resource  implements _$CommunicationRequest {
 CommunicationRequest._();
 factory CommunicationRequest({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'CommunicationRequest') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -139,7 +139,7 @@ factory CommunicationRequestPayload({
 abstract class DeviceRequest with Resource  implements _$DeviceRequest {
 DeviceRequest._();
 factory DeviceRequest({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'DeviceRequest') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -210,7 +210,7 @@ factory DeviceRequestParameter({
 abstract class DeviceUseStatement with Resource  implements _$DeviceUseStatement {
 DeviceUseStatement._();
 factory DeviceUseStatement({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'DeviceUseStatement') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -248,7 +248,7 @@ factory DeviceUseStatement({
 abstract class GuidanceResponse with Resource  implements _$GuidanceResponse {
 GuidanceResponse._();
 factory GuidanceResponse({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'GuidanceResponse') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -289,7 +289,7 @@ factory GuidanceResponse({
 abstract class SupplyDelivery with Resource  implements _$SupplyDelivery {
 SupplyDelivery._();
 factory SupplyDelivery({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'SupplyDelivery') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -339,7 +339,7 @@ factory SupplyDeliverySuppliedItem({
 abstract class SupplyRequest with Resource  implements _$SupplyRequest {
 SupplyRequest._();
 factory SupplyRequest({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'SupplyRequest') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,

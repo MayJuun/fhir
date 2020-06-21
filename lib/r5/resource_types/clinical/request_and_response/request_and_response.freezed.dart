@@ -16,7 +16,7 @@ class _$CommunicationTearOff {
   const _$CommunicationTearOff();
 
   _Communication call(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'Communication') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -101,7 +101,7 @@ class _$CommunicationTearOff {
 const $Communication = _$CommunicationTearOff();
 
 mixin _$Communication {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Communication')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -158,7 +158,7 @@ abstract class $CommunicationCopyWith<$Res> {
           Communication value, $Res Function(Communication) then) =
       _$CommunicationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'Communication') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -483,7 +483,7 @@ abstract class _$CommunicationCopyWith<$Res>
       __$CommunicationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'Communication') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -689,7 +689,7 @@ class __$CommunicationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Communication extends _Communication {
   _$_Communication(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Communication') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -734,7 +734,7 @@ class _$_Communication extends _Communication {
       _$_$_CommunicationFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Communication')
   final String resourceType;
   @override
   final Id id;
@@ -965,7 +965,7 @@ class _$_Communication extends _Communication {
 abstract class _Communication extends Communication {
   _Communication._() : super._();
   factory _Communication(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'Communication') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1008,7 +1008,7 @@ abstract class _Communication extends Communication {
       _$_Communication.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Communication')
   String get resourceType;
   @override
   Id get id;
@@ -1400,39 +1400,49 @@ class _$CommunicationRequestTearOff {
   const _$CommunicationRequestTearOff();
 
   _CommunicationRequest call(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required
+      @JsonKey(defaultValue: 'CommunicationRequest')
+          String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> basedOn,
       List<Reference> replaces,
       Identifier groupIdentifier,
       Code status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept statusReason,
       List<CodeableConcept> category,
       Code priority,
-      @JsonKey(name: '_priority') Element priorityElement,
+      @JsonKey(name: '_priority')
+          Element priorityElement,
       Boolean doNotPerform,
-      @JsonKey(name: '_doNotPerform') Element doNotPerformElement,
+      @JsonKey(name: '_doNotPerform')
+          Element doNotPerformElement,
       List<CodeableConcept> medium,
       Reference subject,
       List<Reference> about,
       Reference encounter,
       List<CommunicationRequestPayload> payload,
       FhirDateTime occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+      @JsonKey(name: '_occurrenceDateTime')
+          Element occurrenceDateTimeElement,
       Period occurrencePeriod,
       FhirDateTime authoredOn,
-      @JsonKey(name: '_authoredOn') Element authoredOnElement,
+      @JsonKey(name: '_authoredOn')
+          Element authoredOnElement,
       Reference requester,
       List<Reference> recipient,
       List<Reference> informationProvider,
@@ -1485,7 +1495,7 @@ class _$CommunicationRequestTearOff {
 const $CommunicationRequest = _$CommunicationRequestTearOff();
 
 mixin _$CommunicationRequest {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'CommunicationRequest')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -1542,7 +1552,7 @@ abstract class $CommunicationRequestCopyWith<$Res> {
           $Res Function(CommunicationRequest) then) =
       _$CommunicationRequestCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'CommunicationRequest') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1897,7 +1907,7 @@ abstract class _$CommunicationRequestCopyWith<$Res>
       __$CommunicationRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'CommunicationRequest') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2115,39 +2125,49 @@ class __$CommunicationRequestCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CommunicationRequest extends _CommunicationRequest {
   _$_CommunicationRequest(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required
+      @JsonKey(defaultValue: 'CommunicationRequest')
+          this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.basedOn,
       this.replaces,
       this.groupIdentifier,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.statusReason,
       this.category,
       this.priority,
-      @JsonKey(name: '_priority') this.priorityElement,
+      @JsonKey(name: '_priority')
+          this.priorityElement,
       this.doNotPerform,
-      @JsonKey(name: '_doNotPerform') this.doNotPerformElement,
+      @JsonKey(name: '_doNotPerform')
+          this.doNotPerformElement,
       this.medium,
       this.subject,
       this.about,
       this.encounter,
       this.payload,
       this.occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime') this.occurrenceDateTimeElement,
+      @JsonKey(name: '_occurrenceDateTime')
+          this.occurrenceDateTimeElement,
       this.occurrencePeriod,
       this.authoredOn,
-      @JsonKey(name: '_authoredOn') this.authoredOnElement,
+      @JsonKey(name: '_authoredOn')
+          this.authoredOnElement,
       this.requester,
       this.recipient,
       this.informationProvider,
@@ -2160,7 +2180,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
       _$_$_CommunicationRequestFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'CommunicationRequest')
   final String resourceType;
   @override
   final Id id;
@@ -2393,39 +2413,49 @@ class _$_CommunicationRequest extends _CommunicationRequest {
 abstract class _CommunicationRequest extends CommunicationRequest {
   _CommunicationRequest._() : super._();
   factory _CommunicationRequest(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required
+      @JsonKey(defaultValue: 'CommunicationRequest')
+          String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> basedOn,
       List<Reference> replaces,
       Identifier groupIdentifier,
       Code status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept statusReason,
       List<CodeableConcept> category,
       Code priority,
-      @JsonKey(name: '_priority') Element priorityElement,
+      @JsonKey(name: '_priority')
+          Element priorityElement,
       Boolean doNotPerform,
-      @JsonKey(name: '_doNotPerform') Element doNotPerformElement,
+      @JsonKey(name: '_doNotPerform')
+          Element doNotPerformElement,
       List<CodeableConcept> medium,
       Reference subject,
       List<Reference> about,
       Reference encounter,
       List<CommunicationRequestPayload> payload,
       FhirDateTime occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+      @JsonKey(name: '_occurrenceDateTime')
+          Element occurrenceDateTimeElement,
       Period occurrencePeriod,
       FhirDateTime authoredOn,
-      @JsonKey(name: '_authoredOn') Element authoredOnElement,
+      @JsonKey(name: '_authoredOn')
+          Element authoredOnElement,
       Reference requester,
       List<Reference> recipient,
       List<Reference> informationProvider,
@@ -2436,7 +2466,7 @@ abstract class _CommunicationRequest extends CommunicationRequest {
       _$_CommunicationRequest.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'CommunicationRequest')
   String get resourceType;
   @override
   Id get id;
@@ -2836,7 +2866,7 @@ class _$DeviceRequestTearOff {
   const _$DeviceRequestTearOff();
 
   _DeviceRequest call(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'DeviceRequest') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2931,7 +2961,7 @@ class _$DeviceRequestTearOff {
 const $DeviceRequest = _$DeviceRequestTearOff();
 
 mixin _$DeviceRequest {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'DeviceRequest')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -2994,7 +3024,7 @@ abstract class $DeviceRequestCopyWith<$Res> {
           DeviceRequest value, $Res Function(DeviceRequest) then) =
       _$DeviceRequestCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'DeviceRequest') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3419,7 +3449,7 @@ abstract class _$DeviceRequestCopyWith<$Res>
       __$DeviceRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'DeviceRequest') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3671,7 +3701,7 @@ class __$DeviceRequestCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_DeviceRequest extends _DeviceRequest {
   _$_DeviceRequest(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'DeviceRequest') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -3722,7 +3752,7 @@ class _$_DeviceRequest extends _DeviceRequest {
       _$_$_DeviceRequestFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'DeviceRequest')
   final String resourceType;
   @override
   final Id id;
@@ -3974,7 +4004,7 @@ class _$_DeviceRequest extends _DeviceRequest {
 abstract class _DeviceRequest extends DeviceRequest {
   _DeviceRequest._() : super._();
   factory _DeviceRequest(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'DeviceRequest') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4022,7 +4052,7 @@ abstract class _DeviceRequest extends DeviceRequest {
       _$_DeviceRequest.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'DeviceRequest')
   String get resourceType;
   @override
   Id get id;
@@ -4518,7 +4548,7 @@ class _$DeviceUseStatementTearOff {
 
   _DeviceUseStatement call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'DeviceUseStatement')
           String resourceType,
       Id id,
       Meta meta,
@@ -4593,7 +4623,7 @@ class _$DeviceUseStatementTearOff {
 const $DeviceUseStatement = _$DeviceUseStatementTearOff();
 
 mixin _$DeviceUseStatement {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'DeviceUseStatement')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -4639,7 +4669,7 @@ abstract class $DeviceUseStatementCopyWith<$Res> {
           DeviceUseStatement value, $Res Function(DeviceUseStatement) then) =
       _$DeviceUseStatementCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'DeviceUseStatement')
           String resourceType,
       Id id,
       Meta meta,
@@ -4935,7 +4965,7 @@ abstract class _$DeviceUseStatementCopyWith<$Res>
       __$DeviceUseStatementCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'DeviceUseStatement')
           String resourceType,
       Id id,
       Meta meta,
@@ -5112,7 +5142,7 @@ class __$DeviceUseStatementCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_DeviceUseStatement extends _DeviceUseStatement {
   _$_DeviceUseStatement(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'DeviceUseStatement') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -5149,7 +5179,7 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
       _$_$_DeviceUseStatementFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'DeviceUseStatement')
   final String resourceType;
   @override
   final Id id;
@@ -5340,7 +5370,7 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
   _DeviceUseStatement._() : super._();
   factory _DeviceUseStatement(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'DeviceUseStatement')
           String resourceType,
       Id id,
       Meta meta,
@@ -5383,7 +5413,7 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
       _$_DeviceUseStatement.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'DeviceUseStatement')
   String get resourceType;
   @override
   Id get id;
@@ -5459,7 +5489,7 @@ class _$GuidanceResponseTearOff {
 
   _GuidanceResponse call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'GuidanceResponse')
           String resourceType,
       Id id,
       Meta meta,
@@ -5539,7 +5569,7 @@ class _$GuidanceResponseTearOff {
 const $GuidanceResponse = _$GuidanceResponseTearOff();
 
 mixin _$GuidanceResponse {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'GuidanceResponse')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -5589,7 +5619,7 @@ abstract class $GuidanceResponseCopyWith<$Res> {
           GuidanceResponse value, $Res Function(GuidanceResponse) then) =
       _$GuidanceResponseCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'GuidanceResponse')
           String resourceType,
       Id id,
       Meta meta,
@@ -5924,7 +5954,7 @@ abstract class _$GuidanceResponseCopyWith<$Res>
       __$GuidanceResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'GuidanceResponse')
           String resourceType,
       Id id,
       Meta meta,
@@ -6121,7 +6151,7 @@ class __$GuidanceResponseCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_GuidanceResponse extends _GuidanceResponse {
   _$_GuidanceResponse(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'GuidanceResponse') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -6159,7 +6189,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
       _$_$_GuidanceResponseFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'GuidanceResponse')
   final String resourceType;
   @override
   final Id id;
@@ -6363,7 +6393,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   _GuidanceResponse._() : super._();
   factory _GuidanceResponse(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'GuidanceResponse')
           String resourceType,
       Id id,
       Meta meta,
@@ -6408,7 +6438,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
       _$_GuidanceResponse.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'GuidanceResponse')
   String get resourceType;
   @override
   Id get id;
@@ -6491,7 +6521,7 @@ class _$SupplyDeliveryTearOff {
 
   _SupplyDelivery call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'SupplyDelivery')
           String resourceType,
       Id id,
       Meta meta,
@@ -6559,7 +6589,7 @@ class _$SupplyDeliveryTearOff {
 const $SupplyDelivery = _$SupplyDeliveryTearOff();
 
 mixin _$SupplyDelivery {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'SupplyDelivery')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -6602,7 +6632,7 @@ abstract class $SupplyDeliveryCopyWith<$Res> {
           SupplyDelivery value, $Res Function(SupplyDelivery) then) =
       _$SupplyDeliveryCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'SupplyDelivery')
           String resourceType,
       Id id,
       Meta meta,
@@ -6888,7 +6918,7 @@ abstract class _$SupplyDeliveryCopyWith<$Res>
       __$SupplyDeliveryCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'SupplyDelivery')
           String resourceType,
       Id id,
       Meta meta,
@@ -7054,7 +7084,7 @@ class __$SupplyDeliveryCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SupplyDelivery extends _SupplyDelivery {
   _$_SupplyDelivery(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'SupplyDelivery') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -7087,7 +7117,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
       _$_$_SupplyDeliveryFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'SupplyDelivery')
   final String resourceType;
   @override
   final Id id;
@@ -7269,7 +7299,7 @@ abstract class _SupplyDelivery extends SupplyDelivery {
   _SupplyDelivery._() : super._();
   factory _SupplyDelivery(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'SupplyDelivery')
           String resourceType,
       Id id,
       Meta meta,
@@ -7307,7 +7337,7 @@ abstract class _SupplyDelivery extends SupplyDelivery {
       _$_SupplyDelivery.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'SupplyDelivery')
   String get resourceType;
   @override
   Id get id;
@@ -7673,7 +7703,7 @@ class _$SupplyRequestTearOff {
 
   _SupplyRequest call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'SupplyRequest')
           String resourceType,
       Id id,
       Meta meta,
@@ -7756,7 +7786,7 @@ class _$SupplyRequestTearOff {
 const $SupplyRequest = _$SupplyRequestTearOff();
 
 mixin _$SupplyRequest {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'SupplyRequest')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -7807,7 +7837,7 @@ abstract class $SupplyRequestCopyWith<$Res> {
           SupplyRequest value, $Res Function(SupplyRequest) then) =
       _$SupplyRequestCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'SupplyRequest')
           String resourceType,
       Id id,
       Meta meta,
@@ -8169,7 +8199,7 @@ abstract class _$SupplyRequestCopyWith<$Res>
       __$SupplyRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'SupplyRequest')
           String resourceType,
       Id id,
       Meta meta,
@@ -8376,7 +8406,7 @@ class __$SupplyRequestCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SupplyRequest extends _SupplyRequest {
   _$_SupplyRequest(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'SupplyRequest') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -8416,7 +8446,7 @@ class _$_SupplyRequest extends _SupplyRequest {
       _$_$_SupplyRequestFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'SupplyRequest')
   final String resourceType;
   @override
   final Id id;
@@ -8624,7 +8654,7 @@ abstract class _SupplyRequest extends SupplyRequest {
   _SupplyRequest._() : super._();
   factory _SupplyRequest(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'SupplyRequest')
           String resourceType,
       Id id,
       Meta meta,
@@ -8671,7 +8701,7 @@ abstract class _SupplyRequest extends SupplyRequest {
       _$_SupplyRequest.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'SupplyRequest')
   String get resourceType;
   @override
   Id get id;

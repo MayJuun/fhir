@@ -8,7 +8,7 @@ part of 'other.dart';
 
 _$_Basic _$_$_BasicFromJson(Map<String, dynamic> json) {
   return _$_Basic(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Basic',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -99,7 +99,7 @@ Map<String, dynamic> _$_$_BasicToJson(_$_Basic instance) {
 
 _$_Binary _$_$_BinaryFromJson(Map<String, dynamic> json) {
   return _$_Binary(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Binary',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -160,7 +160,7 @@ Map<String, dynamic> _$_$_BinaryToJson(_$_Binary instance) {
 
 _$_Bundle _$_$_BundleFromJson(Map<String, dynamic> json) {
   return _$_Bundle(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Bundle',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -592,7 +592,7 @@ Map<String, dynamic> _$_$_BundleResponseToJson(_$_BundleResponse instance) {
 
 _$_Linkage _$_$_LinkageFromJson(Map<String, dynamic> json) {
   return _$_Linkage(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Linkage',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -723,7 +723,7 @@ const _$LinkageItemTypeEnumMap = {
 
 _$_MessageHeader _$_$_MessageHeaderFromJson(Map<String, dynamic> json) {
   return _$_MessageHeader(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'MessageHeader',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1028,7 +1028,7 @@ const _$MessageHeaderResponseCodeEnumMap = {
 
 _$_OperationOutcome _$_$_OperationOutcomeFromJson(Map<String, dynamic> json) {
   return _$_OperationOutcome(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'OperationOutcome',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1218,7 +1218,7 @@ const _$OperationOutcomeIssueCodeEnumMap = {
 
 _$_Parameters _$_$_ParametersFromJson(Map<String, dynamic> json) {
   return _$_Parameters(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Parameters',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1611,7 +1611,7 @@ Map<String, dynamic> _$_$_ParametersParameterToJson(
 
 _$_Subscription _$_$_SubscriptionFromJson(Map<String, dynamic> json) {
   return _$_Subscription(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Subscription',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1940,7 +1940,7 @@ const _$SubscriptionPayloadContentEnumMap = {
 
 _$_Topic _$_$_TopicFromJson(Map<String, dynamic> json) {
   return _$_Topic(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Topic',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null

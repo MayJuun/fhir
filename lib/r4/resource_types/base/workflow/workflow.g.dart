@@ -8,7 +8,7 @@ part of 'workflow.dart';
 
 _$_Appointment _$_$_AppointmentFromJson(Map<String, dynamic> json) {
   return _$_Appointment(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Appointment',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -345,7 +345,7 @@ const _$AppointmentParticipantStatusEnumMap = {
 _$_AppointmentResponse _$_$_AppointmentResponseFromJson(
     Map<String, dynamic> json) {
   return _$_AppointmentResponse(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'AppointmentResponse',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -461,7 +461,7 @@ Map<String, dynamic> _$_$_AppointmentResponseToJson(
 
 _$_Schedule _$_$_ScheduleFromJson(Map<String, dynamic> json) {
   return _$_Schedule(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Schedule',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -574,7 +574,7 @@ Map<String, dynamic> _$_$_ScheduleToJson(_$_Schedule instance) {
 
 _$_Slot _$_$_SlotFromJson(Map<String, dynamic> json) {
   return _$_Slot(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Slot',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -719,7 +719,7 @@ const _$SlotStatusEnumMap = {
 
 _$_Task _$_$_TaskFromJson(Map<String, dynamic> json) {
   return _$_Task(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Task',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1675,7 +1675,7 @@ Map<String, dynamic> _$_$_TaskOutputToJson(_$_TaskOutput instance) {
 _$_VerificationResult _$_$_VerificationResultFromJson(
     Map<String, dynamic> json) {
   return _$_VerificationResult(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'VerificationResult',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null

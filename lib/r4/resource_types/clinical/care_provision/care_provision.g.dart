@@ -8,7 +8,7 @@ part of 'care_provision.dart';
 
 _$_CarePlan _$_$_CarePlanFromJson(Map<String, dynamic> json) {
   return _$_CarePlan(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'CarePlan',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -458,7 +458,7 @@ const _$CarePlanDetailStatusEnumMap = {
 
 _$_CareTeam _$_$_CareTeamFromJson(Map<String, dynamic> json) {
   return _$_CareTeam(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'CareTeam',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -659,7 +659,7 @@ Map<String, dynamic> _$_$_CareTeamParticipantToJson(
 
 _$_Goal _$_$_GoalFromJson(Map<String, dynamic> json) {
   return _$_Goal(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Goal',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -925,7 +925,7 @@ Map<String, dynamic> _$_$_GoalTargetToJson(_$_GoalTarget instance) {
 
 _$_NutritionOrder _$_$_NutritionOrderFromJson(Map<String, dynamic> json) {
   return _$_NutritionOrder(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'NutritionOrder',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1460,7 +1460,7 @@ Map<String, dynamic> _$_$_NutritionOrderAdministrationToJson(
 
 _$_RequestGroup _$_$_RequestGroupFromJson(Map<String, dynamic> json) {
   return _$_RequestGroup(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'RequestGroup',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1927,7 +1927,7 @@ Map<String, dynamic> _$_$_RequestGroupRelatedActionToJson(
 
 _$_RiskAssessment _$_$_RiskAssessmentFromJson(Map<String, dynamic> json) {
   return _$_RiskAssessment(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'RiskAssessment',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -2165,7 +2165,7 @@ Map<String, dynamic> _$_$_RiskAssessmentPredictionToJson(
 
 _$_ServiceRequest _$_$_ServiceRequestFromJson(Map<String, dynamic> json) {
   return _$_ServiceRequest(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'ServiceRequest',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -2459,7 +2459,7 @@ Map<String, dynamic> _$_$_ServiceRequestToJson(_$_ServiceRequest instance) {
 _$_VisionPrescription _$_$_VisionPrescriptionFromJson(
     Map<String, dynamic> json) {
   return _$_VisionPrescription(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'VisionPrescription',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null

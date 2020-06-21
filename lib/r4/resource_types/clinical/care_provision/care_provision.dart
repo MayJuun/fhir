@@ -11,7 +11,7 @@ part 'care_provision.g.dart';
 abstract class CarePlan with Resource implements _$CarePlan {
   CarePlan._();
   factory CarePlan({
-    @JsonKey(defaultValue: 'className') @required String resourceType,
+    @JsonKey(defaultValue: 'CarePlan') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -119,7 +119,7 @@ abstract class CarePlanDetail implements _$CarePlanDetail {
 abstract class CareTeam with Resource implements _$CareTeam {
   CareTeam._();
   factory CareTeam({
-    @JsonKey(defaultValue: 'className') @required String resourceType,
+    @JsonKey(defaultValue: 'CareTeam') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -172,7 +172,7 @@ abstract class CareTeamParticipant implements _$CareTeamParticipant {
 abstract class Goal with Resource implements _$Goal {
   Goal._();
   factory Goal({
-    @JsonKey(defaultValue: 'className') @required String resourceType,
+    @JsonKey(defaultValue: 'Goal') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -241,7 +241,7 @@ abstract class GoalTarget implements _$GoalTarget {
 abstract class NutritionOrder with Resource implements _$NutritionOrder {
   NutritionOrder._();
   factory NutritionOrder({
-    @JsonKey(defaultValue: 'className') @required String resourceType,
+    @JsonKey(defaultValue: 'NutritionOrder') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -400,7 +400,7 @@ abstract class NutritionOrderAdministration
 abstract class RequestGroup with Resource implements _$RequestGroup {
   RequestGroup._();
   factory RequestGroup({
-    @JsonKey(defaultValue: 'className') @required String resourceType,
+    @JsonKey(defaultValue: 'RequestGroup') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -530,7 +530,7 @@ abstract class RequestGroupRelatedAction
 abstract class RiskAssessment with Resource implements _$RiskAssessment {
   RiskAssessment._();
   factory RiskAssessment({
-    @JsonKey(defaultValue: 'className') @required String resourceType,
+    @JsonKey(defaultValue: 'RiskAssessment') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -596,7 +596,7 @@ abstract class RiskAssessmentPrediction implements _$RiskAssessmentPrediction {
 abstract class ServiceRequest with Resource implements _$ServiceRequest {
   ServiceRequest._();
   factory ServiceRequest({
-    @JsonKey(defaultValue: 'className') @required String resourceType,
+    @JsonKey(defaultValue: 'ServiceRequest') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -666,7 +666,7 @@ abstract class VisionPrescription
     implements _$VisionPrescription {
   VisionPrescription._();
   factory VisionPrescription({
-    @JsonKey(defaultValue: 'className') @required String resourceType,
+    @JsonKey(defaultValue: 'VisionPrescription') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

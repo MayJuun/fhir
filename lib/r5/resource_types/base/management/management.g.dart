@@ -8,7 +8,7 @@ part of 'management.dart';
 
 _$_Encounter _$_$_EncounterFromJson(Map<String, dynamic> json) {
   return _$_Encounter(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Encounter',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -584,7 +584,7 @@ const _$EncounterLocationStatusEnumMap = {
 
 _$_EpisodeOfCare _$_$_EpisodeOfCareFromJson(Map<String, dynamic> json) {
   return _$_EpisodeOfCare(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'EpisodeOfCare',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -834,7 +834,7 @@ Map<String, dynamic> _$_$_EpisodeOfCareDiagnosisToJson(
 
 _$_Flag _$_$_FlagFromJson(Map<String, dynamic> json) {
   return _$_Flag(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Flag',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -946,7 +946,7 @@ const _$FlagStatusEnumMap = {
 
 _$_Library _$_$_LibraryFromJson(Map<String, dynamic> json) {
   return _$_Library(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Library',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1224,7 +1224,7 @@ const _$LibraryStatusEnumMap = {
 
 _$_List_ _$_$_List_FromJson(Map<String, dynamic> json) {
   return _$_List_(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'List_',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null

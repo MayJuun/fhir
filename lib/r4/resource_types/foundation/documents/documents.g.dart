@@ -8,7 +8,7 @@ part of 'documents.dart';
 
 _$_CatalogEntry _$_$_CatalogEntryFromJson(Map<String, dynamic> json) {
   return _$_CatalogEntry(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'CatalogEntry',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -248,7 +248,7 @@ const _$CatalogEntryRelatedEntryRelationtypeEnumMap = {
 
 _$_Composition _$_$_CompositionFromJson(Map<String, dynamic> json) {
   return _$_Composition(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Composition',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -650,7 +650,7 @@ Map<String, dynamic> _$_$_CompositionSectionToJson(
 
 _$_DocumentManifest _$_$_DocumentManifestFromJson(Map<String, dynamic> json) {
   return _$_DocumentManifest(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'DocumentManifest',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -835,7 +835,7 @@ Map<String, dynamic> _$_$_DocumentManifestRelatedToJson(
 
 _$_DocumentReference _$_$_DocumentReferenceFromJson(Map<String, dynamic> json) {
   return _$_DocumentReference(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'DocumentReference',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null

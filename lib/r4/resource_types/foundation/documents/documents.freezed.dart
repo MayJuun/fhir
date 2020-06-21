@@ -17,7 +17,7 @@ class _$CatalogEntryTearOff {
 
   _CatalogEntry call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'CatalogEntry')
           String resourceType,
       Id id,
       Meta meta,
@@ -92,7 +92,7 @@ class _$CatalogEntryTearOff {
 const $CatalogEntry = _$CatalogEntryTearOff();
 
 mixin _$CatalogEntry {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'CatalogEntry')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -139,7 +139,7 @@ abstract class $CatalogEntryCopyWith<$Res> {
           CatalogEntry value, $Res Function(CatalogEntry) then) =
       _$CatalogEntryCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'CatalogEntry')
           String resourceType,
       Id id,
       Meta meta,
@@ -417,7 +417,7 @@ abstract class _$CatalogEntryCopyWith<$Res>
       __$CatalogEntryCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'CatalogEntry')
           String resourceType,
       Id id,
       Meta meta,
@@ -594,7 +594,7 @@ class __$CatalogEntryCopyWithImpl<$Res> extends _$CatalogEntryCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CatalogEntry extends _CatalogEntry {
   _$_CatalogEntry(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'CatalogEntry') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -630,7 +630,7 @@ class _$_CatalogEntry extends _CatalogEntry {
       _$_$_CatalogEntryFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'CatalogEntry')
   final String resourceType;
   @override
   final Id id;
@@ -822,7 +822,7 @@ abstract class _CatalogEntry extends CatalogEntry {
   _CatalogEntry._() : super._();
   factory _CatalogEntry(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'CatalogEntry')
           String resourceType,
       Id id,
       Meta meta,
@@ -865,7 +865,7 @@ abstract class _CatalogEntry extends CatalogEntry {
       _$_CatalogEntry.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'CatalogEntry')
   String get resourceType;
   @override
   Id get id;
@@ -1246,7 +1246,7 @@ class _$CompositionTearOff {
 
   _Composition call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'Composition')
           String resourceType,
       Id id,
       Meta meta,
@@ -1326,7 +1326,7 @@ class _$CompositionTearOff {
 const $Composition = _$CompositionTearOff();
 
 mixin _$Composition {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Composition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -1375,7 +1375,7 @@ abstract class $CompositionCopyWith<$Res> {
           Composition value, $Res Function(Composition) then) =
       _$CompositionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'Composition')
           String resourceType,
       Id id,
       Meta meta,
@@ -1675,7 +1675,7 @@ abstract class _$CompositionCopyWith<$Res>
       __$CompositionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'Composition')
           String resourceType,
       Id id,
       Meta meta,
@@ -1856,7 +1856,7 @@ class __$CompositionCopyWithImpl<$Res> extends _$CompositionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Composition extends _Composition {
   _$_Composition(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Composition') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -1895,7 +1895,7 @@ class _$_Composition extends _Composition {
       _$_$_CompositionFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Composition')
   final String resourceType;
   @override
   final Id id;
@@ -2095,7 +2095,7 @@ abstract class _Composition extends Composition {
   _Composition._() : super._();
   factory _Composition(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'Composition')
           String resourceType,
       Id id,
       Meta meta,
@@ -2141,7 +2141,7 @@ abstract class _Composition extends Composition {
       _$_Composition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Composition')
   String get resourceType;
   @override
   Id get id;
@@ -3657,7 +3657,7 @@ class _$DocumentManifestTearOff {
 
   _DocumentManifest call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'DocumentManifest')
           String resourceType,
       Id id,
       Meta meta,
@@ -3730,7 +3730,7 @@ class _$DocumentManifestTearOff {
 const $DocumentManifest = _$DocumentManifestTearOff();
 
 mixin _$DocumentManifest {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'DocumentManifest')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -3776,7 +3776,7 @@ abstract class $DocumentManifestCopyWith<$Res> {
           DocumentManifest value, $Res Function(DocumentManifest) then) =
       _$DocumentManifestCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'DocumentManifest')
           String resourceType,
       Id id,
       Meta meta,
@@ -4044,7 +4044,7 @@ abstract class _$DocumentManifestCopyWith<$Res>
       __$DocumentManifestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'DocumentManifest')
           String resourceType,
       Id id,
       Meta meta,
@@ -4211,7 +4211,7 @@ class __$DocumentManifestCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_DocumentManifest extends _DocumentManifest {
   _$_DocumentManifest(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'DocumentManifest') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -4246,7 +4246,7 @@ class _$_DocumentManifest extends _DocumentManifest {
       _$_$_DocumentManifestFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'DocumentManifest')
   final String resourceType;
   @override
   final Id id;
@@ -4435,7 +4435,7 @@ abstract class _DocumentManifest extends DocumentManifest {
   _DocumentManifest._() : super._();
   factory _DocumentManifest(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'DocumentManifest')
           String resourceType,
       Id id,
       Meta meta,
@@ -4477,7 +4477,7 @@ abstract class _DocumentManifest extends DocumentManifest {
       _$_DocumentManifest.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'DocumentManifest')
   String get resourceType;
   @override
   Id get id;
@@ -4806,7 +4806,7 @@ class _$DocumentReferenceTearOff {
 
   _DocumentReference call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'DocumentReference')
           String resourceType,
       Id id,
       Meta meta,
@@ -4887,7 +4887,7 @@ class _$DocumentReferenceTearOff {
 const $DocumentReference = _$DocumentReferenceTearOff();
 
 mixin _$DocumentReference {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'DocumentReference')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -4937,7 +4937,7 @@ abstract class $DocumentReferenceCopyWith<$Res> {
           DocumentReference value, $Res Function(DocumentReference) then) =
       _$DocumentReferenceCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'DocumentReference')
           String resourceType,
       Id id,
       Meta meta,
@@ -5258,7 +5258,7 @@ abstract class _$DocumentReferenceCopyWith<$Res>
       __$DocumentReferenceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'DocumentReference')
           String resourceType,
       Id id,
       Meta meta,
@@ -5451,7 +5451,7 @@ class __$DocumentReferenceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_DocumentReference extends _DocumentReference {
   _$_DocumentReference(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'DocumentReference') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -5490,7 +5490,7 @@ class _$_DocumentReference extends _DocumentReference {
       _$_$_DocumentReferenceFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'DocumentReference')
   final String resourceType;
   @override
   final Id id;
@@ -5695,7 +5695,7 @@ abstract class _DocumentReference extends DocumentReference {
   _DocumentReference._() : super._();
   factory _DocumentReference(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'DocumentReference')
           String resourceType,
       Id id,
       Meta meta,
@@ -5741,7 +5741,7 @@ abstract class _DocumentReference extends DocumentReference {
       _$_DocumentReference.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'DocumentReference')
   String get resourceType;
   @override
   Id get id;

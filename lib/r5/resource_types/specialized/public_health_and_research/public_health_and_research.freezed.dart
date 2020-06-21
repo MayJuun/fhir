@@ -17,7 +17,7 @@ class _$ResearchStudyTearOff {
 
   _ResearchStudy call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'ResearchStudy')
           String resourceType,
       Id id,
       Meta meta,
@@ -110,7 +110,7 @@ class _$ResearchStudyTearOff {
 const $ResearchStudy = _$ResearchStudyTearOff();
 
 mixin _$ResearchStudy {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ResearchStudy')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -166,7 +166,7 @@ abstract class $ResearchStudyCopyWith<$Res> {
           ResearchStudy value, $Res Function(ResearchStudy) then) =
       _$ResearchStudyCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'ResearchStudy')
           String resourceType,
       Id id,
       Meta meta,
@@ -501,7 +501,7 @@ abstract class _$ResearchStudyCopyWith<$Res>
       __$ResearchStudyCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'ResearchStudy')
           String resourceType,
       Id id,
       Meta meta,
@@ -717,7 +717,7 @@ class __$ResearchStudyCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ResearchStudy extends _ResearchStudy {
   _$_ResearchStudy(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'ResearchStudy') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -762,7 +762,7 @@ class _$_ResearchStudy extends _ResearchStudy {
       _$_$_ResearchStudyFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ResearchStudy')
   final String resourceType;
   @override
   final Id id;
@@ -994,7 +994,7 @@ abstract class _ResearchStudy extends ResearchStudy {
   _ResearchStudy._() : super._();
   factory _ResearchStudy(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'ResearchStudy')
           String resourceType,
       Id id,
       Meta meta,
@@ -1045,7 +1045,7 @@ abstract class _ResearchStudy extends ResearchStudy {
       _$_ResearchStudy.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ResearchStudy')
   String get resourceType;
   @override
   Id get id;
@@ -1748,7 +1748,7 @@ class _$ResearchSubjectTearOff {
 
   _ResearchSubject call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'ResearchSubject')
           String resourceType,
       Id id,
       Meta meta,
@@ -1813,7 +1813,7 @@ class _$ResearchSubjectTearOff {
 const $ResearchSubject = _$ResearchSubjectTearOff();
 
 mixin _$ResearchSubject {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ResearchSubject')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -1854,7 +1854,7 @@ abstract class $ResearchSubjectCopyWith<$Res> {
           ResearchSubject value, $Res Function(ResearchSubject) then) =
       _$ResearchSubjectCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'ResearchSubject')
           String resourceType,
       Id id,
       Meta meta,
@@ -2104,7 +2104,7 @@ abstract class _$ResearchSubjectCopyWith<$Res>
       __$ResearchSubjectCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'ResearchSubject')
           String resourceType,
       Id id,
       Meta meta,
@@ -2253,7 +2253,7 @@ class __$ResearchSubjectCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ResearchSubject extends _ResearchSubject {
   _$_ResearchSubject(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'ResearchSubject') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -2285,7 +2285,7 @@ class _$_ResearchSubject extends _ResearchSubject {
       _$_$_ResearchSubjectFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ResearchSubject')
   final String resourceType;
   @override
   final Id id;
@@ -2453,7 +2453,7 @@ abstract class _ResearchSubject extends ResearchSubject {
   _ResearchSubject._() : super._();
   factory _ResearchSubject(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'ResearchSubject')
           String resourceType,
       Id id,
       Meta meta,
@@ -2491,7 +2491,7 @@ abstract class _ResearchSubject extends ResearchSubject {
       _$_ResearchSubject.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ResearchSubject')
   String get resourceType;
   @override
   Id get id;

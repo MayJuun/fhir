@@ -16,7 +16,7 @@ class _$CarePlanTearOff {
   const _$CarePlanTearOff();
 
   _CarePlan call(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'CarePlan') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -105,7 +105,7 @@ class _$CarePlanTearOff {
 const $CarePlan = _$CarePlanTearOff();
 
 mixin _$CarePlan {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'CarePlan')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -164,7 +164,7 @@ abstract class $CarePlanCopyWith<$Res> {
   factory $CarePlanCopyWith(CarePlan value, $Res Function(CarePlan) then) =
       _$CarePlanCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'CarePlan') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -495,7 +495,7 @@ abstract class _$CarePlanCopyWith<$Res> implements $CarePlanCopyWith<$Res> {
       __$CarePlanCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'CarePlan') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -708,7 +708,7 @@ class __$CarePlanCopyWithImpl<$Res> extends _$CarePlanCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CarePlan extends _CarePlan {
   _$_CarePlan(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'CarePlan') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -756,7 +756,7 @@ class _$_CarePlan extends _CarePlan {
       _$_$_CarePlanFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'CarePlan')
   final String resourceType;
   @override
   final Id id;
@@ -996,7 +996,7 @@ class _$_CarePlan extends _CarePlan {
 abstract class _CarePlan extends CarePlan {
   _CarePlan._() : super._();
   factory _CarePlan(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'CarePlan') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1040,7 +1040,7 @@ abstract class _CarePlan extends CarePlan {
   factory _CarePlan.fromJson(Map<String, dynamic> json) = _$_CarePlan.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'CarePlan')
   String get resourceType;
   @override
   Id get id;
@@ -2436,7 +2436,7 @@ class _$CareTeamTearOff {
   const _$CareTeamTearOff();
 
   _CareTeam call(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'CareTeam') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2497,7 +2497,7 @@ class _$CareTeamTearOff {
 const $CareTeam = _$CareTeamTearOff();
 
 mixin _$CareTeam {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'CareTeam')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -2539,7 +2539,7 @@ abstract class $CareTeamCopyWith<$Res> {
   factory $CareTeamCopyWith(CareTeam value, $Res Function(CareTeam) then) =
       _$CareTeamCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'CareTeam') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2769,7 +2769,7 @@ abstract class _$CareTeamCopyWith<$Res> implements $CareTeamCopyWith<$Res> {
       __$CareTeamCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'CareTeam') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2917,7 +2917,7 @@ class __$CareTeamCopyWithImpl<$Res> extends _$CareTeamCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CareTeam extends _CareTeam {
   _$_CareTeam(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'CareTeam') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -2950,7 +2950,7 @@ class _$_CareTeam extends _CareTeam {
       _$_$_CareTeamFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'CareTeam')
   final String resourceType;
   @override
   final Id id;
@@ -3131,7 +3131,7 @@ class _$_CareTeam extends _CareTeam {
 abstract class _CareTeam extends CareTeam {
   _CareTeam._() : super._();
   factory _CareTeam(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'CareTeam') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3161,7 +3161,7 @@ abstract class _CareTeam extends CareTeam {
   factory _CareTeam.fromJson(Map<String, dynamic> json) = _$_CareTeam.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'CareTeam')
   String get resourceType;
   @override
   Id get id;
@@ -3533,7 +3533,7 @@ class _$GoalTearOff {
 
   _Goal call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'Goal')
           String resourceType,
       Id id,
       Meta meta,
@@ -3617,7 +3617,7 @@ class _$GoalTearOff {
 const $Goal = _$GoalTearOff();
 
 mixin _$Goal {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Goal')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -3667,7 +3667,7 @@ abstract class $GoalCopyWith<$Res> {
   factory $GoalCopyWith(Goal value, $Res Function(Goal) then) =
       _$GoalCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'Goal')
           String resourceType,
       Id id,
       Meta meta,
@@ -3994,7 +3994,7 @@ abstract class _$GoalCopyWith<$Res> implements $GoalCopyWith<$Res> {
       __$GoalCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'Goal')
           String resourceType,
       Id id,
       Meta meta,
@@ -4195,7 +4195,7 @@ class __$GoalCopyWithImpl<$Res> extends _$GoalCopyWithImpl<$Res>
 class _$_Goal extends _Goal {
   _$_Goal(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'Goal')
           this.resourceType,
       this.id,
       this.meta,
@@ -4247,7 +4247,7 @@ class _$_Goal extends _Goal {
       _$_$_GoalFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Goal')
   final String resourceType;
   @override
   final Id id;
@@ -4455,7 +4455,7 @@ abstract class _Goal extends Goal {
   _Goal._() : super._();
   factory _Goal(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'Goal')
           String resourceType,
       Id id,
       Meta meta,
@@ -4502,7 +4502,7 @@ abstract class _Goal extends Goal {
   factory _Goal.fromJson(Map<String, dynamic> json) = _$_Goal.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Goal')
   String get resourceType;
   @override
   Id get id;
@@ -5220,7 +5220,7 @@ class _$NutritionOrderTearOff {
   const _$NutritionOrderTearOff();
 
   _NutritionOrder call(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'NutritionOrder') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5295,7 +5295,7 @@ class _$NutritionOrderTearOff {
 const $NutritionOrder = _$NutritionOrderTearOff();
 
 mixin _$NutritionOrder {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'NutritionOrder')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -5347,7 +5347,7 @@ abstract class $NutritionOrderCopyWith<$Res> {
           NutritionOrder value, $Res Function(NutritionOrder) then) =
       _$NutritionOrderCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'NutritionOrder') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5650,7 +5650,7 @@ abstract class _$NutritionOrderCopyWith<$Res>
       __$NutritionOrderCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'NutritionOrder') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5842,7 +5842,7 @@ class __$NutritionOrderCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_NutritionOrder extends _NutritionOrder {
   _$_NutritionOrder(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'NutritionOrder') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -5883,7 +5883,7 @@ class _$_NutritionOrder extends _NutritionOrder {
       _$_$_NutritionOrderFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'NutritionOrder')
   final String resourceType;
   @override
   final Id id;
@@ -6094,7 +6094,7 @@ class _$_NutritionOrder extends _NutritionOrder {
 abstract class _NutritionOrder extends NutritionOrder {
   _NutritionOrder._() : super._();
   factory _NutritionOrder(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'NutritionOrder') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6132,7 +6132,7 @@ abstract class _NutritionOrder extends NutritionOrder {
       _$_NutritionOrder.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'NutritionOrder')
   String get resourceType;
   @override
   Id get id;
@@ -8419,7 +8419,7 @@ class _$RequestGroupTearOff {
 
   _RequestGroup call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'RequestGroup')
           String resourceType,
       Id id,
       Meta meta,
@@ -8508,7 +8508,7 @@ class _$RequestGroupTearOff {
 const $RequestGroup = _$RequestGroupTearOff();
 
 mixin _$RequestGroup {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'RequestGroup')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -8563,7 +8563,7 @@ abstract class $RequestGroupCopyWith<$Res> {
           RequestGroup value, $Res Function(RequestGroup) then) =
       _$RequestGroupCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'RequestGroup')
           String resourceType,
       Id id,
       Meta meta,
@@ -8889,7 +8889,7 @@ abstract class _$RequestGroupCopyWith<$Res>
       __$RequestGroupCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'RequestGroup')
           String resourceType,
       Id id,
       Meta meta,
@@ -9097,7 +9097,7 @@ class __$RequestGroupCopyWithImpl<$Res> extends _$RequestGroupCopyWithImpl<$Res>
 class _$_RequestGroup extends _RequestGroup {
   _$_RequestGroup(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'RequestGroup')
           this.resourceType,
       this.id,
       this.meta,
@@ -9149,7 +9149,7 @@ class _$_RequestGroup extends _RequestGroup {
       _$_$_RequestGroupFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'RequestGroup')
   final String resourceType;
   @override
   final Id id;
@@ -9367,7 +9367,7 @@ abstract class _RequestGroup extends RequestGroup {
   _RequestGroup._() : super._();
   factory _RequestGroup(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'RequestGroup')
           String resourceType,
       Id id,
       Meta meta,
@@ -9417,7 +9417,7 @@ abstract class _RequestGroup extends RequestGroup {
       _$_RequestGroup.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'RequestGroup')
   String get resourceType;
   @override
   Id get id;
@@ -11356,7 +11356,7 @@ class _$RiskAssessmentTearOff {
   const _$RiskAssessmentTearOff();
 
   _RiskAssessment call(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'RiskAssessment') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -11429,7 +11429,7 @@ class _$RiskAssessmentTearOff {
 const $RiskAssessment = _$RiskAssessmentTearOff();
 
 mixin _$RiskAssessment {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'RiskAssessment')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -11478,7 +11478,7 @@ abstract class $RiskAssessmentCopyWith<$Res> {
           RiskAssessment value, $Res Function(RiskAssessment) then) =
       _$RiskAssessmentCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'RiskAssessment') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -11811,7 +11811,7 @@ abstract class _$RiskAssessmentCopyWith<$Res>
       __$RiskAssessmentCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'RiskAssessment') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -11998,7 +11998,7 @@ class __$RiskAssessmentCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_RiskAssessment extends _RiskAssessment {
   _$_RiskAssessment(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'RiskAssessment') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -12038,7 +12038,7 @@ class _$_RiskAssessment extends _RiskAssessment {
       _$_$_RiskAssessmentFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'RiskAssessment')
   final String resourceType;
   @override
   final Id id;
@@ -12243,7 +12243,7 @@ class _$_RiskAssessment extends _RiskAssessment {
 abstract class _RiskAssessment extends RiskAssessment {
   _RiskAssessment._() : super._();
   factory _RiskAssessment(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'RiskAssessment') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -12280,7 +12280,7 @@ abstract class _RiskAssessment extends RiskAssessment {
       _$_RiskAssessment.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'RiskAssessment')
   String get resourceType;
   @override
   Id get id;
@@ -12909,7 +12909,7 @@ class _$ServiceRequestTearOff {
   const _$ServiceRequestTearOff();
 
   _ServiceRequest call(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'ServiceRequest') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -13034,7 +13034,7 @@ class _$ServiceRequestTearOff {
 const $ServiceRequest = _$ServiceRequestTearOff();
 
 mixin _$ServiceRequest {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ServiceRequest')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -13115,7 +13115,7 @@ abstract class $ServiceRequestCopyWith<$Res> {
           ServiceRequest value, $Res Function(ServiceRequest) then) =
       _$ServiceRequestCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'ServiceRequest') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -13669,7 +13669,7 @@ abstract class _$ServiceRequestCopyWith<$Res>
       __$ServiceRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'ServiceRequest') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -14004,7 +14004,7 @@ class __$ServiceRequestCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ServiceRequest extends _ServiceRequest {
   _$_ServiceRequest(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'ServiceRequest') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -14070,7 +14070,7 @@ class _$_ServiceRequest extends _ServiceRequest {
       _$_$_ServiceRequestFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ServiceRequest')
   final String resourceType;
   @override
   final Id id;
@@ -14385,7 +14385,7 @@ class _$_ServiceRequest extends _ServiceRequest {
 abstract class _ServiceRequest extends ServiceRequest {
   _ServiceRequest._() : super._();
   factory _ServiceRequest(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'ServiceRequest') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -14448,7 +14448,7 @@ abstract class _ServiceRequest extends ServiceRequest {
       _$_ServiceRequest.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ServiceRequest')
   String get resourceType;
   @override
   Id get id;
@@ -14588,28 +14588,39 @@ class _$VisionPrescriptionTearOff {
   const _$VisionPrescriptionTearOff();
 
   _VisionPrescription call(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required
+      @JsonKey(defaultValue: 'VisionPrescription')
+          String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Code status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       FhirDateTime created,
-      @JsonKey(name: '_created') Element createdElement,
-      @required Reference patient,
+      @JsonKey(name: '_created')
+          Element createdElement,
+      @required
+          Reference patient,
       Reference encounter,
       FhirDateTime dateWritten,
-      @JsonKey(name: '_dateWritten') Element dateWrittenElement,
-      @required Reference prescriber,
-      @required List<VisionPrescriptionLensSpecification> lensSpecification}) {
+      @JsonKey(name: '_dateWritten')
+          Element dateWrittenElement,
+      @required
+          Reference prescriber,
+      @required
+          List<VisionPrescriptionLensSpecification> lensSpecification}) {
     return _VisionPrescription(
       resourceType: resourceType,
       id: id,
@@ -14641,7 +14652,7 @@ class _$VisionPrescriptionTearOff {
 const $VisionPrescription = _$VisionPrescriptionTearOff();
 
 mixin _$VisionPrescription {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'VisionPrescription')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -14680,7 +14691,7 @@ abstract class $VisionPrescriptionCopyWith<$Res> {
           VisionPrescription value, $Res Function(VisionPrescription) then) =
       _$VisionPrescriptionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'VisionPrescription') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -14909,7 +14920,7 @@ abstract class _$VisionPrescriptionCopyWith<$Res>
       __$VisionPrescriptionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'VisionPrescription') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -15046,7 +15057,7 @@ class __$VisionPrescriptionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_VisionPrescription extends _VisionPrescription {
   _$_VisionPrescription(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'VisionPrescription') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -15078,7 +15089,7 @@ class _$_VisionPrescription extends _VisionPrescription {
       _$_$_VisionPrescriptionFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'VisionPrescription')
   final String resourceType;
   @override
   final Id id;
@@ -15242,7 +15253,7 @@ abstract class _VisionPrescription extends VisionPrescription {
   _VisionPrescription._() : super._();
   factory _VisionPrescription(
           {@required
-          @JsonKey(defaultValue: 'className')
+          @JsonKey(defaultValue: 'VisionPrescription')
               String resourceType,
           Id id,
           Meta meta,
@@ -15280,7 +15291,7 @@ abstract class _VisionPrescription extends VisionPrescription {
       _$_VisionPrescription.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'VisionPrescription')
   String get resourceType;
   @override
   Id get id;

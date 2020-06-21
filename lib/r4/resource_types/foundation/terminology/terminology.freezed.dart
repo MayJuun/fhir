@@ -17,7 +17,7 @@ class _$CodeSystemTearOff {
 
   _CodeSystem call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'CodeSystem')
           String resourceType,
       Id id,
       Meta meta,
@@ -158,7 +158,7 @@ class _$CodeSystemTearOff {
 const $CodeSystem = _$CodeSystemTearOff();
 
 mixin _$CodeSystem {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'CodeSystem')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -246,7 +246,7 @@ abstract class $CodeSystemCopyWith<$Res> {
           CodeSystem value, $Res Function(CodeSystem) then) =
       _$CodeSystemCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'CodeSystem')
           String resourceType,
       Id id,
       Meta meta,
@@ -758,7 +758,7 @@ abstract class _$CodeSystemCopyWith<$Res> implements $CodeSystemCopyWith<$Res> {
       __$CodeSystemCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'CodeSystem')
           String resourceType,
       Id id,
       Meta meta,
@@ -1081,7 +1081,7 @@ class __$CodeSystemCopyWithImpl<$Res> extends _$CodeSystemCopyWithImpl<$Res>
 class _$_CodeSystem extends _CodeSystem {
   _$_CodeSystem(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'CodeSystem')
           this.resourceType,
       this.id,
       this.meta,
@@ -1166,7 +1166,7 @@ class _$_CodeSystem extends _CodeSystem {
       _$_$_CodeSystemFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'CodeSystem')
   final String resourceType;
   @override
   final Id id;
@@ -1478,7 +1478,7 @@ abstract class _CodeSystem extends CodeSystem {
   _CodeSystem._() : super._();
   factory _CodeSystem(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'CodeSystem')
           String resourceType,
       Id id,
       Meta meta,
@@ -1561,7 +1561,7 @@ abstract class _CodeSystem extends CodeSystem {
       _$_CodeSystem.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'CodeSystem')
   String get resourceType;
   @override
   Id get id;
@@ -3951,7 +3951,7 @@ class _$ConceptMapTearOff {
 
   _ConceptMap call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'ConceptMap')
           String resourceType,
       Id id,
       Meta meta,
@@ -4072,7 +4072,7 @@ class _$ConceptMapTearOff {
 const $ConceptMap = _$ConceptMapTearOff();
 
 mixin _$ConceptMap {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ConceptMap')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -4148,7 +4148,7 @@ abstract class $ConceptMapCopyWith<$Res> {
           ConceptMap value, $Res Function(ConceptMap) then) =
       _$ConceptMapCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'ConceptMap')
           String resourceType,
       Id id,
       Meta meta,
@@ -4604,7 +4604,7 @@ abstract class _$ConceptMapCopyWith<$Res> implements $ConceptMapCopyWith<$Res> {
       __$ConceptMapCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'ConceptMap')
           String resourceType,
       Id id,
       Meta meta,
@@ -4879,7 +4879,7 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ConceptMap extends _ConceptMap {
   _$_ConceptMap(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'ConceptMap') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -4932,7 +4932,7 @@ class _$_ConceptMap extends _ConceptMap {
       _$_$_ConceptMapFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ConceptMap')
   final String resourceType;
   @override
   final Id id;
@@ -5208,7 +5208,7 @@ abstract class _ConceptMap extends ConceptMap {
   _ConceptMap._() : super._();
   factory _ConceptMap(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'ConceptMap')
           String resourceType,
       Id id,
       Meta meta,
@@ -5279,7 +5279,7 @@ abstract class _ConceptMap extends ConceptMap {
       _$_ConceptMap.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ConceptMap')
   String get resourceType;
   @override
   Id get id;
@@ -7477,7 +7477,7 @@ class _$NamingSystemTearOff {
 
   _NamingSystem call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'NamingSystem')
           String resourceType,
       Id id,
       Meta meta,
@@ -7565,7 +7565,7 @@ class _$NamingSystemTearOff {
 const $NamingSystem = _$NamingSystemTearOff();
 
 mixin _$NamingSystem {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'NamingSystem')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -7621,7 +7621,7 @@ abstract class $NamingSystemCopyWith<$Res> {
           NamingSystem value, $Res Function(NamingSystem) then) =
       _$NamingSystemCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'NamingSystem')
           String resourceType,
       Id id,
       Meta meta,
@@ -7934,7 +7934,7 @@ abstract class _$NamingSystemCopyWith<$Res>
       __$NamingSystemCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'NamingSystem')
           String resourceType,
       Id id,
       Meta meta,
@@ -8128,7 +8128,7 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_NamingSystem extends _NamingSystem {
   _$_NamingSystem(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'NamingSystem') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -8168,7 +8168,7 @@ class _$_NamingSystem extends _NamingSystem {
       _$_$_NamingSystemFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'NamingSystem')
   final String resourceType;
   @override
   final Id id;
@@ -8382,7 +8382,7 @@ abstract class _NamingSystem extends NamingSystem {
   _NamingSystem._() : super._();
   factory _NamingSystem(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'NamingSystem')
           String resourceType,
       Id id,
       Meta meta,
@@ -8434,7 +8434,7 @@ abstract class _NamingSystem extends NamingSystem {
       _$_NamingSystem.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'NamingSystem')
   String get resourceType;
   @override
   Id get id;
@@ -8998,7 +8998,7 @@ class _$TerminologyCapabilitiesTearOff {
 
   _TerminologyCapabilities call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'TerminologyCapabilities')
           String resourceType,
       Id id,
       Meta meta,
@@ -9125,7 +9125,7 @@ class _$TerminologyCapabilitiesTearOff {
 const $TerminologyCapabilities = _$TerminologyCapabilitiesTearOff();
 
 mixin _$TerminologyCapabilities {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'TerminologyCapabilities')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -9204,7 +9204,7 @@ abstract class $TerminologyCapabilitiesCopyWith<$Res> {
           $Res Function(TerminologyCapabilities) then) =
       _$TerminologyCapabilitiesCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'TerminologyCapabilities')
           String resourceType,
       Id id,
       Meta meta,
@@ -9732,7 +9732,7 @@ abstract class _$TerminologyCapabilitiesCopyWith<$Res>
       __$TerminologyCapabilitiesCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'TerminologyCapabilities')
           String resourceType,
       Id id,
       Meta meta,
@@ -10038,7 +10038,7 @@ class __$TerminologyCapabilitiesCopyWithImpl<$Res>
 class _$_TerminologyCapabilities extends _TerminologyCapabilities {
   _$_TerminologyCapabilities(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'TerminologyCapabilities')
           this.resourceType,
       this.id,
       this.meta,
@@ -10114,7 +10114,7 @@ class _$_TerminologyCapabilities extends _TerminologyCapabilities {
       _$_$_TerminologyCapabilitiesFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'TerminologyCapabilities')
   final String resourceType;
   @override
   final Id id;
@@ -10403,7 +10403,7 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
   _TerminologyCapabilities._() : super._();
   factory _TerminologyCapabilities(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'TerminologyCapabilities')
           String resourceType,
       Id id,
       Meta meta,
@@ -10477,7 +10477,7 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
       _$_TerminologyCapabilities.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'TerminologyCapabilities')
   String get resourceType;
   @override
   Id get id;
@@ -13875,7 +13875,7 @@ class _$ValueSetTearOff {
   const _$ValueSetTearOff();
 
   _ValueSet call(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'ValueSet') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -13966,7 +13966,7 @@ class _$ValueSetTearOff {
 const $ValueSet = _$ValueSetTearOff();
 
 mixin _$ValueSet {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ValueSet')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -14033,7 +14033,7 @@ abstract class $ValueSetCopyWith<$Res> {
   factory $ValueSetCopyWith(ValueSet value, $Res Function(ValueSet) then) =
       _$ValueSetCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'ValueSet') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -14424,7 +14424,7 @@ abstract class _$ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
       __$ValueSetCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'ValueSet') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -14652,7 +14652,7 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ValueSet extends _ValueSet {
   _$_ValueSet(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'ValueSet') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -14700,7 +14700,7 @@ class _$_ValueSet extends _ValueSet {
       _$_$_ValueSetFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ValueSet')
   final String resourceType;
   @override
   final Id id;
@@ -14952,7 +14952,7 @@ class _$_ValueSet extends _ValueSet {
 abstract class _ValueSet extends ValueSet {
   _ValueSet._() : super._();
   factory _ValueSet(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'ValueSet') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -14997,7 +14997,7 @@ abstract class _ValueSet extends ValueSet {
   factory _ValueSet.fromJson(Map<String, dynamic> json) = _$_ValueSet.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ValueSet')
   String get resourceType;
   @override
   Id get id;

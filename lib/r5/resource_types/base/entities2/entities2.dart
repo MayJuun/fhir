@@ -11,7 +11,7 @@ part 'entities2.g.dart';
 abstract class BiologicallyDerivedProduct with Resource  implements _$BiologicallyDerivedProduct {
 BiologicallyDerivedProduct._();
 factory BiologicallyDerivedProduct({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'BiologicallyDerivedProduct') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -117,7 +117,7 @@ factory BiologicallyDerivedProductStorage({
 abstract class Device with Resource  implements _$Device {
 Device._();
 factory Device({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Device') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -259,7 +259,7 @@ factory DeviceProperty({
 abstract class DeviceMetric with Resource  implements _$DeviceMetric {
 DeviceMetric._();
 factory DeviceMetric({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'DeviceMetric') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -310,7 +310,7 @@ factory DeviceMetricCalibration({
 abstract class Substance with Resource  implements _$Substance {
 Substance._();
 factory Substance({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Substance') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,

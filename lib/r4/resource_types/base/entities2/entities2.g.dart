@@ -9,7 +9,8 @@ part of 'entities2.dart';
 _$_BiologicallyDerivedProduct _$_$_BiologicallyDerivedProductFromJson(
     Map<String, dynamic> json) {
   return _$_BiologicallyDerivedProduct(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType:
+        json['resourceType'] as String ?? 'BiologicallyDerivedProduct',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -437,7 +438,7 @@ const _$BiologicallyDerivedProductStorageScaleEnumMap = {
 
 _$_Device _$_$_DeviceFromJson(Map<String, dynamic> json) {
   return _$_Device(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Device',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -947,7 +948,7 @@ Map<String, dynamic> _$_$_DevicePropertyToJson(_$_DeviceProperty instance) {
 
 _$_DeviceMetric _$_$_DeviceMetricFromJson(Map<String, dynamic> json) {
   return _$_DeviceMetric(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'DeviceMetric',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1172,7 +1173,7 @@ const _$DeviceMetricCalibrationStateEnumMap = {
 
 _$_Substance _$_$_SubstanceFromJson(Map<String, dynamic> json) {
   return _$_Substance(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Substance',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null

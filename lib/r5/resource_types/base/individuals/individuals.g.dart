@@ -8,7 +8,7 @@ part of 'individuals.dart';
 
 _$_Group _$_$_GroupFromJson(Map<String, dynamic> json) {
   return _$_Group(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Group',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -296,7 +296,7 @@ Map<String, dynamic> _$_$_GroupMemberToJson(_$_GroupMember instance) {
 
 _$_Patient _$_$_PatientFromJson(Map<String, dynamic> json) {
   return _$_Patient(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Patient',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -658,7 +658,7 @@ const _$PatientLinkTypeEnumMap = {
 
 _$_Person _$_$_PersonFromJson(Map<String, dynamic> json) {
   return _$_Person(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Person',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -839,7 +839,7 @@ const _$PersonLinkAssuranceEnumMap = {
 
 _$_Practitioner _$_$_PractitionerFromJson(Map<String, dynamic> json) {
   return _$_Practitioner(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Practitioner',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1025,7 +1025,7 @@ Map<String, dynamic> _$_$_PractitionerQualificationToJson(
 
 _$_PractitionerRole _$_$_PractitionerRoleFromJson(Map<String, dynamic> json) {
   return _$_PractitionerRole(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'PractitionerRole',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1286,7 +1286,7 @@ Map<String, dynamic> _$_$_PractitionerRoleNotAvailableToJson(
 
 _$_RelatedPerson _$_$_RelatedPersonFromJson(Map<String, dynamic> json) {
   return _$_RelatedPerson(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'RelatedPerson',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null

@@ -11,7 +11,7 @@ part 'general.g.dart';
 abstract class Account with Resource  implements _$Account {
 Account._();
 factory Account({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Account') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -76,7 +76,7 @@ factory AccountGuarantor({
 abstract class ChargeItem with Resource  implements _$ChargeItem {
 ChargeItem._();
 factory ChargeItem({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'ChargeItem') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -145,7 +145,7 @@ factory ChargeItemPerformer({
 abstract class ChargeItemDefinition with Resource  implements _$ChargeItemDefinition {
 ChargeItemDefinition._();
 factory ChargeItemDefinition({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'ChargeItemDefinition') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -254,7 +254,7 @@ factory ChargeItemDefinitionPriceComponent({
 abstract class Contract with Resource  implements _$Contract {
 Contract._();
 factory Contract({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Contract') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -647,7 +647,7 @@ factory ContractRule({
 abstract class ExplanationOfBenefit with Resource  implements _$ExplanationOfBenefit {
 ExplanationOfBenefit._();
 factory ExplanationOfBenefit({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'ExplanationOfBenefit') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -1165,7 +1165,7 @@ factory ExplanationOfBenefitFinancial({
 abstract class InsurancePlan with Resource  implements _$InsurancePlan {
 InsurancePlan._();
 factory InsurancePlan({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'InsurancePlan') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,

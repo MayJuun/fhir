@@ -8,7 +8,7 @@ part of 'request_and_response.dart';
 
 _$_Communication _$_$_CommunicationFromJson(Map<String, dynamic> json) {
   return _$_Communication(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'Communication',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -262,7 +262,7 @@ Map<String, dynamic> _$_$_CommunicationPayloadToJson(
 _$_CommunicationRequest _$_$_CommunicationRequestFromJson(
     Map<String, dynamic> json) {
   return _$_CommunicationRequest(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'CommunicationRequest',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -512,7 +512,7 @@ Map<String, dynamic> _$_$_CommunicationRequestPayloadToJson(
 
 _$_DeviceRequest _$_$_DeviceRequestFromJson(Map<String, dynamic> json) {
   return _$_DeviceRequest(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'DeviceRequest',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -795,7 +795,7 @@ Map<String, dynamic> _$_$_DeviceRequestParameterToJson(
 _$_DeviceUseStatement _$_$_DeviceUseStatementFromJson(
     Map<String, dynamic> json) {
   return _$_DeviceUseStatement(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'DeviceUseStatement',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -986,7 +986,7 @@ const _$DeviceUseStatementStatusEnumMap = {
 
 _$_GuidanceResponse _$_$_GuidanceResponseFromJson(Map<String, dynamic> json) {
   return _$_GuidanceResponse(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'GuidanceResponse',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1162,7 +1162,7 @@ const _$GuidanceResponseStatusEnumMap = {
 
 _$_SupplyDelivery _$_$_SupplyDeliveryFromJson(Map<String, dynamic> json) {
   return _$_SupplyDelivery(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'SupplyDelivery',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1350,7 +1350,7 @@ Map<String, dynamic> _$_$_SupplyDeliverySuppliedItemToJson(
 
 _$_SupplyRequest _$_$_SupplyRequestFromJson(Map<String, dynamic> json) {
   return _$_SupplyRequest(
-    resourceType: json['resourceType'] as String ?? 'className',
+    resourceType: json['resourceType'] as String ?? 'SupplyRequest',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null

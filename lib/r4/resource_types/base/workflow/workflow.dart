@@ -11,7 +11,7 @@ part 'workflow.g.dart';
 abstract class Appointment with Resource  implements _$Appointment {
 Appointment._();
 factory Appointment({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Appointment') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -81,7 +81,7 @@ factory AppointmentParticipant({
 abstract class AppointmentResponse with Resource  implements _$AppointmentResponse {
 AppointmentResponse._();
 factory AppointmentResponse({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'AppointmentResponse') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -113,7 +113,7 @@ factory AppointmentResponse({
 abstract class Schedule with Resource  implements _$Schedule {
 Schedule._();
 factory Schedule({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Schedule') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -143,7 +143,7 @@ factory Schedule({
 abstract class Slot with Resource  implements _$Slot {
 Slot._();
 factory Slot({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Slot') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -179,7 +179,7 @@ factory Slot({
 abstract class Task with Resource  implements _$Task {
 Task._();
 factory Task({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Task') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -417,7 +417,7 @@ factory TaskOutput({
 abstract class VerificationResult with Resource  implements _$VerificationResult {
 VerificationResult._();
 factory VerificationResult({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'VerificationResult') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,

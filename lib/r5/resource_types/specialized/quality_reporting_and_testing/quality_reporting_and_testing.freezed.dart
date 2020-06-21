@@ -17,7 +17,7 @@ class _$MeasureTearOff {
 
   _Measure call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'Measure')
           String resourceType,
       Id id,
       Meta meta,
@@ -205,7 +205,7 @@ class _$MeasureTearOff {
 const $Measure = _$MeasureTearOff();
 
 mixin _$Measure {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Measure')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -317,7 +317,7 @@ abstract class $MeasureCopyWith<$Res> {
   factory $MeasureCopyWith(Measure value, $Res Function(Measure) then) =
       _$MeasureCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'Measure')
           String resourceType,
       Id id,
       Meta meta,
@@ -1036,7 +1036,7 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       __$MeasureCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'Measure')
           String resourceType,
       Id id,
       Meta meta,
@@ -1473,7 +1473,7 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
 class _$_Measure extends _Measure {
   _$_Measure(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'Measure')
           this.resourceType,
       this.id,
       this.meta,
@@ -1583,7 +1583,7 @@ class _$_Measure extends _Measure {
       _$_$_MeasureFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Measure')
   final String resourceType;
   @override
   final Id id;
@@ -1984,7 +1984,7 @@ abstract class _Measure extends Measure {
   _Measure._() : super._();
   factory _Measure(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'Measure')
           String resourceType,
       Id id,
       Meta meta,
@@ -2091,7 +2091,7 @@ abstract class _Measure extends Measure {
   factory _Measure.fromJson(Map<String, dynamic> json) = _$_Measure.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Measure')
   String get resourceType;
   @override
   Id get id;
@@ -3885,7 +3885,7 @@ class _$MeasureReportTearOff {
 
   _MeasureReport call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'MeasureReport')
           String resourceType,
       Id id,
       Meta meta,
@@ -3955,7 +3955,7 @@ class _$MeasureReportTearOff {
 const $MeasureReport = _$MeasureReportTearOff();
 
 mixin _$MeasureReport {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'MeasureReport')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -3999,7 +3999,7 @@ abstract class $MeasureReportCopyWith<$Res> {
           MeasureReport value, $Res Function(MeasureReport) then) =
       _$MeasureReportCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'MeasureReport')
           String resourceType,
       Id id,
       Meta meta,
@@ -4254,7 +4254,7 @@ abstract class _$MeasureReportCopyWith<$Res>
       __$MeasureReportCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'MeasureReport')
           String resourceType,
       Id id,
       Meta meta,
@@ -4408,7 +4408,7 @@ class __$MeasureReportCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MeasureReport extends _MeasureReport {
   _$_MeasureReport(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'MeasureReport') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -4442,7 +4442,7 @@ class _$_MeasureReport extends _MeasureReport {
       _$_$_MeasureReportFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'MeasureReport')
   final String resourceType;
   @override
   final Id id;
@@ -4622,7 +4622,7 @@ abstract class _MeasureReport extends MeasureReport {
   _MeasureReport._() : super._();
   factory _MeasureReport(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'MeasureReport')
           String resourceType,
       Id id,
       Meta meta,
@@ -4663,7 +4663,7 @@ abstract class _MeasureReport extends MeasureReport {
       _$_MeasureReport.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'MeasureReport')
   String get resourceType;
   @override
   Id get id;
@@ -6438,7 +6438,7 @@ class _$TestReportTearOff {
 
   _TestReport call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'TestReport')
           String resourceType,
       Id id,
       Meta meta,
@@ -6518,7 +6518,7 @@ class _$TestReportTearOff {
 const $TestReport = _$TestReportTearOff();
 
 mixin _$TestReport {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'TestReport')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -6569,7 +6569,7 @@ abstract class $TestReportCopyWith<$Res> {
           TestReport value, $Res Function(TestReport) then) =
       _$TestReportCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'TestReport')
           String resourceType,
       Id id,
       Meta meta,
@@ -6876,7 +6876,7 @@ abstract class _$TestReportCopyWith<$Res> implements $TestReportCopyWith<$Res> {
       __$TestReportCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'TestReport')
           String resourceType,
       Id id,
       Meta meta,
@@ -7056,7 +7056,7 @@ class __$TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_TestReport extends _TestReport {
   _$_TestReport(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'TestReport') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -7093,7 +7093,7 @@ class _$_TestReport extends _TestReport {
       _$_$_TestReportFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'TestReport')
   final String resourceType;
   @override
   final Id id;
@@ -7293,7 +7293,7 @@ abstract class _TestReport extends TestReport {
   _TestReport._() : super._();
   factory _TestReport(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'TestReport')
           String resourceType,
       Id id,
       Meta meta,
@@ -7340,7 +7340,7 @@ abstract class _TestReport extends TestReport {
       _$_TestReport.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'TestReport')
   String get resourceType;
   @override
   Id get id;
@@ -10042,7 +10042,7 @@ class _$TestScriptTearOff {
 
   _TestScript call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'TestScript')
           String resourceType,
       Id id,
       Meta meta,
@@ -10159,7 +10159,7 @@ class _$TestScriptTearOff {
 const $TestScript = _$TestScriptTearOff();
 
 mixin _$TestScript {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'TestScript')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -10231,7 +10231,7 @@ abstract class $TestScriptCopyWith<$Res> {
           TestScript value, $Res Function(TestScript) then) =
       _$TestScriptCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'TestScript')
           String resourceType,
       Id id,
       Meta meta,
@@ -10671,7 +10671,7 @@ abstract class _$TestScriptCopyWith<$Res> implements $TestScriptCopyWith<$Res> {
       __$TestScriptCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'TestScript')
           String resourceType,
       Id id,
       Meta meta,
@@ -10939,7 +10939,7 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_TestScript extends _TestScript {
   _$_TestScript(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'TestScript') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -10992,7 +10992,7 @@ class _$_TestScript extends _TestScript {
       _$_$_TestScriptFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'TestScript')
   final String resourceType;
   @override
   final Id id;
@@ -11264,7 +11264,7 @@ abstract class _TestScript extends TestScript {
   _TestScript._() : super._();
   factory _TestScript(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'TestScript')
           String resourceType,
       Id id,
       Meta meta,
@@ -11331,7 +11331,7 @@ abstract class _TestScript extends TestScript {
       _$_TestScript.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'TestScript')
   String get resourceType;
   @override
   Id get id;

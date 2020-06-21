@@ -11,7 +11,7 @@ part 'definitional_artifacts.g.dart';
 abstract class ActivityDefinition with Resource  implements _$ActivityDefinition {
 ActivityDefinition._();
 factory ActivityDefinition({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'ActivityDefinition') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -134,7 +134,7 @@ factory ActivityDefinitionDynamicValue({
 abstract class ConditionDefinition with Resource  implements _$ConditionDefinition {
 ConditionDefinition._();
 factory ConditionDefinition({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'ConditionDefinition') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -279,7 +279,7 @@ factory ConditionDefinitionPlan({
 abstract class DeviceDefinition with Resource  implements _$DeviceDefinition {
 DeviceDefinition._();
 factory DeviceDefinition({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'DeviceDefinition') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -423,7 +423,7 @@ factory DeviceDefinitionMaterial({
 abstract class EventDefinition with Resource  implements _$EventDefinition {
 EventDefinition._();
 factory EventDefinition({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'EventDefinition') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -487,7 +487,7 @@ factory EventDefinition({
 abstract class ObservationDefinition with Resource  implements _$ObservationDefinition {
 ObservationDefinition._();
 factory ObservationDefinition({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'ObservationDefinition') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -619,7 +619,7 @@ factory ObservationDefinitionComponent({
 abstract class PlanDefinition with Resource  implements _$PlanDefinition {
 PlanDefinition._();
 factory PlanDefinition({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'PlanDefinition') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -845,7 +845,7 @@ factory PlanDefinitionDynamicValue({
 abstract class Questionnaire with Resource  implements _$Questionnaire {
 Questionnaire._();
 factory Questionnaire({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Questionnaire') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -1028,7 +1028,7 @@ factory QuestionnaireInitial({
 abstract class SpecimenDefinition with Resource  implements _$SpecimenDefinition {
 SpecimenDefinition._();
 factory SpecimenDefinition({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'SpecimenDefinition') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,

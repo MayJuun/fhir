@@ -16,7 +16,7 @@ class _$ClaimTearOff {
   const _$ClaimTearOff();
 
   _Claim call(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'Claim') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -107,7 +107,7 @@ class _$ClaimTearOff {
 const $Claim = _$ClaimTearOff();
 
 mixin _$Claim {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Claim')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -165,7 +165,7 @@ abstract class $ClaimCopyWith<$Res> {
   factory $ClaimCopyWith(Claim value, $Res Function(Claim) then) =
       _$ClaimCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'Claim') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -605,7 +605,7 @@ abstract class _$ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
       __$ClaimCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'Claim') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -837,7 +837,7 @@ class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Claim extends _Claim {
   _$_Claim(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Claim') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -890,7 +890,7 @@ class _$_Claim extends _Claim {
       _$_$_ClaimFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Claim')
   final String resourceType;
   @override
   final Id id;
@@ -1133,7 +1133,7 @@ class _$_Claim extends _Claim {
 abstract class _Claim extends Claim {
   _Claim._() : super._();
   factory _Claim(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'Claim') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1178,7 +1178,7 @@ abstract class _Claim extends Claim {
   factory _Claim.fromJson(Map<String, dynamic> json) = _$_Claim.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Claim')
   String get resourceType;
   @override
   Id get id;
@@ -6768,7 +6768,7 @@ class _$ClaimResponseTearOff {
   const _$ClaimResponseTearOff();
 
   _ClaimResponse call(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'ClaimResponse') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6865,7 +6865,7 @@ class _$ClaimResponseTearOff {
 const $ClaimResponse = _$ClaimResponseTearOff();
 
 mixin _$ClaimResponse {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ClaimResponse')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -6929,7 +6929,7 @@ abstract class $ClaimResponseCopyWith<$Res> {
           ClaimResponse value, $Res Function(ClaimResponse) then) =
       _$ClaimResponseCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'ClaimResponse') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7378,7 +7378,7 @@ abstract class _$ClaimResponseCopyWith<$Res>
       __$ClaimResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'ClaimResponse') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7627,7 +7627,7 @@ class __$ClaimResponseCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ClaimResponse extends _ClaimResponse {
   _$_ClaimResponse(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'ClaimResponse') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -7681,7 +7681,7 @@ class _$_ClaimResponse extends _ClaimResponse {
       _$_$_ClaimResponseFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ClaimResponse')
   final String resourceType;
   @override
   final Id id;
@@ -7938,7 +7938,7 @@ class _$_ClaimResponse extends _ClaimResponse {
 abstract class _ClaimResponse extends ClaimResponse {
   _ClaimResponse._() : super._();
   factory _ClaimResponse(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'ClaimResponse') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7987,7 +7987,7 @@ abstract class _ClaimResponse extends ClaimResponse {
       _$_ClaimResponse.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ClaimResponse')
   String get resourceType;
   @override
   Id get id;
@@ -13309,7 +13309,7 @@ class _$InvoiceTearOff {
   const _$InvoiceTearOff();
 
   _Invoice call(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'Invoice') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -13380,7 +13380,7 @@ class _$InvoiceTearOff {
 const $Invoice = _$InvoiceTearOff();
 
 mixin _$Invoice {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Invoice')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -13429,7 +13429,7 @@ abstract class $InvoiceCopyWith<$Res> {
   factory $InvoiceCopyWith(Invoice value, $Res Function(Invoice) then) =
       _$InvoiceCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'Invoice') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -13744,7 +13744,7 @@ abstract class _$InvoiceCopyWith<$Res> implements $InvoiceCopyWith<$Res> {
       __$InvoiceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className') String resourceType,
+      {@JsonKey(defaultValue: 'Invoice') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -13923,7 +13923,7 @@ class __$InvoiceCopyWithImpl<$Res> extends _$InvoiceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Invoice extends _Invoice {
   _$_Invoice(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Invoice') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -13961,7 +13961,7 @@ class _$_Invoice extends _Invoice {
       _$_$_InvoiceFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Invoice')
   final String resourceType;
   @override
   final Id id;
@@ -14164,7 +14164,7 @@ class _$_Invoice extends _Invoice {
 abstract class _Invoice extends Invoice {
   _Invoice._() : super._();
   factory _Invoice(
-      {@required @JsonKey(defaultValue: 'className') String resourceType,
+      {@required @JsonKey(defaultValue: 'Invoice') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -14199,7 +14199,7 @@ abstract class _Invoice extends Invoice {
   factory _Invoice.fromJson(Map<String, dynamic> json) = _$_Invoice.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'Invoice')
   String get resourceType;
   @override
   Id get id;

@@ -11,7 +11,7 @@ part 'individuals.g.dart';
 abstract class Group with Resource  implements _$Group {
 Group._();
 factory Group({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Group') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -84,7 +84,7 @@ factory GroupMember({
 abstract class Patient with Resource  implements _$Patient {
 Patient._();
 factory Patient({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Patient') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -179,7 +179,7 @@ factory PatientLink({
 abstract class Person with Resource  implements _$Person {
 Person._();
 factory Person({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Person') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -227,7 +227,7 @@ factory PersonLink({
 abstract class Practitioner with Resource  implements _$Practitioner {
 Practitioner._();
 factory Practitioner({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Practitioner') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -276,7 +276,7 @@ factory PractitionerQualification({
 abstract class PractitionerRole with Resource  implements _$PractitionerRole {
 PractitionerRole._();
 factory PractitionerRole({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'PractitionerRole') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -347,7 +347,7 @@ factory PractitionerRoleNotAvailable({
 abstract class RelatedPerson with Resource  implements _$RelatedPerson {
 RelatedPerson._();
 factory RelatedPerson({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'RelatedPerson') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,

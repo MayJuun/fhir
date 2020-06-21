@@ -11,7 +11,7 @@ part 'public_health_and_research.g.dart';
 abstract class ResearchStudy with Resource  implements _$ResearchStudy {
 ResearchStudy._();
 factory ResearchStudy({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'ResearchStudy') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -90,7 +90,7 @@ factory ResearchStudyObjective({
 abstract class ResearchSubject with Resource  implements _$ResearchSubject {
 ResearchSubject._();
 factory ResearchSubject({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'ResearchSubject') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,

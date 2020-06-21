@@ -17,7 +17,7 @@ class _$CapabilityStatementTearOff {
 
   _CapabilityStatement call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'CapabilityStatement')
           String resourceType,
       Id id,
       Meta meta,
@@ -154,7 +154,7 @@ class _$CapabilityStatementTearOff {
 const $CapabilityStatement = _$CapabilityStatementTearOff();
 
 mixin _$CapabilityStatement {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'CapabilityStatement')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -239,7 +239,7 @@ abstract class $CapabilityStatementCopyWith<$Res> {
           CapabilityStatement value, $Res Function(CapabilityStatement) then) =
       _$CapabilityStatementCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'CapabilityStatement')
           String resourceType,
       Id id,
       Meta meta,
@@ -725,7 +725,7 @@ abstract class _$CapabilityStatementCopyWith<$Res>
       __$CapabilityStatementCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'CapabilityStatement')
           String resourceType,
       Id id,
       Meta meta,
@@ -1038,7 +1038,7 @@ class __$CapabilityStatementCopyWithImpl<$Res>
 class _$_CapabilityStatement extends _CapabilityStatement {
   _$_CapabilityStatement(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'CapabilityStatement')
           this.resourceType,
       this.id,
       this.meta,
@@ -1120,7 +1120,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
       _$_$_CapabilityStatementFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'CapabilityStatement')
   final String resourceType;
   @override
   final Id id;
@@ -1427,7 +1427,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   _CapabilityStatement._() : super._();
   factory _CapabilityStatement(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'CapabilityStatement')
           String resourceType,
       Id id,
       Meta meta,
@@ -1507,7 +1507,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
       _$_CapabilityStatement.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'CapabilityStatement')
   String get resourceType;
   @override
   Id get id;
@@ -7008,7 +7008,7 @@ class _$CapabilityStatement2TearOff {
 
   _CapabilityStatement2 call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'CapabilityStatement2')
           String resourceType,
       Id id,
       Meta meta,
@@ -7140,7 +7140,7 @@ class _$CapabilityStatement2TearOff {
 const $CapabilityStatement2 = _$CapabilityStatement2TearOff();
 
 mixin _$CapabilityStatement2 {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'CapabilityStatement2')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -7222,7 +7222,7 @@ abstract class $CapabilityStatement2CopyWith<$Res> {
           $Res Function(CapabilityStatement2) then) =
       _$CapabilityStatement2CopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'CapabilityStatement2')
           String resourceType,
       Id id,
       Meta meta,
@@ -7699,7 +7699,7 @@ abstract class _$CapabilityStatement2CopyWith<$Res>
       __$CapabilityStatement2CopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'CapabilityStatement2')
           String resourceType,
       Id id,
       Meta meta,
@@ -8002,7 +8002,7 @@ class __$CapabilityStatement2CopyWithImpl<$Res>
 class _$_CapabilityStatement2 extends _CapabilityStatement2 {
   _$_CapabilityStatement2(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'CapabilityStatement2')
           this.resourceType,
       this.id,
       this.meta,
@@ -8081,7 +8081,7 @@ class _$_CapabilityStatement2 extends _CapabilityStatement2 {
       _$_$_CapabilityStatement2FromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'CapabilityStatement2')
   final String resourceType;
   @override
   final Id id;
@@ -8379,7 +8379,7 @@ abstract class _CapabilityStatement2 extends CapabilityStatement2 {
   _CapabilityStatement2._() : super._();
   factory _CapabilityStatement2(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'CapabilityStatement2')
           String resourceType,
       Id id,
       Meta meta,
@@ -8456,7 +8456,7 @@ abstract class _CapabilityStatement2 extends CapabilityStatement2 {
       _$_CapabilityStatement2.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'CapabilityStatement2')
   String get resourceType;
   @override
   Id get id;
@@ -11548,7 +11548,7 @@ class _$CompartmentDefinitionTearOff {
 
   _CompartmentDefinition call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'CompartmentDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -11660,7 +11660,7 @@ class _$CompartmentDefinitionTearOff {
 const $CompartmentDefinition = _$CompartmentDefinitionTearOff();
 
 mixin _$CompartmentDefinition {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'CompartmentDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -11731,7 +11731,7 @@ abstract class $CompartmentDefinitionCopyWith<$Res> {
           $Res Function(CompartmentDefinition) then) =
       _$CompartmentDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'CompartmentDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -12139,7 +12139,7 @@ abstract class _$CompartmentDefinitionCopyWith<$Res>
       __$CompartmentDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'CompartmentDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -12393,7 +12393,7 @@ class __$CompartmentDefinitionCopyWithImpl<$Res>
 class _$_CompartmentDefinition extends _CompartmentDefinition {
   _$_CompartmentDefinition(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'CompartmentDefinition')
           this.resourceType,
       this.id,
       this.meta,
@@ -12461,7 +12461,7 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
       _$_$_CompartmentDefinitionFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'CompartmentDefinition')
   final String resourceType;
   @override
   final Id id;
@@ -12721,7 +12721,7 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
   _CompartmentDefinition._() : super._();
   factory _CompartmentDefinition(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'CompartmentDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -12787,7 +12787,7 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
       _$_CompartmentDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'CompartmentDefinition')
   String get resourceType;
   @override
   Id get id;
@@ -13260,7 +13260,7 @@ class _$ExampleScenarioTearOff {
 
   _ExampleScenario call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'ExampleScenario')
           String resourceType,
       Id id,
       Meta meta,
@@ -13367,7 +13367,7 @@ class _$ExampleScenarioTearOff {
 const $ExampleScenario = _$ExampleScenarioTearOff();
 
 mixin _$ExampleScenario {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ExampleScenario')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -13434,7 +13434,7 @@ abstract class $ExampleScenarioCopyWith<$Res> {
           ExampleScenario value, $Res Function(ExampleScenario) then) =
       _$ExampleScenarioCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'ExampleScenario')
           String resourceType,
       Id id,
       Meta meta,
@@ -13814,7 +13814,7 @@ abstract class _$ExampleScenarioCopyWith<$Res>
       __$ExampleScenarioCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'ExampleScenario')
           String resourceType,
       Id id,
       Meta meta,
@@ -14057,7 +14057,7 @@ class __$ExampleScenarioCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ExampleScenario extends _ExampleScenario {
   _$_ExampleScenario(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'ExampleScenario') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -14105,7 +14105,7 @@ class _$_ExampleScenario extends _ExampleScenario {
       _$_$_ExampleScenarioFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ExampleScenario')
   final String resourceType;
   @override
   final Id id;
@@ -14357,7 +14357,7 @@ abstract class _ExampleScenario extends ExampleScenario {
   _ExampleScenario._() : super._();
   factory _ExampleScenario(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'ExampleScenario')
           String resourceType,
       Id id,
       Meta meta,
@@ -14419,7 +14419,7 @@ abstract class _ExampleScenario extends ExampleScenario {
       _$_ExampleScenario.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ExampleScenario')
   String get resourceType;
   @override
   Id get id;
@@ -17895,7 +17895,7 @@ class _$GraphDefinitionTearOff {
 
   _GraphDefinition call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'GraphDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -18003,7 +18003,7 @@ class _$GraphDefinitionTearOff {
 const $GraphDefinition = _$GraphDefinitionTearOff();
 
 mixin _$GraphDefinition {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'GraphDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -18071,7 +18071,7 @@ abstract class $GraphDefinitionCopyWith<$Res> {
           GraphDefinition value, $Res Function(GraphDefinition) then) =
       _$GraphDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'GraphDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -18459,7 +18459,7 @@ abstract class _$GraphDefinitionCopyWith<$Res>
       __$GraphDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'GraphDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -18701,7 +18701,7 @@ class __$GraphDefinitionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_GraphDefinition extends _GraphDefinition {
   _$_GraphDefinition(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'GraphDefinition') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -18749,7 +18749,7 @@ class _$_GraphDefinition extends _GraphDefinition {
       _$_$_GraphDefinitionFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'GraphDefinition')
   final String resourceType;
   @override
   final Id id;
@@ -19002,7 +19002,7 @@ abstract class _GraphDefinition extends GraphDefinition {
   _GraphDefinition._() : super._();
   factory _GraphDefinition(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'GraphDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -19065,7 +19065,7 @@ abstract class _GraphDefinition extends GraphDefinition {
       _$_GraphDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'GraphDefinition')
   String get resourceType;
   @override
   Id get id;
@@ -20554,7 +20554,7 @@ class _$ImplementationGuideTearOff {
 
   _ImplementationGuide call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'ImplementationGuide')
           String resourceType,
       Id id,
       Meta meta,
@@ -20677,7 +20677,7 @@ class _$ImplementationGuideTearOff {
 const $ImplementationGuide = _$ImplementationGuideTearOff();
 
 mixin _$ImplementationGuide {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ImplementationGuide')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -20754,7 +20754,7 @@ abstract class $ImplementationGuideCopyWith<$Res> {
           ImplementationGuide value, $Res Function(ImplementationGuide) then) =
       _$ImplementationGuideCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'ImplementationGuide')
           String resourceType,
       Id id,
       Meta meta,
@@ -21214,7 +21214,7 @@ abstract class _$ImplementationGuideCopyWith<$Res>
       __$ImplementationGuideCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'ImplementationGuide')
           String resourceType,
       Id id,
       Meta meta,
@@ -21501,7 +21501,7 @@ class __$ImplementationGuideCopyWithImpl<$Res>
 class _$_ImplementationGuide extends _ImplementationGuide {
   _$_ImplementationGuide(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'ImplementationGuide')
           this.resourceType,
       this.id,
       this.meta,
@@ -21575,7 +21575,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
       _$_$_ImplementationGuideFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ImplementationGuide')
   final String resourceType;
   @override
   final Id id;
@@ -21856,7 +21856,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   _ImplementationGuide._() : super._();
   factory _ImplementationGuide(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'ImplementationGuide')
           String resourceType,
       Id id,
       Meta meta,
@@ -21928,7 +21928,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
       _$_ImplementationGuide.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'ImplementationGuide')
   String get resourceType;
   @override
   Id get id;
@@ -26135,7 +26135,7 @@ class _$MessageDefinitionTearOff {
 
   _MessageDefinition call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'MessageDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -26265,7 +26265,7 @@ class _$MessageDefinitionTearOff {
 const $MessageDefinition = _$MessageDefinitionTearOff();
 
 mixin _$MessageDefinition {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'MessageDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -26346,7 +26346,7 @@ abstract class $MessageDefinitionCopyWith<$Res> {
           MessageDefinition value, $Res Function(MessageDefinition) then) =
       _$MessageDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'MessageDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -26812,7 +26812,7 @@ abstract class _$MessageDefinitionCopyWith<$Res>
       __$MessageDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'MessageDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -27106,7 +27106,7 @@ class __$MessageDefinitionCopyWithImpl<$Res>
 class _$_MessageDefinition extends _MessageDefinition {
   _$_MessageDefinition(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'MessageDefinition')
           this.resourceType,
       this.id,
       this.meta,
@@ -27184,7 +27184,7 @@ class _$_MessageDefinition extends _MessageDefinition {
       _$_$_MessageDefinitionFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'MessageDefinition')
   final String resourceType;
   @override
   final Id id;
@@ -27477,7 +27477,7 @@ abstract class _MessageDefinition extends MessageDefinition {
   _MessageDefinition._() : super._();
   factory _MessageDefinition(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'MessageDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -27553,7 +27553,7 @@ abstract class _MessageDefinition extends MessageDefinition {
       _$_MessageDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'MessageDefinition')
   String get resourceType;
   @override
   Id get id;
@@ -28337,7 +28337,7 @@ class _$OperationDefinitionTearOff {
 
   _OperationDefinition call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'OperationDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -28487,7 +28487,7 @@ class _$OperationDefinitionTearOff {
 const $OperationDefinition = _$OperationDefinitionTearOff();
 
 mixin _$OperationDefinition {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'OperationDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -28580,7 +28580,7 @@ abstract class $OperationDefinitionCopyWith<$Res> {
           OperationDefinition value, $Res Function(OperationDefinition) then) =
       _$OperationDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'OperationDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -29115,7 +29115,7 @@ abstract class _$OperationDefinitionCopyWith<$Res>
       __$OperationDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'OperationDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -29450,60 +29450,86 @@ class __$OperationDefinitionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_OperationDefinition extends _OperationDefinition {
   _$_OperationDefinition(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required
+      @JsonKey(defaultValue: 'OperationDefinition')
+          this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.url,
-      @JsonKey(name: '_url') this.urlElement,
+      @JsonKey(name: '_url')
+          this.urlElement,
       this.identifier,
       this.version,
-      @JsonKey(name: '_version') this.versionElement,
+      @JsonKey(name: '_version')
+          this.versionElement,
       this.name,
-      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
       this.title,
-      @JsonKey(name: '_title') this.titleElement,
-      @JsonKey(unknownEnumValue: OperationDefinitionStatus.unknown) this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_title')
+          this.titleElement,
+      @JsonKey(unknownEnumValue: OperationDefinitionStatus.unknown)
+          this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.experimental,
-      @JsonKey(name: '_experimental') this.experimentalElement,
+      @JsonKey(name: '_experimental')
+          this.experimentalElement,
       this.date,
-      @JsonKey(name: '_date') this.dateElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher') this.publisherElement,
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
       this.contact,
       this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
       this.useContext,
       this.jurisdiction,
       this.purpose,
-      @JsonKey(name: '_purpose') this.purposeElement,
+      @JsonKey(name: '_purpose')
+          this.purposeElement,
       this.copyright,
-      @JsonKey(name: '_copyright') this.copyrightElement,
-      @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown) this.kind,
-      @JsonKey(name: '_kind') this.kindElement,
+      @JsonKey(name: '_copyright')
+          this.copyrightElement,
+      @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
+          this.kind,
+      @JsonKey(name: '_kind')
+          this.kindElement,
       this.affectsState,
-      @JsonKey(name: '_affectsState') this.affectsStateElement,
+      @JsonKey(name: '_affectsState')
+          this.affectsStateElement,
       this.code,
-      @JsonKey(name: '_code') this.codeElement,
+      @JsonKey(name: '_code')
+          this.codeElement,
       this.comment,
-      @JsonKey(name: '_comment') this.commentElement,
+      @JsonKey(name: '_comment')
+          this.commentElement,
       this.base,
       this.resource,
-      @JsonKey(name: '_resource') this.resourceElement,
+      @JsonKey(name: '_resource')
+          this.resourceElement,
       this.system,
-      @JsonKey(name: '_system') this.systemElement,
+      @JsonKey(name: '_system')
+          this.systemElement,
       this.type,
-      @JsonKey(name: '_type') this.typeElement,
+      @JsonKey(name: '_type')
+          this.typeElement,
       this.instance,
-      @JsonKey(name: '_instance') this.instanceElement,
+      @JsonKey(name: '_instance')
+          this.instanceElement,
       this.inputProfile,
       this.outputProfile,
       this.parameter,
@@ -29515,7 +29541,7 @@ class _$_OperationDefinition extends _OperationDefinition {
       _$_$_OperationDefinitionFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'OperationDefinition')
   final String resourceType;
   @override
   final Id id;
@@ -29845,7 +29871,7 @@ abstract class _OperationDefinition extends OperationDefinition {
   _OperationDefinition._() : super._();
   factory _OperationDefinition(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'OperationDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -29933,7 +29959,7 @@ abstract class _OperationDefinition extends OperationDefinition {
       _$_OperationDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'OperationDefinition')
   String get resourceType;
   @override
   Id get id;
@@ -31754,7 +31780,7 @@ class _$SearchParameterTearOff {
 
   _SearchParameter call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'SearchParameter')
           String resourceType,
       Id id,
       Meta meta,
@@ -31919,7 +31945,7 @@ class _$SearchParameterTearOff {
 const $SearchParameter = _$SearchParameterTearOff();
 
 mixin _$SearchParameter {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'SearchParameter')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -32022,7 +32048,7 @@ abstract class $SearchParameterCopyWith<$Res> {
           SearchParameter value, $Res Function(SearchParameter) then) =
       _$SearchParameterCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'SearchParameter')
           String resourceType,
       Id id,
       Meta meta,
@@ -32588,7 +32614,7 @@ abstract class _$SearchParameterCopyWith<$Res>
       __$SearchParameterCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'SearchParameter')
           String resourceType,
       Id id,
       Meta meta,
@@ -32955,7 +32981,7 @@ class __$SearchParameterCopyWithImpl<$Res>
 class _$_SearchParameter extends _SearchParameter {
   _$_SearchParameter(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'SearchParameter')
           this.resourceType,
       this.id,
       this.meta,
@@ -33055,7 +33081,7 @@ class _$_SearchParameter extends _SearchParameter {
       _$_$_SearchParameterFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'SearchParameter')
   final String resourceType;
   @override
   final Id id;
@@ -33409,7 +33435,7 @@ abstract class _SearchParameter extends SearchParameter {
   _SearchParameter._() : super._();
   factory _SearchParameter(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'SearchParameter')
           String resourceType,
       Id id,
       Meta meta,
@@ -33507,7 +33533,7 @@ abstract class _SearchParameter extends SearchParameter {
       _$_SearchParameter.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'SearchParameter')
   String get resourceType;
   @override
   Id get id;
@@ -33947,7 +33973,7 @@ class _$StructureDefinitionTearOff {
 
   _StructureDefinition call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'StructureDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -34022,6 +34048,8 @@ class _$StructureDefinitionTearOff {
       @JsonKey(name: '_type')
           Element typeElement,
       Canonical baseDefinition,
+      @JsonKey(name: '_baseDefinition')
+          Element baseDefinitionElement,
       @JsonKey(unknownEnumValue: StructureDefinitionDerivation.unknown)
           StructureDefinitionDerivation derivation,
       @JsonKey(name: '_derivation')
@@ -34080,6 +34108,7 @@ class _$StructureDefinitionTearOff {
       type: type,
       typeElement: typeElement,
       baseDefinition: baseDefinition,
+      baseDefinitionElement: baseDefinitionElement,
       derivation: derivation,
       derivationElement: derivationElement,
       snapshot: snapshot,
@@ -34092,7 +34121,7 @@ class _$StructureDefinitionTearOff {
 const $StructureDefinition = _$StructureDefinitionTearOff();
 
 mixin _$StructureDefinition {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'StructureDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -34167,6 +34196,8 @@ mixin _$StructureDefinition {
   @JsonKey(name: '_type')
   Element get typeElement;
   Canonical get baseDefinition;
+  @JsonKey(name: '_baseDefinition')
+  Element get baseDefinitionElement;
   @JsonKey(unknownEnumValue: StructureDefinitionDerivation.unknown)
   StructureDefinitionDerivation get derivation;
   @JsonKey(name: '_derivation')
@@ -34183,7 +34214,7 @@ abstract class $StructureDefinitionCopyWith<$Res> {
           StructureDefinition value, $Res Function(StructureDefinition) then) =
       _$StructureDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'StructureDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -34258,6 +34289,8 @@ abstract class $StructureDefinitionCopyWith<$Res> {
       @JsonKey(name: '_type')
           Element typeElement,
       Canonical baseDefinition,
+      @JsonKey(name: '_baseDefinition')
+          Element baseDefinitionElement,
       @JsonKey(unknownEnumValue: StructureDefinitionDerivation.unknown)
           StructureDefinitionDerivation derivation,
       @JsonKey(name: '_derivation')
@@ -34284,6 +34317,7 @@ abstract class $StructureDefinitionCopyWith<$Res> {
   $ElementCopyWith<$Res> get kindElement;
   $ElementCopyWith<$Res> get abstractElement;
   $ElementCopyWith<$Res> get typeElement;
+  $ElementCopyWith<$Res> get baseDefinitionElement;
   $ElementCopyWith<$Res> get derivationElement;
   $StructureDefinitionSnapshotCopyWith<$Res> get snapshot;
   $StructureDefinitionDifferentialCopyWith<$Res> get differential;
@@ -34350,6 +34384,7 @@ class _$StructureDefinitionCopyWithImpl<$Res>
     Object type = freezed,
     Object typeElement = freezed,
     Object baseDefinition = freezed,
+    Object baseDefinitionElement = freezed,
     Object derivation = freezed,
     Object derivationElement = freezed,
     Object snapshot = freezed,
@@ -34470,6 +34505,9 @@ class _$StructureDefinitionCopyWithImpl<$Res>
       baseDefinition: baseDefinition == freezed
           ? _value.baseDefinition
           : baseDefinition as Canonical,
+      baseDefinitionElement: baseDefinitionElement == freezed
+          ? _value.baseDefinitionElement
+          : baseDefinitionElement as Element,
       derivation: derivation == freezed
           ? _value.derivation
           : derivation as StructureDefinitionDerivation,
@@ -34676,6 +34714,16 @@ class _$StructureDefinitionCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res> get baseDefinitionElement {
+    if (_value.baseDefinitionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.baseDefinitionElement, (value) {
+      return _then(_value.copyWith(baseDefinitionElement: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res> get derivationElement {
     if (_value.derivationElement == null) {
       return null;
@@ -34714,7 +34762,7 @@ abstract class _$StructureDefinitionCopyWith<$Res>
       __$StructureDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'StructureDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -34789,6 +34837,8 @@ abstract class _$StructureDefinitionCopyWith<$Res>
       @JsonKey(name: '_type')
           Element typeElement,
       Canonical baseDefinition,
+      @JsonKey(name: '_baseDefinition')
+          Element baseDefinitionElement,
       @JsonKey(unknownEnumValue: StructureDefinitionDerivation.unknown)
           StructureDefinitionDerivation derivation,
       @JsonKey(name: '_derivation')
@@ -34834,6 +34884,8 @@ abstract class _$StructureDefinitionCopyWith<$Res>
   $ElementCopyWith<$Res> get abstractElement;
   @override
   $ElementCopyWith<$Res> get typeElement;
+  @override
+  $ElementCopyWith<$Res> get baseDefinitionElement;
   @override
   $ElementCopyWith<$Res> get derivationElement;
   @override
@@ -34905,6 +34957,7 @@ class __$StructureDefinitionCopyWithImpl<$Res>
     Object type = freezed,
     Object typeElement = freezed,
     Object baseDefinition = freezed,
+    Object baseDefinitionElement = freezed,
     Object derivation = freezed,
     Object derivationElement = freezed,
     Object snapshot = freezed,
@@ -35025,6 +35078,9 @@ class __$StructureDefinitionCopyWithImpl<$Res>
       baseDefinition: baseDefinition == freezed
           ? _value.baseDefinition
           : baseDefinition as Canonical,
+      baseDefinitionElement: baseDefinitionElement == freezed
+          ? _value.baseDefinitionElement
+          : baseDefinitionElement as Element,
       derivation: derivation == freezed
           ? _value.derivation
           : derivation as StructureDefinitionDerivation,
@@ -35045,7 +35101,7 @@ class __$StructureDefinitionCopyWithImpl<$Res>
 class _$_StructureDefinition extends _StructureDefinition {
   _$_StructureDefinition(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'StructureDefinition')
           this.resourceType,
       this.id,
       this.meta,
@@ -35120,6 +35176,8 @@ class _$_StructureDefinition extends _StructureDefinition {
       @JsonKey(name: '_type')
           this.typeElement,
       this.baseDefinition,
+      @JsonKey(name: '_baseDefinition')
+          this.baseDefinitionElement,
       @JsonKey(unknownEnumValue: StructureDefinitionDerivation.unknown)
           this.derivation,
       @JsonKey(name: '_derivation')
@@ -35133,7 +35191,7 @@ class _$_StructureDefinition extends _StructureDefinition {
       _$_$_StructureDefinitionFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'StructureDefinition')
   final String resourceType;
   @override
   final Id id;
@@ -35259,6 +35317,9 @@ class _$_StructureDefinition extends _StructureDefinition {
   @override
   final Canonical baseDefinition;
   @override
+  @JsonKey(name: '_baseDefinition')
+  final Element baseDefinitionElement;
+  @override
   @JsonKey(unknownEnumValue: StructureDefinitionDerivation.unknown)
   final StructureDefinitionDerivation derivation;
   @override
@@ -35271,7 +35332,7 @@ class _$_StructureDefinition extends _StructureDefinition {
 
   @override
   String toString() {
-    return 'StructureDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, keyword: $keyword, fhirVersion: $fhirVersion, fhirVersionElement: $fhirVersionElement, mapping: $mapping, kind: $kind, kindElement: $kindElement, abstract_: $abstract_, abstractElement: $abstractElement, context: $context, contextInvariant: $contextInvariant, contextInvariantElement: $contextInvariantElement, type: $type, typeElement: $typeElement, baseDefinition: $baseDefinition, derivation: $derivation, derivationElement: $derivationElement, snapshot: $snapshot, differential: $differential)';
+    return 'StructureDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, keyword: $keyword, fhirVersion: $fhirVersion, fhirVersionElement: $fhirVersionElement, mapping: $mapping, kind: $kind, kindElement: $kindElement, abstract_: $abstract_, abstractElement: $abstractElement, context: $context, contextInvariant: $contextInvariant, contextInvariantElement: $contextInvariantElement, type: $type, typeElement: $typeElement, baseDefinition: $baseDefinition, baseDefinitionElement: $baseDefinitionElement, derivation: $derivation, derivationElement: $derivationElement, snapshot: $snapshot, differential: $differential)';
   }
 
   @override
@@ -35372,6 +35433,7 @@ class _$_StructureDefinition extends _StructureDefinition {
             (identical(other.type, type) || const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.typeElement, typeElement) || const DeepCollectionEquality().equals(other.typeElement, typeElement)) &&
             (identical(other.baseDefinition, baseDefinition) || const DeepCollectionEquality().equals(other.baseDefinition, baseDefinition)) &&
+            (identical(other.baseDefinitionElement, baseDefinitionElement) || const DeepCollectionEquality().equals(other.baseDefinitionElement, baseDefinitionElement)) &&
             (identical(other.derivation, derivation) || const DeepCollectionEquality().equals(other.derivation, derivation)) &&
             (identical(other.derivationElement, derivationElement) || const DeepCollectionEquality().equals(other.derivationElement, derivationElement)) &&
             (identical(other.snapshot, snapshot) || const DeepCollectionEquality().equals(other.snapshot, snapshot)) &&
@@ -35432,6 +35494,7 @@ class _$_StructureDefinition extends _StructureDefinition {
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(typeElement) ^
       const DeepCollectionEquality().hash(baseDefinition) ^
+      const DeepCollectionEquality().hash(baseDefinitionElement) ^
       const DeepCollectionEquality().hash(derivation) ^
       const DeepCollectionEquality().hash(derivationElement) ^
       const DeepCollectionEquality().hash(snapshot) ^
@@ -35452,7 +35515,7 @@ abstract class _StructureDefinition extends StructureDefinition {
   _StructureDefinition._() : super._();
   factory _StructureDefinition(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'StructureDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -35527,6 +35590,8 @@ abstract class _StructureDefinition extends StructureDefinition {
       @JsonKey(name: '_type')
           Element typeElement,
       Canonical baseDefinition,
+      @JsonKey(name: '_baseDefinition')
+          Element baseDefinitionElement,
       @JsonKey(unknownEnumValue: StructureDefinitionDerivation.unknown)
           StructureDefinitionDerivation derivation,
       @JsonKey(name: '_derivation')
@@ -35538,7 +35603,7 @@ abstract class _StructureDefinition extends StructureDefinition {
       _$_StructureDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'StructureDefinition')
   String get resourceType;
   @override
   Id get id;
@@ -35663,6 +35728,9 @@ abstract class _StructureDefinition extends StructureDefinition {
   Element get typeElement;
   @override
   Canonical get baseDefinition;
+  @override
+  @JsonKey(name: '_baseDefinition')
+  Element get baseDefinitionElement;
   @override
   @JsonKey(unknownEnumValue: StructureDefinitionDerivation.unknown)
   StructureDefinitionDerivation get derivation;
@@ -36874,7 +36942,7 @@ class _$StructureMapTearOff {
 
   _StructureMap call(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'StructureMap')
           String resourceType,
       Id id,
       Meta meta,
@@ -36980,7 +37048,7 @@ class _$StructureMapTearOff {
 const $StructureMap = _$StructureMapTearOff();
 
 mixin _$StructureMap {
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'StructureMap')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -37046,7 +37114,7 @@ abstract class $StructureMapCopyWith<$Res> {
           StructureMap value, $Res Function(StructureMap) then) =
       _$StructureMapCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'StructureMap')
           String resourceType,
       Id id,
       Meta meta,
@@ -37417,7 +37485,7 @@ abstract class _$StructureMapCopyWith<$Res>
       __$StructureMapCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'className')
+      {@JsonKey(defaultValue: 'StructureMap')
           String resourceType,
       Id id,
       Meta meta,
@@ -37651,7 +37719,7 @@ class __$StructureMapCopyWithImpl<$Res> extends _$StructureMapCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_StructureMap extends _StructureMap {
   _$_StructureMap(
-      {@required @JsonKey(defaultValue: 'className') this.resourceType,
+      {@required @JsonKey(defaultValue: 'StructureMap') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -37699,7 +37767,7 @@ class _$_StructureMap extends _StructureMap {
       _$_$_StructureMapFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'StructureMap')
   final String resourceType;
   @override
   final Id id;
@@ -37947,7 +38015,7 @@ abstract class _StructureMap extends StructureMap {
   _StructureMap._() : super._();
   factory _StructureMap(
       {@required
-      @JsonKey(defaultValue: 'className')
+      @JsonKey(defaultValue: 'StructureMap')
           String resourceType,
       Id id,
       Meta meta,
@@ -38009,7 +38077,7 @@ abstract class _StructureMap extends StructureMap {
       _$_StructureMap.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'className')
+  @JsonKey(defaultValue: 'StructureMap')
   String get resourceType;
   @override
   Id get id;

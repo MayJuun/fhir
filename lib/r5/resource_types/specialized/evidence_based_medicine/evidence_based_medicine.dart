@@ -11,7 +11,7 @@ part 'evidence_based_medicine.g.dart';
 abstract class Evidence with Resource  implements _$Evidence {
 Evidence._();
 factory Evidence({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'Evidence') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
@@ -145,7 +145,7 @@ factory EvidenceCertaintySubcomponent({
 abstract class EvidenceVariable with Resource  implements _$EvidenceVariable {
 EvidenceVariable._();
 factory EvidenceVariable({
-@JsonKey(defaultValue: 'className') @required String resourceType,
+@JsonKey(defaultValue: 'EvidenceVariable') @required String resourceType,
    Id id,
    Meta meta,
    FhirUri implicitRules,
