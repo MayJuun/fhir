@@ -6,7 +6,6 @@ part 'resource.g.dart';
 
 @JsonSerializable()
 class Resource {
-
   void printStuff() => print('stuff');
 
   Map<String, dynamic> toJson() => this.toJson();
