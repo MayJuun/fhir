@@ -1,0 +1,84 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "topic-match-operator",
+  "meta": {
+    "lastUpdated": "2019-12-31T21:03:40.621+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003ch2\u003eTopicFilterByMatchType\u003c/h2\u003e\u003cdiv\u003e\u003cp\u003eOperator to apply to filter label.\u003c/p\u003e\n\u003c/div\u003e\u003cp\u003eThis code system http://hl7.org/fhir/topic-match-operator defines the following codes:\u003c/p\u003e\u003ctable class\u003d\"codes\"\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDisplay\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDefinition\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u003d\u003ca name\u003d\"topic-match-operator-.61\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003e\u003d\u003c/td\u003e\u003ctd\u003eUsed to match a value according to FHIR Search rules (e.g., Patient/123, Encounter/2002).\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003ein\u003ca name\u003d\"topic-match-operator-in\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ein\u003c/td\u003e\u003ctd\u003eThe key value in the topic stream is an active members of the reference set identified by the concept provided as the filter value.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003enot-in\u003ca name\u003d\"topic-match-operator-not-in\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003enot-in\u003c/td\u003e\u003ctd\u003eThe key value in the topic stream is NOT an active members of the reference set identified by the concept provided as the filter value.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eabove\u003ca name\u003d\"topic-match-operator-above\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eabove\u003c/td\u003e\u003ctd\u003eThe key value is subsumes the value in the filter value.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003ebelow\u003ca name\u003d\"topic-match-operator-below\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ebelow\u003c/td\u003e\u003ctd\u003eThe key value is subsumed by the value in the filter value.\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "trial-use"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 0
+    }
+  ],
+  "url": "http://hl7.org/fhir/topic-match-operator",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.1.1462"
+    }
+  ],
+  "version": "4.2.0",
+  "name": "TopicFilterByMatchType",
+  "title": "TopicFilterByMatchType",
+  "status": "draft",
+  "experimental": false,
+  "date": "2019-12-31T21:03:40+11:00",
+  "publisher": "HL7 (FHIR Project)",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/fhir"
+        },
+        {
+          "system": "email",
+          "value": "fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "description": "Operator to apply to filter label.",
+  "caseSensitive": true,
+  "valueSet": "http://hl7.org/fhir/ValueSet/topic-match-operator",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "\u003d",
+      "display": "\u003d",
+      "definition": "Used to match a value according to FHIR Search rules (e.g., Patient/123, Encounter/2002)."
+    },
+    {
+      "code": "in",
+      "display": "in",
+      "definition": "The key value in the topic stream is an active members of the reference set identified by the concept provided as the filter value."
+    },
+    {
+      "code": "not-in",
+      "display": "not-in",
+      "definition": "The key value in the topic stream is NOT an active members of the reference set identified by the concept provided as the filter value."
+    },
+    {
+      "code": "above",
+      "display": "above",
+      "definition": "The key value is subsumes the value in the filter value."
+    },
+    {
+      "code": "below",
+      "display": "below",
+      "definition": "The key value is subsumed by the value in the filter value."
+    }
+  ]
+}

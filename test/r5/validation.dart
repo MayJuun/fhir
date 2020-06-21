@@ -79,7 +79,7 @@ Future<String> checkJsonEquality(Map<String, dynamic> input,
         }
       } else {
         if (input[k] != output[k]) {
-          if (isDate(input[k])) {
+          if (isDate(input[k].toString())) {
             if (DateTime.tryParse(input[k]) != DateTime.tryParse(output[k])) {
               string += '\n\n$file\n$source:$k:'
                   '${DateTime.tryParse(input[k])}:'

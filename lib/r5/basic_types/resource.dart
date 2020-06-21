@@ -54,6 +54,8 @@ class Resource {
         return ClaimResponse.fromJson(json);
       case 'ClinicalImpression':
         return ClinicalImpression.fromJson(json);
+      case 'ClinicalUseIssue':
+        return ClinicalUseIssue.fromJson(json);
       case 'CodeSystem':
         return CodeSystem.fromJson(json);
       case 'Communication':
@@ -190,6 +192,8 @@ class Resource {
         return MolecularSequence.fromJson(json);
       case 'NamingSystem':
         return NamingSystem.fromJson(json);
+      case 'NutritionIntake':
+        return NutritionIntake.fromJson(json);
       case 'NutritionOrder':
         return NutritionOrder.fromJson(json);
       case 'Observation':
@@ -258,12 +262,18 @@ class Resource {
         return Subscription.fromJson(json);
       case 'Substance':
         return Substance.fromJson(json);
-      case 'SubstancePolymer':
-        return SubstancePolymer.fromJson(json);
-      case 'SubstanceReferenceInformation':
-        return SubstanceReferenceInformation.fromJson(json);
       case 'SubstanceDefinition':
         return SubstanceDefinition.fromJson(json);
+      case 'SubstanceNucleicAcid':
+        return SubstanceNucleicAcid.fromJson(json);
+      case 'SubstancePolymer':
+        return SubstancePolymer.fromJson(json);
+      case 'SubstanceProtein':
+        return SubstanceProtein.fromJson(json);
+      case 'SubstanceReferenceInformation':
+        return SubstanceReferenceInformation.fromJson(json);
+      case 'SubstanceSourceMaterial':
+        return SubstanceSourceMaterial.fromJson(json);
       case 'SupplyDelivery':
         return SupplyDelivery.fromJson(json);
       case 'SupplyRequest':
