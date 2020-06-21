@@ -556,7 +556,7 @@ class _$DataRequirementTearOff {
       CodeableConcept subjectCodeableConcept,
       Reference subjectReference,
       List<String> mustSupport,
-      @JsonKey(name: '_mustSupport') Element mustSupportElement,
+      @JsonKey(name: '_mustSupport') List<Element> mustSupportElement,
       List<DataRequirementCodeFilter> codeFilter,
       List<DataRequirementDateFilter> dateFilter,
       PositiveInt limit,
@@ -596,7 +596,7 @@ mixin _$DataRequirement {
   Reference get subjectReference;
   List<String> get mustSupport;
   @JsonKey(name: '_mustSupport')
-  Element get mustSupportElement;
+  List<Element> get mustSupportElement;
   List<DataRequirementCodeFilter> get codeFilter;
   List<DataRequirementDateFilter> get dateFilter;
   PositiveInt get limit;
@@ -621,7 +621,7 @@ abstract class $DataRequirementCopyWith<$Res> {
       CodeableConcept subjectCodeableConcept,
       Reference subjectReference,
       List<String> mustSupport,
-      @JsonKey(name: '_mustSupport') Element mustSupportElement,
+      @JsonKey(name: '_mustSupport') List<Element> mustSupportElement,
       List<DataRequirementCodeFilter> codeFilter,
       List<DataRequirementDateFilter> dateFilter,
       PositiveInt limit,
@@ -631,7 +631,6 @@ abstract class $DataRequirementCopyWith<$Res> {
   $ElementCopyWith<$Res> get typeElement;
   $CodeableConceptCopyWith<$Res> get subjectCodeableConcept;
   $ReferenceCopyWith<$Res> get subjectReference;
-  $ElementCopyWith<$Res> get mustSupportElement;
   $ElementCopyWith<$Res> get limitElement;
 }
 
@@ -680,7 +679,7 @@ class _$DataRequirementCopyWithImpl<$Res>
           : mustSupport as List<String>,
       mustSupportElement: mustSupportElement == freezed
           ? _value.mustSupportElement
-          : mustSupportElement as Element,
+          : mustSupportElement as List<Element>,
       codeFilter: codeFilter == freezed
           ? _value.codeFilter
           : codeFilter as List<DataRequirementCodeFilter>,
@@ -727,16 +726,6 @@ class _$DataRequirementCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get mustSupportElement {
-    if (_value.mustSupportElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.mustSupportElement, (value) {
-      return _then(_value.copyWith(mustSupportElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get limitElement {
     if (_value.limitElement == null) {
       return null;
@@ -762,7 +751,7 @@ abstract class _$DataRequirementCopyWith<$Res>
       CodeableConcept subjectCodeableConcept,
       Reference subjectReference,
       List<String> mustSupport,
-      @JsonKey(name: '_mustSupport') Element mustSupportElement,
+      @JsonKey(name: '_mustSupport') List<Element> mustSupportElement,
       List<DataRequirementCodeFilter> codeFilter,
       List<DataRequirementDateFilter> dateFilter,
       PositiveInt limit,
@@ -775,8 +764,6 @@ abstract class _$DataRequirementCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get subjectCodeableConcept;
   @override
   $ReferenceCopyWith<$Res> get subjectReference;
-  @override
-  $ElementCopyWith<$Res> get mustSupportElement;
   @override
   $ElementCopyWith<$Res> get limitElement;
 }
@@ -828,7 +815,7 @@ class __$DataRequirementCopyWithImpl<$Res>
           : mustSupport as List<String>,
       mustSupportElement: mustSupportElement == freezed
           ? _value.mustSupportElement
-          : mustSupportElement as Element,
+          : mustSupportElement as List<Element>,
       codeFilter: codeFilter == freezed
           ? _value.codeFilter
           : codeFilter as List<DataRequirementCodeFilter>,
@@ -886,7 +873,7 @@ class _$_DataRequirement extends _DataRequirement {
   final List<String> mustSupport;
   @override
   @JsonKey(name: '_mustSupport')
-  final Element mustSupportElement;
+  final List<Element> mustSupportElement;
   @override
   final List<DataRequirementCodeFilter> codeFilter;
   @override
@@ -987,7 +974,7 @@ abstract class _DataRequirement extends DataRequirement {
       CodeableConcept subjectCodeableConcept,
       Reference subjectReference,
       List<String> mustSupport,
-      @JsonKey(name: '_mustSupport') Element mustSupportElement,
+      @JsonKey(name: '_mustSupport') List<Element> mustSupportElement,
       List<DataRequirementCodeFilter> codeFilter,
       List<DataRequirementDateFilter> dateFilter,
       PositiveInt limit,
@@ -1017,7 +1004,7 @@ abstract class _DataRequirement extends DataRequirement {
   List<String> get mustSupport;
   @override
   @JsonKey(name: '_mustSupport')
-  Element get mustSupportElement;
+  List<Element> get mustSupportElement;
   @override
   List<DataRequirementCodeFilter> get codeFilter;
   @override

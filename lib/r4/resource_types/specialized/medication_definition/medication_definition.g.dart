@@ -67,9 +67,10 @@ _$_MedicinalProduct _$_$_MedicinalProductFromJson(Map<String, dynamic> json) {
             json['additionalMonitoringIndicator'] as Map<String, dynamic>),
     specialMeasures:
         (json['specialMeasures'] as List)?.map((e) => e as String)?.toList(),
-    specialMeasuresElement: json['_specialMeasures'] == null
-        ? null
-        : Element.fromJson(json['_specialMeasures'] as Map<String, dynamic>),
+    specialMeasuresElement: (json['_specialMeasures'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     paediatricUseIndicator: json['paediatricUseIndicator'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -166,7 +167,8 @@ Map<String, dynamic> _$_$_MedicinalProductToJson(_$_MedicinalProduct instance) {
   writeNotNull('additionalMonitoringIndicator',
       instance.additionalMonitoringIndicator?.toJson());
   writeNotNull('specialMeasures', instance.specialMeasures);
-  writeNotNull('_specialMeasures', instance.specialMeasuresElement?.toJson());
+  writeNotNull('_specialMeasures',
+      instance.specialMeasuresElement?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'paediatricUseIndicator', instance.paediatricUseIndicator?.toJson());
   writeNotNull('productClassification',
@@ -2747,9 +2749,10 @@ _$_SubstancePolymer _$_$_SubstancePolymerFromJson(Map<String, dynamic> json) {
         ?.toList(),
     modification:
         (json['modification'] as List)?.map((e) => e as String)?.toList(),
-    modificationElement: json['_modification'] == null
-        ? null
-        : Element.fromJson(json['_modification'] as Map<String, dynamic>),
+    modificationElement: (json['_modification'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     monomerSet: (json['monomerSet'] as List)
         ?.map((e) => e == null
             ? null
@@ -2791,7 +2794,8 @@ Map<String, dynamic> _$_$_SubstancePolymerToJson(_$_SubstancePolymer instance) {
   writeNotNull('copolymerConnectivity',
       instance.copolymerConnectivity?.map((e) => e?.toJson())?.toList());
   writeNotNull('modification', instance.modification);
-  writeNotNull('_modification', instance.modificationElement?.toJson());
+  writeNotNull('_modification',
+      instance.modificationElement?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'monomerSet', instance.monomerSet?.map((e) => e?.toJson())?.toList());
   writeNotNull('repeat', instance.repeat?.map((e) => e?.toJson())?.toList());
@@ -3172,9 +3176,10 @@ _$_SubstanceProtein _$_$_SubstanceProteinFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_numberOfSubunits'] as Map<String, dynamic>),
     disulfideLinkage:
         (json['disulfideLinkage'] as List)?.map((e) => e as String)?.toList(),
-    disulfideLinkageElement: json['_disulfideLinkage'] == null
-        ? null
-        : Element.fromJson(json['_disulfideLinkage'] as Map<String, dynamic>),
+    disulfideLinkageElement: (json['_disulfideLinkage'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     subunit: (json['subunit'] as List)
         ?.map((e) => e == null
             ? null
@@ -3210,7 +3215,8 @@ Map<String, dynamic> _$_$_SubstanceProteinToJson(_$_SubstanceProtein instance) {
   writeNotNull('numberOfSubunits', instance.numberOfSubunits?.toJson());
   writeNotNull('_numberOfSubunits', instance.numberOfSubunitsElement?.toJson());
   writeNotNull('disulfideLinkage', instance.disulfideLinkage);
-  writeNotNull('_disulfideLinkage', instance.disulfideLinkageElement?.toJson());
+  writeNotNull('_disulfideLinkage',
+      instance.disulfideLinkageElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('subunit', instance.subunit?.map((e) => e?.toJson())?.toList());
   return val;
 }
@@ -3701,10 +3707,10 @@ _$_SubstanceSourceMaterial _$_$_SubstanceSourceMaterialFromJson(
     parentSubstanceName: (json['parentSubstanceName'] as List)
         ?.map((e) => e as String)
         ?.toList(),
-    parentSubstanceNameElement: json['_parentSubstanceName'] == null
-        ? null
-        : Element.fromJson(
-            json['_parentSubstanceName'] as Map<String, dynamic>),
+    parentSubstanceNameElement: (json['_parentSubstanceName'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     countryOfOrigin: (json['countryOfOrigin'] as List)
         ?.map((e) => e == null
             ? null
@@ -3713,10 +3719,10 @@ _$_SubstanceSourceMaterial _$_$_SubstanceSourceMaterialFromJson(
     geographicalLocation: (json['geographicalLocation'] as List)
         ?.map((e) => e as String)
         ?.toList(),
-    geographicalLocationElement: json['_geographicalLocation'] == null
-        ? null
-        : Element.fromJson(
-            json['_geographicalLocation'] as Map<String, dynamic>),
+    geographicalLocationElement: (json['_geographicalLocation'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     developmentStage: json['developmentStage'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -3773,13 +3779,13 @@ Map<String, dynamic> _$_$_SubstanceSourceMaterialToJson(
   writeNotNull('parentSubstanceId',
       instance.parentSubstanceId?.map((e) => e?.toJson())?.toList());
   writeNotNull('parentSubstanceName', instance.parentSubstanceName);
-  writeNotNull(
-      '_parentSubstanceName', instance.parentSubstanceNameElement?.toJson());
+  writeNotNull('_parentSubstanceName',
+      instance.parentSubstanceNameElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('countryOfOrigin',
       instance.countryOfOrigin?.map((e) => e?.toJson())?.toList());
   writeNotNull('geographicalLocation', instance.geographicalLocation);
-  writeNotNull(
-      '_geographicalLocation', instance.geographicalLocationElement?.toJson());
+  writeNotNull('_geographicalLocation',
+      instance.geographicalLocationElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('developmentStage', instance.developmentStage?.toJson());
   writeNotNull('fractionDescription',
       instance.fractionDescription?.map((e) => e?.toJson())?.toList());

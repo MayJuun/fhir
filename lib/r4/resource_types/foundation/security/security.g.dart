@@ -227,9 +227,10 @@ _$_AuditEventAgent _$_$_AuditEventAgentFromJson(Map<String, dynamic> json) {
     policy: (json['policy'] as List)
         ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
         ?.toList(),
-    policyElement: json['_policy'] == null
-        ? null
-        : Element.fromJson(json['_policy'] as Map<String, dynamic>),
+    policyElement: (json['_policy'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     media: json['media'] == null
         ? null
         : Coding.fromJson(json['media'] as Map<String, dynamic>),
@@ -269,7 +270,8 @@ Map<String, dynamic> _$_$_AuditEventAgentToJson(_$_AuditEventAgent instance) {
   writeNotNull('_requestor', instance.requestorElement?.toJson());
   writeNotNull('location', instance.location?.toJson());
   writeNotNull('policy', instance.policy?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_policy', instance.policyElement?.toJson());
+  writeNotNull(
+      '_policy', instance.policyElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('media', instance.media?.toJson());
   writeNotNull('network', instance.network?.toJson());
   writeNotNull(
@@ -1019,9 +1021,10 @@ _$_Provenance _$_$_ProvenanceFromJson(Map<String, dynamic> json) {
     policy: (json['policy'] as List)
         ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
         ?.toList(),
-    policyElement: json['_policy'] == null
-        ? null
-        : Element.fromJson(json['_policy'] as Map<String, dynamic>),
+    policyElement: (json['_policy'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     location: json['location'] == null
         ? null
         : Reference.fromJson(json['location'] as Map<String, dynamic>),
@@ -1080,7 +1083,8 @@ Map<String, dynamic> _$_$_ProvenanceToJson(_$_Provenance instance) {
   writeNotNull('recorded', instance.recorded?.toJson());
   writeNotNull('_recorded', instance.recordedElement?.toJson());
   writeNotNull('policy', instance.policy?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_policy', instance.policyElement?.toJson());
+  writeNotNull(
+      '_policy', instance.policyElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('location', instance.location?.toJson());
   writeNotNull('reason', instance.reason?.map((e) => e?.toJson())?.toList());
   writeNotNull('activity', instance.activity?.toJson());

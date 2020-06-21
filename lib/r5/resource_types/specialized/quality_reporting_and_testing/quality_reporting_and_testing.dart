@@ -81,7 +81,7 @@ factory Measure({
   @JsonKey(name: '_clinicalRecommendationStatement')   Element clinicalRecommendationStatementElement,
    CodeableConcept improvementNotation,
    List<Markdown> definition,
-  @JsonKey(name: '_definition')   Element definitionElement,
+  @JsonKey(name: '_definition')   List<Element> definitionElement,
    Markdown guidance,
   @JsonKey(name: '_guidance')   Element guidanceElement,
    List<MeasureGroup> group,
@@ -605,11 +605,11 @@ factory TestScriptCapability({
    String description,
   @JsonKey(name: '_description')   Element descriptionElement,
    List<Integer> origin,
-  @JsonKey(name: '_origin')   Element originElement,
+  @JsonKey(name: '_origin')   List<Element> originElement,
    Integer destination,
   @JsonKey(name: '_destination')   Element destinationElement,
    List<FhirUri> link,
-  @JsonKey(name: '_link')   Element linkElement,
+  @JsonKey(name: '_link')   List<Element> linkElement,
    @required Canonical capabilities,
 }) = _TestScriptCapability;
 

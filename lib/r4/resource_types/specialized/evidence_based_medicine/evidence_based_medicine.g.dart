@@ -1445,9 +1445,10 @@ _$_ResearchDefinition _$_$_ResearchDefinitionFromJson(
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
     comment: (json['comment'] as List)?.map((e) => e as String)?.toList(),
-    commentElement: json['_comment'] == null
-        ? null
-        : Element.fromJson(json['_comment'] as Map<String, dynamic>),
+    commentElement: (json['_comment'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     useContext: (json['useContext'] as List)
         ?.map((e) =>
             e == null ? null : UsageContext.fromJson(e as Map<String, dynamic>))
@@ -1590,7 +1591,8 @@ Map<String, dynamic> _$_$_ResearchDefinitionToJson(
   writeNotNull('description', instance.description?.toJson());
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('comment', instance.comment);
-  writeNotNull('_comment', instance.commentElement?.toJson());
+  writeNotNull(
+      '_comment', instance.commentElement?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'useContext', instance.useContext?.map((e) => e?.toJson())?.toList());
   writeNotNull(
@@ -1736,9 +1738,10 @@ _$_ResearchElementDefinition _$_$_ResearchElementDefinitionFromJson(
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
     comment: (json['comment'] as List)?.map((e) => e as String)?.toList(),
-    commentElement: json['_comment'] == null
-        ? null
-        : Element.fromJson(json['_comment'] as Map<String, dynamic>),
+    commentElement: (json['_comment'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     useContext: (json['useContext'] as List)
         ?.map((e) =>
             e == null ? null : UsageContext.fromJson(e as Map<String, dynamic>))
@@ -1887,7 +1890,8 @@ Map<String, dynamic> _$_$_ResearchElementDefinitionToJson(
   writeNotNull('description', instance.description?.toJson());
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('comment', instance.comment);
-  writeNotNull('_comment', instance.commentElement?.toJson());
+  writeNotNull(
+      '_comment', instance.commentElement?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'useContext', instance.useContext?.map((e) => e?.toJson())?.toList());
   writeNotNull(

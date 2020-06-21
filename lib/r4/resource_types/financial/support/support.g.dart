@@ -363,9 +363,10 @@ _$_CoverageEligibilityRequest _$_$_CoverageEligibilityRequestFromJson(
         ?.map((e) =>
             _$enumDecodeNullable(_$CoverageEligibilityRequestPurposeEnumMap, e))
         ?.toList(),
-    purposeElement: json['_purpose'] == null
-        ? null
-        : Element.fromJson(json['_purpose'] as Map<String, dynamic>),
+    purposeElement: (json['_purpose'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     patient: json['patient'] == null
         ? null
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
@@ -451,7 +452,8 @@ Map<String, dynamic> _$_$_CoverageEligibilityRequestToJson(
       instance.purpose
           ?.map((e) => _$CoverageEligibilityRequestPurposeEnumMap[e])
           ?.toList());
-  writeNotNull('_purpose', instance.purposeElement?.toJson());
+  writeNotNull(
+      '_purpose', instance.purposeElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('servicedDate', instance.servicedDate?.toJson());
   writeNotNull('_servicedDate', instance.servicedDateElement?.toJson());
@@ -637,10 +639,10 @@ _$_CoverageEligibilityRequestItem _$_$_CoverageEligibilityRequestItemFromJson(
     supportingInfoSequence: (json['supportingInfoSequence'] as List)
         ?.map((e) => e == null ? null : PositiveInt.fromJson(e))
         ?.toList(),
-    supportingInfoSequenceElement: json['_supportingInfoSequence'] == null
-        ? null
-        : Element.fromJson(
-            json['_supportingInfoSequence'] as Map<String, dynamic>),
+    supportingInfoSequenceElement: (json['_supportingInfoSequence'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     category: json['category'] == null
         ? null
         : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
@@ -695,8 +697,11 @@ Map<String, dynamic> _$_$_CoverageEligibilityRequestItemToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('supportingInfoSequence',
       instance.supportingInfoSequence?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_supportingInfoSequence',
-      instance.supportingInfoSequenceElement?.toJson());
+  writeNotNull(
+      '_supportingInfoSequence',
+      instance.supportingInfoSequenceElement
+          ?.map((e) => e?.toJson())
+          ?.toList());
   writeNotNull('category', instance.category?.toJson());
   writeNotNull('productOrService', instance.productOrService?.toJson());
   writeNotNull(
@@ -808,9 +813,10 @@ _$_CoverageEligibilityResponse _$_$_CoverageEligibilityResponseFromJson(
         ?.map((e) => _$enumDecodeNullable(
             _$CoverageEligibilityResponsePurposeEnumMap, e))
         ?.toList(),
-    purposeElement: json['_purpose'] == null
-        ? null
-        : Element.fromJson(json['_purpose'] as Map<String, dynamic>),
+    purposeElement: (json['_purpose'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     patient: json['patient'] == null
         ? null
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
@@ -903,7 +909,8 @@ Map<String, dynamic> _$_$_CoverageEligibilityResponseToJson(
       instance.purpose
           ?.map((e) => _$CoverageEligibilityResponsePurposeEnumMap[e])
           ?.toList());
-  writeNotNull('_purpose', instance.purposeElement?.toJson());
+  writeNotNull(
+      '_purpose', instance.purposeElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('servicedDate', instance.servicedDate?.toJson());
   writeNotNull('_servicedDate', instance.servicedDateElement?.toJson());

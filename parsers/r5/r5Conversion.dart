@@ -41,8 +41,15 @@ void main() async {
                         ? '  @required'
                         : ' ';
             if (field[0] == '_') {
-              data +=
-                  "  @JsonKey(name: '$field') $required Element ${field.substring(1, field.length)}Element,\n";
+              if (schema['definitions'][obj]['properties'][field]
+                  .keys
+                  .contains('type')) {
+                data +=
+                    "  @JsonKey(name: '$field') $required List<Element> ${field.substring(1, field.length)}Element,\n";
+              } else {
+                data +=
+                    "  @JsonKey(name: '$field') $required Element ${field.substring(1, field.length)}Element,\n";
+              }
             } else if (schema['definitions'][obj]['properties'][field]
                 .keys
                 .contains('\$ref')) {

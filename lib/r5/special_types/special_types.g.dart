@@ -79,7 +79,7 @@ _$_FhirExtension _$_$_FhirExtensionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
     valueInteger64: json['valueInteger64'] == null
         ? null
-        : Integer.fromJson(json['valueInteger64']),
+        : Integer64.fromJson(json['valueInteger64']),
     valueInteger64Element: json['_valueInteger64'] == null
         ? null
         : Element.fromJson(json['_valueInteger64'] as Map<String, dynamic>),
@@ -1146,9 +1146,10 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             _$enumDecodeNullable(_$ElementDefinitionRepresentationEnumMap, e))
         ?.toList(),
-    representationElement: json['_representation'] == null
-        ? null
-        : Element.fromJson(json['_representation'] as Map<String, dynamic>),
+    representationElement: (json['_representation'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     sliceName: json['sliceName'] as String,
     sliceNameElement: json['_sliceName'] == null
         ? null
@@ -1195,9 +1196,10 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         ? null
         : Element.fromJson(json['_requirements'] as Map<String, dynamic>),
     alias: (json['alias'] as List)?.map((e) => e as String)?.toList(),
-    aliasElement: json['_alias'] == null
-        ? null
-        : Element.fromJson(json['_alias'] as Map<String, dynamic>),
+    aliasElement: (json['_alias'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     min: json['min'] == null ? null : UnsignedInt.fromJson(json['min']),
     minElement: json['_min'] == null
         ? null
@@ -1289,7 +1291,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
             json['_defaultValueInteger'] as Map<String, dynamic>),
     defaultValueInteger64: json['defaultValueInteger64'] == null
         ? null
-        : Integer.fromJson(json['defaultValueInteger64']),
+        : Integer64.fromJson(json['defaultValueInteger64']),
     defaultValueInteger64Element: json['_defaultValueInteger64'] == null
         ? null
         : Element.fromJson(
@@ -1534,7 +1536,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_fixedInteger'] as Map<String, dynamic>),
     fixedInteger64: json['fixedInteger64'] == null
         ? null
-        : Integer.fromJson(json['fixedInteger64']),
+        : Integer64.fromJson(json['fixedInteger64']),
     fixedInteger64Element: json['_fixedInteger64'] == null
         ? null
         : Element.fromJson(json['_fixedInteger64'] as Map<String, dynamic>),
@@ -1756,7 +1758,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_patternInteger'] as Map<String, dynamic>),
     patternInteger64: json['patternInteger64'] == null
         ? null
-        : Integer.fromJson(json['patternInteger64']),
+        : Integer64.fromJson(json['patternInteger64']),
     patternInteger64Element: json['_patternInteger64'] == null
         ? null
         : Element.fromJson(json['_patternInteger64'] as Map<String, dynamic>),
@@ -1962,7 +1964,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_minValueInteger'] as Map<String, dynamic>),
     minValueInteger64: json['minValueInteger64'] == null
         ? null
-        : Integer.fromJson(json['minValueInteger64']),
+        : Integer64.fromJson(json['minValueInteger64']),
     minValueInteger64Element: json['_minValueInteger64'] == null
         ? null
         : Element.fromJson(json['_minValueInteger64'] as Map<String, dynamic>),
@@ -2021,7 +2023,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_maxValueInteger'] as Map<String, dynamic>),
     maxValueInteger64: json['maxValueInteger64'] == null
         ? null
-        : Integer.fromJson(json['maxValueInteger64']),
+        : Integer64.fromJson(json['maxValueInteger64']),
     maxValueInteger64Element: json['_maxValueInteger64'] == null
         ? null
         : Element.fromJson(json['_maxValueInteger64'] as Map<String, dynamic>),
@@ -2050,9 +2052,10 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
     condition: (json['condition'] as List)
         ?.map((e) => e == null ? null : Id.fromJson(e as String))
         ?.toList(),
-    conditionElement: json['_condition'] == null
-        ? null
-        : Element.fromJson(json['_condition'] as Map<String, dynamic>),
+    conditionElement: (json['_condition'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     constraint: (json['constraint'] as List)
         ?.map((e) => e == null
             ? null
@@ -2113,7 +2116,8 @@ Map<String, dynamic> _$_$_ElementDefinitionToJson(
       instance.representation
           ?.map((e) => _$ElementDefinitionRepresentationEnumMap[e])
           ?.toList());
-  writeNotNull('_representation', instance.representationElement?.toJson());
+  writeNotNull('_representation',
+      instance.representationElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('sliceName', instance.sliceName);
   writeNotNull('_sliceName', instance.sliceNameElement?.toJson());
   writeNotNull('sliceIsConstraining', instance.sliceIsConstraining?.toJson());
@@ -2132,7 +2136,8 @@ Map<String, dynamic> _$_$_ElementDefinitionToJson(
   writeNotNull('requirements', instance.requirements?.toJson());
   writeNotNull('_requirements', instance.requirementsElement?.toJson());
   writeNotNull('alias', instance.alias);
-  writeNotNull('_alias', instance.aliasElement?.toJson());
+  writeNotNull(
+      '_alias', instance.aliasElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('min', instance.min?.toJson());
   writeNotNull('_min', instance.minElement?.toJson());
   writeNotNull('max', instance.max);
@@ -2453,7 +2458,8 @@ Map<String, dynamic> _$_$_ElementDefinitionToJson(
   writeNotNull('_maxLength', instance.maxLengthElement?.toJson());
   writeNotNull(
       'condition', instance.condition?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_condition', instance.conditionElement?.toJson());
+  writeNotNull('_condition',
+      instance.conditionElement?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'constraint', instance.constraint?.map((e) => e?.toJson())?.toList());
   writeNotNull('mustSupport', instance.mustSupport?.toJson());
@@ -2689,9 +2695,10 @@ _$_ElementDefinitionType _$_$_ElementDefinitionTypeFromJson(
         ?.map((e) =>
             _$enumDecodeNullable(_$ElementDefinitionTypeAggregationEnumMap, e))
         ?.toList(),
-    aggregationElement: json['_aggregation'] == null
-        ? null
-        : Element.fromJson(json['_aggregation'] as Map<String, dynamic>),
+    aggregationElement: (json['_aggregation'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     versioning: _$enumDecodeNullable(
         _$ElementDefinitionTypeVersioningEnumMap, json['versioning'],
         unknownValue: ElementDefinitionTypeVersioning.unknown),
@@ -2726,7 +2733,8 @@ Map<String, dynamic> _$_$_ElementDefinitionTypeToJson(
       instance.aggregation
           ?.map((e) => _$ElementDefinitionTypeAggregationEnumMap[e])
           ?.toList());
-  writeNotNull('_aggregation', instance.aggregationElement?.toJson());
+  writeNotNull('_aggregation',
+      instance.aggregationElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('versioning',
       _$ElementDefinitionTypeVersioningEnumMap[instance.versioning]);
   writeNotNull('_versioning', instance.versioningElement?.toJson());
@@ -2826,7 +2834,7 @@ _$_ElementDefinitionExample _$_$_ElementDefinitionExampleFromJson(
         : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
     valueInteger64: json['valueInteger64'] == null
         ? null
-        : Integer.fromJson(json['valueInteger64']),
+        : Integer64.fromJson(json['valueInteger64']),
     valueInteger64Element: json['_valueInteger64'] == null
         ? null
         : Element.fromJson(json['_valueInteger64'] as Map<String, dynamic>),

@@ -1420,7 +1420,7 @@ class _$ChargeItemTearOff {
       List<Identifier> identifier,
       List<FhirUri> definitionUri,
       @JsonKey(name: '_definitionUri')
-          Element definitionUriElement,
+          List<Element> definitionUriElement,
       List<Canonical> definitionCanonical,
       @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
           ChargeItemStatus status,
@@ -1534,7 +1534,7 @@ mixin _$ChargeItem {
   List<Identifier> get identifier;
   List<FhirUri> get definitionUri;
   @JsonKey(name: '_definitionUri')
-  Element get definitionUriElement;
+  List<Element> get definitionUriElement;
   List<Canonical> get definitionCanonical;
   @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
   ChargeItemStatus get status;
@@ -1601,7 +1601,7 @@ abstract class $ChargeItemCopyWith<$Res> {
       List<Identifier> identifier,
       List<FhirUri> definitionUri,
       @JsonKey(name: '_definitionUri')
-          Element definitionUriElement,
+          List<Element> definitionUriElement,
       List<Canonical> definitionCanonical,
       @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
           ChargeItemStatus status,
@@ -1645,7 +1645,6 @@ abstract class $ChargeItemCopyWith<$Res> {
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
-  $ElementCopyWith<$Res> get definitionUriElement;
   $ElementCopyWith<$Res> get statusElement;
   $CodeableConceptCopyWith<$Res> get code;
   $ReferenceCopyWith<$Res> get subject;
@@ -1755,7 +1754,7 @@ class _$ChargeItemCopyWithImpl<$Res> implements $ChargeItemCopyWith<$Res> {
           : definitionUri as List<FhirUri>,
       definitionUriElement: definitionUriElement == freezed
           ? _value.definitionUriElement
-          : definitionUriElement as Element,
+          : definitionUriElement as List<Element>,
       definitionCanonical: definitionCanonical == freezed
           ? _value.definitionCanonical
           : definitionCanonical as List<Canonical>,
@@ -1870,16 +1869,6 @@ class _$ChargeItemCopyWithImpl<$Res> implements $ChargeItemCopyWith<$Res> {
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get definitionUriElement {
-    if (_value.definitionUriElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.definitionUriElement, (value) {
-      return _then(_value.copyWith(definitionUriElement: value));
     });
   }
 
@@ -2089,7 +2078,7 @@ abstract class _$ChargeItemCopyWith<$Res> implements $ChargeItemCopyWith<$Res> {
       List<Identifier> identifier,
       List<FhirUri> definitionUri,
       @JsonKey(name: '_definitionUri')
-          Element definitionUriElement,
+          List<Element> definitionUriElement,
       List<Canonical> definitionCanonical,
       @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
           ChargeItemStatus status,
@@ -2137,8 +2126,6 @@ abstract class _$ChargeItemCopyWith<$Res> implements $ChargeItemCopyWith<$Res> {
   $ElementCopyWith<$Res> get languageElement;
   @override
   $NarrativeCopyWith<$Res> get text;
-  @override
-  $ElementCopyWith<$Res> get definitionUriElement;
   @override
   $ElementCopyWith<$Res> get statusElement;
   @override
@@ -2268,7 +2255,7 @@ class __$ChargeItemCopyWithImpl<$Res> extends _$ChargeItemCopyWithImpl<$Res>
           : definitionUri as List<FhirUri>,
       definitionUriElement: definitionUriElement == freezed
           ? _value.definitionUriElement
-          : definitionUriElement as Element,
+          : definitionUriElement as List<Element>,
       definitionCanonical: definitionCanonical == freezed
           ? _value.definitionCanonical
           : definitionCanonical as List<Canonical>,
@@ -2436,7 +2423,7 @@ class _$_ChargeItem extends _ChargeItem {
   final List<FhirUri> definitionUri;
   @override
   @JsonKey(name: '_definitionUri')
-  final Element definitionUriElement;
+  final List<Element> definitionUriElement;
   @override
   final List<Canonical> definitionCanonical;
   @override
@@ -2689,7 +2676,7 @@ abstract class _ChargeItem extends ChargeItem {
       List<Identifier> identifier,
       List<FhirUri> definitionUri,
       @JsonKey(name: '_definitionUri')
-          Element definitionUriElement,
+          List<Element> definitionUriElement,
       List<Canonical> definitionCanonical,
       @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
           ChargeItemStatus status,
@@ -2766,7 +2753,7 @@ abstract class _ChargeItem extends ChargeItem {
   List<FhirUri> get definitionUri;
   @override
   @JsonKey(name: '_definitionUri')
-  Element get definitionUriElement;
+  List<Element> get definitionUriElement;
   @override
   List<Canonical> get definitionCanonical;
   @override
@@ -3165,7 +3152,7 @@ class _$ChargeItemDefinitionTearOff {
       Period effectivePeriod,
       List<FhirUri> derivedFromUri,
       @JsonKey(name: '_derivedFromUri')
-          Element derivedFromUriElement,
+          List<Element> derivedFromUriElement,
       List<Canonical> partOf,
       List<Canonical> replaces,
       CodeableConcept code,
@@ -3293,7 +3280,7 @@ mixin _$ChargeItemDefinition {
   Period get effectivePeriod;
   List<FhirUri> get derivedFromUri;
   @JsonKey(name: '_derivedFromUri')
-  Element get derivedFromUriElement;
+  List<Element> get derivedFromUriElement;
   List<Canonical> get partOf;
   List<Canonical> get replaces;
   CodeableConcept get code;
@@ -3372,7 +3359,7 @@ abstract class $ChargeItemDefinitionCopyWith<$Res> {
       Period effectivePeriod,
       List<FhirUri> derivedFromUri,
       @JsonKey(name: '_derivedFromUri')
-          Element derivedFromUriElement,
+          List<Element> derivedFromUriElement,
       List<Canonical> partOf,
       List<Canonical> replaces,
       CodeableConcept code,
@@ -3398,7 +3385,6 @@ abstract class $ChargeItemDefinitionCopyWith<$Res> {
   $ElementCopyWith<$Res> get approvalDateElement;
   $ElementCopyWith<$Res> get lastReviewDateElement;
   $PeriodCopyWith<$Res> get effectivePeriod;
-  $ElementCopyWith<$Res> get derivedFromUriElement;
   $CodeableConceptCopyWith<$Res> get code;
 }
 
@@ -3565,7 +3551,7 @@ class _$ChargeItemDefinitionCopyWithImpl<$Res>
           : derivedFromUri as List<FhirUri>,
       derivedFromUriElement: derivedFromUriElement == freezed
           ? _value.derivedFromUriElement
-          : derivedFromUriElement as Element,
+          : derivedFromUriElement as List<Element>,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Canonical>,
       replaces:
           replaces == freezed ? _value.replaces : replaces as List<Canonical>,
@@ -3762,16 +3748,6 @@ class _$ChargeItemDefinitionCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get derivedFromUriElement {
-    if (_value.derivedFromUriElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.derivedFromUriElement, (value) {
-      return _then(_value.copyWith(derivedFromUriElement: value));
-    });
-  }
-
-  @override
   $CodeableConceptCopyWith<$Res> get code {
     if (_value.code == null) {
       return null;
@@ -3851,7 +3827,7 @@ abstract class _$ChargeItemDefinitionCopyWith<$Res>
       Period effectivePeriod,
       List<FhirUri> derivedFromUri,
       @JsonKey(name: '_derivedFromUri')
-          Element derivedFromUriElement,
+          List<Element> derivedFromUriElement,
       List<Canonical> partOf,
       List<Canonical> replaces,
       CodeableConcept code,
@@ -3895,8 +3871,6 @@ abstract class _$ChargeItemDefinitionCopyWith<$Res>
   $ElementCopyWith<$Res> get lastReviewDateElement;
   @override
   $PeriodCopyWith<$Res> get effectivePeriod;
-  @override
-  $ElementCopyWith<$Res> get derivedFromUriElement;
   @override
   $CodeableConceptCopyWith<$Res> get code;
 }
@@ -4066,7 +4040,7 @@ class __$ChargeItemDefinitionCopyWithImpl<$Res>
           : derivedFromUri as List<FhirUri>,
       derivedFromUriElement: derivedFromUriElement == freezed
           ? _value.derivedFromUriElement
-          : derivedFromUriElement as Element,
+          : derivedFromUriElement as List<Element>,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Canonical>,
       replaces:
           replaces == freezed ? _value.replaces : replaces as List<Canonical>,
@@ -4268,7 +4242,7 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
   final List<FhirUri> derivedFromUri;
   @override
   @JsonKey(name: '_derivedFromUri')
-  final Element derivedFromUriElement;
+  final List<Element> derivedFromUriElement;
   @override
   final List<Canonical> partOf;
   @override
@@ -4517,7 +4491,7 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
           Period effectivePeriod,
           List<FhirUri> derivedFromUri,
           @JsonKey(name: '_derivedFromUri')
-              Element derivedFromUriElement,
+              List<Element> derivedFromUriElement,
           List<Canonical> partOf,
           List<Canonical> replaces,
           CodeableConcept code,
@@ -4635,7 +4609,7 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
   List<FhirUri> get derivedFromUri;
   @override
   @JsonKey(name: '_derivedFromUri')
-  Element get derivedFromUriElement;
+  List<Element> get derivedFromUriElement;
   @override
   List<Canonical> get partOf;
   @override
@@ -5696,7 +5670,7 @@ class _$ContractTearOff {
       String subtitle,
       @JsonKey(name: '_subtitle') Element subtitleElement,
       List<String> alias,
-      @JsonKey(name: '_alias') Element aliasElement,
+      @JsonKey(name: '_alias') List<Element> aliasElement,
       Reference author,
       CodeableConcept scope,
       CodeableConcept topicCodeableConcept,
@@ -5828,7 +5802,7 @@ mixin _$Contract {
   Element get subtitleElement;
   List<String> get alias;
   @JsonKey(name: '_alias')
-  Element get aliasElement;
+  List<Element> get aliasElement;
   Reference get author;
   CodeableConcept get scope;
   CodeableConcept get topicCodeableConcept;
@@ -5892,7 +5866,7 @@ abstract class $ContractCopyWith<$Res> {
       String subtitle,
       @JsonKey(name: '_subtitle') Element subtitleElement,
       List<String> alias,
-      @JsonKey(name: '_alias') Element aliasElement,
+      @JsonKey(name: '_alias') List<Element> aliasElement,
       Reference author,
       CodeableConcept scope,
       CodeableConcept topicCodeableConcept,
@@ -5927,7 +5901,6 @@ abstract class $ContractCopyWith<$Res> {
   $ElementCopyWith<$Res> get nameElement;
   $ElementCopyWith<$Res> get titleElement;
   $ElementCopyWith<$Res> get subtitleElement;
-  $ElementCopyWith<$Res> get aliasElement;
   $ReferenceCopyWith<$Res> get author;
   $CodeableConceptCopyWith<$Res> get scope;
   $CodeableConceptCopyWith<$Res> get topicCodeableConcept;
@@ -6085,7 +6058,7 @@ class _$ContractCopyWithImpl<$Res> implements $ContractCopyWith<$Res> {
       alias: alias == freezed ? _value.alias : alias as List<String>,
       aliasElement: aliasElement == freezed
           ? _value.aliasElement
-          : aliasElement as Element,
+          : aliasElement as List<Element>,
       author: author == freezed ? _value.author : author as Reference,
       scope: scope == freezed ? _value.scope : scope as CodeableConcept,
       topicCodeableConcept: topicCodeableConcept == freezed
@@ -6295,16 +6268,6 @@ class _$ContractCopyWithImpl<$Res> implements $ContractCopyWith<$Res> {
   }
 
   @override
-  $ElementCopyWith<$Res> get aliasElement {
-    if (_value.aliasElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.aliasElement, (value) {
-      return _then(_value.copyWith(aliasElement: value));
-    });
-  }
-
-  @override
   $ReferenceCopyWith<$Res> get author {
     if (_value.author == null) {
       return null;
@@ -6429,7 +6392,7 @@ abstract class _$ContractCopyWith<$Res> implements $ContractCopyWith<$Res> {
       String subtitle,
       @JsonKey(name: '_subtitle') Element subtitleElement,
       List<String> alias,
-      @JsonKey(name: '_alias') Element aliasElement,
+      @JsonKey(name: '_alias') List<Element> aliasElement,
       Reference author,
       CodeableConcept scope,
       CodeableConcept topicCodeableConcept,
@@ -6481,8 +6444,6 @@ abstract class _$ContractCopyWith<$Res> implements $ContractCopyWith<$Res> {
   $ElementCopyWith<$Res> get titleElement;
   @override
   $ElementCopyWith<$Res> get subtitleElement;
-  @override
-  $ElementCopyWith<$Res> get aliasElement;
   @override
   $ReferenceCopyWith<$Res> get author;
   @override
@@ -6649,7 +6610,7 @@ class __$ContractCopyWithImpl<$Res> extends _$ContractCopyWithImpl<$Res>
       alias: alias == freezed ? _value.alias : alias as List<String>,
       aliasElement: aliasElement == freezed
           ? _value.aliasElement
-          : aliasElement as Element,
+          : aliasElement as List<Element>,
       author: author == freezed ? _value.author : author as Reference,
       scope: scope == freezed ? _value.scope : scope as CodeableConcept,
       topicCodeableConcept: topicCodeableConcept == freezed
@@ -6843,7 +6804,7 @@ class _$_Contract extends _Contract {
   final List<String> alias;
   @override
   @JsonKey(name: '_alias')
-  final Element aliasElement;
+  final List<Element> aliasElement;
   @override
   final Reference author;
   @override
@@ -7095,7 +7056,7 @@ abstract class _Contract extends Contract {
       String subtitle,
       @JsonKey(name: '_subtitle') Element subtitleElement,
       List<String> alias,
-      @JsonKey(name: '_alias') Element aliasElement,
+      @JsonKey(name: '_alias') List<Element> aliasElement,
       Reference author,
       CodeableConcept scope,
       CodeableConcept topicCodeableConcept,
@@ -7205,7 +7166,7 @@ abstract class _Contract extends Contract {
   List<String> get alias;
   @override
   @JsonKey(name: '_alias')
-  Element get aliasElement;
+  List<Element> get aliasElement;
   @override
   Reference get author;
   @override
@@ -8338,7 +8299,7 @@ class _$ContractSecurityLabelTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<UnsignedInt> number,
-      @JsonKey(name: '_number') Element numberElement,
+      @JsonKey(name: '_number') List<Element> numberElement,
       @required Coding classification,
       List<Coding> category,
       List<Coding> control}) {
@@ -8365,7 +8326,7 @@ mixin _$ContractSecurityLabel {
   List<FhirExtension> get modifierExtension;
   List<UnsignedInt> get number;
   @JsonKey(name: '_number')
-  Element get numberElement;
+  List<Element> get numberElement;
   Coding get classification;
   List<Coding> get category;
   List<Coding> get control;
@@ -8383,12 +8344,11 @@ abstract class $ContractSecurityLabelCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<UnsignedInt> number,
-      @JsonKey(name: '_number') Element numberElement,
+      @JsonKey(name: '_number') List<Element> numberElement,
       Coding classification,
       List<Coding> category,
       List<Coding> control});
 
-  $ElementCopyWith<$Res> get numberElement;
   $CodingCopyWith<$Res> get classification;
 }
 
@@ -8422,7 +8382,7 @@ class _$ContractSecurityLabelCopyWithImpl<$Res>
       number: number == freezed ? _value.number : number as List<UnsignedInt>,
       numberElement: numberElement == freezed
           ? _value.numberElement
-          : numberElement as Element,
+          : numberElement as List<Element>,
       classification: classification == freezed
           ? _value.classification
           : classification as Coding,
@@ -8430,16 +8390,6 @@ class _$ContractSecurityLabelCopyWithImpl<$Res>
           category == freezed ? _value.category : category as List<Coding>,
       control: control == freezed ? _value.control : control as List<Coding>,
     ));
-  }
-
-  @override
-  $ElementCopyWith<$Res> get numberElement {
-    if (_value.numberElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.numberElement, (value) {
-      return _then(_value.copyWith(numberElement: value));
-    });
   }
 
   @override
@@ -8464,13 +8414,11 @@ abstract class _$ContractSecurityLabelCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<UnsignedInt> number,
-      @JsonKey(name: '_number') Element numberElement,
+      @JsonKey(name: '_number') List<Element> numberElement,
       Coding classification,
       List<Coding> category,
       List<Coding> control});
 
-  @override
-  $ElementCopyWith<$Res> get numberElement;
   @override
   $CodingCopyWith<$Res> get classification;
 }
@@ -8507,7 +8455,7 @@ class __$ContractSecurityLabelCopyWithImpl<$Res>
       number: number == freezed ? _value.number : number as List<UnsignedInt>,
       numberElement: numberElement == freezed
           ? _value.numberElement
-          : numberElement as Element,
+          : numberElement as List<Element>,
       classification: classification == freezed
           ? _value.classification
           : classification as Coding,
@@ -8546,7 +8494,7 @@ class _$_ContractSecurityLabel extends _ContractSecurityLabel {
   final List<UnsignedInt> number;
   @override
   @JsonKey(name: '_number')
-  final Element numberElement;
+  final List<Element> numberElement;
   @override
   final Coding classification;
   @override
@@ -8616,7 +8564,7 @@ abstract class _ContractSecurityLabel extends ContractSecurityLabel {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<UnsignedInt> number,
-      @JsonKey(name: '_number') Element numberElement,
+      @JsonKey(name: '_number') List<Element> numberElement,
       @required Coding classification,
       List<Coding> category,
       List<Coding> control}) = _$_ContractSecurityLabel;
@@ -8635,7 +8583,7 @@ abstract class _ContractSecurityLabel extends ContractSecurityLabel {
   List<UnsignedInt> get number;
   @override
   @JsonKey(name: '_number')
-  Element get numberElement;
+  List<Element> get numberElement;
   @override
   Coding get classification;
   @override
@@ -8670,10 +8618,10 @@ class _$ContractOfferTearOff {
           Element textElement,
       List<String> linkId,
       @JsonKey(name: '_linkId')
-          Element linkIdElement,
+          List<Element> linkIdElement,
       List<UnsignedInt> securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
-          Element securityLabelNumberElement}) {
+          List<Element> securityLabelNumberElement}) {
     return _ContractOffer(
       id: id,
       extension_: extension_,
@@ -8715,10 +8663,10 @@ mixin _$ContractOffer {
   Element get textElement;
   List<String> get linkId;
   @JsonKey(name: '_linkId')
-  Element get linkIdElement;
+  List<Element> get linkIdElement;
   List<UnsignedInt> get securityLabelNumber;
   @JsonKey(name: '_securityLabelNumber')
-  Element get securityLabelNumberElement;
+  List<Element> get securityLabelNumberElement;
 
   Map<String, dynamic> toJson();
   $ContractOfferCopyWith<ContractOffer> get copyWith;
@@ -8745,17 +8693,15 @@ abstract class $ContractOfferCopyWith<$Res> {
           Element textElement,
       List<String> linkId,
       @JsonKey(name: '_linkId')
-          Element linkIdElement,
+          List<Element> linkIdElement,
       List<UnsignedInt> securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
-          Element securityLabelNumberElement});
+          List<Element> securityLabelNumberElement});
 
   $ReferenceCopyWith<$Res> get topic;
   $CodeableConceptCopyWith<$Res> get type;
   $CodeableConceptCopyWith<$Res> get decision;
   $ElementCopyWith<$Res> get textElement;
-  $ElementCopyWith<$Res> get linkIdElement;
-  $ElementCopyWith<$Res> get securityLabelNumberElement;
 }
 
 class _$ContractOfferCopyWithImpl<$Res>
@@ -8812,13 +8758,13 @@ class _$ContractOfferCopyWithImpl<$Res>
       linkId: linkId == freezed ? _value.linkId : linkId as List<String>,
       linkIdElement: linkIdElement == freezed
           ? _value.linkIdElement
-          : linkIdElement as Element,
+          : linkIdElement as List<Element>,
       securityLabelNumber: securityLabelNumber == freezed
           ? _value.securityLabelNumber
           : securityLabelNumber as List<UnsignedInt>,
       securityLabelNumberElement: securityLabelNumberElement == freezed
           ? _value.securityLabelNumberElement
-          : securityLabelNumberElement as Element,
+          : securityLabelNumberElement as List<Element>,
     ));
   }
 
@@ -8861,26 +8807,6 @@ class _$ContractOfferCopyWithImpl<$Res>
       return _then(_value.copyWith(textElement: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get linkIdElement {
-    if (_value.linkIdElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.linkIdElement, (value) {
-      return _then(_value.copyWith(linkIdElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get securityLabelNumberElement {
-    if (_value.securityLabelNumberElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.securityLabelNumberElement, (value) {
-      return _then(_value.copyWith(securityLabelNumberElement: value));
-    });
-  }
 }
 
 abstract class _$ContractOfferCopyWith<$Res>
@@ -8906,10 +8832,10 @@ abstract class _$ContractOfferCopyWith<$Res>
           Element textElement,
       List<String> linkId,
       @JsonKey(name: '_linkId')
-          Element linkIdElement,
+          List<Element> linkIdElement,
       List<UnsignedInt> securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
-          Element securityLabelNumberElement});
+          List<Element> securityLabelNumberElement});
 
   @override
   $ReferenceCopyWith<$Res> get topic;
@@ -8919,10 +8845,6 @@ abstract class _$ContractOfferCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get decision;
   @override
   $ElementCopyWith<$Res> get textElement;
-  @override
-  $ElementCopyWith<$Res> get linkIdElement;
-  @override
-  $ElementCopyWith<$Res> get securityLabelNumberElement;
 }
 
 class __$ContractOfferCopyWithImpl<$Res>
@@ -8981,13 +8903,13 @@ class __$ContractOfferCopyWithImpl<$Res>
       linkId: linkId == freezed ? _value.linkId : linkId as List<String>,
       linkIdElement: linkIdElement == freezed
           ? _value.linkIdElement
-          : linkIdElement as Element,
+          : linkIdElement as List<Element>,
       securityLabelNumber: securityLabelNumber == freezed
           ? _value.securityLabelNumber
           : securityLabelNumber as List<UnsignedInt>,
       securityLabelNumberElement: securityLabelNumberElement == freezed
           ? _value.securityLabelNumberElement
-          : securityLabelNumberElement as Element,
+          : securityLabelNumberElement as List<Element>,
     ));
   }
 }
@@ -9046,12 +8968,12 @@ class _$_ContractOffer extends _ContractOffer {
   final List<String> linkId;
   @override
   @JsonKey(name: '_linkId')
-  final Element linkIdElement;
+  final List<Element> linkIdElement;
   @override
   final List<UnsignedInt> securityLabelNumber;
   @override
   @JsonKey(name: '_securityLabelNumber')
-  final Element securityLabelNumberElement;
+  final List<Element> securityLabelNumberElement;
 
   @override
   String toString() {
@@ -9156,10 +9078,10 @@ abstract class _ContractOffer extends ContractOffer {
           Element textElement,
       List<String> linkId,
       @JsonKey(name: '_linkId')
-          Element linkIdElement,
+          List<Element> linkIdElement,
       List<UnsignedInt> securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
-          Element securityLabelNumberElement}) = _$_ContractOffer;
+          List<Element> securityLabelNumberElement}) = _$_ContractOffer;
 
   factory _ContractOffer.fromJson(Map<String, dynamic> json) =
       _$_ContractOffer.fromJson;
@@ -9194,12 +9116,12 @@ abstract class _ContractOffer extends ContractOffer {
   List<String> get linkId;
   @override
   @JsonKey(name: '_linkId')
-  Element get linkIdElement;
+  List<Element> get linkIdElement;
   @override
   List<UnsignedInt> get securityLabelNumber;
   @override
   @JsonKey(name: '_securityLabelNumber')
-  Element get securityLabelNumberElement;
+  List<Element> get securityLabelNumberElement;
   @override
   _$ContractOfferCopyWith<_ContractOffer> get copyWith;
 }
@@ -10263,7 +10185,8 @@ class _$ContractAssetTearOff {
 
   _ContractAsset call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept scope,
       List<CodeableConcept> type,
@@ -10272,17 +10195,21 @@ class _$ContractAssetTearOff {
       Coding relationship,
       List<ContractContext> context,
       String condition,
-      @JsonKey(name: '_condition') Element conditionElement,
+      @JsonKey(name: '_condition')
+          Element conditionElement,
       List<CodeableConcept> periodType,
       List<Period> period,
       List<Period> usePeriod,
       String text,
-      @JsonKey(name: '_text') Element textElement,
+      @JsonKey(name: '_text')
+          Element textElement,
       List<String> linkId,
-      @JsonKey(name: '_linkId') Element linkIdElement,
+      @JsonKey(name: '_linkId')
+          List<Element> linkIdElement,
       List<ContractAnswer> answer,
       List<UnsignedInt> securityLabelNumber,
-      @JsonKey(name: '_securityLabelNumber') Element securityLabelNumberElement,
+      @JsonKey(name: '_securityLabelNumber')
+          List<Element> securityLabelNumberElement,
       List<ContractValuedItem> valuedItem}) {
     return _ContractAsset(
       id: id,
@@ -10336,11 +10263,11 @@ mixin _$ContractAsset {
   Element get textElement;
   List<String> get linkId;
   @JsonKey(name: '_linkId')
-  Element get linkIdElement;
+  List<Element> get linkIdElement;
   List<ContractAnswer> get answer;
   List<UnsignedInt> get securityLabelNumber;
   @JsonKey(name: '_securityLabelNumber')
-  Element get securityLabelNumberElement;
+  List<Element> get securityLabelNumberElement;
   List<ContractValuedItem> get valuedItem;
 
   Map<String, dynamic> toJson();
@@ -10353,7 +10280,8 @@ abstract class $ContractAssetCopyWith<$Res> {
       _$ContractAssetCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept scope,
       List<CodeableConcept> type,
@@ -10362,25 +10290,27 @@ abstract class $ContractAssetCopyWith<$Res> {
       Coding relationship,
       List<ContractContext> context,
       String condition,
-      @JsonKey(name: '_condition') Element conditionElement,
+      @JsonKey(name: '_condition')
+          Element conditionElement,
       List<CodeableConcept> periodType,
       List<Period> period,
       List<Period> usePeriod,
       String text,
-      @JsonKey(name: '_text') Element textElement,
+      @JsonKey(name: '_text')
+          Element textElement,
       List<String> linkId,
-      @JsonKey(name: '_linkId') Element linkIdElement,
+      @JsonKey(name: '_linkId')
+          List<Element> linkIdElement,
       List<ContractAnswer> answer,
       List<UnsignedInt> securityLabelNumber,
-      @JsonKey(name: '_securityLabelNumber') Element securityLabelNumberElement,
+      @JsonKey(name: '_securityLabelNumber')
+          List<Element> securityLabelNumberElement,
       List<ContractValuedItem> valuedItem});
 
   $CodeableConceptCopyWith<$Res> get scope;
   $CodingCopyWith<$Res> get relationship;
   $ElementCopyWith<$Res> get conditionElement;
   $ElementCopyWith<$Res> get textElement;
-  $ElementCopyWith<$Res> get linkIdElement;
-  $ElementCopyWith<$Res> get securityLabelNumberElement;
 }
 
 class _$ContractAssetCopyWithImpl<$Res>
@@ -10454,7 +10384,7 @@ class _$ContractAssetCopyWithImpl<$Res>
       linkId: linkId == freezed ? _value.linkId : linkId as List<String>,
       linkIdElement: linkIdElement == freezed
           ? _value.linkIdElement
-          : linkIdElement as Element,
+          : linkIdElement as List<Element>,
       answer:
           answer == freezed ? _value.answer : answer as List<ContractAnswer>,
       securityLabelNumber: securityLabelNumber == freezed
@@ -10462,7 +10392,7 @@ class _$ContractAssetCopyWithImpl<$Res>
           : securityLabelNumber as List<UnsignedInt>,
       securityLabelNumberElement: securityLabelNumberElement == freezed
           ? _value.securityLabelNumberElement
-          : securityLabelNumberElement as Element,
+          : securityLabelNumberElement as List<Element>,
       valuedItem: valuedItem == freezed
           ? _value.valuedItem
           : valuedItem as List<ContractValuedItem>,
@@ -10508,26 +10438,6 @@ class _$ContractAssetCopyWithImpl<$Res>
       return _then(_value.copyWith(textElement: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get linkIdElement {
-    if (_value.linkIdElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.linkIdElement, (value) {
-      return _then(_value.copyWith(linkIdElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get securityLabelNumberElement {
-    if (_value.securityLabelNumberElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.securityLabelNumberElement, (value) {
-      return _then(_value.copyWith(securityLabelNumberElement: value));
-    });
-  }
 }
 
 abstract class _$ContractAssetCopyWith<$Res>
@@ -10538,7 +10448,8 @@ abstract class _$ContractAssetCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept scope,
       List<CodeableConcept> type,
@@ -10547,17 +10458,21 @@ abstract class _$ContractAssetCopyWith<$Res>
       Coding relationship,
       List<ContractContext> context,
       String condition,
-      @JsonKey(name: '_condition') Element conditionElement,
+      @JsonKey(name: '_condition')
+          Element conditionElement,
       List<CodeableConcept> periodType,
       List<Period> period,
       List<Period> usePeriod,
       String text,
-      @JsonKey(name: '_text') Element textElement,
+      @JsonKey(name: '_text')
+          Element textElement,
       List<String> linkId,
-      @JsonKey(name: '_linkId') Element linkIdElement,
+      @JsonKey(name: '_linkId')
+          List<Element> linkIdElement,
       List<ContractAnswer> answer,
       List<UnsignedInt> securityLabelNumber,
-      @JsonKey(name: '_securityLabelNumber') Element securityLabelNumberElement,
+      @JsonKey(name: '_securityLabelNumber')
+          List<Element> securityLabelNumberElement,
       List<ContractValuedItem> valuedItem});
 
   @override
@@ -10568,10 +10483,6 @@ abstract class _$ContractAssetCopyWith<$Res>
   $ElementCopyWith<$Res> get conditionElement;
   @override
   $ElementCopyWith<$Res> get textElement;
-  @override
-  $ElementCopyWith<$Res> get linkIdElement;
-  @override
-  $ElementCopyWith<$Res> get securityLabelNumberElement;
 }
 
 class __$ContractAssetCopyWithImpl<$Res>
@@ -10647,7 +10558,7 @@ class __$ContractAssetCopyWithImpl<$Res>
       linkId: linkId == freezed ? _value.linkId : linkId as List<String>,
       linkIdElement: linkIdElement == freezed
           ? _value.linkIdElement
-          : linkIdElement as Element,
+          : linkIdElement as List<Element>,
       answer:
           answer == freezed ? _value.answer : answer as List<ContractAnswer>,
       securityLabelNumber: securityLabelNumber == freezed
@@ -10655,7 +10566,7 @@ class __$ContractAssetCopyWithImpl<$Res>
           : securityLabelNumber as List<UnsignedInt>,
       securityLabelNumberElement: securityLabelNumberElement == freezed
           ? _value.securityLabelNumberElement
-          : securityLabelNumberElement as Element,
+          : securityLabelNumberElement as List<Element>,
       valuedItem: valuedItem == freezed
           ? _value.valuedItem
           : valuedItem as List<ContractValuedItem>,
@@ -10732,14 +10643,14 @@ class _$_ContractAsset extends _ContractAsset {
   final List<String> linkId;
   @override
   @JsonKey(name: '_linkId')
-  final Element linkIdElement;
+  final List<Element> linkIdElement;
   @override
   final List<ContractAnswer> answer;
   @override
   final List<UnsignedInt> securityLabelNumber;
   @override
   @JsonKey(name: '_securityLabelNumber')
-  final Element securityLabelNumberElement;
+  final List<Element> securityLabelNumberElement;
   @override
   final List<ContractValuedItem> valuedItem;
 
@@ -10855,7 +10766,8 @@ abstract class _ContractAsset extends ContractAsset {
   _ContractAsset._() : super._();
   factory _ContractAsset(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept scope,
       List<CodeableConcept> type,
@@ -10864,17 +10776,21 @@ abstract class _ContractAsset extends ContractAsset {
       Coding relationship,
       List<ContractContext> context,
       String condition,
-      @JsonKey(name: '_condition') Element conditionElement,
+      @JsonKey(name: '_condition')
+          Element conditionElement,
       List<CodeableConcept> periodType,
       List<Period> period,
       List<Period> usePeriod,
       String text,
-      @JsonKey(name: '_text') Element textElement,
+      @JsonKey(name: '_text')
+          Element textElement,
       List<String> linkId,
-      @JsonKey(name: '_linkId') Element linkIdElement,
+      @JsonKey(name: '_linkId')
+          List<Element> linkIdElement,
       List<ContractAnswer> answer,
       List<UnsignedInt> securityLabelNumber,
-      @JsonKey(name: '_securityLabelNumber') Element securityLabelNumberElement,
+      @JsonKey(name: '_securityLabelNumber')
+          List<Element> securityLabelNumberElement,
       List<ContractValuedItem> valuedItem}) = _$_ContractAsset;
 
   factory _ContractAsset.fromJson(Map<String, dynamic> json) =
@@ -10919,14 +10835,14 @@ abstract class _ContractAsset extends ContractAsset {
   List<String> get linkId;
   @override
   @JsonKey(name: '_linkId')
-  Element get linkIdElement;
+  List<Element> get linkIdElement;
   @override
   List<ContractAnswer> get answer;
   @override
   List<UnsignedInt> get securityLabelNumber;
   @override
   @JsonKey(name: '_securityLabelNumber')
-  Element get securityLabelNumberElement;
+  List<Element> get securityLabelNumberElement;
   @override
   List<ContractValuedItem> get valuedItem;
   @override
@@ -11263,10 +11179,10 @@ class _$ContractValuedItemTearOff {
       Reference recipient,
       List<String> linkId,
       @JsonKey(name: '_linkId')
-          Element linkIdElement,
+          List<Element> linkIdElement,
       List<UnsignedInt> securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
-          Element securityLabelNumberElement}) {
+          List<Element> securityLabelNumberElement}) {
     return _ContractValuedItem(
       id: id,
       extension_: extension_,
@@ -11330,10 +11246,10 @@ mixin _$ContractValuedItem {
   Reference get recipient;
   List<String> get linkId;
   @JsonKey(name: '_linkId')
-  Element get linkIdElement;
+  List<Element> get linkIdElement;
   List<UnsignedInt> get securityLabelNumber;
   @JsonKey(name: '_securityLabelNumber')
-  Element get securityLabelNumberElement;
+  List<Element> get securityLabelNumberElement;
 
   Map<String, dynamic> toJson();
   $ContractValuedItemCopyWith<ContractValuedItem> get copyWith;
@@ -11373,10 +11289,10 @@ abstract class $ContractValuedItemCopyWith<$Res> {
       Reference recipient,
       List<String> linkId,
       @JsonKey(name: '_linkId')
-          Element linkIdElement,
+          List<Element> linkIdElement,
       List<UnsignedInt> securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
-          Element securityLabelNumberElement});
+          List<Element> securityLabelNumberElement});
 
   $CodeableConceptCopyWith<$Res> get entityCodeableConcept;
   $ReferenceCopyWith<$Res> get entityReference;
@@ -11391,8 +11307,6 @@ abstract class $ContractValuedItemCopyWith<$Res> {
   $ElementCopyWith<$Res> get paymentDateElement;
   $ReferenceCopyWith<$Res> get responsible;
   $ReferenceCopyWith<$Res> get recipient;
-  $ElementCopyWith<$Res> get linkIdElement;
-  $ElementCopyWith<$Res> get securityLabelNumberElement;
 }
 
 class _$ContractValuedItemCopyWithImpl<$Res>
@@ -11482,13 +11396,13 @@ class _$ContractValuedItemCopyWithImpl<$Res>
       linkId: linkId == freezed ? _value.linkId : linkId as List<String>,
       linkIdElement: linkIdElement == freezed
           ? _value.linkIdElement
-          : linkIdElement as Element,
+          : linkIdElement as List<Element>,
       securityLabelNumber: securityLabelNumber == freezed
           ? _value.securityLabelNumber
           : securityLabelNumber as List<UnsignedInt>,
       securityLabelNumberElement: securityLabelNumberElement == freezed
           ? _value.securityLabelNumberElement
-          : securityLabelNumberElement as Element,
+          : securityLabelNumberElement as List<Element>,
     ));
   }
 
@@ -11622,26 +11536,6 @@ class _$ContractValuedItemCopyWithImpl<$Res>
       return _then(_value.copyWith(recipient: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get linkIdElement {
-    if (_value.linkIdElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.linkIdElement, (value) {
-      return _then(_value.copyWith(linkIdElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get securityLabelNumberElement {
-    if (_value.securityLabelNumberElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.securityLabelNumberElement, (value) {
-      return _then(_value.copyWith(securityLabelNumberElement: value));
-    });
-  }
 }
 
 abstract class _$ContractValuedItemCopyWith<$Res>
@@ -11680,10 +11574,10 @@ abstract class _$ContractValuedItemCopyWith<$Res>
       Reference recipient,
       List<String> linkId,
       @JsonKey(name: '_linkId')
-          Element linkIdElement,
+          List<Element> linkIdElement,
       List<UnsignedInt> securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
-          Element securityLabelNumberElement});
+          List<Element> securityLabelNumberElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get entityCodeableConcept;
@@ -11711,10 +11605,6 @@ abstract class _$ContractValuedItemCopyWith<$Res>
   $ReferenceCopyWith<$Res> get responsible;
   @override
   $ReferenceCopyWith<$Res> get recipient;
-  @override
-  $ElementCopyWith<$Res> get linkIdElement;
-  @override
-  $ElementCopyWith<$Res> get securityLabelNumberElement;
 }
 
 class __$ContractValuedItemCopyWithImpl<$Res>
@@ -11806,13 +11696,13 @@ class __$ContractValuedItemCopyWithImpl<$Res>
       linkId: linkId == freezed ? _value.linkId : linkId as List<String>,
       linkIdElement: linkIdElement == freezed
           ? _value.linkIdElement
-          : linkIdElement as Element,
+          : linkIdElement as List<Element>,
       securityLabelNumber: securityLabelNumber == freezed
           ? _value.securityLabelNumber
           : securityLabelNumber as List<UnsignedInt>,
       securityLabelNumberElement: securityLabelNumberElement == freezed
           ? _value.securityLabelNumberElement
-          : securityLabelNumberElement as Element,
+          : securityLabelNumberElement as List<Element>,
     ));
   }
 }
@@ -11902,12 +11792,12 @@ class _$_ContractValuedItem extends _ContractValuedItem {
   final List<String> linkId;
   @override
   @JsonKey(name: '_linkId')
-  final Element linkIdElement;
+  final List<Element> linkIdElement;
   @override
   final List<UnsignedInt> securityLabelNumber;
   @override
   @JsonKey(name: '_securityLabelNumber')
-  final Element securityLabelNumberElement;
+  final List<Element> securityLabelNumberElement;
 
   @override
   String toString() {
@@ -12059,10 +11949,10 @@ abstract class _ContractValuedItem extends ContractValuedItem {
       Reference recipient,
       List<String> linkId,
       @JsonKey(name: '_linkId')
-          Element linkIdElement,
+          List<Element> linkIdElement,
       List<UnsignedInt> securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
-          Element securityLabelNumberElement}) = _$_ContractValuedItem;
+          List<Element> securityLabelNumberElement}) = _$_ContractValuedItem;
 
   factory _ContractValuedItem.fromJson(Map<String, dynamic> json) =
       _$_ContractValuedItem.fromJson;
@@ -12119,12 +12009,12 @@ abstract class _ContractValuedItem extends ContractValuedItem {
   List<String> get linkId;
   @override
   @JsonKey(name: '_linkId')
-  Element get linkIdElement;
+  List<Element> get linkIdElement;
   @override
   List<UnsignedInt> get securityLabelNumber;
   @override
   @JsonKey(name: '_securityLabelNumber')
-  Element get securityLabelNumberElement;
+  List<Element> get securityLabelNumberElement;
   @override
   _$ContractValuedItemCopyWith<_ContractValuedItem> get copyWith;
 }
@@ -12151,13 +12041,13 @@ class _$ContractActionTearOff {
           CodeableConcept intent,
       List<String> linkId,
       @JsonKey(name: '_linkId')
-          Element linkIdElement,
+          List<Element> linkIdElement,
       @required
           CodeableConcept status,
       Reference context,
       List<String> contextLinkId,
       @JsonKey(name: '_contextLinkId')
-          Element contextLinkIdElement,
+          List<Element> contextLinkIdElement,
       FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           Element occurrenceDateTimeElement,
@@ -12166,21 +12056,21 @@ class _$ContractActionTearOff {
       List<Reference> requester,
       List<String> requesterLinkId,
       @JsonKey(name: '_requesterLinkId')
-          Element requesterLinkIdElement,
+          List<Element> requesterLinkIdElement,
       List<CodeableConcept> performerType,
       CodeableConcept performerRole,
       Reference performer,
       List<String> performerLinkId,
       @JsonKey(name: '_performerLinkId')
-          Element performerLinkIdElement,
+          List<Element> performerLinkIdElement,
       List<CodeableReference> reason,
       List<String> reasonLinkId,
       @JsonKey(name: '_reasonLinkId')
-          Element reasonLinkIdElement,
+          List<Element> reasonLinkIdElement,
       List<Annotation> note,
       List<UnsignedInt> securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
-          Element securityLabelNumberElement}) {
+          List<Element> securityLabelNumberElement}) {
     return _ContractAction(
       id: id,
       extension_: extension_,
@@ -12234,12 +12124,12 @@ mixin _$ContractAction {
   CodeableConcept get intent;
   List<String> get linkId;
   @JsonKey(name: '_linkId')
-  Element get linkIdElement;
+  List<Element> get linkIdElement;
   CodeableConcept get status;
   Reference get context;
   List<String> get contextLinkId;
   @JsonKey(name: '_contextLinkId')
-  Element get contextLinkIdElement;
+  List<Element> get contextLinkIdElement;
   FhirDateTime get occurrenceDateTime;
   @JsonKey(name: '_occurrenceDateTime')
   Element get occurrenceDateTimeElement;
@@ -12248,21 +12138,21 @@ mixin _$ContractAction {
   List<Reference> get requester;
   List<String> get requesterLinkId;
   @JsonKey(name: '_requesterLinkId')
-  Element get requesterLinkIdElement;
+  List<Element> get requesterLinkIdElement;
   List<CodeableConcept> get performerType;
   CodeableConcept get performerRole;
   Reference get performer;
   List<String> get performerLinkId;
   @JsonKey(name: '_performerLinkId')
-  Element get performerLinkIdElement;
+  List<Element> get performerLinkIdElement;
   List<CodeableReference> get reason;
   List<String> get reasonLinkId;
   @JsonKey(name: '_reasonLinkId')
-  Element get reasonLinkIdElement;
+  List<Element> get reasonLinkIdElement;
   List<Annotation> get note;
   List<UnsignedInt> get securityLabelNumber;
   @JsonKey(name: '_securityLabelNumber')
-  Element get securityLabelNumberElement;
+  List<Element> get securityLabelNumberElement;
 
   Map<String, dynamic> toJson();
   $ContractActionCopyWith<ContractAction> get copyWith;
@@ -12285,12 +12175,12 @@ abstract class $ContractActionCopyWith<$Res> {
       CodeableConcept intent,
       List<String> linkId,
       @JsonKey(name: '_linkId')
-          Element linkIdElement,
+          List<Element> linkIdElement,
       CodeableConcept status,
       Reference context,
       List<String> contextLinkId,
       @JsonKey(name: '_contextLinkId')
-          Element contextLinkIdElement,
+          List<Element> contextLinkIdElement,
       FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           Element occurrenceDateTimeElement,
@@ -12299,38 +12189,32 @@ abstract class $ContractActionCopyWith<$Res> {
       List<Reference> requester,
       List<String> requesterLinkId,
       @JsonKey(name: '_requesterLinkId')
-          Element requesterLinkIdElement,
+          List<Element> requesterLinkIdElement,
       List<CodeableConcept> performerType,
       CodeableConcept performerRole,
       Reference performer,
       List<String> performerLinkId,
       @JsonKey(name: '_performerLinkId')
-          Element performerLinkIdElement,
+          List<Element> performerLinkIdElement,
       List<CodeableReference> reason,
       List<String> reasonLinkId,
       @JsonKey(name: '_reasonLinkId')
-          Element reasonLinkIdElement,
+          List<Element> reasonLinkIdElement,
       List<Annotation> note,
       List<UnsignedInt> securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
-          Element securityLabelNumberElement});
+          List<Element> securityLabelNumberElement});
 
   $ElementCopyWith<$Res> get doNotPerformElement;
   $CodeableConceptCopyWith<$Res> get type;
   $CodeableConceptCopyWith<$Res> get intent;
-  $ElementCopyWith<$Res> get linkIdElement;
   $CodeableConceptCopyWith<$Res> get status;
   $ReferenceCopyWith<$Res> get context;
-  $ElementCopyWith<$Res> get contextLinkIdElement;
   $ElementCopyWith<$Res> get occurrenceDateTimeElement;
   $PeriodCopyWith<$Res> get occurrencePeriod;
   $TimingCopyWith<$Res> get occurrenceTiming;
-  $ElementCopyWith<$Res> get requesterLinkIdElement;
   $CodeableConceptCopyWith<$Res> get performerRole;
   $ReferenceCopyWith<$Res> get performer;
-  $ElementCopyWith<$Res> get performerLinkIdElement;
-  $ElementCopyWith<$Res> get reasonLinkIdElement;
-  $ElementCopyWith<$Res> get securityLabelNumberElement;
 }
 
 class _$ContractActionCopyWithImpl<$Res>
@@ -12398,7 +12282,7 @@ class _$ContractActionCopyWithImpl<$Res>
       linkId: linkId == freezed ? _value.linkId : linkId as List<String>,
       linkIdElement: linkIdElement == freezed
           ? _value.linkIdElement
-          : linkIdElement as Element,
+          : linkIdElement as List<Element>,
       status: status == freezed ? _value.status : status as CodeableConcept,
       context: context == freezed ? _value.context : context as Reference,
       contextLinkId: contextLinkId == freezed
@@ -12406,7 +12290,7 @@ class _$ContractActionCopyWithImpl<$Res>
           : contextLinkId as List<String>,
       contextLinkIdElement: contextLinkIdElement == freezed
           ? _value.contextLinkIdElement
-          : contextLinkIdElement as Element,
+          : contextLinkIdElement as List<Element>,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
           : occurrenceDateTime as FhirDateTime,
@@ -12427,7 +12311,7 @@ class _$ContractActionCopyWithImpl<$Res>
           : requesterLinkId as List<String>,
       requesterLinkIdElement: requesterLinkIdElement == freezed
           ? _value.requesterLinkIdElement
-          : requesterLinkIdElement as Element,
+          : requesterLinkIdElement as List<Element>,
       performerType: performerType == freezed
           ? _value.performerType
           : performerType as List<CodeableConcept>,
@@ -12441,7 +12325,7 @@ class _$ContractActionCopyWithImpl<$Res>
           : performerLinkId as List<String>,
       performerLinkIdElement: performerLinkIdElement == freezed
           ? _value.performerLinkIdElement
-          : performerLinkIdElement as Element,
+          : performerLinkIdElement as List<Element>,
       reason:
           reason == freezed ? _value.reason : reason as List<CodeableReference>,
       reasonLinkId: reasonLinkId == freezed
@@ -12449,14 +12333,14 @@ class _$ContractActionCopyWithImpl<$Res>
           : reasonLinkId as List<String>,
       reasonLinkIdElement: reasonLinkIdElement == freezed
           ? _value.reasonLinkIdElement
-          : reasonLinkIdElement as Element,
+          : reasonLinkIdElement as List<Element>,
       note: note == freezed ? _value.note : note as List<Annotation>,
       securityLabelNumber: securityLabelNumber == freezed
           ? _value.securityLabelNumber
           : securityLabelNumber as List<UnsignedInt>,
       securityLabelNumberElement: securityLabelNumberElement == freezed
           ? _value.securityLabelNumberElement
-          : securityLabelNumberElement as Element,
+          : securityLabelNumberElement as List<Element>,
     ));
   }
 
@@ -12491,16 +12375,6 @@ class _$ContractActionCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get linkIdElement {
-    if (_value.linkIdElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.linkIdElement, (value) {
-      return _then(_value.copyWith(linkIdElement: value));
-    });
-  }
-
-  @override
   $CodeableConceptCopyWith<$Res> get status {
     if (_value.status == null) {
       return null;
@@ -12517,16 +12391,6 @@ class _$ContractActionCopyWithImpl<$Res>
     }
     return $ReferenceCopyWith<$Res>(_value.context, (value) {
       return _then(_value.copyWith(context: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get contextLinkIdElement {
-    if (_value.contextLinkIdElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.contextLinkIdElement, (value) {
-      return _then(_value.copyWith(contextLinkIdElement: value));
     });
   }
 
@@ -12561,16 +12425,6 @@ class _$ContractActionCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get requesterLinkIdElement {
-    if (_value.requesterLinkIdElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.requesterLinkIdElement, (value) {
-      return _then(_value.copyWith(requesterLinkIdElement: value));
-    });
-  }
-
-  @override
   $CodeableConceptCopyWith<$Res> get performerRole {
     if (_value.performerRole == null) {
       return null;
@@ -12587,36 +12441,6 @@ class _$ContractActionCopyWithImpl<$Res>
     }
     return $ReferenceCopyWith<$Res>(_value.performer, (value) {
       return _then(_value.copyWith(performer: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get performerLinkIdElement {
-    if (_value.performerLinkIdElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.performerLinkIdElement, (value) {
-      return _then(_value.copyWith(performerLinkIdElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get reasonLinkIdElement {
-    if (_value.reasonLinkIdElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.reasonLinkIdElement, (value) {
-      return _then(_value.copyWith(reasonLinkIdElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get securityLabelNumberElement {
-    if (_value.securityLabelNumberElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.securityLabelNumberElement, (value) {
-      return _then(_value.copyWith(securityLabelNumberElement: value));
     });
   }
 }
@@ -12640,12 +12464,12 @@ abstract class _$ContractActionCopyWith<$Res>
       CodeableConcept intent,
       List<String> linkId,
       @JsonKey(name: '_linkId')
-          Element linkIdElement,
+          List<Element> linkIdElement,
       CodeableConcept status,
       Reference context,
       List<String> contextLinkId,
       @JsonKey(name: '_contextLinkId')
-          Element contextLinkIdElement,
+          List<Element> contextLinkIdElement,
       FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           Element occurrenceDateTimeElement,
@@ -12654,21 +12478,21 @@ abstract class _$ContractActionCopyWith<$Res>
       List<Reference> requester,
       List<String> requesterLinkId,
       @JsonKey(name: '_requesterLinkId')
-          Element requesterLinkIdElement,
+          List<Element> requesterLinkIdElement,
       List<CodeableConcept> performerType,
       CodeableConcept performerRole,
       Reference performer,
       List<String> performerLinkId,
       @JsonKey(name: '_performerLinkId')
-          Element performerLinkIdElement,
+          List<Element> performerLinkIdElement,
       List<CodeableReference> reason,
       List<String> reasonLinkId,
       @JsonKey(name: '_reasonLinkId')
-          Element reasonLinkIdElement,
+          List<Element> reasonLinkIdElement,
       List<Annotation> note,
       List<UnsignedInt> securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
-          Element securityLabelNumberElement});
+          List<Element> securityLabelNumberElement});
 
   @override
   $ElementCopyWith<$Res> get doNotPerformElement;
@@ -12677,13 +12501,9 @@ abstract class _$ContractActionCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res> get intent;
   @override
-  $ElementCopyWith<$Res> get linkIdElement;
-  @override
   $CodeableConceptCopyWith<$Res> get status;
   @override
   $ReferenceCopyWith<$Res> get context;
-  @override
-  $ElementCopyWith<$Res> get contextLinkIdElement;
   @override
   $ElementCopyWith<$Res> get occurrenceDateTimeElement;
   @override
@@ -12691,17 +12511,9 @@ abstract class _$ContractActionCopyWith<$Res>
   @override
   $TimingCopyWith<$Res> get occurrenceTiming;
   @override
-  $ElementCopyWith<$Res> get requesterLinkIdElement;
-  @override
   $CodeableConceptCopyWith<$Res> get performerRole;
   @override
   $ReferenceCopyWith<$Res> get performer;
-  @override
-  $ElementCopyWith<$Res> get performerLinkIdElement;
-  @override
-  $ElementCopyWith<$Res> get reasonLinkIdElement;
-  @override
-  $ElementCopyWith<$Res> get securityLabelNumberElement;
 }
 
 class __$ContractActionCopyWithImpl<$Res>
@@ -12771,7 +12583,7 @@ class __$ContractActionCopyWithImpl<$Res>
       linkId: linkId == freezed ? _value.linkId : linkId as List<String>,
       linkIdElement: linkIdElement == freezed
           ? _value.linkIdElement
-          : linkIdElement as Element,
+          : linkIdElement as List<Element>,
       status: status == freezed ? _value.status : status as CodeableConcept,
       context: context == freezed ? _value.context : context as Reference,
       contextLinkId: contextLinkId == freezed
@@ -12779,7 +12591,7 @@ class __$ContractActionCopyWithImpl<$Res>
           : contextLinkId as List<String>,
       contextLinkIdElement: contextLinkIdElement == freezed
           ? _value.contextLinkIdElement
-          : contextLinkIdElement as Element,
+          : contextLinkIdElement as List<Element>,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
           : occurrenceDateTime as FhirDateTime,
@@ -12800,7 +12612,7 @@ class __$ContractActionCopyWithImpl<$Res>
           : requesterLinkId as List<String>,
       requesterLinkIdElement: requesterLinkIdElement == freezed
           ? _value.requesterLinkIdElement
-          : requesterLinkIdElement as Element,
+          : requesterLinkIdElement as List<Element>,
       performerType: performerType == freezed
           ? _value.performerType
           : performerType as List<CodeableConcept>,
@@ -12814,7 +12626,7 @@ class __$ContractActionCopyWithImpl<$Res>
           : performerLinkId as List<String>,
       performerLinkIdElement: performerLinkIdElement == freezed
           ? _value.performerLinkIdElement
-          : performerLinkIdElement as Element,
+          : performerLinkIdElement as List<Element>,
       reason:
           reason == freezed ? _value.reason : reason as List<CodeableReference>,
       reasonLinkId: reasonLinkId == freezed
@@ -12822,14 +12634,14 @@ class __$ContractActionCopyWithImpl<$Res>
           : reasonLinkId as List<String>,
       reasonLinkIdElement: reasonLinkIdElement == freezed
           ? _value.reasonLinkIdElement
-          : reasonLinkIdElement as Element,
+          : reasonLinkIdElement as List<Element>,
       note: note == freezed ? _value.note : note as List<Annotation>,
       securityLabelNumber: securityLabelNumber == freezed
           ? _value.securityLabelNumber
           : securityLabelNumber as List<UnsignedInt>,
       securityLabelNumberElement: securityLabelNumberElement == freezed
           ? _value.securityLabelNumberElement
-          : securityLabelNumberElement as Element,
+          : securityLabelNumberElement as List<Element>,
     ));
   }
 }
@@ -12899,7 +12711,7 @@ class _$_ContractAction extends _ContractAction {
   final List<String> linkId;
   @override
   @JsonKey(name: '_linkId')
-  final Element linkIdElement;
+  final List<Element> linkIdElement;
   @override
   final CodeableConcept status;
   @override
@@ -12908,7 +12720,7 @@ class _$_ContractAction extends _ContractAction {
   final List<String> contextLinkId;
   @override
   @JsonKey(name: '_contextLinkId')
-  final Element contextLinkIdElement;
+  final List<Element> contextLinkIdElement;
   @override
   final FhirDateTime occurrenceDateTime;
   @override
@@ -12924,7 +12736,7 @@ class _$_ContractAction extends _ContractAction {
   final List<String> requesterLinkId;
   @override
   @JsonKey(name: '_requesterLinkId')
-  final Element requesterLinkIdElement;
+  final List<Element> requesterLinkIdElement;
   @override
   final List<CodeableConcept> performerType;
   @override
@@ -12935,21 +12747,21 @@ class _$_ContractAction extends _ContractAction {
   final List<String> performerLinkId;
   @override
   @JsonKey(name: '_performerLinkId')
-  final Element performerLinkIdElement;
+  final List<Element> performerLinkIdElement;
   @override
   final List<CodeableReference> reason;
   @override
   final List<String> reasonLinkId;
   @override
   @JsonKey(name: '_reasonLinkId')
-  final Element reasonLinkIdElement;
+  final List<Element> reasonLinkIdElement;
   @override
   final List<Annotation> note;
   @override
   final List<UnsignedInt> securityLabelNumber;
   @override
   @JsonKey(name: '_securityLabelNumber')
-  final Element securityLabelNumberElement;
+  final List<Element> securityLabelNumberElement;
 
   @override
   String toString() {
@@ -13097,13 +12909,13 @@ abstract class _ContractAction extends ContractAction {
           CodeableConcept intent,
       List<String> linkId,
       @JsonKey(name: '_linkId')
-          Element linkIdElement,
+          List<Element> linkIdElement,
       @required
           CodeableConcept status,
       Reference context,
       List<String> contextLinkId,
       @JsonKey(name: '_contextLinkId')
-          Element contextLinkIdElement,
+          List<Element> contextLinkIdElement,
       FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           Element occurrenceDateTimeElement,
@@ -13112,21 +12924,21 @@ abstract class _ContractAction extends ContractAction {
       List<Reference> requester,
       List<String> requesterLinkId,
       @JsonKey(name: '_requesterLinkId')
-          Element requesterLinkIdElement,
+          List<Element> requesterLinkIdElement,
       List<CodeableConcept> performerType,
       CodeableConcept performerRole,
       Reference performer,
       List<String> performerLinkId,
       @JsonKey(name: '_performerLinkId')
-          Element performerLinkIdElement,
+          List<Element> performerLinkIdElement,
       List<CodeableReference> reason,
       List<String> reasonLinkId,
       @JsonKey(name: '_reasonLinkId')
-          Element reasonLinkIdElement,
+          List<Element> reasonLinkIdElement,
       List<Annotation> note,
       List<UnsignedInt> securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
-          Element securityLabelNumberElement}) = _$_ContractAction;
+          List<Element> securityLabelNumberElement}) = _$_ContractAction;
 
   factory _ContractAction.fromJson(Map<String, dynamic> json) =
       _$_ContractAction.fromJson;
@@ -13153,7 +12965,7 @@ abstract class _ContractAction extends ContractAction {
   List<String> get linkId;
   @override
   @JsonKey(name: '_linkId')
-  Element get linkIdElement;
+  List<Element> get linkIdElement;
   @override
   CodeableConcept get status;
   @override
@@ -13162,7 +12974,7 @@ abstract class _ContractAction extends ContractAction {
   List<String> get contextLinkId;
   @override
   @JsonKey(name: '_contextLinkId')
-  Element get contextLinkIdElement;
+  List<Element> get contextLinkIdElement;
   @override
   FhirDateTime get occurrenceDateTime;
   @override
@@ -13178,7 +12990,7 @@ abstract class _ContractAction extends ContractAction {
   List<String> get requesterLinkId;
   @override
   @JsonKey(name: '_requesterLinkId')
-  Element get requesterLinkIdElement;
+  List<Element> get requesterLinkIdElement;
   @override
   List<CodeableConcept> get performerType;
   @override
@@ -13189,21 +13001,21 @@ abstract class _ContractAction extends ContractAction {
   List<String> get performerLinkId;
   @override
   @JsonKey(name: '_performerLinkId')
-  Element get performerLinkIdElement;
+  List<Element> get performerLinkIdElement;
   @override
   List<CodeableReference> get reason;
   @override
   List<String> get reasonLinkId;
   @override
   @JsonKey(name: '_reasonLinkId')
-  Element get reasonLinkIdElement;
+  List<Element> get reasonLinkIdElement;
   @override
   List<Annotation> get note;
   @override
   List<UnsignedInt> get securityLabelNumber;
   @override
   @JsonKey(name: '_securityLabelNumber')
-  Element get securityLabelNumberElement;
+  List<Element> get securityLabelNumberElement;
   @override
   _$ContractActionCopyWith<_ContractAction> get copyWith;
 }
@@ -14560,7 +14372,7 @@ class _$ExplanationOfBenefitTearOff {
           Element dispositionElement,
       List<String> preAuthRef,
       @JsonKey(name: '_preAuthRef')
-          Element preAuthRefElement,
+          List<Element> preAuthRefElement,
       List<Period> preAuthRefPeriod,
       List<ExplanationOfBenefitCareTeam> careTeam,
       List<ExplanationOfBenefitSupportingInfo> supportingInfo,
@@ -14704,7 +14516,7 @@ mixin _$ExplanationOfBenefit {
   Element get dispositionElement;
   List<String> get preAuthRef;
   @JsonKey(name: '_preAuthRef')
-  Element get preAuthRefElement;
+  List<Element> get preAuthRefElement;
   List<Period> get preAuthRefPeriod;
   List<ExplanationOfBenefitCareTeam> get careTeam;
   List<ExplanationOfBenefitSupportingInfo> get supportingInfo;
@@ -14787,7 +14599,7 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
           Element dispositionElement,
       List<String> preAuthRef,
       @JsonKey(name: '_preAuthRef')
-          Element preAuthRefElement,
+          List<Element> preAuthRefElement,
       List<Period> preAuthRefPeriod,
       List<ExplanationOfBenefitCareTeam> careTeam,
       List<ExplanationOfBenefitSupportingInfo> supportingInfo,
@@ -14835,7 +14647,6 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get claimResponse;
   $ElementCopyWith<$Res> get outcomeElement;
   $ElementCopyWith<$Res> get dispositionElement;
-  $ElementCopyWith<$Res> get preAuthRefElement;
   $ElementCopyWith<$Res> get precedenceElement;
   $ExplanationOfBenefitAccidentCopyWith<$Res> get accident;
   $ExplanationOfBenefitPaymentCopyWith<$Res> get payment;
@@ -15005,7 +14816,7 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res>
           : preAuthRef as List<String>,
       preAuthRefElement: preAuthRefElement == freezed
           ? _value.preAuthRefElement
-          : preAuthRefElement as Element,
+          : preAuthRefElement as List<Element>,
       preAuthRefPeriod: preAuthRefPeriod == freezed
           ? _value.preAuthRefPeriod
           : preAuthRefPeriod as List<Period>,
@@ -15324,16 +15135,6 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get preAuthRefElement {
-    if (_value.preAuthRefElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.preAuthRefElement, (value) {
-      return _then(_value.copyWith(preAuthRefElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get precedenceElement {
     if (_value.precedenceElement == null) {
       return null;
@@ -15454,7 +15255,7 @@ abstract class _$ExplanationOfBenefitCopyWith<$Res>
           Element dispositionElement,
       List<String> preAuthRef,
       @JsonKey(name: '_preAuthRef')
-          Element preAuthRefElement,
+          List<Element> preAuthRefElement,
       List<Period> preAuthRefPeriod,
       List<ExplanationOfBenefitCareTeam> careTeam,
       List<ExplanationOfBenefitSupportingInfo> supportingInfo,
@@ -15528,8 +15329,6 @@ abstract class _$ExplanationOfBenefitCopyWith<$Res>
   $ElementCopyWith<$Res> get outcomeElement;
   @override
   $ElementCopyWith<$Res> get dispositionElement;
-  @override
-  $ElementCopyWith<$Res> get preAuthRefElement;
   @override
   $ElementCopyWith<$Res> get precedenceElement;
   @override
@@ -15707,7 +15506,7 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
           : preAuthRef as List<String>,
       preAuthRefElement: preAuthRefElement == freezed
           ? _value.preAuthRefElement
-          : preAuthRefElement as Element,
+          : preAuthRefElement as List<Element>,
       preAuthRefPeriod: preAuthRefPeriod == freezed
           ? _value.preAuthRefPeriod
           : preAuthRefPeriod as List<Period>,
@@ -15952,7 +15751,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   final List<String> preAuthRef;
   @override
   @JsonKey(name: '_preAuthRef')
-  final Element preAuthRefElement;
+  final List<Element> preAuthRefElement;
   @override
   final List<Period> preAuthRefPeriod;
   @override
@@ -16244,7 +16043,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
               Element dispositionElement,
           List<String> preAuthRef,
           @JsonKey(name: '_preAuthRef')
-              Element preAuthRefElement,
+              List<Element> preAuthRefElement,
           List<Period> preAuthRefPeriod,
           List<ExplanationOfBenefitCareTeam> careTeam,
           List<ExplanationOfBenefitSupportingInfo> supportingInfo,
@@ -16365,7 +16164,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   List<String> get preAuthRef;
   @override
   @JsonKey(name: '_preAuthRef')
-  Element get preAuthRefElement;
+  List<Element> get preAuthRefElement;
   @override
   List<Period> get preAuthRefPeriod;
   @override
@@ -18906,7 +18705,7 @@ class _$ExplanationOfBenefitInsuranceTearOff {
       @JsonKey(name: '_focal') Element focalElement,
       @required Reference coverage,
       List<String> preAuthRef,
-      @JsonKey(name: '_preAuthRef') Element preAuthRefElement}) {
+      @JsonKey(name: '_preAuthRef') List<Element> preAuthRefElement}) {
     return _ExplanationOfBenefitInsurance(
       id: id,
       extension_: extension_,
@@ -18934,7 +18733,7 @@ mixin _$ExplanationOfBenefitInsurance {
   Reference get coverage;
   List<String> get preAuthRef;
   @JsonKey(name: '_preAuthRef')
-  Element get preAuthRefElement;
+  List<Element> get preAuthRefElement;
 
   Map<String, dynamic> toJson();
   $ExplanationOfBenefitInsuranceCopyWith<ExplanationOfBenefitInsurance>
@@ -18954,11 +18753,10 @@ abstract class $ExplanationOfBenefitInsuranceCopyWith<$Res> {
       @JsonKey(name: '_focal') Element focalElement,
       Reference coverage,
       List<String> preAuthRef,
-      @JsonKey(name: '_preAuthRef') Element preAuthRefElement});
+      @JsonKey(name: '_preAuthRef') List<Element> preAuthRefElement});
 
   $ElementCopyWith<$Res> get focalElement;
   $ReferenceCopyWith<$Res> get coverage;
-  $ElementCopyWith<$Res> get preAuthRefElement;
 }
 
 class _$ExplanationOfBenefitInsuranceCopyWithImpl<$Res>
@@ -18998,7 +18796,7 @@ class _$ExplanationOfBenefitInsuranceCopyWithImpl<$Res>
           : preAuthRef as List<String>,
       preAuthRefElement: preAuthRefElement == freezed
           ? _value.preAuthRefElement
-          : preAuthRefElement as Element,
+          : preAuthRefElement as List<Element>,
     ));
   }
 
@@ -19021,16 +18819,6 @@ class _$ExplanationOfBenefitInsuranceCopyWithImpl<$Res>
       return _then(_value.copyWith(coverage: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get preAuthRefElement {
-    if (_value.preAuthRefElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.preAuthRefElement, (value) {
-      return _then(_value.copyWith(preAuthRefElement: value));
-    });
-  }
 }
 
 abstract class _$ExplanationOfBenefitInsuranceCopyWith<$Res>
@@ -19048,14 +18836,12 @@ abstract class _$ExplanationOfBenefitInsuranceCopyWith<$Res>
       @JsonKey(name: '_focal') Element focalElement,
       Reference coverage,
       List<String> preAuthRef,
-      @JsonKey(name: '_preAuthRef') Element preAuthRefElement});
+      @JsonKey(name: '_preAuthRef') List<Element> preAuthRefElement});
 
   @override
   $ElementCopyWith<$Res> get focalElement;
   @override
   $ReferenceCopyWith<$Res> get coverage;
-  @override
-  $ElementCopyWith<$Res> get preAuthRefElement;
 }
 
 class __$ExplanationOfBenefitInsuranceCopyWithImpl<$Res>
@@ -19099,7 +18885,7 @@ class __$ExplanationOfBenefitInsuranceCopyWithImpl<$Res>
           : preAuthRef as List<String>,
       preAuthRefElement: preAuthRefElement == freezed
           ? _value.preAuthRefElement
-          : preAuthRefElement as Element,
+          : preAuthRefElement as List<Element>,
     ));
   }
 }
@@ -19140,7 +18926,7 @@ class _$_ExplanationOfBenefitInsurance extends _ExplanationOfBenefitInsurance {
   final List<String> preAuthRef;
   @override
   @JsonKey(name: '_preAuthRef')
-  final Element preAuthRefElement;
+  final List<Element> preAuthRefElement;
 
   @override
   String toString() {
@@ -19209,7 +18995,7 @@ abstract class _ExplanationOfBenefitInsurance
           @JsonKey(name: '_focal') Element focalElement,
           @required Reference coverage,
           List<String> preAuthRef,
-          @JsonKey(name: '_preAuthRef') Element preAuthRefElement}) =
+          @JsonKey(name: '_preAuthRef') List<Element> preAuthRefElement}) =
       _$_ExplanationOfBenefitInsurance;
 
   factory _ExplanationOfBenefitInsurance.fromJson(Map<String, dynamic> json) =
@@ -19233,7 +19019,7 @@ abstract class _ExplanationOfBenefitInsurance
   List<String> get preAuthRef;
   @override
   @JsonKey(name: '_preAuthRef')
-  Element get preAuthRefElement;
+  List<Element> get preAuthRefElement;
   @override
   _$ExplanationOfBenefitInsuranceCopyWith<_ExplanationOfBenefitInsurance>
       get copyWith;
@@ -19602,25 +19388,33 @@ class _$ExplanationOfBenefitItemTearOff {
 
   _ExplanationOfBenefitItem call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       PositiveInt sequence,
-      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_sequence')
+          Element sequenceElement,
       List<PositiveInt> careTeamSequence,
-      @JsonKey(name: '_careTeamSequence') Element careTeamSequenceElement,
+      @JsonKey(name: '_careTeamSequence')
+          List<Element> careTeamSequenceElement,
       List<PositiveInt> diagnosisSequence,
-      @JsonKey(name: '_diagnosisSequence') Element diagnosisSequenceElement,
+      @JsonKey(name: '_diagnosisSequence')
+          List<Element> diagnosisSequenceElement,
       List<PositiveInt> procedureSequence,
-      @JsonKey(name: '_procedureSequence') Element procedureSequenceElement,
+      @JsonKey(name: '_procedureSequence')
+          List<Element> procedureSequenceElement,
       List<PositiveInt> informationSequence,
-      @JsonKey(name: '_informationSequence') Element informationSequenceElement,
+      @JsonKey(name: '_informationSequence')
+          List<Element> informationSequenceElement,
       CodeableConcept revenue,
       CodeableConcept category,
-      @required CodeableConcept productOrService,
+      @required
+          CodeableConcept productOrService,
       List<CodeableConcept> modifier,
       List<CodeableConcept> programCode,
       Date servicedDate,
-      @JsonKey(name: '_servicedDate') Element servicedDateElement,
+      @JsonKey(name: '_servicedDate')
+          Element servicedDateElement,
       Period servicedPeriod,
       CodeableConcept locationCodeableConcept,
       Address locationAddress,
@@ -19628,14 +19422,16 @@ class _$ExplanationOfBenefitItemTearOff {
       Quantity quantity,
       Money unitPrice,
       Decimal factor,
-      @JsonKey(name: '_factor') Element factorElement,
+      @JsonKey(name: '_factor')
+          Element factorElement,
       Money net,
       List<Reference> udi,
       CodeableConcept bodySite,
       List<CodeableConcept> subSite,
       List<Reference> encounter,
       List<PositiveInt> noteNumber,
-      @JsonKey(name: '_noteNumber') Element noteNumberElement,
+      @JsonKey(name: '_noteNumber')
+          List<Element> noteNumberElement,
       List<ExplanationOfBenefitAdjudication> adjudication,
       List<ExplanationOfBenefitDetail> detail}) {
     return _ExplanationOfBenefitItem(
@@ -19693,16 +19489,16 @@ mixin _$ExplanationOfBenefitItem {
   Element get sequenceElement;
   List<PositiveInt> get careTeamSequence;
   @JsonKey(name: '_careTeamSequence')
-  Element get careTeamSequenceElement;
+  List<Element> get careTeamSequenceElement;
   List<PositiveInt> get diagnosisSequence;
   @JsonKey(name: '_diagnosisSequence')
-  Element get diagnosisSequenceElement;
+  List<Element> get diagnosisSequenceElement;
   List<PositiveInt> get procedureSequence;
   @JsonKey(name: '_procedureSequence')
-  Element get procedureSequenceElement;
+  List<Element> get procedureSequenceElement;
   List<PositiveInt> get informationSequence;
   @JsonKey(name: '_informationSequence')
-  Element get informationSequenceElement;
+  List<Element> get informationSequenceElement;
   CodeableConcept get revenue;
   CodeableConcept get category;
   CodeableConcept get productOrService;
@@ -19727,7 +19523,7 @@ mixin _$ExplanationOfBenefitItem {
   List<Reference> get encounter;
   List<PositiveInt> get noteNumber;
   @JsonKey(name: '_noteNumber')
-  Element get noteNumberElement;
+  List<Element> get noteNumberElement;
   List<ExplanationOfBenefitAdjudication> get adjudication;
   List<ExplanationOfBenefitDetail> get detail;
 
@@ -19741,25 +19537,32 @@ abstract class $ExplanationOfBenefitItemCopyWith<$Res> {
       _$ExplanationOfBenefitItemCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       PositiveInt sequence,
-      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_sequence')
+          Element sequenceElement,
       List<PositiveInt> careTeamSequence,
-      @JsonKey(name: '_careTeamSequence') Element careTeamSequenceElement,
+      @JsonKey(name: '_careTeamSequence')
+          List<Element> careTeamSequenceElement,
       List<PositiveInt> diagnosisSequence,
-      @JsonKey(name: '_diagnosisSequence') Element diagnosisSequenceElement,
+      @JsonKey(name: '_diagnosisSequence')
+          List<Element> diagnosisSequenceElement,
       List<PositiveInt> procedureSequence,
-      @JsonKey(name: '_procedureSequence') Element procedureSequenceElement,
+      @JsonKey(name: '_procedureSequence')
+          List<Element> procedureSequenceElement,
       List<PositiveInt> informationSequence,
-      @JsonKey(name: '_informationSequence') Element informationSequenceElement,
+      @JsonKey(name: '_informationSequence')
+          List<Element> informationSequenceElement,
       CodeableConcept revenue,
       CodeableConcept category,
       CodeableConcept productOrService,
       List<CodeableConcept> modifier,
       List<CodeableConcept> programCode,
       Date servicedDate,
-      @JsonKey(name: '_servicedDate') Element servicedDateElement,
+      @JsonKey(name: '_servicedDate')
+          Element servicedDateElement,
       Period servicedPeriod,
       CodeableConcept locationCodeableConcept,
       Address locationAddress,
@@ -19767,22 +19570,20 @@ abstract class $ExplanationOfBenefitItemCopyWith<$Res> {
       Quantity quantity,
       Money unitPrice,
       Decimal factor,
-      @JsonKey(name: '_factor') Element factorElement,
+      @JsonKey(name: '_factor')
+          Element factorElement,
       Money net,
       List<Reference> udi,
       CodeableConcept bodySite,
       List<CodeableConcept> subSite,
       List<Reference> encounter,
       List<PositiveInt> noteNumber,
-      @JsonKey(name: '_noteNumber') Element noteNumberElement,
+      @JsonKey(name: '_noteNumber')
+          List<Element> noteNumberElement,
       List<ExplanationOfBenefitAdjudication> adjudication,
       List<ExplanationOfBenefitDetail> detail});
 
   $ElementCopyWith<$Res> get sequenceElement;
-  $ElementCopyWith<$Res> get careTeamSequenceElement;
-  $ElementCopyWith<$Res> get diagnosisSequenceElement;
-  $ElementCopyWith<$Res> get procedureSequenceElement;
-  $ElementCopyWith<$Res> get informationSequenceElement;
   $CodeableConceptCopyWith<$Res> get revenue;
   $CodeableConceptCopyWith<$Res> get category;
   $CodeableConceptCopyWith<$Res> get productOrService;
@@ -19796,7 +19597,6 @@ abstract class $ExplanationOfBenefitItemCopyWith<$Res> {
   $ElementCopyWith<$Res> get factorElement;
   $MoneyCopyWith<$Res> get net;
   $CodeableConceptCopyWith<$Res> get bodySite;
-  $ElementCopyWith<$Res> get noteNumberElement;
 }
 
 class _$ExplanationOfBenefitItemCopyWithImpl<$Res>
@@ -19864,25 +19664,25 @@ class _$ExplanationOfBenefitItemCopyWithImpl<$Res>
           : careTeamSequence as List<PositiveInt>,
       careTeamSequenceElement: careTeamSequenceElement == freezed
           ? _value.careTeamSequenceElement
-          : careTeamSequenceElement as Element,
+          : careTeamSequenceElement as List<Element>,
       diagnosisSequence: diagnosisSequence == freezed
           ? _value.diagnosisSequence
           : diagnosisSequence as List<PositiveInt>,
       diagnosisSequenceElement: diagnosisSequenceElement == freezed
           ? _value.diagnosisSequenceElement
-          : diagnosisSequenceElement as Element,
+          : diagnosisSequenceElement as List<Element>,
       procedureSequence: procedureSequence == freezed
           ? _value.procedureSequence
           : procedureSequence as List<PositiveInt>,
       procedureSequenceElement: procedureSequenceElement == freezed
           ? _value.procedureSequenceElement
-          : procedureSequenceElement as Element,
+          : procedureSequenceElement as List<Element>,
       informationSequence: informationSequence == freezed
           ? _value.informationSequence
           : informationSequence as List<PositiveInt>,
       informationSequenceElement: informationSequenceElement == freezed
           ? _value.informationSequenceElement
-          : informationSequenceElement as Element,
+          : informationSequenceElement as List<Element>,
       revenue: revenue == freezed ? _value.revenue : revenue as CodeableConcept,
       category:
           category == freezed ? _value.category : category as CodeableConcept,
@@ -19933,7 +19733,7 @@ class _$ExplanationOfBenefitItemCopyWithImpl<$Res>
           : noteNumber as List<PositiveInt>,
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
-          : noteNumberElement as Element,
+          : noteNumberElement as List<Element>,
       adjudication: adjudication == freezed
           ? _value.adjudication
           : adjudication as List<ExplanationOfBenefitAdjudication>,
@@ -19950,46 +19750,6 @@ class _$ExplanationOfBenefitItemCopyWithImpl<$Res>
     }
     return $ElementCopyWith<$Res>(_value.sequenceElement, (value) {
       return _then(_value.copyWith(sequenceElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get careTeamSequenceElement {
-    if (_value.careTeamSequenceElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.careTeamSequenceElement, (value) {
-      return _then(_value.copyWith(careTeamSequenceElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get diagnosisSequenceElement {
-    if (_value.diagnosisSequenceElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.diagnosisSequenceElement, (value) {
-      return _then(_value.copyWith(diagnosisSequenceElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get procedureSequenceElement {
-    if (_value.procedureSequenceElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.procedureSequenceElement, (value) {
-      return _then(_value.copyWith(procedureSequenceElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get informationSequenceElement {
-    if (_value.informationSequenceElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.informationSequenceElement, (value) {
-      return _then(_value.copyWith(informationSequenceElement: value));
     });
   }
 
@@ -20123,16 +19883,6 @@ class _$ExplanationOfBenefitItemCopyWithImpl<$Res>
       return _then(_value.copyWith(bodySite: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get noteNumberElement {
-    if (_value.noteNumberElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.noteNumberElement, (value) {
-      return _then(_value.copyWith(noteNumberElement: value));
-    });
-  }
 }
 
 abstract class _$ExplanationOfBenefitItemCopyWith<$Res>
@@ -20143,25 +19893,32 @@ abstract class _$ExplanationOfBenefitItemCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       PositiveInt sequence,
-      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_sequence')
+          Element sequenceElement,
       List<PositiveInt> careTeamSequence,
-      @JsonKey(name: '_careTeamSequence') Element careTeamSequenceElement,
+      @JsonKey(name: '_careTeamSequence')
+          List<Element> careTeamSequenceElement,
       List<PositiveInt> diagnosisSequence,
-      @JsonKey(name: '_diagnosisSequence') Element diagnosisSequenceElement,
+      @JsonKey(name: '_diagnosisSequence')
+          List<Element> diagnosisSequenceElement,
       List<PositiveInt> procedureSequence,
-      @JsonKey(name: '_procedureSequence') Element procedureSequenceElement,
+      @JsonKey(name: '_procedureSequence')
+          List<Element> procedureSequenceElement,
       List<PositiveInt> informationSequence,
-      @JsonKey(name: '_informationSequence') Element informationSequenceElement,
+      @JsonKey(name: '_informationSequence')
+          List<Element> informationSequenceElement,
       CodeableConcept revenue,
       CodeableConcept category,
       CodeableConcept productOrService,
       List<CodeableConcept> modifier,
       List<CodeableConcept> programCode,
       Date servicedDate,
-      @JsonKey(name: '_servicedDate') Element servicedDateElement,
+      @JsonKey(name: '_servicedDate')
+          Element servicedDateElement,
       Period servicedPeriod,
       CodeableConcept locationCodeableConcept,
       Address locationAddress,
@@ -20169,27 +19926,21 @@ abstract class _$ExplanationOfBenefitItemCopyWith<$Res>
       Quantity quantity,
       Money unitPrice,
       Decimal factor,
-      @JsonKey(name: '_factor') Element factorElement,
+      @JsonKey(name: '_factor')
+          Element factorElement,
       Money net,
       List<Reference> udi,
       CodeableConcept bodySite,
       List<CodeableConcept> subSite,
       List<Reference> encounter,
       List<PositiveInt> noteNumber,
-      @JsonKey(name: '_noteNumber') Element noteNumberElement,
+      @JsonKey(name: '_noteNumber')
+          List<Element> noteNumberElement,
       List<ExplanationOfBenefitAdjudication> adjudication,
       List<ExplanationOfBenefitDetail> detail});
 
   @override
   $ElementCopyWith<$Res> get sequenceElement;
-  @override
-  $ElementCopyWith<$Res> get careTeamSequenceElement;
-  @override
-  $ElementCopyWith<$Res> get diagnosisSequenceElement;
-  @override
-  $ElementCopyWith<$Res> get procedureSequenceElement;
-  @override
-  $ElementCopyWith<$Res> get informationSequenceElement;
   @override
   $CodeableConceptCopyWith<$Res> get revenue;
   @override
@@ -20216,8 +19967,6 @@ abstract class _$ExplanationOfBenefitItemCopyWith<$Res>
   $MoneyCopyWith<$Res> get net;
   @override
   $CodeableConceptCopyWith<$Res> get bodySite;
-  @override
-  $ElementCopyWith<$Res> get noteNumberElement;
 }
 
 class __$ExplanationOfBenefitItemCopyWithImpl<$Res>
@@ -20288,25 +20037,25 @@ class __$ExplanationOfBenefitItemCopyWithImpl<$Res>
           : careTeamSequence as List<PositiveInt>,
       careTeamSequenceElement: careTeamSequenceElement == freezed
           ? _value.careTeamSequenceElement
-          : careTeamSequenceElement as Element,
+          : careTeamSequenceElement as List<Element>,
       diagnosisSequence: diagnosisSequence == freezed
           ? _value.diagnosisSequence
           : diagnosisSequence as List<PositiveInt>,
       diagnosisSequenceElement: diagnosisSequenceElement == freezed
           ? _value.diagnosisSequenceElement
-          : diagnosisSequenceElement as Element,
+          : diagnosisSequenceElement as List<Element>,
       procedureSequence: procedureSequence == freezed
           ? _value.procedureSequence
           : procedureSequence as List<PositiveInt>,
       procedureSequenceElement: procedureSequenceElement == freezed
           ? _value.procedureSequenceElement
-          : procedureSequenceElement as Element,
+          : procedureSequenceElement as List<Element>,
       informationSequence: informationSequence == freezed
           ? _value.informationSequence
           : informationSequence as List<PositiveInt>,
       informationSequenceElement: informationSequenceElement == freezed
           ? _value.informationSequenceElement
-          : informationSequenceElement as Element,
+          : informationSequenceElement as List<Element>,
       revenue: revenue == freezed ? _value.revenue : revenue as CodeableConcept,
       category:
           category == freezed ? _value.category : category as CodeableConcept,
@@ -20357,7 +20106,7 @@ class __$ExplanationOfBenefitItemCopyWithImpl<$Res>
           : noteNumber as List<PositiveInt>,
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
-          : noteNumberElement as Element,
+          : noteNumberElement as List<Element>,
       adjudication: adjudication == freezed
           ? _value.adjudication
           : adjudication as List<ExplanationOfBenefitAdjudication>,
@@ -20430,22 +20179,22 @@ class _$_ExplanationOfBenefitItem extends _ExplanationOfBenefitItem {
   final List<PositiveInt> careTeamSequence;
   @override
   @JsonKey(name: '_careTeamSequence')
-  final Element careTeamSequenceElement;
+  final List<Element> careTeamSequenceElement;
   @override
   final List<PositiveInt> diagnosisSequence;
   @override
   @JsonKey(name: '_diagnosisSequence')
-  final Element diagnosisSequenceElement;
+  final List<Element> diagnosisSequenceElement;
   @override
   final List<PositiveInt> procedureSequence;
   @override
   @JsonKey(name: '_procedureSequence')
-  final Element procedureSequenceElement;
+  final List<Element> procedureSequenceElement;
   @override
   final List<PositiveInt> informationSequence;
   @override
   @JsonKey(name: '_informationSequence')
-  final Element informationSequenceElement;
+  final List<Element> informationSequenceElement;
   @override
   final CodeableConcept revenue;
   @override
@@ -20492,7 +20241,7 @@ class _$_ExplanationOfBenefitItem extends _ExplanationOfBenefitItem {
   final List<PositiveInt> noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  final Element noteNumberElement;
+  final List<Element> noteNumberElement;
   @override
   final List<ExplanationOfBenefitAdjudication> adjudication;
   @override
@@ -20633,25 +20382,33 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
   _ExplanationOfBenefitItem._() : super._();
   factory _ExplanationOfBenefitItem(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       PositiveInt sequence,
-      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_sequence')
+          Element sequenceElement,
       List<PositiveInt> careTeamSequence,
-      @JsonKey(name: '_careTeamSequence') Element careTeamSequenceElement,
+      @JsonKey(name: '_careTeamSequence')
+          List<Element> careTeamSequenceElement,
       List<PositiveInt> diagnosisSequence,
-      @JsonKey(name: '_diagnosisSequence') Element diagnosisSequenceElement,
+      @JsonKey(name: '_diagnosisSequence')
+          List<Element> diagnosisSequenceElement,
       List<PositiveInt> procedureSequence,
-      @JsonKey(name: '_procedureSequence') Element procedureSequenceElement,
+      @JsonKey(name: '_procedureSequence')
+          List<Element> procedureSequenceElement,
       List<PositiveInt> informationSequence,
-      @JsonKey(name: '_informationSequence') Element informationSequenceElement,
+      @JsonKey(name: '_informationSequence')
+          List<Element> informationSequenceElement,
       CodeableConcept revenue,
       CodeableConcept category,
-      @required CodeableConcept productOrService,
+      @required
+          CodeableConcept productOrService,
       List<CodeableConcept> modifier,
       List<CodeableConcept> programCode,
       Date servicedDate,
-      @JsonKey(name: '_servicedDate') Element servicedDateElement,
+      @JsonKey(name: '_servicedDate')
+          Element servicedDateElement,
       Period servicedPeriod,
       CodeableConcept locationCodeableConcept,
       Address locationAddress,
@@ -20659,14 +20416,16 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
       Quantity quantity,
       Money unitPrice,
       Decimal factor,
-      @JsonKey(name: '_factor') Element factorElement,
+      @JsonKey(name: '_factor')
+          Element factorElement,
       Money net,
       List<Reference> udi,
       CodeableConcept bodySite,
       List<CodeableConcept> subSite,
       List<Reference> encounter,
       List<PositiveInt> noteNumber,
-      @JsonKey(name: '_noteNumber') Element noteNumberElement,
+      @JsonKey(name: '_noteNumber')
+          List<Element> noteNumberElement,
       List<ExplanationOfBenefitAdjudication> adjudication,
       List<ExplanationOfBenefitDetail> detail}) = _$_ExplanationOfBenefitItem;
 
@@ -20689,22 +20448,22 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
   List<PositiveInt> get careTeamSequence;
   @override
   @JsonKey(name: '_careTeamSequence')
-  Element get careTeamSequenceElement;
+  List<Element> get careTeamSequenceElement;
   @override
   List<PositiveInt> get diagnosisSequence;
   @override
   @JsonKey(name: '_diagnosisSequence')
-  Element get diagnosisSequenceElement;
+  List<Element> get diagnosisSequenceElement;
   @override
   List<PositiveInt> get procedureSequence;
   @override
   @JsonKey(name: '_procedureSequence')
-  Element get procedureSequenceElement;
+  List<Element> get procedureSequenceElement;
   @override
   List<PositiveInt> get informationSequence;
   @override
   @JsonKey(name: '_informationSequence')
-  Element get informationSequenceElement;
+  List<Element> get informationSequenceElement;
   @override
   CodeableConcept get revenue;
   @override
@@ -20751,7 +20510,7 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
   List<PositiveInt> get noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  Element get noteNumberElement;
+  List<Element> get noteNumberElement;
   @override
   List<ExplanationOfBenefitAdjudication> get adjudication;
   @override
@@ -21139,7 +20898,7 @@ class _$ExplanationOfBenefitDetailTearOff {
       Money net,
       List<Reference> udi,
       List<PositiveInt> noteNumber,
-      @JsonKey(name: '_noteNumber') Element noteNumberElement,
+      @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
       List<ExplanationOfBenefitAdjudication> adjudication,
       List<ExplanationOfBenefitSubDetail> subDetail}) {
     return _ExplanationOfBenefitDetail(
@@ -21192,7 +20951,7 @@ mixin _$ExplanationOfBenefitDetail {
   List<Reference> get udi;
   List<PositiveInt> get noteNumber;
   @JsonKey(name: '_noteNumber')
-  Element get noteNumberElement;
+  List<Element> get noteNumberElement;
   List<ExplanationOfBenefitAdjudication> get adjudication;
   List<ExplanationOfBenefitSubDetail> get subDetail;
 
@@ -21222,7 +20981,7 @@ abstract class $ExplanationOfBenefitDetailCopyWith<$Res> {
       Money net,
       List<Reference> udi,
       List<PositiveInt> noteNumber,
-      @JsonKey(name: '_noteNumber') Element noteNumberElement,
+      @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
       List<ExplanationOfBenefitAdjudication> adjudication,
       List<ExplanationOfBenefitSubDetail> subDetail});
 
@@ -21234,7 +20993,6 @@ abstract class $ExplanationOfBenefitDetailCopyWith<$Res> {
   $MoneyCopyWith<$Res> get unitPrice;
   $ElementCopyWith<$Res> get factorElement;
   $MoneyCopyWith<$Res> get net;
-  $ElementCopyWith<$Res> get noteNumberElement;
 }
 
 class _$ExplanationOfBenefitDetailCopyWithImpl<$Res>
@@ -21305,7 +21063,7 @@ class _$ExplanationOfBenefitDetailCopyWithImpl<$Res>
           : noteNumber as List<PositiveInt>,
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
-          : noteNumberElement as Element,
+          : noteNumberElement as List<Element>,
       adjudication: adjudication == freezed
           ? _value.adjudication
           : adjudication as List<ExplanationOfBenefitAdjudication>,
@@ -21394,16 +21152,6 @@ class _$ExplanationOfBenefitDetailCopyWithImpl<$Res>
       return _then(_value.copyWith(net: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get noteNumberElement {
-    if (_value.noteNumberElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.noteNumberElement, (value) {
-      return _then(_value.copyWith(noteNumberElement: value));
-    });
-  }
 }
 
 abstract class _$ExplanationOfBenefitDetailCopyWith<$Res>
@@ -21431,7 +21179,7 @@ abstract class _$ExplanationOfBenefitDetailCopyWith<$Res>
       Money net,
       List<Reference> udi,
       List<PositiveInt> noteNumber,
-      @JsonKey(name: '_noteNumber') Element noteNumberElement,
+      @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
       List<ExplanationOfBenefitAdjudication> adjudication,
       List<ExplanationOfBenefitSubDetail> subDetail});
 
@@ -21451,8 +21199,6 @@ abstract class _$ExplanationOfBenefitDetailCopyWith<$Res>
   $ElementCopyWith<$Res> get factorElement;
   @override
   $MoneyCopyWith<$Res> get net;
-  @override
-  $ElementCopyWith<$Res> get noteNumberElement;
 }
 
 class __$ExplanationOfBenefitDetailCopyWithImpl<$Res>
@@ -21526,7 +21272,7 @@ class __$ExplanationOfBenefitDetailCopyWithImpl<$Res>
           : noteNumber as List<PositiveInt>,
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
-          : noteNumberElement as Element,
+          : noteNumberElement as List<Element>,
       adjudication: adjudication == freezed
           ? _value.adjudication
           : adjudication as List<ExplanationOfBenefitAdjudication>,
@@ -21605,7 +21351,7 @@ class _$_ExplanationOfBenefitDetail extends _ExplanationOfBenefitDetail {
   final List<PositiveInt> noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  final Element noteNumberElement;
+  final List<Element> noteNumberElement;
   @override
   final List<ExplanationOfBenefitAdjudication> adjudication;
   @override
@@ -21733,7 +21479,7 @@ abstract class _ExplanationOfBenefitDetail extends ExplanationOfBenefitDetail {
           Money net,
           List<Reference> udi,
           List<PositiveInt> noteNumber,
-          @JsonKey(name: '_noteNumber') Element noteNumberElement,
+          @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
           List<ExplanationOfBenefitAdjudication> adjudication,
           List<ExplanationOfBenefitSubDetail> subDetail}) =
       _$_ExplanationOfBenefitDetail;
@@ -21780,7 +21526,7 @@ abstract class _ExplanationOfBenefitDetail extends ExplanationOfBenefitDetail {
   List<PositiveInt> get noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  Element get noteNumberElement;
+  List<Element> get noteNumberElement;
   @override
   List<ExplanationOfBenefitAdjudication> get adjudication;
   @override
@@ -21816,7 +21562,7 @@ class _$ExplanationOfBenefitSubDetailTearOff {
       Money net,
       List<Reference> udi,
       List<PositiveInt> noteNumber,
-      @JsonKey(name: '_noteNumber') Element noteNumberElement,
+      @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
       List<ExplanationOfBenefitAdjudication> adjudication}) {
     return _ExplanationOfBenefitSubDetail(
       id: id,
@@ -21867,7 +21613,7 @@ mixin _$ExplanationOfBenefitSubDetail {
   List<Reference> get udi;
   List<PositiveInt> get noteNumber;
   @JsonKey(name: '_noteNumber')
-  Element get noteNumberElement;
+  List<Element> get noteNumberElement;
   List<ExplanationOfBenefitAdjudication> get adjudication;
 
   Map<String, dynamic> toJson();
@@ -21898,7 +21644,7 @@ abstract class $ExplanationOfBenefitSubDetailCopyWith<$Res> {
       Money net,
       List<Reference> udi,
       List<PositiveInt> noteNumber,
-      @JsonKey(name: '_noteNumber') Element noteNumberElement,
+      @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
       List<ExplanationOfBenefitAdjudication> adjudication});
 
   $ElementCopyWith<$Res> get sequenceElement;
@@ -21909,7 +21655,6 @@ abstract class $ExplanationOfBenefitSubDetailCopyWith<$Res> {
   $MoneyCopyWith<$Res> get unitPrice;
   $ElementCopyWith<$Res> get factorElement;
   $MoneyCopyWith<$Res> get net;
-  $ElementCopyWith<$Res> get noteNumberElement;
 }
 
 class _$ExplanationOfBenefitSubDetailCopyWithImpl<$Res>
@@ -21979,7 +21724,7 @@ class _$ExplanationOfBenefitSubDetailCopyWithImpl<$Res>
           : noteNumber as List<PositiveInt>,
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
-          : noteNumberElement as Element,
+          : noteNumberElement as List<Element>,
       adjudication: adjudication == freezed
           ? _value.adjudication
           : adjudication as List<ExplanationOfBenefitAdjudication>,
@@ -22065,16 +21810,6 @@ class _$ExplanationOfBenefitSubDetailCopyWithImpl<$Res>
       return _then(_value.copyWith(net: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get noteNumberElement {
-    if (_value.noteNumberElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.noteNumberElement, (value) {
-      return _then(_value.copyWith(noteNumberElement: value));
-    });
-  }
 }
 
 abstract class _$ExplanationOfBenefitSubDetailCopyWith<$Res>
@@ -22102,7 +21837,7 @@ abstract class _$ExplanationOfBenefitSubDetailCopyWith<$Res>
       Money net,
       List<Reference> udi,
       List<PositiveInt> noteNumber,
-      @JsonKey(name: '_noteNumber') Element noteNumberElement,
+      @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
       List<ExplanationOfBenefitAdjudication> adjudication});
 
   @override
@@ -22121,8 +21856,6 @@ abstract class _$ExplanationOfBenefitSubDetailCopyWith<$Res>
   $ElementCopyWith<$Res> get factorElement;
   @override
   $MoneyCopyWith<$Res> get net;
-  @override
-  $ElementCopyWith<$Res> get noteNumberElement;
 }
 
 class __$ExplanationOfBenefitSubDetailCopyWithImpl<$Res>
@@ -22196,7 +21929,7 @@ class __$ExplanationOfBenefitSubDetailCopyWithImpl<$Res>
           : noteNumber as List<PositiveInt>,
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
-          : noteNumberElement as Element,
+          : noteNumberElement as List<Element>,
       adjudication: adjudication == freezed
           ? _value.adjudication
           : adjudication as List<ExplanationOfBenefitAdjudication>,
@@ -22272,7 +22005,7 @@ class _$_ExplanationOfBenefitSubDetail extends _ExplanationOfBenefitSubDetail {
   final List<PositiveInt> noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  final Element noteNumberElement;
+  final List<Element> noteNumberElement;
   @override
   final List<ExplanationOfBenefitAdjudication> adjudication;
 
@@ -22395,7 +22128,7 @@ abstract class _ExplanationOfBenefitSubDetail
           Money net,
           List<Reference> udi,
           List<PositiveInt> noteNumber,
-          @JsonKey(name: '_noteNumber') Element noteNumberElement,
+          @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
           List<ExplanationOfBenefitAdjudication> adjudication}) =
       _$_ExplanationOfBenefitSubDetail;
 
@@ -22441,7 +22174,7 @@ abstract class _ExplanationOfBenefitSubDetail
   List<PositiveInt> get noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  Element get noteNumberElement;
+  List<Element> get noteNumberElement;
   @override
   List<ExplanationOfBenefitAdjudication> get adjudication;
   @override
@@ -22459,20 +22192,26 @@ class _$ExplanationOfBenefitAddItemTearOff {
 
   _ExplanationOfBenefitAddItem call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<PositiveInt> itemSequence,
-      @JsonKey(name: '_itemSequence') Element itemSequenceElement,
+      @JsonKey(name: '_itemSequence')
+          List<Element> itemSequenceElement,
       List<PositiveInt> detailSequence,
-      @JsonKey(name: '_detailSequence') Element detailSequenceElement,
+      @JsonKey(name: '_detailSequence')
+          List<Element> detailSequenceElement,
       List<PositiveInt> subDetailSequence,
-      @JsonKey(name: '_subDetailSequence') Element subDetailSequenceElement,
+      @JsonKey(name: '_subDetailSequence')
+          List<Element> subDetailSequenceElement,
       List<Reference> provider,
-      @required CodeableConcept productOrService,
+      @required
+          CodeableConcept productOrService,
       List<CodeableConcept> modifier,
       List<CodeableConcept> programCode,
       Date servicedDate,
-      @JsonKey(name: '_servicedDate') Element servicedDateElement,
+      @JsonKey(name: '_servicedDate')
+          Element servicedDateElement,
       Period servicedPeriod,
       CodeableConcept locationCodeableConcept,
       Address locationAddress,
@@ -22480,12 +22219,14 @@ class _$ExplanationOfBenefitAddItemTearOff {
       Quantity quantity,
       Money unitPrice,
       Decimal factor,
-      @JsonKey(name: '_factor') Element factorElement,
+      @JsonKey(name: '_factor')
+          Element factorElement,
       Money net,
       CodeableConcept bodySite,
       List<CodeableConcept> subSite,
       List<PositiveInt> noteNumber,
-      @JsonKey(name: '_noteNumber') Element noteNumberElement,
+      @JsonKey(name: '_noteNumber')
+          List<Element> noteNumberElement,
       List<ExplanationOfBenefitAdjudication> adjudication,
       List<ExplanationOfBenefitDetail1> detail}) {
     return _ExplanationOfBenefitAddItem(
@@ -22533,13 +22274,13 @@ mixin _$ExplanationOfBenefitAddItem {
   List<FhirExtension> get modifierExtension;
   List<PositiveInt> get itemSequence;
   @JsonKey(name: '_itemSequence')
-  Element get itemSequenceElement;
+  List<Element> get itemSequenceElement;
   List<PositiveInt> get detailSequence;
   @JsonKey(name: '_detailSequence')
-  Element get detailSequenceElement;
+  List<Element> get detailSequenceElement;
   List<PositiveInt> get subDetailSequence;
   @JsonKey(name: '_subDetailSequence')
-  Element get subDetailSequenceElement;
+  List<Element> get subDetailSequenceElement;
   List<Reference> get provider;
   CodeableConcept get productOrService;
   List<CodeableConcept> get modifier;
@@ -22561,7 +22302,7 @@ mixin _$ExplanationOfBenefitAddItem {
   List<CodeableConcept> get subSite;
   List<PositiveInt> get noteNumber;
   @JsonKey(name: '_noteNumber')
-  Element get noteNumberElement;
+  List<Element> get noteNumberElement;
   List<ExplanationOfBenefitAdjudication> get adjudication;
   List<ExplanationOfBenefitDetail1> get detail;
 
@@ -22577,20 +22318,25 @@ abstract class $ExplanationOfBenefitAddItemCopyWith<$Res> {
       _$ExplanationOfBenefitAddItemCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<PositiveInt> itemSequence,
-      @JsonKey(name: '_itemSequence') Element itemSequenceElement,
+      @JsonKey(name: '_itemSequence')
+          List<Element> itemSequenceElement,
       List<PositiveInt> detailSequence,
-      @JsonKey(name: '_detailSequence') Element detailSequenceElement,
+      @JsonKey(name: '_detailSequence')
+          List<Element> detailSequenceElement,
       List<PositiveInt> subDetailSequence,
-      @JsonKey(name: '_subDetailSequence') Element subDetailSequenceElement,
+      @JsonKey(name: '_subDetailSequence')
+          List<Element> subDetailSequenceElement,
       List<Reference> provider,
       CodeableConcept productOrService,
       List<CodeableConcept> modifier,
       List<CodeableConcept> programCode,
       Date servicedDate,
-      @JsonKey(name: '_servicedDate') Element servicedDateElement,
+      @JsonKey(name: '_servicedDate')
+          Element servicedDateElement,
       Period servicedPeriod,
       CodeableConcept locationCodeableConcept,
       Address locationAddress,
@@ -22598,18 +22344,17 @@ abstract class $ExplanationOfBenefitAddItemCopyWith<$Res> {
       Quantity quantity,
       Money unitPrice,
       Decimal factor,
-      @JsonKey(name: '_factor') Element factorElement,
+      @JsonKey(name: '_factor')
+          Element factorElement,
       Money net,
       CodeableConcept bodySite,
       List<CodeableConcept> subSite,
       List<PositiveInt> noteNumber,
-      @JsonKey(name: '_noteNumber') Element noteNumberElement,
+      @JsonKey(name: '_noteNumber')
+          List<Element> noteNumberElement,
       List<ExplanationOfBenefitAdjudication> adjudication,
       List<ExplanationOfBenefitDetail1> detail});
 
-  $ElementCopyWith<$Res> get itemSequenceElement;
-  $ElementCopyWith<$Res> get detailSequenceElement;
-  $ElementCopyWith<$Res> get subDetailSequenceElement;
   $CodeableConceptCopyWith<$Res> get productOrService;
   $ElementCopyWith<$Res> get servicedDateElement;
   $PeriodCopyWith<$Res> get servicedPeriod;
@@ -22621,7 +22366,6 @@ abstract class $ExplanationOfBenefitAddItemCopyWith<$Res> {
   $ElementCopyWith<$Res> get factorElement;
   $MoneyCopyWith<$Res> get net;
   $CodeableConceptCopyWith<$Res> get bodySite;
-  $ElementCopyWith<$Res> get noteNumberElement;
 }
 
 class _$ExplanationOfBenefitAddItemCopyWithImpl<$Res>
@@ -22678,19 +22422,19 @@ class _$ExplanationOfBenefitAddItemCopyWithImpl<$Res>
           : itemSequence as List<PositiveInt>,
       itemSequenceElement: itemSequenceElement == freezed
           ? _value.itemSequenceElement
-          : itemSequenceElement as Element,
+          : itemSequenceElement as List<Element>,
       detailSequence: detailSequence == freezed
           ? _value.detailSequence
           : detailSequence as List<PositiveInt>,
       detailSequenceElement: detailSequenceElement == freezed
           ? _value.detailSequenceElement
-          : detailSequenceElement as Element,
+          : detailSequenceElement as List<Element>,
       subDetailSequence: subDetailSequence == freezed
           ? _value.subDetailSequence
           : subDetailSequence as List<PositiveInt>,
       subDetailSequenceElement: subDetailSequenceElement == freezed
           ? _value.subDetailSequenceElement
-          : subDetailSequenceElement as Element,
+          : subDetailSequenceElement as List<Element>,
       provider:
           provider == freezed ? _value.provider : provider as List<Reference>,
       productOrService: productOrService == freezed
@@ -22736,7 +22480,7 @@ class _$ExplanationOfBenefitAddItemCopyWithImpl<$Res>
           : noteNumber as List<PositiveInt>,
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
-          : noteNumberElement as Element,
+          : noteNumberElement as List<Element>,
       adjudication: adjudication == freezed
           ? _value.adjudication
           : adjudication as List<ExplanationOfBenefitAdjudication>,
@@ -22744,36 +22488,6 @@ class _$ExplanationOfBenefitAddItemCopyWithImpl<$Res>
           ? _value.detail
           : detail as List<ExplanationOfBenefitDetail1>,
     ));
-  }
-
-  @override
-  $ElementCopyWith<$Res> get itemSequenceElement {
-    if (_value.itemSequenceElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.itemSequenceElement, (value) {
-      return _then(_value.copyWith(itemSequenceElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get detailSequenceElement {
-    if (_value.detailSequenceElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.detailSequenceElement, (value) {
-      return _then(_value.copyWith(detailSequenceElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get subDetailSequenceElement {
-    if (_value.subDetailSequenceElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.subDetailSequenceElement, (value) {
-      return _then(_value.copyWith(subDetailSequenceElement: value));
-    });
   }
 
   @override
@@ -22886,16 +22600,6 @@ class _$ExplanationOfBenefitAddItemCopyWithImpl<$Res>
       return _then(_value.copyWith(bodySite: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get noteNumberElement {
-    if (_value.noteNumberElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.noteNumberElement, (value) {
-      return _then(_value.copyWith(noteNumberElement: value));
-    });
-  }
 }
 
 abstract class _$ExplanationOfBenefitAddItemCopyWith<$Res>
@@ -22907,20 +22611,25 @@ abstract class _$ExplanationOfBenefitAddItemCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<PositiveInt> itemSequence,
-      @JsonKey(name: '_itemSequence') Element itemSequenceElement,
+      @JsonKey(name: '_itemSequence')
+          List<Element> itemSequenceElement,
       List<PositiveInt> detailSequence,
-      @JsonKey(name: '_detailSequence') Element detailSequenceElement,
+      @JsonKey(name: '_detailSequence')
+          List<Element> detailSequenceElement,
       List<PositiveInt> subDetailSequence,
-      @JsonKey(name: '_subDetailSequence') Element subDetailSequenceElement,
+      @JsonKey(name: '_subDetailSequence')
+          List<Element> subDetailSequenceElement,
       List<Reference> provider,
       CodeableConcept productOrService,
       List<CodeableConcept> modifier,
       List<CodeableConcept> programCode,
       Date servicedDate,
-      @JsonKey(name: '_servicedDate') Element servicedDateElement,
+      @JsonKey(name: '_servicedDate')
+          Element servicedDateElement,
       Period servicedPeriod,
       CodeableConcept locationCodeableConcept,
       Address locationAddress,
@@ -22928,21 +22637,17 @@ abstract class _$ExplanationOfBenefitAddItemCopyWith<$Res>
       Quantity quantity,
       Money unitPrice,
       Decimal factor,
-      @JsonKey(name: '_factor') Element factorElement,
+      @JsonKey(name: '_factor')
+          Element factorElement,
       Money net,
       CodeableConcept bodySite,
       List<CodeableConcept> subSite,
       List<PositiveInt> noteNumber,
-      @JsonKey(name: '_noteNumber') Element noteNumberElement,
+      @JsonKey(name: '_noteNumber')
+          List<Element> noteNumberElement,
       List<ExplanationOfBenefitAdjudication> adjudication,
       List<ExplanationOfBenefitDetail1> detail});
 
-  @override
-  $ElementCopyWith<$Res> get itemSequenceElement;
-  @override
-  $ElementCopyWith<$Res> get detailSequenceElement;
-  @override
-  $ElementCopyWith<$Res> get subDetailSequenceElement;
   @override
   $CodeableConceptCopyWith<$Res> get productOrService;
   @override
@@ -22965,8 +22670,6 @@ abstract class _$ExplanationOfBenefitAddItemCopyWith<$Res>
   $MoneyCopyWith<$Res> get net;
   @override
   $CodeableConceptCopyWith<$Res> get bodySite;
-  @override
-  $ElementCopyWith<$Res> get noteNumberElement;
 }
 
 class __$ExplanationOfBenefitAddItemCopyWithImpl<$Res>
@@ -23027,19 +22730,19 @@ class __$ExplanationOfBenefitAddItemCopyWithImpl<$Res>
           : itemSequence as List<PositiveInt>,
       itemSequenceElement: itemSequenceElement == freezed
           ? _value.itemSequenceElement
-          : itemSequenceElement as Element,
+          : itemSequenceElement as List<Element>,
       detailSequence: detailSequence == freezed
           ? _value.detailSequence
           : detailSequence as List<PositiveInt>,
       detailSequenceElement: detailSequenceElement == freezed
           ? _value.detailSequenceElement
-          : detailSequenceElement as Element,
+          : detailSequenceElement as List<Element>,
       subDetailSequence: subDetailSequence == freezed
           ? _value.subDetailSequence
           : subDetailSequence as List<PositiveInt>,
       subDetailSequenceElement: subDetailSequenceElement == freezed
           ? _value.subDetailSequenceElement
-          : subDetailSequenceElement as Element,
+          : subDetailSequenceElement as List<Element>,
       provider:
           provider == freezed ? _value.provider : provider as List<Reference>,
       productOrService: productOrService == freezed
@@ -23085,7 +22788,7 @@ class __$ExplanationOfBenefitAddItemCopyWithImpl<$Res>
           : noteNumber as List<PositiveInt>,
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
-          : noteNumberElement as Element,
+          : noteNumberElement as List<Element>,
       adjudication: adjudication == freezed
           ? _value.adjudication
           : adjudication as List<ExplanationOfBenefitAdjudication>,
@@ -23146,17 +22849,17 @@ class _$_ExplanationOfBenefitAddItem extends _ExplanationOfBenefitAddItem {
   final List<PositiveInt> itemSequence;
   @override
   @JsonKey(name: '_itemSequence')
-  final Element itemSequenceElement;
+  final List<Element> itemSequenceElement;
   @override
   final List<PositiveInt> detailSequence;
   @override
   @JsonKey(name: '_detailSequence')
-  final Element detailSequenceElement;
+  final List<Element> detailSequenceElement;
   @override
   final List<PositiveInt> subDetailSequence;
   @override
   @JsonKey(name: '_subDetailSequence')
-  final Element subDetailSequenceElement;
+  final List<Element> subDetailSequenceElement;
   @override
   final List<Reference> provider;
   @override
@@ -23197,7 +22900,7 @@ class _$_ExplanationOfBenefitAddItem extends _ExplanationOfBenefitAddItem {
   final List<PositiveInt> noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  final Element noteNumberElement;
+  final List<Element> noteNumberElement;
   @override
   final List<ExplanationOfBenefitAdjudication> adjudication;
   @override
@@ -23331,20 +23034,26 @@ abstract class _ExplanationOfBenefitAddItem
   _ExplanationOfBenefitAddItem._() : super._();
   factory _ExplanationOfBenefitAddItem(
           {String id,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          @JsonKey(name: 'extension')
+              List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
           List<PositiveInt> itemSequence,
-          @JsonKey(name: '_itemSequence') Element itemSequenceElement,
+          @JsonKey(name: '_itemSequence')
+              List<Element> itemSequenceElement,
           List<PositiveInt> detailSequence,
-          @JsonKey(name: '_detailSequence') Element detailSequenceElement,
+          @JsonKey(name: '_detailSequence')
+              List<Element> detailSequenceElement,
           List<PositiveInt> subDetailSequence,
-          @JsonKey(name: '_subDetailSequence') Element subDetailSequenceElement,
+          @JsonKey(name: '_subDetailSequence')
+              List<Element> subDetailSequenceElement,
           List<Reference> provider,
-          @required CodeableConcept productOrService,
+          @required
+              CodeableConcept productOrService,
           List<CodeableConcept> modifier,
           List<CodeableConcept> programCode,
           Date servicedDate,
-          @JsonKey(name: '_servicedDate') Element servicedDateElement,
+          @JsonKey(name: '_servicedDate')
+              Element servicedDateElement,
           Period servicedPeriod,
           CodeableConcept locationCodeableConcept,
           Address locationAddress,
@@ -23352,12 +23061,14 @@ abstract class _ExplanationOfBenefitAddItem
           Quantity quantity,
           Money unitPrice,
           Decimal factor,
-          @JsonKey(name: '_factor') Element factorElement,
+          @JsonKey(name: '_factor')
+              Element factorElement,
           Money net,
           CodeableConcept bodySite,
           List<CodeableConcept> subSite,
           List<PositiveInt> noteNumber,
-          @JsonKey(name: '_noteNumber') Element noteNumberElement,
+          @JsonKey(name: '_noteNumber')
+              List<Element> noteNumberElement,
           List<ExplanationOfBenefitAdjudication> adjudication,
           List<ExplanationOfBenefitDetail1> detail}) =
       _$_ExplanationOfBenefitAddItem;
@@ -23376,17 +23087,17 @@ abstract class _ExplanationOfBenefitAddItem
   List<PositiveInt> get itemSequence;
   @override
   @JsonKey(name: '_itemSequence')
-  Element get itemSequenceElement;
+  List<Element> get itemSequenceElement;
   @override
   List<PositiveInt> get detailSequence;
   @override
   @JsonKey(name: '_detailSequence')
-  Element get detailSequenceElement;
+  List<Element> get detailSequenceElement;
   @override
   List<PositiveInt> get subDetailSequence;
   @override
   @JsonKey(name: '_subDetailSequence')
-  Element get subDetailSequenceElement;
+  List<Element> get subDetailSequenceElement;
   @override
   List<Reference> get provider;
   @override
@@ -23427,7 +23138,7 @@ abstract class _ExplanationOfBenefitAddItem
   List<PositiveInt> get noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  Element get noteNumberElement;
+  List<Element> get noteNumberElement;
   @override
   List<ExplanationOfBenefitAdjudication> get adjudication;
   @override
@@ -23457,7 +23168,7 @@ class _$ExplanationOfBenefitDetail1TearOff {
       @JsonKey(name: '_factor') Element factorElement,
       Money net,
       List<PositiveInt> noteNumber,
-      @JsonKey(name: '_noteNumber') Element noteNumberElement,
+      @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
       List<ExplanationOfBenefitAdjudication> adjudication,
       List<ExplanationOfBenefitSubDetail1> subDetail}) {
     return _ExplanationOfBenefitDetail1(
@@ -23497,7 +23208,7 @@ mixin _$ExplanationOfBenefitDetail1 {
   Money get net;
   List<PositiveInt> get noteNumber;
   @JsonKey(name: '_noteNumber')
-  Element get noteNumberElement;
+  List<Element> get noteNumberElement;
   List<ExplanationOfBenefitAdjudication> get adjudication;
   List<ExplanationOfBenefitSubDetail1> get subDetail;
 
@@ -23523,7 +23234,7 @@ abstract class $ExplanationOfBenefitDetail1CopyWith<$Res> {
       @JsonKey(name: '_factor') Element factorElement,
       Money net,
       List<PositiveInt> noteNumber,
-      @JsonKey(name: '_noteNumber') Element noteNumberElement,
+      @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
       List<ExplanationOfBenefitAdjudication> adjudication,
       List<ExplanationOfBenefitSubDetail1> subDetail});
 
@@ -23532,7 +23243,6 @@ abstract class $ExplanationOfBenefitDetail1CopyWith<$Res> {
   $MoneyCopyWith<$Res> get unitPrice;
   $ElementCopyWith<$Res> get factorElement;
   $MoneyCopyWith<$Res> get net;
-  $ElementCopyWith<$Res> get noteNumberElement;
 }
 
 class _$ExplanationOfBenefitDetail1CopyWithImpl<$Res>
@@ -23586,7 +23296,7 @@ class _$ExplanationOfBenefitDetail1CopyWithImpl<$Res>
           : noteNumber as List<PositiveInt>,
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
-          : noteNumberElement as Element,
+          : noteNumberElement as List<Element>,
       adjudication: adjudication == freezed
           ? _value.adjudication
           : adjudication as List<ExplanationOfBenefitAdjudication>,
@@ -23645,16 +23355,6 @@ class _$ExplanationOfBenefitDetail1CopyWithImpl<$Res>
       return _then(_value.copyWith(net: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get noteNumberElement {
-    if (_value.noteNumberElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.noteNumberElement, (value) {
-      return _then(_value.copyWith(noteNumberElement: value));
-    });
-  }
 }
 
 abstract class _$ExplanationOfBenefitDetail1CopyWith<$Res>
@@ -23676,7 +23376,7 @@ abstract class _$ExplanationOfBenefitDetail1CopyWith<$Res>
       @JsonKey(name: '_factor') Element factorElement,
       Money net,
       List<PositiveInt> noteNumber,
-      @JsonKey(name: '_noteNumber') Element noteNumberElement,
+      @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
       List<ExplanationOfBenefitAdjudication> adjudication,
       List<ExplanationOfBenefitSubDetail1> subDetail});
 
@@ -23690,8 +23390,6 @@ abstract class _$ExplanationOfBenefitDetail1CopyWith<$Res>
   $ElementCopyWith<$Res> get factorElement;
   @override
   $MoneyCopyWith<$Res> get net;
-  @override
-  $ElementCopyWith<$Res> get noteNumberElement;
 }
 
 class __$ExplanationOfBenefitDetail1CopyWithImpl<$Res>
@@ -23749,7 +23447,7 @@ class __$ExplanationOfBenefitDetail1CopyWithImpl<$Res>
           : noteNumber as List<PositiveInt>,
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
-          : noteNumberElement as Element,
+          : noteNumberElement as List<Element>,
       adjudication: adjudication == freezed
           ? _value.adjudication
           : adjudication as List<ExplanationOfBenefitAdjudication>,
@@ -23809,7 +23507,7 @@ class _$_ExplanationOfBenefitDetail1 extends _ExplanationOfBenefitDetail1 {
   final List<PositiveInt> noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  final Element noteNumberElement;
+  final List<Element> noteNumberElement;
   @override
   final List<ExplanationOfBenefitAdjudication> adjudication;
   @override
@@ -23909,7 +23607,7 @@ abstract class _ExplanationOfBenefitDetail1
           @JsonKey(name: '_factor') Element factorElement,
           Money net,
           List<PositiveInt> noteNumber,
-          @JsonKey(name: '_noteNumber') Element noteNumberElement,
+          @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
           List<ExplanationOfBenefitAdjudication> adjudication,
           List<ExplanationOfBenefitSubDetail1> subDetail}) =
       _$_ExplanationOfBenefitDetail1;
@@ -23943,7 +23641,7 @@ abstract class _ExplanationOfBenefitDetail1
   List<PositiveInt> get noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  Element get noteNumberElement;
+  List<Element> get noteNumberElement;
   @override
   List<ExplanationOfBenefitAdjudication> get adjudication;
   @override
@@ -23973,7 +23671,7 @@ class _$ExplanationOfBenefitSubDetail1TearOff {
       @JsonKey(name: '_factor') Element factorElement,
       Money net,
       List<PositiveInt> noteNumber,
-      @JsonKey(name: '_noteNumber') Element noteNumberElement,
+      @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
       List<ExplanationOfBenefitAdjudication> adjudication}) {
     return _ExplanationOfBenefitSubDetail1(
       id: id,
@@ -24012,7 +23710,7 @@ mixin _$ExplanationOfBenefitSubDetail1 {
   Money get net;
   List<PositiveInt> get noteNumber;
   @JsonKey(name: '_noteNumber')
-  Element get noteNumberElement;
+  List<Element> get noteNumberElement;
   List<ExplanationOfBenefitAdjudication> get adjudication;
 
   Map<String, dynamic> toJson();
@@ -24037,7 +23735,7 @@ abstract class $ExplanationOfBenefitSubDetail1CopyWith<$Res> {
       @JsonKey(name: '_factor') Element factorElement,
       Money net,
       List<PositiveInt> noteNumber,
-      @JsonKey(name: '_noteNumber') Element noteNumberElement,
+      @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
       List<ExplanationOfBenefitAdjudication> adjudication});
 
   $CodeableConceptCopyWith<$Res> get productOrService;
@@ -24045,7 +23743,6 @@ abstract class $ExplanationOfBenefitSubDetail1CopyWith<$Res> {
   $MoneyCopyWith<$Res> get unitPrice;
   $ElementCopyWith<$Res> get factorElement;
   $MoneyCopyWith<$Res> get net;
-  $ElementCopyWith<$Res> get noteNumberElement;
 }
 
 class _$ExplanationOfBenefitSubDetail1CopyWithImpl<$Res>
@@ -24098,7 +23795,7 @@ class _$ExplanationOfBenefitSubDetail1CopyWithImpl<$Res>
           : noteNumber as List<PositiveInt>,
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
-          : noteNumberElement as Element,
+          : noteNumberElement as List<Element>,
       adjudication: adjudication == freezed
           ? _value.adjudication
           : adjudication as List<ExplanationOfBenefitAdjudication>,
@@ -24154,16 +23851,6 @@ class _$ExplanationOfBenefitSubDetail1CopyWithImpl<$Res>
       return _then(_value.copyWith(net: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get noteNumberElement {
-    if (_value.noteNumberElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.noteNumberElement, (value) {
-      return _then(_value.copyWith(noteNumberElement: value));
-    });
-  }
 }
 
 abstract class _$ExplanationOfBenefitSubDetail1CopyWith<$Res>
@@ -24185,7 +23872,7 @@ abstract class _$ExplanationOfBenefitSubDetail1CopyWith<$Res>
       @JsonKey(name: '_factor') Element factorElement,
       Money net,
       List<PositiveInt> noteNumber,
-      @JsonKey(name: '_noteNumber') Element noteNumberElement,
+      @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
       List<ExplanationOfBenefitAdjudication> adjudication});
 
   @override
@@ -24198,8 +23885,6 @@ abstract class _$ExplanationOfBenefitSubDetail1CopyWith<$Res>
   $ElementCopyWith<$Res> get factorElement;
   @override
   $MoneyCopyWith<$Res> get net;
-  @override
-  $ElementCopyWith<$Res> get noteNumberElement;
 }
 
 class __$ExplanationOfBenefitSubDetail1CopyWithImpl<$Res>
@@ -24256,7 +23941,7 @@ class __$ExplanationOfBenefitSubDetail1CopyWithImpl<$Res>
           : noteNumber as List<PositiveInt>,
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
-          : noteNumberElement as Element,
+          : noteNumberElement as List<Element>,
       adjudication: adjudication == freezed
           ? _value.adjudication
           : adjudication as List<ExplanationOfBenefitAdjudication>,
@@ -24314,7 +23999,7 @@ class _$_ExplanationOfBenefitSubDetail1
   final List<PositiveInt> noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  final Element noteNumberElement;
+  final List<Element> noteNumberElement;
   @override
   final List<ExplanationOfBenefitAdjudication> adjudication;
 
@@ -24408,7 +24093,7 @@ abstract class _ExplanationOfBenefitSubDetail1
           @JsonKey(name: '_factor') Element factorElement,
           Money net,
           List<PositiveInt> noteNumber,
-          @JsonKey(name: '_noteNumber') Element noteNumberElement,
+          @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
           List<ExplanationOfBenefitAdjudication> adjudication}) =
       _$_ExplanationOfBenefitSubDetail1;
 
@@ -24441,7 +24126,7 @@ abstract class _ExplanationOfBenefitSubDetail1
   List<PositiveInt> get noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  Element get noteNumberElement;
+  List<Element> get noteNumberElement;
   @override
   List<ExplanationOfBenefitAdjudication> get adjudication;
   @override
@@ -26596,7 +26281,7 @@ class _$InsurancePlanTearOff {
           Element nameElement,
       List<String> alias,
       @JsonKey(name: '_alias')
-          Element aliasElement,
+          List<Element> aliasElement,
       Period period,
       Reference ownedBy,
       Reference administeredBy,
@@ -26669,7 +26354,7 @@ mixin _$InsurancePlan {
   Element get nameElement;
   List<String> get alias;
   @JsonKey(name: '_alias')
-  Element get aliasElement;
+  List<Element> get aliasElement;
   Period get period;
   Reference get ownedBy;
   Reference get administeredBy;
@@ -26715,7 +26400,7 @@ abstract class $InsurancePlanCopyWith<$Res> {
           Element nameElement,
       List<String> alias,
       @JsonKey(name: '_alias')
-          Element aliasElement,
+          List<Element> aliasElement,
       Period period,
       Reference ownedBy,
       Reference administeredBy,
@@ -26732,7 +26417,6 @@ abstract class $InsurancePlanCopyWith<$Res> {
   $NarrativeCopyWith<$Res> get text;
   $ElementCopyWith<$Res> get statusElement;
   $ElementCopyWith<$Res> get nameElement;
-  $ElementCopyWith<$Res> get aliasElement;
   $PeriodCopyWith<$Res> get period;
   $ReferenceCopyWith<$Res> get ownedBy;
   $ReferenceCopyWith<$Res> get administeredBy;
@@ -26816,7 +26500,7 @@ class _$InsurancePlanCopyWithImpl<$Res>
       alias: alias == freezed ? _value.alias : alias as List<String>,
       aliasElement: aliasElement == freezed
           ? _value.aliasElement
-          : aliasElement as Element,
+          : aliasElement as List<Element>,
       period: period == freezed ? _value.period : period as Period,
       ownedBy: ownedBy == freezed ? _value.ownedBy : ownedBy as Reference,
       administeredBy: administeredBy == freezed
@@ -26899,16 +26583,6 @@ class _$InsurancePlanCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get aliasElement {
-    if (_value.aliasElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.aliasElement, (value) {
-      return _then(_value.copyWith(aliasElement: value));
-    });
-  }
-
-  @override
   $PeriodCopyWith<$Res> get period {
     if (_value.period == null) {
       return null;
@@ -26972,7 +26646,7 @@ abstract class _$InsurancePlanCopyWith<$Res>
           Element nameElement,
       List<String> alias,
       @JsonKey(name: '_alias')
-          Element aliasElement,
+          List<Element> aliasElement,
       Period period,
       Reference ownedBy,
       Reference administeredBy,
@@ -26995,8 +26669,6 @@ abstract class _$InsurancePlanCopyWith<$Res>
   $ElementCopyWith<$Res> get statusElement;
   @override
   $ElementCopyWith<$Res> get nameElement;
-  @override
-  $ElementCopyWith<$Res> get aliasElement;
   @override
   $PeriodCopyWith<$Res> get period;
   @override
@@ -27085,7 +26757,7 @@ class __$InsurancePlanCopyWithImpl<$Res>
       alias: alias == freezed ? _value.alias : alias as List<String>,
       aliasElement: aliasElement == freezed
           ? _value.aliasElement
-          : aliasElement as Element,
+          : aliasElement as List<Element>,
       period: period == freezed ? _value.period : period as Period,
       ownedBy: ownedBy == freezed ? _value.ownedBy : ownedBy as Reference,
       administeredBy: administeredBy == freezed
@@ -27190,7 +26862,7 @@ class _$_InsurancePlan extends _InsurancePlan {
   final List<String> alias;
   @override
   @JsonKey(name: '_alias')
-  final Element aliasElement;
+  final List<Element> aliasElement;
   @override
   final Period period;
   @override
@@ -27364,7 +27036,7 @@ abstract class _InsurancePlan extends InsurancePlan {
           Element nameElement,
       List<String> alias,
       @JsonKey(name: '_alias')
-          Element aliasElement,
+          List<Element> aliasElement,
       Period period,
       Reference ownedBy,
       Reference administeredBy,
@@ -27423,7 +27095,7 @@ abstract class _InsurancePlan extends InsurancePlan {
   List<String> get alias;
   @override
   @JsonKey(name: '_alias')
-  Element get aliasElement;
+  List<Element> get aliasElement;
   @override
   Period get period;
   @override

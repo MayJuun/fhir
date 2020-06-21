@@ -5795,7 +5795,7 @@ class _$TaskInputTearOff {
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
       Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Integer valueInteger64,
+      Integer64 valueInteger64,
       @JsonKey(name: '_valueInteger64') Element valueInteger64Element,
       Markdown valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
@@ -5965,7 +5965,7 @@ mixin _$TaskInput {
   Integer get valueInteger;
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
-  Integer get valueInteger64;
+  Integer64 get valueInteger64;
   @JsonKey(name: '_valueInteger64')
   Element get valueInteger64Element;
   Markdown get valueMarkdown;
@@ -6059,7 +6059,7 @@ abstract class $TaskInputCopyWith<$Res> {
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
       Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Integer valueInteger64,
+      Integer64 valueInteger64,
       @JsonKey(name: '_valueInteger64') Element valueInteger64Element,
       Markdown valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
@@ -6315,7 +6315,7 @@ class _$TaskInputCopyWithImpl<$Res> implements $TaskInputCopyWith<$Res> {
           : valueIntegerElement as Element,
       valueInteger64: valueInteger64 == freezed
           ? _value.valueInteger64
-          : valueInteger64 as Integer,
+          : valueInteger64 as Integer64,
       valueInteger64Element: valueInteger64Element == freezed
           ? _value.valueInteger64Element
           : valueInteger64Element as Element,
@@ -6999,7 +6999,7 @@ abstract class _$TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
       Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Integer valueInteger64,
+      Integer64 valueInteger64,
       @JsonKey(name: '_valueInteger64') Element valueInteger64Element,
       Markdown valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
@@ -7308,7 +7308,7 @@ class __$TaskInputCopyWithImpl<$Res> extends _$TaskInputCopyWithImpl<$Res>
           : valueIntegerElement as Element,
       valueInteger64: valueInteger64 == freezed
           ? _value.valueInteger64
-          : valueInteger64 as Integer,
+          : valueInteger64 as Integer64,
       valueInteger64Element: valueInteger64Element == freezed
           ? _value.valueInteger64Element
           : valueInteger64Element as Element,
@@ -7584,7 +7584,7 @@ class _$_TaskInput extends _TaskInput {
   @JsonKey(name: '_valueInteger')
   final Element valueIntegerElement;
   @override
-  final Integer valueInteger64;
+  final Integer64 valueInteger64;
   @override
   @JsonKey(name: '_valueInteger64')
   final Element valueInteger64Element;
@@ -7931,7 +7931,7 @@ abstract class _TaskInput extends TaskInput {
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
       Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Integer valueInteger64,
+      Integer64 valueInteger64,
       @JsonKey(name: '_valueInteger64') Element valueInteger64Element,
       Markdown valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
@@ -8046,7 +8046,7 @@ abstract class _TaskInput extends TaskInput {
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
   @override
-  Integer get valueInteger64;
+  Integer64 get valueInteger64;
   @override
   @JsonKey(name: '_valueInteger64')
   Element get valueInteger64Element;
@@ -8193,7 +8193,7 @@ class _$TaskOutputTearOff {
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
       Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Integer valueInteger64,
+      Integer64 valueInteger64,
       @JsonKey(name: '_valueInteger64') Element valueInteger64Element,
       Markdown valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
@@ -8363,7 +8363,7 @@ mixin _$TaskOutput {
   Integer get valueInteger;
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
-  Integer get valueInteger64;
+  Integer64 get valueInteger64;
   @JsonKey(name: '_valueInteger64')
   Element get valueInteger64Element;
   Markdown get valueMarkdown;
@@ -8458,7 +8458,7 @@ abstract class $TaskOutputCopyWith<$Res> {
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
       Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Integer valueInteger64,
+      Integer64 valueInteger64,
       @JsonKey(name: '_valueInteger64') Element valueInteger64Element,
       Markdown valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
@@ -8714,7 +8714,7 @@ class _$TaskOutputCopyWithImpl<$Res> implements $TaskOutputCopyWith<$Res> {
           : valueIntegerElement as Element,
       valueInteger64: valueInteger64 == freezed
           ? _value.valueInteger64
-          : valueInteger64 as Integer,
+          : valueInteger64 as Integer64,
       valueInteger64Element: valueInteger64Element == freezed
           ? _value.valueInteger64Element
           : valueInteger64Element as Element,
@@ -9398,7 +9398,7 @@ abstract class _$TaskOutputCopyWith<$Res> implements $TaskOutputCopyWith<$Res> {
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
       Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Integer valueInteger64,
+      Integer64 valueInteger64,
       @JsonKey(name: '_valueInteger64') Element valueInteger64Element,
       Markdown valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
@@ -9708,7 +9708,7 @@ class __$TaskOutputCopyWithImpl<$Res> extends _$TaskOutputCopyWithImpl<$Res>
           : valueIntegerElement as Element,
       valueInteger64: valueInteger64 == freezed
           ? _value.valueInteger64
-          : valueInteger64 as Integer,
+          : valueInteger64 as Integer64,
       valueInteger64Element: valueInteger64Element == freezed
           ? _value.valueInteger64Element
           : valueInteger64Element as Element,
@@ -9984,7 +9984,7 @@ class _$_TaskOutput extends _TaskOutput {
   @JsonKey(name: '_valueInteger')
   final Element valueIntegerElement;
   @override
-  final Integer valueInteger64;
+  final Integer64 valueInteger64;
   @override
   @JsonKey(name: '_valueInteger64')
   final Element valueInteger64Element;
@@ -10331,7 +10331,7 @@ abstract class _TaskOutput extends TaskOutput {
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
       Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Integer valueInteger64,
+      Integer64 valueInteger64,
       @JsonKey(name: '_valueInteger64') Element valueInteger64Element,
       Markdown valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
@@ -10446,7 +10446,7 @@ abstract class _TaskOutput extends TaskOutput {
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
   @override
-  Integer get valueInteger64;
+  Integer64 get valueInteger64;
   @override
   @JsonKey(name: '_valueInteger64')
   Element get valueInteger64Element;
@@ -10582,7 +10582,7 @@ class _$VerificationResultTearOff {
       List<FhirExtension> modifierExtension,
       List<Reference> target,
       List<String> targetLocation,
-      @JsonKey(name: '_targetLocation') Element targetLocationElement,
+      @JsonKey(name: '_targetLocation') List<Element> targetLocationElement,
       CodeableConcept need,
       Code status,
       @JsonKey(name: '_status') Element statusElement,
@@ -10656,7 +10656,7 @@ mixin _$VerificationResult {
   List<Reference> get target;
   List<String> get targetLocation;
   @JsonKey(name: '_targetLocation')
-  Element get targetLocationElement;
+  List<Element> get targetLocationElement;
   CodeableConcept get need;
   Code get status;
   @JsonKey(name: '_status')
@@ -10700,7 +10700,7 @@ abstract class $VerificationResultCopyWith<$Res> {
       List<FhirExtension> modifierExtension,
       List<Reference> target,
       List<String> targetLocation,
-      @JsonKey(name: '_targetLocation') Element targetLocationElement,
+      @JsonKey(name: '_targetLocation') List<Element> targetLocationElement,
       CodeableConcept need,
       Code status,
       @JsonKey(name: '_status') Element statusElement,
@@ -10722,7 +10722,6 @@ abstract class $VerificationResultCopyWith<$Res> {
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
-  $ElementCopyWith<$Res> get targetLocationElement;
   $CodeableConceptCopyWith<$Res> get need;
   $ElementCopyWith<$Res> get statusElement;
   $ElementCopyWith<$Res> get statusDateElement;
@@ -10806,7 +10805,7 @@ class _$VerificationResultCopyWithImpl<$Res>
           : targetLocation as List<String>,
       targetLocationElement: targetLocationElement == freezed
           ? _value.targetLocationElement
-          : targetLocationElement as Element,
+          : targetLocationElement as List<Element>,
       need: need == freezed ? _value.need : need as CodeableConcept,
       status: status == freezed ? _value.status : status as Code,
       statusElement: statusElement == freezed
@@ -10889,16 +10888,6 @@ class _$VerificationResultCopyWithImpl<$Res>
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get targetLocationElement {
-    if (_value.targetLocationElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.targetLocationElement, (value) {
-      return _then(_value.copyWith(targetLocationElement: value));
     });
   }
 
@@ -11014,7 +11003,7 @@ abstract class _$VerificationResultCopyWith<$Res>
       List<FhirExtension> modifierExtension,
       List<Reference> target,
       List<String> targetLocation,
-      @JsonKey(name: '_targetLocation') Element targetLocationElement,
+      @JsonKey(name: '_targetLocation') List<Element> targetLocationElement,
       CodeableConcept need,
       Code status,
       @JsonKey(name: '_status') Element statusElement,
@@ -11040,8 +11029,6 @@ abstract class _$VerificationResultCopyWith<$Res>
   $ElementCopyWith<$Res> get languageElement;
   @override
   $NarrativeCopyWith<$Res> get text;
-  @override
-  $ElementCopyWith<$Res> get targetLocationElement;
   @override
   $CodeableConceptCopyWith<$Res> get need;
   @override
@@ -11136,7 +11123,7 @@ class __$VerificationResultCopyWithImpl<$Res>
           : targetLocation as List<String>,
       targetLocationElement: targetLocationElement == freezed
           ? _value.targetLocationElement
-          : targetLocationElement as Element,
+          : targetLocationElement as List<Element>,
       need: need == freezed ? _value.need : need as CodeableConcept,
       status: status == freezed ? _value.status : status as Code,
       statusElement: statusElement == freezed
@@ -11254,7 +11241,7 @@ class _$_VerificationResult extends _VerificationResult {
   final List<String> targetLocation;
   @override
   @JsonKey(name: '_targetLocation')
-  final Element targetLocationElement;
+  final List<Element> targetLocationElement;
   @override
   final CodeableConcept need;
   @override
@@ -11435,7 +11422,7 @@ abstract class _VerificationResult extends VerificationResult {
       List<FhirExtension> modifierExtension,
       List<Reference> target,
       List<String> targetLocation,
-      @JsonKey(name: '_targetLocation') Element targetLocationElement,
+      @JsonKey(name: '_targetLocation') List<Element> targetLocationElement,
       CodeableConcept need,
       Code status,
       @JsonKey(name: '_status') Element statusElement,
@@ -11488,7 +11475,7 @@ abstract class _VerificationResult extends VerificationResult {
   List<String> get targetLocation;
   @override
   @JsonKey(name: '_targetLocation')
-  Element get targetLocationElement;
+  List<Element> get targetLocationElement;
   @override
   CodeableConcept get need;
   @override

@@ -6751,7 +6751,7 @@ class _$PractitionerRoleAvailableTimeTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Code> daysOfWeek,
-      @JsonKey(name: '_daysOfWeek') Element daysOfWeekElement,
+      @JsonKey(name: '_daysOfWeek') List<Element> daysOfWeekElement,
       Boolean allDay,
       @JsonKey(name: '_allDay') Element allDayElement,
       Time availableStartTime,
@@ -6784,7 +6784,7 @@ mixin _$PractitionerRoleAvailableTime {
   List<FhirExtension> get modifierExtension;
   List<Code> get daysOfWeek;
   @JsonKey(name: '_daysOfWeek')
-  Element get daysOfWeekElement;
+  List<Element> get daysOfWeekElement;
   Boolean get allDay;
   @JsonKey(name: '_allDay')
   Element get allDayElement;
@@ -6810,7 +6810,7 @@ abstract class $PractitionerRoleAvailableTimeCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Code> daysOfWeek,
-      @JsonKey(name: '_daysOfWeek') Element daysOfWeekElement,
+      @JsonKey(name: '_daysOfWeek') List<Element> daysOfWeekElement,
       Boolean allDay,
       @JsonKey(name: '_allDay') Element allDayElement,
       Time availableStartTime,
@@ -6818,7 +6818,6 @@ abstract class $PractitionerRoleAvailableTimeCopyWith<$Res> {
       Time availableEndTime,
       @JsonKey(name: '_availableEndTime') Element availableEndTimeElement});
 
-  $ElementCopyWith<$Res> get daysOfWeekElement;
   $ElementCopyWith<$Res> get allDayElement;
   $ElementCopyWith<$Res> get availableStartTimeElement;
   $ElementCopyWith<$Res> get availableEndTimeElement;
@@ -6858,7 +6857,7 @@ class _$PractitionerRoleAvailableTimeCopyWithImpl<$Res>
           daysOfWeek == freezed ? _value.daysOfWeek : daysOfWeek as List<Code>,
       daysOfWeekElement: daysOfWeekElement == freezed
           ? _value.daysOfWeekElement
-          : daysOfWeekElement as Element,
+          : daysOfWeekElement as List<Element>,
       allDay: allDay == freezed ? _value.allDay : allDay as Boolean,
       allDayElement: allDayElement == freezed
           ? _value.allDayElement
@@ -6876,16 +6875,6 @@ class _$PractitionerRoleAvailableTimeCopyWithImpl<$Res>
           ? _value.availableEndTimeElement
           : availableEndTimeElement as Element,
     ));
-  }
-
-  @override
-  $ElementCopyWith<$Res> get daysOfWeekElement {
-    if (_value.daysOfWeekElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.daysOfWeekElement, (value) {
-      return _then(_value.copyWith(daysOfWeekElement: value));
-    });
   }
 
   @override
@@ -6931,7 +6920,7 @@ abstract class _$PractitionerRoleAvailableTimeCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Code> daysOfWeek,
-      @JsonKey(name: '_daysOfWeek') Element daysOfWeekElement,
+      @JsonKey(name: '_daysOfWeek') List<Element> daysOfWeekElement,
       Boolean allDay,
       @JsonKey(name: '_allDay') Element allDayElement,
       Time availableStartTime,
@@ -6939,8 +6928,6 @@ abstract class _$PractitionerRoleAvailableTimeCopyWith<$Res>
       Time availableEndTime,
       @JsonKey(name: '_availableEndTime') Element availableEndTimeElement});
 
-  @override
-  $ElementCopyWith<$Res> get daysOfWeekElement;
   @override
   $ElementCopyWith<$Res> get allDayElement;
   @override
@@ -6987,7 +6974,7 @@ class __$PractitionerRoleAvailableTimeCopyWithImpl<$Res>
           daysOfWeek == freezed ? _value.daysOfWeek : daysOfWeek as List<Code>,
       daysOfWeekElement: daysOfWeekElement == freezed
           ? _value.daysOfWeekElement
-          : daysOfWeekElement as Element,
+          : daysOfWeekElement as List<Element>,
       allDay: allDay == freezed ? _value.allDay : allDay as Boolean,
       allDayElement: allDayElement == freezed
           ? _value.allDayElement
@@ -7039,7 +7026,7 @@ class _$_PractitionerRoleAvailableTime extends _PractitionerRoleAvailableTime {
   final List<Code> daysOfWeek;
   @override
   @JsonKey(name: '_daysOfWeek')
-  final Element daysOfWeekElement;
+  final List<Element> daysOfWeekElement;
   @override
   final Boolean allDay;
   @override
@@ -7137,7 +7124,7 @@ abstract class _PractitionerRoleAvailableTime
       List<FhirExtension> modifierExtension,
       List<Code> daysOfWeek,
       @JsonKey(name: '_daysOfWeek')
-          Element daysOfWeekElement,
+          List<Element> daysOfWeekElement,
       Boolean allDay,
       @JsonKey(name: '_allDay')
           Element allDayElement,
@@ -7162,7 +7149,7 @@ abstract class _PractitionerRoleAvailableTime
   List<Code> get daysOfWeek;
   @override
   @JsonKey(name: '_daysOfWeek')
-  Element get daysOfWeekElement;
+  List<Element> get daysOfWeekElement;
   @override
   Boolean get allDay;
   @override

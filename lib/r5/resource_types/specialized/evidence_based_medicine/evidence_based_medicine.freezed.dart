@@ -4771,7 +4771,7 @@ class _$EvidenceVariableCharacteristicTearOff {
           Reference device,
           List<String> booleanSet,
           @JsonKey(name: '_booleanSet')
-              Element booleanSetElement,
+              List<Element> booleanSetElement,
           Boolean exclude,
           @JsonKey(name: '_exclude')
               Element excludeElement,
@@ -4843,7 +4843,7 @@ mixin _$EvidenceVariableCharacteristic {
   Reference get device;
   List<String> get booleanSet;
   @JsonKey(name: '_booleanSet')
-  Element get booleanSetElement;
+  List<Element> get booleanSetElement;
   Boolean get exclude;
   @JsonKey(name: '_exclude')
   Element get excludeElement;
@@ -4890,7 +4890,7 @@ abstract class $EvidenceVariableCharacteristicCopyWith<$Res> {
           Reference device,
           List<String> booleanSet,
           @JsonKey(name: '_booleanSet')
-              Element booleanSetElement,
+              List<Element> booleanSetElement,
           Boolean exclude,
           @JsonKey(name: '_exclude')
               Element excludeElement,
@@ -4917,7 +4917,6 @@ abstract class $EvidenceVariableCharacteristicCopyWith<$Res> {
   $TriggerDefinitionCopyWith<$Res> get definitionTriggerDefinition;
   $CodeableConceptCopyWith<$Res> get method;
   $ReferenceCopyWith<$Res> get device;
-  $ElementCopyWith<$Res> get booleanSetElement;
   $ElementCopyWith<$Res> get excludeElement;
   $ElementCopyWith<$Res> get participantEffectiveDateTimeElement;
   $PeriodCopyWith<$Res> get participantEffectivePeriod;
@@ -5005,7 +5004,7 @@ class _$EvidenceVariableCharacteristicCopyWithImpl<$Res>
           : booleanSet as List<String>,
       booleanSetElement: booleanSetElement == freezed
           ? _value.booleanSetElement
-          : booleanSetElement as Element,
+          : booleanSetElement as List<Element>,
       exclude: exclude == freezed ? _value.exclude : exclude as Boolean,
       excludeElement: excludeElement == freezed
           ? _value.excludeElement
@@ -5132,16 +5131,6 @@ class _$EvidenceVariableCharacteristicCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get booleanSetElement {
-    if (_value.booleanSetElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.booleanSetElement, (value) {
-      return _then(_value.copyWith(booleanSetElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get excludeElement {
     if (_value.excludeElement == null) {
       return null;
@@ -5242,7 +5231,7 @@ abstract class _$EvidenceVariableCharacteristicCopyWith<$Res>
           Reference device,
           List<String> booleanSet,
           @JsonKey(name: '_booleanSet')
-              Element booleanSetElement,
+              List<Element> booleanSetElement,
           Boolean exclude,
           @JsonKey(name: '_exclude')
               Element excludeElement,
@@ -5278,8 +5267,6 @@ abstract class _$EvidenceVariableCharacteristicCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get method;
   @override
   $ReferenceCopyWith<$Res> get device;
-  @override
-  $ElementCopyWith<$Res> get booleanSetElement;
   @override
   $ElementCopyWith<$Res> get excludeElement;
   @override
@@ -5378,7 +5365,7 @@ class __$EvidenceVariableCharacteristicCopyWithImpl<$Res>
           : booleanSet as List<String>,
       booleanSetElement: booleanSetElement == freezed
           ? _value.booleanSetElement
-          : booleanSetElement as Element,
+          : booleanSetElement as List<Element>,
       exclude: exclude == freezed ? _value.exclude : exclude as Boolean,
       excludeElement: excludeElement == freezed
           ? _value.excludeElement
@@ -5491,7 +5478,7 @@ class _$_EvidenceVariableCharacteristic
   final List<String> booleanSet;
   @override
   @JsonKey(name: '_booleanSet')
-  final Element booleanSetElement;
+  final List<Element> booleanSetElement;
   @override
   final Boolean exclude;
   @override
@@ -5651,7 +5638,7 @@ abstract class _EvidenceVariableCharacteristic
       Reference device,
       List<String> booleanSet,
       @JsonKey(name: '_booleanSet')
-          Element booleanSetElement,
+          List<Element> booleanSetElement,
       Boolean exclude,
       @JsonKey(name: '_exclude')
           Element excludeElement,
@@ -5705,7 +5692,7 @@ abstract class _EvidenceVariableCharacteristic
   List<String> get booleanSet;
   @override
   @JsonKey(name: '_booleanSet')
-  Element get booleanSetElement;
+  List<Element> get booleanSetElement;
   @override
   Boolean get exclude;
   @override

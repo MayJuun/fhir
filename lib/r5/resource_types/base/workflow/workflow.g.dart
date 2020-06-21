@@ -1096,7 +1096,7 @@ _$_TaskInput _$_$_TaskInputFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
     valueInteger64: json['valueInteger64'] == null
         ? null
-        : Integer.fromJson(json['valueInteger64']),
+        : Integer64.fromJson(json['valueInteger64']),
     valueInteger64Element: json['_valueInteger64'] == null
         ? null
         : Element.fromJson(json['_valueInteger64'] as Map<String, dynamic>),
@@ -1427,7 +1427,7 @@ _$_TaskOutput _$_$_TaskOutputFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
     valueInteger64: json['valueInteger64'] == null
         ? null
-        : Integer.fromJson(json['valueInteger64']),
+        : Integer64.fromJson(json['valueInteger64']),
     valueInteger64Element: json['_valueInteger64'] == null
         ? null
         : Element.fromJson(json['_valueInteger64'] as Map<String, dynamic>),
@@ -1724,9 +1724,10 @@ _$_VerificationResult _$_$_VerificationResultFromJson(
         ?.toList(),
     targetLocation:
         (json['targetLocation'] as List)?.map((e) => e as String)?.toList(),
-    targetLocationElement: json['_targetLocation'] == null
-        ? null
-        : Element.fromJson(json['_targetLocation'] as Map<String, dynamic>),
+    targetLocationElement: (json['_targetLocation'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     need: json['need'] == null
         ? null
         : CodeableConcept.fromJson(json['need'] as Map<String, dynamic>),
@@ -1813,7 +1814,8 @@ Map<String, dynamic> _$_$_VerificationResultToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('target', instance.target?.map((e) => e?.toJson())?.toList());
   writeNotNull('targetLocation', instance.targetLocation);
-  writeNotNull('_targetLocation', instance.targetLocationElement?.toJson());
+  writeNotNull('_targetLocation',
+      instance.targetLocationElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('need', instance.need?.toJson());
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());

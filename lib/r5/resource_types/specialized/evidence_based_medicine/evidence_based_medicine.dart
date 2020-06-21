@@ -227,7 +227,7 @@ factory EvidenceVariableCharacteristic({
   CodeableConcept method,
   Reference device,
   List<String> booleanSet,
-  @JsonKey(name: '_booleanSet')  Element booleanSetElement,
+  @JsonKey(name: '_booleanSet')  List<Element> booleanSetElement,
   Boolean exclude,
   @JsonKey(name: '_exclude')  Element excludeElement,
   FhirDateTime participantEffectiveDateTime,

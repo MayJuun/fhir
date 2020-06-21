@@ -1130,13 +1130,15 @@ _$_OperationOutcomeIssue _$_$_OperationOutcomeIssueFromJson(
         ? null
         : Element.fromJson(json['_diagnostics'] as Map<String, dynamic>),
     location: (json['location'] as List)?.map((e) => e as String)?.toList(),
-    locationElement: json['_location'] == null
-        ? null
-        : Element.fromJson(json['_location'] as Map<String, dynamic>),
+    locationElement: (json['_location'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     expression: (json['expression'] as List)?.map((e) => e as String)?.toList(),
-    expressionElement: json['_expression'] == null
-        ? null
-        : Element.fromJson(json['_expression'] as Map<String, dynamic>),
+    expressionElement: (json['_expression'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -1164,9 +1166,11 @@ Map<String, dynamic> _$_$_OperationOutcomeIssueToJson(
   writeNotNull('diagnostics', instance.diagnostics);
   writeNotNull('_diagnostics', instance.diagnosticsElement?.toJson());
   writeNotNull('location', instance.location);
-  writeNotNull('_location', instance.locationElement?.toJson());
+  writeNotNull(
+      '_location', instance.locationElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('expression', instance.expression);
-  writeNotNull('_expression', instance.expressionElement?.toJson());
+  writeNotNull('_expression',
+      instance.expressionElement?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
@@ -1742,9 +1746,10 @@ _$_SubscriptionChannel _$_$_SubscriptionChannelFromJson(
         ? null
         : Element.fromJson(json['_payload'] as Map<String, dynamic>),
     header: (json['header'] as List)?.map((e) => e as String)?.toList(),
-    headerElement: json['_header'] == null
-        ? null
-        : Element.fromJson(json['_header'] as Map<String, dynamic>),
+    headerElement: (json['_header'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -1770,7 +1775,8 @@ Map<String, dynamic> _$_$_SubscriptionChannelToJson(
   writeNotNull('payload', instance.payload?.toJson());
   writeNotNull('_payload', instance.payloadElement?.toJson());
   writeNotNull('header', instance.header);
-  writeNotNull('_header', instance.headerElement?.toJson());
+  writeNotNull(
+      '_header', instance.headerElement?.map((e) => e?.toJson())?.toList());
   return val;
 }
 

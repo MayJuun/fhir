@@ -114,7 +114,7 @@ class _$MeasureTearOff {
       CodeableConcept improvementNotation,
       List<Markdown> definition,
       @JsonKey(name: '_definition')
-          Element definitionElement,
+          List<Element> definitionElement,
       Markdown guidance,
       @JsonKey(name: '_guidance')
           Element guidanceElement,
@@ -302,7 +302,7 @@ mixin _$Measure {
   CodeableConcept get improvementNotation;
   List<Markdown> get definition;
   @JsonKey(name: '_definition')
-  Element get definitionElement;
+  List<Element> get definitionElement;
   Markdown get guidance;
   @JsonKey(name: '_guidance')
   Element get guidanceElement;
@@ -414,7 +414,7 @@ abstract class $MeasureCopyWith<$Res> {
       CodeableConcept improvementNotation,
       List<Markdown> definition,
       @JsonKey(name: '_definition')
-          Element definitionElement,
+          List<Element> definitionElement,
       Markdown guidance,
       @JsonKey(name: '_guidance')
           Element guidanceElement,
@@ -451,7 +451,6 @@ abstract class $MeasureCopyWith<$Res> {
   $ElementCopyWith<$Res> get rationaleElement;
   $ElementCopyWith<$Res> get clinicalRecommendationStatementElement;
   $CodeableConceptCopyWith<$Res> get improvementNotation;
-  $ElementCopyWith<$Res> get definitionElement;
   $ElementCopyWith<$Res> get guidanceElement;
 }
 
@@ -706,7 +705,7 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
           : definition as List<Markdown>,
       definitionElement: definitionElement == freezed
           ? _value.definitionElement
-          : definitionElement as Element,
+          : definitionElement as List<Element>,
       guidance: guidance == freezed ? _value.guidance : guidance as Markdown,
       guidanceElement: guidanceElement == freezed
           ? _value.guidanceElement
@@ -1022,16 +1021,6 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
   }
 
   @override
-  $ElementCopyWith<$Res> get definitionElement {
-    if (_value.definitionElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.definitionElement, (value) {
-      return _then(_value.copyWith(definitionElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get guidanceElement {
     if (_value.guidanceElement == null) {
       return null;
@@ -1144,7 +1133,7 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       CodeableConcept improvementNotation,
       List<Markdown> definition,
       @JsonKey(name: '_definition')
-          Element definitionElement,
+          List<Element> definitionElement,
       Markdown guidance,
       @JsonKey(name: '_guidance')
           Element guidanceElement,
@@ -1211,8 +1200,6 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
   $ElementCopyWith<$Res> get clinicalRecommendationStatementElement;
   @override
   $CodeableConceptCopyWith<$Res> get improvementNotation;
-  @override
-  $ElementCopyWith<$Res> get definitionElement;
   @override
   $ElementCopyWith<$Res> get guidanceElement;
 }
@@ -1469,7 +1456,7 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
           : definition as List<Markdown>,
       definitionElement: definitionElement == freezed
           ? _value.definitionElement
-          : definitionElement as Element,
+          : definitionElement as List<Element>,
       guidance: guidance == freezed ? _value.guidance : guidance as Markdown,
       guidanceElement: guidanceElement == freezed
           ? _value.guidanceElement
@@ -1763,7 +1750,7 @@ class _$_Measure extends _Measure {
   final List<Markdown> definition;
   @override
   @JsonKey(name: '_definition')
-  final Element definitionElement;
+  final List<Element> definitionElement;
   @override
   final Markdown guidance;
   @override
@@ -2094,7 +2081,7 @@ abstract class _Measure extends Measure {
       CodeableConcept improvementNotation,
       List<Markdown> definition,
       @JsonKey(name: '_definition')
-          Element definitionElement,
+          List<Element> definitionElement,
       Markdown guidance,
       @JsonKey(name: '_guidance')
           Element guidanceElement,
@@ -2271,7 +2258,7 @@ abstract class _Measure extends Measure {
   List<Markdown> get definition;
   @override
   @JsonKey(name: '_definition')
-  Element get definitionElement;
+  List<Element> get definitionElement;
   @override
   Markdown get guidance;
   @override
@@ -12553,11 +12540,11 @@ class _$TestScriptCapabilityTearOff {
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
       List<Integer> origin,
-      @JsonKey(name: '_origin') Element originElement,
+      @JsonKey(name: '_origin') List<Element> originElement,
       Integer destination,
       @JsonKey(name: '_destination') Element destinationElement,
       List<FhirUri> link,
-      @JsonKey(name: '_link') Element linkElement,
+      @JsonKey(name: '_link') List<Element> linkElement,
       @required Canonical capabilities}) {
     return _TestScriptCapability(
       id: id,
@@ -12600,13 +12587,13 @@ mixin _$TestScriptCapability {
   Element get descriptionElement;
   List<Integer> get origin;
   @JsonKey(name: '_origin')
-  Element get originElement;
+  List<Element> get originElement;
   Integer get destination;
   @JsonKey(name: '_destination')
   Element get destinationElement;
   List<FhirUri> get link;
   @JsonKey(name: '_link')
-  Element get linkElement;
+  List<Element> get linkElement;
   Canonical get capabilities;
 
   Map<String, dynamic> toJson();
@@ -12628,19 +12615,17 @@ abstract class $TestScriptCapabilityCopyWith<$Res> {
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
       List<Integer> origin,
-      @JsonKey(name: '_origin') Element originElement,
+      @JsonKey(name: '_origin') List<Element> originElement,
       Integer destination,
       @JsonKey(name: '_destination') Element destinationElement,
       List<FhirUri> link,
-      @JsonKey(name: '_link') Element linkElement,
+      @JsonKey(name: '_link') List<Element> linkElement,
       Canonical capabilities});
 
   $ElementCopyWith<$Res> get requiredElement;
   $ElementCopyWith<$Res> get validatedElement;
   $ElementCopyWith<$Res> get descriptionElement;
-  $ElementCopyWith<$Res> get originElement;
   $ElementCopyWith<$Res> get destinationElement;
-  $ElementCopyWith<$Res> get linkElement;
 }
 
 class _$TestScriptCapabilityCopyWithImpl<$Res>
@@ -12694,15 +12679,16 @@ class _$TestScriptCapabilityCopyWithImpl<$Res>
       origin: origin == freezed ? _value.origin : origin as List<Integer>,
       originElement: originElement == freezed
           ? _value.originElement
-          : originElement as Element,
+          : originElement as List<Element>,
       destination:
           destination == freezed ? _value.destination : destination as Integer,
       destinationElement: destinationElement == freezed
           ? _value.destinationElement
           : destinationElement as Element,
       link: link == freezed ? _value.link : link as List<FhirUri>,
-      linkElement:
-          linkElement == freezed ? _value.linkElement : linkElement as Element,
+      linkElement: linkElement == freezed
+          ? _value.linkElement
+          : linkElement as List<Element>,
       capabilities: capabilities == freezed
           ? _value.capabilities
           : capabilities as Canonical,
@@ -12740,32 +12726,12 @@ class _$TestScriptCapabilityCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get originElement {
-    if (_value.originElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.originElement, (value) {
-      return _then(_value.copyWith(originElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get destinationElement {
     if (_value.destinationElement == null) {
       return null;
     }
     return $ElementCopyWith<$Res>(_value.destinationElement, (value) {
       return _then(_value.copyWith(destinationElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get linkElement {
-    if (_value.linkElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.linkElement, (value) {
-      return _then(_value.copyWith(linkElement: value));
     });
   }
 }
@@ -12787,11 +12753,11 @@ abstract class _$TestScriptCapabilityCopyWith<$Res>
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
       List<Integer> origin,
-      @JsonKey(name: '_origin') Element originElement,
+      @JsonKey(name: '_origin') List<Element> originElement,
       Integer destination,
       @JsonKey(name: '_destination') Element destinationElement,
       List<FhirUri> link,
-      @JsonKey(name: '_link') Element linkElement,
+      @JsonKey(name: '_link') List<Element> linkElement,
       Canonical capabilities});
 
   @override
@@ -12801,11 +12767,7 @@ abstract class _$TestScriptCapabilityCopyWith<$Res>
   @override
   $ElementCopyWith<$Res> get descriptionElement;
   @override
-  $ElementCopyWith<$Res> get originElement;
-  @override
   $ElementCopyWith<$Res> get destinationElement;
-  @override
-  $ElementCopyWith<$Res> get linkElement;
 }
 
 class __$TestScriptCapabilityCopyWithImpl<$Res>
@@ -12861,15 +12823,16 @@ class __$TestScriptCapabilityCopyWithImpl<$Res>
       origin: origin == freezed ? _value.origin : origin as List<Integer>,
       originElement: originElement == freezed
           ? _value.originElement
-          : originElement as Element,
+          : originElement as List<Element>,
       destination:
           destination == freezed ? _value.destination : destination as Integer,
       destinationElement: destinationElement == freezed
           ? _value.destinationElement
           : destinationElement as Element,
       link: link == freezed ? _value.link : link as List<FhirUri>,
-      linkElement:
-          linkElement == freezed ? _value.linkElement : linkElement as Element,
+      linkElement: linkElement == freezed
+          ? _value.linkElement
+          : linkElement as List<Element>,
       capabilities: capabilities == freezed
           ? _value.capabilities
           : capabilities as Canonical,
@@ -12929,7 +12892,7 @@ class _$_TestScriptCapability extends _TestScriptCapability {
   final List<Integer> origin;
   @override
   @JsonKey(name: '_origin')
-  final Element originElement;
+  final List<Element> originElement;
   @override
   final Integer destination;
   @override
@@ -12939,7 +12902,7 @@ class _$_TestScriptCapability extends _TestScriptCapability {
   final List<FhirUri> link;
   @override
   @JsonKey(name: '_link')
-  final Element linkElement;
+  final List<Element> linkElement;
   @override
   final Canonical capabilities;
 
@@ -13043,11 +13006,11 @@ abstract class _TestScriptCapability extends TestScriptCapability {
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
       List<Integer> origin,
-      @JsonKey(name: '_origin') Element originElement,
+      @JsonKey(name: '_origin') List<Element> originElement,
       Integer destination,
       @JsonKey(name: '_destination') Element destinationElement,
       List<FhirUri> link,
-      @JsonKey(name: '_link') Element linkElement,
+      @JsonKey(name: '_link') List<Element> linkElement,
       @required Canonical capabilities}) = _$_TestScriptCapability;
 
   factory _TestScriptCapability.fromJson(Map<String, dynamic> json) =
@@ -13080,7 +13043,7 @@ abstract class _TestScriptCapability extends TestScriptCapability {
   List<Integer> get origin;
   @override
   @JsonKey(name: '_origin')
-  Element get originElement;
+  List<Element> get originElement;
   @override
   Integer get destination;
   @override
@@ -13090,7 +13053,7 @@ abstract class _TestScriptCapability extends TestScriptCapability {
   List<FhirUri> get link;
   @override
   @JsonKey(name: '_link')
-  Element get linkElement;
+  List<Element> get linkElement;
   @override
   Canonical get capabilities;
   @override

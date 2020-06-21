@@ -3213,7 +3213,7 @@ class _$AllergyIntoleranceTearOff {
           Element typeElement,
       List<AllergyIntoleranceCategory> category,
       @JsonKey(name: '_category')
-          Element categoryElement,
+          List<Element> categoryElement,
       @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
           AllergyIntoleranceCriticality criticality,
       @JsonKey(name: '_criticality')
@@ -3312,7 +3312,7 @@ mixin _$AllergyIntolerance {
   Element get typeElement;
   List<AllergyIntoleranceCategory> get category;
   @JsonKey(name: '_category')
-  Element get categoryElement;
+  List<Element> get categoryElement;
   @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
   AllergyIntoleranceCriticality get criticality;
   @JsonKey(name: '_criticality')
@@ -3373,7 +3373,7 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
           Element typeElement,
       List<AllergyIntoleranceCategory> category,
       @JsonKey(name: '_category')
-          Element categoryElement,
+          List<Element> categoryElement,
       @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
           AllergyIntoleranceCriticality criticality,
       @JsonKey(name: '_criticality')
@@ -3408,7 +3408,6 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get clinicalStatus;
   $CodeableConceptCopyWith<$Res> get verificationStatus;
   $ElementCopyWith<$Res> get typeElement;
-  $ElementCopyWith<$Res> get categoryElement;
   $ElementCopyWith<$Res> get criticalityElement;
   $CodeableConceptCopyWith<$Res> get code;
   $ReferenceCopyWith<$Res> get patient;
@@ -3515,7 +3514,7 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
           : category as List<AllergyIntoleranceCategory>,
       categoryElement: categoryElement == freezed
           ? _value.categoryElement
-          : categoryElement as Element,
+          : categoryElement as List<Element>,
       criticality: criticality == freezed
           ? _value.criticality
           : criticality as AllergyIntoleranceCriticality,
@@ -3630,16 +3629,6 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
     }
     return $ElementCopyWith<$Res>(_value.typeElement, (value) {
       return _then(_value.copyWith(typeElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get categoryElement {
-    if (_value.categoryElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.categoryElement, (value) {
-      return _then(_value.copyWith(categoryElement: value));
     });
   }
 
@@ -3805,7 +3794,7 @@ abstract class _$AllergyIntoleranceCopyWith<$Res>
           Element typeElement,
       List<AllergyIntoleranceCategory> category,
       @JsonKey(name: '_category')
-          Element categoryElement,
+          List<Element> categoryElement,
       @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
           AllergyIntoleranceCriticality criticality,
       @JsonKey(name: '_criticality')
@@ -3847,8 +3836,6 @@ abstract class _$AllergyIntoleranceCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get verificationStatus;
   @override
   $ElementCopyWith<$Res> get typeElement;
-  @override
-  $ElementCopyWith<$Res> get categoryElement;
   @override
   $ElementCopyWith<$Res> get criticalityElement;
   @override
@@ -3970,7 +3957,7 @@ class __$AllergyIntoleranceCopyWithImpl<$Res>
           : category as List<AllergyIntoleranceCategory>,
       categoryElement: categoryElement == freezed
           ? _value.categoryElement
-          : categoryElement as Element,
+          : categoryElement as List<Element>,
       criticality: criticality == freezed
           ? _value.criticality
           : criticality as AllergyIntoleranceCriticality,
@@ -4124,7 +4111,7 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
   final List<AllergyIntoleranceCategory> category;
   @override
   @JsonKey(name: '_category')
-  final Element categoryElement;
+  final List<Element> categoryElement;
   @override
   @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
   final AllergyIntoleranceCriticality criticality;
@@ -4344,7 +4331,7 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
           Element typeElement,
       List<AllergyIntoleranceCategory> category,
       @JsonKey(name: '_category')
-          Element categoryElement,
+          List<Element> categoryElement,
       @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
           AllergyIntoleranceCriticality criticality,
       @JsonKey(name: '_criticality')
@@ -4418,7 +4405,7 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
   List<AllergyIntoleranceCategory> get category;
   @override
   @JsonKey(name: '_category')
-  Element get categoryElement;
+  List<Element> get categoryElement;
   @override
   @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
   AllergyIntoleranceCriticality get criticality;
@@ -5020,7 +5007,7 @@ class _$ClinicalImpressionTearOff {
       Reference previous,
       List<Reference> problem,
       List<FhirUri> protocol,
-      @JsonKey(name: '_protocol') Element protocolElement,
+      @JsonKey(name: '_protocol') List<Element> protocolElement,
       String summary,
       @JsonKey(name: '_summary') Element summaryElement,
       List<ClinicalImpressionFinding> finding,
@@ -5110,7 +5097,7 @@ mixin _$ClinicalImpression {
   List<Reference> get problem;
   List<FhirUri> get protocol;
   @JsonKey(name: '_protocol')
-  Element get protocolElement;
+  List<Element> get protocolElement;
   String get summary;
   @JsonKey(name: '_summary')
   Element get summaryElement;
@@ -5157,7 +5144,7 @@ abstract class $ClinicalImpressionCopyWith<$Res> {
       Reference previous,
       List<Reference> problem,
       List<FhirUri> protocol,
-      @JsonKey(name: '_protocol') Element protocolElement,
+      @JsonKey(name: '_protocol') List<Element> protocolElement,
       String summary,
       @JsonKey(name: '_summary') Element summaryElement,
       List<ClinicalImpressionFinding> finding,
@@ -5180,7 +5167,6 @@ abstract class $ClinicalImpressionCopyWith<$Res> {
   $ElementCopyWith<$Res> get dateElement;
   $ReferenceCopyWith<$Res> get performer;
   $ReferenceCopyWith<$Res> get previous;
-  $ElementCopyWith<$Res> get protocolElement;
   $ElementCopyWith<$Res> get summaryElement;
 }
 
@@ -5294,7 +5280,7 @@ class _$ClinicalImpressionCopyWithImpl<$Res>
           protocol == freezed ? _value.protocol : protocol as List<FhirUri>,
       protocolElement: protocolElement == freezed
           ? _value.protocolElement
-          : protocolElement as Element,
+          : protocolElement as List<Element>,
       summary: summary == freezed ? _value.summary : summary as String,
       summaryElement: summaryElement == freezed
           ? _value.summaryElement
@@ -5456,16 +5442,6 @@ class _$ClinicalImpressionCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get protocolElement {
-    if (_value.protocolElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.protocolElement, (value) {
-      return _then(_value.copyWith(protocolElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get summaryElement {
     if (_value.summaryElement == null) {
       return null;
@@ -5511,7 +5487,7 @@ abstract class _$ClinicalImpressionCopyWith<$Res>
       Reference previous,
       List<Reference> problem,
       List<FhirUri> protocol,
-      @JsonKey(name: '_protocol') Element protocolElement,
+      @JsonKey(name: '_protocol') List<Element> protocolElement,
       String summary,
       @JsonKey(name: '_summary') Element summaryElement,
       List<ClinicalImpressionFinding> finding,
@@ -5548,8 +5524,6 @@ abstract class _$ClinicalImpressionCopyWith<$Res>
   $ReferenceCopyWith<$Res> get performer;
   @override
   $ReferenceCopyWith<$Res> get previous;
-  @override
-  $ElementCopyWith<$Res> get protocolElement;
   @override
   $ElementCopyWith<$Res> get summaryElement;
 }
@@ -5666,7 +5640,7 @@ class __$ClinicalImpressionCopyWithImpl<$Res>
           protocol == freezed ? _value.protocol : protocol as List<FhirUri>,
       protocolElement: protocolElement == freezed
           ? _value.protocolElement
-          : protocolElement as Element,
+          : protocolElement as List<Element>,
       summary: summary == freezed ? _value.summary : summary as String,
       summaryElement: summaryElement == freezed
           ? _value.summaryElement
@@ -5800,7 +5774,7 @@ class _$_ClinicalImpression extends _ClinicalImpression {
   final List<FhirUri> protocol;
   @override
   @JsonKey(name: '_protocol')
-  final Element protocolElement;
+  final List<Element> protocolElement;
   @override
   final String summary;
   @override
@@ -5987,7 +5961,7 @@ abstract class _ClinicalImpression extends ClinicalImpression {
       Reference previous,
       List<Reference> problem,
       List<FhirUri> protocol,
-      @JsonKey(name: '_protocol') Element protocolElement,
+      @JsonKey(name: '_protocol') List<Element> protocolElement,
       String summary,
       @JsonKey(name: '_summary') Element summaryElement,
       List<ClinicalImpressionFinding> finding,
@@ -6065,7 +6039,7 @@ abstract class _ClinicalImpression extends ClinicalImpression {
   List<FhirUri> get protocol;
   @override
   @JsonKey(name: '_protocol')
-  Element get protocolElement;
+  List<Element> get protocolElement;
   @override
   String get summary;
   @override
@@ -9670,7 +9644,7 @@ class _$FamilyMemberHistoryTearOff {
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
           FamilyMemberHistoryStatus status,
       @JsonKey(name: '_status')
@@ -9793,7 +9767,7 @@ mixin _$FamilyMemberHistory {
   List<Canonical> get instantiatesCanonical;
   List<FhirUri> get instantiatesUri;
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
+  List<Element> get instantiatesUriElement;
   @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
   FamilyMemberHistoryStatus get status;
   @JsonKey(name: '_status')
@@ -9867,7 +9841,7 @@ abstract class $FamilyMemberHistoryCopyWith<$Res> {
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
           FamilyMemberHistoryStatus status,
       @JsonKey(name: '_status')
@@ -9917,7 +9891,6 @@ abstract class $FamilyMemberHistoryCopyWith<$Res> {
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
-  $ElementCopyWith<$Res> get instantiatesUriElement;
   $ElementCopyWith<$Res> get statusElement;
   $CodeableConceptCopyWith<$Res> get dataAbsentReason;
   $ReferenceCopyWith<$Res> get patient;
@@ -10034,7 +10007,7 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res>
           : instantiatesUri as List<FhirUri>,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
+          : instantiatesUriElement as List<Element>,
       status: status == freezed
           ? _value.status
           : status as FamilyMemberHistoryStatus,
@@ -10149,16 +10122,6 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res>
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get instantiatesUriElement {
-    if (_value.instantiatesUriElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.instantiatesUriElement, (value) {
-      return _then(_value.copyWith(instantiatesUriElement: value));
     });
   }
 
@@ -10379,7 +10342,7 @@ abstract class _$FamilyMemberHistoryCopyWith<$Res>
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
           FamilyMemberHistoryStatus status,
       @JsonKey(name: '_status')
@@ -10433,8 +10396,6 @@ abstract class _$FamilyMemberHistoryCopyWith<$Res>
   $ElementCopyWith<$Res> get languageElement;
   @override
   $NarrativeCopyWith<$Res> get text;
-  @override
-  $ElementCopyWith<$Res> get instantiatesUriElement;
   @override
   $ElementCopyWith<$Res> get statusElement;
   @override
@@ -10572,7 +10533,7 @@ class __$FamilyMemberHistoryCopyWithImpl<$Res>
           : instantiatesUri as List<FhirUri>,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
+          : instantiatesUriElement as List<Element>,
       status: status == freezed
           ? _value.status
           : status as FamilyMemberHistoryStatus,
@@ -10744,7 +10705,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
   final List<FhirUri> instantiatesUri;
   @override
   @JsonKey(name: '_instantiatesUri')
-  final Element instantiatesUriElement;
+  final List<Element> instantiatesUriElement;
   @override
   @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
   final FamilyMemberHistoryStatus status;
@@ -11010,7 +10971,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
           FamilyMemberHistoryStatus status,
       @JsonKey(name: '_status')
@@ -11095,7 +11056,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
   List<FhirUri> get instantiatesUri;
   @override
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
+  List<Element> get instantiatesUriElement;
   @override
   @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
   FamilyMemberHistoryStatus get status;
@@ -12273,7 +12234,7 @@ class _$ProcedureTearOff {
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
-      @JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
+      @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
       List<Reference> basedOn,
       List<Reference> partOf,
       Code status,
@@ -12387,7 +12348,7 @@ mixin _$Procedure {
   List<Canonical> get instantiatesCanonical;
   List<FhirUri> get instantiatesUri;
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
+  List<Element> get instantiatesUriElement;
   List<Reference> get basedOn;
   List<Reference> get partOf;
   Code get status;
@@ -12451,7 +12412,7 @@ abstract class $ProcedureCopyWith<$Res> {
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
-      @JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
+      @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
       List<Reference> basedOn,
       List<Reference> partOf,
       Code status,
@@ -12492,7 +12453,6 @@ abstract class $ProcedureCopyWith<$Res> {
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
-  $ElementCopyWith<$Res> get instantiatesUriElement;
   $ElementCopyWith<$Res> get statusElement;
   $CodeableConceptCopyWith<$Res> get statusReason;
   $CodeableConceptCopyWith<$Res> get code;
@@ -12608,7 +12568,7 @@ class _$ProcedureCopyWithImpl<$Res> implements $ProcedureCopyWith<$Res> {
           : instantiatesUri as List<FhirUri>,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
+          : instantiatesUriElement as List<Element>,
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<Reference>,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>,
       status: status == freezed ? _value.status : status as Code,
@@ -12729,16 +12689,6 @@ class _$ProcedureCopyWithImpl<$Res> implements $ProcedureCopyWith<$Res> {
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get instantiatesUriElement {
-    if (_value.instantiatesUriElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.instantiatesUriElement, (value) {
-      return _then(_value.copyWith(instantiatesUriElement: value));
     });
   }
 
@@ -12933,7 +12883,7 @@ abstract class _$ProcedureCopyWith<$Res> implements $ProcedureCopyWith<$Res> {
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
-      @JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
+      @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
       List<Reference> basedOn,
       List<Reference> partOf,
       Code status,
@@ -12978,8 +12928,6 @@ abstract class _$ProcedureCopyWith<$Res> implements $ProcedureCopyWith<$Res> {
   $ElementCopyWith<$Res> get languageElement;
   @override
   $NarrativeCopyWith<$Res> get text;
-  @override
-  $ElementCopyWith<$Res> get instantiatesUriElement;
   @override
   $ElementCopyWith<$Res> get statusElement;
   @override
@@ -13113,7 +13061,7 @@ class __$ProcedureCopyWithImpl<$Res> extends _$ProcedureCopyWithImpl<$Res>
           : instantiatesUri as List<FhirUri>,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
+          : instantiatesUriElement as List<Element>,
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<Reference>,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>,
       status: status == freezed ? _value.status : status as Code,
@@ -13292,7 +13240,7 @@ class _$_Procedure extends _Procedure {
   final List<FhirUri> instantiatesUri;
   @override
   @JsonKey(name: '_instantiatesUri')
-  final Element instantiatesUriElement;
+  final List<Element> instantiatesUriElement;
   @override
   final List<Reference> basedOn;
   @override
@@ -13553,7 +13501,7 @@ abstract class _Procedure extends Procedure {
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
-      @JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
+      @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
       List<Reference> basedOn,
       List<Reference> partOf,
       Code status,
@@ -13627,7 +13575,7 @@ abstract class _Procedure extends Procedure {
   List<FhirUri> get instantiatesUri;
   @override
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
+  List<Element> get instantiatesUriElement;
   @override
   List<Reference> get basedOn;
   @override

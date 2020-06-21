@@ -1057,17 +1057,20 @@ _$_HumanName _$_$_HumanNameFromJson(Map<String, dynamic> json) {
         ? null
         : Element.fromJson(json['_family'] as Map<String, dynamic>),
     given: (json['given'] as List)?.map((e) => e as String)?.toList(),
-    givenElement: json['_given'] == null
-        ? null
-        : Element.fromJson(json['_given'] as Map<String, dynamic>),
+    givenElement: (json['_given'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     prefix: (json['prefix'] as List)?.map((e) => e as String)?.toList(),
-    prefixElement: json['_prefix'] == null
-        ? null
-        : Element.fromJson(json['_prefix'] as Map<String, dynamic>),
+    prefixElement: (json['_prefix'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     suffix: (json['suffix'] as List)?.map((e) => e as String)?.toList(),
-    suffixElement: json['_suffix'] == null
-        ? null
-        : Element.fromJson(json['_suffix'] as Map<String, dynamic>),
+    suffixElement: (json['_suffix'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
@@ -1093,11 +1096,14 @@ Map<String, dynamic> _$_$_HumanNameToJson(_$_HumanName instance) {
   writeNotNull('family', instance.family);
   writeNotNull('_family', instance.familyElement?.toJson());
   writeNotNull('given', instance.given);
-  writeNotNull('_given', instance.givenElement?.toJson());
+  writeNotNull(
+      '_given', instance.givenElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('prefix', instance.prefix);
-  writeNotNull('_prefix', instance.prefixElement?.toJson());
+  writeNotNull(
+      '_prefix', instance.prefixElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('suffix', instance.suffix);
-  writeNotNull('_suffix', instance.suffixElement?.toJson());
+  writeNotNull(
+      '_suffix', instance.suffixElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('period', instance.period?.toJson());
   return val;
 }
@@ -1136,9 +1142,10 @@ _$_Address _$_$_AddressFromJson(Map<String, dynamic> json) {
         ? null
         : Element.fromJson(json['_text'] as Map<String, dynamic>),
     line: (json['line'] as List)?.map((e) => e as String)?.toList(),
-    lineElement: json['_line'] == null
-        ? null
-        : Element.fromJson(json['_line'] as Map<String, dynamic>),
+    lineElement: (json['_line'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     city: json['city'] as String,
     cityElement: json['_city'] == null
         ? null
@@ -1184,7 +1191,8 @@ Map<String, dynamic> _$_$_AddressToJson(_$_Address instance) {
   writeNotNull('text', instance.text);
   writeNotNull('_text', instance.textElement?.toJson());
   writeNotNull('line', instance.line);
-  writeNotNull('_line', instance.lineElement?.toJson());
+  writeNotNull(
+      '_line', instance.lineElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('city', instance.city);
   writeNotNull('_city', instance.cityElement?.toJson());
   writeNotNull('district', instance.district);
@@ -1307,9 +1315,10 @@ _$_Timing _$_$_TimingFromJson(Map<String, dynamic> json) {
     event: (json['event'] as List)
         ?.map((e) => e == null ? null : FhirDateTime.fromJson(e as String))
         ?.toList(),
-    eventElement: json['_event'] == null
-        ? null
-        : Element.fromJson(json['_event'] as Map<String, dynamic>),
+    eventElement: (json['_event'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     repeat: json['repeat'] == null
         ? null
         : TimingRepeat.fromJson(json['repeat'] as Map<String, dynamic>),
@@ -1334,7 +1343,8 @@ Map<String, dynamic> _$_$_TimingToJson(_$_Timing instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('event', instance.event?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_event', instance.eventElement?.toJson());
+  writeNotNull(
+      '_event', instance.eventElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('repeat', instance.repeat?.toJson());
   writeNotNull('code', instance.code?.toJson());
   return val;
@@ -1419,21 +1429,24 @@ _$_TimingRepeat _$_$_TimingRepeatFromJson(Map<String, dynamic> json) {
     dayOfWeek: (json['dayOfWeek'] as List)
         ?.map((e) => e == null ? null : Code.fromJson(e as String))
         ?.toList(),
-    dayOfWeekElement: json['_dayOfWeek'] == null
-        ? null
-        : Element.fromJson(json['_dayOfWeek'] as Map<String, dynamic>),
+    dayOfWeekElement: (json['_dayOfWeek'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     timeOfDay: (json['timeOfDay'] as List)
         ?.map((e) => e == null ? null : Time.fromJson(e as String))
         ?.toList(),
-    timeOfDayElement: json['_timeOfDay'] == null
-        ? null
-        : Element.fromJson(json['_timeOfDay'] as Map<String, dynamic>),
+    timeOfDayElement: (json['_timeOfDay'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     when: (json['when'] as List)
         ?.map((e) => _$enumDecodeNullable(_$TimingRepeatWhenEnumMap, e))
         ?.toList(),
-    whenElement: json['_when'] == null
-        ? null
-        : Element.fromJson(json['_when'] as Map<String, dynamic>),
+    whenElement: (json['_when'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     offset:
         json['offset'] == null ? null : UnsignedInt.fromJson(json['offset']),
     offsetElement: json['_offset'] == null
@@ -1483,13 +1496,16 @@ Map<String, dynamic> _$_$_TimingRepeatToJson(_$_TimingRepeat instance) {
   writeNotNull('_periodUnit', instance.periodUnitElement?.toJson());
   writeNotNull(
       'dayOfWeek', instance.dayOfWeek?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_dayOfWeek', instance.dayOfWeekElement?.toJson());
+  writeNotNull('_dayOfWeek',
+      instance.dayOfWeekElement?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'timeOfDay', instance.timeOfDay?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_timeOfDay', instance.timeOfDayElement?.toJson());
+  writeNotNull('_timeOfDay',
+      instance.timeOfDayElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('when',
       instance.when?.map((e) => _$TimingRepeatWhenEnumMap[e])?.toList());
-  writeNotNull('_when', instance.whenElement?.toJson());
+  writeNotNull(
+      '_when', instance.whenElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('offset', instance.offset?.toJson());
   writeNotNull('_offset', instance.offsetElement?.toJson());
   return val;

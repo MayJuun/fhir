@@ -6854,10 +6854,10 @@ class _$OperationOutcomeIssueTearOff {
           Element diagnosticsElement,
       List<String> location,
       @JsonKey(name: '_location')
-          Element locationElement,
+          List<Element> locationElement,
       List<String> expression,
       @JsonKey(name: '_expression')
-          Element expressionElement}) {
+          List<Element> expressionElement}) {
     return _OperationOutcomeIssue(
       id: id,
       extension_: extension_,
@@ -6899,10 +6899,10 @@ mixin _$OperationOutcomeIssue {
   Element get diagnosticsElement;
   List<String> get location;
   @JsonKey(name: '_location')
-  Element get locationElement;
+  List<Element> get locationElement;
   List<String> get expression;
   @JsonKey(name: '_expression')
-  Element get expressionElement;
+  List<Element> get expressionElement;
 
   Map<String, dynamic> toJson();
   $OperationOutcomeIssueCopyWith<OperationOutcomeIssue> get copyWith;
@@ -6931,17 +6931,15 @@ abstract class $OperationOutcomeIssueCopyWith<$Res> {
           Element diagnosticsElement,
       List<String> location,
       @JsonKey(name: '_location')
-          Element locationElement,
+          List<Element> locationElement,
       List<String> expression,
       @JsonKey(name: '_expression')
-          Element expressionElement});
+          List<Element> expressionElement});
 
   $ElementCopyWith<$Res> get severityElement;
   $ElementCopyWith<$Res> get codeElement;
   $CodeableConceptCopyWith<$Res> get details;
   $ElementCopyWith<$Res> get diagnosticsElement;
-  $ElementCopyWith<$Res> get locationElement;
-  $ElementCopyWith<$Res> get expressionElement;
 }
 
 class _$OperationOutcomeIssueCopyWithImpl<$Res>
@@ -6996,13 +6994,13 @@ class _$OperationOutcomeIssueCopyWithImpl<$Res>
           location == freezed ? _value.location : location as List<String>,
       locationElement: locationElement == freezed
           ? _value.locationElement
-          : locationElement as Element,
+          : locationElement as List<Element>,
       expression: expression == freezed
           ? _value.expression
           : expression as List<String>,
       expressionElement: expressionElement == freezed
           ? _value.expressionElement
-          : expressionElement as Element,
+          : expressionElement as List<Element>,
     ));
   }
 
@@ -7045,26 +7043,6 @@ class _$OperationOutcomeIssueCopyWithImpl<$Res>
       return _then(_value.copyWith(diagnosticsElement: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get locationElement {
-    if (_value.locationElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.locationElement, (value) {
-      return _then(_value.copyWith(locationElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get expressionElement {
-    if (_value.expressionElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.expressionElement, (value) {
-      return _then(_value.copyWith(expressionElement: value));
-    });
-  }
 }
 
 abstract class _$OperationOutcomeIssueCopyWith<$Res>
@@ -7092,10 +7070,10 @@ abstract class _$OperationOutcomeIssueCopyWith<$Res>
           Element diagnosticsElement,
       List<String> location,
       @JsonKey(name: '_location')
-          Element locationElement,
+          List<Element> locationElement,
       List<String> expression,
       @JsonKey(name: '_expression')
-          Element expressionElement});
+          List<Element> expressionElement});
 
   @override
   $ElementCopyWith<$Res> get severityElement;
@@ -7105,10 +7083,6 @@ abstract class _$OperationOutcomeIssueCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get details;
   @override
   $ElementCopyWith<$Res> get diagnosticsElement;
-  @override
-  $ElementCopyWith<$Res> get locationElement;
-  @override
-  $ElementCopyWith<$Res> get expressionElement;
 }
 
 class __$OperationOutcomeIssueCopyWithImpl<$Res>
@@ -7165,13 +7139,13 @@ class __$OperationOutcomeIssueCopyWithImpl<$Res>
           location == freezed ? _value.location : location as List<String>,
       locationElement: locationElement == freezed
           ? _value.locationElement
-          : locationElement as Element,
+          : locationElement as List<Element>,
       expression: expression == freezed
           ? _value.expression
           : expression as List<String>,
       expressionElement: expressionElement == freezed
           ? _value.expressionElement
-          : expressionElement as Element,
+          : expressionElement as List<Element>,
     ));
   }
 }
@@ -7236,12 +7210,12 @@ class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
   final List<String> location;
   @override
   @JsonKey(name: '_location')
-  final Element locationElement;
+  final List<Element> locationElement;
   @override
   final List<String> expression;
   @override
   @JsonKey(name: '_expression')
-  final Element expressionElement;
+  final List<Element> expressionElement;
 
   @override
   String toString() {
@@ -7344,10 +7318,10 @@ abstract class _OperationOutcomeIssue extends OperationOutcomeIssue {
           Element diagnosticsElement,
       List<String> location,
       @JsonKey(name: '_location')
-          Element locationElement,
+          List<Element> locationElement,
       List<String> expression,
       @JsonKey(name: '_expression')
-          Element expressionElement}) = _$_OperationOutcomeIssue;
+          List<Element> expressionElement}) = _$_OperationOutcomeIssue;
 
   factory _OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =
       _$_OperationOutcomeIssue.fromJson;
@@ -7382,12 +7356,12 @@ abstract class _OperationOutcomeIssue extends OperationOutcomeIssue {
   List<String> get location;
   @override
   @JsonKey(name: '_location')
-  Element get locationElement;
+  List<Element> get locationElement;
   @override
   List<String> get expression;
   @override
   @JsonKey(name: '_expression')
-  Element get expressionElement;
+  List<Element> get expressionElement;
   @override
   _$OperationOutcomeIssueCopyWith<_OperationOutcomeIssue> get copyWith;
 }
@@ -10953,7 +10927,7 @@ class _$SubscriptionChannelTearOff {
           Element payloadElement,
       List<String> header,
       @JsonKey(name: '_header')
-          Element headerElement}) {
+          List<Element> headerElement}) {
     return _SubscriptionChannel(
       id: id,
       extension_: extension_,
@@ -10990,7 +10964,7 @@ mixin _$SubscriptionChannel {
   Element get payloadElement;
   List<String> get header;
   @JsonKey(name: '_header')
-  Element get headerElement;
+  List<Element> get headerElement;
 
   Map<String, dynamic> toJson();
   $SubscriptionChannelCopyWith<SubscriptionChannel> get copyWith;
@@ -11017,12 +10991,11 @@ abstract class $SubscriptionChannelCopyWith<$Res> {
           Element payloadElement,
       List<String> header,
       @JsonKey(name: '_header')
-          Element headerElement});
+          List<Element> headerElement});
 
   $ElementCopyWith<$Res> get typeElement;
   $ElementCopyWith<$Res> get endpointElement;
   $ElementCopyWith<$Res> get payloadElement;
-  $ElementCopyWith<$Res> get headerElement;
 }
 
 class _$SubscriptionChannelCopyWithImpl<$Res>
@@ -11069,7 +11042,7 @@ class _$SubscriptionChannelCopyWithImpl<$Res>
       header: header == freezed ? _value.header : header as List<String>,
       headerElement: headerElement == freezed
           ? _value.headerElement
-          : headerElement as Element,
+          : headerElement as List<Element>,
     ));
   }
 
@@ -11102,16 +11075,6 @@ class _$SubscriptionChannelCopyWithImpl<$Res>
       return _then(_value.copyWith(payloadElement: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get headerElement {
-    if (_value.headerElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.headerElement, (value) {
-      return _then(_value.copyWith(headerElement: value));
-    });
-  }
 }
 
 abstract class _$SubscriptionChannelCopyWith<$Res>
@@ -11137,7 +11100,7 @@ abstract class _$SubscriptionChannelCopyWith<$Res>
           Element payloadElement,
       List<String> header,
       @JsonKey(name: '_header')
-          Element headerElement});
+          List<Element> headerElement});
 
   @override
   $ElementCopyWith<$Res> get typeElement;
@@ -11145,8 +11108,6 @@ abstract class _$SubscriptionChannelCopyWith<$Res>
   $ElementCopyWith<$Res> get endpointElement;
   @override
   $ElementCopyWith<$Res> get payloadElement;
-  @override
-  $ElementCopyWith<$Res> get headerElement;
 }
 
 class __$SubscriptionChannelCopyWithImpl<$Res>
@@ -11195,7 +11156,7 @@ class __$SubscriptionChannelCopyWithImpl<$Res>
       header: header == freezed ? _value.header : header as List<String>,
       headerElement: headerElement == freezed
           ? _value.headerElement
-          : headerElement as Element,
+          : headerElement as List<Element>,
     ));
   }
 }
@@ -11246,7 +11207,7 @@ class _$_SubscriptionChannel extends _SubscriptionChannel {
   final List<String> header;
   @override
   @JsonKey(name: '_header')
-  final Element headerElement;
+  final List<Element> headerElement;
 
   @override
   String toString() {
@@ -11334,7 +11295,7 @@ abstract class _SubscriptionChannel extends SubscriptionChannel {
           Element payloadElement,
       List<String> header,
       @JsonKey(name: '_header')
-          Element headerElement}) = _$_SubscriptionChannel;
+          List<Element> headerElement}) = _$_SubscriptionChannel;
 
   factory _SubscriptionChannel.fromJson(Map<String, dynamic> json) =
       _$_SubscriptionChannel.fromJson;
@@ -11366,7 +11327,7 @@ abstract class _SubscriptionChannel extends SubscriptionChannel {
   List<String> get header;
   @override
   @JsonKey(name: '_header')
-  Element get headerElement;
+  List<Element> get headerElement;
   @override
   _$SubscriptionChannelCopyWith<_SubscriptionChannel> get copyWith;
 }

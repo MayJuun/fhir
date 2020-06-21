@@ -6854,10 +6854,10 @@ class _$OperationOutcomeIssueTearOff {
           Element diagnosticsElement,
       List<String> location,
       @JsonKey(name: '_location')
-          Element locationElement,
+          List<Element> locationElement,
       List<String> expression,
       @JsonKey(name: '_expression')
-          Element expressionElement}) {
+          List<Element> expressionElement}) {
     return _OperationOutcomeIssue(
       id: id,
       extension_: extension_,
@@ -6899,10 +6899,10 @@ mixin _$OperationOutcomeIssue {
   Element get diagnosticsElement;
   List<String> get location;
   @JsonKey(name: '_location')
-  Element get locationElement;
+  List<Element> get locationElement;
   List<String> get expression;
   @JsonKey(name: '_expression')
-  Element get expressionElement;
+  List<Element> get expressionElement;
 
   Map<String, dynamic> toJson();
   $OperationOutcomeIssueCopyWith<OperationOutcomeIssue> get copyWith;
@@ -6931,17 +6931,15 @@ abstract class $OperationOutcomeIssueCopyWith<$Res> {
           Element diagnosticsElement,
       List<String> location,
       @JsonKey(name: '_location')
-          Element locationElement,
+          List<Element> locationElement,
       List<String> expression,
       @JsonKey(name: '_expression')
-          Element expressionElement});
+          List<Element> expressionElement});
 
   $ElementCopyWith<$Res> get severityElement;
   $ElementCopyWith<$Res> get codeElement;
   $CodeableConceptCopyWith<$Res> get details;
   $ElementCopyWith<$Res> get diagnosticsElement;
-  $ElementCopyWith<$Res> get locationElement;
-  $ElementCopyWith<$Res> get expressionElement;
 }
 
 class _$OperationOutcomeIssueCopyWithImpl<$Res>
@@ -6996,13 +6994,13 @@ class _$OperationOutcomeIssueCopyWithImpl<$Res>
           location == freezed ? _value.location : location as List<String>,
       locationElement: locationElement == freezed
           ? _value.locationElement
-          : locationElement as Element,
+          : locationElement as List<Element>,
       expression: expression == freezed
           ? _value.expression
           : expression as List<String>,
       expressionElement: expressionElement == freezed
           ? _value.expressionElement
-          : expressionElement as Element,
+          : expressionElement as List<Element>,
     ));
   }
 
@@ -7045,26 +7043,6 @@ class _$OperationOutcomeIssueCopyWithImpl<$Res>
       return _then(_value.copyWith(diagnosticsElement: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get locationElement {
-    if (_value.locationElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.locationElement, (value) {
-      return _then(_value.copyWith(locationElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get expressionElement {
-    if (_value.expressionElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.expressionElement, (value) {
-      return _then(_value.copyWith(expressionElement: value));
-    });
-  }
 }
 
 abstract class _$OperationOutcomeIssueCopyWith<$Res>
@@ -7092,10 +7070,10 @@ abstract class _$OperationOutcomeIssueCopyWith<$Res>
           Element diagnosticsElement,
       List<String> location,
       @JsonKey(name: '_location')
-          Element locationElement,
+          List<Element> locationElement,
       List<String> expression,
       @JsonKey(name: '_expression')
-          Element expressionElement});
+          List<Element> expressionElement});
 
   @override
   $ElementCopyWith<$Res> get severityElement;
@@ -7105,10 +7083,6 @@ abstract class _$OperationOutcomeIssueCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get details;
   @override
   $ElementCopyWith<$Res> get diagnosticsElement;
-  @override
-  $ElementCopyWith<$Res> get locationElement;
-  @override
-  $ElementCopyWith<$Res> get expressionElement;
 }
 
 class __$OperationOutcomeIssueCopyWithImpl<$Res>
@@ -7165,13 +7139,13 @@ class __$OperationOutcomeIssueCopyWithImpl<$Res>
           location == freezed ? _value.location : location as List<String>,
       locationElement: locationElement == freezed
           ? _value.locationElement
-          : locationElement as Element,
+          : locationElement as List<Element>,
       expression: expression == freezed
           ? _value.expression
           : expression as List<String>,
       expressionElement: expressionElement == freezed
           ? _value.expressionElement
-          : expressionElement as Element,
+          : expressionElement as List<Element>,
     ));
   }
 }
@@ -7236,12 +7210,12 @@ class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
   final List<String> location;
   @override
   @JsonKey(name: '_location')
-  final Element locationElement;
+  final List<Element> locationElement;
   @override
   final List<String> expression;
   @override
   @JsonKey(name: '_expression')
-  final Element expressionElement;
+  final List<Element> expressionElement;
 
   @override
   String toString() {
@@ -7344,10 +7318,10 @@ abstract class _OperationOutcomeIssue extends OperationOutcomeIssue {
           Element diagnosticsElement,
       List<String> location,
       @JsonKey(name: '_location')
-          Element locationElement,
+          List<Element> locationElement,
       List<String> expression,
       @JsonKey(name: '_expression')
-          Element expressionElement}) = _$_OperationOutcomeIssue;
+          List<Element> expressionElement}) = _$_OperationOutcomeIssue;
 
   factory _OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =
       _$_OperationOutcomeIssue.fromJson;
@@ -7382,12 +7356,12 @@ abstract class _OperationOutcomeIssue extends OperationOutcomeIssue {
   List<String> get location;
   @override
   @JsonKey(name: '_location')
-  Element get locationElement;
+  List<Element> get locationElement;
   @override
   List<String> get expression;
   @override
   @JsonKey(name: '_expression')
-  Element get expressionElement;
+  List<Element> get expressionElement;
   @override
   _$OperationOutcomeIssueCopyWith<_OperationOutcomeIssue> get copyWith;
 }
@@ -7760,7 +7734,7 @@ class _$ParametersParameterTearOff {
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
       Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Integer valueInteger64,
+      Integer64 valueInteger64,
       @JsonKey(name: '_valueInteger64') Element valueInteger64Element,
       Markdown valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
@@ -7937,7 +7911,7 @@ mixin _$ParametersParameter {
   Integer get valueInteger;
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
-  Integer get valueInteger64;
+  Integer64 get valueInteger64;
   @JsonKey(name: '_valueInteger64')
   Element get valueInteger64Element;
   Markdown get valueMarkdown;
@@ -8035,7 +8009,7 @@ abstract class $ParametersParameterCopyWith<$Res> {
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
       Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Integer valueInteger64,
+      Integer64 valueInteger64,
       @JsonKey(name: '_valueInteger64') Element valueInteger64Element,
       Markdown valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
@@ -8299,7 +8273,7 @@ class _$ParametersParameterCopyWithImpl<$Res>
           : valueIntegerElement as Element,
       valueInteger64: valueInteger64 == freezed
           ? _value.valueInteger64
-          : valueInteger64 as Integer,
+          : valueInteger64 as Integer64,
       valueInteger64Element: valueInteger64Element == freezed
           ? _value.valueInteger64Element
           : valueInteger64Element as Element,
@@ -8987,7 +8961,7 @@ abstract class _$ParametersParameterCopyWith<$Res>
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
       Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Integer valueInteger64,
+      Integer64 valueInteger64,
       @JsonKey(name: '_valueInteger64') Element valueInteger64Element,
       Markdown valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
@@ -9305,7 +9279,7 @@ class __$ParametersParameterCopyWithImpl<$Res>
           : valueIntegerElement as Element,
       valueInteger64: valueInteger64 == freezed
           ? _value.valueInteger64
-          : valueInteger64 as Integer,
+          : valueInteger64 as Integer64,
       valueInteger64Element: valueInteger64Element == freezed
           ? _value.valueInteger64Element
           : valueInteger64Element as Element,
@@ -9588,7 +9562,7 @@ class _$_ParametersParameter extends _ParametersParameter {
   @JsonKey(name: '_valueInteger')
   final Element valueIntegerElement;
   @override
-  final Integer valueInteger64;
+  final Integer64 valueInteger64;
   @override
   @JsonKey(name: '_valueInteger64')
   final Element valueInteger64Element;
@@ -9948,7 +9922,7 @@ abstract class _ParametersParameter extends ParametersParameter {
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
       Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Integer valueInteger64,
+      Integer64 valueInteger64,
       @JsonKey(name: '_valueInteger64') Element valueInteger64Element,
       Markdown valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
@@ -10068,7 +10042,7 @@ abstract class _ParametersParameter extends ParametersParameter {
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
   @override
-  Integer get valueInteger64;
+  Integer64 get valueInteger64;
   @override
   @JsonKey(name: '_valueInteger64')
   Element get valueInteger64Element;
@@ -11488,7 +11462,7 @@ class _$SubscriptionChannelTearOff {
       FhirUrl endpoint,
       @JsonKey(name: '_endpoint') Element endpointElement,
       List<String> header,
-      @JsonKey(name: '_header') Element headerElement,
+      @JsonKey(name: '_header') List<Element> headerElement,
       UnsignedInt heartbeatPeriod,
       @JsonKey(name: '_heartbeatPeriod') Element heartbeatPeriodElement,
       SubscriptionPayload payload}) {
@@ -11522,7 +11496,7 @@ mixin _$SubscriptionChannel {
   Element get endpointElement;
   List<String> get header;
   @JsonKey(name: '_header')
-  Element get headerElement;
+  List<Element> get headerElement;
   UnsignedInt get heartbeatPeriod;
   @JsonKey(name: '_heartbeatPeriod')
   Element get heartbeatPeriodElement;
@@ -11544,14 +11518,13 @@ abstract class $SubscriptionChannelCopyWith<$Res> {
       FhirUrl endpoint,
       @JsonKey(name: '_endpoint') Element endpointElement,
       List<String> header,
-      @JsonKey(name: '_header') Element headerElement,
+      @JsonKey(name: '_header') List<Element> headerElement,
       UnsignedInt heartbeatPeriod,
       @JsonKey(name: '_heartbeatPeriod') Element heartbeatPeriodElement,
       SubscriptionPayload payload});
 
   $CodeableConceptCopyWith<$Res> get type;
   $ElementCopyWith<$Res> get endpointElement;
-  $ElementCopyWith<$Res> get headerElement;
   $ElementCopyWith<$Res> get heartbeatPeriodElement;
   $SubscriptionPayloadCopyWith<$Res> get payload;
 }
@@ -11594,7 +11567,7 @@ class _$SubscriptionChannelCopyWithImpl<$Res>
       header: header == freezed ? _value.header : header as List<String>,
       headerElement: headerElement == freezed
           ? _value.headerElement
-          : headerElement as Element,
+          : headerElement as List<Element>,
       heartbeatPeriod: heartbeatPeriod == freezed
           ? _value.heartbeatPeriod
           : heartbeatPeriod as UnsignedInt,
@@ -11623,16 +11596,6 @@ class _$SubscriptionChannelCopyWithImpl<$Res>
     }
     return $ElementCopyWith<$Res>(_value.endpointElement, (value) {
       return _then(_value.copyWith(endpointElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get headerElement {
-    if (_value.headerElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.headerElement, (value) {
-      return _then(_value.copyWith(headerElement: value));
     });
   }
 
@@ -11671,7 +11634,7 @@ abstract class _$SubscriptionChannelCopyWith<$Res>
       FhirUrl endpoint,
       @JsonKey(name: '_endpoint') Element endpointElement,
       List<String> header,
-      @JsonKey(name: '_header') Element headerElement,
+      @JsonKey(name: '_header') List<Element> headerElement,
       UnsignedInt heartbeatPeriod,
       @JsonKey(name: '_heartbeatPeriod') Element heartbeatPeriodElement,
       SubscriptionPayload payload});
@@ -11680,8 +11643,6 @@ abstract class _$SubscriptionChannelCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get type;
   @override
   $ElementCopyWith<$Res> get endpointElement;
-  @override
-  $ElementCopyWith<$Res> get headerElement;
   @override
   $ElementCopyWith<$Res> get heartbeatPeriodElement;
   @override
@@ -11728,7 +11689,7 @@ class __$SubscriptionChannelCopyWithImpl<$Res>
       header: header == freezed ? _value.header : header as List<String>,
       headerElement: headerElement == freezed
           ? _value.headerElement
-          : headerElement as Element,
+          : headerElement as List<Element>,
       heartbeatPeriod: heartbeatPeriod == freezed
           ? _value.heartbeatPeriod
           : heartbeatPeriod as UnsignedInt,
@@ -11779,7 +11740,7 @@ class _$_SubscriptionChannel extends _SubscriptionChannel {
   final List<String> header;
   @override
   @JsonKey(name: '_header')
-  final Element headerElement;
+  final List<Element> headerElement;
   @override
   final UnsignedInt heartbeatPeriod;
   @override
@@ -11864,7 +11825,7 @@ abstract class _SubscriptionChannel extends SubscriptionChannel {
       FhirUrl endpoint,
       @JsonKey(name: '_endpoint') Element endpointElement,
       List<String> header,
-      @JsonKey(name: '_header') Element headerElement,
+      @JsonKey(name: '_header') List<Element> headerElement,
       UnsignedInt heartbeatPeriod,
       @JsonKey(name: '_heartbeatPeriod') Element heartbeatPeriodElement,
       SubscriptionPayload payload}) = _$_SubscriptionChannel;
@@ -11890,7 +11851,7 @@ abstract class _SubscriptionChannel extends SubscriptionChannel {
   List<String> get header;
   @override
   @JsonKey(name: '_header')
-  Element get headerElement;
+  List<Element> get headerElement;
   @override
   UnsignedInt get heartbeatPeriod;
   @override
@@ -12262,7 +12223,7 @@ class _$TopicTearOff {
       @JsonKey(name: '_title') Element titleElement,
       List<Canonical> derivedFromCanonical,
       List<FhirUri> derivedFromUri,
-      @JsonKey(name: '_derivedFromUri') Element derivedFromUriElement,
+      @JsonKey(name: '_derivedFromUri') List<Element> derivedFromUriElement,
       @JsonKey(unknownEnumValue: TopicStatus.unknown) TopicStatus status,
       @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
@@ -12367,7 +12328,7 @@ mixin _$Topic {
   List<Canonical> get derivedFromCanonical;
   List<FhirUri> get derivedFromUri;
   @JsonKey(name: '_derivedFromUri')
-  Element get derivedFromUriElement;
+  List<Element> get derivedFromUriElement;
   @JsonKey(unknownEnumValue: TopicStatus.unknown)
   TopicStatus get status;
   @JsonKey(name: '_status')
@@ -12429,7 +12390,7 @@ abstract class $TopicCopyWith<$Res> {
       @JsonKey(name: '_title') Element titleElement,
       List<Canonical> derivedFromCanonical,
       List<FhirUri> derivedFromUri,
-      @JsonKey(name: '_derivedFromUri') Element derivedFromUriElement,
+      @JsonKey(name: '_derivedFromUri') List<Element> derivedFromUriElement,
       @JsonKey(unknownEnumValue: TopicStatus.unknown) TopicStatus status,
       @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
@@ -12461,7 +12422,6 @@ abstract class $TopicCopyWith<$Res> {
   $ElementCopyWith<$Res> get urlElement;
   $ElementCopyWith<$Res> get versionElement;
   $ElementCopyWith<$Res> get titleElement;
-  $ElementCopyWith<$Res> get derivedFromUriElement;
   $ElementCopyWith<$Res> get statusElement;
   $ElementCopyWith<$Res> get experimentalElement;
   $ElementCopyWith<$Res> get dateElement;
@@ -12576,7 +12536,7 @@ class _$TopicCopyWithImpl<$Res> implements $TopicCopyWith<$Res> {
           : derivedFromUri as List<FhirUri>,
       derivedFromUriElement: derivedFromUriElement == freezed
           ? _value.derivedFromUriElement
-          : derivedFromUriElement as Element,
+          : derivedFromUriElement as List<Element>,
       status: status == freezed ? _value.status : status as TopicStatus,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -12704,16 +12664,6 @@ class _$TopicCopyWithImpl<$Res> implements $TopicCopyWith<$Res> {
     }
     return $ElementCopyWith<$Res>(_value.titleElement, (value) {
       return _then(_value.copyWith(titleElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get derivedFromUriElement {
-    if (_value.derivedFromUriElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.derivedFromUriElement, (value) {
-      return _then(_value.copyWith(derivedFromUriElement: value));
     });
   }
 
@@ -12853,7 +12803,7 @@ abstract class _$TopicCopyWith<$Res> implements $TopicCopyWith<$Res> {
       @JsonKey(name: '_title') Element titleElement,
       List<Canonical> derivedFromCanonical,
       List<FhirUri> derivedFromUri,
-      @JsonKey(name: '_derivedFromUri') Element derivedFromUriElement,
+      @JsonKey(name: '_derivedFromUri') List<Element> derivedFromUriElement,
       @JsonKey(unknownEnumValue: TopicStatus.unknown) TopicStatus status,
       @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
@@ -12892,8 +12842,6 @@ abstract class _$TopicCopyWith<$Res> implements $TopicCopyWith<$Res> {
   $ElementCopyWith<$Res> get versionElement;
   @override
   $ElementCopyWith<$Res> get titleElement;
-  @override
-  $ElementCopyWith<$Res> get derivedFromUriElement;
   @override
   $ElementCopyWith<$Res> get statusElement;
   @override
@@ -13020,7 +12968,7 @@ class __$TopicCopyWithImpl<$Res> extends _$TopicCopyWithImpl<$Res>
           : derivedFromUri as List<FhirUri>,
       derivedFromUriElement: derivedFromUriElement == freezed
           ? _value.derivedFromUriElement
-          : derivedFromUriElement as Element,
+          : derivedFromUriElement as List<Element>,
       status: status == freezed ? _value.status : status as TopicStatus,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -13184,7 +13132,7 @@ class _$_Topic extends _Topic {
   final List<FhirUri> derivedFromUri;
   @override
   @JsonKey(name: '_derivedFromUri')
-  final Element derivedFromUriElement;
+  final List<Element> derivedFromUriElement;
   @override
   @JsonKey(unknownEnumValue: TopicStatus.unknown)
   final TopicStatus status;
@@ -13419,7 +13367,7 @@ abstract class _Topic extends Topic {
       @JsonKey(name: '_title') Element titleElement,
       List<Canonical> derivedFromCanonical,
       List<FhirUri> derivedFromUri,
-      @JsonKey(name: '_derivedFromUri') Element derivedFromUriElement,
+      @JsonKey(name: '_derivedFromUri') List<Element> derivedFromUriElement,
       @JsonKey(unknownEnumValue: TopicStatus.unknown) TopicStatus status,
       @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
@@ -13495,7 +13443,7 @@ abstract class _Topic extends Topic {
   List<FhirUri> get derivedFromUri;
   @override
   @JsonKey(name: '_derivedFromUri')
-  Element get derivedFromUriElement;
+  List<Element> get derivedFromUriElement;
   @override
   @JsonKey(unknownEnumValue: TopicStatus.unknown)
   TopicStatus get status;
@@ -13569,9 +13517,9 @@ class _$TopicResourceTriggerTearOff {
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
       List<Code> resourceType,
-      @JsonKey(name: '_resourceType') Element resourceTypeElement,
+      @JsonKey(name: '_resourceType') List<Element> resourceTypeElement,
       List<Code> methodCriteria,
-      @JsonKey(name: '_methodCriteria') Element methodCriteriaElement,
+      @JsonKey(name: '_methodCriteria') List<Element> methodCriteriaElement,
       TopicQueryCriteria queryCriteria,
       String fhirPathCriteria,
       @JsonKey(name: '_fhirPathCriteria') Element fhirPathCriteriaElement}) {
@@ -13605,10 +13553,10 @@ mixin _$TopicResourceTrigger {
   Element get descriptionElement;
   List<Code> get resourceType;
   @JsonKey(name: '_resourceType')
-  Element get resourceTypeElement;
+  List<Element> get resourceTypeElement;
   List<Code> get methodCriteria;
   @JsonKey(name: '_methodCriteria')
-  Element get methodCriteriaElement;
+  List<Element> get methodCriteriaElement;
   TopicQueryCriteria get queryCriteria;
   String get fhirPathCriteria;
   @JsonKey(name: '_fhirPathCriteria')
@@ -13629,16 +13577,14 @@ abstract class $TopicResourceTriggerCopyWith<$Res> {
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
       List<Code> resourceType,
-      @JsonKey(name: '_resourceType') Element resourceTypeElement,
+      @JsonKey(name: '_resourceType') List<Element> resourceTypeElement,
       List<Code> methodCriteria,
-      @JsonKey(name: '_methodCriteria') Element methodCriteriaElement,
+      @JsonKey(name: '_methodCriteria') List<Element> methodCriteriaElement,
       TopicQueryCriteria queryCriteria,
       String fhirPathCriteria,
       @JsonKey(name: '_fhirPathCriteria') Element fhirPathCriteriaElement});
 
   $ElementCopyWith<$Res> get descriptionElement;
-  $ElementCopyWith<$Res> get resourceTypeElement;
-  $ElementCopyWith<$Res> get methodCriteriaElement;
   $TopicQueryCriteriaCopyWith<$Res> get queryCriteria;
   $ElementCopyWith<$Res> get fhirPathCriteriaElement;
 }
@@ -13684,13 +13630,13 @@ class _$TopicResourceTriggerCopyWithImpl<$Res>
           : resourceType as List<Code>,
       resourceTypeElement: resourceTypeElement == freezed
           ? _value.resourceTypeElement
-          : resourceTypeElement as Element,
+          : resourceTypeElement as List<Element>,
       methodCriteria: methodCriteria == freezed
           ? _value.methodCriteria
           : methodCriteria as List<Code>,
       methodCriteriaElement: methodCriteriaElement == freezed
           ? _value.methodCriteriaElement
-          : methodCriteriaElement as Element,
+          : methodCriteriaElement as List<Element>,
       queryCriteria: queryCriteria == freezed
           ? _value.queryCriteria
           : queryCriteria as TopicQueryCriteria,
@@ -13710,26 +13656,6 @@ class _$TopicResourceTriggerCopyWithImpl<$Res>
     }
     return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
       return _then(_value.copyWith(descriptionElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get resourceTypeElement {
-    if (_value.resourceTypeElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.resourceTypeElement, (value) {
-      return _then(_value.copyWith(resourceTypeElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get methodCriteriaElement {
-    if (_value.methodCriteriaElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.methodCriteriaElement, (value) {
-      return _then(_value.copyWith(methodCriteriaElement: value));
     });
   }
 
@@ -13767,19 +13693,15 @@ abstract class _$TopicResourceTriggerCopyWith<$Res>
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
       List<Code> resourceType,
-      @JsonKey(name: '_resourceType') Element resourceTypeElement,
+      @JsonKey(name: '_resourceType') List<Element> resourceTypeElement,
       List<Code> methodCriteria,
-      @JsonKey(name: '_methodCriteria') Element methodCriteriaElement,
+      @JsonKey(name: '_methodCriteria') List<Element> methodCriteriaElement,
       TopicQueryCriteria queryCriteria,
       String fhirPathCriteria,
       @JsonKey(name: '_fhirPathCriteria') Element fhirPathCriteriaElement});
 
   @override
   $ElementCopyWith<$Res> get descriptionElement;
-  @override
-  $ElementCopyWith<$Res> get resourceTypeElement;
-  @override
-  $ElementCopyWith<$Res> get methodCriteriaElement;
   @override
   $TopicQueryCriteriaCopyWith<$Res> get queryCriteria;
   @override
@@ -13829,13 +13751,13 @@ class __$TopicResourceTriggerCopyWithImpl<$Res>
           : resourceType as List<Code>,
       resourceTypeElement: resourceTypeElement == freezed
           ? _value.resourceTypeElement
-          : resourceTypeElement as Element,
+          : resourceTypeElement as List<Element>,
       methodCriteria: methodCriteria == freezed
           ? _value.methodCriteria
           : methodCriteria as List<Code>,
       methodCriteriaElement: methodCriteriaElement == freezed
           ? _value.methodCriteriaElement
-          : methodCriteriaElement as Element,
+          : methodCriteriaElement as List<Element>,
       queryCriteria: queryCriteria == freezed
           ? _value.queryCriteria
           : queryCriteria as TopicQueryCriteria,
@@ -13885,12 +13807,12 @@ class _$_TopicResourceTrigger extends _TopicResourceTrigger {
   final List<Code> resourceType;
   @override
   @JsonKey(name: '_resourceType')
-  final Element resourceTypeElement;
+  final List<Element> resourceTypeElement;
   @override
   final List<Code> methodCriteria;
   @override
   @JsonKey(name: '_methodCriteria')
-  final Element methodCriteriaElement;
+  final List<Element> methodCriteriaElement;
   @override
   final TopicQueryCriteria queryCriteria;
   @override
@@ -13985,10 +13907,10 @@ abstract class _TopicResourceTrigger extends TopicResourceTrigger {
           Element descriptionElement,
       List<Code> resourceType,
       @JsonKey(name: '_resourceType')
-          Element resourceTypeElement,
+          List<Element> resourceTypeElement,
       List<Code> methodCriteria,
       @JsonKey(name: '_methodCriteria')
-          Element methodCriteriaElement,
+          List<Element> methodCriteriaElement,
       TopicQueryCriteria queryCriteria,
       String fhirPathCriteria,
       @JsonKey(name: '_fhirPathCriteria')
@@ -14013,12 +13935,12 @@ abstract class _TopicResourceTrigger extends TopicResourceTrigger {
   List<Code> get resourceType;
   @override
   @JsonKey(name: '_resourceType')
-  Element get resourceTypeElement;
+  List<Element> get resourceTypeElement;
   @override
   List<Code> get methodCriteria;
   @override
   @JsonKey(name: '_methodCriteria')
-  Element get methodCriteriaElement;
+  List<Element> get methodCriteriaElement;
   @override
   TopicQueryCriteria get queryCriteria;
   @override
@@ -14407,7 +14329,7 @@ class _$TopicCanFilterByTearOff {
       String name,
       @JsonKey(name: '_name') Element nameElement,
       List<TopicCanFilterByMatchType> matchType,
-      @JsonKey(name: '_matchType') Element matchTypeElement,
+      @JsonKey(name: '_matchType') List<Element> matchTypeElement,
       Markdown documentation,
       @JsonKey(name: '_documentation') Element documentationElement}) {
     return _TopicCanFilterBy(
@@ -14437,7 +14359,7 @@ mixin _$TopicCanFilterBy {
   Element get nameElement;
   List<TopicCanFilterByMatchType> get matchType;
   @JsonKey(name: '_matchType')
-  Element get matchTypeElement;
+  List<Element> get matchTypeElement;
   Markdown get documentation;
   @JsonKey(name: '_documentation')
   Element get documentationElement;
@@ -14457,12 +14379,11 @@ abstract class $TopicCanFilterByCopyWith<$Res> {
       String name,
       @JsonKey(name: '_name') Element nameElement,
       List<TopicCanFilterByMatchType> matchType,
-      @JsonKey(name: '_matchType') Element matchTypeElement,
+      @JsonKey(name: '_matchType') List<Element> matchTypeElement,
       Markdown documentation,
       @JsonKey(name: '_documentation') Element documentationElement});
 
   $ElementCopyWith<$Res> get nameElement;
-  $ElementCopyWith<$Res> get matchTypeElement;
   $ElementCopyWith<$Res> get documentationElement;
 }
 
@@ -14502,7 +14423,7 @@ class _$TopicCanFilterByCopyWithImpl<$Res>
           : matchType as List<TopicCanFilterByMatchType>,
       matchTypeElement: matchTypeElement == freezed
           ? _value.matchTypeElement
-          : matchTypeElement as Element,
+          : matchTypeElement as List<Element>,
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as Markdown,
@@ -14519,16 +14440,6 @@ class _$TopicCanFilterByCopyWithImpl<$Res>
     }
     return $ElementCopyWith<$Res>(_value.nameElement, (value) {
       return _then(_value.copyWith(nameElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get matchTypeElement {
-    if (_value.matchTypeElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.matchTypeElement, (value) {
-      return _then(_value.copyWith(matchTypeElement: value));
     });
   }
 
@@ -14556,14 +14467,12 @@ abstract class _$TopicCanFilterByCopyWith<$Res>
       String name,
       @JsonKey(name: '_name') Element nameElement,
       List<TopicCanFilterByMatchType> matchType,
-      @JsonKey(name: '_matchType') Element matchTypeElement,
+      @JsonKey(name: '_matchType') List<Element> matchTypeElement,
       Markdown documentation,
       @JsonKey(name: '_documentation') Element documentationElement});
 
   @override
   $ElementCopyWith<$Res> get nameElement;
-  @override
-  $ElementCopyWith<$Res> get matchTypeElement;
   @override
   $ElementCopyWith<$Res> get documentationElement;
 }
@@ -14606,7 +14515,7 @@ class __$TopicCanFilterByCopyWithImpl<$Res>
           : matchType as List<TopicCanFilterByMatchType>,
       matchTypeElement: matchTypeElement == freezed
           ? _value.matchTypeElement
-          : matchTypeElement as Element,
+          : matchTypeElement as List<Element>,
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as Markdown,
@@ -14650,7 +14559,7 @@ class _$_TopicCanFilterBy extends _TopicCanFilterBy {
   final List<TopicCanFilterByMatchType> matchType;
   @override
   @JsonKey(name: '_matchType')
-  final Element matchTypeElement;
+  final List<Element> matchTypeElement;
   @override
   final Markdown documentation;
   @override
@@ -14725,7 +14634,7 @@ abstract class _TopicCanFilterBy extends TopicCanFilterBy {
           String name,
           @JsonKey(name: '_name') Element nameElement,
           List<TopicCanFilterByMatchType> matchType,
-          @JsonKey(name: '_matchType') Element matchTypeElement,
+          @JsonKey(name: '_matchType') List<Element> matchTypeElement,
           Markdown documentation,
           @JsonKey(name: '_documentation') Element documentationElement}) =
       _$_TopicCanFilterBy;
@@ -14749,7 +14658,7 @@ abstract class _TopicCanFilterBy extends TopicCanFilterBy {
   List<TopicCanFilterByMatchType> get matchType;
   @override
   @JsonKey(name: '_matchType')
-  Element get matchTypeElement;
+  List<Element> get matchTypeElement;
   @override
   Markdown get documentation;
   @override

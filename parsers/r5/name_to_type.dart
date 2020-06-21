@@ -71,6 +71,8 @@ String whatType(String field) {
       return 'Id';
     case 'instant':
       return 'Instant';
+    case 'integer64':
+      return 'Integer64';
     case 'integer':
       return 'Integer';
     case 'markdown':

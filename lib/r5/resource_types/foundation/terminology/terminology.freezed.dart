@@ -1712,7 +1712,7 @@ class _$CodeSystemFilterTearOff {
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
       List<Code> operator,
-      @JsonKey(name: '_operator') Element operatorElement,
+      @JsonKey(name: '_operator') List<Element> operatorElement,
       String value,
       @JsonKey(name: '_value') Element valueElement}) {
     return _CodeSystemFilter(
@@ -1747,7 +1747,7 @@ mixin _$CodeSystemFilter {
   Element get descriptionElement;
   List<Code> get operator;
   @JsonKey(name: '_operator')
-  Element get operatorElement;
+  List<Element> get operatorElement;
   String get value;
   @JsonKey(name: '_value')
   Element get valueElement;
@@ -1769,13 +1769,12 @@ abstract class $CodeSystemFilterCopyWith<$Res> {
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
       List<Code> operator,
-      @JsonKey(name: '_operator') Element operatorElement,
+      @JsonKey(name: '_operator') List<Element> operatorElement,
       String value,
       @JsonKey(name: '_value') Element valueElement});
 
   $ElementCopyWith<$Res> get codeElement;
   $ElementCopyWith<$Res> get descriptionElement;
-  $ElementCopyWith<$Res> get operatorElement;
   $ElementCopyWith<$Res> get valueElement;
 }
 
@@ -1820,7 +1819,7 @@ class _$CodeSystemFilterCopyWithImpl<$Res>
       operator: operator == freezed ? _value.operator : operator as List<Code>,
       operatorElement: operatorElement == freezed
           ? _value.operatorElement
-          : operatorElement as Element,
+          : operatorElement as List<Element>,
       value: value == freezed ? _value.value : value as String,
       valueElement: valueElement == freezed
           ? _value.valueElement
@@ -1845,16 +1844,6 @@ class _$CodeSystemFilterCopyWithImpl<$Res>
     }
     return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
       return _then(_value.copyWith(descriptionElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get operatorElement {
-    if (_value.operatorElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.operatorElement, (value) {
-      return _then(_value.copyWith(operatorElement: value));
     });
   }
 
@@ -1884,7 +1873,7 @@ abstract class _$CodeSystemFilterCopyWith<$Res>
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
       List<Code> operator,
-      @JsonKey(name: '_operator') Element operatorElement,
+      @JsonKey(name: '_operator') List<Element> operatorElement,
       String value,
       @JsonKey(name: '_value') Element valueElement});
 
@@ -1892,8 +1881,6 @@ abstract class _$CodeSystemFilterCopyWith<$Res>
   $ElementCopyWith<$Res> get codeElement;
   @override
   $ElementCopyWith<$Res> get descriptionElement;
-  @override
-  $ElementCopyWith<$Res> get operatorElement;
   @override
   $ElementCopyWith<$Res> get valueElement;
 }
@@ -1941,7 +1928,7 @@ class __$CodeSystemFilterCopyWithImpl<$Res>
       operator: operator == freezed ? _value.operator : operator as List<Code>,
       operatorElement: operatorElement == freezed
           ? _value.operatorElement
-          : operatorElement as Element,
+          : operatorElement as List<Element>,
       value: value == freezed ? _value.value : value as String,
       valueElement: valueElement == freezed
           ? _value.valueElement
@@ -1990,7 +1977,7 @@ class _$_CodeSystemFilter extends _CodeSystemFilter {
   final List<Code> operator;
   @override
   @JsonKey(name: '_operator')
-  final Element operatorElement;
+  final List<Element> operatorElement;
   @override
   final String value;
   @override
@@ -2074,7 +2061,7 @@ abstract class _CodeSystemFilter extends CodeSystemFilter {
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
       List<Code> operator,
-      @JsonKey(name: '_operator') Element operatorElement,
+      @JsonKey(name: '_operator') List<Element> operatorElement,
       String value,
       @JsonKey(name: '_value') Element valueElement}) = _$_CodeSystemFilter;
 
@@ -2102,7 +2089,7 @@ abstract class _CodeSystemFilter extends CodeSystemFilter {
   List<Code> get operator;
   @override
   @JsonKey(name: '_operator')
-  Element get operatorElement;
+  List<Element> get operatorElement;
   @override
   String get value;
   @override
@@ -12012,10 +11999,10 @@ class _$TerminologyCapabilitiesVersionTearOff {
       Boolean compositional,
       @JsonKey(name: '_compositional') Element compositionalElement,
       List<Code> language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language') List<Element> languageElement,
       List<TerminologyCapabilitiesFilter> filter,
       List<Code> property,
-      @JsonKey(name: '_property') Element propertyElement}) {
+      @JsonKey(name: '_property') List<Element> propertyElement}) {
     return _TerminologyCapabilitiesVersion(
       id: id,
       extension_: extension_,
@@ -12055,11 +12042,11 @@ mixin _$TerminologyCapabilitiesVersion {
   Element get compositionalElement;
   List<Code> get language;
   @JsonKey(name: '_language')
-  Element get languageElement;
+  List<Element> get languageElement;
   List<TerminologyCapabilitiesFilter> get filter;
   List<Code> get property;
   @JsonKey(name: '_property')
-  Element get propertyElement;
+  List<Element> get propertyElement;
 
   Map<String, dynamic> toJson();
   $TerminologyCapabilitiesVersionCopyWith<TerminologyCapabilitiesVersion>
@@ -12082,16 +12069,14 @@ abstract class $TerminologyCapabilitiesVersionCopyWith<$Res> {
       Boolean compositional,
       @JsonKey(name: '_compositional') Element compositionalElement,
       List<Code> language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language') List<Element> languageElement,
       List<TerminologyCapabilitiesFilter> filter,
       List<Code> property,
-      @JsonKey(name: '_property') Element propertyElement});
+      @JsonKey(name: '_property') List<Element> propertyElement});
 
   $ElementCopyWith<$Res> get codeElement;
   $ElementCopyWith<$Res> get isDefaultElement;
   $ElementCopyWith<$Res> get compositionalElement;
-  $ElementCopyWith<$Res> get languageElement;
-  $ElementCopyWith<$Res> get propertyElement;
 }
 
 class _$TerminologyCapabilitiesVersionCopyWithImpl<$Res>
@@ -12143,14 +12128,14 @@ class _$TerminologyCapabilitiesVersionCopyWithImpl<$Res>
       language: language == freezed ? _value.language : language as List<Code>,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
+          : languageElement as List<Element>,
       filter: filter == freezed
           ? _value.filter
           : filter as List<TerminologyCapabilitiesFilter>,
       property: property == freezed ? _value.property : property as List<Code>,
       propertyElement: propertyElement == freezed
           ? _value.propertyElement
-          : propertyElement as Element,
+          : propertyElement as List<Element>,
     ));
   }
 
@@ -12183,26 +12168,6 @@ class _$TerminologyCapabilitiesVersionCopyWithImpl<$Res>
       return _then(_value.copyWith(compositionalElement: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get languageElement {
-    if (_value.languageElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
-      return _then(_value.copyWith(languageElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get propertyElement {
-    if (_value.propertyElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.propertyElement, (value) {
-      return _then(_value.copyWith(propertyElement: value));
-    });
-  }
 }
 
 abstract class _$TerminologyCapabilitiesVersionCopyWith<$Res>
@@ -12223,10 +12188,10 @@ abstract class _$TerminologyCapabilitiesVersionCopyWith<$Res>
       Boolean compositional,
       @JsonKey(name: '_compositional') Element compositionalElement,
       List<Code> language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language') List<Element> languageElement,
       List<TerminologyCapabilitiesFilter> filter,
       List<Code> property,
-      @JsonKey(name: '_property') Element propertyElement});
+      @JsonKey(name: '_property') List<Element> propertyElement});
 
   @override
   $ElementCopyWith<$Res> get codeElement;
@@ -12234,10 +12199,6 @@ abstract class _$TerminologyCapabilitiesVersionCopyWith<$Res>
   $ElementCopyWith<$Res> get isDefaultElement;
   @override
   $ElementCopyWith<$Res> get compositionalElement;
-  @override
-  $ElementCopyWith<$Res> get languageElement;
-  @override
-  $ElementCopyWith<$Res> get propertyElement;
 }
 
 class __$TerminologyCapabilitiesVersionCopyWithImpl<$Res>
@@ -12293,14 +12254,14 @@ class __$TerminologyCapabilitiesVersionCopyWithImpl<$Res>
       language: language == freezed ? _value.language : language as List<Code>,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
+          : languageElement as List<Element>,
       filter: filter == freezed
           ? _value.filter
           : filter as List<TerminologyCapabilitiesFilter>,
       property: property == freezed ? _value.property : property as List<Code>,
       propertyElement: propertyElement == freezed
           ? _value.propertyElement
-          : propertyElement as Element,
+          : propertyElement as List<Element>,
     ));
   }
 }
@@ -12355,14 +12316,14 @@ class _$_TerminologyCapabilitiesVersion
   final List<Code> language;
   @override
   @JsonKey(name: '_language')
-  final Element languageElement;
+  final List<Element> languageElement;
   @override
   final List<TerminologyCapabilitiesFilter> filter;
   @override
   final List<Code> property;
   @override
   @JsonKey(name: '_property')
-  final Element propertyElement;
+  final List<Element> propertyElement;
 
   @override
   String toString() {
@@ -12457,10 +12418,10 @@ abstract class _TerminologyCapabilitiesVersion
           Boolean compositional,
           @JsonKey(name: '_compositional') Element compositionalElement,
           List<Code> language,
-          @JsonKey(name: '_language') Element languageElement,
+          @JsonKey(name: '_language') List<Element> languageElement,
           List<TerminologyCapabilitiesFilter> filter,
           List<Code> property,
-          @JsonKey(name: '_property') Element propertyElement}) =
+          @JsonKey(name: '_property') List<Element> propertyElement}) =
       _$_TerminologyCapabilitiesVersion;
 
   factory _TerminologyCapabilitiesVersion.fromJson(Map<String, dynamic> json) =
@@ -12492,14 +12453,14 @@ abstract class _TerminologyCapabilitiesVersion
   List<Code> get language;
   @override
   @JsonKey(name: '_language')
-  Element get languageElement;
+  List<Element> get languageElement;
   @override
   List<TerminologyCapabilitiesFilter> get filter;
   @override
   List<Code> get property;
   @override
   @JsonKey(name: '_property')
-  Element get propertyElement;
+  List<Element> get propertyElement;
   @override
   _$TerminologyCapabilitiesVersionCopyWith<_TerminologyCapabilitiesVersion>
       get copyWith;
@@ -12520,7 +12481,7 @@ class _$TerminologyCapabilitiesFilterTearOff {
       Code code,
       @JsonKey(name: '_code') Element codeElement,
       List<Code> op,
-      @JsonKey(name: '_op') Element opElement}) {
+      @JsonKey(name: '_op') List<Element> opElement}) {
     return _TerminologyCapabilitiesFilter(
       id: id,
       extension_: extension_,
@@ -12546,7 +12507,7 @@ mixin _$TerminologyCapabilitiesFilter {
   Element get codeElement;
   List<Code> get op;
   @JsonKey(name: '_op')
-  Element get opElement;
+  List<Element> get opElement;
 
   Map<String, dynamic> toJson();
   $TerminologyCapabilitiesFilterCopyWith<TerminologyCapabilitiesFilter>
@@ -12565,10 +12526,9 @@ abstract class $TerminologyCapabilitiesFilterCopyWith<$Res> {
       Code code,
       @JsonKey(name: '_code') Element codeElement,
       List<Code> op,
-      @JsonKey(name: '_op') Element opElement});
+      @JsonKey(name: '_op') List<Element> opElement});
 
   $ElementCopyWith<$Res> get codeElement;
-  $ElementCopyWith<$Res> get opElement;
 }
 
 class _$TerminologyCapabilitiesFilterCopyWithImpl<$Res>
@@ -12601,7 +12561,8 @@ class _$TerminologyCapabilitiesFilterCopyWithImpl<$Res>
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
       op: op == freezed ? _value.op : op as List<Code>,
-      opElement: opElement == freezed ? _value.opElement : opElement as Element,
+      opElement:
+          opElement == freezed ? _value.opElement : opElement as List<Element>,
     ));
   }
 
@@ -12612,16 +12573,6 @@ class _$TerminologyCapabilitiesFilterCopyWithImpl<$Res>
     }
     return $ElementCopyWith<$Res>(_value.codeElement, (value) {
       return _then(_value.copyWith(codeElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get opElement {
-    if (_value.opElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.opElement, (value) {
-      return _then(_value.copyWith(opElement: value));
     });
   }
 }
@@ -12640,12 +12591,10 @@ abstract class _$TerminologyCapabilitiesFilterCopyWith<$Res>
       Code code,
       @JsonKey(name: '_code') Element codeElement,
       List<Code> op,
-      @JsonKey(name: '_op') Element opElement});
+      @JsonKey(name: '_op') List<Element> opElement});
 
   @override
   $ElementCopyWith<$Res> get codeElement;
-  @override
-  $ElementCopyWith<$Res> get opElement;
 }
 
 class __$TerminologyCapabilitiesFilterCopyWithImpl<$Res>
@@ -12682,7 +12631,8 @@ class __$TerminologyCapabilitiesFilterCopyWithImpl<$Res>
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
       op: op == freezed ? _value.op : op as List<Code>,
-      opElement: opElement == freezed ? _value.opElement : opElement as Element,
+      opElement:
+          opElement == freezed ? _value.opElement : opElement as List<Element>,
     ));
   }
 }
@@ -12719,7 +12669,7 @@ class _$_TerminologyCapabilitiesFilter extends _TerminologyCapabilitiesFilter {
   final List<Code> op;
   @override
   @JsonKey(name: '_op')
-  final Element opElement;
+  final List<Element> opElement;
 
   @override
   String toString() {
@@ -12782,7 +12732,7 @@ abstract class _TerminologyCapabilitiesFilter
           Code code,
           @JsonKey(name: '_code') Element codeElement,
           List<Code> op,
-          @JsonKey(name: '_op') Element opElement}) =
+          @JsonKey(name: '_op') List<Element> opElement}) =
       _$_TerminologyCapabilitiesFilter;
 
   factory _TerminologyCapabilitiesFilter.fromJson(Map<String, dynamic> json) =
@@ -12804,7 +12754,7 @@ abstract class _TerminologyCapabilitiesFilter
   List<Code> get op;
   @override
   @JsonKey(name: '_op')
-  Element get opElement;
+  List<Element> get opElement;
   @override
   _$TerminologyCapabilitiesFilterCopyWith<_TerminologyCapabilitiesFilter>
       get copyWith;
@@ -15618,7 +15568,7 @@ class _$ValueSetComposeTearOff {
       @required List<ValueSetInclude> include,
       List<ValueSetInclude> exclude,
       List<String> property,
-      @JsonKey(name: '_property') Element propertyElement}) {
+      @JsonKey(name: '_property') List<Element> propertyElement}) {
     return _ValueSetCompose(
       id: id,
       extension_: extension_,
@@ -15653,7 +15603,7 @@ mixin _$ValueSetCompose {
   List<ValueSetInclude> get exclude;
   List<String> get property;
   @JsonKey(name: '_property')
-  Element get propertyElement;
+  List<Element> get propertyElement;
 
   Map<String, dynamic> toJson();
   $ValueSetComposeCopyWith<ValueSetCompose> get copyWith;
@@ -15674,11 +15624,10 @@ abstract class $ValueSetComposeCopyWith<$Res> {
       List<ValueSetInclude> include,
       List<ValueSetInclude> exclude,
       List<String> property,
-      @JsonKey(name: '_property') Element propertyElement});
+      @JsonKey(name: '_property') List<Element> propertyElement});
 
   $ElementCopyWith<$Res> get lockedDateElement;
   $ElementCopyWith<$Res> get inactiveElement;
-  $ElementCopyWith<$Res> get propertyElement;
 }
 
 class _$ValueSetComposeCopyWithImpl<$Res>
@@ -15730,7 +15679,7 @@ class _$ValueSetComposeCopyWithImpl<$Res>
           property == freezed ? _value.property : property as List<String>,
       propertyElement: propertyElement == freezed
           ? _value.propertyElement
-          : propertyElement as Element,
+          : propertyElement as List<Element>,
     ));
   }
 
@@ -15753,16 +15702,6 @@ class _$ValueSetComposeCopyWithImpl<$Res>
       return _then(_value.copyWith(inactiveElement: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get propertyElement {
-    if (_value.propertyElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.propertyElement, (value) {
-      return _then(_value.copyWith(propertyElement: value));
-    });
-  }
 }
 
 abstract class _$ValueSetComposeCopyWith<$Res>
@@ -15782,14 +15721,12 @@ abstract class _$ValueSetComposeCopyWith<$Res>
       List<ValueSetInclude> include,
       List<ValueSetInclude> exclude,
       List<String> property,
-      @JsonKey(name: '_property') Element propertyElement});
+      @JsonKey(name: '_property') List<Element> propertyElement});
 
   @override
   $ElementCopyWith<$Res> get lockedDateElement;
   @override
   $ElementCopyWith<$Res> get inactiveElement;
-  @override
-  $ElementCopyWith<$Res> get propertyElement;
 }
 
 class __$ValueSetComposeCopyWithImpl<$Res>
@@ -15843,7 +15780,7 @@ class __$ValueSetComposeCopyWithImpl<$Res>
           property == freezed ? _value.property : property as List<String>,
       propertyElement: propertyElement == freezed
           ? _value.propertyElement
-          : propertyElement as Element,
+          : propertyElement as List<Element>,
     ));
   }
 }
@@ -15893,7 +15830,7 @@ class _$_ValueSetCompose extends _ValueSetCompose {
   final List<String> property;
   @override
   @JsonKey(name: '_property')
-  final Element propertyElement;
+  final List<Element> propertyElement;
 
   @override
   String toString() {
@@ -15976,7 +15913,7 @@ abstract class _ValueSetCompose extends ValueSetCompose {
           @required List<ValueSetInclude> include,
           List<ValueSetInclude> exclude,
           List<String> property,
-          @JsonKey(name: '_property') Element propertyElement}) =
+          @JsonKey(name: '_property') List<Element> propertyElement}) =
       _$_ValueSetCompose;
 
   factory _ValueSetCompose.fromJson(Map<String, dynamic> json) =
@@ -16007,7 +15944,7 @@ abstract class _ValueSetCompose extends ValueSetCompose {
   List<String> get property;
   @override
   @JsonKey(name: '_property')
-  Element get propertyElement;
+  List<Element> get propertyElement;
   @override
   _$ValueSetComposeCopyWith<_ValueSetCompose> get copyWith;
 }

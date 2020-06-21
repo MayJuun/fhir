@@ -52,9 +52,10 @@ _$_CarePlan _$_$_CarePlanFromJson(Map<String, dynamic> json) {
     instantiatesUri: (json['instantiatesUri'] as List)
         ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
         ?.toList(),
-    instantiatesUriElement: json['_instantiatesUri'] == null
-        ? null
-        : Element.fromJson(json['_instantiatesUri'] as Map<String, dynamic>),
+    instantiatesUriElement: (json['_instantiatesUri'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     basedOn: (json['basedOn'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
@@ -169,7 +170,8 @@ Map<String, dynamic> _$_$_CarePlanToJson(_$_CarePlan instance) {
       instance.instantiatesCanonical?.map((e) => e?.toJson())?.toList());
   writeNotNull('instantiatesUri',
       instance.instantiatesUri?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_instantiatesUri', instance.instantiatesUriElement?.toJson());
+  writeNotNull('_instantiatesUri',
+      instance.instantiatesUriElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('basedOn', instance.basedOn?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'replaces', instance.replaces?.map((e) => e?.toJson())?.toList());
@@ -288,9 +290,10 @@ _$_CarePlanDetail _$_$_CarePlanDetailFromJson(Map<String, dynamic> json) {
     instantiatesUri: (json['instantiatesUri'] as List)
         ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
         ?.toList(),
-    instantiatesUriElement: json['_instantiatesUri'] == null
-        ? null
-        : Element.fromJson(json['_instantiatesUri'] as Map<String, dynamic>),
+    instantiatesUriElement: (json['_instantiatesUri'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
@@ -379,7 +382,8 @@ Map<String, dynamic> _$_$_CarePlanDetailToJson(_$_CarePlanDetail instance) {
       instance.instantiatesCanonical?.map((e) => e?.toJson())?.toList());
   writeNotNull('instantiatesUri',
       instance.instantiatesUri?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_instantiatesUri', instance.instantiatesUriElement?.toJson());
+  writeNotNull('_instantiatesUri',
+      instance.instantiatesUriElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull(
       'reasonCode', instance.reasonCode?.map((e) => e?.toJson())?.toList());
@@ -965,15 +969,17 @@ _$_NutritionOrder _$_$_NutritionOrderFromJson(Map<String, dynamic> json) {
     instantiatesUri: (json['instantiatesUri'] as List)
         ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
         ?.toList(),
-    instantiatesUriElement: json['_instantiatesUri'] == null
-        ? null
-        : Element.fromJson(json['_instantiatesUri'] as Map<String, dynamic>),
+    instantiatesUriElement: (json['_instantiatesUri'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     instantiates: (json['instantiates'] as List)
         ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
         ?.toList(),
-    instantiatesElement: json['_instantiates'] == null
-        ? null
-        : Element.fromJson(json['_instantiates'] as Map<String, dynamic>),
+    instantiatesElement: (json['_instantiates'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     status:
         json['status'] == null ? null : Code.fromJson(json['status'] as String),
     statusElement: json['_status'] == null
@@ -1062,10 +1068,12 @@ Map<String, dynamic> _$_$_NutritionOrderToJson(_$_NutritionOrder instance) {
       instance.instantiatesCanonical?.map((e) => e?.toJson())?.toList());
   writeNotNull('instantiatesUri',
       instance.instantiatesUri?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_instantiatesUri', instance.instantiatesUriElement?.toJson());
+  writeNotNull('_instantiatesUri',
+      instance.instantiatesUriElement?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'instantiates', instance.instantiates?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_instantiates', instance.instantiatesElement?.toJson());
+  writeNotNull('_instantiates',
+      instance.instantiatesElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('intent', instance.intent?.toJson());
@@ -1493,16 +1501,17 @@ _$_RequestGroup _$_$_RequestGroupFromJson(Map<String, dynamic> json) {
     instantiatesCanonical: (json['instantiatesCanonical'] as List)
         ?.map((e) => e == null ? null : Canonical.fromJson(e as String))
         ?.toList(),
-    instantiatesCanonicalElement: json['_instantiatesCanonical'] == null
-        ? null
-        : Element.fromJson(
-            json['_instantiatesCanonical'] as Map<String, dynamic>),
+    instantiatesCanonicalElement: (json['_instantiatesCanonical'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     instantiatesUri: (json['instantiatesUri'] as List)
         ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
         ?.toList(),
-    instantiatesUriElement: json['_instantiatesUri'] == null
-        ? null
-        : Element.fromJson(json['_instantiatesUri'] as Map<String, dynamic>),
+    instantiatesUriElement: (json['_instantiatesUri'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     basedOn: (json['basedOn'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
@@ -1597,10 +1606,11 @@ Map<String, dynamic> _$_$_RequestGroupToJson(_$_RequestGroup instance) {
   writeNotNull('instantiatesCanonical',
       instance.instantiatesCanonical?.map((e) => e?.toJson())?.toList());
   writeNotNull('_instantiatesCanonical',
-      instance.instantiatesCanonicalElement?.toJson());
+      instance.instantiatesCanonicalElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('instantiatesUri',
       instance.instantiatesUri?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_instantiatesUri', instance.instantiatesUriElement?.toJson());
+  writeNotNull('_instantiatesUri',
+      instance.instantiatesUriElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('basedOn', instance.basedOn?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'replaces', instance.replaces?.map((e) => e?.toJson())?.toList());
@@ -2199,9 +2209,10 @@ _$_ServiceRequest _$_$_ServiceRequestFromJson(Map<String, dynamic> json) {
     instantiatesUri: (json['instantiatesUri'] as List)
         ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
         ?.toList(),
-    instantiatesUriElement: json['_instantiatesUri'] == null
-        ? null
-        : Element.fromJson(json['_instantiatesUri'] as Map<String, dynamic>),
+    instantiatesUriElement: (json['_instantiatesUri'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     basedOn: (json['basedOn'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
@@ -2381,7 +2392,8 @@ Map<String, dynamic> _$_$_ServiceRequestToJson(_$_ServiceRequest instance) {
       instance.instantiatesCanonical?.map((e) => e?.toJson())?.toList());
   writeNotNull('instantiatesUri',
       instance.instantiatesUri?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_instantiatesUri', instance.instantiatesUriElement?.toJson());
+  writeNotNull('_instantiatesUri',
+      instance.instantiatesUriElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('basedOn', instance.basedOn?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'replaces', instance.replaces?.map((e) => e?.toJson())?.toList());

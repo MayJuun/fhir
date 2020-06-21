@@ -30,7 +30,7 @@ class _$CarePlanTearOff {
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
-      @JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
+      @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
       List<Reference> basedOn,
       List<Reference> replaces,
       List<Reference> partOf,
@@ -124,7 +124,7 @@ mixin _$CarePlan {
   List<Canonical> get instantiatesCanonical;
   List<FhirUri> get instantiatesUri;
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
+  List<Element> get instantiatesUriElement;
   List<Reference> get basedOn;
   List<Reference> get replaces;
   List<Reference> get partOf;
@@ -178,7 +178,7 @@ abstract class $CarePlanCopyWith<$Res> {
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
-      @JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
+      @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
       List<Reference> basedOn,
       List<Reference> replaces,
       List<Reference> partOf,
@@ -209,7 +209,6 @@ abstract class $CarePlanCopyWith<$Res> {
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
-  $ElementCopyWith<$Res> get instantiatesUriElement;
   $ElementCopyWith<$Res> get statusElement;
   $ElementCopyWith<$Res> get intentElement;
   $ElementCopyWith<$Res> get titleElement;
@@ -307,7 +306,7 @@ class _$CarePlanCopyWithImpl<$Res> implements $CarePlanCopyWith<$Res> {
           : instantiatesUri as List<FhirUri>,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
+          : instantiatesUriElement as List<Element>,
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<Reference>,
       replaces:
           replaces == freezed ? _value.replaces : replaces as List<Reference>,
@@ -397,16 +396,6 @@ class _$CarePlanCopyWithImpl<$Res> implements $CarePlanCopyWith<$Res> {
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get instantiatesUriElement {
-    if (_value.instantiatesUriElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.instantiatesUriElement, (value) {
-      return _then(_value.copyWith(instantiatesUriElement: value));
     });
   }
 
@@ -520,7 +509,7 @@ abstract class _$CarePlanCopyWith<$Res> implements $CarePlanCopyWith<$Res> {
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
-      @JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
+      @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
       List<Reference> basedOn,
       List<Reference> replaces,
       List<Reference> partOf,
@@ -555,8 +544,6 @@ abstract class _$CarePlanCopyWith<$Res> implements $CarePlanCopyWith<$Res> {
   $ElementCopyWith<$Res> get languageElement;
   @override
   $NarrativeCopyWith<$Res> get text;
-  @override
-  $ElementCopyWith<$Res> get instantiatesUriElement;
   @override
   $ElementCopyWith<$Res> get statusElement;
   @override
@@ -664,7 +651,7 @@ class __$CarePlanCopyWithImpl<$Res> extends _$CarePlanCopyWithImpl<$Res>
           : instantiatesUri as List<FhirUri>,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
+          : instantiatesUriElement as List<Element>,
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<Reference>,
       replaces:
           replaces == freezed ? _value.replaces : replaces as List<Reference>,
@@ -802,7 +789,7 @@ class _$_CarePlan extends _CarePlan {
   final List<FhirUri> instantiatesUri;
   @override
   @JsonKey(name: '_instantiatesUri')
-  final Element instantiatesUriElement;
+  final List<Element> instantiatesUriElement;
   @override
   final List<Reference> basedOn;
   @override
@@ -1023,7 +1010,7 @@ abstract class _CarePlan extends CarePlan {
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
-      @JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
+      @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
       List<Reference> basedOn,
       List<Reference> replaces,
       List<Reference> partOf,
@@ -1086,7 +1073,7 @@ abstract class _CarePlan extends CarePlan {
   List<FhirUri> get instantiatesUri;
   @override
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
+  List<Element> get instantiatesUriElement;
   @override
   List<Reference> get basedOn;
   @override
@@ -1482,7 +1469,7 @@ class _$CarePlanDetailTearOff {
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       CodeableConcept code,
       List<CodeableConcept> reasonCode,
       List<Reference> reasonReference,
@@ -1557,7 +1544,7 @@ mixin _$CarePlanDetail {
   List<Canonical> get instantiatesCanonical;
   List<FhirUri> get instantiatesUri;
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
+  List<Element> get instantiatesUriElement;
   CodeableConcept get code;
   List<CodeableConcept> get reasonCode;
   List<Reference> get reasonReference;
@@ -1604,7 +1591,7 @@ abstract class $CarePlanDetailCopyWith<$Res> {
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       CodeableConcept code,
       List<CodeableConcept> reasonCode,
       List<Reference> reasonReference,
@@ -1633,7 +1620,6 @@ abstract class $CarePlanDetailCopyWith<$Res> {
           Element descriptionElement});
 
   $ElementCopyWith<$Res> get kindElement;
-  $ElementCopyWith<$Res> get instantiatesUriElement;
   $CodeableConceptCopyWith<$Res> get code;
   $ElementCopyWith<$Res> get statusElement;
   $CodeableConceptCopyWith<$Res> get statusReason;
@@ -1708,7 +1694,7 @@ class _$CarePlanDetailCopyWithImpl<$Res>
           : instantiatesUri as List<FhirUri>,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
+          : instantiatesUriElement as List<Element>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
@@ -1771,16 +1757,6 @@ class _$CarePlanDetailCopyWithImpl<$Res>
     }
     return $ElementCopyWith<$Res>(_value.kindElement, (value) {
       return _then(_value.copyWith(kindElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get instantiatesUriElement {
-    if (_value.instantiatesUriElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.instantiatesUriElement, (value) {
-      return _then(_value.copyWith(instantiatesUriElement: value));
     });
   }
 
@@ -1933,7 +1909,7 @@ abstract class _$CarePlanDetailCopyWith<$Res>
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       CodeableConcept code,
       List<CodeableConcept> reasonCode,
       List<Reference> reasonReference,
@@ -1963,8 +1939,6 @@ abstract class _$CarePlanDetailCopyWith<$Res>
 
   @override
   $ElementCopyWith<$Res> get kindElement;
-  @override
-  $ElementCopyWith<$Res> get instantiatesUriElement;
   @override
   $CodeableConceptCopyWith<$Res> get code;
   @override
@@ -2054,7 +2028,7 @@ class __$CarePlanDetailCopyWithImpl<$Res>
           : instantiatesUri as List<FhirUri>,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
+          : instantiatesUriElement as List<Element>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
@@ -2166,7 +2140,7 @@ class _$_CarePlanDetail extends _CarePlanDetail {
   final List<FhirUri> instantiatesUri;
   @override
   @JsonKey(name: '_instantiatesUri')
-  final Element instantiatesUriElement;
+  final List<Element> instantiatesUriElement;
   @override
   final CodeableConcept code;
   @override
@@ -2353,7 +2327,7 @@ abstract class _CarePlanDetail extends CarePlanDetail {
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       CodeableConcept code,
       List<CodeableConcept> reasonCode,
       List<Reference> reasonReference,
@@ -2402,7 +2376,7 @@ abstract class _CarePlanDetail extends CarePlanDetail {
   List<FhirUri> get instantiatesUri;
   @override
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
+  List<Element> get instantiatesUriElement;
   @override
   CodeableConcept get code;
   @override
@@ -5260,9 +5234,9 @@ class _$NutritionOrderTearOff {
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
-      @JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
+      @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
       List<FhirUri> instantiates,
-      @JsonKey(name: '_instantiates') Element instantiatesElement,
+      @JsonKey(name: '_instantiates') List<Element> instantiatesElement,
       Code status,
       @JsonKey(name: '_status') Element statusElement,
       Code intent,
@@ -5340,10 +5314,10 @@ mixin _$NutritionOrder {
   List<Canonical> get instantiatesCanonical;
   List<FhirUri> get instantiatesUri;
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
+  List<Element> get instantiatesUriElement;
   List<FhirUri> get instantiates;
   @JsonKey(name: '_instantiates')
-  Element get instantiatesElement;
+  List<Element> get instantiatesElement;
   Code get status;
   @JsonKey(name: '_status')
   Element get statusElement;
@@ -5387,9 +5361,9 @@ abstract class $NutritionOrderCopyWith<$Res> {
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
-      @JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
+      @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
       List<FhirUri> instantiates,
-      @JsonKey(name: '_instantiates') Element instantiatesElement,
+      @JsonKey(name: '_instantiates') List<Element> instantiatesElement,
       Code status,
       @JsonKey(name: '_status') Element statusElement,
       Code intent,
@@ -5411,8 +5385,6 @@ abstract class $NutritionOrderCopyWith<$Res> {
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
-  $ElementCopyWith<$Res> get instantiatesUriElement;
-  $ElementCopyWith<$Res> get instantiatesElement;
   $ElementCopyWith<$Res> get statusElement;
   $ElementCopyWith<$Res> get intentElement;
   $ReferenceCopyWith<$Res> get patient;
@@ -5503,13 +5475,13 @@ class _$NutritionOrderCopyWithImpl<$Res>
           : instantiatesUri as List<FhirUri>,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
+          : instantiatesUriElement as List<Element>,
       instantiates: instantiates == freezed
           ? _value.instantiates
           : instantiates as List<FhirUri>,
       instantiatesElement: instantiatesElement == freezed
           ? _value.instantiatesElement
-          : instantiatesElement as Element,
+          : instantiatesElement as List<Element>,
       status: status == freezed ? _value.status : status as Code,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -5586,26 +5558,6 @@ class _$NutritionOrderCopyWithImpl<$Res>
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get instantiatesUriElement {
-    if (_value.instantiatesUriElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.instantiatesUriElement, (value) {
-      return _then(_value.copyWith(instantiatesUriElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get instantiatesElement {
-    if (_value.instantiatesElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.instantiatesElement, (value) {
-      return _then(_value.copyWith(instantiatesElement: value));
     });
   }
 
@@ -5712,9 +5664,9 @@ abstract class _$NutritionOrderCopyWith<$Res>
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
-      @JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
+      @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
       List<FhirUri> instantiates,
-      @JsonKey(name: '_instantiates') Element instantiatesElement,
+      @JsonKey(name: '_instantiates') List<Element> instantiatesElement,
       Code status,
       @JsonKey(name: '_status') Element statusElement,
       Code intent,
@@ -5740,10 +5692,6 @@ abstract class _$NutritionOrderCopyWith<$Res>
   $ElementCopyWith<$Res> get languageElement;
   @override
   $NarrativeCopyWith<$Res> get text;
-  @override
-  $ElementCopyWith<$Res> get instantiatesUriElement;
-  @override
-  $ElementCopyWith<$Res> get instantiatesElement;
   @override
   $ElementCopyWith<$Res> get statusElement;
   @override
@@ -5844,13 +5792,13 @@ class __$NutritionOrderCopyWithImpl<$Res>
           : instantiatesUri as List<FhirUri>,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
+          : instantiatesUriElement as List<Element>,
       instantiates: instantiates == freezed
           ? _value.instantiates
           : instantiates as List<FhirUri>,
       instantiatesElement: instantiatesElement == freezed
           ? _value.instantiatesElement
-          : instantiatesElement as Element,
+          : instantiatesElement as List<Element>,
       status: status == freezed ? _value.status : status as Code,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -5968,12 +5916,12 @@ class _$_NutritionOrder extends _NutritionOrder {
   final List<FhirUri> instantiatesUri;
   @override
   @JsonKey(name: '_instantiatesUri')
-  final Element instantiatesUriElement;
+  final List<Element> instantiatesUriElement;
   @override
   final List<FhirUri> instantiates;
   @override
   @JsonKey(name: '_instantiates')
-  final Element instantiatesElement;
+  final List<Element> instantiatesElement;
   @override
   final Code status;
   @override
@@ -6160,9 +6108,9 @@ abstract class _NutritionOrder extends NutritionOrder {
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
-      @JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
+      @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
       List<FhirUri> instantiates,
-      @JsonKey(name: '_instantiates') Element instantiatesElement,
+      @JsonKey(name: '_instantiates') List<Element> instantiatesElement,
       Code status,
       @JsonKey(name: '_status') Element statusElement,
       Code intent,
@@ -6217,12 +6165,12 @@ abstract class _NutritionOrder extends NutritionOrder {
   List<FhirUri> get instantiatesUri;
   @override
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
+  List<Element> get instantiatesUriElement;
   @override
   List<FhirUri> get instantiates;
   @override
   @JsonKey(name: '_instantiates')
-  Element get instantiatesElement;
+  List<Element> get instantiatesElement;
   @override
   Code get status;
   @override
@@ -8489,10 +8437,10 @@ class _$RequestGroupTearOff {
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       @JsonKey(name: '_instantiatesCanonical')
-          Element instantiatesCanonicalElement,
+          List<Element> instantiatesCanonicalElement,
       List<FhirUri> instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       List<Reference> basedOn,
       List<Reference> replaces,
       Identifier groupIdentifier,
@@ -8578,10 +8526,10 @@ mixin _$RequestGroup {
   List<Identifier> get identifier;
   List<Canonical> get instantiatesCanonical;
   @JsonKey(name: '_instantiatesCanonical')
-  Element get instantiatesCanonicalElement;
+  List<Element> get instantiatesCanonicalElement;
   List<FhirUri> get instantiatesUri;
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
+  List<Element> get instantiatesUriElement;
   List<Reference> get basedOn;
   List<Reference> get replaces;
   Identifier get groupIdentifier;
@@ -8633,10 +8581,10 @@ abstract class $RequestGroupCopyWith<$Res> {
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       @JsonKey(name: '_instantiatesCanonical')
-          Element instantiatesCanonicalElement,
+          List<Element> instantiatesCanonicalElement,
       List<FhirUri> instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       List<Reference> basedOn,
       List<Reference> replaces,
       Identifier groupIdentifier,
@@ -8665,8 +8613,6 @@ abstract class $RequestGroupCopyWith<$Res> {
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
-  $ElementCopyWith<$Res> get instantiatesCanonicalElement;
-  $ElementCopyWith<$Res> get instantiatesUriElement;
   $IdentifierCopyWith<$Res> get groupIdentifier;
   $ElementCopyWith<$Res> get statusElement;
   $ElementCopyWith<$Res> get intentElement;
@@ -8756,13 +8702,13 @@ class _$RequestGroupCopyWithImpl<$Res> implements $RequestGroupCopyWith<$Res> {
           : instantiatesCanonical as List<Canonical>,
       instantiatesCanonicalElement: instantiatesCanonicalElement == freezed
           ? _value.instantiatesCanonicalElement
-          : instantiatesCanonicalElement as Element,
+          : instantiatesCanonicalElement as List<Element>,
       instantiatesUri: instantiatesUri == freezed
           ? _value.instantiatesUri
           : instantiatesUri as List<FhirUri>,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
+          : instantiatesUriElement as List<Element>,
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<Reference>,
       replaces:
           replaces == freezed ? _value.replaces : replaces as List<Reference>,
@@ -8842,26 +8788,6 @@ class _$RequestGroupCopyWithImpl<$Res> implements $RequestGroupCopyWith<$Res> {
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get instantiatesCanonicalElement {
-    if (_value.instantiatesCanonicalElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.instantiatesCanonicalElement, (value) {
-      return _then(_value.copyWith(instantiatesCanonicalElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get instantiatesUriElement {
-    if (_value.instantiatesUriElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.instantiatesUriElement, (value) {
-      return _then(_value.copyWith(instantiatesUriElement: value));
     });
   }
 
@@ -8981,10 +8907,10 @@ abstract class _$RequestGroupCopyWith<$Res>
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       @JsonKey(name: '_instantiatesCanonical')
-          Element instantiatesCanonicalElement,
+          List<Element> instantiatesCanonicalElement,
       List<FhirUri> instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       List<Reference> basedOn,
       List<Reference> replaces,
       Identifier groupIdentifier,
@@ -9017,10 +8943,6 @@ abstract class _$RequestGroupCopyWith<$Res>
   $ElementCopyWith<$Res> get languageElement;
   @override
   $NarrativeCopyWith<$Res> get text;
-  @override
-  $ElementCopyWith<$Res> get instantiatesCanonicalElement;
-  @override
-  $ElementCopyWith<$Res> get instantiatesUriElement;
   @override
   $IdentifierCopyWith<$Res> get groupIdentifier;
   @override
@@ -9121,13 +9043,13 @@ class __$RequestGroupCopyWithImpl<$Res> extends _$RequestGroupCopyWithImpl<$Res>
           : instantiatesCanonical as List<Canonical>,
       instantiatesCanonicalElement: instantiatesCanonicalElement == freezed
           ? _value.instantiatesCanonicalElement
-          : instantiatesCanonicalElement as Element,
+          : instantiatesCanonicalElement as List<Element>,
       instantiatesUri: instantiatesUri == freezed
           ? _value.instantiatesUri
           : instantiatesUri as List<FhirUri>,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
+          : instantiatesUriElement as List<Element>,
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<Reference>,
       replaces:
           replaces == freezed ? _value.replaces : replaces as List<Reference>,
@@ -9258,12 +9180,12 @@ class _$_RequestGroup extends _RequestGroup {
   final List<Canonical> instantiatesCanonical;
   @override
   @JsonKey(name: '_instantiatesCanonical')
-  final Element instantiatesCanonicalElement;
+  final List<Element> instantiatesCanonicalElement;
   @override
   final List<FhirUri> instantiatesUri;
   @override
   @JsonKey(name: '_instantiatesUri')
-  final Element instantiatesUriElement;
+  final List<Element> instantiatesUriElement;
   @override
   final List<Reference> basedOn;
   @override
@@ -9463,10 +9385,10 @@ abstract class _RequestGroup extends RequestGroup {
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       @JsonKey(name: '_instantiatesCanonical')
-          Element instantiatesCanonicalElement,
+          List<Element> instantiatesCanonicalElement,
       List<FhirUri> instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       List<Reference> basedOn,
       List<Reference> replaces,
       Identifier groupIdentifier,
@@ -9526,12 +9448,12 @@ abstract class _RequestGroup extends RequestGroup {
   List<Canonical> get instantiatesCanonical;
   @override
   @JsonKey(name: '_instantiatesCanonical')
-  Element get instantiatesCanonicalElement;
+  List<Element> get instantiatesCanonicalElement;
   @override
   List<FhirUri> get instantiatesUri;
   @override
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
+  List<Element> get instantiatesUriElement;
   @override
   List<Reference> get basedOn;
   @override
@@ -13001,7 +12923,7 @@ class _$ServiceRequestTearOff {
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
-      @JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
+      @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
       List<Reference> basedOn,
       List<Reference> replaces,
       Identifier requisition,
@@ -13131,7 +13053,7 @@ mixin _$ServiceRequest {
   List<Canonical> get instantiatesCanonical;
   List<FhirUri> get instantiatesUri;
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
+  List<Element> get instantiatesUriElement;
   List<Reference> get basedOn;
   List<Reference> get replaces;
   Identifier get requisition;
@@ -13207,7 +13129,7 @@ abstract class $ServiceRequestCopyWith<$Res> {
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
-      @JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
+      @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
       List<Reference> basedOn,
       List<Reference> replaces,
       Identifier requisition,
@@ -13256,7 +13178,6 @@ abstract class $ServiceRequestCopyWith<$Res> {
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
-  $ElementCopyWith<$Res> get instantiatesUriElement;
   $IdentifierCopyWith<$Res> get requisition;
   $ElementCopyWith<$Res> get statusElement;
   $ElementCopyWith<$Res> get intentElement;
@@ -13384,7 +13305,7 @@ class _$ServiceRequestCopyWithImpl<$Res>
           : instantiatesUri as List<FhirUri>,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
+          : instantiatesUriElement as List<Element>,
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<Reference>,
       replaces:
           replaces == freezed ? _value.replaces : replaces as List<Reference>,
@@ -13536,16 +13457,6 @@ class _$ServiceRequestCopyWithImpl<$Res>
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get instantiatesUriElement {
-    if (_value.instantiatesUriElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.instantiatesUriElement, (value) {
-      return _then(_value.copyWith(instantiatesUriElement: value));
     });
   }
 
@@ -13772,7 +13683,7 @@ abstract class _$ServiceRequestCopyWith<$Res>
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
-      @JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
+      @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
       List<Reference> basedOn,
       List<Reference> replaces,
       Identifier requisition,
@@ -13825,8 +13736,6 @@ abstract class _$ServiceRequestCopyWith<$Res>
   $ElementCopyWith<$Res> get languageElement;
   @override
   $NarrativeCopyWith<$Res> get text;
-  @override
-  $ElementCopyWith<$Res> get instantiatesUriElement;
   @override
   $IdentifierCopyWith<$Res> get requisition;
   @override
@@ -13976,7 +13885,7 @@ class __$ServiceRequestCopyWithImpl<$Res>
           : instantiatesUri as List<FhirUri>,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
+          : instantiatesUriElement as List<Element>,
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<Reference>,
       replaces:
           replaces == freezed ? _value.replaces : replaces as List<Reference>,
@@ -14194,7 +14103,7 @@ class _$_ServiceRequest extends _ServiceRequest {
   final List<FhirUri> instantiatesUri;
   @override
   @JsonKey(name: '_instantiatesUri')
-  final Element instantiatesUriElement;
+  final List<Element> instantiatesUriElement;
   @override
   final List<Reference> basedOn;
   @override
@@ -14490,7 +14399,7 @@ abstract class _ServiceRequest extends ServiceRequest {
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
-      @JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
+      @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
       List<Reference> basedOn,
       List<Reference> replaces,
       Identifier requisition,
@@ -14572,7 +14481,7 @@ abstract class _ServiceRequest extends ServiceRequest {
   List<FhirUri> get instantiatesUri;
   @override
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
+  List<Element> get instantiatesUriElement;
   @override
   List<Reference> get basedOn;
   @override

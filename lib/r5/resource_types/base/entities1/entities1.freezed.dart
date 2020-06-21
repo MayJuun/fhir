@@ -38,11 +38,11 @@ class _$EndpointTearOff {
       Period period,
       @required List<CodeableConcept> payloadType,
       List<Code> payloadMimeType,
-      @JsonKey(name: '_payloadMimeType') Element payloadMimeTypeElement,
+      @JsonKey(name: '_payloadMimeType') List<Element> payloadMimeTypeElement,
       FhirUrl address,
       @JsonKey(name: '_address') Element addressElement,
       List<String> header,
-      @JsonKey(name: '_header') Element headerElement}) {
+      @JsonKey(name: '_header') List<Element> headerElement}) {
     return _Endpoint(
       resourceType: resourceType,
       id: id,
@@ -109,13 +109,13 @@ mixin _$Endpoint {
   List<CodeableConcept> get payloadType;
   List<Code> get payloadMimeType;
   @JsonKey(name: '_payloadMimeType')
-  Element get payloadMimeTypeElement;
+  List<Element> get payloadMimeTypeElement;
   FhirUrl get address;
   @JsonKey(name: '_address')
   Element get addressElement;
   List<String> get header;
   @JsonKey(name: '_header')
-  Element get headerElement;
+  List<Element> get headerElement;
 
   Map<String, dynamic> toJson();
   $EndpointCopyWith<Endpoint> get copyWith;
@@ -147,11 +147,11 @@ abstract class $EndpointCopyWith<$Res> {
       Period period,
       List<CodeableConcept> payloadType,
       List<Code> payloadMimeType,
-      @JsonKey(name: '_payloadMimeType') Element payloadMimeTypeElement,
+      @JsonKey(name: '_payloadMimeType') List<Element> payloadMimeTypeElement,
       FhirUrl address,
       @JsonKey(name: '_address') Element addressElement,
       List<String> header,
-      @JsonKey(name: '_header') Element headerElement});
+      @JsonKey(name: '_header') List<Element> headerElement});
 
   $MetaCopyWith<$Res> get meta;
   $ElementCopyWith<$Res> get implicitRulesElement;
@@ -162,9 +162,7 @@ abstract class $EndpointCopyWith<$Res> {
   $ElementCopyWith<$Res> get nameElement;
   $ReferenceCopyWith<$Res> get managingOrganization;
   $PeriodCopyWith<$Res> get period;
-  $ElementCopyWith<$Res> get payloadMimeTypeElement;
   $ElementCopyWith<$Res> get addressElement;
-  $ElementCopyWith<$Res> get headerElement;
 }
 
 class _$EndpointCopyWithImpl<$Res> implements $EndpointCopyWith<$Res> {
@@ -256,7 +254,7 @@ class _$EndpointCopyWithImpl<$Res> implements $EndpointCopyWith<$Res> {
           : payloadMimeType as List<Code>,
       payloadMimeTypeElement: payloadMimeTypeElement == freezed
           ? _value.payloadMimeTypeElement
-          : payloadMimeTypeElement as Element,
+          : payloadMimeTypeElement as List<Element>,
       address: address == freezed ? _value.address : address as FhirUrl,
       addressElement: addressElement == freezed
           ? _value.addressElement
@@ -264,7 +262,7 @@ class _$EndpointCopyWithImpl<$Res> implements $EndpointCopyWith<$Res> {
       header: header == freezed ? _value.header : header as List<String>,
       headerElement: headerElement == freezed
           ? _value.headerElement
-          : headerElement as Element,
+          : headerElement as List<Element>,
     ));
   }
 
@@ -359,32 +357,12 @@ class _$EndpointCopyWithImpl<$Res> implements $EndpointCopyWith<$Res> {
   }
 
   @override
-  $ElementCopyWith<$Res> get payloadMimeTypeElement {
-    if (_value.payloadMimeTypeElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.payloadMimeTypeElement, (value) {
-      return _then(_value.copyWith(payloadMimeTypeElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get addressElement {
     if (_value.addressElement == null) {
       return null;
     }
     return $ElementCopyWith<$Res>(_value.addressElement, (value) {
       return _then(_value.copyWith(addressElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get headerElement {
-    if (_value.headerElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.headerElement, (value) {
-      return _then(_value.copyWith(headerElement: value));
     });
   }
 }
@@ -416,11 +394,11 @@ abstract class _$EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
       Period period,
       List<CodeableConcept> payloadType,
       List<Code> payloadMimeType,
-      @JsonKey(name: '_payloadMimeType') Element payloadMimeTypeElement,
+      @JsonKey(name: '_payloadMimeType') List<Element> payloadMimeTypeElement,
       FhirUrl address,
       @JsonKey(name: '_address') Element addressElement,
       List<String> header,
-      @JsonKey(name: '_header') Element headerElement});
+      @JsonKey(name: '_header') List<Element> headerElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -441,11 +419,7 @@ abstract class _$EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
   @override
   $PeriodCopyWith<$Res> get period;
   @override
-  $ElementCopyWith<$Res> get payloadMimeTypeElement;
-  @override
   $ElementCopyWith<$Res> get addressElement;
-  @override
-  $ElementCopyWith<$Res> get headerElement;
 }
 
 class __$EndpointCopyWithImpl<$Res> extends _$EndpointCopyWithImpl<$Res>
@@ -538,7 +512,7 @@ class __$EndpointCopyWithImpl<$Res> extends _$EndpointCopyWithImpl<$Res>
           : payloadMimeType as List<Code>,
       payloadMimeTypeElement: payloadMimeTypeElement == freezed
           ? _value.payloadMimeTypeElement
-          : payloadMimeTypeElement as Element,
+          : payloadMimeTypeElement as List<Element>,
       address: address == freezed ? _value.address : address as FhirUrl,
       addressElement: addressElement == freezed
           ? _value.addressElement
@@ -546,7 +520,7 @@ class __$EndpointCopyWithImpl<$Res> extends _$EndpointCopyWithImpl<$Res>
       header: header == freezed ? _value.header : header as List<String>,
       headerElement: headerElement == freezed
           ? _value.headerElement
-          : headerElement as Element,
+          : headerElement as List<Element>,
     ));
   }
 }
@@ -642,7 +616,7 @@ class _$_Endpoint extends _Endpoint {
   final List<Code> payloadMimeType;
   @override
   @JsonKey(name: '_payloadMimeType')
-  final Element payloadMimeTypeElement;
+  final List<Element> payloadMimeTypeElement;
   @override
   final FhirUrl address;
   @override
@@ -652,7 +626,7 @@ class _$_Endpoint extends _Endpoint {
   final List<String> header;
   @override
   @JsonKey(name: '_header')
-  final Element headerElement;
+  final List<Element> headerElement;
 
   @override
   String toString() {
@@ -800,11 +774,11 @@ abstract class _Endpoint extends Endpoint {
       Period period,
       @required List<CodeableConcept> payloadType,
       List<Code> payloadMimeType,
-      @JsonKey(name: '_payloadMimeType') Element payloadMimeTypeElement,
+      @JsonKey(name: '_payloadMimeType') List<Element> payloadMimeTypeElement,
       FhirUrl address,
       @JsonKey(name: '_address') Element addressElement,
       List<String> header,
-      @JsonKey(name: '_header') Element headerElement}) = _$_Endpoint;
+      @JsonKey(name: '_header') List<Element> headerElement}) = _$_Endpoint;
 
   factory _Endpoint.fromJson(Map<String, dynamic> json) = _$_Endpoint.fromJson;
 
@@ -861,7 +835,7 @@ abstract class _Endpoint extends Endpoint {
   List<Code> get payloadMimeType;
   @override
   @JsonKey(name: '_payloadMimeType')
-  Element get payloadMimeTypeElement;
+  List<Element> get payloadMimeTypeElement;
   @override
   FhirUrl get address;
   @override
@@ -871,7 +845,7 @@ abstract class _Endpoint extends Endpoint {
   List<String> get header;
   @override
   @JsonKey(name: '_header')
-  Element get headerElement;
+  List<Element> get headerElement;
   @override
   _$EndpointCopyWith<_Endpoint> get copyWith;
 }
@@ -2390,7 +2364,7 @@ class _$HealthcareServiceAvailableTimeTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<HealthcareServiceAvailableTimeDaysOfWeek> daysOfWeek,
-      @JsonKey(name: '_daysOfWeek') Element daysOfWeekElement,
+      @JsonKey(name: '_daysOfWeek') List<Element> daysOfWeekElement,
       Boolean allDay,
       @JsonKey(name: '_allDay') Element allDayElement,
       Time availableStartTime,
@@ -2424,7 +2398,7 @@ mixin _$HealthcareServiceAvailableTime {
   List<FhirExtension> get modifierExtension;
   List<HealthcareServiceAvailableTimeDaysOfWeek> get daysOfWeek;
   @JsonKey(name: '_daysOfWeek')
-  Element get daysOfWeekElement;
+  List<Element> get daysOfWeekElement;
   Boolean get allDay;
   @JsonKey(name: '_allDay')
   Element get allDayElement;
@@ -2450,7 +2424,7 @@ abstract class $HealthcareServiceAvailableTimeCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<HealthcareServiceAvailableTimeDaysOfWeek> daysOfWeek,
-      @JsonKey(name: '_daysOfWeek') Element daysOfWeekElement,
+      @JsonKey(name: '_daysOfWeek') List<Element> daysOfWeekElement,
       Boolean allDay,
       @JsonKey(name: '_allDay') Element allDayElement,
       Time availableStartTime,
@@ -2458,7 +2432,6 @@ abstract class $HealthcareServiceAvailableTimeCopyWith<$Res> {
       Time availableEndTime,
       @JsonKey(name: '_availableEndTime') Element availableEndTimeElement});
 
-  $ElementCopyWith<$Res> get daysOfWeekElement;
   $ElementCopyWith<$Res> get allDayElement;
   $ElementCopyWith<$Res> get availableStartTimeElement;
   $ElementCopyWith<$Res> get availableEndTimeElement;
@@ -2499,7 +2472,7 @@ class _$HealthcareServiceAvailableTimeCopyWithImpl<$Res>
           : daysOfWeek as List<HealthcareServiceAvailableTimeDaysOfWeek>,
       daysOfWeekElement: daysOfWeekElement == freezed
           ? _value.daysOfWeekElement
-          : daysOfWeekElement as Element,
+          : daysOfWeekElement as List<Element>,
       allDay: allDay == freezed ? _value.allDay : allDay as Boolean,
       allDayElement: allDayElement == freezed
           ? _value.allDayElement
@@ -2517,16 +2490,6 @@ class _$HealthcareServiceAvailableTimeCopyWithImpl<$Res>
           ? _value.availableEndTimeElement
           : availableEndTimeElement as Element,
     ));
-  }
-
-  @override
-  $ElementCopyWith<$Res> get daysOfWeekElement {
-    if (_value.daysOfWeekElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.daysOfWeekElement, (value) {
-      return _then(_value.copyWith(daysOfWeekElement: value));
-    });
   }
 
   @override
@@ -2572,7 +2535,7 @@ abstract class _$HealthcareServiceAvailableTimeCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<HealthcareServiceAvailableTimeDaysOfWeek> daysOfWeek,
-      @JsonKey(name: '_daysOfWeek') Element daysOfWeekElement,
+      @JsonKey(name: '_daysOfWeek') List<Element> daysOfWeekElement,
       Boolean allDay,
       @JsonKey(name: '_allDay') Element allDayElement,
       Time availableStartTime,
@@ -2580,8 +2543,6 @@ abstract class _$HealthcareServiceAvailableTimeCopyWith<$Res>
       Time availableEndTime,
       @JsonKey(name: '_availableEndTime') Element availableEndTimeElement});
 
-  @override
-  $ElementCopyWith<$Res> get daysOfWeekElement;
   @override
   $ElementCopyWith<$Res> get allDayElement;
   @override
@@ -2629,7 +2590,7 @@ class __$HealthcareServiceAvailableTimeCopyWithImpl<$Res>
           : daysOfWeek as List<HealthcareServiceAvailableTimeDaysOfWeek>,
       daysOfWeekElement: daysOfWeekElement == freezed
           ? _value.daysOfWeekElement
-          : daysOfWeekElement as Element,
+          : daysOfWeekElement as List<Element>,
       allDay: allDay == freezed ? _value.allDay : allDay as Boolean,
       allDayElement: allDayElement == freezed
           ? _value.allDayElement
@@ -2682,7 +2643,7 @@ class _$_HealthcareServiceAvailableTime
   final List<HealthcareServiceAvailableTimeDaysOfWeek> daysOfWeek;
   @override
   @JsonKey(name: '_daysOfWeek')
-  final Element daysOfWeekElement;
+  final List<Element> daysOfWeekElement;
   @override
   final Boolean allDay;
   @override
@@ -2780,7 +2741,7 @@ abstract class _HealthcareServiceAvailableTime
       List<FhirExtension> modifierExtension,
       List<HealthcareServiceAvailableTimeDaysOfWeek> daysOfWeek,
       @JsonKey(name: '_daysOfWeek')
-          Element daysOfWeekElement,
+          List<Element> daysOfWeekElement,
       Boolean allDay,
       @JsonKey(name: '_allDay')
           Element allDayElement,
@@ -2805,7 +2766,7 @@ abstract class _HealthcareServiceAvailableTime
   List<HealthcareServiceAvailableTimeDaysOfWeek> get daysOfWeek;
   @override
   @JsonKey(name: '_daysOfWeek')
-  Element get daysOfWeekElement;
+  List<Element> get daysOfWeekElement;
   @override
   Boolean get allDay;
   @override
@@ -3148,7 +3109,7 @@ class _$LocationTearOff {
           Element nameElement,
       List<String> alias,
       @JsonKey(name: '_alias')
-          Element aliasElement,
+          List<Element> aliasElement,
       String description,
       @JsonKey(name: '_description')
           Element descriptionElement,
@@ -3237,7 +3198,7 @@ mixin _$Location {
   Element get nameElement;
   List<String> get alias;
   @JsonKey(name: '_alias')
-  Element get aliasElement;
+  List<Element> get aliasElement;
   String get description;
   @JsonKey(name: '_description')
   Element get descriptionElement;
@@ -3292,7 +3253,7 @@ abstract class $LocationCopyWith<$Res> {
           Element nameElement,
       List<String> alias,
       @JsonKey(name: '_alias')
-          Element aliasElement,
+          List<Element> aliasElement,
       String description,
       @JsonKey(name: '_description')
           Element descriptionElement,
@@ -3320,7 +3281,6 @@ abstract class $LocationCopyWith<$Res> {
   $ElementCopyWith<$Res> get statusElement;
   $CodingCopyWith<$Res> get operationalStatus;
   $ElementCopyWith<$Res> get nameElement;
-  $ElementCopyWith<$Res> get aliasElement;
   $ElementCopyWith<$Res> get descriptionElement;
   $ElementCopyWith<$Res> get modeElement;
   $AddressCopyWith<$Res> get address;
@@ -3416,7 +3376,7 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
       alias: alias == freezed ? _value.alias : alias as List<String>,
       aliasElement: aliasElement == freezed
           ? _value.aliasElement
-          : aliasElement as Element,
+          : aliasElement as List<Element>,
       description:
           description == freezed ? _value.description : description as String,
       descriptionElement: descriptionElement == freezed
@@ -3519,16 +3479,6 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
     }
     return $ElementCopyWith<$Res>(_value.nameElement, (value) {
       return _then(_value.copyWith(nameElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get aliasElement {
-    if (_value.aliasElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.aliasElement, (value) {
-      return _then(_value.copyWith(aliasElement: value));
     });
   }
 
@@ -3645,7 +3595,7 @@ abstract class _$LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
           Element nameElement,
       List<String> alias,
       @JsonKey(name: '_alias')
-          Element aliasElement,
+          List<Element> aliasElement,
       String description,
       @JsonKey(name: '_description')
           Element descriptionElement,
@@ -3680,8 +3630,6 @@ abstract class _$LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
   $CodingCopyWith<$Res> get operationalStatus;
   @override
   $ElementCopyWith<$Res> get nameElement;
-  @override
-  $ElementCopyWith<$Res> get aliasElement;
   @override
   $ElementCopyWith<$Res> get descriptionElement;
   @override
@@ -3786,7 +3734,7 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
       alias: alias == freezed ? _value.alias : alias as List<String>,
       aliasElement: aliasElement == freezed
           ? _value.aliasElement
-          : aliasElement as Element,
+          : aliasElement as List<Element>,
       description:
           description == freezed ? _value.description : description as String,
       descriptionElement: descriptionElement == freezed
@@ -3924,7 +3872,7 @@ class _$_Location extends _Location {
   final List<String> alias;
   @override
   @JsonKey(name: '_alias')
-  final Element aliasElement;
+  final List<Element> aliasElement;
   @override
   final String description;
   @override
@@ -4126,7 +4074,7 @@ abstract class _Location extends Location {
           Element nameElement,
       List<String> alias,
       @JsonKey(name: '_alias')
-          Element aliasElement,
+          List<Element> aliasElement,
       String description,
       @JsonKey(name: '_description')
           Element descriptionElement,
@@ -4194,7 +4142,7 @@ abstract class _Location extends Location {
   List<String> get alias;
   @override
   @JsonKey(name: '_alias')
-  Element get aliasElement;
+  List<Element> get aliasElement;
   @override
   String get description;
   @override
@@ -4607,7 +4555,7 @@ class _$LocationHoursOfOperationTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Code> daysOfWeek,
-      @JsonKey(name: '_daysOfWeek') Element daysOfWeekElement,
+      @JsonKey(name: '_daysOfWeek') List<Element> daysOfWeekElement,
       Boolean allDay,
       @JsonKey(name: '_allDay') Element allDayElement,
       Time openingTime,
@@ -4640,7 +4588,7 @@ mixin _$LocationHoursOfOperation {
   List<FhirExtension> get modifierExtension;
   List<Code> get daysOfWeek;
   @JsonKey(name: '_daysOfWeek')
-  Element get daysOfWeekElement;
+  List<Element> get daysOfWeekElement;
   Boolean get allDay;
   @JsonKey(name: '_allDay')
   Element get allDayElement;
@@ -4664,7 +4612,7 @@ abstract class $LocationHoursOfOperationCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Code> daysOfWeek,
-      @JsonKey(name: '_daysOfWeek') Element daysOfWeekElement,
+      @JsonKey(name: '_daysOfWeek') List<Element> daysOfWeekElement,
       Boolean allDay,
       @JsonKey(name: '_allDay') Element allDayElement,
       Time openingTime,
@@ -4672,7 +4620,6 @@ abstract class $LocationHoursOfOperationCopyWith<$Res> {
       Time closingTime,
       @JsonKey(name: '_closingTime') Element closingTimeElement});
 
-  $ElementCopyWith<$Res> get daysOfWeekElement;
   $ElementCopyWith<$Res> get allDayElement;
   $ElementCopyWith<$Res> get openingTimeElement;
   $ElementCopyWith<$Res> get closingTimeElement;
@@ -4712,7 +4659,7 @@ class _$LocationHoursOfOperationCopyWithImpl<$Res>
           daysOfWeek == freezed ? _value.daysOfWeek : daysOfWeek as List<Code>,
       daysOfWeekElement: daysOfWeekElement == freezed
           ? _value.daysOfWeekElement
-          : daysOfWeekElement as Element,
+          : daysOfWeekElement as List<Element>,
       allDay: allDay == freezed ? _value.allDay : allDay as Boolean,
       allDayElement: allDayElement == freezed
           ? _value.allDayElement
@@ -4728,16 +4675,6 @@ class _$LocationHoursOfOperationCopyWithImpl<$Res>
           ? _value.closingTimeElement
           : closingTimeElement as Element,
     ));
-  }
-
-  @override
-  $ElementCopyWith<$Res> get daysOfWeekElement {
-    if (_value.daysOfWeekElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.daysOfWeekElement, (value) {
-      return _then(_value.copyWith(daysOfWeekElement: value));
-    });
   }
 
   @override
@@ -4782,7 +4719,7 @@ abstract class _$LocationHoursOfOperationCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Code> daysOfWeek,
-      @JsonKey(name: '_daysOfWeek') Element daysOfWeekElement,
+      @JsonKey(name: '_daysOfWeek') List<Element> daysOfWeekElement,
       Boolean allDay,
       @JsonKey(name: '_allDay') Element allDayElement,
       Time openingTime,
@@ -4790,8 +4727,6 @@ abstract class _$LocationHoursOfOperationCopyWith<$Res>
       Time closingTime,
       @JsonKey(name: '_closingTime') Element closingTimeElement});
 
-  @override
-  $ElementCopyWith<$Res> get daysOfWeekElement;
   @override
   $ElementCopyWith<$Res> get allDayElement;
   @override
@@ -4837,7 +4772,7 @@ class __$LocationHoursOfOperationCopyWithImpl<$Res>
           daysOfWeek == freezed ? _value.daysOfWeek : daysOfWeek as List<Code>,
       daysOfWeekElement: daysOfWeekElement == freezed
           ? _value.daysOfWeekElement
-          : daysOfWeekElement as Element,
+          : daysOfWeekElement as List<Element>,
       allDay: allDay == freezed ? _value.allDay : allDay as Boolean,
       allDayElement: allDayElement == freezed
           ? _value.allDayElement
@@ -4886,7 +4821,7 @@ class _$_LocationHoursOfOperation extends _LocationHoursOfOperation {
   final List<Code> daysOfWeek;
   @override
   @JsonKey(name: '_daysOfWeek')
-  final Element daysOfWeekElement;
+  final List<Element> daysOfWeekElement;
   @override
   final Boolean allDay;
   @override
@@ -4978,7 +4913,7 @@ abstract class _LocationHoursOfOperation extends LocationHoursOfOperation {
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
           List<Code> daysOfWeek,
-          @JsonKey(name: '_daysOfWeek') Element daysOfWeekElement,
+          @JsonKey(name: '_daysOfWeek') List<Element> daysOfWeekElement,
           Boolean allDay,
           @JsonKey(name: '_allDay') Element allDayElement,
           Time openingTime,
@@ -5001,7 +4936,7 @@ abstract class _LocationHoursOfOperation extends LocationHoursOfOperation {
   List<Code> get daysOfWeek;
   @override
   @JsonKey(name: '_daysOfWeek')
-  Element get daysOfWeekElement;
+  List<Element> get daysOfWeekElement;
   @override
   Boolean get allDay;
   @override
@@ -5047,7 +4982,7 @@ class _$OrganizationTearOff {
       String name,
       @JsonKey(name: '_name') Element nameElement,
       List<String> alias,
-      @JsonKey(name: '_alias') Element aliasElement,
+      @JsonKey(name: '_alias') List<Element> aliasElement,
       List<ContactPoint> telecom,
       List<Address> address,
       Reference partOf,
@@ -5111,7 +5046,7 @@ mixin _$Organization {
   Element get nameElement;
   List<String> get alias;
   @JsonKey(name: '_alias')
-  Element get aliasElement;
+  List<Element> get aliasElement;
   List<ContactPoint> get telecom;
   List<Address> get address;
   Reference get partOf;
@@ -5145,7 +5080,7 @@ abstract class $OrganizationCopyWith<$Res> {
       String name,
       @JsonKey(name: '_name') Element nameElement,
       List<String> alias,
-      @JsonKey(name: '_alias') Element aliasElement,
+      @JsonKey(name: '_alias') List<Element> aliasElement,
       List<ContactPoint> telecom,
       List<Address> address,
       Reference partOf,
@@ -5158,7 +5093,6 @@ abstract class $OrganizationCopyWith<$Res> {
   $NarrativeCopyWith<$Res> get text;
   $ElementCopyWith<$Res> get activeElement;
   $ElementCopyWith<$Res> get nameElement;
-  $ElementCopyWith<$Res> get aliasElement;
   $ReferenceCopyWith<$Res> get partOf;
 }
 
@@ -5235,7 +5169,7 @@ class _$OrganizationCopyWithImpl<$Res> implements $OrganizationCopyWith<$Res> {
       alias: alias == freezed ? _value.alias : alias as List<String>,
       aliasElement: aliasElement == freezed
           ? _value.aliasElement
-          : aliasElement as Element,
+          : aliasElement as List<Element>,
       telecom:
           telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
       address: address == freezed ? _value.address : address as List<Address>,
@@ -5309,16 +5243,6 @@ class _$OrganizationCopyWithImpl<$Res> implements $OrganizationCopyWith<$Res> {
   }
 
   @override
-  $ElementCopyWith<$Res> get aliasElement {
-    if (_value.aliasElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.aliasElement, (value) {
-      return _then(_value.copyWith(aliasElement: value));
-    });
-  }
-
-  @override
   $ReferenceCopyWith<$Res> get partOf {
     if (_value.partOf == null) {
       return null;
@@ -5354,7 +5278,7 @@ abstract class _$OrganizationCopyWith<$Res>
       String name,
       @JsonKey(name: '_name') Element nameElement,
       List<String> alias,
-      @JsonKey(name: '_alias') Element aliasElement,
+      @JsonKey(name: '_alias') List<Element> aliasElement,
       List<ContactPoint> telecom,
       List<Address> address,
       Reference partOf,
@@ -5373,8 +5297,6 @@ abstract class _$OrganizationCopyWith<$Res>
   $ElementCopyWith<$Res> get activeElement;
   @override
   $ElementCopyWith<$Res> get nameElement;
-  @override
-  $ElementCopyWith<$Res> get aliasElement;
   @override
   $ReferenceCopyWith<$Res> get partOf;
 }
@@ -5454,7 +5376,7 @@ class __$OrganizationCopyWithImpl<$Res> extends _$OrganizationCopyWithImpl<$Res>
       alias: alias == freezed ? _value.alias : alias as List<String>,
       aliasElement: aliasElement == freezed
           ? _value.aliasElement
-          : aliasElement as Element,
+          : aliasElement as List<Element>,
       telecom:
           telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
       address: address == freezed ? _value.address : address as List<Address>,
@@ -5545,7 +5467,7 @@ class _$_Organization extends _Organization {
   final List<String> alias;
   @override
   @JsonKey(name: '_alias')
-  final Element aliasElement;
+  final List<Element> aliasElement;
   @override
   final List<ContactPoint> telecom;
   @override
@@ -5691,7 +5613,7 @@ abstract class _Organization extends Organization {
       String name,
       @JsonKey(name: '_name') Element nameElement,
       List<String> alias,
-      @JsonKey(name: '_alias') Element aliasElement,
+      @JsonKey(name: '_alias') List<Element> aliasElement,
       List<ContactPoint> telecom,
       List<Address> address,
       Reference partOf,
@@ -5745,7 +5667,7 @@ abstract class _Organization extends Organization {
   List<String> get alias;
   @override
   @JsonKey(name: '_alias')
-  Element get aliasElement;
+  List<Element> get aliasElement;
   @override
   List<ContactPoint> get telecom;
   @override

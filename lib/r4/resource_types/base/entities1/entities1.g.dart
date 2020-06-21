@@ -77,9 +77,10 @@ _$_Endpoint _$_$_EndpointFromJson(Map<String, dynamic> json) {
     payloadMimeType: (json['payloadMimeType'] as List)
         ?.map((e) => e == null ? null : Code.fromJson(e as String))
         ?.toList(),
-    payloadMimeTypeElement: json['_payloadMimeType'] == null
-        ? null
-        : Element.fromJson(json['_payloadMimeType'] as Map<String, dynamic>),
+    payloadMimeTypeElement: (json['_payloadMimeType'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     address: json['address'] == null
         ? null
         : FhirUrl.fromJson(json['address'] as String),
@@ -87,9 +88,10 @@ _$_Endpoint _$_$_EndpointFromJson(Map<String, dynamic> json) {
         ? null
         : Element.fromJson(json['_address'] as Map<String, dynamic>),
     header: (json['header'] as List)?.map((e) => e as String)?.toList(),
-    headerElement: json['_header'] == null
-        ? null
-        : Element.fromJson(json['_header'] as Map<String, dynamic>),
+    headerElement: (json['_header'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -130,11 +132,13 @@ Map<String, dynamic> _$_$_EndpointToJson(_$_Endpoint instance) {
       'payloadType', instance.payloadType?.map((e) => e?.toJson())?.toList());
   writeNotNull('payloadMimeType',
       instance.payloadMimeType?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_payloadMimeType', instance.payloadMimeTypeElement?.toJson());
+  writeNotNull('_payloadMimeType',
+      instance.payloadMimeTypeElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('address', instance.address?.toJson());
   writeNotNull('_address', instance.addressElement?.toJson());
   writeNotNull('header', instance.header);
-  writeNotNull('_header', instance.headerElement?.toJson());
+  writeNotNull(
+      '_header', instance.headerElement?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
@@ -468,9 +472,10 @@ _$_HealthcareServiceAvailableTime _$_$_HealthcareServiceAvailableTimeFromJson(
         ?.map((e) => _$enumDecodeNullable(
             _$HealthcareServiceAvailableTimeDaysOfWeekEnumMap, e))
         ?.toList(),
-    daysOfWeekElement: json['_daysOfWeek'] == null
-        ? null
-        : Element.fromJson(json['_daysOfWeek'] as Map<String, dynamic>),
+    daysOfWeekElement: (json['_daysOfWeek'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     allDay: json['allDay'] == null ? null : Boolean.fromJson(json['allDay']),
     allDayElement: json['_allDay'] == null
         ? null
@@ -510,7 +515,8 @@ Map<String, dynamic> _$_$_HealthcareServiceAvailableTimeToJson(
       instance.daysOfWeek
           ?.map((e) => _$HealthcareServiceAvailableTimeDaysOfWeekEnumMap[e])
           ?.toList());
-  writeNotNull('_daysOfWeek', instance.daysOfWeekElement?.toJson());
+  writeNotNull('_daysOfWeek',
+      instance.daysOfWeekElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('allDay', instance.allDay?.toJson());
   writeNotNull('_allDay', instance.allDayElement?.toJson());
   writeNotNull('availableStartTime', instance.availableStartTime?.toJson());
@@ -630,9 +636,10 @@ _$_Location _$_$_LocationFromJson(Map<String, dynamic> json) {
         ? null
         : Element.fromJson(json['_name'] as Map<String, dynamic>),
     alias: (json['alias'] as List)?.map((e) => e as String)?.toList(),
-    aliasElement: json['_alias'] == null
-        ? null
-        : Element.fromJson(json['_alias'] as Map<String, dynamic>),
+    aliasElement: (json['_alias'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     description: json['description'] as String,
     descriptionElement: json['_description'] == null
         ? null
@@ -716,7 +723,8 @@ Map<String, dynamic> _$_$_LocationToJson(_$_Location instance) {
   writeNotNull('name', instance.name);
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('alias', instance.alias);
-  writeNotNull('_alias', instance.aliasElement?.toJson());
+  writeNotNull(
+      '_alias', instance.aliasElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('mode', _$LocationModeEnumMap[instance.mode]);
@@ -822,9 +830,10 @@ _$_LocationHoursOfOperation _$_$_LocationHoursOfOperationFromJson(
     daysOfWeek: (json['daysOfWeek'] as List)
         ?.map((e) => e == null ? null : Code.fromJson(e as String))
         ?.toList(),
-    daysOfWeekElement: json['_daysOfWeek'] == null
-        ? null
-        : Element.fromJson(json['_daysOfWeek'] as Map<String, dynamic>),
+    daysOfWeekElement: (json['_daysOfWeek'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     allDay: json['allDay'] == null ? null : Boolean.fromJson(json['allDay']),
     allDayElement: json['_allDay'] == null
         ? null
@@ -861,7 +870,8 @@ Map<String, dynamic> _$_$_LocationHoursOfOperationToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'daysOfWeek', instance.daysOfWeek?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_daysOfWeek', instance.daysOfWeekElement?.toJson());
+  writeNotNull('_daysOfWeek',
+      instance.daysOfWeekElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('allDay', instance.allDay?.toJson());
   writeNotNull('_allDay', instance.allDayElement?.toJson());
   writeNotNull('openingTime', instance.openingTime?.toJson());
@@ -925,9 +935,10 @@ _$_Organization _$_$_OrganizationFromJson(Map<String, dynamic> json) {
         ? null
         : Element.fromJson(json['_name'] as Map<String, dynamic>),
     alias: (json['alias'] as List)?.map((e) => e as String)?.toList(),
-    aliasElement: json['_alias'] == null
-        ? null
-        : Element.fromJson(json['_alias'] as Map<String, dynamic>),
+    aliasElement: (json['_alias'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     telecom: (json['telecom'] as List)
         ?.map((e) =>
             e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
@@ -982,7 +993,8 @@ Map<String, dynamic> _$_$_OrganizationToJson(_$_Organization instance) {
   writeNotNull('name', instance.name);
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('alias', instance.alias);
-  writeNotNull('_alias', instance.aliasElement?.toJson());
+  writeNotNull(
+      '_alias', instance.aliasElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson())?.toList());
   writeNotNull('address', instance.address?.map((e) => e?.toJson())?.toList());
   writeNotNull('partOf', instance.partOf?.toJson());

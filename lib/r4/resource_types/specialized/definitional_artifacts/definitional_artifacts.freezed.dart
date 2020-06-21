@@ -3079,7 +3079,7 @@ class _$DeviceDefinitionTearOff {
       CodeableConcept type,
       List<DeviceDefinitionSpecialization> specialization,
       List<String> version,
-      @JsonKey(name: '_version') Element versionElement,
+      @JsonKey(name: '_version') List<Element> versionElement,
       List<CodeableConcept> safety,
       List<ProductShelfLife> shelfLifeStorage,
       ProdCharacteristic physicalCharacteristics,
@@ -3173,7 +3173,7 @@ mixin _$DeviceDefinition {
   List<DeviceDefinitionSpecialization> get specialization;
   List<String> get version;
   @JsonKey(name: '_version')
-  Element get versionElement;
+  List<Element> get versionElement;
   List<CodeableConcept> get safety;
   List<ProductShelfLife> get shelfLifeStorage;
   ProdCharacteristic get physicalCharacteristics;
@@ -3224,7 +3224,7 @@ abstract class $DeviceDefinitionCopyWith<$Res> {
       CodeableConcept type,
       List<DeviceDefinitionSpecialization> specialization,
       List<String> version,
-      @JsonKey(name: '_version') Element versionElement,
+      @JsonKey(name: '_version') List<Element> versionElement,
       List<CodeableConcept> safety,
       List<ProductShelfLife> shelfLifeStorage,
       ProdCharacteristic physicalCharacteristics,
@@ -3250,7 +3250,6 @@ abstract class $DeviceDefinitionCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get manufacturerReference;
   $ElementCopyWith<$Res> get modelNumberElement;
   $CodeableConceptCopyWith<$Res> get type;
-  $ElementCopyWith<$Res> get versionElement;
   $ProdCharacteristicCopyWith<$Res> get physicalCharacteristics;
   $ReferenceCopyWith<$Res> get owner;
   $ElementCopyWith<$Res> get urlElement;
@@ -3364,7 +3363,7 @@ class _$DeviceDefinitionCopyWithImpl<$Res>
       version: version == freezed ? _value.version : version as List<String>,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as Element,
+          : versionElement as List<Element>,
       safety:
           safety == freezed ? _value.safety : safety as List<CodeableConcept>,
       shelfLifeStorage: shelfLifeStorage == freezed
@@ -3486,16 +3485,6 @@ class _$DeviceDefinitionCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get versionElement {
-    if (_value.versionElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.versionElement, (value) {
-      return _then(_value.copyWith(versionElement: value));
-    });
-  }
-
-  @override
   $ProdCharacteristicCopyWith<$Res> get physicalCharacteristics {
     if (_value.physicalCharacteristics == null) {
       return null;
@@ -3586,7 +3575,7 @@ abstract class _$DeviceDefinitionCopyWith<$Res>
       CodeableConcept type,
       List<DeviceDefinitionSpecialization> specialization,
       List<String> version,
-      @JsonKey(name: '_version') Element versionElement,
+      @JsonKey(name: '_version') List<Element> versionElement,
       List<CodeableConcept> safety,
       List<ProductShelfLife> shelfLifeStorage,
       ProdCharacteristic physicalCharacteristics,
@@ -3620,8 +3609,6 @@ abstract class _$DeviceDefinitionCopyWith<$Res>
   $ElementCopyWith<$Res> get modelNumberElement;
   @override
   $CodeableConceptCopyWith<$Res> get type;
-  @override
-  $ElementCopyWith<$Res> get versionElement;
   @override
   $ProdCharacteristicCopyWith<$Res> get physicalCharacteristics;
   @override
@@ -3743,7 +3730,7 @@ class __$DeviceDefinitionCopyWithImpl<$Res>
       version: version == freezed ? _value.version : version as List<String>,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as Element,
+          : versionElement as List<Element>,
       safety:
           safety == freezed ? _value.safety : safety as List<CodeableConcept>,
       shelfLifeStorage: shelfLifeStorage == freezed
@@ -3885,7 +3872,7 @@ class _$_DeviceDefinition extends _DeviceDefinition {
   final List<String> version;
   @override
   @JsonKey(name: '_version')
-  final Element versionElement;
+  final List<Element> versionElement;
   @override
   final List<CodeableConcept> safety;
   @override
@@ -4089,7 +4076,7 @@ abstract class _DeviceDefinition extends DeviceDefinition {
       CodeableConcept type,
       List<DeviceDefinitionSpecialization> specialization,
       List<String> version,
-      @JsonKey(name: '_version') Element versionElement,
+      @JsonKey(name: '_version') List<Element> versionElement,
       List<CodeableConcept> safety,
       List<ProductShelfLife> shelfLifeStorage,
       ProdCharacteristic physicalCharacteristics,
@@ -4162,7 +4149,7 @@ abstract class _DeviceDefinition extends DeviceDefinition {
   List<String> get version;
   @override
   @JsonKey(name: '_version')
-  Element get versionElement;
+  List<Element> get versionElement;
   @override
   List<CodeableConcept> get safety;
   @override
@@ -7803,7 +7790,7 @@ class _$ObservationDefinitionTearOff {
       List<Identifier> identifier,
       List<ObservationDefinitionPermittedDataType> permittedDataType,
       @JsonKey(name: '_permittedDataType')
-          Element permittedDataTypeElement,
+          List<Element> permittedDataTypeElement,
       Boolean multipleResultsAllowed,
       @JsonKey(name: '_multipleResultsAllowed')
           Element multipleResultsAllowedElement,
@@ -7873,7 +7860,7 @@ mixin _$ObservationDefinition {
   List<Identifier> get identifier;
   List<ObservationDefinitionPermittedDataType> get permittedDataType;
   @JsonKey(name: '_permittedDataType')
-  Element get permittedDataTypeElement;
+  List<Element> get permittedDataTypeElement;
   Boolean get multipleResultsAllowed;
   @JsonKey(name: '_multipleResultsAllowed')
   Element get multipleResultsAllowedElement;
@@ -7917,7 +7904,7 @@ abstract class $ObservationDefinitionCopyWith<$Res> {
       List<Identifier> identifier,
       List<ObservationDefinitionPermittedDataType> permittedDataType,
       @JsonKey(name: '_permittedDataType')
-          Element permittedDataTypeElement,
+          List<Element> permittedDataTypeElement,
       Boolean multipleResultsAllowed,
       @JsonKey(name: '_multipleResultsAllowed')
           Element multipleResultsAllowedElement,
@@ -7937,7 +7924,6 @@ abstract class $ObservationDefinitionCopyWith<$Res> {
   $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
   $CodeableConceptCopyWith<$Res> get code;
-  $ElementCopyWith<$Res> get permittedDataTypeElement;
   $ElementCopyWith<$Res> get multipleResultsAllowedElement;
   $CodeableConceptCopyWith<$Res> get method;
   $ElementCopyWith<$Res> get preferredReportNameElement;
@@ -8024,7 +8010,7 @@ class _$ObservationDefinitionCopyWithImpl<$Res>
           : permittedDataType as List<ObservationDefinitionPermittedDataType>,
       permittedDataTypeElement: permittedDataTypeElement == freezed
           ? _value.permittedDataTypeElement
-          : permittedDataTypeElement as Element,
+          : permittedDataTypeElement as List<Element>,
       multipleResultsAllowed: multipleResultsAllowed == freezed
           ? _value.multipleResultsAllowed
           : multipleResultsAllowed as Boolean,
@@ -8106,16 +8092,6 @@ class _$ObservationDefinitionCopyWithImpl<$Res>
     }
     return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
       return _then(_value.copyWith(code: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get permittedDataTypeElement {
-    if (_value.permittedDataTypeElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.permittedDataTypeElement, (value) {
-      return _then(_value.copyWith(permittedDataTypeElement: value));
     });
   }
 
@@ -8230,7 +8206,7 @@ abstract class _$ObservationDefinitionCopyWith<$Res>
       List<Identifier> identifier,
       List<ObservationDefinitionPermittedDataType> permittedDataType,
       @JsonKey(name: '_permittedDataType')
-          Element permittedDataTypeElement,
+          List<Element> permittedDataTypeElement,
       Boolean multipleResultsAllowed,
       @JsonKey(name: '_multipleResultsAllowed')
           Element multipleResultsAllowedElement,
@@ -8255,8 +8231,6 @@ abstract class _$ObservationDefinitionCopyWith<$Res>
   $NarrativeCopyWith<$Res> get text;
   @override
   $CodeableConceptCopyWith<$Res> get code;
-  @override
-  $ElementCopyWith<$Res> get permittedDataTypeElement;
   @override
   $ElementCopyWith<$Res> get multipleResultsAllowedElement;
   @override
@@ -8353,7 +8327,7 @@ class __$ObservationDefinitionCopyWithImpl<$Res>
           : permittedDataType as List<ObservationDefinitionPermittedDataType>,
       permittedDataTypeElement: permittedDataTypeElement == freezed
           ? _value.permittedDataTypeElement
-          : permittedDataTypeElement as Element,
+          : permittedDataTypeElement as List<Element>,
       multipleResultsAllowed: multipleResultsAllowed == freezed
           ? _value.multipleResultsAllowed
           : multipleResultsAllowed as Boolean,
@@ -8471,7 +8445,7 @@ class _$_ObservationDefinition extends _ObservationDefinition {
   final List<ObservationDefinitionPermittedDataType> permittedDataType;
   @override
   @JsonKey(name: '_permittedDataType')
-  final Element permittedDataTypeElement;
+  final List<Element> permittedDataTypeElement;
   @override
   final Boolean multipleResultsAllowed;
   @override
@@ -8641,7 +8615,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
       List<Identifier> identifier,
       List<ObservationDefinitionPermittedDataType> permittedDataType,
       @JsonKey(name: '_permittedDataType')
-          Element permittedDataTypeElement,
+          List<Element> permittedDataTypeElement,
       Boolean multipleResultsAllowed,
       @JsonKey(name: '_multipleResultsAllowed')
           Element multipleResultsAllowedElement,
@@ -8695,7 +8669,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
   List<ObservationDefinitionPermittedDataType> get permittedDataType;
   @override
   @JsonKey(name: '_permittedDataType')
-  Element get permittedDataTypeElement;
+  List<Element> get permittedDataTypeElement;
   @override
   Boolean get multipleResultsAllowed;
   @override
@@ -12240,7 +12214,7 @@ class _$PlanDefinitionActionTearOff {
       List<RelatedArtifact> documentation,
       List<Id> goalId,
       @JsonKey(name: '_goalId')
-          Element goalIdElement,
+          List<Element> goalIdElement,
       CodeableConcept subjectCodeableConcept,
       Reference subjectReference,
       List<TriggerDefinition> trigger,
@@ -12371,7 +12345,7 @@ mixin _$PlanDefinitionAction {
   List<RelatedArtifact> get documentation;
   List<Id> get goalId;
   @JsonKey(name: '_goalId')
-  Element get goalIdElement;
+  List<Element> get goalIdElement;
   CodeableConcept get subjectCodeableConcept;
   Reference get subjectReference;
   List<TriggerDefinition> get trigger;
@@ -12452,7 +12426,7 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
       List<RelatedArtifact> documentation,
       List<Id> goalId,
       @JsonKey(name: '_goalId')
-          Element goalIdElement,
+          List<Element> goalIdElement,
       CodeableConcept subjectCodeableConcept,
       Reference subjectReference,
       List<TriggerDefinition> trigger,
@@ -12505,7 +12479,6 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
   $ElementCopyWith<$Res> get descriptionElement;
   $ElementCopyWith<$Res> get textEquivalentElement;
   $ElementCopyWith<$Res> get priorityElement;
-  $ElementCopyWith<$Res> get goalIdElement;
   $CodeableConceptCopyWith<$Res> get subjectCodeableConcept;
   $ReferenceCopyWith<$Res> get subjectReference;
   $ElementCopyWith<$Res> get timingDateTimeElement;
@@ -12626,7 +12599,7 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
       goalId: goalId == freezed ? _value.goalId : goalId as List<Id>,
       goalIdElement: goalIdElement == freezed
           ? _value.goalIdElement
-          : goalIdElement as Element,
+          : goalIdElement as List<Element>,
       subjectCodeableConcept: subjectCodeableConcept == freezed
           ? _value.subjectCodeableConcept
           : subjectCodeableConcept as CodeableConcept,
@@ -12767,16 +12740,6 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
     }
     return $ElementCopyWith<$Res>(_value.priorityElement, (value) {
       return _then(_value.copyWith(priorityElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get goalIdElement {
-    if (_value.goalIdElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.goalIdElement, (value) {
-      return _then(_value.copyWith(goalIdElement: value));
     });
   }
 
@@ -12973,7 +12936,7 @@ abstract class _$PlanDefinitionActionCopyWith<$Res>
       List<RelatedArtifact> documentation,
       List<Id> goalId,
       @JsonKey(name: '_goalId')
-          Element goalIdElement,
+          List<Element> goalIdElement,
       CodeableConcept subjectCodeableConcept,
       Reference subjectReference,
       List<TriggerDefinition> trigger,
@@ -13031,8 +12994,6 @@ abstract class _$PlanDefinitionActionCopyWith<$Res>
   $ElementCopyWith<$Res> get textEquivalentElement;
   @override
   $ElementCopyWith<$Res> get priorityElement;
-  @override
-  $ElementCopyWith<$Res> get goalIdElement;
   @override
   $CodeableConceptCopyWith<$Res> get subjectCodeableConcept;
   @override
@@ -13171,7 +13132,7 @@ class __$PlanDefinitionActionCopyWithImpl<$Res>
       goalId: goalId == freezed ? _value.goalId : goalId as List<Id>,
       goalIdElement: goalIdElement == freezed
           ? _value.goalIdElement
-          : goalIdElement as Element,
+          : goalIdElement as List<Element>,
       subjectCodeableConcept: subjectCodeableConcept == freezed
           ? _value.subjectCodeableConcept
           : subjectCodeableConcept as CodeableConcept,
@@ -13387,7 +13348,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
   final List<Id> goalId;
   @override
   @JsonKey(name: '_goalId')
-  final Element goalIdElement;
+  final List<Element> goalIdElement;
   @override
   final CodeableConcept subjectCodeableConcept;
   @override
@@ -13665,7 +13626,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
       List<RelatedArtifact> documentation,
       List<Id> goalId,
       @JsonKey(name: '_goalId')
-          Element goalIdElement,
+          List<Element> goalIdElement,
       CodeableConcept subjectCodeableConcept,
       Reference subjectReference,
       List<TriggerDefinition> trigger,
@@ -13758,7 +13719,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
   List<Id> get goalId;
   @override
   @JsonKey(name: '_goalId')
-  Element get goalIdElement;
+  List<Element> get goalIdElement;
   @override
   CodeableConcept get subjectCodeableConcept;
   @override
@@ -15166,7 +15127,7 @@ class _$QuestionnaireTearOff {
           Element experimentalElement,
       List<Code> subjectType,
       @JsonKey(name: '_subjectType')
-          Element subjectTypeElement,
+          List<Element> subjectTypeElement,
       FhirDateTime date,
       @JsonKey(name: '_date')
           Element dateElement,
@@ -15288,7 +15249,7 @@ mixin _$Questionnaire {
   Element get experimentalElement;
   List<Code> get subjectType;
   @JsonKey(name: '_subjectType')
-  Element get subjectTypeElement;
+  List<Element> get subjectTypeElement;
   FhirDateTime get date;
   @JsonKey(name: '_date')
   Element get dateElement;
@@ -15364,7 +15325,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
           Element experimentalElement,
       List<Code> subjectType,
       @JsonKey(name: '_subjectType')
-          Element subjectTypeElement,
+          List<Element> subjectTypeElement,
       FhirDateTime date,
       @JsonKey(name: '_date')
           Element dateElement,
@@ -15403,7 +15364,6 @@ abstract class $QuestionnaireCopyWith<$Res> {
   $ElementCopyWith<$Res> get titleElement;
   $ElementCopyWith<$Res> get statusElement;
   $ElementCopyWith<$Res> get experimentalElement;
-  $ElementCopyWith<$Res> get subjectTypeElement;
   $ElementCopyWith<$Res> get dateElement;
   $ElementCopyWith<$Res> get publisherElement;
   $ElementCopyWith<$Res> get descriptionElement;
@@ -15532,7 +15492,7 @@ class _$QuestionnaireCopyWithImpl<$Res>
           : subjectType as List<Code>,
       subjectTypeElement: subjectTypeElement == freezed
           ? _value.subjectTypeElement
-          : subjectTypeElement as Element,
+          : subjectTypeElement as List<Element>,
       date: date == freezed ? _value.date : date as FhirDateTime,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element,
@@ -15682,16 +15642,6 @@ class _$QuestionnaireCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get subjectTypeElement {
-    if (_value.subjectTypeElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.subjectTypeElement, (value) {
-      return _then(_value.copyWith(subjectTypeElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get dateElement {
     if (_value.dateElement == null) {
       return null;
@@ -15817,7 +15767,7 @@ abstract class _$QuestionnaireCopyWith<$Res>
           Element experimentalElement,
       List<Code> subjectType,
       @JsonKey(name: '_subjectType')
-          Element subjectTypeElement,
+          List<Element> subjectTypeElement,
       FhirDateTime date,
       @JsonKey(name: '_date')
           Element dateElement,
@@ -15866,8 +15816,6 @@ abstract class _$QuestionnaireCopyWith<$Res>
   $ElementCopyWith<$Res> get statusElement;
   @override
   $ElementCopyWith<$Res> get experimentalElement;
-  @override
-  $ElementCopyWith<$Res> get subjectTypeElement;
   @override
   $ElementCopyWith<$Res> get dateElement;
   @override
@@ -16006,7 +15954,7 @@ class __$QuestionnaireCopyWithImpl<$Res>
           : subjectType as List<Code>,
       subjectTypeElement: subjectTypeElement == freezed
           ? _value.subjectTypeElement
-          : subjectTypeElement as Element,
+          : subjectTypeElement as List<Element>,
       date: date == freezed ? _value.date : date as FhirDateTime,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element,
@@ -16177,7 +16125,7 @@ class _$_Questionnaire extends _Questionnaire {
   final List<Code> subjectType;
   @override
   @JsonKey(name: '_subjectType')
-  final Element subjectTypeElement;
+  final List<Element> subjectTypeElement;
   @override
   final FhirDateTime date;
   @override
@@ -16430,7 +16378,7 @@ abstract class _Questionnaire extends Questionnaire {
           Element experimentalElement,
       List<Code> subjectType,
       @JsonKey(name: '_subjectType')
-          Element subjectTypeElement,
+          List<Element> subjectTypeElement,
       FhirDateTime date,
       @JsonKey(name: '_date')
           Element dateElement,
@@ -16527,7 +16475,7 @@ abstract class _Questionnaire extends Questionnaire {
   List<Code> get subjectType;
   @override
   @JsonKey(name: '_subjectType')
-  Element get subjectTypeElement;
+  List<Element> get subjectTypeElement;
   @override
   FhirDateTime get date;
   @override

@@ -688,9 +688,9 @@ class _$ProdCharacteristicTearOff {
       String shape,
       @JsonKey(name: '_shape') Element shapeElement,
       List<String> color,
-      @JsonKey(name: '_color') Element colorElement,
+      @JsonKey(name: '_color') List<Element> colorElement,
       List<String> imprint,
-      @JsonKey(name: '_imprint') Element imprintElement,
+      @JsonKey(name: '_imprint') List<Element> imprintElement,
       List<Attachment> image,
       CodeableConcept scoring}) {
     return _ProdCharacteristic(
@@ -734,10 +734,10 @@ mixin _$ProdCharacteristic {
   Element get shapeElement;
   List<String> get color;
   @JsonKey(name: '_color')
-  Element get colorElement;
+  List<Element> get colorElement;
   List<String> get imprint;
   @JsonKey(name: '_imprint')
-  Element get imprintElement;
+  List<Element> get imprintElement;
   List<Attachment> get image;
   CodeableConcept get scoring;
 
@@ -762,9 +762,9 @@ abstract class $ProdCharacteristicCopyWith<$Res> {
       String shape,
       @JsonKey(name: '_shape') Element shapeElement,
       List<String> color,
-      @JsonKey(name: '_color') Element colorElement,
+      @JsonKey(name: '_color') List<Element> colorElement,
       List<String> imprint,
-      @JsonKey(name: '_imprint') Element imprintElement,
+      @JsonKey(name: '_imprint') List<Element> imprintElement,
       List<Attachment> image,
       CodeableConcept scoring});
 
@@ -775,8 +775,6 @@ abstract class $ProdCharacteristicCopyWith<$Res> {
   $QuantityCopyWith<$Res> get nominalVolume;
   $QuantityCopyWith<$Res> get externalDiameter;
   $ElementCopyWith<$Res> get shapeElement;
-  $ElementCopyWith<$Res> get colorElement;
-  $ElementCopyWith<$Res> get imprintElement;
   $CodeableConceptCopyWith<$Res> get scoring;
 }
 
@@ -833,11 +831,11 @@ class _$ProdCharacteristicCopyWithImpl<$Res>
       color: color == freezed ? _value.color : color as List<String>,
       colorElement: colorElement == freezed
           ? _value.colorElement
-          : colorElement as Element,
+          : colorElement as List<Element>,
       imprint: imprint == freezed ? _value.imprint : imprint as List<String>,
       imprintElement: imprintElement == freezed
           ? _value.imprintElement
-          : imprintElement as Element,
+          : imprintElement as List<Element>,
       image: image == freezed ? _value.image : image as List<Attachment>,
       scoring: scoring == freezed ? _value.scoring : scoring as CodeableConcept,
     ));
@@ -914,26 +912,6 @@ class _$ProdCharacteristicCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get colorElement {
-    if (_value.colorElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.colorElement, (value) {
-      return _then(_value.copyWith(colorElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get imprintElement {
-    if (_value.imprintElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.imprintElement, (value) {
-      return _then(_value.copyWith(imprintElement: value));
-    });
-  }
-
-  @override
   $CodeableConceptCopyWith<$Res> get scoring {
     if (_value.scoring == null) {
       return null;
@@ -963,9 +941,9 @@ abstract class _$ProdCharacteristicCopyWith<$Res>
       String shape,
       @JsonKey(name: '_shape') Element shapeElement,
       List<String> color,
-      @JsonKey(name: '_color') Element colorElement,
+      @JsonKey(name: '_color') List<Element> colorElement,
       List<String> imprint,
-      @JsonKey(name: '_imprint') Element imprintElement,
+      @JsonKey(name: '_imprint') List<Element> imprintElement,
       List<Attachment> image,
       CodeableConcept scoring});
 
@@ -983,10 +961,6 @@ abstract class _$ProdCharacteristicCopyWith<$Res>
   $QuantityCopyWith<$Res> get externalDiameter;
   @override
   $ElementCopyWith<$Res> get shapeElement;
-  @override
-  $ElementCopyWith<$Res> get colorElement;
-  @override
-  $ElementCopyWith<$Res> get imprintElement;
   @override
   $CodeableConceptCopyWith<$Res> get scoring;
 }
@@ -1046,11 +1020,11 @@ class __$ProdCharacteristicCopyWithImpl<$Res>
       color: color == freezed ? _value.color : color as List<String>,
       colorElement: colorElement == freezed
           ? _value.colorElement
-          : colorElement as Element,
+          : colorElement as List<Element>,
       imprint: imprint == freezed ? _value.imprint : imprint as List<String>,
       imprintElement: imprintElement == freezed
           ? _value.imprintElement
-          : imprintElement as Element,
+          : imprintElement as List<Element>,
       image: image == freezed ? _value.image : image as List<Attachment>,
       scoring: scoring == freezed ? _value.scoring : scoring as CodeableConcept,
     ));
@@ -1110,12 +1084,12 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
   final List<String> color;
   @override
   @JsonKey(name: '_color')
-  final Element colorElement;
+  final List<Element> colorElement;
   @override
   final List<String> imprint;
   @override
   @JsonKey(name: '_imprint')
-  final Element imprintElement;
+  final List<Element> imprintElement;
   @override
   final List<Attachment> image;
   @override
@@ -1220,9 +1194,9 @@ abstract class _ProdCharacteristic extends ProdCharacteristic {
       String shape,
       @JsonKey(name: '_shape') Element shapeElement,
       List<String> color,
-      @JsonKey(name: '_color') Element colorElement,
+      @JsonKey(name: '_color') List<Element> colorElement,
       List<String> imprint,
-      @JsonKey(name: '_imprint') Element imprintElement,
+      @JsonKey(name: '_imprint') List<Element> imprintElement,
       List<Attachment> image,
       CodeableConcept scoring}) = _$_ProdCharacteristic;
 
@@ -1257,12 +1231,12 @@ abstract class _ProdCharacteristic extends ProdCharacteristic {
   List<String> get color;
   @override
   @JsonKey(name: '_color')
-  Element get colorElement;
+  List<Element> get colorElement;
   @override
   List<String> get imprint;
   @override
   @JsonKey(name: '_imprint')
-  Element get imprintElement;
+  List<Element> get imprintElement;
   @override
   List<Attachment> get image;
   @override

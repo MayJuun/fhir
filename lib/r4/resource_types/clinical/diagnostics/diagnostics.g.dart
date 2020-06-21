@@ -1457,45 +1457,52 @@ _$_MolecularSequenceRoc _$_$_MolecularSequenceRocFromJson(
     score: (json['score'] as List)
         ?.map((e) => e == null ? null : Integer.fromJson(e))
         ?.toList(),
-    scoreElement: json['_score'] == null
-        ? null
-        : Element.fromJson(json['_score'] as Map<String, dynamic>),
+    scoreElement: (json['_score'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     numTP: (json['numTP'] as List)
         ?.map((e) => e == null ? null : Integer.fromJson(e))
         ?.toList(),
-    numTPElement: json['_numTP'] == null
-        ? null
-        : Element.fromJson(json['_numTP'] as Map<String, dynamic>),
+    numTPElement: (json['_numTP'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     numFP: (json['numFP'] as List)
         ?.map((e) => e == null ? null : Integer.fromJson(e))
         ?.toList(),
-    numFPElement: json['_numFP'] == null
-        ? null
-        : Element.fromJson(json['_numFP'] as Map<String, dynamic>),
+    numFPElement: (json['_numFP'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     numFN: (json['numFN'] as List)
         ?.map((e) => e == null ? null : Integer.fromJson(e))
         ?.toList(),
-    numFNElement: json['_numFN'] == null
-        ? null
-        : Element.fromJson(json['_numFN'] as Map<String, dynamic>),
+    numFNElement: (json['_numFN'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     precision: (json['precision'] as List)
         ?.map((e) => e == null ? null : Decimal.fromJson(e))
         ?.toList(),
-    precisionElement: json['_precision'] == null
-        ? null
-        : Element.fromJson(json['_precision'] as Map<String, dynamic>),
+    precisionElement: (json['_precision'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     sensitivity: (json['sensitivity'] as List)
         ?.map((e) => e == null ? null : Decimal.fromJson(e))
         ?.toList(),
-    sensitivityElement: json['_sensitivity'] == null
-        ? null
-        : Element.fromJson(json['_sensitivity'] as Map<String, dynamic>),
+    sensitivityElement: (json['_sensitivity'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     fMeasure: (json['fMeasure'] as List)
         ?.map((e) => e == null ? null : Decimal.fromJson(e))
         ?.toList(),
-    fMeasureElement: json['_fMeasure'] == null
-        ? null
-        : Element.fromJson(json['_fMeasure'] as Map<String, dynamic>),
+    fMeasureElement: (json['_fMeasure'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -1515,22 +1522,29 @@ Map<String, dynamic> _$_$_MolecularSequenceRocToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('score', instance.score?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_score', instance.scoreElement?.toJson());
+  writeNotNull(
+      '_score', instance.scoreElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('numTP', instance.numTP?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_numTP', instance.numTPElement?.toJson());
+  writeNotNull(
+      '_numTP', instance.numTPElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('numFP', instance.numFP?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_numFP', instance.numFPElement?.toJson());
+  writeNotNull(
+      '_numFP', instance.numFPElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('numFN', instance.numFN?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_numFN', instance.numFNElement?.toJson());
+  writeNotNull(
+      '_numFN', instance.numFNElement?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'precision', instance.precision?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_precision', instance.precisionElement?.toJson());
+  writeNotNull('_precision',
+      instance.precisionElement?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'sensitivity', instance.sensitivity?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_sensitivity', instance.sensitivityElement?.toJson());
+  writeNotNull('_sensitivity',
+      instance.sensitivityElement?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'fMeasure', instance.fMeasure?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_fMeasure', instance.fMeasureElement?.toJson());
+  writeNotNull(
+      '_fMeasure', instance.fMeasureElement?.map((e) => e?.toJson())?.toList());
   return val;
 }
 

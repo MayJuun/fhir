@@ -40,7 +40,7 @@ class _$FhirExtensionTearOff {
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
       Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Integer valueInteger64,
+      Integer64 valueInteger64,
       @JsonKey(name: '_valueInteger64') Element valueInteger64Element,
       Markdown valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
@@ -211,7 +211,7 @@ mixin _$FhirExtension {
   Integer get valueInteger;
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
-  Integer get valueInteger64;
+  Integer64 get valueInteger64;
   @JsonKey(name: '_valueInteger64')
   Element get valueInteger64Element;
   Markdown get valueMarkdown;
@@ -306,7 +306,7 @@ abstract class $FhirExtensionCopyWith<$Res> {
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
       Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Integer valueInteger64,
+      Integer64 valueInteger64,
       @JsonKey(name: '_valueInteger64') Element valueInteger64Element,
       Markdown valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
@@ -562,7 +562,7 @@ class _$FhirExtensionCopyWithImpl<$Res>
           : valueIntegerElement as Element,
       valueInteger64: valueInteger64 == freezed
           ? _value.valueInteger64
-          : valueInteger64 as Integer,
+          : valueInteger64 as Integer64,
       valueInteger64Element: valueInteger64Element == freezed
           ? _value.valueInteger64Element
           : valueInteger64Element as Element,
@@ -1247,7 +1247,7 @@ abstract class _$FhirExtensionCopyWith<$Res>
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
       Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Integer valueInteger64,
+      Integer64 valueInteger64,
       @JsonKey(name: '_valueInteger64') Element valueInteger64Element,
       Markdown valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
@@ -1557,7 +1557,7 @@ class __$FhirExtensionCopyWithImpl<$Res>
           : valueIntegerElement as Element,
       valueInteger64: valueInteger64 == freezed
           ? _value.valueInteger64
-          : valueInteger64 as Integer,
+          : valueInteger64 as Integer64,
       valueInteger64Element: valueInteger64Element == freezed
           ? _value.valueInteger64Element
           : valueInteger64Element as Element,
@@ -1833,7 +1833,7 @@ class _$_FhirExtension extends _FhirExtension {
   @JsonKey(name: '_valueInteger')
   final Element valueIntegerElement;
   @override
-  final Integer valueInteger64;
+  final Integer64 valueInteger64;
   @override
   @JsonKey(name: '_valueInteger64')
   final Element valueInteger64Element;
@@ -2180,7 +2180,7 @@ abstract class _FhirExtension extends FhirExtension {
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
       Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Integer valueInteger64,
+      Integer64 valueInteger64,
       @JsonKey(name: '_valueInteger64') Element valueInteger64Element,
       Markdown valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
@@ -2296,7 +2296,7 @@ abstract class _FhirExtension extends FhirExtension {
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
   @override
-  Integer get valueInteger64;
+  Integer64 get valueInteger64;
   @override
   @JsonKey(name: '_valueInteger64')
   Element get valueInteger64Element;
@@ -7265,7 +7265,7 @@ class _$ElementDefinitionTearOff {
           Element pathElement,
       List<ElementDefinitionRepresentation> representation,
       @JsonKey(name: '_representation')
-          Element representationElement,
+          List<Element> representationElement,
       String sliceName,
       @JsonKey(name: '_sliceName')
           Element sliceNameElement,
@@ -7291,7 +7291,7 @@ class _$ElementDefinitionTearOff {
           Element requirementsElement,
       List<String> alias,
       @JsonKey(name: '_alias')
-          Element aliasElement,
+          List<Element> aliasElement,
       UnsignedInt min,
       @JsonKey(name: '_min')
           Element minElement,
@@ -7333,7 +7333,7 @@ class _$ElementDefinitionTearOff {
       Integer defaultValueInteger,
       @JsonKey(name: '_defaultValueInteger')
           Element defaultValueIntegerElement,
-      Integer defaultValueInteger64,
+      Integer64 defaultValueInteger64,
       @JsonKey(name: '_defaultValueInteger64')
           Element defaultValueInteger64Element,
       Markdown defaultValueMarkdown,
@@ -7430,7 +7430,7 @@ class _$ElementDefinitionTearOff {
       Integer fixedInteger,
       @JsonKey(name: '_fixedInteger')
           Element fixedIntegerElement,
-      Integer fixedInteger64,
+      Integer64 fixedInteger64,
       @JsonKey(name: '_fixedInteger64')
           Element fixedInteger64Element,
       Markdown fixedMarkdown,
@@ -7521,7 +7521,7 @@ class _$ElementDefinitionTearOff {
       Integer patternInteger,
       @JsonKey(name: '_patternInteger')
           Element patternIntegerElement,
-      Integer patternInteger64,
+      Integer64 patternInteger64,
       @JsonKey(name: '_patternInteger64')
           Element patternInteger64Element,
       Markdown patternMarkdown,
@@ -7601,7 +7601,7 @@ class _$ElementDefinitionTearOff {
       Integer minValueInteger,
       @JsonKey(name: '_minValueInteger')
           Element minValueIntegerElement,
-      Integer minValueInteger64,
+      Integer64 minValueInteger64,
       @JsonKey(name: '_minValueInteger64')
           Element minValueInteger64Element,
       PositiveInt minValuePositiveInt,
@@ -7629,7 +7629,7 @@ class _$ElementDefinitionTearOff {
       Integer maxValueInteger,
       @JsonKey(name: '_maxValueInteger')
           Element maxValueIntegerElement,
-      Integer maxValueInteger64,
+      Integer64 maxValueInteger64,
       @JsonKey(name: '_maxValueInteger64')
           Element maxValueInteger64Element,
       PositiveInt maxValuePositiveInt,
@@ -7644,7 +7644,7 @@ class _$ElementDefinitionTearOff {
           Element maxLengthElement,
       List<Id> condition,
       @JsonKey(name: '_condition')
-          Element conditionElement,
+          List<Element> conditionElement,
       List<ElementDefinitionConstraint> constraint,
       Boolean mustSupport,
       @JsonKey(name: '_mustSupport')
@@ -7982,7 +7982,7 @@ mixin _$ElementDefinition {
   Element get pathElement;
   List<ElementDefinitionRepresentation> get representation;
   @JsonKey(name: '_representation')
-  Element get representationElement;
+  List<Element> get representationElement;
   String get sliceName;
   @JsonKey(name: '_sliceName')
   Element get sliceNameElement;
@@ -8008,7 +8008,7 @@ mixin _$ElementDefinition {
   Element get requirementsElement;
   List<String> get alias;
   @JsonKey(name: '_alias')
-  Element get aliasElement;
+  List<Element> get aliasElement;
   UnsignedInt get min;
   @JsonKey(name: '_min')
   Element get minElement;
@@ -8050,7 +8050,7 @@ mixin _$ElementDefinition {
   Integer get defaultValueInteger;
   @JsonKey(name: '_defaultValueInteger')
   Element get defaultValueIntegerElement;
-  Integer get defaultValueInteger64;
+  Integer64 get defaultValueInteger64;
   @JsonKey(name: '_defaultValueInteger64')
   Element get defaultValueInteger64Element;
   Markdown get defaultValueMarkdown;
@@ -8147,7 +8147,7 @@ mixin _$ElementDefinition {
   Integer get fixedInteger;
   @JsonKey(name: '_fixedInteger')
   Element get fixedIntegerElement;
-  Integer get fixedInteger64;
+  Integer64 get fixedInteger64;
   @JsonKey(name: '_fixedInteger64')
   Element get fixedInteger64Element;
   Markdown get fixedMarkdown;
@@ -8238,7 +8238,7 @@ mixin _$ElementDefinition {
   Integer get patternInteger;
   @JsonKey(name: '_patternInteger')
   Element get patternIntegerElement;
-  Integer get patternInteger64;
+  Integer64 get patternInteger64;
   @JsonKey(name: '_patternInteger64')
   Element get patternInteger64Element;
   Markdown get patternMarkdown;
@@ -8318,7 +8318,7 @@ mixin _$ElementDefinition {
   Integer get minValueInteger;
   @JsonKey(name: '_minValueInteger')
   Element get minValueIntegerElement;
-  Integer get minValueInteger64;
+  Integer64 get minValueInteger64;
   @JsonKey(name: '_minValueInteger64')
   Element get minValueInteger64Element;
   PositiveInt get minValuePositiveInt;
@@ -8346,7 +8346,7 @@ mixin _$ElementDefinition {
   Integer get maxValueInteger;
   @JsonKey(name: '_maxValueInteger')
   Element get maxValueIntegerElement;
-  Integer get maxValueInteger64;
+  Integer64 get maxValueInteger64;
   @JsonKey(name: '_maxValueInteger64')
   Element get maxValueInteger64Element;
   PositiveInt get maxValuePositiveInt;
@@ -8361,7 +8361,7 @@ mixin _$ElementDefinition {
   Element get maxLengthElement;
   List<Id> get condition;
   @JsonKey(name: '_condition')
-  Element get conditionElement;
+  List<Element> get conditionElement;
   List<ElementDefinitionConstraint> get constraint;
   Boolean get mustSupport;
   @JsonKey(name: '_mustSupport')
@@ -8396,7 +8396,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
           Element pathElement,
       List<ElementDefinitionRepresentation> representation,
       @JsonKey(name: '_representation')
-          Element representationElement,
+          List<Element> representationElement,
       String sliceName,
       @JsonKey(name: '_sliceName')
           Element sliceNameElement,
@@ -8422,7 +8422,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
           Element requirementsElement,
       List<String> alias,
       @JsonKey(name: '_alias')
-          Element aliasElement,
+          List<Element> aliasElement,
       UnsignedInt min,
       @JsonKey(name: '_min')
           Element minElement,
@@ -8464,7 +8464,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Integer defaultValueInteger,
       @JsonKey(name: '_defaultValueInteger')
           Element defaultValueIntegerElement,
-      Integer defaultValueInteger64,
+      Integer64 defaultValueInteger64,
       @JsonKey(name: '_defaultValueInteger64')
           Element defaultValueInteger64Element,
       Markdown defaultValueMarkdown,
@@ -8561,7 +8561,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Integer fixedInteger,
       @JsonKey(name: '_fixedInteger')
           Element fixedIntegerElement,
-      Integer fixedInteger64,
+      Integer64 fixedInteger64,
       @JsonKey(name: '_fixedInteger64')
           Element fixedInteger64Element,
       Markdown fixedMarkdown,
@@ -8652,7 +8652,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Integer patternInteger,
       @JsonKey(name: '_patternInteger')
           Element patternIntegerElement,
-      Integer patternInteger64,
+      Integer64 patternInteger64,
       @JsonKey(name: '_patternInteger64')
           Element patternInteger64Element,
       Markdown patternMarkdown,
@@ -8732,7 +8732,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Integer minValueInteger,
       @JsonKey(name: '_minValueInteger')
           Element minValueIntegerElement,
-      Integer minValueInteger64,
+      Integer64 minValueInteger64,
       @JsonKey(name: '_minValueInteger64')
           Element minValueInteger64Element,
       PositiveInt minValuePositiveInt,
@@ -8760,7 +8760,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Integer maxValueInteger,
       @JsonKey(name: '_maxValueInteger')
           Element maxValueIntegerElement,
-      Integer maxValueInteger64,
+      Integer64 maxValueInteger64,
       @JsonKey(name: '_maxValueInteger64')
           Element maxValueInteger64Element,
       PositiveInt maxValuePositiveInt,
@@ -8775,7 +8775,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
           Element maxLengthElement,
       List<Id> condition,
       @JsonKey(name: '_condition')
-          Element conditionElement,
+          List<Element> conditionElement,
       List<ElementDefinitionConstraint> constraint,
       Boolean mustSupport,
       @JsonKey(name: '_mustSupport')
@@ -8793,7 +8793,6 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       List<ElementDefinitionMapping> mapping});
 
   $ElementCopyWith<$Res> get pathElement;
-  $ElementCopyWith<$Res> get representationElement;
   $ElementCopyWith<$Res> get sliceNameElement;
   $ElementCopyWith<$Res> get sliceIsConstrainingElement;
   $ElementCopyWith<$Res> get labelElement;
@@ -8802,7 +8801,6 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $ElementCopyWith<$Res> get definitionElement;
   $ElementCopyWith<$Res> get commentElement;
   $ElementCopyWith<$Res> get requirementsElement;
-  $ElementCopyWith<$Res> get aliasElement;
   $ElementCopyWith<$Res> get minElement;
   $ElementCopyWith<$Res> get maxElement;
   $ElementDefinitionBaseCopyWith<$Res> get base;
@@ -8983,7 +8981,6 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $ElementCopyWith<$Res> get maxValueUnsignedIntElement;
   $QuantityCopyWith<$Res> get maxValueQuantity;
   $ElementCopyWith<$Res> get maxLengthElement;
-  $ElementCopyWith<$Res> get conditionElement;
   $ElementCopyWith<$Res> get mustSupportElement;
   $ElementCopyWith<$Res> get isModifierElement;
   $ElementCopyWith<$Res> get isModifierReasonElement;
@@ -9322,7 +9319,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           : representation as List<ElementDefinitionRepresentation>,
       representationElement: representationElement == freezed
           ? _value.representationElement
-          : representationElement as Element,
+          : representationElement as List<Element>,
       sliceName: sliceName == freezed ? _value.sliceName : sliceName as String,
       sliceNameElement: sliceNameElement == freezed
           ? _value.sliceNameElement
@@ -9363,7 +9360,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
       alias: alias == freezed ? _value.alias : alias as List<String>,
       aliasElement: aliasElement == freezed
           ? _value.aliasElement
-          : aliasElement as Element,
+          : aliasElement as List<Element>,
       min: min == freezed ? _value.min : min as UnsignedInt,
       minElement:
           minElement == freezed ? _value.minElement : minElement as Element,
@@ -9441,7 +9438,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           : defaultValueIntegerElement as Element,
       defaultValueInteger64: defaultValueInteger64 == freezed
           ? _value.defaultValueInteger64
-          : defaultValueInteger64 as Integer,
+          : defaultValueInteger64 as Integer64,
       defaultValueInteger64Element: defaultValueInteger64Element == freezed
           ? _value.defaultValueInteger64Element
           : defaultValueInteger64Element as Element,
@@ -9661,7 +9658,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           : fixedIntegerElement as Element,
       fixedInteger64: fixedInteger64 == freezed
           ? _value.fixedInteger64
-          : fixedInteger64 as Integer,
+          : fixedInteger64 as Integer64,
       fixedInteger64Element: fixedInteger64Element == freezed
           ? _value.fixedInteger64Element
           : fixedInteger64Element as Element,
@@ -9847,7 +9844,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           : patternIntegerElement as Element,
       patternInteger64: patternInteger64 == freezed
           ? _value.patternInteger64
-          : patternInteger64 as Integer,
+          : patternInteger64 as Integer64,
       patternInteger64Element: patternInteger64Element == freezed
           ? _value.patternInteger64Element
           : patternInteger64Element as Element,
@@ -10024,7 +10021,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           : minValueIntegerElement as Element,
       minValueInteger64: minValueInteger64 == freezed
           ? _value.minValueInteger64
-          : minValueInteger64 as Integer,
+          : minValueInteger64 as Integer64,
       minValueInteger64Element: minValueInteger64Element == freezed
           ? _value.minValueInteger64Element
           : minValueInteger64Element as Element,
@@ -10079,7 +10076,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           : maxValueIntegerElement as Element,
       maxValueInteger64: maxValueInteger64 == freezed
           ? _value.maxValueInteger64
-          : maxValueInteger64 as Integer,
+          : maxValueInteger64 as Integer64,
       maxValueInteger64Element: maxValueInteger64Element == freezed
           ? _value.maxValueInteger64Element
           : maxValueInteger64Element as Element,
@@ -10106,7 +10103,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           condition == freezed ? _value.condition : condition as List<Id>,
       conditionElement: conditionElement == freezed
           ? _value.conditionElement
-          : conditionElement as Element,
+          : conditionElement as List<Element>,
       constraint: constraint == freezed
           ? _value.constraint
           : constraint as List<ElementDefinitionConstraint>,
@@ -10146,16 +10143,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     }
     return $ElementCopyWith<$Res>(_value.pathElement, (value) {
       return _then(_value.copyWith(pathElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get representationElement {
-    if (_value.representationElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.representationElement, (value) {
-      return _then(_value.copyWith(representationElement: value));
     });
   }
 
@@ -10236,16 +10223,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     }
     return $ElementCopyWith<$Res>(_value.requirementsElement, (value) {
       return _then(_value.copyWith(requirementsElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get aliasElement {
-    if (_value.aliasElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.aliasElement, (value) {
-      return _then(_value.copyWith(aliasElement: value));
     });
   }
 
@@ -12068,16 +12045,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get conditionElement {
-    if (_value.conditionElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.conditionElement, (value) {
-      return _then(_value.copyWith(conditionElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get mustSupportElement {
     if (_value.mustSupportElement == null) {
       return null;
@@ -12144,7 +12111,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
           Element pathElement,
       List<ElementDefinitionRepresentation> representation,
       @JsonKey(name: '_representation')
-          Element representationElement,
+          List<Element> representationElement,
       String sliceName,
       @JsonKey(name: '_sliceName')
           Element sliceNameElement,
@@ -12170,7 +12137,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
           Element requirementsElement,
       List<String> alias,
       @JsonKey(name: '_alias')
-          Element aliasElement,
+          List<Element> aliasElement,
       UnsignedInt min,
       @JsonKey(name: '_min')
           Element minElement,
@@ -12212,7 +12179,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       Integer defaultValueInteger,
       @JsonKey(name: '_defaultValueInteger')
           Element defaultValueIntegerElement,
-      Integer defaultValueInteger64,
+      Integer64 defaultValueInteger64,
       @JsonKey(name: '_defaultValueInteger64')
           Element defaultValueInteger64Element,
       Markdown defaultValueMarkdown,
@@ -12309,7 +12276,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       Integer fixedInteger,
       @JsonKey(name: '_fixedInteger')
           Element fixedIntegerElement,
-      Integer fixedInteger64,
+      Integer64 fixedInteger64,
       @JsonKey(name: '_fixedInteger64')
           Element fixedInteger64Element,
       Markdown fixedMarkdown,
@@ -12400,7 +12367,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       Integer patternInteger,
       @JsonKey(name: '_patternInteger')
           Element patternIntegerElement,
-      Integer patternInteger64,
+      Integer64 patternInteger64,
       @JsonKey(name: '_patternInteger64')
           Element patternInteger64Element,
       Markdown patternMarkdown,
@@ -12480,7 +12447,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       Integer minValueInteger,
       @JsonKey(name: '_minValueInteger')
           Element minValueIntegerElement,
-      Integer minValueInteger64,
+      Integer64 minValueInteger64,
       @JsonKey(name: '_minValueInteger64')
           Element minValueInteger64Element,
       PositiveInt minValuePositiveInt,
@@ -12508,7 +12475,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       Integer maxValueInteger,
       @JsonKey(name: '_maxValueInteger')
           Element maxValueIntegerElement,
-      Integer maxValueInteger64,
+      Integer64 maxValueInteger64,
       @JsonKey(name: '_maxValueInteger64')
           Element maxValueInteger64Element,
       PositiveInt maxValuePositiveInt,
@@ -12523,7 +12490,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
           Element maxLengthElement,
       List<Id> condition,
       @JsonKey(name: '_condition')
-          Element conditionElement,
+          List<Element> conditionElement,
       List<ElementDefinitionConstraint> constraint,
       Boolean mustSupport,
       @JsonKey(name: '_mustSupport')
@@ -12543,8 +12510,6 @@ abstract class _$ElementDefinitionCopyWith<$Res>
   @override
   $ElementCopyWith<$Res> get pathElement;
   @override
-  $ElementCopyWith<$Res> get representationElement;
-  @override
   $ElementCopyWith<$Res> get sliceNameElement;
   @override
   $ElementCopyWith<$Res> get sliceIsConstrainingElement;
@@ -12560,8 +12525,6 @@ abstract class _$ElementDefinitionCopyWith<$Res>
   $ElementCopyWith<$Res> get commentElement;
   @override
   $ElementCopyWith<$Res> get requirementsElement;
-  @override
-  $ElementCopyWith<$Res> get aliasElement;
   @override
   $ElementCopyWith<$Res> get minElement;
   @override
@@ -12923,8 +12886,6 @@ abstract class _$ElementDefinitionCopyWith<$Res>
   @override
   $ElementCopyWith<$Res> get maxLengthElement;
   @override
-  $ElementCopyWith<$Res> get conditionElement;
-  @override
   $ElementCopyWith<$Res> get mustSupportElement;
   @override
   $ElementCopyWith<$Res> get isModifierElement;
@@ -13269,7 +13230,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           : representation as List<ElementDefinitionRepresentation>,
       representationElement: representationElement == freezed
           ? _value.representationElement
-          : representationElement as Element,
+          : representationElement as List<Element>,
       sliceName: sliceName == freezed ? _value.sliceName : sliceName as String,
       sliceNameElement: sliceNameElement == freezed
           ? _value.sliceNameElement
@@ -13310,7 +13271,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
       alias: alias == freezed ? _value.alias : alias as List<String>,
       aliasElement: aliasElement == freezed
           ? _value.aliasElement
-          : aliasElement as Element,
+          : aliasElement as List<Element>,
       min: min == freezed ? _value.min : min as UnsignedInt,
       minElement:
           minElement == freezed ? _value.minElement : minElement as Element,
@@ -13388,7 +13349,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           : defaultValueIntegerElement as Element,
       defaultValueInteger64: defaultValueInteger64 == freezed
           ? _value.defaultValueInteger64
-          : defaultValueInteger64 as Integer,
+          : defaultValueInteger64 as Integer64,
       defaultValueInteger64Element: defaultValueInteger64Element == freezed
           ? _value.defaultValueInteger64Element
           : defaultValueInteger64Element as Element,
@@ -13608,7 +13569,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           : fixedIntegerElement as Element,
       fixedInteger64: fixedInteger64 == freezed
           ? _value.fixedInteger64
-          : fixedInteger64 as Integer,
+          : fixedInteger64 as Integer64,
       fixedInteger64Element: fixedInteger64Element == freezed
           ? _value.fixedInteger64Element
           : fixedInteger64Element as Element,
@@ -13794,7 +13755,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           : patternIntegerElement as Element,
       patternInteger64: patternInteger64 == freezed
           ? _value.patternInteger64
-          : patternInteger64 as Integer,
+          : patternInteger64 as Integer64,
       patternInteger64Element: patternInteger64Element == freezed
           ? _value.patternInteger64Element
           : patternInteger64Element as Element,
@@ -13971,7 +13932,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           : minValueIntegerElement as Element,
       minValueInteger64: minValueInteger64 == freezed
           ? _value.minValueInteger64
-          : minValueInteger64 as Integer,
+          : minValueInteger64 as Integer64,
       minValueInteger64Element: minValueInteger64Element == freezed
           ? _value.minValueInteger64Element
           : minValueInteger64Element as Element,
@@ -14026,7 +13987,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           : maxValueIntegerElement as Element,
       maxValueInteger64: maxValueInteger64 == freezed
           ? _value.maxValueInteger64
-          : maxValueInteger64 as Integer,
+          : maxValueInteger64 as Integer64,
       maxValueInteger64Element: maxValueInteger64Element == freezed
           ? _value.maxValueInteger64Element
           : maxValueInteger64Element as Element,
@@ -14053,7 +14014,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           condition == freezed ? _value.condition : condition as List<Id>,
       conditionElement: conditionElement == freezed
           ? _value.conditionElement
-          : conditionElement as Element,
+          : conditionElement as List<Element>,
       constraint: constraint == freezed
           ? _value.constraint
           : constraint as List<ElementDefinitionConstraint>,
@@ -14515,7 +14476,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   final List<ElementDefinitionRepresentation> representation;
   @override
   @JsonKey(name: '_representation')
-  final Element representationElement;
+  final List<Element> representationElement;
   @override
   final String sliceName;
   @override
@@ -14559,7 +14520,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   final List<String> alias;
   @override
   @JsonKey(name: '_alias')
-  final Element aliasElement;
+  final List<Element> aliasElement;
   @override
   final UnsignedInt min;
   @override
@@ -14630,7 +14591,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_defaultValueInteger')
   final Element defaultValueIntegerElement;
   @override
-  final Integer defaultValueInteger64;
+  final Integer64 defaultValueInteger64;
   @override
   @JsonKey(name: '_defaultValueInteger64')
   final Element defaultValueInteger64Element;
@@ -14802,7 +14763,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_fixedInteger')
   final Element fixedIntegerElement;
   @override
-  final Integer fixedInteger64;
+  final Integer64 fixedInteger64;
   @override
   @JsonKey(name: '_fixedInteger64')
   final Element fixedInteger64Element;
@@ -14964,7 +14925,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_patternInteger')
   final Element patternIntegerElement;
   @override
-  final Integer patternInteger64;
+  final Integer64 patternInteger64;
   @override
   @JsonKey(name: '_patternInteger64')
   final Element patternInteger64Element;
@@ -15108,7 +15069,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_minValueInteger')
   final Element minValueIntegerElement;
   @override
-  final Integer minValueInteger64;
+  final Integer64 minValueInteger64;
   @override
   @JsonKey(name: '_minValueInteger64')
   final Element minValueInteger64Element;
@@ -15155,7 +15116,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_maxValueInteger')
   final Element maxValueIntegerElement;
   @override
-  final Integer maxValueInteger64;
+  final Integer64 maxValueInteger64;
   @override
   @JsonKey(name: '_maxValueInteger64')
   final Element maxValueInteger64Element;
@@ -15180,7 +15141,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   final List<Id> condition;
   @override
   @JsonKey(name: '_condition')
-  final Element conditionElement;
+  final List<Element> conditionElement;
   @override
   final List<ElementDefinitionConstraint> constraint;
   @override
@@ -15892,7 +15853,7 @@ abstract class _ElementDefinition extends ElementDefinition {
           Element pathElement,
       List<ElementDefinitionRepresentation> representation,
       @JsonKey(name: '_representation')
-          Element representationElement,
+          List<Element> representationElement,
       String sliceName,
       @JsonKey(name: '_sliceName')
           Element sliceNameElement,
@@ -15918,7 +15879,7 @@ abstract class _ElementDefinition extends ElementDefinition {
           Element requirementsElement,
       List<String> alias,
       @JsonKey(name: '_alias')
-          Element aliasElement,
+          List<Element> aliasElement,
       UnsignedInt min,
       @JsonKey(name: '_min')
           Element minElement,
@@ -15960,7 +15921,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       Integer defaultValueInteger,
       @JsonKey(name: '_defaultValueInteger')
           Element defaultValueIntegerElement,
-      Integer defaultValueInteger64,
+      Integer64 defaultValueInteger64,
       @JsonKey(name: '_defaultValueInteger64')
           Element defaultValueInteger64Element,
       Markdown defaultValueMarkdown,
@@ -16057,7 +16018,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       Integer fixedInteger,
       @JsonKey(name: '_fixedInteger')
           Element fixedIntegerElement,
-      Integer fixedInteger64,
+      Integer64 fixedInteger64,
       @JsonKey(name: '_fixedInteger64')
           Element fixedInteger64Element,
       Markdown fixedMarkdown,
@@ -16148,7 +16109,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       Integer patternInteger,
       @JsonKey(name: '_patternInteger')
           Element patternIntegerElement,
-      Integer patternInteger64,
+      Integer64 patternInteger64,
       @JsonKey(name: '_patternInteger64')
           Element patternInteger64Element,
       Markdown patternMarkdown,
@@ -16228,7 +16189,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       Integer minValueInteger,
       @JsonKey(name: '_minValueInteger')
           Element minValueIntegerElement,
-      Integer minValueInteger64,
+      Integer64 minValueInteger64,
       @JsonKey(name: '_minValueInteger64')
           Element minValueInteger64Element,
       PositiveInt minValuePositiveInt,
@@ -16256,7 +16217,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       Integer maxValueInteger,
       @JsonKey(name: '_maxValueInteger')
           Element maxValueIntegerElement,
-      Integer maxValueInteger64,
+      Integer64 maxValueInteger64,
       @JsonKey(name: '_maxValueInteger64')
           Element maxValueInteger64Element,
       PositiveInt maxValuePositiveInt,
@@ -16271,7 +16232,7 @@ abstract class _ElementDefinition extends ElementDefinition {
           Element maxLengthElement,
       List<Id> condition,
       @JsonKey(name: '_condition')
-          Element conditionElement,
+          List<Element> conditionElement,
       List<ElementDefinitionConstraint> constraint,
       Boolean mustSupport,
       @JsonKey(name: '_mustSupport')
@@ -16307,7 +16268,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   List<ElementDefinitionRepresentation> get representation;
   @override
   @JsonKey(name: '_representation')
-  Element get representationElement;
+  List<Element> get representationElement;
   @override
   String get sliceName;
   @override
@@ -16351,7 +16312,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   List<String> get alias;
   @override
   @JsonKey(name: '_alias')
-  Element get aliasElement;
+  List<Element> get aliasElement;
   @override
   UnsignedInt get min;
   @override
@@ -16422,7 +16383,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_defaultValueInteger')
   Element get defaultValueIntegerElement;
   @override
-  Integer get defaultValueInteger64;
+  Integer64 get defaultValueInteger64;
   @override
   @JsonKey(name: '_defaultValueInteger64')
   Element get defaultValueInteger64Element;
@@ -16594,7 +16555,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_fixedInteger')
   Element get fixedIntegerElement;
   @override
-  Integer get fixedInteger64;
+  Integer64 get fixedInteger64;
   @override
   @JsonKey(name: '_fixedInteger64')
   Element get fixedInteger64Element;
@@ -16756,7 +16717,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_patternInteger')
   Element get patternIntegerElement;
   @override
-  Integer get patternInteger64;
+  Integer64 get patternInteger64;
   @override
   @JsonKey(name: '_patternInteger64')
   Element get patternInteger64Element;
@@ -16900,7 +16861,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_minValueInteger')
   Element get minValueIntegerElement;
   @override
-  Integer get minValueInteger64;
+  Integer64 get minValueInteger64;
   @override
   @JsonKey(name: '_minValueInteger64')
   Element get minValueInteger64Element;
@@ -16947,7 +16908,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_maxValueInteger')
   Element get maxValueIntegerElement;
   @override
-  Integer get maxValueInteger64;
+  Integer64 get maxValueInteger64;
   @override
   @JsonKey(name: '_maxValueInteger64')
   Element get maxValueInteger64Element;
@@ -16972,7 +16933,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   List<Id> get condition;
   @override
   @JsonKey(name: '_condition')
-  Element get conditionElement;
+  List<Element> get conditionElement;
   @override
   List<ElementDefinitionConstraint> get constraint;
   @override
@@ -18130,7 +18091,7 @@ class _$ElementDefinitionTypeTearOff {
       List<Canonical> targetProfile,
       List<ElementDefinitionTypeAggregation> aggregation,
       @JsonKey(name: '_aggregation')
-          Element aggregationElement,
+          List<Element> aggregationElement,
       @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
           ElementDefinitionTypeVersioning versioning,
       @JsonKey(name: '_versioning')
@@ -18166,7 +18127,7 @@ mixin _$ElementDefinitionType {
   List<Canonical> get targetProfile;
   List<ElementDefinitionTypeAggregation> get aggregation;
   @JsonKey(name: '_aggregation')
-  Element get aggregationElement;
+  List<Element> get aggregationElement;
   @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
   ElementDefinitionTypeVersioning get versioning;
   @JsonKey(name: '_versioning')
@@ -18192,14 +18153,13 @@ abstract class $ElementDefinitionTypeCopyWith<$Res> {
       List<Canonical> targetProfile,
       List<ElementDefinitionTypeAggregation> aggregation,
       @JsonKey(name: '_aggregation')
-          Element aggregationElement,
+          List<Element> aggregationElement,
       @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
           ElementDefinitionTypeVersioning versioning,
       @JsonKey(name: '_versioning')
           Element versioningElement});
 
   $ElementCopyWith<$Res> get codeElement;
-  $ElementCopyWith<$Res> get aggregationElement;
   $ElementCopyWith<$Res> get versioningElement;
 }
 
@@ -18245,7 +18205,7 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res>
           : aggregation as List<ElementDefinitionTypeAggregation>,
       aggregationElement: aggregationElement == freezed
           ? _value.aggregationElement
-          : aggregationElement as Element,
+          : aggregationElement as List<Element>,
       versioning: versioning == freezed
           ? _value.versioning
           : versioning as ElementDefinitionTypeVersioning,
@@ -18262,16 +18222,6 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res>
     }
     return $ElementCopyWith<$Res>(_value.codeElement, (value) {
       return _then(_value.copyWith(codeElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get aggregationElement {
-    if (_value.aggregationElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.aggregationElement, (value) {
-      return _then(_value.copyWith(aggregationElement: value));
     });
   }
 
@@ -18304,7 +18254,7 @@ abstract class _$ElementDefinitionTypeCopyWith<$Res>
       List<Canonical> targetProfile,
       List<ElementDefinitionTypeAggregation> aggregation,
       @JsonKey(name: '_aggregation')
-          Element aggregationElement,
+          List<Element> aggregationElement,
       @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
           ElementDefinitionTypeVersioning versioning,
       @JsonKey(name: '_versioning')
@@ -18312,8 +18262,6 @@ abstract class _$ElementDefinitionTypeCopyWith<$Res>
 
   @override
   $ElementCopyWith<$Res> get codeElement;
-  @override
-  $ElementCopyWith<$Res> get aggregationElement;
   @override
   $ElementCopyWith<$Res> get versioningElement;
 }
@@ -18362,7 +18310,7 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
           : aggregation as List<ElementDefinitionTypeAggregation>,
       aggregationElement: aggregationElement == freezed
           ? _value.aggregationElement
-          : aggregationElement as Element,
+          : aggregationElement as List<Element>,
       versioning: versioning == freezed
           ? _value.versioning
           : versioning as ElementDefinitionTypeVersioning,
@@ -18417,7 +18365,7 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
   final List<ElementDefinitionTypeAggregation> aggregation;
   @override
   @JsonKey(name: '_aggregation')
-  final Element aggregationElement;
+  final List<Element> aggregationElement;
   @override
   @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
   final ElementDefinitionTypeVersioning versioning;
@@ -18507,7 +18455,7 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
       List<Canonical> targetProfile,
       List<ElementDefinitionTypeAggregation> aggregation,
       @JsonKey(name: '_aggregation')
-          Element aggregationElement,
+          List<Element> aggregationElement,
       @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
           ElementDefinitionTypeVersioning versioning,
       @JsonKey(name: '_versioning')
@@ -18536,7 +18484,7 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
   List<ElementDefinitionTypeAggregation> get aggregation;
   @override
   @JsonKey(name: '_aggregation')
-  Element get aggregationElement;
+  List<Element> get aggregationElement;
   @override
   @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
   ElementDefinitionTypeVersioning get versioning;
@@ -18581,7 +18529,7 @@ class _$ElementDefinitionExampleTearOff {
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
       Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Integer valueInteger64,
+      Integer64 valueInteger64,
       @JsonKey(name: '_valueInteger64') Element valueInteger64Element,
       Markdown valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
@@ -18754,7 +18702,7 @@ mixin _$ElementDefinitionExample {
   Integer get valueInteger;
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
-  Integer get valueInteger64;
+  Integer64 get valueInteger64;
   @JsonKey(name: '_valueInteger64')
   Element get valueInteger64Element;
   Markdown get valueMarkdown;
@@ -18850,7 +18798,7 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
       Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Integer valueInteger64,
+      Integer64 valueInteger64,
       @JsonKey(name: '_valueInteger64') Element valueInteger64Element,
       Markdown valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
@@ -19111,7 +19059,7 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
           : valueIntegerElement as Element,
       valueInteger64: valueInteger64 == freezed
           ? _value.valueInteger64
-          : valueInteger64 as Integer,
+          : valueInteger64 as Integer64,
       valueInteger64Element: valueInteger64Element == freezed
           ? _value.valueInteger64Element
           : valueInteger64Element as Element,
@@ -19797,7 +19745,7 @@ abstract class _$ElementDefinitionExampleCopyWith<$Res>
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
       Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Integer valueInteger64,
+      Integer64 valueInteger64,
       @JsonKey(name: '_valueInteger64') Element valueInteger64Element,
       Markdown valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
@@ -20113,7 +20061,7 @@ class __$ElementDefinitionExampleCopyWithImpl<$Res>
           : valueIntegerElement as Element,
       valueInteger64: valueInteger64 == freezed
           ? _value.valueInteger64
-          : valueInteger64 as Integer,
+          : valueInteger64 as Integer64,
       valueInteger64Element: valueInteger64Element == freezed
           ? _value.valueInteger64Element
           : valueInteger64Element as Element,
@@ -20392,7 +20340,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
   @JsonKey(name: '_valueInteger')
   final Element valueIntegerElement;
   @override
-  final Integer valueInteger64;
+  final Integer64 valueInteger64;
   @override
   @JsonKey(name: '_valueInteger64')
   final Element valueInteger64Element;
@@ -20744,7 +20692,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
       Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Integer valueInteger64,
+      Integer64 valueInteger64,
       @JsonKey(name: '_valueInteger64') Element valueInteger64Element,
       Markdown valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
@@ -20862,7 +20810,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
   @override
-  Integer get valueInteger64;
+  Integer64 get valueInteger64;
   @override
   @JsonKey(name: '_valueInteger64')
   Element get valueInteger64Element;

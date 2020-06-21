@@ -908,7 +908,7 @@ class _$AuditEventAgentTearOff {
       @JsonKey(name: '_requestor') Element requestorElement,
       Reference location,
       List<FhirUri> policy,
-      @JsonKey(name: '_policy') Element policyElement,
+      @JsonKey(name: '_policy') List<Element> policyElement,
       Coding media,
       AuditEventNetwork network,
       List<CodeableConcept> purposeOfUse}) {
@@ -958,7 +958,7 @@ mixin _$AuditEventAgent {
   Reference get location;
   List<FhirUri> get policy;
   @JsonKey(name: '_policy')
-  Element get policyElement;
+  List<Element> get policyElement;
   Coding get media;
   AuditEventNetwork get network;
   List<CodeableConcept> get purposeOfUse;
@@ -986,7 +986,7 @@ abstract class $AuditEventAgentCopyWith<$Res> {
       @JsonKey(name: '_requestor') Element requestorElement,
       Reference location,
       List<FhirUri> policy,
-      @JsonKey(name: '_policy') Element policyElement,
+      @JsonKey(name: '_policy') List<Element> policyElement,
       Coding media,
       AuditEventNetwork network,
       List<CodeableConcept> purposeOfUse});
@@ -997,7 +997,6 @@ abstract class $AuditEventAgentCopyWith<$Res> {
   $ElementCopyWith<$Res> get nameElement;
   $ElementCopyWith<$Res> get requestorElement;
   $ReferenceCopyWith<$Res> get location;
-  $ElementCopyWith<$Res> get policyElement;
   $CodingCopyWith<$Res> get media;
   $AuditEventNetworkCopyWith<$Res> get network;
 }
@@ -1057,7 +1056,7 @@ class _$AuditEventAgentCopyWithImpl<$Res>
       policy: policy == freezed ? _value.policy : policy as List<FhirUri>,
       policyElement: policyElement == freezed
           ? _value.policyElement
-          : policyElement as Element,
+          : policyElement as List<Element>,
       media: media == freezed ? _value.media : media as Coding,
       network:
           network == freezed ? _value.network : network as AuditEventNetwork,
@@ -1128,16 +1127,6 @@ class _$AuditEventAgentCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get policyElement {
-    if (_value.policyElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.policyElement, (value) {
-      return _then(_value.copyWith(policyElement: value));
-    });
-  }
-
-  @override
   $CodingCopyWith<$Res> get media {
     if (_value.media == null) {
       return null;
@@ -1179,7 +1168,7 @@ abstract class _$AuditEventAgentCopyWith<$Res>
       @JsonKey(name: '_requestor') Element requestorElement,
       Reference location,
       List<FhirUri> policy,
-      @JsonKey(name: '_policy') Element policyElement,
+      @JsonKey(name: '_policy') List<Element> policyElement,
       Coding media,
       AuditEventNetwork network,
       List<CodeableConcept> purposeOfUse});
@@ -1196,8 +1185,6 @@ abstract class _$AuditEventAgentCopyWith<$Res>
   $ElementCopyWith<$Res> get requestorElement;
   @override
   $ReferenceCopyWith<$Res> get location;
-  @override
-  $ElementCopyWith<$Res> get policyElement;
   @override
   $CodingCopyWith<$Res> get media;
   @override
@@ -1261,7 +1248,7 @@ class __$AuditEventAgentCopyWithImpl<$Res>
       policy: policy == freezed ? _value.policy : policy as List<FhirUri>,
       policyElement: policyElement == freezed
           ? _value.policyElement
-          : policyElement as Element,
+          : policyElement as List<Element>,
       media: media == freezed ? _value.media : media as Coding,
       network:
           network == freezed ? _value.network : network as AuditEventNetwork,
@@ -1332,7 +1319,7 @@ class _$_AuditEventAgent extends _AuditEventAgent {
   final List<FhirUri> policy;
   @override
   @JsonKey(name: '_policy')
-  final Element policyElement;
+  final List<Element> policyElement;
   @override
   final Coding media;
   @override
@@ -1446,7 +1433,7 @@ abstract class _AuditEventAgent extends AuditEventAgent {
       @JsonKey(name: '_requestor') Element requestorElement,
       Reference location,
       List<FhirUri> policy,
-      @JsonKey(name: '_policy') Element policyElement,
+      @JsonKey(name: '_policy') List<Element> policyElement,
       Coding media,
       AuditEventNetwork network,
       List<CodeableConcept> purposeOfUse}) = _$_AuditEventAgent;
@@ -1488,7 +1475,7 @@ abstract class _AuditEventAgent extends AuditEventAgent {
   List<FhirUri> get policy;
   @override
   @JsonKey(name: '_policy')
-  Element get policyElement;
+  List<Element> get policyElement;
   @override
   Coding get media;
   @override
@@ -5573,7 +5560,7 @@ class _$ProvenanceTearOff {
       Instant recorded,
       @JsonKey(name: '_recorded') Element recordedElement,
       List<FhirUri> policy,
-      @JsonKey(name: '_policy') Element policyElement,
+      @JsonKey(name: '_policy') List<Element> policyElement,
       Reference location,
       List<CodeableConcept> reason,
       CodeableConcept activity,
@@ -5639,7 +5626,7 @@ mixin _$Provenance {
   Element get recordedElement;
   List<FhirUri> get policy;
   @JsonKey(name: '_policy')
-  Element get policyElement;
+  List<Element> get policyElement;
   Reference get location;
   List<CodeableConcept> get reason;
   CodeableConcept get activity;
@@ -5674,7 +5661,7 @@ abstract class $ProvenanceCopyWith<$Res> {
       Instant recorded,
       @JsonKey(name: '_recorded') Element recordedElement,
       List<FhirUri> policy,
-      @JsonKey(name: '_policy') Element policyElement,
+      @JsonKey(name: '_policy') List<Element> policyElement,
       Reference location,
       List<CodeableConcept> reason,
       CodeableConcept activity,
@@ -5689,7 +5676,6 @@ abstract class $ProvenanceCopyWith<$Res> {
   $PeriodCopyWith<$Res> get occurredPeriod;
   $ElementCopyWith<$Res> get occurredDateTimeElement;
   $ElementCopyWith<$Res> get recordedElement;
-  $ElementCopyWith<$Res> get policyElement;
   $ReferenceCopyWith<$Res> get location;
   $CodeableConceptCopyWith<$Res> get activity;
 }
@@ -5771,7 +5757,7 @@ class _$ProvenanceCopyWithImpl<$Res> implements $ProvenanceCopyWith<$Res> {
       policy: policy == freezed ? _value.policy : policy as List<FhirUri>,
       policyElement: policyElement == freezed
           ? _value.policyElement
-          : policyElement as Element,
+          : policyElement as List<Element>,
       location: location == freezed ? _value.location : location as Reference,
       reason:
           reason == freezed ? _value.reason : reason as List<CodeableConcept>,
@@ -5857,16 +5843,6 @@ class _$ProvenanceCopyWithImpl<$Res> implements $ProvenanceCopyWith<$Res> {
   }
 
   @override
-  $ElementCopyWith<$Res> get policyElement {
-    if (_value.policyElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.policyElement, (value) {
-      return _then(_value.copyWith(policyElement: value));
-    });
-  }
-
-  @override
   $ReferenceCopyWith<$Res> get location {
     if (_value.location == null) {
       return null;
@@ -5911,7 +5887,7 @@ abstract class _$ProvenanceCopyWith<$Res> implements $ProvenanceCopyWith<$Res> {
       Instant recorded,
       @JsonKey(name: '_recorded') Element recordedElement,
       List<FhirUri> policy,
-      @JsonKey(name: '_policy') Element policyElement,
+      @JsonKey(name: '_policy') List<Element> policyElement,
       Reference location,
       List<CodeableConcept> reason,
       CodeableConcept activity,
@@ -5933,8 +5909,6 @@ abstract class _$ProvenanceCopyWith<$Res> implements $ProvenanceCopyWith<$Res> {
   $ElementCopyWith<$Res> get occurredDateTimeElement;
   @override
   $ElementCopyWith<$Res> get recordedElement;
-  @override
-  $ElementCopyWith<$Res> get policyElement;
   @override
   $ReferenceCopyWith<$Res> get location;
   @override
@@ -6020,7 +5994,7 @@ class __$ProvenanceCopyWithImpl<$Res> extends _$ProvenanceCopyWithImpl<$Res>
       policy: policy == freezed ? _value.policy : policy as List<FhirUri>,
       policyElement: policyElement == freezed
           ? _value.policyElement
-          : policyElement as Element,
+          : policyElement as List<Element>,
       location: location == freezed ? _value.location : location as Reference,
       reason:
           reason == freezed ? _value.reason : reason as List<CodeableConcept>,
@@ -6116,7 +6090,7 @@ class _$_Provenance extends _Provenance {
   final List<FhirUri> policy;
   @override
   @JsonKey(name: '_policy')
-  final Element policyElement;
+  final List<Element> policyElement;
   @override
   final Reference location;
   @override
@@ -6266,7 +6240,7 @@ abstract class _Provenance extends Provenance {
       Instant recorded,
       @JsonKey(name: '_recorded') Element recordedElement,
       List<FhirUri> policy,
-      @JsonKey(name: '_policy') Element policyElement,
+      @JsonKey(name: '_policy') List<Element> policyElement,
       Reference location,
       List<CodeableConcept> reason,
       CodeableConcept activity,
@@ -6321,7 +6295,7 @@ abstract class _Provenance extends Provenance {
   List<FhirUri> get policy;
   @override
   @JsonKey(name: '_policy')
-  Element get policyElement;
+  List<Element> get policyElement;
   @override
   Reference get location;
   @override

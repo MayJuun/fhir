@@ -872,9 +872,10 @@ _$_EvidenceVariableCharacteristic _$_$_EvidenceVariableCharacteristicFromJson(
         ? null
         : Reference.fromJson(json['device'] as Map<String, dynamic>),
     booleanSet: (json['booleanSet'] as List)?.map((e) => e as String)?.toList(),
-    booleanSetElement: json['_booleanSet'] == null
-        ? null
-        : Element.fromJson(json['_booleanSet'] as Map<String, dynamic>),
+    booleanSetElement: (json['_booleanSet'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     exclude: json['exclude'] == null ? null : Boolean.fromJson(json['exclude']),
     excludeElement: json['_exclude'] == null
         ? null
@@ -943,7 +944,8 @@ Map<String, dynamic> _$_$_EvidenceVariableCharacteristicToJson(
   writeNotNull('method', instance.method?.toJson());
   writeNotNull('device', instance.device?.toJson());
   writeNotNull('booleanSet', instance.booleanSet);
-  writeNotNull('_booleanSet', instance.booleanSetElement?.toJson());
+  writeNotNull('_booleanSet',
+      instance.booleanSetElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('exclude', instance.exclude?.toJson());
   writeNotNull('_exclude', instance.excludeElement?.toJson());
   writeNotNull('participantEffectiveDateTime',

@@ -152,9 +152,10 @@ _$_DataRequirement _$_$_DataRequirementFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['subjectReference'] as Map<String, dynamic>),
     mustSupport:
         (json['mustSupport'] as List)?.map((e) => e as String)?.toList(),
-    mustSupportElement: json['_mustSupport'] == null
-        ? null
-        : Element.fromJson(json['_mustSupport'] as Map<String, dynamic>),
+    mustSupportElement: (json['_mustSupport'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     codeFilter: (json['codeFilter'] as List)
         ?.map((e) => e == null
             ? null
@@ -196,7 +197,8 @@ Map<String, dynamic> _$_$_DataRequirementToJson(_$_DataRequirement instance) {
       'subjectCodeableConcept', instance.subjectCodeableConcept?.toJson());
   writeNotNull('subjectReference', instance.subjectReference?.toJson());
   writeNotNull('mustSupport', instance.mustSupport);
-  writeNotNull('_mustSupport', instance.mustSupportElement?.toJson());
+  writeNotNull('_mustSupport',
+      instance.mustSupportElement?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'codeFilter', instance.codeFilter?.map((e) => e?.toJson())?.toList());
   writeNotNull(

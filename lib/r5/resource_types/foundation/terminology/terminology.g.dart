@@ -326,9 +326,10 @@ _$_CodeSystemFilter _$_$_CodeSystemFilterFromJson(Map<String, dynamic> json) {
     operator: (json['operator'] as List)
         ?.map((e) => e == null ? null : Code.fromJson(e as String))
         ?.toList(),
-    operatorElement: json['_operator'] == null
-        ? null
-        : Element.fromJson(json['_operator'] as Map<String, dynamic>),
+    operatorElement: (json['_operator'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     value: json['value'] as String,
     valueElement: json['_value'] == null
         ? null
@@ -356,7 +357,8 @@ Map<String, dynamic> _$_$_CodeSystemFilterToJson(_$_CodeSystemFilter instance) {
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull(
       'operator', instance.operator?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_operator', instance.operatorElement?.toJson());
+  writeNotNull(
+      '_operator', instance.operatorElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('value', instance.value);
   writeNotNull('_value', instance.valueElement?.toJson());
   return val;
@@ -1900,9 +1902,10 @@ _$_TerminologyCapabilitiesVersion _$_$_TerminologyCapabilitiesVersionFromJson(
     language: (json['language'] as List)
         ?.map((e) => e == null ? null : Code.fromJson(e as String))
         ?.toList(),
-    languageElement: json['_language'] == null
-        ? null
-        : Element.fromJson(json['_language'] as Map<String, dynamic>),
+    languageElement: (json['_language'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     filter: (json['filter'] as List)
         ?.map((e) => e == null
             ? null
@@ -1911,9 +1914,10 @@ _$_TerminologyCapabilitiesVersion _$_$_TerminologyCapabilitiesVersionFromJson(
     property: (json['property'] as List)
         ?.map((e) => e == null ? null : Code.fromJson(e as String))
         ?.toList(),
-    propertyElement: json['_property'] == null
-        ? null
-        : Element.fromJson(json['_property'] as Map<String, dynamic>),
+    propertyElement: (json['_property'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -1940,11 +1944,13 @@ Map<String, dynamic> _$_$_TerminologyCapabilitiesVersionToJson(
   writeNotNull('_compositional', instance.compositionalElement?.toJson());
   writeNotNull(
       'language', instance.language?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_language', instance.languageElement?.toJson());
+  writeNotNull(
+      '_language', instance.languageElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('filter', instance.filter?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'property', instance.property?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_property', instance.propertyElement?.toJson());
+  writeNotNull(
+      '_property', instance.propertyElement?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
@@ -1969,9 +1975,10 @@ _$_TerminologyCapabilitiesFilter _$_$_TerminologyCapabilitiesFilterFromJson(
     op: (json['op'] as List)
         ?.map((e) => e == null ? null : Code.fromJson(e as String))
         ?.toList(),
-    opElement: json['_op'] == null
-        ? null
-        : Element.fromJson(json['_op'] as Map<String, dynamic>),
+    opElement: (json['_op'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -1993,7 +2000,7 @@ Map<String, dynamic> _$_$_TerminologyCapabilitiesFilterToJson(
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('_code', instance.codeElement?.toJson());
   writeNotNull('op', instance.op?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_op', instance.opElement?.toJson());
+  writeNotNull('_op', instance.opElement?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
@@ -2470,9 +2477,10 @@ _$_ValueSetCompose _$_$_ValueSetComposeFromJson(Map<String, dynamic> json) {
             : ValueSetInclude.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     property: (json['property'] as List)?.map((e) => e as String)?.toList(),
-    propertyElement: json['_property'] == null
-        ? null
-        : Element.fromJson(json['_property'] as Map<String, dynamic>),
+    propertyElement: (json['_property'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -2497,7 +2505,8 @@ Map<String, dynamic> _$_$_ValueSetComposeToJson(_$_ValueSetCompose instance) {
   writeNotNull('include', instance.include?.map((e) => e?.toJson())?.toList());
   writeNotNull('exclude', instance.exclude?.map((e) => e?.toJson())?.toList());
   writeNotNull('property', instance.property);
-  writeNotNull('_property', instance.propertyElement?.toJson());
+  writeNotNull(
+      '_property', instance.propertyElement?.map((e) => e?.toJson())?.toList());
   return val;
 }
 

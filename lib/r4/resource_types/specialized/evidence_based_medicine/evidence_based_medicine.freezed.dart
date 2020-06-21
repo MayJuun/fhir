@@ -7903,7 +7903,7 @@ class _$ResearchDefinitionTearOff {
           Element descriptionElement,
       List<String> comment,
       @JsonKey(name: '_comment')
-          Element commentElement,
+          List<Element> commentElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Markdown purpose,
@@ -8062,7 +8062,7 @@ mixin _$ResearchDefinition {
   Element get descriptionElement;
   List<String> get comment;
   @JsonKey(name: '_comment')
-  Element get commentElement;
+  List<Element> get commentElement;
   List<UsageContext> get useContext;
   List<CodeableConcept> get jurisdiction;
   Markdown get purpose;
@@ -8158,7 +8158,7 @@ abstract class $ResearchDefinitionCopyWith<$Res> {
           Element descriptionElement,
       List<String> comment,
       @JsonKey(name: '_comment')
-          Element commentElement,
+          List<Element> commentElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Markdown purpose,
@@ -8207,7 +8207,6 @@ abstract class $ResearchDefinitionCopyWith<$Res> {
   $ElementCopyWith<$Res> get dateElement;
   $ElementCopyWith<$Res> get publisherElement;
   $ElementCopyWith<$Res> get descriptionElement;
-  $ElementCopyWith<$Res> get commentElement;
   $ElementCopyWith<$Res> get purposeElement;
   $ElementCopyWith<$Res> get usageElement;
   $ElementCopyWith<$Res> get copyrightElement;
@@ -8380,7 +8379,7 @@ class _$ResearchDefinitionCopyWithImpl<$Res>
       comment: comment == freezed ? _value.comment : comment as List<String>,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element,
+          : commentElement as List<Element>,
       useContext: useContext == freezed
           ? _value.useContext
           : useContext as List<UsageContext>,
@@ -8610,16 +8609,6 @@ class _$ResearchDefinitionCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get commentElement {
-    if (_value.commentElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.commentElement, (value) {
-      return _then(_value.copyWith(commentElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get purposeElement {
     if (_value.purposeElement == null) {
       return null;
@@ -8782,7 +8771,7 @@ abstract class _$ResearchDefinitionCopyWith<$Res>
           Element descriptionElement,
       List<String> comment,
       @JsonKey(name: '_comment')
-          Element commentElement,
+          List<Element> commentElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Markdown purpose,
@@ -8848,8 +8837,6 @@ abstract class _$ResearchDefinitionCopyWith<$Res>
   $ElementCopyWith<$Res> get publisherElement;
   @override
   $ElementCopyWith<$Res> get descriptionElement;
-  @override
-  $ElementCopyWith<$Res> get commentElement;
   @override
   $ElementCopyWith<$Res> get purposeElement;
   @override
@@ -9034,7 +9021,7 @@ class __$ResearchDefinitionCopyWithImpl<$Res>
       comment: comment == freezed ? _value.comment : comment as List<String>,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element,
+          : commentElement as List<Element>,
       useContext: useContext == freezed
           ? _value.useContext
           : useContext as List<UsageContext>,
@@ -9260,7 +9247,7 @@ class _$_ResearchDefinition extends _ResearchDefinition {
   final List<String> comment;
   @override
   @JsonKey(name: '_comment')
-  final Element commentElement;
+  final List<Element> commentElement;
   @override
   final List<UsageContext> useContext;
   @override
@@ -9569,7 +9556,7 @@ abstract class _ResearchDefinition extends ResearchDefinition {
           Element descriptionElement,
       List<String> comment,
       @JsonKey(name: '_comment')
-          Element commentElement,
+          List<Element> commentElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Markdown purpose,
@@ -9699,7 +9686,7 @@ abstract class _ResearchDefinition extends ResearchDefinition {
   List<String> get comment;
   @override
   @JsonKey(name: '_comment')
-  Element get commentElement;
+  List<Element> get commentElement;
   @override
   List<UsageContext> get useContext;
   @override
@@ -9823,7 +9810,7 @@ class _$ResearchElementDefinitionTearOff {
           Element descriptionElement,
       List<String> comment,
       @JsonKey(name: '_comment')
-          Element commentElement,
+          List<Element> commentElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Markdown purpose,
@@ -9988,7 +9975,7 @@ mixin _$ResearchElementDefinition {
   Element get descriptionElement;
   List<String> get comment;
   @JsonKey(name: '_comment')
-  Element get commentElement;
+  List<Element> get commentElement;
   List<UsageContext> get useContext;
   List<CodeableConcept> get jurisdiction;
   Markdown get purpose;
@@ -10089,7 +10076,7 @@ abstract class $ResearchElementDefinitionCopyWith<$Res> {
           Element descriptionElement,
       List<String> comment,
       @JsonKey(name: '_comment')
-          Element commentElement,
+          List<Element> commentElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Markdown purpose,
@@ -10143,7 +10130,6 @@ abstract class $ResearchElementDefinitionCopyWith<$Res> {
   $ElementCopyWith<$Res> get dateElement;
   $ElementCopyWith<$Res> get publisherElement;
   $ElementCopyWith<$Res> get descriptionElement;
-  $ElementCopyWith<$Res> get commentElement;
   $ElementCopyWith<$Res> get purposeElement;
   $ElementCopyWith<$Res> get usageElement;
   $ElementCopyWith<$Res> get copyrightElement;
@@ -10315,7 +10301,7 @@ class _$ResearchElementDefinitionCopyWithImpl<$Res>
       comment: comment == freezed ? _value.comment : comment as List<String>,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element,
+          : commentElement as List<Element>,
       useContext: useContext == freezed
           ? _value.useContext
           : useContext as List<UsageContext>,
@@ -10551,16 +10537,6 @@ class _$ResearchElementDefinitionCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get commentElement {
-    if (_value.commentElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.commentElement, (value) {
-      return _then(_value.copyWith(commentElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get purposeElement {
     if (_value.purposeElement == null) {
       return null;
@@ -10703,7 +10679,7 @@ abstract class _$ResearchElementDefinitionCopyWith<$Res>
           Element descriptionElement,
       List<String> comment,
       @JsonKey(name: '_comment')
-          Element commentElement,
+          List<Element> commentElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Markdown purpose,
@@ -10774,8 +10750,6 @@ abstract class _$ResearchElementDefinitionCopyWith<$Res>
   $ElementCopyWith<$Res> get publisherElement;
   @override
   $ElementCopyWith<$Res> get descriptionElement;
-  @override
-  $ElementCopyWith<$Res> get commentElement;
   @override
   $ElementCopyWith<$Res> get purposeElement;
   @override
@@ -10958,7 +10932,7 @@ class __$ResearchElementDefinitionCopyWithImpl<$Res>
       comment: comment == freezed ? _value.comment : comment as List<String>,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element,
+          : commentElement as List<Element>,
       useContext: useContext == freezed
           ? _value.useContext
           : useContext as List<UsageContext>,
@@ -11220,7 +11194,7 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
   final List<String> comment;
   @override
   @JsonKey(name: '_comment')
-  final Element commentElement;
+  final List<Element> commentElement;
   @override
   final List<UsageContext> useContext;
   @override
@@ -11539,7 +11513,7 @@ abstract class _ResearchElementDefinition extends ResearchElementDefinition {
           Element descriptionElement,
       List<String> comment,
       @JsonKey(name: '_comment')
-          Element commentElement,
+          List<Element> commentElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Markdown purpose,
@@ -11675,7 +11649,7 @@ abstract class _ResearchElementDefinition extends ResearchElementDefinition {
   List<String> get comment;
   @override
   @JsonKey(name: '_comment')
-  Element get commentElement;
+  List<Element> get commentElement;
   @override
   List<UsageContext> get useContext;
   @override

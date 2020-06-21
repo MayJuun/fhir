@@ -1202,9 +1202,10 @@ _$_MedicationAdministration _$_$_MedicationAdministrationFromJson(
     instantiatesUri: (json['instantiatesUri'] as List)
         ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
         ?.toList(),
-    instantiatesUriElement: json['_instantiatesUri'] == null
-        ? null
-        : Element.fromJson(json['_instantiatesUri'] as Map<String, dynamic>),
+    instantiatesUriElement: (json['_instantiatesUri'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     basedOn: (json['basedOn'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
@@ -1324,7 +1325,8 @@ Map<String, dynamic> _$_$_MedicationAdministrationToJson(
       instance.instantiatesCanonical?.map((e) => e?.toJson())?.toList());
   writeNotNull('instantiatesUri',
       instance.instantiatesUri?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_instantiatesUri', instance.instantiatesUriElement?.toJson());
+  writeNotNull('_instantiatesUri',
+      instance.instantiatesUriElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('basedOn', instance.basedOn?.map((e) => e?.toJson())?.toList());
   writeNotNull('partOf', instance.partOf?.map((e) => e?.toJson())?.toList());
   writeNotNull('status', instance.status?.toJson());
@@ -1850,9 +1852,10 @@ _$_MedicationKnowledge _$_$_MedicationKnowledgeFromJson(
         ? null
         : Quantity.fromJson(json['amount'] as Map<String, dynamic>),
     synonym: (json['synonym'] as List)?.map((e) => e as String)?.toList(),
-    synonymElement: json['_synonym'] == null
-        ? null
-        : Element.fromJson(json['_synonym'] as Map<String, dynamic>),
+    synonymElement: (json['_synonym'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     relatedMedicationKnowledge: (json['relatedMedicationKnowledge'] as List)
         ?.map((e) => e == null
             ? null
@@ -1978,7 +1981,8 @@ Map<String, dynamic> _$_$_MedicationKnowledgeToJson(
   writeNotNull('doseForm', instance.doseForm?.toJson());
   writeNotNull('amount', instance.amount?.toJson());
   writeNotNull('synonym', instance.synonym);
-  writeNotNull('_synonym', instance.synonymElement?.toJson());
+  writeNotNull(
+      '_synonym', instance.synonymElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('relatedMedicationKnowledge',
       instance.relatedMedicationKnowledge?.map((e) => e?.toJson())?.toList());
   writeNotNull('associatedMedication',
@@ -2393,9 +2397,10 @@ _$_MedicationKnowledgePatientCharacteristic
         : Quantity.fromJson(
             json['characteristicQuantity'] as Map<String, dynamic>),
     value: (json['value'] as List)?.map((e) => e as String)?.toList(),
-    valueElement: json['_value'] == null
-        ? null
-        : Element.fromJson(json['_value'] as Map<String, dynamic>),
+    valueElement: (json['_value'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -2419,7 +2424,8 @@ Map<String, dynamic> _$_$_MedicationKnowledgePatientCharacteristicToJson(
   writeNotNull(
       'characteristicQuantity', instance.characteristicQuantity?.toJson());
   writeNotNull('value', instance.value);
-  writeNotNull('_value', instance.valueElement?.toJson());
+  writeNotNull(
+      '_value', instance.valueElement?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
@@ -2919,9 +2925,10 @@ _$_MedicationRequest _$_$_MedicationRequestFromJson(Map<String, dynamic> json) {
     instantiatesUri: (json['instantiatesUri'] as List)
         ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
         ?.toList(),
-    instantiatesUriElement: json['_instantiatesUri'] == null
-        ? null
-        : Element.fromJson(json['_instantiatesUri'] as Map<String, dynamic>),
+    instantiatesUriElement: (json['_instantiatesUri'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     basedOn: (json['basedOn'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
@@ -3030,7 +3037,8 @@ Map<String, dynamic> _$_$_MedicationRequestToJson(
       instance.instantiatesCanonical?.map((e) => e?.toJson())?.toList());
   writeNotNull('instantiatesUri',
       instance.instantiatesUri?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_instantiatesUri', instance.instantiatesUriElement?.toJson());
+  writeNotNull('_instantiatesUri',
+      instance.instantiatesUriElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('basedOn', instance.basedOn?.map((e) => e?.toJson())?.toList());
   writeNotNull('groupIdentifier', instance.groupIdentifier?.toJson());
   writeNotNull('courseOfTherapyType', instance.courseOfTherapyType?.toJson());

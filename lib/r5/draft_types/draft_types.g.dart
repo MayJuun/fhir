@@ -151,13 +151,15 @@ _$_ProdCharacteristic _$_$_ProdCharacteristicFromJson(
         ? null
         : Element.fromJson(json['_shape'] as Map<String, dynamic>),
     color: (json['color'] as List)?.map((e) => e as String)?.toList(),
-    colorElement: json['_color'] == null
-        ? null
-        : Element.fromJson(json['_color'] as Map<String, dynamic>),
+    colorElement: (json['_color'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     imprint: (json['imprint'] as List)?.map((e) => e as String)?.toList(),
-    imprintElement: json['_imprint'] == null
-        ? null
-        : Element.fromJson(json['_imprint'] as Map<String, dynamic>),
+    imprintElement: (json['_imprint'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     image: (json['image'] as List)
         ?.map((e) =>
             e == null ? null : Attachment.fromJson(e as Map<String, dynamic>))
@@ -192,9 +194,11 @@ Map<String, dynamic> _$_$_ProdCharacteristicToJson(
   writeNotNull('shape', instance.shape);
   writeNotNull('_shape', instance.shapeElement?.toJson());
   writeNotNull('color', instance.color);
-  writeNotNull('_color', instance.colorElement?.toJson());
+  writeNotNull(
+      '_color', instance.colorElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('imprint', instance.imprint);
-  writeNotNull('_imprint', instance.imprintElement?.toJson());
+  writeNotNull(
+      '_imprint', instance.imprintElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('image', instance.image?.map((e) => e?.toJson())?.toList());
   writeNotNull('scoring', instance.scoring?.toJson());
   return val;

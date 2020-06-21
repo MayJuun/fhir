@@ -10489,7 +10489,7 @@ class _$VerificationResultTearOff {
       List<FhirExtension> modifierExtension,
       List<Reference> target,
       List<String> targetLocation,
-      @JsonKey(name: '_targetLocation') Element targetLocationElement,
+      @JsonKey(name: '_targetLocation') List<Element> targetLocationElement,
       CodeableConcept need,
       Code status,
       @JsonKey(name: '_status') Element statusElement,
@@ -10563,7 +10563,7 @@ mixin _$VerificationResult {
   List<Reference> get target;
   List<String> get targetLocation;
   @JsonKey(name: '_targetLocation')
-  Element get targetLocationElement;
+  List<Element> get targetLocationElement;
   CodeableConcept get need;
   Code get status;
   @JsonKey(name: '_status')
@@ -10607,7 +10607,7 @@ abstract class $VerificationResultCopyWith<$Res> {
       List<FhirExtension> modifierExtension,
       List<Reference> target,
       List<String> targetLocation,
-      @JsonKey(name: '_targetLocation') Element targetLocationElement,
+      @JsonKey(name: '_targetLocation') List<Element> targetLocationElement,
       CodeableConcept need,
       Code status,
       @JsonKey(name: '_status') Element statusElement,
@@ -10629,7 +10629,6 @@ abstract class $VerificationResultCopyWith<$Res> {
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
-  $ElementCopyWith<$Res> get targetLocationElement;
   $CodeableConceptCopyWith<$Res> get need;
   $ElementCopyWith<$Res> get statusElement;
   $ElementCopyWith<$Res> get statusDateElement;
@@ -10713,7 +10712,7 @@ class _$VerificationResultCopyWithImpl<$Res>
           : targetLocation as List<String>,
       targetLocationElement: targetLocationElement == freezed
           ? _value.targetLocationElement
-          : targetLocationElement as Element,
+          : targetLocationElement as List<Element>,
       need: need == freezed ? _value.need : need as CodeableConcept,
       status: status == freezed ? _value.status : status as Code,
       statusElement: statusElement == freezed
@@ -10796,16 +10795,6 @@ class _$VerificationResultCopyWithImpl<$Res>
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get targetLocationElement {
-    if (_value.targetLocationElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.targetLocationElement, (value) {
-      return _then(_value.copyWith(targetLocationElement: value));
     });
   }
 
@@ -10921,7 +10910,7 @@ abstract class _$VerificationResultCopyWith<$Res>
       List<FhirExtension> modifierExtension,
       List<Reference> target,
       List<String> targetLocation,
-      @JsonKey(name: '_targetLocation') Element targetLocationElement,
+      @JsonKey(name: '_targetLocation') List<Element> targetLocationElement,
       CodeableConcept need,
       Code status,
       @JsonKey(name: '_status') Element statusElement,
@@ -10947,8 +10936,6 @@ abstract class _$VerificationResultCopyWith<$Res>
   $ElementCopyWith<$Res> get languageElement;
   @override
   $NarrativeCopyWith<$Res> get text;
-  @override
-  $ElementCopyWith<$Res> get targetLocationElement;
   @override
   $CodeableConceptCopyWith<$Res> get need;
   @override
@@ -11043,7 +11030,7 @@ class __$VerificationResultCopyWithImpl<$Res>
           : targetLocation as List<String>,
       targetLocationElement: targetLocationElement == freezed
           ? _value.targetLocationElement
-          : targetLocationElement as Element,
+          : targetLocationElement as List<Element>,
       need: need == freezed ? _value.need : need as CodeableConcept,
       status: status == freezed ? _value.status : status as Code,
       statusElement: statusElement == freezed
@@ -11161,7 +11148,7 @@ class _$_VerificationResult extends _VerificationResult {
   final List<String> targetLocation;
   @override
   @JsonKey(name: '_targetLocation')
-  final Element targetLocationElement;
+  final List<Element> targetLocationElement;
   @override
   final CodeableConcept need;
   @override
@@ -11342,7 +11329,7 @@ abstract class _VerificationResult extends VerificationResult {
       List<FhirExtension> modifierExtension,
       List<Reference> target,
       List<String> targetLocation,
-      @JsonKey(name: '_targetLocation') Element targetLocationElement,
+      @JsonKey(name: '_targetLocation') List<Element> targetLocationElement,
       CodeableConcept need,
       Code status,
       @JsonKey(name: '_status') Element statusElement,
@@ -11395,7 +11382,7 @@ abstract class _VerificationResult extends VerificationResult {
   List<String> get targetLocation;
   @override
   @JsonKey(name: '_targetLocation')
-  Element get targetLocationElement;
+  List<Element> get targetLocationElement;
   @override
   CodeableConcept get need;
   @override
