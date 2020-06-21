@@ -1,0 +1,73 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "encounter-subject-status",
+  "meta": {
+    "lastUpdated": "2019-12-31T21:03:40.621+11:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003ch2\u003eEncounter subject status\u003c/h2\u003e\u003cdiv\u003e\u003cp\u003eThis example value set defines a set of codes that can be used to indicate the status of the subject within the encounter\u003c/p\u003e\n\u003c/div\u003e\u003cp\u003eThis code system http://terminology.hl7.org/CodeSystem/encounter-subject-status defines the following codes:\u003c/p\u003e\u003ctable class\u003d\"codes\"\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDisplay\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDefinition\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003earrived\u003ca name\u003d\"encounter-subject-status-arrived\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eArrived\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003etriaged\u003ca name\u003d\"encounter-subject-status-triaged\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eTriaged\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eon-leave\u003ca name\u003d\"encounter-subject-status-on-leave\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eOn Leave\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003edeparted\u003ca name\u003d\"encounter-subject-status-departed\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eDeparted\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "pa"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "trial-use"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 2
+    }
+  ],
+  "url": "http://terminology.hl7.org/CodeSystem/encounter-subject-status",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.1.1420"
+    }
+  ],
+  "version": "4.2.0",
+  "name": "EncounterSubjectStatus",
+  "title": "Encounter subject status",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "FHIR Project team",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/fhir"
+        }
+      ]
+    }
+  ],
+  "description": "This example value set defines a set of codes that can be used to indicate the status of the subject within the encounter",
+  "caseSensitive": true,
+  "valueSet": "http://hl7.org/fhir/ValueSet/encounter-subject-status",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "arrived",
+      "display": "Arrived"
+    },
+    {
+      "code": "triaged",
+      "display": "Triaged"
+    },
+    {
+      "code": "on-leave",
+      "display": "On Leave"
+    },
+    {
+      "code": "departed",
+      "display": "Departed"
+    }
+  ]
+}

@@ -606,7 +606,7 @@ class __$EncounterCopyWithImpl<$Res> extends _$EncounterCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Encounter implements _Encounter {
-  const _$_Encounter(
+  _$_Encounter(
       {@required
       @JsonKey(required: true, defaultValue: 'Encounter')
           this.resourceType,
@@ -848,7 +848,7 @@ class _$_Encounter implements _Encounter {
 }
 
 abstract class _Encounter implements Encounter {
-  const factory _Encounter(
+  factory _Encounter(
       {@required
       @JsonKey(required: true, defaultValue: 'Encounter')
           String resourceType,
@@ -1107,7 +1107,7 @@ class __$EncounterStatusHistoryCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_EncounterStatusHistory implements _EncounterStatusHistory {
-  const _$_EncounterStatusHistory(
+  _$_EncounterStatusHistory(
       {@JsonKey(unknownEnumValue: EncounterStatus.unknown) this.status,
       @JsonKey(required: true) this.period,
       @JsonKey(name: '_status') this.statusElement});
@@ -1162,7 +1162,7 @@ class _$_EncounterStatusHistory implements _EncounterStatusHistory {
 }
 
 abstract class _EncounterStatusHistory implements EncounterStatusHistory {
-  const factory _EncounterStatusHistory(
+  factory _EncounterStatusHistory(
       {@JsonKey(unknownEnumValue: EncounterStatus.unknown)
           EncounterStatus status,
       @JsonKey(required: true)
@@ -1309,7 +1309,7 @@ class __$EncounterClassHistoryCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_EncounterClassHistory implements _EncounterClassHistory {
-  const _$_EncounterClassHistory(
+  _$_EncounterClassHistory(
       {@JsonKey(required: true, name: 'class') this.class_,
       @JsonKey(required: true) this.period});
 
@@ -1356,7 +1356,7 @@ class _$_EncounterClassHistory implements _EncounterClassHistory {
 }
 
 abstract class _EncounterClassHistory implements EncounterClassHistory {
-  const factory _EncounterClassHistory(
+  factory _EncounterClassHistory(
       {@JsonKey(required: true, name: 'class') Coding class_,
       @JsonKey(required: true) Period period}) = _$_EncounterClassHistory;
 
@@ -1496,7 +1496,7 @@ class __$EncounterParticipantCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_EncounterParticipant implements _EncounterParticipant {
-  const _$_EncounterParticipant({this.type, this.period, this.individual});
+  _$_EncounterParticipant({this.type, this.period, this.individual});
 
   factory _$_EncounterParticipant.fromJson(Map<String, dynamic> json) =>
       _$_$_EncounterParticipantFromJson(json);
@@ -1545,7 +1545,7 @@ class _$_EncounterParticipant implements _EncounterParticipant {
 }
 
 abstract class _EncounterParticipant implements EncounterParticipant {
-  const factory _EncounterParticipant(
+  factory _EncounterParticipant(
       {List<CodeableConcept> type,
       Period period,
       Reference individual}) = _$_EncounterParticipant;
@@ -1720,7 +1720,7 @@ class __$EncounterDiagnosisCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_EncounterDiagnosis implements _EncounterDiagnosis {
-  const _$_EncounterDiagnosis(
+  _$_EncounterDiagnosis(
       {@JsonKey(required: true) this.condition,
       this.role,
       this.rank,
@@ -1780,7 +1780,7 @@ class _$_EncounterDiagnosis implements _EncounterDiagnosis {
 }
 
 abstract class _EncounterDiagnosis implements EncounterDiagnosis {
-  const factory _EncounterDiagnosis(
+  factory _EncounterDiagnosis(
       {@JsonKey(required: true) Reference condition,
       CodeableConcept role,
       PositiveInt rank,
@@ -2072,7 +2072,7 @@ class __$EncounterHospitalizationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_EncounterHospitalization implements _EncounterHospitalization {
-  const _$_EncounterHospitalization(
+  _$_EncounterHospitalization(
       {this.preAdmissionIdentifier,
       this.origin,
       this.admitSource,
@@ -2167,7 +2167,7 @@ class _$_EncounterHospitalization implements _EncounterHospitalization {
 }
 
 abstract class _EncounterHospitalization implements EncounterHospitalization {
-  const factory _EncounterHospitalization(
+  factory _EncounterHospitalization(
       {Identifier preAdmissionIdentifier,
       Reference origin,
       CodeableConcept admitSource,
@@ -2372,7 +2372,7 @@ class __$EncounterLocationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_EncounterLocation implements _EncounterLocation {
-  const _$_EncounterLocation(
+  _$_EncounterLocation(
       {@JsonKey(required: true) this.location,
       @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown) this.status,
       this.period,
@@ -2433,7 +2433,7 @@ class _$_EncounterLocation implements _EncounterLocation {
 }
 
 abstract class _EncounterLocation implements EncounterLocation {
-  const factory _EncounterLocation(
+  factory _EncounterLocation(
       {@JsonKey(required: true)
           Reference location,
       @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
@@ -2892,7 +2892,7 @@ class __$EpisodeOfCareCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_EpisodeOfCare implements _EpisodeOfCare {
-  const _$_EpisodeOfCare(
+  _$_EpisodeOfCare(
       {@required
       @JsonKey(required: true, defaultValue: 'EpisodeOfCare')
           this.resourceType,
@@ -3083,7 +3083,7 @@ class _$_EpisodeOfCare implements _EpisodeOfCare {
 }
 
 abstract class _EpisodeOfCare implements EpisodeOfCare {
-  const factory _EpisodeOfCare(
+  factory _EpisodeOfCare(
       {@required
       @JsonKey(required: true, defaultValue: 'EpisodeOfCare')
           String resourceType,
@@ -3317,7 +3317,7 @@ class __$EpisodeOfCareStatusHistoryCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_EpisodeOfCareStatusHistory implements _EpisodeOfCareStatusHistory {
-  const _$_EpisodeOfCareStatusHistory(
+  _$_EpisodeOfCareStatusHistory(
       {@JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown) this.status,
       @JsonKey(required: true) this.period,
       @JsonKey(name: '_status') this.statusElement});
@@ -3373,7 +3373,7 @@ class _$_EpisodeOfCareStatusHistory implements _EpisodeOfCareStatusHistory {
 
 abstract class _EpisodeOfCareStatusHistory
     implements EpisodeOfCareStatusHistory {
-  const factory _EpisodeOfCareStatusHistory(
+  factory _EpisodeOfCareStatusHistory(
       {@JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
           EpisodeOfCareStatus status,
       @JsonKey(required: true)
@@ -3556,7 +3556,7 @@ class __$EpisodeOfCareDiagnosisCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_EpisodeOfCareDiagnosis implements _EpisodeOfCareDiagnosis {
-  const _$_EpisodeOfCareDiagnosis(
+  _$_EpisodeOfCareDiagnosis(
       {@JsonKey(required: true) this.condition,
       this.role,
       this.rank,
@@ -3617,7 +3617,7 @@ class _$_EpisodeOfCareDiagnosis implements _EpisodeOfCareDiagnosis {
 }
 
 abstract class _EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
-  const factory _EpisodeOfCareDiagnosis(
+  factory _EpisodeOfCareDiagnosis(
       {@JsonKey(required: true) Reference condition,
       CodeableConcept role,
       PositiveInt rank,
@@ -4032,7 +4032,7 @@ class __$FlagCopyWithImpl<$Res> extends _$FlagCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Flag implements _Flag {
-  const _$_Flag(
+  _$_Flag(
       {@required
       @JsonKey(required: true, defaultValue: 'Flag')
           this.resourceType,
@@ -4197,7 +4197,7 @@ class _$_Flag implements _Flag {
 }
 
 abstract class _Flag implements Flag {
-  const factory _Flag(
+  factory _Flag(
       {@required
       @JsonKey(required: true, defaultValue: 'Flag')
           String resourceType,
@@ -5170,7 +5170,7 @@ class __$LibraryCopyWithImpl<$Res> extends _$LibraryCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Library implements _Library {
-  const _$_Library(
+  _$_Library(
       {@required
       @JsonKey(required: true, defaultValue: 'Library')
           this.resourceType,
@@ -5528,7 +5528,7 @@ class _$_Library implements _Library {
 }
 
 abstract class _Library implements Library {
-  const factory _Library(
+  factory _Library(
       {@required
       @JsonKey(required: true, defaultValue: 'Library')
           String resourceType,
@@ -6241,7 +6241,7 @@ class __$List_CopyWithImpl<$Res> extends _$List_CopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_List_ implements _List_ {
-  const _$_List_(
+  _$_List_(
       {@required
       @JsonKey(required: true, defaultValue: 'List')
           this.resourceType,
@@ -6462,7 +6462,7 @@ class _$_List_ implements _List_ {
 }
 
 abstract class _List_ implements List_ {
-  const factory _List_(
+  factory _List_(
       {@required
       @JsonKey(required: true, defaultValue: 'List')
           String resourceType,
@@ -6751,7 +6751,7 @@ class __$ListEntryCopyWithImpl<$Res> extends _$ListEntryCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ListEntry implements _ListEntry {
-  const _$_ListEntry(
+  _$_ListEntry(
       {this.flag,
       this.deleted,
       this.date,
@@ -6825,7 +6825,7 @@ class _$_ListEntry implements _ListEntry {
 }
 
 abstract class _ListEntry implements ListEntry {
-  const factory _ListEntry(
+  factory _ListEntry(
       {CodeableConcept flag,
       Boolean deleted,
       FhirDateTime date,

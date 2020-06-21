@@ -516,7 +516,7 @@ class __$PaymentNoticeCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_PaymentNotice implements _PaymentNotice {
-  const _$_PaymentNotice(
+  _$_PaymentNotice(
       {@JsonKey(defaultValue: 'PaymentNotice') this.resourceType,
       this.id,
       this.meta,
@@ -705,7 +705,7 @@ class _$_PaymentNotice implements _PaymentNotice {
 }
 
 abstract class _PaymentNotice implements PaymentNotice {
-  const factory _PaymentNotice(
+  factory _PaymentNotice(
       {@JsonKey(defaultValue: 'PaymentNotice') String resourceType,
       Id id,
       Meta meta,
@@ -1454,7 +1454,7 @@ class __$PaymentReconciliationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_PaymentReconciliation implements _PaymentReconciliation {
-  const _$_PaymentReconciliation(
+  _$_PaymentReconciliation(
       {@JsonKey(defaultValue: 'PaymentReconciliation')
           this.resourceType,
       this.id,
@@ -1694,7 +1694,7 @@ class _$_PaymentReconciliation implements _PaymentReconciliation {
 }
 
 abstract class _PaymentReconciliation implements PaymentReconciliation {
-  const factory _PaymentReconciliation(
+  factory _PaymentReconciliation(
       {@JsonKey(defaultValue: 'PaymentReconciliation')
           String resourceType,
       Id id,
@@ -2109,7 +2109,7 @@ class __$PaymentReconciliationDetailCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_PaymentReconciliationDetail implements _PaymentReconciliationDetail {
-  const _$_PaymentReconciliationDetail(
+  _$_PaymentReconciliationDetail(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -2219,7 +2219,7 @@ class _$_PaymentReconciliationDetail implements _PaymentReconciliationDetail {
 
 abstract class _PaymentReconciliationDetail
     implements PaymentReconciliationDetail {
-  const factory _PaymentReconciliationDetail(
+  factory _PaymentReconciliationDetail(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -2474,7 +2474,7 @@ class __$PaymentReconciliationNoteCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_PaymentReconciliationNote implements _PaymentReconciliationNote {
-  const _$_PaymentReconciliationNote(
+  _$_PaymentReconciliationNote(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -2557,7 +2557,7 @@ class _$_PaymentReconciliationNote implements _PaymentReconciliationNote {
 }
 
 abstract class _PaymentReconciliationNote implements PaymentReconciliationNote {
-  const factory _PaymentReconciliationNote(
+  factory _PaymentReconciliationNote(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,

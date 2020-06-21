@@ -8,11 +8,10 @@ part 'security.g.dart';
 
 @freezed
 abstract class AuditEvent with _$AuditEvent implements Resource {
-  const factory AuditEvent({
+  factory AuditEvent({
     @JsonKey(required: true, defaultValue: 'AuditEvent')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -44,7 +43,7 @@ abstract class AuditEvent with _$AuditEvent implements Resource {
 
 @freezed
 abstract class AuditEventAgent with _$AuditEventAgent {
-  const factory AuditEventAgent({
+  factory AuditEventAgent({
     List<CodeableConcept> role,
     Reference reference,
     Identifier userId,
@@ -67,7 +66,7 @@ abstract class AuditEventAgent with _$AuditEventAgent {
 
 @freezed
 abstract class AuditEventNetwork with _$AuditEventNetwork {
-  const factory AuditEventNetwork({
+  factory AuditEventNetwork({
     String address,
     @JsonKey(unknownEnumValue: NetworkType.unknown) NetworkType type,
     @JsonKey(name: '_address') Element addressElement,
@@ -79,7 +78,7 @@ abstract class AuditEventNetwork with _$AuditEventNetwork {
 
 @freezed
 abstract class AuditEventSource with _$AuditEventSource {
-  const factory AuditEventSource({
+  factory AuditEventSource({
     String site,
     @JsonKey(required: true) Identifier identifier,
     List<Coding> type,
@@ -91,7 +90,7 @@ abstract class AuditEventSource with _$AuditEventSource {
 
 @freezed
 abstract class AuditEventEntity with _$AuditEventEntity {
-  const factory AuditEventEntity({
+  factory AuditEventEntity({
     Identifier identifier,
     Reference reference,
     Coding type,
@@ -112,7 +111,7 @@ abstract class AuditEventEntity with _$AuditEventEntity {
 
 @freezed
 abstract class AuditEventDetail with _$AuditEventDetail {
-  const factory AuditEventDetail({
+  factory AuditEventDetail({
     String type,
     String value,
     @JsonKey(name: '_type') Element typeElement,
@@ -124,11 +123,10 @@ abstract class AuditEventDetail with _$AuditEventDetail {
 
 @freezed
 abstract class Consent with _$Consent implements Resource {
-  const factory Consent({
+  factory Consent({
     @JsonKey(required: true, defaultValue: 'Consent')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -167,7 +165,7 @@ abstract class Consent with _$Consent implements Resource {
 
 @freezed
 abstract class ConsentActor with _$ConsentActor {
-  const factory ConsentActor({
+  factory ConsentActor({
     @JsonKey(required: true) CodeableConcept role,
     @JsonKey(required: true) Reference reference,
   }) = _ConsentActor;
@@ -177,7 +175,7 @@ abstract class ConsentActor with _$ConsentActor {
 
 @freezed
 abstract class ConsentPolicy with _$ConsentPolicy {
-  const factory ConsentPolicy({
+  factory ConsentPolicy({
     String authority,
     String uri,
     @JsonKey(name: '_authority') Element authorityElement,
@@ -189,7 +187,7 @@ abstract class ConsentPolicy with _$ConsentPolicy {
 
 @freezed
 abstract class ConsentData with _$ConsentData {
-  const factory ConsentData({
+  factory ConsentData({
     @JsonKey(unknownEnumValue: DataMeaning.unknown) DataMeaning meaning,
     @JsonKey(required: true) Reference reference,
     @JsonKey(name: '_meaning') Element meaningElement,
@@ -200,7 +198,7 @@ abstract class ConsentData with _$ConsentData {
 
 @freezed
 abstract class ConsentExcept with _$ConsentExcept {
-  const factory ConsentExcept({
+  factory ConsentExcept({
     @JsonKey(unknownEnumValue: ExceptType.unknown) ExceptType type,
     Period period,
     List<ConsentActor1> actor,
@@ -219,7 +217,7 @@ abstract class ConsentExcept with _$ConsentExcept {
 
 @freezed
 abstract class ConsentActor1 with _$ConsentActor1 {
-  const factory ConsentActor1({
+  factory ConsentActor1({
     @JsonKey(required: true) CodeableConcept role,
     @JsonKey(required: true) Reference reference,
   }) = _ConsentActor1;
@@ -229,7 +227,7 @@ abstract class ConsentActor1 with _$ConsentActor1 {
 
 @freezed
 abstract class ConsentData1 with _$ConsentData1 {
-  const factory ConsentData1({
+  factory ConsentData1({
     @JsonKey(unknownEnumValue: DataMeaning.unknown) DataMeaning meaning,
     @JsonKey(required: true) Reference reference,
     @JsonKey(name: '_meaning') Element meaningElement,
@@ -240,11 +238,10 @@ abstract class ConsentData1 with _$ConsentData1 {
 
 @freezed
 abstract class Provenance with _$Provenance implements Resource {
-  const factory Provenance({
+  factory Provenance({
     @JsonKey(required: true, defaultValue: 'Provenance')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -272,7 +269,7 @@ abstract class Provenance with _$Provenance implements Resource {
 
 @freezed
 abstract class ProvenanceAgent with _$ProvenanceAgent {
-  const factory ProvenanceAgent({
+  factory ProvenanceAgent({
     List<CodeableConcept> role,
     String whoUri,
     Reference whoReference,
@@ -288,7 +285,7 @@ abstract class ProvenanceAgent with _$ProvenanceAgent {
 
 @freezed
 abstract class ProvenanceEntity with _$ProvenanceEntity {
-  const factory ProvenanceEntity({
+  factory ProvenanceEntity({
     @JsonKey(unknownEnumValue: EntityRole.unknown) EntityRole role,
     String whatUri,
     Reference whatReference,

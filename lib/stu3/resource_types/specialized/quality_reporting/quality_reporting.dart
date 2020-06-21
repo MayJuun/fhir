@@ -9,11 +9,10 @@ part 'quality_reporting.g.dart';
 
 @freezed
 abstract class Measure with _$Measure implements Resource {
-  const factory Measure({
+  factory Measure({
     @JsonKey(required: true, defaultValue: 'Measure')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -90,7 +89,7 @@ abstract class Measure with _$Measure implements Resource {
 
 @freezed
 abstract class MeasureGroup with _$MeasureGroup {
-  const factory MeasureGroup({
+  factory MeasureGroup({
     @JsonKey(required: true) Identifier identifier,
     String name,
     String description,
@@ -105,7 +104,7 @@ abstract class MeasureGroup with _$MeasureGroup {
 
 @freezed
 abstract class MeasurePopulation with _$MeasurePopulation {
-  const factory MeasurePopulation({
+  factory MeasurePopulation({
     Identifier identifier,
     CodeableConcept code,
     String name,
@@ -121,7 +120,7 @@ abstract class MeasurePopulation with _$MeasurePopulation {
 
 @freezed
 abstract class MeasureStratifier with _$MeasureStratifier {
-  const factory MeasureStratifier({
+  factory MeasureStratifier({
     Identifier identifier,
     String criteria,
     String path,
@@ -134,7 +133,7 @@ abstract class MeasureStratifier with _$MeasureStratifier {
 
 @freezed
 abstract class MeasureSupplementalData with _$MeasureSupplementalData {
-  const factory MeasureSupplementalData({
+  factory MeasureSupplementalData({
     Identifier identifier,
     List<CodeableConcept> usage,
     String criteria,
@@ -148,11 +147,10 @@ abstract class MeasureSupplementalData with _$MeasureSupplementalData {
 
 @freezed
 abstract class MeasureReport with _$MeasureReport implements Resource {
-  const factory MeasureReport({
+  factory MeasureReport({
     @JsonKey(required: true, defaultValue: 'MeasureReport')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -183,7 +181,7 @@ abstract class MeasureReport with _$MeasureReport implements Resource {
 
 @freezed
 abstract class MeasureReportGroup with _$MeasureReportGroup {
-  const factory MeasureReportGroup({
+  factory MeasureReportGroup({
     @JsonKey(required: true) Identifier identifier,
     List<MeasureReportPopulation> population,
     Decimal measureScore,
@@ -196,7 +194,7 @@ abstract class MeasureReportGroup with _$MeasureReportGroup {
 
 @freezed
 abstract class MeasureReportPopulation with _$MeasureReportPopulation {
-  const factory MeasureReportPopulation({
+  factory MeasureReportPopulation({
     Identifier identifier,
     CodeableConcept code,
     Integer count,
@@ -209,7 +207,7 @@ abstract class MeasureReportPopulation with _$MeasureReportPopulation {
 
 @freezed
 abstract class MeasureReportStratifier with _$MeasureReportStratifier {
-  const factory MeasureReportStratifier({
+  factory MeasureReportStratifier({
     Identifier identifier,
     List<MeasureReportStratum> stratum,
   }) = _MeasureReportStratifier;
@@ -219,7 +217,7 @@ abstract class MeasureReportStratifier with _$MeasureReportStratifier {
 
 @freezed
 abstract class MeasureReportStratum with _$MeasureReportStratum {
-  const factory MeasureReportStratum({
+  factory MeasureReportStratum({
     String value,
     List<MeasureReportPopulation1> population,
     Decimal measureScore,
@@ -232,7 +230,7 @@ abstract class MeasureReportStratum with _$MeasureReportStratum {
 
 @freezed
 abstract class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
-  const factory MeasureReportPopulation1({
+  factory MeasureReportPopulation1({
     Identifier identifier,
     CodeableConcept code,
     Integer count,

@@ -9,7 +9,7 @@ part 'individuals.g.dart';
 
 @freezed
 abstract class Practitioner with _$Practitioner implements Resource {
-  const factory Practitioner({
+  factory Practitioner({
     @JsonKey(defaultValue: 'Practitioner') String resourceType,
     Id id,
     Meta meta,
@@ -44,7 +44,7 @@ abstract class Practitioner with _$Practitioner implements Resource {
 
 @freezed
 abstract class RelatedPerson with _$RelatedPerson implements Resource {
-  const factory RelatedPerson({
+  factory RelatedPerson({
     @JsonKey(defaultValue: 'RelatedPerson') String resourceType,
     Id id,
     Meta meta,
@@ -78,7 +78,7 @@ abstract class RelatedPerson with _$RelatedPerson implements Resource {
 
 @freezed
 abstract class Patient with _$Patient implements Resource {
-  const factory Patient({
+  factory Patient({
     @JsonKey(defaultValue: 'Patient') String resourceType,
     Id id,
     Meta meta,
@@ -126,7 +126,7 @@ abstract class Patient with _$Patient implements Resource {
 @freezed
 abstract class PractitionerPractitionerRole
     with _$PractitionerPractitionerRole {
-  const factory PractitionerPractitionerRole({
+  factory PractitionerPractitionerRole({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     @JsonKey(name: 'fhir_comments') List<String> fhirComments,
@@ -145,7 +145,7 @@ abstract class PractitionerPractitionerRole
 
 @freezed
 abstract class PractitionerQualification with _$PractitionerQualification {
-  const factory PractitionerQualification({
+  factory PractitionerQualification({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -161,7 +161,7 @@ abstract class PractitionerQualification with _$PractitionerQualification {
 
 @freezed
 abstract class PatientContact with _$PatientContact {
-  const factory PatientContact({
+  factory PatientContact({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -181,7 +181,7 @@ abstract class PatientContact with _$PatientContact {
 
 @freezed
 abstract class PatientAnimal with _$PatientAnimal {
-  const factory PatientAnimal({
+  factory PatientAnimal({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -196,7 +196,7 @@ abstract class PatientAnimal with _$PatientAnimal {
 
 @freezed
 abstract class PatientCommunication with _$PatientCommunication {
-  const factory PatientCommunication({
+  factory PatientCommunication({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -211,7 +211,7 @@ abstract class PatientCommunication with _$PatientCommunication {
 
 @freezed
 abstract class PatientLink with _$PatientLink {
-  const factory PatientLink({
+  factory PatientLink({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,

@@ -8,7 +8,7 @@ part 'resource.g.dart';
 
 @freezed
 abstract class DomainResource with _$DomainResource implements Resource {
-  const factory DomainResource({
+  factory DomainResource({
     @JsonKey(required: true) @required Id id,
     Meta meta,
     FhirUri implicitRules,

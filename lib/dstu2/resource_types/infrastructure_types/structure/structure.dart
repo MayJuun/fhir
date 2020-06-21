@@ -9,7 +9,7 @@ part 'structure.g.dart';
 
 @freezed
 abstract class Media with _$Media implements Resource {
-  const factory Media({
+  factory Media({
     @JsonKey(defaultValue: 'Media') String resourceType,
     Id id,
     Meta meta,
@@ -47,7 +47,7 @@ abstract class Media with _$Media implements Resource {
 
 @freezed
 abstract class Basic with _$Basic implements Resource {
-  const factory Basic({
+  factory Basic({
     @JsonKey(defaultValue: 'Basic') String resourceType,
     Id id,
     Meta meta,
@@ -72,7 +72,7 @@ abstract class Basic with _$Basic implements Resource {
 
 @freezed
 abstract class Binary with _$Binary implements Resource {
-  const factory Binary({
+  factory Binary({
     @JsonKey(defaultValue: 'Binary') String resourceType,
     Id id,
     Meta meta,
@@ -90,7 +90,7 @@ abstract class Binary with _$Binary implements Resource {
 
 @freezed
 abstract class Bundle with _$Bundle implements Resource {
-  const factory Bundle({
+  factory Bundle({
     @JsonKey(defaultValue: 'Bundle') String resourceType,
     Id id,
     Meta meta,
@@ -114,7 +114,7 @@ abstract class Bundle with _$Bundle implements Resource {
 
 @freezed
 abstract class BundleLink with _$BundleLink {
-  const factory BundleLink({
+  factory BundleLink({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -131,7 +131,7 @@ abstract class BundleLink with _$BundleLink {
 
 @freezed
 abstract class BundleEntry with _$BundleEntry {
-  const factory BundleEntry({
+  factory BundleEntry({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -151,7 +151,7 @@ abstract class BundleEntry with _$BundleEntry {
 
 @freezed
 abstract class BundleSearch with _$BundleSearch {
-  const factory BundleSearch({
+  factory BundleSearch({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -168,7 +168,7 @@ abstract class BundleSearch with _$BundleSearch {
 
 @freezed
 abstract class BundleRequest with _$BundleRequest {
-  const factory BundleRequest({
+  factory BundleRequest({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -195,7 +195,7 @@ abstract class BundleRequest with _$BundleRequest {
 
 @freezed
 abstract class BundleResponse with _$BundleResponse {
-  const factory BundleResponse({
+  factory BundleResponse({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,

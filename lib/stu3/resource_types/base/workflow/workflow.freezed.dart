@@ -716,7 +716,7 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Appointment implements _Appointment {
-  const _$_Appointment(
+  _$_Appointment(
       {@required
       @JsonKey(required: true, defaultValue: 'Appointment')
           this.resourceType,
@@ -1002,7 +1002,7 @@ class _$_Appointment implements _Appointment {
 }
 
 abstract class _Appointment implements Appointment {
-  const factory _Appointment(
+  factory _Appointment(
       {@required
       @JsonKey(required: true, defaultValue: 'Appointment')
           String resourceType,
@@ -1345,7 +1345,7 @@ class __$AppointmentParticipantCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_AppointmentParticipant implements _AppointmentParticipant {
-  const _$_AppointmentParticipant(
+  _$_AppointmentParticipant(
       {this.type,
       this.actor,
       @JsonKey(name: 'required', unknownEnumValue: ParticipantRequired.unknown)
@@ -1425,7 +1425,7 @@ class _$_AppointmentParticipant implements _AppointmentParticipant {
 }
 
 abstract class _AppointmentParticipant implements AppointmentParticipant {
-  const factory _AppointmentParticipant(
+  factory _AppointmentParticipant(
       {List<CodeableConcept> type,
       Reference actor,
       @JsonKey(name: 'required', unknownEnumValue: ParticipantRequired.unknown)
@@ -1906,7 +1906,7 @@ class __$AppointmentResponseCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_AppointmentResponse implements _AppointmentResponse {
-  const _$_AppointmentResponse(
+  _$_AppointmentResponse(
       {@required
       @JsonKey(required: true, defaultValue: 'AppointmentResponse')
           this.resourceType,
@@ -2098,7 +2098,7 @@ class _$_AppointmentResponse implements _AppointmentResponse {
 }
 
 abstract class _AppointmentResponse implements AppointmentResponse {
-  const factory _AppointmentResponse(
+  factory _AppointmentResponse(
       {@required
       @JsonKey(required: true, defaultValue: 'AppointmentResponse')
           String resourceType,
@@ -2832,7 +2832,7 @@ class __$ProcessRequestCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ProcessRequest implements _ProcessRequest {
-  const _$_ProcessRequest(
+  _$_ProcessRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'ProcessRequest')
           this.resourceType,
@@ -3084,7 +3084,7 @@ class _$_ProcessRequest implements _ProcessRequest {
 }
 
 abstract class _ProcessRequest implements ProcessRequest {
-  const factory _ProcessRequest(
+  factory _ProcessRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'ProcessRequest')
           String resourceType,
@@ -3323,7 +3323,7 @@ class __$ProcessRequestItemCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ProcessRequestItem implements _ProcessRequestItem {
-  const _$_ProcessRequestItem(
+  _$_ProcessRequestItem(
       {this.sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId') this.sequenceLinkIdElement});
 
@@ -3370,7 +3370,7 @@ class _$_ProcessRequestItem implements _ProcessRequestItem {
 }
 
 abstract class _ProcessRequestItem implements ProcessRequestItem {
-  const factory _ProcessRequestItem(
+  factory _ProcessRequestItem(
           {Integer sequenceLinkId,
           @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement}) =
       _$_ProcessRequestItem;
@@ -3908,7 +3908,7 @@ class __$ProcessResponseCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ProcessResponse implements _ProcessResponse {
-  const _$_ProcessResponse(
+  _$_ProcessResponse(
       {@required
       @JsonKey(required: true, defaultValue: 'ProcessResponse')
           this.resourceType,
@@ -4119,7 +4119,7 @@ class _$_ProcessResponse implements _ProcessResponse {
 }
 
 abstract class _ProcessResponse implements ProcessResponse {
-  const factory _ProcessResponse(
+  factory _ProcessResponse(
       {@required
       @JsonKey(required: true, defaultValue: 'ProcessResponse')
           String resourceType,
@@ -4349,7 +4349,7 @@ class __$ProcessResponseProcessNoteCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ProcessResponseProcessNote implements _ProcessResponseProcessNote {
-  const _$_ProcessResponseProcessNote(
+  _$_ProcessResponseProcessNote(
       {this.type, this.text, @JsonKey(name: '_text') this.textElement});
 
   factory _$_ProcessResponseProcessNote.fromJson(Map<String, dynamic> json) =>
@@ -4401,7 +4401,7 @@ class _$_ProcessResponseProcessNote implements _ProcessResponseProcessNote {
 
 abstract class _ProcessResponseProcessNote
     implements ProcessResponseProcessNote {
-  const factory _ProcessResponseProcessNote(
+  factory _ProcessResponseProcessNote(
           {CodeableConcept type,
           String text,
           @JsonKey(name: '_text') Element textElement}) =
@@ -4798,7 +4798,7 @@ class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Schedule implements _Schedule {
-  const _$_Schedule(
+  _$_Schedule(
       {@required
       @JsonKey(required: true, defaultValue: 'Schedule')
           this.resourceType,
@@ -4970,7 +4970,7 @@ class _$_Schedule implements _Schedule {
 }
 
 abstract class _Schedule implements Schedule {
-  const factory _Schedule(
+  factory _Schedule(
       {@required
       @JsonKey(required: true, defaultValue: 'Schedule')
           String resourceType,
@@ -5548,7 +5548,7 @@ class __$SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Slot implements _Slot {
-  const _$_Slot(
+  _$_Slot(
       {@required
       @JsonKey(required: true, defaultValue: 'Slot')
           this.resourceType,
@@ -5768,7 +5768,7 @@ class _$_Slot implements _Slot {
 }
 
 abstract class _Slot implements Slot {
-  const factory _Slot(
+  factory _Slot(
       {@required
       @JsonKey(required: true, defaultValue: 'Slot')
           String resourceType,
@@ -6743,7 +6743,7 @@ class __$TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Task implements _Task {
-  const _$_Task(
+  _$_Task(
       {@required
       @JsonKey(required: true, defaultValue: 'Task')
           this.resourceType,
@@ -7062,7 +7062,7 @@ class _$_Task implements _Task {
 }
 
 abstract class _Task implements Task {
-  const factory _Task(
+  factory _Task(
       {@required
       @JsonKey(required: true, defaultValue: 'Task')
           String resourceType,
@@ -7343,8 +7343,7 @@ class __$TaskRequesterCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TaskRequester implements _TaskRequester {
-  const _$_TaskRequester(
-      {@JsonKey(required: true) this.agent, this.onBehalfOf});
+  _$_TaskRequester({@JsonKey(required: true) this.agent, this.onBehalfOf});
 
   factory _$_TaskRequester.fromJson(Map<String, dynamic> json) =>
       _$_$_TaskRequesterFromJson(json);
@@ -7388,7 +7387,7 @@ class _$_TaskRequester implements _TaskRequester {
 }
 
 abstract class _TaskRequester implements TaskRequester {
-  const factory _TaskRequester(
+  factory _TaskRequester(
       {@JsonKey(required: true) Reference agent,
       Reference onBehalfOf}) = _$_TaskRequester;
 
@@ -7555,7 +7554,7 @@ class __$TaskRestrictionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TaskRestriction implements _TaskRestriction {
-  const _$_TaskRestriction(
+  _$_TaskRestriction(
       {this.repetitions,
       this.period,
       this.recipient,
@@ -7615,7 +7614,7 @@ class _$_TaskRestriction implements _TaskRestriction {
 }
 
 abstract class _TaskRestriction implements TaskRestriction {
-  const factory _TaskRestriction(
+  factory _TaskRestriction(
           {PositiveInt repetitions,
           Period period,
           List<Reference> recipient,
@@ -9297,7 +9296,7 @@ class __$TaskInputCopyWithImpl<$Res> extends _$TaskInputCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TaskInput implements _TaskInput {
-  const _$_TaskInput(
+  _$_TaskInput(
       {@JsonKey(required: true) this.type,
       this.valueBoolean,
       this.valueInteger,
@@ -9745,7 +9744,7 @@ class _$_TaskInput implements _TaskInput {
 }
 
 abstract class _TaskInput implements TaskInput {
-  const factory _TaskInput(
+  factory _TaskInput(
           {@JsonKey(required: true) CodeableConcept type,
           Boolean valueBoolean,
           Integer valueInteger,
@@ -11647,7 +11646,7 @@ class __$TaskOutputCopyWithImpl<$Res> extends _$TaskOutputCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TaskOutput implements _TaskOutput {
-  const _$_TaskOutput(
+  _$_TaskOutput(
       {@JsonKey(required: true) this.type,
       this.valueBoolean,
       this.valueInteger,
@@ -12095,7 +12094,7 @@ class _$_TaskOutput implements _TaskOutput {
 }
 
 abstract class _TaskOutput implements TaskOutput {
-  const factory _TaskOutput(
+  factory _TaskOutput(
           {@JsonKey(required: true) CodeableConcept type,
           Boolean valueBoolean,
           Integer valueInteger,

@@ -637,7 +637,7 @@ class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Coverage implements _Coverage {
-  const _$_Coverage(
+  _$_Coverage(
       {@required
       @JsonKey(required: true, defaultValue: 'Coverage')
           this.resourceType,
@@ -885,7 +885,7 @@ class _$_Coverage implements _Coverage {
 }
 
 abstract class _Coverage implements Coverage {
-  const factory _Coverage(
+  factory _Coverage(
       {@required
       @JsonKey(required: true, defaultValue: 'Coverage')
           String resourceType,
@@ -1532,7 +1532,7 @@ class __$CoverageGroupingCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CoverageGrouping implements _CoverageGrouping {
-  const _$_CoverageGrouping(
+  _$_CoverageGrouping(
       {this.group,
       this.groupDisplay,
       this.subGroup,
@@ -1739,7 +1739,7 @@ class _$_CoverageGrouping implements _CoverageGrouping {
 }
 
 abstract class _CoverageGrouping implements CoverageGrouping {
-  const factory _CoverageGrouping(
+  factory _CoverageGrouping(
           {String group,
           String groupDisplay,
           String subGroup,
@@ -2479,7 +2479,7 @@ class __$EligibilityRequestCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_EligibilityRequest implements _EligibilityRequest {
-  const _$_EligibilityRequest(
+  _$_EligibilityRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'EligibilityRequest')
           this.resourceType,
@@ -2713,7 +2713,7 @@ class _$_EligibilityRequest implements _EligibilityRequest {
 }
 
 abstract class _EligibilityRequest implements EligibilityRequest {
-  const factory _EligibilityRequest(
+  factory _EligibilityRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'EligibilityRequest')
           String resourceType,
@@ -3369,7 +3369,7 @@ class __$EligibilityResponseCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_EligibilityResponse implements _EligibilityResponse {
-  const _$_EligibilityResponse(
+  _$_EligibilityResponse(
       {@required
       @JsonKey(required: true, defaultValue: 'EligibilityResponse')
           this.resourceType,
@@ -3589,7 +3589,7 @@ class _$_EligibilityResponse implements _EligibilityResponse {
 }
 
 abstract class _EligibilityResponse implements EligibilityResponse {
-  const factory _EligibilityResponse(
+  factory _EligibilityResponse(
       {@required
       @JsonKey(required: true, defaultValue: 'EligibilityResponse')
           String resourceType,
@@ -3828,7 +3828,7 @@ class __$EligibilityResponseInsuranceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_EligibilityResponseInsurance implements _EligibilityResponseInsurance {
-  const _$_EligibilityResponseInsurance(
+  _$_EligibilityResponseInsurance(
       {this.coverage, this.contract, this.benefitBalance});
 
   factory _$_EligibilityResponseInsurance.fromJson(Map<String, dynamic> json) =>
@@ -3881,7 +3881,7 @@ class _$_EligibilityResponseInsurance implements _EligibilityResponseInsurance {
 
 abstract class _EligibilityResponseInsurance
     implements EligibilityResponseInsurance {
-  const factory _EligibilityResponseInsurance(
+  factory _EligibilityResponseInsurance(
           {Reference coverage,
           Reference contract,
           List<EligibilityResponseBenefitBalance> benefitBalance}) =
@@ -4223,7 +4223,7 @@ class __$EligibilityResponseBenefitBalanceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_EligibilityResponseBenefitBalance
     implements _EligibilityResponseBenefitBalance {
-  const _$_EligibilityResponseBenefitBalance(
+  _$_EligibilityResponseBenefitBalance(
       {@JsonKey(required: true) this.category,
       this.subCategory,
       this.excluded,
@@ -4344,7 +4344,7 @@ class _$_EligibilityResponseBenefitBalance
 
 abstract class _EligibilityResponseBenefitBalance
     implements EligibilityResponseBenefitBalance {
-  const factory _EligibilityResponseBenefitBalance(
+  factory _EligibilityResponseBenefitBalance(
           {@JsonKey(required: true) CodeableConcept category,
           CodeableConcept subCategory,
           Boolean excluded,
@@ -4667,7 +4667,7 @@ class __$EligibilityResponseFinancialCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_EligibilityResponseFinancial implements _EligibilityResponseFinancial {
-  const _$_EligibilityResponseFinancial(
+  _$_EligibilityResponseFinancial(
       {@JsonKey(required: true) this.type,
       this.allowedUnsignedInt,
       this.allowedString,
@@ -4769,7 +4769,7 @@ class _$_EligibilityResponseFinancial implements _EligibilityResponseFinancial {
 
 abstract class _EligibilityResponseFinancial
     implements EligibilityResponseFinancial {
-  const factory _EligibilityResponseFinancial(
+  factory _EligibilityResponseFinancial(
       {@JsonKey(required: true)
           CodeableConcept type,
       UnsignedInt allowedUnsignedInt,
@@ -4913,7 +4913,7 @@ class __$EligibilityResponseErrorCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_EligibilityResponseError implements _EligibilityResponseError {
-  const _$_EligibilityResponseError({@JsonKey(required: true) this.code});
+  _$_EligibilityResponseError({@JsonKey(required: true) this.code});
 
   factory _$_EligibilityResponseError.fromJson(Map<String, dynamic> json) =>
       _$_$_EligibilityResponseErrorFromJson(json);
@@ -4951,7 +4951,7 @@ class _$_EligibilityResponseError implements _EligibilityResponseError {
 }
 
 abstract class _EligibilityResponseError implements EligibilityResponseError {
-  const factory _EligibilityResponseError(
+  factory _EligibilityResponseError(
           {@JsonKey(required: true) CodeableConcept code}) =
       _$_EligibilityResponseError;
 
@@ -5380,7 +5380,7 @@ class __$EnrollmentRequestCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_EnrollmentRequest implements _EnrollmentRequest {
-  const _$_EnrollmentRequest(
+  _$_EnrollmentRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'EnrollmentRequest')
           this.resourceType,
@@ -5551,7 +5551,7 @@ class _$_EnrollmentRequest implements _EnrollmentRequest {
 }
 
 abstract class _EnrollmentRequest implements EnrollmentRequest {
-  const factory _EnrollmentRequest(
+  factory _EnrollmentRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'EnrollmentRequest')
           String resourceType,
@@ -6090,7 +6090,7 @@ class __$EnrollmentResponseCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_EnrollmentResponse implements _EnrollmentResponse {
-  const _$_EnrollmentResponse(
+  _$_EnrollmentResponse(
       {@required
       @JsonKey(required: true, defaultValue: 'EnrollmentResponse')
           this.resourceType,
@@ -6277,7 +6277,7 @@ class _$_EnrollmentResponse implements _EnrollmentResponse {
 }
 
 abstract class _EnrollmentResponse implements EnrollmentResponse {
-  const factory _EnrollmentResponse(
+  factory _EnrollmentResponse(
       {@required
       @JsonKey(required: true, defaultValue: 'EnrollmentResponse')
           String resourceType,

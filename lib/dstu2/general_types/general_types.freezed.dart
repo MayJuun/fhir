@@ -185,7 +185,7 @@ class __$PeriodCopyWithImpl<$Res> extends _$PeriodCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Period implements _Period {
-  const _$_Period(
+  _$_Period(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       @JsonKey(name: 'fhir_comments') this.fhirComments,
@@ -267,7 +267,7 @@ class _$_Period implements _Period {
 }
 
 abstract class _Period implements Period {
-  const factory _Period(
+  factory _Period(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(name: 'fhir_comments') List<String> fhirComments,
@@ -589,7 +589,7 @@ class __$CodingCopyWithImpl<$Res> extends _$CodingCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Coding implements _Coding {
-  const _$_Coding(
+  _$_Coding(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       @JsonKey(name: 'fhir_comments') this.fhirComments,
@@ -716,7 +716,7 @@ class _$_Coding implements _Coding {
 }
 
 abstract class _Coding implements Coding {
-  const factory _Coding(
+  factory _Coding(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(name: 'fhir_comments') List<String> fhirComments,
@@ -907,7 +907,7 @@ class __$RangeCopyWithImpl<$Res> extends _$RangeCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Range implements _Range {
-  const _$_Range(
+  _$_Range(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.low,
@@ -965,7 +965,7 @@ class _$_Range implements _Range {
 }
 
 abstract class _Range implements Range {
-  const factory _Range(
+  factory _Range(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       Quantity low,
@@ -1298,7 +1298,7 @@ class __$QuantityCopyWithImpl<$Res> extends _$QuantityCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Quantity implements _Quantity {
-  const _$_Quantity(
+  _$_Quantity(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       @JsonKey(name: 'fhir_comments') this.fhirComments,
@@ -1424,7 +1424,7 @@ class _$_Quantity implements _Quantity {
 }
 
 abstract class _Quantity implements Quantity {
-  const factory _Quantity(
+  factory _Quantity(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -1881,7 +1881,7 @@ class __$AttachmentCopyWithImpl<$Res> extends _$AttachmentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Attachment implements _Attachment {
-  const _$_Attachment(
+  _$_Attachment(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       @JsonKey(name: 'fhir_comments') this.fhirComments,
@@ -2050,7 +2050,7 @@ class _$_Attachment implements _Attachment {
 }
 
 abstract class _Attachment implements Attachment {
-  const factory _Attachment(
+  factory _Attachment(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(name: 'fhir_comments') List<String> fhirComments,
@@ -2267,7 +2267,7 @@ class __$RatioCopyWithImpl<$Res> extends _$RatioCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Ratio implements _Ratio {
-  const _$_Ratio(
+  _$_Ratio(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.numerator,
@@ -2327,7 +2327,7 @@ class _$_Ratio implements _Ratio {
 }
 
 abstract class _Ratio implements Ratio {
-  const factory _Ratio(
+  factory _Ratio(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       Quantity numerator,
@@ -2593,7 +2593,7 @@ class __$AnnotationCopyWithImpl<$Res> extends _$AnnotationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Annotation implements _Annotation {
-  const _$_Annotation(
+  _$_Annotation(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       @JsonKey(name: 'fhir_comments') this.fhirComments,
@@ -2699,7 +2699,7 @@ class _$_Annotation implements _Annotation {
 }
 
 abstract class _Annotation implements Annotation {
-  const factory _Annotation(
+  factory _Annotation(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(name: 'fhir_comments') List<String> fhirComments,
@@ -3087,7 +3087,7 @@ class __$SampledDataCopyWithImpl<$Res> extends _$SampledDataCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_SampledData implements _SampledData {
-  const _$_SampledData(
+  _$_SampledData(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       @required @JsonKey(required: true) this.origin,
@@ -3234,7 +3234,7 @@ class _$_SampledData implements _SampledData {
 }
 
 abstract class _SampledData implements SampledData {
-  const factory _SampledData(
+  factory _SampledData(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @required @JsonKey(required: true) Quantity origin,
@@ -3455,7 +3455,7 @@ class __$CodeableConceptCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CodeableConcept implements _CodeableConcept {
-  const _$_CodeableConcept(
+  _$_CodeableConcept(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       @JsonKey(name: 'fhir_comments') this.fhirComments,
@@ -3529,7 +3529,7 @@ class _$_CodeableConcept implements _CodeableConcept {
 }
 
 abstract class _CodeableConcept implements CodeableConcept {
-  const factory _CodeableConcept(
+  factory _CodeableConcept(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(name: 'fhir_comments') List<String> fhirComments,
@@ -3842,7 +3842,7 @@ class __$IdentifierCopyWithImpl<$Res> extends _$IdentifierCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Identifier implements _Identifier {
-  const _$_Identifier(
+  _$_Identifier(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       @JsonKey(name: 'fhir_comments') this.fhirComments,
@@ -3958,7 +3958,7 @@ class _$_Identifier implements _Identifier {
 }
 
 abstract class _Identifier implements Identifier {
-  const factory _Identifier(
+  factory _Identifier(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(name: 'fhir_comments') List<String> fhirComments,
@@ -4311,7 +4311,7 @@ class __$SignatureCopyWithImpl<$Res> extends _$SignatureCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Signature implements _Signature {
-  const _$_Signature(
+  _$_Signature(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       @required @JsonKey(required: true) this.type,
@@ -4443,7 +4443,7 @@ class _$_Signature implements _Signature {
 }
 
 abstract class _Signature implements Signature {
-  const factory _Signature(
+  factory _Signature(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           @required @JsonKey(required: true) List<Coding> type,
@@ -4689,7 +4689,7 @@ class __$TimingCopyWithImpl<$Res> extends _$TimingCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Timing implements _Timing {
-  const _$_Timing(
+  _$_Timing(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       @JsonKey(name: 'fhir_comments') this.fhirComments,
@@ -4769,7 +4769,7 @@ class _$_Timing implements _Timing {
 }
 
 abstract class _Timing implements Timing {
-  const factory _Timing(
+  factory _Timing(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(name: 'fhir_comments') List<String> fhirComments,
@@ -5248,7 +5248,7 @@ class __$AddressCopyWithImpl<$Res> extends _$AddressCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Address implements _Address {
-  const _$_Address(
+  _$_Address(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       @JsonKey(name: 'fhir_comments') this.fhirComments,
@@ -5439,7 +5439,7 @@ class _$_Address implements _Address {
 }
 
 abstract class _Address implements Address {
-  const factory _Address(
+  factory _Address(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(name: 'fhir_comments') List<String> fhirComments,
@@ -5843,7 +5843,7 @@ class __$HumanNameCopyWithImpl<$Res> extends _$HumanNameCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_HumanName implements _HumanName {
-  const _$_HumanName(
+  _$_HumanName(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       @JsonKey(name: 'fhir_comments') this.fhirComments,
@@ -5988,7 +5988,7 @@ class _$_HumanName implements _HumanName {
 }
 
 abstract class _HumanName implements HumanName {
-  const factory _HumanName(
+  factory _HumanName(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(name: 'fhir_comments') List<String> fhirComments,
@@ -6353,7 +6353,7 @@ class __$ContactPointCopyWithImpl<$Res> extends _$ContactPointCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ContactPoint implements _ContactPoint {
-  const _$_ContactPoint(
+  _$_ContactPoint(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       @JsonKey(name: 'fhir_comments') this.fhirComments,
@@ -6471,7 +6471,7 @@ class _$_ContactPoint implements _ContactPoint {
 }
 
 abstract class _ContactPoint implements ContactPoint {
-  const factory _ContactPoint(
+  factory _ContactPoint(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -7093,7 +7093,7 @@ class __$TimingRepeatCopyWithImpl<$Res> extends _$TimingRepeatCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TimingRepeat implements _TimingRepeat {
-  const _$_TimingRepeat(
+  _$_TimingRepeat(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       @JsonKey(name: 'fhir_comments') this.fhirComments,
@@ -7312,7 +7312,7 @@ class _$_TimingRepeat implements _TimingRepeat {
 }
 
 abstract class _TimingRepeat implements TimingRepeat {
-  const factory _TimingRepeat(
+  factory _TimingRepeat(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(name: 'fhir_comments') List<String> fhirComments,

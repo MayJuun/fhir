@@ -7,9 +7,9 @@ void main() async {
   //location of fhir schema
   var file = File('./parsers/stu3/fhir.schema.stu3.json');
   var contents = await file.readAsString();
-  var newObj;
-  var require = <String>[];
-  var isRequired;
+  // var newObj;
+  // var require = <String>[];
+  // var isRequired;
 
   Map schema = json.decode(contents);
   String text = '';
@@ -49,7 +49,7 @@ void main() async {
 //       newObj = obj.replaceAll('_', '');
 //       text = '@freezed\nabstract class $newObj with _\$$newObj '
 //           '${domainTypes(obj.toLowerCase()) ? 'implements Resource' : ''}{'
-//           '\nconst factory $newObj ({\n';
+//           '\nfactory $newObj ({\n';
 //       print(text);
 //       if (schema['definitions'][obj]['allOf'][1].keys.contains('required')) {
 //         schema['definitions'][obj]['allOf'][1]['required']

@@ -351,7 +351,7 @@ class __$ImmunizationRecommendationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImmunizationRecommendation implements _ImmunizationRecommendation {
-  const _$_ImmunizationRecommendation(
+  _$_ImmunizationRecommendation(
       {@JsonKey(defaultValue: 'ImmunizationRecommendation') this.resourceType,
       this.id,
       this.meta,
@@ -488,7 +488,7 @@ class _$_ImmunizationRecommendation implements _ImmunizationRecommendation {
 
 abstract class _ImmunizationRecommendation
     implements ImmunizationRecommendation {
-  const factory _ImmunizationRecommendation(
+  factory _ImmunizationRecommendation(
       {@JsonKey(defaultValue: 'ImmunizationRecommendation')
           String resourceType,
       Id id,
@@ -1259,7 +1259,7 @@ class __$MedicationDispenseCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MedicationDispense implements _MedicationDispense {
-  const _$_MedicationDispense(
+  _$_MedicationDispense(
       {@JsonKey(defaultValue: 'MedicationDispense') this.resourceType,
       this.id,
       this.meta,
@@ -1492,7 +1492,7 @@ class _$_MedicationDispense implements _MedicationDispense {
 }
 
 abstract class _MedicationDispense implements MedicationDispense {
-  const factory _MedicationDispense(
+  factory _MedicationDispense(
       {@JsonKey(defaultValue: 'MedicationDispense')
           String resourceType,
       Id id,
@@ -2283,7 +2283,7 @@ class __$MedicationStatementCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MedicationStatement implements _MedicationStatement {
-  const _$_MedicationStatement(
+  _$_MedicationStatement(
       {@JsonKey(defaultValue: 'MedicationStatement')
           this.resourceType,
       this.id,
@@ -2529,7 +2529,7 @@ class _$_MedicationStatement implements _MedicationStatement {
 }
 
 abstract class _MedicationStatement implements MedicationStatement {
-  const factory _MedicationStatement(
+  factory _MedicationStatement(
       {@JsonKey(defaultValue: 'MedicationStatement')
           String resourceType,
       Id id,
@@ -3415,7 +3415,7 @@ class __$ImmunizationCopyWithImpl<$Res> extends _$ImmunizationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Immunization implements _Immunization {
-  const _$_Immunization(
+  _$_Immunization(
       {@JsonKey(defaultValue: 'Immunization')
           this.resourceType,
       this.id,
@@ -3699,7 +3699,7 @@ class _$_Immunization implements _Immunization {
 }
 
 abstract class _Immunization implements Immunization {
-  const factory _Immunization(
+  factory _Immunization(
       {@JsonKey(defaultValue: 'Immunization')
           String resourceType,
       Id id,
@@ -4214,7 +4214,7 @@ class __$MedicationCopyWithImpl<$Res> extends _$MedicationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Medication implements _Medication {
-  const _$_Medication(
+  _$_Medication(
       {@JsonKey(defaultValue: 'Medication') this.resourceType,
       this.id,
       this.meta,
@@ -4358,7 +4358,7 @@ class _$_Medication implements _Medication {
 }
 
 abstract class _Medication implements Medication {
-  const factory _Medication(
+  factory _Medication(
       {@JsonKey(defaultValue: 'Medication') String resourceType,
       Id id,
       Meta meta,
@@ -5072,7 +5072,7 @@ class __$MedicationAdministrationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MedicationAdministration implements _MedicationAdministration {
-  const _$_MedicationAdministration(
+  _$_MedicationAdministration(
       {@JsonKey(defaultValue: 'MedicationAdministration')
           this.resourceType,
       this.id,
@@ -5313,7 +5313,7 @@ class _$_MedicationAdministration implements _MedicationAdministration {
 }
 
 abstract class _MedicationAdministration implements MedicationAdministration {
-  const factory _MedicationAdministration(
+  factory _MedicationAdministration(
       {@JsonKey(defaultValue: 'MedicationAdministration')
           String resourceType,
       Id id,
@@ -6062,7 +6062,7 @@ class __$MedicationOrderCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MedicationOrder implements _MedicationOrder {
-  const _$_MedicationOrder(
+  _$_MedicationOrder(
       {@JsonKey(defaultValue: 'MedicationOrder') this.resourceType,
       this.id,
       this.meta,
@@ -6281,7 +6281,7 @@ class _$_MedicationOrder implements _MedicationOrder {
 }
 
 abstract class _MedicationOrder implements MedicationOrder {
-  const factory _MedicationOrder(
+  factory _MedicationOrder(
       {@JsonKey(defaultValue: 'MedicationOrder')
           String resourceType,
       Id id,
@@ -6661,7 +6661,7 @@ class __$ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ImmunizationRecommendationRecommendation
     implements _ImmunizationRecommendationRecommendation {
-  const _$_ImmunizationRecommendationRecommendation(
+  _$_ImmunizationRecommendationRecommendation(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -6779,7 +6779,7 @@ class _$_ImmunizationRecommendationRecommendation
 
 abstract class _ImmunizationRecommendationRecommendation
     implements ImmunizationRecommendationRecommendation {
-  const factory _ImmunizationRecommendationRecommendation(
+  factory _ImmunizationRecommendationRecommendation(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -7273,7 +7273,7 @@ class __$MedicationDispenseDosageInstructionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicationDispenseDosageInstruction
     implements _MedicationDispenseDosageInstruction {
-  const _$_MedicationDispenseDosageInstruction(
+  _$_MedicationDispenseDosageInstruction(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -7425,7 +7425,7 @@ class _$_MedicationDispenseDosageInstruction
 
 abstract class _MedicationDispenseDosageInstruction
     implements MedicationDispenseDosageInstruction {
-  const factory _MedicationDispenseDosageInstruction(
+  factory _MedicationDispenseDosageInstruction(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -7668,7 +7668,7 @@ class __$MedicationDispenseSubstitutionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicationDispenseSubstitution
     implements _MedicationDispenseSubstitution {
-  const _$_MedicationDispenseSubstitution(
+  _$_MedicationDispenseSubstitution(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -7745,7 +7745,7 @@ class _$_MedicationDispenseSubstitution
 
 abstract class _MedicationDispenseSubstitution
     implements MedicationDispenseSubstitution {
-  const factory _MedicationDispenseSubstitution(
+  factory _MedicationDispenseSubstitution(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -8191,7 +8191,7 @@ class __$MedicationStatementDosageCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MedicationStatementDosage implements _MedicationStatementDosage {
-  const _$_MedicationStatementDosage(
+  _$_MedicationStatementDosage(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -8334,7 +8334,7 @@ class _$_MedicationStatementDosage implements _MedicationStatementDosage {
 }
 
 abstract class _MedicationStatementDosage implements MedicationStatementDosage {
-  const factory _MedicationStatementDosage(
+  factory _MedicationStatementDosage(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -8543,7 +8543,7 @@ class __$ImmunizationExplanationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImmunizationExplanation implements _ImmunizationExplanation {
-  const _$_ImmunizationExplanation(
+  _$_ImmunizationExplanation(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -8610,7 +8610,7 @@ class _$_ImmunizationExplanation implements _ImmunizationExplanation {
 }
 
 abstract class _ImmunizationExplanation implements ImmunizationExplanation {
-  const factory _ImmunizationExplanation(
+  factory _ImmunizationExplanation(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -8852,7 +8852,7 @@ class __$ImmunizationReactionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImmunizationReaction implements _ImmunizationReaction {
-  const _$_ImmunizationReaction(
+  _$_ImmunizationReaction(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -8941,7 +8941,7 @@ class _$_ImmunizationReaction implements _ImmunizationReaction {
 }
 
 abstract class _ImmunizationReaction implements ImmunizationReaction {
-  const factory _ImmunizationReaction(
+  factory _ImmunizationReaction(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -9275,7 +9275,7 @@ class __$ImmunizationVaccinationProtocolCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ImmunizationVaccinationProtocol
     implements _ImmunizationVaccinationProtocol {
-  const _$_ImmunizationVaccinationProtocol(
+  _$_ImmunizationVaccinationProtocol(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -9398,7 +9398,7 @@ class _$_ImmunizationVaccinationProtocol
 
 abstract class _ImmunizationVaccinationProtocol
     implements ImmunizationVaccinationProtocol {
-  const factory _ImmunizationVaccinationProtocol(
+  factory _ImmunizationVaccinationProtocol(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -9632,7 +9632,7 @@ class __$MedicationProductCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MedicationProduct implements _MedicationProduct {
-  const _$_MedicationProduct(
+  _$_MedicationProduct(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -9712,7 +9712,7 @@ class _$_MedicationProduct implements _MedicationProduct {
 }
 
 abstract class _MedicationProduct implements MedicationProduct {
-  const factory _MedicationProduct(
+  factory _MedicationProduct(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -9922,7 +9922,7 @@ class __$MedicationPackageCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MedicationPackage implements _MedicationPackage {
-  const _$_MedicationPackage(
+  _$_MedicationPackage(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -9996,7 +9996,7 @@ class _$_MedicationPackage implements _MedicationPackage {
 }
 
 abstract class _MedicationPackage implements MedicationPackage {
-  const factory _MedicationPackage(
+  factory _MedicationPackage(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -10354,7 +10354,7 @@ class __$MedicationAdministrationDosageCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicationAdministrationDosage
     implements _MedicationAdministrationDosage {
-  const _$_MedicationAdministrationDosage(
+  _$_MedicationAdministrationDosage(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -10471,7 +10471,7 @@ class _$_MedicationAdministrationDosage
 
 abstract class _MedicationAdministrationDosage
     implements MedicationAdministrationDosage {
-  const factory _MedicationAdministrationDosage(
+  factory _MedicationAdministrationDosage(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -10965,7 +10965,7 @@ class __$MedicationOrderDosageInstructionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicationOrderDosageInstruction
     implements _MedicationOrderDosageInstruction {
-  const _$_MedicationOrderDosageInstruction(
+  _$_MedicationOrderDosageInstruction(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -11116,7 +11116,7 @@ class _$_MedicationOrderDosageInstruction
 
 abstract class _MedicationOrderDosageInstruction
     implements MedicationOrderDosageInstruction {
-  const factory _MedicationOrderDosageInstruction(
+  factory _MedicationOrderDosageInstruction(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -11451,7 +11451,7 @@ class __$MedicationOrderDispenseRequestCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicationOrderDispenseRequest
     implements _MedicationOrderDispenseRequest {
-  const _$_MedicationOrderDispenseRequest(
+  _$_MedicationOrderDispenseRequest(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -11551,7 +11551,7 @@ class _$_MedicationOrderDispenseRequest
 
 abstract class _MedicationOrderDispenseRequest
     implements MedicationOrderDispenseRequest {
-  const factory _MedicationOrderDispenseRequest(
+  factory _MedicationOrderDispenseRequest(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -11765,7 +11765,7 @@ class __$MedicationOrderSubstitutionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MedicationOrderSubstitution implements _MedicationOrderSubstitution {
-  const _$_MedicationOrderSubstitution(
+  _$_MedicationOrderSubstitution(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -11834,7 +11834,7 @@ class _$_MedicationOrderSubstitution implements _MedicationOrderSubstitution {
 
 abstract class _MedicationOrderSubstitution
     implements MedicationOrderSubstitution {
-  const factory _MedicationOrderSubstitution(
+  factory _MedicationOrderSubstitution(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -12065,7 +12065,7 @@ class __$ImmunizationRecommendationDateCriterionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ImmunizationRecommendationDateCriterion
     implements _ImmunizationRecommendationDateCriterion {
-  const _$_ImmunizationRecommendationDateCriterion(
+  _$_ImmunizationRecommendationDateCriterion(
       {this.id,
       this.extensio,
       this.modifier,
@@ -12145,7 +12145,7 @@ class _$_ImmunizationRecommendationDateCriterion
 
 abstract class _ImmunizationRecommendationDateCriterion
     implements ImmunizationRecommendationDateCriterion {
-  const factory _ImmunizationRecommendationDateCriterion(
+  factory _ImmunizationRecommendationDateCriterion(
           {Id id,
           FhirExtension extensio,
           FhirExtension modifier,
@@ -12395,7 +12395,7 @@ class __$ImmunizationRecommendationProtocolCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ImmunizationRecommendationProtocol
     implements _ImmunizationRecommendationProtocol {
-  const _$_ImmunizationRecommendationProtocol(
+  _$_ImmunizationRecommendationProtocol(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExten,
@@ -12487,7 +12487,7 @@ class _$_ImmunizationRecommendationProtocol
 
 abstract class _ImmunizationRecommendationProtocol
     implements ImmunizationRecommendationProtocol {
-  const factory _ImmunizationRecommendationProtocol(
+  factory _ImmunizationRecommendationProtocol(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExten,
@@ -12695,7 +12695,7 @@ class __$MedicationIngredientCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MedicationIngredient implements _MedicationIngredient {
-  const _$_MedicationIngredient(
+  _$_MedicationIngredient(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -12763,7 +12763,7 @@ class _$_MedicationIngredient implements _MedicationIngredient {
 }
 
 abstract class _MedicationIngredient implements MedicationIngredient {
-  const factory _MedicationIngredient(
+  factory _MedicationIngredient(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -12990,7 +12990,7 @@ class __$MedicationBatchCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MedicationBatch implements _MedicationBatch {
-  const _$_MedicationBatch(
+  _$_MedicationBatch(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -13073,7 +13073,7 @@ class _$_MedicationBatch implements _MedicationBatch {
 }
 
 abstract class _MedicationBatch implements MedicationBatch {
-  const factory _MedicationBatch(
+  factory _MedicationBatch(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -13277,7 +13277,7 @@ class __$MedicationContentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MedicationContent implements _MedicationContent {
-  const _$_MedicationContent(
+  _$_MedicationContent(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -13344,7 +13344,7 @@ class _$_MedicationContent implements _MedicationContent {
 }
 
 abstract class _MedicationContent implements MedicationContent {
-  const factory _MedicationContent(
+  factory _MedicationContent(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,

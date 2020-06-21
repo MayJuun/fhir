@@ -9,6 +9,7 @@ export 'fhir_uri.dart';
 export 'fhir_url.dart';
 export 'id.dart';
 export 'instant.dart';
+export 'integer64.dart';
 export 'integer.dart';
 export 'markdown.dart';
 export 'oid.dart';

@@ -9,7 +9,7 @@ part 'groups.g.dart';
 
 @freezed
 abstract class Organization with _$Organization implements Resource {
-  const factory Organization({
+  factory Organization({
     @JsonKey(defaultValue: 'Organization') String resourceType,
     Id id,
     Meta meta,
@@ -40,7 +40,7 @@ abstract class Organization with _$Organization implements Resource {
 
 @freezed
 abstract class Group with _$Group implements Resource {
-  const factory Group({
+  factory Group({
     @JsonKey(defaultValue: 'Group') String resourceType,
     Id id,
     Meta meta,
@@ -73,7 +73,7 @@ abstract class Group with _$Group implements Resource {
 
 @freezed
 abstract class HealthcareService with _$HealthcareService implements Resource {
-  const factory HealthcareService({
+  factory HealthcareService({
     @JsonKey(defaultValue: 'HealthcareService') String resourceType,
     Id id,
     Meta meta,
@@ -120,7 +120,7 @@ abstract class HealthcareService with _$HealthcareService implements Resource {
 
 @freezed
 abstract class OrganizationContact with _$OrganizationContact {
-  const factory OrganizationContact({
+  factory OrganizationContact({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -137,7 +137,7 @@ abstract class OrganizationContact with _$OrganizationContact {
 
 @freezed
 abstract class GroupCharacteristic with _$GroupCharacteristic {
-  const factory GroupCharacteristic({
+  factory GroupCharacteristic({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -157,7 +157,7 @@ abstract class GroupCharacteristic with _$GroupCharacteristic {
 
 @freezed
 abstract class GroupMember with _$GroupMember {
-  const factory GroupMember({
+  factory GroupMember({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -174,7 +174,7 @@ abstract class GroupMember with _$GroupMember {
 @freezed
 abstract class HealthcareServiceServiceType
     with _$HealthcareServiceServiceType {
-  const factory HealthcareServiceServiceType({
+  factory HealthcareServiceServiceType({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -189,7 +189,7 @@ abstract class HealthcareServiceServiceType
 @freezed
 abstract class HealthcareServiceAvailableTime
     with _$HealthcareServiceAvailableTime {
-  const factory HealthcareServiceAvailableTime({
+  factory HealthcareServiceAvailableTime({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -210,7 +210,7 @@ abstract class HealthcareServiceAvailableTime
 @freezed
 abstract class HealthcareServiceNotAvailable
     with _$HealthcareServiceNotAvailable {
-  const factory HealthcareServiceNotAvailable({
+  factory HealthcareServiceNotAvailable({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,

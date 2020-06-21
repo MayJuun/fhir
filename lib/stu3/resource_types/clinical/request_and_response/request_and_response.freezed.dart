@@ -604,7 +604,7 @@ class __$CommunicationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Communication implements _Communication {
-  const _$_Communication(
+  _$_Communication(
       {@required
       @JsonKey(required: true, defaultValue: 'Communication')
           this.resourceType,
@@ -858,7 +858,7 @@ class _$_Communication implements _Communication {
 }
 
 abstract class _Communication implements Communication {
-  const factory _Communication(
+  factory _Communication(
       {@required
       @JsonKey(required: true, defaultValue: 'Communication')
           String resourceType,
@@ -1147,7 +1147,7 @@ class __$CommunicationPayloadCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CommunicationPayload implements _CommunicationPayload {
-  const _$_CommunicationPayload(
+  _$_CommunicationPayload(
       {this.contentString,
       this.contentAttachment,
       this.contentReference,
@@ -1209,7 +1209,7 @@ class _$_CommunicationPayload implements _CommunicationPayload {
 }
 
 abstract class _CommunicationPayload implements CommunicationPayload {
-  const factory _CommunicationPayload(
+  factory _CommunicationPayload(
           {String contentString,
           Attachment contentAttachment,
           Reference contentReference,
@@ -1878,7 +1878,7 @@ class __$CommunicationRequestCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CommunicationRequest implements _CommunicationRequest {
-  const _$_CommunicationRequest(
+  _$_CommunicationRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'CommunicationRequest')
           this.resourceType,
@@ -2138,7 +2138,7 @@ class _$_CommunicationRequest implements _CommunicationRequest {
 }
 
 abstract class _CommunicationRequest implements CommunicationRequest {
-  const factory _CommunicationRequest(
+  factory _CommunicationRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'CommunicationRequest')
           String resourceType,
@@ -2436,7 +2436,7 @@ class __$CommunicationRequestPayloadCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CommunicationRequestPayload implements _CommunicationRequestPayload {
-  const _$_CommunicationRequestPayload(
+  _$_CommunicationRequestPayload(
       {this.contentString,
       this.contentAttachment,
       this.contentReference,
@@ -2499,7 +2499,7 @@ class _$_CommunicationRequestPayload implements _CommunicationRequestPayload {
 
 abstract class _CommunicationRequestPayload
     implements CommunicationRequestPayload {
-  const factory _CommunicationRequestPayload(
+  factory _CommunicationRequestPayload(
           {String contentString,
           Attachment contentAttachment,
           Reference contentReference,
@@ -2648,7 +2648,7 @@ class __$CommunicationRequestRequesterCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CommunicationRequestRequester
     implements _CommunicationRequestRequester {
-  const _$_CommunicationRequestRequester(
+  _$_CommunicationRequestRequester(
       {@JsonKey(required: true) this.agent, this.onBehalfOf});
 
   factory _$_CommunicationRequestRequester.fromJson(
@@ -2696,7 +2696,7 @@ class _$_CommunicationRequestRequester
 
 abstract class _CommunicationRequestRequester
     implements CommunicationRequestRequester {
-  const factory _CommunicationRequestRequester(
+  factory _CommunicationRequestRequester(
       {@JsonKey(required: true) Reference agent,
       Reference onBehalfOf}) = _$_CommunicationRequestRequester;
 
@@ -3476,7 +3476,7 @@ class __$DeviceRequestCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DeviceRequest implements _DeviceRequest {
-  const _$_DeviceRequest(
+  _$_DeviceRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'DeviceRequest')
           this.resourceType,
@@ -3754,7 +3754,7 @@ class _$_DeviceRequest implements _DeviceRequest {
 }
 
 abstract class _DeviceRequest implements DeviceRequest {
-  const factory _DeviceRequest(
+  factory _DeviceRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'DeviceRequest')
           String resourceType,
@@ -4010,7 +4010,7 @@ class __$DeviceRequestRequesterCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DeviceRequestRequester implements _DeviceRequestRequester {
-  const _$_DeviceRequestRequester(
+  _$_DeviceRequestRequester(
       {@JsonKey(required: true) this.agent, this.onBehalfOf});
 
   factory _$_DeviceRequestRequester.fromJson(Map<String, dynamic> json) =>
@@ -4056,7 +4056,7 @@ class _$_DeviceRequestRequester implements _DeviceRequestRequester {
 }
 
 abstract class _DeviceRequestRequester implements DeviceRequestRequester {
-  const factory _DeviceRequestRequester(
+  factory _DeviceRequestRequester(
       {@JsonKey(required: true) Reference agent,
       Reference onBehalfOf}) = _$_DeviceRequestRequester;
 
@@ -4618,7 +4618,7 @@ class __$DeviceUseStatementCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DeviceUseStatement implements _DeviceUseStatement {
-  const _$_DeviceUseStatement(
+  _$_DeviceUseStatement(
       {@required
       @JsonKey(required: true, defaultValue: 'DeviceUseStatement')
           this.resourceType,
@@ -4835,7 +4835,7 @@ class _$_DeviceUseStatement implements _DeviceUseStatement {
 }
 
 abstract class _DeviceUseStatement implements DeviceUseStatement {
-  const factory _DeviceUseStatement(
+  factory _DeviceUseStatement(
       {@required
       @JsonKey(required: true, defaultValue: 'DeviceUseStatement')
           String resourceType,
@@ -5458,7 +5458,7 @@ class __$SupplyDeliveryCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_SupplyDelivery implements _SupplyDelivery {
-  const _$_SupplyDelivery(
+  _$_SupplyDelivery(
       {@required
       @JsonKey(required: true, defaultValue: 'SupplyDelivery')
           this.resourceType,
@@ -5664,7 +5664,7 @@ class _$_SupplyDelivery implements _SupplyDelivery {
 }
 
 abstract class _SupplyDelivery implements SupplyDelivery {
-  const factory _SupplyDelivery(
+  factory _SupplyDelivery(
       {@required
       @JsonKey(required: true, defaultValue: 'SupplyDelivery')
           String resourceType,
@@ -5909,7 +5909,7 @@ class __$SupplyDeliverySuppliedItemCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_SupplyDeliverySuppliedItem implements _SupplyDeliverySuppliedItem {
-  const _$_SupplyDeliverySuppliedItem(
+  _$_SupplyDeliverySuppliedItem(
       {this.quantity, this.itemCodeableConcept, this.itemReference});
 
   factory _$_SupplyDeliverySuppliedItem.fromJson(Map<String, dynamic> json) =>
@@ -5962,7 +5962,7 @@ class _$_SupplyDeliverySuppliedItem implements _SupplyDeliverySuppliedItem {
 
 abstract class _SupplyDeliverySuppliedItem
     implements SupplyDeliverySuppliedItem {
-  const factory _SupplyDeliverySuppliedItem(
+  factory _SupplyDeliverySuppliedItem(
       {Quantity quantity,
       CodeableConcept itemCodeableConcept,
       Reference itemReference}) = _$_SupplyDeliverySuppliedItem;
@@ -6625,7 +6625,7 @@ class __$SupplyRequestCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_SupplyRequest implements _SupplyRequest {
-  const _$_SupplyRequest(
+  _$_SupplyRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'SupplyRequest')
           this.resourceType,
@@ -6855,7 +6855,7 @@ class _$_SupplyRequest implements _SupplyRequest {
 }
 
 abstract class _SupplyRequest implements SupplyRequest {
-  const factory _SupplyRequest(
+  factory _SupplyRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'SupplyRequest')
           String resourceType,
@@ -7116,7 +7116,7 @@ class __$SupplyRequestOrderedItemCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_SupplyRequestOrderedItem implements _SupplyRequestOrderedItem {
-  const _$_SupplyRequestOrderedItem(
+  _$_SupplyRequestOrderedItem(
       {@JsonKey(required: true) this.quantity,
       this.itemCodeableConcept,
       this.itemReference});
@@ -7171,7 +7171,7 @@ class _$_SupplyRequestOrderedItem implements _SupplyRequestOrderedItem {
 }
 
 abstract class _SupplyRequestOrderedItem implements SupplyRequestOrderedItem {
-  const factory _SupplyRequestOrderedItem(
+  factory _SupplyRequestOrderedItem(
       {@JsonKey(required: true) Quantity quantity,
       CodeableConcept itemCodeableConcept,
       Reference itemReference}) = _$_SupplyRequestOrderedItem;
@@ -7309,7 +7309,7 @@ class __$SupplyRequestRequesterCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_SupplyRequestRequester implements _SupplyRequestRequester {
-  const _$_SupplyRequestRequester(
+  _$_SupplyRequestRequester(
       {@JsonKey(required: true) this.agent, this.onBehalfOf});
 
   factory _$_SupplyRequestRequester.fromJson(Map<String, dynamic> json) =>
@@ -7355,7 +7355,7 @@ class _$_SupplyRequestRequester implements _SupplyRequestRequester {
 }
 
 abstract class _SupplyRequestRequester implements SupplyRequestRequester {
-  const factory _SupplyRequestRequester(
+  factory _SupplyRequestRequester(
       {@JsonKey(required: true) Reference agent,
       Reference onBehalfOf}) = _$_SupplyRequestRequester;
 

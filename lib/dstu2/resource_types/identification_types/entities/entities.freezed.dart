@@ -386,7 +386,7 @@ class __$SubstanceCopyWithImpl<$Res> extends _$SubstanceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Substance implements _Substance {
-  const _$_Substance(
+  _$_Substance(
       {@JsonKey(defaultValue: 'Substance') this.resourceType,
       this.id,
       this.meta,
@@ -547,7 +547,7 @@ class _$_Substance implements _Substance {
 }
 
 abstract class _Substance implements Substance {
-  const factory _Substance(
+  factory _Substance(
           {@JsonKey(defaultValue: 'Substance') String resourceType,
           Id id,
           Meta meta,
@@ -1191,7 +1191,7 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Location implements _Location {
-  const _$_Location(
+  _$_Location(
       {@JsonKey(defaultValue: 'Location') this.resourceType,
       this.id,
       this.meta,
@@ -1410,7 +1410,7 @@ class _$_Location implements _Location {
 }
 
 abstract class _Location implements Location {
-  const factory _Location(
+  factory _Location(
       {@JsonKey(defaultValue: 'Location') String resourceType,
       Id id,
       Meta meta,
@@ -1981,7 +1981,7 @@ class __$PersonCopyWithImpl<$Res> extends _$PersonCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Person implements _Person {
-  const _$_Person(
+  _$_Person(
       {@JsonKey(defaultValue: 'Person') this.resourceType,
       this.id,
       this.meta,
@@ -2181,7 +2181,7 @@ class _$_Person implements _Person {
 }
 
 abstract class _Person implements Person {
-  const factory _Person(
+  factory _Person(
       {@JsonKey(defaultValue: 'Person') String resourceType,
       Id id,
       Meta meta,
@@ -2476,7 +2476,7 @@ class __$SubstanceInstanceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_SubstanceInstance implements _SubstanceInstance {
-  const _$_SubstanceInstance(
+  _$_SubstanceInstance(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -2557,7 +2557,7 @@ class _$_SubstanceInstance implements _SubstanceInstance {
 }
 
 abstract class _SubstanceInstance implements SubstanceInstance {
-  const factory _SubstanceInstance(
+  factory _SubstanceInstance(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -2761,7 +2761,7 @@ class __$SubstanceIngredientCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_SubstanceIngredient implements _SubstanceIngredient {
-  const _$_SubstanceIngredient(
+  _$_SubstanceIngredient(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -2831,7 +2831,7 @@ class _$_SubstanceIngredient implements _SubstanceIngredient {
 }
 
 abstract class _SubstanceIngredient implements SubstanceIngredient {
-  const factory _SubstanceIngredient(
+  factory _SubstanceIngredient(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -3093,7 +3093,7 @@ class __$LocationPositionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_LocationPosition implements _LocationPosition {
-  const _$_LocationPosition(
+  _$_LocationPosition(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3195,7 +3195,7 @@ class _$_LocationPosition implements _LocationPosition {
 }
 
 abstract class _LocationPosition implements LocationPosition {
-  const factory _LocationPosition(
+  factory _LocationPosition(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -3422,7 +3422,7 @@ class __$PersonLinkCopyWithImpl<$Res> extends _$PersonLinkCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_PersonLink implements _PersonLink {
-  const _$_PersonLink(
+  _$_PersonLink(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3499,7 +3499,7 @@ class _$_PersonLink implements _PersonLink {
 }
 
 abstract class _PersonLink implements PersonLink {
-  const factory _PersonLink(
+  factory _PersonLink(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -3682,7 +3682,7 @@ class __$TermActorCopyWithImpl<$Res> extends _$TermActorCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TermActor implements _TermActor {
-  const _$_TermActor(
+  _$_TermActor(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3749,7 +3749,7 @@ class _$_TermActor implements _TermActor {
 }
 
 abstract class _TermActor implements TermActor {
-  const factory _TermActor(
+  factory _TermActor(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -4336,7 +4336,7 @@ class __$ContractCopyWithImpl<$Res> extends _$ContractCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Contract implements _Contract {
-  const _$_Contract(
+  _$_Contract(
       {@JsonKey(defaultValue: 'Contract') this.resourceType,
       this.id,
       this.meta,
@@ -4571,7 +4571,7 @@ class _$_Contract implements _Contract {
 }
 
 abstract class _Contract implements Contract {
-  const factory _Contract(
+  factory _Contract(
       {@JsonKey(defaultValue: 'Contract') String resourceType,
       Id id,
       Meta meta,
@@ -4834,7 +4834,7 @@ class __$ContractActorCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ContractActor implements _ContractActor {
-  const _$_ContractActor(
+  _$_ContractActor(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -4901,7 +4901,7 @@ class _$_ContractActor implements _ContractActor {
 }
 
 abstract class _ContractActor implements ContractActor {
-  const factory _ContractActor(
+  factory _ContractActor(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -5322,7 +5322,7 @@ class __$ContractValuedItemCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ContractValuedItem implements _ContractValuedItem {
-  const _$_ContractValuedItem(
+  _$_ContractValuedItem(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -5468,7 +5468,7 @@ class _$_ContractValuedItem implements _ContractValuedItem {
 }
 
 abstract class _ContractValuedItem implements ContractValuedItem {
-  const factory _ContractValuedItem(
+  factory _ContractValuedItem(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -5710,7 +5710,7 @@ class __$ContractSignerCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ContractSigner implements _ContractSigner {
-  const _$_ContractSigner(
+  _$_ContractSigner(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -5788,7 +5788,7 @@ class _$_ContractSigner implements _ContractSigner {
 }
 
 abstract class _ContractSigner implements ContractSigner {
-  const factory _ContractSigner(
+  factory _ContractSigner(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -6179,7 +6179,7 @@ class __$ContractTermCopyWithImpl<$Res> extends _$ContractTermCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ContractTerm implements _ContractTerm {
-  const _$_ContractTerm(
+  _$_ContractTerm(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -6326,7 +6326,7 @@ class _$_ContractTerm implements _ContractTerm {
 }
 
 abstract class _ContractTerm implements ContractTerm {
-  const factory _ContractTerm(
+  factory _ContractTerm(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -6566,7 +6566,7 @@ class __$ContractFriendlyCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ContractFriendly implements _ContractFriendly {
-  const _$_ContractFriendly(
+  _$_ContractFriendly(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -6633,7 +6633,7 @@ class _$_ContractFriendly implements _ContractFriendly {
 }
 
 abstract class _ContractFriendly implements ContractFriendly {
-  const factory _ContractFriendly(
+  factory _ContractFriendly(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -6831,7 +6831,7 @@ class __$ContractLegalCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ContractLegal implements _ContractLegal {
-  const _$_ContractLegal(
+  _$_ContractLegal(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -6897,7 +6897,7 @@ class _$_ContractLegal implements _ContractLegal {
 }
 
 abstract class _ContractLegal implements ContractLegal {
-  const factory _ContractLegal(
+  factory _ContractLegal(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -7097,7 +7097,7 @@ class __$ContractRuleCopyWithImpl<$Res> extends _$ContractRuleCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ContractRule implements _ContractRule {
-  const _$_ContractRule(
+  _$_ContractRule(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -7164,7 +7164,7 @@ class _$_ContractRule implements _ContractRule {
 }
 
 abstract class _ContractRule implements ContractRule {
-  const factory _ContractRule(
+  factory _ContractRule(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,

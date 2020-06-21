@@ -589,7 +589,7 @@ class __$CompositionCopyWithImpl<$Res> extends _$CompositionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Composition implements _Composition {
-  const _$_Composition(
+  _$_Composition(
       {@required
       @JsonKey(required: true, defaultValue: 'Composition')
           this.resourceType,
@@ -828,7 +828,7 @@ class _$_Composition implements _Composition {
 }
 
 abstract class _Composition implements Composition {
-  const factory _Composition(
+  factory _Composition(
       {@required
       @JsonKey(required: true, defaultValue: 'Composition')
           String resourceType,
@@ -1110,7 +1110,7 @@ class __$CompositionAttesterCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CompositionAttester implements _CompositionAttester {
-  const _$_CompositionAttester(
+  _$_CompositionAttester(
       {this.mode,
       this.time,
       this.party,
@@ -1177,7 +1177,7 @@ class _$_CompositionAttester implements _CompositionAttester {
 }
 
 abstract class _CompositionAttester implements CompositionAttester {
-  const factory _CompositionAttester(
+  factory _CompositionAttester(
       {List<AttesterMode> mode,
       FhirDateTime time,
       Reference party,
@@ -1365,7 +1365,7 @@ class __$CompositionRelatesToCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CompositionRelatesTo implements _CompositionRelatesTo {
-  const _$_CompositionRelatesTo(
+  _$_CompositionRelatesTo(
       {this.code,
       this.targetIdentifier,
       this.targetReference,
@@ -1426,7 +1426,7 @@ class _$_CompositionRelatesTo implements _CompositionRelatesTo {
 }
 
 abstract class _CompositionRelatesTo implements CompositionRelatesTo {
-  const factory _CompositionRelatesTo(
+  factory _CompositionRelatesTo(
       {Code code,
       Identifier targetIdentifier,
       Reference targetReference,
@@ -1558,7 +1558,7 @@ class __$CompositionEventCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CompositionEvent implements _CompositionEvent {
-  const _$_CompositionEvent({this.code, this.period, this.detail});
+  _$_CompositionEvent({this.code, this.period, this.detail});
 
   factory _$_CompositionEvent.fromJson(Map<String, dynamic> json) =>
       _$_$_CompositionEventFromJson(json);
@@ -1605,7 +1605,7 @@ class _$_CompositionEvent implements _CompositionEvent {
 }
 
 abstract class _CompositionEvent implements CompositionEvent {
-  const factory _CompositionEvent(
+  factory _CompositionEvent(
       {List<CodeableConcept> code,
       Period period,
       List<Reference> detail}) = _$_CompositionEvent;
@@ -1887,7 +1887,7 @@ class __$CompositionSectionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CompositionSection implements _CompositionSection {
-  const _$_CompositionSection(
+  _$_CompositionSection(
       {this.title,
       this.code,
       this.text,
@@ -1986,7 +1986,7 @@ class _$_CompositionSection implements _CompositionSection {
 }
 
 abstract class _CompositionSection implements CompositionSection {
-  const factory _CompositionSection(
+  factory _CompositionSection(
       {String title,
       CodeableConcept code,
       Narrative text,
@@ -2534,7 +2534,7 @@ class __$DocumentManifestCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DocumentManifest implements _DocumentManifest {
-  const _$_DocumentManifest(
+  _$_DocumentManifest(
       {@required
       @JsonKey(required: true, defaultValue: 'DocumentManifest')
           this.resourceType,
@@ -2752,7 +2752,7 @@ class _$_DocumentManifest implements _DocumentManifest {
 }
 
 abstract class _DocumentManifest implements DocumentManifest {
-  const factory _DocumentManifest(
+  factory _DocumentManifest(
       {@required
       @JsonKey(required: true, defaultValue: 'DocumentManifest')
           String resourceType,
@@ -2976,7 +2976,7 @@ class __$DocumentManifestContentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DocumentManifestContent implements _DocumentManifestContent {
-  const _$_DocumentManifestContent({this.pAttachment, this.pReference});
+  _$_DocumentManifestContent({this.pAttachment, this.pReference});
 
   factory _$_DocumentManifestContent.fromJson(Map<String, dynamic> json) =>
       _$_$_DocumentManifestContentFromJson(json);
@@ -3021,7 +3021,7 @@ class _$_DocumentManifestContent implements _DocumentManifestContent {
 }
 
 abstract class _DocumentManifestContent implements DocumentManifestContent {
-  const factory _DocumentManifestContent(
+  factory _DocumentManifestContent(
       {Attachment pAttachment,
       Reference pReference}) = _$_DocumentManifestContent;
 
@@ -3154,7 +3154,7 @@ class __$DocumentManifestRelatedCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DocumentManifestRelated implements _DocumentManifestRelated {
-  const _$_DocumentManifestRelated({this.identifier, this.ref});
+  _$_DocumentManifestRelated({this.identifier, this.ref});
 
   factory _$_DocumentManifestRelated.fromJson(Map<String, dynamic> json) =>
       _$_$_DocumentManifestRelatedFromJson(json);
@@ -3198,8 +3198,8 @@ class _$_DocumentManifestRelated implements _DocumentManifestRelated {
 }
 
 abstract class _DocumentManifestRelated implements DocumentManifestRelated {
-  const factory _DocumentManifestRelated(
-      {Identifier identifier, Reference ref}) = _$_DocumentManifestRelated;
+  factory _DocumentManifestRelated({Identifier identifier, Reference ref}) =
+      _$_DocumentManifestRelated;
 
   factory _DocumentManifestRelated.fromJson(Map<String, dynamic> json) =
       _$_DocumentManifestRelated.fromJson;
@@ -3864,7 +3864,7 @@ class __$DocumentReferenceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DocumentReference implements _DocumentReference {
-  const _$_DocumentReference(
+  _$_DocumentReference(
       {@required
       @JsonKey(required: true, defaultValue: 'DocumentReference')
           this.resourceType,
@@ -4118,7 +4118,7 @@ class _$_DocumentReference implements _DocumentReference {
 }
 
 abstract class _DocumentReference implements DocumentReference {
-  const factory _DocumentReference(
+  factory _DocumentReference(
       {@required
       @JsonKey(required: true, defaultValue: 'DocumentReference')
           String resourceType,
@@ -4380,7 +4380,7 @@ class __$DocumentReferenceRelatesToCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DocumentReferenceRelatesTo implements _DocumentReferenceRelatesTo {
-  const _$_DocumentReferenceRelatesTo(
+  _$_DocumentReferenceRelatesTo(
       {@JsonKey(unknownEnumValue: RelatesToCode.unknown) this.code,
       @JsonKey(required: true) this.target,
       @JsonKey(name: '_code') this.codeElement});
@@ -4436,7 +4436,7 @@ class _$_DocumentReferenceRelatesTo implements _DocumentReferenceRelatesTo {
 
 abstract class _DocumentReferenceRelatesTo
     implements DocumentReferenceRelatesTo {
-  const factory _DocumentReferenceRelatesTo(
+  factory _DocumentReferenceRelatesTo(
           {@JsonKey(unknownEnumValue: RelatesToCode.unknown) RelatesToCode code,
           @JsonKey(required: true) Reference target,
           @JsonKey(name: '_code') Element codeElement}) =
@@ -4579,7 +4579,7 @@ class __$DocumentReferenceContentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DocumentReferenceContent implements _DocumentReferenceContent {
-  const _$_DocumentReferenceContent(
+  _$_DocumentReferenceContent(
       {@JsonKey(required: true) this.attachment, this.format});
 
   factory _$_DocumentReferenceContent.fromJson(Map<String, dynamic> json) =>
@@ -4625,7 +4625,7 @@ class _$_DocumentReferenceContent implements _DocumentReferenceContent {
 }
 
 abstract class _DocumentReferenceContent implements DocumentReferenceContent {
-  const factory _DocumentReferenceContent(
+  factory _DocumentReferenceContent(
       {@JsonKey(required: true) Attachment attachment,
       Coding format}) = _$_DocumentReferenceContent;
 
@@ -4865,7 +4865,7 @@ class __$DocumentReferenceContextCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DocumentReferenceContext implements _DocumentReferenceContext {
-  const _$_DocumentReferenceContext(
+  _$_DocumentReferenceContext(
       {this.encounter,
       this.event,
       this.period,
@@ -4944,7 +4944,7 @@ class _$_DocumentReferenceContext implements _DocumentReferenceContext {
 }
 
 abstract class _DocumentReferenceContext implements DocumentReferenceContext {
-  const factory _DocumentReferenceContext(
+  factory _DocumentReferenceContext(
       {Reference encounter,
       List<CodeableConcept> event,
       Period period,
@@ -5092,7 +5092,7 @@ class __$DocumentReferenceRelatedCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DocumentReferenceRelated implements _DocumentReferenceRelated {
-  const _$_DocumentReferenceRelated({this.identifier, this.ref});
+  _$_DocumentReferenceRelated({this.identifier, this.ref});
 
   factory _$_DocumentReferenceRelated.fromJson(Map<String, dynamic> json) =>
       _$_$_DocumentReferenceRelatedFromJson(json);
@@ -5136,8 +5136,8 @@ class _$_DocumentReferenceRelated implements _DocumentReferenceRelated {
 }
 
 abstract class _DocumentReferenceRelated implements DocumentReferenceRelated {
-  const factory _DocumentReferenceRelated(
-      {Identifier identifier, Reference ref}) = _$_DocumentReferenceRelated;
+  factory _DocumentReferenceRelated({Identifier identifier, Reference ref}) =
+      _$_DocumentReferenceRelated;
 
   factory _DocumentReferenceRelated.fromJson(Map<String, dynamic> json) =
       _$_DocumentReferenceRelated.fromJson;

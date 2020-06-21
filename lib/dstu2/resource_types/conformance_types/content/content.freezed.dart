@@ -1001,7 +1001,7 @@ class __$StructureDefinitionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_StructureDefinition implements _StructureDefinition {
-  const _$_StructureDefinition(
+  _$_StructureDefinition(
       {@JsonKey(defaultValue: 'StructureDefinition')
           this.resourceType,
       this.id,
@@ -1378,7 +1378,7 @@ class _$_StructureDefinition implements _StructureDefinition {
 }
 
 abstract class _StructureDefinition implements StructureDefinition {
-  const factory _StructureDefinition(
+  factory _StructureDefinition(
       {@JsonKey(defaultValue: 'StructureDefinition')
           String resourceType,
       Id id,
@@ -1973,7 +1973,7 @@ class __$DataElementCopyWithImpl<$Res> extends _$DataElementCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DataElement implements _DataElement {
-  const _$_DataElement(
+  _$_DataElement(
       {@JsonKey(defaultValue: 'DataElement')
           this.resourceType,
       this.id,
@@ -2172,7 +2172,7 @@ class _$_DataElement implements _DataElement {
 }
 
 abstract class _DataElement implements DataElement {
-  const factory _DataElement(
+  factory _DataElement(
       {@JsonKey(defaultValue: 'DataElement')
           String resourceType,
       Id id,
@@ -2410,7 +2410,7 @@ class __$StructureDefinitionContactCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_StructureDefinitionContact implements _StructureDefinitionContact {
-  const _$_StructureDefinitionContact(
+  _$_StructureDefinitionContact(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -2477,7 +2477,7 @@ class _$_StructureDefinitionContact implements _StructureDefinitionContact {
 
 abstract class _StructureDefinitionContact
     implements StructureDefinitionContact {
-  const factory _StructureDefinitionContact(
+  factory _StructureDefinitionContact(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -2786,7 +2786,7 @@ class __$StructureDefinitionMappingCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_StructureDefinitionMapping implements _StructureDefinitionMapping {
-  const _$_StructureDefinitionMapping(
+  _$_StructureDefinitionMapping(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -2909,7 +2909,7 @@ class _$_StructureDefinitionMapping implements _StructureDefinitionMapping {
 
 abstract class _StructureDefinitionMapping
     implements StructureDefinitionMapping {
-  const factory _StructureDefinitionMapping(
+  factory _StructureDefinitionMapping(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -3108,7 +3108,7 @@ class __$StructureDefinitionSnapshotCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_StructureDefinitionSnapshot implements _StructureDefinitionSnapshot {
-  const _$_StructureDefinitionSnapshot(
+  _$_StructureDefinitionSnapshot(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3171,7 +3171,7 @@ class _$_StructureDefinitionSnapshot implements _StructureDefinitionSnapshot {
 
 abstract class _StructureDefinitionSnapshot
     implements StructureDefinitionSnapshot {
-  const factory _StructureDefinitionSnapshot(
+  factory _StructureDefinitionSnapshot(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -3343,7 +3343,7 @@ class __$StructureDefinitionDifferentialCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_StructureDefinitionDifferential
     implements _StructureDefinitionDifferential {
-  const _$_StructureDefinitionDifferential(
+  _$_StructureDefinitionDifferential(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3407,7 +3407,7 @@ class _$_StructureDefinitionDifferential
 
 abstract class _StructureDefinitionDifferential
     implements StructureDefinitionDifferential {
-  const factory _StructureDefinitionDifferential(
+  factory _StructureDefinitionDifferential(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -3577,7 +3577,7 @@ class __$DataElementContactCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DataElementContact implements _DataElementContact {
-  const _$_DataElementContact(
+  _$_DataElementContact(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3642,7 +3642,7 @@ class _$_DataElementContact implements _DataElementContact {
 }
 
 abstract class _DataElementContact implements DataElementContact {
-  const factory _DataElementContact(
+  factory _DataElementContact(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -3947,7 +3947,7 @@ class __$DataElementMappingCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DataElementMapping implements _DataElementMapping {
-  const _$_DataElementMapping(
+  _$_DataElementMapping(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -4068,7 +4068,7 @@ class _$_DataElementMapping implements _DataElementMapping {
 }
 
 abstract class _DataElementMapping implements DataElementMapping {
-  const factory _DataElementMapping(
+  factory _DataElementMapping(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,

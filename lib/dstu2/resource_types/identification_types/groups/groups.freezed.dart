@@ -463,7 +463,7 @@ class __$OrganizationCopyWithImpl<$Res> extends _$OrganizationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Organization implements _Organization {
-  const _$_Organization(
+  _$_Organization(
       {@JsonKey(defaultValue: 'Organization') this.resourceType,
       this.id,
       this.meta,
@@ -649,7 +649,7 @@ class _$_Organization implements _Organization {
 }
 
 abstract class _Organization implements Organization {
-  const factory _Organization(
+  factory _Organization(
       {@JsonKey(defaultValue: 'Organization') String resourceType,
       Id id,
       Meta meta,
@@ -1226,7 +1226,7 @@ class __$GroupCopyWithImpl<$Res> extends _$GroupCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Group implements _Group {
-  const _$_Group(
+  _$_Group(
       {@JsonKey(defaultValue: 'Group')
           this.resourceType,
       this.id,
@@ -1435,7 +1435,7 @@ class _$_Group implements _Group {
 }
 
 abstract class _Group implements Group {
-  const factory _Group(
+  factory _Group(
       {@JsonKey(defaultValue: 'Group')
           String resourceType,
       Id id,
@@ -2271,7 +2271,7 @@ class __$HealthcareServiceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_HealthcareService implements _HealthcareService {
-  const _$_HealthcareService(
+  _$_HealthcareService(
       {@JsonKey(defaultValue: 'HealthcareService')
           this.resourceType,
       this.id,
@@ -2550,7 +2550,7 @@ class _$_HealthcareService implements _HealthcareService {
 }
 
 abstract class _HealthcareService implements HealthcareService {
-  const factory _HealthcareService(
+  factory _HealthcareService(
       {@JsonKey(defaultValue: 'HealthcareService')
           String resourceType,
       Id id,
@@ -2905,7 +2905,7 @@ class __$OrganizationContactCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_OrganizationContact implements _OrganizationContact {
-  const _$_OrganizationContact(
+  _$_OrganizationContact(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -2993,7 +2993,7 @@ class _$_OrganizationContact implements _OrganizationContact {
 }
 
 abstract class _OrganizationContact implements OrganizationContact {
-  const factory _OrganizationContact(
+  factory _OrganizationContact(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -3324,7 +3324,7 @@ class __$GroupCharacteristicCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_GroupCharacteristic implements _GroupCharacteristic {
-  const _$_GroupCharacteristic(
+  _$_GroupCharacteristic(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3437,7 +3437,7 @@ class _$_GroupCharacteristic implements _GroupCharacteristic {
 }
 
 abstract class _GroupCharacteristic implements GroupCharacteristic {
-  const factory _GroupCharacteristic(
+  factory _GroupCharacteristic(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -3688,7 +3688,7 @@ class __$GroupMemberCopyWithImpl<$Res> extends _$GroupMemberCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_GroupMember implements _GroupMember {
-  const _$_GroupMember(
+  _$_GroupMember(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3770,7 +3770,7 @@ class _$_GroupMember implements _GroupMember {
 }
 
 abstract class _GroupMember implements GroupMember {
-  const factory _GroupMember(
+  factory _GroupMember(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -3970,7 +3970,7 @@ class __$HealthcareServiceServiceTypeCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_HealthcareServiceServiceType implements _HealthcareServiceServiceType {
-  const _$_HealthcareServiceServiceType(
+  _$_HealthcareServiceServiceType(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -4040,7 +4040,7 @@ class _$_HealthcareServiceServiceType implements _HealthcareServiceServiceType {
 
 abstract class _HealthcareServiceServiceType
     implements HealthcareServiceServiceType {
-  const factory _HealthcareServiceServiceType(
+  factory _HealthcareServiceServiceType(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -4356,7 +4356,7 @@ class __$HealthcareServiceAvailableTimeCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_HealthcareServiceAvailableTime
     implements _HealthcareServiceAvailableTime {
-  const _$_HealthcareServiceAvailableTime(
+  _$_HealthcareServiceAvailableTime(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -4474,7 +4474,7 @@ class _$_HealthcareServiceAvailableTime
 
 abstract class _HealthcareServiceAvailableTime
     implements HealthcareServiceAvailableTime {
-  const factory _HealthcareServiceAvailableTime(
+  factory _HealthcareServiceAvailableTime(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -4720,7 +4720,7 @@ class __$HealthcareServiceNotAvailableCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_HealthcareServiceNotAvailable
     implements _HealthcareServiceNotAvailable {
-  const _$_HealthcareServiceNotAvailable(
+  _$_HealthcareServiceNotAvailable(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -4799,7 +4799,7 @@ class _$_HealthcareServiceNotAvailable
 
 abstract class _HealthcareServiceNotAvailable
     implements HealthcareServiceNotAvailable {
-  const factory _HealthcareServiceNotAvailable(
+  factory _HealthcareServiceNotAvailable(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,

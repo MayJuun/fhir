@@ -326,7 +326,7 @@ class __$BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Basic implements _Basic {
-  const _$_Basic(
+  _$_Basic(
       {@required
       @JsonKey(required: true, defaultValue: 'Basic')
           this.resourceType,
@@ -468,7 +468,7 @@ class _$_Basic implements _Basic {
 }
 
 abstract class _Basic implements Basic {
-  const factory _Basic(
+  factory _Basic(
       {@required
       @JsonKey(required: true, defaultValue: 'Basic')
           String resourceType,
@@ -832,7 +832,7 @@ class __$BinaryCopyWithImpl<$Res> extends _$BinaryCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Binary implements _Binary {
-  const _$_Binary(
+  _$_Binary(
       {@required
       @JsonKey(required: true, defaultValue: 'Binary')
           this.resourceType,
@@ -969,7 +969,7 @@ class _$_Binary implements _Binary {
 }
 
 abstract class _Binary implements Binary {
-  const factory _Binary(
+  factory _Binary(
       {@required
       @JsonKey(required: true, defaultValue: 'Binary')
           String resourceType,
@@ -1368,7 +1368,7 @@ class __$BundleCopyWithImpl<$Res> extends _$BundleCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Bundle implements _Bundle {
-  const _$_Bundle(
+  _$_Bundle(
       {@required
       @JsonKey(required: true, defaultValue: 'Bundle')
           this.resourceType,
@@ -1524,7 +1524,7 @@ class _$_Bundle implements _Bundle {
 }
 
 abstract class _Bundle implements Bundle {
-  const factory _Bundle(
+  factory _Bundle(
       {@required
       @JsonKey(required: true, defaultValue: 'Bundle')
           String resourceType,
@@ -1737,7 +1737,7 @@ class __$BundleLinkCopyWithImpl<$Res> extends _$BundleLinkCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_BundleLink implements _BundleLink {
-  const _$_BundleLink(
+  _$_BundleLink(
       {this.relation,
       this.url,
       @JsonKey(name: '_relation') this.relationElement,
@@ -1798,7 +1798,7 @@ class _$_BundleLink implements _BundleLink {
 }
 
 abstract class _BundleLink implements BundleLink {
-  const factory _BundleLink(
+  factory _BundleLink(
       {String relation,
       String url,
       @JsonKey(name: '_relation') Element relationElement,
@@ -2017,7 +2017,7 @@ class __$BundleEntryCopyWithImpl<$Res> extends _$BundleEntryCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_BundleEntry implements _BundleEntry {
-  const _$_BundleEntry(
+  _$_BundleEntry(
       {this.link,
       this.fullUrl,
       this.resource,
@@ -2097,7 +2097,7 @@ class _$_BundleEntry implements _BundleEntry {
 }
 
 abstract class _BundleEntry implements BundleEntry {
-  const factory _BundleEntry(
+  factory _BundleEntry(
       {List<BundleLink> link,
       String fullUrl,
       Resource resource,
@@ -2273,7 +2273,7 @@ class __$BundleSearchCopyWithImpl<$Res> extends _$BundleSearchCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_BundleSearch implements _BundleSearch {
-  const _$_BundleSearch(
+  _$_BundleSearch(
       {@JsonKey(unknownEnumValue: SearchMode.unknown) this.mode,
       this.score,
       @JsonKey(name: '_mode') this.modeElement,
@@ -2334,7 +2334,7 @@ class _$_BundleSearch implements _BundleSearch {
 }
 
 abstract class _BundleSearch implements BundleSearch {
-  const factory _BundleSearch(
+  factory _BundleSearch(
       {@JsonKey(unknownEnumValue: SearchMode.unknown) SearchMode mode,
       Decimal score,
       @JsonKey(name: '_mode') Element modeElement,
@@ -2657,7 +2657,7 @@ class __$BundleRequestCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_BundleRequest implements _BundleRequest {
-  const _$_BundleRequest(
+  _$_BundleRequest(
       {@JsonKey(unknownEnumValue: RequestMethod.unknown) this.method,
       this.url,
       this.ifNoneMatch,
@@ -2778,7 +2778,7 @@ class _$_BundleRequest implements _BundleRequest {
 }
 
 abstract class _BundleRequest implements BundleRequest {
-  const factory _BundleRequest(
+  factory _BundleRequest(
       {@JsonKey(unknownEnumValue: RequestMethod.unknown)
           RequestMethod method,
       String url,
@@ -3068,7 +3068,7 @@ class __$BundleResponseCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_BundleResponse implements _BundleResponse {
-  const _$_BundleResponse(
+  _$_BundleResponse(
       {this.status,
       this.location,
       this.etag,
@@ -3165,7 +3165,7 @@ class _$_BundleResponse implements _BundleResponse {
 }
 
 abstract class _BundleResponse implements BundleResponse {
-  const factory _BundleResponse(
+  factory _BundleResponse(
           {String status,
           String location,
           String etag,
@@ -3476,7 +3476,7 @@ class __$LinkageCopyWithImpl<$Res> extends _$LinkageCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Linkage implements _Linkage {
-  const _$_Linkage(
+  _$_Linkage(
       {@required
       @JsonKey(required: true, defaultValue: 'Linkage')
           this.resourceType,
@@ -3603,7 +3603,7 @@ class _$_Linkage implements _Linkage {
 }
 
 abstract class _Linkage implements Linkage {
-  const factory _Linkage(
+  factory _Linkage(
       {@required
       @JsonKey(required: true, defaultValue: 'Linkage')
           String resourceType,
@@ -3791,7 +3791,7 @@ class __$LinkageItemCopyWithImpl<$Res> extends _$LinkageItemCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_LinkageItem implements _LinkageItem {
-  const _$_LinkageItem(
+  _$_LinkageItem(
       {@JsonKey(unknownEnumValue: LinkageItemType.unknown) this.type,
       @JsonKey(required: true) this.resource,
       @JsonKey(name: '_type') this.typeElement});
@@ -3846,7 +3846,7 @@ class _$_LinkageItem implements _LinkageItem {
 }
 
 abstract class _LinkageItem implements LinkageItem {
-  const factory _LinkageItem(
+  factory _LinkageItem(
       {@JsonKey(unknownEnumValue: LinkageItemType.unknown) LinkageItemType type,
       @JsonKey(required: true) Reference resource,
       @JsonKey(name: '_type') Element typeElement}) = _$_LinkageItem;
@@ -4543,7 +4543,7 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Media implements _Media {
-  const _$_Media(
+  _$_Media(
       {@required
       @JsonKey(required: true, defaultValue: 'Media')
           this.resourceType,
@@ -4810,7 +4810,7 @@ class _$_Media implements _Media {
 }
 
 abstract class _Media implements Media {
-  const factory _Media(
+  factory _Media(
       {@required
       @JsonKey(required: true, defaultValue: 'Media')
           String resourceType,
@@ -5426,7 +5426,7 @@ class __$MessageHeaderCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MessageHeader implements _MessageHeader {
-  const _$_MessageHeader(
+  _$_MessageHeader(
       {@required
       @JsonKey(required: true, defaultValue: 'MessageHeader')
           this.resourceType,
@@ -5615,7 +5615,7 @@ class _$_MessageHeader implements _MessageHeader {
 }
 
 abstract class _MessageHeader implements MessageHeader {
-  const factory _MessageHeader(
+  factory _MessageHeader(
       {@required
       @JsonKey(required: true, defaultValue: 'MessageHeader')
           String resourceType,
@@ -5871,7 +5871,7 @@ class __$MessageHeaderDestinationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MessageHeaderDestination implements _MessageHeaderDestination {
-  const _$_MessageHeaderDestination(
+  _$_MessageHeaderDestination(
       {this.name,
       this.target,
       this.endpoint,
@@ -5939,7 +5939,7 @@ class _$_MessageHeaderDestination implements _MessageHeaderDestination {
 }
 
 abstract class _MessageHeaderDestination implements MessageHeaderDestination {
-  const factory _MessageHeaderDestination(
+  factory _MessageHeaderDestination(
           {String name,
           Reference target,
           String endpoint,
@@ -6206,7 +6206,7 @@ class __$MessageHeaderSourceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MessageHeaderSource implements _MessageHeaderSource {
-  const _$_MessageHeaderSource(
+  _$_MessageHeaderSource(
       {this.name,
       this.software,
       this.version,
@@ -6305,7 +6305,7 @@ class _$_MessageHeaderSource implements _MessageHeaderSource {
 }
 
 abstract class _MessageHeaderSource implements MessageHeaderSource {
-  const factory _MessageHeaderSource(
+  factory _MessageHeaderSource(
           {String name,
           String software,
           String version,
@@ -6516,7 +6516,7 @@ class __$MessageHeaderResponseCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MessageHeaderResponse implements _MessageHeaderResponse {
-  const _$_MessageHeaderResponse(
+  _$_MessageHeaderResponse(
       {this.identifier,
       @JsonKey(unknownEnumValue: ResponseCode.unknown) this.code,
       this.details,
@@ -6586,7 +6586,7 @@ class _$_MessageHeaderResponse implements _MessageHeaderResponse {
 }
 
 abstract class _MessageHeaderResponse implements MessageHeaderResponse {
-  const factory _MessageHeaderResponse(
+  factory _MessageHeaderResponse(
       {Id identifier,
       @JsonKey(unknownEnumValue: ResponseCode.unknown) ResponseCode code,
       Reference details,
@@ -6840,7 +6840,7 @@ class __$OperationOutcomeCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_OperationOutcome implements _OperationOutcome {
-  const _$_OperationOutcome(
+  _$_OperationOutcome(
       {@required
       @JsonKey(required: true, defaultValue: 'OperationOutcome')
           this.resourceType,
@@ -6946,7 +6946,7 @@ class _$_OperationOutcome implements _OperationOutcome {
 }
 
 abstract class _OperationOutcome implements OperationOutcome {
-  const factory _OperationOutcome(
+  factory _OperationOutcome(
       {@required
       @JsonKey(required: true, defaultValue: 'OperationOutcome')
           String resourceType,
@@ -7281,7 +7281,7 @@ class __$OperationOutcomeIssueCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_OperationOutcomeIssue implements _OperationOutcomeIssue {
-  const _$_OperationOutcomeIssue(
+  _$_OperationOutcomeIssue(
       {@JsonKey(unknownEnumValue: IssueSeverity.unknown) this.severity,
       @JsonKey(unknownEnumValue: IssueCode.unknown) this.code,
       this.details,
@@ -7397,7 +7397,7 @@ class _$_OperationOutcomeIssue implements _OperationOutcomeIssue {
 }
 
 abstract class _OperationOutcomeIssue implements OperationOutcomeIssue {
-  const factory _OperationOutcomeIssue(
+  factory _OperationOutcomeIssue(
       {@JsonKey(unknownEnumValue: IssueSeverity.unknown)
           IssueSeverity severity,
       @JsonKey(unknownEnumValue: IssueCode.unknown)
@@ -7592,7 +7592,7 @@ class __$ParametersCopyWithImpl<$Res> extends _$ParametersCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Parameters implements _Parameters {
-  const _$_Parameters(
+  _$_Parameters(
       {this.id, this.meta, this.implicitRules, this.language, this.parameter});
 
   factory _$_Parameters.fromJson(Map<String, dynamic> json) =>
@@ -7653,7 +7653,7 @@ class _$_Parameters implements _Parameters {
 }
 
 abstract class _Parameters implements Parameters {
-  const factory _Parameters(
+  factory _Parameters(
       {Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9370,7 +9370,7 @@ class __$ParametersParameterCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ParametersParameter implements _ParametersParameter {
-  const _$_ParametersParameter(
+  _$_ParametersParameter(
       {this.name,
       this.valueBoolean,
       this.valueInteger,
@@ -9834,7 +9834,7 @@ class _$_ParametersParameter implements _ParametersParameter {
 }
 
 abstract class _ParametersParameter implements ParametersParameter {
-  const factory _ParametersParameter(
+  factory _ParametersParameter(
           {String name,
           Boolean valueBoolean,
           Integer valueInteger,
@@ -10537,7 +10537,7 @@ class __$SubscriptionCopyWithImpl<$Res> extends _$SubscriptionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Subscription implements _Subscription {
-  const _$_Subscription(
+  _$_Subscription(
       {@required
       @JsonKey(required: true, defaultValue: 'Subscription')
           this.resourceType,
@@ -10735,7 +10735,7 @@ class _$_Subscription implements _Subscription {
 }
 
 abstract class _Subscription implements Subscription {
-  const factory _Subscription(
+  factory _Subscription(
       {@required
       @JsonKey(required: true, defaultValue: 'Subscription')
           String resourceType,
@@ -11048,7 +11048,7 @@ class __$SubscriptionChannelCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_SubscriptionChannel implements _SubscriptionChannel {
-  const _$_SubscriptionChannel(
+  _$_SubscriptionChannel(
       {@JsonKey(unknownEnumValue: ChannelType.unknown) this.type,
       this.endpoint,
       this.payload,
@@ -11140,7 +11140,7 @@ class _$_SubscriptionChannel implements _SubscriptionChannel {
 }
 
 abstract class _SubscriptionChannel implements SubscriptionChannel {
-  const factory _SubscriptionChannel(
+  factory _SubscriptionChannel(
           {@JsonKey(unknownEnumValue: ChannelType.unknown) ChannelType type,
           String endpoint,
           String payload,

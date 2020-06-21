@@ -512,7 +512,7 @@ class __$PractitionerCopyWithImpl<$Res> extends _$PractitionerCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Practitioner implements _Practitioner {
-  const _$_Practitioner(
+  _$_Practitioner(
       {@JsonKey(defaultValue: 'Practitioner') this.resourceType,
       this.id,
       this.meta,
@@ -720,7 +720,7 @@ class _$_Practitioner implements _Practitioner {
 }
 
 abstract class _Practitioner implements Practitioner {
-  const factory _Practitioner(
+  factory _Practitioner(
       {@JsonKey(defaultValue: 'Practitioner')
           String resourceType,
       Id id,
@@ -1353,7 +1353,7 @@ class __$RelatedPersonCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_RelatedPerson implements _RelatedPerson {
-  const _$_RelatedPerson(
+  _$_RelatedPerson(
       {@JsonKey(defaultValue: 'RelatedPerson') this.resourceType,
       this.id,
       this.meta,
@@ -1556,7 +1556,7 @@ class _$_RelatedPerson implements _RelatedPerson {
 }
 
 abstract class _RelatedPerson implements RelatedPerson {
-  const factory _RelatedPerson(
+  factory _RelatedPerson(
       {@JsonKey(defaultValue: 'RelatedPerson')
           String resourceType,
       Id id,
@@ -2409,7 +2409,7 @@ class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Patient implements _Patient {
-  const _$_Patient(
+  _$_Patient(
       {@JsonKey(defaultValue: 'Patient')
           this.resourceType,
       this.id,
@@ -2699,7 +2699,7 @@ class _$_Patient implements _Patient {
 }
 
 abstract class _Patient implements Patient {
-  const factory _Patient(
+  factory _Patient(
       {@JsonKey(defaultValue: 'Patient')
           String resourceType,
       Id id,
@@ -3099,7 +3099,7 @@ class __$PractitionerPractitionerRoleCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_PractitionerPractitionerRole implements _PractitionerPractitionerRole {
-  const _$_PractitionerPractitionerRole(
+  _$_PractitionerPractitionerRole(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       @JsonKey(name: 'fhir_comments') this.fhirComments,
@@ -3202,7 +3202,7 @@ class _$_PractitionerPractitionerRole implements _PractitionerPractitionerRole {
 
 abstract class _PractitionerPractitionerRole
     implements PractitionerPractitionerRole {
-  const factory _PractitionerPractitionerRole(
+  factory _PractitionerPractitionerRole(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(name: 'fhir_comments') List<String> fhirComments,
@@ -3451,7 +3451,7 @@ class __$PractitionerQualificationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_PractitionerQualification implements _PractitionerQualification {
-  const _$_PractitionerQualification(
+  _$_PractitionerQualification(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3533,7 +3533,7 @@ class _$_PractitionerQualification implements _PractitionerQualification {
 }
 
 abstract class _PractitionerQualification implements PractitionerQualification {
-  const factory _PractitionerQualification(
+  factory _PractitionerQualification(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -3843,7 +3843,7 @@ class __$PatientContactCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_PatientContact implements _PatientContact {
-  const _$_PatientContact(
+  _$_PatientContact(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3951,7 +3951,7 @@ class _$_PatientContact implements _PatientContact {
 }
 
 abstract class _PatientContact implements PatientContact {
-  const factory _PatientContact(
+  factory _PatientContact(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -4192,7 +4192,7 @@ class __$PatientAnimalCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_PatientAnimal implements _PatientAnimal {
-  const _$_PatientAnimal(
+  _$_PatientAnimal(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -4267,7 +4267,7 @@ class _$_PatientAnimal implements _PatientAnimal {
 }
 
 abstract class _PatientAnimal implements PatientAnimal {
-  const factory _PatientAnimal(
+  factory _PatientAnimal(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -4482,7 +4482,7 @@ class __$PatientCommunicationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_PatientCommunication implements _PatientCommunication {
-  const _$_PatientCommunication(
+  _$_PatientCommunication(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -4560,7 +4560,7 @@ class _$_PatientCommunication implements _PatientCommunication {
 }
 
 abstract class _PatientCommunication implements PatientCommunication {
-  const factory _PatientCommunication(
+  factory _PatientCommunication(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -4786,7 +4786,7 @@ class __$PatientLinkCopyWithImpl<$Res> extends _$PatientLinkCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_PatientLink implements _PatientLink {
-  const _$_PatientLink(
+  _$_PatientLink(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -4870,7 +4870,7 @@ class _$_PatientLink implements _PatientLink {
 }
 
 abstract class _PatientLink implements PatientLink {
-  const factory _PatientLink(
+  factory _PatientLink(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,

@@ -9,7 +9,7 @@ part 'scheduling.g.dart';
 
 @freezed
 abstract class Appointment with _$Appointment implements Resource {
-  const factory Appointment({
+  factory Appointment({
     @JsonKey(defaultValue: 'Appointment') String resourceType,
     Id id,
     Meta meta,
@@ -50,7 +50,7 @@ abstract class Appointment with _$Appointment implements Resource {
 
 @freezed
 abstract class Slot with _$Slot implements Resource {
-  const factory Slot({
+  factory Slot({
     @JsonKey(defaultValue: 'Slot') String resourceType,
     Id id,
     Meta meta,
@@ -85,7 +85,7 @@ abstract class Slot with _$Slot implements Resource {
 abstract class AppointmentResponse
     with _$AppointmentResponse
     implements Resource {
-  const factory AppointmentResponse({
+  factory AppointmentResponse({
     @JsonKey(defaultValue: 'AppointmentResponse') String resourceType,
     Id id,
     Meta meta,
@@ -121,7 +121,7 @@ abstract class AppointmentResponse
 
 @freezed
 abstract class Schedule with _$Schedule implements Resource {
-  const factory Schedule({
+  factory Schedule({
     @JsonKey(defaultValue: 'Schedule') String resourceType,
     Id id,
     Meta meta,
@@ -147,7 +147,7 @@ abstract class Schedule with _$Schedule implements Resource {
 
 @freezed
 abstract class AppointmentParticipant with _$AppointmentParticipant {
-  const factory AppointmentParticipant({
+  factory AppointmentParticipant({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,

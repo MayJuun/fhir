@@ -8,11 +8,10 @@ part 'care_provision.g.dart';
 
 @freezed
 abstract class CarePlan with _$CarePlan implements Resource {
-  const factory CarePlan({
+  factory CarePlan({
     @JsonKey(required: true, defaultValue: 'CarePlan')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -52,7 +51,7 @@ abstract class CarePlan with _$CarePlan implements Resource {
 
 @freezed
 abstract class CarePlanActivity with _$CarePlanActivity {
-  const factory CarePlanActivity({
+  factory CarePlanActivity({
     List<CodeableConcept> outcomeCodeableConcept,
     List<Reference> outcomeReference,
     List<Annotation> progress,
@@ -65,7 +64,7 @@ abstract class CarePlanActivity with _$CarePlanActivity {
 
 @freezed
 abstract class CarePlanDetail with _$CarePlanDetail {
-  const factory CarePlanDetail({
+  factory CarePlanDetail({
     CodeableConcept category,
     Reference definition,
     CodeableConcept code,
@@ -98,11 +97,10 @@ abstract class CarePlanDetail with _$CarePlanDetail {
 
 @freezed
 abstract class CareTeam with _$CareTeam implements Resource {
-  const factory CareTeam({
+  factory CareTeam({
     @JsonKey(required: true, defaultValue: 'CareTeam')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -132,7 +130,7 @@ abstract class CareTeam with _$CareTeam implements Resource {
 
 @freezed
 abstract class CareTeamParticipant with _$CareTeamParticipant {
-  const factory CareTeamParticipant({
+  factory CareTeamParticipant({
     CodeableConcept role,
     Reference member,
     Reference onBehalfOf,
@@ -144,11 +142,10 @@ abstract class CareTeamParticipant with _$CareTeamParticipant {
 
 @freezed
 abstract class Goal with _$Goal implements Resource {
-  const factory Goal({
+  factory Goal({
     @JsonKey(required: true, defaultValue: 'Goal')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -183,7 +180,7 @@ abstract class Goal with _$Goal implements Resource {
 
 @freezed
 abstract class GoalTarget with _$GoalTarget {
-  const factory GoalTarget({
+  factory GoalTarget({
     CodeableConcept measure,
     Quantity detailQuantity,
     Range detailRange,
@@ -198,11 +195,10 @@ abstract class GoalTarget with _$GoalTarget {
 
 @freezed
 abstract class NutritionOrder with _$NutritionOrder implements Resource {
-  const factory NutritionOrder({
+  factory NutritionOrder({
     @JsonKey(required: true, defaultValue: 'NutritionOrder')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -233,7 +229,7 @@ abstract class NutritionOrder with _$NutritionOrder implements Resource {
 
 @freezed
 abstract class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
-  const factory NutritionOrderOralDiet({
+  factory NutritionOrderOralDiet({
     List<CodeableConcept> type,
     List<Timing> schedule,
     List<NutritionOrderNutrient> nutrient,
@@ -248,7 +244,7 @@ abstract class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
 
 @freezed
 abstract class NutritionOrderNutrient with _$NutritionOrderNutrient {
-  const factory NutritionOrderNutrient({
+  factory NutritionOrderNutrient({
     CodeableConcept modifier,
     Quantity amount,
   }) = _NutritionOrderNutrient;
@@ -258,7 +254,7 @@ abstract class NutritionOrderNutrient with _$NutritionOrderNutrient {
 
 @freezed
 abstract class NutritionOrderTexture with _$NutritionOrderTexture {
-  const factory NutritionOrderTexture({
+  factory NutritionOrderTexture({
     CodeableConcept modifier,
     CodeableConcept foodType,
   }) = _NutritionOrderTexture;
@@ -268,7 +264,7 @@ abstract class NutritionOrderTexture with _$NutritionOrderTexture {
 
 @freezed
 abstract class NutritionOrderSupplement with _$NutritionOrderSupplement {
-  const factory NutritionOrderSupplement({
+  factory NutritionOrderSupplement({
     CodeableConcept type,
     String productName,
     List<Timing> schedule,
@@ -284,7 +280,7 @@ abstract class NutritionOrderSupplement with _$NutritionOrderSupplement {
 @freezed
 abstract class NutritionOrderEnteralFormula
     with _$NutritionOrderEnteralFormula {
-  const factory NutritionOrderEnteralFormula({
+  factory NutritionOrderEnteralFormula({
     CodeableConcept baseFormulaType,
     String baseFormulaProductName,
     CodeableConcept additiveType,
@@ -307,7 +303,7 @@ abstract class NutritionOrderEnteralFormula
 @freezed
 abstract class NutritionOrderAdministration
     with _$NutritionOrderAdministration {
-  const factory NutritionOrderAdministration({
+  factory NutritionOrderAdministration({
     Timing schedule,
     Quantity quantity,
     Quantity rateSimpleQuantity,
@@ -319,11 +315,10 @@ abstract class NutritionOrderAdministration
 
 @freezed
 abstract class ProcedureRequest with _$ProcedureRequest implements Resource {
-  const factory ProcedureRequest({
+  factory ProcedureRequest({
     @JsonKey(required: true, defaultValue: 'ProcedureRequest')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -375,7 +370,7 @@ abstract class ProcedureRequest with _$ProcedureRequest implements Resource {
 
 @freezed
 abstract class ProcedureRequestRequester with _$ProcedureRequestRequester {
-  const factory ProcedureRequestRequester({
+  factory ProcedureRequestRequester({
     @JsonKey(required: true) Reference agent,
     Reference onBehalfOf,
   }) = _ProcedureRequestRequester;
@@ -385,11 +380,10 @@ abstract class ProcedureRequestRequester with _$ProcedureRequestRequester {
 
 @freezed
 abstract class ReferralRequest with _$ReferralRequest implements Resource {
-  const factory ReferralRequest({
+  factory ReferralRequest({
     @JsonKey(required: true, defaultValue: 'ReferralRequest')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -435,7 +429,7 @@ abstract class ReferralRequest with _$ReferralRequest implements Resource {
 
 @freezed
 abstract class ReferralRequestRequester with _$ReferralRequestRequester {
-  const factory ReferralRequestRequester({
+  factory ReferralRequestRequester({
     @JsonKey(required: true) Reference agent,
     Reference onBehalfOf,
   }) = _ReferralRequestRequester;
@@ -445,11 +439,10 @@ abstract class ReferralRequestRequester with _$ReferralRequestRequester {
 
 @freezed
 abstract class RequestGroup with _$RequestGroup implements Resource {
-  const factory RequestGroup({
+  factory RequestGroup({
     @JsonKey(required: true, defaultValue: 'RequestGroup')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -485,7 +478,7 @@ abstract class RequestGroup with _$RequestGroup implements Resource {
 
 @freezed
 abstract class RequestGroupAction with _$RequestGroupAction {
-  const factory RequestGroupAction({
+  factory RequestGroupAction({
     String label,
     String title,
     String description,
@@ -525,7 +518,7 @@ abstract class RequestGroupAction with _$RequestGroupAction {
 
 @freezed
 abstract class RequestGroupCondition with _$RequestGroupCondition {
-  const factory RequestGroupCondition({
+  factory RequestGroupCondition({
     Code kind,
     String description,
     String language,
@@ -541,7 +534,7 @@ abstract class RequestGroupCondition with _$RequestGroupCondition {
 
 @freezed
 abstract class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
-  const factory RequestGroupRelatedAction({
+  factory RequestGroupRelatedAction({
     Id actionId,
     Code relationship,
     Duration offsetDuration,
@@ -555,11 +548,10 @@ abstract class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
 
 @freezed
 abstract class RiskAssessment with _$RiskAssessment implements Resource {
-  const factory RiskAssessment({
+  factory RiskAssessment({
     @JsonKey(required: true, defaultValue: 'RiskAssessment')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -597,7 +589,7 @@ abstract class RiskAssessment with _$RiskAssessment implements Resource {
 
 @freezed
 abstract class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
-  const factory RiskAssessmentPrediction({
+  factory RiskAssessmentPrediction({
     @JsonKey(required: true) CodeableConcept outcome,
     Decimal probabilityDecimal,
     Range probabilityRange,
@@ -618,11 +610,10 @@ abstract class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
 abstract class VisionPrescription
     with _$VisionPrescription
     implements Resource {
-  const factory VisionPrescription({
+  factory VisionPrescription({
     @JsonKey(required: true, defaultValue: 'VisionPrescription')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -649,7 +640,7 @@ abstract class VisionPrescription
 
 @freezed
 abstract class VisionPrescriptionDispense with _$VisionPrescriptionDispense {
-  const factory VisionPrescriptionDispense({
+  factory VisionPrescriptionDispense({
     CodeableConcept product,
     @JsonKey(unknownEnumValue: DispenseEye.unknown) DispenseEye eye,
     Decimal sphere,

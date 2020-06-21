@@ -872,7 +872,7 @@ class __$FhirExtensionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_FhirExtension implements _FhirExtension {
-  const _$_FhirExtension(
+  _$_FhirExtension(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       @required @JsonKey(required: true) this.url,
@@ -1152,7 +1152,7 @@ class _$_FhirExtension implements _FhirExtension {
 }
 
 abstract class _FhirExtension implements FhirExtension {
-  const factory _FhirExtension(
+  factory _FhirExtension(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @required @JsonKey(required: true) FhirUri url,
@@ -1499,7 +1499,7 @@ class __$MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Meta implements _Meta {
-  const _$_Meta(
+  _$_Meta(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       @JsonKey(name: 'fhir_comments') this.fhirComments,
@@ -1603,7 +1603,7 @@ class _$_Meta implements _Meta {
 }
 
 abstract class _Meta implements Meta {
-  const factory _Meta(
+  factory _Meta(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(name: 'fhir_comments') List<String> fhirComments,
@@ -1825,7 +1825,7 @@ class __$ReferenceCopyWithImpl<$Res> extends _$ReferenceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Reference implements _Reference {
-  const _$_Reference(
+  _$_Reference(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       @JsonKey(name: 'fhir_comments') this.fhirComments,
@@ -1909,7 +1909,7 @@ class _$_Reference implements _Reference {
 }
 
 abstract class _Reference implements Reference {
-  const factory _Reference(
+  factory _Reference(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(name: 'fhir_comments') List<String> fhirComments,
@@ -2048,7 +2048,7 @@ class __$ElementCopyWithImpl<$Res> extends _$ElementCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Element implements _Element {
-  const _$_Element(
+  _$_Element(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       @JsonKey(name: 'fhir_comments') this.fhirComments});
@@ -2102,7 +2102,7 @@ class _$_Element implements _Element {
 }
 
 abstract class _Element implements Element {
-  const factory _Element(
+  factory _Element(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(name: 'fhir_comments') List<String> fhirComments}) = _$_Element;
@@ -7301,7 +7301,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ElementDefinition implements _ElementDefinition {
-  const _$_ElementDefinition(
+  _$_ElementDefinition(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -8675,7 +8675,7 @@ class _$_ElementDefinition implements _ElementDefinition {
 }
 
 abstract class _ElementDefinition implements ElementDefinition {
-  const factory _ElementDefinition(
+  factory _ElementDefinition(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -9691,7 +9691,7 @@ class __$NarrativeCopyWithImpl<$Res> extends _$NarrativeCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Narrative implements _Narrative {
-  const _$_Narrative(
+  _$_Narrative(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -9776,7 +9776,7 @@ class _$_Narrative implements _Narrative {
 }
 
 abstract class _Narrative implements Narrative {
-  const factory _Narrative(
+  factory _Narrative(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -10056,7 +10056,7 @@ class __$ElementDefinitionSlicingCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ElementDefinitionSlicing implements _ElementDefinitionSlicing {
-  const _$_ElementDefinitionSlicing(
+  _$_ElementDefinitionSlicing(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -10162,7 +10162,7 @@ class _$_ElementDefinitionSlicing implements _ElementDefinitionSlicing {
 }
 
 abstract class _ElementDefinitionSlicing implements ElementDefinitionSlicing {
-  const factory _ElementDefinitionSlicing(
+  factory _ElementDefinitionSlicing(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -10414,7 +10414,7 @@ class __$ElementDefinitionBaseCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ElementDefinitionBase implements _ElementDefinitionBase {
-  const _$_ElementDefinitionBase(
+  _$_ElementDefinitionBase(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       @required @JsonKey(required: true) this.path,
@@ -10509,7 +10509,7 @@ class _$_ElementDefinitionBase implements _ElementDefinitionBase {
 }
 
 abstract class _ElementDefinitionBase implements ElementDefinitionBase {
-  const factory _ElementDefinitionBase(
+  factory _ElementDefinitionBase(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @required @JsonKey(required: true) String path,
@@ -10748,7 +10748,7 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ElementDefinitionType implements _ElementDefinitionType {
-  const _$_ElementDefinitionType(
+  _$_ElementDefinitionType(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.code,
@@ -10839,7 +10839,7 @@ class _$_ElementDefinitionType implements _ElementDefinitionType {
 }
 
 abstract class _ElementDefinitionType implements ElementDefinitionType {
-  const factory _ElementDefinitionType(
+  factory _ElementDefinitionType(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           Code code,
@@ -10963,7 +10963,7 @@ class __$TypeCodeExtensionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TypeCodeExtension implements _TypeCodeExtension {
-  const _$_TypeCodeExtension({@JsonKey(name: 'extension') this.extension_});
+  _$_TypeCodeExtension({@JsonKey(name: 'extension') this.extension_});
 
   factory _$_TypeCodeExtension.fromJson(Map<String, dynamic> json) =>
       _$_$_TypeCodeExtensionFromJson(json);
@@ -11001,7 +11001,7 @@ class _$_TypeCodeExtension implements _TypeCodeExtension {
 }
 
 abstract class _TypeCodeExtension implements TypeCodeExtension {
-  const factory _TypeCodeExtension(
+  factory _TypeCodeExtension(
           {@JsonKey(name: 'extension') List<FhirExtension> extension_}) =
       _$_TypeCodeExtension;
 
@@ -11344,7 +11344,7 @@ class __$ElementDefinitionConstraintCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ElementDefinitionConstraint implements _ElementDefinitionConstraint {
-  const _$_ElementDefinitionConstraint(
+  _$_ElementDefinitionConstraint(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -11486,7 +11486,7 @@ class _$_ElementDefinitionConstraint implements _ElementDefinitionConstraint {
 
 abstract class _ElementDefinitionConstraint
     implements ElementDefinitionConstraint {
-  const factory _ElementDefinitionConstraint(
+  factory _ElementDefinitionConstraint(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -11784,7 +11784,7 @@ class __$ElementDefinitionBindingCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ElementDefinitionBinding implements _ElementDefinitionBinding {
-  const _$_ElementDefinitionBinding(
+  _$_ElementDefinitionBinding(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -11882,7 +11882,7 @@ class _$_ElementDefinitionBinding implements _ElementDefinitionBinding {
 }
 
 abstract class _ElementDefinitionBinding implements ElementDefinitionBinding {
-  const factory _ElementDefinitionBinding(
+  factory _ElementDefinitionBinding(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -12147,7 +12147,7 @@ class __$ElementDefinitionMappingCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ElementDefinitionMapping implements _ElementDefinitionMapping {
-  const _$_ElementDefinitionMapping(
+  _$_ElementDefinitionMapping(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       @JsonKey(name: 'fhir_comments') this.fhirComments,
@@ -12250,7 +12250,7 @@ class _$_ElementDefinitionMapping implements _ElementDefinitionMapping {
 }
 
 abstract class _ElementDefinitionMapping implements ElementDefinitionMapping {
-  const factory _ElementDefinitionMapping(
+  factory _ElementDefinitionMapping(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(name: 'fhir_comments') List<String> fhirComments,
@@ -12418,7 +12418,7 @@ class __$BackboneElementCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_BackboneElement implements _BackboneElement {
-  const _$_BackboneElement(
+  _$_BackboneElement(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension});
@@ -12471,7 +12471,7 @@ class _$_BackboneElement implements _BackboneElement {
 }
 
 abstract class _BackboneElement implements BackboneElement {
-  const factory _BackboneElement(
+  factory _BackboneElement(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension}) = _$_BackboneElement;

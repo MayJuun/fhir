@@ -9,7 +9,7 @@ part 'metadata_types.g.dart';
 
 @freezed
 abstract class ContactDetail with _$ContactDetail {
-  const factory ContactDetail({
+  factory ContactDetail({
     String name,
     List<ContactPoint> telecom,
     @JsonKey(name: '_name') Element nameElement,
@@ -20,7 +20,7 @@ abstract class ContactDetail with _$ContactDetail {
 
 @freezed
 abstract class RelatedArtifact with _$RelatedArtifact {
-  const factory RelatedArtifact({
+  factory RelatedArtifact({
     @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
         RelatedArtifactType type,
     String display,
@@ -39,7 +39,7 @@ abstract class RelatedArtifact with _$RelatedArtifact {
 
 @freezed
 abstract class UsageContext with _$UsageContext {
-  const factory UsageContext({
+  factory UsageContext({
     @JsonKey(required: true) Coding code,
     CodeableConcept valueCodeableConcept,
     Quantity valueQuantity,
@@ -51,7 +51,7 @@ abstract class UsageContext with _$UsageContext {
 
 @freezed
 abstract class DataRequirement with _$DataRequirement {
-  const factory DataRequirement({
+  factory DataRequirement({
     Code type,
     List<String> profile,
     List<String> mustSupport,
@@ -67,7 +67,7 @@ abstract class DataRequirement with _$DataRequirement {
 
 @freezed
 abstract class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
-  const factory DataRequirementCodeFilter({
+  factory DataRequirementCodeFilter({
     String path,
     String valueSetString,
     Reference valueSetReference,
@@ -84,7 +84,7 @@ abstract class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
 
 @freezed
 abstract class DataRequirementDateFilter with _$DataRequirementDateFilter {
-  const factory DataRequirementDateFilter({
+  factory DataRequirementDateFilter({
     String path,
     FhirDateTime valueDateTime,
     Period valuePeriod,
@@ -98,7 +98,7 @@ abstract class DataRequirementDateFilter with _$DataRequirementDateFilter {
 
 @freezed
 abstract class ParameterDefinition with _$ParameterDefinition {
-  const factory ParameterDefinition({
+  factory ParameterDefinition({
     Code name,
     Code use,
     Integer min,
@@ -119,7 +119,7 @@ abstract class ParameterDefinition with _$ParameterDefinition {
 
 @freezed
 abstract class TriggerDefinition with _$TriggerDefinition {
-  const factory TriggerDefinition({
+  factory TriggerDefinition({
     @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
         TriggerDefinitionType type,
     String eventName,

@@ -9,7 +9,7 @@ part 'entities.g.dart';
 
 @freezed
 abstract class Device with _$Device implements Resource {
-  const factory Device({
+  factory Device({
     @JsonKey(required: true, defaultValue: 'Device')
     @required
         String resourceType,
@@ -52,7 +52,7 @@ abstract class Device with _$Device implements Resource {
 
 @freezed
 abstract class DeviceUdi with _$DeviceUdi {
-  const factory DeviceUdi({
+  factory DeviceUdi({
     String deviceIdentifier,
     String name,
     String jurisdiction,
@@ -74,7 +74,7 @@ abstract class DeviceUdi with _$DeviceUdi {
 
 @freezed
 abstract class DeviceComponent with _$DeviceComponent implements Resource {
-  const factory DeviceComponent({
+  factory DeviceComponent({
     @JsonKey(required: true, defaultValue: 'DeviceComponent')
     @required
         String resourceType,
@@ -107,7 +107,7 @@ abstract class DeviceComponent with _$DeviceComponent implements Resource {
 @freezed
 abstract class DeviceComponentProductionSpecification
     with _$DeviceComponentProductionSpecification {
-  const factory DeviceComponentProductionSpecification({
+  factory DeviceComponentProductionSpecification({
     CodeableConcept specType,
     Identifier componentId,
     String productionSpec,
@@ -120,7 +120,7 @@ abstract class DeviceComponentProductionSpecification
 
 @freezed
 abstract class DeviceMetric with _$DeviceMetric implements Resource {
-  const factory DeviceMetric({
+  factory DeviceMetric({
     @JsonKey(required: true, defaultValue: 'DeviceMetric')
     @required
         String resourceType,
@@ -155,7 +155,7 @@ abstract class DeviceMetric with _$DeviceMetric implements Resource {
 
 @freezed
 abstract class DeviceMetricCalibration with _$DeviceMetricCalibration {
-  const factory DeviceMetricCalibration({
+  factory DeviceMetricCalibration({
     @JsonKey(unknownEnumValue: CalibrationType.unknown) CalibrationType type,
     @JsonKey(unknownEnumValue: CalibrationState.unknown) CalibrationState state,
     String time,
@@ -169,7 +169,7 @@ abstract class DeviceMetricCalibration with _$DeviceMetricCalibration {
 
 @freezed
 abstract class Endpoint with _$Endpoint implements Resource {
-  const factory Endpoint({
+  factory Endpoint({
     @JsonKey(required: true, defaultValue: 'Endpoint')
     @required
         String resourceType,
@@ -204,7 +204,7 @@ abstract class Endpoint with _$Endpoint implements Resource {
 
 @freezed
 abstract class HealthcareService with _$HealthcareService implements Resource {
-  const factory HealthcareService({
+  factory HealthcareService({
     @JsonKey(required: true, defaultValue: 'HealthcareService')
     @required
         String resourceType,
@@ -257,7 +257,7 @@ abstract class HealthcareService with _$HealthcareService implements Resource {
 @freezed
 abstract class HealthcareServiceAvailableTime
     with _$HealthcareServiceAvailableTime {
-  const factory HealthcareServiceAvailableTime({
+  factory HealthcareServiceAvailableTime({
     List<AvailableTimeDaysOfWeek> daysOfWeek,
     Boolean allDay,
     Time availableStartTime,
@@ -274,7 +274,7 @@ abstract class HealthcareServiceAvailableTime
 @freezed
 abstract class HealthcareServiceNotAvailable
     with _$HealthcareServiceNotAvailable {
-  const factory HealthcareServiceNotAvailable({
+  factory HealthcareServiceNotAvailable({
     String description,
     Period during,
     @JsonKey(name: '_description') Element descriptionElement,
@@ -285,7 +285,7 @@ abstract class HealthcareServiceNotAvailable
 
 @freezed
 abstract class Location with _$Location implements Resource {
-  const factory Location({
+  factory Location({
     @JsonKey(required: true, defaultValue: 'Location')
     @required
         String resourceType,
@@ -324,7 +324,7 @@ abstract class Location with _$Location implements Resource {
 
 @freezed
 abstract class LocationPosition with _$LocationPosition {
-  const factory LocationPosition({
+  factory LocationPosition({
     Decimal longitude,
     Decimal latitude,
     Decimal altitude,
@@ -338,7 +338,7 @@ abstract class LocationPosition with _$LocationPosition {
 
 @freezed
 abstract class Organization with _$Organization implements Resource {
-  const factory Organization({
+  factory Organization({
     @JsonKey(required: true, defaultValue: 'Organization')
     @required
         String resourceType,
@@ -370,7 +370,7 @@ abstract class Organization with _$Organization implements Resource {
 
 @freezed
 abstract class OrganizationContact with _$OrganizationContact {
-  const factory OrganizationContact({
+  factory OrganizationContact({
     CodeableConcept purpose,
     HumanName name,
     List<ContactPoint> telecom,
@@ -382,7 +382,7 @@ abstract class OrganizationContact with _$OrganizationContact {
 
 @freezed
 abstract class Substance with _$Substance implements Resource {
-  const factory Substance({
+  factory Substance({
     @JsonKey(required: true, defaultValue: 'Substance')
     @required
         String resourceType,
@@ -410,7 +410,7 @@ abstract class Substance with _$Substance implements Resource {
 
 @freezed
 abstract class SubstanceInstance with _$SubstanceInstance {
-  const factory SubstanceInstance({
+  factory SubstanceInstance({
     Identifier identifier,
     FhirDateTime expiry,
     Quantity quantity,
@@ -422,7 +422,7 @@ abstract class SubstanceInstance with _$SubstanceInstance {
 
 @freezed
 abstract class SubstanceIngredient with _$SubstanceIngredient {
-  const factory SubstanceIngredient({
+  factory SubstanceIngredient({
     Ratio quantity,
     CodeableConcept substanceCodeableConcept,
     Reference substanceReference,

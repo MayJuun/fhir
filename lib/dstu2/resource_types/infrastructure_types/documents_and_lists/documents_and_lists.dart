@@ -9,7 +9,7 @@ part 'documents_and_lists.g.dart';
 
 @freezed
 abstract class Composition with _$Composition implements Resource {
-  const factory Composition({
+  factory Composition({
     @JsonKey(defaultValue: 'Composition') String resourceType,
     Id id,
     Meta meta,
@@ -49,7 +49,7 @@ abstract class Composition with _$Composition implements Resource {
 
 @freezed
 abstract class DocumentReference with _$DocumentReference implements Resource {
-  const factory DocumentReference({
+  factory DocumentReference({
     @JsonKey(defaultValue: 'DocumentReference') String resourceType,
     Id id,
     Meta meta,
@@ -91,7 +91,7 @@ abstract class DocumentReference with _$DocumentReference implements Resource {
 
 @freezed
 abstract class DocumentManifest with _$DocumentManifest implements Resource {
-  const factory DocumentManifest({
+  factory DocumentManifest({
     @JsonKey(defaultValue: 'DocumentManifest') String resourceType,
     Id id,
     Meta meta,
@@ -129,7 +129,7 @@ abstract class DocumentManifest with _$DocumentManifest implements Resource {
 
 @freezed
 abstract class List_ with _$List_ implements Resource {
-  const factory List_({
+  factory List_({
     @JsonKey(defaultValue: 'List') String resourceType,
     Id id,
     Meta meta,
@@ -169,7 +169,7 @@ abstract class List_ with _$List_ implements Resource {
 
 @freezed
 abstract class CompositionAttester with _$CompositionAttester {
-  const factory CompositionAttester({
+  factory CompositionAttester({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -186,7 +186,7 @@ abstract class CompositionAttester with _$CompositionAttester {
 
 @freezed
 abstract class CompositionEvent with _$CompositionEvent {
-  const factory CompositionEvent({
+  factory CompositionEvent({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -201,7 +201,7 @@ abstract class CompositionEvent with _$CompositionEvent {
 
 @freezed
 abstract class CompositionSection with _$CompositionSection {
-  const factory CompositionSection({
+  factory CompositionSection({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -224,7 +224,7 @@ abstract class CompositionSection with _$CompositionSection {
 
 @freezed
 abstract class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
-  const factory DocumentReferenceRelatesTo({
+  factory DocumentReferenceRelatesTo({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -241,7 +241,7 @@ abstract class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
 
 @freezed
 abstract class DocumentReferenceContent with _$DocumentReferenceContent {
-  const factory DocumentReferenceContent({
+  factory DocumentReferenceContent({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -255,7 +255,7 @@ abstract class DocumentReferenceContent with _$DocumentReferenceContent {
 
 @freezed
 abstract class DocumentReferenceContext with _$DocumentReferenceContext {
-  const factory DocumentReferenceContext({
+  factory DocumentReferenceContext({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -274,7 +274,7 @@ abstract class DocumentReferenceContext with _$DocumentReferenceContext {
 
 @freezed
 abstract class DocumentManifestContent with _$DocumentManifestContent {
-  const factory DocumentManifestContent({
+  factory DocumentManifestContent({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -288,7 +288,7 @@ abstract class DocumentManifestContent with _$DocumentManifestContent {
 
 @freezed
 abstract class DocumentManifestRelated with _$DocumentManifestRelated {
-  const factory DocumentManifestRelated({
+  factory DocumentManifestRelated({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -302,7 +302,7 @@ abstract class DocumentManifestRelated with _$DocumentManifestRelated {
 
 @freezed
 abstract class ListEntry with _$ListEntry {
-  const factory ListEntry({
+  factory ListEntry({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -321,7 +321,7 @@ abstract class ListEntry with _$ListEntry {
 
 @freezed
 abstract class DocumentReferenceRelated with _$DocumentReferenceRelated {
-  const factory DocumentReferenceRelated({
+  factory DocumentReferenceRelated({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,

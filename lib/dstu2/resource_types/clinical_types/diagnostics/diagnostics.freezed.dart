@@ -664,7 +664,7 @@ class __$ImagingStudyCopyWithImpl<$Res> extends _$ImagingStudyCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImagingStudy implements _ImagingStudy {
-  const _$_ImagingStudy(
+  _$_ImagingStudy(
       {@JsonKey(defaultValue: 'ImagingStudy')
           this.resourceType,
       this.id,
@@ -928,7 +928,7 @@ class _$_ImagingStudy implements _ImagingStudy {
 }
 
 abstract class _ImagingStudy implements ImagingStudy {
-  const factory _ImagingStudy(
+  factory _ImagingStudy(
       {@JsonKey(defaultValue: 'ImagingStudy')
           String resourceType,
       Id id,
@@ -1767,7 +1767,7 @@ class __$DiagnosticReportCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DiagnosticReport implements _DiagnosticReport {
-  const _$_DiagnosticReport(
+  _$_DiagnosticReport(
       {@JsonKey(defaultValue: 'DiagnosticReport')
           this.resourceType,
       this.id,
@@ -2043,7 +2043,7 @@ class _$_DiagnosticReport implements _DiagnosticReport {
 }
 
 abstract class _DiagnosticReport implements DiagnosticReport {
-  const factory _DiagnosticReport(
+  factory _DiagnosticReport(
       {@JsonKey(defaultValue: 'DiagnosticReport')
           String resourceType,
       Id id,
@@ -2525,7 +2525,7 @@ class __$ImagingObjectSelectionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImagingObjectSelection implements _ImagingObjectSelection {
-  const _$_ImagingObjectSelection(
+  _$_ImagingObjectSelection(
       {@JsonKey(defaultValue: 'ImagingObjectSelection') this.resourceType,
       this.id,
       this.meta,
@@ -2673,7 +2673,7 @@ class _$_ImagingObjectSelection implements _ImagingObjectSelection {
 }
 
 abstract class _ImagingObjectSelection implements ImagingObjectSelection {
-  const factory _ImagingObjectSelection(
+  factory _ImagingObjectSelection(
       {@JsonKey(defaultValue: 'ImagingObjectSelection')
           String resourceType,
       Id id,
@@ -3047,7 +3047,7 @@ class __$BodySiteCopyWithImpl<$Res> extends _$BodySiteCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_BodySite implements _BodySite {
-  const _$_BodySite(
+  _$_BodySite(
       {@JsonKey(defaultValue: 'BodySite') this.resourceType,
       this.id,
       this.meta,
@@ -3183,7 +3183,7 @@ class _$_BodySite implements _BodySite {
 }
 
 abstract class _BodySite implements BodySite {
-  const factory _BodySite(
+  factory _BodySite(
       {@JsonKey(defaultValue: 'BodySite') String resourceType,
       Id id,
       Meta meta,
@@ -4309,7 +4309,7 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Observation implements _Observation {
-  const _$_Observation(
+  _$_Observation(
       {@JsonKey(defaultValue: 'Observation')
           this.resourceType,
       this.id,
@@ -4654,7 +4654,7 @@ class _$_Observation implements _Observation {
 }
 
 abstract class _Observation implements Observation {
-  const factory _Observation(
+  factory _Observation(
       {@JsonKey(defaultValue: 'Observation')
           String resourceType,
       Id id,
@@ -5321,7 +5321,7 @@ class __$SpecimenCopyWithImpl<$Res> extends _$SpecimenCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Specimen implements _Specimen {
-  const _$_Specimen(
+  _$_Specimen(
       {@JsonKey(defaultValue: 'Specimen') this.resourceType,
       this.id,
       this.meta,
@@ -5517,7 +5517,7 @@ class _$_Specimen implements _Specimen {
 }
 
 abstract class _Specimen implements Specimen {
-  const factory _Specimen(
+  factory _Specimen(
       {@JsonKey(defaultValue: 'Specimen')
           String resourceType,
       Id id,
@@ -6015,7 +6015,7 @@ class __$DiagnosticOrderCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DiagnosticOrder implements _DiagnosticOrder {
-  const _$_DiagnosticOrder(
+  _$_DiagnosticOrder(
       {@JsonKey(defaultValue: 'DiagnosticOrder') this.resourceType,
       this.id,
       this.meta,
@@ -6192,7 +6192,7 @@ class _$_DiagnosticOrder implements _DiagnosticOrder {
 }
 
 abstract class _DiagnosticOrder implements DiagnosticOrder {
-  const factory _DiagnosticOrder(
+  factory _DiagnosticOrder(
       {@JsonKey(defaultValue: 'DiagnosticOrder')
           String resourceType,
       Id id,
@@ -6724,7 +6724,7 @@ class __$ImagingStudySeriesCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImagingStudySeries implements _ImagingStudySeries {
-  const _$_ImagingStudySeries(
+  _$_ImagingStudySeries(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -6900,7 +6900,7 @@ class _$_ImagingStudySeries implements _ImagingStudySeries {
 }
 
 abstract class _ImagingStudySeries implements ImagingStudySeries {
-  const factory _ImagingStudySeries(
+  factory _ImagingStudySeries(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -7174,7 +7174,7 @@ class __$DiagnosticReportImageCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DiagnosticReportImage implements _DiagnosticReportImage {
-  const _$_DiagnosticReportImage(
+  _$_DiagnosticReportImage(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -7251,7 +7251,7 @@ class _$_DiagnosticReportImage implements _DiagnosticReportImage {
 }
 
 abstract class _DiagnosticReportImage implements DiagnosticReportImage {
-  const factory _DiagnosticReportImage(
+  factory _DiagnosticReportImage(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -7477,7 +7477,7 @@ class __$ImagingObjectSelectionStudyCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImagingObjectSelectionStudy implements _ImagingObjectSelectionStudy {
-  const _$_ImagingObjectSelectionStudy(
+  _$_ImagingObjectSelectionStudy(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -7561,7 +7561,7 @@ class _$_ImagingObjectSelectionStudy implements _ImagingObjectSelectionStudy {
 
 abstract class _ImagingObjectSelectionStudy
     implements ImagingObjectSelectionStudy {
-  const factory _ImagingObjectSelectionStudy(
+  factory _ImagingObjectSelectionStudy(
           {Id id,
           @JsonKey(name: 'extension')
               List<FhirExtension> extension_,
@@ -7864,7 +7864,7 @@ class __$ObservationReferenceRangeCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ObservationReferenceRange implements _ObservationReferenceRange {
-  const _$_ObservationReferenceRange(
+  _$_ObservationReferenceRange(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -7966,7 +7966,7 @@ class _$_ObservationReferenceRange implements _ObservationReferenceRange {
 }
 
 abstract class _ObservationReferenceRange implements ObservationReferenceRange {
-  const factory _ObservationReferenceRange(
+  factory _ObservationReferenceRange(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -8181,7 +8181,7 @@ class __$ObservationRelatedCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ObservationRelated implements _ObservationRelated {
-  const _$_ObservationRelated(
+  _$_ObservationRelated(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -8257,7 +8257,7 @@ class _$_ObservationRelated implements _ObservationRelated {
 }
 
 abstract class _ObservationRelated implements ObservationRelated {
-  const factory _ObservationRelated(
+  factory _ObservationRelated(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -8780,7 +8780,7 @@ class __$ObservationComponentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ObservationComponent implements _ObservationComponent {
-  const _$_ObservationComponent(
+  _$_ObservationComponent(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -8958,7 +8958,7 @@ class _$_ObservationComponent implements _ObservationComponent {
 }
 
 abstract class _ObservationComponent implements ObservationComponent {
-  const factory _ObservationComponent(
+  factory _ObservationComponent(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -9340,7 +9340,7 @@ class __$SpecimenCollectionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_SpecimenCollection implements _SpecimenCollection {
-  const _$_SpecimenCollection(
+  _$_SpecimenCollection(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       @JsonKey(name: 'fhir_comments') this.fhirComments,
@@ -9458,7 +9458,7 @@ class _$_SpecimenCollection implements _SpecimenCollection {
 }
 
 abstract class _SpecimenCollection implements SpecimenCollection {
-  const factory _SpecimenCollection(
+  factory _SpecimenCollection(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -9682,7 +9682,7 @@ class __$SpecimenTreatmentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_SpecimenTreatment implements _SpecimenTreatment {
-  const _$_SpecimenTreatment(
+  _$_SpecimenTreatment(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -9756,7 +9756,7 @@ class _$_SpecimenTreatment implements _SpecimenTreatment {
 }
 
 abstract class _SpecimenTreatment implements SpecimenTreatment {
-  const factory _SpecimenTreatment(
+  factory _SpecimenTreatment(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -10083,7 +10083,7 @@ class __$SpecimenContainerCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_SpecimenContainer implements _SpecimenContainer {
-  const _$_SpecimenContainer(
+  _$_SpecimenContainer(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -10193,7 +10193,7 @@ class _$_SpecimenContainer implements _SpecimenContainer {
 }
 
 abstract class _SpecimenContainer implements SpecimenContainer {
-  const factory _SpecimenContainer(
+  factory _SpecimenContainer(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -10444,7 +10444,7 @@ class __$DiagnosticOrderEventCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DiagnosticOrderEvent implements _DiagnosticOrderEvent {
-  const _$_DiagnosticOrderEvent(
+  _$_DiagnosticOrderEvent(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -10533,7 +10533,7 @@ class _$_DiagnosticOrderEvent implements _DiagnosticOrderEvent {
 }
 
 abstract class _DiagnosticOrderEvent implements DiagnosticOrderEvent {
-  const factory _DiagnosticOrderEvent(
+  factory _DiagnosticOrderEvent(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -10775,7 +10775,7 @@ class __$DiagnosticOrderItemCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DiagnosticOrderItem implements _DiagnosticOrderItem {
-  const _$_DiagnosticOrderItem(
+  _$_DiagnosticOrderItem(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -10864,7 +10864,7 @@ class _$_DiagnosticOrderItem implements _DiagnosticOrderItem {
 }
 
 abstract class _DiagnosticOrderItem implements DiagnosticOrderItem {
-  const factory _DiagnosticOrderItem(
+  factory _DiagnosticOrderItem(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -11162,7 +11162,7 @@ class __$ImagingStudyInstanceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImagingStudyInstance implements _ImagingStudyInstance {
-  const _$_ImagingStudyInstance(
+  _$_ImagingStudyInstance(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -11282,7 +11282,7 @@ class _$_ImagingStudyInstance implements _ImagingStudyInstance {
 }
 
 abstract class _ImagingStudyInstance implements ImagingStudyInstance {
-  const factory _ImagingStudyInstance(
+  factory _ImagingStudyInstance(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -11499,7 +11499,7 @@ class __$ImagingObjectSelectionSeriesCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImagingObjectSelectionSeries implements _ImagingObjectSelectionSeries {
-  const _$_ImagingObjectSelectionSeries(
+  _$_ImagingObjectSelectionSeries(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -11575,7 +11575,7 @@ class _$_ImagingObjectSelectionSeries implements _ImagingObjectSelectionSeries {
 
 abstract class _ImagingObjectSelectionSeries
     implements ImagingObjectSelectionSeries {
-  const factory _ImagingObjectSelectionSeries(
+  factory _ImagingObjectSelectionSeries(
           {Id id,
           @JsonKey(name: 'extension')
               List<FhirExtension> extension_,
@@ -11785,7 +11785,7 @@ class __$ImagingObjectSelectionInstanceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ImagingObjectSelectionInstance
     implements _ImagingObjectSelectionInstance {
-  const _$_ImagingObjectSelectionInstance(
+  _$_ImagingObjectSelectionInstance(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -11872,7 +11872,7 @@ class _$_ImagingObjectSelectionInstance
 
 abstract class _ImagingObjectSelectionInstance
     implements ImagingObjectSelectionInstance {
-  const factory _ImagingObjectSelectionInstance(
+  factory _ImagingObjectSelectionInstance(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -12063,7 +12063,7 @@ class __$ImagingObjectSelectionFramesCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImagingObjectSelectionFrames implements _ImagingObjectSelectionFrames {
-  const _$_ImagingObjectSelectionFrames(
+  _$_ImagingObjectSelectionFrames(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExte,
@@ -12135,7 +12135,7 @@ class _$_ImagingObjectSelectionFrames implements _ImagingObjectSelectionFrames {
 
 abstract class _ImagingObjectSelectionFrames
     implements ImagingObjectSelectionFrames {
-  const factory _ImagingObjectSelectionFrames(
+  factory _ImagingObjectSelectionFrames(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExte,

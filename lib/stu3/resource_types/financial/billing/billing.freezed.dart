@@ -858,7 +858,7 @@ class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Claim implements _Claim {
-  const _$_Claim(
+  _$_Claim(
       {@required
       @JsonKey(required: true, defaultValue: 'Claim')
           this.resourceType,
@@ -1157,7 +1157,7 @@ class _$_Claim implements _Claim {
 }
 
 abstract class _Claim implements Claim {
-  const factory _Claim(
+  factory _Claim(
       {@required
       @JsonKey(required: true, defaultValue: 'Claim')
           String resourceType,
@@ -1444,7 +1444,7 @@ class __$ClaimRelatedCopyWithImpl<$Res> extends _$ClaimRelatedCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimRelated implements _ClaimRelated {
-  const _$_ClaimRelated({this.claim, this.relationship, this.reference});
+  _$_ClaimRelated({this.claim, this.relationship, this.reference});
 
   factory _$_ClaimRelated.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimRelatedFromJson(json);
@@ -1493,7 +1493,7 @@ class _$_ClaimRelated implements _ClaimRelated {
 }
 
 abstract class _ClaimRelated implements ClaimRelated {
-  const factory _ClaimRelated(
+  factory _ClaimRelated(
       {Reference claim,
       CodeableConcept relationship,
       Identifier reference}) = _$_ClaimRelated;
@@ -1760,7 +1760,7 @@ class __$ClaimPayeeCopyWithImpl<$Res> extends _$ClaimPayeeCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimPayee implements _ClaimPayee {
-  const _$_ClaimPayee(
+  _$_ClaimPayee(
       {@JsonKey(required: true)
           this.type,
       @required
@@ -1872,7 +1872,7 @@ class _$_ClaimPayee implements _ClaimPayee {
 }
 
 abstract class _ClaimPayee implements ClaimPayee {
-  const factory _ClaimPayee(
+  factory _ClaimPayee(
       {@JsonKey(required: true)
           CodeableConcept type,
       @required
@@ -2142,7 +2142,7 @@ class __$ClaimCareTeamCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimCareTeam implements _ClaimCareTeam {
-  const _$_ClaimCareTeam(
+  _$_ClaimCareTeam(
       {this.sequence,
       @JsonKey(required: true) this.provider,
       this.responsible,
@@ -2225,7 +2225,7 @@ class _$_ClaimCareTeam implements _ClaimCareTeam {
 }
 
 abstract class _ClaimCareTeam implements ClaimCareTeam {
-  const factory _ClaimCareTeam(
+  factory _ClaimCareTeam(
           {PositiveInt sequence,
           @JsonKey(required: true) Reference provider,
           Boolean responsible,
@@ -2620,7 +2620,7 @@ class __$ClaimInformationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimInformation implements _ClaimInformation {
-  const _$_ClaimInformation(
+  _$_ClaimInformation(
       {this.sequence,
       @JsonKey(required: true) this.category,
       this.code,
@@ -2745,7 +2745,7 @@ class _$_ClaimInformation implements _ClaimInformation {
 }
 
 abstract class _ClaimInformation implements ClaimInformation {
-  const factory _ClaimInformation(
+  factory _ClaimInformation(
           {PositiveInt sequence,
           @JsonKey(required: true) CodeableConcept category,
           CodeableConcept code,
@@ -2998,7 +2998,7 @@ class __$ClaimDiagnosisCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimDiagnosis implements _ClaimDiagnosis {
-  const _$_ClaimDiagnosis(
+  _$_ClaimDiagnosis(
       {this.sequence,
       this.diagnosisCodeableConcept,
       this.diagnosisReference,
@@ -3074,7 +3074,7 @@ class _$_ClaimDiagnosis implements _ClaimDiagnosis {
 }
 
 abstract class _ClaimDiagnosis implements ClaimDiagnosis {
-  const factory _ClaimDiagnosis(
+  factory _ClaimDiagnosis(
       {PositiveInt sequence,
       CodeableConcept diagnosisCodeableConcept,
       Reference diagnosisReference,
@@ -3301,7 +3301,7 @@ class __$ClaimProcedureCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimProcedure implements _ClaimProcedure {
-  const _$_ClaimProcedure(
+  _$_ClaimProcedure(
       {this.sequence,
       this.date,
       this.procedureCodeableConcept,
@@ -3378,7 +3378,7 @@ class _$_ClaimProcedure implements _ClaimProcedure {
 }
 
 abstract class _ClaimProcedure implements ClaimProcedure {
-  const factory _ClaimProcedure(
+  factory _ClaimProcedure(
       {PositiveInt sequence,
       FhirDateTime date,
       CodeableConcept procedureCodeableConcept,
@@ -3684,7 +3684,7 @@ class __$ClaimInsuranceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimInsurance implements _ClaimInsurance {
-  const _$_ClaimInsurance(
+  _$_ClaimInsurance(
       {this.sequence,
       this.focal,
       @JsonKey(required: true) this.coverage,
@@ -3792,7 +3792,7 @@ class _$_ClaimInsurance implements _ClaimInsurance {
 }
 
 abstract class _ClaimInsurance implements ClaimInsurance {
-  const factory _ClaimInsurance(
+  factory _ClaimInsurance(
       {PositiveInt sequence,
       Boolean focal,
       @JsonKey(required: true)
@@ -4025,7 +4025,7 @@ class __$ClaimAccidentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimAccident implements _ClaimAccident {
-  const _$_ClaimAccident(
+  _$_ClaimAccident(
       {this.date,
       this.type,
       this.locationAddress,
@@ -4091,7 +4091,7 @@ class _$_ClaimAccident implements _ClaimAccident {
 }
 
 abstract class _ClaimAccident implements ClaimAccident {
-  const factory _ClaimAccident(
+  factory _ClaimAccident(
       {Date date,
       CodeableConcept type,
       Address locationAddress,
@@ -4790,7 +4790,7 @@ class __$ClaimItemCopyWithImpl<$Res> extends _$ClaimItemCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimItem implements _ClaimItem {
-  const _$_ClaimItem(
+  _$_ClaimItem(
       {this.sequence,
       this.careTeamLinkId,
       this.diagnosisLinkId,
@@ -5024,7 +5024,7 @@ class _$_ClaimItem implements _ClaimItem {
 }
 
 abstract class _ClaimItem implements ClaimItem {
-  const factory _ClaimItem(
+  factory _ClaimItem(
       {PositiveInt sequence,
       List<PositiveInt> careTeamLinkId,
       List<PositiveInt> diagnosisLinkId,
@@ -5461,7 +5461,7 @@ class __$ClaimDetailCopyWithImpl<$Res> extends _$ClaimDetailCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimDetail implements _ClaimDetail {
-  const _$_ClaimDetail(
+  _$_ClaimDetail(
       {this.sequence,
       this.revenue,
       this.category,
@@ -5590,7 +5590,7 @@ class _$_ClaimDetail implements _ClaimDetail {
 }
 
 abstract class _ClaimDetail implements ClaimDetail {
-  const factory _ClaimDetail(
+  factory _ClaimDetail(
       {PositiveInt sequence,
       CodeableConcept revenue,
       CodeableConcept category,
@@ -5960,7 +5960,7 @@ class __$ClaimSubDetailCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimSubDetail implements _ClaimSubDetail {
-  const _$_ClaimSubDetail(
+  _$_ClaimSubDetail(
       {this.sequence,
       this.revenue,
       this.category,
@@ -6082,7 +6082,7 @@ class _$_ClaimSubDetail implements _ClaimSubDetail {
 }
 
 abstract class _ClaimSubDetail implements ClaimSubDetail {
-  const factory _ClaimSubDetail(
+  factory _ClaimSubDetail(
       {PositiveInt sequence,
       CodeableConcept revenue,
       CodeableConcept category,
@@ -6852,7 +6852,7 @@ class __$ClaimResponseCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimResponse implements _ClaimResponse {
-  const _$_ClaimResponse(
+  _$_ClaimResponse(
       {@required
       @JsonKey(required: true, defaultValue: 'ClaimResponse')
           this.resourceType,
@@ -7114,7 +7114,7 @@ class _$_ClaimResponse implements _ClaimResponse {
 }
 
 abstract class _ClaimResponse implements ClaimResponse {
-  const factory _ClaimResponse(
+  factory _ClaimResponse(
       {@required
       @JsonKey(required: true, defaultValue: 'ClaimResponse')
           String resourceType,
@@ -7421,7 +7421,7 @@ class __$ClaimResponseItemCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimResponseItem implements _ClaimResponseItem {
-  const _$_ClaimResponseItem(
+  _$_ClaimResponseItem(
       {this.sequenceLinkId,
       this.noteNumber,
       this.adjudication,
@@ -7496,7 +7496,7 @@ class _$_ClaimResponseItem implements _ClaimResponseItem {
 }
 
 abstract class _ClaimResponseItem implements ClaimResponseItem {
-  const factory _ClaimResponseItem(
+  factory _ClaimResponseItem(
           {PositiveInt sequenceLinkId,
           List<PositiveInt> noteNumber,
           List<ClaimResponseAdjudication> adjudication,
@@ -7709,7 +7709,7 @@ class __$ClaimResponseAdjudicationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimResponseAdjudication implements _ClaimResponseAdjudication {
-  const _$_ClaimResponseAdjudication(
+  _$_ClaimResponseAdjudication(
       {@JsonKey(required: true) this.category,
       this.reason,
       this.amount,
@@ -7777,7 +7777,7 @@ class _$_ClaimResponseAdjudication implements _ClaimResponseAdjudication {
 }
 
 abstract class _ClaimResponseAdjudication implements ClaimResponseAdjudication {
-  const factory _ClaimResponseAdjudication(
+  factory _ClaimResponseAdjudication(
           {@JsonKey(required: true) CodeableConcept category,
           CodeableConcept reason,
           Money amount,
@@ -7986,7 +7986,7 @@ class __$ClaimResponseDetailCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimResponseDetail implements _ClaimResponseDetail {
-  const _$_ClaimResponseDetail(
+  _$_ClaimResponseDetail(
       {this.sequenceLinkId,
       this.noteNumber,
       this.adjudication,
@@ -8063,7 +8063,7 @@ class _$_ClaimResponseDetail implements _ClaimResponseDetail {
 }
 
 abstract class _ClaimResponseDetail implements ClaimResponseDetail {
-  const factory _ClaimResponseDetail(
+  factory _ClaimResponseDetail(
           {PositiveInt sequenceLinkId,
           List<PositiveInt> noteNumber,
           List<ClaimResponseAdjudication> adjudication,
@@ -8263,7 +8263,7 @@ class __$ClaimResponseSubDetailCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimResponseSubDetail implements _ClaimResponseSubDetail {
-  const _$_ClaimResponseSubDetail(
+  _$_ClaimResponseSubDetail(
       {this.sequenceLinkId,
       this.noteNumber,
       this.adjudication,
@@ -8333,7 +8333,7 @@ class _$_ClaimResponseSubDetail implements _ClaimResponseSubDetail {
 }
 
 abstract class _ClaimResponseSubDetail implements ClaimResponseSubDetail {
-  const factory _ClaimResponseSubDetail(
+  factory _ClaimResponseSubDetail(
           {PositiveInt sequenceLinkId,
           List<PositiveInt> noteNumber,
           List<ClaimResponseAdjudication> adjudication,
@@ -8645,7 +8645,7 @@ class __$ClaimResponseAddItemCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimResponseAddItem implements _ClaimResponseAddItem {
-  const _$_ClaimResponseAddItem(
+  _$_ClaimResponseAddItem(
       {this.sequenceLinkId,
       this.revenue,
       this.category,
@@ -8755,7 +8755,7 @@ class _$_ClaimResponseAddItem implements _ClaimResponseAddItem {
 }
 
 abstract class _ClaimResponseAddItem implements ClaimResponseAddItem {
-  const factory _ClaimResponseAddItem(
+  factory _ClaimResponseAddItem(
           {List<PositiveInt> sequenceLinkId,
           CodeableConcept revenue,
           CodeableConcept category,
@@ -9032,7 +9032,7 @@ class __$ClaimResponseDetail1CopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimResponseDetail1 implements _ClaimResponseDetail1 {
-  const _$_ClaimResponseDetail1(
+  _$_ClaimResponseDetail1(
       {this.revenue,
       this.category,
       this.service,
@@ -9121,7 +9121,7 @@ class _$_ClaimResponseDetail1 implements _ClaimResponseDetail1 {
 }
 
 abstract class _ClaimResponseDetail1 implements ClaimResponseDetail1 {
-  const factory _ClaimResponseDetail1(
+  factory _ClaimResponseDetail1(
           {CodeableConcept revenue,
           CodeableConcept category,
           CodeableConcept service,
@@ -9388,7 +9388,7 @@ class __$ClaimResponseErrorCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimResponseError implements _ClaimResponseError {
-  const _$_ClaimResponseError(
+  _$_ClaimResponseError(
       {this.sequenceLinkId,
       this.detailSequenceLinkId,
       this.subdetailSequenceLinkId,
@@ -9481,7 +9481,7 @@ class _$_ClaimResponseError implements _ClaimResponseError {
 }
 
 abstract class _ClaimResponseError implements ClaimResponseError {
-  const factory _ClaimResponseError(
+  factory _ClaimResponseError(
       {PositiveInt sequenceLinkId,
       PositiveInt detailSequenceLinkId,
       PositiveInt subdetailSequenceLinkId,
@@ -9747,7 +9747,7 @@ class __$ClaimResponsePaymentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimResponsePayment implements _ClaimResponsePayment {
-  const _$_ClaimResponsePayment(
+  _$_ClaimResponsePayment(
       {this.type,
       this.adjustment,
       this.adjustmentReason,
@@ -9827,7 +9827,7 @@ class _$_ClaimResponsePayment implements _ClaimResponsePayment {
 }
 
 abstract class _ClaimResponsePayment implements ClaimResponsePayment {
-  const factory _ClaimResponsePayment(
+  factory _ClaimResponsePayment(
       {CodeableConcept type,
       Money adjustment,
       CodeableConcept adjustmentReason,
@@ -10052,7 +10052,7 @@ class __$ClaimResponseProcessNoteCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimResponseProcessNote implements _ClaimResponseProcessNote {
-  const _$_ClaimResponseProcessNote(
+  _$_ClaimResponseProcessNote(
       {this.number,
       this.type,
       this.text,
@@ -10126,7 +10126,7 @@ class _$_ClaimResponseProcessNote implements _ClaimResponseProcessNote {
 }
 
 abstract class _ClaimResponseProcessNote implements ClaimResponseProcessNote {
-  const factory _ClaimResponseProcessNote(
+  factory _ClaimResponseProcessNote(
           {PositiveInt number,
           CodeableConcept type,
           String text,
@@ -10434,7 +10434,7 @@ class __$ClaimResponseInsuranceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClaimResponseInsurance implements _ClaimResponseInsurance {
-  const _$_ClaimResponseInsurance(
+  _$_ClaimResponseInsurance(
       {this.sequence,
       this.focal,
       @JsonKey(required: true) this.coverage,
@@ -10543,7 +10543,7 @@ class _$_ClaimResponseInsurance implements _ClaimResponseInsurance {
 }
 
 abstract class _ClaimResponseInsurance implements ClaimResponseInsurance {
-  const factory _ClaimResponseInsurance(
+  factory _ClaimResponseInsurance(
       {PositiveInt sequence,
       Boolean focal,
       @JsonKey(required: true)

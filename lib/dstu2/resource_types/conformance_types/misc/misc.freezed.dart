@@ -794,7 +794,7 @@ class __$ImplementationGuideCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImplementationGuide implements _ImplementationGuide {
-  const _$_ImplementationGuide(
+  _$_ImplementationGuide(
       {@JsonKey(defaultValue: 'ImplementationGuide')
           this.resourceType,
       this.id,
@@ -1108,7 +1108,7 @@ class _$_ImplementationGuide implements _ImplementationGuide {
 }
 
 abstract class _ImplementationGuide implements ImplementationGuide {
-  const factory _ImplementationGuide(
+  factory _ImplementationGuide(
       {@JsonKey(defaultValue: 'ImplementationGuide')
           String resourceType,
       Id id,
@@ -1422,7 +1422,7 @@ class __$ImplementationGuideContactCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImplementationGuideContact implements _ImplementationGuideContact {
-  const _$_ImplementationGuideContact(
+  _$_ImplementationGuideContact(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -1489,7 +1489,7 @@ class _$_ImplementationGuideContact implements _ImplementationGuideContact {
 
 abstract class _ImplementationGuideContact
     implements ImplementationGuideContact {
-  const factory _ImplementationGuideContact(
+  factory _ImplementationGuideContact(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -1706,7 +1706,7 @@ class __$ImplementationGuideDependencyCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ImplementationGuideDependency
     implements _ImplementationGuideDependency {
-  const _$_ImplementationGuideDependency(
+  _$_ImplementationGuideDependency(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -1792,7 +1792,7 @@ class _$_ImplementationGuideDependency
 
 abstract class _ImplementationGuideDependency
     implements ImplementationGuideDependency {
-  const factory _ImplementationGuideDependency(
+  factory _ImplementationGuideDependency(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -1998,7 +1998,7 @@ class __$ImplementationGuidePackageCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImplementationGuidePackage implements _ImplementationGuidePackage {
-  const _$_ImplementationGuidePackage(
+  _$_ImplementationGuidePackage(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -2077,7 +2077,7 @@ class _$_ImplementationGuidePackage implements _ImplementationGuidePackage {
 
 abstract class _ImplementationGuidePackage
     implements ImplementationGuidePackage {
-  const factory _ImplementationGuidePackage(
+  factory _ImplementationGuidePackage(
           {Id id,
           @JsonKey(name: 'extension')
               List<FhirExtension> extension_,
@@ -2299,7 +2299,7 @@ class __$ImplementationGuideGlobalCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImplementationGuideGlobal implements _ImplementationGuideGlobal {
-  const _$_ImplementationGuideGlobal(
+  _$_ImplementationGuideGlobal(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -2379,7 +2379,7 @@ class _$_ImplementationGuideGlobal implements _ImplementationGuideGlobal {
 }
 
 abstract class _ImplementationGuideGlobal implements ImplementationGuideGlobal {
-  const factory _ImplementationGuideGlobal(
+  factory _ImplementationGuideGlobal(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -2621,7 +2621,7 @@ class __$ImplementationGuidePageCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImplementationGuidePage implements _ImplementationGuidePage {
-  const _$_ImplementationGuidePage(
+  _$_ImplementationGuidePage(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -2731,7 +2731,7 @@ class _$_ImplementationGuidePage implements _ImplementationGuidePage {
 }
 
 abstract class _ImplementationGuidePage implements ImplementationGuidePage {
-  const factory _ImplementationGuidePage(
+  factory _ImplementationGuidePage(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -3047,7 +3047,7 @@ class __$ImplementationGuideResourceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImplementationGuideResource implements _ImplementationGuideResource {
-  const _$_ImplementationGuideResource(
+  _$_ImplementationGuideResource(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -3164,7 +3164,7 @@ class _$_ImplementationGuideResource implements _ImplementationGuideResource {
 
 abstract class _ImplementationGuideResource
     implements ImplementationGuideResource {
-  const factory _ImplementationGuideResource(
+  factory _ImplementationGuideResource(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -4021,7 +4021,7 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScript implements _TestScript {
-  const _$_TestScript(
+  _$_TestScript(
       {@JsonKey(defaultValue: 'TestScript')
           this.resourceType,
       this.id,
@@ -4332,7 +4332,7 @@ class _$_TestScript implements _TestScript {
 }
 
 abstract class _TestScript implements TestScript {
-  const factory _TestScript(
+  factory _TestScript(
       {@JsonKey(defaultValue: 'TestScript')
           String resourceType,
       Id id,
@@ -4639,7 +4639,7 @@ class __$TestScriptContactCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptContact implements _TestScriptContact {
-  const _$_TestScriptContact(
+  _$_TestScriptContact(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -4704,7 +4704,7 @@ class _$_TestScriptContact implements _TestScriptContact {
 }
 
 abstract class _TestScriptContact implements TestScriptContact {
-  const factory _TestScriptContact(
+  factory _TestScriptContact(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -4880,7 +4880,7 @@ class __$TestScriptMetadataCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptMetadata implements _TestScriptMetadata {
-  const _$_TestScriptMetadata(
+  _$_TestScriptMetadata(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -4948,7 +4948,7 @@ class _$_TestScriptMetadata implements _TestScriptMetadata {
 }
 
 abstract class _TestScriptMetadata implements TestScriptMetadata {
-  const factory _TestScriptMetadata(
+  factory _TestScriptMetadata(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -5175,7 +5175,7 @@ class __$TestScriptLinkCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptLink implements _TestScriptLink {
-  const _$_TestScriptLink(
+  _$_TestScriptLink(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -5259,7 +5259,7 @@ class _$_TestScriptLink implements _TestScriptLink {
 }
 
 abstract class _TestScriptLink implements TestScriptLink {
-  const factory _TestScriptLink(
+  factory _TestScriptLink(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -5618,7 +5618,7 @@ class __$TestScriptCapabilityCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptCapability implements _TestScriptCapability {
-  const _$_TestScriptCapability(
+  _$_TestScriptCapability(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -5756,7 +5756,7 @@ class _$_TestScriptCapability implements _TestScriptCapability {
 }
 
 abstract class _TestScriptCapability implements TestScriptCapability {
-  const factory _TestScriptCapability(
+  factory _TestScriptCapability(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -6039,7 +6039,7 @@ class __$TestScriptFixtureCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptFixture implements _TestScriptFixture {
-  const _$_TestScriptFixture(
+  _$_TestScriptFixture(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -6129,7 +6129,7 @@ class _$_TestScriptFixture implements _TestScriptFixture {
 }
 
 abstract class _TestScriptFixture implements TestScriptFixture {
-  const factory _TestScriptFixture(
+  factory _TestScriptFixture(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -6434,7 +6434,7 @@ class __$TestScriptVariableCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptVariable implements _TestScriptVariable {
-  const _$_TestScriptVariable(
+  _$_TestScriptVariable(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -6547,7 +6547,7 @@ class _$_TestScriptVariable implements _TestScriptVariable {
 }
 
 abstract class _TestScriptVariable implements TestScriptVariable {
-  const factory _TestScriptVariable(
+  factory _TestScriptVariable(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -6757,7 +6757,7 @@ class __$TestScriptSetupCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptSetup implements _TestScriptSetup {
-  const _$_TestScriptSetup(
+  _$_TestScriptSetup(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -6825,7 +6825,7 @@ class _$_TestScriptSetup implements _TestScriptSetup {
 }
 
 abstract class _TestScriptSetup implements TestScriptSetup {
-  const factory _TestScriptSetup(
+  factory _TestScriptSetup(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -7038,7 +7038,7 @@ class __$SetupActionCopyWithImpl<$Res> extends _$SetupActionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_SetupAction implements _SetupAction {
-  const _$_SetupAction(
+  _$_SetupAction(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -7113,7 +7113,7 @@ class _$_SetupAction implements _SetupAction {
 }
 
 abstract class _SetupAction implements SetupAction {
-  const factory _SetupAction(
+  factory _SetupAction(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -7809,7 +7809,7 @@ class __$ActionOperationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ActionOperation implements _ActionOperation {
-  const _$_ActionOperation(
+  _$_ActionOperation(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -8050,7 +8050,7 @@ class _$_ActionOperation implements _ActionOperation {
 }
 
 abstract class _ActionOperation implements ActionOperation {
-  const factory _ActionOperation(
+  factory _ActionOperation(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -9031,7 +9031,7 @@ class __$ActionAssertCopyWithImpl<$Res> extends _$ActionAssertCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ActionAssert implements _ActionAssert {
-  const _$_ActionAssert(
+  _$_ActionAssert(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -9340,7 +9340,7 @@ class _$_ActionAssert implements _ActionAssert {
 }
 
 abstract class _ActionAssert implements ActionAssert {
-  const factory _ActionAssert(
+  factory _ActionAssert(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -9708,7 +9708,7 @@ class __$TestScriptRequestHeaderCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptRequestHeader implements _TestScriptRequestHeader {
-  const _$_TestScriptRequestHeader(
+  _$_TestScriptRequestHeader(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtensio,
@@ -9794,7 +9794,7 @@ class _$_TestScriptRequestHeader implements _TestScriptRequestHeader {
 }
 
 abstract class _TestScriptRequestHeader implements TestScriptRequestHeader {
-  const factory _TestScriptRequestHeader(
+  factory _TestScriptRequestHeader(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtensio,
@@ -10063,7 +10063,7 @@ class __$TestScriptTestCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptTest implements _TestScriptTest {
-  const _$_TestScriptTest(
+  _$_TestScriptTest(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -10160,7 +10160,7 @@ class _$_TestScriptTest implements _TestScriptTest {
 }
 
 abstract class _TestScriptTest implements TestScriptTest {
-  const factory _TestScriptTest(
+  factory _TestScriptTest(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -10338,7 +10338,7 @@ class __$TestScriptTeardownCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TestScriptTeardown implements _TestScriptTeardown {
-  const _$_TestScriptTeardown(
+  _$_TestScriptTeardown(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -10399,7 +10399,7 @@ class _$_TestScriptTeardown implements _TestScriptTeardown {
 }
 
 abstract class _TestScriptTeardown implements TestScriptTeardown {
-  const factory _TestScriptTeardown(
+  factory _TestScriptTeardown(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -10588,7 +10588,7 @@ class __$TeardownActionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TeardownAction implements _TeardownAction {
-  const _$_TeardownAction(
+  _$_TeardownAction(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -10656,7 +10656,7 @@ class _$_TeardownAction implements _TeardownAction {
 }
 
 abstract class _TeardownAction implements TeardownAction {
-  const factory _TeardownAction(
+  factory _TeardownAction(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,

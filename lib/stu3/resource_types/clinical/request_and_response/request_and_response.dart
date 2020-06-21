@@ -8,11 +8,10 @@ part 'request_and_response.g.dart';
 
 @freezed
 abstract class Communication with _$Communication implements Resource {
-  const factory Communication({
+  factory Communication({
     @JsonKey(required: true, defaultValue: 'Communication')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -52,7 +51,7 @@ abstract class Communication with _$Communication implements Resource {
 
 @freezed
 abstract class CommunicationPayload with _$CommunicationPayload {
-  const factory CommunicationPayload({
+  factory CommunicationPayload({
     String contentString,
     Attachment contentAttachment,
     Reference contentReference,
@@ -66,11 +65,10 @@ abstract class CommunicationPayload with _$CommunicationPayload {
 abstract class CommunicationRequest
     with _$CommunicationRequest
     implements Resource {
-  const factory CommunicationRequest({
+  factory CommunicationRequest({
     @JsonKey(required: true, defaultValue: 'CommunicationRequest')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -111,7 +109,7 @@ abstract class CommunicationRequest
 
 @freezed
 abstract class CommunicationRequestPayload with _$CommunicationRequestPayload {
-  const factory CommunicationRequestPayload({
+  factory CommunicationRequestPayload({
     String contentString,
     Attachment contentAttachment,
     Reference contentReference,
@@ -124,7 +122,7 @@ abstract class CommunicationRequestPayload with _$CommunicationRequestPayload {
 @freezed
 abstract class CommunicationRequestRequester
     with _$CommunicationRequestRequester {
-  const factory CommunicationRequestRequester({
+  factory CommunicationRequestRequester({
     @JsonKey(required: true) Reference agent,
     Reference onBehalfOf,
   }) = _CommunicationRequestRequester;
@@ -134,11 +132,10 @@ abstract class CommunicationRequestRequester
 
 @freezed
 abstract class DeviceRequest with _$DeviceRequest implements Resource {
-  const factory DeviceRequest({
+  factory DeviceRequest({
     @JsonKey(required: true, defaultValue: 'DeviceRequest')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -182,7 +179,7 @@ abstract class DeviceRequest with _$DeviceRequest implements Resource {
 
 @freezed
 abstract class DeviceRequestRequester with _$DeviceRequestRequester {
-  const factory DeviceRequestRequester({
+  factory DeviceRequestRequester({
     @JsonKey(required: true) Reference agent,
     Reference onBehalfOf,
   }) = _DeviceRequestRequester;
@@ -194,11 +191,10 @@ abstract class DeviceRequestRequester with _$DeviceRequestRequester {
 abstract class DeviceUseStatement
     with _$DeviceUseStatement
     implements Resource {
-  const factory DeviceUseStatement({
+  factory DeviceUseStatement({
     @JsonKey(required: true, defaultValue: 'DeviceUseStatement')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -230,11 +226,10 @@ abstract class DeviceUseStatement
 
 @freezed
 abstract class SupplyDelivery with _$SupplyDelivery implements Resource {
-  const factory SupplyDelivery({
+  factory SupplyDelivery({
     @JsonKey(required: true, defaultValue: 'SupplyDelivery')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -266,7 +261,7 @@ abstract class SupplyDelivery with _$SupplyDelivery implements Resource {
 
 @freezed
 abstract class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
-  const factory SupplyDeliverySuppliedItem({
+  factory SupplyDeliverySuppliedItem({
     Quantity quantity,
     CodeableConcept itemCodeableConcept,
     Reference itemReference,
@@ -277,11 +272,10 @@ abstract class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
 
 @freezed
 abstract class SupplyRequest with _$SupplyRequest implements Resource {
-  const factory SupplyRequest({
+  factory SupplyRequest({
     @JsonKey(required: true, defaultValue: 'SupplyRequest')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -317,7 +311,7 @@ abstract class SupplyRequest with _$SupplyRequest implements Resource {
 
 @freezed
 abstract class SupplyRequestOrderedItem with _$SupplyRequestOrderedItem {
-  const factory SupplyRequestOrderedItem({
+  factory SupplyRequestOrderedItem({
     @JsonKey(required: true) Quantity quantity,
     CodeableConcept itemCodeableConcept,
     Reference itemReference,
@@ -328,7 +322,7 @@ abstract class SupplyRequestOrderedItem with _$SupplyRequestOrderedItem {
 
 @freezed
 abstract class SupplyRequestRequester with _$SupplyRequestRequester {
-  const factory SupplyRequestRequester({
+  factory SupplyRequestRequester({
     @JsonKey(required: true) Reference agent,
     Reference onBehalfOf,
   }) = _SupplyRequestRequester;

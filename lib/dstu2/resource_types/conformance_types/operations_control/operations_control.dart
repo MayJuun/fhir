@@ -9,7 +9,7 @@ part 'operations_control.g.dart';
 
 @freezed
 abstract class Conformance with _$Conformance implements Resource {
-  const factory Conformance({
+  factory Conformance({
     @JsonKey(defaultValue: 'Conformance') String resourceType,
     Id id,
     Meta meta,
@@ -58,7 +58,7 @@ abstract class Conformance with _$Conformance implements Resource {
 abstract class OperationDefinition
     with _$OperationDefinition
     implements Resource {
-  const factory OperationDefinition({
+  factory OperationDefinition({
     @JsonKey(defaultValue: 'OperationDefinition') String resourceType,
     Id id,
     Meta meta,
@@ -100,7 +100,7 @@ abstract class OperationDefinition
 
 @freezed
 abstract class SearchParameter with _$SearchParameter implements Resource {
-  const factory SearchParameter({
+  factory SearchParameter({
     @JsonKey(defaultValue: 'SearchParameter') String resourceType,
     Id id,
     Meta meta,
@@ -138,7 +138,7 @@ abstract class SearchParameter with _$SearchParameter implements Resource {
 
 @freezed
 abstract class ConformanceContact with _$ConformanceContact {
-  const factory ConformanceContact({
+  factory ConformanceContact({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -152,7 +152,7 @@ abstract class ConformanceContact with _$ConformanceContact {
 
 @freezed
 abstract class ConformanceSoftware with _$ConformanceSoftware {
-  const factory ConformanceSoftware({
+  factory ConformanceSoftware({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -167,7 +167,7 @@ abstract class ConformanceSoftware with _$ConformanceSoftware {
 
 @freezed
 abstract class ConformanceImplementation with _$ConformanceImplementation {
-  const factory ConformanceImplementation({
+  factory ConformanceImplementation({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -181,7 +181,7 @@ abstract class ConformanceImplementation with _$ConformanceImplementation {
 
 @freezed
 abstract class ConformanceRest with _$ConformanceRest {
-  const factory ConformanceRest({
+  factory ConformanceRest({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -207,7 +207,7 @@ abstract class ConformanceRest with _$ConformanceRest {
 
 @freezed
 abstract class ConformanceMessaging with _$ConformanceMessaging {
-  const factory ConformanceMessaging({
+  factory ConformanceMessaging({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -224,7 +224,7 @@ abstract class ConformanceMessaging with _$ConformanceMessaging {
 
 @freezed
 abstract class ConformanceDocument with _$ConformanceDocument {
-  const factory ConformanceDocument({
+  factory ConformanceDocument({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -242,7 +242,7 @@ abstract class ConformanceDocument with _$ConformanceDocument {
 
 @freezed
 abstract class OperationDefinitionContact with _$OperationDefinitionContact {
-  const factory OperationDefinitionContact({
+  factory OperationDefinitionContact({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -257,7 +257,7 @@ abstract class OperationDefinitionContact with _$OperationDefinitionContact {
 @freezed
 abstract class OperationDefinitionParameter
     with _$OperationDefinitionParameter {
-  const factory OperationDefinitionParameter({
+  factory OperationDefinitionParameter({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -281,7 +281,7 @@ abstract class OperationDefinitionParameter
 
 @freezed
 abstract class SearchParameterContact with _$SearchParameterContact {
-  const factory SearchParameterContact({
+  factory SearchParameterContact({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -295,7 +295,7 @@ abstract class SearchParameterContact with _$SearchParameterContact {
 
 @freezed
 abstract class ConformanceSecurity with _$ConformanceSecurity {
-  const factory ConformanceSecurity({
+  factory ConformanceSecurity({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -312,7 +312,7 @@ abstract class ConformanceSecurity with _$ConformanceSecurity {
 
 @freezed
 abstract class ConformanceResource with _$ConformanceResource {
-  const factory ConformanceResource({
+  factory ConformanceResource({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -346,7 +346,7 @@ abstract class ConformanceResource with _$ConformanceResource {
 @freezed
 abstract class ConformanceResourceInteraction
     with _$ConformanceResourceInteraction {
-  const factory ConformanceResourceInteraction({
+  factory ConformanceResourceInteraction({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -362,7 +362,7 @@ abstract class ConformanceResourceInteraction
 
 @freezed
 abstract class ConformanceOperation with _$ConformanceOperation {
-  const factory ConformanceOperation({
+  factory ConformanceOperation({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -377,7 +377,7 @@ abstract class ConformanceOperation with _$ConformanceOperation {
 
 @freezed
 abstract class ConformanceEndpoint with _$ConformanceEndpoint {
-  const factory ConformanceEndpoint({
+  factory ConformanceEndpoint({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -392,7 +392,7 @@ abstract class ConformanceEndpoint with _$ConformanceEndpoint {
 
 @freezed
 abstract class ConformanceEvent with _$ConformanceEvent {
-  const factory ConformanceEvent({
+  factory ConformanceEvent({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -414,7 +414,7 @@ abstract class ConformanceEvent with _$ConformanceEvent {
 
 @freezed
 abstract class OperationDefinitionBinding with _$OperationDefinitionBinding {
-  const factory OperationDefinitionBinding({
+  factory OperationDefinitionBinding({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -432,7 +432,7 @@ abstract class OperationDefinitionBinding with _$OperationDefinitionBinding {
 
 @freezed
 abstract class ConformanceCertificate with _$ConformanceCertificate {
-  const factory ConformanceCertificate({
+  factory ConformanceCertificate({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -447,7 +447,7 @@ abstract class ConformanceCertificate with _$ConformanceCertificate {
 
 @freezed
 abstract class ConformanceRestInteraction with _$ConformanceRestInteraction {
-  const factory ConformanceRestInteraction({
+  factory ConformanceRestInteraction({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -463,7 +463,7 @@ abstract class ConformanceRestInteraction with _$ConformanceRestInteraction {
 
 @freezed
 abstract class ConformanceSearchParam with _$ConformanceSearchParam {
-  const factory ConformanceSearchParam({
+  factory ConformanceSearchParam({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,

@@ -8,11 +8,10 @@ part 'workflow.g.dart';
 
 @freezed
 abstract class Appointment with _$Appointment implements Resource {
-  const factory Appointment({
+  factory Appointment({
     @JsonKey(required: true, defaultValue: 'Appointment')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -57,7 +56,7 @@ abstract class Appointment with _$Appointment implements Resource {
 
 @freezed
 abstract class AppointmentParticipant with _$AppointmentParticipant {
-  const factory AppointmentParticipant({
+  factory AppointmentParticipant({
     List<CodeableConcept> type,
     Reference actor,
     @JsonKey(name: 'required', unknownEnumValue: ParticipantRequired.unknown)
@@ -75,11 +74,10 @@ abstract class AppointmentParticipant with _$AppointmentParticipant {
 abstract class AppointmentResponse
     with _$AppointmentResponse
     implements Resource {
-  const factory AppointmentResponse({
+  factory AppointmentResponse({
     @JsonKey(required: true, defaultValue: 'AppointmentResponse')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -107,11 +105,10 @@ abstract class AppointmentResponse
 
 @freezed
 abstract class ProcessRequest with _$ProcessRequest implements Resource {
-  const factory ProcessRequest({
+  factory ProcessRequest({
     @JsonKey(required: true, defaultValue: 'ProcessRequest')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -150,7 +147,7 @@ abstract class ProcessRequest with _$ProcessRequest implements Resource {
 
 @freezed
 abstract class ProcessRequestItem with _$ProcessRequestItem {
-  const factory ProcessRequestItem({
+  factory ProcessRequestItem({
     Integer sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement,
   }) = _ProcessRequestItem;
@@ -160,11 +157,10 @@ abstract class ProcessRequestItem with _$ProcessRequestItem {
 
 @freezed
 abstract class ProcessResponse with _$ProcessResponse implements Resource {
-  const factory ProcessResponse({
+  factory ProcessResponse({
     @JsonKey(required: true, defaultValue: 'ProcessResponse')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -196,7 +192,7 @@ abstract class ProcessResponse with _$ProcessResponse implements Resource {
 
 @freezed
 abstract class ProcessResponseProcessNote with _$ProcessResponseProcessNote {
-  const factory ProcessResponseProcessNote({
+  factory ProcessResponseProcessNote({
     CodeableConcept type,
     String text,
     @JsonKey(name: '_text') Element textElement,
@@ -207,11 +203,10 @@ abstract class ProcessResponseProcessNote with _$ProcessResponseProcessNote {
 
 @freezed
 abstract class Schedule with _$Schedule implements Resource {
-  const factory Schedule({
+  factory Schedule({
     @JsonKey(required: true, defaultValue: 'Schedule')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -237,11 +232,10 @@ abstract class Schedule with _$Schedule implements Resource {
 
 @freezed
 abstract class Slot with _$Slot implements Resource {
-  const factory Slot({
+  factory Slot({
     @JsonKey(required: true, defaultValue: 'Slot')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -272,11 +266,10 @@ abstract class Slot with _$Slot implements Resource {
 
 @freezed
 abstract class Task with _$Task implements Resource {
-  const factory Task({
+  factory Task({
     @JsonKey(required: true, defaultValue: 'Task')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -326,7 +319,7 @@ abstract class Task with _$Task implements Resource {
 
 @freezed
 abstract class TaskRequester with _$TaskRequester {
-  const factory TaskRequester({
+  factory TaskRequester({
     @JsonKey(required: true) Reference agent,
     Reference onBehalfOf,
   }) = _TaskRequester;
@@ -336,7 +329,7 @@ abstract class TaskRequester with _$TaskRequester {
 
 @freezed
 abstract class TaskRestriction with _$TaskRestriction {
-  const factory TaskRestriction({
+  factory TaskRestriction({
     PositiveInt repetitions,
     Period period,
     List<Reference> recipient,
@@ -348,7 +341,7 @@ abstract class TaskRestriction with _$TaskRestriction {
 
 @freezed
 abstract class TaskInput with _$TaskInput {
-  const factory TaskInput({
+  factory TaskInput({
     @JsonKey(required: true) CodeableConcept type,
     Boolean valueBoolean,
     Integer valueInteger,
@@ -427,7 +420,7 @@ abstract class TaskInput with _$TaskInput {
 
 @freezed
 abstract class TaskOutput with _$TaskOutput {
-  const factory TaskOutput({
+  factory TaskOutput({
     @JsonKey(required: true) CodeableConcept type,
     Boolean valueBoolean,
     Integer valueInteger,

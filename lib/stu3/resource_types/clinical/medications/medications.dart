@@ -9,11 +9,10 @@ part 'medications.g.dart';
 
 @freezed
 abstract class Immunization with _$Immunization implements Resource {
-  const factory Immunization({
+  factory Immunization({
     @JsonKey(required: true, defaultValue: 'Immunization')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -56,7 +55,7 @@ abstract class Immunization with _$Immunization implements Resource {
 
 @freezed
 abstract class ImmunizationPractitioner with _$ImmunizationPractitioner {
-  const factory ImmunizationPractitioner({
+  factory ImmunizationPractitioner({
     CodeableConcept role,
     @JsonKey(required: true) Reference actor,
   }) = _ImmunizationPractitioner;
@@ -66,7 +65,7 @@ abstract class ImmunizationPractitioner with _$ImmunizationPractitioner {
 
 @freezed
 abstract class ImmunizationExplanation with _$ImmunizationExplanation {
-  const factory ImmunizationExplanation({
+  factory ImmunizationExplanation({
     List<CodeableConcept> reason,
     List<CodeableConcept> reasonNotGiven,
   }) = _ImmunizationExplanation;
@@ -76,7 +75,7 @@ abstract class ImmunizationExplanation with _$ImmunizationExplanation {
 
 @freezed
 abstract class ImmunizationReaction with _$ImmunizationReaction {
-  const factory ImmunizationReaction({
+  factory ImmunizationReaction({
     FhirDateTime date,
     Reference detail,
     Boolean reported,
@@ -90,7 +89,7 @@ abstract class ImmunizationReaction with _$ImmunizationReaction {
 @freezed
 abstract class ImmunizationVaccinationProtocol
     with _$ImmunizationVaccinationProtocol {
-  const factory ImmunizationVaccinationProtocol({
+  factory ImmunizationVaccinationProtocol({
     PositiveInt doseSequence,
     String description,
     Reference authority,
@@ -112,11 +111,10 @@ abstract class ImmunizationVaccinationProtocol
 abstract class ImmunizationRecommendation
     with _$ImmunizationRecommendation
     implements Resource {
-  const factory ImmunizationRecommendation({
+  factory ImmunizationRecommendation({
     @JsonKey(required: true, defaultValue: 'ImmunizationRecommendation')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -137,7 +135,7 @@ abstract class ImmunizationRecommendation
 @freezed
 abstract class ImmunizationRecommendationRecommendation
     with _$ImmunizationRecommendationRecommendation {
-  const factory ImmunizationRecommendationRecommendation({
+  factory ImmunizationRecommendationRecommendation({
     FhirDateTime date,
     CodeableConcept vaccineCode,
     CodeableConcept targetDisease,
@@ -158,7 +156,7 @@ abstract class ImmunizationRecommendationRecommendation
 @freezed
 abstract class ImmunizationRecommendationDateCriterion
     with _$ImmunizationRecommendationDateCriterion {
-  const factory ImmunizationRecommendationDateCriterion({
+  factory ImmunizationRecommendationDateCriterion({
     @JsonKey(required: true) CodeableConcept code,
     FhirDateTime value,
     @JsonKey(name: '_value') Element valueElement,
@@ -171,7 +169,7 @@ abstract class ImmunizationRecommendationDateCriterion
 @freezed
 abstract class ImmunizationRecommendationProtocol
     with _$ImmunizationRecommendationProtocol {
-  const factory ImmunizationRecommendationProtocol({
+  factory ImmunizationRecommendationProtocol({
     PositiveInt doseSequence,
     String description,
     Reference authority,
@@ -187,11 +185,10 @@ abstract class ImmunizationRecommendationProtocol
 
 @freezed
 abstract class Medication with _$Medication implements Resource {
-  const factory Medication({
+  factory Medication({
     @JsonKey(required: true, defaultValue: 'Medication')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -219,7 +216,7 @@ abstract class Medication with _$Medication implements Resource {
 
 @freezed
 abstract class MedicationIngredient with _$MedicationIngredient {
-  const factory MedicationIngredient({
+  factory MedicationIngredient({
     CodeableConcept itemCodeableConcept,
     Reference itemReference,
     Boolean isActive,
@@ -232,7 +229,7 @@ abstract class MedicationIngredient with _$MedicationIngredient {
 
 @freezed
 abstract class MedicationPackage with _$MedicationPackage {
-  const factory MedicationPackage({
+  factory MedicationPackage({
     CodeableConcept container,
     List<MedicationContent> content,
     List<MedicationBatch> batch,
@@ -243,7 +240,7 @@ abstract class MedicationPackage with _$MedicationPackage {
 
 @freezed
 abstract class MedicationContent with _$MedicationContent {
-  const factory MedicationContent({
+  factory MedicationContent({
     CodeableConcept itemCodeableConcept,
     Reference itemReference,
     Quantity amount,
@@ -254,7 +251,7 @@ abstract class MedicationContent with _$MedicationContent {
 
 @freezed
 abstract class MedicationBatch with _$MedicationBatch {
-  const factory MedicationBatch({
+  factory MedicationBatch({
     String lotNumber,
     FhirDateTime expirationDate,
     @JsonKey(name: '_lotNumber') Element lotNumberElement,
@@ -268,11 +265,10 @@ abstract class MedicationBatch with _$MedicationBatch {
 abstract class MedicationAdministration
     with _$MedicationAdministration
     implements Resource {
-  const factory MedicationAdministration({
+  factory MedicationAdministration({
     @JsonKey(required: true, defaultValue: 'MedicationAdministration')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -315,7 +311,7 @@ abstract class MedicationAdministration
 @freezed
 abstract class MedicationAdministrationPerformer
     with _$MedicationAdministrationPerformer {
-  const factory MedicationAdministrationPerformer({
+  factory MedicationAdministrationPerformer({
     @JsonKey(required: true) Reference actor,
     Reference onBehalfOf,
   }) = _MedicationAdministrationPerformer;
@@ -327,7 +323,7 @@ abstract class MedicationAdministrationPerformer
 @freezed
 abstract class MedicationAdministrationDosage
     with _$MedicationAdministrationDosage {
-  const factory MedicationAdministrationDosage({
+  factory MedicationAdministrationDosage({
     String text,
     CodeableConcept site,
     CodeableConcept route,
@@ -345,11 +341,10 @@ abstract class MedicationAdministrationDosage
 abstract class MedicationDispense
     with _$MedicationDispense
     implements Resource {
-  const factory MedicationDispense({
+  factory MedicationDispense({
     @JsonKey(required: true, defaultValue: 'MedicationDispense')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -396,7 +391,7 @@ abstract class MedicationDispense
 
 @freezed
 abstract class MedicationDispensePerformer with _$MedicationDispensePerformer {
-  const factory MedicationDispensePerformer({
+  factory MedicationDispensePerformer({
     @JsonKey(required: true) Reference actor,
     Reference onBehalfOf,
   }) = _MedicationDispensePerformer;
@@ -407,7 +402,7 @@ abstract class MedicationDispensePerformer with _$MedicationDispensePerformer {
 @freezed
 abstract class MedicationDispenseSubstitution
     with _$MedicationDispenseSubstitution {
-  const factory MedicationDispenseSubstitution({
+  factory MedicationDispenseSubstitution({
     Boolean wasSubstituted,
     CodeableConcept type,
     List<CodeableConcept> reason,
@@ -420,11 +415,10 @@ abstract class MedicationDispenseSubstitution
 
 @freezed
 abstract class MedicationRequest with _$MedicationRequest implements Resource {
-  const factory MedicationRequest({
+  factory MedicationRequest({
     @JsonKey(required: true, defaultValue: 'MedicationRequest')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -472,7 +466,7 @@ abstract class MedicationRequest with _$MedicationRequest implements Resource {
 
 @freezed
 abstract class MedicationRequestRequester with _$MedicationRequestRequester {
-  const factory MedicationRequestRequester({
+  factory MedicationRequestRequester({
     @JsonKey(required: true) Reference agent,
     Reference onBehalfOf,
   }) = _MedicationRequestRequester;
@@ -483,7 +477,7 @@ abstract class MedicationRequestRequester with _$MedicationRequestRequester {
 @freezed
 abstract class MedicationRequestDispenseRequest
     with _$MedicationRequestDispenseRequest {
-  const factory MedicationRequestDispenseRequest({
+  factory MedicationRequestDispenseRequest({
     Period validityPeriod,
     PositiveInt numberOfRepeatsAllowed,
     Quantity quantity,
@@ -500,7 +494,7 @@ abstract class MedicationRequestDispenseRequest
 @freezed
 abstract class MedicationRequestSubstitution
     with _$MedicationRequestSubstitution {
-  const factory MedicationRequestSubstitution({
+  factory MedicationRequestSubstitution({
     Boolean allowed,
     CodeableConcept reason,
     @JsonKey(name: '_allowed') Element allowedElement,
@@ -513,11 +507,10 @@ abstract class MedicationRequestSubstitution
 abstract class MedicationStatement
     with _$MedicationStatement
     implements Resource {
-  const factory MedicationStatement({
+  factory MedicationStatement({
     @JsonKey(required: true, defaultValue: 'MedicationStatement')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

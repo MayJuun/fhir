@@ -129,7 +129,7 @@ class __$ContactDetailCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ContactDetail implements _ContactDetail {
-  const _$_ContactDetail(
+  _$_ContactDetail(
       {this.name, this.telecom, @JsonKey(name: '_name') this.nameElement});
 
   factory _$_ContactDetail.fromJson(Map<String, dynamic> json) =>
@@ -180,7 +180,7 @@ class _$_ContactDetail implements _ContactDetail {
 }
 
 abstract class _ContactDetail implements ContactDetail {
-  const factory _ContactDetail(
+  factory _ContactDetail(
       {String name,
       List<ContactPoint> telecom,
       @JsonKey(name: '_name') Element nameElement}) = _$_ContactDetail;
@@ -475,7 +475,7 @@ class __$RelatedArtifactCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_RelatedArtifact implements _RelatedArtifact {
-  const _$_RelatedArtifact(
+  _$_RelatedArtifact(
       {@JsonKey(unknownEnumValue: RelatedArtifactType.unknown) this.type,
       this.display,
       this.citation,
@@ -580,7 +580,7 @@ class _$_RelatedArtifact implements _RelatedArtifact {
 }
 
 abstract class _RelatedArtifact implements RelatedArtifact {
-  const factory _RelatedArtifact(
+  factory _RelatedArtifact(
       {@JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
           RelatedArtifactType type,
       String display,
@@ -802,7 +802,7 @@ class __$UsageContextCopyWithImpl<$Res> extends _$UsageContextCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_UsageContext implements _UsageContext {
-  const _$_UsageContext(
+  _$_UsageContext(
       {@JsonKey(required: true) this.code,
       this.valueCodeableConcept,
       this.valueQuantity,
@@ -862,7 +862,7 @@ class _$_UsageContext implements _UsageContext {
 }
 
 abstract class _UsageContext implements UsageContext {
-  const factory _UsageContext(
+  factory _UsageContext(
       {@JsonKey(required: true) Coding code,
       CodeableConcept valueCodeableConcept,
       Quantity valueQuantity,
@@ -1096,7 +1096,7 @@ class __$DataRequirementCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DataRequirement implements _DataRequirement {
-  const _$_DataRequirement(
+  _$_DataRequirement(
       {this.type,
       this.profile,
       this.mustSupport,
@@ -1186,7 +1186,7 @@ class _$_DataRequirement implements _DataRequirement {
 }
 
 abstract class _DataRequirement implements DataRequirement {
-  const factory _DataRequirement(
+  factory _DataRequirement(
           {Code type,
           List<String> profile,
           List<String> mustSupport,
@@ -1465,7 +1465,7 @@ class __$DataRequirementCodeFilterCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DataRequirementCodeFilter implements _DataRequirementCodeFilter {
-  const _$_DataRequirementCodeFilter(
+  _$_DataRequirementCodeFilter(
       {this.path,
       this.valueSetString,
       this.valueSetReference,
@@ -1564,7 +1564,7 @@ class _$_DataRequirementCodeFilter implements _DataRequirementCodeFilter {
 }
 
 abstract class _DataRequirementCodeFilter implements DataRequirementCodeFilter {
-  const factory _DataRequirementCodeFilter(
+  factory _DataRequirementCodeFilter(
           {String path,
           String valueSetString,
           Reference valueSetReference,
@@ -1806,7 +1806,7 @@ class __$DataRequirementDateFilterCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DataRequirementDateFilter implements _DataRequirementDateFilter {
-  const _$_DataRequirementDateFilter(
+  _$_DataRequirementDateFilter(
       {this.path,
       this.valueDateTime,
       this.valuePeriod,
@@ -1883,7 +1883,7 @@ class _$_DataRequirementDateFilter implements _DataRequirementDateFilter {
 }
 
 abstract class _DataRequirementDateFilter implements DataRequirementDateFilter {
-  const factory _DataRequirementDateFilter(
+  factory _DataRequirementDateFilter(
           {String path,
           FhirDateTime valueDateTime,
           Period valuePeriod,
@@ -2221,7 +2221,7 @@ class __$ParameterDefinitionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ParameterDefinition implements _ParameterDefinition {
-  const _$_ParameterDefinition(
+  _$_ParameterDefinition(
       {this.name,
       this.use,
       this.min,
@@ -2346,7 +2346,7 @@ class _$_ParameterDefinition implements _ParameterDefinition {
 }
 
 abstract class _ParameterDefinition implements ParameterDefinition {
-  const factory _ParameterDefinition(
+  factory _ParameterDefinition(
       {Code name,
       Code use,
       Integer min,
@@ -2720,7 +2720,7 @@ class __$TriggerDefinitionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TriggerDefinition implements _TriggerDefinition {
-  const _$_TriggerDefinition(
+  _$_TriggerDefinition(
       {@JsonKey(unknownEnumValue: TriggerDefinitionType.unknown) this.type,
       this.eventName,
       this.eventTimingTiming,
@@ -2835,7 +2835,7 @@ class _$_TriggerDefinition implements _TriggerDefinition {
 }
 
 abstract class _TriggerDefinition implements TriggerDefinition {
-  const factory _TriggerDefinition(
+  factory _TriggerDefinition(
       {@JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
           TriggerDefinitionType type,
       String eventName,

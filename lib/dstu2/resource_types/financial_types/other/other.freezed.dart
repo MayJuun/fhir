@@ -578,7 +578,7 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ExplanationOfBenefit implements _ExplanationOfBenefit {
-  const _$_ExplanationOfBenefit(
+  _$_ExplanationOfBenefit(
       {@JsonKey(defaultValue: 'ExplanationOfBenefit')
           this.resourceType,
       this.id,
@@ -789,7 +789,7 @@ class _$_ExplanationOfBenefit implements _ExplanationOfBenefit {
 }
 
 abstract class _ExplanationOfBenefit implements ExplanationOfBenefit {
-  const factory _ExplanationOfBenefit(
+  factory _ExplanationOfBenefit(
       {@JsonKey(defaultValue: 'ExplanationOfBenefit')
           String resourceType,
       Id id,

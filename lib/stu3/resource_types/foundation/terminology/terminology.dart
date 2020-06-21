@@ -9,11 +9,10 @@ part 'terminology.g.dart';
 
 @freezed
 abstract class CodeSystem with _$CodeSystem implements Resource {
-  const factory CodeSystem({
+  factory CodeSystem({
     @JsonKey(required: true, defaultValue: 'CodeSystem')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -74,7 +73,7 @@ abstract class CodeSystem with _$CodeSystem implements Resource {
 
 @freezed
 abstract class CodeSystemFilter with _$CodeSystemFilter {
-  const factory CodeSystemFilter({
+  factory CodeSystemFilter({
     Code code,
     String description,
     @JsonKey(name: 'operator') List<Code> operator_,
@@ -90,7 +89,7 @@ abstract class CodeSystemFilter with _$CodeSystemFilter {
 
 @freezed
 abstract class CodeSystemProperty with _$CodeSystemProperty {
-  const factory CodeSystemProperty({
+  factory CodeSystemProperty({
     Code code,
     String uri,
     String description,
@@ -106,7 +105,7 @@ abstract class CodeSystemProperty with _$CodeSystemProperty {
 
 @freezed
 abstract class CodeSystemConcept with _$CodeSystemConcept {
-  const factory CodeSystemConcept({
+  factory CodeSystemConcept({
     Code code,
     String display,
     String definition,
@@ -123,7 +122,7 @@ abstract class CodeSystemConcept with _$CodeSystemConcept {
 
 @freezed
 abstract class CodeSystemDesignation with _$CodeSystemDesignation {
-  const factory CodeSystemDesignation({
+  factory CodeSystemDesignation({
     Code language,
     Coding use,
     String value,
@@ -136,7 +135,7 @@ abstract class CodeSystemDesignation with _$CodeSystemDesignation {
 
 @freezed
 abstract class CodeSystemProperty1 with _$CodeSystemProperty1 {
-  const factory CodeSystemProperty1({
+  factory CodeSystemProperty1({
     Code code,
     Code valueCode,
     Coding valueCoding,
@@ -157,11 +156,10 @@ abstract class CodeSystemProperty1 with _$CodeSystemProperty1 {
 
 @freezed
 abstract class ConceptMap with _$ConceptMap implements Resource {
-  const factory ConceptMap({
+  factory ConceptMap({
     @JsonKey(required: true, defaultValue: 'ConceptMap')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -210,7 +208,7 @@ abstract class ConceptMap with _$ConceptMap implements Resource {
 
 @freezed
 abstract class ConceptMapGroup with _$ConceptMapGroup {
-  const factory ConceptMapGroup({
+  factory ConceptMapGroup({
     String source,
     String sourceVersion,
     String target,
@@ -228,7 +226,7 @@ abstract class ConceptMapGroup with _$ConceptMapGroup {
 
 @freezed
 abstract class ConceptMapElement with _$ConceptMapElement {
-  const factory ConceptMapElement({
+  factory ConceptMapElement({
     Code code,
     String display,
     List<ConceptMapTarget> target,
@@ -241,7 +239,7 @@ abstract class ConceptMapElement with _$ConceptMapElement {
 
 @freezed
 abstract class ConceptMapTarget with _$ConceptMapTarget {
-  const factory ConceptMapTarget({
+  factory ConceptMapTarget({
     Code code,
     String display,
     @JsonKey(unknownEnumValue: TargetEquivalence.unknown)
@@ -260,7 +258,7 @@ abstract class ConceptMapTarget with _$ConceptMapTarget {
 
 @freezed
 abstract class ConceptMapDependsOn with _$ConceptMapDependsOn {
-  const factory ConceptMapDependsOn({
+  factory ConceptMapDependsOn({
     String property,
     String system,
     String code,
@@ -276,7 +274,7 @@ abstract class ConceptMapDependsOn with _$ConceptMapDependsOn {
 
 @freezed
 abstract class ConceptMapUnmapped with _$ConceptMapUnmapped {
-  const factory ConceptMapUnmapped({
+  factory ConceptMapUnmapped({
     @JsonKey(unknownEnumValue: UnmappedMode.unknown) UnmappedMode mode,
     Code code,
     String display,
@@ -292,11 +290,10 @@ abstract class ConceptMapUnmapped with _$ConceptMapUnmapped {
 
 @freezed
 abstract class ExpansionProfile with _$ExpansionProfile implements Resource {
-  const factory ExpansionProfile({
+  factory ExpansionProfile({
     @JsonKey(required: true, defaultValue: 'ExpansionProfile')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -353,7 +350,7 @@ abstract class ExpansionProfile with _$ExpansionProfile implements Resource {
 @freezed
 abstract class ExpansionProfileFixedVersion
     with _$ExpansionProfileFixedVersion {
-  const factory ExpansionProfileFixedVersion({
+  factory ExpansionProfileFixedVersion({
     String system,
     String version,
     @JsonKey(unknownEnumValue: FixedVersionMode.unknown) FixedVersionMode mode,
@@ -368,7 +365,7 @@ abstract class ExpansionProfileFixedVersion
 @freezed
 abstract class ExpansionProfileExcludedSystem
     with _$ExpansionProfileExcludedSystem {
-  const factory ExpansionProfileExcludedSystem({
+  factory ExpansionProfileExcludedSystem({
     String system,
     String version,
     @JsonKey(name: '_system') Element systemElement,
@@ -380,7 +377,7 @@ abstract class ExpansionProfileExcludedSystem
 
 @freezed
 abstract class ExpansionProfileDesignation with _$ExpansionProfileDesignation {
-  const factory ExpansionProfileDesignation({
+  factory ExpansionProfileDesignation({
     ExpansionProfileInclude include,
     ExpansionProfileExclude exclude,
     @JsonKey(name: '_language') Element languageElement,
@@ -391,7 +388,7 @@ abstract class ExpansionProfileDesignation with _$ExpansionProfileDesignation {
 
 @freezed
 abstract class ExpansionProfileInclude with _$ExpansionProfileInclude {
-  const factory ExpansionProfileInclude({
+  factory ExpansionProfileInclude({
     List<ExpansionProfileDesignation1> designation,
   }) = _ExpansionProfileInclude;
   factory ExpansionProfileInclude.fromJson(Map<String, dynamic> json) =>
@@ -401,7 +398,7 @@ abstract class ExpansionProfileInclude with _$ExpansionProfileInclude {
 @freezed
 abstract class ExpansionProfileDesignation1
     with _$ExpansionProfileDesignation1 {
-  const factory ExpansionProfileDesignation1({
+  factory ExpansionProfileDesignation1({
     Code language,
     Coding use,
   }) = _ExpansionProfileDesignation1;
@@ -411,7 +408,7 @@ abstract class ExpansionProfileDesignation1
 
 @freezed
 abstract class ExpansionProfileExclude with _$ExpansionProfileExclude {
-  const factory ExpansionProfileExclude({
+  factory ExpansionProfileExclude({
     List<ExpansionProfileDesignation2> designation,
   }) = _ExpansionProfileExclude;
   factory ExpansionProfileExclude.fromJson(Map<String, dynamic> json) =>
@@ -421,7 +418,7 @@ abstract class ExpansionProfileExclude with _$ExpansionProfileExclude {
 @freezed
 abstract class ExpansionProfileDesignation2
     with _$ExpansionProfileDesignation2 {
-  const factory ExpansionProfileDesignation2({
+  factory ExpansionProfileDesignation2({
     Code language,
     Coding use,
     @JsonKey(name: '_language') Element languageElement,
@@ -432,11 +429,10 @@ abstract class ExpansionProfileDesignation2
 
 @freezed
 abstract class NamingSystem with _$NamingSystem implements Resource {
-  const factory NamingSystem({
+  factory NamingSystem({
     @JsonKey(required: true, defaultValue: 'NamingSystem')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -474,7 +470,7 @@ abstract class NamingSystem with _$NamingSystem implements Resource {
 
 @freezed
 abstract class NamingSystemUniqueId with _$NamingSystemUniqueId {
-  const factory NamingSystemUniqueId({
+  factory NamingSystemUniqueId({
     @JsonKey(unknownEnumValue: UniqueIdType.unknown) UniqueIdType type,
     String value,
     Boolean preferred,
@@ -491,11 +487,10 @@ abstract class NamingSystemUniqueId with _$NamingSystemUniqueId {
 
 @freezed
 abstract class ValueSet with _$ValueSet implements Resource {
-  const factory ValueSet({
+  factory ValueSet({
     @JsonKey(required: true, defaultValue: 'ValueSet')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -543,7 +538,7 @@ abstract class ValueSet with _$ValueSet implements Resource {
 
 @freezed
 abstract class ValueSetCompose with _$ValueSetCompose {
-  const factory ValueSetCompose({
+  factory ValueSetCompose({
     Date lockedDate,
     Boolean inactive,
     @JsonKey(required: true) List<ValueSetInclude> include,
@@ -557,7 +552,7 @@ abstract class ValueSetCompose with _$ValueSetCompose {
 
 @freezed
 abstract class ValueSetInclude with _$ValueSetInclude {
-  const factory ValueSetInclude({
+  factory ValueSetInclude({
     String system,
     String version,
     List<ValueSetConcept> concept,
@@ -573,7 +568,7 @@ abstract class ValueSetInclude with _$ValueSetInclude {
 
 @freezed
 abstract class ValueSetConcept with _$ValueSetConcept {
-  const factory ValueSetConcept({
+  factory ValueSetConcept({
     Code code,
     String display,
     List<ValueSetDesignation> designation,
@@ -586,7 +581,7 @@ abstract class ValueSetConcept with _$ValueSetConcept {
 
 @freezed
 abstract class ValueSetDesignation with _$ValueSetDesignation {
-  const factory ValueSetDesignation({
+  factory ValueSetDesignation({
     Code language,
     Coding use,
     String value,
@@ -599,7 +594,7 @@ abstract class ValueSetDesignation with _$ValueSetDesignation {
 
 @freezed
 abstract class ValueSetFilter with _$ValueSetFilter {
-  const factory ValueSetFilter({
+  factory ValueSetFilter({
     Code property,
     @JsonKey(unknownEnumValue: FilterOp.unknown) FilterOp op,
     Code value,
@@ -613,7 +608,7 @@ abstract class ValueSetFilter with _$ValueSetFilter {
 
 @freezed
 abstract class ValueSetExpansion with _$ValueSetExpansion {
-  const factory ValueSetExpansion({
+  factory ValueSetExpansion({
     String identifier,
     FhirDateTime timestamp,
     Integer total,
@@ -631,7 +626,7 @@ abstract class ValueSetExpansion with _$ValueSetExpansion {
 
 @freezed
 abstract class ValueSetParameter with _$ValueSetParameter {
-  const factory ValueSetParameter({
+  factory ValueSetParameter({
     String name,
     String valueString,
     Boolean valueBoolean,
@@ -653,7 +648,7 @@ abstract class ValueSetParameter with _$ValueSetParameter {
 
 @freezed
 abstract class ValueSetContains with _$ValueSetContains {
-  const factory ValueSetContains({
+  factory ValueSetContains({
     String system,
     @JsonKey(name: 'abstract') Boolean abstract_,
     Boolean inactive,

@@ -11,11 +11,10 @@ part 'definitional_artifacts.g.dart';
 abstract class ActivityDefinition
     with _$ActivityDefinition
     implements Resource {
-  const factory ActivityDefinition({
+  factory ActivityDefinition({
     @JsonKey(required: true, defaultValue: 'ActivityDefinition')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -86,7 +85,7 @@ abstract class ActivityDefinition
 @freezed
 abstract class ActivityDefinitionParticipant
     with _$ActivityDefinitionParticipant {
-  const factory ActivityDefinitionParticipant({
+  factory ActivityDefinitionParticipant({
     Code type,
     CodeableConcept role,
     @JsonKey(name: '_type') Element typeElement,
@@ -98,7 +97,7 @@ abstract class ActivityDefinitionParticipant
 @freezed
 abstract class ActivityDefinitionDynamicValue
     with _$ActivityDefinitionDynamicValue {
-  const factory ActivityDefinitionDynamicValue({
+  factory ActivityDefinitionDynamicValue({
     String description,
     String path,
     String language,
@@ -114,11 +113,10 @@ abstract class ActivityDefinitionDynamicValue
 
 @freezed
 abstract class PlanDefinition with _$PlanDefinition implements Resource {
-  const factory PlanDefinition({
+  factory PlanDefinition({
     @JsonKey(required: true, defaultValue: 'PlanDefinition')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -174,7 +172,7 @@ abstract class PlanDefinition with _$PlanDefinition implements Resource {
 
 @freezed
 abstract class PlanDefinitionGoal with _$PlanDefinitionGoal {
-  const factory PlanDefinitionGoal({
+  factory PlanDefinitionGoal({
     CodeableConcept category,
     @JsonKey(required: true) CodeableConcept description,
     CodeableConcept priority,
@@ -189,7 +187,7 @@ abstract class PlanDefinitionGoal with _$PlanDefinitionGoal {
 
 @freezed
 abstract class PlanDefinitionTarget with _$PlanDefinitionTarget {
-  const factory PlanDefinitionTarget({
+  factory PlanDefinitionTarget({
     CodeableConcept measure,
     Quantity detailQuantity,
     Range detailRange,
@@ -202,7 +200,7 @@ abstract class PlanDefinitionTarget with _$PlanDefinitionTarget {
 
 @freezed
 abstract class PlanDefinitionAction with _$PlanDefinitionAction {
-  const factory PlanDefinitionAction({
+  factory PlanDefinitionAction({
     String label,
     String title,
     String description,
@@ -255,7 +253,7 @@ abstract class PlanDefinitionAction with _$PlanDefinitionAction {
 
 @freezed
 abstract class PlanDefinitionCondition with _$PlanDefinitionCondition {
-  const factory PlanDefinitionCondition({
+  factory PlanDefinitionCondition({
     @JsonKey(unknownEnumValue: ConditionKind.unknown) ConditionKind kind,
     String description,
     String language,
@@ -271,7 +269,7 @@ abstract class PlanDefinitionCondition with _$PlanDefinitionCondition {
 
 @freezed
 abstract class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
-  const factory PlanDefinitionRelatedAction({
+  factory PlanDefinitionRelatedAction({
     Id actionId,
     @JsonKey(unknownEnumValue: RelatedActionRelationship.unknown)
         RelatedActionRelationship relationship,
@@ -286,7 +284,7 @@ abstract class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
 
 @freezed
 abstract class PlanDefinitionParticipant with _$PlanDefinitionParticipant {
-  const factory PlanDefinitionParticipant({
+  factory PlanDefinitionParticipant({
     @JsonKey(unknownEnumValue: PlanDefinitionParticipantType.unknown)
         PlanDefinitionParticipantType type,
     CodeableConcept role,
@@ -298,7 +296,7 @@ abstract class PlanDefinitionParticipant with _$PlanDefinitionParticipant {
 
 @freezed
 abstract class PlanDefinitionDynamicValue with _$PlanDefinitionDynamicValue {
-  const factory PlanDefinitionDynamicValue({
+  factory PlanDefinitionDynamicValue({
     String description,
     String path,
     String language,
@@ -314,11 +312,10 @@ abstract class PlanDefinitionDynamicValue with _$PlanDefinitionDynamicValue {
 
 @freezed
 abstract class Questionnaire with _$Questionnaire implements Resource {
-  const factory Questionnaire({
+  factory Questionnaire({
     @JsonKey(required: true, defaultValue: 'Questionnaire')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -369,7 +366,7 @@ abstract class Questionnaire with _$Questionnaire implements Resource {
 
 @freezed
 abstract class QuestionnaireItem with _$QuestionnaireItem {
-  const factory QuestionnaireItem({
+  factory QuestionnaireItem({
     String linkId,
     String definition,
     List<Coding> code,
@@ -421,7 +418,7 @@ abstract class QuestionnaireItem with _$QuestionnaireItem {
 
 @freezed
 abstract class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
-  const factory QuestionnaireEnableWhen({
+  factory QuestionnaireEnableWhen({
     String question,
     Boolean hasAnswer,
     Boolean answerBoolean,
@@ -453,7 +450,7 @@ abstract class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
 
 @freezed
 abstract class QuestionnaireOption with _$QuestionnaireOption {
-  const factory QuestionnaireOption({
+  factory QuestionnaireOption({
     Integer valueInteger,
     Date valueDate,
     Time valueTime,
@@ -470,11 +467,10 @@ abstract class QuestionnaireOption with _$QuestionnaireOption {
 
 @freezed
 abstract class ServiceDefinition with _$ServiceDefinition implements Resource {
-  const factory ServiceDefinition({
+  factory ServiceDefinition({
     @JsonKey(required: true, defaultValue: 'ServiceDefinition')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

@@ -471,7 +471,7 @@ class __$DeviceComponentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DeviceComponent implements _DeviceComponent {
-  const _$_DeviceComponent(
+  _$_DeviceComponent(
       {@JsonKey(defaultValue: 'DeviceComponent')
           this.resourceType,
       this.id,
@@ -658,7 +658,7 @@ class _$_DeviceComponent implements _DeviceComponent {
 }
 
 abstract class _DeviceComponent implements DeviceComponent {
-  const factory _DeviceComponent(
+  factory _DeviceComponent(
       {@JsonKey(defaultValue: 'DeviceComponent')
           String resourceType,
       Id id,
@@ -1323,7 +1323,7 @@ class __$DeviceMetricCopyWithImpl<$Res> extends _$DeviceMetricCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DeviceMetric implements _DeviceMetric {
-  const _$_DeviceMetric(
+  _$_DeviceMetric(
       {@JsonKey(defaultValue: 'DeviceMetric')
           this.resourceType,
       this.id,
@@ -1546,7 +1546,7 @@ class _$_DeviceMetric implements _DeviceMetric {
 }
 
 abstract class _DeviceMetric implements DeviceMetric {
-  const factory _DeviceMetric(
+  factory _DeviceMetric(
       {@JsonKey(defaultValue: 'DeviceMetric')
           String resourceType,
       Id id,
@@ -2288,7 +2288,7 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Device implements _Device {
-  const _$_Device(
+  _$_Device(
       {@JsonKey(defaultValue: 'Device') this.resourceType,
       this.id,
       this.meta,
@@ -2541,7 +2541,7 @@ class _$_Device implements _Device {
 }
 
 abstract class _Device implements Device {
-  const factory _Device(
+  factory _Device(
       {@JsonKey(defaultValue: 'Device') String resourceType,
       Id id,
       Meta meta,
@@ -2858,7 +2858,7 @@ class __$DeviceComponentProductionSpecificationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_DeviceComponentProductionSpecification
     implements _DeviceComponentProductionSpecification {
-  const _$_DeviceComponentProductionSpecification(
+  _$_DeviceComponentProductionSpecification(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -2936,7 +2936,7 @@ class _$_DeviceComponentProductionSpecification
 
 abstract class _DeviceComponentProductionSpecification
     implements DeviceComponentProductionSpecification {
-  const factory _DeviceComponentProductionSpecification(
+  factory _DeviceComponentProductionSpecification(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -3217,7 +3217,7 @@ class __$DeviceMetricCalibrationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DeviceMetricCalibration implements _DeviceMetricCalibration {
-  const _$_DeviceMetricCalibration(
+  _$_DeviceMetricCalibration(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3315,7 +3315,7 @@ class _$_DeviceMetricCalibration implements _DeviceMetricCalibration {
 }
 
 abstract class _DeviceMetricCalibration implements DeviceMetricCalibration {
-  const factory _DeviceMetricCalibration(
+  factory _DeviceMetricCalibration(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,

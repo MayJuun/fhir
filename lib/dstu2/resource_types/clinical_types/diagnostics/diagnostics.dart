@@ -9,7 +9,7 @@ part 'diagnostics.g.dart';
 
 @freezed
 abstract class ImagingStudy with _$ImagingStudy implements Resource {
-  const factory ImagingStudy({
+  factory ImagingStudy({
     @JsonKey(defaultValue: 'ImagingStudy') String resourceType,
     Id id,
     Meta meta,
@@ -50,7 +50,7 @@ abstract class ImagingStudy with _$ImagingStudy implements Resource {
 
 @freezed
 abstract class DiagnosticReport with _$DiagnosticReport implements Resource {
-  const factory DiagnosticReport({
+  factory DiagnosticReport({
     @JsonKey(defaultValue: 'DiagnosticReport') String resourceType,
     Id id,
     Meta meta,
@@ -96,7 +96,7 @@ abstract class DiagnosticReport with _$DiagnosticReport implements Resource {
 abstract class ImagingObjectSelection
     with _$ImagingObjectSelection
     implements Resource {
-  const factory ImagingObjectSelection({
+  factory ImagingObjectSelection({
     @JsonKey(defaultValue: 'ImagingObjectSelection') String resourceType,
     Id id,
     Meta meta,
@@ -121,7 +121,7 @@ abstract class ImagingObjectSelection
 
 @freezed
 abstract class BodySite with _$BodySite implements Resource {
-  const factory BodySite({
+  factory BodySite({
     @JsonKey(defaultValue: 'BodySite') String resourceType,
     Id id,
     Meta meta,
@@ -145,7 +145,7 @@ abstract class BodySite with _$BodySite implements Resource {
 
 @freezed
 abstract class Observation with _$Observation implements Resource {
-  const factory Observation({
+  factory Observation({
     @JsonKey(defaultValue: 'Observation') String resourceType,
     Id id,
     Meta meta,
@@ -204,7 +204,7 @@ abstract class Observation with _$Observation implements Resource {
 
 @freezed
 abstract class Specimen with _$Specimen implements Resource {
-  const factory Specimen({
+  factory Specimen({
     @JsonKey(defaultValue: 'Specimen') String resourceType,
     Id id,
     Meta meta,
@@ -236,7 +236,7 @@ abstract class Specimen with _$Specimen implements Resource {
 
 @freezed
 abstract class DiagnosticOrder with _$DiagnosticOrder implements Resource {
-  const factory DiagnosticOrder({
+  factory DiagnosticOrder({
     @JsonKey(defaultValue: 'DiagnosticOrder') String resourceType,
     Id id,
     Meta meta,
@@ -268,7 +268,7 @@ abstract class DiagnosticOrder with _$DiagnosticOrder implements Resource {
 
 @freezed
 abstract class ImagingStudySeries with _$ImagingStudySeries {
-  const factory ImagingStudySeries({
+  factory ImagingStudySeries({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -297,7 +297,7 @@ abstract class ImagingStudySeries with _$ImagingStudySeries {
 
 @freezed
 abstract class DiagnosticReportImage with _$DiagnosticReportImage {
-  const factory DiagnosticReportImage({
+  factory DiagnosticReportImage({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -312,7 +312,7 @@ abstract class DiagnosticReportImage with _$DiagnosticReportImage {
 
 @freezed
 abstract class ImagingObjectSelectionStudy with _$ImagingObjectSelectionStudy {
-  const factory ImagingObjectSelectionStudy({
+  factory ImagingObjectSelectionStudy({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -330,7 +330,7 @@ abstract class ImagingObjectSelectionStudy with _$ImagingObjectSelectionStudy {
 
 @freezed
 abstract class ObservationReferenceRange with _$ObservationReferenceRange {
-  const factory ObservationReferenceRange({
+  factory ObservationReferenceRange({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -349,7 +349,7 @@ abstract class ObservationReferenceRange with _$ObservationReferenceRange {
 
 @freezed
 abstract class ObservationRelated with _$ObservationRelated {
-  const factory ObservationRelated({
+  factory ObservationRelated({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -364,7 +364,7 @@ abstract class ObservationRelated with _$ObservationRelated {
 
 @freezed
 abstract class ObservationComponent with _$ObservationComponent {
-  const factory ObservationComponent({
+  factory ObservationComponent({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -393,7 +393,7 @@ abstract class ObservationComponent with _$ObservationComponent {
 
 @freezed
 abstract class SpecimenCollection with _$SpecimenCollection {
-  const factory SpecimenCollection({
+  factory SpecimenCollection({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     @JsonKey(name: 'fhir_comments') List<String> fhirComments,
@@ -414,7 +414,7 @@ abstract class SpecimenCollection with _$SpecimenCollection {
 
 @freezed
 abstract class SpecimenTreatment with _$SpecimenTreatment {
-  const factory SpecimenTreatment({
+  factory SpecimenTreatment({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -429,7 +429,7 @@ abstract class SpecimenTreatment with _$SpecimenTreatment {
 
 @freezed
 abstract class SpecimenContainer with _$SpecimenContainer {
-  const factory SpecimenContainer({
+  factory SpecimenContainer({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -449,7 +449,7 @@ abstract class SpecimenContainer with _$SpecimenContainer {
 
 @freezed
 abstract class DiagnosticOrderEvent with _$DiagnosticOrderEvent {
-  const factory DiagnosticOrderEvent({
+  factory DiagnosticOrderEvent({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -467,7 +467,7 @@ abstract class DiagnosticOrderEvent with _$DiagnosticOrderEvent {
 
 @freezed
 abstract class DiagnosticOrderItem with _$DiagnosticOrderItem {
-  const factory DiagnosticOrderItem({
+  factory DiagnosticOrderItem({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -484,7 +484,7 @@ abstract class DiagnosticOrderItem with _$DiagnosticOrderItem {
 
 @freezed
 abstract class ImagingStudyInstance with _$ImagingStudyInstance {
-  const factory ImagingStudyInstance({
+  factory ImagingStudyInstance({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -506,7 +506,7 @@ abstract class ImagingStudyInstance with _$ImagingStudyInstance {
 @freezed
 abstract class ImagingObjectSelectionSeries
     with _$ImagingObjectSelectionSeries {
-  const factory ImagingObjectSelectionSeries({
+  factory ImagingObjectSelectionSeries({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -524,7 +524,7 @@ abstract class ImagingObjectSelectionSeries
 @freezed
 abstract class ImagingObjectSelectionInstance
     with _$ImagingObjectSelectionInstance {
-  const factory ImagingObjectSelectionInstance({
+  factory ImagingObjectSelectionInstance({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -541,7 +541,7 @@ abstract class ImagingObjectSelectionInstance
 @freezed
 abstract class ImagingObjectSelectionFrames
     with _$ImagingObjectSelectionFrames {
-  const factory ImagingObjectSelectionFrames({
+  factory ImagingObjectSelectionFrames({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExte,

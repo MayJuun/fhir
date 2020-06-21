@@ -9,7 +9,7 @@ part 'devices.g.dart';
 
 @freezed
 abstract class DeviceComponent with _$DeviceComponent implements Resource {
-  const factory DeviceComponent({
+  factory DeviceComponent({
     @JsonKey(defaultValue: 'DeviceComponent') String resourceType,
     Id id,
     Meta meta,
@@ -39,7 +39,7 @@ abstract class DeviceComponent with _$DeviceComponent implements Resource {
 
 @freezed
 abstract class DeviceMetric with _$DeviceMetric implements Resource {
-  const factory DeviceMetric({
+  factory DeviceMetric({
     @JsonKey(defaultValue: 'DeviceMetric') String resourceType,
     Id id,
     Meta meta,
@@ -76,7 +76,7 @@ abstract class DeviceMetric with _$DeviceMetric implements Resource {
 
 @freezed
 abstract class Device with _$Device implements Resource {
-  const factory Device({
+  factory Device({
     @JsonKey(defaultValue: 'Device') String resourceType,
     Id id,
     Meta meta,
@@ -118,7 +118,7 @@ abstract class Device with _$Device implements Resource {
 @freezed
 abstract class DeviceComponentProductionSpecification
     with _$DeviceComponentProductionSpecification {
-  const factory DeviceComponentProductionSpecification({
+  factory DeviceComponentProductionSpecification({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -134,7 +134,7 @@ abstract class DeviceComponentProductionSpecification
 
 @freezed
 abstract class DeviceMetricCalibration with _$DeviceMetricCalibration {
-  const factory DeviceMetricCalibration({
+  factory DeviceMetricCalibration({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,

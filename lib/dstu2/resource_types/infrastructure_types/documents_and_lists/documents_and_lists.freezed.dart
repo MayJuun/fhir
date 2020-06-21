@@ -662,7 +662,7 @@ class __$CompositionCopyWithImpl<$Res> extends _$CompositionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Composition implements _Composition {
-  const _$_Composition(
+  _$_Composition(
       {@JsonKey(defaultValue: 'Composition')
           this.resourceType,
       this.id,
@@ -924,7 +924,7 @@ class _$_Composition implements _Composition {
 }
 
 abstract class _Composition implements Composition {
-  const factory _Composition(
+  factory _Composition(
       {@JsonKey(defaultValue: 'Composition')
           String resourceType,
       Id id,
@@ -1747,7 +1747,7 @@ class __$DocumentReferenceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DocumentReference implements _DocumentReference {
-  const _$_DocumentReference(
+  _$_DocumentReference(
       {@JsonKey(defaultValue: 'DocumentReference')
           this.resourceType,
       this.id,
@@ -2009,7 +2009,7 @@ class _$_DocumentReference implements _DocumentReference {
 }
 
 abstract class _DocumentReference implements DocumentReference {
-  const factory _DocumentReference(
+  factory _DocumentReference(
       {@JsonKey(defaultValue: 'DocumentReference')
           String resourceType,
       Id id,
@@ -2722,7 +2722,7 @@ class __$DocumentManifestCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DocumentManifest implements _DocumentManifest {
-  const _$_DocumentManifest(
+  _$_DocumentManifest(
       {@JsonKey(defaultValue: 'DocumentManifest')
           this.resourceType,
       this.id,
@@ -2956,7 +2956,7 @@ class _$_DocumentManifest implements _DocumentManifest {
 }
 
 abstract class _DocumentManifest implements DocumentManifest {
-  const factory _DocumentManifest(
+  factory _DocumentManifest(
       {@JsonKey(defaultValue: 'DocumentManifest')
           String resourceType,
       Id id,
@@ -3679,7 +3679,7 @@ class __$List_CopyWithImpl<$Res> extends _$List_CopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_List_ implements _List_ {
-  const _$_List_(
+  _$_List_(
       {@JsonKey(defaultValue: 'List')
           this.resourceType,
       this.id,
@@ -3918,7 +3918,7 @@ class _$_List_ implements _List_ {
 }
 
 abstract class _List_ implements List_ {
-  const factory _List_(
+  factory _List_(
       {@JsonKey(defaultValue: 'List')
           String resourceType,
       Id id,
@@ -4248,7 +4248,7 @@ class __$CompositionAttesterCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CompositionAttester implements _CompositionAttester {
-  const _$_CompositionAttester(
+  _$_CompositionAttester(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -4338,7 +4338,7 @@ class _$_CompositionAttester implements _CompositionAttester {
 }
 
 abstract class _CompositionAttester implements CompositionAttester {
-  const factory _CompositionAttester(
+  factory _CompositionAttester(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -4540,7 +4540,7 @@ class __$CompositionEventCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CompositionEvent implements _CompositionEvent {
-  const _$_CompositionEvent(
+  _$_CompositionEvent(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -4611,7 +4611,7 @@ class _$_CompositionEvent implements _CompositionEvent {
 }
 
 abstract class _CompositionEvent implements CompositionEvent {
-  const factory _CompositionEvent(
+  factory _CompositionEvent(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -4967,7 +4967,7 @@ class __$CompositionSectionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CompositionSection implements _CompositionSection {
-  const _$_CompositionSection(
+  _$_CompositionSection(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -5096,7 +5096,7 @@ class _$_CompositionSection implements _CompositionSection {
 }
 
 abstract class _CompositionSection implements CompositionSection {
-  const factory _CompositionSection(
+  factory _CompositionSection(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -5352,7 +5352,7 @@ class __$DocumentReferenceRelatesToCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DocumentReferenceRelatesTo implements _DocumentReferenceRelatesTo {
-  const _$_DocumentReferenceRelatesTo(
+  _$_DocumentReferenceRelatesTo(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -5437,7 +5437,7 @@ class _$_DocumentReferenceRelatesTo implements _DocumentReferenceRelatesTo {
 
 abstract class _DocumentReferenceRelatesTo
     implements DocumentReferenceRelatesTo {
-  const factory _DocumentReferenceRelatesTo(
+  factory _DocumentReferenceRelatesTo(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -5636,7 +5636,7 @@ class __$DocumentReferenceContentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DocumentReferenceContent implements _DocumentReferenceContent {
-  const _$_DocumentReferenceContent(
+  _$_DocumentReferenceContent(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -5705,7 +5705,7 @@ class _$_DocumentReferenceContent implements _DocumentReferenceContent {
 }
 
 abstract class _DocumentReferenceContent implements DocumentReferenceContent {
-  const factory _DocumentReferenceContent(
+  factory _DocumentReferenceContent(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -6004,7 +6004,7 @@ class __$DocumentReferenceContextCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DocumentReferenceContext implements _DocumentReferenceContext {
-  const _$_DocumentReferenceContext(
+  _$_DocumentReferenceContext(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -6104,7 +6104,7 @@ class _$_DocumentReferenceContext implements _DocumentReferenceContext {
 }
 
 abstract class _DocumentReferenceContext implements DocumentReferenceContext {
-  const factory _DocumentReferenceContext(
+  factory _DocumentReferenceContext(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -6321,7 +6321,7 @@ class __$DocumentManifestContentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DocumentManifestContent implements _DocumentManifestContent {
-  const _$_DocumentManifestContent(
+  _$_DocumentManifestContent(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -6389,7 +6389,7 @@ class _$_DocumentManifestContent implements _DocumentManifestContent {
 }
 
 abstract class _DocumentManifestContent implements DocumentManifestContent {
-  const factory _DocumentManifestContent(
+  factory _DocumentManifestContent(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -6587,7 +6587,7 @@ class __$DocumentManifestRelatedCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DocumentManifestRelated implements _DocumentManifestRelated {
-  const _$_DocumentManifestRelated(
+  _$_DocumentManifestRelated(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -6654,7 +6654,7 @@ class _$_DocumentManifestRelated implements _DocumentManifestRelated {
 }
 
 abstract class _DocumentManifestRelated implements DocumentManifestRelated {
-  const factory _DocumentManifestRelated(
+  factory _DocumentManifestRelated(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -6928,7 +6928,7 @@ class __$ListEntryCopyWithImpl<$Res> extends _$ListEntryCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ListEntry implements _ListEntry {
-  const _$_ListEntry(
+  _$_ListEntry(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -7032,7 +7032,7 @@ class _$_ListEntry implements _ListEntry {
 }
 
 abstract class _ListEntry implements ListEntry {
-  const factory _ListEntry(
+  factory _ListEntry(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -7249,7 +7249,7 @@ class __$DocumentReferenceRelatedCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DocumentReferenceRelated implements _DocumentReferenceRelated {
-  const _$_DocumentReferenceRelated(
+  _$_DocumentReferenceRelated(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -7316,7 +7316,7 @@ class _$_DocumentReferenceRelated implements _DocumentReferenceRelated {
 }
 
 abstract class _DocumentReferenceRelated implements DocumentReferenceRelated {
-  const factory _DocumentReferenceRelated(
+  factory _DocumentReferenceRelated(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,

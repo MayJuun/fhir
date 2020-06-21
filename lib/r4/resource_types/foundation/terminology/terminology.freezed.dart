@@ -17,139 +17,139 @@ class _$CodeSystemTearOff {
 
   _CodeSystem call(
       {@required
-      @JsonKey(required: true, defaultValue: 'CodeSystem')
+      @JsonKey(defaultValue: 'CodeSystem')
           String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri url,
+      @JsonKey(name: '_url')
+          Element urlElement,
       List<Identifier> identifier,
       String version,
+      @JsonKey(name: '_version')
+          Element versionElement,
       String name,
+      @JsonKey(name: '_name')
+          Element nameElement,
       String title,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(unknownEnumValue: CodeSystemStatus.unknown)
+          CodeSystemStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Boolean experimental,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
       FhirDateTime date,
+      @JsonKey(name: '_date')
+          Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
       List<ContactDetail> contact,
       Markdown description,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Markdown purpose,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
       Markdown copyright,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
       Boolean caseSensitive,
+      @JsonKey(name: '_caseSensitive')
+          Element caseSensitiveElement,
       Canonical valueSet,
       @JsonKey(unknownEnumValue: CodeSystemHierarchyMeaning.unknown)
           CodeSystemHierarchyMeaning hierarchyMeaning,
-      Boolean compositional,
-      Boolean versionNeeded,
-      @JsonKey(unknownEnumValue: CodeSystemContent.unknown)
-          CodeSystemContent content,
-      Canonical supplements,
-      UnsignedInt count,
-      List<CodeSystemFilter> filter,
-      List<CodeSystemProperty> property,
-      List<CodeSystemConcept> concept,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      @JsonKey(name: '_language')
-          Element languageElement,
-      @JsonKey(name: '_url')
-          Element urlElement,
-      @JsonKey(name: '_version')
-          Element versionElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
-      @JsonKey(name: '_copyright')
-          Element copyrightElement,
-      @JsonKey(name: '_caseSensitive')
-          Element caseSensitiveElement,
       @JsonKey(name: '_hierarchyMeaning')
           Element hierarchyMeaningElement,
+      Boolean compositional,
       @JsonKey(name: '_compositional')
           Element compositionalElement,
+      Boolean versionNeeded,
       @JsonKey(name: '_versionNeeded')
           Element versionNeededElement,
+      @JsonKey(unknownEnumValue: CodeSystemContent.unknown)
+          CodeSystemContent content,
       @JsonKey(name: '_content')
           Element contentElement,
+      Canonical supplements,
+      UnsignedInt count,
       @JsonKey(name: '_count')
-          Element countElement}) {
+          Element countElement,
+      List<CodeSystemFilter> filter,
+      List<CodeSystemProperty> property,
+      List<CodeSystemConcept> concept}) {
     return _CodeSystem(
       resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
+      implicitRulesElement: implicitRulesElement,
       language: language,
+      languageElement: languageElement,
       text: text,
       contained: contained,
       extension_: extension_,
       modifierExtension: modifierExtension,
       url: url,
+      urlElement: urlElement,
       identifier: identifier,
       version: version,
+      versionElement: versionElement,
       name: name,
+      nameElement: nameElement,
       title: title,
+      titleElement: titleElement,
       status: status,
+      statusElement: statusElement,
       experimental: experimental,
+      experimentalElement: experimentalElement,
       date: date,
+      dateElement: dateElement,
       publisher: publisher,
+      publisherElement: publisherElement,
       contact: contact,
       description: description,
+      descriptionElement: descriptionElement,
       useContext: useContext,
       jurisdiction: jurisdiction,
       purpose: purpose,
+      purposeElement: purposeElement,
       copyright: copyright,
+      copyrightElement: copyrightElement,
       caseSensitive: caseSensitive,
+      caseSensitiveElement: caseSensitiveElement,
       valueSet: valueSet,
       hierarchyMeaning: hierarchyMeaning,
+      hierarchyMeaningElement: hierarchyMeaningElement,
       compositional: compositional,
+      compositionalElement: compositionalElement,
       versionNeeded: versionNeeded,
+      versionNeededElement: versionNeededElement,
       content: content,
+      contentElement: contentElement,
       supplements: supplements,
       count: count,
+      countElement: countElement,
       filter: filter,
       property: property,
       concept: concept,
-      implicitRulesElement: implicitRulesElement,
-      languageElement: languageElement,
-      urlElement: urlElement,
-      versionElement: versionElement,
-      nameElement: nameElement,
-      titleElement: titleElement,
-      statusElement: statusElement,
-      experimentalElement: experimentalElement,
-      dateElement: dateElement,
-      publisherElement: publisherElement,
-      descriptionElement: descriptionElement,
-      purposeElement: purposeElement,
-      copyrightElement: copyrightElement,
-      caseSensitiveElement: caseSensitiveElement,
-      hierarchyMeaningElement: hierarchyMeaningElement,
-      compositionalElement: compositionalElement,
-      versionNeededElement: versionNeededElement,
-      contentElement: contentElement,
-      countElement: countElement,
     );
   }
 }
@@ -158,84 +158,84 @@ class _$CodeSystemTearOff {
 const $CodeSystem = _$CodeSystemTearOff();
 
 mixin _$CodeSystem {
-  @JsonKey(required: true, defaultValue: 'CodeSystem')
+  @JsonKey(defaultValue: 'CodeSystem')
   String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
   Code get language;
+  @JsonKey(name: '_language')
+  Element get languageElement;
   Narrative get text;
   List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   FhirUri get url;
+  @JsonKey(name: '_url')
+  Element get urlElement;
   List<Identifier> get identifier;
   String get version;
+  @JsonKey(name: '_version')
+  Element get versionElement;
   String get name;
+  @JsonKey(name: '_name')
+  Element get nameElement;
   String get title;
-  @JsonKey(unknownEnumValue: Status.unknown)
-  Status get status;
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @JsonKey(unknownEnumValue: CodeSystemStatus.unknown)
+  CodeSystemStatus get status;
+  @JsonKey(name: '_status')
+  Element get statusElement;
   Boolean get experimental;
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
   FhirDateTime get date;
+  @JsonKey(name: '_date')
+  Element get dateElement;
   String get publisher;
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
   List<ContactDetail> get contact;
   Markdown get description;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
   List<UsageContext> get useContext;
   List<CodeableConcept> get jurisdiction;
   Markdown get purpose;
+  @JsonKey(name: '_purpose')
+  Element get purposeElement;
   Markdown get copyright;
+  @JsonKey(name: '_copyright')
+  Element get copyrightElement;
   Boolean get caseSensitive;
+  @JsonKey(name: '_caseSensitive')
+  Element get caseSensitiveElement;
   Canonical get valueSet;
   @JsonKey(unknownEnumValue: CodeSystemHierarchyMeaning.unknown)
   CodeSystemHierarchyMeaning get hierarchyMeaning;
+  @JsonKey(name: '_hierarchyMeaning')
+  Element get hierarchyMeaningElement;
   Boolean get compositional;
+  @JsonKey(name: '_compositional')
+  Element get compositionalElement;
   Boolean get versionNeeded;
+  @JsonKey(name: '_versionNeeded')
+  Element get versionNeededElement;
   @JsonKey(unknownEnumValue: CodeSystemContent.unknown)
   CodeSystemContent get content;
+  @JsonKey(name: '_content')
+  Element get contentElement;
   Canonical get supplements;
   UnsignedInt get count;
+  @JsonKey(name: '_count')
+  Element get countElement;
   List<CodeSystemFilter> get filter;
   List<CodeSystemProperty> get property;
   List<CodeSystemConcept> get concept;
-  @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  @JsonKey(name: '_language')
-  Element get languageElement;
-  @JsonKey(name: '_url')
-  Element get urlElement;
-  @JsonKey(name: '_version')
-  Element get versionElement;
-  @JsonKey(name: '_name')
-  Element get nameElement;
-  @JsonKey(name: '_title')
-  Element get titleElement;
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @JsonKey(name: '_experimental')
-  Element get experimentalElement;
-  @JsonKey(name: '_date')
-  Element get dateElement;
-  @JsonKey(name: '_publisher')
-  Element get publisherElement;
-  @JsonKey(name: '_description')
-  Element get descriptionElement;
-  @JsonKey(name: '_purpose')
-  Element get purposeElement;
-  @JsonKey(name: '_copyright')
-  Element get copyrightElement;
-  @JsonKey(name: '_caseSensitive')
-  Element get caseSensitiveElement;
-  @JsonKey(name: '_hierarchyMeaning')
-  Element get hierarchyMeaningElement;
-  @JsonKey(name: '_compositional')
-  Element get compositionalElement;
-  @JsonKey(name: '_versionNeeded')
-  Element get versionNeededElement;
-  @JsonKey(name: '_content')
-  Element get contentElement;
-  @JsonKey(name: '_count')
-  Element get countElement;
 
   Map<String, dynamic> toJson();
   $CodeSystemCopyWith<CodeSystem> get copyWith;
@@ -246,89 +246,89 @@ abstract class $CodeSystemCopyWith<$Res> {
           CodeSystem value, $Res Function(CodeSystem) then) =
       _$CodeSystemCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'CodeSystem')
+      {@JsonKey(defaultValue: 'CodeSystem')
           String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri url,
+      @JsonKey(name: '_url')
+          Element urlElement,
       List<Identifier> identifier,
       String version,
+      @JsonKey(name: '_version')
+          Element versionElement,
       String name,
+      @JsonKey(name: '_name')
+          Element nameElement,
       String title,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(unknownEnumValue: CodeSystemStatus.unknown)
+          CodeSystemStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Boolean experimental,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
       FhirDateTime date,
+      @JsonKey(name: '_date')
+          Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
       List<ContactDetail> contact,
       Markdown description,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Markdown purpose,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
       Markdown copyright,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
       Boolean caseSensitive,
+      @JsonKey(name: '_caseSensitive')
+          Element caseSensitiveElement,
       Canonical valueSet,
       @JsonKey(unknownEnumValue: CodeSystemHierarchyMeaning.unknown)
           CodeSystemHierarchyMeaning hierarchyMeaning,
-      Boolean compositional,
-      Boolean versionNeeded,
-      @JsonKey(unknownEnumValue: CodeSystemContent.unknown)
-          CodeSystemContent content,
-      Canonical supplements,
-      UnsignedInt count,
-      List<CodeSystemFilter> filter,
-      List<CodeSystemProperty> property,
-      List<CodeSystemConcept> concept,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      @JsonKey(name: '_language')
-          Element languageElement,
-      @JsonKey(name: '_url')
-          Element urlElement,
-      @JsonKey(name: '_version')
-          Element versionElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
-      @JsonKey(name: '_copyright')
-          Element copyrightElement,
-      @JsonKey(name: '_caseSensitive')
-          Element caseSensitiveElement,
       @JsonKey(name: '_hierarchyMeaning')
           Element hierarchyMeaningElement,
+      Boolean compositional,
       @JsonKey(name: '_compositional')
           Element compositionalElement,
+      Boolean versionNeeded,
       @JsonKey(name: '_versionNeeded')
           Element versionNeededElement,
+      @JsonKey(unknownEnumValue: CodeSystemContent.unknown)
+          CodeSystemContent content,
       @JsonKey(name: '_content')
           Element contentElement,
+      Canonical supplements,
+      UnsignedInt count,
       @JsonKey(name: '_count')
-          Element countElement});
+          Element countElement,
+      List<CodeSystemFilter> filter,
+      List<CodeSystemProperty> property,
+      List<CodeSystemConcept> concept});
 
   $MetaCopyWith<$Res> get meta;
-  $NarrativeCopyWith<$Res> get text;
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
+  $NarrativeCopyWith<$Res> get text;
   $ElementCopyWith<$Res> get urlElement;
   $ElementCopyWith<$Res> get versionElement;
   $ElementCopyWith<$Res> get nameElement;
@@ -361,56 +361,56 @@ class _$CodeSystemCopyWithImpl<$Res> implements $CodeSystemCopyWith<$Res> {
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object url = freezed,
+    Object urlElement = freezed,
     Object identifier = freezed,
     Object version = freezed,
+    Object versionElement = freezed,
     Object name = freezed,
+    Object nameElement = freezed,
     Object title = freezed,
+    Object titleElement = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object experimental = freezed,
+    Object experimentalElement = freezed,
     Object date = freezed,
+    Object dateElement = freezed,
     Object publisher = freezed,
+    Object publisherElement = freezed,
     Object contact = freezed,
     Object description = freezed,
+    Object descriptionElement = freezed,
     Object useContext = freezed,
     Object jurisdiction = freezed,
     Object purpose = freezed,
+    Object purposeElement = freezed,
     Object copyright = freezed,
+    Object copyrightElement = freezed,
     Object caseSensitive = freezed,
+    Object caseSensitiveElement = freezed,
     Object valueSet = freezed,
     Object hierarchyMeaning = freezed,
+    Object hierarchyMeaningElement = freezed,
     Object compositional = freezed,
+    Object compositionalElement = freezed,
     Object versionNeeded = freezed,
+    Object versionNeededElement = freezed,
     Object content = freezed,
+    Object contentElement = freezed,
     Object supplements = freezed,
     Object count = freezed,
+    Object countElement = freezed,
     Object filter = freezed,
     Object property = freezed,
     Object concept = freezed,
-    Object implicitRulesElement = freezed,
-    Object languageElement = freezed,
-    Object urlElement = freezed,
-    Object versionElement = freezed,
-    Object nameElement = freezed,
-    Object titleElement = freezed,
-    Object statusElement = freezed,
-    Object experimentalElement = freezed,
-    Object dateElement = freezed,
-    Object publisherElement = freezed,
-    Object descriptionElement = freezed,
-    Object purposeElement = freezed,
-    Object copyrightElement = freezed,
-    Object caseSensitiveElement = freezed,
-    Object hierarchyMeaningElement = freezed,
-    Object compositionalElement = freezed,
-    Object versionNeededElement = freezed,
-    Object contentElement = freezed,
-    Object countElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -421,7 +421,13 @@ class _$CodeSystemCopyWithImpl<$Res> implements $CodeSystemCopyWith<$Res> {
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -432,22 +438,46 @@ class _$CodeSystemCopyWithImpl<$Res> implements $CodeSystemCopyWith<$Res> {
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as FhirUri,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
       version: version == freezed ? _value.version : version as String,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
       name: name == freezed ? _value.name : name as String,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed ? _value.status : status as Status,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      status: status == freezed ? _value.status : status as CodeSystemStatus,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
       date: date == freezed ? _value.date : date as FhirDateTime,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
       description:
           description == freezed ? _value.description : description as Markdown,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
       useContext: useContext == freezed
           ? _value.useContext
           : useContext as List<UsageContext>,
@@ -455,27 +485,51 @@ class _$CodeSystemCopyWithImpl<$Res> implements $CodeSystemCopyWith<$Res> {
           ? _value.jurisdiction
           : jurisdiction as List<CodeableConcept>,
       purpose: purpose == freezed ? _value.purpose : purpose as Markdown,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement as Element,
       copyright:
           copyright == freezed ? _value.copyright : copyright as Markdown,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
       caseSensitive: caseSensitive == freezed
           ? _value.caseSensitive
           : caseSensitive as Boolean,
+      caseSensitiveElement: caseSensitiveElement == freezed
+          ? _value.caseSensitiveElement
+          : caseSensitiveElement as Element,
       valueSet: valueSet == freezed ? _value.valueSet : valueSet as Canonical,
       hierarchyMeaning: hierarchyMeaning == freezed
           ? _value.hierarchyMeaning
           : hierarchyMeaning as CodeSystemHierarchyMeaning,
+      hierarchyMeaningElement: hierarchyMeaningElement == freezed
+          ? _value.hierarchyMeaningElement
+          : hierarchyMeaningElement as Element,
       compositional: compositional == freezed
           ? _value.compositional
           : compositional as Boolean,
+      compositionalElement: compositionalElement == freezed
+          ? _value.compositionalElement
+          : compositionalElement as Element,
       versionNeeded: versionNeeded == freezed
           ? _value.versionNeeded
           : versionNeeded as Boolean,
+      versionNeededElement: versionNeededElement == freezed
+          ? _value.versionNeededElement
+          : versionNeededElement as Element,
       content:
           content == freezed ? _value.content : content as CodeSystemContent,
+      contentElement: contentElement == freezed
+          ? _value.contentElement
+          : contentElement as Element,
       supplements: supplements == freezed
           ? _value.supplements
           : supplements as Canonical,
       count: count == freezed ? _value.count : count as UnsignedInt,
+      countElement: countElement == freezed
+          ? _value.countElement
+          : countElement as Element,
       filter:
           filter == freezed ? _value.filter : filter as List<CodeSystemFilter>,
       property: property == freezed
@@ -484,60 +538,6 @@ class _$CodeSystemCopyWithImpl<$Res> implements $CodeSystemCopyWith<$Res> {
       concept: concept == freezed
           ? _value.concept
           : concept as List<CodeSystemConcept>,
-      implicitRulesElement: implicitRulesElement == freezed
-          ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      languageElement: languageElement == freezed
-          ? _value.languageElement
-          : languageElement as Element,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element,
-      versionElement: versionElement == freezed
-          ? _value.versionElement
-          : versionElement as Element,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      titleElement: titleElement == freezed
-          ? _value.titleElement
-          : titleElement as Element,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      experimentalElement: experimentalElement == freezed
-          ? _value.experimentalElement
-          : experimentalElement as Element,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element,
-      publisherElement: publisherElement == freezed
-          ? _value.publisherElement
-          : publisherElement as Element,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement as Element,
-      purposeElement: purposeElement == freezed
-          ? _value.purposeElement
-          : purposeElement as Element,
-      copyrightElement: copyrightElement == freezed
-          ? _value.copyrightElement
-          : copyrightElement as Element,
-      caseSensitiveElement: caseSensitiveElement == freezed
-          ? _value.caseSensitiveElement
-          : caseSensitiveElement as Element,
-      hierarchyMeaningElement: hierarchyMeaningElement == freezed
-          ? _value.hierarchyMeaningElement
-          : hierarchyMeaningElement as Element,
-      compositionalElement: compositionalElement == freezed
-          ? _value.compositionalElement
-          : compositionalElement as Element,
-      versionNeededElement: versionNeededElement == freezed
-          ? _value.versionNeededElement
-          : versionNeededElement as Element,
-      contentElement: contentElement == freezed
-          ? _value.contentElement
-          : contentElement as Element,
-      countElement: countElement == freezed
-          ? _value.countElement
-          : countElement as Element,
     ));
   }
 
@@ -548,16 +548,6 @@ class _$CodeSystemCopyWithImpl<$Res> implements $CodeSystemCopyWith<$Res> {
     }
     return $MetaCopyWith<$Res>(_value.meta, (value) {
       return _then(_value.copyWith(meta: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get text {
-    if (_value.text == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.text, (value) {
-      return _then(_value.copyWith(text: value));
     });
   }
 
@@ -578,6 +568,16 @@ class _$CodeSystemCopyWithImpl<$Res> implements $CodeSystemCopyWith<$Res> {
     }
     return $ElementCopyWith<$Res>(_value.languageElement, (value) {
       return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
     });
   }
 
@@ -758,93 +758,93 @@ abstract class _$CodeSystemCopyWith<$Res> implements $CodeSystemCopyWith<$Res> {
       __$CodeSystemCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'CodeSystem')
+      {@JsonKey(defaultValue: 'CodeSystem')
           String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri url,
+      @JsonKey(name: '_url')
+          Element urlElement,
       List<Identifier> identifier,
       String version,
+      @JsonKey(name: '_version')
+          Element versionElement,
       String name,
+      @JsonKey(name: '_name')
+          Element nameElement,
       String title,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(unknownEnumValue: CodeSystemStatus.unknown)
+          CodeSystemStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Boolean experimental,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
       FhirDateTime date,
+      @JsonKey(name: '_date')
+          Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
       List<ContactDetail> contact,
       Markdown description,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Markdown purpose,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
       Markdown copyright,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
       Boolean caseSensitive,
+      @JsonKey(name: '_caseSensitive')
+          Element caseSensitiveElement,
       Canonical valueSet,
       @JsonKey(unknownEnumValue: CodeSystemHierarchyMeaning.unknown)
           CodeSystemHierarchyMeaning hierarchyMeaning,
-      Boolean compositional,
-      Boolean versionNeeded,
-      @JsonKey(unknownEnumValue: CodeSystemContent.unknown)
-          CodeSystemContent content,
-      Canonical supplements,
-      UnsignedInt count,
-      List<CodeSystemFilter> filter,
-      List<CodeSystemProperty> property,
-      List<CodeSystemConcept> concept,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      @JsonKey(name: '_language')
-          Element languageElement,
-      @JsonKey(name: '_url')
-          Element urlElement,
-      @JsonKey(name: '_version')
-          Element versionElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
-      @JsonKey(name: '_copyright')
-          Element copyrightElement,
-      @JsonKey(name: '_caseSensitive')
-          Element caseSensitiveElement,
       @JsonKey(name: '_hierarchyMeaning')
           Element hierarchyMeaningElement,
+      Boolean compositional,
       @JsonKey(name: '_compositional')
           Element compositionalElement,
+      Boolean versionNeeded,
       @JsonKey(name: '_versionNeeded')
           Element versionNeededElement,
+      @JsonKey(unknownEnumValue: CodeSystemContent.unknown)
+          CodeSystemContent content,
       @JsonKey(name: '_content')
           Element contentElement,
+      Canonical supplements,
+      UnsignedInt count,
       @JsonKey(name: '_count')
-          Element countElement});
+          Element countElement,
+      List<CodeSystemFilter> filter,
+      List<CodeSystemProperty> property,
+      List<CodeSystemConcept> concept});
 
   @override
   $MetaCopyWith<$Res> get meta;
   @override
-  $NarrativeCopyWith<$Res> get text;
-  @override
   $ElementCopyWith<$Res> get implicitRulesElement;
   @override
   $ElementCopyWith<$Res> get languageElement;
+  @override
+  $NarrativeCopyWith<$Res> get text;
   @override
   $ElementCopyWith<$Res> get urlElement;
   @override
@@ -896,56 +896,56 @@ class __$CodeSystemCopyWithImpl<$Res> extends _$CodeSystemCopyWithImpl<$Res>
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object url = freezed,
+    Object urlElement = freezed,
     Object identifier = freezed,
     Object version = freezed,
+    Object versionElement = freezed,
     Object name = freezed,
+    Object nameElement = freezed,
     Object title = freezed,
+    Object titleElement = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object experimental = freezed,
+    Object experimentalElement = freezed,
     Object date = freezed,
+    Object dateElement = freezed,
     Object publisher = freezed,
+    Object publisherElement = freezed,
     Object contact = freezed,
     Object description = freezed,
+    Object descriptionElement = freezed,
     Object useContext = freezed,
     Object jurisdiction = freezed,
     Object purpose = freezed,
+    Object purposeElement = freezed,
     Object copyright = freezed,
+    Object copyrightElement = freezed,
     Object caseSensitive = freezed,
+    Object caseSensitiveElement = freezed,
     Object valueSet = freezed,
     Object hierarchyMeaning = freezed,
+    Object hierarchyMeaningElement = freezed,
     Object compositional = freezed,
+    Object compositionalElement = freezed,
     Object versionNeeded = freezed,
+    Object versionNeededElement = freezed,
     Object content = freezed,
+    Object contentElement = freezed,
     Object supplements = freezed,
     Object count = freezed,
+    Object countElement = freezed,
     Object filter = freezed,
     Object property = freezed,
     Object concept = freezed,
-    Object implicitRulesElement = freezed,
-    Object languageElement = freezed,
-    Object urlElement = freezed,
-    Object versionElement = freezed,
-    Object nameElement = freezed,
-    Object titleElement = freezed,
-    Object statusElement = freezed,
-    Object experimentalElement = freezed,
-    Object dateElement = freezed,
-    Object publisherElement = freezed,
-    Object descriptionElement = freezed,
-    Object purposeElement = freezed,
-    Object copyrightElement = freezed,
-    Object caseSensitiveElement = freezed,
-    Object hierarchyMeaningElement = freezed,
-    Object compositionalElement = freezed,
-    Object versionNeededElement = freezed,
-    Object contentElement = freezed,
-    Object countElement = freezed,
   }) {
     return _then(_CodeSystem(
       resourceType: resourceType == freezed
@@ -956,7 +956,13 @@ class __$CodeSystemCopyWithImpl<$Res> extends _$CodeSystemCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -967,22 +973,46 @@ class __$CodeSystemCopyWithImpl<$Res> extends _$CodeSystemCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as FhirUri,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
       version: version == freezed ? _value.version : version as String,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
       name: name == freezed ? _value.name : name as String,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed ? _value.status : status as Status,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      status: status == freezed ? _value.status : status as CodeSystemStatus,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
       date: date == freezed ? _value.date : date as FhirDateTime,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
       description:
           description == freezed ? _value.description : description as Markdown,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
       useContext: useContext == freezed
           ? _value.useContext
           : useContext as List<UsageContext>,
@@ -990,27 +1020,51 @@ class __$CodeSystemCopyWithImpl<$Res> extends _$CodeSystemCopyWithImpl<$Res>
           ? _value.jurisdiction
           : jurisdiction as List<CodeableConcept>,
       purpose: purpose == freezed ? _value.purpose : purpose as Markdown,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement as Element,
       copyright:
           copyright == freezed ? _value.copyright : copyright as Markdown,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
       caseSensitive: caseSensitive == freezed
           ? _value.caseSensitive
           : caseSensitive as Boolean,
+      caseSensitiveElement: caseSensitiveElement == freezed
+          ? _value.caseSensitiveElement
+          : caseSensitiveElement as Element,
       valueSet: valueSet == freezed ? _value.valueSet : valueSet as Canonical,
       hierarchyMeaning: hierarchyMeaning == freezed
           ? _value.hierarchyMeaning
           : hierarchyMeaning as CodeSystemHierarchyMeaning,
+      hierarchyMeaningElement: hierarchyMeaningElement == freezed
+          ? _value.hierarchyMeaningElement
+          : hierarchyMeaningElement as Element,
       compositional: compositional == freezed
           ? _value.compositional
           : compositional as Boolean,
+      compositionalElement: compositionalElement == freezed
+          ? _value.compositionalElement
+          : compositionalElement as Element,
       versionNeeded: versionNeeded == freezed
           ? _value.versionNeeded
           : versionNeeded as Boolean,
+      versionNeededElement: versionNeededElement == freezed
+          ? _value.versionNeededElement
+          : versionNeededElement as Element,
       content:
           content == freezed ? _value.content : content as CodeSystemContent,
+      contentElement: contentElement == freezed
+          ? _value.contentElement
+          : contentElement as Element,
       supplements: supplements == freezed
           ? _value.supplements
           : supplements as Canonical,
       count: count == freezed ? _value.count : count as UnsignedInt,
+      countElement: countElement == freezed
+          ? _value.countElement
+          : countElement as Element,
       filter:
           filter == freezed ? _value.filter : filter as List<CodeSystemFilter>,
       property: property == freezed
@@ -1019,153 +1073,100 @@ class __$CodeSystemCopyWithImpl<$Res> extends _$CodeSystemCopyWithImpl<$Res>
       concept: concept == freezed
           ? _value.concept
           : concept as List<CodeSystemConcept>,
-      implicitRulesElement: implicitRulesElement == freezed
-          ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      languageElement: languageElement == freezed
-          ? _value.languageElement
-          : languageElement as Element,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element,
-      versionElement: versionElement == freezed
-          ? _value.versionElement
-          : versionElement as Element,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      titleElement: titleElement == freezed
-          ? _value.titleElement
-          : titleElement as Element,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      experimentalElement: experimentalElement == freezed
-          ? _value.experimentalElement
-          : experimentalElement as Element,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element,
-      publisherElement: publisherElement == freezed
-          ? _value.publisherElement
-          : publisherElement as Element,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement as Element,
-      purposeElement: purposeElement == freezed
-          ? _value.purposeElement
-          : purposeElement as Element,
-      copyrightElement: copyrightElement == freezed
-          ? _value.copyrightElement
-          : copyrightElement as Element,
-      caseSensitiveElement: caseSensitiveElement == freezed
-          ? _value.caseSensitiveElement
-          : caseSensitiveElement as Element,
-      hierarchyMeaningElement: hierarchyMeaningElement == freezed
-          ? _value.hierarchyMeaningElement
-          : hierarchyMeaningElement as Element,
-      compositionalElement: compositionalElement == freezed
-          ? _value.compositionalElement
-          : compositionalElement as Element,
-      versionNeededElement: versionNeededElement == freezed
-          ? _value.versionNeededElement
-          : versionNeededElement as Element,
-      contentElement: contentElement == freezed
-          ? _value.contentElement
-          : contentElement as Element,
-      countElement: countElement == freezed
-          ? _value.countElement
-          : countElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_CodeSystem implements _CodeSystem {
-  const _$_CodeSystem(
+class _$_CodeSystem extends _CodeSystem {
+  _$_CodeSystem(
       {@required
-      @JsonKey(required: true, defaultValue: 'CodeSystem')
+      @JsonKey(defaultValue: 'CodeSystem')
           this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
       @JsonKey(name: 'extension')
           this.extension_,
       this.modifierExtension,
       this.url,
+      @JsonKey(name: '_url')
+          this.urlElement,
       this.identifier,
       this.version,
+      @JsonKey(name: '_version')
+          this.versionElement,
       this.name,
+      @JsonKey(name: '_name')
+          this.nameElement,
       this.title,
-      @JsonKey(unknownEnumValue: Status.unknown)
+      @JsonKey(name: '_title')
+          this.titleElement,
+      @JsonKey(unknownEnumValue: CodeSystemStatus.unknown)
           this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.experimental,
+      @JsonKey(name: '_experimental')
+          this.experimentalElement,
       this.date,
+      @JsonKey(name: '_date')
+          this.dateElement,
       this.publisher,
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
       this.contact,
       this.description,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
       this.useContext,
       this.jurisdiction,
       this.purpose,
+      @JsonKey(name: '_purpose')
+          this.purposeElement,
       this.copyright,
+      @JsonKey(name: '_copyright')
+          this.copyrightElement,
       this.caseSensitive,
+      @JsonKey(name: '_caseSensitive')
+          this.caseSensitiveElement,
       this.valueSet,
       @JsonKey(unknownEnumValue: CodeSystemHierarchyMeaning.unknown)
           this.hierarchyMeaning,
-      this.compositional,
-      this.versionNeeded,
-      @JsonKey(unknownEnumValue: CodeSystemContent.unknown)
-          this.content,
-      this.supplements,
-      this.count,
-      this.filter,
-      this.property,
-      this.concept,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
-      @JsonKey(name: '_language')
-          this.languageElement,
-      @JsonKey(name: '_url')
-          this.urlElement,
-      @JsonKey(name: '_version')
-          this.versionElement,
-      @JsonKey(name: '_name')
-          this.nameElement,
-      @JsonKey(name: '_title')
-          this.titleElement,
-      @JsonKey(name: '_status')
-          this.statusElement,
-      @JsonKey(name: '_experimental')
-          this.experimentalElement,
-      @JsonKey(name: '_date')
-          this.dateElement,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
-      @JsonKey(name: '_purpose')
-          this.purposeElement,
-      @JsonKey(name: '_copyright')
-          this.copyrightElement,
-      @JsonKey(name: '_caseSensitive')
-          this.caseSensitiveElement,
       @JsonKey(name: '_hierarchyMeaning')
           this.hierarchyMeaningElement,
+      this.compositional,
       @JsonKey(name: '_compositional')
           this.compositionalElement,
+      this.versionNeeded,
       @JsonKey(name: '_versionNeeded')
           this.versionNeededElement,
+      @JsonKey(unknownEnumValue: CodeSystemContent.unknown)
+          this.content,
       @JsonKey(name: '_content')
           this.contentElement,
+      this.supplements,
+      this.count,
       @JsonKey(name: '_count')
-          this.countElement})
-      : assert(resourceType != null);
+          this.countElement,
+      this.filter,
+      this.property,
+      this.concept})
+      : assert(resourceType != null),
+        super._();
 
   factory _$_CodeSystem.fromJson(Map<String, dynamic> json) =>
       _$_$_CodeSystemFromJson(json);
 
   @override
-  @JsonKey(required: true, defaultValue: 'CodeSystem')
+  @JsonKey(defaultValue: 'CodeSystem')
   final String resourceType;
   @override
   final Id id;
@@ -1174,7 +1175,13 @@ class _$_CodeSystem implements _CodeSystem {
   @override
   final FhirUri implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
   final Code language;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
   @override
   final Narrative text;
   @override
@@ -1187,26 +1194,53 @@ class _$_CodeSystem implements _CodeSystem {
   @override
   final FhirUri url;
   @override
+  @JsonKey(name: '_url')
+  final Element urlElement;
+  @override
   final List<Identifier> identifier;
   @override
   final String version;
   @override
+  @JsonKey(name: '_version')
+  final Element versionElement;
+  @override
   final String name;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
   @override
   final String title;
   @override
-  @JsonKey(unknownEnumValue: Status.unknown)
-  final Status status;
+  @JsonKey(name: '_title')
+  final Element titleElement;
+  @override
+  @JsonKey(unknownEnumValue: CodeSystemStatus.unknown)
+  final CodeSystemStatus status;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
   @override
   final Boolean experimental;
   @override
+  @JsonKey(name: '_experimental')
+  final Element experimentalElement;
+  @override
   final FhirDateTime date;
   @override
+  @JsonKey(name: '_date')
+  final Element dateElement;
+  @override
   final String publisher;
+  @override
+  @JsonKey(name: '_publisher')
+  final Element publisherElement;
   @override
   final List<ContactDetail> contact;
   @override
   final Markdown description;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
   @override
   final List<UsageContext> useContext;
   @override
@@ -1214,92 +1248,59 @@ class _$_CodeSystem implements _CodeSystem {
   @override
   final Markdown purpose;
   @override
+  @JsonKey(name: '_purpose')
+  final Element purposeElement;
+  @override
   final Markdown copyright;
   @override
+  @JsonKey(name: '_copyright')
+  final Element copyrightElement;
+  @override
   final Boolean caseSensitive;
+  @override
+  @JsonKey(name: '_caseSensitive')
+  final Element caseSensitiveElement;
   @override
   final Canonical valueSet;
   @override
   @JsonKey(unknownEnumValue: CodeSystemHierarchyMeaning.unknown)
   final CodeSystemHierarchyMeaning hierarchyMeaning;
   @override
+  @JsonKey(name: '_hierarchyMeaning')
+  final Element hierarchyMeaningElement;
+  @override
   final Boolean compositional;
   @override
+  @JsonKey(name: '_compositional')
+  final Element compositionalElement;
+  @override
   final Boolean versionNeeded;
+  @override
+  @JsonKey(name: '_versionNeeded')
+  final Element versionNeededElement;
   @override
   @JsonKey(unknownEnumValue: CodeSystemContent.unknown)
   final CodeSystemContent content;
   @override
+  @JsonKey(name: '_content')
+  final Element contentElement;
+  @override
   final Canonical supplements;
   @override
   final UnsignedInt count;
+  @override
+  @JsonKey(name: '_count')
+  final Element countElement;
   @override
   final List<CodeSystemFilter> filter;
   @override
   final List<CodeSystemProperty> property;
   @override
   final List<CodeSystemConcept> concept;
-  @override
-  @JsonKey(name: '_implicitRules')
-  final Element implicitRulesElement;
-  @override
-  @JsonKey(name: '_language')
-  final Element languageElement;
-  @override
-  @JsonKey(name: '_url')
-  final Element urlElement;
-  @override
-  @JsonKey(name: '_version')
-  final Element versionElement;
-  @override
-  @JsonKey(name: '_name')
-  final Element nameElement;
-  @override
-  @JsonKey(name: '_title')
-  final Element titleElement;
-  @override
-  @JsonKey(name: '_status')
-  final Element statusElement;
-  @override
-  @JsonKey(name: '_experimental')
-  final Element experimentalElement;
-  @override
-  @JsonKey(name: '_date')
-  final Element dateElement;
-  @override
-  @JsonKey(name: '_publisher')
-  final Element publisherElement;
-  @override
-  @JsonKey(name: '_description')
-  final Element descriptionElement;
-  @override
-  @JsonKey(name: '_purpose')
-  final Element purposeElement;
-  @override
-  @JsonKey(name: '_copyright')
-  final Element copyrightElement;
-  @override
-  @JsonKey(name: '_caseSensitive')
-  final Element caseSensitiveElement;
-  @override
-  @JsonKey(name: '_hierarchyMeaning')
-  final Element hierarchyMeaningElement;
-  @override
-  @JsonKey(name: '_compositional')
-  final Element compositionalElement;
-  @override
-  @JsonKey(name: '_versionNeeded')
-  final Element versionNeededElement;
-  @override
-  @JsonKey(name: '_content')
-  final Element contentElement;
-  @override
-  @JsonKey(name: '_count')
-  final Element countElement;
 
   @override
   String toString() {
-    return 'CodeSystem(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, copyright: $copyright, caseSensitive: $caseSensitive, valueSet: $valueSet, hierarchyMeaning: $hierarchyMeaning, compositional: $compositional, versionNeeded: $versionNeeded, content: $content, supplements: $supplements, count: $count, filter: $filter, property: $property, concept: $concept, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, copyrightElement: $copyrightElement, caseSensitiveElement: $caseSensitiveElement, hierarchyMeaningElement: $hierarchyMeaningElement, compositionalElement: $compositionalElement, versionNeededElement: $versionNeededElement, contentElement: $contentElement, countElement: $countElement)';
+    return 'CodeSystem(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, caseSensitive: $caseSensitive, caseSensitiveElement: $caseSensitiveElement, valueSet: $valueSet, hierarchyMeaning: $hierarchyMeaning, hierarchyMeaningElement: $hierarchyMeaningElement, compositional: $compositional, compositionalElement: $compositionalElement, versionNeeded: $versionNeeded, versionNeededElement: $versionNeededElement, content: $content, contentElement: $contentElement, supplements: $supplements, count: $count, countElement: $countElement, filter: $filter, property: $property, concept: $concept)';
   }
 
   @override
@@ -1316,9 +1317,15 @@ class _$_CodeSystem implements _CodeSystem {
             (identical(other.implicitRules, implicitRules) ||
                 const DeepCollectionEquality()
                     .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
             (identical(other.language, language) ||
                 const DeepCollectionEquality()
                     .equals(other.language, language)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
             (identical(other.text, text) ||
                 const DeepCollectionEquality().equals(other.text, text)) &&
             (identical(other.contained, contained) ||
@@ -1332,77 +1339,71 @@ class _$_CodeSystem implements _CodeSystem {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
+            (identical(other.urlElement, urlElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.urlElement, urlElement)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
             (identical(other.version, version) ||
                 const DeepCollectionEquality()
                     .equals(other.version, version)) &&
+            (identical(other.versionElement, versionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.versionElement, versionElement)) &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
             (identical(other.title, title) ||
                 const DeepCollectionEquality().equals(other.title, title)) &&
+            (identical(other.titleElement, titleElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.titleElement, titleElement)) &&
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
             (identical(other.experimental, experimental) ||
                 const DeepCollectionEquality()
                     .equals(other.experimental, experimental)) &&
+            (identical(other.experimentalElement, experimentalElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.experimentalElement, experimentalElement)) &&
             (identical(other.date, date) ||
                 const DeepCollectionEquality().equals(other.date, date)) &&
-            (identical(other.publisher, publisher) ||
-                const DeepCollectionEquality()
-                    .equals(other.publisher, publisher)) &&
-            (identical(other.contact, contact) ||
-                const DeepCollectionEquality()
-                    .equals(other.contact, contact)) &&
-            (identical(other.description, description) ||
-                const DeepCollectionEquality()
-                    .equals(other.description, description)) &&
-            (identical(other.useContext, useContext) ||
-                const DeepCollectionEquality()
-                    .equals(other.useContext, useContext)) &&
-            (identical(other.jurisdiction, jurisdiction) ||
-                const DeepCollectionEquality()
-                    .equals(other.jurisdiction, jurisdiction)) &&
-            (identical(other.purpose, purpose) ||
-                const DeepCollectionEquality()
-                    .equals(other.purpose, purpose)) &&
-            (identical(other.copyright, copyright) ||
-                const DeepCollectionEquality()
-                    .equals(other.copyright, copyright)) &&
-            (identical(other.caseSensitive, caseSensitive) ||
-                const DeepCollectionEquality()
-                    .equals(other.caseSensitive, caseSensitive)) &&
-            (identical(other.valueSet, valueSet) ||
-                const DeepCollectionEquality().equals(other.valueSet, valueSet)) &&
+            (identical(other.dateElement, dateElement) ||
+                const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
+            (identical(other.publisher, publisher) || const DeepCollectionEquality().equals(other.publisher, publisher)) &&
+            (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
+            (identical(other.contact, contact) || const DeepCollectionEquality().equals(other.contact, contact)) &&
+            (identical(other.description, description) || const DeepCollectionEquality().equals(other.description, description)) &&
+            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.useContext, useContext) || const DeepCollectionEquality().equals(other.useContext, useContext)) &&
+            (identical(other.jurisdiction, jurisdiction) || const DeepCollectionEquality().equals(other.jurisdiction, jurisdiction)) &&
+            (identical(other.purpose, purpose) || const DeepCollectionEquality().equals(other.purpose, purpose)) &&
+            (identical(other.purposeElement, purposeElement) || const DeepCollectionEquality().equals(other.purposeElement, purposeElement)) &&
+            (identical(other.copyright, copyright) || const DeepCollectionEquality().equals(other.copyright, copyright)) &&
+            (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)) &&
+            (identical(other.caseSensitive, caseSensitive) || const DeepCollectionEquality().equals(other.caseSensitive, caseSensitive)) &&
+            (identical(other.caseSensitiveElement, caseSensitiveElement) || const DeepCollectionEquality().equals(other.caseSensitiveElement, caseSensitiveElement)) &&
+            (identical(other.valueSet, valueSet) || const DeepCollectionEquality().equals(other.valueSet, valueSet)) &&
             (identical(other.hierarchyMeaning, hierarchyMeaning) || const DeepCollectionEquality().equals(other.hierarchyMeaning, hierarchyMeaning)) &&
+            (identical(other.hierarchyMeaningElement, hierarchyMeaningElement) || const DeepCollectionEquality().equals(other.hierarchyMeaningElement, hierarchyMeaningElement)) &&
             (identical(other.compositional, compositional) || const DeepCollectionEquality().equals(other.compositional, compositional)) &&
+            (identical(other.compositionalElement, compositionalElement) || const DeepCollectionEquality().equals(other.compositionalElement, compositionalElement)) &&
             (identical(other.versionNeeded, versionNeeded) || const DeepCollectionEquality().equals(other.versionNeeded, versionNeeded)) &&
+            (identical(other.versionNeededElement, versionNeededElement) || const DeepCollectionEquality().equals(other.versionNeededElement, versionNeededElement)) &&
             (identical(other.content, content) || const DeepCollectionEquality().equals(other.content, content)) &&
+            (identical(other.contentElement, contentElement) || const DeepCollectionEquality().equals(other.contentElement, contentElement)) &&
             (identical(other.supplements, supplements) || const DeepCollectionEquality().equals(other.supplements, supplements)) &&
             (identical(other.count, count) || const DeepCollectionEquality().equals(other.count, count)) &&
+            (identical(other.countElement, countElement) || const DeepCollectionEquality().equals(other.countElement, countElement)) &&
             (identical(other.filter, filter) || const DeepCollectionEquality().equals(other.filter, filter)) &&
             (identical(other.property, property) || const DeepCollectionEquality().equals(other.property, property)) &&
-            (identical(other.concept, concept) || const DeepCollectionEquality().equals(other.concept, concept)) &&
-            (identical(other.implicitRulesElement, implicitRulesElement) || const DeepCollectionEquality().equals(other.implicitRulesElement, implicitRulesElement)) &&
-            (identical(other.languageElement, languageElement) || const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
-            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
-            (identical(other.versionElement, versionElement) || const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
-            (identical(other.nameElement, nameElement) || const DeepCollectionEquality().equals(other.nameElement, nameElement)) &&
-            (identical(other.titleElement, titleElement) || const DeepCollectionEquality().equals(other.titleElement, titleElement)) &&
-            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
-            (identical(other.experimentalElement, experimentalElement) || const DeepCollectionEquality().equals(other.experimentalElement, experimentalElement)) &&
-            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
-            (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
-            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
-            (identical(other.purposeElement, purposeElement) || const DeepCollectionEquality().equals(other.purposeElement, purposeElement)) &&
-            (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)) &&
-            (identical(other.caseSensitiveElement, caseSensitiveElement) || const DeepCollectionEquality().equals(other.caseSensitiveElement, caseSensitiveElement)) &&
-            (identical(other.hierarchyMeaningElement, hierarchyMeaningElement) || const DeepCollectionEquality().equals(other.hierarchyMeaningElement, hierarchyMeaningElement)) &&
-            (identical(other.compositionalElement, compositionalElement) || const DeepCollectionEquality().equals(other.compositionalElement, compositionalElement)) &&
-            (identical(other.versionNeededElement, versionNeededElement) || const DeepCollectionEquality().equals(other.versionNeededElement, versionNeededElement)) &&
-            (identical(other.contentElement, contentElement) || const DeepCollectionEquality().equals(other.contentElement, contentElement)) &&
-            (identical(other.countElement, countElement) || const DeepCollectionEquality().equals(other.countElement, countElement)));
+            (identical(other.concept, concept) || const DeepCollectionEquality().equals(other.concept, concept)));
   }
 
   @override
@@ -1412,56 +1413,56 @@ class _$_CodeSystem implements _CodeSystem {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
       const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(url) ^
+      const DeepCollectionEquality().hash(urlElement) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(version) ^
+      const DeepCollectionEquality().hash(versionElement) ^
       const DeepCollectionEquality().hash(name) ^
+      const DeepCollectionEquality().hash(nameElement) ^
       const DeepCollectionEquality().hash(title) ^
+      const DeepCollectionEquality().hash(titleElement) ^
       const DeepCollectionEquality().hash(status) ^
+      const DeepCollectionEquality().hash(statusElement) ^
       const DeepCollectionEquality().hash(experimental) ^
+      const DeepCollectionEquality().hash(experimentalElement) ^
       const DeepCollectionEquality().hash(date) ^
+      const DeepCollectionEquality().hash(dateElement) ^
       const DeepCollectionEquality().hash(publisher) ^
+      const DeepCollectionEquality().hash(publisherElement) ^
       const DeepCollectionEquality().hash(contact) ^
       const DeepCollectionEquality().hash(description) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(useContext) ^
       const DeepCollectionEquality().hash(jurisdiction) ^
       const DeepCollectionEquality().hash(purpose) ^
+      const DeepCollectionEquality().hash(purposeElement) ^
       const DeepCollectionEquality().hash(copyright) ^
+      const DeepCollectionEquality().hash(copyrightElement) ^
       const DeepCollectionEquality().hash(caseSensitive) ^
+      const DeepCollectionEquality().hash(caseSensitiveElement) ^
       const DeepCollectionEquality().hash(valueSet) ^
       const DeepCollectionEquality().hash(hierarchyMeaning) ^
+      const DeepCollectionEquality().hash(hierarchyMeaningElement) ^
       const DeepCollectionEquality().hash(compositional) ^
+      const DeepCollectionEquality().hash(compositionalElement) ^
       const DeepCollectionEquality().hash(versionNeeded) ^
+      const DeepCollectionEquality().hash(versionNeededElement) ^
       const DeepCollectionEquality().hash(content) ^
+      const DeepCollectionEquality().hash(contentElement) ^
       const DeepCollectionEquality().hash(supplements) ^
       const DeepCollectionEquality().hash(count) ^
+      const DeepCollectionEquality().hash(countElement) ^
       const DeepCollectionEquality().hash(filter) ^
       const DeepCollectionEquality().hash(property) ^
-      const DeepCollectionEquality().hash(concept) ^
-      const DeepCollectionEquality().hash(implicitRulesElement) ^
-      const DeepCollectionEquality().hash(languageElement) ^
-      const DeepCollectionEquality().hash(urlElement) ^
-      const DeepCollectionEquality().hash(versionElement) ^
-      const DeepCollectionEquality().hash(nameElement) ^
-      const DeepCollectionEquality().hash(titleElement) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(experimentalElement) ^
-      const DeepCollectionEquality().hash(dateElement) ^
-      const DeepCollectionEquality().hash(publisherElement) ^
-      const DeepCollectionEquality().hash(descriptionElement) ^
-      const DeepCollectionEquality().hash(purposeElement) ^
-      const DeepCollectionEquality().hash(copyrightElement) ^
-      const DeepCollectionEquality().hash(caseSensitiveElement) ^
-      const DeepCollectionEquality().hash(hierarchyMeaningElement) ^
-      const DeepCollectionEquality().hash(compositionalElement) ^
-      const DeepCollectionEquality().hash(versionNeededElement) ^
-      const DeepCollectionEquality().hash(contentElement) ^
-      const DeepCollectionEquality().hash(countElement);
+      const DeepCollectionEquality().hash(concept);
 
   @override
   _$CodeSystemCopyWith<_CodeSystem> get copyWith =>
@@ -1473,93 +1474,94 @@ class _$_CodeSystem implements _CodeSystem {
   }
 }
 
-abstract class _CodeSystem implements CodeSystem {
-  const factory _CodeSystem(
+abstract class _CodeSystem extends CodeSystem {
+  _CodeSystem._() : super._();
+  factory _CodeSystem(
       {@required
-      @JsonKey(required: true, defaultValue: 'CodeSystem')
+      @JsonKey(defaultValue: 'CodeSystem')
           String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri url,
+      @JsonKey(name: '_url')
+          Element urlElement,
       List<Identifier> identifier,
       String version,
+      @JsonKey(name: '_version')
+          Element versionElement,
       String name,
+      @JsonKey(name: '_name')
+          Element nameElement,
       String title,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(unknownEnumValue: CodeSystemStatus.unknown)
+          CodeSystemStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Boolean experimental,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
       FhirDateTime date,
+      @JsonKey(name: '_date')
+          Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
       List<ContactDetail> contact,
       Markdown description,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Markdown purpose,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
       Markdown copyright,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
       Boolean caseSensitive,
+      @JsonKey(name: '_caseSensitive')
+          Element caseSensitiveElement,
       Canonical valueSet,
       @JsonKey(unknownEnumValue: CodeSystemHierarchyMeaning.unknown)
           CodeSystemHierarchyMeaning hierarchyMeaning,
-      Boolean compositional,
-      Boolean versionNeeded,
-      @JsonKey(unknownEnumValue: CodeSystemContent.unknown)
-          CodeSystemContent content,
-      Canonical supplements,
-      UnsignedInt count,
-      List<CodeSystemFilter> filter,
-      List<CodeSystemProperty> property,
-      List<CodeSystemConcept> concept,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      @JsonKey(name: '_language')
-          Element languageElement,
-      @JsonKey(name: '_url')
-          Element urlElement,
-      @JsonKey(name: '_version')
-          Element versionElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
-      @JsonKey(name: '_copyright')
-          Element copyrightElement,
-      @JsonKey(name: '_caseSensitive')
-          Element caseSensitiveElement,
       @JsonKey(name: '_hierarchyMeaning')
           Element hierarchyMeaningElement,
+      Boolean compositional,
       @JsonKey(name: '_compositional')
           Element compositionalElement,
+      Boolean versionNeeded,
       @JsonKey(name: '_versionNeeded')
           Element versionNeededElement,
+      @JsonKey(unknownEnumValue: CodeSystemContent.unknown)
+          CodeSystemContent content,
       @JsonKey(name: '_content')
           Element contentElement,
+      Canonical supplements,
+      UnsignedInt count,
       @JsonKey(name: '_count')
-          Element countElement}) = _$_CodeSystem;
+          Element countElement,
+      List<CodeSystemFilter> filter,
+      List<CodeSystemProperty> property,
+      List<CodeSystemConcept> concept}) = _$_CodeSystem;
 
   factory _CodeSystem.fromJson(Map<String, dynamic> json) =
       _$_CodeSystem.fromJson;
 
   @override
-  @JsonKey(required: true, defaultValue: 'CodeSystem')
+  @JsonKey(defaultValue: 'CodeSystem')
   String get resourceType;
   @override
   Id get id;
@@ -1568,7 +1570,13 @@ abstract class _CodeSystem implements CodeSystem {
   @override
   FhirUri get implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
   Code get language;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
   @override
   Narrative get text;
   @override
@@ -1581,26 +1589,53 @@ abstract class _CodeSystem implements CodeSystem {
   @override
   FhirUri get url;
   @override
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @override
   List<Identifier> get identifier;
   @override
   String get version;
   @override
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @override
   String get name;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
   @override
   String get title;
   @override
-  @JsonKey(unknownEnumValue: Status.unknown)
-  Status get status;
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @override
+  @JsonKey(unknownEnumValue: CodeSystemStatus.unknown)
+  CodeSystemStatus get status;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
   @override
   Boolean get experimental;
   @override
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  @override
   FhirDateTime get date;
   @override
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @override
   String get publisher;
+  @override
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
   @override
   List<ContactDetail> get contact;
   @override
   Markdown get description;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
   @override
   List<UsageContext> get useContext;
   @override
@@ -1608,88 +1643,55 @@ abstract class _CodeSystem implements CodeSystem {
   @override
   Markdown get purpose;
   @override
+  @JsonKey(name: '_purpose')
+  Element get purposeElement;
+  @override
   Markdown get copyright;
   @override
+  @JsonKey(name: '_copyright')
+  Element get copyrightElement;
+  @override
   Boolean get caseSensitive;
+  @override
+  @JsonKey(name: '_caseSensitive')
+  Element get caseSensitiveElement;
   @override
   Canonical get valueSet;
   @override
   @JsonKey(unknownEnumValue: CodeSystemHierarchyMeaning.unknown)
   CodeSystemHierarchyMeaning get hierarchyMeaning;
   @override
+  @JsonKey(name: '_hierarchyMeaning')
+  Element get hierarchyMeaningElement;
+  @override
   Boolean get compositional;
   @override
+  @JsonKey(name: '_compositional')
+  Element get compositionalElement;
+  @override
   Boolean get versionNeeded;
+  @override
+  @JsonKey(name: '_versionNeeded')
+  Element get versionNeededElement;
   @override
   @JsonKey(unknownEnumValue: CodeSystemContent.unknown)
   CodeSystemContent get content;
   @override
+  @JsonKey(name: '_content')
+  Element get contentElement;
+  @override
   Canonical get supplements;
   @override
   UnsignedInt get count;
+  @override
+  @JsonKey(name: '_count')
+  Element get countElement;
   @override
   List<CodeSystemFilter> get filter;
   @override
   List<CodeSystemProperty> get property;
   @override
   List<CodeSystemConcept> get concept;
-  @override
-  @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  @override
-  @JsonKey(name: '_language')
-  Element get languageElement;
-  @override
-  @JsonKey(name: '_url')
-  Element get urlElement;
-  @override
-  @JsonKey(name: '_version')
-  Element get versionElement;
-  @override
-  @JsonKey(name: '_name')
-  Element get nameElement;
-  @override
-  @JsonKey(name: '_title')
-  Element get titleElement;
-  @override
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @override
-  @JsonKey(name: '_experimental')
-  Element get experimentalElement;
-  @override
-  @JsonKey(name: '_date')
-  Element get dateElement;
-  @override
-  @JsonKey(name: '_publisher')
-  Element get publisherElement;
-  @override
-  @JsonKey(name: '_description')
-  Element get descriptionElement;
-  @override
-  @JsonKey(name: '_purpose')
-  Element get purposeElement;
-  @override
-  @JsonKey(name: '_copyright')
-  Element get copyrightElement;
-  @override
-  @JsonKey(name: '_caseSensitive')
-  Element get caseSensitiveElement;
-  @override
-  @JsonKey(name: '_hierarchyMeaning')
-  Element get hierarchyMeaningElement;
-  @override
-  @JsonKey(name: '_compositional')
-  Element get compositionalElement;
-  @override
-  @JsonKey(name: '_versionNeeded')
-  Element get versionNeededElement;
-  @override
-  @JsonKey(name: '_content')
-  Element get contentElement;
-  @override
-  @JsonKey(name: '_count')
-  Element get countElement;
   @override
   _$CodeSystemCopyWith<_CodeSystem> get copyWith;
 }
@@ -1706,24 +1708,24 @@ class _$CodeSystemFilterTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code code,
-      String description,
-      List<Code> operator,
-      String value,
       @JsonKey(name: '_code') Element codeElement,
+      String description,
       @JsonKey(name: '_description') Element descriptionElement,
+      List<Code> operator,
       @JsonKey(name: '_operator') List<Element> operatorElement,
+      String value,
       @JsonKey(name: '_value') Element valueElement}) {
     return _CodeSystemFilter(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       code: code,
-      description: description,
-      operator: operator,
-      value: value,
       codeElement: codeElement,
+      description: description,
       descriptionElement: descriptionElement,
+      operator: operator,
       operatorElement: operatorElement,
+      value: value,
       valueElement: valueElement,
     );
   }
@@ -1738,15 +1740,15 @@ mixin _$CodeSystemFilter {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   Code get code;
-  String get description;
-  List<Code> get operator;
-  String get value;
   @JsonKey(name: '_code')
   Element get codeElement;
+  String get description;
   @JsonKey(name: '_description')
   Element get descriptionElement;
+  List<Code> get operator;
   @JsonKey(name: '_operator')
   List<Element> get operatorElement;
+  String get value;
   @JsonKey(name: '_value')
   Element get valueElement;
 
@@ -1763,12 +1765,12 @@ abstract class $CodeSystemFilterCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code code,
-      String description,
-      List<Code> operator,
-      String value,
       @JsonKey(name: '_code') Element codeElement,
+      String description,
       @JsonKey(name: '_description') Element descriptionElement,
+      List<Code> operator,
       @JsonKey(name: '_operator') List<Element> operatorElement,
+      String value,
       @JsonKey(name: '_value') Element valueElement});
 
   $ElementCopyWith<$Res> get codeElement;
@@ -1790,12 +1792,12 @@ class _$CodeSystemFilterCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object code = freezed,
-    Object description = freezed,
-    Object operator = freezed,
-    Object value = freezed,
     Object codeElement = freezed,
+    Object description = freezed,
     Object descriptionElement = freezed,
+    Object operator = freezed,
     Object operatorElement = freezed,
+    Object value = freezed,
     Object valueElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -1807,18 +1809,18 @@ class _$CodeSystemFilterCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       code: code == freezed ? _value.code : code as Code,
-      description:
-          description == freezed ? _value.description : description as String,
-      operator: operator == freezed ? _value.operator : operator as List<Code>,
-      value: value == freezed ? _value.value : value as String,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
+      description:
+          description == freezed ? _value.description : description as String,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
+      operator: operator == freezed ? _value.operator : operator as List<Code>,
       operatorElement: operatorElement == freezed
           ? _value.operatorElement
           : operatorElement as List<Element>,
+      value: value == freezed ? _value.value : value as String,
       valueElement: valueElement == freezed
           ? _value.valueElement
           : valueElement as Element,
@@ -1867,12 +1869,12 @@ abstract class _$CodeSystemFilterCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code code,
-      String description,
-      List<Code> operator,
-      String value,
       @JsonKey(name: '_code') Element codeElement,
+      String description,
       @JsonKey(name: '_description') Element descriptionElement,
+      List<Code> operator,
       @JsonKey(name: '_operator') List<Element> operatorElement,
+      String value,
       @JsonKey(name: '_value') Element valueElement});
 
   @override
@@ -1899,12 +1901,12 @@ class __$CodeSystemFilterCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object code = freezed,
-    Object description = freezed,
-    Object operator = freezed,
-    Object value = freezed,
     Object codeElement = freezed,
+    Object description = freezed,
     Object descriptionElement = freezed,
+    Object operator = freezed,
     Object operatorElement = freezed,
+    Object value = freezed,
     Object valueElement = freezed,
   }) {
     return _then(_CodeSystemFilter(
@@ -1916,18 +1918,18 @@ class __$CodeSystemFilterCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       code: code == freezed ? _value.code : code as Code,
-      description:
-          description == freezed ? _value.description : description as String,
-      operator: operator == freezed ? _value.operator : operator as List<Code>,
-      value: value == freezed ? _value.value : value as String,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
+      description:
+          description == freezed ? _value.description : description as String,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
+      operator: operator == freezed ? _value.operator : operator as List<Code>,
       operatorElement: operatorElement == freezed
           ? _value.operatorElement
           : operatorElement as List<Element>,
+      value: value == freezed ? _value.value : value as String,
       valueElement: valueElement == freezed
           ? _value.valueElement
           : valueElement as Element,
@@ -1936,19 +1938,20 @@ class __$CodeSystemFilterCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_CodeSystemFilter implements _CodeSystemFilter {
-  const _$_CodeSystemFilter(
+class _$_CodeSystemFilter extends _CodeSystemFilter {
+  _$_CodeSystemFilter(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.code,
-      this.description,
-      this.operator,
-      this.value,
       @JsonKey(name: '_code') this.codeElement,
+      this.description,
       @JsonKey(name: '_description') this.descriptionElement,
+      this.operator,
       @JsonKey(name: '_operator') this.operatorElement,
-      @JsonKey(name: '_value') this.valueElement});
+      this.value,
+      @JsonKey(name: '_value') this.valueElement})
+      : super._();
 
   factory _$_CodeSystemFilter.fromJson(Map<String, dynamic> json) =>
       _$_$_CodeSystemFilterFromJson(json);
@@ -1963,27 +1966,27 @@ class _$_CodeSystemFilter implements _CodeSystemFilter {
   @override
   final Code code;
   @override
-  final String description;
-  @override
-  final List<Code> operator;
-  @override
-  final String value;
-  @override
   @JsonKey(name: '_code')
   final Element codeElement;
+  @override
+  final String description;
   @override
   @JsonKey(name: '_description')
   final Element descriptionElement;
   @override
+  final List<Code> operator;
+  @override
   @JsonKey(name: '_operator')
   final List<Element> operatorElement;
+  @override
+  final String value;
   @override
   @JsonKey(name: '_value')
   final Element valueElement;
 
   @override
   String toString() {
-    return 'CodeSystemFilter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, description: $description, operator: $operator, value: $value, codeElement: $codeElement, descriptionElement: $descriptionElement, operatorElement: $operatorElement, valueElement: $valueElement)';
+    return 'CodeSystemFilter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, codeElement: $codeElement, description: $description, descriptionElement: $descriptionElement, operator: $operator, operatorElement: $operatorElement, value: $value, valueElement: $valueElement)';
   }
 
   @override
@@ -2000,23 +2003,23 @@ class _$_CodeSystemFilter implements _CodeSystemFilter {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.code, code) ||
                 const DeepCollectionEquality().equals(other.code, code)) &&
-            (identical(other.description, description) ||
-                const DeepCollectionEquality()
-                    .equals(other.description, description)) &&
-            (identical(other.operator, operator) ||
-                const DeepCollectionEquality()
-                    .equals(other.operator, operator)) &&
-            (identical(other.value, value) ||
-                const DeepCollectionEquality().equals(other.value, value)) &&
             (identical(other.codeElement, codeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.codeElement, codeElement)) &&
+            (identical(other.description, description) ||
+                const DeepCollectionEquality()
+                    .equals(other.description, description)) &&
             (identical(other.descriptionElement, descriptionElement) ||
                 const DeepCollectionEquality()
                     .equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.operator, operator) ||
+                const DeepCollectionEquality()
+                    .equals(other.operator, operator)) &&
             (identical(other.operatorElement, operatorElement) ||
                 const DeepCollectionEquality()
                     .equals(other.operatorElement, operatorElement)) &&
+            (identical(other.value, value) ||
+                const DeepCollectionEquality().equals(other.value, value)) &&
             (identical(other.valueElement, valueElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueElement, valueElement)));
@@ -2029,12 +2032,12 @@ class _$_CodeSystemFilter implements _CodeSystemFilter {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(code) ^
-      const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(operator) ^
-      const DeepCollectionEquality().hash(value) ^
       const DeepCollectionEquality().hash(codeElement) ^
+      const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(operator) ^
       const DeepCollectionEquality().hash(operatorElement) ^
+      const DeepCollectionEquality().hash(value) ^
       const DeepCollectionEquality().hash(valueElement);
 
   @override
@@ -2047,18 +2050,19 @@ class _$_CodeSystemFilter implements _CodeSystemFilter {
   }
 }
 
-abstract class _CodeSystemFilter implements CodeSystemFilter {
-  const factory _CodeSystemFilter(
+abstract class _CodeSystemFilter extends CodeSystemFilter {
+  _CodeSystemFilter._() : super._();
+  factory _CodeSystemFilter(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code code,
-      String description,
-      List<Code> operator,
-      String value,
       @JsonKey(name: '_code') Element codeElement,
+      String description,
       @JsonKey(name: '_description') Element descriptionElement,
+      List<Code> operator,
       @JsonKey(name: '_operator') List<Element> operatorElement,
+      String value,
       @JsonKey(name: '_value') Element valueElement}) = _$_CodeSystemFilter;
 
   factory _CodeSystemFilter.fromJson(Map<String, dynamic> json) =
@@ -2074,20 +2078,20 @@ abstract class _CodeSystemFilter implements CodeSystemFilter {
   @override
   Code get code;
   @override
-  String get description;
-  @override
-  List<Code> get operator;
-  @override
-  String get value;
-  @override
   @JsonKey(name: '_code')
   Element get codeElement;
+  @override
+  String get description;
   @override
   @JsonKey(name: '_description')
   Element get descriptionElement;
   @override
+  List<Code> get operator;
+  @override
   @JsonKey(name: '_operator')
   List<Element> get operatorElement;
+  @override
+  String get value;
   @override
   @JsonKey(name: '_value')
   Element get valueElement;
@@ -2104,27 +2108,33 @@ class _$CodeSystemPropertyTearOff {
 
   _CodeSystemProperty call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code code,
+      @JsonKey(name: '_code')
+          Element codeElement,
       FhirUri uri,
+      @JsonKey(name: '_uri')
+          Element uriElement,
       String description,
-      @JsonKey(unknownEnumValue: PropertyType.unknown) PropertyType type,
-      @JsonKey(name: '_code') Element codeElement,
-      @JsonKey(name: '_uri') Element uriElement,
-      @JsonKey(name: '_description') Element descriptionElement,
-      @JsonKey(name: '_type') Element typeElement}) {
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(unknownEnumValue: CodeSystemPropertyType.unknown)
+          CodeSystemPropertyType type,
+      @JsonKey(name: '_type')
+          Element typeElement}) {
     return _CodeSystemProperty(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       code: code,
-      uri: uri,
-      description: description,
-      type: type,
       codeElement: codeElement,
+      uri: uri,
       uriElement: uriElement,
+      description: description,
       descriptionElement: descriptionElement,
+      type: type,
       typeElement: typeElement,
     );
   }
@@ -2139,16 +2149,16 @@ mixin _$CodeSystemProperty {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   Code get code;
-  FhirUri get uri;
-  String get description;
-  @JsonKey(unknownEnumValue: PropertyType.unknown)
-  PropertyType get type;
   @JsonKey(name: '_code')
   Element get codeElement;
+  FhirUri get uri;
   @JsonKey(name: '_uri')
   Element get uriElement;
+  String get description;
   @JsonKey(name: '_description')
   Element get descriptionElement;
+  @JsonKey(unknownEnumValue: CodeSystemPropertyType.unknown)
+  CodeSystemPropertyType get type;
   @JsonKey(name: '_type')
   Element get typeElement;
 
@@ -2162,16 +2172,22 @@ abstract class $CodeSystemPropertyCopyWith<$Res> {
       _$CodeSystemPropertyCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code code,
+      @JsonKey(name: '_code')
+          Element codeElement,
       FhirUri uri,
+      @JsonKey(name: '_uri')
+          Element uriElement,
       String description,
-      @JsonKey(unknownEnumValue: PropertyType.unknown) PropertyType type,
-      @JsonKey(name: '_code') Element codeElement,
-      @JsonKey(name: '_uri') Element uriElement,
-      @JsonKey(name: '_description') Element descriptionElement,
-      @JsonKey(name: '_type') Element typeElement});
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(unknownEnumValue: CodeSystemPropertyType.unknown)
+          CodeSystemPropertyType type,
+      @JsonKey(name: '_type')
+          Element typeElement});
 
   $ElementCopyWith<$Res> get codeElement;
   $ElementCopyWith<$Res> get uriElement;
@@ -2193,12 +2209,12 @@ class _$CodeSystemPropertyCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object code = freezed,
-    Object uri = freezed,
-    Object description = freezed,
-    Object type = freezed,
     Object codeElement = freezed,
+    Object uri = freezed,
     Object uriElement = freezed,
+    Object description = freezed,
     Object descriptionElement = freezed,
+    Object type = freezed,
     Object typeElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -2210,17 +2226,17 @@ class _$CodeSystemPropertyCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       code: code == freezed ? _value.code : code as Code,
-      uri: uri == freezed ? _value.uri : uri as FhirUri,
-      description:
-          description == freezed ? _value.description : description as String,
-      type: type == freezed ? _value.type : type as PropertyType,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
+      uri: uri == freezed ? _value.uri : uri as FhirUri,
       uriElement:
           uriElement == freezed ? _value.uriElement : uriElement as Element,
+      description:
+          description == freezed ? _value.description : description as String,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
+      type: type == freezed ? _value.type : type as CodeSystemPropertyType,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element,
     ));
@@ -2275,16 +2291,22 @@ abstract class _$CodeSystemPropertyCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code code,
+      @JsonKey(name: '_code')
+          Element codeElement,
       FhirUri uri,
+      @JsonKey(name: '_uri')
+          Element uriElement,
       String description,
-      @JsonKey(unknownEnumValue: PropertyType.unknown) PropertyType type,
-      @JsonKey(name: '_code') Element codeElement,
-      @JsonKey(name: '_uri') Element uriElement,
-      @JsonKey(name: '_description') Element descriptionElement,
-      @JsonKey(name: '_type') Element typeElement});
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(unknownEnumValue: CodeSystemPropertyType.unknown)
+          CodeSystemPropertyType type,
+      @JsonKey(name: '_type')
+          Element typeElement});
 
   @override
   $ElementCopyWith<$Res> get codeElement;
@@ -2312,12 +2334,12 @@ class __$CodeSystemPropertyCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object code = freezed,
-    Object uri = freezed,
-    Object description = freezed,
-    Object type = freezed,
     Object codeElement = freezed,
+    Object uri = freezed,
     Object uriElement = freezed,
+    Object description = freezed,
     Object descriptionElement = freezed,
+    Object type = freezed,
     Object typeElement = freezed,
   }) {
     return _then(_CodeSystemProperty(
@@ -2329,17 +2351,17 @@ class __$CodeSystemPropertyCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       code: code == freezed ? _value.code : code as Code,
-      uri: uri == freezed ? _value.uri : uri as FhirUri,
-      description:
-          description == freezed ? _value.description : description as String,
-      type: type == freezed ? _value.type : type as PropertyType,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
+      uri: uri == freezed ? _value.uri : uri as FhirUri,
       uriElement:
           uriElement == freezed ? _value.uriElement : uriElement as Element,
+      description:
+          description == freezed ? _value.description : description as String,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
+      type: type == freezed ? _value.type : type as CodeSystemPropertyType,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element,
     ));
@@ -2347,19 +2369,20 @@ class __$CodeSystemPropertyCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_CodeSystemProperty implements _CodeSystemProperty {
-  const _$_CodeSystemProperty(
+class _$_CodeSystemProperty extends _CodeSystemProperty {
+  _$_CodeSystemProperty(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.code,
-      this.uri,
-      this.description,
-      @JsonKey(unknownEnumValue: PropertyType.unknown) this.type,
       @JsonKey(name: '_code') this.codeElement,
+      this.uri,
       @JsonKey(name: '_uri') this.uriElement,
+      this.description,
       @JsonKey(name: '_description') this.descriptionElement,
-      @JsonKey(name: '_type') this.typeElement});
+      @JsonKey(unknownEnumValue: CodeSystemPropertyType.unknown) this.type,
+      @JsonKey(name: '_type') this.typeElement})
+      : super._();
 
   factory _$_CodeSystemProperty.fromJson(Map<String, dynamic> json) =>
       _$_$_CodeSystemPropertyFromJson(json);
@@ -2374,28 +2397,28 @@ class _$_CodeSystemProperty implements _CodeSystemProperty {
   @override
   final Code code;
   @override
-  final FhirUri uri;
-  @override
-  final String description;
-  @override
-  @JsonKey(unknownEnumValue: PropertyType.unknown)
-  final PropertyType type;
-  @override
   @JsonKey(name: '_code')
   final Element codeElement;
+  @override
+  final FhirUri uri;
   @override
   @JsonKey(name: '_uri')
   final Element uriElement;
   @override
+  final String description;
+  @override
   @JsonKey(name: '_description')
   final Element descriptionElement;
+  @override
+  @JsonKey(unknownEnumValue: CodeSystemPropertyType.unknown)
+  final CodeSystemPropertyType type;
   @override
   @JsonKey(name: '_type')
   final Element typeElement;
 
   @override
   String toString() {
-    return 'CodeSystemProperty(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, uri: $uri, description: $description, type: $type, codeElement: $codeElement, uriElement: $uriElement, descriptionElement: $descriptionElement, typeElement: $typeElement)';
+    return 'CodeSystemProperty(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, codeElement: $codeElement, uri: $uri, uriElement: $uriElement, description: $description, descriptionElement: $descriptionElement, type: $type, typeElement: $typeElement)';
   }
 
   @override
@@ -2412,22 +2435,22 @@ class _$_CodeSystemProperty implements _CodeSystemProperty {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.code, code) ||
                 const DeepCollectionEquality().equals(other.code, code)) &&
-            (identical(other.uri, uri) ||
-                const DeepCollectionEquality().equals(other.uri, uri)) &&
-            (identical(other.description, description) ||
-                const DeepCollectionEquality()
-                    .equals(other.description, description)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.codeElement, codeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.codeElement, codeElement)) &&
+            (identical(other.uri, uri) ||
+                const DeepCollectionEquality().equals(other.uri, uri)) &&
             (identical(other.uriElement, uriElement) ||
                 const DeepCollectionEquality()
                     .equals(other.uriElement, uriElement)) &&
+            (identical(other.description, description) ||
+                const DeepCollectionEquality()
+                    .equals(other.description, description)) &&
             (identical(other.descriptionElement, descriptionElement) ||
                 const DeepCollectionEquality()
                     .equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.type, type) ||
+                const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.typeElement, typeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.typeElement, typeElement)));
@@ -2440,12 +2463,12 @@ class _$_CodeSystemProperty implements _CodeSystemProperty {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(code) ^
-      const DeepCollectionEquality().hash(uri) ^
-      const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(codeElement) ^
+      const DeepCollectionEquality().hash(uri) ^
       const DeepCollectionEquality().hash(uriElement) ^
+      const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(typeElement);
 
   @override
@@ -2458,19 +2481,26 @@ class _$_CodeSystemProperty implements _CodeSystemProperty {
   }
 }
 
-abstract class _CodeSystemProperty implements CodeSystemProperty {
-  const factory _CodeSystemProperty(
+abstract class _CodeSystemProperty extends CodeSystemProperty {
+  _CodeSystemProperty._() : super._();
+  factory _CodeSystemProperty(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code code,
+      @JsonKey(name: '_code')
+          Element codeElement,
       FhirUri uri,
+      @JsonKey(name: '_uri')
+          Element uriElement,
       String description,
-      @JsonKey(unknownEnumValue: PropertyType.unknown) PropertyType type,
-      @JsonKey(name: '_code') Element codeElement,
-      @JsonKey(name: '_uri') Element uriElement,
-      @JsonKey(name: '_description') Element descriptionElement,
-      @JsonKey(name: '_type') Element typeElement}) = _$_CodeSystemProperty;
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(unknownEnumValue: CodeSystemPropertyType.unknown)
+          CodeSystemPropertyType type,
+      @JsonKey(name: '_type')
+          Element typeElement}) = _$_CodeSystemProperty;
 
   factory _CodeSystemProperty.fromJson(Map<String, dynamic> json) =
       _$_CodeSystemProperty.fromJson;
@@ -2485,21 +2515,21 @@ abstract class _CodeSystemProperty implements CodeSystemProperty {
   @override
   Code get code;
   @override
-  FhirUri get uri;
-  @override
-  String get description;
-  @override
-  @JsonKey(unknownEnumValue: PropertyType.unknown)
-  PropertyType get type;
-  @override
   @JsonKey(name: '_code')
   Element get codeElement;
+  @override
+  FhirUri get uri;
   @override
   @JsonKey(name: '_uri')
   Element get uriElement;
   @override
+  String get description;
+  @override
   @JsonKey(name: '_description')
   Element get descriptionElement;
+  @override
+  @JsonKey(unknownEnumValue: CodeSystemPropertyType.unknown)
+  CodeSystemPropertyType get type;
   @override
   @JsonKey(name: '_type')
   Element get typeElement;
@@ -2519,27 +2549,27 @@ class _$CodeSystemConceptTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code code,
+      @JsonKey(name: '_code') Element codeElement,
       String display,
+      @JsonKey(name: '_display') Element displayElement,
       String definition,
+      @JsonKey(name: '_definition') Element definitionElement,
       List<CodeSystemDesignation> designation,
       List<CodeSystemProperty1> property,
-      List<CodeSystemConcept> concept,
-      @JsonKey(name: '_code') Element codeElement,
-      @JsonKey(name: '_display') Element displayElement,
-      @JsonKey(name: '_definition') Element definitionElement}) {
+      List<CodeSystemConcept> concept}) {
     return _CodeSystemConcept(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       code: code,
+      codeElement: codeElement,
       display: display,
+      displayElement: displayElement,
       definition: definition,
+      definitionElement: definitionElement,
       designation: designation,
       property: property,
       concept: concept,
-      codeElement: codeElement,
-      displayElement: displayElement,
-      definitionElement: definitionElement,
     );
   }
 }
@@ -2553,17 +2583,17 @@ mixin _$CodeSystemConcept {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   Code get code;
+  @JsonKey(name: '_code')
+  Element get codeElement;
   String get display;
+  @JsonKey(name: '_display')
+  Element get displayElement;
   String get definition;
+  @JsonKey(name: '_definition')
+  Element get definitionElement;
   List<CodeSystemDesignation> get designation;
   List<CodeSystemProperty1> get property;
   List<CodeSystemConcept> get concept;
-  @JsonKey(name: '_code')
-  Element get codeElement;
-  @JsonKey(name: '_display')
-  Element get displayElement;
-  @JsonKey(name: '_definition')
-  Element get definitionElement;
 
   Map<String, dynamic> toJson();
   $CodeSystemConceptCopyWith<CodeSystemConcept> get copyWith;
@@ -2578,14 +2608,14 @@ abstract class $CodeSystemConceptCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code code,
+      @JsonKey(name: '_code') Element codeElement,
       String display,
+      @JsonKey(name: '_display') Element displayElement,
       String definition,
+      @JsonKey(name: '_definition') Element definitionElement,
       List<CodeSystemDesignation> designation,
       List<CodeSystemProperty1> property,
-      List<CodeSystemConcept> concept,
-      @JsonKey(name: '_code') Element codeElement,
-      @JsonKey(name: '_display') Element displayElement,
-      @JsonKey(name: '_definition') Element definitionElement});
+      List<CodeSystemConcept> concept});
 
   $ElementCopyWith<$Res> get codeElement;
   $ElementCopyWith<$Res> get displayElement;
@@ -2606,14 +2636,14 @@ class _$CodeSystemConceptCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object code = freezed,
+    Object codeElement = freezed,
     Object display = freezed,
+    Object displayElement = freezed,
     Object definition = freezed,
+    Object definitionElement = freezed,
     Object designation = freezed,
     Object property = freezed,
     Object concept = freezed,
-    Object codeElement = freezed,
-    Object displayElement = freezed,
-    Object definitionElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -2624,9 +2654,17 @@ class _$CodeSystemConceptCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       code: code == freezed ? _value.code : code as Code,
+      codeElement:
+          codeElement == freezed ? _value.codeElement : codeElement as Element,
       display: display == freezed ? _value.display : display as String,
+      displayElement: displayElement == freezed
+          ? _value.displayElement
+          : displayElement as Element,
       definition:
           definition == freezed ? _value.definition : definition as String,
+      definitionElement: definitionElement == freezed
+          ? _value.definitionElement
+          : definitionElement as Element,
       designation: designation == freezed
           ? _value.designation
           : designation as List<CodeSystemDesignation>,
@@ -2636,14 +2674,6 @@ class _$CodeSystemConceptCopyWithImpl<$Res>
       concept: concept == freezed
           ? _value.concept
           : concept as List<CodeSystemConcept>,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element,
-      displayElement: displayElement == freezed
-          ? _value.displayElement
-          : displayElement as Element,
-      definitionElement: definitionElement == freezed
-          ? _value.definitionElement
-          : definitionElement as Element,
     ));
   }
 
@@ -2689,14 +2719,14 @@ abstract class _$CodeSystemConceptCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code code,
+      @JsonKey(name: '_code') Element codeElement,
       String display,
+      @JsonKey(name: '_display') Element displayElement,
       String definition,
+      @JsonKey(name: '_definition') Element definitionElement,
       List<CodeSystemDesignation> designation,
       List<CodeSystemProperty1> property,
-      List<CodeSystemConcept> concept,
-      @JsonKey(name: '_code') Element codeElement,
-      @JsonKey(name: '_display') Element displayElement,
-      @JsonKey(name: '_definition') Element definitionElement});
+      List<CodeSystemConcept> concept});
 
   @override
   $ElementCopyWith<$Res> get codeElement;
@@ -2722,14 +2752,14 @@ class __$CodeSystemConceptCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object code = freezed,
+    Object codeElement = freezed,
     Object display = freezed,
+    Object displayElement = freezed,
     Object definition = freezed,
+    Object definitionElement = freezed,
     Object designation = freezed,
     Object property = freezed,
     Object concept = freezed,
-    Object codeElement = freezed,
-    Object displayElement = freezed,
-    Object definitionElement = freezed,
   }) {
     return _then(_CodeSystemConcept(
       id: id == freezed ? _value.id : id as String,
@@ -2740,9 +2770,17 @@ class __$CodeSystemConceptCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       code: code == freezed ? _value.code : code as Code,
+      codeElement:
+          codeElement == freezed ? _value.codeElement : codeElement as Element,
       display: display == freezed ? _value.display : display as String,
+      displayElement: displayElement == freezed
+          ? _value.displayElement
+          : displayElement as Element,
       definition:
           definition == freezed ? _value.definition : definition as String,
+      definitionElement: definitionElement == freezed
+          ? _value.definitionElement
+          : definitionElement as Element,
       designation: designation == freezed
           ? _value.designation
           : designation as List<CodeSystemDesignation>,
@@ -2752,33 +2790,26 @@ class __$CodeSystemConceptCopyWithImpl<$Res>
       concept: concept == freezed
           ? _value.concept
           : concept as List<CodeSystemConcept>,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element,
-      displayElement: displayElement == freezed
-          ? _value.displayElement
-          : displayElement as Element,
-      definitionElement: definitionElement == freezed
-          ? _value.definitionElement
-          : definitionElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_CodeSystemConcept implements _CodeSystemConcept {
-  const _$_CodeSystemConcept(
+class _$_CodeSystemConcept extends _CodeSystemConcept {
+  _$_CodeSystemConcept(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.code,
+      @JsonKey(name: '_code') this.codeElement,
       this.display,
+      @JsonKey(name: '_display') this.displayElement,
       this.definition,
+      @JsonKey(name: '_definition') this.definitionElement,
       this.designation,
       this.property,
-      this.concept,
-      @JsonKey(name: '_code') this.codeElement,
-      @JsonKey(name: '_display') this.displayElement,
-      @JsonKey(name: '_definition') this.definitionElement});
+      this.concept})
+      : super._();
 
   factory _$_CodeSystemConcept.fromJson(Map<String, dynamic> json) =>
       _$_$_CodeSystemConceptFromJson(json);
@@ -2793,28 +2824,28 @@ class _$_CodeSystemConcept implements _CodeSystemConcept {
   @override
   final Code code;
   @override
+  @JsonKey(name: '_code')
+  final Element codeElement;
+  @override
   final String display;
   @override
+  @JsonKey(name: '_display')
+  final Element displayElement;
+  @override
   final String definition;
+  @override
+  @JsonKey(name: '_definition')
+  final Element definitionElement;
   @override
   final List<CodeSystemDesignation> designation;
   @override
   final List<CodeSystemProperty1> property;
   @override
   final List<CodeSystemConcept> concept;
-  @override
-  @JsonKey(name: '_code')
-  final Element codeElement;
-  @override
-  @JsonKey(name: '_display')
-  final Element displayElement;
-  @override
-  @JsonKey(name: '_definition')
-  final Element definitionElement;
 
   @override
   String toString() {
-    return 'CodeSystemConcept(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, display: $display, definition: $definition, designation: $designation, property: $property, concept: $concept, codeElement: $codeElement, displayElement: $displayElement, definitionElement: $definitionElement)';
+    return 'CodeSystemConcept(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, codeElement: $codeElement, display: $display, displayElement: $displayElement, definition: $definition, definitionElement: $definitionElement, designation: $designation, property: $property, concept: $concept)';
   }
 
   @override
@@ -2831,12 +2862,21 @@ class _$_CodeSystemConcept implements _CodeSystemConcept {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.code, code) ||
                 const DeepCollectionEquality().equals(other.code, code)) &&
+            (identical(other.codeElement, codeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.codeElement, codeElement)) &&
             (identical(other.display, display) ||
                 const DeepCollectionEquality()
                     .equals(other.display, display)) &&
+            (identical(other.displayElement, displayElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.displayElement, displayElement)) &&
             (identical(other.definition, definition) ||
                 const DeepCollectionEquality()
                     .equals(other.definition, definition)) &&
+            (identical(other.definitionElement, definitionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.definitionElement, definitionElement)) &&
             (identical(other.designation, designation) ||
                 const DeepCollectionEquality()
                     .equals(other.designation, designation)) &&
@@ -2844,17 +2884,7 @@ class _$_CodeSystemConcept implements _CodeSystemConcept {
                 const DeepCollectionEquality()
                     .equals(other.property, property)) &&
             (identical(other.concept, concept) ||
-                const DeepCollectionEquality()
-                    .equals(other.concept, concept)) &&
-            (identical(other.codeElement, codeElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.codeElement, codeElement)) &&
-            (identical(other.displayElement, displayElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.displayElement, displayElement)) &&
-            (identical(other.definitionElement, definitionElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.definitionElement, definitionElement)));
+                const DeepCollectionEquality().equals(other.concept, concept)));
   }
 
   @override
@@ -2864,14 +2894,14 @@ class _$_CodeSystemConcept implements _CodeSystemConcept {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(code) ^
+      const DeepCollectionEquality().hash(codeElement) ^
       const DeepCollectionEquality().hash(display) ^
+      const DeepCollectionEquality().hash(displayElement) ^
       const DeepCollectionEquality().hash(definition) ^
+      const DeepCollectionEquality().hash(definitionElement) ^
       const DeepCollectionEquality().hash(designation) ^
       const DeepCollectionEquality().hash(property) ^
-      const DeepCollectionEquality().hash(concept) ^
-      const DeepCollectionEquality().hash(codeElement) ^
-      const DeepCollectionEquality().hash(displayElement) ^
-      const DeepCollectionEquality().hash(definitionElement);
+      const DeepCollectionEquality().hash(concept);
 
   @override
   _$CodeSystemConceptCopyWith<_CodeSystemConcept> get copyWith =>
@@ -2883,21 +2913,21 @@ class _$_CodeSystemConcept implements _CodeSystemConcept {
   }
 }
 
-abstract class _CodeSystemConcept implements CodeSystemConcept {
-  const factory _CodeSystemConcept(
-          {String id,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          List<FhirExtension> modifierExtension,
-          Code code,
-          String display,
-          String definition,
-          List<CodeSystemDesignation> designation,
-          List<CodeSystemProperty1> property,
-          List<CodeSystemConcept> concept,
-          @JsonKey(name: '_code') Element codeElement,
-          @JsonKey(name: '_display') Element displayElement,
-          @JsonKey(name: '_definition') Element definitionElement}) =
-      _$_CodeSystemConcept;
+abstract class _CodeSystemConcept extends CodeSystemConcept {
+  _CodeSystemConcept._() : super._();
+  factory _CodeSystemConcept(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Code code,
+      @JsonKey(name: '_code') Element codeElement,
+      String display,
+      @JsonKey(name: '_display') Element displayElement,
+      String definition,
+      @JsonKey(name: '_definition') Element definitionElement,
+      List<CodeSystemDesignation> designation,
+      List<CodeSystemProperty1> property,
+      List<CodeSystemConcept> concept}) = _$_CodeSystemConcept;
 
   factory _CodeSystemConcept.fromJson(Map<String, dynamic> json) =
       _$_CodeSystemConcept.fromJson;
@@ -2912,24 +2942,24 @@ abstract class _CodeSystemConcept implements CodeSystemConcept {
   @override
   Code get code;
   @override
+  @JsonKey(name: '_code')
+  Element get codeElement;
+  @override
   String get display;
   @override
+  @JsonKey(name: '_display')
+  Element get displayElement;
+  @override
   String get definition;
+  @override
+  @JsonKey(name: '_definition')
+  Element get definitionElement;
   @override
   List<CodeSystemDesignation> get designation;
   @override
   List<CodeSystemProperty1> get property;
   @override
   List<CodeSystemConcept> get concept;
-  @override
-  @JsonKey(name: '_code')
-  Element get codeElement;
-  @override
-  @JsonKey(name: '_display')
-  Element get displayElement;
-  @override
-  @JsonKey(name: '_definition')
-  Element get definitionElement;
   @override
   _$CodeSystemConceptCopyWith<_CodeSystemConcept> get copyWith;
 }
@@ -2947,18 +2977,18 @@ class _$CodeSystemDesignationTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Coding use,
       String value,
-      @JsonKey(name: '_language') Element languageElement,
       @JsonKey(name: '_value') Element valueElement}) {
     return _CodeSystemDesignation(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       language: language,
+      languageElement: languageElement,
       use: use,
       value: value,
-      languageElement: languageElement,
       valueElement: valueElement,
     );
   }
@@ -2973,10 +3003,10 @@ mixin _$CodeSystemDesignation {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   Code get language;
-  Coding get use;
-  String get value;
   @JsonKey(name: '_language')
   Element get languageElement;
+  Coding get use;
+  String get value;
   @JsonKey(name: '_value')
   Element get valueElement;
 
@@ -2993,13 +3023,13 @@ abstract class $CodeSystemDesignationCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Coding use,
       String value,
-      @JsonKey(name: '_language') Element languageElement,
       @JsonKey(name: '_value') Element valueElement});
 
-  $CodingCopyWith<$Res> get use;
   $ElementCopyWith<$Res> get languageElement;
+  $CodingCopyWith<$Res> get use;
   $ElementCopyWith<$Res> get valueElement;
 }
 
@@ -3017,9 +3047,9 @@ class _$CodeSystemDesignationCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object use = freezed,
     Object value = freezed,
-    Object languageElement = freezed,
     Object valueElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -3031,25 +3061,15 @@ class _$CodeSystemDesignationCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       language: language == freezed ? _value.language : language as Code,
-      use: use == freezed ? _value.use : use as Coding,
-      value: value == freezed ? _value.value : value as String,
       languageElement: languageElement == freezed
           ? _value.languageElement
           : languageElement as Element,
+      use: use == freezed ? _value.use : use as Coding,
+      value: value == freezed ? _value.value : value as String,
       valueElement: valueElement == freezed
           ? _value.valueElement
           : valueElement as Element,
     ));
-  }
-
-  @override
-  $CodingCopyWith<$Res> get use {
-    if (_value.use == null) {
-      return null;
-    }
-    return $CodingCopyWith<$Res>(_value.use, (value) {
-      return _then(_value.copyWith(use: value));
-    });
   }
 
   @override
@@ -3059,6 +3079,16 @@ class _$CodeSystemDesignationCopyWithImpl<$Res>
     }
     return $ElementCopyWith<$Res>(_value.languageElement, (value) {
       return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $CodingCopyWith<$Res> get use {
+    if (_value.use == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.use, (value) {
+      return _then(_value.copyWith(use: value));
     });
   }
 
@@ -3084,15 +3114,15 @@ abstract class _$CodeSystemDesignationCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Coding use,
       String value,
-      @JsonKey(name: '_language') Element languageElement,
       @JsonKey(name: '_value') Element valueElement});
 
   @override
-  $CodingCopyWith<$Res> get use;
-  @override
   $ElementCopyWith<$Res> get languageElement;
+  @override
+  $CodingCopyWith<$Res> get use;
   @override
   $ElementCopyWith<$Res> get valueElement;
 }
@@ -3113,9 +3143,9 @@ class __$CodeSystemDesignationCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object use = freezed,
     Object value = freezed,
-    Object languageElement = freezed,
     Object valueElement = freezed,
   }) {
     return _then(_CodeSystemDesignation(
@@ -3127,11 +3157,11 @@ class __$CodeSystemDesignationCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       language: language == freezed ? _value.language : language as Code,
-      use: use == freezed ? _value.use : use as Coding,
-      value: value == freezed ? _value.value : value as String,
       languageElement: languageElement == freezed
           ? _value.languageElement
           : languageElement as Element,
+      use: use == freezed ? _value.use : use as Coding,
+      value: value == freezed ? _value.value : value as String,
       valueElement: valueElement == freezed
           ? _value.valueElement
           : valueElement as Element,
@@ -3140,16 +3170,17 @@ class __$CodeSystemDesignationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_CodeSystemDesignation implements _CodeSystemDesignation {
-  const _$_CodeSystemDesignation(
+class _$_CodeSystemDesignation extends _CodeSystemDesignation {
+  _$_CodeSystemDesignation(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.language,
+      @JsonKey(name: '_language') this.languageElement,
       this.use,
       this.value,
-      @JsonKey(name: '_language') this.languageElement,
-      @JsonKey(name: '_value') this.valueElement});
+      @JsonKey(name: '_value') this.valueElement})
+      : super._();
 
   factory _$_CodeSystemDesignation.fromJson(Map<String, dynamic> json) =>
       _$_$_CodeSystemDesignationFromJson(json);
@@ -3164,19 +3195,19 @@ class _$_CodeSystemDesignation implements _CodeSystemDesignation {
   @override
   final Code language;
   @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
   final Coding use;
   @override
   final String value;
-  @override
-  @JsonKey(name: '_language')
-  final Element languageElement;
   @override
   @JsonKey(name: '_value')
   final Element valueElement;
 
   @override
   String toString() {
-    return 'CodeSystemDesignation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, language: $language, use: $use, value: $value, languageElement: $languageElement, valueElement: $valueElement)';
+    return 'CodeSystemDesignation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, language: $language, languageElement: $languageElement, use: $use, value: $value, valueElement: $valueElement)';
   }
 
   @override
@@ -3194,13 +3225,13 @@ class _$_CodeSystemDesignation implements _CodeSystemDesignation {
             (identical(other.language, language) ||
                 const DeepCollectionEquality()
                     .equals(other.language, language)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
             (identical(other.use, use) ||
                 const DeepCollectionEquality().equals(other.use, use)) &&
             (identical(other.value, value) ||
                 const DeepCollectionEquality().equals(other.value, value)) &&
-            (identical(other.languageElement, languageElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.languageElement, languageElement)) &&
             (identical(other.valueElement, valueElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueElement, valueElement)));
@@ -3213,9 +3244,9 @@ class _$_CodeSystemDesignation implements _CodeSystemDesignation {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(use) ^
       const DeepCollectionEquality().hash(value) ^
-      const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(valueElement);
 
   @override
@@ -3229,15 +3260,16 @@ class _$_CodeSystemDesignation implements _CodeSystemDesignation {
   }
 }
 
-abstract class _CodeSystemDesignation implements CodeSystemDesignation {
-  const factory _CodeSystemDesignation(
+abstract class _CodeSystemDesignation extends CodeSystemDesignation {
+  _CodeSystemDesignation._() : super._();
+  factory _CodeSystemDesignation(
           {String id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
           Code language,
+          @JsonKey(name: '_language') Element languageElement,
           Coding use,
           String value,
-          @JsonKey(name: '_language') Element languageElement,
           @JsonKey(name: '_value') Element valueElement}) =
       _$_CodeSystemDesignation;
 
@@ -3254,12 +3286,12 @@ abstract class _CodeSystemDesignation implements CodeSystemDesignation {
   @override
   Code get language;
   @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
   Coding get use;
   @override
   String get value;
-  @override
-  @JsonKey(name: '_language')
-  Element get languageElement;
   @override
   @JsonKey(name: '_value')
   Element get valueElement;
@@ -3279,38 +3311,38 @@ class _$CodeSystemProperty1TearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code code,
+      @JsonKey(name: '_code') Element codeElement,
       Code valueCode,
+      @JsonKey(name: '_valueCode') Element valueCodeElement,
       Coding valueCoding,
       String valueString,
-      Integer valueInteger,
-      Boolean valueBoolean,
-      FhirDateTime valueDateTime,
-      Decimal valueDecimal,
-      @JsonKey(name: '_code') Element codeElement,
-      @JsonKey(name: '_valueCode') Element valueCodeElement,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement}) {
     return _CodeSystemProperty1(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       code: code,
+      codeElement: codeElement,
       valueCode: valueCode,
+      valueCodeElement: valueCodeElement,
       valueCoding: valueCoding,
       valueString: valueString,
-      valueInteger: valueInteger,
-      valueBoolean: valueBoolean,
-      valueDateTime: valueDateTime,
-      valueDecimal: valueDecimal,
-      codeElement: codeElement,
-      valueCodeElement: valueCodeElement,
       valueStringElement: valueStringElement,
+      valueInteger: valueInteger,
       valueIntegerElement: valueIntegerElement,
+      valueBoolean: valueBoolean,
       valueBooleanElement: valueBooleanElement,
+      valueDateTime: valueDateTime,
       valueDateTimeElement: valueDateTimeElement,
+      valueDecimal: valueDecimal,
       valueDecimalElement: valueDecimalElement,
     );
   }
@@ -3325,25 +3357,25 @@ mixin _$CodeSystemProperty1 {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   Code get code;
-  Code get valueCode;
-  Coding get valueCoding;
-  String get valueString;
-  Integer get valueInteger;
-  Boolean get valueBoolean;
-  FhirDateTime get valueDateTime;
-  Decimal get valueDecimal;
   @JsonKey(name: '_code')
   Element get codeElement;
+  Code get valueCode;
   @JsonKey(name: '_valueCode')
   Element get valueCodeElement;
+  Coding get valueCoding;
+  String get valueString;
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
+  Integer get valueInteger;
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
+  Boolean get valueBoolean;
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
+  FhirDateTime get valueDateTime;
   @JsonKey(name: '_valueDateTime')
   Element get valueDateTimeElement;
+  Decimal get valueDecimal;
   @JsonKey(name: '_valueDecimal')
   Element get valueDecimalElement;
 
@@ -3360,24 +3392,24 @@ abstract class $CodeSystemProperty1CopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code code,
+      @JsonKey(name: '_code') Element codeElement,
       Code valueCode,
+      @JsonKey(name: '_valueCode') Element valueCodeElement,
       Coding valueCoding,
       String valueString,
-      Integer valueInteger,
-      Boolean valueBoolean,
-      FhirDateTime valueDateTime,
-      Decimal valueDecimal,
-      @JsonKey(name: '_code') Element codeElement,
-      @JsonKey(name: '_valueCode') Element valueCodeElement,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement});
 
-  $CodingCopyWith<$Res> get valueCoding;
   $ElementCopyWith<$Res> get codeElement;
   $ElementCopyWith<$Res> get valueCodeElement;
+  $CodingCopyWith<$Res> get valueCoding;
   $ElementCopyWith<$Res> get valueStringElement;
   $ElementCopyWith<$Res> get valueIntegerElement;
   $ElementCopyWith<$Res> get valueBooleanElement;
@@ -3399,19 +3431,19 @@ class _$CodeSystemProperty1CopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object code = freezed,
+    Object codeElement = freezed,
     Object valueCode = freezed,
+    Object valueCodeElement = freezed,
     Object valueCoding = freezed,
     Object valueString = freezed,
-    Object valueInteger = freezed,
-    Object valueBoolean = freezed,
-    Object valueDateTime = freezed,
-    Object valueDecimal = freezed,
-    Object codeElement = freezed,
-    Object valueCodeElement = freezed,
     Object valueStringElement = freezed,
+    Object valueInteger = freezed,
     Object valueIntegerElement = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
+    Object valueDateTime = freezed,
     Object valueDateTimeElement = freezed,
+    Object valueDecimal = freezed,
     Object valueDecimalElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -3423,54 +3455,44 @@ class _$CodeSystemProperty1CopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       code: code == freezed ? _value.code : code as Code,
+      codeElement:
+          codeElement == freezed ? _value.codeElement : codeElement as Element,
       valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
+      valueCodeElement: valueCodeElement == freezed
+          ? _value.valueCodeElement
+          : valueCodeElement as Element,
       valueCoding:
           valueCoding == freezed ? _value.valueCoding : valueCoding as Coding,
       valueString:
           valueString == freezed ? _value.valueString : valueString as String,
-      valueInteger: valueInteger == freezed
-          ? _value.valueInteger
-          : valueInteger as Integer,
-      valueBoolean: valueBoolean == freezed
-          ? _value.valueBoolean
-          : valueBoolean as Boolean,
-      valueDateTime: valueDateTime == freezed
-          ? _value.valueDateTime
-          : valueDateTime as FhirDateTime,
-      valueDecimal: valueDecimal == freezed
-          ? _value.valueDecimal
-          : valueDecimal as Decimal,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element,
-      valueCodeElement: valueCodeElement == freezed
-          ? _value.valueCodeElement
-          : valueCodeElement as Element,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger as Integer,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement as Element,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime as FhirDateTime,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement as Element,
+      valueDecimal: valueDecimal == freezed
+          ? _value.valueDecimal
+          : valueDecimal as Decimal,
       valueDecimalElement: valueDecimalElement == freezed
           ? _value.valueDecimalElement
           : valueDecimalElement as Element,
     ));
-  }
-
-  @override
-  $CodingCopyWith<$Res> get valueCoding {
-    if (_value.valueCoding == null) {
-      return null;
-    }
-    return $CodingCopyWith<$Res>(_value.valueCoding, (value) {
-      return _then(_value.copyWith(valueCoding: value));
-    });
   }
 
   @override
@@ -3490,6 +3512,16 @@ class _$CodeSystemProperty1CopyWithImpl<$Res>
     }
     return $ElementCopyWith<$Res>(_value.valueCodeElement, (value) {
       return _then(_value.copyWith(valueCodeElement: value));
+    });
+  }
+
+  @override
+  $CodingCopyWith<$Res> get valueCoding {
+    if (_value.valueCoding == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.valueCoding, (value) {
+      return _then(_value.copyWith(valueCoding: value));
     });
   }
 
@@ -3555,27 +3587,27 @@ abstract class _$CodeSystemProperty1CopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code code,
+      @JsonKey(name: '_code') Element codeElement,
       Code valueCode,
+      @JsonKey(name: '_valueCode') Element valueCodeElement,
       Coding valueCoding,
       String valueString,
-      Integer valueInteger,
-      Boolean valueBoolean,
-      FhirDateTime valueDateTime,
-      Decimal valueDecimal,
-      @JsonKey(name: '_code') Element codeElement,
-      @JsonKey(name: '_valueCode') Element valueCodeElement,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement});
 
-  @override
-  $CodingCopyWith<$Res> get valueCoding;
   @override
   $ElementCopyWith<$Res> get codeElement;
   @override
   $ElementCopyWith<$Res> get valueCodeElement;
+  @override
+  $CodingCopyWith<$Res> get valueCoding;
   @override
   $ElementCopyWith<$Res> get valueStringElement;
   @override
@@ -3604,19 +3636,19 @@ class __$CodeSystemProperty1CopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object code = freezed,
+    Object codeElement = freezed,
     Object valueCode = freezed,
+    Object valueCodeElement = freezed,
     Object valueCoding = freezed,
     Object valueString = freezed,
-    Object valueInteger = freezed,
-    Object valueBoolean = freezed,
-    Object valueDateTime = freezed,
-    Object valueDecimal = freezed,
-    Object codeElement = freezed,
-    Object valueCodeElement = freezed,
     Object valueStringElement = freezed,
+    Object valueInteger = freezed,
     Object valueIntegerElement = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
+    Object valueDateTime = freezed,
     Object valueDateTimeElement = freezed,
+    Object valueDecimal = freezed,
     Object valueDecimalElement = freezed,
   }) {
     return _then(_CodeSystemProperty1(
@@ -3628,40 +3660,40 @@ class __$CodeSystemProperty1CopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       code: code == freezed ? _value.code : code as Code,
+      codeElement:
+          codeElement == freezed ? _value.codeElement : codeElement as Element,
       valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
+      valueCodeElement: valueCodeElement == freezed
+          ? _value.valueCodeElement
+          : valueCodeElement as Element,
       valueCoding:
           valueCoding == freezed ? _value.valueCoding : valueCoding as Coding,
       valueString:
           valueString == freezed ? _value.valueString : valueString as String,
-      valueInteger: valueInteger == freezed
-          ? _value.valueInteger
-          : valueInteger as Integer,
-      valueBoolean: valueBoolean == freezed
-          ? _value.valueBoolean
-          : valueBoolean as Boolean,
-      valueDateTime: valueDateTime == freezed
-          ? _value.valueDateTime
-          : valueDateTime as FhirDateTime,
-      valueDecimal: valueDecimal == freezed
-          ? _value.valueDecimal
-          : valueDecimal as Decimal,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element,
-      valueCodeElement: valueCodeElement == freezed
-          ? _value.valueCodeElement
-          : valueCodeElement as Element,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger as Integer,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement as Element,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime as FhirDateTime,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement as Element,
+      valueDecimal: valueDecimal == freezed
+          ? _value.valueDecimal
+          : valueDecimal as Decimal,
       valueDecimalElement: valueDecimalElement == freezed
           ? _value.valueDecimalElement
           : valueDecimalElement as Element,
@@ -3670,26 +3702,27 @@ class __$CodeSystemProperty1CopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_CodeSystemProperty1 implements _CodeSystemProperty1 {
-  const _$_CodeSystemProperty1(
+class _$_CodeSystemProperty1 extends _CodeSystemProperty1 {
+  _$_CodeSystemProperty1(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.code,
+      @JsonKey(name: '_code') this.codeElement,
       this.valueCode,
+      @JsonKey(name: '_valueCode') this.valueCodeElement,
       this.valueCoding,
       this.valueString,
-      this.valueInteger,
-      this.valueBoolean,
-      this.valueDateTime,
-      this.valueDecimal,
-      @JsonKey(name: '_code') this.codeElement,
-      @JsonKey(name: '_valueCode') this.valueCodeElement,
       @JsonKey(name: '_valueString') this.valueStringElement,
+      this.valueInteger,
       @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+      this.valueBoolean,
       @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+      this.valueDateTime,
       @JsonKey(name: '_valueDateTime') this.valueDateTimeElement,
-      @JsonKey(name: '_valueDecimal') this.valueDecimalElement});
+      this.valueDecimal,
+      @JsonKey(name: '_valueDecimal') this.valueDecimalElement})
+      : super._();
 
   factory _$_CodeSystemProperty1.fromJson(Map<String, dynamic> json) =>
       _$_$_CodeSystemProperty1FromJson(json);
@@ -3704,44 +3737,44 @@ class _$_CodeSystemProperty1 implements _CodeSystemProperty1 {
   @override
   final Code code;
   @override
+  @JsonKey(name: '_code')
+  final Element codeElement;
+  @override
   final Code valueCode;
+  @override
+  @JsonKey(name: '_valueCode')
+  final Element valueCodeElement;
   @override
   final Coding valueCoding;
   @override
   final String valueString;
   @override
-  final Integer valueInteger;
-  @override
-  final Boolean valueBoolean;
-  @override
-  final FhirDateTime valueDateTime;
-  @override
-  final Decimal valueDecimal;
-  @override
-  @JsonKey(name: '_code')
-  final Element codeElement;
-  @override
-  @JsonKey(name: '_valueCode')
-  final Element valueCodeElement;
-  @override
   @JsonKey(name: '_valueString')
   final Element valueStringElement;
+  @override
+  final Integer valueInteger;
   @override
   @JsonKey(name: '_valueInteger')
   final Element valueIntegerElement;
   @override
+  final Boolean valueBoolean;
+  @override
   @JsonKey(name: '_valueBoolean')
   final Element valueBooleanElement;
   @override
+  final FhirDateTime valueDateTime;
+  @override
   @JsonKey(name: '_valueDateTime')
   final Element valueDateTimeElement;
+  @override
+  final Decimal valueDecimal;
   @override
   @JsonKey(name: '_valueDecimal')
   final Element valueDecimalElement;
 
   @override
   String toString() {
-    return 'CodeSystemProperty1(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, valueCode: $valueCode, valueCoding: $valueCoding, valueString: $valueString, valueInteger: $valueInteger, valueBoolean: $valueBoolean, valueDateTime: $valueDateTime, valueDecimal: $valueDecimal, codeElement: $codeElement, valueCodeElement: $valueCodeElement, valueStringElement: $valueStringElement, valueIntegerElement: $valueIntegerElement, valueBooleanElement: $valueBooleanElement, valueDateTimeElement: $valueDateTimeElement, valueDecimalElement: $valueDecimalElement)';
+    return 'CodeSystemProperty1(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, codeElement: $codeElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueCoding: $valueCoding, valueString: $valueString, valueStringElement: $valueStringElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement)';
   }
 
   @override
@@ -3758,45 +3791,45 @@ class _$_CodeSystemProperty1 implements _CodeSystemProperty1 {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.code, code) ||
                 const DeepCollectionEquality().equals(other.code, code)) &&
+            (identical(other.codeElement, codeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.codeElement, codeElement)) &&
             (identical(other.valueCode, valueCode) ||
                 const DeepCollectionEquality()
                     .equals(other.valueCode, valueCode)) &&
+            (identical(other.valueCodeElement, valueCodeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueCodeElement, valueCodeElement)) &&
             (identical(other.valueCoding, valueCoding) ||
                 const DeepCollectionEquality()
                     .equals(other.valueCoding, valueCoding)) &&
             (identical(other.valueString, valueString) ||
                 const DeepCollectionEquality()
                     .equals(other.valueString, valueString)) &&
-            (identical(other.valueInteger, valueInteger) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueInteger, valueInteger)) &&
-            (identical(other.valueBoolean, valueBoolean) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueBoolean, valueBoolean)) &&
-            (identical(other.valueDateTime, valueDateTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueDateTime, valueDateTime)) &&
-            (identical(other.valueDecimal, valueDecimal) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueDecimal, valueDecimal)) &&
-            (identical(other.codeElement, codeElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.codeElement, codeElement)) &&
-            (identical(other.valueCodeElement, valueCodeElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueCodeElement, valueCodeElement)) &&
             (identical(other.valueStringElement, valueStringElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueStringElement, valueStringElement)) &&
+            (identical(other.valueInteger, valueInteger) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueInteger, valueInteger)) &&
             (identical(other.valueIntegerElement, valueIntegerElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueIntegerElement, valueIntegerElement)) &&
+            (identical(other.valueBoolean, valueBoolean) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBoolean, valueBoolean)) &&
             (identical(other.valueBooleanElement, valueBooleanElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueBooleanElement, valueBooleanElement)) &&
+            (identical(other.valueDateTime, valueDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDateTime, valueDateTime)) &&
             (identical(other.valueDateTimeElement, valueDateTimeElement) ||
                 const DeepCollectionEquality().equals(
                     other.valueDateTimeElement, valueDateTimeElement)) &&
+            (identical(other.valueDecimal, valueDecimal) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDecimal, valueDecimal)) &&
             (identical(other.valueDecimalElement, valueDecimalElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueDecimalElement, valueDecimalElement)));
@@ -3809,19 +3842,19 @@ class _$_CodeSystemProperty1 implements _CodeSystemProperty1 {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(code) ^
+      const DeepCollectionEquality().hash(codeElement) ^
       const DeepCollectionEquality().hash(valueCode) ^
+      const DeepCollectionEquality().hash(valueCodeElement) ^
       const DeepCollectionEquality().hash(valueCoding) ^
       const DeepCollectionEquality().hash(valueString) ^
-      const DeepCollectionEquality().hash(valueInteger) ^
-      const DeepCollectionEquality().hash(valueBoolean) ^
-      const DeepCollectionEquality().hash(valueDateTime) ^
-      const DeepCollectionEquality().hash(valueDecimal) ^
-      const DeepCollectionEquality().hash(codeElement) ^
-      const DeepCollectionEquality().hash(valueCodeElement) ^
       const DeepCollectionEquality().hash(valueStringElement) ^
+      const DeepCollectionEquality().hash(valueInteger) ^
       const DeepCollectionEquality().hash(valueIntegerElement) ^
+      const DeepCollectionEquality().hash(valueBoolean) ^
       const DeepCollectionEquality().hash(valueBooleanElement) ^
+      const DeepCollectionEquality().hash(valueDateTime) ^
       const DeepCollectionEquality().hash(valueDateTimeElement) ^
+      const DeepCollectionEquality().hash(valueDecimal) ^
       const DeepCollectionEquality().hash(valueDecimalElement);
 
   @override
@@ -3835,25 +3868,26 @@ class _$_CodeSystemProperty1 implements _CodeSystemProperty1 {
   }
 }
 
-abstract class _CodeSystemProperty1 implements CodeSystemProperty1 {
-  const factory _CodeSystemProperty1(
+abstract class _CodeSystemProperty1 extends CodeSystemProperty1 {
+  _CodeSystemProperty1._() : super._();
+  factory _CodeSystemProperty1(
           {String id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
           Code code,
+          @JsonKey(name: '_code') Element codeElement,
           Code valueCode,
+          @JsonKey(name: '_valueCode') Element valueCodeElement,
           Coding valueCoding,
           String valueString,
-          Integer valueInteger,
-          Boolean valueBoolean,
-          FhirDateTime valueDateTime,
-          Decimal valueDecimal,
-          @JsonKey(name: '_code') Element codeElement,
-          @JsonKey(name: '_valueCode') Element valueCodeElement,
           @JsonKey(name: '_valueString') Element valueStringElement,
+          Integer valueInteger,
           @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+          Boolean valueBoolean,
           @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+          FhirDateTime valueDateTime,
           @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+          Decimal valueDecimal,
           @JsonKey(name: '_valueDecimal') Element valueDecimalElement}) =
       _$_CodeSystemProperty1;
 
@@ -3870,37 +3904,37 @@ abstract class _CodeSystemProperty1 implements CodeSystemProperty1 {
   @override
   Code get code;
   @override
+  @JsonKey(name: '_code')
+  Element get codeElement;
+  @override
   Code get valueCode;
+  @override
+  @JsonKey(name: '_valueCode')
+  Element get valueCodeElement;
   @override
   Coding get valueCoding;
   @override
   String get valueString;
   @override
-  Integer get valueInteger;
-  @override
-  Boolean get valueBoolean;
-  @override
-  FhirDateTime get valueDateTime;
-  @override
-  Decimal get valueDecimal;
-  @override
-  @JsonKey(name: '_code')
-  Element get codeElement;
-  @override
-  @JsonKey(name: '_valueCode')
-  Element get valueCodeElement;
-  @override
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
+  @override
+  Integer get valueInteger;
   @override
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
   @override
+  Boolean get valueBoolean;
+  @override
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
   @override
+  FhirDateTime get valueDateTime;
+  @override
   @JsonKey(name: '_valueDateTime')
   Element get valueDateTimeElement;
+  @override
+  Decimal get valueDecimal;
   @override
   @JsonKey(name: '_valueDecimal')
   Element get valueDecimalElement;
@@ -3917,119 +3951,119 @@ class _$ConceptMapTearOff {
 
   _ConceptMap call(
       {@required
-      @JsonKey(required: true, defaultValue: 'ConceptMap')
+      @JsonKey(defaultValue: 'ConceptMap')
           String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri url,
+      @JsonKey(name: '_url')
+          Element urlElement,
       Identifier identifier,
       String version,
+      @JsonKey(name: '_version')
+          Element versionElement,
       String name,
+      @JsonKey(name: '_name')
+          Element nameElement,
       String title,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
+          ConceptMapStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Boolean experimental,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
       FhirDateTime date,
+      @JsonKey(name: '_date')
+          Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
       List<ContactDetail> contact,
       Markdown description,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Markdown purpose,
-      Markdown copyright,
-      FhirUri sourceUri,
-      Canonical sourceCanonical,
-      FhirUri targetUri,
-      Canonical targetCanonical,
-      List<ConceptMapGroup> group,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      @JsonKey(name: '_language')
-          Element languageElement,
-      @JsonKey(name: '_url')
-          Element urlElement,
-      @JsonKey(name: '_version')
-          Element versionElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
       @JsonKey(name: '_purpose')
           Element purposeElement,
+      Markdown copyright,
       @JsonKey(name: '_copyright')
           Element copyrightElement,
+      FhirUri sourceUri,
       @JsonKey(name: '_sourceUri')
           Element sourceUriElement,
+      Canonical sourceCanonical,
       @JsonKey(name: '_sourceCanonical')
           Element sourceCanonicalElement,
+      FhirUri targetUri,
       @JsonKey(name: '_targetUri')
           Element targetUriElement,
+      Canonical targetCanonical,
       @JsonKey(name: '_targetCanonical')
-          Element targetCanonicalElement}) {
+          Element targetCanonicalElement,
+      List<ConceptMapGroup> group}) {
     return _ConceptMap(
       resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
+      implicitRulesElement: implicitRulesElement,
       language: language,
+      languageElement: languageElement,
       text: text,
       contained: contained,
       extension_: extension_,
       modifierExtension: modifierExtension,
       url: url,
+      urlElement: urlElement,
       identifier: identifier,
       version: version,
+      versionElement: versionElement,
       name: name,
+      nameElement: nameElement,
       title: title,
+      titleElement: titleElement,
       status: status,
+      statusElement: statusElement,
       experimental: experimental,
+      experimentalElement: experimentalElement,
       date: date,
+      dateElement: dateElement,
       publisher: publisher,
+      publisherElement: publisherElement,
       contact: contact,
       description: description,
+      descriptionElement: descriptionElement,
       useContext: useContext,
       jurisdiction: jurisdiction,
       purpose: purpose,
-      copyright: copyright,
-      sourceUri: sourceUri,
-      sourceCanonical: sourceCanonical,
-      targetUri: targetUri,
-      targetCanonical: targetCanonical,
-      group: group,
-      implicitRulesElement: implicitRulesElement,
-      languageElement: languageElement,
-      urlElement: urlElement,
-      versionElement: versionElement,
-      nameElement: nameElement,
-      titleElement: titleElement,
-      statusElement: statusElement,
-      experimentalElement: experimentalElement,
-      dateElement: dateElement,
-      publisherElement: publisherElement,
-      descriptionElement: descriptionElement,
       purposeElement: purposeElement,
+      copyright: copyright,
       copyrightElement: copyrightElement,
+      sourceUri: sourceUri,
       sourceUriElement: sourceUriElement,
+      sourceCanonical: sourceCanonical,
       sourceCanonicalElement: sourceCanonicalElement,
+      targetUri: targetUri,
       targetUriElement: targetUriElement,
+      targetCanonical: targetCanonical,
       targetCanonicalElement: targetCanonicalElement,
+      group: group,
     );
   }
 }
@@ -4038,72 +4072,72 @@ class _$ConceptMapTearOff {
 const $ConceptMap = _$ConceptMapTearOff();
 
 mixin _$ConceptMap {
-  @JsonKey(required: true, defaultValue: 'ConceptMap')
+  @JsonKey(defaultValue: 'ConceptMap')
   String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
   Code get language;
+  @JsonKey(name: '_language')
+  Element get languageElement;
   Narrative get text;
   List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   FhirUri get url;
+  @JsonKey(name: '_url')
+  Element get urlElement;
   Identifier get identifier;
   String get version;
+  @JsonKey(name: '_version')
+  Element get versionElement;
   String get name;
+  @JsonKey(name: '_name')
+  Element get nameElement;
   String get title;
-  @JsonKey(unknownEnumValue: Status.unknown)
-  Status get status;
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
+  ConceptMapStatus get status;
+  @JsonKey(name: '_status')
+  Element get statusElement;
   Boolean get experimental;
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
   FhirDateTime get date;
+  @JsonKey(name: '_date')
+  Element get dateElement;
   String get publisher;
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
   List<ContactDetail> get contact;
   Markdown get description;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
   List<UsageContext> get useContext;
   List<CodeableConcept> get jurisdiction;
   Markdown get purpose;
-  Markdown get copyright;
-  FhirUri get sourceUri;
-  Canonical get sourceCanonical;
-  FhirUri get targetUri;
-  Canonical get targetCanonical;
-  List<ConceptMapGroup> get group;
-  @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  @JsonKey(name: '_language')
-  Element get languageElement;
-  @JsonKey(name: '_url')
-  Element get urlElement;
-  @JsonKey(name: '_version')
-  Element get versionElement;
-  @JsonKey(name: '_name')
-  Element get nameElement;
-  @JsonKey(name: '_title')
-  Element get titleElement;
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @JsonKey(name: '_experimental')
-  Element get experimentalElement;
-  @JsonKey(name: '_date')
-  Element get dateElement;
-  @JsonKey(name: '_publisher')
-  Element get publisherElement;
-  @JsonKey(name: '_description')
-  Element get descriptionElement;
   @JsonKey(name: '_purpose')
   Element get purposeElement;
+  Markdown get copyright;
   @JsonKey(name: '_copyright')
   Element get copyrightElement;
+  FhirUri get sourceUri;
   @JsonKey(name: '_sourceUri')
   Element get sourceUriElement;
+  Canonical get sourceCanonical;
   @JsonKey(name: '_sourceCanonical')
   Element get sourceCanonicalElement;
+  FhirUri get targetUri;
   @JsonKey(name: '_targetUri')
   Element get targetUriElement;
+  Canonical get targetCanonical;
   @JsonKey(name: '_targetCanonical')
   Element get targetCanonicalElement;
+  List<ConceptMapGroup> get group;
 
   Map<String, dynamic> toJson();
   $ConceptMapCopyWith<ConceptMap> get copyWith;
@@ -4114,59 +4148,79 @@ abstract class $ConceptMapCopyWith<$Res> {
           ConceptMap value, $Res Function(ConceptMap) then) =
       _$ConceptMapCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'ConceptMap') String resourceType,
+      {@JsonKey(defaultValue: 'ConceptMap')
+          String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri url,
+      @JsonKey(name: '_url')
+          Element urlElement,
       Identifier identifier,
       String version,
+      @JsonKey(name: '_version')
+          Element versionElement,
       String name,
+      @JsonKey(name: '_name')
+          Element nameElement,
       String title,
-      @JsonKey(unknownEnumValue: Status.unknown) Status status,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
+          ConceptMapStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Boolean experimental,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
       FhirDateTime date,
+      @JsonKey(name: '_date')
+          Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
       List<ContactDetail> contact,
       Markdown description,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Markdown purpose,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
       Markdown copyright,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
       FhirUri sourceUri,
+      @JsonKey(name: '_sourceUri')
+          Element sourceUriElement,
       Canonical sourceCanonical,
+      @JsonKey(name: '_sourceCanonical')
+          Element sourceCanonicalElement,
       FhirUri targetUri,
+      @JsonKey(name: '_targetUri')
+          Element targetUriElement,
       Canonical targetCanonical,
-      List<ConceptMapGroup> group,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-      @JsonKey(name: '_language') Element languageElement,
-      @JsonKey(name: '_url') Element urlElement,
-      @JsonKey(name: '_version') Element versionElement,
-      @JsonKey(name: '_name') Element nameElement,
-      @JsonKey(name: '_title') Element titleElement,
-      @JsonKey(name: '_status') Element statusElement,
-      @JsonKey(name: '_experimental') Element experimentalElement,
-      @JsonKey(name: '_date') Element dateElement,
-      @JsonKey(name: '_publisher') Element publisherElement,
-      @JsonKey(name: '_description') Element descriptionElement,
-      @JsonKey(name: '_purpose') Element purposeElement,
-      @JsonKey(name: '_copyright') Element copyrightElement,
-      @JsonKey(name: '_sourceUri') Element sourceUriElement,
-      @JsonKey(name: '_sourceCanonical') Element sourceCanonicalElement,
-      @JsonKey(name: '_targetUri') Element targetUriElement,
-      @JsonKey(name: '_targetCanonical') Element targetCanonicalElement});
+      @JsonKey(name: '_targetCanonical')
+          Element targetCanonicalElement,
+      List<ConceptMapGroup> group});
 
   $MetaCopyWith<$Res> get meta;
-  $NarrativeCopyWith<$Res> get text;
-  $IdentifierCopyWith<$Res> get identifier;
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
+  $NarrativeCopyWith<$Res> get text;
   $ElementCopyWith<$Res> get urlElement;
+  $IdentifierCopyWith<$Res> get identifier;
   $ElementCopyWith<$Res> get versionElement;
   $ElementCopyWith<$Res> get nameElement;
   $ElementCopyWith<$Res> get titleElement;
@@ -4196,48 +4250,48 @@ class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object url = freezed,
+    Object urlElement = freezed,
     Object identifier = freezed,
     Object version = freezed,
+    Object versionElement = freezed,
     Object name = freezed,
+    Object nameElement = freezed,
     Object title = freezed,
+    Object titleElement = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object experimental = freezed,
+    Object experimentalElement = freezed,
     Object date = freezed,
+    Object dateElement = freezed,
     Object publisher = freezed,
+    Object publisherElement = freezed,
     Object contact = freezed,
     Object description = freezed,
+    Object descriptionElement = freezed,
     Object useContext = freezed,
     Object jurisdiction = freezed,
     Object purpose = freezed,
-    Object copyright = freezed,
-    Object sourceUri = freezed,
-    Object sourceCanonical = freezed,
-    Object targetUri = freezed,
-    Object targetCanonical = freezed,
-    Object group = freezed,
-    Object implicitRulesElement = freezed,
-    Object languageElement = freezed,
-    Object urlElement = freezed,
-    Object versionElement = freezed,
-    Object nameElement = freezed,
-    Object titleElement = freezed,
-    Object statusElement = freezed,
-    Object experimentalElement = freezed,
-    Object dateElement = freezed,
-    Object publisherElement = freezed,
-    Object descriptionElement = freezed,
     Object purposeElement = freezed,
+    Object copyright = freezed,
     Object copyrightElement = freezed,
+    Object sourceUri = freezed,
     Object sourceUriElement = freezed,
+    Object sourceCanonical = freezed,
     Object sourceCanonicalElement = freezed,
+    Object targetUri = freezed,
     Object targetUriElement = freezed,
+    Object targetCanonical = freezed,
     Object targetCanonicalElement = freezed,
+    Object group = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -4248,7 +4302,13 @@ class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -4259,21 +4319,45 @@ class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as FhirUri,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       version: version == freezed ? _value.version : version as String,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
       name: name == freezed ? _value.name : name as String,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed ? _value.status : status as Status,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      status: status == freezed ? _value.status : status as ConceptMapStatus,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
       date: date == freezed ? _value.date : date as FhirDateTime,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
       description:
           description == freezed ? _value.description : description as Markdown,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
       useContext: useContext == freezed
           ? _value.useContext
           : useContext as List<UsageContext>,
@@ -4281,65 +4365,35 @@ class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
           ? _value.jurisdiction
           : jurisdiction as List<CodeableConcept>,
       purpose: purpose == freezed ? _value.purpose : purpose as Markdown,
-      copyright:
-          copyright == freezed ? _value.copyright : copyright as Markdown,
-      sourceUri: sourceUri == freezed ? _value.sourceUri : sourceUri as FhirUri,
-      sourceCanonical: sourceCanonical == freezed
-          ? _value.sourceCanonical
-          : sourceCanonical as Canonical,
-      targetUri: targetUri == freezed ? _value.targetUri : targetUri as FhirUri,
-      targetCanonical: targetCanonical == freezed
-          ? _value.targetCanonical
-          : targetCanonical as Canonical,
-      group: group == freezed ? _value.group : group as List<ConceptMapGroup>,
-      implicitRulesElement: implicitRulesElement == freezed
-          ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      languageElement: languageElement == freezed
-          ? _value.languageElement
-          : languageElement as Element,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element,
-      versionElement: versionElement == freezed
-          ? _value.versionElement
-          : versionElement as Element,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      titleElement: titleElement == freezed
-          ? _value.titleElement
-          : titleElement as Element,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      experimentalElement: experimentalElement == freezed
-          ? _value.experimentalElement
-          : experimentalElement as Element,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element,
-      publisherElement: publisherElement == freezed
-          ? _value.publisherElement
-          : publisherElement as Element,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement as Element,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
           : purposeElement as Element,
+      copyright:
+          copyright == freezed ? _value.copyright : copyright as Markdown,
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
           : copyrightElement as Element,
+      sourceUri: sourceUri == freezed ? _value.sourceUri : sourceUri as FhirUri,
       sourceUriElement: sourceUriElement == freezed
           ? _value.sourceUriElement
           : sourceUriElement as Element,
+      sourceCanonical: sourceCanonical == freezed
+          ? _value.sourceCanonical
+          : sourceCanonical as Canonical,
       sourceCanonicalElement: sourceCanonicalElement == freezed
           ? _value.sourceCanonicalElement
           : sourceCanonicalElement as Element,
+      targetUri: targetUri == freezed ? _value.targetUri : targetUri as FhirUri,
       targetUriElement: targetUriElement == freezed
           ? _value.targetUriElement
           : targetUriElement as Element,
+      targetCanonical: targetCanonical == freezed
+          ? _value.targetCanonical
+          : targetCanonical as Canonical,
       targetCanonicalElement: targetCanonicalElement == freezed
           ? _value.targetCanonicalElement
           : targetCanonicalElement as Element,
+      group: group == freezed ? _value.group : group as List<ConceptMapGroup>,
     ));
   }
 
@@ -4350,26 +4404,6 @@ class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
     }
     return $MetaCopyWith<$Res>(_value.meta, (value) {
       return _then(_value.copyWith(meta: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get text {
-    if (_value.text == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.text, (value) {
-      return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
     });
   }
 
@@ -4394,12 +4428,32 @@ class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
   }
 
   @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res> get urlElement {
     if (_value.urlElement == null) {
       return null;
     }
     return $ElementCopyWith<$Res>(_value.urlElement, (value) {
       return _then(_value.copyWith(urlElement: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
     });
   }
 
@@ -4550,65 +4604,85 @@ abstract class _$ConceptMapCopyWith<$Res> implements $ConceptMapCopyWith<$Res> {
       __$ConceptMapCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'ConceptMap') String resourceType,
+      {@JsonKey(defaultValue: 'ConceptMap')
+          String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri url,
+      @JsonKey(name: '_url')
+          Element urlElement,
       Identifier identifier,
       String version,
+      @JsonKey(name: '_version')
+          Element versionElement,
       String name,
+      @JsonKey(name: '_name')
+          Element nameElement,
       String title,
-      @JsonKey(unknownEnumValue: Status.unknown) Status status,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
+          ConceptMapStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Boolean experimental,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
       FhirDateTime date,
+      @JsonKey(name: '_date')
+          Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
       List<ContactDetail> contact,
       Markdown description,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Markdown purpose,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
       Markdown copyright,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
       FhirUri sourceUri,
+      @JsonKey(name: '_sourceUri')
+          Element sourceUriElement,
       Canonical sourceCanonical,
+      @JsonKey(name: '_sourceCanonical')
+          Element sourceCanonicalElement,
       FhirUri targetUri,
+      @JsonKey(name: '_targetUri')
+          Element targetUriElement,
       Canonical targetCanonical,
-      List<ConceptMapGroup> group,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-      @JsonKey(name: '_language') Element languageElement,
-      @JsonKey(name: '_url') Element urlElement,
-      @JsonKey(name: '_version') Element versionElement,
-      @JsonKey(name: '_name') Element nameElement,
-      @JsonKey(name: '_title') Element titleElement,
-      @JsonKey(name: '_status') Element statusElement,
-      @JsonKey(name: '_experimental') Element experimentalElement,
-      @JsonKey(name: '_date') Element dateElement,
-      @JsonKey(name: '_publisher') Element publisherElement,
-      @JsonKey(name: '_description') Element descriptionElement,
-      @JsonKey(name: '_purpose') Element purposeElement,
-      @JsonKey(name: '_copyright') Element copyrightElement,
-      @JsonKey(name: '_sourceUri') Element sourceUriElement,
-      @JsonKey(name: '_sourceCanonical') Element sourceCanonicalElement,
-      @JsonKey(name: '_targetUri') Element targetUriElement,
-      @JsonKey(name: '_targetCanonical') Element targetCanonicalElement});
+      @JsonKey(name: '_targetCanonical')
+          Element targetCanonicalElement,
+      List<ConceptMapGroup> group});
 
   @override
   $MetaCopyWith<$Res> get meta;
-  @override
-  $NarrativeCopyWith<$Res> get text;
-  @override
-  $IdentifierCopyWith<$Res> get identifier;
   @override
   $ElementCopyWith<$Res> get implicitRulesElement;
   @override
   $ElementCopyWith<$Res> get languageElement;
   @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
   $ElementCopyWith<$Res> get urlElement;
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
   @override
   $ElementCopyWith<$Res> get versionElement;
   @override
@@ -4654,48 +4728,48 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object url = freezed,
+    Object urlElement = freezed,
     Object identifier = freezed,
     Object version = freezed,
+    Object versionElement = freezed,
     Object name = freezed,
+    Object nameElement = freezed,
     Object title = freezed,
+    Object titleElement = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object experimental = freezed,
+    Object experimentalElement = freezed,
     Object date = freezed,
+    Object dateElement = freezed,
     Object publisher = freezed,
+    Object publisherElement = freezed,
     Object contact = freezed,
     Object description = freezed,
+    Object descriptionElement = freezed,
     Object useContext = freezed,
     Object jurisdiction = freezed,
     Object purpose = freezed,
-    Object copyright = freezed,
-    Object sourceUri = freezed,
-    Object sourceCanonical = freezed,
-    Object targetUri = freezed,
-    Object targetCanonical = freezed,
-    Object group = freezed,
-    Object implicitRulesElement = freezed,
-    Object languageElement = freezed,
-    Object urlElement = freezed,
-    Object versionElement = freezed,
-    Object nameElement = freezed,
-    Object titleElement = freezed,
-    Object statusElement = freezed,
-    Object experimentalElement = freezed,
-    Object dateElement = freezed,
-    Object publisherElement = freezed,
-    Object descriptionElement = freezed,
     Object purposeElement = freezed,
+    Object copyright = freezed,
     Object copyrightElement = freezed,
+    Object sourceUri = freezed,
     Object sourceUriElement = freezed,
+    Object sourceCanonical = freezed,
     Object sourceCanonicalElement = freezed,
+    Object targetUri = freezed,
     Object targetUriElement = freezed,
+    Object targetCanonical = freezed,
     Object targetCanonicalElement = freezed,
+    Object group = freezed,
   }) {
     return _then(_ConceptMap(
       resourceType: resourceType == freezed
@@ -4706,7 +4780,13 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -4717,21 +4797,45 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as FhirUri,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       version: version == freezed ? _value.version : version as String,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
       name: name == freezed ? _value.name : name as String,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed ? _value.status : status as Status,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      status: status == freezed ? _value.status : status as ConceptMapStatus,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
       date: date == freezed ? _value.date : date as FhirDateTime,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
       description:
           description == freezed ? _value.description : description as Markdown,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
       useContext: useContext == freezed
           ? _value.useContext
           : useContext as List<UsageContext>,
@@ -4739,146 +4843,96 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
           ? _value.jurisdiction
           : jurisdiction as List<CodeableConcept>,
       purpose: purpose == freezed ? _value.purpose : purpose as Markdown,
-      copyright:
-          copyright == freezed ? _value.copyright : copyright as Markdown,
-      sourceUri: sourceUri == freezed ? _value.sourceUri : sourceUri as FhirUri,
-      sourceCanonical: sourceCanonical == freezed
-          ? _value.sourceCanonical
-          : sourceCanonical as Canonical,
-      targetUri: targetUri == freezed ? _value.targetUri : targetUri as FhirUri,
-      targetCanonical: targetCanonical == freezed
-          ? _value.targetCanonical
-          : targetCanonical as Canonical,
-      group: group == freezed ? _value.group : group as List<ConceptMapGroup>,
-      implicitRulesElement: implicitRulesElement == freezed
-          ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      languageElement: languageElement == freezed
-          ? _value.languageElement
-          : languageElement as Element,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element,
-      versionElement: versionElement == freezed
-          ? _value.versionElement
-          : versionElement as Element,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      titleElement: titleElement == freezed
-          ? _value.titleElement
-          : titleElement as Element,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      experimentalElement: experimentalElement == freezed
-          ? _value.experimentalElement
-          : experimentalElement as Element,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element,
-      publisherElement: publisherElement == freezed
-          ? _value.publisherElement
-          : publisherElement as Element,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement as Element,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
           : purposeElement as Element,
+      copyright:
+          copyright == freezed ? _value.copyright : copyright as Markdown,
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
           : copyrightElement as Element,
+      sourceUri: sourceUri == freezed ? _value.sourceUri : sourceUri as FhirUri,
       sourceUriElement: sourceUriElement == freezed
           ? _value.sourceUriElement
           : sourceUriElement as Element,
+      sourceCanonical: sourceCanonical == freezed
+          ? _value.sourceCanonical
+          : sourceCanonical as Canonical,
       sourceCanonicalElement: sourceCanonicalElement == freezed
           ? _value.sourceCanonicalElement
           : sourceCanonicalElement as Element,
+      targetUri: targetUri == freezed ? _value.targetUri : targetUri as FhirUri,
       targetUriElement: targetUriElement == freezed
           ? _value.targetUriElement
           : targetUriElement as Element,
+      targetCanonical: targetCanonical == freezed
+          ? _value.targetCanonical
+          : targetCanonical as Canonical,
       targetCanonicalElement: targetCanonicalElement == freezed
           ? _value.targetCanonicalElement
           : targetCanonicalElement as Element,
+      group: group == freezed ? _value.group : group as List<ConceptMapGroup>,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_ConceptMap implements _ConceptMap {
-  const _$_ConceptMap(
-      {@required
-      @JsonKey(required: true, defaultValue: 'ConceptMap')
-          this.resourceType,
+class _$_ConceptMap extends _ConceptMap {
+  _$_ConceptMap(
+      {@required @JsonKey(defaultValue: 'ConceptMap') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.url,
+      @JsonKey(name: '_url') this.urlElement,
       this.identifier,
       this.version,
+      @JsonKey(name: '_version') this.versionElement,
       this.name,
+      @JsonKey(name: '_name') this.nameElement,
       this.title,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          this.status,
+      @JsonKey(name: '_title') this.titleElement,
+      @JsonKey(unknownEnumValue: ConceptMapStatus.unknown) this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.experimental,
+      @JsonKey(name: '_experimental') this.experimentalElement,
       this.date,
+      @JsonKey(name: '_date') this.dateElement,
       this.publisher,
+      @JsonKey(name: '_publisher') this.publisherElement,
       this.contact,
       this.description,
+      @JsonKey(name: '_description') this.descriptionElement,
       this.useContext,
       this.jurisdiction,
       this.purpose,
+      @JsonKey(name: '_purpose') this.purposeElement,
       this.copyright,
+      @JsonKey(name: '_copyright') this.copyrightElement,
       this.sourceUri,
+      @JsonKey(name: '_sourceUri') this.sourceUriElement,
       this.sourceCanonical,
+      @JsonKey(name: '_sourceCanonical') this.sourceCanonicalElement,
       this.targetUri,
+      @JsonKey(name: '_targetUri') this.targetUriElement,
       this.targetCanonical,
-      this.group,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
-      @JsonKey(name: '_language')
-          this.languageElement,
-      @JsonKey(name: '_url')
-          this.urlElement,
-      @JsonKey(name: '_version')
-          this.versionElement,
-      @JsonKey(name: '_name')
-          this.nameElement,
-      @JsonKey(name: '_title')
-          this.titleElement,
-      @JsonKey(name: '_status')
-          this.statusElement,
-      @JsonKey(name: '_experimental')
-          this.experimentalElement,
-      @JsonKey(name: '_date')
-          this.dateElement,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
-      @JsonKey(name: '_purpose')
-          this.purposeElement,
-      @JsonKey(name: '_copyright')
-          this.copyrightElement,
-      @JsonKey(name: '_sourceUri')
-          this.sourceUriElement,
-      @JsonKey(name: '_sourceCanonical')
-          this.sourceCanonicalElement,
-      @JsonKey(name: '_targetUri')
-          this.targetUriElement,
-      @JsonKey(name: '_targetCanonical')
-          this.targetCanonicalElement})
-      : assert(resourceType != null);
+      @JsonKey(name: '_targetCanonical') this.targetCanonicalElement,
+      this.group})
+      : assert(resourceType != null),
+        super._();
 
   factory _$_ConceptMap.fromJson(Map<String, dynamic> json) =>
       _$_$_ConceptMapFromJson(json);
 
   @override
-  @JsonKey(required: true, defaultValue: 'ConceptMap')
+  @JsonKey(defaultValue: 'ConceptMap')
   final String resourceType;
   @override
   final Id id;
@@ -4887,7 +4941,13 @@ class _$_ConceptMap implements _ConceptMap {
   @override
   final FhirUri implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
   final Code language;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
   @override
   final Narrative text;
   @override
@@ -4900,26 +4960,53 @@ class _$_ConceptMap implements _ConceptMap {
   @override
   final FhirUri url;
   @override
+  @JsonKey(name: '_url')
+  final Element urlElement;
+  @override
   final Identifier identifier;
   @override
   final String version;
   @override
+  @JsonKey(name: '_version')
+  final Element versionElement;
+  @override
   final String name;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
   @override
   final String title;
   @override
-  @JsonKey(unknownEnumValue: Status.unknown)
-  final Status status;
+  @JsonKey(name: '_title')
+  final Element titleElement;
+  @override
+  @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
+  final ConceptMapStatus status;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
   @override
   final Boolean experimental;
   @override
+  @JsonKey(name: '_experimental')
+  final Element experimentalElement;
+  @override
   final FhirDateTime date;
   @override
+  @JsonKey(name: '_date')
+  final Element dateElement;
+  @override
   final String publisher;
+  @override
+  @JsonKey(name: '_publisher')
+  final Element publisherElement;
   @override
   final List<ContactDetail> contact;
   @override
   final Markdown description;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
   @override
   final List<UsageContext> useContext;
   @override
@@ -4927,72 +5014,39 @@ class _$_ConceptMap implements _ConceptMap {
   @override
   final Markdown purpose;
   @override
-  final Markdown copyright;
-  @override
-  final FhirUri sourceUri;
-  @override
-  final Canonical sourceCanonical;
-  @override
-  final FhirUri targetUri;
-  @override
-  final Canonical targetCanonical;
-  @override
-  final List<ConceptMapGroup> group;
-  @override
-  @JsonKey(name: '_implicitRules')
-  final Element implicitRulesElement;
-  @override
-  @JsonKey(name: '_language')
-  final Element languageElement;
-  @override
-  @JsonKey(name: '_url')
-  final Element urlElement;
-  @override
-  @JsonKey(name: '_version')
-  final Element versionElement;
-  @override
-  @JsonKey(name: '_name')
-  final Element nameElement;
-  @override
-  @JsonKey(name: '_title')
-  final Element titleElement;
-  @override
-  @JsonKey(name: '_status')
-  final Element statusElement;
-  @override
-  @JsonKey(name: '_experimental')
-  final Element experimentalElement;
-  @override
-  @JsonKey(name: '_date')
-  final Element dateElement;
-  @override
-  @JsonKey(name: '_publisher')
-  final Element publisherElement;
-  @override
-  @JsonKey(name: '_description')
-  final Element descriptionElement;
-  @override
   @JsonKey(name: '_purpose')
   final Element purposeElement;
+  @override
+  final Markdown copyright;
   @override
   @JsonKey(name: '_copyright')
   final Element copyrightElement;
   @override
+  final FhirUri sourceUri;
+  @override
   @JsonKey(name: '_sourceUri')
   final Element sourceUriElement;
+  @override
+  final Canonical sourceCanonical;
   @override
   @JsonKey(name: '_sourceCanonical')
   final Element sourceCanonicalElement;
   @override
+  final FhirUri targetUri;
+  @override
   @JsonKey(name: '_targetUri')
   final Element targetUriElement;
   @override
+  final Canonical targetCanonical;
+  @override
   @JsonKey(name: '_targetCanonical')
   final Element targetCanonicalElement;
+  @override
+  final List<ConceptMapGroup> group;
 
   @override
   String toString() {
-    return 'ConceptMap(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, copyright: $copyright, sourceUri: $sourceUri, sourceCanonical: $sourceCanonical, targetUri: $targetUri, targetCanonical: $targetCanonical, group: $group, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, copyrightElement: $copyrightElement, sourceUriElement: $sourceUriElement, sourceCanonicalElement: $sourceCanonicalElement, targetUriElement: $targetUriElement, targetCanonicalElement: $targetCanonicalElement)';
+    return 'ConceptMap(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, sourceUri: $sourceUri, sourceUriElement: $sourceUriElement, sourceCanonical: $sourceCanonical, sourceCanonicalElement: $sourceCanonicalElement, targetUri: $targetUri, targetUriElement: $targetUriElement, targetCanonical: $targetCanonical, targetCanonicalElement: $targetCanonicalElement, group: $group)';
   }
 
   @override
@@ -5009,9 +5063,15 @@ class _$_ConceptMap implements _ConceptMap {
             (identical(other.implicitRules, implicitRules) ||
                 const DeepCollectionEquality()
                     .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
             (identical(other.language, language) ||
                 const DeepCollectionEquality()
                     .equals(other.language, language)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
             (identical(other.text, text) ||
                 const DeepCollectionEquality().equals(other.text, text)) &&
             (identical(other.contained, contained) ||
@@ -5025,69 +5085,63 @@ class _$_ConceptMap implements _ConceptMap {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
+            (identical(other.urlElement, urlElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.urlElement, urlElement)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
             (identical(other.version, version) ||
                 const DeepCollectionEquality()
                     .equals(other.version, version)) &&
+            (identical(other.versionElement, versionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.versionElement, versionElement)) &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
             (identical(other.title, title) ||
                 const DeepCollectionEquality().equals(other.title, title)) &&
+            (identical(other.titleElement, titleElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.titleElement, titleElement)) &&
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
             (identical(other.experimental, experimental) ||
                 const DeepCollectionEquality()
                     .equals(other.experimental, experimental)) &&
+            (identical(other.experimentalElement, experimentalElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.experimentalElement, experimentalElement)) &&
             (identical(other.date, date) ||
                 const DeepCollectionEquality().equals(other.date, date)) &&
-            (identical(other.publisher, publisher) ||
-                const DeepCollectionEquality()
-                    .equals(other.publisher, publisher)) &&
-            (identical(other.contact, contact) ||
-                const DeepCollectionEquality()
-                    .equals(other.contact, contact)) &&
-            (identical(other.description, description) ||
-                const DeepCollectionEquality()
-                    .equals(other.description, description)) &&
-            (identical(other.useContext, useContext) ||
-                const DeepCollectionEquality()
-                    .equals(other.useContext, useContext)) &&
-            (identical(other.jurisdiction, jurisdiction) ||
-                const DeepCollectionEquality()
-                    .equals(other.jurisdiction, jurisdiction)) &&
-            (identical(other.purpose, purpose) ||
-                const DeepCollectionEquality()
-                    .equals(other.purpose, purpose)) &&
-            (identical(other.copyright, copyright) ||
-                const DeepCollectionEquality()
-                    .equals(other.copyright, copyright)) &&
-            (identical(other.sourceUri, sourceUri) ||
-                const DeepCollectionEquality()
-                    .equals(other.sourceUri, sourceUri)) &&
-            (identical(other.sourceCanonical, sourceCanonical) ||
-                const DeepCollectionEquality().equals(other.sourceCanonical, sourceCanonical)) &&
-            (identical(other.targetUri, targetUri) || const DeepCollectionEquality().equals(other.targetUri, targetUri)) &&
-            (identical(other.targetCanonical, targetCanonical) || const DeepCollectionEquality().equals(other.targetCanonical, targetCanonical)) &&
-            (identical(other.group, group) || const DeepCollectionEquality().equals(other.group, group)) &&
-            (identical(other.implicitRulesElement, implicitRulesElement) || const DeepCollectionEquality().equals(other.implicitRulesElement, implicitRulesElement)) &&
-            (identical(other.languageElement, languageElement) || const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
-            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
-            (identical(other.versionElement, versionElement) || const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
-            (identical(other.nameElement, nameElement) || const DeepCollectionEquality().equals(other.nameElement, nameElement)) &&
-            (identical(other.titleElement, titleElement) || const DeepCollectionEquality().equals(other.titleElement, titleElement)) &&
-            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
-            (identical(other.experimentalElement, experimentalElement) || const DeepCollectionEquality().equals(other.experimentalElement, experimentalElement)) &&
-            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
+            (identical(other.dateElement, dateElement) ||
+                const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
+            (identical(other.publisher, publisher) || const DeepCollectionEquality().equals(other.publisher, publisher)) &&
             (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
+            (identical(other.contact, contact) || const DeepCollectionEquality().equals(other.contact, contact)) &&
+            (identical(other.description, description) || const DeepCollectionEquality().equals(other.description, description)) &&
             (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.useContext, useContext) || const DeepCollectionEquality().equals(other.useContext, useContext)) &&
+            (identical(other.jurisdiction, jurisdiction) || const DeepCollectionEquality().equals(other.jurisdiction, jurisdiction)) &&
+            (identical(other.purpose, purpose) || const DeepCollectionEquality().equals(other.purpose, purpose)) &&
             (identical(other.purposeElement, purposeElement) || const DeepCollectionEquality().equals(other.purposeElement, purposeElement)) &&
+            (identical(other.copyright, copyright) || const DeepCollectionEquality().equals(other.copyright, copyright)) &&
             (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)) &&
+            (identical(other.sourceUri, sourceUri) || const DeepCollectionEquality().equals(other.sourceUri, sourceUri)) &&
             (identical(other.sourceUriElement, sourceUriElement) || const DeepCollectionEquality().equals(other.sourceUriElement, sourceUriElement)) &&
+            (identical(other.sourceCanonical, sourceCanonical) || const DeepCollectionEquality().equals(other.sourceCanonical, sourceCanonical)) &&
             (identical(other.sourceCanonicalElement, sourceCanonicalElement) || const DeepCollectionEquality().equals(other.sourceCanonicalElement, sourceCanonicalElement)) &&
+            (identical(other.targetUri, targetUri) || const DeepCollectionEquality().equals(other.targetUri, targetUri)) &&
             (identical(other.targetUriElement, targetUriElement) || const DeepCollectionEquality().equals(other.targetUriElement, targetUriElement)) &&
-            (identical(other.targetCanonicalElement, targetCanonicalElement) || const DeepCollectionEquality().equals(other.targetCanonicalElement, targetCanonicalElement)));
+            (identical(other.targetCanonical, targetCanonical) || const DeepCollectionEquality().equals(other.targetCanonical, targetCanonical)) &&
+            (identical(other.targetCanonicalElement, targetCanonicalElement) || const DeepCollectionEquality().equals(other.targetCanonicalElement, targetCanonicalElement)) &&
+            (identical(other.group, group) || const DeepCollectionEquality().equals(other.group, group)));
   }
 
   @override
@@ -5097,48 +5151,48 @@ class _$_ConceptMap implements _ConceptMap {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
       const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(url) ^
+      const DeepCollectionEquality().hash(urlElement) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(version) ^
+      const DeepCollectionEquality().hash(versionElement) ^
       const DeepCollectionEquality().hash(name) ^
+      const DeepCollectionEquality().hash(nameElement) ^
       const DeepCollectionEquality().hash(title) ^
+      const DeepCollectionEquality().hash(titleElement) ^
       const DeepCollectionEquality().hash(status) ^
+      const DeepCollectionEquality().hash(statusElement) ^
       const DeepCollectionEquality().hash(experimental) ^
+      const DeepCollectionEquality().hash(experimentalElement) ^
       const DeepCollectionEquality().hash(date) ^
+      const DeepCollectionEquality().hash(dateElement) ^
       const DeepCollectionEquality().hash(publisher) ^
+      const DeepCollectionEquality().hash(publisherElement) ^
       const DeepCollectionEquality().hash(contact) ^
       const DeepCollectionEquality().hash(description) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(useContext) ^
       const DeepCollectionEquality().hash(jurisdiction) ^
       const DeepCollectionEquality().hash(purpose) ^
-      const DeepCollectionEquality().hash(copyright) ^
-      const DeepCollectionEquality().hash(sourceUri) ^
-      const DeepCollectionEquality().hash(sourceCanonical) ^
-      const DeepCollectionEquality().hash(targetUri) ^
-      const DeepCollectionEquality().hash(targetCanonical) ^
-      const DeepCollectionEquality().hash(group) ^
-      const DeepCollectionEquality().hash(implicitRulesElement) ^
-      const DeepCollectionEquality().hash(languageElement) ^
-      const DeepCollectionEquality().hash(urlElement) ^
-      const DeepCollectionEquality().hash(versionElement) ^
-      const DeepCollectionEquality().hash(nameElement) ^
-      const DeepCollectionEquality().hash(titleElement) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(experimentalElement) ^
-      const DeepCollectionEquality().hash(dateElement) ^
-      const DeepCollectionEquality().hash(publisherElement) ^
-      const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(purposeElement) ^
+      const DeepCollectionEquality().hash(copyright) ^
       const DeepCollectionEquality().hash(copyrightElement) ^
+      const DeepCollectionEquality().hash(sourceUri) ^
       const DeepCollectionEquality().hash(sourceUriElement) ^
+      const DeepCollectionEquality().hash(sourceCanonical) ^
       const DeepCollectionEquality().hash(sourceCanonicalElement) ^
+      const DeepCollectionEquality().hash(targetUri) ^
       const DeepCollectionEquality().hash(targetUriElement) ^
-      const DeepCollectionEquality().hash(targetCanonicalElement);
+      const DeepCollectionEquality().hash(targetCanonical) ^
+      const DeepCollectionEquality().hash(targetCanonicalElement) ^
+      const DeepCollectionEquality().hash(group);
 
   @override
   _$ConceptMapCopyWith<_ConceptMap> get copyWith =>
@@ -5150,81 +5204,82 @@ class _$_ConceptMap implements _ConceptMap {
   }
 }
 
-abstract class _ConceptMap implements ConceptMap {
-  const factory _ConceptMap(
+abstract class _ConceptMap extends ConceptMap {
+  _ConceptMap._() : super._();
+  factory _ConceptMap(
       {@required
-      @JsonKey(required: true, defaultValue: 'ConceptMap')
+      @JsonKey(defaultValue: 'ConceptMap')
           String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri url,
+      @JsonKey(name: '_url')
+          Element urlElement,
       Identifier identifier,
       String version,
+      @JsonKey(name: '_version')
+          Element versionElement,
       String name,
+      @JsonKey(name: '_name')
+          Element nameElement,
       String title,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
+          ConceptMapStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Boolean experimental,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
       FhirDateTime date,
+      @JsonKey(name: '_date')
+          Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
       List<ContactDetail> contact,
       Markdown description,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Markdown purpose,
-      Markdown copyright,
-      FhirUri sourceUri,
-      Canonical sourceCanonical,
-      FhirUri targetUri,
-      Canonical targetCanonical,
-      List<ConceptMapGroup> group,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      @JsonKey(name: '_language')
-          Element languageElement,
-      @JsonKey(name: '_url')
-          Element urlElement,
-      @JsonKey(name: '_version')
-          Element versionElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
       @JsonKey(name: '_purpose')
           Element purposeElement,
+      Markdown copyright,
       @JsonKey(name: '_copyright')
           Element copyrightElement,
+      FhirUri sourceUri,
       @JsonKey(name: '_sourceUri')
           Element sourceUriElement,
+      Canonical sourceCanonical,
       @JsonKey(name: '_sourceCanonical')
           Element sourceCanonicalElement,
+      FhirUri targetUri,
       @JsonKey(name: '_targetUri')
           Element targetUriElement,
+      Canonical targetCanonical,
       @JsonKey(name: '_targetCanonical')
-          Element targetCanonicalElement}) = _$_ConceptMap;
+          Element targetCanonicalElement,
+      List<ConceptMapGroup> group}) = _$_ConceptMap;
 
   factory _ConceptMap.fromJson(Map<String, dynamic> json) =
       _$_ConceptMap.fromJson;
 
   @override
-  @JsonKey(required: true, defaultValue: 'ConceptMap')
+  @JsonKey(defaultValue: 'ConceptMap')
   String get resourceType;
   @override
   Id get id;
@@ -5233,7 +5288,13 @@ abstract class _ConceptMap implements ConceptMap {
   @override
   FhirUri get implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
   Code get language;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
   @override
   Narrative get text;
   @override
@@ -5246,26 +5307,53 @@ abstract class _ConceptMap implements ConceptMap {
   @override
   FhirUri get url;
   @override
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @override
   Identifier get identifier;
   @override
   String get version;
   @override
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @override
   String get name;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
   @override
   String get title;
   @override
-  @JsonKey(unknownEnumValue: Status.unknown)
-  Status get status;
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @override
+  @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
+  ConceptMapStatus get status;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
   @override
   Boolean get experimental;
   @override
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  @override
   FhirDateTime get date;
   @override
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @override
   String get publisher;
+  @override
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
   @override
   List<ContactDetail> get contact;
   @override
   Markdown get description;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
   @override
   List<UsageContext> get useContext;
   @override
@@ -5273,68 +5361,35 @@ abstract class _ConceptMap implements ConceptMap {
   @override
   Markdown get purpose;
   @override
-  Markdown get copyright;
-  @override
-  FhirUri get sourceUri;
-  @override
-  Canonical get sourceCanonical;
-  @override
-  FhirUri get targetUri;
-  @override
-  Canonical get targetCanonical;
-  @override
-  List<ConceptMapGroup> get group;
-  @override
-  @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  @override
-  @JsonKey(name: '_language')
-  Element get languageElement;
-  @override
-  @JsonKey(name: '_url')
-  Element get urlElement;
-  @override
-  @JsonKey(name: '_version')
-  Element get versionElement;
-  @override
-  @JsonKey(name: '_name')
-  Element get nameElement;
-  @override
-  @JsonKey(name: '_title')
-  Element get titleElement;
-  @override
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @override
-  @JsonKey(name: '_experimental')
-  Element get experimentalElement;
-  @override
-  @JsonKey(name: '_date')
-  Element get dateElement;
-  @override
-  @JsonKey(name: '_publisher')
-  Element get publisherElement;
-  @override
-  @JsonKey(name: '_description')
-  Element get descriptionElement;
-  @override
   @JsonKey(name: '_purpose')
   Element get purposeElement;
+  @override
+  Markdown get copyright;
   @override
   @JsonKey(name: '_copyright')
   Element get copyrightElement;
   @override
+  FhirUri get sourceUri;
+  @override
   @JsonKey(name: '_sourceUri')
   Element get sourceUriElement;
+  @override
+  Canonical get sourceCanonical;
   @override
   @JsonKey(name: '_sourceCanonical')
   Element get sourceCanonicalElement;
   @override
+  FhirUri get targetUri;
+  @override
   @JsonKey(name: '_targetUri')
   Element get targetUriElement;
   @override
+  Canonical get targetCanonical;
+  @override
   @JsonKey(name: '_targetCanonical')
   Element get targetCanonicalElement;
+  @override
+  List<ConceptMapGroup> get group;
   @override
   _$ConceptMapCopyWith<_ConceptMap> get copyWith;
 }
@@ -5351,29 +5406,29 @@ class _$ConceptMapGroupTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri source,
-      String sourceVersion,
-      FhirUri target,
-      String targetVersion,
-      @required @JsonKey(required: true) List<ConceptMapElement> element,
-      ConceptMapUnmapped unmapped,
       @JsonKey(name: '_source') Element sourceElement,
+      String sourceVersion,
       @JsonKey(name: '_sourceVersion') Element sourceVersionElement,
+      FhirUri target,
       @JsonKey(name: '_target') Element targetElement,
-      @JsonKey(name: '_targetVersion') Element targetVersionElement}) {
+      String targetVersion,
+      @JsonKey(name: '_targetVersion') Element targetVersionElement,
+      @required List<ConceptMapElement> element,
+      ConceptMapUnmapped unmapped}) {
     return _ConceptMapGroup(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       source: source,
+      sourceElement: sourceElement,
       sourceVersion: sourceVersion,
+      sourceVersionElement: sourceVersionElement,
       target: target,
+      targetElement: targetElement,
       targetVersion: targetVersion,
+      targetVersionElement: targetVersionElement,
       element: element,
       unmapped: unmapped,
-      sourceElement: sourceElement,
-      sourceVersionElement: sourceVersionElement,
-      targetElement: targetElement,
-      targetVersionElement: targetVersionElement,
     );
   }
 }
@@ -5387,20 +5442,19 @@ mixin _$ConceptMapGroup {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   FhirUri get source;
-  String get sourceVersion;
-  FhirUri get target;
-  String get targetVersion;
-  @JsonKey(required: true)
-  List<ConceptMapElement> get element;
-  ConceptMapUnmapped get unmapped;
   @JsonKey(name: '_source')
   Element get sourceElement;
+  String get sourceVersion;
   @JsonKey(name: '_sourceVersion')
   Element get sourceVersionElement;
+  FhirUri get target;
   @JsonKey(name: '_target')
   Element get targetElement;
+  String get targetVersion;
   @JsonKey(name: '_targetVersion')
   Element get targetVersionElement;
+  List<ConceptMapElement> get element;
+  ConceptMapUnmapped get unmapped;
 
   Map<String, dynamic> toJson();
   $ConceptMapGroupCopyWith<ConceptMapGroup> get copyWith;
@@ -5415,21 +5469,21 @@ abstract class $ConceptMapGroupCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri source,
-      String sourceVersion,
-      FhirUri target,
-      String targetVersion,
-      @JsonKey(required: true) List<ConceptMapElement> element,
-      ConceptMapUnmapped unmapped,
       @JsonKey(name: '_source') Element sourceElement,
+      String sourceVersion,
       @JsonKey(name: '_sourceVersion') Element sourceVersionElement,
+      FhirUri target,
       @JsonKey(name: '_target') Element targetElement,
-      @JsonKey(name: '_targetVersion') Element targetVersionElement});
+      String targetVersion,
+      @JsonKey(name: '_targetVersion') Element targetVersionElement,
+      List<ConceptMapElement> element,
+      ConceptMapUnmapped unmapped});
 
-  $ConceptMapUnmappedCopyWith<$Res> get unmapped;
   $ElementCopyWith<$Res> get sourceElement;
   $ElementCopyWith<$Res> get sourceVersionElement;
   $ElementCopyWith<$Res> get targetElement;
   $ElementCopyWith<$Res> get targetVersionElement;
+  $ConceptMapUnmappedCopyWith<$Res> get unmapped;
 }
 
 class _$ConceptMapGroupCopyWithImpl<$Res>
@@ -5446,15 +5500,15 @@ class _$ConceptMapGroupCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object source = freezed,
+    Object sourceElement = freezed,
     Object sourceVersion = freezed,
+    Object sourceVersionElement = freezed,
     Object target = freezed,
+    Object targetElement = freezed,
     Object targetVersion = freezed,
+    Object targetVersionElement = freezed,
     Object element = freezed,
     Object unmapped = freezed,
-    Object sourceElement = freezed,
-    Object sourceVersionElement = freezed,
-    Object targetElement = freezed,
-    Object targetVersionElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -5465,42 +5519,32 @@ class _$ConceptMapGroupCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       source: source == freezed ? _value.source : source as FhirUri,
+      sourceElement: sourceElement == freezed
+          ? _value.sourceElement
+          : sourceElement as Element,
       sourceVersion: sourceVersion == freezed
           ? _value.sourceVersion
           : sourceVersion as String,
+      sourceVersionElement: sourceVersionElement == freezed
+          ? _value.sourceVersionElement
+          : sourceVersionElement as Element,
       target: target == freezed ? _value.target : target as FhirUri,
+      targetElement: targetElement == freezed
+          ? _value.targetElement
+          : targetElement as Element,
       targetVersion: targetVersion == freezed
           ? _value.targetVersion
           : targetVersion as String,
+      targetVersionElement: targetVersionElement == freezed
+          ? _value.targetVersionElement
+          : targetVersionElement as Element,
       element: element == freezed
           ? _value.element
           : element as List<ConceptMapElement>,
       unmapped: unmapped == freezed
           ? _value.unmapped
           : unmapped as ConceptMapUnmapped,
-      sourceElement: sourceElement == freezed
-          ? _value.sourceElement
-          : sourceElement as Element,
-      sourceVersionElement: sourceVersionElement == freezed
-          ? _value.sourceVersionElement
-          : sourceVersionElement as Element,
-      targetElement: targetElement == freezed
-          ? _value.targetElement
-          : targetElement as Element,
-      targetVersionElement: targetVersionElement == freezed
-          ? _value.targetVersionElement
-          : targetVersionElement as Element,
     ));
-  }
-
-  @override
-  $ConceptMapUnmappedCopyWith<$Res> get unmapped {
-    if (_value.unmapped == null) {
-      return null;
-    }
-    return $ConceptMapUnmappedCopyWith<$Res>(_value.unmapped, (value) {
-      return _then(_value.copyWith(unmapped: value));
-    });
   }
 
   @override
@@ -5542,6 +5586,16 @@ class _$ConceptMapGroupCopyWithImpl<$Res>
       return _then(_value.copyWith(targetVersionElement: value));
     });
   }
+
+  @override
+  $ConceptMapUnmappedCopyWith<$Res> get unmapped {
+    if (_value.unmapped == null) {
+      return null;
+    }
+    return $ConceptMapUnmappedCopyWith<$Res>(_value.unmapped, (value) {
+      return _then(_value.copyWith(unmapped: value));
+    });
+  }
 }
 
 abstract class _$ConceptMapGroupCopyWith<$Res>
@@ -5555,18 +5609,16 @@ abstract class _$ConceptMapGroupCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri source,
-      String sourceVersion,
-      FhirUri target,
-      String targetVersion,
-      @JsonKey(required: true) List<ConceptMapElement> element,
-      ConceptMapUnmapped unmapped,
       @JsonKey(name: '_source') Element sourceElement,
+      String sourceVersion,
       @JsonKey(name: '_sourceVersion') Element sourceVersionElement,
+      FhirUri target,
       @JsonKey(name: '_target') Element targetElement,
-      @JsonKey(name: '_targetVersion') Element targetVersionElement});
+      String targetVersion,
+      @JsonKey(name: '_targetVersion') Element targetVersionElement,
+      List<ConceptMapElement> element,
+      ConceptMapUnmapped unmapped});
 
-  @override
-  $ConceptMapUnmappedCopyWith<$Res> get unmapped;
   @override
   $ElementCopyWith<$Res> get sourceElement;
   @override
@@ -5575,6 +5627,8 @@ abstract class _$ConceptMapGroupCopyWith<$Res>
   $ElementCopyWith<$Res> get targetElement;
   @override
   $ElementCopyWith<$Res> get targetVersionElement;
+  @override
+  $ConceptMapUnmappedCopyWith<$Res> get unmapped;
 }
 
 class __$ConceptMapGroupCopyWithImpl<$Res>
@@ -5593,15 +5647,15 @@ class __$ConceptMapGroupCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object source = freezed,
+    Object sourceElement = freezed,
     Object sourceVersion = freezed,
+    Object sourceVersionElement = freezed,
     Object target = freezed,
+    Object targetElement = freezed,
     Object targetVersion = freezed,
+    Object targetVersionElement = freezed,
     Object element = freezed,
     Object unmapped = freezed,
-    Object sourceElement = freezed,
-    Object sourceVersionElement = freezed,
-    Object targetElement = freezed,
-    Object targetVersionElement = freezed,
   }) {
     return _then(_ConceptMapGroup(
       id: id == freezed ? _value.id : id as String,
@@ -5612,52 +5666,53 @@ class __$ConceptMapGroupCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       source: source == freezed ? _value.source : source as FhirUri,
+      sourceElement: sourceElement == freezed
+          ? _value.sourceElement
+          : sourceElement as Element,
       sourceVersion: sourceVersion == freezed
           ? _value.sourceVersion
           : sourceVersion as String,
+      sourceVersionElement: sourceVersionElement == freezed
+          ? _value.sourceVersionElement
+          : sourceVersionElement as Element,
       target: target == freezed ? _value.target : target as FhirUri,
+      targetElement: targetElement == freezed
+          ? _value.targetElement
+          : targetElement as Element,
       targetVersion: targetVersion == freezed
           ? _value.targetVersion
           : targetVersion as String,
+      targetVersionElement: targetVersionElement == freezed
+          ? _value.targetVersionElement
+          : targetVersionElement as Element,
       element: element == freezed
           ? _value.element
           : element as List<ConceptMapElement>,
       unmapped: unmapped == freezed
           ? _value.unmapped
           : unmapped as ConceptMapUnmapped,
-      sourceElement: sourceElement == freezed
-          ? _value.sourceElement
-          : sourceElement as Element,
-      sourceVersionElement: sourceVersionElement == freezed
-          ? _value.sourceVersionElement
-          : sourceVersionElement as Element,
-      targetElement: targetElement == freezed
-          ? _value.targetElement
-          : targetElement as Element,
-      targetVersionElement: targetVersionElement == freezed
-          ? _value.targetVersionElement
-          : targetVersionElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_ConceptMapGroup implements _ConceptMapGroup {
-  const _$_ConceptMapGroup(
+class _$_ConceptMapGroup extends _ConceptMapGroup {
+  _$_ConceptMapGroup(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.source,
-      this.sourceVersion,
-      this.target,
-      this.targetVersion,
-      @required @JsonKey(required: true) this.element,
-      this.unmapped,
       @JsonKey(name: '_source') this.sourceElement,
+      this.sourceVersion,
       @JsonKey(name: '_sourceVersion') this.sourceVersionElement,
+      this.target,
       @JsonKey(name: '_target') this.targetElement,
-      @JsonKey(name: '_targetVersion') this.targetVersionElement})
-      : assert(element != null);
+      this.targetVersion,
+      @JsonKey(name: '_targetVersion') this.targetVersionElement,
+      @required this.element,
+      this.unmapped})
+      : assert(element != null),
+        super._();
 
   factory _$_ConceptMapGroup.fromJson(Map<String, dynamic> json) =>
       _$_$_ConceptMapGroupFromJson(json);
@@ -5672,32 +5727,31 @@ class _$_ConceptMapGroup implements _ConceptMapGroup {
   @override
   final FhirUri source;
   @override
-  final String sourceVersion;
-  @override
-  final FhirUri target;
-  @override
-  final String targetVersion;
-  @override
-  @JsonKey(required: true)
-  final List<ConceptMapElement> element;
-  @override
-  final ConceptMapUnmapped unmapped;
-  @override
   @JsonKey(name: '_source')
   final Element sourceElement;
+  @override
+  final String sourceVersion;
   @override
   @JsonKey(name: '_sourceVersion')
   final Element sourceVersionElement;
   @override
+  final FhirUri target;
+  @override
   @JsonKey(name: '_target')
   final Element targetElement;
   @override
+  final String targetVersion;
+  @override
   @JsonKey(name: '_targetVersion')
   final Element targetVersionElement;
+  @override
+  final List<ConceptMapElement> element;
+  @override
+  final ConceptMapUnmapped unmapped;
 
   @override
   String toString() {
-    return 'ConceptMapGroup(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, source: $source, sourceVersion: $sourceVersion, target: $target, targetVersion: $targetVersion, element: $element, unmapped: $unmapped, sourceElement: $sourceElement, sourceVersionElement: $sourceVersionElement, targetElement: $targetElement, targetVersionElement: $targetVersionElement)';
+    return 'ConceptMapGroup(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, source: $source, sourceElement: $sourceElement, sourceVersion: $sourceVersion, sourceVersionElement: $sourceVersionElement, target: $target, targetElement: $targetElement, targetVersion: $targetVersion, targetVersionElement: $targetVersionElement, element: $element, unmapped: $unmapped)';
   }
 
   @override
@@ -5714,32 +5768,32 @@ class _$_ConceptMapGroup implements _ConceptMapGroup {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.source, source) ||
                 const DeepCollectionEquality().equals(other.source, source)) &&
+            (identical(other.sourceElement, sourceElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.sourceElement, sourceElement)) &&
             (identical(other.sourceVersion, sourceVersion) ||
                 const DeepCollectionEquality()
                     .equals(other.sourceVersion, sourceVersion)) &&
+            (identical(other.sourceVersionElement, sourceVersionElement) ||
+                const DeepCollectionEquality().equals(
+                    other.sourceVersionElement, sourceVersionElement)) &&
             (identical(other.target, target) ||
                 const DeepCollectionEquality().equals(other.target, target)) &&
+            (identical(other.targetElement, targetElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.targetElement, targetElement)) &&
             (identical(other.targetVersion, targetVersion) ||
                 const DeepCollectionEquality()
                     .equals(other.targetVersion, targetVersion)) &&
+            (identical(other.targetVersionElement, targetVersionElement) ||
+                const DeepCollectionEquality().equals(
+                    other.targetVersionElement, targetVersionElement)) &&
             (identical(other.element, element) ||
                 const DeepCollectionEquality()
                     .equals(other.element, element)) &&
             (identical(other.unmapped, unmapped) ||
                 const DeepCollectionEquality()
-                    .equals(other.unmapped, unmapped)) &&
-            (identical(other.sourceElement, sourceElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.sourceElement, sourceElement)) &&
-            (identical(other.sourceVersionElement, sourceVersionElement) ||
-                const DeepCollectionEquality().equals(
-                    other.sourceVersionElement, sourceVersionElement)) &&
-            (identical(other.targetElement, targetElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.targetElement, targetElement)) &&
-            (identical(other.targetVersionElement, targetVersionElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.targetVersionElement, targetVersionElement)));
+                    .equals(other.unmapped, unmapped)));
   }
 
   @override
@@ -5749,15 +5803,15 @@ class _$_ConceptMapGroup implements _ConceptMapGroup {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(source) ^
-      const DeepCollectionEquality().hash(sourceVersion) ^
-      const DeepCollectionEquality().hash(target) ^
-      const DeepCollectionEquality().hash(targetVersion) ^
-      const DeepCollectionEquality().hash(element) ^
-      const DeepCollectionEquality().hash(unmapped) ^
       const DeepCollectionEquality().hash(sourceElement) ^
+      const DeepCollectionEquality().hash(sourceVersion) ^
       const DeepCollectionEquality().hash(sourceVersionElement) ^
+      const DeepCollectionEquality().hash(target) ^
       const DeepCollectionEquality().hash(targetElement) ^
-      const DeepCollectionEquality().hash(targetVersionElement);
+      const DeepCollectionEquality().hash(targetVersion) ^
+      const DeepCollectionEquality().hash(targetVersionElement) ^
+      const DeepCollectionEquality().hash(element) ^
+      const DeepCollectionEquality().hash(unmapped);
 
   @override
   _$ConceptMapGroupCopyWith<_ConceptMapGroup> get copyWith =>
@@ -5769,22 +5823,22 @@ class _$_ConceptMapGroup implements _ConceptMapGroup {
   }
 }
 
-abstract class _ConceptMapGroup implements ConceptMapGroup {
-  const factory _ConceptMapGroup(
-          {String id,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          List<FhirExtension> modifierExtension,
-          FhirUri source,
-          String sourceVersion,
-          FhirUri target,
-          String targetVersion,
-          @required @JsonKey(required: true) List<ConceptMapElement> element,
-          ConceptMapUnmapped unmapped,
-          @JsonKey(name: '_source') Element sourceElement,
-          @JsonKey(name: '_sourceVersion') Element sourceVersionElement,
-          @JsonKey(name: '_target') Element targetElement,
-          @JsonKey(name: '_targetVersion') Element targetVersionElement}) =
-      _$_ConceptMapGroup;
+abstract class _ConceptMapGroup extends ConceptMapGroup {
+  _ConceptMapGroup._() : super._();
+  factory _ConceptMapGroup(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      FhirUri source,
+      @JsonKey(name: '_source') Element sourceElement,
+      String sourceVersion,
+      @JsonKey(name: '_sourceVersion') Element sourceVersionElement,
+      FhirUri target,
+      @JsonKey(name: '_target') Element targetElement,
+      String targetVersion,
+      @JsonKey(name: '_targetVersion') Element targetVersionElement,
+      @required List<ConceptMapElement> element,
+      ConceptMapUnmapped unmapped}) = _$_ConceptMapGroup;
 
   factory _ConceptMapGroup.fromJson(Map<String, dynamic> json) =
       _$_ConceptMapGroup.fromJson;
@@ -5799,28 +5853,27 @@ abstract class _ConceptMapGroup implements ConceptMapGroup {
   @override
   FhirUri get source;
   @override
-  String get sourceVersion;
-  @override
-  FhirUri get target;
-  @override
-  String get targetVersion;
-  @override
-  @JsonKey(required: true)
-  List<ConceptMapElement> get element;
-  @override
-  ConceptMapUnmapped get unmapped;
-  @override
   @JsonKey(name: '_source')
   Element get sourceElement;
+  @override
+  String get sourceVersion;
   @override
   @JsonKey(name: '_sourceVersion')
   Element get sourceVersionElement;
   @override
+  FhirUri get target;
+  @override
   @JsonKey(name: '_target')
   Element get targetElement;
   @override
+  String get targetVersion;
+  @override
   @JsonKey(name: '_targetVersion')
   Element get targetVersionElement;
+  @override
+  List<ConceptMapElement> get element;
+  @override
+  ConceptMapUnmapped get unmapped;
   @override
   _$ConceptMapGroupCopyWith<_ConceptMapGroup> get copyWith;
 }
@@ -5837,19 +5890,19 @@ class _$ConceptMapElementTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code code,
-      String display,
-      List<ConceptMapTarget> target,
       @JsonKey(name: '_code') Element codeElement,
-      @JsonKey(name: '_display') Element displayElement}) {
+      String display,
+      @JsonKey(name: '_display') Element displayElement,
+      List<ConceptMapTarget> target}) {
     return _ConceptMapElement(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       code: code,
-      display: display,
-      target: target,
       codeElement: codeElement,
+      display: display,
       displayElement: displayElement,
+      target: target,
     );
   }
 }
@@ -5863,12 +5916,12 @@ mixin _$ConceptMapElement {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   Code get code;
-  String get display;
-  List<ConceptMapTarget> get target;
   @JsonKey(name: '_code')
   Element get codeElement;
+  String get display;
   @JsonKey(name: '_display')
   Element get displayElement;
+  List<ConceptMapTarget> get target;
 
   Map<String, dynamic> toJson();
   $ConceptMapElementCopyWith<ConceptMapElement> get copyWith;
@@ -5883,10 +5936,10 @@ abstract class $ConceptMapElementCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code code,
-      String display,
-      List<ConceptMapTarget> target,
       @JsonKey(name: '_code') Element codeElement,
-      @JsonKey(name: '_display') Element displayElement});
+      String display,
+      @JsonKey(name: '_display') Element displayElement,
+      List<ConceptMapTarget> target});
 
   $ElementCopyWith<$Res> get codeElement;
   $ElementCopyWith<$Res> get displayElement;
@@ -5906,10 +5959,10 @@ class _$ConceptMapElementCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object code = freezed,
-    Object display = freezed,
-    Object target = freezed,
     Object codeElement = freezed,
+    Object display = freezed,
     Object displayElement = freezed,
+    Object target = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -5920,14 +5973,14 @@ class _$ConceptMapElementCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       code: code == freezed ? _value.code : code as Code,
-      display: display == freezed ? _value.display : display as String,
-      target:
-          target == freezed ? _value.target : target as List<ConceptMapTarget>,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
+      display: display == freezed ? _value.display : display as String,
       displayElement: displayElement == freezed
           ? _value.displayElement
           : displayElement as Element,
+      target:
+          target == freezed ? _value.target : target as List<ConceptMapTarget>,
     ));
   }
 
@@ -5963,10 +6016,10 @@ abstract class _$ConceptMapElementCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code code,
-      String display,
-      List<ConceptMapTarget> target,
       @JsonKey(name: '_code') Element codeElement,
-      @JsonKey(name: '_display') Element displayElement});
+      String display,
+      @JsonKey(name: '_display') Element displayElement,
+      List<ConceptMapTarget> target});
 
   @override
   $ElementCopyWith<$Res> get codeElement;
@@ -5990,10 +6043,10 @@ class __$ConceptMapElementCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object code = freezed,
-    Object display = freezed,
-    Object target = freezed,
     Object codeElement = freezed,
+    Object display = freezed,
     Object displayElement = freezed,
+    Object target = freezed,
   }) {
     return _then(_ConceptMapElement(
       id: id == freezed ? _value.id : id as String,
@@ -6004,29 +6057,30 @@ class __$ConceptMapElementCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       code: code == freezed ? _value.code : code as Code,
-      display: display == freezed ? _value.display : display as String,
-      target:
-          target == freezed ? _value.target : target as List<ConceptMapTarget>,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
+      display: display == freezed ? _value.display : display as String,
       displayElement: displayElement == freezed
           ? _value.displayElement
           : displayElement as Element,
+      target:
+          target == freezed ? _value.target : target as List<ConceptMapTarget>,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_ConceptMapElement implements _ConceptMapElement {
-  const _$_ConceptMapElement(
+class _$_ConceptMapElement extends _ConceptMapElement {
+  _$_ConceptMapElement(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.code,
-      this.display,
-      this.target,
       @JsonKey(name: '_code') this.codeElement,
-      @JsonKey(name: '_display') this.displayElement});
+      this.display,
+      @JsonKey(name: '_display') this.displayElement,
+      this.target})
+      : super._();
 
   factory _$_ConceptMapElement.fromJson(Map<String, dynamic> json) =>
       _$_$_ConceptMapElementFromJson(json);
@@ -6041,19 +6095,19 @@ class _$_ConceptMapElement implements _ConceptMapElement {
   @override
   final Code code;
   @override
-  final String display;
-  @override
-  final List<ConceptMapTarget> target;
-  @override
   @JsonKey(name: '_code')
   final Element codeElement;
   @override
+  final String display;
+  @override
   @JsonKey(name: '_display')
   final Element displayElement;
+  @override
+  final List<ConceptMapTarget> target;
 
   @override
   String toString() {
-    return 'ConceptMapElement(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, display: $display, target: $target, codeElement: $codeElement, displayElement: $displayElement)';
+    return 'ConceptMapElement(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, codeElement: $codeElement, display: $display, displayElement: $displayElement, target: $target)';
   }
 
   @override
@@ -6070,17 +6124,17 @@ class _$_ConceptMapElement implements _ConceptMapElement {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.code, code) ||
                 const DeepCollectionEquality().equals(other.code, code)) &&
-            (identical(other.display, display) ||
-                const DeepCollectionEquality()
-                    .equals(other.display, display)) &&
-            (identical(other.target, target) ||
-                const DeepCollectionEquality().equals(other.target, target)) &&
             (identical(other.codeElement, codeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.codeElement, codeElement)) &&
+            (identical(other.display, display) ||
+                const DeepCollectionEquality()
+                    .equals(other.display, display)) &&
             (identical(other.displayElement, displayElement) ||
                 const DeepCollectionEquality()
-                    .equals(other.displayElement, displayElement)));
+                    .equals(other.displayElement, displayElement)) &&
+            (identical(other.target, target) ||
+                const DeepCollectionEquality().equals(other.target, target)));
   }
 
   @override
@@ -6090,10 +6144,10 @@ class _$_ConceptMapElement implements _ConceptMapElement {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(code) ^
-      const DeepCollectionEquality().hash(display) ^
-      const DeepCollectionEquality().hash(target) ^
       const DeepCollectionEquality().hash(codeElement) ^
-      const DeepCollectionEquality().hash(displayElement);
+      const DeepCollectionEquality().hash(display) ^
+      const DeepCollectionEquality().hash(displayElement) ^
+      const DeepCollectionEquality().hash(target);
 
   @override
   _$ConceptMapElementCopyWith<_ConceptMapElement> get copyWith =>
@@ -6105,17 +6159,17 @@ class _$_ConceptMapElement implements _ConceptMapElement {
   }
 }
 
-abstract class _ConceptMapElement implements ConceptMapElement {
-  const factory _ConceptMapElement(
-          {String id,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          List<FhirExtension> modifierExtension,
-          Code code,
-          String display,
-          List<ConceptMapTarget> target,
-          @JsonKey(name: '_code') Element codeElement,
-          @JsonKey(name: '_display') Element displayElement}) =
-      _$_ConceptMapElement;
+abstract class _ConceptMapElement extends ConceptMapElement {
+  _ConceptMapElement._() : super._();
+  factory _ConceptMapElement(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Code code,
+      @JsonKey(name: '_code') Element codeElement,
+      String display,
+      @JsonKey(name: '_display') Element displayElement,
+      List<ConceptMapTarget> target}) = _$_ConceptMapElement;
 
   factory _ConceptMapElement.fromJson(Map<String, dynamic> json) =
       _$_ConceptMapElement.fromJson;
@@ -6130,15 +6184,15 @@ abstract class _ConceptMapElement implements ConceptMapElement {
   @override
   Code get code;
   @override
-  String get display;
-  @override
-  List<ConceptMapTarget> get target;
-  @override
   @JsonKey(name: '_code')
   Element get codeElement;
   @override
+  String get display;
+  @override
   @JsonKey(name: '_display')
   Element get displayElement;
+  @override
+  List<ConceptMapTarget> get target;
   @override
   _$ConceptMapElementCopyWith<_ConceptMapElement> get copyWith;
 }
@@ -6156,34 +6210,34 @@ class _$ConceptMapTargetTearOff {
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code code,
-      String display,
-      @JsonKey(unknownEnumValue: TargetEquivalence.unknown)
-          TargetEquivalence equivalence,
-      String comment,
-      List<ConceptMapDependsOn> dependsOn,
-      List<ConceptMapDependsOn> product,
       @JsonKey(name: '_code')
           Element codeElement,
+      String display,
       @JsonKey(name: '_display')
           Element displayElement,
+      @JsonKey(unknownEnumValue: ConceptMapTargetEquivalence.unknown)
+          ConceptMapTargetEquivalence equivalence,
       @JsonKey(name: '_equivalence')
           Element equivalenceElement,
+      String comment,
       @JsonKey(name: '_comment')
-          Element commentElement}) {
+          Element commentElement,
+      List<ConceptMapDependsOn> dependsOn,
+      List<ConceptMapDependsOn> product}) {
     return _ConceptMapTarget(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       code: code,
+      codeElement: codeElement,
       display: display,
+      displayElement: displayElement,
       equivalence: equivalence,
+      equivalenceElement: equivalenceElement,
       comment: comment,
+      commentElement: commentElement,
       dependsOn: dependsOn,
       product: product,
-      codeElement: codeElement,
-      displayElement: displayElement,
-      equivalenceElement: equivalenceElement,
-      commentElement: commentElement,
     );
   }
 }
@@ -6197,20 +6251,20 @@ mixin _$ConceptMapTarget {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   Code get code;
-  String get display;
-  @JsonKey(unknownEnumValue: TargetEquivalence.unknown)
-  TargetEquivalence get equivalence;
-  String get comment;
-  List<ConceptMapDependsOn> get dependsOn;
-  List<ConceptMapDependsOn> get product;
   @JsonKey(name: '_code')
   Element get codeElement;
+  String get display;
   @JsonKey(name: '_display')
   Element get displayElement;
+  @JsonKey(unknownEnumValue: ConceptMapTargetEquivalence.unknown)
+  ConceptMapTargetEquivalence get equivalence;
   @JsonKey(name: '_equivalence')
   Element get equivalenceElement;
+  String get comment;
   @JsonKey(name: '_comment')
   Element get commentElement;
+  List<ConceptMapDependsOn> get dependsOn;
+  List<ConceptMapDependsOn> get product;
 
   Map<String, dynamic> toJson();
   $ConceptMapTargetCopyWith<ConceptMapTarget> get copyWith;
@@ -6226,20 +6280,20 @@ abstract class $ConceptMapTargetCopyWith<$Res> {
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code code,
-      String display,
-      @JsonKey(unknownEnumValue: TargetEquivalence.unknown)
-          TargetEquivalence equivalence,
-      String comment,
-      List<ConceptMapDependsOn> dependsOn,
-      List<ConceptMapDependsOn> product,
       @JsonKey(name: '_code')
           Element codeElement,
+      String display,
       @JsonKey(name: '_display')
           Element displayElement,
+      @JsonKey(unknownEnumValue: ConceptMapTargetEquivalence.unknown)
+          ConceptMapTargetEquivalence equivalence,
       @JsonKey(name: '_equivalence')
           Element equivalenceElement,
+      String comment,
       @JsonKey(name: '_comment')
-          Element commentElement});
+          Element commentElement,
+      List<ConceptMapDependsOn> dependsOn,
+      List<ConceptMapDependsOn> product});
 
   $ElementCopyWith<$Res> get codeElement;
   $ElementCopyWith<$Res> get displayElement;
@@ -6261,15 +6315,15 @@ class _$ConceptMapTargetCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object code = freezed,
+    Object codeElement = freezed,
     Object display = freezed,
+    Object displayElement = freezed,
     Object equivalence = freezed,
+    Object equivalenceElement = freezed,
     Object comment = freezed,
+    Object commentElement = freezed,
     Object dependsOn = freezed,
     Object product = freezed,
-    Object codeElement = freezed,
-    Object displayElement = freezed,
-    Object equivalenceElement = freezed,
-    Object commentElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -6280,28 +6334,28 @@ class _$ConceptMapTargetCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       code: code == freezed ? _value.code : code as Code,
+      codeElement:
+          codeElement == freezed ? _value.codeElement : codeElement as Element,
       display: display == freezed ? _value.display : display as String,
+      displayElement: displayElement == freezed
+          ? _value.displayElement
+          : displayElement as Element,
       equivalence: equivalence == freezed
           ? _value.equivalence
-          : equivalence as TargetEquivalence,
+          : equivalence as ConceptMapTargetEquivalence,
+      equivalenceElement: equivalenceElement == freezed
+          ? _value.equivalenceElement
+          : equivalenceElement as Element,
       comment: comment == freezed ? _value.comment : comment as String,
+      commentElement: commentElement == freezed
+          ? _value.commentElement
+          : commentElement as Element,
       dependsOn: dependsOn == freezed
           ? _value.dependsOn
           : dependsOn as List<ConceptMapDependsOn>,
       product: product == freezed
           ? _value.product
           : product as List<ConceptMapDependsOn>,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element,
-      displayElement: displayElement == freezed
-          ? _value.displayElement
-          : displayElement as Element,
-      equivalenceElement: equivalenceElement == freezed
-          ? _value.equivalenceElement
-          : equivalenceElement as Element,
-      commentElement: commentElement == freezed
-          ? _value.commentElement
-          : commentElement as Element,
     ));
   }
 
@@ -6358,20 +6412,20 @@ abstract class _$ConceptMapTargetCopyWith<$Res>
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code code,
-      String display,
-      @JsonKey(unknownEnumValue: TargetEquivalence.unknown)
-          TargetEquivalence equivalence,
-      String comment,
-      List<ConceptMapDependsOn> dependsOn,
-      List<ConceptMapDependsOn> product,
       @JsonKey(name: '_code')
           Element codeElement,
+      String display,
       @JsonKey(name: '_display')
           Element displayElement,
+      @JsonKey(unknownEnumValue: ConceptMapTargetEquivalence.unknown)
+          ConceptMapTargetEquivalence equivalence,
       @JsonKey(name: '_equivalence')
           Element equivalenceElement,
+      String comment,
       @JsonKey(name: '_comment')
-          Element commentElement});
+          Element commentElement,
+      List<ConceptMapDependsOn> dependsOn,
+      List<ConceptMapDependsOn> product});
 
   @override
   $ElementCopyWith<$Res> get codeElement;
@@ -6399,15 +6453,15 @@ class __$ConceptMapTargetCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object code = freezed,
+    Object codeElement = freezed,
     Object display = freezed,
+    Object displayElement = freezed,
     Object equivalence = freezed,
+    Object equivalenceElement = freezed,
     Object comment = freezed,
+    Object commentElement = freezed,
     Object dependsOn = freezed,
     Object product = freezed,
-    Object codeElement = freezed,
-    Object displayElement = freezed,
-    Object equivalenceElement = freezed,
-    Object commentElement = freezed,
   }) {
     return _then(_ConceptMapTarget(
       id: id == freezed ? _value.id : id as String,
@@ -6418,48 +6472,55 @@ class __$ConceptMapTargetCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       code: code == freezed ? _value.code : code as Code,
+      codeElement:
+          codeElement == freezed ? _value.codeElement : codeElement as Element,
       display: display == freezed ? _value.display : display as String,
+      displayElement: displayElement == freezed
+          ? _value.displayElement
+          : displayElement as Element,
       equivalence: equivalence == freezed
           ? _value.equivalence
-          : equivalence as TargetEquivalence,
+          : equivalence as ConceptMapTargetEquivalence,
+      equivalenceElement: equivalenceElement == freezed
+          ? _value.equivalenceElement
+          : equivalenceElement as Element,
       comment: comment == freezed ? _value.comment : comment as String,
+      commentElement: commentElement == freezed
+          ? _value.commentElement
+          : commentElement as Element,
       dependsOn: dependsOn == freezed
           ? _value.dependsOn
           : dependsOn as List<ConceptMapDependsOn>,
       product: product == freezed
           ? _value.product
           : product as List<ConceptMapDependsOn>,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element,
-      displayElement: displayElement == freezed
-          ? _value.displayElement
-          : displayElement as Element,
-      equivalenceElement: equivalenceElement == freezed
-          ? _value.equivalenceElement
-          : equivalenceElement as Element,
-      commentElement: commentElement == freezed
-          ? _value.commentElement
-          : commentElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_ConceptMapTarget implements _ConceptMapTarget {
-  const _$_ConceptMapTarget(
+class _$_ConceptMapTarget extends _ConceptMapTarget {
+  _$_ConceptMapTarget(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.code,
+      @JsonKey(name: '_code')
+          this.codeElement,
       this.display,
-      @JsonKey(unknownEnumValue: TargetEquivalence.unknown) this.equivalence,
+      @JsonKey(name: '_display')
+          this.displayElement,
+      @JsonKey(unknownEnumValue: ConceptMapTargetEquivalence.unknown)
+          this.equivalence,
+      @JsonKey(name: '_equivalence')
+          this.equivalenceElement,
       this.comment,
+      @JsonKey(name: '_comment')
+          this.commentElement,
       this.dependsOn,
-      this.product,
-      @JsonKey(name: '_code') this.codeElement,
-      @JsonKey(name: '_display') this.displayElement,
-      @JsonKey(name: '_equivalence') this.equivalenceElement,
-      @JsonKey(name: '_comment') this.commentElement});
+      this.product})
+      : super._();
 
   factory _$_ConceptMapTarget.fromJson(Map<String, dynamic> json) =>
       _$_$_ConceptMapTargetFromJson(json);
@@ -6474,32 +6535,32 @@ class _$_ConceptMapTarget implements _ConceptMapTarget {
   @override
   final Code code;
   @override
-  final String display;
-  @override
-  @JsonKey(unknownEnumValue: TargetEquivalence.unknown)
-  final TargetEquivalence equivalence;
-  @override
-  final String comment;
-  @override
-  final List<ConceptMapDependsOn> dependsOn;
-  @override
-  final List<ConceptMapDependsOn> product;
-  @override
   @JsonKey(name: '_code')
   final Element codeElement;
+  @override
+  final String display;
   @override
   @JsonKey(name: '_display')
   final Element displayElement;
   @override
+  @JsonKey(unknownEnumValue: ConceptMapTargetEquivalence.unknown)
+  final ConceptMapTargetEquivalence equivalence;
+  @override
   @JsonKey(name: '_equivalence')
   final Element equivalenceElement;
   @override
+  final String comment;
+  @override
   @JsonKey(name: '_comment')
   final Element commentElement;
+  @override
+  final List<ConceptMapDependsOn> dependsOn;
+  @override
+  final List<ConceptMapDependsOn> product;
 
   @override
   String toString() {
-    return 'ConceptMapTarget(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, display: $display, equivalence: $equivalence, comment: $comment, dependsOn: $dependsOn, product: $product, codeElement: $codeElement, displayElement: $displayElement, equivalenceElement: $equivalenceElement, commentElement: $commentElement)';
+    return 'ConceptMapTarget(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, codeElement: $codeElement, display: $display, displayElement: $displayElement, equivalence: $equivalence, equivalenceElement: $equivalenceElement, comment: $comment, commentElement: $commentElement, dependsOn: $dependsOn, product: $product)';
   }
 
   @override
@@ -6516,33 +6577,32 @@ class _$_ConceptMapTarget implements _ConceptMapTarget {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.code, code) ||
                 const DeepCollectionEquality().equals(other.code, code)) &&
+            (identical(other.codeElement, codeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.codeElement, codeElement)) &&
             (identical(other.display, display) ||
                 const DeepCollectionEquality()
                     .equals(other.display, display)) &&
+            (identical(other.displayElement, displayElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.displayElement, displayElement)) &&
             (identical(other.equivalence, equivalence) ||
                 const DeepCollectionEquality()
                     .equals(other.equivalence, equivalence)) &&
+            (identical(other.equivalenceElement, equivalenceElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.equivalenceElement, equivalenceElement)) &&
             (identical(other.comment, comment) ||
                 const DeepCollectionEquality()
                     .equals(other.comment, comment)) &&
+            (identical(other.commentElement, commentElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.commentElement, commentElement)) &&
             (identical(other.dependsOn, dependsOn) ||
                 const DeepCollectionEquality()
                     .equals(other.dependsOn, dependsOn)) &&
             (identical(other.product, product) ||
-                const DeepCollectionEquality()
-                    .equals(other.product, product)) &&
-            (identical(other.codeElement, codeElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.codeElement, codeElement)) &&
-            (identical(other.displayElement, displayElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.displayElement, displayElement)) &&
-            (identical(other.equivalenceElement, equivalenceElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.equivalenceElement, equivalenceElement)) &&
-            (identical(other.commentElement, commentElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.commentElement, commentElement)));
+                const DeepCollectionEquality().equals(other.product, product)));
   }
 
   @override
@@ -6552,15 +6612,15 @@ class _$_ConceptMapTarget implements _ConceptMapTarget {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(code) ^
-      const DeepCollectionEquality().hash(display) ^
-      const DeepCollectionEquality().hash(equivalence) ^
-      const DeepCollectionEquality().hash(comment) ^
-      const DeepCollectionEquality().hash(dependsOn) ^
-      const DeepCollectionEquality().hash(product) ^
       const DeepCollectionEquality().hash(codeElement) ^
+      const DeepCollectionEquality().hash(display) ^
       const DeepCollectionEquality().hash(displayElement) ^
+      const DeepCollectionEquality().hash(equivalence) ^
       const DeepCollectionEquality().hash(equivalenceElement) ^
-      const DeepCollectionEquality().hash(commentElement);
+      const DeepCollectionEquality().hash(comment) ^
+      const DeepCollectionEquality().hash(commentElement) ^
+      const DeepCollectionEquality().hash(dependsOn) ^
+      const DeepCollectionEquality().hash(product);
 
   @override
   _$ConceptMapTargetCopyWith<_ConceptMapTarget> get copyWith =>
@@ -6572,27 +6632,28 @@ class _$_ConceptMapTarget implements _ConceptMapTarget {
   }
 }
 
-abstract class _ConceptMapTarget implements ConceptMapTarget {
-  const factory _ConceptMapTarget(
+abstract class _ConceptMapTarget extends ConceptMapTarget {
+  _ConceptMapTarget._() : super._();
+  factory _ConceptMapTarget(
       {String id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code code,
-      String display,
-      @JsonKey(unknownEnumValue: TargetEquivalence.unknown)
-          TargetEquivalence equivalence,
-      String comment,
-      List<ConceptMapDependsOn> dependsOn,
-      List<ConceptMapDependsOn> product,
       @JsonKey(name: '_code')
           Element codeElement,
+      String display,
       @JsonKey(name: '_display')
           Element displayElement,
+      @JsonKey(unknownEnumValue: ConceptMapTargetEquivalence.unknown)
+          ConceptMapTargetEquivalence equivalence,
       @JsonKey(name: '_equivalence')
           Element equivalenceElement,
+      String comment,
       @JsonKey(name: '_comment')
-          Element commentElement}) = _$_ConceptMapTarget;
+          Element commentElement,
+      List<ConceptMapDependsOn> dependsOn,
+      List<ConceptMapDependsOn> product}) = _$_ConceptMapTarget;
 
   factory _ConceptMapTarget.fromJson(Map<String, dynamic> json) =
       _$_ConceptMapTarget.fromJson;
@@ -6607,28 +6668,28 @@ abstract class _ConceptMapTarget implements ConceptMapTarget {
   @override
   Code get code;
   @override
-  String get display;
-  @override
-  @JsonKey(unknownEnumValue: TargetEquivalence.unknown)
-  TargetEquivalence get equivalence;
-  @override
-  String get comment;
-  @override
-  List<ConceptMapDependsOn> get dependsOn;
-  @override
-  List<ConceptMapDependsOn> get product;
-  @override
   @JsonKey(name: '_code')
   Element get codeElement;
+  @override
+  String get display;
   @override
   @JsonKey(name: '_display')
   Element get displayElement;
   @override
+  @JsonKey(unknownEnumValue: ConceptMapTargetEquivalence.unknown)
+  ConceptMapTargetEquivalence get equivalence;
+  @override
   @JsonKey(name: '_equivalence')
   Element get equivalenceElement;
   @override
+  String get comment;
+  @override
   @JsonKey(name: '_comment')
   Element get commentElement;
+  @override
+  List<ConceptMapDependsOn> get dependsOn;
+  @override
+  List<ConceptMapDependsOn> get product;
   @override
   _$ConceptMapTargetCopyWith<_ConceptMapTarget> get copyWith;
 }
@@ -6645,22 +6706,22 @@ class _$ConceptMapDependsOnTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri property,
+      @JsonKey(name: '_property') Element propertyElement,
       Canonical system,
       String value,
-      String display,
-      @JsonKey(name: '_property') Element propertyElement,
       @JsonKey(name: '_value') Element valueElement,
+      String display,
       @JsonKey(name: '_display') Element displayElement}) {
     return _ConceptMapDependsOn(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       property: property,
+      propertyElement: propertyElement,
       system: system,
       value: value,
-      display: display,
-      propertyElement: propertyElement,
       valueElement: valueElement,
+      display: display,
       displayElement: displayElement,
     );
   }
@@ -6675,13 +6736,13 @@ mixin _$ConceptMapDependsOn {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   FhirUri get property;
-  Canonical get system;
-  String get value;
-  String get display;
   @JsonKey(name: '_property')
   Element get propertyElement;
+  Canonical get system;
+  String get value;
   @JsonKey(name: '_value')
   Element get valueElement;
+  String get display;
   @JsonKey(name: '_display')
   Element get displayElement;
 
@@ -6698,11 +6759,11 @@ abstract class $ConceptMapDependsOnCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri property,
+      @JsonKey(name: '_property') Element propertyElement,
       Canonical system,
       String value,
-      String display,
-      @JsonKey(name: '_property') Element propertyElement,
       @JsonKey(name: '_value') Element valueElement,
+      String display,
       @JsonKey(name: '_display') Element displayElement});
 
   $ElementCopyWith<$Res> get propertyElement;
@@ -6724,11 +6785,11 @@ class _$ConceptMapDependsOnCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object property = freezed,
+    Object propertyElement = freezed,
     Object system = freezed,
     Object value = freezed,
-    Object display = freezed,
-    Object propertyElement = freezed,
     Object valueElement = freezed,
+    Object display = freezed,
     Object displayElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -6740,15 +6801,15 @@ class _$ConceptMapDependsOnCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       property: property == freezed ? _value.property : property as FhirUri,
-      system: system == freezed ? _value.system : system as Canonical,
-      value: value == freezed ? _value.value : value as String,
-      display: display == freezed ? _value.display : display as String,
       propertyElement: propertyElement == freezed
           ? _value.propertyElement
           : propertyElement as Element,
+      system: system == freezed ? _value.system : system as Canonical,
+      value: value == freezed ? _value.value : value as String,
       valueElement: valueElement == freezed
           ? _value.valueElement
           : valueElement as Element,
+      display: display == freezed ? _value.display : display as String,
       displayElement: displayElement == freezed
           ? _value.displayElement
           : displayElement as Element,
@@ -6797,11 +6858,11 @@ abstract class _$ConceptMapDependsOnCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri property,
+      @JsonKey(name: '_property') Element propertyElement,
       Canonical system,
       String value,
-      String display,
-      @JsonKey(name: '_property') Element propertyElement,
       @JsonKey(name: '_value') Element valueElement,
+      String display,
       @JsonKey(name: '_display') Element displayElement});
 
   @override
@@ -6828,11 +6889,11 @@ class __$ConceptMapDependsOnCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object property = freezed,
+    Object propertyElement = freezed,
     Object system = freezed,
     Object value = freezed,
-    Object display = freezed,
-    Object propertyElement = freezed,
     Object valueElement = freezed,
+    Object display = freezed,
     Object displayElement = freezed,
   }) {
     return _then(_ConceptMapDependsOn(
@@ -6844,15 +6905,15 @@ class __$ConceptMapDependsOnCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       property: property == freezed ? _value.property : property as FhirUri,
-      system: system == freezed ? _value.system : system as Canonical,
-      value: value == freezed ? _value.value : value as String,
-      display: display == freezed ? _value.display : display as String,
       propertyElement: propertyElement == freezed
           ? _value.propertyElement
           : propertyElement as Element,
+      system: system == freezed ? _value.system : system as Canonical,
+      value: value == freezed ? _value.value : value as String,
       valueElement: valueElement == freezed
           ? _value.valueElement
           : valueElement as Element,
+      display: display == freezed ? _value.display : display as String,
       displayElement: displayElement == freezed
           ? _value.displayElement
           : displayElement as Element,
@@ -6861,18 +6922,19 @@ class __$ConceptMapDependsOnCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ConceptMapDependsOn implements _ConceptMapDependsOn {
-  const _$_ConceptMapDependsOn(
+class _$_ConceptMapDependsOn extends _ConceptMapDependsOn {
+  _$_ConceptMapDependsOn(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.property,
+      @JsonKey(name: '_property') this.propertyElement,
       this.system,
       this.value,
-      this.display,
-      @JsonKey(name: '_property') this.propertyElement,
       @JsonKey(name: '_value') this.valueElement,
-      @JsonKey(name: '_display') this.displayElement});
+      this.display,
+      @JsonKey(name: '_display') this.displayElement})
+      : super._();
 
   factory _$_ConceptMapDependsOn.fromJson(Map<String, dynamic> json) =>
       _$_$_ConceptMapDependsOnFromJson(json);
@@ -6887,24 +6949,24 @@ class _$_ConceptMapDependsOn implements _ConceptMapDependsOn {
   @override
   final FhirUri property;
   @override
+  @JsonKey(name: '_property')
+  final Element propertyElement;
+  @override
   final Canonical system;
   @override
   final String value;
   @override
-  final String display;
-  @override
-  @JsonKey(name: '_property')
-  final Element propertyElement;
-  @override
   @JsonKey(name: '_value')
   final Element valueElement;
+  @override
+  final String display;
   @override
   @JsonKey(name: '_display')
   final Element displayElement;
 
   @override
   String toString() {
-    return 'ConceptMapDependsOn(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, property: $property, system: $system, value: $value, display: $display, propertyElement: $propertyElement, valueElement: $valueElement, displayElement: $displayElement)';
+    return 'ConceptMapDependsOn(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, property: $property, propertyElement: $propertyElement, system: $system, value: $value, valueElement: $valueElement, display: $display, displayElement: $displayElement)';
   }
 
   @override
@@ -6922,19 +6984,19 @@ class _$_ConceptMapDependsOn implements _ConceptMapDependsOn {
             (identical(other.property, property) ||
                 const DeepCollectionEquality()
                     .equals(other.property, property)) &&
+            (identical(other.propertyElement, propertyElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.propertyElement, propertyElement)) &&
             (identical(other.system, system) ||
                 const DeepCollectionEquality().equals(other.system, system)) &&
             (identical(other.value, value) ||
                 const DeepCollectionEquality().equals(other.value, value)) &&
-            (identical(other.display, display) ||
-                const DeepCollectionEquality()
-                    .equals(other.display, display)) &&
-            (identical(other.propertyElement, propertyElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.propertyElement, propertyElement)) &&
             (identical(other.valueElement, valueElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueElement, valueElement)) &&
+            (identical(other.display, display) ||
+                const DeepCollectionEquality()
+                    .equals(other.display, display)) &&
             (identical(other.displayElement, displayElement) ||
                 const DeepCollectionEquality()
                     .equals(other.displayElement, displayElement)));
@@ -6947,11 +7009,11 @@ class _$_ConceptMapDependsOn implements _ConceptMapDependsOn {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(property) ^
+      const DeepCollectionEquality().hash(propertyElement) ^
       const DeepCollectionEquality().hash(system) ^
       const DeepCollectionEquality().hash(value) ^
-      const DeepCollectionEquality().hash(display) ^
-      const DeepCollectionEquality().hash(propertyElement) ^
       const DeepCollectionEquality().hash(valueElement) ^
+      const DeepCollectionEquality().hash(display) ^
       const DeepCollectionEquality().hash(displayElement);
 
   @override
@@ -6965,17 +7027,18 @@ class _$_ConceptMapDependsOn implements _ConceptMapDependsOn {
   }
 }
 
-abstract class _ConceptMapDependsOn implements ConceptMapDependsOn {
-  const factory _ConceptMapDependsOn(
+abstract class _ConceptMapDependsOn extends ConceptMapDependsOn {
+  _ConceptMapDependsOn._() : super._();
+  factory _ConceptMapDependsOn(
           {String id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
           FhirUri property,
+          @JsonKey(name: '_property') Element propertyElement,
           Canonical system,
           String value,
-          String display,
-          @JsonKey(name: '_property') Element propertyElement,
           @JsonKey(name: '_value') Element valueElement,
+          String display,
           @JsonKey(name: '_display') Element displayElement}) =
       _$_ConceptMapDependsOn;
 
@@ -6992,17 +7055,17 @@ abstract class _ConceptMapDependsOn implements ConceptMapDependsOn {
   @override
   FhirUri get property;
   @override
+  @JsonKey(name: '_property')
+  Element get propertyElement;
+  @override
   Canonical get system;
   @override
   String get value;
   @override
-  String get display;
-  @override
-  @JsonKey(name: '_property')
-  Element get propertyElement;
-  @override
   @JsonKey(name: '_value')
   Element get valueElement;
+  @override
+  String get display;
   @override
   @JsonKey(name: '_display')
   Element get displayElement;
@@ -7019,26 +7082,31 @@ class _$ConceptMapUnmappedTearOff {
 
   _ConceptMapUnmapped call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @JsonKey(unknownEnumValue: UnmappedMode.unknown) UnmappedMode mode,
+      @JsonKey(unknownEnumValue: ConceptMapUnmappedMode.unknown)
+          ConceptMapUnmappedMode mode,
+      @JsonKey(name: '_mode')
+          Element modeElement,
       Code code,
+      @JsonKey(name: '_code')
+          Element codeElement,
       String display,
-      Canonical url,
-      @JsonKey(name: '_mode') Element modeElement,
-      @JsonKey(name: '_code') Element codeElement,
-      @JsonKey(name: '_display') Element displayElement}) {
+      @JsonKey(name: '_display')
+          Element displayElement,
+      Canonical url}) {
     return _ConceptMapUnmapped(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       mode: mode,
-      code: code,
-      display: display,
-      url: url,
       modeElement: modeElement,
+      code: code,
       codeElement: codeElement,
+      display: display,
       displayElement: displayElement,
+      url: url,
     );
   }
 }
@@ -7051,17 +7119,17 @@ mixin _$ConceptMapUnmapped {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
-  @JsonKey(unknownEnumValue: UnmappedMode.unknown)
-  UnmappedMode get mode;
-  Code get code;
-  String get display;
-  Canonical get url;
+  @JsonKey(unknownEnumValue: ConceptMapUnmappedMode.unknown)
+  ConceptMapUnmappedMode get mode;
   @JsonKey(name: '_mode')
   Element get modeElement;
+  Code get code;
   @JsonKey(name: '_code')
   Element get codeElement;
+  String get display;
   @JsonKey(name: '_display')
   Element get displayElement;
+  Canonical get url;
 
   Map<String, dynamic> toJson();
   $ConceptMapUnmappedCopyWith<ConceptMapUnmapped> get copyWith;
@@ -7073,15 +7141,20 @@ abstract class $ConceptMapUnmappedCopyWith<$Res> {
       _$ConceptMapUnmappedCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @JsonKey(unknownEnumValue: UnmappedMode.unknown) UnmappedMode mode,
+      @JsonKey(unknownEnumValue: ConceptMapUnmappedMode.unknown)
+          ConceptMapUnmappedMode mode,
+      @JsonKey(name: '_mode')
+          Element modeElement,
       Code code,
+      @JsonKey(name: '_code')
+          Element codeElement,
       String display,
-      Canonical url,
-      @JsonKey(name: '_mode') Element modeElement,
-      @JsonKey(name: '_code') Element codeElement,
-      @JsonKey(name: '_display') Element displayElement});
+      @JsonKey(name: '_display')
+          Element displayElement,
+      Canonical url});
 
   $ElementCopyWith<$Res> get modeElement;
   $ElementCopyWith<$Res> get codeElement;
@@ -7102,12 +7175,12 @@ class _$ConceptMapUnmappedCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object mode = freezed,
-    Object code = freezed,
-    Object display = freezed,
-    Object url = freezed,
     Object modeElement = freezed,
+    Object code = freezed,
     Object codeElement = freezed,
+    Object display = freezed,
     Object displayElement = freezed,
+    Object url = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -7117,17 +7190,17 @@ class _$ConceptMapUnmappedCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      mode: mode == freezed ? _value.mode : mode as UnmappedMode,
-      code: code == freezed ? _value.code : code as Code,
-      display: display == freezed ? _value.display : display as String,
-      url: url == freezed ? _value.url : url as Canonical,
+      mode: mode == freezed ? _value.mode : mode as ConceptMapUnmappedMode,
       modeElement:
           modeElement == freezed ? _value.modeElement : modeElement as Element,
+      code: code == freezed ? _value.code : code as Code,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
+      display: display == freezed ? _value.display : display as String,
       displayElement: displayElement == freezed
           ? _value.displayElement
           : displayElement as Element,
+      url: url == freezed ? _value.url : url as Canonical,
     ));
   }
 
@@ -7170,15 +7243,20 @@ abstract class _$ConceptMapUnmappedCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @JsonKey(unknownEnumValue: UnmappedMode.unknown) UnmappedMode mode,
+      @JsonKey(unknownEnumValue: ConceptMapUnmappedMode.unknown)
+          ConceptMapUnmappedMode mode,
+      @JsonKey(name: '_mode')
+          Element modeElement,
       Code code,
+      @JsonKey(name: '_code')
+          Element codeElement,
       String display,
-      Canonical url,
-      @JsonKey(name: '_mode') Element modeElement,
-      @JsonKey(name: '_code') Element codeElement,
-      @JsonKey(name: '_display') Element displayElement});
+      @JsonKey(name: '_display')
+          Element displayElement,
+      Canonical url});
 
   @override
   $ElementCopyWith<$Res> get modeElement;
@@ -7204,12 +7282,12 @@ class __$ConceptMapUnmappedCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object mode = freezed,
-    Object code = freezed,
-    Object display = freezed,
-    Object url = freezed,
     Object modeElement = freezed,
+    Object code = freezed,
     Object codeElement = freezed,
+    Object display = freezed,
     Object displayElement = freezed,
+    Object url = freezed,
   }) {
     return _then(_ConceptMapUnmapped(
       id: id == freezed ? _value.id : id as String,
@@ -7219,34 +7297,35 @@ class __$ConceptMapUnmappedCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      mode: mode == freezed ? _value.mode : mode as UnmappedMode,
-      code: code == freezed ? _value.code : code as Code,
-      display: display == freezed ? _value.display : display as String,
-      url: url == freezed ? _value.url : url as Canonical,
+      mode: mode == freezed ? _value.mode : mode as ConceptMapUnmappedMode,
       modeElement:
           modeElement == freezed ? _value.modeElement : modeElement as Element,
+      code: code == freezed ? _value.code : code as Code,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
+      display: display == freezed ? _value.display : display as String,
       displayElement: displayElement == freezed
           ? _value.displayElement
           : displayElement as Element,
+      url: url == freezed ? _value.url : url as Canonical,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_ConceptMapUnmapped implements _ConceptMapUnmapped {
-  const _$_ConceptMapUnmapped(
+class _$_ConceptMapUnmapped extends _ConceptMapUnmapped {
+  _$_ConceptMapUnmapped(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @JsonKey(unknownEnumValue: UnmappedMode.unknown) this.mode,
-      this.code,
-      this.display,
-      this.url,
+      @JsonKey(unknownEnumValue: ConceptMapUnmappedMode.unknown) this.mode,
       @JsonKey(name: '_mode') this.modeElement,
+      this.code,
       @JsonKey(name: '_code') this.codeElement,
-      @JsonKey(name: '_display') this.displayElement});
+      this.display,
+      @JsonKey(name: '_display') this.displayElement,
+      this.url})
+      : super._();
 
   factory _$_ConceptMapUnmapped.fromJson(Map<String, dynamic> json) =>
       _$_$_ConceptMapUnmappedFromJson(json);
@@ -7259,27 +7338,27 @@ class _$_ConceptMapUnmapped implements _ConceptMapUnmapped {
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  @JsonKey(unknownEnumValue: UnmappedMode.unknown)
-  final UnmappedMode mode;
-  @override
-  final Code code;
-  @override
-  final String display;
-  @override
-  final Canonical url;
+  @JsonKey(unknownEnumValue: ConceptMapUnmappedMode.unknown)
+  final ConceptMapUnmappedMode mode;
   @override
   @JsonKey(name: '_mode')
   final Element modeElement;
   @override
+  final Code code;
+  @override
   @JsonKey(name: '_code')
   final Element codeElement;
   @override
+  final String display;
+  @override
   @JsonKey(name: '_display')
   final Element displayElement;
+  @override
+  final Canonical url;
 
   @override
   String toString() {
-    return 'ConceptMapUnmapped(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, mode: $mode, code: $code, display: $display, url: $url, modeElement: $modeElement, codeElement: $codeElement, displayElement: $displayElement)';
+    return 'ConceptMapUnmapped(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, mode: $mode, modeElement: $modeElement, code: $code, codeElement: $codeElement, display: $display, displayElement: $displayElement, url: $url)';
   }
 
   @override
@@ -7296,22 +7375,22 @@ class _$_ConceptMapUnmapped implements _ConceptMapUnmapped {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.mode, mode) ||
                 const DeepCollectionEquality().equals(other.mode, mode)) &&
-            (identical(other.code, code) ||
-                const DeepCollectionEquality().equals(other.code, code)) &&
-            (identical(other.display, display) ||
-                const DeepCollectionEquality()
-                    .equals(other.display, display)) &&
-            (identical(other.url, url) ||
-                const DeepCollectionEquality().equals(other.url, url)) &&
             (identical(other.modeElement, modeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.modeElement, modeElement)) &&
+            (identical(other.code, code) ||
+                const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.codeElement, codeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.codeElement, codeElement)) &&
+            (identical(other.display, display) ||
+                const DeepCollectionEquality()
+                    .equals(other.display, display)) &&
             (identical(other.displayElement, displayElement) ||
                 const DeepCollectionEquality()
-                    .equals(other.displayElement, displayElement)));
+                    .equals(other.displayElement, displayElement)) &&
+            (identical(other.url, url) ||
+                const DeepCollectionEquality().equals(other.url, url)));
   }
 
   @override
@@ -7321,12 +7400,12 @@ class _$_ConceptMapUnmapped implements _ConceptMapUnmapped {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(mode) ^
-      const DeepCollectionEquality().hash(code) ^
-      const DeepCollectionEquality().hash(display) ^
-      const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(modeElement) ^
+      const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(codeElement) ^
-      const DeepCollectionEquality().hash(displayElement);
+      const DeepCollectionEquality().hash(display) ^
+      const DeepCollectionEquality().hash(displayElement) ^
+      const DeepCollectionEquality().hash(url);
 
   @override
   _$ConceptMapUnmappedCopyWith<_ConceptMapUnmapped> get copyWith =>
@@ -7338,19 +7417,24 @@ class _$_ConceptMapUnmapped implements _ConceptMapUnmapped {
   }
 }
 
-abstract class _ConceptMapUnmapped implements ConceptMapUnmapped {
-  const factory _ConceptMapUnmapped(
-          {String id,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          List<FhirExtension> modifierExtension,
-          @JsonKey(unknownEnumValue: UnmappedMode.unknown) UnmappedMode mode,
-          Code code,
-          String display,
-          Canonical url,
-          @JsonKey(name: '_mode') Element modeElement,
-          @JsonKey(name: '_code') Element codeElement,
-          @JsonKey(name: '_display') Element displayElement}) =
-      _$_ConceptMapUnmapped;
+abstract class _ConceptMapUnmapped extends ConceptMapUnmapped {
+  _ConceptMapUnmapped._() : super._();
+  factory _ConceptMapUnmapped(
+      {String id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      @JsonKey(unknownEnumValue: ConceptMapUnmappedMode.unknown)
+          ConceptMapUnmappedMode mode,
+      @JsonKey(name: '_mode')
+          Element modeElement,
+      Code code,
+      @JsonKey(name: '_code')
+          Element codeElement,
+      String display,
+      @JsonKey(name: '_display')
+          Element displayElement,
+      Canonical url}) = _$_ConceptMapUnmapped;
 
   factory _ConceptMapUnmapped.fromJson(Map<String, dynamic> json) =
       _$_ConceptMapUnmapped.fromJson;
@@ -7363,23 +7447,23 @@ abstract class _ConceptMapUnmapped implements ConceptMapUnmapped {
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  @JsonKey(unknownEnumValue: UnmappedMode.unknown)
-  UnmappedMode get mode;
-  @override
-  Code get code;
-  @override
-  String get display;
-  @override
-  Canonical get url;
+  @JsonKey(unknownEnumValue: ConceptMapUnmappedMode.unknown)
+  ConceptMapUnmappedMode get mode;
   @override
   @JsonKey(name: '_mode')
   Element get modeElement;
   @override
+  Code get code;
+  @override
   @JsonKey(name: '_code')
   Element get codeElement;
   @override
+  String get display;
+  @override
   @JsonKey(name: '_display')
   Element get displayElement;
+  @override
+  Canonical get url;
   @override
   _$ConceptMapUnmappedCopyWith<_ConceptMapUnmapped> get copyWith;
 }
@@ -7393,87 +7477,86 @@ class _$NamingSystemTearOff {
 
   _NamingSystem call(
       {@required
-      @JsonKey(required: true, defaultValue: 'NamingSystem')
+      @JsonKey(defaultValue: 'NamingSystem')
           String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String name,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
+          NamingSystemStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
           NamingSystemKind kind,
+      @JsonKey(name: '_kind')
+          Element kindElement,
       FhirDateTime date,
+      @JsonKey(name: '_date')
+          Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
       List<ContactDetail> contact,
       String responsible,
+      @JsonKey(name: '_responsible')
+          Element responsibleElement,
       CodeableConcept type,
       Markdown description,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       String usage,
-      @required
-      @JsonKey(required: true)
-          List<NamingSystemUniqueId> uniqueId,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      @JsonKey(name: '_language')
-          Element languageElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_kind')
-          Element kindElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_responsible')
-          Element responsibleElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
       @JsonKey(name: '_usage')
-          Element usageElement}) {
+          Element usageElement,
+      @required
+          List<NamingSystemUniqueId> uniqueId}) {
     return _NamingSystem(
       resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
+      implicitRulesElement: implicitRulesElement,
       language: language,
+      languageElement: languageElement,
       text: text,
       contained: contained,
       extension_: extension_,
       modifierExtension: modifierExtension,
       name: name,
+      nameElement: nameElement,
       status: status,
+      statusElement: statusElement,
       kind: kind,
+      kindElement: kindElement,
       date: date,
+      dateElement: dateElement,
       publisher: publisher,
+      publisherElement: publisherElement,
       contact: contact,
       responsible: responsible,
+      responsibleElement: responsibleElement,
       type: type,
       description: description,
+      descriptionElement: descriptionElement,
       useContext: useContext,
       jurisdiction: jurisdiction,
       usage: usage,
-      uniqueId: uniqueId,
-      implicitRulesElement: implicitRulesElement,
-      languageElement: languageElement,
-      nameElement: nameElement,
-      statusElement: statusElement,
-      kindElement: kindElement,
-      dateElement: dateElement,
-      publisherElement: publisherElement,
-      responsibleElement: responsibleElement,
-      descriptionElement: descriptionElement,
       usageElement: usageElement,
+      uniqueId: uniqueId,
     );
   }
 }
@@ -7482,53 +7565,52 @@ class _$NamingSystemTearOff {
 const $NamingSystem = _$NamingSystemTearOff();
 
 mixin _$NamingSystem {
-  @JsonKey(required: true, defaultValue: 'NamingSystem')
+  @JsonKey(defaultValue: 'NamingSystem')
   String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
   Code get language;
+  @JsonKey(name: '_language')
+  Element get languageElement;
   Narrative get text;
   List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   String get name;
-  @JsonKey(unknownEnumValue: Status.unknown)
-  Status get status;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
+  NamingSystemStatus get status;
+  @JsonKey(name: '_status')
+  Element get statusElement;
   @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
   NamingSystemKind get kind;
+  @JsonKey(name: '_kind')
+  Element get kindElement;
   FhirDateTime get date;
+  @JsonKey(name: '_date')
+  Element get dateElement;
   String get publisher;
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
   List<ContactDetail> get contact;
   String get responsible;
+  @JsonKey(name: '_responsible')
+  Element get responsibleElement;
   CodeableConcept get type;
   Markdown get description;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
   List<UsageContext> get useContext;
   List<CodeableConcept> get jurisdiction;
   String get usage;
-  @JsonKey(required: true)
-  List<NamingSystemUniqueId> get uniqueId;
-  @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  @JsonKey(name: '_language')
-  Element get languageElement;
-  @JsonKey(name: '_name')
-  Element get nameElement;
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @JsonKey(name: '_kind')
-  Element get kindElement;
-  @JsonKey(name: '_date')
-  Element get dateElement;
-  @JsonKey(name: '_publisher')
-  Element get publisherElement;
-  @JsonKey(name: '_responsible')
-  Element get responsibleElement;
-  @JsonKey(name: '_description')
-  Element get descriptionElement;
   @JsonKey(name: '_usage')
   Element get usageElement;
+  List<NamingSystemUniqueId> get uniqueId;
 
   Map<String, dynamic> toJson();
   $NamingSystemCopyWith<NamingSystem> get copyWith;
@@ -7539,65 +7621,64 @@ abstract class $NamingSystemCopyWith<$Res> {
           NamingSystem value, $Res Function(NamingSystem) then) =
       _$NamingSystemCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'NamingSystem')
+      {@JsonKey(defaultValue: 'NamingSystem')
           String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String name,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
+          NamingSystemStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
           NamingSystemKind kind,
+      @JsonKey(name: '_kind')
+          Element kindElement,
       FhirDateTime date,
+      @JsonKey(name: '_date')
+          Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
       List<ContactDetail> contact,
       String responsible,
+      @JsonKey(name: '_responsible')
+          Element responsibleElement,
       CodeableConcept type,
       Markdown description,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       String usage,
-      @JsonKey(required: true)
-          List<NamingSystemUniqueId> uniqueId,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      @JsonKey(name: '_language')
-          Element languageElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_kind')
-          Element kindElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_responsible')
-          Element responsibleElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
       @JsonKey(name: '_usage')
-          Element usageElement});
+          Element usageElement,
+      List<NamingSystemUniqueId> uniqueId});
 
   $MetaCopyWith<$Res> get meta;
-  $NarrativeCopyWith<$Res> get text;
-  $CodeableConceptCopyWith<$Res> get type;
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
+  $NarrativeCopyWith<$Res> get text;
   $ElementCopyWith<$Res> get nameElement;
   $ElementCopyWith<$Res> get statusElement;
   $ElementCopyWith<$Res> get kindElement;
   $ElementCopyWith<$Res> get dateElement;
   $ElementCopyWith<$Res> get publisherElement;
   $ElementCopyWith<$Res> get responsibleElement;
+  $CodeableConceptCopyWith<$Res> get type;
   $ElementCopyWith<$Res> get descriptionElement;
   $ElementCopyWith<$Res> get usageElement;
 }
@@ -7615,34 +7696,34 @@ class _$NamingSystemCopyWithImpl<$Res> implements $NamingSystemCopyWith<$Res> {
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object name = freezed,
+    Object nameElement = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object kind = freezed,
+    Object kindElement = freezed,
     Object date = freezed,
+    Object dateElement = freezed,
     Object publisher = freezed,
+    Object publisherElement = freezed,
     Object contact = freezed,
     Object responsible = freezed,
+    Object responsibleElement = freezed,
     Object type = freezed,
     Object description = freezed,
+    Object descriptionElement = freezed,
     Object useContext = freezed,
     Object jurisdiction = freezed,
     Object usage = freezed,
-    Object uniqueId = freezed,
-    Object implicitRulesElement = freezed,
-    Object languageElement = freezed,
-    Object nameElement = freezed,
-    Object statusElement = freezed,
-    Object kindElement = freezed,
-    Object dateElement = freezed,
-    Object publisherElement = freezed,
-    Object responsibleElement = freezed,
-    Object descriptionElement = freezed,
     Object usageElement = freezed,
+    Object uniqueId = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -7653,7 +7734,13 @@ class _$NamingSystemCopyWithImpl<$Res> implements $NamingSystemCopyWith<$Res> {
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -7664,17 +7751,35 @@ class _$NamingSystemCopyWithImpl<$Res> implements $NamingSystemCopyWith<$Res> {
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       name: name == freezed ? _value.name : name as String,
-      status: status == freezed ? _value.status : status as Status,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      status: status == freezed ? _value.status : status as NamingSystemStatus,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       kind: kind == freezed ? _value.kind : kind as NamingSystemKind,
+      kindElement:
+          kindElement == freezed ? _value.kindElement : kindElement as Element,
       date: date == freezed ? _value.date : date as FhirDateTime,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
       responsible:
           responsible == freezed ? _value.responsible : responsible as String,
+      responsibleElement: responsibleElement == freezed
+          ? _value.responsibleElement
+          : responsibleElement as Element,
       type: type == freezed ? _value.type : type as CodeableConcept,
       description:
           description == freezed ? _value.description : description as Markdown,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
       useContext: useContext == freezed
           ? _value.useContext
           : useContext as List<UsageContext>,
@@ -7682,36 +7787,12 @@ class _$NamingSystemCopyWithImpl<$Res> implements $NamingSystemCopyWith<$Res> {
           ? _value.jurisdiction
           : jurisdiction as List<CodeableConcept>,
       usage: usage == freezed ? _value.usage : usage as String,
-      uniqueId: uniqueId == freezed
-          ? _value.uniqueId
-          : uniqueId as List<NamingSystemUniqueId>,
-      implicitRulesElement: implicitRulesElement == freezed
-          ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      languageElement: languageElement == freezed
-          ? _value.languageElement
-          : languageElement as Element,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      kindElement:
-          kindElement == freezed ? _value.kindElement : kindElement as Element,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element,
-      publisherElement: publisherElement == freezed
-          ? _value.publisherElement
-          : publisherElement as Element,
-      responsibleElement: responsibleElement == freezed
-          ? _value.responsibleElement
-          : responsibleElement as Element,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement as Element,
       usageElement: usageElement == freezed
           ? _value.usageElement
           : usageElement as Element,
+      uniqueId: uniqueId == freezed
+          ? _value.uniqueId
+          : uniqueId as List<NamingSystemUniqueId>,
     ));
   }
 
@@ -7722,26 +7803,6 @@ class _$NamingSystemCopyWithImpl<$Res> implements $NamingSystemCopyWith<$Res> {
     }
     return $MetaCopyWith<$Res>(_value.meta, (value) {
       return _then(_value.copyWith(meta: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get text {
-    if (_value.text == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.text, (value) {
-      return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get type {
-    if (_value.type == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
-      return _then(_value.copyWith(type: value));
     });
   }
 
@@ -7762,6 +7823,16 @@ class _$NamingSystemCopyWithImpl<$Res> implements $NamingSystemCopyWith<$Res> {
     }
     return $ElementCopyWith<$Res>(_value.languageElement, (value) {
       return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
     });
   }
 
@@ -7826,6 +7897,16 @@ class _$NamingSystemCopyWithImpl<$Res> implements $NamingSystemCopyWith<$Res> {
   }
 
   @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res> get descriptionElement {
     if (_value.descriptionElement == null) {
       return null;
@@ -7853,64 +7934,61 @@ abstract class _$NamingSystemCopyWith<$Res>
       __$NamingSystemCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'NamingSystem')
+      {@JsonKey(defaultValue: 'NamingSystem')
           String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String name,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
+          NamingSystemStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
           NamingSystemKind kind,
+      @JsonKey(name: '_kind')
+          Element kindElement,
       FhirDateTime date,
+      @JsonKey(name: '_date')
+          Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
       List<ContactDetail> contact,
       String responsible,
+      @JsonKey(name: '_responsible')
+          Element responsibleElement,
       CodeableConcept type,
       Markdown description,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       String usage,
-      @JsonKey(required: true)
-          List<NamingSystemUniqueId> uniqueId,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      @JsonKey(name: '_language')
-          Element languageElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_kind')
-          Element kindElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_responsible')
-          Element responsibleElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
       @JsonKey(name: '_usage')
-          Element usageElement});
+          Element usageElement,
+      List<NamingSystemUniqueId> uniqueId});
 
   @override
   $MetaCopyWith<$Res> get meta;
   @override
-  $NarrativeCopyWith<$Res> get text;
-  @override
-  $CodeableConceptCopyWith<$Res> get type;
-  @override
   $ElementCopyWith<$Res> get implicitRulesElement;
   @override
   $ElementCopyWith<$Res> get languageElement;
+  @override
+  $NarrativeCopyWith<$Res> get text;
   @override
   $ElementCopyWith<$Res> get nameElement;
   @override
@@ -7923,6 +8001,8 @@ abstract class _$NamingSystemCopyWith<$Res>
   $ElementCopyWith<$Res> get publisherElement;
   @override
   $ElementCopyWith<$Res> get responsibleElement;
+  @override
+  $CodeableConceptCopyWith<$Res> get type;
   @override
   $ElementCopyWith<$Res> get descriptionElement;
   @override
@@ -7944,34 +8024,34 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object name = freezed,
+    Object nameElement = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object kind = freezed,
+    Object kindElement = freezed,
     Object date = freezed,
+    Object dateElement = freezed,
     Object publisher = freezed,
+    Object publisherElement = freezed,
     Object contact = freezed,
     Object responsible = freezed,
+    Object responsibleElement = freezed,
     Object type = freezed,
     Object description = freezed,
+    Object descriptionElement = freezed,
     Object useContext = freezed,
     Object jurisdiction = freezed,
     Object usage = freezed,
-    Object uniqueId = freezed,
-    Object implicitRulesElement = freezed,
-    Object languageElement = freezed,
-    Object nameElement = freezed,
-    Object statusElement = freezed,
-    Object kindElement = freezed,
-    Object dateElement = freezed,
-    Object publisherElement = freezed,
-    Object responsibleElement = freezed,
-    Object descriptionElement = freezed,
     Object usageElement = freezed,
+    Object uniqueId = freezed,
   }) {
     return _then(_NamingSystem(
       resourceType: resourceType == freezed
@@ -7982,7 +8062,13 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -7993,17 +8079,35 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       name: name == freezed ? _value.name : name as String,
-      status: status == freezed ? _value.status : status as Status,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      status: status == freezed ? _value.status : status as NamingSystemStatus,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       kind: kind == freezed ? _value.kind : kind as NamingSystemKind,
+      kindElement:
+          kindElement == freezed ? _value.kindElement : kindElement as Element,
       date: date == freezed ? _value.date : date as FhirDateTime,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
       responsible:
           responsible == freezed ? _value.responsible : responsible as String,
+      responsibleElement: responsibleElement == freezed
+          ? _value.responsibleElement
+          : responsibleElement as Element,
       type: type == freezed ? _value.type : type as CodeableConcept,
       description:
           description == freezed ? _value.description : description as Markdown,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
       useContext: useContext == freezed
           ? _value.useContext
           : useContext as List<UsageContext>,
@@ -8011,100 +8115,60 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
           ? _value.jurisdiction
           : jurisdiction as List<CodeableConcept>,
       usage: usage == freezed ? _value.usage : usage as String,
-      uniqueId: uniqueId == freezed
-          ? _value.uniqueId
-          : uniqueId as List<NamingSystemUniqueId>,
-      implicitRulesElement: implicitRulesElement == freezed
-          ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      languageElement: languageElement == freezed
-          ? _value.languageElement
-          : languageElement as Element,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      kindElement:
-          kindElement == freezed ? _value.kindElement : kindElement as Element,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element,
-      publisherElement: publisherElement == freezed
-          ? _value.publisherElement
-          : publisherElement as Element,
-      responsibleElement: responsibleElement == freezed
-          ? _value.responsibleElement
-          : responsibleElement as Element,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement as Element,
       usageElement: usageElement == freezed
           ? _value.usageElement
           : usageElement as Element,
+      uniqueId: uniqueId == freezed
+          ? _value.uniqueId
+          : uniqueId as List<NamingSystemUniqueId>,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_NamingSystem implements _NamingSystem {
-  const _$_NamingSystem(
-      {@required
-      @JsonKey(required: true, defaultValue: 'NamingSystem')
-          this.resourceType,
+class _$_NamingSystem extends _NamingSystem {
+  _$_NamingSystem(
+      {@required @JsonKey(defaultValue: 'NamingSystem') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.name,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          this.status,
-      @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
-          this.kind,
+      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(unknownEnumValue: NamingSystemStatus.unknown) this.status,
+      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(unknownEnumValue: NamingSystemKind.unknown) this.kind,
+      @JsonKey(name: '_kind') this.kindElement,
       this.date,
+      @JsonKey(name: '_date') this.dateElement,
       this.publisher,
+      @JsonKey(name: '_publisher') this.publisherElement,
       this.contact,
       this.responsible,
+      @JsonKey(name: '_responsible') this.responsibleElement,
       this.type,
       this.description,
+      @JsonKey(name: '_description') this.descriptionElement,
       this.useContext,
       this.jurisdiction,
       this.usage,
-      @required
-      @JsonKey(required: true)
-          this.uniqueId,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
-      @JsonKey(name: '_language')
-          this.languageElement,
-      @JsonKey(name: '_name')
-          this.nameElement,
-      @JsonKey(name: '_status')
-          this.statusElement,
-      @JsonKey(name: '_kind')
-          this.kindElement,
-      @JsonKey(name: '_date')
-          this.dateElement,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
-      @JsonKey(name: '_responsible')
-          this.responsibleElement,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
-      @JsonKey(name: '_usage')
-          this.usageElement})
+      @JsonKey(name: '_usage') this.usageElement,
+      @required this.uniqueId})
       : assert(resourceType != null),
-        assert(uniqueId != null);
+        assert(uniqueId != null),
+        super._();
 
   factory _$_NamingSystem.fromJson(Map<String, dynamic> json) =>
       _$_$_NamingSystemFromJson(json);
 
   @override
-  @JsonKey(required: true, defaultValue: 'NamingSystem')
+  @JsonKey(defaultValue: 'NamingSystem')
   final String resourceType;
   @override
   final Id id;
@@ -8113,7 +8177,13 @@ class _$_NamingSystem implements _NamingSystem {
   @override
   final FhirUri implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
   final Code language;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
   @override
   final Narrative text;
   @override
@@ -8126,23 +8196,44 @@ class _$_NamingSystem implements _NamingSystem {
   @override
   final String name;
   @override
-  @JsonKey(unknownEnumValue: Status.unknown)
-  final Status status;
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
+  final NamingSystemStatus status;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
   @override
   @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
   final NamingSystemKind kind;
   @override
+  @JsonKey(name: '_kind')
+  final Element kindElement;
+  @override
   final FhirDateTime date;
   @override
+  @JsonKey(name: '_date')
+  final Element dateElement;
+  @override
   final String publisher;
+  @override
+  @JsonKey(name: '_publisher')
+  final Element publisherElement;
   @override
   final List<ContactDetail> contact;
   @override
   final String responsible;
   @override
+  @JsonKey(name: '_responsible')
+  final Element responsibleElement;
+  @override
   final CodeableConcept type;
   @override
   final Markdown description;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
   @override
   final List<UsageContext> useContext;
   @override
@@ -8150,42 +8241,14 @@ class _$_NamingSystem implements _NamingSystem {
   @override
   final String usage;
   @override
-  @JsonKey(required: true)
-  final List<NamingSystemUniqueId> uniqueId;
-  @override
-  @JsonKey(name: '_implicitRules')
-  final Element implicitRulesElement;
-  @override
-  @JsonKey(name: '_language')
-  final Element languageElement;
-  @override
-  @JsonKey(name: '_name')
-  final Element nameElement;
-  @override
-  @JsonKey(name: '_status')
-  final Element statusElement;
-  @override
-  @JsonKey(name: '_kind')
-  final Element kindElement;
-  @override
-  @JsonKey(name: '_date')
-  final Element dateElement;
-  @override
-  @JsonKey(name: '_publisher')
-  final Element publisherElement;
-  @override
-  @JsonKey(name: '_responsible')
-  final Element responsibleElement;
-  @override
-  @JsonKey(name: '_description')
-  final Element descriptionElement;
-  @override
   @JsonKey(name: '_usage')
   final Element usageElement;
+  @override
+  final List<NamingSystemUniqueId> uniqueId;
 
   @override
   String toString() {
-    return 'NamingSystem(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, status: $status, kind: $kind, date: $date, publisher: $publisher, contact: $contact, responsible: $responsible, type: $type, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, usage: $usage, uniqueId: $uniqueId, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, nameElement: $nameElement, statusElement: $statusElement, kindElement: $kindElement, dateElement: $dateElement, publisherElement: $publisherElement, responsibleElement: $responsibleElement, descriptionElement: $descriptionElement, usageElement: $usageElement)';
+    return 'NamingSystem(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, status: $status, statusElement: $statusElement, kind: $kind, kindElement: $kindElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, responsible: $responsible, responsibleElement: $responsibleElement, type: $type, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, usage: $usage, usageElement: $usageElement, uniqueId: $uniqueId)';
   }
 
   @override
@@ -8202,9 +8265,15 @@ class _$_NamingSystem implements _NamingSystem {
             (identical(other.implicitRules, implicitRules) ||
                 const DeepCollectionEquality()
                     .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
             (identical(other.language, language) ||
                 const DeepCollectionEquality()
                     .equals(other.language, language)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
             (identical(other.text, text) ||
                 const DeepCollectionEquality().equals(other.text, text)) &&
             (identical(other.contained, contained) ||
@@ -8218,55 +8287,49 @@ class _$_NamingSystem implements _NamingSystem {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
             (identical(other.kind, kind) ||
                 const DeepCollectionEquality().equals(other.kind, kind)) &&
+            (identical(other.kindElement, kindElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.kindElement, kindElement)) &&
             (identical(other.date, date) ||
                 const DeepCollectionEquality().equals(other.date, date)) &&
+            (identical(other.dateElement, dateElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.dateElement, dateElement)) &&
             (identical(other.publisher, publisher) ||
                 const DeepCollectionEquality()
                     .equals(other.publisher, publisher)) &&
+            (identical(other.publisherElement, publisherElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.publisherElement, publisherElement)) &&
             (identical(other.contact, contact) ||
                 const DeepCollectionEquality()
                     .equals(other.contact, contact)) &&
             (identical(other.responsible, responsible) ||
                 const DeepCollectionEquality()
                     .equals(other.responsible, responsible)) &&
+            (identical(other.responsibleElement, responsibleElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.responsibleElement, responsibleElement)) &&
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.description, description) ||
-                const DeepCollectionEquality()
-                    .equals(other.description, description)) &&
-            (identical(other.useContext, useContext) ||
-                const DeepCollectionEquality()
-                    .equals(other.useContext, useContext)) &&
-            (identical(other.jurisdiction, jurisdiction) ||
-                const DeepCollectionEquality()
-                    .equals(other.jurisdiction, jurisdiction)) &&
-            (identical(other.usage, usage) ||
-                const DeepCollectionEquality().equals(other.usage, usage)) &&
-            (identical(other.uniqueId, uniqueId) ||
-                const DeepCollectionEquality()
-                    .equals(other.uniqueId, uniqueId)) &&
-            (identical(other.implicitRulesElement, implicitRulesElement) ||
-                const DeepCollectionEquality().equals(
-                    other.implicitRulesElement, implicitRulesElement)) &&
-            (identical(other.languageElement, languageElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.languageElement, languageElement)) &&
-            (identical(other.nameElement, nameElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.nameElement, nameElement)) &&
-            (identical(other.statusElement, statusElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusElement, statusElement)) &&
-            (identical(other.kindElement, kindElement) || const DeepCollectionEquality().equals(other.kindElement, kindElement)) &&
-            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
-            (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
-            (identical(other.responsibleElement, responsibleElement) || const DeepCollectionEquality().equals(other.responsibleElement, responsibleElement)) &&
+                const DeepCollectionEquality().equals(other.description, description)) &&
             (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
-            (identical(other.usageElement, usageElement) || const DeepCollectionEquality().equals(other.usageElement, usageElement)));
+            (identical(other.useContext, useContext) || const DeepCollectionEquality().equals(other.useContext, useContext)) &&
+            (identical(other.jurisdiction, jurisdiction) || const DeepCollectionEquality().equals(other.jurisdiction, jurisdiction)) &&
+            (identical(other.usage, usage) || const DeepCollectionEquality().equals(other.usage, usage)) &&
+            (identical(other.usageElement, usageElement) || const DeepCollectionEquality().equals(other.usageElement, usageElement)) &&
+            (identical(other.uniqueId, uniqueId) || const DeepCollectionEquality().equals(other.uniqueId, uniqueId)));
   }
 
   @override
@@ -8276,34 +8339,34 @@ class _$_NamingSystem implements _NamingSystem {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
       const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(name) ^
+      const DeepCollectionEquality().hash(nameElement) ^
       const DeepCollectionEquality().hash(status) ^
+      const DeepCollectionEquality().hash(statusElement) ^
       const DeepCollectionEquality().hash(kind) ^
+      const DeepCollectionEquality().hash(kindElement) ^
       const DeepCollectionEquality().hash(date) ^
+      const DeepCollectionEquality().hash(dateElement) ^
       const DeepCollectionEquality().hash(publisher) ^
+      const DeepCollectionEquality().hash(publisherElement) ^
       const DeepCollectionEquality().hash(contact) ^
       const DeepCollectionEquality().hash(responsible) ^
+      const DeepCollectionEquality().hash(responsibleElement) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(description) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(useContext) ^
       const DeepCollectionEquality().hash(jurisdiction) ^
       const DeepCollectionEquality().hash(usage) ^
-      const DeepCollectionEquality().hash(uniqueId) ^
-      const DeepCollectionEquality().hash(implicitRulesElement) ^
-      const DeepCollectionEquality().hash(languageElement) ^
-      const DeepCollectionEquality().hash(nameElement) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(kindElement) ^
-      const DeepCollectionEquality().hash(dateElement) ^
-      const DeepCollectionEquality().hash(publisherElement) ^
-      const DeepCollectionEquality().hash(responsibleElement) ^
-      const DeepCollectionEquality().hash(descriptionElement) ^
-      const DeepCollectionEquality().hash(usageElement);
+      const DeepCollectionEquality().hash(usageElement) ^
+      const DeepCollectionEquality().hash(uniqueId);
 
   @override
   _$NamingSystemCopyWith<_NamingSystem> get copyWith =>
@@ -8315,63 +8378,63 @@ class _$_NamingSystem implements _NamingSystem {
   }
 }
 
-abstract class _NamingSystem implements NamingSystem {
-  const factory _NamingSystem(
+abstract class _NamingSystem extends NamingSystem {
+  _NamingSystem._() : super._();
+  factory _NamingSystem(
       {@required
-      @JsonKey(required: true, defaultValue: 'NamingSystem')
+      @JsonKey(defaultValue: 'NamingSystem')
           String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String name,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
+          NamingSystemStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
           NamingSystemKind kind,
+      @JsonKey(name: '_kind')
+          Element kindElement,
       FhirDateTime date,
+      @JsonKey(name: '_date')
+          Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
       List<ContactDetail> contact,
       String responsible,
+      @JsonKey(name: '_responsible')
+          Element responsibleElement,
       CodeableConcept type,
       Markdown description,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       String usage,
-      @required
-      @JsonKey(required: true)
-          List<NamingSystemUniqueId> uniqueId,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      @JsonKey(name: '_language')
-          Element languageElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_kind')
-          Element kindElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_responsible')
-          Element responsibleElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
       @JsonKey(name: '_usage')
-          Element usageElement}) = _$_NamingSystem;
+          Element usageElement,
+      @required
+          List<NamingSystemUniqueId> uniqueId}) = _$_NamingSystem;
 
   factory _NamingSystem.fromJson(Map<String, dynamic> json) =
       _$_NamingSystem.fromJson;
 
   @override
-  @JsonKey(required: true, defaultValue: 'NamingSystem')
+  @JsonKey(defaultValue: 'NamingSystem')
   String get resourceType;
   @override
   Id get id;
@@ -8380,7 +8443,13 @@ abstract class _NamingSystem implements NamingSystem {
   @override
   FhirUri get implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
   Code get language;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
   @override
   Narrative get text;
   @override
@@ -8393,23 +8462,44 @@ abstract class _NamingSystem implements NamingSystem {
   @override
   String get name;
   @override
-  @JsonKey(unknownEnumValue: Status.unknown)
-  Status get status;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
+  NamingSystemStatus get status;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
   @override
   @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
   NamingSystemKind get kind;
   @override
+  @JsonKey(name: '_kind')
+  Element get kindElement;
+  @override
   FhirDateTime get date;
   @override
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @override
   String get publisher;
+  @override
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
   @override
   List<ContactDetail> get contact;
   @override
   String get responsible;
   @override
+  @JsonKey(name: '_responsible')
+  Element get responsibleElement;
+  @override
   CodeableConcept get type;
   @override
   Markdown get description;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
   @override
   List<UsageContext> get useContext;
   @override
@@ -8417,38 +8507,10 @@ abstract class _NamingSystem implements NamingSystem {
   @override
   String get usage;
   @override
-  @JsonKey(required: true)
-  List<NamingSystemUniqueId> get uniqueId;
-  @override
-  @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  @override
-  @JsonKey(name: '_language')
-  Element get languageElement;
-  @override
-  @JsonKey(name: '_name')
-  Element get nameElement;
-  @override
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @override
-  @JsonKey(name: '_kind')
-  Element get kindElement;
-  @override
-  @JsonKey(name: '_date')
-  Element get dateElement;
-  @override
-  @JsonKey(name: '_publisher')
-  Element get publisherElement;
-  @override
-  @JsonKey(name: '_responsible')
-  Element get responsibleElement;
-  @override
-  @JsonKey(name: '_description')
-  Element get descriptionElement;
-  @override
   @JsonKey(name: '_usage')
   Element get usageElement;
+  @override
+  List<NamingSystemUniqueId> get uniqueId;
   @override
   _$NamingSystemCopyWith<_NamingSystem> get copyWith;
 }
@@ -8462,30 +8524,36 @@ class _$NamingSystemUniqueIdTearOff {
 
   _NamingSystemUniqueId call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @JsonKey(unknownEnumValue: UniqueIdType.unknown) UniqueIdType type,
+      @JsonKey(unknownEnumValue: NamingSystemUniqueIdType.unknown)
+          NamingSystemUniqueIdType type,
+      @JsonKey(name: '_type')
+          Element typeElement,
       String value,
+      @JsonKey(name: '_value')
+          Element valueElement,
       Boolean preferred,
+      @JsonKey(name: '_preferred')
+          Element preferredElement,
       String comment,
-      Period period,
-      @JsonKey(name: '_type') Element typeElement,
-      @JsonKey(name: '_value') Element valueElement,
-      @JsonKey(name: '_preferred') Element preferredElement,
-      @JsonKey(name: '_comment') Element commentElement}) {
+      @JsonKey(name: '_comment')
+          Element commentElement,
+      Period period}) {
     return _NamingSystemUniqueId(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       type: type,
-      value: value,
-      preferred: preferred,
-      comment: comment,
-      period: period,
       typeElement: typeElement,
+      value: value,
       valueElement: valueElement,
+      preferred: preferred,
       preferredElement: preferredElement,
+      comment: comment,
       commentElement: commentElement,
+      period: period,
     );
   }
 }
@@ -8498,20 +8566,20 @@ mixin _$NamingSystemUniqueId {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
-  @JsonKey(unknownEnumValue: UniqueIdType.unknown)
-  UniqueIdType get type;
-  String get value;
-  Boolean get preferred;
-  String get comment;
-  Period get period;
+  @JsonKey(unknownEnumValue: NamingSystemUniqueIdType.unknown)
+  NamingSystemUniqueIdType get type;
   @JsonKey(name: '_type')
   Element get typeElement;
+  String get value;
   @JsonKey(name: '_value')
   Element get valueElement;
+  Boolean get preferred;
   @JsonKey(name: '_preferred')
   Element get preferredElement;
+  String get comment;
   @JsonKey(name: '_comment')
   Element get commentElement;
+  Period get period;
 
   Map<String, dynamic> toJson();
   $NamingSystemUniqueIdCopyWith<NamingSystemUniqueId> get copyWith;
@@ -8523,23 +8591,29 @@ abstract class $NamingSystemUniqueIdCopyWith<$Res> {
       _$NamingSystemUniqueIdCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @JsonKey(unknownEnumValue: UniqueIdType.unknown) UniqueIdType type,
+      @JsonKey(unknownEnumValue: NamingSystemUniqueIdType.unknown)
+          NamingSystemUniqueIdType type,
+      @JsonKey(name: '_type')
+          Element typeElement,
       String value,
+      @JsonKey(name: '_value')
+          Element valueElement,
       Boolean preferred,
+      @JsonKey(name: '_preferred')
+          Element preferredElement,
       String comment,
-      Period period,
-      @JsonKey(name: '_type') Element typeElement,
-      @JsonKey(name: '_value') Element valueElement,
-      @JsonKey(name: '_preferred') Element preferredElement,
-      @JsonKey(name: '_comment') Element commentElement});
+      @JsonKey(name: '_comment')
+          Element commentElement,
+      Period period});
 
-  $PeriodCopyWith<$Res> get period;
   $ElementCopyWith<$Res> get typeElement;
   $ElementCopyWith<$Res> get valueElement;
   $ElementCopyWith<$Res> get preferredElement;
   $ElementCopyWith<$Res> get commentElement;
+  $PeriodCopyWith<$Res> get period;
 }
 
 class _$NamingSystemUniqueIdCopyWithImpl<$Res>
@@ -8556,14 +8630,14 @@ class _$NamingSystemUniqueIdCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object type = freezed,
-    Object value = freezed,
-    Object preferred = freezed,
-    Object comment = freezed,
-    Object period = freezed,
     Object typeElement = freezed,
+    Object value = freezed,
     Object valueElement = freezed,
+    Object preferred = freezed,
     Object preferredElement = freezed,
+    Object comment = freezed,
     Object commentElement = freezed,
+    Object period = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -8573,33 +8647,23 @@ class _$NamingSystemUniqueIdCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      type: type == freezed ? _value.type : type as UniqueIdType,
-      value: value == freezed ? _value.value : value as String,
-      preferred: preferred == freezed ? _value.preferred : preferred as Boolean,
-      comment: comment == freezed ? _value.comment : comment as String,
-      period: period == freezed ? _value.period : period as Period,
+      type: type == freezed ? _value.type : type as NamingSystemUniqueIdType,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element,
+      value: value == freezed ? _value.value : value as String,
       valueElement: valueElement == freezed
           ? _value.valueElement
           : valueElement as Element,
+      preferred: preferred == freezed ? _value.preferred : preferred as Boolean,
       preferredElement: preferredElement == freezed
           ? _value.preferredElement
           : preferredElement as Element,
+      comment: comment == freezed ? _value.comment : comment as String,
       commentElement: commentElement == freezed
           ? _value.commentElement
           : commentElement as Element,
+      period: period == freezed ? _value.period : period as Period,
     ));
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get period {
-    if (_value.period == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.period, (value) {
-      return _then(_value.copyWith(period: value));
-    });
   }
 
   @override
@@ -8641,6 +8705,16 @@ class _$NamingSystemUniqueIdCopyWithImpl<$Res>
       return _then(_value.copyWith(commentElement: value));
     });
   }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
+  }
 }
 
 abstract class _$NamingSystemUniqueIdCopyWith<$Res>
@@ -8651,20 +8725,24 @@ abstract class _$NamingSystemUniqueIdCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @JsonKey(unknownEnumValue: UniqueIdType.unknown) UniqueIdType type,
+      @JsonKey(unknownEnumValue: NamingSystemUniqueIdType.unknown)
+          NamingSystemUniqueIdType type,
+      @JsonKey(name: '_type')
+          Element typeElement,
       String value,
+      @JsonKey(name: '_value')
+          Element valueElement,
       Boolean preferred,
+      @JsonKey(name: '_preferred')
+          Element preferredElement,
       String comment,
-      Period period,
-      @JsonKey(name: '_type') Element typeElement,
-      @JsonKey(name: '_value') Element valueElement,
-      @JsonKey(name: '_preferred') Element preferredElement,
-      @JsonKey(name: '_comment') Element commentElement});
+      @JsonKey(name: '_comment')
+          Element commentElement,
+      Period period});
 
-  @override
-  $PeriodCopyWith<$Res> get period;
   @override
   $ElementCopyWith<$Res> get typeElement;
   @override
@@ -8673,6 +8751,8 @@ abstract class _$NamingSystemUniqueIdCopyWith<$Res>
   $ElementCopyWith<$Res> get preferredElement;
   @override
   $ElementCopyWith<$Res> get commentElement;
+  @override
+  $PeriodCopyWith<$Res> get period;
 }
 
 class __$NamingSystemUniqueIdCopyWithImpl<$Res>
@@ -8691,14 +8771,14 @@ class __$NamingSystemUniqueIdCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object type = freezed,
-    Object value = freezed,
-    Object preferred = freezed,
-    Object comment = freezed,
-    Object period = freezed,
     Object typeElement = freezed,
+    Object value = freezed,
     Object valueElement = freezed,
+    Object preferred = freezed,
     Object preferredElement = freezed,
+    Object comment = freezed,
     Object commentElement = freezed,
+    Object period = freezed,
   }) {
     return _then(_NamingSystemUniqueId(
       id: id == freezed ? _value.id : id as String,
@@ -8708,41 +8788,42 @@ class __$NamingSystemUniqueIdCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      type: type == freezed ? _value.type : type as UniqueIdType,
-      value: value == freezed ? _value.value : value as String,
-      preferred: preferred == freezed ? _value.preferred : preferred as Boolean,
-      comment: comment == freezed ? _value.comment : comment as String,
-      period: period == freezed ? _value.period : period as Period,
+      type: type == freezed ? _value.type : type as NamingSystemUniqueIdType,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element,
+      value: value == freezed ? _value.value : value as String,
       valueElement: valueElement == freezed
           ? _value.valueElement
           : valueElement as Element,
+      preferred: preferred == freezed ? _value.preferred : preferred as Boolean,
       preferredElement: preferredElement == freezed
           ? _value.preferredElement
           : preferredElement as Element,
+      comment: comment == freezed ? _value.comment : comment as String,
       commentElement: commentElement == freezed
           ? _value.commentElement
           : commentElement as Element,
+      period: period == freezed ? _value.period : period as Period,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_NamingSystemUniqueId implements _NamingSystemUniqueId {
-  const _$_NamingSystemUniqueId(
+class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
+  _$_NamingSystemUniqueId(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @JsonKey(unknownEnumValue: UniqueIdType.unknown) this.type,
-      this.value,
-      this.preferred,
-      this.comment,
-      this.period,
+      @JsonKey(unknownEnumValue: NamingSystemUniqueIdType.unknown) this.type,
       @JsonKey(name: '_type') this.typeElement,
+      this.value,
       @JsonKey(name: '_value') this.valueElement,
+      this.preferred,
       @JsonKey(name: '_preferred') this.preferredElement,
-      @JsonKey(name: '_comment') this.commentElement});
+      this.comment,
+      @JsonKey(name: '_comment') this.commentElement,
+      this.period})
+      : super._();
 
   factory _$_NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =>
       _$_$_NamingSystemUniqueIdFromJson(json);
@@ -8755,32 +8836,32 @@ class _$_NamingSystemUniqueId implements _NamingSystemUniqueId {
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  @JsonKey(unknownEnumValue: UniqueIdType.unknown)
-  final UniqueIdType type;
-  @override
-  final String value;
-  @override
-  final Boolean preferred;
-  @override
-  final String comment;
-  @override
-  final Period period;
+  @JsonKey(unknownEnumValue: NamingSystemUniqueIdType.unknown)
+  final NamingSystemUniqueIdType type;
   @override
   @JsonKey(name: '_type')
   final Element typeElement;
   @override
+  final String value;
+  @override
   @JsonKey(name: '_value')
   final Element valueElement;
+  @override
+  final Boolean preferred;
   @override
   @JsonKey(name: '_preferred')
   final Element preferredElement;
   @override
+  final String comment;
+  @override
   @JsonKey(name: '_comment')
   final Element commentElement;
+  @override
+  final Period period;
 
   @override
   String toString() {
-    return 'NamingSystemUniqueId(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, value: $value, preferred: $preferred, comment: $comment, period: $period, typeElement: $typeElement, valueElement: $valueElement, preferredElement: $preferredElement, commentElement: $commentElement)';
+    return 'NamingSystemUniqueId(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, typeElement: $typeElement, value: $value, valueElement: $valueElement, preferred: $preferred, preferredElement: $preferredElement, comment: $comment, commentElement: $commentElement, period: $period)';
   }
 
   @override
@@ -8797,28 +8878,28 @@ class _$_NamingSystemUniqueId implements _NamingSystemUniqueId {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.value, value) ||
-                const DeepCollectionEquality().equals(other.value, value)) &&
-            (identical(other.preferred, preferred) ||
-                const DeepCollectionEquality()
-                    .equals(other.preferred, preferred)) &&
-            (identical(other.comment, comment) ||
-                const DeepCollectionEquality()
-                    .equals(other.comment, comment)) &&
-            (identical(other.period, period) ||
-                const DeepCollectionEquality().equals(other.period, period)) &&
             (identical(other.typeElement, typeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.typeElement, typeElement)) &&
+            (identical(other.value, value) ||
+                const DeepCollectionEquality().equals(other.value, value)) &&
             (identical(other.valueElement, valueElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueElement, valueElement)) &&
+            (identical(other.preferred, preferred) ||
+                const DeepCollectionEquality()
+                    .equals(other.preferred, preferred)) &&
             (identical(other.preferredElement, preferredElement) ||
                 const DeepCollectionEquality()
                     .equals(other.preferredElement, preferredElement)) &&
+            (identical(other.comment, comment) ||
+                const DeepCollectionEquality()
+                    .equals(other.comment, comment)) &&
             (identical(other.commentElement, commentElement) ||
                 const DeepCollectionEquality()
-                    .equals(other.commentElement, commentElement)));
+                    .equals(other.commentElement, commentElement)) &&
+            (identical(other.period, period) ||
+                const DeepCollectionEquality().equals(other.period, period)));
   }
 
   @override
@@ -8828,14 +8909,14 @@ class _$_NamingSystemUniqueId implements _NamingSystemUniqueId {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(value) ^
-      const DeepCollectionEquality().hash(preferred) ^
-      const DeepCollectionEquality().hash(comment) ^
-      const DeepCollectionEquality().hash(period) ^
       const DeepCollectionEquality().hash(typeElement) ^
+      const DeepCollectionEquality().hash(value) ^
       const DeepCollectionEquality().hash(valueElement) ^
+      const DeepCollectionEquality().hash(preferred) ^
       const DeepCollectionEquality().hash(preferredElement) ^
-      const DeepCollectionEquality().hash(commentElement);
+      const DeepCollectionEquality().hash(comment) ^
+      const DeepCollectionEquality().hash(commentElement) ^
+      const DeepCollectionEquality().hash(period);
 
   @override
   _$NamingSystemUniqueIdCopyWith<_NamingSystemUniqueId> get copyWith =>
@@ -8848,21 +8929,27 @@ class _$_NamingSystemUniqueId implements _NamingSystemUniqueId {
   }
 }
 
-abstract class _NamingSystemUniqueId implements NamingSystemUniqueId {
-  const factory _NamingSystemUniqueId(
-          {String id,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          List<FhirExtension> modifierExtension,
-          @JsonKey(unknownEnumValue: UniqueIdType.unknown) UniqueIdType type,
-          String value,
-          Boolean preferred,
-          String comment,
-          Period period,
-          @JsonKey(name: '_type') Element typeElement,
-          @JsonKey(name: '_value') Element valueElement,
-          @JsonKey(name: '_preferred') Element preferredElement,
-          @JsonKey(name: '_comment') Element commentElement}) =
-      _$_NamingSystemUniqueId;
+abstract class _NamingSystemUniqueId extends NamingSystemUniqueId {
+  _NamingSystemUniqueId._() : super._();
+  factory _NamingSystemUniqueId(
+      {String id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      @JsonKey(unknownEnumValue: NamingSystemUniqueIdType.unknown)
+          NamingSystemUniqueIdType type,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      String value,
+      @JsonKey(name: '_value')
+          Element valueElement,
+      Boolean preferred,
+      @JsonKey(name: '_preferred')
+          Element preferredElement,
+      String comment,
+      @JsonKey(name: '_comment')
+          Element commentElement,
+      Period period}) = _$_NamingSystemUniqueId;
 
   factory _NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =
       _$_NamingSystemUniqueId.fromJson;
@@ -8875,28 +8962,28 @@ abstract class _NamingSystemUniqueId implements NamingSystemUniqueId {
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  @JsonKey(unknownEnumValue: UniqueIdType.unknown)
-  UniqueIdType get type;
-  @override
-  String get value;
-  @override
-  Boolean get preferred;
-  @override
-  String get comment;
-  @override
-  Period get period;
+  @JsonKey(unknownEnumValue: NamingSystemUniqueIdType.unknown)
+  NamingSystemUniqueIdType get type;
   @override
   @JsonKey(name: '_type')
   Element get typeElement;
   @override
+  String get value;
+  @override
   @JsonKey(name: '_value')
   Element get valueElement;
+  @override
+  Boolean get preferred;
   @override
   @JsonKey(name: '_preferred')
   Element get preferredElement;
   @override
+  String get comment;
+  @override
   @JsonKey(name: '_comment')
   Element get commentElement;
+  @override
+  Period get period;
   @override
   _$NamingSystemUniqueIdCopyWith<_NamingSystemUniqueId> get copyWith;
 }
@@ -8911,125 +8998,125 @@ class _$TerminologyCapabilitiesTearOff {
 
   _TerminologyCapabilities call(
       {@required
-      @JsonKey(required: true, defaultValue: 'TerminologyCapabilities')
+      @JsonKey(defaultValue: 'TerminologyCapabilities')
           String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri url,
+      @JsonKey(name: '_url')
+          Element urlElement,
       String version,
+      @JsonKey(name: '_version')
+          Element versionElement,
       String name,
+      @JsonKey(name: '_name')
+          Element nameElement,
       String title,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(unknownEnumValue: TerminologyCapabilitiesStatus.unknown)
+          TerminologyCapabilitiesStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Boolean experimental,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
       FhirDateTime date,
+      @JsonKey(name: '_date')
+          Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
       List<ContactDetail> contact,
       Markdown description,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Markdown purpose,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
       Markdown copyright,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
       Code kind,
+      @JsonKey(name: '_kind')
+          Element kindElement,
       TerminologyCapabilitiesSoftware software,
       TerminologyCapabilitiesImplementation implementation,
       Boolean lockedDate,
+      @JsonKey(name: '_lockedDate')
+          Element lockedDateElement,
       List<TerminologyCapabilitiesCodeSystem> codeSystem,
       TerminologyCapabilitiesExpansion expansion,
       @JsonKey(unknownEnumValue: TerminologyCapabilitiesCodeSearch.unknown)
           TerminologyCapabilitiesCodeSearch codeSearch,
+      @JsonKey(name: '_codeSearch')
+          Element codeSearchElement,
       TerminologyCapabilitiesValidateCode validateCode,
       TerminologyCapabilitiesTranslation translation,
-      TerminologyCapabilitiesClosure closure,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      @JsonKey(name: '_language')
-          Element languageElement,
-      @JsonKey(name: '_url')
-          Element urlElement,
-      @JsonKey(name: '_version')
-          Element versionElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
-      @JsonKey(name: '_copyright')
-          Element copyrightElement,
-      @JsonKey(name: '_kind')
-          Element kindElement,
-      @JsonKey(name: '_lockedDate')
-          Element lockedDateElement,
-      @JsonKey(name: '_codeSearch')
-          Element codeSearchElement}) {
+      TerminologyCapabilitiesClosure closure}) {
     return _TerminologyCapabilities(
       resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
+      implicitRulesElement: implicitRulesElement,
       language: language,
+      languageElement: languageElement,
       text: text,
       contained: contained,
       extension_: extension_,
       modifierExtension: modifierExtension,
       url: url,
+      urlElement: urlElement,
       version: version,
+      versionElement: versionElement,
       name: name,
+      nameElement: nameElement,
       title: title,
+      titleElement: titleElement,
       status: status,
+      statusElement: statusElement,
       experimental: experimental,
+      experimentalElement: experimentalElement,
       date: date,
+      dateElement: dateElement,
       publisher: publisher,
+      publisherElement: publisherElement,
       contact: contact,
       description: description,
+      descriptionElement: descriptionElement,
       useContext: useContext,
       jurisdiction: jurisdiction,
       purpose: purpose,
+      purposeElement: purposeElement,
       copyright: copyright,
+      copyrightElement: copyrightElement,
       kind: kind,
+      kindElement: kindElement,
       software: software,
       implementation: implementation,
       lockedDate: lockedDate,
+      lockedDateElement: lockedDateElement,
       codeSystem: codeSystem,
       expansion: expansion,
       codeSearch: codeSearch,
+      codeSearchElement: codeSearchElement,
       validateCode: validateCode,
       translation: translation,
       closure: closure,
-      implicitRulesElement: implicitRulesElement,
-      languageElement: languageElement,
-      urlElement: urlElement,
-      versionElement: versionElement,
-      nameElement: nameElement,
-      titleElement: titleElement,
-      statusElement: statusElement,
-      experimentalElement: experimentalElement,
-      dateElement: dateElement,
-      publisherElement: publisherElement,
-      descriptionElement: descriptionElement,
-      purposeElement: purposeElement,
-      copyrightElement: copyrightElement,
-      kindElement: kindElement,
-      lockedDateElement: lockedDateElement,
-      codeSearchElement: codeSearchElement,
     );
   }
 }
@@ -9038,75 +9125,75 @@ class _$TerminologyCapabilitiesTearOff {
 const $TerminologyCapabilities = _$TerminologyCapabilitiesTearOff();
 
 mixin _$TerminologyCapabilities {
-  @JsonKey(required: true, defaultValue: 'TerminologyCapabilities')
+  @JsonKey(defaultValue: 'TerminologyCapabilities')
   String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
   Code get language;
+  @JsonKey(name: '_language')
+  Element get languageElement;
   Narrative get text;
   List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   FhirUri get url;
+  @JsonKey(name: '_url')
+  Element get urlElement;
   String get version;
+  @JsonKey(name: '_version')
+  Element get versionElement;
   String get name;
+  @JsonKey(name: '_name')
+  Element get nameElement;
   String get title;
-  @JsonKey(unknownEnumValue: Status.unknown)
-  Status get status;
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @JsonKey(unknownEnumValue: TerminologyCapabilitiesStatus.unknown)
+  TerminologyCapabilitiesStatus get status;
+  @JsonKey(name: '_status')
+  Element get statusElement;
   Boolean get experimental;
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
   FhirDateTime get date;
+  @JsonKey(name: '_date')
+  Element get dateElement;
   String get publisher;
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
   List<ContactDetail> get contact;
   Markdown get description;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
   List<UsageContext> get useContext;
   List<CodeableConcept> get jurisdiction;
   Markdown get purpose;
+  @JsonKey(name: '_purpose')
+  Element get purposeElement;
   Markdown get copyright;
+  @JsonKey(name: '_copyright')
+  Element get copyrightElement;
   Code get kind;
+  @JsonKey(name: '_kind')
+  Element get kindElement;
   TerminologyCapabilitiesSoftware get software;
   TerminologyCapabilitiesImplementation get implementation;
   Boolean get lockedDate;
+  @JsonKey(name: '_lockedDate')
+  Element get lockedDateElement;
   List<TerminologyCapabilitiesCodeSystem> get codeSystem;
   TerminologyCapabilitiesExpansion get expansion;
   @JsonKey(unknownEnumValue: TerminologyCapabilitiesCodeSearch.unknown)
   TerminologyCapabilitiesCodeSearch get codeSearch;
+  @JsonKey(name: '_codeSearch')
+  Element get codeSearchElement;
   TerminologyCapabilitiesValidateCode get validateCode;
   TerminologyCapabilitiesTranslation get translation;
   TerminologyCapabilitiesClosure get closure;
-  @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  @JsonKey(name: '_language')
-  Element get languageElement;
-  @JsonKey(name: '_url')
-  Element get urlElement;
-  @JsonKey(name: '_version')
-  Element get versionElement;
-  @JsonKey(name: '_name')
-  Element get nameElement;
-  @JsonKey(name: '_title')
-  Element get titleElement;
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @JsonKey(name: '_experimental')
-  Element get experimentalElement;
-  @JsonKey(name: '_date')
-  Element get dateElement;
-  @JsonKey(name: '_publisher')
-  Element get publisherElement;
-  @JsonKey(name: '_description')
-  Element get descriptionElement;
-  @JsonKey(name: '_purpose')
-  Element get purposeElement;
-  @JsonKey(name: '_copyright')
-  Element get copyrightElement;
-  @JsonKey(name: '_kind')
-  Element get kindElement;
-  @JsonKey(name: '_lockedDate')
-  Element get lockedDateElement;
-  @JsonKey(name: '_codeSearch')
-  Element get codeSearchElement;
 
   Map<String, dynamic> toJson();
   $TerminologyCapabilitiesCopyWith<TerminologyCapabilities> get copyWith;
@@ -9117,86 +9204,80 @@ abstract class $TerminologyCapabilitiesCopyWith<$Res> {
           $Res Function(TerminologyCapabilities) then) =
       _$TerminologyCapabilitiesCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'TerminologyCapabilities')
+      {@JsonKey(defaultValue: 'TerminologyCapabilities')
           String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri url,
+      @JsonKey(name: '_url')
+          Element urlElement,
       String version,
+      @JsonKey(name: '_version')
+          Element versionElement,
       String name,
+      @JsonKey(name: '_name')
+          Element nameElement,
       String title,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(unknownEnumValue: TerminologyCapabilitiesStatus.unknown)
+          TerminologyCapabilitiesStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Boolean experimental,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
       FhirDateTime date,
+      @JsonKey(name: '_date')
+          Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
       List<ContactDetail> contact,
       Markdown description,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Markdown purpose,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
       Markdown copyright,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
       Code kind,
+      @JsonKey(name: '_kind')
+          Element kindElement,
       TerminologyCapabilitiesSoftware software,
       TerminologyCapabilitiesImplementation implementation,
       Boolean lockedDate,
+      @JsonKey(name: '_lockedDate')
+          Element lockedDateElement,
       List<TerminologyCapabilitiesCodeSystem> codeSystem,
       TerminologyCapabilitiesExpansion expansion,
       @JsonKey(unknownEnumValue: TerminologyCapabilitiesCodeSearch.unknown)
           TerminologyCapabilitiesCodeSearch codeSearch,
+      @JsonKey(name: '_codeSearch')
+          Element codeSearchElement,
       TerminologyCapabilitiesValidateCode validateCode,
       TerminologyCapabilitiesTranslation translation,
-      TerminologyCapabilitiesClosure closure,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      @JsonKey(name: '_language')
-          Element languageElement,
-      @JsonKey(name: '_url')
-          Element urlElement,
-      @JsonKey(name: '_version')
-          Element versionElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
-      @JsonKey(name: '_copyright')
-          Element copyrightElement,
-      @JsonKey(name: '_kind')
-          Element kindElement,
-      @JsonKey(name: '_lockedDate')
-          Element lockedDateElement,
-      @JsonKey(name: '_codeSearch')
-          Element codeSearchElement});
+      TerminologyCapabilitiesClosure closure});
 
   $MetaCopyWith<$Res> get meta;
-  $NarrativeCopyWith<$Res> get text;
-  $TerminologyCapabilitiesSoftwareCopyWith<$Res> get software;
-  $TerminologyCapabilitiesImplementationCopyWith<$Res> get implementation;
-  $TerminologyCapabilitiesExpansionCopyWith<$Res> get expansion;
-  $TerminologyCapabilitiesValidateCodeCopyWith<$Res> get validateCode;
-  $TerminologyCapabilitiesTranslationCopyWith<$Res> get translation;
-  $TerminologyCapabilitiesClosureCopyWith<$Res> get closure;
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
+  $NarrativeCopyWith<$Res> get text;
   $ElementCopyWith<$Res> get urlElement;
   $ElementCopyWith<$Res> get versionElement;
   $ElementCopyWith<$Res> get nameElement;
@@ -9209,8 +9290,14 @@ abstract class $TerminologyCapabilitiesCopyWith<$Res> {
   $ElementCopyWith<$Res> get purposeElement;
   $ElementCopyWith<$Res> get copyrightElement;
   $ElementCopyWith<$Res> get kindElement;
+  $TerminologyCapabilitiesSoftwareCopyWith<$Res> get software;
+  $TerminologyCapabilitiesImplementationCopyWith<$Res> get implementation;
   $ElementCopyWith<$Res> get lockedDateElement;
+  $TerminologyCapabilitiesExpansionCopyWith<$Res> get expansion;
   $ElementCopyWith<$Res> get codeSearchElement;
+  $TerminologyCapabilitiesValidateCodeCopyWith<$Res> get validateCode;
+  $TerminologyCapabilitiesTranslationCopyWith<$Res> get translation;
+  $TerminologyCapabilitiesClosureCopyWith<$Res> get closure;
 }
 
 class _$TerminologyCapabilitiesCopyWithImpl<$Res>
@@ -9227,51 +9314,51 @@ class _$TerminologyCapabilitiesCopyWithImpl<$Res>
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object url = freezed,
+    Object urlElement = freezed,
     Object version = freezed,
+    Object versionElement = freezed,
     Object name = freezed,
+    Object nameElement = freezed,
     Object title = freezed,
+    Object titleElement = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object experimental = freezed,
+    Object experimentalElement = freezed,
     Object date = freezed,
+    Object dateElement = freezed,
     Object publisher = freezed,
+    Object publisherElement = freezed,
     Object contact = freezed,
     Object description = freezed,
+    Object descriptionElement = freezed,
     Object useContext = freezed,
     Object jurisdiction = freezed,
     Object purpose = freezed,
+    Object purposeElement = freezed,
     Object copyright = freezed,
+    Object copyrightElement = freezed,
     Object kind = freezed,
+    Object kindElement = freezed,
     Object software = freezed,
     Object implementation = freezed,
     Object lockedDate = freezed,
+    Object lockedDateElement = freezed,
     Object codeSystem = freezed,
     Object expansion = freezed,
     Object codeSearch = freezed,
+    Object codeSearchElement = freezed,
     Object validateCode = freezed,
     Object translation = freezed,
     Object closure = freezed,
-    Object implicitRulesElement = freezed,
-    Object languageElement = freezed,
-    Object urlElement = freezed,
-    Object versionElement = freezed,
-    Object nameElement = freezed,
-    Object titleElement = freezed,
-    Object statusElement = freezed,
-    Object experimentalElement = freezed,
-    Object dateElement = freezed,
-    Object publisherElement = freezed,
-    Object descriptionElement = freezed,
-    Object purposeElement = freezed,
-    Object copyrightElement = freezed,
-    Object kindElement = freezed,
-    Object lockedDateElement = freezed,
-    Object codeSearchElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -9282,7 +9369,13 @@ class _$TerminologyCapabilitiesCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -9293,19 +9386,45 @@ class _$TerminologyCapabilitiesCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as FhirUri,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
       version: version == freezed ? _value.version : version as String,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
       name: name == freezed ? _value.name : name as String,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed ? _value.status : status as Status,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      status: status == freezed
+          ? _value.status
+          : status as TerminologyCapabilitiesStatus,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
       date: date == freezed ? _value.date : date as FhirDateTime,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
       description:
           description == freezed ? _value.description : description as Markdown,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
       useContext: useContext == freezed
           ? _value.useContext
           : useContext as List<UsageContext>,
@@ -9313,9 +9432,17 @@ class _$TerminologyCapabilitiesCopyWithImpl<$Res>
           ? _value.jurisdiction
           : jurisdiction as List<CodeableConcept>,
       purpose: purpose == freezed ? _value.purpose : purpose as Markdown,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement as Element,
       copyright:
           copyright == freezed ? _value.copyright : copyright as Markdown,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
       kind: kind == freezed ? _value.kind : kind as Code,
+      kindElement:
+          kindElement == freezed ? _value.kindElement : kindElement as Element,
       software: software == freezed
           ? _value.software
           : software as TerminologyCapabilitiesSoftware,
@@ -9324,6 +9451,9 @@ class _$TerminologyCapabilitiesCopyWithImpl<$Res>
           : implementation as TerminologyCapabilitiesImplementation,
       lockedDate:
           lockedDate == freezed ? _value.lockedDate : lockedDate as Boolean,
+      lockedDateElement: lockedDateElement == freezed
+          ? _value.lockedDateElement
+          : lockedDateElement as Element,
       codeSystem: codeSystem == freezed
           ? _value.codeSystem
           : codeSystem as List<TerminologyCapabilitiesCodeSystem>,
@@ -9333,6 +9463,9 @@ class _$TerminologyCapabilitiesCopyWithImpl<$Res>
       codeSearch: codeSearch == freezed
           ? _value.codeSearch
           : codeSearch as TerminologyCapabilitiesCodeSearch,
+      codeSearchElement: codeSearchElement == freezed
+          ? _value.codeSearchElement
+          : codeSearchElement as Element,
       validateCode: validateCode == freezed
           ? _value.validateCode
           : validateCode as TerminologyCapabilitiesValidateCode,
@@ -9342,50 +9475,6 @@ class _$TerminologyCapabilitiesCopyWithImpl<$Res>
       closure: closure == freezed
           ? _value.closure
           : closure as TerminologyCapabilitiesClosure,
-      implicitRulesElement: implicitRulesElement == freezed
-          ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      languageElement: languageElement == freezed
-          ? _value.languageElement
-          : languageElement as Element,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element,
-      versionElement: versionElement == freezed
-          ? _value.versionElement
-          : versionElement as Element,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      titleElement: titleElement == freezed
-          ? _value.titleElement
-          : titleElement as Element,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      experimentalElement: experimentalElement == freezed
-          ? _value.experimentalElement
-          : experimentalElement as Element,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element,
-      publisherElement: publisherElement == freezed
-          ? _value.publisherElement
-          : publisherElement as Element,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement as Element,
-      purposeElement: purposeElement == freezed
-          ? _value.purposeElement
-          : purposeElement as Element,
-      copyrightElement: copyrightElement == freezed
-          ? _value.copyrightElement
-          : copyrightElement as Element,
-      kindElement:
-          kindElement == freezed ? _value.kindElement : kindElement as Element,
-      lockedDateElement: lockedDateElement == freezed
-          ? _value.lockedDateElement
-          : lockedDateElement as Element,
-      codeSearchElement: codeSearchElement == freezed
-          ? _value.codeSearchElement
-          : codeSearchElement as Element,
     ));
   }
 
@@ -9396,82 +9485,6 @@ class _$TerminologyCapabilitiesCopyWithImpl<$Res>
     }
     return $MetaCopyWith<$Res>(_value.meta, (value) {
       return _then(_value.copyWith(meta: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get text {
-    if (_value.text == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.text, (value) {
-      return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $TerminologyCapabilitiesSoftwareCopyWith<$Res> get software {
-    if (_value.software == null) {
-      return null;
-    }
-    return $TerminologyCapabilitiesSoftwareCopyWith<$Res>(_value.software,
-        (value) {
-      return _then(_value.copyWith(software: value));
-    });
-  }
-
-  @override
-  $TerminologyCapabilitiesImplementationCopyWith<$Res> get implementation {
-    if (_value.implementation == null) {
-      return null;
-    }
-    return $TerminologyCapabilitiesImplementationCopyWith<$Res>(
-        _value.implementation, (value) {
-      return _then(_value.copyWith(implementation: value));
-    });
-  }
-
-  @override
-  $TerminologyCapabilitiesExpansionCopyWith<$Res> get expansion {
-    if (_value.expansion == null) {
-      return null;
-    }
-    return $TerminologyCapabilitiesExpansionCopyWith<$Res>(_value.expansion,
-        (value) {
-      return _then(_value.copyWith(expansion: value));
-    });
-  }
-
-  @override
-  $TerminologyCapabilitiesValidateCodeCopyWith<$Res> get validateCode {
-    if (_value.validateCode == null) {
-      return null;
-    }
-    return $TerminologyCapabilitiesValidateCodeCopyWith<$Res>(
-        _value.validateCode, (value) {
-      return _then(_value.copyWith(validateCode: value));
-    });
-  }
-
-  @override
-  $TerminologyCapabilitiesTranslationCopyWith<$Res> get translation {
-    if (_value.translation == null) {
-      return null;
-    }
-    return $TerminologyCapabilitiesTranslationCopyWith<$Res>(_value.translation,
-        (value) {
-      return _then(_value.copyWith(translation: value));
-    });
-  }
-
-  @override
-  $TerminologyCapabilitiesClosureCopyWith<$Res> get closure {
-    if (_value.closure == null) {
-      return null;
-    }
-    return $TerminologyCapabilitiesClosureCopyWith<$Res>(_value.closure,
-        (value) {
-      return _then(_value.copyWith(closure: value));
     });
   }
 
@@ -9492,6 +9505,16 @@ class _$TerminologyCapabilitiesCopyWithImpl<$Res>
     }
     return $ElementCopyWith<$Res>(_value.languageElement, (value) {
       return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
     });
   }
 
@@ -9616,12 +9639,45 @@ class _$TerminologyCapabilitiesCopyWithImpl<$Res>
   }
 
   @override
+  $TerminologyCapabilitiesSoftwareCopyWith<$Res> get software {
+    if (_value.software == null) {
+      return null;
+    }
+    return $TerminologyCapabilitiesSoftwareCopyWith<$Res>(_value.software,
+        (value) {
+      return _then(_value.copyWith(software: value));
+    });
+  }
+
+  @override
+  $TerminologyCapabilitiesImplementationCopyWith<$Res> get implementation {
+    if (_value.implementation == null) {
+      return null;
+    }
+    return $TerminologyCapabilitiesImplementationCopyWith<$Res>(
+        _value.implementation, (value) {
+      return _then(_value.copyWith(implementation: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res> get lockedDateElement {
     if (_value.lockedDateElement == null) {
       return null;
     }
     return $ElementCopyWith<$Res>(_value.lockedDateElement, (value) {
       return _then(_value.copyWith(lockedDateElement: value));
+    });
+  }
+
+  @override
+  $TerminologyCapabilitiesExpansionCopyWith<$Res> get expansion {
+    if (_value.expansion == null) {
+      return null;
+    }
+    return $TerminologyCapabilitiesExpansionCopyWith<$Res>(_value.expansion,
+        (value) {
+      return _then(_value.copyWith(expansion: value));
     });
   }
 
@@ -9634,6 +9690,39 @@ class _$TerminologyCapabilitiesCopyWithImpl<$Res>
       return _then(_value.copyWith(codeSearchElement: value));
     });
   }
+
+  @override
+  $TerminologyCapabilitiesValidateCodeCopyWith<$Res> get validateCode {
+    if (_value.validateCode == null) {
+      return null;
+    }
+    return $TerminologyCapabilitiesValidateCodeCopyWith<$Res>(
+        _value.validateCode, (value) {
+      return _then(_value.copyWith(validateCode: value));
+    });
+  }
+
+  @override
+  $TerminologyCapabilitiesTranslationCopyWith<$Res> get translation {
+    if (_value.translation == null) {
+      return null;
+    }
+    return $TerminologyCapabilitiesTranslationCopyWith<$Res>(_value.translation,
+        (value) {
+      return _then(_value.copyWith(translation: value));
+    });
+  }
+
+  @override
+  $TerminologyCapabilitiesClosureCopyWith<$Res> get closure {
+    if (_value.closure == null) {
+      return null;
+    }
+    return $TerminologyCapabilitiesClosureCopyWith<$Res>(_value.closure,
+        (value) {
+      return _then(_value.copyWith(closure: value));
+    });
+  }
 }
 
 abstract class _$TerminologyCapabilitiesCopyWith<$Res>
@@ -9643,96 +9732,84 @@ abstract class _$TerminologyCapabilitiesCopyWith<$Res>
       __$TerminologyCapabilitiesCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'TerminologyCapabilities')
+      {@JsonKey(defaultValue: 'TerminologyCapabilities')
           String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri url,
+      @JsonKey(name: '_url')
+          Element urlElement,
       String version,
+      @JsonKey(name: '_version')
+          Element versionElement,
       String name,
+      @JsonKey(name: '_name')
+          Element nameElement,
       String title,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(unknownEnumValue: TerminologyCapabilitiesStatus.unknown)
+          TerminologyCapabilitiesStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Boolean experimental,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
       FhirDateTime date,
+      @JsonKey(name: '_date')
+          Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
       List<ContactDetail> contact,
       Markdown description,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Markdown purpose,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
       Markdown copyright,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
       Code kind,
+      @JsonKey(name: '_kind')
+          Element kindElement,
       TerminologyCapabilitiesSoftware software,
       TerminologyCapabilitiesImplementation implementation,
       Boolean lockedDate,
+      @JsonKey(name: '_lockedDate')
+          Element lockedDateElement,
       List<TerminologyCapabilitiesCodeSystem> codeSystem,
       TerminologyCapabilitiesExpansion expansion,
       @JsonKey(unknownEnumValue: TerminologyCapabilitiesCodeSearch.unknown)
           TerminologyCapabilitiesCodeSearch codeSearch,
+      @JsonKey(name: '_codeSearch')
+          Element codeSearchElement,
       TerminologyCapabilitiesValidateCode validateCode,
       TerminologyCapabilitiesTranslation translation,
-      TerminologyCapabilitiesClosure closure,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      @JsonKey(name: '_language')
-          Element languageElement,
-      @JsonKey(name: '_url')
-          Element urlElement,
-      @JsonKey(name: '_version')
-          Element versionElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
-      @JsonKey(name: '_copyright')
-          Element copyrightElement,
-      @JsonKey(name: '_kind')
-          Element kindElement,
-      @JsonKey(name: '_lockedDate')
-          Element lockedDateElement,
-      @JsonKey(name: '_codeSearch')
-          Element codeSearchElement});
+      TerminologyCapabilitiesClosure closure});
 
   @override
   $MetaCopyWith<$Res> get meta;
   @override
-  $NarrativeCopyWith<$Res> get text;
-  @override
-  $TerminologyCapabilitiesSoftwareCopyWith<$Res> get software;
-  @override
-  $TerminologyCapabilitiesImplementationCopyWith<$Res> get implementation;
-  @override
-  $TerminologyCapabilitiesExpansionCopyWith<$Res> get expansion;
-  @override
-  $TerminologyCapabilitiesValidateCodeCopyWith<$Res> get validateCode;
-  @override
-  $TerminologyCapabilitiesTranslationCopyWith<$Res> get translation;
-  @override
-  $TerminologyCapabilitiesClosureCopyWith<$Res> get closure;
-  @override
   $ElementCopyWith<$Res> get implicitRulesElement;
   @override
   $ElementCopyWith<$Res> get languageElement;
+  @override
+  $NarrativeCopyWith<$Res> get text;
   @override
   $ElementCopyWith<$Res> get urlElement;
   @override
@@ -9758,9 +9835,21 @@ abstract class _$TerminologyCapabilitiesCopyWith<$Res>
   @override
   $ElementCopyWith<$Res> get kindElement;
   @override
+  $TerminologyCapabilitiesSoftwareCopyWith<$Res> get software;
+  @override
+  $TerminologyCapabilitiesImplementationCopyWith<$Res> get implementation;
+  @override
   $ElementCopyWith<$Res> get lockedDateElement;
   @override
+  $TerminologyCapabilitiesExpansionCopyWith<$Res> get expansion;
+  @override
   $ElementCopyWith<$Res> get codeSearchElement;
+  @override
+  $TerminologyCapabilitiesValidateCodeCopyWith<$Res> get validateCode;
+  @override
+  $TerminologyCapabilitiesTranslationCopyWith<$Res> get translation;
+  @override
+  $TerminologyCapabilitiesClosureCopyWith<$Res> get closure;
 }
 
 class __$TerminologyCapabilitiesCopyWithImpl<$Res>
@@ -9780,51 +9869,51 @@ class __$TerminologyCapabilitiesCopyWithImpl<$Res>
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object url = freezed,
+    Object urlElement = freezed,
     Object version = freezed,
+    Object versionElement = freezed,
     Object name = freezed,
+    Object nameElement = freezed,
     Object title = freezed,
+    Object titleElement = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object experimental = freezed,
+    Object experimentalElement = freezed,
     Object date = freezed,
+    Object dateElement = freezed,
     Object publisher = freezed,
+    Object publisherElement = freezed,
     Object contact = freezed,
     Object description = freezed,
+    Object descriptionElement = freezed,
     Object useContext = freezed,
     Object jurisdiction = freezed,
     Object purpose = freezed,
+    Object purposeElement = freezed,
     Object copyright = freezed,
+    Object copyrightElement = freezed,
     Object kind = freezed,
+    Object kindElement = freezed,
     Object software = freezed,
     Object implementation = freezed,
     Object lockedDate = freezed,
+    Object lockedDateElement = freezed,
     Object codeSystem = freezed,
     Object expansion = freezed,
     Object codeSearch = freezed,
+    Object codeSearchElement = freezed,
     Object validateCode = freezed,
     Object translation = freezed,
     Object closure = freezed,
-    Object implicitRulesElement = freezed,
-    Object languageElement = freezed,
-    Object urlElement = freezed,
-    Object versionElement = freezed,
-    Object nameElement = freezed,
-    Object titleElement = freezed,
-    Object statusElement = freezed,
-    Object experimentalElement = freezed,
-    Object dateElement = freezed,
-    Object publisherElement = freezed,
-    Object descriptionElement = freezed,
-    Object purposeElement = freezed,
-    Object copyrightElement = freezed,
-    Object kindElement = freezed,
-    Object lockedDateElement = freezed,
-    Object codeSearchElement = freezed,
   }) {
     return _then(_TerminologyCapabilities(
       resourceType: resourceType == freezed
@@ -9835,7 +9924,13 @@ class __$TerminologyCapabilitiesCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -9846,19 +9941,45 @@ class __$TerminologyCapabilitiesCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as FhirUri,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
       version: version == freezed ? _value.version : version as String,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
       name: name == freezed ? _value.name : name as String,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed ? _value.status : status as Status,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      status: status == freezed
+          ? _value.status
+          : status as TerminologyCapabilitiesStatus,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
       date: date == freezed ? _value.date : date as FhirDateTime,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
       description:
           description == freezed ? _value.description : description as Markdown,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
       useContext: useContext == freezed
           ? _value.useContext
           : useContext as List<UsageContext>,
@@ -9866,9 +9987,17 @@ class __$TerminologyCapabilitiesCopyWithImpl<$Res>
           ? _value.jurisdiction
           : jurisdiction as List<CodeableConcept>,
       purpose: purpose == freezed ? _value.purpose : purpose as Markdown,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement as Element,
       copyright:
           copyright == freezed ? _value.copyright : copyright as Markdown,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
       kind: kind == freezed ? _value.kind : kind as Code,
+      kindElement:
+          kindElement == freezed ? _value.kindElement : kindElement as Element,
       software: software == freezed
           ? _value.software
           : software as TerminologyCapabilitiesSoftware,
@@ -9877,6 +10006,9 @@ class __$TerminologyCapabilitiesCopyWithImpl<$Res>
           : implementation as TerminologyCapabilitiesImplementation,
       lockedDate:
           lockedDate == freezed ? _value.lockedDate : lockedDate as Boolean,
+      lockedDateElement: lockedDateElement == freezed
+          ? _value.lockedDateElement
+          : lockedDateElement as Element,
       codeSystem: codeSystem == freezed
           ? _value.codeSystem
           : codeSystem as List<TerminologyCapabilitiesCodeSystem>,
@@ -9886,6 +10018,9 @@ class __$TerminologyCapabilitiesCopyWithImpl<$Res>
       codeSearch: codeSearch == freezed
           ? _value.codeSearch
           : codeSearch as TerminologyCapabilitiesCodeSearch,
+      codeSearchElement: codeSearchElement == freezed
+          ? _value.codeSearchElement
+          : codeSearchElement as Element,
       validateCode: validateCode == freezed
           ? _value.validateCode
           : validateCode as TerminologyCapabilitiesValidateCode,
@@ -9895,134 +10030,91 @@ class __$TerminologyCapabilitiesCopyWithImpl<$Res>
       closure: closure == freezed
           ? _value.closure
           : closure as TerminologyCapabilitiesClosure,
-      implicitRulesElement: implicitRulesElement == freezed
-          ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      languageElement: languageElement == freezed
-          ? _value.languageElement
-          : languageElement as Element,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element,
-      versionElement: versionElement == freezed
-          ? _value.versionElement
-          : versionElement as Element,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      titleElement: titleElement == freezed
-          ? _value.titleElement
-          : titleElement as Element,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      experimentalElement: experimentalElement == freezed
-          ? _value.experimentalElement
-          : experimentalElement as Element,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element,
-      publisherElement: publisherElement == freezed
-          ? _value.publisherElement
-          : publisherElement as Element,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement as Element,
-      purposeElement: purposeElement == freezed
-          ? _value.purposeElement
-          : purposeElement as Element,
-      copyrightElement: copyrightElement == freezed
-          ? _value.copyrightElement
-          : copyrightElement as Element,
-      kindElement:
-          kindElement == freezed ? _value.kindElement : kindElement as Element,
-      lockedDateElement: lockedDateElement == freezed
-          ? _value.lockedDateElement
-          : lockedDateElement as Element,
-      codeSearchElement: codeSearchElement == freezed
-          ? _value.codeSearchElement
-          : codeSearchElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_TerminologyCapabilities implements _TerminologyCapabilities {
-  const _$_TerminologyCapabilities(
+class _$_TerminologyCapabilities extends _TerminologyCapabilities {
+  _$_TerminologyCapabilities(
       {@required
-      @JsonKey(required: true, defaultValue: 'TerminologyCapabilities')
+      @JsonKey(defaultValue: 'TerminologyCapabilities')
           this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
       @JsonKey(name: 'extension')
           this.extension_,
       this.modifierExtension,
       this.url,
+      @JsonKey(name: '_url')
+          this.urlElement,
       this.version,
+      @JsonKey(name: '_version')
+          this.versionElement,
       this.name,
+      @JsonKey(name: '_name')
+          this.nameElement,
       this.title,
-      @JsonKey(unknownEnumValue: Status.unknown)
+      @JsonKey(name: '_title')
+          this.titleElement,
+      @JsonKey(unknownEnumValue: TerminologyCapabilitiesStatus.unknown)
           this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.experimental,
+      @JsonKey(name: '_experimental')
+          this.experimentalElement,
       this.date,
+      @JsonKey(name: '_date')
+          this.dateElement,
       this.publisher,
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
       this.contact,
       this.description,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
       this.useContext,
       this.jurisdiction,
       this.purpose,
+      @JsonKey(name: '_purpose')
+          this.purposeElement,
       this.copyright,
+      @JsonKey(name: '_copyright')
+          this.copyrightElement,
       this.kind,
+      @JsonKey(name: '_kind')
+          this.kindElement,
       this.software,
       this.implementation,
       this.lockedDate,
+      @JsonKey(name: '_lockedDate')
+          this.lockedDateElement,
       this.codeSystem,
       this.expansion,
       @JsonKey(unknownEnumValue: TerminologyCapabilitiesCodeSearch.unknown)
           this.codeSearch,
+      @JsonKey(name: '_codeSearch')
+          this.codeSearchElement,
       this.validateCode,
       this.translation,
-      this.closure,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
-      @JsonKey(name: '_language')
-          this.languageElement,
-      @JsonKey(name: '_url')
-          this.urlElement,
-      @JsonKey(name: '_version')
-          this.versionElement,
-      @JsonKey(name: '_name')
-          this.nameElement,
-      @JsonKey(name: '_title')
-          this.titleElement,
-      @JsonKey(name: '_status')
-          this.statusElement,
-      @JsonKey(name: '_experimental')
-          this.experimentalElement,
-      @JsonKey(name: '_date')
-          this.dateElement,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
-      @JsonKey(name: '_purpose')
-          this.purposeElement,
-      @JsonKey(name: '_copyright')
-          this.copyrightElement,
-      @JsonKey(name: '_kind')
-          this.kindElement,
-      @JsonKey(name: '_lockedDate')
-          this.lockedDateElement,
-      @JsonKey(name: '_codeSearch')
-          this.codeSearchElement})
-      : assert(resourceType != null);
+      this.closure})
+      : assert(resourceType != null),
+        super._();
 
   factory _$_TerminologyCapabilities.fromJson(Map<String, dynamic> json) =>
       _$_$_TerminologyCapabilitiesFromJson(json);
 
   @override
-  @JsonKey(required: true, defaultValue: 'TerminologyCapabilities')
+  @JsonKey(defaultValue: 'TerminologyCapabilities')
   final String resourceType;
   @override
   final Id id;
@@ -10031,7 +10123,13 @@ class _$_TerminologyCapabilities implements _TerminologyCapabilities {
   @override
   final FhirUri implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
   final Code language;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
   @override
   final Narrative text;
   @override
@@ -10044,24 +10142,51 @@ class _$_TerminologyCapabilities implements _TerminologyCapabilities {
   @override
   final FhirUri url;
   @override
+  @JsonKey(name: '_url')
+  final Element urlElement;
+  @override
   final String version;
+  @override
+  @JsonKey(name: '_version')
+  final Element versionElement;
   @override
   final String name;
   @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
   final String title;
   @override
-  @JsonKey(unknownEnumValue: Status.unknown)
-  final Status status;
+  @JsonKey(name: '_title')
+  final Element titleElement;
+  @override
+  @JsonKey(unknownEnumValue: TerminologyCapabilitiesStatus.unknown)
+  final TerminologyCapabilitiesStatus status;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
   @override
   final Boolean experimental;
   @override
+  @JsonKey(name: '_experimental')
+  final Element experimentalElement;
+  @override
   final FhirDateTime date;
   @override
+  @JsonKey(name: '_date')
+  final Element dateElement;
+  @override
   final String publisher;
+  @override
+  @JsonKey(name: '_publisher')
+  final Element publisherElement;
   @override
   final List<ContactDetail> contact;
   @override
   final Markdown description;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
   @override
   final List<UsageContext> useContext;
   @override
@@ -10069,15 +10194,27 @@ class _$_TerminologyCapabilities implements _TerminologyCapabilities {
   @override
   final Markdown purpose;
   @override
+  @JsonKey(name: '_purpose')
+  final Element purposeElement;
+  @override
   final Markdown copyright;
   @override
+  @JsonKey(name: '_copyright')
+  final Element copyrightElement;
+  @override
   final Code kind;
+  @override
+  @JsonKey(name: '_kind')
+  final Element kindElement;
   @override
   final TerminologyCapabilitiesSoftware software;
   @override
   final TerminologyCapabilitiesImplementation implementation;
   @override
   final Boolean lockedDate;
+  @override
+  @JsonKey(name: '_lockedDate')
+  final Element lockedDateElement;
   @override
   final List<TerminologyCapabilitiesCodeSystem> codeSystem;
   @override
@@ -10086,63 +10223,18 @@ class _$_TerminologyCapabilities implements _TerminologyCapabilities {
   @JsonKey(unknownEnumValue: TerminologyCapabilitiesCodeSearch.unknown)
   final TerminologyCapabilitiesCodeSearch codeSearch;
   @override
+  @JsonKey(name: '_codeSearch')
+  final Element codeSearchElement;
+  @override
   final TerminologyCapabilitiesValidateCode validateCode;
   @override
   final TerminologyCapabilitiesTranslation translation;
   @override
   final TerminologyCapabilitiesClosure closure;
-  @override
-  @JsonKey(name: '_implicitRules')
-  final Element implicitRulesElement;
-  @override
-  @JsonKey(name: '_language')
-  final Element languageElement;
-  @override
-  @JsonKey(name: '_url')
-  final Element urlElement;
-  @override
-  @JsonKey(name: '_version')
-  final Element versionElement;
-  @override
-  @JsonKey(name: '_name')
-  final Element nameElement;
-  @override
-  @JsonKey(name: '_title')
-  final Element titleElement;
-  @override
-  @JsonKey(name: '_status')
-  final Element statusElement;
-  @override
-  @JsonKey(name: '_experimental')
-  final Element experimentalElement;
-  @override
-  @JsonKey(name: '_date')
-  final Element dateElement;
-  @override
-  @JsonKey(name: '_publisher')
-  final Element publisherElement;
-  @override
-  @JsonKey(name: '_description')
-  final Element descriptionElement;
-  @override
-  @JsonKey(name: '_purpose')
-  final Element purposeElement;
-  @override
-  @JsonKey(name: '_copyright')
-  final Element copyrightElement;
-  @override
-  @JsonKey(name: '_kind')
-  final Element kindElement;
-  @override
-  @JsonKey(name: '_lockedDate')
-  final Element lockedDateElement;
-  @override
-  @JsonKey(name: '_codeSearch')
-  final Element codeSearchElement;
 
   @override
   String toString() {
-    return 'TerminologyCapabilities(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, copyright: $copyright, kind: $kind, software: $software, implementation: $implementation, lockedDate: $lockedDate, codeSystem: $codeSystem, expansion: $expansion, codeSearch: $codeSearch, validateCode: $validateCode, translation: $translation, closure: $closure, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, copyrightElement: $copyrightElement, kindElement: $kindElement, lockedDateElement: $lockedDateElement, codeSearchElement: $codeSearchElement)';
+    return 'TerminologyCapabilities(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, kind: $kind, kindElement: $kindElement, software: $software, implementation: $implementation, lockedDate: $lockedDate, lockedDateElement: $lockedDateElement, codeSystem: $codeSystem, expansion: $expansion, codeSearch: $codeSearch, codeSearchElement: $codeSearchElement, validateCode: $validateCode, translation: $translation, closure: $closure)';
   }
 
   @override
@@ -10159,9 +10251,15 @@ class _$_TerminologyCapabilities implements _TerminologyCapabilities {
             (identical(other.implicitRules, implicitRules) ||
                 const DeepCollectionEquality()
                     .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
             (identical(other.language, language) ||
                 const DeepCollectionEquality()
                     .equals(other.language, language)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
             (identical(other.text, text) ||
                 const DeepCollectionEquality().equals(other.text, text)) &&
             (identical(other.contained, contained) ||
@@ -10175,72 +10273,66 @@ class _$_TerminologyCapabilities implements _TerminologyCapabilities {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
+            (identical(other.urlElement, urlElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.urlElement, urlElement)) &&
             (identical(other.version, version) ||
                 const DeepCollectionEquality()
                     .equals(other.version, version)) &&
+            (identical(other.versionElement, versionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.versionElement, versionElement)) &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
             (identical(other.title, title) ||
                 const DeepCollectionEquality().equals(other.title, title)) &&
+            (identical(other.titleElement, titleElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.titleElement, titleElement)) &&
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
             (identical(other.experimental, experimental) ||
                 const DeepCollectionEquality()
                     .equals(other.experimental, experimental)) &&
+            (identical(other.experimentalElement, experimentalElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.experimentalElement, experimentalElement)) &&
             (identical(other.date, date) ||
                 const DeepCollectionEquality().equals(other.date, date)) &&
+            (identical(other.dateElement, dateElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.dateElement, dateElement)) &&
             (identical(other.publisher, publisher) ||
-                const DeepCollectionEquality()
-                    .equals(other.publisher, publisher)) &&
-            (identical(other.contact, contact) ||
-                const DeepCollectionEquality()
-                    .equals(other.contact, contact)) &&
-            (identical(other.description, description) ||
-                const DeepCollectionEquality()
-                    .equals(other.description, description)) &&
-            (identical(other.useContext, useContext) ||
-                const DeepCollectionEquality()
-                    .equals(other.useContext, useContext)) &&
-            (identical(other.jurisdiction, jurisdiction) ||
-                const DeepCollectionEquality()
-                    .equals(other.jurisdiction, jurisdiction)) &&
-            (identical(other.purpose, purpose) ||
-                const DeepCollectionEquality()
-                    .equals(other.purpose, purpose)) &&
-            (identical(other.copyright, copyright) ||
-                const DeepCollectionEquality()
-                    .equals(other.copyright, copyright)) &&
-            (identical(other.kind, kind) ||
-                const DeepCollectionEquality().equals(other.kind, kind)) &&
-            (identical(other.software, software) ||
-                const DeepCollectionEquality()
-                    .equals(other.software, software)) &&
-            (identical(other.implementation, implementation) ||
-                const DeepCollectionEquality()
-                    .equals(other.implementation, implementation)) &&
+                const DeepCollectionEquality().equals(other.publisher, publisher)) &&
+            (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
+            (identical(other.contact, contact) || const DeepCollectionEquality().equals(other.contact, contact)) &&
+            (identical(other.description, description) || const DeepCollectionEquality().equals(other.description, description)) &&
+            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.useContext, useContext) || const DeepCollectionEquality().equals(other.useContext, useContext)) &&
+            (identical(other.jurisdiction, jurisdiction) || const DeepCollectionEquality().equals(other.jurisdiction, jurisdiction)) &&
+            (identical(other.purpose, purpose) || const DeepCollectionEquality().equals(other.purpose, purpose)) &&
+            (identical(other.purposeElement, purposeElement) || const DeepCollectionEquality().equals(other.purposeElement, purposeElement)) &&
+            (identical(other.copyright, copyright) || const DeepCollectionEquality().equals(other.copyright, copyright)) &&
+            (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)) &&
+            (identical(other.kind, kind) || const DeepCollectionEquality().equals(other.kind, kind)) &&
+            (identical(other.kindElement, kindElement) || const DeepCollectionEquality().equals(other.kindElement, kindElement)) &&
+            (identical(other.software, software) || const DeepCollectionEquality().equals(other.software, software)) &&
+            (identical(other.implementation, implementation) || const DeepCollectionEquality().equals(other.implementation, implementation)) &&
             (identical(other.lockedDate, lockedDate) || const DeepCollectionEquality().equals(other.lockedDate, lockedDate)) &&
+            (identical(other.lockedDateElement, lockedDateElement) || const DeepCollectionEquality().equals(other.lockedDateElement, lockedDateElement)) &&
             (identical(other.codeSystem, codeSystem) || const DeepCollectionEquality().equals(other.codeSystem, codeSystem)) &&
             (identical(other.expansion, expansion) || const DeepCollectionEquality().equals(other.expansion, expansion)) &&
             (identical(other.codeSearch, codeSearch) || const DeepCollectionEquality().equals(other.codeSearch, codeSearch)) &&
+            (identical(other.codeSearchElement, codeSearchElement) || const DeepCollectionEquality().equals(other.codeSearchElement, codeSearchElement)) &&
             (identical(other.validateCode, validateCode) || const DeepCollectionEquality().equals(other.validateCode, validateCode)) &&
             (identical(other.translation, translation) || const DeepCollectionEquality().equals(other.translation, translation)) &&
-            (identical(other.closure, closure) || const DeepCollectionEquality().equals(other.closure, closure)) &&
-            (identical(other.implicitRulesElement, implicitRulesElement) || const DeepCollectionEquality().equals(other.implicitRulesElement, implicitRulesElement)) &&
-            (identical(other.languageElement, languageElement) || const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
-            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
-            (identical(other.versionElement, versionElement) || const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
-            (identical(other.nameElement, nameElement) || const DeepCollectionEquality().equals(other.nameElement, nameElement)) &&
-            (identical(other.titleElement, titleElement) || const DeepCollectionEquality().equals(other.titleElement, titleElement)) &&
-            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
-            (identical(other.experimentalElement, experimentalElement) || const DeepCollectionEquality().equals(other.experimentalElement, experimentalElement)) &&
-            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
-            (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
-            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
-            (identical(other.purposeElement, purposeElement) || const DeepCollectionEquality().equals(other.purposeElement, purposeElement)) &&
-            (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)) &&
-            (identical(other.kindElement, kindElement) || const DeepCollectionEquality().equals(other.kindElement, kindElement)) &&
-            (identical(other.lockedDateElement, lockedDateElement) || const DeepCollectionEquality().equals(other.lockedDateElement, lockedDateElement)) &&
-            (identical(other.codeSearchElement, codeSearchElement) || const DeepCollectionEquality().equals(other.codeSearchElement, codeSearchElement)));
+            (identical(other.closure, closure) || const DeepCollectionEquality().equals(other.closure, closure)));
   }
 
   @override
@@ -10250,51 +10342,51 @@ class _$_TerminologyCapabilities implements _TerminologyCapabilities {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
       const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(url) ^
+      const DeepCollectionEquality().hash(urlElement) ^
       const DeepCollectionEquality().hash(version) ^
+      const DeepCollectionEquality().hash(versionElement) ^
       const DeepCollectionEquality().hash(name) ^
+      const DeepCollectionEquality().hash(nameElement) ^
       const DeepCollectionEquality().hash(title) ^
+      const DeepCollectionEquality().hash(titleElement) ^
       const DeepCollectionEquality().hash(status) ^
+      const DeepCollectionEquality().hash(statusElement) ^
       const DeepCollectionEquality().hash(experimental) ^
+      const DeepCollectionEquality().hash(experimentalElement) ^
       const DeepCollectionEquality().hash(date) ^
+      const DeepCollectionEquality().hash(dateElement) ^
       const DeepCollectionEquality().hash(publisher) ^
+      const DeepCollectionEquality().hash(publisherElement) ^
       const DeepCollectionEquality().hash(contact) ^
       const DeepCollectionEquality().hash(description) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(useContext) ^
       const DeepCollectionEquality().hash(jurisdiction) ^
       const DeepCollectionEquality().hash(purpose) ^
+      const DeepCollectionEquality().hash(purposeElement) ^
       const DeepCollectionEquality().hash(copyright) ^
+      const DeepCollectionEquality().hash(copyrightElement) ^
       const DeepCollectionEquality().hash(kind) ^
+      const DeepCollectionEquality().hash(kindElement) ^
       const DeepCollectionEquality().hash(software) ^
       const DeepCollectionEquality().hash(implementation) ^
       const DeepCollectionEquality().hash(lockedDate) ^
+      const DeepCollectionEquality().hash(lockedDateElement) ^
       const DeepCollectionEquality().hash(codeSystem) ^
       const DeepCollectionEquality().hash(expansion) ^
       const DeepCollectionEquality().hash(codeSearch) ^
+      const DeepCollectionEquality().hash(codeSearchElement) ^
       const DeepCollectionEquality().hash(validateCode) ^
       const DeepCollectionEquality().hash(translation) ^
-      const DeepCollectionEquality().hash(closure) ^
-      const DeepCollectionEquality().hash(implicitRulesElement) ^
-      const DeepCollectionEquality().hash(languageElement) ^
-      const DeepCollectionEquality().hash(urlElement) ^
-      const DeepCollectionEquality().hash(versionElement) ^
-      const DeepCollectionEquality().hash(nameElement) ^
-      const DeepCollectionEquality().hash(titleElement) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(experimentalElement) ^
-      const DeepCollectionEquality().hash(dateElement) ^
-      const DeepCollectionEquality().hash(publisherElement) ^
-      const DeepCollectionEquality().hash(descriptionElement) ^
-      const DeepCollectionEquality().hash(purposeElement) ^
-      const DeepCollectionEquality().hash(copyrightElement) ^
-      const DeepCollectionEquality().hash(kindElement) ^
-      const DeepCollectionEquality().hash(lockedDateElement) ^
-      const DeepCollectionEquality().hash(codeSearchElement);
+      const DeepCollectionEquality().hash(closure);
 
   @override
   _$TerminologyCapabilitiesCopyWith<_TerminologyCapabilities> get copyWith =>
@@ -10307,84 +10399,85 @@ class _$_TerminologyCapabilities implements _TerminologyCapabilities {
   }
 }
 
-abstract class _TerminologyCapabilities implements TerminologyCapabilities {
-  const factory _TerminologyCapabilities(
+abstract class _TerminologyCapabilities extends TerminologyCapabilities {
+  _TerminologyCapabilities._() : super._();
+  factory _TerminologyCapabilities(
       {@required
-      @JsonKey(required: true, defaultValue: 'TerminologyCapabilities')
+      @JsonKey(defaultValue: 'TerminologyCapabilities')
           String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri url,
+      @JsonKey(name: '_url')
+          Element urlElement,
       String version,
+      @JsonKey(name: '_version')
+          Element versionElement,
       String name,
+      @JsonKey(name: '_name')
+          Element nameElement,
       String title,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(unknownEnumValue: TerminologyCapabilitiesStatus.unknown)
+          TerminologyCapabilitiesStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Boolean experimental,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
       FhirDateTime date,
+      @JsonKey(name: '_date')
+          Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
       List<ContactDetail> contact,
       Markdown description,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Markdown purpose,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
       Markdown copyright,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
       Code kind,
+      @JsonKey(name: '_kind')
+          Element kindElement,
       TerminologyCapabilitiesSoftware software,
       TerminologyCapabilitiesImplementation implementation,
       Boolean lockedDate,
+      @JsonKey(name: '_lockedDate')
+          Element lockedDateElement,
       List<TerminologyCapabilitiesCodeSystem> codeSystem,
       TerminologyCapabilitiesExpansion expansion,
       @JsonKey(unknownEnumValue: TerminologyCapabilitiesCodeSearch.unknown)
           TerminologyCapabilitiesCodeSearch codeSearch,
+      @JsonKey(name: '_codeSearch')
+          Element codeSearchElement,
       TerminologyCapabilitiesValidateCode validateCode,
       TerminologyCapabilitiesTranslation translation,
-      TerminologyCapabilitiesClosure closure,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      @JsonKey(name: '_language')
-          Element languageElement,
-      @JsonKey(name: '_url')
-          Element urlElement,
-      @JsonKey(name: '_version')
-          Element versionElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
-      @JsonKey(name: '_copyright')
-          Element copyrightElement,
-      @JsonKey(name: '_kind')
-          Element kindElement,
-      @JsonKey(name: '_lockedDate')
-          Element lockedDateElement,
-      @JsonKey(name: '_codeSearch')
-          Element codeSearchElement}) = _$_TerminologyCapabilities;
+      TerminologyCapabilitiesClosure closure}) = _$_TerminologyCapabilities;
 
   factory _TerminologyCapabilities.fromJson(Map<String, dynamic> json) =
       _$_TerminologyCapabilities.fromJson;
 
   @override
-  @JsonKey(required: true, defaultValue: 'TerminologyCapabilities')
+  @JsonKey(defaultValue: 'TerminologyCapabilities')
   String get resourceType;
   @override
   Id get id;
@@ -10393,7 +10486,13 @@ abstract class _TerminologyCapabilities implements TerminologyCapabilities {
   @override
   FhirUri get implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
   Code get language;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
   @override
   Narrative get text;
   @override
@@ -10406,24 +10505,51 @@ abstract class _TerminologyCapabilities implements TerminologyCapabilities {
   @override
   FhirUri get url;
   @override
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @override
   String get version;
+  @override
+  @JsonKey(name: '_version')
+  Element get versionElement;
   @override
   String get name;
   @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
   String get title;
   @override
-  @JsonKey(unknownEnumValue: Status.unknown)
-  Status get status;
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @override
+  @JsonKey(unknownEnumValue: TerminologyCapabilitiesStatus.unknown)
+  TerminologyCapabilitiesStatus get status;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
   @override
   Boolean get experimental;
   @override
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  @override
   FhirDateTime get date;
   @override
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @override
   String get publisher;
+  @override
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
   @override
   List<ContactDetail> get contact;
   @override
   Markdown get description;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
   @override
   List<UsageContext> get useContext;
   @override
@@ -10431,15 +10557,27 @@ abstract class _TerminologyCapabilities implements TerminologyCapabilities {
   @override
   Markdown get purpose;
   @override
+  @JsonKey(name: '_purpose')
+  Element get purposeElement;
+  @override
   Markdown get copyright;
   @override
+  @JsonKey(name: '_copyright')
+  Element get copyrightElement;
+  @override
   Code get kind;
+  @override
+  @JsonKey(name: '_kind')
+  Element get kindElement;
   @override
   TerminologyCapabilitiesSoftware get software;
   @override
   TerminologyCapabilitiesImplementation get implementation;
   @override
   Boolean get lockedDate;
+  @override
+  @JsonKey(name: '_lockedDate')
+  Element get lockedDateElement;
   @override
   List<TerminologyCapabilitiesCodeSystem> get codeSystem;
   @override
@@ -10448,59 +10586,14 @@ abstract class _TerminologyCapabilities implements TerminologyCapabilities {
   @JsonKey(unknownEnumValue: TerminologyCapabilitiesCodeSearch.unknown)
   TerminologyCapabilitiesCodeSearch get codeSearch;
   @override
+  @JsonKey(name: '_codeSearch')
+  Element get codeSearchElement;
+  @override
   TerminologyCapabilitiesValidateCode get validateCode;
   @override
   TerminologyCapabilitiesTranslation get translation;
   @override
   TerminologyCapabilitiesClosure get closure;
-  @override
-  @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  @override
-  @JsonKey(name: '_language')
-  Element get languageElement;
-  @override
-  @JsonKey(name: '_url')
-  Element get urlElement;
-  @override
-  @JsonKey(name: '_version')
-  Element get versionElement;
-  @override
-  @JsonKey(name: '_name')
-  Element get nameElement;
-  @override
-  @JsonKey(name: '_title')
-  Element get titleElement;
-  @override
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @override
-  @JsonKey(name: '_experimental')
-  Element get experimentalElement;
-  @override
-  @JsonKey(name: '_date')
-  Element get dateElement;
-  @override
-  @JsonKey(name: '_publisher')
-  Element get publisherElement;
-  @override
-  @JsonKey(name: '_description')
-  Element get descriptionElement;
-  @override
-  @JsonKey(name: '_purpose')
-  Element get purposeElement;
-  @override
-  @JsonKey(name: '_copyright')
-  Element get copyrightElement;
-  @override
-  @JsonKey(name: '_kind')
-  Element get kindElement;
-  @override
-  @JsonKey(name: '_lockedDate')
-  Element get lockedDateElement;
-  @override
-  @JsonKey(name: '_codeSearch')
-  Element get codeSearchElement;
   @override
   _$TerminologyCapabilitiesCopyWith<_TerminologyCapabilities> get copyWith;
 }
@@ -10518,16 +10611,16 @@ class _$TerminologyCapabilitiesSoftwareTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String name,
-      String version,
       @JsonKey(name: '_name') Element nameElement,
+      String version,
       @JsonKey(name: '_version') Element versionElement}) {
     return _TerminologyCapabilitiesSoftware(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       name: name,
-      version: version,
       nameElement: nameElement,
+      version: version,
       versionElement: versionElement,
     );
   }
@@ -10543,9 +10636,9 @@ mixin _$TerminologyCapabilitiesSoftware {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   String get name;
-  String get version;
   @JsonKey(name: '_name')
   Element get nameElement;
+  String get version;
   @JsonKey(name: '_version')
   Element get versionElement;
 
@@ -10564,8 +10657,8 @@ abstract class $TerminologyCapabilitiesSoftwareCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String name,
-      String version,
       @JsonKey(name: '_name') Element nameElement,
+      String version,
       @JsonKey(name: '_version') Element versionElement});
 
   $ElementCopyWith<$Res> get nameElement;
@@ -10586,8 +10679,8 @@ class _$TerminologyCapabilitiesSoftwareCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object name = freezed,
-    Object version = freezed,
     Object nameElement = freezed,
+    Object version = freezed,
     Object versionElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -10599,9 +10692,9 @@ class _$TerminologyCapabilitiesSoftwareCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       name: name == freezed ? _value.name : name as String,
-      version: version == freezed ? _value.version : version as String,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element,
+      version: version == freezed ? _value.version : version as String,
       versionElement: versionElement == freezed
           ? _value.versionElement
           : versionElement as Element,
@@ -10641,8 +10734,8 @@ abstract class _$TerminologyCapabilitiesSoftwareCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String name,
-      String version,
       @JsonKey(name: '_name') Element nameElement,
+      String version,
       @JsonKey(name: '_version') Element versionElement});
 
   @override
@@ -10669,8 +10762,8 @@ class __$TerminologyCapabilitiesSoftwareCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object name = freezed,
-    Object version = freezed,
     Object nameElement = freezed,
+    Object version = freezed,
     Object versionElement = freezed,
   }) {
     return _then(_TerminologyCapabilitiesSoftware(
@@ -10682,9 +10775,9 @@ class __$TerminologyCapabilitiesSoftwareCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       name: name == freezed ? _value.name : name as String,
-      version: version == freezed ? _value.version : version as String,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element,
+      version: version == freezed ? _value.version : version as String,
       versionElement: versionElement == freezed
           ? _value.versionElement
           : versionElement as Element,
@@ -10694,15 +10787,16 @@ class __$TerminologyCapabilitiesSoftwareCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TerminologyCapabilitiesSoftware
-    implements _TerminologyCapabilitiesSoftware {
-  const _$_TerminologyCapabilitiesSoftware(
+    extends _TerminologyCapabilitiesSoftware {
+  _$_TerminologyCapabilitiesSoftware(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.name,
-      this.version,
       @JsonKey(name: '_name') this.nameElement,
-      @JsonKey(name: '_version') this.versionElement});
+      this.version,
+      @JsonKey(name: '_version') this.versionElement})
+      : super._();
 
   factory _$_TerminologyCapabilitiesSoftware.fromJson(
           Map<String, dynamic> json) =>
@@ -10718,17 +10812,17 @@ class _$_TerminologyCapabilitiesSoftware
   @override
   final String name;
   @override
-  final String version;
-  @override
   @JsonKey(name: '_name')
   final Element nameElement;
+  @override
+  final String version;
   @override
   @JsonKey(name: '_version')
   final Element versionElement;
 
   @override
   String toString() {
-    return 'TerminologyCapabilitiesSoftware(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, version: $version, nameElement: $nameElement, versionElement: $versionElement)';
+    return 'TerminologyCapabilitiesSoftware(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, version: $version, versionElement: $versionElement)';
   }
 
   @override
@@ -10745,12 +10839,12 @@ class _$_TerminologyCapabilitiesSoftware
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.version, version) ||
-                const DeepCollectionEquality()
-                    .equals(other.version, version)) &&
             (identical(other.nameElement, nameElement) ||
                 const DeepCollectionEquality()
                     .equals(other.nameElement, nameElement)) &&
+            (identical(other.version, version) ||
+                const DeepCollectionEquality()
+                    .equals(other.version, version)) &&
             (identical(other.versionElement, versionElement) ||
                 const DeepCollectionEquality()
                     .equals(other.versionElement, versionElement)));
@@ -10763,8 +10857,8 @@ class _$_TerminologyCapabilitiesSoftware
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(version) ^
       const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(version) ^
       const DeepCollectionEquality().hash(versionElement);
 
   @override
@@ -10779,14 +10873,15 @@ class _$_TerminologyCapabilitiesSoftware
 }
 
 abstract class _TerminologyCapabilitiesSoftware
-    implements TerminologyCapabilitiesSoftware {
-  const factory _TerminologyCapabilitiesSoftware(
+    extends TerminologyCapabilitiesSoftware {
+  _TerminologyCapabilitiesSoftware._() : super._();
+  factory _TerminologyCapabilitiesSoftware(
           {String id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
           String name,
-          String version,
           @JsonKey(name: '_name') Element nameElement,
+          String version,
           @JsonKey(name: '_version') Element versionElement}) =
       _$_TerminologyCapabilitiesSoftware;
 
@@ -10803,10 +10898,10 @@ abstract class _TerminologyCapabilitiesSoftware
   @override
   String get name;
   @override
-  String get version;
-  @override
   @JsonKey(name: '_name')
   Element get nameElement;
+  @override
+  String get version;
   @override
   @JsonKey(name: '_version')
   Element get versionElement;
@@ -10828,16 +10923,16 @@ class _$TerminologyCapabilitiesImplementationTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String description,
-      FhirUrl url,
       @JsonKey(name: '_description') Element descriptionElement,
+      FhirUrl url,
       @JsonKey(name: '_url') Element urlElement}) {
     return _TerminologyCapabilitiesImplementation(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       description: description,
-      url: url,
       descriptionElement: descriptionElement,
+      url: url,
       urlElement: urlElement,
     );
   }
@@ -10853,9 +10948,9 @@ mixin _$TerminologyCapabilitiesImplementation {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   String get description;
-  FhirUrl get url;
   @JsonKey(name: '_description')
   Element get descriptionElement;
+  FhirUrl get url;
   @JsonKey(name: '_url')
   Element get urlElement;
 
@@ -10874,8 +10969,8 @@ abstract class $TerminologyCapabilitiesImplementationCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String description,
-      FhirUrl url,
       @JsonKey(name: '_description') Element descriptionElement,
+      FhirUrl url,
       @JsonKey(name: '_url') Element urlElement});
 
   $ElementCopyWith<$Res> get descriptionElement;
@@ -10896,8 +10991,8 @@ class _$TerminologyCapabilitiesImplementationCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object description = freezed,
-    Object url = freezed,
     Object descriptionElement = freezed,
+    Object url = freezed,
     Object urlElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -10910,10 +11005,10 @@ class _$TerminologyCapabilitiesImplementationCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension>,
       description:
           description == freezed ? _value.description : description as String,
-      url: url == freezed ? _value.url : url as FhirUrl,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
+      url: url == freezed ? _value.url : url as FhirUrl,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element,
     ));
@@ -10952,8 +11047,8 @@ abstract class _$TerminologyCapabilitiesImplementationCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String description,
-      FhirUrl url,
       @JsonKey(name: '_description') Element descriptionElement,
+      FhirUrl url,
       @JsonKey(name: '_url') Element urlElement});
 
   @override
@@ -10981,8 +11076,8 @@ class __$TerminologyCapabilitiesImplementationCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object description = freezed,
-    Object url = freezed,
     Object descriptionElement = freezed,
+    Object url = freezed,
     Object urlElement = freezed,
   }) {
     return _then(_TerminologyCapabilitiesImplementation(
@@ -10995,10 +11090,10 @@ class __$TerminologyCapabilitiesImplementationCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension>,
       description:
           description == freezed ? _value.description : description as String,
-      url: url == freezed ? _value.url : url as FhirUrl,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
+      url: url == freezed ? _value.url : url as FhirUrl,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element,
     ));
@@ -11007,15 +11102,16 @@ class __$TerminologyCapabilitiesImplementationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TerminologyCapabilitiesImplementation
-    implements _TerminologyCapabilitiesImplementation {
-  const _$_TerminologyCapabilitiesImplementation(
+    extends _TerminologyCapabilitiesImplementation {
+  _$_TerminologyCapabilitiesImplementation(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.description,
-      this.url,
       @JsonKey(name: '_description') this.descriptionElement,
-      @JsonKey(name: '_url') this.urlElement});
+      this.url,
+      @JsonKey(name: '_url') this.urlElement})
+      : super._();
 
   factory _$_TerminologyCapabilitiesImplementation.fromJson(
           Map<String, dynamic> json) =>
@@ -11031,17 +11127,17 @@ class _$_TerminologyCapabilitiesImplementation
   @override
   final String description;
   @override
-  final FhirUrl url;
-  @override
   @JsonKey(name: '_description')
   final Element descriptionElement;
+  @override
+  final FhirUrl url;
   @override
   @JsonKey(name: '_url')
   final Element urlElement;
 
   @override
   String toString() {
-    return 'TerminologyCapabilitiesImplementation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, url: $url, descriptionElement: $descriptionElement, urlElement: $urlElement)';
+    return 'TerminologyCapabilitiesImplementation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, url: $url, urlElement: $urlElement)';
   }
 
   @override
@@ -11059,11 +11155,11 @@ class _$_TerminologyCapabilitiesImplementation
             (identical(other.description, description) ||
                 const DeepCollectionEquality()
                     .equals(other.description, description)) &&
-            (identical(other.url, url) ||
-                const DeepCollectionEquality().equals(other.url, url)) &&
             (identical(other.descriptionElement, descriptionElement) ||
                 const DeepCollectionEquality()
                     .equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.url, url) ||
+                const DeepCollectionEquality().equals(other.url, url)) &&
             (identical(other.urlElement, urlElement) ||
                 const DeepCollectionEquality()
                     .equals(other.urlElement, urlElement)));
@@ -11076,8 +11172,8 @@ class _$_TerminologyCapabilitiesImplementation
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(urlElement);
 
   @override
@@ -11093,14 +11189,15 @@ class _$_TerminologyCapabilitiesImplementation
 }
 
 abstract class _TerminologyCapabilitiesImplementation
-    implements TerminologyCapabilitiesImplementation {
-  const factory _TerminologyCapabilitiesImplementation(
+    extends TerminologyCapabilitiesImplementation {
+  _TerminologyCapabilitiesImplementation._() : super._();
+  factory _TerminologyCapabilitiesImplementation(
           {String id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
           String description,
-          FhirUrl url,
           @JsonKey(name: '_description') Element descriptionElement,
+          FhirUrl url,
           @JsonKey(name: '_url') Element urlElement}) =
       _$_TerminologyCapabilitiesImplementation;
 
@@ -11118,10 +11215,10 @@ abstract class _TerminologyCapabilitiesImplementation
   @override
   String get description;
   @override
-  FhirUrl get url;
-  @override
   @JsonKey(name: '_description')
   Element get descriptionElement;
+  @override
+  FhirUrl get url;
   @override
   @JsonKey(name: '_url')
   Element get urlElement;
@@ -11309,15 +11406,16 @@ class __$TerminologyCapabilitiesCodeSystemCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TerminologyCapabilitiesCodeSystem
-    implements _TerminologyCapabilitiesCodeSystem {
-  const _$_TerminologyCapabilitiesCodeSystem(
+    extends _TerminologyCapabilitiesCodeSystem {
+  _$_TerminologyCapabilitiesCodeSystem(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.uri,
       this.version,
       this.subsumption,
-      @JsonKey(name: '_subsumption') this.subsumptionElement});
+      @JsonKey(name: '_subsumption') this.subsumptionElement})
+      : super._();
 
   factory _$_TerminologyCapabilitiesCodeSystem.fromJson(
           Map<String, dynamic> json) =>
@@ -11394,8 +11492,9 @@ class _$_TerminologyCapabilitiesCodeSystem
 }
 
 abstract class _TerminologyCapabilitiesCodeSystem
-    implements TerminologyCapabilitiesCodeSystem {
-  const factory _TerminologyCapabilitiesCodeSystem(
+    extends TerminologyCapabilitiesCodeSystem {
+  _TerminologyCapabilitiesCodeSystem._() : super._();
+  factory _TerminologyCapabilitiesCodeSystem(
           {String id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
@@ -11443,30 +11542,30 @@ class _$TerminologyCapabilitiesVersionTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String code,
+      @JsonKey(name: '_code') Element codeElement,
       Boolean isDefault,
+      @JsonKey(name: '_isDefault') Element isDefaultElement,
       Boolean compositional,
+      @JsonKey(name: '_compositional') Element compositionalElement,
       List<Code> language,
+      @JsonKey(name: '_language') List<Element> languageElement,
       List<TerminologyCapabilitiesFilter> filter,
       List<Code> property,
-      @JsonKey(name: '_code') Element codeElement,
-      @JsonKey(name: '_isDefault') Element isDefaultElement,
-      @JsonKey(name: '_compositional') Element compositionalElement,
-      @JsonKey(name: '_language') List<Element> languageElement,
       @JsonKey(name: '_property') List<Element> propertyElement}) {
     return _TerminologyCapabilitiesVersion(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       code: code,
+      codeElement: codeElement,
       isDefault: isDefault,
+      isDefaultElement: isDefaultElement,
       compositional: compositional,
+      compositionalElement: compositionalElement,
       language: language,
+      languageElement: languageElement,
       filter: filter,
       property: property,
-      codeElement: codeElement,
-      isDefaultElement: isDefaultElement,
-      compositionalElement: compositionalElement,
-      languageElement: languageElement,
       propertyElement: propertyElement,
     );
   }
@@ -11482,19 +11581,19 @@ mixin _$TerminologyCapabilitiesVersion {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   String get code;
-  Boolean get isDefault;
-  Boolean get compositional;
-  List<Code> get language;
-  List<TerminologyCapabilitiesFilter> get filter;
-  List<Code> get property;
   @JsonKey(name: '_code')
   Element get codeElement;
+  Boolean get isDefault;
   @JsonKey(name: '_isDefault')
   Element get isDefaultElement;
+  Boolean get compositional;
   @JsonKey(name: '_compositional')
   Element get compositionalElement;
+  List<Code> get language;
   @JsonKey(name: '_language')
   List<Element> get languageElement;
+  List<TerminologyCapabilitiesFilter> get filter;
+  List<Code> get property;
   @JsonKey(name: '_property')
   List<Element> get propertyElement;
 
@@ -11513,15 +11612,15 @@ abstract class $TerminologyCapabilitiesVersionCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String code,
+      @JsonKey(name: '_code') Element codeElement,
       Boolean isDefault,
+      @JsonKey(name: '_isDefault') Element isDefaultElement,
       Boolean compositional,
+      @JsonKey(name: '_compositional') Element compositionalElement,
       List<Code> language,
+      @JsonKey(name: '_language') List<Element> languageElement,
       List<TerminologyCapabilitiesFilter> filter,
       List<Code> property,
-      @JsonKey(name: '_code') Element codeElement,
-      @JsonKey(name: '_isDefault') Element isDefaultElement,
-      @JsonKey(name: '_compositional') Element compositionalElement,
-      @JsonKey(name: '_language') List<Element> languageElement,
       @JsonKey(name: '_property') List<Element> propertyElement});
 
   $ElementCopyWith<$Res> get codeElement;
@@ -11543,15 +11642,15 @@ class _$TerminologyCapabilitiesVersionCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object code = freezed,
+    Object codeElement = freezed,
     Object isDefault = freezed,
+    Object isDefaultElement = freezed,
     Object compositional = freezed,
+    Object compositionalElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object filter = freezed,
     Object property = freezed,
-    Object codeElement = freezed,
-    Object isDefaultElement = freezed,
-    Object compositionalElement = freezed,
-    Object languageElement = freezed,
     Object propertyElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -11563,26 +11662,26 @@ class _$TerminologyCapabilitiesVersionCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       code: code == freezed ? _value.code : code as String,
+      codeElement:
+          codeElement == freezed ? _value.codeElement : codeElement as Element,
       isDefault: isDefault == freezed ? _value.isDefault : isDefault as Boolean,
+      isDefaultElement: isDefaultElement == freezed
+          ? _value.isDefaultElement
+          : isDefaultElement as Element,
       compositional: compositional == freezed
           ? _value.compositional
           : compositional as Boolean,
+      compositionalElement: compositionalElement == freezed
+          ? _value.compositionalElement
+          : compositionalElement as Element,
       language: language == freezed ? _value.language : language as List<Code>,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as List<Element>,
       filter: filter == freezed
           ? _value.filter
           : filter as List<TerminologyCapabilitiesFilter>,
       property: property == freezed ? _value.property : property as List<Code>,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element,
-      isDefaultElement: isDefaultElement == freezed
-          ? _value.isDefaultElement
-          : isDefaultElement as Element,
-      compositionalElement: compositionalElement == freezed
-          ? _value.compositionalElement
-          : compositionalElement as Element,
-      languageElement: languageElement == freezed
-          ? _value.languageElement
-          : languageElement as List<Element>,
       propertyElement: propertyElement == freezed
           ? _value.propertyElement
           : propertyElement as List<Element>,
@@ -11632,15 +11731,15 @@ abstract class _$TerminologyCapabilitiesVersionCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String code,
+      @JsonKey(name: '_code') Element codeElement,
       Boolean isDefault,
+      @JsonKey(name: '_isDefault') Element isDefaultElement,
       Boolean compositional,
+      @JsonKey(name: '_compositional') Element compositionalElement,
       List<Code> language,
+      @JsonKey(name: '_language') List<Element> languageElement,
       List<TerminologyCapabilitiesFilter> filter,
       List<Code> property,
-      @JsonKey(name: '_code') Element codeElement,
-      @JsonKey(name: '_isDefault') Element isDefaultElement,
-      @JsonKey(name: '_compositional') Element compositionalElement,
-      @JsonKey(name: '_language') List<Element> languageElement,
       @JsonKey(name: '_property') List<Element> propertyElement});
 
   @override
@@ -11669,15 +11768,15 @@ class __$TerminologyCapabilitiesVersionCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object code = freezed,
+    Object codeElement = freezed,
     Object isDefault = freezed,
+    Object isDefaultElement = freezed,
     Object compositional = freezed,
+    Object compositionalElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object filter = freezed,
     Object property = freezed,
-    Object codeElement = freezed,
-    Object isDefaultElement = freezed,
-    Object compositionalElement = freezed,
-    Object languageElement = freezed,
     Object propertyElement = freezed,
   }) {
     return _then(_TerminologyCapabilitiesVersion(
@@ -11689,26 +11788,26 @@ class __$TerminologyCapabilitiesVersionCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       code: code == freezed ? _value.code : code as String,
+      codeElement:
+          codeElement == freezed ? _value.codeElement : codeElement as Element,
       isDefault: isDefault == freezed ? _value.isDefault : isDefault as Boolean,
+      isDefaultElement: isDefaultElement == freezed
+          ? _value.isDefaultElement
+          : isDefaultElement as Element,
       compositional: compositional == freezed
           ? _value.compositional
           : compositional as Boolean,
+      compositionalElement: compositionalElement == freezed
+          ? _value.compositionalElement
+          : compositionalElement as Element,
       language: language == freezed ? _value.language : language as List<Code>,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as List<Element>,
       filter: filter == freezed
           ? _value.filter
           : filter as List<TerminologyCapabilitiesFilter>,
       property: property == freezed ? _value.property : property as List<Code>,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element,
-      isDefaultElement: isDefaultElement == freezed
-          ? _value.isDefaultElement
-          : isDefaultElement as Element,
-      compositionalElement: compositionalElement == freezed
-          ? _value.compositionalElement
-          : compositionalElement as Element,
-      languageElement: languageElement == freezed
-          ? _value.languageElement
-          : languageElement as List<Element>,
       propertyElement: propertyElement == freezed
           ? _value.propertyElement
           : propertyElement as List<Element>,
@@ -11718,22 +11817,23 @@ class __$TerminologyCapabilitiesVersionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TerminologyCapabilitiesVersion
-    implements _TerminologyCapabilitiesVersion {
-  const _$_TerminologyCapabilitiesVersion(
+    extends _TerminologyCapabilitiesVersion {
+  _$_TerminologyCapabilitiesVersion(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.code,
+      @JsonKey(name: '_code') this.codeElement,
       this.isDefault,
+      @JsonKey(name: '_isDefault') this.isDefaultElement,
       this.compositional,
+      @JsonKey(name: '_compositional') this.compositionalElement,
       this.language,
+      @JsonKey(name: '_language') this.languageElement,
       this.filter,
       this.property,
-      @JsonKey(name: '_code') this.codeElement,
-      @JsonKey(name: '_isDefault') this.isDefaultElement,
-      @JsonKey(name: '_compositional') this.compositionalElement,
-      @JsonKey(name: '_language') this.languageElement,
-      @JsonKey(name: '_property') this.propertyElement});
+      @JsonKey(name: '_property') this.propertyElement})
+      : super._();
 
   factory _$_TerminologyCapabilitiesVersion.fromJson(
           Map<String, dynamic> json) =>
@@ -11749,34 +11849,34 @@ class _$_TerminologyCapabilitiesVersion
   @override
   final String code;
   @override
-  final Boolean isDefault;
-  @override
-  final Boolean compositional;
-  @override
-  final List<Code> language;
-  @override
-  final List<TerminologyCapabilitiesFilter> filter;
-  @override
-  final List<Code> property;
-  @override
   @JsonKey(name: '_code')
   final Element codeElement;
+  @override
+  final Boolean isDefault;
   @override
   @JsonKey(name: '_isDefault')
   final Element isDefaultElement;
   @override
+  final Boolean compositional;
+  @override
   @JsonKey(name: '_compositional')
   final Element compositionalElement;
   @override
+  final List<Code> language;
+  @override
   @JsonKey(name: '_language')
   final List<Element> languageElement;
+  @override
+  final List<TerminologyCapabilitiesFilter> filter;
+  @override
+  final List<Code> property;
   @override
   @JsonKey(name: '_property')
   final List<Element> propertyElement;
 
   @override
   String toString() {
-    return 'TerminologyCapabilitiesVersion(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, isDefault: $isDefault, compositional: $compositional, language: $language, filter: $filter, property: $property, codeElement: $codeElement, isDefaultElement: $isDefaultElement, compositionalElement: $compositionalElement, languageElement: $languageElement, propertyElement: $propertyElement)';
+    return 'TerminologyCapabilitiesVersion(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, codeElement: $codeElement, isDefault: $isDefault, isDefaultElement: $isDefaultElement, compositional: $compositional, compositionalElement: $compositionalElement, language: $language, languageElement: $languageElement, filter: $filter, property: $property, propertyElement: $propertyElement)';
   }
 
   @override
@@ -11793,32 +11893,32 @@ class _$_TerminologyCapabilitiesVersion
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.code, code) ||
                 const DeepCollectionEquality().equals(other.code, code)) &&
+            (identical(other.codeElement, codeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.codeElement, codeElement)) &&
             (identical(other.isDefault, isDefault) ||
                 const DeepCollectionEquality()
                     .equals(other.isDefault, isDefault)) &&
+            (identical(other.isDefaultElement, isDefaultElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.isDefaultElement, isDefaultElement)) &&
             (identical(other.compositional, compositional) ||
                 const DeepCollectionEquality()
                     .equals(other.compositional, compositional)) &&
+            (identical(other.compositionalElement, compositionalElement) ||
+                const DeepCollectionEquality().equals(
+                    other.compositionalElement, compositionalElement)) &&
             (identical(other.language, language) ||
                 const DeepCollectionEquality()
                     .equals(other.language, language)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
             (identical(other.filter, filter) ||
                 const DeepCollectionEquality().equals(other.filter, filter)) &&
             (identical(other.property, property) ||
                 const DeepCollectionEquality()
                     .equals(other.property, property)) &&
-            (identical(other.codeElement, codeElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.codeElement, codeElement)) &&
-            (identical(other.isDefaultElement, isDefaultElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.isDefaultElement, isDefaultElement)) &&
-            (identical(other.compositionalElement, compositionalElement) ||
-                const DeepCollectionEquality().equals(
-                    other.compositionalElement, compositionalElement)) &&
-            (identical(other.languageElement, languageElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.languageElement, languageElement)) &&
             (identical(other.propertyElement, propertyElement) ||
                 const DeepCollectionEquality()
                     .equals(other.propertyElement, propertyElement)));
@@ -11831,15 +11931,15 @@ class _$_TerminologyCapabilitiesVersion
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(code) ^
+      const DeepCollectionEquality().hash(codeElement) ^
       const DeepCollectionEquality().hash(isDefault) ^
+      const DeepCollectionEquality().hash(isDefaultElement) ^
       const DeepCollectionEquality().hash(compositional) ^
+      const DeepCollectionEquality().hash(compositionalElement) ^
       const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(filter) ^
       const DeepCollectionEquality().hash(property) ^
-      const DeepCollectionEquality().hash(codeElement) ^
-      const DeepCollectionEquality().hash(isDefaultElement) ^
-      const DeepCollectionEquality().hash(compositionalElement) ^
-      const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(propertyElement);
 
   @override
@@ -11854,21 +11954,22 @@ class _$_TerminologyCapabilitiesVersion
 }
 
 abstract class _TerminologyCapabilitiesVersion
-    implements TerminologyCapabilitiesVersion {
-  const factory _TerminologyCapabilitiesVersion(
+    extends TerminologyCapabilitiesVersion {
+  _TerminologyCapabilitiesVersion._() : super._();
+  factory _TerminologyCapabilitiesVersion(
           {String id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
           String code,
+          @JsonKey(name: '_code') Element codeElement,
           Boolean isDefault,
+          @JsonKey(name: '_isDefault') Element isDefaultElement,
           Boolean compositional,
+          @JsonKey(name: '_compositional') Element compositionalElement,
           List<Code> language,
+          @JsonKey(name: '_language') List<Element> languageElement,
           List<TerminologyCapabilitiesFilter> filter,
           List<Code> property,
-          @JsonKey(name: '_code') Element codeElement,
-          @JsonKey(name: '_isDefault') Element isDefaultElement,
-          @JsonKey(name: '_compositional') Element compositionalElement,
-          @JsonKey(name: '_language') List<Element> languageElement,
           @JsonKey(name: '_property') List<Element> propertyElement}) =
       _$_TerminologyCapabilitiesVersion;
 
@@ -11885,27 +11986,27 @@ abstract class _TerminologyCapabilitiesVersion
   @override
   String get code;
   @override
-  Boolean get isDefault;
-  @override
-  Boolean get compositional;
-  @override
-  List<Code> get language;
-  @override
-  List<TerminologyCapabilitiesFilter> get filter;
-  @override
-  List<Code> get property;
-  @override
   @JsonKey(name: '_code')
   Element get codeElement;
+  @override
+  Boolean get isDefault;
   @override
   @JsonKey(name: '_isDefault')
   Element get isDefaultElement;
   @override
+  Boolean get compositional;
+  @override
   @JsonKey(name: '_compositional')
   Element get compositionalElement;
   @override
+  List<Code> get language;
+  @override
   @JsonKey(name: '_language')
   List<Element> get languageElement;
+  @override
+  List<TerminologyCapabilitiesFilter> get filter;
+  @override
+  List<Code> get property;
   @override
   @JsonKey(name: '_property')
   List<Element> get propertyElement;
@@ -11927,16 +12028,16 @@ class _$TerminologyCapabilitiesFilterTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code code,
-      List<Code> op,
       @JsonKey(name: '_code') Element codeElement,
+      List<Code> op,
       @JsonKey(name: '_op') List<Element> opElement}) {
     return _TerminologyCapabilitiesFilter(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       code: code,
-      op: op,
       codeElement: codeElement,
+      op: op,
       opElement: opElement,
     );
   }
@@ -11951,9 +12052,9 @@ mixin _$TerminologyCapabilitiesFilter {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   Code get code;
-  List<Code> get op;
   @JsonKey(name: '_code')
   Element get codeElement;
+  List<Code> get op;
   @JsonKey(name: '_op')
   List<Element> get opElement;
 
@@ -11972,8 +12073,8 @@ abstract class $TerminologyCapabilitiesFilterCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code code,
-      List<Code> op,
       @JsonKey(name: '_code') Element codeElement,
+      List<Code> op,
       @JsonKey(name: '_op') List<Element> opElement});
 
   $ElementCopyWith<$Res> get codeElement;
@@ -11993,8 +12094,8 @@ class _$TerminologyCapabilitiesFilterCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object code = freezed,
-    Object op = freezed,
     Object codeElement = freezed,
+    Object op = freezed,
     Object opElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -12006,9 +12107,9 @@ class _$TerminologyCapabilitiesFilterCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       code: code == freezed ? _value.code : code as Code,
-      op: op == freezed ? _value.op : op as List<Code>,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
+      op: op == freezed ? _value.op : op as List<Code>,
       opElement:
           opElement == freezed ? _value.opElement : opElement as List<Element>,
     ));
@@ -12037,8 +12138,8 @@ abstract class _$TerminologyCapabilitiesFilterCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code code,
-      List<Code> op,
       @JsonKey(name: '_code') Element codeElement,
+      List<Code> op,
       @JsonKey(name: '_op') List<Element> opElement});
 
   @override
@@ -12063,8 +12164,8 @@ class __$TerminologyCapabilitiesFilterCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object code = freezed,
-    Object op = freezed,
     Object codeElement = freezed,
+    Object op = freezed,
     Object opElement = freezed,
   }) {
     return _then(_TerminologyCapabilitiesFilter(
@@ -12076,9 +12177,9 @@ class __$TerminologyCapabilitiesFilterCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       code: code == freezed ? _value.code : code as Code,
-      op: op == freezed ? _value.op : op as List<Code>,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
+      op: op == freezed ? _value.op : op as List<Code>,
       opElement:
           opElement == freezed ? _value.opElement : opElement as List<Element>,
     ));
@@ -12086,16 +12187,16 @@ class __$TerminologyCapabilitiesFilterCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_TerminologyCapabilitiesFilter
-    implements _TerminologyCapabilitiesFilter {
-  const _$_TerminologyCapabilitiesFilter(
+class _$_TerminologyCapabilitiesFilter extends _TerminologyCapabilitiesFilter {
+  _$_TerminologyCapabilitiesFilter(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.code,
-      this.op,
       @JsonKey(name: '_code') this.codeElement,
-      @JsonKey(name: '_op') this.opElement});
+      this.op,
+      @JsonKey(name: '_op') this.opElement})
+      : super._();
 
   factory _$_TerminologyCapabilitiesFilter.fromJson(
           Map<String, dynamic> json) =>
@@ -12111,17 +12212,17 @@ class _$_TerminologyCapabilitiesFilter
   @override
   final Code code;
   @override
-  final List<Code> op;
-  @override
   @JsonKey(name: '_code')
   final Element codeElement;
+  @override
+  final List<Code> op;
   @override
   @JsonKey(name: '_op')
   final List<Element> opElement;
 
   @override
   String toString() {
-    return 'TerminologyCapabilitiesFilter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, op: $op, codeElement: $codeElement, opElement: $opElement)';
+    return 'TerminologyCapabilitiesFilter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, codeElement: $codeElement, op: $op, opElement: $opElement)';
   }
 
   @override
@@ -12138,11 +12239,11 @@ class _$_TerminologyCapabilitiesFilter
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.code, code) ||
                 const DeepCollectionEquality().equals(other.code, code)) &&
-            (identical(other.op, op) ||
-                const DeepCollectionEquality().equals(other.op, op)) &&
             (identical(other.codeElement, codeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.codeElement, codeElement)) &&
+            (identical(other.op, op) ||
+                const DeepCollectionEquality().equals(other.op, op)) &&
             (identical(other.opElement, opElement) ||
                 const DeepCollectionEquality()
                     .equals(other.opElement, opElement)));
@@ -12155,8 +12256,8 @@ class _$_TerminologyCapabilitiesFilter
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(code) ^
-      const DeepCollectionEquality().hash(op) ^
       const DeepCollectionEquality().hash(codeElement) ^
+      const DeepCollectionEquality().hash(op) ^
       const DeepCollectionEquality().hash(opElement);
 
   @override
@@ -12171,14 +12272,15 @@ class _$_TerminologyCapabilitiesFilter
 }
 
 abstract class _TerminologyCapabilitiesFilter
-    implements TerminologyCapabilitiesFilter {
-  const factory _TerminologyCapabilitiesFilter(
+    extends TerminologyCapabilitiesFilter {
+  _TerminologyCapabilitiesFilter._() : super._();
+  factory _TerminologyCapabilitiesFilter(
           {String id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
           Code code,
-          List<Code> op,
           @JsonKey(name: '_code') Element codeElement,
+          List<Code> op,
           @JsonKey(name: '_op') List<Element> opElement}) =
       _$_TerminologyCapabilitiesFilter;
 
@@ -12195,10 +12297,10 @@ abstract class _TerminologyCapabilitiesFilter
   @override
   Code get code;
   @override
-  List<Code> get op;
-  @override
   @JsonKey(name: '_code')
   Element get codeElement;
+  @override
+  List<Code> get op;
   @override
   @JsonKey(name: '_op')
   List<Element> get opElement;
@@ -12220,26 +12322,26 @@ class _$TerminologyCapabilitiesExpansionTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Boolean hierarchical,
+      @JsonKey(name: '_hierarchical') Element hierarchicalElement,
       Boolean paging,
+      @JsonKey(name: '_paging') Element pagingElement,
       Boolean incomplete,
+      @JsonKey(name: '_incomplete') Element incompleteElement,
       List<TerminologyCapabilitiesParameter> parameter,
       Markdown textFilter,
-      @JsonKey(name: '_hierarchical') Element hierarchicalElement,
-      @JsonKey(name: '_paging') Element pagingElement,
-      @JsonKey(name: '_incomplete') Element incompleteElement,
       @JsonKey(name: '_textFilter') Element textFilterElement}) {
     return _TerminologyCapabilitiesExpansion(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       hierarchical: hierarchical,
+      hierarchicalElement: hierarchicalElement,
       paging: paging,
+      pagingElement: pagingElement,
       incomplete: incomplete,
+      incompleteElement: incompleteElement,
       parameter: parameter,
       textFilter: textFilter,
-      hierarchicalElement: hierarchicalElement,
-      pagingElement: pagingElement,
-      incompleteElement: incompleteElement,
       textFilterElement: textFilterElement,
     );
   }
@@ -12255,16 +12357,16 @@ mixin _$TerminologyCapabilitiesExpansion {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   Boolean get hierarchical;
-  Boolean get paging;
-  Boolean get incomplete;
-  List<TerminologyCapabilitiesParameter> get parameter;
-  Markdown get textFilter;
   @JsonKey(name: '_hierarchical')
   Element get hierarchicalElement;
+  Boolean get paging;
   @JsonKey(name: '_paging')
   Element get pagingElement;
+  Boolean get incomplete;
   @JsonKey(name: '_incomplete')
   Element get incompleteElement;
+  List<TerminologyCapabilitiesParameter> get parameter;
+  Markdown get textFilter;
   @JsonKey(name: '_textFilter')
   Element get textFilterElement;
 
@@ -12283,13 +12385,13 @@ abstract class $TerminologyCapabilitiesExpansionCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Boolean hierarchical,
+      @JsonKey(name: '_hierarchical') Element hierarchicalElement,
       Boolean paging,
+      @JsonKey(name: '_paging') Element pagingElement,
       Boolean incomplete,
+      @JsonKey(name: '_incomplete') Element incompleteElement,
       List<TerminologyCapabilitiesParameter> parameter,
       Markdown textFilter,
-      @JsonKey(name: '_hierarchical') Element hierarchicalElement,
-      @JsonKey(name: '_paging') Element pagingElement,
-      @JsonKey(name: '_incomplete') Element incompleteElement,
       @JsonKey(name: '_textFilter') Element textFilterElement});
 
   $ElementCopyWith<$Res> get hierarchicalElement;
@@ -12312,13 +12414,13 @@ class _$TerminologyCapabilitiesExpansionCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object hierarchical = freezed,
+    Object hierarchicalElement = freezed,
     Object paging = freezed,
+    Object pagingElement = freezed,
     Object incomplete = freezed,
+    Object incompleteElement = freezed,
     Object parameter = freezed,
     Object textFilter = freezed,
-    Object hierarchicalElement = freezed,
-    Object pagingElement = freezed,
-    Object incompleteElement = freezed,
     Object textFilterElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -12332,23 +12434,23 @@ class _$TerminologyCapabilitiesExpansionCopyWithImpl<$Res>
       hierarchical: hierarchical == freezed
           ? _value.hierarchical
           : hierarchical as Boolean,
+      hierarchicalElement: hierarchicalElement == freezed
+          ? _value.hierarchicalElement
+          : hierarchicalElement as Element,
       paging: paging == freezed ? _value.paging : paging as Boolean,
+      pagingElement: pagingElement == freezed
+          ? _value.pagingElement
+          : pagingElement as Element,
       incomplete:
           incomplete == freezed ? _value.incomplete : incomplete as Boolean,
+      incompleteElement: incompleteElement == freezed
+          ? _value.incompleteElement
+          : incompleteElement as Element,
       parameter: parameter == freezed
           ? _value.parameter
           : parameter as List<TerminologyCapabilitiesParameter>,
       textFilter:
           textFilter == freezed ? _value.textFilter : textFilter as Markdown,
-      hierarchicalElement: hierarchicalElement == freezed
-          ? _value.hierarchicalElement
-          : hierarchicalElement as Element,
-      pagingElement: pagingElement == freezed
-          ? _value.pagingElement
-          : pagingElement as Element,
-      incompleteElement: incompleteElement == freezed
-          ? _value.incompleteElement
-          : incompleteElement as Element,
       textFilterElement: textFilterElement == freezed
           ? _value.textFilterElement
           : textFilterElement as Element,
@@ -12408,13 +12510,13 @@ abstract class _$TerminologyCapabilitiesExpansionCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Boolean hierarchical,
+      @JsonKey(name: '_hierarchical') Element hierarchicalElement,
       Boolean paging,
+      @JsonKey(name: '_paging') Element pagingElement,
       Boolean incomplete,
+      @JsonKey(name: '_incomplete') Element incompleteElement,
       List<TerminologyCapabilitiesParameter> parameter,
       Markdown textFilter,
-      @JsonKey(name: '_hierarchical') Element hierarchicalElement,
-      @JsonKey(name: '_paging') Element pagingElement,
-      @JsonKey(name: '_incomplete') Element incompleteElement,
       @JsonKey(name: '_textFilter') Element textFilterElement});
 
   @override
@@ -12445,13 +12547,13 @@ class __$TerminologyCapabilitiesExpansionCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object hierarchical = freezed,
+    Object hierarchicalElement = freezed,
     Object paging = freezed,
+    Object pagingElement = freezed,
     Object incomplete = freezed,
+    Object incompleteElement = freezed,
     Object parameter = freezed,
     Object textFilter = freezed,
-    Object hierarchicalElement = freezed,
-    Object pagingElement = freezed,
-    Object incompleteElement = freezed,
     Object textFilterElement = freezed,
   }) {
     return _then(_TerminologyCapabilitiesExpansion(
@@ -12465,23 +12567,23 @@ class __$TerminologyCapabilitiesExpansionCopyWithImpl<$Res>
       hierarchical: hierarchical == freezed
           ? _value.hierarchical
           : hierarchical as Boolean,
+      hierarchicalElement: hierarchicalElement == freezed
+          ? _value.hierarchicalElement
+          : hierarchicalElement as Element,
       paging: paging == freezed ? _value.paging : paging as Boolean,
+      pagingElement: pagingElement == freezed
+          ? _value.pagingElement
+          : pagingElement as Element,
       incomplete:
           incomplete == freezed ? _value.incomplete : incomplete as Boolean,
+      incompleteElement: incompleteElement == freezed
+          ? _value.incompleteElement
+          : incompleteElement as Element,
       parameter: parameter == freezed
           ? _value.parameter
           : parameter as List<TerminologyCapabilitiesParameter>,
       textFilter:
           textFilter == freezed ? _value.textFilter : textFilter as Markdown,
-      hierarchicalElement: hierarchicalElement == freezed
-          ? _value.hierarchicalElement
-          : hierarchicalElement as Element,
-      pagingElement: pagingElement == freezed
-          ? _value.pagingElement
-          : pagingElement as Element,
-      incompleteElement: incompleteElement == freezed
-          ? _value.incompleteElement
-          : incompleteElement as Element,
       textFilterElement: textFilterElement == freezed
           ? _value.textFilterElement
           : textFilterElement as Element,
@@ -12491,20 +12593,21 @@ class __$TerminologyCapabilitiesExpansionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TerminologyCapabilitiesExpansion
-    implements _TerminologyCapabilitiesExpansion {
-  const _$_TerminologyCapabilitiesExpansion(
+    extends _TerminologyCapabilitiesExpansion {
+  _$_TerminologyCapabilitiesExpansion(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.hierarchical,
+      @JsonKey(name: '_hierarchical') this.hierarchicalElement,
       this.paging,
+      @JsonKey(name: '_paging') this.pagingElement,
       this.incomplete,
+      @JsonKey(name: '_incomplete') this.incompleteElement,
       this.parameter,
       this.textFilter,
-      @JsonKey(name: '_hierarchical') this.hierarchicalElement,
-      @JsonKey(name: '_paging') this.pagingElement,
-      @JsonKey(name: '_incomplete') this.incompleteElement,
-      @JsonKey(name: '_textFilter') this.textFilterElement});
+      @JsonKey(name: '_textFilter') this.textFilterElement})
+      : super._();
 
   factory _$_TerminologyCapabilitiesExpansion.fromJson(
           Map<String, dynamic> json) =>
@@ -12520,29 +12623,29 @@ class _$_TerminologyCapabilitiesExpansion
   @override
   final Boolean hierarchical;
   @override
-  final Boolean paging;
-  @override
-  final Boolean incomplete;
-  @override
-  final List<TerminologyCapabilitiesParameter> parameter;
-  @override
-  final Markdown textFilter;
-  @override
   @JsonKey(name: '_hierarchical')
   final Element hierarchicalElement;
+  @override
+  final Boolean paging;
   @override
   @JsonKey(name: '_paging')
   final Element pagingElement;
   @override
+  final Boolean incomplete;
+  @override
   @JsonKey(name: '_incomplete')
   final Element incompleteElement;
+  @override
+  final List<TerminologyCapabilitiesParameter> parameter;
+  @override
+  final Markdown textFilter;
   @override
   @JsonKey(name: '_textFilter')
   final Element textFilterElement;
 
   @override
   String toString() {
-    return 'TerminologyCapabilitiesExpansion(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, hierarchical: $hierarchical, paging: $paging, incomplete: $incomplete, parameter: $parameter, textFilter: $textFilter, hierarchicalElement: $hierarchicalElement, pagingElement: $pagingElement, incompleteElement: $incompleteElement, textFilterElement: $textFilterElement)';
+    return 'TerminologyCapabilitiesExpansion(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, hierarchical: $hierarchical, hierarchicalElement: $hierarchicalElement, paging: $paging, pagingElement: $pagingElement, incomplete: $incomplete, incompleteElement: $incompleteElement, parameter: $parameter, textFilter: $textFilter, textFilterElement: $textFilterElement)';
   }
 
   @override
@@ -12560,26 +12663,26 @@ class _$_TerminologyCapabilitiesExpansion
             (identical(other.hierarchical, hierarchical) ||
                 const DeepCollectionEquality()
                     .equals(other.hierarchical, hierarchical)) &&
+            (identical(other.hierarchicalElement, hierarchicalElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.hierarchicalElement, hierarchicalElement)) &&
             (identical(other.paging, paging) ||
                 const DeepCollectionEquality().equals(other.paging, paging)) &&
+            (identical(other.pagingElement, pagingElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.pagingElement, pagingElement)) &&
             (identical(other.incomplete, incomplete) ||
                 const DeepCollectionEquality()
                     .equals(other.incomplete, incomplete)) &&
+            (identical(other.incompleteElement, incompleteElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.incompleteElement, incompleteElement)) &&
             (identical(other.parameter, parameter) ||
                 const DeepCollectionEquality()
                     .equals(other.parameter, parameter)) &&
             (identical(other.textFilter, textFilter) ||
                 const DeepCollectionEquality()
                     .equals(other.textFilter, textFilter)) &&
-            (identical(other.hierarchicalElement, hierarchicalElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.hierarchicalElement, hierarchicalElement)) &&
-            (identical(other.pagingElement, pagingElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.pagingElement, pagingElement)) &&
-            (identical(other.incompleteElement, incompleteElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.incompleteElement, incompleteElement)) &&
             (identical(other.textFilterElement, textFilterElement) ||
                 const DeepCollectionEquality()
                     .equals(other.textFilterElement, textFilterElement)));
@@ -12592,13 +12695,13 @@ class _$_TerminologyCapabilitiesExpansion
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(hierarchical) ^
+      const DeepCollectionEquality().hash(hierarchicalElement) ^
       const DeepCollectionEquality().hash(paging) ^
+      const DeepCollectionEquality().hash(pagingElement) ^
       const DeepCollectionEquality().hash(incomplete) ^
+      const DeepCollectionEquality().hash(incompleteElement) ^
       const DeepCollectionEquality().hash(parameter) ^
       const DeepCollectionEquality().hash(textFilter) ^
-      const DeepCollectionEquality().hash(hierarchicalElement) ^
-      const DeepCollectionEquality().hash(pagingElement) ^
-      const DeepCollectionEquality().hash(incompleteElement) ^
       const DeepCollectionEquality().hash(textFilterElement);
 
   @override
@@ -12613,19 +12716,20 @@ class _$_TerminologyCapabilitiesExpansion
 }
 
 abstract class _TerminologyCapabilitiesExpansion
-    implements TerminologyCapabilitiesExpansion {
-  const factory _TerminologyCapabilitiesExpansion(
+    extends TerminologyCapabilitiesExpansion {
+  _TerminologyCapabilitiesExpansion._() : super._();
+  factory _TerminologyCapabilitiesExpansion(
           {String id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
           Boolean hierarchical,
+          @JsonKey(name: '_hierarchical') Element hierarchicalElement,
           Boolean paging,
+          @JsonKey(name: '_paging') Element pagingElement,
           Boolean incomplete,
+          @JsonKey(name: '_incomplete') Element incompleteElement,
           List<TerminologyCapabilitiesParameter> parameter,
           Markdown textFilter,
-          @JsonKey(name: '_hierarchical') Element hierarchicalElement,
-          @JsonKey(name: '_paging') Element pagingElement,
-          @JsonKey(name: '_incomplete') Element incompleteElement,
           @JsonKey(name: '_textFilter') Element textFilterElement}) =
       _$_TerminologyCapabilitiesExpansion;
 
@@ -12642,22 +12746,22 @@ abstract class _TerminologyCapabilitiesExpansion
   @override
   Boolean get hierarchical;
   @override
-  Boolean get paging;
-  @override
-  Boolean get incomplete;
-  @override
-  List<TerminologyCapabilitiesParameter> get parameter;
-  @override
-  Markdown get textFilter;
-  @override
   @JsonKey(name: '_hierarchical')
   Element get hierarchicalElement;
+  @override
+  Boolean get paging;
   @override
   @JsonKey(name: '_paging')
   Element get pagingElement;
   @override
+  Boolean get incomplete;
+  @override
   @JsonKey(name: '_incomplete')
   Element get incompleteElement;
+  @override
+  List<TerminologyCapabilitiesParameter> get parameter;
+  @override
+  Markdown get textFilter;
   @override
   @JsonKey(name: '_textFilter')
   Element get textFilterElement;
@@ -12679,16 +12783,16 @@ class _$TerminologyCapabilitiesParameterTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code name,
-      String documentation,
       @JsonKey(name: '_name') Element nameElement,
+      String documentation,
       @JsonKey(name: '_documentation') Element documentationElement}) {
     return _TerminologyCapabilitiesParameter(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       name: name,
-      documentation: documentation,
       nameElement: nameElement,
+      documentation: documentation,
       documentationElement: documentationElement,
     );
   }
@@ -12704,9 +12808,9 @@ mixin _$TerminologyCapabilitiesParameter {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   Code get name;
-  String get documentation;
   @JsonKey(name: '_name')
   Element get nameElement;
+  String get documentation;
   @JsonKey(name: '_documentation')
   Element get documentationElement;
 
@@ -12725,8 +12829,8 @@ abstract class $TerminologyCapabilitiesParameterCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code name,
-      String documentation,
       @JsonKey(name: '_name') Element nameElement,
+      String documentation,
       @JsonKey(name: '_documentation') Element documentationElement});
 
   $ElementCopyWith<$Res> get nameElement;
@@ -12747,8 +12851,8 @@ class _$TerminologyCapabilitiesParameterCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object name = freezed,
-    Object documentation = freezed,
     Object nameElement = freezed,
+    Object documentation = freezed,
     Object documentationElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -12760,11 +12864,11 @@ class _$TerminologyCapabilitiesParameterCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       name: name == freezed ? _value.name : name as Code,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as String,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
           : documentationElement as Element,
@@ -12804,8 +12908,8 @@ abstract class _$TerminologyCapabilitiesParameterCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code name,
-      String documentation,
       @JsonKey(name: '_name') Element nameElement,
+      String documentation,
       @JsonKey(name: '_documentation') Element documentationElement});
 
   @override
@@ -12832,8 +12936,8 @@ class __$TerminologyCapabilitiesParameterCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object name = freezed,
-    Object documentation = freezed,
     Object nameElement = freezed,
+    Object documentation = freezed,
     Object documentationElement = freezed,
   }) {
     return _then(_TerminologyCapabilitiesParameter(
@@ -12845,11 +12949,11 @@ class __$TerminologyCapabilitiesParameterCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       name: name == freezed ? _value.name : name as Code,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as String,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
           : documentationElement as Element,
@@ -12859,15 +12963,16 @@ class __$TerminologyCapabilitiesParameterCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TerminologyCapabilitiesParameter
-    implements _TerminologyCapabilitiesParameter {
-  const _$_TerminologyCapabilitiesParameter(
+    extends _TerminologyCapabilitiesParameter {
+  _$_TerminologyCapabilitiesParameter(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.name,
-      this.documentation,
       @JsonKey(name: '_name') this.nameElement,
-      @JsonKey(name: '_documentation') this.documentationElement});
+      this.documentation,
+      @JsonKey(name: '_documentation') this.documentationElement})
+      : super._();
 
   factory _$_TerminologyCapabilitiesParameter.fromJson(
           Map<String, dynamic> json) =>
@@ -12883,17 +12988,17 @@ class _$_TerminologyCapabilitiesParameter
   @override
   final Code name;
   @override
-  final String documentation;
-  @override
   @JsonKey(name: '_name')
   final Element nameElement;
+  @override
+  final String documentation;
   @override
   @JsonKey(name: '_documentation')
   final Element documentationElement;
 
   @override
   String toString() {
-    return 'TerminologyCapabilitiesParameter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, documentation: $documentation, nameElement: $nameElement, documentationElement: $documentationElement)';
+    return 'TerminologyCapabilitiesParameter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, documentation: $documentation, documentationElement: $documentationElement)';
   }
 
   @override
@@ -12910,12 +13015,12 @@ class _$_TerminologyCapabilitiesParameter
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.documentation, documentation) ||
-                const DeepCollectionEquality()
-                    .equals(other.documentation, documentation)) &&
             (identical(other.nameElement, nameElement) ||
                 const DeepCollectionEquality()
                     .equals(other.nameElement, nameElement)) &&
+            (identical(other.documentation, documentation) ||
+                const DeepCollectionEquality()
+                    .equals(other.documentation, documentation)) &&
             (identical(other.documentationElement, documentationElement) ||
                 const DeepCollectionEquality()
                     .equals(other.documentationElement, documentationElement)));
@@ -12928,8 +13033,8 @@ class _$_TerminologyCapabilitiesParameter
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(documentation) ^
       const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(documentation) ^
       const DeepCollectionEquality().hash(documentationElement);
 
   @override
@@ -12944,14 +13049,15 @@ class _$_TerminologyCapabilitiesParameter
 }
 
 abstract class _TerminologyCapabilitiesParameter
-    implements TerminologyCapabilitiesParameter {
-  const factory _TerminologyCapabilitiesParameter(
+    extends TerminologyCapabilitiesParameter {
+  _TerminologyCapabilitiesParameter._() : super._();
+  factory _TerminologyCapabilitiesParameter(
           {String id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
           Code name,
-          String documentation,
           @JsonKey(name: '_name') Element nameElement,
+          String documentation,
           @JsonKey(name: '_documentation') Element documentationElement}) =
       _$_TerminologyCapabilitiesParameter;
 
@@ -12968,10 +13074,10 @@ abstract class _TerminologyCapabilitiesParameter
   @override
   Code get name;
   @override
-  String get documentation;
-  @override
   @JsonKey(name: '_name')
   Element get nameElement;
+  @override
+  String get documentation;
   @override
   @JsonKey(name: '_documentation')
   Element get documentationElement;
@@ -13139,13 +13245,14 @@ class __$TerminologyCapabilitiesValidateCodeCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TerminologyCapabilitiesValidateCode
-    implements _TerminologyCapabilitiesValidateCode {
-  const _$_TerminologyCapabilitiesValidateCode(
+    extends _TerminologyCapabilitiesValidateCode {
+  _$_TerminologyCapabilitiesValidateCode(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.translations,
-      @JsonKey(name: '_translations') this.translationsElement});
+      @JsonKey(name: '_translations') this.translationsElement})
+      : super._();
 
   factory _$_TerminologyCapabilitiesValidateCode.fromJson(
           Map<String, dynamic> json) =>
@@ -13211,8 +13318,9 @@ class _$_TerminologyCapabilitiesValidateCode
 }
 
 abstract class _TerminologyCapabilitiesValidateCode
-    implements TerminologyCapabilitiesValidateCode {
-  const factory _TerminologyCapabilitiesValidateCode(
+    extends TerminologyCapabilitiesValidateCode {
+  _TerminologyCapabilitiesValidateCode._() : super._();
+  factory _TerminologyCapabilitiesValidateCode(
           {String id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
@@ -13396,13 +13504,14 @@ class __$TerminologyCapabilitiesTranslationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TerminologyCapabilitiesTranslation
-    implements _TerminologyCapabilitiesTranslation {
-  const _$_TerminologyCapabilitiesTranslation(
+    extends _TerminologyCapabilitiesTranslation {
+  _$_TerminologyCapabilitiesTranslation(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.needsMap,
-      @JsonKey(name: '_needsMap') this.needsMapElement});
+      @JsonKey(name: '_needsMap') this.needsMapElement})
+      : super._();
 
   factory _$_TerminologyCapabilitiesTranslation.fromJson(
           Map<String, dynamic> json) =>
@@ -13468,8 +13577,9 @@ class _$_TerminologyCapabilitiesTranslation
 }
 
 abstract class _TerminologyCapabilitiesTranslation
-    implements TerminologyCapabilitiesTranslation {
-  const factory _TerminologyCapabilitiesTranslation(
+    extends TerminologyCapabilitiesTranslation {
+  _TerminologyCapabilitiesTranslation._() : super._();
+  factory _TerminologyCapabilitiesTranslation(
           {String id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
@@ -13655,13 +13765,14 @@ class __$TerminologyCapabilitiesClosureCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_TerminologyCapabilitiesClosure
-    implements _TerminologyCapabilitiesClosure {
-  const _$_TerminologyCapabilitiesClosure(
+    extends _TerminologyCapabilitiesClosure {
+  _$_TerminologyCapabilitiesClosure(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.translation,
-      @JsonKey(name: '_translation') this.translationElement});
+      @JsonKey(name: '_translation') this.translationElement})
+      : super._();
 
   factory _$_TerminologyCapabilitiesClosure.fromJson(
           Map<String, dynamic> json) =>
@@ -13726,8 +13837,9 @@ class _$_TerminologyCapabilitiesClosure
 }
 
 abstract class _TerminologyCapabilitiesClosure
-    implements TerminologyCapabilitiesClosure {
-  const factory _TerminologyCapabilitiesClosure(
+    extends TerminologyCapabilitiesClosure {
+  _TerminologyCapabilitiesClosure._() : super._();
+  factory _TerminologyCapabilitiesClosure(
           {String id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
@@ -13763,107 +13875,89 @@ class _$ValueSetTearOff {
   const _$ValueSetTearOff();
 
   _ValueSet call(
-      {@required
-      @JsonKey(required: true, defaultValue: 'ValueSet')
-          String resourceType,
+      {@required @JsonKey(defaultValue: 'ValueSet') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri url,
+      @JsonKey(name: '_url') Element urlElement,
       List<Identifier> identifier,
       String version,
+      @JsonKey(name: '_version') Element versionElement,
       String name,
+      @JsonKey(name: '_name') Element nameElement,
       String title,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
+      @JsonKey(name: '_title') Element titleElement,
+      @JsonKey(unknownEnumValue: ValueSetStatus.unknown) ValueSetStatus status,
+      @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
+      @JsonKey(name: '_experimental') Element experimentalElement,
       FhirDateTime date,
+      @JsonKey(name: '_date') Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher') Element publisherElement,
       List<ContactDetail> contact,
       Markdown description,
+      @JsonKey(name: '_description') Element descriptionElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Boolean immutable,
+      @JsonKey(name: '_immutable') Element immutableElement,
       Markdown purpose,
+      @JsonKey(name: '_purpose') Element purposeElement,
       Markdown copyright,
+      @JsonKey(name: '_copyright') Element copyrightElement,
       ValueSetCompose compose,
-      ValueSetExpansion expansion,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      @JsonKey(name: '_language')
-          Element languageElement,
-      @JsonKey(name: '_url')
-          Element urlElement,
-      @JsonKey(name: '_version')
-          Element versionElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @JsonKey(name: '_immutable')
-          Element immutableElement,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
-      @JsonKey(name: '_copyright')
-          Element copyrightElement}) {
+      ValueSetExpansion expansion}) {
     return _ValueSet(
       resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
+      implicitRulesElement: implicitRulesElement,
       language: language,
+      languageElement: languageElement,
       text: text,
       contained: contained,
       extension_: extension_,
       modifierExtension: modifierExtension,
       url: url,
+      urlElement: urlElement,
       identifier: identifier,
       version: version,
+      versionElement: versionElement,
       name: name,
+      nameElement: nameElement,
       title: title,
+      titleElement: titleElement,
       status: status,
+      statusElement: statusElement,
       experimental: experimental,
+      experimentalElement: experimentalElement,
       date: date,
+      dateElement: dateElement,
       publisher: publisher,
+      publisherElement: publisherElement,
       contact: contact,
       description: description,
+      descriptionElement: descriptionElement,
       useContext: useContext,
       jurisdiction: jurisdiction,
       immutable: immutable,
+      immutableElement: immutableElement,
       purpose: purpose,
+      purposeElement: purposeElement,
       copyright: copyright,
+      copyrightElement: copyrightElement,
       compose: compose,
       expansion: expansion,
-      implicitRulesElement: implicitRulesElement,
-      languageElement: languageElement,
-      urlElement: urlElement,
-      versionElement: versionElement,
-      nameElement: nameElement,
-      titleElement: titleElement,
-      statusElement: statusElement,
-      experimentalElement: experimentalElement,
-      dateElement: dateElement,
-      publisherElement: publisherElement,
-      descriptionElement: descriptionElement,
-      immutableElement: immutableElement,
-      purposeElement: purposeElement,
-      copyrightElement: copyrightElement,
     );
   }
 }
@@ -13872,64 +13966,64 @@ class _$ValueSetTearOff {
 const $ValueSet = _$ValueSetTearOff();
 
 mixin _$ValueSet {
-  @JsonKey(required: true, defaultValue: 'ValueSet')
+  @JsonKey(defaultValue: 'ValueSet')
   String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
   Code get language;
+  @JsonKey(name: '_language')
+  Element get languageElement;
   Narrative get text;
   List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   FhirUri get url;
+  @JsonKey(name: '_url')
+  Element get urlElement;
   List<Identifier> get identifier;
   String get version;
+  @JsonKey(name: '_version')
+  Element get versionElement;
   String get name;
+  @JsonKey(name: '_name')
+  Element get nameElement;
   String get title;
-  @JsonKey(unknownEnumValue: Status.unknown)
-  Status get status;
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @JsonKey(unknownEnumValue: ValueSetStatus.unknown)
+  ValueSetStatus get status;
+  @JsonKey(name: '_status')
+  Element get statusElement;
   Boolean get experimental;
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
   FhirDateTime get date;
+  @JsonKey(name: '_date')
+  Element get dateElement;
   String get publisher;
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
   List<ContactDetail> get contact;
   Markdown get description;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
   List<UsageContext> get useContext;
   List<CodeableConcept> get jurisdiction;
   Boolean get immutable;
-  Markdown get purpose;
-  Markdown get copyright;
-  ValueSetCompose get compose;
-  ValueSetExpansion get expansion;
-  @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  @JsonKey(name: '_language')
-  Element get languageElement;
-  @JsonKey(name: '_url')
-  Element get urlElement;
-  @JsonKey(name: '_version')
-  Element get versionElement;
-  @JsonKey(name: '_name')
-  Element get nameElement;
-  @JsonKey(name: '_title')
-  Element get titleElement;
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @JsonKey(name: '_experimental')
-  Element get experimentalElement;
-  @JsonKey(name: '_date')
-  Element get dateElement;
-  @JsonKey(name: '_publisher')
-  Element get publisherElement;
-  @JsonKey(name: '_description')
-  Element get descriptionElement;
   @JsonKey(name: '_immutable')
   Element get immutableElement;
+  Markdown get purpose;
   @JsonKey(name: '_purpose')
   Element get purposeElement;
+  Markdown get copyright;
   @JsonKey(name: '_copyright')
   Element get copyrightElement;
+  ValueSetCompose get compose;
+  ValueSetExpansion get expansion;
 
   Map<String, dynamic> toJson();
   $ValueSetCopyWith<ValueSet> get copyWith;
@@ -13939,54 +14033,52 @@ abstract class $ValueSetCopyWith<$Res> {
   factory $ValueSetCopyWith(ValueSet value, $Res Function(ValueSet) then) =
       _$ValueSetCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'ValueSet') String resourceType,
+      {@JsonKey(defaultValue: 'ValueSet') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri url,
+      @JsonKey(name: '_url') Element urlElement,
       List<Identifier> identifier,
       String version,
+      @JsonKey(name: '_version') Element versionElement,
       String name,
+      @JsonKey(name: '_name') Element nameElement,
       String title,
-      @JsonKey(unknownEnumValue: Status.unknown) Status status,
+      @JsonKey(name: '_title') Element titleElement,
+      @JsonKey(unknownEnumValue: ValueSetStatus.unknown) ValueSetStatus status,
+      @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
+      @JsonKey(name: '_experimental') Element experimentalElement,
       FhirDateTime date,
+      @JsonKey(name: '_date') Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher') Element publisherElement,
       List<ContactDetail> contact,
       Markdown description,
+      @JsonKey(name: '_description') Element descriptionElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Boolean immutable,
-      Markdown purpose,
-      Markdown copyright,
-      ValueSetCompose compose,
-      ValueSetExpansion expansion,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-      @JsonKey(name: '_language') Element languageElement,
-      @JsonKey(name: '_url') Element urlElement,
-      @JsonKey(name: '_version') Element versionElement,
-      @JsonKey(name: '_name') Element nameElement,
-      @JsonKey(name: '_title') Element titleElement,
-      @JsonKey(name: '_status') Element statusElement,
-      @JsonKey(name: '_experimental') Element experimentalElement,
-      @JsonKey(name: '_date') Element dateElement,
-      @JsonKey(name: '_publisher') Element publisherElement,
-      @JsonKey(name: '_description') Element descriptionElement,
       @JsonKey(name: '_immutable') Element immutableElement,
+      Markdown purpose,
       @JsonKey(name: '_purpose') Element purposeElement,
-      @JsonKey(name: '_copyright') Element copyrightElement});
+      Markdown copyright,
+      @JsonKey(name: '_copyright') Element copyrightElement,
+      ValueSetCompose compose,
+      ValueSetExpansion expansion});
 
   $MetaCopyWith<$Res> get meta;
-  $NarrativeCopyWith<$Res> get text;
-  $ValueSetComposeCopyWith<$Res> get compose;
-  $ValueSetExpansionCopyWith<$Res> get expansion;
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
+  $NarrativeCopyWith<$Res> get text;
   $ElementCopyWith<$Res> get urlElement;
   $ElementCopyWith<$Res> get versionElement;
   $ElementCopyWith<$Res> get nameElement;
@@ -13999,6 +14091,8 @@ abstract class $ValueSetCopyWith<$Res> {
   $ElementCopyWith<$Res> get immutableElement;
   $ElementCopyWith<$Res> get purposeElement;
   $ElementCopyWith<$Res> get copyrightElement;
+  $ValueSetComposeCopyWith<$Res> get compose;
+  $ValueSetExpansionCopyWith<$Res> get expansion;
 }
 
 class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
@@ -14014,43 +14108,43 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object url = freezed,
+    Object urlElement = freezed,
     Object identifier = freezed,
     Object version = freezed,
+    Object versionElement = freezed,
     Object name = freezed,
+    Object nameElement = freezed,
     Object title = freezed,
+    Object titleElement = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object experimental = freezed,
+    Object experimentalElement = freezed,
     Object date = freezed,
+    Object dateElement = freezed,
     Object publisher = freezed,
+    Object publisherElement = freezed,
     Object contact = freezed,
     Object description = freezed,
+    Object descriptionElement = freezed,
     Object useContext = freezed,
     Object jurisdiction = freezed,
     Object immutable = freezed,
+    Object immutableElement = freezed,
     Object purpose = freezed,
+    Object purposeElement = freezed,
     Object copyright = freezed,
+    Object copyrightElement = freezed,
     Object compose = freezed,
     Object expansion = freezed,
-    Object implicitRulesElement = freezed,
-    Object languageElement = freezed,
-    Object urlElement = freezed,
-    Object versionElement = freezed,
-    Object nameElement = freezed,
-    Object titleElement = freezed,
-    Object statusElement = freezed,
-    Object experimentalElement = freezed,
-    Object dateElement = freezed,
-    Object publisherElement = freezed,
-    Object descriptionElement = freezed,
-    Object immutableElement = freezed,
-    Object purposeElement = freezed,
-    Object copyrightElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -14061,7 +14155,13 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -14072,22 +14172,46 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as FhirUri,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
       version: version == freezed ? _value.version : version as String,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
       name: name == freezed ? _value.name : name as String,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed ? _value.status : status as Status,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      status: status == freezed ? _value.status : status as ValueSetStatus,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
       date: date == freezed ? _value.date : date as FhirDateTime,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
       description:
           description == freezed ? _value.description : description as Markdown,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
       useContext: useContext == freezed
           ? _value.useContext
           : useContext as List<UsageContext>,
@@ -14095,52 +14219,22 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
           ? _value.jurisdiction
           : jurisdiction as List<CodeableConcept>,
       immutable: immutable == freezed ? _value.immutable : immutable as Boolean,
+      immutableElement: immutableElement == freezed
+          ? _value.immutableElement
+          : immutableElement as Element,
       purpose: purpose == freezed ? _value.purpose : purpose as Markdown,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement as Element,
       copyright:
           copyright == freezed ? _value.copyright : copyright as Markdown,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
       compose: compose == freezed ? _value.compose : compose as ValueSetCompose,
       expansion: expansion == freezed
           ? _value.expansion
           : expansion as ValueSetExpansion,
-      implicitRulesElement: implicitRulesElement == freezed
-          ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      languageElement: languageElement == freezed
-          ? _value.languageElement
-          : languageElement as Element,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element,
-      versionElement: versionElement == freezed
-          ? _value.versionElement
-          : versionElement as Element,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      titleElement: titleElement == freezed
-          ? _value.titleElement
-          : titleElement as Element,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      experimentalElement: experimentalElement == freezed
-          ? _value.experimentalElement
-          : experimentalElement as Element,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element,
-      publisherElement: publisherElement == freezed
-          ? _value.publisherElement
-          : publisherElement as Element,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement as Element,
-      immutableElement: immutableElement == freezed
-          ? _value.immutableElement
-          : immutableElement as Element,
-      purposeElement: purposeElement == freezed
-          ? _value.purposeElement
-          : purposeElement as Element,
-      copyrightElement: copyrightElement == freezed
-          ? _value.copyrightElement
-          : copyrightElement as Element,
     ));
   }
 
@@ -14151,36 +14245,6 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
     }
     return $MetaCopyWith<$Res>(_value.meta, (value) {
       return _then(_value.copyWith(meta: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get text {
-    if (_value.text == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.text, (value) {
-      return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $ValueSetComposeCopyWith<$Res> get compose {
-    if (_value.compose == null) {
-      return null;
-    }
-    return $ValueSetComposeCopyWith<$Res>(_value.compose, (value) {
-      return _then(_value.copyWith(compose: value));
-    });
-  }
-
-  @override
-  $ValueSetExpansionCopyWith<$Res> get expansion {
-    if (_value.expansion == null) {
-      return null;
-    }
-    return $ValueSetExpansionCopyWith<$Res>(_value.expansion, (value) {
-      return _then(_value.copyWith(expansion: value));
     });
   }
 
@@ -14201,6 +14265,16 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
     }
     return $ElementCopyWith<$Res>(_value.languageElement, (value) {
       return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
     });
   }
 
@@ -14323,6 +14397,26 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
       return _then(_value.copyWith(copyrightElement: value));
     });
   }
+
+  @override
+  $ValueSetComposeCopyWith<$Res> get compose {
+    if (_value.compose == null) {
+      return null;
+    }
+    return $ValueSetComposeCopyWith<$Res>(_value.compose, (value) {
+      return _then(_value.copyWith(compose: value));
+    });
+  }
+
+  @override
+  $ValueSetExpansionCopyWith<$Res> get expansion {
+    if (_value.expansion == null) {
+      return null;
+    }
+    return $ValueSetExpansionCopyWith<$Res>(_value.expansion, (value) {
+      return _then(_value.copyWith(expansion: value));
+    });
+  }
 }
 
 abstract class _$ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
@@ -14330,60 +14424,56 @@ abstract class _$ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
       __$ValueSetCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'ValueSet') String resourceType,
+      {@JsonKey(defaultValue: 'ValueSet') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri url,
+      @JsonKey(name: '_url') Element urlElement,
       List<Identifier> identifier,
       String version,
+      @JsonKey(name: '_version') Element versionElement,
       String name,
+      @JsonKey(name: '_name') Element nameElement,
       String title,
-      @JsonKey(unknownEnumValue: Status.unknown) Status status,
+      @JsonKey(name: '_title') Element titleElement,
+      @JsonKey(unknownEnumValue: ValueSetStatus.unknown) ValueSetStatus status,
+      @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
+      @JsonKey(name: '_experimental') Element experimentalElement,
       FhirDateTime date,
+      @JsonKey(name: '_date') Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher') Element publisherElement,
       List<ContactDetail> contact,
       Markdown description,
+      @JsonKey(name: '_description') Element descriptionElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Boolean immutable,
-      Markdown purpose,
-      Markdown copyright,
-      ValueSetCompose compose,
-      ValueSetExpansion expansion,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-      @JsonKey(name: '_language') Element languageElement,
-      @JsonKey(name: '_url') Element urlElement,
-      @JsonKey(name: '_version') Element versionElement,
-      @JsonKey(name: '_name') Element nameElement,
-      @JsonKey(name: '_title') Element titleElement,
-      @JsonKey(name: '_status') Element statusElement,
-      @JsonKey(name: '_experimental') Element experimentalElement,
-      @JsonKey(name: '_date') Element dateElement,
-      @JsonKey(name: '_publisher') Element publisherElement,
-      @JsonKey(name: '_description') Element descriptionElement,
       @JsonKey(name: '_immutable') Element immutableElement,
+      Markdown purpose,
       @JsonKey(name: '_purpose') Element purposeElement,
-      @JsonKey(name: '_copyright') Element copyrightElement});
+      Markdown copyright,
+      @JsonKey(name: '_copyright') Element copyrightElement,
+      ValueSetCompose compose,
+      ValueSetExpansion expansion});
 
   @override
   $MetaCopyWith<$Res> get meta;
   @override
-  $NarrativeCopyWith<$Res> get text;
-  @override
-  $ValueSetComposeCopyWith<$Res> get compose;
-  @override
-  $ValueSetExpansionCopyWith<$Res> get expansion;
-  @override
   $ElementCopyWith<$Res> get implicitRulesElement;
   @override
   $ElementCopyWith<$Res> get languageElement;
+  @override
+  $NarrativeCopyWith<$Res> get text;
   @override
   $ElementCopyWith<$Res> get urlElement;
   @override
@@ -14408,6 +14498,10 @@ abstract class _$ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
   $ElementCopyWith<$Res> get purposeElement;
   @override
   $ElementCopyWith<$Res> get copyrightElement;
+  @override
+  $ValueSetComposeCopyWith<$Res> get compose;
+  @override
+  $ValueSetExpansionCopyWith<$Res> get expansion;
 }
 
 class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
@@ -14424,43 +14518,43 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object url = freezed,
+    Object urlElement = freezed,
     Object identifier = freezed,
     Object version = freezed,
+    Object versionElement = freezed,
     Object name = freezed,
+    Object nameElement = freezed,
     Object title = freezed,
+    Object titleElement = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object experimental = freezed,
+    Object experimentalElement = freezed,
     Object date = freezed,
+    Object dateElement = freezed,
     Object publisher = freezed,
+    Object publisherElement = freezed,
     Object contact = freezed,
     Object description = freezed,
+    Object descriptionElement = freezed,
     Object useContext = freezed,
     Object jurisdiction = freezed,
     Object immutable = freezed,
+    Object immutableElement = freezed,
     Object purpose = freezed,
+    Object purposeElement = freezed,
     Object copyright = freezed,
+    Object copyrightElement = freezed,
     Object compose = freezed,
     Object expansion = freezed,
-    Object implicitRulesElement = freezed,
-    Object languageElement = freezed,
-    Object urlElement = freezed,
-    Object versionElement = freezed,
-    Object nameElement = freezed,
-    Object titleElement = freezed,
-    Object statusElement = freezed,
-    Object experimentalElement = freezed,
-    Object dateElement = freezed,
-    Object publisherElement = freezed,
-    Object descriptionElement = freezed,
-    Object immutableElement = freezed,
-    Object purposeElement = freezed,
-    Object copyrightElement = freezed,
   }) {
     return _then(_ValueSet(
       resourceType: resourceType == freezed
@@ -14471,7 +14565,13 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -14482,22 +14582,46 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as FhirUri,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
       version: version == freezed ? _value.version : version as String,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
       name: name == freezed ? _value.name : name as String,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed ? _value.status : status as Status,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      status: status == freezed ? _value.status : status as ValueSetStatus,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
       date: date == freezed ? _value.date : date as FhirDateTime,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
       description:
           description == freezed ? _value.description : description as Markdown,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
       useContext: useContext == freezed
           ? _value.useContext
           : useContext as List<UsageContext>,
@@ -14505,125 +14629,78 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
           ? _value.jurisdiction
           : jurisdiction as List<CodeableConcept>,
       immutable: immutable == freezed ? _value.immutable : immutable as Boolean,
+      immutableElement: immutableElement == freezed
+          ? _value.immutableElement
+          : immutableElement as Element,
       purpose: purpose == freezed ? _value.purpose : purpose as Markdown,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement as Element,
       copyright:
           copyright == freezed ? _value.copyright : copyright as Markdown,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
       compose: compose == freezed ? _value.compose : compose as ValueSetCompose,
       expansion: expansion == freezed
           ? _value.expansion
           : expansion as ValueSetExpansion,
-      implicitRulesElement: implicitRulesElement == freezed
-          ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      languageElement: languageElement == freezed
-          ? _value.languageElement
-          : languageElement as Element,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element,
-      versionElement: versionElement == freezed
-          ? _value.versionElement
-          : versionElement as Element,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      titleElement: titleElement == freezed
-          ? _value.titleElement
-          : titleElement as Element,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      experimentalElement: experimentalElement == freezed
-          ? _value.experimentalElement
-          : experimentalElement as Element,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element,
-      publisherElement: publisherElement == freezed
-          ? _value.publisherElement
-          : publisherElement as Element,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement as Element,
-      immutableElement: immutableElement == freezed
-          ? _value.immutableElement
-          : immutableElement as Element,
-      purposeElement: purposeElement == freezed
-          ? _value.purposeElement
-          : purposeElement as Element,
-      copyrightElement: copyrightElement == freezed
-          ? _value.copyrightElement
-          : copyrightElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_ValueSet implements _ValueSet {
-  const _$_ValueSet(
-      {@required
-      @JsonKey(required: true, defaultValue: 'ValueSet')
-          this.resourceType,
+class _$_ValueSet extends _ValueSet {
+  _$_ValueSet(
+      {@required @JsonKey(defaultValue: 'ValueSet') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.url,
+      @JsonKey(name: '_url') this.urlElement,
       this.identifier,
       this.version,
+      @JsonKey(name: '_version') this.versionElement,
       this.name,
+      @JsonKey(name: '_name') this.nameElement,
       this.title,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          this.status,
+      @JsonKey(name: '_title') this.titleElement,
+      @JsonKey(unknownEnumValue: ValueSetStatus.unknown) this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.experimental,
+      @JsonKey(name: '_experimental') this.experimentalElement,
       this.date,
+      @JsonKey(name: '_date') this.dateElement,
       this.publisher,
+      @JsonKey(name: '_publisher') this.publisherElement,
       this.contact,
       this.description,
+      @JsonKey(name: '_description') this.descriptionElement,
       this.useContext,
       this.jurisdiction,
       this.immutable,
+      @JsonKey(name: '_immutable') this.immutableElement,
       this.purpose,
+      @JsonKey(name: '_purpose') this.purposeElement,
       this.copyright,
+      @JsonKey(name: '_copyright') this.copyrightElement,
       this.compose,
-      this.expansion,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
-      @JsonKey(name: '_language')
-          this.languageElement,
-      @JsonKey(name: '_url')
-          this.urlElement,
-      @JsonKey(name: '_version')
-          this.versionElement,
-      @JsonKey(name: '_name')
-          this.nameElement,
-      @JsonKey(name: '_title')
-          this.titleElement,
-      @JsonKey(name: '_status')
-          this.statusElement,
-      @JsonKey(name: '_experimental')
-          this.experimentalElement,
-      @JsonKey(name: '_date')
-          this.dateElement,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
-      @JsonKey(name: '_immutable')
-          this.immutableElement,
-      @JsonKey(name: '_purpose')
-          this.purposeElement,
-      @JsonKey(name: '_copyright')
-          this.copyrightElement})
-      : assert(resourceType != null);
+      this.expansion})
+      : assert(resourceType != null),
+        super._();
 
   factory _$_ValueSet.fromJson(Map<String, dynamic> json) =>
       _$_$_ValueSetFromJson(json);
 
   @override
-  @JsonKey(required: true, defaultValue: 'ValueSet')
+  @JsonKey(defaultValue: 'ValueSet')
   final String resourceType;
   @override
   final Id id;
@@ -14632,7 +14709,13 @@ class _$_ValueSet implements _ValueSet {
   @override
   final FhirUri implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
   final Code language;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
   @override
   final Narrative text;
   @override
@@ -14645,26 +14728,53 @@ class _$_ValueSet implements _ValueSet {
   @override
   final FhirUri url;
   @override
+  @JsonKey(name: '_url')
+  final Element urlElement;
+  @override
   final List<Identifier> identifier;
   @override
   final String version;
   @override
+  @JsonKey(name: '_version')
+  final Element versionElement;
+  @override
   final String name;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
   @override
   final String title;
   @override
-  @JsonKey(unknownEnumValue: Status.unknown)
-  final Status status;
+  @JsonKey(name: '_title')
+  final Element titleElement;
+  @override
+  @JsonKey(unknownEnumValue: ValueSetStatus.unknown)
+  final ValueSetStatus status;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
   @override
   final Boolean experimental;
   @override
+  @JsonKey(name: '_experimental')
+  final Element experimentalElement;
+  @override
   final FhirDateTime date;
   @override
+  @JsonKey(name: '_date')
+  final Element dateElement;
+  @override
   final String publisher;
+  @override
+  @JsonKey(name: '_publisher')
+  final Element publisherElement;
   @override
   final List<ContactDetail> contact;
   @override
   final Markdown description;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
   @override
   final List<UsageContext> useContext;
   @override
@@ -14672,59 +14782,26 @@ class _$_ValueSet implements _ValueSet {
   @override
   final Boolean immutable;
   @override
-  final Markdown purpose;
-  @override
-  final Markdown copyright;
-  @override
-  final ValueSetCompose compose;
-  @override
-  final ValueSetExpansion expansion;
-  @override
-  @JsonKey(name: '_implicitRules')
-  final Element implicitRulesElement;
-  @override
-  @JsonKey(name: '_language')
-  final Element languageElement;
-  @override
-  @JsonKey(name: '_url')
-  final Element urlElement;
-  @override
-  @JsonKey(name: '_version')
-  final Element versionElement;
-  @override
-  @JsonKey(name: '_name')
-  final Element nameElement;
-  @override
-  @JsonKey(name: '_title')
-  final Element titleElement;
-  @override
-  @JsonKey(name: '_status')
-  final Element statusElement;
-  @override
-  @JsonKey(name: '_experimental')
-  final Element experimentalElement;
-  @override
-  @JsonKey(name: '_date')
-  final Element dateElement;
-  @override
-  @JsonKey(name: '_publisher')
-  final Element publisherElement;
-  @override
-  @JsonKey(name: '_description')
-  final Element descriptionElement;
-  @override
   @JsonKey(name: '_immutable')
   final Element immutableElement;
+  @override
+  final Markdown purpose;
   @override
   @JsonKey(name: '_purpose')
   final Element purposeElement;
   @override
+  final Markdown copyright;
+  @override
   @JsonKey(name: '_copyright')
   final Element copyrightElement;
+  @override
+  final ValueSetCompose compose;
+  @override
+  final ValueSetExpansion expansion;
 
   @override
   String toString() {
-    return 'ValueSet(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, immutable: $immutable, purpose: $purpose, copyright: $copyright, compose: $compose, expansion: $expansion, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, immutableElement: $immutableElement, purposeElement: $purposeElement, copyrightElement: $copyrightElement)';
+    return 'ValueSet(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, immutable: $immutable, immutableElement: $immutableElement, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, compose: $compose, expansion: $expansion)';
   }
 
   @override
@@ -14741,9 +14818,15 @@ class _$_ValueSet implements _ValueSet {
             (identical(other.implicitRules, implicitRules) ||
                 const DeepCollectionEquality()
                     .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
             (identical(other.language, language) ||
                 const DeepCollectionEquality()
                     .equals(other.language, language)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
             (identical(other.text, text) ||
                 const DeepCollectionEquality().equals(other.text, text)) &&
             (identical(other.contained, contained) ||
@@ -14757,64 +14840,58 @@ class _$_ValueSet implements _ValueSet {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
+            (identical(other.urlElement, urlElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.urlElement, urlElement)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
             (identical(other.version, version) ||
                 const DeepCollectionEquality()
                     .equals(other.version, version)) &&
+            (identical(other.versionElement, versionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.versionElement, versionElement)) &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
             (identical(other.title, title) ||
                 const DeepCollectionEquality().equals(other.title, title)) &&
+            (identical(other.titleElement, titleElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.titleElement, titleElement)) &&
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
             (identical(other.experimental, experimental) ||
                 const DeepCollectionEquality()
                     .equals(other.experimental, experimental)) &&
+            (identical(other.experimentalElement, experimentalElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.experimentalElement, experimentalElement)) &&
             (identical(other.date, date) ||
                 const DeepCollectionEquality().equals(other.date, date)) &&
-            (identical(other.publisher, publisher) ||
-                const DeepCollectionEquality()
-                    .equals(other.publisher, publisher)) &&
-            (identical(other.contact, contact) ||
-                const DeepCollectionEquality()
-                    .equals(other.contact, contact)) &&
-            (identical(other.description, description) ||
-                const DeepCollectionEquality()
-                    .equals(other.description, description)) &&
-            (identical(other.useContext, useContext) ||
-                const DeepCollectionEquality()
-                    .equals(other.useContext, useContext)) &&
-            (identical(other.jurisdiction, jurisdiction) ||
-                const DeepCollectionEquality()
-                    .equals(other.jurisdiction, jurisdiction)) &&
-            (identical(other.immutable, immutable) ||
-                const DeepCollectionEquality()
-                    .equals(other.immutable, immutable)) &&
-            (identical(other.purpose, purpose) ||
-                const DeepCollectionEquality()
-                    .equals(other.purpose, purpose)) &&
-            (identical(other.copyright, copyright) ||
-                const DeepCollectionEquality()
-                    .equals(other.copyright, copyright)) &&
-            (identical(other.compose, compose) ||
-                const DeepCollectionEquality().equals(other.compose, compose)) &&
-            (identical(other.expansion, expansion) || const DeepCollectionEquality().equals(other.expansion, expansion)) &&
-            (identical(other.implicitRulesElement, implicitRulesElement) || const DeepCollectionEquality().equals(other.implicitRulesElement, implicitRulesElement)) &&
-            (identical(other.languageElement, languageElement) || const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
-            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
-            (identical(other.versionElement, versionElement) || const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
-            (identical(other.nameElement, nameElement) || const DeepCollectionEquality().equals(other.nameElement, nameElement)) &&
-            (identical(other.titleElement, titleElement) || const DeepCollectionEquality().equals(other.titleElement, titleElement)) &&
-            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
-            (identical(other.experimentalElement, experimentalElement) || const DeepCollectionEquality().equals(other.experimentalElement, experimentalElement)) &&
-            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
+            (identical(other.dateElement, dateElement) ||
+                const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
+            (identical(other.publisher, publisher) || const DeepCollectionEquality().equals(other.publisher, publisher)) &&
             (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
+            (identical(other.contact, contact) || const DeepCollectionEquality().equals(other.contact, contact)) &&
+            (identical(other.description, description) || const DeepCollectionEquality().equals(other.description, description)) &&
             (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.useContext, useContext) || const DeepCollectionEquality().equals(other.useContext, useContext)) &&
+            (identical(other.jurisdiction, jurisdiction) || const DeepCollectionEquality().equals(other.jurisdiction, jurisdiction)) &&
+            (identical(other.immutable, immutable) || const DeepCollectionEquality().equals(other.immutable, immutable)) &&
             (identical(other.immutableElement, immutableElement) || const DeepCollectionEquality().equals(other.immutableElement, immutableElement)) &&
+            (identical(other.purpose, purpose) || const DeepCollectionEquality().equals(other.purpose, purpose)) &&
             (identical(other.purposeElement, purposeElement) || const DeepCollectionEquality().equals(other.purposeElement, purposeElement)) &&
-            (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)));
+            (identical(other.copyright, copyright) || const DeepCollectionEquality().equals(other.copyright, copyright)) &&
+            (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)) &&
+            (identical(other.compose, compose) || const DeepCollectionEquality().equals(other.compose, compose)) &&
+            (identical(other.expansion, expansion) || const DeepCollectionEquality().equals(other.expansion, expansion)));
   }
 
   @override
@@ -14824,43 +14901,43 @@ class _$_ValueSet implements _ValueSet {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
       const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(url) ^
+      const DeepCollectionEquality().hash(urlElement) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(version) ^
+      const DeepCollectionEquality().hash(versionElement) ^
       const DeepCollectionEquality().hash(name) ^
+      const DeepCollectionEquality().hash(nameElement) ^
       const DeepCollectionEquality().hash(title) ^
+      const DeepCollectionEquality().hash(titleElement) ^
       const DeepCollectionEquality().hash(status) ^
+      const DeepCollectionEquality().hash(statusElement) ^
       const DeepCollectionEquality().hash(experimental) ^
+      const DeepCollectionEquality().hash(experimentalElement) ^
       const DeepCollectionEquality().hash(date) ^
+      const DeepCollectionEquality().hash(dateElement) ^
       const DeepCollectionEquality().hash(publisher) ^
+      const DeepCollectionEquality().hash(publisherElement) ^
       const DeepCollectionEquality().hash(contact) ^
       const DeepCollectionEquality().hash(description) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(useContext) ^
       const DeepCollectionEquality().hash(jurisdiction) ^
       const DeepCollectionEquality().hash(immutable) ^
-      const DeepCollectionEquality().hash(purpose) ^
-      const DeepCollectionEquality().hash(copyright) ^
-      const DeepCollectionEquality().hash(compose) ^
-      const DeepCollectionEquality().hash(expansion) ^
-      const DeepCollectionEquality().hash(implicitRulesElement) ^
-      const DeepCollectionEquality().hash(languageElement) ^
-      const DeepCollectionEquality().hash(urlElement) ^
-      const DeepCollectionEquality().hash(versionElement) ^
-      const DeepCollectionEquality().hash(nameElement) ^
-      const DeepCollectionEquality().hash(titleElement) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(experimentalElement) ^
-      const DeepCollectionEquality().hash(dateElement) ^
-      const DeepCollectionEquality().hash(publisherElement) ^
-      const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(immutableElement) ^
+      const DeepCollectionEquality().hash(purpose) ^
       const DeepCollectionEquality().hash(purposeElement) ^
-      const DeepCollectionEquality().hash(copyrightElement);
+      const DeepCollectionEquality().hash(copyright) ^
+      const DeepCollectionEquality().hash(copyrightElement) ^
+      const DeepCollectionEquality().hash(compose) ^
+      const DeepCollectionEquality().hash(expansion);
 
   @override
   _$ValueSetCopyWith<_ValueSet> get copyWith =>
@@ -14872,72 +14949,55 @@ class _$_ValueSet implements _ValueSet {
   }
 }
 
-abstract class _ValueSet implements ValueSet {
-  const factory _ValueSet(
-      {@required
-      @JsonKey(required: true, defaultValue: 'ValueSet')
-          String resourceType,
+abstract class _ValueSet extends ValueSet {
+  _ValueSet._() : super._();
+  factory _ValueSet(
+      {@required @JsonKey(defaultValue: 'ValueSet') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri url,
+      @JsonKey(name: '_url') Element urlElement,
       List<Identifier> identifier,
       String version,
+      @JsonKey(name: '_version') Element versionElement,
       String name,
+      @JsonKey(name: '_name') Element nameElement,
       String title,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
+      @JsonKey(name: '_title') Element titleElement,
+      @JsonKey(unknownEnumValue: ValueSetStatus.unknown) ValueSetStatus status,
+      @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
+      @JsonKey(name: '_experimental') Element experimentalElement,
       FhirDateTime date,
+      @JsonKey(name: '_date') Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher') Element publisherElement,
       List<ContactDetail> contact,
       Markdown description,
+      @JsonKey(name: '_description') Element descriptionElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Boolean immutable,
+      @JsonKey(name: '_immutable') Element immutableElement,
       Markdown purpose,
+      @JsonKey(name: '_purpose') Element purposeElement,
       Markdown copyright,
+      @JsonKey(name: '_copyright') Element copyrightElement,
       ValueSetCompose compose,
-      ValueSetExpansion expansion,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      @JsonKey(name: '_language')
-          Element languageElement,
-      @JsonKey(name: '_url')
-          Element urlElement,
-      @JsonKey(name: '_version')
-          Element versionElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @JsonKey(name: '_immutable')
-          Element immutableElement,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
-      @JsonKey(name: '_copyright')
-          Element copyrightElement}) = _$_ValueSet;
+      ValueSetExpansion expansion}) = _$_ValueSet;
 
   factory _ValueSet.fromJson(Map<String, dynamic> json) = _$_ValueSet.fromJson;
 
   @override
-  @JsonKey(required: true, defaultValue: 'ValueSet')
+  @JsonKey(defaultValue: 'ValueSet')
   String get resourceType;
   @override
   Id get id;
@@ -14946,7 +15006,13 @@ abstract class _ValueSet implements ValueSet {
   @override
   FhirUri get implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
   Code get language;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
   @override
   Narrative get text;
   @override
@@ -14959,26 +15025,53 @@ abstract class _ValueSet implements ValueSet {
   @override
   FhirUri get url;
   @override
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @override
   List<Identifier> get identifier;
   @override
   String get version;
   @override
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @override
   String get name;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
   @override
   String get title;
   @override
-  @JsonKey(unknownEnumValue: Status.unknown)
-  Status get status;
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @override
+  @JsonKey(unknownEnumValue: ValueSetStatus.unknown)
+  ValueSetStatus get status;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
   @override
   Boolean get experimental;
   @override
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  @override
   FhirDateTime get date;
   @override
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @override
   String get publisher;
+  @override
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
   @override
   List<ContactDetail> get contact;
   @override
   Markdown get description;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
   @override
   List<UsageContext> get useContext;
   @override
@@ -14986,55 +15079,22 @@ abstract class _ValueSet implements ValueSet {
   @override
   Boolean get immutable;
   @override
-  Markdown get purpose;
-  @override
-  Markdown get copyright;
-  @override
-  ValueSetCompose get compose;
-  @override
-  ValueSetExpansion get expansion;
-  @override
-  @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  @override
-  @JsonKey(name: '_language')
-  Element get languageElement;
-  @override
-  @JsonKey(name: '_url')
-  Element get urlElement;
-  @override
-  @JsonKey(name: '_version')
-  Element get versionElement;
-  @override
-  @JsonKey(name: '_name')
-  Element get nameElement;
-  @override
-  @JsonKey(name: '_title')
-  Element get titleElement;
-  @override
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @override
-  @JsonKey(name: '_experimental')
-  Element get experimentalElement;
-  @override
-  @JsonKey(name: '_date')
-  Element get dateElement;
-  @override
-  @JsonKey(name: '_publisher')
-  Element get publisherElement;
-  @override
-  @JsonKey(name: '_description')
-  Element get descriptionElement;
-  @override
   @JsonKey(name: '_immutable')
   Element get immutableElement;
+  @override
+  Markdown get purpose;
   @override
   @JsonKey(name: '_purpose')
   Element get purposeElement;
   @override
+  Markdown get copyright;
+  @override
   @JsonKey(name: '_copyright')
   Element get copyrightElement;
+  @override
+  ValueSetCompose get compose;
+  @override
+  ValueSetExpansion get expansion;
   @override
   _$ValueSetCopyWith<_ValueSet> get copyWith;
 }
@@ -15051,21 +15111,21 @@ class _$ValueSetComposeTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Date lockedDate,
-      Boolean inactive,
-      @required @JsonKey(required: true) List<ValueSetInclude> include,
-      List<ValueSetInclude> exclude,
       @JsonKey(name: '_lockedDate') Element lockedDateElement,
-      @JsonKey(name: '_inactive') Element inactiveElement}) {
+      Boolean inactive,
+      @JsonKey(name: '_inactive') Element inactiveElement,
+      @required List<ValueSetInclude> include,
+      List<ValueSetInclude> exclude}) {
     return _ValueSetCompose(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       lockedDate: lockedDate,
+      lockedDateElement: lockedDateElement,
       inactive: inactive,
+      inactiveElement: inactiveElement,
       include: include,
       exclude: exclude,
-      lockedDateElement: lockedDateElement,
-      inactiveElement: inactiveElement,
     );
   }
 }
@@ -15079,14 +15139,13 @@ mixin _$ValueSetCompose {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   Date get lockedDate;
-  Boolean get inactive;
-  @JsonKey(required: true)
-  List<ValueSetInclude> get include;
-  List<ValueSetInclude> get exclude;
   @JsonKey(name: '_lockedDate')
   Element get lockedDateElement;
+  Boolean get inactive;
   @JsonKey(name: '_inactive')
   Element get inactiveElement;
+  List<ValueSetInclude> get include;
+  List<ValueSetInclude> get exclude;
 
   Map<String, dynamic> toJson();
   $ValueSetComposeCopyWith<ValueSetCompose> get copyWith;
@@ -15101,11 +15160,11 @@ abstract class $ValueSetComposeCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Date lockedDate,
-      Boolean inactive,
-      @JsonKey(required: true) List<ValueSetInclude> include,
-      List<ValueSetInclude> exclude,
       @JsonKey(name: '_lockedDate') Element lockedDateElement,
-      @JsonKey(name: '_inactive') Element inactiveElement});
+      Boolean inactive,
+      @JsonKey(name: '_inactive') Element inactiveElement,
+      List<ValueSetInclude> include,
+      List<ValueSetInclude> exclude});
 
   $ElementCopyWith<$Res> get lockedDateElement;
   $ElementCopyWith<$Res> get inactiveElement;
@@ -15125,11 +15184,11 @@ class _$ValueSetComposeCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object lockedDate = freezed,
+    Object lockedDateElement = freezed,
     Object inactive = freezed,
+    Object inactiveElement = freezed,
     Object include = freezed,
     Object exclude = freezed,
-    Object lockedDateElement = freezed,
-    Object inactiveElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -15141,19 +15200,19 @@ class _$ValueSetComposeCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension>,
       lockedDate:
           lockedDate == freezed ? _value.lockedDate : lockedDate as Date,
+      lockedDateElement: lockedDateElement == freezed
+          ? _value.lockedDateElement
+          : lockedDateElement as Element,
       inactive: inactive == freezed ? _value.inactive : inactive as Boolean,
+      inactiveElement: inactiveElement == freezed
+          ? _value.inactiveElement
+          : inactiveElement as Element,
       include: include == freezed
           ? _value.include
           : include as List<ValueSetInclude>,
       exclude: exclude == freezed
           ? _value.exclude
           : exclude as List<ValueSetInclude>,
-      lockedDateElement: lockedDateElement == freezed
-          ? _value.lockedDateElement
-          : lockedDateElement as Element,
-      inactiveElement: inactiveElement == freezed
-          ? _value.inactiveElement
-          : inactiveElement as Element,
     ));
   }
 
@@ -15189,11 +15248,11 @@ abstract class _$ValueSetComposeCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Date lockedDate,
-      Boolean inactive,
-      @JsonKey(required: true) List<ValueSetInclude> include,
-      List<ValueSetInclude> exclude,
       @JsonKey(name: '_lockedDate') Element lockedDateElement,
-      @JsonKey(name: '_inactive') Element inactiveElement});
+      Boolean inactive,
+      @JsonKey(name: '_inactive') Element inactiveElement,
+      List<ValueSetInclude> include,
+      List<ValueSetInclude> exclude});
 
   @override
   $ElementCopyWith<$Res> get lockedDateElement;
@@ -15217,11 +15276,11 @@ class __$ValueSetComposeCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object lockedDate = freezed,
+    Object lockedDateElement = freezed,
     Object inactive = freezed,
+    Object inactiveElement = freezed,
     Object include = freezed,
     Object exclude = freezed,
-    Object lockedDateElement = freezed,
-    Object inactiveElement = freezed,
   }) {
     return _then(_ValueSetCompose(
       id: id == freezed ? _value.id : id as String,
@@ -15233,36 +15292,37 @@ class __$ValueSetComposeCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension>,
       lockedDate:
           lockedDate == freezed ? _value.lockedDate : lockedDate as Date,
+      lockedDateElement: lockedDateElement == freezed
+          ? _value.lockedDateElement
+          : lockedDateElement as Element,
       inactive: inactive == freezed ? _value.inactive : inactive as Boolean,
+      inactiveElement: inactiveElement == freezed
+          ? _value.inactiveElement
+          : inactiveElement as Element,
       include: include == freezed
           ? _value.include
           : include as List<ValueSetInclude>,
       exclude: exclude == freezed
           ? _value.exclude
           : exclude as List<ValueSetInclude>,
-      lockedDateElement: lockedDateElement == freezed
-          ? _value.lockedDateElement
-          : lockedDateElement as Element,
-      inactiveElement: inactiveElement == freezed
-          ? _value.inactiveElement
-          : inactiveElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_ValueSetCompose implements _ValueSetCompose {
-  const _$_ValueSetCompose(
+class _$_ValueSetCompose extends _ValueSetCompose {
+  _$_ValueSetCompose(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.lockedDate,
-      this.inactive,
-      @required @JsonKey(required: true) this.include,
-      this.exclude,
       @JsonKey(name: '_lockedDate') this.lockedDateElement,
-      @JsonKey(name: '_inactive') this.inactiveElement})
-      : assert(include != null);
+      this.inactive,
+      @JsonKey(name: '_inactive') this.inactiveElement,
+      @required this.include,
+      this.exclude})
+      : assert(include != null),
+        super._();
 
   factory _$_ValueSetCompose.fromJson(Map<String, dynamic> json) =>
       _$_$_ValueSetComposeFromJson(json);
@@ -15277,22 +15337,21 @@ class _$_ValueSetCompose implements _ValueSetCompose {
   @override
   final Date lockedDate;
   @override
-  final Boolean inactive;
-  @override
-  @JsonKey(required: true)
-  final List<ValueSetInclude> include;
-  @override
-  final List<ValueSetInclude> exclude;
-  @override
   @JsonKey(name: '_lockedDate')
   final Element lockedDateElement;
   @override
+  final Boolean inactive;
+  @override
   @JsonKey(name: '_inactive')
   final Element inactiveElement;
+  @override
+  final List<ValueSetInclude> include;
+  @override
+  final List<ValueSetInclude> exclude;
 
   @override
   String toString() {
-    return 'ValueSetCompose(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, lockedDate: $lockedDate, inactive: $inactive, include: $include, exclude: $exclude, lockedDateElement: $lockedDateElement, inactiveElement: $inactiveElement)';
+    return 'ValueSetCompose(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, lockedDate: $lockedDate, lockedDateElement: $lockedDateElement, inactive: $inactive, inactiveElement: $inactiveElement, include: $include, exclude: $exclude)';
   }
 
   @override
@@ -15310,21 +15369,20 @@ class _$_ValueSetCompose implements _ValueSetCompose {
             (identical(other.lockedDate, lockedDate) ||
                 const DeepCollectionEquality()
                     .equals(other.lockedDate, lockedDate)) &&
+            (identical(other.lockedDateElement, lockedDateElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.lockedDateElement, lockedDateElement)) &&
             (identical(other.inactive, inactive) ||
                 const DeepCollectionEquality()
                     .equals(other.inactive, inactive)) &&
+            (identical(other.inactiveElement, inactiveElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.inactiveElement, inactiveElement)) &&
             (identical(other.include, include) ||
                 const DeepCollectionEquality()
                     .equals(other.include, include)) &&
             (identical(other.exclude, exclude) ||
-                const DeepCollectionEquality()
-                    .equals(other.exclude, exclude)) &&
-            (identical(other.lockedDateElement, lockedDateElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.lockedDateElement, lockedDateElement)) &&
-            (identical(other.inactiveElement, inactiveElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.inactiveElement, inactiveElement)));
+                const DeepCollectionEquality().equals(other.exclude, exclude)));
   }
 
   @override
@@ -15334,11 +15392,11 @@ class _$_ValueSetCompose implements _ValueSetCompose {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(lockedDate) ^
-      const DeepCollectionEquality().hash(inactive) ^
-      const DeepCollectionEquality().hash(include) ^
-      const DeepCollectionEquality().hash(exclude) ^
       const DeepCollectionEquality().hash(lockedDateElement) ^
-      const DeepCollectionEquality().hash(inactiveElement);
+      const DeepCollectionEquality().hash(inactive) ^
+      const DeepCollectionEquality().hash(inactiveElement) ^
+      const DeepCollectionEquality().hash(include) ^
+      const DeepCollectionEquality().hash(exclude);
 
   @override
   _$ValueSetComposeCopyWith<_ValueSetCompose> get copyWith =>
@@ -15350,18 +15408,18 @@ class _$_ValueSetCompose implements _ValueSetCompose {
   }
 }
 
-abstract class _ValueSetCompose implements ValueSetCompose {
-  const factory _ValueSetCompose(
-          {String id,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          List<FhirExtension> modifierExtension,
-          Date lockedDate,
-          Boolean inactive,
-          @required @JsonKey(required: true) List<ValueSetInclude> include,
-          List<ValueSetInclude> exclude,
-          @JsonKey(name: '_lockedDate') Element lockedDateElement,
-          @JsonKey(name: '_inactive') Element inactiveElement}) =
-      _$_ValueSetCompose;
+abstract class _ValueSetCompose extends ValueSetCompose {
+  _ValueSetCompose._() : super._();
+  factory _ValueSetCompose(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Date lockedDate,
+      @JsonKey(name: '_lockedDate') Element lockedDateElement,
+      Boolean inactive,
+      @JsonKey(name: '_inactive') Element inactiveElement,
+      @required List<ValueSetInclude> include,
+      List<ValueSetInclude> exclude}) = _$_ValueSetCompose;
 
   factory _ValueSetCompose.fromJson(Map<String, dynamic> json) =
       _$_ValueSetCompose.fromJson;
@@ -15376,18 +15434,17 @@ abstract class _ValueSetCompose implements ValueSetCompose {
   @override
   Date get lockedDate;
   @override
-  Boolean get inactive;
-  @override
-  @JsonKey(required: true)
-  List<ValueSetInclude> get include;
-  @override
-  List<ValueSetInclude> get exclude;
-  @override
   @JsonKey(name: '_lockedDate')
   Element get lockedDateElement;
   @override
+  Boolean get inactive;
+  @override
   @JsonKey(name: '_inactive')
   Element get inactiveElement;
+  @override
+  List<ValueSetInclude> get include;
+  @override
+  List<ValueSetInclude> get exclude;
   @override
   _$ValueSetComposeCopyWith<_ValueSetCompose> get copyWith;
 }
@@ -15404,23 +15461,23 @@ class _$ValueSetIncludeTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri system,
+      @JsonKey(name: '_system') Element systemElement,
       String version,
+      @JsonKey(name: '_version') Element versionElement,
       List<ValueSetConcept> concept,
       List<ValueSetFilter> filter,
-      List<Canonical> valueSet,
-      @JsonKey(name: '_system') Element systemElement,
-      @JsonKey(name: '_version') Element versionElement}) {
+      List<Canonical> valueSet}) {
     return _ValueSetInclude(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       system: system,
+      systemElement: systemElement,
       version: version,
+      versionElement: versionElement,
       concept: concept,
       filter: filter,
       valueSet: valueSet,
-      systemElement: systemElement,
-      versionElement: versionElement,
     );
   }
 }
@@ -15434,14 +15491,14 @@ mixin _$ValueSetInclude {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   FhirUri get system;
+  @JsonKey(name: '_system')
+  Element get systemElement;
   String get version;
+  @JsonKey(name: '_version')
+  Element get versionElement;
   List<ValueSetConcept> get concept;
   List<ValueSetFilter> get filter;
   List<Canonical> get valueSet;
-  @JsonKey(name: '_system')
-  Element get systemElement;
-  @JsonKey(name: '_version')
-  Element get versionElement;
 
   Map<String, dynamic> toJson();
   $ValueSetIncludeCopyWith<ValueSetInclude> get copyWith;
@@ -15456,12 +15513,12 @@ abstract class $ValueSetIncludeCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri system,
+      @JsonKey(name: '_system') Element systemElement,
       String version,
+      @JsonKey(name: '_version') Element versionElement,
       List<ValueSetConcept> concept,
       List<ValueSetFilter> filter,
-      List<Canonical> valueSet,
-      @JsonKey(name: '_system') Element systemElement,
-      @JsonKey(name: '_version') Element versionElement});
+      List<Canonical> valueSet});
 
   $ElementCopyWith<$Res> get systemElement;
   $ElementCopyWith<$Res> get versionElement;
@@ -15481,12 +15538,12 @@ class _$ValueSetIncludeCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object system = freezed,
+    Object systemElement = freezed,
     Object version = freezed,
+    Object versionElement = freezed,
     Object concept = freezed,
     Object filter = freezed,
     Object valueSet = freezed,
-    Object systemElement = freezed,
-    Object versionElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -15497,7 +15554,13 @@ class _$ValueSetIncludeCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       system: system == freezed ? _value.system : system as FhirUri,
+      systemElement: systemElement == freezed
+          ? _value.systemElement
+          : systemElement as Element,
       version: version == freezed ? _value.version : version as String,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
       concept: concept == freezed
           ? _value.concept
           : concept as List<ValueSetConcept>,
@@ -15505,12 +15568,6 @@ class _$ValueSetIncludeCopyWithImpl<$Res>
           filter == freezed ? _value.filter : filter as List<ValueSetFilter>,
       valueSet:
           valueSet == freezed ? _value.valueSet : valueSet as List<Canonical>,
-      systemElement: systemElement == freezed
-          ? _value.systemElement
-          : systemElement as Element,
-      versionElement: versionElement == freezed
-          ? _value.versionElement
-          : versionElement as Element,
     ));
   }
 
@@ -15546,12 +15603,12 @@ abstract class _$ValueSetIncludeCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri system,
+      @JsonKey(name: '_system') Element systemElement,
       String version,
+      @JsonKey(name: '_version') Element versionElement,
       List<ValueSetConcept> concept,
       List<ValueSetFilter> filter,
-      List<Canonical> valueSet,
-      @JsonKey(name: '_system') Element systemElement,
-      @JsonKey(name: '_version') Element versionElement});
+      List<Canonical> valueSet});
 
   @override
   $ElementCopyWith<$Res> get systemElement;
@@ -15575,12 +15632,12 @@ class __$ValueSetIncludeCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object system = freezed,
+    Object systemElement = freezed,
     Object version = freezed,
+    Object versionElement = freezed,
     Object concept = freezed,
     Object filter = freezed,
     Object valueSet = freezed,
-    Object systemElement = freezed,
-    Object versionElement = freezed,
   }) {
     return _then(_ValueSetInclude(
       id: id == freezed ? _value.id : id as String,
@@ -15591,7 +15648,13 @@ class __$ValueSetIncludeCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       system: system == freezed ? _value.system : system as FhirUri,
+      systemElement: systemElement == freezed
+          ? _value.systemElement
+          : systemElement as Element,
       version: version == freezed ? _value.version : version as String,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
       concept: concept == freezed
           ? _value.concept
           : concept as List<ValueSetConcept>,
@@ -15599,29 +15662,24 @@ class __$ValueSetIncludeCopyWithImpl<$Res>
           filter == freezed ? _value.filter : filter as List<ValueSetFilter>,
       valueSet:
           valueSet == freezed ? _value.valueSet : valueSet as List<Canonical>,
-      systemElement: systemElement == freezed
-          ? _value.systemElement
-          : systemElement as Element,
-      versionElement: versionElement == freezed
-          ? _value.versionElement
-          : versionElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_ValueSetInclude implements _ValueSetInclude {
-  const _$_ValueSetInclude(
+class _$_ValueSetInclude extends _ValueSetInclude {
+  _$_ValueSetInclude(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.system,
+      @JsonKey(name: '_system') this.systemElement,
       this.version,
+      @JsonKey(name: '_version') this.versionElement,
       this.concept,
       this.filter,
-      this.valueSet,
-      @JsonKey(name: '_system') this.systemElement,
-      @JsonKey(name: '_version') this.versionElement});
+      this.valueSet})
+      : super._();
 
   factory _$_ValueSetInclude.fromJson(Map<String, dynamic> json) =>
       _$_$_ValueSetIncludeFromJson(json);
@@ -15636,23 +15694,23 @@ class _$_ValueSetInclude implements _ValueSetInclude {
   @override
   final FhirUri system;
   @override
+  @JsonKey(name: '_system')
+  final Element systemElement;
+  @override
   final String version;
+  @override
+  @JsonKey(name: '_version')
+  final Element versionElement;
   @override
   final List<ValueSetConcept> concept;
   @override
   final List<ValueSetFilter> filter;
   @override
   final List<Canonical> valueSet;
-  @override
-  @JsonKey(name: '_system')
-  final Element systemElement;
-  @override
-  @JsonKey(name: '_version')
-  final Element versionElement;
 
   @override
   String toString() {
-    return 'ValueSetInclude(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, system: $system, version: $version, concept: $concept, filter: $filter, valueSet: $valueSet, systemElement: $systemElement, versionElement: $versionElement)';
+    return 'ValueSetInclude(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, system: $system, systemElement: $systemElement, version: $version, versionElement: $versionElement, concept: $concept, filter: $filter, valueSet: $valueSet)';
   }
 
   @override
@@ -15669,9 +15727,15 @@ class _$_ValueSetInclude implements _ValueSetInclude {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.system, system) ||
                 const DeepCollectionEquality().equals(other.system, system)) &&
+            (identical(other.systemElement, systemElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.systemElement, systemElement)) &&
             (identical(other.version, version) ||
                 const DeepCollectionEquality()
                     .equals(other.version, version)) &&
+            (identical(other.versionElement, versionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.versionElement, versionElement)) &&
             (identical(other.concept, concept) ||
                 const DeepCollectionEquality()
                     .equals(other.concept, concept)) &&
@@ -15679,13 +15743,7 @@ class _$_ValueSetInclude implements _ValueSetInclude {
                 const DeepCollectionEquality().equals(other.filter, filter)) &&
             (identical(other.valueSet, valueSet) ||
                 const DeepCollectionEquality()
-                    .equals(other.valueSet, valueSet)) &&
-            (identical(other.systemElement, systemElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.systemElement, systemElement)) &&
-            (identical(other.versionElement, versionElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.versionElement, versionElement)));
+                    .equals(other.valueSet, valueSet)));
   }
 
   @override
@@ -15695,12 +15753,12 @@ class _$_ValueSetInclude implements _ValueSetInclude {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(system) ^
+      const DeepCollectionEquality().hash(systemElement) ^
       const DeepCollectionEquality().hash(version) ^
+      const DeepCollectionEquality().hash(versionElement) ^
       const DeepCollectionEquality().hash(concept) ^
       const DeepCollectionEquality().hash(filter) ^
-      const DeepCollectionEquality().hash(valueSet) ^
-      const DeepCollectionEquality().hash(systemElement) ^
-      const DeepCollectionEquality().hash(versionElement);
+      const DeepCollectionEquality().hash(valueSet);
 
   @override
   _$ValueSetIncludeCopyWith<_ValueSetInclude> get copyWith =>
@@ -15712,18 +15770,19 @@ class _$_ValueSetInclude implements _ValueSetInclude {
   }
 }
 
-abstract class _ValueSetInclude implements ValueSetInclude {
-  const factory _ValueSetInclude(
+abstract class _ValueSetInclude extends ValueSetInclude {
+  _ValueSetInclude._() : super._();
+  factory _ValueSetInclude(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri system,
+      @JsonKey(name: '_system') Element systemElement,
       String version,
+      @JsonKey(name: '_version') Element versionElement,
       List<ValueSetConcept> concept,
       List<ValueSetFilter> filter,
-      List<Canonical> valueSet,
-      @JsonKey(name: '_system') Element systemElement,
-      @JsonKey(name: '_version') Element versionElement}) = _$_ValueSetInclude;
+      List<Canonical> valueSet}) = _$_ValueSetInclude;
 
   factory _ValueSetInclude.fromJson(Map<String, dynamic> json) =
       _$_ValueSetInclude.fromJson;
@@ -15738,19 +15797,19 @@ abstract class _ValueSetInclude implements ValueSetInclude {
   @override
   FhirUri get system;
   @override
+  @JsonKey(name: '_system')
+  Element get systemElement;
+  @override
   String get version;
+  @override
+  @JsonKey(name: '_version')
+  Element get versionElement;
   @override
   List<ValueSetConcept> get concept;
   @override
   List<ValueSetFilter> get filter;
   @override
   List<Canonical> get valueSet;
-  @override
-  @JsonKey(name: '_system')
-  Element get systemElement;
-  @override
-  @JsonKey(name: '_version')
-  Element get versionElement;
   @override
   _$ValueSetIncludeCopyWith<_ValueSetInclude> get copyWith;
 }
@@ -15767,19 +15826,19 @@ class _$ValueSetConceptTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code code,
-      String display,
-      List<ValueSetDesignation> designation,
       @JsonKey(name: '_code') Element codeElement,
-      @JsonKey(name: '_display') Element displayElement}) {
+      String display,
+      @JsonKey(name: '_display') Element displayElement,
+      List<ValueSetDesignation> designation}) {
     return _ValueSetConcept(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       code: code,
-      display: display,
-      designation: designation,
       codeElement: codeElement,
+      display: display,
       displayElement: displayElement,
+      designation: designation,
     );
   }
 }
@@ -15793,12 +15852,12 @@ mixin _$ValueSetConcept {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   Code get code;
-  String get display;
-  List<ValueSetDesignation> get designation;
   @JsonKey(name: '_code')
   Element get codeElement;
+  String get display;
   @JsonKey(name: '_display')
   Element get displayElement;
+  List<ValueSetDesignation> get designation;
 
   Map<String, dynamic> toJson();
   $ValueSetConceptCopyWith<ValueSetConcept> get copyWith;
@@ -15813,10 +15872,10 @@ abstract class $ValueSetConceptCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code code,
-      String display,
-      List<ValueSetDesignation> designation,
       @JsonKey(name: '_code') Element codeElement,
-      @JsonKey(name: '_display') Element displayElement});
+      String display,
+      @JsonKey(name: '_display') Element displayElement,
+      List<ValueSetDesignation> designation});
 
   $ElementCopyWith<$Res> get codeElement;
   $ElementCopyWith<$Res> get displayElement;
@@ -15836,10 +15895,10 @@ class _$ValueSetConceptCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object code = freezed,
-    Object display = freezed,
-    Object designation = freezed,
     Object codeElement = freezed,
+    Object display = freezed,
     Object displayElement = freezed,
+    Object designation = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -15850,15 +15909,15 @@ class _$ValueSetConceptCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       code: code == freezed ? _value.code : code as Code,
-      display: display == freezed ? _value.display : display as String,
-      designation: designation == freezed
-          ? _value.designation
-          : designation as List<ValueSetDesignation>,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
+      display: display == freezed ? _value.display : display as String,
       displayElement: displayElement == freezed
           ? _value.displayElement
           : displayElement as Element,
+      designation: designation == freezed
+          ? _value.designation
+          : designation as List<ValueSetDesignation>,
     ));
   }
 
@@ -15894,10 +15953,10 @@ abstract class _$ValueSetConceptCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code code,
-      String display,
-      List<ValueSetDesignation> designation,
       @JsonKey(name: '_code') Element codeElement,
-      @JsonKey(name: '_display') Element displayElement});
+      String display,
+      @JsonKey(name: '_display') Element displayElement,
+      List<ValueSetDesignation> designation});
 
   @override
   $ElementCopyWith<$Res> get codeElement;
@@ -15921,10 +15980,10 @@ class __$ValueSetConceptCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object code = freezed,
-    Object display = freezed,
-    Object designation = freezed,
     Object codeElement = freezed,
+    Object display = freezed,
     Object displayElement = freezed,
+    Object designation = freezed,
   }) {
     return _then(_ValueSetConcept(
       id: id == freezed ? _value.id : id as String,
@@ -15935,30 +15994,31 @@ class __$ValueSetConceptCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       code: code == freezed ? _value.code : code as Code,
-      display: display == freezed ? _value.display : display as String,
-      designation: designation == freezed
-          ? _value.designation
-          : designation as List<ValueSetDesignation>,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
+      display: display == freezed ? _value.display : display as String,
       displayElement: displayElement == freezed
           ? _value.displayElement
           : displayElement as Element,
+      designation: designation == freezed
+          ? _value.designation
+          : designation as List<ValueSetDesignation>,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_ValueSetConcept implements _ValueSetConcept {
-  const _$_ValueSetConcept(
+class _$_ValueSetConcept extends _ValueSetConcept {
+  _$_ValueSetConcept(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.code,
-      this.display,
-      this.designation,
       @JsonKey(name: '_code') this.codeElement,
-      @JsonKey(name: '_display') this.displayElement});
+      this.display,
+      @JsonKey(name: '_display') this.displayElement,
+      this.designation})
+      : super._();
 
   factory _$_ValueSetConcept.fromJson(Map<String, dynamic> json) =>
       _$_$_ValueSetConceptFromJson(json);
@@ -15973,19 +16033,19 @@ class _$_ValueSetConcept implements _ValueSetConcept {
   @override
   final Code code;
   @override
-  final String display;
-  @override
-  final List<ValueSetDesignation> designation;
-  @override
   @JsonKey(name: '_code')
   final Element codeElement;
   @override
+  final String display;
+  @override
   @JsonKey(name: '_display')
   final Element displayElement;
+  @override
+  final List<ValueSetDesignation> designation;
 
   @override
   String toString() {
-    return 'ValueSetConcept(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, display: $display, designation: $designation, codeElement: $codeElement, displayElement: $displayElement)';
+    return 'ValueSetConcept(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, codeElement: $codeElement, display: $display, displayElement: $displayElement, designation: $designation)';
   }
 
   @override
@@ -16002,18 +16062,18 @@ class _$_ValueSetConcept implements _ValueSetConcept {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.code, code) ||
                 const DeepCollectionEquality().equals(other.code, code)) &&
-            (identical(other.display, display) ||
-                const DeepCollectionEquality()
-                    .equals(other.display, display)) &&
-            (identical(other.designation, designation) ||
-                const DeepCollectionEquality()
-                    .equals(other.designation, designation)) &&
             (identical(other.codeElement, codeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.codeElement, codeElement)) &&
+            (identical(other.display, display) ||
+                const DeepCollectionEquality()
+                    .equals(other.display, display)) &&
             (identical(other.displayElement, displayElement) ||
                 const DeepCollectionEquality()
-                    .equals(other.displayElement, displayElement)));
+                    .equals(other.displayElement, displayElement)) &&
+            (identical(other.designation, designation) ||
+                const DeepCollectionEquality()
+                    .equals(other.designation, designation)));
   }
 
   @override
@@ -16023,10 +16083,10 @@ class _$_ValueSetConcept implements _ValueSetConcept {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(code) ^
-      const DeepCollectionEquality().hash(display) ^
-      const DeepCollectionEquality().hash(designation) ^
       const DeepCollectionEquality().hash(codeElement) ^
-      const DeepCollectionEquality().hash(displayElement);
+      const DeepCollectionEquality().hash(display) ^
+      const DeepCollectionEquality().hash(displayElement) ^
+      const DeepCollectionEquality().hash(designation);
 
   @override
   _$ValueSetConceptCopyWith<_ValueSetConcept> get copyWith =>
@@ -16038,16 +16098,17 @@ class _$_ValueSetConcept implements _ValueSetConcept {
   }
 }
 
-abstract class _ValueSetConcept implements ValueSetConcept {
-  const factory _ValueSetConcept(
+abstract class _ValueSetConcept extends ValueSetConcept {
+  _ValueSetConcept._() : super._();
+  factory _ValueSetConcept(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code code,
-      String display,
-      List<ValueSetDesignation> designation,
       @JsonKey(name: '_code') Element codeElement,
-      @JsonKey(name: '_display') Element displayElement}) = _$_ValueSetConcept;
+      String display,
+      @JsonKey(name: '_display') Element displayElement,
+      List<ValueSetDesignation> designation}) = _$_ValueSetConcept;
 
   factory _ValueSetConcept.fromJson(Map<String, dynamic> json) =
       _$_ValueSetConcept.fromJson;
@@ -16062,15 +16123,15 @@ abstract class _ValueSetConcept implements ValueSetConcept {
   @override
   Code get code;
   @override
-  String get display;
-  @override
-  List<ValueSetDesignation> get designation;
-  @override
   @JsonKey(name: '_code')
   Element get codeElement;
   @override
+  String get display;
+  @override
   @JsonKey(name: '_display')
   Element get displayElement;
+  @override
+  List<ValueSetDesignation> get designation;
   @override
   _$ValueSetConceptCopyWith<_ValueSetConcept> get copyWith;
 }
@@ -16087,18 +16148,18 @@ class _$ValueSetDesignationTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Coding use,
       String value,
-      @JsonKey(name: '_language') Element languageElement,
       @JsonKey(name: '_value') Element valueElement}) {
     return _ValueSetDesignation(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       language: language,
+      languageElement: languageElement,
       use: use,
       value: value,
-      languageElement: languageElement,
       valueElement: valueElement,
     );
   }
@@ -16113,10 +16174,10 @@ mixin _$ValueSetDesignation {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   Code get language;
-  Coding get use;
-  String get value;
   @JsonKey(name: '_language')
   Element get languageElement;
+  Coding get use;
+  String get value;
   @JsonKey(name: '_value')
   Element get valueElement;
 
@@ -16133,13 +16194,13 @@ abstract class $ValueSetDesignationCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Coding use,
       String value,
-      @JsonKey(name: '_language') Element languageElement,
       @JsonKey(name: '_value') Element valueElement});
 
-  $CodingCopyWith<$Res> get use;
   $ElementCopyWith<$Res> get languageElement;
+  $CodingCopyWith<$Res> get use;
   $ElementCopyWith<$Res> get valueElement;
 }
 
@@ -16157,9 +16218,9 @@ class _$ValueSetDesignationCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object use = freezed,
     Object value = freezed,
-    Object languageElement = freezed,
     Object valueElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -16171,25 +16232,15 @@ class _$ValueSetDesignationCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       language: language == freezed ? _value.language : language as Code,
-      use: use == freezed ? _value.use : use as Coding,
-      value: value == freezed ? _value.value : value as String,
       languageElement: languageElement == freezed
           ? _value.languageElement
           : languageElement as Element,
+      use: use == freezed ? _value.use : use as Coding,
+      value: value == freezed ? _value.value : value as String,
       valueElement: valueElement == freezed
           ? _value.valueElement
           : valueElement as Element,
     ));
-  }
-
-  @override
-  $CodingCopyWith<$Res> get use {
-    if (_value.use == null) {
-      return null;
-    }
-    return $CodingCopyWith<$Res>(_value.use, (value) {
-      return _then(_value.copyWith(use: value));
-    });
   }
 
   @override
@@ -16199,6 +16250,16 @@ class _$ValueSetDesignationCopyWithImpl<$Res>
     }
     return $ElementCopyWith<$Res>(_value.languageElement, (value) {
       return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $CodingCopyWith<$Res> get use {
+    if (_value.use == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.use, (value) {
+      return _then(_value.copyWith(use: value));
     });
   }
 
@@ -16224,15 +16285,15 @@ abstract class _$ValueSetDesignationCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Coding use,
       String value,
-      @JsonKey(name: '_language') Element languageElement,
       @JsonKey(name: '_value') Element valueElement});
 
   @override
-  $CodingCopyWith<$Res> get use;
-  @override
   $ElementCopyWith<$Res> get languageElement;
+  @override
+  $CodingCopyWith<$Res> get use;
   @override
   $ElementCopyWith<$Res> get valueElement;
 }
@@ -16253,9 +16314,9 @@ class __$ValueSetDesignationCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object use = freezed,
     Object value = freezed,
-    Object languageElement = freezed,
     Object valueElement = freezed,
   }) {
     return _then(_ValueSetDesignation(
@@ -16267,11 +16328,11 @@ class __$ValueSetDesignationCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       language: language == freezed ? _value.language : language as Code,
-      use: use == freezed ? _value.use : use as Coding,
-      value: value == freezed ? _value.value : value as String,
       languageElement: languageElement == freezed
           ? _value.languageElement
           : languageElement as Element,
+      use: use == freezed ? _value.use : use as Coding,
+      value: value == freezed ? _value.value : value as String,
       valueElement: valueElement == freezed
           ? _value.valueElement
           : valueElement as Element,
@@ -16280,16 +16341,17 @@ class __$ValueSetDesignationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ValueSetDesignation implements _ValueSetDesignation {
-  const _$_ValueSetDesignation(
+class _$_ValueSetDesignation extends _ValueSetDesignation {
+  _$_ValueSetDesignation(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.language,
+      @JsonKey(name: '_language') this.languageElement,
       this.use,
       this.value,
-      @JsonKey(name: '_language') this.languageElement,
-      @JsonKey(name: '_value') this.valueElement});
+      @JsonKey(name: '_value') this.valueElement})
+      : super._();
 
   factory _$_ValueSetDesignation.fromJson(Map<String, dynamic> json) =>
       _$_$_ValueSetDesignationFromJson(json);
@@ -16304,19 +16366,19 @@ class _$_ValueSetDesignation implements _ValueSetDesignation {
   @override
   final Code language;
   @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
   final Coding use;
   @override
   final String value;
-  @override
-  @JsonKey(name: '_language')
-  final Element languageElement;
   @override
   @JsonKey(name: '_value')
   final Element valueElement;
 
   @override
   String toString() {
-    return 'ValueSetDesignation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, language: $language, use: $use, value: $value, languageElement: $languageElement, valueElement: $valueElement)';
+    return 'ValueSetDesignation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, language: $language, languageElement: $languageElement, use: $use, value: $value, valueElement: $valueElement)';
   }
 
   @override
@@ -16334,13 +16396,13 @@ class _$_ValueSetDesignation implements _ValueSetDesignation {
             (identical(other.language, language) ||
                 const DeepCollectionEquality()
                     .equals(other.language, language)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
             (identical(other.use, use) ||
                 const DeepCollectionEquality().equals(other.use, use)) &&
             (identical(other.value, value) ||
                 const DeepCollectionEquality().equals(other.value, value)) &&
-            (identical(other.languageElement, languageElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.languageElement, languageElement)) &&
             (identical(other.valueElement, valueElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueElement, valueElement)));
@@ -16353,9 +16415,9 @@ class _$_ValueSetDesignation implements _ValueSetDesignation {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(use) ^
       const DeepCollectionEquality().hash(value) ^
-      const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(valueElement);
 
   @override
@@ -16369,15 +16431,16 @@ class _$_ValueSetDesignation implements _ValueSetDesignation {
   }
 }
 
-abstract class _ValueSetDesignation implements ValueSetDesignation {
-  const factory _ValueSetDesignation(
+abstract class _ValueSetDesignation extends ValueSetDesignation {
+  _ValueSetDesignation._() : super._();
+  factory _ValueSetDesignation(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Coding use,
       String value,
-      @JsonKey(name: '_language') Element languageElement,
       @JsonKey(name: '_value') Element valueElement}) = _$_ValueSetDesignation;
 
   factory _ValueSetDesignation.fromJson(Map<String, dynamic> json) =
@@ -16393,12 +16456,12 @@ abstract class _ValueSetDesignation implements ValueSetDesignation {
   @override
   Code get language;
   @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
   Coding get use;
   @override
   String get value;
-  @override
-  @JsonKey(name: '_language')
-  Element get languageElement;
   @override
   @JsonKey(name: '_value')
   Element get valueElement;
@@ -16418,20 +16481,20 @@ class _$ValueSetFilterTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code property,
-      @JsonKey(unknownEnumValue: FilterOp.unknown) FilterOp op,
-      String value,
       @JsonKey(name: '_property') Element propertyElement,
+      @JsonKey(unknownEnumValue: ValueSetFilterOp.unknown) ValueSetFilterOp op,
       @JsonKey(name: '_op') Element opElement,
+      String value,
       @JsonKey(name: '_value') Element valueElement}) {
     return _ValueSetFilter(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       property: property,
-      op: op,
-      value: value,
       propertyElement: propertyElement,
+      op: op,
       opElement: opElement,
+      value: value,
       valueElement: valueElement,
     );
   }
@@ -16446,13 +16509,13 @@ mixin _$ValueSetFilter {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   Code get property;
-  @JsonKey(unknownEnumValue: FilterOp.unknown)
-  FilterOp get op;
-  String get value;
   @JsonKey(name: '_property')
   Element get propertyElement;
+  @JsonKey(unknownEnumValue: ValueSetFilterOp.unknown)
+  ValueSetFilterOp get op;
   @JsonKey(name: '_op')
   Element get opElement;
+  String get value;
   @JsonKey(name: '_value')
   Element get valueElement;
 
@@ -16469,10 +16532,10 @@ abstract class $ValueSetFilterCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code property,
-      @JsonKey(unknownEnumValue: FilterOp.unknown) FilterOp op,
-      String value,
       @JsonKey(name: '_property') Element propertyElement,
+      @JsonKey(unknownEnumValue: ValueSetFilterOp.unknown) ValueSetFilterOp op,
       @JsonKey(name: '_op') Element opElement,
+      String value,
       @JsonKey(name: '_value') Element valueElement});
 
   $ElementCopyWith<$Res> get propertyElement;
@@ -16494,10 +16557,10 @@ class _$ValueSetFilterCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object property = freezed,
-    Object op = freezed,
-    Object value = freezed,
     Object propertyElement = freezed,
+    Object op = freezed,
     Object opElement = freezed,
+    Object value = freezed,
     Object valueElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -16509,12 +16572,12 @@ class _$ValueSetFilterCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       property: property == freezed ? _value.property : property as Code,
-      op: op == freezed ? _value.op : op as FilterOp,
-      value: value == freezed ? _value.value : value as String,
       propertyElement: propertyElement == freezed
           ? _value.propertyElement
           : propertyElement as Element,
+      op: op == freezed ? _value.op : op as ValueSetFilterOp,
       opElement: opElement == freezed ? _value.opElement : opElement as Element,
+      value: value == freezed ? _value.value : value as String,
       valueElement: valueElement == freezed
           ? _value.valueElement
           : valueElement as Element,
@@ -16563,10 +16626,10 @@ abstract class _$ValueSetFilterCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code property,
-      @JsonKey(unknownEnumValue: FilterOp.unknown) FilterOp op,
-      String value,
       @JsonKey(name: '_property') Element propertyElement,
+      @JsonKey(unknownEnumValue: ValueSetFilterOp.unknown) ValueSetFilterOp op,
       @JsonKey(name: '_op') Element opElement,
+      String value,
       @JsonKey(name: '_value') Element valueElement});
 
   @override
@@ -16593,10 +16656,10 @@ class __$ValueSetFilterCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object property = freezed,
-    Object op = freezed,
-    Object value = freezed,
     Object propertyElement = freezed,
+    Object op = freezed,
     Object opElement = freezed,
+    Object value = freezed,
     Object valueElement = freezed,
   }) {
     return _then(_ValueSetFilter(
@@ -16608,12 +16671,12 @@ class __$ValueSetFilterCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       property: property == freezed ? _value.property : property as Code,
-      op: op == freezed ? _value.op : op as FilterOp,
-      value: value == freezed ? _value.value : value as String,
       propertyElement: propertyElement == freezed
           ? _value.propertyElement
           : propertyElement as Element,
+      op: op == freezed ? _value.op : op as ValueSetFilterOp,
       opElement: opElement == freezed ? _value.opElement : opElement as Element,
+      value: value == freezed ? _value.value : value as String,
       valueElement: valueElement == freezed
           ? _value.valueElement
           : valueElement as Element,
@@ -16622,17 +16685,18 @@ class __$ValueSetFilterCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ValueSetFilter implements _ValueSetFilter {
-  const _$_ValueSetFilter(
+class _$_ValueSetFilter extends _ValueSetFilter {
+  _$_ValueSetFilter(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.property,
-      @JsonKey(unknownEnumValue: FilterOp.unknown) this.op,
-      this.value,
       @JsonKey(name: '_property') this.propertyElement,
+      @JsonKey(unknownEnumValue: ValueSetFilterOp.unknown) this.op,
       @JsonKey(name: '_op') this.opElement,
-      @JsonKey(name: '_value') this.valueElement});
+      this.value,
+      @JsonKey(name: '_value') this.valueElement})
+      : super._();
 
   factory _$_ValueSetFilter.fromJson(Map<String, dynamic> json) =>
       _$_$_ValueSetFilterFromJson(json);
@@ -16647,23 +16711,23 @@ class _$_ValueSetFilter implements _ValueSetFilter {
   @override
   final Code property;
   @override
-  @JsonKey(unknownEnumValue: FilterOp.unknown)
-  final FilterOp op;
-  @override
-  final String value;
-  @override
   @JsonKey(name: '_property')
   final Element propertyElement;
   @override
+  @JsonKey(unknownEnumValue: ValueSetFilterOp.unknown)
+  final ValueSetFilterOp op;
+  @override
   @JsonKey(name: '_op')
   final Element opElement;
+  @override
+  final String value;
   @override
   @JsonKey(name: '_value')
   final Element valueElement;
 
   @override
   String toString() {
-    return 'ValueSetFilter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, property: $property, op: $op, value: $value, propertyElement: $propertyElement, opElement: $opElement, valueElement: $valueElement)';
+    return 'ValueSetFilter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, property: $property, propertyElement: $propertyElement, op: $op, opElement: $opElement, value: $value, valueElement: $valueElement)';
   }
 
   @override
@@ -16681,16 +16745,16 @@ class _$_ValueSetFilter implements _ValueSetFilter {
             (identical(other.property, property) ||
                 const DeepCollectionEquality()
                     .equals(other.property, property)) &&
-            (identical(other.op, op) ||
-                const DeepCollectionEquality().equals(other.op, op)) &&
-            (identical(other.value, value) ||
-                const DeepCollectionEquality().equals(other.value, value)) &&
             (identical(other.propertyElement, propertyElement) ||
                 const DeepCollectionEquality()
                     .equals(other.propertyElement, propertyElement)) &&
+            (identical(other.op, op) ||
+                const DeepCollectionEquality().equals(other.op, op)) &&
             (identical(other.opElement, opElement) ||
                 const DeepCollectionEquality()
                     .equals(other.opElement, opElement)) &&
+            (identical(other.value, value) ||
+                const DeepCollectionEquality().equals(other.value, value)) &&
             (identical(other.valueElement, valueElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueElement, valueElement)));
@@ -16703,10 +16767,10 @@ class _$_ValueSetFilter implements _ValueSetFilter {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(property) ^
-      const DeepCollectionEquality().hash(op) ^
-      const DeepCollectionEquality().hash(value) ^
       const DeepCollectionEquality().hash(propertyElement) ^
+      const DeepCollectionEquality().hash(op) ^
       const DeepCollectionEquality().hash(opElement) ^
+      const DeepCollectionEquality().hash(value) ^
       const DeepCollectionEquality().hash(valueElement);
 
   @override
@@ -16719,16 +16783,17 @@ class _$_ValueSetFilter implements _ValueSetFilter {
   }
 }
 
-abstract class _ValueSetFilter implements ValueSetFilter {
-  const factory _ValueSetFilter(
+abstract class _ValueSetFilter extends ValueSetFilter {
+  _ValueSetFilter._() : super._();
+  factory _ValueSetFilter(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code property,
-      @JsonKey(unknownEnumValue: FilterOp.unknown) FilterOp op,
-      String value,
       @JsonKey(name: '_property') Element propertyElement,
+      @JsonKey(unknownEnumValue: ValueSetFilterOp.unknown) ValueSetFilterOp op,
       @JsonKey(name: '_op') Element opElement,
+      String value,
       @JsonKey(name: '_value') Element valueElement}) = _$_ValueSetFilter;
 
   factory _ValueSetFilter.fromJson(Map<String, dynamic> json) =
@@ -16744,16 +16809,16 @@ abstract class _ValueSetFilter implements ValueSetFilter {
   @override
   Code get property;
   @override
-  @JsonKey(unknownEnumValue: FilterOp.unknown)
-  FilterOp get op;
-  @override
-  String get value;
-  @override
   @JsonKey(name: '_property')
   Element get propertyElement;
   @override
+  @JsonKey(unknownEnumValue: ValueSetFilterOp.unknown)
+  ValueSetFilterOp get op;
+  @override
   @JsonKey(name: '_op')
   Element get opElement;
+  @override
+  String get value;
   @override
   @JsonKey(name: '_value')
   Element get valueElement;
@@ -16773,29 +16838,29 @@ class _$ValueSetExpansionTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri identifier,
-      FhirDateTime timestamp,
-      Integer total,
-      Integer offset,
-      List<ValueSetParameter> parameter,
-      List<ValueSetContains> contains,
       @JsonKey(name: '_identifier') Element identifierElement,
+      FhirDateTime timestamp,
       @JsonKey(name: '_timestamp') Element timestampElement,
+      Integer total,
       @JsonKey(name: '_total') Element totalElement,
-      @JsonKey(name: '_offset') Element offsetElement}) {
+      Integer offset,
+      @JsonKey(name: '_offset') Element offsetElement,
+      List<ValueSetParameter> parameter,
+      List<ValueSetContains> contains}) {
     return _ValueSetExpansion(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       identifier: identifier,
+      identifierElement: identifierElement,
       timestamp: timestamp,
+      timestampElement: timestampElement,
       total: total,
+      totalElement: totalElement,
       offset: offset,
+      offsetElement: offsetElement,
       parameter: parameter,
       contains: contains,
-      identifierElement: identifierElement,
-      timestampElement: timestampElement,
-      totalElement: totalElement,
-      offsetElement: offsetElement,
     );
   }
 }
@@ -16809,19 +16874,19 @@ mixin _$ValueSetExpansion {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   FhirUri get identifier;
-  FhirDateTime get timestamp;
-  Integer get total;
-  Integer get offset;
-  List<ValueSetParameter> get parameter;
-  List<ValueSetContains> get contains;
   @JsonKey(name: '_identifier')
   Element get identifierElement;
+  FhirDateTime get timestamp;
   @JsonKey(name: '_timestamp')
   Element get timestampElement;
+  Integer get total;
   @JsonKey(name: '_total')
   Element get totalElement;
+  Integer get offset;
   @JsonKey(name: '_offset')
   Element get offsetElement;
+  List<ValueSetParameter> get parameter;
+  List<ValueSetContains> get contains;
 
   Map<String, dynamic> toJson();
   $ValueSetExpansionCopyWith<ValueSetExpansion> get copyWith;
@@ -16836,15 +16901,15 @@ abstract class $ValueSetExpansionCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri identifier,
-      FhirDateTime timestamp,
-      Integer total,
-      Integer offset,
-      List<ValueSetParameter> parameter,
-      List<ValueSetContains> contains,
       @JsonKey(name: '_identifier') Element identifierElement,
+      FhirDateTime timestamp,
       @JsonKey(name: '_timestamp') Element timestampElement,
+      Integer total,
       @JsonKey(name: '_total') Element totalElement,
-      @JsonKey(name: '_offset') Element offsetElement});
+      Integer offset,
+      @JsonKey(name: '_offset') Element offsetElement,
+      List<ValueSetParameter> parameter,
+      List<ValueSetContains> contains});
 
   $ElementCopyWith<$Res> get identifierElement;
   $ElementCopyWith<$Res> get timestampElement;
@@ -16866,15 +16931,15 @@ class _$ValueSetExpansionCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
+    Object identifierElement = freezed,
     Object timestamp = freezed,
+    Object timestampElement = freezed,
     Object total = freezed,
+    Object totalElement = freezed,
     Object offset = freezed,
+    Object offsetElement = freezed,
     Object parameter = freezed,
     Object contains = freezed,
-    Object identifierElement = freezed,
-    Object timestampElement = freezed,
-    Object totalElement = freezed,
-    Object offsetElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -16886,28 +16951,28 @@ class _$ValueSetExpansionCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension>,
       identifier:
           identifier == freezed ? _value.identifier : identifier as FhirUri,
+      identifierElement: identifierElement == freezed
+          ? _value.identifierElement
+          : identifierElement as Element,
       timestamp:
           timestamp == freezed ? _value.timestamp : timestamp as FhirDateTime,
+      timestampElement: timestampElement == freezed
+          ? _value.timestampElement
+          : timestampElement as Element,
       total: total == freezed ? _value.total : total as Integer,
+      totalElement: totalElement == freezed
+          ? _value.totalElement
+          : totalElement as Element,
       offset: offset == freezed ? _value.offset : offset as Integer,
+      offsetElement: offsetElement == freezed
+          ? _value.offsetElement
+          : offsetElement as Element,
       parameter: parameter == freezed
           ? _value.parameter
           : parameter as List<ValueSetParameter>,
       contains: contains == freezed
           ? _value.contains
           : contains as List<ValueSetContains>,
-      identifierElement: identifierElement == freezed
-          ? _value.identifierElement
-          : identifierElement as Element,
-      timestampElement: timestampElement == freezed
-          ? _value.timestampElement
-          : timestampElement as Element,
-      totalElement: totalElement == freezed
-          ? _value.totalElement
-          : totalElement as Element,
-      offsetElement: offsetElement == freezed
-          ? _value.offsetElement
-          : offsetElement as Element,
     ));
   }
 
@@ -16963,15 +17028,15 @@ abstract class _$ValueSetExpansionCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri identifier,
-      FhirDateTime timestamp,
-      Integer total,
-      Integer offset,
-      List<ValueSetParameter> parameter,
-      List<ValueSetContains> contains,
       @JsonKey(name: '_identifier') Element identifierElement,
+      FhirDateTime timestamp,
       @JsonKey(name: '_timestamp') Element timestampElement,
+      Integer total,
       @JsonKey(name: '_total') Element totalElement,
-      @JsonKey(name: '_offset') Element offsetElement});
+      Integer offset,
+      @JsonKey(name: '_offset') Element offsetElement,
+      List<ValueSetParameter> parameter,
+      List<ValueSetContains> contains});
 
   @override
   $ElementCopyWith<$Res> get identifierElement;
@@ -16999,15 +17064,15 @@ class __$ValueSetExpansionCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
+    Object identifierElement = freezed,
     Object timestamp = freezed,
+    Object timestampElement = freezed,
     Object total = freezed,
+    Object totalElement = freezed,
     Object offset = freezed,
+    Object offsetElement = freezed,
     Object parameter = freezed,
     Object contains = freezed,
-    Object identifierElement = freezed,
-    Object timestampElement = freezed,
-    Object totalElement = freezed,
-    Object offsetElement = freezed,
   }) {
     return _then(_ValueSetExpansion(
       id: id == freezed ? _value.id : id as String,
@@ -17019,48 +17084,49 @@ class __$ValueSetExpansionCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension>,
       identifier:
           identifier == freezed ? _value.identifier : identifier as FhirUri,
+      identifierElement: identifierElement == freezed
+          ? _value.identifierElement
+          : identifierElement as Element,
       timestamp:
           timestamp == freezed ? _value.timestamp : timestamp as FhirDateTime,
+      timestampElement: timestampElement == freezed
+          ? _value.timestampElement
+          : timestampElement as Element,
       total: total == freezed ? _value.total : total as Integer,
+      totalElement: totalElement == freezed
+          ? _value.totalElement
+          : totalElement as Element,
       offset: offset == freezed ? _value.offset : offset as Integer,
+      offsetElement: offsetElement == freezed
+          ? _value.offsetElement
+          : offsetElement as Element,
       parameter: parameter == freezed
           ? _value.parameter
           : parameter as List<ValueSetParameter>,
       contains: contains == freezed
           ? _value.contains
           : contains as List<ValueSetContains>,
-      identifierElement: identifierElement == freezed
-          ? _value.identifierElement
-          : identifierElement as Element,
-      timestampElement: timestampElement == freezed
-          ? _value.timestampElement
-          : timestampElement as Element,
-      totalElement: totalElement == freezed
-          ? _value.totalElement
-          : totalElement as Element,
-      offsetElement: offsetElement == freezed
-          ? _value.offsetElement
-          : offsetElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_ValueSetExpansion implements _ValueSetExpansion {
-  const _$_ValueSetExpansion(
+class _$_ValueSetExpansion extends _ValueSetExpansion {
+  _$_ValueSetExpansion(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
-      this.timestamp,
-      this.total,
-      this.offset,
-      this.parameter,
-      this.contains,
       @JsonKey(name: '_identifier') this.identifierElement,
+      this.timestamp,
       @JsonKey(name: '_timestamp') this.timestampElement,
+      this.total,
       @JsonKey(name: '_total') this.totalElement,
-      @JsonKey(name: '_offset') this.offsetElement});
+      this.offset,
+      @JsonKey(name: '_offset') this.offsetElement,
+      this.parameter,
+      this.contains})
+      : super._();
 
   factory _$_ValueSetExpansion.fromJson(Map<String, dynamic> json) =>
       _$_$_ValueSetExpansionFromJson(json);
@@ -17075,31 +17141,31 @@ class _$_ValueSetExpansion implements _ValueSetExpansion {
   @override
   final FhirUri identifier;
   @override
-  final FhirDateTime timestamp;
-  @override
-  final Integer total;
-  @override
-  final Integer offset;
-  @override
-  final List<ValueSetParameter> parameter;
-  @override
-  final List<ValueSetContains> contains;
-  @override
   @JsonKey(name: '_identifier')
   final Element identifierElement;
+  @override
+  final FhirDateTime timestamp;
   @override
   @JsonKey(name: '_timestamp')
   final Element timestampElement;
   @override
+  final Integer total;
+  @override
   @JsonKey(name: '_total')
   final Element totalElement;
   @override
+  final Integer offset;
+  @override
   @JsonKey(name: '_offset')
   final Element offsetElement;
+  @override
+  final List<ValueSetParameter> parameter;
+  @override
+  final List<ValueSetContains> contains;
 
   @override
   String toString() {
-    return 'ValueSetExpansion(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, timestamp: $timestamp, total: $total, offset: $offset, parameter: $parameter, contains: $contains, identifierElement: $identifierElement, timestampElement: $timestampElement, totalElement: $totalElement, offsetElement: $offsetElement)';
+    return 'ValueSetExpansion(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, identifierElement: $identifierElement, timestamp: $timestamp, timestampElement: $timestampElement, total: $total, totalElement: $totalElement, offset: $offset, offsetElement: $offsetElement, parameter: $parameter, contains: $contains)';
   }
 
   @override
@@ -17117,31 +17183,31 @@ class _$_ValueSetExpansion implements _ValueSetExpansion {
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
+            (identical(other.identifierElement, identifierElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.identifierElement, identifierElement)) &&
             (identical(other.timestamp, timestamp) ||
                 const DeepCollectionEquality()
                     .equals(other.timestamp, timestamp)) &&
+            (identical(other.timestampElement, timestampElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.timestampElement, timestampElement)) &&
             (identical(other.total, total) ||
                 const DeepCollectionEquality().equals(other.total, total)) &&
+            (identical(other.totalElement, totalElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.totalElement, totalElement)) &&
             (identical(other.offset, offset) ||
                 const DeepCollectionEquality().equals(other.offset, offset)) &&
+            (identical(other.offsetElement, offsetElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.offsetElement, offsetElement)) &&
             (identical(other.parameter, parameter) ||
                 const DeepCollectionEquality()
                     .equals(other.parameter, parameter)) &&
             (identical(other.contains, contains) ||
                 const DeepCollectionEquality()
-                    .equals(other.contains, contains)) &&
-            (identical(other.identifierElement, identifierElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.identifierElement, identifierElement)) &&
-            (identical(other.timestampElement, timestampElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.timestampElement, timestampElement)) &&
-            (identical(other.totalElement, totalElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.totalElement, totalElement)) &&
-            (identical(other.offsetElement, offsetElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.offsetElement, offsetElement)));
+                    .equals(other.contains, contains)));
   }
 
   @override
@@ -17151,15 +17217,15 @@ class _$_ValueSetExpansion implements _ValueSetExpansion {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
-      const DeepCollectionEquality().hash(timestamp) ^
-      const DeepCollectionEquality().hash(total) ^
-      const DeepCollectionEquality().hash(offset) ^
-      const DeepCollectionEquality().hash(parameter) ^
-      const DeepCollectionEquality().hash(contains) ^
       const DeepCollectionEquality().hash(identifierElement) ^
+      const DeepCollectionEquality().hash(timestamp) ^
       const DeepCollectionEquality().hash(timestampElement) ^
+      const DeepCollectionEquality().hash(total) ^
       const DeepCollectionEquality().hash(totalElement) ^
-      const DeepCollectionEquality().hash(offsetElement);
+      const DeepCollectionEquality().hash(offset) ^
+      const DeepCollectionEquality().hash(offsetElement) ^
+      const DeepCollectionEquality().hash(parameter) ^
+      const DeepCollectionEquality().hash(contains);
 
   @override
   _$ValueSetExpansionCopyWith<_ValueSetExpansion> get copyWith =>
@@ -17171,21 +17237,22 @@ class _$_ValueSetExpansion implements _ValueSetExpansion {
   }
 }
 
-abstract class _ValueSetExpansion implements ValueSetExpansion {
-  const factory _ValueSetExpansion(
+abstract class _ValueSetExpansion extends ValueSetExpansion {
+  _ValueSetExpansion._() : super._();
+  factory _ValueSetExpansion(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri identifier,
-      FhirDateTime timestamp,
-      Integer total,
-      Integer offset,
-      List<ValueSetParameter> parameter,
-      List<ValueSetContains> contains,
       @JsonKey(name: '_identifier') Element identifierElement,
+      FhirDateTime timestamp,
       @JsonKey(name: '_timestamp') Element timestampElement,
+      Integer total,
       @JsonKey(name: '_total') Element totalElement,
-      @JsonKey(name: '_offset') Element offsetElement}) = _$_ValueSetExpansion;
+      Integer offset,
+      @JsonKey(name: '_offset') Element offsetElement,
+      List<ValueSetParameter> parameter,
+      List<ValueSetContains> contains}) = _$_ValueSetExpansion;
 
   factory _ValueSetExpansion.fromJson(Map<String, dynamic> json) =
       _$_ValueSetExpansion.fromJson;
@@ -17200,27 +17267,27 @@ abstract class _ValueSetExpansion implements ValueSetExpansion {
   @override
   FhirUri get identifier;
   @override
-  FhirDateTime get timestamp;
-  @override
-  Integer get total;
-  @override
-  Integer get offset;
-  @override
-  List<ValueSetParameter> get parameter;
-  @override
-  List<ValueSetContains> get contains;
-  @override
   @JsonKey(name: '_identifier')
   Element get identifierElement;
+  @override
+  FhirDateTime get timestamp;
   @override
   @JsonKey(name: '_timestamp')
   Element get timestampElement;
   @override
+  Integer get total;
+  @override
   @JsonKey(name: '_total')
   Element get totalElement;
   @override
+  Integer get offset;
+  @override
   @JsonKey(name: '_offset')
   Element get offsetElement;
+  @override
+  List<ValueSetParameter> get parameter;
+  @override
+  List<ValueSetContains> get contains;
   @override
   _$ValueSetExpansionCopyWith<_ValueSetExpansion> get copyWith;
 }
@@ -17237,40 +17304,40 @@ class _$ValueSetParameterTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String name,
-      String valueString,
-      Boolean valueBoolean,
-      Integer valueInteger,
-      Decimal valueDecimal,
-      FhirUri valueUri,
-      Code valueCode,
-      FhirDateTime valueDateTime,
       @JsonKey(name: '_name') Element nameElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      FhirUri valueUri,
       @JsonKey(name: '_valueUri') Element valueUriElement,
+      Code valueCode,
       @JsonKey(name: '_valueCode') Element valueCodeElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement}) {
     return _ValueSetParameter(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       name: name,
-      valueString: valueString,
-      valueBoolean: valueBoolean,
-      valueInteger: valueInteger,
-      valueDecimal: valueDecimal,
-      valueUri: valueUri,
-      valueCode: valueCode,
-      valueDateTime: valueDateTime,
       nameElement: nameElement,
+      valueString: valueString,
       valueStringElement: valueStringElement,
+      valueBoolean: valueBoolean,
       valueBooleanElement: valueBooleanElement,
+      valueInteger: valueInteger,
       valueIntegerElement: valueIntegerElement,
+      valueDecimal: valueDecimal,
       valueDecimalElement: valueDecimalElement,
+      valueUri: valueUri,
       valueUriElement: valueUriElement,
+      valueCode: valueCode,
       valueCodeElement: valueCodeElement,
+      valueDateTime: valueDateTime,
       valueDateTimeElement: valueDateTimeElement,
     );
   }
@@ -17285,27 +17352,27 @@ mixin _$ValueSetParameter {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   String get name;
-  String get valueString;
-  Boolean get valueBoolean;
-  Integer get valueInteger;
-  Decimal get valueDecimal;
-  FhirUri get valueUri;
-  Code get valueCode;
-  FhirDateTime get valueDateTime;
   @JsonKey(name: '_name')
   Element get nameElement;
+  String get valueString;
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
+  Boolean get valueBoolean;
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
+  Integer get valueInteger;
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
+  Decimal get valueDecimal;
   @JsonKey(name: '_valueDecimal')
   Element get valueDecimalElement;
+  FhirUri get valueUri;
   @JsonKey(name: '_valueUri')
   Element get valueUriElement;
+  Code get valueCode;
   @JsonKey(name: '_valueCode')
   Element get valueCodeElement;
+  FhirDateTime get valueDateTime;
   @JsonKey(name: '_valueDateTime')
   Element get valueDateTimeElement;
 
@@ -17322,20 +17389,20 @@ abstract class $ValueSetParameterCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String name,
-      String valueString,
-      Boolean valueBoolean,
-      Integer valueInteger,
-      Decimal valueDecimal,
-      FhirUri valueUri,
-      Code valueCode,
-      FhirDateTime valueDateTime,
       @JsonKey(name: '_name') Element nameElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      FhirUri valueUri,
       @JsonKey(name: '_valueUri') Element valueUriElement,
+      Code valueCode,
       @JsonKey(name: '_valueCode') Element valueCodeElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement});
 
   $ElementCopyWith<$Res> get nameElement;
@@ -17362,20 +17429,20 @@ class _$ValueSetParameterCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object name = freezed,
-    Object valueString = freezed,
-    Object valueBoolean = freezed,
-    Object valueInteger = freezed,
-    Object valueDecimal = freezed,
-    Object valueUri = freezed,
-    Object valueCode = freezed,
-    Object valueDateTime = freezed,
     Object nameElement = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
+    Object valueInteger = freezed,
     Object valueIntegerElement = freezed,
+    Object valueDecimal = freezed,
     Object valueDecimalElement = freezed,
+    Object valueUri = freezed,
     Object valueUriElement = freezed,
+    Object valueCode = freezed,
     Object valueCodeElement = freezed,
+    Object valueDateTime = freezed,
     Object valueDateTimeElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -17387,42 +17454,42 @@ class _$ValueSetParameterCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       name: name == freezed ? _value.name : name as String,
-      valueString:
-          valueString == freezed ? _value.valueString : valueString as String,
-      valueBoolean: valueBoolean == freezed
-          ? _value.valueBoolean
-          : valueBoolean as Boolean,
-      valueInteger: valueInteger == freezed
-          ? _value.valueInteger
-          : valueInteger as Integer,
-      valueDecimal: valueDecimal == freezed
-          ? _value.valueDecimal
-          : valueDecimal as Decimal,
-      valueUri: valueUri == freezed ? _value.valueUri : valueUri as FhirUri,
-      valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
-      valueDateTime: valueDateTime == freezed
-          ? _value.valueDateTime
-          : valueDateTime as FhirDateTime,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger as Integer,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement as Element,
+      valueDecimal: valueDecimal == freezed
+          ? _value.valueDecimal
+          : valueDecimal as Decimal,
       valueDecimalElement: valueDecimalElement == freezed
           ? _value.valueDecimalElement
           : valueDecimalElement as Element,
+      valueUri: valueUri == freezed ? _value.valueUri : valueUri as FhirUri,
       valueUriElement: valueUriElement == freezed
           ? _value.valueUriElement
           : valueUriElement as Element,
+      valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
       valueCodeElement: valueCodeElement == freezed
           ? _value.valueCodeElement
           : valueCodeElement as Element,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime as FhirDateTime,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement as Element,
@@ -17521,20 +17588,20 @@ abstract class _$ValueSetParameterCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String name,
-      String valueString,
-      Boolean valueBoolean,
-      Integer valueInteger,
-      Decimal valueDecimal,
-      FhirUri valueUri,
-      Code valueCode,
-      FhirDateTime valueDateTime,
       @JsonKey(name: '_name') Element nameElement,
+      String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
+      Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Integer valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      FhirUri valueUri,
       @JsonKey(name: '_valueUri') Element valueUriElement,
+      Code valueCode,
       @JsonKey(name: '_valueCode') Element valueCodeElement,
+      FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement});
 
   @override
@@ -17571,20 +17638,20 @@ class __$ValueSetParameterCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object name = freezed,
-    Object valueString = freezed,
-    Object valueBoolean = freezed,
-    Object valueInteger = freezed,
-    Object valueDecimal = freezed,
-    Object valueUri = freezed,
-    Object valueCode = freezed,
-    Object valueDateTime = freezed,
     Object nameElement = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueBoolean = freezed,
     Object valueBooleanElement = freezed,
+    Object valueInteger = freezed,
     Object valueIntegerElement = freezed,
+    Object valueDecimal = freezed,
     Object valueDecimalElement = freezed,
+    Object valueUri = freezed,
     Object valueUriElement = freezed,
+    Object valueCode = freezed,
     Object valueCodeElement = freezed,
+    Object valueDateTime = freezed,
     Object valueDateTimeElement = freezed,
   }) {
     return _then(_ValueSetParameter(
@@ -17596,42 +17663,42 @@ class __$ValueSetParameterCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       name: name == freezed ? _value.name : name as String,
-      valueString:
-          valueString == freezed ? _value.valueString : valueString as String,
-      valueBoolean: valueBoolean == freezed
-          ? _value.valueBoolean
-          : valueBoolean as Boolean,
-      valueInteger: valueInteger == freezed
-          ? _value.valueInteger
-          : valueInteger as Integer,
-      valueDecimal: valueDecimal == freezed
-          ? _value.valueDecimal
-          : valueDecimal as Decimal,
-      valueUri: valueUri == freezed ? _value.valueUri : valueUri as FhirUri,
-      valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
-      valueDateTime: valueDateTime == freezed
-          ? _value.valueDateTime
-          : valueDateTime as FhirDateTime,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
           : valueBooleanElement as Element,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger as Integer,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement as Element,
+      valueDecimal: valueDecimal == freezed
+          ? _value.valueDecimal
+          : valueDecimal as Decimal,
       valueDecimalElement: valueDecimalElement == freezed
           ? _value.valueDecimalElement
           : valueDecimalElement as Element,
+      valueUri: valueUri == freezed ? _value.valueUri : valueUri as FhirUri,
       valueUriElement: valueUriElement == freezed
           ? _value.valueUriElement
           : valueUriElement as Element,
+      valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
       valueCodeElement: valueCodeElement == freezed
           ? _value.valueCodeElement
           : valueCodeElement as Element,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime as FhirDateTime,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement as Element,
@@ -17640,27 +17707,28 @@ class __$ValueSetParameterCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ValueSetParameter implements _ValueSetParameter {
-  const _$_ValueSetParameter(
+class _$_ValueSetParameter extends _ValueSetParameter {
+  _$_ValueSetParameter(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.name,
-      this.valueString,
-      this.valueBoolean,
-      this.valueInteger,
-      this.valueDecimal,
-      this.valueUri,
-      this.valueCode,
-      this.valueDateTime,
       @JsonKey(name: '_name') this.nameElement,
+      this.valueString,
       @JsonKey(name: '_valueString') this.valueStringElement,
+      this.valueBoolean,
       @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+      this.valueInteger,
       @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+      this.valueDecimal,
       @JsonKey(name: '_valueDecimal') this.valueDecimalElement,
+      this.valueUri,
       @JsonKey(name: '_valueUri') this.valueUriElement,
+      this.valueCode,
       @JsonKey(name: '_valueCode') this.valueCodeElement,
-      @JsonKey(name: '_valueDateTime') this.valueDateTimeElement});
+      this.valueDateTime,
+      @JsonKey(name: '_valueDateTime') this.valueDateTimeElement})
+      : super._();
 
   factory _$_ValueSetParameter.fromJson(Map<String, dynamic> json) =>
       _$_$_ValueSetParameterFromJson(json);
@@ -17675,47 +17743,47 @@ class _$_ValueSetParameter implements _ValueSetParameter {
   @override
   final String name;
   @override
-  final String valueString;
-  @override
-  final Boolean valueBoolean;
-  @override
-  final Integer valueInteger;
-  @override
-  final Decimal valueDecimal;
-  @override
-  final FhirUri valueUri;
-  @override
-  final Code valueCode;
-  @override
-  final FhirDateTime valueDateTime;
-  @override
   @JsonKey(name: '_name')
   final Element nameElement;
+  @override
+  final String valueString;
   @override
   @JsonKey(name: '_valueString')
   final Element valueStringElement;
   @override
+  final Boolean valueBoolean;
+  @override
   @JsonKey(name: '_valueBoolean')
   final Element valueBooleanElement;
+  @override
+  final Integer valueInteger;
   @override
   @JsonKey(name: '_valueInteger')
   final Element valueIntegerElement;
   @override
+  final Decimal valueDecimal;
+  @override
   @JsonKey(name: '_valueDecimal')
   final Element valueDecimalElement;
+  @override
+  final FhirUri valueUri;
   @override
   @JsonKey(name: '_valueUri')
   final Element valueUriElement;
   @override
+  final Code valueCode;
+  @override
   @JsonKey(name: '_valueCode')
   final Element valueCodeElement;
+  @override
+  final FhirDateTime valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
   final Element valueDateTimeElement;
 
   @override
   String toString() {
-    return 'ValueSetParameter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, valueString: $valueString, valueBoolean: $valueBoolean, valueInteger: $valueInteger, valueDecimal: $valueDecimal, valueUri: $valueUri, valueCode: $valueCode, valueDateTime: $valueDateTime, nameElement: $nameElement, valueStringElement: $valueStringElement, valueBooleanElement: $valueBooleanElement, valueIntegerElement: $valueIntegerElement, valueDecimalElement: $valueDecimalElement, valueUriElement: $valueUriElement, valueCodeElement: $valueCodeElement, valueDateTimeElement: $valueDateTimeElement)';
+    return 'ValueSetParameter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, valueString: $valueString, valueStringElement: $valueStringElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement)';
   }
 
   @override
@@ -17732,48 +17800,48 @@ class _$_ValueSetParameter implements _ValueSetParameter {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.valueString, valueString) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueString, valueString)) &&
-            (identical(other.valueBoolean, valueBoolean) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueBoolean, valueBoolean)) &&
-            (identical(other.valueInteger, valueInteger) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueInteger, valueInteger)) &&
-            (identical(other.valueDecimal, valueDecimal) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueDecimal, valueDecimal)) &&
-            (identical(other.valueUri, valueUri) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueUri, valueUri)) &&
-            (identical(other.valueCode, valueCode) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueCode, valueCode)) &&
-            (identical(other.valueDateTime, valueDateTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueDateTime, valueDateTime)) &&
             (identical(other.nameElement, nameElement) ||
                 const DeepCollectionEquality()
                     .equals(other.nameElement, nameElement)) &&
+            (identical(other.valueString, valueString) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueString, valueString)) &&
             (identical(other.valueStringElement, valueStringElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueStringElement, valueStringElement)) &&
+            (identical(other.valueBoolean, valueBoolean) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBoolean, valueBoolean)) &&
             (identical(other.valueBooleanElement, valueBooleanElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueBooleanElement, valueBooleanElement)) &&
+            (identical(other.valueInteger, valueInteger) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueInteger, valueInteger)) &&
             (identical(other.valueIntegerElement, valueIntegerElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueIntegerElement, valueIntegerElement)) &&
+            (identical(other.valueDecimal, valueDecimal) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDecimal, valueDecimal)) &&
             (identical(other.valueDecimalElement, valueDecimalElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueDecimalElement, valueDecimalElement)) &&
+            (identical(other.valueUri, valueUri) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueUri, valueUri)) &&
             (identical(other.valueUriElement, valueUriElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueUriElement, valueUriElement)) &&
+            (identical(other.valueCode, valueCode) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueCode, valueCode)) &&
             (identical(other.valueCodeElement, valueCodeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueCodeElement, valueCodeElement)) &&
+            (identical(other.valueDateTime, valueDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDateTime, valueDateTime)) &&
             (identical(other.valueDateTimeElement, valueDateTimeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueDateTimeElement, valueDateTimeElement)));
@@ -17786,20 +17854,20 @@ class _$_ValueSetParameter implements _ValueSetParameter {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(valueString) ^
-      const DeepCollectionEquality().hash(valueBoolean) ^
-      const DeepCollectionEquality().hash(valueInteger) ^
-      const DeepCollectionEquality().hash(valueDecimal) ^
-      const DeepCollectionEquality().hash(valueUri) ^
-      const DeepCollectionEquality().hash(valueCode) ^
-      const DeepCollectionEquality().hash(valueDateTime) ^
       const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(valueString) ^
       const DeepCollectionEquality().hash(valueStringElement) ^
+      const DeepCollectionEquality().hash(valueBoolean) ^
       const DeepCollectionEquality().hash(valueBooleanElement) ^
+      const DeepCollectionEquality().hash(valueInteger) ^
       const DeepCollectionEquality().hash(valueIntegerElement) ^
+      const DeepCollectionEquality().hash(valueDecimal) ^
       const DeepCollectionEquality().hash(valueDecimalElement) ^
+      const DeepCollectionEquality().hash(valueUri) ^
       const DeepCollectionEquality().hash(valueUriElement) ^
+      const DeepCollectionEquality().hash(valueCode) ^
       const DeepCollectionEquality().hash(valueCodeElement) ^
+      const DeepCollectionEquality().hash(valueDateTime) ^
       const DeepCollectionEquality().hash(valueDateTimeElement);
 
   @override
@@ -17812,26 +17880,27 @@ class _$_ValueSetParameter implements _ValueSetParameter {
   }
 }
 
-abstract class _ValueSetParameter implements ValueSetParameter {
-  const factory _ValueSetParameter(
+abstract class _ValueSetParameter extends ValueSetParameter {
+  _ValueSetParameter._() : super._();
+  factory _ValueSetParameter(
           {String id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
           String name,
-          String valueString,
-          Boolean valueBoolean,
-          Integer valueInteger,
-          Decimal valueDecimal,
-          FhirUri valueUri,
-          Code valueCode,
-          FhirDateTime valueDateTime,
           @JsonKey(name: '_name') Element nameElement,
+          String valueString,
           @JsonKey(name: '_valueString') Element valueStringElement,
+          Boolean valueBoolean,
           @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+          Integer valueInteger,
           @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+          Decimal valueDecimal,
           @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+          FhirUri valueUri,
           @JsonKey(name: '_valueUri') Element valueUriElement,
+          Code valueCode,
           @JsonKey(name: '_valueCode') Element valueCodeElement,
+          FhirDateTime valueDateTime,
           @JsonKey(name: '_valueDateTime') Element valueDateTimeElement}) =
       _$_ValueSetParameter;
 
@@ -17848,40 +17917,40 @@ abstract class _ValueSetParameter implements ValueSetParameter {
   @override
   String get name;
   @override
-  String get valueString;
-  @override
-  Boolean get valueBoolean;
-  @override
-  Integer get valueInteger;
-  @override
-  Decimal get valueDecimal;
-  @override
-  FhirUri get valueUri;
-  @override
-  Code get valueCode;
-  @override
-  FhirDateTime get valueDateTime;
-  @override
   @JsonKey(name: '_name')
   Element get nameElement;
+  @override
+  String get valueString;
   @override
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
   @override
+  Boolean get valueBoolean;
+  @override
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
+  @override
+  Integer get valueInteger;
   @override
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
   @override
+  Decimal get valueDecimal;
+  @override
   @JsonKey(name: '_valueDecimal')
   Element get valueDecimalElement;
+  @override
+  FhirUri get valueUri;
   @override
   @JsonKey(name: '_valueUri')
   Element get valueUriElement;
   @override
+  Code get valueCode;
+  @override
   @JsonKey(name: '_valueCode')
   Element get valueCodeElement;
+  @override
+  FhirDateTime get valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
   Element get valueDateTimeElement;
@@ -17901,37 +17970,37 @@ class _$ValueSetContainsTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri system,
-      Boolean abstract,
-      Boolean inactive,
-      String version,
-      Code code,
-      String display,
-      List<ValueSetDesignation> designation,
-      List<ValueSetContains> contains,
       @JsonKey(name: '_system') Element systemElement,
+      @JsonKey(name: 'abstract') Boolean abstract_,
       @JsonKey(name: '_abstract') Element abstractElement,
+      Boolean inactive,
       @JsonKey(name: '_inactive') Element inactiveElement,
+      String version,
       @JsonKey(name: '_version') Element versionElement,
+      Code code,
       @JsonKey(name: '_code') Element codeElement,
-      @JsonKey(name: '_display') Element displayElement}) {
+      String display,
+      @JsonKey(name: '_display') Element displayElement,
+      List<ValueSetDesignation> designation,
+      List<ValueSetContains> contains}) {
     return _ValueSetContains(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       system: system,
-      abstract: abstract,
+      systemElement: systemElement,
+      abstract_: abstract_,
+      abstractElement: abstractElement,
       inactive: inactive,
+      inactiveElement: inactiveElement,
       version: version,
+      versionElement: versionElement,
       code: code,
+      codeElement: codeElement,
       display: display,
+      displayElement: displayElement,
       designation: designation,
       contains: contains,
-      systemElement: systemElement,
-      abstractElement: abstractElement,
-      inactiveElement: inactiveElement,
-      versionElement: versionElement,
-      codeElement: codeElement,
-      displayElement: displayElement,
     );
   }
 }
@@ -17945,25 +18014,26 @@ mixin _$ValueSetContains {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   FhirUri get system;
-  Boolean get abstract;
-  Boolean get inactive;
-  String get version;
-  Code get code;
-  String get display;
-  List<ValueSetDesignation> get designation;
-  List<ValueSetContains> get contains;
   @JsonKey(name: '_system')
   Element get systemElement;
+  @JsonKey(name: 'abstract')
+  Boolean get abstract_;
   @JsonKey(name: '_abstract')
   Element get abstractElement;
+  Boolean get inactive;
   @JsonKey(name: '_inactive')
   Element get inactiveElement;
+  String get version;
   @JsonKey(name: '_version')
   Element get versionElement;
+  Code get code;
   @JsonKey(name: '_code')
   Element get codeElement;
+  String get display;
   @JsonKey(name: '_display')
   Element get displayElement;
+  List<ValueSetDesignation> get designation;
+  List<ValueSetContains> get contains;
 
   Map<String, dynamic> toJson();
   $ValueSetContainsCopyWith<ValueSetContains> get copyWith;
@@ -17978,19 +18048,19 @@ abstract class $ValueSetContainsCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri system,
-      Boolean abstract,
-      Boolean inactive,
-      String version,
-      Code code,
-      String display,
-      List<ValueSetDesignation> designation,
-      List<ValueSetContains> contains,
       @JsonKey(name: '_system') Element systemElement,
+      @JsonKey(name: 'abstract') Boolean abstract_,
       @JsonKey(name: '_abstract') Element abstractElement,
+      Boolean inactive,
       @JsonKey(name: '_inactive') Element inactiveElement,
+      String version,
       @JsonKey(name: '_version') Element versionElement,
+      Code code,
       @JsonKey(name: '_code') Element codeElement,
-      @JsonKey(name: '_display') Element displayElement});
+      String display,
+      @JsonKey(name: '_display') Element displayElement,
+      List<ValueSetDesignation> designation,
+      List<ValueSetContains> contains});
 
   $ElementCopyWith<$Res> get systemElement;
   $ElementCopyWith<$Res> get abstractElement;
@@ -18014,19 +18084,19 @@ class _$ValueSetContainsCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object system = freezed,
-    Object abstract = freezed,
+    Object systemElement = freezed,
+    Object abstract_ = freezed,
+    Object abstractElement = freezed,
     Object inactive = freezed,
+    Object inactiveElement = freezed,
     Object version = freezed,
+    Object versionElement = freezed,
     Object code = freezed,
+    Object codeElement = freezed,
     Object display = freezed,
+    Object displayElement = freezed,
     Object designation = freezed,
     Object contains = freezed,
-    Object systemElement = freezed,
-    Object abstractElement = freezed,
-    Object inactiveElement = freezed,
-    Object versionElement = freezed,
-    Object codeElement = freezed,
-    Object displayElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -18037,34 +18107,34 @@ class _$ValueSetContainsCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       system: system == freezed ? _value.system : system as FhirUri,
-      abstract: abstract == freezed ? _value.abstract : abstract as Boolean,
+      systemElement: systemElement == freezed
+          ? _value.systemElement
+          : systemElement as Element,
+      abstract_: abstract_ == freezed ? _value.abstract_ : abstract_ as Boolean,
+      abstractElement: abstractElement == freezed
+          ? _value.abstractElement
+          : abstractElement as Element,
       inactive: inactive == freezed ? _value.inactive : inactive as Boolean,
+      inactiveElement: inactiveElement == freezed
+          ? _value.inactiveElement
+          : inactiveElement as Element,
       version: version == freezed ? _value.version : version as String,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
       code: code == freezed ? _value.code : code as Code,
+      codeElement:
+          codeElement == freezed ? _value.codeElement : codeElement as Element,
       display: display == freezed ? _value.display : display as String,
+      displayElement: displayElement == freezed
+          ? _value.displayElement
+          : displayElement as Element,
       designation: designation == freezed
           ? _value.designation
           : designation as List<ValueSetDesignation>,
       contains: contains == freezed
           ? _value.contains
           : contains as List<ValueSetContains>,
-      systemElement: systemElement == freezed
-          ? _value.systemElement
-          : systemElement as Element,
-      abstractElement: abstractElement == freezed
-          ? _value.abstractElement
-          : abstractElement as Element,
-      inactiveElement: inactiveElement == freezed
-          ? _value.inactiveElement
-          : inactiveElement as Element,
-      versionElement: versionElement == freezed
-          ? _value.versionElement
-          : versionElement as Element,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element,
-      displayElement: displayElement == freezed
-          ? _value.displayElement
-          : displayElement as Element,
     ));
   }
 
@@ -18140,19 +18210,19 @@ abstract class _$ValueSetContainsCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri system,
-      Boolean abstract,
-      Boolean inactive,
-      String version,
-      Code code,
-      String display,
-      List<ValueSetDesignation> designation,
-      List<ValueSetContains> contains,
       @JsonKey(name: '_system') Element systemElement,
+      @JsonKey(name: 'abstract') Boolean abstract_,
       @JsonKey(name: '_abstract') Element abstractElement,
+      Boolean inactive,
       @JsonKey(name: '_inactive') Element inactiveElement,
+      String version,
       @JsonKey(name: '_version') Element versionElement,
+      Code code,
       @JsonKey(name: '_code') Element codeElement,
-      @JsonKey(name: '_display') Element displayElement});
+      String display,
+      @JsonKey(name: '_display') Element displayElement,
+      List<ValueSetDesignation> designation,
+      List<ValueSetContains> contains});
 
   @override
   $ElementCopyWith<$Res> get systemElement;
@@ -18184,19 +18254,19 @@ class __$ValueSetContainsCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object system = freezed,
-    Object abstract = freezed,
+    Object systemElement = freezed,
+    Object abstract_ = freezed,
+    Object abstractElement = freezed,
     Object inactive = freezed,
+    Object inactiveElement = freezed,
     Object version = freezed,
+    Object versionElement = freezed,
     Object code = freezed,
+    Object codeElement = freezed,
     Object display = freezed,
+    Object displayElement = freezed,
     Object designation = freezed,
     Object contains = freezed,
-    Object systemElement = freezed,
-    Object abstractElement = freezed,
-    Object inactiveElement = freezed,
-    Object versionElement = freezed,
-    Object codeElement = freezed,
-    Object displayElement = freezed,
   }) {
     return _then(_ValueSetContains(
       id: id == freezed ? _value.id : id as String,
@@ -18207,58 +18277,59 @@ class __$ValueSetContainsCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       system: system == freezed ? _value.system : system as FhirUri,
-      abstract: abstract == freezed ? _value.abstract : abstract as Boolean,
+      systemElement: systemElement == freezed
+          ? _value.systemElement
+          : systemElement as Element,
+      abstract_: abstract_ == freezed ? _value.abstract_ : abstract_ as Boolean,
+      abstractElement: abstractElement == freezed
+          ? _value.abstractElement
+          : abstractElement as Element,
       inactive: inactive == freezed ? _value.inactive : inactive as Boolean,
+      inactiveElement: inactiveElement == freezed
+          ? _value.inactiveElement
+          : inactiveElement as Element,
       version: version == freezed ? _value.version : version as String,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
       code: code == freezed ? _value.code : code as Code,
+      codeElement:
+          codeElement == freezed ? _value.codeElement : codeElement as Element,
       display: display == freezed ? _value.display : display as String,
+      displayElement: displayElement == freezed
+          ? _value.displayElement
+          : displayElement as Element,
       designation: designation == freezed
           ? _value.designation
           : designation as List<ValueSetDesignation>,
       contains: contains == freezed
           ? _value.contains
           : contains as List<ValueSetContains>,
-      systemElement: systemElement == freezed
-          ? _value.systemElement
-          : systemElement as Element,
-      abstractElement: abstractElement == freezed
-          ? _value.abstractElement
-          : abstractElement as Element,
-      inactiveElement: inactiveElement == freezed
-          ? _value.inactiveElement
-          : inactiveElement as Element,
-      versionElement: versionElement == freezed
-          ? _value.versionElement
-          : versionElement as Element,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element,
-      displayElement: displayElement == freezed
-          ? _value.displayElement
-          : displayElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_ValueSetContains implements _ValueSetContains {
-  const _$_ValueSetContains(
+class _$_ValueSetContains extends _ValueSetContains {
+  _$_ValueSetContains(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.system,
-      this.abstract,
-      this.inactive,
-      this.version,
-      this.code,
-      this.display,
-      this.designation,
-      this.contains,
       @JsonKey(name: '_system') this.systemElement,
+      @JsonKey(name: 'abstract') this.abstract_,
       @JsonKey(name: '_abstract') this.abstractElement,
+      this.inactive,
       @JsonKey(name: '_inactive') this.inactiveElement,
+      this.version,
       @JsonKey(name: '_version') this.versionElement,
+      this.code,
       @JsonKey(name: '_code') this.codeElement,
-      @JsonKey(name: '_display') this.displayElement});
+      this.display,
+      @JsonKey(name: '_display') this.displayElement,
+      this.designation,
+      this.contains})
+      : super._();
 
   factory _$_ValueSetContains.fromJson(Map<String, dynamic> json) =>
       _$_$_ValueSetContainsFromJson(json);
@@ -18273,41 +18344,42 @@ class _$_ValueSetContains implements _ValueSetContains {
   @override
   final FhirUri system;
   @override
-  final Boolean abstract;
-  @override
-  final Boolean inactive;
-  @override
-  final String version;
-  @override
-  final Code code;
-  @override
-  final String display;
-  @override
-  final List<ValueSetDesignation> designation;
-  @override
-  final List<ValueSetContains> contains;
-  @override
   @JsonKey(name: '_system')
   final Element systemElement;
+  @override
+  @JsonKey(name: 'abstract')
+  final Boolean abstract_;
   @override
   @JsonKey(name: '_abstract')
   final Element abstractElement;
   @override
+  final Boolean inactive;
+  @override
   @JsonKey(name: '_inactive')
   final Element inactiveElement;
+  @override
+  final String version;
   @override
   @JsonKey(name: '_version')
   final Element versionElement;
   @override
+  final Code code;
+  @override
   @JsonKey(name: '_code')
   final Element codeElement;
   @override
+  final String display;
+  @override
   @JsonKey(name: '_display')
   final Element displayElement;
+  @override
+  final List<ValueSetDesignation> designation;
+  @override
+  final List<ValueSetContains> contains;
 
   @override
   String toString() {
-    return 'ValueSetContains(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, system: $system, abstract: $abstract, inactive: $inactive, version: $version, code: $code, display: $display, designation: $designation, contains: $contains, systemElement: $systemElement, abstractElement: $abstractElement, inactiveElement: $inactiveElement, versionElement: $versionElement, codeElement: $codeElement, displayElement: $displayElement)';
+    return 'ValueSetContains(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, system: $system, systemElement: $systemElement, abstract_: $abstract_, abstractElement: $abstractElement, inactive: $inactive, inactiveElement: $inactiveElement, version: $version, versionElement: $versionElement, code: $code, codeElement: $codeElement, display: $display, displayElement: $displayElement, designation: $designation, contains: $contains)';
   }
 
   @override
@@ -18324,44 +18396,44 @@ class _$_ValueSetContains implements _ValueSetContains {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.system, system) ||
                 const DeepCollectionEquality().equals(other.system, system)) &&
-            (identical(other.abstract, abstract) ||
+            (identical(other.systemElement, systemElement) ||
                 const DeepCollectionEquality()
-                    .equals(other.abstract, abstract)) &&
+                    .equals(other.systemElement, systemElement)) &&
+            (identical(other.abstract_, abstract_) ||
+                const DeepCollectionEquality()
+                    .equals(other.abstract_, abstract_)) &&
+            (identical(other.abstractElement, abstractElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.abstractElement, abstractElement)) &&
             (identical(other.inactive, inactive) ||
                 const DeepCollectionEquality()
                     .equals(other.inactive, inactive)) &&
+            (identical(other.inactiveElement, inactiveElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.inactiveElement, inactiveElement)) &&
             (identical(other.version, version) ||
                 const DeepCollectionEquality()
                     .equals(other.version, version)) &&
+            (identical(other.versionElement, versionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.versionElement, versionElement)) &&
             (identical(other.code, code) ||
                 const DeepCollectionEquality().equals(other.code, code)) &&
+            (identical(other.codeElement, codeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.codeElement, codeElement)) &&
             (identical(other.display, display) ||
                 const DeepCollectionEquality()
                     .equals(other.display, display)) &&
+            (identical(other.displayElement, displayElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.displayElement, displayElement)) &&
             (identical(other.designation, designation) ||
                 const DeepCollectionEquality()
                     .equals(other.designation, designation)) &&
             (identical(other.contains, contains) ||
                 const DeepCollectionEquality()
-                    .equals(other.contains, contains)) &&
-            (identical(other.systemElement, systemElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.systemElement, systemElement)) &&
-            (identical(other.abstractElement, abstractElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.abstractElement, abstractElement)) &&
-            (identical(other.inactiveElement, inactiveElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.inactiveElement, inactiveElement)) &&
-            (identical(other.versionElement, versionElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.versionElement, versionElement)) &&
-            (identical(other.codeElement, codeElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.codeElement, codeElement)) &&
-            (identical(other.displayElement, displayElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.displayElement, displayElement)));
+                    .equals(other.contains, contains)));
   }
 
   @override
@@ -18371,19 +18443,19 @@ class _$_ValueSetContains implements _ValueSetContains {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(system) ^
-      const DeepCollectionEquality().hash(abstract) ^
-      const DeepCollectionEquality().hash(inactive) ^
-      const DeepCollectionEquality().hash(version) ^
-      const DeepCollectionEquality().hash(code) ^
-      const DeepCollectionEquality().hash(display) ^
-      const DeepCollectionEquality().hash(designation) ^
-      const DeepCollectionEquality().hash(contains) ^
       const DeepCollectionEquality().hash(systemElement) ^
+      const DeepCollectionEquality().hash(abstract_) ^
       const DeepCollectionEquality().hash(abstractElement) ^
+      const DeepCollectionEquality().hash(inactive) ^
       const DeepCollectionEquality().hash(inactiveElement) ^
+      const DeepCollectionEquality().hash(version) ^
       const DeepCollectionEquality().hash(versionElement) ^
+      const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(codeElement) ^
-      const DeepCollectionEquality().hash(displayElement);
+      const DeepCollectionEquality().hash(display) ^
+      const DeepCollectionEquality().hash(displayElement) ^
+      const DeepCollectionEquality().hash(designation) ^
+      const DeepCollectionEquality().hash(contains);
 
   @override
   _$ValueSetContainsCopyWith<_ValueSetContains> get copyWith =>
@@ -18395,25 +18467,26 @@ class _$_ValueSetContains implements _ValueSetContains {
   }
 }
 
-abstract class _ValueSetContains implements ValueSetContains {
-  const factory _ValueSetContains(
+abstract class _ValueSetContains extends ValueSetContains {
+  _ValueSetContains._() : super._();
+  factory _ValueSetContains(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri system,
-      Boolean abstract,
-      Boolean inactive,
-      String version,
-      Code code,
-      String display,
-      List<ValueSetDesignation> designation,
-      List<ValueSetContains> contains,
       @JsonKey(name: '_system') Element systemElement,
+      @JsonKey(name: 'abstract') Boolean abstract_,
       @JsonKey(name: '_abstract') Element abstractElement,
+      Boolean inactive,
       @JsonKey(name: '_inactive') Element inactiveElement,
+      String version,
       @JsonKey(name: '_version') Element versionElement,
+      Code code,
       @JsonKey(name: '_code') Element codeElement,
-      @JsonKey(name: '_display') Element displayElement}) = _$_ValueSetContains;
+      String display,
+      @JsonKey(name: '_display') Element displayElement,
+      List<ValueSetDesignation> designation,
+      List<ValueSetContains> contains}) = _$_ValueSetContains;
 
   factory _ValueSetContains.fromJson(Map<String, dynamic> json) =
       _$_ValueSetContains.fromJson;
@@ -18428,37 +18501,38 @@ abstract class _ValueSetContains implements ValueSetContains {
   @override
   FhirUri get system;
   @override
-  Boolean get abstract;
-  @override
-  Boolean get inactive;
-  @override
-  String get version;
-  @override
-  Code get code;
-  @override
-  String get display;
-  @override
-  List<ValueSetDesignation> get designation;
-  @override
-  List<ValueSetContains> get contains;
-  @override
   @JsonKey(name: '_system')
   Element get systemElement;
+  @override
+  @JsonKey(name: 'abstract')
+  Boolean get abstract_;
   @override
   @JsonKey(name: '_abstract')
   Element get abstractElement;
   @override
+  Boolean get inactive;
+  @override
   @JsonKey(name: '_inactive')
   Element get inactiveElement;
+  @override
+  String get version;
   @override
   @JsonKey(name: '_version')
   Element get versionElement;
   @override
+  Code get code;
+  @override
   @JsonKey(name: '_code')
   Element get codeElement;
   @override
+  String get display;
+  @override
   @JsonKey(name: '_display')
   Element get displayElement;
+  @override
+  List<ValueSetDesignation> get designation;
+  @override
+  List<ValueSetContains> get contains;
   @override
   _$ValueSetContainsCopyWith<_ValueSetContains> get copyWith;
 }

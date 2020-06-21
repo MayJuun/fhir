@@ -490,7 +490,7 @@ class __$PaymentNoticeCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_PaymentNotice implements _PaymentNotice {
-  const _$_PaymentNotice(
+  _$_PaymentNotice(
       {@required
       @JsonKey(required: true, defaultValue: 'PaymentNotice')
           this.resourceType,
@@ -683,7 +683,7 @@ class _$_PaymentNotice implements _PaymentNotice {
 }
 
 abstract class _PaymentNotice implements PaymentNotice {
-  const factory _PaymentNotice(
+  factory _PaymentNotice(
       {@required
       @JsonKey(required: true, defaultValue: 'PaymentNotice')
           String resourceType,
@@ -1326,7 +1326,7 @@ class __$PaymentReconciliationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_PaymentReconciliation implements _PaymentReconciliation {
-  const _$_PaymentReconciliation(
+  _$_PaymentReconciliation(
       {@required
       @JsonKey(required: true, defaultValue: 'PaymentReconciliation')
           this.resourceType,
@@ -1544,7 +1544,7 @@ class _$_PaymentReconciliation implements _PaymentReconciliation {
 }
 
 abstract class _PaymentReconciliation implements PaymentReconciliation {
-  const factory _PaymentReconciliation(
+  factory _PaymentReconciliation(
       {@required
       @JsonKey(required: true, defaultValue: 'PaymentReconciliation')
           String resourceType,
@@ -1893,7 +1893,7 @@ class __$PaymentReconciliationDetailCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_PaymentReconciliationDetail implements _PaymentReconciliationDetail {
-  const _$_PaymentReconciliationDetail(
+  _$_PaymentReconciliationDetail(
       {@JsonKey(required: true) this.type,
       this.request,
       this.response,
@@ -1981,7 +1981,7 @@ class _$_PaymentReconciliationDetail implements _PaymentReconciliationDetail {
 
 abstract class _PaymentReconciliationDetail
     implements PaymentReconciliationDetail {
-  const factory _PaymentReconciliationDetail(
+  factory _PaymentReconciliationDetail(
           {@JsonKey(required: true) CodeableConcept type,
           Reference request,
           Reference response,
@@ -2158,7 +2158,7 @@ class __$PaymentReconciliationProcessNoteCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_PaymentReconciliationProcessNote
     implements _PaymentReconciliationProcessNote {
-  const _$_PaymentReconciliationProcessNote(
+  _$_PaymentReconciliationProcessNote(
       {this.type, this.text, @JsonKey(name: '_text') this.textElement});
 
   factory _$_PaymentReconciliationProcessNote.fromJson(
@@ -2211,7 +2211,7 @@ class _$_PaymentReconciliationProcessNote
 
 abstract class _PaymentReconciliationProcessNote
     implements PaymentReconciliationProcessNote {
-  const factory _PaymentReconciliationProcessNote(
+  factory _PaymentReconciliationProcessNote(
           {CodeableConcept type,
           String text,
           @JsonKey(name: '_text') Element textElement}) =

@@ -9,7 +9,7 @@ part 'patient_management.g.dart';
 
 @freezed
 abstract class Communication with _$Communication implements Resource {
-  const factory Communication({
+  factory Communication({
     @JsonKey(defaultValue: 'Communication') String resourceType,
     Id id,
     Meta meta,
@@ -46,7 +46,7 @@ abstract class Communication with _$Communication implements Resource {
 
 @freezed
 abstract class EpisodeOfCare with _$EpisodeOfCare implements Resource {
-  const factory EpisodeOfCare({
+  factory EpisodeOfCare({
     @JsonKey(defaultValue: 'EpisodeOfCare') String resourceType,
     Id id,
     Meta meta,
@@ -80,7 +80,7 @@ abstract class EpisodeOfCare with _$EpisodeOfCare implements Resource {
 
 @freezed
 abstract class Encounter with _$Encounter implements Resource {
-  const factory Encounter({
+  factory Encounter({
     @JsonKey(defaultValue: 'Encounter') String resourceType,
     Id id,
     Meta meta,
@@ -124,7 +124,7 @@ abstract class Encounter with _$Encounter implements Resource {
 
 @freezed
 abstract class Flag with _$Flag implements Resource {
-  const factory Flag({
+  factory Flag({
     @JsonKey(defaultValue: 'Flag') String resourceType,
     Id id,
     Meta meta,
@@ -154,7 +154,7 @@ abstract class Flag with _$Flag implements Resource {
 
 @freezed
 abstract class CommunicationPayload with _$CommunicationPayload {
-  const factory CommunicationPayload({
+  factory CommunicationPayload({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -170,7 +170,7 @@ abstract class CommunicationPayload with _$CommunicationPayload {
 
 @freezed
 abstract class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
-  const factory EpisodeOfCareStatusHistory({
+  factory EpisodeOfCareStatusHistory({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -188,7 +188,7 @@ abstract class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
 
 @freezed
 abstract class EpisodeOfCareCareTeam with _$EpisodeOfCareCareTeam {
-  const factory EpisodeOfCareCareTeam({
+  factory EpisodeOfCareCareTeam({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -203,7 +203,7 @@ abstract class EpisodeOfCareCareTeam with _$EpisodeOfCareCareTeam {
 
 @freezed
 abstract class EncounterStatusHistory with _$EncounterStatusHistory {
-  const factory EncounterStatusHistory({
+  factory EncounterStatusHistory({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -220,7 +220,7 @@ abstract class EncounterStatusHistory with _$EncounterStatusHistory {
 
 @freezed
 abstract class EncounterParticipant with _$EncounterParticipant {
-  const factory EncounterParticipant({
+  factory EncounterParticipant({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -235,7 +235,7 @@ abstract class EncounterParticipant with _$EncounterParticipant {
 
 @freezed
 abstract class EncounterHospitalization with _$EncounterHospitalization {
-  const factory EncounterHospitalization({
+  factory EncounterHospitalization({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     @JsonKey(name: 'fhir_comments') List<String> fhirComments,
@@ -259,7 +259,7 @@ abstract class EncounterHospitalization with _$EncounterHospitalization {
 
 @freezed
 abstract class EncounterLocation with _$EncounterLocation {
-  const factory EncounterLocation({
+  factory EncounterLocation({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,

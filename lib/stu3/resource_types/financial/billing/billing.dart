@@ -8,11 +8,10 @@ part 'billing.g.dart';
 
 @freezed
 abstract class Claim with _$Claim implements Resource {
-  const factory Claim({
+  factory Claim({
     @JsonKey(required: true, defaultValue: 'Claim')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -60,7 +59,7 @@ abstract class Claim with _$Claim implements Resource {
 
 @freezed
 abstract class ClaimRelated with _$ClaimRelated {
-  const factory ClaimRelated({
+  factory ClaimRelated({
     Reference claim,
     CodeableConcept relationship,
     Identifier reference,
@@ -71,12 +70,11 @@ abstract class ClaimRelated with _$ClaimRelated {
 
 @freezed
 abstract class ClaimPayee with _$ClaimPayee {
-  const factory ClaimPayee({
+  factory ClaimPayee({
     @JsonKey(required: true) CodeableConcept type,
     @JsonKey(required: true, defaultValue: 'ClaimPayee')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -93,7 +91,7 @@ abstract class ClaimPayee with _$ClaimPayee {
 
 @freezed
 abstract class ClaimCareTeam with _$ClaimCareTeam {
-  const factory ClaimCareTeam({
+  factory ClaimCareTeam({
     PositiveInt sequence,
     @JsonKey(required: true) Reference provider,
     Boolean responsible,
@@ -108,7 +106,7 @@ abstract class ClaimCareTeam with _$ClaimCareTeam {
 
 @freezed
 abstract class ClaimInformation with _$ClaimInformation {
-  const factory ClaimInformation({
+  factory ClaimInformation({
     PositiveInt sequence,
     @JsonKey(required: true) CodeableConcept category,
     CodeableConcept code,
@@ -129,7 +127,7 @@ abstract class ClaimInformation with _$ClaimInformation {
 
 @freezed
 abstract class ClaimDiagnosis with _$ClaimDiagnosis {
-  const factory ClaimDiagnosis({
+  factory ClaimDiagnosis({
     PositiveInt sequence,
     CodeableConcept diagnosisCodeableConcept,
     Reference diagnosisReference,
@@ -143,7 +141,7 @@ abstract class ClaimDiagnosis with _$ClaimDiagnosis {
 
 @freezed
 abstract class ClaimProcedure with _$ClaimProcedure {
-  const factory ClaimProcedure({
+  factory ClaimProcedure({
     PositiveInt sequence,
     FhirDateTime date,
     CodeableConcept procedureCodeableConcept,
@@ -157,7 +155,7 @@ abstract class ClaimProcedure with _$ClaimProcedure {
 
 @freezed
 abstract class ClaimInsurance with _$ClaimInsurance {
-  const factory ClaimInsurance({
+  factory ClaimInsurance({
     PositiveInt sequence,
     Boolean focal,
     @JsonKey(required: true) Reference coverage,
@@ -175,7 +173,7 @@ abstract class ClaimInsurance with _$ClaimInsurance {
 
 @freezed
 abstract class ClaimAccident with _$ClaimAccident {
-  const factory ClaimAccident({
+  factory ClaimAccident({
     Date date,
     CodeableConcept type,
     Address locationAddress,
@@ -188,7 +186,7 @@ abstract class ClaimAccident with _$ClaimAccident {
 
 @freezed
 abstract class ClaimItem with _$ClaimItem {
-  const factory ClaimItem({
+  factory ClaimItem({
     PositiveInt sequence,
     List<PositiveInt> careTeamLinkId,
     List<PositiveInt> diagnosisLinkId,
@@ -227,7 +225,7 @@ abstract class ClaimItem with _$ClaimItem {
 
 @freezed
 abstract class ClaimDetail with _$ClaimDetail {
-  const factory ClaimDetail({
+  factory ClaimDetail({
     PositiveInt sequence,
     CodeableConcept revenue,
     CodeableConcept category,
@@ -249,7 +247,7 @@ abstract class ClaimDetail with _$ClaimDetail {
 
 @freezed
 abstract class ClaimSubDetail with _$ClaimSubDetail {
-  const factory ClaimSubDetail({
+  factory ClaimSubDetail({
     PositiveInt sequence,
     CodeableConcept revenue,
     CodeableConcept category,
@@ -270,11 +268,10 @@ abstract class ClaimSubDetail with _$ClaimSubDetail {
 
 @freezed
 abstract class ClaimResponse with _$ClaimResponse implements Resource {
-  const factory ClaimResponse({
+  factory ClaimResponse({
     @JsonKey(required: true, defaultValue: 'ClaimResponse')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -316,7 +313,7 @@ abstract class ClaimResponse with _$ClaimResponse implements Resource {
 
 @freezed
 abstract class ClaimResponseItem with _$ClaimResponseItem {
-  const factory ClaimResponseItem({
+  factory ClaimResponseItem({
     PositiveInt sequenceLinkId,
     List<PositiveInt> noteNumber,
     List<ClaimResponseAdjudication> adjudication,
@@ -330,7 +327,7 @@ abstract class ClaimResponseItem with _$ClaimResponseItem {
 
 @freezed
 abstract class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
-  const factory ClaimResponseAdjudication({
+  factory ClaimResponseAdjudication({
     @JsonKey(required: true) CodeableConcept category,
     CodeableConcept reason,
     Money amount,
@@ -343,7 +340,7 @@ abstract class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
 
 @freezed
 abstract class ClaimResponseDetail with _$ClaimResponseDetail {
-  const factory ClaimResponseDetail({
+  factory ClaimResponseDetail({
     PositiveInt sequenceLinkId,
     List<PositiveInt> noteNumber,
     List<ClaimResponseAdjudication> adjudication,
@@ -357,7 +354,7 @@ abstract class ClaimResponseDetail with _$ClaimResponseDetail {
 
 @freezed
 abstract class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
-  const factory ClaimResponseSubDetail({
+  factory ClaimResponseSubDetail({
     PositiveInt sequenceLinkId,
     List<PositiveInt> noteNumber,
     List<ClaimResponseAdjudication> adjudication,
@@ -370,7 +367,7 @@ abstract class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
 
 @freezed
 abstract class ClaimResponseAddItem with _$ClaimResponseAddItem {
-  const factory ClaimResponseAddItem({
+  factory ClaimResponseAddItem({
     List<PositiveInt> sequenceLinkId,
     CodeableConcept revenue,
     CodeableConcept category,
@@ -389,7 +386,7 @@ abstract class ClaimResponseAddItem with _$ClaimResponseAddItem {
 
 @freezed
 abstract class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
-  const factory ClaimResponseDetail1({
+  factory ClaimResponseDetail1({
     CodeableConcept revenue,
     CodeableConcept category,
     CodeableConcept service,
@@ -405,7 +402,7 @@ abstract class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
 
 @freezed
 abstract class ClaimResponseError with _$ClaimResponseError {
-  const factory ClaimResponseError({
+  factory ClaimResponseError({
     PositiveInt sequenceLinkId,
     PositiveInt detailSequenceLinkId,
     PositiveInt subdetailSequenceLinkId,
@@ -421,7 +418,7 @@ abstract class ClaimResponseError with _$ClaimResponseError {
 
 @freezed
 abstract class ClaimResponsePayment with _$ClaimResponsePayment {
-  const factory ClaimResponsePayment({
+  factory ClaimResponsePayment({
     CodeableConcept type,
     Money adjustment,
     CodeableConcept adjustmentReason,
@@ -436,7 +433,7 @@ abstract class ClaimResponsePayment with _$ClaimResponsePayment {
 
 @freezed
 abstract class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
-  const factory ClaimResponseProcessNote({
+  factory ClaimResponseProcessNote({
     PositiveInt number,
     CodeableConcept type,
     String text,
@@ -450,7 +447,7 @@ abstract class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
 
 @freezed
 abstract class ClaimResponseInsurance with _$ClaimResponseInsurance {
-  const factory ClaimResponseInsurance({
+  factory ClaimResponseInsurance({
     PositiveInt sequence,
     Boolean focal,
     @JsonKey(required: true) Reference coverage,

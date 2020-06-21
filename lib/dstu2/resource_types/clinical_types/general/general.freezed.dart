@@ -915,7 +915,7 @@ class __$ConditionCopyWithImpl<$Res> extends _$ConditionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Condition implements _Condition {
-  const _$_Condition(
+  _$_Condition(
       {@JsonKey(defaultValue: 'Condition')
           this.resourceType,
       this.id,
@@ -1228,7 +1228,7 @@ class _$_Condition implements _Condition {
 }
 
 abstract class _Condition implements Condition {
-  const factory _Condition(
+  factory _Condition(
       {@JsonKey(defaultValue: 'Condition')
           String resourceType,
       Id id,
@@ -1924,7 +1924,7 @@ class __$DetectedIssueCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DetectedIssue implements _DetectedIssue {
-  const _$_DetectedIssue(
+  _$_DetectedIssue(
       {@JsonKey(defaultValue: 'DetectedIssue') this.resourceType,
       this.id,
       this.meta,
@@ -2126,7 +2126,7 @@ class _$_DetectedIssue implements _DetectedIssue {
 }
 
 abstract class _DetectedIssue implements DetectedIssue {
-  const factory _DetectedIssue(
+  factory _DetectedIssue(
       {@JsonKey(defaultValue: 'DetectedIssue')
           String resourceType,
       Id id,
@@ -3118,7 +3118,7 @@ class __$FamilyMemberHistoryCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_FamilyMemberHistory implements _FamilyMemberHistory {
-  const _$_FamilyMemberHistory(
+  _$_FamilyMemberHistory(
       {@JsonKey(defaultValue: 'FamilyMemberHistory')
           this.resourceType,
       this.id,
@@ -3434,7 +3434,7 @@ class _$_FamilyMemberHistory implements _FamilyMemberHistory {
 }
 
 abstract class _FamilyMemberHistory implements FamilyMemberHistory {
-  const factory _FamilyMemberHistory(
+  factory _FamilyMemberHistory(
       {@JsonKey(defaultValue: 'FamilyMemberHistory')
           String resourceType,
       Id id,
@@ -4342,7 +4342,7 @@ class __$ProcedureCopyWithImpl<$Res> extends _$ProcedureCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Procedure implements _Procedure {
-  const _$_Procedure(
+  _$_Procedure(
       {@JsonKey(defaultValue: 'Procedure')
           this.resourceType,
       this.id,
@@ -4621,7 +4621,7 @@ class _$_Procedure implements _Procedure {
 }
 
 abstract class _Procedure implements Procedure {
-  const factory _Procedure(
+  factory _Procedure(
       {@JsonKey(defaultValue: 'Procedure')
           String resourceType,
       Id id,
@@ -5444,7 +5444,7 @@ class __$ClinicalImpressionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClinicalImpression implements _ClinicalImpression {
-  const _$_ClinicalImpression(
+  _$_ClinicalImpression(
       {@JsonKey(defaultValue: 'ClinicalImpression')
           this.resourceType,
       this.id,
@@ -5714,7 +5714,7 @@ class _$_ClinicalImpression implements _ClinicalImpression {
 }
 
 abstract class _ClinicalImpression implements ClinicalImpression {
-  const factory _ClinicalImpression(
+  factory _ClinicalImpression(
       {@JsonKey(defaultValue: 'ClinicalImpression')
           String resourceType,
       Id id,
@@ -6328,7 +6328,7 @@ class __$RiskAssessmentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_RiskAssessment implements _RiskAssessment {
-  const _$_RiskAssessment(
+  _$_RiskAssessment(
       {@JsonKey(defaultValue: 'RiskAssessment') this.resourceType,
       this.id,
       this.meta,
@@ -6513,7 +6513,7 @@ class _$_RiskAssessment implements _RiskAssessment {
 }
 
 abstract class _RiskAssessment implements RiskAssessment {
-  const factory _RiskAssessment(
+  factory _RiskAssessment(
           {@JsonKey(defaultValue: 'RiskAssessment') String resourceType,
           Id id,
           Meta meta,
@@ -7303,7 +7303,7 @@ class __$AllergyIntoleranceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_AllergyIntolerance implements _AllergyIntolerance {
-  const _$_AllergyIntolerance(
+  _$_AllergyIntolerance(
       {@JsonKey(defaultValue: 'AllergyIntolerance')
           this.resourceType,
       this.id,
@@ -7568,7 +7568,7 @@ class _$_AllergyIntolerance implements _AllergyIntolerance {
 }
 
 abstract class _AllergyIntolerance implements AllergyIntolerance {
-  const factory _AllergyIntolerance(
+  factory _AllergyIntolerance(
       {@JsonKey(defaultValue: 'AllergyIntolerance')
           String resourceType,
       Id id,
@@ -7878,7 +7878,7 @@ class __$ConditionStageCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConditionStage implements _ConditionStage {
-  const _$_ConditionStage(
+  _$_ConditionStage(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       @JsonKey(name: 'fhir_comments') this.fhirComments,
@@ -7953,7 +7953,7 @@ class _$_ConditionStage implements _ConditionStage {
 }
 
 abstract class _ConditionStage implements ConditionStage {
-  const factory _ConditionStage(
+  factory _ConditionStage(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(name: 'fhir_comments') List<String> fhirComments,
@@ -8152,7 +8152,7 @@ class __$ConditionEvidenceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConditionEvidence implements _ConditionEvidence {
-  const _$_ConditionEvidence(
+  _$_ConditionEvidence(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -8225,7 +8225,7 @@ class _$_ConditionEvidence implements _ConditionEvidence {
 }
 
 abstract class _ConditionEvidence implements ConditionEvidence {
-  const factory _ConditionEvidence(
+  factory _ConditionEvidence(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -8435,7 +8435,7 @@ class __$DetectedIssueMitigationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_DetectedIssueMitigation implements _DetectedIssueMitigation {
-  const _$_DetectedIssueMitigation(
+  _$_DetectedIssueMitigation(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -8509,7 +8509,7 @@ class _$_DetectedIssueMitigation implements _DetectedIssueMitigation {
 }
 
 abstract class _DetectedIssueMitigation implements DetectedIssueMitigation {
-  const factory _DetectedIssueMitigation(
+  factory _DetectedIssueMitigation(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -8848,7 +8848,7 @@ class __$FamilyMemberHistoryConditionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_FamilyMemberHistoryCondition implements _FamilyMemberHistoryCondition {
-  const _$_FamilyMemberHistoryCondition(
+  _$_FamilyMemberHistoryCondition(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -8960,7 +8960,7 @@ class _$_FamilyMemberHistoryCondition implements _FamilyMemberHistoryCondition {
 
 abstract class _FamilyMemberHistoryCondition
     implements FamilyMemberHistoryCondition {
-  const factory _FamilyMemberHistoryCondition(
+  factory _FamilyMemberHistoryCondition(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -9190,7 +9190,7 @@ class __$ProcedurePerformerCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ProcedurePerformer implements _ProcedurePerformer {
-  const _$_ProcedurePerformer(
+  _$_ProcedurePerformer(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -9263,7 +9263,7 @@ class _$_ProcedurePerformer implements _ProcedurePerformer {
 }
 
 abstract class _ProcedurePerformer implements ProcedurePerformer {
-  const factory _ProcedurePerformer(
+  factory _ProcedurePerformer(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -9466,7 +9466,7 @@ class __$ProcedureFocalDeviceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ProcedureFocalDevice implements _ProcedureFocalDevice {
-  const _$_ProcedureFocalDevice(
+  _$_ProcedureFocalDevice(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -9535,7 +9535,7 @@ class _$_ProcedureFocalDevice implements _ProcedureFocalDevice {
 }
 
 abstract class _ProcedureFocalDevice implements ProcedureFocalDevice {
-  const factory _ProcedureFocalDevice(
+  factory _ProcedureFocalDevice(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -9727,7 +9727,7 @@ class __$ClinicalImpressionInvestigationsCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ClinicalImpressionInvestigations
     implements _ClinicalImpressionInvestigations {
-  const _$_ClinicalImpressionInvestigations(
+  _$_ClinicalImpressionInvestigations(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -9797,7 +9797,7 @@ class _$_ClinicalImpressionInvestigations
 
 abstract class _ClinicalImpressionInvestigations
     implements ClinicalImpressionInvestigations {
-  const factory _ClinicalImpressionInvestigations(
+  factory _ClinicalImpressionInvestigations(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -9983,7 +9983,7 @@ class __$ClinicalImpressionFindingCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClinicalImpressionFinding implements _ClinicalImpressionFinding {
-  const _$_ClinicalImpressionFinding(
+  _$_ClinicalImpressionFinding(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -10052,7 +10052,7 @@ class _$_ClinicalImpressionFinding implements _ClinicalImpressionFinding {
 }
 
 abstract class _ClinicalImpressionFinding implements ClinicalImpressionFinding {
-  const factory _ClinicalImpressionFinding(
+  factory _ClinicalImpressionFinding(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -10238,7 +10238,7 @@ class __$ClinicalImpressionRuledOutCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ClinicalImpressionRuledOut implements _ClinicalImpressionRuledOut {
-  const _$_ClinicalImpressionRuledOut(
+  _$_ClinicalImpressionRuledOut(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -10307,7 +10307,7 @@ class _$_ClinicalImpressionRuledOut implements _ClinicalImpressionRuledOut {
 
 abstract class _ClinicalImpressionRuledOut
     implements ClinicalImpressionRuledOut {
-  const factory _ClinicalImpressionRuledOut(
+  factory _ClinicalImpressionRuledOut(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -10699,7 +10699,7 @@ class __$RiskAssessmentPredictionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_RiskAssessmentPrediction implements _RiskAssessmentPrediction {
-  const _$_RiskAssessmentPrediction(
+  _$_RiskAssessmentPrediction(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -10839,7 +10839,7 @@ class _$_RiskAssessmentPrediction implements _RiskAssessmentPrediction {
 }
 
 abstract class _RiskAssessmentPrediction implements RiskAssessmentPrediction {
-  const factory _RiskAssessmentPrediction(
+  factory _RiskAssessmentPrediction(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -11313,7 +11313,7 @@ class __$AllergyIntoleranceReactionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_AllergyIntoleranceReaction implements _AllergyIntoleranceReaction {
-  const _$_AllergyIntoleranceReaction(
+  _$_AllergyIntoleranceReaction(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -11466,7 +11466,7 @@ class _$_AllergyIntoleranceReaction implements _AllergyIntoleranceReaction {
 
 abstract class _AllergyIntoleranceReaction
     implements AllergyIntoleranceReaction {
-  const factory _AllergyIntoleranceReaction(
+  factory _AllergyIntoleranceReaction(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,

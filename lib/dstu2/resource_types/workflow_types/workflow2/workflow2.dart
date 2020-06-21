@@ -9,7 +9,7 @@ part 'workflow2.g.dart';
 
 @freezed
 abstract class ProcessRequest with _$ProcessRequest implements Resource {
-  const factory ProcessRequest({
+  factory ProcessRequest({
     @JsonKey(defaultValue: 'ProcessRequest') String resourceType,
     Id id,
     Meta meta,
@@ -45,7 +45,7 @@ abstract class ProcessRequest with _$ProcessRequest implements Resource {
 
 @freezed
 abstract class SupplyDelivery with _$SupplyDelivery implements Resource {
-  const factory SupplyDelivery({
+  factory SupplyDelivery({
     @JsonKey(defaultValue: 'SupplyDelivery') String resourceType,
     Id id,
     Meta meta,
@@ -78,7 +78,7 @@ abstract class SupplyDelivery with _$SupplyDelivery implements Resource {
 
 @freezed
 abstract class ProcessResponse with _$ProcessResponse implements Resource {
-  const factory ProcessResponse({
+  factory ProcessResponse({
     @JsonKey(defaultValue: 'ProcessResponse') String resourceType,
     Id id,
     Meta meta,
@@ -109,7 +109,7 @@ abstract class ProcessResponse with _$ProcessResponse implements Resource {
 
 @freezed
 abstract class SupplyRequest with _$SupplyRequest implements Resource {
-  const factory SupplyRequest({
+  factory SupplyRequest({
     @JsonKey(defaultValue: 'SupplyRequest') String resourceType,
     Id id,
     Meta meta,
@@ -142,7 +142,7 @@ abstract class SupplyRequest with _$SupplyRequest implements Resource {
 
 @freezed
 abstract class ProcessRequestItem with _$ProcessRequestItem {
-  const factory ProcessRequestItem({
+  factory ProcessRequestItem({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -155,7 +155,7 @@ abstract class ProcessRequestItem with _$ProcessRequestItem {
 
 @freezed
 abstract class ProcessResponseNotes with _$ProcessResponseNotes {
-  const factory ProcessResponseNotes({
+  factory ProcessResponseNotes({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -169,7 +169,7 @@ abstract class ProcessResponseNotes with _$ProcessResponseNotes {
 
 @freezed
 abstract class SupplyRequestWhen with _$SupplyRequestWhen {
-  const factory SupplyRequestWhen({
+  factory SupplyRequestWhen({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,

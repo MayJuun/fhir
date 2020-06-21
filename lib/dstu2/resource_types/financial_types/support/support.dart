@@ -9,7 +9,7 @@ part 'support.g.dart';
 
 @freezed
 abstract class Coverage with _$Coverage implements Resource {
-  const factory Coverage({
+  factory Coverage({
     @JsonKey(defaultValue: 'Coverage') String resourceType,
     Id id,
     Meta meta,
@@ -48,7 +48,7 @@ abstract class Coverage with _$Coverage implements Resource {
 abstract class EligibilityRequest
     with _$EligibilityRequest
     implements Resource {
-  const factory EligibilityRequest({
+  factory EligibilityRequest({
     @JsonKey(defaultValue: 'EligibilityRequest') String resourceType,
     Id id,
     Meta meta,
@@ -76,7 +76,7 @@ abstract class EligibilityRequest
 
 @freezed
 abstract class EnrollmentRequest with _$EnrollmentRequest implements Resource {
-  const factory EnrollmentRequest({
+  factory EnrollmentRequest({
     @JsonKey(defaultValue: 'EnrollmentRequest') String resourceType,
     Id id,
     Meta meta,
@@ -109,7 +109,7 @@ abstract class EnrollmentRequest with _$EnrollmentRequest implements Resource {
 abstract class EnrollmentResponse
     with _$EnrollmentResponse
     implements Resource {
-  const factory EnrollmentResponse({
+  factory EnrollmentResponse({
     @JsonKey(defaultValue: 'EnrollmentResponse') String resourceType,
     Id id,
     Meta meta,
@@ -145,7 +145,7 @@ abstract class EnrollmentResponse
 abstract class EligibilityResponse
     with _$EligibilityResponse
     implements Resource {
-  const factory EligibilityResponse({
+  factory EligibilityResponse({
     @JsonKey(defaultValue: 'EligibilityResponse') String resourceType,
     Id id,
     Meta meta,

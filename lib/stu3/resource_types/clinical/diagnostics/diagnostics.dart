@@ -8,11 +8,10 @@ part 'diagnostics.g.dart';
 
 @freezed
 abstract class BodySite with _$BodySite implements Resource {
-  const factory BodySite({
+  factory BodySite({
     @JsonKey(required: true, defaultValue: 'BodySite')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -37,11 +36,10 @@ abstract class BodySite with _$BodySite implements Resource {
 
 @freezed
 abstract class DiagnosticReport with _$DiagnosticReport implements Resource {
-  const factory DiagnosticReport({
+  factory DiagnosticReport({
     @JsonKey(required: true, defaultValue: 'DiagnosticReport')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -80,7 +78,7 @@ abstract class DiagnosticReport with _$DiagnosticReport implements Resource {
 
 @freezed
 abstract class DiagnosticReportPerformer with _$DiagnosticReportPerformer {
-  const factory DiagnosticReportPerformer({
+  factory DiagnosticReportPerformer({
     CodeableConcept role,
     @JsonKey(required: true) Reference actor,
   }) = _DiagnosticReportPerformer;
@@ -90,7 +88,7 @@ abstract class DiagnosticReportPerformer with _$DiagnosticReportPerformer {
 
 @freezed
 abstract class DiagnosticReportImage with _$DiagnosticReportImage {
-  const factory DiagnosticReportImage({
+  factory DiagnosticReportImage({
     String comment,
     @JsonKey(required: true) Reference link,
     @JsonKey(name: '_comment') Element commentElement,
@@ -101,11 +99,10 @@ abstract class DiagnosticReportImage with _$DiagnosticReportImage {
 
 @freezed
 abstract class ImagingManifest with _$ImagingManifest implements Resource {
-  const factory ImagingManifest({
+  factory ImagingManifest({
     @JsonKey(required: true, defaultValue: 'ImagingManifest')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -129,7 +126,7 @@ abstract class ImagingManifest with _$ImagingManifest implements Resource {
 
 @freezed
 abstract class ImagingManifestStudy with _$ImagingManifestStudy {
-  const factory ImagingManifestStudy({
+  factory ImagingManifestStudy({
     Oid uid,
     Reference imagingStudy,
     List<Reference> endpoint,
@@ -142,7 +139,7 @@ abstract class ImagingManifestStudy with _$ImagingManifestStudy {
 
 @freezed
 abstract class ImagingManifestSeries with _$ImagingManifestSeries {
-  const factory ImagingManifestSeries({
+  factory ImagingManifestSeries({
     Oid uid,
     List<Reference> endpoint,
     @JsonKey(required: true) List<ImagingManifestInstance> instance,
@@ -154,7 +151,7 @@ abstract class ImagingManifestSeries with _$ImagingManifestSeries {
 
 @freezed
 abstract class ImagingManifestInstance with _$ImagingManifestInstance {
-  const factory ImagingManifestInstance({
+  factory ImagingManifestInstance({
     Oid sopClass,
     Oid uid,
     @JsonKey(name: '_sopClass') Element sopClassElement,
@@ -166,11 +163,10 @@ abstract class ImagingManifestInstance with _$ImagingManifestInstance {
 
 @freezed
 abstract class ImagingStudy with _$ImagingStudy implements Resource {
-  const factory ImagingStudy({
+  factory ImagingStudy({
     @JsonKey(required: true, defaultValue: 'ImagingStudy')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -211,7 +207,7 @@ abstract class ImagingStudy with _$ImagingStudy implements Resource {
 
 @freezed
 abstract class ImagingStudySeries with _$ImagingStudySeries {
-  const factory ImagingStudySeries({
+  factory ImagingStudySeries({
     Oid uid,
     UnsignedInt number,
     @JsonKey(required: true) Coding modality,
@@ -237,7 +233,7 @@ abstract class ImagingStudySeries with _$ImagingStudySeries {
 
 @freezed
 abstract class ImagingStudyInstance with _$ImagingStudyInstance {
-  const factory ImagingStudyInstance({
+  factory ImagingStudyInstance({
     Oid uid,
     UnsignedInt number,
     Oid sopClass,
@@ -253,11 +249,10 @@ abstract class ImagingStudyInstance with _$ImagingStudyInstance {
 
 @freezed
 abstract class Observation with _$Observation implements Resource {
-  const factory Observation({
+  factory Observation({
     @JsonKey(required: true, defaultValue: 'Observation')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -314,7 +309,7 @@ abstract class Observation with _$Observation implements Resource {
 
 @freezed
 abstract class ObservationReferenceRange with _$ObservationReferenceRange {
-  const factory ObservationReferenceRange({
+  factory ObservationReferenceRange({
     Quantity low,
     Quantity high,
     CodeableConcept type,
@@ -329,7 +324,7 @@ abstract class ObservationReferenceRange with _$ObservationReferenceRange {
 
 @freezed
 abstract class ObservationRelated with _$ObservationRelated {
-  const factory ObservationRelated({
+  factory ObservationRelated({
     @JsonKey(unknownEnumValue: RelatedType.unknown) RelatedType type,
     @JsonKey(required: true) Reference target,
     @JsonKey(name: '_type') Element typeElement,
@@ -340,7 +335,7 @@ abstract class ObservationRelated with _$ObservationRelated {
 
 @freezed
 abstract class ObservationComponent with _$ObservationComponent {
-  const factory ObservationComponent({
+  factory ObservationComponent({
     @JsonKey(required: true) CodeableConcept code,
     Quantity valueQuantity,
     CodeableConcept valueCodeableConcept,
@@ -367,11 +362,10 @@ abstract class ObservationComponent with _$ObservationComponent {
 abstract class QuestionnaireResponse
     with _$QuestionnaireResponse
     implements Resource {
-  const factory QuestionnaireResponse({
+  factory QuestionnaireResponse({
     @JsonKey(required: true, defaultValue: 'QuestionnaireResponse')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -401,7 +395,7 @@ abstract class QuestionnaireResponse
 
 @freezed
 abstract class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
-  const factory QuestionnaireResponseItem({
+  factory QuestionnaireResponseItem({
     String linkId,
     String definition,
     String text,
@@ -418,7 +412,7 @@ abstract class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
 
 @freezed
 abstract class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
-  const factory QuestionnaireResponseAnswer({
+  factory QuestionnaireResponseAnswer({
     Boolean valueBoolean,
     Decimal valueDecimal,
     Integer valueInteger,
@@ -447,11 +441,10 @@ abstract class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
 
 @freezed
 abstract class Sequence with _$Sequence implements Resource {
-  const factory Sequence({
+  factory Sequence({
     @JsonKey(required: true, defaultValue: 'Sequence')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -486,7 +479,7 @@ abstract class Sequence with _$Sequence implements Resource {
 
 @freezed
 abstract class SequenceReferenceSeq with _$SequenceReferenceSeq {
-  const factory SequenceReferenceSeq({
+  factory SequenceReferenceSeq({
     CodeableConcept chromosome,
     String genomeBuild,
     CodeableConcept referenceSeqId,
@@ -507,7 +500,7 @@ abstract class SequenceReferenceSeq with _$SequenceReferenceSeq {
 
 @freezed
 abstract class SequenceVariant with _$SequenceVariant {
-  const factory SequenceVariant({
+  factory SequenceVariant({
     Integer start,
     Integer end,
     String observedAllele,
@@ -526,7 +519,7 @@ abstract class SequenceVariant with _$SequenceVariant {
 
 @freezed
 abstract class SequenceQuality with _$SequenceQuality {
-  const factory SequenceQuality({
+  factory SequenceQuality({
     @JsonKey(unknownEnumValue: QualityType.unknown) QualityType type,
     CodeableConcept standardSequence,
     Integer start,
@@ -559,7 +552,7 @@ abstract class SequenceQuality with _$SequenceQuality {
 
 @freezed
 abstract class SequenceRepository with _$SequenceRepository {
-  const factory SequenceRepository({
+  factory SequenceRepository({
     @JsonKey(unknownEnumValue: RepositoryType.unknown) RepositoryType type,
     String url,
     String name,
@@ -579,11 +572,10 @@ abstract class SequenceRepository with _$SequenceRepository {
 
 @freezed
 abstract class Specimen with _$Specimen implements Resource {
-  const factory Specimen({
+  factory Specimen({
     @JsonKey(required: true, defaultValue: 'Specimen')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -613,7 +605,7 @@ abstract class Specimen with _$Specimen implements Resource {
 
 @freezed
 abstract class SpecimenCollection with _$SpecimenCollection {
-  const factory SpecimenCollection({
+  factory SpecimenCollection({
     Reference collector,
     FhirDateTime collectedDateTime,
     Period collectedPeriod,
@@ -628,7 +620,7 @@ abstract class SpecimenCollection with _$SpecimenCollection {
 
 @freezed
 abstract class SpecimenProcessing with _$SpecimenProcessing {
-  const factory SpecimenProcessing({
+  factory SpecimenProcessing({
     String description,
     CodeableConcept procedure,
     List<Reference> additive,
@@ -643,7 +635,7 @@ abstract class SpecimenProcessing with _$SpecimenProcessing {
 
 @freezed
 abstract class SpecimenContainer with _$SpecimenContainer {
-  const factory SpecimenContainer({
+  factory SpecimenContainer({
     List<Identifier> identifier,
     String description,
     CodeableConcept type,

@@ -590,7 +590,7 @@ class __$CommunicationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Communication implements _Communication {
-  const _$_Communication(
+  _$_Communication(
       {@JsonKey(defaultValue: 'Communication') this.resourceType,
       this.id,
       this.meta,
@@ -808,7 +808,7 @@ class _$_Communication implements _Communication {
 }
 
 abstract class _Communication implements Communication {
-  const factory _Communication(
+  factory _Communication(
       {@JsonKey(defaultValue: 'Communication')
           String resourceType,
       Id id,
@@ -1415,7 +1415,7 @@ class __$EpisodeOfCareCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_EpisodeOfCare implements _EpisodeOfCare {
-  const _$_EpisodeOfCare(
+  _$_EpisodeOfCare(
       {@JsonKey(defaultValue: 'EpisodeOfCare')
           this.resourceType,
       this.id,
@@ -1620,7 +1620,7 @@ class _$_EpisodeOfCare implements _EpisodeOfCare {
 }
 
 abstract class _EpisodeOfCare implements EpisodeOfCare {
-  const factory _EpisodeOfCare(
+  factory _EpisodeOfCare(
       {@JsonKey(defaultValue: 'EpisodeOfCare')
           String resourceType,
       Id id,
@@ -2380,7 +2380,7 @@ class __$EncounterCopyWithImpl<$Res> extends _$EncounterCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Encounter implements _Encounter {
-  const _$_Encounter(
+  _$_Encounter(
       {@JsonKey(defaultValue: 'Encounter')
           this.resourceType,
       this.id,
@@ -2633,7 +2633,7 @@ class _$_Encounter implements _Encounter {
 }
 
 abstract class _Encounter implements Encounter {
-  const factory _Encounter(
+  factory _Encounter(
       {@JsonKey(defaultValue: 'Encounter')
           String resourceType,
       Id id,
@@ -3234,7 +3234,7 @@ class __$FlagCopyWithImpl<$Res> extends _$FlagCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Flag implements _Flag {
-  const _$_Flag(
+  _$_Flag(
       {@JsonKey(defaultValue: 'Flag')
           this.resourceType,
       this.id,
@@ -3421,7 +3421,7 @@ class _$_Flag implements _Flag {
 }
 
 abstract class _Flag implements Flag {
-  const factory _Flag(
+  factory _Flag(
       {@JsonKey(defaultValue: 'Flag')
           String resourceType,
       Id id,
@@ -3725,7 +3725,7 @@ class __$CommunicationPayloadCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CommunicationPayload implements _CommunicationPayload {
-  const _$_CommunicationPayload(
+  _$_CommunicationPayload(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3808,7 +3808,7 @@ class _$_CommunicationPayload implements _CommunicationPayload {
 }
 
 abstract class _CommunicationPayload implements CommunicationPayload {
-  const factory _CommunicationPayload(
+  factory _CommunicationPayload(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -4047,7 +4047,7 @@ class __$EpisodeOfCareStatusHistoryCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_EpisodeOfCareStatusHistory implements _EpisodeOfCareStatusHistory {
-  const _$_EpisodeOfCareStatusHistory(
+  _$_EpisodeOfCareStatusHistory(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -4132,7 +4132,7 @@ class _$_EpisodeOfCareStatusHistory implements _EpisodeOfCareStatusHistory {
 
 abstract class _EpisodeOfCareStatusHistory
     implements EpisodeOfCareStatusHistory {
-  const factory _EpisodeOfCareStatusHistory(
+  factory _EpisodeOfCareStatusHistory(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -4349,7 +4349,7 @@ class __$EpisodeOfCareCareTeamCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_EpisodeOfCareCareTeam implements _EpisodeOfCareCareTeam {
-  const _$_EpisodeOfCareCareTeam(
+  _$_EpisodeOfCareCareTeam(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -4421,7 +4421,7 @@ class _$_EpisodeOfCareCareTeam implements _EpisodeOfCareCareTeam {
 }
 
 abstract class _EpisodeOfCareCareTeam implements EpisodeOfCareCareTeam {
-  const factory _EpisodeOfCareCareTeam(
+  factory _EpisodeOfCareCareTeam(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -4651,7 +4651,7 @@ class __$EncounterStatusHistoryCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_EncounterStatusHistory implements _EncounterStatusHistory {
-  const _$_EncounterStatusHistory(
+  _$_EncounterStatusHistory(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -4735,7 +4735,7 @@ class _$_EncounterStatusHistory implements _EncounterStatusHistory {
 }
 
 abstract class _EncounterStatusHistory implements EncounterStatusHistory {
-  const factory _EncounterStatusHistory(
+  factory _EncounterStatusHistory(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -4952,7 +4952,7 @@ class __$EncounterParticipantCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_EncounterParticipant implements _EncounterParticipant {
-  const _$_EncounterParticipant(
+  _$_EncounterParticipant(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -5025,7 +5025,7 @@ class _$_EncounterParticipant implements _EncounterParticipant {
 }
 
 abstract class _EncounterParticipant implements EncounterParticipant {
-  const factory _EncounterParticipant(
+  factory _EncounterParticipant(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -5411,7 +5411,7 @@ class __$EncounterHospitalizationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_EncounterHospitalization implements _EncounterHospitalization {
-  const _$_EncounterHospitalization(
+  _$_EncounterHospitalization(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       @JsonKey(name: 'fhir_comments') this.fhirComments,
@@ -5549,7 +5549,7 @@ class _$_EncounterHospitalization implements _EncounterHospitalization {
 }
 
 abstract class _EncounterHospitalization implements EncounterHospitalization {
-  const factory _EncounterHospitalization(
+  factory _EncounterHospitalization(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(name: 'fhir_comments') List<String> fhirComments,
@@ -5812,7 +5812,7 @@ class __$EncounterLocationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_EncounterLocation implements _EncounterLocation {
-  const _$_EncounterLocation(
+  _$_EncounterLocation(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -5895,7 +5895,7 @@ class _$_EncounterLocation implements _EncounterLocation {
 }
 
 abstract class _EncounterLocation implements EncounterLocation {
-  const factory _EncounterLocation(
+  factory _EncounterLocation(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,

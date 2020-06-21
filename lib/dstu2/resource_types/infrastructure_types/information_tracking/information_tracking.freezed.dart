@@ -556,7 +556,7 @@ class __$QuestionnaireCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Questionnaire implements _Questionnaire {
-  const _$_Questionnaire(
+  _$_Questionnaire(
       {@JsonKey(defaultValue: 'Questionnaire')
           this.resourceType,
       this.id,
@@ -784,7 +784,7 @@ class _$_Questionnaire implements _Questionnaire {
 }
 
 abstract class _Questionnaire implements Questionnaire {
-  const factory _Questionnaire(
+  factory _Questionnaire(
       {@JsonKey(defaultValue: 'Questionnaire')
           String resourceType,
       Id id,
@@ -1343,7 +1343,7 @@ class __$ProvenanceCopyWithImpl<$Res> extends _$ProvenanceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Provenance implements _Provenance {
-  const _$_Provenance(
+  _$_Provenance(
       {@JsonKey(defaultValue: 'Provenance') this.resourceType,
       this.id,
       this.meta,
@@ -1537,7 +1537,7 @@ class _$_Provenance implements _Provenance {
 }
 
 abstract class _Provenance implements Provenance {
-  const factory _Provenance(
+  factory _Provenance(
       {@JsonKey(defaultValue: 'Provenance') String resourceType,
       Id id,
       Meta meta,
@@ -2186,7 +2186,7 @@ class __$QuestionnaireResponseCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_QuestionnaireResponse implements _QuestionnaireResponse {
-  const _$_QuestionnaireResponse(
+  _$_QuestionnaireResponse(
       {@JsonKey(defaultValue: 'QuestionnaireResponse')
           this.resourceType,
       this.id,
@@ -2392,7 +2392,7 @@ class _$_QuestionnaireResponse implements _QuestionnaireResponse {
 }
 
 abstract class _QuestionnaireResponse implements QuestionnaireResponse {
-  const factory _QuestionnaireResponse(
+  factory _QuestionnaireResponse(
       {@JsonKey(defaultValue: 'QuestionnaireResponse')
           String resourceType,
       Id id,
@@ -2836,7 +2836,7 @@ class __$AuditEventCopyWithImpl<$Res> extends _$AuditEventCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_AuditEvent implements _AuditEvent {
-  const _$_AuditEvent(
+  _$_AuditEvent(
       {@JsonKey(defaultValue: 'AuditEvent') this.resourceType,
       this.id,
       this.meta,
@@ -2977,7 +2977,7 @@ class _$_AuditEvent implements _AuditEvent {
 }
 
 abstract class _AuditEvent implements AuditEvent {
-  const factory _AuditEvent(
+  factory _AuditEvent(
       {@JsonKey(defaultValue: 'AuditEvent')
           String resourceType,
       Id id,
@@ -3320,7 +3320,7 @@ class __$QuestionnaireGroupCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_QuestionnaireGroup implements _QuestionnaireGroup {
-  const _$_QuestionnaireGroup(
+  _$_QuestionnaireGroup(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3450,7 +3450,7 @@ class _$_QuestionnaireGroup implements _QuestionnaireGroup {
 }
 
 abstract class _QuestionnaireGroup implements QuestionnaireGroup {
-  const factory _QuestionnaireGroup(
+  factory _QuestionnaireGroup(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -3725,7 +3725,7 @@ class __$ProvenanceAgentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ProvenanceAgent implements _ProvenanceAgent {
-  const _$_ProvenanceAgent(
+  _$_ProvenanceAgent(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3813,7 +3813,7 @@ class _$_ProvenanceAgent implements _ProvenanceAgent {
 }
 
 abstract class _ProvenanceAgent implements ProvenanceAgent {
-  const factory _ProvenanceAgent(
+  factory _ProvenanceAgent(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -4138,7 +4138,7 @@ class __$ProvenanceEntityCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ProvenanceEntity implements _ProvenanceEntity {
-  const _$_ProvenanceEntity(
+  _$_ProvenanceEntity(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -4263,7 +4263,7 @@ class _$_ProvenanceEntity implements _ProvenanceEntity {
 }
 
 abstract class _ProvenanceEntity implements ProvenanceEntity {
-  const factory _ProvenanceEntity(
+  factory _ProvenanceEntity(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -4593,7 +4593,7 @@ class __$QuestionnaireResponseGroupCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_QuestionnaireResponseGroup implements _QuestionnaireResponseGroup {
-  const _$_QuestionnaireResponseGroup(
+  _$_QuestionnaireResponseGroup(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -4710,7 +4710,7 @@ class _$_QuestionnaireResponseGroup implements _QuestionnaireResponseGroup {
 
 abstract class _QuestionnaireResponseGroup
     implements QuestionnaireResponseGroup {
-  const factory _QuestionnaireResponseGroup(
+  factory _QuestionnaireResponseGroup(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -4970,7 +4970,7 @@ class __$AuditEventEventCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_AuditEventEvent implements _AuditEventEvent {
-  const _$_AuditEventEvent(
+  _$_AuditEventEvent(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -5074,7 +5074,7 @@ class _$_AuditEventEvent implements _AuditEventEvent {
 }
 
 abstract class _AuditEventEvent implements AuditEventEvent {
-  const factory _AuditEventEvent(
+  factory _AuditEventEvent(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -5440,7 +5440,7 @@ class __$AuditEventParticipantCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_AuditEventParticipant implements _AuditEventParticipant {
-  const _$_AuditEventParticipant(
+  _$_AuditEventParticipant(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -5575,7 +5575,7 @@ class _$_AuditEventParticipant implements _AuditEventParticipant {
 }
 
 abstract class _AuditEventParticipant implements AuditEventParticipant {
-  const factory _AuditEventParticipant(
+  factory _AuditEventParticipant(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -5825,7 +5825,7 @@ class __$AuditEventSourceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_AuditEventSource implements _AuditEventSource {
-  const _$_AuditEventSource(
+  _$_AuditEventSource(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -5907,7 +5907,7 @@ class _$_AuditEventSource implements _AuditEventSource {
 }
 
 abstract class _AuditEventSource implements AuditEventSource {
-  const factory _AuditEventSource(
+  factory _AuditEventSource(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -6259,7 +6259,7 @@ class __$AuditEventObjectCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_AuditEventObject implements _AuditEventObject {
-  const _$_AuditEventObject(
+  _$_AuditEventObject(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -6385,7 +6385,7 @@ class _$_AuditEventObject implements _AuditEventObject {
 }
 
 abstract class _AuditEventObject implements AuditEventObject {
-  const factory _AuditEventObject(
+  factory _AuditEventObject(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -6703,7 +6703,7 @@ class __$QuestionnaireQuestionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_QuestionnaireQuestion implements _QuestionnaireQuestion {
-  const _$_QuestionnaireQuestion(
+  _$_QuestionnaireQuestion(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -6833,7 +6833,7 @@ class _$_QuestionnaireQuestion implements _QuestionnaireQuestion {
 }
 
 abstract class _QuestionnaireQuestion implements QuestionnaireQuestion {
-  const factory _QuestionnaireQuestion(
+  factory _QuestionnaireQuestion(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -7048,7 +7048,7 @@ class __$ProvenanceRelatedAgentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ProvenanceRelatedAgent implements _ProvenanceRelatedAgent {
-  const _$_ProvenanceRelatedAgent(
+  _$_ProvenanceRelatedAgent(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -7118,7 +7118,7 @@ class _$_ProvenanceRelatedAgent implements _ProvenanceRelatedAgent {
 }
 
 abstract class _ProvenanceRelatedAgent implements ProvenanceRelatedAgent {
-  const factory _ProvenanceRelatedAgent(
+  factory _ProvenanceRelatedAgent(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -7350,7 +7350,7 @@ class __$QuestionnaireResponseQuestionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_QuestionnaireResponseQuestion
     implements _QuestionnaireResponseQuestion {
-  const _$_QuestionnaireResponseQuestion(
+  _$_QuestionnaireResponseQuestion(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -7440,7 +7440,7 @@ class _$_QuestionnaireResponseQuestion
 
 abstract class _QuestionnaireResponseQuestion
     implements QuestionnaireResponseQuestion {
-  const factory _QuestionnaireResponseQuestion(
+  factory _QuestionnaireResponseQuestion(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -7673,7 +7673,7 @@ class __$AuditEventNetworkCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_AuditEventNetwork implements _AuditEventNetwork {
-  const _$_AuditEventNetwork(
+  _$_AuditEventNetwork(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -7755,7 +7755,7 @@ class _$_AuditEventNetwork implements _AuditEventNetwork {
 }
 
 abstract class _AuditEventNetwork implements AuditEventNetwork {
-  const factory _AuditEventNetwork(
+  factory _AuditEventNetwork(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -7958,7 +7958,7 @@ class __$AuditEventDetailCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_AuditEventDetail implements _AuditEventDetail {
-  const _$_AuditEventDetail(
+  _$_AuditEventDetail(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -8035,7 +8035,7 @@ class _$_AuditEventDetail implements _AuditEventDetail {
 }
 
 abstract class _AuditEventDetail implements AuditEventDetail {
-  const factory _AuditEventDetail(
+  factory _AuditEventDetail(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -8645,7 +8645,7 @@ class __$QuestionnaireResponseAnswerCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_QuestionnaireResponseAnswer implements _QuestionnaireResponseAnswer {
-  const _$_QuestionnaireResponseAnswer(
+  _$_QuestionnaireResponseAnswer(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -8862,7 +8862,7 @@ class _$_QuestionnaireResponseAnswer implements _QuestionnaireResponseAnswer {
 
 abstract class _QuestionnaireResponseAnswer
     implements QuestionnaireResponseAnswer {
-  const factory _QuestionnaireResponseAnswer(
+  factory _QuestionnaireResponseAnswer(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,

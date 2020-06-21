@@ -9,11 +9,10 @@ part 'general.g.dart';
 
 @freezed
 abstract class Account with _$Account implements Resource {
-  const factory Account({
+  factory Account({
     @JsonKey(required: true, defaultValue: 'Account')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -44,7 +43,7 @@ abstract class Account with _$Account implements Resource {
 
 @freezed
 abstract class AccountCoverage with _$AccountCoverage {
-  const factory AccountCoverage({
+  factory AccountCoverage({
     @JsonKey(required: true) Reference coverage,
     PositiveInt priority,
     @JsonKey(name: '_priority') Element priorityElement,
@@ -55,7 +54,7 @@ abstract class AccountCoverage with _$AccountCoverage {
 
 @freezed
 abstract class AccountGuarantor with _$AccountGuarantor {
-  const factory AccountGuarantor({
+  factory AccountGuarantor({
     @JsonKey(required: true) Reference party,
     Boolean onHold,
     Period period,
@@ -67,11 +66,10 @@ abstract class AccountGuarantor with _$AccountGuarantor {
 
 @freezed
 abstract class ChargeItem with _$ChargeItem implements Resource {
-  const factory ChargeItem({
+  factory ChargeItem({
     @JsonKey(required: true, defaultValue: 'ChargeItem')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -119,7 +117,7 @@ abstract class ChargeItem with _$ChargeItem implements Resource {
 
 @freezed
 abstract class ChargeItemParticipant with _$ChargeItemParticipant {
-  const factory ChargeItemParticipant({
+  factory ChargeItemParticipant({
     CodeableConcept role,
     @JsonKey(required: true) Reference actor,
   }) = _ChargeItemParticipant;
@@ -129,11 +127,10 @@ abstract class ChargeItemParticipant with _$ChargeItemParticipant {
 
 @freezed
 abstract class Contract with _$Contract implements Resource {
-  const factory Contract({
+  factory Contract({
     @JsonKey(required: true, defaultValue: 'Contract')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -175,7 +172,7 @@ abstract class Contract with _$Contract implements Resource {
 
 @freezed
 abstract class ContractAgent with _$ContractAgent {
-  const factory ContractAgent({
+  factory ContractAgent({
     @JsonKey(required: true) Reference actor,
     List<CodeableConcept> role,
   }) = _ContractAgent;
@@ -185,7 +182,7 @@ abstract class ContractAgent with _$ContractAgent {
 
 @freezed
 abstract class ContractSigner with _$ContractSigner {
-  const factory ContractSigner({
+  factory ContractSigner({
     @JsonKey(required: true) Coding type,
     @JsonKey(required: true) Reference party,
     @JsonKey(required: true) List<Signature> signature,
@@ -196,7 +193,7 @@ abstract class ContractSigner with _$ContractSigner {
 
 @freezed
 abstract class ContractValuedItem with _$ContractValuedItem {
-  const factory ContractValuedItem({
+  factory ContractValuedItem({
     CodeableConcept entityCodeableConcept,
     Reference entityReference,
     Identifier identifier,
@@ -216,7 +213,7 @@ abstract class ContractValuedItem with _$ContractValuedItem {
 
 @freezed
 abstract class ContractTerm with _$ContractTerm {
-  const factory ContractTerm({
+  factory ContractTerm({
     Identifier identifier,
     FhirDateTime issued,
     Period applies,
@@ -239,7 +236,7 @@ abstract class ContractTerm with _$ContractTerm {
 
 @freezed
 abstract class ContractAgent1 with _$ContractAgent1 {
-  const factory ContractAgent1({
+  factory ContractAgent1({
     @JsonKey(required: true) Reference actor,
     List<CodeableConcept> role,
   }) = _ContractAgent1;
@@ -249,7 +246,7 @@ abstract class ContractAgent1 with _$ContractAgent1 {
 
 @freezed
 abstract class ContractValuedItem1 with _$ContractValuedItem1 {
-  const factory ContractValuedItem1({
+  factory ContractValuedItem1({
     CodeableConcept entityCodeableConcept,
     Reference entityReference,
     Identifier identifier,
@@ -269,7 +266,7 @@ abstract class ContractValuedItem1 with _$ContractValuedItem1 {
 
 @freezed
 abstract class ContractFriendly with _$ContractFriendly {
-  const factory ContractFriendly({
+  factory ContractFriendly({
     Attachment contentAttachment,
     Reference contentReference,
   }) = _ContractFriendly;
@@ -279,7 +276,7 @@ abstract class ContractFriendly with _$ContractFriendly {
 
 @freezed
 abstract class ContractLegal with _$ContractLegal {
-  const factory ContractLegal({
+  factory ContractLegal({
     Attachment contentAttachment,
     Reference contentReference,
   }) = _ContractLegal;
@@ -289,7 +286,7 @@ abstract class ContractLegal with _$ContractLegal {
 
 @freezed
 abstract class ContractRule with _$ContractRule {
-  const factory ContractRule({
+  factory ContractRule({
     Attachment contentAttachment,
     Reference contentReference,
   }) = _ContractRule;
@@ -301,11 +298,10 @@ abstract class ContractRule with _$ContractRule {
 abstract class ExplanationOfBenefit
     with _$ExplanationOfBenefit
     implements Resource {
-  const factory ExplanationOfBenefit({
+  factory ExplanationOfBenefit({
     @JsonKey(required: true, defaultValue: 'ExplanationOfBenefit')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -365,7 +361,7 @@ abstract class ExplanationOfBenefit
 
 @freezed
 abstract class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
-  const factory ExplanationOfBenefitRelated({
+  factory ExplanationOfBenefitRelated({
     Reference claim,
     CodeableConcept relationship,
     Identifier reference,
@@ -376,12 +372,11 @@ abstract class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
 
 @freezed
 abstract class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
-  const factory ExplanationOfBenefitPayee({
+  factory ExplanationOfBenefitPayee({
     CodeableConcept type,
     @JsonKey(required: true, defaultValue: 'ExplanationOfBenefitPayee')
     @required
-        String     resourceType,
-
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -399,7 +394,7 @@ abstract class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
 @freezed
 abstract class ExplanationOfBenefitInformation
     with _$ExplanationOfBenefitInformation {
-  const factory ExplanationOfBenefitInformation({
+  factory ExplanationOfBenefitInformation({
     PositiveInt sequence,
     @JsonKey(required: true) CodeableConcept category,
     CodeableConcept code,
@@ -421,7 +416,7 @@ abstract class ExplanationOfBenefitInformation
 @freezed
 abstract class ExplanationOfBenefitCareTeam
     with _$ExplanationOfBenefitCareTeam {
-  const factory ExplanationOfBenefitCareTeam({
+  factory ExplanationOfBenefitCareTeam({
     PositiveInt sequence,
     @JsonKey(required: true) Reference provider,
     Boolean responsible,
@@ -437,7 +432,7 @@ abstract class ExplanationOfBenefitCareTeam
 @freezed
 abstract class ExplanationOfBenefitDiagnosis
     with _$ExplanationOfBenefitDiagnosis {
-  const factory ExplanationOfBenefitDiagnosis({
+  factory ExplanationOfBenefitDiagnosis({
     PositiveInt sequence,
     CodeableConcept diagnosisCodeableConcept,
     Reference diagnosisReference,
@@ -452,7 +447,7 @@ abstract class ExplanationOfBenefitDiagnosis
 @freezed
 abstract class ExplanationOfBenefitProcedure
     with _$ExplanationOfBenefitProcedure {
-  const factory ExplanationOfBenefitProcedure({
+  factory ExplanationOfBenefitProcedure({
     PositiveInt sequence,
     FhirDateTime date,
     CodeableConcept procedureCodeableConcept,
@@ -467,7 +462,7 @@ abstract class ExplanationOfBenefitProcedure
 @freezed
 abstract class ExplanationOfBenefitInsurance
     with _$ExplanationOfBenefitInsurance {
-  const factory ExplanationOfBenefitInsurance({
+  factory ExplanationOfBenefitInsurance({
     Reference coverage,
     List<String> preAuthRef,
     @JsonKey(name: '_preAuthRef') Element preAuthRefElement,
@@ -479,7 +474,7 @@ abstract class ExplanationOfBenefitInsurance
 @freezed
 abstract class ExplanationOfBenefitAccident
     with _$ExplanationOfBenefitAccident {
-  const factory ExplanationOfBenefitAccident({
+  factory ExplanationOfBenefitAccident({
     Date date,
     CodeableConcept type,
     Address locationAddress,
@@ -492,7 +487,7 @@ abstract class ExplanationOfBenefitAccident
 
 @freezed
 abstract class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
-  const factory ExplanationOfBenefitItem({
+  factory ExplanationOfBenefitItem({
     PositiveInt sequence,
     List<PositiveInt> careTeamLinkId,
     List<PositiveInt> diagnosisLinkId,
@@ -535,7 +530,7 @@ abstract class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
 @freezed
 abstract class ExplanationOfBenefitAdjudication
     with _$ExplanationOfBenefitAdjudication {
-  const factory ExplanationOfBenefitAdjudication({
+  factory ExplanationOfBenefitAdjudication({
     @JsonKey(required: true) CodeableConcept category,
     CodeableConcept reason,
     Money amount,
@@ -549,7 +544,7 @@ abstract class ExplanationOfBenefitAdjudication
 
 @freezed
 abstract class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
-  const factory ExplanationOfBenefitDetail({
+  factory ExplanationOfBenefitDetail({
     PositiveInt sequence,
     @JsonKey(required: true) CodeableConcept type,
     CodeableConcept revenue,
@@ -576,7 +571,7 @@ abstract class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
 @freezed
 abstract class ExplanationOfBenefitSubDetail
     with _$ExplanationOfBenefitSubDetail {
-  const factory ExplanationOfBenefitSubDetail({
+  factory ExplanationOfBenefitSubDetail({
     PositiveInt sequence,
     @JsonKey(required: true) CodeableConcept type,
     CodeableConcept revenue,
@@ -601,7 +596,7 @@ abstract class ExplanationOfBenefitSubDetail
 
 @freezed
 abstract class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
-  const factory ExplanationOfBenefitAddItem({
+  factory ExplanationOfBenefitAddItem({
     List<PositiveInt> sequenceLinkId,
     CodeableConcept revenue,
     CodeableConcept category,
@@ -620,7 +615,7 @@ abstract class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
 
 @freezed
 abstract class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
-  const factory ExplanationOfBenefitDetail1({
+  factory ExplanationOfBenefitDetail1({
     CodeableConcept revenue,
     CodeableConcept category,
     CodeableConcept service,
@@ -636,7 +631,7 @@ abstract class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
 
 @freezed
 abstract class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
-  const factory ExplanationOfBenefitPayment({
+  factory ExplanationOfBenefitPayment({
     CodeableConcept type,
     Money adjustment,
     CodeableConcept adjustmentReason,
@@ -652,7 +647,7 @@ abstract class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
 @freezed
 abstract class ExplanationOfBenefitProcessNote
     with _$ExplanationOfBenefitProcessNote {
-  const factory ExplanationOfBenefitProcessNote({
+  factory ExplanationOfBenefitProcessNote({
     PositiveInt number,
     CodeableConcept type,
     String text,
@@ -667,7 +662,7 @@ abstract class ExplanationOfBenefitProcessNote
 @freezed
 abstract class ExplanationOfBenefitBenefitBalance
     with _$ExplanationOfBenefitBenefitBalance {
-  const factory ExplanationOfBenefitBenefitBalance({
+  factory ExplanationOfBenefitBenefitBalance({
     @JsonKey(required: true) CodeableConcept category,
     CodeableConcept subCategory,
     Boolean excluded,
@@ -689,7 +684,7 @@ abstract class ExplanationOfBenefitBenefitBalance
 @freezed
 abstract class ExplanationOfBenefitFinancial
     with _$ExplanationOfBenefitFinancial {
-  const factory ExplanationOfBenefitFinancial({
+  factory ExplanationOfBenefitFinancial({
     @JsonKey(required: true) CodeableConcept type,
     UnsignedInt allowedUnsignedInt,
     String allowedString,

@@ -9,7 +9,7 @@ part 'workflow1.g.dart';
 
 @freezed
 abstract class OrderResponse with _$OrderResponse implements Resource {
-  const factory OrderResponse({
+  factory OrderResponse({
     @JsonKey(defaultValue: 'OrderResponse') String resourceType,
     Id id,
     Meta meta,
@@ -37,7 +37,7 @@ abstract class OrderResponse with _$OrderResponse implements Resource {
 
 @freezed
 abstract class Order with _$Order implements Resource {
-  const factory Order({
+  factory Order({
     @JsonKey(defaultValue: 'Order') String resourceType,
     Id id,
     Meta meta,
@@ -63,7 +63,7 @@ abstract class Order with _$Order implements Resource {
 
 @freezed
 abstract class DeviceUseRequest with _$DeviceUseRequest implements Resource {
-  const factory DeviceUseRequest({
+  factory DeviceUseRequest({
     @JsonKey(defaultValue: 'DeviceUseRequest') String resourceType,
     Id id,
     Meta meta,
@@ -105,7 +105,7 @@ abstract class DeviceUseRequest with _$DeviceUseRequest implements Resource {
 abstract class DeviceUseStatement
     with _$DeviceUseStatement
     implements Resource {
-  const factory DeviceUseStatement({
+  factory DeviceUseStatement({
     @JsonKey(defaultValue: 'DeviceUseStatement') String resourceType,
     Id id,
     Meta meta,
@@ -141,7 +141,7 @@ abstract class DeviceUseStatement
 abstract class CommunicationRequest
     with _$CommunicationRequest
     implements Resource {
-  const factory CommunicationRequest({
+  factory CommunicationRequest({
     @JsonKey(defaultValue: 'CommunicationRequest') String resourceType,
     Id id,
     Meta meta,
@@ -179,7 +179,7 @@ abstract class CommunicationRequest
 
 @freezed
 abstract class OrderWhen with _$OrderWhen {
-  const factory OrderWhen({
+  factory OrderWhen({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -194,7 +194,7 @@ abstract class OrderWhen with _$OrderWhen {
 
 @freezed
 abstract class CommunicationRequestPayload with _$CommunicationRequestPayload {
-  const factory CommunicationRequestPayload({
+  factory CommunicationRequestPayload({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,

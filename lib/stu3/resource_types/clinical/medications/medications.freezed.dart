@@ -767,7 +767,7 @@ class __$ImmunizationCopyWithImpl<$Res> extends _$ImmunizationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Immunization implements _Immunization {
-  const _$_Immunization(
+  _$_Immunization(
       {@required
       @JsonKey(required: true, defaultValue: 'Immunization')
           this.resourceType,
@@ -1044,7 +1044,7 @@ class _$_Immunization implements _Immunization {
 }
 
 abstract class _Immunization implements Immunization {
-  const factory _Immunization(
+  factory _Immunization(
       {@required
       @JsonKey(required: true, defaultValue: 'Immunization')
           String resourceType,
@@ -1300,8 +1300,7 @@ class __$ImmunizationPractitionerCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImmunizationPractitioner implements _ImmunizationPractitioner {
-  const _$_ImmunizationPractitioner(
-      {this.role, @JsonKey(required: true) this.actor});
+  _$_ImmunizationPractitioner({this.role, @JsonKey(required: true) this.actor});
 
   factory _$_ImmunizationPractitioner.fromJson(Map<String, dynamic> json) =>
       _$_$_ImmunizationPractitionerFromJson(json);
@@ -1345,7 +1344,7 @@ class _$_ImmunizationPractitioner implements _ImmunizationPractitioner {
 }
 
 abstract class _ImmunizationPractitioner implements ImmunizationPractitioner {
-  const factory _ImmunizationPractitioner(
+  factory _ImmunizationPractitioner(
       {CodeableConcept role,
       @JsonKey(required: true) Reference actor}) = _$_ImmunizationPractitioner;
 
@@ -1458,7 +1457,7 @@ class __$ImmunizationExplanationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImmunizationExplanation implements _ImmunizationExplanation {
-  const _$_ImmunizationExplanation({this.reason, this.reasonNotGiven});
+  _$_ImmunizationExplanation({this.reason, this.reasonNotGiven});
 
   factory _$_ImmunizationExplanation.fromJson(Map<String, dynamic> json) =>
       _$_$_ImmunizationExplanationFromJson(json);
@@ -1502,7 +1501,7 @@ class _$_ImmunizationExplanation implements _ImmunizationExplanation {
 }
 
 abstract class _ImmunizationExplanation implements ImmunizationExplanation {
-  const factory _ImmunizationExplanation(
+  factory _ImmunizationExplanation(
       {List<CodeableConcept> reason,
       List<CodeableConcept> reasonNotGiven}) = _$_ImmunizationExplanation;
 
@@ -1685,7 +1684,7 @@ class __$ImmunizationReactionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImmunizationReaction implements _ImmunizationReaction {
-  const _$_ImmunizationReaction(
+  _$_ImmunizationReaction(
       {this.date,
       this.detail,
       this.reported,
@@ -1753,7 +1752,7 @@ class _$_ImmunizationReaction implements _ImmunizationReaction {
 }
 
 abstract class _ImmunizationReaction implements ImmunizationReaction {
-  const factory _ImmunizationReaction(
+  factory _ImmunizationReaction(
           {FhirDateTime date,
           Reference detail,
           Boolean reported,
@@ -2109,7 +2108,7 @@ class __$ImmunizationVaccinationProtocolCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ImmunizationVaccinationProtocol
     implements _ImmunizationVaccinationProtocol {
-  const _$_ImmunizationVaccinationProtocol(
+  _$_ImmunizationVaccinationProtocol(
       {this.doseSequence,
       this.description,
       this.authority,
@@ -2233,7 +2232,7 @@ class _$_ImmunizationVaccinationProtocol
 
 abstract class _ImmunizationVaccinationProtocol
     implements ImmunizationVaccinationProtocol {
-  const factory _ImmunizationVaccinationProtocol(
+  factory _ImmunizationVaccinationProtocol(
           {PositiveInt doseSequence,
           String description,
           Reference authority,
@@ -2555,7 +2554,7 @@ class __$ImmunizationRecommendationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ImmunizationRecommendation implements _ImmunizationRecommendation {
-  const _$_ImmunizationRecommendation(
+  _$_ImmunizationRecommendation(
       {@required
       @JsonKey(required: true, defaultValue: 'ImmunizationRecommendation')
           this.resourceType,
@@ -2680,7 +2679,7 @@ class _$_ImmunizationRecommendation implements _ImmunizationRecommendation {
 
 abstract class _ImmunizationRecommendation
     implements ImmunizationRecommendation {
-  const factory _ImmunizationRecommendation(
+  factory _ImmunizationRecommendation(
           {@required
           @JsonKey(required: true, defaultValue: 'ImmunizationRecommendation')
               String resourceType,
@@ -3040,7 +3039,7 @@ class __$ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ImmunizationRecommendationRecommendation
     implements _ImmunizationRecommendationRecommendation {
-  const _$_ImmunizationRecommendationRecommendation(
+  _$_ImmunizationRecommendationRecommendation(
       {this.date,
       this.vaccineCode,
       this.targetDisease,
@@ -3157,7 +3156,7 @@ class _$_ImmunizationRecommendationRecommendation
 
 abstract class _ImmunizationRecommendationRecommendation
     implements ImmunizationRecommendationRecommendation {
-  const factory _ImmunizationRecommendationRecommendation(
+  factory _ImmunizationRecommendationRecommendation(
           {FhirDateTime date,
           CodeableConcept vaccineCode,
           CodeableConcept targetDisease,
@@ -3351,7 +3350,7 @@ class __$ImmunizationRecommendationDateCriterionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ImmunizationRecommendationDateCriterion
     implements _ImmunizationRecommendationDateCriterion {
-  const _$_ImmunizationRecommendationDateCriterion(
+  _$_ImmunizationRecommendationDateCriterion(
       {@JsonKey(required: true) this.code,
       this.value,
       @JsonKey(name: '_value') this.valueElement});
@@ -3408,7 +3407,7 @@ class _$_ImmunizationRecommendationDateCriterion
 
 abstract class _ImmunizationRecommendationDateCriterion
     implements ImmunizationRecommendationDateCriterion {
-  const factory _ImmunizationRecommendationDateCriterion(
+  factory _ImmunizationRecommendationDateCriterion(
           {@JsonKey(required: true) CodeableConcept code,
           FhirDateTime value,
           @JsonKey(name: '_value') Element valueElement}) =
@@ -3653,7 +3652,7 @@ class __$ImmunizationRecommendationProtocolCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ImmunizationRecommendationProtocol
     implements _ImmunizationRecommendationProtocol {
-  const _$_ImmunizationRecommendationProtocol(
+  _$_ImmunizationRecommendationProtocol(
       {this.doseSequence,
       this.description,
       this.authority,
@@ -3740,7 +3739,7 @@ class _$_ImmunizationRecommendationProtocol
 
 abstract class _ImmunizationRecommendationProtocol
     implements ImmunizationRecommendationProtocol {
-  const factory _ImmunizationRecommendationProtocol(
+  factory _ImmunizationRecommendationProtocol(
           {PositiveInt doseSequence,
           String description,
           Reference authority,
@@ -4212,7 +4211,7 @@ class __$MedicationCopyWithImpl<$Res> extends _$MedicationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Medication implements _Medication {
-  const _$_Medication(
+  _$_Medication(
       {@required
       @JsonKey(required: true, defaultValue: 'Medication')
           this.resourceType,
@@ -4399,7 +4398,7 @@ class _$_Medication implements _Medication {
 }
 
 abstract class _Medication implements Medication {
-  const factory _Medication(
+  factory _Medication(
       {@required
       @JsonKey(required: true, defaultValue: 'Medication')
           String resourceType,
@@ -4670,7 +4669,7 @@ class __$MedicationIngredientCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MedicationIngredient implements _MedicationIngredient {
-  const _$_MedicationIngredient(
+  _$_MedicationIngredient(
       {this.itemCodeableConcept,
       this.itemReference,
       this.isActive,
@@ -4738,7 +4737,7 @@ class _$_MedicationIngredient implements _MedicationIngredient {
 }
 
 abstract class _MedicationIngredient implements MedicationIngredient {
-  const factory _MedicationIngredient(
+  factory _MedicationIngredient(
           {CodeableConcept itemCodeableConcept,
           Reference itemReference,
           Boolean isActive,
@@ -4888,7 +4887,7 @@ class __$MedicationPackageCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MedicationPackage implements _MedicationPackage {
-  const _$_MedicationPackage({this.container, this.content, this.batch});
+  _$_MedicationPackage({this.container, this.content, this.batch});
 
   factory _$_MedicationPackage.fromJson(Map<String, dynamic> json) =>
       _$_$_MedicationPackageFromJson(json);
@@ -4937,7 +4936,7 @@ class _$_MedicationPackage implements _MedicationPackage {
 }
 
 abstract class _MedicationPackage implements MedicationPackage {
-  const factory _MedicationPackage(
+  factory _MedicationPackage(
       {CodeableConcept container,
       List<MedicationContent> content,
       List<MedicationBatch> batch}) = _$_MedicationPackage;
@@ -5105,7 +5104,7 @@ class __$MedicationContentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MedicationContent implements _MedicationContent {
-  const _$_MedicationContent(
+  _$_MedicationContent(
       {this.itemCodeableConcept, this.itemReference, this.amount});
 
   factory _$_MedicationContent.fromJson(Map<String, dynamic> json) =>
@@ -5155,7 +5154,7 @@ class _$_MedicationContent implements _MedicationContent {
 }
 
 abstract class _MedicationContent implements MedicationContent {
-  const factory _MedicationContent(
+  factory _MedicationContent(
       {CodeableConcept itemCodeableConcept,
       Reference itemReference,
       Quantity amount}) = _$_MedicationContent;
@@ -5325,7 +5324,7 @@ class __$MedicationBatchCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MedicationBatch implements _MedicationBatch {
-  const _$_MedicationBatch(
+  _$_MedicationBatch(
       {this.lotNumber,
       this.expirationDate,
       @JsonKey(name: '_lotNumber') this.lotNumberElement,
@@ -5387,7 +5386,7 @@ class _$_MedicationBatch implements _MedicationBatch {
 }
 
 abstract class _MedicationBatch implements MedicationBatch {
-  const factory _MedicationBatch(
+  factory _MedicationBatch(
           {String lotNumber,
           FhirDateTime expirationDate,
           @JsonKey(name: '_lotNumber') Element lotNumberElement,
@@ -6087,7 +6086,7 @@ class __$MedicationAdministrationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MedicationAdministration implements _MedicationAdministration {
-  const _$_MedicationAdministration(
+  _$_MedicationAdministration(
       {@required
       @JsonKey(required: true, defaultValue: 'MedicationAdministration')
           this.resourceType,
@@ -6346,7 +6345,7 @@ class _$_MedicationAdministration implements _MedicationAdministration {
 }
 
 abstract class _MedicationAdministration implements MedicationAdministration {
-  const factory _MedicationAdministration(
+  factory _MedicationAdministration(
       {@required
       @JsonKey(required: true, defaultValue: 'MedicationAdministration')
           String resourceType,
@@ -6598,7 +6597,7 @@ class __$MedicationAdministrationPerformerCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicationAdministrationPerformer
     implements _MedicationAdministrationPerformer {
-  const _$_MedicationAdministrationPerformer(
+  _$_MedicationAdministrationPerformer(
       {@JsonKey(required: true) this.actor, this.onBehalfOf});
 
   factory _$_MedicationAdministrationPerformer.fromJson(
@@ -6647,7 +6646,7 @@ class _$_MedicationAdministrationPerformer
 
 abstract class _MedicationAdministrationPerformer
     implements MedicationAdministrationPerformer {
-  const factory _MedicationAdministrationPerformer(
+  factory _MedicationAdministrationPerformer(
       {@JsonKey(required: true) Reference actor,
       Reference onBehalfOf}) = _$_MedicationAdministrationPerformer;
 
@@ -6919,7 +6918,7 @@ class __$MedicationAdministrationDosageCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicationAdministrationDosage
     implements _MedicationAdministrationDosage {
-  const _$_MedicationAdministrationDosage(
+  _$_MedicationAdministrationDosage(
       {this.text,
       this.site,
       this.route,
@@ -7006,7 +7005,7 @@ class _$_MedicationAdministrationDosage
 
 abstract class _MedicationAdministrationDosage
     implements MedicationAdministrationDosage {
-  const factory _MedicationAdministrationDosage(
+  factory _MedicationAdministrationDosage(
           {String text,
           CodeableConcept site,
           CodeableConcept route,
@@ -7839,7 +7838,7 @@ class __$MedicationDispenseCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MedicationDispense implements _MedicationDispense {
-  const _$_MedicationDispense(
+  _$_MedicationDispense(
       {@required
       @JsonKey(required: true, defaultValue: 'MedicationDispense')
           this.resourceType,
@@ -8121,7 +8120,7 @@ class _$_MedicationDispense implements _MedicationDispense {
 }
 
 abstract class _MedicationDispense implements MedicationDispense {
-  const factory _MedicationDispense(
+  factory _MedicationDispense(
       {@required
       @JsonKey(required: true, defaultValue: 'MedicationDispense')
           String resourceType,
@@ -8386,7 +8385,7 @@ class __$MedicationDispensePerformerCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MedicationDispensePerformer implements _MedicationDispensePerformer {
-  const _$_MedicationDispensePerformer(
+  _$_MedicationDispensePerformer(
       {@JsonKey(required: true) this.actor, this.onBehalfOf});
 
   factory _$_MedicationDispensePerformer.fromJson(Map<String, dynamic> json) =>
@@ -8433,7 +8432,7 @@ class _$_MedicationDispensePerformer implements _MedicationDispensePerformer {
 
 abstract class _MedicationDispensePerformer
     implements MedicationDispensePerformer {
-  const factory _MedicationDispensePerformer(
+  factory _MedicationDispensePerformer(
       {@JsonKey(required: true) Reference actor,
       Reference onBehalfOf}) = _$_MedicationDispensePerformer;
 
@@ -8620,7 +8619,7 @@ class __$MedicationDispenseSubstitutionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicationDispenseSubstitution
     implements _MedicationDispenseSubstitution {
-  const _$_MedicationDispenseSubstitution(
+  _$_MedicationDispenseSubstitution(
       {this.wasSubstituted,
       this.type,
       this.reason,
@@ -8689,7 +8688,7 @@ class _$_MedicationDispenseSubstitution
 
 abstract class _MedicationDispenseSubstitution
     implements MedicationDispenseSubstitution {
-  const factory _MedicationDispenseSubstitution(
+  factory _MedicationDispenseSubstitution(
           {Boolean wasSubstituted,
           CodeableConcept type,
           List<CodeableConcept> reason,
@@ -9507,7 +9506,7 @@ class __$MedicationRequestCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MedicationRequest implements _MedicationRequest {
-  const _$_MedicationRequest(
+  _$_MedicationRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'MedicationRequest')
           this.resourceType,
@@ -9792,7 +9791,7 @@ class _$_MedicationRequest implements _MedicationRequest {
 }
 
 abstract class _MedicationRequest implements MedicationRequest {
-  const factory _MedicationRequest(
+  factory _MedicationRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'MedicationRequest')
           String resourceType,
@@ -10057,7 +10056,7 @@ class __$MedicationRequestRequesterCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MedicationRequestRequester implements _MedicationRequestRequester {
-  const _$_MedicationRequestRequester(
+  _$_MedicationRequestRequester(
       {@JsonKey(required: true) this.agent, this.onBehalfOf});
 
   factory _$_MedicationRequestRequester.fromJson(Map<String, dynamic> json) =>
@@ -10104,7 +10103,7 @@ class _$_MedicationRequestRequester implements _MedicationRequestRequester {
 
 abstract class _MedicationRequestRequester
     implements MedicationRequestRequester {
-  const factory _MedicationRequestRequester(
+  factory _MedicationRequestRequester(
       {@JsonKey(required: true) Reference agent,
       Reference onBehalfOf}) = _$_MedicationRequestRequester;
 
@@ -10347,7 +10346,7 @@ class __$MedicationRequestDispenseRequestCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicationRequestDispenseRequest
     implements _MedicationRequestDispenseRequest {
-  const _$_MedicationRequestDispenseRequest(
+  _$_MedicationRequestDispenseRequest(
       {this.validityPeriod,
       this.numberOfRepeatsAllowed,
       this.quantity,
@@ -10428,7 +10427,7 @@ class _$_MedicationRequestDispenseRequest
 
 abstract class _MedicationRequestDispenseRequest
     implements MedicationRequestDispenseRequest {
-  const factory _MedicationRequestDispenseRequest(
+  factory _MedicationRequestDispenseRequest(
           {Period validityPeriod,
           PositiveInt numberOfRepeatsAllowed,
           Quantity quantity,
@@ -10600,7 +10599,7 @@ class __$MedicationRequestSubstitutionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MedicationRequestSubstitution
     implements _MedicationRequestSubstitution {
-  const _$_MedicationRequestSubstitution(
+  _$_MedicationRequestSubstitution(
       {this.allowed,
       this.reason,
       @JsonKey(name: '_allowed') this.allowedElement});
@@ -10656,7 +10655,7 @@ class _$_MedicationRequestSubstitution
 
 abstract class _MedicationRequestSubstitution
     implements MedicationRequestSubstitution {
-  const factory _MedicationRequestSubstitution(
+  factory _MedicationRequestSubstitution(
           {Boolean allowed,
           CodeableConcept reason,
           @JsonKey(name: '_allowed') Element allowedElement}) =
@@ -11339,7 +11338,7 @@ class __$MedicationStatementCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_MedicationStatement implements _MedicationStatement {
-  const _$_MedicationStatement(
+  _$_MedicationStatement(
       {@required
       @JsonKey(required: true, defaultValue: 'MedicationStatement')
           this.resourceType,
@@ -11598,7 +11597,7 @@ class _$_MedicationStatement implements _MedicationStatement {
 }
 
 abstract class _MedicationStatement implements MedicationStatement {
-  const factory _MedicationStatement(
+  factory _MedicationStatement(
       {@required
       @JsonKey(required: true, defaultValue: 'MedicationStatement')
           String resourceType,

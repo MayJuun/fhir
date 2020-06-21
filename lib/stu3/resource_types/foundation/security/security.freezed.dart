@@ -481,7 +481,7 @@ class __$AuditEventCopyWithImpl<$Res> extends _$AuditEventCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_AuditEvent implements _AuditEvent {
-  const _$_AuditEvent(
+  _$_AuditEvent(
       {@required
       @JsonKey(required: true, defaultValue: 'AuditEvent')
           this.resourceType,
@@ -690,7 +690,7 @@ class _$_AuditEvent implements _AuditEvent {
 }
 
 abstract class _AuditEvent implements AuditEvent {
-  const factory _AuditEvent(
+  factory _AuditEvent(
       {@required
       @JsonKey(required: true, defaultValue: 'AuditEvent')
           String resourceType,
@@ -1145,7 +1145,7 @@ class __$AuditEventAgentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_AuditEventAgent implements _AuditEventAgent {
-  const _$_AuditEventAgent(
+  _$_AuditEventAgent(
       {this.role,
       this.reference,
       this.userId,
@@ -1280,7 +1280,7 @@ class _$_AuditEventAgent implements _AuditEventAgent {
 }
 
 abstract class _AuditEventAgent implements AuditEventAgent {
-  const factory _AuditEventAgent(
+  factory _AuditEventAgent(
       {List<CodeableConcept> role,
       Reference reference,
       Identifier userId,
@@ -1485,7 +1485,7 @@ class __$AuditEventNetworkCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_AuditEventNetwork implements _AuditEventNetwork {
-  const _$_AuditEventNetwork(
+  _$_AuditEventNetwork(
       {this.address,
       @JsonKey(unknownEnumValue: NetworkType.unknown) this.type,
       @JsonKey(name: '_address') this.addressElement,
@@ -1547,7 +1547,7 @@ class _$_AuditEventNetwork implements _AuditEventNetwork {
 }
 
 abstract class _AuditEventNetwork implements AuditEventNetwork {
-  const factory _AuditEventNetwork(
+  factory _AuditEventNetwork(
       {String address,
       @JsonKey(unknownEnumValue: NetworkType.unknown) NetworkType type,
       @JsonKey(name: '_address') Element addressElement,
@@ -1715,7 +1715,7 @@ class __$AuditEventSourceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_AuditEventSource implements _AuditEventSource {
-  const _$_AuditEventSource(
+  _$_AuditEventSource(
       {this.site,
       @JsonKey(required: true) this.identifier,
       this.type,
@@ -1775,7 +1775,7 @@ class _$_AuditEventSource implements _AuditEventSource {
 }
 
 abstract class _AuditEventSource implements AuditEventSource {
-  const factory _AuditEventSource(
+  factory _AuditEventSource(
       {String site,
       @JsonKey(required: true) Identifier identifier,
       List<Coding> type,
@@ -2120,7 +2120,7 @@ class __$AuditEventEntityCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_AuditEventEntity implements _AuditEventEntity {
-  const _$_AuditEventEntity(
+  _$_AuditEventEntity(
       {this.identifier,
       this.reference,
       this.type,
@@ -2241,7 +2241,7 @@ class _$_AuditEventEntity implements _AuditEventEntity {
 }
 
 abstract class _AuditEventEntity implements AuditEventEntity {
-  const factory _AuditEventEntity(
+  factory _AuditEventEntity(
       {Identifier identifier,
       Reference reference,
       Coding type,
@@ -2438,7 +2438,7 @@ class __$AuditEventDetailCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_AuditEventDetail implements _AuditEventDetail {
-  const _$_AuditEventDetail(
+  _$_AuditEventDetail(
       {this.type,
       this.value,
       @JsonKey(name: '_type') this.typeElement,
@@ -2498,7 +2498,7 @@ class _$_AuditEventDetail implements _AuditEventDetail {
 }
 
 abstract class _AuditEventDetail implements AuditEventDetail {
-  const factory _AuditEventDetail(
+  factory _AuditEventDetail(
       {String type,
       String value,
       @JsonKey(name: '_type') Element typeElement,
@@ -3118,7 +3118,7 @@ class __$ConsentCopyWithImpl<$Res> extends _$ConsentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Consent implements _Consent {
-  const _$_Consent(
+  _$_Consent(
       {@required
       @JsonKey(required: true, defaultValue: 'Consent')
           this.resourceType,
@@ -3369,7 +3369,7 @@ class _$_Consent implements _Consent {
 }
 
 abstract class _Consent implements Consent {
-  const factory _Consent(
+  factory _Consent(
       {@required
       @JsonKey(required: true, defaultValue: 'Consent')
           String resourceType,
@@ -3610,7 +3610,7 @@ class __$ConsentActorCopyWithImpl<$Res> extends _$ConsentActorCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConsentActor implements _ConsentActor {
-  const _$_ConsentActor(
+  _$_ConsentActor(
       {@JsonKey(required: true) this.role,
       @JsonKey(required: true) this.reference});
 
@@ -3657,7 +3657,7 @@ class _$_ConsentActor implements _ConsentActor {
 }
 
 abstract class _ConsentActor implements ConsentActor {
-  const factory _ConsentActor(
+  factory _ConsentActor(
       {@JsonKey(required: true) CodeableConcept role,
       @JsonKey(required: true) Reference reference}) = _$_ConsentActor;
 
@@ -3820,7 +3820,7 @@ class __$ConsentPolicyCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConsentPolicy implements _ConsentPolicy {
-  const _$_ConsentPolicy(
+  _$_ConsentPolicy(
       {this.authority,
       this.uri,
       @JsonKey(name: '_authority') this.authorityElement,
@@ -3881,7 +3881,7 @@ class _$_ConsentPolicy implements _ConsentPolicy {
 }
 
 abstract class _ConsentPolicy implements ConsentPolicy {
-  const factory _ConsentPolicy(
+  factory _ConsentPolicy(
       {String authority,
       String uri,
       @JsonKey(name: '_authority') Element authorityElement,
@@ -4040,7 +4040,7 @@ class __$ConsentDataCopyWithImpl<$Res> extends _$ConsentDataCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConsentData implements _ConsentData {
-  const _$_ConsentData(
+  _$_ConsentData(
       {@JsonKey(unknownEnumValue: DataMeaning.unknown) this.meaning,
       @JsonKey(required: true) this.reference,
       @JsonKey(name: '_meaning') this.meaningElement});
@@ -4096,7 +4096,7 @@ class _$_ConsentData implements _ConsentData {
 }
 
 abstract class _ConsentData implements ConsentData {
-  const factory _ConsentData(
+  factory _ConsentData(
       {@JsonKey(unknownEnumValue: DataMeaning.unknown) DataMeaning meaning,
       @JsonKey(required: true) Reference reference,
       @JsonKey(name: '_meaning') Element meaningElement}) = _$_ConsentData;
@@ -4344,7 +4344,7 @@ class __$ConsentExceptCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConsentExcept implements _ConsentExcept {
-  const _$_ConsentExcept(
+  _$_ConsentExcept(
       {@JsonKey(unknownEnumValue: ExceptType.unknown) this.type,
       this.period,
       this.actor,
@@ -4449,7 +4449,7 @@ class _$_ConsentExcept implements _ConsentExcept {
 }
 
 abstract class _ConsentExcept implements ConsentExcept {
-  const factory _ConsentExcept(
+  factory _ConsentExcept(
       {@JsonKey(unknownEnumValue: ExceptType.unknown) ExceptType type,
       Period period,
       List<ConsentActor1> actor,
@@ -4618,7 +4618,7 @@ class __$ConsentActor1CopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConsentActor1 implements _ConsentActor1 {
-  const _$_ConsentActor1(
+  _$_ConsentActor1(
       {@JsonKey(required: true) this.role,
       @JsonKey(required: true) this.reference});
 
@@ -4665,7 +4665,7 @@ class _$_ConsentActor1 implements _ConsentActor1 {
 }
 
 abstract class _ConsentActor1 implements ConsentActor1 {
-  const factory _ConsentActor1(
+  factory _ConsentActor1(
       {@JsonKey(required: true) CodeableConcept role,
       @JsonKey(required: true) Reference reference}) = _$_ConsentActor1;
 
@@ -4818,7 +4818,7 @@ class __$ConsentData1CopyWithImpl<$Res> extends _$ConsentData1CopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ConsentData1 implements _ConsentData1 {
-  const _$_ConsentData1(
+  _$_ConsentData1(
       {@JsonKey(unknownEnumValue: DataMeaning.unknown) this.meaning,
       @JsonKey(required: true) this.reference,
       @JsonKey(name: '_meaning') this.meaningElement});
@@ -4874,7 +4874,7 @@ class _$_ConsentData1 implements _ConsentData1 {
 }
 
 abstract class _ConsentData1 implements ConsentData1 {
-  const factory _ConsentData1(
+  factory _ConsentData1(
       {@JsonKey(unknownEnumValue: DataMeaning.unknown) DataMeaning meaning,
       @JsonKey(required: true) Reference reference,
       @JsonKey(name: '_meaning') Element meaningElement}) = _$_ConsentData1;
@@ -5293,7 +5293,7 @@ class __$ProvenanceCopyWithImpl<$Res> extends _$ProvenanceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Provenance implements _Provenance {
-  const _$_Provenance(
+  _$_Provenance(
       {@required
       @JsonKey(required: true, defaultValue: 'Provenance')
           this.resourceType,
@@ -5477,7 +5477,7 @@ class _$_Provenance implements _Provenance {
 }
 
 abstract class _Provenance implements Provenance {
-  const factory _Provenance(
+  factory _Provenance(
       {@required
       @JsonKey(required: true, defaultValue: 'Provenance')
           String resourceType,
@@ -5801,7 +5801,7 @@ class __$ProvenanceAgentCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ProvenanceAgent implements _ProvenanceAgent {
-  const _$_ProvenanceAgent(
+  _$_ProvenanceAgent(
       {this.role,
       this.whoUri,
       this.whoReference,
@@ -5889,7 +5889,7 @@ class _$_ProvenanceAgent implements _ProvenanceAgent {
 }
 
 abstract class _ProvenanceAgent implements ProvenanceAgent {
-  const factory _ProvenanceAgent(
+  factory _ProvenanceAgent(
           {List<CodeableConcept> role,
           String whoUri,
           Reference whoReference,
@@ -6133,7 +6133,7 @@ class __$ProvenanceEntityCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ProvenanceEntity implements _ProvenanceEntity {
-  const _$_ProvenanceEntity(
+  _$_ProvenanceEntity(
       {@JsonKey(unknownEnumValue: EntityRole.unknown) this.role,
       this.whatUri,
       this.whatReference,
@@ -6215,7 +6215,7 @@ class _$_ProvenanceEntity implements _ProvenanceEntity {
 }
 
 abstract class _ProvenanceEntity implements ProvenanceEntity {
-  const factory _ProvenanceEntity(
+  factory _ProvenanceEntity(
       {@JsonKey(unknownEnumValue: EntityRole.unknown) EntityRole role,
       String whatUri,
       Reference whatReference,

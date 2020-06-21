@@ -10,7 +10,7 @@ part 'special_types.g.dart';
 
 @freezed
 abstract class BackboneElement with _$BackboneElement {
-  const factory BackboneElement({
+  factory BackboneElement({
     List<FhirExtension> modifierExtension,
   }) = _BackboneElement;
   factory BackboneElement.fromJson(Map<String, dynamic> json) =>
@@ -19,7 +19,7 @@ abstract class BackboneElement with _$BackboneElement {
 
 @freezed
 abstract class Narrative with _$Narrative {
-  const factory Narrative({
+  factory Narrative({
     @JsonKey(unknownEnumValue: NarrativeStatus.unknown) NarrativeStatus status,
     @JsonKey(required: true) String div,
     @JsonKey(name: '_status') Element statusElement,
@@ -30,7 +30,7 @@ abstract class Narrative with _$Narrative {
 
 @freezed
 abstract class Reference with _$Reference {
-  const factory Reference({
+  factory Reference({
     String reference,
     Identifier identifier,
     String display,
@@ -43,7 +43,7 @@ abstract class Reference with _$Reference {
 
 @freezed
 abstract class Meta with _$Meta {
-  const factory Meta({
+  factory Meta({
     Id versionId,
     String lastUpdated,
     List<String> profile,
@@ -58,7 +58,7 @@ abstract class Meta with _$Meta {
 
 @freezed
 abstract class Element with _$Element {
-  const factory Element({
+  factory Element({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     @JsonKey(name: '_id') Element idElement,
@@ -69,7 +69,7 @@ abstract class Element with _$Element {
 
 @freezed
 abstract class ElementDefinition with _$ElementDefinition {
-  const factory ElementDefinition({
+  factory ElementDefinition({
     String path,
     List<ElementDefinitionRepresentation> representation,
     String sliceName,
@@ -370,7 +370,7 @@ abstract class ElementDefinition with _$ElementDefinition {
 
 @freezed
 abstract class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
-  const factory ElementDefinitionSlicing({
+  factory ElementDefinitionSlicing({
     List<ElementDefinitionDiscriminator> discriminator,
     String description,
     Boolean ordered,
@@ -386,7 +386,7 @@ abstract class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
 @freezed
 abstract class ElementDefinitionDiscriminator
     with _$ElementDefinitionDiscriminator {
-  const factory ElementDefinitionDiscriminator({
+  factory ElementDefinitionDiscriminator({
     @JsonKey(unknownEnumValue: DiscriminatorType.unknown)
         DiscriminatorType type,
     String path,
@@ -399,7 +399,7 @@ abstract class ElementDefinitionDiscriminator
 
 @freezed
 abstract class ElementDefinitionBase with _$ElementDefinitionBase {
-  const factory ElementDefinitionBase({
+  factory ElementDefinitionBase({
     String path,
     UnsignedInt min,
     String max,
@@ -413,7 +413,7 @@ abstract class ElementDefinitionBase with _$ElementDefinitionBase {
 
 @freezed
 abstract class ElementDefinitionType with _$ElementDefinitionType {
-  const factory ElementDefinitionType({
+  factory ElementDefinitionType({
     String code,
     String profile,
     String targetProfile,
@@ -432,7 +432,7 @@ abstract class ElementDefinitionType with _$ElementDefinitionType {
 
 @freezed
 abstract class ElementDefinitionExample with _$ElementDefinitionExample {
-  const factory ElementDefinitionExample({
+  factory ElementDefinitionExample({
     String label,
     Boolean valueBoolean,
     Integer valueInteger,
@@ -512,7 +512,7 @@ abstract class ElementDefinitionExample with _$ElementDefinitionExample {
 
 @freezed
 abstract class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
-  const factory ElementDefinitionConstraint({
+  factory ElementDefinitionConstraint({
     Id key,
     String requirements,
     @JsonKey(unknownEnumValue: ConstraintSeverity.unknown)
@@ -535,7 +535,7 @@ abstract class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
 
 @freezed
 abstract class ElementDefinitionBinding with _$ElementDefinitionBinding {
-  const factory ElementDefinitionBinding({
+  factory ElementDefinitionBinding({
     @JsonKey(unknownEnumValue: BindingStrength.unknown)
         BindingStrength strength,
     String description,
@@ -551,7 +551,7 @@ abstract class ElementDefinitionBinding with _$ElementDefinitionBinding {
 
 @freezed
 abstract class ElementDefinitionMapping with _$ElementDefinitionMapping {
-  const factory ElementDefinitionMapping({
+  factory ElementDefinitionMapping({
     Id identity,
     Code language,
     String map,
@@ -567,7 +567,7 @@ abstract class ElementDefinitionMapping with _$ElementDefinitionMapping {
 
 @freezed
 abstract class Dosage with _$Dosage {
-  const factory Dosage({
+  factory Dosage({
     Integer sequence,
     String text,
     List<CodeableConcept> additionalInstruction,
