@@ -17,14 +17,9 @@ As well as the R5 Preview #1:
 
 ## Validation
 ### R5
-  * These are non-resource files that my parser won't do (well, it won't read it as a resource)
-  1. File: './test/r5/r5_examples/package-min-ver.json'
-  2. File: './test/r5/r5_examples/uml.json'
-  3. File: './test/r5/r5_examples/hl7.fhir.r5.corexml.manifest.json'
-  4. File: './test/r5/r5_examples/hl7.fhir.r5.core.manifest.json'
-  5. File: './test/r5/r5_examples/hl7.fhir.r5.expansions.manifest.json'
+  * These are non-resource files that my parser won't do (well, it won't read it as a resource). [package-min-ver.json](https://github.com/Dokotela/fhir/blob/master/test/r5/r5_examples/package-min-ver.json), [uml.json](https://github.com/Dokotela/fhir/blob/master/test/r5/r5_examples/uml.json), [hl7.fhir.r5.corexml.manifest.json](https://github.com/Dokotela/fhir/blob/master/test/r5/r5_examples/hl7.fhir.r5.corexml.manifest.json), [hl7.fhir.r5.core.manifest.json](https://github.com/Dokotela/fhir/blob/master/test/r5/r5_examples/hl7.fhir.r5.core.manifest.json), [hl7.fhir.r5.expansions.manifest.json](https://github.com/Dokotela/fhir/blob/master/test/r5/r5_examples/hl7.fhir.r5.expansions.manifest.json)
   * It still finds that the Id field in [this file](https://github.com/Dokotela/fhir/blob/master/test/r5/r5_examples/questionnaireresponse-extensions-QuestionnaireResponse-item-subject.json) is too long
-  * And the padding on this [Base64Binary](https://github.com/Dokotela/fhir/blob/master/test/r4/r4_examples/binary-example.json) field renders it invalid
+  * And the padding on this [Base64Binary](https://github.com/Dokotela/fhir/blob/master/test/r5/r5_examples/binary-example.json) field renders it invalid
 ### R4
   * All of the downloadable [R4 HL7 Examples](https://www.hl7.org/fhir/examples-json.zip) have been run through the classes via this [tester](https://github.com/Dokotela/fhir/blob/master/test/r4/validation.dart).
   * I've compared each field from the input to the output and output to input as Maps. This should have revealed if any fields were created or deleted. It also avoids issues with fields in a different order from input to output.
