@@ -1475,7 +1475,7 @@ class _$CodingTearOff {
   const _$CodingTearOff();
 
   _Coding call(
-      {String system,
+      {FhirUri system,
       String version,
       Code code,
       String display,
@@ -1504,7 +1504,7 @@ class _$CodingTearOff {
 const $Coding = _$CodingTearOff();
 
 mixin _$Coding {
-  String get system;
+  FhirUri get system;
   String get version;
   Code get code;
   String get display;
@@ -1528,7 +1528,7 @@ abstract class $CodingCopyWith<$Res> {
   factory $CodingCopyWith(Coding value, $Res Function(Coding) then) =
       _$CodingCopyWithImpl<$Res>;
   $Res call(
-      {String system,
+      {FhirUri system,
       String version,
       Code code,
       String display,
@@ -1567,7 +1567,7 @@ class _$CodingCopyWithImpl<$Res> implements $CodingCopyWith<$Res> {
     Object userSelectedElement = freezed,
   }) {
     return _then(_value.copyWith(
-      system: system == freezed ? _value.system : system as String,
+      system: system == freezed ? _value.system : system as FhirUri,
       version: version == freezed ? _value.version : version as String,
       code: code == freezed ? _value.code : code as Code,
       display: display == freezed ? _value.display : display as String,
@@ -1647,7 +1647,7 @@ abstract class _$CodingCopyWith<$Res> implements $CodingCopyWith<$Res> {
       __$CodingCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String system,
+      {FhirUri system,
       String version,
       Code code,
       String display,
@@ -1692,7 +1692,7 @@ class __$CodingCopyWithImpl<$Res> extends _$CodingCopyWithImpl<$Res>
     Object userSelectedElement = freezed,
   }) {
     return _then(_Coding(
-      system: system == freezed ? _value.system : system as String,
+      system: system == freezed ? _value.system : system as FhirUri,
       version: version == freezed ? _value.version : version as String,
       code: code == freezed ? _value.code : code as Code,
       display: display == freezed ? _value.display : display as String,
@@ -1735,7 +1735,7 @@ class _$_Coding implements _Coding {
       _$_$_CodingFromJson(json);
 
   @override
-  final String system;
+  final FhirUri system;
   @override
   final String version;
   @override
@@ -1825,7 +1825,7 @@ class _$_Coding implements _Coding {
 
 abstract class _Coding implements Coding {
   factory _Coding(
-      {String system,
+      {FhirUri system,
       String version,
       Code code,
       String display,
@@ -1839,7 +1839,7 @@ abstract class _Coding implements Coding {
   factory _Coding.fromJson(Map<String, dynamic> json) = _$_Coding.fromJson;
 
   @override
-  String get system;
+  FhirUri get system;
   @override
   String get version;
   @override

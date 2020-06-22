@@ -77,7 +77,7 @@ abstract class CodeableConcept with _$CodeableConcept {
 @freezed
 abstract class Coding with _$Coding {
   factory Coding({
-    String system,
+    FhirUri system,
     String version,
     Code code,
     String display,

@@ -236,7 +236,9 @@ Map<String, dynamic> _$_$_CodeableConceptToJson(_$_CodeableConcept instance) {
 
 _$_Coding _$_$_CodingFromJson(Map<String, dynamic> json) {
   return _$_Coding(
-    system: json['system'] as String,
+    system: json['system'] == null
+        ? null
+        : FhirUri.fromJson(json['system'] as String),
     version: json['version'] as String,
     code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
     display: json['display'] as String,
@@ -270,7 +272,7 @@ Map<String, dynamic> _$_$_CodingToJson(_$_Coding instance) {
     }
   }
 
-  writeNotNull('system', instance.system);
+  writeNotNull('system', instance.system?.toJson());
   writeNotNull('version', instance.version);
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('display', instance.display);
