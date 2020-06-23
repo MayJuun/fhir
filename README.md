@@ -1,45 +1,60 @@
-# Close to ready for release. 
+# Close to ready for release.
 
 # ToDos - not emergent or necessary
+
 1. Order of classes in files (just because I have some OCD tendencies).
 2. I have shortened subclass names of DSTU2. Should I have left the long original names?
 
 # FHIR
+
 A Dart/Flutter package for working with FHIR resources.
 
 It contains packages for the 3 released FHIR versions:
-* [R4 v4.0.1](https://hl7.org/fhir/R4/)
-* [Stu3 v3.0.2](https://www.hl7.org/fhir/stu3/)
-* [Dstu2 v1.0.2](https://www.hl7.org/fhir/DSTU2/)
+
+- [R4 v4.0.1](https://hl7.org/fhir/R4/)
+- [Stu3 v3.0.2](https://www.hl7.org/fhir/stu3/)
+- [Dstu2 v1.0.2](https://www.hl7.org/fhir/DSTU2/)
 
 As well as the R5 Preview #1:
-* [v4.2.0: R5 Draft](http://hl7.org/fhir/2020Feb/)
+
+- [v4.2.0: R5 Draft](http://hl7.org/fhir/2020Feb/)
 
 ## Validation
+
 ### R5
-  * These are non-resource files that my parser won't do (well, it won't read it as a resource). [package-min-ver.json](https://github.com/Dokotela/fhir/blob/master/test/r5/r5_examples/package-min-ver.json), [uml.json](https://github.com/Dokotela/fhir/blob/master/test/r5/r5_examples/uml.json), [hl7.fhir.r5.corexml.manifest.json](https://github.com/Dokotela/fhir/blob/master/test/r5/r5_examples/hl7.fhir.r5.corexml.manifest.json), [hl7.fhir.r5.core.manifest.json](https://github.com/Dokotela/fhir/blob/master/test/r5/r5_examples/hl7.fhir.r5.core.manifest.json), [hl7.fhir.r5.expansions.manifest.json](https://github.com/Dokotela/fhir/blob/master/test/r5/r5_examples/hl7.fhir.r5.expansions.manifest.json)
-  * It still finds that the Id field in [this file](https://github.com/Dokotela/fhir/blob/master/test/r5/r5_examples/questionnaireresponse-extensions-QuestionnaireResponse-item-subject.json) is too long
-  * And the padding on this [Base64Binary](https://github.com/Dokotela/fhir/blob/master/test/r5/r5_examples/binary-example.json) field renders it invalid
+
+- These are non-resource files that my parser won't do (well, it won't read it as a resource). [package-min-ver.json](test/r5/r5_examples/package-min-ver.json), [uml.json](test/r5/r5_examples/uml.json), [hl7.fhir.r5.corexml.manifest.json](test/r5/r5_examples/hl7.fhir.r5.corexml.manifest.json), [hl7.fhir.r5.core.manifest.json](test/r5/r5_examples/hl7.fhir.r5.core.manifest.json), [hl7.fhir.r5.expansions.manifest.json](test/r5/r5_examples/hl7.fhir.r5.expansions.manifest.json)
+- It still finds that the Id field in [this file](test/r5/r5_examples/questionnaireresponse-extensions-QuestionnaireResponse-item-subject.json) is too long
+- And the padding on this [Base64Binary](test/r5/r5_examples/binary-example.json) field renders it invalid
+
 ### R4
-  * All of the downloadable [R4 HL7 Examples](https://www.hl7.org/fhir/examples-json.zip) have been run through the classes via this [tester](https://github.com/Dokotela/fhir/blob/master/test/r4/validation.dart).
-  * I've compared each field from the input to the output and output to input as Maps. This should have revealed if any fields were created or deleted. It also avoids issues with fields in a different order from input to output.
-  * Known problems:
-  1. There is an [Id field](https://github.com/Dokotela/fhir/blob/master/test/r4/r4_examples/questionnaireresponse-extensions-QuestionnaireResponse-item-subject.json) in the examples seems to be too long
-  2. There is a [Base64Binary](https://github.com/Dokotela/fhir/blob/master/test/r4/r4_examples/binary-example.json) field that has padding which renders it invalid
-  3. There's also [this file](https://github.com/Dokotela/fhir/blob/master/test/r4/r4_examples/package-min-ver.json) I have no idea what to do with.
+
+- All of the downloadable [R4 HL7 Examples](https://www.hl7.org/fhir/examples-json.zip) have been run through the classes via this [tester](test/r4/validation.dart).
+- I've compared each field from the input to the output and output to input as Maps. This should have revealed if any fields were created or deleted. It also avoids issues with fields in a different order from input to output.
+- Known problems:
+
+1. There is an [Id field](test/r4/r4_examples/questionnaireresponse-extensions-QuestionnaireResponse-item-subject.json) in the examples seems to be too long
+2. There is a [Base64Binary](test/r4/r4_examples/binary-example.json) field that has padding which renders it invalid
+3. There's also [this file](test/r4/r4_examples/package-min-ver.json) I have no idea what to do with.
+
 ### Stu3
-  * All of the downloadable [STU3 HL7 Examples](https://hl7.org/fhir/STU3/examples-json.zip) have been run through this [tester](https://github.com/Dokotela/fhir/blob/master/test/stu3/validation.dart). Amazingly, it seemed to correctly run through all of them.
+
+- All of the downloadable [STU3 HL7 Examples](https://hl7.org/fhir/STU3/examples-json.zip) have been run through this [tester](test/stu3/validation.dart). Amazingly, it seemed to correctly run through all of them.
+
 ### Dstu2
-  * All of the downloadale [DSTU2 HL7 Examples](http://hl7.org/fhir/dstu2/validation-min.json.zip) have been run through this [tester](https://github.com/Dokotela/fhir/blob/master/test/dstu2/validation.dart).
-  * [SearchParameter](https://www.hl7.org/fhir/DSTU2/searchparameter.html): at least according to this website, it does appear that the field "base" and "description" should be required. However, many, many of the examples that are provided on the website do not have those fields, so I have not made them mandatory.
-  * [ElementDefinition](https://www.hl7.org/fhir/DSTU2/elementdefinition.html#ElementDefinition) It seems that in the type field, "code" is required, but if "_code" is present, this does not seem to be the case in the examples. I have therefore removed the requirement from the code field.
-  * There are private fields in this FHIR version that appear to correlate to the private Element fields in R4. I cannot find these specifically stated anywhere, so I'm going to assume all R4 private fields are valid as long as there is a corresponding public field. A few of these should actually be lists. But if they are not in the examples, then I do not know which. So there are likely some that should be lists that I have not implemented as such.
-  * Known Problems, a number of files appear to have Ids that are too long, all observations: [Observation1](https://github.com/Dokotela/fhir/blob/master/test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change.json), [Observation2](https://github.com/Dokotela/fhir/blob/master/test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart.json), [Observation3](https://github.com/Dokotela/fhir/blob/master/test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant.canonical.json), [Observation4](https://github.com/Dokotela/fhir/blob/master/test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant.json), [Observation5](https://github.com/Dokotela/fhir/blob/master/test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change.canonical.json), [Observation6](https://github.com/Dokotela/fhir/blob/master/test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart.canonical.json).
+
+- All of the downloadale [DSTU2 HL7 Examples](http://hl7.org/fhir/dstu2/validation-min.json.zip) have been run through this [tester](test/dstu2/validation.dart).
+- [SearchParameter](https://www.hl7.org/fhir/DSTU2/searchparameter.html): at least according to this website, it does appear that the field "base" and "description" should be required. However, many, many of the examples that are provided on the website do not have those fields, so I have not made them mandatory.
+- [ElementDefinition](https://www.hl7.org/fhir/DSTU2/elementdefinition.html#ElementDefinition) It seems that in the type field, "code" is required, but if "\_code" is present, this does not seem to be the case in the examples. I have therefore removed the requirement from the code field.
+- There are private fields in this FHIR version that appear to correlate to the private Element fields in R4. I cannot find these specifically stated anywhere, so I'm going to assume all R4 private fields are valid as long as there is a corresponding public field. A few of these should actually be lists. But if they are not in the examples, then I do not know which. So there are likely some that should be lists that I have not implemented as such.
+- Known Problems, a number of files appear to have Ids that are too long, all observations: [Observation1](test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change.json), [Observation2](test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart.json), [Observation3](test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant.canonical.json), [Observation4](test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant.json), [Observation5](test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change.canonical.json), [Observation6](test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart.canonical.json).
 
 ## First Package
+
 This is the first time I've ever created a package, feedback and pull requests are welcome. I've also been started to implement type checking using [Freezed](https://pub.dev/packages/freezed). But if you run into any issues with this, either incorrect validation, or frustrating to work with returned failures, please let me know.
 
 ## Things I'm working on
+
 Currently working on refactoring and abstracting some classes with the help of [Dr. John Manning](https://github.com/FireJuun).
 
 Nevermind about the previous thing about [Aidbox](https://www.health-samurai.io/aidbox), my favorite FHIR server. They have changed some of the endpoints for their server as they feel it works better, however, if you append fhir before the rest, then it returns the normal FHIR json (i.e. GET /fhir/Patient)
@@ -50,102 +65,102 @@ I think it's the new compiling. It's actually great though, [json_serializable](
 
 ## Formatting Notes
 
-* Class names: upper camel case.
-* Variables: lower camel case.
-* File names: lower camel case.
-* FHIR nested classes (ncluding enums) listed under the primary class
-* When working with some of the variables, I have had to change their names, 'Class', 'List', 'extends', 'for', and 'assert' are reserved words in flutter, so I've made these changes:
-  * 'class' to 'classs' in 'ConsentProvision', 'Coverage', 'Encounter', 'EncounterClassHistory', 'SubstancePlymer', 'SubstanceSourceMaterial_OrganismGeneral'
-  * 'List' to 'Lists' - this is solely for the class name, the 'resourceType' is still 'List' and all nested classes are 'ListClass'.
-  * 'extends' to 'extend' in 'StructureMapGroup'
-  * 'for' to 'fore' in 'Task'
-  * 'assert' to 'asserts' in 'TestReportAction', 'TestReportAction1', 'TestScript_Action', 'TestScript_Action1'
-  * 'required' to 'require' in 'TestScript' - this isn't a reserved word, but in order to have @required parameters, I had to change it.
-* In the offical [FHIR Json Schema](https://www.hl7.org/fhir/fhir.schema.json.zip) every field has a private extension. I have not included these at this time.
+- Class names: upper camel case.
+- Variables: lower camel case.
+- File names: lower camel case.
+- FHIR nested classes (including enums) listed under the primary class
+- When working with some of the variables, I have had to change their names, 'Class', 'List', 'extends', 'for', and 'assert' are reserved words in flutter, so I've made these changes:
+  - 'class' to 'classs' in 'ConsentProvision', 'Coverage', 'Encounter', 'EncounterClassHistory', 'SubstancePlymer', 'SubstanceSourceMaterial_OrganismGeneral'
+  - 'List' to 'Lists' - this is solely for the class name, the 'resourceType' is still 'List' and all nested classes are 'ListClass'.
+  - 'extends' to 'extend' in 'StructureMapGroup'
+  - 'for' to 'fore' in 'Task'
+  - 'assert' to 'asserts' in 'TestReportAction', 'TestReportAction1', 'TestScript_Action', 'TestScript_Action1'
+  - 'required' to 'require' in 'TestScript' - this isn't a reserved word, but in order to have @required parameters, I had to change it.
+- In the offical [FHIR Json Schema](https://www.hl7.org/fhir/fhir.schema.json.zip) every field has a private extension. I have not included these at this time.
 
 ### FHIR datatypes (these are R4 (which is what everyone should be using, but since EHR vendors are doing everything they can to not share data, I am also working on stu3 and dstu2 as well)
 
-| PrimitiveTypes | GeneralTypes | MetadataTypes | SpecialTypes | DraftTypes |
-|--------|--------|--------|--------|----------|
-| base64binary | address| contactDetail | dosage | population |
-| boolean | age | contributor | elementDefinition | productedShelfLife |
-| canonical | annotation | dataRequirement | extension | prodCharacteristic |
-| code | attachment | parameterDefinition | meta | marketingStatus |
-| date | codeableConcept | relatedArtifact | narrative | substanceAmount |
-| dateTime | coding | triggerDefinition | reference | |
-| decimal | contactPoint | usageContext |  | |
-| id | count | relatedArtifact |  | |
-| instant | distance | triggerDefinition |  | |
-| integer | duration | usageContext |  | |
-| markdown | humanName | expression |  | |
-| oid | identifier |  |  | |
-| positiveInt | money |  |  | |
-| string | moneyQuantity |  |  | |
-| time | period |  |  | |
-| unsignedInt | quantity |  |  | |
-| uri | range |  |  | |
-| url | ratio |  |  | |
-| | sampledData |  |  | |
-| | signature |  |  | |
-| | simpleQuantity |  |  | |
-| | timing |  |  | |
+| PrimitiveTypes | GeneralTypes    | MetadataTypes       | SpecialTypes      | DraftTypes         |
+| -------------- | --------------- | ------------------- | ----------------- | ------------------ |
+| base64binary   | address         | contactDetail       | dosage            | population         |
+| boolean        | age             | contributor         | elementDefinition | productedShelfLife |
+| canonical      | annotation      | dataRequirement     | extension         | prodCharacteristic |
+| code           | attachment      | parameterDefinition | meta              | marketingStatus    |
+| date           | codeableConcept | relatedArtifact     | narrative         | substanceAmount    |
+| dateTime       | coding          | triggerDefinition   | reference         |                    |
+| decimal        | contactPoint    | usageContext        |                   |                    |
+| id             | count           | relatedArtifact     |                   |                    |
+| instant        | distance        | triggerDefinition   |                   |                    |
+| integer        | duration        | usageContext        |                   |                    |
+| markdown       | humanName       | expression          |                   |                    |
+| oid            | identifier      |                     |                   |                    |
+| positiveInt    | money           |                     |                   |                    |
+| string         | moneyQuantity   |                     |                   |                    |
+| time           | period          |                     |                   |                    |
+| unsignedInt    | quantity        |                     |                   |                    |
+| uri            | range           |                     |                   |                    |
+| url            | ratio           |                     |                   |                    |
+|                | sampledData     |                     |                   |                    |
+|                | signature       |                     |                   |                    |
+|                | simpleQuantity  |                     |                   |                    |
+|                | timing          |                     |                   |                    |
 
-| [ResourceTypes](https://www.hl7.org/fhir/resourcelist.html) |by Category| |||||
-|:-----|:-----|-----|-----|-----|-----|-----|
-| **Base** |
-| *Individuals* | *Entities1* | *Entities2* | *Workflow* | Management |
-| Group| Endpoing | BiologicallyDerivedProduct | Appointment | Encounter |
-| Patient  | HealthcareService | Device | AppointmentResponse | EpisodeOfCare |
-| Person | Location | DeviceMetric | Schedule | Flag |
-| Practitioner | Organization | Substance | Slot | Library |
-| PractitionerRole | OrganizationAffiliation || VerificationResult | List |
-| RelatedPerson |
-| **Clinical** |
-| *Summary* | *Diagnostics* | *Medications* | *CareProvision* | *RequestAndResponse* |
-| AdverseEvent | BodyStructure | Immunization | CarePlan | Communication |
-| AllergyIntolerance | DiagnosticReport | ImmunizationEvaluation | CareTeam | CommunicationRequest |
-| ClinicalImpression | ImagingStudy | ImmunizationRecommendation | Goal | DeviceRequest |
-| DetectedIssue | Media | Medication | NutritionOrder | DeviceUseStatement |
-| FamilyMemberHistory | MolecularSequence | MedicationAdministration | RequestGroup | GuidanceResponse |
-| Procedure | Observation | MedicationDispense | RiskAssessment | SupplyDelivery |
-| | QuestionnaireResponse | MedicationKnowledge | VisionPrescription | SupplyRequest |
-| | Specimen | MedicationRequest |
-| | | MedicationStatement |
-| **Financial** |
-| *Support* | *Billing* | *Payment* | *General* |
-| Coverage | Claim | PaymentNotice | Account |
-| CoverageEligibilityRequest | ClaimResponse | PaymentReconciliation | ChargeItem |
-| CoverageEligibilityResponse | Invoice | | ChargeItemDefinition
-| EnrollmentRequest | | | Contract |
-| EnrollmentResponse | | | ExplanationOfBenefits |
-| | | | InsurancePlan |
-| **Foundation** |
-| *Conformance* | *Terminology* | *Security* | *Documents* | *Other* |
-| CapabilityStatement | CodeSystem | AuditEvent | CatalogEntry | Basic |
-| CompartmentDefinition | ConceptMap | Consent | Composition | Binary |
-| ExampleScenario |  NamingSystem | Provenance | DocumentManifest | Bundle |
-| GraphDefinition | TerminologyCapabilities | DocumentReference | | Linkage |
-| ImplementationGuide | ValueSet | | | MessageHeader |
-| MessageDefinition | | | | OperationOutcome |
-| OperationDefinition | | | | Parameters |
-| SearchParameter | | | | Subscription |
-| StructureDefinition |
-| StructureMap |
-| **Specialized** |
-| *Public Health And Research* | *Definitional Artifacts* | *Evidence Based Medicine* | *Quality Reporting And Testing* | *Medication Definition* |
-| ResearchStudy | ActivityDefinition | EffectEvidenceSynthesis | Measure | MedicinalProduct |
-| ResearchSubject | DeviceDefinition | Evidence | MeasureReport | MedicinalProductAuthorization |
-| | EventDefinition | EvidenceVariable | TestScript | MedicinalProductContraindication |
-| | ObservationDefinition | ResearchDefinition | TestReport | MedicinalProductIndication |
-| | PlanDefinition | ResearchElementDefinition || MedicinalProductIngredient |
-| | Quesionnaire | RiskEvidenceSynthesis || MedicinalProductInteraction |
-| | SpecimenDefinition ||| MedicinalProductManufactured |
-| |||| MedicinalProductPackaged |
-| |||| MedicinalProductPharmaceutical |
-| |||| MedicinalProductUndesirableEffect |
-| |||| SubstanceNucleicAcid |
-| |||| SubstancePolymer |
-| |||| SubstanceProtein |
-| |||| SubstanceReferenceInformation |
-| |||| SubstanceSpecification |
-| |||| SubstanceSourceMaterial |
+| [ResourceTypes](https://www.hl7.org/fhir/resourcelist.html) | by Category              |                            |                                 |                                   |     |     |
+| :---------------------------------------------------------- | :----------------------- | -------------------------- | ------------------------------- | --------------------------------- | --- | --- |
+| **Base**                                                    |
+| _Individuals_                                               | _Entities1_              | _Entities2_                | _Workflow_                      | Management                        |
+| Group                                                       | Endpoing                 | BiologicallyDerivedProduct | Appointment                     | Encounter                         |
+| Patient                                                     | HealthcareService        | Device                     | AppointmentResponse             | EpisodeOfCare                     |
+| Person                                                      | Location                 | DeviceMetric               | Schedule                        | Flag                              |
+| Practitioner                                                | Organization             | Substance                  | Slot                            | Library                           |
+| PractitionerRole                                            | OrganizationAffiliation  |                            | VerificationResult              | List                              |
+| RelatedPerson                                               |
+| **Clinical**                                                |
+| _Summary_                                                   | _Diagnostics_            | _Medications_              | _CareProvision_                 | _RequestAndResponse_              |
+| AdverseEvent                                                | BodyStructure            | Immunization               | CarePlan                        | Communication                     |
+| AllergyIntolerance                                          | DiagnosticReport         | ImmunizationEvaluation     | CareTeam                        | CommunicationRequest              |
+| ClinicalImpression                                          | ImagingStudy             | ImmunizationRecommendation | Goal                            | DeviceRequest                     |
+| DetectedIssue                                               | Media                    | Medication                 | NutritionOrder                  | DeviceUseStatement                |
+| FamilyMemberHistory                                         | MolecularSequence        | MedicationAdministration   | RequestGroup                    | GuidanceResponse                  |
+| Procedure                                                   | Observation              | MedicationDispense         | RiskAssessment                  | SupplyDelivery                    |
+|                                                             | QuestionnaireResponse    | MedicationKnowledge        | VisionPrescription              | SupplyRequest                     |
+|                                                             | Specimen                 | MedicationRequest          |
+|                                                             |                          | MedicationStatement        |
+| **Financial**                                               |
+| _Support_                                                   | _Billing_                | _Payment_                  | _General_                       |
+| Coverage                                                    | Claim                    | PaymentNotice              | Account                         |
+| CoverageEligibilityRequest                                  | ClaimResponse            | PaymentReconciliation      | ChargeItem                      |
+| CoverageEligibilityResponse                                 | Invoice                  |                            | ChargeItemDefinition            |
+| EnrollmentRequest                                           |                          |                            | Contract                        |
+| EnrollmentResponse                                          |                          |                            | ExplanationOfBenefits           |
+|                                                             |                          |                            | InsurancePlan                   |
+| **Foundation**                                              |
+| _Conformance_                                               | _Terminology_            | _Security_                 | _Documents_                     | _Other_                           |
+| CapabilityStatement                                         | CodeSystem               | AuditEvent                 | CatalogEntry                    | Basic                             |
+| CompartmentDefinition                                       | ConceptMap               | Consent                    | Composition                     | Binary                            |
+| ExampleScenario                                             | NamingSystem             | Provenance                 | DocumentManifest                | Bundle                            |
+| GraphDefinition                                             | TerminologyCapabilities  | DocumentReference          |                                 | Linkage                           |
+| ImplementationGuide                                         | ValueSet                 |                            |                                 | MessageHeader                     |
+| MessageDefinition                                           |                          |                            |                                 | OperationOutcome                  |
+| OperationDefinition                                         |                          |                            |                                 | Parameters                        |
+| SearchParameter                                             |                          |                            |                                 | Subscription                      |
+| StructureDefinition                                         |
+| StructureMap                                                |
+| **Specialized**                                             |
+| _Public Health And Research_                                | _Definitional Artifacts_ | _Evidence Based Medicine_  | _Quality Reporting And Testing_ | _Medication Definition_           |
+| ResearchStudy                                               | ActivityDefinition       | EffectEvidenceSynthesis    | Measure                         | MedicinalProduct                  |
+| ResearchSubject                                             | DeviceDefinition         | Evidence                   | MeasureReport                   | MedicinalProductAuthorization     |
+|                                                             | EventDefinition          | EvidenceVariable           | TestScript                      | MedicinalProductContraindication  |
+|                                                             | ObservationDefinition    | ResearchDefinition         | TestReport                      | MedicinalProductIndication        |
+|                                                             | PlanDefinition           | ResearchElementDefinition  |                                 | MedicinalProductIngredient        |
+|                                                             | Quesionnaire             | RiskEvidenceSynthesis      |                                 | MedicinalProductInteraction       |
+|                                                             | SpecimenDefinition       |                            |                                 | MedicinalProductManufactured      |
+|                                                             |                          |                            |                                 | MedicinalProductPackaged          |
+|                                                             |                          |                            |                                 | MedicinalProductPharmaceutical    |
+|                                                             |                          |                            |                                 | MedicinalProductUndesirableEffect |
+|                                                             |                          |                            |                                 | SubstanceNucleicAcid              |
+|                                                             |                          |                            |                                 | SubstancePolymer                  |
+|                                                             |                          |                            |                                 | SubstanceProtein                  |
+|                                                             |                          |                            |                                 | SubstanceReferenceInformation     |
+|                                                             |                          |                            |                                 | SubstanceSpecification            |
+|                                                             |                          |                            |                                 | SubstanceSourceMaterial           |
