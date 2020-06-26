@@ -8,7 +8,7 @@ part 'special_types.freezed.dart';
 part 'special_types.g.dart';
 
 @freezed
-abstract class FhirExtension with Resource implements _$FhirExtension {
+abstract class FhirExtension implements _$FhirExtension {
   FhirExtension._();
   factory FhirExtension({
     String id,
@@ -93,7 +93,7 @@ abstract class FhirExtension with Resource implements _$FhirExtension {
 }
 
 @freezed
-abstract class Narrative with Resource implements _$Narrative {
+abstract class Narrative implements _$Narrative {
   Narrative._();
   factory Narrative({
     String id,
@@ -108,7 +108,7 @@ abstract class Narrative with Resource implements _$Narrative {
 }
 
 @freezed
-abstract class CodeableReference with Resource implements _$CodeableReference {
+abstract class CodeableReference implements _$CodeableReference {
   CodeableReference._();
   factory CodeableReference({
     String id,
@@ -122,7 +122,7 @@ abstract class CodeableReference with Resource implements _$CodeableReference {
 }
 
 @freezed
-abstract class Reference with Resource implements _$Reference {
+abstract class Reference implements _$Reference {
   Reference._();
   factory Reference({
     String id,
@@ -141,7 +141,7 @@ abstract class Reference with Resource implements _$Reference {
 }
 
 @freezed
-abstract class Statistic with Resource implements _$Statistic {
+abstract class Statistic implements _$Statistic {
   Statistic._();
   factory Statistic({
     String id,
@@ -230,9 +230,7 @@ abstract class StatisticEstimateQualifier
 }
 
 @freezed
-abstract class OrderedDistribution
-    with Resource
-    implements _$OrderedDistribution {
+abstract class OrderedDistribution implements _$OrderedDistribution {
   OrderedDistribution._();
   factory OrderedDistribution({
     String id,
@@ -270,7 +268,7 @@ abstract class OrderedDistributionInterval
 }
 
 @freezed
-abstract class Meta with Resource implements _$Meta {
+abstract class Meta implements _$Meta {
   Meta._();
   factory Meta({
     String id,
@@ -290,7 +288,7 @@ abstract class Meta with Resource implements _$Meta {
 }
 
 @freezed
-abstract class Dosage with Resource implements _$Dosage {
+abstract class Dosage implements _$Dosage {
   Dosage._();
   factory Dosage({
     String id,
@@ -339,7 +337,7 @@ abstract class DosageDoseAndRate implements _$DosageDoseAndRate {
 }
 
 @freezed
-abstract class ElementDefinition with Resource implements _$ElementDefinition {
+abstract class ElementDefinition implements _$ElementDefinition {
   ElementDefinition._();
   factory ElementDefinition({
     String id,

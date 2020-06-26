@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'fhir_types_lists.dart';
 import 'get_type.dart';
 import 'headers.dart';
 import 'name_to_type.dart';
@@ -19,7 +20,8 @@ void main() async {
   for (var i = 0; i < 2; i++) {
     for (var obj in schema['definitions'].keys) {
       if (schema['definitions'][obj].keys.contains('properties')) {
-        resource = obj.contains('_') ? '' : 'with Resource ';
+        resource =
+            obj.contains('_') || !isResourceType(obj) ? '' : 'with Resource ';
         var name = obj.split('_')[0].toLowerCase();
         type = getType(name);
         if (type != 'other') {

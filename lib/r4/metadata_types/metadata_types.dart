@@ -8,7 +8,7 @@ part 'metadata_types.freezed.dart';
 part 'metadata_types.g.dart';
 
 @freezed
-abstract class ContactDetail with Resource implements _$ContactDetail {
+abstract class ContactDetail implements _$ContactDetail {
   ContactDetail._();
   factory ContactDetail({
     String id,
@@ -23,7 +23,7 @@ abstract class ContactDetail with Resource implements _$ContactDetail {
 }
 
 @freezed
-abstract class Contributor with Resource implements _$Contributor {
+abstract class Contributor implements _$Contributor {
   Contributor._();
   factory Contributor({
     String id,
@@ -40,7 +40,7 @@ abstract class Contributor with Resource implements _$Contributor {
 }
 
 @freezed
-abstract class DataRequirement with Resource implements _$DataRequirement {
+abstract class DataRequirement implements _$DataRequirement {
   DataRequirement._();
   factory DataRequirement({
     String id,
@@ -124,9 +124,7 @@ abstract class DataRequirementSort implements _$DataRequirementSort {
 }
 
 @freezed
-abstract class ParameterDefinition
-    with Resource
-    implements _$ParameterDefinition {
+abstract class ParameterDefinition implements _$ParameterDefinition {
   ParameterDefinition._();
   factory ParameterDefinition({
     String id,
@@ -151,7 +149,7 @@ abstract class ParameterDefinition
 }
 
 @freezed
-abstract class RelatedArtifact with Resource implements _$RelatedArtifact {
+abstract class RelatedArtifact implements _$RelatedArtifact {
   RelatedArtifact._();
   factory RelatedArtifact({
     String id,
@@ -176,7 +174,7 @@ abstract class RelatedArtifact with Resource implements _$RelatedArtifact {
 }
 
 @freezed
-abstract class TriggerDefinition with Resource implements _$TriggerDefinition {
+abstract class TriggerDefinition implements _$TriggerDefinition {
   TriggerDefinition._();
   factory TriggerDefinition({
     String id,
@@ -201,7 +199,7 @@ abstract class TriggerDefinition with Resource implements _$TriggerDefinition {
 }
 
 @freezed
-abstract class UsageContext with Resource implements _$UsageContext {
+abstract class UsageContext implements _$UsageContext {
   UsageContext._();
   factory UsageContext({
     String id,
@@ -218,7 +216,7 @@ abstract class UsageContext with Resource implements _$UsageContext {
 }
 
 @freezed
-abstract class Expression with Resource implements _$Expression {
+abstract class Expression implements _$Expression {
   Expression._();
   factory Expression({
     String id,

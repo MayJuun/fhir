@@ -8,7 +8,7 @@ part 'general_types.freezed.dart';
 part 'general_types.g.dart';
 
 @freezed
-abstract class BackboneType with Resource implements _$BackboneType {
+abstract class BackboneType implements _$BackboneType {
   BackboneType._();
   factory BackboneType({
     String id,
@@ -21,7 +21,7 @@ abstract class BackboneType with Resource implements _$BackboneType {
 }
 
 @freezed
-abstract class Annotation with Resource implements _$Annotation {
+abstract class Annotation implements _$Annotation {
   Annotation._();
   factory Annotation({
     String id,
@@ -40,7 +40,7 @@ abstract class Annotation with Resource implements _$Annotation {
 }
 
 @freezed
-abstract class Attachment with Resource implements _$Attachment {
+abstract class Attachment implements _$Attachment {
   Attachment._();
   factory Attachment({
     String id,
@@ -78,7 +78,7 @@ abstract class Attachment with Resource implements _$Attachment {
 }
 
 @freezed
-abstract class Identifier with Resource implements _$Identifier {
+abstract class Identifier implements _$Identifier {
   Identifier._();
   factory Identifier({
     String id,
@@ -99,7 +99,7 @@ abstract class Identifier with Resource implements _$Identifier {
 }
 
 @freezed
-abstract class CodeableConcept with Resource implements _$CodeableConcept {
+abstract class CodeableConcept implements _$CodeableConcept {
   CodeableConcept._();
   factory CodeableConcept({
     String id,
@@ -114,7 +114,7 @@ abstract class CodeableConcept with Resource implements _$CodeableConcept {
 }
 
 @freezed
-abstract class Coding with Resource implements _$Coding {
+abstract class Coding implements _$Coding {
   Coding._();
   factory Coding({
     String id,
@@ -135,7 +135,7 @@ abstract class Coding with Resource implements _$Coding {
 }
 
 @freezed
-abstract class Quantity with Resource implements _$Quantity {
+abstract class Quantity implements _$Quantity {
   Quantity._();
   factory Quantity({
     String id,
@@ -158,7 +158,7 @@ abstract class Quantity with Resource implements _$Quantity {
 }
 
 @freezed
-abstract class Duration with Resource implements _$Duration {
+abstract class Duration implements _$Duration {
   Duration._();
   factory Duration({
     String id,
@@ -181,7 +181,7 @@ abstract class Duration with Resource implements _$Duration {
 }
 
 @freezed
-abstract class Distance with Resource implements _$Distance {
+abstract class Distance implements _$Distance {
   Distance._();
   factory Distance({
     String id,
@@ -204,7 +204,7 @@ abstract class Distance with Resource implements _$Distance {
 }
 
 @freezed
-abstract class Count with Resource implements _$Count {
+abstract class Count implements _$Count {
   Count._();
   factory Count({
     String id,
@@ -226,7 +226,7 @@ abstract class Count with Resource implements _$Count {
 }
 
 @freezed
-abstract class Money with Resource implements _$Money {
+abstract class Money implements _$Money {
   Money._();
   factory Money({
     String id,
@@ -241,7 +241,7 @@ abstract class Money with Resource implements _$Money {
 }
 
 @freezed
-abstract class Age with Resource implements _$Age {
+abstract class Age implements _$Age {
   Age._();
   factory Age({
     String id,
@@ -262,7 +262,7 @@ abstract class Age with Resource implements _$Age {
 }
 
 @freezed
-abstract class Range with Resource implements _$Range {
+abstract class Range implements _$Range {
   Range._();
   factory Range({
     String id,
@@ -275,7 +275,7 @@ abstract class Range with Resource implements _$Range {
 }
 
 @freezed
-abstract class Period with Resource implements _$Period {
+abstract class Period implements _$Period {
   Period._();
   factory Period({
     String id,
@@ -290,7 +290,7 @@ abstract class Period with Resource implements _$Period {
 }
 
 @freezed
-abstract class Ratio with Resource implements _$Ratio {
+abstract class Ratio implements _$Ratio {
   Ratio._();
   factory Ratio({
     String id,
@@ -303,7 +303,7 @@ abstract class Ratio with Resource implements _$Ratio {
 }
 
 @freezed
-abstract class SampledData with Resource implements _$SampledData {
+abstract class SampledData implements _$SampledData {
   SampledData._();
   factory SampledData({
     String id,
@@ -328,7 +328,7 @@ abstract class SampledData with Resource implements _$SampledData {
 }
 
 @freezed
-abstract class Signature with Resource implements _$Signature {
+abstract class Signature implements _$Signature {
   Signature._();
   factory Signature({
     String id,
@@ -351,7 +351,7 @@ abstract class Signature with Resource implements _$Signature {
 }
 
 @freezed
-abstract class HumanName with Resource implements _$HumanName {
+abstract class HumanName implements _$HumanName {
   HumanName._();
   factory HumanName({
     String id,
@@ -376,7 +376,7 @@ abstract class HumanName with Resource implements _$HumanName {
 }
 
 @freezed
-abstract class Address with Resource implements _$Address {
+abstract class Address implements _$Address {
   Address._();
   factory Address({
     String id,
@@ -407,7 +407,7 @@ abstract class Address with Resource implements _$Address {
 }
 
 @freezed
-abstract class ContactPoint with Resource implements _$ContactPoint {
+abstract class ContactPoint implements _$ContactPoint {
   ContactPoint._();
   factory ContactPoint({
     String id,
@@ -429,7 +429,7 @@ abstract class ContactPoint with Resource implements _$ContactPoint {
 }
 
 @freezed
-abstract class Timing with Resource implements _$Timing {
+abstract class Timing implements _$Timing {
   Timing._();
   factory Timing({
     String id,

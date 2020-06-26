@@ -1,3 +1,12 @@
+bool isResourceType(String type) {
+  type = type.toLowerCase();
+  return primitiveTypes.contains(type) ||
+      draftTypes.contains(type) ||
+      generalTypes.contains(type) ||
+      specialTypes.contains(type) ||
+      metadataTypes.contains(type);
+}
+
 var primitiveTypes = [
   'instant',
   'time',
