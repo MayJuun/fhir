@@ -6,24 +6,12 @@ import '../../fhir_dstu2.dart';
 part 'resource.freezed.dart';
 part 'resource.g.dart';
 
-@freezed
-abstract class DomainResource with _$DomainResource implements Resource {
-  factory DomainResource({
-    @JsonKey(required: true) @required Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-  }) = _DomainResource;
-
-  factory DomainResource.fromJson(Map<String, dynamic> json) =>
-      _$DomainResourceFromJson(json);
-}
-
 @JsonSerializable()
 class Resource {
-  dynamic toJson() => this.toJson();
+  Id id;
+  String resourceType;
+
+  Map<String, dynamic> toJson() => this.toJson();
 
   static Resource fromJson(Map<String, dynamic> json) {
     switch (json['resourceType']) {

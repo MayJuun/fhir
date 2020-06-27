@@ -7,7 +7,8 @@ part 'security.freezed.dart';
 part 'security.g.dart';
 
 @freezed
-abstract class AuditEvent with _$AuditEvent implements Resource {
+abstract class AuditEvent with Resource implements _$AuditEvent {
+  AuditEvent._();
   factory AuditEvent({
     @JsonKey(required: true, defaultValue: 'AuditEvent')
     @required
@@ -122,7 +123,8 @@ abstract class AuditEventDetail with _$AuditEventDetail {
 }
 
 @freezed
-abstract class Consent with _$Consent implements Resource {
+abstract class Consent with Resource implements _$Consent {
+  Consent._();
   factory Consent({
     @JsonKey(required: true, defaultValue: 'Consent')
     @required
@@ -237,7 +239,8 @@ abstract class ConsentData1 with _$ConsentData1 {
 }
 
 @freezed
-abstract class Provenance with _$Provenance implements Resource {
+abstract class Provenance with Resource implements _$Provenance {
+  Provenance._();
   factory Provenance({
     @JsonKey(required: true, defaultValue: 'Provenance')
     @required

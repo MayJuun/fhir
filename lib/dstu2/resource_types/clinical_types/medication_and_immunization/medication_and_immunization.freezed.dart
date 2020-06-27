@@ -17,7 +17,8 @@ class _$ImmunizationRecommendationTearOff {
   const _$ImmunizationRecommendationTearOff();
 
   _ImmunizationRecommendation call(
-      {@JsonKey(defaultValue: 'ImmunizationRecommendation')
+      {@required
+      @JsonKey(defaultValue: 'ImmunizationRecommendation')
           String resourceType,
       Id id,
       Meta meta,
@@ -350,24 +351,35 @@ class __$ImmunizationRecommendationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ImmunizationRecommendation implements _ImmunizationRecommendation {
+class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
   _$_ImmunizationRecommendation(
-      {@JsonKey(defaultValue: 'ImmunizationRecommendation') this.resourceType,
+      {@required
+      @JsonKey(defaultValue: 'ImmunizationRecommendation')
+          this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
       this.language,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
-      @required @JsonKey(required: true) this.patient,
-      @required @JsonKey(required: true) this.recommendation,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
-      @JsonKey(name: '_language') this.languageElement})
-      : assert(patient != null),
-        assert(recommendation != null);
+      @required
+      @JsonKey(required: true)
+          this.patient,
+      @required
+      @JsonKey(required: true)
+          this.recommendation,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      @JsonKey(name: '_language')
+          this.languageElement})
+      : assert(resourceType != null),
+        assert(patient != null),
+        assert(recommendation != null),
+        super._();
 
   factory _$_ImmunizationRecommendation.fromJson(Map<String, dynamic> json) =>
       _$_$_ImmunizationRecommendationFromJson(json);
@@ -486,10 +498,11 @@ class _$_ImmunizationRecommendation implements _ImmunizationRecommendation {
   }
 }
 
-abstract class _ImmunizationRecommendation
-    implements ImmunizationRecommendation {
+abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
+  _ImmunizationRecommendation._() : super._();
   factory _ImmunizationRecommendation(
-      {@JsonKey(defaultValue: 'ImmunizationRecommendation')
+      {@required
+      @JsonKey(defaultValue: 'ImmunizationRecommendation')
           String resourceType,
       Id id,
       Meta meta,
@@ -562,7 +575,8 @@ class _$MedicationDispenseTearOff {
   const _$MedicationDispenseTearOff();
 
   _MedicationDispense call(
-      {@JsonKey(defaultValue: 'MedicationDispense')
+      {@required
+      @JsonKey(defaultValue: 'MedicationDispense')
           String resourceType,
       Id id,
       Meta meta,
@@ -1258,9 +1272,9 @@ class __$MedicationDispenseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_MedicationDispense implements _MedicationDispense {
+class _$_MedicationDispense extends _MedicationDispense {
   _$_MedicationDispense(
-      {@JsonKey(defaultValue: 'MedicationDispense') this.resourceType,
+      {@required @JsonKey(defaultValue: 'MedicationDispense') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -1290,7 +1304,9 @@ class _$_MedicationDispense implements _MedicationDispense {
       @JsonKey(name: '_language') this.languageElement,
       @JsonKey(name: '_status') this.statusElement,
       @JsonKey(name: '_whenPrepared') this.whenPreparedElement,
-      @JsonKey(name: '_whenHandedOver') this.whenHandedOverElement});
+      @JsonKey(name: '_whenHandedOver') this.whenHandedOverElement})
+      : assert(resourceType != null),
+        super._();
 
   factory _$_MedicationDispense.fromJson(Map<String, dynamic> json) =>
       _$_$_MedicationDispenseFromJson(json);
@@ -1491,9 +1507,11 @@ class _$_MedicationDispense implements _MedicationDispense {
   }
 }
 
-abstract class _MedicationDispense implements MedicationDispense {
+abstract class _MedicationDispense extends MedicationDispense {
+  _MedicationDispense._() : super._();
   factory _MedicationDispense(
-      {@JsonKey(defaultValue: 'MedicationDispense')
+      {@required
+      @JsonKey(defaultValue: 'MedicationDispense')
           String resourceType,
       Id id,
       Meta meta,
@@ -1618,7 +1636,8 @@ class _$MedicationStatementTearOff {
   const _$MedicationStatementTearOff();
 
   _MedicationStatement call(
-      {@JsonKey(defaultValue: 'MedicationStatement')
+      {@required
+      @JsonKey(defaultValue: 'MedicationStatement')
           String resourceType,
       Id id,
       Meta meta,
@@ -2282,9 +2301,10 @@ class __$MedicationStatementCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_MedicationStatement implements _MedicationStatement {
+class _$_MedicationStatement extends _MedicationStatement {
   _$_MedicationStatement(
-      {@JsonKey(defaultValue: 'MedicationStatement')
+      {@required
+      @JsonKey(defaultValue: 'MedicationStatement')
           this.resourceType,
       this.id,
       this.meta,
@@ -2325,8 +2345,10 @@ class _$_MedicationStatement implements _MedicationStatement {
           this.effectiveDateTimeElement,
       @JsonKey(name: '_dateAsserted')
           this.dateAssertedElement})
-      : assert(patient != null),
-        assert(status != null);
+      : assert(resourceType != null),
+        assert(patient != null),
+        assert(status != null),
+        super._();
 
   factory _$_MedicationStatement.fromJson(Map<String, dynamic> json) =>
       _$_$_MedicationStatementFromJson(json);
@@ -2528,9 +2550,11 @@ class _$_MedicationStatement implements _MedicationStatement {
   }
 }
 
-abstract class _MedicationStatement implements MedicationStatement {
+abstract class _MedicationStatement extends MedicationStatement {
+  _MedicationStatement._() : super._();
   factory _MedicationStatement(
-      {@JsonKey(defaultValue: 'MedicationStatement')
+      {@required
+      @JsonKey(defaultValue: 'MedicationStatement')
           String resourceType,
       Id id,
       Meta meta,
@@ -2656,7 +2680,8 @@ class _$ImmunizationTearOff {
   const _$ImmunizationTearOff();
 
   _Immunization call(
-      {@JsonKey(defaultValue: 'Immunization')
+      {@required
+      @JsonKey(defaultValue: 'Immunization')
           String resourceType,
       Id id,
       Meta meta,
@@ -3414,9 +3439,10 @@ class __$ImmunizationCopyWithImpl<$Res> extends _$ImmunizationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Immunization implements _Immunization {
+class _$_Immunization extends _Immunization {
   _$_Immunization(
-      {@JsonKey(defaultValue: 'Immunization')
+      {@required
+      @JsonKey(defaultValue: 'Immunization')
           this.resourceType,
       this.id,
       this.meta,
@@ -3468,11 +3494,13 @@ class _$_Immunization implements _Immunization {
           this.lotNumberElement,
       @JsonKey(name: '_expirationDate')
           this.expirationDateElement})
-      : assert(status != null),
+      : assert(resourceType != null),
+        assert(status != null),
         assert(vaccineCode != null),
         assert(patient != null),
         assert(wasNotGiven != null),
-        assert(reported != null);
+        assert(reported != null),
+        super._();
 
   factory _$_Immunization.fromJson(Map<String, dynamic> json) =>
       _$_$_ImmunizationFromJson(json);
@@ -3698,9 +3726,11 @@ class _$_Immunization implements _Immunization {
   }
 }
 
-abstract class _Immunization implements Immunization {
+abstract class _Immunization extends Immunization {
+  _Immunization._() : super._();
   factory _Immunization(
-      {@JsonKey(defaultValue: 'Immunization')
+      {@required
+      @JsonKey(defaultValue: 'Immunization')
           String resourceType,
       Id id,
       Meta meta,
@@ -3850,7 +3880,7 @@ class _$MedicationTearOff {
   const _$MedicationTearOff();
 
   _Medication call(
-      {@JsonKey(defaultValue: 'Medication') String resourceType,
+      {@required @JsonKey(defaultValue: 'Medication') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4213,9 +4243,9 @@ class __$MedicationCopyWithImpl<$Res> extends _$MedicationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Medication implements _Medication {
+class _$_Medication extends _Medication {
   _$_Medication(
-      {@JsonKey(defaultValue: 'Medication') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Medication') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -4230,7 +4260,9 @@ class _$_Medication implements _Medication {
       this.product,
       this.package,
       @JsonKey(name: '_implicitRules') this.implicitRulesElement,
-      @JsonKey(name: '_language') this.languageElement});
+      @JsonKey(name: '_language') this.languageElement})
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Medication.fromJson(Map<String, dynamic> json) =>
       _$_$_MedicationFromJson(json);
@@ -4357,9 +4389,10 @@ class _$_Medication implements _Medication {
   }
 }
 
-abstract class _Medication implements Medication {
+abstract class _Medication extends Medication {
+  _Medication._() : super._();
   factory _Medication(
-      {@JsonKey(defaultValue: 'Medication') String resourceType,
+      {@required @JsonKey(defaultValue: 'Medication') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4428,7 +4461,8 @@ class _$MedicationAdministrationTearOff {
   const _$MedicationAdministrationTearOff();
 
   _MedicationAdministration call(
-      {@JsonKey(defaultValue: 'MedicationAdministration')
+      {@required
+      @JsonKey(defaultValue: 'MedicationAdministration')
           String resourceType,
       Id id,
       Meta meta,
@@ -5071,9 +5105,10 @@ class __$MedicationAdministrationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_MedicationAdministration implements _MedicationAdministration {
+class _$_MedicationAdministration extends _MedicationAdministration {
   _$_MedicationAdministration(
-      {@JsonKey(defaultValue: 'MedicationAdministration')
+      {@required
+      @JsonKey(defaultValue: 'MedicationAdministration')
           this.resourceType,
       this.id,
       this.meta,
@@ -5112,8 +5147,10 @@ class _$_MedicationAdministration implements _MedicationAdministration {
           this.statusElement,
       @JsonKey(name: '_effectiveDateTime')
           this.effectiveDateTimeElement})
-      : assert(status != null),
-        assert(patient != null);
+      : assert(resourceType != null),
+        assert(status != null),
+        assert(patient != null),
+        super._();
 
   factory _$_MedicationAdministration.fromJson(Map<String, dynamic> json) =>
       _$_$_MedicationAdministrationFromJson(json);
@@ -5312,9 +5349,11 @@ class _$_MedicationAdministration implements _MedicationAdministration {
   }
 }
 
-abstract class _MedicationAdministration implements MedicationAdministration {
+abstract class _MedicationAdministration extends MedicationAdministration {
+  _MedicationAdministration._() : super._();
   factory _MedicationAdministration(
-      {@JsonKey(defaultValue: 'MedicationAdministration')
+      {@required
+      @JsonKey(defaultValue: 'MedicationAdministration')
           String resourceType,
       Id id,
       Meta meta,
@@ -5436,7 +5475,8 @@ class _$MedicationOrderTearOff {
   const _$MedicationOrderTearOff();
 
   _MedicationOrder call(
-      {@JsonKey(defaultValue: 'MedicationOrder')
+      {@required
+      @JsonKey(defaultValue: 'MedicationOrder')
           String resourceType,
       Id id,
       Meta meta,
@@ -6061,9 +6101,9 @@ class __$MedicationOrderCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_MedicationOrder implements _MedicationOrder {
+class _$_MedicationOrder extends _MedicationOrder {
   _$_MedicationOrder(
-      {@JsonKey(defaultValue: 'MedicationOrder') this.resourceType,
+      {@required @JsonKey(defaultValue: 'MedicationOrder') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -6090,7 +6130,9 @@ class _$_MedicationOrder implements _MedicationOrder {
       this.substitution,
       this.priorPrescription,
       @JsonKey(name: '_id') this.idElement,
-      @JsonKey(name: '_status') this.statusElement});
+      @JsonKey(name: '_status') this.statusElement})
+      : assert(resourceType != null),
+        super._();
 
   factory _$_MedicationOrder.fromJson(Map<String, dynamic> json) =>
       _$_$_MedicationOrderFromJson(json);
@@ -6280,9 +6322,11 @@ class _$_MedicationOrder implements _MedicationOrder {
   }
 }
 
-abstract class _MedicationOrder implements MedicationOrder {
+abstract class _MedicationOrder extends MedicationOrder {
+  _MedicationOrder._() : super._();
   factory _MedicationOrder(
-      {@JsonKey(defaultValue: 'MedicationOrder')
+      {@required
+      @JsonKey(defaultValue: 'MedicationOrder')
           String resourceType,
       Id id,
       Meta meta,

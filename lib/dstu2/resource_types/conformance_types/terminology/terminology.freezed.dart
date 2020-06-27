@@ -16,7 +16,8 @@ class _$ValueSetTearOff {
   const _$ValueSetTearOff();
 
   _ValueSet call(
-      {@JsonKey(defaultValue: 'ValueSet')
+      {@required
+      @JsonKey(defaultValue: 'ValueSet')
           String resourceType,
       Id id,
       Meta meta,
@@ -893,9 +894,10 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ValueSet implements _ValueSet {
+class _$_ValueSet extends _ValueSet {
   _$_ValueSet(
-      {@JsonKey(defaultValue: 'ValueSet')
+      {@required
+      @JsonKey(defaultValue: 'ValueSet')
           this.resourceType,
       this.id,
       this.meta,
@@ -955,7 +957,9 @@ class _$_ValueSet implements _ValueSet {
           this.copyrightElement,
       @JsonKey(name: '_lockedDate')
           this.lockedDateElement})
-      : assert(status != null);
+      : assert(resourceType != null),
+        assert(status != null),
+        super._();
 
   factory _$_ValueSet.fromJson(Map<String, dynamic> json) =>
       _$_$_ValueSetFromJson(json);
@@ -1214,9 +1218,11 @@ class _$_ValueSet implements _ValueSet {
   }
 }
 
-abstract class _ValueSet implements ValueSet {
+abstract class _ValueSet extends ValueSet {
+  _ValueSet._() : super._();
   factory _ValueSet(
-      {@JsonKey(defaultValue: 'ValueSet')
+      {@required
+      @JsonKey(defaultValue: 'ValueSet')
           String resourceType,
       Id id,
       Meta meta,
@@ -6012,7 +6018,8 @@ class _$NamingSystemTearOff {
   const _$NamingSystemTearOff();
 
   _NamingSystem call(
-      {@JsonKey(defaultValue: 'NamingSystem')
+      {@required
+      @JsonKey(defaultValue: 'NamingSystem')
           String resourceType,
       Id id,
       Meta meta,
@@ -6703,9 +6710,10 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_NamingSystem implements _NamingSystem {
+class _$_NamingSystem extends _NamingSystem {
   _$_NamingSystem(
-      {@JsonKey(defaultValue: 'NamingSystem')
+      {@required
+      @JsonKey(defaultValue: 'NamingSystem')
           this.resourceType,
       this.id,
       this.meta,
@@ -6759,11 +6767,13 @@ class _$_NamingSystem implements _NamingSystem {
           this.descriptionElement,
       @JsonKey(name: '_usage')
           this.usageElement})
-      : assert(name != null),
+      : assert(resourceType != null),
+        assert(name != null),
         assert(status != null),
         assert(kind != null),
         assert(date != null),
-        assert(uniqueId != null);
+        assert(uniqueId != null),
+        super._();
 
   factory _$_NamingSystem.fromJson(Map<String, dynamic> json) =>
       _$_$_NamingSystemFromJson(json);
@@ -6982,9 +6992,11 @@ class _$_NamingSystem implements _NamingSystem {
   }
 }
 
-abstract class _NamingSystem implements NamingSystem {
+abstract class _NamingSystem extends NamingSystem {
+  _NamingSystem._() : super._();
   factory _NamingSystem(
-      {@JsonKey(defaultValue: 'NamingSystem')
+      {@required
+      @JsonKey(defaultValue: 'NamingSystem')
           String resourceType,
       Id id,
       Meta meta,
@@ -7135,7 +7147,8 @@ class _$ConceptMapTearOff {
   const _$ConceptMapTearOff();
 
   _ConceptMap call(
-      {@JsonKey(defaultValue: 'ConceptMap')
+      {@required
+      @JsonKey(defaultValue: 'ConceptMap')
           String resourceType,
       Id id,
       Meta meta,
@@ -7967,9 +7980,10 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ConceptMap implements _ConceptMap {
+class _$_ConceptMap extends _ConceptMap {
   _$_ConceptMap(
-      {@JsonKey(defaultValue: 'ConceptMap')
+      {@required
+      @JsonKey(defaultValue: 'ConceptMap')
           this.resourceType,
       this.id,
       this.meta,
@@ -8026,7 +8040,9 @@ class _$_ConceptMap implements _ConceptMap {
           this.sourceUriElement,
       @JsonKey(name: '_targetUri')
           this.targetUriElement})
-      : assert(status != null);
+      : assert(resourceType != null),
+        assert(status != null),
+        super._();
 
   factory _$_ConceptMap.fromJson(Map<String, dynamic> json) =>
       _$_$_ConceptMapFromJson(json);
@@ -8276,9 +8292,11 @@ class _$_ConceptMap implements _ConceptMap {
   }
 }
 
-abstract class _ConceptMap implements ConceptMap {
+abstract class _ConceptMap extends ConceptMap {
+  _ConceptMap._() : super._();
   factory _ConceptMap(
-      {@JsonKey(defaultValue: 'ConceptMap')
+      {@required
+      @JsonKey(defaultValue: 'ConceptMap')
           String resourceType,
       Id id,
       Meta meta,

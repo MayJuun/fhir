@@ -588,7 +588,7 @@ class __$CompositionCopyWithImpl<$Res> extends _$CompositionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Composition implements _Composition {
+class _$_Composition extends _Composition {
   _$_Composition(
       {@required
       @JsonKey(required: true, defaultValue: 'Composition')
@@ -630,7 +630,8 @@ class _$_Composition implements _Composition {
           this.titleElement,
       @JsonKey(name: '_confidentiality')
           this.confidentialityElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Composition.fromJson(Map<String, dynamic> json) =>
       _$_$_CompositionFromJson(json);
@@ -827,7 +828,8 @@ class _$_Composition implements _Composition {
   }
 }
 
-abstract class _Composition implements Composition {
+abstract class _Composition extends Composition {
+  _Composition._() : super._();
   factory _Composition(
       {@required
       @JsonKey(required: true, defaultValue: 'Composition')
@@ -2533,7 +2535,7 @@ class __$DocumentManifestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_DocumentManifest implements _DocumentManifest {
+class _$_DocumentManifest extends _DocumentManifest {
   _$_DocumentManifest(
       {@required
       @JsonKey(required: true, defaultValue: 'DocumentManifest')
@@ -2569,7 +2571,8 @@ class _$_DocumentManifest implements _DocumentManifest {
           this.sourceElement,
       @JsonKey(name: '_description')
           this.descriptionElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_DocumentManifest.fromJson(Map<String, dynamic> json) =>
       _$_$_DocumentManifestFromJson(json);
@@ -2751,7 +2754,8 @@ class _$_DocumentManifest implements _DocumentManifest {
   }
 }
 
-abstract class _DocumentManifest implements DocumentManifest {
+abstract class _DocumentManifest extends DocumentManifest {
+  _DocumentManifest._() : super._();
   factory _DocumentManifest(
       {@required
       @JsonKey(required: true, defaultValue: 'DocumentManifest')
@@ -3863,7 +3867,7 @@ class __$DocumentReferenceCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_DocumentReference implements _DocumentReference {
+class _$_DocumentReference extends _DocumentReference {
   _$_DocumentReference(
       {@required
       @JsonKey(required: true, defaultValue: 'DocumentReference')
@@ -3908,7 +3912,8 @@ class _$_DocumentReference implements _DocumentReference {
           this.indexedElement,
       @JsonKey(name: '_description')
           this.descriptionElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_DocumentReference.fromJson(Map<String, dynamic> json) =>
       _$_$_DocumentReferenceFromJson(json);
@@ -4117,7 +4122,8 @@ class _$_DocumentReference implements _DocumentReference {
   }
 }
 
-abstract class _DocumentReference implements DocumentReference {
+abstract class _DocumentReference extends DocumentReference {
+  _DocumentReference._() : super._();
   factory _DocumentReference(
       {@required
       @JsonKey(required: true, defaultValue: 'DocumentReference')

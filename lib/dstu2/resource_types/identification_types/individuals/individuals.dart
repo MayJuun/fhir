@@ -8,9 +8,10 @@ part 'individuals.freezed.dart';
 part 'individuals.g.dart';
 
 @freezed
-abstract class Practitioner with _$Practitioner implements Resource {
+abstract class Practitioner with Resource implements _$Practitioner {
+  Practitioner._();
   factory Practitioner({
-    @JsonKey(defaultValue: 'Practitioner') String resourceType,
+    @JsonKey(defaultValue: 'Practitioner') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -43,9 +44,10 @@ abstract class Practitioner with _$Practitioner implements Resource {
 }
 
 @freezed
-abstract class RelatedPerson with _$RelatedPerson implements Resource {
+abstract class RelatedPerson with Resource implements _$RelatedPerson {
+  RelatedPerson._();
   factory RelatedPerson({
-    @JsonKey(defaultValue: 'RelatedPerson') String resourceType,
+    @JsonKey(defaultValue: 'RelatedPerson') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -77,9 +79,10 @@ abstract class RelatedPerson with _$RelatedPerson implements Resource {
 }
 
 @freezed
-abstract class Patient with _$Patient implements Resource {
+abstract class Patient with Resource implements _$Patient {
+  Patient._();
   factory Patient({
-    @JsonKey(defaultValue: 'Patient') String resourceType,
+    @JsonKey(defaultValue: 'Patient') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

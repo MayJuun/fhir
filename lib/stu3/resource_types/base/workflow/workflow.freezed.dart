@@ -715,7 +715,7 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Appointment implements _Appointment {
+class _$_Appointment extends _Appointment {
   _$_Appointment(
       {@required
       @JsonKey(required: true, defaultValue: 'Appointment')
@@ -767,7 +767,8 @@ class _$_Appointment implements _Appointment {
           this.createdElement,
       @JsonKey(name: '_comment')
           this.commentElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Appointment.fromJson(Map<String, dynamic> json) =>
       _$_$_AppointmentFromJson(json);
@@ -1001,7 +1002,8 @@ class _$_Appointment implements _Appointment {
   }
 }
 
-abstract class _Appointment implements Appointment {
+abstract class _Appointment extends Appointment {
+  _Appointment._() : super._();
   factory _Appointment(
       {@required
       @JsonKey(required: true, defaultValue: 'Appointment')
@@ -1905,7 +1907,7 @@ class __$AppointmentResponseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_AppointmentResponse implements _AppointmentResponse {
+class _$_AppointmentResponse extends _AppointmentResponse {
   _$_AppointmentResponse(
       {@required
       @JsonKey(required: true, defaultValue: 'AppointmentResponse')
@@ -1936,7 +1938,8 @@ class _$_AppointmentResponse implements _AppointmentResponse {
           this.participantStatusElement,
       @JsonKey(name: '_comment')
           this.commentElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_AppointmentResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_AppointmentResponseFromJson(json);
@@ -2097,7 +2100,8 @@ class _$_AppointmentResponse implements _AppointmentResponse {
   }
 }
 
-abstract class _AppointmentResponse implements AppointmentResponse {
+abstract class _AppointmentResponse extends AppointmentResponse {
+  _AppointmentResponse._() : super._();
   factory _AppointmentResponse(
       {@required
       @JsonKey(required: true, defaultValue: 'AppointmentResponse')
@@ -2831,7 +2835,7 @@ class __$ProcessRequestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ProcessRequest implements _ProcessRequest {
+class _$_ProcessRequest extends _ProcessRequest {
   _$_ProcessRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'ProcessRequest')
@@ -2875,7 +2879,8 @@ class _$_ProcessRequest implements _ProcessRequest {
           this.includeElement,
       @JsonKey(name: '_exclude')
           this.excludeElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_ProcessRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_ProcessRequestFromJson(json);
@@ -3083,7 +3088,8 @@ class _$_ProcessRequest implements _ProcessRequest {
   }
 }
 
-abstract class _ProcessRequest implements ProcessRequest {
+abstract class _ProcessRequest extends ProcessRequest {
+  _ProcessRequest._() : super._();
   factory _ProcessRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'ProcessRequest')
@@ -3907,7 +3913,7 @@ class __$ProcessResponseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ProcessResponse implements _ProcessResponse {
+class _$_ProcessResponse extends _ProcessResponse {
   _$_ProcessResponse(
       {@required
       @JsonKey(required: true, defaultValue: 'ProcessResponse')
@@ -3940,7 +3946,8 @@ class _$_ProcessResponse implements _ProcessResponse {
           this.createdElement,
       @JsonKey(name: '_disposition')
           this.dispositionElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_ProcessResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_ProcessResponseFromJson(json);
@@ -4118,7 +4125,8 @@ class _$_ProcessResponse implements _ProcessResponse {
   }
 }
 
-abstract class _ProcessResponse implements ProcessResponse {
+abstract class _ProcessResponse extends ProcessResponse {
+  _ProcessResponse._() : super._();
   factory _ProcessResponse(
       {@required
       @JsonKey(required: true, defaultValue: 'ProcessResponse')
@@ -4797,7 +4805,7 @@ class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Schedule implements _Schedule {
+class _$_Schedule extends _Schedule {
   _$_Schedule(
       {@required
       @JsonKey(required: true, defaultValue: 'Schedule')
@@ -4824,7 +4832,8 @@ class _$_Schedule implements _Schedule {
           this.activeElement,
       @JsonKey(name: '_comment')
           this.commentElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Schedule.fromJson(Map<String, dynamic> json) =>
       _$_$_ScheduleFromJson(json);
@@ -4969,7 +4978,8 @@ class _$_Schedule implements _Schedule {
   }
 }
 
-abstract class _Schedule implements Schedule {
+abstract class _Schedule extends Schedule {
+  _Schedule._() : super._();
   factory _Schedule(
       {@required
       @JsonKey(required: true, defaultValue: 'Schedule')
@@ -5547,7 +5557,7 @@ class __$SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Slot implements _Slot {
+class _$_Slot extends _Slot {
   _$_Slot(
       {@required
       @JsonKey(required: true, defaultValue: 'Slot')
@@ -5584,7 +5594,8 @@ class _$_Slot implements _Slot {
           this.overbookedElement,
       @JsonKey(name: '_comment')
           this.commentElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Slot.fromJson(Map<String, dynamic> json) =>
       _$_$_SlotFromJson(json);
@@ -5767,7 +5778,8 @@ class _$_Slot implements _Slot {
   }
 }
 
-abstract class _Slot implements Slot {
+abstract class _Slot extends Slot {
+  _Slot._() : super._();
   factory _Slot(
       {@required
       @JsonKey(required: true, defaultValue: 'Slot')
@@ -6742,7 +6754,7 @@ class __$TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Task implements _Task {
+class _$_Task extends _Task {
   _$_Task(
       {@required
       @JsonKey(required: true, defaultValue: 'Task')
@@ -6800,7 +6812,8 @@ class _$_Task implements _Task {
           this.authoredOnElement,
       @JsonKey(name: '_lastModified')
           this.lastModifiedElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Task.fromJson(Map<String, dynamic> json) =>
       _$_$_TaskFromJson(json);
@@ -7061,7 +7074,8 @@ class _$_Task implements _Task {
   }
 }
 
-abstract class _Task implements Task {
+abstract class _Task extends Task {
+  _Task._() : super._();
   factory _Task(
       {@required
       @JsonKey(required: true, defaultValue: 'Task')

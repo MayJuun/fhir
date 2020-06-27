@@ -8,9 +8,10 @@ part 'care_provision.freezed.dart';
 part 'care_provision.g.dart';
 
 @freezed
-abstract class ProcedureRequest with _$ProcedureRequest implements Resource {
-  const factory ProcedureRequest({
-    @JsonKey(defaultValue: 'ProcedureRequest') String resourceType,
+abstract class ProcedureRequest with Resource implements _$ProcedureRequest {
+  ProcedureRequest._();
+  factory ProcedureRequest({
+    @JsonKey(defaultValue: 'ProcedureRequest') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -47,10 +48,11 @@ abstract class ProcedureRequest with _$ProcedureRequest implements Resource {
 
 @freezed
 abstract class VisionPrescription
-    with _$VisionPrescription
-    implements Resource {
-  const factory VisionPrescription({
-    @JsonKey(defaultValue: 'VisionPrescription') String resourceType,
+    with Resource
+    implements _$VisionPrescription {
+  VisionPrescription._();
+  factory VisionPrescription({
+    @JsonKey(defaultValue: 'VisionPrescription') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -77,9 +79,10 @@ abstract class VisionPrescription
 }
 
 @freezed
-abstract class CarePlan with _$CarePlan implements Resource {
-  const factory CarePlan({
-    @JsonKey(defaultValue: 'CarePlan') String resourceType,
+abstract class CarePlan with Resource implements _$CarePlan {
+  CarePlan._();
+  factory CarePlan({
+    @JsonKey(defaultValue: 'CarePlan') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -117,9 +120,10 @@ abstract class CarePlan with _$CarePlan implements Resource {
 }
 
 @freezed
-abstract class Goal with _$Goal implements Resource {
-  const factory Goal({
-    @JsonKey(defaultValue: 'Goal') String resourceType,
+abstract class Goal with Resource implements _$Goal {
+  Goal._();
+  factory Goal({
+    @JsonKey(defaultValue: 'Goal') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -157,9 +161,10 @@ abstract class Goal with _$Goal implements Resource {
 }
 
 @freezed
-abstract class NutritionOrder with _$NutritionOrder implements Resource {
-  const factory NutritionOrder({
-    @JsonKey(defaultValue: 'NutritionOrder') String resourceType,
+abstract class NutritionOrder with Resource implements _$NutritionOrder {
+  NutritionOrder._();
+  factory NutritionOrder({
+    @JsonKey(defaultValue: 'NutritionOrder') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -192,9 +197,10 @@ abstract class NutritionOrder with _$NutritionOrder implements Resource {
 }
 
 @freezed
-abstract class ReferralRequest with _$ReferralRequest implements Resource {
-  const factory ReferralRequest({
-    @JsonKey(defaultValue: 'ReferralRequest') String resourceType,
+abstract class ReferralRequest with Resource implements _$ReferralRequest {
+  ReferralRequest._();
+  factory ReferralRequest({
+    @JsonKey(defaultValue: 'ReferralRequest') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -229,7 +235,7 @@ abstract class ReferralRequest with _$ReferralRequest implements Resource {
 
 @freezed
 abstract class VisionPrescriptionDispense with _$VisionPrescriptionDispense {
-  const factory VisionPrescriptionDispense({
+  factory VisionPrescriptionDispense({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -256,7 +262,7 @@ abstract class VisionPrescriptionDispense with _$VisionPrescriptionDispense {
 
 @freezed
 abstract class CarePlanRelatedPlan with _$CarePlanRelatedPlan {
-  const factory CarePlanRelatedPlan({
+  factory CarePlanRelatedPlan({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -270,7 +276,7 @@ abstract class CarePlanRelatedPlan with _$CarePlanRelatedPlan {
 
 @freezed
 abstract class CarePlanParticipant with _$CarePlanParticipant {
-  const factory CarePlanParticipant({
+  factory CarePlanParticipant({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -284,7 +290,7 @@ abstract class CarePlanParticipant with _$CarePlanParticipant {
 
 @freezed
 abstract class CarePlanActivity with _$CarePlanActivity {
-  const factory CarePlanActivity({
+  factory CarePlanActivity({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -301,7 +307,7 @@ abstract class CarePlanActivity with _$CarePlanActivity {
 
 @freezed
 abstract class GoalOutcome with _$GoalOutcome {
-  const factory GoalOutcome({
+  factory GoalOutcome({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -315,7 +321,7 @@ abstract class GoalOutcome with _$GoalOutcome {
 
 @freezed
 abstract class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
-  const factory NutritionOrderOralDiet({
+  factory NutritionOrderOralDiet({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -335,7 +341,7 @@ abstract class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
 
 @freezed
 abstract class NutritionOrderSupplement with _$NutritionOrderSupplement {
-  const factory NutritionOrderSupplement({
+  factory NutritionOrderSupplement({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -356,7 +362,7 @@ abstract class NutritionOrderSupplement with _$NutritionOrderSupplement {
 @freezed
 abstract class NutritionOrderEnteralFormula
     with _$NutritionOrderEnteralFormula {
-  const factory NutritionOrderEnteralFormula({
+  factory NutritionOrderEnteralFormula({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -383,7 +389,7 @@ abstract class NutritionOrderEnteralFormula
 
 @freezed
 abstract class CarePlanDetail with _$CarePlanDetail {
-  const factory CarePlanDetail({
+  factory CarePlanDetail({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -417,7 +423,7 @@ abstract class CarePlanDetail with _$CarePlanDetail {
 
 @freezed
 abstract class NutritionOrderNutrient with _$NutritionOrderNutrient {
-  const factory NutritionOrderNutrient({
+  factory NutritionOrderNutrient({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -432,7 +438,7 @@ abstract class NutritionOrderNutrient with _$NutritionOrderNutrient {
 
 @freezed
 abstract class NutritionOrderTexture with _$NutritionOrderTexture {
-  const factory NutritionOrderTexture({
+  factory NutritionOrderTexture({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
@@ -448,7 +454,7 @@ abstract class NutritionOrderTexture with _$NutritionOrderTexture {
 @freezed
 abstract class NutritionOrderAdministration
     with _$NutritionOrderAdministration {
-  const factory NutritionOrderAdministration({
+  factory NutritionOrderAdministration({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,

@@ -1348,7 +1348,7 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Measure implements _Measure {
+class _$_Measure extends _Measure {
   _$_Measure(
       {@required
       @JsonKey(required: true, defaultValue: 'Measure')
@@ -1447,7 +1447,8 @@ class _$_Measure implements _Measure {
           this.guidanceElement,
       @JsonKey(name: '_set')
           this.setElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Measure.fromJson(Map<String, dynamic> json) =>
       _$_$_MeasureFromJson(json);
@@ -1825,7 +1826,8 @@ class _$_Measure implements _Measure {
   }
 }
 
-abstract class _Measure implements Measure {
+abstract class _Measure extends Measure {
+  _Measure._() : super._();
   factory _Measure(
       {@required
       @JsonKey(required: true, defaultValue: 'Measure')
@@ -3807,7 +3809,7 @@ class __$MeasureReportCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_MeasureReport implements _MeasureReport {
+class _$_MeasureReport extends _MeasureReport {
   _$_MeasureReport(
       {@required
       @JsonKey(required: true, defaultValue: 'MeasureReport')
@@ -3841,7 +3843,8 @@ class _$_MeasureReport implements _MeasureReport {
           this.typeElement,
       @JsonKey(name: '_date')
           this.dateElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_MeasureReport.fromJson(Map<String, dynamic> json) =>
       _$_$_MeasureReportFromJson(json);
@@ -4005,7 +4008,8 @@ class _$_MeasureReport implements _MeasureReport {
   }
 }
 
-abstract class _MeasureReport implements MeasureReport {
+abstract class _MeasureReport extends MeasureReport {
+  _MeasureReport._() : super._();
   factory _MeasureReport(
       {@required
       @JsonKey(required: true, defaultValue: 'MeasureReport')

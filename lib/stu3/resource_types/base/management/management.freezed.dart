@@ -605,7 +605,7 @@ class __$EncounterCopyWithImpl<$Res> extends _$EncounterCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Encounter implements _Encounter {
+class _$_Encounter extends _Encounter {
   _$_Encounter(
       {@required
       @JsonKey(required: true, defaultValue: 'Encounter')
@@ -644,7 +644,8 @@ class _$_Encounter implements _Encounter {
       this.partOf,
       @JsonKey(name: '_status')
           this.statusElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Encounter.fromJson(Map<String, dynamic> json) =>
       _$_$_EncounterFromJson(json);
@@ -847,7 +848,8 @@ class _$_Encounter implements _Encounter {
   }
 }
 
-abstract class _Encounter implements Encounter {
+abstract class _Encounter extends Encounter {
+  _Encounter._() : super._();
   factory _Encounter(
       {@required
       @JsonKey(required: true, defaultValue: 'Encounter')
@@ -2891,7 +2893,7 @@ class __$EpisodeOfCareCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_EpisodeOfCare implements _EpisodeOfCare {
+class _$_EpisodeOfCare extends _EpisodeOfCare {
   _$_EpisodeOfCare(
       {@required
       @JsonKey(required: true, defaultValue: 'EpisodeOfCare')
@@ -2921,7 +2923,8 @@ class _$_EpisodeOfCare implements _EpisodeOfCare {
       this.account,
       @JsonKey(name: '_status')
           this.statusElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_EpisodeOfCare.fromJson(Map<String, dynamic> json) =>
       _$_$_EpisodeOfCareFromJson(json);
@@ -3082,7 +3085,8 @@ class _$_EpisodeOfCare implements _EpisodeOfCare {
   }
 }
 
-abstract class _EpisodeOfCare implements EpisodeOfCare {
+abstract class _EpisodeOfCare extends EpisodeOfCare {
+  _EpisodeOfCare._() : super._();
   factory _EpisodeOfCare(
       {@required
       @JsonKey(required: true, defaultValue: 'EpisodeOfCare')
@@ -4031,7 +4035,7 @@ class __$FlagCopyWithImpl<$Res> extends _$FlagCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Flag implements _Flag {
+class _$_Flag extends _Flag {
   _$_Flag(
       {@required
       @JsonKey(required: true, defaultValue: 'Flag')
@@ -4058,7 +4062,8 @@ class _$_Flag implements _Flag {
       this.author,
       @JsonKey(name: '_status')
           this.statusElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Flag.fromJson(Map<String, dynamic> json) =>
       _$_$_FlagFromJson(json);
@@ -4196,7 +4201,8 @@ class _$_Flag implements _Flag {
   }
 }
 
-abstract class _Flag implements Flag {
+abstract class _Flag extends Flag {
+  _Flag._() : super._();
   factory _Flag(
       {@required
       @JsonKey(required: true, defaultValue: 'Flag')
@@ -5169,7 +5175,7 @@ class __$LibraryCopyWithImpl<$Res> extends _$LibraryCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Library implements _Library {
+class _$_Library extends _Library {
   _$_Library(
       {@required
       @JsonKey(required: true, defaultValue: 'Library')
@@ -5239,7 +5245,8 @@ class _$_Library implements _Library {
           this.lastReviewDateElement,
       @JsonKey(name: '_copyright')
           this.copyrightElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Library.fromJson(Map<String, dynamic> json) =>
       _$_$_LibraryFromJson(json);
@@ -5527,7 +5534,8 @@ class _$_Library implements _Library {
   }
 }
 
-abstract class _Library implements Library {
+abstract class _Library extends Library {
+  _Library._() : super._();
   factory _Library(
       {@required
       @JsonKey(required: true, defaultValue: 'Library')
@@ -6240,7 +6248,7 @@ class __$List_CopyWithImpl<$Res> extends _$List_CopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_List_ implements _List_ {
+class _$_List_ extends _List_ {
   _$_List_(
       {@required
       @JsonKey(required: true, defaultValue: 'List')
@@ -6277,7 +6285,8 @@ class _$_List_ implements _List_ {
           this.titleElement,
       @JsonKey(name: '_date')
           this.dateElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_List_.fromJson(Map<String, dynamic> json) =>
       _$_$_List_FromJson(json);
@@ -6461,7 +6470,8 @@ class _$_List_ implements _List_ {
   }
 }
 
-abstract class _List_ implements List_ {
+abstract class _List_ extends List_ {
+  _List_._() : super._();
   factory _List_(
       {@required
       @JsonKey(required: true, defaultValue: 'List')

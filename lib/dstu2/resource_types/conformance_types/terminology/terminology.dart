@@ -8,9 +8,10 @@ part 'terminology.freezed.dart';
 part 'terminology.g.dart';
 
 @freezed
-abstract class ValueSet with _$ValueSet implements Resource {
+abstract class ValueSet with Resource implements _$ValueSet {
+  ValueSet._();
   factory ValueSet({
-    @JsonKey(defaultValue: 'ValueSet') String resourceType,
+    @JsonKey(defaultValue: 'ValueSet') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -282,9 +283,10 @@ abstract class ValueSetContains with _$ValueSetContains {
 }
 
 @freezed
-abstract class NamingSystem with _$NamingSystem implements Resource {
+abstract class NamingSystem with Resource implements _$NamingSystem {
+  NamingSystem._();
   factory NamingSystem({
-    @JsonKey(defaultValue: 'NamingSystem') String resourceType,
+    @JsonKey(defaultValue: 'NamingSystem') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -327,9 +329,10 @@ abstract class NamingSystem with _$NamingSystem implements Resource {
 }
 
 @freezed
-abstract class ConceptMap with _$ConceptMap implements Resource {
+abstract class ConceptMap with Resource implements _$ConceptMap {
+  ConceptMap._();
   factory ConceptMap({
-    @JsonKey(defaultValue: 'ConceptMap') String resourceType,
+    @JsonKey(defaultValue: 'ConceptMap') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

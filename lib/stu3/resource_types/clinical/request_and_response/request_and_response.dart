@@ -7,7 +7,8 @@ part 'request_and_response.freezed.dart';
 part 'request_and_response.g.dart';
 
 @freezed
-abstract class Communication with _$Communication implements Resource {
+abstract class Communication with Resource implements _$Communication {
+  Communication._();
   factory Communication({
     @JsonKey(required: true, defaultValue: 'Communication')
     @required
@@ -63,8 +64,9 @@ abstract class CommunicationPayload with _$CommunicationPayload {
 
 @freezed
 abstract class CommunicationRequest
-    with _$CommunicationRequest
-    implements Resource {
+    with Resource
+    implements _$CommunicationRequest {
+  CommunicationRequest._();
   factory CommunicationRequest({
     @JsonKey(required: true, defaultValue: 'CommunicationRequest')
     @required
@@ -131,7 +133,8 @@ abstract class CommunicationRequestRequester
 }
 
 @freezed
-abstract class DeviceRequest with _$DeviceRequest implements Resource {
+abstract class DeviceRequest with Resource implements _$DeviceRequest {
+  DeviceRequest._();
   factory DeviceRequest({
     @JsonKey(required: true, defaultValue: 'DeviceRequest')
     @required
@@ -189,8 +192,9 @@ abstract class DeviceRequestRequester with _$DeviceRequestRequester {
 
 @freezed
 abstract class DeviceUseStatement
-    with _$DeviceUseStatement
-    implements Resource {
+    with Resource
+    implements _$DeviceUseStatement {
+  DeviceUseStatement._();
   factory DeviceUseStatement({
     @JsonKey(required: true, defaultValue: 'DeviceUseStatement')
     @required
@@ -225,7 +229,8 @@ abstract class DeviceUseStatement
 }
 
 @freezed
-abstract class SupplyDelivery with _$SupplyDelivery implements Resource {
+abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
+  SupplyDelivery._();
   factory SupplyDelivery({
     @JsonKey(required: true, defaultValue: 'SupplyDelivery')
     @required
@@ -271,7 +276,8 @@ abstract class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
 }
 
 @freezed
-abstract class SupplyRequest with _$SupplyRequest implements Resource {
+abstract class SupplyRequest with Resource implements _$SupplyRequest {
+  SupplyRequest._();
   factory SupplyRequest({
     @JsonKey(required: true, defaultValue: 'SupplyRequest')
     @required

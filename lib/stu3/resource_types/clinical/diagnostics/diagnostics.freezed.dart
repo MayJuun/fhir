@@ -364,7 +364,7 @@ class __$BodySiteCopyWithImpl<$Res> extends _$BodySiteCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_BodySite implements _BodySite {
+class _$_BodySite extends _BodySite {
   _$_BodySite(
       {@required
       @JsonKey(required: true, defaultValue: 'BodySite')
@@ -390,7 +390,8 @@ class _$_BodySite implements _BodySite {
           this.activeElement,
       @JsonKey(name: '_description')
           this.descriptionElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_BodySite.fromJson(Map<String, dynamic> json) =>
       _$_$_BodySiteFromJson(json);
@@ -528,7 +529,8 @@ class _$_BodySite implements _BodySite {
   }
 }
 
-abstract class _BodySite implements BodySite {
+abstract class _BodySite extends BodySite {
+  _BodySite._() : super._();
   factory _BodySite(
       {@required
       @JsonKey(required: true, defaultValue: 'BodySite')
@@ -1206,7 +1208,7 @@ class __$DiagnosticReportCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_DiagnosticReport implements _DiagnosticReport {
+class _$_DiagnosticReport extends _DiagnosticReport {
   _$_DiagnosticReport(
       {@required
       @JsonKey(required: true, defaultValue: 'DiagnosticReport')
@@ -1248,7 +1250,8 @@ class _$_DiagnosticReport implements _DiagnosticReport {
           this.issuedElement,
       @JsonKey(name: '_conclusion')
           this.conclusionElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_DiagnosticReport.fromJson(Map<String, dynamic> json) =>
       _$_$_DiagnosticReportFromJson(json);
@@ -1454,7 +1457,8 @@ class _$_DiagnosticReport implements _DiagnosticReport {
   }
 }
 
-abstract class _DiagnosticReport implements DiagnosticReport {
+abstract class _DiagnosticReport extends DiagnosticReport {
+  _DiagnosticReport._() : super._();
   factory _DiagnosticReport(
       {@required
       @JsonKey(required: true, defaultValue: 'DiagnosticReport')
@@ -2346,7 +2350,7 @@ class __$ImagingManifestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ImagingManifest implements _ImagingManifest {
+class _$_ImagingManifest extends _ImagingManifest {
   _$_ImagingManifest(
       {@required
       @JsonKey(required: true, defaultValue: 'ImagingManifest')
@@ -2372,7 +2376,8 @@ class _$_ImagingManifest implements _ImagingManifest {
           this.authoringTimeElement,
       @JsonKey(name: '_description')
           this.descriptionElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_ImagingManifest.fromJson(Map<String, dynamic> json) =>
       _$_$_ImagingManifestFromJson(json);
@@ -2506,7 +2511,8 @@ class _$_ImagingManifest implements _ImagingManifest {
   }
 }
 
-abstract class _ImagingManifest implements ImagingManifest {
+abstract class _ImagingManifest extends ImagingManifest {
+  _ImagingManifest._() : super._();
   factory _ImagingManifest(
       {@required
       @JsonKey(required: true, defaultValue: 'ImagingManifest')
@@ -3960,7 +3966,7 @@ class __$ImagingStudyCopyWithImpl<$Res> extends _$ImagingStudyCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ImagingStudy implements _ImagingStudy {
+class _$_ImagingStudy extends _ImagingStudy {
   _$_ImagingStudy(
       {@required
       @JsonKey(required: true, defaultValue: 'ImagingStudy')
@@ -4007,7 +4013,8 @@ class _$_ImagingStudy implements _ImagingStudy {
           this.numberOfInstancesElement,
       @JsonKey(name: '_description')
           this.descriptionElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_ImagingStudy.fromJson(Map<String, dynamic> json) =>
       _$_$_ImagingStudyFromJson(json);
@@ -4227,7 +4234,8 @@ class _$_ImagingStudy implements _ImagingStudy {
   }
 }
 
-abstract class _ImagingStudy implements ImagingStudy {
+abstract class _ImagingStudy extends ImagingStudy {
+  _ImagingStudy._() : super._();
   factory _ImagingStudy(
       {@required
       @JsonKey(required: true, defaultValue: 'ImagingStudy')
@@ -6419,7 +6427,7 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Observation implements _Observation {
+class _$_Observation extends _Observation {
   _$_Observation(
       {@required
       @JsonKey(required: true, defaultValue: 'Observation')
@@ -6483,7 +6491,8 @@ class _$_Observation implements _Observation {
           this.valueDateTimeElement,
       @JsonKey(name: '_comment')
           this.commentElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Observation.fromJson(Map<String, dynamic> json) =>
       _$_$_ObservationFromJson(json);
@@ -6764,7 +6773,8 @@ class _$_Observation implements _Observation {
   }
 }
 
-abstract class _Observation implements Observation {
+abstract class _Observation extends Observation {
+  _Observation._() : super._();
   factory _Observation(
       {@required
       @JsonKey(required: true, defaultValue: 'Observation')
@@ -8620,7 +8630,7 @@ class __$QuestionnaireResponseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_QuestionnaireResponse implements _QuestionnaireResponse {
+class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   _$_QuestionnaireResponse(
       {@required
       @JsonKey(required: true, defaultValue: 'QuestionnaireResponse')
@@ -8650,7 +8660,8 @@ class _$_QuestionnaireResponse implements _QuestionnaireResponse {
           this.statusElement,
       @JsonKey(name: '_authored')
           this.authoredElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_QuestionnaireResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_QuestionnaireResponseFromJson(json);
@@ -8811,7 +8822,8 @@ class _$_QuestionnaireResponse implements _QuestionnaireResponse {
   }
 }
 
-abstract class _QuestionnaireResponse implements QuestionnaireResponse {
+abstract class _QuestionnaireResponse extends QuestionnaireResponse {
+  _QuestionnaireResponse._() : super._();
   factory _QuestionnaireResponse(
       {@required
       @JsonKey(required: true, defaultValue: 'QuestionnaireResponse')
@@ -10597,7 +10609,7 @@ class __$SequenceCopyWithImpl<$Res> extends _$SequenceCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Sequence implements _Sequence {
+class _$_Sequence extends _Sequence {
   _$_Sequence(
       {@required
       @JsonKey(required: true, defaultValue: 'Sequence')
@@ -10635,7 +10647,8 @@ class _$_Sequence implements _Sequence {
           this.observedSeqElement,
       @JsonKey(name: '_readCoverage')
           this.readCoverageElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Sequence.fromJson(Map<String, dynamic> json) =>
       _$_$_SequenceFromJson(json);
@@ -10828,7 +10841,8 @@ class _$_Sequence implements _Sequence {
   }
 }
 
-abstract class _Sequence implements Sequence {
+abstract class _Sequence extends Sequence {
+  _Sequence._() : super._();
   factory _Sequence(
       {@required
       @JsonKey(required: true, defaultValue: 'Sequence')
@@ -13669,7 +13683,7 @@ class __$SpecimenCopyWithImpl<$Res> extends _$SpecimenCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Specimen implements _Specimen {
+class _$_Specimen extends _Specimen {
   _$_Specimen(
       {@required
       @JsonKey(required: true, defaultValue: 'Specimen')
@@ -13701,7 +13715,8 @@ class _$_Specimen implements _Specimen {
           this.statusElement,
       @JsonKey(name: '_receivedTime')
           this.receivedTimeElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Specimen.fromJson(Map<String, dynamic> json) =>
       _$_$_SpecimenFromJson(json);
@@ -13869,7 +13884,8 @@ class _$_Specimen implements _Specimen {
   }
 }
 
-abstract class _Specimen implements Specimen {
+abstract class _Specimen extends Specimen {
+  _Specimen._() : super._();
   factory _Specimen(
       {@required
       @JsonKey(required: true, defaultValue: 'Specimen')

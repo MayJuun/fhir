@@ -7,7 +7,8 @@ part 'public_health_and_research.freezed.dart';
 part 'public_health_and_research.g.dart';
 
 @freezed
-abstract class ResearchStudy with _$ResearchStudy implements Resource {
+abstract class ResearchStudy with Resource implements _$ResearchStudy {
+  ResearchStudy._();
   factory ResearchStudy({
     @JsonKey(required: true, defaultValue: 'ResearchStudy')
     @required
@@ -63,7 +64,8 @@ abstract class ResearchStudyArm with _$ResearchStudyArm {
 }
 
 @freezed
-abstract class ResearchSubject with _$ResearchSubject implements Resource {
+abstract class ResearchSubject with Resource implements _$ResearchSubject {
+  ResearchSubject._();
   factory ResearchSubject({
     @JsonKey(required: true, defaultValue: 'ResearchSubject')
     @required

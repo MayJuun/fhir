@@ -16,7 +16,8 @@ class _$AppointmentTearOff {
   const _$AppointmentTearOff();
 
   _Appointment call(
-      {@JsonKey(defaultValue: 'Appointment')
+      {@required
+      @JsonKey(defaultValue: 'Appointment')
           String resourceType,
       Id id,
       Meta meta,
@@ -653,9 +654,10 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Appointment implements _Appointment {
+class _$_Appointment extends _Appointment {
   _$_Appointment(
-      {@JsonKey(defaultValue: 'Appointment')
+      {@required
+      @JsonKey(defaultValue: 'Appointment')
           this.resourceType,
       this.id,
       this.meta,
@@ -700,8 +702,10 @@ class _$_Appointment implements _Appointment {
           this.minutesDurationElement,
       @JsonKey(name: '_comment')
           this.commentElement})
-      : assert(status != null),
-        assert(participant != null);
+      : assert(resourceType != null),
+        assert(status != null),
+        assert(participant != null),
+        super._();
 
   factory _$_Appointment.fromJson(Map<String, dynamic> json) =>
       _$_$_AppointmentFromJson(json);
@@ -908,9 +912,11 @@ class _$_Appointment implements _Appointment {
   }
 }
 
-abstract class _Appointment implements Appointment {
+abstract class _Appointment extends Appointment {
+  _Appointment._() : super._();
   factory _Appointment(
-      {@JsonKey(defaultValue: 'Appointment')
+      {@required
+      @JsonKey(defaultValue: 'Appointment')
           String resourceType,
       Id id,
       Meta meta,
@@ -1044,7 +1050,8 @@ class _$SlotTearOff {
   const _$SlotTearOff();
 
   _Slot call(
-      {@JsonKey(defaultValue: 'Slot')
+      {@required
+      @JsonKey(defaultValue: 'Slot')
           String resourceType,
       Id id,
       Meta meta,
@@ -1557,9 +1564,10 @@ class __$SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Slot implements _Slot {
+class _$_Slot extends _Slot {
   _$_Slot(
-      {@JsonKey(defaultValue: 'Slot')
+      {@required
+      @JsonKey(defaultValue: 'Slot')
           this.resourceType,
       this.id,
       this.meta,
@@ -1598,10 +1606,12 @@ class _$_Slot implements _Slot {
           this.overbookedElement,
       @JsonKey(name: '_comment')
           this.commentElement})
-      : assert(schedule != null),
+      : assert(resourceType != null),
+        assert(schedule != null),
         assert(freeBusyType != null),
         assert(start != null),
-        assert(end != null);
+        assert(end != null),
+        super._();
 
   factory _$_Slot.fromJson(Map<String, dynamic> json) =>
       _$_$_SlotFromJson(json);
@@ -1776,9 +1786,11 @@ class _$_Slot implements _Slot {
   }
 }
 
-abstract class _Slot implements Slot {
+abstract class _Slot extends Slot {
+  _Slot._() : super._();
   factory _Slot(
-      {@JsonKey(defaultValue: 'Slot')
+      {@required
+      @JsonKey(defaultValue: 'Slot')
           String resourceType,
       Id id,
       Meta meta,
@@ -1890,7 +1902,8 @@ class _$AppointmentResponseTearOff {
   const _$AppointmentResponseTearOff();
 
   _AppointmentResponse call(
-      {@JsonKey(defaultValue: 'AppointmentResponse')
+      {@required
+      @JsonKey(defaultValue: 'AppointmentResponse')
           String resourceType,
       Id id,
       Meta meta,
@@ -2407,9 +2420,10 @@ class __$AppointmentResponseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_AppointmentResponse implements _AppointmentResponse {
+class _$_AppointmentResponse extends _AppointmentResponse {
   _$_AppointmentResponse(
-      {@JsonKey(defaultValue: 'AppointmentResponse')
+      {@required
+      @JsonKey(defaultValue: 'AppointmentResponse')
           this.resourceType,
       this.id,
       this.meta,
@@ -2444,8 +2458,10 @@ class _$_AppointmentResponse implements _AppointmentResponse {
           this.participantStatusElement,
       @JsonKey(name: '_comment')
           this.commentElement})
-      : assert(appointment != null),
-        assert(participantStatus != null);
+      : assert(resourceType != null),
+        assert(appointment != null),
+        assert(participantStatus != null),
+        super._();
 
   factory _$_AppointmentResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_AppointmentResponseFromJson(json);
@@ -2623,9 +2639,11 @@ class _$_AppointmentResponse implements _AppointmentResponse {
   }
 }
 
-abstract class _AppointmentResponse implements AppointmentResponse {
+abstract class _AppointmentResponse extends AppointmentResponse {
+  _AppointmentResponse._() : super._();
   factory _AppointmentResponse(
-      {@JsonKey(defaultValue: 'AppointmentResponse')
+      {@required
+      @JsonKey(defaultValue: 'AppointmentResponse')
           String resourceType,
       Id id,
       Meta meta,
@@ -2734,7 +2752,7 @@ class _$ScheduleTearOff {
   const _$ScheduleTearOff();
 
   _Schedule call(
-      {@JsonKey(defaultValue: 'Schedule') String resourceType,
+      {@required @JsonKey(defaultValue: 'Schedule') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3096,9 +3114,9 @@ class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Schedule implements _Schedule {
+class _$_Schedule extends _Schedule {
   _$_Schedule(
-      {@JsonKey(defaultValue: 'Schedule') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Schedule') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -3115,7 +3133,9 @@ class _$_Schedule implements _Schedule {
       @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       @JsonKey(name: '_language') this.languageElement,
       @JsonKey(name: '_comment') this.commentElement})
-      : assert(actor != null);
+      : assert(resourceType != null),
+        assert(actor != null),
+        super._();
 
   factory _$_Schedule.fromJson(Map<String, dynamic> json) =>
       _$_$_ScheduleFromJson(json);
@@ -3249,9 +3269,10 @@ class _$_Schedule implements _Schedule {
   }
 }
 
-abstract class _Schedule implements Schedule {
+abstract class _Schedule extends Schedule {
+  _Schedule._() : super._();
   factory _Schedule(
-      {@JsonKey(defaultValue: 'Schedule') String resourceType,
+      {@required @JsonKey(defaultValue: 'Schedule') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,

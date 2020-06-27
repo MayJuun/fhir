@@ -8,7 +8,8 @@ part 'testing.freezed.dart';
 part 'testing.g.dart';
 
 @freezed
-abstract class TestReport with _$TestReport implements Resource {
+abstract class TestReport with Resource implements _$TestReport {
+  TestReport._();
   factory TestReport({
     @JsonKey(required: true, defaultValue: 'TestReport')
     @required
@@ -150,7 +151,8 @@ abstract class TestReportAction2 with _$TestReportAction2 {
 }
 
 @freezed
-abstract class TestScript with _$TestScript implements Resource {
+abstract class TestScript with Resource implements _$TestScript {
+  TestScript._();
   factory TestScript({
     @JsonKey(required: true, defaultValue: 'TestScript')
     @required

@@ -6,7 +6,8 @@ part 'support.freezed.dart';
 part 'support.g.dart';
 
 @freezed
-abstract class Coverage with _$Coverage implements Resource {
+abstract class Coverage with Resource implements _$Coverage {
+  Coverage._();
   factory Coverage({
     @JsonKey(required: true, defaultValue: 'Coverage')
     @required
@@ -80,8 +81,9 @@ abstract class CoverageGrouping with _$CoverageGrouping {
 
 @freezed
 abstract class EligibilityRequest
-    with _$EligibilityRequest
-    implements Resource {
+    with Resource
+    implements _$EligibilityRequest {
+  EligibilityRequest._();
   factory EligibilityRequest({
     @JsonKey(required: true, defaultValue: 'EligibilityRequest')
     @required
@@ -121,8 +123,9 @@ abstract class EligibilityRequest
 
 @freezed
 abstract class EligibilityResponse
-    with _$EligibilityResponse
-    implements Resource {
+    with Resource
+    implements _$EligibilityResponse {
+  EligibilityResponse._();
   factory EligibilityResponse({
     @JsonKey(required: true, defaultValue: 'EligibilityResponse')
     @required
@@ -219,7 +222,8 @@ abstract class EligibilityResponseError with _$EligibilityResponseError {
 }
 
 @freezed
-abstract class EnrollmentRequest with _$EnrollmentRequest implements Resource {
+abstract class EnrollmentRequest with Resource implements _$EnrollmentRequest {
+  EnrollmentRequest._();
   factory EnrollmentRequest({
     @JsonKey(required: true, defaultValue: 'EnrollmentRequest')
     @required
@@ -249,8 +253,9 @@ abstract class EnrollmentRequest with _$EnrollmentRequest implements Resource {
 
 @freezed
 abstract class EnrollmentResponse
-    with _$EnrollmentResponse
-    implements Resource {
+    with Resource
+    implements _$EnrollmentResponse {
+  EnrollmentResponse._();
   factory EnrollmentResponse({
     @JsonKey(required: true, defaultValue: 'EnrollmentResponse')
     @required

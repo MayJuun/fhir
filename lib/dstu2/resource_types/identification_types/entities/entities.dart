@@ -8,9 +8,10 @@ part 'entities.freezed.dart';
 part 'entities.g.dart';
 
 @freezed
-abstract class Substance with _$Substance implements Resource {
+abstract class Substance with Resource implements _$Substance {
+  Substance._();
   factory Substance({
-    @JsonKey(defaultValue: 'Substance') String resourceType,
+    @JsonKey(defaultValue: 'Substance') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -35,9 +36,10 @@ abstract class Substance with _$Substance implements Resource {
 }
 
 @freezed
-abstract class Location with _$Location implements Resource {
+abstract class Location with Resource implements _$Location {
+  Location._();
   factory Location({
-    @JsonKey(defaultValue: 'Location') String resourceType,
+    @JsonKey(defaultValue: 'Location') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -71,9 +73,10 @@ abstract class Location with _$Location implements Resource {
 }
 
 @freezed
-abstract class Person with _$Person implements Resource {
+abstract class Person with Resource implements _$Person {
+  Person._();
   factory Person({
-    @JsonKey(defaultValue: 'Person') String resourceType,
+    @JsonKey(defaultValue: 'Person') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -180,9 +183,10 @@ abstract class TermActor with _$TermActor {
 }
 
 @freezed
-abstract class Contract with _$Contract implements Resource {
+abstract class Contract with Resource implements _$Contract {
+  Contract._();
   factory Contract({
-    @JsonKey(defaultValue: 'Contract') String resourceType,
+    @JsonKey(defaultValue: 'Contract') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

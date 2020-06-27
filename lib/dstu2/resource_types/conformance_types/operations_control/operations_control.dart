@@ -8,9 +8,10 @@ part 'operations_control.freezed.dart';
 part 'operations_control.g.dart';
 
 @freezed
-abstract class Conformance with _$Conformance implements Resource {
+abstract class Conformance with Resource implements _$Conformance {
+  Conformance._();
   factory Conformance({
-    @JsonKey(defaultValue: 'Conformance') String resourceType,
+    @JsonKey(defaultValue: 'Conformance') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -56,10 +57,11 @@ abstract class Conformance with _$Conformance implements Resource {
 
 @freezed
 abstract class OperationDefinition
-    with _$OperationDefinition
-    implements Resource {
+    with Resource
+    implements _$OperationDefinition {
+      OperationDefinition._();
   factory OperationDefinition({
-    @JsonKey(defaultValue: 'OperationDefinition') String resourceType,
+    @JsonKey(defaultValue: 'OperationDefinition') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -99,9 +101,10 @@ abstract class OperationDefinition
 }
 
 @freezed
-abstract class SearchParameter with _$SearchParameter implements Resource {
+abstract class SearchParameter with Resource implements _$SearchParameter {
+  SearchParameter._();
   factory SearchParameter({
-    @JsonKey(defaultValue: 'SearchParameter') String resourceType,
+    @JsonKey(defaultValue: 'SearchParameter') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

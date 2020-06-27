@@ -8,9 +8,10 @@ part 'diagnostics.freezed.dart';
 part 'diagnostics.g.dart';
 
 @freezed
-abstract class ImagingStudy with _$ImagingStudy implements Resource {
+abstract class ImagingStudy with Resource implements _$ImagingStudy {
+  ImagingStudy._();
   factory ImagingStudy({
-    @JsonKey(defaultValue: 'ImagingStudy') String resourceType,
+    @JsonKey(defaultValue: 'ImagingStudy') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -49,9 +50,10 @@ abstract class ImagingStudy with _$ImagingStudy implements Resource {
 }
 
 @freezed
-abstract class DiagnosticReport with _$DiagnosticReport implements Resource {
+abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
+  DiagnosticReport._();
   factory DiagnosticReport({
-    @JsonKey(defaultValue: 'DiagnosticReport') String resourceType,
+    @JsonKey(defaultValue: 'DiagnosticReport') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -94,10 +96,13 @@ abstract class DiagnosticReport with _$DiagnosticReport implements Resource {
 
 @freezed
 abstract class ImagingObjectSelection
-    with _$ImagingObjectSelection
-    implements Resource {
+    with Resource
+    implements _$ImagingObjectSelection {
+  ImagingObjectSelection._();
   factory ImagingObjectSelection({
-    @JsonKey(defaultValue: 'ImagingObjectSelection') String resourceType,
+    @JsonKey(defaultValue: 'ImagingObjectSelection')
+    @required
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -120,9 +125,10 @@ abstract class ImagingObjectSelection
 }
 
 @freezed
-abstract class BodySite with _$BodySite implements Resource {
+abstract class BodySite with Resource implements _$BodySite {
+  BodySite._();
   factory BodySite({
-    @JsonKey(defaultValue: 'BodySite') String resourceType,
+    @JsonKey(defaultValue: 'BodySite') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -144,9 +150,10 @@ abstract class BodySite with _$BodySite implements Resource {
 }
 
 @freezed
-abstract class Observation with _$Observation implements Resource {
+abstract class Observation with Resource implements _$Observation {
+  Observation._();
   factory Observation({
-    @JsonKey(defaultValue: 'Observation') String resourceType,
+    @JsonKey(defaultValue: 'Observation') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -203,9 +210,10 @@ abstract class Observation with _$Observation implements Resource {
 }
 
 @freezed
-abstract class Specimen with _$Specimen implements Resource {
+abstract class Specimen with Resource implements _$Specimen {
+  Specimen._();
   factory Specimen({
-    @JsonKey(defaultValue: 'Specimen') String resourceType,
+    @JsonKey(defaultValue: 'Specimen') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -235,9 +243,10 @@ abstract class Specimen with _$Specimen implements Resource {
 }
 
 @freezed
-abstract class DiagnosticOrder with _$DiagnosticOrder implements Resource {
+abstract class DiagnosticOrder with Resource implements _$DiagnosticOrder {
+  DiagnosticOrder._();
   factory DiagnosticOrder({
-    @JsonKey(defaultValue: 'DiagnosticOrder') String resourceType,
+    @JsonKey(defaultValue: 'DiagnosticOrder') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

@@ -16,7 +16,8 @@ class _$CommunicationTearOff {
   const _$CommunicationTearOff();
 
   _Communication call(
-      {@JsonKey(defaultValue: 'Communication')
+      {@required
+      @JsonKey(defaultValue: 'Communication')
           String resourceType,
       Id id,
       Meta meta,
@@ -589,9 +590,9 @@ class __$CommunicationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Communication implements _Communication {
+class _$_Communication extends _Communication {
   _$_Communication(
-      {@JsonKey(defaultValue: 'Communication') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Communication') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -617,7 +618,9 @@ class _$_Communication implements _Communication {
       @JsonKey(name: '_language') this.languageElement,
       @JsonKey(name: '_status') this.statusElement,
       @JsonKey(name: '_sent') this.sentElement,
-      @JsonKey(name: '_received') this.receivedElement});
+      @JsonKey(name: '_received') this.receivedElement})
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Communication.fromJson(Map<String, dynamic> json) =>
       _$_$_CommunicationFromJson(json);
@@ -807,9 +810,11 @@ class _$_Communication implements _Communication {
   }
 }
 
-abstract class _Communication implements Communication {
+abstract class _Communication extends Communication {
+  _Communication._() : super._();
   factory _Communication(
-      {@JsonKey(defaultValue: 'Communication')
+      {@required
+      @JsonKey(defaultValue: 'Communication')
           String resourceType,
       Id id,
       Meta meta,
@@ -922,7 +927,8 @@ class _$EpisodeOfCareTearOff {
   const _$EpisodeOfCareTearOff();
 
   _EpisodeOfCare call(
-      {@JsonKey(defaultValue: 'EpisodeOfCare')
+      {@required
+      @JsonKey(defaultValue: 'EpisodeOfCare')
           String resourceType,
       Id id,
       Meta meta,
@@ -1414,9 +1420,10 @@ class __$EpisodeOfCareCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_EpisodeOfCare implements _EpisodeOfCare {
+class _$_EpisodeOfCare extends _EpisodeOfCare {
   _$_EpisodeOfCare(
-      {@JsonKey(defaultValue: 'EpisodeOfCare')
+      {@required
+      @JsonKey(defaultValue: 'EpisodeOfCare')
           this.resourceType,
       this.id,
       this.meta,
@@ -1448,8 +1455,10 @@ class _$_EpisodeOfCare implements _EpisodeOfCare {
           this.languageElement,
       @JsonKey(name: '_status')
           this.statusElement})
-      : assert(status != null),
-        assert(patient != null);
+      : assert(resourceType != null),
+        assert(status != null),
+        assert(patient != null),
+        super._();
 
   factory _$_EpisodeOfCare.fromJson(Map<String, dynamic> json) =>
       _$_$_EpisodeOfCareFromJson(json);
@@ -1619,9 +1628,11 @@ class _$_EpisodeOfCare implements _EpisodeOfCare {
   }
 }
 
-abstract class _EpisodeOfCare implements EpisodeOfCare {
+abstract class _EpisodeOfCare extends EpisodeOfCare {
+  _EpisodeOfCare._() : super._();
   factory _EpisodeOfCare(
-      {@JsonKey(defaultValue: 'EpisodeOfCare')
+      {@required
+      @JsonKey(defaultValue: 'EpisodeOfCare')
           String resourceType,
       Id id,
       Meta meta,
@@ -1722,7 +1733,8 @@ class _$EncounterTearOff {
   const _$EncounterTearOff();
 
   _Encounter call(
-      {@JsonKey(defaultValue: 'Encounter')
+      {@required
+      @JsonKey(defaultValue: 'Encounter')
           String resourceType,
       Id id,
       Meta meta,
@@ -2379,9 +2391,10 @@ class __$EncounterCopyWithImpl<$Res> extends _$EncounterCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Encounter implements _Encounter {
+class _$_Encounter extends _Encounter {
   _$_Encounter(
-      {@JsonKey(defaultValue: 'Encounter')
+      {@required
+      @JsonKey(defaultValue: 'Encounter')
           this.resourceType,
       this.id,
       this.meta,
@@ -2422,7 +2435,9 @@ class _$_Encounter implements _Encounter {
           this.statusElement,
       @JsonKey(name: '_class')
           this.classElement})
-      : assert(status != null);
+      : assert(resourceType != null),
+        assert(status != null),
+        super._();
 
   factory _$_Encounter.fromJson(Map<String, dynamic> json) =>
       _$_$_EncounterFromJson(json);
@@ -2632,9 +2647,11 @@ class _$_Encounter implements _Encounter {
   }
 }
 
-abstract class _Encounter implements Encounter {
+abstract class _Encounter extends Encounter {
+  _Encounter._() : super._();
   factory _Encounter(
-      {@JsonKey(defaultValue: 'Encounter')
+      {@required
+      @JsonKey(defaultValue: 'Encounter')
           String resourceType,
       Id id,
       Meta meta,
@@ -2763,7 +2780,8 @@ class _$FlagTearOff {
   const _$FlagTearOff();
 
   _Flag call(
-      {@JsonKey(defaultValue: 'Flag')
+      {@required
+      @JsonKey(defaultValue: 'Flag')
           String resourceType,
       Id id,
       Meta meta,
@@ -3233,9 +3251,10 @@ class __$FlagCopyWithImpl<$Res> extends _$FlagCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Flag implements _Flag {
+class _$_Flag extends _Flag {
   _$_Flag(
-      {@JsonKey(defaultValue: 'Flag')
+      {@required
+      @JsonKey(defaultValue: 'Flag')
           this.resourceType,
       this.id,
       this.meta,
@@ -3266,9 +3285,11 @@ class _$_Flag implements _Flag {
           this.languageElement,
       @JsonKey(name: '_status')
           this.statusElement})
-      : assert(status != null),
+      : assert(resourceType != null),
+        assert(status != null),
         assert(subject != null),
-        assert(code != null);
+        assert(code != null),
+        super._();
 
   factory _$_Flag.fromJson(Map<String, dynamic> json) =>
       _$_$_FlagFromJson(json);
@@ -3420,9 +3441,11 @@ class _$_Flag implements _Flag {
   }
 }
 
-abstract class _Flag implements Flag {
+abstract class _Flag extends Flag {
+  _Flag._() : super._();
   factory _Flag(
-      {@JsonKey(defaultValue: 'Flag')
+      {@required
+      @JsonKey(defaultValue: 'Flag')
           String resourceType,
       Id id,
       Meta meta,

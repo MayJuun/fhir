@@ -16,7 +16,8 @@ class _$ProcessRequestTearOff {
   const _$ProcessRequestTearOff();
 
   _ProcessRequest call(
-      {@JsonKey(defaultValue: 'ProcessRequest')
+      {@required
+      @JsonKey(defaultValue: 'ProcessRequest')
           String resourceType,
       Id id,
       Meta meta,
@@ -496,9 +497,10 @@ class __$ProcessRequestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ProcessRequest implements _ProcessRequest {
+class _$_ProcessRequest extends _ProcessRequest {
   _$_ProcessRequest(
-      {@JsonKey(defaultValue: 'ProcessRequest')
+      {@required
+      @JsonKey(defaultValue: 'ProcessRequest')
           this.resourceType,
       this.id,
       this.meta,
@@ -527,7 +529,9 @@ class _$_ProcessRequest implements _ProcessRequest {
       this.include,
       this.exclude,
       this.period})
-      : assert(action != null);
+      : assert(resourceType != null),
+        assert(action != null),
+        super._();
 
   factory _$_ProcessRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_ProcessRequestFromJson(json);
@@ -704,9 +708,11 @@ class _$_ProcessRequest implements _ProcessRequest {
   }
 }
 
-abstract class _ProcessRequest implements ProcessRequest {
+abstract class _ProcessRequest extends ProcessRequest {
+  _ProcessRequest._() : super._();
   factory _ProcessRequest(
-      {@JsonKey(defaultValue: 'ProcessRequest')
+      {@required
+      @JsonKey(defaultValue: 'ProcessRequest')
           String resourceType,
       Id id,
       Meta meta,
@@ -804,7 +810,8 @@ class _$SupplyDeliveryTearOff {
   const _$SupplyDeliveryTearOff();
 
   _SupplyDelivery call(
-      {@JsonKey(defaultValue: 'SupplyDelivery')
+      {@required
+      @JsonKey(defaultValue: 'SupplyDelivery')
           String resourceType,
       Id id,
       Meta meta,
@@ -1332,9 +1339,9 @@ class __$SupplyDeliveryCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_SupplyDelivery implements _SupplyDelivery {
+class _$_SupplyDelivery extends _SupplyDelivery {
   _$_SupplyDelivery(
-      {@JsonKey(defaultValue: 'SupplyDelivery') this.resourceType,
+      {@required @JsonKey(defaultValue: 'SupplyDelivery') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -1356,7 +1363,9 @@ class _$_SupplyDelivery implements _SupplyDelivery {
       this.receiver,
       @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       @JsonKey(name: '_language') this.languageElement,
-      @JsonKey(name: '_status') this.statusElement});
+      @JsonKey(name: '_status') this.statusElement})
+      : assert(resourceType != null),
+        super._();
 
   factory _$_SupplyDelivery.fromJson(Map<String, dynamic> json) =>
       _$_$_SupplyDeliveryFromJson(json);
@@ -1525,9 +1534,11 @@ class _$_SupplyDelivery implements _SupplyDelivery {
   }
 }
 
-abstract class _SupplyDelivery implements SupplyDelivery {
+abstract class _SupplyDelivery extends SupplyDelivery {
+  _SupplyDelivery._() : super._();
   factory _SupplyDelivery(
-      {@JsonKey(defaultValue: 'SupplyDelivery')
+      {@required
+      @JsonKey(defaultValue: 'SupplyDelivery')
           String resourceType,
       Id id,
       Meta meta,
@@ -1624,7 +1635,7 @@ class _$ProcessResponseTearOff {
   const _$ProcessResponseTearOff();
 
   _ProcessResponse call(
-      {@JsonKey(defaultValue: 'ProcessResponse') String resourceType,
+      {@required @JsonKey(defaultValue: 'ProcessResponse') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2076,9 +2087,9 @@ class __$ProcessResponseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ProcessResponse implements _ProcessResponse {
+class _$_ProcessResponse extends _ProcessResponse {
   _$_ProcessResponse(
-      {@JsonKey(defaultValue: 'ProcessResponse') this.resourceType,
+      {@required @JsonKey(defaultValue: 'ProcessResponse') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -2099,7 +2110,9 @@ class _$_ProcessResponse implements _ProcessResponse {
       this.requestOrganization,
       this.form,
       this.notes,
-      this.error});
+      this.error})
+      : assert(resourceType != null),
+        super._();
 
   factory _$_ProcessResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_ProcessResponseFromJson(json);
@@ -2258,9 +2271,10 @@ class _$_ProcessResponse implements _ProcessResponse {
   }
 }
 
-abstract class _ProcessResponse implements ProcessResponse {
+abstract class _ProcessResponse extends ProcessResponse {
+  _ProcessResponse._() : super._();
   factory _ProcessResponse(
-      {@JsonKey(defaultValue: 'ProcessResponse') String resourceType,
+      {@required @JsonKey(defaultValue: 'ProcessResponse') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2344,7 +2358,8 @@ class _$SupplyRequestTearOff {
   const _$SupplyRequestTearOff();
 
   _SupplyRequest call(
-      {@JsonKey(defaultValue: 'SupplyRequest')
+      {@required
+      @JsonKey(defaultValue: 'SupplyRequest')
           String resourceType,
       Id id,
       Meta meta,
@@ -2871,9 +2886,9 @@ class __$SupplyRequestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_SupplyRequest implements _SupplyRequest {
+class _$_SupplyRequest extends _SupplyRequest {
   _$_SupplyRequest(
-      {@JsonKey(defaultValue: 'SupplyRequest') this.resourceType,
+      {@required @JsonKey(defaultValue: 'SupplyRequest') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -2895,7 +2910,9 @@ class _$_SupplyRequest implements _SupplyRequest {
       this.when,
       @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       @JsonKey(name: '_language') this.languageElement,
-      @JsonKey(name: '_status') this.statusElement});
+      @JsonKey(name: '_status') this.statusElement})
+      : assert(resourceType != null),
+        super._();
 
   factory _$_SupplyRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_SupplyRequestFromJson(json);
@@ -3062,9 +3079,11 @@ class _$_SupplyRequest implements _SupplyRequest {
   }
 }
 
-abstract class _SupplyRequest implements SupplyRequest {
+abstract class _SupplyRequest extends SupplyRequest {
+  _SupplyRequest._() : super._();
   factory _SupplyRequest(
-      {@JsonKey(defaultValue: 'SupplyRequest')
+      {@required
+      @JsonKey(defaultValue: 'SupplyRequest')
           String resourceType,
       Id id,
       Meta meta,

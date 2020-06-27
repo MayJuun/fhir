@@ -16,7 +16,8 @@ class _$ProcedureRequestTearOff {
   const _$ProcedureRequestTearOff();
 
   _ProcedureRequest call(
-      {@JsonKey(defaultValue: 'ProcedureRequest')
+      {@required
+      @JsonKey(defaultValue: 'ProcedureRequest')
           String resourceType,
       Id id,
       Meta meta,
@@ -589,9 +590,10 @@ class __$ProcedureRequestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ProcedureRequest implements _ProcedureRequest {
-  const _$_ProcedureRequest(
-      {@JsonKey(defaultValue: 'ProcedureRequest')
+class _$_ProcedureRequest extends _ProcedureRequest {
+  _$_ProcedureRequest(
+      {@required
+      @JsonKey(defaultValue: 'ProcedureRequest')
           this.resourceType,
       this.id,
       this.meta,
@@ -626,8 +628,10 @@ class _$_ProcedureRequest implements _ProcedureRequest {
       this.orderer,
       @JsonKey(unknownEnumValue: ProcedureRequestPriority.unknown)
           this.priority})
-      : assert(subject != null),
-        assert(code != null);
+      : assert(resourceType != null),
+        assert(subject != null),
+        assert(code != null),
+        super._();
 
   factory _$_ProcedureRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_ProcedureRequestFromJson(json);
@@ -814,9 +818,11 @@ class _$_ProcedureRequest implements _ProcedureRequest {
   }
 }
 
-abstract class _ProcedureRequest implements ProcedureRequest {
-  const factory _ProcedureRequest(
-      {@JsonKey(defaultValue: 'ProcedureRequest')
+abstract class _ProcedureRequest extends ProcedureRequest {
+  _ProcedureRequest._() : super._();
+  factory _ProcedureRequest(
+      {@required
+      @JsonKey(defaultValue: 'ProcedureRequest')
           String resourceType,
       Id id,
       Meta meta,
@@ -927,14 +933,17 @@ class _$VisionPrescriptionTearOff {
   const _$VisionPrescriptionTearOff();
 
   _VisionPrescription call(
-      {@JsonKey(defaultValue: 'VisionPrescription') String resourceType,
+      {@required
+      @JsonKey(defaultValue: 'VisionPrescription')
+          String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<Identifier> identifier,
       FhirDateTime dateWritten,
@@ -944,9 +953,12 @@ class _$VisionPrescriptionTearOff {
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
       List<VisionPrescriptionDispense> dispense,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-      @JsonKey(name: '_language') Element languageElement,
-      @JsonKey(name: '_dateWritten') Element dateWrittenElement}) {
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_dateWritten')
+          Element dateWrittenElement}) {
     return _VisionPrescription(
       resourceType: resourceType,
       id: id,
@@ -1377,9 +1389,9 @@ class __$VisionPrescriptionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_VisionPrescription implements _VisionPrescription {
-  const _$_VisionPrescription(
-      {@JsonKey(defaultValue: 'VisionPrescription') this.resourceType,
+class _$_VisionPrescription extends _VisionPrescription {
+  _$_VisionPrescription(
+      {@required @JsonKey(defaultValue: 'VisionPrescription') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -1398,7 +1410,9 @@ class _$_VisionPrescription implements _VisionPrescription {
       this.dispense,
       @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       @JsonKey(name: '_language') this.languageElement,
-      @JsonKey(name: '_dateWritten') this.dateWrittenElement});
+      @JsonKey(name: '_dateWritten') this.dateWrittenElement})
+      : assert(resourceType != null),
+        super._();
 
   factory _$_VisionPrescription.fromJson(Map<String, dynamic> json) =>
       _$_$_VisionPrescriptionFromJson(json);
@@ -1551,29 +1565,35 @@ class _$_VisionPrescription implements _VisionPrescription {
   }
 }
 
-abstract class _VisionPrescription implements VisionPrescription {
-  const factory _VisionPrescription(
-          {@JsonKey(defaultValue: 'VisionPrescription') String resourceType,
-          Id id,
-          Meta meta,
-          FhirUri implicitRules,
-          Code language,
-          Narrative text,
-          List<Resource> contained,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          FhirExtension modifierExtension,
-          List<Identifier> identifier,
-          FhirDateTime dateWritten,
-          Reference patient,
-          Reference prescriber,
-          Reference encounter,
-          CodeableConcept reasonCodeableConcept,
-          Reference reasonReference,
-          List<VisionPrescriptionDispense> dispense,
-          @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-          @JsonKey(name: '_language') Element languageElement,
-          @JsonKey(name: '_dateWritten') Element dateWrittenElement}) =
-      _$_VisionPrescription;
+abstract class _VisionPrescription extends VisionPrescription {
+  _VisionPrescription._() : super._();
+  factory _VisionPrescription(
+      {@required
+      @JsonKey(defaultValue: 'VisionPrescription')
+          String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      FhirExtension modifierExtension,
+      List<Identifier> identifier,
+      FhirDateTime dateWritten,
+      Reference patient,
+      Reference prescriber,
+      Reference encounter,
+      CodeableConcept reasonCodeableConcept,
+      Reference reasonReference,
+      List<VisionPrescriptionDispense> dispense,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_dateWritten')
+          Element dateWrittenElement}) = _$_VisionPrescription;
 
   factory _VisionPrescription.fromJson(Map<String, dynamic> json) =
       _$_VisionPrescription.fromJson;
@@ -1635,7 +1655,8 @@ class _$CarePlanTearOff {
   const _$CarePlanTearOff();
 
   _CarePlan call(
-      {@JsonKey(defaultValue: 'CarePlan')
+      {@required
+      @JsonKey(defaultValue: 'CarePlan')
           String resourceType,
       Id id,
       Meta meta,
@@ -2191,9 +2212,10 @@ class __$CarePlanCopyWithImpl<$Res> extends _$CarePlanCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_CarePlan implements _CarePlan {
-  const _$_CarePlan(
-      {@JsonKey(defaultValue: 'CarePlan')
+class _$_CarePlan extends _CarePlan {
+  _$_CarePlan(
+      {@required
+      @JsonKey(defaultValue: 'CarePlan')
           this.resourceType,
       this.id,
       this.meta,
@@ -2230,7 +2252,9 @@ class _$_CarePlan implements _CarePlan {
           this.statusElement,
       @JsonKey(name: '_description')
           this.descriptionElement})
-      : assert(status != null);
+      : assert(resourceType != null),
+        assert(status != null),
+        super._();
 
   factory _$_CarePlan.fromJson(Map<String, dynamic> json) =>
       _$_$_CarePlanFromJson(json);
@@ -2427,9 +2451,11 @@ class _$_CarePlan implements _CarePlan {
   }
 }
 
-abstract class _CarePlan implements CarePlan {
-  const factory _CarePlan(
-      {@JsonKey(defaultValue: 'CarePlan')
+abstract class _CarePlan extends CarePlan {
+  _CarePlan._() : super._();
+  factory _CarePlan(
+      {@required
+      @JsonKey(defaultValue: 'CarePlan')
           String resourceType,
       Id id,
       Meta meta,
@@ -2546,7 +2572,8 @@ class _$GoalTearOff {
   const _$GoalTearOff();
 
   _Goal call(
-      {@JsonKey(defaultValue: 'Goal')
+      {@required
+      @JsonKey(defaultValue: 'Goal')
           String resourceType,
       Id id,
       Meta meta,
@@ -3169,9 +3196,10 @@ class __$GoalCopyWithImpl<$Res> extends _$GoalCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Goal implements _Goal {
-  const _$_Goal(
-      {@JsonKey(defaultValue: 'Goal')
+class _$_Goal extends _Goal {
+  _$_Goal(
+      {@required
+      @JsonKey(defaultValue: 'Goal')
           this.resourceType,
       this.id,
       this.meta,
@@ -3212,8 +3240,10 @@ class _$_Goal implements _Goal {
           this.statusDateElement,
       @JsonKey(name: '_statusReason')
           this.statusReasonElement})
-      : assert(description != null),
-        assert(status != null);
+      : assert(resourceType != null),
+        assert(description != null),
+        assert(status != null),
+        super._();
 
   factory _$_Goal.fromJson(Map<String, dynamic> json) =>
       _$_$_GoalFromJson(json);
@@ -3416,9 +3446,11 @@ class _$_Goal implements _Goal {
   }
 }
 
-abstract class _Goal implements Goal {
-  const factory _Goal(
-      {@JsonKey(defaultValue: 'Goal')
+abstract class _Goal extends Goal {
+  _Goal._() : super._();
+  factory _Goal(
+      {@required
+      @JsonKey(defaultValue: 'Goal')
           String resourceType,
       Id id,
       Meta meta,
@@ -3543,7 +3575,8 @@ class _$NutritionOrderTearOff {
   const _$NutritionOrderTearOff();
 
   _NutritionOrder call(
-      {@JsonKey(defaultValue: 'NutritionOrder')
+      {@required
+      @JsonKey(defaultValue: 'NutritionOrder')
           String resourceType,
       Id id,
       Meta meta,
@@ -4098,9 +4131,9 @@ class __$NutritionOrderCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_NutritionOrder implements _NutritionOrder {
-  const _$_NutritionOrder(
-      {@JsonKey(defaultValue: 'NutritionOrder') this.resourceType,
+class _$_NutritionOrder extends _NutritionOrder {
+  _$_NutritionOrder(
+      {@required @JsonKey(defaultValue: 'NutritionOrder') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -4125,8 +4158,10 @@ class _$_NutritionOrder implements _NutritionOrder {
       @JsonKey(name: '_language') this.languageElement,
       @JsonKey(name: '_status') this.statusElement,
       @JsonKey(name: '_dateTime') this.dateTimeElement})
-      : assert(patient != null),
-        assert(dateTime != null);
+      : assert(resourceType != null),
+        assert(patient != null),
+        assert(dateTime != null),
+        super._();
 
   factory _$_NutritionOrder.fromJson(Map<String, dynamic> json) =>
       _$_$_NutritionOrderFromJson(json);
@@ -4308,9 +4343,11 @@ class _$_NutritionOrder implements _NutritionOrder {
   }
 }
 
-abstract class _NutritionOrder implements NutritionOrder {
-  const factory _NutritionOrder(
-      {@JsonKey(defaultValue: 'NutritionOrder')
+abstract class _NutritionOrder extends NutritionOrder {
+  _NutritionOrder._() : super._();
+  factory _NutritionOrder(
+      {@required
+      @JsonKey(defaultValue: 'NutritionOrder')
           String resourceType,
       Id id,
       Meta meta,
@@ -4421,7 +4458,8 @@ class _$ReferralRequestTearOff {
   const _$ReferralRequestTearOff();
 
   _ReferralRequest call(
-      {@JsonKey(defaultValue: 'ReferralRequest')
+      {@required
+      @JsonKey(defaultValue: 'ReferralRequest')
           String resourceType,
       Id id,
       Meta meta,
@@ -4923,9 +4961,10 @@ class __$ReferralRequestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ReferralRequest implements _ReferralRequest {
-  const _$_ReferralRequest(
-      {@JsonKey(defaultValue: 'ReferralRequest')
+class _$_ReferralRequest extends _ReferralRequest {
+  _$_ReferralRequest(
+      {@required
+      @JsonKey(defaultValue: 'ReferralRequest')
           this.resourceType,
       this.id,
       this.meta,
@@ -4954,7 +4993,9 @@ class _$_ReferralRequest implements _ReferralRequest {
       this.serviceRequested,
       this.supportingInformation,
       this.fulfillmentTime})
-      : assert(status != null);
+      : assert(resourceType != null),
+        assert(status != null),
+        super._();
 
   factory _$_ReferralRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_ReferralRequestFromJson(json);
@@ -5130,9 +5171,11 @@ class _$_ReferralRequest implements _ReferralRequest {
   }
 }
 
-abstract class _ReferralRequest implements ReferralRequest {
-  const factory _ReferralRequest(
-      {@JsonKey(defaultValue: 'ReferralRequest')
+abstract class _ReferralRequest extends ReferralRequest {
+  _ReferralRequest._() : super._();
+  factory _ReferralRequest(
+      {@required
+      @JsonKey(defaultValue: 'ReferralRequest')
           String resourceType,
       Id id,
       Meta meta,
@@ -5514,7 +5557,7 @@ class __$VisionPrescriptionDispenseCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_VisionPrescriptionDispense implements _VisionPrescriptionDispense {
-  const _$_VisionPrescriptionDispense(
+  _$_VisionPrescriptionDispense(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -5668,7 +5711,7 @@ class _$_VisionPrescriptionDispense implements _VisionPrescriptionDispense {
 
 abstract class _VisionPrescriptionDispense
     implements VisionPrescriptionDispense {
-  const factory _VisionPrescriptionDispense(
+  factory _VisionPrescriptionDispense(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -5894,7 +5937,7 @@ class __$CarePlanRelatedPlanCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CarePlanRelatedPlan implements _CarePlanRelatedPlan {
-  const _$_CarePlanRelatedPlan(
+  _$_CarePlanRelatedPlan(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -5963,7 +6006,7 @@ class _$_CarePlanRelatedPlan implements _CarePlanRelatedPlan {
 }
 
 abstract class _CarePlanRelatedPlan implements CarePlanRelatedPlan {
-  const factory _CarePlanRelatedPlan(
+  factory _CarePlanRelatedPlan(
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -6163,7 +6206,7 @@ class __$CarePlanParticipantCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CarePlanParticipant implements _CarePlanParticipant {
-  const _$_CarePlanParticipant(
+  _$_CarePlanParticipant(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -6229,7 +6272,7 @@ class _$_CarePlanParticipant implements _CarePlanParticipant {
 }
 
 abstract class _CarePlanParticipant implements CarePlanParticipant {
-  const factory _CarePlanParticipant(
+  factory _CarePlanParticipant(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -6463,7 +6506,7 @@ class __$CarePlanActivityCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CarePlanActivity implements _CarePlanActivity {
-  const _$_CarePlanActivity(
+  _$_CarePlanActivity(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -6551,7 +6594,7 @@ class _$_CarePlanActivity implements _CarePlanActivity {
 }
 
 abstract class _CarePlanActivity implements CarePlanActivity {
-  const factory _CarePlanActivity(
+  factory _CarePlanActivity(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -6762,7 +6805,7 @@ class __$GoalOutcomeCopyWithImpl<$Res> extends _$GoalOutcomeCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_GoalOutcome implements _GoalOutcome {
-  const _$_GoalOutcome(
+  _$_GoalOutcome(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -6829,7 +6872,7 @@ class _$_GoalOutcome implements _GoalOutcome {
 }
 
 abstract class _GoalOutcome implements GoalOutcome {
-  const factory _GoalOutcome(
+  factory _GoalOutcome(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -7091,7 +7134,7 @@ class __$NutritionOrderOralDietCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_NutritionOrderOralDiet implements _NutritionOrderOralDiet {
-  const _$_NutritionOrderOralDiet(
+  _$_NutritionOrderOralDiet(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -7202,7 +7245,7 @@ class _$_NutritionOrderOralDiet implements _NutritionOrderOralDiet {
 }
 
 abstract class _NutritionOrderOralDiet implements NutritionOrderOralDiet {
-  const factory _NutritionOrderOralDiet(
+  factory _NutritionOrderOralDiet(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -7520,7 +7563,7 @@ class __$NutritionOrderSupplementCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_NutritionOrderSupplement implements _NutritionOrderSupplement {
-  const _$_NutritionOrderSupplement(
+  _$_NutritionOrderSupplement(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -7632,7 +7675,7 @@ class _$_NutritionOrderSupplement implements _NutritionOrderSupplement {
 }
 
 abstract class _NutritionOrderSupplement implements NutritionOrderSupplement {
-  const factory _NutritionOrderSupplement(
+  factory _NutritionOrderSupplement(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -8107,7 +8150,7 @@ class __$NutritionOrderEnteralFormulaCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_NutritionOrderEnteralFormula implements _NutritionOrderEnteralFormula {
-  const _$_NutritionOrderEnteralFormula(
+  _$_NutritionOrderEnteralFormula(
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
@@ -8267,7 +8310,7 @@ class _$_NutritionOrderEnteralFormula implements _NutritionOrderEnteralFormula {
 
 abstract class _NutritionOrderEnteralFormula
     implements NutritionOrderEnteralFormula {
-  const factory _NutritionOrderEnteralFormula(
+  factory _NutritionOrderEnteralFormula(
           {Id id,
           @JsonKey(name: 'extension')
               List<FhirExtension> extension_,
@@ -8895,7 +8938,7 @@ class __$CarePlanDetailCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CarePlanDetail implements _CarePlanDetail {
-  const _$_CarePlanDetail(
+  _$_CarePlanDetail(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -9103,7 +9146,7 @@ class _$_CarePlanDetail implements _CarePlanDetail {
 }
 
 abstract class _CarePlanDetail implements CarePlanDetail {
-  const factory _CarePlanDetail(
+  factory _CarePlanDetail(
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
@@ -9381,7 +9424,7 @@ class __$NutritionOrderNutrientCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_NutritionOrderNutrient implements _NutritionOrderNutrient {
-  const _$_NutritionOrderNutrient(
+  _$_NutritionOrderNutrient(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -9456,7 +9499,7 @@ class _$_NutritionOrderNutrient implements _NutritionOrderNutrient {
 }
 
 abstract class _NutritionOrderNutrient implements NutritionOrderNutrient {
-  const factory _NutritionOrderNutrient(
+  factory _NutritionOrderNutrient(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -9673,7 +9716,7 @@ class __$NutritionOrderTextureCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_NutritionOrderTexture implements _NutritionOrderTexture {
-  const _$_NutritionOrderTexture(
+  _$_NutritionOrderTexture(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -9749,7 +9792,7 @@ class _$_NutritionOrderTexture implements _NutritionOrderTexture {
 }
 
 abstract class _NutritionOrderTexture implements NutritionOrderTexture {
-  const factory _NutritionOrderTexture(
+  factory _NutritionOrderTexture(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -10001,7 +10044,7 @@ class __$NutritionOrderAdministrationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_NutritionOrderAdministration implements _NutritionOrderAdministration {
-  const _$_NutritionOrderAdministration(
+  _$_NutritionOrderAdministration(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -10084,7 +10127,7 @@ class _$_NutritionOrderAdministration implements _NutritionOrderAdministration {
 
 abstract class _NutritionOrderAdministration
     implements NutritionOrderAdministration {
-  const factory _NutritionOrderAdministration(
+  factory _NutritionOrderAdministration(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,

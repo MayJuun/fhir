@@ -16,7 +16,8 @@ class _$ImagingStudyTearOff {
   const _$ImagingStudyTearOff();
 
   _ImagingStudy call(
-      {@JsonKey(defaultValue: 'ImagingStudy')
+      {@required
+      @JsonKey(defaultValue: 'ImagingStudy')
           String resourceType,
       Id id,
       Meta meta,
@@ -663,9 +664,10 @@ class __$ImagingStudyCopyWithImpl<$Res> extends _$ImagingStudyCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ImagingStudy implements _ImagingStudy {
+class _$_ImagingStudy extends _ImagingStudy {
   _$_ImagingStudy(
-      {@JsonKey(defaultValue: 'ImagingStudy')
+      {@required
+      @JsonKey(defaultValue: 'ImagingStudy')
           this.resourceType,
       this.id,
       this.meta,
@@ -713,10 +715,12 @@ class _$_ImagingStudy implements _ImagingStudy {
           this.numberOfInstancesElement,
       @JsonKey(name: '_description')
           this.descriptionElement})
-      : assert(patient != null),
+      : assert(resourceType != null),
+        assert(patient != null),
         assert(uid != null),
         assert(numberOfSeries != null),
-        assert(numberOfInstances != null);
+        assert(numberOfInstances != null),
+        super._();
 
   factory _$_ImagingStudy.fromJson(Map<String, dynamic> json) =>
       _$_$_ImagingStudyFromJson(json);
@@ -927,9 +931,11 @@ class _$_ImagingStudy implements _ImagingStudy {
   }
 }
 
-abstract class _ImagingStudy implements ImagingStudy {
+abstract class _ImagingStudy extends ImagingStudy {
+  _ImagingStudy._() : super._();
   factory _ImagingStudy(
-      {@JsonKey(defaultValue: 'ImagingStudy')
+      {@required
+      @JsonKey(defaultValue: 'ImagingStudy')
           String resourceType,
       Id id,
       Meta meta,
@@ -1068,7 +1074,8 @@ class _$DiagnosticReportTearOff {
   const _$DiagnosticReportTearOff();
 
   _DiagnosticReport call(
-      {@JsonKey(defaultValue: 'DiagnosticReport')
+      {@required
+      @JsonKey(defaultValue: 'DiagnosticReport')
           String resourceType,
       Id id,
       Meta meta,
@@ -1766,9 +1773,10 @@ class __$DiagnosticReportCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_DiagnosticReport implements _DiagnosticReport {
+class _$_DiagnosticReport extends _DiagnosticReport {
   _$_DiagnosticReport(
-      {@JsonKey(defaultValue: 'DiagnosticReport')
+      {@required
+      @JsonKey(defaultValue: 'DiagnosticReport')
           this.resourceType,
       this.id,
       this.meta,
@@ -1819,11 +1827,13 @@ class _$_DiagnosticReport implements _DiagnosticReport {
           this.issuedElement,
       @JsonKey(name: '_conclusion')
           this.conclusionElement})
-      : assert(status != null),
+      : assert(resourceType != null),
+        assert(status != null),
         assert(code != null),
         assert(subject != null),
         assert(issued != null),
-        assert(performer != null);
+        assert(performer != null),
+        super._();
 
   factory _$_DiagnosticReport.fromJson(Map<String, dynamic> json) =>
       _$_$_DiagnosticReportFromJson(json);
@@ -2042,9 +2052,11 @@ class _$_DiagnosticReport implements _DiagnosticReport {
   }
 }
 
-abstract class _DiagnosticReport implements DiagnosticReport {
+abstract class _DiagnosticReport extends DiagnosticReport {
+  _DiagnosticReport._() : super._();
   factory _DiagnosticReport(
-      {@JsonKey(defaultValue: 'DiagnosticReport')
+      {@required
+      @JsonKey(defaultValue: 'DiagnosticReport')
           String resourceType,
       Id id,
       Meta meta,
@@ -2191,7 +2203,8 @@ class _$ImagingObjectSelectionTearOff {
   const _$ImagingObjectSelectionTearOff();
 
   _ImagingObjectSelection call(
-      {@JsonKey(defaultValue: 'ImagingObjectSelection')
+      {@required
+      @JsonKey(defaultValue: 'ImagingObjectSelection')
           String resourceType,
       Id id,
       Meta meta,
@@ -2524,28 +2537,41 @@ class __$ImagingObjectSelectionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ImagingObjectSelection implements _ImagingObjectSelection {
+class _$_ImagingObjectSelection extends _ImagingObjectSelection {
   _$_ImagingObjectSelection(
-      {@JsonKey(defaultValue: 'ImagingObjectSelection') this.resourceType,
+      {@required
+      @JsonKey(defaultValue: 'ImagingObjectSelection')
+          this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
       this.language,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
-      @required @JsonKey(required: true) this.uid,
-      @required @JsonKey(required: true) this.patient,
-      @required @JsonKey(required: true) this.title,
+      @required
+      @JsonKey(required: true)
+          this.uid,
+      @required
+      @JsonKey(required: true)
+          this.patient,
+      @required
+      @JsonKey(required: true)
+          this.title,
       this.description,
       this.author,
       this.authoringTime,
-      @required @JsonKey(required: true) this.study})
-      : assert(uid != null),
+      @required
+      @JsonKey(required: true)
+          this.study})
+      : assert(resourceType != null),
+        assert(uid != null),
         assert(patient != null),
         assert(title != null),
-        assert(study != null);
+        assert(study != null),
+        super._();
 
   factory _$_ImagingObjectSelection.fromJson(Map<String, dynamic> json) =>
       _$_$_ImagingObjectSelectionFromJson(json);
@@ -2672,9 +2698,11 @@ class _$_ImagingObjectSelection implements _ImagingObjectSelection {
   }
 }
 
-abstract class _ImagingObjectSelection implements ImagingObjectSelection {
+abstract class _ImagingObjectSelection extends ImagingObjectSelection {
+  _ImagingObjectSelection._() : super._();
   factory _ImagingObjectSelection(
-      {@JsonKey(defaultValue: 'ImagingObjectSelection')
+      {@required
+      @JsonKey(defaultValue: 'ImagingObjectSelection')
           String resourceType,
       Id id,
       Meta meta,
@@ -2754,7 +2782,7 @@ class _$BodySiteTearOff {
   const _$BodySiteTearOff();
 
   _BodySite call(
-      {@JsonKey(defaultValue: 'BodySite') String resourceType,
+      {@required @JsonKey(defaultValue: 'BodySite') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3046,9 +3074,9 @@ class __$BodySiteCopyWithImpl<$Res> extends _$BodySiteCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_BodySite implements _BodySite {
+class _$_BodySite extends _BodySite {
   _$_BodySite(
-      {@JsonKey(defaultValue: 'BodySite') this.resourceType,
+      {@required @JsonKey(defaultValue: 'BodySite') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -3063,7 +3091,9 @@ class _$_BodySite implements _BodySite {
       this.modifier,
       this.description,
       this.image})
-      : assert(patient != null);
+      : assert(resourceType != null),
+        assert(patient != null),
+        super._();
 
   factory _$_BodySite.fromJson(Map<String, dynamic> json) =>
       _$_$_BodySiteFromJson(json);
@@ -3182,9 +3212,10 @@ class _$_BodySite implements _BodySite {
   }
 }
 
-abstract class _BodySite implements BodySite {
+abstract class _BodySite extends BodySite {
+  _BodySite._() : super._();
   factory _BodySite(
-      {@JsonKey(defaultValue: 'BodySite') String resourceType,
+      {@required @JsonKey(defaultValue: 'BodySite') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3247,7 +3278,8 @@ class _$ObservationTearOff {
   const _$ObservationTearOff();
 
   _Observation call(
-      {@JsonKey(defaultValue: 'Observation')
+      {@required
+      @JsonKey(defaultValue: 'Observation')
           String resourceType,
       Id id,
       Meta meta,
@@ -4308,9 +4340,10 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Observation implements _Observation {
+class _$_Observation extends _Observation {
   _$_Observation(
-      {@JsonKey(defaultValue: 'Observation')
+      {@required
+      @JsonKey(defaultValue: 'Observation')
           this.resourceType,
       this.id,
       this.meta,
@@ -4373,8 +4406,10 @@ class _$_Observation implements _Observation {
           this.valueTimeElement,
       @JsonKey(name: '_valueDateTime')
           this.valueDateTimeElement})
-      : assert(status != null),
-        assert(code != null);
+      : assert(resourceType != null),
+        assert(status != null),
+        assert(code != null),
+        super._();
 
   factory _$_Observation.fromJson(Map<String, dynamic> json) =>
       _$_$_ObservationFromJson(json);
@@ -4653,9 +4688,11 @@ class _$_Observation implements _Observation {
   }
 }
 
-abstract class _Observation implements Observation {
+abstract class _Observation extends Observation {
+  _Observation._() : super._();
   factory _Observation(
-      {@JsonKey(defaultValue: 'Observation')
+      {@required
+      @JsonKey(defaultValue: 'Observation')
           String resourceType,
       Id id,
       Meta meta,
@@ -4843,7 +4880,7 @@ class _$SpecimenTearOff {
   const _$SpecimenTearOff();
 
   _Specimen call(
-      {@JsonKey(defaultValue: 'Specimen') String resourceType,
+      {@required @JsonKey(defaultValue: 'Specimen') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5320,9 +5357,9 @@ class __$SpecimenCopyWithImpl<$Res> extends _$SpecimenCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Specimen implements _Specimen {
+class _$_Specimen extends _Specimen {
   _$_Specimen(
-      {@JsonKey(defaultValue: 'Specimen') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Specimen') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -5345,7 +5382,9 @@ class _$_Specimen implements _Specimen {
       @JsonKey(name: '_language') this.languageElement,
       @JsonKey(name: '_status') this.statusElement,
       @JsonKey(name: '_receivedTime') this.receivedTimeElement})
-      : assert(subject != null);
+      : assert(resourceType != null),
+        assert(subject != null),
+        super._();
 
   factory _$_Specimen.fromJson(Map<String, dynamic> json) =>
       _$_$_SpecimenFromJson(json);
@@ -5516,9 +5555,11 @@ class _$_Specimen implements _Specimen {
   }
 }
 
-abstract class _Specimen implements Specimen {
+abstract class _Specimen extends Specimen {
+  _Specimen._() : super._();
   factory _Specimen(
-      {@JsonKey(defaultValue: 'Specimen')
+      {@required
+      @JsonKey(defaultValue: 'Specimen')
           String resourceType,
       Id id,
       Meta meta,
@@ -5619,7 +5660,8 @@ class _$DiagnosticOrderTearOff {
   const _$DiagnosticOrderTearOff();
 
   _DiagnosticOrder call(
-      {@JsonKey(defaultValue: 'DiagnosticOrder')
+      {@required
+      @JsonKey(defaultValue: 'DiagnosticOrder')
           String resourceType,
       Id id,
       Meta meta,
@@ -6014,9 +6056,9 @@ class __$DiagnosticOrderCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_DiagnosticOrder implements _DiagnosticOrder {
+class _$_DiagnosticOrder extends _DiagnosticOrder {
   _$_DiagnosticOrder(
-      {@JsonKey(defaultValue: 'DiagnosticOrder') this.resourceType,
+      {@required @JsonKey(defaultValue: 'DiagnosticOrder') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -6037,7 +6079,9 @@ class _$_DiagnosticOrder implements _DiagnosticOrder {
       this.event,
       this.item,
       this.note})
-      : assert(subject != null);
+      : assert(resourceType != null),
+        assert(subject != null),
+        super._();
 
   factory _$_DiagnosticOrder.fromJson(Map<String, dynamic> json) =>
       _$_$_DiagnosticOrderFromJson(json);
@@ -6191,9 +6235,11 @@ class _$_DiagnosticOrder implements _DiagnosticOrder {
   }
 }
 
-abstract class _DiagnosticOrder implements DiagnosticOrder {
+abstract class _DiagnosticOrder extends DiagnosticOrder {
+  _DiagnosticOrder._() : super._();
   factory _DiagnosticOrder(
-      {@JsonKey(defaultValue: 'DiagnosticOrder')
+      {@required
+      @JsonKey(defaultValue: 'DiagnosticOrder')
           String resourceType,
       Id id,
       Meta meta,

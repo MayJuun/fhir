@@ -7,7 +7,8 @@ part 'care_provision.freezed.dart';
 part 'care_provision.g.dart';
 
 @freezed
-abstract class CarePlan with _$CarePlan implements Resource {
+abstract class CarePlan with Resource implements _$CarePlan {
+  CarePlan._();
   factory CarePlan({
     @JsonKey(required: true, defaultValue: 'CarePlan')
     @required
@@ -96,7 +97,8 @@ abstract class CarePlanDetail with _$CarePlanDetail {
 }
 
 @freezed
-abstract class CareTeam with _$CareTeam implements Resource {
+abstract class CareTeam with Resource implements _$CareTeam {
+  CareTeam._();
   factory CareTeam({
     @JsonKey(required: true, defaultValue: 'CareTeam')
     @required
@@ -141,7 +143,8 @@ abstract class CareTeamParticipant with _$CareTeamParticipant {
 }
 
 @freezed
-abstract class Goal with _$Goal implements Resource {
+abstract class Goal with Resource implements _$Goal {
+  Goal._();
   factory Goal({
     @JsonKey(required: true, defaultValue: 'Goal')
     @required
@@ -194,7 +197,8 @@ abstract class GoalTarget with _$GoalTarget {
 }
 
 @freezed
-abstract class NutritionOrder with _$NutritionOrder implements Resource {
+abstract class NutritionOrder with Resource implements _$NutritionOrder {
+  NutritionOrder._();
   factory NutritionOrder({
     @JsonKey(required: true, defaultValue: 'NutritionOrder')
     @required
@@ -314,7 +318,8 @@ abstract class NutritionOrderAdministration
 }
 
 @freezed
-abstract class ProcedureRequest with _$ProcedureRequest implements Resource {
+abstract class ProcedureRequest with Resource implements _$ProcedureRequest {
+  ProcedureRequest._();
   factory ProcedureRequest({
     @JsonKey(required: true, defaultValue: 'ProcedureRequest')
     @required
@@ -379,7 +384,8 @@ abstract class ProcedureRequestRequester with _$ProcedureRequestRequester {
 }
 
 @freezed
-abstract class ReferralRequest with _$ReferralRequest implements Resource {
+abstract class ReferralRequest with Resource implements _$ReferralRequest {
+  ReferralRequest._();
   factory ReferralRequest({
     @JsonKey(required: true, defaultValue: 'ReferralRequest')
     @required
@@ -438,7 +444,8 @@ abstract class ReferralRequestRequester with _$ReferralRequestRequester {
 }
 
 @freezed
-abstract class RequestGroup with _$RequestGroup implements Resource {
+abstract class RequestGroup with Resource implements _$RequestGroup {
+  RequestGroup._();
   factory RequestGroup({
     @JsonKey(required: true, defaultValue: 'RequestGroup')
     @required
@@ -547,7 +554,8 @@ abstract class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
 }
 
 @freezed
-abstract class RiskAssessment with _$RiskAssessment implements Resource {
+abstract class RiskAssessment with Resource implements _$RiskAssessment {
+  RiskAssessment._();
   factory RiskAssessment({
     @JsonKey(required: true, defaultValue: 'RiskAssessment')
     @required
@@ -608,8 +616,9 @@ abstract class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
 
 @freezed
 abstract class VisionPrescription
-    with _$VisionPrescription
-    implements Resource {
+    with Resource
+    implements _$VisionPrescription {
+  VisionPrescription._();
   factory VisionPrescription({
     @JsonKey(required: true, defaultValue: 'VisionPrescription')
     @required

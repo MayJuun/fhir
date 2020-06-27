@@ -491,7 +491,7 @@ class __$AccountCopyWithImpl<$Res> extends _$AccountCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Account implements _Account {
+class _$_Account extends _Account {
   _$_Account(
       {@required
       @JsonKey(required: true, defaultValue: 'Account')
@@ -524,7 +524,8 @@ class _$_Account implements _Account {
           this.nameElement,
       @JsonKey(name: '_description')
           this.descriptionElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Account.fromJson(Map<String, dynamic> json) =>
       _$_$_AccountFromJson(json);
@@ -696,7 +697,8 @@ class _$_Account implements _Account {
   }
 }
 
-abstract class _Account implements Account {
+abstract class _Account extends Account {
+  _Account._() : super._();
   factory _Account(
       {@required
       @JsonKey(required: true, defaultValue: 'Account')
@@ -2062,7 +2064,7 @@ class __$ChargeItemCopyWithImpl<$Res> extends _$ChargeItemCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ChargeItem implements _ChargeItem {
+class _$_ChargeItem extends _ChargeItem {
   _$_ChargeItem(
       {@required
       @JsonKey(required: true, defaultValue: 'ChargeItem')
@@ -2116,7 +2118,8 @@ class _$_ChargeItem implements _ChargeItem {
           this.overrideReasonElement,
       @JsonKey(name: '_enteredDate')
           this.enteredDateElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_ChargeItem.fromJson(Map<String, dynamic> json) =>
       _$_$_ChargeItemFromJson(json);
@@ -2360,7 +2363,8 @@ class _$_ChargeItem implements _ChargeItem {
   }
 }
 
-abstract class _ChargeItem implements ChargeItem {
+abstract class _ChargeItem extends ChargeItem {
+  _ChargeItem._() : super._();
   factory _ChargeItem(
       {@required
       @JsonKey(required: true, defaultValue: 'ChargeItem')
@@ -3298,7 +3302,7 @@ class __$ContractCopyWithImpl<$Res> extends _$ContractCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Contract implements _Contract {
+class _$_Contract extends _Contract {
   _$_Contract(
       {@required
       @JsonKey(required: true, defaultValue: 'Contract')
@@ -3340,7 +3344,8 @@ class _$_Contract implements _Contract {
           this.statusElement,
       @JsonKey(name: '_issued')
           this.issuedElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Contract.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractFromJson(json);
@@ -3558,7 +3563,8 @@ class _$_Contract implements _Contract {
   }
 }
 
-abstract class _Contract implements Contract {
+abstract class _Contract extends Contract {
+  _Contract._() : super._();
   factory _Contract(
       {@required
       @JsonKey(required: true, defaultValue: 'Contract')
@@ -7353,7 +7359,7 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ExplanationOfBenefit implements _ExplanationOfBenefit {
+class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   _$_ExplanationOfBenefit(
       {@required
       @JsonKey(required: true, defaultValue: 'ExplanationOfBenefit')
@@ -7415,7 +7421,8 @@ class _$_ExplanationOfBenefit implements _ExplanationOfBenefit {
           this.dispositionElement,
       @JsonKey(name: '_precedence')
           this.precedenceElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =>
       _$_$_ExplanationOfBenefitFromJson(json);
@@ -7705,7 +7712,8 @@ class _$_ExplanationOfBenefit implements _ExplanationOfBenefit {
   }
 }
 
-abstract class _ExplanationOfBenefit implements ExplanationOfBenefit {
+abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
+  _ExplanationOfBenefit._() : super._();
   factory _ExplanationOfBenefit(
       {@required
       @JsonKey(required: true, defaultValue: 'ExplanationOfBenefit')
@@ -8360,7 +8368,7 @@ class __$ExplanationOfBenefitPayeeCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ExplanationOfBenefitPayee implements _ExplanationOfBenefitPayee {
+class _$_ExplanationOfBenefitPayee extends _ExplanationOfBenefitPayee {
   _$_ExplanationOfBenefitPayee(
       {this.type,
       @required
@@ -8376,7 +8384,8 @@ class _$_ExplanationOfBenefitPayee implements _ExplanationOfBenefitPayee {
           this.extension_,
       this.modifierExtension,
       this.party})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_ExplanationOfBenefitPayee.fromJson(Map<String, dynamic> json) =>
       _$_$_ExplanationOfBenefitPayeeFromJson(json);
@@ -8472,7 +8481,8 @@ class _$_ExplanationOfBenefitPayee implements _ExplanationOfBenefitPayee {
   }
 }
 
-abstract class _ExplanationOfBenefitPayee implements ExplanationOfBenefitPayee {
+abstract class _ExplanationOfBenefitPayee extends ExplanationOfBenefitPayee {
+  _ExplanationOfBenefitPayee._() : super._();
   factory _ExplanationOfBenefitPayee(
       {CodeableConcept type,
       @required

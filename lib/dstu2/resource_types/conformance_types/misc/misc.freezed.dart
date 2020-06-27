@@ -16,7 +16,8 @@ class _$ImplementationGuideTearOff {
   const _$ImplementationGuideTearOff();
 
   _ImplementationGuide call(
-      {@JsonKey(defaultValue: 'ImplementationGuide')
+      {@required
+      @JsonKey(defaultValue: 'ImplementationGuide')
           String resourceType,
       Id id,
       Meta meta,
@@ -793,9 +794,10 @@ class __$ImplementationGuideCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ImplementationGuide implements _ImplementationGuide {
+class _$_ImplementationGuide extends _ImplementationGuide {
   _$_ImplementationGuide(
-      {@JsonKey(defaultValue: 'ImplementationGuide')
+      {@required
+      @JsonKey(defaultValue: 'ImplementationGuide')
           this.resourceType,
       this.id,
       this.meta,
@@ -857,11 +859,13 @@ class _$_ImplementationGuide implements _ImplementationGuide {
           this.copyrightElement,
       @JsonKey(name: '_fhirVersion')
           this.fhirVersionElement})
-      : assert(url != null),
+      : assert(resourceType != null),
+        assert(url != null),
         assert(name != null),
         assert(status != null),
         assert(package != null),
-        assert(page != null);
+        assert(page != null),
+        super._();
 
   factory _$_ImplementationGuide.fromJson(Map<String, dynamic> json) =>
       _$_$_ImplementationGuideFromJson(json);
@@ -1107,9 +1111,11 @@ class _$_ImplementationGuide implements _ImplementationGuide {
   }
 }
 
-abstract class _ImplementationGuide implements ImplementationGuide {
+abstract class _ImplementationGuide extends ImplementationGuide {
+  _ImplementationGuide._() : super._();
   factory _ImplementationGuide(
-      {@JsonKey(defaultValue: 'ImplementationGuide')
+      {@required
+      @JsonKey(defaultValue: 'ImplementationGuide')
           String resourceType,
       Id id,
       Meta meta,
@@ -3222,7 +3228,8 @@ class _$TestScriptTearOff {
   const _$TestScriptTearOff();
 
   _TestScript call(
-      {@JsonKey(defaultValue: 'TestScript')
+      {@required
+      @JsonKey(defaultValue: 'TestScript')
           String resourceType,
       Id id,
       Meta meta,
@@ -4020,9 +4027,10 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_TestScript implements _TestScript {
+class _$_TestScript extends _TestScript {
   _$_TestScript(
-      {@JsonKey(defaultValue: 'TestScript')
+      {@required
+      @JsonKey(defaultValue: 'TestScript')
           this.resourceType,
       this.id,
       this.meta,
@@ -4080,9 +4088,11 @@ class _$_TestScript implements _TestScript {
           this.descriptionElement,
       @JsonKey(name: '_copyright')
           this.copyrightElement})
-      : assert(url != null),
+      : assert(resourceType != null),
+        assert(url != null),
         assert(name != null),
-        assert(status != null);
+        assert(status != null),
+        super._();
 
   factory _$_TestScript.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptFromJson(json);
@@ -4331,9 +4341,11 @@ class _$_TestScript implements _TestScript {
   }
 }
 
-abstract class _TestScript implements TestScript {
+abstract class _TestScript extends TestScript {
+  _TestScript._() : super._();
   factory _TestScript(
-      {@JsonKey(defaultValue: 'TestScript')
+      {@required
+      @JsonKey(defaultValue: 'TestScript')
           String resourceType,
       Id id,
       Meta meta,

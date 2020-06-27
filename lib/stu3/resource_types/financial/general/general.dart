@@ -8,7 +8,8 @@ part 'general.freezed.dart';
 part 'general.g.dart';
 
 @freezed
-abstract class Account with _$Account implements Resource {
+abstract class Account with Resource implements _$Account {
+  Account._();
   factory Account({
     @JsonKey(required: true, defaultValue: 'Account')
     @required
@@ -65,7 +66,8 @@ abstract class AccountGuarantor with _$AccountGuarantor {
 }
 
 @freezed
-abstract class ChargeItem with _$ChargeItem implements Resource {
+abstract class ChargeItem with Resource implements _$ChargeItem {
+  ChargeItem._();
   factory ChargeItem({
     @JsonKey(required: true, defaultValue: 'ChargeItem')
     @required
@@ -126,7 +128,8 @@ abstract class ChargeItemParticipant with _$ChargeItemParticipant {
 }
 
 @freezed
-abstract class Contract with _$Contract implements Resource {
+abstract class Contract with Resource implements _$Contract {
+  Contract._();
   factory Contract({
     @JsonKey(required: true, defaultValue: 'Contract')
     @required
@@ -296,8 +299,9 @@ abstract class ContractRule with _$ContractRule {
 
 @freezed
 abstract class ExplanationOfBenefit
-    with _$ExplanationOfBenefit
-    implements Resource {
+    with Resource
+    implements _$ExplanationOfBenefit {
+  ExplanationOfBenefit._();
   factory ExplanationOfBenefit({
     @JsonKey(required: true, defaultValue: 'ExplanationOfBenefit')
     @required
@@ -371,7 +375,10 @@ abstract class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
 }
 
 @freezed
-abstract class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
+abstract class ExplanationOfBenefitPayee
+    with Resource
+    implements _$ExplanationOfBenefitPayee {
+  ExplanationOfBenefitPayee._();
   factory ExplanationOfBenefitPayee({
     CodeableConcept type,
     @JsonKey(required: true, defaultValue: 'ExplanationOfBenefitPayee')

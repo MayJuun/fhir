@@ -581,7 +581,7 @@ class __$ResearchStudyCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ResearchStudy implements _ResearchStudy {
+class _$_ResearchStudy extends _ResearchStudy {
   _$_ResearchStudy(
       {@required
       @JsonKey(required: true, defaultValue: 'ResearchStudy')
@@ -622,7 +622,8 @@ class _$_ResearchStudy implements _ResearchStudy {
           this.statusElement,
       @JsonKey(name: '_description')
           this.descriptionElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_ResearchStudy.fromJson(Map<String, dynamic> json) =>
       _$_$_ResearchStudyFromJson(json);
@@ -829,7 +830,8 @@ class _$_ResearchStudy implements _ResearchStudy {
   }
 }
 
-abstract class _ResearchStudy implements ResearchStudy {
+abstract class _ResearchStudy extends ResearchStudy {
+  _ResearchStudy._() : super._();
   factory _ResearchStudy(
       {@required
       @JsonKey(required: true, defaultValue: 'ResearchStudy')
@@ -1668,7 +1670,7 @@ class __$ResearchSubjectCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ResearchSubject implements _ResearchSubject {
+class _$_ResearchSubject extends _ResearchSubject {
   _$_ResearchSubject(
       {@required
       @JsonKey(required: true, defaultValue: 'ResearchSubject')
@@ -1699,7 +1701,8 @@ class _$_ResearchSubject implements _ResearchSubject {
           this.assignedArmElement,
       @JsonKey(name: '_actualArm')
           this.actualArmElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_ResearchSubject.fromJson(Map<String, dynamic> json) =>
       _$_$_ResearchSubjectFromJson(json);
@@ -1852,7 +1855,8 @@ class _$_ResearchSubject implements _ResearchSubject {
   }
 }
 
-abstract class _ResearchSubject implements ResearchSubject {
+abstract class _ResearchSubject extends ResearchSubject {
+  _ResearchSubject._() : super._();
   factory _ResearchSubject(
       {@required
       @JsonKey(required: true, defaultValue: 'ResearchSubject')

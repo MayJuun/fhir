@@ -9,8 +9,9 @@ part 'definitional_artifacts.g.dart';
 
 @freezed
 abstract class ActivityDefinition
-    with _$ActivityDefinition
-    implements Resource {
+    with Resource
+    implements _$ActivityDefinition {
+  ActivityDefinition._();
   factory ActivityDefinition({
     @JsonKey(required: true, defaultValue: 'ActivityDefinition')
     @required
@@ -112,7 +113,8 @@ abstract class ActivityDefinitionDynamicValue
 }
 
 @freezed
-abstract class PlanDefinition with _$PlanDefinition implements Resource {
+abstract class PlanDefinition with Resource implements _$PlanDefinition {
+  PlanDefinition._();
   factory PlanDefinition({
     @JsonKey(required: true, defaultValue: 'PlanDefinition')
     @required
@@ -311,7 +313,8 @@ abstract class PlanDefinitionDynamicValue with _$PlanDefinitionDynamicValue {
 }
 
 @freezed
-abstract class Questionnaire with _$Questionnaire implements Resource {
+abstract class Questionnaire with Resource implements _$Questionnaire {
+  Questionnaire._();
   factory Questionnaire({
     @JsonKey(required: true, defaultValue: 'Questionnaire')
     @required
@@ -466,7 +469,8 @@ abstract class QuestionnaireOption with _$QuestionnaireOption {
 }
 
 @freezed
-abstract class ServiceDefinition with _$ServiceDefinition implements Resource {
+abstract class ServiceDefinition with Resource implements _$ServiceDefinition {
+  ServiceDefinition._();
   factory ServiceDefinition({
     @JsonKey(required: true, defaultValue: 'ServiceDefinition')
     @required

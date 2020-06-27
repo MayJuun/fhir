@@ -480,7 +480,7 @@ class __$AuditEventCopyWithImpl<$Res> extends _$AuditEventCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_AuditEvent implements _AuditEvent {
+class _$_AuditEvent extends _AuditEvent {
   _$_AuditEvent(
       {@required
       @JsonKey(required: true, defaultValue: 'AuditEvent')
@@ -517,7 +517,8 @@ class _$_AuditEvent implements _AuditEvent {
           this.outcomeElement,
       @JsonKey(name: '_outcomeDesc')
           this.outcomeDescElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_AuditEvent.fromJson(Map<String, dynamic> json) =>
       _$_$_AuditEventFromJson(json);
@@ -689,7 +690,8 @@ class _$_AuditEvent implements _AuditEvent {
   }
 }
 
-abstract class _AuditEvent implements AuditEvent {
+abstract class _AuditEvent extends AuditEvent {
+  _AuditEvent._() : super._();
   factory _AuditEvent(
       {@required
       @JsonKey(required: true, defaultValue: 'AuditEvent')
@@ -3117,7 +3119,7 @@ class __$ConsentCopyWithImpl<$Res> extends _$ConsentCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Consent implements _Consent {
+class _$_Consent extends _Consent {
   _$_Consent(
       {@required
       @JsonKey(required: true, defaultValue: 'Consent')
@@ -3159,7 +3161,8 @@ class _$_Consent implements _Consent {
           this.dateTimeElement,
       @JsonKey(name: '_policyRule')
           this.policyRuleElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Consent.fromJson(Map<String, dynamic> json) =>
       _$_$_ConsentFromJson(json);
@@ -3368,7 +3371,8 @@ class _$_Consent implements _Consent {
   }
 }
 
-abstract class _Consent implements Consent {
+abstract class _Consent extends Consent {
+  _Consent._() : super._();
   factory _Consent(
       {@required
       @JsonKey(required: true, defaultValue: 'Consent')
@@ -5292,7 +5296,7 @@ class __$ProvenanceCopyWithImpl<$Res> extends _$ProvenanceCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Provenance implements _Provenance {
+class _$_Provenance extends _Provenance {
   _$_Provenance(
       {@required
       @JsonKey(required: true, defaultValue: 'Provenance')
@@ -5322,7 +5326,8 @@ class _$_Provenance implements _Provenance {
           this.recordedElement,
       @JsonKey(name: '_policy')
           this.policyElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Provenance.fromJson(Map<String, dynamic> json) =>
       _$_$_ProvenanceFromJson(json);
@@ -5476,7 +5481,8 @@ class _$_Provenance implements _Provenance {
   }
 }
 
-abstract class _Provenance implements Provenance {
+abstract class _Provenance extends Provenance {
+  _Provenance._() : super._();
   factory _Provenance(
       {@required
       @JsonKey(required: true, defaultValue: 'Provenance')

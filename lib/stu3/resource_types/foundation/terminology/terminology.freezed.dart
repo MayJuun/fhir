@@ -1044,7 +1044,7 @@ class __$CodeSystemCopyWithImpl<$Res> extends _$CodeSystemCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_CodeSystem implements _CodeSystem {
+class _$_CodeSystem extends _CodeSystem {
   _$_CodeSystem(
       {@required
       @JsonKey(required: true, defaultValue: 'CodeSystem')
@@ -1122,7 +1122,8 @@ class _$_CodeSystem implements _CodeSystem {
           this.contentElement,
       @JsonKey(name: '_count')
           this.countElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_CodeSystem.fromJson(Map<String, dynamic> json) =>
       _$_$_CodeSystemFromJson(json);
@@ -1427,7 +1428,8 @@ class _$_CodeSystem implements _CodeSystem {
   }
 }
 
-abstract class _CodeSystem implements CodeSystem {
+abstract class _CodeSystem extends CodeSystem {
+  _CodeSystem._() : super._();
   factory _CodeSystem(
       {@required
       @JsonKey(required: true, defaultValue: 'CodeSystem')
@@ -4282,7 +4284,7 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ConceptMap implements _ConceptMap {
+class _$_ConceptMap extends _ConceptMap {
   _$_ConceptMap(
       {@required
       @JsonKey(required: true, defaultValue: 'ConceptMap')
@@ -4343,7 +4345,8 @@ class _$_ConceptMap implements _ConceptMap {
           this.sourceUriElement,
       @JsonKey(name: '_targetUri')
           this.targetUriElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_ConceptMap.fromJson(Map<String, dynamic> json) =>
       _$_$_ConceptMapFromJson(json);
@@ -4601,7 +4604,8 @@ class _$_ConceptMap implements _ConceptMap {
   }
 }
 
-abstract class _ConceptMap implements ConceptMap {
+abstract class _ConceptMap extends ConceptMap {
+  _ConceptMap._() : super._();
   factory _ConceptMap(
       {@required
       @JsonKey(required: true, defaultValue: 'ConceptMap')
@@ -7544,7 +7548,7 @@ class __$ExpansionProfileCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ExpansionProfile implements _ExpansionProfile {
+class _$_ExpansionProfile extends _ExpansionProfile {
   _$_ExpansionProfile(
       {@required
       @JsonKey(required: true, defaultValue: 'ExpansionProfile')
@@ -7614,7 +7618,8 @@ class _$_ExpansionProfile implements _ExpansionProfile {
           this.displayLanguageElement,
       @JsonKey(name: '_limitedExpansion')
           this.limitedExpansionElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_ExpansionProfile.fromJson(Map<String, dynamic> json) =>
       _$_$_ExpansionProfileFromJson(json);
@@ -7899,7 +7904,8 @@ class _$_ExpansionProfile implements _ExpansionProfile {
   }
 }
 
-abstract class _ExpansionProfile implements ExpansionProfile {
+abstract class _ExpansionProfile extends ExpansionProfile {
+  _ExpansionProfile._() : super._();
   factory _ExpansionProfile(
       {@required
       @JsonKey(required: true, defaultValue: 'ExpansionProfile')
@@ -10174,7 +10180,7 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_NamingSystem implements _NamingSystem {
+class _$_NamingSystem extends _NamingSystem {
   _$_NamingSystem(
       {@required
       @JsonKey(required: true, defaultValue: 'NamingSystem')
@@ -10221,7 +10227,8 @@ class _$_NamingSystem implements _NamingSystem {
           this.descriptionElement,
       @JsonKey(name: '_usage')
           this.usageElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_NamingSystem.fromJson(Map<String, dynamic> json) =>
       _$_$_NamingSystemFromJson(json);
@@ -10432,7 +10439,8 @@ class _$_NamingSystem implements _NamingSystem {
   }
 }
 
-abstract class _NamingSystem implements NamingSystem {
+abstract class _NamingSystem extends NamingSystem {
+  _NamingSystem._() : super._();
   factory _NamingSystem(
       {@required
       @JsonKey(required: true, defaultValue: 'NamingSystem')
@@ -11725,7 +11733,7 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ValueSet implements _ValueSet {
+class _$_ValueSet extends _ValueSet {
   _$_ValueSet(
       {@required
       @JsonKey(required: true, defaultValue: 'ValueSet')
@@ -11785,7 +11793,8 @@ class _$_ValueSet implements _ValueSet {
           this.copyrightElement,
       @JsonKey(name: '_extensible')
           this.extensibleElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_ValueSet.fromJson(Map<String, dynamic> json) =>
       _$_$_ValueSetFromJson(json);
@@ -12039,7 +12048,8 @@ class _$_ValueSet implements _ValueSet {
   }
 }
 
-abstract class _ValueSet implements ValueSet {
+abstract class _ValueSet extends ValueSet {
+  _ValueSet._() : super._();
   factory _ValueSet(
       {@required
       @JsonKey(required: true, defaultValue: 'ValueSet')

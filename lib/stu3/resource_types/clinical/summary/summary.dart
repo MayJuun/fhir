@@ -8,7 +8,8 @@ part 'summary.freezed.dart';
 part 'summary.g.dart';
 
 @freezed
-abstract class AdverseEvent with _$AdverseEvent implements Resource {
+abstract class AdverseEvent with Resource implements _$AdverseEvent {
+  AdverseEvent._();
   factory AdverseEvent({
     @JsonKey(required: true, defaultValue: 'AdverseEvent')
     @required
@@ -67,8 +68,9 @@ abstract class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
 
 @freezed
 abstract class AllergyIntolerance
-    with _$AllergyIntolerance
-    implements Resource {
+    with Resource
+    implements _$AllergyIntolerance {
+  AllergyIntolerance._();
   factory AllergyIntolerance({
     @JsonKey(required: true, defaultValue: 'AllergyIntolerance')
     @required
@@ -139,8 +141,9 @@ abstract class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
 
 @freezed
 abstract class ClinicalImpression
-    with _$ClinicalImpression
-    implements Resource {
+    with Resource
+    implements _$ClinicalImpression {
+  ClinicalImpression._();
   factory ClinicalImpression({
     @JsonKey(required: true, defaultValue: 'ClinicalImpression')
     @required
@@ -209,7 +212,8 @@ abstract class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
 }
 
 @freezed
-abstract class Condition with _$Condition implements Resource {
+abstract class Condition with Resource implements _$Condition {
+  Condition._();
   factory Condition({
     @JsonKey(required: true, defaultValue: 'Condition')
     @required
@@ -282,7 +286,8 @@ abstract class ConditionEvidence with _$ConditionEvidence {
 }
 
 @freezed
-abstract class DetectedIssue with _$DetectedIssue implements Resource {
+abstract class DetectedIssue with Resource implements _$DetectedIssue {
+  DetectedIssue._();
   factory DetectedIssue({
     @JsonKey(required: true, defaultValue: 'DetectedIssue')
     @required
@@ -331,8 +336,9 @@ abstract class DetectedIssueMitigation with _$DetectedIssueMitigation {
 
 @freezed
 abstract class FamilyMemberHistory
-    with _$FamilyMemberHistory
-    implements Resource {
+    with Resource
+    implements _$FamilyMemberHistory {
+  FamilyMemberHistory._();
   factory FamilyMemberHistory({
     @JsonKey(required: true, defaultValue: 'FamilyMemberHistory')
     @required
@@ -407,7 +413,8 @@ abstract class FamilyMemberHistoryCondition
 }
 
 @freezed
-abstract class Procedure with _$Procedure implements Resource {
+abstract class Procedure with Resource implements _$Procedure {
+  Procedure._();
   factory Procedure({
     @JsonKey(required: true, defaultValue: 'Procedure')
     @required

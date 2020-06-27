@@ -8,7 +8,8 @@ part 'terminology.freezed.dart';
 part 'terminology.g.dart';
 
 @freezed
-abstract class CodeSystem with _$CodeSystem implements Resource {
+abstract class CodeSystem with Resource implements _$CodeSystem {
+  CodeSystem._();
   factory CodeSystem({
     @JsonKey(required: true, defaultValue: 'CodeSystem')
     @required
@@ -155,7 +156,8 @@ abstract class CodeSystemProperty1 with _$CodeSystemProperty1 {
 }
 
 @freezed
-abstract class ConceptMap with _$ConceptMap implements Resource {
+abstract class ConceptMap with Resource implements _$ConceptMap {
+  ConceptMap._();
   factory ConceptMap({
     @JsonKey(required: true, defaultValue: 'ConceptMap')
     @required
@@ -289,7 +291,8 @@ abstract class ConceptMapUnmapped with _$ConceptMapUnmapped {
 }
 
 @freezed
-abstract class ExpansionProfile with _$ExpansionProfile implements Resource {
+abstract class ExpansionProfile with Resource implements _$ExpansionProfile {
+  ExpansionProfile._();
   factory ExpansionProfile({
     @JsonKey(required: true, defaultValue: 'ExpansionProfile')
     @required
@@ -428,7 +431,8 @@ abstract class ExpansionProfileDesignation2
 }
 
 @freezed
-abstract class NamingSystem with _$NamingSystem implements Resource {
+abstract class NamingSystem with Resource implements _$NamingSystem {
+  NamingSystem._();
   factory NamingSystem({
     @JsonKey(required: true, defaultValue: 'NamingSystem')
     @required
@@ -486,7 +490,8 @@ abstract class NamingSystemUniqueId with _$NamingSystemUniqueId {
 }
 
 @freezed
-abstract class ValueSet with _$ValueSet implements Resource {
+abstract class ValueSet with Resource implements _$ValueSet {
+  ValueSet._();
   factory ValueSet({
     @JsonKey(required: true, defaultValue: 'ValueSet')
     @required

@@ -585,7 +585,7 @@ class __$AdverseEventCopyWithImpl<$Res> extends _$AdverseEventCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_AdverseEvent implements _AdverseEvent {
+class _$_AdverseEvent extends _AdverseEvent {
   _$_AdverseEvent(
       {@required
       @JsonKey(required: true, defaultValue: 'AdverseEvent')
@@ -622,7 +622,8 @@ class _$_AdverseEvent implements _AdverseEvent {
           this.dateElement,
       @JsonKey(name: '_description')
           this.descriptionElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_AdverseEvent.fromJson(Map<String, dynamic> json) =>
       _$_$_AdverseEventFromJson(json);
@@ -813,7 +814,8 @@ class _$_AdverseEvent implements _AdverseEvent {
   }
 }
 
-abstract class _AdverseEvent implements AdverseEvent {
+abstract class _AdverseEvent extends AdverseEvent {
+  _AdverseEvent._() : super._();
   factory _AdverseEvent(
       {@required
       @JsonKey(required: true, defaultValue: 'AdverseEvent')
@@ -2176,7 +2178,7 @@ class __$AllergyIntoleranceCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_AllergyIntolerance implements _AllergyIntolerance {
+class _$_AllergyIntolerance extends _AllergyIntolerance {
   _$_AllergyIntolerance(
       {@required
       @JsonKey(required: true, defaultValue: 'AllergyIntolerance')
@@ -2232,7 +2234,8 @@ class _$_AllergyIntolerance implements _AllergyIntolerance {
           this.assertedDateElement,
       @JsonKey(name: '_lastOccurrence')
           this.lastOccurrenceElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_AllergyIntolerance.fromJson(Map<String, dynamic> json) =>
       _$_$_AllergyIntoleranceFromJson(json);
@@ -2470,7 +2473,8 @@ class _$_AllergyIntolerance implements _AllergyIntolerance {
   }
 }
 
-abstract class _AllergyIntolerance implements AllergyIntolerance {
+abstract class _AllergyIntolerance extends AllergyIntolerance {
+  _AllergyIntolerance._() : super._();
   factory _AllergyIntolerance(
       {@required
       @JsonKey(required: true, defaultValue: 'AllergyIntolerance')
@@ -3752,7 +3756,7 @@ class __$ClinicalImpressionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ClinicalImpression implements _ClinicalImpression {
+class _$_ClinicalImpression extends _ClinicalImpression {
   _$_ClinicalImpression(
       {@required
       @JsonKey(required: true, defaultValue: 'ClinicalImpression')
@@ -3800,7 +3804,8 @@ class _$_ClinicalImpression implements _ClinicalImpression {
           this.protocolElement,
       @JsonKey(name: '_summary')
           this.summaryElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_ClinicalImpression.fromJson(Map<String, dynamic> json) =>
       _$_$_ClinicalImpressionFromJson(json);
@@ -4024,7 +4029,8 @@ class _$_ClinicalImpression implements _ClinicalImpression {
   }
 }
 
-abstract class _ClinicalImpression implements ClinicalImpression {
+abstract class _ClinicalImpression extends ClinicalImpression {
+  _ClinicalImpression._() : super._();
   factory _ClinicalImpression(
       {@required
       @JsonKey(required: true, defaultValue: 'ClinicalImpression')
@@ -5483,7 +5489,7 @@ class __$ConditionCopyWithImpl<$Res> extends _$ConditionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Condition implements _Condition {
+class _$_Condition extends _Condition {
   _$_Condition(
       {@required
       @JsonKey(required: true, defaultValue: 'Condition')
@@ -5540,7 +5546,8 @@ class _$_Condition implements _Condition {
           this.abatementStringElement,
       @JsonKey(name: '_assertedDate')
           this.assertedDateElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Condition.fromJson(Map<String, dynamic> json) =>
       _$_$_ConditionFromJson(json);
@@ -5794,7 +5801,8 @@ class _$_Condition implements _Condition {
   }
 }
 
-abstract class _Condition implements Condition {
+abstract class _Condition extends Condition {
+  _Condition._() : super._();
   factory _Condition(
       {@required
       @JsonKey(required: true, defaultValue: 'Condition')
@@ -6791,7 +6799,7 @@ class __$DetectedIssueCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_DetectedIssue implements _DetectedIssue {
+class _$_DetectedIssue extends _DetectedIssue {
   _$_DetectedIssue(
       {@required
       @JsonKey(required: true, defaultValue: 'DetectedIssue')
@@ -6827,7 +6835,8 @@ class _$_DetectedIssue implements _DetectedIssue {
           this.detailElement,
       @JsonKey(name: '_reference')
           this.referenceElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_DetectedIssue.fromJson(Map<String, dynamic> json) =>
       _$_$_DetectedIssueFromJson(json);
@@ -7009,7 +7018,8 @@ class _$_DetectedIssue implements _DetectedIssue {
   }
 }
 
-abstract class _DetectedIssue implements DetectedIssue {
+abstract class _DetectedIssue extends DetectedIssue {
+  _DetectedIssue._() : super._();
   factory _DetectedIssue(
       {@required
       @JsonKey(required: true, defaultValue: 'DetectedIssue')
@@ -8327,7 +8337,7 @@ class __$FamilyMemberHistoryCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_FamilyMemberHistory implements _FamilyMemberHistory {
+class _$_FamilyMemberHistory extends _FamilyMemberHistory {
   _$_FamilyMemberHistory(
       {@required
       @JsonKey(required: true, defaultValue: 'FamilyMemberHistory')
@@ -8395,7 +8405,8 @@ class _$_FamilyMemberHistory implements _FamilyMemberHistory {
           this.deceasedDateElement,
       @JsonKey(name: '_deceasedString')
           this.deceasedStringElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_FamilyMemberHistory.fromJson(Map<String, dynamic> json) =>
       _$_$_FamilyMemberHistoryFromJson(json);
@@ -8676,7 +8687,8 @@ class _$_FamilyMemberHistory implements _FamilyMemberHistory {
   }
 }
 
-abstract class _FamilyMemberHistory implements FamilyMemberHistory {
+abstract class _FamilyMemberHistory extends FamilyMemberHistory {
+  _FamilyMemberHistory._() : super._();
   factory _FamilyMemberHistory(
       {@required
       @JsonKey(required: true, defaultValue: 'FamilyMemberHistory')
@@ -9930,7 +9942,7 @@ class __$ProcedureCopyWithImpl<$Res> extends _$ProcedureCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Procedure implements _Procedure {
+class _$_Procedure extends _Procedure {
   _$_Procedure(
       {@required
       @JsonKey(required: true, defaultValue: 'Procedure')
@@ -9978,7 +9990,8 @@ class _$_Procedure implements _Procedure {
           this.notDoneElement,
       @JsonKey(name: '_performedDateTime')
           this.performedDateTimeElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Procedure.fromJson(Map<String, dynamic> json) =>
       _$_$_ProcedureFromJson(json);
@@ -10214,7 +10227,8 @@ class _$_Procedure implements _Procedure {
   }
 }
 
-abstract class _Procedure implements Procedure {
+abstract class _Procedure extends Procedure {
+  _Procedure._() : super._();
   factory _Procedure(
       {@required
       @JsonKey(required: true, defaultValue: 'Procedure')

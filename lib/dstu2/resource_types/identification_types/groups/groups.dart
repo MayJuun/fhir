@@ -8,9 +8,10 @@ part 'groups.freezed.dart';
 part 'groups.g.dart';
 
 @freezed
-abstract class Organization with _$Organization implements Resource {
+abstract class Organization with Resource implements _$Organization {
+  Organization._();
   factory Organization({
-    @JsonKey(defaultValue: 'Organization') String resourceType,
+    @JsonKey(defaultValue: 'Organization') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -39,9 +40,10 @@ abstract class Organization with _$Organization implements Resource {
 }
 
 @freezed
-abstract class Group with _$Group implements Resource {
+abstract class Group with Resource implements _$Group {
+  Group._();
   factory Group({
-    @JsonKey(defaultValue: 'Group') String resourceType,
+    @JsonKey(defaultValue: 'Group') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -72,9 +74,10 @@ abstract class Group with _$Group implements Resource {
 }
 
 @freezed
-abstract class HealthcareService with _$HealthcareService implements Resource {
+abstract class HealthcareService with Resource implements _$HealthcareService {
+  HealthcareService._();
   factory HealthcareService({
-    @JsonKey(defaultValue: 'HealthcareService') String resourceType,
+    @JsonKey(defaultValue: 'HealthcareService') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

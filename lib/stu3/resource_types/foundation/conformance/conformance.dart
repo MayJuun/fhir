@@ -9,8 +9,9 @@ part 'conformance.g.dart';
 
 @freezed
 abstract class CapabilityStatement
-    with _$CapabilityStatement
-    implements Resource {
+    with Resource
+    implements _$CapabilityStatement {
+  CapabilityStatement._();
   factory CapabilityStatement({
     @JsonKey(required: true, defaultValue: 'CapabilityStatement')
     @required
@@ -317,8 +318,9 @@ abstract class CapabilityStatementDocument with _$CapabilityStatementDocument {
 
 @freezed
 abstract class CompartmentDefinition
-    with _$CompartmentDefinition
-    implements Resource {
+    with Resource
+    implements _$CompartmentDefinition {
+  CompartmentDefinition._();
   factory CompartmentDefinition({
     @JsonKey(required: true, defaultValue: 'CompartmentDefinition')
     @required
@@ -379,7 +381,8 @@ abstract class CompartmentDefinitionResource
 }
 
 @freezed
-abstract class DataElement with _$DataElement implements Resource {
+abstract class DataElement with Resource implements _$DataElement {
+  DataElement._();
   factory DataElement({
     @JsonKey(required: true, defaultValue: 'DataElement')
     @required
@@ -441,7 +444,8 @@ abstract class DataElementMapping with _$DataElementMapping {
 }
 
 @freezed
-abstract class GraphDefinition with _$GraphDefinition implements Resource {
+abstract class GraphDefinition with Resource implements _$GraphDefinition {
+  GraphDefinition._();
   factory GraphDefinition({
     @JsonKey(required: true, defaultValue: 'GraphDefinition')
     @required
@@ -536,8 +540,9 @@ abstract class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
 
 @freezed
 abstract class ImplementationGuide
-    with _$ImplementationGuide
-    implements Resource {
+    with Resource
+    implements _$ImplementationGuide {
+  ImplementationGuide._();
   factory ImplementationGuide({
     @JsonKey(required: true, defaultValue: 'ImplementationGuide')
     @required
@@ -663,7 +668,8 @@ abstract class ImplementationGuidePage with _$ImplementationGuidePage {
 }
 
 @freezed
-abstract class MessageDefinition with _$MessageDefinition implements Resource {
+abstract class MessageDefinition with Resource implements _$MessageDefinition {
+  MessageDefinition._();
   factory MessageDefinition({
     @JsonKey(required: true, defaultValue: 'MessageDefinition')
     @required
@@ -747,8 +753,9 @@ abstract class MessageDefinitionAllowedResponse
 
 @freezed
 abstract class OperationDefinition
-    with _$OperationDefinition
-    implements Resource {
+    with Resource
+    implements _$OperationDefinition {
+  OperationDefinition._();
   factory OperationDefinition({
     @JsonKey(required: true, defaultValue: 'OperationDefinition')
     @required
@@ -861,7 +868,8 @@ abstract class OperationDefinitionOverload with _$OperationDefinitionOverload {
 }
 
 @freezed
-abstract class SearchParameter with _$SearchParameter implements Resource {
+abstract class SearchParameter with Resource implements _$SearchParameter {
+  SearchParameter._();
   factory SearchParameter({
     @JsonKey(required: true, defaultValue: 'SearchParameter')
     @required
@@ -938,8 +946,9 @@ abstract class SearchParameterComponent with _$SearchParameterComponent {
 
 @freezed
 abstract class StructureDefinition
-    with _$StructureDefinition
-    implements Resource {
+    with Resource
+    implements _$StructureDefinition {
+  StructureDefinition._();
   factory StructureDefinition({
     @JsonKey(required: true, defaultValue: 'StructureDefinition')
     @required
@@ -1044,7 +1053,8 @@ abstract class StructureDefinitionDifferential
 }
 
 @freezed
-abstract class StructureMap with _$StructureMap implements Resource {
+abstract class StructureMap with Resource implements _$StructureMap {
+  StructureMap._();
   factory StructureMap({
     @JsonKey(required: true, defaultValue: 'StructureMap')
     @required

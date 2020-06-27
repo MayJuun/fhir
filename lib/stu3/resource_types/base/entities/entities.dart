@@ -8,7 +8,8 @@ part 'entities.freezed.dart';
 part 'entities.g.dart';
 
 @freezed
-abstract class Device with _$Device implements Resource {
+abstract class Device with Resource implements _$Device {
+  Device._();
   factory Device({
     @JsonKey(required: true, defaultValue: 'Device')
     @required
@@ -73,7 +74,8 @@ abstract class DeviceUdi with _$DeviceUdi {
 }
 
 @freezed
-abstract class DeviceComponent with _$DeviceComponent implements Resource {
+abstract class DeviceComponent with Resource implements _$DeviceComponent {
+  DeviceComponent._();
   factory DeviceComponent({
     @JsonKey(required: true, defaultValue: 'DeviceComponent')
     @required
@@ -119,7 +121,8 @@ abstract class DeviceComponentProductionSpecification
 }
 
 @freezed
-abstract class DeviceMetric with _$DeviceMetric implements Resource {
+abstract class DeviceMetric with Resource implements _$DeviceMetric {
+  DeviceMetric._();
   factory DeviceMetric({
     @JsonKey(required: true, defaultValue: 'DeviceMetric')
     @required
@@ -168,7 +171,8 @@ abstract class DeviceMetricCalibration with _$DeviceMetricCalibration {
 }
 
 @freezed
-abstract class Endpoint with _$Endpoint implements Resource {
+abstract class Endpoint with Resource implements _$Endpoint {
+  Endpoint._();
   factory Endpoint({
     @JsonKey(required: true, defaultValue: 'Endpoint')
     @required
@@ -203,7 +207,8 @@ abstract class Endpoint with _$Endpoint implements Resource {
 }
 
 @freezed
-abstract class HealthcareService with _$HealthcareService implements Resource {
+abstract class HealthcareService with Resource implements _$HealthcareService {
+  HealthcareService._();
   factory HealthcareService({
     @JsonKey(required: true, defaultValue: 'HealthcareService')
     @required
@@ -284,7 +289,8 @@ abstract class HealthcareServiceNotAvailable
 }
 
 @freezed
-abstract class Location with _$Location implements Resource {
+abstract class Location with Resource implements _$Location {
+  Location._();
   factory Location({
     @JsonKey(required: true, defaultValue: 'Location')
     @required
@@ -337,7 +343,8 @@ abstract class LocationPosition with _$LocationPosition {
 }
 
 @freezed
-abstract class Organization with _$Organization implements Resource {
+abstract class Organization with Resource implements _$Organization {
+  Organization._();
   factory Organization({
     @JsonKey(required: true, defaultValue: 'Organization')
     @required
@@ -381,7 +388,8 @@ abstract class OrganizationContact with _$OrganizationContact {
 }
 
 @freezed
-abstract class Substance with _$Substance implements Resource {
+abstract class Substance with Resource implements _$Substance {
+  Substance._();
   factory Substance({
     @JsonKey(required: true, defaultValue: 'Substance')
     @required

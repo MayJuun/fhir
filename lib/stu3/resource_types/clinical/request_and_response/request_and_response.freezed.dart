@@ -603,7 +603,7 @@ class __$CommunicationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Communication implements _Communication {
+class _$_Communication extends _Communication {
   _$_Communication(
       {@required
       @JsonKey(required: true, defaultValue: 'Communication')
@@ -645,7 +645,8 @@ class _$_Communication implements _Communication {
           this.sentElement,
       @JsonKey(name: '_received')
           this.receivedElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Communication.fromJson(Map<String, dynamic> json) =>
       _$_$_CommunicationFromJson(json);
@@ -857,7 +858,8 @@ class _$_Communication implements _Communication {
   }
 }
 
-abstract class _Communication implements Communication {
+abstract class _Communication extends Communication {
+  _Communication._() : super._();
   factory _Communication(
       {@required
       @JsonKey(required: true, defaultValue: 'Communication')
@@ -1877,7 +1879,7 @@ class __$CommunicationRequestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_CommunicationRequest implements _CommunicationRequest {
+class _$_CommunicationRequest extends _CommunicationRequest {
   _$_CommunicationRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'CommunicationRequest')
@@ -1920,7 +1922,8 @@ class _$_CommunicationRequest implements _CommunicationRequest {
           this.occurrenceDateTimeElement,
       @JsonKey(name: '_authoredOn')
           this.authoredOnElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_CommunicationRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_CommunicationRequestFromJson(json);
@@ -2137,7 +2140,8 @@ class _$_CommunicationRequest implements _CommunicationRequest {
   }
 }
 
-abstract class _CommunicationRequest implements CommunicationRequest {
+abstract class _CommunicationRequest extends CommunicationRequest {
+  _CommunicationRequest._() : super._();
   factory _CommunicationRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'CommunicationRequest')
@@ -3475,7 +3479,7 @@ class __$DeviceRequestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_DeviceRequest implements _DeviceRequest {
+class _$_DeviceRequest extends _DeviceRequest {
   _$_DeviceRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'DeviceRequest')
@@ -3523,7 +3527,8 @@ class _$_DeviceRequest implements _DeviceRequest {
           this.occurrenceDateTimeElement,
       @JsonKey(name: '_authoredOn')
           this.authoredOnElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_DeviceRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_DeviceRequestFromJson(json);
@@ -3753,7 +3758,8 @@ class _$_DeviceRequest implements _DeviceRequest {
   }
 }
 
-abstract class _DeviceRequest implements DeviceRequest {
+abstract class _DeviceRequest extends DeviceRequest {
+  _DeviceRequest._() : super._();
   factory _DeviceRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'DeviceRequest')
@@ -4617,7 +4623,7 @@ class __$DeviceUseStatementCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_DeviceUseStatement implements _DeviceUseStatement {
+class _$_DeviceUseStatement extends _DeviceUseStatement {
   _$_DeviceUseStatement(
       {@required
       @JsonKey(required: true, defaultValue: 'DeviceUseStatement')
@@ -4653,7 +4659,8 @@ class _$_DeviceUseStatement implements _DeviceUseStatement {
           this.timingDateTimeElement,
       @JsonKey(name: '_recordedOn')
           this.recordedOnElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
       _$_$_DeviceUseStatementFromJson(json);
@@ -4834,7 +4841,8 @@ class _$_DeviceUseStatement implements _DeviceUseStatement {
   }
 }
 
-abstract class _DeviceUseStatement implements DeviceUseStatement {
+abstract class _DeviceUseStatement extends DeviceUseStatement {
+  _DeviceUseStatement._() : super._();
   factory _DeviceUseStatement(
       {@required
       @JsonKey(required: true, defaultValue: 'DeviceUseStatement')
@@ -5457,7 +5465,7 @@ class __$SupplyDeliveryCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_SupplyDelivery implements _SupplyDelivery {
+class _$_SupplyDelivery extends _SupplyDelivery {
   _$_SupplyDelivery(
       {@required
       @JsonKey(required: true, defaultValue: 'SupplyDelivery')
@@ -5489,7 +5497,8 @@ class _$_SupplyDelivery implements _SupplyDelivery {
           this.statusElement,
       @JsonKey(name: '_occurrenceDateTime')
           this.occurrenceDateTimeElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_SupplyDelivery.fromJson(Map<String, dynamic> json) =>
       _$_$_SupplyDeliveryFromJson(json);
@@ -5663,7 +5672,8 @@ class _$_SupplyDelivery implements _SupplyDelivery {
   }
 }
 
-abstract class _SupplyDelivery implements SupplyDelivery {
+abstract class _SupplyDelivery extends SupplyDelivery {
+  _SupplyDelivery._() : super._();
   factory _SupplyDelivery(
       {@required
       @JsonKey(required: true, defaultValue: 'SupplyDelivery')
@@ -6624,7 +6634,7 @@ class __$SupplyRequestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_SupplyRequest implements _SupplyRequest {
+class _$_SupplyRequest extends _SupplyRequest {
   _$_SupplyRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'SupplyRequest')
@@ -6662,7 +6672,8 @@ class _$_SupplyRequest implements _SupplyRequest {
           this.occurrenceDateTimeElement,
       @JsonKey(name: '_authoredOn')
           this.authoredOnElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_SupplyRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_SupplyRequestFromJson(json);
@@ -6854,7 +6865,8 @@ class _$_SupplyRequest implements _SupplyRequest {
   }
 }
 
-abstract class _SupplyRequest implements SupplyRequest {
+abstract class _SupplyRequest extends SupplyRequest {
+  _SupplyRequest._() : super._();
   factory _SupplyRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'SupplyRequest')

@@ -6,7 +6,8 @@ part 'payment.freezed.dart';
 part 'payment.g.dart';
 
 @freezed
-abstract class PaymentNotice with _$PaymentNotice implements Resource {
+abstract class PaymentNotice with Resource implements _$PaymentNotice {
+  PaymentNotice._();
   factory PaymentNotice({
     @JsonKey(required: true, defaultValue: 'PaymentNotice')
     @required
@@ -39,8 +40,9 @@ abstract class PaymentNotice with _$PaymentNotice implements Resource {
 
 @freezed
 abstract class PaymentReconciliation
-    with _$PaymentReconciliation
-    implements Resource {
+    with Resource
+    implements _$PaymentReconciliation {
+  PaymentReconciliation._();
   factory PaymentReconciliation({
     @JsonKey(required: true, defaultValue: 'PaymentReconciliation')
     @required

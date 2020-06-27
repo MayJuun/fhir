@@ -9,10 +9,13 @@ part 'other.g.dart';
 
 @freezed
 abstract class ExplanationOfBenefit
-    with _$ExplanationOfBenefit
-    implements Resource {
+    with Resource
+    implements _$ExplanationOfBenefit {
+  ExplanationOfBenefit._();
   factory ExplanationOfBenefit({
-    @JsonKey(defaultValue: 'ExplanationOfBenefit') String resourceType,
+    @JsonKey(defaultValue: 'ExplanationOfBenefit')
+    @required
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

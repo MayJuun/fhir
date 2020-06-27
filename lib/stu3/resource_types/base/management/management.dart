@@ -8,7 +8,8 @@ part 'management.freezed.dart';
 part 'management.g.dart';
 
 @freezed
-abstract class Encounter with _$Encounter implements Resource {
+abstract class Encounter with Resource implements _$Encounter {
+  Encounter._();
   factory Encounter({
     @JsonKey(required: true, defaultValue: 'Encounter')
     @required
@@ -123,7 +124,8 @@ abstract class EncounterLocation with _$EncounterLocation {
 }
 
 @freezed
-abstract class EpisodeOfCare with _$EpisodeOfCare implements Resource {
+abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
+  EpisodeOfCare._();
   factory EpisodeOfCare({
     @JsonKey(required: true, defaultValue: 'EpisodeOfCare')
     @required
@@ -180,7 +182,8 @@ abstract class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
 }
 
 @freezed
-abstract class Flag with _$Flag implements Resource {
+abstract class Flag with Resource implements _$Flag {
+  Flag._();
   factory Flag({
     @JsonKey(required: true, defaultValue: 'Flag')
     @required
@@ -207,7 +210,8 @@ abstract class Flag with _$Flag implements Resource {
 }
 
 @freezed
-abstract class Library with _$Library implements Resource {
+abstract class Library with Resource implements _$Library {
+  Library._();
   factory Library({
     @JsonKey(required: true, defaultValue: 'Library')
     @required
@@ -266,7 +270,8 @@ abstract class Library with _$Library implements Resource {
 }
 
 @freezed
-abstract class List_ with _$List_ implements Resource {
+abstract class List_ with Resource implements _$List_ {
+  List_._();
   factory List_({
     @JsonKey(required: true, defaultValue: 'List')
     @required

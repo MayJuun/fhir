@@ -16,7 +16,8 @@ class _$PractitionerTearOff {
   const _$PractitionerTearOff();
 
   _Practitioner call(
-      {@JsonKey(defaultValue: 'Practitioner')
+      {@required
+      @JsonKey(defaultValue: 'Practitioner')
           String resourceType,
       Id id,
       Meta meta,
@@ -511,9 +512,9 @@ class __$PractitionerCopyWithImpl<$Res> extends _$PractitionerCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Practitioner implements _Practitioner {
+class _$_Practitioner extends _Practitioner {
   _$_Practitioner(
-      {@JsonKey(defaultValue: 'Practitioner') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Practitioner') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -537,7 +538,9 @@ class _$_Practitioner implements _Practitioner {
       @JsonKey(name: '_language') this.languageElement,
       @JsonKey(name: '_active') this.activeElement,
       @JsonKey(name: '_gender') this.genderElement,
-      @JsonKey(name: '_birthDate') this.birthDateElement});
+      @JsonKey(name: '_birthDate') this.birthDateElement})
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Practitioner.fromJson(Map<String, dynamic> json) =>
       _$_$_PractitionerFromJson(json);
@@ -719,9 +722,11 @@ class _$_Practitioner implements _Practitioner {
   }
 }
 
-abstract class _Practitioner implements Practitioner {
+abstract class _Practitioner extends Practitioner {
+  _Practitioner._() : super._();
   factory _Practitioner(
-      {@JsonKey(defaultValue: 'Practitioner')
+      {@required
+      @JsonKey(defaultValue: 'Practitioner')
           String resourceType,
       Id id,
       Meta meta,
@@ -828,7 +833,8 @@ class _$RelatedPersonTearOff {
   const _$RelatedPersonTearOff();
 
   _RelatedPerson call(
-      {@JsonKey(defaultValue: 'RelatedPerson')
+      {@required
+      @JsonKey(defaultValue: 'RelatedPerson')
           String resourceType,
       Id id,
       Meta meta,
@@ -1352,9 +1358,9 @@ class __$RelatedPersonCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_RelatedPerson implements _RelatedPerson {
+class _$_RelatedPerson extends _RelatedPerson {
   _$_RelatedPerson(
-      {@JsonKey(defaultValue: 'RelatedPerson') this.resourceType,
+      {@required @JsonKey(defaultValue: 'RelatedPerson') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -1378,7 +1384,9 @@ class _$_RelatedPerson implements _RelatedPerson {
       @JsonKey(name: '_active') this.activeElement,
       @JsonKey(name: '_gender') this.genderElement,
       @JsonKey(name: '_birthDate') this.birthDateElement})
-      : assert(patient != null);
+      : assert(resourceType != null),
+        assert(patient != null),
+        super._();
 
   factory _$_RelatedPerson.fromJson(Map<String, dynamic> json) =>
       _$_$_RelatedPersonFromJson(json);
@@ -1555,9 +1563,11 @@ class _$_RelatedPerson implements _RelatedPerson {
   }
 }
 
-abstract class _RelatedPerson implements RelatedPerson {
+abstract class _RelatedPerson extends RelatedPerson {
+  _RelatedPerson._() : super._();
   factory _RelatedPerson(
-      {@JsonKey(defaultValue: 'RelatedPerson')
+      {@required
+      @JsonKey(defaultValue: 'RelatedPerson')
           String resourceType,
       Id id,
       Meta meta,
@@ -1664,7 +1674,8 @@ class _$PatientTearOff {
   const _$PatientTearOff();
 
   _Patient call(
-      {@JsonKey(defaultValue: 'Patient')
+      {@required
+      @JsonKey(defaultValue: 'Patient')
           String resourceType,
       Id id,
       Meta meta,
@@ -2408,25 +2419,22 @@ class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Patient implements _Patient {
+class _$_Patient extends _Patient {
   _$_Patient(
-      {@JsonKey(defaultValue: 'Patient')
-          this.resourceType,
+      {@required @JsonKey(defaultValue: 'Patient') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
       this.language,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.active,
       this.name,
       this.telecom,
-      @JsonKey(unknownEnumValue: PatientGender.unknown)
-          this.gender,
+      @JsonKey(unknownEnumValue: PatientGender.unknown) this.gender,
       this.birthDate,
       this.deceasedBoolean,
       this.deceasedDateTime,
@@ -2441,26 +2449,18 @@ class _$_Patient implements _Patient {
       this.careProvider,
       this.managingOrganization,
       this.link,
-      @JsonKey(name: '_id')
-          this.idElement,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
-      @JsonKey(name: '_language')
-          this.languageElement,
-      @JsonKey(name: '_active')
-          this.activeElement,
-      @JsonKey(name: '_gender')
-          this.genderElement,
-      @JsonKey(name: '_birthDate')
-          this.birthDateElement,
-      @JsonKey(name: '_deceasedBoolean')
-          this.deceasedBooleanElement,
-      @JsonKey(name: '_deceasedDateTime')
-          this.deceasedDateTimeElement,
-      @JsonKey(name: '_multipleBirthBoolean')
-          this.multipleBirthBooleanElement,
-      @JsonKey(name: '_multipleBirthInteger')
-          this.multipleBirthIntegerElement});
+      @JsonKey(name: '_id') this.idElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_active') this.activeElement,
+      @JsonKey(name: '_gender') this.genderElement,
+      @JsonKey(name: '_birthDate') this.birthDateElement,
+      @JsonKey(name: '_deceasedBoolean') this.deceasedBooleanElement,
+      @JsonKey(name: '_deceasedDateTime') this.deceasedDateTimeElement,
+      @JsonKey(name: '_multipleBirthBoolean') this.multipleBirthBooleanElement,
+      @JsonKey(name: '_multipleBirthInteger') this.multipleBirthIntegerElement})
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Patient.fromJson(Map<String, dynamic> json) =>
       _$_$_PatientFromJson(json);
@@ -2698,9 +2698,11 @@ class _$_Patient implements _Patient {
   }
 }
 
-abstract class _Patient implements Patient {
+abstract class _Patient extends Patient {
+  _Patient._() : super._();
   factory _Patient(
-      {@JsonKey(defaultValue: 'Patient')
+      {@required
+      @JsonKey(defaultValue: 'Patient')
           String resourceType,
       Id id,
       Meta meta,

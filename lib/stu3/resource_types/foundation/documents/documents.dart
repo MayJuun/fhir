@@ -7,7 +7,8 @@ part 'documents.freezed.dart';
 part 'documents.g.dart';
 
 @freezed
-abstract class Composition with _$Composition implements Resource {
+abstract class Composition with Resource implements _$Composition {
+  Composition._();
   factory Composition({
     @JsonKey(required: true, defaultValue: 'Composition')
     @required
@@ -100,7 +101,8 @@ abstract class CompositionSection with _$CompositionSection {
 }
 
 @freezed
-abstract class DocumentManifest with _$DocumentManifest implements Resource {
+abstract class DocumentManifest with Resource implements _$DocumentManifest {
+  DocumentManifest._();
   factory DocumentManifest({
     @JsonKey(required: true, defaultValue: 'DocumentManifest')
     @required
@@ -155,7 +157,8 @@ abstract class DocumentManifestRelated with _$DocumentManifestRelated {
 }
 
 @freezed
-abstract class DocumentReference with _$DocumentReference implements Resource {
+abstract class DocumentReference with Resource implements _$DocumentReference {
+  DocumentReference._();
   factory DocumentReference({
     @JsonKey(required: true, defaultValue: 'DocumentReference')
     @required

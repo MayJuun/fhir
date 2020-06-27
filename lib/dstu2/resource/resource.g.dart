@@ -7,10 +7,24 @@ part of 'resource.dart';
 // **************************************************************************
 
 Resource _$ResourceFromJson(Map<String, dynamic> json) {
-  return Resource();
+  return Resource()
+    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
+    ..resourceType = json['resourceType'] as String;
 }
 
-Map<String, dynamic> _$ResourceToJson(Resource instance) => <String, dynamic>{};
+Map<String, dynamic> _$ResourceToJson(Resource instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', instance.resourceType);
+  return val;
+}
 
 _$_DomainResource _$_$_DomainResourceFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['id']);

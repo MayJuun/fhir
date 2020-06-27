@@ -16,7 +16,7 @@ class _$AccountTearOff {
   const _$AccountTearOff();
 
   _Account call(
-      {@JsonKey(defaultValue: 'Account') String resourceType,
+      {@required @JsonKey(defaultValue: 'Account') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -555,9 +555,9 @@ class __$AccountCopyWithImpl<$Res> extends _$AccountCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Account implements _Account {
+class _$_Account extends _Account {
   _$_Account(
-      {@JsonKey(defaultValue: 'Account') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Account') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -581,7 +581,9 @@ class _$_Account implements _Account {
       @JsonKey(name: '_language') this.languageElement,
       @JsonKey(name: '_status') this.statusElement,
       @JsonKey(name: '_name') this.nameElement,
-      @JsonKey(name: '_description') this.descriptionElement});
+      @JsonKey(name: '_description') this.descriptionElement})
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Account.fromJson(Map<String, dynamic> json) =>
       _$_$_AccountFromJson(json);
@@ -763,9 +765,10 @@ class _$_Account implements _Account {
   }
 }
 
-abstract class _Account implements Account {
+abstract class _Account extends Account {
+  _Account._() : super._();
   factory _Account(
-      {@JsonKey(defaultValue: 'Account') String resourceType,
+      {@required @JsonKey(defaultValue: 'Account') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -863,7 +866,8 @@ class _$ClaimTearOff {
   const _$ClaimTearOff();
 
   _Claim call(
-      {@JsonKey(defaultValue: 'Claim')
+      {@required
+      @JsonKey(defaultValue: 'Claim')
           String resourceType,
       Id id,
       Meta meta,
@@ -1710,9 +1714,10 @@ class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Claim implements _Claim {
+class _$_Claim extends _Claim {
   _$_Claim(
-      {@JsonKey(defaultValue: 'Claim')
+      {@required
+      @JsonKey(defaultValue: 'Claim')
           this.resourceType,
       this.id,
       this.meta,
@@ -1765,8 +1770,10 @@ class _$_Claim implements _Claim {
           this.useElement,
       @JsonKey(name: '_created')
           this.createdElement})
-      : assert(type != null),
-        assert(patient != null);
+      : assert(resourceType != null),
+        assert(type != null),
+        assert(patient != null),
+        super._();
 
   factory _$_Claim.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimFromJson(json);
@@ -2016,9 +2023,11 @@ class _$_Claim implements _Claim {
   }
 }
 
-abstract class _Claim implements Claim {
+abstract class _Claim extends Claim {
+  _Claim._() : super._();
   factory _Claim(
-      {@JsonKey(defaultValue: 'Claim')
+      {@required
+      @JsonKey(defaultValue: 'Claim')
           String resourceType,
       Id id,
       Meta meta,
@@ -5647,7 +5656,8 @@ class _$ClaimResponseTearOff {
   const _$ClaimResponseTearOff();
 
   _ClaimResponse call(
-      {@JsonKey(defaultValue: 'ClaimResponse')
+      {@required
+      @JsonKey(defaultValue: 'ClaimResponse')
           String resourceType,
       Id id,
       Meta meta,
@@ -6546,9 +6556,9 @@ class __$ClaimResponseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ClaimResponse implements _ClaimResponse {
+class _$_ClaimResponse extends _ClaimResponse {
   _$_ClaimResponse(
-      {@JsonKey(defaultValue: 'ClaimResponse') this.resourceType,
+      {@required @JsonKey(defaultValue: 'ClaimResponse') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -6588,7 +6598,9 @@ class _$_ClaimResponse implements _ClaimResponse {
       @JsonKey(name: '_created') this.createdElement,
       @JsonKey(name: '_outcome') this.outcomeElement,
       @JsonKey(name: '_disposition') this.dispositionElement,
-      @JsonKey(name: '_paymentDate') this.paymentDateElement});
+      @JsonKey(name: '_paymentDate') this.paymentDateElement})
+      : assert(resourceType != null),
+        super._();
 
   factory _$_ClaimResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimResponseFromJson(json);
@@ -6835,9 +6847,11 @@ class _$_ClaimResponse implements _ClaimResponse {
   }
 }
 
-abstract class _ClaimResponse implements ClaimResponse {
+abstract class _ClaimResponse extends ClaimResponse {
+  _ClaimResponse._() : super._();
   factory _ClaimResponse(
-      {@JsonKey(defaultValue: 'ClaimResponse')
+      {@required
+      @JsonKey(defaultValue: 'ClaimResponse')
           String resourceType,
       Id id,
       Meta meta,

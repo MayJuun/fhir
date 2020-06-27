@@ -16,7 +16,7 @@ class _$SubstanceTearOff {
   const _$SubstanceTearOff();
 
   _Substance call(
-      {@JsonKey(defaultValue: 'Substance') String resourceType,
+      {@required @JsonKey(defaultValue: 'Substance') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -385,9 +385,9 @@ class __$SubstanceCopyWithImpl<$Res> extends _$SubstanceCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Substance implements _Substance {
+class _$_Substance extends _Substance {
   _$_Substance(
-      {@JsonKey(defaultValue: 'Substance') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Substance') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -405,7 +405,9 @@ class _$_Substance implements _Substance {
       @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       @JsonKey(name: '_language') this.languageElement,
       @JsonKey(name: '_description') this.descriptionElement})
-      : assert(code != null);
+      : assert(resourceType != null),
+        assert(code != null),
+        super._();
 
   factory _$_Substance.fromJson(Map<String, dynamic> json) =>
       _$_$_SubstanceFromJson(json);
@@ -546,9 +548,10 @@ class _$_Substance implements _Substance {
   }
 }
 
-abstract class _Substance implements Substance {
+abstract class _Substance extends Substance {
+  _Substance._() : super._();
   factory _Substance(
-          {@JsonKey(defaultValue: 'Substance') String resourceType,
+          {@required @JsonKey(defaultValue: 'Substance') String resourceType,
           Id id,
           Meta meta,
           FhirUri implicitRules,
@@ -625,7 +628,7 @@ class _$LocationTearOff {
   const _$LocationTearOff();
 
   _Location call(
-      {@JsonKey(defaultValue: 'Location') String resourceType,
+      {@required @JsonKey(defaultValue: 'Location') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1190,9 +1193,9 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Location implements _Location {
+class _$_Location extends _Location {
   _$_Location(
-      {@JsonKey(defaultValue: 'Location') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Location') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -1218,7 +1221,9 @@ class _$_Location implements _Location {
       @JsonKey(name: '_name') this.nameElement,
       @JsonKey(name: '_description') this.descriptionElement,
       @JsonKey(name: '_mode') this.modeElement,
-      @JsonKey(name: '_status') this.statusElement});
+      @JsonKey(name: '_status') this.statusElement})
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Location.fromJson(Map<String, dynamic> json) =>
       _$_$_LocationFromJson(json);
@@ -1409,9 +1414,10 @@ class _$_Location implements _Location {
   }
 }
 
-abstract class _Location implements Location {
+abstract class _Location extends Location {
+  _Location._() : super._();
   factory _Location(
-      {@JsonKey(defaultValue: 'Location') String resourceType,
+      {@required @JsonKey(defaultValue: 'Location') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1517,7 +1523,7 @@ class _$PersonTearOff {
   const _$PersonTearOff();
 
   _Person call(
-      {@JsonKey(defaultValue: 'Person') String resourceType,
+      {@required @JsonKey(defaultValue: 'Person') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1980,9 +1986,9 @@ class __$PersonCopyWithImpl<$Res> extends _$PersonCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Person implements _Person {
+class _$_Person extends _Person {
   _$_Person(
-      {@JsonKey(defaultValue: 'Person') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Person') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -2005,7 +2011,9 @@ class _$_Person implements _Person {
       @JsonKey(name: '_language') this.languageElement,
       @JsonKey(name: '_gender') this.genderElement,
       @JsonKey(name: '_birthDate') this.birthDateElement,
-      @JsonKey(name: '_active') this.activeElement});
+      @JsonKey(name: '_active') this.activeElement})
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Person.fromJson(Map<String, dynamic> json) =>
       _$_$_PersonFromJson(json);
@@ -2180,9 +2188,10 @@ class _$_Person implements _Person {
   }
 }
 
-abstract class _Person implements Person {
+abstract class _Person extends Person {
+  _Person._() : super._();
   factory _Person(
-      {@JsonKey(defaultValue: 'Person') String resourceType,
+      {@required @JsonKey(defaultValue: 'Person') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3783,7 +3792,7 @@ class _$ContractTearOff {
   const _$ContractTearOff();
 
   _Contract call(
-      {@JsonKey(defaultValue: 'Contract') String resourceType,
+      {@required @JsonKey(defaultValue: 'Contract') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4335,9 +4344,9 @@ class __$ContractCopyWithImpl<$Res> extends _$ContractCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Contract implements _Contract {
+class _$_Contract extends _Contract {
   _$_Contract(
-      {@JsonKey(defaultValue: 'Contract') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Contract') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -4367,7 +4376,9 @@ class _$_Contract implements _Contract {
       this.rule,
       @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       @JsonKey(name: '_language') this.languageElement,
-      @JsonKey(name: '_issued') this.issuedElement});
+      @JsonKey(name: '_issued') this.issuedElement})
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Contract.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractFromJson(json);
@@ -4570,9 +4581,10 @@ class _$_Contract implements _Contract {
   }
 }
 
-abstract class _Contract implements Contract {
+abstract class _Contract extends Contract {
+  _Contract._() : super._();
   factory _Contract(
-      {@JsonKey(defaultValue: 'Contract') String resourceType,
+      {@required @JsonKey(defaultValue: 'Contract') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,

@@ -16,7 +16,8 @@ class _$StructureDefinitionTearOff {
   const _$StructureDefinitionTearOff();
 
   _StructureDefinition call(
-      {@JsonKey(defaultValue: 'StructureDefinition')
+      {@required
+      @JsonKey(defaultValue: 'StructureDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -1000,9 +1001,10 @@ class __$StructureDefinitionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_StructureDefinition implements _StructureDefinition {
+class _$_StructureDefinition extends _StructureDefinition {
   _$_StructureDefinition(
-      {@JsonKey(defaultValue: 'StructureDefinition')
+      {@required
+      @JsonKey(defaultValue: 'StructureDefinition')
           this.resourceType,
       this.id,
       this.meta,
@@ -1079,11 +1081,13 @@ class _$_StructureDefinition implements _StructureDefinition {
           this.kindElement,
       @JsonKey(name: '_abstract')
           this.abstractElement})
-      : assert(url != null),
+      : assert(resourceType != null),
+        assert(url != null),
         assert(name != null),
         assert(status != null),
         assert(kind != null),
-        assert(abstract_ != null);
+        assert(abstract_ != null),
+        super._();
 
   factory _$_StructureDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_StructureDefinitionFromJson(json);
@@ -1377,9 +1381,11 @@ class _$_StructureDefinition implements _StructureDefinition {
   }
 }
 
-abstract class _StructureDefinition implements StructureDefinition {
+abstract class _StructureDefinition extends StructureDefinition {
+  _StructureDefinition._() : super._();
   factory _StructureDefinition(
-      {@JsonKey(defaultValue: 'StructureDefinition')
+      {@required
+      @JsonKey(defaultValue: 'StructureDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -1593,7 +1599,8 @@ class _$DataElementTearOff {
   const _$DataElementTearOff();
 
   _DataElement call(
-      {@JsonKey(defaultValue: 'DataElement')
+      {@required
+      @JsonKey(defaultValue: 'DataElement')
           String resourceType,
       Id id,
       Meta meta,
@@ -1972,9 +1979,10 @@ class __$DataElementCopyWithImpl<$Res> extends _$DataElementCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_DataElement implements _DataElement {
+class _$_DataElement extends _DataElement {
   _$_DataElement(
-      {@JsonKey(defaultValue: 'DataElement')
+      {@required
+      @JsonKey(defaultValue: 'DataElement')
           this.resourceType,
       this.id,
       this.meta,
@@ -2004,8 +2012,10 @@ class _$_DataElement implements _DataElement {
       @required
       @JsonKey(required: true)
           this.element})
-      : assert(status != null),
-        assert(element != null);
+      : assert(resourceType != null),
+        assert(status != null),
+        assert(element != null),
+        super._();
 
   factory _$_DataElement.fromJson(Map<String, dynamic> json) =>
       _$_$_DataElementFromJson(json);
@@ -2171,9 +2181,11 @@ class _$_DataElement implements _DataElement {
   }
 }
 
-abstract class _DataElement implements DataElement {
+abstract class _DataElement extends DataElement {
+  _DataElement._() : super._();
   factory _DataElement(
-      {@JsonKey(defaultValue: 'DataElement')
+      {@required
+      @JsonKey(defaultValue: 'DataElement')
           String resourceType,
       Id id,
       Meta meta,

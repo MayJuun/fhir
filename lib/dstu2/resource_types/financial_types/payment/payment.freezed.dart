@@ -16,7 +16,7 @@ class _$PaymentNoticeTearOff {
   const _$PaymentNoticeTearOff();
 
   _PaymentNotice call(
-      {@JsonKey(defaultValue: 'PaymentNotice') String resourceType,
+      {@required @JsonKey(defaultValue: 'PaymentNotice') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -515,9 +515,9 @@ class __$PaymentNoticeCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_PaymentNotice implements _PaymentNotice {
+class _$_PaymentNotice extends _PaymentNotice {
   _$_PaymentNotice(
-      {@JsonKey(defaultValue: 'PaymentNotice') this.resourceType,
+      {@required @JsonKey(defaultValue: 'PaymentNotice') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -539,7 +539,9 @@ class _$_PaymentNotice implements _PaymentNotice {
       @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       @JsonKey(name: '_language') this.languageElement,
       @JsonKey(name: '_created') this.createdElement})
-      : assert(paymentStatus != null);
+      : assert(resourceType != null),
+        assert(paymentStatus != null),
+        super._();
 
   factory _$_PaymentNotice.fromJson(Map<String, dynamic> json) =>
       _$_$_PaymentNoticeFromJson(json);
@@ -704,9 +706,10 @@ class _$_PaymentNotice implements _PaymentNotice {
   }
 }
 
-abstract class _PaymentNotice implements PaymentNotice {
+abstract class _PaymentNotice extends PaymentNotice {
+  _PaymentNotice._() : super._();
   factory _PaymentNotice(
-      {@JsonKey(defaultValue: 'PaymentNotice') String resourceType,
+      {@required @JsonKey(defaultValue: 'PaymentNotice') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -795,7 +798,8 @@ class _$PaymentReconciliationTearOff {
   const _$PaymentReconciliationTearOff();
 
   _PaymentReconciliation call(
-      {@JsonKey(defaultValue: 'PaymentReconciliation')
+      {@required
+      @JsonKey(defaultValue: 'PaymentReconciliation')
           String resourceType,
       Id id,
       Meta meta,
@@ -1453,9 +1457,10 @@ class __$PaymentReconciliationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_PaymentReconciliation implements _PaymentReconciliation {
+class _$_PaymentReconciliation extends _PaymentReconciliation {
   _$_PaymentReconciliation(
-      {@JsonKey(defaultValue: 'PaymentReconciliation')
+      {@required
+      @JsonKey(defaultValue: 'PaymentReconciliation')
           this.resourceType,
       this.id,
       this.meta,
@@ -1494,7 +1499,9 @@ class _$_PaymentReconciliation implements _PaymentReconciliation {
           this.outcomeElement,
       @JsonKey(name: '_disposition')
           this.dispositionElement})
-      : assert(total != null);
+      : assert(resourceType != null),
+        assert(total != null),
+        super._();
 
   factory _$_PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
       _$_$_PaymentReconciliationFromJson(json);
@@ -1693,9 +1700,11 @@ class _$_PaymentReconciliation implements _PaymentReconciliation {
   }
 }
 
-abstract class _PaymentReconciliation implements PaymentReconciliation {
+abstract class _PaymentReconciliation extends PaymentReconciliation {
+  _PaymentReconciliation._() : super._();
   factory _PaymentReconciliation(
-      {@JsonKey(defaultValue: 'PaymentReconciliation')
+      {@required
+      @JsonKey(defaultValue: 'PaymentReconciliation')
           String resourceType,
       Id id,
       Meta meta,

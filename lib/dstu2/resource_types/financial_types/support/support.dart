@@ -8,9 +8,10 @@ part 'support.freezed.dart';
 part 'support.g.dart';
 
 @freezed
-abstract class Coverage with _$Coverage implements Resource {
+abstract class Coverage with Resource implements _$Coverage {
+  Coverage._();
   factory Coverage({
-    @JsonKey(defaultValue: 'Coverage') String resourceType,
+    @JsonKey(defaultValue: 'Coverage') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -46,10 +47,11 @@ abstract class Coverage with _$Coverage implements Resource {
 
 @freezed
 abstract class EligibilityRequest
-    with _$EligibilityRequest
-    implements Resource {
+    with Resource
+    implements _$EligibilityRequest {
+  EligibilityRequest._();
   factory EligibilityRequest({
-    @JsonKey(defaultValue: 'EligibilityRequest') String resourceType,
+    @JsonKey(defaultValue: 'EligibilityRequest') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -75,9 +77,10 @@ abstract class EligibilityRequest
 }
 
 @freezed
-abstract class EnrollmentRequest with _$EnrollmentRequest implements Resource {
+abstract class EnrollmentRequest with Resource implements _$EnrollmentRequest {
+  EnrollmentRequest._();
   factory EnrollmentRequest({
-    @JsonKey(defaultValue: 'EnrollmentRequest') String resourceType,
+    @JsonKey(defaultValue: 'EnrollmentRequest') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -107,10 +110,11 @@ abstract class EnrollmentRequest with _$EnrollmentRequest implements Resource {
 
 @freezed
 abstract class EnrollmentResponse
-    with _$EnrollmentResponse
-    implements Resource {
+    with Resource
+    implements _$EnrollmentResponse {
+  EnrollmentResponse._();
   factory EnrollmentResponse({
-    @JsonKey(defaultValue: 'EnrollmentResponse') String resourceType,
+    @JsonKey(defaultValue: 'EnrollmentResponse') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -143,10 +147,11 @@ abstract class EnrollmentResponse
 
 @freezed
 abstract class EligibilityResponse
-    with _$EligibilityResponse
-    implements Resource {
+    with Resource
+    implements _$EligibilityResponse {
+  EligibilityResponse._();
   factory EligibilityResponse({
-    @JsonKey(defaultValue: 'EligibilityResponse') String resourceType,
+    @JsonKey(defaultValue: 'EligibilityResponse') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

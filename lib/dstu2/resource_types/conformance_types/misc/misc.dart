@@ -9,10 +9,11 @@ part 'misc.g.dart';
 
 @freezed
 abstract class ImplementationGuide
-    with _$ImplementationGuide
-    implements Resource {
+    with Resource
+    implements _$ImplementationGuide {
+  ImplementationGuide._();
   factory ImplementationGuide({
-    @JsonKey(defaultValue: 'ImplementationGuide') String resourceType,
+    @JsonKey(defaultValue: 'ImplementationGuide') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -167,9 +168,10 @@ abstract class ImplementationGuideResource with _$ImplementationGuideResource {
 }
 
 @freezed
-abstract class TestScript with _$TestScript implements Resource {
+abstract class TestScript with Resource implements _$TestScript {
+  TestScript._();
   factory TestScript({
-    @JsonKey(defaultValue: 'TestScript') String resourceType,
+    @JsonKey(defaultValue: 'TestScript') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

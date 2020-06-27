@@ -16,7 +16,8 @@ class _$MediaTearOff {
   const _$MediaTearOff();
 
   _Media call(
-      {@JsonKey(defaultValue: 'Media')
+      {@required
+      @JsonKey(defaultValue: 'Media')
           String resourceType,
       Id id,
       Meta meta,
@@ -628,9 +629,10 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Media implements _Media {
+class _$_Media extends _Media {
   _$_Media(
-      {@JsonKey(defaultValue: 'Media')
+      {@required
+      @JsonKey(defaultValue: 'Media')
           this.resourceType,
       this.id,
       this.meta,
@@ -672,8 +674,10 @@ class _$_Media implements _Media {
           this.framesElement,
       @JsonKey(name: '_duration')
           this.durationElement})
-      : assert(type != null),
-        assert(content != null);
+      : assert(resourceType != null),
+        assert(type != null),
+        assert(content != null),
+        super._();
 
   factory _$_Media.fromJson(Map<String, dynamic> json) =>
       _$_$_MediaFromJson(json);
@@ -871,9 +875,11 @@ class _$_Media implements _Media {
   }
 }
 
-abstract class _Media implements Media {
+abstract class _Media extends Media {
+  _Media._() : super._();
   factory _Media(
-      {@JsonKey(defaultValue: 'Media')
+      {@required
+      @JsonKey(defaultValue: 'Media')
           String resourceType,
       Id id,
       Meta meta,
@@ -998,7 +1004,7 @@ class _$BasicTearOff {
   const _$BasicTearOff();
 
   _Basic call(
-      {@JsonKey(defaultValue: 'Basic') String resourceType,
+      {@required @JsonKey(defaultValue: 'Basic') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1356,9 +1362,9 @@ class __$BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Basic implements _Basic {
+class _$_Basic extends _Basic {
   _$_Basic(
-      {@JsonKey(defaultValue: 'Basic') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Basic') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -1375,7 +1381,9 @@ class _$_Basic implements _Basic {
       @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       @JsonKey(name: '_language') this.languageElement,
       @JsonKey(name: '_created') this.createdElement})
-      : assert(code != null);
+      : assert(resourceType != null),
+        assert(code != null),
+        super._();
 
   factory _$_Basic.fromJson(Map<String, dynamic> json) =>
       _$_$_BasicFromJson(json);
@@ -1509,9 +1517,10 @@ class _$_Basic implements _Basic {
   }
 }
 
-abstract class _Basic implements Basic {
+abstract class _Basic extends Basic {
+  _Basic._() : super._();
   factory _Basic(
-      {@JsonKey(defaultValue: 'Basic') String resourceType,
+      {@required @JsonKey(defaultValue: 'Basic') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1583,7 +1592,7 @@ class _$BinaryTearOff {
   const _$BinaryTearOff();
 
   _Binary call(
-      {@JsonKey(defaultValue: 'Binary') String resourceType,
+      {@required @JsonKey(defaultValue: 'Binary') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1812,9 +1821,9 @@ class __$BinaryCopyWithImpl<$Res> extends _$BinaryCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Binary implements _Binary {
+class _$_Binary extends _Binary {
   _$_Binary(
-      {@JsonKey(defaultValue: 'Binary') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Binary') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -1823,7 +1832,9 @@ class _$_Binary implements _Binary {
       this.content,
       @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       @JsonKey(name: '_language') this.languageElement,
-      @JsonKey(name: '_contentType') this.contentTypeElement});
+      @JsonKey(name: '_contentType') this.contentTypeElement})
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Binary.fromJson(Map<String, dynamic> json) =>
       _$_$_BinaryFromJson(json);
@@ -1916,9 +1927,10 @@ class _$_Binary implements _Binary {
   }
 }
 
-abstract class _Binary implements Binary {
+abstract class _Binary extends Binary {
+  _Binary._() : super._();
   factory _Binary(
-      {@JsonKey(defaultValue: 'Binary') String resourceType,
+      {@required @JsonKey(defaultValue: 'Binary') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1967,7 +1979,8 @@ class _$BundleTearOff {
   const _$BundleTearOff();
 
   _Bundle call(
-      {@JsonKey(defaultValue: 'Bundle')
+      {@required
+      @JsonKey(defaultValue: 'Bundle')
           String resourceType,
       Id id,
       Meta meta,
@@ -2281,9 +2294,10 @@ class __$BundleCopyWithImpl<$Res> extends _$BundleCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Bundle implements _Bundle {
+class _$_Bundle extends _Bundle {
   _$_Bundle(
-      {@JsonKey(defaultValue: 'Bundle')
+      {@required
+      @JsonKey(defaultValue: 'Bundle')
           this.resourceType,
       this.id,
       this.meta,
@@ -2304,7 +2318,9 @@ class _$_Bundle implements _Bundle {
           this.typeElement,
       @JsonKey(name: '_total')
           this.totalElement})
-      : assert(type != null);
+      : assert(resourceType != null),
+        assert(type != null),
+        super._();
 
   factory _$_Bundle.fromJson(Map<String, dynamic> json) =>
       _$_$_BundleFromJson(json);
@@ -2419,9 +2435,11 @@ class _$_Bundle implements _Bundle {
   }
 }
 
-abstract class _Bundle implements Bundle {
+abstract class _Bundle extends Bundle {
+  _Bundle._() : super._();
   factory _Bundle(
-      {@JsonKey(defaultValue: 'Bundle')
+      {@required
+      @JsonKey(defaultValue: 'Bundle')
           String resourceType,
       Id id,
       Meta meta,

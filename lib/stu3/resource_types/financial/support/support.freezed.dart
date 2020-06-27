@@ -636,7 +636,7 @@ class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Coverage implements _Coverage {
+class _$_Coverage extends _Coverage {
   _$_Coverage(
       {@required
       @JsonKey(required: true, defaultValue: 'Coverage')
@@ -678,7 +678,8 @@ class _$_Coverage implements _Coverage {
           this.orderElement,
       @JsonKey(name: '_network')
           this.networkElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Coverage.fromJson(Map<String, dynamic> json) =>
       _$_$_CoverageFromJson(json);
@@ -884,7 +885,8 @@ class _$_Coverage implements _Coverage {
   }
 }
 
-abstract class _Coverage implements Coverage {
+abstract class _Coverage extends Coverage {
+  _Coverage._() : super._();
   factory _Coverage(
       {@required
       @JsonKey(required: true, defaultValue: 'Coverage')
@@ -2478,7 +2480,7 @@ class __$EligibilityRequestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_EligibilityRequest implements _EligibilityRequest {
+class _$_EligibilityRequest extends _EligibilityRequest {
   _$_EligibilityRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'EligibilityRequest')
@@ -2516,7 +2518,8 @@ class _$_EligibilityRequest implements _EligibilityRequest {
           this.createdElement,
       @JsonKey(name: '_businessArrangement')
           this.businessArrangementElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_EligibilityRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_EligibilityRequestFromJson(json);
@@ -2712,7 +2715,8 @@ class _$_EligibilityRequest implements _EligibilityRequest {
   }
 }
 
-abstract class _EligibilityRequest implements EligibilityRequest {
+abstract class _EligibilityRequest extends EligibilityRequest {
+  _EligibilityRequest._() : super._();
   factory _EligibilityRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'EligibilityRequest')
@@ -3368,7 +3372,7 @@ class __$EligibilityResponseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_EligibilityResponse implements _EligibilityResponse {
+class _$_EligibilityResponse extends _EligibilityResponse {
   _$_EligibilityResponse(
       {@required
       @JsonKey(required: true, defaultValue: 'EligibilityResponse')
@@ -3403,7 +3407,8 @@ class _$_EligibilityResponse implements _EligibilityResponse {
           this.dispositionElement,
       @JsonKey(name: '_inforce')
           this.inforceElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_EligibilityResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_EligibilityResponseFromJson(json);
@@ -3588,7 +3593,8 @@ class _$_EligibilityResponse implements _EligibilityResponse {
   }
 }
 
-abstract class _EligibilityResponse implements EligibilityResponse {
+abstract class _EligibilityResponse extends EligibilityResponse {
+  _EligibilityResponse._() : super._();
   factory _EligibilityResponse(
       {@required
       @JsonKey(required: true, defaultValue: 'EligibilityResponse')
@@ -5379,7 +5385,7 @@ class __$EnrollmentRequestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_EnrollmentRequest implements _EnrollmentRequest {
+class _$_EnrollmentRequest extends _EnrollmentRequest {
   _$_EnrollmentRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'EnrollmentRequest')
@@ -5405,7 +5411,8 @@ class _$_EnrollmentRequest implements _EnrollmentRequest {
           this.statusElement,
       @JsonKey(name: '_created')
           this.createdElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_EnrollmentRequestFromJson(json);
@@ -5550,7 +5557,8 @@ class _$_EnrollmentRequest implements _EnrollmentRequest {
   }
 }
 
-abstract class _EnrollmentRequest implements EnrollmentRequest {
+abstract class _EnrollmentRequest extends EnrollmentRequest {
+  _EnrollmentRequest._() : super._();
   factory _EnrollmentRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'EnrollmentRequest')
@@ -6089,7 +6097,7 @@ class __$EnrollmentResponseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_EnrollmentResponse implements _EnrollmentResponse {
+class _$_EnrollmentResponse extends _EnrollmentResponse {
   _$_EnrollmentResponse(
       {@required
       @JsonKey(required: true, defaultValue: 'EnrollmentResponse')
@@ -6118,7 +6126,8 @@ class _$_EnrollmentResponse implements _EnrollmentResponse {
           this.dispositionElement,
       @JsonKey(name: '_created')
           this.createdElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_EnrollmentResponseFromJson(json);
@@ -6276,7 +6285,8 @@ class _$_EnrollmentResponse implements _EnrollmentResponse {
   }
 }
 
-abstract class _EnrollmentResponse implements EnrollmentResponse {
+abstract class _EnrollmentResponse extends EnrollmentResponse {
+  _EnrollmentResponse._() : super._();
   factory _EnrollmentResponse(
       {@required
       @JsonKey(required: true, defaultValue: 'EnrollmentResponse')

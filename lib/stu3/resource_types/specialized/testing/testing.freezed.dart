@@ -576,7 +576,7 @@ class __$TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_TestReport implements _TestReport {
+class _$_TestReport extends _TestReport {
   _$_TestReport(
       {@required
       @JsonKey(required: true, defaultValue: 'TestReport')
@@ -617,7 +617,8 @@ class _$_TestReport implements _TestReport {
           this.testerElement,
       @JsonKey(name: '_issued')
           this.issuedElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_TestReport.fromJson(Map<String, dynamic> json) =>
       _$_$_TestReportFromJson(json);
@@ -810,7 +811,8 @@ class _$_TestReport implements _TestReport {
   }
 }
 
-abstract class _TestReport implements TestReport {
+abstract class _TestReport extends TestReport {
+  _TestReport._() : super._();
   factory _TestReport(
       {@required
       @JsonKey(required: true, defaultValue: 'TestReport')
@@ -3706,7 +3708,7 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_TestScript implements _TestScript {
+class _$_TestScript extends _TestScript {
   _$_TestScript(
       {@required
       @JsonKey(required: true, defaultValue: 'TestScript')
@@ -3769,7 +3771,8 @@ class _$_TestScript implements _TestScript {
           this.purposeElement,
       @JsonKey(name: '_copyright')
           this.copyrightElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_TestScript.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptFromJson(json);
@@ -4041,7 +4044,8 @@ class _$_TestScript implements _TestScript {
   }
 }
 
-abstract class _TestScript implements TestScript {
+abstract class _TestScript extends TestScript {
+  _TestScript._() : super._();
   factory _TestScript(
       {@required
       @JsonKey(required: true, defaultValue: 'TestScript')

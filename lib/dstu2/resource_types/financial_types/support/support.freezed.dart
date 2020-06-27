@@ -16,7 +16,7 @@ class _$CoverageTearOff {
   const _$CoverageTearOff();
 
   _Coverage call(
-      {@JsonKey(defaultValue: 'Coverage') String resourceType,
+      {@required @JsonKey(defaultValue: 'Coverage') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -583,9 +583,9 @@ class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Coverage implements _Coverage {
+class _$_Coverage extends _Coverage {
   _$_Coverage(
-      {@JsonKey(defaultValue: 'Coverage') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Coverage') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -612,7 +612,9 @@ class _$_Coverage implements _Coverage {
       @JsonKey(name: '_language') this.languageElement,
       @JsonKey(name: '_subscriberId') this.subscriberIdElement,
       @JsonKey(name: '_dependent') this.dependentElement,
-      @JsonKey(name: '_network') this.networkElement});
+      @JsonKey(name: '_network') this.networkElement})
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Coverage.fromJson(Map<String, dynamic> json) =>
       _$_$_CoverageFromJson(json);
@@ -805,9 +807,10 @@ class _$_Coverage implements _Coverage {
   }
 }
 
-abstract class _Coverage implements Coverage {
+abstract class _Coverage extends Coverage {
+  _Coverage._() : super._();
   factory _Coverage(
-      {@JsonKey(defaultValue: 'Coverage') String resourceType,
+      {@required @JsonKey(defaultValue: 'Coverage') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -913,14 +916,17 @@ class _$EligibilityRequestTearOff {
   const _$EligibilityRequestTearOff();
 
   _EligibilityRequest call(
-      {@JsonKey(defaultValue: 'EligibilityRequest') String resourceType,
+      {@required
+      @JsonKey(defaultValue: 'EligibilityRequest')
+          String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<Identifier> identifier,
       Coding ruleset,
@@ -929,9 +935,12 @@ class _$EligibilityRequestTearOff {
       Reference target,
       Reference provider,
       Reference organization,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-      @JsonKey(name: '_language') Element languageElement,
-      @JsonKey(name: '_created') Element createdElement}) {
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_created')
+          Element createdElement}) {
     return _EligibilityRequest(
       resourceType: resourceType,
       id: id,
@@ -1341,9 +1350,9 @@ class __$EligibilityRequestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_EligibilityRequest implements _EligibilityRequest {
+class _$_EligibilityRequest extends _EligibilityRequest {
   _$_EligibilityRequest(
-      {@JsonKey(defaultValue: 'EligibilityRequest') this.resourceType,
+      {@required @JsonKey(defaultValue: 'EligibilityRequest') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -1361,7 +1370,9 @@ class _$_EligibilityRequest implements _EligibilityRequest {
       this.organization,
       @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       @JsonKey(name: '_language') this.languageElement,
-      @JsonKey(name: '_created') this.createdElement});
+      @JsonKey(name: '_created') this.createdElement})
+      : assert(resourceType != null),
+        super._();
 
   factory _$_EligibilityRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_EligibilityRequestFromJson(json);
@@ -1507,28 +1518,34 @@ class _$_EligibilityRequest implements _EligibilityRequest {
   }
 }
 
-abstract class _EligibilityRequest implements EligibilityRequest {
+abstract class _EligibilityRequest extends EligibilityRequest {
+  _EligibilityRequest._() : super._();
   factory _EligibilityRequest(
-          {@JsonKey(defaultValue: 'EligibilityRequest') String resourceType,
-          Id id,
-          Meta meta,
-          FhirUri implicitRules,
-          Code language,
-          Narrative text,
-          List<Resource> contained,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          FhirExtension modifierExtension,
-          List<Identifier> identifier,
-          Coding ruleset,
-          Coding originalRuleset,
-          FhirDateTime created,
-          Reference target,
-          Reference provider,
-          Reference organization,
-          @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-          @JsonKey(name: '_language') Element languageElement,
-          @JsonKey(name: '_created') Element createdElement}) =
-      _$_EligibilityRequest;
+      {@required
+      @JsonKey(defaultValue: 'EligibilityRequest')
+          String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      FhirExtension modifierExtension,
+      List<Identifier> identifier,
+      Coding ruleset,
+      Coding originalRuleset,
+      FhirDateTime created,
+      Reference target,
+      Reference provider,
+      Reference organization,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_created')
+          Element createdElement}) = _$_EligibilityRequest;
 
   factory _EligibilityRequest.fromJson(Map<String, dynamic> json) =
       _$_EligibilityRequest.fromJson;
@@ -1588,14 +1605,17 @@ class _$EnrollmentRequestTearOff {
   const _$EnrollmentRequestTearOff();
 
   _EnrollmentRequest call(
-      {@JsonKey(defaultValue: 'EnrollmentRequest') String resourceType,
+      {@required
+      @JsonKey(defaultValue: 'EnrollmentRequest')
+          String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<Identifier> identifier,
       Coding ruleset,
@@ -1604,12 +1624,21 @@ class _$EnrollmentRequestTearOff {
       Reference target,
       Reference provider,
       Reference organization,
-      @required @JsonKey(required: true) Reference subject,
-      @required @JsonKey(required: true) Reference coverage,
-      @required @JsonKey(required: true) Coding relationship,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-      @JsonKey(name: '_language') Element languageElement,
-      @JsonKey(name: '_created') Element createdElement}) {
+      @required
+      @JsonKey(required: true)
+          Reference subject,
+      @required
+      @JsonKey(required: true)
+          Reference coverage,
+      @required
+      @JsonKey(required: true)
+          Coding relationship,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_created')
+          Element createdElement}) {
     return _EnrollmentRequest(
       resourceType: resourceType,
       id: id,
@@ -2089,9 +2118,9 @@ class __$EnrollmentRequestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_EnrollmentRequest implements _EnrollmentRequest {
+class _$_EnrollmentRequest extends _EnrollmentRequest {
   _$_EnrollmentRequest(
-      {@JsonKey(defaultValue: 'EnrollmentRequest') this.resourceType,
+      {@required @JsonKey(defaultValue: 'EnrollmentRequest') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -2113,9 +2142,11 @@ class _$_EnrollmentRequest implements _EnrollmentRequest {
       @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       @JsonKey(name: '_language') this.languageElement,
       @JsonKey(name: '_created') this.createdElement})
-      : assert(subject != null),
+      : assert(resourceType != null),
+        assert(subject != null),
         assert(coverage != null),
-        assert(relationship != null);
+        assert(relationship != null),
+        super._();
 
   factory _$_EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_EnrollmentRequestFromJson(json);
@@ -2282,31 +2313,43 @@ class _$_EnrollmentRequest implements _EnrollmentRequest {
   }
 }
 
-abstract class _EnrollmentRequest implements EnrollmentRequest {
+abstract class _EnrollmentRequest extends EnrollmentRequest {
+  _EnrollmentRequest._() : super._();
   factory _EnrollmentRequest(
-          {@JsonKey(defaultValue: 'EnrollmentRequest') String resourceType,
-          Id id,
-          Meta meta,
-          FhirUri implicitRules,
-          Code language,
-          Narrative text,
-          List<Resource> contained,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          FhirExtension modifierExtension,
-          List<Identifier> identifier,
-          Coding ruleset,
-          Coding originalRuleset,
-          FhirDateTime created,
-          Reference target,
-          Reference provider,
-          Reference organization,
-          @required @JsonKey(required: true) Reference subject,
-          @required @JsonKey(required: true) Reference coverage,
-          @required @JsonKey(required: true) Coding relationship,
-          @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-          @JsonKey(name: '_language') Element languageElement,
-          @JsonKey(name: '_created') Element createdElement}) =
-      _$_EnrollmentRequest;
+      {@required
+      @JsonKey(defaultValue: 'EnrollmentRequest')
+          String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      FhirExtension modifierExtension,
+      List<Identifier> identifier,
+      Coding ruleset,
+      Coding originalRuleset,
+      FhirDateTime created,
+      Reference target,
+      Reference provider,
+      Reference organization,
+      @required
+      @JsonKey(required: true)
+          Reference subject,
+      @required
+      @JsonKey(required: true)
+          Reference coverage,
+      @required
+      @JsonKey(required: true)
+          Coding relationship,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_created')
+          Element createdElement}) = _$_EnrollmentRequest;
 
   factory _EnrollmentRequest.fromJson(Map<String, dynamic> json) =
       _$_EnrollmentRequest.fromJson;
@@ -2375,7 +2418,8 @@ class _$EnrollmentResponseTearOff {
   const _$EnrollmentResponseTearOff();
 
   _EnrollmentResponse call(
-      {@JsonKey(defaultValue: 'EnrollmentResponse')
+      {@required
+      @JsonKey(defaultValue: 'EnrollmentResponse')
           String resourceType,
       Id id,
       Meta meta,
@@ -2936,9 +2980,10 @@ class __$EnrollmentResponseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_EnrollmentResponse implements _EnrollmentResponse {
+class _$_EnrollmentResponse extends _EnrollmentResponse {
   _$_EnrollmentResponse(
-      {@JsonKey(defaultValue: 'EnrollmentResponse')
+      {@required
+      @JsonKey(defaultValue: 'EnrollmentResponse')
           this.resourceType,
       this.id,
       this.meta,
@@ -2969,7 +3014,9 @@ class _$_EnrollmentResponse implements _EnrollmentResponse {
       @JsonKey(name: '_disposition')
           this.dispositionElement,
       @JsonKey(name: '_created')
-          this.createdElement});
+          this.createdElement})
+      : assert(resourceType != null),
+        super._();
 
   factory _$_EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_EnrollmentResponseFromJson(json);
@@ -3146,9 +3193,11 @@ class _$_EnrollmentResponse implements _EnrollmentResponse {
   }
 }
 
-abstract class _EnrollmentResponse implements EnrollmentResponse {
+abstract class _EnrollmentResponse extends EnrollmentResponse {
+  _EnrollmentResponse._() : super._();
   factory _EnrollmentResponse(
-      {@JsonKey(defaultValue: 'EnrollmentResponse')
+      {@required
+      @JsonKey(defaultValue: 'EnrollmentResponse')
           String resourceType,
       Id id,
       Meta meta,
@@ -3252,7 +3301,8 @@ class _$EligibilityResponseTearOff {
   const _$EligibilityResponseTearOff();
 
   _EligibilityResponse call(
-      {@JsonKey(defaultValue: 'EligibilityResponse')
+      {@required
+      @JsonKey(defaultValue: 'EligibilityResponse')
           String resourceType,
       Id id,
       Meta meta,
@@ -3813,9 +3863,10 @@ class __$EligibilityResponseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_EligibilityResponse implements _EligibilityResponse {
+class _$_EligibilityResponse extends _EligibilityResponse {
   _$_EligibilityResponse(
-      {@JsonKey(defaultValue: 'EligibilityResponse')
+      {@required
+      @JsonKey(defaultValue: 'EligibilityResponse')
           this.resourceType,
       this.id,
       this.meta,
@@ -3846,7 +3897,9 @@ class _$_EligibilityResponse implements _EligibilityResponse {
       @JsonKey(name: '_outcome')
           this.outcomeElement,
       @JsonKey(name: '_disposition')
-          this.dispositionElement});
+          this.dispositionElement})
+      : assert(resourceType != null),
+        super._();
 
   factory _$_EligibilityResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_EligibilityResponseFromJson(json);
@@ -4024,9 +4077,11 @@ class _$_EligibilityResponse implements _EligibilityResponse {
   }
 }
 
-abstract class _EligibilityResponse implements EligibilityResponse {
+abstract class _EligibilityResponse extends EligibilityResponse {
+  _EligibilityResponse._() : super._();
   factory _EligibilityResponse(
-      {@JsonKey(defaultValue: 'EligibilityResponse')
+      {@required
+      @JsonKey(defaultValue: 'EligibilityResponse')
           String resourceType,
       Id id,
       Meta meta,

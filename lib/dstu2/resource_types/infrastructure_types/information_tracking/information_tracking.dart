@@ -8,9 +8,10 @@ part 'information_tracking.freezed.dart';
 part 'information_tracking.g.dart';
 
 @freezed
-abstract class Questionnaire with _$Questionnaire implements Resource {
+abstract class Questionnaire with Resource implements _$Questionnaire {
+  Questionnaire._();
   factory Questionnaire({
-    @JsonKey(defaultValue: 'Questionnaire') String resourceType,
+    @JsonKey(defaultValue: 'Questionnaire') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -44,9 +45,10 @@ abstract class Questionnaire with _$Questionnaire implements Resource {
 }
 
 @freezed
-abstract class Provenance with _$Provenance implements Resource {
+abstract class Provenance with Resource implements _$Provenance {
+  Provenance._();
   factory Provenance({
-    @JsonKey(defaultValue: 'Provenance') String resourceType,
+    @JsonKey(defaultValue: 'Provenance') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -77,10 +79,13 @@ abstract class Provenance with _$Provenance implements Resource {
 
 @freezed
 abstract class QuestionnaireResponse
-    with _$QuestionnaireResponse
-    implements Resource {
+    with Resource
+    implements _$QuestionnaireResponse {
+  QuestionnaireResponse._();
   factory QuestionnaireResponse({
-    @JsonKey(defaultValue: 'QuestionnaireResponse') String resourceType,
+    @JsonKey(defaultValue: 'QuestionnaireResponse')
+    @required
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -113,9 +118,10 @@ abstract class QuestionnaireResponse
 }
 
 @freezed
-abstract class AuditEvent with _$AuditEvent implements Resource {
+abstract class AuditEvent with Resource implements _$AuditEvent {
+  AuditEvent._();
   factory AuditEvent({
-    @JsonKey(defaultValue: 'AuditEvent') String resourceType,
+    @JsonKey(defaultValue: 'AuditEvent') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

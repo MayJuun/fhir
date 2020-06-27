@@ -7,7 +7,8 @@ part 'other.freezed.dart';
 part 'other.g.dart';
 
 @freezed
-abstract class Basic with _$Basic implements Resource {
+abstract class Basic with Resource implements _$Basic {
+  Basic._();
   factory Basic({
     @JsonKey(required: true, defaultValue: 'Basic')
     @required
@@ -31,7 +32,8 @@ abstract class Basic with _$Basic implements Resource {
 }
 
 @freezed
-abstract class Binary with _$Binary implements Resource {
+abstract class Binary with Resource implements _$Binary {
+  Binary._();
   factory Binary({
     @JsonKey(required: true, defaultValue: 'Binary')
     @required
@@ -54,7 +56,8 @@ abstract class Binary with _$Binary implements Resource {
 }
 
 @freezed
-abstract class Bundle with _$Bundle implements Resource {
+abstract class Bundle with Resource implements _$Bundle {
+  Bundle._();
   factory Bundle({
     @JsonKey(required: true, defaultValue: 'Bundle')
     @required
@@ -156,7 +159,8 @@ abstract class BundleResponse with _$BundleResponse {
 }
 
 @freezed
-abstract class Linkage with _$Linkage implements Resource {
+abstract class Linkage with Resource implements _$Linkage {
+  Linkage._();
   factory Linkage({
     @JsonKey(required: true, defaultValue: 'Linkage')
     @required
@@ -190,7 +194,8 @@ abstract class LinkageItem with _$LinkageItem {
 }
 
 @freezed
-abstract class Media with _$Media implements Resource {
+abstract class Media with Resource implements _$Media {
+  Media._();
   factory Media({
     @JsonKey(required: true, defaultValue: 'Media')
     @required
@@ -233,7 +238,8 @@ abstract class Media with _$Media implements Resource {
 }
 
 @freezed
-abstract class MessageHeader with _$MessageHeader implements Resource {
+abstract class MessageHeader with Resource implements _$MessageHeader {
+  MessageHeader._();
   factory MessageHeader({
     @JsonKey(required: true, defaultValue: 'MessageHeader')
     @required
@@ -308,7 +314,8 @@ abstract class MessageHeaderResponse with _$MessageHeaderResponse {
 }
 
 @freezed
-abstract class OperationOutcome with _$OperationOutcome implements Resource {
+abstract class OperationOutcome with Resource implements _$OperationOutcome {
+  OperationOutcome._();
   factory OperationOutcome({
     @JsonKey(required: true, defaultValue: 'OperationOutcome')
     @required
@@ -347,7 +354,7 @@ abstract class OperationOutcomeIssue with _$OperationOutcomeIssue {
 }
 
 @freezed
-abstract class Parameters with _$Parameters implements Resource {
+abstract class Parameters with Resource implements _$Parameters {
   factory Parameters({
     Id id,
     Meta meta,
@@ -442,7 +449,8 @@ abstract class ParametersParameter with _$ParametersParameter {
 }
 
 @freezed
-abstract class Subscription with _$Subscription implements Resource {
+abstract class Subscription with Resource implements _$Subscription {
+  Subscription._();
   factory Subscription({
     @JsonKey(required: true, defaultValue: 'Subscription')
     @required

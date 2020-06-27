@@ -325,7 +325,7 @@ class __$BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Basic implements _Basic {
+class _$_Basic extends _Basic {
   _$_Basic(
       {@required
       @JsonKey(required: true, defaultValue: 'Basic')
@@ -347,7 +347,8 @@ class _$_Basic implements _Basic {
       this.author,
       @JsonKey(name: '_created')
           this.createdElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Basic.fromJson(Map<String, dynamic> json) =>
       _$_$_BasicFromJson(json);
@@ -467,7 +468,8 @@ class _$_Basic implements _Basic {
   }
 }
 
-abstract class _Basic implements Basic {
+abstract class _Basic extends Basic {
+  _Basic._() : super._();
   factory _Basic(
       {@required
       @JsonKey(required: true, defaultValue: 'Basic')
@@ -831,7 +833,7 @@ class __$BinaryCopyWithImpl<$Res> extends _$BinaryCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Binary implements _Binary {
+class _$_Binary extends _Binary {
   _$_Binary(
       {@required
       @JsonKey(required: true, defaultValue: 'Binary')
@@ -852,7 +854,8 @@ class _$_Binary implements _Binary {
           this.contentTypeElement,
       @JsonKey(name: '_content')
           this.contentElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Binary.fromJson(Map<String, dynamic> json) =>
       _$_$_BinaryFromJson(json);
@@ -968,7 +971,8 @@ class _$_Binary implements _Binary {
   }
 }
 
-abstract class _Binary implements Binary {
+abstract class _Binary extends Binary {
+  _Binary._() : super._();
   factory _Binary(
       {@required
       @JsonKey(required: true, defaultValue: 'Binary')
@@ -1367,7 +1371,7 @@ class __$BundleCopyWithImpl<$Res> extends _$BundleCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Bundle implements _Bundle {
+class _$_Bundle extends _Bundle {
   _$_Bundle(
       {@required
       @JsonKey(required: true, defaultValue: 'Bundle')
@@ -1392,7 +1396,8 @@ class _$_Bundle implements _Bundle {
           this.typeElement,
       @JsonKey(name: '_total')
           this.totalElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Bundle.fromJson(Map<String, dynamic> json) =>
       _$_$_BundleFromJson(json);
@@ -1523,7 +1528,8 @@ class _$_Bundle implements _Bundle {
   }
 }
 
-abstract class _Bundle implements Bundle {
+abstract class _Bundle extends Bundle {
+  _Bundle._() : super._();
   factory _Bundle(
       {@required
       @JsonKey(required: true, defaultValue: 'Bundle')
@@ -3475,7 +3481,7 @@ class __$LinkageCopyWithImpl<$Res> extends _$LinkageCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Linkage implements _Linkage {
+class _$_Linkage extends _Linkage {
   _$_Linkage(
       {@required
       @JsonKey(required: true, defaultValue: 'Linkage')
@@ -3495,7 +3501,8 @@ class _$_Linkage implements _Linkage {
           this.item,
       @JsonKey(name: '_active')
           this.activeElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Linkage.fromJson(Map<String, dynamic> json) =>
       _$_$_LinkageFromJson(json);
@@ -3602,7 +3609,8 @@ class _$_Linkage implements _Linkage {
   }
 }
 
-abstract class _Linkage implements Linkage {
+abstract class _Linkage extends Linkage {
+  _Linkage._() : super._();
   factory _Linkage(
       {@required
       @JsonKey(required: true, defaultValue: 'Linkage')
@@ -4542,7 +4550,7 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Media implements _Media {
+class _$_Media extends _Media {
   _$_Media(
       {@required
       @JsonKey(required: true, defaultValue: 'Media')
@@ -4589,7 +4597,8 @@ class _$_Media implements _Media {
           this.framesElement,
       @JsonKey(name: '_duration')
           this.durationElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Media.fromJson(Map<String, dynamic> json) =>
       _$_$_MediaFromJson(json);
@@ -4809,7 +4818,8 @@ class _$_Media implements _Media {
   }
 }
 
-abstract class _Media implements Media {
+abstract class _Media extends Media {
+  _Media._() : super._();
   factory _Media(
       {@required
       @JsonKey(required: true, defaultValue: 'Media')
@@ -5425,7 +5435,7 @@ class __$MessageHeaderCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_MessageHeader implements _MessageHeader {
+class _$_MessageHeader extends _MessageHeader {
   _$_MessageHeader(
       {@required
       @JsonKey(required: true, defaultValue: 'MessageHeader')
@@ -5455,7 +5465,8 @@ class _$_MessageHeader implements _MessageHeader {
       this.focus,
       @JsonKey(name: '_timestamp')
           this.timestampElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_MessageHeader.fromJson(Map<String, dynamic> json) =>
       _$_$_MessageHeaderFromJson(json);
@@ -5614,7 +5625,8 @@ class _$_MessageHeader implements _MessageHeader {
   }
 }
 
-abstract class _MessageHeader implements MessageHeader {
+abstract class _MessageHeader extends MessageHeader {
+  _MessageHeader._() : super._();
   factory _MessageHeader(
       {@required
       @JsonKey(required: true, defaultValue: 'MessageHeader')
@@ -6839,7 +6851,7 @@ class __$OperationOutcomeCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_OperationOutcome implements _OperationOutcome {
+class _$_OperationOutcome extends _OperationOutcome {
   _$_OperationOutcome(
       {@required
       @JsonKey(required: true, defaultValue: 'OperationOutcome')
@@ -6855,7 +6867,8 @@ class _$_OperationOutcome implements _OperationOutcome {
       this.modifierExtension,
       @JsonKey(required: true)
           this.issue})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_OperationOutcome.fromJson(Map<String, dynamic> json) =>
       _$_$_OperationOutcomeFromJson(json);
@@ -6945,7 +6958,8 @@ class _$_OperationOutcome implements _OperationOutcome {
   }
 }
 
-abstract class _OperationOutcome implements OperationOutcome {
+abstract class _OperationOutcome extends OperationOutcome {
+  _OperationOutcome._() : super._();
   factory _OperationOutcome(
       {@required
       @JsonKey(required: true, defaultValue: 'OperationOutcome')
@@ -10536,7 +10550,7 @@ class __$SubscriptionCopyWithImpl<$Res> extends _$SubscriptionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Subscription implements _Subscription {
+class _$_Subscription extends _Subscription {
   _$_Subscription(
       {@required
       @JsonKey(required: true, defaultValue: 'Subscription')
@@ -10570,7 +10584,8 @@ class _$_Subscription implements _Subscription {
           this.criteriaElement,
       @JsonKey(name: '_error')
           this.errorElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Subscription.fromJson(Map<String, dynamic> json) =>
       _$_$_SubscriptionFromJson(json);
@@ -10734,7 +10749,8 @@ class _$_Subscription implements _Subscription {
   }
 }
 
-abstract class _Subscription implements Subscription {
+abstract class _Subscription extends Subscription {
+  _Subscription._() : super._();
   factory _Subscription(
       {@required
       @JsonKey(required: true, defaultValue: 'Subscription')

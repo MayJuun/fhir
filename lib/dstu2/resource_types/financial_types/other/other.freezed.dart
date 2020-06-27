@@ -16,7 +16,8 @@ class _$ExplanationOfBenefitTearOff {
   const _$ExplanationOfBenefitTearOff();
 
   _ExplanationOfBenefit call(
-      {@JsonKey(defaultValue: 'ExplanationOfBenefit')
+      {@required
+      @JsonKey(defaultValue: 'ExplanationOfBenefit')
           String resourceType,
       Id id,
       Meta meta,
@@ -577,9 +578,10 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ExplanationOfBenefit implements _ExplanationOfBenefit {
+class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   _$_ExplanationOfBenefit(
-      {@JsonKey(defaultValue: 'ExplanationOfBenefit')
+      {@required
+      @JsonKey(defaultValue: 'ExplanationOfBenefit')
           this.resourceType,
       this.id,
       this.meta,
@@ -610,7 +612,9 @@ class _$_ExplanationOfBenefit implements _ExplanationOfBenefit {
       @JsonKey(name: '_outcome')
           this.outcomeElement,
       @JsonKey(name: '_disposition')
-          this.dispositionElement});
+          this.dispositionElement})
+      : assert(resourceType != null),
+        super._();
 
   factory _$_ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =>
       _$_$_ExplanationOfBenefitFromJson(json);
@@ -788,9 +792,11 @@ class _$_ExplanationOfBenefit implements _ExplanationOfBenefit {
   }
 }
 
-abstract class _ExplanationOfBenefit implements ExplanationOfBenefit {
+abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
+  _ExplanationOfBenefit._() : super._();
   factory _ExplanationOfBenefit(
-      {@JsonKey(defaultValue: 'ExplanationOfBenefit')
+      {@required
+      @JsonKey(defaultValue: 'ExplanationOfBenefit')
           String resourceType,
       Id id,
       Meta meta,

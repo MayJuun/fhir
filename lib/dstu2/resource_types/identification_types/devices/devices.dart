@@ -8,9 +8,10 @@ part 'devices.freezed.dart';
 part 'devices.g.dart';
 
 @freezed
-abstract class DeviceComponent with _$DeviceComponent implements Resource {
+abstract class DeviceComponent with Resource implements _$DeviceComponent {
+  DeviceComponent._();
   factory DeviceComponent({
-    @JsonKey(defaultValue: 'DeviceComponent') String resourceType,
+    @JsonKey(defaultValue: 'DeviceComponent') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -38,9 +39,10 @@ abstract class DeviceComponent with _$DeviceComponent implements Resource {
 }
 
 @freezed
-abstract class DeviceMetric with _$DeviceMetric implements Resource {
+abstract class DeviceMetric with Resource implements _$DeviceMetric {
+  DeviceMetric._();
   factory DeviceMetric({
-    @JsonKey(defaultValue: 'DeviceMetric') String resourceType,
+    @JsonKey(defaultValue: 'DeviceMetric') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -75,9 +77,10 @@ abstract class DeviceMetric with _$DeviceMetric implements Resource {
 }
 
 @freezed
-abstract class Device with _$Device implements Resource {
+abstract class Device with Resource implements _$Device {
+  Device._();
   factory Device({
-    @JsonKey(defaultValue: 'Device') String resourceType,
+    @JsonKey(defaultValue: 'Device') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

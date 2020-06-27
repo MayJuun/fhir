@@ -16,7 +16,8 @@ class _$QuestionnaireTearOff {
   const _$QuestionnaireTearOff();
 
   _Questionnaire call(
-      {@JsonKey(defaultValue: 'Questionnaire')
+      {@required
+      @JsonKey(defaultValue: 'Questionnaire')
           String resourceType,
       Id id,
       Meta meta,
@@ -555,9 +556,10 @@ class __$QuestionnaireCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Questionnaire implements _Questionnaire {
+class _$_Questionnaire extends _Questionnaire {
   _$_Questionnaire(
-      {@JsonKey(defaultValue: 'Questionnaire')
+      {@required
+      @JsonKey(defaultValue: 'Questionnaire')
           this.resourceType,
       this.id,
       this.meta,
@@ -596,8 +598,10 @@ class _$_Questionnaire implements _Questionnaire {
           this.dateElement,
       @JsonKey(name: '_publisher')
           this.publisherElement})
-      : assert(status != null),
-        assert(group != null);
+      : assert(resourceType != null),
+        assert(status != null),
+        assert(group != null),
+        super._();
 
   factory _$_Questionnaire.fromJson(Map<String, dynamic> json) =>
       _$_$_QuestionnaireFromJson(json);
@@ -783,9 +787,11 @@ class _$_Questionnaire implements _Questionnaire {
   }
 }
 
-abstract class _Questionnaire implements Questionnaire {
+abstract class _Questionnaire extends Questionnaire {
+  _Questionnaire._() : super._();
   factory _Questionnaire(
-      {@JsonKey(defaultValue: 'Questionnaire')
+      {@required
+      @JsonKey(defaultValue: 'Questionnaire')
           String resourceType,
       Id id,
       Meta meta,
@@ -902,7 +908,7 @@ class _$ProvenanceTearOff {
   const _$ProvenanceTearOff();
 
   _Provenance call(
-      {@JsonKey(defaultValue: 'Provenance') String resourceType,
+      {@required @JsonKey(defaultValue: 'Provenance') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1342,9 +1348,9 @@ class __$ProvenanceCopyWithImpl<$Res> extends _$ProvenanceCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Provenance implements _Provenance {
+class _$_Provenance extends _Provenance {
   _$_Provenance(
-      {@JsonKey(defaultValue: 'Provenance') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Provenance') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -1367,8 +1373,10 @@ class _$_Provenance implements _Provenance {
       @JsonKey(name: '_language') this.languageElement,
       @JsonKey(name: '_recorded') this.recordedElement,
       @JsonKey(name: '_policy') this.policyElement})
-      : assert(target != null),
-        assert(recorded != null);
+      : assert(resourceType != null),
+        assert(target != null),
+        assert(recorded != null),
+        super._();
 
   factory _$_Provenance.fromJson(Map<String, dynamic> json) =>
       _$_$_ProvenanceFromJson(json);
@@ -1536,9 +1544,10 @@ class _$_Provenance implements _Provenance {
   }
 }
 
-abstract class _Provenance implements Provenance {
+abstract class _Provenance extends Provenance {
+  _Provenance._() : super._();
   factory _Provenance(
-      {@JsonKey(defaultValue: 'Provenance') String resourceType,
+      {@required @JsonKey(defaultValue: 'Provenance') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1632,7 +1641,8 @@ class _$QuestionnaireResponseTearOff {
   const _$QuestionnaireResponseTearOff();
 
   _QuestionnaireResponse call(
-      {@JsonKey(defaultValue: 'QuestionnaireResponse')
+      {@required
+      @JsonKey(defaultValue: 'QuestionnaireResponse')
           String resourceType,
       Id id,
       Meta meta,
@@ -2185,9 +2195,10 @@ class __$QuestionnaireResponseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_QuestionnaireResponse implements _QuestionnaireResponse {
+class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   _$_QuestionnaireResponse(
-      {@JsonKey(defaultValue: 'QuestionnaireResponse')
+      {@required
+      @JsonKey(defaultValue: 'QuestionnaireResponse')
           this.resourceType,
       this.id,
       this.meta,
@@ -2219,7 +2230,9 @@ class _$_QuestionnaireResponse implements _QuestionnaireResponse {
           this.statusElement,
       @JsonKey(name: '_authored')
           this.authoredElement})
-      : assert(status != null);
+      : assert(resourceType != null),
+        assert(status != null),
+        super._();
 
   factory _$_QuestionnaireResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_QuestionnaireResponseFromJson(json);
@@ -2391,9 +2404,11 @@ class _$_QuestionnaireResponse implements _QuestionnaireResponse {
   }
 }
 
-abstract class _QuestionnaireResponse implements QuestionnaireResponse {
+abstract class _QuestionnaireResponse extends QuestionnaireResponse {
+  _QuestionnaireResponse._() : super._();
   factory _QuestionnaireResponse(
-      {@JsonKey(defaultValue: 'QuestionnaireResponse')
+      {@required
+      @JsonKey(defaultValue: 'QuestionnaireResponse')
           String resourceType,
       Id id,
       Meta meta,
@@ -2496,7 +2511,8 @@ class _$AuditEventTearOff {
   const _$AuditEventTearOff();
 
   _AuditEvent call(
-      {@JsonKey(defaultValue: 'AuditEvent')
+      {@required
+      @JsonKey(defaultValue: 'AuditEvent')
           String resourceType,
       Id id,
       Meta meta,
@@ -2835,9 +2851,9 @@ class __$AuditEventCopyWithImpl<$Res> extends _$AuditEventCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_AuditEvent implements _AuditEvent {
+class _$_AuditEvent extends _AuditEvent {
   _$_AuditEvent(
-      {@JsonKey(defaultValue: 'AuditEvent') this.resourceType,
+      {@required @JsonKey(defaultValue: 'AuditEvent') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -2852,9 +2868,11 @@ class _$_AuditEvent implements _AuditEvent {
       this.object,
       @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       @JsonKey(name: '_language') this.languageElement})
-      : assert(event != null),
+      : assert(resourceType != null),
+        assert(event != null),
         assert(participant != null),
-        assert(source != null);
+        assert(source != null),
+        super._();
 
   factory _$_AuditEvent.fromJson(Map<String, dynamic> json) =>
       _$_$_AuditEventFromJson(json);
@@ -2976,9 +2994,11 @@ class _$_AuditEvent implements _AuditEvent {
   }
 }
 
-abstract class _AuditEvent implements AuditEvent {
+abstract class _AuditEvent extends AuditEvent {
+  _AuditEvent._() : super._();
   factory _AuditEvent(
-      {@JsonKey(defaultValue: 'AuditEvent')
+      {@required
+      @JsonKey(defaultValue: 'AuditEvent')
           String resourceType,
       Id id,
       Meta meta,

@@ -16,7 +16,8 @@ class _$OrderResponseTearOff {
   const _$OrderResponseTearOff();
 
   _OrderResponse call(
-      {@JsonKey(defaultValue: 'OrderResponse')
+      {@required
+      @JsonKey(defaultValue: 'OrderResponse')
           String resourceType,
       Id id,
       Meta meta,
@@ -372,9 +373,10 @@ class __$OrderResponseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_OrderResponse implements _OrderResponse {
+class _$_OrderResponse extends _OrderResponse {
   _$_OrderResponse(
-      {@JsonKey(defaultValue: 'OrderResponse')
+      {@required
+      @JsonKey(defaultValue: 'OrderResponse')
           this.resourceType,
       this.id,
       this.meta,
@@ -398,8 +400,10 @@ class _$_OrderResponse implements _OrderResponse {
       this.fulfillment,
       @JsonKey(name: '_orderStatus')
           this.orderStatusElement})
-      : assert(request != null),
-        assert(orderStatus != null);
+      : assert(resourceType != null),
+        assert(request != null),
+        assert(orderStatus != null),
+        super._();
 
   factory _$_OrderResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_OrderResponseFromJson(json);
@@ -532,9 +536,11 @@ class _$_OrderResponse implements _OrderResponse {
   }
 }
 
-abstract class _OrderResponse implements OrderResponse {
+abstract class _OrderResponse extends OrderResponse {
+  _OrderResponse._() : super._();
   factory _OrderResponse(
-      {@JsonKey(defaultValue: 'OrderResponse')
+      {@required
+      @JsonKey(defaultValue: 'OrderResponse')
           String resourceType,
       Id id,
       Meta meta,
@@ -613,7 +619,7 @@ class _$OrderTearOff {
   const _$OrderTearOff();
 
   _Order call(
-      {@JsonKey(defaultValue: 'Order') String resourceType,
+      {@required @JsonKey(defaultValue: 'Order') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -987,9 +993,9 @@ class __$OrderCopyWithImpl<$Res> extends _$OrderCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Order implements _Order {
+class _$_Order extends _Order {
   _$_Order(
-      {@JsonKey(defaultValue: 'Order') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Order') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -1007,7 +1013,9 @@ class _$_Order implements _Order {
       this.reasonReference,
       this.when,
       @required @JsonKey(required: true) this.detail})
-      : assert(detail != null);
+      : assert(resourceType != null),
+        assert(detail != null),
+        super._();
 
   factory _$_Order.fromJson(Map<String, dynamic> json) =>
       _$_$_OrderFromJson(json);
@@ -1141,9 +1149,10 @@ class _$_Order implements _Order {
   }
 }
 
-abstract class _Order implements Order {
+abstract class _Order extends Order {
+  _Order._() : super._();
   factory _Order(
-      {@JsonKey(defaultValue: 'Order') String resourceType,
+      {@required @JsonKey(defaultValue: 'Order') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1215,7 +1224,8 @@ class _$DeviceUseRequestTearOff {
   const _$DeviceUseRequestTearOff();
 
   _DeviceUseRequest call(
-      {@JsonKey(defaultValue: 'DeviceUseRequest')
+      {@required
+      @JsonKey(defaultValue: 'DeviceUseRequest')
           String resourceType,
       Id id,
       Meta meta,
@@ -1848,9 +1858,10 @@ class __$DeviceUseRequestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_DeviceUseRequest implements _DeviceUseRequest {
+class _$_DeviceUseRequest extends _DeviceUseRequest {
   _$_DeviceUseRequest(
-      {@JsonKey(defaultValue: 'DeviceUseRequest')
+      {@required
+      @JsonKey(defaultValue: 'DeviceUseRequest')
           this.resourceType,
       this.id,
       this.meta,
@@ -1891,8 +1902,10 @@ class _$_DeviceUseRequest implements _DeviceUseRequest {
           this.statusElement,
       @JsonKey(name: '_priority')
           this.priorityElement})
-      : assert(device != null),
-        assert(subject != null);
+      : assert(resourceType != null),
+        assert(device != null),
+        assert(subject != null),
+        super._();
 
   factory _$_DeviceUseRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_DeviceUseRequestFromJson(json);
@@ -2085,9 +2098,11 @@ class _$_DeviceUseRequest implements _DeviceUseRequest {
   }
 }
 
-abstract class _DeviceUseRequest implements DeviceUseRequest {
+abstract class _DeviceUseRequest extends DeviceUseRequest {
+  _DeviceUseRequest._() : super._();
   factory _DeviceUseRequest(
-      {@JsonKey(defaultValue: 'DeviceUseRequest')
+      {@required
+      @JsonKey(defaultValue: 'DeviceUseRequest')
           String resourceType,
       Id id,
       Meta meta,
@@ -2212,31 +2227,42 @@ class _$DeviceUseStatementTearOff {
   const _$DeviceUseStatementTearOff();
 
   _DeviceUseStatement call(
-      {@JsonKey(defaultValue: 'DeviceUseStatement') String resourceType,
+      {@required
+      @JsonKey(defaultValue: 'DeviceUseStatement')
+          String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       CodeableConcept bodySiteCodeableConcept,
       Reference bodySiteReference,
       Period whenUsed,
-      @required @JsonKey(required: true) Reference device,
+      @required
+      @JsonKey(required: true)
+          Reference device,
       List<Identifier> identifier,
       List<CodeableConcept> indication,
       List<String> notes,
       FhirDateTime recordedOn,
-      @required @JsonKey(required: true) Reference subject,
+      @required
+      @JsonKey(required: true)
+          Reference subject,
       Timing timingTiming,
       Period timingPeriod,
       FhirDateTime timingDateTime,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-      @JsonKey(name: '_language') Element languageElement,
-      @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
-      @JsonKey(name: '_recordedOn') Element recordedOnElement}) {
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_timingDateTime')
+          Element timingDateTimeElement,
+      @JsonKey(name: '_recordedOn')
+          Element recordedOnElement}) {
     return _DeviceUseStatement(
       resourceType: resourceType,
       id: id,
@@ -2761,9 +2787,9 @@ class __$DeviceUseStatementCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_DeviceUseStatement implements _DeviceUseStatement {
+class _$_DeviceUseStatement extends _DeviceUseStatement {
   _$_DeviceUseStatement(
-      {@JsonKey(defaultValue: 'DeviceUseStatement') this.resourceType,
+      {@required @JsonKey(defaultValue: 'DeviceUseStatement') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -2788,8 +2814,10 @@ class _$_DeviceUseStatement implements _DeviceUseStatement {
       @JsonKey(name: '_language') this.languageElement,
       @JsonKey(name: '_timingDateTime') this.timingDateTimeElement,
       @JsonKey(name: '_recordedOn') this.recordedOnElement})
-      : assert(device != null),
-        assert(subject != null);
+      : assert(resourceType != null),
+        assert(device != null),
+        assert(subject != null),
+        super._();
 
   factory _$_DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
       _$_$_DeviceUseStatementFromJson(json);
@@ -2964,34 +2992,45 @@ class _$_DeviceUseStatement implements _DeviceUseStatement {
   }
 }
 
-abstract class _DeviceUseStatement implements DeviceUseStatement {
+abstract class _DeviceUseStatement extends DeviceUseStatement {
+  _DeviceUseStatement._() : super._();
   factory _DeviceUseStatement(
-          {@JsonKey(defaultValue: 'DeviceUseStatement') String resourceType,
-          Id id,
-          Meta meta,
-          FhirUri implicitRules,
-          Code language,
-          Narrative text,
-          List<Resource> contained,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          FhirExtension modifierExtension,
-          CodeableConcept bodySiteCodeableConcept,
-          Reference bodySiteReference,
-          Period whenUsed,
-          @required @JsonKey(required: true) Reference device,
-          List<Identifier> identifier,
-          List<CodeableConcept> indication,
-          List<String> notes,
-          FhirDateTime recordedOn,
-          @required @JsonKey(required: true) Reference subject,
-          Timing timingTiming,
-          Period timingPeriod,
-          FhirDateTime timingDateTime,
-          @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-          @JsonKey(name: '_language') Element languageElement,
-          @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
-          @JsonKey(name: '_recordedOn') Element recordedOnElement}) =
-      _$_DeviceUseStatement;
+      {@required
+      @JsonKey(defaultValue: 'DeviceUseStatement')
+          String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      FhirExtension modifierExtension,
+      CodeableConcept bodySiteCodeableConcept,
+      Reference bodySiteReference,
+      Period whenUsed,
+      @required
+      @JsonKey(required: true)
+          Reference device,
+      List<Identifier> identifier,
+      List<CodeableConcept> indication,
+      List<String> notes,
+      FhirDateTime recordedOn,
+      @required
+      @JsonKey(required: true)
+          Reference subject,
+      Timing timingTiming,
+      Period timingPeriod,
+      FhirDateTime timingDateTime,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_timingDateTime')
+          Element timingDateTimeElement,
+      @JsonKey(name: '_recordedOn')
+          Element recordedOnElement}) = _$_DeviceUseStatement;
 
   factory _DeviceUseStatement.fromJson(Map<String, dynamic> json) =
       _$_DeviceUseStatement.fromJson;
@@ -3066,7 +3105,8 @@ class _$CommunicationRequestTearOff {
   const _$CommunicationRequestTearOff();
 
   _CommunicationRequest call(
-      {@JsonKey(defaultValue: 'CommunicationRequest')
+      {@required
+      @JsonKey(defaultValue: 'CommunicationRequest')
           String resourceType,
       Id id,
       Meta meta,
@@ -3682,9 +3722,10 @@ class __$CommunicationRequestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_CommunicationRequest implements _CommunicationRequest {
+class _$_CommunicationRequest extends _CommunicationRequest {
   _$_CommunicationRequest(
-      {@JsonKey(defaultValue: 'CommunicationRequest')
+      {@required
+      @JsonKey(defaultValue: 'CommunicationRequest')
           this.resourceType,
       this.id,
       this.meta,
@@ -3718,7 +3759,9 @@ class _$_CommunicationRequest implements _CommunicationRequest {
       @JsonKey(name: '_status')
           this.statusElement,
       @JsonKey(name: '_priority')
-          this.priorityElement});
+          this.priorityElement})
+      : assert(resourceType != null),
+        super._();
 
   factory _$_CommunicationRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_CommunicationRequestFromJson(json);
@@ -3912,9 +3955,11 @@ class _$_CommunicationRequest implements _CommunicationRequest {
   }
 }
 
-abstract class _CommunicationRequest implements CommunicationRequest {
+abstract class _CommunicationRequest extends CommunicationRequest {
+  _CommunicationRequest._() : super._();
   factory _CommunicationRequest(
-      {@JsonKey(defaultValue: 'CommunicationRequest')
+      {@required
+      @JsonKey(defaultValue: 'CommunicationRequest')
           String resourceType,
       Id id,
       Meta meta,

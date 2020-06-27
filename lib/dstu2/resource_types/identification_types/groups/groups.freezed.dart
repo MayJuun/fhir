@@ -16,7 +16,7 @@ class _$OrganizationTearOff {
   const _$OrganizationTearOff();
 
   _Organization call(
-      {@JsonKey(defaultValue: 'Organization') String resourceType,
+      {@required @JsonKey(defaultValue: 'Organization') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -462,9 +462,9 @@ class __$OrganizationCopyWithImpl<$Res> extends _$OrganizationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Organization implements _Organization {
+class _$_Organization extends _Organization {
   _$_Organization(
-      {@JsonKey(defaultValue: 'Organization') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Organization') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -485,7 +485,9 @@ class _$_Organization implements _Organization {
       @JsonKey(name: '_language') this.languageElement,
       @JsonKey(name: '_active') this.activeElement,
       @JsonKey(name: '_name') this.nameElement,
-      @JsonKey(name: '_alias') this.aliasElement});
+      @JsonKey(name: '_alias') this.aliasElement})
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Organization.fromJson(Map<String, dynamic> json) =>
       _$_$_OrganizationFromJson(json);
@@ -648,9 +650,10 @@ class _$_Organization implements _Organization {
   }
 }
 
-abstract class _Organization implements Organization {
+abstract class _Organization extends Organization {
+  _Organization._() : super._();
   factory _Organization(
-      {@JsonKey(defaultValue: 'Organization') String resourceType,
+      {@required @JsonKey(defaultValue: 'Organization') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -739,7 +742,8 @@ class _$GroupTearOff {
   const _$GroupTearOff();
 
   _Group call(
-      {@JsonKey(defaultValue: 'Group')
+      {@required
+      @JsonKey(defaultValue: 'Group')
           String resourceType,
       Id id,
       Meta meta,
@@ -1225,9 +1229,10 @@ class __$GroupCopyWithImpl<$Res> extends _$GroupCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Group implements _Group {
+class _$_Group extends _Group {
   _$_Group(
-      {@JsonKey(defaultValue: 'Group')
+      {@required
+      @JsonKey(defaultValue: 'Group')
           this.resourceType,
       this.id,
       this.meta,
@@ -1262,8 +1267,10 @@ class _$_Group implements _Group {
           this.nameElement,
       @JsonKey(name: '_quantity')
           this.quantityElement})
-      : assert(type != null),
-        assert(actual != null);
+      : assert(resourceType != null),
+        assert(type != null),
+        assert(actual != null),
+        super._();
 
   factory _$_Group.fromJson(Map<String, dynamic> json) =>
       _$_$_GroupFromJson(json);
@@ -1434,9 +1441,11 @@ class _$_Group implements _Group {
   }
 }
 
-abstract class _Group implements Group {
+abstract class _Group extends Group {
+  _Group._() : super._();
   factory _Group(
-      {@JsonKey(defaultValue: 'Group')
+      {@required
+      @JsonKey(defaultValue: 'Group')
           String resourceType,
       Id id,
       Meta meta,
@@ -1542,7 +1551,8 @@ class _$HealthcareServiceTearOff {
   const _$HealthcareServiceTearOff();
 
   _HealthcareService call(
-      {@JsonKey(defaultValue: 'HealthcareService')
+      {@required
+      @JsonKey(defaultValue: 'HealthcareService')
           String resourceType,
       Id id,
       Meta meta,
@@ -2270,9 +2280,10 @@ class __$HealthcareServiceCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_HealthcareService implements _HealthcareService {
+class _$_HealthcareService extends _HealthcareService {
   _$_HealthcareService(
-      {@JsonKey(defaultValue: 'HealthcareService')
+      {@required
+      @JsonKey(defaultValue: 'HealthcareService')
           this.resourceType,
       this.id,
       this.meta,
@@ -2319,7 +2330,9 @@ class _$_HealthcareService implements _HealthcareService {
           this.appointmentRequiredElement,
       @JsonKey(name: '_availabilityExceptions')
           this.availabilityExceptionsElement})
-      : assert(location != null);
+      : assert(resourceType != null),
+        assert(location != null),
+        super._();
 
   factory _$_HealthcareService.fromJson(Map<String, dynamic> json) =>
       _$_$_HealthcareServiceFromJson(json);
@@ -2549,9 +2562,11 @@ class _$_HealthcareService implements _HealthcareService {
   }
 }
 
-abstract class _HealthcareService implements HealthcareService {
+abstract class _HealthcareService extends HealthcareService {
+  _HealthcareService._() : super._();
   factory _HealthcareService(
-      {@JsonKey(defaultValue: 'HealthcareService')
+      {@required
+      @JsonKey(defaultValue: 'HealthcareService')
           String resourceType,
       Id id,
       Meta meta,

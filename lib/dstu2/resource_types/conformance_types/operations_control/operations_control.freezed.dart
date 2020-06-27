@@ -16,7 +16,8 @@ class _$ConformanceTearOff {
   const _$ConformanceTearOff();
 
   _Conformance call(
-      {@JsonKey(defaultValue: 'Conformance')
+      {@required
+      @JsonKey(defaultValue: 'Conformance')
           String resourceType,
       Id id,
       Meta meta,
@@ -598,9 +599,10 @@ class __$ConformanceCopyWithImpl<$Res> extends _$ConformanceCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Conformance implements _Conformance {
+class _$_Conformance extends _Conformance {
   _$_Conformance(
-      {@JsonKey(defaultValue: 'Conformance')
+      {@required
+      @JsonKey(defaultValue: 'Conformance')
           this.resourceType,
       this.id,
       this.meta,
@@ -649,11 +651,13 @@ class _$_Conformance implements _Conformance {
           this.fhirVersionElement,
       @JsonKey(name: '_acceptUnknown')
           this.acceptUnknownElement})
-      : assert(date != null),
+      : assert(resourceType != null),
+        assert(date != null),
         assert(kind != null),
         assert(fhirVersion != null),
         assert(acceptUnknown != null),
-        assert(format != null);
+        assert(format != null),
+        super._();
 
   factory _$_Conformance.fromJson(Map<String, dynamic> json) =>
       _$_$_ConformanceFromJson(json);
@@ -870,9 +874,11 @@ class _$_Conformance implements _Conformance {
   }
 }
 
-abstract class _Conformance implements Conformance {
+abstract class _Conformance extends Conformance {
+  _Conformance._() : super._();
   factory _Conformance(
-      {@JsonKey(defaultValue: 'Conformance')
+      {@required
+      @JsonKey(defaultValue: 'Conformance')
           String resourceType,
       Id id,
       Meta meta,
@@ -1014,7 +1020,8 @@ class _$OperationDefinitionTearOff {
   const _$OperationDefinitionTearOff();
 
   _OperationDefinition call(
-      {@JsonKey(defaultValue: 'OperationDefinition')
+      {@required
+      @JsonKey(defaultValue: 'OperationDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -1465,9 +1472,10 @@ class __$OperationDefinitionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_OperationDefinition implements _OperationDefinition {
+class _$_OperationDefinition extends _OperationDefinition {
   _$_OperationDefinition(
-      {@JsonKey(defaultValue: 'OperationDefinition')
+      {@required
+      @JsonKey(defaultValue: 'OperationDefinition')
           this.resourceType,
       this.id,
       this.meta,
@@ -1509,12 +1517,14 @@ class _$_OperationDefinition implements _OperationDefinition {
       @JsonKey(required: true)
           this.instance,
       this.parameter})
-      : assert(name != null),
+      : assert(resourceType != null),
+        assert(name != null),
         assert(status != null),
         assert(kind != null),
         assert(code != null),
         assert(system != null),
-        assert(instance != null);
+        assert(instance != null),
+        super._();
 
   factory _$_OperationDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_OperationDefinitionFromJson(json);
@@ -1709,9 +1719,11 @@ class _$_OperationDefinition implements _OperationDefinition {
   }
 }
 
-abstract class _OperationDefinition implements OperationDefinition {
+abstract class _OperationDefinition extends OperationDefinition {
+  _OperationDefinition._() : super._();
   factory _OperationDefinition(
-      {@JsonKey(defaultValue: 'OperationDefinition')
+      {@required
+      @JsonKey(defaultValue: 'OperationDefinition')
           String resourceType,
       Id id,
       Meta meta,
@@ -1833,7 +1845,8 @@ class _$SearchParameterTearOff {
   const _$SearchParameterTearOff();
 
   _SearchParameter call(
-      {@JsonKey(defaultValue: 'SearchParameter')
+      {@required
+      @JsonKey(defaultValue: 'SearchParameter')
           String resourceType,
       Id id,
       Meta meta,
@@ -2259,9 +2272,10 @@ class __$SearchParameterCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_SearchParameter implements _SearchParameter {
+class _$_SearchParameter extends _SearchParameter {
   _$_SearchParameter(
-      {@JsonKey(defaultValue: 'SearchParameter')
+      {@required
+      @JsonKey(defaultValue: 'SearchParameter')
           this.resourceType,
       this.id,
       this.meta,
@@ -2299,10 +2313,12 @@ class _$_SearchParameter implements _SearchParameter {
       this.target,
       @JsonKey(name: '_requirements')
           this.requirementsElement})
-      : assert(url != null),
+      : assert(resourceType != null),
+        assert(url != null),
         assert(name != null),
         assert(code != null),
-        assert(type != null);
+        assert(type != null),
+        super._();
 
   factory _$_SearchParameter.fromJson(Map<String, dynamic> json) =>
       _$_$_SearchParameterFromJson(json);
@@ -2480,9 +2496,11 @@ class _$_SearchParameter implements _SearchParameter {
   }
 }
 
-abstract class _SearchParameter implements SearchParameter {
+abstract class _SearchParameter extends SearchParameter {
+  _SearchParameter._() : super._();
   factory _SearchParameter(
-      {@JsonKey(defaultValue: 'SearchParameter')
+      {@required
+      @JsonKey(defaultValue: 'SearchParameter')
           String resourceType,
       Id id,
       Meta meta,

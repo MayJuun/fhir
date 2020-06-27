@@ -8,9 +8,10 @@ part 'patient_management.freezed.dart';
 part 'patient_management.g.dart';
 
 @freezed
-abstract class Communication with _$Communication implements Resource {
+abstract class Communication with Resource implements _$Communication {
+  Communication._();
   factory Communication({
-    @JsonKey(defaultValue: 'Communication') String resourceType,
+    @JsonKey(defaultValue: 'Communication') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -45,9 +46,10 @@ abstract class Communication with _$Communication implements Resource {
 }
 
 @freezed
-abstract class EpisodeOfCare with _$EpisodeOfCare implements Resource {
+abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
+  EpisodeOfCare._();
   factory EpisodeOfCare({
-    @JsonKey(defaultValue: 'EpisodeOfCare') String resourceType,
+    @JsonKey(defaultValue: 'EpisodeOfCare') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -79,9 +81,10 @@ abstract class EpisodeOfCare with _$EpisodeOfCare implements Resource {
 }
 
 @freezed
-abstract class Encounter with _$Encounter implements Resource {
+abstract class Encounter with Resource implements _$Encounter {
+  Encounter._();
   factory Encounter({
-    @JsonKey(defaultValue: 'Encounter') String resourceType,
+    @JsonKey(defaultValue: 'Encounter') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -123,9 +126,10 @@ abstract class Encounter with _$Encounter implements Resource {
 }
 
 @freezed
-abstract class Flag with _$Flag implements Resource {
+abstract class Flag with Resource implements _$Flag {
+  Flag._();
   factory Flag({
-    @JsonKey(defaultValue: 'Flag') String resourceType,
+    @JsonKey(defaultValue: 'Flag') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

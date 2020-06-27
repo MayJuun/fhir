@@ -9,10 +9,11 @@ part 'content.g.dart';
 
 @freezed
 abstract class StructureDefinition
-    with _$StructureDefinition
-    implements Resource {
+    with Resource
+    implements _$StructureDefinition {
+  StructureDefinition._();
   factory StructureDefinition({
-    @JsonKey(defaultValue: 'StructureDefinition') String resourceType,
+    @JsonKey(defaultValue: 'StructureDefinition') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -74,9 +75,10 @@ abstract class StructureDefinition
 }
 
 @freezed
-abstract class DataElement with _$DataElement implements Resource {
+abstract class DataElement with Resource implements _$DataElement {
+  DataElement._();
   factory DataElement({
-    @JsonKey(defaultValue: 'DataElement') String resourceType,
+    @JsonKey(defaultValue: 'DataElement') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

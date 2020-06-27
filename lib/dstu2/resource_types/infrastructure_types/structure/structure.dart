@@ -8,9 +8,10 @@ part 'structure.freezed.dart';
 part 'structure.g.dart';
 
 @freezed
-abstract class Media with _$Media implements Resource {
+abstract class Media with Resource implements _$Media {
+  Media._();
   factory Media({
-    @JsonKey(defaultValue: 'Media') String resourceType,
+    @JsonKey(defaultValue: 'Media') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -46,9 +47,10 @@ abstract class Media with _$Media implements Resource {
 }
 
 @freezed
-abstract class Basic with _$Basic implements Resource {
+abstract class Basic with Resource implements _$Basic {
+  Basic._();
   factory Basic({
-    @JsonKey(defaultValue: 'Basic') String resourceType,
+    @JsonKey(defaultValue: 'Basic') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -71,9 +73,10 @@ abstract class Basic with _$Basic implements Resource {
 }
 
 @freezed
-abstract class Binary with _$Binary implements Resource {
+abstract class Binary with Resource implements _$Binary {
+  Binary._();
   factory Binary({
-    @JsonKey(defaultValue: 'Binary') String resourceType,
+    @JsonKey(defaultValue: 'Binary') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -89,9 +92,10 @@ abstract class Binary with _$Binary implements Resource {
 }
 
 @freezed
-abstract class Bundle with _$Bundle implements Resource {
+abstract class Bundle with Resource implements _$Bundle {
+  Bundle._();
   factory Bundle({
-    @JsonKey(defaultValue: 'Bundle') String resourceType,
+    @JsonKey(defaultValue: 'Bundle') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

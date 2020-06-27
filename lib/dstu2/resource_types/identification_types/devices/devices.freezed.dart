@@ -16,7 +16,8 @@ class _$DeviceComponentTearOff {
   const _$DeviceComponentTearOff();
 
   _DeviceComponent call(
-      {@JsonKey(defaultValue: 'DeviceComponent')
+      {@required
+      @JsonKey(defaultValue: 'DeviceComponent')
           String resourceType,
       Id id,
       Meta meta,
@@ -470,9 +471,10 @@ class __$DeviceComponentCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_DeviceComponent implements _DeviceComponent {
+class _$_DeviceComponent extends _DeviceComponent {
   _$_DeviceComponent(
-      {@JsonKey(defaultValue: 'DeviceComponent')
+      {@required
+      @JsonKey(defaultValue: 'DeviceComponent')
           this.resourceType,
       this.id,
       this.meta,
@@ -502,9 +504,11 @@ class _$_DeviceComponent implements _DeviceComponent {
       this.languageCode,
       @JsonKey(name: '_id')
           this.idElement})
-      : assert(type != null),
+      : assert(resourceType != null),
+        assert(type != null),
         assert(identifier != null),
-        assert(lastSystemChange != null);
+        assert(lastSystemChange != null),
+        super._();
 
   factory _$_DeviceComponent.fromJson(Map<String, dynamic> json) =>
       _$_$_DeviceComponentFromJson(json);
@@ -657,9 +661,11 @@ class _$_DeviceComponent implements _DeviceComponent {
   }
 }
 
-abstract class _DeviceComponent implements DeviceComponent {
+abstract class _DeviceComponent extends DeviceComponent {
+  _DeviceComponent._() : super._();
   factory _DeviceComponent(
-      {@JsonKey(defaultValue: 'DeviceComponent')
+      {@required
+      @JsonKey(defaultValue: 'DeviceComponent')
           String resourceType,
       Id id,
       Meta meta,
@@ -752,7 +758,8 @@ class _$DeviceMetricTearOff {
   const _$DeviceMetricTearOff();
 
   _DeviceMetric call(
-      {@JsonKey(defaultValue: 'DeviceMetric')
+      {@required
+      @JsonKey(defaultValue: 'DeviceMetric')
           String resourceType,
       Id id,
       Meta meta,
@@ -1322,9 +1329,10 @@ class __$DeviceMetricCopyWithImpl<$Res> extends _$DeviceMetricCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_DeviceMetric implements _DeviceMetric {
+class _$_DeviceMetric extends _DeviceMetric {
   _$_DeviceMetric(
-      {@JsonKey(defaultValue: 'DeviceMetric')
+      {@required
+      @JsonKey(defaultValue: 'DeviceMetric')
           this.resourceType,
       this.id,
       this.meta,
@@ -1363,9 +1371,11 @@ class _$_DeviceMetric implements _DeviceMetric {
           this.colorElement,
       @JsonKey(name: '_category')
           this.categoryElement})
-      : assert(type != null),
+      : assert(resourceType != null),
+        assert(type != null),
         assert(identifier != null),
-        assert(category != null);
+        assert(category != null),
+        super._();
 
   factory _$_DeviceMetric.fromJson(Map<String, dynamic> json) =>
       _$_$_DeviceMetricFromJson(json);
@@ -1545,9 +1555,11 @@ class _$_DeviceMetric implements _DeviceMetric {
   }
 }
 
-abstract class _DeviceMetric implements DeviceMetric {
+abstract class _DeviceMetric extends DeviceMetric {
+  _DeviceMetric._() : super._();
   factory _DeviceMetric(
-      {@JsonKey(defaultValue: 'DeviceMetric')
+      {@required
+      @JsonKey(defaultValue: 'DeviceMetric')
           String resourceType,
       Id id,
       Meta meta,
@@ -1662,7 +1674,7 @@ class _$DeviceTearOff {
   const _$DeviceTearOff();
 
   _Device call(
-      {@JsonKey(defaultValue: 'Device') String resourceType,
+      {@required @JsonKey(defaultValue: 'Device') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2287,9 +2299,9 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Device implements _Device {
+class _$_Device extends _Device {
   _$_Device(
-      {@JsonKey(defaultValue: 'Device') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Device') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -2322,7 +2334,9 @@ class _$_Device implements _Device {
       @JsonKey(name: '_lotNumber') this.lotNumberElement,
       @JsonKey(name: '_url') this.urlElement,
       @JsonKey(name: '_udi') this.udiElement})
-      : assert(type != null);
+      : assert(resourceType != null),
+        assert(type != null),
+        super._();
 
   factory _$_Device.fromJson(Map<String, dynamic> json) =>
       _$_$_DeviceFromJson(json);
@@ -2540,9 +2554,10 @@ class _$_Device implements _Device {
   }
 }
 
-abstract class _Device implements Device {
+abstract class _Device extends Device {
+  _Device._() : super._();
   factory _Device(
-      {@JsonKey(defaultValue: 'Device') String resourceType,
+      {@required @JsonKey(defaultValue: 'Device') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,

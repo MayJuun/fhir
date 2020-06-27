@@ -7,7 +7,8 @@ part 'clinical_decision_support.freezed.dart';
 part 'clinical_decision_support.g.dart';
 
 @freezed
-abstract class GuidanceResponse with _$GuidanceResponse implements Resource {
+abstract class GuidanceResponse with Resource implements _$GuidanceResponse {
+  GuidanceResponse._();
   factory GuidanceResponse({
     @JsonKey(required: true, defaultValue: 'GuidanceResponse')
     @required
@@ -45,9 +46,10 @@ abstract class GuidanceResponse with _$GuidanceResponse implements Resource {
 }
 
 @freezed
-abstract class Contributor with _$Contributor implements Resource {
+abstract class Contributor with Resource implements _$Contributor {
+  Contributor._();
   factory Contributor({
-    @JsonKey(defaultValue: 'Contributor') String resourceType,
+    @JsonKey(defaultValue: 'Contributor') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

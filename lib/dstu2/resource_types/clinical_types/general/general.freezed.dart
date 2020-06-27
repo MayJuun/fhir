@@ -16,7 +16,8 @@ class _$ConditionTearOff {
   const _$ConditionTearOff();
 
   _Condition call(
-      {@JsonKey(defaultValue: 'Condition')
+      {@required
+      @JsonKey(defaultValue: 'Condition')
           String resourceType,
       Id id,
       Meta meta,
@@ -914,9 +915,10 @@ class __$ConditionCopyWithImpl<$Res> extends _$ConditionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Condition implements _Condition {
+class _$_Condition extends _Condition {
   _$_Condition(
-      {@JsonKey(defaultValue: 'Condition')
+      {@required
+      @JsonKey(defaultValue: 'Condition')
           this.resourceType,
       this.id,
       this.meta,
@@ -973,9 +975,11 @@ class _$_Condition implements _Condition {
           this.abatementStringElement,
       @JsonKey(name: '_dateRecorded')
           this.dateRecordedElement})
-      : assert(patient != null),
+      : assert(resourceType != null),
+        assert(patient != null),
         assert(code != null),
-        assert(verificationStatus != null);
+        assert(verificationStatus != null),
+        super._();
 
   factory _$_Condition.fromJson(Map<String, dynamic> json) =>
       _$_$_ConditionFromJson(json);
@@ -1227,9 +1231,11 @@ class _$_Condition implements _Condition {
   }
 }
 
-abstract class _Condition implements Condition {
+abstract class _Condition extends Condition {
+  _Condition._() : super._();
   factory _Condition(
-      {@JsonKey(defaultValue: 'Condition')
+      {@required
+      @JsonKey(defaultValue: 'Condition')
           String resourceType,
       Id id,
       Meta meta,
@@ -1398,7 +1404,8 @@ class _$DetectedIssueTearOff {
   const _$DetectedIssueTearOff();
 
   _DetectedIssue call(
-      {@JsonKey(defaultValue: 'DetectedIssue')
+      {@required
+      @JsonKey(defaultValue: 'DetectedIssue')
           String resourceType,
       Id id,
       Meta meta,
@@ -1923,9 +1930,9 @@ class __$DetectedIssueCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_DetectedIssue implements _DetectedIssue {
+class _$_DetectedIssue extends _DetectedIssue {
   _$_DetectedIssue(
-      {@JsonKey(defaultValue: 'DetectedIssue') this.resourceType,
+      {@required @JsonKey(defaultValue: 'DetectedIssue') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -1948,7 +1955,9 @@ class _$_DetectedIssue implements _DetectedIssue {
       @JsonKey(name: '_language') this.languageElement,
       @JsonKey(name: '_severity') this.severityElement,
       @JsonKey(name: '_detail') this.detailElement,
-      @JsonKey(name: '_reference') this.referenceElement});
+      @JsonKey(name: '_reference') this.referenceElement})
+      : assert(resourceType != null),
+        super._();
 
   factory _$_DetectedIssue.fromJson(Map<String, dynamic> json) =>
       _$_$_DetectedIssueFromJson(json);
@@ -2125,9 +2134,11 @@ class _$_DetectedIssue implements _DetectedIssue {
   }
 }
 
-abstract class _DetectedIssue implements DetectedIssue {
+abstract class _DetectedIssue extends DetectedIssue {
+  _DetectedIssue._() : super._();
   factory _DetectedIssue(
-      {@JsonKey(defaultValue: 'DetectedIssue')
+      {@required
+      @JsonKey(defaultValue: 'DetectedIssue')
           String resourceType,
       Id id,
       Meta meta,
@@ -2231,7 +2242,8 @@ class _$FamilyMemberHistoryTearOff {
   const _$FamilyMemberHistoryTearOff();
 
   _FamilyMemberHistory call(
-      {@JsonKey(defaultValue: 'FamilyMemberHistory')
+      {@required
+      @JsonKey(defaultValue: 'FamilyMemberHistory')
           String resourceType,
       Id id,
       Meta meta,
@@ -3117,9 +3129,10 @@ class __$FamilyMemberHistoryCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_FamilyMemberHistory implements _FamilyMemberHistory {
+class _$_FamilyMemberHistory extends _FamilyMemberHistory {
   _$_FamilyMemberHistory(
-      {@JsonKey(defaultValue: 'FamilyMemberHistory')
+      {@required
+      @JsonKey(defaultValue: 'FamilyMemberHistory')
           this.resourceType,
       this.id,
       this.meta,
@@ -3179,9 +3192,11 @@ class _$_FamilyMemberHistory implements _FamilyMemberHistory {
           this.deceasedDateElement,
       @JsonKey(name: '_deceasedString')
           this.deceasedStringElement})
-      : assert(patient != null),
+      : assert(resourceType != null),
+        assert(patient != null),
         assert(status != null),
-        assert(relationship != null);
+        assert(relationship != null),
+        super._();
 
   factory _$_FamilyMemberHistory.fromJson(Map<String, dynamic> json) =>
       _$_$_FamilyMemberHistoryFromJson(json);
@@ -3433,9 +3448,11 @@ class _$_FamilyMemberHistory implements _FamilyMemberHistory {
   }
 }
 
-abstract class _FamilyMemberHistory implements FamilyMemberHistory {
+abstract class _FamilyMemberHistory extends FamilyMemberHistory {
+  _FamilyMemberHistory._() : super._();
   factory _FamilyMemberHistory(
-      {@JsonKey(defaultValue: 'FamilyMemberHistory')
+      {@required
+      @JsonKey(defaultValue: 'FamilyMemberHistory')
           String resourceType,
       Id id,
       Meta meta,
@@ -3608,7 +3625,8 @@ class _$ProcedureTearOff {
   const _$ProcedureTearOff();
 
   _Procedure call(
-      {@JsonKey(defaultValue: 'Procedure')
+      {@required
+      @JsonKey(defaultValue: 'Procedure')
           String resourceType,
       Id id,
       Meta meta,
@@ -4341,9 +4359,10 @@ class __$ProcedureCopyWithImpl<$Res> extends _$ProcedureCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Procedure implements _Procedure {
+class _$_Procedure extends _Procedure {
   _$_Procedure(
-      {@JsonKey(defaultValue: 'Procedure')
+      {@required
+      @JsonKey(defaultValue: 'Procedure')
           this.resourceType,
       this.id,
       this.meta,
@@ -4391,9 +4410,11 @@ class _$_Procedure implements _Procedure {
           this.statusElement,
       @JsonKey(name: '_performedDateTime')
           this.performedDateTimeElement})
-      : assert(subject != null),
+      : assert(resourceType != null),
+        assert(subject != null),
         assert(status != null),
-        assert(code != null);
+        assert(code != null),
+        super._();
 
   factory _$_Procedure.fromJson(Map<String, dynamic> json) =>
       _$_$_ProcedureFromJson(json);
@@ -4620,9 +4641,11 @@ class _$_Procedure implements _Procedure {
   }
 }
 
-abstract class _Procedure implements Procedure {
+abstract class _Procedure extends Procedure {
+  _Procedure._() : super._();
   factory _Procedure(
-      {@JsonKey(defaultValue: 'Procedure')
+      {@required
+      @JsonKey(defaultValue: 'Procedure')
           String resourceType,
       Id id,
       Meta meta,
@@ -4767,7 +4790,8 @@ class _$ClinicalImpressionTearOff {
   const _$ClinicalImpressionTearOff();
 
   _ClinicalImpression call(
-      {@JsonKey(defaultValue: 'ClinicalImpression')
+      {@required
+      @JsonKey(defaultValue: 'ClinicalImpression')
           String resourceType,
       Id id,
       Meta meta,
@@ -5443,9 +5467,10 @@ class __$ClinicalImpressionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ClinicalImpression implements _ClinicalImpression {
+class _$_ClinicalImpression extends _ClinicalImpression {
   _$_ClinicalImpression(
-      {@JsonKey(defaultValue: 'ClinicalImpression')
+      {@required
+      @JsonKey(defaultValue: 'ClinicalImpression')
           this.resourceType,
       this.id,
       this.meta,
@@ -5492,8 +5517,10 @@ class _$_ClinicalImpression implements _ClinicalImpression {
           this.protocolElement,
       @JsonKey(name: '_summary')
           this.summaryElement})
-      : assert(patient != null),
-        assert(status != null);
+      : assert(resourceType != null),
+        assert(patient != null),
+        assert(status != null),
+        super._();
 
   factory _$_ClinicalImpression.fromJson(Map<String, dynamic> json) =>
       _$_$_ClinicalImpressionFromJson(json);
@@ -5713,9 +5740,11 @@ class _$_ClinicalImpression implements _ClinicalImpression {
   }
 }
 
-abstract class _ClinicalImpression implements ClinicalImpression {
+abstract class _ClinicalImpression extends ClinicalImpression {
+  _ClinicalImpression._() : super._();
   factory _ClinicalImpression(
-      {@JsonKey(defaultValue: 'ClinicalImpression')
+      {@required
+      @JsonKey(defaultValue: 'ClinicalImpression')
           String resourceType,
       Id id,
       Meta meta,
@@ -5857,7 +5886,7 @@ class _$RiskAssessmentTearOff {
   const _$RiskAssessmentTearOff();
 
   _RiskAssessment call(
-      {@JsonKey(defaultValue: 'RiskAssessment') String resourceType,
+      {@required @JsonKey(defaultValue: 'RiskAssessment') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6327,9 +6356,9 @@ class __$RiskAssessmentCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_RiskAssessment implements _RiskAssessment {
+class _$_RiskAssessment extends _RiskAssessment {
   _$_RiskAssessment(
-      {@JsonKey(defaultValue: 'RiskAssessment') this.resourceType,
+      {@required @JsonKey(defaultValue: 'RiskAssessment') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -6350,7 +6379,9 @@ class _$_RiskAssessment implements _RiskAssessment {
       this.mitigation,
       @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       @JsonKey(name: '_language') this.languageElement,
-      @JsonKey(name: '_mitigation') this.mitigationElement});
+      @JsonKey(name: '_mitigation') this.mitigationElement})
+      : assert(resourceType != null),
+        super._();
 
   factory _$_RiskAssessment.fromJson(Map<String, dynamic> json) =>
       _$_$_RiskAssessmentFromJson(json);
@@ -6512,31 +6543,37 @@ class _$_RiskAssessment implements _RiskAssessment {
   }
 }
 
-abstract class _RiskAssessment implements RiskAssessment {
+abstract class _RiskAssessment extends RiskAssessment {
+  _RiskAssessment._() : super._();
   factory _RiskAssessment(
-          {@JsonKey(defaultValue: 'RiskAssessment') String resourceType,
-          Id id,
-          Meta meta,
-          FhirUri implicitRules,
-          Code language,
-          Narrative text,
-          List<Resource> contained,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          FhirExtension modifierExtension,
-          Reference subject,
-          FhirDateTime date,
-          Reference condition,
-          Reference encounter,
-          Reference performer,
-          Identifier identifier,
-          CodeableConcept method,
-          List<Reference> basis,
-          List<RiskAssessmentPrediction> prediction,
-          String mitigation,
-          @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-          @JsonKey(name: '_language') Element languageElement,
-          @JsonKey(name: '_mitigation') Element mitigationElement}) =
-      _$_RiskAssessment;
+      {@required
+      @JsonKey(defaultValue: 'RiskAssessment')
+          String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      FhirExtension modifierExtension,
+      Reference subject,
+      FhirDateTime date,
+      Reference condition,
+      Reference encounter,
+      Reference performer,
+      Identifier identifier,
+      CodeableConcept method,
+      List<Reference> basis,
+      List<RiskAssessmentPrediction> prediction,
+      String mitigation,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_mitigation')
+          Element mitigationElement}) = _$_RiskAssessment;
 
   factory _RiskAssessment.fromJson(Map<String, dynamic> json) =
       _$_RiskAssessment.fromJson;
@@ -6602,7 +6639,8 @@ class _$AllergyIntoleranceTearOff {
   const _$AllergyIntoleranceTearOff();
 
   _AllergyIntolerance call(
-      {@JsonKey(defaultValue: 'AllergyIntolerance')
+      {@required
+      @JsonKey(defaultValue: 'AllergyIntolerance')
           String resourceType,
       Id id,
       Meta meta,
@@ -7302,9 +7340,10 @@ class __$AllergyIntoleranceCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_AllergyIntolerance implements _AllergyIntolerance {
+class _$_AllergyIntolerance extends _AllergyIntolerance {
   _$_AllergyIntolerance(
-      {@JsonKey(defaultValue: 'AllergyIntolerance')
+      {@required
+      @JsonKey(defaultValue: 'AllergyIntolerance')
           this.resourceType,
       this.id,
       this.meta,
@@ -7353,8 +7392,10 @@ class _$_AllergyIntolerance implements _AllergyIntolerance {
           this.recordedDateElement,
       @JsonKey(name: '_lastOccurence')
           this.lastOccurenceElement})
-      : assert(patient != null),
-        assert(substance != null);
+      : assert(resourceType != null),
+        assert(patient != null),
+        assert(substance != null),
+        super._();
 
   factory _$_AllergyIntolerance.fromJson(Map<String, dynamic> json) =>
       _$_$_AllergyIntoleranceFromJson(json);
@@ -7567,9 +7608,11 @@ class _$_AllergyIntolerance implements _AllergyIntolerance {
   }
 }
 
-abstract class _AllergyIntolerance implements AllergyIntolerance {
+abstract class _AllergyIntolerance extends AllergyIntolerance {
+  _AllergyIntolerance._() : super._();
   factory _AllergyIntolerance(
-      {@JsonKey(defaultValue: 'AllergyIntolerance')
+      {@required
+      @JsonKey(defaultValue: 'AllergyIntolerance')
           String resourceType,
       Id id,
       Meta meta,

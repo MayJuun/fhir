@@ -8,9 +8,10 @@ part 'general.freezed.dart';
 part 'general.g.dart';
 
 @freezed
-abstract class Condition with _$Condition implements Resource {
+abstract class Condition with Resource implements _$Condition {
+  Condition._();
   factory Condition({
-    @JsonKey(defaultValue: 'Condition') String resourceType,
+    @JsonKey(defaultValue: 'Condition') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -62,9 +63,10 @@ abstract class Condition with _$Condition implements Resource {
 }
 
 @freezed
-abstract class DetectedIssue with _$DetectedIssue implements Resource {
+abstract class DetectedIssue with Resource implements _$DetectedIssue {
+  DetectedIssue._();
   factory DetectedIssue({
-    @JsonKey(defaultValue: 'DetectedIssue') String resourceType,
+    @JsonKey(defaultValue: 'DetectedIssue') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -97,10 +99,11 @@ abstract class DetectedIssue with _$DetectedIssue implements Resource {
 
 @freezed
 abstract class FamilyMemberHistory
-    with _$FamilyMemberHistory
-    implements Resource {
+    with Resource
+    implements _$FamilyMemberHistory {
+  FamilyMemberHistory._();
   factory FamilyMemberHistory({
-    @JsonKey(defaultValue: 'FamilyMemberHistory') String resourceType,
+    @JsonKey(defaultValue: 'FamilyMemberHistory') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -151,9 +154,10 @@ abstract class FamilyMemberHistory
 }
 
 @freezed
-abstract class Procedure with _$Procedure implements Resource {
+abstract class Procedure with Resource implements _$Procedure {
+  Procedure._();
   factory Procedure({
-    @JsonKey(defaultValue: 'Procedure') String resourceType,
+    @JsonKey(defaultValue: 'Procedure') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -199,10 +203,11 @@ abstract class Procedure with _$Procedure implements Resource {
 
 @freezed
 abstract class ClinicalImpression
-    with _$ClinicalImpression
-    implements Resource {
+    with Resource
+    implements _$ClinicalImpression {
+  ClinicalImpression._();
   factory ClinicalImpression({
-    @JsonKey(defaultValue: 'ClinicalImpression') String resourceType,
+    @JsonKey(defaultValue: 'ClinicalImpression') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -245,9 +250,10 @@ abstract class ClinicalImpression
 }
 
 @freezed
-abstract class RiskAssessment with _$RiskAssessment implements Resource {
+abstract class RiskAssessment with Resource implements _$RiskAssessment {
+  RiskAssessment._();
   factory RiskAssessment({
-    @JsonKey(defaultValue: 'RiskAssessment') String resourceType,
+    @JsonKey(defaultValue: 'RiskAssessment') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -277,10 +283,11 @@ abstract class RiskAssessment with _$RiskAssessment implements Resource {
 
 @freezed
 abstract class AllergyIntolerance
-    with _$AllergyIntolerance
-    implements Resource {
+    with Resource
+    implements _$AllergyIntolerance {
+  AllergyIntolerance._();
   factory AllergyIntolerance({
-    @JsonKey(defaultValue: 'AllergyIntolerance') String resourceType,
+    @JsonKey(defaultValue: 'AllergyIntolerance') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

@@ -857,7 +857,7 @@ class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Claim implements _Claim {
+class _$_Claim extends _Claim {
   _$_Claim(
       {@required
       @JsonKey(required: true, defaultValue: 'Claim')
@@ -908,7 +908,8 @@ class _$_Claim implements _Claim {
           this.useElement,
       @JsonKey(name: '_created')
           this.createdElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Claim.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimFromJson(json);
@@ -1156,7 +1157,8 @@ class _$_Claim implements _Claim {
   }
 }
 
-abstract class _Claim implements Claim {
+abstract class _Claim extends Claim {
+  _Claim._() : super._();
   factory _Claim(
       {@required
       @JsonKey(required: true, defaultValue: 'Claim')
@@ -1759,7 +1761,7 @@ class __$ClaimPayeeCopyWithImpl<$Res> extends _$ClaimPayeeCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ClaimPayee implements _ClaimPayee {
+class _$_ClaimPayee extends _ClaimPayee {
   _$_ClaimPayee(
       {@JsonKey(required: true)
           this.type,
@@ -1776,7 +1778,8 @@ class _$_ClaimPayee implements _ClaimPayee {
           this.extension_,
       this.modifierExtension,
       this.party})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_ClaimPayee.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimPayeeFromJson(json);
@@ -1871,7 +1874,8 @@ class _$_ClaimPayee implements _ClaimPayee {
   }
 }
 
-abstract class _ClaimPayee implements ClaimPayee {
+abstract class _ClaimPayee extends ClaimPayee {
+  _ClaimPayee._() : super._();
   factory _ClaimPayee(
       {@JsonKey(required: true)
           CodeableConcept type,
@@ -6851,7 +6855,7 @@ class __$ClaimResponseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ClaimResponse implements _ClaimResponse {
+class _$_ClaimResponse extends _ClaimResponse {
   _$_ClaimResponse(
       {@required
       @JsonKey(required: true, defaultValue: 'ClaimResponse')
@@ -6894,7 +6898,8 @@ class _$_ClaimResponse implements _ClaimResponse {
           this.createdElement,
       @JsonKey(name: '_disposition')
           this.dispositionElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_ClaimResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimResponseFromJson(json);
@@ -7113,7 +7118,8 @@ class _$_ClaimResponse implements _ClaimResponse {
   }
 }
 
-abstract class _ClaimResponse implements ClaimResponse {
+abstract class _ClaimResponse extends ClaimResponse {
+  _ClaimResponse._() : super._();
   factory _ClaimResponse(
       {@required
       @JsonKey(required: true, defaultValue: 'ClaimResponse')

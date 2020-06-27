@@ -1083,7 +1083,7 @@ class __$CapabilityStatementCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_CapabilityStatement implements _CapabilityStatement {
+class _$_CapabilityStatement extends _CapabilityStatement {
   _$_CapabilityStatement(
       {@required
       @JsonKey(required: true, defaultValue: 'CapabilityStatement')
@@ -1163,7 +1163,8 @@ class _$_CapabilityStatement implements _CapabilityStatement {
           this.patchFormatElement,
       @JsonKey(name: '_implementationGuide')
           this.implementationGuideElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_CapabilityStatement.fromJson(Map<String, dynamic> json) =>
       _$_$_CapabilityStatementFromJson(json);
@@ -1477,7 +1478,8 @@ class _$_CapabilityStatement implements _CapabilityStatement {
   }
 }
 
-abstract class _CapabilityStatement implements CapabilityStatement {
+abstract class _CapabilityStatement extends CapabilityStatement {
+  _CapabilityStatement._() : super._();
   factory _CapabilityStatement(
       {@required
       @JsonKey(required: true, defaultValue: 'CapabilityStatement')
@@ -7556,7 +7558,7 @@ class __$CompartmentDefinitionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_CompartmentDefinition implements _CompartmentDefinition {
+class _$_CompartmentDefinition extends _CompartmentDefinition {
   _$_CompartmentDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'CompartmentDefinition')
@@ -7609,7 +7611,8 @@ class _$_CompartmentDefinition implements _CompartmentDefinition {
           this.codeElement,
       @JsonKey(name: '_search')
           this.searchElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_CompartmentDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_CompartmentDefinitionFromJson(json);
@@ -7839,7 +7842,8 @@ class _$_CompartmentDefinition implements _CompartmentDefinition {
   }
 }
 
-abstract class _CompartmentDefinition implements CompartmentDefinition {
+abstract class _CompartmentDefinition extends CompartmentDefinition {
+  _CompartmentDefinition._() : super._();
   factory _CompartmentDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'CompartmentDefinition')
@@ -8975,7 +8979,7 @@ class __$DataElementCopyWithImpl<$Res> extends _$DataElementCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_DataElement implements _DataElement {
+class _$_DataElement extends _DataElement {
   _$_DataElement(
       {@required
       @JsonKey(required: true, defaultValue: 'DataElement')
@@ -9028,7 +9032,8 @@ class _$_DataElement implements _DataElement {
           this.copyrightElement,
       @JsonKey(name: '_stringency')
           this.stringencyElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_DataElement.fromJson(Map<String, dynamic> json) =>
       _$_$_DataElementFromJson(json);
@@ -9257,7 +9262,8 @@ class _$_DataElement implements _DataElement {
   }
 }
 
-abstract class _DataElement implements DataElement {
+abstract class _DataElement extends DataElement {
+  _DataElement._() : super._();
   factory _DataElement(
       {@required
       @JsonKey(required: true, defaultValue: 'DataElement')
@@ -10435,7 +10441,7 @@ class __$GraphDefinitionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_GraphDefinition implements _GraphDefinition {
+class _$_GraphDefinition extends _GraphDefinition {
   _$_GraphDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'GraphDefinition')
@@ -10487,7 +10493,8 @@ class _$_GraphDefinition implements _GraphDefinition {
           this.startElement,
       @JsonKey(name: '_profile')
           this.profileElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_GraphDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_GraphDefinitionFromJson(json);
@@ -10715,7 +10722,8 @@ class _$_GraphDefinition implements _GraphDefinition {
   }
 }
 
-abstract class _GraphDefinition implements GraphDefinition {
+abstract class _GraphDefinition extends GraphDefinition {
+  _GraphDefinition._() : super._();
   factory _GraphDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'GraphDefinition')
@@ -12663,7 +12671,7 @@ class __$ImplementationGuideCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ImplementationGuide implements _ImplementationGuide {
+class _$_ImplementationGuide extends _ImplementationGuide {
   _$_ImplementationGuide(
       {@required
       @JsonKey(required: true, defaultValue: 'ImplementationGuide')
@@ -12718,7 +12726,8 @@ class _$_ImplementationGuide implements _ImplementationGuide {
           this.fhirVersionElement,
       @JsonKey(name: '_binary')
           this.binaryElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_ImplementationGuide.fromJson(Map<String, dynamic> json) =>
       _$_$_ImplementationGuideFromJson(json);
@@ -12959,7 +12968,8 @@ class _$_ImplementationGuide implements _ImplementationGuide {
   }
 }
 
-abstract class _ImplementationGuide implements ImplementationGuide {
+abstract class _ImplementationGuide extends ImplementationGuide {
+  _ImplementationGuide._() : super._();
   factory _ImplementationGuide(
       {@required
       @JsonKey(required: true, defaultValue: 'ImplementationGuide')
@@ -15681,7 +15691,7 @@ class __$MessageDefinitionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_MessageDefinition implements _MessageDefinition {
+class _$_MessageDefinition extends _MessageDefinition {
   _$_MessageDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'MessageDefinition')
@@ -15746,7 +15756,8 @@ class _$_MessageDefinition implements _MessageDefinition {
           this.categoryElement,
       @JsonKey(name: '_responseRequired')
           this.responseRequiredElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_MessageDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_MessageDefinitionFromJson(json);
@@ -16017,7 +16028,8 @@ class _$_MessageDefinition implements _MessageDefinition {
   }
 }
 
-abstract class _MessageDefinition implements MessageDefinition {
+abstract class _MessageDefinition extends MessageDefinition {
+  _MessageDefinition._() : super._();
   factory _MessageDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'MessageDefinition')
@@ -17697,7 +17709,7 @@ class __$OperationDefinitionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_OperationDefinition implements _OperationDefinition {
+class _$_OperationDefinition extends _OperationDefinition {
   _$_OperationDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'OperationDefinition')
@@ -17770,7 +17782,8 @@ class _$_OperationDefinition implements _OperationDefinition {
           this.typeElement,
       @JsonKey(name: '_instance')
           this.instanceElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_OperationDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_OperationDefinitionFromJson(json);
@@ -18062,7 +18075,8 @@ class _$_OperationDefinition implements _OperationDefinition {
   }
 }
 
-abstract class _OperationDefinition implements OperationDefinition {
+abstract class _OperationDefinition extends OperationDefinition {
+  _OperationDefinition._() : super._();
   factory _OperationDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'OperationDefinition')
@@ -20521,7 +20535,7 @@ class __$SearchParameterCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_SearchParameter implements _SearchParameter {
+class _$_SearchParameter extends _SearchParameter {
   _$_SearchParameter(
       {@required
       @JsonKey(required: true, defaultValue: 'SearchParameter')
@@ -20602,7 +20616,8 @@ class _$_SearchParameter implements _SearchParameter {
           this.modifierElement,
       @JsonKey(name: '_chain')
           this.chainElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_SearchParameter.fromJson(Map<String, dynamic> json) =>
       _$_$_SearchParameterFromJson(json);
@@ -20913,7 +20928,8 @@ class _$_SearchParameter implements _SearchParameter {
   }
 }
 
-abstract class _SearchParameter implements SearchParameter {
+abstract class _SearchParameter extends SearchParameter {
+  _SearchParameter._() : super._();
   factory _SearchParameter(
       {@required
       @JsonKey(required: true, defaultValue: 'SearchParameter')
@@ -22499,7 +22515,7 @@ class __$StructureDefinitionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_StructureDefinition implements _StructureDefinition {
+class _$_StructureDefinition extends _StructureDefinition {
   _$_StructureDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'StructureDefinition')
@@ -22586,7 +22602,8 @@ class _$_StructureDefinition implements _StructureDefinition {
           this.baseDefinitionElement,
       @JsonKey(name: '_derivation')
           this.derivationElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_StructureDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_StructureDefinitionFromJson(json);
@@ -22916,7 +22933,8 @@ class _$_StructureDefinition implements _StructureDefinition {
   }
 }
 
-abstract class _StructureDefinition implements StructureDefinition {
+abstract class _StructureDefinition extends StructureDefinition {
+  _StructureDefinition._() : super._();
   factory _StructureDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'StructureDefinition')
@@ -24552,7 +24570,7 @@ class __$StructureMapCopyWithImpl<$Res> extends _$StructureMapCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_StructureMap implements _StructureMap {
+class _$_StructureMap extends _StructureMap {
   _$_StructureMap(
       {@required
       @JsonKey(required: true, defaultValue: 'StructureMap')
@@ -24610,7 +24628,8 @@ class _$_StructureMap implements _StructureMap {
           this.copyrightElement,
       @JsonKey(name: '_import')
           this.importElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_StructureMap.fromJson(Map<String, dynamic> json) =>
       _$_$_StructureMapFromJson(json);
@@ -24856,7 +24875,8 @@ class _$_StructureMap implements _StructureMap {
   }
 }
 
-abstract class _StructureMap implements StructureMap {
+abstract class _StructureMap extends StructureMap {
+  _StructureMap._() : super._();
   factory _StructureMap(
       {@required
       @JsonKey(required: true, defaultValue: 'StructureMap')

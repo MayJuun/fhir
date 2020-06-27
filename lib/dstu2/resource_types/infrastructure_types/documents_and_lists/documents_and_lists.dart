@@ -8,9 +8,10 @@ part 'documents_and_lists.freezed.dart';
 part 'documents_and_lists.g.dart';
 
 @freezed
-abstract class Composition with _$Composition implements Resource {
+abstract class Composition with Resource implements _$Composition {
+  Composition._();
   factory Composition({
-    @JsonKey(defaultValue: 'Composition') String resourceType,
+    @JsonKey(defaultValue: 'Composition') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -48,9 +49,10 @@ abstract class Composition with _$Composition implements Resource {
 }
 
 @freezed
-abstract class DocumentReference with _$DocumentReference implements Resource {
+abstract class DocumentReference with Resource implements _$DocumentReference {
+  DocumentReference._();
   factory DocumentReference({
-    @JsonKey(defaultValue: 'DocumentReference') String resourceType,
+    @JsonKey(defaultValue: 'DocumentReference') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -90,9 +92,10 @@ abstract class DocumentReference with _$DocumentReference implements Resource {
 }
 
 @freezed
-abstract class DocumentManifest with _$DocumentManifest implements Resource {
+abstract class DocumentManifest with Resource implements _$DocumentManifest {
+  DocumentManifest._();
   factory DocumentManifest({
-    @JsonKey(defaultValue: 'DocumentManifest') String resourceType,
+    @JsonKey(defaultValue: 'DocumentManifest') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -128,9 +131,10 @@ abstract class DocumentManifest with _$DocumentManifest implements Resource {
 }
 
 @freezed
-abstract class List_ with _$List_ implements Resource {
+abstract class List_ with Resource implements _$List_ {
+  List_._();
   factory List_({
-    @JsonKey(defaultValue: 'List') String resourceType,
+    @JsonKey(defaultValue: 'List') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

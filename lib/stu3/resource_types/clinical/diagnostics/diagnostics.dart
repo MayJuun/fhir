@@ -7,7 +7,8 @@ part 'diagnostics.freezed.dart';
 part 'diagnostics.g.dart';
 
 @freezed
-abstract class BodySite with _$BodySite implements Resource {
+abstract class BodySite with Resource implements _$BodySite {
+  BodySite._();
   factory BodySite({
     @JsonKey(required: true, defaultValue: 'BodySite')
     @required
@@ -35,7 +36,8 @@ abstract class BodySite with _$BodySite implements Resource {
 }
 
 @freezed
-abstract class DiagnosticReport with _$DiagnosticReport implements Resource {
+abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
+  DiagnosticReport._();
   factory DiagnosticReport({
     @JsonKey(required: true, defaultValue: 'DiagnosticReport')
     @required
@@ -98,7 +100,8 @@ abstract class DiagnosticReportImage with _$DiagnosticReportImage {
 }
 
 @freezed
-abstract class ImagingManifest with _$ImagingManifest implements Resource {
+abstract class ImagingManifest with Resource implements _$ImagingManifest {
+  ImagingManifest._();
   factory ImagingManifest({
     @JsonKey(required: true, defaultValue: 'ImagingManifest')
     @required
@@ -162,7 +165,8 @@ abstract class ImagingManifestInstance with _$ImagingManifestInstance {
 }
 
 @freezed
-abstract class ImagingStudy with _$ImagingStudy implements Resource {
+abstract class ImagingStudy with Resource implements _$ImagingStudy {
+  ImagingStudy._();
   factory ImagingStudy({
     @JsonKey(required: true, defaultValue: 'ImagingStudy')
     @required
@@ -248,7 +252,8 @@ abstract class ImagingStudyInstance with _$ImagingStudyInstance {
 }
 
 @freezed
-abstract class Observation with _$Observation implements Resource {
+abstract class Observation with Resource implements _$Observation {
+  Observation._();
   factory Observation({
     @JsonKey(required: true, defaultValue: 'Observation')
     @required
@@ -360,8 +365,9 @@ abstract class ObservationComponent with _$ObservationComponent {
 
 @freezed
 abstract class QuestionnaireResponse
-    with _$QuestionnaireResponse
-    implements Resource {
+    with Resource
+    implements _$QuestionnaireResponse {
+  QuestionnaireResponse._();
   factory QuestionnaireResponse({
     @JsonKey(required: true, defaultValue: 'QuestionnaireResponse')
     @required
@@ -440,7 +446,8 @@ abstract class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
 }
 
 @freezed
-abstract class Sequence with _$Sequence implements Resource {
+abstract class Sequence with Resource implements _$Sequence {
+  Sequence._();
   factory Sequence({
     @JsonKey(required: true, defaultValue: 'Sequence')
     @required
@@ -571,7 +578,8 @@ abstract class SequenceRepository with _$SequenceRepository {
 }
 
 @freezed
-abstract class Specimen with _$Specimen implements Resource {
+abstract class Specimen with Resource implements _$Specimen {
+  Specimen._();
   factory Specimen({
     @JsonKey(required: true, defaultValue: 'Specimen')
     @required

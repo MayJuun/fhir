@@ -8,9 +8,10 @@ part 'exchange.freezed.dart';
 part 'exchange.g.dart';
 
 @freezed
-abstract class OperationOutcome with _$OperationOutcome implements Resource {
+abstract class OperationOutcome with Resource implements _$OperationOutcome {
+  OperationOutcome._();
   factory OperationOutcome({
-    @JsonKey(defaultValue: 'OperationOutcome') String resourceType,
+    @JsonKey(defaultValue: 'OperationOutcome') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -30,9 +31,10 @@ abstract class OperationOutcome with _$OperationOutcome implements Resource {
 }
 
 @freezed
-abstract class Subscription with _$Subscription implements Resource {
+abstract class Subscription with Resource implements _$Subscription {
+  Subscription._();
   factory Subscription({
-    @JsonKey(defaultValue: 'Subscription') String resourceType,
+    @JsonKey(defaultValue: 'Subscription') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -65,9 +67,10 @@ abstract class Subscription with _$Subscription implements Resource {
 }
 
 @freezed
-abstract class MessageHeader with _$MessageHeader implements Resource {
+abstract class MessageHeader with Resource implements _$MessageHeader {
+  MessageHeader._();
   factory MessageHeader({
-    @JsonKey(defaultValue: 'MessageHeader') String resourceType,
+    @JsonKey(defaultValue: 'MessageHeader') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -96,9 +99,10 @@ abstract class MessageHeader with _$MessageHeader implements Resource {
 }
 
 @freezed
-abstract class Parameters with _$Parameters implements Resource {
+abstract class Parameters with Resource implements _$Parameters {
+  Parameters._();
   factory Parameters({
-    @JsonKey(defaultValue: 'Parameters') String resourceType,
+    @JsonKey(defaultValue: 'Parameters') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

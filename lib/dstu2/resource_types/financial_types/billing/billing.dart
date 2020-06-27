@@ -8,9 +8,10 @@ part 'billing.freezed.dart';
 part 'billing.g.dart';
 
 @freezed
-abstract class Account with _$Account implements Resource {
+abstract class Account with Resource implements _$Account {
+  Account._();
   factory Account({
-    @JsonKey(defaultValue: 'Account') String resourceType,
+    @JsonKey(defaultValue: 'Account') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -42,9 +43,10 @@ abstract class Account with _$Account implements Resource {
 }
 
 @freezed
-abstract class Claim with _$Claim implements Resource {
+abstract class Claim with Resource implements _$Claim {
+  Claim._();
   factory Claim({
-    @JsonKey(defaultValue: 'Claim') String resourceType,
+    @JsonKey(defaultValue: 'Claim') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -254,9 +256,10 @@ abstract class ClaimMissingTeeth with _$ClaimMissingTeeth {
 }
 
 @freezed
-abstract class ClaimResponse with _$ClaimResponse implements Resource {
+abstract class ClaimResponse with Resource implements _$ClaimResponse {
+  ClaimResponse._();
   factory ClaimResponse({
-    @JsonKey(defaultValue: 'ClaimResponse') String resourceType,
+    @JsonKey(defaultValue: 'ClaimResponse') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

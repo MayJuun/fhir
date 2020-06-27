@@ -598,7 +598,7 @@ class __$GuidanceResponseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_GuidanceResponse implements _GuidanceResponse {
+class _$_GuidanceResponse extends _GuidanceResponse {
   _$_GuidanceResponse(
       {@required
       @JsonKey(required: true, defaultValue: 'GuidanceResponse')
@@ -635,7 +635,8 @@ class _$_GuidanceResponse implements _GuidanceResponse {
           this.statusElement,
       @JsonKey(name: '_occurrenceDateTime')
           this.occurrenceDateTimeElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_GuidanceResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_GuidanceResponseFromJson(json);
@@ -824,7 +825,8 @@ class _$_GuidanceResponse implements _GuidanceResponse {
   }
 }
 
-abstract class _GuidanceResponse implements GuidanceResponse {
+abstract class _GuidanceResponse extends GuidanceResponse {
+  _GuidanceResponse._() : super._();
   factory _GuidanceResponse(
       {@required
       @JsonKey(required: true, defaultValue: 'GuidanceResponse')
@@ -938,7 +940,8 @@ class _$ContributorTearOff {
   const _$ContributorTearOff();
 
   _Contributor call(
-      {@JsonKey(defaultValue: 'Contributor')
+      {@required
+      @JsonKey(defaultValue: 'Contributor')
           String resourceType,
       Id id,
       Meta meta,
@@ -1231,9 +1234,10 @@ class __$ContributorCopyWithImpl<$Res> extends _$ContributorCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Contributor implements _Contributor {
+class _$_Contributor extends _Contributor {
   _$_Contributor(
-      {@JsonKey(defaultValue: 'Contributor')
+      {@required
+      @JsonKey(defaultValue: 'Contributor')
           this.resourceType,
       this.id,
       this.meta,
@@ -1255,8 +1259,10 @@ class _$_Contributor implements _Contributor {
           this.typeElement,
       @JsonKey(name: '_name')
           this.nameElement})
-      : assert(type != null),
-        assert(name != null);
+      : assert(resourceType != null),
+        assert(type != null),
+        assert(name != null),
+        super._();
 
   factory _$_Contributor.fromJson(Map<String, dynamic> json) =>
       _$_$_ContributorFromJson(json);
@@ -1372,9 +1378,11 @@ class _$_Contributor implements _Contributor {
   }
 }
 
-abstract class _Contributor implements Contributor {
+abstract class _Contributor extends Contributor {
+  _Contributor._() : super._();
   factory _Contributor(
-      {@JsonKey(defaultValue: 'Contributor')
+      {@required
+      @JsonKey(defaultValue: 'Contributor')
           String resourceType,
       Id id,
       Meta meta,

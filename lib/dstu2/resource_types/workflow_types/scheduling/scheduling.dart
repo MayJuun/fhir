@@ -8,9 +8,10 @@ part 'scheduling.freezed.dart';
 part 'scheduling.g.dart';
 
 @freezed
-abstract class Appointment with _$Appointment implements Resource {
+abstract class Appointment with Resource implements _$Appointment {
+  Appointment._();
   factory Appointment({
-    @JsonKey(defaultValue: 'Appointment') String resourceType,
+    @JsonKey(defaultValue: 'Appointment') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -49,9 +50,10 @@ abstract class Appointment with _$Appointment implements Resource {
 }
 
 @freezed
-abstract class Slot with _$Slot implements Resource {
+abstract class Slot with Resource implements _$Slot {
+  Slot._();
   factory Slot({
-    @JsonKey(defaultValue: 'Slot') String resourceType,
+    @JsonKey(defaultValue: 'Slot') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -83,10 +85,11 @@ abstract class Slot with _$Slot implements Resource {
 
 @freezed
 abstract class AppointmentResponse
-    with _$AppointmentResponse
-    implements Resource {
+    with Resource
+    implements _$AppointmentResponse {
+  AppointmentResponse._();
   factory AppointmentResponse({
-    @JsonKey(defaultValue: 'AppointmentResponse') String resourceType,
+    @JsonKey(defaultValue: 'AppointmentResponse') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -120,9 +123,10 @@ abstract class AppointmentResponse
 }
 
 @freezed
-abstract class Schedule with _$Schedule implements Resource {
+abstract class Schedule with Resource implements _$Schedule {
+  Schedule._();
   factory Schedule({
-    @JsonKey(defaultValue: 'Schedule') String resourceType,
+    @JsonKey(defaultValue: 'Schedule') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

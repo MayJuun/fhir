@@ -9,10 +9,13 @@ part 'medication_and_immunization.g.dart';
 
 @freezed
 abstract class ImmunizationRecommendation
-    with _$ImmunizationRecommendation
-    implements Resource {
+    with Resource
+    implements _$ImmunizationRecommendation {
+  ImmunizationRecommendation._();
   factory ImmunizationRecommendation({
-    @JsonKey(defaultValue: 'ImmunizationRecommendation') String resourceType,
+    @JsonKey(defaultValue: 'ImmunizationRecommendation')
+    @required
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -36,10 +39,11 @@ abstract class ImmunizationRecommendation
 
 @freezed
 abstract class MedicationDispense
-    with _$MedicationDispense
-    implements Resource {
+    with Resource
+    implements _$MedicationDispense {
+  MedicationDispense._();
   factory MedicationDispense({
-    @JsonKey(defaultValue: 'MedicationDispense') String resourceType,
+    @JsonKey(defaultValue: 'MedicationDispense') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -79,10 +83,11 @@ abstract class MedicationDispense
 
 @freezed
 abstract class MedicationStatement
-    with _$MedicationStatement
-    implements Resource {
+    with Resource
+    implements _$MedicationStatement {
+  MedicationStatement._();
   factory MedicationStatement({
-    @JsonKey(defaultValue: 'MedicationStatement') String resourceType,
+    @JsonKey(defaultValue: 'MedicationStatement') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -122,9 +127,10 @@ abstract class MedicationStatement
 }
 
 @freezed
-abstract class Immunization with _$Immunization implements Resource {
+abstract class Immunization with Resource implements _$Immunization {
+  Immunization._();
   factory Immunization({
-    @JsonKey(defaultValue: 'Immunization') String resourceType,
+    @JsonKey(defaultValue: 'Immunization') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -168,9 +174,10 @@ abstract class Immunization with _$Immunization implements Resource {
 }
 
 @freezed
-abstract class Medication with _$Medication implements Resource {
+abstract class Medication with Resource implements _$Medication {
+  Medication._();
   factory Medication({
-    @JsonKey(defaultValue: 'Medication') String resourceType,
+    @JsonKey(defaultValue: 'Medication') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -194,10 +201,13 @@ abstract class Medication with _$Medication implements Resource {
 
 @freezed
 abstract class MedicationAdministration
-    with _$MedicationAdministration
-    implements Resource {
+    with Resource
+    implements _$MedicationAdministration {
+  MedicationAdministration._();
   factory MedicationAdministration({
-    @JsonKey(defaultValue: 'MedicationAdministration') String resourceType,
+    @JsonKey(defaultValue: 'MedicationAdministration')
+    @required
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -237,9 +247,10 @@ abstract class MedicationAdministration
 }
 
 @freezed
-abstract class MedicationOrder with _$MedicationOrder implements Resource {
+abstract class MedicationOrder with Resource implements _$MedicationOrder {
+  MedicationOrder._();
   factory MedicationOrder({
-    @JsonKey(defaultValue: 'MedicationOrder') String resourceType,
+    @JsonKey(defaultValue: 'MedicationOrder') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

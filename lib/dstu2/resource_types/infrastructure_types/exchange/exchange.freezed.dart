@@ -16,7 +16,7 @@ class _$OperationOutcomeTearOff {
   const _$OperationOutcomeTearOff();
 
   _OperationOutcome call(
-      {@JsonKey(defaultValue: 'OperationOutcome') String resourceType,
+      {@required @JsonKey(defaultValue: 'OperationOutcome') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -314,9 +314,9 @@ class __$OperationOutcomeCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_OperationOutcome implements _OperationOutcome {
+class _$_OperationOutcome extends _OperationOutcome {
   _$_OperationOutcome(
-      {@JsonKey(defaultValue: 'OperationOutcome') this.resourceType,
+      {@required @JsonKey(defaultValue: 'OperationOutcome') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -329,7 +329,9 @@ class _$_OperationOutcome implements _OperationOutcome {
       @JsonKey(name: '_id') this.idElement,
       @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       @JsonKey(name: '_language') this.languageElement})
-      : assert(issue != null);
+      : assert(resourceType != null),
+        assert(issue != null),
+        super._();
 
   factory _$_OperationOutcome.fromJson(Map<String, dynamic> json) =>
       _$_$_OperationOutcomeFromJson(json);
@@ -440,22 +442,30 @@ class _$_OperationOutcome implements _OperationOutcome {
   }
 }
 
-abstract class _OperationOutcome implements OperationOutcome {
+abstract class _OperationOutcome extends OperationOutcome {
+  _OperationOutcome._() : super._();
   factory _OperationOutcome(
-          {@JsonKey(defaultValue: 'OperationOutcome') String resourceType,
-          Id id,
-          Meta meta,
-          FhirUri implicitRules,
-          Code language,
-          Narrative text,
-          List<Resource> contained,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          FhirExtension modifierExtension,
-          @required @JsonKey(required: true) List<OperationOutcomeIssue> issue,
-          @JsonKey(name: '_id') Element idElement,
-          @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-          @JsonKey(name: '_language') Element languageElement}) =
-      _$_OperationOutcome;
+      {@required
+      @JsonKey(defaultValue: 'OperationOutcome')
+          String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      FhirExtension modifierExtension,
+      @required
+      @JsonKey(required: true)
+          List<OperationOutcomeIssue> issue,
+      @JsonKey(name: '_id')
+          Element idElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement}) = _$_OperationOutcome;
 
   factory _OperationOutcome.fromJson(Map<String, dynamic> json) =
       _$_OperationOutcome.fromJson;
@@ -504,7 +514,8 @@ class _$SubscriptionTearOff {
   const _$SubscriptionTearOff();
 
   _Subscription call(
-      {@JsonKey(defaultValue: 'Subscription')
+      {@required
+      @JsonKey(defaultValue: 'Subscription')
           String resourceType,
       Id id,
       Meta meta,
@@ -1032,9 +1043,10 @@ class __$SubscriptionCopyWithImpl<$Res> extends _$SubscriptionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Subscription implements _Subscription {
+class _$_Subscription extends _Subscription {
   _$_Subscription(
-      {@JsonKey(defaultValue: 'Subscription')
+      {@required
+      @JsonKey(defaultValue: 'Subscription')
           this.resourceType,
       this.id,
       this.meta,
@@ -1075,10 +1087,12 @@ class _$_Subscription implements _Subscription {
           this.criteriaElement,
       @JsonKey(name: '_error')
           this.errorElement})
-      : assert(criteria != null),
+      : assert(resourceType != null),
+        assert(criteria != null),
         assert(reason != null),
         assert(status != null),
-        assert(channel != null);
+        assert(channel != null),
+        super._();
 
   factory _$_Subscription.fromJson(Map<String, dynamic> json) =>
       _$_$_SubscriptionFromJson(json);
@@ -1258,9 +1272,11 @@ class _$_Subscription implements _Subscription {
   }
 }
 
-abstract class _Subscription implements Subscription {
+abstract class _Subscription extends Subscription {
+  _Subscription._() : super._();
   factory _Subscription(
-      {@JsonKey(defaultValue: 'Subscription')
+      {@required
+      @JsonKey(defaultValue: 'Subscription')
           String resourceType,
       Id id,
       Meta meta,
@@ -1378,7 +1394,7 @@ class _$MessageHeaderTearOff {
   const _$MessageHeaderTearOff();
 
   _MessageHeader call(
-      {@JsonKey(defaultValue: 'MessageHeader') String resourceType,
+      {@required @JsonKey(defaultValue: 'MessageHeader') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1857,9 +1873,9 @@ class __$MessageHeaderCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_MessageHeader implements _MessageHeader {
+class _$_MessageHeader extends _MessageHeader {
   _$_MessageHeader(
-      {@JsonKey(defaultValue: 'MessageHeader') this.resourceType,
+      {@required @JsonKey(defaultValue: 'MessageHeader') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
@@ -1881,9 +1897,11 @@ class _$_MessageHeader implements _MessageHeader {
       this.data,
       @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       @JsonKey(name: '_language') this.languageElement})
-      : assert(timestamp != null),
+      : assert(resourceType != null),
+        assert(timestamp != null),
         assert(event != null),
-        assert(source != null);
+        assert(source != null),
+        super._();
 
   factory _$_MessageHeader.fromJson(Map<String, dynamic> json) =>
       _$_$_MessageHeaderFromJson(json);
@@ -2045,9 +2063,10 @@ class _$_MessageHeader implements _MessageHeader {
   }
 }
 
-abstract class _MessageHeader implements MessageHeader {
+abstract class _MessageHeader extends MessageHeader {
+  _MessageHeader._() : super._();
   factory _MessageHeader(
-      {@JsonKey(defaultValue: 'MessageHeader') String resourceType,
+      {@required @JsonKey(defaultValue: 'MessageHeader') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2136,7 +2155,7 @@ class _$ParametersTearOff {
   const _$ParametersTearOff();
 
   _Parameters call(
-      {@JsonKey(defaultValue: 'Parameters') String resourceType,
+      {@required @JsonKey(defaultValue: 'Parameters') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2334,16 +2353,18 @@ class __$ParametersCopyWithImpl<$Res> extends _$ParametersCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Parameters implements _Parameters {
+class _$_Parameters extends _Parameters {
   _$_Parameters(
-      {@JsonKey(defaultValue: 'Parameters') this.resourceType,
+      {@required @JsonKey(defaultValue: 'Parameters') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
       this.language,
       this.parameter,
       @JsonKey(name: '_implicitRules') this.implicitRulesElement,
-      @JsonKey(name: '_language') this.languageElement});
+      @JsonKey(name: '_language') this.languageElement})
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Parameters.fromJson(Map<String, dynamic> json) =>
       _$_$_ParametersFromJson(json);
@@ -2423,9 +2444,10 @@ class _$_Parameters implements _Parameters {
   }
 }
 
-abstract class _Parameters implements Parameters {
+abstract class _Parameters extends Parameters {
+  _Parameters._() : super._();
   factory _Parameters(
-      {@JsonKey(defaultValue: 'Parameters') String resourceType,
+      {@required @JsonKey(defaultValue: 'Parameters') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,

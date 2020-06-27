@@ -8,9 +8,10 @@ part 'workflow1.freezed.dart';
 part 'workflow1.g.dart';
 
 @freezed
-abstract class OrderResponse with _$OrderResponse implements Resource {
+abstract class OrderResponse with Resource implements _$OrderResponse {
+  OrderResponse._();
   factory OrderResponse({
-    @JsonKey(defaultValue: 'OrderResponse') String resourceType,
+    @JsonKey(defaultValue: 'OrderResponse') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -36,9 +37,10 @@ abstract class OrderResponse with _$OrderResponse implements Resource {
 }
 
 @freezed
-abstract class Order with _$Order implements Resource {
+abstract class Order with Resource implements _$Order {
+  Order._();
   factory Order({
-    @JsonKey(defaultValue: 'Order') String resourceType,
+    @JsonKey(defaultValue: 'Order') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -62,9 +64,10 @@ abstract class Order with _$Order implements Resource {
 }
 
 @freezed
-abstract class DeviceUseRequest with _$DeviceUseRequest implements Resource {
+abstract class DeviceUseRequest with Resource implements _$DeviceUseRequest {
+  DeviceUseRequest._();
   factory DeviceUseRequest({
-    @JsonKey(defaultValue: 'DeviceUseRequest') String resourceType,
+    @JsonKey(defaultValue: 'DeviceUseRequest') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -103,10 +106,11 @@ abstract class DeviceUseRequest with _$DeviceUseRequest implements Resource {
 
 @freezed
 abstract class DeviceUseStatement
-    with _$DeviceUseStatement
-    implements Resource {
+    with Resource
+    implements _$DeviceUseStatement {
+  DeviceUseStatement._();
   factory DeviceUseStatement({
-    @JsonKey(defaultValue: 'DeviceUseStatement') String resourceType,
+    @JsonKey(defaultValue: 'DeviceUseStatement') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -139,10 +143,13 @@ abstract class DeviceUseStatement
 
 @freezed
 abstract class CommunicationRequest
-    with _$CommunicationRequest
-    implements Resource {
+    with Resource
+    implements _$CommunicationRequest {
+  CommunicationRequest._();
   factory CommunicationRequest({
-    @JsonKey(defaultValue: 'CommunicationRequest') String resourceType,
+    @JsonKey(defaultValue: 'CommunicationRequest')
+    @required
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

@@ -1240,7 +1240,7 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ActivityDefinition implements _ActivityDefinition {
+class _$_ActivityDefinition extends _ActivityDefinition {
   _$_ActivityDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'ActivityDefinition')
@@ -1325,7 +1325,8 @@ class _$_ActivityDefinition implements _ActivityDefinition {
           this.kindElement,
       @JsonKey(name: '_timingDateTime')
           this.timingDateTimeElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_ActivityDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_ActivityDefinitionFromJson(json);
@@ -1670,7 +1671,8 @@ class _$_ActivityDefinition implements _ActivityDefinition {
   }
 }
 
-abstract class _ActivityDefinition implements ActivityDefinition {
+abstract class _ActivityDefinition extends ActivityDefinition {
+  _ActivityDefinition._() : super._();
   factory _ActivityDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'ActivityDefinition')
@@ -3413,7 +3415,7 @@ class __$PlanDefinitionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_PlanDefinition implements _PlanDefinition {
+class _$_PlanDefinition extends _PlanDefinition {
   _$_PlanDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'PlanDefinition')
@@ -3482,7 +3484,8 @@ class _$_PlanDefinition implements _PlanDefinition {
           this.lastReviewDateElement,
       @JsonKey(name: '_copyright')
           this.copyrightElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_PlanDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_PlanDefinitionFromJson(json);
@@ -3769,7 +3772,8 @@ class _$_PlanDefinition implements _PlanDefinition {
   }
 }
 
-abstract class _PlanDefinition implements PlanDefinition {
+abstract class _PlanDefinition extends PlanDefinition {
+  _PlanDefinition._() : super._();
   factory _PlanDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'PlanDefinition')
@@ -8032,7 +8036,7 @@ class __$QuestionnaireCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Questionnaire implements _Questionnaire {
+class _$_Questionnaire extends _Questionnaire {
   _$_Questionnaire(
       {@required
       @JsonKey(required: true, defaultValue: 'Questionnaire')
@@ -8096,7 +8100,8 @@ class _$_Questionnaire implements _Questionnaire {
           this.copyrightElement,
       @JsonKey(name: '_subjectType')
           this.subjectTypeElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Questionnaire.fromJson(Map<String, dynamic> json) =>
       _$_$_QuestionnaireFromJson(json);
@@ -8363,7 +8368,8 @@ class _$_Questionnaire implements _Questionnaire {
   }
 }
 
-abstract class _Questionnaire implements Questionnaire {
+abstract class _Questionnaire extends Questionnaire {
+  _Questionnaire._() : super._();
   factory _Questionnaire(
       {@required
       @JsonKey(required: true, defaultValue: 'Questionnaire')
@@ -12141,7 +12147,7 @@ class __$ServiceDefinitionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ServiceDefinition implements _ServiceDefinition {
+class _$_ServiceDefinition extends _ServiceDefinition {
   _$_ServiceDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'ServiceDefinition')
@@ -12209,7 +12215,8 @@ class _$_ServiceDefinition implements _ServiceDefinition {
           this.lastReviewDateElement,
       @JsonKey(name: '_copyright')
           this.copyrightElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_ServiceDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_ServiceDefinitionFromJson(json);
@@ -12492,7 +12499,8 @@ class _$_ServiceDefinition implements _ServiceDefinition {
   }
 }
 
-abstract class _ServiceDefinition implements ServiceDefinition {
+abstract class _ServiceDefinition extends ServiceDefinition {
+  _ServiceDefinition._() : super._();
   factory _ServiceDefinition(
       {@required
       @JsonKey(required: true, defaultValue: 'ServiceDefinition')

@@ -8,7 +8,8 @@ part 'quality_reporting.freezed.dart';
 part 'quality_reporting.g.dart';
 
 @freezed
-abstract class Measure with _$Measure implements Resource {
+abstract class Measure with Resource implements _$Measure {
+  Measure._();
   factory Measure({
     @JsonKey(required: true, defaultValue: 'Measure')
     @required
@@ -146,7 +147,8 @@ abstract class MeasureSupplementalData with _$MeasureSupplementalData {
 }
 
 @freezed
-abstract class MeasureReport with _$MeasureReport implements Resource {
+abstract class MeasureReport with Resource implements _$MeasureReport {
+  MeasureReport._();
   factory MeasureReport({
     @JsonKey(required: true, defaultValue: 'MeasureReport')
     @required

@@ -8,7 +8,8 @@ part 'individuals.freezed.dart';
 part 'individuals.g.dart';
 
 @freezed
-abstract class Group with _$Group implements Resource {
+abstract class Group with Resource implements _$Group {
+  Group._();
   factory Group({
     @JsonKey(required: true, defaultValue: 'Group')
     @required
@@ -69,7 +70,8 @@ abstract class GroupMember with _$GroupMember {
 }
 
 @freezed
-abstract class Patient with _$Patient implements Resource {
+abstract class Patient with Resource implements _$Patient {
+  Patient._();
   factory Patient({
     @JsonKey(required: true, defaultValue: 'Patient')
     @required
@@ -163,7 +165,8 @@ abstract class PatientLink with _$PatientLink {
 }
 
 @freezed
-abstract class Person with _$Person implements Resource {
+abstract class Person with Resource implements _$Person {
+  Person._();
   factory Person({
     @JsonKey(required: true, defaultValue: 'Person')
     @required
@@ -206,7 +209,8 @@ abstract class PersonLink with _$PersonLink {
 }
 
 @freezed
-abstract class Practitioner with _$Practitioner implements Resource {
+abstract class Practitioner with Resource implements _$Practitioner {
+  Practitioner._();
   factory Practitioner({
     @JsonKey(required: true, defaultValue: 'Practitioner')
     @required
@@ -250,7 +254,8 @@ abstract class PractitionerQualification with _$PractitionerQualification {
 }
 
 @freezed
-abstract class PractitionerRole with _$PractitionerRole implements Resource {
+abstract class PractitionerRole with Resource implements _$PractitionerRole {
+  PractitionerRole._();
   factory PractitionerRole({
     @JsonKey(required: true, defaultValue: 'PractitionerRole')
     @required
@@ -315,7 +320,8 @@ abstract class PractitionerRoleNotAvailable
 }
 
 @freezed
-abstract class RelatedPerson with _$RelatedPerson implements Resource {
+abstract class RelatedPerson with Resource implements _$RelatedPerson {
+  RelatedPerson._();
   factory RelatedPerson({
     @JsonKey(required: true, defaultValue: 'RelatedPerson')
     @required

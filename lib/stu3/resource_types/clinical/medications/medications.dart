@@ -8,7 +8,8 @@ part 'medications.freezed.dart';
 part 'medications.g.dart';
 
 @freezed
-abstract class Immunization with _$Immunization implements Resource {
+abstract class Immunization with Resource implements _$Immunization {
+  Immunization._();
   factory Immunization({
     @JsonKey(required: true, defaultValue: 'Immunization')
     @required
@@ -109,8 +110,9 @@ abstract class ImmunizationVaccinationProtocol
 
 @freezed
 abstract class ImmunizationRecommendation
-    with _$ImmunizationRecommendation
-    implements Resource {
+    with Resource
+    implements _$ImmunizationRecommendation {
+  ImmunizationRecommendation._();
   factory ImmunizationRecommendation({
     @JsonKey(required: true, defaultValue: 'ImmunizationRecommendation')
     @required
@@ -184,7 +186,8 @@ abstract class ImmunizationRecommendationProtocol
 }
 
 @freezed
-abstract class Medication with _$Medication implements Resource {
+abstract class Medication with Resource implements _$Medication {
+  Medication._();
   factory Medication({
     @JsonKey(required: true, defaultValue: 'Medication')
     @required
@@ -263,8 +266,9 @@ abstract class MedicationBatch with _$MedicationBatch {
 
 @freezed
 abstract class MedicationAdministration
-    with _$MedicationAdministration
-    implements Resource {
+    with Resource
+    implements _$MedicationAdministration {
+  MedicationAdministration._();
   factory MedicationAdministration({
     @JsonKey(required: true, defaultValue: 'MedicationAdministration')
     @required
@@ -339,8 +343,9 @@ abstract class MedicationAdministrationDosage
 
 @freezed
 abstract class MedicationDispense
-    with _$MedicationDispense
-    implements Resource {
+    with Resource
+    implements _$MedicationDispense {
+  MedicationDispense._();
   factory MedicationDispense({
     @JsonKey(required: true, defaultValue: 'MedicationDispense')
     @required
@@ -414,7 +419,8 @@ abstract class MedicationDispenseSubstitution
 }
 
 @freezed
-abstract class MedicationRequest with _$MedicationRequest implements Resource {
+abstract class MedicationRequest with Resource implements _$MedicationRequest {
+  MedicationRequest._();
   factory MedicationRequest({
     @JsonKey(required: true, defaultValue: 'MedicationRequest')
     @required
@@ -505,8 +511,9 @@ abstract class MedicationRequestSubstitution
 
 @freezed
 abstract class MedicationStatement
-    with _$MedicationStatement
-    implements Resource {
+    with Resource
+    implements _$MedicationStatement {
+  MedicationStatement._();
   factory MedicationStatement({
     @JsonKey(required: true, defaultValue: 'MedicationStatement')
     @required

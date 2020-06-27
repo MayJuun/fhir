@@ -447,7 +447,7 @@ class __$GroupCopyWithImpl<$Res> extends _$GroupCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Group implements _Group {
+class _$_Group extends _Group {
   _$_Group(
       {@required
       @JsonKey(required: true, defaultValue: 'Group')
@@ -481,7 +481,8 @@ class _$_Group implements _Group {
           this.nameElement,
       @JsonKey(name: '_quantity')
           this.quantityElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Group.fromJson(Map<String, dynamic> json) =>
       _$_$_GroupFromJson(json);
@@ -649,7 +650,8 @@ class _$_Group implements _Group {
   }
 }
 
-abstract class _Group implements Group {
+abstract class _Group extends Group {
+  _Group._() : super._();
   factory _Group(
       {@required
       @JsonKey(required: true, defaultValue: 'Group')
@@ -2059,7 +2061,7 @@ class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Patient implements _Patient {
+class _$_Patient extends _Patient {
   _$_Patient(
       {@required
       @JsonKey(required: true, defaultValue: 'Patient')
@@ -2107,7 +2109,8 @@ class _$_Patient implements _Patient {
           this.multipleBirthBooleanElement,
       @JsonKey(name: '_multipleBirthInteger')
           this.multipleBirthIntegerElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Patient.fromJson(Map<String, dynamic> json) =>
       _$_$_PatientFromJson(json);
@@ -2330,7 +2333,8 @@ class _$_Patient implements _Patient {
   }
 }
 
-abstract class _Patient implements Patient {
+abstract class _Patient extends Patient {
+  _Patient._() : super._();
   factory _Patient(
       {@required
       @JsonKey(required: true, defaultValue: 'Patient')
@@ -3866,7 +3870,7 @@ class __$PersonCopyWithImpl<$Res> extends _$PersonCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Person implements _Person {
+class _$_Person extends _Person {
   _$_Person(
       {@required
       @JsonKey(required: true, defaultValue: 'Person')
@@ -3897,7 +3901,8 @@ class _$_Person implements _Person {
           this.birthDateElement,
       @JsonKey(name: '_active')
           this.activeElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Person.fromJson(Map<String, dynamic> json) =>
       _$_$_PersonFromJson(json);
@@ -4058,7 +4063,8 @@ class _$_Person implements _Person {
   }
 }
 
-abstract class _Person implements Person {
+abstract class _Person extends Person {
+  _Person._() : super._();
   factory _Person(
       {@required
       @JsonKey(required: true, defaultValue: 'Person')
@@ -4776,7 +4782,7 @@ class __$PractitionerCopyWithImpl<$Res> extends _$PractitionerCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Practitioner implements _Practitioner {
+class _$_Practitioner extends _Practitioner {
   _$_Practitioner(
       {@required
       @JsonKey(required: true, defaultValue: 'Practitioner')
@@ -4807,7 +4813,8 @@ class _$_Practitioner implements _Practitioner {
           this.genderElement,
       @JsonKey(name: '_birthDate')
           this.birthDateElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Practitioner.fromJson(Map<String, dynamic> json) =>
       _$_$_PractitionerFromJson(json);
@@ -4969,7 +4976,8 @@ class _$_Practitioner implements _Practitioner {
   }
 }
 
-abstract class _Practitioner implements Practitioner {
+abstract class _Practitioner extends Practitioner {
+  _Practitioner._() : super._();
   factory _Practitioner(
       {@required
       @JsonKey(required: true, defaultValue: 'Practitioner')
@@ -5771,7 +5779,7 @@ class __$PractitionerRoleCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_PractitionerRole implements _PractitionerRole {
+class _$_PractitionerRole extends _PractitionerRole {
   _$_PractitionerRole(
       {@required
       @JsonKey(required: true, defaultValue: 'PractitionerRole')
@@ -5803,7 +5811,8 @@ class _$_PractitionerRole implements _PractitionerRole {
           this.activeElement,
       @JsonKey(name: '_availabilityExceptions')
           this.availabilityExceptionsElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_PractitionerRole.fromJson(Map<String, dynamic> json) =>
       _$_$_PractitionerRoleFromJson(json);
@@ -5980,7 +5989,8 @@ class _$_PractitionerRole implements _PractitionerRole {
   }
 }
 
-abstract class _PractitionerRole implements PractitionerRole {
+abstract class _PractitionerRole extends PractitionerRole {
+  _PractitionerRole._() : super._();
   factory _PractitionerRole(
       {@required
       @JsonKey(required: true, defaultValue: 'PractitionerRole')
@@ -7123,7 +7133,7 @@ class __$RelatedPersonCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_RelatedPerson implements _RelatedPerson {
+class _$_RelatedPerson extends _RelatedPerson {
   _$_RelatedPerson(
       {@required
       @JsonKey(required: true, defaultValue: 'RelatedPerson')
@@ -7156,7 +7166,8 @@ class _$_RelatedPerson implements _RelatedPerson {
           this.genderElement,
       @JsonKey(name: '_birthDate')
           this.birthDateElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_RelatedPerson.fromJson(Map<String, dynamic> json) =>
       _$_$_RelatedPersonFromJson(json);
@@ -7324,7 +7335,8 @@ class _$_RelatedPerson implements _RelatedPerson {
   }
 }
 
-abstract class _RelatedPerson implements RelatedPerson {
+abstract class _RelatedPerson extends RelatedPerson {
+  _RelatedPerson._() : super._();
   factory _RelatedPerson(
       {@required
       @JsonKey(required: true, defaultValue: 'RelatedPerson')

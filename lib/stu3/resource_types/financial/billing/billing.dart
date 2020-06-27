@@ -7,7 +7,8 @@ part 'billing.freezed.dart';
 part 'billing.g.dart';
 
 @freezed
-abstract class Claim with _$Claim implements Resource {
+abstract class Claim with Resource implements _$Claim {
+  Claim._();
   factory Claim({
     @JsonKey(required: true, defaultValue: 'Claim')
     @required
@@ -70,6 +71,7 @@ abstract class ClaimRelated with _$ClaimRelated {
 
 @freezed
 abstract class ClaimPayee with _$ClaimPayee {
+  ClaimPayee._();
   factory ClaimPayee({
     @JsonKey(required: true) CodeableConcept type,
     @JsonKey(required: true, defaultValue: 'ClaimPayee')
@@ -267,7 +269,8 @@ abstract class ClaimSubDetail with _$ClaimSubDetail {
 }
 
 @freezed
-abstract class ClaimResponse with _$ClaimResponse implements Resource {
+abstract class ClaimResponse with Resource implements _$ClaimResponse {
+  ClaimResponse._();
   factory ClaimResponse({
     @JsonKey(required: true, defaultValue: 'ClaimResponse')
     @required

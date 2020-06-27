@@ -8,9 +8,10 @@ part 'workflow2.freezed.dart';
 part 'workflow2.g.dart';
 
 @freezed
-abstract class ProcessRequest with _$ProcessRequest implements Resource {
+abstract class ProcessRequest with Resource implements _$ProcessRequest {
+  ProcessRequest._();
   factory ProcessRequest({
-    @JsonKey(defaultValue: 'ProcessRequest') String resourceType,
+    @JsonKey(defaultValue: 'ProcessRequest') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -44,9 +45,10 @@ abstract class ProcessRequest with _$ProcessRequest implements Resource {
 }
 
 @freezed
-abstract class SupplyDelivery with _$SupplyDelivery implements Resource {
+abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
+  SupplyDelivery._();
   factory SupplyDelivery({
-    @JsonKey(defaultValue: 'SupplyDelivery') String resourceType,
+    @JsonKey(defaultValue: 'SupplyDelivery') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -77,9 +79,10 @@ abstract class SupplyDelivery with _$SupplyDelivery implements Resource {
 }
 
 @freezed
-abstract class ProcessResponse with _$ProcessResponse implements Resource {
+abstract class ProcessResponse with Resource implements _$ProcessResponse {
+  ProcessResponse._();
   factory ProcessResponse({
-    @JsonKey(defaultValue: 'ProcessResponse') String resourceType,
+    @JsonKey(defaultValue: 'ProcessResponse') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -108,9 +111,10 @@ abstract class ProcessResponse with _$ProcessResponse implements Resource {
 }
 
 @freezed
-abstract class SupplyRequest with _$SupplyRequest implements Resource {
+abstract class SupplyRequest with Resource implements _$SupplyRequest {
+  SupplyRequest._();
   factory SupplyRequest({
-    @JsonKey(defaultValue: 'SupplyRequest') String resourceType,
+    @JsonKey(defaultValue: 'SupplyRequest') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

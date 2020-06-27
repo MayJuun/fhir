@@ -669,7 +669,7 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Device implements _Device {
+class _$_Device extends _Device {
   _$_Device(
       {@required
       @JsonKey(required: true, defaultValue: 'Device')
@@ -717,7 +717,8 @@ class _$_Device implements _Device {
           this.versionElement,
       @JsonKey(name: '_url')
           this.urlElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Device.fromJson(Map<String, dynamic> json) =>
       _$_$_DeviceFromJson(json);
@@ -938,7 +939,8 @@ class _$_Device implements _Device {
   }
 }
 
-abstract class _Device implements Device {
+abstract class _Device extends Device {
+  _Device._() : super._();
   factory _Device(
       {@required
       @JsonKey(required: true, defaultValue: 'Device')
@@ -2081,7 +2083,7 @@ class __$DeviceComponentCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_DeviceComponent implements _DeviceComponent {
+class _$_DeviceComponent extends _DeviceComponent {
   _$_DeviceComponent(
       {@required
       @JsonKey(required: true, defaultValue: 'DeviceComponent')
@@ -2112,7 +2114,8 @@ class _$_DeviceComponent implements _DeviceComponent {
           this.lastSystemChangeElement,
       @JsonKey(name: '_measurementPrinciple')
           this.measurementPrincipleElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_DeviceComponent.fromJson(Map<String, dynamic> json) =>
       _$_$_DeviceComponentFromJson(json);
@@ -2272,7 +2275,8 @@ class _$_DeviceComponent implements _DeviceComponent {
   }
 }
 
-abstract class _DeviceComponent implements DeviceComponent {
+abstract class _DeviceComponent extends DeviceComponent {
+  _DeviceComponent._() : super._();
   factory _DeviceComponent(
       {@required
       @JsonKey(required: true, defaultValue: 'DeviceComponent')
@@ -3129,7 +3133,7 @@ class __$DeviceMetricCopyWithImpl<$Res> extends _$DeviceMetricCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_DeviceMetric implements _DeviceMetric {
+class _$_DeviceMetric extends _DeviceMetric {
   _$_DeviceMetric(
       {@required
       @JsonKey(required: true, defaultValue: 'DeviceMetric')
@@ -3164,7 +3168,8 @@ class _$_DeviceMetric implements _DeviceMetric {
           this.colorElement,
       @JsonKey(name: '_category')
           this.categoryElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_DeviceMetric.fromJson(Map<String, dynamic> json) =>
       _$_$_DeviceMetricFromJson(json);
@@ -3331,7 +3336,8 @@ class _$_DeviceMetric implements _DeviceMetric {
   }
 }
 
-abstract class _DeviceMetric implements DeviceMetric {
+abstract class _DeviceMetric extends DeviceMetric {
+  _DeviceMetric._() : super._();
   factory _DeviceMetric(
       {@required
       @JsonKey(required: true, defaultValue: 'DeviceMetric')
@@ -4244,7 +4250,7 @@ class __$EndpointCopyWithImpl<$Res> extends _$EndpointCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Endpoint implements _Endpoint {
+class _$_Endpoint extends _Endpoint {
   _$_Endpoint(
       {@required
       @JsonKey(required: true, defaultValue: 'Endpoint')
@@ -4282,7 +4288,8 @@ class _$_Endpoint implements _Endpoint {
           this.addressElement,
       @JsonKey(name: '_header')
           this.headerElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Endpoint.fromJson(Map<String, dynamic> json) =>
       _$_$_EndpointFromJson(json);
@@ -4465,7 +4472,8 @@ class _$_Endpoint implements _Endpoint {
   }
 }
 
-abstract class _Endpoint implements Endpoint {
+abstract class _Endpoint extends Endpoint {
+  _Endpoint._() : super._();
   factory _Endpoint(
       {@required
       @JsonKey(required: true, defaultValue: 'Endpoint')
@@ -5352,7 +5360,7 @@ class __$HealthcareServiceCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_HealthcareService implements _HealthcareService {
+class _$_HealthcareService extends _HealthcareService {
   _$_HealthcareService(
       {@required
       @JsonKey(required: true, defaultValue: 'HealthcareService')
@@ -5406,7 +5414,8 @@ class _$_HealthcareService implements _HealthcareService {
           this.appointmentRequiredElement,
       @JsonKey(name: '_availabilityExceptions')
           this.availabilityExceptionsElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_HealthcareService.fromJson(Map<String, dynamic> json) =>
       _$_$_HealthcareServiceFromJson(json);
@@ -5653,7 +5662,8 @@ class _$_HealthcareService implements _HealthcareService {
   }
 }
 
-abstract class _HealthcareService implements HealthcareService {
+abstract class _HealthcareService extends HealthcareService {
+  _HealthcareService._() : super._();
   factory _HealthcareService(
       {@required
       @JsonKey(required: true, defaultValue: 'HealthcareService')
@@ -6995,7 +7005,7 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Location implements _Location {
+class _$_Location extends _Location {
   _$_Location(
       {@required
       @JsonKey(required: true, defaultValue: 'Location')
@@ -7036,7 +7046,8 @@ class _$_Location implements _Location {
           this.descriptionElement,
       @JsonKey(name: '_mode')
           this.modeElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Location.fromJson(Map<String, dynamic> json) =>
       _$_$_LocationFromJson(json);
@@ -7235,7 +7246,8 @@ class _$_Location implements _Location {
   }
 }
 
-abstract class _Location implements Location {
+abstract class _Location extends Location {
+  _Location._() : super._();
   factory _Location(
       {@required
       @JsonKey(required: true, defaultValue: 'Location')
@@ -8052,7 +8064,7 @@ class __$OrganizationCopyWithImpl<$Res> extends _$OrganizationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Organization implements _Organization {
+class _$_Organization extends _Organization {
   _$_Organization(
       {@required
       @JsonKey(required: true, defaultValue: 'Organization')
@@ -8082,7 +8094,8 @@ class _$_Organization implements _Organization {
           this.nameElement,
       @JsonKey(name: '_alias')
           this.aliasElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Organization.fromJson(Map<String, dynamic> json) =>
       _$_$_OrganizationFromJson(json);
@@ -8242,7 +8255,8 @@ class _$_Organization implements _Organization {
   }
 }
 
-abstract class _Organization implements Organization {
+abstract class _Organization extends Organization {
+  _Organization._() : super._();
   factory _Organization(
       {@required
       @JsonKey(required: true, defaultValue: 'Organization')
@@ -8912,7 +8926,7 @@ class __$SubstanceCopyWithImpl<$Res> extends _$SubstanceCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Substance implements _Substance {
+class _$_Substance extends _Substance {
   _$_Substance(
       {@required
       @JsonKey(required: true, defaultValue: 'Substance')
@@ -8939,7 +8953,8 @@ class _$_Substance implements _Substance {
           this.statusElement,
       @JsonKey(name: '_description')
           this.descriptionElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Substance.fromJson(Map<String, dynamic> json) =>
       _$_$_SubstanceFromJson(json);
@@ -9079,7 +9094,8 @@ class _$_Substance implements _Substance {
   }
 }
 
-abstract class _Substance implements Substance {
+abstract class _Substance extends Substance {
+  _Substance._() : super._();
   factory _Substance(
       {@required
       @JsonKey(required: true, defaultValue: 'Substance')

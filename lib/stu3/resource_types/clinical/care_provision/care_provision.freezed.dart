@@ -574,7 +574,7 @@ class __$CarePlanCopyWithImpl<$Res> extends _$CarePlanCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_CarePlan implements _CarePlan {
+class _$_CarePlan extends _CarePlan {
   _$_CarePlan(
       {@required
       @JsonKey(required: true, defaultValue: 'CarePlan')
@@ -619,7 +619,8 @@ class _$_CarePlan implements _CarePlan {
           this.titleElement,
       @JsonKey(name: '_description')
           this.descriptionElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_CarePlan.fromJson(Map<String, dynamic> json) =>
       _$_$_CarePlanFromJson(json);
@@ -834,7 +835,8 @@ class _$_CarePlan implements _CarePlan {
   }
 }
 
-abstract class _CarePlan implements CarePlan {
+abstract class _CarePlan extends CarePlan {
+  _CarePlan._() : super._();
   factory _CarePlan(
       {@required
       @JsonKey(required: true, defaultValue: 'CarePlan')
@@ -2510,7 +2512,7 @@ class __$CareTeamCopyWithImpl<$Res> extends _$CareTeamCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_CareTeam implements _CareTeam {
+class _$_CareTeam extends _CareTeam {
   _$_CareTeam(
       {@required
       @JsonKey(required: true, defaultValue: 'CareTeam')
@@ -2541,7 +2543,8 @@ class _$_CareTeam implements _CareTeam {
           this.statusElement,
       @JsonKey(name: '_name')
           this.nameElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_CareTeam.fromJson(Map<String, dynamic> json) =>
       _$_$_CareTeamFromJson(json);
@@ -2708,7 +2711,8 @@ class _$_CareTeam implements _CareTeam {
   }
 }
 
-abstract class _CareTeam implements CareTeam {
+abstract class _CareTeam extends CareTeam {
+  _CareTeam._() : super._();
   factory _CareTeam(
       {@required
       @JsonKey(required: true, defaultValue: 'CareTeam')
@@ -3616,7 +3620,7 @@ class __$GoalCopyWithImpl<$Res> extends _$GoalCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Goal implements _Goal {
+class _$_Goal extends _Goal {
   _$_Goal(
       {@required
       @JsonKey(required: true, defaultValue: 'Goal')
@@ -3656,7 +3660,8 @@ class _$_Goal implements _Goal {
           this.statusDateElement,
       @JsonKey(name: '_statusReason')
           this.statusReasonElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Goal.fromJson(Map<String, dynamic> json) =>
       _$_$_GoalFromJson(json);
@@ -3854,7 +3859,8 @@ class _$_Goal implements _Goal {
   }
 }
 
-abstract class _Goal implements Goal {
+abstract class _Goal extends Goal {
+  _Goal._() : super._();
   factory _Goal(
       {@required
       @JsonKey(required: true, defaultValue: 'Goal')
@@ -4797,7 +4803,7 @@ class __$NutritionOrderCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_NutritionOrder implements _NutritionOrder {
+class _$_NutritionOrder extends _NutritionOrder {
   _$_NutritionOrder(
       {@required
       @JsonKey(required: true, defaultValue: 'NutritionOrder')
@@ -4829,7 +4835,8 @@ class _$_NutritionOrder implements _NutritionOrder {
           this.statusElement,
       @JsonKey(name: '_dateTime')
           this.dateTimeElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_NutritionOrder.fromJson(Map<String, dynamic> json) =>
       _$_$_NutritionOrderFromJson(json);
@@ -5000,7 +5007,8 @@ class _$_NutritionOrder implements _NutritionOrder {
   }
 }
 
-abstract class _NutritionOrder implements NutritionOrder {
+abstract class _NutritionOrder extends NutritionOrder {
+  _NutritionOrder._() : super._();
   factory _NutritionOrder(
       {@required
       @JsonKey(required: true, defaultValue: 'NutritionOrder')
@@ -7754,7 +7762,7 @@ class __$ProcedureRequestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ProcedureRequest implements _ProcedureRequest {
+class _$_ProcedureRequest extends _ProcedureRequest {
   _$_ProcedureRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'ProcedureRequest')
@@ -7813,7 +7821,8 @@ class _$_ProcedureRequest implements _ProcedureRequest {
           this.asNeededBooleanElement,
       @JsonKey(name: '_authoredOn')
           this.authoredOnElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_ProcedureRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_ProcedureRequestFromJson(json);
@@ -8078,7 +8087,8 @@ class _$_ProcedureRequest implements _ProcedureRequest {
   }
 }
 
-abstract class _ProcedureRequest implements ProcedureRequest {
+abstract class _ProcedureRequest extends ProcedureRequest {
+  _ProcedureRequest._() : super._();
   factory _ProcedureRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'ProcedureRequest')
@@ -9189,7 +9199,7 @@ class __$ReferralRequestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_ReferralRequest implements _ReferralRequest {
+class _$_ReferralRequest extends _ReferralRequest {
   _$_ReferralRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'ReferralRequest')
@@ -9240,7 +9250,8 @@ class _$_ReferralRequest implements _ReferralRequest {
           this.authoredOnElement,
       @JsonKey(name: '_description')
           this.descriptionElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_ReferralRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_ReferralRequestFromJson(json);
@@ -9479,7 +9490,8 @@ class _$_ReferralRequest implements _ReferralRequest {
   }
 }
 
-abstract class _ReferralRequest implements ReferralRequest {
+abstract class _ReferralRequest extends ReferralRequest {
+  _ReferralRequest._() : super._();
   factory _ReferralRequest(
       {@required
       @JsonKey(required: true, defaultValue: 'ReferralRequest')
@@ -10387,7 +10399,7 @@ class __$RequestGroupCopyWithImpl<$Res> extends _$RequestGroupCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_RequestGroup implements _RequestGroup {
+class _$_RequestGroup extends _RequestGroup {
   _$_RequestGroup(
       {@required
       @JsonKey(required: true, defaultValue: 'RequestGroup')
@@ -10425,7 +10437,8 @@ class _$_RequestGroup implements _RequestGroup {
           this.priorityElement,
       @JsonKey(name: '_authoredOn')
           this.authoredOnElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_RequestGroup.fromJson(Map<String, dynamic> json) =>
       _$_$_RequestGroupFromJson(json);
@@ -10620,7 +10633,8 @@ class _$_RequestGroup implements _RequestGroup {
   }
 }
 
-abstract class _RequestGroup implements RequestGroup {
+abstract class _RequestGroup extends RequestGroup {
+  _RequestGroup._() : super._();
   factory _RequestGroup(
       {@required
       @JsonKey(required: true, defaultValue: 'RequestGroup')
@@ -13155,7 +13169,7 @@ class __$RiskAssessmentCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_RiskAssessment implements _RiskAssessment {
+class _$_RiskAssessment extends _RiskAssessment {
   _$_RiskAssessment(
       {@required
       @JsonKey(required: true, defaultValue: 'RiskAssessment')
@@ -13195,7 +13209,8 @@ class _$_RiskAssessment implements _RiskAssessment {
           this.mitigationElement,
       @JsonKey(name: '_comment')
           this.commentElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_RiskAssessment.fromJson(Map<String, dynamic> json) =>
       _$_$_RiskAssessmentFromJson(json);
@@ -13399,7 +13414,8 @@ class _$_RiskAssessment implements _RiskAssessment {
   }
 }
 
-abstract class _RiskAssessment implements RiskAssessment {
+abstract class _RiskAssessment extends RiskAssessment {
+  _RiskAssessment._() : super._();
   factory _RiskAssessment(
       {@required
       @JsonKey(required: true, defaultValue: 'RiskAssessment')
@@ -14436,7 +14452,7 @@ class __$VisionPrescriptionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_VisionPrescription implements _VisionPrescription {
+class _$_VisionPrescription extends _VisionPrescription {
   _$_VisionPrescription(
       {@required
       @JsonKey(required: true, defaultValue: 'VisionPrescription')
@@ -14463,7 +14479,8 @@ class _$_VisionPrescription implements _VisionPrescription {
           this.statusElement,
       @JsonKey(name: '_dateWritten')
           this.dateWrittenElement})
-      : assert(resourceType != null);
+      : assert(resourceType != null),
+        super._();
 
   factory _$_VisionPrescription.fromJson(Map<String, dynamic> json) =>
       _$_$_VisionPrescriptionFromJson(json);
@@ -14614,7 +14631,8 @@ class _$_VisionPrescription implements _VisionPrescription {
   }
 }
 
-abstract class _VisionPrescription implements VisionPrescription {
+abstract class _VisionPrescription extends VisionPrescription {
+  _VisionPrescription._() : super._();
   factory _VisionPrescription(
       {@required
       @JsonKey(required: true, defaultValue: 'VisionPrescription')

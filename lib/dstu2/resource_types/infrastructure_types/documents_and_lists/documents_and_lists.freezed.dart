@@ -16,7 +16,8 @@ class _$CompositionTearOff {
   const _$CompositionTearOff();
 
   _Composition call(
-      {@JsonKey(defaultValue: 'Composition')
+      {@required
+      @JsonKey(defaultValue: 'Composition')
           String resourceType,
       Id id,
       Meta meta,
@@ -661,9 +662,10 @@ class __$CompositionCopyWithImpl<$Res> extends _$CompositionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Composition implements _Composition {
+class _$_Composition extends _Composition {
   _$_Composition(
-      {@JsonKey(defaultValue: 'Composition')
+      {@required
+      @JsonKey(defaultValue: 'Composition')
           this.resourceType,
       this.id,
       this.meta,
@@ -713,12 +715,14 @@ class _$_Composition implements _Composition {
           this.titleElement,
       @JsonKey(name: '_confidentiality')
           this.confidentialityElement})
-      : assert(date != null),
+      : assert(resourceType != null),
+        assert(date != null),
         assert(type != null),
         assert(title != null),
         assert(status != null),
         assert(subject != null),
-        assert(author != null);
+        assert(author != null),
+        super._();
 
   factory _$_Composition.fromJson(Map<String, dynamic> json) =>
       _$_$_CompositionFromJson(json);
@@ -923,9 +927,11 @@ class _$_Composition implements _Composition {
   }
 }
 
-abstract class _Composition implements Composition {
+abstract class _Composition extends Composition {
+  _Composition._() : super._();
   factory _Composition(
-      {@JsonKey(defaultValue: 'Composition')
+      {@required
+      @JsonKey(defaultValue: 'Composition')
           String resourceType,
       Id id,
       Meta meta,
@@ -1064,7 +1070,8 @@ class _$DocumentReferenceTearOff {
   const _$DocumentReferenceTearOff();
 
   _DocumentReference call(
-      {@JsonKey(defaultValue: 'DocumentReference')
+      {@required
+      @JsonKey(defaultValue: 'DocumentReference')
           String resourceType,
       Id id,
       Meta meta,
@@ -1746,9 +1753,10 @@ class __$DocumentReferenceCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_DocumentReference implements _DocumentReference {
+class _$_DocumentReference extends _DocumentReference {
   _$_DocumentReference(
-      {@JsonKey(defaultValue: 'DocumentReference')
+      {@required
+      @JsonKey(defaultValue: 'DocumentReference')
           this.resourceType,
       this.id,
       this.meta,
@@ -1795,10 +1803,12 @@ class _$_DocumentReference implements _DocumentReference {
           this.docStatusElement,
       @JsonKey(name: '_description')
           this.descriptionElement})
-      : assert(type != null),
+      : assert(resourceType != null),
+        assert(type != null),
         assert(indexed != null),
         assert(status != null),
-        assert(content != null);
+        assert(content != null),
+        super._();
 
   factory _$_DocumentReference.fromJson(Map<String, dynamic> json) =>
       _$_$_DocumentReferenceFromJson(json);
@@ -2008,9 +2018,11 @@ class _$_DocumentReference implements _DocumentReference {
   }
 }
 
-abstract class _DocumentReference implements DocumentReference {
+abstract class _DocumentReference extends DocumentReference {
+  _DocumentReference._() : super._();
   factory _DocumentReference(
-      {@JsonKey(defaultValue: 'DocumentReference')
+      {@required
+      @JsonKey(defaultValue: 'DocumentReference')
           String resourceType,
       Id id,
       Meta meta,
@@ -2147,7 +2159,8 @@ class _$DocumentManifestTearOff {
   const _$DocumentManifestTearOff();
 
   _DocumentManifest call(
-      {@JsonKey(defaultValue: 'DocumentManifest')
+      {@required
+      @JsonKey(defaultValue: 'DocumentManifest')
           String resourceType,
       Id id,
       Meta meta,
@@ -2721,9 +2734,10 @@ class __$DocumentManifestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_DocumentManifest implements _DocumentManifest {
+class _$_DocumentManifest extends _DocumentManifest {
   _$_DocumentManifest(
-      {@JsonKey(defaultValue: 'DocumentManifest')
+      {@required
+      @JsonKey(defaultValue: 'DocumentManifest')
           this.resourceType,
       this.id,
       this.meta,
@@ -2762,8 +2776,10 @@ class _$_DocumentManifest implements _DocumentManifest {
           this.sourceElement,
       @JsonKey(name: '_description')
           this.descriptionElement})
-      : assert(status != null),
-        assert(content != null);
+      : assert(resourceType != null),
+        assert(status != null),
+        assert(content != null),
+        super._();
 
   factory _$_DocumentManifest.fromJson(Map<String, dynamic> json) =>
       _$_$_DocumentManifestFromJson(json);
@@ -2955,9 +2971,11 @@ class _$_DocumentManifest implements _DocumentManifest {
   }
 }
 
-abstract class _DocumentManifest implements DocumentManifest {
+abstract class _DocumentManifest extends DocumentManifest {
+  _DocumentManifest._() : super._();
   factory _DocumentManifest(
-      {@JsonKey(defaultValue: 'DocumentManifest')
+      {@required
+      @JsonKey(defaultValue: 'DocumentManifest')
           String resourceType,
       Id id,
       Meta meta,
@@ -3076,7 +3094,8 @@ class _$List_TearOff {
   const _$List_TearOff();
 
   _List_ call(
-      {@JsonKey(defaultValue: 'List')
+      {@required
+      @JsonKey(defaultValue: 'List')
           String resourceType,
       Id id,
       Meta meta,
@@ -3678,9 +3697,10 @@ class __$List_CopyWithImpl<$Res> extends _$List_CopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_List_ implements _List_ {
+class _$_List_ extends _List_ {
   _$_List_(
-      {@JsonKey(defaultValue: 'List')
+      {@required
+      @JsonKey(defaultValue: 'List')
           this.resourceType,
       this.id,
       this.meta,
@@ -3720,8 +3740,10 @@ class _$_List_ implements _List_ {
           this.titleElement,
       @JsonKey(name: '_date')
           this.dateElement})
-      : assert(status != null),
-        assert(mode != null);
+      : assert(resourceType != null),
+        assert(status != null),
+        assert(mode != null),
+        super._();
 
   factory _$_List_.fromJson(Map<String, dynamic> json) =>
       _$_$_List_FromJson(json);
@@ -3917,9 +3939,11 @@ class _$_List_ implements _List_ {
   }
 }
 
-abstract class _List_ implements List_ {
+abstract class _List_ extends List_ {
+  _List_._() : super._();
   factory _List_(
-      {@JsonKey(defaultValue: 'List')
+      {@required
+      @JsonKey(defaultValue: 'List')
           String resourceType,
       Id id,
       Meta meta,

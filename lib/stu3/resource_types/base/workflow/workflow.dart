@@ -7,7 +7,8 @@ part 'workflow.freezed.dart';
 part 'workflow.g.dart';
 
 @freezed
-abstract class Appointment with _$Appointment implements Resource {
+abstract class Appointment with Resource implements _$Appointment {
+  Appointment._();
   factory Appointment({
     @JsonKey(required: true, defaultValue: 'Appointment')
     @required
@@ -72,8 +73,9 @@ abstract class AppointmentParticipant with _$AppointmentParticipant {
 
 @freezed
 abstract class AppointmentResponse
-    with _$AppointmentResponse
-    implements Resource {
+    with Resource
+    implements _$AppointmentResponse {
+  AppointmentResponse._();
   factory AppointmentResponse({
     @JsonKey(required: true, defaultValue: 'AppointmentResponse')
     @required
@@ -104,7 +106,8 @@ abstract class AppointmentResponse
 }
 
 @freezed
-abstract class ProcessRequest with _$ProcessRequest implements Resource {
+abstract class ProcessRequest with Resource implements _$ProcessRequest {
+  ProcessRequest._();
   factory ProcessRequest({
     @JsonKey(required: true, defaultValue: 'ProcessRequest')
     @required
@@ -156,7 +159,8 @@ abstract class ProcessRequestItem with _$ProcessRequestItem {
 }
 
 @freezed
-abstract class ProcessResponse with _$ProcessResponse implements Resource {
+abstract class ProcessResponse with Resource implements _$ProcessResponse {
+  ProcessResponse._();
   factory ProcessResponse({
     @JsonKey(required: true, defaultValue: 'ProcessResponse')
     @required
@@ -202,7 +206,8 @@ abstract class ProcessResponseProcessNote with _$ProcessResponseProcessNote {
 }
 
 @freezed
-abstract class Schedule with _$Schedule implements Resource {
+abstract class Schedule with Resource implements _$Schedule {
+  Schedule._();
   factory Schedule({
     @JsonKey(required: true, defaultValue: 'Schedule')
     @required
@@ -231,7 +236,8 @@ abstract class Schedule with _$Schedule implements Resource {
 }
 
 @freezed
-abstract class Slot with _$Slot implements Resource {
+abstract class Slot with Resource implements _$Slot {
+  Slot._();
   factory Slot({
     @JsonKey(required: true, defaultValue: 'Slot')
     @required
@@ -265,7 +271,8 @@ abstract class Slot with _$Slot implements Resource {
 }
 
 @freezed
-abstract class Task with _$Task implements Resource {
+abstract class Task with Resource implements _$Task {
+  Task._();
   factory Task({
     @JsonKey(required: true, defaultValue: 'Task')
     @required
