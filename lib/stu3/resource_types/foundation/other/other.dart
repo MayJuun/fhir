@@ -355,7 +355,11 @@ abstract class OperationOutcomeIssue with _$OperationOutcomeIssue {
 
 @freezed
 abstract class Parameters with Resource implements _$Parameters {
+  Parameters._();
   factory Parameters({
+    @JsonKey(required: true, defaultValue: 'Parameters')
+    @required
+        String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

@@ -1,10 +1,3 @@
-# Close to ready for release.
-
-# ToDos - not emergent or necessary
-
-1. Order of classes in files (just because I have some OCD tendencies).
-2. I have shortened subclass names of DSTU2. Should I have left the long original names?
-
 # FHIR
 
 A Dart/Flutter package for working with FHIR resources.
@@ -164,3 +157,8 @@ I think it's the new compiling. It's actually great though, [json_serializable](
 |                                                             |                          |                            |                                 | SubstanceReferenceInformation     |
 |                                                             |                          |                            |                                 | SubstanceSpecification            |
 |                                                             |                          |                            |                                 | SubstanceSourceMaterial           |
+
+# ToDos - not emergent or necessary
+
+1. Order of classes in files (just because I have some OCD tendencies).
+2. I have shortened subclass names of DSTU2. Should I have left the long original names?

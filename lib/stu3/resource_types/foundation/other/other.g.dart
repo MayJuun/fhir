@@ -1194,7 +1194,9 @@ const _$IssueCodeEnumMap = {
 };
 
 _$_Parameters _$_$_ParametersFromJson(Map<String, dynamic> json) {
+  $checkKeys(json, requiredKeys: const ['resourceType']);
   return _$_Parameters(
+    resourceType: json['resourceType'] as String ?? 'Parameters',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1222,6 +1224,7 @@ Map<String, dynamic> _$_$_ParametersToJson(_$_Parameters instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());

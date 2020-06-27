@@ -3,7 +3,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 import '../../fhir_dstu2.dart';
 
-part 'resource.freezed.dart';
 part 'resource.g.dart';
 
 @JsonSerializable()

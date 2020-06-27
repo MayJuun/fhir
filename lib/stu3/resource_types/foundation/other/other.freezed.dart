@@ -7475,12 +7475,16 @@ class _$ParametersTearOff {
   const _$ParametersTearOff();
 
   _Parameters call(
-      {Id id,
+      {@required
+      @JsonKey(required: true, defaultValue: 'Parameters')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
       List<ParametersParameter> parameter}) {
     return _Parameters(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -7494,6 +7498,8 @@ class _$ParametersTearOff {
 const $Parameters = _$ParametersTearOff();
 
 mixin _$Parameters {
+  @JsonKey(required: true, defaultValue: 'Parameters')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -7509,7 +7515,8 @@ abstract class $ParametersCopyWith<$Res> {
           Parameters value, $Res Function(Parameters) then) =
       _$ParametersCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(required: true, defaultValue: 'Parameters') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -7527,6 +7534,7 @@ class _$ParametersCopyWithImpl<$Res> implements $ParametersCopyWith<$Res> {
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -7534,6 +7542,9 @@ class _$ParametersCopyWithImpl<$Res> implements $ParametersCopyWith<$Res> {
     Object parameter = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -7563,7 +7574,8 @@ abstract class _$ParametersCopyWith<$Res> implements $ParametersCopyWith<$Res> {
       __$ParametersCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(required: true, defaultValue: 'Parameters') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -7584,6 +7596,7 @@ class __$ParametersCopyWithImpl<$Res> extends _$ParametersCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -7591,6 +7604,9 @@ class __$ParametersCopyWithImpl<$Res> extends _$ParametersCopyWithImpl<$Res>
     Object parameter = freezed,
   }) {
     return _then(_Parameters(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -7605,13 +7621,25 @@ class __$ParametersCopyWithImpl<$Res> extends _$ParametersCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Parameters implements _Parameters {
+class _$_Parameters extends _Parameters {
   _$_Parameters(
-      {this.id, this.meta, this.implicitRules, this.language, this.parameter});
+      {@required
+      @JsonKey(required: true, defaultValue: 'Parameters')
+          this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.parameter})
+      : assert(resourceType != null),
+        super._();
 
   factory _$_Parameters.fromJson(Map<String, dynamic> json) =>
       _$_$_ParametersFromJson(json);
 
+  @override
+  @JsonKey(required: true, defaultValue: 'Parameters')
+  final String resourceType;
   @override
   final Id id;
   @override
@@ -7625,13 +7653,16 @@ class _$_Parameters implements _Parameters {
 
   @override
   String toString() {
-    return 'Parameters(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, parameter: $parameter)';
+    return 'Parameters(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, parameter: $parameter)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Parameters &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -7650,6 +7681,7 @@ class _$_Parameters implements _Parameters {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -7666,9 +7698,13 @@ class _$_Parameters implements _Parameters {
   }
 }
 
-abstract class _Parameters implements Parameters {
+abstract class _Parameters extends Parameters {
+  _Parameters._() : super._();
   factory _Parameters(
-      {Id id,
+      {@required
+      @JsonKey(required: true, defaultValue: 'Parameters')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -7677,6 +7713,9 @@ abstract class _Parameters implements Parameters {
   factory _Parameters.fromJson(Map<String, dynamic> json) =
       _$_Parameters.fromJson;
 
+  @override
+  @JsonKey(required: true, defaultValue: 'Parameters')
+  String get resourceType;
   @override
   Id get id;
   @override
