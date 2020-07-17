@@ -236,7 +236,7 @@ abstract class ImmunizationRecommendationRecommendation
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     List<CodeableConcept> vaccineCode,
-    CodeableConcept targetDisease,
+    List<CodeableConcept> targetDisease,
     List<CodeableConcept> contraindicatedVaccineCode,
     @required CodeableConcept forecastStatus,
     List<CodeableConcept> forecastReason,
