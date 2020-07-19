@@ -1,7 +1,9 @@
 import 'dart:convert';
-import 'package:fhir/fhir_r4.dart';
-import 'package:fhir/r4/smart/scope.dart';
+
 import 'package:http/http.dart';
+
+import '../../fhir_dstu2.dart';
+import 'scope.dart';
 
 class FhirClient {
   FhirUri iss;
@@ -9,7 +11,7 @@ class FhirClient {
   String clientId;
   String clientSecret;
   Map<String, String> headers;
-  CapabilityStatement capabilityStatement;
+  Conformance conformance;
   FhirUri tokenEndpoint;
   FhirUri authEndpoint;
   List<String> tokenEndpointAuthMethods;
@@ -27,7 +29,7 @@ class FhirClient {
     this.clientId,
     this.clientSecret,
     headers,
-    this.capabilityStatement,
+    this.conformance,
     this.tokenEndpoint,
     this.authEndpoint,
     this.tokenEndpointAuthMethods,
@@ -43,18 +45,17 @@ class FhirClient {
     scopesSupported = <String>[];
   }
 
-  Future getCapabilityStatement() async {
+  Future getconformance() async {
     var response = await get('${iss.toString()}/metadata', headers: headers);
     print(response.body);
-    capabilityStatement =
-        CapabilityStatement.fromJson(jsonDecode(response.body));
+    conformance = Conformance.fromJson(jsonDecode(response.body));
     //ToDo: what happens when there is more than one rest entry
     tokenEndpoint = getEndpoints('token');
     authEndpoint = getEndpoints('authorize');
   }
 
   FhirUri getEndpoints(String type) =>
-      capabilityStatement?.rest[0]?.security?.extension_[0]?.extension_
+      conformance?.rest[0]?.security?.extension_[0]?.extension_
           ?.singleWhere((ext) => ext?.url?.toString() == type)
           ?.valueUri;
 
