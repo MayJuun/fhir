@@ -6,10 +6,10 @@ import '../../fhir_dstu2.dart';
 import 'scope.dart';
 
 class FhirClient {
-  FhirUri iss;
-  String launch;
   String clientId;
   String clientSecret;
+  FhirUri iss;
+  String launch;
   Map<String, String> headers;
   Conformance conformance;
   FhirUri tokenEndpoint;

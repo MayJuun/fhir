@@ -59,7 +59,7 @@ abstract class Conformance with Resource implements _$Conformance {
 abstract class OperationDefinition
     with Resource
     implements _$OperationDefinition {
-      OperationDefinition._();
+  OperationDefinition._();
   factory OperationDefinition({
     @JsonKey(defaultValue: 'OperationDefinition') @required String resourceType,
     Id id,
