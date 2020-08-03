@@ -4882,7 +4882,7 @@ class _$ImmunizationRecommendationRecommendationTearOff {
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<CodeableConcept> vaccineCode,
-      CodeableConcept targetDisease,
+      List<CodeableConcept> targetDisease,
       List<CodeableConcept> contraindicatedVaccineCode,
       @required
           CodeableConcept forecastStatus,
@@ -4946,7 +4946,7 @@ mixin _$ImmunizationRecommendationRecommendation {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   List<CodeableConcept> get vaccineCode;
-  CodeableConcept get targetDisease;
+  List<CodeableConcept> get targetDisease;
   List<CodeableConcept> get contraindicatedVaccineCode;
   CodeableConcept get forecastStatus;
   List<CodeableConcept> get forecastReason;
@@ -4988,7 +4988,7 @@ abstract class $ImmunizationRecommendationRecommendationCopyWith<$Res> {
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<CodeableConcept> vaccineCode,
-      CodeableConcept targetDisease,
+      List<CodeableConcept> targetDisease,
       List<CodeableConcept> contraindicatedVaccineCode,
       CodeableConcept forecastStatus,
       List<CodeableConcept> forecastReason,
@@ -5014,7 +5014,6 @@ abstract class $ImmunizationRecommendationRecommendationCopyWith<$Res> {
       List<Reference> supportingImmunization,
       List<Reference> supportingPatientInformation});
 
-  $CodeableConceptCopyWith<$Res> get targetDisease;
   $CodeableConceptCopyWith<$Res> get forecastStatus;
   $ElementCopyWith<$Res> get descriptionElement;
   $ElementCopyWith<$Res> get seriesElement;
@@ -5072,7 +5071,7 @@ class _$ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
           : vaccineCode as List<CodeableConcept>,
       targetDisease: targetDisease == freezed
           ? _value.targetDisease
-          : targetDisease as CodeableConcept,
+          : targetDisease as List<CodeableConcept>,
       contraindicatedVaccineCode: contraindicatedVaccineCode == freezed
           ? _value.contraindicatedVaccineCode
           : contraindicatedVaccineCode as List<CodeableConcept>,
@@ -5125,16 +5124,6 @@ class _$ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
           ? _value.supportingPatientInformation
           : supportingPatientInformation as List<Reference>,
     ));
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get targetDisease {
-    if (_value.targetDisease == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.targetDisease, (value) {
-      return _then(_value.copyWith(targetDisease: value));
-    });
   }
 
   @override
@@ -5222,7 +5211,7 @@ abstract class _$ImmunizationRecommendationRecommendationCopyWith<$Res>
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<CodeableConcept> vaccineCode,
-      CodeableConcept targetDisease,
+      List<CodeableConcept> targetDisease,
       List<CodeableConcept> contraindicatedVaccineCode,
       CodeableConcept forecastStatus,
       List<CodeableConcept> forecastReason,
@@ -5248,8 +5237,6 @@ abstract class _$ImmunizationRecommendationRecommendationCopyWith<$Res>
       List<Reference> supportingImmunization,
       List<Reference> supportingPatientInformation});
 
-  @override
-  $CodeableConceptCopyWith<$Res> get targetDisease;
   @override
   $CodeableConceptCopyWith<$Res> get forecastStatus;
   @override
@@ -5318,7 +5305,7 @@ class __$ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
           : vaccineCode as List<CodeableConcept>,
       targetDisease: targetDisease == freezed
           ? _value.targetDisease
-          : targetDisease as CodeableConcept,
+          : targetDisease as List<CodeableConcept>,
       contraindicatedVaccineCode: contraindicatedVaccineCode == freezed
           ? _value.contraindicatedVaccineCode
           : contraindicatedVaccineCode as List<CodeableConcept>,
@@ -5426,7 +5413,7 @@ class _$_ImmunizationRecommendationRecommendation
   @override
   final List<CodeableConcept> vaccineCode;
   @override
-  final CodeableConcept targetDisease;
+  final List<CodeableConcept> targetDisease;
   @override
   final List<CodeableConcept> contraindicatedVaccineCode;
   @override
@@ -5586,7 +5573,7 @@ abstract class _ImmunizationRecommendationRecommendation
               List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
           List<CodeableConcept> vaccineCode,
-          CodeableConcept targetDisease,
+          List<CodeableConcept> targetDisease,
           List<CodeableConcept> contraindicatedVaccineCode,
           @required
               CodeableConcept forecastStatus,
@@ -5628,7 +5615,7 @@ abstract class _ImmunizationRecommendationRecommendation
   @override
   List<CodeableConcept> get vaccineCode;
   @override
-  CodeableConcept get targetDisease;
+  List<CodeableConcept> get targetDisease;
   @override
   List<CodeableConcept> get contraindicatedVaccineCode;
   @override

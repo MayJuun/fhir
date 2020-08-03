@@ -1,0 +1,361 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+
+part 'scope.freezed.dart';
+
+@freezed
+abstract class Scope with _$Scope {
+  Scope._();
+  factory Scope.clinical(
+    ScopeLevel level,
+    ResourceType fhirResource,
+    ScopePermission permission,
+  ) = _Clinical;
+  factory Scope.launch(ScopeContext context) = _Launch;
+  factory Scope.identity(OpenIdScope openId) = _Identity;
+  factory Scope.refreshToken(ScopeAccess access) = _RefreshToken;
+
+  String toString() => this.when(
+        clinical: (ScopeLevel level, ResourceType fhirResource,
+                ScopePermission permission) =>
+            '${level.toString()}/'
+            '${fhirResource.toString()}.'
+            '${permission.toString()}',
+        launch: (ScopeContext context) => context.toString(),
+        identity: (OpenIdScope openId) => openId.toString(),
+        refreshToken: (ScopeAccess access) => access.toString(),
+      );
+}
+
+enum ScopeAccess {
+  @JsonValue('online_access')
+  onlineAccess,
+  @JsonValue('offline_access')
+  offlineAccess,
+}
+
+enum OpenIdScope {
+  @JsonValue('openid fhirUser')
+  fhirUser,
+  @JsonValue('openid profile')
+  profile,
+}
+
+enum ScopeContext {
+  @JsonValue('patient')
+  patient,
+  @JsonValue('encounter')
+  encounter,
+}
+
+enum ScopeLevel {
+  @JsonValue('patient')
+  patient,
+  @JsonValue('user')
+  user,
+}
+
+enum ScopePermission {
+  @JsonValue('*')
+  read_write,
+  @JsonValue('read')
+  read,
+  @JsonValue('write')
+  write,
+}
+
+enum ResourceType {
+  @JsonValue('*')
+  all,
+  @JsonValue('Account')
+  account,
+  @JsonValue('ActivityDefinition')
+  activityDefinition,
+  @JsonValue('AdverseEvent')
+  adverseEvent,
+  @JsonValue('AllergyIntolerance')
+  allergyIntolerance,
+  @JsonValue('Appointment')
+  appointment,
+  @JsonValue('AppointmentResponse')
+  appointmentResponse,
+  @JsonValue('AuditEvent')
+  auditEvent,
+  @JsonValue('Basic')
+  basic,
+  @JsonValue('Binary')
+  binary,
+  @JsonValue('BiologicallyDerivedProduct')
+  biologicallyDerivedProduct,
+  @JsonValue('BodyStructure')
+  bodyStructure,
+  @JsonValue('Bundle')
+  bundle,
+  @JsonValue('CapabilityStatement')
+  capabilityStatement,
+  @JsonValue('CarePlan')
+  carePlan,
+  @JsonValue('CareTeam')
+  careTeam,
+  @JsonValue('CatalogEntry')
+  catalogEntry,
+  @JsonValue('ChargeItem')
+  chargeItem,
+  @JsonValue('ChargeItemDefinition')
+  chargeItemDefinition,
+  @JsonValue('Claim')
+  claim,
+  @JsonValue('ClaimResponse')
+  claimResponse,
+  @JsonValue('ClinicalImpression')
+  clinicalImpression,
+  @JsonValue('CodeSystem')
+  codeSystem,
+  @JsonValue('Communication')
+  communication,
+  @JsonValue('CommunicationRequest')
+  communicationRequest,
+  @JsonValue('CompartmentDefinition')
+  compartmentDefinition,
+  @JsonValue('Composition')
+  composition,
+  @JsonValue('ConceptMap')
+  conceptMap,
+  @JsonValue('Condition')
+  condition,
+  @JsonValue('Consent')
+  consent,
+  @JsonValue('Contract')
+  contract,
+  @JsonValue('Coverage')
+  coverage,
+  @JsonValue('CoverageEligibilityRequest')
+  coverageEligibilityRequest,
+  @JsonValue('CoverageEligibilityResponse')
+  coverageEligibilityResponse,
+  @JsonValue('DetectedIssue')
+  detectedIssue,
+  @JsonValue('Device')
+  device,
+  @JsonValue('DeviceDefinition')
+  deviceDefinition,
+  @JsonValue('DeviceMetric')
+  deviceMetric,
+  @JsonValue('DeviceRequest')
+  deviceRequest,
+  @JsonValue('DeviceUseStatement')
+  deviceUseStatement,
+  @JsonValue('DiagnosticReport')
+  diagnosticReport,
+  @JsonValue('DocumentManifest')
+  documentManifest,
+  @JsonValue('DocumentReference')
+  documentReference,
+  @JsonValue('EffectEvidenceSynthesis')
+  effectEvidenceSynthesis,
+  @JsonValue('Encounter')
+  encounter,
+  @JsonValue('Endpoint')
+  endpoint,
+  @JsonValue('EnrollmentRequest')
+  enrollmentRequest,
+  @JsonValue('EnrollmentResponse')
+  enrollmentResponse,
+  @JsonValue('EpisodeOfCare')
+  episodeOfCare,
+  @JsonValue('EventDefinition')
+  eventDefinition,
+  @JsonValue('Evidence')
+  evidence,
+  @JsonValue('EvidenceVariable')
+  evidenceVariable,
+  @JsonValue('ExampleScenario')
+  exampleScenario,
+  @JsonValue('ExplanationOfBenefit')
+  explanationOfBenefit,
+  @JsonValue('FamilyMemberHistory')
+  familyMemberHistory,
+  @JsonValue('Flag')
+  flag,
+  @JsonValue('Goal')
+  goal,
+  @JsonValue('GraphDefinition')
+  graphDefinition,
+  @JsonValue('Group')
+  group,
+  @JsonValue('GuidanceResponse')
+  guidanceResponse,
+  @JsonValue('HealthcareService')
+  healthcareService,
+  @JsonValue('ImagingStudy')
+  imagingStudy,
+  @JsonValue('Immunization')
+  immunization,
+  @JsonValue('ImmunizationEvaluation')
+  immunizationEvaluation,
+  @JsonValue('ImmunizationRecommendation')
+  immunizationRecommendation,
+  @JsonValue('ImplementationGuide')
+  implementationGuide,
+  @JsonValue('InsurancePlan')
+  insurancePlan,
+  @JsonValue('Invoice')
+  invoice,
+  @JsonValue('Library')
+  library,
+  @JsonValue('Linkage')
+  linkage,
+  @JsonValue('List')
+  list_,
+  @JsonValue('Location')
+  location,
+  @JsonValue('Measure')
+  measure,
+  @JsonValue('MeasureReport')
+  measureReport,
+  @JsonValue('Media')
+  media,
+  @JsonValue('Medication')
+  medication,
+  @JsonValue('MedicationAdministration')
+  medicationAdministration,
+  @JsonValue('MedicationDispense')
+  medicationDispense,
+  @JsonValue('MedicationKnowledge')
+  medicationKnowledge,
+  @JsonValue('MedicationRequest')
+  medicationRequest,
+  @JsonValue('MedicationStatement')
+  medicationStatement,
+  @JsonValue('MedicinalProduct')
+  medicinalProduct,
+  @JsonValue('MedicinalProductAuthorization')
+  medicinalProductAuthorization,
+  @JsonValue('MedicinalProductContraindication')
+  medicinalProductContraindication,
+  @JsonValue('MedicinalProductIndication')
+  medicinalProductIndication,
+  @JsonValue('MedicinalProductIngredient')
+  medicinalProductIngredient,
+  @JsonValue('MedicinalProductInteraction')
+  medicinalProductInteraction,
+  @JsonValue('MedicinalProductManufactured')
+  medicinalProductManufactured,
+  @JsonValue('MedicinalProductPackaged')
+  medicinalProductPackaged,
+  @JsonValue('MedicinalProductPharmaceutical')
+  medicinalProductPharmaceutical,
+  @JsonValue('MedicinalProductUndesirableEffect')
+  medicinalProductUndesirableEffect,
+  @JsonValue('MessageDefinition')
+  messageDefinition,
+  @JsonValue('MessageHeader')
+  messageHeader,
+  @JsonValue('MolecularSequence')
+  molecularSequence,
+  @JsonValue('NamingSystem')
+  namingSystem,
+  @JsonValue('NutritionOrder')
+  nutritionOrder,
+  @JsonValue('Observation')
+  observation,
+  @JsonValue('ObservationDefinition')
+  observationDefinition,
+  @JsonValue('OperationDefinition')
+  operationDefinition,
+  @JsonValue('OperationOutcome')
+  operationOutcome,
+  @JsonValue('Organization')
+  organization,
+  @JsonValue('OrganizationAffiliation')
+  organizationAffiliation,
+  @JsonValue('Parameters')
+  parameters,
+  @JsonValue('Patient')
+  patient,
+  @JsonValue('PaymentNotice')
+  paymentNotice,
+  @JsonValue('PaymentReconciliation')
+  paymentReconciliation,
+  @JsonValue('Person')
+  person,
+  @JsonValue('PlanDefinition')
+  planDefinition,
+  @JsonValue('Practitioner')
+  practitioner,
+  @JsonValue('PractitionerRole')
+  practitionerRole,
+  @JsonValue('Procedure')
+  procedure,
+  @JsonValue('Provenance')
+  provenance,
+  @JsonValue('Questionnaire')
+  questionnaire,
+  @JsonValue('QuestionnaireResponse')
+  questionnaireResponse,
+  @JsonValue('RelatedPerson')
+  relatedPerson,
+  @JsonValue('RequestGroup')
+  requestGroup,
+  @JsonValue('ResearchDefinition')
+  researchDefinition,
+  @JsonValue('ResearchElementDefinition')
+  researchElementDefinition,
+  @JsonValue('ResearchStudy')
+  researchStudy,
+  @JsonValue('ResearchSubject')
+  researchSubject,
+  @JsonValue('RiskAssessment')
+  riskAssessment,
+  @JsonValue('RiskEvidenceSynthesis')
+  riskEvidenceSynthesis,
+  @JsonValue('Schedule')
+  schedule,
+  @JsonValue('SearchParameter')
+  searchParameter,
+  @JsonValue('ServiceRequest')
+  serviceRequest,
+  @JsonValue('Slot')
+  slot,
+  @JsonValue('Specimen')
+  specimen,
+  @JsonValue('SpecimenDefinition')
+  specimenDefinition,
+  @JsonValue('StructureDefinition')
+  structureDefinition,
+  @JsonValue('StructureMap')
+  structureMap,
+  @JsonValue('Subscription')
+  subscription,
+  @JsonValue('Substance')
+  substance,
+  @JsonValue('SubstanceNucleicAcid')
+  substanceNucleicAcid,
+  @JsonValue('SubstancePolymer')
+  substancePolymer,
+  @JsonValue('SubstanceProtein')
+  substanceProtein,
+  @JsonValue('SubstanceReferenceInformation')
+  substanceReferenceInformation,
+  @JsonValue('SubstanceSourceMaterial')
+  substanceSourceMaterial,
+  @JsonValue('SubstanceSpecification')
+  substanceSpecification,
+  @JsonValue('SupplyDelivery')
+  supplyDelivery,
+  @JsonValue('SupplyRequest')
+  supplyRequest,
+  @JsonValue('Task')
+  task,
+  @JsonValue('TerminologyCapabilities')
+  terminologyCapabilities,
+  @JsonValue('TestReport')
+  testReport,
+  @JsonValue('TestScript')
+  testScript,
+  @JsonValue('ValueSet')
+  valueSet,
+  @JsonValue('VerificationResult')
+  verificationResult,
+  @JsonValue('VisionPrescription')
+  visionPrescription,
+}
