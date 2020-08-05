@@ -1,4 +1,0 @@
-// class FhirServer {
-//   FhirClient client;
-
-// }
