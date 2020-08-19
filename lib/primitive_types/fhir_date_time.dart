@@ -10,17 +10,8 @@ class FhirDateTime extends Dates {
 
   factory FhirDateTime(value) {
     assert(value != null);
-    var dateFormat = validateDate(value.toString());
-    if (dateFormat[0] is PrimitiveFailure) {
-      return FhirDateTime._(
-          Left(
-            PrimitiveFailure.invalidFhirDateTime(
-              failedValue: value.toString(),
-            ),
-          ),
-          DateTimeFormat.incorrect_format);
-    }
-    return FhirDateTime._(Right(dateFormat[0]), dateFormat[1]);
+    var dateTuple = validateDate(value.toString());
+    return FhirDateTime._(dateTuple.value1, dateTuple.value2);
   }
 
   FhirDateTime._(this.value, this.format);

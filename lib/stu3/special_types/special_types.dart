@@ -2,7 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 // import 'package:flutter/foundation.dart';
 
 import 'special_types.enums.dart';
-import '../../fhir_stu3.dart';
+import '../../stu3.dart';
 import '../resource_types/resource_types.enums.dart';
 
 part 'special_types.freezed.dart';

@@ -2,7 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 // import 'package:flutter/foundation.dart';
 
 import 'documents_and_lists.enums.dart';
-import '../../../../fhir_dstu2.dart';
+import '../../../../dstu2.dart';
 
 part 'documents_and_lists.freezed.dart';
 part 'documents_and_lists.g.dart';

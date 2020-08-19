@@ -2,7 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 // import 'package:flutter/foundation.dart';
 
 import 'workflow2.enums.dart';
-import '../../../../fhir_dstu2.dart';
+import '../../../../dstu2.dart';
 
 part 'workflow2.freezed.dart';
 part 'workflow2.g.dart';

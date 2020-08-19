@@ -19,13 +19,13 @@ abstract class PrimitiveObject<T> {
   int get hashCode => value.hashCode;
 
   @override
-  String toString() => result();
+  String toString() => result().toString();
 
   dynamic toJson() => result();
 
   dynamic result() => value.fold(
-        (failure) => '${failure.runtimeType}:${failure.failedValue.toString()}',
-        (value) => value.toString(),
+        (ifLeft) => '${ifLeft.runtimeType}:${ifLeft.failedValue.toString()}',
+        (isRight) => isRight,
       );
 }
 
@@ -118,7 +118,7 @@ Either<PrimitiveFailure<String>, Uri> validateFhirUri(String value) =>
         : left(PrimitiveFailure.invalidFhirUri(failedValue: value));
 
 Either<PrimitiveFailure<String>, Uri> validateFhirUrl(String value) =>
-    Uri.tryParse(value) != null
+    Uri.tryParse(value).isAbsolute
         ? right(Uri.parse(value))
         : left(PrimitiveFailure.invalidFhirUrl(failedValue: value));
 

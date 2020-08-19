@@ -14,6 +14,18 @@ class FhirUrl extends PrimitiveObject<Uri> {
     );
   }
 
+  @override
+  String toString() => result();
+
+  @override
+  dynamic toJson() => result();
+
+  @override
+  dynamic result() => value.fold(
+        (ifLeft) => '${ifLeft.runtimeType}:${ifLeft.failedValue.toString()}',
+        (isRight) => isRight.toString(),
+      );
+
   const FhirUrl._(this.value);
 
   factory FhirUrl.fromJson(String json) => FhirUrl(json);

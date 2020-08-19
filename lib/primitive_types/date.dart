@@ -10,27 +10,8 @@ class Date extends Dates {
 
   factory Date(value) {
     assert(value != null);
-    var dateFormat = validateDate(value.toString());
-    if (dateFormat[1] != DateTimeFormat.y &&
-        dateFormat[1] != DateTimeFormat.ym &&
-        dateFormat[1] != DateTimeFormat.ymd) {
-      return Date._(
-          Left(
-            PrimitiveFailure.invalidDate(
-              failedValue: value.toString(),
-            ),
-          ),
-          DateTimeFormat.incorrect_format);
-    } else if (dateFormat[0] is PrimitiveFailure) {
-      Date._(
-          Left(
-            PrimitiveFailure.invalidDate(
-              failedValue: value.toString(),
-            ),
-          ),
-          DateTimeFormat.incorrect_format);
-    }
-    return Date._(Right(dateFormat[0]), dateFormat[1]);
+    var dateTuple = validateDate(value.toString());
+    return Date._(dateTuple.value1, dateTuple.value2);
   }
 
   Date._(this.value, this.format);

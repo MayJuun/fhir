@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 // import 'package:flutter/foundation.dart';
 
-import '../../../../fhir_r5.dart';
+import '../../../../r5.dart';
 
 part 'individuals.enums.dart';
 part 'individuals.freezed.dart';

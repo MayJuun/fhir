@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import '../../fhir_dstu2.dart';
+import '../../dstu2.dart';
 
 part 'resource.g.dart';
 

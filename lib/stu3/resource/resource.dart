@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import '../../fhir_stu3.dart';
+import '../../stu3.dart';
 
 part 'resource.freezed.dart';
 part 'resource.g.dart';

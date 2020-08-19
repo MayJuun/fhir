@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../../fhir_stu3.dart';
+import '../../../../stu3.dart';
 import 'documents.enums.dart';
 
 part 'documents.freezed.dart';

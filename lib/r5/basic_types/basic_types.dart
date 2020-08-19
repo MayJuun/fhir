@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../fhir_r5.dart';
+import '../../r5.dart';
 
 part 'basic_types.freezed.dart';
 part 'basic_types.g.dart';

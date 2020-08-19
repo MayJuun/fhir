@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../../fhir_r5.dart';
+import '../../r5.dart';
 
 part 'resource.g.dart';
 
