@@ -12,6 +12,68 @@ As well as the R5 Preview #1:
 
 - [v4.2.0: R5 Draft](http://hl7.org/fhir/2020Feb/)
 
+## How To Use
+
+In order to use this package in your app, you must include the following in your pubspec.yaml file under dependencies:
+```
+fhir:
+  git:
+    url: git://github.com/Dokotela/fhir.git
+```
+Then, in any file where you're going to be using it, simply import it like this:
+```
+import 'package:fhir/r4.dart';
+```
+Or, you may need to rename the package, for instance, there are some variables FHIR uses that overlap with dart:core, or if you're going to be using more than oen version of FHIR in the same file:
+```
+import 'package:fhir/r4.dart' as r4;
+import 'package:fhir/stu3.dart' as stu3;
+```
+And then just remember to append r4 or stu3 to any variables you use from the library.
+
+Currently this package is really just for serializing/deserializing FHIR data, and being able to create FHIR resources.
+
+To do something like create a patient, you can do the following::
+```
+var newPatient = Patient(
+  resourceType: 'Patient',
+  name: [
+    HumanName(family: 'LastName', given: ['FirstName'])
+  ],
+  birthDate: Date('2020-01-01'),
+  gender: PatientGender.female,
+);
+```
+If you're instead trying to get data from a server (currently I haven't implemented SMART on FHIR so it would need to be an open server, [HAPI](http://hapi.fhir.org/) for instance - make sure you choose the right version you're interested in), a very simple example of querying and then printing the result:
+```
+import 'dart:convert';
+
+import 'package:fhir/r4.dart';
+import 'package:http/http.dart';
+
+Future main() async {
+  var server = 'http://hapi.fhir.org/baseR4';
+  var headers = {'Content-type': 'application/json'};
+  var desiredResource = 'Patient';
+  var response = await get('$server/$desiredResource', headers: headers);
+  var searchSetBundle = Bundle.fromJson(json.decode(response.body));
+  print(searchSetBundle.toJson());
+}
+```
+All of the FHIR resources are immutable classes using the [freezed package](https://pub.dev/packages/freezed), which means you can take advantage of it's functionality for things like copying/updating:
+```
+  var changePatientName = newPatient.copyWith(name: [
+    HumanName(family: 'NewLastName', given: ['SameFirstName'])
+  ]);
+```
+And that's essentially all there is at this point. This is still very much a developing package, so there are likely to be breaking changes as I try and figure out how it should all work. I welcome any and all feedback, suggestions or pull requests.
+
+## Upcoming
+There are two big items I would really like to get to work to add functionality:
+1. Database - I'm working on a locally embedded, encrypted database using [Sembast](https://pub.dev/packages/sembast) and [SQFlite](https://pub.dev/packages/sqflite). Feel free to take a look, it's in the basic branch of my [vigor repository](https://github.com/Dokotela/vigor).
+2. SMART - this one I could really use some help with. I think I understand the pieces, but I'm not sure the best way to try and implement it. But I do realize it's necessary to truly making this a useful package.
+
+
 ## Validation
 
 ### R5
