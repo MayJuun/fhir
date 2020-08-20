@@ -1,5 +1,4 @@
-export 'basic_types/resource.dart';
-export 'basic_types/element.dart';
+export 'basic_types/basic_types.dart';
 export 'draft_types/draft_types.dart';
 export 'general_types/general_types.dart';
 export 'metadata_types/metadata_types.dart';

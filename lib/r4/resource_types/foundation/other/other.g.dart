@@ -131,7 +131,24 @@ _$_Binary _$_$_BinaryFromJson(Map<String, dynamic> json) {
     dataElement: json['_data'] == null
         ? null
         : Element.fromJson(json['_data'] as Map<String, dynamic>),
-  );
+  )
+    ..text = json['text'] == null
+        ? null
+        : Narrative.fromJson(json['text'] as Map<String, dynamic>)
+    ..contained = (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
+        ?.toList()
+    ..extension_ = (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList()
+    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList();
 }
 
 Map<String, dynamic> _$_$_BinaryToJson(_$_Binary instance) {
@@ -143,6 +160,13 @@ Map<String, dynamic> _$_$_BinaryToJson(_$_Binary instance) {
     }
   }
 
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull(
+      'contained', instance.contained?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
@@ -206,7 +230,24 @@ _$_Bundle _$_$_BundleFromJson(Map<String, dynamic> json) {
     signature: json['signature'] == null
         ? null
         : Signature.fromJson(json['signature'] as Map<String, dynamic>),
-  );
+  )
+    ..text = json['text'] == null
+        ? null
+        : Narrative.fromJson(json['text'] as Map<String, dynamic>)
+    ..contained = (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
+        ?.toList()
+    ..extension_ = (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList()
+    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList();
 }
 
 Map<String, dynamic> _$_$_BundleToJson(_$_Bundle instance) {
@@ -218,6 +259,13 @@ Map<String, dynamic> _$_$_BundleToJson(_$_Bundle instance) {
     }
   }
 
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull(
+      'contained', instance.contained?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
@@ -1240,7 +1288,24 @@ _$_Parameters _$_$_ParametersFromJson(Map<String, dynamic> json) {
             ? null
             : ParametersParameter.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-  );
+  )
+    ..text = json['text'] == null
+        ? null
+        : Narrative.fromJson(json['text'] as Map<String, dynamic>)
+    ..contained = (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
+        ?.toList()
+    ..extension_ = (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList()
+    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList();
 }
 
 Map<String, dynamic> _$_$_ParametersToJson(_$_Parameters instance) {
@@ -1252,6 +1317,13 @@ Map<String, dynamic> _$_$_ParametersToJson(_$_Parameters instance) {
     }
   }
 
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull(
+      'contained', instance.contained?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());

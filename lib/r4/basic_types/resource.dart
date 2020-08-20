@@ -6,9 +6,16 @@ part 'resource.g.dart';
 
 @JsonSerializable()
 class Resource {
-  Id id;
   String resourceType;
+  Id id;
   Meta meta;
+  FhirUri implicitRules;
+  Code language;
+  Narrative text;
+  List<Resource> contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> extension_;
+  List<FhirExtension> modifierExtension;
 
   Map<String, dynamic> toJson() => this.toJson();
 
