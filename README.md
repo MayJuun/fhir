@@ -124,14 +124,10 @@ I think it's the new compiling. It's actually great though, [json_serializable](
 - Variables: lower camel case.
 - File names: lower camel case.
 - FHIR nested classes (including enums) listed under the primary class
-- When working with some of the variables, I have had to change their names, 'Class', 'List', 'extends', 'for', and 'assert' are reserved words in flutter, so I've made these changes:
-  - 'class' to 'classs' in 'ConsentProvision', 'Coverage', 'Encounter', 'EncounterClassHistory', 'SubstancePlymer', 'SubstanceSourceMaterial_OrganismGeneral'
-  - 'List' to 'Lists' - this is solely for the class name, the 'resourceType' is still 'List' and all nested classes are 'ListClass'.
-  - 'extends' to 'extend' in 'StructureMapGroup'
-  - 'for' to 'fore' in 'Task'
-  - 'assert' to 'asserts' in 'TestReportAction', 'TestReportAction1', 'TestScript_Action', 'TestScript_Action1'
-  - 'required' to 'require' in 'TestScript' - this isn't a reserved word, but in order to have @required parameters, I had to change it.
-- In the offical [FHIR Json Schema](https://www.hl7.org/fhir/fhir.schema.json.zip) every field has a private extension. I have not included these at this time.
+- There are a number of FHIR fields that are reserved words in Dart. For these, I have added a '_' to the end of the field. (note that this does not change the json format, as when that happens the @JsonKey has been added to the field like so:
+```
+@JsonKey(name: 'extension') List<FhirExtension> extension_,
+```
 
 ### FHIR datatypes (these are R4 (which is what everyone should be using, but since EHR vendors are doing everything they can to not share data, I am also working on stu3 and dstu2 as well)
 
