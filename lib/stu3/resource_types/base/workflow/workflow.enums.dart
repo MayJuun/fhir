@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'workflow.dart';
 
 enum AppointmentStatus {
   @JsonValue('proposed')
@@ -21,9 +21,9 @@ enum AppointmentStatus {
   unknown,
 }
 
-enum ParticipantRequired {
+enum AppointmentParticipantRequired {
   @JsonValue('required')
-  required,
+  required_,
   @JsonValue('optional')
   optional,
   @JsonValue('information-only')
@@ -32,7 +32,7 @@ enum ParticipantRequired {
   unknown,
 }
 
-enum ParticipantStatus {
+enum AppointmentParticipantStatus {
   @JsonValue('accepted')
   accepted,
   @JsonValue('declined')

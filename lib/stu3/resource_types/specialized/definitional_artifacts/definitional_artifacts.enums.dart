@@ -1,6 +1,28 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'definitional_artifacts.dart';
 
-enum ActionGroupingBehavior {
+enum ActivityDefinitionStatus {
+  @JsonValue('draft')
+  draft,
+  @JsonValue('active')
+  active,
+  @JsonValue('retired')
+  retired,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum PlanDefinitionStatus {
+  @JsonValue('draft')
+  draft,
+  @JsonValue('active')
+  active,
+  @JsonValue('retired')
+  retired,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum PlanDefinitionActionGroupingBehavior {
   @JsonValue('visual-group')
   visual_group,
   @JsonValue('logical-group')
@@ -11,7 +33,7 @@ enum ActionGroupingBehavior {
   unknown,
 }
 
-enum ActionSelectionBehavior {
+enum PlanDefinitionActionSelectionBehavior {
   @JsonValue('any')
   any,
   @JsonValue('all')
@@ -28,7 +50,7 @@ enum ActionSelectionBehavior {
   unknown,
 }
 
-enum ActionRequiredBehavior {
+enum PlanDefinitionActionRequiredBehavior {
   @JsonValue('must')
   must,
   @JsonValue('could')
@@ -39,7 +61,7 @@ enum ActionRequiredBehavior {
   unknown,
 }
 
-enum ActionPrecheckBehavior {
+enum PlanDefinitionActionPrecheckBehavior {
   @JsonValue('yes')
   yes,
   @JsonValue('no')
@@ -48,7 +70,7 @@ enum ActionPrecheckBehavior {
   unknown,
 }
 
-enum ActionCardinalityBehavior {
+enum PlanDefinitionActionCardinalityBehavior {
   @JsonValue('single')
   single,
   @JsonValue('multiple')
@@ -57,7 +79,7 @@ enum ActionCardinalityBehavior {
   unknown,
 }
 
-enum ConditionKind {
+enum PlanDefinitionConditionKind {
   @JsonValue('applicability')
   applicability,
   @JsonValue('start')
@@ -68,7 +90,7 @@ enum ConditionKind {
   unknown,
 }
 
-enum RelatedActionRelationship {
+enum PlanDefinitionRelatedActionRelationship {
   @JsonValue('before-start')
   before_start,
   @JsonValue('before')
@@ -98,6 +120,17 @@ enum PlanDefinitionParticipantType {
   practitioner,
   @JsonValue('related-person')
   related_person,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum QuestionnaireStatus {
+  @JsonValue('draft')
+  draft,
+  @JsonValue('active')
+  active,
+  @JsonValue('retired')
+  retired,
   @JsonValue('unknown')
   unknown,
 }
@@ -135,6 +168,17 @@ enum QuestionnaireItemType {
   reference,
   @JsonValue('quantity')
   quantity,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum ServiceDefinitionStatus {
+  @JsonValue('draft')
+  draft,
+  @JsonValue('active')
+  active,
+  @JsonValue('retired')
+  retired,
   @JsonValue('unknown')
   unknown,
 }

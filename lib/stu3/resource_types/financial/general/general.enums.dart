@@ -1,4 +1,15 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'general.dart';
+
+enum AccountStatus {
+  @JsonValue('active')
+  active,
+  @JsonValue('inactive')
+  inactive,
+  @JsonValue('entered-in-error')
+  entered_in_error,
+  @JsonValue('unknown')
+  unknown,
+}
 
 enum ChargeItemStatus {
   @JsonValue('planned')

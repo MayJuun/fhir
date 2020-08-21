@@ -1,4 +1,15 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'conformance.dart';
+
+enum CapabilityStatementStatus {
+  @JsonValue('draft')
+  draft,
+  @JsonValue('active')
+  active,
+  @JsonValue('retired')
+  retired,
+  @JsonValue('unknown')
+  unknown,
+}
 
 enum CapabilityStatementKind {
   @JsonValue('instance')
@@ -24,7 +35,7 @@ enum CapabilityStatementAcceptUnknown {
   unknown,
 }
 
-enum RestMode {
+enum CapabilityStatementRestMode {
   @JsonValue('client')
   client,
   @JsonValue('server')
@@ -33,7 +44,7 @@ enum RestMode {
   unknown,
 }
 
-enum ResourceVersioning {
+enum CapabilityStatementResourceVersioning {
   @JsonValue('no-version')
   no_version,
   @JsonValue('versioned')
@@ -44,7 +55,7 @@ enum ResourceVersioning {
   unknown,
 }
 
-enum ResourceConditionalRead {
+enum CapabilityStatementResourceConditionalRead {
   @JsonValue('not-supported')
   not_supported,
   @JsonValue('modified-since')
@@ -57,7 +68,7 @@ enum ResourceConditionalRead {
   unknown,
 }
 
-enum ResourceConditionalDelete {
+enum CapabilityStatementResourceConditionalDelete {
   @JsonValue('not-supported')
   not_supported,
   @JsonValue('single')
@@ -68,28 +79,22 @@ enum ResourceConditionalDelete {
   unknown,
 }
 
-enum ParameterSearchType {
-  @JsonValue('number')
-  number,
-  @JsonValue('date')
-  date,
-  @JsonValue('string')
-  string,
-  @JsonValue('token')
-  token,
-  @JsonValue('reference')
-  reference,
-  @JsonValue('composite')
-  composite,
-  @JsonValue('quantity')
-  quantity,
-  @JsonValue('uri')
-  uri,
+enum CapabilityStatementResourceReferencePolicy {
+  @JsonValue('literal')
+  literal,
+  @JsonValue('logical')
+  logical,
+  @JsonValue('resolves')
+  resolves,
+  @JsonValue('enforced')
+  enforced,
+  @JsonValue('local')
+  local,
   @JsonValue('unknown')
   unknown,
 }
 
-enum InteractionCode {
+enum CapabilityStatementInteractionCode {
   @JsonValue('read')
   read,
   @JsonValue('vread')
@@ -112,7 +117,28 @@ enum InteractionCode {
   unknown,
 }
 
-enum Interaction1Code {
+enum CapabilityStatementSearchParamType {
+  @JsonValue('number')
+  number,
+  @JsonValue('date')
+  date,
+  @JsonValue('string')
+  string,
+  @JsonValue('token')
+  token,
+  @JsonValue('reference')
+  reference,
+  @JsonValue('composite')
+  composite,
+  @JsonValue('quantity')
+  quantity,
+  @JsonValue('uri')
+  uri,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum CapabilityStatementInteraction1Code {
   @JsonValue('transaction')
   transaction,
   @JsonValue('batch')
@@ -125,7 +151,7 @@ enum Interaction1Code {
   unknown,
 }
 
-enum Mode {
+enum CapabilityStatementSupportedMessageMode {
   @JsonValue('sender')
   sender,
   @JsonValue('receiver')
@@ -134,7 +160,7 @@ enum Mode {
   unknown,
 }
 
-enum EventCategory {
+enum CapabilityStatementEventCategory {
   @JsonValue('Consequence')
   consequence,
   @JsonValue('Currency')
@@ -145,11 +171,31 @@ enum EventCategory {
   unknown,
 }
 
-enum DocumentMode {
+enum CapabilityStatementEventMode {
+  @JsonValue('sender')
+  sender,
+  @JsonValue('receiver')
+  receiver,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum CapabilityStatementDocumentMode {
   @JsonValue('producer')
   producer,
   @JsonValue('consumer')
   consumer,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum CompartmentDefinitionStatus {
+  @JsonValue('draft')
+  draft,
+  @JsonValue('active')
+  active,
+  @JsonValue('retired')
+  retired,
   @JsonValue('unknown')
   unknown,
 }
@@ -165,6 +211,17 @@ enum CompartmentDefinitionCode {
   practitioner,
   @JsonValue('Device')
   device,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum DataElementStatus {
+  @JsonValue('draft')
+  draft,
+  @JsonValue('active')
+  active,
+  @JsonValue('retired')
+  retired,
   @JsonValue('unknown')
   unknown,
 }
@@ -186,7 +243,18 @@ enum DataElementStringency {
   unknown,
 }
 
-enum CompartmentRule {
+enum GraphDefinitionStatus {
+  @JsonValue('draft')
+  draft,
+  @JsonValue('active')
+  active,
+  @JsonValue('retired')
+  retired,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum GraphDefinitionCompartmentRule {
   @JsonValue('identical')
   identical,
   @JsonValue('matching')
@@ -199,7 +267,18 @@ enum CompartmentRule {
   unknown,
 }
 
-enum DependencyType {
+enum ImplementationGuideStatus {
+  @JsonValue('draft')
+  draft,
+  @JsonValue('active')
+  active,
+  @JsonValue('retired')
+  retired,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum ImplementationGuideDependencyType {
   @JsonValue('reference')
   reference,
   @JsonValue('inclusion')
@@ -208,7 +287,7 @@ enum DependencyType {
   unknown,
 }
 
-enum PageKind {
+enum ImplementationGuidePageKind {
   @JsonValue('page')
   page,
   @JsonValue('example')
@@ -229,6 +308,28 @@ enum PageKind {
   unknown,
 }
 
+enum MessageDefinitionStatus {
+  @JsonValue('draft')
+  draft,
+  @JsonValue('active')
+  active,
+  @JsonValue('retired')
+  retired,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum OperationDefinitionStatus {
+  @JsonValue('draft')
+  draft,
+  @JsonValue('active')
+  active,
+  @JsonValue('retired')
+  retired,
+  @JsonValue('unknown')
+  unknown,
+}
+
 enum OperationDefinitionKind {
   @JsonValue('operation')
   operation,
@@ -238,11 +339,77 @@ enum OperationDefinitionKind {
   unknown,
 }
 
-enum ParameterUse {
+enum OperationDefinitionParameterUse {
   @JsonValue('in')
   in_,
   @JsonValue('out')
   out,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum OperationDefinitionParameterSearchType {
+  @JsonValue('number')
+  number,
+  @JsonValue('date')
+  date,
+  @JsonValue('string')
+  string,
+  @JsonValue('token')
+  token,
+  @JsonValue('reference')
+  reference,
+  @JsonValue('composite')
+  composite,
+  @JsonValue('quantity')
+  quantity,
+  @JsonValue('uri')
+  uri,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum OperationDefinitionBindingStrength {
+  @JsonValue('required')
+  required_,
+  @JsonValue('extensible')
+  extensible,
+  @JsonValue('preferred')
+  preferred,
+  @JsonValue('example')
+  example,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum SearchParameterStatus {
+  @JsonValue('draft')
+  draft,
+  @JsonValue('active')
+  active,
+  @JsonValue('retired')
+  retired,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum SearchParameterType {
+  @JsonValue('number')
+  number,
+  @JsonValue('date')
+  date,
+  @JsonValue('string')
+  string,
+  @JsonValue('token')
+  token,
+  @JsonValue('reference')
+  reference,
+  @JsonValue('composite')
+  composite,
+  @JsonValue('quantity')
+  quantity,
+  @JsonValue('uri')
+  uri,
   @JsonValue('unknown')
   unknown,
 }
@@ -258,148 +425,6 @@ enum SearchParameterXpathUsage {
   distance,
   @JsonValue('other')
   other,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum StructureDefinitionKind {
-  @JsonValue('primitive-type')
-  primitive_type,
-  @JsonValue('complex-type')
-  complex_type,
-  @JsonValue('resource')
-  resource,
-  @JsonValue('logical')
-  logical,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum StructureDefinitionContextType {
-  @JsonValue('resource')
-  resource,
-  @JsonValue('datatype')
-  datatype,
-  @JsonValue('extension')
-  extension,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum StructureDefinitionDerivation {
-  @JsonValue('specialization')
-  specialization,
-  @JsonValue('constraint')
-  constraint,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum StructureMode {
-  @JsonValue('source')
-  source,
-  @JsonValue('queried')
-  queried,
-  @JsonValue('target')
-  target,
-  @JsonValue('produced')
-  produced,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum GroupTypeMode {
-  @JsonValue('none')
-  none,
-  @JsonValue('types')
-  types,
-  @JsonValue('type-and-types')
-  type_and_types,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum InputMode {
-  @JsonValue('source')
-  source,
-  @JsonValue('target')
-  target,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum TargetContextType {
-  @JsonValue('type')
-  type,
-  @JsonValue('variable')
-  variable,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum TargetTransform {
-  @JsonValue('create')
-  create,
-  @JsonValue('copy')
-  copy,
-  @JsonValue('truncate')
-  truncate,
-  @JsonValue('escape')
-  escape,
-  @JsonValue('cast')
-  cast,
-  @JsonValue('append')
-  append,
-  @JsonValue('translate')
-  translate,
-  @JsonValue('reference')
-  reference,
-  @JsonValue('dateOp')
-  dateop,
-  @JsonValue('uuid')
-  uuid,
-  @JsonValue('pointer')
-  pointer,
-  @JsonValue('evaluate')
-  evaluate,
-  @JsonValue('cc')
-  cc,
-  @JsonValue('c')
-  c,
-  @JsonValue('qty')
-  qty,
-  @JsonValue('id')
-  id,
-  @JsonValue('cp')
-  cp,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum TargetListMode {
-  @JsonValue('first')
-  first,
-  @JsonValue('share')
-  share,
-  @JsonValue('last')
-  last,
-  @JsonValue('collate')
-  collate,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum ResourceReferencePolicy {
-  @JsonValue('literal')
-  literal,
-  @JsonValue('logical')
-  logical,
-  @JsonValue('resolves')
-  resolves,
-  @JsonValue('enforced')
-  enforced,
-  @JsonValue('local')
-  local,
   @JsonValue('unknown')
   unknown,
 }
@@ -452,7 +477,95 @@ enum SearchParameterModifier {
   unknown,
 }
 
-enum SourceListMode {
+enum StructureDefinitionStatus {
+  @JsonValue('draft')
+  draft,
+  @JsonValue('active')
+  active,
+  @JsonValue('retired')
+  retired,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum StructureDefinitionKind {
+  @JsonValue('primitive-type')
+  primitive_type,
+  @JsonValue('complex-type')
+  complex_type,
+  @JsonValue('resource')
+  resource,
+  @JsonValue('logical')
+  logical,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum StructureDefinitionContextType {
+  @JsonValue('resource')
+  resource,
+  @JsonValue('datatype')
+  datatype,
+  @JsonValue('extension')
+  extension_,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum StructureDefinitionDerivation {
+  @JsonValue('specialization')
+  specialization,
+  @JsonValue('constraint')
+  constraint,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum StructureMapStatus {
+  @JsonValue('draft')
+  draft,
+  @JsonValue('active')
+  active,
+  @JsonValue('retired')
+  retired,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum StructureMapStructureMode {
+  @JsonValue('source')
+  source,
+  @JsonValue('queried')
+  queried,
+  @JsonValue('target')
+  target,
+  @JsonValue('produced')
+  produced,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum StructureMapGroupTypeMode {
+  @JsonValue('none')
+  none,
+  @JsonValue('types')
+  types,
+  @JsonValue('type-and-types')
+  type_and_types,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum StructureMapInputMode {
+  @JsonValue('source')
+  source,
+  @JsonValue('target')
+  target,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum StructureMapSourceListMode {
   @JsonValue('first')
   first,
   @JsonValue('not_first')
@@ -463,6 +576,67 @@ enum SourceListMode {
   not_last,
   @JsonValue('only_one')
   only_one,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum StructureMapTargetContextType {
+  @JsonValue('type')
+  type,
+  @JsonValue('variable')
+  variable,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum StructureMapTargetListMode {
+  @JsonValue('first')
+  first,
+  @JsonValue('share')
+  share,
+  @JsonValue('last')
+  last,
+  @JsonValue('collate')
+  collate,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum StructureMapTargetTransform {
+  @JsonValue('create')
+  create,
+  @JsonValue('copy')
+  copy,
+  @JsonValue('truncate')
+  truncate,
+  @JsonValue('escape')
+  escape,
+  @JsonValue('cast')
+  cast,
+  @JsonValue('append')
+  append,
+  @JsonValue('translate')
+  translate,
+  @JsonValue('reference')
+  reference,
+  @JsonValue('dateOp')
+  dateop,
+  @JsonValue('uuid')
+  uuid,
+  @JsonValue('pointer')
+  pointer,
+  @JsonValue('evaluate')
+  evaluate,
+  @JsonValue('cc')
+  cc,
+  @JsonValue('c')
+  c,
+  @JsonValue('qty')
+  qty,
+  @JsonValue('id')
+  id,
+  @JsonValue('cp')
+  cp,
   @JsonValue('unknown')
   unknown,
 }

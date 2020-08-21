@@ -1,6 +1,17 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'entities.dart';
 
-enum UdiEntryType {
+enum DeviceStatus {
+  @JsonValue('active')
+  active,
+  @JsonValue('inactive')
+  inactive,
+  @JsonValue('entered-in-error')
+  entered_in_error,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum DeviceUdiEntryType {
   @JsonValue('barcode')
   barcode,
   @JsonValue('rfid')
@@ -44,7 +55,7 @@ enum DeviceComponentMeasurementPrinciple {
 
 enum DeviceMetricOperationalStatus {
   @JsonValue('on')
-  on_,
+  on,
   @JsonValue('off')
   off,
   @JsonValue('standby')
@@ -89,7 +100,7 @@ enum DeviceMetricCategory {
   unknown,
 }
 
-enum CalibrationType {
+enum DeviceMetricCalibrationType {
   @JsonValue('unspecified')
   unspecified,
   @JsonValue('offset')
@@ -102,7 +113,7 @@ enum CalibrationType {
   unknown,
 }
 
-enum CalibrationState {
+enum DeviceMetricCalibrationState {
   @JsonValue('not-calibrated')
   not_calibrated,
   @JsonValue('calibration-required')
@@ -132,6 +143,25 @@ enum EndpointStatus {
   unknown,
 }
 
+enum HealthcareServiceAvailableTimeDaysOfWeek {
+  @JsonValue('mon')
+  mon,
+  @JsonValue('tue')
+  tue,
+  @JsonValue('wed')
+  wed,
+  @JsonValue('thu')
+  thu,
+  @JsonValue('fri')
+  fri,
+  @JsonValue('sat')
+  sat,
+  @JsonValue('sun')
+  sun,
+  @JsonValue('unknown')
+  unknown,
+}
+
 enum LocationStatus {
   @JsonValue('active')
   active,
@@ -152,21 +182,13 @@ enum LocationMode {
   unknown,
 }
 
-enum AvailableTimeDaysOfWeek {
-  @JsonValue('mon')
-  mon,
-  @JsonValue('tue')
-  tue,
-  @JsonValue('wed')
-  wed,
-  @JsonValue('thu')
-  thu,
-  @JsonValue('fri')
-  fri,
-  @JsonValue('sat')
-  sat,
-  @JsonValue('sun')
-  sun,
+enum SubstanceStatus {
+  @JsonValue('active')
+  active,
+  @JsonValue('inactive')
+  inactive,
+  @JsonValue('entered-in-error')
+  entered_in_error,
   @JsonValue('unknown')
   unknown,
 }

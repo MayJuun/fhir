@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'diagnostics.dart';
 
 enum DiagnosticReportStatus {
   @JsonValue('registered')
@@ -23,7 +23,20 @@ enum DiagnosticReportStatus {
   unknown,
 }
 
-enum Availability {
+enum ImagingStudyAvailability {
+  @JsonValue('ONLINE')
+  online,
+  @JsonValue('OFFLINE')
+  offline,
+  @JsonValue('NEARLINE')
+  nearline,
+  @JsonValue('UNAVAILABLE')
+  unavailable,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum ImagingStudySeriesAvailability {
   @JsonValue('ONLINE')
   online,
   @JsonValue('OFFLINE')
@@ -55,7 +68,7 @@ enum ObservationStatus {
   unknown,
 }
 
-enum RelatedType {
+enum ObservationRelatedType {
   @JsonValue('has-member')
   has_member,
   @JsonValue('derived-from')
@@ -98,7 +111,7 @@ enum SequenceType {
   unknown,
 }
 
-enum QualityType {
+enum SequenceQualityType {
   @JsonValue('indel')
   indel,
   @JsonValue('snp')
@@ -107,7 +120,7 @@ enum QualityType {
   unknown,
 }
 
-enum RepositoryType {
+enum SequenceRepositoryType {
   @JsonValue('directlink')
   directlink,
   @JsonValue('openapi')

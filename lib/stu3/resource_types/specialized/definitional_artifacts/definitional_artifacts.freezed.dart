@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'definitional_artifacts.dart';
 
@@ -15,34 +15,64 @@ ActivityDefinition _$ActivityDefinitionFromJson(Map<String, dynamic> json) {
 class _$ActivityDefinitionTearOff {
   const _$ActivityDefinitionTearOff();
 
+// ignore: unused_element
   _ActivityDefinition call(
       {@required
-      @JsonKey(required: true, defaultValue: 'ActivityDefinition')
+      @JsonKey(defaultValue: 'ActivityDefinition')
           String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String url,
+      @JsonKey(name: '_url')
+          Element urlElement,
       List<Identifier> identifier,
       String version,
+      @JsonKey(name: '_version')
+          Element versionElement,
       String name,
+      @JsonKey(name: '_name')
+          Element nameElement,
       String title,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      ActivityDefinitionStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Boolean experimental,
-      FhirDateTime date,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      Date date,
+      @JsonKey(name: '_date')
+          Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
       String description,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       String purpose,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
       String usage,
+      @JsonKey(name: '_usage')
+          Element usageElement,
       Date approvalDate,
+      @JsonKey(name: '_approvalDate')
+          Element approvalDateElement,
       Date lastReviewDate,
+      @JsonKey(name: '_lastReviewDate')
+          Element lastReviewDateElement,
       Period effectivePeriod,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
@@ -50,12 +80,19 @@ class _$ActivityDefinitionTearOff {
       List<Contributor> contributor,
       List<ContactDetail> contact,
       String copyright,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
       List<RelatedArtifact> relatedArtifact,
-      List<Reference> library,
-      Code kind,
+      @JsonKey(name: 'library')
+          List<Reference> library_,
+      String kind,
+      @JsonKey(name: '_kind')
+          Element kindElement,
       CodeableConcept code,
       Timing timingTiming,
       FhirDateTime timingDateTime,
+      @JsonKey(name: '_timingDateTime')
+          Element timingDateTimeElement,
       Period timingPeriod,
       Range timingRange,
       Reference location,
@@ -66,63 +103,46 @@ class _$ActivityDefinitionTearOff {
       List<Dosage> dosage,
       List<CodeableConcept> bodySite,
       Reference transform,
-      List<ActivityDefinitionDynamicValue> dynamicValue,
-      @JsonKey(name: '_url')
-          Element urlElement,
-      @JsonKey(name: '_version')
-          Element versionElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
-      @JsonKey(name: '_usage')
-          Element usageElement,
-      @JsonKey(name: '_approvalDate')
-          Element approvalDateElement,
-      @JsonKey(name: '_lastReviewDate')
-          Element lastReviewDateElement,
-      @JsonKey(name: '_copyright')
-          Element copyrightElement,
-      @JsonKey(name: '_kind')
-          Element kindElement,
-      @JsonKey(name: '_timingDateTime')
-          Element timingDateTimeElement}) {
+      List<ActivityDefinitionDynamicValue> dynamicValue}) {
     return _ActivityDefinition(
       resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
+      implicitRulesElement: implicitRulesElement,
       language: language,
+      languageElement: languageElement,
       text: text,
       contained: contained,
       extension_: extension_,
       modifierExtension: modifierExtension,
       url: url,
+      urlElement: urlElement,
       identifier: identifier,
       version: version,
+      versionElement: versionElement,
       name: name,
+      nameElement: nameElement,
       title: title,
+      titleElement: titleElement,
       status: status,
+      statusElement: statusElement,
       experimental: experimental,
+      experimentalElement: experimentalElement,
       date: date,
+      dateElement: dateElement,
       publisher: publisher,
+      publisherElement: publisherElement,
       description: description,
+      descriptionElement: descriptionElement,
       purpose: purpose,
+      purposeElement: purposeElement,
       usage: usage,
+      usageElement: usageElement,
       approvalDate: approvalDate,
+      approvalDateElement: approvalDateElement,
       lastReviewDate: lastReviewDate,
+      lastReviewDateElement: lastReviewDateElement,
       effectivePeriod: effectivePeriod,
       useContext: useContext,
       jurisdiction: jurisdiction,
@@ -130,12 +150,15 @@ class _$ActivityDefinitionTearOff {
       contributor: contributor,
       contact: contact,
       copyright: copyright,
+      copyrightElement: copyrightElement,
       relatedArtifact: relatedArtifact,
-      library: library,
+      library_: library_,
       kind: kind,
+      kindElement: kindElement,
       code: code,
       timingTiming: timingTiming,
       timingDateTime: timingDateTime,
+      timingDateTimeElement: timingDateTimeElement,
       timingPeriod: timingPeriod,
       timingRange: timingRange,
       location: location,
@@ -147,22 +170,6 @@ class _$ActivityDefinitionTearOff {
       bodySite: bodySite,
       transform: transform,
       dynamicValue: dynamicValue,
-      urlElement: urlElement,
-      versionElement: versionElement,
-      nameElement: nameElement,
-      titleElement: titleElement,
-      statusElement: statusElement,
-      experimentalElement: experimentalElement,
-      dateElement: dateElement,
-      publisherElement: publisherElement,
-      descriptionElement: descriptionElement,
-      purposeElement: purposeElement,
-      usageElement: usageElement,
-      approvalDateElement: approvalDateElement,
-      lastReviewDateElement: lastReviewDateElement,
-      copyrightElement: copyrightElement,
-      kindElement: kindElement,
-      timingDateTimeElement: timingDateTimeElement,
     );
   }
 }
@@ -171,32 +178,61 @@ class _$ActivityDefinitionTearOff {
 const $ActivityDefinition = _$ActivityDefinitionTearOff();
 
 mixin _$ActivityDefinition {
-  @JsonKey(required: true, defaultValue: 'ActivityDefinition')
+  @JsonKey(defaultValue: 'ActivityDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
   Code get language;
+  @JsonKey(name: '_language')
+  Element get languageElement;
   Narrative get text;
   List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   String get url;
+  @JsonKey(name: '_url')
+  Element get urlElement;
   List<Identifier> get identifier;
   String get version;
+  @JsonKey(name: '_version')
+  Element get versionElement;
   String get name;
+  @JsonKey(name: '_name')
+  Element get nameElement;
   String get title;
-  @JsonKey(unknownEnumValue: Status.unknown)
-  Status get status;
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  ActivityDefinitionStatus get status;
+  @JsonKey(name: '_status')
+  Element get statusElement;
   Boolean get experimental;
-  FhirDateTime get date;
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  Date get date;
+  @JsonKey(name: '_date')
+  Element get dateElement;
   String get publisher;
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
   String get description;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
   String get purpose;
+  @JsonKey(name: '_purpose')
+  Element get purposeElement;
   String get usage;
+  @JsonKey(name: '_usage')
+  Element get usageElement;
   Date get approvalDate;
+  @JsonKey(name: '_approvalDate')
+  Element get approvalDateElement;
   Date get lastReviewDate;
+  @JsonKey(name: '_lastReviewDate')
+  Element get lastReviewDateElement;
   Period get effectivePeriod;
   List<UsageContext> get useContext;
   List<CodeableConcept> get jurisdiction;
@@ -204,12 +240,19 @@ mixin _$ActivityDefinition {
   List<Contributor> get contributor;
   List<ContactDetail> get contact;
   String get copyright;
+  @JsonKey(name: '_copyright')
+  Element get copyrightElement;
   List<RelatedArtifact> get relatedArtifact;
-  List<Reference> get library;
-  Code get kind;
+  @JsonKey(name: 'library')
+  List<Reference> get library_;
+  String get kind;
+  @JsonKey(name: '_kind')
+  Element get kindElement;
   CodeableConcept get code;
   Timing get timingTiming;
   FhirDateTime get timingDateTime;
+  @JsonKey(name: '_timingDateTime')
+  Element get timingDateTimeElement;
   Period get timingPeriod;
   Range get timingRange;
   Reference get location;
@@ -221,38 +264,6 @@ mixin _$ActivityDefinition {
   List<CodeableConcept> get bodySite;
   Reference get transform;
   List<ActivityDefinitionDynamicValue> get dynamicValue;
-  @JsonKey(name: '_url')
-  Element get urlElement;
-  @JsonKey(name: '_version')
-  Element get versionElement;
-  @JsonKey(name: '_name')
-  Element get nameElement;
-  @JsonKey(name: '_title')
-  Element get titleElement;
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @JsonKey(name: '_experimental')
-  Element get experimentalElement;
-  @JsonKey(name: '_date')
-  Element get dateElement;
-  @JsonKey(name: '_publisher')
-  Element get publisherElement;
-  @JsonKey(name: '_description')
-  Element get descriptionElement;
-  @JsonKey(name: '_purpose')
-  Element get purposeElement;
-  @JsonKey(name: '_usage')
-  Element get usageElement;
-  @JsonKey(name: '_approvalDate')
-  Element get approvalDateElement;
-  @JsonKey(name: '_lastReviewDate')
-  Element get lastReviewDateElement;
-  @JsonKey(name: '_copyright')
-  Element get copyrightElement;
-  @JsonKey(name: '_kind')
-  Element get kindElement;
-  @JsonKey(name: '_timingDateTime')
-  Element get timingDateTimeElement;
 
   Map<String, dynamic> toJson();
   $ActivityDefinitionCopyWith<ActivityDefinition> get copyWith;
@@ -263,32 +274,44 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
           ActivityDefinition value, $Res Function(ActivityDefinition) then) =
       _$ActivityDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'ActivityDefinition')
-          String resourceType,
+      {@JsonKey(defaultValue: 'ActivityDefinition') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String url,
+      @JsonKey(name: '_url') Element urlElement,
       List<Identifier> identifier,
       String version,
+      @JsonKey(name: '_version') Element versionElement,
       String name,
+      @JsonKey(name: '_name') Element nameElement,
       String title,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
+      @JsonKey(name: '_title') Element titleElement,
+      ActivityDefinitionStatus status,
+      @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
-      FhirDateTime date,
+      @JsonKey(name: '_experimental') Element experimentalElement,
+      Date date,
+      @JsonKey(name: '_date') Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher') Element publisherElement,
       String description,
+      @JsonKey(name: '_description') Element descriptionElement,
       String purpose,
+      @JsonKey(name: '_purpose') Element purposeElement,
       String usage,
+      @JsonKey(name: '_usage') Element usageElement,
       Date approvalDate,
+      @JsonKey(name: '_approvalDate') Element approvalDateElement,
       Date lastReviewDate,
+      @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
       Period effectivePeriod,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
@@ -296,12 +319,15 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       List<Contributor> contributor,
       List<ContactDetail> contact,
       String copyright,
+      @JsonKey(name: '_copyright') Element copyrightElement,
       List<RelatedArtifact> relatedArtifact,
-      List<Reference> library,
-      Code kind,
+      @JsonKey(name: 'library') List<Reference> library_,
+      String kind,
+      @JsonKey(name: '_kind') Element kindElement,
       CodeableConcept code,
       Timing timingTiming,
       FhirDateTime timingDateTime,
+      @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
       Period timingPeriod,
       Range timingRange,
       Reference location,
@@ -312,52 +338,12 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       List<Dosage> dosage,
       List<CodeableConcept> bodySite,
       Reference transform,
-      List<ActivityDefinitionDynamicValue> dynamicValue,
-      @JsonKey(name: '_url')
-          Element urlElement,
-      @JsonKey(name: '_version')
-          Element versionElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
-      @JsonKey(name: '_usage')
-          Element usageElement,
-      @JsonKey(name: '_approvalDate')
-          Element approvalDateElement,
-      @JsonKey(name: '_lastReviewDate')
-          Element lastReviewDateElement,
-      @JsonKey(name: '_copyright')
-          Element copyrightElement,
-      @JsonKey(name: '_kind')
-          Element kindElement,
-      @JsonKey(name: '_timingDateTime')
-          Element timingDateTimeElement});
+      List<ActivityDefinitionDynamicValue> dynamicValue});
 
   $MetaCopyWith<$Res> get meta;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
-  $PeriodCopyWith<$Res> get effectivePeriod;
-  $CodeableConceptCopyWith<$Res> get code;
-  $TimingCopyWith<$Res> get timingTiming;
-  $PeriodCopyWith<$Res> get timingPeriod;
-  $RangeCopyWith<$Res> get timingRange;
-  $ReferenceCopyWith<$Res> get location;
-  $ReferenceCopyWith<$Res> get productReference;
-  $CodeableConceptCopyWith<$Res> get productCodeableConcept;
-  $QuantityCopyWith<$Res> get quantity;
-  $ReferenceCopyWith<$Res> get transform;
   $ElementCopyWith<$Res> get urlElement;
   $ElementCopyWith<$Res> get versionElement;
   $ElementCopyWith<$Res> get nameElement;
@@ -371,9 +357,19 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
   $ElementCopyWith<$Res> get usageElement;
   $ElementCopyWith<$Res> get approvalDateElement;
   $ElementCopyWith<$Res> get lastReviewDateElement;
+  $PeriodCopyWith<$Res> get effectivePeriod;
   $ElementCopyWith<$Res> get copyrightElement;
   $ElementCopyWith<$Res> get kindElement;
+  $CodeableConceptCopyWith<$Res> get code;
+  $TimingCopyWith<$Res> get timingTiming;
   $ElementCopyWith<$Res> get timingDateTimeElement;
+  $PeriodCopyWith<$Res> get timingPeriod;
+  $RangeCopyWith<$Res> get timingRange;
+  $ReferenceCopyWith<$Res> get location;
+  $ReferenceCopyWith<$Res> get productReference;
+  $CodeableConceptCopyWith<$Res> get productCodeableConcept;
+  $QuantityCopyWith<$Res> get quantity;
+  $ReferenceCopyWith<$Res> get transform;
 }
 
 class _$ActivityDefinitionCopyWithImpl<$Res>
@@ -390,25 +386,40 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object url = freezed,
+    Object urlElement = freezed,
     Object identifier = freezed,
     Object version = freezed,
+    Object versionElement = freezed,
     Object name = freezed,
+    Object nameElement = freezed,
     Object title = freezed,
+    Object titleElement = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object experimental = freezed,
+    Object experimentalElement = freezed,
     Object date = freezed,
+    Object dateElement = freezed,
     Object publisher = freezed,
+    Object publisherElement = freezed,
     Object description = freezed,
+    Object descriptionElement = freezed,
     Object purpose = freezed,
+    Object purposeElement = freezed,
     Object usage = freezed,
+    Object usageElement = freezed,
     Object approvalDate = freezed,
+    Object approvalDateElement = freezed,
     Object lastReviewDate = freezed,
+    Object lastReviewDateElement = freezed,
     Object effectivePeriod = freezed,
     Object useContext = freezed,
     Object jurisdiction = freezed,
@@ -416,12 +427,15 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
     Object contributor = freezed,
     Object contact = freezed,
     Object copyright = freezed,
+    Object copyrightElement = freezed,
     Object relatedArtifact = freezed,
-    Object library = freezed,
+    Object library_ = freezed,
     Object kind = freezed,
+    Object kindElement = freezed,
     Object code = freezed,
     Object timingTiming = freezed,
     Object timingDateTime = freezed,
+    Object timingDateTimeElement = freezed,
     Object timingPeriod = freezed,
     Object timingRange = freezed,
     Object location = freezed,
@@ -433,22 +447,6 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
     Object bodySite = freezed,
     Object transform = freezed,
     Object dynamicValue = freezed,
-    Object urlElement = freezed,
-    Object versionElement = freezed,
-    Object nameElement = freezed,
-    Object titleElement = freezed,
-    Object statusElement = freezed,
-    Object experimentalElement = freezed,
-    Object dateElement = freezed,
-    Object publisherElement = freezed,
-    Object descriptionElement = freezed,
-    Object purposeElement = freezed,
-    Object usageElement = freezed,
-    Object approvalDateElement = freezed,
-    Object lastReviewDateElement = freezed,
-    Object copyrightElement = freezed,
-    Object kindElement = freezed,
-    Object timingDateTimeElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -459,7 +457,13 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -470,27 +474,65 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
       version: version == freezed ? _value.version : version as String,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
       name: name == freezed ? _value.name : name as String,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed ? _value.status : status as Status,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      status: status == freezed
+          ? _value.status
+          : status as ActivityDefinitionStatus,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as FhirDateTime,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
+      date: date == freezed ? _value.date : date as Date,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
       description:
           description == freezed ? _value.description : description as String,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
       purpose: purpose == freezed ? _value.purpose : purpose as String,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement as Element,
       usage: usage == freezed ? _value.usage : usage as String,
+      usageElement: usageElement == freezed
+          ? _value.usageElement
+          : usageElement as Element,
       approvalDate:
           approvalDate == freezed ? _value.approvalDate : approvalDate as Date,
+      approvalDateElement: approvalDateElement == freezed
+          ? _value.approvalDateElement
+          : approvalDateElement as Element,
       lastReviewDate: lastReviewDate == freezed
           ? _value.lastReviewDate
           : lastReviewDate as Date,
+      lastReviewDateElement: lastReviewDateElement == freezed
+          ? _value.lastReviewDateElement
+          : lastReviewDateElement as Element,
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period,
@@ -507,11 +549,17 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
       copyright: copyright == freezed ? _value.copyright : copyright as String,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
       relatedArtifact: relatedArtifact == freezed
           ? _value.relatedArtifact
           : relatedArtifact as List<RelatedArtifact>,
-      library: library == freezed ? _value.library : library as List<Reference>,
-      kind: kind == freezed ? _value.kind : kind as Code,
+      library_:
+          library_ == freezed ? _value.library_ : library_ as List<Reference>,
+      kind: kind == freezed ? _value.kind : kind as String,
+      kindElement:
+          kindElement == freezed ? _value.kindElement : kindElement as Element,
       code: code == freezed ? _value.code : code as CodeableConcept,
       timingTiming: timingTiming == freezed
           ? _value.timingTiming
@@ -519,6 +567,9 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
       timingDateTime: timingDateTime == freezed
           ? _value.timingDateTime
           : timingDateTime as FhirDateTime,
+      timingDateTimeElement: timingDateTimeElement == freezed
+          ? _value.timingDateTimeElement
+          : timingDateTimeElement as Element,
       timingPeriod: timingPeriod == freezed
           ? _value.timingPeriod
           : timingPeriod as Period,
@@ -544,50 +595,6 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
       dynamicValue: dynamicValue == freezed
           ? _value.dynamicValue
           : dynamicValue as List<ActivityDefinitionDynamicValue>,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element,
-      versionElement: versionElement == freezed
-          ? _value.versionElement
-          : versionElement as Element,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      titleElement: titleElement == freezed
-          ? _value.titleElement
-          : titleElement as Element,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      experimentalElement: experimentalElement == freezed
-          ? _value.experimentalElement
-          : experimentalElement as Element,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element,
-      publisherElement: publisherElement == freezed
-          ? _value.publisherElement
-          : publisherElement as Element,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement as Element,
-      purposeElement: purposeElement == freezed
-          ? _value.purposeElement
-          : purposeElement as Element,
-      usageElement: usageElement == freezed
-          ? _value.usageElement
-          : usageElement as Element,
-      approvalDateElement: approvalDateElement == freezed
-          ? _value.approvalDateElement
-          : approvalDateElement as Element,
-      lastReviewDateElement: lastReviewDateElement == freezed
-          ? _value.lastReviewDateElement
-          : lastReviewDateElement as Element,
-      copyrightElement: copyrightElement == freezed
-          ? _value.copyrightElement
-          : copyrightElement as Element,
-      kindElement:
-          kindElement == freezed ? _value.kindElement : kindElement as Element,
-      timingDateTimeElement: timingDateTimeElement == freezed
-          ? _value.timingDateTimeElement
-          : timingDateTimeElement as Element,
     ));
   }
 
@@ -602,6 +609,26 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
   $NarrativeCopyWith<$Res> get text {
     if (_value.text == null) {
       return null;
@@ -612,12 +639,162 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res> get urlElement {
+    if (_value.urlElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.urlElement, (value) {
+      return _then(_value.copyWith(urlElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get versionElement {
+    if (_value.versionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.versionElement, (value) {
+      return _then(_value.copyWith(versionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get titleElement {
+    if (_value.titleElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.titleElement, (value) {
+      return _then(_value.copyWith(titleElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get experimentalElement {
+    if (_value.experimentalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.experimentalElement, (value) {
+      return _then(_value.copyWith(experimentalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get dateElement {
+    if (_value.dateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.dateElement, (value) {
+      return _then(_value.copyWith(dateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get publisherElement {
+    if (_value.publisherElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.publisherElement, (value) {
+      return _then(_value.copyWith(publisherElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get purposeElement {
+    if (_value.purposeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.purposeElement, (value) {
+      return _then(_value.copyWith(purposeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get usageElement {
+    if (_value.usageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.usageElement, (value) {
+      return _then(_value.copyWith(usageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get approvalDateElement {
+    if (_value.approvalDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.approvalDateElement, (value) {
+      return _then(_value.copyWith(approvalDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get lastReviewDateElement {
+    if (_value.lastReviewDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.lastReviewDateElement, (value) {
+      return _then(_value.copyWith(lastReviewDateElement: value));
+    });
+  }
+
+  @override
   $PeriodCopyWith<$Res> get effectivePeriod {
     if (_value.effectivePeriod == null) {
       return null;
     }
     return $PeriodCopyWith<$Res>(_value.effectivePeriod, (value) {
       return _then(_value.copyWith(effectivePeriod: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get copyrightElement {
+    if (_value.copyrightElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.copyrightElement, (value) {
+      return _then(_value.copyWith(copyrightElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get kindElement {
+    if (_value.kindElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.kindElement, (value) {
+      return _then(_value.copyWith(kindElement: value));
     });
   }
 
@@ -638,6 +815,16 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
     }
     return $TimingCopyWith<$Res>(_value.timingTiming, (value) {
       return _then(_value.copyWith(timingTiming: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get timingDateTimeElement {
+    if (_value.timingDateTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.timingDateTimeElement, (value) {
+      return _then(_value.copyWith(timingDateTimeElement: value));
     });
   }
 
@@ -711,166 +898,6 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
       return _then(_value.copyWith(transform: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get urlElement {
-    if (_value.urlElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.urlElement, (value) {
-      return _then(_value.copyWith(urlElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get versionElement {
-    if (_value.versionElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.versionElement, (value) {
-      return _then(_value.copyWith(versionElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get nameElement {
-    if (_value.nameElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
-      return _then(_value.copyWith(nameElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get titleElement {
-    if (_value.titleElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.titleElement, (value) {
-      return _then(_value.copyWith(titleElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get statusElement {
-    if (_value.statusElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
-      return _then(_value.copyWith(statusElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get experimentalElement {
-    if (_value.experimentalElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.experimentalElement, (value) {
-      return _then(_value.copyWith(experimentalElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get dateElement {
-    if (_value.dateElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.dateElement, (value) {
-      return _then(_value.copyWith(dateElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get publisherElement {
-    if (_value.publisherElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.publisherElement, (value) {
-      return _then(_value.copyWith(publisherElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get descriptionElement {
-    if (_value.descriptionElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
-      return _then(_value.copyWith(descriptionElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get purposeElement {
-    if (_value.purposeElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.purposeElement, (value) {
-      return _then(_value.copyWith(purposeElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get usageElement {
-    if (_value.usageElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.usageElement, (value) {
-      return _then(_value.copyWith(usageElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get approvalDateElement {
-    if (_value.approvalDateElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.approvalDateElement, (value) {
-      return _then(_value.copyWith(approvalDateElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get lastReviewDateElement {
-    if (_value.lastReviewDateElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.lastReviewDateElement, (value) {
-      return _then(_value.copyWith(lastReviewDateElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get copyrightElement {
-    if (_value.copyrightElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.copyrightElement, (value) {
-      return _then(_value.copyWith(copyrightElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get kindElement {
-    if (_value.kindElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.kindElement, (value) {
-      return _then(_value.copyWith(kindElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get timingDateTimeElement {
-    if (_value.timingDateTimeElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.timingDateTimeElement, (value) {
-      return _then(_value.copyWith(timingDateTimeElement: value));
-    });
-  }
 }
 
 abstract class _$ActivityDefinitionCopyWith<$Res>
@@ -880,32 +907,44 @@ abstract class _$ActivityDefinitionCopyWith<$Res>
       __$ActivityDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'ActivityDefinition')
-          String resourceType,
+      {@JsonKey(defaultValue: 'ActivityDefinition') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String url,
+      @JsonKey(name: '_url') Element urlElement,
       List<Identifier> identifier,
       String version,
+      @JsonKey(name: '_version') Element versionElement,
       String name,
+      @JsonKey(name: '_name') Element nameElement,
       String title,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
+      @JsonKey(name: '_title') Element titleElement,
+      ActivityDefinitionStatus status,
+      @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
-      FhirDateTime date,
+      @JsonKey(name: '_experimental') Element experimentalElement,
+      Date date,
+      @JsonKey(name: '_date') Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher') Element publisherElement,
       String description,
+      @JsonKey(name: '_description') Element descriptionElement,
       String purpose,
+      @JsonKey(name: '_purpose') Element purposeElement,
       String usage,
+      @JsonKey(name: '_usage') Element usageElement,
       Date approvalDate,
+      @JsonKey(name: '_approvalDate') Element approvalDateElement,
       Date lastReviewDate,
+      @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
       Period effectivePeriod,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
@@ -913,12 +952,15 @@ abstract class _$ActivityDefinitionCopyWith<$Res>
       List<Contributor> contributor,
       List<ContactDetail> contact,
       String copyright,
+      @JsonKey(name: '_copyright') Element copyrightElement,
       List<RelatedArtifact> relatedArtifact,
-      List<Reference> library,
-      Code kind,
+      @JsonKey(name: 'library') List<Reference> library_,
+      String kind,
+      @JsonKey(name: '_kind') Element kindElement,
       CodeableConcept code,
       Timing timingTiming,
       FhirDateTime timingDateTime,
+      @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
       Period timingPeriod,
       Range timingRange,
       Reference location,
@@ -929,64 +971,16 @@ abstract class _$ActivityDefinitionCopyWith<$Res>
       List<Dosage> dosage,
       List<CodeableConcept> bodySite,
       Reference transform,
-      List<ActivityDefinitionDynamicValue> dynamicValue,
-      @JsonKey(name: '_url')
-          Element urlElement,
-      @JsonKey(name: '_version')
-          Element versionElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
-      @JsonKey(name: '_usage')
-          Element usageElement,
-      @JsonKey(name: '_approvalDate')
-          Element approvalDateElement,
-      @JsonKey(name: '_lastReviewDate')
-          Element lastReviewDateElement,
-      @JsonKey(name: '_copyright')
-          Element copyrightElement,
-      @JsonKey(name: '_kind')
-          Element kindElement,
-      @JsonKey(name: '_timingDateTime')
-          Element timingDateTimeElement});
+      List<ActivityDefinitionDynamicValue> dynamicValue});
 
   @override
   $MetaCopyWith<$Res> get meta;
   @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
   $NarrativeCopyWith<$Res> get text;
-  @override
-  $PeriodCopyWith<$Res> get effectivePeriod;
-  @override
-  $CodeableConceptCopyWith<$Res> get code;
-  @override
-  $TimingCopyWith<$Res> get timingTiming;
-  @override
-  $PeriodCopyWith<$Res> get timingPeriod;
-  @override
-  $RangeCopyWith<$Res> get timingRange;
-  @override
-  $ReferenceCopyWith<$Res> get location;
-  @override
-  $ReferenceCopyWith<$Res> get productReference;
-  @override
-  $CodeableConceptCopyWith<$Res> get productCodeableConcept;
-  @override
-  $QuantityCopyWith<$Res> get quantity;
-  @override
-  $ReferenceCopyWith<$Res> get transform;
   @override
   $ElementCopyWith<$Res> get urlElement;
   @override
@@ -1014,11 +1008,31 @@ abstract class _$ActivityDefinitionCopyWith<$Res>
   @override
   $ElementCopyWith<$Res> get lastReviewDateElement;
   @override
+  $PeriodCopyWith<$Res> get effectivePeriod;
+  @override
   $ElementCopyWith<$Res> get copyrightElement;
   @override
   $ElementCopyWith<$Res> get kindElement;
   @override
+  $CodeableConceptCopyWith<$Res> get code;
+  @override
+  $TimingCopyWith<$Res> get timingTiming;
+  @override
   $ElementCopyWith<$Res> get timingDateTimeElement;
+  @override
+  $PeriodCopyWith<$Res> get timingPeriod;
+  @override
+  $RangeCopyWith<$Res> get timingRange;
+  @override
+  $ReferenceCopyWith<$Res> get location;
+  @override
+  $ReferenceCopyWith<$Res> get productReference;
+  @override
+  $CodeableConceptCopyWith<$Res> get productCodeableConcept;
+  @override
+  $QuantityCopyWith<$Res> get quantity;
+  @override
+  $ReferenceCopyWith<$Res> get transform;
 }
 
 class __$ActivityDefinitionCopyWithImpl<$Res>
@@ -1037,25 +1051,40 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object url = freezed,
+    Object urlElement = freezed,
     Object identifier = freezed,
     Object version = freezed,
+    Object versionElement = freezed,
     Object name = freezed,
+    Object nameElement = freezed,
     Object title = freezed,
+    Object titleElement = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object experimental = freezed,
+    Object experimentalElement = freezed,
     Object date = freezed,
+    Object dateElement = freezed,
     Object publisher = freezed,
+    Object publisherElement = freezed,
     Object description = freezed,
+    Object descriptionElement = freezed,
     Object purpose = freezed,
+    Object purposeElement = freezed,
     Object usage = freezed,
+    Object usageElement = freezed,
     Object approvalDate = freezed,
+    Object approvalDateElement = freezed,
     Object lastReviewDate = freezed,
+    Object lastReviewDateElement = freezed,
     Object effectivePeriod = freezed,
     Object useContext = freezed,
     Object jurisdiction = freezed,
@@ -1063,12 +1092,15 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
     Object contributor = freezed,
     Object contact = freezed,
     Object copyright = freezed,
+    Object copyrightElement = freezed,
     Object relatedArtifact = freezed,
-    Object library = freezed,
+    Object library_ = freezed,
     Object kind = freezed,
+    Object kindElement = freezed,
     Object code = freezed,
     Object timingTiming = freezed,
     Object timingDateTime = freezed,
+    Object timingDateTimeElement = freezed,
     Object timingPeriod = freezed,
     Object timingRange = freezed,
     Object location = freezed,
@@ -1080,22 +1112,6 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
     Object bodySite = freezed,
     Object transform = freezed,
     Object dynamicValue = freezed,
-    Object urlElement = freezed,
-    Object versionElement = freezed,
-    Object nameElement = freezed,
-    Object titleElement = freezed,
-    Object statusElement = freezed,
-    Object experimentalElement = freezed,
-    Object dateElement = freezed,
-    Object publisherElement = freezed,
-    Object descriptionElement = freezed,
-    Object purposeElement = freezed,
-    Object usageElement = freezed,
-    Object approvalDateElement = freezed,
-    Object lastReviewDateElement = freezed,
-    Object copyrightElement = freezed,
-    Object kindElement = freezed,
-    Object timingDateTimeElement = freezed,
   }) {
     return _then(_ActivityDefinition(
       resourceType: resourceType == freezed
@@ -1106,7 +1122,13 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -1117,27 +1139,65 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
       version: version == freezed ? _value.version : version as String,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
       name: name == freezed ? _value.name : name as String,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed ? _value.status : status as Status,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      status: status == freezed
+          ? _value.status
+          : status as ActivityDefinitionStatus,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as FhirDateTime,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
+      date: date == freezed ? _value.date : date as Date,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
       description:
           description == freezed ? _value.description : description as String,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
       purpose: purpose == freezed ? _value.purpose : purpose as String,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement as Element,
       usage: usage == freezed ? _value.usage : usage as String,
+      usageElement: usageElement == freezed
+          ? _value.usageElement
+          : usageElement as Element,
       approvalDate:
           approvalDate == freezed ? _value.approvalDate : approvalDate as Date,
+      approvalDateElement: approvalDateElement == freezed
+          ? _value.approvalDateElement
+          : approvalDateElement as Element,
       lastReviewDate: lastReviewDate == freezed
           ? _value.lastReviewDate
           : lastReviewDate as Date,
+      lastReviewDateElement: lastReviewDateElement == freezed
+          ? _value.lastReviewDateElement
+          : lastReviewDateElement as Element,
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period,
@@ -1154,11 +1214,17 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
       copyright: copyright == freezed ? _value.copyright : copyright as String,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
       relatedArtifact: relatedArtifact == freezed
           ? _value.relatedArtifact
           : relatedArtifact as List<RelatedArtifact>,
-      library: library == freezed ? _value.library : library as List<Reference>,
-      kind: kind == freezed ? _value.kind : kind as Code,
+      library_:
+          library_ == freezed ? _value.library_ : library_ as List<Reference>,
+      kind: kind == freezed ? _value.kind : kind as String,
+      kindElement:
+          kindElement == freezed ? _value.kindElement : kindElement as Element,
       code: code == freezed ? _value.code : code as CodeableConcept,
       timingTiming: timingTiming == freezed
           ? _value.timingTiming
@@ -1166,6 +1232,9 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
       timingDateTime: timingDateTime == freezed
           ? _value.timingDateTime
           : timingDateTime as FhirDateTime,
+      timingDateTimeElement: timingDateTimeElement == freezed
+          ? _value.timingDateTimeElement
+          : timingDateTimeElement as Element,
       timingPeriod: timingPeriod == freezed
           ? _value.timingPeriod
           : timingPeriod as Period,
@@ -1191,50 +1260,6 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
       dynamicValue: dynamicValue == freezed
           ? _value.dynamicValue
           : dynamicValue as List<ActivityDefinitionDynamicValue>,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element,
-      versionElement: versionElement == freezed
-          ? _value.versionElement
-          : versionElement as Element,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      titleElement: titleElement == freezed
-          ? _value.titleElement
-          : titleElement as Element,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      experimentalElement: experimentalElement == freezed
-          ? _value.experimentalElement
-          : experimentalElement as Element,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element,
-      publisherElement: publisherElement == freezed
-          ? _value.publisherElement
-          : publisherElement as Element,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement as Element,
-      purposeElement: purposeElement == freezed
-          ? _value.purposeElement
-          : purposeElement as Element,
-      usageElement: usageElement == freezed
-          ? _value.usageElement
-          : usageElement as Element,
-      approvalDateElement: approvalDateElement == freezed
-          ? _value.approvalDateElement
-          : approvalDateElement as Element,
-      lastReviewDateElement: lastReviewDateElement == freezed
-          ? _value.lastReviewDateElement
-          : lastReviewDateElement as Element,
-      copyrightElement: copyrightElement == freezed
-          ? _value.copyrightElement
-          : copyrightElement as Element,
-      kindElement:
-          kindElement == freezed ? _value.kindElement : kindElement as Element,
-      timingDateTimeElement: timingDateTimeElement == freezed
-          ? _value.timingDateTimeElement
-          : timingDateTimeElement as Element,
     ));
   }
 }
@@ -1242,33 +1267,44 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ActivityDefinition extends _ActivityDefinition {
   _$_ActivityDefinition(
-      {@required
-      @JsonKey(required: true, defaultValue: 'ActivityDefinition')
-          this.resourceType,
+      {@required @JsonKey(defaultValue: 'ActivityDefinition') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.url,
+      @JsonKey(name: '_url') this.urlElement,
       this.identifier,
       this.version,
+      @JsonKey(name: '_version') this.versionElement,
       this.name,
+      @JsonKey(name: '_name') this.nameElement,
       this.title,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          this.status,
+      @JsonKey(name: '_title') this.titleElement,
+      this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.experimental,
+      @JsonKey(name: '_experimental') this.experimentalElement,
       this.date,
+      @JsonKey(name: '_date') this.dateElement,
       this.publisher,
+      @JsonKey(name: '_publisher') this.publisherElement,
       this.description,
+      @JsonKey(name: '_description') this.descriptionElement,
       this.purpose,
+      @JsonKey(name: '_purpose') this.purposeElement,
       this.usage,
+      @JsonKey(name: '_usage') this.usageElement,
       this.approvalDate,
+      @JsonKey(name: '_approvalDate') this.approvalDateElement,
       this.lastReviewDate,
+      @JsonKey(name: '_lastReviewDate') this.lastReviewDateElement,
       this.effectivePeriod,
       this.useContext,
       this.jurisdiction,
@@ -1276,12 +1312,15 @@ class _$_ActivityDefinition extends _ActivityDefinition {
       this.contributor,
       this.contact,
       this.copyright,
+      @JsonKey(name: '_copyright') this.copyrightElement,
       this.relatedArtifact,
-      this.library,
+      @JsonKey(name: 'library') this.library_,
       this.kind,
+      @JsonKey(name: '_kind') this.kindElement,
       this.code,
       this.timingTiming,
       this.timingDateTime,
+      @JsonKey(name: '_timingDateTime') this.timingDateTimeElement,
       this.timingPeriod,
       this.timingRange,
       this.location,
@@ -1292,39 +1331,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
       this.dosage,
       this.bodySite,
       this.transform,
-      this.dynamicValue,
-      @JsonKey(name: '_url')
-          this.urlElement,
-      @JsonKey(name: '_version')
-          this.versionElement,
-      @JsonKey(name: '_name')
-          this.nameElement,
-      @JsonKey(name: '_title')
-          this.titleElement,
-      @JsonKey(name: '_status')
-          this.statusElement,
-      @JsonKey(name: '_experimental')
-          this.experimentalElement,
-      @JsonKey(name: '_date')
-          this.dateElement,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
-      @JsonKey(name: '_purpose')
-          this.purposeElement,
-      @JsonKey(name: '_usage')
-          this.usageElement,
-      @JsonKey(name: '_approvalDate')
-          this.approvalDateElement,
-      @JsonKey(name: '_lastReviewDate')
-          this.lastReviewDateElement,
-      @JsonKey(name: '_copyright')
-          this.copyrightElement,
-      @JsonKey(name: '_kind')
-          this.kindElement,
-      @JsonKey(name: '_timingDateTime')
-          this.timingDateTimeElement})
+      this.dynamicValue})
       : assert(resourceType != null),
         super._();
 
@@ -1332,7 +1339,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
       _$_$_ActivityDefinitionFromJson(json);
 
   @override
-  @JsonKey(required: true, defaultValue: 'ActivityDefinition')
+  @JsonKey(defaultValue: 'ActivityDefinition')
   final String resourceType;
   @override
   final Id id;
@@ -1341,7 +1348,13 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   @override
   final FhirUri implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
   final Code language;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
   @override
   final Narrative text;
   @override
@@ -1354,32 +1367,70 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   @override
   final String url;
   @override
+  @JsonKey(name: '_url')
+  final Element urlElement;
+  @override
   final List<Identifier> identifier;
   @override
   final String version;
   @override
+  @JsonKey(name: '_version')
+  final Element versionElement;
+  @override
   final String name;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
   @override
   final String title;
   @override
-  @JsonKey(unknownEnumValue: Status.unknown)
-  final Status status;
+  @JsonKey(name: '_title')
+  final Element titleElement;
+  @override
+  final ActivityDefinitionStatus status;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
   @override
   final Boolean experimental;
   @override
-  final FhirDateTime date;
+  @JsonKey(name: '_experimental')
+  final Element experimentalElement;
+  @override
+  final Date date;
+  @override
+  @JsonKey(name: '_date')
+  final Element dateElement;
   @override
   final String publisher;
   @override
+  @JsonKey(name: '_publisher')
+  final Element publisherElement;
+  @override
   final String description;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
   @override
   final String purpose;
   @override
+  @JsonKey(name: '_purpose')
+  final Element purposeElement;
+  @override
   final String usage;
+  @override
+  @JsonKey(name: '_usage')
+  final Element usageElement;
   @override
   final Date approvalDate;
   @override
+  @JsonKey(name: '_approvalDate')
+  final Element approvalDateElement;
+  @override
   final Date lastReviewDate;
+  @override
+  @JsonKey(name: '_lastReviewDate')
+  final Element lastReviewDateElement;
   @override
   final Period effectivePeriod;
   @override
@@ -1395,17 +1446,27 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   @override
   final String copyright;
   @override
+  @JsonKey(name: '_copyright')
+  final Element copyrightElement;
+  @override
   final List<RelatedArtifact> relatedArtifact;
   @override
-  final List<Reference> library;
+  @JsonKey(name: 'library')
+  final List<Reference> library_;
   @override
-  final Code kind;
+  final String kind;
+  @override
+  @JsonKey(name: '_kind')
+  final Element kindElement;
   @override
   final CodeableConcept code;
   @override
   final Timing timingTiming;
   @override
   final FhirDateTime timingDateTime;
+  @override
+  @JsonKey(name: '_timingDateTime')
+  final Element timingDateTimeElement;
   @override
   final Period timingPeriod;
   @override
@@ -1428,58 +1489,10 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   final Reference transform;
   @override
   final List<ActivityDefinitionDynamicValue> dynamicValue;
-  @override
-  @JsonKey(name: '_url')
-  final Element urlElement;
-  @override
-  @JsonKey(name: '_version')
-  final Element versionElement;
-  @override
-  @JsonKey(name: '_name')
-  final Element nameElement;
-  @override
-  @JsonKey(name: '_title')
-  final Element titleElement;
-  @override
-  @JsonKey(name: '_status')
-  final Element statusElement;
-  @override
-  @JsonKey(name: '_experimental')
-  final Element experimentalElement;
-  @override
-  @JsonKey(name: '_date')
-  final Element dateElement;
-  @override
-  @JsonKey(name: '_publisher')
-  final Element publisherElement;
-  @override
-  @JsonKey(name: '_description')
-  final Element descriptionElement;
-  @override
-  @JsonKey(name: '_purpose')
-  final Element purposeElement;
-  @override
-  @JsonKey(name: '_usage')
-  final Element usageElement;
-  @override
-  @JsonKey(name: '_approvalDate')
-  final Element approvalDateElement;
-  @override
-  @JsonKey(name: '_lastReviewDate')
-  final Element lastReviewDateElement;
-  @override
-  @JsonKey(name: '_copyright')
-  final Element copyrightElement;
-  @override
-  @JsonKey(name: '_kind')
-  final Element kindElement;
-  @override
-  @JsonKey(name: '_timingDateTime')
-  final Element timingDateTimeElement;
 
   @override
   String toString() {
-    return 'ActivityDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, description: $description, purpose: $purpose, usage: $usage, approvalDate: $approvalDate, lastReviewDate: $lastReviewDate, effectivePeriod: $effectivePeriod, useContext: $useContext, jurisdiction: $jurisdiction, topic: $topic, contributor: $contributor, contact: $contact, copyright: $copyright, relatedArtifact: $relatedArtifact, library: $library, kind: $kind, code: $code, timingTiming: $timingTiming, timingDateTime: $timingDateTime, timingPeriod: $timingPeriod, timingRange: $timingRange, location: $location, participant: $participant, productReference: $productReference, productCodeableConcept: $productCodeableConcept, quantity: $quantity, dosage: $dosage, bodySite: $bodySite, transform: $transform, dynamicValue: $dynamicValue, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, usageElement: $usageElement, approvalDateElement: $approvalDateElement, lastReviewDateElement: $lastReviewDateElement, copyrightElement: $copyrightElement, kindElement: $kindElement, timingDateTimeElement: $timingDateTimeElement)';
+    return 'ActivityDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, description: $description, descriptionElement: $descriptionElement, purpose: $purpose, purposeElement: $purposeElement, usage: $usage, usageElement: $usageElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, useContext: $useContext, jurisdiction: $jurisdiction, topic: $topic, contributor: $contributor, contact: $contact, copyright: $copyright, copyrightElement: $copyrightElement, relatedArtifact: $relatedArtifact, library_: $library_, kind: $kind, kindElement: $kindElement, code: $code, timingTiming: $timingTiming, timingDateTime: $timingDateTime, timingDateTimeElement: $timingDateTimeElement, timingPeriod: $timingPeriod, timingRange: $timingRange, location: $location, participant: $participant, productReference: $productReference, productCodeableConcept: $productCodeableConcept, quantity: $quantity, dosage: $dosage, bodySite: $bodySite, transform: $transform, dynamicValue: $dynamicValue)';
   }
 
   @override
@@ -1496,9 +1509,15 @@ class _$_ActivityDefinition extends _ActivityDefinition {
             (identical(other.implicitRules, implicitRules) ||
                 const DeepCollectionEquality()
                     .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
             (identical(other.language, language) ||
                 const DeepCollectionEquality()
                     .equals(other.language, language)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
             (identical(other.text, text) ||
                 const DeepCollectionEquality().equals(other.text, text)) &&
             (identical(other.contained, contained) ||
@@ -1512,59 +1531,71 @@ class _$_ActivityDefinition extends _ActivityDefinition {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
+            (identical(other.urlElement, urlElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.urlElement, urlElement)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
             (identical(other.version, version) ||
                 const DeepCollectionEquality()
                     .equals(other.version, version)) &&
+            (identical(other.versionElement, versionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.versionElement, versionElement)) &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
             (identical(other.title, title) ||
                 const DeepCollectionEquality().equals(other.title, title)) &&
+            (identical(other.titleElement, titleElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.titleElement, titleElement)) &&
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
             (identical(other.experimental, experimental) ||
                 const DeepCollectionEquality()
                     .equals(other.experimental, experimental)) &&
+            (identical(other.experimentalElement, experimentalElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.experimentalElement, experimentalElement)) &&
             (identical(other.date, date) ||
                 const DeepCollectionEquality().equals(other.date, date)) &&
-            (identical(other.publisher, publisher) ||
-                const DeepCollectionEquality()
-                    .equals(other.publisher, publisher)) &&
-            (identical(other.description, description) ||
-                const DeepCollectionEquality()
-                    .equals(other.description, description)) &&
-            (identical(other.purpose, purpose) ||
-                const DeepCollectionEquality()
-                    .equals(other.purpose, purpose)) &&
-            (identical(other.usage, usage) ||
-                const DeepCollectionEquality().equals(other.usage, usage)) &&
-            (identical(other.approvalDate, approvalDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.approvalDate, approvalDate)) &&
-            (identical(other.lastReviewDate, lastReviewDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.lastReviewDate, lastReviewDate)) &&
-            (identical(other.effectivePeriod, effectivePeriod) ||
-                const DeepCollectionEquality()
-                    .equals(other.effectivePeriod, effectivePeriod)) &&
-            (identical(other.useContext, useContext) ||
-                const DeepCollectionEquality()
-                    .equals(other.useContext, useContext)) &&
-            (identical(other.jurisdiction, jurisdiction) ||
-                const DeepCollectionEquality()
-                    .equals(other.jurisdiction, jurisdiction)) &&
+            (identical(other.dateElement, dateElement) ||
+                const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
+            (identical(other.publisher, publisher) || const DeepCollectionEquality().equals(other.publisher, publisher)) &&
+            (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
+            (identical(other.description, description) || const DeepCollectionEquality().equals(other.description, description)) &&
+            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.purpose, purpose) || const DeepCollectionEquality().equals(other.purpose, purpose)) &&
+            (identical(other.purposeElement, purposeElement) || const DeepCollectionEquality().equals(other.purposeElement, purposeElement)) &&
+            (identical(other.usage, usage) || const DeepCollectionEquality().equals(other.usage, usage)) &&
+            (identical(other.usageElement, usageElement) || const DeepCollectionEquality().equals(other.usageElement, usageElement)) &&
+            (identical(other.approvalDate, approvalDate) || const DeepCollectionEquality().equals(other.approvalDate, approvalDate)) &&
+            (identical(other.approvalDateElement, approvalDateElement) || const DeepCollectionEquality().equals(other.approvalDateElement, approvalDateElement)) &&
+            (identical(other.lastReviewDate, lastReviewDate) || const DeepCollectionEquality().equals(other.lastReviewDate, lastReviewDate)) &&
+            (identical(other.lastReviewDateElement, lastReviewDateElement) || const DeepCollectionEquality().equals(other.lastReviewDateElement, lastReviewDateElement)) &&
+            (identical(other.effectivePeriod, effectivePeriod) || const DeepCollectionEquality().equals(other.effectivePeriod, effectivePeriod)) &&
+            (identical(other.useContext, useContext) || const DeepCollectionEquality().equals(other.useContext, useContext)) &&
+            (identical(other.jurisdiction, jurisdiction) || const DeepCollectionEquality().equals(other.jurisdiction, jurisdiction)) &&
             (identical(other.topic, topic) || const DeepCollectionEquality().equals(other.topic, topic)) &&
             (identical(other.contributor, contributor) || const DeepCollectionEquality().equals(other.contributor, contributor)) &&
             (identical(other.contact, contact) || const DeepCollectionEquality().equals(other.contact, contact)) &&
             (identical(other.copyright, copyright) || const DeepCollectionEquality().equals(other.copyright, copyright)) &&
+            (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)) &&
             (identical(other.relatedArtifact, relatedArtifact) || const DeepCollectionEquality().equals(other.relatedArtifact, relatedArtifact)) &&
-            (identical(other.library, library) || const DeepCollectionEquality().equals(other.library, library)) &&
+            (identical(other.library_, library_) || const DeepCollectionEquality().equals(other.library_, library_)) &&
             (identical(other.kind, kind) || const DeepCollectionEquality().equals(other.kind, kind)) &&
+            (identical(other.kindElement, kindElement) || const DeepCollectionEquality().equals(other.kindElement, kindElement)) &&
             (identical(other.code, code) || const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.timingTiming, timingTiming) || const DeepCollectionEquality().equals(other.timingTiming, timingTiming)) &&
             (identical(other.timingDateTime, timingDateTime) || const DeepCollectionEquality().equals(other.timingDateTime, timingDateTime)) &&
+            (identical(other.timingDateTimeElement, timingDateTimeElement) || const DeepCollectionEquality().equals(other.timingDateTimeElement, timingDateTimeElement)) &&
             (identical(other.timingPeriod, timingPeriod) || const DeepCollectionEquality().equals(other.timingPeriod, timingPeriod)) &&
             (identical(other.timingRange, timingRange) || const DeepCollectionEquality().equals(other.timingRange, timingRange)) &&
             (identical(other.location, location) || const DeepCollectionEquality().equals(other.location, location)) &&
@@ -1575,23 +1606,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
             (identical(other.dosage, dosage) || const DeepCollectionEquality().equals(other.dosage, dosage)) &&
             (identical(other.bodySite, bodySite) || const DeepCollectionEquality().equals(other.bodySite, bodySite)) &&
             (identical(other.transform, transform) || const DeepCollectionEquality().equals(other.transform, transform)) &&
-            (identical(other.dynamicValue, dynamicValue) || const DeepCollectionEquality().equals(other.dynamicValue, dynamicValue)) &&
-            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
-            (identical(other.versionElement, versionElement) || const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
-            (identical(other.nameElement, nameElement) || const DeepCollectionEquality().equals(other.nameElement, nameElement)) &&
-            (identical(other.titleElement, titleElement) || const DeepCollectionEquality().equals(other.titleElement, titleElement)) &&
-            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
-            (identical(other.experimentalElement, experimentalElement) || const DeepCollectionEquality().equals(other.experimentalElement, experimentalElement)) &&
-            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
-            (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
-            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
-            (identical(other.purposeElement, purposeElement) || const DeepCollectionEquality().equals(other.purposeElement, purposeElement)) &&
-            (identical(other.usageElement, usageElement) || const DeepCollectionEquality().equals(other.usageElement, usageElement)) &&
-            (identical(other.approvalDateElement, approvalDateElement) || const DeepCollectionEquality().equals(other.approvalDateElement, approvalDateElement)) &&
-            (identical(other.lastReviewDateElement, lastReviewDateElement) || const DeepCollectionEquality().equals(other.lastReviewDateElement, lastReviewDateElement)) &&
-            (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)) &&
-            (identical(other.kindElement, kindElement) || const DeepCollectionEquality().equals(other.kindElement, kindElement)) &&
-            (identical(other.timingDateTimeElement, timingDateTimeElement) || const DeepCollectionEquality().equals(other.timingDateTimeElement, timingDateTimeElement)));
+            (identical(other.dynamicValue, dynamicValue) || const DeepCollectionEquality().equals(other.dynamicValue, dynamicValue)));
   }
 
   @override
@@ -1601,25 +1616,40 @@ class _$_ActivityDefinition extends _ActivityDefinition {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
       const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(url) ^
+      const DeepCollectionEquality().hash(urlElement) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(version) ^
+      const DeepCollectionEquality().hash(versionElement) ^
       const DeepCollectionEquality().hash(name) ^
+      const DeepCollectionEquality().hash(nameElement) ^
       const DeepCollectionEquality().hash(title) ^
+      const DeepCollectionEquality().hash(titleElement) ^
       const DeepCollectionEquality().hash(status) ^
+      const DeepCollectionEquality().hash(statusElement) ^
       const DeepCollectionEquality().hash(experimental) ^
+      const DeepCollectionEquality().hash(experimentalElement) ^
       const DeepCollectionEquality().hash(date) ^
+      const DeepCollectionEquality().hash(dateElement) ^
       const DeepCollectionEquality().hash(publisher) ^
+      const DeepCollectionEquality().hash(publisherElement) ^
       const DeepCollectionEquality().hash(description) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(purpose) ^
+      const DeepCollectionEquality().hash(purposeElement) ^
       const DeepCollectionEquality().hash(usage) ^
+      const DeepCollectionEquality().hash(usageElement) ^
       const DeepCollectionEquality().hash(approvalDate) ^
+      const DeepCollectionEquality().hash(approvalDateElement) ^
       const DeepCollectionEquality().hash(lastReviewDate) ^
+      const DeepCollectionEquality().hash(lastReviewDateElement) ^
       const DeepCollectionEquality().hash(effectivePeriod) ^
       const DeepCollectionEquality().hash(useContext) ^
       const DeepCollectionEquality().hash(jurisdiction) ^
@@ -1627,12 +1657,15 @@ class _$_ActivityDefinition extends _ActivityDefinition {
       const DeepCollectionEquality().hash(contributor) ^
       const DeepCollectionEquality().hash(contact) ^
       const DeepCollectionEquality().hash(copyright) ^
+      const DeepCollectionEquality().hash(copyrightElement) ^
       const DeepCollectionEquality().hash(relatedArtifact) ^
-      const DeepCollectionEquality().hash(library) ^
+      const DeepCollectionEquality().hash(library_) ^
       const DeepCollectionEquality().hash(kind) ^
+      const DeepCollectionEquality().hash(kindElement) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(timingTiming) ^
       const DeepCollectionEquality().hash(timingDateTime) ^
+      const DeepCollectionEquality().hash(timingDateTimeElement) ^
       const DeepCollectionEquality().hash(timingPeriod) ^
       const DeepCollectionEquality().hash(timingRange) ^
       const DeepCollectionEquality().hash(location) ^
@@ -1643,23 +1676,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
       const DeepCollectionEquality().hash(dosage) ^
       const DeepCollectionEquality().hash(bodySite) ^
       const DeepCollectionEquality().hash(transform) ^
-      const DeepCollectionEquality().hash(dynamicValue) ^
-      const DeepCollectionEquality().hash(urlElement) ^
-      const DeepCollectionEquality().hash(versionElement) ^
-      const DeepCollectionEquality().hash(nameElement) ^
-      const DeepCollectionEquality().hash(titleElement) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(experimentalElement) ^
-      const DeepCollectionEquality().hash(dateElement) ^
-      const DeepCollectionEquality().hash(publisherElement) ^
-      const DeepCollectionEquality().hash(descriptionElement) ^
-      const DeepCollectionEquality().hash(purposeElement) ^
-      const DeepCollectionEquality().hash(usageElement) ^
-      const DeepCollectionEquality().hash(approvalDateElement) ^
-      const DeepCollectionEquality().hash(lastReviewDateElement) ^
-      const DeepCollectionEquality().hash(copyrightElement) ^
-      const DeepCollectionEquality().hash(kindElement) ^
-      const DeepCollectionEquality().hash(timingDateTimeElement);
+      const DeepCollectionEquality().hash(dynamicValue);
 
   @override
   _$ActivityDefinitionCopyWith<_ActivityDefinition> get copyWith =>
@@ -1674,95 +1691,100 @@ class _$_ActivityDefinition extends _ActivityDefinition {
 abstract class _ActivityDefinition extends ActivityDefinition {
   _ActivityDefinition._() : super._();
   factory _ActivityDefinition(
-      {@required
-      @JsonKey(required: true, defaultValue: 'ActivityDefinition')
-          String resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
-      Code language,
-      Narrative text,
-      List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      String url,
-      List<Identifier> identifier,
-      String version,
-      String name,
-      String title,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
-      Boolean experimental,
-      FhirDateTime date,
-      String publisher,
-      String description,
-      String purpose,
-      String usage,
-      Date approvalDate,
-      Date lastReviewDate,
-      Period effectivePeriod,
-      List<UsageContext> useContext,
-      List<CodeableConcept> jurisdiction,
-      List<CodeableConcept> topic,
-      List<Contributor> contributor,
-      List<ContactDetail> contact,
-      String copyright,
-      List<RelatedArtifact> relatedArtifact,
-      List<Reference> library,
-      Code kind,
-      CodeableConcept code,
-      Timing timingTiming,
-      FhirDateTime timingDateTime,
-      Period timingPeriod,
-      Range timingRange,
-      Reference location,
-      List<ActivityDefinitionParticipant> participant,
-      Reference productReference,
-      CodeableConcept productCodeableConcept,
-      Quantity quantity,
-      List<Dosage> dosage,
-      List<CodeableConcept> bodySite,
-      Reference transform,
-      List<ActivityDefinitionDynamicValue> dynamicValue,
-      @JsonKey(name: '_url')
-          Element urlElement,
-      @JsonKey(name: '_version')
-          Element versionElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
-      @JsonKey(name: '_usage')
-          Element usageElement,
-      @JsonKey(name: '_approvalDate')
-          Element approvalDateElement,
-      @JsonKey(name: '_lastReviewDate')
-          Element lastReviewDateElement,
-      @JsonKey(name: '_copyright')
-          Element copyrightElement,
-      @JsonKey(name: '_kind')
-          Element kindElement,
-      @JsonKey(name: '_timingDateTime')
-          Element timingDateTimeElement}) = _$_ActivityDefinition;
+          {@required
+          @JsonKey(defaultValue: 'ActivityDefinition')
+              String resourceType,
+          Id id,
+          Meta meta,
+          FhirUri implicitRules,
+          @JsonKey(name: '_implicitRules')
+              Element implicitRulesElement,
+          Code language,
+          @JsonKey(name: '_language')
+              Element languageElement,
+          Narrative text,
+          List<Resource> contained,
+          @JsonKey(name: 'extension')
+              List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          String url,
+          @JsonKey(name: '_url')
+              Element urlElement,
+          List<Identifier> identifier,
+          String version,
+          @JsonKey(name: '_version')
+              Element versionElement,
+          String name,
+          @JsonKey(name: '_name')
+              Element nameElement,
+          String title,
+          @JsonKey(name: '_title')
+              Element titleElement,
+          ActivityDefinitionStatus status,
+          @JsonKey(name: '_status')
+              Element statusElement,
+          Boolean experimental,
+          @JsonKey(name: '_experimental')
+              Element experimentalElement,
+          Date date,
+          @JsonKey(name: '_date')
+              Element dateElement,
+          String publisher,
+          @JsonKey(name: '_publisher')
+              Element publisherElement,
+          String description,
+          @JsonKey(name: '_description')
+              Element descriptionElement,
+          String purpose,
+          @JsonKey(name: '_purpose')
+              Element purposeElement,
+          String usage,
+          @JsonKey(name: '_usage')
+              Element usageElement,
+          Date approvalDate,
+          @JsonKey(name: '_approvalDate')
+              Element approvalDateElement,
+          Date lastReviewDate,
+          @JsonKey(name: '_lastReviewDate')
+              Element lastReviewDateElement,
+          Period effectivePeriod,
+          List<UsageContext> useContext,
+          List<CodeableConcept> jurisdiction,
+          List<CodeableConcept> topic,
+          List<Contributor> contributor,
+          List<ContactDetail> contact,
+          String copyright,
+          @JsonKey(name: '_copyright')
+              Element copyrightElement,
+          List<RelatedArtifact> relatedArtifact,
+          @JsonKey(name: 'library')
+              List<Reference> library_,
+          String kind,
+          @JsonKey(name: '_kind')
+              Element kindElement,
+          CodeableConcept code,
+          Timing timingTiming,
+          FhirDateTime timingDateTime,
+          @JsonKey(name: '_timingDateTime')
+              Element timingDateTimeElement,
+          Period timingPeriod,
+          Range timingRange,
+          Reference location,
+          List<ActivityDefinitionParticipant> participant,
+          Reference productReference,
+          CodeableConcept productCodeableConcept,
+          Quantity quantity,
+          List<Dosage> dosage,
+          List<CodeableConcept> bodySite,
+          Reference transform,
+          List<ActivityDefinitionDynamicValue> dynamicValue}) =
+      _$_ActivityDefinition;
 
   factory _ActivityDefinition.fromJson(Map<String, dynamic> json) =
       _$_ActivityDefinition.fromJson;
 
   @override
-  @JsonKey(required: true, defaultValue: 'ActivityDefinition')
+  @JsonKey(defaultValue: 'ActivityDefinition')
   String get resourceType;
   @override
   Id get id;
@@ -1771,7 +1793,13 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   @override
   FhirUri get implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
   Code get language;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
   @override
   Narrative get text;
   @override
@@ -1784,32 +1812,70 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   @override
   String get url;
   @override
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @override
   List<Identifier> get identifier;
   @override
   String get version;
   @override
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @override
   String get name;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
   @override
   String get title;
   @override
-  @JsonKey(unknownEnumValue: Status.unknown)
-  Status get status;
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @override
+  ActivityDefinitionStatus get status;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
   @override
   Boolean get experimental;
   @override
-  FhirDateTime get date;
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  @override
+  Date get date;
+  @override
+  @JsonKey(name: '_date')
+  Element get dateElement;
   @override
   String get publisher;
   @override
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
+  @override
   String get description;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
   @override
   String get purpose;
   @override
+  @JsonKey(name: '_purpose')
+  Element get purposeElement;
+  @override
   String get usage;
+  @override
+  @JsonKey(name: '_usage')
+  Element get usageElement;
   @override
   Date get approvalDate;
   @override
+  @JsonKey(name: '_approvalDate')
+  Element get approvalDateElement;
+  @override
   Date get lastReviewDate;
+  @override
+  @JsonKey(name: '_lastReviewDate')
+  Element get lastReviewDateElement;
   @override
   Period get effectivePeriod;
   @override
@@ -1825,17 +1891,27 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   @override
   String get copyright;
   @override
+  @JsonKey(name: '_copyright')
+  Element get copyrightElement;
+  @override
   List<RelatedArtifact> get relatedArtifact;
   @override
-  List<Reference> get library;
+  @JsonKey(name: 'library')
+  List<Reference> get library_;
   @override
-  Code get kind;
+  String get kind;
+  @override
+  @JsonKey(name: '_kind')
+  Element get kindElement;
   @override
   CodeableConcept get code;
   @override
   Timing get timingTiming;
   @override
   FhirDateTime get timingDateTime;
+  @override
+  @JsonKey(name: '_timingDateTime')
+  Element get timingDateTimeElement;
   @override
   Period get timingPeriod;
   @override
@@ -1859,54 +1935,6 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   @override
   List<ActivityDefinitionDynamicValue> get dynamicValue;
   @override
-  @JsonKey(name: '_url')
-  Element get urlElement;
-  @override
-  @JsonKey(name: '_version')
-  Element get versionElement;
-  @override
-  @JsonKey(name: '_name')
-  Element get nameElement;
-  @override
-  @JsonKey(name: '_title')
-  Element get titleElement;
-  @override
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @override
-  @JsonKey(name: '_experimental')
-  Element get experimentalElement;
-  @override
-  @JsonKey(name: '_date')
-  Element get dateElement;
-  @override
-  @JsonKey(name: '_publisher')
-  Element get publisherElement;
-  @override
-  @JsonKey(name: '_description')
-  Element get descriptionElement;
-  @override
-  @JsonKey(name: '_purpose')
-  Element get purposeElement;
-  @override
-  @JsonKey(name: '_usage')
-  Element get usageElement;
-  @override
-  @JsonKey(name: '_approvalDate')
-  Element get approvalDateElement;
-  @override
-  @JsonKey(name: '_lastReviewDate')
-  Element get lastReviewDateElement;
-  @override
-  @JsonKey(name: '_copyright')
-  Element get copyrightElement;
-  @override
-  @JsonKey(name: '_kind')
-  Element get kindElement;
-  @override
-  @JsonKey(name: '_timingDateTime')
-  Element get timingDateTimeElement;
-  @override
   _$ActivityDefinitionCopyWith<_ActivityDefinition> get copyWith;
 }
 
@@ -1918,14 +1946,15 @@ ActivityDefinitionParticipant _$ActivityDefinitionParticipantFromJson(
 class _$ActivityDefinitionParticipantTearOff {
   const _$ActivityDefinitionParticipantTearOff();
 
+// ignore: unused_element
   _ActivityDefinitionParticipant call(
-      {Code type,
-      CodeableConcept role,
-      @JsonKey(name: '_type') Element typeElement}) {
+      {String type,
+      @JsonKey(name: '_type') Element typeElement,
+      CodeableConcept role}) {
     return _ActivityDefinitionParticipant(
       type: type,
-      role: role,
       typeElement: typeElement,
+      role: role,
     );
   }
 }
@@ -1934,10 +1963,10 @@ class _$ActivityDefinitionParticipantTearOff {
 const $ActivityDefinitionParticipant = _$ActivityDefinitionParticipantTearOff();
 
 mixin _$ActivityDefinitionParticipant {
-  Code get type;
-  CodeableConcept get role;
+  String get type;
   @JsonKey(name: '_type')
   Element get typeElement;
+  CodeableConcept get role;
 
   Map<String, dynamic> toJson();
   $ActivityDefinitionParticipantCopyWith<ActivityDefinitionParticipant>
@@ -1950,12 +1979,12 @@ abstract class $ActivityDefinitionParticipantCopyWith<$Res> {
           $Res Function(ActivityDefinitionParticipant) then) =
       _$ActivityDefinitionParticipantCopyWithImpl<$Res>;
   $Res call(
-      {Code type,
-      CodeableConcept role,
-      @JsonKey(name: '_type') Element typeElement});
+      {String type,
+      @JsonKey(name: '_type') Element typeElement,
+      CodeableConcept role});
 
-  $CodeableConceptCopyWith<$Res> get role;
   $ElementCopyWith<$Res> get typeElement;
+  $CodeableConceptCopyWith<$Res> get role;
 }
 
 class _$ActivityDefinitionParticipantCopyWithImpl<$Res>
@@ -1969,25 +1998,15 @@ class _$ActivityDefinitionParticipantCopyWithImpl<$Res>
   @override
   $Res call({
     Object type = freezed,
-    Object role = freezed,
     Object typeElement = freezed,
+    Object role = freezed,
   }) {
     return _then(_value.copyWith(
-      type: type == freezed ? _value.type : type as Code,
-      role: role == freezed ? _value.role : role as CodeableConcept,
+      type: type == freezed ? _value.type : type as String,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element,
+      role: role == freezed ? _value.role : role as CodeableConcept,
     ));
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get role {
-    if (_value.role == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.role, (value) {
-      return _then(_value.copyWith(role: value));
-    });
   }
 
   @override
@@ -1997,6 +2016,16 @@ class _$ActivityDefinitionParticipantCopyWithImpl<$Res>
     }
     return $ElementCopyWith<$Res>(_value.typeElement, (value) {
       return _then(_value.copyWith(typeElement: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get role {
+    if (_value.role == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.role, (value) {
+      return _then(_value.copyWith(role: value));
     });
   }
 }
@@ -2009,14 +2038,14 @@ abstract class _$ActivityDefinitionParticipantCopyWith<$Res>
       __$ActivityDefinitionParticipantCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Code type,
-      CodeableConcept role,
-      @JsonKey(name: '_type') Element typeElement});
+      {String type,
+      @JsonKey(name: '_type') Element typeElement,
+      CodeableConcept role});
 
   @override
-  $CodeableConceptCopyWith<$Res> get role;
-  @override
   $ElementCopyWith<$Res> get typeElement;
+  @override
+  $CodeableConceptCopyWith<$Res> get role;
 }
 
 class __$ActivityDefinitionParticipantCopyWithImpl<$Res>
@@ -2034,39 +2063,39 @@ class __$ActivityDefinitionParticipantCopyWithImpl<$Res>
   @override
   $Res call({
     Object type = freezed,
-    Object role = freezed,
     Object typeElement = freezed,
+    Object role = freezed,
   }) {
     return _then(_ActivityDefinitionParticipant(
-      type: type == freezed ? _value.type : type as Code,
-      role: role == freezed ? _value.role : role as CodeableConcept,
+      type: type == freezed ? _value.type : type as String,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element,
+      role: role == freezed ? _value.role : role as CodeableConcept,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_ActivityDefinitionParticipant
-    implements _ActivityDefinitionParticipant {
+class _$_ActivityDefinitionParticipant extends _ActivityDefinitionParticipant {
   _$_ActivityDefinitionParticipant(
-      {this.type, this.role, @JsonKey(name: '_type') this.typeElement});
+      {this.type, @JsonKey(name: '_type') this.typeElement, this.role})
+      : super._();
 
   factory _$_ActivityDefinitionParticipant.fromJson(
           Map<String, dynamic> json) =>
       _$_$_ActivityDefinitionParticipantFromJson(json);
 
   @override
-  final Code type;
-  @override
-  final CodeableConcept role;
+  final String type;
   @override
   @JsonKey(name: '_type')
   final Element typeElement;
+  @override
+  final CodeableConcept role;
 
   @override
   String toString() {
-    return 'ActivityDefinitionParticipant(type: $type, role: $role, typeElement: $typeElement)';
+    return 'ActivityDefinitionParticipant(type: $type, typeElement: $typeElement, role: $role)';
   }
 
   @override
@@ -2075,19 +2104,19 @@ class _$_ActivityDefinitionParticipant
         (other is _ActivityDefinitionParticipant &&
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.role, role) ||
-                const DeepCollectionEquality().equals(other.role, role)) &&
             (identical(other.typeElement, typeElement) ||
                 const DeepCollectionEquality()
-                    .equals(other.typeElement, typeElement)));
+                    .equals(other.typeElement, typeElement)) &&
+            (identical(other.role, role) ||
+                const DeepCollectionEquality().equals(other.role, role)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(role) ^
-      const DeepCollectionEquality().hash(typeElement);
+      const DeepCollectionEquality().hash(typeElement) ^
+      const DeepCollectionEquality().hash(role);
 
   @override
   _$ActivityDefinitionParticipantCopyWith<_ActivityDefinitionParticipant>
@@ -2101,23 +2130,23 @@ class _$_ActivityDefinitionParticipant
 }
 
 abstract class _ActivityDefinitionParticipant
-    implements ActivityDefinitionParticipant {
+    extends ActivityDefinitionParticipant {
+  _ActivityDefinitionParticipant._() : super._();
   factory _ActivityDefinitionParticipant(
-          {Code type,
-          CodeableConcept role,
-          @JsonKey(name: '_type') Element typeElement}) =
-      _$_ActivityDefinitionParticipant;
+      {String type,
+      @JsonKey(name: '_type') Element typeElement,
+      CodeableConcept role}) = _$_ActivityDefinitionParticipant;
 
   factory _ActivityDefinitionParticipant.fromJson(Map<String, dynamic> json) =
       _$_ActivityDefinitionParticipant.fromJson;
 
   @override
-  Code get type;
-  @override
-  CodeableConcept get role;
+  String get type;
   @override
   @JsonKey(name: '_type')
   Element get typeElement;
+  @override
+  CodeableConcept get role;
   @override
   _$ActivityDefinitionParticipantCopyWith<_ActivityDefinitionParticipant>
       get copyWith;
@@ -2131,23 +2160,24 @@ ActivityDefinitionDynamicValue _$ActivityDefinitionDynamicValueFromJson(
 class _$ActivityDefinitionDynamicValueTearOff {
   const _$ActivityDefinitionDynamicValueTearOff();
 
+// ignore: unused_element
   _ActivityDefinitionDynamicValue call(
       {String description,
-      String path,
-      String language,
-      String expression,
       @JsonKey(name: '_description') Element descriptionElement,
+      String path,
       @JsonKey(name: '_path') Element pathElement,
+      String language,
       @JsonKey(name: '_language') Element languageElement,
+      String expression,
       @JsonKey(name: '_expression') Element expressionElement}) {
     return _ActivityDefinitionDynamicValue(
       description: description,
-      path: path,
-      language: language,
-      expression: expression,
       descriptionElement: descriptionElement,
+      path: path,
       pathElement: pathElement,
+      language: language,
       languageElement: languageElement,
+      expression: expression,
       expressionElement: expressionElement,
     );
   }
@@ -2159,15 +2189,15 @@ const $ActivityDefinitionDynamicValue =
 
 mixin _$ActivityDefinitionDynamicValue {
   String get description;
-  String get path;
-  String get language;
-  String get expression;
   @JsonKey(name: '_description')
   Element get descriptionElement;
+  String get path;
   @JsonKey(name: '_path')
   Element get pathElement;
+  String get language;
   @JsonKey(name: '_language')
   Element get languageElement;
+  String get expression;
   @JsonKey(name: '_expression')
   Element get expressionElement;
 
@@ -2183,12 +2213,12 @@ abstract class $ActivityDefinitionDynamicValueCopyWith<$Res> {
       _$ActivityDefinitionDynamicValueCopyWithImpl<$Res>;
   $Res call(
       {String description,
-      String path,
-      String language,
-      String expression,
       @JsonKey(name: '_description') Element descriptionElement,
+      String path,
       @JsonKey(name: '_path') Element pathElement,
+      String language,
       @JsonKey(name: '_language') Element languageElement,
+      String expression,
       @JsonKey(name: '_expression') Element expressionElement});
 
   $ElementCopyWith<$Res> get descriptionElement;
@@ -2208,29 +2238,29 @@ class _$ActivityDefinitionDynamicValueCopyWithImpl<$Res>
   @override
   $Res call({
     Object description = freezed,
-    Object path = freezed,
-    Object language = freezed,
-    Object expression = freezed,
     Object descriptionElement = freezed,
+    Object path = freezed,
     Object pathElement = freezed,
+    Object language = freezed,
     Object languageElement = freezed,
+    Object expression = freezed,
     Object expressionElement = freezed,
   }) {
     return _then(_value.copyWith(
       description:
           description == freezed ? _value.description : description as String,
-      path: path == freezed ? _value.path : path as String,
-      language: language == freezed ? _value.language : language as String,
-      expression:
-          expression == freezed ? _value.expression : expression as String,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
+      path: path == freezed ? _value.path : path as String,
       pathElement:
           pathElement == freezed ? _value.pathElement : pathElement as Element,
+      language: language == freezed ? _value.language : language as String,
       languageElement: languageElement == freezed
           ? _value.languageElement
           : languageElement as Element,
+      expression:
+          expression == freezed ? _value.expression : expression as String,
       expressionElement: expressionElement == freezed
           ? _value.expressionElement
           : expressionElement as Element,
@@ -2287,12 +2317,12 @@ abstract class _$ActivityDefinitionDynamicValueCopyWith<$Res>
   @override
   $Res call(
       {String description,
-      String path,
-      String language,
-      String expression,
       @JsonKey(name: '_description') Element descriptionElement,
+      String path,
       @JsonKey(name: '_path') Element pathElement,
+      String language,
       @JsonKey(name: '_language') Element languageElement,
+      String expression,
       @JsonKey(name: '_expression') Element expressionElement});
 
   @override
@@ -2320,29 +2350,29 @@ class __$ActivityDefinitionDynamicValueCopyWithImpl<$Res>
   @override
   $Res call({
     Object description = freezed,
-    Object path = freezed,
-    Object language = freezed,
-    Object expression = freezed,
     Object descriptionElement = freezed,
+    Object path = freezed,
     Object pathElement = freezed,
+    Object language = freezed,
     Object languageElement = freezed,
+    Object expression = freezed,
     Object expressionElement = freezed,
   }) {
     return _then(_ActivityDefinitionDynamicValue(
       description:
           description == freezed ? _value.description : description as String,
-      path: path == freezed ? _value.path : path as String,
-      language: language == freezed ? _value.language : language as String,
-      expression:
-          expression == freezed ? _value.expression : expression as String,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
+      path: path == freezed ? _value.path : path as String,
       pathElement:
           pathElement == freezed ? _value.pathElement : pathElement as Element,
+      language: language == freezed ? _value.language : language as String,
       languageElement: languageElement == freezed
           ? _value.languageElement
           : languageElement as Element,
+      expression:
+          expression == freezed ? _value.expression : expression as String,
       expressionElement: expressionElement == freezed
           ? _value.expressionElement
           : expressionElement as Element,
@@ -2352,16 +2382,17 @@ class __$ActivityDefinitionDynamicValueCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_ActivityDefinitionDynamicValue
-    implements _ActivityDefinitionDynamicValue {
+    extends _ActivityDefinitionDynamicValue {
   _$_ActivityDefinitionDynamicValue(
       {this.description,
-      this.path,
-      this.language,
-      this.expression,
       @JsonKey(name: '_description') this.descriptionElement,
+      this.path,
       @JsonKey(name: '_path') this.pathElement,
+      this.language,
       @JsonKey(name: '_language') this.languageElement,
-      @JsonKey(name: '_expression') this.expressionElement});
+      this.expression,
+      @JsonKey(name: '_expression') this.expressionElement})
+      : super._();
 
   factory _$_ActivityDefinitionDynamicValue.fromJson(
           Map<String, dynamic> json) =>
@@ -2370,27 +2401,27 @@ class _$_ActivityDefinitionDynamicValue
   @override
   final String description;
   @override
-  final String path;
-  @override
-  final String language;
-  @override
-  final String expression;
-  @override
   @JsonKey(name: '_description')
   final Element descriptionElement;
+  @override
+  final String path;
   @override
   @JsonKey(name: '_path')
   final Element pathElement;
   @override
+  final String language;
+  @override
   @JsonKey(name: '_language')
   final Element languageElement;
+  @override
+  final String expression;
   @override
   @JsonKey(name: '_expression')
   final Element expressionElement;
 
   @override
   String toString() {
-    return 'ActivityDefinitionDynamicValue(description: $description, path: $path, language: $language, expression: $expression, descriptionElement: $descriptionElement, pathElement: $pathElement, languageElement: $languageElement, expressionElement: $expressionElement)';
+    return 'ActivityDefinitionDynamicValue(description: $description, descriptionElement: $descriptionElement, path: $path, pathElement: $pathElement, language: $language, languageElement: $languageElement, expression: $expression, expressionElement: $expressionElement)';
   }
 
   @override
@@ -2400,23 +2431,23 @@ class _$_ActivityDefinitionDynamicValue
             (identical(other.description, description) ||
                 const DeepCollectionEquality()
                     .equals(other.description, description)) &&
-            (identical(other.path, path) ||
-                const DeepCollectionEquality().equals(other.path, path)) &&
-            (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
-            (identical(other.expression, expression) ||
-                const DeepCollectionEquality()
-                    .equals(other.expression, expression)) &&
             (identical(other.descriptionElement, descriptionElement) ||
                 const DeepCollectionEquality()
                     .equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.path, path) ||
+                const DeepCollectionEquality().equals(other.path, path)) &&
             (identical(other.pathElement, pathElement) ||
                 const DeepCollectionEquality()
                     .equals(other.pathElement, pathElement)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
             (identical(other.languageElement, languageElement) ||
                 const DeepCollectionEquality()
                     .equals(other.languageElement, languageElement)) &&
+            (identical(other.expression, expression) ||
+                const DeepCollectionEquality()
+                    .equals(other.expression, expression)) &&
             (identical(other.expressionElement, expressionElement) ||
                 const DeepCollectionEquality()
                     .equals(other.expressionElement, expressionElement)));
@@ -2426,12 +2457,12 @@ class _$_ActivityDefinitionDynamicValue
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(path) ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(expression) ^
       const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(path) ^
       const DeepCollectionEquality().hash(pathElement) ^
+      const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(expression) ^
       const DeepCollectionEquality().hash(expressionElement);
 
   @override
@@ -2446,15 +2477,16 @@ class _$_ActivityDefinitionDynamicValue
 }
 
 abstract class _ActivityDefinitionDynamicValue
-    implements ActivityDefinitionDynamicValue {
+    extends ActivityDefinitionDynamicValue {
+  _ActivityDefinitionDynamicValue._() : super._();
   factory _ActivityDefinitionDynamicValue(
           {String description,
-          String path,
-          String language,
-          String expression,
           @JsonKey(name: '_description') Element descriptionElement,
+          String path,
           @JsonKey(name: '_path') Element pathElement,
+          String language,
           @JsonKey(name: '_language') Element languageElement,
+          String expression,
           @JsonKey(name: '_expression') Element expressionElement}) =
       _$_ActivityDefinitionDynamicValue;
 
@@ -2464,20 +2496,20 @@ abstract class _ActivityDefinitionDynamicValue
   @override
   String get description;
   @override
-  String get path;
-  @override
-  String get language;
-  @override
-  String get expression;
-  @override
   @JsonKey(name: '_description')
   Element get descriptionElement;
+  @override
+  String get path;
   @override
   @JsonKey(name: '_path')
   Element get pathElement;
   @override
+  String get language;
+  @override
   @JsonKey(name: '_language')
   Element get languageElement;
+  @override
+  String get expression;
   @override
   @JsonKey(name: '_expression')
   Element get expressionElement;
@@ -2493,35 +2525,47 @@ PlanDefinition _$PlanDefinitionFromJson(Map<String, dynamic> json) {
 class _$PlanDefinitionTearOff {
   const _$PlanDefinitionTearOff();
 
+// ignore: unused_element
   _PlanDefinition call(
-      {@required
-      @JsonKey(required: true, defaultValue: 'PlanDefinition')
-          String resourceType,
+      {@required @JsonKey(defaultValue: 'PlanDefinition') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String url,
+      @JsonKey(name: '_url') Element urlElement,
       List<Identifier> identifier,
       String version,
+      @JsonKey(name: '_version') Element versionElement,
       String name,
+      @JsonKey(name: '_name') Element nameElement,
       String title,
+      @JsonKey(name: '_title') Element titleElement,
       CodeableConcept type,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
+      PlanDefinitionStatus status,
+      @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
-      FhirDateTime date,
+      @JsonKey(name: '_experimental') Element experimentalElement,
+      Date date,
+      @JsonKey(name: '_date') Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher') Element publisherElement,
       String description,
+      @JsonKey(name: '_description') Element descriptionElement,
       String purpose,
+      @JsonKey(name: '_purpose') Element purposeElement,
       String usage,
+      @JsonKey(name: '_usage') Element usageElement,
       Date approvalDate,
+      @JsonKey(name: '_approvalDate') Element approvalDateElement,
       Date lastReviewDate,
+      @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
       Period effectivePeriod,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
@@ -2529,63 +2573,51 @@ class _$PlanDefinitionTearOff {
       List<Contributor> contributor,
       List<ContactDetail> contact,
       String copyright,
+      @JsonKey(name: '_copyright') Element copyrightElement,
       List<RelatedArtifact> relatedArtifact,
-      List<Reference> library,
+      @JsonKey(name: 'library') List<Reference> library_,
       List<PlanDefinitionGoal> goal,
-      List<PlanDefinitionAction> action,
-      @JsonKey(name: '_url')
-          Element urlElement,
-      @JsonKey(name: '_version')
-          Element versionElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
-      @JsonKey(name: '_usage')
-          Element usageElement,
-      @JsonKey(name: '_approvalDate')
-          Element approvalDateElement,
-      @JsonKey(name: '_lastReviewDate')
-          Element lastReviewDateElement,
-      @JsonKey(name: '_copyright')
-          Element copyrightElement}) {
+      List<PlanDefinitionAction> action}) {
     return _PlanDefinition(
       resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
+      implicitRulesElement: implicitRulesElement,
       language: language,
+      languageElement: languageElement,
       text: text,
       contained: contained,
       extension_: extension_,
       modifierExtension: modifierExtension,
       url: url,
+      urlElement: urlElement,
       identifier: identifier,
       version: version,
+      versionElement: versionElement,
       name: name,
+      nameElement: nameElement,
       title: title,
+      titleElement: titleElement,
       type: type,
       status: status,
+      statusElement: statusElement,
       experimental: experimental,
+      experimentalElement: experimentalElement,
       date: date,
+      dateElement: dateElement,
       publisher: publisher,
+      publisherElement: publisherElement,
       description: description,
+      descriptionElement: descriptionElement,
       purpose: purpose,
+      purposeElement: purposeElement,
       usage: usage,
+      usageElement: usageElement,
       approvalDate: approvalDate,
+      approvalDateElement: approvalDateElement,
       lastReviewDate: lastReviewDate,
+      lastReviewDateElement: lastReviewDateElement,
       effectivePeriod: effectivePeriod,
       useContext: useContext,
       jurisdiction: jurisdiction,
@@ -2593,24 +2625,11 @@ class _$PlanDefinitionTearOff {
       contributor: contributor,
       contact: contact,
       copyright: copyright,
+      copyrightElement: copyrightElement,
       relatedArtifact: relatedArtifact,
-      library: library,
+      library_: library_,
       goal: goal,
       action: action,
-      urlElement: urlElement,
-      versionElement: versionElement,
-      nameElement: nameElement,
-      titleElement: titleElement,
-      statusElement: statusElement,
-      experimentalElement: experimentalElement,
-      dateElement: dateElement,
-      publisherElement: publisherElement,
-      descriptionElement: descriptionElement,
-      purposeElement: purposeElement,
-      usageElement: usageElement,
-      approvalDateElement: approvalDateElement,
-      lastReviewDateElement: lastReviewDateElement,
-      copyrightElement: copyrightElement,
     );
   }
 }
@@ -2619,33 +2638,62 @@ class _$PlanDefinitionTearOff {
 const $PlanDefinition = _$PlanDefinitionTearOff();
 
 mixin _$PlanDefinition {
-  @JsonKey(required: true, defaultValue: 'PlanDefinition')
+  @JsonKey(defaultValue: 'PlanDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
   Code get language;
+  @JsonKey(name: '_language')
+  Element get languageElement;
   Narrative get text;
   List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   String get url;
+  @JsonKey(name: '_url')
+  Element get urlElement;
   List<Identifier> get identifier;
   String get version;
+  @JsonKey(name: '_version')
+  Element get versionElement;
   String get name;
+  @JsonKey(name: '_name')
+  Element get nameElement;
   String get title;
+  @JsonKey(name: '_title')
+  Element get titleElement;
   CodeableConcept get type;
-  @JsonKey(unknownEnumValue: Status.unknown)
-  Status get status;
+  PlanDefinitionStatus get status;
+  @JsonKey(name: '_status')
+  Element get statusElement;
   Boolean get experimental;
-  FhirDateTime get date;
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  Date get date;
+  @JsonKey(name: '_date')
+  Element get dateElement;
   String get publisher;
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
   String get description;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
   String get purpose;
+  @JsonKey(name: '_purpose')
+  Element get purposeElement;
   String get usage;
+  @JsonKey(name: '_usage')
+  Element get usageElement;
   Date get approvalDate;
+  @JsonKey(name: '_approvalDate')
+  Element get approvalDateElement;
   Date get lastReviewDate;
+  @JsonKey(name: '_lastReviewDate')
+  Element get lastReviewDateElement;
   Period get effectivePeriod;
   List<UsageContext> get useContext;
   List<CodeableConcept> get jurisdiction;
@@ -2653,38 +2701,13 @@ mixin _$PlanDefinition {
   List<Contributor> get contributor;
   List<ContactDetail> get contact;
   String get copyright;
-  List<RelatedArtifact> get relatedArtifact;
-  List<Reference> get library;
-  List<PlanDefinitionGoal> get goal;
-  List<PlanDefinitionAction> get action;
-  @JsonKey(name: '_url')
-  Element get urlElement;
-  @JsonKey(name: '_version')
-  Element get versionElement;
-  @JsonKey(name: '_name')
-  Element get nameElement;
-  @JsonKey(name: '_title')
-  Element get titleElement;
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @JsonKey(name: '_experimental')
-  Element get experimentalElement;
-  @JsonKey(name: '_date')
-  Element get dateElement;
-  @JsonKey(name: '_publisher')
-  Element get publisherElement;
-  @JsonKey(name: '_description')
-  Element get descriptionElement;
-  @JsonKey(name: '_purpose')
-  Element get purposeElement;
-  @JsonKey(name: '_usage')
-  Element get usageElement;
-  @JsonKey(name: '_approvalDate')
-  Element get approvalDateElement;
-  @JsonKey(name: '_lastReviewDate')
-  Element get lastReviewDateElement;
   @JsonKey(name: '_copyright')
   Element get copyrightElement;
+  List<RelatedArtifact> get relatedArtifact;
+  @JsonKey(name: 'library')
+  List<Reference> get library_;
+  List<PlanDefinitionGoal> get goal;
+  List<PlanDefinitionAction> get action;
 
   Map<String, dynamic> toJson();
   $PlanDefinitionCopyWith<PlanDefinition> get copyWith;
@@ -2695,33 +2718,45 @@ abstract class $PlanDefinitionCopyWith<$Res> {
           PlanDefinition value, $Res Function(PlanDefinition) then) =
       _$PlanDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'PlanDefinition')
-          String resourceType,
+      {@JsonKey(defaultValue: 'PlanDefinition') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String url,
+      @JsonKey(name: '_url') Element urlElement,
       List<Identifier> identifier,
       String version,
+      @JsonKey(name: '_version') Element versionElement,
       String name,
+      @JsonKey(name: '_name') Element nameElement,
       String title,
+      @JsonKey(name: '_title') Element titleElement,
       CodeableConcept type,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
+      PlanDefinitionStatus status,
+      @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
-      FhirDateTime date,
+      @JsonKey(name: '_experimental') Element experimentalElement,
+      Date date,
+      @JsonKey(name: '_date') Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher') Element publisherElement,
       String description,
+      @JsonKey(name: '_description') Element descriptionElement,
       String purpose,
+      @JsonKey(name: '_purpose') Element purposeElement,
       String usage,
+      @JsonKey(name: '_usage') Element usageElement,
       Date approvalDate,
+      @JsonKey(name: '_approvalDate') Element approvalDateElement,
       Date lastReviewDate,
+      @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
       Period effectivePeriod,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
@@ -2729,47 +2764,21 @@ abstract class $PlanDefinitionCopyWith<$Res> {
       List<Contributor> contributor,
       List<ContactDetail> contact,
       String copyright,
+      @JsonKey(name: '_copyright') Element copyrightElement,
       List<RelatedArtifact> relatedArtifact,
-      List<Reference> library,
+      @JsonKey(name: 'library') List<Reference> library_,
       List<PlanDefinitionGoal> goal,
-      List<PlanDefinitionAction> action,
-      @JsonKey(name: '_url')
-          Element urlElement,
-      @JsonKey(name: '_version')
-          Element versionElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
-      @JsonKey(name: '_usage')
-          Element usageElement,
-      @JsonKey(name: '_approvalDate')
-          Element approvalDateElement,
-      @JsonKey(name: '_lastReviewDate')
-          Element lastReviewDateElement,
-      @JsonKey(name: '_copyright')
-          Element copyrightElement});
+      List<PlanDefinitionAction> action});
 
   $MetaCopyWith<$Res> get meta;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
-  $CodeableConceptCopyWith<$Res> get type;
-  $PeriodCopyWith<$Res> get effectivePeriod;
   $ElementCopyWith<$Res> get urlElement;
   $ElementCopyWith<$Res> get versionElement;
   $ElementCopyWith<$Res> get nameElement;
   $ElementCopyWith<$Res> get titleElement;
+  $CodeableConceptCopyWith<$Res> get type;
   $ElementCopyWith<$Res> get statusElement;
   $ElementCopyWith<$Res> get experimentalElement;
   $ElementCopyWith<$Res> get dateElement;
@@ -2779,6 +2788,7 @@ abstract class $PlanDefinitionCopyWith<$Res> {
   $ElementCopyWith<$Res> get usageElement;
   $ElementCopyWith<$Res> get approvalDateElement;
   $ElementCopyWith<$Res> get lastReviewDateElement;
+  $PeriodCopyWith<$Res> get effectivePeriod;
   $ElementCopyWith<$Res> get copyrightElement;
 }
 
@@ -2796,26 +2806,41 @@ class _$PlanDefinitionCopyWithImpl<$Res>
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object url = freezed,
+    Object urlElement = freezed,
     Object identifier = freezed,
     Object version = freezed,
+    Object versionElement = freezed,
     Object name = freezed,
+    Object nameElement = freezed,
     Object title = freezed,
+    Object titleElement = freezed,
     Object type = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object experimental = freezed,
+    Object experimentalElement = freezed,
     Object date = freezed,
+    Object dateElement = freezed,
     Object publisher = freezed,
+    Object publisherElement = freezed,
     Object description = freezed,
+    Object descriptionElement = freezed,
     Object purpose = freezed,
+    Object purposeElement = freezed,
     Object usage = freezed,
+    Object usageElement = freezed,
     Object approvalDate = freezed,
+    Object approvalDateElement = freezed,
     Object lastReviewDate = freezed,
+    Object lastReviewDateElement = freezed,
     Object effectivePeriod = freezed,
     Object useContext = freezed,
     Object jurisdiction = freezed,
@@ -2823,24 +2848,11 @@ class _$PlanDefinitionCopyWithImpl<$Res>
     Object contributor = freezed,
     Object contact = freezed,
     Object copyright = freezed,
+    Object copyrightElement = freezed,
     Object relatedArtifact = freezed,
-    Object library = freezed,
+    Object library_ = freezed,
     Object goal = freezed,
     Object action = freezed,
-    Object urlElement = freezed,
-    Object versionElement = freezed,
-    Object nameElement = freezed,
-    Object titleElement = freezed,
-    Object statusElement = freezed,
-    Object experimentalElement = freezed,
-    Object dateElement = freezed,
-    Object publisherElement = freezed,
-    Object descriptionElement = freezed,
-    Object purposeElement = freezed,
-    Object usageElement = freezed,
-    Object approvalDateElement = freezed,
-    Object lastReviewDateElement = freezed,
-    Object copyrightElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -2851,7 +2863,13 @@ class _$PlanDefinitionCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -2862,28 +2880,65 @@ class _$PlanDefinitionCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
       version: version == freezed ? _value.version : version as String,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
       name: name == freezed ? _value.name : name as String,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
       title: title == freezed ? _value.title : title as String,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
       type: type == freezed ? _value.type : type as CodeableConcept,
-      status: status == freezed ? _value.status : status as Status,
+      status:
+          status == freezed ? _value.status : status as PlanDefinitionStatus,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as FhirDateTime,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
+      date: date == freezed ? _value.date : date as Date,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
       description:
           description == freezed ? _value.description : description as String,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
       purpose: purpose == freezed ? _value.purpose : purpose as String,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement as Element,
       usage: usage == freezed ? _value.usage : usage as String,
+      usageElement: usageElement == freezed
+          ? _value.usageElement
+          : usageElement as Element,
       approvalDate:
           approvalDate == freezed ? _value.approvalDate : approvalDate as Date,
+      approvalDateElement: approvalDateElement == freezed
+          ? _value.approvalDateElement
+          : approvalDateElement as Element,
       lastReviewDate: lastReviewDate == freezed
           ? _value.lastReviewDate
           : lastReviewDate as Date,
+      lastReviewDateElement: lastReviewDateElement == freezed
+          ? _value.lastReviewDateElement
+          : lastReviewDateElement as Element,
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period,
@@ -2900,53 +2955,18 @@ class _$PlanDefinitionCopyWithImpl<$Res>
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
       copyright: copyright == freezed ? _value.copyright : copyright as String,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
       relatedArtifact: relatedArtifact == freezed
           ? _value.relatedArtifact
           : relatedArtifact as List<RelatedArtifact>,
-      library: library == freezed ? _value.library : library as List<Reference>,
+      library_:
+          library_ == freezed ? _value.library_ : library_ as List<Reference>,
       goal: goal == freezed ? _value.goal : goal as List<PlanDefinitionGoal>,
       action: action == freezed
           ? _value.action
           : action as List<PlanDefinitionAction>,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element,
-      versionElement: versionElement == freezed
-          ? _value.versionElement
-          : versionElement as Element,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      titleElement: titleElement == freezed
-          ? _value.titleElement
-          : titleElement as Element,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      experimentalElement: experimentalElement == freezed
-          ? _value.experimentalElement
-          : experimentalElement as Element,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element,
-      publisherElement: publisherElement == freezed
-          ? _value.publisherElement
-          : publisherElement as Element,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement as Element,
-      purposeElement: purposeElement == freezed
-          ? _value.purposeElement
-          : purposeElement as Element,
-      usageElement: usageElement == freezed
-          ? _value.usageElement
-          : usageElement as Element,
-      approvalDateElement: approvalDateElement == freezed
-          ? _value.approvalDateElement
-          : approvalDateElement as Element,
-      lastReviewDateElement: lastReviewDateElement == freezed
-          ? _value.lastReviewDateElement
-          : lastReviewDateElement as Element,
-      copyrightElement: copyrightElement == freezed
-          ? _value.copyrightElement
-          : copyrightElement as Element,
     ));
   }
 
@@ -2961,32 +2981,32 @@ class _$PlanDefinitionCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
   $NarrativeCopyWith<$Res> get text {
     if (_value.text == null) {
       return null;
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get type {
-    if (_value.type == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
-      return _then(_value.copyWith(type: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get effectivePeriod {
-    if (_value.effectivePeriod == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.effectivePeriod, (value) {
-      return _then(_value.copyWith(effectivePeriod: value));
     });
   }
 
@@ -3027,6 +3047,16 @@ class _$PlanDefinitionCopyWithImpl<$Res>
     }
     return $ElementCopyWith<$Res>(_value.titleElement, (value) {
       return _then(_value.copyWith(titleElement: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
     });
   }
 
@@ -3121,6 +3151,16 @@ class _$PlanDefinitionCopyWithImpl<$Res>
   }
 
   @override
+  $PeriodCopyWith<$Res> get effectivePeriod {
+    if (_value.effectivePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.effectivePeriod, (value) {
+      return _then(_value.copyWith(effectivePeriod: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res> get copyrightElement {
     if (_value.copyrightElement == null) {
       return null;
@@ -3138,33 +3178,45 @@ abstract class _$PlanDefinitionCopyWith<$Res>
       __$PlanDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'PlanDefinition')
-          String resourceType,
+      {@JsonKey(defaultValue: 'PlanDefinition') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String url,
+      @JsonKey(name: '_url') Element urlElement,
       List<Identifier> identifier,
       String version,
+      @JsonKey(name: '_version') Element versionElement,
       String name,
+      @JsonKey(name: '_name') Element nameElement,
       String title,
+      @JsonKey(name: '_title') Element titleElement,
       CodeableConcept type,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
+      PlanDefinitionStatus status,
+      @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
-      FhirDateTime date,
+      @JsonKey(name: '_experimental') Element experimentalElement,
+      Date date,
+      @JsonKey(name: '_date') Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher') Element publisherElement,
       String description,
+      @JsonKey(name: '_description') Element descriptionElement,
       String purpose,
+      @JsonKey(name: '_purpose') Element purposeElement,
       String usage,
+      @JsonKey(name: '_usage') Element usageElement,
       Date approvalDate,
+      @JsonKey(name: '_approvalDate') Element approvalDateElement,
       Date lastReviewDate,
+      @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
       Period effectivePeriod,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
@@ -3172,47 +3224,20 @@ abstract class _$PlanDefinitionCopyWith<$Res>
       List<Contributor> contributor,
       List<ContactDetail> contact,
       String copyright,
+      @JsonKey(name: '_copyright') Element copyrightElement,
       List<RelatedArtifact> relatedArtifact,
-      List<Reference> library,
+      @JsonKey(name: 'library') List<Reference> library_,
       List<PlanDefinitionGoal> goal,
-      List<PlanDefinitionAction> action,
-      @JsonKey(name: '_url')
-          Element urlElement,
-      @JsonKey(name: '_version')
-          Element versionElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
-      @JsonKey(name: '_usage')
-          Element usageElement,
-      @JsonKey(name: '_approvalDate')
-          Element approvalDateElement,
-      @JsonKey(name: '_lastReviewDate')
-          Element lastReviewDateElement,
-      @JsonKey(name: '_copyright')
-          Element copyrightElement});
+      List<PlanDefinitionAction> action});
 
   @override
   $MetaCopyWith<$Res> get meta;
   @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
   $NarrativeCopyWith<$Res> get text;
-  @override
-  $CodeableConceptCopyWith<$Res> get type;
-  @override
-  $PeriodCopyWith<$Res> get effectivePeriod;
   @override
   $ElementCopyWith<$Res> get urlElement;
   @override
@@ -3221,6 +3246,8 @@ abstract class _$PlanDefinitionCopyWith<$Res>
   $ElementCopyWith<$Res> get nameElement;
   @override
   $ElementCopyWith<$Res> get titleElement;
+  @override
+  $CodeableConceptCopyWith<$Res> get type;
   @override
   $ElementCopyWith<$Res> get statusElement;
   @override
@@ -3239,6 +3266,8 @@ abstract class _$PlanDefinitionCopyWith<$Res>
   $ElementCopyWith<$Res> get approvalDateElement;
   @override
   $ElementCopyWith<$Res> get lastReviewDateElement;
+  @override
+  $PeriodCopyWith<$Res> get effectivePeriod;
   @override
   $ElementCopyWith<$Res> get copyrightElement;
 }
@@ -3259,26 +3288,41 @@ class __$PlanDefinitionCopyWithImpl<$Res>
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object url = freezed,
+    Object urlElement = freezed,
     Object identifier = freezed,
     Object version = freezed,
+    Object versionElement = freezed,
     Object name = freezed,
+    Object nameElement = freezed,
     Object title = freezed,
+    Object titleElement = freezed,
     Object type = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object experimental = freezed,
+    Object experimentalElement = freezed,
     Object date = freezed,
+    Object dateElement = freezed,
     Object publisher = freezed,
+    Object publisherElement = freezed,
     Object description = freezed,
+    Object descriptionElement = freezed,
     Object purpose = freezed,
+    Object purposeElement = freezed,
     Object usage = freezed,
+    Object usageElement = freezed,
     Object approvalDate = freezed,
+    Object approvalDateElement = freezed,
     Object lastReviewDate = freezed,
+    Object lastReviewDateElement = freezed,
     Object effectivePeriod = freezed,
     Object useContext = freezed,
     Object jurisdiction = freezed,
@@ -3286,24 +3330,11 @@ class __$PlanDefinitionCopyWithImpl<$Res>
     Object contributor = freezed,
     Object contact = freezed,
     Object copyright = freezed,
+    Object copyrightElement = freezed,
     Object relatedArtifact = freezed,
-    Object library = freezed,
+    Object library_ = freezed,
     Object goal = freezed,
     Object action = freezed,
-    Object urlElement = freezed,
-    Object versionElement = freezed,
-    Object nameElement = freezed,
-    Object titleElement = freezed,
-    Object statusElement = freezed,
-    Object experimentalElement = freezed,
-    Object dateElement = freezed,
-    Object publisherElement = freezed,
-    Object descriptionElement = freezed,
-    Object purposeElement = freezed,
-    Object usageElement = freezed,
-    Object approvalDateElement = freezed,
-    Object lastReviewDateElement = freezed,
-    Object copyrightElement = freezed,
   }) {
     return _then(_PlanDefinition(
       resourceType: resourceType == freezed
@@ -3314,7 +3345,13 @@ class __$PlanDefinitionCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -3325,28 +3362,65 @@ class __$PlanDefinitionCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
       version: version == freezed ? _value.version : version as String,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
       name: name == freezed ? _value.name : name as String,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
       title: title == freezed ? _value.title : title as String,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
       type: type == freezed ? _value.type : type as CodeableConcept,
-      status: status == freezed ? _value.status : status as Status,
+      status:
+          status == freezed ? _value.status : status as PlanDefinitionStatus,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as FhirDateTime,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
+      date: date == freezed ? _value.date : date as Date,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
       description:
           description == freezed ? _value.description : description as String,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
       purpose: purpose == freezed ? _value.purpose : purpose as String,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement as Element,
       usage: usage == freezed ? _value.usage : usage as String,
+      usageElement: usageElement == freezed
+          ? _value.usageElement
+          : usageElement as Element,
       approvalDate:
           approvalDate == freezed ? _value.approvalDate : approvalDate as Date,
+      approvalDateElement: approvalDateElement == freezed
+          ? _value.approvalDateElement
+          : approvalDateElement as Element,
       lastReviewDate: lastReviewDate == freezed
           ? _value.lastReviewDate
           : lastReviewDate as Date,
+      lastReviewDateElement: lastReviewDateElement == freezed
+          ? _value.lastReviewDateElement
+          : lastReviewDateElement as Element,
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period,
@@ -3363,53 +3437,18 @@ class __$PlanDefinitionCopyWithImpl<$Res>
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
       copyright: copyright == freezed ? _value.copyright : copyright as String,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
       relatedArtifact: relatedArtifact == freezed
           ? _value.relatedArtifact
           : relatedArtifact as List<RelatedArtifact>,
-      library: library == freezed ? _value.library : library as List<Reference>,
+      library_:
+          library_ == freezed ? _value.library_ : library_ as List<Reference>,
       goal: goal == freezed ? _value.goal : goal as List<PlanDefinitionGoal>,
       action: action == freezed
           ? _value.action
           : action as List<PlanDefinitionAction>,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element,
-      versionElement: versionElement == freezed
-          ? _value.versionElement
-          : versionElement as Element,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      titleElement: titleElement == freezed
-          ? _value.titleElement
-          : titleElement as Element,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      experimentalElement: experimentalElement == freezed
-          ? _value.experimentalElement
-          : experimentalElement as Element,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element,
-      publisherElement: publisherElement == freezed
-          ? _value.publisherElement
-          : publisherElement as Element,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement as Element,
-      purposeElement: purposeElement == freezed
-          ? _value.purposeElement
-          : purposeElement as Element,
-      usageElement: usageElement == freezed
-          ? _value.usageElement
-          : usageElement as Element,
-      approvalDateElement: approvalDateElement == freezed
-          ? _value.approvalDateElement
-          : approvalDateElement as Element,
-      lastReviewDateElement: lastReviewDateElement == freezed
-          ? _value.lastReviewDateElement
-          : lastReviewDateElement as Element,
-      copyrightElement: copyrightElement == freezed
-          ? _value.copyrightElement
-          : copyrightElement as Element,
     ));
   }
 }
@@ -3417,34 +3456,45 @@ class __$PlanDefinitionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_PlanDefinition extends _PlanDefinition {
   _$_PlanDefinition(
-      {@required
-      @JsonKey(required: true, defaultValue: 'PlanDefinition')
-          this.resourceType,
+      {@required @JsonKey(defaultValue: 'PlanDefinition') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.url,
+      @JsonKey(name: '_url') this.urlElement,
       this.identifier,
       this.version,
+      @JsonKey(name: '_version') this.versionElement,
       this.name,
+      @JsonKey(name: '_name') this.nameElement,
       this.title,
+      @JsonKey(name: '_title') this.titleElement,
       this.type,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          this.status,
+      this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.experimental,
+      @JsonKey(name: '_experimental') this.experimentalElement,
       this.date,
+      @JsonKey(name: '_date') this.dateElement,
       this.publisher,
+      @JsonKey(name: '_publisher') this.publisherElement,
       this.description,
+      @JsonKey(name: '_description') this.descriptionElement,
       this.purpose,
+      @JsonKey(name: '_purpose') this.purposeElement,
       this.usage,
+      @JsonKey(name: '_usage') this.usageElement,
       this.approvalDate,
+      @JsonKey(name: '_approvalDate') this.approvalDateElement,
       this.lastReviewDate,
+      @JsonKey(name: '_lastReviewDate') this.lastReviewDateElement,
       this.effectivePeriod,
       this.useContext,
       this.jurisdiction,
@@ -3452,38 +3502,11 @@ class _$_PlanDefinition extends _PlanDefinition {
       this.contributor,
       this.contact,
       this.copyright,
+      @JsonKey(name: '_copyright') this.copyrightElement,
       this.relatedArtifact,
-      this.library,
+      @JsonKey(name: 'library') this.library_,
       this.goal,
-      this.action,
-      @JsonKey(name: '_url')
-          this.urlElement,
-      @JsonKey(name: '_version')
-          this.versionElement,
-      @JsonKey(name: '_name')
-          this.nameElement,
-      @JsonKey(name: '_title')
-          this.titleElement,
-      @JsonKey(name: '_status')
-          this.statusElement,
-      @JsonKey(name: '_experimental')
-          this.experimentalElement,
-      @JsonKey(name: '_date')
-          this.dateElement,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
-      @JsonKey(name: '_purpose')
-          this.purposeElement,
-      @JsonKey(name: '_usage')
-          this.usageElement,
-      @JsonKey(name: '_approvalDate')
-          this.approvalDateElement,
-      @JsonKey(name: '_lastReviewDate')
-          this.lastReviewDateElement,
-      @JsonKey(name: '_copyright')
-          this.copyrightElement})
+      this.action})
       : assert(resourceType != null),
         super._();
 
@@ -3491,7 +3514,7 @@ class _$_PlanDefinition extends _PlanDefinition {
       _$_$_PlanDefinitionFromJson(json);
 
   @override
-  @JsonKey(required: true, defaultValue: 'PlanDefinition')
+  @JsonKey(defaultValue: 'PlanDefinition')
   final String resourceType;
   @override
   final Id id;
@@ -3500,7 +3523,13 @@ class _$_PlanDefinition extends _PlanDefinition {
   @override
   final FhirUri implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
   final Code language;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
   @override
   final Narrative text;
   @override
@@ -3513,34 +3542,72 @@ class _$_PlanDefinition extends _PlanDefinition {
   @override
   final String url;
   @override
+  @JsonKey(name: '_url')
+  final Element urlElement;
+  @override
   final List<Identifier> identifier;
   @override
   final String version;
   @override
+  @JsonKey(name: '_version')
+  final Element versionElement;
+  @override
   final String name;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
   @override
   final String title;
   @override
+  @JsonKey(name: '_title')
+  final Element titleElement;
+  @override
   final CodeableConcept type;
   @override
-  @JsonKey(unknownEnumValue: Status.unknown)
-  final Status status;
+  final PlanDefinitionStatus status;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
   @override
   final Boolean experimental;
   @override
-  final FhirDateTime date;
+  @JsonKey(name: '_experimental')
+  final Element experimentalElement;
+  @override
+  final Date date;
+  @override
+  @JsonKey(name: '_date')
+  final Element dateElement;
   @override
   final String publisher;
   @override
+  @JsonKey(name: '_publisher')
+  final Element publisherElement;
+  @override
   final String description;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
   @override
   final String purpose;
   @override
+  @JsonKey(name: '_purpose')
+  final Element purposeElement;
+  @override
   final String usage;
+  @override
+  @JsonKey(name: '_usage')
+  final Element usageElement;
   @override
   final Date approvalDate;
   @override
+  @JsonKey(name: '_approvalDate')
+  final Element approvalDateElement;
+  @override
   final Date lastReviewDate;
+  @override
+  @JsonKey(name: '_lastReviewDate')
+  final Element lastReviewDateElement;
   @override
   final Period effectivePeriod;
   @override
@@ -3556,59 +3623,21 @@ class _$_PlanDefinition extends _PlanDefinition {
   @override
   final String copyright;
   @override
+  @JsonKey(name: '_copyright')
+  final Element copyrightElement;
+  @override
   final List<RelatedArtifact> relatedArtifact;
   @override
-  final List<Reference> library;
+  @JsonKey(name: 'library')
+  final List<Reference> library_;
   @override
   final List<PlanDefinitionGoal> goal;
   @override
   final List<PlanDefinitionAction> action;
-  @override
-  @JsonKey(name: '_url')
-  final Element urlElement;
-  @override
-  @JsonKey(name: '_version')
-  final Element versionElement;
-  @override
-  @JsonKey(name: '_name')
-  final Element nameElement;
-  @override
-  @JsonKey(name: '_title')
-  final Element titleElement;
-  @override
-  @JsonKey(name: '_status')
-  final Element statusElement;
-  @override
-  @JsonKey(name: '_experimental')
-  final Element experimentalElement;
-  @override
-  @JsonKey(name: '_date')
-  final Element dateElement;
-  @override
-  @JsonKey(name: '_publisher')
-  final Element publisherElement;
-  @override
-  @JsonKey(name: '_description')
-  final Element descriptionElement;
-  @override
-  @JsonKey(name: '_purpose')
-  final Element purposeElement;
-  @override
-  @JsonKey(name: '_usage')
-  final Element usageElement;
-  @override
-  @JsonKey(name: '_approvalDate')
-  final Element approvalDateElement;
-  @override
-  @JsonKey(name: '_lastReviewDate')
-  final Element lastReviewDateElement;
-  @override
-  @JsonKey(name: '_copyright')
-  final Element copyrightElement;
 
   @override
   String toString() {
-    return 'PlanDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, type: $type, status: $status, experimental: $experimental, date: $date, publisher: $publisher, description: $description, purpose: $purpose, usage: $usage, approvalDate: $approvalDate, lastReviewDate: $lastReviewDate, effectivePeriod: $effectivePeriod, useContext: $useContext, jurisdiction: $jurisdiction, topic: $topic, contributor: $contributor, contact: $contact, copyright: $copyright, relatedArtifact: $relatedArtifact, library: $library, goal: $goal, action: $action, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, usageElement: $usageElement, approvalDateElement: $approvalDateElement, lastReviewDateElement: $lastReviewDateElement, copyrightElement: $copyrightElement)';
+    return 'PlanDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, type: $type, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, description: $description, descriptionElement: $descriptionElement, purpose: $purpose, purposeElement: $purposeElement, usage: $usage, usageElement: $usageElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, useContext: $useContext, jurisdiction: $jurisdiction, topic: $topic, contributor: $contributor, contact: $contact, copyright: $copyright, copyrightElement: $copyrightElement, relatedArtifact: $relatedArtifact, library_: $library_, goal: $goal, action: $action)';
   }
 
   @override
@@ -3625,9 +3654,15 @@ class _$_PlanDefinition extends _PlanDefinition {
             (identical(other.implicitRules, implicitRules) ||
                 const DeepCollectionEquality()
                     .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
             (identical(other.language, language) ||
                 const DeepCollectionEquality()
                     .equals(other.language, language)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
             (identical(other.text, text) ||
                 const DeepCollectionEquality().equals(other.text, text)) &&
             (identical(other.contained, contained) ||
@@ -3641,72 +3676,68 @@ class _$_PlanDefinition extends _PlanDefinition {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
+            (identical(other.urlElement, urlElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.urlElement, urlElement)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
             (identical(other.version, version) ||
                 const DeepCollectionEquality()
                     .equals(other.version, version)) &&
+            (identical(other.versionElement, versionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.versionElement, versionElement)) &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
             (identical(other.title, title) ||
                 const DeepCollectionEquality().equals(other.title, title)) &&
+            (identical(other.titleElement, titleElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.titleElement, titleElement)) &&
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
             (identical(other.experimental, experimental) ||
                 const DeepCollectionEquality()
                     .equals(other.experimental, experimental)) &&
+            (identical(other.experimentalElement, experimentalElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.experimentalElement, experimentalElement)) &&
             (identical(other.date, date) ||
                 const DeepCollectionEquality().equals(other.date, date)) &&
-            (identical(other.publisher, publisher) ||
-                const DeepCollectionEquality()
-                    .equals(other.publisher, publisher)) &&
-            (identical(other.description, description) ||
-                const DeepCollectionEquality()
-                    .equals(other.description, description)) &&
-            (identical(other.purpose, purpose) ||
-                const DeepCollectionEquality()
-                    .equals(other.purpose, purpose)) &&
-            (identical(other.usage, usage) ||
-                const DeepCollectionEquality().equals(other.usage, usage)) &&
-            (identical(other.approvalDate, approvalDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.approvalDate, approvalDate)) &&
-            (identical(other.lastReviewDate, lastReviewDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.lastReviewDate, lastReviewDate)) &&
-            (identical(other.effectivePeriod, effectivePeriod) ||
-                const DeepCollectionEquality()
-                    .equals(other.effectivePeriod, effectivePeriod)) &&
-            (identical(other.useContext, useContext) ||
-                const DeepCollectionEquality()
-                    .equals(other.useContext, useContext)) &&
-            (identical(other.jurisdiction, jurisdiction) ||
-                const DeepCollectionEquality().equals(other.jurisdiction, jurisdiction)) &&
+            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
+            (identical(other.publisher, publisher) || const DeepCollectionEquality().equals(other.publisher, publisher)) &&
+            (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
+            (identical(other.description, description) || const DeepCollectionEquality().equals(other.description, description)) &&
+            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.purpose, purpose) || const DeepCollectionEquality().equals(other.purpose, purpose)) &&
+            (identical(other.purposeElement, purposeElement) || const DeepCollectionEquality().equals(other.purposeElement, purposeElement)) &&
+            (identical(other.usage, usage) || const DeepCollectionEquality().equals(other.usage, usage)) &&
+            (identical(other.usageElement, usageElement) || const DeepCollectionEquality().equals(other.usageElement, usageElement)) &&
+            (identical(other.approvalDate, approvalDate) || const DeepCollectionEquality().equals(other.approvalDate, approvalDate)) &&
+            (identical(other.approvalDateElement, approvalDateElement) || const DeepCollectionEquality().equals(other.approvalDateElement, approvalDateElement)) &&
+            (identical(other.lastReviewDate, lastReviewDate) || const DeepCollectionEquality().equals(other.lastReviewDate, lastReviewDate)) &&
+            (identical(other.lastReviewDateElement, lastReviewDateElement) || const DeepCollectionEquality().equals(other.lastReviewDateElement, lastReviewDateElement)) &&
+            (identical(other.effectivePeriod, effectivePeriod) || const DeepCollectionEquality().equals(other.effectivePeriod, effectivePeriod)) &&
+            (identical(other.useContext, useContext) || const DeepCollectionEquality().equals(other.useContext, useContext)) &&
+            (identical(other.jurisdiction, jurisdiction) || const DeepCollectionEquality().equals(other.jurisdiction, jurisdiction)) &&
             (identical(other.topic, topic) || const DeepCollectionEquality().equals(other.topic, topic)) &&
             (identical(other.contributor, contributor) || const DeepCollectionEquality().equals(other.contributor, contributor)) &&
             (identical(other.contact, contact) || const DeepCollectionEquality().equals(other.contact, contact)) &&
             (identical(other.copyright, copyright) || const DeepCollectionEquality().equals(other.copyright, copyright)) &&
+            (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)) &&
             (identical(other.relatedArtifact, relatedArtifact) || const DeepCollectionEquality().equals(other.relatedArtifact, relatedArtifact)) &&
-            (identical(other.library, library) || const DeepCollectionEquality().equals(other.library, library)) &&
+            (identical(other.library_, library_) || const DeepCollectionEquality().equals(other.library_, library_)) &&
             (identical(other.goal, goal) || const DeepCollectionEquality().equals(other.goal, goal)) &&
-            (identical(other.action, action) || const DeepCollectionEquality().equals(other.action, action)) &&
-            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
-            (identical(other.versionElement, versionElement) || const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
-            (identical(other.nameElement, nameElement) || const DeepCollectionEquality().equals(other.nameElement, nameElement)) &&
-            (identical(other.titleElement, titleElement) || const DeepCollectionEquality().equals(other.titleElement, titleElement)) &&
-            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
-            (identical(other.experimentalElement, experimentalElement) || const DeepCollectionEquality().equals(other.experimentalElement, experimentalElement)) &&
-            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
-            (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
-            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
-            (identical(other.purposeElement, purposeElement) || const DeepCollectionEquality().equals(other.purposeElement, purposeElement)) &&
-            (identical(other.usageElement, usageElement) || const DeepCollectionEquality().equals(other.usageElement, usageElement)) &&
-            (identical(other.approvalDateElement, approvalDateElement) || const DeepCollectionEquality().equals(other.approvalDateElement, approvalDateElement)) &&
-            (identical(other.lastReviewDateElement, lastReviewDateElement) || const DeepCollectionEquality().equals(other.lastReviewDateElement, lastReviewDateElement)) &&
-            (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)));
+            (identical(other.action, action) || const DeepCollectionEquality().equals(other.action, action)));
   }
 
   @override
@@ -3716,26 +3747,41 @@ class _$_PlanDefinition extends _PlanDefinition {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
       const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(url) ^
+      const DeepCollectionEquality().hash(urlElement) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(version) ^
+      const DeepCollectionEquality().hash(versionElement) ^
       const DeepCollectionEquality().hash(name) ^
+      const DeepCollectionEquality().hash(nameElement) ^
       const DeepCollectionEquality().hash(title) ^
+      const DeepCollectionEquality().hash(titleElement) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(status) ^
+      const DeepCollectionEquality().hash(statusElement) ^
       const DeepCollectionEquality().hash(experimental) ^
+      const DeepCollectionEquality().hash(experimentalElement) ^
       const DeepCollectionEquality().hash(date) ^
+      const DeepCollectionEquality().hash(dateElement) ^
       const DeepCollectionEquality().hash(publisher) ^
+      const DeepCollectionEquality().hash(publisherElement) ^
       const DeepCollectionEquality().hash(description) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(purpose) ^
+      const DeepCollectionEquality().hash(purposeElement) ^
       const DeepCollectionEquality().hash(usage) ^
+      const DeepCollectionEquality().hash(usageElement) ^
       const DeepCollectionEquality().hash(approvalDate) ^
+      const DeepCollectionEquality().hash(approvalDateElement) ^
       const DeepCollectionEquality().hash(lastReviewDate) ^
+      const DeepCollectionEquality().hash(lastReviewDateElement) ^
       const DeepCollectionEquality().hash(effectivePeriod) ^
       const DeepCollectionEquality().hash(useContext) ^
       const DeepCollectionEquality().hash(jurisdiction) ^
@@ -3743,24 +3789,11 @@ class _$_PlanDefinition extends _PlanDefinition {
       const DeepCollectionEquality().hash(contributor) ^
       const DeepCollectionEquality().hash(contact) ^
       const DeepCollectionEquality().hash(copyright) ^
+      const DeepCollectionEquality().hash(copyrightElement) ^
       const DeepCollectionEquality().hash(relatedArtifact) ^
-      const DeepCollectionEquality().hash(library) ^
+      const DeepCollectionEquality().hash(library_) ^
       const DeepCollectionEquality().hash(goal) ^
-      const DeepCollectionEquality().hash(action) ^
-      const DeepCollectionEquality().hash(urlElement) ^
-      const DeepCollectionEquality().hash(versionElement) ^
-      const DeepCollectionEquality().hash(nameElement) ^
-      const DeepCollectionEquality().hash(titleElement) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(experimentalElement) ^
-      const DeepCollectionEquality().hash(dateElement) ^
-      const DeepCollectionEquality().hash(publisherElement) ^
-      const DeepCollectionEquality().hash(descriptionElement) ^
-      const DeepCollectionEquality().hash(purposeElement) ^
-      const DeepCollectionEquality().hash(usageElement) ^
-      const DeepCollectionEquality().hash(approvalDateElement) ^
-      const DeepCollectionEquality().hash(lastReviewDateElement) ^
-      const DeepCollectionEquality().hash(copyrightElement);
+      const DeepCollectionEquality().hash(action);
 
   @override
   _$PlanDefinitionCopyWith<_PlanDefinition> get copyWith =>
@@ -3775,34 +3808,45 @@ class _$_PlanDefinition extends _PlanDefinition {
 abstract class _PlanDefinition extends PlanDefinition {
   _PlanDefinition._() : super._();
   factory _PlanDefinition(
-      {@required
-      @JsonKey(required: true, defaultValue: 'PlanDefinition')
-          String resourceType,
+      {@required @JsonKey(defaultValue: 'PlanDefinition') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String url,
+      @JsonKey(name: '_url') Element urlElement,
       List<Identifier> identifier,
       String version,
+      @JsonKey(name: '_version') Element versionElement,
       String name,
+      @JsonKey(name: '_name') Element nameElement,
       String title,
+      @JsonKey(name: '_title') Element titleElement,
       CodeableConcept type,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
+      PlanDefinitionStatus status,
+      @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
-      FhirDateTime date,
+      @JsonKey(name: '_experimental') Element experimentalElement,
+      Date date,
+      @JsonKey(name: '_date') Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher') Element publisherElement,
       String description,
+      @JsonKey(name: '_description') Element descriptionElement,
       String purpose,
+      @JsonKey(name: '_purpose') Element purposeElement,
       String usage,
+      @JsonKey(name: '_usage') Element usageElement,
       Date approvalDate,
+      @JsonKey(name: '_approvalDate') Element approvalDateElement,
       Date lastReviewDate,
+      @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
       Period effectivePeriod,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
@@ -3810,44 +3854,17 @@ abstract class _PlanDefinition extends PlanDefinition {
       List<Contributor> contributor,
       List<ContactDetail> contact,
       String copyright,
+      @JsonKey(name: '_copyright') Element copyrightElement,
       List<RelatedArtifact> relatedArtifact,
-      List<Reference> library,
+      @JsonKey(name: 'library') List<Reference> library_,
       List<PlanDefinitionGoal> goal,
-      List<PlanDefinitionAction> action,
-      @JsonKey(name: '_url')
-          Element urlElement,
-      @JsonKey(name: '_version')
-          Element versionElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
-      @JsonKey(name: '_usage')
-          Element usageElement,
-      @JsonKey(name: '_approvalDate')
-          Element approvalDateElement,
-      @JsonKey(name: '_lastReviewDate')
-          Element lastReviewDateElement,
-      @JsonKey(name: '_copyright')
-          Element copyrightElement}) = _$_PlanDefinition;
+      List<PlanDefinitionAction> action}) = _$_PlanDefinition;
 
   factory _PlanDefinition.fromJson(Map<String, dynamic> json) =
       _$_PlanDefinition.fromJson;
 
   @override
-  @JsonKey(required: true, defaultValue: 'PlanDefinition')
+  @JsonKey(defaultValue: 'PlanDefinition')
   String get resourceType;
   @override
   Id get id;
@@ -3856,7 +3873,13 @@ abstract class _PlanDefinition extends PlanDefinition {
   @override
   FhirUri get implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
   Code get language;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
   @override
   Narrative get text;
   @override
@@ -3869,34 +3892,72 @@ abstract class _PlanDefinition extends PlanDefinition {
   @override
   String get url;
   @override
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @override
   List<Identifier> get identifier;
   @override
   String get version;
   @override
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @override
   String get name;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
   @override
   String get title;
   @override
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @override
   CodeableConcept get type;
   @override
-  @JsonKey(unknownEnumValue: Status.unknown)
-  Status get status;
+  PlanDefinitionStatus get status;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
   @override
   Boolean get experimental;
   @override
-  FhirDateTime get date;
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  @override
+  Date get date;
+  @override
+  @JsonKey(name: '_date')
+  Element get dateElement;
   @override
   String get publisher;
   @override
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
+  @override
   String get description;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
   @override
   String get purpose;
   @override
+  @JsonKey(name: '_purpose')
+  Element get purposeElement;
+  @override
   String get usage;
+  @override
+  @JsonKey(name: '_usage')
+  Element get usageElement;
   @override
   Date get approvalDate;
   @override
+  @JsonKey(name: '_approvalDate')
+  Element get approvalDateElement;
+  @override
   Date get lastReviewDate;
+  @override
+  @JsonKey(name: '_lastReviewDate')
+  Element get lastReviewDateElement;
   @override
   Period get effectivePeriod;
   @override
@@ -3912,55 +3973,17 @@ abstract class _PlanDefinition extends PlanDefinition {
   @override
   String get copyright;
   @override
+  @JsonKey(name: '_copyright')
+  Element get copyrightElement;
+  @override
   List<RelatedArtifact> get relatedArtifact;
   @override
-  List<Reference> get library;
+  @JsonKey(name: 'library')
+  List<Reference> get library_;
   @override
   List<PlanDefinitionGoal> get goal;
   @override
   List<PlanDefinitionAction> get action;
-  @override
-  @JsonKey(name: '_url')
-  Element get urlElement;
-  @override
-  @JsonKey(name: '_version')
-  Element get versionElement;
-  @override
-  @JsonKey(name: '_name')
-  Element get nameElement;
-  @override
-  @JsonKey(name: '_title')
-  Element get titleElement;
-  @override
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @override
-  @JsonKey(name: '_experimental')
-  Element get experimentalElement;
-  @override
-  @JsonKey(name: '_date')
-  Element get dateElement;
-  @override
-  @JsonKey(name: '_publisher')
-  Element get publisherElement;
-  @override
-  @JsonKey(name: '_description')
-  Element get descriptionElement;
-  @override
-  @JsonKey(name: '_purpose')
-  Element get purposeElement;
-  @override
-  @JsonKey(name: '_usage')
-  Element get usageElement;
-  @override
-  @JsonKey(name: '_approvalDate')
-  Element get approvalDateElement;
-  @override
-  @JsonKey(name: '_lastReviewDate')
-  Element get lastReviewDateElement;
-  @override
-  @JsonKey(name: '_copyright')
-  Element get copyrightElement;
   @override
   _$PlanDefinitionCopyWith<_PlanDefinition> get copyWith;
 }
@@ -3972,9 +3995,10 @@ PlanDefinitionGoal _$PlanDefinitionGoalFromJson(Map<String, dynamic> json) {
 class _$PlanDefinitionGoalTearOff {
   const _$PlanDefinitionGoalTearOff();
 
+// ignore: unused_element
   _PlanDefinitionGoal call(
       {CodeableConcept category,
-      @JsonKey(required: true) CodeableConcept description,
+      @required CodeableConcept description,
       CodeableConcept priority,
       CodeableConcept start,
       List<CodeableConcept> addresses,
@@ -3997,7 +4021,6 @@ const $PlanDefinitionGoal = _$PlanDefinitionGoalTearOff();
 
 mixin _$PlanDefinitionGoal {
   CodeableConcept get category;
-  @JsonKey(required: true)
   CodeableConcept get description;
   CodeableConcept get priority;
   CodeableConcept get start;
@@ -4015,7 +4038,7 @@ abstract class $PlanDefinitionGoalCopyWith<$Res> {
       _$PlanDefinitionGoalCopyWithImpl<$Res>;
   $Res call(
       {CodeableConcept category,
-      @JsonKey(required: true) CodeableConcept description,
+      CodeableConcept description,
       CodeableConcept priority,
       CodeableConcept start,
       List<CodeableConcept> addresses,
@@ -4116,7 +4139,7 @@ abstract class _$PlanDefinitionGoalCopyWith<$Res>
   @override
   $Res call(
       {CodeableConcept category,
-      @JsonKey(required: true) CodeableConcept description,
+      CodeableConcept description,
       CodeableConcept priority,
       CodeableConcept start,
       List<CodeableConcept> addresses,
@@ -4176,15 +4199,17 @@ class __$PlanDefinitionGoalCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_PlanDefinitionGoal implements _PlanDefinitionGoal {
+class _$_PlanDefinitionGoal extends _PlanDefinitionGoal {
   _$_PlanDefinitionGoal(
       {this.category,
-      @JsonKey(required: true) this.description,
+      @required this.description,
       this.priority,
       this.start,
       this.addresses,
       this.documentation,
-      this.target});
+      this.target})
+      : assert(description != null),
+        super._();
 
   factory _$_PlanDefinitionGoal.fromJson(Map<String, dynamic> json) =>
       _$_$_PlanDefinitionGoalFromJson(json);
@@ -4192,7 +4217,6 @@ class _$_PlanDefinitionGoal implements _PlanDefinitionGoal {
   @override
   final CodeableConcept category;
   @override
-  @JsonKey(required: true)
   final CodeableConcept description;
   @override
   final CodeableConcept priority;
@@ -4256,10 +4280,11 @@ class _$_PlanDefinitionGoal implements _PlanDefinitionGoal {
   }
 }
 
-abstract class _PlanDefinitionGoal implements PlanDefinitionGoal {
+abstract class _PlanDefinitionGoal extends PlanDefinitionGoal {
+  _PlanDefinitionGoal._() : super._();
   factory _PlanDefinitionGoal(
       {CodeableConcept category,
-      @JsonKey(required: true) CodeableConcept description,
+      @required CodeableConcept description,
       CodeableConcept priority,
       CodeableConcept start,
       List<CodeableConcept> addresses,
@@ -4272,7 +4297,6 @@ abstract class _PlanDefinitionGoal implements PlanDefinitionGoal {
   @override
   CodeableConcept get category;
   @override
-  @JsonKey(required: true)
   CodeableConcept get description;
   @override
   CodeableConcept get priority;
@@ -4295,6 +4319,7 @@ PlanDefinitionTarget _$PlanDefinitionTargetFromJson(Map<String, dynamic> json) {
 class _$PlanDefinitionTargetTearOff {
   const _$PlanDefinitionTargetTearOff();
 
+// ignore: unused_element
   _PlanDefinitionTarget call(
       {CodeableConcept measure,
       Quantity detailQuantity,
@@ -4484,13 +4509,14 @@ class __$PlanDefinitionTargetCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_PlanDefinitionTarget implements _PlanDefinitionTarget {
+class _$_PlanDefinitionTarget extends _PlanDefinitionTarget {
   _$_PlanDefinitionTarget(
       {this.measure,
       this.detailQuantity,
       this.detailRange,
       this.detailCodeableConcept,
-      this.due});
+      this.due})
+      : super._();
 
   factory _$_PlanDefinitionTarget.fromJson(Map<String, dynamic> json) =>
       _$_$_PlanDefinitionTargetFromJson(json);
@@ -4551,7 +4577,8 @@ class _$_PlanDefinitionTarget implements _PlanDefinitionTarget {
   }
 }
 
-abstract class _PlanDefinitionTarget implements PlanDefinitionTarget {
+abstract class _PlanDefinitionTarget extends PlanDefinitionTarget {
+  _PlanDefinitionTarget._() : super._();
   factory _PlanDefinitionTarget(
       {CodeableConcept measure,
       Quantity detailQuantity,
@@ -4583,78 +4610,69 @@ PlanDefinitionAction _$PlanDefinitionActionFromJson(Map<String, dynamic> json) {
 class _$PlanDefinitionActionTearOff {
   const _$PlanDefinitionActionTearOff();
 
+// ignore: unused_element
   _PlanDefinitionAction call(
       {String label,
+      @JsonKey(name: '_label') Element labelElement,
       String title,
+      @JsonKey(name: '_title') Element titleElement,
       String description,
+      @JsonKey(name: '_description') Element descriptionElement,
       String textEquivalent,
+      @JsonKey(name: '_textEquivalent') Element textEquivalentElement,
       List<CodeableConcept> code,
       List<CodeableConcept> reason,
       List<RelatedArtifact> documentation,
       List<Id> goalId,
+      @JsonKey(name: '_goalId') List<Element> goalIdElement,
       List<TriggerDefinition> triggerDefinition,
       List<PlanDefinitionCondition> condition,
       List<DataRequirement> input,
       List<DataRequirement> output,
       List<PlanDefinitionRelatedAction> relatedAction,
       FhirDateTime timingDateTime,
+      @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
       Period timingPeriod,
       Duration timingDuration,
       Range timingRange,
       Timing timingTiming,
       List<PlanDefinitionParticipant> participant,
       Coding type,
-      @JsonKey(unknownEnumValue: ActionGroupingBehavior.unknown)
-          ActionGroupingBehavior groupingBehavior,
-      @JsonKey(unknownEnumValue: ActionSelectionBehavior.unknown)
-          ActionSelectionBehavior selectionBehavior,
-      @JsonKey(unknownEnumValue: ActionRequiredBehavior.unknown)
-          ActionRequiredBehavior requiredBehavior,
-      @JsonKey(unknownEnumValue: ActionPrecheckBehavior.unknown)
-          ActionPrecheckBehavior precheckBehavior,
-      @JsonKey(unknownEnumValue: ActionCardinalityBehavior.unknown)
-          ActionCardinalityBehavior cardinalityBehavior,
+      PlanDefinitionActionGroupingBehavior groupingBehavior,
+      @JsonKey(name: '_groupingBehavior') Element groupingBehaviorElement,
+      PlanDefinitionActionSelectionBehavior selectionBehavior,
+      @JsonKey(name: '_selectionBehavior') Element selectionBehaviorElement,
+      PlanDefinitionActionRequiredBehavior requiredBehavior,
+      @JsonKey(name: '_requiredBehavior') Element requiredBehaviorElement,
+      PlanDefinitionActionPrecheckBehavior precheckBehavior,
+      @JsonKey(name: '_precheckBehavior') Element precheckBehaviorElement,
+      PlanDefinitionActionCardinalityBehavior cardinalityBehavior,
+      @JsonKey(name: '_cardinalityBehavior') Element cardinalityBehaviorElement,
       Reference definition,
       Reference transform,
       List<PlanDefinitionDynamicValue> dynamicValue,
-      List<PlanDefinitionAction> action,
-      @JsonKey(name: '_label')
-          Element labelElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @JsonKey(name: '_textEquivalent')
-          Element textEquivalentElement,
-      @JsonKey(name: '_goalId')
-          Element goalIdElement,
-      @JsonKey(name: '_timingDateTime')
-          Element timingDateTimeElement,
-      @JsonKey(name: '_groupingBehavior')
-          Element groupingBehaviorElement,
-      @JsonKey(name: '_selectionBehavior')
-          Element selectionBehaviorElement,
-      @JsonKey(name: '_requiredBehavior')
-          Element requiredBehaviorElement,
-      @JsonKey(name: '_precheckBehavior')
-          Element precheckBehaviorElement,
-      @JsonKey(name: '_cardinalityBehavior')
-          Element cardinalityBehaviorElement}) {
+      List<PlanDefinitionAction> action}) {
     return _PlanDefinitionAction(
       label: label,
+      labelElement: labelElement,
       title: title,
+      titleElement: titleElement,
       description: description,
+      descriptionElement: descriptionElement,
       textEquivalent: textEquivalent,
+      textEquivalentElement: textEquivalentElement,
       code: code,
       reason: reason,
       documentation: documentation,
       goalId: goalId,
+      goalIdElement: goalIdElement,
       triggerDefinition: triggerDefinition,
       condition: condition,
       input: input,
       output: output,
       relatedAction: relatedAction,
       timingDateTime: timingDateTime,
+      timingDateTimeElement: timingDateTimeElement,
       timingPeriod: timingPeriod,
       timingDuration: timingDuration,
       timingRange: timingRange,
@@ -4662,25 +4680,19 @@ class _$PlanDefinitionActionTearOff {
       participant: participant,
       type: type,
       groupingBehavior: groupingBehavior,
+      groupingBehaviorElement: groupingBehaviorElement,
       selectionBehavior: selectionBehavior,
+      selectionBehaviorElement: selectionBehaviorElement,
       requiredBehavior: requiredBehavior,
+      requiredBehaviorElement: requiredBehaviorElement,
       precheckBehavior: precheckBehavior,
+      precheckBehaviorElement: precheckBehaviorElement,
       cardinalityBehavior: cardinalityBehavior,
+      cardinalityBehaviorElement: cardinalityBehaviorElement,
       definition: definition,
       transform: transform,
       dynamicValue: dynamicValue,
       action: action,
-      labelElement: labelElement,
-      titleElement: titleElement,
-      descriptionElement: descriptionElement,
-      textEquivalentElement: textEquivalentElement,
-      goalIdElement: goalIdElement,
-      timingDateTimeElement: timingDateTimeElement,
-      groupingBehaviorElement: groupingBehaviorElement,
-      selectionBehaviorElement: selectionBehaviorElement,
-      requiredBehaviorElement: requiredBehaviorElement,
-      precheckBehaviorElement: precheckBehaviorElement,
-      cardinalityBehaviorElement: cardinalityBehaviorElement,
     );
   }
 }
@@ -4690,61 +4702,56 @@ const $PlanDefinitionAction = _$PlanDefinitionActionTearOff();
 
 mixin _$PlanDefinitionAction {
   String get label;
+  @JsonKey(name: '_label')
+  Element get labelElement;
   String get title;
+  @JsonKey(name: '_title')
+  Element get titleElement;
   String get description;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
   String get textEquivalent;
+  @JsonKey(name: '_textEquivalent')
+  Element get textEquivalentElement;
   List<CodeableConcept> get code;
   List<CodeableConcept> get reason;
   List<RelatedArtifact> get documentation;
   List<Id> get goalId;
+  @JsonKey(name: '_goalId')
+  List<Element> get goalIdElement;
   List<TriggerDefinition> get triggerDefinition;
   List<PlanDefinitionCondition> get condition;
   List<DataRequirement> get input;
   List<DataRequirement> get output;
   List<PlanDefinitionRelatedAction> get relatedAction;
   FhirDateTime get timingDateTime;
+  @JsonKey(name: '_timingDateTime')
+  Element get timingDateTimeElement;
   Period get timingPeriod;
   Duration get timingDuration;
   Range get timingRange;
   Timing get timingTiming;
   List<PlanDefinitionParticipant> get participant;
   Coding get type;
-  @JsonKey(unknownEnumValue: ActionGroupingBehavior.unknown)
-  ActionGroupingBehavior get groupingBehavior;
-  @JsonKey(unknownEnumValue: ActionSelectionBehavior.unknown)
-  ActionSelectionBehavior get selectionBehavior;
-  @JsonKey(unknownEnumValue: ActionRequiredBehavior.unknown)
-  ActionRequiredBehavior get requiredBehavior;
-  @JsonKey(unknownEnumValue: ActionPrecheckBehavior.unknown)
-  ActionPrecheckBehavior get precheckBehavior;
-  @JsonKey(unknownEnumValue: ActionCardinalityBehavior.unknown)
-  ActionCardinalityBehavior get cardinalityBehavior;
+  PlanDefinitionActionGroupingBehavior get groupingBehavior;
+  @JsonKey(name: '_groupingBehavior')
+  Element get groupingBehaviorElement;
+  PlanDefinitionActionSelectionBehavior get selectionBehavior;
+  @JsonKey(name: '_selectionBehavior')
+  Element get selectionBehaviorElement;
+  PlanDefinitionActionRequiredBehavior get requiredBehavior;
+  @JsonKey(name: '_requiredBehavior')
+  Element get requiredBehaviorElement;
+  PlanDefinitionActionPrecheckBehavior get precheckBehavior;
+  @JsonKey(name: '_precheckBehavior')
+  Element get precheckBehaviorElement;
+  PlanDefinitionActionCardinalityBehavior get cardinalityBehavior;
+  @JsonKey(name: '_cardinalityBehavior')
+  Element get cardinalityBehaviorElement;
   Reference get definition;
   Reference get transform;
   List<PlanDefinitionDynamicValue> get dynamicValue;
   List<PlanDefinitionAction> get action;
-  @JsonKey(name: '_label')
-  Element get labelElement;
-  @JsonKey(name: '_title')
-  Element get titleElement;
-  @JsonKey(name: '_description')
-  Element get descriptionElement;
-  @JsonKey(name: '_textEquivalent')
-  Element get textEquivalentElement;
-  @JsonKey(name: '_goalId')
-  Element get goalIdElement;
-  @JsonKey(name: '_timingDateTime')
-  Element get timingDateTimeElement;
-  @JsonKey(name: '_groupingBehavior')
-  Element get groupingBehaviorElement;
-  @JsonKey(name: '_selectionBehavior')
-  Element get selectionBehaviorElement;
-  @JsonKey(name: '_requiredBehavior')
-  Element get requiredBehaviorElement;
-  @JsonKey(name: '_precheckBehavior')
-  Element get precheckBehaviorElement;
-  @JsonKey(name: '_cardinalityBehavior')
-  Element get cardinalityBehaviorElement;
 
   Map<String, dynamic> toJson();
   $PlanDefinitionActionCopyWith<PlanDefinitionAction> get copyWith;
@@ -4756,80 +4763,63 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
       _$PlanDefinitionActionCopyWithImpl<$Res>;
   $Res call(
       {String label,
+      @JsonKey(name: '_label') Element labelElement,
       String title,
+      @JsonKey(name: '_title') Element titleElement,
       String description,
+      @JsonKey(name: '_description') Element descriptionElement,
       String textEquivalent,
+      @JsonKey(name: '_textEquivalent') Element textEquivalentElement,
       List<CodeableConcept> code,
       List<CodeableConcept> reason,
       List<RelatedArtifact> documentation,
       List<Id> goalId,
+      @JsonKey(name: '_goalId') List<Element> goalIdElement,
       List<TriggerDefinition> triggerDefinition,
       List<PlanDefinitionCondition> condition,
       List<DataRequirement> input,
       List<DataRequirement> output,
       List<PlanDefinitionRelatedAction> relatedAction,
       FhirDateTime timingDateTime,
+      @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
       Period timingPeriod,
       Duration timingDuration,
       Range timingRange,
       Timing timingTiming,
       List<PlanDefinitionParticipant> participant,
       Coding type,
-      @JsonKey(unknownEnumValue: ActionGroupingBehavior.unknown)
-          ActionGroupingBehavior groupingBehavior,
-      @JsonKey(unknownEnumValue: ActionSelectionBehavior.unknown)
-          ActionSelectionBehavior selectionBehavior,
-      @JsonKey(unknownEnumValue: ActionRequiredBehavior.unknown)
-          ActionRequiredBehavior requiredBehavior,
-      @JsonKey(unknownEnumValue: ActionPrecheckBehavior.unknown)
-          ActionPrecheckBehavior precheckBehavior,
-      @JsonKey(unknownEnumValue: ActionCardinalityBehavior.unknown)
-          ActionCardinalityBehavior cardinalityBehavior,
+      PlanDefinitionActionGroupingBehavior groupingBehavior,
+      @JsonKey(name: '_groupingBehavior') Element groupingBehaviorElement,
+      PlanDefinitionActionSelectionBehavior selectionBehavior,
+      @JsonKey(name: '_selectionBehavior') Element selectionBehaviorElement,
+      PlanDefinitionActionRequiredBehavior requiredBehavior,
+      @JsonKey(name: '_requiredBehavior') Element requiredBehaviorElement,
+      PlanDefinitionActionPrecheckBehavior precheckBehavior,
+      @JsonKey(name: '_precheckBehavior') Element precheckBehaviorElement,
+      PlanDefinitionActionCardinalityBehavior cardinalityBehavior,
+      @JsonKey(name: '_cardinalityBehavior') Element cardinalityBehaviorElement,
       Reference definition,
       Reference transform,
       List<PlanDefinitionDynamicValue> dynamicValue,
-      List<PlanDefinitionAction> action,
-      @JsonKey(name: '_label')
-          Element labelElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @JsonKey(name: '_textEquivalent')
-          Element textEquivalentElement,
-      @JsonKey(name: '_goalId')
-          Element goalIdElement,
-      @JsonKey(name: '_timingDateTime')
-          Element timingDateTimeElement,
-      @JsonKey(name: '_groupingBehavior')
-          Element groupingBehaviorElement,
-      @JsonKey(name: '_selectionBehavior')
-          Element selectionBehaviorElement,
-      @JsonKey(name: '_requiredBehavior')
-          Element requiredBehaviorElement,
-      @JsonKey(name: '_precheckBehavior')
-          Element precheckBehaviorElement,
-      @JsonKey(name: '_cardinalityBehavior')
-          Element cardinalityBehaviorElement});
+      List<PlanDefinitionAction> action});
 
+  $ElementCopyWith<$Res> get labelElement;
+  $ElementCopyWith<$Res> get titleElement;
+  $ElementCopyWith<$Res> get descriptionElement;
+  $ElementCopyWith<$Res> get textEquivalentElement;
+  $ElementCopyWith<$Res> get timingDateTimeElement;
   $PeriodCopyWith<$Res> get timingPeriod;
   $DurationCopyWith<$Res> get timingDuration;
   $RangeCopyWith<$Res> get timingRange;
   $TimingCopyWith<$Res> get timingTiming;
   $CodingCopyWith<$Res> get type;
-  $ReferenceCopyWith<$Res> get definition;
-  $ReferenceCopyWith<$Res> get transform;
-  $ElementCopyWith<$Res> get labelElement;
-  $ElementCopyWith<$Res> get titleElement;
-  $ElementCopyWith<$Res> get descriptionElement;
-  $ElementCopyWith<$Res> get textEquivalentElement;
-  $ElementCopyWith<$Res> get goalIdElement;
-  $ElementCopyWith<$Res> get timingDateTimeElement;
   $ElementCopyWith<$Res> get groupingBehaviorElement;
   $ElementCopyWith<$Res> get selectionBehaviorElement;
   $ElementCopyWith<$Res> get requiredBehaviorElement;
   $ElementCopyWith<$Res> get precheckBehaviorElement;
   $ElementCopyWith<$Res> get cardinalityBehaviorElement;
+  $ReferenceCopyWith<$Res> get definition;
+  $ReferenceCopyWith<$Res> get transform;
 }
 
 class _$PlanDefinitionActionCopyWithImpl<$Res>
@@ -4843,19 +4833,25 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
   @override
   $Res call({
     Object label = freezed,
+    Object labelElement = freezed,
     Object title = freezed,
+    Object titleElement = freezed,
     Object description = freezed,
+    Object descriptionElement = freezed,
     Object textEquivalent = freezed,
+    Object textEquivalentElement = freezed,
     Object code = freezed,
     Object reason = freezed,
     Object documentation = freezed,
     Object goalId = freezed,
+    Object goalIdElement = freezed,
     Object triggerDefinition = freezed,
     Object condition = freezed,
     Object input = freezed,
     Object output = freezed,
     Object relatedAction = freezed,
     Object timingDateTime = freezed,
+    Object timingDateTimeElement = freezed,
     Object timingPeriod = freezed,
     Object timingDuration = freezed,
     Object timingRange = freezed,
@@ -4863,34 +4859,40 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
     Object participant = freezed,
     Object type = freezed,
     Object groupingBehavior = freezed,
+    Object groupingBehaviorElement = freezed,
     Object selectionBehavior = freezed,
+    Object selectionBehaviorElement = freezed,
     Object requiredBehavior = freezed,
+    Object requiredBehaviorElement = freezed,
     Object precheckBehavior = freezed,
+    Object precheckBehaviorElement = freezed,
     Object cardinalityBehavior = freezed,
+    Object cardinalityBehaviorElement = freezed,
     Object definition = freezed,
     Object transform = freezed,
     Object dynamicValue = freezed,
     Object action = freezed,
-    Object labelElement = freezed,
-    Object titleElement = freezed,
-    Object descriptionElement = freezed,
-    Object textEquivalentElement = freezed,
-    Object goalIdElement = freezed,
-    Object timingDateTimeElement = freezed,
-    Object groupingBehaviorElement = freezed,
-    Object selectionBehaviorElement = freezed,
-    Object requiredBehaviorElement = freezed,
-    Object precheckBehaviorElement = freezed,
-    Object cardinalityBehaviorElement = freezed,
   }) {
     return _then(_value.copyWith(
       label: label == freezed ? _value.label : label as String,
+      labelElement: labelElement == freezed
+          ? _value.labelElement
+          : labelElement as Element,
       title: title == freezed ? _value.title : title as String,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
       description:
           description == freezed ? _value.description : description as String,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
       textEquivalent: textEquivalent == freezed
           ? _value.textEquivalent
           : textEquivalent as String,
+      textEquivalentElement: textEquivalentElement == freezed
+          ? _value.textEquivalentElement
+          : textEquivalentElement as Element,
       code: code == freezed ? _value.code : code as List<CodeableConcept>,
       reason:
           reason == freezed ? _value.reason : reason as List<CodeableConcept>,
@@ -4898,6 +4900,9 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
           ? _value.documentation
           : documentation as List<RelatedArtifact>,
       goalId: goalId == freezed ? _value.goalId : goalId as List<Id>,
+      goalIdElement: goalIdElement == freezed
+          ? _value.goalIdElement
+          : goalIdElement as List<Element>,
       triggerDefinition: triggerDefinition == freezed
           ? _value.triggerDefinition
           : triggerDefinition as List<TriggerDefinition>,
@@ -4913,6 +4918,9 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
       timingDateTime: timingDateTime == freezed
           ? _value.timingDateTime
           : timingDateTime as FhirDateTime,
+      timingDateTimeElement: timingDateTimeElement == freezed
+          ? _value.timingDateTimeElement
+          : timingDateTimeElement as Element,
       timingPeriod: timingPeriod == freezed
           ? _value.timingPeriod
           : timingPeriod as Period,
@@ -4930,19 +4938,34 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as Coding,
       groupingBehavior: groupingBehavior == freezed
           ? _value.groupingBehavior
-          : groupingBehavior as ActionGroupingBehavior,
+          : groupingBehavior as PlanDefinitionActionGroupingBehavior,
+      groupingBehaviorElement: groupingBehaviorElement == freezed
+          ? _value.groupingBehaviorElement
+          : groupingBehaviorElement as Element,
       selectionBehavior: selectionBehavior == freezed
           ? _value.selectionBehavior
-          : selectionBehavior as ActionSelectionBehavior,
+          : selectionBehavior as PlanDefinitionActionSelectionBehavior,
+      selectionBehaviorElement: selectionBehaviorElement == freezed
+          ? _value.selectionBehaviorElement
+          : selectionBehaviorElement as Element,
       requiredBehavior: requiredBehavior == freezed
           ? _value.requiredBehavior
-          : requiredBehavior as ActionRequiredBehavior,
+          : requiredBehavior as PlanDefinitionActionRequiredBehavior,
+      requiredBehaviorElement: requiredBehaviorElement == freezed
+          ? _value.requiredBehaviorElement
+          : requiredBehaviorElement as Element,
       precheckBehavior: precheckBehavior == freezed
           ? _value.precheckBehavior
-          : precheckBehavior as ActionPrecheckBehavior,
+          : precheckBehavior as PlanDefinitionActionPrecheckBehavior,
+      precheckBehaviorElement: precheckBehaviorElement == freezed
+          ? _value.precheckBehaviorElement
+          : precheckBehaviorElement as Element,
       cardinalityBehavior: cardinalityBehavior == freezed
           ? _value.cardinalityBehavior
-          : cardinalityBehavior as ActionCardinalityBehavior,
+          : cardinalityBehavior as PlanDefinitionActionCardinalityBehavior,
+      cardinalityBehaviorElement: cardinalityBehaviorElement == freezed
+          ? _value.cardinalityBehaviorElement
+          : cardinalityBehaviorElement as Element,
       definition:
           definition == freezed ? _value.definition : definition as Reference,
       transform:
@@ -4953,40 +4976,57 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
       action: action == freezed
           ? _value.action
           : action as List<PlanDefinitionAction>,
-      labelElement: labelElement == freezed
-          ? _value.labelElement
-          : labelElement as Element,
-      titleElement: titleElement == freezed
-          ? _value.titleElement
-          : titleElement as Element,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement as Element,
-      textEquivalentElement: textEquivalentElement == freezed
-          ? _value.textEquivalentElement
-          : textEquivalentElement as Element,
-      goalIdElement: goalIdElement == freezed
-          ? _value.goalIdElement
-          : goalIdElement as Element,
-      timingDateTimeElement: timingDateTimeElement == freezed
-          ? _value.timingDateTimeElement
-          : timingDateTimeElement as Element,
-      groupingBehaviorElement: groupingBehaviorElement == freezed
-          ? _value.groupingBehaviorElement
-          : groupingBehaviorElement as Element,
-      selectionBehaviorElement: selectionBehaviorElement == freezed
-          ? _value.selectionBehaviorElement
-          : selectionBehaviorElement as Element,
-      requiredBehaviorElement: requiredBehaviorElement == freezed
-          ? _value.requiredBehaviorElement
-          : requiredBehaviorElement as Element,
-      precheckBehaviorElement: precheckBehaviorElement == freezed
-          ? _value.precheckBehaviorElement
-          : precheckBehaviorElement as Element,
-      cardinalityBehaviorElement: cardinalityBehaviorElement == freezed
-          ? _value.cardinalityBehaviorElement
-          : cardinalityBehaviorElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get labelElement {
+    if (_value.labelElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.labelElement, (value) {
+      return _then(_value.copyWith(labelElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get titleElement {
+    if (_value.titleElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.titleElement, (value) {
+      return _then(_value.copyWith(titleElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get textEquivalentElement {
+    if (_value.textEquivalentElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.textEquivalentElement, (value) {
+      return _then(_value.copyWith(textEquivalentElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get timingDateTimeElement {
+    if (_value.timingDateTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.timingDateTimeElement, (value) {
+      return _then(_value.copyWith(timingDateTimeElement: value));
+    });
   }
 
   @override
@@ -5040,86 +5080,6 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res> get definition {
-    if (_value.definition == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.definition, (value) {
-      return _then(_value.copyWith(definition: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get transform {
-    if (_value.transform == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.transform, (value) {
-      return _then(_value.copyWith(transform: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get labelElement {
-    if (_value.labelElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.labelElement, (value) {
-      return _then(_value.copyWith(labelElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get titleElement {
-    if (_value.titleElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.titleElement, (value) {
-      return _then(_value.copyWith(titleElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get descriptionElement {
-    if (_value.descriptionElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
-      return _then(_value.copyWith(descriptionElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get textEquivalentElement {
-    if (_value.textEquivalentElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.textEquivalentElement, (value) {
-      return _then(_value.copyWith(textEquivalentElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get goalIdElement {
-    if (_value.goalIdElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.goalIdElement, (value) {
-      return _then(_value.copyWith(goalIdElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get timingDateTimeElement {
-    if (_value.timingDateTimeElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.timingDateTimeElement, (value) {
-      return _then(_value.copyWith(timingDateTimeElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get groupingBehaviorElement {
     if (_value.groupingBehaviorElement == null) {
       return null;
@@ -5168,6 +5128,26 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
       return _then(_value.copyWith(cardinalityBehaviorElement: value));
     });
   }
+
+  @override
+  $ReferenceCopyWith<$Res> get definition {
+    if (_value.definition == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.definition, (value) {
+      return _then(_value.copyWith(definition: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get transform {
+    if (_value.transform == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.transform, (value) {
+      return _then(_value.copyWith(transform: value));
+    });
+  }
 }
 
 abstract class _$PlanDefinitionActionCopyWith<$Res>
@@ -5178,62 +5158,56 @@ abstract class _$PlanDefinitionActionCopyWith<$Res>
   @override
   $Res call(
       {String label,
+      @JsonKey(name: '_label') Element labelElement,
       String title,
+      @JsonKey(name: '_title') Element titleElement,
       String description,
+      @JsonKey(name: '_description') Element descriptionElement,
       String textEquivalent,
+      @JsonKey(name: '_textEquivalent') Element textEquivalentElement,
       List<CodeableConcept> code,
       List<CodeableConcept> reason,
       List<RelatedArtifact> documentation,
       List<Id> goalId,
+      @JsonKey(name: '_goalId') List<Element> goalIdElement,
       List<TriggerDefinition> triggerDefinition,
       List<PlanDefinitionCondition> condition,
       List<DataRequirement> input,
       List<DataRequirement> output,
       List<PlanDefinitionRelatedAction> relatedAction,
       FhirDateTime timingDateTime,
+      @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
       Period timingPeriod,
       Duration timingDuration,
       Range timingRange,
       Timing timingTiming,
       List<PlanDefinitionParticipant> participant,
       Coding type,
-      @JsonKey(unknownEnumValue: ActionGroupingBehavior.unknown)
-          ActionGroupingBehavior groupingBehavior,
-      @JsonKey(unknownEnumValue: ActionSelectionBehavior.unknown)
-          ActionSelectionBehavior selectionBehavior,
-      @JsonKey(unknownEnumValue: ActionRequiredBehavior.unknown)
-          ActionRequiredBehavior requiredBehavior,
-      @JsonKey(unknownEnumValue: ActionPrecheckBehavior.unknown)
-          ActionPrecheckBehavior precheckBehavior,
-      @JsonKey(unknownEnumValue: ActionCardinalityBehavior.unknown)
-          ActionCardinalityBehavior cardinalityBehavior,
+      PlanDefinitionActionGroupingBehavior groupingBehavior,
+      @JsonKey(name: '_groupingBehavior') Element groupingBehaviorElement,
+      PlanDefinitionActionSelectionBehavior selectionBehavior,
+      @JsonKey(name: '_selectionBehavior') Element selectionBehaviorElement,
+      PlanDefinitionActionRequiredBehavior requiredBehavior,
+      @JsonKey(name: '_requiredBehavior') Element requiredBehaviorElement,
+      PlanDefinitionActionPrecheckBehavior precheckBehavior,
+      @JsonKey(name: '_precheckBehavior') Element precheckBehaviorElement,
+      PlanDefinitionActionCardinalityBehavior cardinalityBehavior,
+      @JsonKey(name: '_cardinalityBehavior') Element cardinalityBehaviorElement,
       Reference definition,
       Reference transform,
       List<PlanDefinitionDynamicValue> dynamicValue,
-      List<PlanDefinitionAction> action,
-      @JsonKey(name: '_label')
-          Element labelElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @JsonKey(name: '_textEquivalent')
-          Element textEquivalentElement,
-      @JsonKey(name: '_goalId')
-          Element goalIdElement,
-      @JsonKey(name: '_timingDateTime')
-          Element timingDateTimeElement,
-      @JsonKey(name: '_groupingBehavior')
-          Element groupingBehaviorElement,
-      @JsonKey(name: '_selectionBehavior')
-          Element selectionBehaviorElement,
-      @JsonKey(name: '_requiredBehavior')
-          Element requiredBehaviorElement,
-      @JsonKey(name: '_precheckBehavior')
-          Element precheckBehaviorElement,
-      @JsonKey(name: '_cardinalityBehavior')
-          Element cardinalityBehaviorElement});
+      List<PlanDefinitionAction> action});
 
+  @override
+  $ElementCopyWith<$Res> get labelElement;
+  @override
+  $ElementCopyWith<$Res> get titleElement;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
+  @override
+  $ElementCopyWith<$Res> get textEquivalentElement;
+  @override
+  $ElementCopyWith<$Res> get timingDateTimeElement;
   @override
   $PeriodCopyWith<$Res> get timingPeriod;
   @override
@@ -5245,22 +5219,6 @@ abstract class _$PlanDefinitionActionCopyWith<$Res>
   @override
   $CodingCopyWith<$Res> get type;
   @override
-  $ReferenceCopyWith<$Res> get definition;
-  @override
-  $ReferenceCopyWith<$Res> get transform;
-  @override
-  $ElementCopyWith<$Res> get labelElement;
-  @override
-  $ElementCopyWith<$Res> get titleElement;
-  @override
-  $ElementCopyWith<$Res> get descriptionElement;
-  @override
-  $ElementCopyWith<$Res> get textEquivalentElement;
-  @override
-  $ElementCopyWith<$Res> get goalIdElement;
-  @override
-  $ElementCopyWith<$Res> get timingDateTimeElement;
-  @override
   $ElementCopyWith<$Res> get groupingBehaviorElement;
   @override
   $ElementCopyWith<$Res> get selectionBehaviorElement;
@@ -5270,6 +5228,10 @@ abstract class _$PlanDefinitionActionCopyWith<$Res>
   $ElementCopyWith<$Res> get precheckBehaviorElement;
   @override
   $ElementCopyWith<$Res> get cardinalityBehaviorElement;
+  @override
+  $ReferenceCopyWith<$Res> get definition;
+  @override
+  $ReferenceCopyWith<$Res> get transform;
 }
 
 class __$PlanDefinitionActionCopyWithImpl<$Res>
@@ -5285,19 +5247,25 @@ class __$PlanDefinitionActionCopyWithImpl<$Res>
   @override
   $Res call({
     Object label = freezed,
+    Object labelElement = freezed,
     Object title = freezed,
+    Object titleElement = freezed,
     Object description = freezed,
+    Object descriptionElement = freezed,
     Object textEquivalent = freezed,
+    Object textEquivalentElement = freezed,
     Object code = freezed,
     Object reason = freezed,
     Object documentation = freezed,
     Object goalId = freezed,
+    Object goalIdElement = freezed,
     Object triggerDefinition = freezed,
     Object condition = freezed,
     Object input = freezed,
     Object output = freezed,
     Object relatedAction = freezed,
     Object timingDateTime = freezed,
+    Object timingDateTimeElement = freezed,
     Object timingPeriod = freezed,
     Object timingDuration = freezed,
     Object timingRange = freezed,
@@ -5305,34 +5273,40 @@ class __$PlanDefinitionActionCopyWithImpl<$Res>
     Object participant = freezed,
     Object type = freezed,
     Object groupingBehavior = freezed,
+    Object groupingBehaviorElement = freezed,
     Object selectionBehavior = freezed,
+    Object selectionBehaviorElement = freezed,
     Object requiredBehavior = freezed,
+    Object requiredBehaviorElement = freezed,
     Object precheckBehavior = freezed,
+    Object precheckBehaviorElement = freezed,
     Object cardinalityBehavior = freezed,
+    Object cardinalityBehaviorElement = freezed,
     Object definition = freezed,
     Object transform = freezed,
     Object dynamicValue = freezed,
     Object action = freezed,
-    Object labelElement = freezed,
-    Object titleElement = freezed,
-    Object descriptionElement = freezed,
-    Object textEquivalentElement = freezed,
-    Object goalIdElement = freezed,
-    Object timingDateTimeElement = freezed,
-    Object groupingBehaviorElement = freezed,
-    Object selectionBehaviorElement = freezed,
-    Object requiredBehaviorElement = freezed,
-    Object precheckBehaviorElement = freezed,
-    Object cardinalityBehaviorElement = freezed,
   }) {
     return _then(_PlanDefinitionAction(
       label: label == freezed ? _value.label : label as String,
+      labelElement: labelElement == freezed
+          ? _value.labelElement
+          : labelElement as Element,
       title: title == freezed ? _value.title : title as String,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
       description:
           description == freezed ? _value.description : description as String,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
       textEquivalent: textEquivalent == freezed
           ? _value.textEquivalent
           : textEquivalent as String,
+      textEquivalentElement: textEquivalentElement == freezed
+          ? _value.textEquivalentElement
+          : textEquivalentElement as Element,
       code: code == freezed ? _value.code : code as List<CodeableConcept>,
       reason:
           reason == freezed ? _value.reason : reason as List<CodeableConcept>,
@@ -5340,6 +5314,9 @@ class __$PlanDefinitionActionCopyWithImpl<$Res>
           ? _value.documentation
           : documentation as List<RelatedArtifact>,
       goalId: goalId == freezed ? _value.goalId : goalId as List<Id>,
+      goalIdElement: goalIdElement == freezed
+          ? _value.goalIdElement
+          : goalIdElement as List<Element>,
       triggerDefinition: triggerDefinition == freezed
           ? _value.triggerDefinition
           : triggerDefinition as List<TriggerDefinition>,
@@ -5355,6 +5332,9 @@ class __$PlanDefinitionActionCopyWithImpl<$Res>
       timingDateTime: timingDateTime == freezed
           ? _value.timingDateTime
           : timingDateTime as FhirDateTime,
+      timingDateTimeElement: timingDateTimeElement == freezed
+          ? _value.timingDateTimeElement
+          : timingDateTimeElement as Element,
       timingPeriod: timingPeriod == freezed
           ? _value.timingPeriod
           : timingPeriod as Period,
@@ -5372,19 +5352,34 @@ class __$PlanDefinitionActionCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as Coding,
       groupingBehavior: groupingBehavior == freezed
           ? _value.groupingBehavior
-          : groupingBehavior as ActionGroupingBehavior,
+          : groupingBehavior as PlanDefinitionActionGroupingBehavior,
+      groupingBehaviorElement: groupingBehaviorElement == freezed
+          ? _value.groupingBehaviorElement
+          : groupingBehaviorElement as Element,
       selectionBehavior: selectionBehavior == freezed
           ? _value.selectionBehavior
-          : selectionBehavior as ActionSelectionBehavior,
+          : selectionBehavior as PlanDefinitionActionSelectionBehavior,
+      selectionBehaviorElement: selectionBehaviorElement == freezed
+          ? _value.selectionBehaviorElement
+          : selectionBehaviorElement as Element,
       requiredBehavior: requiredBehavior == freezed
           ? _value.requiredBehavior
-          : requiredBehavior as ActionRequiredBehavior,
+          : requiredBehavior as PlanDefinitionActionRequiredBehavior,
+      requiredBehaviorElement: requiredBehaviorElement == freezed
+          ? _value.requiredBehaviorElement
+          : requiredBehaviorElement as Element,
       precheckBehavior: precheckBehavior == freezed
           ? _value.precheckBehavior
-          : precheckBehavior as ActionPrecheckBehavior,
+          : precheckBehavior as PlanDefinitionActionPrecheckBehavior,
+      precheckBehaviorElement: precheckBehaviorElement == freezed
+          ? _value.precheckBehaviorElement
+          : precheckBehaviorElement as Element,
       cardinalityBehavior: cardinalityBehavior == freezed
           ? _value.cardinalityBehavior
-          : cardinalityBehavior as ActionCardinalityBehavior,
+          : cardinalityBehavior as PlanDefinitionActionCardinalityBehavior,
+      cardinalityBehaviorElement: cardinalityBehaviorElement == freezed
+          ? _value.cardinalityBehaviorElement
+          : cardinalityBehaviorElement as Element,
       definition:
           definition == freezed ? _value.definition : definition as Reference,
       transform:
@@ -5395,102 +5390,54 @@ class __$PlanDefinitionActionCopyWithImpl<$Res>
       action: action == freezed
           ? _value.action
           : action as List<PlanDefinitionAction>,
-      labelElement: labelElement == freezed
-          ? _value.labelElement
-          : labelElement as Element,
-      titleElement: titleElement == freezed
-          ? _value.titleElement
-          : titleElement as Element,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement as Element,
-      textEquivalentElement: textEquivalentElement == freezed
-          ? _value.textEquivalentElement
-          : textEquivalentElement as Element,
-      goalIdElement: goalIdElement == freezed
-          ? _value.goalIdElement
-          : goalIdElement as Element,
-      timingDateTimeElement: timingDateTimeElement == freezed
-          ? _value.timingDateTimeElement
-          : timingDateTimeElement as Element,
-      groupingBehaviorElement: groupingBehaviorElement == freezed
-          ? _value.groupingBehaviorElement
-          : groupingBehaviorElement as Element,
-      selectionBehaviorElement: selectionBehaviorElement == freezed
-          ? _value.selectionBehaviorElement
-          : selectionBehaviorElement as Element,
-      requiredBehaviorElement: requiredBehaviorElement == freezed
-          ? _value.requiredBehaviorElement
-          : requiredBehaviorElement as Element,
-      precheckBehaviorElement: precheckBehaviorElement == freezed
-          ? _value.precheckBehaviorElement
-          : precheckBehaviorElement as Element,
-      cardinalityBehaviorElement: cardinalityBehaviorElement == freezed
-          ? _value.cardinalityBehaviorElement
-          : cardinalityBehaviorElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_PlanDefinitionAction implements _PlanDefinitionAction {
+class _$_PlanDefinitionAction extends _PlanDefinitionAction {
   _$_PlanDefinitionAction(
       {this.label,
+      @JsonKey(name: '_label') this.labelElement,
       this.title,
+      @JsonKey(name: '_title') this.titleElement,
       this.description,
+      @JsonKey(name: '_description') this.descriptionElement,
       this.textEquivalent,
+      @JsonKey(name: '_textEquivalent') this.textEquivalentElement,
       this.code,
       this.reason,
       this.documentation,
       this.goalId,
+      @JsonKey(name: '_goalId') this.goalIdElement,
       this.triggerDefinition,
       this.condition,
       this.input,
       this.output,
       this.relatedAction,
       this.timingDateTime,
+      @JsonKey(name: '_timingDateTime') this.timingDateTimeElement,
       this.timingPeriod,
       this.timingDuration,
       this.timingRange,
       this.timingTiming,
       this.participant,
       this.type,
-      @JsonKey(unknownEnumValue: ActionGroupingBehavior.unknown)
-          this.groupingBehavior,
-      @JsonKey(unknownEnumValue: ActionSelectionBehavior.unknown)
-          this.selectionBehavior,
-      @JsonKey(unknownEnumValue: ActionRequiredBehavior.unknown)
-          this.requiredBehavior,
-      @JsonKey(unknownEnumValue: ActionPrecheckBehavior.unknown)
-          this.precheckBehavior,
-      @JsonKey(unknownEnumValue: ActionCardinalityBehavior.unknown)
-          this.cardinalityBehavior,
+      this.groupingBehavior,
+      @JsonKey(name: '_groupingBehavior') this.groupingBehaviorElement,
+      this.selectionBehavior,
+      @JsonKey(name: '_selectionBehavior') this.selectionBehaviorElement,
+      this.requiredBehavior,
+      @JsonKey(name: '_requiredBehavior') this.requiredBehaviorElement,
+      this.precheckBehavior,
+      @JsonKey(name: '_precheckBehavior') this.precheckBehaviorElement,
+      this.cardinalityBehavior,
+      @JsonKey(name: '_cardinalityBehavior') this.cardinalityBehaviorElement,
       this.definition,
       this.transform,
       this.dynamicValue,
-      this.action,
-      @JsonKey(name: '_label')
-          this.labelElement,
-      @JsonKey(name: '_title')
-          this.titleElement,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
-      @JsonKey(name: '_textEquivalent')
-          this.textEquivalentElement,
-      @JsonKey(name: '_goalId')
-          this.goalIdElement,
-      @JsonKey(name: '_timingDateTime')
-          this.timingDateTimeElement,
-      @JsonKey(name: '_groupingBehavior')
-          this.groupingBehaviorElement,
-      @JsonKey(name: '_selectionBehavior')
-          this.selectionBehaviorElement,
-      @JsonKey(name: '_requiredBehavior')
-          this.requiredBehaviorElement,
-      @JsonKey(name: '_precheckBehavior')
-          this.precheckBehaviorElement,
-      @JsonKey(name: '_cardinalityBehavior')
-          this.cardinalityBehaviorElement});
+      this.action})
+      : super._();
 
   factory _$_PlanDefinitionAction.fromJson(Map<String, dynamic> json) =>
       _$_$_PlanDefinitionActionFromJson(json);
@@ -5498,11 +5445,23 @@ class _$_PlanDefinitionAction implements _PlanDefinitionAction {
   @override
   final String label;
   @override
+  @JsonKey(name: '_label')
+  final Element labelElement;
+  @override
   final String title;
+  @override
+  @JsonKey(name: '_title')
+  final Element titleElement;
   @override
   final String description;
   @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
+  @override
   final String textEquivalent;
+  @override
+  @JsonKey(name: '_textEquivalent')
+  final Element textEquivalentElement;
   @override
   final List<CodeableConcept> code;
   @override
@@ -5511,6 +5470,9 @@ class _$_PlanDefinitionAction implements _PlanDefinitionAction {
   final List<RelatedArtifact> documentation;
   @override
   final List<Id> goalId;
+  @override
+  @JsonKey(name: '_goalId')
+  final List<Element> goalIdElement;
   @override
   final List<TriggerDefinition> triggerDefinition;
   @override
@@ -5524,6 +5486,9 @@ class _$_PlanDefinitionAction implements _PlanDefinitionAction {
   @override
   final FhirDateTime timingDateTime;
   @override
+  @JsonKey(name: '_timingDateTime')
+  final Element timingDateTimeElement;
+  @override
   final Period timingPeriod;
   @override
   final Duration timingDuration;
@@ -5536,20 +5501,30 @@ class _$_PlanDefinitionAction implements _PlanDefinitionAction {
   @override
   final Coding type;
   @override
-  @JsonKey(unknownEnumValue: ActionGroupingBehavior.unknown)
-  final ActionGroupingBehavior groupingBehavior;
+  final PlanDefinitionActionGroupingBehavior groupingBehavior;
   @override
-  @JsonKey(unknownEnumValue: ActionSelectionBehavior.unknown)
-  final ActionSelectionBehavior selectionBehavior;
+  @JsonKey(name: '_groupingBehavior')
+  final Element groupingBehaviorElement;
   @override
-  @JsonKey(unknownEnumValue: ActionRequiredBehavior.unknown)
-  final ActionRequiredBehavior requiredBehavior;
+  final PlanDefinitionActionSelectionBehavior selectionBehavior;
   @override
-  @JsonKey(unknownEnumValue: ActionPrecheckBehavior.unknown)
-  final ActionPrecheckBehavior precheckBehavior;
+  @JsonKey(name: '_selectionBehavior')
+  final Element selectionBehaviorElement;
   @override
-  @JsonKey(unknownEnumValue: ActionCardinalityBehavior.unknown)
-  final ActionCardinalityBehavior cardinalityBehavior;
+  final PlanDefinitionActionRequiredBehavior requiredBehavior;
+  @override
+  @JsonKey(name: '_requiredBehavior')
+  final Element requiredBehaviorElement;
+  @override
+  final PlanDefinitionActionPrecheckBehavior precheckBehavior;
+  @override
+  @JsonKey(name: '_precheckBehavior')
+  final Element precheckBehaviorElement;
+  @override
+  final PlanDefinitionActionCardinalityBehavior cardinalityBehavior;
+  @override
+  @JsonKey(name: '_cardinalityBehavior')
+  final Element cardinalityBehaviorElement;
   @override
   final Reference definition;
   @override
@@ -5558,43 +5533,10 @@ class _$_PlanDefinitionAction implements _PlanDefinitionAction {
   final List<PlanDefinitionDynamicValue> dynamicValue;
   @override
   final List<PlanDefinitionAction> action;
-  @override
-  @JsonKey(name: '_label')
-  final Element labelElement;
-  @override
-  @JsonKey(name: '_title')
-  final Element titleElement;
-  @override
-  @JsonKey(name: '_description')
-  final Element descriptionElement;
-  @override
-  @JsonKey(name: '_textEquivalent')
-  final Element textEquivalentElement;
-  @override
-  @JsonKey(name: '_goalId')
-  final Element goalIdElement;
-  @override
-  @JsonKey(name: '_timingDateTime')
-  final Element timingDateTimeElement;
-  @override
-  @JsonKey(name: '_groupingBehavior')
-  final Element groupingBehaviorElement;
-  @override
-  @JsonKey(name: '_selectionBehavior')
-  final Element selectionBehaviorElement;
-  @override
-  @JsonKey(name: '_requiredBehavior')
-  final Element requiredBehaviorElement;
-  @override
-  @JsonKey(name: '_precheckBehavior')
-  final Element precheckBehaviorElement;
-  @override
-  @JsonKey(name: '_cardinalityBehavior')
-  final Element cardinalityBehaviorElement;
 
   @override
   String toString() {
-    return 'PlanDefinitionAction(label: $label, title: $title, description: $description, textEquivalent: $textEquivalent, code: $code, reason: $reason, documentation: $documentation, goalId: $goalId, triggerDefinition: $triggerDefinition, condition: $condition, input: $input, output: $output, relatedAction: $relatedAction, timingDateTime: $timingDateTime, timingPeriod: $timingPeriod, timingDuration: $timingDuration, timingRange: $timingRange, timingTiming: $timingTiming, participant: $participant, type: $type, groupingBehavior: $groupingBehavior, selectionBehavior: $selectionBehavior, requiredBehavior: $requiredBehavior, precheckBehavior: $precheckBehavior, cardinalityBehavior: $cardinalityBehavior, definition: $definition, transform: $transform, dynamicValue: $dynamicValue, action: $action, labelElement: $labelElement, titleElement: $titleElement, descriptionElement: $descriptionElement, textEquivalentElement: $textEquivalentElement, goalIdElement: $goalIdElement, timingDateTimeElement: $timingDateTimeElement, groupingBehaviorElement: $groupingBehaviorElement, selectionBehaviorElement: $selectionBehaviorElement, requiredBehaviorElement: $requiredBehaviorElement, precheckBehaviorElement: $precheckBehaviorElement, cardinalityBehaviorElement: $cardinalityBehaviorElement)';
+    return 'PlanDefinitionAction(label: $label, labelElement: $labelElement, title: $title, titleElement: $titleElement, description: $description, descriptionElement: $descriptionElement, textEquivalent: $textEquivalent, textEquivalentElement: $textEquivalentElement, code: $code, reason: $reason, documentation: $documentation, goalId: $goalId, goalIdElement: $goalIdElement, triggerDefinition: $triggerDefinition, condition: $condition, input: $input, output: $output, relatedAction: $relatedAction, timingDateTime: $timingDateTime, timingDateTimeElement: $timingDateTimeElement, timingPeriod: $timingPeriod, timingDuration: $timingDuration, timingRange: $timingRange, timingTiming: $timingTiming, participant: $participant, type: $type, groupingBehavior: $groupingBehavior, groupingBehaviorElement: $groupingBehaviorElement, selectionBehavior: $selectionBehavior, selectionBehaviorElement: $selectionBehaviorElement, requiredBehavior: $requiredBehavior, requiredBehaviorElement: $requiredBehaviorElement, precheckBehavior: $precheckBehavior, precheckBehaviorElement: $precheckBehaviorElement, cardinalityBehavior: $cardinalityBehavior, cardinalityBehaviorElement: $cardinalityBehaviorElement, definition: $definition, transform: $transform, dynamicValue: $dynamicValue, action: $action)';
   }
 
   @override
@@ -5603,14 +5545,26 @@ class _$_PlanDefinitionAction implements _PlanDefinitionAction {
         (other is _PlanDefinitionAction &&
             (identical(other.label, label) ||
                 const DeepCollectionEquality().equals(other.label, label)) &&
+            (identical(other.labelElement, labelElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.labelElement, labelElement)) &&
             (identical(other.title, title) ||
                 const DeepCollectionEquality().equals(other.title, title)) &&
+            (identical(other.titleElement, titleElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.titleElement, titleElement)) &&
             (identical(other.description, description) ||
                 const DeepCollectionEquality()
                     .equals(other.description, description)) &&
+            (identical(other.descriptionElement, descriptionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.descriptionElement, descriptionElement)) &&
             (identical(other.textEquivalent, textEquivalent) ||
                 const DeepCollectionEquality()
                     .equals(other.textEquivalent, textEquivalent)) &&
+            (identical(other.textEquivalentElement, textEquivalentElement) ||
+                const DeepCollectionEquality().equals(
+                    other.textEquivalentElement, textEquivalentElement)) &&
             (identical(other.code, code) ||
                 const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.reason, reason) ||
@@ -5620,6 +5574,9 @@ class _$_PlanDefinitionAction implements _PlanDefinitionAction {
                     .equals(other.documentation, documentation)) &&
             (identical(other.goalId, goalId) ||
                 const DeepCollectionEquality().equals(other.goalId, goalId)) &&
+            (identical(other.goalIdElement, goalIdElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.goalIdElement, goalIdElement)) &&
             (identical(other.triggerDefinition, triggerDefinition) ||
                 const DeepCollectionEquality()
                     .equals(other.triggerDefinition, triggerDefinition)) &&
@@ -5636,6 +5593,9 @@ class _$_PlanDefinitionAction implements _PlanDefinitionAction {
             (identical(other.timingDateTime, timingDateTime) ||
                 const DeepCollectionEquality()
                     .equals(other.timingDateTime, timingDateTime)) &&
+            (identical(other.timingDateTimeElement, timingDateTimeElement) ||
+                const DeepCollectionEquality().equals(
+                    other.timingDateTimeElement, timingDateTimeElement)) &&
             (identical(other.timingPeriod, timingPeriod) ||
                 const DeepCollectionEquality()
                     .equals(other.timingPeriod, timingPeriod)) &&
@@ -5649,60 +5609,47 @@ class _$_PlanDefinitionAction implements _PlanDefinitionAction {
                 const DeepCollectionEquality()
                     .equals(other.timingTiming, timingTiming)) &&
             (identical(other.participant, participant) ||
-                const DeepCollectionEquality()
-                    .equals(other.participant, participant)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.groupingBehavior, groupingBehavior) ||
-                const DeepCollectionEquality()
-                    .equals(other.groupingBehavior, groupingBehavior)) &&
-            (identical(other.selectionBehavior, selectionBehavior) ||
-                const DeepCollectionEquality()
-                    .equals(other.selectionBehavior, selectionBehavior)) &&
-            (identical(other.requiredBehavior, requiredBehavior) ||
-                const DeepCollectionEquality()
-                    .equals(other.requiredBehavior, requiredBehavior)) &&
-            (identical(other.precheckBehavior, precheckBehavior) ||
-                const DeepCollectionEquality()
-                    .equals(other.precheckBehavior, precheckBehavior)) &&
-            (identical(other.cardinalityBehavior, cardinalityBehavior) ||
-                const DeepCollectionEquality()
-                    .equals(other.cardinalityBehavior, cardinalityBehavior)) &&
-            (identical(other.definition, definition) ||
-                const DeepCollectionEquality().equals(other.definition, definition)) &&
+                const DeepCollectionEquality().equals(other.participant, participant)) &&
+            (identical(other.type, type) || const DeepCollectionEquality().equals(other.type, type)) &&
+            (identical(other.groupingBehavior, groupingBehavior) || const DeepCollectionEquality().equals(other.groupingBehavior, groupingBehavior)) &&
+            (identical(other.groupingBehaviorElement, groupingBehaviorElement) || const DeepCollectionEquality().equals(other.groupingBehaviorElement, groupingBehaviorElement)) &&
+            (identical(other.selectionBehavior, selectionBehavior) || const DeepCollectionEquality().equals(other.selectionBehavior, selectionBehavior)) &&
+            (identical(other.selectionBehaviorElement, selectionBehaviorElement) || const DeepCollectionEquality().equals(other.selectionBehaviorElement, selectionBehaviorElement)) &&
+            (identical(other.requiredBehavior, requiredBehavior) || const DeepCollectionEquality().equals(other.requiredBehavior, requiredBehavior)) &&
+            (identical(other.requiredBehaviorElement, requiredBehaviorElement) || const DeepCollectionEquality().equals(other.requiredBehaviorElement, requiredBehaviorElement)) &&
+            (identical(other.precheckBehavior, precheckBehavior) || const DeepCollectionEquality().equals(other.precheckBehavior, precheckBehavior)) &&
+            (identical(other.precheckBehaviorElement, precheckBehaviorElement) || const DeepCollectionEquality().equals(other.precheckBehaviorElement, precheckBehaviorElement)) &&
+            (identical(other.cardinalityBehavior, cardinalityBehavior) || const DeepCollectionEquality().equals(other.cardinalityBehavior, cardinalityBehavior)) &&
+            (identical(other.cardinalityBehaviorElement, cardinalityBehaviorElement) || const DeepCollectionEquality().equals(other.cardinalityBehaviorElement, cardinalityBehaviorElement)) &&
+            (identical(other.definition, definition) || const DeepCollectionEquality().equals(other.definition, definition)) &&
             (identical(other.transform, transform) || const DeepCollectionEquality().equals(other.transform, transform)) &&
             (identical(other.dynamicValue, dynamicValue) || const DeepCollectionEquality().equals(other.dynamicValue, dynamicValue)) &&
-            (identical(other.action, action) || const DeepCollectionEquality().equals(other.action, action)) &&
-            (identical(other.labelElement, labelElement) || const DeepCollectionEquality().equals(other.labelElement, labelElement)) &&
-            (identical(other.titleElement, titleElement) || const DeepCollectionEquality().equals(other.titleElement, titleElement)) &&
-            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
-            (identical(other.textEquivalentElement, textEquivalentElement) || const DeepCollectionEquality().equals(other.textEquivalentElement, textEquivalentElement)) &&
-            (identical(other.goalIdElement, goalIdElement) || const DeepCollectionEquality().equals(other.goalIdElement, goalIdElement)) &&
-            (identical(other.timingDateTimeElement, timingDateTimeElement) || const DeepCollectionEquality().equals(other.timingDateTimeElement, timingDateTimeElement)) &&
-            (identical(other.groupingBehaviorElement, groupingBehaviorElement) || const DeepCollectionEquality().equals(other.groupingBehaviorElement, groupingBehaviorElement)) &&
-            (identical(other.selectionBehaviorElement, selectionBehaviorElement) || const DeepCollectionEquality().equals(other.selectionBehaviorElement, selectionBehaviorElement)) &&
-            (identical(other.requiredBehaviorElement, requiredBehaviorElement) || const DeepCollectionEquality().equals(other.requiredBehaviorElement, requiredBehaviorElement)) &&
-            (identical(other.precheckBehaviorElement, precheckBehaviorElement) || const DeepCollectionEquality().equals(other.precheckBehaviorElement, precheckBehaviorElement)) &&
-            (identical(other.cardinalityBehaviorElement, cardinalityBehaviorElement) || const DeepCollectionEquality().equals(other.cardinalityBehaviorElement, cardinalityBehaviorElement)));
+            (identical(other.action, action) || const DeepCollectionEquality().equals(other.action, action)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(label) ^
+      const DeepCollectionEquality().hash(labelElement) ^
       const DeepCollectionEquality().hash(title) ^
+      const DeepCollectionEquality().hash(titleElement) ^
       const DeepCollectionEquality().hash(description) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(textEquivalent) ^
+      const DeepCollectionEquality().hash(textEquivalentElement) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(reason) ^
       const DeepCollectionEquality().hash(documentation) ^
       const DeepCollectionEquality().hash(goalId) ^
+      const DeepCollectionEquality().hash(goalIdElement) ^
       const DeepCollectionEquality().hash(triggerDefinition) ^
       const DeepCollectionEquality().hash(condition) ^
       const DeepCollectionEquality().hash(input) ^
       const DeepCollectionEquality().hash(output) ^
       const DeepCollectionEquality().hash(relatedAction) ^
       const DeepCollectionEquality().hash(timingDateTime) ^
+      const DeepCollectionEquality().hash(timingDateTimeElement) ^
       const DeepCollectionEquality().hash(timingPeriod) ^
       const DeepCollectionEquality().hash(timingDuration) ^
       const DeepCollectionEquality().hash(timingRange) ^
@@ -5710,25 +5657,19 @@ class _$_PlanDefinitionAction implements _PlanDefinitionAction {
       const DeepCollectionEquality().hash(participant) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(groupingBehavior) ^
+      const DeepCollectionEquality().hash(groupingBehaviorElement) ^
       const DeepCollectionEquality().hash(selectionBehavior) ^
+      const DeepCollectionEquality().hash(selectionBehaviorElement) ^
       const DeepCollectionEquality().hash(requiredBehavior) ^
+      const DeepCollectionEquality().hash(requiredBehaviorElement) ^
       const DeepCollectionEquality().hash(precheckBehavior) ^
+      const DeepCollectionEquality().hash(precheckBehaviorElement) ^
       const DeepCollectionEquality().hash(cardinalityBehavior) ^
+      const DeepCollectionEquality().hash(cardinalityBehaviorElement) ^
       const DeepCollectionEquality().hash(definition) ^
       const DeepCollectionEquality().hash(transform) ^
       const DeepCollectionEquality().hash(dynamicValue) ^
-      const DeepCollectionEquality().hash(action) ^
-      const DeepCollectionEquality().hash(labelElement) ^
-      const DeepCollectionEquality().hash(titleElement) ^
-      const DeepCollectionEquality().hash(descriptionElement) ^
-      const DeepCollectionEquality().hash(textEquivalentElement) ^
-      const DeepCollectionEquality().hash(goalIdElement) ^
-      const DeepCollectionEquality().hash(timingDateTimeElement) ^
-      const DeepCollectionEquality().hash(groupingBehaviorElement) ^
-      const DeepCollectionEquality().hash(selectionBehaviorElement) ^
-      const DeepCollectionEquality().hash(requiredBehaviorElement) ^
-      const DeepCollectionEquality().hash(precheckBehaviorElement) ^
-      const DeepCollectionEquality().hash(cardinalityBehaviorElement);
+      const DeepCollectionEquality().hash(action);
 
   @override
   _$PlanDefinitionActionCopyWith<_PlanDefinitionAction> get copyWith =>
@@ -5741,64 +5682,49 @@ class _$_PlanDefinitionAction implements _PlanDefinitionAction {
   }
 }
 
-abstract class _PlanDefinitionAction implements PlanDefinitionAction {
+abstract class _PlanDefinitionAction extends PlanDefinitionAction {
+  _PlanDefinitionAction._() : super._();
   factory _PlanDefinitionAction(
       {String label,
+      @JsonKey(name: '_label') Element labelElement,
       String title,
+      @JsonKey(name: '_title') Element titleElement,
       String description,
+      @JsonKey(name: '_description') Element descriptionElement,
       String textEquivalent,
+      @JsonKey(name: '_textEquivalent') Element textEquivalentElement,
       List<CodeableConcept> code,
       List<CodeableConcept> reason,
       List<RelatedArtifact> documentation,
       List<Id> goalId,
+      @JsonKey(name: '_goalId') List<Element> goalIdElement,
       List<TriggerDefinition> triggerDefinition,
       List<PlanDefinitionCondition> condition,
       List<DataRequirement> input,
       List<DataRequirement> output,
       List<PlanDefinitionRelatedAction> relatedAction,
       FhirDateTime timingDateTime,
+      @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
       Period timingPeriod,
       Duration timingDuration,
       Range timingRange,
       Timing timingTiming,
       List<PlanDefinitionParticipant> participant,
       Coding type,
-      @JsonKey(unknownEnumValue: ActionGroupingBehavior.unknown)
-          ActionGroupingBehavior groupingBehavior,
-      @JsonKey(unknownEnumValue: ActionSelectionBehavior.unknown)
-          ActionSelectionBehavior selectionBehavior,
-      @JsonKey(unknownEnumValue: ActionRequiredBehavior.unknown)
-          ActionRequiredBehavior requiredBehavior,
-      @JsonKey(unknownEnumValue: ActionPrecheckBehavior.unknown)
-          ActionPrecheckBehavior precheckBehavior,
-      @JsonKey(unknownEnumValue: ActionCardinalityBehavior.unknown)
-          ActionCardinalityBehavior cardinalityBehavior,
+      PlanDefinitionActionGroupingBehavior groupingBehavior,
+      @JsonKey(name: '_groupingBehavior') Element groupingBehaviorElement,
+      PlanDefinitionActionSelectionBehavior selectionBehavior,
+      @JsonKey(name: '_selectionBehavior') Element selectionBehaviorElement,
+      PlanDefinitionActionRequiredBehavior requiredBehavior,
+      @JsonKey(name: '_requiredBehavior') Element requiredBehaviorElement,
+      PlanDefinitionActionPrecheckBehavior precheckBehavior,
+      @JsonKey(name: '_precheckBehavior') Element precheckBehaviorElement,
+      PlanDefinitionActionCardinalityBehavior cardinalityBehavior,
+      @JsonKey(name: '_cardinalityBehavior') Element cardinalityBehaviorElement,
       Reference definition,
       Reference transform,
       List<PlanDefinitionDynamicValue> dynamicValue,
-      List<PlanDefinitionAction> action,
-      @JsonKey(name: '_label')
-          Element labelElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @JsonKey(name: '_textEquivalent')
-          Element textEquivalentElement,
-      @JsonKey(name: '_goalId')
-          Element goalIdElement,
-      @JsonKey(name: '_timingDateTime')
-          Element timingDateTimeElement,
-      @JsonKey(name: '_groupingBehavior')
-          Element groupingBehaviorElement,
-      @JsonKey(name: '_selectionBehavior')
-          Element selectionBehaviorElement,
-      @JsonKey(name: '_requiredBehavior')
-          Element requiredBehaviorElement,
-      @JsonKey(name: '_precheckBehavior')
-          Element precheckBehaviorElement,
-      @JsonKey(name: '_cardinalityBehavior')
-          Element cardinalityBehaviorElement}) = _$_PlanDefinitionAction;
+      List<PlanDefinitionAction> action}) = _$_PlanDefinitionAction;
 
   factory _PlanDefinitionAction.fromJson(Map<String, dynamic> json) =
       _$_PlanDefinitionAction.fromJson;
@@ -5806,11 +5732,23 @@ abstract class _PlanDefinitionAction implements PlanDefinitionAction {
   @override
   String get label;
   @override
+  @JsonKey(name: '_label')
+  Element get labelElement;
+  @override
   String get title;
+  @override
+  @JsonKey(name: '_title')
+  Element get titleElement;
   @override
   String get description;
   @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @override
   String get textEquivalent;
+  @override
+  @JsonKey(name: '_textEquivalent')
+  Element get textEquivalentElement;
   @override
   List<CodeableConcept> get code;
   @override
@@ -5819,6 +5757,9 @@ abstract class _PlanDefinitionAction implements PlanDefinitionAction {
   List<RelatedArtifact> get documentation;
   @override
   List<Id> get goalId;
+  @override
+  @JsonKey(name: '_goalId')
+  List<Element> get goalIdElement;
   @override
   List<TriggerDefinition> get triggerDefinition;
   @override
@@ -5832,6 +5773,9 @@ abstract class _PlanDefinitionAction implements PlanDefinitionAction {
   @override
   FhirDateTime get timingDateTime;
   @override
+  @JsonKey(name: '_timingDateTime')
+  Element get timingDateTimeElement;
+  @override
   Period get timingPeriod;
   @override
   Duration get timingDuration;
@@ -5844,20 +5788,30 @@ abstract class _PlanDefinitionAction implements PlanDefinitionAction {
   @override
   Coding get type;
   @override
-  @JsonKey(unknownEnumValue: ActionGroupingBehavior.unknown)
-  ActionGroupingBehavior get groupingBehavior;
+  PlanDefinitionActionGroupingBehavior get groupingBehavior;
   @override
-  @JsonKey(unknownEnumValue: ActionSelectionBehavior.unknown)
-  ActionSelectionBehavior get selectionBehavior;
+  @JsonKey(name: '_groupingBehavior')
+  Element get groupingBehaviorElement;
   @override
-  @JsonKey(unknownEnumValue: ActionRequiredBehavior.unknown)
-  ActionRequiredBehavior get requiredBehavior;
+  PlanDefinitionActionSelectionBehavior get selectionBehavior;
   @override
-  @JsonKey(unknownEnumValue: ActionPrecheckBehavior.unknown)
-  ActionPrecheckBehavior get precheckBehavior;
+  @JsonKey(name: '_selectionBehavior')
+  Element get selectionBehaviorElement;
   @override
-  @JsonKey(unknownEnumValue: ActionCardinalityBehavior.unknown)
-  ActionCardinalityBehavior get cardinalityBehavior;
+  PlanDefinitionActionRequiredBehavior get requiredBehavior;
+  @override
+  @JsonKey(name: '_requiredBehavior')
+  Element get requiredBehaviorElement;
+  @override
+  PlanDefinitionActionPrecheckBehavior get precheckBehavior;
+  @override
+  @JsonKey(name: '_precheckBehavior')
+  Element get precheckBehaviorElement;
+  @override
+  PlanDefinitionActionCardinalityBehavior get cardinalityBehavior;
+  @override
+  @JsonKey(name: '_cardinalityBehavior')
+  Element get cardinalityBehaviorElement;
   @override
   Reference get definition;
   @override
@@ -5866,39 +5820,6 @@ abstract class _PlanDefinitionAction implements PlanDefinitionAction {
   List<PlanDefinitionDynamicValue> get dynamicValue;
   @override
   List<PlanDefinitionAction> get action;
-  @override
-  @JsonKey(name: '_label')
-  Element get labelElement;
-  @override
-  @JsonKey(name: '_title')
-  Element get titleElement;
-  @override
-  @JsonKey(name: '_description')
-  Element get descriptionElement;
-  @override
-  @JsonKey(name: '_textEquivalent')
-  Element get textEquivalentElement;
-  @override
-  @JsonKey(name: '_goalId')
-  Element get goalIdElement;
-  @override
-  @JsonKey(name: '_timingDateTime')
-  Element get timingDateTimeElement;
-  @override
-  @JsonKey(name: '_groupingBehavior')
-  Element get groupingBehaviorElement;
-  @override
-  @JsonKey(name: '_selectionBehavior')
-  Element get selectionBehaviorElement;
-  @override
-  @JsonKey(name: '_requiredBehavior')
-  Element get requiredBehaviorElement;
-  @override
-  @JsonKey(name: '_precheckBehavior')
-  Element get precheckBehaviorElement;
-  @override
-  @JsonKey(name: '_cardinalityBehavior')
-  Element get cardinalityBehaviorElement;
   @override
   _$PlanDefinitionActionCopyWith<_PlanDefinitionAction> get copyWith;
 }
@@ -5911,23 +5832,24 @@ PlanDefinitionCondition _$PlanDefinitionConditionFromJson(
 class _$PlanDefinitionConditionTearOff {
   const _$PlanDefinitionConditionTearOff();
 
+// ignore: unused_element
   _PlanDefinitionCondition call(
-      {@JsonKey(unknownEnumValue: ConditionKind.unknown) ConditionKind kind,
-      String description,
-      String language,
-      String expression,
+      {PlanDefinitionConditionKind kind,
       @JsonKey(name: '_kind') Element kindElement,
+      String description,
       @JsonKey(name: '_description') Element descriptionElement,
+      String language,
       @JsonKey(name: '_language') Element languageElement,
+      String expression,
       @JsonKey(name: '_expression') Element expressionElement}) {
     return _PlanDefinitionCondition(
       kind: kind,
-      description: description,
-      language: language,
-      expression: expression,
       kindElement: kindElement,
+      description: description,
       descriptionElement: descriptionElement,
+      language: language,
       languageElement: languageElement,
+      expression: expression,
       expressionElement: expressionElement,
     );
   }
@@ -5937,17 +5859,16 @@ class _$PlanDefinitionConditionTearOff {
 const $PlanDefinitionCondition = _$PlanDefinitionConditionTearOff();
 
 mixin _$PlanDefinitionCondition {
-  @JsonKey(unknownEnumValue: ConditionKind.unknown)
-  ConditionKind get kind;
-  String get description;
-  String get language;
-  String get expression;
+  PlanDefinitionConditionKind get kind;
   @JsonKey(name: '_kind')
   Element get kindElement;
+  String get description;
   @JsonKey(name: '_description')
   Element get descriptionElement;
+  String get language;
   @JsonKey(name: '_language')
   Element get languageElement;
+  String get expression;
   @JsonKey(name: '_expression')
   Element get expressionElement;
 
@@ -5960,13 +5881,13 @@ abstract class $PlanDefinitionConditionCopyWith<$Res> {
           $Res Function(PlanDefinitionCondition) then) =
       _$PlanDefinitionConditionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: ConditionKind.unknown) ConditionKind kind,
-      String description,
-      String language,
-      String expression,
+      {PlanDefinitionConditionKind kind,
       @JsonKey(name: '_kind') Element kindElement,
+      String description,
       @JsonKey(name: '_description') Element descriptionElement,
+      String language,
       @JsonKey(name: '_language') Element languageElement,
+      String expression,
       @JsonKey(name: '_expression') Element expressionElement});
 
   $ElementCopyWith<$Res> get kindElement;
@@ -5986,29 +5907,29 @@ class _$PlanDefinitionConditionCopyWithImpl<$Res>
   @override
   $Res call({
     Object kind = freezed,
-    Object description = freezed,
-    Object language = freezed,
-    Object expression = freezed,
     Object kindElement = freezed,
+    Object description = freezed,
     Object descriptionElement = freezed,
+    Object language = freezed,
     Object languageElement = freezed,
+    Object expression = freezed,
     Object expressionElement = freezed,
   }) {
     return _then(_value.copyWith(
-      kind: kind == freezed ? _value.kind : kind as ConditionKind,
-      description:
-          description == freezed ? _value.description : description as String,
-      language: language == freezed ? _value.language : language as String,
-      expression:
-          expression == freezed ? _value.expression : expression as String,
+      kind: kind == freezed ? _value.kind : kind as PlanDefinitionConditionKind,
       kindElement:
           kindElement == freezed ? _value.kindElement : kindElement as Element,
+      description:
+          description == freezed ? _value.description : description as String,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
+      language: language == freezed ? _value.language : language as String,
       languageElement: languageElement == freezed
           ? _value.languageElement
           : languageElement as Element,
+      expression:
+          expression == freezed ? _value.expression : expression as String,
       expressionElement: expressionElement == freezed
           ? _value.expressionElement
           : expressionElement as Element,
@@ -6063,13 +5984,13 @@ abstract class _$PlanDefinitionConditionCopyWith<$Res>
       __$PlanDefinitionConditionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: ConditionKind.unknown) ConditionKind kind,
-      String description,
-      String language,
-      String expression,
+      {PlanDefinitionConditionKind kind,
       @JsonKey(name: '_kind') Element kindElement,
+      String description,
       @JsonKey(name: '_description') Element descriptionElement,
+      String language,
       @JsonKey(name: '_language') Element languageElement,
+      String expression,
       @JsonKey(name: '_expression') Element expressionElement});
 
   @override
@@ -6096,29 +6017,29 @@ class __$PlanDefinitionConditionCopyWithImpl<$Res>
   @override
   $Res call({
     Object kind = freezed,
-    Object description = freezed,
-    Object language = freezed,
-    Object expression = freezed,
     Object kindElement = freezed,
+    Object description = freezed,
     Object descriptionElement = freezed,
+    Object language = freezed,
     Object languageElement = freezed,
+    Object expression = freezed,
     Object expressionElement = freezed,
   }) {
     return _then(_PlanDefinitionCondition(
-      kind: kind == freezed ? _value.kind : kind as ConditionKind,
-      description:
-          description == freezed ? _value.description : description as String,
-      language: language == freezed ? _value.language : language as String,
-      expression:
-          expression == freezed ? _value.expression : expression as String,
+      kind: kind == freezed ? _value.kind : kind as PlanDefinitionConditionKind,
       kindElement:
           kindElement == freezed ? _value.kindElement : kindElement as Element,
+      description:
+          description == freezed ? _value.description : description as String,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
+      language: language == freezed ? _value.language : language as String,
       languageElement: languageElement == freezed
           ? _value.languageElement
           : languageElement as Element,
+      expression:
+          expression == freezed ? _value.expression : expression as String,
       expressionElement: expressionElement == freezed
           ? _value.expressionElement
           : expressionElement as Element,
@@ -6127,45 +6048,45 @@ class __$PlanDefinitionConditionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_PlanDefinitionCondition implements _PlanDefinitionCondition {
+class _$_PlanDefinitionCondition extends _PlanDefinitionCondition {
   _$_PlanDefinitionCondition(
-      {@JsonKey(unknownEnumValue: ConditionKind.unknown) this.kind,
-      this.description,
-      this.language,
-      this.expression,
+      {this.kind,
       @JsonKey(name: '_kind') this.kindElement,
+      this.description,
       @JsonKey(name: '_description') this.descriptionElement,
+      this.language,
       @JsonKey(name: '_language') this.languageElement,
-      @JsonKey(name: '_expression') this.expressionElement});
+      this.expression,
+      @JsonKey(name: '_expression') this.expressionElement})
+      : super._();
 
   factory _$_PlanDefinitionCondition.fromJson(Map<String, dynamic> json) =>
       _$_$_PlanDefinitionConditionFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: ConditionKind.unknown)
-  final ConditionKind kind;
-  @override
-  final String description;
-  @override
-  final String language;
-  @override
-  final String expression;
+  final PlanDefinitionConditionKind kind;
   @override
   @JsonKey(name: '_kind')
   final Element kindElement;
   @override
+  final String description;
+  @override
   @JsonKey(name: '_description')
   final Element descriptionElement;
   @override
+  final String language;
+  @override
   @JsonKey(name: '_language')
   final Element languageElement;
+  @override
+  final String expression;
   @override
   @JsonKey(name: '_expression')
   final Element expressionElement;
 
   @override
   String toString() {
-    return 'PlanDefinitionCondition(kind: $kind, description: $description, language: $language, expression: $expression, kindElement: $kindElement, descriptionElement: $descriptionElement, languageElement: $languageElement, expressionElement: $expressionElement)';
+    return 'PlanDefinitionCondition(kind: $kind, kindElement: $kindElement, description: $description, descriptionElement: $descriptionElement, language: $language, languageElement: $languageElement, expression: $expression, expressionElement: $expressionElement)';
   }
 
   @override
@@ -6174,24 +6095,24 @@ class _$_PlanDefinitionCondition implements _PlanDefinitionCondition {
         (other is _PlanDefinitionCondition &&
             (identical(other.kind, kind) ||
                 const DeepCollectionEquality().equals(other.kind, kind)) &&
-            (identical(other.description, description) ||
-                const DeepCollectionEquality()
-                    .equals(other.description, description)) &&
-            (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
-            (identical(other.expression, expression) ||
-                const DeepCollectionEquality()
-                    .equals(other.expression, expression)) &&
             (identical(other.kindElement, kindElement) ||
                 const DeepCollectionEquality()
                     .equals(other.kindElement, kindElement)) &&
+            (identical(other.description, description) ||
+                const DeepCollectionEquality()
+                    .equals(other.description, description)) &&
             (identical(other.descriptionElement, descriptionElement) ||
                 const DeepCollectionEquality()
                     .equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
             (identical(other.languageElement, languageElement) ||
                 const DeepCollectionEquality()
                     .equals(other.languageElement, languageElement)) &&
+            (identical(other.expression, expression) ||
+                const DeepCollectionEquality()
+                    .equals(other.expression, expression)) &&
             (identical(other.expressionElement, expressionElement) ||
                 const DeepCollectionEquality()
                     .equals(other.expressionElement, expressionElement)));
@@ -6201,12 +6122,12 @@ class _$_PlanDefinitionCondition implements _PlanDefinitionCondition {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(kind) ^
-      const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(expression) ^
       const DeepCollectionEquality().hash(kindElement) ^
+      const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(expression) ^
       const DeepCollectionEquality().hash(expressionElement);
 
   @override
@@ -6220,15 +6141,16 @@ class _$_PlanDefinitionCondition implements _PlanDefinitionCondition {
   }
 }
 
-abstract class _PlanDefinitionCondition implements PlanDefinitionCondition {
+abstract class _PlanDefinitionCondition extends PlanDefinitionCondition {
+  _PlanDefinitionCondition._() : super._();
   factory _PlanDefinitionCondition(
-          {@JsonKey(unknownEnumValue: ConditionKind.unknown) ConditionKind kind,
-          String description,
-          String language,
-          String expression,
+          {PlanDefinitionConditionKind kind,
           @JsonKey(name: '_kind') Element kindElement,
+          String description,
           @JsonKey(name: '_description') Element descriptionElement,
+          String language,
           @JsonKey(name: '_language') Element languageElement,
+          String expression,
           @JsonKey(name: '_expression') Element expressionElement}) =
       _$_PlanDefinitionCondition;
 
@@ -6236,23 +6158,22 @@ abstract class _PlanDefinitionCondition implements PlanDefinitionCondition {
       _$_PlanDefinitionCondition.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: ConditionKind.unknown)
-  ConditionKind get kind;
-  @override
-  String get description;
-  @override
-  String get language;
-  @override
-  String get expression;
+  PlanDefinitionConditionKind get kind;
   @override
   @JsonKey(name: '_kind')
   Element get kindElement;
   @override
+  String get description;
+  @override
   @JsonKey(name: '_description')
   Element get descriptionElement;
   @override
+  String get language;
+  @override
   @JsonKey(name: '_language')
   Element get languageElement;
+  @override
+  String get expression;
   @override
   @JsonKey(name: '_expression')
   Element get expressionElement;
@@ -6268,23 +6189,21 @@ PlanDefinitionRelatedAction _$PlanDefinitionRelatedActionFromJson(
 class _$PlanDefinitionRelatedActionTearOff {
   const _$PlanDefinitionRelatedActionTearOff();
 
+// ignore: unused_element
   _PlanDefinitionRelatedAction call(
       {Id actionId,
-      @JsonKey(unknownEnumValue: RelatedActionRelationship.unknown)
-          RelatedActionRelationship relationship,
+      @JsonKey(name: '_actionId') Element actionIdElement,
+      PlanDefinitionRelatedActionRelationship relationship,
+      @JsonKey(name: '_relationship') Element relationshipElement,
       Duration offsetDuration,
-      Range offsetRange,
-      @JsonKey(name: '_actionId')
-          Element actionIdElement,
-      @JsonKey(name: '_relationship')
-          Element relationshipElement}) {
+      Range offsetRange}) {
     return _PlanDefinitionRelatedAction(
       actionId: actionId,
+      actionIdElement: actionIdElement,
       relationship: relationship,
+      relationshipElement: relationshipElement,
       offsetDuration: offsetDuration,
       offsetRange: offsetRange,
-      actionIdElement: actionIdElement,
-      relationshipElement: relationshipElement,
     );
   }
 }
@@ -6294,14 +6213,13 @@ const $PlanDefinitionRelatedAction = _$PlanDefinitionRelatedActionTearOff();
 
 mixin _$PlanDefinitionRelatedAction {
   Id get actionId;
-  @JsonKey(unknownEnumValue: RelatedActionRelationship.unknown)
-  RelatedActionRelationship get relationship;
-  Duration get offsetDuration;
-  Range get offsetRange;
   @JsonKey(name: '_actionId')
   Element get actionIdElement;
+  PlanDefinitionRelatedActionRelationship get relationship;
   @JsonKey(name: '_relationship')
   Element get relationshipElement;
+  Duration get offsetDuration;
+  Range get offsetRange;
 
   Map<String, dynamic> toJson();
   $PlanDefinitionRelatedActionCopyWith<PlanDefinitionRelatedAction>
@@ -6315,19 +6233,16 @@ abstract class $PlanDefinitionRelatedActionCopyWith<$Res> {
       _$PlanDefinitionRelatedActionCopyWithImpl<$Res>;
   $Res call(
       {Id actionId,
-      @JsonKey(unknownEnumValue: RelatedActionRelationship.unknown)
-          RelatedActionRelationship relationship,
+      @JsonKey(name: '_actionId') Element actionIdElement,
+      PlanDefinitionRelatedActionRelationship relationship,
+      @JsonKey(name: '_relationship') Element relationshipElement,
       Duration offsetDuration,
-      Range offsetRange,
-      @JsonKey(name: '_actionId')
-          Element actionIdElement,
-      @JsonKey(name: '_relationship')
-          Element relationshipElement});
+      Range offsetRange});
 
-  $DurationCopyWith<$Res> get offsetDuration;
-  $RangeCopyWith<$Res> get offsetRange;
   $ElementCopyWith<$Res> get actionIdElement;
   $ElementCopyWith<$Res> get relationshipElement;
+  $DurationCopyWith<$Res> get offsetDuration;
+  $RangeCopyWith<$Res> get offsetRange;
 }
 
 class _$PlanDefinitionRelatedActionCopyWithImpl<$Res>
@@ -6341,49 +6256,29 @@ class _$PlanDefinitionRelatedActionCopyWithImpl<$Res>
   @override
   $Res call({
     Object actionId = freezed,
+    Object actionIdElement = freezed,
     Object relationship = freezed,
+    Object relationshipElement = freezed,
     Object offsetDuration = freezed,
     Object offsetRange = freezed,
-    Object actionIdElement = freezed,
-    Object relationshipElement = freezed,
   }) {
     return _then(_value.copyWith(
       actionId: actionId == freezed ? _value.actionId : actionId as Id,
+      actionIdElement: actionIdElement == freezed
+          ? _value.actionIdElement
+          : actionIdElement as Element,
       relationship: relationship == freezed
           ? _value.relationship
-          : relationship as RelatedActionRelationship,
+          : relationship as PlanDefinitionRelatedActionRelationship,
+      relationshipElement: relationshipElement == freezed
+          ? _value.relationshipElement
+          : relationshipElement as Element,
       offsetDuration: offsetDuration == freezed
           ? _value.offsetDuration
           : offsetDuration as Duration,
       offsetRange:
           offsetRange == freezed ? _value.offsetRange : offsetRange as Range,
-      actionIdElement: actionIdElement == freezed
-          ? _value.actionIdElement
-          : actionIdElement as Element,
-      relationshipElement: relationshipElement == freezed
-          ? _value.relationshipElement
-          : relationshipElement as Element,
     ));
-  }
-
-  @override
-  $DurationCopyWith<$Res> get offsetDuration {
-    if (_value.offsetDuration == null) {
-      return null;
-    }
-    return $DurationCopyWith<$Res>(_value.offsetDuration, (value) {
-      return _then(_value.copyWith(offsetDuration: value));
-    });
-  }
-
-  @override
-  $RangeCopyWith<$Res> get offsetRange {
-    if (_value.offsetRange == null) {
-      return null;
-    }
-    return $RangeCopyWith<$Res>(_value.offsetRange, (value) {
-      return _then(_value.copyWith(offsetRange: value));
-    });
   }
 
   @override
@@ -6405,6 +6300,26 @@ class _$PlanDefinitionRelatedActionCopyWithImpl<$Res>
       return _then(_value.copyWith(relationshipElement: value));
     });
   }
+
+  @override
+  $DurationCopyWith<$Res> get offsetDuration {
+    if (_value.offsetDuration == null) {
+      return null;
+    }
+    return $DurationCopyWith<$Res>(_value.offsetDuration, (value) {
+      return _then(_value.copyWith(offsetDuration: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res> get offsetRange {
+    if (_value.offsetRange == null) {
+      return null;
+    }
+    return $RangeCopyWith<$Res>(_value.offsetRange, (value) {
+      return _then(_value.copyWith(offsetRange: value));
+    });
+  }
 }
 
 abstract class _$PlanDefinitionRelatedActionCopyWith<$Res>
@@ -6416,23 +6331,20 @@ abstract class _$PlanDefinitionRelatedActionCopyWith<$Res>
   @override
   $Res call(
       {Id actionId,
-      @JsonKey(unknownEnumValue: RelatedActionRelationship.unknown)
-          RelatedActionRelationship relationship,
+      @JsonKey(name: '_actionId') Element actionIdElement,
+      PlanDefinitionRelatedActionRelationship relationship,
+      @JsonKey(name: '_relationship') Element relationshipElement,
       Duration offsetDuration,
-      Range offsetRange,
-      @JsonKey(name: '_actionId')
-          Element actionIdElement,
-      @JsonKey(name: '_relationship')
-          Element relationshipElement});
+      Range offsetRange});
 
-  @override
-  $DurationCopyWith<$Res> get offsetDuration;
-  @override
-  $RangeCopyWith<$Res> get offsetRange;
   @override
   $ElementCopyWith<$Res> get actionIdElement;
   @override
   $ElementCopyWith<$Res> get relationshipElement;
+  @override
+  $DurationCopyWith<$Res> get offsetDuration;
+  @override
+  $RangeCopyWith<$Res> get offsetRange;
 }
 
 class __$PlanDefinitionRelatedActionCopyWithImpl<$Res>
@@ -6450,44 +6362,42 @@ class __$PlanDefinitionRelatedActionCopyWithImpl<$Res>
   @override
   $Res call({
     Object actionId = freezed,
+    Object actionIdElement = freezed,
     Object relationship = freezed,
+    Object relationshipElement = freezed,
     Object offsetDuration = freezed,
     Object offsetRange = freezed,
-    Object actionIdElement = freezed,
-    Object relationshipElement = freezed,
   }) {
     return _then(_PlanDefinitionRelatedAction(
       actionId: actionId == freezed ? _value.actionId : actionId as Id,
+      actionIdElement: actionIdElement == freezed
+          ? _value.actionIdElement
+          : actionIdElement as Element,
       relationship: relationship == freezed
           ? _value.relationship
-          : relationship as RelatedActionRelationship,
+          : relationship as PlanDefinitionRelatedActionRelationship,
+      relationshipElement: relationshipElement == freezed
+          ? _value.relationshipElement
+          : relationshipElement as Element,
       offsetDuration: offsetDuration == freezed
           ? _value.offsetDuration
           : offsetDuration as Duration,
       offsetRange:
           offsetRange == freezed ? _value.offsetRange : offsetRange as Range,
-      actionIdElement: actionIdElement == freezed
-          ? _value.actionIdElement
-          : actionIdElement as Element,
-      relationshipElement: relationshipElement == freezed
-          ? _value.relationshipElement
-          : relationshipElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_PlanDefinitionRelatedAction implements _PlanDefinitionRelatedAction {
+class _$_PlanDefinitionRelatedAction extends _PlanDefinitionRelatedAction {
   _$_PlanDefinitionRelatedAction(
       {this.actionId,
-      @JsonKey(unknownEnumValue: RelatedActionRelationship.unknown)
-          this.relationship,
+      @JsonKey(name: '_actionId') this.actionIdElement,
+      this.relationship,
+      @JsonKey(name: '_relationship') this.relationshipElement,
       this.offsetDuration,
-      this.offsetRange,
-      @JsonKey(name: '_actionId')
-          this.actionIdElement,
-      @JsonKey(name: '_relationship')
-          this.relationshipElement});
+      this.offsetRange})
+      : super._();
 
   factory _$_PlanDefinitionRelatedAction.fromJson(Map<String, dynamic> json) =>
       _$_$_PlanDefinitionRelatedActionFromJson(json);
@@ -6495,22 +6405,21 @@ class _$_PlanDefinitionRelatedAction implements _PlanDefinitionRelatedAction {
   @override
   final Id actionId;
   @override
-  @JsonKey(unknownEnumValue: RelatedActionRelationship.unknown)
-  final RelatedActionRelationship relationship;
+  @JsonKey(name: '_actionId')
+  final Element actionIdElement;
+  @override
+  final PlanDefinitionRelatedActionRelationship relationship;
+  @override
+  @JsonKey(name: '_relationship')
+  final Element relationshipElement;
   @override
   final Duration offsetDuration;
   @override
   final Range offsetRange;
-  @override
-  @JsonKey(name: '_actionId')
-  final Element actionIdElement;
-  @override
-  @JsonKey(name: '_relationship')
-  final Element relationshipElement;
 
   @override
   String toString() {
-    return 'PlanDefinitionRelatedAction(actionId: $actionId, relationship: $relationship, offsetDuration: $offsetDuration, offsetRange: $offsetRange, actionIdElement: $actionIdElement, relationshipElement: $relationshipElement)';
+    return 'PlanDefinitionRelatedAction(actionId: $actionId, actionIdElement: $actionIdElement, relationship: $relationship, relationshipElement: $relationshipElement, offsetDuration: $offsetDuration, offsetRange: $offsetRange)';
   }
 
   @override
@@ -6520,32 +6429,32 @@ class _$_PlanDefinitionRelatedAction implements _PlanDefinitionRelatedAction {
             (identical(other.actionId, actionId) ||
                 const DeepCollectionEquality()
                     .equals(other.actionId, actionId)) &&
+            (identical(other.actionIdElement, actionIdElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.actionIdElement, actionIdElement)) &&
             (identical(other.relationship, relationship) ||
                 const DeepCollectionEquality()
                     .equals(other.relationship, relationship)) &&
+            (identical(other.relationshipElement, relationshipElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.relationshipElement, relationshipElement)) &&
             (identical(other.offsetDuration, offsetDuration) ||
                 const DeepCollectionEquality()
                     .equals(other.offsetDuration, offsetDuration)) &&
             (identical(other.offsetRange, offsetRange) ||
                 const DeepCollectionEquality()
-                    .equals(other.offsetRange, offsetRange)) &&
-            (identical(other.actionIdElement, actionIdElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.actionIdElement, actionIdElement)) &&
-            (identical(other.relationshipElement, relationshipElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.relationshipElement, relationshipElement)));
+                    .equals(other.offsetRange, offsetRange)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(actionId) ^
-      const DeepCollectionEquality().hash(relationship) ^
-      const DeepCollectionEquality().hash(offsetDuration) ^
-      const DeepCollectionEquality().hash(offsetRange) ^
       const DeepCollectionEquality().hash(actionIdElement) ^
-      const DeepCollectionEquality().hash(relationshipElement);
+      const DeepCollectionEquality().hash(relationship) ^
+      const DeepCollectionEquality().hash(relationshipElement) ^
+      const DeepCollectionEquality().hash(offsetDuration) ^
+      const DeepCollectionEquality().hash(offsetRange);
 
   @override
   _$PlanDefinitionRelatedActionCopyWith<_PlanDefinitionRelatedAction>
@@ -6559,17 +6468,15 @@ class _$_PlanDefinitionRelatedAction implements _PlanDefinitionRelatedAction {
 }
 
 abstract class _PlanDefinitionRelatedAction
-    implements PlanDefinitionRelatedAction {
+    extends PlanDefinitionRelatedAction {
+  _PlanDefinitionRelatedAction._() : super._();
   factory _PlanDefinitionRelatedAction(
       {Id actionId,
-      @JsonKey(unknownEnumValue: RelatedActionRelationship.unknown)
-          RelatedActionRelationship relationship,
+      @JsonKey(name: '_actionId') Element actionIdElement,
+      PlanDefinitionRelatedActionRelationship relationship,
+      @JsonKey(name: '_relationship') Element relationshipElement,
       Duration offsetDuration,
-      Range offsetRange,
-      @JsonKey(name: '_actionId')
-          Element actionIdElement,
-      @JsonKey(name: '_relationship')
-          Element relationshipElement}) = _$_PlanDefinitionRelatedAction;
+      Range offsetRange}) = _$_PlanDefinitionRelatedAction;
 
   factory _PlanDefinitionRelatedAction.fromJson(Map<String, dynamic> json) =
       _$_PlanDefinitionRelatedAction.fromJson;
@@ -6577,18 +6484,17 @@ abstract class _PlanDefinitionRelatedAction
   @override
   Id get actionId;
   @override
-  @JsonKey(unknownEnumValue: RelatedActionRelationship.unknown)
-  RelatedActionRelationship get relationship;
+  @JsonKey(name: '_actionId')
+  Element get actionIdElement;
+  @override
+  PlanDefinitionRelatedActionRelationship get relationship;
+  @override
+  @JsonKey(name: '_relationship')
+  Element get relationshipElement;
   @override
   Duration get offsetDuration;
   @override
   Range get offsetRange;
-  @override
-  @JsonKey(name: '_actionId')
-  Element get actionIdElement;
-  @override
-  @JsonKey(name: '_relationship')
-  Element get relationshipElement;
   @override
   _$PlanDefinitionRelatedActionCopyWith<_PlanDefinitionRelatedAction>
       get copyWith;
@@ -6602,16 +6508,15 @@ PlanDefinitionParticipant _$PlanDefinitionParticipantFromJson(
 class _$PlanDefinitionParticipantTearOff {
   const _$PlanDefinitionParticipantTearOff();
 
+// ignore: unused_element
   _PlanDefinitionParticipant call(
-      {@JsonKey(unknownEnumValue: PlanDefinitionParticipantType.unknown)
-          PlanDefinitionParticipantType type,
-      CodeableConcept role,
-      @JsonKey(name: '_type')
-          Element typeElement}) {
+      {PlanDefinitionParticipantType type,
+      @JsonKey(name: '_type') Element typeElement,
+      CodeableConcept role}) {
     return _PlanDefinitionParticipant(
       type: type,
-      role: role,
       typeElement: typeElement,
+      role: role,
     );
   }
 }
@@ -6620,11 +6525,10 @@ class _$PlanDefinitionParticipantTearOff {
 const $PlanDefinitionParticipant = _$PlanDefinitionParticipantTearOff();
 
 mixin _$PlanDefinitionParticipant {
-  @JsonKey(unknownEnumValue: PlanDefinitionParticipantType.unknown)
   PlanDefinitionParticipantType get type;
-  CodeableConcept get role;
   @JsonKey(name: '_type')
   Element get typeElement;
+  CodeableConcept get role;
 
   Map<String, dynamic> toJson();
   $PlanDefinitionParticipantCopyWith<PlanDefinitionParticipant> get copyWith;
@@ -6635,14 +6539,12 @@ abstract class $PlanDefinitionParticipantCopyWith<$Res> {
           $Res Function(PlanDefinitionParticipant) then) =
       _$PlanDefinitionParticipantCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: PlanDefinitionParticipantType.unknown)
-          PlanDefinitionParticipantType type,
-      CodeableConcept role,
-      @JsonKey(name: '_type')
-          Element typeElement});
+      {PlanDefinitionParticipantType type,
+      @JsonKey(name: '_type') Element typeElement,
+      CodeableConcept role});
 
-  $CodeableConceptCopyWith<$Res> get role;
   $ElementCopyWith<$Res> get typeElement;
+  $CodeableConceptCopyWith<$Res> get role;
 }
 
 class _$PlanDefinitionParticipantCopyWithImpl<$Res>
@@ -6656,26 +6558,16 @@ class _$PlanDefinitionParticipantCopyWithImpl<$Res>
   @override
   $Res call({
     Object type = freezed,
-    Object role = freezed,
     Object typeElement = freezed,
+    Object role = freezed,
   }) {
     return _then(_value.copyWith(
       type:
           type == freezed ? _value.type : type as PlanDefinitionParticipantType,
-      role: role == freezed ? _value.role : role as CodeableConcept,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element,
+      role: role == freezed ? _value.role : role as CodeableConcept,
     ));
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get role {
-    if (_value.role == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.role, (value) {
-      return _then(_value.copyWith(role: value));
-    });
   }
 
   @override
@@ -6687,6 +6579,16 @@ class _$PlanDefinitionParticipantCopyWithImpl<$Res>
       return _then(_value.copyWith(typeElement: value));
     });
   }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get role {
+    if (_value.role == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.role, (value) {
+      return _then(_value.copyWith(role: value));
+    });
+  }
 }
 
 abstract class _$PlanDefinitionParticipantCopyWith<$Res>
@@ -6696,16 +6598,14 @@ abstract class _$PlanDefinitionParticipantCopyWith<$Res>
       __$PlanDefinitionParticipantCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: PlanDefinitionParticipantType.unknown)
-          PlanDefinitionParticipantType type,
-      CodeableConcept role,
-      @JsonKey(name: '_type')
-          Element typeElement});
+      {PlanDefinitionParticipantType type,
+      @JsonKey(name: '_type') Element typeElement,
+      CodeableConcept role});
 
   @override
-  $CodeableConceptCopyWith<$Res> get role;
-  @override
   $ElementCopyWith<$Res> get typeElement;
+  @override
+  $CodeableConceptCopyWith<$Res> get role;
 }
 
 class __$PlanDefinitionParticipantCopyWithImpl<$Res>
@@ -6722,43 +6622,39 @@ class __$PlanDefinitionParticipantCopyWithImpl<$Res>
   @override
   $Res call({
     Object type = freezed,
-    Object role = freezed,
     Object typeElement = freezed,
+    Object role = freezed,
   }) {
     return _then(_PlanDefinitionParticipant(
       type:
           type == freezed ? _value.type : type as PlanDefinitionParticipantType,
-      role: role == freezed ? _value.role : role as CodeableConcept,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element,
+      role: role == freezed ? _value.role : role as CodeableConcept,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_PlanDefinitionParticipant implements _PlanDefinitionParticipant {
+class _$_PlanDefinitionParticipant extends _PlanDefinitionParticipant {
   _$_PlanDefinitionParticipant(
-      {@JsonKey(unknownEnumValue: PlanDefinitionParticipantType.unknown)
-          this.type,
-      this.role,
-      @JsonKey(name: '_type')
-          this.typeElement});
+      {this.type, @JsonKey(name: '_type') this.typeElement, this.role})
+      : super._();
 
   factory _$_PlanDefinitionParticipant.fromJson(Map<String, dynamic> json) =>
       _$_$_PlanDefinitionParticipantFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: PlanDefinitionParticipantType.unknown)
   final PlanDefinitionParticipantType type;
-  @override
-  final CodeableConcept role;
   @override
   @JsonKey(name: '_type')
   final Element typeElement;
+  @override
+  final CodeableConcept role;
 
   @override
   String toString() {
-    return 'PlanDefinitionParticipant(type: $type, role: $role, typeElement: $typeElement)';
+    return 'PlanDefinitionParticipant(type: $type, typeElement: $typeElement, role: $role)';
   }
 
   @override
@@ -6767,19 +6663,19 @@ class _$_PlanDefinitionParticipant implements _PlanDefinitionParticipant {
         (other is _PlanDefinitionParticipant &&
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.role, role) ||
-                const DeepCollectionEquality().equals(other.role, role)) &&
             (identical(other.typeElement, typeElement) ||
                 const DeepCollectionEquality()
-                    .equals(other.typeElement, typeElement)));
+                    .equals(other.typeElement, typeElement)) &&
+            (identical(other.role, role) ||
+                const DeepCollectionEquality().equals(other.role, role)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(role) ^
-      const DeepCollectionEquality().hash(typeElement);
+      const DeepCollectionEquality().hash(typeElement) ^
+      const DeepCollectionEquality().hash(role);
 
   @override
   _$PlanDefinitionParticipantCopyWith<_PlanDefinitionParticipant>
@@ -6793,25 +6689,23 @@ class _$_PlanDefinitionParticipant implements _PlanDefinitionParticipant {
   }
 }
 
-abstract class _PlanDefinitionParticipant implements PlanDefinitionParticipant {
+abstract class _PlanDefinitionParticipant extends PlanDefinitionParticipant {
+  _PlanDefinitionParticipant._() : super._();
   factory _PlanDefinitionParticipant(
-      {@JsonKey(unknownEnumValue: PlanDefinitionParticipantType.unknown)
-          PlanDefinitionParticipantType type,
-      CodeableConcept role,
-      @JsonKey(name: '_type')
-          Element typeElement}) = _$_PlanDefinitionParticipant;
+      {PlanDefinitionParticipantType type,
+      @JsonKey(name: '_type') Element typeElement,
+      CodeableConcept role}) = _$_PlanDefinitionParticipant;
 
   factory _PlanDefinitionParticipant.fromJson(Map<String, dynamic> json) =
       _$_PlanDefinitionParticipant.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: PlanDefinitionParticipantType.unknown)
   PlanDefinitionParticipantType get type;
-  @override
-  CodeableConcept get role;
   @override
   @JsonKey(name: '_type')
   Element get typeElement;
+  @override
+  CodeableConcept get role;
   @override
   _$PlanDefinitionParticipantCopyWith<_PlanDefinitionParticipant> get copyWith;
 }
@@ -6824,23 +6718,24 @@ PlanDefinitionDynamicValue _$PlanDefinitionDynamicValueFromJson(
 class _$PlanDefinitionDynamicValueTearOff {
   const _$PlanDefinitionDynamicValueTearOff();
 
+// ignore: unused_element
   _PlanDefinitionDynamicValue call(
       {String description,
-      String path,
-      String language,
-      String expression,
       @JsonKey(name: '_description') Element descriptionElement,
+      String path,
       @JsonKey(name: '_path') Element pathElement,
+      String language,
       @JsonKey(name: '_language') Element languageElement,
+      String expression,
       @JsonKey(name: '_expression') Element expressionElement}) {
     return _PlanDefinitionDynamicValue(
       description: description,
-      path: path,
-      language: language,
-      expression: expression,
       descriptionElement: descriptionElement,
+      path: path,
       pathElement: pathElement,
+      language: language,
       languageElement: languageElement,
+      expression: expression,
       expressionElement: expressionElement,
     );
   }
@@ -6851,15 +6746,15 @@ const $PlanDefinitionDynamicValue = _$PlanDefinitionDynamicValueTearOff();
 
 mixin _$PlanDefinitionDynamicValue {
   String get description;
-  String get path;
-  String get language;
-  String get expression;
   @JsonKey(name: '_description')
   Element get descriptionElement;
+  String get path;
   @JsonKey(name: '_path')
   Element get pathElement;
+  String get language;
   @JsonKey(name: '_language')
   Element get languageElement;
+  String get expression;
   @JsonKey(name: '_expression')
   Element get expressionElement;
 
@@ -6873,12 +6768,12 @@ abstract class $PlanDefinitionDynamicValueCopyWith<$Res> {
       _$PlanDefinitionDynamicValueCopyWithImpl<$Res>;
   $Res call(
       {String description,
-      String path,
-      String language,
-      String expression,
       @JsonKey(name: '_description') Element descriptionElement,
+      String path,
       @JsonKey(name: '_path') Element pathElement,
+      String language,
       @JsonKey(name: '_language') Element languageElement,
+      String expression,
       @JsonKey(name: '_expression') Element expressionElement});
 
   $ElementCopyWith<$Res> get descriptionElement;
@@ -6898,29 +6793,29 @@ class _$PlanDefinitionDynamicValueCopyWithImpl<$Res>
   @override
   $Res call({
     Object description = freezed,
-    Object path = freezed,
-    Object language = freezed,
-    Object expression = freezed,
     Object descriptionElement = freezed,
+    Object path = freezed,
     Object pathElement = freezed,
+    Object language = freezed,
     Object languageElement = freezed,
+    Object expression = freezed,
     Object expressionElement = freezed,
   }) {
     return _then(_value.copyWith(
       description:
           description == freezed ? _value.description : description as String,
-      path: path == freezed ? _value.path : path as String,
-      language: language == freezed ? _value.language : language as String,
-      expression:
-          expression == freezed ? _value.expression : expression as String,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
+      path: path == freezed ? _value.path : path as String,
       pathElement:
           pathElement == freezed ? _value.pathElement : pathElement as Element,
+      language: language == freezed ? _value.language : language as String,
       languageElement: languageElement == freezed
           ? _value.languageElement
           : languageElement as Element,
+      expression:
+          expression == freezed ? _value.expression : expression as String,
       expressionElement: expressionElement == freezed
           ? _value.expressionElement
           : expressionElement as Element,
@@ -6977,12 +6872,12 @@ abstract class _$PlanDefinitionDynamicValueCopyWith<$Res>
   @override
   $Res call(
       {String description,
-      String path,
-      String language,
-      String expression,
       @JsonKey(name: '_description') Element descriptionElement,
+      String path,
       @JsonKey(name: '_path') Element pathElement,
+      String language,
       @JsonKey(name: '_language') Element languageElement,
+      String expression,
       @JsonKey(name: '_expression') Element expressionElement});
 
   @override
@@ -7009,29 +6904,29 @@ class __$PlanDefinitionDynamicValueCopyWithImpl<$Res>
   @override
   $Res call({
     Object description = freezed,
-    Object path = freezed,
-    Object language = freezed,
-    Object expression = freezed,
     Object descriptionElement = freezed,
+    Object path = freezed,
     Object pathElement = freezed,
+    Object language = freezed,
     Object languageElement = freezed,
+    Object expression = freezed,
     Object expressionElement = freezed,
   }) {
     return _then(_PlanDefinitionDynamicValue(
       description:
           description == freezed ? _value.description : description as String,
-      path: path == freezed ? _value.path : path as String,
-      language: language == freezed ? _value.language : language as String,
-      expression:
-          expression == freezed ? _value.expression : expression as String,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
+      path: path == freezed ? _value.path : path as String,
       pathElement:
           pathElement == freezed ? _value.pathElement : pathElement as Element,
+      language: language == freezed ? _value.language : language as String,
       languageElement: languageElement == freezed
           ? _value.languageElement
           : languageElement as Element,
+      expression:
+          expression == freezed ? _value.expression : expression as String,
       expressionElement: expressionElement == freezed
           ? _value.expressionElement
           : expressionElement as Element,
@@ -7040,16 +6935,17 @@ class __$PlanDefinitionDynamicValueCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_PlanDefinitionDynamicValue implements _PlanDefinitionDynamicValue {
+class _$_PlanDefinitionDynamicValue extends _PlanDefinitionDynamicValue {
   _$_PlanDefinitionDynamicValue(
       {this.description,
-      this.path,
-      this.language,
-      this.expression,
       @JsonKey(name: '_description') this.descriptionElement,
+      this.path,
       @JsonKey(name: '_path') this.pathElement,
+      this.language,
       @JsonKey(name: '_language') this.languageElement,
-      @JsonKey(name: '_expression') this.expressionElement});
+      this.expression,
+      @JsonKey(name: '_expression') this.expressionElement})
+      : super._();
 
   factory _$_PlanDefinitionDynamicValue.fromJson(Map<String, dynamic> json) =>
       _$_$_PlanDefinitionDynamicValueFromJson(json);
@@ -7057,27 +6953,27 @@ class _$_PlanDefinitionDynamicValue implements _PlanDefinitionDynamicValue {
   @override
   final String description;
   @override
-  final String path;
-  @override
-  final String language;
-  @override
-  final String expression;
-  @override
   @JsonKey(name: '_description')
   final Element descriptionElement;
+  @override
+  final String path;
   @override
   @JsonKey(name: '_path')
   final Element pathElement;
   @override
+  final String language;
+  @override
   @JsonKey(name: '_language')
   final Element languageElement;
+  @override
+  final String expression;
   @override
   @JsonKey(name: '_expression')
   final Element expressionElement;
 
   @override
   String toString() {
-    return 'PlanDefinitionDynamicValue(description: $description, path: $path, language: $language, expression: $expression, descriptionElement: $descriptionElement, pathElement: $pathElement, languageElement: $languageElement, expressionElement: $expressionElement)';
+    return 'PlanDefinitionDynamicValue(description: $description, descriptionElement: $descriptionElement, path: $path, pathElement: $pathElement, language: $language, languageElement: $languageElement, expression: $expression, expressionElement: $expressionElement)';
   }
 
   @override
@@ -7087,23 +6983,23 @@ class _$_PlanDefinitionDynamicValue implements _PlanDefinitionDynamicValue {
             (identical(other.description, description) ||
                 const DeepCollectionEquality()
                     .equals(other.description, description)) &&
-            (identical(other.path, path) ||
-                const DeepCollectionEquality().equals(other.path, path)) &&
-            (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
-            (identical(other.expression, expression) ||
-                const DeepCollectionEquality()
-                    .equals(other.expression, expression)) &&
             (identical(other.descriptionElement, descriptionElement) ||
                 const DeepCollectionEquality()
                     .equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.path, path) ||
+                const DeepCollectionEquality().equals(other.path, path)) &&
             (identical(other.pathElement, pathElement) ||
                 const DeepCollectionEquality()
                     .equals(other.pathElement, pathElement)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
             (identical(other.languageElement, languageElement) ||
                 const DeepCollectionEquality()
                     .equals(other.languageElement, languageElement)) &&
+            (identical(other.expression, expression) ||
+                const DeepCollectionEquality()
+                    .equals(other.expression, expression)) &&
             (identical(other.expressionElement, expressionElement) ||
                 const DeepCollectionEquality()
                     .equals(other.expressionElement, expressionElement)));
@@ -7113,12 +7009,12 @@ class _$_PlanDefinitionDynamicValue implements _PlanDefinitionDynamicValue {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(path) ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(expression) ^
       const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(path) ^
       const DeepCollectionEquality().hash(pathElement) ^
+      const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(expression) ^
       const DeepCollectionEquality().hash(expressionElement);
 
   @override
@@ -7132,16 +7028,16 @@ class _$_PlanDefinitionDynamicValue implements _PlanDefinitionDynamicValue {
   }
 }
 
-abstract class _PlanDefinitionDynamicValue
-    implements PlanDefinitionDynamicValue {
+abstract class _PlanDefinitionDynamicValue extends PlanDefinitionDynamicValue {
+  _PlanDefinitionDynamicValue._() : super._();
   factory _PlanDefinitionDynamicValue(
           {String description,
-          String path,
-          String language,
-          String expression,
           @JsonKey(name: '_description') Element descriptionElement,
+          String path,
           @JsonKey(name: '_path') Element pathElement,
+          String language,
           @JsonKey(name: '_language') Element languageElement,
+          String expression,
           @JsonKey(name: '_expression') Element expressionElement}) =
       _$_PlanDefinitionDynamicValue;
 
@@ -7151,20 +7047,20 @@ abstract class _PlanDefinitionDynamicValue
   @override
   String get description;
   @override
-  String get path;
-  @override
-  String get language;
-  @override
-  String get expression;
-  @override
   @JsonKey(name: '_description')
   Element get descriptionElement;
+  @override
+  String get path;
   @override
   @JsonKey(name: '_path')
   Element get pathElement;
   @override
+  String get language;
+  @override
   @JsonKey(name: '_language')
   Element get languageElement;
+  @override
+  String get expression;
   @override
   @JsonKey(name: '_expression')
   Element get expressionElement;
@@ -7180,114 +7076,101 @@ Questionnaire _$QuestionnaireFromJson(Map<String, dynamic> json) {
 class _$QuestionnaireTearOff {
   const _$QuestionnaireTearOff();
 
+// ignore: unused_element
   _Questionnaire call(
-      {@required
-      @JsonKey(required: true, defaultValue: 'Questionnaire')
-          String resourceType,
+      {@required @JsonKey(defaultValue: 'Questionnaire') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String url,
+      @JsonKey(name: '_url') Element urlElement,
       List<Identifier> identifier,
       String version,
+      @JsonKey(name: '_version') Element versionElement,
       String name,
+      @JsonKey(name: '_name') Element nameElement,
       String title,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
+      @JsonKey(name: '_title') Element titleElement,
+      QuestionnaireStatus status,
+      @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
-      FhirDateTime date,
+      @JsonKey(name: '_experimental') Element experimentalElement,
+      Date date,
+      @JsonKey(name: '_date') Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher') Element publisherElement,
       String description,
+      @JsonKey(name: '_description') Element descriptionElement,
       String purpose,
+      @JsonKey(name: '_purpose') Element purposeElement,
       Date approvalDate,
+      @JsonKey(name: '_approvalDate') Element approvalDateElement,
       Date lastReviewDate,
+      @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
       Period effectivePeriod,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       List<ContactDetail> contact,
       String copyright,
+      @JsonKey(name: '_copyright') Element copyrightElement,
       List<Coding> code,
-      List<Code> subjectType,
-      List<QuestionnaireItem> item,
-      @JsonKey(name: '_url')
-          Element urlElement,
-      @JsonKey(name: '_version')
-          Element versionElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
-      @JsonKey(name: '_approvalDate')
-          Element approvalDateElement,
-      @JsonKey(name: '_lastReviewDate')
-          Element lastReviewDateElement,
-      @JsonKey(name: '_copyright')
-          Element copyrightElement,
-      @JsonKey(name: '_subjectType')
-          Element subjectTypeElement}) {
+      List<String> subjectType,
+      @JsonKey(name: '_subjectType') List<Element> subjectTypeElement,
+      List<QuestionnaireItem> item}) {
     return _Questionnaire(
       resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
+      implicitRulesElement: implicitRulesElement,
       language: language,
+      languageElement: languageElement,
       text: text,
       contained: contained,
       extension_: extension_,
       modifierExtension: modifierExtension,
       url: url,
+      urlElement: urlElement,
       identifier: identifier,
       version: version,
+      versionElement: versionElement,
       name: name,
+      nameElement: nameElement,
       title: title,
+      titleElement: titleElement,
       status: status,
+      statusElement: statusElement,
       experimental: experimental,
+      experimentalElement: experimentalElement,
       date: date,
+      dateElement: dateElement,
       publisher: publisher,
+      publisherElement: publisherElement,
       description: description,
+      descriptionElement: descriptionElement,
       purpose: purpose,
+      purposeElement: purposeElement,
       approvalDate: approvalDate,
+      approvalDateElement: approvalDateElement,
       lastReviewDate: lastReviewDate,
+      lastReviewDateElement: lastReviewDateElement,
       effectivePeriod: effectivePeriod,
       useContext: useContext,
       jurisdiction: jurisdiction,
       contact: contact,
       copyright: copyright,
+      copyrightElement: copyrightElement,
       code: code,
       subjectType: subjectType,
-      item: item,
-      urlElement: urlElement,
-      versionElement: versionElement,
-      nameElement: nameElement,
-      titleElement: titleElement,
-      statusElement: statusElement,
-      experimentalElement: experimentalElement,
-      dateElement: dateElement,
-      publisherElement: publisherElement,
-      descriptionElement: descriptionElement,
-      purposeElement: purposeElement,
-      approvalDateElement: approvalDateElement,
-      lastReviewDateElement: lastReviewDateElement,
-      copyrightElement: copyrightElement,
       subjectTypeElement: subjectTypeElement,
+      item: item,
     );
   }
 }
@@ -7296,67 +7179,70 @@ class _$QuestionnaireTearOff {
 const $Questionnaire = _$QuestionnaireTearOff();
 
 mixin _$Questionnaire {
-  @JsonKey(required: true, defaultValue: 'Questionnaire')
+  @JsonKey(defaultValue: 'Questionnaire')
   String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
   Code get language;
+  @JsonKey(name: '_language')
+  Element get languageElement;
   Narrative get text;
   List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   String get url;
+  @JsonKey(name: '_url')
+  Element get urlElement;
   List<Identifier> get identifier;
   String get version;
+  @JsonKey(name: '_version')
+  Element get versionElement;
   String get name;
+  @JsonKey(name: '_name')
+  Element get nameElement;
   String get title;
-  @JsonKey(unknownEnumValue: Status.unknown)
-  Status get status;
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  QuestionnaireStatus get status;
+  @JsonKey(name: '_status')
+  Element get statusElement;
   Boolean get experimental;
-  FhirDateTime get date;
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  Date get date;
+  @JsonKey(name: '_date')
+  Element get dateElement;
   String get publisher;
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
   String get description;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
   String get purpose;
+  @JsonKey(name: '_purpose')
+  Element get purposeElement;
   Date get approvalDate;
+  @JsonKey(name: '_approvalDate')
+  Element get approvalDateElement;
   Date get lastReviewDate;
+  @JsonKey(name: '_lastReviewDate')
+  Element get lastReviewDateElement;
   Period get effectivePeriod;
   List<UsageContext> get useContext;
   List<CodeableConcept> get jurisdiction;
   List<ContactDetail> get contact;
   String get copyright;
-  List<Coding> get code;
-  List<Code> get subjectType;
-  List<QuestionnaireItem> get item;
-  @JsonKey(name: '_url')
-  Element get urlElement;
-  @JsonKey(name: '_version')
-  Element get versionElement;
-  @JsonKey(name: '_name')
-  Element get nameElement;
-  @JsonKey(name: '_title')
-  Element get titleElement;
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @JsonKey(name: '_experimental')
-  Element get experimentalElement;
-  @JsonKey(name: '_date')
-  Element get dateElement;
-  @JsonKey(name: '_publisher')
-  Element get publisherElement;
-  @JsonKey(name: '_description')
-  Element get descriptionElement;
-  @JsonKey(name: '_purpose')
-  Element get purposeElement;
-  @JsonKey(name: '_approvalDate')
-  Element get approvalDateElement;
-  @JsonKey(name: '_lastReviewDate')
-  Element get lastReviewDateElement;
   @JsonKey(name: '_copyright')
   Element get copyrightElement;
+  List<Coding> get code;
+  List<String> get subjectType;
   @JsonKey(name: '_subjectType')
-  Element get subjectTypeElement;
+  List<Element> get subjectTypeElement;
+  List<QuestionnaireItem> get item;
 
   Map<String, dynamic> toJson();
   $QuestionnaireCopyWith<Questionnaire> get copyWith;
@@ -7367,71 +7253,57 @@ abstract class $QuestionnaireCopyWith<$Res> {
           Questionnaire value, $Res Function(Questionnaire) then) =
       _$QuestionnaireCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'Questionnaire')
-          String resourceType,
+      {@JsonKey(defaultValue: 'Questionnaire') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String url,
+      @JsonKey(name: '_url') Element urlElement,
       List<Identifier> identifier,
       String version,
+      @JsonKey(name: '_version') Element versionElement,
       String name,
+      @JsonKey(name: '_name') Element nameElement,
       String title,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
+      @JsonKey(name: '_title') Element titleElement,
+      QuestionnaireStatus status,
+      @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
-      FhirDateTime date,
+      @JsonKey(name: '_experimental') Element experimentalElement,
+      Date date,
+      @JsonKey(name: '_date') Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher') Element publisherElement,
       String description,
+      @JsonKey(name: '_description') Element descriptionElement,
       String purpose,
+      @JsonKey(name: '_purpose') Element purposeElement,
       Date approvalDate,
+      @JsonKey(name: '_approvalDate') Element approvalDateElement,
       Date lastReviewDate,
+      @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
       Period effectivePeriod,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       List<ContactDetail> contact,
       String copyright,
+      @JsonKey(name: '_copyright') Element copyrightElement,
       List<Coding> code,
-      List<Code> subjectType,
-      List<QuestionnaireItem> item,
-      @JsonKey(name: '_url')
-          Element urlElement,
-      @JsonKey(name: '_version')
-          Element versionElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
-      @JsonKey(name: '_approvalDate')
-          Element approvalDateElement,
-      @JsonKey(name: '_lastReviewDate')
-          Element lastReviewDateElement,
-      @JsonKey(name: '_copyright')
-          Element copyrightElement,
-      @JsonKey(name: '_subjectType')
-          Element subjectTypeElement});
+      List<String> subjectType,
+      @JsonKey(name: '_subjectType') List<Element> subjectTypeElement,
+      List<QuestionnaireItem> item});
 
   $MetaCopyWith<$Res> get meta;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
-  $PeriodCopyWith<$Res> get effectivePeriod;
   $ElementCopyWith<$Res> get urlElement;
   $ElementCopyWith<$Res> get versionElement;
   $ElementCopyWith<$Res> get nameElement;
@@ -7444,8 +7316,8 @@ abstract class $QuestionnaireCopyWith<$Res> {
   $ElementCopyWith<$Res> get purposeElement;
   $ElementCopyWith<$Res> get approvalDateElement;
   $ElementCopyWith<$Res> get lastReviewDateElement;
+  $PeriodCopyWith<$Res> get effectivePeriod;
   $ElementCopyWith<$Res> get copyrightElement;
-  $ElementCopyWith<$Res> get subjectTypeElement;
 }
 
 class _$QuestionnaireCopyWithImpl<$Res>
@@ -7462,46 +7334,48 @@ class _$QuestionnaireCopyWithImpl<$Res>
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object url = freezed,
+    Object urlElement = freezed,
     Object identifier = freezed,
     Object version = freezed,
+    Object versionElement = freezed,
     Object name = freezed,
+    Object nameElement = freezed,
     Object title = freezed,
+    Object titleElement = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object experimental = freezed,
+    Object experimentalElement = freezed,
     Object date = freezed,
+    Object dateElement = freezed,
     Object publisher = freezed,
+    Object publisherElement = freezed,
     Object description = freezed,
+    Object descriptionElement = freezed,
     Object purpose = freezed,
+    Object purposeElement = freezed,
     Object approvalDate = freezed,
+    Object approvalDateElement = freezed,
     Object lastReviewDate = freezed,
+    Object lastReviewDateElement = freezed,
     Object effectivePeriod = freezed,
     Object useContext = freezed,
     Object jurisdiction = freezed,
     Object contact = freezed,
     Object copyright = freezed,
+    Object copyrightElement = freezed,
     Object code = freezed,
     Object subjectType = freezed,
-    Object item = freezed,
-    Object urlElement = freezed,
-    Object versionElement = freezed,
-    Object nameElement = freezed,
-    Object titleElement = freezed,
-    Object statusElement = freezed,
-    Object experimentalElement = freezed,
-    Object dateElement = freezed,
-    Object publisherElement = freezed,
-    Object descriptionElement = freezed,
-    Object purposeElement = freezed,
-    Object approvalDateElement = freezed,
-    Object lastReviewDateElement = freezed,
-    Object copyrightElement = freezed,
     Object subjectTypeElement = freezed,
+    Object item = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -7512,7 +7386,13 @@ class _$QuestionnaireCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -7523,26 +7403,59 @@ class _$QuestionnaireCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
       version: version == freezed ? _value.version : version as String,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
       name: name == freezed ? _value.name : name as String,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed ? _value.status : status as Status,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      status: status == freezed ? _value.status : status as QuestionnaireStatus,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as FhirDateTime,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
+      date: date == freezed ? _value.date : date as Date,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
       description:
           description == freezed ? _value.description : description as String,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
       purpose: purpose == freezed ? _value.purpose : purpose as String,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement as Element,
       approvalDate:
           approvalDate == freezed ? _value.approvalDate : approvalDate as Date,
+      approvalDateElement: approvalDateElement == freezed
+          ? _value.approvalDateElement
+          : approvalDateElement as Element,
       lastReviewDate: lastReviewDate == freezed
           ? _value.lastReviewDate
           : lastReviewDate as Date,
+      lastReviewDateElement: lastReviewDateElement == freezed
+          ? _value.lastReviewDateElement
+          : lastReviewDateElement as Element,
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period,
@@ -7555,50 +7468,17 @@ class _$QuestionnaireCopyWithImpl<$Res>
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
       copyright: copyright == freezed ? _value.copyright : copyright as String,
-      code: code == freezed ? _value.code : code as List<Coding>,
-      subjectType: subjectType == freezed
-          ? _value.subjectType
-          : subjectType as List<Code>,
-      item: item == freezed ? _value.item : item as List<QuestionnaireItem>,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element,
-      versionElement: versionElement == freezed
-          ? _value.versionElement
-          : versionElement as Element,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      titleElement: titleElement == freezed
-          ? _value.titleElement
-          : titleElement as Element,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      experimentalElement: experimentalElement == freezed
-          ? _value.experimentalElement
-          : experimentalElement as Element,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element,
-      publisherElement: publisherElement == freezed
-          ? _value.publisherElement
-          : publisherElement as Element,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement as Element,
-      purposeElement: purposeElement == freezed
-          ? _value.purposeElement
-          : purposeElement as Element,
-      approvalDateElement: approvalDateElement == freezed
-          ? _value.approvalDateElement
-          : approvalDateElement as Element,
-      lastReviewDateElement: lastReviewDateElement == freezed
-          ? _value.lastReviewDateElement
-          : lastReviewDateElement as Element,
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
           : copyrightElement as Element,
+      code: code == freezed ? _value.code : code as List<Coding>,
+      subjectType: subjectType == freezed
+          ? _value.subjectType
+          : subjectType as List<String>,
       subjectTypeElement: subjectTypeElement == freezed
           ? _value.subjectTypeElement
-          : subjectTypeElement as Element,
+          : subjectTypeElement as List<Element>,
+      item: item == freezed ? _value.item : item as List<QuestionnaireItem>,
     ));
   }
 
@@ -7613,22 +7493,32 @@ class _$QuestionnaireCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
   $NarrativeCopyWith<$Res> get text {
     if (_value.text == null) {
       return null;
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get effectivePeriod {
-    if (_value.effectivePeriod == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.effectivePeriod, (value) {
-      return _then(_value.copyWith(effectivePeriod: value));
     });
   }
 
@@ -7753,22 +7643,22 @@ class _$QuestionnaireCopyWithImpl<$Res>
   }
 
   @override
+  $PeriodCopyWith<$Res> get effectivePeriod {
+    if (_value.effectivePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.effectivePeriod, (value) {
+      return _then(_value.copyWith(effectivePeriod: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res> get copyrightElement {
     if (_value.copyrightElement == null) {
       return null;
     }
     return $ElementCopyWith<$Res>(_value.copyrightElement, (value) {
       return _then(_value.copyWith(copyrightElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get subjectTypeElement {
-    if (_value.subjectTypeElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.subjectTypeElement, (value) {
-      return _then(_value.copyWith(subjectTypeElement: value));
     });
   }
 }
@@ -7780,74 +7670,61 @@ abstract class _$QuestionnaireCopyWith<$Res>
       __$QuestionnaireCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'Questionnaire')
-          String resourceType,
+      {@JsonKey(defaultValue: 'Questionnaire') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String url,
+      @JsonKey(name: '_url') Element urlElement,
       List<Identifier> identifier,
       String version,
+      @JsonKey(name: '_version') Element versionElement,
       String name,
+      @JsonKey(name: '_name') Element nameElement,
       String title,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
+      @JsonKey(name: '_title') Element titleElement,
+      QuestionnaireStatus status,
+      @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
-      FhirDateTime date,
+      @JsonKey(name: '_experimental') Element experimentalElement,
+      Date date,
+      @JsonKey(name: '_date') Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher') Element publisherElement,
       String description,
+      @JsonKey(name: '_description') Element descriptionElement,
       String purpose,
+      @JsonKey(name: '_purpose') Element purposeElement,
       Date approvalDate,
+      @JsonKey(name: '_approvalDate') Element approvalDateElement,
       Date lastReviewDate,
+      @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
       Period effectivePeriod,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       List<ContactDetail> contact,
       String copyright,
+      @JsonKey(name: '_copyright') Element copyrightElement,
       List<Coding> code,
-      List<Code> subjectType,
-      List<QuestionnaireItem> item,
-      @JsonKey(name: '_url')
-          Element urlElement,
-      @JsonKey(name: '_version')
-          Element versionElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
-      @JsonKey(name: '_approvalDate')
-          Element approvalDateElement,
-      @JsonKey(name: '_lastReviewDate')
-          Element lastReviewDateElement,
-      @JsonKey(name: '_copyright')
-          Element copyrightElement,
-      @JsonKey(name: '_subjectType')
-          Element subjectTypeElement});
+      List<String> subjectType,
+      @JsonKey(name: '_subjectType') List<Element> subjectTypeElement,
+      List<QuestionnaireItem> item});
 
   @override
   $MetaCopyWith<$Res> get meta;
   @override
-  $NarrativeCopyWith<$Res> get text;
+  $ElementCopyWith<$Res> get implicitRulesElement;
   @override
-  $PeriodCopyWith<$Res> get effectivePeriod;
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $NarrativeCopyWith<$Res> get text;
   @override
   $ElementCopyWith<$Res> get urlElement;
   @override
@@ -7873,9 +7750,9 @@ abstract class _$QuestionnaireCopyWith<$Res>
   @override
   $ElementCopyWith<$Res> get lastReviewDateElement;
   @override
-  $ElementCopyWith<$Res> get copyrightElement;
+  $PeriodCopyWith<$Res> get effectivePeriod;
   @override
-  $ElementCopyWith<$Res> get subjectTypeElement;
+  $ElementCopyWith<$Res> get copyrightElement;
 }
 
 class __$QuestionnaireCopyWithImpl<$Res>
@@ -7894,46 +7771,48 @@ class __$QuestionnaireCopyWithImpl<$Res>
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object url = freezed,
+    Object urlElement = freezed,
     Object identifier = freezed,
     Object version = freezed,
+    Object versionElement = freezed,
     Object name = freezed,
+    Object nameElement = freezed,
     Object title = freezed,
+    Object titleElement = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object experimental = freezed,
+    Object experimentalElement = freezed,
     Object date = freezed,
+    Object dateElement = freezed,
     Object publisher = freezed,
+    Object publisherElement = freezed,
     Object description = freezed,
+    Object descriptionElement = freezed,
     Object purpose = freezed,
+    Object purposeElement = freezed,
     Object approvalDate = freezed,
+    Object approvalDateElement = freezed,
     Object lastReviewDate = freezed,
+    Object lastReviewDateElement = freezed,
     Object effectivePeriod = freezed,
     Object useContext = freezed,
     Object jurisdiction = freezed,
     Object contact = freezed,
     Object copyright = freezed,
+    Object copyrightElement = freezed,
     Object code = freezed,
     Object subjectType = freezed,
-    Object item = freezed,
-    Object urlElement = freezed,
-    Object versionElement = freezed,
-    Object nameElement = freezed,
-    Object titleElement = freezed,
-    Object statusElement = freezed,
-    Object experimentalElement = freezed,
-    Object dateElement = freezed,
-    Object publisherElement = freezed,
-    Object descriptionElement = freezed,
-    Object purposeElement = freezed,
-    Object approvalDateElement = freezed,
-    Object lastReviewDateElement = freezed,
-    Object copyrightElement = freezed,
     Object subjectTypeElement = freezed,
+    Object item = freezed,
   }) {
     return _then(_Questionnaire(
       resourceType: resourceType == freezed
@@ -7944,7 +7823,13 @@ class __$QuestionnaireCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -7955,26 +7840,59 @@ class __$QuestionnaireCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
       version: version == freezed ? _value.version : version as String,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
       name: name == freezed ? _value.name : name as String,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed ? _value.status : status as Status,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      status: status == freezed ? _value.status : status as QuestionnaireStatus,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as FhirDateTime,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
+      date: date == freezed ? _value.date : date as Date,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
       description:
           description == freezed ? _value.description : description as String,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
       purpose: purpose == freezed ? _value.purpose : purpose as String,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement as Element,
       approvalDate:
           approvalDate == freezed ? _value.approvalDate : approvalDate as Date,
+      approvalDateElement: approvalDateElement == freezed
+          ? _value.approvalDateElement
+          : approvalDateElement as Element,
       lastReviewDate: lastReviewDate == freezed
           ? _value.lastReviewDate
           : lastReviewDate as Date,
+      lastReviewDateElement: lastReviewDateElement == freezed
+          ? _value.lastReviewDateElement
+          : lastReviewDateElement as Element,
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period,
@@ -7987,50 +7905,17 @@ class __$QuestionnaireCopyWithImpl<$Res>
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
       copyright: copyright == freezed ? _value.copyright : copyright as String,
-      code: code == freezed ? _value.code : code as List<Coding>,
-      subjectType: subjectType == freezed
-          ? _value.subjectType
-          : subjectType as List<Code>,
-      item: item == freezed ? _value.item : item as List<QuestionnaireItem>,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element,
-      versionElement: versionElement == freezed
-          ? _value.versionElement
-          : versionElement as Element,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      titleElement: titleElement == freezed
-          ? _value.titleElement
-          : titleElement as Element,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      experimentalElement: experimentalElement == freezed
-          ? _value.experimentalElement
-          : experimentalElement as Element,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element,
-      publisherElement: publisherElement == freezed
-          ? _value.publisherElement
-          : publisherElement as Element,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement as Element,
-      purposeElement: purposeElement == freezed
-          ? _value.purposeElement
-          : purposeElement as Element,
-      approvalDateElement: approvalDateElement == freezed
-          ? _value.approvalDateElement
-          : approvalDateElement as Element,
-      lastReviewDateElement: lastReviewDateElement == freezed
-          ? _value.lastReviewDateElement
-          : lastReviewDateElement as Element,
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
           : copyrightElement as Element,
+      code: code == freezed ? _value.code : code as List<Coding>,
+      subjectType: subjectType == freezed
+          ? _value.subjectType
+          : subjectType as List<String>,
       subjectTypeElement: subjectTypeElement == freezed
           ? _value.subjectTypeElement
-          : subjectTypeElement as Element,
+          : subjectTypeElement as List<Element>,
+      item: item == freezed ? _value.item : item as List<QuestionnaireItem>,
     ));
   }
 }
@@ -8038,68 +7923,52 @@ class __$QuestionnaireCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Questionnaire extends _Questionnaire {
   _$_Questionnaire(
-      {@required
-      @JsonKey(required: true, defaultValue: 'Questionnaire')
-          this.resourceType,
+      {@required @JsonKey(defaultValue: 'Questionnaire') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.url,
+      @JsonKey(name: '_url') this.urlElement,
       this.identifier,
       this.version,
+      @JsonKey(name: '_version') this.versionElement,
       this.name,
+      @JsonKey(name: '_name') this.nameElement,
       this.title,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          this.status,
+      @JsonKey(name: '_title') this.titleElement,
+      this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.experimental,
+      @JsonKey(name: '_experimental') this.experimentalElement,
       this.date,
+      @JsonKey(name: '_date') this.dateElement,
       this.publisher,
+      @JsonKey(name: '_publisher') this.publisherElement,
       this.description,
+      @JsonKey(name: '_description') this.descriptionElement,
       this.purpose,
+      @JsonKey(name: '_purpose') this.purposeElement,
       this.approvalDate,
+      @JsonKey(name: '_approvalDate') this.approvalDateElement,
       this.lastReviewDate,
+      @JsonKey(name: '_lastReviewDate') this.lastReviewDateElement,
       this.effectivePeriod,
       this.useContext,
       this.jurisdiction,
       this.contact,
       this.copyright,
+      @JsonKey(name: '_copyright') this.copyrightElement,
       this.code,
       this.subjectType,
-      this.item,
-      @JsonKey(name: '_url')
-          this.urlElement,
-      @JsonKey(name: '_version')
-          this.versionElement,
-      @JsonKey(name: '_name')
-          this.nameElement,
-      @JsonKey(name: '_title')
-          this.titleElement,
-      @JsonKey(name: '_status')
-          this.statusElement,
-      @JsonKey(name: '_experimental')
-          this.experimentalElement,
-      @JsonKey(name: '_date')
-          this.dateElement,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
-      @JsonKey(name: '_purpose')
-          this.purposeElement,
-      @JsonKey(name: '_approvalDate')
-          this.approvalDateElement,
-      @JsonKey(name: '_lastReviewDate')
-          this.lastReviewDateElement,
-      @JsonKey(name: '_copyright')
-          this.copyrightElement,
-      @JsonKey(name: '_subjectType')
-          this.subjectTypeElement})
+      @JsonKey(name: '_subjectType') this.subjectTypeElement,
+      this.item})
       : assert(resourceType != null),
         super._();
 
@@ -8107,7 +7976,7 @@ class _$_Questionnaire extends _Questionnaire {
       _$_$_QuestionnaireFromJson(json);
 
   @override
-  @JsonKey(required: true, defaultValue: 'Questionnaire')
+  @JsonKey(defaultValue: 'Questionnaire')
   final String resourceType;
   @override
   final Id id;
@@ -8116,7 +7985,13 @@ class _$_Questionnaire extends _Questionnaire {
   @override
   final FhirUri implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
   final Code language;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
   @override
   final Narrative text;
   @override
@@ -8129,30 +8004,65 @@ class _$_Questionnaire extends _Questionnaire {
   @override
   final String url;
   @override
+  @JsonKey(name: '_url')
+  final Element urlElement;
+  @override
   final List<Identifier> identifier;
   @override
   final String version;
   @override
+  @JsonKey(name: '_version')
+  final Element versionElement;
+  @override
   final String name;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
   @override
   final String title;
   @override
-  @JsonKey(unknownEnumValue: Status.unknown)
-  final Status status;
+  @JsonKey(name: '_title')
+  final Element titleElement;
+  @override
+  final QuestionnaireStatus status;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
   @override
   final Boolean experimental;
   @override
-  final FhirDateTime date;
+  @JsonKey(name: '_experimental')
+  final Element experimentalElement;
+  @override
+  final Date date;
+  @override
+  @JsonKey(name: '_date')
+  final Element dateElement;
   @override
   final String publisher;
   @override
+  @JsonKey(name: '_publisher')
+  final Element publisherElement;
+  @override
   final String description;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
   @override
   final String purpose;
   @override
+  @JsonKey(name: '_purpose')
+  final Element purposeElement;
+  @override
   final Date approvalDate;
   @override
+  @JsonKey(name: '_approvalDate')
+  final Element approvalDateElement;
+  @override
   final Date lastReviewDate;
+  @override
+  @JsonKey(name: '_lastReviewDate')
+  final Element lastReviewDateElement;
   @override
   final Period effectivePeriod;
   @override
@@ -8164,57 +8074,21 @@ class _$_Questionnaire extends _Questionnaire {
   @override
   final String copyright;
   @override
-  final List<Coding> code;
-  @override
-  final List<Code> subjectType;
-  @override
-  final List<QuestionnaireItem> item;
-  @override
-  @JsonKey(name: '_url')
-  final Element urlElement;
-  @override
-  @JsonKey(name: '_version')
-  final Element versionElement;
-  @override
-  @JsonKey(name: '_name')
-  final Element nameElement;
-  @override
-  @JsonKey(name: '_title')
-  final Element titleElement;
-  @override
-  @JsonKey(name: '_status')
-  final Element statusElement;
-  @override
-  @JsonKey(name: '_experimental')
-  final Element experimentalElement;
-  @override
-  @JsonKey(name: '_date')
-  final Element dateElement;
-  @override
-  @JsonKey(name: '_publisher')
-  final Element publisherElement;
-  @override
-  @JsonKey(name: '_description')
-  final Element descriptionElement;
-  @override
-  @JsonKey(name: '_purpose')
-  final Element purposeElement;
-  @override
-  @JsonKey(name: '_approvalDate')
-  final Element approvalDateElement;
-  @override
-  @JsonKey(name: '_lastReviewDate')
-  final Element lastReviewDateElement;
-  @override
   @JsonKey(name: '_copyright')
   final Element copyrightElement;
   @override
+  final List<Coding> code;
+  @override
+  final List<String> subjectType;
+  @override
   @JsonKey(name: '_subjectType')
-  final Element subjectTypeElement;
+  final List<Element> subjectTypeElement;
+  @override
+  final List<QuestionnaireItem> item;
 
   @override
   String toString() {
-    return 'Questionnaire(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, description: $description, purpose: $purpose, approvalDate: $approvalDate, lastReviewDate: $lastReviewDate, effectivePeriod: $effectivePeriod, useContext: $useContext, jurisdiction: $jurisdiction, contact: $contact, copyright: $copyright, code: $code, subjectType: $subjectType, item: $item, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, approvalDateElement: $approvalDateElement, lastReviewDateElement: $lastReviewDateElement, copyrightElement: $copyrightElement, subjectTypeElement: $subjectTypeElement)';
+    return 'Questionnaire(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, description: $description, descriptionElement: $descriptionElement, purpose: $purpose, purposeElement: $purposeElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, useContext: $useContext, jurisdiction: $jurisdiction, contact: $contact, copyright: $copyright, copyrightElement: $copyrightElement, code: $code, subjectType: $subjectType, subjectTypeElement: $subjectTypeElement, item: $item)';
   }
 
   @override
@@ -8231,9 +8105,15 @@ class _$_Questionnaire extends _Questionnaire {
             (identical(other.implicitRules, implicitRules) ||
                 const DeepCollectionEquality()
                     .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
             (identical(other.language, language) ||
                 const DeepCollectionEquality()
                     .equals(other.language, language)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
             (identical(other.text, text) ||
                 const DeepCollectionEquality().equals(other.text, text)) &&
             (identical(other.contained, contained) ||
@@ -8247,67 +8127,63 @@ class _$_Questionnaire extends _Questionnaire {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
+            (identical(other.urlElement, urlElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.urlElement, urlElement)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
             (identical(other.version, version) ||
                 const DeepCollectionEquality()
                     .equals(other.version, version)) &&
+            (identical(other.versionElement, versionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.versionElement, versionElement)) &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
             (identical(other.title, title) ||
                 const DeepCollectionEquality().equals(other.title, title)) &&
+            (identical(other.titleElement, titleElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.titleElement, titleElement)) &&
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
             (identical(other.experimental, experimental) ||
                 const DeepCollectionEquality()
                     .equals(other.experimental, experimental)) &&
+            (identical(other.experimentalElement, experimentalElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.experimentalElement, experimentalElement)) &&
             (identical(other.date, date) ||
                 const DeepCollectionEquality().equals(other.date, date)) &&
-            (identical(other.publisher, publisher) ||
-                const DeepCollectionEquality()
-                    .equals(other.publisher, publisher)) &&
-            (identical(other.description, description) ||
-                const DeepCollectionEquality()
-                    .equals(other.description, description)) &&
-            (identical(other.purpose, purpose) ||
-                const DeepCollectionEquality()
-                    .equals(other.purpose, purpose)) &&
-            (identical(other.approvalDate, approvalDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.approvalDate, approvalDate)) &&
-            (identical(other.lastReviewDate, lastReviewDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.lastReviewDate, lastReviewDate)) &&
-            (identical(other.effectivePeriod, effectivePeriod) ||
-                const DeepCollectionEquality()
-                    .equals(other.effectivePeriod, effectivePeriod)) &&
-            (identical(other.useContext, useContext) ||
-                const DeepCollectionEquality()
-                    .equals(other.useContext, useContext)) &&
-            (identical(other.jurisdiction, jurisdiction) ||
-                const DeepCollectionEquality()
-                    .equals(other.jurisdiction, jurisdiction)) &&
-            (identical(other.contact, contact) ||
-                const DeepCollectionEquality().equals(other.contact, contact)) &&
+            (identical(other.dateElement, dateElement) ||
+                const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
+            (identical(other.publisher, publisher) || const DeepCollectionEquality().equals(other.publisher, publisher)) &&
+            (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
+            (identical(other.description, description) || const DeepCollectionEquality().equals(other.description, description)) &&
+            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.purpose, purpose) || const DeepCollectionEquality().equals(other.purpose, purpose)) &&
+            (identical(other.purposeElement, purposeElement) || const DeepCollectionEquality().equals(other.purposeElement, purposeElement)) &&
+            (identical(other.approvalDate, approvalDate) || const DeepCollectionEquality().equals(other.approvalDate, approvalDate)) &&
+            (identical(other.approvalDateElement, approvalDateElement) || const DeepCollectionEquality().equals(other.approvalDateElement, approvalDateElement)) &&
+            (identical(other.lastReviewDate, lastReviewDate) || const DeepCollectionEquality().equals(other.lastReviewDate, lastReviewDate)) &&
+            (identical(other.lastReviewDateElement, lastReviewDateElement) || const DeepCollectionEquality().equals(other.lastReviewDateElement, lastReviewDateElement)) &&
+            (identical(other.effectivePeriod, effectivePeriod) || const DeepCollectionEquality().equals(other.effectivePeriod, effectivePeriod)) &&
+            (identical(other.useContext, useContext) || const DeepCollectionEquality().equals(other.useContext, useContext)) &&
+            (identical(other.jurisdiction, jurisdiction) || const DeepCollectionEquality().equals(other.jurisdiction, jurisdiction)) &&
+            (identical(other.contact, contact) || const DeepCollectionEquality().equals(other.contact, contact)) &&
             (identical(other.copyright, copyright) || const DeepCollectionEquality().equals(other.copyright, copyright)) &&
+            (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)) &&
             (identical(other.code, code) || const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.subjectType, subjectType) || const DeepCollectionEquality().equals(other.subjectType, subjectType)) &&
-            (identical(other.item, item) || const DeepCollectionEquality().equals(other.item, item)) &&
-            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
-            (identical(other.versionElement, versionElement) || const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
-            (identical(other.nameElement, nameElement) || const DeepCollectionEquality().equals(other.nameElement, nameElement)) &&
-            (identical(other.titleElement, titleElement) || const DeepCollectionEquality().equals(other.titleElement, titleElement)) &&
-            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
-            (identical(other.experimentalElement, experimentalElement) || const DeepCollectionEquality().equals(other.experimentalElement, experimentalElement)) &&
-            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
-            (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
-            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
-            (identical(other.purposeElement, purposeElement) || const DeepCollectionEquality().equals(other.purposeElement, purposeElement)) &&
-            (identical(other.approvalDateElement, approvalDateElement) || const DeepCollectionEquality().equals(other.approvalDateElement, approvalDateElement)) &&
-            (identical(other.lastReviewDateElement, lastReviewDateElement) || const DeepCollectionEquality().equals(other.lastReviewDateElement, lastReviewDateElement)) &&
-            (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)) &&
-            (identical(other.subjectTypeElement, subjectTypeElement) || const DeepCollectionEquality().equals(other.subjectTypeElement, subjectTypeElement)));
+            (identical(other.subjectTypeElement, subjectTypeElement) || const DeepCollectionEquality().equals(other.subjectTypeElement, subjectTypeElement)) &&
+            (identical(other.item, item) || const DeepCollectionEquality().equals(other.item, item)));
   }
 
   @override
@@ -8317,46 +8193,48 @@ class _$_Questionnaire extends _Questionnaire {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
       const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(url) ^
+      const DeepCollectionEquality().hash(urlElement) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(version) ^
+      const DeepCollectionEquality().hash(versionElement) ^
       const DeepCollectionEquality().hash(name) ^
+      const DeepCollectionEquality().hash(nameElement) ^
       const DeepCollectionEquality().hash(title) ^
+      const DeepCollectionEquality().hash(titleElement) ^
       const DeepCollectionEquality().hash(status) ^
+      const DeepCollectionEquality().hash(statusElement) ^
       const DeepCollectionEquality().hash(experimental) ^
+      const DeepCollectionEquality().hash(experimentalElement) ^
       const DeepCollectionEquality().hash(date) ^
+      const DeepCollectionEquality().hash(dateElement) ^
       const DeepCollectionEquality().hash(publisher) ^
+      const DeepCollectionEquality().hash(publisherElement) ^
       const DeepCollectionEquality().hash(description) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(purpose) ^
+      const DeepCollectionEquality().hash(purposeElement) ^
       const DeepCollectionEquality().hash(approvalDate) ^
+      const DeepCollectionEquality().hash(approvalDateElement) ^
       const DeepCollectionEquality().hash(lastReviewDate) ^
+      const DeepCollectionEquality().hash(lastReviewDateElement) ^
       const DeepCollectionEquality().hash(effectivePeriod) ^
       const DeepCollectionEquality().hash(useContext) ^
       const DeepCollectionEquality().hash(jurisdiction) ^
       const DeepCollectionEquality().hash(contact) ^
       const DeepCollectionEquality().hash(copyright) ^
+      const DeepCollectionEquality().hash(copyrightElement) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(subjectType) ^
-      const DeepCollectionEquality().hash(item) ^
-      const DeepCollectionEquality().hash(urlElement) ^
-      const DeepCollectionEquality().hash(versionElement) ^
-      const DeepCollectionEquality().hash(nameElement) ^
-      const DeepCollectionEquality().hash(titleElement) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(experimentalElement) ^
-      const DeepCollectionEquality().hash(dateElement) ^
-      const DeepCollectionEquality().hash(publisherElement) ^
-      const DeepCollectionEquality().hash(descriptionElement) ^
-      const DeepCollectionEquality().hash(purposeElement) ^
-      const DeepCollectionEquality().hash(approvalDateElement) ^
-      const DeepCollectionEquality().hash(lastReviewDateElement) ^
-      const DeepCollectionEquality().hash(copyrightElement) ^
-      const DeepCollectionEquality().hash(subjectTypeElement);
+      const DeepCollectionEquality().hash(subjectTypeElement) ^
+      const DeepCollectionEquality().hash(item);
 
   @override
   _$QuestionnaireCopyWith<_Questionnaire> get copyWith =>
@@ -8371,74 +8249,58 @@ class _$_Questionnaire extends _Questionnaire {
 abstract class _Questionnaire extends Questionnaire {
   _Questionnaire._() : super._();
   factory _Questionnaire(
-      {@required
-      @JsonKey(required: true, defaultValue: 'Questionnaire')
-          String resourceType,
+      {@required @JsonKey(defaultValue: 'Questionnaire') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String url,
+      @JsonKey(name: '_url') Element urlElement,
       List<Identifier> identifier,
       String version,
+      @JsonKey(name: '_version') Element versionElement,
       String name,
+      @JsonKey(name: '_name') Element nameElement,
       String title,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
+      @JsonKey(name: '_title') Element titleElement,
+      QuestionnaireStatus status,
+      @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
-      FhirDateTime date,
+      @JsonKey(name: '_experimental') Element experimentalElement,
+      Date date,
+      @JsonKey(name: '_date') Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher') Element publisherElement,
       String description,
+      @JsonKey(name: '_description') Element descriptionElement,
       String purpose,
+      @JsonKey(name: '_purpose') Element purposeElement,
       Date approvalDate,
+      @JsonKey(name: '_approvalDate') Element approvalDateElement,
       Date lastReviewDate,
+      @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
       Period effectivePeriod,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       List<ContactDetail> contact,
       String copyright,
+      @JsonKey(name: '_copyright') Element copyrightElement,
       List<Coding> code,
-      List<Code> subjectType,
-      List<QuestionnaireItem> item,
-      @JsonKey(name: '_url')
-          Element urlElement,
-      @JsonKey(name: '_version')
-          Element versionElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
-      @JsonKey(name: '_approvalDate')
-          Element approvalDateElement,
-      @JsonKey(name: '_lastReviewDate')
-          Element lastReviewDateElement,
-      @JsonKey(name: '_copyright')
-          Element copyrightElement,
-      @JsonKey(name: '_subjectType')
-          Element subjectTypeElement}) = _$_Questionnaire;
+      List<String> subjectType,
+      @JsonKey(name: '_subjectType') List<Element> subjectTypeElement,
+      List<QuestionnaireItem> item}) = _$_Questionnaire;
 
   factory _Questionnaire.fromJson(Map<String, dynamic> json) =
       _$_Questionnaire.fromJson;
 
   @override
-  @JsonKey(required: true, defaultValue: 'Questionnaire')
+  @JsonKey(defaultValue: 'Questionnaire')
   String get resourceType;
   @override
   Id get id;
@@ -8447,7 +8309,13 @@ abstract class _Questionnaire extends Questionnaire {
   @override
   FhirUri get implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
   Code get language;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
   @override
   Narrative get text;
   @override
@@ -8460,30 +8328,65 @@ abstract class _Questionnaire extends Questionnaire {
   @override
   String get url;
   @override
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @override
   List<Identifier> get identifier;
   @override
   String get version;
   @override
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @override
   String get name;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
   @override
   String get title;
   @override
-  @JsonKey(unknownEnumValue: Status.unknown)
-  Status get status;
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @override
+  QuestionnaireStatus get status;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
   @override
   Boolean get experimental;
   @override
-  FhirDateTime get date;
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  @override
+  Date get date;
+  @override
+  @JsonKey(name: '_date')
+  Element get dateElement;
   @override
   String get publisher;
   @override
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
+  @override
   String get description;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
   @override
   String get purpose;
   @override
+  @JsonKey(name: '_purpose')
+  Element get purposeElement;
+  @override
   Date get approvalDate;
   @override
+  @JsonKey(name: '_approvalDate')
+  Element get approvalDateElement;
+  @override
   Date get lastReviewDate;
+  @override
+  @JsonKey(name: '_lastReviewDate')
+  Element get lastReviewDateElement;
   @override
   Period get effectivePeriod;
   @override
@@ -8495,53 +8398,17 @@ abstract class _Questionnaire extends Questionnaire {
   @override
   String get copyright;
   @override
-  List<Coding> get code;
-  @override
-  List<Code> get subjectType;
-  @override
-  List<QuestionnaireItem> get item;
-  @override
-  @JsonKey(name: '_url')
-  Element get urlElement;
-  @override
-  @JsonKey(name: '_version')
-  Element get versionElement;
-  @override
-  @JsonKey(name: '_name')
-  Element get nameElement;
-  @override
-  @JsonKey(name: '_title')
-  Element get titleElement;
-  @override
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @override
-  @JsonKey(name: '_experimental')
-  Element get experimentalElement;
-  @override
-  @JsonKey(name: '_date')
-  Element get dateElement;
-  @override
-  @JsonKey(name: '_publisher')
-  Element get publisherElement;
-  @override
-  @JsonKey(name: '_description')
-  Element get descriptionElement;
-  @override
-  @JsonKey(name: '_purpose')
-  Element get purposeElement;
-  @override
-  @JsonKey(name: '_approvalDate')
-  Element get approvalDateElement;
-  @override
-  @JsonKey(name: '_lastReviewDate')
-  Element get lastReviewDateElement;
-  @override
   @JsonKey(name: '_copyright')
   Element get copyrightElement;
   @override
+  List<Coding> get code;
+  @override
+  List<String> get subjectType;
+  @override
   @JsonKey(name: '_subjectType')
-  Element get subjectTypeElement;
+  List<Element> get subjectTypeElement;
+  @override
+  List<QuestionnaireItem> get item;
   @override
   _$QuestionnaireCopyWith<_Questionnaire> get copyWith;
 }
@@ -8553,112 +8420,95 @@ QuestionnaireItem _$QuestionnaireItemFromJson(Map<String, dynamic> json) {
 class _$QuestionnaireItemTearOff {
   const _$QuestionnaireItemTearOff();
 
+// ignore: unused_element
   _QuestionnaireItem call(
       {String linkId,
+      @JsonKey(name: '_linkId') Element linkIdElement,
       String definition,
+      @JsonKey(name: '_definition') Element definitionElement,
       List<Coding> code,
       String prefix,
+      @JsonKey(name: '_prefix') Element prefixElement,
       String text,
-      @JsonKey(unknownEnumValue: QuestionnaireItemType.unknown)
-          QuestionnaireItemType type,
+      @JsonKey(name: '_text') Element textElement,
+      QuestionnaireItemType type,
+      @JsonKey(name: '_type') Element typeElement,
       List<QuestionnaireEnableWhen> enableWhen,
-      Boolean required,
+      @JsonKey(name: 'required') Boolean required_,
+      @JsonKey(name: '_required') Element requiredElement,
       Boolean repeats,
+      @JsonKey(name: '_repeats') Element repeatsElement,
       Boolean readOnly,
-      Integer maxLength,
+      @JsonKey(name: '_readOnly') Element readOnlyElement,
+      Decimal maxLength,
+      @JsonKey(name: '_maxLength') Element maxLengthElement,
       Reference options,
       List<QuestionnaireOption> option,
       Boolean initialBoolean,
+      @JsonKey(name: '_initialBoolean') Element initialBooleanElement,
       Decimal initialDecimal,
-      Integer initialInteger,
+      @JsonKey(name: '_initialDecimal') Element initialDecimalElement,
+      Decimal initialInteger,
+      @JsonKey(name: '_initialInteger') Element initialIntegerElement,
       Date initialDate,
+      @JsonKey(name: '_initialDate') Element initialDateElement,
       FhirDateTime initialDateTime,
+      @JsonKey(name: '_initialDateTime') Element initialDateTimeElement,
       Time initialTime,
+      @JsonKey(name: '_initialTime') Element initialTimeElement,
       String initialString,
+      @JsonKey(name: '_initialString') Element initialStringElement,
       String initialUri,
+      @JsonKey(name: '_initialUri') Element initialUriElement,
       Attachment initialAttachment,
       Coding initialCoding,
       Quantity initialQuantity,
       Reference initialReference,
-      List<QuestionnaireItem> item,
-      @JsonKey(name: '_linkId')
-          Element linkIdElement,
-      @JsonKey(name: '_definition')
-          Element definitionElement,
-      @JsonKey(name: '_prefix')
-          Element prefixElement,
-      @JsonKey(name: '_text')
-          Element textElement,
-      @JsonKey(name: '_type')
-          Element typeElement,
-      @JsonKey(name: '_required')
-          Element requiredElement,
-      @JsonKey(name: '_repeats')
-          Element repeatsElement,
-      @JsonKey(name: '_readOnly')
-          Element readOnlyElement,
-      @JsonKey(name: '_maxLength')
-          Element maxLengthElement,
-      @JsonKey(name: '_initialBoolean')
-          Element initialBooleanElement,
-      @JsonKey(name: '_initialDecimal')
-          Element initialDecimalElement,
-      @JsonKey(name: '_initialInteger')
-          Element initialIntegerElement,
-      @JsonKey(name: '_initialDate')
-          Element initialDateElement,
-      @JsonKey(name: '_initialDateTime')
-          Element initialDateTimeElement,
-      @JsonKey(name: '_initialTime')
-          Element initialTimeElement,
-      @JsonKey(name: '_initialString')
-          Element initialStringElement,
-      @JsonKey(name: '_initialUri')
-          Element initialUriElement}) {
+      List<QuestionnaireItem> item}) {
     return _QuestionnaireItem(
       linkId: linkId,
+      linkIdElement: linkIdElement,
       definition: definition,
+      definitionElement: definitionElement,
       code: code,
       prefix: prefix,
+      prefixElement: prefixElement,
       text: text,
+      textElement: textElement,
       type: type,
+      typeElement: typeElement,
       enableWhen: enableWhen,
-      required: required,
+      required_: required_,
+      requiredElement: requiredElement,
       repeats: repeats,
+      repeatsElement: repeatsElement,
       readOnly: readOnly,
+      readOnlyElement: readOnlyElement,
       maxLength: maxLength,
+      maxLengthElement: maxLengthElement,
       options: options,
       option: option,
       initialBoolean: initialBoolean,
+      initialBooleanElement: initialBooleanElement,
       initialDecimal: initialDecimal,
+      initialDecimalElement: initialDecimalElement,
       initialInteger: initialInteger,
+      initialIntegerElement: initialIntegerElement,
       initialDate: initialDate,
+      initialDateElement: initialDateElement,
       initialDateTime: initialDateTime,
+      initialDateTimeElement: initialDateTimeElement,
       initialTime: initialTime,
+      initialTimeElement: initialTimeElement,
       initialString: initialString,
+      initialStringElement: initialStringElement,
       initialUri: initialUri,
+      initialUriElement: initialUriElement,
       initialAttachment: initialAttachment,
       initialCoding: initialCoding,
       initialQuantity: initialQuantity,
       initialReference: initialReference,
       item: item,
-      linkIdElement: linkIdElement,
-      definitionElement: definitionElement,
-      prefixElement: prefixElement,
-      textElement: textElement,
-      typeElement: typeElement,
-      requiredElement: requiredElement,
-      repeatsElement: repeatsElement,
-      readOnlyElement: readOnlyElement,
-      maxLengthElement: maxLengthElement,
-      initialBooleanElement: initialBooleanElement,
-      initialDecimalElement: initialDecimalElement,
-      initialIntegerElement: initialIntegerElement,
-      initialDateElement: initialDateElement,
-      initialDateTimeElement: initialDateTimeElement,
-      initialTimeElement: initialTimeElement,
-      initialStringElement: initialStringElement,
-      initialUriElement: initialUriElement,
     );
   }
 }
@@ -8668,66 +8518,66 @@ const $QuestionnaireItem = _$QuestionnaireItemTearOff();
 
 mixin _$QuestionnaireItem {
   String get linkId;
+  @JsonKey(name: '_linkId')
+  Element get linkIdElement;
   String get definition;
+  @JsonKey(name: '_definition')
+  Element get definitionElement;
   List<Coding> get code;
   String get prefix;
+  @JsonKey(name: '_prefix')
+  Element get prefixElement;
   String get text;
-  @JsonKey(unknownEnumValue: QuestionnaireItemType.unknown)
+  @JsonKey(name: '_text')
+  Element get textElement;
   QuestionnaireItemType get type;
+  @JsonKey(name: '_type')
+  Element get typeElement;
   List<QuestionnaireEnableWhen> get enableWhen;
-  Boolean get required;
+  @JsonKey(name: 'required')
+  Boolean get required_;
+  @JsonKey(name: '_required')
+  Element get requiredElement;
   Boolean get repeats;
+  @JsonKey(name: '_repeats')
+  Element get repeatsElement;
   Boolean get readOnly;
-  Integer get maxLength;
+  @JsonKey(name: '_readOnly')
+  Element get readOnlyElement;
+  Decimal get maxLength;
+  @JsonKey(name: '_maxLength')
+  Element get maxLengthElement;
   Reference get options;
   List<QuestionnaireOption> get option;
   Boolean get initialBoolean;
+  @JsonKey(name: '_initialBoolean')
+  Element get initialBooleanElement;
   Decimal get initialDecimal;
-  Integer get initialInteger;
+  @JsonKey(name: '_initialDecimal')
+  Element get initialDecimalElement;
+  Decimal get initialInteger;
+  @JsonKey(name: '_initialInteger')
+  Element get initialIntegerElement;
   Date get initialDate;
+  @JsonKey(name: '_initialDate')
+  Element get initialDateElement;
   FhirDateTime get initialDateTime;
+  @JsonKey(name: '_initialDateTime')
+  Element get initialDateTimeElement;
   Time get initialTime;
+  @JsonKey(name: '_initialTime')
+  Element get initialTimeElement;
   String get initialString;
+  @JsonKey(name: '_initialString')
+  Element get initialStringElement;
   String get initialUri;
+  @JsonKey(name: '_initialUri')
+  Element get initialUriElement;
   Attachment get initialAttachment;
   Coding get initialCoding;
   Quantity get initialQuantity;
   Reference get initialReference;
   List<QuestionnaireItem> get item;
-  @JsonKey(name: '_linkId')
-  Element get linkIdElement;
-  @JsonKey(name: '_definition')
-  Element get definitionElement;
-  @JsonKey(name: '_prefix')
-  Element get prefixElement;
-  @JsonKey(name: '_text')
-  Element get textElement;
-  @JsonKey(name: '_type')
-  Element get typeElement;
-  @JsonKey(name: '_required')
-  Element get requiredElement;
-  @JsonKey(name: '_repeats')
-  Element get repeatsElement;
-  @JsonKey(name: '_readOnly')
-  Element get readOnlyElement;
-  @JsonKey(name: '_maxLength')
-  Element get maxLengthElement;
-  @JsonKey(name: '_initialBoolean')
-  Element get initialBooleanElement;
-  @JsonKey(name: '_initialDecimal')
-  Element get initialDecimalElement;
-  @JsonKey(name: '_initialInteger')
-  Element get initialIntegerElement;
-  @JsonKey(name: '_initialDate')
-  Element get initialDateElement;
-  @JsonKey(name: '_initialDateTime')
-  Element get initialDateTimeElement;
-  @JsonKey(name: '_initialTime')
-  Element get initialTimeElement;
-  @JsonKey(name: '_initialString')
-  Element get initialStringElement;
-  @JsonKey(name: '_initialUri')
-  Element get initialUriElement;
 
   Map<String, dynamic> toJson();
   $QuestionnaireItemCopyWith<QuestionnaireItem> get copyWith;
@@ -8739,72 +8589,49 @@ abstract class $QuestionnaireItemCopyWith<$Res> {
       _$QuestionnaireItemCopyWithImpl<$Res>;
   $Res call(
       {String linkId,
+      @JsonKey(name: '_linkId') Element linkIdElement,
       String definition,
+      @JsonKey(name: '_definition') Element definitionElement,
       List<Coding> code,
       String prefix,
+      @JsonKey(name: '_prefix') Element prefixElement,
       String text,
-      @JsonKey(unknownEnumValue: QuestionnaireItemType.unknown)
-          QuestionnaireItemType type,
+      @JsonKey(name: '_text') Element textElement,
+      QuestionnaireItemType type,
+      @JsonKey(name: '_type') Element typeElement,
       List<QuestionnaireEnableWhen> enableWhen,
-      Boolean required,
+      @JsonKey(name: 'required') Boolean required_,
+      @JsonKey(name: '_required') Element requiredElement,
       Boolean repeats,
+      @JsonKey(name: '_repeats') Element repeatsElement,
       Boolean readOnly,
-      Integer maxLength,
+      @JsonKey(name: '_readOnly') Element readOnlyElement,
+      Decimal maxLength,
+      @JsonKey(name: '_maxLength') Element maxLengthElement,
       Reference options,
       List<QuestionnaireOption> option,
       Boolean initialBoolean,
+      @JsonKey(name: '_initialBoolean') Element initialBooleanElement,
       Decimal initialDecimal,
-      Integer initialInteger,
+      @JsonKey(name: '_initialDecimal') Element initialDecimalElement,
+      Decimal initialInteger,
+      @JsonKey(name: '_initialInteger') Element initialIntegerElement,
       Date initialDate,
+      @JsonKey(name: '_initialDate') Element initialDateElement,
       FhirDateTime initialDateTime,
+      @JsonKey(name: '_initialDateTime') Element initialDateTimeElement,
       Time initialTime,
+      @JsonKey(name: '_initialTime') Element initialTimeElement,
       String initialString,
+      @JsonKey(name: '_initialString') Element initialStringElement,
       String initialUri,
+      @JsonKey(name: '_initialUri') Element initialUriElement,
       Attachment initialAttachment,
       Coding initialCoding,
       Quantity initialQuantity,
       Reference initialReference,
-      List<QuestionnaireItem> item,
-      @JsonKey(name: '_linkId')
-          Element linkIdElement,
-      @JsonKey(name: '_definition')
-          Element definitionElement,
-      @JsonKey(name: '_prefix')
-          Element prefixElement,
-      @JsonKey(name: '_text')
-          Element textElement,
-      @JsonKey(name: '_type')
-          Element typeElement,
-      @JsonKey(name: '_required')
-          Element requiredElement,
-      @JsonKey(name: '_repeats')
-          Element repeatsElement,
-      @JsonKey(name: '_readOnly')
-          Element readOnlyElement,
-      @JsonKey(name: '_maxLength')
-          Element maxLengthElement,
-      @JsonKey(name: '_initialBoolean')
-          Element initialBooleanElement,
-      @JsonKey(name: '_initialDecimal')
-          Element initialDecimalElement,
-      @JsonKey(name: '_initialInteger')
-          Element initialIntegerElement,
-      @JsonKey(name: '_initialDate')
-          Element initialDateElement,
-      @JsonKey(name: '_initialDateTime')
-          Element initialDateTimeElement,
-      @JsonKey(name: '_initialTime')
-          Element initialTimeElement,
-      @JsonKey(name: '_initialString')
-          Element initialStringElement,
-      @JsonKey(name: '_initialUri')
-          Element initialUriElement});
+      List<QuestionnaireItem> item});
 
-  $ReferenceCopyWith<$Res> get options;
-  $AttachmentCopyWith<$Res> get initialAttachment;
-  $CodingCopyWith<$Res> get initialCoding;
-  $QuantityCopyWith<$Res> get initialQuantity;
-  $ReferenceCopyWith<$Res> get initialReference;
   $ElementCopyWith<$Res> get linkIdElement;
   $ElementCopyWith<$Res> get definitionElement;
   $ElementCopyWith<$Res> get prefixElement;
@@ -8814,6 +8641,7 @@ abstract class $QuestionnaireItemCopyWith<$Res> {
   $ElementCopyWith<$Res> get repeatsElement;
   $ElementCopyWith<$Res> get readOnlyElement;
   $ElementCopyWith<$Res> get maxLengthElement;
+  $ReferenceCopyWith<$Res> get options;
   $ElementCopyWith<$Res> get initialBooleanElement;
   $ElementCopyWith<$Res> get initialDecimalElement;
   $ElementCopyWith<$Res> get initialIntegerElement;
@@ -8822,6 +8650,10 @@ abstract class $QuestionnaireItemCopyWith<$Res> {
   $ElementCopyWith<$Res> get initialTimeElement;
   $ElementCopyWith<$Res> get initialStringElement;
   $ElementCopyWith<$Res> get initialUriElement;
+  $AttachmentCopyWith<$Res> get initialAttachment;
+  $CodingCopyWith<$Res> get initialCoding;
+  $QuantityCopyWith<$Res> get initialQuantity;
+  $ReferenceCopyWith<$Res> get initialReference;
 }
 
 class _$QuestionnaireItemCopyWithImpl<$Res>
@@ -8835,64 +8667,89 @@ class _$QuestionnaireItemCopyWithImpl<$Res>
   @override
   $Res call({
     Object linkId = freezed,
+    Object linkIdElement = freezed,
     Object definition = freezed,
+    Object definitionElement = freezed,
     Object code = freezed,
     Object prefix = freezed,
+    Object prefixElement = freezed,
     Object text = freezed,
+    Object textElement = freezed,
     Object type = freezed,
+    Object typeElement = freezed,
     Object enableWhen = freezed,
-    Object required = freezed,
+    Object required_ = freezed,
+    Object requiredElement = freezed,
     Object repeats = freezed,
+    Object repeatsElement = freezed,
     Object readOnly = freezed,
+    Object readOnlyElement = freezed,
     Object maxLength = freezed,
+    Object maxLengthElement = freezed,
     Object options = freezed,
     Object option = freezed,
     Object initialBoolean = freezed,
+    Object initialBooleanElement = freezed,
     Object initialDecimal = freezed,
+    Object initialDecimalElement = freezed,
     Object initialInteger = freezed,
+    Object initialIntegerElement = freezed,
     Object initialDate = freezed,
+    Object initialDateElement = freezed,
     Object initialDateTime = freezed,
+    Object initialDateTimeElement = freezed,
     Object initialTime = freezed,
+    Object initialTimeElement = freezed,
     Object initialString = freezed,
+    Object initialStringElement = freezed,
     Object initialUri = freezed,
+    Object initialUriElement = freezed,
     Object initialAttachment = freezed,
     Object initialCoding = freezed,
     Object initialQuantity = freezed,
     Object initialReference = freezed,
     Object item = freezed,
-    Object linkIdElement = freezed,
-    Object definitionElement = freezed,
-    Object prefixElement = freezed,
-    Object textElement = freezed,
-    Object typeElement = freezed,
-    Object requiredElement = freezed,
-    Object repeatsElement = freezed,
-    Object readOnlyElement = freezed,
-    Object maxLengthElement = freezed,
-    Object initialBooleanElement = freezed,
-    Object initialDecimalElement = freezed,
-    Object initialIntegerElement = freezed,
-    Object initialDateElement = freezed,
-    Object initialDateTimeElement = freezed,
-    Object initialTimeElement = freezed,
-    Object initialStringElement = freezed,
-    Object initialUriElement = freezed,
   }) {
     return _then(_value.copyWith(
       linkId: linkId == freezed ? _value.linkId : linkId as String,
+      linkIdElement: linkIdElement == freezed
+          ? _value.linkIdElement
+          : linkIdElement as Element,
       definition:
           definition == freezed ? _value.definition : definition as String,
+      definitionElement: definitionElement == freezed
+          ? _value.definitionElement
+          : definitionElement as Element,
       code: code == freezed ? _value.code : code as List<Coding>,
       prefix: prefix == freezed ? _value.prefix : prefix as String,
+      prefixElement: prefixElement == freezed
+          ? _value.prefixElement
+          : prefixElement as Element,
       text: text == freezed ? _value.text : text as String,
+      textElement:
+          textElement == freezed ? _value.textElement : textElement as Element,
       type: type == freezed ? _value.type : type as QuestionnaireItemType,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
       enableWhen: enableWhen == freezed
           ? _value.enableWhen
           : enableWhen as List<QuestionnaireEnableWhen>,
-      required: required == freezed ? _value.required : required as Boolean,
+      required_: required_ == freezed ? _value.required_ : required_ as Boolean,
+      requiredElement: requiredElement == freezed
+          ? _value.requiredElement
+          : requiredElement as Element,
       repeats: repeats == freezed ? _value.repeats : repeats as Boolean,
+      repeatsElement: repeatsElement == freezed
+          ? _value.repeatsElement
+          : repeatsElement as Element,
       readOnly: readOnly == freezed ? _value.readOnly : readOnly as Boolean,
-      maxLength: maxLength == freezed ? _value.maxLength : maxLength as Integer,
+      readOnlyElement: readOnlyElement == freezed
+          ? _value.readOnlyElement
+          : readOnlyElement as Element,
+      maxLength: maxLength == freezed ? _value.maxLength : maxLength as Decimal,
+      maxLengthElement: maxLengthElement == freezed
+          ? _value.maxLengthElement
+          : maxLengthElement as Element,
       options: options == freezed ? _value.options : options as Reference,
       option: option == freezed
           ? _value.option
@@ -8900,24 +8757,48 @@ class _$QuestionnaireItemCopyWithImpl<$Res>
       initialBoolean: initialBoolean == freezed
           ? _value.initialBoolean
           : initialBoolean as Boolean,
+      initialBooleanElement: initialBooleanElement == freezed
+          ? _value.initialBooleanElement
+          : initialBooleanElement as Element,
       initialDecimal: initialDecimal == freezed
           ? _value.initialDecimal
           : initialDecimal as Decimal,
+      initialDecimalElement: initialDecimalElement == freezed
+          ? _value.initialDecimalElement
+          : initialDecimalElement as Element,
       initialInteger: initialInteger == freezed
           ? _value.initialInteger
-          : initialInteger as Integer,
+          : initialInteger as Decimal,
+      initialIntegerElement: initialIntegerElement == freezed
+          ? _value.initialIntegerElement
+          : initialIntegerElement as Element,
       initialDate:
           initialDate == freezed ? _value.initialDate : initialDate as Date,
+      initialDateElement: initialDateElement == freezed
+          ? _value.initialDateElement
+          : initialDateElement as Element,
       initialDateTime: initialDateTime == freezed
           ? _value.initialDateTime
           : initialDateTime as FhirDateTime,
+      initialDateTimeElement: initialDateTimeElement == freezed
+          ? _value.initialDateTimeElement
+          : initialDateTimeElement as Element,
       initialTime:
           initialTime == freezed ? _value.initialTime : initialTime as Time,
+      initialTimeElement: initialTimeElement == freezed
+          ? _value.initialTimeElement
+          : initialTimeElement as Element,
       initialString: initialString == freezed
           ? _value.initialString
           : initialString as String,
+      initialStringElement: initialStringElement == freezed
+          ? _value.initialStringElement
+          : initialStringElement as Element,
       initialUri:
           initialUri == freezed ? _value.initialUri : initialUri as String,
+      initialUriElement: initialUriElement == freezed
+          ? _value.initialUriElement
+          : initialUriElement as Element,
       initialAttachment: initialAttachment == freezed
           ? _value.initialAttachment
           : initialAttachment as Attachment,
@@ -8931,106 +8812,7 @@ class _$QuestionnaireItemCopyWithImpl<$Res>
           ? _value.initialReference
           : initialReference as Reference,
       item: item == freezed ? _value.item : item as List<QuestionnaireItem>,
-      linkIdElement: linkIdElement == freezed
-          ? _value.linkIdElement
-          : linkIdElement as Element,
-      definitionElement: definitionElement == freezed
-          ? _value.definitionElement
-          : definitionElement as Element,
-      prefixElement: prefixElement == freezed
-          ? _value.prefixElement
-          : prefixElement as Element,
-      textElement:
-          textElement == freezed ? _value.textElement : textElement as Element,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element,
-      requiredElement: requiredElement == freezed
-          ? _value.requiredElement
-          : requiredElement as Element,
-      repeatsElement: repeatsElement == freezed
-          ? _value.repeatsElement
-          : repeatsElement as Element,
-      readOnlyElement: readOnlyElement == freezed
-          ? _value.readOnlyElement
-          : readOnlyElement as Element,
-      maxLengthElement: maxLengthElement == freezed
-          ? _value.maxLengthElement
-          : maxLengthElement as Element,
-      initialBooleanElement: initialBooleanElement == freezed
-          ? _value.initialBooleanElement
-          : initialBooleanElement as Element,
-      initialDecimalElement: initialDecimalElement == freezed
-          ? _value.initialDecimalElement
-          : initialDecimalElement as Element,
-      initialIntegerElement: initialIntegerElement == freezed
-          ? _value.initialIntegerElement
-          : initialIntegerElement as Element,
-      initialDateElement: initialDateElement == freezed
-          ? _value.initialDateElement
-          : initialDateElement as Element,
-      initialDateTimeElement: initialDateTimeElement == freezed
-          ? _value.initialDateTimeElement
-          : initialDateTimeElement as Element,
-      initialTimeElement: initialTimeElement == freezed
-          ? _value.initialTimeElement
-          : initialTimeElement as Element,
-      initialStringElement: initialStringElement == freezed
-          ? _value.initialStringElement
-          : initialStringElement as Element,
-      initialUriElement: initialUriElement == freezed
-          ? _value.initialUriElement
-          : initialUriElement as Element,
     ));
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get options {
-    if (_value.options == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.options, (value) {
-      return _then(_value.copyWith(options: value));
-    });
-  }
-
-  @override
-  $AttachmentCopyWith<$Res> get initialAttachment {
-    if (_value.initialAttachment == null) {
-      return null;
-    }
-    return $AttachmentCopyWith<$Res>(_value.initialAttachment, (value) {
-      return _then(_value.copyWith(initialAttachment: value));
-    });
-  }
-
-  @override
-  $CodingCopyWith<$Res> get initialCoding {
-    if (_value.initialCoding == null) {
-      return null;
-    }
-    return $CodingCopyWith<$Res>(_value.initialCoding, (value) {
-      return _then(_value.copyWith(initialCoding: value));
-    });
-  }
-
-  @override
-  $QuantityCopyWith<$Res> get initialQuantity {
-    if (_value.initialQuantity == null) {
-      return null;
-    }
-    return $QuantityCopyWith<$Res>(_value.initialQuantity, (value) {
-      return _then(_value.copyWith(initialQuantity: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get initialReference {
-    if (_value.initialReference == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.initialReference, (value) {
-      return _then(_value.copyWith(initialReference: value));
-    });
   }
 
   @override
@@ -9124,6 +8906,16 @@ class _$QuestionnaireItemCopyWithImpl<$Res>
   }
 
   @override
+  $ReferenceCopyWith<$Res> get options {
+    if (_value.options == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.options, (value) {
+      return _then(_value.copyWith(options: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res> get initialBooleanElement {
     if (_value.initialBooleanElement == null) {
       return null;
@@ -9202,6 +8994,46 @@ class _$QuestionnaireItemCopyWithImpl<$Res>
       return _then(_value.copyWith(initialUriElement: value));
     });
   }
+
+  @override
+  $AttachmentCopyWith<$Res> get initialAttachment {
+    if (_value.initialAttachment == null) {
+      return null;
+    }
+    return $AttachmentCopyWith<$Res>(_value.initialAttachment, (value) {
+      return _then(_value.copyWith(initialAttachment: value));
+    });
+  }
+
+  @override
+  $CodingCopyWith<$Res> get initialCoding {
+    if (_value.initialCoding == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.initialCoding, (value) {
+      return _then(_value.copyWith(initialCoding: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get initialQuantity {
+    if (_value.initialQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.initialQuantity, (value) {
+      return _then(_value.copyWith(initialQuantity: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get initialReference {
+    if (_value.initialReference == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.initialReference, (value) {
+      return _then(_value.copyWith(initialReference: value));
+    });
+  }
 }
 
 abstract class _$QuestionnaireItemCopyWith<$Res>
@@ -9212,77 +9044,49 @@ abstract class _$QuestionnaireItemCopyWith<$Res>
   @override
   $Res call(
       {String linkId,
+      @JsonKey(name: '_linkId') Element linkIdElement,
       String definition,
+      @JsonKey(name: '_definition') Element definitionElement,
       List<Coding> code,
       String prefix,
+      @JsonKey(name: '_prefix') Element prefixElement,
       String text,
-      @JsonKey(unknownEnumValue: QuestionnaireItemType.unknown)
-          QuestionnaireItemType type,
+      @JsonKey(name: '_text') Element textElement,
+      QuestionnaireItemType type,
+      @JsonKey(name: '_type') Element typeElement,
       List<QuestionnaireEnableWhen> enableWhen,
-      Boolean required,
+      @JsonKey(name: 'required') Boolean required_,
+      @JsonKey(name: '_required') Element requiredElement,
       Boolean repeats,
+      @JsonKey(name: '_repeats') Element repeatsElement,
       Boolean readOnly,
-      Integer maxLength,
+      @JsonKey(name: '_readOnly') Element readOnlyElement,
+      Decimal maxLength,
+      @JsonKey(name: '_maxLength') Element maxLengthElement,
       Reference options,
       List<QuestionnaireOption> option,
       Boolean initialBoolean,
+      @JsonKey(name: '_initialBoolean') Element initialBooleanElement,
       Decimal initialDecimal,
-      Integer initialInteger,
+      @JsonKey(name: '_initialDecimal') Element initialDecimalElement,
+      Decimal initialInteger,
+      @JsonKey(name: '_initialInteger') Element initialIntegerElement,
       Date initialDate,
+      @JsonKey(name: '_initialDate') Element initialDateElement,
       FhirDateTime initialDateTime,
+      @JsonKey(name: '_initialDateTime') Element initialDateTimeElement,
       Time initialTime,
+      @JsonKey(name: '_initialTime') Element initialTimeElement,
       String initialString,
+      @JsonKey(name: '_initialString') Element initialStringElement,
       String initialUri,
+      @JsonKey(name: '_initialUri') Element initialUriElement,
       Attachment initialAttachment,
       Coding initialCoding,
       Quantity initialQuantity,
       Reference initialReference,
-      List<QuestionnaireItem> item,
-      @JsonKey(name: '_linkId')
-          Element linkIdElement,
-      @JsonKey(name: '_definition')
-          Element definitionElement,
-      @JsonKey(name: '_prefix')
-          Element prefixElement,
-      @JsonKey(name: '_text')
-          Element textElement,
-      @JsonKey(name: '_type')
-          Element typeElement,
-      @JsonKey(name: '_required')
-          Element requiredElement,
-      @JsonKey(name: '_repeats')
-          Element repeatsElement,
-      @JsonKey(name: '_readOnly')
-          Element readOnlyElement,
-      @JsonKey(name: '_maxLength')
-          Element maxLengthElement,
-      @JsonKey(name: '_initialBoolean')
-          Element initialBooleanElement,
-      @JsonKey(name: '_initialDecimal')
-          Element initialDecimalElement,
-      @JsonKey(name: '_initialInteger')
-          Element initialIntegerElement,
-      @JsonKey(name: '_initialDate')
-          Element initialDateElement,
-      @JsonKey(name: '_initialDateTime')
-          Element initialDateTimeElement,
-      @JsonKey(name: '_initialTime')
-          Element initialTimeElement,
-      @JsonKey(name: '_initialString')
-          Element initialStringElement,
-      @JsonKey(name: '_initialUri')
-          Element initialUriElement});
+      List<QuestionnaireItem> item});
 
-  @override
-  $ReferenceCopyWith<$Res> get options;
-  @override
-  $AttachmentCopyWith<$Res> get initialAttachment;
-  @override
-  $CodingCopyWith<$Res> get initialCoding;
-  @override
-  $QuantityCopyWith<$Res> get initialQuantity;
-  @override
-  $ReferenceCopyWith<$Res> get initialReference;
   @override
   $ElementCopyWith<$Res> get linkIdElement;
   @override
@@ -9302,6 +9106,8 @@ abstract class _$QuestionnaireItemCopyWith<$Res>
   @override
   $ElementCopyWith<$Res> get maxLengthElement;
   @override
+  $ReferenceCopyWith<$Res> get options;
+  @override
   $ElementCopyWith<$Res> get initialBooleanElement;
   @override
   $ElementCopyWith<$Res> get initialDecimalElement;
@@ -9317,6 +9123,14 @@ abstract class _$QuestionnaireItemCopyWith<$Res>
   $ElementCopyWith<$Res> get initialStringElement;
   @override
   $ElementCopyWith<$Res> get initialUriElement;
+  @override
+  $AttachmentCopyWith<$Res> get initialAttachment;
+  @override
+  $CodingCopyWith<$Res> get initialCoding;
+  @override
+  $QuantityCopyWith<$Res> get initialQuantity;
+  @override
+  $ReferenceCopyWith<$Res> get initialReference;
 }
 
 class __$QuestionnaireItemCopyWithImpl<$Res>
@@ -9332,64 +9146,89 @@ class __$QuestionnaireItemCopyWithImpl<$Res>
   @override
   $Res call({
     Object linkId = freezed,
+    Object linkIdElement = freezed,
     Object definition = freezed,
+    Object definitionElement = freezed,
     Object code = freezed,
     Object prefix = freezed,
+    Object prefixElement = freezed,
     Object text = freezed,
+    Object textElement = freezed,
     Object type = freezed,
+    Object typeElement = freezed,
     Object enableWhen = freezed,
-    Object required = freezed,
+    Object required_ = freezed,
+    Object requiredElement = freezed,
     Object repeats = freezed,
+    Object repeatsElement = freezed,
     Object readOnly = freezed,
+    Object readOnlyElement = freezed,
     Object maxLength = freezed,
+    Object maxLengthElement = freezed,
     Object options = freezed,
     Object option = freezed,
     Object initialBoolean = freezed,
+    Object initialBooleanElement = freezed,
     Object initialDecimal = freezed,
+    Object initialDecimalElement = freezed,
     Object initialInteger = freezed,
+    Object initialIntegerElement = freezed,
     Object initialDate = freezed,
+    Object initialDateElement = freezed,
     Object initialDateTime = freezed,
+    Object initialDateTimeElement = freezed,
     Object initialTime = freezed,
+    Object initialTimeElement = freezed,
     Object initialString = freezed,
+    Object initialStringElement = freezed,
     Object initialUri = freezed,
+    Object initialUriElement = freezed,
     Object initialAttachment = freezed,
     Object initialCoding = freezed,
     Object initialQuantity = freezed,
     Object initialReference = freezed,
     Object item = freezed,
-    Object linkIdElement = freezed,
-    Object definitionElement = freezed,
-    Object prefixElement = freezed,
-    Object textElement = freezed,
-    Object typeElement = freezed,
-    Object requiredElement = freezed,
-    Object repeatsElement = freezed,
-    Object readOnlyElement = freezed,
-    Object maxLengthElement = freezed,
-    Object initialBooleanElement = freezed,
-    Object initialDecimalElement = freezed,
-    Object initialIntegerElement = freezed,
-    Object initialDateElement = freezed,
-    Object initialDateTimeElement = freezed,
-    Object initialTimeElement = freezed,
-    Object initialStringElement = freezed,
-    Object initialUriElement = freezed,
   }) {
     return _then(_QuestionnaireItem(
       linkId: linkId == freezed ? _value.linkId : linkId as String,
+      linkIdElement: linkIdElement == freezed
+          ? _value.linkIdElement
+          : linkIdElement as Element,
       definition:
           definition == freezed ? _value.definition : definition as String,
+      definitionElement: definitionElement == freezed
+          ? _value.definitionElement
+          : definitionElement as Element,
       code: code == freezed ? _value.code : code as List<Coding>,
       prefix: prefix == freezed ? _value.prefix : prefix as String,
+      prefixElement: prefixElement == freezed
+          ? _value.prefixElement
+          : prefixElement as Element,
       text: text == freezed ? _value.text : text as String,
+      textElement:
+          textElement == freezed ? _value.textElement : textElement as Element,
       type: type == freezed ? _value.type : type as QuestionnaireItemType,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
       enableWhen: enableWhen == freezed
           ? _value.enableWhen
           : enableWhen as List<QuestionnaireEnableWhen>,
-      required: required == freezed ? _value.required : required as Boolean,
+      required_: required_ == freezed ? _value.required_ : required_ as Boolean,
+      requiredElement: requiredElement == freezed
+          ? _value.requiredElement
+          : requiredElement as Element,
       repeats: repeats == freezed ? _value.repeats : repeats as Boolean,
+      repeatsElement: repeatsElement == freezed
+          ? _value.repeatsElement
+          : repeatsElement as Element,
       readOnly: readOnly == freezed ? _value.readOnly : readOnly as Boolean,
-      maxLength: maxLength == freezed ? _value.maxLength : maxLength as Integer,
+      readOnlyElement: readOnlyElement == freezed
+          ? _value.readOnlyElement
+          : readOnlyElement as Element,
+      maxLength: maxLength == freezed ? _value.maxLength : maxLength as Decimal,
+      maxLengthElement: maxLengthElement == freezed
+          ? _value.maxLengthElement
+          : maxLengthElement as Element,
       options: options == freezed ? _value.options : options as Reference,
       option: option == freezed
           ? _value.option
@@ -9397,24 +9236,48 @@ class __$QuestionnaireItemCopyWithImpl<$Res>
       initialBoolean: initialBoolean == freezed
           ? _value.initialBoolean
           : initialBoolean as Boolean,
+      initialBooleanElement: initialBooleanElement == freezed
+          ? _value.initialBooleanElement
+          : initialBooleanElement as Element,
       initialDecimal: initialDecimal == freezed
           ? _value.initialDecimal
           : initialDecimal as Decimal,
+      initialDecimalElement: initialDecimalElement == freezed
+          ? _value.initialDecimalElement
+          : initialDecimalElement as Element,
       initialInteger: initialInteger == freezed
           ? _value.initialInteger
-          : initialInteger as Integer,
+          : initialInteger as Decimal,
+      initialIntegerElement: initialIntegerElement == freezed
+          ? _value.initialIntegerElement
+          : initialIntegerElement as Element,
       initialDate:
           initialDate == freezed ? _value.initialDate : initialDate as Date,
+      initialDateElement: initialDateElement == freezed
+          ? _value.initialDateElement
+          : initialDateElement as Element,
       initialDateTime: initialDateTime == freezed
           ? _value.initialDateTime
           : initialDateTime as FhirDateTime,
+      initialDateTimeElement: initialDateTimeElement == freezed
+          ? _value.initialDateTimeElement
+          : initialDateTimeElement as Element,
       initialTime:
           initialTime == freezed ? _value.initialTime : initialTime as Time,
+      initialTimeElement: initialTimeElement == freezed
+          ? _value.initialTimeElement
+          : initialTimeElement as Element,
       initialString: initialString == freezed
           ? _value.initialString
           : initialString as String,
+      initialStringElement: initialStringElement == freezed
+          ? _value.initialStringElement
+          : initialStringElement as Element,
       initialUri:
           initialUri == freezed ? _value.initialUri : initialUri as String,
+      initialUriElement: initialUriElement == freezed
+          ? _value.initialUriElement
+          : initialUriElement as Element,
       initialAttachment: initialAttachment == freezed
           ? _value.initialAttachment
           : initialAttachment as Attachment,
@@ -9428,105 +9291,57 @@ class __$QuestionnaireItemCopyWithImpl<$Res>
           ? _value.initialReference
           : initialReference as Reference,
       item: item == freezed ? _value.item : item as List<QuestionnaireItem>,
-      linkIdElement: linkIdElement == freezed
-          ? _value.linkIdElement
-          : linkIdElement as Element,
-      definitionElement: definitionElement == freezed
-          ? _value.definitionElement
-          : definitionElement as Element,
-      prefixElement: prefixElement == freezed
-          ? _value.prefixElement
-          : prefixElement as Element,
-      textElement:
-          textElement == freezed ? _value.textElement : textElement as Element,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element,
-      requiredElement: requiredElement == freezed
-          ? _value.requiredElement
-          : requiredElement as Element,
-      repeatsElement: repeatsElement == freezed
-          ? _value.repeatsElement
-          : repeatsElement as Element,
-      readOnlyElement: readOnlyElement == freezed
-          ? _value.readOnlyElement
-          : readOnlyElement as Element,
-      maxLengthElement: maxLengthElement == freezed
-          ? _value.maxLengthElement
-          : maxLengthElement as Element,
-      initialBooleanElement: initialBooleanElement == freezed
-          ? _value.initialBooleanElement
-          : initialBooleanElement as Element,
-      initialDecimalElement: initialDecimalElement == freezed
-          ? _value.initialDecimalElement
-          : initialDecimalElement as Element,
-      initialIntegerElement: initialIntegerElement == freezed
-          ? _value.initialIntegerElement
-          : initialIntegerElement as Element,
-      initialDateElement: initialDateElement == freezed
-          ? _value.initialDateElement
-          : initialDateElement as Element,
-      initialDateTimeElement: initialDateTimeElement == freezed
-          ? _value.initialDateTimeElement
-          : initialDateTimeElement as Element,
-      initialTimeElement: initialTimeElement == freezed
-          ? _value.initialTimeElement
-          : initialTimeElement as Element,
-      initialStringElement: initialStringElement == freezed
-          ? _value.initialStringElement
-          : initialStringElement as Element,
-      initialUriElement: initialUriElement == freezed
-          ? _value.initialUriElement
-          : initialUriElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_QuestionnaireItem implements _QuestionnaireItem {
+class _$_QuestionnaireItem extends _QuestionnaireItem {
   _$_QuestionnaireItem(
       {this.linkId,
+      @JsonKey(name: '_linkId') this.linkIdElement,
       this.definition,
+      @JsonKey(name: '_definition') this.definitionElement,
       this.code,
       this.prefix,
+      @JsonKey(name: '_prefix') this.prefixElement,
       this.text,
-      @JsonKey(unknownEnumValue: QuestionnaireItemType.unknown) this.type,
+      @JsonKey(name: '_text') this.textElement,
+      this.type,
+      @JsonKey(name: '_type') this.typeElement,
       this.enableWhen,
-      this.required,
+      @JsonKey(name: 'required') this.required_,
+      @JsonKey(name: '_required') this.requiredElement,
       this.repeats,
+      @JsonKey(name: '_repeats') this.repeatsElement,
       this.readOnly,
+      @JsonKey(name: '_readOnly') this.readOnlyElement,
       this.maxLength,
+      @JsonKey(name: '_maxLength') this.maxLengthElement,
       this.options,
       this.option,
       this.initialBoolean,
+      @JsonKey(name: '_initialBoolean') this.initialBooleanElement,
       this.initialDecimal,
+      @JsonKey(name: '_initialDecimal') this.initialDecimalElement,
       this.initialInteger,
+      @JsonKey(name: '_initialInteger') this.initialIntegerElement,
       this.initialDate,
+      @JsonKey(name: '_initialDate') this.initialDateElement,
       this.initialDateTime,
+      @JsonKey(name: '_initialDateTime') this.initialDateTimeElement,
       this.initialTime,
+      @JsonKey(name: '_initialTime') this.initialTimeElement,
       this.initialString,
+      @JsonKey(name: '_initialString') this.initialStringElement,
       this.initialUri,
+      @JsonKey(name: '_initialUri') this.initialUriElement,
       this.initialAttachment,
       this.initialCoding,
       this.initialQuantity,
       this.initialReference,
-      this.item,
-      @JsonKey(name: '_linkId') this.linkIdElement,
-      @JsonKey(name: '_definition') this.definitionElement,
-      @JsonKey(name: '_prefix') this.prefixElement,
-      @JsonKey(name: '_text') this.textElement,
-      @JsonKey(name: '_type') this.typeElement,
-      @JsonKey(name: '_required') this.requiredElement,
-      @JsonKey(name: '_repeats') this.repeatsElement,
-      @JsonKey(name: '_readOnly') this.readOnlyElement,
-      @JsonKey(name: '_maxLength') this.maxLengthElement,
-      @JsonKey(name: '_initialBoolean') this.initialBooleanElement,
-      @JsonKey(name: '_initialDecimal') this.initialDecimalElement,
-      @JsonKey(name: '_initialInteger') this.initialIntegerElement,
-      @JsonKey(name: '_initialDate') this.initialDateElement,
-      @JsonKey(name: '_initialDateTime') this.initialDateTimeElement,
-      @JsonKey(name: '_initialTime') this.initialTimeElement,
-      @JsonKey(name: '_initialString') this.initialStringElement,
-      @JsonKey(name: '_initialUri') this.initialUriElement});
+      this.item})
+      : super._();
 
   factory _$_QuestionnaireItem.fromJson(Map<String, dynamic> json) =>
       _$_$_QuestionnaireItemFromJson(json);
@@ -9534,26 +9349,53 @@ class _$_QuestionnaireItem implements _QuestionnaireItem {
   @override
   final String linkId;
   @override
+  @JsonKey(name: '_linkId')
+  final Element linkIdElement;
+  @override
   final String definition;
+  @override
+  @JsonKey(name: '_definition')
+  final Element definitionElement;
   @override
   final List<Coding> code;
   @override
   final String prefix;
   @override
+  @JsonKey(name: '_prefix')
+  final Element prefixElement;
+  @override
   final String text;
   @override
-  @JsonKey(unknownEnumValue: QuestionnaireItemType.unknown)
+  @JsonKey(name: '_text')
+  final Element textElement;
+  @override
   final QuestionnaireItemType type;
+  @override
+  @JsonKey(name: '_type')
+  final Element typeElement;
   @override
   final List<QuestionnaireEnableWhen> enableWhen;
   @override
-  final Boolean required;
+  @JsonKey(name: 'required')
+  final Boolean required_;
+  @override
+  @JsonKey(name: '_required')
+  final Element requiredElement;
   @override
   final Boolean repeats;
   @override
+  @JsonKey(name: '_repeats')
+  final Element repeatsElement;
+  @override
   final Boolean readOnly;
   @override
-  final Integer maxLength;
+  @JsonKey(name: '_readOnly')
+  final Element readOnlyElement;
+  @override
+  final Decimal maxLength;
+  @override
+  @JsonKey(name: '_maxLength')
+  final Element maxLengthElement;
   @override
   final Reference options;
   @override
@@ -9561,19 +9403,43 @@ class _$_QuestionnaireItem implements _QuestionnaireItem {
   @override
   final Boolean initialBoolean;
   @override
+  @JsonKey(name: '_initialBoolean')
+  final Element initialBooleanElement;
+  @override
   final Decimal initialDecimal;
   @override
-  final Integer initialInteger;
+  @JsonKey(name: '_initialDecimal')
+  final Element initialDecimalElement;
+  @override
+  final Decimal initialInteger;
+  @override
+  @JsonKey(name: '_initialInteger')
+  final Element initialIntegerElement;
   @override
   final Date initialDate;
   @override
+  @JsonKey(name: '_initialDate')
+  final Element initialDateElement;
+  @override
   final FhirDateTime initialDateTime;
+  @override
+  @JsonKey(name: '_initialDateTime')
+  final Element initialDateTimeElement;
   @override
   final Time initialTime;
   @override
+  @JsonKey(name: '_initialTime')
+  final Element initialTimeElement;
+  @override
   final String initialString;
   @override
+  @JsonKey(name: '_initialString')
+  final Element initialStringElement;
+  @override
   final String initialUri;
+  @override
+  @JsonKey(name: '_initialUri')
+  final Element initialUriElement;
   @override
   final Attachment initialAttachment;
   @override
@@ -9584,61 +9450,10 @@ class _$_QuestionnaireItem implements _QuestionnaireItem {
   final Reference initialReference;
   @override
   final List<QuestionnaireItem> item;
-  @override
-  @JsonKey(name: '_linkId')
-  final Element linkIdElement;
-  @override
-  @JsonKey(name: '_definition')
-  final Element definitionElement;
-  @override
-  @JsonKey(name: '_prefix')
-  final Element prefixElement;
-  @override
-  @JsonKey(name: '_text')
-  final Element textElement;
-  @override
-  @JsonKey(name: '_type')
-  final Element typeElement;
-  @override
-  @JsonKey(name: '_required')
-  final Element requiredElement;
-  @override
-  @JsonKey(name: '_repeats')
-  final Element repeatsElement;
-  @override
-  @JsonKey(name: '_readOnly')
-  final Element readOnlyElement;
-  @override
-  @JsonKey(name: '_maxLength')
-  final Element maxLengthElement;
-  @override
-  @JsonKey(name: '_initialBoolean')
-  final Element initialBooleanElement;
-  @override
-  @JsonKey(name: '_initialDecimal')
-  final Element initialDecimalElement;
-  @override
-  @JsonKey(name: '_initialInteger')
-  final Element initialIntegerElement;
-  @override
-  @JsonKey(name: '_initialDate')
-  final Element initialDateElement;
-  @override
-  @JsonKey(name: '_initialDateTime')
-  final Element initialDateTimeElement;
-  @override
-  @JsonKey(name: '_initialTime')
-  final Element initialTimeElement;
-  @override
-  @JsonKey(name: '_initialString')
-  final Element initialStringElement;
-  @override
-  @JsonKey(name: '_initialUri')
-  final Element initialUriElement;
 
   @override
   String toString() {
-    return 'QuestionnaireItem(linkId: $linkId, definition: $definition, code: $code, prefix: $prefix, text: $text, type: $type, enableWhen: $enableWhen, required: $required, repeats: $repeats, readOnly: $readOnly, maxLength: $maxLength, options: $options, option: $option, initialBoolean: $initialBoolean, initialDecimal: $initialDecimal, initialInteger: $initialInteger, initialDate: $initialDate, initialDateTime: $initialDateTime, initialTime: $initialTime, initialString: $initialString, initialUri: $initialUri, initialAttachment: $initialAttachment, initialCoding: $initialCoding, initialQuantity: $initialQuantity, initialReference: $initialReference, item: $item, linkIdElement: $linkIdElement, definitionElement: $definitionElement, prefixElement: $prefixElement, textElement: $textElement, typeElement: $typeElement, requiredElement: $requiredElement, repeatsElement: $repeatsElement, readOnlyElement: $readOnlyElement, maxLengthElement: $maxLengthElement, initialBooleanElement: $initialBooleanElement, initialDecimalElement: $initialDecimalElement, initialIntegerElement: $initialIntegerElement, initialDateElement: $initialDateElement, initialDateTimeElement: $initialDateTimeElement, initialTimeElement: $initialTimeElement, initialStringElement: $initialStringElement, initialUriElement: $initialUriElement)';
+    return 'QuestionnaireItem(linkId: $linkId, linkIdElement: $linkIdElement, definition: $definition, definitionElement: $definitionElement, code: $code, prefix: $prefix, prefixElement: $prefixElement, text: $text, textElement: $textElement, type: $type, typeElement: $typeElement, enableWhen: $enableWhen, required_: $required_, requiredElement: $requiredElement, repeats: $repeats, repeatsElement: $repeatsElement, readOnly: $readOnly, readOnlyElement: $readOnlyElement, maxLength: $maxLength, maxLengthElement: $maxLengthElement, options: $options, option: $option, initialBoolean: $initialBoolean, initialBooleanElement: $initialBooleanElement, initialDecimal: $initialDecimal, initialDecimalElement: $initialDecimalElement, initialInteger: $initialInteger, initialIntegerElement: $initialIntegerElement, initialDate: $initialDate, initialDateElement: $initialDateElement, initialDateTime: $initialDateTime, initialDateTimeElement: $initialDateTimeElement, initialTime: $initialTime, initialTimeElement: $initialTimeElement, initialString: $initialString, initialStringElement: $initialStringElement, initialUri: $initialUri, initialUriElement: $initialUriElement, initialAttachment: $initialAttachment, initialCoding: $initialCoding, initialQuantity: $initialQuantity, initialReference: $initialReference, item: $item)';
   }
 
   @override
@@ -9647,32 +9462,59 @@ class _$_QuestionnaireItem implements _QuestionnaireItem {
         (other is _QuestionnaireItem &&
             (identical(other.linkId, linkId) ||
                 const DeepCollectionEquality().equals(other.linkId, linkId)) &&
+            (identical(other.linkIdElement, linkIdElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.linkIdElement, linkIdElement)) &&
             (identical(other.definition, definition) ||
                 const DeepCollectionEquality()
                     .equals(other.definition, definition)) &&
+            (identical(other.definitionElement, definitionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.definitionElement, definitionElement)) &&
             (identical(other.code, code) ||
                 const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.prefix, prefix) ||
                 const DeepCollectionEquality().equals(other.prefix, prefix)) &&
+            (identical(other.prefixElement, prefixElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.prefixElement, prefixElement)) &&
             (identical(other.text, text) ||
                 const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.textElement, textElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.textElement, textElement)) &&
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)) &&
+            (identical(other.typeElement, typeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.typeElement, typeElement)) &&
             (identical(other.enableWhen, enableWhen) ||
                 const DeepCollectionEquality()
                     .equals(other.enableWhen, enableWhen)) &&
-            (identical(other.required, required) ||
+            (identical(other.required_, required_) ||
                 const DeepCollectionEquality()
-                    .equals(other.required, required)) &&
+                    .equals(other.required_, required_)) &&
+            (identical(other.requiredElement, requiredElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.requiredElement, requiredElement)) &&
             (identical(other.repeats, repeats) ||
                 const DeepCollectionEquality()
                     .equals(other.repeats, repeats)) &&
+            (identical(other.repeatsElement, repeatsElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.repeatsElement, repeatsElement)) &&
             (identical(other.readOnly, readOnly) ||
                 const DeepCollectionEquality()
                     .equals(other.readOnly, readOnly)) &&
+            (identical(other.readOnlyElement, readOnlyElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.readOnlyElement, readOnlyElement)) &&
             (identical(other.maxLength, maxLength) ||
                 const DeepCollectionEquality()
                     .equals(other.maxLength, maxLength)) &&
+            (identical(other.maxLengthElement, maxLengthElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.maxLengthElement, maxLengthElement)) &&
             (identical(other.options, options) ||
                 const DeepCollectionEquality()
                     .equals(other.options, options)) &&
@@ -9681,104 +9523,77 @@ class _$_QuestionnaireItem implements _QuestionnaireItem {
             (identical(other.initialBoolean, initialBoolean) ||
                 const DeepCollectionEquality()
                     .equals(other.initialBoolean, initialBoolean)) &&
+            (identical(other.initialBooleanElement, initialBooleanElement) ||
+                const DeepCollectionEquality().equals(
+                    other.initialBooleanElement, initialBooleanElement)) &&
             (identical(other.initialDecimal, initialDecimal) ||
-                const DeepCollectionEquality()
-                    .equals(other.initialDecimal, initialDecimal)) &&
-            (identical(other.initialInteger, initialInteger) ||
-                const DeepCollectionEquality()
-                    .equals(other.initialInteger, initialInteger)) &&
-            (identical(other.initialDate, initialDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.initialDate, initialDate)) &&
-            (identical(other.initialDateTime, initialDateTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.initialDateTime, initialDateTime)) &&
-            (identical(other.initialTime, initialTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.initialTime, initialTime)) &&
-            (identical(other.initialString, initialString) ||
-                const DeepCollectionEquality()
-                    .equals(other.initialString, initialString)) &&
-            (identical(other.initialUri, initialUri) ||
-                const DeepCollectionEquality()
-                    .equals(other.initialUri, initialUri)) &&
-            (identical(other.initialAttachment, initialAttachment) ||
-                const DeepCollectionEquality()
-                    .equals(other.initialAttachment, initialAttachment)) &&
-            (identical(other.initialCoding, initialCoding) ||
-                const DeepCollectionEquality()
-                    .equals(other.initialCoding, initialCoding)) &&
-            (identical(other.initialQuantity, initialQuantity) ||
-                const DeepCollectionEquality()
-                    .equals(other.initialQuantity, initialQuantity)) &&
-            (identical(other.initialReference, initialReference) ||
-                const DeepCollectionEquality().equals(other.initialReference, initialReference)) &&
-            (identical(other.item, item) || const DeepCollectionEquality().equals(other.item, item)) &&
-            (identical(other.linkIdElement, linkIdElement) || const DeepCollectionEquality().equals(other.linkIdElement, linkIdElement)) &&
-            (identical(other.definitionElement, definitionElement) || const DeepCollectionEquality().equals(other.definitionElement, definitionElement)) &&
-            (identical(other.prefixElement, prefixElement) || const DeepCollectionEquality().equals(other.prefixElement, prefixElement)) &&
-            (identical(other.textElement, textElement) || const DeepCollectionEquality().equals(other.textElement, textElement)) &&
-            (identical(other.typeElement, typeElement) || const DeepCollectionEquality().equals(other.typeElement, typeElement)) &&
-            (identical(other.requiredElement, requiredElement) || const DeepCollectionEquality().equals(other.requiredElement, requiredElement)) &&
-            (identical(other.repeatsElement, repeatsElement) || const DeepCollectionEquality().equals(other.repeatsElement, repeatsElement)) &&
-            (identical(other.readOnlyElement, readOnlyElement) || const DeepCollectionEquality().equals(other.readOnlyElement, readOnlyElement)) &&
-            (identical(other.maxLengthElement, maxLengthElement) || const DeepCollectionEquality().equals(other.maxLengthElement, maxLengthElement)) &&
-            (identical(other.initialBooleanElement, initialBooleanElement) || const DeepCollectionEquality().equals(other.initialBooleanElement, initialBooleanElement)) &&
+                const DeepCollectionEquality().equals(other.initialDecimal, initialDecimal)) &&
             (identical(other.initialDecimalElement, initialDecimalElement) || const DeepCollectionEquality().equals(other.initialDecimalElement, initialDecimalElement)) &&
+            (identical(other.initialInteger, initialInteger) || const DeepCollectionEquality().equals(other.initialInteger, initialInteger)) &&
             (identical(other.initialIntegerElement, initialIntegerElement) || const DeepCollectionEquality().equals(other.initialIntegerElement, initialIntegerElement)) &&
+            (identical(other.initialDate, initialDate) || const DeepCollectionEquality().equals(other.initialDate, initialDate)) &&
             (identical(other.initialDateElement, initialDateElement) || const DeepCollectionEquality().equals(other.initialDateElement, initialDateElement)) &&
+            (identical(other.initialDateTime, initialDateTime) || const DeepCollectionEquality().equals(other.initialDateTime, initialDateTime)) &&
             (identical(other.initialDateTimeElement, initialDateTimeElement) || const DeepCollectionEquality().equals(other.initialDateTimeElement, initialDateTimeElement)) &&
+            (identical(other.initialTime, initialTime) || const DeepCollectionEquality().equals(other.initialTime, initialTime)) &&
             (identical(other.initialTimeElement, initialTimeElement) || const DeepCollectionEquality().equals(other.initialTimeElement, initialTimeElement)) &&
+            (identical(other.initialString, initialString) || const DeepCollectionEquality().equals(other.initialString, initialString)) &&
             (identical(other.initialStringElement, initialStringElement) || const DeepCollectionEquality().equals(other.initialStringElement, initialStringElement)) &&
-            (identical(other.initialUriElement, initialUriElement) || const DeepCollectionEquality().equals(other.initialUriElement, initialUriElement)));
+            (identical(other.initialUri, initialUri) || const DeepCollectionEquality().equals(other.initialUri, initialUri)) &&
+            (identical(other.initialUriElement, initialUriElement) || const DeepCollectionEquality().equals(other.initialUriElement, initialUriElement)) &&
+            (identical(other.initialAttachment, initialAttachment) || const DeepCollectionEquality().equals(other.initialAttachment, initialAttachment)) &&
+            (identical(other.initialCoding, initialCoding) || const DeepCollectionEquality().equals(other.initialCoding, initialCoding)) &&
+            (identical(other.initialQuantity, initialQuantity) || const DeepCollectionEquality().equals(other.initialQuantity, initialQuantity)) &&
+            (identical(other.initialReference, initialReference) || const DeepCollectionEquality().equals(other.initialReference, initialReference)) &&
+            (identical(other.item, item) || const DeepCollectionEquality().equals(other.item, item)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(linkId) ^
+      const DeepCollectionEquality().hash(linkIdElement) ^
       const DeepCollectionEquality().hash(definition) ^
+      const DeepCollectionEquality().hash(definitionElement) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(prefix) ^
+      const DeepCollectionEquality().hash(prefixElement) ^
       const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(textElement) ^
       const DeepCollectionEquality().hash(type) ^
+      const DeepCollectionEquality().hash(typeElement) ^
       const DeepCollectionEquality().hash(enableWhen) ^
-      const DeepCollectionEquality().hash(required) ^
+      const DeepCollectionEquality().hash(required_) ^
+      const DeepCollectionEquality().hash(requiredElement) ^
       const DeepCollectionEquality().hash(repeats) ^
+      const DeepCollectionEquality().hash(repeatsElement) ^
       const DeepCollectionEquality().hash(readOnly) ^
+      const DeepCollectionEquality().hash(readOnlyElement) ^
       const DeepCollectionEquality().hash(maxLength) ^
+      const DeepCollectionEquality().hash(maxLengthElement) ^
       const DeepCollectionEquality().hash(options) ^
       const DeepCollectionEquality().hash(option) ^
       const DeepCollectionEquality().hash(initialBoolean) ^
+      const DeepCollectionEquality().hash(initialBooleanElement) ^
       const DeepCollectionEquality().hash(initialDecimal) ^
+      const DeepCollectionEquality().hash(initialDecimalElement) ^
       const DeepCollectionEquality().hash(initialInteger) ^
+      const DeepCollectionEquality().hash(initialIntegerElement) ^
       const DeepCollectionEquality().hash(initialDate) ^
+      const DeepCollectionEquality().hash(initialDateElement) ^
       const DeepCollectionEquality().hash(initialDateTime) ^
+      const DeepCollectionEquality().hash(initialDateTimeElement) ^
       const DeepCollectionEquality().hash(initialTime) ^
+      const DeepCollectionEquality().hash(initialTimeElement) ^
       const DeepCollectionEquality().hash(initialString) ^
+      const DeepCollectionEquality().hash(initialStringElement) ^
       const DeepCollectionEquality().hash(initialUri) ^
+      const DeepCollectionEquality().hash(initialUriElement) ^
       const DeepCollectionEquality().hash(initialAttachment) ^
       const DeepCollectionEquality().hash(initialCoding) ^
       const DeepCollectionEquality().hash(initialQuantity) ^
       const DeepCollectionEquality().hash(initialReference) ^
-      const DeepCollectionEquality().hash(item) ^
-      const DeepCollectionEquality().hash(linkIdElement) ^
-      const DeepCollectionEquality().hash(definitionElement) ^
-      const DeepCollectionEquality().hash(prefixElement) ^
-      const DeepCollectionEquality().hash(textElement) ^
-      const DeepCollectionEquality().hash(typeElement) ^
-      const DeepCollectionEquality().hash(requiredElement) ^
-      const DeepCollectionEquality().hash(repeatsElement) ^
-      const DeepCollectionEquality().hash(readOnlyElement) ^
-      const DeepCollectionEquality().hash(maxLengthElement) ^
-      const DeepCollectionEquality().hash(initialBooleanElement) ^
-      const DeepCollectionEquality().hash(initialDecimalElement) ^
-      const DeepCollectionEquality().hash(initialIntegerElement) ^
-      const DeepCollectionEquality().hash(initialDateElement) ^
-      const DeepCollectionEquality().hash(initialDateTimeElement) ^
-      const DeepCollectionEquality().hash(initialTimeElement) ^
-      const DeepCollectionEquality().hash(initialStringElement) ^
-      const DeepCollectionEquality().hash(initialUriElement);
+      const DeepCollectionEquality().hash(item);
 
   @override
   _$QuestionnaireItemCopyWith<_QuestionnaireItem> get copyWith =>
@@ -9790,69 +9605,52 @@ class _$_QuestionnaireItem implements _QuestionnaireItem {
   }
 }
 
-abstract class _QuestionnaireItem implements QuestionnaireItem {
+abstract class _QuestionnaireItem extends QuestionnaireItem {
+  _QuestionnaireItem._() : super._();
   factory _QuestionnaireItem(
       {String linkId,
+      @JsonKey(name: '_linkId') Element linkIdElement,
       String definition,
+      @JsonKey(name: '_definition') Element definitionElement,
       List<Coding> code,
       String prefix,
+      @JsonKey(name: '_prefix') Element prefixElement,
       String text,
-      @JsonKey(unknownEnumValue: QuestionnaireItemType.unknown)
-          QuestionnaireItemType type,
+      @JsonKey(name: '_text') Element textElement,
+      QuestionnaireItemType type,
+      @JsonKey(name: '_type') Element typeElement,
       List<QuestionnaireEnableWhen> enableWhen,
-      Boolean required,
+      @JsonKey(name: 'required') Boolean required_,
+      @JsonKey(name: '_required') Element requiredElement,
       Boolean repeats,
+      @JsonKey(name: '_repeats') Element repeatsElement,
       Boolean readOnly,
-      Integer maxLength,
+      @JsonKey(name: '_readOnly') Element readOnlyElement,
+      Decimal maxLength,
+      @JsonKey(name: '_maxLength') Element maxLengthElement,
       Reference options,
       List<QuestionnaireOption> option,
       Boolean initialBoolean,
+      @JsonKey(name: '_initialBoolean') Element initialBooleanElement,
       Decimal initialDecimal,
-      Integer initialInteger,
+      @JsonKey(name: '_initialDecimal') Element initialDecimalElement,
+      Decimal initialInteger,
+      @JsonKey(name: '_initialInteger') Element initialIntegerElement,
       Date initialDate,
+      @JsonKey(name: '_initialDate') Element initialDateElement,
       FhirDateTime initialDateTime,
+      @JsonKey(name: '_initialDateTime') Element initialDateTimeElement,
       Time initialTime,
+      @JsonKey(name: '_initialTime') Element initialTimeElement,
       String initialString,
+      @JsonKey(name: '_initialString') Element initialStringElement,
       String initialUri,
+      @JsonKey(name: '_initialUri') Element initialUriElement,
       Attachment initialAttachment,
       Coding initialCoding,
       Quantity initialQuantity,
       Reference initialReference,
-      List<QuestionnaireItem> item,
-      @JsonKey(name: '_linkId')
-          Element linkIdElement,
-      @JsonKey(name: '_definition')
-          Element definitionElement,
-      @JsonKey(name: '_prefix')
-          Element prefixElement,
-      @JsonKey(name: '_text')
-          Element textElement,
-      @JsonKey(name: '_type')
-          Element typeElement,
-      @JsonKey(name: '_required')
-          Element requiredElement,
-      @JsonKey(name: '_repeats')
-          Element repeatsElement,
-      @JsonKey(name: '_readOnly')
-          Element readOnlyElement,
-      @JsonKey(name: '_maxLength')
-          Element maxLengthElement,
-      @JsonKey(name: '_initialBoolean')
-          Element initialBooleanElement,
-      @JsonKey(name: '_initialDecimal')
-          Element initialDecimalElement,
-      @JsonKey(name: '_initialInteger')
-          Element initialIntegerElement,
-      @JsonKey(name: '_initialDate')
-          Element initialDateElement,
-      @JsonKey(name: '_initialDateTime')
-          Element initialDateTimeElement,
-      @JsonKey(name: '_initialTime')
-          Element initialTimeElement,
-      @JsonKey(name: '_initialString')
-          Element initialStringElement,
-      @JsonKey(name: '_initialUri')
-          Element initialUriElement}) = _$_QuestionnaireItem;
+      List<QuestionnaireItem> item}) = _$_QuestionnaireItem;
 
   factory _QuestionnaireItem.fromJson(Map<String, dynamic> json) =
       _$_QuestionnaireItem.fromJson;
@@ -9860,26 +9658,53 @@ abstract class _QuestionnaireItem implements QuestionnaireItem {
   @override
   String get linkId;
   @override
+  @JsonKey(name: '_linkId')
+  Element get linkIdElement;
+  @override
   String get definition;
+  @override
+  @JsonKey(name: '_definition')
+  Element get definitionElement;
   @override
   List<Coding> get code;
   @override
   String get prefix;
   @override
+  @JsonKey(name: '_prefix')
+  Element get prefixElement;
+  @override
   String get text;
   @override
-  @JsonKey(unknownEnumValue: QuestionnaireItemType.unknown)
+  @JsonKey(name: '_text')
+  Element get textElement;
+  @override
   QuestionnaireItemType get type;
+  @override
+  @JsonKey(name: '_type')
+  Element get typeElement;
   @override
   List<QuestionnaireEnableWhen> get enableWhen;
   @override
-  Boolean get required;
+  @JsonKey(name: 'required')
+  Boolean get required_;
+  @override
+  @JsonKey(name: '_required')
+  Element get requiredElement;
   @override
   Boolean get repeats;
   @override
+  @JsonKey(name: '_repeats')
+  Element get repeatsElement;
+  @override
   Boolean get readOnly;
   @override
-  Integer get maxLength;
+  @JsonKey(name: '_readOnly')
+  Element get readOnlyElement;
+  @override
+  Decimal get maxLength;
+  @override
+  @JsonKey(name: '_maxLength')
+  Element get maxLengthElement;
   @override
   Reference get options;
   @override
@@ -9887,19 +9712,43 @@ abstract class _QuestionnaireItem implements QuestionnaireItem {
   @override
   Boolean get initialBoolean;
   @override
+  @JsonKey(name: '_initialBoolean')
+  Element get initialBooleanElement;
+  @override
   Decimal get initialDecimal;
   @override
-  Integer get initialInteger;
+  @JsonKey(name: '_initialDecimal')
+  Element get initialDecimalElement;
+  @override
+  Decimal get initialInteger;
+  @override
+  @JsonKey(name: '_initialInteger')
+  Element get initialIntegerElement;
   @override
   Date get initialDate;
   @override
+  @JsonKey(name: '_initialDate')
+  Element get initialDateElement;
+  @override
   FhirDateTime get initialDateTime;
+  @override
+  @JsonKey(name: '_initialDateTime')
+  Element get initialDateTimeElement;
   @override
   Time get initialTime;
   @override
+  @JsonKey(name: '_initialTime')
+  Element get initialTimeElement;
+  @override
   String get initialString;
   @override
+  @JsonKey(name: '_initialString')
+  Element get initialStringElement;
+  @override
   String get initialUri;
+  @override
+  @JsonKey(name: '_initialUri')
+  Element get initialUriElement;
   @override
   Attachment get initialAttachment;
   @override
@@ -9910,57 +9759,6 @@ abstract class _QuestionnaireItem implements QuestionnaireItem {
   Reference get initialReference;
   @override
   List<QuestionnaireItem> get item;
-  @override
-  @JsonKey(name: '_linkId')
-  Element get linkIdElement;
-  @override
-  @JsonKey(name: '_definition')
-  Element get definitionElement;
-  @override
-  @JsonKey(name: '_prefix')
-  Element get prefixElement;
-  @override
-  @JsonKey(name: '_text')
-  Element get textElement;
-  @override
-  @JsonKey(name: '_type')
-  Element get typeElement;
-  @override
-  @JsonKey(name: '_required')
-  Element get requiredElement;
-  @override
-  @JsonKey(name: '_repeats')
-  Element get repeatsElement;
-  @override
-  @JsonKey(name: '_readOnly')
-  Element get readOnlyElement;
-  @override
-  @JsonKey(name: '_maxLength')
-  Element get maxLengthElement;
-  @override
-  @JsonKey(name: '_initialBoolean')
-  Element get initialBooleanElement;
-  @override
-  @JsonKey(name: '_initialDecimal')
-  Element get initialDecimalElement;
-  @override
-  @JsonKey(name: '_initialInteger')
-  Element get initialIntegerElement;
-  @override
-  @JsonKey(name: '_initialDate')
-  Element get initialDateElement;
-  @override
-  @JsonKey(name: '_initialDateTime')
-  Element get initialDateTimeElement;
-  @override
-  @JsonKey(name: '_initialTime')
-  Element get initialTimeElement;
-  @override
-  @JsonKey(name: '_initialString')
-  Element get initialStringElement;
-  @override
-  @JsonKey(name: '_initialUri')
-  Element get initialUriElement;
   @override
   _$QuestionnaireItemCopyWith<_QuestionnaireItem> get copyWith;
 }
@@ -9973,56 +9771,57 @@ QuestionnaireEnableWhen _$QuestionnaireEnableWhenFromJson(
 class _$QuestionnaireEnableWhenTearOff {
   const _$QuestionnaireEnableWhenTearOff();
 
+// ignore: unused_element
   _QuestionnaireEnableWhen call(
       {String question,
+      @JsonKey(name: '_question') Element questionElement,
       Boolean hasAnswer,
+      @JsonKey(name: '_hasAnswer') Element hasAnswerElement,
       Boolean answerBoolean,
+      @JsonKey(name: '_answerBoolean') Element answerBooleanElement,
       Decimal answerDecimal,
-      Integer answerInteger,
+      @JsonKey(name: '_answerDecimal') Element answerDecimalElement,
+      Decimal answerInteger,
+      @JsonKey(name: '_answerInteger') Element answerIntegerElement,
       Date answerDate,
+      @JsonKey(name: '_answerDate') Element answerDateElement,
       FhirDateTime answerDateTime,
+      @JsonKey(name: '_answerDateTime') Element answerDateTimeElement,
       Time answerTime,
+      @JsonKey(name: '_answerTime') Element answerTimeElement,
       String answerString,
+      @JsonKey(name: '_answerString') Element answerStringElement,
       String answerUri,
+      @JsonKey(name: '_answerUri') Element answerUriElement,
       Attachment answerAttachment,
       Coding answerCoding,
       Quantity answerQuantity,
-      Reference answerReference,
-      @JsonKey(name: '_question') Element questionElement,
-      @JsonKey(name: '_hasAnswer') Element hasAnswerElement,
-      @JsonKey(name: '_answerBoolean') Element answerBooleanElement,
-      @JsonKey(name: '_answerDecimal') Element answerDecimalElement,
-      @JsonKey(name: '_answerInteger') Element answerIntegerElement,
-      @JsonKey(name: '_answerDate') Element answerDateElement,
-      @JsonKey(name: '_answerDateTime') Element answerDateTimeElement,
-      @JsonKey(name: '_answerTime') Element answerTimeElement,
-      @JsonKey(name: '_answerString') Element answerStringElement,
-      @JsonKey(name: '_answerUri') Element answerUriElement}) {
+      Reference answerReference}) {
     return _QuestionnaireEnableWhen(
       question: question,
+      questionElement: questionElement,
       hasAnswer: hasAnswer,
+      hasAnswerElement: hasAnswerElement,
       answerBoolean: answerBoolean,
+      answerBooleanElement: answerBooleanElement,
       answerDecimal: answerDecimal,
+      answerDecimalElement: answerDecimalElement,
       answerInteger: answerInteger,
+      answerIntegerElement: answerIntegerElement,
       answerDate: answerDate,
+      answerDateElement: answerDateElement,
       answerDateTime: answerDateTime,
+      answerDateTimeElement: answerDateTimeElement,
       answerTime: answerTime,
+      answerTimeElement: answerTimeElement,
       answerString: answerString,
+      answerStringElement: answerStringElement,
       answerUri: answerUri,
+      answerUriElement: answerUriElement,
       answerAttachment: answerAttachment,
       answerCoding: answerCoding,
       answerQuantity: answerQuantity,
       answerReference: answerReference,
-      questionElement: questionElement,
-      hasAnswerElement: hasAnswerElement,
-      answerBooleanElement: answerBooleanElement,
-      answerDecimalElement: answerDecimalElement,
-      answerIntegerElement: answerIntegerElement,
-      answerDateElement: answerDateElement,
-      answerDateTimeElement: answerDateTimeElement,
-      answerTimeElement: answerTimeElement,
-      answerStringElement: answerStringElement,
-      answerUriElement: answerUriElement,
     );
   }
 }
@@ -10032,39 +9831,39 @@ const $QuestionnaireEnableWhen = _$QuestionnaireEnableWhenTearOff();
 
 mixin _$QuestionnaireEnableWhen {
   String get question;
+  @JsonKey(name: '_question')
+  Element get questionElement;
   Boolean get hasAnswer;
+  @JsonKey(name: '_hasAnswer')
+  Element get hasAnswerElement;
   Boolean get answerBoolean;
+  @JsonKey(name: '_answerBoolean')
+  Element get answerBooleanElement;
   Decimal get answerDecimal;
-  Integer get answerInteger;
+  @JsonKey(name: '_answerDecimal')
+  Element get answerDecimalElement;
+  Decimal get answerInteger;
+  @JsonKey(name: '_answerInteger')
+  Element get answerIntegerElement;
   Date get answerDate;
+  @JsonKey(name: '_answerDate')
+  Element get answerDateElement;
   FhirDateTime get answerDateTime;
+  @JsonKey(name: '_answerDateTime')
+  Element get answerDateTimeElement;
   Time get answerTime;
+  @JsonKey(name: '_answerTime')
+  Element get answerTimeElement;
   String get answerString;
+  @JsonKey(name: '_answerString')
+  Element get answerStringElement;
   String get answerUri;
+  @JsonKey(name: '_answerUri')
+  Element get answerUriElement;
   Attachment get answerAttachment;
   Coding get answerCoding;
   Quantity get answerQuantity;
   Reference get answerReference;
-  @JsonKey(name: '_question')
-  Element get questionElement;
-  @JsonKey(name: '_hasAnswer')
-  Element get hasAnswerElement;
-  @JsonKey(name: '_answerBoolean')
-  Element get answerBooleanElement;
-  @JsonKey(name: '_answerDecimal')
-  Element get answerDecimalElement;
-  @JsonKey(name: '_answerInteger')
-  Element get answerIntegerElement;
-  @JsonKey(name: '_answerDate')
-  Element get answerDateElement;
-  @JsonKey(name: '_answerDateTime')
-  Element get answerDateTimeElement;
-  @JsonKey(name: '_answerTime')
-  Element get answerTimeElement;
-  @JsonKey(name: '_answerString')
-  Element get answerStringElement;
-  @JsonKey(name: '_answerUri')
-  Element get answerUriElement;
 
   Map<String, dynamic> toJson();
   $QuestionnaireEnableWhenCopyWith<QuestionnaireEnableWhen> get copyWith;
@@ -10076,34 +9875,30 @@ abstract class $QuestionnaireEnableWhenCopyWith<$Res> {
       _$QuestionnaireEnableWhenCopyWithImpl<$Res>;
   $Res call(
       {String question,
+      @JsonKey(name: '_question') Element questionElement,
       Boolean hasAnswer,
+      @JsonKey(name: '_hasAnswer') Element hasAnswerElement,
       Boolean answerBoolean,
+      @JsonKey(name: '_answerBoolean') Element answerBooleanElement,
       Decimal answerDecimal,
-      Integer answerInteger,
+      @JsonKey(name: '_answerDecimal') Element answerDecimalElement,
+      Decimal answerInteger,
+      @JsonKey(name: '_answerInteger') Element answerIntegerElement,
       Date answerDate,
+      @JsonKey(name: '_answerDate') Element answerDateElement,
       FhirDateTime answerDateTime,
+      @JsonKey(name: '_answerDateTime') Element answerDateTimeElement,
       Time answerTime,
+      @JsonKey(name: '_answerTime') Element answerTimeElement,
       String answerString,
+      @JsonKey(name: '_answerString') Element answerStringElement,
       String answerUri,
+      @JsonKey(name: '_answerUri') Element answerUriElement,
       Attachment answerAttachment,
       Coding answerCoding,
       Quantity answerQuantity,
-      Reference answerReference,
-      @JsonKey(name: '_question') Element questionElement,
-      @JsonKey(name: '_hasAnswer') Element hasAnswerElement,
-      @JsonKey(name: '_answerBoolean') Element answerBooleanElement,
-      @JsonKey(name: '_answerDecimal') Element answerDecimalElement,
-      @JsonKey(name: '_answerInteger') Element answerIntegerElement,
-      @JsonKey(name: '_answerDate') Element answerDateElement,
-      @JsonKey(name: '_answerDateTime') Element answerDateTimeElement,
-      @JsonKey(name: '_answerTime') Element answerTimeElement,
-      @JsonKey(name: '_answerString') Element answerStringElement,
-      @JsonKey(name: '_answerUri') Element answerUriElement});
+      Reference answerReference});
 
-  $AttachmentCopyWith<$Res> get answerAttachment;
-  $CodingCopyWith<$Res> get answerCoding;
-  $QuantityCopyWith<$Res> get answerQuantity;
-  $ReferenceCopyWith<$Res> get answerReference;
   $ElementCopyWith<$Res> get questionElement;
   $ElementCopyWith<$Res> get hasAnswerElement;
   $ElementCopyWith<$Res> get answerBooleanElement;
@@ -10114,6 +9909,10 @@ abstract class $QuestionnaireEnableWhenCopyWith<$Res> {
   $ElementCopyWith<$Res> get answerTimeElement;
   $ElementCopyWith<$Res> get answerStringElement;
   $ElementCopyWith<$Res> get answerUriElement;
+  $AttachmentCopyWith<$Res> get answerAttachment;
+  $CodingCopyWith<$Res> get answerCoding;
+  $QuantityCopyWith<$Res> get answerQuantity;
+  $ReferenceCopyWith<$Res> get answerReference;
 }
 
 class _$QuestionnaireEnableWhenCopyWithImpl<$Res>
@@ -10127,53 +9926,83 @@ class _$QuestionnaireEnableWhenCopyWithImpl<$Res>
   @override
   $Res call({
     Object question = freezed,
+    Object questionElement = freezed,
     Object hasAnswer = freezed,
+    Object hasAnswerElement = freezed,
     Object answerBoolean = freezed,
+    Object answerBooleanElement = freezed,
     Object answerDecimal = freezed,
+    Object answerDecimalElement = freezed,
     Object answerInteger = freezed,
+    Object answerIntegerElement = freezed,
     Object answerDate = freezed,
+    Object answerDateElement = freezed,
     Object answerDateTime = freezed,
+    Object answerDateTimeElement = freezed,
     Object answerTime = freezed,
+    Object answerTimeElement = freezed,
     Object answerString = freezed,
+    Object answerStringElement = freezed,
     Object answerUri = freezed,
+    Object answerUriElement = freezed,
     Object answerAttachment = freezed,
     Object answerCoding = freezed,
     Object answerQuantity = freezed,
     Object answerReference = freezed,
-    Object questionElement = freezed,
-    Object hasAnswerElement = freezed,
-    Object answerBooleanElement = freezed,
-    Object answerDecimalElement = freezed,
-    Object answerIntegerElement = freezed,
-    Object answerDateElement = freezed,
-    Object answerDateTimeElement = freezed,
-    Object answerTimeElement = freezed,
-    Object answerStringElement = freezed,
-    Object answerUriElement = freezed,
   }) {
     return _then(_value.copyWith(
       question: question == freezed ? _value.question : question as String,
+      questionElement: questionElement == freezed
+          ? _value.questionElement
+          : questionElement as Element,
       hasAnswer: hasAnswer == freezed ? _value.hasAnswer : hasAnswer as Boolean,
+      hasAnswerElement: hasAnswerElement == freezed
+          ? _value.hasAnswerElement
+          : hasAnswerElement as Element,
       answerBoolean: answerBoolean == freezed
           ? _value.answerBoolean
           : answerBoolean as Boolean,
+      answerBooleanElement: answerBooleanElement == freezed
+          ? _value.answerBooleanElement
+          : answerBooleanElement as Element,
       answerDecimal: answerDecimal == freezed
           ? _value.answerDecimal
           : answerDecimal as Decimal,
+      answerDecimalElement: answerDecimalElement == freezed
+          ? _value.answerDecimalElement
+          : answerDecimalElement as Element,
       answerInteger: answerInteger == freezed
           ? _value.answerInteger
-          : answerInteger as Integer,
+          : answerInteger as Decimal,
+      answerIntegerElement: answerIntegerElement == freezed
+          ? _value.answerIntegerElement
+          : answerIntegerElement as Element,
       answerDate:
           answerDate == freezed ? _value.answerDate : answerDate as Date,
+      answerDateElement: answerDateElement == freezed
+          ? _value.answerDateElement
+          : answerDateElement as Element,
       answerDateTime: answerDateTime == freezed
           ? _value.answerDateTime
           : answerDateTime as FhirDateTime,
+      answerDateTimeElement: answerDateTimeElement == freezed
+          ? _value.answerDateTimeElement
+          : answerDateTimeElement as Element,
       answerTime:
           answerTime == freezed ? _value.answerTime : answerTime as Time,
+      answerTimeElement: answerTimeElement == freezed
+          ? _value.answerTimeElement
+          : answerTimeElement as Element,
       answerString: answerString == freezed
           ? _value.answerString
           : answerString as String,
+      answerStringElement: answerStringElement == freezed
+          ? _value.answerStringElement
+          : answerStringElement as Element,
       answerUri: answerUri == freezed ? _value.answerUri : answerUri as String,
+      answerUriElement: answerUriElement == freezed
+          ? _value.answerUriElement
+          : answerUriElement as Element,
       answerAttachment: answerAttachment == freezed
           ? _value.answerAttachment
           : answerAttachment as Attachment,
@@ -10186,77 +10015,7 @@ class _$QuestionnaireEnableWhenCopyWithImpl<$Res>
       answerReference: answerReference == freezed
           ? _value.answerReference
           : answerReference as Reference,
-      questionElement: questionElement == freezed
-          ? _value.questionElement
-          : questionElement as Element,
-      hasAnswerElement: hasAnswerElement == freezed
-          ? _value.hasAnswerElement
-          : hasAnswerElement as Element,
-      answerBooleanElement: answerBooleanElement == freezed
-          ? _value.answerBooleanElement
-          : answerBooleanElement as Element,
-      answerDecimalElement: answerDecimalElement == freezed
-          ? _value.answerDecimalElement
-          : answerDecimalElement as Element,
-      answerIntegerElement: answerIntegerElement == freezed
-          ? _value.answerIntegerElement
-          : answerIntegerElement as Element,
-      answerDateElement: answerDateElement == freezed
-          ? _value.answerDateElement
-          : answerDateElement as Element,
-      answerDateTimeElement: answerDateTimeElement == freezed
-          ? _value.answerDateTimeElement
-          : answerDateTimeElement as Element,
-      answerTimeElement: answerTimeElement == freezed
-          ? _value.answerTimeElement
-          : answerTimeElement as Element,
-      answerStringElement: answerStringElement == freezed
-          ? _value.answerStringElement
-          : answerStringElement as Element,
-      answerUriElement: answerUriElement == freezed
-          ? _value.answerUriElement
-          : answerUriElement as Element,
     ));
-  }
-
-  @override
-  $AttachmentCopyWith<$Res> get answerAttachment {
-    if (_value.answerAttachment == null) {
-      return null;
-    }
-    return $AttachmentCopyWith<$Res>(_value.answerAttachment, (value) {
-      return _then(_value.copyWith(answerAttachment: value));
-    });
-  }
-
-  @override
-  $CodingCopyWith<$Res> get answerCoding {
-    if (_value.answerCoding == null) {
-      return null;
-    }
-    return $CodingCopyWith<$Res>(_value.answerCoding, (value) {
-      return _then(_value.copyWith(answerCoding: value));
-    });
-  }
-
-  @override
-  $QuantityCopyWith<$Res> get answerQuantity {
-    if (_value.answerQuantity == null) {
-      return null;
-    }
-    return $QuantityCopyWith<$Res>(_value.answerQuantity, (value) {
-      return _then(_value.copyWith(answerQuantity: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get answerReference {
-    if (_value.answerReference == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.answerReference, (value) {
-      return _then(_value.copyWith(answerReference: value));
-    });
   }
 
   @override
@@ -10358,6 +10117,46 @@ class _$QuestionnaireEnableWhenCopyWithImpl<$Res>
       return _then(_value.copyWith(answerUriElement: value));
     });
   }
+
+  @override
+  $AttachmentCopyWith<$Res> get answerAttachment {
+    if (_value.answerAttachment == null) {
+      return null;
+    }
+    return $AttachmentCopyWith<$Res>(_value.answerAttachment, (value) {
+      return _then(_value.copyWith(answerAttachment: value));
+    });
+  }
+
+  @override
+  $CodingCopyWith<$Res> get answerCoding {
+    if (_value.answerCoding == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.answerCoding, (value) {
+      return _then(_value.copyWith(answerCoding: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get answerQuantity {
+    if (_value.answerQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.answerQuantity, (value) {
+      return _then(_value.copyWith(answerQuantity: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get answerReference {
+    if (_value.answerReference == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.answerReference, (value) {
+      return _then(_value.copyWith(answerReference: value));
+    });
+  }
 }
 
 abstract class _$QuestionnaireEnableWhenCopyWith<$Res>
@@ -10368,38 +10167,30 @@ abstract class _$QuestionnaireEnableWhenCopyWith<$Res>
   @override
   $Res call(
       {String question,
+      @JsonKey(name: '_question') Element questionElement,
       Boolean hasAnswer,
+      @JsonKey(name: '_hasAnswer') Element hasAnswerElement,
       Boolean answerBoolean,
+      @JsonKey(name: '_answerBoolean') Element answerBooleanElement,
       Decimal answerDecimal,
-      Integer answerInteger,
+      @JsonKey(name: '_answerDecimal') Element answerDecimalElement,
+      Decimal answerInteger,
+      @JsonKey(name: '_answerInteger') Element answerIntegerElement,
       Date answerDate,
+      @JsonKey(name: '_answerDate') Element answerDateElement,
       FhirDateTime answerDateTime,
+      @JsonKey(name: '_answerDateTime') Element answerDateTimeElement,
       Time answerTime,
+      @JsonKey(name: '_answerTime') Element answerTimeElement,
       String answerString,
+      @JsonKey(name: '_answerString') Element answerStringElement,
       String answerUri,
+      @JsonKey(name: '_answerUri') Element answerUriElement,
       Attachment answerAttachment,
       Coding answerCoding,
       Quantity answerQuantity,
-      Reference answerReference,
-      @JsonKey(name: '_question') Element questionElement,
-      @JsonKey(name: '_hasAnswer') Element hasAnswerElement,
-      @JsonKey(name: '_answerBoolean') Element answerBooleanElement,
-      @JsonKey(name: '_answerDecimal') Element answerDecimalElement,
-      @JsonKey(name: '_answerInteger') Element answerIntegerElement,
-      @JsonKey(name: '_answerDate') Element answerDateElement,
-      @JsonKey(name: '_answerDateTime') Element answerDateTimeElement,
-      @JsonKey(name: '_answerTime') Element answerTimeElement,
-      @JsonKey(name: '_answerString') Element answerStringElement,
-      @JsonKey(name: '_answerUri') Element answerUriElement});
+      Reference answerReference});
 
-  @override
-  $AttachmentCopyWith<$Res> get answerAttachment;
-  @override
-  $CodingCopyWith<$Res> get answerCoding;
-  @override
-  $QuantityCopyWith<$Res> get answerQuantity;
-  @override
-  $ReferenceCopyWith<$Res> get answerReference;
   @override
   $ElementCopyWith<$Res> get questionElement;
   @override
@@ -10420,6 +10211,14 @@ abstract class _$QuestionnaireEnableWhenCopyWith<$Res>
   $ElementCopyWith<$Res> get answerStringElement;
   @override
   $ElementCopyWith<$Res> get answerUriElement;
+  @override
+  $AttachmentCopyWith<$Res> get answerAttachment;
+  @override
+  $CodingCopyWith<$Res> get answerCoding;
+  @override
+  $QuantityCopyWith<$Res> get answerQuantity;
+  @override
+  $ReferenceCopyWith<$Res> get answerReference;
 }
 
 class __$QuestionnaireEnableWhenCopyWithImpl<$Res>
@@ -10436,53 +10235,83 @@ class __$QuestionnaireEnableWhenCopyWithImpl<$Res>
   @override
   $Res call({
     Object question = freezed,
+    Object questionElement = freezed,
     Object hasAnswer = freezed,
+    Object hasAnswerElement = freezed,
     Object answerBoolean = freezed,
+    Object answerBooleanElement = freezed,
     Object answerDecimal = freezed,
+    Object answerDecimalElement = freezed,
     Object answerInteger = freezed,
+    Object answerIntegerElement = freezed,
     Object answerDate = freezed,
+    Object answerDateElement = freezed,
     Object answerDateTime = freezed,
+    Object answerDateTimeElement = freezed,
     Object answerTime = freezed,
+    Object answerTimeElement = freezed,
     Object answerString = freezed,
+    Object answerStringElement = freezed,
     Object answerUri = freezed,
+    Object answerUriElement = freezed,
     Object answerAttachment = freezed,
     Object answerCoding = freezed,
     Object answerQuantity = freezed,
     Object answerReference = freezed,
-    Object questionElement = freezed,
-    Object hasAnswerElement = freezed,
-    Object answerBooleanElement = freezed,
-    Object answerDecimalElement = freezed,
-    Object answerIntegerElement = freezed,
-    Object answerDateElement = freezed,
-    Object answerDateTimeElement = freezed,
-    Object answerTimeElement = freezed,
-    Object answerStringElement = freezed,
-    Object answerUriElement = freezed,
   }) {
     return _then(_QuestionnaireEnableWhen(
       question: question == freezed ? _value.question : question as String,
+      questionElement: questionElement == freezed
+          ? _value.questionElement
+          : questionElement as Element,
       hasAnswer: hasAnswer == freezed ? _value.hasAnswer : hasAnswer as Boolean,
+      hasAnswerElement: hasAnswerElement == freezed
+          ? _value.hasAnswerElement
+          : hasAnswerElement as Element,
       answerBoolean: answerBoolean == freezed
           ? _value.answerBoolean
           : answerBoolean as Boolean,
+      answerBooleanElement: answerBooleanElement == freezed
+          ? _value.answerBooleanElement
+          : answerBooleanElement as Element,
       answerDecimal: answerDecimal == freezed
           ? _value.answerDecimal
           : answerDecimal as Decimal,
+      answerDecimalElement: answerDecimalElement == freezed
+          ? _value.answerDecimalElement
+          : answerDecimalElement as Element,
       answerInteger: answerInteger == freezed
           ? _value.answerInteger
-          : answerInteger as Integer,
+          : answerInteger as Decimal,
+      answerIntegerElement: answerIntegerElement == freezed
+          ? _value.answerIntegerElement
+          : answerIntegerElement as Element,
       answerDate:
           answerDate == freezed ? _value.answerDate : answerDate as Date,
+      answerDateElement: answerDateElement == freezed
+          ? _value.answerDateElement
+          : answerDateElement as Element,
       answerDateTime: answerDateTime == freezed
           ? _value.answerDateTime
           : answerDateTime as FhirDateTime,
+      answerDateTimeElement: answerDateTimeElement == freezed
+          ? _value.answerDateTimeElement
+          : answerDateTimeElement as Element,
       answerTime:
           answerTime == freezed ? _value.answerTime : answerTime as Time,
+      answerTimeElement: answerTimeElement == freezed
+          ? _value.answerTimeElement
+          : answerTimeElement as Element,
       answerString: answerString == freezed
           ? _value.answerString
           : answerString as String,
+      answerStringElement: answerStringElement == freezed
+          ? _value.answerStringElement
+          : answerStringElement as Element,
       answerUri: answerUri == freezed ? _value.answerUri : answerUri as String,
+      answerUriElement: answerUriElement == freezed
+          ? _value.answerUriElement
+          : answerUriElement as Element,
       answerAttachment: answerAttachment == freezed
           ? _value.answerAttachment
           : answerAttachment as Attachment,
@@ -10495,67 +10324,38 @@ class __$QuestionnaireEnableWhenCopyWithImpl<$Res>
       answerReference: answerReference == freezed
           ? _value.answerReference
           : answerReference as Reference,
-      questionElement: questionElement == freezed
-          ? _value.questionElement
-          : questionElement as Element,
-      hasAnswerElement: hasAnswerElement == freezed
-          ? _value.hasAnswerElement
-          : hasAnswerElement as Element,
-      answerBooleanElement: answerBooleanElement == freezed
-          ? _value.answerBooleanElement
-          : answerBooleanElement as Element,
-      answerDecimalElement: answerDecimalElement == freezed
-          ? _value.answerDecimalElement
-          : answerDecimalElement as Element,
-      answerIntegerElement: answerIntegerElement == freezed
-          ? _value.answerIntegerElement
-          : answerIntegerElement as Element,
-      answerDateElement: answerDateElement == freezed
-          ? _value.answerDateElement
-          : answerDateElement as Element,
-      answerDateTimeElement: answerDateTimeElement == freezed
-          ? _value.answerDateTimeElement
-          : answerDateTimeElement as Element,
-      answerTimeElement: answerTimeElement == freezed
-          ? _value.answerTimeElement
-          : answerTimeElement as Element,
-      answerStringElement: answerStringElement == freezed
-          ? _value.answerStringElement
-          : answerStringElement as Element,
-      answerUriElement: answerUriElement == freezed
-          ? _value.answerUriElement
-          : answerUriElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_QuestionnaireEnableWhen implements _QuestionnaireEnableWhen {
+class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
   _$_QuestionnaireEnableWhen(
       {this.question,
+      @JsonKey(name: '_question') this.questionElement,
       this.hasAnswer,
+      @JsonKey(name: '_hasAnswer') this.hasAnswerElement,
       this.answerBoolean,
+      @JsonKey(name: '_answerBoolean') this.answerBooleanElement,
       this.answerDecimal,
+      @JsonKey(name: '_answerDecimal') this.answerDecimalElement,
       this.answerInteger,
+      @JsonKey(name: '_answerInteger') this.answerIntegerElement,
       this.answerDate,
+      @JsonKey(name: '_answerDate') this.answerDateElement,
       this.answerDateTime,
+      @JsonKey(name: '_answerDateTime') this.answerDateTimeElement,
       this.answerTime,
+      @JsonKey(name: '_answerTime') this.answerTimeElement,
       this.answerString,
+      @JsonKey(name: '_answerString') this.answerStringElement,
       this.answerUri,
+      @JsonKey(name: '_answerUri') this.answerUriElement,
       this.answerAttachment,
       this.answerCoding,
       this.answerQuantity,
-      this.answerReference,
-      @JsonKey(name: '_question') this.questionElement,
-      @JsonKey(name: '_hasAnswer') this.hasAnswerElement,
-      @JsonKey(name: '_answerBoolean') this.answerBooleanElement,
-      @JsonKey(name: '_answerDecimal') this.answerDecimalElement,
-      @JsonKey(name: '_answerInteger') this.answerIntegerElement,
-      @JsonKey(name: '_answerDate') this.answerDateElement,
-      @JsonKey(name: '_answerDateTime') this.answerDateTimeElement,
-      @JsonKey(name: '_answerTime') this.answerTimeElement,
-      @JsonKey(name: '_answerString') this.answerStringElement,
-      @JsonKey(name: '_answerUri') this.answerUriElement});
+      this.answerReference})
+      : super._();
 
   factory _$_QuestionnaireEnableWhen.fromJson(Map<String, dynamic> json) =>
       _$_$_QuestionnaireEnableWhenFromJson(json);
@@ -10563,23 +10363,53 @@ class _$_QuestionnaireEnableWhen implements _QuestionnaireEnableWhen {
   @override
   final String question;
   @override
+  @JsonKey(name: '_question')
+  final Element questionElement;
+  @override
   final Boolean hasAnswer;
+  @override
+  @JsonKey(name: '_hasAnswer')
+  final Element hasAnswerElement;
   @override
   final Boolean answerBoolean;
   @override
+  @JsonKey(name: '_answerBoolean')
+  final Element answerBooleanElement;
+  @override
   final Decimal answerDecimal;
   @override
-  final Integer answerInteger;
+  @JsonKey(name: '_answerDecimal')
+  final Element answerDecimalElement;
+  @override
+  final Decimal answerInteger;
+  @override
+  @JsonKey(name: '_answerInteger')
+  final Element answerIntegerElement;
   @override
   final Date answerDate;
   @override
+  @JsonKey(name: '_answerDate')
+  final Element answerDateElement;
+  @override
   final FhirDateTime answerDateTime;
+  @override
+  @JsonKey(name: '_answerDateTime')
+  final Element answerDateTimeElement;
   @override
   final Time answerTime;
   @override
+  @JsonKey(name: '_answerTime')
+  final Element answerTimeElement;
+  @override
   final String answerString;
   @override
+  @JsonKey(name: '_answerString')
+  final Element answerStringElement;
+  @override
   final String answerUri;
+  @override
+  @JsonKey(name: '_answerUri')
+  final Element answerUriElement;
   @override
   final Attachment answerAttachment;
   @override
@@ -10588,40 +10418,10 @@ class _$_QuestionnaireEnableWhen implements _QuestionnaireEnableWhen {
   final Quantity answerQuantity;
   @override
   final Reference answerReference;
-  @override
-  @JsonKey(name: '_question')
-  final Element questionElement;
-  @override
-  @JsonKey(name: '_hasAnswer')
-  final Element hasAnswerElement;
-  @override
-  @JsonKey(name: '_answerBoolean')
-  final Element answerBooleanElement;
-  @override
-  @JsonKey(name: '_answerDecimal')
-  final Element answerDecimalElement;
-  @override
-  @JsonKey(name: '_answerInteger')
-  final Element answerIntegerElement;
-  @override
-  @JsonKey(name: '_answerDate')
-  final Element answerDateElement;
-  @override
-  @JsonKey(name: '_answerDateTime')
-  final Element answerDateTimeElement;
-  @override
-  @JsonKey(name: '_answerTime')
-  final Element answerTimeElement;
-  @override
-  @JsonKey(name: '_answerString')
-  final Element answerStringElement;
-  @override
-  @JsonKey(name: '_answerUri')
-  final Element answerUriElement;
 
   @override
   String toString() {
-    return 'QuestionnaireEnableWhen(question: $question, hasAnswer: $hasAnswer, answerBoolean: $answerBoolean, answerDecimal: $answerDecimal, answerInteger: $answerInteger, answerDate: $answerDate, answerDateTime: $answerDateTime, answerTime: $answerTime, answerString: $answerString, answerUri: $answerUri, answerAttachment: $answerAttachment, answerCoding: $answerCoding, answerQuantity: $answerQuantity, answerReference: $answerReference, questionElement: $questionElement, hasAnswerElement: $hasAnswerElement, answerBooleanElement: $answerBooleanElement, answerDecimalElement: $answerDecimalElement, answerIntegerElement: $answerIntegerElement, answerDateElement: $answerDateElement, answerDateTimeElement: $answerDateTimeElement, answerTimeElement: $answerTimeElement, answerStringElement: $answerStringElement, answerUriElement: $answerUriElement)';
+    return 'QuestionnaireEnableWhen(question: $question, questionElement: $questionElement, hasAnswer: $hasAnswer, hasAnswerElement: $hasAnswerElement, answerBoolean: $answerBoolean, answerBooleanElement: $answerBooleanElement, answerDecimal: $answerDecimal, answerDecimalElement: $answerDecimalElement, answerInteger: $answerInteger, answerIntegerElement: $answerIntegerElement, answerDate: $answerDate, answerDateElement: $answerDateElement, answerDateTime: $answerDateTime, answerDateTimeElement: $answerDateTimeElement, answerTime: $answerTime, answerTimeElement: $answerTimeElement, answerString: $answerString, answerStringElement: $answerStringElement, answerUri: $answerUri, answerUriElement: $answerUriElement, answerAttachment: $answerAttachment, answerCoding: $answerCoding, answerQuantity: $answerQuantity, answerReference: $answerReference)';
   }
 
   @override
@@ -10631,98 +10431,98 @@ class _$_QuestionnaireEnableWhen implements _QuestionnaireEnableWhen {
             (identical(other.question, question) ||
                 const DeepCollectionEquality()
                     .equals(other.question, question)) &&
-            (identical(other.hasAnswer, hasAnswer) ||
-                const DeepCollectionEquality()
-                    .equals(other.hasAnswer, hasAnswer)) &&
-            (identical(other.answerBoolean, answerBoolean) ||
-                const DeepCollectionEquality()
-                    .equals(other.answerBoolean, answerBoolean)) &&
-            (identical(other.answerDecimal, answerDecimal) ||
-                const DeepCollectionEquality()
-                    .equals(other.answerDecimal, answerDecimal)) &&
-            (identical(other.answerInteger, answerInteger) ||
-                const DeepCollectionEquality()
-                    .equals(other.answerInteger, answerInteger)) &&
-            (identical(other.answerDate, answerDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.answerDate, answerDate)) &&
-            (identical(other.answerDateTime, answerDateTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.answerDateTime, answerDateTime)) &&
-            (identical(other.answerTime, answerTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.answerTime, answerTime)) &&
-            (identical(other.answerString, answerString) ||
-                const DeepCollectionEquality()
-                    .equals(other.answerString, answerString)) &&
-            (identical(other.answerUri, answerUri) ||
-                const DeepCollectionEquality()
-                    .equals(other.answerUri, answerUri)) &&
-            (identical(other.answerAttachment, answerAttachment) ||
-                const DeepCollectionEquality()
-                    .equals(other.answerAttachment, answerAttachment)) &&
-            (identical(other.answerCoding, answerCoding) ||
-                const DeepCollectionEquality()
-                    .equals(other.answerCoding, answerCoding)) &&
-            (identical(other.answerQuantity, answerQuantity) ||
-                const DeepCollectionEquality()
-                    .equals(other.answerQuantity, answerQuantity)) &&
-            (identical(other.answerReference, answerReference) ||
-                const DeepCollectionEquality()
-                    .equals(other.answerReference, answerReference)) &&
             (identical(other.questionElement, questionElement) ||
                 const DeepCollectionEquality()
                     .equals(other.questionElement, questionElement)) &&
+            (identical(other.hasAnswer, hasAnswer) ||
+                const DeepCollectionEquality()
+                    .equals(other.hasAnswer, hasAnswer)) &&
             (identical(other.hasAnswerElement, hasAnswerElement) ||
                 const DeepCollectionEquality()
                     .equals(other.hasAnswerElement, hasAnswerElement)) &&
+            (identical(other.answerBoolean, answerBoolean) ||
+                const DeepCollectionEquality()
+                    .equals(other.answerBoolean, answerBoolean)) &&
             (identical(other.answerBooleanElement, answerBooleanElement) ||
                 const DeepCollectionEquality().equals(
                     other.answerBooleanElement, answerBooleanElement)) &&
+            (identical(other.answerDecimal, answerDecimal) ||
+                const DeepCollectionEquality()
+                    .equals(other.answerDecimal, answerDecimal)) &&
             (identical(other.answerDecimalElement, answerDecimalElement) ||
                 const DeepCollectionEquality().equals(
                     other.answerDecimalElement, answerDecimalElement)) &&
+            (identical(other.answerInteger, answerInteger) ||
+                const DeepCollectionEquality()
+                    .equals(other.answerInteger, answerInteger)) &&
             (identical(other.answerIntegerElement, answerIntegerElement) ||
                 const DeepCollectionEquality().equals(
                     other.answerIntegerElement, answerIntegerElement)) &&
+            (identical(other.answerDate, answerDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.answerDate, answerDate)) &&
             (identical(other.answerDateElement, answerDateElement) ||
                 const DeepCollectionEquality()
                     .equals(other.answerDateElement, answerDateElement)) &&
-            (identical(other.answerDateTimeElement, answerDateTimeElement) ||
+            (identical(other.answerDateTime, answerDateTime) ||
                 const DeepCollectionEquality()
-                    .equals(other.answerDateTimeElement, answerDateTimeElement)) &&
-            (identical(other.answerTimeElement, answerTimeElement) || const DeepCollectionEquality().equals(other.answerTimeElement, answerTimeElement)) &&
-            (identical(other.answerStringElement, answerStringElement) || const DeepCollectionEquality().equals(other.answerStringElement, answerStringElement)) &&
-            (identical(other.answerUriElement, answerUriElement) || const DeepCollectionEquality().equals(other.answerUriElement, answerUriElement)));
+                    .equals(other.answerDateTime, answerDateTime)) &&
+            (identical(other.answerDateTimeElement, answerDateTimeElement) ||
+                const DeepCollectionEquality().equals(
+                    other.answerDateTimeElement, answerDateTimeElement)) &&
+            (identical(other.answerTime, answerTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.answerTime, answerTime)) &&
+            (identical(other.answerTimeElement, answerTimeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.answerTimeElement, answerTimeElement)) &&
+            (identical(other.answerString, answerString) ||
+                const DeepCollectionEquality()
+                    .equals(other.answerString, answerString)) &&
+            (identical(other.answerStringElement, answerStringElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.answerStringElement, answerStringElement)) &&
+            (identical(other.answerUri, answerUri) ||
+                const DeepCollectionEquality()
+                    .equals(other.answerUri, answerUri)) &&
+            (identical(other.answerUriElement, answerUriElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.answerUriElement, answerUriElement)) &&
+            (identical(other.answerAttachment, answerAttachment) ||
+                const DeepCollectionEquality()
+                    .equals(other.answerAttachment, answerAttachment)) &&
+            (identical(other.answerCoding, answerCoding) || const DeepCollectionEquality().equals(other.answerCoding, answerCoding)) &&
+            (identical(other.answerQuantity, answerQuantity) || const DeepCollectionEquality().equals(other.answerQuantity, answerQuantity)) &&
+            (identical(other.answerReference, answerReference) || const DeepCollectionEquality().equals(other.answerReference, answerReference)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(question) ^
+      const DeepCollectionEquality().hash(questionElement) ^
       const DeepCollectionEquality().hash(hasAnswer) ^
+      const DeepCollectionEquality().hash(hasAnswerElement) ^
       const DeepCollectionEquality().hash(answerBoolean) ^
+      const DeepCollectionEquality().hash(answerBooleanElement) ^
       const DeepCollectionEquality().hash(answerDecimal) ^
+      const DeepCollectionEquality().hash(answerDecimalElement) ^
       const DeepCollectionEquality().hash(answerInteger) ^
+      const DeepCollectionEquality().hash(answerIntegerElement) ^
       const DeepCollectionEquality().hash(answerDate) ^
+      const DeepCollectionEquality().hash(answerDateElement) ^
       const DeepCollectionEquality().hash(answerDateTime) ^
+      const DeepCollectionEquality().hash(answerDateTimeElement) ^
       const DeepCollectionEquality().hash(answerTime) ^
+      const DeepCollectionEquality().hash(answerTimeElement) ^
       const DeepCollectionEquality().hash(answerString) ^
+      const DeepCollectionEquality().hash(answerStringElement) ^
       const DeepCollectionEquality().hash(answerUri) ^
+      const DeepCollectionEquality().hash(answerUriElement) ^
       const DeepCollectionEquality().hash(answerAttachment) ^
       const DeepCollectionEquality().hash(answerCoding) ^
       const DeepCollectionEquality().hash(answerQuantity) ^
-      const DeepCollectionEquality().hash(answerReference) ^
-      const DeepCollectionEquality().hash(questionElement) ^
-      const DeepCollectionEquality().hash(hasAnswerElement) ^
-      const DeepCollectionEquality().hash(answerBooleanElement) ^
-      const DeepCollectionEquality().hash(answerDecimalElement) ^
-      const DeepCollectionEquality().hash(answerIntegerElement) ^
-      const DeepCollectionEquality().hash(answerDateElement) ^
-      const DeepCollectionEquality().hash(answerDateTimeElement) ^
-      const DeepCollectionEquality().hash(answerTimeElement) ^
-      const DeepCollectionEquality().hash(answerStringElement) ^
-      const DeepCollectionEquality().hash(answerUriElement);
+      const DeepCollectionEquality().hash(answerReference);
 
   @override
   _$QuestionnaireEnableWhenCopyWith<_QuestionnaireEnableWhen> get copyWith =>
@@ -10735,33 +10535,33 @@ class _$_QuestionnaireEnableWhen implements _QuestionnaireEnableWhen {
   }
 }
 
-abstract class _QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
+abstract class _QuestionnaireEnableWhen extends QuestionnaireEnableWhen {
+  _QuestionnaireEnableWhen._() : super._();
   factory _QuestionnaireEnableWhen(
-          {String question,
-          Boolean hasAnswer,
-          Boolean answerBoolean,
-          Decimal answerDecimal,
-          Integer answerInteger,
-          Date answerDate,
-          FhirDateTime answerDateTime,
-          Time answerTime,
-          String answerString,
-          String answerUri,
-          Attachment answerAttachment,
-          Coding answerCoding,
-          Quantity answerQuantity,
-          Reference answerReference,
-          @JsonKey(name: '_question') Element questionElement,
-          @JsonKey(name: '_hasAnswer') Element hasAnswerElement,
-          @JsonKey(name: '_answerBoolean') Element answerBooleanElement,
-          @JsonKey(name: '_answerDecimal') Element answerDecimalElement,
-          @JsonKey(name: '_answerInteger') Element answerIntegerElement,
-          @JsonKey(name: '_answerDate') Element answerDateElement,
-          @JsonKey(name: '_answerDateTime') Element answerDateTimeElement,
-          @JsonKey(name: '_answerTime') Element answerTimeElement,
-          @JsonKey(name: '_answerString') Element answerStringElement,
-          @JsonKey(name: '_answerUri') Element answerUriElement}) =
-      _$_QuestionnaireEnableWhen;
+      {String question,
+      @JsonKey(name: '_question') Element questionElement,
+      Boolean hasAnswer,
+      @JsonKey(name: '_hasAnswer') Element hasAnswerElement,
+      Boolean answerBoolean,
+      @JsonKey(name: '_answerBoolean') Element answerBooleanElement,
+      Decimal answerDecimal,
+      @JsonKey(name: '_answerDecimal') Element answerDecimalElement,
+      Decimal answerInteger,
+      @JsonKey(name: '_answerInteger') Element answerIntegerElement,
+      Date answerDate,
+      @JsonKey(name: '_answerDate') Element answerDateElement,
+      FhirDateTime answerDateTime,
+      @JsonKey(name: '_answerDateTime') Element answerDateTimeElement,
+      Time answerTime,
+      @JsonKey(name: '_answerTime') Element answerTimeElement,
+      String answerString,
+      @JsonKey(name: '_answerString') Element answerStringElement,
+      String answerUri,
+      @JsonKey(name: '_answerUri') Element answerUriElement,
+      Attachment answerAttachment,
+      Coding answerCoding,
+      Quantity answerQuantity,
+      Reference answerReference}) = _$_QuestionnaireEnableWhen;
 
   factory _QuestionnaireEnableWhen.fromJson(Map<String, dynamic> json) =
       _$_QuestionnaireEnableWhen.fromJson;
@@ -10769,23 +10569,53 @@ abstract class _QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
   @override
   String get question;
   @override
+  @JsonKey(name: '_question')
+  Element get questionElement;
+  @override
   Boolean get hasAnswer;
+  @override
+  @JsonKey(name: '_hasAnswer')
+  Element get hasAnswerElement;
   @override
   Boolean get answerBoolean;
   @override
+  @JsonKey(name: '_answerBoolean')
+  Element get answerBooleanElement;
+  @override
   Decimal get answerDecimal;
   @override
-  Integer get answerInteger;
+  @JsonKey(name: '_answerDecimal')
+  Element get answerDecimalElement;
+  @override
+  Decimal get answerInteger;
+  @override
+  @JsonKey(name: '_answerInteger')
+  Element get answerIntegerElement;
   @override
   Date get answerDate;
   @override
+  @JsonKey(name: '_answerDate')
+  Element get answerDateElement;
+  @override
   FhirDateTime get answerDateTime;
+  @override
+  @JsonKey(name: '_answerDateTime')
+  Element get answerDateTimeElement;
   @override
   Time get answerTime;
   @override
+  @JsonKey(name: '_answerTime')
+  Element get answerTimeElement;
+  @override
   String get answerString;
   @override
+  @JsonKey(name: '_answerString')
+  Element get answerStringElement;
+  @override
   String get answerUri;
+  @override
+  @JsonKey(name: '_answerUri')
+  Element get answerUriElement;
   @override
   Attachment get answerAttachment;
   @override
@@ -10794,36 +10624,6 @@ abstract class _QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
   Quantity get answerQuantity;
   @override
   Reference get answerReference;
-  @override
-  @JsonKey(name: '_question')
-  Element get questionElement;
-  @override
-  @JsonKey(name: '_hasAnswer')
-  Element get hasAnswerElement;
-  @override
-  @JsonKey(name: '_answerBoolean')
-  Element get answerBooleanElement;
-  @override
-  @JsonKey(name: '_answerDecimal')
-  Element get answerDecimalElement;
-  @override
-  @JsonKey(name: '_answerInteger')
-  Element get answerIntegerElement;
-  @override
-  @JsonKey(name: '_answerDate')
-  Element get answerDateElement;
-  @override
-  @JsonKey(name: '_answerDateTime')
-  Element get answerDateTimeElement;
-  @override
-  @JsonKey(name: '_answerTime')
-  Element get answerTimeElement;
-  @override
-  @JsonKey(name: '_answerString')
-  Element get answerStringElement;
-  @override
-  @JsonKey(name: '_answerUri')
-  Element get answerUriElement;
   @override
   _$QuestionnaireEnableWhenCopyWith<_QuestionnaireEnableWhen> get copyWith;
 }
@@ -10835,26 +10635,27 @@ QuestionnaireOption _$QuestionnaireOptionFromJson(Map<String, dynamic> json) {
 class _$QuestionnaireOptionTearOff {
   const _$QuestionnaireOptionTearOff();
 
+// ignore: unused_element
   _QuestionnaireOption call(
-      {Integer valueInteger,
-      Date valueDate,
-      Time valueTime,
-      String valueString,
-      Coding valueCoding,
+      {Decimal valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      Time valueTime,
       @JsonKey(name: '_valueTime') Element valueTimeElement,
-      @JsonKey(name: '_valueString') Element valueStringElement}) {
+      String valueString,
+      @JsonKey(name: '_valueString') Element valueStringElement,
+      Coding valueCoding}) {
     return _QuestionnaireOption(
       valueInteger: valueInteger,
-      valueDate: valueDate,
-      valueTime: valueTime,
-      valueString: valueString,
-      valueCoding: valueCoding,
       valueIntegerElement: valueIntegerElement,
+      valueDate: valueDate,
       valueDateElement: valueDateElement,
+      valueTime: valueTime,
       valueTimeElement: valueTimeElement,
+      valueString: valueString,
       valueStringElement: valueStringElement,
+      valueCoding: valueCoding,
     );
   }
 }
@@ -10863,19 +10664,19 @@ class _$QuestionnaireOptionTearOff {
 const $QuestionnaireOption = _$QuestionnaireOptionTearOff();
 
 mixin _$QuestionnaireOption {
-  Integer get valueInteger;
-  Date get valueDate;
-  Time get valueTime;
-  String get valueString;
-  Coding get valueCoding;
+  Decimal get valueInteger;
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
+  Date get valueDate;
   @JsonKey(name: '_valueDate')
   Element get valueDateElement;
+  Time get valueTime;
   @JsonKey(name: '_valueTime')
   Element get valueTimeElement;
+  String get valueString;
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
+  Coding get valueCoding;
 
   Map<String, dynamic> toJson();
   $QuestionnaireOptionCopyWith<QuestionnaireOption> get copyWith;
@@ -10886,21 +10687,21 @@ abstract class $QuestionnaireOptionCopyWith<$Res> {
           QuestionnaireOption value, $Res Function(QuestionnaireOption) then) =
       _$QuestionnaireOptionCopyWithImpl<$Res>;
   $Res call(
-      {Integer valueInteger,
-      Date valueDate,
-      Time valueTime,
-      String valueString,
-      Coding valueCoding,
+      {Decimal valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      Time valueTime,
       @JsonKey(name: '_valueTime') Element valueTimeElement,
-      @JsonKey(name: '_valueString') Element valueStringElement});
+      String valueString,
+      @JsonKey(name: '_valueString') Element valueStringElement,
+      Coding valueCoding});
 
-  $CodingCopyWith<$Res> get valueCoding;
   $ElementCopyWith<$Res> get valueIntegerElement;
   $ElementCopyWith<$Res> get valueDateElement;
   $ElementCopyWith<$Res> get valueTimeElement;
   $ElementCopyWith<$Res> get valueStringElement;
+  $CodingCopyWith<$Res> get valueCoding;
 }
 
 class _$QuestionnaireOptionCopyWithImpl<$Res>
@@ -10914,48 +10715,38 @@ class _$QuestionnaireOptionCopyWithImpl<$Res>
   @override
   $Res call({
     Object valueInteger = freezed,
-    Object valueDate = freezed,
-    Object valueTime = freezed,
-    Object valueString = freezed,
-    Object valueCoding = freezed,
     Object valueIntegerElement = freezed,
+    Object valueDate = freezed,
     Object valueDateElement = freezed,
+    Object valueTime = freezed,
     Object valueTimeElement = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueCoding = freezed,
   }) {
     return _then(_value.copyWith(
       valueInteger: valueInteger == freezed
           ? _value.valueInteger
-          : valueInteger as Integer,
-      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
-      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
-      valueString:
-          valueString == freezed ? _value.valueString : valueString as String,
-      valueCoding:
-          valueCoding == freezed ? _value.valueCoding : valueCoding as Coding,
+          : valueInteger as Decimal,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement as Element,
+      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateElement: valueDateElement == freezed
           ? _value.valueDateElement
           : valueDateElement as Element,
+      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueTimeElement: valueTimeElement == freezed
           ? _value.valueTimeElement
           : valueTimeElement as Element,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueCoding:
+          valueCoding == freezed ? _value.valueCoding : valueCoding as Coding,
     ));
-  }
-
-  @override
-  $CodingCopyWith<$Res> get valueCoding {
-    if (_value.valueCoding == null) {
-      return null;
-    }
-    return $CodingCopyWith<$Res>(_value.valueCoding, (value) {
-      return _then(_value.copyWith(valueCoding: value));
-    });
   }
 
   @override
@@ -10997,6 +10788,16 @@ class _$QuestionnaireOptionCopyWithImpl<$Res>
       return _then(_value.copyWith(valueStringElement: value));
     });
   }
+
+  @override
+  $CodingCopyWith<$Res> get valueCoding {
+    if (_value.valueCoding == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.valueCoding, (value) {
+      return _then(_value.copyWith(valueCoding: value));
+    });
+  }
 }
 
 abstract class _$QuestionnaireOptionCopyWith<$Res>
@@ -11006,18 +10807,16 @@ abstract class _$QuestionnaireOptionCopyWith<$Res>
       __$QuestionnaireOptionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Integer valueInteger,
-      Date valueDate,
-      Time valueTime,
-      String valueString,
-      Coding valueCoding,
+      {Decimal valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
+      Time valueTime,
       @JsonKey(name: '_valueTime') Element valueTimeElement,
-      @JsonKey(name: '_valueString') Element valueStringElement});
+      String valueString,
+      @JsonKey(name: '_valueString') Element valueStringElement,
+      Coding valueCoding});
 
-  @override
-  $CodingCopyWith<$Res> get valueCoding;
   @override
   $ElementCopyWith<$Res> get valueIntegerElement;
   @override
@@ -11026,6 +10825,8 @@ abstract class _$QuestionnaireOptionCopyWith<$Res>
   $ElementCopyWith<$Res> get valueTimeElement;
   @override
   $ElementCopyWith<$Res> get valueStringElement;
+  @override
+  $CodingCopyWith<$Res> get valueCoding;
 }
 
 class __$QuestionnaireOptionCopyWithImpl<$Res>
@@ -11041,83 +10842,84 @@ class __$QuestionnaireOptionCopyWithImpl<$Res>
   @override
   $Res call({
     Object valueInteger = freezed,
-    Object valueDate = freezed,
-    Object valueTime = freezed,
-    Object valueString = freezed,
-    Object valueCoding = freezed,
     Object valueIntegerElement = freezed,
+    Object valueDate = freezed,
     Object valueDateElement = freezed,
+    Object valueTime = freezed,
     Object valueTimeElement = freezed,
+    Object valueString = freezed,
     Object valueStringElement = freezed,
+    Object valueCoding = freezed,
   }) {
     return _then(_QuestionnaireOption(
       valueInteger: valueInteger == freezed
           ? _value.valueInteger
-          : valueInteger as Integer,
-      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
-      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
-      valueString:
-          valueString == freezed ? _value.valueString : valueString as String,
-      valueCoding:
-          valueCoding == freezed ? _value.valueCoding : valueCoding as Coding,
+          : valueInteger as Decimal,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement as Element,
+      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateElement: valueDateElement == freezed
           ? _value.valueDateElement
           : valueDateElement as Element,
+      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueTimeElement: valueTimeElement == freezed
           ? _value.valueTimeElement
           : valueTimeElement as Element,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
+      valueCoding:
+          valueCoding == freezed ? _value.valueCoding : valueCoding as Coding,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_QuestionnaireOption implements _QuestionnaireOption {
+class _$_QuestionnaireOption extends _QuestionnaireOption {
   _$_QuestionnaireOption(
       {this.valueInteger,
-      this.valueDate,
-      this.valueTime,
-      this.valueString,
-      this.valueCoding,
       @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+      this.valueDate,
       @JsonKey(name: '_valueDate') this.valueDateElement,
+      this.valueTime,
       @JsonKey(name: '_valueTime') this.valueTimeElement,
-      @JsonKey(name: '_valueString') this.valueStringElement});
+      this.valueString,
+      @JsonKey(name: '_valueString') this.valueStringElement,
+      this.valueCoding})
+      : super._();
 
   factory _$_QuestionnaireOption.fromJson(Map<String, dynamic> json) =>
       _$_$_QuestionnaireOptionFromJson(json);
 
   @override
-  final Integer valueInteger;
-  @override
-  final Date valueDate;
-  @override
-  final Time valueTime;
-  @override
-  final String valueString;
-  @override
-  final Coding valueCoding;
+  final Decimal valueInteger;
   @override
   @JsonKey(name: '_valueInteger')
   final Element valueIntegerElement;
   @override
+  final Date valueDate;
+  @override
   @JsonKey(name: '_valueDate')
   final Element valueDateElement;
+  @override
+  final Time valueTime;
   @override
   @JsonKey(name: '_valueTime')
   final Element valueTimeElement;
   @override
+  final String valueString;
+  @override
   @JsonKey(name: '_valueString')
   final Element valueStringElement;
+  @override
+  final Coding valueCoding;
 
   @override
   String toString() {
-    return 'QuestionnaireOption(valueInteger: $valueInteger, valueDate: $valueDate, valueTime: $valueTime, valueString: $valueString, valueCoding: $valueCoding, valueIntegerElement: $valueIntegerElement, valueDateElement: $valueDateElement, valueTimeElement: $valueTimeElement, valueStringElement: $valueStringElement)';
+    return 'QuestionnaireOption(valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueString: $valueString, valueStringElement: $valueStringElement, valueCoding: $valueCoding)';
   }
 
   @override
@@ -11127,44 +10929,44 @@ class _$_QuestionnaireOption implements _QuestionnaireOption {
             (identical(other.valueInteger, valueInteger) ||
                 const DeepCollectionEquality()
                     .equals(other.valueInteger, valueInteger)) &&
-            (identical(other.valueDate, valueDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueDate, valueDate)) &&
-            (identical(other.valueTime, valueTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueTime, valueTime)) &&
-            (identical(other.valueString, valueString) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueString, valueString)) &&
-            (identical(other.valueCoding, valueCoding) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueCoding, valueCoding)) &&
             (identical(other.valueIntegerElement, valueIntegerElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueIntegerElement, valueIntegerElement)) &&
+            (identical(other.valueDate, valueDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDate, valueDate)) &&
             (identical(other.valueDateElement, valueDateElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueDateElement, valueDateElement)) &&
+            (identical(other.valueTime, valueTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueTime, valueTime)) &&
             (identical(other.valueTimeElement, valueTimeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueTimeElement, valueTimeElement)) &&
+            (identical(other.valueString, valueString) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueString, valueString)) &&
             (identical(other.valueStringElement, valueStringElement) ||
                 const DeepCollectionEquality()
-                    .equals(other.valueStringElement, valueStringElement)));
+                    .equals(other.valueStringElement, valueStringElement)) &&
+            (identical(other.valueCoding, valueCoding) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueCoding, valueCoding)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(valueInteger) ^
-      const DeepCollectionEquality().hash(valueDate) ^
-      const DeepCollectionEquality().hash(valueTime) ^
-      const DeepCollectionEquality().hash(valueString) ^
-      const DeepCollectionEquality().hash(valueCoding) ^
       const DeepCollectionEquality().hash(valueIntegerElement) ^
+      const DeepCollectionEquality().hash(valueDate) ^
       const DeepCollectionEquality().hash(valueDateElement) ^
+      const DeepCollectionEquality().hash(valueTime) ^
       const DeepCollectionEquality().hash(valueTimeElement) ^
-      const DeepCollectionEquality().hash(valueStringElement);
+      const DeepCollectionEquality().hash(valueString) ^
+      const DeepCollectionEquality().hash(valueStringElement) ^
+      const DeepCollectionEquality().hash(valueCoding);
 
   @override
   _$QuestionnaireOptionCopyWith<_QuestionnaireOption> get copyWith =>
@@ -11177,44 +10979,44 @@ class _$_QuestionnaireOption implements _QuestionnaireOption {
   }
 }
 
-abstract class _QuestionnaireOption implements QuestionnaireOption {
+abstract class _QuestionnaireOption extends QuestionnaireOption {
+  _QuestionnaireOption._() : super._();
   factory _QuestionnaireOption(
-          {Integer valueInteger,
-          Date valueDate,
-          Time valueTime,
-          String valueString,
-          Coding valueCoding,
-          @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-          @JsonKey(name: '_valueDate') Element valueDateElement,
-          @JsonKey(name: '_valueTime') Element valueTimeElement,
-          @JsonKey(name: '_valueString') Element valueStringElement}) =
-      _$_QuestionnaireOption;
+      {Decimal valueInteger,
+      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      Date valueDate,
+      @JsonKey(name: '_valueDate') Element valueDateElement,
+      Time valueTime,
+      @JsonKey(name: '_valueTime') Element valueTimeElement,
+      String valueString,
+      @JsonKey(name: '_valueString') Element valueStringElement,
+      Coding valueCoding}) = _$_QuestionnaireOption;
 
   factory _QuestionnaireOption.fromJson(Map<String, dynamic> json) =
       _$_QuestionnaireOption.fromJson;
 
   @override
-  Integer get valueInteger;
-  @override
-  Date get valueDate;
-  @override
-  Time get valueTime;
-  @override
-  String get valueString;
-  @override
-  Coding get valueCoding;
+  Decimal get valueInteger;
   @override
   @JsonKey(name: '_valueInteger')
   Element get valueIntegerElement;
   @override
+  Date get valueDate;
+  @override
   @JsonKey(name: '_valueDate')
   Element get valueDateElement;
+  @override
+  Time get valueTime;
   @override
   @JsonKey(name: '_valueTime')
   Element get valueTimeElement;
   @override
+  String get valueString;
+  @override
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
+  @override
+  Coding get valueCoding;
   @override
   _$QuestionnaireOptionCopyWith<_QuestionnaireOption> get copyWith;
 }
@@ -11226,34 +11028,64 @@ ServiceDefinition _$ServiceDefinitionFromJson(Map<String, dynamic> json) {
 class _$ServiceDefinitionTearOff {
   const _$ServiceDefinitionTearOff();
 
+// ignore: unused_element
   _ServiceDefinition call(
       {@required
-      @JsonKey(required: true, defaultValue: 'ServiceDefinition')
+      @JsonKey(defaultValue: 'ServiceDefinition')
           String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String url,
+      @JsonKey(name: '_url')
+          Element urlElement,
       List<Identifier> identifier,
       String version,
+      @JsonKey(name: '_version')
+          Element versionElement,
       String name,
+      @JsonKey(name: '_name')
+          Element nameElement,
       String title,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      ServiceDefinitionStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Boolean experimental,
-      FhirDateTime date,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      Date date,
+      @JsonKey(name: '_date')
+          Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
       String description,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       String purpose,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
       String usage,
+      @JsonKey(name: '_usage')
+          Element usageElement,
       Date approvalDate,
+      @JsonKey(name: '_approvalDate')
+          Element approvalDateElement,
       Date lastReviewDate,
+      @JsonKey(name: '_lastReviewDate')
+          Element lastReviewDateElement,
       Period effectivePeriod,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
@@ -11261,62 +11093,51 @@ class _$ServiceDefinitionTearOff {
       List<Contributor> contributor,
       List<ContactDetail> contact,
       String copyright,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
       List<RelatedArtifact> relatedArtifact,
       List<TriggerDefinition> trigger,
       List<DataRequirement> dataRequirement,
-      Reference operationDefinition,
-      @JsonKey(name: '_url')
-          Element urlElement,
-      @JsonKey(name: '_version')
-          Element versionElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
-      @JsonKey(name: '_usage')
-          Element usageElement,
-      @JsonKey(name: '_approvalDate')
-          Element approvalDateElement,
-      @JsonKey(name: '_lastReviewDate')
-          Element lastReviewDateElement,
-      @JsonKey(name: '_copyright')
-          Element copyrightElement}) {
+      Reference operationDefinition}) {
     return _ServiceDefinition(
       resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
+      implicitRulesElement: implicitRulesElement,
       language: language,
+      languageElement: languageElement,
       text: text,
       contained: contained,
       extension_: extension_,
       modifierExtension: modifierExtension,
       url: url,
+      urlElement: urlElement,
       identifier: identifier,
       version: version,
+      versionElement: versionElement,
       name: name,
+      nameElement: nameElement,
       title: title,
+      titleElement: titleElement,
       status: status,
+      statusElement: statusElement,
       experimental: experimental,
+      experimentalElement: experimentalElement,
       date: date,
+      dateElement: dateElement,
       publisher: publisher,
+      publisherElement: publisherElement,
       description: description,
+      descriptionElement: descriptionElement,
       purpose: purpose,
+      purposeElement: purposeElement,
       usage: usage,
+      usageElement: usageElement,
       approvalDate: approvalDate,
+      approvalDateElement: approvalDateElement,
       lastReviewDate: lastReviewDate,
+      lastReviewDateElement: lastReviewDateElement,
       effectivePeriod: effectivePeriod,
       useContext: useContext,
       jurisdiction: jurisdiction,
@@ -11324,24 +11145,11 @@ class _$ServiceDefinitionTearOff {
       contributor: contributor,
       contact: contact,
       copyright: copyright,
+      copyrightElement: copyrightElement,
       relatedArtifact: relatedArtifact,
       trigger: trigger,
       dataRequirement: dataRequirement,
       operationDefinition: operationDefinition,
-      urlElement: urlElement,
-      versionElement: versionElement,
-      nameElement: nameElement,
-      titleElement: titleElement,
-      statusElement: statusElement,
-      experimentalElement: experimentalElement,
-      dateElement: dateElement,
-      publisherElement: publisherElement,
-      descriptionElement: descriptionElement,
-      purposeElement: purposeElement,
-      usageElement: usageElement,
-      approvalDateElement: approvalDateElement,
-      lastReviewDateElement: lastReviewDateElement,
-      copyrightElement: copyrightElement,
     );
   }
 }
@@ -11350,32 +11158,61 @@ class _$ServiceDefinitionTearOff {
 const $ServiceDefinition = _$ServiceDefinitionTearOff();
 
 mixin _$ServiceDefinition {
-  @JsonKey(required: true, defaultValue: 'ServiceDefinition')
+  @JsonKey(defaultValue: 'ServiceDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
   Code get language;
+  @JsonKey(name: '_language')
+  Element get languageElement;
   Narrative get text;
   List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   String get url;
+  @JsonKey(name: '_url')
+  Element get urlElement;
   List<Identifier> get identifier;
   String get version;
+  @JsonKey(name: '_version')
+  Element get versionElement;
   String get name;
+  @JsonKey(name: '_name')
+  Element get nameElement;
   String get title;
-  @JsonKey(unknownEnumValue: Status.unknown)
-  Status get status;
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  ServiceDefinitionStatus get status;
+  @JsonKey(name: '_status')
+  Element get statusElement;
   Boolean get experimental;
-  FhirDateTime get date;
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  Date get date;
+  @JsonKey(name: '_date')
+  Element get dateElement;
   String get publisher;
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
   String get description;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
   String get purpose;
+  @JsonKey(name: '_purpose')
+  Element get purposeElement;
   String get usage;
+  @JsonKey(name: '_usage')
+  Element get usageElement;
   Date get approvalDate;
+  @JsonKey(name: '_approvalDate')
+  Element get approvalDateElement;
   Date get lastReviewDate;
+  @JsonKey(name: '_lastReviewDate')
+  Element get lastReviewDateElement;
   Period get effectivePeriod;
   List<UsageContext> get useContext;
   List<CodeableConcept> get jurisdiction;
@@ -11383,38 +11220,12 @@ mixin _$ServiceDefinition {
   List<Contributor> get contributor;
   List<ContactDetail> get contact;
   String get copyright;
+  @JsonKey(name: '_copyright')
+  Element get copyrightElement;
   List<RelatedArtifact> get relatedArtifact;
   List<TriggerDefinition> get trigger;
   List<DataRequirement> get dataRequirement;
   Reference get operationDefinition;
-  @JsonKey(name: '_url')
-  Element get urlElement;
-  @JsonKey(name: '_version')
-  Element get versionElement;
-  @JsonKey(name: '_name')
-  Element get nameElement;
-  @JsonKey(name: '_title')
-  Element get titleElement;
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @JsonKey(name: '_experimental')
-  Element get experimentalElement;
-  @JsonKey(name: '_date')
-  Element get dateElement;
-  @JsonKey(name: '_publisher')
-  Element get publisherElement;
-  @JsonKey(name: '_description')
-  Element get descriptionElement;
-  @JsonKey(name: '_purpose')
-  Element get purposeElement;
-  @JsonKey(name: '_usage')
-  Element get usageElement;
-  @JsonKey(name: '_approvalDate')
-  Element get approvalDateElement;
-  @JsonKey(name: '_lastReviewDate')
-  Element get lastReviewDateElement;
-  @JsonKey(name: '_copyright')
-  Element get copyrightElement;
 
   Map<String, dynamic> toJson();
   $ServiceDefinitionCopyWith<ServiceDefinition> get copyWith;
@@ -11425,32 +11236,44 @@ abstract class $ServiceDefinitionCopyWith<$Res> {
           ServiceDefinition value, $Res Function(ServiceDefinition) then) =
       _$ServiceDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'ServiceDefinition')
-          String resourceType,
+      {@JsonKey(defaultValue: 'ServiceDefinition') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String url,
+      @JsonKey(name: '_url') Element urlElement,
       List<Identifier> identifier,
       String version,
+      @JsonKey(name: '_version') Element versionElement,
       String name,
+      @JsonKey(name: '_name') Element nameElement,
       String title,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
+      @JsonKey(name: '_title') Element titleElement,
+      ServiceDefinitionStatus status,
+      @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
-      FhirDateTime date,
+      @JsonKey(name: '_experimental') Element experimentalElement,
+      Date date,
+      @JsonKey(name: '_date') Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher') Element publisherElement,
       String description,
+      @JsonKey(name: '_description') Element descriptionElement,
       String purpose,
+      @JsonKey(name: '_purpose') Element purposeElement,
       String usage,
+      @JsonKey(name: '_usage') Element usageElement,
       Date approvalDate,
+      @JsonKey(name: '_approvalDate') Element approvalDateElement,
       Date lastReviewDate,
+      @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
       Period effectivePeriod,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
@@ -11458,43 +11281,16 @@ abstract class $ServiceDefinitionCopyWith<$Res> {
       List<Contributor> contributor,
       List<ContactDetail> contact,
       String copyright,
+      @JsonKey(name: '_copyright') Element copyrightElement,
       List<RelatedArtifact> relatedArtifact,
       List<TriggerDefinition> trigger,
       List<DataRequirement> dataRequirement,
-      Reference operationDefinition,
-      @JsonKey(name: '_url')
-          Element urlElement,
-      @JsonKey(name: '_version')
-          Element versionElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
-      @JsonKey(name: '_usage')
-          Element usageElement,
-      @JsonKey(name: '_approvalDate')
-          Element approvalDateElement,
-      @JsonKey(name: '_lastReviewDate')
-          Element lastReviewDateElement,
-      @JsonKey(name: '_copyright')
-          Element copyrightElement});
+      Reference operationDefinition});
 
   $MetaCopyWith<$Res> get meta;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
-  $PeriodCopyWith<$Res> get effectivePeriod;
-  $ReferenceCopyWith<$Res> get operationDefinition;
   $ElementCopyWith<$Res> get urlElement;
   $ElementCopyWith<$Res> get versionElement;
   $ElementCopyWith<$Res> get nameElement;
@@ -11508,7 +11304,9 @@ abstract class $ServiceDefinitionCopyWith<$Res> {
   $ElementCopyWith<$Res> get usageElement;
   $ElementCopyWith<$Res> get approvalDateElement;
   $ElementCopyWith<$Res> get lastReviewDateElement;
+  $PeriodCopyWith<$Res> get effectivePeriod;
   $ElementCopyWith<$Res> get copyrightElement;
+  $ReferenceCopyWith<$Res> get operationDefinition;
 }
 
 class _$ServiceDefinitionCopyWithImpl<$Res>
@@ -11525,25 +11323,40 @@ class _$ServiceDefinitionCopyWithImpl<$Res>
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object url = freezed,
+    Object urlElement = freezed,
     Object identifier = freezed,
     Object version = freezed,
+    Object versionElement = freezed,
     Object name = freezed,
+    Object nameElement = freezed,
     Object title = freezed,
+    Object titleElement = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object experimental = freezed,
+    Object experimentalElement = freezed,
     Object date = freezed,
+    Object dateElement = freezed,
     Object publisher = freezed,
+    Object publisherElement = freezed,
     Object description = freezed,
+    Object descriptionElement = freezed,
     Object purpose = freezed,
+    Object purposeElement = freezed,
     Object usage = freezed,
+    Object usageElement = freezed,
     Object approvalDate = freezed,
+    Object approvalDateElement = freezed,
     Object lastReviewDate = freezed,
+    Object lastReviewDateElement = freezed,
     Object effectivePeriod = freezed,
     Object useContext = freezed,
     Object jurisdiction = freezed,
@@ -11551,24 +11364,11 @@ class _$ServiceDefinitionCopyWithImpl<$Res>
     Object contributor = freezed,
     Object contact = freezed,
     Object copyright = freezed,
+    Object copyrightElement = freezed,
     Object relatedArtifact = freezed,
     Object trigger = freezed,
     Object dataRequirement = freezed,
     Object operationDefinition = freezed,
-    Object urlElement = freezed,
-    Object versionElement = freezed,
-    Object nameElement = freezed,
-    Object titleElement = freezed,
-    Object statusElement = freezed,
-    Object experimentalElement = freezed,
-    Object dateElement = freezed,
-    Object publisherElement = freezed,
-    Object descriptionElement = freezed,
-    Object purposeElement = freezed,
-    Object usageElement = freezed,
-    Object approvalDateElement = freezed,
-    Object lastReviewDateElement = freezed,
-    Object copyrightElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -11579,7 +11379,13 @@ class _$ServiceDefinitionCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -11590,27 +11396,64 @@ class _$ServiceDefinitionCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
       version: version == freezed ? _value.version : version as String,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
       name: name == freezed ? _value.name : name as String,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed ? _value.status : status as Status,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      status:
+          status == freezed ? _value.status : status as ServiceDefinitionStatus,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as FhirDateTime,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
+      date: date == freezed ? _value.date : date as Date,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
       description:
           description == freezed ? _value.description : description as String,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
       purpose: purpose == freezed ? _value.purpose : purpose as String,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement as Element,
       usage: usage == freezed ? _value.usage : usage as String,
+      usageElement: usageElement == freezed
+          ? _value.usageElement
+          : usageElement as Element,
       approvalDate:
           approvalDate == freezed ? _value.approvalDate : approvalDate as Date,
+      approvalDateElement: approvalDateElement == freezed
+          ? _value.approvalDateElement
+          : approvalDateElement as Element,
       lastReviewDate: lastReviewDate == freezed
           ? _value.lastReviewDate
           : lastReviewDate as Date,
+      lastReviewDateElement: lastReviewDateElement == freezed
+          ? _value.lastReviewDateElement
+          : lastReviewDateElement as Element,
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period,
@@ -11627,6 +11470,9 @@ class _$ServiceDefinitionCopyWithImpl<$Res>
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
       copyright: copyright == freezed ? _value.copyright : copyright as String,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
       relatedArtifact: relatedArtifact == freezed
           ? _value.relatedArtifact
           : relatedArtifact as List<RelatedArtifact>,
@@ -11639,45 +11485,6 @@ class _$ServiceDefinitionCopyWithImpl<$Res>
       operationDefinition: operationDefinition == freezed
           ? _value.operationDefinition
           : operationDefinition as Reference,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element,
-      versionElement: versionElement == freezed
-          ? _value.versionElement
-          : versionElement as Element,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      titleElement: titleElement == freezed
-          ? _value.titleElement
-          : titleElement as Element,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      experimentalElement: experimentalElement == freezed
-          ? _value.experimentalElement
-          : experimentalElement as Element,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element,
-      publisherElement: publisherElement == freezed
-          ? _value.publisherElement
-          : publisherElement as Element,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement as Element,
-      purposeElement: purposeElement == freezed
-          ? _value.purposeElement
-          : purposeElement as Element,
-      usageElement: usageElement == freezed
-          ? _value.usageElement
-          : usageElement as Element,
-      approvalDateElement: approvalDateElement == freezed
-          ? _value.approvalDateElement
-          : approvalDateElement as Element,
-      lastReviewDateElement: lastReviewDateElement == freezed
-          ? _value.lastReviewDateElement
-          : lastReviewDateElement as Element,
-      copyrightElement: copyrightElement == freezed
-          ? _value.copyrightElement
-          : copyrightElement as Element,
     ));
   }
 
@@ -11692,32 +11499,32 @@ class _$ServiceDefinitionCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
   $NarrativeCopyWith<$Res> get text {
     if (_value.text == null) {
       return null;
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get effectivePeriod {
-    if (_value.effectivePeriod == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.effectivePeriod, (value) {
-      return _then(_value.copyWith(effectivePeriod: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get operationDefinition {
-    if (_value.operationDefinition == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.operationDefinition, (value) {
-      return _then(_value.copyWith(operationDefinition: value));
     });
   }
 
@@ -11852,12 +11659,32 @@ class _$ServiceDefinitionCopyWithImpl<$Res>
   }
 
   @override
+  $PeriodCopyWith<$Res> get effectivePeriod {
+    if (_value.effectivePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.effectivePeriod, (value) {
+      return _then(_value.copyWith(effectivePeriod: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res> get copyrightElement {
     if (_value.copyrightElement == null) {
       return null;
     }
     return $ElementCopyWith<$Res>(_value.copyrightElement, (value) {
       return _then(_value.copyWith(copyrightElement: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get operationDefinition {
+    if (_value.operationDefinition == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.operationDefinition, (value) {
+      return _then(_value.copyWith(operationDefinition: value));
     });
   }
 }
@@ -11869,32 +11696,44 @@ abstract class _$ServiceDefinitionCopyWith<$Res>
       __$ServiceDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'ServiceDefinition')
-          String resourceType,
+      {@JsonKey(defaultValue: 'ServiceDefinition') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String url,
+      @JsonKey(name: '_url') Element urlElement,
       List<Identifier> identifier,
       String version,
+      @JsonKey(name: '_version') Element versionElement,
       String name,
+      @JsonKey(name: '_name') Element nameElement,
       String title,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
+      @JsonKey(name: '_title') Element titleElement,
+      ServiceDefinitionStatus status,
+      @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
-      FhirDateTime date,
+      @JsonKey(name: '_experimental') Element experimentalElement,
+      Date date,
+      @JsonKey(name: '_date') Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher') Element publisherElement,
       String description,
+      @JsonKey(name: '_description') Element descriptionElement,
       String purpose,
+      @JsonKey(name: '_purpose') Element purposeElement,
       String usage,
+      @JsonKey(name: '_usage') Element usageElement,
       Date approvalDate,
+      @JsonKey(name: '_approvalDate') Element approvalDateElement,
       Date lastReviewDate,
+      @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
       Period effectivePeriod,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
@@ -11902,47 +11741,20 @@ abstract class _$ServiceDefinitionCopyWith<$Res>
       List<Contributor> contributor,
       List<ContactDetail> contact,
       String copyright,
+      @JsonKey(name: '_copyright') Element copyrightElement,
       List<RelatedArtifact> relatedArtifact,
       List<TriggerDefinition> trigger,
       List<DataRequirement> dataRequirement,
-      Reference operationDefinition,
-      @JsonKey(name: '_url')
-          Element urlElement,
-      @JsonKey(name: '_version')
-          Element versionElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
-      @JsonKey(name: '_usage')
-          Element usageElement,
-      @JsonKey(name: '_approvalDate')
-          Element approvalDateElement,
-      @JsonKey(name: '_lastReviewDate')
-          Element lastReviewDateElement,
-      @JsonKey(name: '_copyright')
-          Element copyrightElement});
+      Reference operationDefinition});
 
   @override
   $MetaCopyWith<$Res> get meta;
   @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
   $NarrativeCopyWith<$Res> get text;
-  @override
-  $PeriodCopyWith<$Res> get effectivePeriod;
-  @override
-  $ReferenceCopyWith<$Res> get operationDefinition;
   @override
   $ElementCopyWith<$Res> get urlElement;
   @override
@@ -11970,7 +11782,11 @@ abstract class _$ServiceDefinitionCopyWith<$Res>
   @override
   $ElementCopyWith<$Res> get lastReviewDateElement;
   @override
+  $PeriodCopyWith<$Res> get effectivePeriod;
+  @override
   $ElementCopyWith<$Res> get copyrightElement;
+  @override
+  $ReferenceCopyWith<$Res> get operationDefinition;
 }
 
 class __$ServiceDefinitionCopyWithImpl<$Res>
@@ -11989,25 +11805,40 @@ class __$ServiceDefinitionCopyWithImpl<$Res>
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object url = freezed,
+    Object urlElement = freezed,
     Object identifier = freezed,
     Object version = freezed,
+    Object versionElement = freezed,
     Object name = freezed,
+    Object nameElement = freezed,
     Object title = freezed,
+    Object titleElement = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object experimental = freezed,
+    Object experimentalElement = freezed,
     Object date = freezed,
+    Object dateElement = freezed,
     Object publisher = freezed,
+    Object publisherElement = freezed,
     Object description = freezed,
+    Object descriptionElement = freezed,
     Object purpose = freezed,
+    Object purposeElement = freezed,
     Object usage = freezed,
+    Object usageElement = freezed,
     Object approvalDate = freezed,
+    Object approvalDateElement = freezed,
     Object lastReviewDate = freezed,
+    Object lastReviewDateElement = freezed,
     Object effectivePeriod = freezed,
     Object useContext = freezed,
     Object jurisdiction = freezed,
@@ -12015,24 +11846,11 @@ class __$ServiceDefinitionCopyWithImpl<$Res>
     Object contributor = freezed,
     Object contact = freezed,
     Object copyright = freezed,
+    Object copyrightElement = freezed,
     Object relatedArtifact = freezed,
     Object trigger = freezed,
     Object dataRequirement = freezed,
     Object operationDefinition = freezed,
-    Object urlElement = freezed,
-    Object versionElement = freezed,
-    Object nameElement = freezed,
-    Object titleElement = freezed,
-    Object statusElement = freezed,
-    Object experimentalElement = freezed,
-    Object dateElement = freezed,
-    Object publisherElement = freezed,
-    Object descriptionElement = freezed,
-    Object purposeElement = freezed,
-    Object usageElement = freezed,
-    Object approvalDateElement = freezed,
-    Object lastReviewDateElement = freezed,
-    Object copyrightElement = freezed,
   }) {
     return _then(_ServiceDefinition(
       resourceType: resourceType == freezed
@@ -12043,7 +11861,13 @@ class __$ServiceDefinitionCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -12054,27 +11878,64 @@ class __$ServiceDefinitionCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
       version: version == freezed ? _value.version : version as String,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
       name: name == freezed ? _value.name : name as String,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed ? _value.status : status as Status,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      status:
+          status == freezed ? _value.status : status as ServiceDefinitionStatus,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as FhirDateTime,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
+      date: date == freezed ? _value.date : date as Date,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
       description:
           description == freezed ? _value.description : description as String,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
       purpose: purpose == freezed ? _value.purpose : purpose as String,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement as Element,
       usage: usage == freezed ? _value.usage : usage as String,
+      usageElement: usageElement == freezed
+          ? _value.usageElement
+          : usageElement as Element,
       approvalDate:
           approvalDate == freezed ? _value.approvalDate : approvalDate as Date,
+      approvalDateElement: approvalDateElement == freezed
+          ? _value.approvalDateElement
+          : approvalDateElement as Element,
       lastReviewDate: lastReviewDate == freezed
           ? _value.lastReviewDate
           : lastReviewDate as Date,
+      lastReviewDateElement: lastReviewDateElement == freezed
+          ? _value.lastReviewDateElement
+          : lastReviewDateElement as Element,
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period,
@@ -12091,6 +11952,9 @@ class __$ServiceDefinitionCopyWithImpl<$Res>
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
       copyright: copyright == freezed ? _value.copyright : copyright as String,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
       relatedArtifact: relatedArtifact == freezed
           ? _value.relatedArtifact
           : relatedArtifact as List<RelatedArtifact>,
@@ -12103,45 +11967,6 @@ class __$ServiceDefinitionCopyWithImpl<$Res>
       operationDefinition: operationDefinition == freezed
           ? _value.operationDefinition
           : operationDefinition as Reference,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element,
-      versionElement: versionElement == freezed
-          ? _value.versionElement
-          : versionElement as Element,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      titleElement: titleElement == freezed
-          ? _value.titleElement
-          : titleElement as Element,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      experimentalElement: experimentalElement == freezed
-          ? _value.experimentalElement
-          : experimentalElement as Element,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element,
-      publisherElement: publisherElement == freezed
-          ? _value.publisherElement
-          : publisherElement as Element,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement as Element,
-      purposeElement: purposeElement == freezed
-          ? _value.purposeElement
-          : purposeElement as Element,
-      usageElement: usageElement == freezed
-          ? _value.usageElement
-          : usageElement as Element,
-      approvalDateElement: approvalDateElement == freezed
-          ? _value.approvalDateElement
-          : approvalDateElement as Element,
-      lastReviewDateElement: lastReviewDateElement == freezed
-          ? _value.lastReviewDateElement
-          : lastReviewDateElement as Element,
-      copyrightElement: copyrightElement == freezed
-          ? _value.copyrightElement
-          : copyrightElement as Element,
     ));
   }
 }
@@ -12149,33 +11974,44 @@ class __$ServiceDefinitionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ServiceDefinition extends _ServiceDefinition {
   _$_ServiceDefinition(
-      {@required
-      @JsonKey(required: true, defaultValue: 'ServiceDefinition')
-          this.resourceType,
+      {@required @JsonKey(defaultValue: 'ServiceDefinition') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.url,
+      @JsonKey(name: '_url') this.urlElement,
       this.identifier,
       this.version,
+      @JsonKey(name: '_version') this.versionElement,
       this.name,
+      @JsonKey(name: '_name') this.nameElement,
       this.title,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          this.status,
+      @JsonKey(name: '_title') this.titleElement,
+      this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.experimental,
+      @JsonKey(name: '_experimental') this.experimentalElement,
       this.date,
+      @JsonKey(name: '_date') this.dateElement,
       this.publisher,
+      @JsonKey(name: '_publisher') this.publisherElement,
       this.description,
+      @JsonKey(name: '_description') this.descriptionElement,
       this.purpose,
+      @JsonKey(name: '_purpose') this.purposeElement,
       this.usage,
+      @JsonKey(name: '_usage') this.usageElement,
       this.approvalDate,
+      @JsonKey(name: '_approvalDate') this.approvalDateElement,
       this.lastReviewDate,
+      @JsonKey(name: '_lastReviewDate') this.lastReviewDateElement,
       this.effectivePeriod,
       this.useContext,
       this.jurisdiction,
@@ -12183,38 +12019,11 @@ class _$_ServiceDefinition extends _ServiceDefinition {
       this.contributor,
       this.contact,
       this.copyright,
+      @JsonKey(name: '_copyright') this.copyrightElement,
       this.relatedArtifact,
       this.trigger,
       this.dataRequirement,
-      this.operationDefinition,
-      @JsonKey(name: '_url')
-          this.urlElement,
-      @JsonKey(name: '_version')
-          this.versionElement,
-      @JsonKey(name: '_name')
-          this.nameElement,
-      @JsonKey(name: '_title')
-          this.titleElement,
-      @JsonKey(name: '_status')
-          this.statusElement,
-      @JsonKey(name: '_experimental')
-          this.experimentalElement,
-      @JsonKey(name: '_date')
-          this.dateElement,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
-      @JsonKey(name: '_purpose')
-          this.purposeElement,
-      @JsonKey(name: '_usage')
-          this.usageElement,
-      @JsonKey(name: '_approvalDate')
-          this.approvalDateElement,
-      @JsonKey(name: '_lastReviewDate')
-          this.lastReviewDateElement,
-      @JsonKey(name: '_copyright')
-          this.copyrightElement})
+      this.operationDefinition})
       : assert(resourceType != null),
         super._();
 
@@ -12222,7 +12031,7 @@ class _$_ServiceDefinition extends _ServiceDefinition {
       _$_$_ServiceDefinitionFromJson(json);
 
   @override
-  @JsonKey(required: true, defaultValue: 'ServiceDefinition')
+  @JsonKey(defaultValue: 'ServiceDefinition')
   final String resourceType;
   @override
   final Id id;
@@ -12231,7 +12040,13 @@ class _$_ServiceDefinition extends _ServiceDefinition {
   @override
   final FhirUri implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
   final Code language;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
   @override
   final Narrative text;
   @override
@@ -12244,32 +12059,70 @@ class _$_ServiceDefinition extends _ServiceDefinition {
   @override
   final String url;
   @override
+  @JsonKey(name: '_url')
+  final Element urlElement;
+  @override
   final List<Identifier> identifier;
   @override
   final String version;
   @override
+  @JsonKey(name: '_version')
+  final Element versionElement;
+  @override
   final String name;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
   @override
   final String title;
   @override
-  @JsonKey(unknownEnumValue: Status.unknown)
-  final Status status;
+  @JsonKey(name: '_title')
+  final Element titleElement;
+  @override
+  final ServiceDefinitionStatus status;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
   @override
   final Boolean experimental;
   @override
-  final FhirDateTime date;
+  @JsonKey(name: '_experimental')
+  final Element experimentalElement;
+  @override
+  final Date date;
+  @override
+  @JsonKey(name: '_date')
+  final Element dateElement;
   @override
   final String publisher;
   @override
+  @JsonKey(name: '_publisher')
+  final Element publisherElement;
+  @override
   final String description;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
   @override
   final String purpose;
   @override
+  @JsonKey(name: '_purpose')
+  final Element purposeElement;
+  @override
   final String usage;
+  @override
+  @JsonKey(name: '_usage')
+  final Element usageElement;
   @override
   final Date approvalDate;
   @override
+  @JsonKey(name: '_approvalDate')
+  final Element approvalDateElement;
+  @override
   final Date lastReviewDate;
+  @override
+  @JsonKey(name: '_lastReviewDate')
+  final Element lastReviewDateElement;
   @override
   final Period effectivePeriod;
   @override
@@ -12285,6 +12138,9 @@ class _$_ServiceDefinition extends _ServiceDefinition {
   @override
   final String copyright;
   @override
+  @JsonKey(name: '_copyright')
+  final Element copyrightElement;
+  @override
   final List<RelatedArtifact> relatedArtifact;
   @override
   final List<TriggerDefinition> trigger;
@@ -12292,52 +12148,10 @@ class _$_ServiceDefinition extends _ServiceDefinition {
   final List<DataRequirement> dataRequirement;
   @override
   final Reference operationDefinition;
-  @override
-  @JsonKey(name: '_url')
-  final Element urlElement;
-  @override
-  @JsonKey(name: '_version')
-  final Element versionElement;
-  @override
-  @JsonKey(name: '_name')
-  final Element nameElement;
-  @override
-  @JsonKey(name: '_title')
-  final Element titleElement;
-  @override
-  @JsonKey(name: '_status')
-  final Element statusElement;
-  @override
-  @JsonKey(name: '_experimental')
-  final Element experimentalElement;
-  @override
-  @JsonKey(name: '_date')
-  final Element dateElement;
-  @override
-  @JsonKey(name: '_publisher')
-  final Element publisherElement;
-  @override
-  @JsonKey(name: '_description')
-  final Element descriptionElement;
-  @override
-  @JsonKey(name: '_purpose')
-  final Element purposeElement;
-  @override
-  @JsonKey(name: '_usage')
-  final Element usageElement;
-  @override
-  @JsonKey(name: '_approvalDate')
-  final Element approvalDateElement;
-  @override
-  @JsonKey(name: '_lastReviewDate')
-  final Element lastReviewDateElement;
-  @override
-  @JsonKey(name: '_copyright')
-  final Element copyrightElement;
 
   @override
   String toString() {
-    return 'ServiceDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, description: $description, purpose: $purpose, usage: $usage, approvalDate: $approvalDate, lastReviewDate: $lastReviewDate, effectivePeriod: $effectivePeriod, useContext: $useContext, jurisdiction: $jurisdiction, topic: $topic, contributor: $contributor, contact: $contact, copyright: $copyright, relatedArtifact: $relatedArtifact, trigger: $trigger, dataRequirement: $dataRequirement, operationDefinition: $operationDefinition, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, usageElement: $usageElement, approvalDateElement: $approvalDateElement, lastReviewDateElement: $lastReviewDateElement, copyrightElement: $copyrightElement)';
+    return 'ServiceDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, description: $description, descriptionElement: $descriptionElement, purpose: $purpose, purposeElement: $purposeElement, usage: $usage, usageElement: $usageElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, useContext: $useContext, jurisdiction: $jurisdiction, topic: $topic, contributor: $contributor, contact: $contact, copyright: $copyright, copyrightElement: $copyrightElement, relatedArtifact: $relatedArtifact, trigger: $trigger, dataRequirement: $dataRequirement, operationDefinition: $operationDefinition)';
   }
 
   @override
@@ -12354,9 +12168,15 @@ class _$_ServiceDefinition extends _ServiceDefinition {
             (identical(other.implicitRules, implicitRules) ||
                 const DeepCollectionEquality()
                     .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
             (identical(other.language, language) ||
                 const DeepCollectionEquality()
                     .equals(other.language, language)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
             (identical(other.text, text) ||
                 const DeepCollectionEquality().equals(other.text, text)) &&
             (identical(other.contained, contained) ||
@@ -12370,71 +12190,67 @@ class _$_ServiceDefinition extends _ServiceDefinition {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
+            (identical(other.urlElement, urlElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.urlElement, urlElement)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
             (identical(other.version, version) ||
                 const DeepCollectionEquality()
                     .equals(other.version, version)) &&
+            (identical(other.versionElement, versionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.versionElement, versionElement)) &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
             (identical(other.title, title) ||
                 const DeepCollectionEquality().equals(other.title, title)) &&
+            (identical(other.titleElement, titleElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.titleElement, titleElement)) &&
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
             (identical(other.experimental, experimental) ||
                 const DeepCollectionEquality()
                     .equals(other.experimental, experimental)) &&
+            (identical(other.experimentalElement, experimentalElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.experimentalElement, experimentalElement)) &&
             (identical(other.date, date) ||
                 const DeepCollectionEquality().equals(other.date, date)) &&
-            (identical(other.publisher, publisher) ||
-                const DeepCollectionEquality()
-                    .equals(other.publisher, publisher)) &&
-            (identical(other.description, description) ||
-                const DeepCollectionEquality()
-                    .equals(other.description, description)) &&
-            (identical(other.purpose, purpose) ||
-                const DeepCollectionEquality()
-                    .equals(other.purpose, purpose)) &&
-            (identical(other.usage, usage) ||
-                const DeepCollectionEquality().equals(other.usage, usage)) &&
-            (identical(other.approvalDate, approvalDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.approvalDate, approvalDate)) &&
-            (identical(other.lastReviewDate, lastReviewDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.lastReviewDate, lastReviewDate)) &&
-            (identical(other.effectivePeriod, effectivePeriod) ||
-                const DeepCollectionEquality()
-                    .equals(other.effectivePeriod, effectivePeriod)) &&
-            (identical(other.useContext, useContext) ||
-                const DeepCollectionEquality()
-                    .equals(other.useContext, useContext)) &&
-            (identical(other.jurisdiction, jurisdiction) ||
-                const DeepCollectionEquality()
-                    .equals(other.jurisdiction, jurisdiction)) &&
+            (identical(other.dateElement, dateElement) ||
+                const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
+            (identical(other.publisher, publisher) || const DeepCollectionEquality().equals(other.publisher, publisher)) &&
+            (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
+            (identical(other.description, description) || const DeepCollectionEquality().equals(other.description, description)) &&
+            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.purpose, purpose) || const DeepCollectionEquality().equals(other.purpose, purpose)) &&
+            (identical(other.purposeElement, purposeElement) || const DeepCollectionEquality().equals(other.purposeElement, purposeElement)) &&
+            (identical(other.usage, usage) || const DeepCollectionEquality().equals(other.usage, usage)) &&
+            (identical(other.usageElement, usageElement) || const DeepCollectionEquality().equals(other.usageElement, usageElement)) &&
+            (identical(other.approvalDate, approvalDate) || const DeepCollectionEquality().equals(other.approvalDate, approvalDate)) &&
+            (identical(other.approvalDateElement, approvalDateElement) || const DeepCollectionEquality().equals(other.approvalDateElement, approvalDateElement)) &&
+            (identical(other.lastReviewDate, lastReviewDate) || const DeepCollectionEquality().equals(other.lastReviewDate, lastReviewDate)) &&
+            (identical(other.lastReviewDateElement, lastReviewDateElement) || const DeepCollectionEquality().equals(other.lastReviewDateElement, lastReviewDateElement)) &&
+            (identical(other.effectivePeriod, effectivePeriod) || const DeepCollectionEquality().equals(other.effectivePeriod, effectivePeriod)) &&
+            (identical(other.useContext, useContext) || const DeepCollectionEquality().equals(other.useContext, useContext)) &&
+            (identical(other.jurisdiction, jurisdiction) || const DeepCollectionEquality().equals(other.jurisdiction, jurisdiction)) &&
             (identical(other.topic, topic) || const DeepCollectionEquality().equals(other.topic, topic)) &&
             (identical(other.contributor, contributor) || const DeepCollectionEquality().equals(other.contributor, contributor)) &&
             (identical(other.contact, contact) || const DeepCollectionEquality().equals(other.contact, contact)) &&
             (identical(other.copyright, copyright) || const DeepCollectionEquality().equals(other.copyright, copyright)) &&
+            (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)) &&
             (identical(other.relatedArtifact, relatedArtifact) || const DeepCollectionEquality().equals(other.relatedArtifact, relatedArtifact)) &&
             (identical(other.trigger, trigger) || const DeepCollectionEquality().equals(other.trigger, trigger)) &&
             (identical(other.dataRequirement, dataRequirement) || const DeepCollectionEquality().equals(other.dataRequirement, dataRequirement)) &&
-            (identical(other.operationDefinition, operationDefinition) || const DeepCollectionEquality().equals(other.operationDefinition, operationDefinition)) &&
-            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
-            (identical(other.versionElement, versionElement) || const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
-            (identical(other.nameElement, nameElement) || const DeepCollectionEquality().equals(other.nameElement, nameElement)) &&
-            (identical(other.titleElement, titleElement) || const DeepCollectionEquality().equals(other.titleElement, titleElement)) &&
-            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
-            (identical(other.experimentalElement, experimentalElement) || const DeepCollectionEquality().equals(other.experimentalElement, experimentalElement)) &&
-            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
-            (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
-            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
-            (identical(other.purposeElement, purposeElement) || const DeepCollectionEquality().equals(other.purposeElement, purposeElement)) &&
-            (identical(other.usageElement, usageElement) || const DeepCollectionEquality().equals(other.usageElement, usageElement)) &&
-            (identical(other.approvalDateElement, approvalDateElement) || const DeepCollectionEquality().equals(other.approvalDateElement, approvalDateElement)) &&
-            (identical(other.lastReviewDateElement, lastReviewDateElement) || const DeepCollectionEquality().equals(other.lastReviewDateElement, lastReviewDateElement)) &&
-            (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)));
+            (identical(other.operationDefinition, operationDefinition) || const DeepCollectionEquality().equals(other.operationDefinition, operationDefinition)));
   }
 
   @override
@@ -12444,25 +12260,40 @@ class _$_ServiceDefinition extends _ServiceDefinition {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
       const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(url) ^
+      const DeepCollectionEquality().hash(urlElement) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(version) ^
+      const DeepCollectionEquality().hash(versionElement) ^
       const DeepCollectionEquality().hash(name) ^
+      const DeepCollectionEquality().hash(nameElement) ^
       const DeepCollectionEquality().hash(title) ^
+      const DeepCollectionEquality().hash(titleElement) ^
       const DeepCollectionEquality().hash(status) ^
+      const DeepCollectionEquality().hash(statusElement) ^
       const DeepCollectionEquality().hash(experimental) ^
+      const DeepCollectionEquality().hash(experimentalElement) ^
       const DeepCollectionEquality().hash(date) ^
+      const DeepCollectionEquality().hash(dateElement) ^
       const DeepCollectionEquality().hash(publisher) ^
+      const DeepCollectionEquality().hash(publisherElement) ^
       const DeepCollectionEquality().hash(description) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(purpose) ^
+      const DeepCollectionEquality().hash(purposeElement) ^
       const DeepCollectionEquality().hash(usage) ^
+      const DeepCollectionEquality().hash(usageElement) ^
       const DeepCollectionEquality().hash(approvalDate) ^
+      const DeepCollectionEquality().hash(approvalDateElement) ^
       const DeepCollectionEquality().hash(lastReviewDate) ^
+      const DeepCollectionEquality().hash(lastReviewDateElement) ^
       const DeepCollectionEquality().hash(effectivePeriod) ^
       const DeepCollectionEquality().hash(useContext) ^
       const DeepCollectionEquality().hash(jurisdiction) ^
@@ -12470,24 +12301,11 @@ class _$_ServiceDefinition extends _ServiceDefinition {
       const DeepCollectionEquality().hash(contributor) ^
       const DeepCollectionEquality().hash(contact) ^
       const DeepCollectionEquality().hash(copyright) ^
+      const DeepCollectionEquality().hash(copyrightElement) ^
       const DeepCollectionEquality().hash(relatedArtifact) ^
       const DeepCollectionEquality().hash(trigger) ^
       const DeepCollectionEquality().hash(dataRequirement) ^
-      const DeepCollectionEquality().hash(operationDefinition) ^
-      const DeepCollectionEquality().hash(urlElement) ^
-      const DeepCollectionEquality().hash(versionElement) ^
-      const DeepCollectionEquality().hash(nameElement) ^
-      const DeepCollectionEquality().hash(titleElement) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(experimentalElement) ^
-      const DeepCollectionEquality().hash(dateElement) ^
-      const DeepCollectionEquality().hash(publisherElement) ^
-      const DeepCollectionEquality().hash(descriptionElement) ^
-      const DeepCollectionEquality().hash(purposeElement) ^
-      const DeepCollectionEquality().hash(usageElement) ^
-      const DeepCollectionEquality().hash(approvalDateElement) ^
-      const DeepCollectionEquality().hash(lastReviewDateElement) ^
-      const DeepCollectionEquality().hash(copyrightElement);
+      const DeepCollectionEquality().hash(operationDefinition);
 
   @override
   _$ServiceDefinitionCopyWith<_ServiceDefinition> get copyWith =>
@@ -12503,32 +12321,61 @@ abstract class _ServiceDefinition extends ServiceDefinition {
   _ServiceDefinition._() : super._();
   factory _ServiceDefinition(
       {@required
-      @JsonKey(required: true, defaultValue: 'ServiceDefinition')
+      @JsonKey(defaultValue: 'ServiceDefinition')
           String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String url,
+      @JsonKey(name: '_url')
+          Element urlElement,
       List<Identifier> identifier,
       String version,
+      @JsonKey(name: '_version')
+          Element versionElement,
       String name,
+      @JsonKey(name: '_name')
+          Element nameElement,
       String title,
-      @JsonKey(unknownEnumValue: Status.unknown)
-          Status status,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      ServiceDefinitionStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Boolean experimental,
-      FhirDateTime date,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      Date date,
+      @JsonKey(name: '_date')
+          Element dateElement,
       String publisher,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
       String description,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       String purpose,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
       String usage,
+      @JsonKey(name: '_usage')
+          Element usageElement,
       Date approvalDate,
+      @JsonKey(name: '_approvalDate')
+          Element approvalDateElement,
       Date lastReviewDate,
+      @JsonKey(name: '_lastReviewDate')
+          Element lastReviewDateElement,
       Period effectivePeriod,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
@@ -12536,44 +12383,18 @@ abstract class _ServiceDefinition extends ServiceDefinition {
       List<Contributor> contributor,
       List<ContactDetail> contact,
       String copyright,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
       List<RelatedArtifact> relatedArtifact,
       List<TriggerDefinition> trigger,
       List<DataRequirement> dataRequirement,
-      Reference operationDefinition,
-      @JsonKey(name: '_url')
-          Element urlElement,
-      @JsonKey(name: '_version')
-          Element versionElement,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(name: '_title')
-          Element titleElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
-      @JsonKey(name: '_date')
-          Element dateElement,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
-      @JsonKey(name: '_usage')
-          Element usageElement,
-      @JsonKey(name: '_approvalDate')
-          Element approvalDateElement,
-      @JsonKey(name: '_lastReviewDate')
-          Element lastReviewDateElement,
-      @JsonKey(name: '_copyright')
-          Element copyrightElement}) = _$_ServiceDefinition;
+      Reference operationDefinition}) = _$_ServiceDefinition;
 
   factory _ServiceDefinition.fromJson(Map<String, dynamic> json) =
       _$_ServiceDefinition.fromJson;
 
   @override
-  @JsonKey(required: true, defaultValue: 'ServiceDefinition')
+  @JsonKey(defaultValue: 'ServiceDefinition')
   String get resourceType;
   @override
   Id get id;
@@ -12582,7 +12403,13 @@ abstract class _ServiceDefinition extends ServiceDefinition {
   @override
   FhirUri get implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
   Code get language;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
   @override
   Narrative get text;
   @override
@@ -12595,32 +12422,70 @@ abstract class _ServiceDefinition extends ServiceDefinition {
   @override
   String get url;
   @override
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @override
   List<Identifier> get identifier;
   @override
   String get version;
   @override
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @override
   String get name;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
   @override
   String get title;
   @override
-  @JsonKey(unknownEnumValue: Status.unknown)
-  Status get status;
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @override
+  ServiceDefinitionStatus get status;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
   @override
   Boolean get experimental;
   @override
-  FhirDateTime get date;
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  @override
+  Date get date;
+  @override
+  @JsonKey(name: '_date')
+  Element get dateElement;
   @override
   String get publisher;
   @override
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
+  @override
   String get description;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
   @override
   String get purpose;
   @override
+  @JsonKey(name: '_purpose')
+  Element get purposeElement;
+  @override
   String get usage;
+  @override
+  @JsonKey(name: '_usage')
+  Element get usageElement;
   @override
   Date get approvalDate;
   @override
+  @JsonKey(name: '_approvalDate')
+  Element get approvalDateElement;
+  @override
   Date get lastReviewDate;
+  @override
+  @JsonKey(name: '_lastReviewDate')
+  Element get lastReviewDateElement;
   @override
   Period get effectivePeriod;
   @override
@@ -12636,6 +12501,9 @@ abstract class _ServiceDefinition extends ServiceDefinition {
   @override
   String get copyright;
   @override
+  @JsonKey(name: '_copyright')
+  Element get copyrightElement;
+  @override
   List<RelatedArtifact> get relatedArtifact;
   @override
   List<TriggerDefinition> get trigger;
@@ -12643,48 +12511,6 @@ abstract class _ServiceDefinition extends ServiceDefinition {
   List<DataRequirement> get dataRequirement;
   @override
   Reference get operationDefinition;
-  @override
-  @JsonKey(name: '_url')
-  Element get urlElement;
-  @override
-  @JsonKey(name: '_version')
-  Element get versionElement;
-  @override
-  @JsonKey(name: '_name')
-  Element get nameElement;
-  @override
-  @JsonKey(name: '_title')
-  Element get titleElement;
-  @override
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @override
-  @JsonKey(name: '_experimental')
-  Element get experimentalElement;
-  @override
-  @JsonKey(name: '_date')
-  Element get dateElement;
-  @override
-  @JsonKey(name: '_publisher')
-  Element get publisherElement;
-  @override
-  @JsonKey(name: '_description')
-  Element get descriptionElement;
-  @override
-  @JsonKey(name: '_purpose')
-  Element get purposeElement;
-  @override
-  @JsonKey(name: '_usage')
-  Element get usageElement;
-  @override
-  @JsonKey(name: '_approvalDate')
-  Element get approvalDateElement;
-  @override
-  @JsonKey(name: '_lastReviewDate')
-  Element get lastReviewDateElement;
-  @override
-  @JsonKey(name: '_copyright')
-  Element get copyrightElement;
   @override
   _$ServiceDefinitionCopyWith<_ServiceDefinition> get copyWith;
 }

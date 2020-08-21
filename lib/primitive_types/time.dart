@@ -3,9 +3,9 @@ import 'package:dartz/dartz.dart';
 import 'primitive_failures.dart';
 import 'primitive_objects.dart';
 
-class Time extends PrimitiveObject<Duration> {
+class Time extends PrimitiveObject<String> {
   @override
-  final Either<PrimitiveFailure<String>, Duration> value;
+  final Either<PrimitiveFailure<String>, String> value;
 
   factory Time(String value) {
     assert(value != null);

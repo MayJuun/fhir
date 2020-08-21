@@ -7,7 +7,6 @@ part of 'entities.dart';
 // **************************************************************************
 
 _$_Device _$_$_DeviceFromJson(Map<String, dynamic> json) {
-  $checkKeys(json, requiredKeys: const ['resourceType']);
   return _$_Device(
     resourceType: json['resourceType'] as String ?? 'Device',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
@@ -17,9 +16,15 @@ _$_Device _$_$_DeviceFromJson(Map<String, dynamic> json) {
     implicitRules: json['implicitRules'] == null
         ? null
         : FhirUri.fromJson(json['implicitRules'] as String),
+    implicitRulesElement: json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
     language: json['language'] == null
         ? null
         : Code.fromJson(json['language'] as String),
+    languageElement: json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>),
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -44,21 +49,41 @@ _$_Device _$_$_DeviceFromJson(Map<String, dynamic> json) {
     udi: json['udi'] == null
         ? null
         : DeviceUdi.fromJson(json['udi'] as Map<String, dynamic>),
-    status: _$enumDecodeNullable(_$ActiveInactiveEnumMap, json['status'],
-        unknownValue: ActiveInactive.unknown),
+    status: _$enumDecodeNullable(_$DeviceStatusEnumMap, json['status']),
+    statusElement: json['_status'] == null
+        ? null
+        : Element.fromJson(json['_status'] as Map<String, dynamic>),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
     lotNumber: json['lotNumber'] as String,
+    lotNumberElement: json['_lotNumber'] == null
+        ? null
+        : Element.fromJson(json['_lotNumber'] as Map<String, dynamic>),
     manufacturer: json['manufacturer'] as String,
+    manufacturerElement: json['_manufacturer'] == null
+        ? null
+        : Element.fromJson(json['_manufacturer'] as Map<String, dynamic>),
     manufactureDate: json['manufactureDate'] == null
         ? null
-        : FhirDateTime.fromJson(json['manufactureDate'] as String),
+        : Date.fromJson(json['manufactureDate'] as String),
+    manufactureDateElement: json['_manufactureDate'] == null
+        ? null
+        : Element.fromJson(json['_manufactureDate'] as Map<String, dynamic>),
     expirationDate: json['expirationDate'] == null
         ? null
-        : FhirDateTime.fromJson(json['expirationDate'] as String),
+        : Date.fromJson(json['expirationDate'] as String),
+    expirationDateElement: json['_expirationDate'] == null
+        ? null
+        : Element.fromJson(json['_expirationDate'] as Map<String, dynamic>),
     model: json['model'] as String,
+    modelElement: json['_model'] == null
+        ? null
+        : Element.fromJson(json['_model'] as Map<String, dynamic>),
     version: json['version'] as String,
+    versionElement: json['_version'] == null
+        ? null
+        : Element.fromJson(json['_version'] as Map<String, dynamic>),
     patient: json['patient'] == null
         ? null
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
@@ -73,6 +98,9 @@ _$_Device _$_$_DeviceFromJson(Map<String, dynamic> json) {
         ? null
         : Reference.fromJson(json['location'] as Map<String, dynamic>),
     url: json['url'] as String,
+    urlElement: json['_url'] == null
+        ? null
+        : Element.fromJson(json['_url'] as Map<String, dynamic>),
     note: (json['note'] as List)
         ?.map((e) =>
             e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
@@ -82,30 +110,6 @@ _$_Device _$_$_DeviceFromJson(Map<String, dynamic> json) {
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    statusElement: json['_status'] == null
-        ? null
-        : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    lotNumberElement: json['_lotNumber'] == null
-        ? null
-        : Element.fromJson(json['_lotNumber'] as Map<String, dynamic>),
-    manufacturerElement: json['_manufacturer'] == null
-        ? null
-        : Element.fromJson(json['_manufacturer'] as Map<String, dynamic>),
-    manufactureDateElement: json['_manufactureDate'] == null
-        ? null
-        : Element.fromJson(json['_manufactureDate'] as Map<String, dynamic>),
-    expirationDateElement: json['_expirationDate'] == null
-        ? null
-        : Element.fromJson(json['_expirationDate'] as Map<String, dynamic>),
-    modelElement: json['_model'] == null
-        ? null
-        : Element.fromJson(json['_model'] as Map<String, dynamic>),
-    versionElement: json['_version'] == null
-        ? null
-        : Element.fromJson(json['_version'] as Map<String, dynamic>),
-    urlElement: json['_url'] == null
-        ? null
-        : Element.fromJson(json['_url'] as Map<String, dynamic>),
   );
 }
 
@@ -122,7 +126,9 @@ Map<String, dynamic> _$_$_DeviceToJson(_$_Device instance) {
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
   writeNotNull('language', instance.language?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
       'contained', instance.contained?.map((e) => e?.toJson())?.toList());
@@ -133,29 +139,29 @@ Map<String, dynamic> _$_$_DeviceToJson(_$_Device instance) {
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('udi', instance.udi?.toJson());
-  writeNotNull('status', _$ActiveInactiveEnumMap[instance.status]);
+  writeNotNull('status', _$DeviceStatusEnumMap[instance.status]);
+  writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('lotNumber', instance.lotNumber);
+  writeNotNull('_lotNumber', instance.lotNumberElement?.toJson());
   writeNotNull('manufacturer', instance.manufacturer);
+  writeNotNull('_manufacturer', instance.manufacturerElement?.toJson());
   writeNotNull('manufactureDate', instance.manufactureDate?.toJson());
+  writeNotNull('_manufactureDate', instance.manufactureDateElement?.toJson());
   writeNotNull('expirationDate', instance.expirationDate?.toJson());
+  writeNotNull('_expirationDate', instance.expirationDateElement?.toJson());
   writeNotNull('model', instance.model);
+  writeNotNull('_model', instance.modelElement?.toJson());
   writeNotNull('version', instance.version);
+  writeNotNull('_version', instance.versionElement?.toJson());
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('owner', instance.owner?.toJson());
   writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
   writeNotNull('location', instance.location?.toJson());
   writeNotNull('url', instance.url);
+  writeNotNull('_url', instance.urlElement?.toJson());
   writeNotNull('note', instance.note?.map((e) => e?.toJson())?.toList());
   writeNotNull('safety', instance.safety?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('_lotNumber', instance.lotNumberElement?.toJson());
-  writeNotNull('_manufacturer', instance.manufacturerElement?.toJson());
-  writeNotNull('_manufactureDate', instance.manufactureDateElement?.toJson());
-  writeNotNull('_expirationDate', instance.expirationDateElement?.toJson());
-  writeNotNull('_model', instance.modelElement?.toJson());
-  writeNotNull('_version', instance.versionElement?.toJson());
-  writeNotNull('_url', instance.urlElement?.toJson());
   return val;
 }
 
@@ -191,41 +197,41 @@ T _$enumDecodeNullable<T>(
   return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
 }
 
-const _$ActiveInactiveEnumMap = {
-  ActiveInactive.active: 'active',
-  ActiveInactive.inactive: 'inactive',
-  ActiveInactive.entered_in_error: 'entered-in-error',
-  ActiveInactive.unknown: 'unknown',
+const _$DeviceStatusEnumMap = {
+  DeviceStatus.active: 'active',
+  DeviceStatus.inactive: 'inactive',
+  DeviceStatus.entered_in_error: 'entered-in-error',
+  DeviceStatus.unknown: 'unknown',
 };
 
 _$_DeviceUdi _$_$_DeviceUdiFromJson(Map<String, dynamic> json) {
   return _$_DeviceUdi(
     deviceIdentifier: json['deviceIdentifier'] as String,
-    name: json['name'] as String,
-    jurisdiction: json['jurisdiction'] as String,
-    carrierHRF: json['carrierHRF'] as String,
-    carrierAIDC: json['carrierAIDC'] as String,
-    issuer: json['issuer'] as String,
-    entryType: _$enumDecodeNullable(_$UdiEntryTypeEnumMap, json['entryType'],
-        unknownValue: UdiEntryType.unknown),
     deviceIdentifierElement: json['_deviceIdentifier'] == null
         ? null
         : Element.fromJson(json['_deviceIdentifier'] as Map<String, dynamic>),
+    name: json['name'] as String,
     nameElement: json['_name'] == null
         ? null
         : Element.fromJson(json['_name'] as Map<String, dynamic>),
+    jurisdiction: json['jurisdiction'] as String,
     jurisdictionElement: json['_jurisdiction'] == null
         ? null
         : Element.fromJson(json['_jurisdiction'] as Map<String, dynamic>),
+    carrierHRF: json['carrierHRF'] as String,
     carrierHRFElement: json['_carrierHRF'] == null
         ? null
         : Element.fromJson(json['_carrierHRF'] as Map<String, dynamic>),
+    carrierAIDC: json['carrierAIDC'] as String,
     carrierAIDCElement: json['_carrierAIDC'] == null
         ? null
         : Element.fromJson(json['_carrierAIDC'] as Map<String, dynamic>),
+    issuer: json['issuer'] as String,
     issuerElement: json['_issuer'] == null
         ? null
         : Element.fromJson(json['_issuer'] as Map<String, dynamic>),
+    entryType:
+        _$enumDecodeNullable(_$DeviceUdiEntryTypeEnumMap, json['entryType']),
     entryTypeElement: json['_entryType'] == null
         ? null
         : Element.fromJson(json['_entryType'] as Map<String, dynamic>),
@@ -242,33 +248,32 @@ Map<String, dynamic> _$_$_DeviceUdiToJson(_$_DeviceUdi instance) {
   }
 
   writeNotNull('deviceIdentifier', instance.deviceIdentifier);
-  writeNotNull('name', instance.name);
-  writeNotNull('jurisdiction', instance.jurisdiction);
-  writeNotNull('carrierHRF', instance.carrierHRF);
-  writeNotNull('carrierAIDC', instance.carrierAIDC);
-  writeNotNull('issuer', instance.issuer);
-  writeNotNull('entryType', _$UdiEntryTypeEnumMap[instance.entryType]);
   writeNotNull('_deviceIdentifier', instance.deviceIdentifierElement?.toJson());
+  writeNotNull('name', instance.name);
   writeNotNull('_name', instance.nameElement?.toJson());
+  writeNotNull('jurisdiction', instance.jurisdiction);
   writeNotNull('_jurisdiction', instance.jurisdictionElement?.toJson());
+  writeNotNull('carrierHRF', instance.carrierHRF);
   writeNotNull('_carrierHRF', instance.carrierHRFElement?.toJson());
+  writeNotNull('carrierAIDC', instance.carrierAIDC);
   writeNotNull('_carrierAIDC', instance.carrierAIDCElement?.toJson());
+  writeNotNull('issuer', instance.issuer);
   writeNotNull('_issuer', instance.issuerElement?.toJson());
+  writeNotNull('entryType', _$DeviceUdiEntryTypeEnumMap[instance.entryType]);
   writeNotNull('_entryType', instance.entryTypeElement?.toJson());
   return val;
 }
 
-const _$UdiEntryTypeEnumMap = {
-  UdiEntryType.barcode: 'barcode',
-  UdiEntryType.rfid: 'rfid',
-  UdiEntryType.manual: 'manual',
-  UdiEntryType.card: 'card',
-  UdiEntryType.self_reported: 'self-reported',
-  UdiEntryType.unknown: 'unknown',
+const _$DeviceUdiEntryTypeEnumMap = {
+  DeviceUdiEntryType.barcode: 'barcode',
+  DeviceUdiEntryType.rfid: 'rfid',
+  DeviceUdiEntryType.manual: 'manual',
+  DeviceUdiEntryType.card: 'card',
+  DeviceUdiEntryType.self_reported: 'self-reported',
+  DeviceUdiEntryType.unknown: 'unknown',
 };
 
 _$_DeviceComponent _$_$_DeviceComponentFromJson(Map<String, dynamic> json) {
-  $checkKeys(json, requiredKeys: const ['resourceType', 'identifier', 'type']);
   return _$_DeviceComponent(
     resourceType: json['resourceType'] as String ?? 'DeviceComponent',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
@@ -278,9 +283,15 @@ _$_DeviceComponent _$_$_DeviceComponentFromJson(Map<String, dynamic> json) {
     implicitRules: json['implicitRules'] == null
         ? null
         : FhirUri.fromJson(json['implicitRules'] as String),
+    implicitRulesElement: json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
     language: json['language'] == null
         ? null
         : Code.fromJson(json['language'] as String),
+    languageElement: json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>),
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -305,6 +316,9 @@ _$_DeviceComponent _$_$_DeviceComponentFromJson(Map<String, dynamic> json) {
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
     lastSystemChange: json['lastSystemChange'] as String,
+    lastSystemChangeElement: json['_lastSystemChange'] == null
+        ? null
+        : Element.fromJson(json['_lastSystemChange'] as Map<String, dynamic>),
     source: json['source'] == null
         ? null
         : Reference.fromJson(json['source'] as Map<String, dynamic>),
@@ -322,8 +336,11 @@ _$_DeviceComponent _$_$_DeviceComponentFromJson(Map<String, dynamic> json) {
             json['parameterGroup'] as Map<String, dynamic>),
     measurementPrinciple: _$enumDecodeNullable(
         _$DeviceComponentMeasurementPrincipleEnumMap,
-        json['measurementPrinciple'],
-        unknownValue: DeviceComponentMeasurementPrinciple.unknown),
+        json['measurementPrinciple']),
+    measurementPrincipleElement: json['_measurementPrinciple'] == null
+        ? null
+        : Element.fromJson(
+            json['_measurementPrinciple'] as Map<String, dynamic>),
     productionSpecification: (json['productionSpecification'] as List)
         ?.map((e) => e == null
             ? null
@@ -334,13 +351,6 @@ _$_DeviceComponent _$_$_DeviceComponentFromJson(Map<String, dynamic> json) {
         ? null
         : CodeableConcept.fromJson(
             json['languageCode'] as Map<String, dynamic>),
-    lastSystemChangeElement: json['_lastSystemChange'] == null
-        ? null
-        : Element.fromJson(json['_lastSystemChange'] as Map<String, dynamic>),
-    measurementPrincipleElement: json['_measurementPrinciple'] == null
-        ? null
-        : Element.fromJson(
-            json['_measurementPrinciple'] as Map<String, dynamic>),
   );
 }
 
@@ -357,7 +367,9 @@ Map<String, dynamic> _$_$_DeviceComponentToJson(_$_DeviceComponent instance) {
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
   writeNotNull('language', instance.language?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
       'contained', instance.contained?.map((e) => e?.toJson())?.toList());
@@ -368,6 +380,7 @@ Map<String, dynamic> _$_$_DeviceComponentToJson(_$_DeviceComponent instance) {
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('lastSystemChange', instance.lastSystemChange);
+  writeNotNull('_lastSystemChange', instance.lastSystemChangeElement?.toJson());
   writeNotNull('source', instance.source?.toJson());
   writeNotNull('parent', instance.parent?.toJson());
   writeNotNull('operationalStatus',
@@ -377,12 +390,11 @@ Map<String, dynamic> _$_$_DeviceComponentToJson(_$_DeviceComponent instance) {
       'measurementPrinciple',
       _$DeviceComponentMeasurementPrincipleEnumMap[
           instance.measurementPrinciple]);
+  writeNotNull(
+      '_measurementPrinciple', instance.measurementPrincipleElement?.toJson());
   writeNotNull('productionSpecification',
       instance.productionSpecification?.map((e) => e?.toJson())?.toList());
   writeNotNull('languageCode', instance.languageCode?.toJson());
-  writeNotNull('_lastSystemChange', instance.lastSystemChangeElement?.toJson());
-  writeNotNull(
-      '_measurementPrinciple', instance.measurementPrincipleElement?.toJson());
   return val;
 }
 
@@ -436,7 +448,6 @@ Map<String, dynamic> _$_$_DeviceComponentProductionSpecificationToJson(
 }
 
 _$_DeviceMetric _$_$_DeviceMetricFromJson(Map<String, dynamic> json) {
-  $checkKeys(json, requiredKeys: const ['resourceType', 'identifier', 'type']);
   return _$_DeviceMetric(
     resourceType: json['resourceType'] as String ?? 'DeviceMetric',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
@@ -446,9 +457,15 @@ _$_DeviceMetric _$_$_DeviceMetricFromJson(Map<String, dynamic> json) {
     implicitRules: json['implicitRules'] == null
         ? null
         : FhirUri.fromJson(json['implicitRules'] as String),
+    implicitRulesElement: json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
     language: json['language'] == null
         ? null
         : Code.fromJson(json['language'] as String),
+    languageElement: json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>),
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -482,13 +499,19 @@ _$_DeviceMetric _$_$_DeviceMetricFromJson(Map<String, dynamic> json) {
         ? null
         : Reference.fromJson(json['parent'] as Map<String, dynamic>),
     operationalStatus: _$enumDecodeNullable(
-        _$DeviceMetricOperationalStatusEnumMap, json['operationalStatus'],
-        unknownValue: DeviceMetricOperationalStatus.unknown),
-    color: _$enumDecodeNullable(_$DeviceMetricColorEnumMap, json['color'],
-        unknownValue: DeviceMetricColor.unknown),
-    category: _$enumDecodeNullable(
-        _$DeviceMetricCategoryEnumMap, json['category'],
-        unknownValue: DeviceMetricCategory.unknown),
+        _$DeviceMetricOperationalStatusEnumMap, json['operationalStatus']),
+    operationalStatusElement: json['_operationalStatus'] == null
+        ? null
+        : Element.fromJson(json['_operationalStatus'] as Map<String, dynamic>),
+    color: _$enumDecodeNullable(_$DeviceMetricColorEnumMap, json['color']),
+    colorElement: json['_color'] == null
+        ? null
+        : Element.fromJson(json['_color'] as Map<String, dynamic>),
+    category:
+        _$enumDecodeNullable(_$DeviceMetricCategoryEnumMap, json['category']),
+    categoryElement: json['_category'] == null
+        ? null
+        : Element.fromJson(json['_category'] as Map<String, dynamic>),
     measurementPeriod: json['measurementPeriod'] == null
         ? null
         : Timing.fromJson(json['measurementPeriod'] as Map<String, dynamic>),
@@ -497,15 +520,6 @@ _$_DeviceMetric _$_$_DeviceMetricFromJson(Map<String, dynamic> json) {
             ? null
             : DeviceMetricCalibration.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    operationalStatusElement: json['_operationalStatus'] == null
-        ? null
-        : Element.fromJson(json['_operationalStatus'] as Map<String, dynamic>),
-    colorElement: json['_color'] == null
-        ? null
-        : Element.fromJson(json['_color'] as Map<String, dynamic>),
-    categoryElement: json['_category'] == null
-        ? null
-        : Element.fromJson(json['_category'] as Map<String, dynamic>),
   );
 }
 
@@ -522,7 +536,9 @@ Map<String, dynamic> _$_$_DeviceMetricToJson(_$_DeviceMetric instance) {
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
   writeNotNull('language', instance.language?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
       'contained', instance.contained?.map((e) => e?.toJson())?.toList());
@@ -537,20 +553,20 @@ Map<String, dynamic> _$_$_DeviceMetricToJson(_$_DeviceMetric instance) {
   writeNotNull('parent', instance.parent?.toJson());
   writeNotNull('operationalStatus',
       _$DeviceMetricOperationalStatusEnumMap[instance.operationalStatus]);
+  writeNotNull(
+      '_operationalStatus', instance.operationalStatusElement?.toJson());
   writeNotNull('color', _$DeviceMetricColorEnumMap[instance.color]);
+  writeNotNull('_color', instance.colorElement?.toJson());
   writeNotNull('category', _$DeviceMetricCategoryEnumMap[instance.category]);
+  writeNotNull('_category', instance.categoryElement?.toJson());
   writeNotNull('measurementPeriod', instance.measurementPeriod?.toJson());
   writeNotNull(
       'calibration', instance.calibration?.map((e) => e?.toJson())?.toList());
-  writeNotNull(
-      '_operationalStatus', instance.operationalStatusElement?.toJson());
-  writeNotNull('_color', instance.colorElement?.toJson());
-  writeNotNull('_category', instance.categoryElement?.toJson());
   return val;
 }
 
 const _$DeviceMetricOperationalStatusEnumMap = {
-  DeviceMetricOperationalStatus.on_: 'on',
+  DeviceMetricOperationalStatus.on: 'on',
   DeviceMetricOperationalStatus.off: 'off',
   DeviceMetricOperationalStatus.standby: 'standby',
   DeviceMetricOperationalStatus.entered_in_error: 'entered-in-error',
@@ -580,17 +596,17 @@ const _$DeviceMetricCategoryEnumMap = {
 _$_DeviceMetricCalibration _$_$_DeviceMetricCalibrationFromJson(
     Map<String, dynamic> json) {
   return _$_DeviceMetricCalibration(
-    type: _$enumDecodeNullable(_$CalibrationTypeEnumMap, json['type'],
-        unknownValue: CalibrationType.unknown),
-    state: _$enumDecodeNullable(_$CalibrationStateEnumMap, json['state'],
-        unknownValue: CalibrationState.unknown),
-    time: json['time'] as String,
+    type: _$enumDecodeNullable(
+        _$DeviceMetricCalibrationTypeEnumMap, json['type']),
     typeElement: json['_type'] == null
         ? null
         : Element.fromJson(json['_type'] as Map<String, dynamic>),
+    state: _$enumDecodeNullable(
+        _$DeviceMetricCalibrationStateEnumMap, json['state']),
     stateElement: json['_state'] == null
         ? null
         : Element.fromJson(json['_state'] as Map<String, dynamic>),
+    time: json['time'] as String,
     timeElement: json['_time'] == null
         ? null
         : Element.fromJson(json['_time'] as Map<String, dynamic>),
@@ -607,34 +623,32 @@ Map<String, dynamic> _$_$_DeviceMetricCalibrationToJson(
     }
   }
 
-  writeNotNull('type', _$CalibrationTypeEnumMap[instance.type]);
-  writeNotNull('state', _$CalibrationStateEnumMap[instance.state]);
-  writeNotNull('time', instance.time);
+  writeNotNull('type', _$DeviceMetricCalibrationTypeEnumMap[instance.type]);
   writeNotNull('_type', instance.typeElement?.toJson());
+  writeNotNull('state', _$DeviceMetricCalibrationStateEnumMap[instance.state]);
   writeNotNull('_state', instance.stateElement?.toJson());
+  writeNotNull('time', instance.time);
   writeNotNull('_time', instance.timeElement?.toJson());
   return val;
 }
 
-const _$CalibrationTypeEnumMap = {
-  CalibrationType.unspecified: 'unspecified',
-  CalibrationType.offset: 'offset',
-  CalibrationType.gain: 'gain',
-  CalibrationType.two_point: 'two-point',
-  CalibrationType.unknown: 'unknown',
+const _$DeviceMetricCalibrationTypeEnumMap = {
+  DeviceMetricCalibrationType.unspecified: 'unspecified',
+  DeviceMetricCalibrationType.offset: 'offset',
+  DeviceMetricCalibrationType.gain: 'gain',
+  DeviceMetricCalibrationType.two_point: 'two-point',
+  DeviceMetricCalibrationType.unknown: 'unknown',
 };
 
-const _$CalibrationStateEnumMap = {
-  CalibrationState.not_calibrated: 'not-calibrated',
-  CalibrationState.calibration_required: 'calibration-required',
-  CalibrationState.calibrated: 'calibrated',
-  CalibrationState.unspecified: 'unspecified',
-  CalibrationState.unknown: 'unknown',
+const _$DeviceMetricCalibrationStateEnumMap = {
+  DeviceMetricCalibrationState.not_calibrated: 'not-calibrated',
+  DeviceMetricCalibrationState.calibration_required: 'calibration-required',
+  DeviceMetricCalibrationState.calibrated: 'calibrated',
+  DeviceMetricCalibrationState.unspecified: 'unspecified',
+  DeviceMetricCalibrationState.unknown: 'unknown',
 };
 
 _$_Endpoint _$_$_EndpointFromJson(Map<String, dynamic> json) {
-  $checkKeys(json,
-      requiredKeys: const ['resourceType', 'connectionType', 'payloadType']);
   return _$_Endpoint(
     resourceType: json['resourceType'] as String ?? 'Endpoint',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
@@ -644,9 +658,15 @@ _$_Endpoint _$_$_EndpointFromJson(Map<String, dynamic> json) {
     implicitRules: json['implicitRules'] == null
         ? null
         : FhirUri.fromJson(json['implicitRules'] as String),
+    implicitRulesElement: json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
     language: json['language'] == null
         ? null
         : Code.fromJson(json['language'] as String),
+    languageElement: json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>),
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -668,12 +688,17 @@ _$_Endpoint _$_$_EndpointFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: _$enumDecodeNullable(_$EndpointStatusEnumMap, json['status'],
-        unknownValue: EndpointStatus.unknown),
+    status: _$enumDecodeNullable(_$EndpointStatusEnumMap, json['status']),
+    statusElement: json['_status'] == null
+        ? null
+        : Element.fromJson(json['_status'] as Map<String, dynamic>),
     connectionType: json['connectionType'] == null
         ? null
         : Coding.fromJson(json['connectionType'] as Map<String, dynamic>),
     name: json['name'] as String,
+    nameElement: json['_name'] == null
+        ? null
+        : Element.fromJson(json['_name'] as Map<String, dynamic>),
     managingOrganization: json['managingOrganization'] == null
         ? null
         : Reference.fromJson(
@@ -690,26 +715,21 @@ _$_Endpoint _$_$_EndpointFromJson(Map<String, dynamic> json) {
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    payloadMimeType: (json['payloadMimeType'] as List)
-        ?.map((e) => e == null ? null : Code.fromJson(e as String))
+    payloadMimeType:
+        (json['payloadMimeType'] as List)?.map((e) => e as String)?.toList(),
+    payloadMimeTypeElement: (json['_payloadMimeType'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     address: json['address'] as String,
-    header: (json['header'] as List)?.map((e) => e as String)?.toList(),
-    statusElement: json['_status'] == null
-        ? null
-        : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    nameElement: json['_name'] == null
-        ? null
-        : Element.fromJson(json['_name'] as Map<String, dynamic>),
-    payloadMimeTypeElement: json['_payloadMimeType'] == null
-        ? null
-        : Element.fromJson(json['_payloadMimeType'] as Map<String, dynamic>),
     addressElement: json['_address'] == null
         ? null
         : Element.fromJson(json['_address'] as Map<String, dynamic>),
-    headerElement: json['_header'] == null
-        ? null
-        : Element.fromJson(json['_header'] as Map<String, dynamic>),
+    header: (json['header'] as List)?.map((e) => e as String)?.toList(),
+    headerElement: (json['_header'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -726,7 +746,9 @@ Map<String, dynamic> _$_$_EndpointToJson(_$_Endpoint instance) {
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
   writeNotNull('language', instance.language?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
       'contained', instance.contained?.map((e) => e?.toJson())?.toList());
@@ -737,22 +759,23 @@ Map<String, dynamic> _$_$_EndpointToJson(_$_Endpoint instance) {
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('status', _$EndpointStatusEnumMap[instance.status]);
+  writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('connectionType', instance.connectionType?.toJson());
   writeNotNull('name', instance.name);
+  writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('managingOrganization', instance.managingOrganization?.toJson());
   writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
   writeNotNull('period', instance.period?.toJson());
   writeNotNull(
       'payloadType', instance.payloadType?.map((e) => e?.toJson())?.toList());
-  writeNotNull('payloadMimeType',
-      instance.payloadMimeType?.map((e) => e?.toJson())?.toList());
+  writeNotNull('payloadMimeType', instance.payloadMimeType);
+  writeNotNull('_payloadMimeType',
+      instance.payloadMimeTypeElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('address', instance.address);
-  writeNotNull('header', instance.header);
-  writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('_name', instance.nameElement?.toJson());
-  writeNotNull('_payloadMimeType', instance.payloadMimeTypeElement?.toJson());
   writeNotNull('_address', instance.addressElement?.toJson());
-  writeNotNull('_header', instance.headerElement?.toJson());
+  writeNotNull('header', instance.header);
+  writeNotNull(
+      '_header', instance.headerElement?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
@@ -767,7 +790,6 @@ const _$EndpointStatusEnumMap = {
 };
 
 _$_HealthcareService _$_$_HealthcareServiceFromJson(Map<String, dynamic> json) {
-  $checkKeys(json, requiredKeys: const ['resourceType']);
   return _$_HealthcareService(
     resourceType: json['resourceType'] as String ?? 'HealthcareService',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
@@ -777,9 +799,15 @@ _$_HealthcareService _$_$_HealthcareServiceFromJson(Map<String, dynamic> json) {
     implicitRules: json['implicitRules'] == null
         ? null
         : FhirUri.fromJson(json['implicitRules'] as String),
+    implicitRulesElement: json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
     language: json['language'] == null
         ? null
         : Code.fromJson(json['language'] as String),
+    languageElement: json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>),
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -802,6 +830,9 @@ _$_HealthcareService _$_$_HealthcareServiceFromJson(Map<String, dynamic> json) {
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     active: json['active'] == null ? null : Boolean.fromJson(json['active']),
+    activeElement: json['_active'] == null
+        ? null
+        : Element.fromJson(json['_active'] as Map<String, dynamic>),
     providedBy: json['providedBy'] == null
         ? null
         : Reference.fromJson(json['providedBy'] as Map<String, dynamic>),
@@ -823,8 +854,17 @@ _$_HealthcareService _$_$_HealthcareServiceFromJson(Map<String, dynamic> json) {
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     name: json['name'] as String,
+    nameElement: json['_name'] == null
+        ? null
+        : Element.fromJson(json['_name'] as Map<String, dynamic>),
     comment: json['comment'] as String,
+    commentElement: json['_comment'] == null
+        ? null
+        : Element.fromJson(json['_comment'] as Map<String, dynamic>),
     extraDetails: json['extraDetails'] as String,
+    extraDetailsElement: json['_extraDetails'] == null
+        ? null
+        : Element.fromJson(json['_extraDetails'] as Map<String, dynamic>),
     photo: json['photo'] == null
         ? null
         : Attachment.fromJson(json['photo'] as Map<String, dynamic>),
@@ -845,8 +885,15 @@ _$_HealthcareService _$_$_HealthcareServiceFromJson(Map<String, dynamic> json) {
         ? null
         : CodeableConcept.fromJson(json['eligibility'] as Map<String, dynamic>),
     eligibilityNote: json['eligibilityNote'] as String,
+    eligibilityNoteElement: json['_eligibilityNote'] == null
+        ? null
+        : Element.fromJson(json['_eligibilityNote'] as Map<String, dynamic>),
     programName:
         (json['programName'] as List)?.map((e) => e as String)?.toList(),
+    programNameElement: (json['_programName'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     characteristic: (json['characteristic'] as List)
         ?.map((e) => e == null
             ? null
@@ -860,6 +907,10 @@ _$_HealthcareService _$_$_HealthcareServiceFromJson(Map<String, dynamic> json) {
     appointmentRequired: json['appointmentRequired'] == null
         ? null
         : Boolean.fromJson(json['appointmentRequired']),
+    appointmentRequiredElement: json['_appointmentRequired'] == null
+        ? null
+        : Element.fromJson(
+            json['_appointmentRequired'] as Map<String, dynamic>),
     availableTime: (json['availableTime'] as List)
         ?.map((e) => e == null
             ? null
@@ -872,36 +923,14 @@ _$_HealthcareService _$_$_HealthcareServiceFromJson(Map<String, dynamic> json) {
             : HealthcareServiceNotAvailable.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     availabilityExceptions: json['availabilityExceptions'] as String,
-    endpoint: (json['endpoint'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    activeElement: json['_active'] == null
-        ? null
-        : Element.fromJson(json['_active'] as Map<String, dynamic>),
-    nameElement: json['_name'] == null
-        ? null
-        : Element.fromJson(json['_name'] as Map<String, dynamic>),
-    commentElement: json['_comment'] == null
-        ? null
-        : Element.fromJson(json['_comment'] as Map<String, dynamic>),
-    extraDetailsElement: json['_extraDetails'] == null
-        ? null
-        : Element.fromJson(json['_extraDetails'] as Map<String, dynamic>),
-    eligibilityNoteElement: json['_eligibilityNote'] == null
-        ? null
-        : Element.fromJson(json['_eligibilityNote'] as Map<String, dynamic>),
-    programNameElement: json['_programName'] == null
-        ? null
-        : Element.fromJson(json['_programName'] as Map<String, dynamic>),
-    appointmentRequiredElement: json['_appointmentRequired'] == null
-        ? null
-        : Element.fromJson(
-            json['_appointmentRequired'] as Map<String, dynamic>),
     availabilityExceptionsElement: json['_availabilityExceptions'] == null
         ? null
         : Element.fromJson(
             json['_availabilityExceptions'] as Map<String, dynamic>),
+    endpoint: (json['endpoint'] as List)
+        ?.map((e) =>
+            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -919,7 +948,9 @@ Map<String, dynamic> _$_$_HealthcareServiceToJson(
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
   writeNotNull('language', instance.language?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
       'contained', instance.contained?.map((e) => e?.toJson())?.toList());
@@ -930,6 +961,7 @@ Map<String, dynamic> _$_$_HealthcareServiceToJson(
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('active', instance.active?.toJson());
+  writeNotNull('_active', instance.activeElement?.toJson());
   writeNotNull('providedBy', instance.providedBy?.toJson());
   writeNotNull('category', instance.category?.toJson());
   writeNotNull('type', instance.type?.map((e) => e?.toJson())?.toList());
@@ -938,8 +970,11 @@ Map<String, dynamic> _$_$_HealthcareServiceToJson(
   writeNotNull(
       'location', instance.location?.map((e) => e?.toJson())?.toList());
   writeNotNull('name', instance.name);
+  writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('comment', instance.comment);
+  writeNotNull('_comment', instance.commentElement?.toJson());
   writeNotNull('extraDetails', instance.extraDetails);
+  writeNotNull('_extraDetails', instance.extraDetailsElement?.toJson());
   writeNotNull('photo', instance.photo?.toJson());
   writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson())?.toList());
   writeNotNull(
@@ -948,29 +983,26 @@ Map<String, dynamic> _$_$_HealthcareServiceToJson(
       instance.serviceProvisionCode?.map((e) => e?.toJson())?.toList());
   writeNotNull('eligibility', instance.eligibility?.toJson());
   writeNotNull('eligibilityNote', instance.eligibilityNote);
+  writeNotNull('_eligibilityNote', instance.eligibilityNoteElement?.toJson());
   writeNotNull('programName', instance.programName);
+  writeNotNull('_programName',
+      instance.programNameElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('characteristic',
       instance.characteristic?.map((e) => e?.toJson())?.toList());
   writeNotNull('referralMethod',
       instance.referralMethod?.map((e) => e?.toJson())?.toList());
   writeNotNull('appointmentRequired', instance.appointmentRequired?.toJson());
+  writeNotNull(
+      '_appointmentRequired', instance.appointmentRequiredElement?.toJson());
   writeNotNull('availableTime',
       instance.availableTime?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'notAvailable', instance.notAvailable?.map((e) => e?.toJson())?.toList());
   writeNotNull('availabilityExceptions', instance.availabilityExceptions);
-  writeNotNull(
-      'endpoint', instance.endpoint?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_active', instance.activeElement?.toJson());
-  writeNotNull('_name', instance.nameElement?.toJson());
-  writeNotNull('_comment', instance.commentElement?.toJson());
-  writeNotNull('_extraDetails', instance.extraDetailsElement?.toJson());
-  writeNotNull('_eligibilityNote', instance.eligibilityNoteElement?.toJson());
-  writeNotNull('_programName', instance.programNameElement?.toJson());
-  writeNotNull(
-      '_appointmentRequired', instance.appointmentRequiredElement?.toJson());
   writeNotNull('_availabilityExceptions',
       instance.availabilityExceptionsElement?.toJson());
+  writeNotNull(
+      'endpoint', instance.endpoint?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
@@ -978,24 +1010,26 @@ _$_HealthcareServiceAvailableTime _$_$_HealthcareServiceAvailableTimeFromJson(
     Map<String, dynamic> json) {
   return _$_HealthcareServiceAvailableTime(
     daysOfWeek: (json['daysOfWeek'] as List)
-        ?.map((e) => _$enumDecodeNullable(_$AvailableTimeDaysOfWeekEnumMap, e))
+        ?.map((e) => _$enumDecodeNullable(
+            _$HealthcareServiceAvailableTimeDaysOfWeekEnumMap, e))
+        ?.toList(),
+    daysOfWeekElement: (json['_daysOfWeek'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     allDay: json['allDay'] == null ? null : Boolean.fromJson(json['allDay']),
-    availableStartTime: json['availableStartTime'] == null
-        ? null
-        : Time.fromJson(json['availableStartTime'] as String),
-    availableEndTime: json['availableEndTime'] == null
-        ? null
-        : Time.fromJson(json['availableEndTime'] as String),
-    daysOfWeekElement: json['_daysOfWeek'] == null
-        ? null
-        : Element.fromJson(json['_daysOfWeek'] as Map<String, dynamic>),
     allDayElement: json['_allDay'] == null
         ? null
         : Element.fromJson(json['_allDay'] as Map<String, dynamic>),
+    availableStartTime: json['availableStartTime'] == null
+        ? null
+        : Time.fromJson(json['availableStartTime'] as String),
     availableStartTimeElement: json['_availableStartTime'] == null
         ? null
         : Element.fromJson(json['_availableStartTime'] as Map<String, dynamic>),
+    availableEndTime: json['availableEndTime'] == null
+        ? null
+        : Time.fromJson(json['availableEndTime'] as String),
     availableEndTimeElement: json['_availableEndTime'] == null
         ? null
         : Element.fromJson(json['_availableEndTime'] as Map<String, dynamic>),
@@ -1015,40 +1049,41 @@ Map<String, dynamic> _$_$_HealthcareServiceAvailableTimeToJson(
   writeNotNull(
       'daysOfWeek',
       instance.daysOfWeek
-          ?.map((e) => _$AvailableTimeDaysOfWeekEnumMap[e])
+          ?.map((e) => _$HealthcareServiceAvailableTimeDaysOfWeekEnumMap[e])
           ?.toList());
+  writeNotNull('_daysOfWeek',
+      instance.daysOfWeekElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('allDay', instance.allDay?.toJson());
-  writeNotNull('availableStartTime', instance.availableStartTime?.toJson());
-  writeNotNull('availableEndTime', instance.availableEndTime?.toJson());
-  writeNotNull('_daysOfWeek', instance.daysOfWeekElement?.toJson());
   writeNotNull('_allDay', instance.allDayElement?.toJson());
+  writeNotNull('availableStartTime', instance.availableStartTime?.toJson());
   writeNotNull(
       '_availableStartTime', instance.availableStartTimeElement?.toJson());
+  writeNotNull('availableEndTime', instance.availableEndTime?.toJson());
   writeNotNull('_availableEndTime', instance.availableEndTimeElement?.toJson());
   return val;
 }
 
-const _$AvailableTimeDaysOfWeekEnumMap = {
-  AvailableTimeDaysOfWeek.mon: 'mon',
-  AvailableTimeDaysOfWeek.tue: 'tue',
-  AvailableTimeDaysOfWeek.wed: 'wed',
-  AvailableTimeDaysOfWeek.thu: 'thu',
-  AvailableTimeDaysOfWeek.fri: 'fri',
-  AvailableTimeDaysOfWeek.sat: 'sat',
-  AvailableTimeDaysOfWeek.sun: 'sun',
-  AvailableTimeDaysOfWeek.unknown: 'unknown',
+const _$HealthcareServiceAvailableTimeDaysOfWeekEnumMap = {
+  HealthcareServiceAvailableTimeDaysOfWeek.mon: 'mon',
+  HealthcareServiceAvailableTimeDaysOfWeek.tue: 'tue',
+  HealthcareServiceAvailableTimeDaysOfWeek.wed: 'wed',
+  HealthcareServiceAvailableTimeDaysOfWeek.thu: 'thu',
+  HealthcareServiceAvailableTimeDaysOfWeek.fri: 'fri',
+  HealthcareServiceAvailableTimeDaysOfWeek.sat: 'sat',
+  HealthcareServiceAvailableTimeDaysOfWeek.sun: 'sun',
+  HealthcareServiceAvailableTimeDaysOfWeek.unknown: 'unknown',
 };
 
 _$_HealthcareServiceNotAvailable _$_$_HealthcareServiceNotAvailableFromJson(
     Map<String, dynamic> json) {
   return _$_HealthcareServiceNotAvailable(
     description: json['description'] as String,
-    during: json['during'] == null
-        ? null
-        : Period.fromJson(json['during'] as Map<String, dynamic>),
     descriptionElement: json['_description'] == null
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
+    during: json['during'] == null
+        ? null
+        : Period.fromJson(json['during'] as Map<String, dynamic>),
   );
 }
 
@@ -1063,13 +1098,12 @@ Map<String, dynamic> _$_$_HealthcareServiceNotAvailableToJson(
   }
 
   writeNotNull('description', instance.description);
-  writeNotNull('during', instance.during?.toJson());
   writeNotNull('_description', instance.descriptionElement?.toJson());
+  writeNotNull('during', instance.during?.toJson());
   return val;
 }
 
 _$_Location _$_$_LocationFromJson(Map<String, dynamic> json) {
-  $checkKeys(json, requiredKeys: const ['resourceType']);
   return _$_Location(
     resourceType: json['resourceType'] as String ?? 'Location',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
@@ -1079,9 +1113,15 @@ _$_Location _$_$_LocationFromJson(Map<String, dynamic> json) {
     implicitRules: json['implicitRules'] == null
         ? null
         : FhirUri.fromJson(json['implicitRules'] as String),
+    implicitRulesElement: json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
     language: json['language'] == null
         ? null
         : Code.fromJson(json['language'] as String),
+    languageElement: json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>),
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -1103,16 +1143,30 @@ _$_Location _$_$_LocationFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: _$enumDecodeNullable(_$LocationStatusEnumMap, json['status'],
-        unknownValue: LocationStatus.unknown),
+    status: _$enumDecodeNullable(_$LocationStatusEnumMap, json['status']),
+    statusElement: json['_status'] == null
+        ? null
+        : Element.fromJson(json['_status'] as Map<String, dynamic>),
     operationalStatus: json['operationalStatus'] == null
         ? null
         : Coding.fromJson(json['operationalStatus'] as Map<String, dynamic>),
     name: json['name'] as String,
+    nameElement: json['_name'] == null
+        ? null
+        : Element.fromJson(json['_name'] as Map<String, dynamic>),
     alias: (json['alias'] as List)?.map((e) => e as String)?.toList(),
+    aliasElement: (json['_alias'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     description: json['description'] as String,
-    mode: _$enumDecodeNullable(_$LocationModeEnumMap, json['mode'],
-        unknownValue: LocationMode.unknown),
+    descriptionElement: json['_description'] == null
+        ? null
+        : Element.fromJson(json['_description'] as Map<String, dynamic>),
+    mode: _$enumDecodeNullable(_$LocationModeEnumMap, json['mode']),
+    modeElement: json['_mode'] == null
+        ? null
+        : Element.fromJson(json['_mode'] as Map<String, dynamic>),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -1141,21 +1195,6 @@ _$_Location _$_$_LocationFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    statusElement: json['_status'] == null
-        ? null
-        : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    nameElement: json['_name'] == null
-        ? null
-        : Element.fromJson(json['_name'] as Map<String, dynamic>),
-    aliasElement: json['_alias'] == null
-        ? null
-        : Element.fromJson(json['_alias'] as Map<String, dynamic>),
-    descriptionElement: json['_description'] == null
-        ? null
-        : Element.fromJson(json['_description'] as Map<String, dynamic>),
-    modeElement: json['_mode'] == null
-        ? null
-        : Element.fromJson(json['_mode'] as Map<String, dynamic>),
   );
 }
 
@@ -1172,7 +1211,9 @@ Map<String, dynamic> _$_$_LocationToJson(_$_Location instance) {
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
   writeNotNull('language', instance.language?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
       'contained', instance.contained?.map((e) => e?.toJson())?.toList());
@@ -1183,11 +1224,17 @@ Map<String, dynamic> _$_$_LocationToJson(_$_Location instance) {
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('status', _$LocationStatusEnumMap[instance.status]);
+  writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('operationalStatus', instance.operationalStatus?.toJson());
   writeNotNull('name', instance.name);
+  writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('alias', instance.alias);
+  writeNotNull(
+      '_alias', instance.aliasElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('description', instance.description);
+  writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('mode', _$LocationModeEnumMap[instance.mode]);
+  writeNotNull('_mode', instance.modeElement?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson())?.toList());
   writeNotNull('address', instance.address?.toJson());
@@ -1197,11 +1244,6 @@ Map<String, dynamic> _$_$_LocationToJson(_$_Location instance) {
   writeNotNull('partOf', instance.partOf?.toJson());
   writeNotNull(
       'endpoint', instance.endpoint?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('_name', instance.nameElement?.toJson());
-  writeNotNull('_alias', instance.aliasElement?.toJson());
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('_mode', instance.modeElement?.toJson());
   return val;
 }
 
@@ -1222,16 +1264,16 @@ _$_LocationPosition _$_$_LocationPositionFromJson(Map<String, dynamic> json) {
   return _$_LocationPosition(
     longitude:
         json['longitude'] == null ? null : Decimal.fromJson(json['longitude']),
-    latitude:
-        json['latitude'] == null ? null : Decimal.fromJson(json['latitude']),
-    altitude:
-        json['altitude'] == null ? null : Decimal.fromJson(json['altitude']),
     longitudeElement: json['_longitude'] == null
         ? null
         : Element.fromJson(json['_longitude'] as Map<String, dynamic>),
+    latitude:
+        json['latitude'] == null ? null : Decimal.fromJson(json['latitude']),
     latitudeElement: json['_latitude'] == null
         ? null
         : Element.fromJson(json['_latitude'] as Map<String, dynamic>),
+    altitude:
+        json['altitude'] == null ? null : Decimal.fromJson(json['altitude']),
     altitudeElement: json['_altitude'] == null
         ? null
         : Element.fromJson(json['_altitude'] as Map<String, dynamic>),
@@ -1248,16 +1290,15 @@ Map<String, dynamic> _$_$_LocationPositionToJson(_$_LocationPosition instance) {
   }
 
   writeNotNull('longitude', instance.longitude?.toJson());
-  writeNotNull('latitude', instance.latitude?.toJson());
-  writeNotNull('altitude', instance.altitude?.toJson());
   writeNotNull('_longitude', instance.longitudeElement?.toJson());
+  writeNotNull('latitude', instance.latitude?.toJson());
   writeNotNull('_latitude', instance.latitudeElement?.toJson());
+  writeNotNull('altitude', instance.altitude?.toJson());
   writeNotNull('_altitude', instance.altitudeElement?.toJson());
   return val;
 }
 
 _$_Organization _$_$_OrganizationFromJson(Map<String, dynamic> json) {
-  $checkKeys(json, requiredKeys: const ['resourceType']);
   return _$_Organization(
     resourceType: json['resourceType'] as String ?? 'Organization',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
@@ -1267,9 +1308,15 @@ _$_Organization _$_$_OrganizationFromJson(Map<String, dynamic> json) {
     implicitRules: json['implicitRules'] == null
         ? null
         : FhirUri.fromJson(json['implicitRules'] as String),
+    implicitRulesElement: json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
     language: json['language'] == null
         ? null
         : Code.fromJson(json['language'] as String),
+    languageElement: json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>),
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -1292,13 +1339,23 @@ _$_Organization _$_$_OrganizationFromJson(Map<String, dynamic> json) {
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     active: json['active'] == null ? null : Boolean.fromJson(json['active']),
+    activeElement: json['_active'] == null
+        ? null
+        : Element.fromJson(json['_active'] as Map<String, dynamic>),
     type: (json['type'] as List)
         ?.map((e) => e == null
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     name: json['name'] as String,
+    nameElement: json['_name'] == null
+        ? null
+        : Element.fromJson(json['_name'] as Map<String, dynamic>),
     alias: (json['alias'] as List)?.map((e) => e as String)?.toList(),
+    aliasElement: (json['_alias'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     telecom: (json['telecom'] as List)
         ?.map((e) =>
             e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
@@ -1319,15 +1376,6 @@ _$_Organization _$_$_OrganizationFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    activeElement: json['_active'] == null
-        ? null
-        : Element.fromJson(json['_active'] as Map<String, dynamic>),
-    nameElement: json['_name'] == null
-        ? null
-        : Element.fromJson(json['_name'] as Map<String, dynamic>),
-    aliasElement: json['_alias'] == null
-        ? null
-        : Element.fromJson(json['_alias'] as Map<String, dynamic>),
   );
 }
 
@@ -1344,7 +1392,9 @@ Map<String, dynamic> _$_$_OrganizationToJson(_$_Organization instance) {
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
   writeNotNull('language', instance.language?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
       'contained', instance.contained?.map((e) => e?.toJson())?.toList());
@@ -1355,18 +1405,19 @@ Map<String, dynamic> _$_$_OrganizationToJson(_$_Organization instance) {
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('active', instance.active?.toJson());
+  writeNotNull('_active', instance.activeElement?.toJson());
   writeNotNull('type', instance.type?.map((e) => e?.toJson())?.toList());
   writeNotNull('name', instance.name);
+  writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('alias', instance.alias);
+  writeNotNull(
+      '_alias', instance.aliasElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson())?.toList());
   writeNotNull('address', instance.address?.map((e) => e?.toJson())?.toList());
   writeNotNull('partOf', instance.partOf?.toJson());
   writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'endpoint', instance.endpoint?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_active', instance.activeElement?.toJson());
-  writeNotNull('_name', instance.nameElement?.toJson());
-  writeNotNull('_alias', instance.aliasElement?.toJson());
   return val;
 }
 
@@ -1407,7 +1458,6 @@ Map<String, dynamic> _$_$_OrganizationContactToJson(
 }
 
 _$_Substance _$_$_SubstanceFromJson(Map<String, dynamic> json) {
-  $checkKeys(json, requiredKeys: const ['resourceType', 'code']);
   return _$_Substance(
     resourceType: json['resourceType'] as String ?? 'Substance',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
@@ -1417,9 +1467,15 @@ _$_Substance _$_$_SubstanceFromJson(Map<String, dynamic> json) {
     implicitRules: json['implicitRules'] == null
         ? null
         : FhirUri.fromJson(json['implicitRules'] as String),
+    implicitRulesElement: json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
     language: json['language'] == null
         ? null
         : Code.fromJson(json['language'] as String),
+    languageElement: json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>),
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -1441,8 +1497,10 @@ _$_Substance _$_$_SubstanceFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: _$enumDecodeNullable(_$ActiveInactiveEnumMap, json['status'],
-        unknownValue: ActiveInactive.unknown),
+    status: _$enumDecodeNullable(_$SubstanceStatusEnumMap, json['status']),
+    statusElement: json['_status'] == null
+        ? null
+        : Element.fromJson(json['_status'] as Map<String, dynamic>),
     category: (json['category'] as List)
         ?.map((e) => e == null
             ? null
@@ -1452,6 +1510,9 @@ _$_Substance _$_$_SubstanceFromJson(Map<String, dynamic> json) {
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
     description: json['description'] as String,
+    descriptionElement: json['_description'] == null
+        ? null
+        : Element.fromJson(json['_description'] as Map<String, dynamic>),
     instance: (json['instance'] as List)
         ?.map((e) => e == null
             ? null
@@ -1462,12 +1523,6 @@ _$_Substance _$_$_SubstanceFromJson(Map<String, dynamic> json) {
             ? null
             : SubstanceIngredient.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    statusElement: json['_status'] == null
-        ? null
-        : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    descriptionElement: json['_description'] == null
-        ? null
-        : Element.fromJson(json['_description'] as Map<String, dynamic>),
   );
 }
 
@@ -1484,7 +1539,9 @@ Map<String, dynamic> _$_$_SubstanceToJson(_$_Substance instance) {
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
   writeNotNull('language', instance.language?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
       'contained', instance.contained?.map((e) => e?.toJson())?.toList());
@@ -1494,34 +1551,39 @@ Map<String, dynamic> _$_$_SubstanceToJson(_$_Substance instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', _$ActiveInactiveEnumMap[instance.status]);
+  writeNotNull('status', _$SubstanceStatusEnumMap[instance.status]);
+  writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull(
       'category', instance.category?.map((e) => e?.toJson())?.toList());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('description', instance.description);
+  writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull(
       'instance', instance.instance?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'ingredient', instance.ingredient?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('_description', instance.descriptionElement?.toJson());
   return val;
 }
+
+const _$SubstanceStatusEnumMap = {
+  SubstanceStatus.active: 'active',
+  SubstanceStatus.inactive: 'inactive',
+  SubstanceStatus.entered_in_error: 'entered-in-error',
+  SubstanceStatus.unknown: 'unknown',
+};
 
 _$_SubstanceInstance _$_$_SubstanceInstanceFromJson(Map<String, dynamic> json) {
   return _$_SubstanceInstance(
     identifier: json['identifier'] == null
         ? null
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-    expiry: json['expiry'] == null
-        ? null
-        : FhirDateTime.fromJson(json['expiry'] as String),
-    quantity: json['quantity'] == null
-        ? null
-        : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
+    expiry: json['expiry'] as String,
     expiryElement: json['_expiry'] == null
         ? null
         : Element.fromJson(json['_expiry'] as Map<String, dynamic>),
+    quantity: json['quantity'] == null
+        ? null
+        : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
   );
 }
 
@@ -1536,9 +1598,9 @@ Map<String, dynamic> _$_$_SubstanceInstanceToJson(
   }
 
   writeNotNull('identifier', instance.identifier?.toJson());
-  writeNotNull('expiry', instance.expiry?.toJson());
-  writeNotNull('quantity', instance.quantity?.toJson());
+  writeNotNull('expiry', instance.expiry);
   writeNotNull('_expiry', instance.expiryElement?.toJson());
+  writeNotNull('quantity', instance.quantity?.toJson());
   return val;
 }
 

@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'documents.dart';
 
 enum CompositionStatus {
   @JsonValue('preliminary')
@@ -13,7 +13,20 @@ enum CompositionStatus {
   unknown,
 }
 
-enum DocumentStatus {
+enum CompositionAttesterMode {
+  @JsonValue('personal')
+  personal,
+  @JsonValue('professional')
+  professional,
+  @JsonValue('legal')
+  legal,
+  @JsonValue('official')
+  official,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum DocumentManifestStatus {
   @JsonValue('current')
   current,
   @JsonValue('superseded')
@@ -24,7 +37,18 @@ enum DocumentStatus {
   unknown,
 }
 
-enum RelatesToCode {
+enum DocumentReferenceStatus {
+  @JsonValue('current')
+  current,
+  @JsonValue('superseded')
+  superseded,
+  @JsonValue('entered-in-error')
+  entered_in_error,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum DocumentReferenceRelatesToCode {
   @JsonValue('replaces')
   replaces,
   @JsonValue('transforms')
@@ -33,19 +57,6 @@ enum RelatesToCode {
   signs,
   @JsonValue('appends')
   appends,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum AttesterMode {
-  @JsonValue('personal')
-  personal,
-  @JsonValue('professional')
-  professional,
-  @JsonValue('legal')
-  legal,
-  @JsonValue('official')
-  official,
   @JsonValue('unknown')
   unknown,
 }

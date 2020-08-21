@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'payment.dart';
 
@@ -15,58 +15,57 @@ PaymentNotice _$PaymentNoticeFromJson(Map<String, dynamic> json) {
 class _$PaymentNoticeTearOff {
   const _$PaymentNoticeTearOff();
 
+// ignore: unused_element
   _PaymentNotice call(
-      {@required
-      @JsonKey(required: true, defaultValue: 'PaymentNotice')
-          String resourceType,
+      {@required @JsonKey(defaultValue: 'PaymentNotice') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      String status,
+      @JsonKey(name: '_status') Element statusElement,
       Reference request,
       Reference response,
       Date statusDate,
-      FhirDateTime created,
+      @JsonKey(name: '_statusDate') Element statusDateElement,
+      String created,
+      @JsonKey(name: '_created') Element createdElement,
       Reference target,
       Reference provider,
       Reference organization,
-      CodeableConcept paymentStatus,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_statusDate')
-          Element statusDateElement,
-      @JsonKey(name: '_created')
-          Element createdElement}) {
+      CodeableConcept paymentStatus}) {
     return _PaymentNotice(
       resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
+      implicitRulesElement: implicitRulesElement,
       language: language,
+      languageElement: languageElement,
       text: text,
       contained: contained,
       extension_: extension_,
       modifierExtension: modifierExtension,
       identifier: identifier,
       status: status,
+      statusElement: statusElement,
       request: request,
       response: response,
       statusDate: statusDate,
+      statusDateElement: statusDateElement,
       created: created,
+      createdElement: createdElement,
       target: target,
       provider: provider,
       organization: organization,
       paymentStatus: paymentStatus,
-      statusElement: statusElement,
-      statusDateElement: statusDateElement,
-      createdElement: createdElement,
     );
   }
 }
@@ -75,33 +74,37 @@ class _$PaymentNoticeTearOff {
 const $PaymentNotice = _$PaymentNoticeTearOff();
 
 mixin _$PaymentNotice {
-  @JsonKey(required: true, defaultValue: 'PaymentNotice')
+  @JsonKey(defaultValue: 'PaymentNotice')
   String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
   Code get language;
+  @JsonKey(name: '_language')
+  Element get languageElement;
   Narrative get text;
   List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
-  Code get status;
+  String get status;
+  @JsonKey(name: '_status')
+  Element get statusElement;
   Reference get request;
   Reference get response;
   Date get statusDate;
-  FhirDateTime get created;
+  @JsonKey(name: '_statusDate')
+  Element get statusDateElement;
+  String get created;
+  @JsonKey(name: '_created')
+  Element get createdElement;
   Reference get target;
   Reference get provider;
   Reference get organization;
   CodeableConcept get paymentStatus;
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @JsonKey(name: '_statusDate')
-  Element get statusDateElement;
-  @JsonKey(name: '_created')
-  Element get createdElement;
 
   Map<String, dynamic> toJson();
   $PaymentNoticeCopyWith<PaymentNotice> get copyWith;
@@ -112,45 +115,44 @@ abstract class $PaymentNoticeCopyWith<$Res> {
           PaymentNotice value, $Res Function(PaymentNotice) then) =
       _$PaymentNoticeCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'PaymentNotice')
-          String resourceType,
+      {@JsonKey(defaultValue: 'PaymentNotice') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      String status,
+      @JsonKey(name: '_status') Element statusElement,
       Reference request,
       Reference response,
       Date statusDate,
-      FhirDateTime created,
+      @JsonKey(name: '_statusDate') Element statusDateElement,
+      String created,
+      @JsonKey(name: '_created') Element createdElement,
       Reference target,
       Reference provider,
       Reference organization,
-      CodeableConcept paymentStatus,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_statusDate')
-          Element statusDateElement,
-      @JsonKey(name: '_created')
-          Element createdElement});
+      CodeableConcept paymentStatus});
 
   $MetaCopyWith<$Res> get meta;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
+  $ElementCopyWith<$Res> get statusElement;
   $ReferenceCopyWith<$Res> get request;
   $ReferenceCopyWith<$Res> get response;
+  $ElementCopyWith<$Res> get statusDateElement;
+  $ElementCopyWith<$Res> get createdElement;
   $ReferenceCopyWith<$Res> get target;
   $ReferenceCopyWith<$Res> get provider;
   $ReferenceCopyWith<$Res> get organization;
   $CodeableConceptCopyWith<$Res> get paymentStatus;
-  $ElementCopyWith<$Res> get statusElement;
-  $ElementCopyWith<$Res> get statusDateElement;
-  $ElementCopyWith<$Res> get createdElement;
 }
 
 class _$PaymentNoticeCopyWithImpl<$Res>
@@ -167,24 +169,26 @@ class _$PaymentNoticeCopyWithImpl<$Res>
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object request = freezed,
     Object response = freezed,
     Object statusDate = freezed,
+    Object statusDateElement = freezed,
     Object created = freezed,
+    Object createdElement = freezed,
     Object target = freezed,
     Object provider = freezed,
     Object organization = freezed,
     Object paymentStatus = freezed,
-    Object statusElement = freezed,
-    Object statusDateElement = freezed,
-    Object createdElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -195,7 +199,13 @@ class _$PaymentNoticeCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -208,12 +218,21 @@ class _$PaymentNoticeCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed ? _value.status : status as String,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       request: request == freezed ? _value.request : request as Reference,
       response: response == freezed ? _value.response : response as Reference,
       statusDate:
           statusDate == freezed ? _value.statusDate : statusDate as Date,
-      created: created == freezed ? _value.created : created as FhirDateTime,
+      statusDateElement: statusDateElement == freezed
+          ? _value.statusDateElement
+          : statusDateElement as Element,
+      created: created == freezed ? _value.created : created as String,
+      createdElement: createdElement == freezed
+          ? _value.createdElement
+          : createdElement as Element,
       target: target == freezed ? _value.target : target as Reference,
       provider: provider == freezed ? _value.provider : provider as Reference,
       organization: organization == freezed
@@ -222,15 +241,6 @@ class _$PaymentNoticeCopyWithImpl<$Res>
       paymentStatus: paymentStatus == freezed
           ? _value.paymentStatus
           : paymentStatus as CodeableConcept,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      statusDateElement: statusDateElement == freezed
-          ? _value.statusDateElement
-          : statusDateElement as Element,
-      createdElement: createdElement == freezed
-          ? _value.createdElement
-          : createdElement as Element,
     ));
   }
 
@@ -245,12 +255,42 @@ class _$PaymentNoticeCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
   $NarrativeCopyWith<$Res> get text {
     if (_value.text == null) {
       return null;
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
     });
   }
 
@@ -271,6 +311,26 @@ class _$PaymentNoticeCopyWithImpl<$Res>
     }
     return $ReferenceCopyWith<$Res>(_value.response, (value) {
       return _then(_value.copyWith(response: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusDateElement {
+    if (_value.statusDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusDateElement, (value) {
+      return _then(_value.copyWith(statusDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get createdElement {
+    if (_value.createdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.createdElement, (value) {
+      return _then(_value.copyWith(createdElement: value));
     });
   }
 
@@ -313,36 +373,6 @@ class _$PaymentNoticeCopyWithImpl<$Res>
       return _then(_value.copyWith(paymentStatus: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get statusElement {
-    if (_value.statusElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
-      return _then(_value.copyWith(statusElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get statusDateElement {
-    if (_value.statusDateElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.statusDateElement, (value) {
-      return _then(_value.copyWith(statusDateElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get createdElement {
-    if (_value.createdElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.createdElement, (value) {
-      return _then(_value.copyWith(createdElement: value));
-    });
-  }
 }
 
 abstract class _$PaymentNoticeCopyWith<$Res>
@@ -352,42 +382,49 @@ abstract class _$PaymentNoticeCopyWith<$Res>
       __$PaymentNoticeCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'PaymentNotice')
-          String resourceType,
+      {@JsonKey(defaultValue: 'PaymentNotice') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      String status,
+      @JsonKey(name: '_status') Element statusElement,
       Reference request,
       Reference response,
       Date statusDate,
-      FhirDateTime created,
+      @JsonKey(name: '_statusDate') Element statusDateElement,
+      String created,
+      @JsonKey(name: '_created') Element createdElement,
       Reference target,
       Reference provider,
       Reference organization,
-      CodeableConcept paymentStatus,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_statusDate')
-          Element statusDateElement,
-      @JsonKey(name: '_created')
-          Element createdElement});
+      CodeableConcept paymentStatus});
 
   @override
   $MetaCopyWith<$Res> get meta;
   @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
   $NarrativeCopyWith<$Res> get text;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
   @override
   $ReferenceCopyWith<$Res> get request;
   @override
   $ReferenceCopyWith<$Res> get response;
+  @override
+  $ElementCopyWith<$Res> get statusDateElement;
+  @override
+  $ElementCopyWith<$Res> get createdElement;
   @override
   $ReferenceCopyWith<$Res> get target;
   @override
@@ -396,12 +433,6 @@ abstract class _$PaymentNoticeCopyWith<$Res>
   $ReferenceCopyWith<$Res> get organization;
   @override
   $CodeableConceptCopyWith<$Res> get paymentStatus;
-  @override
-  $ElementCopyWith<$Res> get statusElement;
-  @override
-  $ElementCopyWith<$Res> get statusDateElement;
-  @override
-  $ElementCopyWith<$Res> get createdElement;
 }
 
 class __$PaymentNoticeCopyWithImpl<$Res>
@@ -420,24 +451,26 @@ class __$PaymentNoticeCopyWithImpl<$Res>
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object request = freezed,
     Object response = freezed,
     Object statusDate = freezed,
+    Object statusDateElement = freezed,
     Object created = freezed,
+    Object createdElement = freezed,
     Object target = freezed,
     Object provider = freezed,
     Object organization = freezed,
     Object paymentStatus = freezed,
-    Object statusElement = freezed,
-    Object statusDateElement = freezed,
-    Object createdElement = freezed,
   }) {
     return _then(_PaymentNotice(
       resourceType: resourceType == freezed
@@ -448,7 +481,13 @@ class __$PaymentNoticeCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -461,12 +500,21 @@ class __$PaymentNoticeCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed ? _value.status : status as String,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       request: request == freezed ? _value.request : request as Reference,
       response: response == freezed ? _value.response : response as Reference,
       statusDate:
           statusDate == freezed ? _value.statusDate : statusDate as Date,
-      created: created == freezed ? _value.created : created as FhirDateTime,
+      statusDateElement: statusDateElement == freezed
+          ? _value.statusDateElement
+          : statusDateElement as Element,
+      created: created == freezed ? _value.created : created as String,
+      createdElement: createdElement == freezed
+          ? _value.createdElement
+          : createdElement as Element,
       target: target == freezed ? _value.target : target as Reference,
       provider: provider == freezed ? _value.provider : provider as Reference,
       organization: organization == freezed
@@ -475,15 +523,6 @@ class __$PaymentNoticeCopyWithImpl<$Res>
       paymentStatus: paymentStatus == freezed
           ? _value.paymentStatus
           : paymentStatus as CodeableConcept,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      statusDateElement: statusDateElement == freezed
-          ? _value.statusDateElement
-          : statusDateElement as Element,
-      createdElement: createdElement == freezed
-          ? _value.createdElement
-          : createdElement as Element,
     ));
   }
 }
@@ -491,34 +530,30 @@ class __$PaymentNoticeCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_PaymentNotice extends _PaymentNotice {
   _$_PaymentNotice(
-      {@required
-      @JsonKey(required: true, defaultValue: 'PaymentNotice')
-          this.resourceType,
+      {@required @JsonKey(defaultValue: 'PaymentNotice') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.request,
       this.response,
       this.statusDate,
+      @JsonKey(name: '_statusDate') this.statusDateElement,
       this.created,
+      @JsonKey(name: '_created') this.createdElement,
       this.target,
       this.provider,
       this.organization,
-      this.paymentStatus,
-      @JsonKey(name: '_status')
-          this.statusElement,
-      @JsonKey(name: '_statusDate')
-          this.statusDateElement,
-      @JsonKey(name: '_created')
-          this.createdElement})
+      this.paymentStatus})
       : assert(resourceType != null),
         super._();
 
@@ -526,7 +561,7 @@ class _$_PaymentNotice extends _PaymentNotice {
       _$_$_PaymentNoticeFromJson(json);
 
   @override
-  @JsonKey(required: true, defaultValue: 'PaymentNotice')
+  @JsonKey(defaultValue: 'PaymentNotice')
   final String resourceType;
   @override
   final Id id;
@@ -535,7 +570,13 @@ class _$_PaymentNotice extends _PaymentNotice {
   @override
   final FhirUri implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
   final Code language;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
   @override
   final Narrative text;
   @override
@@ -548,7 +589,10 @@ class _$_PaymentNotice extends _PaymentNotice {
   @override
   final List<Identifier> identifier;
   @override
-  final Code status;
+  final String status;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
   @override
   final Reference request;
   @override
@@ -556,7 +600,13 @@ class _$_PaymentNotice extends _PaymentNotice {
   @override
   final Date statusDate;
   @override
-  final FhirDateTime created;
+  @JsonKey(name: '_statusDate')
+  final Element statusDateElement;
+  @override
+  final String created;
+  @override
+  @JsonKey(name: '_created')
+  final Element createdElement;
   @override
   final Reference target;
   @override
@@ -565,19 +615,10 @@ class _$_PaymentNotice extends _PaymentNotice {
   final Reference organization;
   @override
   final CodeableConcept paymentStatus;
-  @override
-  @JsonKey(name: '_status')
-  final Element statusElement;
-  @override
-  @JsonKey(name: '_statusDate')
-  final Element statusDateElement;
-  @override
-  @JsonKey(name: '_created')
-  final Element createdElement;
 
   @override
   String toString() {
-    return 'PaymentNotice(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, request: $request, response: $response, statusDate: $statusDate, created: $created, target: $target, provider: $provider, organization: $organization, paymentStatus: $paymentStatus, statusElement: $statusElement, statusDateElement: $statusDateElement, createdElement: $createdElement)';
+    return 'PaymentNotice(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, request: $request, response: $response, statusDate: $statusDate, statusDateElement: $statusDateElement, created: $created, createdElement: $createdElement, target: $target, provider: $provider, organization: $organization, paymentStatus: $paymentStatus)';
   }
 
   @override
@@ -594,9 +635,15 @@ class _$_PaymentNotice extends _PaymentNotice {
             (identical(other.implicitRules, implicitRules) ||
                 const DeepCollectionEquality()
                     .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
             (identical(other.language, language) ||
                 const DeepCollectionEquality()
                     .equals(other.language, language)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
             (identical(other.text, text) ||
                 const DeepCollectionEquality().equals(other.text, text)) &&
             (identical(other.contained, contained) ||
@@ -613,6 +660,9 @@ class _$_PaymentNotice extends _PaymentNotice {
                     .equals(other.identifier, identifier)) &&
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
             (identical(other.request, request) ||
                 const DeepCollectionEquality()
                     .equals(other.request, request)) &&
@@ -622,9 +672,15 @@ class _$_PaymentNotice extends _PaymentNotice {
             (identical(other.statusDate, statusDate) ||
                 const DeepCollectionEquality()
                     .equals(other.statusDate, statusDate)) &&
+            (identical(other.statusDateElement, statusDateElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusDateElement, statusDateElement)) &&
             (identical(other.created, created) ||
                 const DeepCollectionEquality()
                     .equals(other.created, created)) &&
+            (identical(other.createdElement, createdElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.createdElement, createdElement)) &&
             (identical(other.target, target) ||
                 const DeepCollectionEquality().equals(other.target, target)) &&
             (identical(other.provider, provider) ||
@@ -635,16 +691,7 @@ class _$_PaymentNotice extends _PaymentNotice {
                     .equals(other.organization, organization)) &&
             (identical(other.paymentStatus, paymentStatus) ||
                 const DeepCollectionEquality()
-                    .equals(other.paymentStatus, paymentStatus)) &&
-            (identical(other.statusElement, statusElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusElement, statusElement)) &&
-            (identical(other.statusDateElement, statusDateElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusDateElement, statusDateElement)) &&
-            (identical(other.createdElement, createdElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.createdElement, createdElement)));
+                    .equals(other.paymentStatus, paymentStatus)));
   }
 
   @override
@@ -654,24 +701,26 @@ class _$_PaymentNotice extends _PaymentNotice {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
       const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(status) ^
+      const DeepCollectionEquality().hash(statusElement) ^
       const DeepCollectionEquality().hash(request) ^
       const DeepCollectionEquality().hash(response) ^
       const DeepCollectionEquality().hash(statusDate) ^
+      const DeepCollectionEquality().hash(statusDateElement) ^
       const DeepCollectionEquality().hash(created) ^
+      const DeepCollectionEquality().hash(createdElement) ^
       const DeepCollectionEquality().hash(target) ^
       const DeepCollectionEquality().hash(provider) ^
       const DeepCollectionEquality().hash(organization) ^
-      const DeepCollectionEquality().hash(paymentStatus) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(statusDateElement) ^
-      const DeepCollectionEquality().hash(createdElement);
+      const DeepCollectionEquality().hash(paymentStatus);
 
   @override
   _$PaymentNoticeCopyWith<_PaymentNotice> get copyWith =>
@@ -686,40 +735,36 @@ class _$_PaymentNotice extends _PaymentNotice {
 abstract class _PaymentNotice extends PaymentNotice {
   _PaymentNotice._() : super._();
   factory _PaymentNotice(
-      {@required
-      @JsonKey(required: true, defaultValue: 'PaymentNotice')
-          String resourceType,
+      {@required @JsonKey(defaultValue: 'PaymentNotice') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      String status,
+      @JsonKey(name: '_status') Element statusElement,
       Reference request,
       Reference response,
       Date statusDate,
-      FhirDateTime created,
+      @JsonKey(name: '_statusDate') Element statusDateElement,
+      String created,
+      @JsonKey(name: '_created') Element createdElement,
       Reference target,
       Reference provider,
       Reference organization,
-      CodeableConcept paymentStatus,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_statusDate')
-          Element statusDateElement,
-      @JsonKey(name: '_created')
-          Element createdElement}) = _$_PaymentNotice;
+      CodeableConcept paymentStatus}) = _$_PaymentNotice;
 
   factory _PaymentNotice.fromJson(Map<String, dynamic> json) =
       _$_PaymentNotice.fromJson;
 
   @override
-  @JsonKey(required: true, defaultValue: 'PaymentNotice')
+  @JsonKey(defaultValue: 'PaymentNotice')
   String get resourceType;
   @override
   Id get id;
@@ -728,7 +773,13 @@ abstract class _PaymentNotice extends PaymentNotice {
   @override
   FhirUri get implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
   Code get language;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
   @override
   Narrative get text;
   @override
@@ -741,7 +792,10 @@ abstract class _PaymentNotice extends PaymentNotice {
   @override
   List<Identifier> get identifier;
   @override
-  Code get status;
+  String get status;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
   @override
   Reference get request;
   @override
@@ -749,7 +803,13 @@ abstract class _PaymentNotice extends PaymentNotice {
   @override
   Date get statusDate;
   @override
-  FhirDateTime get created;
+  @JsonKey(name: '_statusDate')
+  Element get statusDateElement;
+  @override
+  String get created;
+  @override
+  @JsonKey(name: '_created')
+  Element get createdElement;
   @override
   Reference get target;
   @override
@@ -758,15 +818,6 @@ abstract class _PaymentNotice extends PaymentNotice {
   Reference get organization;
   @override
   CodeableConcept get paymentStatus;
-  @override
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @override
-  @JsonKey(name: '_statusDate')
-  Element get statusDateElement;
-  @override
-  @JsonKey(name: '_created')
-  Element get createdElement;
   @override
   _$PaymentNoticeCopyWith<_PaymentNotice> get copyWith;
 }
@@ -779,66 +830,73 @@ PaymentReconciliation _$PaymentReconciliationFromJson(
 class _$PaymentReconciliationTearOff {
   const _$PaymentReconciliationTearOff();
 
+// ignore: unused_element
   _PaymentReconciliation call(
       {@required
-      @JsonKey(required: true, defaultValue: 'PaymentReconciliation')
+      @JsonKey(defaultValue: 'PaymentReconciliation')
           String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      String status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Period period,
-      FhirDateTime created,
+      String created,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference organization,
       Reference request,
       CodeableConcept outcome,
       String disposition,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
       Reference requestProvider,
       Reference requestOrganization,
       List<PaymentReconciliationDetail> detail,
       CodeableConcept form,
       Money total,
-      List<PaymentReconciliationProcessNote> processNote,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_created')
-          Element createdElement,
-      @JsonKey(name: '_disposition')
-          Element dispositionElement}) {
+      List<PaymentReconciliationProcessNote> processNote}) {
     return _PaymentReconciliation(
       resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
+      implicitRulesElement: implicitRulesElement,
       language: language,
+      languageElement: languageElement,
       text: text,
       contained: contained,
       extension_: extension_,
       modifierExtension: modifierExtension,
       identifier: identifier,
       status: status,
+      statusElement: statusElement,
       period: period,
       created: created,
+      createdElement: createdElement,
       organization: organization,
       request: request,
       outcome: outcome,
       disposition: disposition,
+      dispositionElement: dispositionElement,
       requestProvider: requestProvider,
       requestOrganization: requestOrganization,
       detail: detail,
       form: form,
       total: total,
       processNote: processNote,
-      statusElement: statusElement,
-      createdElement: createdElement,
-      dispositionElement: dispositionElement,
     );
   }
 }
@@ -847,37 +905,41 @@ class _$PaymentReconciliationTearOff {
 const $PaymentReconciliation = _$PaymentReconciliationTearOff();
 
 mixin _$PaymentReconciliation {
-  @JsonKey(required: true, defaultValue: 'PaymentReconciliation')
+  @JsonKey(defaultValue: 'PaymentReconciliation')
   String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
   Code get language;
+  @JsonKey(name: '_language')
+  Element get languageElement;
   Narrative get text;
   List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
-  Code get status;
+  String get status;
+  @JsonKey(name: '_status')
+  Element get statusElement;
   Period get period;
-  FhirDateTime get created;
+  String get created;
+  @JsonKey(name: '_created')
+  Element get createdElement;
   Reference get organization;
   Reference get request;
   CodeableConcept get outcome;
   String get disposition;
+  @JsonKey(name: '_disposition')
+  Element get dispositionElement;
   Reference get requestProvider;
   Reference get requestOrganization;
   List<PaymentReconciliationDetail> get detail;
   CodeableConcept get form;
   Money get total;
   List<PaymentReconciliationProcessNote> get processNote;
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @JsonKey(name: '_created')
-  Element get createdElement;
-  @JsonKey(name: '_disposition')
-  Element get dispositionElement;
 
   Map<String, dynamic> toJson();
   $PaymentReconciliationCopyWith<PaymentReconciliation> get copyWith;
@@ -888,51 +950,50 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
           $Res Function(PaymentReconciliation) then) =
       _$PaymentReconciliationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'PaymentReconciliation')
-          String resourceType,
+      {@JsonKey(defaultValue: 'PaymentReconciliation') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      String status,
+      @JsonKey(name: '_status') Element statusElement,
       Period period,
-      FhirDateTime created,
+      String created,
+      @JsonKey(name: '_created') Element createdElement,
       Reference organization,
       Reference request,
       CodeableConcept outcome,
       String disposition,
+      @JsonKey(name: '_disposition') Element dispositionElement,
       Reference requestProvider,
       Reference requestOrganization,
       List<PaymentReconciliationDetail> detail,
       CodeableConcept form,
       Money total,
-      List<PaymentReconciliationProcessNote> processNote,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_created')
-          Element createdElement,
-      @JsonKey(name: '_disposition')
-          Element dispositionElement});
+      List<PaymentReconciliationProcessNote> processNote});
 
   $MetaCopyWith<$Res> get meta;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
+  $ElementCopyWith<$Res> get statusElement;
   $PeriodCopyWith<$Res> get period;
+  $ElementCopyWith<$Res> get createdElement;
   $ReferenceCopyWith<$Res> get organization;
   $ReferenceCopyWith<$Res> get request;
   $CodeableConceptCopyWith<$Res> get outcome;
+  $ElementCopyWith<$Res> get dispositionElement;
   $ReferenceCopyWith<$Res> get requestProvider;
   $ReferenceCopyWith<$Res> get requestOrganization;
   $CodeableConceptCopyWith<$Res> get form;
   $MoneyCopyWith<$Res> get total;
-  $ElementCopyWith<$Res> get statusElement;
-  $ElementCopyWith<$Res> get createdElement;
-  $ElementCopyWith<$Res> get dispositionElement;
 }
 
 class _$PaymentReconciliationCopyWithImpl<$Res>
@@ -949,28 +1010,30 @@ class _$PaymentReconciliationCopyWithImpl<$Res>
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object period = freezed,
     Object created = freezed,
+    Object createdElement = freezed,
     Object organization = freezed,
     Object request = freezed,
     Object outcome = freezed,
     Object disposition = freezed,
+    Object dispositionElement = freezed,
     Object requestProvider = freezed,
     Object requestOrganization = freezed,
     Object detail = freezed,
     Object form = freezed,
     Object total = freezed,
     Object processNote = freezed,
-    Object statusElement = freezed,
-    Object createdElement = freezed,
-    Object dispositionElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -981,7 +1044,13 @@ class _$PaymentReconciliationCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -994,9 +1063,15 @@ class _$PaymentReconciliationCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed ? _value.status : status as String,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       period: period == freezed ? _value.period : period as Period,
-      created: created == freezed ? _value.created : created as FhirDateTime,
+      created: created == freezed ? _value.created : created as String,
+      createdElement: createdElement == freezed
+          ? _value.createdElement
+          : createdElement as Element,
       organization: organization == freezed
           ? _value.organization
           : organization as Reference,
@@ -1004,6 +1079,9 @@ class _$PaymentReconciliationCopyWithImpl<$Res>
       outcome: outcome == freezed ? _value.outcome : outcome as CodeableConcept,
       disposition:
           disposition == freezed ? _value.disposition : disposition as String,
+      dispositionElement: dispositionElement == freezed
+          ? _value.dispositionElement
+          : dispositionElement as Element,
       requestProvider: requestProvider == freezed
           ? _value.requestProvider
           : requestProvider as Reference,
@@ -1018,15 +1096,6 @@ class _$PaymentReconciliationCopyWithImpl<$Res>
       processNote: processNote == freezed
           ? _value.processNote
           : processNote as List<PaymentReconciliationProcessNote>,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      createdElement: createdElement == freezed
-          ? _value.createdElement
-          : createdElement as Element,
-      dispositionElement: dispositionElement == freezed
-          ? _value.dispositionElement
-          : dispositionElement as Element,
     ));
   }
 
@@ -1041,6 +1110,26 @@ class _$PaymentReconciliationCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
   $NarrativeCopyWith<$Res> get text {
     if (_value.text == null) {
       return null;
@@ -1051,12 +1140,32 @@ class _$PaymentReconciliationCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
   $PeriodCopyWith<$Res> get period {
     if (_value.period == null) {
       return null;
     }
     return $PeriodCopyWith<$Res>(_value.period, (value) {
       return _then(_value.copyWith(period: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get createdElement {
+    if (_value.createdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.createdElement, (value) {
+      return _then(_value.copyWith(createdElement: value));
     });
   }
 
@@ -1087,6 +1196,16 @@ class _$PaymentReconciliationCopyWithImpl<$Res>
     }
     return $CodeableConceptCopyWith<$Res>(_value.outcome, (value) {
       return _then(_value.copyWith(outcome: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get dispositionElement {
+    if (_value.dispositionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.dispositionElement, (value) {
+      return _then(_value.copyWith(dispositionElement: value));
     });
   }
 
@@ -1129,36 +1248,6 @@ class _$PaymentReconciliationCopyWithImpl<$Res>
       return _then(_value.copyWith(total: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get statusElement {
-    if (_value.statusElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
-      return _then(_value.copyWith(statusElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get createdElement {
-    if (_value.createdElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.createdElement, (value) {
-      return _then(_value.copyWith(createdElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get dispositionElement {
-    if (_value.dispositionElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.dispositionElement, (value) {
-      return _then(_value.copyWith(dispositionElement: value));
-    });
-  }
 }
 
 abstract class _$PaymentReconciliationCopyWith<$Res>
@@ -1168,50 +1257,57 @@ abstract class _$PaymentReconciliationCopyWith<$Res>
       __$PaymentReconciliationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'PaymentReconciliation')
-          String resourceType,
+      {@JsonKey(defaultValue: 'PaymentReconciliation') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      String status,
+      @JsonKey(name: '_status') Element statusElement,
       Period period,
-      FhirDateTime created,
+      String created,
+      @JsonKey(name: '_created') Element createdElement,
       Reference organization,
       Reference request,
       CodeableConcept outcome,
       String disposition,
+      @JsonKey(name: '_disposition') Element dispositionElement,
       Reference requestProvider,
       Reference requestOrganization,
       List<PaymentReconciliationDetail> detail,
       CodeableConcept form,
       Money total,
-      List<PaymentReconciliationProcessNote> processNote,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_created')
-          Element createdElement,
-      @JsonKey(name: '_disposition')
-          Element dispositionElement});
+      List<PaymentReconciliationProcessNote> processNote});
 
   @override
   $MetaCopyWith<$Res> get meta;
   @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
   $NarrativeCopyWith<$Res> get text;
   @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
   $PeriodCopyWith<$Res> get period;
+  @override
+  $ElementCopyWith<$Res> get createdElement;
   @override
   $ReferenceCopyWith<$Res> get organization;
   @override
   $ReferenceCopyWith<$Res> get request;
   @override
   $CodeableConceptCopyWith<$Res> get outcome;
+  @override
+  $ElementCopyWith<$Res> get dispositionElement;
   @override
   $ReferenceCopyWith<$Res> get requestProvider;
   @override
@@ -1220,12 +1316,6 @@ abstract class _$PaymentReconciliationCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get form;
   @override
   $MoneyCopyWith<$Res> get total;
-  @override
-  $ElementCopyWith<$Res> get statusElement;
-  @override
-  $ElementCopyWith<$Res> get createdElement;
-  @override
-  $ElementCopyWith<$Res> get dispositionElement;
 }
 
 class __$PaymentReconciliationCopyWithImpl<$Res>
@@ -1244,28 +1334,30 @@ class __$PaymentReconciliationCopyWithImpl<$Res>
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object period = freezed,
     Object created = freezed,
+    Object createdElement = freezed,
     Object organization = freezed,
     Object request = freezed,
     Object outcome = freezed,
     Object disposition = freezed,
+    Object dispositionElement = freezed,
     Object requestProvider = freezed,
     Object requestOrganization = freezed,
     Object detail = freezed,
     Object form = freezed,
     Object total = freezed,
     Object processNote = freezed,
-    Object statusElement = freezed,
-    Object createdElement = freezed,
-    Object dispositionElement = freezed,
   }) {
     return _then(_PaymentReconciliation(
       resourceType: resourceType == freezed
@@ -1276,7 +1368,13 @@ class __$PaymentReconciliationCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -1289,9 +1387,15 @@ class __$PaymentReconciliationCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed ? _value.status : status as String,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       period: period == freezed ? _value.period : period as Period,
-      created: created == freezed ? _value.created : created as FhirDateTime,
+      created: created == freezed ? _value.created : created as String,
+      createdElement: createdElement == freezed
+          ? _value.createdElement
+          : createdElement as Element,
       organization: organization == freezed
           ? _value.organization
           : organization as Reference,
@@ -1299,6 +1403,9 @@ class __$PaymentReconciliationCopyWithImpl<$Res>
       outcome: outcome == freezed ? _value.outcome : outcome as CodeableConcept,
       disposition:
           disposition == freezed ? _value.disposition : disposition as String,
+      dispositionElement: dispositionElement == freezed
+          ? _value.dispositionElement
+          : dispositionElement as Element,
       requestProvider: requestProvider == freezed
           ? _value.requestProvider
           : requestProvider as Reference,
@@ -1313,15 +1420,6 @@ class __$PaymentReconciliationCopyWithImpl<$Res>
       processNote: processNote == freezed
           ? _value.processNote
           : processNote as List<PaymentReconciliationProcessNote>,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      createdElement: createdElement == freezed
-          ? _value.createdElement
-          : createdElement as Element,
-      dispositionElement: dispositionElement == freezed
-          ? _value.dispositionElement
-          : dispositionElement as Element,
     ));
   }
 }
@@ -1330,12 +1428,16 @@ class __$PaymentReconciliationCopyWithImpl<$Res>
 class _$_PaymentReconciliation extends _PaymentReconciliation {
   _$_PaymentReconciliation(
       {@required
-      @JsonKey(required: true, defaultValue: 'PaymentReconciliation')
+      @JsonKey(defaultValue: 'PaymentReconciliation')
           this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
       @JsonKey(name: 'extension')
@@ -1343,24 +1445,24 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
       this.modifierExtension,
       this.identifier,
       this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.period,
       this.created,
+      @JsonKey(name: '_created')
+          this.createdElement,
       this.organization,
       this.request,
       this.outcome,
       this.disposition,
+      @JsonKey(name: '_disposition')
+          this.dispositionElement,
       this.requestProvider,
       this.requestOrganization,
       this.detail,
       this.form,
       this.total,
-      this.processNote,
-      @JsonKey(name: '_status')
-          this.statusElement,
-      @JsonKey(name: '_created')
-          this.createdElement,
-      @JsonKey(name: '_disposition')
-          this.dispositionElement})
+      this.processNote})
       : assert(resourceType != null),
         super._();
 
@@ -1368,7 +1470,7 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
       _$_$_PaymentReconciliationFromJson(json);
 
   @override
-  @JsonKey(required: true, defaultValue: 'PaymentReconciliation')
+  @JsonKey(defaultValue: 'PaymentReconciliation')
   final String resourceType;
   @override
   final Id id;
@@ -1377,7 +1479,13 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
   @override
   final FhirUri implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
   final Code language;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
   @override
   final Narrative text;
   @override
@@ -1390,11 +1498,17 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
   @override
   final List<Identifier> identifier;
   @override
-  final Code status;
+  final String status;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
   @override
   final Period period;
   @override
-  final FhirDateTime created;
+  final String created;
+  @override
+  @JsonKey(name: '_created')
+  final Element createdElement;
   @override
   final Reference organization;
   @override
@@ -1403,6 +1517,9 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
   final CodeableConcept outcome;
   @override
   final String disposition;
+  @override
+  @JsonKey(name: '_disposition')
+  final Element dispositionElement;
   @override
   final Reference requestProvider;
   @override
@@ -1415,19 +1532,10 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
   final Money total;
   @override
   final List<PaymentReconciliationProcessNote> processNote;
-  @override
-  @JsonKey(name: '_status')
-  final Element statusElement;
-  @override
-  @JsonKey(name: '_created')
-  final Element createdElement;
-  @override
-  @JsonKey(name: '_disposition')
-  final Element dispositionElement;
 
   @override
   String toString() {
-    return 'PaymentReconciliation(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, period: $period, created: $created, organization: $organization, request: $request, outcome: $outcome, disposition: $disposition, requestProvider: $requestProvider, requestOrganization: $requestOrganization, detail: $detail, form: $form, total: $total, processNote: $processNote, statusElement: $statusElement, createdElement: $createdElement, dispositionElement: $dispositionElement)';
+    return 'PaymentReconciliation(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, period: $period, created: $created, createdElement: $createdElement, organization: $organization, request: $request, outcome: $outcome, disposition: $disposition, dispositionElement: $dispositionElement, requestProvider: $requestProvider, requestOrganization: $requestOrganization, detail: $detail, form: $form, total: $total, processNote: $processNote)';
   }
 
   @override
@@ -1444,9 +1552,15 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
             (identical(other.implicitRules, implicitRules) ||
                 const DeepCollectionEquality()
                     .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
             (identical(other.language, language) ||
                 const DeepCollectionEquality()
                     .equals(other.language, language)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
             (identical(other.text, text) ||
                 const DeepCollectionEquality().equals(other.text, text)) &&
             (identical(other.contained, contained) ||
@@ -1463,11 +1577,17 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
                     .equals(other.identifier, identifier)) &&
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
             (identical(other.period, period) ||
                 const DeepCollectionEquality().equals(other.period, period)) &&
             (identical(other.created, created) ||
                 const DeepCollectionEquality()
                     .equals(other.created, created)) &&
+            (identical(other.createdElement, createdElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.createdElement, createdElement)) &&
             (identical(other.organization, organization) ||
                 const DeepCollectionEquality()
                     .equals(other.organization, organization)) &&
@@ -1480,29 +1600,19 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
             (identical(other.disposition, disposition) ||
                 const DeepCollectionEquality()
                     .equals(other.disposition, disposition)) &&
+            (identical(other.dispositionElement, dispositionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.dispositionElement, dispositionElement)) &&
             (identical(other.requestProvider, requestProvider) ||
                 const DeepCollectionEquality()
                     .equals(other.requestProvider, requestProvider)) &&
             (identical(other.requestOrganization, requestOrganization) ||
                 const DeepCollectionEquality()
                     .equals(other.requestOrganization, requestOrganization)) &&
-            (identical(other.detail, detail) ||
-                const DeepCollectionEquality().equals(other.detail, detail)) &&
-            (identical(other.form, form) ||
-                const DeepCollectionEquality().equals(other.form, form)) &&
-            (identical(other.total, total) ||
-                const DeepCollectionEquality().equals(other.total, total)) &&
-            (identical(other.processNote, processNote) ||
-                const DeepCollectionEquality()
-                    .equals(other.processNote, processNote)) &&
-            (identical(other.statusElement, statusElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusElement, statusElement)) &&
-            (identical(other.createdElement, createdElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.createdElement, createdElement)) &&
-            (identical(other.dispositionElement, dispositionElement) ||
-                const DeepCollectionEquality().equals(other.dispositionElement, dispositionElement)));
+            (identical(other.detail, detail) || const DeepCollectionEquality().equals(other.detail, detail)) &&
+            (identical(other.form, form) || const DeepCollectionEquality().equals(other.form, form)) &&
+            (identical(other.total, total) || const DeepCollectionEquality().equals(other.total, total)) &&
+            (identical(other.processNote, processNote) || const DeepCollectionEquality().equals(other.processNote, processNote)));
   }
 
   @override
@@ -1512,28 +1622,30 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
       const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(status) ^
+      const DeepCollectionEquality().hash(statusElement) ^
       const DeepCollectionEquality().hash(period) ^
       const DeepCollectionEquality().hash(created) ^
+      const DeepCollectionEquality().hash(createdElement) ^
       const DeepCollectionEquality().hash(organization) ^
       const DeepCollectionEquality().hash(request) ^
       const DeepCollectionEquality().hash(outcome) ^
       const DeepCollectionEquality().hash(disposition) ^
+      const DeepCollectionEquality().hash(dispositionElement) ^
       const DeepCollectionEquality().hash(requestProvider) ^
       const DeepCollectionEquality().hash(requestOrganization) ^
       const DeepCollectionEquality().hash(detail) ^
       const DeepCollectionEquality().hash(form) ^
       const DeepCollectionEquality().hash(total) ^
-      const DeepCollectionEquality().hash(processNote) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(createdElement) ^
-      const DeepCollectionEquality().hash(dispositionElement);
+      const DeepCollectionEquality().hash(processNote);
 
   @override
   _$PaymentReconciliationCopyWith<_PaymentReconciliation> get copyWith =>
@@ -1549,44 +1661,49 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
 abstract class _PaymentReconciliation extends PaymentReconciliation {
   _PaymentReconciliation._() : super._();
   factory _PaymentReconciliation(
-      {@required
-      @JsonKey(required: true, defaultValue: 'PaymentReconciliation')
-          String resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
-      Code language,
-      Narrative text,
-      List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Code status,
-      Period period,
-      FhirDateTime created,
-      Reference organization,
-      Reference request,
-      CodeableConcept outcome,
-      String disposition,
-      Reference requestProvider,
-      Reference requestOrganization,
-      List<PaymentReconciliationDetail> detail,
-      CodeableConcept form,
-      Money total,
-      List<PaymentReconciliationProcessNote> processNote,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_created')
-          Element createdElement,
-      @JsonKey(name: '_disposition')
-          Element dispositionElement}) = _$_PaymentReconciliation;
+          {@required
+          @JsonKey(defaultValue: 'PaymentReconciliation')
+              String resourceType,
+          Id id,
+          Meta meta,
+          FhirUri implicitRules,
+          @JsonKey(name: '_implicitRules')
+              Element implicitRulesElement,
+          Code language,
+          @JsonKey(name: '_language')
+              Element languageElement,
+          Narrative text,
+          List<Resource> contained,
+          @JsonKey(name: 'extension')
+              List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          List<Identifier> identifier,
+          String status,
+          @JsonKey(name: '_status')
+              Element statusElement,
+          Period period,
+          String created,
+          @JsonKey(name: '_created')
+              Element createdElement,
+          Reference organization,
+          Reference request,
+          CodeableConcept outcome,
+          String disposition,
+          @JsonKey(name: '_disposition')
+              Element dispositionElement,
+          Reference requestProvider,
+          Reference requestOrganization,
+          List<PaymentReconciliationDetail> detail,
+          CodeableConcept form,
+          Money total,
+          List<PaymentReconciliationProcessNote> processNote}) =
+      _$_PaymentReconciliation;
 
   factory _PaymentReconciliation.fromJson(Map<String, dynamic> json) =
       _$_PaymentReconciliation.fromJson;
 
   @override
-  @JsonKey(required: true, defaultValue: 'PaymentReconciliation')
+  @JsonKey(defaultValue: 'PaymentReconciliation')
   String get resourceType;
   @override
   Id get id;
@@ -1595,7 +1712,13 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
   @override
   FhirUri get implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
   Code get language;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
   @override
   Narrative get text;
   @override
@@ -1608,11 +1731,17 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
   @override
   List<Identifier> get identifier;
   @override
-  Code get status;
+  String get status;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
   @override
   Period get period;
   @override
-  FhirDateTime get created;
+  String get created;
+  @override
+  @JsonKey(name: '_created')
+  Element get createdElement;
   @override
   Reference get organization;
   @override
@@ -1621,6 +1750,9 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
   CodeableConcept get outcome;
   @override
   String get disposition;
+  @override
+  @JsonKey(name: '_disposition')
+  Element get dispositionElement;
   @override
   Reference get requestProvider;
   @override
@@ -1634,15 +1766,6 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
   @override
   List<PaymentReconciliationProcessNote> get processNote;
   @override
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @override
-  @JsonKey(name: '_created')
-  Element get createdElement;
-  @override
-  @JsonKey(name: '_disposition')
-  Element get dispositionElement;
-  @override
   _$PaymentReconciliationCopyWith<_PaymentReconciliation> get copyWith;
 }
 
@@ -1654,15 +1777,16 @@ PaymentReconciliationDetail _$PaymentReconciliationDetailFromJson(
 class _$PaymentReconciliationDetailTearOff {
   const _$PaymentReconciliationDetailTearOff();
 
+// ignore: unused_element
   _PaymentReconciliationDetail call(
-      {@JsonKey(required: true) CodeableConcept type,
+      {@required CodeableConcept type,
       Reference request,
       Reference response,
       Reference submitter,
       Reference payee,
       Date date,
-      Money amount,
-      @JsonKey(name: '_date') Element dateElement}) {
+      @JsonKey(name: '_date') Element dateElement,
+      Money amount}) {
     return _PaymentReconciliationDetail(
       type: type,
       request: request,
@@ -1670,8 +1794,8 @@ class _$PaymentReconciliationDetailTearOff {
       submitter: submitter,
       payee: payee,
       date: date,
-      amount: amount,
       dateElement: dateElement,
+      amount: amount,
     );
   }
 }
@@ -1680,16 +1804,15 @@ class _$PaymentReconciliationDetailTearOff {
 const $PaymentReconciliationDetail = _$PaymentReconciliationDetailTearOff();
 
 mixin _$PaymentReconciliationDetail {
-  @JsonKey(required: true)
   CodeableConcept get type;
   Reference get request;
   Reference get response;
   Reference get submitter;
   Reference get payee;
   Date get date;
-  Money get amount;
   @JsonKey(name: '_date')
   Element get dateElement;
+  Money get amount;
 
   Map<String, dynamic> toJson();
   $PaymentReconciliationDetailCopyWith<PaymentReconciliationDetail>
@@ -1702,22 +1825,22 @@ abstract class $PaymentReconciliationDetailCopyWith<$Res> {
           $Res Function(PaymentReconciliationDetail) then) =
       _$PaymentReconciliationDetailCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(required: true) CodeableConcept type,
+      {CodeableConcept type,
       Reference request,
       Reference response,
       Reference submitter,
       Reference payee,
       Date date,
-      Money amount,
-      @JsonKey(name: '_date') Element dateElement});
+      @JsonKey(name: '_date') Element dateElement,
+      Money amount});
 
   $CodeableConceptCopyWith<$Res> get type;
   $ReferenceCopyWith<$Res> get request;
   $ReferenceCopyWith<$Res> get response;
   $ReferenceCopyWith<$Res> get submitter;
   $ReferenceCopyWith<$Res> get payee;
-  $MoneyCopyWith<$Res> get amount;
   $ElementCopyWith<$Res> get dateElement;
+  $MoneyCopyWith<$Res> get amount;
 }
 
 class _$PaymentReconciliationDetailCopyWithImpl<$Res>
@@ -1736,8 +1859,8 @@ class _$PaymentReconciliationDetailCopyWithImpl<$Res>
     Object submitter = freezed,
     Object payee = freezed,
     Object date = freezed,
-    Object amount = freezed,
     Object dateElement = freezed,
+    Object amount = freezed,
   }) {
     return _then(_value.copyWith(
       type: type == freezed ? _value.type : type as CodeableConcept,
@@ -1747,9 +1870,9 @@ class _$PaymentReconciliationDetailCopyWithImpl<$Res>
           submitter == freezed ? _value.submitter : submitter as Reference,
       payee: payee == freezed ? _value.payee : payee as Reference,
       date: date == freezed ? _value.date : date as Date,
-      amount: amount == freezed ? _value.amount : amount as Money,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element,
+      amount: amount == freezed ? _value.amount : amount as Money,
     ));
   }
 
@@ -1804,22 +1927,22 @@ class _$PaymentReconciliationDetailCopyWithImpl<$Res>
   }
 
   @override
-  $MoneyCopyWith<$Res> get amount {
-    if (_value.amount == null) {
-      return null;
-    }
-    return $MoneyCopyWith<$Res>(_value.amount, (value) {
-      return _then(_value.copyWith(amount: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get dateElement {
     if (_value.dateElement == null) {
       return null;
     }
     return $ElementCopyWith<$Res>(_value.dateElement, (value) {
       return _then(_value.copyWith(dateElement: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get amount {
+    if (_value.amount == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.amount, (value) {
+      return _then(_value.copyWith(amount: value));
     });
   }
 }
@@ -1832,14 +1955,14 @@ abstract class _$PaymentReconciliationDetailCopyWith<$Res>
       __$PaymentReconciliationDetailCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(required: true) CodeableConcept type,
+      {CodeableConcept type,
       Reference request,
       Reference response,
       Reference submitter,
       Reference payee,
       Date date,
-      Money amount,
-      @JsonKey(name: '_date') Element dateElement});
+      @JsonKey(name: '_date') Element dateElement,
+      Money amount});
 
   @override
   $CodeableConceptCopyWith<$Res> get type;
@@ -1852,9 +1975,9 @@ abstract class _$PaymentReconciliationDetailCopyWith<$Res>
   @override
   $ReferenceCopyWith<$Res> get payee;
   @override
-  $MoneyCopyWith<$Res> get amount;
-  @override
   $ElementCopyWith<$Res> get dateElement;
+  @override
+  $MoneyCopyWith<$Res> get amount;
 }
 
 class __$PaymentReconciliationDetailCopyWithImpl<$Res>
@@ -1877,8 +2000,8 @@ class __$PaymentReconciliationDetailCopyWithImpl<$Res>
     Object submitter = freezed,
     Object payee = freezed,
     Object date = freezed,
-    Object amount = freezed,
     Object dateElement = freezed,
+    Object amount = freezed,
   }) {
     return _then(_PaymentReconciliationDetail(
       type: type == freezed ? _value.type : type as CodeableConcept,
@@ -1888,30 +2011,31 @@ class __$PaymentReconciliationDetailCopyWithImpl<$Res>
           submitter == freezed ? _value.submitter : submitter as Reference,
       payee: payee == freezed ? _value.payee : payee as Reference,
       date: date == freezed ? _value.date : date as Date,
-      amount: amount == freezed ? _value.amount : amount as Money,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element,
+      amount: amount == freezed ? _value.amount : amount as Money,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_PaymentReconciliationDetail implements _PaymentReconciliationDetail {
+class _$_PaymentReconciliationDetail extends _PaymentReconciliationDetail {
   _$_PaymentReconciliationDetail(
-      {@JsonKey(required: true) this.type,
+      {@required this.type,
       this.request,
       this.response,
       this.submitter,
       this.payee,
       this.date,
-      this.amount,
-      @JsonKey(name: '_date') this.dateElement});
+      @JsonKey(name: '_date') this.dateElement,
+      this.amount})
+      : assert(type != null),
+        super._();
 
   factory _$_PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =>
       _$_$_PaymentReconciliationDetailFromJson(json);
 
   @override
-  @JsonKey(required: true)
   final CodeableConcept type;
   @override
   final Reference request;
@@ -1924,14 +2048,14 @@ class _$_PaymentReconciliationDetail implements _PaymentReconciliationDetail {
   @override
   final Date date;
   @override
-  final Money amount;
-  @override
   @JsonKey(name: '_date')
   final Element dateElement;
+  @override
+  final Money amount;
 
   @override
   String toString() {
-    return 'PaymentReconciliationDetail(type: $type, request: $request, response: $response, submitter: $submitter, payee: $payee, date: $date, amount: $amount, dateElement: $dateElement)';
+    return 'PaymentReconciliationDetail(type: $type, request: $request, response: $response, submitter: $submitter, payee: $payee, date: $date, dateElement: $dateElement, amount: $amount)';
   }
 
   @override
@@ -1953,11 +2077,11 @@ class _$_PaymentReconciliationDetail implements _PaymentReconciliationDetail {
                 const DeepCollectionEquality().equals(other.payee, payee)) &&
             (identical(other.date, date) ||
                 const DeepCollectionEquality().equals(other.date, date)) &&
-            (identical(other.amount, amount) ||
-                const DeepCollectionEquality().equals(other.amount, amount)) &&
             (identical(other.dateElement, dateElement) ||
                 const DeepCollectionEquality()
-                    .equals(other.dateElement, dateElement)));
+                    .equals(other.dateElement, dateElement)) &&
+            (identical(other.amount, amount) ||
+                const DeepCollectionEquality().equals(other.amount, amount)));
   }
 
   @override
@@ -1969,8 +2093,8 @@ class _$_PaymentReconciliationDetail implements _PaymentReconciliationDetail {
       const DeepCollectionEquality().hash(submitter) ^
       const DeepCollectionEquality().hash(payee) ^
       const DeepCollectionEquality().hash(date) ^
-      const DeepCollectionEquality().hash(amount) ^
-      const DeepCollectionEquality().hash(dateElement);
+      const DeepCollectionEquality().hash(dateElement) ^
+      const DeepCollectionEquality().hash(amount);
 
   @override
   _$PaymentReconciliationDetailCopyWith<_PaymentReconciliationDetail>
@@ -1984,23 +2108,22 @@ class _$_PaymentReconciliationDetail implements _PaymentReconciliationDetail {
 }
 
 abstract class _PaymentReconciliationDetail
-    implements PaymentReconciliationDetail {
+    extends PaymentReconciliationDetail {
+  _PaymentReconciliationDetail._() : super._();
   factory _PaymentReconciliationDetail(
-          {@JsonKey(required: true) CodeableConcept type,
-          Reference request,
-          Reference response,
-          Reference submitter,
-          Reference payee,
-          Date date,
-          Money amount,
-          @JsonKey(name: '_date') Element dateElement}) =
-      _$_PaymentReconciliationDetail;
+      {@required CodeableConcept type,
+      Reference request,
+      Reference response,
+      Reference submitter,
+      Reference payee,
+      Date date,
+      @JsonKey(name: '_date') Element dateElement,
+      Money amount}) = _$_PaymentReconciliationDetail;
 
   factory _PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =
       _$_PaymentReconciliationDetail.fromJson;
 
   @override
-  @JsonKey(required: true)
   CodeableConcept get type;
   @override
   Reference get request;
@@ -2013,10 +2136,10 @@ abstract class _PaymentReconciliationDetail
   @override
   Date get date;
   @override
-  Money get amount;
-  @override
   @JsonKey(name: '_date')
   Element get dateElement;
+  @override
+  Money get amount;
   @override
   _$PaymentReconciliationDetailCopyWith<_PaymentReconciliationDetail>
       get copyWith;
@@ -2030,6 +2153,7 @@ PaymentReconciliationProcessNote _$PaymentReconciliationProcessNoteFromJson(
 class _$PaymentReconciliationProcessNoteTearOff {
   const _$PaymentReconciliationProcessNoteTearOff();
 
+// ignore: unused_element
   _PaymentReconciliationProcessNote call(
       {CodeableConcept type,
       String text,
@@ -2161,9 +2285,10 @@ class __$PaymentReconciliationProcessNoteCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_PaymentReconciliationProcessNote
-    implements _PaymentReconciliationProcessNote {
+    extends _PaymentReconciliationProcessNote {
   _$_PaymentReconciliationProcessNote(
-      {this.type, this.text, @JsonKey(name: '_text') this.textElement});
+      {this.type, this.text, @JsonKey(name: '_text') this.textElement})
+      : super._();
 
   factory _$_PaymentReconciliationProcessNote.fromJson(
           Map<String, dynamic> json) =>
@@ -2214,7 +2339,8 @@ class _$_PaymentReconciliationProcessNote
 }
 
 abstract class _PaymentReconciliationProcessNote
-    implements PaymentReconciliationProcessNote {
+    extends PaymentReconciliationProcessNote {
+  _PaymentReconciliationProcessNote._() : super._();
   factory _PaymentReconciliationProcessNote(
           {CodeableConcept type,
           String text,

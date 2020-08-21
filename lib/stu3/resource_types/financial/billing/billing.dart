@@ -1,8 +1,9 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
 import '../../../../stu3.dart';
-import 'billing.enums.dart';
 
+part 'billing.enums.dart';
 part 'billing.freezed.dart';
 part 'billing.g.dart';
 
@@ -10,25 +11,28 @@ part 'billing.g.dart';
 abstract class Claim with Resource implements _$Claim {
   Claim._();
   factory Claim({
-    @JsonKey(required: true, defaultValue: 'Claim')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'Claim') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
-    Code status,
+    String status,
+    @JsonKey(name: '_status') Element statusElement,
     CodeableConcept type,
     List<CodeableConcept> subType,
-    @JsonKey(unknownEnumValue: ClaimUse.unknown) ClaimUse use,
+    ClaimUse use,
+    @JsonKey(name: '_use') Element useElement,
     Reference patient,
     Period billablePeriod,
-    FhirDateTime created,
+    String created,
+    @JsonKey(name: '_created') Element createdElement,
     Reference enterer,
     Reference insurer,
     Reference provider,
@@ -51,155 +55,164 @@ abstract class Claim with Resource implements _$Claim {
     Period hospitalization,
     List<ClaimItem> item,
     Money total,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_use') Element useElement,
-    @JsonKey(name: '_created') Element createdElement,
   }) = _Claim;
+
   factory Claim.fromJson(Map<String, dynamic> json) => _$ClaimFromJson(json);
 }
 
 @freezed
-abstract class ClaimRelated with _$ClaimRelated {
+abstract class ClaimRelated implements _$ClaimRelated {
+  ClaimRelated._();
   factory ClaimRelated({
     Reference claim,
     CodeableConcept relationship,
     Identifier reference,
   }) = _ClaimRelated;
+
   factory ClaimRelated.fromJson(Map<String, dynamic> json) =>
       _$ClaimRelatedFromJson(json);
 }
 
 @freezed
-abstract class ClaimPayee with _$ClaimPayee {
+abstract class ClaimPayee implements _$ClaimPayee {
   ClaimPayee._();
   factory ClaimPayee({
-    @JsonKey(required: true) CodeableConcept type,
-    @JsonKey(required: true, defaultValue: 'ClaimPayee')
-    @required
-        String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
+    @required CodeableConcept type,
     Reference party,
   }) = _ClaimPayee;
+
   factory ClaimPayee.fromJson(Map<String, dynamic> json) =>
       _$ClaimPayeeFromJson(json);
 }
 
 @freezed
-abstract class ClaimCareTeam with _$ClaimCareTeam {
+abstract class ClaimCareTeam implements _$ClaimCareTeam {
+  ClaimCareTeam._();
   factory ClaimCareTeam({
-    PositiveInt sequence,
-    @JsonKey(required: true) Reference provider,
+    Decimal sequence,
+    @JsonKey(name: '_sequence') Element sequenceElement,
+    @required Reference provider,
     Boolean responsible,
+    @JsonKey(name: '_responsible') Element responsibleElement,
     CodeableConcept role,
     CodeableConcept qualification,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    @JsonKey(name: '_responsible') Element responsibleElement,
   }) = _ClaimCareTeam;
+
   factory ClaimCareTeam.fromJson(Map<String, dynamic> json) =>
       _$ClaimCareTeamFromJson(json);
 }
 
 @freezed
-abstract class ClaimInformation with _$ClaimInformation {
+abstract class ClaimInformation implements _$ClaimInformation {
+  ClaimInformation._();
   factory ClaimInformation({
-    PositiveInt sequence,
-    @JsonKey(required: true) CodeableConcept category,
+    Decimal sequence,
+    @JsonKey(name: '_sequence') Element sequenceElement,
+    @required CodeableConcept category,
     CodeableConcept code,
     Date timingDate,
+    @JsonKey(name: '_timingDate') Element timingDateElement,
     Period timingPeriod,
     String valueString,
+    @JsonKey(name: '_valueString') Element valueStringElement,
     Quantity valueQuantity,
     Attachment valueAttachment,
     Reference valueReference,
     CodeableConcept reason,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    @JsonKey(name: '_timingDate') Element timingDateElement,
-    @JsonKey(name: '_valueString') Element valueStringElement,
   }) = _ClaimInformation;
+
   factory ClaimInformation.fromJson(Map<String, dynamic> json) =>
       _$ClaimInformationFromJson(json);
 }
 
 @freezed
-abstract class ClaimDiagnosis with _$ClaimDiagnosis {
+abstract class ClaimDiagnosis implements _$ClaimDiagnosis {
+  ClaimDiagnosis._();
   factory ClaimDiagnosis({
-    PositiveInt sequence,
+    Decimal sequence,
+    @JsonKey(name: '_sequence') Element sequenceElement,
     CodeableConcept diagnosisCodeableConcept,
     Reference diagnosisReference,
     List<CodeableConcept> type,
     CodeableConcept packageCode,
-    @JsonKey(name: '_sequence') Element sequenceElement,
   }) = _ClaimDiagnosis;
+
   factory ClaimDiagnosis.fromJson(Map<String, dynamic> json) =>
       _$ClaimDiagnosisFromJson(json);
 }
 
 @freezed
-abstract class ClaimProcedure with _$ClaimProcedure {
+abstract class ClaimProcedure implements _$ClaimProcedure {
+  ClaimProcedure._();
   factory ClaimProcedure({
-    PositiveInt sequence,
-    FhirDateTime date,
+    Decimal sequence,
+    @JsonKey(name: '_sequence') Element sequenceElement,
+    Date date,
+    @JsonKey(name: '_date') Element dateElement,
     CodeableConcept procedureCodeableConcept,
     Reference procedureReference,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    @JsonKey(name: '_date') Element dateElement,
   }) = _ClaimProcedure;
+
   factory ClaimProcedure.fromJson(Map<String, dynamic> json) =>
       _$ClaimProcedureFromJson(json);
 }
 
 @freezed
-abstract class ClaimInsurance with _$ClaimInsurance {
+abstract class ClaimInsurance implements _$ClaimInsurance {
+  ClaimInsurance._();
   factory ClaimInsurance({
-    PositiveInt sequence,
-    Boolean focal,
-    @JsonKey(required: true) Reference coverage,
-    String businessArrangement,
-    List<String> preAuthRef,
-    Reference claimResponse,
+    Decimal sequence,
     @JsonKey(name: '_sequence') Element sequenceElement,
+    Boolean focal,
     @JsonKey(name: '_focal') Element focalElement,
+    @required Reference coverage,
+    String businessArrangement,
     @JsonKey(name: '_businessArrangement') Element businessArrangementElement,
-    @JsonKey(name: '_preAuthRef') Element preAuthRefElement,
+    List<String> preAuthRef,
+    @JsonKey(name: '_preAuthRef') List<Element> preAuthRefElement,
+    Reference claimResponse,
   }) = _ClaimInsurance;
+
   factory ClaimInsurance.fromJson(Map<String, dynamic> json) =>
       _$ClaimInsuranceFromJson(json);
 }
 
 @freezed
-abstract class ClaimAccident with _$ClaimAccident {
+abstract class ClaimAccident implements _$ClaimAccident {
+  ClaimAccident._();
   factory ClaimAccident({
     Date date,
+    @JsonKey(name: '_date') Element dateElement,
     CodeableConcept type,
     Address locationAddress,
     Reference locationReference,
-    @JsonKey(name: '_date') Element dateElement,
   }) = _ClaimAccident;
+
   factory ClaimAccident.fromJson(Map<String, dynamic> json) =>
       _$ClaimAccidentFromJson(json);
 }
 
 @freezed
-abstract class ClaimItem with _$ClaimItem {
+abstract class ClaimItem implements _$ClaimItem {
+  ClaimItem._();
   factory ClaimItem({
-    PositiveInt sequence,
-    List<PositiveInt> careTeamLinkId,
-    List<PositiveInt> diagnosisLinkId,
-    List<PositiveInt> procedureLinkId,
-    List<PositiveInt> informationLinkId,
+    Decimal sequence,
+    @JsonKey(name: '_sequence') Element sequenceElement,
+    List<Id> careTeamLinkId,
+    @JsonKey(name: '_careTeamLinkId') List<Element> careTeamLinkIdElement,
+    List<Id> diagnosisLinkId,
+    @JsonKey(name: '_diagnosisLinkId') List<Element> diagnosisLinkIdElement,
+    List<Id> procedureLinkId,
+    @JsonKey(name: '_procedureLinkId') List<Element> procedureLinkIdElement,
+    List<Id> informationLinkId,
+    @JsonKey(name: '_informationLinkId') List<Element> informationLinkIdElement,
     CodeableConcept revenue,
     CodeableConcept category,
     CodeableConcept service,
     List<CodeableConcept> modifier,
     List<CodeableConcept> programCode,
     Date servicedDate,
+    @JsonKey(name: '_servicedDate') Element servicedDateElement,
     Period servicedPeriod,
     CodeableConcept locationCodeableConcept,
     Address locationAddress,
@@ -207,28 +220,25 @@ abstract class ClaimItem with _$ClaimItem {
     Quantity quantity,
     Money unitPrice,
     Decimal factor,
+    @JsonKey(name: '_factor') Element factorElement,
     Money net,
     List<Reference> udi,
     CodeableConcept bodySite,
     List<CodeableConcept> subSite,
     List<Reference> encounter,
     List<ClaimDetail> detail,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    @JsonKey(name: '_careTeamLinkId') Element careTeamLinkIdElement,
-    @JsonKey(name: '_diagnosisLinkId') Element diagnosisLinkIdElement,
-    @JsonKey(name: '_procedureLinkId') Element procedureLinkIdElement,
-    @JsonKey(name: '_informationLinkId') Element informationLinkIdElement,
-    @JsonKey(name: '_servicedDate') Element servicedDateElement,
-    @JsonKey(name: '_factor') Element factorElement,
   }) = _ClaimItem;
+
   factory ClaimItem.fromJson(Map<String, dynamic> json) =>
       _$ClaimItemFromJson(json);
 }
 
 @freezed
-abstract class ClaimDetail with _$ClaimDetail {
+abstract class ClaimDetail implements _$ClaimDetail {
+  ClaimDetail._();
   factory ClaimDetail({
-    PositiveInt sequence,
+    Decimal sequence,
+    @JsonKey(name: '_sequence') Element sequenceElement,
     CodeableConcept revenue,
     CodeableConcept category,
     CodeableConcept service,
@@ -237,20 +247,22 @@ abstract class ClaimDetail with _$ClaimDetail {
     Quantity quantity,
     Money unitPrice,
     Decimal factor,
+    @JsonKey(name: '_factor') Element factorElement,
     Money net,
     List<Reference> udi,
     List<ClaimSubDetail> subDetail,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    @JsonKey(name: '_factor') Element factorElement,
   }) = _ClaimDetail;
+
   factory ClaimDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimDetailFromJson(json);
 }
 
 @freezed
-abstract class ClaimSubDetail with _$ClaimSubDetail {
+abstract class ClaimSubDetail implements _$ClaimSubDetail {
+  ClaimSubDetail._();
   factory ClaimSubDetail({
-    PositiveInt sequence,
+    Decimal sequence,
+    @JsonKey(name: '_sequence') Element sequenceElement,
     CodeableConcept revenue,
     CodeableConcept category,
     CodeableConcept service,
@@ -259,11 +271,11 @@ abstract class ClaimSubDetail with _$ClaimSubDetail {
     Quantity quantity,
     Money unitPrice,
     Decimal factor,
+    @JsonKey(name: '_factor') Element factorElement,
     Money net,
     List<Reference> udi,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    @JsonKey(name: '_factor') Element factorElement,
   }) = _ClaimSubDetail;
+
   factory ClaimSubDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimSubDetailFromJson(json);
 }
@@ -272,27 +284,30 @@ abstract class ClaimSubDetail with _$ClaimSubDetail {
 abstract class ClaimResponse with Resource implements _$ClaimResponse {
   ClaimResponse._();
   factory ClaimResponse({
-    @JsonKey(required: true, defaultValue: 'ClaimResponse')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'ClaimResponse') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
-    Code status,
+    String status,
+    @JsonKey(name: '_status') Element statusElement,
     Reference patient,
-    FhirDateTime created,
+    String created,
+    @JsonKey(name: '_created') Element createdElement,
     Reference insurer,
     Reference requestProvider,
     Reference requestOrganization,
     Reference request,
     CodeableConcept outcome,
     String disposition,
+    @JsonKey(name: '_disposition') Element dispositionElement,
     CodeableConcept payeeType,
     List<ClaimResponseItem> item,
     List<ClaimResponseAddItem> addItem,
@@ -306,162 +321,181 @@ abstract class ClaimResponse with Resource implements _$ClaimResponse {
     List<ClaimResponseProcessNote> processNote,
     List<Reference> communicationRequest,
     List<ClaimResponseInsurance> insurance,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_created') Element createdElement,
-    @JsonKey(name: '_disposition') Element dispositionElement,
   }) = _ClaimResponse;
+
   factory ClaimResponse.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseFromJson(json);
 }
 
 @freezed
-abstract class ClaimResponseItem with _$ClaimResponseItem {
+abstract class ClaimResponseItem implements _$ClaimResponseItem {
+  ClaimResponseItem._();
   factory ClaimResponseItem({
-    PositiveInt sequenceLinkId,
-    List<PositiveInt> noteNumber,
+    Id sequenceLinkId,
+    @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement,
+    List<Decimal> noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
     List<ClaimResponseAdjudication> adjudication,
     List<ClaimResponseDetail> detail,
-    @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement,
-    @JsonKey(name: '_noteNumber') Element noteNumberElement,
   }) = _ClaimResponseItem;
+
   factory ClaimResponseItem.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseItemFromJson(json);
 }
 
 @freezed
-abstract class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
+abstract class ClaimResponseAdjudication
+    implements _$ClaimResponseAdjudication {
+  ClaimResponseAdjudication._();
   factory ClaimResponseAdjudication({
-    @JsonKey(required: true) CodeableConcept category,
+    @required CodeableConcept category,
     CodeableConcept reason,
     Money amount,
     Decimal value,
     @JsonKey(name: '_value') Element valueElement,
   }) = _ClaimResponseAdjudication;
+
   factory ClaimResponseAdjudication.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseAdjudicationFromJson(json);
 }
 
 @freezed
-abstract class ClaimResponseDetail with _$ClaimResponseDetail {
+abstract class ClaimResponseDetail implements _$ClaimResponseDetail {
+  ClaimResponseDetail._();
   factory ClaimResponseDetail({
-    PositiveInt sequenceLinkId,
-    List<PositiveInt> noteNumber,
+    Id sequenceLinkId,
+    @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement,
+    List<Decimal> noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
     List<ClaimResponseAdjudication> adjudication,
     List<ClaimResponseSubDetail> subDetail,
-    @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement,
-    @JsonKey(name: '_noteNumber') Element noteNumberElement,
   }) = _ClaimResponseDetail;
+
   factory ClaimResponseDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseDetailFromJson(json);
 }
 
 @freezed
-abstract class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
+abstract class ClaimResponseSubDetail implements _$ClaimResponseSubDetail {
+  ClaimResponseSubDetail._();
   factory ClaimResponseSubDetail({
-    PositiveInt sequenceLinkId,
-    List<PositiveInt> noteNumber,
-    List<ClaimResponseAdjudication> adjudication,
+    Id sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement,
-    @JsonKey(name: '_noteNumber') Element noteNumberElement,
+    List<Decimal> noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
+    List<ClaimResponseAdjudication> adjudication,
   }) = _ClaimResponseSubDetail;
+
   factory ClaimResponseSubDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseSubDetailFromJson(json);
 }
 
 @freezed
-abstract class ClaimResponseAddItem with _$ClaimResponseAddItem {
+abstract class ClaimResponseAddItem implements _$ClaimResponseAddItem {
+  ClaimResponseAddItem._();
   factory ClaimResponseAddItem({
-    List<PositiveInt> sequenceLinkId,
+    List<Id> sequenceLinkId,
+    @JsonKey(name: '_sequenceLinkId') List<Element> sequenceLinkIdElement,
     CodeableConcept revenue,
     CodeableConcept category,
     CodeableConcept service,
     List<CodeableConcept> modifier,
     Money fee,
-    List<PositiveInt> noteNumber,
+    List<Decimal> noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
     List<ClaimResponseAdjudication> adjudication,
     List<ClaimResponseDetail1> detail,
-    @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement,
-    @JsonKey(name: '_noteNumber') Element noteNumberElement,
   }) = _ClaimResponseAddItem;
+
   factory ClaimResponseAddItem.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseAddItemFromJson(json);
 }
 
 @freezed
-abstract class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
+abstract class ClaimResponseDetail1 implements _$ClaimResponseDetail1 {
+  ClaimResponseDetail1._();
   factory ClaimResponseDetail1({
     CodeableConcept revenue,
     CodeableConcept category,
     CodeableConcept service,
     List<CodeableConcept> modifier,
     Money fee,
-    List<PositiveInt> noteNumber,
+    List<Decimal> noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
     List<ClaimResponseAdjudication> adjudication,
-    @JsonKey(name: '_noteNumber') Element noteNumberElement,
   }) = _ClaimResponseDetail1;
+
   factory ClaimResponseDetail1.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseDetail1FromJson(json);
 }
 
 @freezed
-abstract class ClaimResponseError with _$ClaimResponseError {
+abstract class ClaimResponseError implements _$ClaimResponseError {
+  ClaimResponseError._();
   factory ClaimResponseError({
-    PositiveInt sequenceLinkId,
-    PositiveInt detailSequenceLinkId,
-    PositiveInt subdetailSequenceLinkId,
-    @JsonKey(required: true) CodeableConcept code,
+    Id sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement,
+    Id detailSequenceLinkId,
     @JsonKey(name: '_detailSequenceLinkId') Element detailSequenceLinkIdElement,
+    Id subdetailSequenceLinkId,
     @JsonKey(name: '_subdetailSequenceLinkId')
         Element subdetailSequenceLinkIdElement,
+    @required CodeableConcept code,
   }) = _ClaimResponseError;
+
   factory ClaimResponseError.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseErrorFromJson(json);
 }
 
 @freezed
-abstract class ClaimResponsePayment with _$ClaimResponsePayment {
+abstract class ClaimResponsePayment implements _$ClaimResponsePayment {
+  ClaimResponsePayment._();
   factory ClaimResponsePayment({
     CodeableConcept type,
     Money adjustment,
     CodeableConcept adjustmentReason,
     Date date,
+    @JsonKey(name: '_date') Element dateElement,
     Money amount,
     Identifier identifier,
-    @JsonKey(name: '_date') Element dateElement,
   }) = _ClaimResponsePayment;
+
   factory ClaimResponsePayment.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponsePaymentFromJson(json);
 }
 
 @freezed
-abstract class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
+abstract class ClaimResponseProcessNote implements _$ClaimResponseProcessNote {
+  ClaimResponseProcessNote._();
   factory ClaimResponseProcessNote({
-    PositiveInt number,
+    Decimal number,
+    @JsonKey(name: '_number') Element numberElement,
     CodeableConcept type,
     String text,
-    CodeableConcept language,
-    @JsonKey(name: '_number') Element numberElement,
     @JsonKey(name: '_text') Element textElement,
+    CodeableConcept language,
   }) = _ClaimResponseProcessNote;
+
   factory ClaimResponseProcessNote.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseProcessNoteFromJson(json);
 }
 
 @freezed
-abstract class ClaimResponseInsurance with _$ClaimResponseInsurance {
+abstract class ClaimResponseInsurance implements _$ClaimResponseInsurance {
+  ClaimResponseInsurance._();
   factory ClaimResponseInsurance({
-    PositiveInt sequence,
-    Boolean focal,
-    @JsonKey(required: true) Reference coverage,
-    String businessArrangement,
-    List<String> preAuthRef,
-    Reference claimResponse,
+    Decimal sequence,
     @JsonKey(name: '_sequence') Element sequenceElement,
+    Boolean focal,
     @JsonKey(name: '_focal') Element focalElement,
+    @required Reference coverage,
+    String businessArrangement,
     @JsonKey(name: '_businessArrangement') Element businessArrangementElement,
-    @JsonKey(name: '_preAuthRef') Element preAuthRefElement,
+    List<String> preAuthRef,
+    @JsonKey(name: '_preAuthRef') List<Element> preAuthRefElement,
+    Reference claimResponse,
   }) = _ClaimResponseInsurance;
+
   factory ClaimResponseInsurance.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseInsuranceFromJson(json);
 }

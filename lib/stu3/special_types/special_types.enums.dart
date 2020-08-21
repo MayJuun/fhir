@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'special_types.dart';
 
 enum NarrativeStatus {
   @JsonValue('generated')
@@ -28,7 +28,7 @@ enum ElementDefinitionRepresentation {
   unknown,
 }
 
-enum SlicingRules {
+enum ElementDefinitionSlicingRules {
   @JsonValue('closed')
   closed,
   @JsonValue('open')
@@ -39,7 +39,7 @@ enum SlicingRules {
   unknown,
 }
 
-enum DiscriminatorType {
+enum ElementDefinitionDiscriminatorType {
   @JsonValue('value')
   value,
   @JsonValue('exists')
@@ -54,7 +54,7 @@ enum DiscriminatorType {
   unknown,
 }
 
-enum TypeAggregation {
+enum ElementDefinitionTypeAggregation {
   @JsonValue('contained')
   contained,
   @JsonValue('referenced')
@@ -65,7 +65,7 @@ enum TypeAggregation {
   unknown,
 }
 
-enum TypeVersioning {
+enum ElementDefinitionTypeVersioning {
   @JsonValue('either')
   either,
   @JsonValue('independent')
@@ -76,11 +76,24 @@ enum TypeVersioning {
   unknown,
 }
 
-enum ConstraintSeverity {
+enum ElementDefinitionConstraintSeverity {
   @JsonValue('error')
   error,
   @JsonValue('warning')
   warning,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum ElementDefinitionBindingStrength {
+  @JsonValue('required')
+  required_,
+  @JsonValue('extensible')
+  extensible,
+  @JsonValue('preferred')
+  preferred,
+  @JsonValue('example')
+  example,
   @JsonValue('unknown')
   unknown,
 }

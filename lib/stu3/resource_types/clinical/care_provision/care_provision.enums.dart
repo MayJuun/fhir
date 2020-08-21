@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'care_provision.dart';
 
 enum CarePlanStatus {
   @JsonValue('draft')
@@ -116,7 +116,7 @@ enum NutritionOrderStatus {
   unknown,
 }
 
-enum DispenseEye {
+enum VisionPrescriptionDispenseEye {
   @JsonValue('right')
   right,
   @JsonValue('left')
@@ -125,7 +125,7 @@ enum DispenseEye {
   unknown,
 }
 
-enum DispenseBase {
+enum VisionPrescriptionDispenseBase {
   @JsonValue('up')
   up,
   @JsonValue('down')

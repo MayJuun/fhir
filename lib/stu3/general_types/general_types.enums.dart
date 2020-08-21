@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'general_types.dart';
 
 enum IdentifierUse {
   @JsonValue('usual')
@@ -13,15 +13,15 @@ enum IdentifierUse {
   unknown,
 }
 
-enum Comparator {
+enum QuantityComparator {
   @JsonValue('<')
-  less_than,
+  lt,
   @JsonValue('<=')
-  less_or_equal,
+  le,
   @JsonValue('>=')
-  greater_or_equal,
+  ge,
   @JsonValue('>')
-  greater_than,
+  gt,
   @JsonValue('unknown')
   unknown,
 }

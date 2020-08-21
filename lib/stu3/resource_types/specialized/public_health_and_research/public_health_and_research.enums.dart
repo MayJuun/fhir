@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'public_health_and_research.dart';
 
 enum ResearchStudyStatus {
   @JsonValue('draft')

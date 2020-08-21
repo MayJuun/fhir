@@ -9,13 +9,13 @@ part of 'metadata_types.dart';
 _$_ContactDetail _$_$_ContactDetailFromJson(Map<String, dynamic> json) {
   return _$_ContactDetail(
     name: json['name'] as String,
+    nameElement: json['_name'] == null
+        ? null
+        : Element.fromJson(json['_name'] as Map<String, dynamic>),
     telecom: (json['telecom'] as List)
         ?.map((e) =>
             e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    nameElement: json['_name'] == null
-        ? null
-        : Element.fromJson(json['_name'] as Map<String, dynamic>),
   );
 }
 
@@ -29,40 +29,30 @@ Map<String, dynamic> _$_$_ContactDetailToJson(_$_ContactDetail instance) {
   }
 
   writeNotNull('name', instance.name);
-  writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson())?.toList());
   writeNotNull('_name', instance.nameElement?.toJson());
+  writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
-_$_RelatedArtifact _$_$_RelatedArtifactFromJson(Map<String, dynamic> json) {
-  return _$_RelatedArtifact(
-    type: _$enumDecodeNullable(_$RelatedArtifactTypeEnumMap, json['type'],
-        unknownValue: RelatedArtifactType.unknown),
-    display: json['display'] as String,
-    citation: json['citation'] as String,
-    url: json['url'] as String,
-    document: json['document'] == null
-        ? null
-        : Attachment.fromJson(json['document'] as Map<String, dynamic>),
-    resource: json['resource'] == null
-        ? null
-        : Reference.fromJson(json['resource'] as Map<String, dynamic>),
+_$_Contributor _$_$_ContributorFromJson(Map<String, dynamic> json) {
+  return _$_Contributor(
+    type: _$enumDecodeNullable(_$ContributorTypeEnumMap, json['type']),
     typeElement: json['_type'] == null
         ? null
         : Element.fromJson(json['_type'] as Map<String, dynamic>),
-    displayElement: json['_display'] == null
+    name: json['name'] as String,
+    nameElement: json['_name'] == null
         ? null
-        : Element.fromJson(json['_display'] as Map<String, dynamic>),
-    citationElement: json['_citation'] == null
-        ? null
-        : Element.fromJson(json['_citation'] as Map<String, dynamic>),
-    urlElement: json['_url'] == null
-        ? null
-        : Element.fromJson(json['_url'] as Map<String, dynamic>),
+        : Element.fromJson(json['_name'] as Map<String, dynamic>),
+    contact: (json['contact'] as List)
+        ?.map((e) => e == null
+            ? null
+            : ContactDetail.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
-Map<String, dynamic> _$_$_RelatedArtifactToJson(_$_RelatedArtifact instance) {
+Map<String, dynamic> _$_$_ContributorToJson(_$_Contributor instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -71,16 +61,11 @@ Map<String, dynamic> _$_$_RelatedArtifactToJson(_$_RelatedArtifact instance) {
     }
   }
 
-  writeNotNull('type', _$RelatedArtifactTypeEnumMap[instance.type]);
-  writeNotNull('display', instance.display);
-  writeNotNull('citation', instance.citation);
-  writeNotNull('url', instance.url);
-  writeNotNull('document', instance.document?.toJson());
-  writeNotNull('resource', instance.resource?.toJson());
+  writeNotNull('type', _$ContributorTypeEnumMap[instance.type]);
   writeNotNull('_type', instance.typeElement?.toJson());
-  writeNotNull('_display', instance.displayElement?.toJson());
-  writeNotNull('_citation', instance.citationElement?.toJson());
-  writeNotNull('_url', instance.urlElement?.toJson());
+  writeNotNull('name', instance.name);
+  writeNotNull('_name', instance.nameElement?.toJson());
+  writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
@@ -116,6 +101,63 @@ T _$enumDecodeNullable<T>(
   return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
 }
 
+const _$ContributorTypeEnumMap = {
+  ContributorType.author: 'author',
+  ContributorType.editor: 'editor',
+  ContributorType.reviewer: 'reviewer',
+  ContributorType.endorser: 'endorser',
+  ContributorType.unknown: 'unknown',
+};
+
+_$_RelatedArtifact _$_$_RelatedArtifactFromJson(Map<String, dynamic> json) {
+  return _$_RelatedArtifact(
+    type: _$enumDecodeNullable(_$RelatedArtifactTypeEnumMap, json['type']),
+    typeElement: json['_type'] == null
+        ? null
+        : Element.fromJson(json['_type'] as Map<String, dynamic>),
+    display: json['display'] as String,
+    displayElement: json['_display'] == null
+        ? null
+        : Element.fromJson(json['_display'] as Map<String, dynamic>),
+    citation: json['citation'] as String,
+    citationElement: json['_citation'] == null
+        ? null
+        : Element.fromJson(json['_citation'] as Map<String, dynamic>),
+    url: json['url'] as String,
+    urlElement: json['_url'] == null
+        ? null
+        : Element.fromJson(json['_url'] as Map<String, dynamic>),
+    document: json['document'] == null
+        ? null
+        : Attachment.fromJson(json['document'] as Map<String, dynamic>),
+    resource: json['resource'] == null
+        ? null
+        : Reference.fromJson(json['resource'] as Map<String, dynamic>),
+  );
+}
+
+Map<String, dynamic> _$_$_RelatedArtifactToJson(_$_RelatedArtifact instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('type', _$RelatedArtifactTypeEnumMap[instance.type]);
+  writeNotNull('_type', instance.typeElement?.toJson());
+  writeNotNull('display', instance.display);
+  writeNotNull('_display', instance.displayElement?.toJson());
+  writeNotNull('citation', instance.citation);
+  writeNotNull('_citation', instance.citationElement?.toJson());
+  writeNotNull('url', instance.url);
+  writeNotNull('_url', instance.urlElement?.toJson());
+  writeNotNull('document', instance.document?.toJson());
+  writeNotNull('resource', instance.resource?.toJson());
+  return val;
+}
+
 const _$RelatedArtifactTypeEnumMap = {
   RelatedArtifactType.documentation: 'documentation',
   RelatedArtifactType.justification: 'justification',
@@ -129,7 +171,6 @@ const _$RelatedArtifactTypeEnumMap = {
 };
 
 _$_UsageContext _$_$_UsageContextFromJson(Map<String, dynamic> json) {
-  $checkKeys(json, requiredKeys: const ['code']);
   return _$_UsageContext(
     code: json['code'] == null
         ? null
@@ -165,10 +206,21 @@ Map<String, dynamic> _$_$_UsageContextToJson(_$_UsageContext instance) {
 
 _$_DataRequirement _$_$_DataRequirementFromJson(Map<String, dynamic> json) {
   return _$_DataRequirement(
-    type: json['type'] == null ? null : Code.fromJson(json['type'] as String),
+    type: json['type'] as String,
+    typeElement: json['_type'] == null
+        ? null
+        : Element.fromJson(json['_type'] as Map<String, dynamic>),
     profile: (json['profile'] as List)?.map((e) => e as String)?.toList(),
+    profileElement: (json['_profile'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     mustSupport:
         (json['mustSupport'] as List)?.map((e) => e as String)?.toList(),
+    mustSupportElement: (json['_mustSupport'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     codeFilter: (json['codeFilter'] as List)
         ?.map((e) => e == null
             ? null
@@ -179,15 +231,6 @@ _$_DataRequirement _$_$_DataRequirementFromJson(Map<String, dynamic> json) {
             ? null
             : DataRequirementDateFilter.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    typeElement: json['_type'] == null
-        ? null
-        : Element.fromJson(json['_type'] as Map<String, dynamic>),
-    profileElement: json['_profile'] == null
-        ? null
-        : Element.fromJson(json['_profile'] as Map<String, dynamic>),
-    mustSupportElement: json['_mustSupport'] == null
-        ? null
-        : Element.fromJson(json['_mustSupport'] as Map<String, dynamic>),
   );
 }
 
@@ -200,16 +243,18 @@ Map<String, dynamic> _$_$_DataRequirementToJson(_$_DataRequirement instance) {
     }
   }
 
-  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('type', instance.type);
+  writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('profile', instance.profile);
+  writeNotNull(
+      '_profile', instance.profileElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('mustSupport', instance.mustSupport);
+  writeNotNull('_mustSupport',
+      instance.mustSupportElement?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'codeFilter', instance.codeFilter?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'dateFilter', instance.dateFilter?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_type', instance.typeElement?.toJson());
-  writeNotNull('_profile', instance.profileElement?.toJson());
-  writeNotNull('_mustSupport', instance.mustSupportElement?.toJson());
   return val;
 }
 
@@ -217,12 +262,22 @@ _$_DataRequirementCodeFilter _$_$_DataRequirementCodeFilterFromJson(
     Map<String, dynamic> json) {
   return _$_DataRequirementCodeFilter(
     path: json['path'] as String,
+    pathElement: json['_path'] == null
+        ? null
+        : Element.fromJson(json['_path'] as Map<String, dynamic>),
     valueSetString: json['valueSetString'] as String,
+    valueSetStringElement: json['_valueSetString'] == null
+        ? null
+        : Element.fromJson(json['_valueSetString'] as Map<String, dynamic>),
     valueSetReference: json['valueSetReference'] == null
         ? null
         : Reference.fromJson(json['valueSetReference'] as Map<String, dynamic>),
     valueCode: (json['valueCode'] as List)
         ?.map((e) => e == null ? null : Code.fromJson(e as String))
+        ?.toList(),
+    valueCodeElement: (json['_valueCode'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     valueCoding: (json['valueCoding'] as List)
         ?.map((e) =>
@@ -233,15 +288,6 @@ _$_DataRequirementCodeFilter _$_$_DataRequirementCodeFilterFromJson(
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    pathElement: json['_path'] == null
-        ? null
-        : Element.fromJson(json['_path'] as Map<String, dynamic>),
-    valueSetStringElement: json['_valueSetString'] == null
-        ? null
-        : Element.fromJson(json['_valueSetString'] as Map<String, dynamic>),
-    valueCodeElement: json['_valueCode'] == null
-        ? null
-        : Element.fromJson(json['_valueCode'] as Map<String, dynamic>),
   );
 }
 
@@ -256,17 +302,18 @@ Map<String, dynamic> _$_$_DataRequirementCodeFilterToJson(
   }
 
   writeNotNull('path', instance.path);
+  writeNotNull('_path', instance.pathElement?.toJson());
   writeNotNull('valueSetString', instance.valueSetString);
+  writeNotNull('_valueSetString', instance.valueSetStringElement?.toJson());
   writeNotNull('valueSetReference', instance.valueSetReference?.toJson());
   writeNotNull(
       'valueCode', instance.valueCode?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_valueCode',
+      instance.valueCodeElement?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'valueCoding', instance.valueCoding?.map((e) => e?.toJson())?.toList());
   writeNotNull('valueCodeableConcept',
       instance.valueCodeableConcept?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_path', instance.pathElement?.toJson());
-  writeNotNull('_valueSetString', instance.valueSetStringElement?.toJson());
-  writeNotNull('_valueCode', instance.valueCodeElement?.toJson());
   return val;
 }
 
@@ -274,21 +321,21 @@ _$_DataRequirementDateFilter _$_$_DataRequirementDateFilterFromJson(
     Map<String, dynamic> json) {
   return _$_DataRequirementDateFilter(
     path: json['path'] as String,
+    pathElement: json['_path'] == null
+        ? null
+        : Element.fromJson(json['_path'] as Map<String, dynamic>),
     valueDateTime: json['valueDateTime'] == null
         ? null
         : FhirDateTime.fromJson(json['valueDateTime'] as String),
+    valueDateTimeElement: json['_valueDateTime'] == null
+        ? null
+        : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
     valuePeriod: json['valuePeriod'] == null
         ? null
         : Period.fromJson(json['valuePeriod'] as Map<String, dynamic>),
     valueDuration: json['valueDuration'] == null
         ? null
         : Duration.fromJson(json['valueDuration'] as Map<String, dynamic>),
-    pathElement: json['_path'] == null
-        ? null
-        : Element.fromJson(json['_path'] as Map<String, dynamic>),
-    valueDateTimeElement: json['_valueDateTime'] == null
-        ? null
-        : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
   );
 }
 
@@ -303,44 +350,44 @@ Map<String, dynamic> _$_$_DataRequirementDateFilterToJson(
   }
 
   writeNotNull('path', instance.path);
+  writeNotNull('_path', instance.pathElement?.toJson());
   writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
+  writeNotNull('_valueDateTime', instance.valueDateTimeElement?.toJson());
   writeNotNull('valuePeriod', instance.valuePeriod?.toJson());
   writeNotNull('valueDuration', instance.valueDuration?.toJson());
-  writeNotNull('_path', instance.pathElement?.toJson());
-  writeNotNull('_valueDateTime', instance.valueDateTimeElement?.toJson());
   return val;
 }
 
 _$_ParameterDefinition _$_$_ParameterDefinitionFromJson(
     Map<String, dynamic> json) {
   return _$_ParameterDefinition(
-    name: json['name'] == null ? null : Code.fromJson(json['name'] as String),
-    use: json['use'] == null ? null : Code.fromJson(json['use'] as String),
-    min: json['min'] == null ? null : Integer.fromJson(json['min']),
-    max: json['max'] as String,
-    documentation: json['documentation'] as String,
-    type: json['type'] == null ? null : Code.fromJson(json['type'] as String),
-    profile: json['profile'] == null
-        ? null
-        : Reference.fromJson(json['profile'] as Map<String, dynamic>),
+    name: json['name'] as String,
     nameElement: json['_name'] == null
         ? null
         : Element.fromJson(json['_name'] as Map<String, dynamic>),
+    use: json['use'] as String,
     useElement: json['_use'] == null
         ? null
         : Element.fromJson(json['_use'] as Map<String, dynamic>),
+    min: json['min'] == null ? null : Decimal.fromJson(json['min']),
     minElement: json['_min'] == null
         ? null
         : Element.fromJson(json['_min'] as Map<String, dynamic>),
+    max: json['max'] as String,
     maxElement: json['_max'] == null
         ? null
         : Element.fromJson(json['_max'] as Map<String, dynamic>),
+    documentation: json['documentation'] as String,
     documentationElement: json['_documentation'] == null
         ? null
         : Element.fromJson(json['_documentation'] as Map<String, dynamic>),
+    type: json['type'] as String,
     typeElement: json['_type'] == null
         ? null
         : Element.fromJson(json['_type'] as Map<String, dynamic>),
+    profile: json['profile'] == null
+        ? null
+        : Reference.fromJson(json['profile'] as Map<String, dynamic>),
   );
 }
 
@@ -354,27 +401,32 @@ Map<String, dynamic> _$_$_ParameterDefinitionToJson(
     }
   }
 
-  writeNotNull('name', instance.name?.toJson());
-  writeNotNull('use', instance.use?.toJson());
-  writeNotNull('min', instance.min?.toJson());
-  writeNotNull('max', instance.max);
-  writeNotNull('documentation', instance.documentation);
-  writeNotNull('type', instance.type?.toJson());
-  writeNotNull('profile', instance.profile?.toJson());
+  writeNotNull('name', instance.name);
   writeNotNull('_name', instance.nameElement?.toJson());
+  writeNotNull('use', instance.use);
   writeNotNull('_use', instance.useElement?.toJson());
+  writeNotNull('min', instance.min?.toJson());
   writeNotNull('_min', instance.minElement?.toJson());
+  writeNotNull('max', instance.max);
   writeNotNull('_max', instance.maxElement?.toJson());
+  writeNotNull('documentation', instance.documentation);
   writeNotNull('_documentation', instance.documentationElement?.toJson());
+  writeNotNull('type', instance.type);
   writeNotNull('_type', instance.typeElement?.toJson());
+  writeNotNull('profile', instance.profile?.toJson());
   return val;
 }
 
 _$_TriggerDefinition _$_$_TriggerDefinitionFromJson(Map<String, dynamic> json) {
   return _$_TriggerDefinition(
-    type: _$enumDecodeNullable(_$TriggerDefinitionTypeEnumMap, json['type'],
-        unknownValue: TriggerDefinitionType.unknown),
+    type: _$enumDecodeNullable(_$TriggerDefinitionTypeEnumMap, json['type']),
+    typeElement: json['_type'] == null
+        ? null
+        : Element.fromJson(json['_type'] as Map<String, dynamic>),
     eventName: json['eventName'] as String,
+    eventNameElement: json['_eventName'] == null
+        ? null
+        : Element.fromJson(json['_eventName'] as Map<String, dynamic>),
     eventTimingTiming: json['eventTimingTiming'] == null
         ? null
         : Timing.fromJson(json['eventTimingTiming'] as Map<String, dynamic>),
@@ -385,25 +437,19 @@ _$_TriggerDefinition _$_$_TriggerDefinitionFromJson(Map<String, dynamic> json) {
     eventTimingDate: json['eventTimingDate'] == null
         ? null
         : Date.fromJson(json['eventTimingDate'] as String),
-    eventTimingDateTime: json['eventTimingDateTime'] == null
-        ? null
-        : FhirDateTime.fromJson(json['eventTimingDateTime'] as String),
-    eventData: json['eventData'] == null
-        ? null
-        : DataRequirement.fromJson(json['eventData'] as Map<String, dynamic>),
-    typeElement: json['_type'] == null
-        ? null
-        : Element.fromJson(json['_type'] as Map<String, dynamic>),
-    eventNameElement: json['_eventName'] == null
-        ? null
-        : Element.fromJson(json['_eventName'] as Map<String, dynamic>),
     eventTimingDateElement: json['_eventTimingDate'] == null
         ? null
         : Element.fromJson(json['_eventTimingDate'] as Map<String, dynamic>),
+    eventTimingDateTime: json['eventTimingDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['eventTimingDateTime'] as String),
     eventTimingDateTimeElement: json['_eventTimingDateTime'] == null
         ? null
         : Element.fromJson(
             json['_eventTimingDateTime'] as Map<String, dynamic>),
+    eventData: json['eventData'] == null
+        ? null
+        : DataRequirement.fromJson(json['eventData'] as Map<String, dynamic>),
   );
 }
 
@@ -418,17 +464,17 @@ Map<String, dynamic> _$_$_TriggerDefinitionToJson(
   }
 
   writeNotNull('type', _$TriggerDefinitionTypeEnumMap[instance.type]);
+  writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('eventName', instance.eventName);
+  writeNotNull('_eventName', instance.eventNameElement?.toJson());
   writeNotNull('eventTimingTiming', instance.eventTimingTiming?.toJson());
   writeNotNull('eventTimingReference', instance.eventTimingReference?.toJson());
   writeNotNull('eventTimingDate', instance.eventTimingDate?.toJson());
-  writeNotNull('eventTimingDateTime', instance.eventTimingDateTime?.toJson());
-  writeNotNull('eventData', instance.eventData?.toJson());
-  writeNotNull('_type', instance.typeElement?.toJson());
-  writeNotNull('_eventName', instance.eventNameElement?.toJson());
   writeNotNull('_eventTimingDate', instance.eventTimingDateElement?.toJson());
+  writeNotNull('eventTimingDateTime', instance.eventTimingDateTime?.toJson());
   writeNotNull(
       '_eventTimingDateTime', instance.eventTimingDateTimeElement?.toJson());
+  writeNotNull('eventData', instance.eventData?.toJson());
   return val;
 }
 

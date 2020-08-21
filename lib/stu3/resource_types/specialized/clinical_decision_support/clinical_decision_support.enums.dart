@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'clinical_decision_support.dart';
 
 enum GuidanceResponseStatus {
   @JsonValue('success')
@@ -13,19 +13,6 @@ enum GuidanceResponseStatus {
   failure,
   @JsonValue('entered-in-error')
   entered_in_error,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum ContributorType {
-  @JsonValue('author')
-  author,
-  @JsonValue('editor')
-  editor,
-  @JsonValue('reviewer')
-  reviewer,
-  @JsonValue('endorser')
-  endorser,
   @JsonValue('unknown')
   unknown,
 }

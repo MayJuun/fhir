@@ -1,9 +1,9 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
 import '../../../../stu3.dart';
-import '../../resource_types.enums.dart';
-import 'general.enums.dart';
 
+part 'general.enums.dart';
 part 'general.freezed.dart';
 part 'general.g.dart';
 
@@ -11,21 +11,23 @@ part 'general.g.dart';
 abstract class Account with Resource implements _$Account {
   Account._();
   factory Account({
-    @JsonKey(required: true, defaultValue: 'Account')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'Account') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: ActiveInactive.unknown) ActiveInactive status,
+    AccountStatus status,
+    @JsonKey(name: '_status') Element statusElement,
     CodeableConcept type,
     String name,
+    @JsonKey(name: '_name') Element nameElement,
     Reference subject,
     Period period,
     Period active,
@@ -33,34 +35,37 @@ abstract class Account with Resource implements _$Account {
     List<AccountCoverage> coverage,
     Reference owner,
     String description,
-    List<AccountGuarantor> guarantor,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_name') Element nameElement,
     @JsonKey(name: '_description') Element descriptionElement,
+    List<AccountGuarantor> guarantor,
   }) = _Account;
+
   factory Account.fromJson(Map<String, dynamic> json) =>
       _$AccountFromJson(json);
 }
 
 @freezed
-abstract class AccountCoverage with _$AccountCoverage {
+abstract class AccountCoverage implements _$AccountCoverage {
+  AccountCoverage._();
   factory AccountCoverage({
-    @JsonKey(required: true) Reference coverage,
-    PositiveInt priority,
+    @required Reference coverage,
+    Decimal priority,
     @JsonKey(name: '_priority') Element priorityElement,
   }) = _AccountCoverage;
+
   factory AccountCoverage.fromJson(Map<String, dynamic> json) =>
       _$AccountCoverageFromJson(json);
 }
 
 @freezed
-abstract class AccountGuarantor with _$AccountGuarantor {
+abstract class AccountGuarantor implements _$AccountGuarantor {
+  AccountGuarantor._();
   factory AccountGuarantor({
-    @JsonKey(required: true) Reference party,
+    @required Reference party,
     Boolean onHold,
-    Period period,
     @JsonKey(name: '_onHold') Element onHoldElement,
+    Period period,
   }) = _AccountGuarantor;
+
   factory AccountGuarantor.fromJson(Map<String, dynamic> json) =>
       _$AccountGuarantorFromJson(json);
 }
@@ -69,26 +74,28 @@ abstract class AccountGuarantor with _$AccountGuarantor {
 abstract class ChargeItem with Resource implements _$ChargeItem {
   ChargeItem._();
   factory ChargeItem({
-    @JsonKey(required: true, defaultValue: 'ChargeItem')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'ChargeItem') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     Identifier identifier,
     List<String> definition,
-    @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
-        ChargeItemStatus status,
+    @JsonKey(name: '_definition') List<Element> definitionElement,
+    ChargeItemStatus status,
+    @JsonKey(name: '_status') Element statusElement,
     List<Reference> partOf,
-    @JsonKey(required: true) CodeableConcept code,
-    @JsonKey(required: true) Reference subject,
+    @required CodeableConcept code,
+    @required Reference subject,
     Reference context,
     FhirDateTime occurrenceDateTime,
+    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
     Period occurrencePeriod,
     Timing occurrenceTiming,
     List<ChargeItemParticipant> participant,
@@ -96,33 +103,33 @@ abstract class ChargeItem with Resource implements _$ChargeItem {
     Reference requestingOrganization,
     Quantity quantity,
     List<CodeableConcept> bodysite,
-    Decimal factorOverride,
+    Id factorOverride,
+    @JsonKey(name: '_factorOverride') Element factorOverrideElement,
     Money priceOverride,
     String overrideReason,
+    @JsonKey(name: '_overrideReason') Element overrideReasonElement,
     Reference enterer,
-    FhirDateTime enteredDate,
+    Date enteredDate,
+    @JsonKey(name: '_enteredDate') Element enteredDateElement,
     List<CodeableConcept> reason,
     List<Reference> service,
     List<Reference> account,
     List<Annotation> note,
     List<Reference> supportingInformation,
-    @JsonKey(name: '_definition') Element definitionElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
-    @JsonKey(name: '_factorOverride') Element factorOverrideElement,
-    @JsonKey(name: '_overrideReason') Element overrideReasonElement,
-    @JsonKey(name: '_enteredDate') Element enteredDateElement,
   }) = _ChargeItem;
+
   factory ChargeItem.fromJson(Map<String, dynamic> json) =>
       _$ChargeItemFromJson(json);
 }
 
 @freezed
-abstract class ChargeItemParticipant with _$ChargeItemParticipant {
+abstract class ChargeItemParticipant implements _$ChargeItemParticipant {
+  ChargeItemParticipant._();
   factory ChargeItemParticipant({
     CodeableConcept role,
-    @JsonKey(required: true) Reference actor,
+    @required Reference actor,
   }) = _ChargeItemParticipant;
+
   factory ChargeItemParticipant.fromJson(Map<String, dynamic> json) =>
       _$ChargeItemParticipantFromJson(json);
 }
@@ -131,20 +138,22 @@ abstract class ChargeItemParticipant with _$ChargeItemParticipant {
 abstract class Contract with Resource implements _$Contract {
   Contract._();
   factory Contract({
-    @JsonKey(required: true, defaultValue: 'Contract')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'Contract') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     Identifier identifier,
-    Code status,
-    FhirDateTime issued,
+    String status,
+    @JsonKey(name: '_status') Element statusElement,
+    String issued,
+    @JsonKey(name: '_issued') Element issuedElement,
     Period applies,
     List<Reference> subject,
     List<Reference> topic,
@@ -166,59 +175,66 @@ abstract class Contract with Resource implements _$Contract {
     List<ContractFriendly> friendly,
     List<ContractLegal> legal,
     List<ContractRule> rule,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_issued') Element issuedElement,
   }) = _Contract;
+
   factory Contract.fromJson(Map<String, dynamic> json) =>
       _$ContractFromJson(json);
 }
 
 @freezed
-abstract class ContractAgent with _$ContractAgent {
+abstract class ContractAgent implements _$ContractAgent {
+  ContractAgent._();
   factory ContractAgent({
-    @JsonKey(required: true) Reference actor,
+    @required Reference actor,
     List<CodeableConcept> role,
   }) = _ContractAgent;
+
   factory ContractAgent.fromJson(Map<String, dynamic> json) =>
       _$ContractAgentFromJson(json);
 }
 
 @freezed
-abstract class ContractSigner with _$ContractSigner {
+abstract class ContractSigner implements _$ContractSigner {
+  ContractSigner._();
   factory ContractSigner({
-    @JsonKey(required: true) Coding type,
-    @JsonKey(required: true) Reference party,
-    @JsonKey(required: true) List<Signature> signature,
+    @required Coding type,
+    @required Reference party,
+    @required List<Signature> signature,
   }) = _ContractSigner;
+
   factory ContractSigner.fromJson(Map<String, dynamic> json) =>
       _$ContractSignerFromJson(json);
 }
 
 @freezed
-abstract class ContractValuedItem with _$ContractValuedItem {
+abstract class ContractValuedItem implements _$ContractValuedItem {
+  ContractValuedItem._();
   factory ContractValuedItem({
     CodeableConcept entityCodeableConcept,
     Reference entityReference,
     Identifier identifier,
-    FhirDateTime effectiveTime,
+    Time effectiveTime,
+    @JsonKey(name: '_effectiveTime') Element effectiveTimeElement,
     Quantity quantity,
     Money unitPrice,
     Decimal factor,
-    Decimal points,
-    Money net,
-    @JsonKey(name: '_effectiveTime') Element effectiveTimeElement,
     @JsonKey(name: '_factor') Element factorElement,
+    Decimal points,
     @JsonKey(name: '_points') Element pointsElement,
+    Money net,
   }) = _ContractValuedItem;
+
   factory ContractValuedItem.fromJson(Map<String, dynamic> json) =>
       _$ContractValuedItemFromJson(json);
 }
 
 @freezed
-abstract class ContractTerm with _$ContractTerm {
+abstract class ContractTerm implements _$ContractTerm {
+  ContractTerm._();
   factory ContractTerm({
     Identifier identifier,
-    FhirDateTime issued,
+    String issued,
+    @JsonKey(name: '_issued') Element issuedElement,
     Period applies,
     CodeableConcept type,
     CodeableConcept subType,
@@ -228,71 +244,81 @@ abstract class ContractTerm with _$ContractTerm {
     List<Coding> securityLabel,
     List<ContractAgent1> agent,
     String text,
+    @JsonKey(name: '_text') Element textElement,
     List<ContractValuedItem1> valuedItem,
     List<ContractTerm> group,
-    @JsonKey(name: '_issued') Element issuedElement,
-    @JsonKey(name: '_text') Element textElement,
   }) = _ContractTerm;
+
   factory ContractTerm.fromJson(Map<String, dynamic> json) =>
       _$ContractTermFromJson(json);
 }
 
 @freezed
-abstract class ContractAgent1 with _$ContractAgent1 {
+abstract class ContractAgent1 implements _$ContractAgent1 {
+  ContractAgent1._();
   factory ContractAgent1({
-    @JsonKey(required: true) Reference actor,
+    @required Reference actor,
     List<CodeableConcept> role,
   }) = _ContractAgent1;
+
   factory ContractAgent1.fromJson(Map<String, dynamic> json) =>
       _$ContractAgent1FromJson(json);
 }
 
 @freezed
-abstract class ContractValuedItem1 with _$ContractValuedItem1 {
+abstract class ContractValuedItem1 implements _$ContractValuedItem1 {
+  ContractValuedItem1._();
   factory ContractValuedItem1({
     CodeableConcept entityCodeableConcept,
     Reference entityReference,
     Identifier identifier,
-    FhirDateTime effectiveTime,
+    Time effectiveTime,
+    @JsonKey(name: '_effectiveTime') Element effectiveTimeElement,
     Quantity quantity,
     Money unitPrice,
     Decimal factor,
-    Decimal points,
-    Money net,
-    @JsonKey(name: '_effectiveTime') Element effectiveTimeElement,
     @JsonKey(name: '_factor') Element factorElement,
+    Decimal points,
     @JsonKey(name: '_points') Element pointsElement,
+    Money net,
   }) = _ContractValuedItem1;
+
   factory ContractValuedItem1.fromJson(Map<String, dynamic> json) =>
       _$ContractValuedItem1FromJson(json);
 }
 
 @freezed
-abstract class ContractFriendly with _$ContractFriendly {
+abstract class ContractFriendly implements _$ContractFriendly {
+  ContractFriendly._();
   factory ContractFriendly({
     Attachment contentAttachment,
     Reference contentReference,
   }) = _ContractFriendly;
+
   factory ContractFriendly.fromJson(Map<String, dynamic> json) =>
       _$ContractFriendlyFromJson(json);
 }
 
 @freezed
-abstract class ContractLegal with _$ContractLegal {
+abstract class ContractLegal implements _$ContractLegal {
+  ContractLegal._();
   factory ContractLegal({
     Attachment contentAttachment,
     Reference contentReference,
   }) = _ContractLegal;
+
   factory ContractLegal.fromJson(Map<String, dynamic> json) =>
       _$ContractLegalFromJson(json);
 }
 
 @freezed
-abstract class ContractRule with _$ContractRule {
+abstract class ContractRule implements _$ContractRule {
+  ContractRule._();
   factory ContractRule({
     Attachment contentAttachment,
     Reference contentReference,
   }) = _ContractRule;
+
   factory ContractRule.fromJson(Map<String, dynamic> json) =>
       _$ContractRuleFromJson(json);
 }
@@ -303,25 +329,28 @@ abstract class ExplanationOfBenefit
     implements _$ExplanationOfBenefit {
   ExplanationOfBenefit._();
   factory ExplanationOfBenefit({
-    @JsonKey(required: true, defaultValue: 'ExplanationOfBenefit')
+    @JsonKey(defaultValue: 'ExplanationOfBenefit')
     @required
         String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: ExplanationOfBenefitStatus.unknown)
-        ExplanationOfBenefitStatus status,
+    ExplanationOfBenefitStatus status,
+    @JsonKey(name: '_status') Element statusElement,
     CodeableConcept type,
     List<CodeableConcept> subType,
     Reference patient,
     Period billablePeriod,
-    FhirDateTime created,
+    String created,
+    @JsonKey(name: '_created') Element createdElement,
     Reference enterer,
     Reference insurer,
     Reference provider,
@@ -332,6 +361,7 @@ abstract class ExplanationOfBenefit
     Reference claimResponse,
     CodeableConcept outcome,
     String disposition,
+    @JsonKey(name: '_disposition') Element dispositionElement,
     List<ExplanationOfBenefitRelated> related,
     Reference prescription,
     Reference originalPrescription,
@@ -340,7 +370,8 @@ abstract class ExplanationOfBenefit
     List<ExplanationOfBenefitCareTeam> careTeam,
     List<ExplanationOfBenefitDiagnosis> diagnosis,
     List<ExplanationOfBenefitProcedure> procedure,
-    PositiveInt precedence,
+    Decimal precedence,
+    @JsonKey(name: '_precedence') Element precedenceElement,
     ExplanationOfBenefitInsurance insurance,
     ExplanationOfBenefitAccident accident,
     Period employmentImpacted,
@@ -354,158 +385,166 @@ abstract class ExplanationOfBenefit
     CodeableConcept form,
     List<ExplanationOfBenefitProcessNote> processNote,
     List<ExplanationOfBenefitBenefitBalance> benefitBalance,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_created') Element createdElement,
-    @JsonKey(name: '_disposition') Element dispositionElement,
-    @JsonKey(name: '_precedence') Element precedenceElement,
   }) = _ExplanationOfBenefit;
+
   factory ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitFromJson(json);
 }
 
 @freezed
-abstract class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
+abstract class ExplanationOfBenefitRelated
+    implements _$ExplanationOfBenefitRelated {
+  ExplanationOfBenefitRelated._();
   factory ExplanationOfBenefitRelated({
     Reference claim,
     CodeableConcept relationship,
     Identifier reference,
   }) = _ExplanationOfBenefitRelated;
+
   factory ExplanationOfBenefitRelated.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitRelatedFromJson(json);
 }
 
 @freezed
 abstract class ExplanationOfBenefitPayee
-    with Resource
     implements _$ExplanationOfBenefitPayee {
   ExplanationOfBenefitPayee._();
   factory ExplanationOfBenefitPayee({
     CodeableConcept type,
-    @JsonKey(required: true, defaultValue: 'ExplanationOfBenefitPayee')
-    @required
-        String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
     Reference party,
   }) = _ExplanationOfBenefitPayee;
+
   factory ExplanationOfBenefitPayee.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitPayeeFromJson(json);
 }
 
 @freezed
 abstract class ExplanationOfBenefitInformation
-    with _$ExplanationOfBenefitInformation {
+    implements _$ExplanationOfBenefitInformation {
+  ExplanationOfBenefitInformation._();
   factory ExplanationOfBenefitInformation({
-    PositiveInt sequence,
-    @JsonKey(required: true) CodeableConcept category,
+    Decimal sequence,
+    @JsonKey(name: '_sequence') Element sequenceElement,
+    @required CodeableConcept category,
     CodeableConcept code,
     Date timingDate,
+    @JsonKey(name: '_timingDate') Element timingDateElement,
     Period timingPeriod,
     String valueString,
+    @JsonKey(name: '_valueString') Element valueStringElement,
     Quantity valueQuantity,
     Attachment valueAttachment,
     Reference valueReference,
     Coding reason,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    @JsonKey(name: '_timingDate') Element timingDateElement,
-    @JsonKey(name: '_valueString') Element valueStringElement,
   }) = _ExplanationOfBenefitInformation;
+
   factory ExplanationOfBenefitInformation.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitInformationFromJson(json);
 }
 
 @freezed
 abstract class ExplanationOfBenefitCareTeam
-    with _$ExplanationOfBenefitCareTeam {
+    implements _$ExplanationOfBenefitCareTeam {
+  ExplanationOfBenefitCareTeam._();
   factory ExplanationOfBenefitCareTeam({
-    PositiveInt sequence,
-    @JsonKey(required: true) Reference provider,
+    Decimal sequence,
+    @JsonKey(name: '_sequence') Element sequenceElement,
+    @required Reference provider,
     Boolean responsible,
+    @JsonKey(name: '_responsible') Element responsibleElement,
     CodeableConcept role,
     CodeableConcept qualification,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    @JsonKey(name: '_responsible') Element responsibleElement,
   }) = _ExplanationOfBenefitCareTeam;
+
   factory ExplanationOfBenefitCareTeam.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitCareTeamFromJson(json);
 }
 
 @freezed
 abstract class ExplanationOfBenefitDiagnosis
-    with _$ExplanationOfBenefitDiagnosis {
+    implements _$ExplanationOfBenefitDiagnosis {
+  ExplanationOfBenefitDiagnosis._();
   factory ExplanationOfBenefitDiagnosis({
-    PositiveInt sequence,
+    Decimal sequence,
+    @JsonKey(name: '_sequence') Element sequenceElement,
     CodeableConcept diagnosisCodeableConcept,
     Reference diagnosisReference,
     List<CodeableConcept> type,
     CodeableConcept packageCode,
-    @JsonKey(name: '_sequence') Element sequenceElement,
   }) = _ExplanationOfBenefitDiagnosis;
+
   factory ExplanationOfBenefitDiagnosis.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitDiagnosisFromJson(json);
 }
 
 @freezed
 abstract class ExplanationOfBenefitProcedure
-    with _$ExplanationOfBenefitProcedure {
+    implements _$ExplanationOfBenefitProcedure {
+  ExplanationOfBenefitProcedure._();
   factory ExplanationOfBenefitProcedure({
-    PositiveInt sequence,
-    FhirDateTime date,
+    Decimal sequence,
+    @JsonKey(name: '_sequence') Element sequenceElement,
+    Date date,
+    @JsonKey(name: '_date') Element dateElement,
     CodeableConcept procedureCodeableConcept,
     Reference procedureReference,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    @JsonKey(name: '_date') Element dateElement,
   }) = _ExplanationOfBenefitProcedure;
+
   factory ExplanationOfBenefitProcedure.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitProcedureFromJson(json);
 }
 
 @freezed
 abstract class ExplanationOfBenefitInsurance
-    with _$ExplanationOfBenefitInsurance {
+    implements _$ExplanationOfBenefitInsurance {
+  ExplanationOfBenefitInsurance._();
   factory ExplanationOfBenefitInsurance({
     Reference coverage,
     List<String> preAuthRef,
-    @JsonKey(name: '_preAuthRef') Element preAuthRefElement,
+    @JsonKey(name: '_preAuthRef') List<Element> preAuthRefElement,
   }) = _ExplanationOfBenefitInsurance;
+
   factory ExplanationOfBenefitInsurance.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitInsuranceFromJson(json);
 }
 
 @freezed
 abstract class ExplanationOfBenefitAccident
-    with _$ExplanationOfBenefitAccident {
+    implements _$ExplanationOfBenefitAccident {
+  ExplanationOfBenefitAccident._();
   factory ExplanationOfBenefitAccident({
     Date date,
+    @JsonKey(name: '_date') Element dateElement,
     CodeableConcept type,
     Address locationAddress,
     Reference locationReference,
-    @JsonKey(name: '_date') Element dateElement,
   }) = _ExplanationOfBenefitAccident;
+
   factory ExplanationOfBenefitAccident.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitAccidentFromJson(json);
 }
 
 @freezed
-abstract class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
+abstract class ExplanationOfBenefitItem implements _$ExplanationOfBenefitItem {
+  ExplanationOfBenefitItem._();
   factory ExplanationOfBenefitItem({
-    PositiveInt sequence,
-    List<PositiveInt> careTeamLinkId,
-    List<PositiveInt> diagnosisLinkId,
-    List<PositiveInt> procedureLinkId,
-    List<PositiveInt> informationLinkId,
+    Decimal sequence,
+    @JsonKey(name: '_sequence') Element sequenceElement,
+    List<Id> careTeamLinkId,
+    @JsonKey(name: '_careTeamLinkId') List<Element> careTeamLinkIdElement,
+    List<Id> diagnosisLinkId,
+    @JsonKey(name: '_diagnosisLinkId') List<Element> diagnosisLinkIdElement,
+    List<Id> procedureLinkId,
+    @JsonKey(name: '_procedureLinkId') List<Element> procedureLinkIdElement,
+    List<Id> informationLinkId,
+    @JsonKey(name: '_informationLinkId') List<Element> informationLinkIdElement,
     CodeableConcept revenue,
     CodeableConcept category,
     CodeableConcept service,
     List<CodeableConcept> modifier,
     List<CodeableConcept> programCode,
     Date servicedDate,
+    @JsonKey(name: '_servicedDate') Element servicedDateElement,
     Period servicedPeriod,
     CodeableConcept locationCodeableConcept,
     Address locationAddress,
@@ -513,47 +552,47 @@ abstract class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
     Quantity quantity,
     Money unitPrice,
     Decimal factor,
+    @JsonKey(name: '_factor') Element factorElement,
     Money net,
     List<Reference> udi,
     CodeableConcept bodySite,
     List<CodeableConcept> subSite,
     List<Reference> encounter,
-    List<PositiveInt> noteNumber,
+    List<Decimal> noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
     List<ExplanationOfBenefitAdjudication> adjudication,
     List<ExplanationOfBenefitDetail> detail,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    @JsonKey(name: '_careTeamLinkId') Element careTeamLinkIdElement,
-    @JsonKey(name: '_diagnosisLinkId') Element diagnosisLinkIdElement,
-    @JsonKey(name: '_procedureLinkId') Element procedureLinkIdElement,
-    @JsonKey(name: '_informationLinkId') Element informationLinkIdElement,
-    @JsonKey(name: '_servicedDate') Element servicedDateElement,
-    @JsonKey(name: '_factor') Element factorElement,
-    @JsonKey(name: '_noteNumber') Element noteNumberElement,
   }) = _ExplanationOfBenefitItem;
+
   factory ExplanationOfBenefitItem.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitItemFromJson(json);
 }
 
 @freezed
 abstract class ExplanationOfBenefitAdjudication
-    with _$ExplanationOfBenefitAdjudication {
+    implements _$ExplanationOfBenefitAdjudication {
+  ExplanationOfBenefitAdjudication._();
   factory ExplanationOfBenefitAdjudication({
-    @JsonKey(required: true) CodeableConcept category,
+    @required CodeableConcept category,
     CodeableConcept reason,
     Money amount,
     Decimal value,
     @JsonKey(name: '_value') Element valueElement,
   }) = _ExplanationOfBenefitAdjudication;
+
   factory ExplanationOfBenefitAdjudication.fromJson(
           Map<String, dynamic> json) =>
       _$ExplanationOfBenefitAdjudicationFromJson(json);
 }
 
 @freezed
-abstract class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
+abstract class ExplanationOfBenefitDetail
+    implements _$ExplanationOfBenefitDetail {
+  ExplanationOfBenefitDetail._();
   factory ExplanationOfBenefitDetail({
-    PositiveInt sequence,
-    @JsonKey(required: true) CodeableConcept type,
+    Decimal sequence,
+    @JsonKey(name: '_sequence') Element sequenceElement,
+    @required CodeableConcept type,
     CodeableConcept revenue,
     CodeableConcept category,
     CodeableConcept service,
@@ -562,25 +601,27 @@ abstract class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
     Quantity quantity,
     Money unitPrice,
     Decimal factor,
+    @JsonKey(name: '_factor') Element factorElement,
     Money net,
     List<Reference> udi,
-    List<PositiveInt> noteNumber,
+    List<Decimal> noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
     List<ExplanationOfBenefitAdjudication> adjudication,
     List<ExplanationOfBenefitSubDetail> subDetail,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    @JsonKey(name: '_factor') Element factorElement,
-    @JsonKey(name: '_noteNumber') Element noteNumberElement,
   }) = _ExplanationOfBenefitDetail;
+
   factory ExplanationOfBenefitDetail.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitDetailFromJson(json);
 }
 
 @freezed
 abstract class ExplanationOfBenefitSubDetail
-    with _$ExplanationOfBenefitSubDetail {
+    implements _$ExplanationOfBenefitSubDetail {
+  ExplanationOfBenefitSubDetail._();
   factory ExplanationOfBenefitSubDetail({
-    PositiveInt sequence,
-    @JsonKey(required: true) CodeableConcept type,
+    Decimal sequence,
+    @JsonKey(name: '_sequence') Element sequenceElement,
+    @required CodeableConcept type,
     CodeableConcept revenue,
     CodeableConcept category,
     CodeableConcept service,
@@ -589,100 +630,113 @@ abstract class ExplanationOfBenefitSubDetail
     Quantity quantity,
     Money unitPrice,
     Decimal factor,
+    @JsonKey(name: '_factor') Element factorElement,
     Money net,
     List<Reference> udi,
-    List<PositiveInt> noteNumber,
+    List<Decimal> noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
     List<ExplanationOfBenefitAdjudication> adjudication,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    @JsonKey(name: '_factor') Element factorElement,
-    @JsonKey(name: '_noteNumber') Element noteNumberElement,
   }) = _ExplanationOfBenefitSubDetail;
+
   factory ExplanationOfBenefitSubDetail.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitSubDetailFromJson(json);
 }
 
 @freezed
-abstract class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
+abstract class ExplanationOfBenefitAddItem
+    implements _$ExplanationOfBenefitAddItem {
+  ExplanationOfBenefitAddItem._();
   factory ExplanationOfBenefitAddItem({
-    List<PositiveInt> sequenceLinkId,
+    List<Id> sequenceLinkId,
+    @JsonKey(name: '_sequenceLinkId') List<Element> sequenceLinkIdElement,
     CodeableConcept revenue,
     CodeableConcept category,
     CodeableConcept service,
     List<CodeableConcept> modifier,
     Money fee,
-    List<PositiveInt> noteNumber,
+    List<Decimal> noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
     List<ExplanationOfBenefitAdjudication> adjudication,
     List<ExplanationOfBenefitDetail1> detail,
-    @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement,
-    @JsonKey(name: '_noteNumber') Element noteNumberElement,
   }) = _ExplanationOfBenefitAddItem;
+
   factory ExplanationOfBenefitAddItem.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitAddItemFromJson(json);
 }
 
 @freezed
-abstract class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
+abstract class ExplanationOfBenefitDetail1
+    implements _$ExplanationOfBenefitDetail1 {
+  ExplanationOfBenefitDetail1._();
   factory ExplanationOfBenefitDetail1({
     CodeableConcept revenue,
     CodeableConcept category,
     CodeableConcept service,
     List<CodeableConcept> modifier,
     Money fee,
-    List<PositiveInt> noteNumber,
+    List<Decimal> noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
     List<ExplanationOfBenefitAdjudication> adjudication,
-    @JsonKey(name: '_noteNumber') Element noteNumberElement,
   }) = _ExplanationOfBenefitDetail1;
+
   factory ExplanationOfBenefitDetail1.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitDetail1FromJson(json);
 }
 
 @freezed
-abstract class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
+abstract class ExplanationOfBenefitPayment
+    implements _$ExplanationOfBenefitPayment {
+  ExplanationOfBenefitPayment._();
   factory ExplanationOfBenefitPayment({
     CodeableConcept type,
     Money adjustment,
     CodeableConcept adjustmentReason,
     Date date,
+    @JsonKey(name: '_date') Element dateElement,
     Money amount,
     Identifier identifier,
-    @JsonKey(name: '_date') Element dateElement,
   }) = _ExplanationOfBenefitPayment;
+
   factory ExplanationOfBenefitPayment.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitPaymentFromJson(json);
 }
 
 @freezed
 abstract class ExplanationOfBenefitProcessNote
-    with _$ExplanationOfBenefitProcessNote {
+    implements _$ExplanationOfBenefitProcessNote {
+  ExplanationOfBenefitProcessNote._();
   factory ExplanationOfBenefitProcessNote({
-    PositiveInt number,
+    Decimal number,
+    @JsonKey(name: '_number') Element numberElement,
     CodeableConcept type,
     String text,
-    CodeableConcept language,
-    @JsonKey(name: '_number') Element numberElement,
     @JsonKey(name: '_text') Element textElement,
+    CodeableConcept language,
   }) = _ExplanationOfBenefitProcessNote;
+
   factory ExplanationOfBenefitProcessNote.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitProcessNoteFromJson(json);
 }
 
 @freezed
 abstract class ExplanationOfBenefitBenefitBalance
-    with _$ExplanationOfBenefitBenefitBalance {
+    implements _$ExplanationOfBenefitBenefitBalance {
+  ExplanationOfBenefitBenefitBalance._();
   factory ExplanationOfBenefitBenefitBalance({
-    @JsonKey(required: true) CodeableConcept category,
+    @required CodeableConcept category,
     CodeableConcept subCategory,
     Boolean excluded,
+    @JsonKey(name: '_excluded') Element excludedElement,
     String name,
+    @JsonKey(name: '_name') Element nameElement,
     String description,
+    @JsonKey(name: '_description') Element descriptionElement,
     CodeableConcept network,
     CodeableConcept unit,
     CodeableConcept term,
     List<ExplanationOfBenefitFinancial> financial,
-    @JsonKey(name: '_excluded') Element excludedElement,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_description') Element descriptionElement,
   }) = _ExplanationOfBenefitBenefitBalance;
+
   factory ExplanationOfBenefitBenefitBalance.fromJson(
           Map<String, dynamic> json) =>
       _$ExplanationOfBenefitBenefitBalanceFromJson(json);
@@ -690,18 +744,20 @@ abstract class ExplanationOfBenefitBenefitBalance
 
 @freezed
 abstract class ExplanationOfBenefitFinancial
-    with _$ExplanationOfBenefitFinancial {
+    implements _$ExplanationOfBenefitFinancial {
+  ExplanationOfBenefitFinancial._();
   factory ExplanationOfBenefitFinancial({
-    @JsonKey(required: true) CodeableConcept type,
-    UnsignedInt allowedUnsignedInt,
-    String allowedString,
-    Money allowedMoney,
-    UnsignedInt usedUnsignedInt,
-    Money usedMoney,
+    @required CodeableConcept type,
+    Decimal allowedUnsignedInt,
     @JsonKey(name: '_allowedUnsignedInt') Element allowedUnsignedIntElement,
+    String allowedString,
     @JsonKey(name: '_allowedString') Element allowedStringElement,
+    Money allowedMoney,
+    Decimal usedUnsignedInt,
     @JsonKey(name: '_usedUnsignedInt') Element usedUnsignedIntElement,
+    Money usedMoney,
   }) = _ExplanationOfBenefitFinancial;
+
   factory ExplanationOfBenefitFinancial.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitFinancialFromJson(json);
 }

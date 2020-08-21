@@ -1,8 +1,9 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
 import '../../../../stu3.dart';
-import 'workflow.enums.dart';
 
+part 'workflow.enums.dart';
 part 'workflow.freezed.dart';
 part 'workflow.g.dart';
 
@@ -10,63 +11,63 @@ part 'workflow.g.dart';
 abstract class Appointment with Resource implements _$Appointment {
   Appointment._();
   factory Appointment({
-    @JsonKey(required: true, defaultValue: 'Appointment')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'Appointment') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
-        AppointmentStatus status,
+    AppointmentStatus status,
+    @JsonKey(name: '_status') Element statusElement,
     CodeableConcept serviceCategory,
     List<CodeableConcept> serviceType,
     List<CodeableConcept> specialty,
     CodeableConcept appointmentType,
     List<CodeableConcept> reason,
     List<Reference> indication,
-    UnsignedInt priority,
+    Decimal priority,
+    @JsonKey(name: '_priority') Element priorityElement,
     String description,
+    @JsonKey(name: '_description') Element descriptionElement,
     List<Reference> supportingInformation,
     String start,
-    String end,
-    PositiveInt minutesDuration,
-    List<Reference> slot,
-    FhirDateTime created,
-    String comment,
-    List<Reference> incomingReferral,
-    @JsonKey(required: true) List<AppointmentParticipant> participant,
-    List<Period> requestedPeriod,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_priority') Element priorityElement,
-    @JsonKey(name: '_description') Element descriptionElement,
     @JsonKey(name: '_start') Element startElement,
+    String end,
     @JsonKey(name: '_end') Element endElement,
+    Decimal minutesDuration,
     @JsonKey(name: '_minutesDuration') Element minutesDurationElement,
+    List<Reference> slot,
+    String created,
     @JsonKey(name: '_created') Element createdElement,
+    String comment,
     @JsonKey(name: '_comment') Element commentElement,
+    List<Reference> incomingReferral,
+    @required List<AppointmentParticipant> participant,
+    List<Period> requestedPeriod,
   }) = _Appointment;
+
   factory Appointment.fromJson(Map<String, dynamic> json) =>
       _$AppointmentFromJson(json);
 }
 
 @freezed
-abstract class AppointmentParticipant with _$AppointmentParticipant {
+abstract class AppointmentParticipant implements _$AppointmentParticipant {
+  AppointmentParticipant._();
   factory AppointmentParticipant({
     List<CodeableConcept> type,
     Reference actor,
-    @JsonKey(name: 'required', unknownEnumValue: ParticipantRequired.unknown)
-        ParticipantRequired required_,
-    @JsonKey(unknownEnumValue: ParticipantStatus.unknown)
-        ParticipantStatus status,
+    @JsonKey(name: 'required') AppointmentParticipantRequired required_,
     @JsonKey(name: '_required') Element requiredElement,
+    AppointmentParticipantStatus status,
     @JsonKey(name: '_status') Element statusElement,
   }) = _AppointmentParticipant;
+
   factory AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
       _$AppointmentParticipantFromJson(json);
 }
@@ -77,30 +78,31 @@ abstract class AppointmentResponse
     implements _$AppointmentResponse {
   AppointmentResponse._();
   factory AppointmentResponse({
-    @JsonKey(required: true, defaultValue: 'AppointmentResponse')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'AppointmentResponse') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
-    @JsonKey(required: true) Reference appointment,
+    @required Reference appointment,
     String start,
+    @JsonKey(name: '_start') Element startElement,
     String end,
+    @JsonKey(name: '_end') Element endElement,
     List<CodeableConcept> participantType,
     Reference actor,
-    Code participantStatus,
-    String comment,
-    @JsonKey(name: '_start') Element startElement,
-    @JsonKey(name: '_end') Element endElement,
+    String participantStatus,
     @JsonKey(name: '_participantStatus') Element participantStatusElement,
+    String comment,
     @JsonKey(name: '_comment') Element commentElement,
   }) = _AppointmentResponse;
+
   factory AppointmentResponse.fromJson(Map<String, dynamic> json) =>
       _$AppointmentResponseFromJson(json);
 }
@@ -109,51 +111,53 @@ abstract class AppointmentResponse
 abstract class ProcessRequest with Resource implements _$ProcessRequest {
   ProcessRequest._();
   factory ProcessRequest({
-    @JsonKey(required: true, defaultValue: 'ProcessRequest')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'ProcessRequest') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
-    Code status,
-    @JsonKey(unknownEnumValue: ProcessRequestAction.unknown)
-        ProcessRequestAction action,
+    String status,
+    @JsonKey(name: '_status') Element statusElement,
+    ProcessRequestAction action,
+    @JsonKey(name: '_action') Element actionElement,
     Reference target,
-    FhirDateTime created,
+    String created,
+    @JsonKey(name: '_created') Element createdElement,
     Reference provider,
     Reference organization,
     Reference request,
     Reference response,
     Boolean nullify,
+    @JsonKey(name: '_nullify') Element nullifyElement,
     String reference,
+    @JsonKey(name: '_reference') Element referenceElement,
     List<ProcessRequestItem> item,
     List<String> include,
+    @JsonKey(name: '_include') List<Element> includeElement,
     List<String> exclude,
+    @JsonKey(name: '_exclude') List<Element> excludeElement,
     Period period,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_action') Element actionElement,
-    @JsonKey(name: '_created') Element createdElement,
-    @JsonKey(name: '_nullify') Element nullifyElement,
-    @JsonKey(name: '_reference') Element referenceElement,
-    @JsonKey(name: '_include') Element includeElement,
-    @JsonKey(name: '_exclude') Element excludeElement,
   }) = _ProcessRequest;
+
   factory ProcessRequest.fromJson(Map<String, dynamic> json) =>
       _$ProcessRequestFromJson(json);
 }
 
 @freezed
-abstract class ProcessRequestItem with _$ProcessRequestItem {
+abstract class ProcessRequestItem implements _$ProcessRequestItem {
+  ProcessRequestItem._();
   factory ProcessRequestItem({
-    Integer sequenceLinkId,
+    Id sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement,
   }) = _ProcessRequestItem;
+
   factory ProcessRequestItem.fromJson(Map<String, dynamic> json) =>
       _$ProcessRequestItemFromJson(json);
 }
@@ -162,75 +166,198 @@ abstract class ProcessRequestItem with _$ProcessRequestItem {
 abstract class ProcessResponse with Resource implements _$ProcessResponse {
   ProcessResponse._();
   factory ProcessResponse({
-    @JsonKey(required: true, defaultValue: 'ProcessResponse')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'ProcessResponse') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
-    Code status,
-    FhirDateTime created,
+    String status,
+    @JsonKey(name: '_status') Element statusElement,
+    String created,
+    @JsonKey(name: '_created') Element createdElement,
     Reference organization,
     Reference request,
     CodeableConcept outcome,
     String disposition,
+    @JsonKey(name: '_disposition') Element dispositionElement,
     Reference requestProvider,
     Reference requestOrganization,
     CodeableConcept form,
     List<ProcessResponseProcessNote> processNote,
     List<CodeableConcept> error,
     List<Reference> communicationRequest,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_created') Element createdElement,
-    @JsonKey(name: '_disposition') Element dispositionElement,
   }) = _ProcessResponse;
+
   factory ProcessResponse.fromJson(Map<String, dynamic> json) =>
       _$ProcessResponseFromJson(json);
 }
 
 @freezed
-abstract class ProcessResponseProcessNote with _$ProcessResponseProcessNote {
+abstract class ProcessResponseProcessNote
+    implements _$ProcessResponseProcessNote {
+  ProcessResponseProcessNote._();
   factory ProcessResponseProcessNote({
     CodeableConcept type,
     String text,
     @JsonKey(name: '_text') Element textElement,
   }) = _ProcessResponseProcessNote;
+
   factory ProcessResponseProcessNote.fromJson(Map<String, dynamic> json) =>
       _$ProcessResponseProcessNoteFromJson(json);
+}
+
+@freezed
+abstract class RequestGroup with Resource implements _$RequestGroup {
+  RequestGroup._();
+  factory RequestGroup({
+    @JsonKey(defaultValue: 'RequestGroup') @required String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    Code language,
+    @JsonKey(name: '_language') Element languageElement,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
+    List<Identifier> identifier,
+    List<Reference> definition,
+    List<Reference> basedOn,
+    List<Reference> replaces,
+    Identifier groupIdentifier,
+    String status,
+    @JsonKey(name: '_status') Element statusElement,
+    String intent,
+    @JsonKey(name: '_intent') Element intentElement,
+    String priority,
+    @JsonKey(name: '_priority') Element priorityElement,
+    Reference subject,
+    Reference context,
+    String authoredOn,
+    @JsonKey(name: '_authoredOn') Element authoredOnElement,
+    Reference author,
+    CodeableConcept reasonCodeableConcept,
+    Reference reasonReference,
+    List<Annotation> note,
+    List<RequestGroupAction> action,
+  }) = _RequestGroup;
+
+  factory RequestGroup.fromJson(Map<String, dynamic> json) =>
+      _$RequestGroupFromJson(json);
+}
+
+@freezed
+abstract class RequestGroupAction implements _$RequestGroupAction {
+  RequestGroupAction._();
+  factory RequestGroupAction({
+    String label,
+    @JsonKey(name: '_label') Element labelElement,
+    String title,
+    @JsonKey(name: '_title') Element titleElement,
+    String description,
+    @JsonKey(name: '_description') Element descriptionElement,
+    String textEquivalent,
+    @JsonKey(name: '_textEquivalent') Element textEquivalentElement,
+    List<CodeableConcept> code,
+    List<RelatedArtifact> documentation,
+    List<RequestGroupCondition> condition,
+    List<RequestGroupRelatedAction> relatedAction,
+    FhirDateTime timingDateTime,
+    @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
+    Period timingPeriod,
+    Duration timingDuration,
+    Range timingRange,
+    Timing timingTiming,
+    List<Reference> participant,
+    Coding type,
+    String groupingBehavior,
+    @JsonKey(name: '_groupingBehavior') Element groupingBehaviorElement,
+    String selectionBehavior,
+    @JsonKey(name: '_selectionBehavior') Element selectionBehaviorElement,
+    String requiredBehavior,
+    @JsonKey(name: '_requiredBehavior') Element requiredBehaviorElement,
+    String precheckBehavior,
+    @JsonKey(name: '_precheckBehavior') Element precheckBehaviorElement,
+    String cardinalityBehavior,
+    @JsonKey(name: '_cardinalityBehavior') Element cardinalityBehaviorElement,
+    Reference resource,
+    List<RequestGroupAction> action,
+  }) = _RequestGroupAction;
+
+  factory RequestGroupAction.fromJson(Map<String, dynamic> json) =>
+      _$RequestGroupActionFromJson(json);
+}
+
+@freezed
+abstract class RequestGroupCondition implements _$RequestGroupCondition {
+  RequestGroupCondition._();
+  factory RequestGroupCondition({
+    String kind,
+    @JsonKey(name: '_kind') Element kindElement,
+    String description,
+    @JsonKey(name: '_description') Element descriptionElement,
+    String language,
+    @JsonKey(name: '_language') Element languageElement,
+    String expression,
+    @JsonKey(name: '_expression') Element expressionElement,
+  }) = _RequestGroupCondition;
+
+  factory RequestGroupCondition.fromJson(Map<String, dynamic> json) =>
+      _$RequestGroupConditionFromJson(json);
+}
+
+@freezed
+abstract class RequestGroupRelatedAction
+    implements _$RequestGroupRelatedAction {
+  RequestGroupRelatedAction._();
+  factory RequestGroupRelatedAction({
+    Id actionId,
+    @JsonKey(name: '_actionId') Element actionIdElement,
+    String relationship,
+    @JsonKey(name: '_relationship') Element relationshipElement,
+    Duration offsetDuration,
+    Range offsetRange,
+  }) = _RequestGroupRelatedAction;
+
+  factory RequestGroupRelatedAction.fromJson(Map<String, dynamic> json) =>
+      _$RequestGroupRelatedActionFromJson(json);
 }
 
 @freezed
 abstract class Schedule with Resource implements _$Schedule {
   Schedule._();
   factory Schedule({
-    @JsonKey(required: true, defaultValue: 'Schedule')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'Schedule') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Boolean active,
+    @JsonKey(name: '_active') Element activeElement,
     CodeableConcept serviceCategory,
     List<CodeableConcept> serviceType,
     List<CodeableConcept> specialty,
-    @JsonKey(required: true) List<Reference> actor,
+    @required List<Reference> actor,
     Period planningHorizon,
     String comment,
-    @JsonKey(name: '_active') Element activeElement,
     @JsonKey(name: '_comment') Element commentElement,
   }) = _Schedule;
+
   factory Schedule.fromJson(Map<String, dynamic> json) =>
       _$ScheduleFromJson(json);
 }
@@ -239,13 +366,13 @@ abstract class Schedule with Resource implements _$Schedule {
 abstract class Slot with Resource implements _$Slot {
   Slot._();
   factory Slot({
-    @JsonKey(required: true, defaultValue: 'Slot')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'Slot') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -255,18 +382,19 @@ abstract class Slot with Resource implements _$Slot {
     List<CodeableConcept> serviceType,
     List<CodeableConcept> specialty,
     CodeableConcept appointmentType,
-    @JsonKey(required: true) Reference schedule,
-    @JsonKey(unknownEnumValue: SlotStatus.unknown) SlotStatus status,
-    String start,
-    String end,
-    Boolean overbooked,
-    String comment,
+    @required Reference schedule,
+    SlotStatus status,
     @JsonKey(name: '_status') Element statusElement,
+    String start,
     @JsonKey(name: '_start') Element startElement,
+    String end,
     @JsonKey(name: '_end') Element endElement,
+    Boolean overbooked,
     @JsonKey(name: '_overbooked') Element overbookedElement,
+    String comment,
     @JsonKey(name: '_comment') Element commentElement,
   }) = _Slot;
+
   factory Slot.fromJson(Map<String, dynamic> json) => _$SlotFromJson(json);
 }
 
@@ -274,36 +402,43 @@ abstract class Slot with Resource implements _$Slot {
 abstract class Task with Resource implements _$Task {
   Task._();
   factory Task({
-    @JsonKey(required: true, defaultValue: 'Task')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'Task') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     String definitionUri,
+    @JsonKey(name: '_definitionUri') Element definitionUriElement,
     Reference definitionReference,
     List<Reference> basedOn,
     Identifier groupIdentifier,
     List<Reference> partOf,
-    @JsonKey(unknownEnumValue: TaskStatus.unknown) TaskStatus status,
+    TaskStatus status,
+    @JsonKey(name: '_status') Element statusElement,
     CodeableConcept statusReason,
     CodeableConcept businessStatus,
-    Code intent,
-    Code priority,
+    String intent,
+    @JsonKey(name: '_intent') Element intentElement,
+    String priority,
+    @JsonKey(name: '_priority') Element priorityElement,
     CodeableConcept code,
     String description,
+    @JsonKey(name: '_description') Element descriptionElement,
     Reference focus,
     @JsonKey(name: 'for') Reference for_,
     Reference context,
     Period executionPeriod,
-    FhirDateTime authoredOn,
-    FhirDateTime lastModified,
+    String authoredOn,
+    @JsonKey(name: '_authoredOn') Element authoredOnElement,
+    String lastModified,
+    @JsonKey(name: '_lastModified') Element lastModifiedElement,
     TaskRequester requester,
     List<CodeableConcept> performerType,
     Reference owner,
@@ -313,60 +448,76 @@ abstract class Task with Resource implements _$Task {
     TaskRestriction restriction,
     List<TaskInput> input,
     List<TaskOutput> output,
-    @JsonKey(name: '_definitionUri') Element definitionUriElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_intent') Element intentElement,
-    @JsonKey(name: '_priority') Element priorityElement,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @JsonKey(name: '_authoredOn') Element authoredOnElement,
-    @JsonKey(name: '_lastModified') Element lastModifiedElement,
   }) = _Task;
+
   factory Task.fromJson(Map<String, dynamic> json) => _$TaskFromJson(json);
 }
 
 @freezed
-abstract class TaskRequester with _$TaskRequester {
+abstract class TaskRequester implements _$TaskRequester {
+  TaskRequester._();
   factory TaskRequester({
-    @JsonKey(required: true) Reference agent,
+    @required Reference agent,
     Reference onBehalfOf,
   }) = _TaskRequester;
+
   factory TaskRequester.fromJson(Map<String, dynamic> json) =>
       _$TaskRequesterFromJson(json);
 }
 
 @freezed
-abstract class TaskRestriction with _$TaskRestriction {
+abstract class TaskRestriction implements _$TaskRestriction {
+  TaskRestriction._();
   factory TaskRestriction({
-    PositiveInt repetitions,
+    Decimal repetitions,
+    @JsonKey(name: '_repetitions') Element repetitionsElement,
     Period period,
     List<Reference> recipient,
-    @JsonKey(name: '_repetitions') Element repetitionsElement,
   }) = _TaskRestriction;
+
   factory TaskRestriction.fromJson(Map<String, dynamic> json) =>
       _$TaskRestrictionFromJson(json);
 }
 
 @freezed
-abstract class TaskInput with _$TaskInput {
+abstract class TaskInput implements _$TaskInput {
+  TaskInput._();
   factory TaskInput({
-    @JsonKey(required: true) CodeableConcept type,
+    @required CodeableConcept type,
     Boolean valueBoolean,
-    Integer valueInteger,
+    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+    Decimal valueInteger,
+    @JsonKey(name: '_valueInteger') Element valueIntegerElement,
     Decimal valueDecimal,
+    @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
     String valueBase64Binary,
+    @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
     String valueInstant,
+    @JsonKey(name: '_valueInstant') Element valueInstantElement,
     String valueString,
+    @JsonKey(name: '_valueString') Element valueStringElement,
     String valueUri,
+    @JsonKey(name: '_valueUri') Element valueUriElement,
     Date valueDate,
+    @JsonKey(name: '_valueDate') Element valueDateElement,
     FhirDateTime valueDateTime,
+    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
     Time valueTime,
+    @JsonKey(name: '_valueTime') Element valueTimeElement,
     Code valueCode,
-    Oid valueOid,
-    Uuid valueUuid,
+    @JsonKey(name: '_valueCode') Element valueCodeElement,
+    Id valueOid,
+    @JsonKey(name: '_valueOid') Element valueOidElement,
+    Id valueUuid,
+    @JsonKey(name: '_valueUuid') Element valueUuidElement,
     Id valueId,
-    UnsignedInt valueUnsignedInt,
-    PositiveInt valuePositiveInt,
+    @JsonKey(name: '_valueId') Element valueIdElement,
+    Decimal valueUnsignedInt,
+    @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
+    Decimal valuePositiveInt,
+    @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
     String valueMarkdown,
+    @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
     Element valueElement,
     FhirExtension valueExtension,
     BackboneElement valueBackboneElement,
@@ -403,49 +554,51 @@ abstract class TaskInput with _$TaskInput {
     DataRequirement valueDataRequirement,
     ParameterDefinition valueParameterDefinition,
     TriggerDefinition valueTriggerDefinition,
-    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-    @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-    @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-    @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
-    @JsonKey(name: '_valueInstant') Element valueInstantElement,
-    @JsonKey(name: '_valueString') Element valueStringElement,
-    @JsonKey(name: '_valueUri') Element valueUriElement,
-    @JsonKey(name: '_valueDate') Element valueDateElement,
-    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-    @JsonKey(name: '_valueTime') Element valueTimeElement,
-    @JsonKey(name: '_valueCode') Element valueCodeElement,
-    @JsonKey(name: '_valueOid') Element valueOidElement,
-    @JsonKey(name: '_valueUuid') Element valueUuidElement,
-    @JsonKey(name: '_valueId') Element valueIdElement,
-    @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
-    @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
-    @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
   }) = _TaskInput;
+
   factory TaskInput.fromJson(Map<String, dynamic> json) =>
       _$TaskInputFromJson(json);
 }
 
 @freezed
-abstract class TaskOutput with _$TaskOutput {
+abstract class TaskOutput implements _$TaskOutput {
+  TaskOutput._();
   factory TaskOutput({
-    @JsonKey(required: true) CodeableConcept type,
+    @required CodeableConcept type,
     Boolean valueBoolean,
-    Integer valueInteger,
+    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+    Decimal valueInteger,
+    @JsonKey(name: '_valueInteger') Element valueIntegerElement,
     Decimal valueDecimal,
+    @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
     String valueBase64Binary,
+    @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
     String valueInstant,
+    @JsonKey(name: '_valueInstant') Element valueInstantElement,
     String valueString,
+    @JsonKey(name: '_valueString') Element valueStringElement,
     String valueUri,
+    @JsonKey(name: '_valueUri') Element valueUriElement,
     Date valueDate,
+    @JsonKey(name: '_valueDate') Element valueDateElement,
     FhirDateTime valueDateTime,
+    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
     Time valueTime,
+    @JsonKey(name: '_valueTime') Element valueTimeElement,
     Code valueCode,
-    Oid valueOid,
-    Uuid valueUuid,
+    @JsonKey(name: '_valueCode') Element valueCodeElement,
+    Id valueOid,
+    @JsonKey(name: '_valueOid') Element valueOidElement,
+    Id valueUuid,
+    @JsonKey(name: '_valueUuid') Element valueUuidElement,
     Id valueId,
-    UnsignedInt valueUnsignedInt,
-    PositiveInt valuePositiveInt,
+    @JsonKey(name: '_valueId') Element valueIdElement,
+    Decimal valueUnsignedInt,
+    @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
+    Decimal valuePositiveInt,
+    @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
     String valueMarkdown,
+    @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
     Element valueElement,
     FhirExtension valueExtension,
     BackboneElement valueBackboneElement,
@@ -482,24 +635,8 @@ abstract class TaskOutput with _$TaskOutput {
     DataRequirement valueDataRequirement,
     ParameterDefinition valueParameterDefinition,
     TriggerDefinition valueTriggerDefinition,
-    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-    @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-    @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-    @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
-    @JsonKey(name: '_valueInstant') Element valueInstantElement,
-    @JsonKey(name: '_valueString') Element valueStringElement,
-    @JsonKey(name: '_valueUri') Element valueUriElement,
-    @JsonKey(name: '_valueDate') Element valueDateElement,
-    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-    @JsonKey(name: '_valueTime') Element valueTimeElement,
-    @JsonKey(name: '_valueCode') Element valueCodeElement,
-    @JsonKey(name: '_valueOid') Element valueOidElement,
-    @JsonKey(name: '_valueUuid') Element valueUuidElement,
-    @JsonKey(name: '_valueId') Element valueIdElement,
-    @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
-    @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
-    @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
   }) = _TaskOutput;
+
   factory TaskOutput.fromJson(Map<String, dynamic> json) =>
       _$TaskOutputFromJson(json);
 }

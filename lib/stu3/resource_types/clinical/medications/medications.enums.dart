@@ -1,4 +1,15 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'medications.dart';
+
+enum MedicationStatus {
+  @JsonValue('active')
+  active,
+  @JsonValue('inactive')
+  inactive,
+  @JsonValue('entered-in-error')
+  entered_in_error,
+  @JsonValue('unknown')
+  unknown,
+}
 
 enum MedicationAdministrationStatus {
   @JsonValue('in-progress')
@@ -77,20 +88,7 @@ enum MedicationRequestPriority {
   unknown,
 }
 
-enum MedicationStatementTaken {
-  @JsonValue('y')
-  y,
-  @JsonValue('n')
-  n,
-  @JsonValue('unk')
-  unk,
-  @JsonValue('na')
-  na,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum StatementStatus {
+enum MedicationStatementStatus {
   @JsonValue('active')
   active,
   @JsonValue('completed')
@@ -103,6 +101,19 @@ enum StatementStatus {
   stopped,
   @JsonValue('on-hold')
   on_hold,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum MedicationStatementTaken {
+  @JsonValue('y')
+  y,
+  @JsonValue('n')
+  n,
+  @JsonValue('unk')
+  unk,
+  @JsonValue('na')
+  na,
   @JsonValue('unknown')
   unknown,
 }

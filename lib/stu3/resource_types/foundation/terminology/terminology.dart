@@ -1,9 +1,9 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
 import '../../../../stu3.dart';
-import '../../resource_types.enums.dart';
-import 'terminology.enums.dart';
 
+part 'terminology.enums.dart';
 part 'terminology.freezed.dart';
 part 'terminology.g.dart';
 
@@ -11,146 +11,155 @@ part 'terminology.g.dart';
 abstract class CodeSystem with Resource implements _$CodeSystem {
   CodeSystem._();
   factory CodeSystem({
-    @JsonKey(required: true, defaultValue: 'CodeSystem')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'CodeSystem') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     String url,
+    @JsonKey(name: '_url') Element urlElement,
     Identifier identifier,
     String version,
+    @JsonKey(name: '_version') Element versionElement,
     String name,
+    @JsonKey(name: '_name') Element nameElement,
     String title,
-    @JsonKey(unknownEnumValue: Status.unknown) Status status,
+    @JsonKey(name: '_title') Element titleElement,
+    CodeSystemStatus status,
+    @JsonKey(name: '_status') Element statusElement,
     Boolean experimental,
-    FhirDateTime date,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    Date date,
+    @JsonKey(name: '_date') Element dateElement,
     String publisher,
+    @JsonKey(name: '_publisher') Element publisherElement,
     List<ContactDetail> contact,
     String description,
+    @JsonKey(name: '_description') Element descriptionElement,
     List<UsageContext> useContext,
     List<CodeableConcept> jurisdiction,
     String purpose,
+    @JsonKey(name: '_purpose') Element purposeElement,
     String copyright,
+    @JsonKey(name: '_copyright') Element copyrightElement,
     Boolean caseSensitive,
+    @JsonKey(name: '_caseSensitive') Element caseSensitiveElement,
     String valueSet,
-    @JsonKey(unknownEnumValue: CodeSystemHierarchyMeaning.unknown)
-        CodeSystemHierarchyMeaning hierarchyMeaning,
+    @JsonKey(name: '_valueSet') Element valueSetElement,
+    CodeSystemHierarchyMeaning hierarchyMeaning,
+    @JsonKey(name: '_hierarchyMeaning') Element hierarchyMeaningElement,
     Boolean compositional,
+    @JsonKey(name: '_compositional') Element compositionalElement,
     Boolean versionNeeded,
-    @JsonKey(unknownEnumValue: CodeSystemContent.unknown)
-        CodeSystemContent content,
-    UnsignedInt count,
+    @JsonKey(name: '_versionNeeded') Element versionNeededElement,
+    CodeSystemContent content,
+    @JsonKey(name: '_content') Element contentElement,
+    Decimal count,
+    @JsonKey(name: '_count') Element countElement,
     List<CodeSystemFilter> filter,
     List<CodeSystemProperty> property,
     List<CodeSystemConcept> concept,
-    @JsonKey(name: '_url') Element urlElement,
-    @JsonKey(name: '_version') Element versionElement,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_title') Element titleElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_experimental') Element experimentalElement,
-    @JsonKey(name: '_date') Element dateElement,
-    @JsonKey(name: '_publisher') Element publisherElement,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @JsonKey(name: '_purpose') Element purposeElement,
-    @JsonKey(name: '_copyright') Element copyrightElement,
-    @JsonKey(name: '_caseSensitive') Element caseSensitiveElement,
-    @JsonKey(name: '_valueSet') Element valueSetElement,
-    @JsonKey(name: '_hierarchyMeaning') Element hierarchyMeaningElement,
-    @JsonKey(name: '_compositional') Element compositionalElement,
-    @JsonKey(name: '_versionNeeded') Element versionNeededElement,
-    @JsonKey(name: '_content') Element contentElement,
-    @JsonKey(name: '_count') Element countElement,
   }) = _CodeSystem;
+
   factory CodeSystem.fromJson(Map<String, dynamic> json) =>
       _$CodeSystemFromJson(json);
 }
 
 @freezed
-abstract class CodeSystemFilter with _$CodeSystemFilter {
+abstract class CodeSystemFilter implements _$CodeSystemFilter {
+  CodeSystemFilter._();
   factory CodeSystemFilter({
     Code code,
-    String description,
-    @JsonKey(name: 'operator') List<Code> operator_,
-    String value,
     @JsonKey(name: '_code') Element codeElement,
+    String description,
     @JsonKey(name: '_description') Element descriptionElement,
-    @JsonKey(name: '_operator') Element operatorElement,
+    List<String> operator,
+    @JsonKey(name: '_operator') List<Element> operatorElement,
+    String value,
     @JsonKey(name: '_value') Element valueElement,
   }) = _CodeSystemFilter;
+
   factory CodeSystemFilter.fromJson(Map<String, dynamic> json) =>
       _$CodeSystemFilterFromJson(json);
 }
 
 @freezed
-abstract class CodeSystemProperty with _$CodeSystemProperty {
+abstract class CodeSystemProperty implements _$CodeSystemProperty {
+  CodeSystemProperty._();
   factory CodeSystemProperty({
     Code code,
-    String uri,
-    String description,
-    @JsonKey(unknownEnumValue: PropertyType.unknown) PropertyType type,
     @JsonKey(name: '_code') Element codeElement,
+    String uri,
     @JsonKey(name: '_uri') Element uriElement,
+    String description,
     @JsonKey(name: '_description') Element descriptionElement,
+    CodeSystemPropertyType type,
     @JsonKey(name: '_type') Element typeElement,
   }) = _CodeSystemProperty;
+
   factory CodeSystemProperty.fromJson(Map<String, dynamic> json) =>
       _$CodeSystemPropertyFromJson(json);
 }
 
 @freezed
-abstract class CodeSystemConcept with _$CodeSystemConcept {
+abstract class CodeSystemConcept implements _$CodeSystemConcept {
+  CodeSystemConcept._();
   factory CodeSystemConcept({
     Code code,
+    @JsonKey(name: '_code') Element codeElement,
     String display,
+    @JsonKey(name: '_display') Element displayElement,
     String definition,
+    @JsonKey(name: '_definition') Element definitionElement,
     List<CodeSystemDesignation> designation,
     List<CodeSystemProperty1> property,
     List<CodeSystemConcept> concept,
-    @JsonKey(name: '_code') Element codeElement,
-    @JsonKey(name: '_display') Element displayElement,
-    @JsonKey(name: '_definition') Element definitionElement,
   }) = _CodeSystemConcept;
+
   factory CodeSystemConcept.fromJson(Map<String, dynamic> json) =>
       _$CodeSystemConceptFromJson(json);
 }
 
 @freezed
-abstract class CodeSystemDesignation with _$CodeSystemDesignation {
+abstract class CodeSystemDesignation implements _$CodeSystemDesignation {
+  CodeSystemDesignation._();
   factory CodeSystemDesignation({
-    Code language,
+    String language,
+    @JsonKey(name: '_language') Element languageElement,
     Coding use,
     String value,
-    @JsonKey(name: '_language') Element languageElement,
     @JsonKey(name: '_value') Element valueElement,
   }) = _CodeSystemDesignation;
+
   factory CodeSystemDesignation.fromJson(Map<String, dynamic> json) =>
       _$CodeSystemDesignationFromJson(json);
 }
 
 @freezed
-abstract class CodeSystemProperty1 with _$CodeSystemProperty1 {
+abstract class CodeSystemProperty1 implements _$CodeSystemProperty1 {
+  CodeSystemProperty1._();
   factory CodeSystemProperty1({
     Code code,
+    @JsonKey(name: '_code') Element codeElement,
     Code valueCode,
+    @JsonKey(name: '_valueCode') Element valueCodeElement,
     Coding valueCoding,
     String valueString,
-    Integer valueInteger,
-    Boolean valueBoolean,
-    FhirDateTime valueDateTime,
-    @JsonKey(name: '_code') Element codeElement,
-    @JsonKey(name: '_valueCode') Element valueCodeElement,
     @JsonKey(name: '_valueString') Element valueStringElement,
+    Decimal valueInteger,
     @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+    Boolean valueBoolean,
     @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+    FhirDateTime valueDateTime,
     @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
   }) = _CodeSystemProperty1;
+
   factory CodeSystemProperty1.fromJson(Map<String, dynamic> json) =>
       _$CodeSystemProperty1FromJson(json);
 }
@@ -159,133 +168,143 @@ abstract class CodeSystemProperty1 with _$CodeSystemProperty1 {
 abstract class ConceptMap with Resource implements _$ConceptMap {
   ConceptMap._();
   factory ConceptMap({
-    @JsonKey(required: true, defaultValue: 'ConceptMap')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'ConceptMap') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     String url,
+    @JsonKey(name: '_url') Element urlElement,
     Identifier identifier,
     String version,
+    @JsonKey(name: '_version') Element versionElement,
     String name,
+    @JsonKey(name: '_name') Element nameElement,
     String title,
-    @JsonKey(unknownEnumValue: Status.unknown) Status status,
+    @JsonKey(name: '_title') Element titleElement,
+    ConceptMapStatus status,
+    @JsonKey(name: '_status') Element statusElement,
     Boolean experimental,
-    FhirDateTime date,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    Date date,
+    @JsonKey(name: '_date') Element dateElement,
     String publisher,
+    @JsonKey(name: '_publisher') Element publisherElement,
     List<ContactDetail> contact,
     String description,
+    @JsonKey(name: '_description') Element descriptionElement,
     List<UsageContext> useContext,
     List<CodeableConcept> jurisdiction,
     String purpose,
+    @JsonKey(name: '_purpose') Element purposeElement,
     String copyright,
+    @JsonKey(name: '_copyright') Element copyrightElement,
     String sourceUri,
+    @JsonKey(name: '_sourceUri') Element sourceUriElement,
     Reference sourceReference,
     String targetUri,
+    @JsonKey(name: '_targetUri') Element targetUriElement,
     Reference targetReference,
     List<ConceptMapGroup> group,
-    @JsonKey(name: '_url') Element urlElement,
-    @JsonKey(name: '_version') Element versionElement,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_title') Element titleElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_experimental') Element experimentalElement,
-    @JsonKey(name: '_date') Element dateElement,
-    @JsonKey(name: '_publisher') Element publisherElement,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @JsonKey(name: '_purpose') Element purposeElement,
-    @JsonKey(name: '_copyright') Element copyrightElement,
-    @JsonKey(name: '_sourceUri') Element sourceUriElement,
-    @JsonKey(name: '_targetUri') Element targetUriElement,
   }) = _ConceptMap;
+
   factory ConceptMap.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapFromJson(json);
 }
 
 @freezed
-abstract class ConceptMapGroup with _$ConceptMapGroup {
+abstract class ConceptMapGroup implements _$ConceptMapGroup {
+  ConceptMapGroup._();
   factory ConceptMapGroup({
     String source,
-    String sourceVersion,
-    String target,
-    String targetVersion,
-    @JsonKey(required: true) List<ConceptMapElement> element,
-    ConceptMapUnmapped unmapped,
     @JsonKey(name: '_source') Element sourceElement,
+    String sourceVersion,
     @JsonKey(name: '_sourceVersion') Element sourceVersionElement,
+    String target,
     @JsonKey(name: '_target') Element targetElement,
+    String targetVersion,
     @JsonKey(name: '_targetVersion') Element targetVersionElement,
+    @required List<ConceptMapElement> element,
+    ConceptMapUnmapped unmapped,
   }) = _ConceptMapGroup;
+
   factory ConceptMapGroup.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapGroupFromJson(json);
 }
 
 @freezed
-abstract class ConceptMapElement with _$ConceptMapElement {
+abstract class ConceptMapElement implements _$ConceptMapElement {
+  ConceptMapElement._();
   factory ConceptMapElement({
     Code code,
-    String display,
-    List<ConceptMapTarget> target,
     @JsonKey(name: '_code') Element codeElement,
+    String display,
     @JsonKey(name: '_display') Element displayElement,
+    List<ConceptMapTarget> target,
   }) = _ConceptMapElement;
+
   factory ConceptMapElement.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapElementFromJson(json);
 }
 
 @freezed
-abstract class ConceptMapTarget with _$ConceptMapTarget {
+abstract class ConceptMapTarget implements _$ConceptMapTarget {
+  ConceptMapTarget._();
   factory ConceptMapTarget({
     Code code,
+    @JsonKey(name: '_code') Element codeElement,
     String display,
-    @JsonKey(unknownEnumValue: TargetEquivalence.unknown)
-        TargetEquivalence equivalence,
+    @JsonKey(name: '_display') Element displayElement,
+    ConceptMapTargetEquivalence equivalence,
+    @JsonKey(name: '_equivalence') Element equivalenceElement,
     String comment,
+    @JsonKey(name: '_comment') Element commentElement,
     List<ConceptMapDependsOn> dependsOn,
     List<ConceptMapDependsOn> product,
-    @JsonKey(name: '_code') Element codeElement,
-    @JsonKey(name: '_display') Element displayElement,
-    @JsonKey(name: '_equivalence') Element equivalenceElement,
-    @JsonKey(name: '_comment') Element commentElement,
   }) = _ConceptMapTarget;
+
   factory ConceptMapTarget.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapTargetFromJson(json);
 }
 
 @freezed
-abstract class ConceptMapDependsOn with _$ConceptMapDependsOn {
+abstract class ConceptMapDependsOn implements _$ConceptMapDependsOn {
+  ConceptMapDependsOn._();
   factory ConceptMapDependsOn({
     String property,
-    String system,
-    String code,
-    String display,
     @JsonKey(name: '_property') Element propertyElement,
+    String system,
     @JsonKey(name: '_system') Element systemElement,
+    String code,
     @JsonKey(name: '_code') Element codeElement,
+    String display,
     @JsonKey(name: '_display') Element displayElement,
   }) = _ConceptMapDependsOn;
+
   factory ConceptMapDependsOn.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapDependsOnFromJson(json);
 }
 
 @freezed
-abstract class ConceptMapUnmapped with _$ConceptMapUnmapped {
+abstract class ConceptMapUnmapped implements _$ConceptMapUnmapped {
+  ConceptMapUnmapped._();
   factory ConceptMapUnmapped({
-    @JsonKey(unknownEnumValue: UnmappedMode.unknown) UnmappedMode mode,
-    Code code,
-    String display,
-    String url,
+    ConceptMapUnmappedMode mode,
     @JsonKey(name: '_mode') Element modeElement,
+    Code code,
     @JsonKey(name: '_code') Element codeElement,
+    String display,
     @JsonKey(name: '_display') Element displayElement,
+    String url,
     @JsonKey(name: '_url') Element urlElement,
   }) = _ConceptMapUnmapped;
+
   factory ConceptMapUnmapped.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapUnmappedFromJson(json);
 }
@@ -294,138 +313,154 @@ abstract class ConceptMapUnmapped with _$ConceptMapUnmapped {
 abstract class ExpansionProfile with Resource implements _$ExpansionProfile {
   ExpansionProfile._();
   factory ExpansionProfile({
-    @JsonKey(required: true, defaultValue: 'ExpansionProfile')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'ExpansionProfile') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     String url,
+    @JsonKey(name: '_url') Element urlElement,
     Identifier identifier,
     String version,
+    @JsonKey(name: '_version') Element versionElement,
     String name,
-    @JsonKey(unknownEnumValue: Status.unknown) Status status,
+    @JsonKey(name: '_name') Element nameElement,
+    ExpansionProfileStatus status,
+    @JsonKey(name: '_status') Element statusElement,
     Boolean experimental,
-    FhirDateTime date,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    Date date,
+    @JsonKey(name: '_date') Element dateElement,
     String publisher,
+    @JsonKey(name: '_publisher') Element publisherElement,
     List<ContactDetail> contact,
     String description,
+    @JsonKey(name: '_description') Element descriptionElement,
     List<UsageContext> useContext,
     List<CodeableConcept> jurisdiction,
     List<ExpansionProfileFixedVersion> fixedVersion,
     ExpansionProfileExcludedSystem excludedSystem,
     Boolean includeDesignations,
+    @JsonKey(name: '_includeDesignations') Element includeDesignationsElement,
     ExpansionProfileDesignation designation,
     Boolean includeDefinition,
-    Boolean activeOnly,
-    Boolean excludeNested,
-    Boolean excludeNotForUI,
-    Boolean excludePostCoordinated,
-    Code displayLanguage,
-    Boolean limitedExpansion,
-    @JsonKey(name: '_url') Element urlElement,
-    @JsonKey(name: '_version') Element versionElement,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_experimental') Element experimentalElement,
-    @JsonKey(name: '_date') Element dateElement,
-    @JsonKey(name: '_publisher') Element publisherElement,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @JsonKey(name: '_includeDesignations') Element includeDesignationsElement,
     @JsonKey(name: '_includeDefinition') Element includeDefinitionElement,
+    Boolean activeOnly,
     @JsonKey(name: '_activeOnly') Element activeOnlyElement,
+    Boolean excludeNested,
     @JsonKey(name: '_excludeNested') Element excludeNestedElement,
+    Boolean excludeNotForUI,
     @JsonKey(name: '_excludeNotForUI') Element excludeNotForUIElement,
+    Boolean excludePostCoordinated,
     @JsonKey(name: '_excludePostCoordinated')
         Element excludePostCoordinatedElement,
+    String displayLanguage,
     @JsonKey(name: '_displayLanguage') Element displayLanguageElement,
+    Boolean limitedExpansion,
     @JsonKey(name: '_limitedExpansion') Element limitedExpansionElement,
   }) = _ExpansionProfile;
+
   factory ExpansionProfile.fromJson(Map<String, dynamic> json) =>
       _$ExpansionProfileFromJson(json);
 }
 
 @freezed
 abstract class ExpansionProfileFixedVersion
-    with _$ExpansionProfileFixedVersion {
+    implements _$ExpansionProfileFixedVersion {
+  ExpansionProfileFixedVersion._();
   factory ExpansionProfileFixedVersion({
     String system,
-    String version,
-    @JsonKey(unknownEnumValue: FixedVersionMode.unknown) FixedVersionMode mode,
     @JsonKey(name: '_system') Element systemElement,
+    String version,
     @JsonKey(name: '_version') Element versionElement,
+    ExpansionProfileFixedVersionMode mode,
     @JsonKey(name: '_mode') Element modeElement,
   }) = _ExpansionProfileFixedVersion;
+
   factory ExpansionProfileFixedVersion.fromJson(Map<String, dynamic> json) =>
       _$ExpansionProfileFixedVersionFromJson(json);
 }
 
 @freezed
 abstract class ExpansionProfileExcludedSystem
-    with _$ExpansionProfileExcludedSystem {
+    implements _$ExpansionProfileExcludedSystem {
+  ExpansionProfileExcludedSystem._();
   factory ExpansionProfileExcludedSystem({
     String system,
-    String version,
     @JsonKey(name: '_system') Element systemElement,
+    String version,
     @JsonKey(name: '_version') Element versionElement,
   }) = _ExpansionProfileExcludedSystem;
+
   factory ExpansionProfileExcludedSystem.fromJson(Map<String, dynamic> json) =>
       _$ExpansionProfileExcludedSystemFromJson(json);
 }
 
 @freezed
-abstract class ExpansionProfileDesignation with _$ExpansionProfileDesignation {
+abstract class ExpansionProfileDesignation
+    implements _$ExpansionProfileDesignation {
+  ExpansionProfileDesignation._();
   factory ExpansionProfileDesignation({
     ExpansionProfileInclude include,
     ExpansionProfileExclude exclude,
-    @JsonKey(name: '_language') Element languageElement,
   }) = _ExpansionProfileDesignation;
+
   factory ExpansionProfileDesignation.fromJson(Map<String, dynamic> json) =>
       _$ExpansionProfileDesignationFromJson(json);
 }
 
 @freezed
-abstract class ExpansionProfileInclude with _$ExpansionProfileInclude {
+abstract class ExpansionProfileInclude implements _$ExpansionProfileInclude {
+  ExpansionProfileInclude._();
   factory ExpansionProfileInclude({
     List<ExpansionProfileDesignation1> designation,
   }) = _ExpansionProfileInclude;
+
   factory ExpansionProfileInclude.fromJson(Map<String, dynamic> json) =>
       _$ExpansionProfileIncludeFromJson(json);
 }
 
 @freezed
 abstract class ExpansionProfileDesignation1
-    with _$ExpansionProfileDesignation1 {
+    implements _$ExpansionProfileDesignation1 {
+  ExpansionProfileDesignation1._();
   factory ExpansionProfileDesignation1({
-    Code language,
+    String language,
+    @JsonKey(name: '_language') Element languageElement,
     Coding use,
   }) = _ExpansionProfileDesignation1;
+
   factory ExpansionProfileDesignation1.fromJson(Map<String, dynamic> json) =>
       _$ExpansionProfileDesignation1FromJson(json);
 }
 
 @freezed
-abstract class ExpansionProfileExclude with _$ExpansionProfileExclude {
+abstract class ExpansionProfileExclude implements _$ExpansionProfileExclude {
+  ExpansionProfileExclude._();
   factory ExpansionProfileExclude({
     List<ExpansionProfileDesignation2> designation,
   }) = _ExpansionProfileExclude;
+
   factory ExpansionProfileExclude.fromJson(Map<String, dynamic> json) =>
       _$ExpansionProfileExcludeFromJson(json);
 }
 
 @freezed
 abstract class ExpansionProfileDesignation2
-    with _$ExpansionProfileDesignation2 {
+    implements _$ExpansionProfileDesignation2 {
+  ExpansionProfileDesignation2._();
   factory ExpansionProfileDesignation2({
-    Code language,
-    Coding use,
+    String language,
     @JsonKey(name: '_language') Element languageElement,
+    Coding use,
   }) = _ExpansionProfileDesignation2;
+
   factory ExpansionProfileDesignation2.fromJson(Map<String, dynamic> json) =>
       _$ExpansionProfileDesignation2FromJson(json);
 }
@@ -434,57 +469,60 @@ abstract class ExpansionProfileDesignation2
 abstract class NamingSystem with Resource implements _$NamingSystem {
   NamingSystem._();
   factory NamingSystem({
-    @JsonKey(required: true, defaultValue: 'NamingSystem')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'NamingSystem') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     String name,
-    @JsonKey(unknownEnumValue: Status.unknown) Status status,
-    @JsonKey(unknownEnumValue: NamingSystemKind.unknown) NamingSystemKind kind,
-    FhirDateTime date,
+    @JsonKey(name: '_name') Element nameElement,
+    NamingSystemStatus status,
+    @JsonKey(name: '_status') Element statusElement,
+    NamingSystemKind kind,
+    @JsonKey(name: '_kind') Element kindElement,
+    Date date,
+    @JsonKey(name: '_date') Element dateElement,
     String publisher,
+    @JsonKey(name: '_publisher') Element publisherElement,
     List<ContactDetail> contact,
     String responsible,
+    @JsonKey(name: '_responsible') Element responsibleElement,
     CodeableConcept type,
     String description,
+    @JsonKey(name: '_description') Element descriptionElement,
     List<UsageContext> useContext,
     List<CodeableConcept> jurisdiction,
     String usage,
-    @JsonKey(required: true) List<NamingSystemUniqueId> uniqueId,
-    Reference replacedBy,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_kind') Element kindElement,
-    @JsonKey(name: '_date') Element dateElement,
-    @JsonKey(name: '_publisher') Element publisherElement,
-    @JsonKey(name: '_responsible') Element responsibleElement,
-    @JsonKey(name: '_description') Element descriptionElement,
     @JsonKey(name: '_usage') Element usageElement,
+    @required List<NamingSystemUniqueId> uniqueId,
+    Reference replacedBy,
   }) = _NamingSystem;
+
   factory NamingSystem.fromJson(Map<String, dynamic> json) =>
       _$NamingSystemFromJson(json);
 }
 
 @freezed
-abstract class NamingSystemUniqueId with _$NamingSystemUniqueId {
+abstract class NamingSystemUniqueId implements _$NamingSystemUniqueId {
+  NamingSystemUniqueId._();
   factory NamingSystemUniqueId({
-    @JsonKey(unknownEnumValue: UniqueIdType.unknown) UniqueIdType type,
-    String value,
-    Boolean preferred,
-    String comment,
-    Period period,
+    NamingSystemUniqueIdType type,
     @JsonKey(name: '_type') Element typeElement,
+    String value,
     @JsonKey(name: '_value') Element valueElement,
+    Boolean preferred,
     @JsonKey(name: '_preferred') Element preferredElement,
+    String comment,
     @JsonKey(name: '_comment') Element commentElement,
+    Period period,
   }) = _NamingSystemUniqueId;
+
   factory NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =>
       _$NamingSystemUniqueIdFromJson(json);
 }
@@ -493,182 +531,199 @@ abstract class NamingSystemUniqueId with _$NamingSystemUniqueId {
 abstract class ValueSet with Resource implements _$ValueSet {
   ValueSet._();
   factory ValueSet({
-    @JsonKey(required: true, defaultValue: 'ValueSet')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'ValueSet') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     String url,
+    @JsonKey(name: '_url') Element urlElement,
     List<Identifier> identifier,
     String version,
+    @JsonKey(name: '_version') Element versionElement,
     String name,
+    @JsonKey(name: '_name') Element nameElement,
     String title,
-    @JsonKey(unknownEnumValue: Status.unknown) Status status,
+    @JsonKey(name: '_title') Element titleElement,
+    ValueSetStatus status,
+    @JsonKey(name: '_status') Element statusElement,
     Boolean experimental,
-    FhirDateTime date,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    Date date,
+    @JsonKey(name: '_date') Element dateElement,
     String publisher,
+    @JsonKey(name: '_publisher') Element publisherElement,
     List<ContactDetail> contact,
     String description,
+    @JsonKey(name: '_description') Element descriptionElement,
     List<UsageContext> useContext,
     List<CodeableConcept> jurisdiction,
     Boolean immutable,
+    @JsonKey(name: '_immutable') Element immutableElement,
     String purpose,
+    @JsonKey(name: '_purpose') Element purposeElement,
     String copyright,
+    @JsonKey(name: '_copyright') Element copyrightElement,
     Boolean extensible,
+    @JsonKey(name: '_extensible') Element extensibleElement,
     ValueSetCompose compose,
     ValueSetExpansion expansion,
-    @JsonKey(name: '_url') Element urlElement,
-    @JsonKey(name: '_version') Element versionElement,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_title') Element titleElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_experimental') Element experimentalElement,
-    @JsonKey(name: '_date') Element dateElement,
-    @JsonKey(name: '_publisher') Element publisherElement,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @JsonKey(name: '_immutable') Element immutableElement,
-    @JsonKey(name: '_purpose') Element purposeElement,
-    @JsonKey(name: '_copyright') Element copyrightElement,
-    @JsonKey(name: '_extensible') Element extensibleElement,
   }) = _ValueSet;
+
   factory ValueSet.fromJson(Map<String, dynamic> json) =>
       _$ValueSetFromJson(json);
 }
 
 @freezed
-abstract class ValueSetCompose with _$ValueSetCompose {
+abstract class ValueSetCompose implements _$ValueSetCompose {
+  ValueSetCompose._();
   factory ValueSetCompose({
     Date lockedDate,
-    Boolean inactive,
-    @JsonKey(required: true) List<ValueSetInclude> include,
-    List<ValueSetInclude> exclude,
     @JsonKey(name: '_lockedDate') Element lockedDateElement,
+    Boolean inactive,
     @JsonKey(name: '_inactive') Element inactiveElement,
+    @required List<ValueSetInclude> include,
+    List<ValueSetInclude> exclude,
   }) = _ValueSetCompose;
+
   factory ValueSetCompose.fromJson(Map<String, dynamic> json) =>
       _$ValueSetComposeFromJson(json);
 }
 
 @freezed
-abstract class ValueSetInclude with _$ValueSetInclude {
+abstract class ValueSetInclude implements _$ValueSetInclude {
+  ValueSetInclude._();
   factory ValueSetInclude({
     String system,
+    @JsonKey(name: '_system') Element systemElement,
     String version,
+    @JsonKey(name: '_version') Element versionElement,
     List<ValueSetConcept> concept,
     List<ValueSetFilter> filter,
     List<String> valueSet,
-    @JsonKey(name: '_system') Element systemElement,
-    @JsonKey(name: '_version') Element versionElement,
-    @JsonKey(name: '_valueSet') Element valueSetElement,
+    @JsonKey(name: '_valueSet') List<Element> valueSetElement,
   }) = _ValueSetInclude;
+
   factory ValueSetInclude.fromJson(Map<String, dynamic> json) =>
       _$ValueSetIncludeFromJson(json);
 }
 
 @freezed
-abstract class ValueSetConcept with _$ValueSetConcept {
+abstract class ValueSetConcept implements _$ValueSetConcept {
+  ValueSetConcept._();
   factory ValueSetConcept({
     Code code,
-    String display,
-    List<ValueSetDesignation> designation,
     @JsonKey(name: '_code') Element codeElement,
+    String display,
     @JsonKey(name: '_display') Element displayElement,
+    List<ValueSetDesignation> designation,
   }) = _ValueSetConcept;
+
   factory ValueSetConcept.fromJson(Map<String, dynamic> json) =>
       _$ValueSetConceptFromJson(json);
 }
 
 @freezed
-abstract class ValueSetDesignation with _$ValueSetDesignation {
+abstract class ValueSetDesignation implements _$ValueSetDesignation {
+  ValueSetDesignation._();
   factory ValueSetDesignation({
-    Code language,
+    String language,
+    @JsonKey(name: '_language') Element languageElement,
     Coding use,
     String value,
-    @JsonKey(name: '_language') Element languageElement,
     @JsonKey(name: '_value') Element valueElement,
   }) = _ValueSetDesignation;
+
   factory ValueSetDesignation.fromJson(Map<String, dynamic> json) =>
       _$ValueSetDesignationFromJson(json);
 }
 
 @freezed
-abstract class ValueSetFilter with _$ValueSetFilter {
+abstract class ValueSetFilter implements _$ValueSetFilter {
+  ValueSetFilter._();
   factory ValueSetFilter({
-    Code property,
-    @JsonKey(unknownEnumValue: FilterOp.unknown) FilterOp op,
-    Code value,
+    String property,
     @JsonKey(name: '_property') Element propertyElement,
+    ValueSetFilterOp op,
     @JsonKey(name: '_op') Element opElement,
+    String value,
     @JsonKey(name: '_value') Element valueElement,
   }) = _ValueSetFilter;
+
   factory ValueSetFilter.fromJson(Map<String, dynamic> json) =>
       _$ValueSetFilterFromJson(json);
 }
 
 @freezed
-abstract class ValueSetExpansion with _$ValueSetExpansion {
+abstract class ValueSetExpansion implements _$ValueSetExpansion {
+  ValueSetExpansion._();
   factory ValueSetExpansion({
     String identifier,
-    FhirDateTime timestamp,
-    Integer total,
-    Integer offset,
+    @JsonKey(name: '_identifier') Element identifierElement,
+    Time timestamp,
+    @JsonKey(name: '_timestamp') Element timestampElement,
+    Decimal total,
+    @JsonKey(name: '_total') Element totalElement,
+    Decimal offset,
+    @JsonKey(name: '_offset') Element offsetElement,
     List<ValueSetParameter> parameter,
     List<ValueSetContains> contains,
-    @JsonKey(name: '_identifier') Element identifierElement,
-    @JsonKey(name: '_timestamp') Element timestampElement,
-    @JsonKey(name: '_total') Element totalElement,
-    @JsonKey(name: '_offset') Element offsetElement,
   }) = _ValueSetExpansion;
+
   factory ValueSetExpansion.fromJson(Map<String, dynamic> json) =>
       _$ValueSetExpansionFromJson(json);
 }
 
 @freezed
-abstract class ValueSetParameter with _$ValueSetParameter {
+abstract class ValueSetParameter implements _$ValueSetParameter {
+  ValueSetParameter._();
   factory ValueSetParameter({
     String name,
-    String valueString,
-    Boolean valueBoolean,
-    Integer valueInteger,
-    Decimal valueDecimal,
-    String valueUri,
-    Code valueCode,
     @JsonKey(name: '_name') Element nameElement,
+    String valueString,
     @JsonKey(name: '_valueString') Element valueStringElement,
+    Boolean valueBoolean,
     @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+    Decimal valueInteger,
     @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+    Decimal valueDecimal,
     @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+    String valueUri,
     @JsonKey(name: '_valueUri') Element valueUriElement,
+    Code valueCode,
     @JsonKey(name: '_valueCode') Element valueCodeElement,
   }) = _ValueSetParameter;
+
   factory ValueSetParameter.fromJson(Map<String, dynamic> json) =>
       _$ValueSetParameterFromJson(json);
 }
 
 @freezed
-abstract class ValueSetContains with _$ValueSetContains {
+abstract class ValueSetContains implements _$ValueSetContains {
+  ValueSetContains._();
   factory ValueSetContains({
     String system,
+    @JsonKey(name: '_system') Element systemElement,
     @JsonKey(name: 'abstract') Boolean abstract_,
+    @JsonKey(name: '_abstract') Element abstractElement,
     Boolean inactive,
+    @JsonKey(name: '_inactive') Element inactiveElement,
     String version,
+    @JsonKey(name: '_version') Element versionElement,
     Code code,
+    @JsonKey(name: '_code') Element codeElement,
     String display,
+    @JsonKey(name: '_display') Element displayElement,
     List<ValueSetDesignation> designation,
     List<ValueSetContains> contains,
-    @JsonKey(name: '_system') Element systemElement,
-    @JsonKey(name: '_abstract') Element abstractElement,
-    @JsonKey(name: '_inactive') Element inactiveElement,
-    @JsonKey(name: '_version') Element versionElement,
-    @JsonKey(name: '_code') Element codeElement,
-    @JsonKey(name: '_display') Element displayElement,
   }) = _ValueSetContains;
+
   factory ValueSetContains.fromJson(Map<String, dynamic> json) =>
       _$ValueSetContainsFromJson(json);
 }

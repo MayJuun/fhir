@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'testing.dart';
 
 enum TestReportStatus {
   @JsonValue('completed')
@@ -37,7 +37,7 @@ enum TestReportParticipantType {
   unknown,
 }
 
-enum Result {
+enum TestReportOperationResult {
   @JsonValue('pass')
   pass,
   @JsonValue('skip')
@@ -52,7 +52,33 @@ enum Result {
   unknown,
 }
 
-enum ContentType {
+enum TestReportAssertResult {
+  @JsonValue('pass')
+  pass,
+  @JsonValue('skip')
+  skip,
+  @JsonValue('fail')
+  fail,
+  @JsonValue('warning')
+  warning,
+  @JsonValue('error')
+  error,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum TestScriptStatus {
+  @JsonValue('draft')
+  draft,
+  @JsonValue('active')
+  active,
+  @JsonValue('retired')
+  retired,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum TestScriptOperationAccept {
   @JsonValue('xml')
   xml,
   @JsonValue('json')
@@ -65,7 +91,20 @@ enum ContentType {
   unknown,
 }
 
-enum AssertDirection {
+enum TestScriptOperationContentType {
+  @JsonValue('xml')
+  xml,
+  @JsonValue('json')
+  json,
+  @JsonValue('ttl')
+  ttl,
+  @JsonValue('none')
+  none,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum TestScriptAssertDirection {
   @JsonValue('response')
   response,
   @JsonValue('request')
@@ -74,7 +113,20 @@ enum AssertDirection {
   unknown,
 }
 
-enum AssertOperator {
+enum TestScriptAssertContentType {
+  @JsonValue('xml')
+  xml,
+  @JsonValue('json')
+  json,
+  @JsonValue('ttl')
+  ttl,
+  @JsonValue('none')
+  none,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum TestScriptAssertOperator {
   @JsonValue('equals')
   equals,
   @JsonValue('notEquals')
@@ -101,11 +153,11 @@ enum AssertOperator {
   unknown,
 }
 
-enum AssertRequestedMethod {
+enum TestScriptAssertRequestMethod {
   @JsonValue('delete')
   delete,
   @JsonValue('get')
-  get,
+  get_,
   @JsonValue('options')
   options,
   @JsonValue('patch')
@@ -118,7 +170,7 @@ enum AssertRequestedMethod {
   unknown,
 }
 
-enum AssertResponse {
+enum TestScriptAssertResponse {
   @JsonValue('okay')
   okay,
   @JsonValue('created')

@@ -1,9 +1,9 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
 import '../../../../stu3.dart';
-import '../../resource_types.enums.dart';
-import 'conformance.enums.dart';
 
+part 'conformance.enums.dart';
 part 'conformance.freezed.dart';
 part 'conformance.g.dart';
 
@@ -13,305 +13,336 @@ abstract class CapabilityStatement
     implements _$CapabilityStatement {
   CapabilityStatement._();
   factory CapabilityStatement({
-    @JsonKey(required: true, defaultValue: 'CapabilityStatement')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'CapabilityStatement') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     String url,
+    @JsonKey(name: '_url') Element urlElement,
     String version,
+    @JsonKey(name: '_version') Element versionElement,
     String name,
+    @JsonKey(name: '_name') Element nameElement,
     String title,
-    @JsonKey(unknownEnumValue: Status.unknown) Status status,
+    @JsonKey(name: '_title') Element titleElement,
+    CapabilityStatementStatus status,
+    @JsonKey(name: '_status') Element statusElement,
     Boolean experimental,
-    FhirDateTime date,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    Date date,
+    @JsonKey(name: '_date') Element dateElement,
     String publisher,
+    @JsonKey(name: '_publisher') Element publisherElement,
     List<ContactDetail> contact,
     String description,
+    @JsonKey(name: '_description') Element descriptionElement,
     List<UsageContext> useContext,
     List<CodeableConcept> jurisdiction,
     String purpose,
+    @JsonKey(name: '_purpose') Element purposeElement,
     String copyright,
-    @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
-        CapabilityStatementKind kind,
-    List<String> instantiates,
+    @JsonKey(name: '_copyright') Element copyrightElement,
+    CapabilityStatementKind kind,
+    @JsonKey(name: '_kind') Element kindElement,
+    List<Instant> instantiates,
+    @JsonKey(name: '_instantiates') List<Element> instantiatesElement,
     CapabilityStatementSoftware software,
     CapabilityStatementImplementation implementation,
-    Id fhirVersion,
-    @JsonKey(unknownEnumValue: CapabilityStatementAcceptUnknown.unknown)
-        CapabilityStatementAcceptUnknown acceptUnknown,
-    List<Code> format,
-    List<Code> patchFormat,
-    List<String> implementationGuide,
+    String fhirVersion,
+    @JsonKey(name: '_fhirVersion') Element fhirVersionElement,
+    CapabilityStatementAcceptUnknown acceptUnknown,
+    @JsonKey(name: '_acceptUnknown') Element acceptUnknownElement,
+    List<String> format,
+    @JsonKey(name: '_format') List<Element> formatElement,
+    List<String> patchFormat,
+    @JsonKey(name: '_patchFormat') List<Element> patchFormatElement,
+    List<Id> implementationGuide,
+    @JsonKey(name: '_implementationGuide')
+        List<Element> implementationGuideElement,
     List<Reference> profile,
     List<CapabilityStatementRest> rest,
     List<CapabilityStatementMessaging> messaging,
     List<CapabilityStatementDocument> document,
-    @JsonKey(name: '_url') Element urlElement,
-    @JsonKey(name: '_version') Element versionElement,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_title') Element titleElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_experimental') Element experimentalElement,
-    @JsonKey(name: '_date') Element dateElement,
-    @JsonKey(name: '_publisher') Element publisherElement,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @JsonKey(name: '_purpose') Element purposeElement,
-    @JsonKey(name: '_copyright') Element copyrightElement,
-    @JsonKey(name: '_kind') Element kindElement,
-    @JsonKey(name: '_instantiates') Element instantiatesElement,
-    @JsonKey(name: '_fhirVersion') Element fhirVersionElement,
-    @JsonKey(name: '_acceptUnknown') Element acceptUnknownElement,
-    @JsonKey(name: '_format') Element formatElement,
-    @JsonKey(name: '_patchFormat') Element patchFormatElement,
-    @JsonKey(name: '_implementationGuide') Element implementationGuideElement,
   }) = _CapabilityStatement;
+
   factory CapabilityStatement.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementFromJson(json);
 }
 
 @freezed
-abstract class CapabilityStatementSoftware with _$CapabilityStatementSoftware {
+abstract class CapabilityStatementSoftware
+    implements _$CapabilityStatementSoftware {
+  CapabilityStatementSoftware._();
   factory CapabilityStatementSoftware({
     String name,
-    String version,
-    FhirDateTime releaseDate,
     @JsonKey(name: '_name') Element nameElement,
+    String version,
     @JsonKey(name: '_version') Element versionElement,
+    Date releaseDate,
     @JsonKey(name: '_releaseDate') Element releaseDateElement,
   }) = _CapabilityStatementSoftware;
+
   factory CapabilityStatementSoftware.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementSoftwareFromJson(json);
 }
 
 @freezed
 abstract class CapabilityStatementImplementation
-    with _$CapabilityStatementImplementation {
+    implements _$CapabilityStatementImplementation {
+  CapabilityStatementImplementation._();
   factory CapabilityStatementImplementation({
     String description,
-    String url,
     @JsonKey(name: '_description') Element descriptionElement,
+    String url,
     @JsonKey(name: '_url') Element urlElement,
   }) = _CapabilityStatementImplementation;
+
   factory CapabilityStatementImplementation.fromJson(
           Map<String, dynamic> json) =>
       _$CapabilityStatementImplementationFromJson(json);
 }
 
 @freezed
-abstract class CapabilityStatementRest with _$CapabilityStatementRest {
+abstract class CapabilityStatementRest implements _$CapabilityStatementRest {
+  CapabilityStatementRest._();
   factory CapabilityStatementRest({
-    @JsonKey(unknownEnumValue: RestMode.unknown) RestMode mode,
+    CapabilityStatementRestMode mode,
+    @JsonKey(name: '_mode') Element modeElement,
     String documentation,
+    @JsonKey(name: '_documentation') Element documentationElement,
     CapabilityStatementSecurity security,
     List<CapabilityStatementResource> resource,
     List<CapabilityStatementInteraction1> interaction,
     List<CapabilityStatementSearchParam> searchParam,
     List<CapabilityStatementOperation> operation,
     List<String> compartment,
-    @JsonKey(name: '_mode') Element modeElement,
-    @JsonKey(name: '_documentation') Element documentationElement,
-    @JsonKey(name: '_compartment') Element compartmentElement,
+    @JsonKey(name: '_compartment') List<Element> compartmentElement,
   }) = _CapabilityStatementRest;
+
   factory CapabilityStatementRest.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementRestFromJson(json);
 }
 
 @freezed
-abstract class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
+abstract class CapabilityStatementSecurity
+    implements _$CapabilityStatementSecurity {
+  CapabilityStatementSecurity._();
   factory CapabilityStatementSecurity({
     Boolean cors,
+    @JsonKey(name: '_cors') Element corsElement,
     List<CodeableConcept> service,
     String description,
-    List<CapabilityStatementCertificate> certificate,
-    @JsonKey(name: '_cors') Element corsElement,
     @JsonKey(name: '_description') Element descriptionElement,
+    List<CapabilityStatementCertificate> certificate,
   }) = _CapabilityStatementSecurity;
+
   factory CapabilityStatementSecurity.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementSecurityFromJson(json);
 }
 
 @freezed
 abstract class CapabilityStatementCertificate
-    with _$CapabilityStatementCertificate {
+    implements _$CapabilityStatementCertificate {
+  CapabilityStatementCertificate._();
   factory CapabilityStatementCertificate({
-    Code type,
-    String blob,
+    String type,
     @JsonKey(name: '_type') Element typeElement,
+    String blob,
     @JsonKey(name: '_blob') Element blobElement,
   }) = _CapabilityStatementCertificate;
+
   factory CapabilityStatementCertificate.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementCertificateFromJson(json);
 }
 
 @freezed
-abstract class CapabilityStatementResource with _$CapabilityStatementResource {
+abstract class CapabilityStatementResource
+    implements _$CapabilityStatementResource {
+  CapabilityStatementResource._();
   factory CapabilityStatementResource({
-    Code type,
+    String type,
+    @JsonKey(name: '_type') Element typeElement,
     Reference profile,
     String documentation,
-    @JsonKey(required: true) List<CapabilityStatementInteraction> interaction,
-    @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
-        ResourceVersioning versioning,
-    Boolean readHistory,
-    Boolean updateCreate,
-    Boolean conditionalCreate,
-    @JsonKey(unknownEnumValue: ResourceConditionalRead.unknown)
-        ResourceConditionalRead conditionalRead,
-    Boolean conditionalUpdate,
-    @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
-        ResourceConditionalDelete conditionalDelete,
-    List<ResourceReferencePolicy> referencePolicy,
-    List<String> searchInclude,
-    List<String> searchRevInclude,
-    List<CapabilityStatementSearchParam> searchParam,
-    @JsonKey(name: '_type') Element typeElement,
     @JsonKey(name: '_documentation') Element documentationElement,
+    @required List<CapabilityStatementInteraction> interaction,
+    CapabilityStatementResourceVersioning versioning,
     @JsonKey(name: '_versioning') Element versioningElement,
+    Boolean readHistory,
     @JsonKey(name: '_readHistory') Element readHistoryElement,
+    Boolean updateCreate,
     @JsonKey(name: '_updateCreate') Element updateCreateElement,
+    Boolean conditionalCreate,
     @JsonKey(name: '_conditionalCreate') Element conditionalCreateElement,
+    CapabilityStatementResourceConditionalRead conditionalRead,
     @JsonKey(name: '_conditionalRead') Element conditionalReadElement,
+    Boolean conditionalUpdate,
     @JsonKey(name: '_conditionalUpdate') Element conditionalUpdateElement,
+    CapabilityStatementResourceConditionalDelete conditionalDelete,
     @JsonKey(name: '_conditionalDelete') Element conditionalDeleteElement,
-    @JsonKey(name: '_referencePolicy') Element referencePolicyElement,
-    @JsonKey(name: '_searchInclude') Element searchIncludeElement,
-    @JsonKey(name: '_searchRevInclude') Element searchRevIncludeElement,
+    List<CapabilityStatementResourceReferencePolicy> referencePolicy,
+    @JsonKey(name: '_referencePolicy') List<Element> referencePolicyElement,
+    List<String> searchInclude,
+    @JsonKey(name: '_searchInclude') List<Element> searchIncludeElement,
+    List<String> searchRevInclude,
+    @JsonKey(name: '_searchRevInclude') List<Element> searchRevIncludeElement,
+    List<CapabilityStatementSearchParam> searchParam,
   }) = _CapabilityStatementResource;
+
   factory CapabilityStatementResource.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementResourceFromJson(json);
 }
 
 @freezed
 abstract class CapabilityStatementInteraction
-    with _$CapabilityStatementInteraction {
+    implements _$CapabilityStatementInteraction {
+  CapabilityStatementInteraction._();
   factory CapabilityStatementInteraction({
-    @JsonKey(unknownEnumValue: InteractionCode.unknown) InteractionCode code,
-    String documentation,
+    CapabilityStatementInteractionCode code,
     @JsonKey(name: '_code') Element codeElement,
+    String documentation,
     @JsonKey(name: '_documentation') Element documentationElement,
   }) = _CapabilityStatementInteraction;
+
   factory CapabilityStatementInteraction.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementInteractionFromJson(json);
 }
 
 @freezed
 abstract class CapabilityStatementSearchParam
-    with _$CapabilityStatementSearchParam {
+    implements _$CapabilityStatementSearchParam {
+  CapabilityStatementSearchParam._();
   factory CapabilityStatementSearchParam({
     String name,
-    String definition,
-    @JsonKey(unknownEnumValue: ParameterSearchType.unknown)
-        ParameterSearchType type,
-    String documentation,
     @JsonKey(name: '_name') Element nameElement,
+    String definition,
     @JsonKey(name: '_definition') Element definitionElement,
+    CapabilityStatementSearchParamType type,
     @JsonKey(name: '_type') Element typeElement,
+    String documentation,
     @JsonKey(name: '_documentation') Element documentationElement,
   }) = _CapabilityStatementSearchParam;
+
   factory CapabilityStatementSearchParam.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementSearchParamFromJson(json);
 }
 
 @freezed
 abstract class CapabilityStatementInteraction1
-    with _$CapabilityStatementInteraction1 {
+    implements _$CapabilityStatementInteraction1 {
+  CapabilityStatementInteraction1._();
   factory CapabilityStatementInteraction1({
-    @JsonKey(unknownEnumValue: Interaction1Code.unknown) Interaction1Code code,
-    String documentation,
+    CapabilityStatementInteraction1Code code,
     @JsonKey(name: '_code') Element codeElement,
+    String documentation,
     @JsonKey(name: '_documentation') Element documentationElement,
   }) = _CapabilityStatementInteraction1;
+
   factory CapabilityStatementInteraction1.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementInteraction1FromJson(json);
 }
 
 @freezed
 abstract class CapabilityStatementOperation
-    with _$CapabilityStatementOperation {
+    implements _$CapabilityStatementOperation {
+  CapabilityStatementOperation._();
   factory CapabilityStatementOperation({
     String name,
-    @JsonKey(required: true) Reference definition,
     @JsonKey(name: '_name') Element nameElement,
+    @required Reference definition,
   }) = _CapabilityStatementOperation;
+
   factory CapabilityStatementOperation.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementOperationFromJson(json);
 }
 
 @freezed
 abstract class CapabilityStatementMessaging
-    with _$CapabilityStatementMessaging {
+    implements _$CapabilityStatementMessaging {
+  CapabilityStatementMessaging._();
   factory CapabilityStatementMessaging({
     List<CapabilityStatementEndpoint> endpoint,
-    UnsignedInt reliableCache,
+    Decimal reliableCache,
+    @JsonKey(name: '_reliableCache') Element reliableCacheElement,
     String documentation,
+    @JsonKey(name: '_documentation') Element documentationElement,
     List<CapabilityStatementSupportedMessage> supportedMessage,
     List<CapabilityStatementEvent> event,
-    @JsonKey(name: '_reliableCache') Element reliableCacheElement,
-    @JsonKey(name: '_documentation') Element documentationElement,
   }) = _CapabilityStatementMessaging;
+
   factory CapabilityStatementMessaging.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementMessagingFromJson(json);
 }
 
 @freezed
-abstract class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
+abstract class CapabilityStatementEndpoint
+    implements _$CapabilityStatementEndpoint {
+  CapabilityStatementEndpoint._();
   factory CapabilityStatementEndpoint({
-    @JsonKey(required: true) Coding protocol,
+    @required Coding protocol,
     String address,
     @JsonKey(name: '_address') Element addressElement,
   }) = _CapabilityStatementEndpoint;
+
   factory CapabilityStatementEndpoint.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementEndpointFromJson(json);
 }
 
 @freezed
 abstract class CapabilityStatementSupportedMessage
-    with _$CapabilityStatementSupportedMessage {
+    implements _$CapabilityStatementSupportedMessage {
+  CapabilityStatementSupportedMessage._();
   factory CapabilityStatementSupportedMessage({
-    @JsonKey(unknownEnumValue: Mode.unknown) Mode mode,
-    @JsonKey(required: true) Reference definition,
+    CapabilityStatementSupportedMessageMode mode,
     @JsonKey(name: '_mode') Element modeElement,
+    @required Reference definition,
   }) = _CapabilityStatementSupportedMessage;
+
   factory CapabilityStatementSupportedMessage.fromJson(
           Map<String, dynamic> json) =>
       _$CapabilityStatementSupportedMessageFromJson(json);
 }
 
 @freezed
-abstract class CapabilityStatementEvent with _$CapabilityStatementEvent {
+abstract class CapabilityStatementEvent implements _$CapabilityStatementEvent {
+  CapabilityStatementEvent._();
   factory CapabilityStatementEvent({
-    @JsonKey(required: true) Coding code,
-    @JsonKey(unknownEnumValue: EventCategory.unknown) EventCategory category,
-    @JsonKey(unknownEnumValue: Mode.unknown) Mode mode,
-    Code focus,
-    @JsonKey(required: true) Reference request,
-    @JsonKey(required: true) Reference response,
-    String documentation,
+    @required Coding code,
+    CapabilityStatementEventCategory category,
     @JsonKey(name: '_category') Element categoryElement,
+    CapabilityStatementEventMode mode,
     @JsonKey(name: '_mode') Element modeElement,
+    String focus,
     @JsonKey(name: '_focus') Element focusElement,
+    @required Reference request,
+    @required Reference response,
+    String documentation,
     @JsonKey(name: '_documentation') Element documentationElement,
   }) = _CapabilityStatementEvent;
+
   factory CapabilityStatementEvent.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementEventFromJson(json);
 }
 
 @freezed
-abstract class CapabilityStatementDocument with _$CapabilityStatementDocument {
+abstract class CapabilityStatementDocument
+    implements _$CapabilityStatementDocument {
+  CapabilityStatementDocument._();
   factory CapabilityStatementDocument({
-    @JsonKey(unknownEnumValue: DocumentMode.unknown) DocumentMode mode,
-    String documentation,
-    @JsonKey(required: true) Reference profile,
+    CapabilityStatementDocumentMode mode,
     @JsonKey(name: '_mode') Element modeElement,
+    String documentation,
     @JsonKey(name: '_documentation') Element documentationElement,
+    @required Reference profile,
   }) = _CapabilityStatementDocument;
+
   factory CapabilityStatementDocument.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementDocumentFromJson(json);
 }
@@ -322,60 +353,64 @@ abstract class CompartmentDefinition
     implements _$CompartmentDefinition {
   CompartmentDefinition._();
   factory CompartmentDefinition({
-    @JsonKey(required: true, defaultValue: 'CompartmentDefinition')
+    @JsonKey(defaultValue: 'CompartmentDefinition')
     @required
         String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     String url,
+    @JsonKey(name: '_url') Element urlElement,
     String name,
+    @JsonKey(name: '_name') Element nameElement,
     String title,
-    @JsonKey(unknownEnumValue: Status.unknown) Status status,
+    @JsonKey(name: '_title') Element titleElement,
+    CompartmentDefinitionStatus status,
+    @JsonKey(name: '_status') Element statusElement,
     Boolean experimental,
-    FhirDateTime date,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    Date date,
+    @JsonKey(name: '_date') Element dateElement,
     String publisher,
+    @JsonKey(name: '_publisher') Element publisherElement,
     List<ContactDetail> contact,
     String description,
+    @JsonKey(name: '_description') Element descriptionElement,
     String purpose,
+    @JsonKey(name: '_purpose') Element purposeElement,
     List<UsageContext> useContext,
     List<CodeableConcept> jurisdiction,
-    @JsonKey(unknownEnumValue: CompartmentDefinitionCode.unknown)
-        CompartmentDefinitionCode code,
-    Boolean search,
-    List<CompartmentDefinitionResource> resource,
-    @JsonKey(name: '_url') Element urlElement,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_title') Element titleElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_experimental') Element experimentalElement,
-    @JsonKey(name: '_date') Element dateElement,
-    @JsonKey(name: '_publisher') Element publisherElement,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @JsonKey(name: '_purpose') Element purposeElement,
+    CompartmentDefinitionCode code,
     @JsonKey(name: '_code') Element codeElement,
+    Boolean search,
     @JsonKey(name: '_search') Element searchElement,
+    List<CompartmentDefinitionResource> resource,
   }) = _CompartmentDefinition;
+
   factory CompartmentDefinition.fromJson(Map<String, dynamic> json) =>
       _$CompartmentDefinitionFromJson(json);
 }
 
 @freezed
 abstract class CompartmentDefinitionResource
-    with _$CompartmentDefinitionResource {
+    implements _$CompartmentDefinitionResource {
+  CompartmentDefinitionResource._();
   factory CompartmentDefinitionResource({
     Code code,
-    List<String> param,
-    String documentation,
     @JsonKey(name: '_code') Element codeElement,
-    @JsonKey(name: '_param') Element paramElement,
+    List<String> param,
+    @JsonKey(name: '_param') List<Element> paramElement,
+    String documentation,
     @JsonKey(name: '_documentation') Element documentationElement,
   }) = _CompartmentDefinitionResource;
+
   factory CompartmentDefinitionResource.fromJson(Map<String, dynamic> json) =>
       _$CompartmentDefinitionResourceFromJson(json);
 }
@@ -384,61 +419,63 @@ abstract class CompartmentDefinitionResource
 abstract class DataElement with Resource implements _$DataElement {
   DataElement._();
   factory DataElement({
-    @JsonKey(required: true, defaultValue: 'DataElement')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'DataElement') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     String url,
+    @JsonKey(name: '_url') Element urlElement,
     List<Identifier> identifier,
     String version,
-    @JsonKey(unknownEnumValue: Status.unknown) Status status,
+    @JsonKey(name: '_version') Element versionElement,
+    DataElementStatus status,
+    @JsonKey(name: '_status') Element statusElement,
     Boolean experimental,
-    FhirDateTime date,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    Date date,
+    @JsonKey(name: '_date') Element dateElement,
     String publisher,
+    @JsonKey(name: '_publisher') Element publisherElement,
     String name,
+    @JsonKey(name: '_name') Element nameElement,
     String title,
+    @JsonKey(name: '_title') Element titleElement,
     List<ContactDetail> contact,
     List<UsageContext> useContext,
     List<CodeableConcept> jurisdiction,
     String copyright,
-    @JsonKey(unknownEnumValue: DataElementStringency.unknown)
-        DataElementStringency stringency,
-    List<DataElementMapping> mapping,
-    @JsonKey(required: true) List<ElementDefinition> element,
-    @JsonKey(name: '_url') Element urlElement,
-    @JsonKey(name: '_version') Element versionElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_experimental') Element experimentalElement,
-    @JsonKey(name: '_date') Element dateElement,
-    @JsonKey(name: '_publisher') Element publisherElement,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_title') Element titleElement,
     @JsonKey(name: '_copyright') Element copyrightElement,
+    DataElementStringency stringency,
     @JsonKey(name: '_stringency') Element stringencyElement,
+    List<DataElementMapping> mapping,
+    @required List<ElementDefinition> element,
   }) = _DataElement;
+
   factory DataElement.fromJson(Map<String, dynamic> json) =>
       _$DataElementFromJson(json);
 }
 
 @freezed
-abstract class DataElementMapping with _$DataElementMapping {
+abstract class DataElementMapping implements _$DataElementMapping {
+  DataElementMapping._();
   factory DataElementMapping({
     Id identity,
-    String uri,
-    String name,
-    String comment,
     @JsonKey(name: '_identity') Element identityElement,
+    String uri,
     @JsonKey(name: '_uri') Element uriElement,
+    String name,
     @JsonKey(name: '_name') Element nameElement,
+    String comment,
     @JsonKey(name: '_comment') Element commentElement,
   }) = _DataElementMapping;
+
   factory DataElementMapping.fromJson(Map<String, dynamic> json) =>
       _$DataElementMappingFromJson(json);
 }
@@ -447,93 +484,101 @@ abstract class DataElementMapping with _$DataElementMapping {
 abstract class GraphDefinition with Resource implements _$GraphDefinition {
   GraphDefinition._();
   factory GraphDefinition({
-    @JsonKey(required: true, defaultValue: 'GraphDefinition')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'GraphDefinition') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     String url,
+    @JsonKey(name: '_url') Element urlElement,
     String version,
+    @JsonKey(name: '_version') Element versionElement,
     String name,
-    @JsonKey(unknownEnumValue: Status.unknown) Status status,
+    @JsonKey(name: '_name') Element nameElement,
+    GraphDefinitionStatus status,
+    @JsonKey(name: '_status') Element statusElement,
     Boolean experimental,
-    FhirDateTime date,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    Date date,
+    @JsonKey(name: '_date') Element dateElement,
     String publisher,
+    @JsonKey(name: '_publisher') Element publisherElement,
     List<ContactDetail> contact,
     String description,
+    @JsonKey(name: '_description') Element descriptionElement,
     List<UsageContext> useContext,
     List<CodeableConcept> jurisdiction,
     String purpose,
-    Code start,
-    String profile,
-    List<GraphDefinitionLink> link,
-    @JsonKey(name: '_url') Element urlElement,
-    @JsonKey(name: '_version') Element versionElement,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_experimental') Element experimentalElement,
-    @JsonKey(name: '_date') Element dateElement,
-    @JsonKey(name: '_publisher') Element publisherElement,
-    @JsonKey(name: '_description') Element descriptionElement,
     @JsonKey(name: '_purpose') Element purposeElement,
+    String start,
     @JsonKey(name: '_start') Element startElement,
+    String profile,
     @JsonKey(name: '_profile') Element profileElement,
+    List<GraphDefinitionLink> link,
   }) = _GraphDefinition;
+
   factory GraphDefinition.fromJson(Map<String, dynamic> json) =>
       _$GraphDefinitionFromJson(json);
 }
 
 @freezed
-abstract class GraphDefinitionLink with _$GraphDefinitionLink {
+abstract class GraphDefinitionLink implements _$GraphDefinitionLink {
+  GraphDefinitionLink._();
   factory GraphDefinitionLink({
     String path,
-    String sliceName,
-    Integer min,
-    String max,
-    String description,
-    @JsonKey(required: true) List<GraphDefinitionTarget> target,
     @JsonKey(name: '_path') Element pathElement,
+    String sliceName,
     @JsonKey(name: '_sliceName') Element sliceNameElement,
+    Decimal min,
     @JsonKey(name: '_min') Element minElement,
+    String max,
     @JsonKey(name: '_max') Element maxElement,
+    String description,
     @JsonKey(name: '_description') Element descriptionElement,
+    @required List<GraphDefinitionTarget> target,
   }) = _GraphDefinitionLink;
+
   factory GraphDefinitionLink.fromJson(Map<String, dynamic> json) =>
       _$GraphDefinitionLinkFromJson(json);
 }
 
 @freezed
-abstract class GraphDefinitionTarget with _$GraphDefinitionTarget {
+abstract class GraphDefinitionTarget implements _$GraphDefinitionTarget {
+  GraphDefinitionTarget._();
   factory GraphDefinitionTarget({
-    Code type,
+    String type,
+    @JsonKey(name: '_type') Element typeElement,
     String profile,
+    @JsonKey(name: '_profile') Element profileElement,
     List<GraphDefinitionCompartment> compartment,
     List<GraphDefinitionLink> link,
-    @JsonKey(name: '_type') Element typeElement,
-    @JsonKey(name: '_profile') Element profileElement,
   }) = _GraphDefinitionTarget;
+
   factory GraphDefinitionTarget.fromJson(Map<String, dynamic> json) =>
       _$GraphDefinitionTargetFromJson(json);
 }
 
 @freezed
-abstract class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
+abstract class GraphDefinitionCompartment
+    implements _$GraphDefinitionCompartment {
+  GraphDefinitionCompartment._();
   factory GraphDefinitionCompartment({
     Code code,
-    @JsonKey(unknownEnumValue: CompartmentRule.unknown) CompartmentRule rule,
-    String expression,
-    String description,
     @JsonKey(name: '_code') Element codeElement,
+    GraphDefinitionCompartmentRule rule,
     @JsonKey(name: '_rule') Element ruleElement,
+    String expression,
     @JsonKey(name: '_expression') Element expressionElement,
+    String description,
     @JsonKey(name: '_description') Element descriptionElement,
   }) = _GraphDefinitionCompartment;
+
   factory GraphDefinitionCompartment.fromJson(Map<String, dynamic> json) =>
       _$GraphDefinitionCompartmentFromJson(json);
 }
@@ -544,125 +589,139 @@ abstract class ImplementationGuide
     implements _$ImplementationGuide {
   ImplementationGuide._();
   factory ImplementationGuide({
-    @JsonKey(required: true, defaultValue: 'ImplementationGuide')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'ImplementationGuide') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     String url,
+    @JsonKey(name: '_url') Element urlElement,
     String version,
+    @JsonKey(name: '_version') Element versionElement,
     String name,
-    @JsonKey(unknownEnumValue: Status.unknown) Status status,
+    @JsonKey(name: '_name') Element nameElement,
+    ImplementationGuideStatus status,
+    @JsonKey(name: '_status') Element statusElement,
     Boolean experimental,
-    FhirDateTime date,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    Date date,
+    @JsonKey(name: '_date') Element dateElement,
     String publisher,
+    @JsonKey(name: '_publisher') Element publisherElement,
     List<ContactDetail> contact,
     String description,
+    @JsonKey(name: '_description') Element descriptionElement,
     List<UsageContext> useContext,
     List<CodeableConcept> jurisdiction,
     String copyright,
-    Id fhirVersion,
+    @JsonKey(name: '_copyright') Element copyrightElement,
+    String fhirVersion,
+    @JsonKey(name: '_fhirVersion') Element fhirVersionElement,
     List<ImplementationGuideDependency> dependency,
     List<ImplementationGuidePackage> package,
     List<ImplementationGuideGlobal> global,
     List<String> binary,
+    @JsonKey(name: '_binary') List<Element> binaryElement,
     ImplementationGuidePage page,
-    @JsonKey(name: '_url') Element urlElement,
-    @JsonKey(name: '_version') Element versionElement,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_experimental') Element experimentalElement,
-    @JsonKey(name: '_date') Element dateElement,
-    @JsonKey(name: '_publisher') Element publisherElement,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @JsonKey(name: '_copyright') Element copyrightElement,
-    @JsonKey(name: '_fhirVersion') Element fhirVersionElement,
-    @JsonKey(name: '_binary') Element binaryElement,
   }) = _ImplementationGuide;
+
   factory ImplementationGuide.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideFromJson(json);
 }
 
 @freezed
 abstract class ImplementationGuideDependency
-    with _$ImplementationGuideDependency {
+    implements _$ImplementationGuideDependency {
+  ImplementationGuideDependency._();
   factory ImplementationGuideDependency({
-    @JsonKey(unknownEnumValue: DependencyType.unknown) DependencyType type,
-    String uri,
+    ImplementationGuideDependencyType type,
     @JsonKey(name: '_type') Element typeElement,
+    String uri,
     @JsonKey(name: '_uri') Element uriElement,
   }) = _ImplementationGuideDependency;
+
   factory ImplementationGuideDependency.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideDependencyFromJson(json);
 }
 
 @freezed
-abstract class ImplementationGuidePackage with _$ImplementationGuidePackage {
+abstract class ImplementationGuidePackage
+    implements _$ImplementationGuidePackage {
+  ImplementationGuidePackage._();
   factory ImplementationGuidePackage({
     String name,
-    String description,
-    @JsonKey(required: true) List<ImplementationGuideResource> resource,
     @JsonKey(name: '_name') Element nameElement,
+    String description,
     @JsonKey(name: '_description') Element descriptionElement,
+    @required List<ImplementationGuideResource> resource,
   }) = _ImplementationGuidePackage;
+
   factory ImplementationGuidePackage.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuidePackageFromJson(json);
 }
 
 @freezed
-abstract class ImplementationGuideResource with _$ImplementationGuideResource {
+abstract class ImplementationGuideResource
+    implements _$ImplementationGuideResource {
+  ImplementationGuideResource._();
   factory ImplementationGuideResource({
     Boolean example,
+    @JsonKey(name: '_example') Element exampleElement,
     String name,
+    @JsonKey(name: '_name') Element nameElement,
     String description,
+    @JsonKey(name: '_description') Element descriptionElement,
     String acronym,
+    @JsonKey(name: '_acronym') Element acronymElement,
     String sourceUri,
+    @JsonKey(name: '_sourceUri') Element sourceUriElement,
     Reference sourceReference,
     Reference exampleFor,
-    @JsonKey(name: '_example') Element exampleElement,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @JsonKey(name: '_acronym') Element acronymElement,
-    @JsonKey(name: '_sourceUri') Element sourceUriElement,
   }) = _ImplementationGuideResource;
+
   factory ImplementationGuideResource.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideResourceFromJson(json);
 }
 
 @freezed
-abstract class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
+abstract class ImplementationGuideGlobal
+    implements _$ImplementationGuideGlobal {
+  ImplementationGuideGlobal._();
   factory ImplementationGuideGlobal({
-    Code type,
-    @JsonKey(required: true) Reference profile,
+    String type,
     @JsonKey(name: '_type') Element typeElement,
+    @required Reference profile,
   }) = _ImplementationGuideGlobal;
+
   factory ImplementationGuideGlobal.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideGlobalFromJson(json);
 }
 
 @freezed
-abstract class ImplementationGuidePage with _$ImplementationGuidePage {
+abstract class ImplementationGuidePage implements _$ImplementationGuidePage {
+  ImplementationGuidePage._();
   factory ImplementationGuidePage({
     String source,
-    String title,
-    @JsonKey(unknownEnumValue: PageKind.unknown) PageKind kind,
-    List<Code> type,
-    List<String> package,
-    Code format,
-    List<ImplementationGuidePage> page,
     @JsonKey(name: '_source') Element sourceElement,
+    String title,
     @JsonKey(name: '_title') Element titleElement,
+    ImplementationGuidePageKind kind,
     @JsonKey(name: '_kind') Element kindElement,
-    @JsonKey(name: '_type') Element typeElement,
-    @JsonKey(name: '_package') Element packageElement,
+    List<String> type,
+    @JsonKey(name: '_type') List<Element> typeElement,
+    List<String> package,
+    @JsonKey(name: '_package') List<Element> packageElement,
+    String format,
     @JsonKey(name: '_format') Element formatElement,
+    List<ImplementationGuidePage> page,
   }) = _ImplementationGuidePage;
+
   factory ImplementationGuidePage.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuidePageFromJson(json);
 }
@@ -671,81 +730,86 @@ abstract class ImplementationGuidePage with _$ImplementationGuidePage {
 abstract class MessageDefinition with Resource implements _$MessageDefinition {
   MessageDefinition._();
   factory MessageDefinition({
-    @JsonKey(required: true, defaultValue: 'MessageDefinition')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'MessageDefinition') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     String url,
+    @JsonKey(name: '_url') Element urlElement,
     Identifier identifier,
     String version,
+    @JsonKey(name: '_version') Element versionElement,
     String name,
+    @JsonKey(name: '_name') Element nameElement,
     String title,
-    @JsonKey(unknownEnumValue: Status.unknown) Status status,
+    @JsonKey(name: '_title') Element titleElement,
+    MessageDefinitionStatus status,
+    @JsonKey(name: '_status') Element statusElement,
     Boolean experimental,
-    FhirDateTime date,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    Date date,
+    @JsonKey(name: '_date') Element dateElement,
     String publisher,
+    @JsonKey(name: '_publisher') Element publisherElement,
     List<ContactDetail> contact,
     String description,
+    @JsonKey(name: '_description') Element descriptionElement,
     List<UsageContext> useContext,
     List<CodeableConcept> jurisdiction,
     String purpose,
+    @JsonKey(name: '_purpose') Element purposeElement,
     String copyright,
+    @JsonKey(name: '_copyright') Element copyrightElement,
     Reference base,
     List<Reference> parent,
     List<Reference> replaces,
-    @JsonKey(required: true) Coding event,
-    Code category,
+    @required Coding event,
+    String category,
+    @JsonKey(name: '_category') Element categoryElement,
     List<MessageDefinitionFocus> focus,
     Boolean responseRequired,
-    List<MessageDefinitionAllowedResponse> allowedResponse,
-    @JsonKey(name: '_url') Element urlElement,
-    @JsonKey(name: '_version') Element versionElement,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_title') Element titleElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_experimental') Element experimentalElement,
-    @JsonKey(name: '_date') Element dateElement,
-    @JsonKey(name: '_publisher') Element publisherElement,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @JsonKey(name: '_purpose') Element purposeElement,
-    @JsonKey(name: '_copyright') Element copyrightElement,
-    @JsonKey(name: '_category') Element categoryElement,
     @JsonKey(name: '_responseRequired') Element responseRequiredElement,
+    List<MessageDefinitionAllowedResponse> allowedResponse,
   }) = _MessageDefinition;
+
   factory MessageDefinition.fromJson(Map<String, dynamic> json) =>
       _$MessageDefinitionFromJson(json);
 }
 
 @freezed
-abstract class MessageDefinitionFocus with _$MessageDefinitionFocus {
+abstract class MessageDefinitionFocus implements _$MessageDefinitionFocus {
+  MessageDefinitionFocus._();
   factory MessageDefinitionFocus({
     Code code,
-    Reference profile,
-    UnsignedInt min,
-    String max,
     @JsonKey(name: '_code') Element codeElement,
+    Reference profile,
+    Decimal min,
     @JsonKey(name: '_min') Element minElement,
+    String max,
     @JsonKey(name: '_max') Element maxElement,
   }) = _MessageDefinitionFocus;
+
   factory MessageDefinitionFocus.fromJson(Map<String, dynamic> json) =>
       _$MessageDefinitionFocusFromJson(json);
 }
 
 @freezed
 abstract class MessageDefinitionAllowedResponse
-    with _$MessageDefinitionAllowedResponse {
+    implements _$MessageDefinitionAllowedResponse {
+  MessageDefinitionAllowedResponse._();
   factory MessageDefinitionAllowedResponse({
-    @JsonKey(required: true) Reference message,
+    @required Reference message,
     String situation,
     @JsonKey(name: '_situation') Element situationElement,
   }) = _MessageDefinitionAllowedResponse;
+
   factory MessageDefinitionAllowedResponse.fromJson(
           Map<String, dynamic> json) =>
       _$MessageDefinitionAllowedResponseFromJson(json);
@@ -757,112 +821,118 @@ abstract class OperationDefinition
     implements _$OperationDefinition {
   OperationDefinition._();
   factory OperationDefinition({
-    @JsonKey(required: true, defaultValue: 'OperationDefinition')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'OperationDefinition') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     String url,
+    @JsonKey(name: '_url') Element urlElement,
     String version,
+    @JsonKey(name: '_version') Element versionElement,
     String name,
-    @JsonKey(unknownEnumValue: Status.unknown) Status status,
-    @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
-        OperationDefinitionKind kind,
+    @JsonKey(name: '_name') Element nameElement,
+    OperationDefinitionStatus status,
+    @JsonKey(name: '_status') Element statusElement,
+    OperationDefinitionKind kind,
+    @JsonKey(name: '_kind') Element kindElement,
     Boolean experimental,
-    FhirDateTime date,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    Date date,
+    @JsonKey(name: '_date') Element dateElement,
     String publisher,
+    @JsonKey(name: '_publisher') Element publisherElement,
     List<ContactDetail> contact,
     String description,
+    @JsonKey(name: '_description') Element descriptionElement,
     List<UsageContext> useContext,
     List<CodeableConcept> jurisdiction,
     String purpose,
+    @JsonKey(name: '_purpose') Element purposeElement,
     Boolean idempotent,
+    @JsonKey(name: '_idempotent') Element idempotentElement,
     Code code,
+    @JsonKey(name: '_code') Element codeElement,
     String comment,
+    @JsonKey(name: '_comment') Element commentElement,
     Reference base,
-    List<Code> resource,
+    List<String> resource,
+    @JsonKey(name: '_resource') List<Element> resourceElement,
     Boolean system,
+    @JsonKey(name: '_system') Element systemElement,
     Boolean type,
+    @JsonKey(name: '_type') Element typeElement,
     Boolean instance,
+    @JsonKey(name: '_instance') Element instanceElement,
     List<OperationDefinitionParameter> parameter,
     List<OperationDefinitionOverload> overload,
-    @JsonKey(name: '_url') Element urlElement,
-    @JsonKey(name: '_version') Element versionElement,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_kind') Element kindElement,
-    @JsonKey(name: '_experimental') Element experimentalElement,
-    @JsonKey(name: '_date') Element dateElement,
-    @JsonKey(name: '_publisher') Element publisherElement,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @JsonKey(name: '_purpose') Element purposeElement,
-    @JsonKey(name: '_idempotent') Element idempotentElement,
-    @JsonKey(name: '_code') Element codeElement,
-    @JsonKey(name: '_comment') Element commentElement,
-    @JsonKey(name: '_resource') Element resourceElement,
-    @JsonKey(name: '_system') Element systemElement,
-    @JsonKey(name: '_type') Element typeElement,
-    @JsonKey(name: '_instance') Element instanceElement,
   }) = _OperationDefinition;
+
   factory OperationDefinition.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionFromJson(json);
 }
 
 @freezed
 abstract class OperationDefinitionParameter
-    with _$OperationDefinitionParameter {
+    implements _$OperationDefinitionParameter {
+  OperationDefinitionParameter._();
   factory OperationDefinitionParameter({
-    Code name,
-    @JsonKey(unknownEnumValue: ParameterUse.unknown) ParameterUse use,
-    Integer min,
+    String name,
+    @JsonKey(name: '_name') Element nameElement,
+    OperationDefinitionParameterUse use,
+    @JsonKey(name: '_use') Element useElement,
+    Decimal min,
+    @JsonKey(name: '_min') Element minElement,
     String max,
+    @JsonKey(name: '_max') Element maxElement,
     String documentation,
-    Code type,
-    @JsonKey(unknownEnumValue: ParameterSearchType.unknown)
-        ParameterSearchType searchType,
+    @JsonKey(name: '_documentation') Element documentationElement,
+    String type,
+    @JsonKey(name: '_type') Element typeElement,
+    OperationDefinitionParameterSearchType searchType,
+    @JsonKey(name: '_searchType') Element searchTypeElement,
     Reference profile,
     OperationDefinitionBinding binding,
     List<OperationDefinitionParameter> part,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_use') Element useElement,
-    @JsonKey(name: '_min') Element minElement,
-    @JsonKey(name: '_max') Element maxElement,
-    @JsonKey(name: '_documentation') Element documentationElement,
-    @JsonKey(name: '_type') Element typeElement,
-    @JsonKey(name: '_searchType') Element searchTypeElement,
   }) = _OperationDefinitionParameter;
+
   factory OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionParameterFromJson(json);
 }
 
 @freezed
-abstract class OperationDefinitionBinding with _$OperationDefinitionBinding {
+abstract class OperationDefinitionBinding
+    implements _$OperationDefinitionBinding {
+  OperationDefinitionBinding._();
   factory OperationDefinitionBinding({
-    @JsonKey(unknownEnumValue: BindingStrength.unknown)
-        BindingStrength strength,
-    String valueSetUri,
-    Reference valueSetReference,
+    OperationDefinitionBindingStrength strength,
     @JsonKey(name: '_strength') Element strengthElement,
+    String valueSetUri,
     @JsonKey(name: '_valueSetUri') Element valueSetUriElement,
+    Reference valueSetReference,
   }) = _OperationDefinitionBinding;
+
   factory OperationDefinitionBinding.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionBindingFromJson(json);
 }
 
 @freezed
-abstract class OperationDefinitionOverload with _$OperationDefinitionOverload {
+abstract class OperationDefinitionOverload
+    implements _$OperationDefinitionOverload {
+  OperationDefinitionOverload._();
   factory OperationDefinitionOverload({
     List<String> parameterName,
+    @JsonKey(name: '_parameterName') List<Element> parameterNameElement,
     String comment,
-    @JsonKey(name: '_parameterName') Element parameterNameElement,
     @JsonKey(name: '_comment') Element commentElement,
   }) = _OperationDefinitionOverload;
+
   factory OperationDefinitionOverload.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionOverloadFromJson(json);
 }
@@ -871,75 +941,76 @@ abstract class OperationDefinitionOverload with _$OperationDefinitionOverload {
 abstract class SearchParameter with Resource implements _$SearchParameter {
   SearchParameter._();
   factory SearchParameter({
-    @JsonKey(required: true, defaultValue: 'SearchParameter')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'SearchParameter') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     String url,
+    @JsonKey(name: '_url') Element urlElement,
     String version,
+    @JsonKey(name: '_version') Element versionElement,
     String name,
-    @JsonKey(unknownEnumValue: Status.unknown) Status status,
+    @JsonKey(name: '_name') Element nameElement,
+    SearchParameterStatus status,
+    @JsonKey(name: '_status') Element statusElement,
     Boolean experimental,
-    FhirDateTime date,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    Date date,
+    @JsonKey(name: '_date') Element dateElement,
     String publisher,
+    @JsonKey(name: '_publisher') Element publisherElement,
     List<ContactDetail> contact,
     List<UsageContext> useContext,
     List<CodeableConcept> jurisdiction,
     String purpose,
-    Code code,
-    List<Code> base,
-    @JsonKey(unknownEnumValue: ParameterSearchType.unknown)
-        ParameterSearchType type,
-    String derivedFrom,
-    String description,
-    String expression,
-    String xpath,
-    @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
-        SearchParameterXpathUsage xpathUsage,
-    List<Code> target,
-    List<SearchParameterComparator> comparator,
-    List<SearchParameterModifier> modifier,
-    List<String> chain,
-    List<SearchParameterComponent> component,
-    @JsonKey(name: '_url') Element urlElement,
-    @JsonKey(name: '_version') Element versionElement,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_experimental') Element experimentalElement,
-    @JsonKey(name: '_date') Element dateElement,
-    @JsonKey(name: '_publisher') Element publisherElement,
     @JsonKey(name: '_purpose') Element purposeElement,
+    Code code,
     @JsonKey(name: '_code') Element codeElement,
-    @JsonKey(name: '_base') Element baseElement,
+    List<String> base,
+    @JsonKey(name: '_base') List<Element> baseElement,
+    SearchParameterType type,
     @JsonKey(name: '_type') Element typeElement,
+    String derivedFrom,
     @JsonKey(name: '_derivedFrom') Element derivedFromElement,
+    String description,
     @JsonKey(name: '_description') Element descriptionElement,
+    String expression,
     @JsonKey(name: '_expression') Element expressionElement,
+    String xpath,
     @JsonKey(name: '_xpath') Element xpathElement,
+    SearchParameterXpathUsage xpathUsage,
     @JsonKey(name: '_xpathUsage') Element xpathUsageElement,
-    @JsonKey(name: '_target') Element targetElement,
-    @JsonKey(name: '_comparator') Element comparatorElement,
-    @JsonKey(name: '_modifier') Element modifierElement,
-    @JsonKey(name: '_chain') Element chainElement,
+    List<String> target,
+    @JsonKey(name: '_target') List<Element> targetElement,
+    List<SearchParameterComparator> comparator,
+    @JsonKey(name: '_comparator') List<Element> comparatorElement,
+    List<SearchParameterModifier> modifier,
+    @JsonKey(name: '_modifier') List<Element> modifierElement,
+    List<String> chain,
+    @JsonKey(name: '_chain') List<Element> chainElement,
+    List<SearchParameterComponent> component,
   }) = _SearchParameter;
+
   factory SearchParameter.fromJson(Map<String, dynamic> json) =>
       _$SearchParameterFromJson(json);
 }
 
 @freezed
-abstract class SearchParameterComponent with _$SearchParameterComponent {
+abstract class SearchParameterComponent implements _$SearchParameterComponent {
+  SearchParameterComponent._();
   factory SearchParameterComponent({
-    @JsonKey(required: true) Reference definition,
+    @required Reference definition,
     String expression,
     @JsonKey(name: '_expression') Element expressionElement,
   }) = _SearchParameterComponent;
+
   factory SearchParameterComponent.fromJson(Map<String, dynamic> json) =>
       _$SearchParameterComponentFromJson(json);
 }
@@ -950,104 +1021,110 @@ abstract class StructureDefinition
     implements _$StructureDefinition {
   StructureDefinition._();
   factory StructureDefinition({
-    @JsonKey(required: true, defaultValue: 'StructureDefinition')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'StructureDefinition') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     String url,
+    @JsonKey(name: '_url') Element urlElement,
     List<Identifier> identifier,
     String version,
+    @JsonKey(name: '_version') Element versionElement,
     String name,
+    @JsonKey(name: '_name') Element nameElement,
     String title,
-    @JsonKey(unknownEnumValue: Status.unknown) Status status,
+    @JsonKey(name: '_title') Element titleElement,
+    StructureDefinitionStatus status,
+    @JsonKey(name: '_status') Element statusElement,
     Boolean experimental,
-    FhirDateTime date,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    Date date,
+    @JsonKey(name: '_date') Element dateElement,
     String publisher,
+    @JsonKey(name: '_publisher') Element publisherElement,
     List<ContactDetail> contact,
     String description,
+    @JsonKey(name: '_description') Element descriptionElement,
     List<UsageContext> useContext,
     List<CodeableConcept> jurisdiction,
     String purpose,
+    @JsonKey(name: '_purpose') Element purposeElement,
     String copyright,
+    @JsonKey(name: '_copyright') Element copyrightElement,
     List<Coding> keyword,
-    Id fhirVersion,
+    String fhirVersion,
+    @JsonKey(name: '_fhirVersion') Element fhirVersionElement,
     List<StructureDefinitionMapping> mapping,
-    @JsonKey(unknownEnumValue: StructureDefinitionKind.unknown)
-        StructureDefinitionKind kind,
+    StructureDefinitionKind kind,
+    @JsonKey(name: '_kind') Element kindElement,
     @JsonKey(name: 'abstract') Boolean abstract_,
-    @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
-        StructureDefinitionContextType contextType,
+    @JsonKey(name: '_abstract') Element abstractElement,
+    StructureDefinitionContextType contextType,
+    @JsonKey(name: '_contextType') Element contextTypeElement,
     List<String> context,
+    @JsonKey(name: '_context') List<Element> contextElement,
     List<String> contextInvariant,
-    Code type,
+    @JsonKey(name: '_contextInvariant') List<Element> contextInvariantElement,
+    String type,
+    @JsonKey(name: '_type') Element typeElement,
     String baseDefinition,
-    @JsonKey(unknownEnumValue: StructureDefinitionDerivation.unknown)
-        StructureDefinitionDerivation derivation,
+    @JsonKey(name: '_baseDefinition') Element baseDefinitionElement,
+    StructureDefinitionDerivation derivation,
+    @JsonKey(name: '_derivation') Element derivationElement,
     StructureDefinitionSnapshot snapshot,
     StructureDefinitionDifferential differential,
-    @JsonKey(name: '_url') Element urlElement,
-    @JsonKey(name: '_version') Element versionElement,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_title') Element titleElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_experimental') Element experimentalElement,
-    @JsonKey(name: '_date') Element dateElement,
-    @JsonKey(name: '_publisher') Element publisherElement,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @JsonKey(name: '_purpose') Element purposeElement,
-    @JsonKey(name: '_copyright') Element copyrightElement,
-    @JsonKey(name: '_fhirVersion') Element fhirVersionElement,
-    @JsonKey(name: '_kind') Element kindElement,
-    @JsonKey(name: '_abstract') Element abstractElement,
-    @JsonKey(name: '_contextType') Element contextTypeElement,
-    @JsonKey(name: '_context') Element contextElement,
-    @JsonKey(name: '_contextInvariant') Element contextInvariantElement,
-    @JsonKey(name: '_type') Element typeElement,
-    @JsonKey(name: '_baseDefinition') Element baseDefinitionElement,
-    @JsonKey(name: '_derivation') Element derivationElement,
   }) = _StructureDefinition;
+
   factory StructureDefinition.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionFromJson(json);
 }
 
 @freezed
-abstract class StructureDefinitionMapping with _$StructureDefinitionMapping {
+abstract class StructureDefinitionMapping
+    implements _$StructureDefinitionMapping {
+  StructureDefinitionMapping._();
   factory StructureDefinitionMapping({
     Id identity,
-    String uri,
-    String name,
-    String comment,
     @JsonKey(name: '_identity') Element identityElement,
+    String uri,
     @JsonKey(name: '_uri') Element uriElement,
+    String name,
     @JsonKey(name: '_name') Element nameElement,
+    String comment,
     @JsonKey(name: '_comment') Element commentElement,
   }) = _StructureDefinitionMapping;
+
   factory StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionMappingFromJson(json);
 }
 
 @freezed
-abstract class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
+abstract class StructureDefinitionSnapshot
+    implements _$StructureDefinitionSnapshot {
+  StructureDefinitionSnapshot._();
   factory StructureDefinitionSnapshot({
-    @JsonKey(required: true) List<ElementDefinition> element,
+    @required List<ElementDefinition> element,
   }) = _StructureDefinitionSnapshot;
+
   factory StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionSnapshotFromJson(json);
 }
 
 @freezed
 abstract class StructureDefinitionDifferential
-    with _$StructureDefinitionDifferential {
+    implements _$StructureDefinitionDifferential {
+  StructureDefinitionDifferential._();
   factory StructureDefinitionDifferential({
-    @JsonKey(required: true) List<ElementDefinition> element,
+    @required List<ElementDefinition> element,
   }) = _StructureDefinitionDifferential;
+
   factory StructureDefinitionDifferential.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionDifferentialFromJson(json);
 }
@@ -1056,142 +1133,176 @@ abstract class StructureDefinitionDifferential
 abstract class StructureMap with Resource implements _$StructureMap {
   StructureMap._();
   factory StructureMap({
-    @JsonKey(required: true, defaultValue: 'StructureMap')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'StructureMap') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     String url,
+    @JsonKey(name: '_url') Element urlElement,
     List<Identifier> identifier,
     String version,
+    @JsonKey(name: '_version') Element versionElement,
     String name,
+    @JsonKey(name: '_name') Element nameElement,
     String title,
-    @JsonKey(unknownEnumValue: Status.unknown) Status status,
+    @JsonKey(name: '_title') Element titleElement,
+    StructureMapStatus status,
+    @JsonKey(name: '_status') Element statusElement,
     Boolean experimental,
-    FhirDateTime date,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    Date date,
+    @JsonKey(name: '_date') Element dateElement,
     String publisher,
+    @JsonKey(name: '_publisher') Element publisherElement,
     List<ContactDetail> contact,
     String description,
+    @JsonKey(name: '_description') Element descriptionElement,
     List<UsageContext> useContext,
     List<CodeableConcept> jurisdiction,
     String purpose,
+    @JsonKey(name: '_purpose') Element purposeElement,
     String copyright,
+    @JsonKey(name: '_copyright') Element copyrightElement,
     List<StructureMapStructure> structure,
     List<String> import,
-    @JsonKey(required: true) List<StructureMapGroup> group,
-    @JsonKey(name: '_url') Element urlElement,
-    @JsonKey(name: '_version') Element versionElement,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_title') Element titleElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_experimental') Element experimentalElement,
-    @JsonKey(name: '_date') Element dateElement,
-    @JsonKey(name: '_publisher') Element publisherElement,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @JsonKey(name: '_purpose') Element purposeElement,
-    @JsonKey(name: '_copyright') Element copyrightElement,
-    @JsonKey(name: '_import') Element importElement,
+    @JsonKey(name: '_import') List<Element> importElement,
+    @required List<StructureMapGroup> group,
   }) = _StructureMap;
+
   factory StructureMap.fromJson(Map<String, dynamic> json) =>
       _$StructureMapFromJson(json);
 }
 
 @freezed
-abstract class StructureMapStructure with _$StructureMapStructure {
+abstract class StructureMapStructure implements _$StructureMapStructure {
+  StructureMapStructure._();
   factory StructureMapStructure({
     String url,
-    @JsonKey(unknownEnumValue: StructureMode.unknown) StructureMode mode,
-    String alias,
-    String documentation,
     @JsonKey(name: '_url') Element urlElement,
+    StructureMapStructureMode mode,
     @JsonKey(name: '_mode') Element modeElement,
+    String alias,
     @JsonKey(name: '_alias') Element aliasElement,
+    String documentation,
     @JsonKey(name: '_documentation') Element documentationElement,
   }) = _StructureMapStructure;
+
   factory StructureMapStructure.fromJson(Map<String, dynamic> json) =>
       _$StructureMapStructureFromJson(json);
 }
 
 @freezed
-abstract class StructureMapGroup with _$StructureMapGroup {
+abstract class StructureMapGroup implements _$StructureMapGroup {
+  StructureMapGroup._();
   factory StructureMapGroup({
-    Id name,
-    @JsonKey(name: 'extends') Id extends_,
-    @JsonKey(unknownEnumValue: GroupTypeMode.unknown) GroupTypeMode typeMode,
-    String documentation,
-    @JsonKey(required: true) List<StructureMapInput> input,
-    @JsonKey(required: true) List<StructureMapRule> rule,
+    String name,
     @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: 'extends') String extends_,
     @JsonKey(name: '_extends') Element extendsElement,
+    StructureMapGroupTypeMode typeMode,
     @JsonKey(name: '_typeMode') Element typeModeElement,
+    String documentation,
     @JsonKey(name: '_documentation') Element documentationElement,
+    @required List<StructureMapInput> input,
+    @required List<StructureMapRule> rule,
   }) = _StructureMapGroup;
+
   factory StructureMapGroup.fromJson(Map<String, dynamic> json) =>
       _$StructureMapGroupFromJson(json);
 }
 
 @freezed
-abstract class StructureMapInput with _$StructureMapInput {
+abstract class StructureMapInput implements _$StructureMapInput {
+  StructureMapInput._();
   factory StructureMapInput({
-    Id name,
-    String type,
-    @JsonKey(unknownEnumValue: InputMode.unknown) InputMode mode,
-    String documentation,
+    String name,
     @JsonKey(name: '_name') Element nameElement,
+    String type,
     @JsonKey(name: '_type') Element typeElement,
+    StructureMapInputMode mode,
     @JsonKey(name: '_mode') Element modeElement,
+    String documentation,
     @JsonKey(name: '_documentation') Element documentationElement,
   }) = _StructureMapInput;
+
   factory StructureMapInput.fromJson(Map<String, dynamic> json) =>
       _$StructureMapInputFromJson(json);
 }
 
 @freezed
-abstract class StructureMapRule with _$StructureMapRule {
+abstract class StructureMapRule implements _$StructureMapRule {
+  StructureMapRule._();
   factory StructureMapRule({
-    Id name,
-    @JsonKey(required: true) List<StructureMapSource> source,
+    String name,
+    @JsonKey(name: '_name') Element nameElement,
+    @required List<StructureMapSource> source,
     List<StructureMapTarget> target,
     List<StructureMapRule> rule,
     List<StructureMapDependent> dependent,
     String documentation,
-    @JsonKey(name: '_name') Element nameElement,
     @JsonKey(name: '_documentation') Element documentationElement,
   }) = _StructureMapRule;
+
   factory StructureMapRule.fromJson(Map<String, dynamic> json) =>
       _$StructureMapRuleFromJson(json);
 }
 
 @freezed
-abstract class StructureMapSource with _$StructureMapSource {
+abstract class StructureMapSource implements _$StructureMapSource {
+  StructureMapSource._();
   factory StructureMapSource({
-    Id context,
-    Integer min,
+    String context,
+    @JsonKey(name: '_context') Element contextElement,
+    Decimal min,
+    @JsonKey(name: '_min') Element minElement,
     String max,
+    @JsonKey(name: '_max') Element maxElement,
     String type,
+    @JsonKey(name: '_type') Element typeElement,
     Boolean defaultValueBoolean,
-    Integer defaultValueInteger,
+    @JsonKey(name: '_defaultValueBoolean') Element defaultValueBooleanElement,
+    Decimal defaultValueInteger,
+    @JsonKey(name: '_defaultValueInteger') Element defaultValueIntegerElement,
     Decimal defaultValueDecimal,
+    @JsonKey(name: '_defaultValueDecimal') Element defaultValueDecimalElement,
     String defaultValueBase64Binary,
+    @JsonKey(name: '_defaultValueBase64Binary')
+        Element defaultValueBase64BinaryElement,
     String defaultValueInstant,
+    @JsonKey(name: '_defaultValueInstant') Element defaultValueInstantElement,
     String defaultValueString,
+    @JsonKey(name: '_defaultValueString') Element defaultValueStringElement,
     String defaultValueUri,
+    @JsonKey(name: '_defaultValueUri') Element defaultValueUriElement,
     Date defaultValueDate,
+    @JsonKey(name: '_defaultValueDate') Element defaultValueDateElement,
     FhirDateTime defaultValueDateTime,
+    @JsonKey(name: '_defaultValueDateTime') Element defaultValueDateTimeElement,
     Time defaultValueTime,
+    @JsonKey(name: '_defaultValueTime') Element defaultValueTimeElement,
     Code defaultValueCode,
-    Oid defaultValueOid,
-    Uuid defaultValueUuid,
+    @JsonKey(name: '_defaultValueCode') Element defaultValueCodeElement,
+    Id defaultValueOid,
+    @JsonKey(name: '_defaultValueOid') Element defaultValueOidElement,
+    Id defaultValueUuid,
+    @JsonKey(name: '_defaultValueUuid') Element defaultValueUuidElement,
     Id defaultValueId,
-    UnsignedInt defaultValueUnsignedInt,
-    PositiveInt defaultValuePositiveInt,
+    @JsonKey(name: '_defaultValueId') Element defaultValueIdElement,
+    Decimal defaultValueUnsignedInt,
+    @JsonKey(name: '_defaultValueUnsignedInt')
+        Element defaultValueUnsignedIntElement,
+    Decimal defaultValuePositiveInt,
+    @JsonKey(name: '_defaultValuePositiveInt')
+        Element defaultValuePositiveIntElement,
     String defaultValueMarkdown,
+    @JsonKey(name: '_defaultValueMarkdown') Element defaultValueMarkdownElement,
     Element defaultValueElement,
     FhirExtension defaultValueExtension,
     BackboneElement defaultValueBackboneElement,
@@ -1229,95 +1340,76 @@ abstract class StructureMapSource with _$StructureMapSource {
     ParameterDefinition defaultValueParameterDefinition,
     TriggerDefinition defaultValueTriggerDefinition,
     String element,
-    @JsonKey(unknownEnumValue: SourceListMode.unknown) SourceListMode listMode,
-    Id variable,
-    String condition,
-    String check,
-    @JsonKey(name: '_context') Element contextElement,
-    @JsonKey(name: '_min') Element minElement,
-    @JsonKey(name: '_max') Element maxElement,
-    @JsonKey(name: '_type') Element typeElement,
-    @JsonKey(name: '_defaultValueBoolean') Element defaultValueBooleanElement,
-    @JsonKey(name: '_defaultValueInteger') Element defaultValueIntegerElement,
-    @JsonKey(name: '_defaultValueDecimal') Element defaultValueDecimalElement,
-    @JsonKey(name: '_defaultValueBase64Binary')
-        Element defaultValueBase64BinaryElement,
-    @JsonKey(name: '_defaultValueInstant') Element defaultValueInstantElement,
-    @JsonKey(name: '_defaultValueString') Element defaultValueStringElement,
-    @JsonKey(name: '_defaultValueUri') Element defaultValueUriElement,
-    @JsonKey(name: '_defaultValueDate') Element defaultValueDateElement,
-    @JsonKey(name: '_defaultValueDateTime') Element defaultValueDateTimeElement,
-    @JsonKey(name: '_defaultValueTime') Element defaultValueTimeElement,
-    @JsonKey(name: '_defaultValueCode') Element defaultValueCodeElement,
-    @JsonKey(name: '_defaultValueOid') Element defaultValueOidElement,
-    @JsonKey(name: '_defaultValueUuid') Element defaultValueUuidElement,
-    @JsonKey(name: '_defaultValueId') Element defaultValueIdElement,
-    @JsonKey(name: '_defaultValueUnsignedInt')
-        Element defaultValueUnsignedIntElement,
-    @JsonKey(name: '_defaultValuePositiveInt')
-        Element defaultValuePositiveIntElement,
-    @JsonKey(name: '_defaultValueMarkdown') Element defaultValueMarkdownElement,
     @JsonKey(name: '_element') Element elementElement,
+    StructureMapSourceListMode listMode,
     @JsonKey(name: '_listMode') Element listModeElement,
+    String variable,
     @JsonKey(name: '_variable') Element variableElement,
+    String condition,
     @JsonKey(name: '_condition') Element conditionElement,
+    String check,
     @JsonKey(name: '_check') Element checkElement,
   }) = _StructureMapSource;
+
   factory StructureMapSource.fromJson(Map<String, dynamic> json) =>
       _$StructureMapSourceFromJson(json);
 }
 
 @freezed
-abstract class StructureMapTarget with _$StructureMapTarget {
+abstract class StructureMapTarget implements _$StructureMapTarget {
+  StructureMapTarget._();
   factory StructureMapTarget({
-    Id context,
-    @JsonKey(unknownEnumValue: TargetContextType.unknown)
-        TargetContextType contextType,
-    String element,
-    Id variable,
-    List<TargetListMode> listMode,
-    Id listRuleId,
-    @JsonKey(unknownEnumValue: TargetTransform.unknown)
-        TargetTransform transform,
-    List<StructureMapParameter> parameter,
+    String context,
     @JsonKey(name: '_context') Element contextElement,
+    StructureMapTargetContextType contextType,
     @JsonKey(name: '_contextType') Element contextTypeElement,
+    String element,
     @JsonKey(name: '_element') Element elementElement,
+    String variable,
     @JsonKey(name: '_variable') Element variableElement,
-    @JsonKey(name: '_listMode') Element listModeElement,
+    List<StructureMapTargetListMode> listMode,
+    @JsonKey(name: '_listMode') List<Element> listModeElement,
+    Id listRuleId,
     @JsonKey(name: '_listRuleId') Element listRuleIdElement,
+    StructureMapTargetTransform transform,
     @JsonKey(name: '_transform') Element transformElement,
+    List<StructureMapParameter> parameter,
   }) = _StructureMapTarget;
+
   factory StructureMapTarget.fromJson(Map<String, dynamic> json) =>
       _$StructureMapTargetFromJson(json);
 }
 
 @freezed
-abstract class StructureMapParameter with _$StructureMapParameter {
+abstract class StructureMapParameter implements _$StructureMapParameter {
+  StructureMapParameter._();
   factory StructureMapParameter({
     Id valueId,
-    String valueString,
-    Boolean valueBoolean,
-    Integer valueInteger,
-    Decimal valueDecimal,
     @JsonKey(name: '_valueId') Element valueIdElement,
+    String valueString,
     @JsonKey(name: '_valueString') Element valueStringElement,
+    Boolean valueBoolean,
     @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+    Decimal valueInteger,
     @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+    Decimal valueDecimal,
     @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
   }) = _StructureMapParameter;
+
   factory StructureMapParameter.fromJson(Map<String, dynamic> json) =>
       _$StructureMapParameterFromJson(json);
 }
 
 @freezed
-abstract class StructureMapDependent with _$StructureMapDependent {
+abstract class StructureMapDependent implements _$StructureMapDependent {
+  StructureMapDependent._();
   factory StructureMapDependent({
-    Id name,
-    List<String> variable,
+    String name,
     @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_variable') Element variableElement,
+    List<String> variable,
+    @JsonKey(name: '_variable') List<Element> variableElement,
   }) = _StructureMapDependent;
+
   factory StructureMapDependent.fromJson(Map<String, dynamic> json) =>
       _$StructureMapDependentFromJson(json);
 }

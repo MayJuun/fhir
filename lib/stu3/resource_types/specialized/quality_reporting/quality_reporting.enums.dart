@@ -1,4 +1,15 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'quality_reporting.dart';
+
+enum MeasureStatus {
+  @JsonValue('draft')
+  draft,
+  @JsonValue('active')
+  active,
+  @JsonValue('retired')
+  retired,
+  @JsonValue('unknown')
+  unknown,
+}
 
 enum MeasureReportStatus {
   @JsonValue('complete')

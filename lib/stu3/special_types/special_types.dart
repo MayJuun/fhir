@@ -1,108 +1,126 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 // import 'package:flutter/foundation.dart';
 
-import 'special_types.enums.dart';
 import '../../stu3.dart';
-import '../resource_types/resource_types.enums.dart';
 
+part 'special_types.enums.dart';
 part 'special_types.freezed.dart';
 part 'special_types.g.dart';
 
 @freezed
-abstract class BackboneElement with _$BackboneElement {
-  factory BackboneElement({
-    List<FhirExtension> modifierExtension,
-  }) = _BackboneElement;
-  factory BackboneElement.fromJson(Map<String, dynamic> json) =>
-      _$BackboneElementFromJson(json);
-}
-
-@freezed
-abstract class Narrative with _$Narrative {
+abstract class Narrative implements _$Narrative {
+  Narrative._();
   factory Narrative({
-    @JsonKey(unknownEnumValue: NarrativeStatus.unknown) NarrativeStatus status,
-    @JsonKey(required: true) String div,
+    NarrativeStatus status,
     @JsonKey(name: '_status') Element statusElement,
+    @required String div,
   }) = _Narrative;
+
   factory Narrative.fromJson(Map<String, dynamic> json) =>
       _$NarrativeFromJson(json);
 }
 
 @freezed
-abstract class Reference with _$Reference {
+abstract class Reference implements _$Reference {
+  Reference._();
   factory Reference({
     String reference,
+    @JsonKey(name: '_reference') Element referenceElement,
     Identifier identifier,
     String display,
-    @JsonKey(name: '_reference') Element referenceElement,
     @JsonKey(name: '_display') Element displayElement,
   }) = _Reference;
+
   factory Reference.fromJson(Map<String, dynamic> json) =>
       _$ReferenceFromJson(json);
 }
 
 @freezed
-abstract class Meta with _$Meta {
+abstract class Meta implements _$Meta {
+  Meta._();
   factory Meta({
     Id versionId,
+    @JsonKey(name: '_versionId') Element versionIdElement,
     String lastUpdated,
+    @JsonKey(name: '_lastUpdated') Element lastUpdatedElement,
     List<String> profile,
+    @JsonKey(name: '_profile') List<Element> profileElement,
     List<Coding> security,
     List<Coding> tag,
-    @JsonKey(name: '_versionId') Element versionIdElement,
-    @JsonKey(name: '_lastUpdated') Element lastUpdatedElement,
-    @JsonKey(name: '_profile') Element profileElement,
   }) = _Meta;
+
   factory Meta.fromJson(Map<String, dynamic> json) => _$MetaFromJson(json);
 }
 
 @freezed
-abstract class Element with _$Element {
-  factory Element({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    @JsonKey(name: '_id') Element idElement,
-  }) = _Element;
-  factory Element.fromJson(Map<String, dynamic> json) =>
-      _$ElementFromJson(json);
-}
-
-@freezed
-abstract class ElementDefinition with _$ElementDefinition {
+abstract class ElementDefinition implements _$ElementDefinition {
+  ElementDefinition._();
   factory ElementDefinition({
     String path,
+    @JsonKey(name: '_path') Element pathElement,
     List<ElementDefinitionRepresentation> representation,
+    @JsonKey(name: '_representation') List<Element> representationElement,
     String sliceName,
+    @JsonKey(name: '_sliceName') Element sliceNameElement,
     String label,
+    @JsonKey(name: '_label') Element labelElement,
     List<Coding> code,
     ElementDefinitionSlicing slicing,
     String short,
+    @JsonKey(name: '_short') Element shortElement,
     String definition,
+    @JsonKey(name: '_definition') Element definitionElement,
     String comment,
+    @JsonKey(name: '_comment') Element commentElement,
     String requirements,
+    @JsonKey(name: '_requirements') Element requirementsElement,
     List<String> alias,
-    UnsignedInt min,
+    @JsonKey(name: '_alias') List<Element> aliasElement,
+    Decimal min,
+    @JsonKey(name: '_min') Element minElement,
     String max,
+    @JsonKey(name: '_max') Element maxElement,
     ElementDefinitionBase base,
     String contentReference,
+    @JsonKey(name: '_contentReference') Element contentReferenceElement,
     List<ElementDefinitionType> type,
     Boolean defaultValueBoolean,
-    Integer defaultValueInteger,
+    @JsonKey(name: '_defaultValueBoolean') Element defaultValueBooleanElement,
+    Decimal defaultValueInteger,
+    @JsonKey(name: '_defaultValueInteger') Element defaultValueIntegerElement,
     Decimal defaultValueDecimal,
+    @JsonKey(name: '_defaultValueDecimal') Element defaultValueDecimalElement,
     String defaultValueBase64Binary,
+    @JsonKey(name: '_defaultValueBase64Binary')
+        Element defaultValueBase64BinaryElement,
     String defaultValueInstant,
+    @JsonKey(name: '_defaultValueInstant') Element defaultValueInstantElement,
     String defaultValueString,
+    @JsonKey(name: '_defaultValueString') Element defaultValueStringElement,
     String defaultValueUri,
+    @JsonKey(name: '_defaultValueUri') Element defaultValueUriElement,
     Date defaultValueDate,
+    @JsonKey(name: '_defaultValueDate') Element defaultValueDateElement,
     FhirDateTime defaultValueDateTime,
+    @JsonKey(name: '_defaultValueDateTime') Element defaultValueDateTimeElement,
     Time defaultValueTime,
+    @JsonKey(name: '_defaultValueTime') Element defaultValueTimeElement,
     Code defaultValueCode,
-    Oid defaultValueOid,
-    Uuid defaultValueUuid,
+    @JsonKey(name: '_defaultValueCode') Element defaultValueCodeElement,
+    Id defaultValueOid,
+    @JsonKey(name: '_defaultValueOid') Element defaultValueOidElement,
+    Id defaultValueUuid,
+    @JsonKey(name: '_defaultValueUuid') Element defaultValueUuidElement,
     Id defaultValueId,
-    UnsignedInt defaultValueUnsignedInt,
-    PositiveInt defaultValuePositiveInt,
+    @JsonKey(name: '_defaultValueId') Element defaultValueIdElement,
+    Decimal defaultValueUnsignedInt,
+    @JsonKey(name: '_defaultValueUnsignedInt')
+        Element defaultValueUnsignedIntElement,
+    Decimal defaultValuePositiveInt,
+    @JsonKey(name: '_defaultValuePositiveInt')
+        Element defaultValuePositiveIntElement,
     String defaultValueMarkdown,
+    @JsonKey(name: '_defaultValueMarkdown') Element defaultValueMarkdownElement,
     Element defaultValueElement,
     FhirExtension defaultValueExtension,
     BackboneElement defaultValueBackboneElement,
@@ -140,24 +158,43 @@ abstract class ElementDefinition with _$ElementDefinition {
     ParameterDefinition defaultValueParameterDefinition,
     TriggerDefinition defaultValueTriggerDefinition,
     String meaningWhenMissing,
+    @JsonKey(name: '_meaningWhenMissing') Element meaningWhenMissingElement,
     String orderMeaning,
+    @JsonKey(name: '_orderMeaning') Element orderMeaningElement,
     Boolean fixedBoolean,
-    Integer fixedInteger,
+    @JsonKey(name: '_fixedBoolean') Element fixedBooleanElement,
+    Decimal fixedInteger,
+    @JsonKey(name: '_fixedInteger') Element fixedIntegerElement,
     Decimal fixedDecimal,
+    @JsonKey(name: '_fixedDecimal') Element fixedDecimalElement,
     String fixedBase64Binary,
+    @JsonKey(name: '_fixedBase64Binary') Element fixedBase64BinaryElement,
     String fixedInstant,
+    @JsonKey(name: '_fixedInstant') Element fixedInstantElement,
     String fixedString,
+    @JsonKey(name: '_fixedString') Element fixedStringElement,
     String fixedUri,
+    @JsonKey(name: '_fixedUri') Element fixedUriElement,
     Date fixedDate,
+    @JsonKey(name: '_fixedDate') Element fixedDateElement,
     FhirDateTime fixedDateTime,
+    @JsonKey(name: '_fixedDateTime') Element fixedDateTimeElement,
     Time fixedTime,
+    @JsonKey(name: '_fixedTime') Element fixedTimeElement,
     Code fixedCode,
-    Oid fixedOid,
-    Uuid fixedUuid,
+    @JsonKey(name: '_fixedCode') Element fixedCodeElement,
+    Id fixedOid,
+    @JsonKey(name: '_fixedOid') Element fixedOidElement,
+    Id fixedUuid,
+    @JsonKey(name: '_fixedUuid') Element fixedUuidElement,
     Id fixedId,
-    UnsignedInt fixedUnsignedInt,
-    PositiveInt fixedPositiveInt,
+    @JsonKey(name: '_fixedId') Element fixedIdElement,
+    Decimal fixedUnsignedInt,
+    @JsonKey(name: '_fixedUnsignedInt') Element fixedUnsignedIntElement,
+    Decimal fixedPositiveInt,
+    @JsonKey(name: '_fixedPositiveInt') Element fixedPositiveIntElement,
     String fixedMarkdown,
+    @JsonKey(name: '_fixedMarkdown') Element fixedMarkdownElement,
     Element fixedElement,
     FhirExtension fixedExtension,
     BackboneElement fixedBackboneElement,
@@ -195,22 +232,39 @@ abstract class ElementDefinition with _$ElementDefinition {
     ParameterDefinition fixedParameterDefinition,
     TriggerDefinition fixedTriggerDefinition,
     Boolean patternBoolean,
-    Integer patternInteger,
+    @JsonKey(name: '_patternBoolean') Element patternBooleanElement,
+    Decimal patternInteger,
+    @JsonKey(name: '_patternInteger') Element patternIntegerElement,
     Decimal patternDecimal,
+    @JsonKey(name: '_patternDecimal') Element patternDecimalElement,
     String patternBase64Binary,
+    @JsonKey(name: '_patternBase64Binary') Element patternBase64BinaryElement,
     String patternInstant,
+    @JsonKey(name: '_patternInstant') Element patternInstantElement,
     String patternString,
+    @JsonKey(name: '_patternString') Element patternStringElement,
     String patternUri,
+    @JsonKey(name: '_patternUri') Element patternUriElement,
     Date patternDate,
+    @JsonKey(name: '_patternDate') Element patternDateElement,
     FhirDateTime patternDateTime,
+    @JsonKey(name: '_patternDateTime') Element patternDateTimeElement,
     Time patternTime,
+    @JsonKey(name: '_patternTime') Element patternTimeElement,
     Code patternCode,
-    Oid patternOid,
-    Uuid patternUuid,
+    @JsonKey(name: '_patternCode') Element patternCodeElement,
+    Id patternOid,
+    @JsonKey(name: '_patternOid') Element patternOidElement,
+    Id patternUuid,
+    @JsonKey(name: '_patternUuid') Element patternUuidElement,
     Id patternId,
-    UnsignedInt patternUnsignedInt,
-    PositiveInt patternPositiveInt,
+    @JsonKey(name: '_patternId') Element patternIdElement,
+    Decimal patternUnsignedInt,
+    @JsonKey(name: '_patternUnsignedInt') Element patternUnsignedIntElement,
+    Decimal patternPositiveInt,
+    @JsonKey(name: '_patternPositiveInt') Element patternPositiveIntElement,
     String patternMarkdown,
+    @JsonKey(name: '_patternMarkdown') Element patternMarkdownElement,
     Element patternElement,
     FhirExtension patternExtension,
     BackboneElement patternBackboneElement,
@@ -249,208 +303,166 @@ abstract class ElementDefinition with _$ElementDefinition {
     TriggerDefinition patternTriggerDefinition,
     List<ElementDefinitionExample> example,
     Date minValueDate,
+    @JsonKey(name: '_minValueDate') Element minValueDateElement,
     FhirDateTime minValueDateTime,
+    @JsonKey(name: '_minValueDateTime') Element minValueDateTimeElement,
     String minValueInstant,
+    @JsonKey(name: '_minValueInstant') Element minValueInstantElement,
     Time minValueTime,
+    @JsonKey(name: '_minValueTime') Element minValueTimeElement,
     Decimal minValueDecimal,
-    Integer minValueInteger,
-    PositiveInt minValuePositiveInt,
-    UnsignedInt minValueUnsignedInt,
+    @JsonKey(name: '_minValueDecimal') Element minValueDecimalElement,
+    Decimal minValueInteger,
+    @JsonKey(name: '_minValueInteger') Element minValueIntegerElement,
+    Decimal minValuePositiveInt,
+    @JsonKey(name: '_minValuePositiveInt') Element minValuePositiveIntElement,
+    Decimal minValueUnsignedInt,
+    @JsonKey(name: '_minValueUnsignedInt') Element minValueUnsignedIntElement,
     Quantity minValueQuantity,
     Date maxValueDate,
+    @JsonKey(name: '_maxValueDate') Element maxValueDateElement,
     FhirDateTime maxValueDateTime,
+    @JsonKey(name: '_maxValueDateTime') Element maxValueDateTimeElement,
     String maxValueInstant,
+    @JsonKey(name: '_maxValueInstant') Element maxValueInstantElement,
     Time maxValueTime,
+    @JsonKey(name: '_maxValueTime') Element maxValueTimeElement,
     Decimal maxValueDecimal,
-    Integer maxValueInteger,
-    PositiveInt maxValuePositiveInt,
-    UnsignedInt maxValueUnsignedInt,
+    @JsonKey(name: '_maxValueDecimal') Element maxValueDecimalElement,
+    Decimal maxValueInteger,
+    @JsonKey(name: '_maxValueInteger') Element maxValueIntegerElement,
+    Decimal maxValuePositiveInt,
+    @JsonKey(name: '_maxValuePositiveInt') Element maxValuePositiveIntElement,
+    Decimal maxValueUnsignedInt,
+    @JsonKey(name: '_maxValueUnsignedInt') Element maxValueUnsignedIntElement,
     Quantity maxValueQuantity,
-    Integer maxLength,
-    List<Id> condition,
+    Decimal maxLength,
+    @JsonKey(name: '_maxLength') Element maxLengthElement,
+    List<String> condition,
+    @JsonKey(name: '_condition') List<Element> conditionElement,
     List<ElementDefinitionConstraint> constraint,
     Boolean mustSupport,
+    @JsonKey(name: '_mustSupport') Element mustSupportElement,
     Boolean isModifier,
+    @JsonKey(name: '_isModifier') Element isModifierElement,
     Boolean isSummary,
+    @JsonKey(name: '_isSummary') Element isSummaryElement,
     ElementDefinitionBinding binding,
     List<ElementDefinitionMapping> mapping,
-    @JsonKey(name: '_path') Element pathElement,
-    @JsonKey(name: '_representation') Element representationElement,
-    @JsonKey(name: '_sliceName') Element sliceNameElement,
-    @JsonKey(name: '_label') Element labelElement,
-    @JsonKey(name: '_short') Element shortElement,
-    @JsonKey(name: '_definition') Element definitionElement,
-    @JsonKey(name: '_comment') Element commentElement,
-    @JsonKey(name: '_requirements') Element requirementsElement,
-    @JsonKey(name: '_alias') Element aliasElement,
-    @JsonKey(name: '_min') Element minElement,
-    @JsonKey(name: '_max') Element maxElement,
-    @JsonKey(name: '_contentReference') Element contentReferenceElement,
-    @JsonKey(name: '_defaultValueBoolean') Element defaultValueBooleanElement,
-    @JsonKey(name: '_defaultValueInteger') Element defaultValueIntegerElement,
-    @JsonKey(name: '_defaultValueDecimal') Element defaultValueDecimalElement,
-    @JsonKey(name: '_defaultValueBase64Binary')
-        Element defaultValueBase64BinaryElement,
-    @JsonKey(name: '_defaultValueInstant') Element defaultValueInstantElement,
-    @JsonKey(name: '_defaultValueString') Element defaultValueStringElement,
-    @JsonKey(name: '_defaultValueUri') Element defaultValueUriElement,
-    @JsonKey(name: '_defaultValueDate') Element defaultValueDateElement,
-    @JsonKey(name: '_defaultValueDateTime') Element defaultValueDateTimeElement,
-    @JsonKey(name: '_defaultValueTime') Element defaultValueTimeElement,
-    @JsonKey(name: '_defaultValueCode') Element defaultValueCodeElement,
-    @JsonKey(name: '_defaultValueOid') Element defaultValueOidElement,
-    @JsonKey(name: '_defaultValueUuid') Element defaultValueUuidElement,
-    @JsonKey(name: '_defaultValueId') Element defaultValueIdElement,
-    @JsonKey(name: '_defaultValueUnsignedInt')
-        Element defaultValueUnsignedIntElement,
-    @JsonKey(name: '_defaultValuePositiveInt')
-        Element defaultValuePositiveIntElement,
-    @JsonKey(name: '_defaultValueMarkdown') Element defaultValueMarkdownElement,
-    @JsonKey(name: '_meaningWhenMissing') Element meaningWhenMissingElement,
-    @JsonKey(name: '_orderMeaning') Element orderMeaningElement,
-    @JsonKey(name: '_fixedBoolean') Element fixedBooleanElement,
-    @JsonKey(name: '_fixedInteger') Element fixedIntegerElement,
-    @JsonKey(name: '_fixedDecimal') Element fixedDecimalElement,
-    @JsonKey(name: '_fixedBase64Binary') Element fixedBase64BinaryElement,
-    @JsonKey(name: '_fixedInstant') Element fixedInstantElement,
-    @JsonKey(name: '_fixedString') Element fixedStringElement,
-    @JsonKey(name: '_fixedUri') Element fixedUriElement,
-    @JsonKey(name: '_fixedDate') Element fixedDateElement,
-    @JsonKey(name: '_fixedDateTime') Element fixedDateTimeElement,
-    @JsonKey(name: '_fixedTime') Element fixedTimeElement,
-    @JsonKey(name: '_fixedCode') Element fixedCodeElement,
-    @JsonKey(name: '_fixedOid') Element fixedOidElement,
-    @JsonKey(name: '_fixedUuid') Element fixedUuidElement,
-    @JsonKey(name: '_fixedId') Element fixedIdElement,
-    @JsonKey(name: '_fixedUnsignedInt') Element fixedUnsignedIntElement,
-    @JsonKey(name: '_fixedPositiveInt') Element fixedPositiveIntElement,
-    @JsonKey(name: '_fixedMarkdown') Element fixedMarkdownElement,
-    @JsonKey(name: '_patternBoolean') Element patternBooleanElement,
-    @JsonKey(name: '_patternInteger') Element patternIntegerElement,
-    @JsonKey(name: '_patternDecimal') Element patternDecimalElement,
-    @JsonKey(name: '_patternBase64Binary') Element patternBase64BinaryElement,
-    @JsonKey(name: '_patternInstant') Element patternInstantElement,
-    @JsonKey(name: '_patternString') Element patternStringElement,
-    @JsonKey(name: '_patternUri') Element patternUriElement,
-    @JsonKey(name: '_patternDate') Element patternDateElement,
-    @JsonKey(name: '_patternDateTime') Element patternDateTimeElement,
-    @JsonKey(name: '_patternTime') Element patternTimeElement,
-    @JsonKey(name: '_patternCode') Element patternCodeElement,
-    @JsonKey(name: '_patternOid') Element patternOidElement,
-    @JsonKey(name: '_patternUuid') Element patternUuidElement,
-    @JsonKey(name: '_patternId') Element patternIdElement,
-    @JsonKey(name: '_patternUnsignedInt') Element patternUnsignedIntElement,
-    @JsonKey(name: '_patternPositiveInt') Element patternPositiveIntElement,
-    @JsonKey(name: '_patternMarkdown') Element patternMarkdownElement,
-    @JsonKey(name: '_minValueDate') Element minValueDateElement,
-    @JsonKey(name: '_minValueDateTime') Element minValueDateTimeElement,
-    @JsonKey(name: '_minValueInstant') Element minValueInstantElement,
-    @JsonKey(name: '_minValueTime') Element minValueTimeElement,
-    @JsonKey(name: '_minValueDecimal') Element minValueDecimalElement,
-    @JsonKey(name: '_minValueInteger') Element minValueIntegerElement,
-    @JsonKey(name: '_minValuePositiveInt') Element minValuePositiveIntElement,
-    @JsonKey(name: '_minValueUnsignedInt') Element minValueUnsignedIntElement,
-    @JsonKey(name: '_maxValueDate') Element maxValueDateElement,
-    @JsonKey(name: '_maxValueDateTime') Element maxValueDateTimeElement,
-    @JsonKey(name: '_maxValueInstant') Element maxValueInstantElement,
-    @JsonKey(name: '_maxValueTime') Element maxValueTimeElement,
-    @JsonKey(name: '_maxValueDecimal') Element maxValueDecimalElement,
-    @JsonKey(name: '_maxValueInteger') Element maxValueIntegerElement,
-    @JsonKey(name: '_maxValuePositiveInt') Element maxValuePositiveIntElement,
-    @JsonKey(name: '_maxValueUnsignedInt') Element maxValueUnsignedIntElement,
-    @JsonKey(name: '_maxLength') Element maxLengthElement,
-    @JsonKey(name: '_condition') Element conditionElement,
-    @JsonKey(name: '_mustSupport') Element mustSupportElement,
-    @JsonKey(name: '_isModifier') Element isModifierElement,
-    @JsonKey(name: '_isSummary') Element isSummaryElement,
   }) = _ElementDefinition;
+
   factory ElementDefinition.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionFromJson(json);
 }
 
 @freezed
-abstract class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
+abstract class ElementDefinitionSlicing implements _$ElementDefinitionSlicing {
+  ElementDefinitionSlicing._();
   factory ElementDefinitionSlicing({
     List<ElementDefinitionDiscriminator> discriminator,
     String description,
-    Boolean ordered,
-    @JsonKey(unknownEnumValue: SlicingRules.unknown) SlicingRules rules,
     @JsonKey(name: '_description') Element descriptionElement,
+    Boolean ordered,
     @JsonKey(name: '_ordered') Element orderedElement,
+    ElementDefinitionSlicingRules rules,
     @JsonKey(name: '_rules') Element rulesElement,
   }) = _ElementDefinitionSlicing;
+
   factory ElementDefinitionSlicing.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionSlicingFromJson(json);
 }
 
 @freezed
 abstract class ElementDefinitionDiscriminator
-    with _$ElementDefinitionDiscriminator {
+    implements _$ElementDefinitionDiscriminator {
+  ElementDefinitionDiscriminator._();
   factory ElementDefinitionDiscriminator({
-    @JsonKey(unknownEnumValue: DiscriminatorType.unknown)
-        DiscriminatorType type,
-    String path,
+    ElementDefinitionDiscriminatorType type,
     @JsonKey(name: '_type') Element typeElement,
+    String path,
     @JsonKey(name: '_path') Element pathElement,
   }) = _ElementDefinitionDiscriminator;
+
   factory ElementDefinitionDiscriminator.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionDiscriminatorFromJson(json);
 }
 
 @freezed
-abstract class ElementDefinitionBase with _$ElementDefinitionBase {
+abstract class ElementDefinitionBase implements _$ElementDefinitionBase {
+  ElementDefinitionBase._();
   factory ElementDefinitionBase({
     String path,
-    UnsignedInt min,
-    String max,
     @JsonKey(name: '_path') Element pathElement,
+    Decimal min,
     @JsonKey(name: '_min') Element minElement,
+    String max,
     @JsonKey(name: '_max') Element maxElement,
   }) = _ElementDefinitionBase;
+
   factory ElementDefinitionBase.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionBaseFromJson(json);
 }
 
 @freezed
-abstract class ElementDefinitionType with _$ElementDefinitionType {
+abstract class ElementDefinitionType implements _$ElementDefinitionType {
+  ElementDefinitionType._();
   factory ElementDefinitionType({
     String code,
-    String profile,
-    String targetProfile,
-    List<TypeAggregation> aggregation,
-    @JsonKey(unknownEnumValue: TypeVersioning.unknown)
-        TypeVersioning versioning,
     @JsonKey(name: '_code') Element codeElement,
+    String profile,
     @JsonKey(name: '_profile') Element profileElement,
+    String targetProfile,
     @JsonKey(name: '_targetProfile') Element targetProfileElement,
-    @JsonKey(name: '_aggregation') Element aggregationElement,
+    List<ElementDefinitionTypeAggregation> aggregation,
+    @JsonKey(name: '_aggregation') List<Element> aggregationElement,
+    ElementDefinitionTypeVersioning versioning,
     @JsonKey(name: '_versioning') Element versioningElement,
   }) = _ElementDefinitionType;
+
   factory ElementDefinitionType.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionTypeFromJson(json);
 }
 
 @freezed
-abstract class ElementDefinitionExample with _$ElementDefinitionExample {
+abstract class ElementDefinitionExample implements _$ElementDefinitionExample {
+  ElementDefinitionExample._();
   factory ElementDefinitionExample({
     String label,
+    @JsonKey(name: '_label') Element labelElement,
     Boolean valueBoolean,
-    Integer valueInteger,
+    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+    Decimal valueInteger,
+    @JsonKey(name: '_valueInteger') Element valueIntegerElement,
     Decimal valueDecimal,
+    @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
     String valueBase64Binary,
+    @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
     String valueInstant,
+    @JsonKey(name: '_valueInstant') Element valueInstantElement,
     String valueString,
+    @JsonKey(name: '_valueString') Element valueStringElement,
     String valueUri,
+    @JsonKey(name: '_valueUri') Element valueUriElement,
     Date valueDate,
+    @JsonKey(name: '_valueDate') Element valueDateElement,
     FhirDateTime valueDateTime,
+    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
     Time valueTime,
+    @JsonKey(name: '_valueTime') Element valueTimeElement,
     Code valueCode,
-    Oid valueOid,
-    Uuid valueUuid,
+    @JsonKey(name: '_valueCode') Element valueCodeElement,
+    Id valueOid,
+    @JsonKey(name: '_valueOid') Element valueOidElement,
+    Id valueUuid,
+    @JsonKey(name: '_valueUuid') Element valueUuidElement,
     Id valueId,
-    UnsignedInt valueUnsignedInt,
-    PositiveInt valuePositiveInt,
+    @JsonKey(name: '_valueId') Element valueIdElement,
+    Decimal valueUnsignedInt,
+    @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
+    Decimal valuePositiveInt,
+    @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
     String valueMarkdown,
+    @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
     Element valueElement,
     FhirExtension valueExtension,
     BackboneElement valueBackboneElement,
@@ -487,93 +499,86 @@ abstract class ElementDefinitionExample with _$ElementDefinitionExample {
     DataRequirement valueDataRequirement,
     ParameterDefinition valueParameterDefinition,
     TriggerDefinition valueTriggerDefinition,
-    @JsonKey(name: '_label') Element labelElement,
-    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-    @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-    @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-    @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
-    @JsonKey(name: '_valueInstant') Element valueInstantElement,
-    @JsonKey(name: '_valueString') Element valueStringElement,
-    @JsonKey(name: '_valueUri') Element valueUriElement,
-    @JsonKey(name: '_valueDate') Element valueDateElement,
-    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-    @JsonKey(name: '_valueTime') Element valueTimeElement,
-    @JsonKey(name: '_valueCode') Element valueCodeElement,
-    @JsonKey(name: '_valueOid') Element valueOidElement,
-    @JsonKey(name: '_valueUuid') Element valueUuidElement,
-    @JsonKey(name: '_valueId') Element valueIdElement,
-    @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
-    @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
-    @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
   }) = _ElementDefinitionExample;
+
   factory ElementDefinitionExample.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionExampleFromJson(json);
 }
 
 @freezed
-abstract class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
+abstract class ElementDefinitionConstraint
+    implements _$ElementDefinitionConstraint {
+  ElementDefinitionConstraint._();
   factory ElementDefinitionConstraint({
-    Id key,
-    String requirements,
-    @JsonKey(unknownEnumValue: ConstraintSeverity.unknown)
-        ConstraintSeverity severity,
-    String human,
-    String expression,
-    String xpath,
-    String source,
+    String key,
     @JsonKey(name: '_key') Element keyElement,
+    String requirements,
     @JsonKey(name: '_requirements') Element requirementsElement,
+    ElementDefinitionConstraintSeverity severity,
     @JsonKey(name: '_severity') Element severityElement,
+    String human,
     @JsonKey(name: '_human') Element humanElement,
+    String expression,
     @JsonKey(name: '_expression') Element expressionElement,
+    String xpath,
     @JsonKey(name: '_xpath') Element xpathElement,
+    String source,
     @JsonKey(name: '_source') Element sourceElement,
   }) = _ElementDefinitionConstraint;
+
   factory ElementDefinitionConstraint.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionConstraintFromJson(json);
 }
 
 @freezed
-abstract class ElementDefinitionBinding with _$ElementDefinitionBinding {
+abstract class ElementDefinitionBinding implements _$ElementDefinitionBinding {
+  ElementDefinitionBinding._();
   factory ElementDefinitionBinding({
-    @JsonKey(unknownEnumValue: BindingStrength.unknown)
-        BindingStrength strength,
-    String description,
-    String valueSetUri,
-    Reference valueSetReference,
+    ElementDefinitionBindingStrength strength,
     @JsonKey(name: '_strength') Element strengthElement,
+    String description,
     @JsonKey(name: '_description') Element descriptionElement,
+    String valueSetUri,
     @JsonKey(name: '_valueSetUri') Element valueSetUriElement,
+    Reference valueSetReference,
   }) = _ElementDefinitionBinding;
+
   factory ElementDefinitionBinding.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionBindingFromJson(json);
 }
 
 @freezed
-abstract class ElementDefinitionMapping with _$ElementDefinitionMapping {
+abstract class ElementDefinitionMapping implements _$ElementDefinitionMapping {
+  ElementDefinitionMapping._();
   factory ElementDefinitionMapping({
     Id identity,
-    Code language,
-    String map,
-    String comment,
     @JsonKey(name: '_identity') Element identityElement,
+    String language,
     @JsonKey(name: '_language') Element languageElement,
+    String map,
     @JsonKey(name: '_map') Element mapElement,
+    String comment,
     @JsonKey(name: '_comment') Element commentElement,
   }) = _ElementDefinitionMapping;
+
   factory ElementDefinitionMapping.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionMappingFromJson(json);
 }
 
 @freezed
-abstract class Dosage with _$Dosage {
+abstract class Dosage implements _$Dosage {
+  Dosage._();
   factory Dosage({
-    Integer sequence,
+    Decimal sequence,
+    @JsonKey(name: '_sequence') Element sequenceElement,
     String text,
+    @JsonKey(name: '_text') Element textElement,
     List<CodeableConcept> additionalInstruction,
     String patientInstruction,
+    @JsonKey(name: '_patientInstruction') Element patientInstructionElement,
     Timing timing,
     Boolean asNeededBoolean,
+    @JsonKey(name: '_asNeededBoolean') Element asNeededBooleanElement,
     CodeableConcept asNeededCodeableConcept,
     CodeableConcept site,
     CodeableConcept route,
@@ -586,10 +591,7 @@ abstract class Dosage with _$Dosage {
     Ratio rateRatio,
     Range rateRange,
     Quantity rateSimpleQuantity,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    @JsonKey(name: '_text') Element textElement,
-    @JsonKey(name: '_patientInstruction') Element patientInstructionElement,
-    @JsonKey(name: '_asNeededBoolean') Element asNeededBooleanElement,
   }) = _Dosage;
+
   factory Dosage.fromJson(Map<String, dynamic> json) => _$DosageFromJson(json);
 }

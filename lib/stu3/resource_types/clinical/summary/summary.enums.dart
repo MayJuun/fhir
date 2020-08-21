@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'summary.dart';
 
 enum AdverseEventCategory {
   @JsonValue('AE')
@@ -9,7 +9,7 @@ enum AdverseEventCategory {
   unknown,
 }
 
-enum SuspectEntityCausality {
+enum AdverseEventSuspectEntityCausality {
   @JsonValue('causality1')
   causality1,
   @JsonValue('causality2')
@@ -75,7 +75,7 @@ enum AllergyIntoleranceCriticality {
   unknown,
 }
 
-enum ReactionSeverity {
+enum AllergyIntoleranceReactionSeverity {
   @JsonValue('mild')
   mild,
   @JsonValue('moderate')
@@ -132,6 +132,17 @@ enum FamilyMemberHistoryStatus {
   entered_in_error,
   @JsonValue('health-unknown')
   health_unknown,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum FamilyMemberHistoryGender {
+  @JsonValue('male')
+  male,
+  @JsonValue('female')
+  female,
+  @JsonValue('other')
+  other,
   @JsonValue('unknown')
   unknown,
 }

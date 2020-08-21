@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'security.dart';
 
 enum AuditEventAction {
   @JsonValue('C')
@@ -17,28 +17,28 @@ enum AuditEventAction {
 
 enum AuditEventOutcome {
   @JsonValue('0')
-  num_0,
+  zero,
   @JsonValue('4')
-  num_4,
+  four,
   @JsonValue('8')
-  num_8,
+  eight,
   @JsonValue('12')
-  num_12,
+  twelve,
   @JsonValue('unknown')
   unknown,
 }
 
-enum NetworkType {
+enum AuditEventNetworkType {
   @JsonValue('1')
-  num_1,
+  one,
   @JsonValue('2')
-  num_2,
+  two,
   @JsonValue('3')
-  num_3,
+  three,
   @JsonValue('4')
-  num_4,
+  four,
   @JsonValue('5')
-  num_5,
+  five,
   @JsonValue('unknown')
   unknown,
 }
@@ -60,7 +60,7 @@ enum ConsentStatus {
   unknown,
 }
 
-enum DataMeaning {
+enum ConsentDataMeaning {
   @JsonValue('instance')
   instance,
   @JsonValue('related')
@@ -73,7 +73,7 @@ enum DataMeaning {
   unknown,
 }
 
-enum ExceptType {
+enum ConsentExceptType {
   @JsonValue('deny')
   deny,
   @JsonValue('permit')
@@ -82,7 +82,20 @@ enum ExceptType {
   unknown,
 }
 
-enum EntityRole {
+enum ConsentData1Meaning {
+  @JsonValue('instance')
+  instance,
+  @JsonValue('related')
+  related,
+  @JsonValue('dependents')
+  dependents,
+  @JsonValue('authoredby')
+  authoredby,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum ProvenanceEntityRole {
   @JsonValue('derivation')
   derivation,
   @JsonValue('revision')

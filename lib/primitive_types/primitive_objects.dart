@@ -93,13 +93,11 @@ Either<PrimitiveFailure<String>, int> validatePositiveInt(dynamic value) {
           PrimitiveFailure.invalidPositiveInt(failedValue: value.toString()));
 }
 
-Either<PrimitiveFailure<String>, Duration> validateTime(String value) =>
-    hasMatch(r"""^([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\.[0-9]+)?$""",
-            value)
-        ? right(Duration(
-            hours: int.parse(value.split(':')[0]),
-            minutes: int.parse(value.split(':')[1])))
-        : left(PrimitiveFailure.invalidTime(failedValue: value));
+Either<PrimitiveFailure<String>, String> validateTime(String value) => hasMatch(
+        r"""^([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\.[0-9]+)?$""",
+        value)
+    ? right(value)
+    : left(PrimitiveFailure.invalidTime(failedValue: value));
 
 Either<PrimitiveFailure<String>, int> validateUnsignedInt(dynamic value) {
   var val = int.tryParse(value.toString());

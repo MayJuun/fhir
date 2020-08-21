@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'support.dart';
 
@@ -15,79 +15,75 @@ Coverage _$CoverageFromJson(Map<String, dynamic> json) {
 class _$CoverageTearOff {
   const _$CoverageTearOff();
 
+// ignore: unused_element
   _Coverage call(
-      {@required
-      @JsonKey(required: true, defaultValue: 'Coverage')
-          String resourceType,
+      {@required @JsonKey(defaultValue: 'Coverage') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      String status,
+      @JsonKey(name: '_status') Element statusElement,
       CodeableConcept type,
       Reference policyHolder,
       Reference subscriber,
       String subscriberId,
+      @JsonKey(name: '_subscriberId') Element subscriberIdElement,
       Reference beneficiary,
       CodeableConcept relationship,
       Period period,
       List<Reference> payor,
       CoverageGrouping grouping,
       String dependent,
+      @JsonKey(name: '_dependent') Element dependentElement,
       String sequence,
-      PositiveInt order,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      Decimal order,
+      @JsonKey(name: '_order') Element orderElement,
       String network,
-      List<Reference> contract,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_subscriberId')
-          Element subscriberIdElement,
-      @JsonKey(name: '_dependent')
-          Element dependentElement,
-      @JsonKey(name: '_sequence')
-          Element sequenceElement,
-      @JsonKey(name: '_order')
-          Element orderElement,
-      @JsonKey(name: '_network')
-          Element networkElement}) {
+      @JsonKey(name: '_network') Element networkElement,
+      List<Reference> contract}) {
     return _Coverage(
       resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
+      implicitRulesElement: implicitRulesElement,
       language: language,
+      languageElement: languageElement,
       text: text,
       contained: contained,
       extension_: extension_,
       modifierExtension: modifierExtension,
       identifier: identifier,
       status: status,
+      statusElement: statusElement,
       type: type,
       policyHolder: policyHolder,
       subscriber: subscriber,
       subscriberId: subscriberId,
+      subscriberIdElement: subscriberIdElement,
       beneficiary: beneficiary,
       relationship: relationship,
       period: period,
       payor: payor,
       grouping: grouping,
       dependent: dependent,
-      sequence: sequence,
-      order: order,
-      network: network,
-      contract: contract,
-      statusElement: statusElement,
-      subscriberIdElement: subscriberIdElement,
       dependentElement: dependentElement,
+      sequence: sequence,
       sequenceElement: sequenceElement,
+      order: order,
       orderElement: orderElement,
+      network: network,
       networkElement: networkElement,
+      contract: contract,
     );
   }
 }
@@ -96,45 +92,49 @@ class _$CoverageTearOff {
 const $Coverage = _$CoverageTearOff();
 
 mixin _$Coverage {
-  @JsonKey(required: true, defaultValue: 'Coverage')
+  @JsonKey(defaultValue: 'Coverage')
   String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
   Code get language;
+  @JsonKey(name: '_language')
+  Element get languageElement;
   Narrative get text;
   List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
-  Code get status;
+  String get status;
+  @JsonKey(name: '_status')
+  Element get statusElement;
   CodeableConcept get type;
   Reference get policyHolder;
   Reference get subscriber;
   String get subscriberId;
+  @JsonKey(name: '_subscriberId')
+  Element get subscriberIdElement;
   Reference get beneficiary;
   CodeableConcept get relationship;
   Period get period;
   List<Reference> get payor;
   CoverageGrouping get grouping;
   String get dependent;
-  String get sequence;
-  PositiveInt get order;
-  String get network;
-  List<Reference> get contract;
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @JsonKey(name: '_subscriberId')
-  Element get subscriberIdElement;
   @JsonKey(name: '_dependent')
   Element get dependentElement;
+  String get sequence;
   @JsonKey(name: '_sequence')
   Element get sequenceElement;
+  Decimal get order;
   @JsonKey(name: '_order')
   Element get orderElement;
+  String get network;
   @JsonKey(name: '_network')
   Element get networkElement;
+  List<Reference> get contract;
 
   Map<String, dynamic> toJson();
   $CoverageCopyWith<Coverage> get copyWith;
@@ -144,49 +144,53 @@ abstract class $CoverageCopyWith<$Res> {
   factory $CoverageCopyWith(Coverage value, $Res Function(Coverage) then) =
       _$CoverageCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'Coverage') String resourceType,
+      {@JsonKey(defaultValue: 'Coverage') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      String status,
+      @JsonKey(name: '_status') Element statusElement,
       CodeableConcept type,
       Reference policyHolder,
       Reference subscriber,
       String subscriberId,
+      @JsonKey(name: '_subscriberId') Element subscriberIdElement,
       Reference beneficiary,
       CodeableConcept relationship,
       Period period,
       List<Reference> payor,
       CoverageGrouping grouping,
       String dependent,
-      String sequence,
-      PositiveInt order,
-      String network,
-      List<Reference> contract,
-      @JsonKey(name: '_status') Element statusElement,
-      @JsonKey(name: '_subscriberId') Element subscriberIdElement,
       @JsonKey(name: '_dependent') Element dependentElement,
+      String sequence,
       @JsonKey(name: '_sequence') Element sequenceElement,
+      Decimal order,
       @JsonKey(name: '_order') Element orderElement,
-      @JsonKey(name: '_network') Element networkElement});
+      String network,
+      @JsonKey(name: '_network') Element networkElement,
+      List<Reference> contract});
 
   $MetaCopyWith<$Res> get meta;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
+  $ElementCopyWith<$Res> get statusElement;
   $CodeableConceptCopyWith<$Res> get type;
   $ReferenceCopyWith<$Res> get policyHolder;
   $ReferenceCopyWith<$Res> get subscriber;
+  $ElementCopyWith<$Res> get subscriberIdElement;
   $ReferenceCopyWith<$Res> get beneficiary;
   $CodeableConceptCopyWith<$Res> get relationship;
   $PeriodCopyWith<$Res> get period;
   $CoverageGroupingCopyWith<$Res> get grouping;
-  $ElementCopyWith<$Res> get statusElement;
-  $ElementCopyWith<$Res> get subscriberIdElement;
   $ElementCopyWith<$Res> get dependentElement;
   $ElementCopyWith<$Res> get sequenceElement;
   $ElementCopyWith<$Res> get orderElement;
@@ -206,33 +210,35 @@ class _$CoverageCopyWithImpl<$Res> implements $CoverageCopyWith<$Res> {
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object type = freezed,
     Object policyHolder = freezed,
     Object subscriber = freezed,
     Object subscriberId = freezed,
+    Object subscriberIdElement = freezed,
     Object beneficiary = freezed,
     Object relationship = freezed,
     Object period = freezed,
     Object payor = freezed,
     Object grouping = freezed,
     Object dependent = freezed,
-    Object sequence = freezed,
-    Object order = freezed,
-    Object network = freezed,
-    Object contract = freezed,
-    Object statusElement = freezed,
-    Object subscriberIdElement = freezed,
     Object dependentElement = freezed,
+    Object sequence = freezed,
     Object sequenceElement = freezed,
+    Object order = freezed,
     Object orderElement = freezed,
+    Object network = freezed,
     Object networkElement = freezed,
+    Object contract = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -243,7 +249,13 @@ class _$CoverageCopyWithImpl<$Res> implements $CoverageCopyWith<$Res> {
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -256,7 +268,10 @@ class _$CoverageCopyWithImpl<$Res> implements $CoverageCopyWith<$Res> {
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed ? _value.status : status as String,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       type: type == freezed ? _value.type : type as CodeableConcept,
       policyHolder: policyHolder == freezed
           ? _value.policyHolder
@@ -266,6 +281,9 @@ class _$CoverageCopyWithImpl<$Res> implements $CoverageCopyWith<$Res> {
       subscriberId: subscriberId == freezed
           ? _value.subscriberId
           : subscriberId as String,
+      subscriberIdElement: subscriberIdElement == freezed
+          ? _value.subscriberIdElement
+          : subscriberIdElement as Element,
       beneficiary: beneficiary == freezed
           ? _value.beneficiary
           : beneficiary as Reference,
@@ -277,29 +295,23 @@ class _$CoverageCopyWithImpl<$Res> implements $CoverageCopyWith<$Res> {
       grouping:
           grouping == freezed ? _value.grouping : grouping as CoverageGrouping,
       dependent: dependent == freezed ? _value.dependent : dependent as String,
-      sequence: sequence == freezed ? _value.sequence : sequence as String,
-      order: order == freezed ? _value.order : order as PositiveInt,
-      network: network == freezed ? _value.network : network as String,
-      contract:
-          contract == freezed ? _value.contract : contract as List<Reference>,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      subscriberIdElement: subscriberIdElement == freezed
-          ? _value.subscriberIdElement
-          : subscriberIdElement as Element,
       dependentElement: dependentElement == freezed
           ? _value.dependentElement
           : dependentElement as Element,
+      sequence: sequence == freezed ? _value.sequence : sequence as String,
       sequenceElement: sequenceElement == freezed
           ? _value.sequenceElement
           : sequenceElement as Element,
+      order: order == freezed ? _value.order : order as Decimal,
       orderElement: orderElement == freezed
           ? _value.orderElement
           : orderElement as Element,
+      network: network == freezed ? _value.network : network as String,
       networkElement: networkElement == freezed
           ? _value.networkElement
           : networkElement as Element,
+      contract:
+          contract == freezed ? _value.contract : contract as List<Reference>,
     ));
   }
 
@@ -314,12 +326,42 @@ class _$CoverageCopyWithImpl<$Res> implements $CoverageCopyWith<$Res> {
   }
 
   @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
   $NarrativeCopyWith<$Res> get text {
     if (_value.text == null) {
       return null;
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
     });
   }
 
@@ -350,6 +392,16 @@ class _$CoverageCopyWithImpl<$Res> implements $CoverageCopyWith<$Res> {
     }
     return $ReferenceCopyWith<$Res>(_value.subscriber, (value) {
       return _then(_value.copyWith(subscriber: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get subscriberIdElement {
+    if (_value.subscriberIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.subscriberIdElement, (value) {
+      return _then(_value.copyWith(subscriberIdElement: value));
     });
   }
 
@@ -390,26 +442,6 @@ class _$CoverageCopyWithImpl<$Res> implements $CoverageCopyWith<$Res> {
     }
     return $CoverageGroupingCopyWith<$Res>(_value.grouping, (value) {
       return _then(_value.copyWith(grouping: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get statusElement {
-    if (_value.statusElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
-      return _then(_value.copyWith(statusElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get subscriberIdElement {
-    if (_value.subscriberIdElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.subscriberIdElement, (value) {
-      return _then(_value.copyWith(subscriberIdElement: value));
     });
   }
 
@@ -459,48 +491,58 @@ abstract class _$CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
       __$CoverageCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'Coverage') String resourceType,
+      {@JsonKey(defaultValue: 'Coverage') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      String status,
+      @JsonKey(name: '_status') Element statusElement,
       CodeableConcept type,
       Reference policyHolder,
       Reference subscriber,
       String subscriberId,
+      @JsonKey(name: '_subscriberId') Element subscriberIdElement,
       Reference beneficiary,
       CodeableConcept relationship,
       Period period,
       List<Reference> payor,
       CoverageGrouping grouping,
       String dependent,
-      String sequence,
-      PositiveInt order,
-      String network,
-      List<Reference> contract,
-      @JsonKey(name: '_status') Element statusElement,
-      @JsonKey(name: '_subscriberId') Element subscriberIdElement,
       @JsonKey(name: '_dependent') Element dependentElement,
+      String sequence,
       @JsonKey(name: '_sequence') Element sequenceElement,
+      Decimal order,
       @JsonKey(name: '_order') Element orderElement,
-      @JsonKey(name: '_network') Element networkElement});
+      String network,
+      @JsonKey(name: '_network') Element networkElement,
+      List<Reference> contract});
 
   @override
   $MetaCopyWith<$Res> get meta;
   @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
   $NarrativeCopyWith<$Res> get text;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
   @override
   $CodeableConceptCopyWith<$Res> get type;
   @override
   $ReferenceCopyWith<$Res> get policyHolder;
   @override
   $ReferenceCopyWith<$Res> get subscriber;
+  @override
+  $ElementCopyWith<$Res> get subscriberIdElement;
   @override
   $ReferenceCopyWith<$Res> get beneficiary;
   @override
@@ -509,10 +551,6 @@ abstract class _$CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
   $PeriodCopyWith<$Res> get period;
   @override
   $CoverageGroupingCopyWith<$Res> get grouping;
-  @override
-  $ElementCopyWith<$Res> get statusElement;
-  @override
-  $ElementCopyWith<$Res> get subscriberIdElement;
   @override
   $ElementCopyWith<$Res> get dependentElement;
   @override
@@ -537,33 +575,35 @@ class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object type = freezed,
     Object policyHolder = freezed,
     Object subscriber = freezed,
     Object subscriberId = freezed,
+    Object subscriberIdElement = freezed,
     Object beneficiary = freezed,
     Object relationship = freezed,
     Object period = freezed,
     Object payor = freezed,
     Object grouping = freezed,
     Object dependent = freezed,
-    Object sequence = freezed,
-    Object order = freezed,
-    Object network = freezed,
-    Object contract = freezed,
-    Object statusElement = freezed,
-    Object subscriberIdElement = freezed,
     Object dependentElement = freezed,
+    Object sequence = freezed,
     Object sequenceElement = freezed,
+    Object order = freezed,
     Object orderElement = freezed,
+    Object network = freezed,
     Object networkElement = freezed,
+    Object contract = freezed,
   }) {
     return _then(_Coverage(
       resourceType: resourceType == freezed
@@ -574,7 +614,13 @@ class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -587,7 +633,10 @@ class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed ? _value.status : status as String,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       type: type == freezed ? _value.type : type as CodeableConcept,
       policyHolder: policyHolder == freezed
           ? _value.policyHolder
@@ -597,6 +646,9 @@ class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
       subscriberId: subscriberId == freezed
           ? _value.subscriberId
           : subscriberId as String,
+      subscriberIdElement: subscriberIdElement == freezed
+          ? _value.subscriberIdElement
+          : subscriberIdElement as Element,
       beneficiary: beneficiary == freezed
           ? _value.beneficiary
           : beneficiary as Reference,
@@ -608,29 +660,23 @@ class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
       grouping:
           grouping == freezed ? _value.grouping : grouping as CoverageGrouping,
       dependent: dependent == freezed ? _value.dependent : dependent as String,
-      sequence: sequence == freezed ? _value.sequence : sequence as String,
-      order: order == freezed ? _value.order : order as PositiveInt,
-      network: network == freezed ? _value.network : network as String,
-      contract:
-          contract == freezed ? _value.contract : contract as List<Reference>,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      subscriberIdElement: subscriberIdElement == freezed
-          ? _value.subscriberIdElement
-          : subscriberIdElement as Element,
       dependentElement: dependentElement == freezed
           ? _value.dependentElement
           : dependentElement as Element,
+      sequence: sequence == freezed ? _value.sequence : sequence as String,
       sequenceElement: sequenceElement == freezed
           ? _value.sequenceElement
           : sequenceElement as Element,
+      order: order == freezed ? _value.order : order as Decimal,
       orderElement: orderElement == freezed
           ? _value.orderElement
           : orderElement as Element,
+      network: network == freezed ? _value.network : network as String,
       networkElement: networkElement == freezed
           ? _value.networkElement
           : networkElement as Element,
+      contract:
+          contract == freezed ? _value.contract : contract as List<Reference>,
     ));
   }
 }
@@ -638,46 +684,39 @@ class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Coverage extends _Coverage {
   _$_Coverage(
-      {@required
-      @JsonKey(required: true, defaultValue: 'Coverage')
-          this.resourceType,
+      {@required @JsonKey(defaultValue: 'Coverage') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.type,
       this.policyHolder,
       this.subscriber,
       this.subscriberId,
+      @JsonKey(name: '_subscriberId') this.subscriberIdElement,
       this.beneficiary,
       this.relationship,
       this.period,
       this.payor,
       this.grouping,
       this.dependent,
+      @JsonKey(name: '_dependent') this.dependentElement,
       this.sequence,
+      @JsonKey(name: '_sequence') this.sequenceElement,
       this.order,
+      @JsonKey(name: '_order') this.orderElement,
       this.network,
-      this.contract,
-      @JsonKey(name: '_status')
-          this.statusElement,
-      @JsonKey(name: '_subscriberId')
-          this.subscriberIdElement,
-      @JsonKey(name: '_dependent')
-          this.dependentElement,
-      @JsonKey(name: '_sequence')
-          this.sequenceElement,
-      @JsonKey(name: '_order')
-          this.orderElement,
-      @JsonKey(name: '_network')
-          this.networkElement})
+      @JsonKey(name: '_network') this.networkElement,
+      this.contract})
       : assert(resourceType != null),
         super._();
 
@@ -685,7 +724,7 @@ class _$_Coverage extends _Coverage {
       _$_$_CoverageFromJson(json);
 
   @override
-  @JsonKey(required: true, defaultValue: 'Coverage')
+  @JsonKey(defaultValue: 'Coverage')
   final String resourceType;
   @override
   final Id id;
@@ -694,7 +733,13 @@ class _$_Coverage extends _Coverage {
   @override
   final FhirUri implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
   final Code language;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
   @override
   final Narrative text;
   @override
@@ -707,7 +752,10 @@ class _$_Coverage extends _Coverage {
   @override
   final List<Identifier> identifier;
   @override
-  final Code status;
+  final String status;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
   @override
   final CodeableConcept type;
   @override
@@ -716,6 +764,9 @@ class _$_Coverage extends _Coverage {
   final Reference subscriber;
   @override
   final String subscriberId;
+  @override
+  @JsonKey(name: '_subscriberId')
+  final Element subscriberIdElement;
   @override
   final Reference beneficiary;
   @override
@@ -729,35 +780,29 @@ class _$_Coverage extends _Coverage {
   @override
   final String dependent;
   @override
-  final String sequence;
-  @override
-  final PositiveInt order;
-  @override
-  final String network;
-  @override
-  final List<Reference> contract;
-  @override
-  @JsonKey(name: '_status')
-  final Element statusElement;
-  @override
-  @JsonKey(name: '_subscriberId')
-  final Element subscriberIdElement;
-  @override
   @JsonKey(name: '_dependent')
   final Element dependentElement;
+  @override
+  final String sequence;
   @override
   @JsonKey(name: '_sequence')
   final Element sequenceElement;
   @override
+  final Decimal order;
+  @override
   @JsonKey(name: '_order')
   final Element orderElement;
   @override
+  final String network;
+  @override
   @JsonKey(name: '_network')
   final Element networkElement;
+  @override
+  final List<Reference> contract;
 
   @override
   String toString() {
-    return 'Coverage(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, type: $type, policyHolder: $policyHolder, subscriber: $subscriber, subscriberId: $subscriberId, beneficiary: $beneficiary, relationship: $relationship, period: $period, payor: $payor, grouping: $grouping, dependent: $dependent, sequence: $sequence, order: $order, network: $network, contract: $contract, statusElement: $statusElement, subscriberIdElement: $subscriberIdElement, dependentElement: $dependentElement, sequenceElement: $sequenceElement, orderElement: $orderElement, networkElement: $networkElement)';
+    return 'Coverage(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, type: $type, policyHolder: $policyHolder, subscriber: $subscriber, subscriberId: $subscriberId, subscriberIdElement: $subscriberIdElement, beneficiary: $beneficiary, relationship: $relationship, period: $period, payor: $payor, grouping: $grouping, dependent: $dependent, dependentElement: $dependentElement, sequence: $sequence, sequenceElement: $sequenceElement, order: $order, orderElement: $orderElement, network: $network, networkElement: $networkElement, contract: $contract)';
   }
 
   @override
@@ -774,9 +819,15 @@ class _$_Coverage extends _Coverage {
             (identical(other.implicitRules, implicitRules) ||
                 const DeepCollectionEquality()
                     .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
             (identical(other.language, language) ||
                 const DeepCollectionEquality()
                     .equals(other.language, language)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
             (identical(other.text, text) ||
                 const DeepCollectionEquality().equals(other.text, text)) &&
             (identical(other.contained, contained) ||
@@ -793,6 +844,9 @@ class _$_Coverage extends _Coverage {
                     .equals(other.identifier, identifier)) &&
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.policyHolder, policyHolder) ||
@@ -804,6 +858,9 @@ class _$_Coverage extends _Coverage {
             (identical(other.subscriberId, subscriberId) ||
                 const DeepCollectionEquality()
                     .equals(other.subscriberId, subscriberId)) &&
+            (identical(other.subscriberIdElement, subscriberIdElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.subscriberIdElement, subscriberIdElement)) &&
             (identical(other.beneficiary, beneficiary) ||
                 const DeepCollectionEquality()
                     .equals(other.beneficiary, beneficiary)) &&
@@ -820,24 +877,14 @@ class _$_Coverage extends _Coverage {
             (identical(other.dependent, dependent) ||
                 const DeepCollectionEquality()
                     .equals(other.dependent, dependent)) &&
-            (identical(other.sequence, sequence) ||
-                const DeepCollectionEquality()
-                    .equals(other.sequence, sequence)) &&
-            (identical(other.order, order) ||
-                const DeepCollectionEquality().equals(other.order, order)) &&
-            (identical(other.network, network) ||
-                const DeepCollectionEquality()
-                    .equals(other.network, network)) &&
-            (identical(other.contract, contract) ||
-                const DeepCollectionEquality()
-                    .equals(other.contract, contract)) &&
-            (identical(other.statusElement, statusElement) ||
-                const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
-            (identical(other.subscriberIdElement, subscriberIdElement) || const DeepCollectionEquality().equals(other.subscriberIdElement, subscriberIdElement)) &&
             (identical(other.dependentElement, dependentElement) || const DeepCollectionEquality().equals(other.dependentElement, dependentElement)) &&
+            (identical(other.sequence, sequence) || const DeepCollectionEquality().equals(other.sequence, sequence)) &&
             (identical(other.sequenceElement, sequenceElement) || const DeepCollectionEquality().equals(other.sequenceElement, sequenceElement)) &&
+            (identical(other.order, order) || const DeepCollectionEquality().equals(other.order, order)) &&
             (identical(other.orderElement, orderElement) || const DeepCollectionEquality().equals(other.orderElement, orderElement)) &&
-            (identical(other.networkElement, networkElement) || const DeepCollectionEquality().equals(other.networkElement, networkElement)));
+            (identical(other.network, network) || const DeepCollectionEquality().equals(other.network, network)) &&
+            (identical(other.networkElement, networkElement) || const DeepCollectionEquality().equals(other.networkElement, networkElement)) &&
+            (identical(other.contract, contract) || const DeepCollectionEquality().equals(other.contract, contract)));
   }
 
   @override
@@ -847,33 +894,35 @@ class _$_Coverage extends _Coverage {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
       const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(status) ^
+      const DeepCollectionEquality().hash(statusElement) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(policyHolder) ^
       const DeepCollectionEquality().hash(subscriber) ^
       const DeepCollectionEquality().hash(subscriberId) ^
+      const DeepCollectionEquality().hash(subscriberIdElement) ^
       const DeepCollectionEquality().hash(beneficiary) ^
       const DeepCollectionEquality().hash(relationship) ^
       const DeepCollectionEquality().hash(period) ^
       const DeepCollectionEquality().hash(payor) ^
       const DeepCollectionEquality().hash(grouping) ^
       const DeepCollectionEquality().hash(dependent) ^
-      const DeepCollectionEquality().hash(sequence) ^
-      const DeepCollectionEquality().hash(order) ^
-      const DeepCollectionEquality().hash(network) ^
-      const DeepCollectionEquality().hash(contract) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(subscriberIdElement) ^
       const DeepCollectionEquality().hash(dependentElement) ^
+      const DeepCollectionEquality().hash(sequence) ^
       const DeepCollectionEquality().hash(sequenceElement) ^
+      const DeepCollectionEquality().hash(order) ^
       const DeepCollectionEquality().hash(orderElement) ^
-      const DeepCollectionEquality().hash(networkElement);
+      const DeepCollectionEquality().hash(network) ^
+      const DeepCollectionEquality().hash(networkElement) ^
+      const DeepCollectionEquality().hash(contract);
 
   @override
   _$CoverageCopyWith<_Coverage> get copyWith =>
@@ -888,51 +937,44 @@ class _$_Coverage extends _Coverage {
 abstract class _Coverage extends Coverage {
   _Coverage._() : super._();
   factory _Coverage(
-      {@required
-      @JsonKey(required: true, defaultValue: 'Coverage')
-          String resourceType,
+      {@required @JsonKey(defaultValue: 'Coverage') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      String status,
+      @JsonKey(name: '_status') Element statusElement,
       CodeableConcept type,
       Reference policyHolder,
       Reference subscriber,
       String subscriberId,
+      @JsonKey(name: '_subscriberId') Element subscriberIdElement,
       Reference beneficiary,
       CodeableConcept relationship,
       Period period,
       List<Reference> payor,
       CoverageGrouping grouping,
       String dependent,
+      @JsonKey(name: '_dependent') Element dependentElement,
       String sequence,
-      PositiveInt order,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      Decimal order,
+      @JsonKey(name: '_order') Element orderElement,
       String network,
-      List<Reference> contract,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_subscriberId')
-          Element subscriberIdElement,
-      @JsonKey(name: '_dependent')
-          Element dependentElement,
-      @JsonKey(name: '_sequence')
-          Element sequenceElement,
-      @JsonKey(name: '_order')
-          Element orderElement,
-      @JsonKey(name: '_network')
-          Element networkElement}) = _$_Coverage;
+      @JsonKey(name: '_network') Element networkElement,
+      List<Reference> contract}) = _$_Coverage;
 
   factory _Coverage.fromJson(Map<String, dynamic> json) = _$_Coverage.fromJson;
 
   @override
-  @JsonKey(required: true, defaultValue: 'Coverage')
+  @JsonKey(defaultValue: 'Coverage')
   String get resourceType;
   @override
   Id get id;
@@ -941,7 +983,13 @@ abstract class _Coverage extends Coverage {
   @override
   FhirUri get implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
   Code get language;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
   @override
   Narrative get text;
   @override
@@ -954,7 +1002,10 @@ abstract class _Coverage extends Coverage {
   @override
   List<Identifier> get identifier;
   @override
-  Code get status;
+  String get status;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
   @override
   CodeableConcept get type;
   @override
@@ -963,6 +1014,9 @@ abstract class _Coverage extends Coverage {
   Reference get subscriber;
   @override
   String get subscriberId;
+  @override
+  @JsonKey(name: '_subscriberId')
+  Element get subscriberIdElement;
   @override
   Reference get beneficiary;
   @override
@@ -976,31 +1030,25 @@ abstract class _Coverage extends Coverage {
   @override
   String get dependent;
   @override
-  String get sequence;
-  @override
-  PositiveInt get order;
-  @override
-  String get network;
-  @override
-  List<Reference> get contract;
-  @override
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @override
-  @JsonKey(name: '_subscriberId')
-  Element get subscriberIdElement;
-  @override
   @JsonKey(name: '_dependent')
   Element get dependentElement;
+  @override
+  String get sequence;
   @override
   @JsonKey(name: '_sequence')
   Element get sequenceElement;
   @override
+  Decimal get order;
+  @override
   @JsonKey(name: '_order')
   Element get orderElement;
   @override
+  String get network;
+  @override
   @JsonKey(name: '_network')
   Element get networkElement;
+  @override
+  List<Reference> get contract;
   @override
   _$CoverageCopyWith<_Coverage> get copyWith;
 }
@@ -1012,55 +1060,56 @@ CoverageGrouping _$CoverageGroupingFromJson(Map<String, dynamic> json) {
 class _$CoverageGroupingTearOff {
   const _$CoverageGroupingTearOff();
 
+// ignore: unused_element
   _CoverageGrouping call(
       {String group,
-      String groupDisplay,
-      String subGroup,
-      String subGroupDisplay,
-      String plan,
-      String planDisplay,
-      String subPlan,
-      String subPlanDisplay,
-      @JsonKey(name: 'class') String class_,
-      String classDisplay,
-      String subClass,
-      String subClassDisplay,
       @JsonKey(name: '_group') Element groupElement,
+      String groupDisplay,
       @JsonKey(name: '_groupDisplay') Element groupDisplayElement,
+      String subGroup,
       @JsonKey(name: '_subGroup') Element subGroupElement,
+      String subGroupDisplay,
       @JsonKey(name: '_subGroupDisplay') Element subGroupDisplayElement,
+      String plan,
       @JsonKey(name: '_plan') Element planElement,
+      String planDisplay,
       @JsonKey(name: '_planDisplay') Element planDisplayElement,
+      String subPlan,
       @JsonKey(name: '_subPlan') Element subPlanElement,
+      String subPlanDisplay,
       @JsonKey(name: '_subPlanDisplay') Element subPlanDisplayElement,
+      @JsonKey(name: 'class') String class_,
       @JsonKey(name: '_class') Element classElement,
+      String classDisplay,
       @JsonKey(name: '_classDisplay') Element classDisplayElement,
+      String subClass,
       @JsonKey(name: '_subClass') Element subClassElement,
+      String subClassDisplay,
       @JsonKey(name: '_subClassDisplay') Element subClassDisplayElement}) {
     return _CoverageGrouping(
       group: group,
-      groupDisplay: groupDisplay,
-      subGroup: subGroup,
-      subGroupDisplay: subGroupDisplay,
-      plan: plan,
-      planDisplay: planDisplay,
-      subPlan: subPlan,
-      subPlanDisplay: subPlanDisplay,
-      class_: class_,
-      classDisplay: classDisplay,
-      subClass: subClass,
-      subClassDisplay: subClassDisplay,
       groupElement: groupElement,
+      groupDisplay: groupDisplay,
       groupDisplayElement: groupDisplayElement,
+      subGroup: subGroup,
       subGroupElement: subGroupElement,
+      subGroupDisplay: subGroupDisplay,
       subGroupDisplayElement: subGroupDisplayElement,
+      plan: plan,
       planElement: planElement,
+      planDisplay: planDisplay,
       planDisplayElement: planDisplayElement,
+      subPlan: subPlan,
       subPlanElement: subPlanElement,
+      subPlanDisplay: subPlanDisplay,
       subPlanDisplayElement: subPlanDisplayElement,
+      class_: class_,
       classElement: classElement,
+      classDisplay: classDisplay,
       classDisplayElement: classDisplayElement,
+      subClass: subClass,
       subClassElement: subClassElement,
+      subClassDisplay: subClassDisplay,
       subClassDisplayElement: subClassDisplayElement,
     );
   }
@@ -1071,40 +1120,40 @@ const $CoverageGrouping = _$CoverageGroupingTearOff();
 
 mixin _$CoverageGrouping {
   String get group;
-  String get groupDisplay;
-  String get subGroup;
-  String get subGroupDisplay;
-  String get plan;
-  String get planDisplay;
-  String get subPlan;
-  String get subPlanDisplay;
-  @JsonKey(name: 'class')
-  String get class_;
-  String get classDisplay;
-  String get subClass;
-  String get subClassDisplay;
   @JsonKey(name: '_group')
   Element get groupElement;
+  String get groupDisplay;
   @JsonKey(name: '_groupDisplay')
   Element get groupDisplayElement;
+  String get subGroup;
   @JsonKey(name: '_subGroup')
   Element get subGroupElement;
+  String get subGroupDisplay;
   @JsonKey(name: '_subGroupDisplay')
   Element get subGroupDisplayElement;
+  String get plan;
   @JsonKey(name: '_plan')
   Element get planElement;
+  String get planDisplay;
   @JsonKey(name: '_planDisplay')
   Element get planDisplayElement;
+  String get subPlan;
   @JsonKey(name: '_subPlan')
   Element get subPlanElement;
+  String get subPlanDisplay;
   @JsonKey(name: '_subPlanDisplay')
   Element get subPlanDisplayElement;
+  @JsonKey(name: 'class')
+  String get class_;
   @JsonKey(name: '_class')
   Element get classElement;
+  String get classDisplay;
   @JsonKey(name: '_classDisplay')
   Element get classDisplayElement;
+  String get subClass;
   @JsonKey(name: '_subClass')
   Element get subClassElement;
+  String get subClassDisplay;
   @JsonKey(name: '_subClassDisplay')
   Element get subClassDisplayElement;
 
@@ -1118,28 +1167,28 @@ abstract class $CoverageGroupingCopyWith<$Res> {
       _$CoverageGroupingCopyWithImpl<$Res>;
   $Res call(
       {String group,
-      String groupDisplay,
-      String subGroup,
-      String subGroupDisplay,
-      String plan,
-      String planDisplay,
-      String subPlan,
-      String subPlanDisplay,
-      @JsonKey(name: 'class') String class_,
-      String classDisplay,
-      String subClass,
-      String subClassDisplay,
       @JsonKey(name: '_group') Element groupElement,
+      String groupDisplay,
       @JsonKey(name: '_groupDisplay') Element groupDisplayElement,
+      String subGroup,
       @JsonKey(name: '_subGroup') Element subGroupElement,
+      String subGroupDisplay,
       @JsonKey(name: '_subGroupDisplay') Element subGroupDisplayElement,
+      String plan,
       @JsonKey(name: '_plan') Element planElement,
+      String planDisplay,
       @JsonKey(name: '_planDisplay') Element planDisplayElement,
+      String subPlan,
       @JsonKey(name: '_subPlan') Element subPlanElement,
+      String subPlanDisplay,
       @JsonKey(name: '_subPlanDisplay') Element subPlanDisplayElement,
+      @JsonKey(name: 'class') String class_,
       @JsonKey(name: '_class') Element classElement,
+      String classDisplay,
       @JsonKey(name: '_classDisplay') Element classDisplayElement,
+      String subClass,
       @JsonKey(name: '_subClass') Element subClassElement,
+      String subClassDisplay,
       @JsonKey(name: '_subClassDisplay') Element subClassDisplayElement});
 
   $ElementCopyWith<$Res> get groupElement;
@@ -1167,86 +1216,86 @@ class _$CoverageGroupingCopyWithImpl<$Res>
   @override
   $Res call({
     Object group = freezed,
-    Object groupDisplay = freezed,
-    Object subGroup = freezed,
-    Object subGroupDisplay = freezed,
-    Object plan = freezed,
-    Object planDisplay = freezed,
-    Object subPlan = freezed,
-    Object subPlanDisplay = freezed,
-    Object class_ = freezed,
-    Object classDisplay = freezed,
-    Object subClass = freezed,
-    Object subClassDisplay = freezed,
     Object groupElement = freezed,
+    Object groupDisplay = freezed,
     Object groupDisplayElement = freezed,
+    Object subGroup = freezed,
     Object subGroupElement = freezed,
+    Object subGroupDisplay = freezed,
     Object subGroupDisplayElement = freezed,
+    Object plan = freezed,
     Object planElement = freezed,
+    Object planDisplay = freezed,
     Object planDisplayElement = freezed,
+    Object subPlan = freezed,
     Object subPlanElement = freezed,
+    Object subPlanDisplay = freezed,
     Object subPlanDisplayElement = freezed,
+    Object class_ = freezed,
     Object classElement = freezed,
+    Object classDisplay = freezed,
     Object classDisplayElement = freezed,
+    Object subClass = freezed,
     Object subClassElement = freezed,
+    Object subClassDisplay = freezed,
     Object subClassDisplayElement = freezed,
   }) {
     return _then(_value.copyWith(
       group: group == freezed ? _value.group : group as String,
-      groupDisplay: groupDisplay == freezed
-          ? _value.groupDisplay
-          : groupDisplay as String,
-      subGroup: subGroup == freezed ? _value.subGroup : subGroup as String,
-      subGroupDisplay: subGroupDisplay == freezed
-          ? _value.subGroupDisplay
-          : subGroupDisplay as String,
-      plan: plan == freezed ? _value.plan : plan as String,
-      planDisplay:
-          planDisplay == freezed ? _value.planDisplay : planDisplay as String,
-      subPlan: subPlan == freezed ? _value.subPlan : subPlan as String,
-      subPlanDisplay: subPlanDisplay == freezed
-          ? _value.subPlanDisplay
-          : subPlanDisplay as String,
-      class_: class_ == freezed ? _value.class_ : class_ as String,
-      classDisplay: classDisplay == freezed
-          ? _value.classDisplay
-          : classDisplay as String,
-      subClass: subClass == freezed ? _value.subClass : subClass as String,
-      subClassDisplay: subClassDisplay == freezed
-          ? _value.subClassDisplay
-          : subClassDisplay as String,
       groupElement: groupElement == freezed
           ? _value.groupElement
           : groupElement as Element,
+      groupDisplay: groupDisplay == freezed
+          ? _value.groupDisplay
+          : groupDisplay as String,
       groupDisplayElement: groupDisplayElement == freezed
           ? _value.groupDisplayElement
           : groupDisplayElement as Element,
+      subGroup: subGroup == freezed ? _value.subGroup : subGroup as String,
       subGroupElement: subGroupElement == freezed
           ? _value.subGroupElement
           : subGroupElement as Element,
+      subGroupDisplay: subGroupDisplay == freezed
+          ? _value.subGroupDisplay
+          : subGroupDisplay as String,
       subGroupDisplayElement: subGroupDisplayElement == freezed
           ? _value.subGroupDisplayElement
           : subGroupDisplayElement as Element,
+      plan: plan == freezed ? _value.plan : plan as String,
       planElement:
           planElement == freezed ? _value.planElement : planElement as Element,
+      planDisplay:
+          planDisplay == freezed ? _value.planDisplay : planDisplay as String,
       planDisplayElement: planDisplayElement == freezed
           ? _value.planDisplayElement
           : planDisplayElement as Element,
+      subPlan: subPlan == freezed ? _value.subPlan : subPlan as String,
       subPlanElement: subPlanElement == freezed
           ? _value.subPlanElement
           : subPlanElement as Element,
+      subPlanDisplay: subPlanDisplay == freezed
+          ? _value.subPlanDisplay
+          : subPlanDisplay as String,
       subPlanDisplayElement: subPlanDisplayElement == freezed
           ? _value.subPlanDisplayElement
           : subPlanDisplayElement as Element,
+      class_: class_ == freezed ? _value.class_ : class_ as String,
       classElement: classElement == freezed
           ? _value.classElement
           : classElement as Element,
+      classDisplay: classDisplay == freezed
+          ? _value.classDisplay
+          : classDisplay as String,
       classDisplayElement: classDisplayElement == freezed
           ? _value.classDisplayElement
           : classDisplayElement as Element,
+      subClass: subClass == freezed ? _value.subClass : subClass as String,
       subClassElement: subClassElement == freezed
           ? _value.subClassElement
           : subClassElement as Element,
+      subClassDisplay: subClassDisplay == freezed
+          ? _value.subClassDisplay
+          : subClassDisplay as String,
       subClassDisplayElement: subClassDisplayElement == freezed
           ? _value.subClassDisplayElement
           : subClassDisplayElement as Element,
@@ -1382,28 +1431,28 @@ abstract class _$CoverageGroupingCopyWith<$Res>
   @override
   $Res call(
       {String group,
-      String groupDisplay,
-      String subGroup,
-      String subGroupDisplay,
-      String plan,
-      String planDisplay,
-      String subPlan,
-      String subPlanDisplay,
-      @JsonKey(name: 'class') String class_,
-      String classDisplay,
-      String subClass,
-      String subClassDisplay,
       @JsonKey(name: '_group') Element groupElement,
+      String groupDisplay,
       @JsonKey(name: '_groupDisplay') Element groupDisplayElement,
+      String subGroup,
       @JsonKey(name: '_subGroup') Element subGroupElement,
+      String subGroupDisplay,
       @JsonKey(name: '_subGroupDisplay') Element subGroupDisplayElement,
+      String plan,
       @JsonKey(name: '_plan') Element planElement,
+      String planDisplay,
       @JsonKey(name: '_planDisplay') Element planDisplayElement,
+      String subPlan,
       @JsonKey(name: '_subPlan') Element subPlanElement,
+      String subPlanDisplay,
       @JsonKey(name: '_subPlanDisplay') Element subPlanDisplayElement,
+      @JsonKey(name: 'class') String class_,
       @JsonKey(name: '_class') Element classElement,
+      String classDisplay,
       @JsonKey(name: '_classDisplay') Element classDisplayElement,
+      String subClass,
       @JsonKey(name: '_subClass') Element subClassElement,
+      String subClassDisplay,
       @JsonKey(name: '_subClassDisplay') Element subClassDisplayElement});
 
   @override
@@ -1445,86 +1494,86 @@ class __$CoverageGroupingCopyWithImpl<$Res>
   @override
   $Res call({
     Object group = freezed,
-    Object groupDisplay = freezed,
-    Object subGroup = freezed,
-    Object subGroupDisplay = freezed,
-    Object plan = freezed,
-    Object planDisplay = freezed,
-    Object subPlan = freezed,
-    Object subPlanDisplay = freezed,
-    Object class_ = freezed,
-    Object classDisplay = freezed,
-    Object subClass = freezed,
-    Object subClassDisplay = freezed,
     Object groupElement = freezed,
+    Object groupDisplay = freezed,
     Object groupDisplayElement = freezed,
+    Object subGroup = freezed,
     Object subGroupElement = freezed,
+    Object subGroupDisplay = freezed,
     Object subGroupDisplayElement = freezed,
+    Object plan = freezed,
     Object planElement = freezed,
+    Object planDisplay = freezed,
     Object planDisplayElement = freezed,
+    Object subPlan = freezed,
     Object subPlanElement = freezed,
+    Object subPlanDisplay = freezed,
     Object subPlanDisplayElement = freezed,
+    Object class_ = freezed,
     Object classElement = freezed,
+    Object classDisplay = freezed,
     Object classDisplayElement = freezed,
+    Object subClass = freezed,
     Object subClassElement = freezed,
+    Object subClassDisplay = freezed,
     Object subClassDisplayElement = freezed,
   }) {
     return _then(_CoverageGrouping(
       group: group == freezed ? _value.group : group as String,
-      groupDisplay: groupDisplay == freezed
-          ? _value.groupDisplay
-          : groupDisplay as String,
-      subGroup: subGroup == freezed ? _value.subGroup : subGroup as String,
-      subGroupDisplay: subGroupDisplay == freezed
-          ? _value.subGroupDisplay
-          : subGroupDisplay as String,
-      plan: plan == freezed ? _value.plan : plan as String,
-      planDisplay:
-          planDisplay == freezed ? _value.planDisplay : planDisplay as String,
-      subPlan: subPlan == freezed ? _value.subPlan : subPlan as String,
-      subPlanDisplay: subPlanDisplay == freezed
-          ? _value.subPlanDisplay
-          : subPlanDisplay as String,
-      class_: class_ == freezed ? _value.class_ : class_ as String,
-      classDisplay: classDisplay == freezed
-          ? _value.classDisplay
-          : classDisplay as String,
-      subClass: subClass == freezed ? _value.subClass : subClass as String,
-      subClassDisplay: subClassDisplay == freezed
-          ? _value.subClassDisplay
-          : subClassDisplay as String,
       groupElement: groupElement == freezed
           ? _value.groupElement
           : groupElement as Element,
+      groupDisplay: groupDisplay == freezed
+          ? _value.groupDisplay
+          : groupDisplay as String,
       groupDisplayElement: groupDisplayElement == freezed
           ? _value.groupDisplayElement
           : groupDisplayElement as Element,
+      subGroup: subGroup == freezed ? _value.subGroup : subGroup as String,
       subGroupElement: subGroupElement == freezed
           ? _value.subGroupElement
           : subGroupElement as Element,
+      subGroupDisplay: subGroupDisplay == freezed
+          ? _value.subGroupDisplay
+          : subGroupDisplay as String,
       subGroupDisplayElement: subGroupDisplayElement == freezed
           ? _value.subGroupDisplayElement
           : subGroupDisplayElement as Element,
+      plan: plan == freezed ? _value.plan : plan as String,
       planElement:
           planElement == freezed ? _value.planElement : planElement as Element,
+      planDisplay:
+          planDisplay == freezed ? _value.planDisplay : planDisplay as String,
       planDisplayElement: planDisplayElement == freezed
           ? _value.planDisplayElement
           : planDisplayElement as Element,
+      subPlan: subPlan == freezed ? _value.subPlan : subPlan as String,
       subPlanElement: subPlanElement == freezed
           ? _value.subPlanElement
           : subPlanElement as Element,
+      subPlanDisplay: subPlanDisplay == freezed
+          ? _value.subPlanDisplay
+          : subPlanDisplay as String,
       subPlanDisplayElement: subPlanDisplayElement == freezed
           ? _value.subPlanDisplayElement
           : subPlanDisplayElement as Element,
+      class_: class_ == freezed ? _value.class_ : class_ as String,
       classElement: classElement == freezed
           ? _value.classElement
           : classElement as Element,
+      classDisplay: classDisplay == freezed
+          ? _value.classDisplay
+          : classDisplay as String,
       classDisplayElement: classDisplayElement == freezed
           ? _value.classDisplayElement
           : classDisplayElement as Element,
+      subClass: subClass == freezed ? _value.subClass : subClass as String,
       subClassElement: subClassElement == freezed
           ? _value.subClassElement
           : subClassElement as Element,
+      subClassDisplay: subClassDisplay == freezed
+          ? _value.subClassDisplay
+          : subClassDisplay as String,
       subClassDisplayElement: subClassDisplayElement == freezed
           ? _value.subClassDisplayElement
           : subClassDisplayElement as Element,
@@ -1533,32 +1582,33 @@ class __$CoverageGroupingCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_CoverageGrouping implements _CoverageGrouping {
+class _$_CoverageGrouping extends _CoverageGrouping {
   _$_CoverageGrouping(
       {this.group,
-      this.groupDisplay,
-      this.subGroup,
-      this.subGroupDisplay,
-      this.plan,
-      this.planDisplay,
-      this.subPlan,
-      this.subPlanDisplay,
-      @JsonKey(name: 'class') this.class_,
-      this.classDisplay,
-      this.subClass,
-      this.subClassDisplay,
       @JsonKey(name: '_group') this.groupElement,
+      this.groupDisplay,
       @JsonKey(name: '_groupDisplay') this.groupDisplayElement,
+      this.subGroup,
       @JsonKey(name: '_subGroup') this.subGroupElement,
+      this.subGroupDisplay,
       @JsonKey(name: '_subGroupDisplay') this.subGroupDisplayElement,
+      this.plan,
       @JsonKey(name: '_plan') this.planElement,
+      this.planDisplay,
       @JsonKey(name: '_planDisplay') this.planDisplayElement,
+      this.subPlan,
       @JsonKey(name: '_subPlan') this.subPlanElement,
+      this.subPlanDisplay,
       @JsonKey(name: '_subPlanDisplay') this.subPlanDisplayElement,
+      @JsonKey(name: 'class') this.class_,
       @JsonKey(name: '_class') this.classElement,
+      this.classDisplay,
       @JsonKey(name: '_classDisplay') this.classDisplayElement,
+      this.subClass,
       @JsonKey(name: '_subClass') this.subClassElement,
-      @JsonKey(name: '_subClassDisplay') this.subClassDisplayElement});
+      this.subClassDisplay,
+      @JsonKey(name: '_subClassDisplay') this.subClassDisplayElement})
+      : super._();
 
   factory _$_CoverageGrouping.fromJson(Map<String, dynamic> json) =>
       _$_$_CoverageGroupingFromJson(json);
@@ -1566,68 +1616,68 @@ class _$_CoverageGrouping implements _CoverageGrouping {
   @override
   final String group;
   @override
-  final String groupDisplay;
-  @override
-  final String subGroup;
-  @override
-  final String subGroupDisplay;
-  @override
-  final String plan;
-  @override
-  final String planDisplay;
-  @override
-  final String subPlan;
-  @override
-  final String subPlanDisplay;
-  @override
-  @JsonKey(name: 'class')
-  final String class_;
-  @override
-  final String classDisplay;
-  @override
-  final String subClass;
-  @override
-  final String subClassDisplay;
-  @override
   @JsonKey(name: '_group')
   final Element groupElement;
+  @override
+  final String groupDisplay;
   @override
   @JsonKey(name: '_groupDisplay')
   final Element groupDisplayElement;
   @override
+  final String subGroup;
+  @override
   @JsonKey(name: '_subGroup')
   final Element subGroupElement;
+  @override
+  final String subGroupDisplay;
   @override
   @JsonKey(name: '_subGroupDisplay')
   final Element subGroupDisplayElement;
   @override
+  final String plan;
+  @override
   @JsonKey(name: '_plan')
   final Element planElement;
+  @override
+  final String planDisplay;
   @override
   @JsonKey(name: '_planDisplay')
   final Element planDisplayElement;
   @override
+  final String subPlan;
+  @override
   @JsonKey(name: '_subPlan')
   final Element subPlanElement;
+  @override
+  final String subPlanDisplay;
   @override
   @JsonKey(name: '_subPlanDisplay')
   final Element subPlanDisplayElement;
   @override
+  @JsonKey(name: 'class')
+  final String class_;
+  @override
   @JsonKey(name: '_class')
   final Element classElement;
+  @override
+  final String classDisplay;
   @override
   @JsonKey(name: '_classDisplay')
   final Element classDisplayElement;
   @override
+  final String subClass;
+  @override
   @JsonKey(name: '_subClass')
   final Element subClassElement;
+  @override
+  final String subClassDisplay;
   @override
   @JsonKey(name: '_subClassDisplay')
   final Element subClassDisplayElement;
 
   @override
   String toString() {
-    return 'CoverageGrouping(group: $group, groupDisplay: $groupDisplay, subGroup: $subGroup, subGroupDisplay: $subGroupDisplay, plan: $plan, planDisplay: $planDisplay, subPlan: $subPlan, subPlanDisplay: $subPlanDisplay, class_: $class_, classDisplay: $classDisplay, subClass: $subClass, subClassDisplay: $subClassDisplay, groupElement: $groupElement, groupDisplayElement: $groupDisplayElement, subGroupElement: $subGroupElement, subGroupDisplayElement: $subGroupDisplayElement, planElement: $planElement, planDisplayElement: $planDisplayElement, subPlanElement: $subPlanElement, subPlanDisplayElement: $subPlanDisplayElement, classElement: $classElement, classDisplayElement: $classDisplayElement, subClassElement: $subClassElement, subClassDisplayElement: $subClassDisplayElement)';
+    return 'CoverageGrouping(group: $group, groupElement: $groupElement, groupDisplay: $groupDisplay, groupDisplayElement: $groupDisplayElement, subGroup: $subGroup, subGroupElement: $subGroupElement, subGroupDisplay: $subGroupDisplay, subGroupDisplayElement: $subGroupDisplayElement, plan: $plan, planElement: $planElement, planDisplay: $planDisplay, planDisplayElement: $planDisplayElement, subPlan: $subPlan, subPlanElement: $subPlanElement, subPlanDisplay: $subPlanDisplay, subPlanDisplayElement: $subPlanDisplayElement, class_: $class_, classElement: $classElement, classDisplay: $classDisplay, classDisplayElement: $classDisplayElement, subClass: $subClass, subClassElement: $subClassElement, subClassDisplay: $subClassDisplay, subClassDisplayElement: $subClassDisplayElement)';
   }
 
   @override
@@ -1636,69 +1686,69 @@ class _$_CoverageGrouping implements _CoverageGrouping {
         (other is _CoverageGrouping &&
             (identical(other.group, group) ||
                 const DeepCollectionEquality().equals(other.group, group)) &&
-            (identical(other.groupDisplay, groupDisplay) ||
-                const DeepCollectionEquality()
-                    .equals(other.groupDisplay, groupDisplay)) &&
-            (identical(other.subGroup, subGroup) ||
-                const DeepCollectionEquality()
-                    .equals(other.subGroup, subGroup)) &&
-            (identical(other.subGroupDisplay, subGroupDisplay) ||
-                const DeepCollectionEquality()
-                    .equals(other.subGroupDisplay, subGroupDisplay)) &&
-            (identical(other.plan, plan) ||
-                const DeepCollectionEquality().equals(other.plan, plan)) &&
-            (identical(other.planDisplay, planDisplay) ||
-                const DeepCollectionEquality()
-                    .equals(other.planDisplay, planDisplay)) &&
-            (identical(other.subPlan, subPlan) ||
-                const DeepCollectionEquality()
-                    .equals(other.subPlan, subPlan)) &&
-            (identical(other.subPlanDisplay, subPlanDisplay) ||
-                const DeepCollectionEquality()
-                    .equals(other.subPlanDisplay, subPlanDisplay)) &&
-            (identical(other.class_, class_) ||
-                const DeepCollectionEquality().equals(other.class_, class_)) &&
-            (identical(other.classDisplay, classDisplay) ||
-                const DeepCollectionEquality()
-                    .equals(other.classDisplay, classDisplay)) &&
-            (identical(other.subClass, subClass) ||
-                const DeepCollectionEquality()
-                    .equals(other.subClass, subClass)) &&
-            (identical(other.subClassDisplay, subClassDisplay) ||
-                const DeepCollectionEquality()
-                    .equals(other.subClassDisplay, subClassDisplay)) &&
             (identical(other.groupElement, groupElement) ||
                 const DeepCollectionEquality()
                     .equals(other.groupElement, groupElement)) &&
+            (identical(other.groupDisplay, groupDisplay) ||
+                const DeepCollectionEquality()
+                    .equals(other.groupDisplay, groupDisplay)) &&
             (identical(other.groupDisplayElement, groupDisplayElement) ||
                 const DeepCollectionEquality()
                     .equals(other.groupDisplayElement, groupDisplayElement)) &&
+            (identical(other.subGroup, subGroup) ||
+                const DeepCollectionEquality()
+                    .equals(other.subGroup, subGroup)) &&
             (identical(other.subGroupElement, subGroupElement) ||
                 const DeepCollectionEquality()
                     .equals(other.subGroupElement, subGroupElement)) &&
+            (identical(other.subGroupDisplay, subGroupDisplay) ||
+                const DeepCollectionEquality()
+                    .equals(other.subGroupDisplay, subGroupDisplay)) &&
             (identical(other.subGroupDisplayElement, subGroupDisplayElement) ||
                 const DeepCollectionEquality().equals(
                     other.subGroupDisplayElement, subGroupDisplayElement)) &&
+            (identical(other.plan, plan) ||
+                const DeepCollectionEquality().equals(other.plan, plan)) &&
             (identical(other.planElement, planElement) ||
                 const DeepCollectionEquality()
                     .equals(other.planElement, planElement)) &&
+            (identical(other.planDisplay, planDisplay) ||
+                const DeepCollectionEquality()
+                    .equals(other.planDisplay, planDisplay)) &&
             (identical(other.planDisplayElement, planDisplayElement) ||
                 const DeepCollectionEquality()
                     .equals(other.planDisplayElement, planDisplayElement)) &&
+            (identical(other.subPlan, subPlan) ||
+                const DeepCollectionEquality()
+                    .equals(other.subPlan, subPlan)) &&
             (identical(other.subPlanElement, subPlanElement) ||
                 const DeepCollectionEquality()
                     .equals(other.subPlanElement, subPlanElement)) &&
+            (identical(other.subPlanDisplay, subPlanDisplay) ||
+                const DeepCollectionEquality()
+                    .equals(other.subPlanDisplay, subPlanDisplay)) &&
             (identical(other.subPlanDisplayElement, subPlanDisplayElement) ||
                 const DeepCollectionEquality().equals(
                     other.subPlanDisplayElement, subPlanDisplayElement)) &&
+            (identical(other.class_, class_) ||
+                const DeepCollectionEquality().equals(other.class_, class_)) &&
             (identical(other.classElement, classElement) ||
                 const DeepCollectionEquality()
                     .equals(other.classElement, classElement)) &&
+            (identical(other.classDisplay, classDisplay) ||
+                const DeepCollectionEquality()
+                    .equals(other.classDisplay, classDisplay)) &&
             (identical(other.classDisplayElement, classDisplayElement) ||
                 const DeepCollectionEquality()
                     .equals(other.classDisplayElement, classDisplayElement)) &&
+            (identical(other.subClass, subClass) ||
+                const DeepCollectionEquality()
+                    .equals(other.subClass, subClass)) &&
             (identical(other.subClassElement, subClassElement) ||
-                const DeepCollectionEquality().equals(other.subClassElement, subClassElement)) &&
+                const DeepCollectionEquality()
+                    .equals(other.subClassElement, subClassElement)) &&
+            (identical(other.subClassDisplay, subClassDisplay) ||
+                const DeepCollectionEquality().equals(other.subClassDisplay, subClassDisplay)) &&
             (identical(other.subClassDisplayElement, subClassDisplayElement) || const DeepCollectionEquality().equals(other.subClassDisplayElement, subClassDisplayElement)));
   }
 
@@ -1706,28 +1756,28 @@ class _$_CoverageGrouping implements _CoverageGrouping {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(group) ^
-      const DeepCollectionEquality().hash(groupDisplay) ^
-      const DeepCollectionEquality().hash(subGroup) ^
-      const DeepCollectionEquality().hash(subGroupDisplay) ^
-      const DeepCollectionEquality().hash(plan) ^
-      const DeepCollectionEquality().hash(planDisplay) ^
-      const DeepCollectionEquality().hash(subPlan) ^
-      const DeepCollectionEquality().hash(subPlanDisplay) ^
-      const DeepCollectionEquality().hash(class_) ^
-      const DeepCollectionEquality().hash(classDisplay) ^
-      const DeepCollectionEquality().hash(subClass) ^
-      const DeepCollectionEquality().hash(subClassDisplay) ^
       const DeepCollectionEquality().hash(groupElement) ^
+      const DeepCollectionEquality().hash(groupDisplay) ^
       const DeepCollectionEquality().hash(groupDisplayElement) ^
+      const DeepCollectionEquality().hash(subGroup) ^
       const DeepCollectionEquality().hash(subGroupElement) ^
+      const DeepCollectionEquality().hash(subGroupDisplay) ^
       const DeepCollectionEquality().hash(subGroupDisplayElement) ^
+      const DeepCollectionEquality().hash(plan) ^
       const DeepCollectionEquality().hash(planElement) ^
+      const DeepCollectionEquality().hash(planDisplay) ^
       const DeepCollectionEquality().hash(planDisplayElement) ^
+      const DeepCollectionEquality().hash(subPlan) ^
       const DeepCollectionEquality().hash(subPlanElement) ^
+      const DeepCollectionEquality().hash(subPlanDisplay) ^
       const DeepCollectionEquality().hash(subPlanDisplayElement) ^
+      const DeepCollectionEquality().hash(class_) ^
       const DeepCollectionEquality().hash(classElement) ^
+      const DeepCollectionEquality().hash(classDisplay) ^
       const DeepCollectionEquality().hash(classDisplayElement) ^
+      const DeepCollectionEquality().hash(subClass) ^
       const DeepCollectionEquality().hash(subClassElement) ^
+      const DeepCollectionEquality().hash(subClassDisplay) ^
       const DeepCollectionEquality().hash(subClassDisplayElement);
 
   @override
@@ -1740,31 +1790,32 @@ class _$_CoverageGrouping implements _CoverageGrouping {
   }
 }
 
-abstract class _CoverageGrouping implements CoverageGrouping {
+abstract class _CoverageGrouping extends CoverageGrouping {
+  _CoverageGrouping._() : super._();
   factory _CoverageGrouping(
           {String group,
-          String groupDisplay,
-          String subGroup,
-          String subGroupDisplay,
-          String plan,
-          String planDisplay,
-          String subPlan,
-          String subPlanDisplay,
-          @JsonKey(name: 'class') String class_,
-          String classDisplay,
-          String subClass,
-          String subClassDisplay,
           @JsonKey(name: '_group') Element groupElement,
+          String groupDisplay,
           @JsonKey(name: '_groupDisplay') Element groupDisplayElement,
+          String subGroup,
           @JsonKey(name: '_subGroup') Element subGroupElement,
+          String subGroupDisplay,
           @JsonKey(name: '_subGroupDisplay') Element subGroupDisplayElement,
+          String plan,
           @JsonKey(name: '_plan') Element planElement,
+          String planDisplay,
           @JsonKey(name: '_planDisplay') Element planDisplayElement,
+          String subPlan,
           @JsonKey(name: '_subPlan') Element subPlanElement,
+          String subPlanDisplay,
           @JsonKey(name: '_subPlanDisplay') Element subPlanDisplayElement,
+          @JsonKey(name: 'class') String class_,
           @JsonKey(name: '_class') Element classElement,
+          String classDisplay,
           @JsonKey(name: '_classDisplay') Element classDisplayElement,
+          String subClass,
           @JsonKey(name: '_subClass') Element subClassElement,
+          String subClassDisplay,
           @JsonKey(name: '_subClassDisplay') Element subClassDisplayElement}) =
       _$_CoverageGrouping;
 
@@ -1774,61 +1825,61 @@ abstract class _CoverageGrouping implements CoverageGrouping {
   @override
   String get group;
   @override
-  String get groupDisplay;
-  @override
-  String get subGroup;
-  @override
-  String get subGroupDisplay;
-  @override
-  String get plan;
-  @override
-  String get planDisplay;
-  @override
-  String get subPlan;
-  @override
-  String get subPlanDisplay;
-  @override
-  @JsonKey(name: 'class')
-  String get class_;
-  @override
-  String get classDisplay;
-  @override
-  String get subClass;
-  @override
-  String get subClassDisplay;
-  @override
   @JsonKey(name: '_group')
   Element get groupElement;
+  @override
+  String get groupDisplay;
   @override
   @JsonKey(name: '_groupDisplay')
   Element get groupDisplayElement;
   @override
+  String get subGroup;
+  @override
   @JsonKey(name: '_subGroup')
   Element get subGroupElement;
+  @override
+  String get subGroupDisplay;
   @override
   @JsonKey(name: '_subGroupDisplay')
   Element get subGroupDisplayElement;
   @override
+  String get plan;
+  @override
   @JsonKey(name: '_plan')
   Element get planElement;
+  @override
+  String get planDisplay;
   @override
   @JsonKey(name: '_planDisplay')
   Element get planDisplayElement;
   @override
+  String get subPlan;
+  @override
   @JsonKey(name: '_subPlan')
   Element get subPlanElement;
+  @override
+  String get subPlanDisplay;
   @override
   @JsonKey(name: '_subPlanDisplay')
   Element get subPlanDisplayElement;
   @override
+  @JsonKey(name: 'class')
+  String get class_;
+  @override
   @JsonKey(name: '_class')
   Element get classElement;
+  @override
+  String get classDisplay;
   @override
   @JsonKey(name: '_classDisplay')
   Element get classDisplayElement;
   @override
+  String get subClass;
+  @override
   @JsonKey(name: '_subClass')
   Element get subClassElement;
+  @override
+  String get subClassDisplay;
   @override
   @JsonKey(name: '_subClassDisplay')
   Element get subClassDisplayElement;
@@ -1843,26 +1894,37 @@ EligibilityRequest _$EligibilityRequestFromJson(Map<String, dynamic> json) {
 class _$EligibilityRequestTearOff {
   const _$EligibilityRequestTearOff();
 
+// ignore: unused_element
   _EligibilityRequest call(
       {@required
-      @JsonKey(required: true, defaultValue: 'EligibilityRequest')
+      @JsonKey(defaultValue: 'EligibilityRequest')
           String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      String status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept priority,
       Reference patient,
       Date servicedDate,
+      @JsonKey(name: '_servicedDate')
+          Element servicedDateElement,
       Period servicedPeriod,
-      FhirDateTime created,
+      String created,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference enterer,
       Reference provider,
       Reference organization,
@@ -1870,33 +1932,32 @@ class _$EligibilityRequestTearOff {
       Reference facility,
       Reference coverage,
       String businessArrangement,
-      CodeableConcept benefitCategory,
-      CodeableConcept benefitSubCategory,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_servicedDate')
-          Element servicedDateElement,
-      @JsonKey(name: '_created')
-          Element createdElement,
       @JsonKey(name: '_businessArrangement')
-          Element businessArrangementElement}) {
+          Element businessArrangementElement,
+      CodeableConcept benefitCategory,
+      CodeableConcept benefitSubCategory}) {
     return _EligibilityRequest(
       resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
+      implicitRulesElement: implicitRulesElement,
       language: language,
+      languageElement: languageElement,
       text: text,
       contained: contained,
       extension_: extension_,
       modifierExtension: modifierExtension,
       identifier: identifier,
       status: status,
+      statusElement: statusElement,
       priority: priority,
       patient: patient,
       servicedDate: servicedDate,
+      servicedDateElement: servicedDateElement,
       servicedPeriod: servicedPeriod,
       created: created,
+      createdElement: createdElement,
       enterer: enterer,
       provider: provider,
       organization: organization,
@@ -1904,12 +1965,9 @@ class _$EligibilityRequestTearOff {
       facility: facility,
       coverage: coverage,
       businessArrangement: businessArrangement,
+      businessArrangementElement: businessArrangementElement,
       benefitCategory: benefitCategory,
       benefitSubCategory: benefitSubCategory,
-      statusElement: statusElement,
-      servicedDateElement: servicedDateElement,
-      createdElement: createdElement,
-      businessArrangementElement: businessArrangementElement,
     );
   }
 }
@@ -1918,24 +1976,34 @@ class _$EligibilityRequestTearOff {
 const $EligibilityRequest = _$EligibilityRequestTearOff();
 
 mixin _$EligibilityRequest {
-  @JsonKey(required: true, defaultValue: 'EligibilityRequest')
+  @JsonKey(defaultValue: 'EligibilityRequest')
   String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
   Code get language;
+  @JsonKey(name: '_language')
+  Element get languageElement;
   Narrative get text;
   List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
-  Code get status;
+  String get status;
+  @JsonKey(name: '_status')
+  Element get statusElement;
   CodeableConcept get priority;
   Reference get patient;
   Date get servicedDate;
+  @JsonKey(name: '_servicedDate')
+  Element get servicedDateElement;
   Period get servicedPeriod;
-  FhirDateTime get created;
+  String get created;
+  @JsonKey(name: '_created')
+  Element get createdElement;
   Reference get enterer;
   Reference get provider;
   Reference get organization;
@@ -1943,16 +2011,10 @@ mixin _$EligibilityRequest {
   Reference get facility;
   Reference get coverage;
   String get businessArrangement;
-  CodeableConcept get benefitCategory;
-  CodeableConcept get benefitSubCategory;
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @JsonKey(name: '_servicedDate')
-  Element get servicedDateElement;
-  @JsonKey(name: '_created')
-  Element get createdElement;
   @JsonKey(name: '_businessArrangement')
   Element get businessArrangementElement;
+  CodeableConcept get benefitCategory;
+  CodeableConcept get benefitSubCategory;
 
   Map<String, dynamic> toJson();
   $EligibilityRequestCopyWith<EligibilityRequest> get copyWith;
@@ -1963,24 +2025,27 @@ abstract class $EligibilityRequestCopyWith<$Res> {
           EligibilityRequest value, $Res Function(EligibilityRequest) then) =
       _$EligibilityRequestCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'EligibilityRequest')
-          String resourceType,
+      {@JsonKey(defaultValue: 'EligibilityRequest') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      String status,
+      @JsonKey(name: '_status') Element statusElement,
       CodeableConcept priority,
       Reference patient,
       Date servicedDate,
+      @JsonKey(name: '_servicedDate') Element servicedDateElement,
       Period servicedPeriod,
-      FhirDateTime created,
+      String created,
+      @JsonKey(name: '_created') Element createdElement,
       Reference enterer,
       Reference provider,
       Reference organization,
@@ -1988,34 +2053,29 @@ abstract class $EligibilityRequestCopyWith<$Res> {
       Reference facility,
       Reference coverage,
       String businessArrangement,
+      @JsonKey(name: '_businessArrangement') Element businessArrangementElement,
       CodeableConcept benefitCategory,
-      CodeableConcept benefitSubCategory,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_servicedDate')
-          Element servicedDateElement,
-      @JsonKey(name: '_created')
-          Element createdElement,
-      @JsonKey(name: '_businessArrangement')
-          Element businessArrangementElement});
+      CodeableConcept benefitSubCategory});
 
   $MetaCopyWith<$Res> get meta;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
+  $ElementCopyWith<$Res> get statusElement;
   $CodeableConceptCopyWith<$Res> get priority;
   $ReferenceCopyWith<$Res> get patient;
+  $ElementCopyWith<$Res> get servicedDateElement;
   $PeriodCopyWith<$Res> get servicedPeriod;
+  $ElementCopyWith<$Res> get createdElement;
   $ReferenceCopyWith<$Res> get enterer;
   $ReferenceCopyWith<$Res> get provider;
   $ReferenceCopyWith<$Res> get organization;
   $ReferenceCopyWith<$Res> get insurer;
   $ReferenceCopyWith<$Res> get facility;
   $ReferenceCopyWith<$Res> get coverage;
+  $ElementCopyWith<$Res> get businessArrangementElement;
   $CodeableConceptCopyWith<$Res> get benefitCategory;
   $CodeableConceptCopyWith<$Res> get benefitSubCategory;
-  $ElementCopyWith<$Res> get statusElement;
-  $ElementCopyWith<$Res> get servicedDateElement;
-  $ElementCopyWith<$Res> get createdElement;
-  $ElementCopyWith<$Res> get businessArrangementElement;
 }
 
 class _$EligibilityRequestCopyWithImpl<$Res>
@@ -2032,18 +2092,23 @@ class _$EligibilityRequestCopyWithImpl<$Res>
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object priority = freezed,
     Object patient = freezed,
     Object servicedDate = freezed,
+    Object servicedDateElement = freezed,
     Object servicedPeriod = freezed,
     Object created = freezed,
+    Object createdElement = freezed,
     Object enterer = freezed,
     Object provider = freezed,
     Object organization = freezed,
@@ -2051,12 +2116,9 @@ class _$EligibilityRequestCopyWithImpl<$Res>
     Object facility = freezed,
     Object coverage = freezed,
     Object businessArrangement = freezed,
+    Object businessArrangementElement = freezed,
     Object benefitCategory = freezed,
     Object benefitSubCategory = freezed,
-    Object statusElement = freezed,
-    Object servicedDateElement = freezed,
-    Object createdElement = freezed,
-    Object businessArrangementElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -2067,7 +2129,13 @@ class _$EligibilityRequestCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -2080,16 +2148,25 @@ class _$EligibilityRequestCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed ? _value.status : status as String,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       priority:
           priority == freezed ? _value.priority : priority as CodeableConcept,
       patient: patient == freezed ? _value.patient : patient as Reference,
       servicedDate:
           servicedDate == freezed ? _value.servicedDate : servicedDate as Date,
+      servicedDateElement: servicedDateElement == freezed
+          ? _value.servicedDateElement
+          : servicedDateElement as Element,
       servicedPeriod: servicedPeriod == freezed
           ? _value.servicedPeriod
           : servicedPeriod as Period,
-      created: created == freezed ? _value.created : created as FhirDateTime,
+      created: created == freezed ? _value.created : created as String,
+      createdElement: createdElement == freezed
+          ? _value.createdElement
+          : createdElement as Element,
       enterer: enterer == freezed ? _value.enterer : enterer as Reference,
       provider: provider == freezed ? _value.provider : provider as Reference,
       organization: organization == freezed
@@ -2101,24 +2178,15 @@ class _$EligibilityRequestCopyWithImpl<$Res>
       businessArrangement: businessArrangement == freezed
           ? _value.businessArrangement
           : businessArrangement as String,
+      businessArrangementElement: businessArrangementElement == freezed
+          ? _value.businessArrangementElement
+          : businessArrangementElement as Element,
       benefitCategory: benefitCategory == freezed
           ? _value.benefitCategory
           : benefitCategory as CodeableConcept,
       benefitSubCategory: benefitSubCategory == freezed
           ? _value.benefitSubCategory
           : benefitSubCategory as CodeableConcept,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      servicedDateElement: servicedDateElement == freezed
-          ? _value.servicedDateElement
-          : servicedDateElement as Element,
-      createdElement: createdElement == freezed
-          ? _value.createdElement
-          : createdElement as Element,
-      businessArrangementElement: businessArrangementElement == freezed
-          ? _value.businessArrangementElement
-          : businessArrangementElement as Element,
     ));
   }
 
@@ -2133,12 +2201,42 @@ class _$EligibilityRequestCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
   $NarrativeCopyWith<$Res> get text {
     if (_value.text == null) {
       return null;
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
     });
   }
 
@@ -2163,12 +2261,32 @@ class _$EligibilityRequestCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res> get servicedDateElement {
+    if (_value.servicedDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.servicedDateElement, (value) {
+      return _then(_value.copyWith(servicedDateElement: value));
+    });
+  }
+
+  @override
   $PeriodCopyWith<$Res> get servicedPeriod {
     if (_value.servicedPeriod == null) {
       return null;
     }
     return $PeriodCopyWith<$Res>(_value.servicedPeriod, (value) {
       return _then(_value.copyWith(servicedPeriod: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get createdElement {
+    if (_value.createdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.createdElement, (value) {
+      return _then(_value.copyWith(createdElement: value));
     });
   }
 
@@ -2233,6 +2351,16 @@ class _$EligibilityRequestCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res> get businessArrangementElement {
+    if (_value.businessArrangementElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.businessArrangementElement, (value) {
+      return _then(_value.copyWith(businessArrangementElement: value));
+    });
+  }
+
+  @override
   $CodeableConceptCopyWith<$Res> get benefitCategory {
     if (_value.benefitCategory == null) {
       return null;
@@ -2251,46 +2379,6 @@ class _$EligibilityRequestCopyWithImpl<$Res>
       return _then(_value.copyWith(benefitSubCategory: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get statusElement {
-    if (_value.statusElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
-      return _then(_value.copyWith(statusElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get servicedDateElement {
-    if (_value.servicedDateElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.servicedDateElement, (value) {
-      return _then(_value.copyWith(servicedDateElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get createdElement {
-    if (_value.createdElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.createdElement, (value) {
-      return _then(_value.copyWith(createdElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get businessArrangementElement {
-    if (_value.businessArrangementElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.businessArrangementElement, (value) {
-      return _then(_value.copyWith(businessArrangementElement: value));
-    });
-  }
 }
 
 abstract class _$EligibilityRequestCopyWith<$Res>
@@ -2300,24 +2388,27 @@ abstract class _$EligibilityRequestCopyWith<$Res>
       __$EligibilityRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'EligibilityRequest')
-          String resourceType,
+      {@JsonKey(defaultValue: 'EligibilityRequest') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      String status,
+      @JsonKey(name: '_status') Element statusElement,
       CodeableConcept priority,
       Reference patient,
       Date servicedDate,
+      @JsonKey(name: '_servicedDate') Element servicedDateElement,
       Period servicedPeriod,
-      FhirDateTime created,
+      String created,
+      @JsonKey(name: '_created') Element createdElement,
       Reference enterer,
       Reference provider,
       Reference organization,
@@ -2325,27 +2416,30 @@ abstract class _$EligibilityRequestCopyWith<$Res>
       Reference facility,
       Reference coverage,
       String businessArrangement,
+      @JsonKey(name: '_businessArrangement') Element businessArrangementElement,
       CodeableConcept benefitCategory,
-      CodeableConcept benefitSubCategory,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_servicedDate')
-          Element servicedDateElement,
-      @JsonKey(name: '_created')
-          Element createdElement,
-      @JsonKey(name: '_businessArrangement')
-          Element businessArrangementElement});
+      CodeableConcept benefitSubCategory});
 
   @override
   $MetaCopyWith<$Res> get meta;
   @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
   $NarrativeCopyWith<$Res> get text;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
   @override
   $CodeableConceptCopyWith<$Res> get priority;
   @override
   $ReferenceCopyWith<$Res> get patient;
   @override
+  $ElementCopyWith<$Res> get servicedDateElement;
+  @override
   $PeriodCopyWith<$Res> get servicedPeriod;
+  @override
+  $ElementCopyWith<$Res> get createdElement;
   @override
   $ReferenceCopyWith<$Res> get enterer;
   @override
@@ -2359,17 +2453,11 @@ abstract class _$EligibilityRequestCopyWith<$Res>
   @override
   $ReferenceCopyWith<$Res> get coverage;
   @override
+  $ElementCopyWith<$Res> get businessArrangementElement;
+  @override
   $CodeableConceptCopyWith<$Res> get benefitCategory;
   @override
   $CodeableConceptCopyWith<$Res> get benefitSubCategory;
-  @override
-  $ElementCopyWith<$Res> get statusElement;
-  @override
-  $ElementCopyWith<$Res> get servicedDateElement;
-  @override
-  $ElementCopyWith<$Res> get createdElement;
-  @override
-  $ElementCopyWith<$Res> get businessArrangementElement;
 }
 
 class __$EligibilityRequestCopyWithImpl<$Res>
@@ -2388,18 +2476,23 @@ class __$EligibilityRequestCopyWithImpl<$Res>
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object priority = freezed,
     Object patient = freezed,
     Object servicedDate = freezed,
+    Object servicedDateElement = freezed,
     Object servicedPeriod = freezed,
     Object created = freezed,
+    Object createdElement = freezed,
     Object enterer = freezed,
     Object provider = freezed,
     Object organization = freezed,
@@ -2407,12 +2500,9 @@ class __$EligibilityRequestCopyWithImpl<$Res>
     Object facility = freezed,
     Object coverage = freezed,
     Object businessArrangement = freezed,
+    Object businessArrangementElement = freezed,
     Object benefitCategory = freezed,
     Object benefitSubCategory = freezed,
-    Object statusElement = freezed,
-    Object servicedDateElement = freezed,
-    Object createdElement = freezed,
-    Object businessArrangementElement = freezed,
   }) {
     return _then(_EligibilityRequest(
       resourceType: resourceType == freezed
@@ -2423,7 +2513,13 @@ class __$EligibilityRequestCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -2436,16 +2532,25 @@ class __$EligibilityRequestCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed ? _value.status : status as String,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       priority:
           priority == freezed ? _value.priority : priority as CodeableConcept,
       patient: patient == freezed ? _value.patient : patient as Reference,
       servicedDate:
           servicedDate == freezed ? _value.servicedDate : servicedDate as Date,
+      servicedDateElement: servicedDateElement == freezed
+          ? _value.servicedDateElement
+          : servicedDateElement as Element,
       servicedPeriod: servicedPeriod == freezed
           ? _value.servicedPeriod
           : servicedPeriod as Period,
-      created: created == freezed ? _value.created : created as FhirDateTime,
+      created: created == freezed ? _value.created : created as String,
+      createdElement: createdElement == freezed
+          ? _value.createdElement
+          : createdElement as Element,
       enterer: enterer == freezed ? _value.enterer : enterer as Reference,
       provider: provider == freezed ? _value.provider : provider as Reference,
       organization: organization == freezed
@@ -2457,24 +2562,15 @@ class __$EligibilityRequestCopyWithImpl<$Res>
       businessArrangement: businessArrangement == freezed
           ? _value.businessArrangement
           : businessArrangement as String,
+      businessArrangementElement: businessArrangementElement == freezed
+          ? _value.businessArrangementElement
+          : businessArrangementElement as Element,
       benefitCategory: benefitCategory == freezed
           ? _value.benefitCategory
           : benefitCategory as CodeableConcept,
       benefitSubCategory: benefitSubCategory == freezed
           ? _value.benefitSubCategory
           : benefitSubCategory as CodeableConcept,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      servicedDateElement: servicedDateElement == freezed
-          ? _value.servicedDateElement
-          : servicedDateElement as Element,
-      createdElement: createdElement == freezed
-          ? _value.createdElement
-          : createdElement as Element,
-      businessArrangementElement: businessArrangementElement == freezed
-          ? _value.businessArrangementElement
-          : businessArrangementElement as Element,
     ));
   }
 }
@@ -2482,25 +2578,27 @@ class __$EligibilityRequestCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_EligibilityRequest extends _EligibilityRequest {
   _$_EligibilityRequest(
-      {@required
-      @JsonKey(required: true, defaultValue: 'EligibilityRequest')
-          this.resourceType,
+      {@required @JsonKey(defaultValue: 'EligibilityRequest') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.priority,
       this.patient,
       this.servicedDate,
+      @JsonKey(name: '_servicedDate') this.servicedDateElement,
       this.servicedPeriod,
       this.created,
+      @JsonKey(name: '_created') this.createdElement,
       this.enterer,
       this.provider,
       this.organization,
@@ -2508,16 +2606,9 @@ class _$_EligibilityRequest extends _EligibilityRequest {
       this.facility,
       this.coverage,
       this.businessArrangement,
+      @JsonKey(name: '_businessArrangement') this.businessArrangementElement,
       this.benefitCategory,
-      this.benefitSubCategory,
-      @JsonKey(name: '_status')
-          this.statusElement,
-      @JsonKey(name: '_servicedDate')
-          this.servicedDateElement,
-      @JsonKey(name: '_created')
-          this.createdElement,
-      @JsonKey(name: '_businessArrangement')
-          this.businessArrangementElement})
+      this.benefitSubCategory})
       : assert(resourceType != null),
         super._();
 
@@ -2525,7 +2616,7 @@ class _$_EligibilityRequest extends _EligibilityRequest {
       _$_$_EligibilityRequestFromJson(json);
 
   @override
-  @JsonKey(required: true, defaultValue: 'EligibilityRequest')
+  @JsonKey(defaultValue: 'EligibilityRequest')
   final String resourceType;
   @override
   final Id id;
@@ -2534,7 +2625,13 @@ class _$_EligibilityRequest extends _EligibilityRequest {
   @override
   final FhirUri implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
   final Code language;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
   @override
   final Narrative text;
   @override
@@ -2547,7 +2644,10 @@ class _$_EligibilityRequest extends _EligibilityRequest {
   @override
   final List<Identifier> identifier;
   @override
-  final Code status;
+  final String status;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
   @override
   final CodeableConcept priority;
   @override
@@ -2555,9 +2655,15 @@ class _$_EligibilityRequest extends _EligibilityRequest {
   @override
   final Date servicedDate;
   @override
+  @JsonKey(name: '_servicedDate')
+  final Element servicedDateElement;
+  @override
   final Period servicedPeriod;
   @override
-  final FhirDateTime created;
+  final String created;
+  @override
+  @JsonKey(name: '_created')
+  final Element createdElement;
   @override
   final Reference enterer;
   @override
@@ -2573,25 +2679,16 @@ class _$_EligibilityRequest extends _EligibilityRequest {
   @override
   final String businessArrangement;
   @override
+  @JsonKey(name: '_businessArrangement')
+  final Element businessArrangementElement;
+  @override
   final CodeableConcept benefitCategory;
   @override
   final CodeableConcept benefitSubCategory;
-  @override
-  @JsonKey(name: '_status')
-  final Element statusElement;
-  @override
-  @JsonKey(name: '_servicedDate')
-  final Element servicedDateElement;
-  @override
-  @JsonKey(name: '_created')
-  final Element createdElement;
-  @override
-  @JsonKey(name: '_businessArrangement')
-  final Element businessArrangementElement;
 
   @override
   String toString() {
-    return 'EligibilityRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, priority: $priority, patient: $patient, servicedDate: $servicedDate, servicedPeriod: $servicedPeriod, created: $created, enterer: $enterer, provider: $provider, organization: $organization, insurer: $insurer, facility: $facility, coverage: $coverage, businessArrangement: $businessArrangement, benefitCategory: $benefitCategory, benefitSubCategory: $benefitSubCategory, statusElement: $statusElement, servicedDateElement: $servicedDateElement, createdElement: $createdElement, businessArrangementElement: $businessArrangementElement)';
+    return 'EligibilityRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, priority: $priority, patient: $patient, servicedDate: $servicedDate, servicedDateElement: $servicedDateElement, servicedPeriod: $servicedPeriod, created: $created, createdElement: $createdElement, enterer: $enterer, provider: $provider, organization: $organization, insurer: $insurer, facility: $facility, coverage: $coverage, businessArrangement: $businessArrangement, businessArrangementElement: $businessArrangementElement, benefitCategory: $benefitCategory, benefitSubCategory: $benefitSubCategory)';
   }
 
   @override
@@ -2608,9 +2705,15 @@ class _$_EligibilityRequest extends _EligibilityRequest {
             (identical(other.implicitRules, implicitRules) ||
                 const DeepCollectionEquality()
                     .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
             (identical(other.language, language) ||
                 const DeepCollectionEquality()
                     .equals(other.language, language)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
             (identical(other.text, text) ||
                 const DeepCollectionEquality().equals(other.text, text)) &&
             (identical(other.contained, contained) ||
@@ -2627,6 +2730,9 @@ class _$_EligibilityRequest extends _EligibilityRequest {
                     .equals(other.identifier, identifier)) &&
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
             (identical(other.priority, priority) ||
                 const DeepCollectionEquality()
                     .equals(other.priority, priority)) &&
@@ -2636,12 +2742,18 @@ class _$_EligibilityRequest extends _EligibilityRequest {
             (identical(other.servicedDate, servicedDate) ||
                 const DeepCollectionEquality()
                     .equals(other.servicedDate, servicedDate)) &&
+            (identical(other.servicedDateElement, servicedDateElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.servicedDateElement, servicedDateElement)) &&
             (identical(other.servicedPeriod, servicedPeriod) ||
                 const DeepCollectionEquality()
                     .equals(other.servicedPeriod, servicedPeriod)) &&
             (identical(other.created, created) ||
                 const DeepCollectionEquality()
                     .equals(other.created, created)) &&
+            (identical(other.createdElement, createdElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.createdElement, createdElement)) &&
             (identical(other.enterer, enterer) ||
                 const DeepCollectionEquality()
                     .equals(other.enterer, enterer)) &&
@@ -2649,27 +2761,14 @@ class _$_EligibilityRequest extends _EligibilityRequest {
                 const DeepCollectionEquality()
                     .equals(other.provider, provider)) &&
             (identical(other.organization, organization) ||
-                const DeepCollectionEquality()
-                    .equals(other.organization, organization)) &&
-            (identical(other.insurer, insurer) ||
-                const DeepCollectionEquality()
-                    .equals(other.insurer, insurer)) &&
-            (identical(other.facility, facility) ||
-                const DeepCollectionEquality()
-                    .equals(other.facility, facility)) &&
-            (identical(other.coverage, coverage) ||
-                const DeepCollectionEquality()
-                    .equals(other.coverage, coverage)) &&
-            (identical(other.businessArrangement, businessArrangement) ||
-                const DeepCollectionEquality()
-                    .equals(other.businessArrangement, businessArrangement)) &&
-            (identical(other.benefitCategory, benefitCategory) ||
-                const DeepCollectionEquality().equals(other.benefitCategory, benefitCategory)) &&
-            (identical(other.benefitSubCategory, benefitSubCategory) || const DeepCollectionEquality().equals(other.benefitSubCategory, benefitSubCategory)) &&
-            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
-            (identical(other.servicedDateElement, servicedDateElement) || const DeepCollectionEquality().equals(other.servicedDateElement, servicedDateElement)) &&
-            (identical(other.createdElement, createdElement) || const DeepCollectionEquality().equals(other.createdElement, createdElement)) &&
-            (identical(other.businessArrangementElement, businessArrangementElement) || const DeepCollectionEquality().equals(other.businessArrangementElement, businessArrangementElement)));
+                const DeepCollectionEquality().equals(other.organization, organization)) &&
+            (identical(other.insurer, insurer) || const DeepCollectionEquality().equals(other.insurer, insurer)) &&
+            (identical(other.facility, facility) || const DeepCollectionEquality().equals(other.facility, facility)) &&
+            (identical(other.coverage, coverage) || const DeepCollectionEquality().equals(other.coverage, coverage)) &&
+            (identical(other.businessArrangement, businessArrangement) || const DeepCollectionEquality().equals(other.businessArrangement, businessArrangement)) &&
+            (identical(other.businessArrangementElement, businessArrangementElement) || const DeepCollectionEquality().equals(other.businessArrangementElement, businessArrangementElement)) &&
+            (identical(other.benefitCategory, benefitCategory) || const DeepCollectionEquality().equals(other.benefitCategory, benefitCategory)) &&
+            (identical(other.benefitSubCategory, benefitSubCategory) || const DeepCollectionEquality().equals(other.benefitSubCategory, benefitSubCategory)));
   }
 
   @override
@@ -2679,18 +2778,23 @@ class _$_EligibilityRequest extends _EligibilityRequest {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
       const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(status) ^
+      const DeepCollectionEquality().hash(statusElement) ^
       const DeepCollectionEquality().hash(priority) ^
       const DeepCollectionEquality().hash(patient) ^
       const DeepCollectionEquality().hash(servicedDate) ^
+      const DeepCollectionEquality().hash(servicedDateElement) ^
       const DeepCollectionEquality().hash(servicedPeriod) ^
       const DeepCollectionEquality().hash(created) ^
+      const DeepCollectionEquality().hash(createdElement) ^
       const DeepCollectionEquality().hash(enterer) ^
       const DeepCollectionEquality().hash(provider) ^
       const DeepCollectionEquality().hash(organization) ^
@@ -2698,12 +2802,9 @@ class _$_EligibilityRequest extends _EligibilityRequest {
       const DeepCollectionEquality().hash(facility) ^
       const DeepCollectionEquality().hash(coverage) ^
       const DeepCollectionEquality().hash(businessArrangement) ^
+      const DeepCollectionEquality().hash(businessArrangementElement) ^
       const DeepCollectionEquality().hash(benefitCategory) ^
-      const DeepCollectionEquality().hash(benefitSubCategory) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(servicedDateElement) ^
-      const DeepCollectionEquality().hash(createdElement) ^
-      const DeepCollectionEquality().hash(businessArrangementElement);
+      const DeepCollectionEquality().hash(benefitSubCategory);
 
   @override
   _$EligibilityRequestCopyWith<_EligibilityRequest> get copyWith =>
@@ -2719,24 +2820,34 @@ abstract class _EligibilityRequest extends EligibilityRequest {
   _EligibilityRequest._() : super._();
   factory _EligibilityRequest(
       {@required
-      @JsonKey(required: true, defaultValue: 'EligibilityRequest')
+      @JsonKey(defaultValue: 'EligibilityRequest')
           String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      String status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept priority,
       Reference patient,
       Date servicedDate,
+      @JsonKey(name: '_servicedDate')
+          Element servicedDateElement,
       Period servicedPeriod,
-      FhirDateTime created,
+      String created,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference enterer,
       Reference provider,
       Reference organization,
@@ -2744,22 +2855,16 @@ abstract class _EligibilityRequest extends EligibilityRequest {
       Reference facility,
       Reference coverage,
       String businessArrangement,
-      CodeableConcept benefitCategory,
-      CodeableConcept benefitSubCategory,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_servicedDate')
-          Element servicedDateElement,
-      @JsonKey(name: '_created')
-          Element createdElement,
       @JsonKey(name: '_businessArrangement')
-          Element businessArrangementElement}) = _$_EligibilityRequest;
+          Element businessArrangementElement,
+      CodeableConcept benefitCategory,
+      CodeableConcept benefitSubCategory}) = _$_EligibilityRequest;
 
   factory _EligibilityRequest.fromJson(Map<String, dynamic> json) =
       _$_EligibilityRequest.fromJson;
 
   @override
-  @JsonKey(required: true, defaultValue: 'EligibilityRequest')
+  @JsonKey(defaultValue: 'EligibilityRequest')
   String get resourceType;
   @override
   Id get id;
@@ -2768,7 +2873,13 @@ abstract class _EligibilityRequest extends EligibilityRequest {
   @override
   FhirUri get implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
   Code get language;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
   @override
   Narrative get text;
   @override
@@ -2781,7 +2892,10 @@ abstract class _EligibilityRequest extends EligibilityRequest {
   @override
   List<Identifier> get identifier;
   @override
-  Code get status;
+  String get status;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
   @override
   CodeableConcept get priority;
   @override
@@ -2789,9 +2903,15 @@ abstract class _EligibilityRequest extends EligibilityRequest {
   @override
   Date get servicedDate;
   @override
+  @JsonKey(name: '_servicedDate')
+  Element get servicedDateElement;
+  @override
   Period get servicedPeriod;
   @override
-  FhirDateTime get created;
+  String get created;
+  @override
+  @JsonKey(name: '_created')
+  Element get createdElement;
   @override
   Reference get enterer;
   @override
@@ -2807,21 +2927,12 @@ abstract class _EligibilityRequest extends EligibilityRequest {
   @override
   String get businessArrangement;
   @override
+  @JsonKey(name: '_businessArrangement')
+  Element get businessArrangementElement;
+  @override
   CodeableConcept get benefitCategory;
   @override
   CodeableConcept get benefitSubCategory;
-  @override
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @override
-  @JsonKey(name: '_servicedDate')
-  Element get servicedDateElement;
-  @override
-  @JsonKey(name: '_created')
-  Element get createdElement;
-  @override
-  @JsonKey(name: '_businessArrangement')
-  Element get businessArrangementElement;
   @override
   _$EligibilityRequestCopyWith<_EligibilityRequest> get copyWith;
 }
@@ -2833,67 +2944,74 @@ EligibilityResponse _$EligibilityResponseFromJson(Map<String, dynamic> json) {
 class _$EligibilityResponseTearOff {
   const _$EligibilityResponseTearOff();
 
+// ignore: unused_element
   _EligibilityResponse call(
       {@required
-      @JsonKey(required: true, defaultValue: 'EligibilityResponse')
+      @JsonKey(defaultValue: 'EligibilityResponse')
           String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
-      FhirDateTime created,
+      String status,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      String created,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference requestProvider,
       Reference requestOrganization,
       Reference request,
       CodeableConcept outcome,
       String disposition,
-      Reference insurer,
-      Boolean inforce,
-      List<EligibilityResponseInsurance> insurance,
-      CodeableConcept form,
-      List<EligibilityResponseError> error,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_created')
-          Element createdElement,
       @JsonKey(name: '_disposition')
           Element dispositionElement,
+      Reference insurer,
+      Boolean inforce,
       @JsonKey(name: '_inforce')
-          Element inforceElement}) {
+          Element inforceElement,
+      List<EligibilityResponseInsurance> insurance,
+      CodeableConcept form,
+      List<EligibilityResponseError> error}) {
     return _EligibilityResponse(
       resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
+      implicitRulesElement: implicitRulesElement,
       language: language,
+      languageElement: languageElement,
       text: text,
       contained: contained,
       extension_: extension_,
       modifierExtension: modifierExtension,
       identifier: identifier,
       status: status,
+      statusElement: statusElement,
       created: created,
+      createdElement: createdElement,
       requestProvider: requestProvider,
       requestOrganization: requestOrganization,
       request: request,
       outcome: outcome,
       disposition: disposition,
+      dispositionElement: dispositionElement,
       insurer: insurer,
       inforce: inforce,
+      inforceElement: inforceElement,
       insurance: insurance,
       form: form,
       error: error,
-      statusElement: statusElement,
-      createdElement: createdElement,
-      dispositionElement: dispositionElement,
-      inforceElement: inforceElement,
     );
   }
 }
@@ -2902,38 +3020,42 @@ class _$EligibilityResponseTearOff {
 const $EligibilityResponse = _$EligibilityResponseTearOff();
 
 mixin _$EligibilityResponse {
-  @JsonKey(required: true, defaultValue: 'EligibilityResponse')
+  @JsonKey(defaultValue: 'EligibilityResponse')
   String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
   Code get language;
+  @JsonKey(name: '_language')
+  Element get languageElement;
   Narrative get text;
   List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
-  Code get status;
-  FhirDateTime get created;
+  String get status;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  String get created;
+  @JsonKey(name: '_created')
+  Element get createdElement;
   Reference get requestProvider;
   Reference get requestOrganization;
   Reference get request;
   CodeableConcept get outcome;
   String get disposition;
+  @JsonKey(name: '_disposition')
+  Element get dispositionElement;
   Reference get insurer;
   Boolean get inforce;
+  @JsonKey(name: '_inforce')
+  Element get inforceElement;
   List<EligibilityResponseInsurance> get insurance;
   CodeableConcept get form;
   List<EligibilityResponseError> get error;
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @JsonKey(name: '_created')
-  Element get createdElement;
-  @JsonKey(name: '_disposition')
-  Element get dispositionElement;
-  @JsonKey(name: '_inforce')
-  Element get inforceElement;
 
   Map<String, dynamic> toJson();
   $EligibilityResponseCopyWith<EligibilityResponse> get copyWith;
@@ -2944,51 +3066,49 @@ abstract class $EligibilityResponseCopyWith<$Res> {
           EligibilityResponse value, $Res Function(EligibilityResponse) then) =
       _$EligibilityResponseCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'EligibilityResponse')
-          String resourceType,
+      {@JsonKey(defaultValue: 'EligibilityResponse') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
-      FhirDateTime created,
+      String status,
+      @JsonKey(name: '_status') Element statusElement,
+      String created,
+      @JsonKey(name: '_created') Element createdElement,
       Reference requestProvider,
       Reference requestOrganization,
       Reference request,
       CodeableConcept outcome,
       String disposition,
+      @JsonKey(name: '_disposition') Element dispositionElement,
       Reference insurer,
       Boolean inforce,
+      @JsonKey(name: '_inforce') Element inforceElement,
       List<EligibilityResponseInsurance> insurance,
       CodeableConcept form,
-      List<EligibilityResponseError> error,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_created')
-          Element createdElement,
-      @JsonKey(name: '_disposition')
-          Element dispositionElement,
-      @JsonKey(name: '_inforce')
-          Element inforceElement});
+      List<EligibilityResponseError> error});
 
   $MetaCopyWith<$Res> get meta;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get createdElement;
   $ReferenceCopyWith<$Res> get requestProvider;
   $ReferenceCopyWith<$Res> get requestOrganization;
   $ReferenceCopyWith<$Res> get request;
   $CodeableConceptCopyWith<$Res> get outcome;
-  $ReferenceCopyWith<$Res> get insurer;
-  $CodeableConceptCopyWith<$Res> get form;
-  $ElementCopyWith<$Res> get statusElement;
-  $ElementCopyWith<$Res> get createdElement;
   $ElementCopyWith<$Res> get dispositionElement;
+  $ReferenceCopyWith<$Res> get insurer;
   $ElementCopyWith<$Res> get inforceElement;
+  $CodeableConceptCopyWith<$Res> get form;
 }
 
 class _$EligibilityResponseCopyWithImpl<$Res>
@@ -3005,28 +3125,30 @@ class _$EligibilityResponseCopyWithImpl<$Res>
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object created = freezed,
+    Object createdElement = freezed,
     Object requestProvider = freezed,
     Object requestOrganization = freezed,
     Object request = freezed,
     Object outcome = freezed,
     Object disposition = freezed,
+    Object dispositionElement = freezed,
     Object insurer = freezed,
     Object inforce = freezed,
+    Object inforceElement = freezed,
     Object insurance = freezed,
     Object form = freezed,
     Object error = freezed,
-    Object statusElement = freezed,
-    Object createdElement = freezed,
-    Object dispositionElement = freezed,
-    Object inforceElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -3037,7 +3159,13 @@ class _$EligibilityResponseCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -3050,8 +3178,14 @@ class _$EligibilityResponseCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
-      created: created == freezed ? _value.created : created as FhirDateTime,
+      status: status == freezed ? _value.status : status as String,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      created: created == freezed ? _value.created : created as String,
+      createdElement: createdElement == freezed
+          ? _value.createdElement
+          : createdElement as Element,
       requestProvider: requestProvider == freezed
           ? _value.requestProvider
           : requestProvider as Reference,
@@ -3062,8 +3196,14 @@ class _$EligibilityResponseCopyWithImpl<$Res>
       outcome: outcome == freezed ? _value.outcome : outcome as CodeableConcept,
       disposition:
           disposition == freezed ? _value.disposition : disposition as String,
+      dispositionElement: dispositionElement == freezed
+          ? _value.dispositionElement
+          : dispositionElement as Element,
       insurer: insurer == freezed ? _value.insurer : insurer as Reference,
       inforce: inforce == freezed ? _value.inforce : inforce as Boolean,
+      inforceElement: inforceElement == freezed
+          ? _value.inforceElement
+          : inforceElement as Element,
       insurance: insurance == freezed
           ? _value.insurance
           : insurance as List<EligibilityResponseInsurance>,
@@ -3071,18 +3211,6 @@ class _$EligibilityResponseCopyWithImpl<$Res>
       error: error == freezed
           ? _value.error
           : error as List<EligibilityResponseError>,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      createdElement: createdElement == freezed
-          ? _value.createdElement
-          : createdElement as Element,
-      dispositionElement: dispositionElement == freezed
-          ? _value.dispositionElement
-          : dispositionElement as Element,
-      inforceElement: inforceElement == freezed
-          ? _value.inforceElement
-          : inforceElement as Element,
     ));
   }
 
@@ -3097,12 +3225,52 @@ class _$EligibilityResponseCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
   $NarrativeCopyWith<$Res> get text {
     if (_value.text == null) {
       return null;
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get createdElement {
+    if (_value.createdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.createdElement, (value) {
+      return _then(_value.copyWith(createdElement: value));
     });
   }
 
@@ -3147,52 +3315,22 @@ class _$EligibilityResponseCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res> get insurer {
-    if (_value.insurer == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.insurer, (value) {
-      return _then(_value.copyWith(insurer: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get form {
-    if (_value.form == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.form, (value) {
-      return _then(_value.copyWith(form: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get statusElement {
-    if (_value.statusElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
-      return _then(_value.copyWith(statusElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get createdElement {
-    if (_value.createdElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.createdElement, (value) {
-      return _then(_value.copyWith(createdElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get dispositionElement {
     if (_value.dispositionElement == null) {
       return null;
     }
     return $ElementCopyWith<$Res>(_value.dispositionElement, (value) {
       return _then(_value.copyWith(dispositionElement: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get insurer {
+    if (_value.insurer == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.insurer, (value) {
+      return _then(_value.copyWith(insurer: value));
     });
   }
 
@@ -3205,6 +3343,16 @@ class _$EligibilityResponseCopyWithImpl<$Res>
       return _then(_value.copyWith(inforceElement: value));
     });
   }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get form {
+    if (_value.form == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.form, (value) {
+      return _then(_value.copyWith(form: value));
+    });
+  }
 }
 
 abstract class _$EligibilityResponseCopyWith<$Res>
@@ -3214,43 +3362,47 @@ abstract class _$EligibilityResponseCopyWith<$Res>
       __$EligibilityResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'EligibilityResponse')
-          String resourceType,
+      {@JsonKey(defaultValue: 'EligibilityResponse') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
-      FhirDateTime created,
+      String status,
+      @JsonKey(name: '_status') Element statusElement,
+      String created,
+      @JsonKey(name: '_created') Element createdElement,
       Reference requestProvider,
       Reference requestOrganization,
       Reference request,
       CodeableConcept outcome,
       String disposition,
+      @JsonKey(name: '_disposition') Element dispositionElement,
       Reference insurer,
       Boolean inforce,
+      @JsonKey(name: '_inforce') Element inforceElement,
       List<EligibilityResponseInsurance> insurance,
       CodeableConcept form,
-      List<EligibilityResponseError> error,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_created')
-          Element createdElement,
-      @JsonKey(name: '_disposition')
-          Element dispositionElement,
-      @JsonKey(name: '_inforce')
-          Element inforceElement});
+      List<EligibilityResponseError> error});
 
   @override
   $MetaCopyWith<$Res> get meta;
   @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
   $NarrativeCopyWith<$Res> get text;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get createdElement;
   @override
   $ReferenceCopyWith<$Res> get requestProvider;
   @override
@@ -3260,17 +3412,13 @@ abstract class _$EligibilityResponseCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res> get outcome;
   @override
-  $ReferenceCopyWith<$Res> get insurer;
-  @override
-  $CodeableConceptCopyWith<$Res> get form;
-  @override
-  $ElementCopyWith<$Res> get statusElement;
-  @override
-  $ElementCopyWith<$Res> get createdElement;
-  @override
   $ElementCopyWith<$Res> get dispositionElement;
   @override
+  $ReferenceCopyWith<$Res> get insurer;
+  @override
   $ElementCopyWith<$Res> get inforceElement;
+  @override
+  $CodeableConceptCopyWith<$Res> get form;
 }
 
 class __$EligibilityResponseCopyWithImpl<$Res>
@@ -3289,28 +3437,30 @@ class __$EligibilityResponseCopyWithImpl<$Res>
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object created = freezed,
+    Object createdElement = freezed,
     Object requestProvider = freezed,
     Object requestOrganization = freezed,
     Object request = freezed,
     Object outcome = freezed,
     Object disposition = freezed,
+    Object dispositionElement = freezed,
     Object insurer = freezed,
     Object inforce = freezed,
+    Object inforceElement = freezed,
     Object insurance = freezed,
     Object form = freezed,
     Object error = freezed,
-    Object statusElement = freezed,
-    Object createdElement = freezed,
-    Object dispositionElement = freezed,
-    Object inforceElement = freezed,
   }) {
     return _then(_EligibilityResponse(
       resourceType: resourceType == freezed
@@ -3321,7 +3471,13 @@ class __$EligibilityResponseCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -3334,8 +3490,14 @@ class __$EligibilityResponseCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
-      created: created == freezed ? _value.created : created as FhirDateTime,
+      status: status == freezed ? _value.status : status as String,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      created: created == freezed ? _value.created : created as String,
+      createdElement: createdElement == freezed
+          ? _value.createdElement
+          : createdElement as Element,
       requestProvider: requestProvider == freezed
           ? _value.requestProvider
           : requestProvider as Reference,
@@ -3346,8 +3508,14 @@ class __$EligibilityResponseCopyWithImpl<$Res>
       outcome: outcome == freezed ? _value.outcome : outcome as CodeableConcept,
       disposition:
           disposition == freezed ? _value.disposition : disposition as String,
+      dispositionElement: dispositionElement == freezed
+          ? _value.dispositionElement
+          : dispositionElement as Element,
       insurer: insurer == freezed ? _value.insurer : insurer as Reference,
       inforce: inforce == freezed ? _value.inforce : inforce as Boolean,
+      inforceElement: inforceElement == freezed
+          ? _value.inforceElement
+          : inforceElement as Element,
       insurance: insurance == freezed
           ? _value.insurance
           : insurance as List<EligibilityResponseInsurance>,
@@ -3355,18 +3523,6 @@ class __$EligibilityResponseCopyWithImpl<$Res>
       error: error == freezed
           ? _value.error
           : error as List<EligibilityResponseError>,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      createdElement: createdElement == freezed
-          ? _value.createdElement
-          : createdElement as Element,
-      dispositionElement: dispositionElement == freezed
-          ? _value.dispositionElement
-          : dispositionElement as Element,
-      inforceElement: inforceElement == freezed
-          ? _value.inforceElement
-          : inforceElement as Element,
     ));
   }
 }
@@ -3375,12 +3531,16 @@ class __$EligibilityResponseCopyWithImpl<$Res>
 class _$_EligibilityResponse extends _EligibilityResponse {
   _$_EligibilityResponse(
       {@required
-      @JsonKey(required: true, defaultValue: 'EligibilityResponse')
+      @JsonKey(defaultValue: 'EligibilityResponse')
           this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
       @JsonKey(name: 'extension')
@@ -3388,25 +3548,25 @@ class _$_EligibilityResponse extends _EligibilityResponse {
       this.modifierExtension,
       this.identifier,
       this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.created,
+      @JsonKey(name: '_created')
+          this.createdElement,
       this.requestProvider,
       this.requestOrganization,
       this.request,
       this.outcome,
       this.disposition,
-      this.insurer,
-      this.inforce,
-      this.insurance,
-      this.form,
-      this.error,
-      @JsonKey(name: '_status')
-          this.statusElement,
-      @JsonKey(name: '_created')
-          this.createdElement,
       @JsonKey(name: '_disposition')
           this.dispositionElement,
+      this.insurer,
+      this.inforce,
       @JsonKey(name: '_inforce')
-          this.inforceElement})
+          this.inforceElement,
+      this.insurance,
+      this.form,
+      this.error})
       : assert(resourceType != null),
         super._();
 
@@ -3414,7 +3574,7 @@ class _$_EligibilityResponse extends _EligibilityResponse {
       _$_$_EligibilityResponseFromJson(json);
 
   @override
-  @JsonKey(required: true, defaultValue: 'EligibilityResponse')
+  @JsonKey(defaultValue: 'EligibilityResponse')
   final String resourceType;
   @override
   final Id id;
@@ -3423,7 +3583,13 @@ class _$_EligibilityResponse extends _EligibilityResponse {
   @override
   final FhirUri implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
   final Code language;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
   @override
   final Narrative text;
   @override
@@ -3436,9 +3602,15 @@ class _$_EligibilityResponse extends _EligibilityResponse {
   @override
   final List<Identifier> identifier;
   @override
-  final Code status;
+  final String status;
   @override
-  final FhirDateTime created;
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  final String created;
+  @override
+  @JsonKey(name: '_created')
+  final Element createdElement;
   @override
   final Reference requestProvider;
   @override
@@ -3450,31 +3622,25 @@ class _$_EligibilityResponse extends _EligibilityResponse {
   @override
   final String disposition;
   @override
+  @JsonKey(name: '_disposition')
+  final Element dispositionElement;
+  @override
   final Reference insurer;
   @override
   final Boolean inforce;
+  @override
+  @JsonKey(name: '_inforce')
+  final Element inforceElement;
   @override
   final List<EligibilityResponseInsurance> insurance;
   @override
   final CodeableConcept form;
   @override
   final List<EligibilityResponseError> error;
-  @override
-  @JsonKey(name: '_status')
-  final Element statusElement;
-  @override
-  @JsonKey(name: '_created')
-  final Element createdElement;
-  @override
-  @JsonKey(name: '_disposition')
-  final Element dispositionElement;
-  @override
-  @JsonKey(name: '_inforce')
-  final Element inforceElement;
 
   @override
   String toString() {
-    return 'EligibilityResponse(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, created: $created, requestProvider: $requestProvider, requestOrganization: $requestOrganization, request: $request, outcome: $outcome, disposition: $disposition, insurer: $insurer, inforce: $inforce, insurance: $insurance, form: $form, error: $error, statusElement: $statusElement, createdElement: $createdElement, dispositionElement: $dispositionElement, inforceElement: $inforceElement)';
+    return 'EligibilityResponse(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, created: $created, createdElement: $createdElement, requestProvider: $requestProvider, requestOrganization: $requestOrganization, request: $request, outcome: $outcome, disposition: $disposition, dispositionElement: $dispositionElement, insurer: $insurer, inforce: $inforce, inforceElement: $inforceElement, insurance: $insurance, form: $form, error: $error)';
   }
 
   @override
@@ -3491,9 +3657,15 @@ class _$_EligibilityResponse extends _EligibilityResponse {
             (identical(other.implicitRules, implicitRules) ||
                 const DeepCollectionEquality()
                     .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
             (identical(other.language, language) ||
                 const DeepCollectionEquality()
                     .equals(other.language, language)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
             (identical(other.text, text) ||
                 const DeepCollectionEquality().equals(other.text, text)) &&
             (identical(other.contained, contained) ||
@@ -3510,9 +3682,15 @@ class _$_EligibilityResponse extends _EligibilityResponse {
                     .equals(other.identifier, identifier)) &&
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
             (identical(other.created, created) ||
                 const DeepCollectionEquality()
                     .equals(other.created, created)) &&
+            (identical(other.createdElement, createdElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.createdElement, createdElement)) &&
             (identical(other.requestProvider, requestProvider) ||
                 const DeepCollectionEquality()
                     .equals(other.requestProvider, requestProvider)) &&
@@ -3528,28 +3706,18 @@ class _$_EligibilityResponse extends _EligibilityResponse {
             (identical(other.disposition, disposition) ||
                 const DeepCollectionEquality()
                     .equals(other.disposition, disposition)) &&
+            (identical(other.dispositionElement, dispositionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.dispositionElement, dispositionElement)) &&
             (identical(other.insurer, insurer) ||
                 const DeepCollectionEquality()
                     .equals(other.insurer, insurer)) &&
             (identical(other.inforce, inforce) ||
-                const DeepCollectionEquality()
-                    .equals(other.inforce, inforce)) &&
-            (identical(other.insurance, insurance) ||
-                const DeepCollectionEquality()
-                    .equals(other.insurance, insurance)) &&
-            (identical(other.form, form) ||
-                const DeepCollectionEquality().equals(other.form, form)) &&
-            (identical(other.error, error) ||
-                const DeepCollectionEquality().equals(other.error, error)) &&
-            (identical(other.statusElement, statusElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusElement, statusElement)) &&
-            (identical(other.createdElement, createdElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.createdElement, createdElement)) &&
-            (identical(other.dispositionElement, dispositionElement) ||
-                const DeepCollectionEquality().equals(other.dispositionElement, dispositionElement)) &&
-            (identical(other.inforceElement, inforceElement) || const DeepCollectionEquality().equals(other.inforceElement, inforceElement)));
+                const DeepCollectionEquality().equals(other.inforce, inforce)) &&
+            (identical(other.inforceElement, inforceElement) || const DeepCollectionEquality().equals(other.inforceElement, inforceElement)) &&
+            (identical(other.insurance, insurance) || const DeepCollectionEquality().equals(other.insurance, insurance)) &&
+            (identical(other.form, form) || const DeepCollectionEquality().equals(other.form, form)) &&
+            (identical(other.error, error) || const DeepCollectionEquality().equals(other.error, error)));
   }
 
   @override
@@ -3559,28 +3727,30 @@ class _$_EligibilityResponse extends _EligibilityResponse {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
       const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(status) ^
+      const DeepCollectionEquality().hash(statusElement) ^
       const DeepCollectionEquality().hash(created) ^
+      const DeepCollectionEquality().hash(createdElement) ^
       const DeepCollectionEquality().hash(requestProvider) ^
       const DeepCollectionEquality().hash(requestOrganization) ^
       const DeepCollectionEquality().hash(request) ^
       const DeepCollectionEquality().hash(outcome) ^
       const DeepCollectionEquality().hash(disposition) ^
+      const DeepCollectionEquality().hash(dispositionElement) ^
       const DeepCollectionEquality().hash(insurer) ^
       const DeepCollectionEquality().hash(inforce) ^
+      const DeepCollectionEquality().hash(inforceElement) ^
       const DeepCollectionEquality().hash(insurance) ^
       const DeepCollectionEquality().hash(form) ^
-      const DeepCollectionEquality().hash(error) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(createdElement) ^
-      const DeepCollectionEquality().hash(dispositionElement) ^
-      const DeepCollectionEquality().hash(inforceElement);
+      const DeepCollectionEquality().hash(error);
 
   @override
   _$EligibilityResponseCopyWith<_EligibilityResponse> get copyWith =>
@@ -3597,44 +3767,48 @@ abstract class _EligibilityResponse extends EligibilityResponse {
   _EligibilityResponse._() : super._();
   factory _EligibilityResponse(
       {@required
-      @JsonKey(required: true, defaultValue: 'EligibilityResponse')
+      @JsonKey(defaultValue: 'EligibilityResponse')
           String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
-      FhirDateTime created,
+      String status,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      String created,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference requestProvider,
       Reference requestOrganization,
       Reference request,
       CodeableConcept outcome,
       String disposition,
-      Reference insurer,
-      Boolean inforce,
-      List<EligibilityResponseInsurance> insurance,
-      CodeableConcept form,
-      List<EligibilityResponseError> error,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_created')
-          Element createdElement,
       @JsonKey(name: '_disposition')
           Element dispositionElement,
+      Reference insurer,
+      Boolean inforce,
       @JsonKey(name: '_inforce')
-          Element inforceElement}) = _$_EligibilityResponse;
+          Element inforceElement,
+      List<EligibilityResponseInsurance> insurance,
+      CodeableConcept form,
+      List<EligibilityResponseError> error}) = _$_EligibilityResponse;
 
   factory _EligibilityResponse.fromJson(Map<String, dynamic> json) =
       _$_EligibilityResponse.fromJson;
 
   @override
-  @JsonKey(required: true, defaultValue: 'EligibilityResponse')
+  @JsonKey(defaultValue: 'EligibilityResponse')
   String get resourceType;
   @override
   Id get id;
@@ -3643,7 +3817,13 @@ abstract class _EligibilityResponse extends EligibilityResponse {
   @override
   FhirUri get implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
   Code get language;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
   @override
   Narrative get text;
   @override
@@ -3656,9 +3836,15 @@ abstract class _EligibilityResponse extends EligibilityResponse {
   @override
   List<Identifier> get identifier;
   @override
-  Code get status;
+  String get status;
   @override
-  FhirDateTime get created;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  String get created;
+  @override
+  @JsonKey(name: '_created')
+  Element get createdElement;
   @override
   Reference get requestProvider;
   @override
@@ -3670,27 +3856,21 @@ abstract class _EligibilityResponse extends EligibilityResponse {
   @override
   String get disposition;
   @override
+  @JsonKey(name: '_disposition')
+  Element get dispositionElement;
+  @override
   Reference get insurer;
   @override
   Boolean get inforce;
+  @override
+  @JsonKey(name: '_inforce')
+  Element get inforceElement;
   @override
   List<EligibilityResponseInsurance> get insurance;
   @override
   CodeableConcept get form;
   @override
   List<EligibilityResponseError> get error;
-  @override
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @override
-  @JsonKey(name: '_created')
-  Element get createdElement;
-  @override
-  @JsonKey(name: '_disposition')
-  Element get dispositionElement;
-  @override
-  @JsonKey(name: '_inforce')
-  Element get inforceElement;
   @override
   _$EligibilityResponseCopyWith<_EligibilityResponse> get copyWith;
 }
@@ -3703,6 +3883,7 @@ EligibilityResponseInsurance _$EligibilityResponseInsuranceFromJson(
 class _$EligibilityResponseInsuranceTearOff {
   const _$EligibilityResponseInsuranceTearOff();
 
+// ignore: unused_element
   _EligibilityResponseInsurance call(
       {Reference coverage,
       Reference contract,
@@ -3833,9 +4014,10 @@ class __$EligibilityResponseInsuranceCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_EligibilityResponseInsurance implements _EligibilityResponseInsurance {
+class _$_EligibilityResponseInsurance extends _EligibilityResponseInsurance {
   _$_EligibilityResponseInsurance(
-      {this.coverage, this.contract, this.benefitBalance});
+      {this.coverage, this.contract, this.benefitBalance})
+      : super._();
 
   factory _$_EligibilityResponseInsurance.fromJson(Map<String, dynamic> json) =>
       _$_$_EligibilityResponseInsuranceFromJson(json);
@@ -3886,7 +4068,8 @@ class _$_EligibilityResponseInsurance implements _EligibilityResponseInsurance {
 }
 
 abstract class _EligibilityResponseInsurance
-    implements EligibilityResponseInsurance {
+    extends EligibilityResponseInsurance {
+  _EligibilityResponseInsurance._() : super._();
   factory _EligibilityResponseInsurance(
           {Reference coverage,
           Reference contract,
@@ -3915,32 +4098,33 @@ EligibilityResponseBenefitBalance _$EligibilityResponseBenefitBalanceFromJson(
 class _$EligibilityResponseBenefitBalanceTearOff {
   const _$EligibilityResponseBenefitBalanceTearOff();
 
+// ignore: unused_element
   _EligibilityResponseBenefitBalance call(
-      {@JsonKey(required: true) CodeableConcept category,
+      {@required CodeableConcept category,
       CodeableConcept subCategory,
       Boolean excluded,
+      @JsonKey(name: '_excluded') Element excludedElement,
       String name,
+      @JsonKey(name: '_name') Element nameElement,
       String description,
+      @JsonKey(name: '_description') Element descriptionElement,
       CodeableConcept network,
       CodeableConcept unit,
       CodeableConcept term,
-      List<EligibilityResponseFinancial> financial,
-      @JsonKey(name: '_excluded') Element excludedElement,
-      @JsonKey(name: '_name') Element nameElement,
-      @JsonKey(name: '_description') Element descriptionElement}) {
+      List<EligibilityResponseFinancial> financial}) {
     return _EligibilityResponseBenefitBalance(
       category: category,
       subCategory: subCategory,
       excluded: excluded,
+      excludedElement: excludedElement,
       name: name,
+      nameElement: nameElement,
       description: description,
+      descriptionElement: descriptionElement,
       network: network,
       unit: unit,
       term: term,
       financial: financial,
-      excludedElement: excludedElement,
-      nameElement: nameElement,
-      descriptionElement: descriptionElement,
     );
   }
 }
@@ -3950,22 +4134,21 @@ const $EligibilityResponseBenefitBalance =
     _$EligibilityResponseBenefitBalanceTearOff();
 
 mixin _$EligibilityResponseBenefitBalance {
-  @JsonKey(required: true)
   CodeableConcept get category;
   CodeableConcept get subCategory;
   Boolean get excluded;
+  @JsonKey(name: '_excluded')
+  Element get excludedElement;
   String get name;
+  @JsonKey(name: '_name')
+  Element get nameElement;
   String get description;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
   CodeableConcept get network;
   CodeableConcept get unit;
   CodeableConcept get term;
   List<EligibilityResponseFinancial> get financial;
-  @JsonKey(name: '_excluded')
-  Element get excludedElement;
-  @JsonKey(name: '_name')
-  Element get nameElement;
-  @JsonKey(name: '_description')
-  Element get descriptionElement;
 
   Map<String, dynamic> toJson();
   $EligibilityResponseBenefitBalanceCopyWith<EligibilityResponseBenefitBalance>
@@ -3978,27 +4161,27 @@ abstract class $EligibilityResponseBenefitBalanceCopyWith<$Res> {
           $Res Function(EligibilityResponseBenefitBalance) then) =
       _$EligibilityResponseBenefitBalanceCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(required: true) CodeableConcept category,
+      {CodeableConcept category,
       CodeableConcept subCategory,
       Boolean excluded,
+      @JsonKey(name: '_excluded') Element excludedElement,
       String name,
+      @JsonKey(name: '_name') Element nameElement,
       String description,
+      @JsonKey(name: '_description') Element descriptionElement,
       CodeableConcept network,
       CodeableConcept unit,
       CodeableConcept term,
-      List<EligibilityResponseFinancial> financial,
-      @JsonKey(name: '_excluded') Element excludedElement,
-      @JsonKey(name: '_name') Element nameElement,
-      @JsonKey(name: '_description') Element descriptionElement});
+      List<EligibilityResponseFinancial> financial});
 
   $CodeableConceptCopyWith<$Res> get category;
   $CodeableConceptCopyWith<$Res> get subCategory;
-  $CodeableConceptCopyWith<$Res> get network;
-  $CodeableConceptCopyWith<$Res> get unit;
-  $CodeableConceptCopyWith<$Res> get term;
   $ElementCopyWith<$Res> get excludedElement;
   $ElementCopyWith<$Res> get nameElement;
   $ElementCopyWith<$Res> get descriptionElement;
+  $CodeableConceptCopyWith<$Res> get network;
+  $CodeableConceptCopyWith<$Res> get unit;
+  $CodeableConceptCopyWith<$Res> get term;
 }
 
 class _$EligibilityResponseBenefitBalanceCopyWithImpl<$Res>
@@ -4014,15 +4197,15 @@ class _$EligibilityResponseBenefitBalanceCopyWithImpl<$Res>
     Object category = freezed,
     Object subCategory = freezed,
     Object excluded = freezed,
+    Object excludedElement = freezed,
     Object name = freezed,
+    Object nameElement = freezed,
     Object description = freezed,
+    Object descriptionElement = freezed,
     Object network = freezed,
     Object unit = freezed,
     Object term = freezed,
     Object financial = freezed,
-    Object excludedElement = freezed,
-    Object nameElement = freezed,
-    Object descriptionElement = freezed,
   }) {
     return _then(_value.copyWith(
       category:
@@ -4031,23 +4214,23 @@ class _$EligibilityResponseBenefitBalanceCopyWithImpl<$Res>
           ? _value.subCategory
           : subCategory as CodeableConcept,
       excluded: excluded == freezed ? _value.excluded : excluded as Boolean,
+      excludedElement: excludedElement == freezed
+          ? _value.excludedElement
+          : excludedElement as Element,
       name: name == freezed ? _value.name : name as String,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
       description:
           description == freezed ? _value.description : description as String,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
       network: network == freezed ? _value.network : network as CodeableConcept,
       unit: unit == freezed ? _value.unit : unit as CodeableConcept,
       term: term == freezed ? _value.term : term as CodeableConcept,
       financial: financial == freezed
           ? _value.financial
           : financial as List<EligibilityResponseFinancial>,
-      excludedElement: excludedElement == freezed
-          ? _value.excludedElement
-          : excludedElement as Element,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement as Element,
     ));
   }
 
@@ -4068,36 +4251,6 @@ class _$EligibilityResponseBenefitBalanceCopyWithImpl<$Res>
     }
     return $CodeableConceptCopyWith<$Res>(_value.subCategory, (value) {
       return _then(_value.copyWith(subCategory: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get network {
-    if (_value.network == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.network, (value) {
-      return _then(_value.copyWith(network: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get unit {
-    if (_value.unit == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.unit, (value) {
-      return _then(_value.copyWith(unit: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get term {
-    if (_value.term == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.term, (value) {
-      return _then(_value.copyWith(term: value));
     });
   }
 
@@ -4130,6 +4283,36 @@ class _$EligibilityResponseBenefitBalanceCopyWithImpl<$Res>
       return _then(_value.copyWith(descriptionElement: value));
     });
   }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get network {
+    if (_value.network == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.network, (value) {
+      return _then(_value.copyWith(network: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get unit {
+    if (_value.unit == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.unit, (value) {
+      return _then(_value.copyWith(unit: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get term {
+    if (_value.term == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.term, (value) {
+      return _then(_value.copyWith(term: value));
+    });
+  }
 }
 
 abstract class _$EligibilityResponseBenefitBalanceCopyWith<$Res>
@@ -4140,35 +4323,35 @@ abstract class _$EligibilityResponseBenefitBalanceCopyWith<$Res>
       __$EligibilityResponseBenefitBalanceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(required: true) CodeableConcept category,
+      {CodeableConcept category,
       CodeableConcept subCategory,
       Boolean excluded,
+      @JsonKey(name: '_excluded') Element excludedElement,
       String name,
+      @JsonKey(name: '_name') Element nameElement,
       String description,
+      @JsonKey(name: '_description') Element descriptionElement,
       CodeableConcept network,
       CodeableConcept unit,
       CodeableConcept term,
-      List<EligibilityResponseFinancial> financial,
-      @JsonKey(name: '_excluded') Element excludedElement,
-      @JsonKey(name: '_name') Element nameElement,
-      @JsonKey(name: '_description') Element descriptionElement});
+      List<EligibilityResponseFinancial> financial});
 
   @override
   $CodeableConceptCopyWith<$Res> get category;
   @override
   $CodeableConceptCopyWith<$Res> get subCategory;
   @override
-  $CodeableConceptCopyWith<$Res> get network;
-  @override
-  $CodeableConceptCopyWith<$Res> get unit;
-  @override
-  $CodeableConceptCopyWith<$Res> get term;
-  @override
   $ElementCopyWith<$Res> get excludedElement;
   @override
   $ElementCopyWith<$Res> get nameElement;
   @override
   $ElementCopyWith<$Res> get descriptionElement;
+  @override
+  $CodeableConceptCopyWith<$Res> get network;
+  @override
+  $CodeableConceptCopyWith<$Res> get unit;
+  @override
+  $CodeableConceptCopyWith<$Res> get term;
 }
 
 class __$EligibilityResponseBenefitBalanceCopyWithImpl<$Res>
@@ -4188,15 +4371,15 @@ class __$EligibilityResponseBenefitBalanceCopyWithImpl<$Res>
     Object category = freezed,
     Object subCategory = freezed,
     Object excluded = freezed,
+    Object excludedElement = freezed,
     Object name = freezed,
+    Object nameElement = freezed,
     Object description = freezed,
+    Object descriptionElement = freezed,
     Object network = freezed,
     Object unit = freezed,
     Object term = freezed,
     Object financial = freezed,
-    Object excludedElement = freezed,
-    Object nameElement = freezed,
-    Object descriptionElement = freezed,
   }) {
     return _then(_EligibilityResponseBenefitBalance(
       category:
@@ -4205,59 +4388,69 @@ class __$EligibilityResponseBenefitBalanceCopyWithImpl<$Res>
           ? _value.subCategory
           : subCategory as CodeableConcept,
       excluded: excluded == freezed ? _value.excluded : excluded as Boolean,
+      excludedElement: excludedElement == freezed
+          ? _value.excludedElement
+          : excludedElement as Element,
       name: name == freezed ? _value.name : name as String,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
       description:
           description == freezed ? _value.description : description as String,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
       network: network == freezed ? _value.network : network as CodeableConcept,
       unit: unit == freezed ? _value.unit : unit as CodeableConcept,
       term: term == freezed ? _value.term : term as CodeableConcept,
       financial: financial == freezed
           ? _value.financial
           : financial as List<EligibilityResponseFinancial>,
-      excludedElement: excludedElement == freezed
-          ? _value.excludedElement
-          : excludedElement as Element,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
 class _$_EligibilityResponseBenefitBalance
-    implements _EligibilityResponseBenefitBalance {
+    extends _EligibilityResponseBenefitBalance {
   _$_EligibilityResponseBenefitBalance(
-      {@JsonKey(required: true) this.category,
+      {@required this.category,
       this.subCategory,
       this.excluded,
+      @JsonKey(name: '_excluded') this.excludedElement,
       this.name,
+      @JsonKey(name: '_name') this.nameElement,
       this.description,
+      @JsonKey(name: '_description') this.descriptionElement,
       this.network,
       this.unit,
       this.term,
-      this.financial,
-      @JsonKey(name: '_excluded') this.excludedElement,
-      @JsonKey(name: '_name') this.nameElement,
-      @JsonKey(name: '_description') this.descriptionElement});
+      this.financial})
+      : assert(category != null),
+        super._();
 
   factory _$_EligibilityResponseBenefitBalance.fromJson(
           Map<String, dynamic> json) =>
       _$_$_EligibilityResponseBenefitBalanceFromJson(json);
 
   @override
-  @JsonKey(required: true)
   final CodeableConcept category;
   @override
   final CodeableConcept subCategory;
   @override
   final Boolean excluded;
   @override
+  @JsonKey(name: '_excluded')
+  final Element excludedElement;
+  @override
   final String name;
   @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
   final String description;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
   @override
   final CodeableConcept network;
   @override
@@ -4266,19 +4459,10 @@ class _$_EligibilityResponseBenefitBalance
   final CodeableConcept term;
   @override
   final List<EligibilityResponseFinancial> financial;
-  @override
-  @JsonKey(name: '_excluded')
-  final Element excludedElement;
-  @override
-  @JsonKey(name: '_name')
-  final Element nameElement;
-  @override
-  @JsonKey(name: '_description')
-  final Element descriptionElement;
 
   @override
   String toString() {
-    return 'EligibilityResponseBenefitBalance(category: $category, subCategory: $subCategory, excluded: $excluded, name: $name, description: $description, network: $network, unit: $unit, term: $term, financial: $financial, excludedElement: $excludedElement, nameElement: $nameElement, descriptionElement: $descriptionElement)';
+    return 'EligibilityResponseBenefitBalance(category: $category, subCategory: $subCategory, excluded: $excluded, excludedElement: $excludedElement, name: $name, nameElement: $nameElement, description: $description, descriptionElement: $descriptionElement, network: $network, unit: $unit, term: $term, financial: $financial)';
   }
 
   @override
@@ -4294,11 +4478,20 @@ class _$_EligibilityResponseBenefitBalance
             (identical(other.excluded, excluded) ||
                 const DeepCollectionEquality()
                     .equals(other.excluded, excluded)) &&
+            (identical(other.excludedElement, excludedElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.excludedElement, excludedElement)) &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
             (identical(other.description, description) ||
                 const DeepCollectionEquality()
                     .equals(other.description, description)) &&
+            (identical(other.descriptionElement, descriptionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.descriptionElement, descriptionElement)) &&
             (identical(other.network, network) ||
                 const DeepCollectionEquality()
                     .equals(other.network, network)) &&
@@ -4308,16 +4501,7 @@ class _$_EligibilityResponseBenefitBalance
                 const DeepCollectionEquality().equals(other.term, term)) &&
             (identical(other.financial, financial) ||
                 const DeepCollectionEquality()
-                    .equals(other.financial, financial)) &&
-            (identical(other.excludedElement, excludedElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.excludedElement, excludedElement)) &&
-            (identical(other.nameElement, nameElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.nameElement, nameElement)) &&
-            (identical(other.descriptionElement, descriptionElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.descriptionElement, descriptionElement)));
+                    .equals(other.financial, financial)));
   }
 
   @override
@@ -4326,15 +4510,15 @@ class _$_EligibilityResponseBenefitBalance
       const DeepCollectionEquality().hash(category) ^
       const DeepCollectionEquality().hash(subCategory) ^
       const DeepCollectionEquality().hash(excluded) ^
+      const DeepCollectionEquality().hash(excludedElement) ^
       const DeepCollectionEquality().hash(name) ^
+      const DeepCollectionEquality().hash(nameElement) ^
       const DeepCollectionEquality().hash(description) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(network) ^
       const DeepCollectionEquality().hash(unit) ^
       const DeepCollectionEquality().hash(term) ^
-      const DeepCollectionEquality().hash(financial) ^
-      const DeepCollectionEquality().hash(excludedElement) ^
-      const DeepCollectionEquality().hash(nameElement) ^
-      const DeepCollectionEquality().hash(descriptionElement);
+      const DeepCollectionEquality().hash(financial);
 
   @override
   _$EligibilityResponseBenefitBalanceCopyWith<
@@ -4349,20 +4533,21 @@ class _$_EligibilityResponseBenefitBalance
 }
 
 abstract class _EligibilityResponseBenefitBalance
-    implements EligibilityResponseBenefitBalance {
+    extends EligibilityResponseBenefitBalance {
+  _EligibilityResponseBenefitBalance._() : super._();
   factory _EligibilityResponseBenefitBalance(
-          {@JsonKey(required: true) CodeableConcept category,
+          {@required CodeableConcept category,
           CodeableConcept subCategory,
           Boolean excluded,
+          @JsonKey(name: '_excluded') Element excludedElement,
           String name,
+          @JsonKey(name: '_name') Element nameElement,
           String description,
+          @JsonKey(name: '_description') Element descriptionElement,
           CodeableConcept network,
           CodeableConcept unit,
           CodeableConcept term,
-          List<EligibilityResponseFinancial> financial,
-          @JsonKey(name: '_excluded') Element excludedElement,
-          @JsonKey(name: '_name') Element nameElement,
-          @JsonKey(name: '_description') Element descriptionElement}) =
+          List<EligibilityResponseFinancial> financial}) =
       _$_EligibilityResponseBenefitBalance;
 
   factory _EligibilityResponseBenefitBalance.fromJson(
@@ -4370,16 +4555,24 @@ abstract class _EligibilityResponseBenefitBalance
       _$_EligibilityResponseBenefitBalance.fromJson;
 
   @override
-  @JsonKey(required: true)
   CodeableConcept get category;
   @override
   CodeableConcept get subCategory;
   @override
   Boolean get excluded;
   @override
+  @JsonKey(name: '_excluded')
+  Element get excludedElement;
+  @override
   String get name;
   @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
   String get description;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
   @override
   CodeableConcept get network;
   @override
@@ -4388,15 +4581,6 @@ abstract class _EligibilityResponseBenefitBalance
   CodeableConcept get term;
   @override
   List<EligibilityResponseFinancial> get financial;
-  @override
-  @JsonKey(name: '_excluded')
-  Element get excludedElement;
-  @override
-  @JsonKey(name: '_name')
-  Element get nameElement;
-  @override
-  @JsonKey(name: '_description')
-  Element get descriptionElement;
   @override
   _$EligibilityResponseBenefitBalanceCopyWith<
       _EligibilityResponseBenefitBalance> get copyWith;
@@ -4410,26 +4594,27 @@ EligibilityResponseFinancial _$EligibilityResponseFinancialFromJson(
 class _$EligibilityResponseFinancialTearOff {
   const _$EligibilityResponseFinancialTearOff();
 
+// ignore: unused_element
   _EligibilityResponseFinancial call(
-      {@JsonKey(required: true) CodeableConcept type,
-      UnsignedInt allowedUnsignedInt,
-      String allowedString,
-      Money allowedMoney,
-      UnsignedInt usedUnsignedInt,
-      Money usedMoney,
+      {@required CodeableConcept type,
+      Decimal allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt') Element allowedUnsignedIntElement,
+      String allowedString,
       @JsonKey(name: '_allowedString') Element allowedStringElement,
-      @JsonKey(name: '_usedUnsignedInt') Element usedUnsignedIntElement}) {
+      Money allowedMoney,
+      Decimal usedUnsignedInt,
+      @JsonKey(name: '_usedUnsignedInt') Element usedUnsignedIntElement,
+      Money usedMoney}) {
     return _EligibilityResponseFinancial(
       type: type,
       allowedUnsignedInt: allowedUnsignedInt,
+      allowedUnsignedIntElement: allowedUnsignedIntElement,
       allowedString: allowedString,
+      allowedStringElement: allowedStringElement,
       allowedMoney: allowedMoney,
       usedUnsignedInt: usedUnsignedInt,
-      usedMoney: usedMoney,
-      allowedUnsignedIntElement: allowedUnsignedIntElement,
-      allowedStringElement: allowedStringElement,
       usedUnsignedIntElement: usedUnsignedIntElement,
+      usedMoney: usedMoney,
     );
   }
 }
@@ -4438,19 +4623,18 @@ class _$EligibilityResponseFinancialTearOff {
 const $EligibilityResponseFinancial = _$EligibilityResponseFinancialTearOff();
 
 mixin _$EligibilityResponseFinancial {
-  @JsonKey(required: true)
   CodeableConcept get type;
-  UnsignedInt get allowedUnsignedInt;
-  String get allowedString;
-  Money get allowedMoney;
-  UnsignedInt get usedUnsignedInt;
-  Money get usedMoney;
+  Decimal get allowedUnsignedInt;
   @JsonKey(name: '_allowedUnsignedInt')
   Element get allowedUnsignedIntElement;
+  String get allowedString;
   @JsonKey(name: '_allowedString')
   Element get allowedStringElement;
+  Money get allowedMoney;
+  Decimal get usedUnsignedInt;
   @JsonKey(name: '_usedUnsignedInt')
   Element get usedUnsignedIntElement;
+  Money get usedMoney;
 
   Map<String, dynamic> toJson();
   $EligibilityResponseFinancialCopyWith<EligibilityResponseFinancial>
@@ -4463,22 +4647,22 @@ abstract class $EligibilityResponseFinancialCopyWith<$Res> {
           $Res Function(EligibilityResponseFinancial) then) =
       _$EligibilityResponseFinancialCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(required: true) CodeableConcept type,
-      UnsignedInt allowedUnsignedInt,
-      String allowedString,
-      Money allowedMoney,
-      UnsignedInt usedUnsignedInt,
-      Money usedMoney,
+      {CodeableConcept type,
+      Decimal allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt') Element allowedUnsignedIntElement,
+      String allowedString,
       @JsonKey(name: '_allowedString') Element allowedStringElement,
-      @JsonKey(name: '_usedUnsignedInt') Element usedUnsignedIntElement});
+      Money allowedMoney,
+      Decimal usedUnsignedInt,
+      @JsonKey(name: '_usedUnsignedInt') Element usedUnsignedIntElement,
+      Money usedMoney});
 
   $CodeableConceptCopyWith<$Res> get type;
-  $MoneyCopyWith<$Res> get allowedMoney;
-  $MoneyCopyWith<$Res> get usedMoney;
   $ElementCopyWith<$Res> get allowedUnsignedIntElement;
   $ElementCopyWith<$Res> get allowedStringElement;
+  $MoneyCopyWith<$Res> get allowedMoney;
   $ElementCopyWith<$Res> get usedUnsignedIntElement;
+  $MoneyCopyWith<$Res> get usedMoney;
 }
 
 class _$EligibilityResponseFinancialCopyWithImpl<$Res>
@@ -4493,37 +4677,37 @@ class _$EligibilityResponseFinancialCopyWithImpl<$Res>
   $Res call({
     Object type = freezed,
     Object allowedUnsignedInt = freezed,
+    Object allowedUnsignedIntElement = freezed,
     Object allowedString = freezed,
+    Object allowedStringElement = freezed,
     Object allowedMoney = freezed,
     Object usedUnsignedInt = freezed,
-    Object usedMoney = freezed,
-    Object allowedUnsignedIntElement = freezed,
-    Object allowedStringElement = freezed,
     Object usedUnsignedIntElement = freezed,
+    Object usedMoney = freezed,
   }) {
     return _then(_value.copyWith(
       type: type == freezed ? _value.type : type as CodeableConcept,
       allowedUnsignedInt: allowedUnsignedInt == freezed
           ? _value.allowedUnsignedInt
-          : allowedUnsignedInt as UnsignedInt,
+          : allowedUnsignedInt as Decimal,
+      allowedUnsignedIntElement: allowedUnsignedIntElement == freezed
+          ? _value.allowedUnsignedIntElement
+          : allowedUnsignedIntElement as Element,
       allowedString: allowedString == freezed
           ? _value.allowedString
           : allowedString as String,
+      allowedStringElement: allowedStringElement == freezed
+          ? _value.allowedStringElement
+          : allowedStringElement as Element,
       allowedMoney:
           allowedMoney == freezed ? _value.allowedMoney : allowedMoney as Money,
       usedUnsignedInt: usedUnsignedInt == freezed
           ? _value.usedUnsignedInt
-          : usedUnsignedInt as UnsignedInt,
-      usedMoney: usedMoney == freezed ? _value.usedMoney : usedMoney as Money,
-      allowedUnsignedIntElement: allowedUnsignedIntElement == freezed
-          ? _value.allowedUnsignedIntElement
-          : allowedUnsignedIntElement as Element,
-      allowedStringElement: allowedStringElement == freezed
-          ? _value.allowedStringElement
-          : allowedStringElement as Element,
+          : usedUnsignedInt as Decimal,
       usedUnsignedIntElement: usedUnsignedIntElement == freezed
           ? _value.usedUnsignedIntElement
           : usedUnsignedIntElement as Element,
+      usedMoney: usedMoney == freezed ? _value.usedMoney : usedMoney as Money,
     ));
   }
 
@@ -4534,26 +4718,6 @@ class _$EligibilityResponseFinancialCopyWithImpl<$Res>
     }
     return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
-    });
-  }
-
-  @override
-  $MoneyCopyWith<$Res> get allowedMoney {
-    if (_value.allowedMoney == null) {
-      return null;
-    }
-    return $MoneyCopyWith<$Res>(_value.allowedMoney, (value) {
-      return _then(_value.copyWith(allowedMoney: value));
-    });
-  }
-
-  @override
-  $MoneyCopyWith<$Res> get usedMoney {
-    if (_value.usedMoney == null) {
-      return null;
-    }
-    return $MoneyCopyWith<$Res>(_value.usedMoney, (value) {
-      return _then(_value.copyWith(usedMoney: value));
     });
   }
 
@@ -4578,12 +4742,32 @@ class _$EligibilityResponseFinancialCopyWithImpl<$Res>
   }
 
   @override
+  $MoneyCopyWith<$Res> get allowedMoney {
+    if (_value.allowedMoney == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.allowedMoney, (value) {
+      return _then(_value.copyWith(allowedMoney: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res> get usedUnsignedIntElement {
     if (_value.usedUnsignedIntElement == null) {
       return null;
     }
     return $ElementCopyWith<$Res>(_value.usedUnsignedIntElement, (value) {
       return _then(_value.copyWith(usedUnsignedIntElement: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get usedMoney {
+    if (_value.usedMoney == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.usedMoney, (value) {
+      return _then(_value.copyWith(usedMoney: value));
     });
   }
 }
@@ -4596,28 +4780,28 @@ abstract class _$EligibilityResponseFinancialCopyWith<$Res>
       __$EligibilityResponseFinancialCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(required: true) CodeableConcept type,
-      UnsignedInt allowedUnsignedInt,
-      String allowedString,
-      Money allowedMoney,
-      UnsignedInt usedUnsignedInt,
-      Money usedMoney,
+      {CodeableConcept type,
+      Decimal allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt') Element allowedUnsignedIntElement,
+      String allowedString,
       @JsonKey(name: '_allowedString') Element allowedStringElement,
-      @JsonKey(name: '_usedUnsignedInt') Element usedUnsignedIntElement});
+      Money allowedMoney,
+      Decimal usedUnsignedInt,
+      @JsonKey(name: '_usedUnsignedInt') Element usedUnsignedIntElement,
+      Money usedMoney});
 
   @override
   $CodeableConceptCopyWith<$Res> get type;
-  @override
-  $MoneyCopyWith<$Res> get allowedMoney;
-  @override
-  $MoneyCopyWith<$Res> get usedMoney;
   @override
   $ElementCopyWith<$Res> get allowedUnsignedIntElement;
   @override
   $ElementCopyWith<$Res> get allowedStringElement;
   @override
+  $MoneyCopyWith<$Res> get allowedMoney;
+  @override
   $ElementCopyWith<$Res> get usedUnsignedIntElement;
+  @override
+  $MoneyCopyWith<$Res> get usedMoney;
 }
 
 class __$EligibilityResponseFinancialCopyWithImpl<$Res>
@@ -4636,83 +4820,84 @@ class __$EligibilityResponseFinancialCopyWithImpl<$Res>
   $Res call({
     Object type = freezed,
     Object allowedUnsignedInt = freezed,
+    Object allowedUnsignedIntElement = freezed,
     Object allowedString = freezed,
+    Object allowedStringElement = freezed,
     Object allowedMoney = freezed,
     Object usedUnsignedInt = freezed,
-    Object usedMoney = freezed,
-    Object allowedUnsignedIntElement = freezed,
-    Object allowedStringElement = freezed,
     Object usedUnsignedIntElement = freezed,
+    Object usedMoney = freezed,
   }) {
     return _then(_EligibilityResponseFinancial(
       type: type == freezed ? _value.type : type as CodeableConcept,
       allowedUnsignedInt: allowedUnsignedInt == freezed
           ? _value.allowedUnsignedInt
-          : allowedUnsignedInt as UnsignedInt,
+          : allowedUnsignedInt as Decimal,
+      allowedUnsignedIntElement: allowedUnsignedIntElement == freezed
+          ? _value.allowedUnsignedIntElement
+          : allowedUnsignedIntElement as Element,
       allowedString: allowedString == freezed
           ? _value.allowedString
           : allowedString as String,
+      allowedStringElement: allowedStringElement == freezed
+          ? _value.allowedStringElement
+          : allowedStringElement as Element,
       allowedMoney:
           allowedMoney == freezed ? _value.allowedMoney : allowedMoney as Money,
       usedUnsignedInt: usedUnsignedInt == freezed
           ? _value.usedUnsignedInt
-          : usedUnsignedInt as UnsignedInt,
-      usedMoney: usedMoney == freezed ? _value.usedMoney : usedMoney as Money,
-      allowedUnsignedIntElement: allowedUnsignedIntElement == freezed
-          ? _value.allowedUnsignedIntElement
-          : allowedUnsignedIntElement as Element,
-      allowedStringElement: allowedStringElement == freezed
-          ? _value.allowedStringElement
-          : allowedStringElement as Element,
+          : usedUnsignedInt as Decimal,
       usedUnsignedIntElement: usedUnsignedIntElement == freezed
           ? _value.usedUnsignedIntElement
           : usedUnsignedIntElement as Element,
+      usedMoney: usedMoney == freezed ? _value.usedMoney : usedMoney as Money,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_EligibilityResponseFinancial implements _EligibilityResponseFinancial {
+class _$_EligibilityResponseFinancial extends _EligibilityResponseFinancial {
   _$_EligibilityResponseFinancial(
-      {@JsonKey(required: true) this.type,
+      {@required this.type,
       this.allowedUnsignedInt,
+      @JsonKey(name: '_allowedUnsignedInt') this.allowedUnsignedIntElement,
       this.allowedString,
+      @JsonKey(name: '_allowedString') this.allowedStringElement,
       this.allowedMoney,
       this.usedUnsignedInt,
-      this.usedMoney,
-      @JsonKey(name: '_allowedUnsignedInt') this.allowedUnsignedIntElement,
-      @JsonKey(name: '_allowedString') this.allowedStringElement,
-      @JsonKey(name: '_usedUnsignedInt') this.usedUnsignedIntElement});
+      @JsonKey(name: '_usedUnsignedInt') this.usedUnsignedIntElement,
+      this.usedMoney})
+      : assert(type != null),
+        super._();
 
   factory _$_EligibilityResponseFinancial.fromJson(Map<String, dynamic> json) =>
       _$_$_EligibilityResponseFinancialFromJson(json);
 
   @override
-  @JsonKey(required: true)
   final CodeableConcept type;
   @override
-  final UnsignedInt allowedUnsignedInt;
-  @override
-  final String allowedString;
-  @override
-  final Money allowedMoney;
-  @override
-  final UnsignedInt usedUnsignedInt;
-  @override
-  final Money usedMoney;
+  final Decimal allowedUnsignedInt;
   @override
   @JsonKey(name: '_allowedUnsignedInt')
   final Element allowedUnsignedIntElement;
   @override
+  final String allowedString;
+  @override
   @JsonKey(name: '_allowedString')
   final Element allowedStringElement;
   @override
+  final Money allowedMoney;
+  @override
+  final Decimal usedUnsignedInt;
+  @override
   @JsonKey(name: '_usedUnsignedInt')
   final Element usedUnsignedIntElement;
+  @override
+  final Money usedMoney;
 
   @override
   String toString() {
-    return 'EligibilityResponseFinancial(type: $type, allowedUnsignedInt: $allowedUnsignedInt, allowedString: $allowedString, allowedMoney: $allowedMoney, usedUnsignedInt: $usedUnsignedInt, usedMoney: $usedMoney, allowedUnsignedIntElement: $allowedUnsignedIntElement, allowedStringElement: $allowedStringElement, usedUnsignedIntElement: $usedUnsignedIntElement)';
+    return 'EligibilityResponseFinancial(type: $type, allowedUnsignedInt: $allowedUnsignedInt, allowedUnsignedIntElement: $allowedUnsignedIntElement, allowedString: $allowedString, allowedStringElement: $allowedStringElement, allowedMoney: $allowedMoney, usedUnsignedInt: $usedUnsignedInt, usedUnsignedIntElement: $usedUnsignedIntElement, usedMoney: $usedMoney)';
   }
 
   @override
@@ -4724,29 +4909,29 @@ class _$_EligibilityResponseFinancial implements _EligibilityResponseFinancial {
             (identical(other.allowedUnsignedInt, allowedUnsignedInt) ||
                 const DeepCollectionEquality()
                     .equals(other.allowedUnsignedInt, allowedUnsignedInt)) &&
+            (identical(other.allowedUnsignedIntElement,
+                    allowedUnsignedIntElement) ||
+                const DeepCollectionEquality().equals(
+                    other.allowedUnsignedIntElement,
+                    allowedUnsignedIntElement)) &&
             (identical(other.allowedString, allowedString) ||
                 const DeepCollectionEquality()
                     .equals(other.allowedString, allowedString)) &&
+            (identical(other.allowedStringElement, allowedStringElement) ||
+                const DeepCollectionEquality().equals(
+                    other.allowedStringElement, allowedStringElement)) &&
             (identical(other.allowedMoney, allowedMoney) ||
                 const DeepCollectionEquality()
                     .equals(other.allowedMoney, allowedMoney)) &&
             (identical(other.usedUnsignedInt, usedUnsignedInt) ||
                 const DeepCollectionEquality()
                     .equals(other.usedUnsignedInt, usedUnsignedInt)) &&
-            (identical(other.usedMoney, usedMoney) ||
-                const DeepCollectionEquality()
-                    .equals(other.usedMoney, usedMoney)) &&
-            (identical(other.allowedUnsignedIntElement,
-                    allowedUnsignedIntElement) ||
-                const DeepCollectionEquality().equals(
-                    other.allowedUnsignedIntElement,
-                    allowedUnsignedIntElement)) &&
-            (identical(other.allowedStringElement, allowedStringElement) ||
-                const DeepCollectionEquality().equals(
-                    other.allowedStringElement, allowedStringElement)) &&
             (identical(other.usedUnsignedIntElement, usedUnsignedIntElement) ||
                 const DeepCollectionEquality().equals(
-                    other.usedUnsignedIntElement, usedUnsignedIntElement)));
+                    other.usedUnsignedIntElement, usedUnsignedIntElement)) &&
+            (identical(other.usedMoney, usedMoney) ||
+                const DeepCollectionEquality()
+                    .equals(other.usedMoney, usedMoney)));
   }
 
   @override
@@ -4754,13 +4939,13 @@ class _$_EligibilityResponseFinancial implements _EligibilityResponseFinancial {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(allowedUnsignedInt) ^
+      const DeepCollectionEquality().hash(allowedUnsignedIntElement) ^
       const DeepCollectionEquality().hash(allowedString) ^
+      const DeepCollectionEquality().hash(allowedStringElement) ^
       const DeepCollectionEquality().hash(allowedMoney) ^
       const DeepCollectionEquality().hash(usedUnsignedInt) ^
-      const DeepCollectionEquality().hash(usedMoney) ^
-      const DeepCollectionEquality().hash(allowedUnsignedIntElement) ^
-      const DeepCollectionEquality().hash(allowedStringElement) ^
-      const DeepCollectionEquality().hash(usedUnsignedIntElement);
+      const DeepCollectionEquality().hash(usedUnsignedIntElement) ^
+      const DeepCollectionEquality().hash(usedMoney);
 
   @override
   _$EligibilityResponseFinancialCopyWith<_EligibilityResponseFinancial>
@@ -4774,47 +4959,43 @@ class _$_EligibilityResponseFinancial implements _EligibilityResponseFinancial {
 }
 
 abstract class _EligibilityResponseFinancial
-    implements EligibilityResponseFinancial {
+    extends EligibilityResponseFinancial {
+  _EligibilityResponseFinancial._() : super._();
   factory _EligibilityResponseFinancial(
-      {@JsonKey(required: true)
-          CodeableConcept type,
-      UnsignedInt allowedUnsignedInt,
+      {@required CodeableConcept type,
+      Decimal allowedUnsignedInt,
+      @JsonKey(name: '_allowedUnsignedInt') Element allowedUnsignedIntElement,
       String allowedString,
+      @JsonKey(name: '_allowedString') Element allowedStringElement,
       Money allowedMoney,
-      UnsignedInt usedUnsignedInt,
-      Money usedMoney,
-      @JsonKey(name: '_allowedUnsignedInt')
-          Element allowedUnsignedIntElement,
-      @JsonKey(name: '_allowedString')
-          Element allowedStringElement,
-      @JsonKey(name: '_usedUnsignedInt')
-          Element usedUnsignedIntElement}) = _$_EligibilityResponseFinancial;
+      Decimal usedUnsignedInt,
+      @JsonKey(name: '_usedUnsignedInt') Element usedUnsignedIntElement,
+      Money usedMoney}) = _$_EligibilityResponseFinancial;
 
   factory _EligibilityResponseFinancial.fromJson(Map<String, dynamic> json) =
       _$_EligibilityResponseFinancial.fromJson;
 
   @override
-  @JsonKey(required: true)
   CodeableConcept get type;
   @override
-  UnsignedInt get allowedUnsignedInt;
-  @override
-  String get allowedString;
-  @override
-  Money get allowedMoney;
-  @override
-  UnsignedInt get usedUnsignedInt;
-  @override
-  Money get usedMoney;
+  Decimal get allowedUnsignedInt;
   @override
   @JsonKey(name: '_allowedUnsignedInt')
   Element get allowedUnsignedIntElement;
   @override
+  String get allowedString;
+  @override
   @JsonKey(name: '_allowedString')
   Element get allowedStringElement;
   @override
+  Money get allowedMoney;
+  @override
+  Decimal get usedUnsignedInt;
+  @override
   @JsonKey(name: '_usedUnsignedInt')
   Element get usedUnsignedIntElement;
+  @override
+  Money get usedMoney;
   @override
   _$EligibilityResponseFinancialCopyWith<_EligibilityResponseFinancial>
       get copyWith;
@@ -4828,8 +5009,8 @@ EligibilityResponseError _$EligibilityResponseErrorFromJson(
 class _$EligibilityResponseErrorTearOff {
   const _$EligibilityResponseErrorTearOff();
 
-  _EligibilityResponseError call(
-      {@JsonKey(required: true) CodeableConcept code}) {
+// ignore: unused_element
+  _EligibilityResponseError call({@required CodeableConcept code}) {
     return _EligibilityResponseError(
       code: code,
     );
@@ -4840,7 +5021,6 @@ class _$EligibilityResponseErrorTearOff {
 const $EligibilityResponseError = _$EligibilityResponseErrorTearOff();
 
 mixin _$EligibilityResponseError {
-  @JsonKey(required: true)
   CodeableConcept get code;
 
   Map<String, dynamic> toJson();
@@ -4851,7 +5031,7 @@ abstract class $EligibilityResponseErrorCopyWith<$Res> {
   factory $EligibilityResponseErrorCopyWith(EligibilityResponseError value,
           $Res Function(EligibilityResponseError) then) =
       _$EligibilityResponseErrorCopyWithImpl<$Res>;
-  $Res call({@JsonKey(required: true) CodeableConcept code});
+  $Res call({CodeableConcept code});
 
   $CodeableConceptCopyWith<$Res> get code;
 }
@@ -4890,7 +5070,7 @@ abstract class _$EligibilityResponseErrorCopyWith<$Res>
           $Res Function(_EligibilityResponseError) then) =
       __$EligibilityResponseErrorCopyWithImpl<$Res>;
   @override
-  $Res call({@JsonKey(required: true) CodeableConcept code});
+  $Res call({CodeableConcept code});
 
   @override
   $CodeableConceptCopyWith<$Res> get code;
@@ -4918,14 +5098,15 @@ class __$EligibilityResponseErrorCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_EligibilityResponseError implements _EligibilityResponseError {
-  _$_EligibilityResponseError({@JsonKey(required: true) this.code});
+class _$_EligibilityResponseError extends _EligibilityResponseError {
+  _$_EligibilityResponseError({@required this.code})
+      : assert(code != null),
+        super._();
 
   factory _$_EligibilityResponseError.fromJson(Map<String, dynamic> json) =>
       _$_$_EligibilityResponseErrorFromJson(json);
 
   @override
-  @JsonKey(required: true)
   final CodeableConcept code;
 
   @override
@@ -4956,16 +5137,15 @@ class _$_EligibilityResponseError implements _EligibilityResponseError {
   }
 }
 
-abstract class _EligibilityResponseError implements EligibilityResponseError {
-  factory _EligibilityResponseError(
-          {@JsonKey(required: true) CodeableConcept code}) =
+abstract class _EligibilityResponseError extends EligibilityResponseError {
+  _EligibilityResponseError._() : super._();
+  factory _EligibilityResponseError({@required CodeableConcept code}) =
       _$_EligibilityResponseError;
 
   factory _EligibilityResponseError.fromJson(Map<String, dynamic> json) =
       _$_EligibilityResponseError.fromJson;
 
   @override
-  @JsonKey(required: true)
   CodeableConcept get code;
   @override
   _$EligibilityResponseErrorCopyWith<_EligibilityResponseError> get copyWith;
@@ -4978,51 +5158,58 @@ EnrollmentRequest _$EnrollmentRequestFromJson(Map<String, dynamic> json) {
 class _$EnrollmentRequestTearOff {
   const _$EnrollmentRequestTearOff();
 
+// ignore: unused_element
   _EnrollmentRequest call(
       {@required
-      @JsonKey(required: true, defaultValue: 'EnrollmentRequest')
+      @JsonKey(defaultValue: 'EnrollmentRequest')
           String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
-      FhirDateTime created,
+      String status,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      String created,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference insurer,
       Reference provider,
       Reference organization,
       Reference subject,
-      Reference coverage,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_created')
-          Element createdElement}) {
+      Reference coverage}) {
     return _EnrollmentRequest(
       resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
+      implicitRulesElement: implicitRulesElement,
       language: language,
+      languageElement: languageElement,
       text: text,
       contained: contained,
       extension_: extension_,
       modifierExtension: modifierExtension,
       identifier: identifier,
       status: status,
+      statusElement: statusElement,
       created: created,
+      createdElement: createdElement,
       insurer: insurer,
       provider: provider,
       organization: organization,
       subject: subject,
       coverage: coverage,
-      statusElement: statusElement,
-      createdElement: createdElement,
     );
   }
 }
@@ -5031,29 +5218,33 @@ class _$EnrollmentRequestTearOff {
 const $EnrollmentRequest = _$EnrollmentRequestTearOff();
 
 mixin _$EnrollmentRequest {
-  @JsonKey(required: true, defaultValue: 'EnrollmentRequest')
+  @JsonKey(defaultValue: 'EnrollmentRequest')
   String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
   Code get language;
+  @JsonKey(name: '_language')
+  Element get languageElement;
   Narrative get text;
   List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
-  Code get status;
-  FhirDateTime get created;
+  String get status;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  String get created;
+  @JsonKey(name: '_created')
+  Element get createdElement;
   Reference get insurer;
   Reference get provider;
   Reference get organization;
   Reference get subject;
   Reference get coverage;
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @JsonKey(name: '_created')
-  Element get createdElement;
 
   Map<String, dynamic> toJson();
   $EnrollmentRequestCopyWith<EnrollmentRequest> get copyWith;
@@ -5064,39 +5255,39 @@ abstract class $EnrollmentRequestCopyWith<$Res> {
           EnrollmentRequest value, $Res Function(EnrollmentRequest) then) =
       _$EnrollmentRequestCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'EnrollmentRequest')
-          String resourceType,
+      {@JsonKey(defaultValue: 'EnrollmentRequest') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
-      FhirDateTime created,
+      String status,
+      @JsonKey(name: '_status') Element statusElement,
+      String created,
+      @JsonKey(name: '_created') Element createdElement,
       Reference insurer,
       Reference provider,
       Reference organization,
       Reference subject,
-      Reference coverage,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_created')
-          Element createdElement});
+      Reference coverage});
 
   $MetaCopyWith<$Res> get meta;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get createdElement;
   $ReferenceCopyWith<$Res> get insurer;
   $ReferenceCopyWith<$Res> get provider;
   $ReferenceCopyWith<$Res> get organization;
   $ReferenceCopyWith<$Res> get subject;
   $ReferenceCopyWith<$Res> get coverage;
-  $ElementCopyWith<$Res> get statusElement;
-  $ElementCopyWith<$Res> get createdElement;
 }
 
 class _$EnrollmentRequestCopyWithImpl<$Res>
@@ -5113,21 +5304,23 @@ class _$EnrollmentRequestCopyWithImpl<$Res>
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object created = freezed,
+    Object createdElement = freezed,
     Object insurer = freezed,
     Object provider = freezed,
     Object organization = freezed,
     Object subject = freezed,
     Object coverage = freezed,
-    Object statusElement = freezed,
-    Object createdElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -5138,7 +5331,13 @@ class _$EnrollmentRequestCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -5151,8 +5350,14 @@ class _$EnrollmentRequestCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
-      created: created == freezed ? _value.created : created as FhirDateTime,
+      status: status == freezed ? _value.status : status as String,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      created: created == freezed ? _value.created : created as String,
+      createdElement: createdElement == freezed
+          ? _value.createdElement
+          : createdElement as Element,
       insurer: insurer == freezed ? _value.insurer : insurer as Reference,
       provider: provider == freezed ? _value.provider : provider as Reference,
       organization: organization == freezed
@@ -5160,12 +5365,6 @@ class _$EnrollmentRequestCopyWithImpl<$Res>
           : organization as Reference,
       subject: subject == freezed ? _value.subject : subject as Reference,
       coverage: coverage == freezed ? _value.coverage : coverage as Reference,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      createdElement: createdElement == freezed
-          ? _value.createdElement
-          : createdElement as Element,
     ));
   }
 
@@ -5180,12 +5379,52 @@ class _$EnrollmentRequestCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
   $NarrativeCopyWith<$Res> get text {
     if (_value.text == null) {
       return null;
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get createdElement {
+    if (_value.createdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.createdElement, (value) {
+      return _then(_value.copyWith(createdElement: value));
     });
   }
 
@@ -5238,26 +5477,6 @@ class _$EnrollmentRequestCopyWithImpl<$Res>
       return _then(_value.copyWith(coverage: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get statusElement {
-    if (_value.statusElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
-      return _then(_value.copyWith(statusElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get createdElement {
-    if (_value.createdElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.createdElement, (value) {
-      return _then(_value.copyWith(createdElement: value));
-    });
-  }
 }
 
 abstract class _$EnrollmentRequestCopyWith<$Res>
@@ -5267,34 +5486,40 @@ abstract class _$EnrollmentRequestCopyWith<$Res>
       __$EnrollmentRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'EnrollmentRequest')
-          String resourceType,
+      {@JsonKey(defaultValue: 'EnrollmentRequest') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
-      FhirDateTime created,
+      String status,
+      @JsonKey(name: '_status') Element statusElement,
+      String created,
+      @JsonKey(name: '_created') Element createdElement,
       Reference insurer,
       Reference provider,
       Reference organization,
       Reference subject,
-      Reference coverage,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_created')
-          Element createdElement});
+      Reference coverage});
 
   @override
   $MetaCopyWith<$Res> get meta;
   @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
   $NarrativeCopyWith<$Res> get text;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get createdElement;
   @override
   $ReferenceCopyWith<$Res> get insurer;
   @override
@@ -5305,10 +5530,6 @@ abstract class _$EnrollmentRequestCopyWith<$Res>
   $ReferenceCopyWith<$Res> get subject;
   @override
   $ReferenceCopyWith<$Res> get coverage;
-  @override
-  $ElementCopyWith<$Res> get statusElement;
-  @override
-  $ElementCopyWith<$Res> get createdElement;
 }
 
 class __$EnrollmentRequestCopyWithImpl<$Res>
@@ -5327,21 +5548,23 @@ class __$EnrollmentRequestCopyWithImpl<$Res>
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object created = freezed,
+    Object createdElement = freezed,
     Object insurer = freezed,
     Object provider = freezed,
     Object organization = freezed,
     Object subject = freezed,
     Object coverage = freezed,
-    Object statusElement = freezed,
-    Object createdElement = freezed,
   }) {
     return _then(_EnrollmentRequest(
       resourceType: resourceType == freezed
@@ -5352,7 +5575,13 @@ class __$EnrollmentRequestCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -5365,8 +5594,14 @@ class __$EnrollmentRequestCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
-      created: created == freezed ? _value.created : created as FhirDateTime,
+      status: status == freezed ? _value.status : status as String,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      created: created == freezed ? _value.created : created as String,
+      createdElement: createdElement == freezed
+          ? _value.createdElement
+          : createdElement as Element,
       insurer: insurer == freezed ? _value.insurer : insurer as Reference,
       provider: provider == freezed ? _value.provider : provider as Reference,
       organization: organization == freezed
@@ -5374,12 +5609,6 @@ class __$EnrollmentRequestCopyWithImpl<$Res>
           : organization as Reference,
       subject: subject == freezed ? _value.subject : subject as Reference,
       coverage: coverage == freezed ? _value.coverage : coverage as Reference,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      createdElement: createdElement == freezed
-          ? _value.createdElement
-          : createdElement as Element,
     ));
   }
 }
@@ -5387,30 +5616,27 @@ class __$EnrollmentRequestCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_EnrollmentRequest extends _EnrollmentRequest {
   _$_EnrollmentRequest(
-      {@required
-      @JsonKey(required: true, defaultValue: 'EnrollmentRequest')
-          this.resourceType,
+      {@required @JsonKey(defaultValue: 'EnrollmentRequest') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.created,
+      @JsonKey(name: '_created') this.createdElement,
       this.insurer,
       this.provider,
       this.organization,
       this.subject,
-      this.coverage,
-      @JsonKey(name: '_status')
-          this.statusElement,
-      @JsonKey(name: '_created')
-          this.createdElement})
+      this.coverage})
       : assert(resourceType != null),
         super._();
 
@@ -5418,7 +5644,7 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
       _$_$_EnrollmentRequestFromJson(json);
 
   @override
-  @JsonKey(required: true, defaultValue: 'EnrollmentRequest')
+  @JsonKey(defaultValue: 'EnrollmentRequest')
   final String resourceType;
   @override
   final Id id;
@@ -5427,7 +5653,13 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
   @override
   final FhirUri implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
   final Code language;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
   @override
   final Narrative text;
   @override
@@ -5440,9 +5672,15 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
   @override
   final List<Identifier> identifier;
   @override
-  final Code status;
+  final String status;
   @override
-  final FhirDateTime created;
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  final String created;
+  @override
+  @JsonKey(name: '_created')
+  final Element createdElement;
   @override
   final Reference insurer;
   @override
@@ -5453,16 +5691,10 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
   final Reference subject;
   @override
   final Reference coverage;
-  @override
-  @JsonKey(name: '_status')
-  final Element statusElement;
-  @override
-  @JsonKey(name: '_created')
-  final Element createdElement;
 
   @override
   String toString() {
-    return 'EnrollmentRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, created: $created, insurer: $insurer, provider: $provider, organization: $organization, subject: $subject, coverage: $coverage, statusElement: $statusElement, createdElement: $createdElement)';
+    return 'EnrollmentRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, created: $created, createdElement: $createdElement, insurer: $insurer, provider: $provider, organization: $organization, subject: $subject, coverage: $coverage)';
   }
 
   @override
@@ -5479,9 +5711,15 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
             (identical(other.implicitRules, implicitRules) ||
                 const DeepCollectionEquality()
                     .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
             (identical(other.language, language) ||
                 const DeepCollectionEquality()
                     .equals(other.language, language)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
             (identical(other.text, text) ||
                 const DeepCollectionEquality().equals(other.text, text)) &&
             (identical(other.contained, contained) ||
@@ -5498,9 +5736,15 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
                     .equals(other.identifier, identifier)) &&
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
             (identical(other.created, created) ||
                 const DeepCollectionEquality()
                     .equals(other.created, created)) &&
+            (identical(other.createdElement, createdElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.createdElement, createdElement)) &&
             (identical(other.insurer, insurer) ||
                 const DeepCollectionEquality()
                     .equals(other.insurer, insurer)) &&
@@ -5515,13 +5759,7 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
                     .equals(other.subject, subject)) &&
             (identical(other.coverage, coverage) ||
                 const DeepCollectionEquality()
-                    .equals(other.coverage, coverage)) &&
-            (identical(other.statusElement, statusElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusElement, statusElement)) &&
-            (identical(other.createdElement, createdElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.createdElement, createdElement)));
+                    .equals(other.coverage, coverage)));
   }
 
   @override
@@ -5531,21 +5769,23 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
       const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(status) ^
+      const DeepCollectionEquality().hash(statusElement) ^
       const DeepCollectionEquality().hash(created) ^
+      const DeepCollectionEquality().hash(createdElement) ^
       const DeepCollectionEquality().hash(insurer) ^
       const DeepCollectionEquality().hash(provider) ^
       const DeepCollectionEquality().hash(organization) ^
       const DeepCollectionEquality().hash(subject) ^
-      const DeepCollectionEquality().hash(coverage) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(createdElement);
+      const DeepCollectionEquality().hash(coverage);
 
   @override
   _$EnrollmentRequestCopyWith<_EnrollmentRequest> get copyWith =>
@@ -5561,35 +5801,39 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
   _EnrollmentRequest._() : super._();
   factory _EnrollmentRequest(
       {@required
-      @JsonKey(required: true, defaultValue: 'EnrollmentRequest')
+      @JsonKey(defaultValue: 'EnrollmentRequest')
           String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
-      FhirDateTime created,
+      String status,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      String created,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference insurer,
       Reference provider,
       Reference organization,
       Reference subject,
-      Reference coverage,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_created')
-          Element createdElement}) = _$_EnrollmentRequest;
+      Reference coverage}) = _$_EnrollmentRequest;
 
   factory _EnrollmentRequest.fromJson(Map<String, dynamic> json) =
       _$_EnrollmentRequest.fromJson;
 
   @override
-  @JsonKey(required: true, defaultValue: 'EnrollmentRequest')
+  @JsonKey(defaultValue: 'EnrollmentRequest')
   String get resourceType;
   @override
   Id get id;
@@ -5598,7 +5842,13 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
   @override
   FhirUri get implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
   Code get language;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
   @override
   Narrative get text;
   @override
@@ -5611,9 +5861,15 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
   @override
   List<Identifier> get identifier;
   @override
-  Code get status;
+  String get status;
   @override
-  FhirDateTime get created;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  String get created;
+  @override
+  @JsonKey(name: '_created')
+  Element get createdElement;
   @override
   Reference get insurer;
   @override
@@ -5625,12 +5881,6 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
   @override
   Reference get coverage;
   @override
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @override
-  @JsonKey(name: '_created')
-  Element get createdElement;
-  @override
   _$EnrollmentRequestCopyWith<_EnrollmentRequest> get copyWith;
 }
 
@@ -5641,56 +5891,63 @@ EnrollmentResponse _$EnrollmentResponseFromJson(Map<String, dynamic> json) {
 class _$EnrollmentResponseTearOff {
   const _$EnrollmentResponseTearOff();
 
+// ignore: unused_element
   _EnrollmentResponse call(
       {@required
-      @JsonKey(required: true, defaultValue: 'EnrollmentResponse')
+      @JsonKey(defaultValue: 'EnrollmentResponse')
           String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      String status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Reference request,
       CodeableConcept outcome,
       String disposition,
-      FhirDateTime created,
-      Reference organization,
-      Reference requestProvider,
-      Reference requestOrganization,
-      @JsonKey(name: '_status')
-          Element statusElement,
       @JsonKey(name: '_disposition')
           Element dispositionElement,
+      String created,
       @JsonKey(name: '_created')
-          Element createdElement}) {
+          Element createdElement,
+      Reference organization,
+      Reference requestProvider,
+      Reference requestOrganization}) {
     return _EnrollmentResponse(
       resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
+      implicitRulesElement: implicitRulesElement,
       language: language,
+      languageElement: languageElement,
       text: text,
       contained: contained,
       extension_: extension_,
       modifierExtension: modifierExtension,
       identifier: identifier,
       status: status,
+      statusElement: statusElement,
       request: request,
       outcome: outcome,
       disposition: disposition,
+      dispositionElement: dispositionElement,
       created: created,
+      createdElement: createdElement,
       organization: organization,
       requestProvider: requestProvider,
       requestOrganization: requestOrganization,
-      statusElement: statusElement,
-      dispositionElement: dispositionElement,
-      createdElement: createdElement,
     );
   }
 }
@@ -5699,32 +5956,36 @@ class _$EnrollmentResponseTearOff {
 const $EnrollmentResponse = _$EnrollmentResponseTearOff();
 
 mixin _$EnrollmentResponse {
-  @JsonKey(required: true, defaultValue: 'EnrollmentResponse')
+  @JsonKey(defaultValue: 'EnrollmentResponse')
   String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
   Code get language;
+  @JsonKey(name: '_language')
+  Element get languageElement;
   Narrative get text;
   List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
-  Code get status;
+  String get status;
+  @JsonKey(name: '_status')
+  Element get statusElement;
   Reference get request;
   CodeableConcept get outcome;
   String get disposition;
-  FhirDateTime get created;
+  @JsonKey(name: '_disposition')
+  Element get dispositionElement;
+  String get created;
+  @JsonKey(name: '_created')
+  Element get createdElement;
   Reference get organization;
   Reference get requestProvider;
   Reference get requestOrganization;
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @JsonKey(name: '_disposition')
-  Element get dispositionElement;
-  @JsonKey(name: '_created')
-  Element get createdElement;
 
   Map<String, dynamic> toJson();
   $EnrollmentResponseCopyWith<EnrollmentResponse> get copyWith;
@@ -5735,43 +5996,42 @@ abstract class $EnrollmentResponseCopyWith<$Res> {
           EnrollmentResponse value, $Res Function(EnrollmentResponse) then) =
       _$EnrollmentResponseCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'EnrollmentResponse')
-          String resourceType,
+      {@JsonKey(defaultValue: 'EnrollmentResponse') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      String status,
+      @JsonKey(name: '_status') Element statusElement,
       Reference request,
       CodeableConcept outcome,
       String disposition,
-      FhirDateTime created,
+      @JsonKey(name: '_disposition') Element dispositionElement,
+      String created,
+      @JsonKey(name: '_created') Element createdElement,
       Reference organization,
       Reference requestProvider,
-      Reference requestOrganization,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_disposition')
-          Element dispositionElement,
-      @JsonKey(name: '_created')
-          Element createdElement});
+      Reference requestOrganization});
 
   $MetaCopyWith<$Res> get meta;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
+  $ElementCopyWith<$Res> get statusElement;
   $ReferenceCopyWith<$Res> get request;
   $CodeableConceptCopyWith<$Res> get outcome;
+  $ElementCopyWith<$Res> get dispositionElement;
+  $ElementCopyWith<$Res> get createdElement;
   $ReferenceCopyWith<$Res> get organization;
   $ReferenceCopyWith<$Res> get requestProvider;
   $ReferenceCopyWith<$Res> get requestOrganization;
-  $ElementCopyWith<$Res> get statusElement;
-  $ElementCopyWith<$Res> get dispositionElement;
-  $ElementCopyWith<$Res> get createdElement;
 }
 
 class _$EnrollmentResponseCopyWithImpl<$Res>
@@ -5788,23 +6048,25 @@ class _$EnrollmentResponseCopyWithImpl<$Res>
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object request = freezed,
     Object outcome = freezed,
     Object disposition = freezed,
+    Object dispositionElement = freezed,
     Object created = freezed,
+    Object createdElement = freezed,
     Object organization = freezed,
     Object requestProvider = freezed,
     Object requestOrganization = freezed,
-    Object statusElement = freezed,
-    Object dispositionElement = freezed,
-    Object createdElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -5815,7 +6077,13 @@ class _$EnrollmentResponseCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -5828,12 +6096,21 @@ class _$EnrollmentResponseCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed ? _value.status : status as String,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       request: request == freezed ? _value.request : request as Reference,
       outcome: outcome == freezed ? _value.outcome : outcome as CodeableConcept,
       disposition:
           disposition == freezed ? _value.disposition : disposition as String,
-      created: created == freezed ? _value.created : created as FhirDateTime,
+      dispositionElement: dispositionElement == freezed
+          ? _value.dispositionElement
+          : dispositionElement as Element,
+      created: created == freezed ? _value.created : created as String,
+      createdElement: createdElement == freezed
+          ? _value.createdElement
+          : createdElement as Element,
       organization: organization == freezed
           ? _value.organization
           : organization as Reference,
@@ -5843,15 +6120,6 @@ class _$EnrollmentResponseCopyWithImpl<$Res>
       requestOrganization: requestOrganization == freezed
           ? _value.requestOrganization
           : requestOrganization as Reference,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      dispositionElement: dispositionElement == freezed
-          ? _value.dispositionElement
-          : dispositionElement as Element,
-      createdElement: createdElement == freezed
-          ? _value.createdElement
-          : createdElement as Element,
     ));
   }
 
@@ -5866,12 +6134,42 @@ class _$EnrollmentResponseCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
   $NarrativeCopyWith<$Res> get text {
     if (_value.text == null) {
       return null;
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
     });
   }
 
@@ -5892,6 +6190,26 @@ class _$EnrollmentResponseCopyWithImpl<$Res>
     }
     return $CodeableConceptCopyWith<$Res>(_value.outcome, (value) {
       return _then(_value.copyWith(outcome: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get dispositionElement {
+    if (_value.dispositionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.dispositionElement, (value) {
+      return _then(_value.copyWith(dispositionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get createdElement {
+    if (_value.createdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.createdElement, (value) {
+      return _then(_value.copyWith(createdElement: value));
     });
   }
 
@@ -5924,36 +6242,6 @@ class _$EnrollmentResponseCopyWithImpl<$Res>
       return _then(_value.copyWith(requestOrganization: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get statusElement {
-    if (_value.statusElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
-      return _then(_value.copyWith(statusElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get dispositionElement {
-    if (_value.dispositionElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.dispositionElement, (value) {
-      return _then(_value.copyWith(dispositionElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get createdElement {
-    if (_value.createdElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.createdElement, (value) {
-      return _then(_value.copyWith(createdElement: value));
-    });
-  }
 }
 
 abstract class _$EnrollmentResponseCopyWith<$Res>
@@ -5963,53 +6251,54 @@ abstract class _$EnrollmentResponseCopyWith<$Res>
       __$EnrollmentResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'EnrollmentResponse')
-          String resourceType,
+      {@JsonKey(defaultValue: 'EnrollmentResponse') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      String status,
+      @JsonKey(name: '_status') Element statusElement,
       Reference request,
       CodeableConcept outcome,
       String disposition,
-      FhirDateTime created,
+      @JsonKey(name: '_disposition') Element dispositionElement,
+      String created,
+      @JsonKey(name: '_created') Element createdElement,
       Reference organization,
       Reference requestProvider,
-      Reference requestOrganization,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_disposition')
-          Element dispositionElement,
-      @JsonKey(name: '_created')
-          Element createdElement});
+      Reference requestOrganization});
 
   @override
   $MetaCopyWith<$Res> get meta;
   @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
   $NarrativeCopyWith<$Res> get text;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
   @override
   $ReferenceCopyWith<$Res> get request;
   @override
   $CodeableConceptCopyWith<$Res> get outcome;
+  @override
+  $ElementCopyWith<$Res> get dispositionElement;
+  @override
+  $ElementCopyWith<$Res> get createdElement;
   @override
   $ReferenceCopyWith<$Res> get organization;
   @override
   $ReferenceCopyWith<$Res> get requestProvider;
   @override
   $ReferenceCopyWith<$Res> get requestOrganization;
-  @override
-  $ElementCopyWith<$Res> get statusElement;
-  @override
-  $ElementCopyWith<$Res> get dispositionElement;
-  @override
-  $ElementCopyWith<$Res> get createdElement;
 }
 
 class __$EnrollmentResponseCopyWithImpl<$Res>
@@ -6028,23 +6317,25 @@ class __$EnrollmentResponseCopyWithImpl<$Res>
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object request = freezed,
     Object outcome = freezed,
     Object disposition = freezed,
+    Object dispositionElement = freezed,
     Object created = freezed,
+    Object createdElement = freezed,
     Object organization = freezed,
     Object requestProvider = freezed,
     Object requestOrganization = freezed,
-    Object statusElement = freezed,
-    Object dispositionElement = freezed,
-    Object createdElement = freezed,
   }) {
     return _then(_EnrollmentResponse(
       resourceType: resourceType == freezed
@@ -6055,7 +6346,13 @@ class __$EnrollmentResponseCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -6068,12 +6365,21 @@ class __$EnrollmentResponseCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed ? _value.status : status as String,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       request: request == freezed ? _value.request : request as Reference,
       outcome: outcome == freezed ? _value.outcome : outcome as CodeableConcept,
       disposition:
           disposition == freezed ? _value.disposition : disposition as String,
-      created: created == freezed ? _value.created : created as FhirDateTime,
+      dispositionElement: dispositionElement == freezed
+          ? _value.dispositionElement
+          : dispositionElement as Element,
+      created: created == freezed ? _value.created : created as String,
+      createdElement: createdElement == freezed
+          ? _value.createdElement
+          : createdElement as Element,
       organization: organization == freezed
           ? _value.organization
           : organization as Reference,
@@ -6083,15 +6389,6 @@ class __$EnrollmentResponseCopyWithImpl<$Res>
       requestOrganization: requestOrganization == freezed
           ? _value.requestOrganization
           : requestOrganization as Reference,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      dispositionElement: dispositionElement == freezed
-          ? _value.dispositionElement
-          : dispositionElement as Element,
-      createdElement: createdElement == freezed
-          ? _value.createdElement
-          : createdElement as Element,
     ));
   }
 }
@@ -6099,33 +6396,29 @@ class __$EnrollmentResponseCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_EnrollmentResponse extends _EnrollmentResponse {
   _$_EnrollmentResponse(
-      {@required
-      @JsonKey(required: true, defaultValue: 'EnrollmentResponse')
-          this.resourceType,
+      {@required @JsonKey(defaultValue: 'EnrollmentResponse') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.request,
       this.outcome,
       this.disposition,
+      @JsonKey(name: '_disposition') this.dispositionElement,
       this.created,
+      @JsonKey(name: '_created') this.createdElement,
       this.organization,
       this.requestProvider,
-      this.requestOrganization,
-      @JsonKey(name: '_status')
-          this.statusElement,
-      @JsonKey(name: '_disposition')
-          this.dispositionElement,
-      @JsonKey(name: '_created')
-          this.createdElement})
+      this.requestOrganization})
       : assert(resourceType != null),
         super._();
 
@@ -6133,7 +6426,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
       _$_$_EnrollmentResponseFromJson(json);
 
   @override
-  @JsonKey(required: true, defaultValue: 'EnrollmentResponse')
+  @JsonKey(defaultValue: 'EnrollmentResponse')
   final String resourceType;
   @override
   final Id id;
@@ -6142,7 +6435,13 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
   @override
   final FhirUri implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
   final Code language;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
   @override
   final Narrative text;
   @override
@@ -6155,7 +6454,10 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
   @override
   final List<Identifier> identifier;
   @override
-  final Code status;
+  final String status;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
   @override
   final Reference request;
   @override
@@ -6163,26 +6465,23 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
   @override
   final String disposition;
   @override
-  final FhirDateTime created;
+  @JsonKey(name: '_disposition')
+  final Element dispositionElement;
+  @override
+  final String created;
+  @override
+  @JsonKey(name: '_created')
+  final Element createdElement;
   @override
   final Reference organization;
   @override
   final Reference requestProvider;
   @override
   final Reference requestOrganization;
-  @override
-  @JsonKey(name: '_status')
-  final Element statusElement;
-  @override
-  @JsonKey(name: '_disposition')
-  final Element dispositionElement;
-  @override
-  @JsonKey(name: '_created')
-  final Element createdElement;
 
   @override
   String toString() {
-    return 'EnrollmentResponse(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, request: $request, outcome: $outcome, disposition: $disposition, created: $created, organization: $organization, requestProvider: $requestProvider, requestOrganization: $requestOrganization, statusElement: $statusElement, dispositionElement: $dispositionElement, createdElement: $createdElement)';
+    return 'EnrollmentResponse(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, request: $request, outcome: $outcome, disposition: $disposition, dispositionElement: $dispositionElement, created: $created, createdElement: $createdElement, organization: $organization, requestProvider: $requestProvider, requestOrganization: $requestOrganization)';
   }
 
   @override
@@ -6199,9 +6498,15 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
             (identical(other.implicitRules, implicitRules) ||
                 const DeepCollectionEquality()
                     .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
             (identical(other.language, language) ||
                 const DeepCollectionEquality()
                     .equals(other.language, language)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
             (identical(other.text, text) ||
                 const DeepCollectionEquality().equals(other.text, text)) &&
             (identical(other.contained, contained) ||
@@ -6218,6 +6523,9 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
                     .equals(other.identifier, identifier)) &&
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
             (identical(other.request, request) ||
                 const DeepCollectionEquality()
                     .equals(other.request, request)) &&
@@ -6227,9 +6535,15 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
             (identical(other.disposition, disposition) ||
                 const DeepCollectionEquality()
                     .equals(other.disposition, disposition)) &&
+            (identical(other.dispositionElement, dispositionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.dispositionElement, dispositionElement)) &&
             (identical(other.created, created) ||
                 const DeepCollectionEquality()
                     .equals(other.created, created)) &&
+            (identical(other.createdElement, createdElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.createdElement, createdElement)) &&
             (identical(other.organization, organization) ||
                 const DeepCollectionEquality()
                     .equals(other.organization, organization)) &&
@@ -6238,16 +6552,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
                     .equals(other.requestProvider, requestProvider)) &&
             (identical(other.requestOrganization, requestOrganization) ||
                 const DeepCollectionEquality()
-                    .equals(other.requestOrganization, requestOrganization)) &&
-            (identical(other.statusElement, statusElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusElement, statusElement)) &&
-            (identical(other.dispositionElement, dispositionElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.dispositionElement, dispositionElement)) &&
-            (identical(other.createdElement, createdElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.createdElement, createdElement)));
+                    .equals(other.requestOrganization, requestOrganization)));
   }
 
   @override
@@ -6257,23 +6562,25 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
       const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(status) ^
+      const DeepCollectionEquality().hash(statusElement) ^
       const DeepCollectionEquality().hash(request) ^
       const DeepCollectionEquality().hash(outcome) ^
       const DeepCollectionEquality().hash(disposition) ^
+      const DeepCollectionEquality().hash(dispositionElement) ^
       const DeepCollectionEquality().hash(created) ^
+      const DeepCollectionEquality().hash(createdElement) ^
       const DeepCollectionEquality().hash(organization) ^
       const DeepCollectionEquality().hash(requestProvider) ^
-      const DeepCollectionEquality().hash(requestOrganization) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(dispositionElement) ^
-      const DeepCollectionEquality().hash(createdElement);
+      const DeepCollectionEquality().hash(requestOrganization);
 
   @override
   _$EnrollmentResponseCopyWith<_EnrollmentResponse> get copyWith =>
@@ -6289,38 +6596,42 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
   _EnrollmentResponse._() : super._();
   factory _EnrollmentResponse(
       {@required
-      @JsonKey(required: true, defaultValue: 'EnrollmentResponse')
+      @JsonKey(defaultValue: 'EnrollmentResponse')
           String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      String status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Reference request,
       CodeableConcept outcome,
       String disposition,
-      FhirDateTime created,
-      Reference organization,
-      Reference requestProvider,
-      Reference requestOrganization,
-      @JsonKey(name: '_status')
-          Element statusElement,
       @JsonKey(name: '_disposition')
           Element dispositionElement,
+      String created,
       @JsonKey(name: '_created')
-          Element createdElement}) = _$_EnrollmentResponse;
+          Element createdElement,
+      Reference organization,
+      Reference requestProvider,
+      Reference requestOrganization}) = _$_EnrollmentResponse;
 
   factory _EnrollmentResponse.fromJson(Map<String, dynamic> json) =
       _$_EnrollmentResponse.fromJson;
 
   @override
-  @JsonKey(required: true, defaultValue: 'EnrollmentResponse')
+  @JsonKey(defaultValue: 'EnrollmentResponse')
   String get resourceType;
   @override
   Id get id;
@@ -6329,7 +6640,13 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
   @override
   FhirUri get implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
   Code get language;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
   @override
   Narrative get text;
   @override
@@ -6342,7 +6659,10 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
   @override
   List<Identifier> get identifier;
   @override
-  Code get status;
+  String get status;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
   @override
   Reference get request;
   @override
@@ -6350,22 +6670,19 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
   @override
   String get disposition;
   @override
-  FhirDateTime get created;
+  @JsonKey(name: '_disposition')
+  Element get dispositionElement;
+  @override
+  String get created;
+  @override
+  @JsonKey(name: '_created')
+  Element get createdElement;
   @override
   Reference get organization;
   @override
   Reference get requestProvider;
   @override
   Reference get requestOrganization;
-  @override
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @override
-  @JsonKey(name: '_disposition')
-  Element get dispositionElement;
-  @override
-  @JsonKey(name: '_created')
-  Element get createdElement;
   @override
   _$EnrollmentResponseCopyWith<_EnrollmentResponse> get copyWith;
 }

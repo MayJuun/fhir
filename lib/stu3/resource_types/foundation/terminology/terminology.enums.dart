@@ -1,4 +1,15 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'terminology.dart';
+
+enum CodeSystemStatus {
+  @JsonValue('draft')
+  draft,
+  @JsonValue('active')
+  active,
+  @JsonValue('retired')
+  retired,
+  @JsonValue('unknown')
+  unknown,
+}
 
 enum CodeSystemHierarchyMeaning {
   @JsonValue('grouped-by')
@@ -26,7 +37,7 @@ enum CodeSystemContent {
   unknown,
 }
 
-enum PropertyType {
+enum CodeSystemPropertyType {
   @JsonValue('code')
   code,
   @JsonValue('Coding')
@@ -43,7 +54,18 @@ enum PropertyType {
   unknown,
 }
 
-enum TargetEquivalence {
+enum ConceptMapStatus {
+  @JsonValue('draft')
+  draft,
+  @JsonValue('active')
+  active,
+  @JsonValue('retired')
+  retired,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum ConceptMapTargetEquivalence {
   @JsonValue('relatedto')
   relatedto,
   @JsonValue('equivalent')
@@ -68,7 +90,7 @@ enum TargetEquivalence {
   unknown,
 }
 
-enum UnmappedMode {
+enum ConceptMapUnmappedMode {
   @JsonValue('provided')
   provided,
   @JsonValue('fixed')
@@ -79,13 +101,35 @@ enum UnmappedMode {
   unknown,
 }
 
-enum FixedVersionMode {
+enum ExpansionProfileStatus {
+  @JsonValue('draft')
+  draft,
+  @JsonValue('active')
+  active,
+  @JsonValue('retired')
+  retired,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum ExpansionProfileFixedVersionMode {
   @JsonValue('default')
   default_,
   @JsonValue('check')
   check,
   @JsonValue('override')
   override,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum NamingSystemStatus {
+  @JsonValue('draft')
+  draft,
+  @JsonValue('active')
+  active,
+  @JsonValue('retired')
+  retired,
   @JsonValue('unknown')
   unknown,
 }
@@ -101,7 +145,7 @@ enum NamingSystemKind {
   unknown,
 }
 
-enum UniqueIdType {
+enum NamingSystemUniqueIdType {
   @JsonValue('oid')
   oid,
   @JsonValue('uuid')
@@ -114,9 +158,20 @@ enum UniqueIdType {
   unknown,
 }
 
-enum FilterOp {
+enum ValueSetStatus {
+  @JsonValue('draft')
+  draft,
+  @JsonValue('active')
+  active,
+  @JsonValue('retired')
+  retired,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum ValueSetFilterOp {
   @JsonValue('=')
-  equal,
+  eq,
   @JsonValue('is-a')
   is_a,
   @JsonValue('descendent-of')

@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'other.dart';
 
 enum BundleType {
   @JsonValue('document')
@@ -23,7 +23,7 @@ enum BundleType {
   unknown,
 }
 
-enum SearchMode {
+enum BundleSearchMode {
   @JsonValue('match')
   match,
   @JsonValue('include')
@@ -34,9 +34,9 @@ enum SearchMode {
   unknown,
 }
 
-enum RequestMethod {
+enum BundleRequestMethod {
   @JsonValue('GET')
-  get,
+  get_,
   @JsonValue('POST')
   post,
   @JsonValue('PUT')
@@ -69,7 +69,7 @@ enum MediaType {
   unknown,
 }
 
-enum ResponseCode {
+enum MessageHeaderResponseCode {
   @JsonValue('ok')
   ok,
   @JsonValue('transient-error')
@@ -80,7 +80,7 @@ enum ResponseCode {
   unknown,
 }
 
-enum IssueSeverity {
+enum OperationOutcomeIssueSeverity {
   @JsonValue('fatal')
   fatal,
   @JsonValue('error')
@@ -93,13 +93,13 @@ enum IssueSeverity {
   unknown,
 }
 
-enum IssueCode {
+enum OperationOutcomeIssueCode {
   @JsonValue('invalid')
   invalid,
   @JsonValue('structure')
   structure,
   @JsonValue('required')
-  required,
+  required_,
   @JsonValue('value')
   value,
   @JsonValue('invariant')
@@ -129,7 +129,7 @@ enum IssueCode {
   @JsonValue('code-invalid')
   code_invalid,
   @JsonValue('extension')
-  extension,
+  extension_,
   @JsonValue('too-costly')
   too_costly,
   @JsonValue('business-rule')
@@ -167,7 +167,7 @@ enum SubscriptionStatus {
   unknown,
 }
 
-enum ChannelType {
+enum SubscriptionChannelType {
   @JsonValue('rest-hook')
   rest_hook,
   @JsonValue('websocket')

@@ -1,8 +1,9 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
 import '../../../../stu3.dart';
-import 'other.enums.dart';
 
+part 'other.enums.dart';
 part 'other.freezed.dart';
 part 'other.g.dart';
 
@@ -10,24 +11,25 @@ part 'other.g.dart';
 abstract class Basic with Resource implements _$Basic {
   Basic._();
   factory Basic({
-    @JsonKey(required: true, defaultValue: 'Basic')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'Basic') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
-    @JsonKey(required: true) CodeableConcept code,
+    @required CodeableConcept code,
     Reference subject,
-    Date created,
-    Reference author,
+    String created,
     @JsonKey(name: '_created') Element createdElement,
+    Reference author,
   }) = _Basic;
+
   factory Basic.fromJson(Map<String, dynamic> json) => _$BasicFromJson(json);
 }
 
@@ -35,23 +37,24 @@ abstract class Basic with Resource implements _$Basic {
 abstract class Binary with Resource implements _$Binary {
   Binary._();
   factory Binary({
-    @JsonKey(required: true, defaultValue: 'Binary')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'Binary') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
-    Code contentType,
+    String contentType,
+    @JsonKey(name: '_contentType') Element contentTypeElement,
     Reference securityContext,
     String content,
-    @JsonKey(name: '_contentType') Element contentTypeElement,
     @JsonKey(name: '_content') Element contentElement,
   }) = _Binary;
+
   factory Binary.fromJson(Map<String, dynamic> json) => _$BinaryFromJson(json);
 }
 
@@ -59,101 +62,112 @@ abstract class Binary with Resource implements _$Binary {
 abstract class Bundle with Resource implements _$Bundle {
   Bundle._();
   factory Bundle({
-    @JsonKey(required: true, defaultValue: 'Bundle')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'Bundle') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     Identifier identifier,
-    @JsonKey(unknownEnumValue: BundleType.unknown) BundleType type,
-    UnsignedInt total,
+    BundleType type,
+    @JsonKey(name: '_type') Element typeElement,
+    Decimal total,
+    @JsonKey(name: '_total') Element totalElement,
     List<BundleLink> link,
     List<BundleEntry> entry,
     Signature signature,
-    @JsonKey(name: '_type') Element typeElement,
-    @JsonKey(name: '_total') Element totalElement,
   }) = _Bundle;
+
   factory Bundle.fromJson(Map<String, dynamic> json) => _$BundleFromJson(json);
 }
 
 @freezed
-abstract class BundleLink with _$BundleLink {
+abstract class BundleLink implements _$BundleLink {
+  BundleLink._();
   factory BundleLink({
     String relation,
-    String url,
     @JsonKey(name: '_relation') Element relationElement,
+    String url,
     @JsonKey(name: '_url') Element urlElement,
   }) = _BundleLink;
+
   factory BundleLink.fromJson(Map<String, dynamic> json) =>
       _$BundleLinkFromJson(json);
 }
 
 @freezed
-abstract class BundleEntry with _$BundleEntry {
+abstract class BundleEntry implements _$BundleEntry {
+  BundleEntry._();
   factory BundleEntry({
     List<BundleLink> link,
     String fullUrl,
+    @JsonKey(name: '_fullUrl') Element fullUrlElement,
     Resource resource,
     BundleSearch search,
     BundleRequest request,
     BundleResponse response,
-    @JsonKey(name: '_fullUrl') Element fullUrlElement,
   }) = _BundleEntry;
+
   factory BundleEntry.fromJson(Map<String, dynamic> json) =>
       _$BundleEntryFromJson(json);
 }
 
 @freezed
-abstract class BundleSearch with _$BundleSearch {
+abstract class BundleSearch implements _$BundleSearch {
+  BundleSearch._();
   factory BundleSearch({
-    @JsonKey(unknownEnumValue: SearchMode.unknown) SearchMode mode,
-    Decimal score,
+    BundleSearchMode mode,
     @JsonKey(name: '_mode') Element modeElement,
+    Decimal score,
     @JsonKey(name: '_score') Element scoreElement,
   }) = _BundleSearch;
+
   factory BundleSearch.fromJson(Map<String, dynamic> json) =>
       _$BundleSearchFromJson(json);
 }
 
 @freezed
-abstract class BundleRequest with _$BundleRequest {
+abstract class BundleRequest implements _$BundleRequest {
+  BundleRequest._();
   factory BundleRequest({
-    @JsonKey(unknownEnumValue: RequestMethod.unknown) RequestMethod method,
-    String url,
-    String ifNoneMatch,
-    String ifModifiedSince,
-    String ifMatch,
-    String ifNoneExist,
+    BundleRequestMethod method,
     @JsonKey(name: '_method') Element methodElement,
+    String url,
     @JsonKey(name: '_url') Element urlElement,
+    String ifNoneMatch,
     @JsonKey(name: '_ifNoneMatch') Element ifNoneMatchElement,
+    String ifModifiedSince,
     @JsonKey(name: '_ifModifiedSince') Element ifModifiedSinceElement,
+    String ifMatch,
     @JsonKey(name: '_ifMatch') Element ifMatchElement,
+    String ifNoneExist,
     @JsonKey(name: '_ifNoneExist') Element ifNoneExistElement,
   }) = _BundleRequest;
+
   factory BundleRequest.fromJson(Map<String, dynamic> json) =>
       _$BundleRequestFromJson(json);
 }
 
 @freezed
-abstract class BundleResponse with _$BundleResponse {
+abstract class BundleResponse implements _$BundleResponse {
+  BundleResponse._();
   factory BundleResponse({
     String status,
-    String location,
-    String etag,
-    String lastModified,
-    Resource outcome,
     @JsonKey(name: '_status') Element statusElement,
+    String location,
     @JsonKey(name: '_location') Element locationElement,
+    String etag,
     @JsonKey(name: '_etag') Element etagElement,
+    String lastModified,
     @JsonKey(name: '_lastModified') Element lastModifiedElement,
+    Resource outcome,
   }) = _BundleResponse;
+
   factory BundleResponse.fromJson(Map<String, dynamic> json) =>
       _$BundleResponseFromJson(json);
 }
@@ -162,33 +176,36 @@ abstract class BundleResponse with _$BundleResponse {
 abstract class Linkage with Resource implements _$Linkage {
   Linkage._();
   factory Linkage({
-    @JsonKey(required: true, defaultValue: 'Linkage')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'Linkage') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     Boolean active,
-    Reference author,
-    @JsonKey(required: true) List<LinkageItem> item,
     @JsonKey(name: '_active') Element activeElement,
+    Reference author,
+    @required List<LinkageItem> item,
   }) = _Linkage;
+
   factory Linkage.fromJson(Map<String, dynamic> json) =>
       _$LinkageFromJson(json);
 }
 
 @freezed
-abstract class LinkageItem with _$LinkageItem {
+abstract class LinkageItem implements _$LinkageItem {
+  LinkageItem._();
   factory LinkageItem({
-    @JsonKey(unknownEnumValue: LinkageItemType.unknown) LinkageItemType type,
-    @JsonKey(required: true) Reference resource,
+    LinkageItemType type,
     @JsonKey(name: '_type') Element typeElement,
+    @required Reference resource,
   }) = _LinkageItem;
+
   factory LinkageItem.fromJson(Map<String, dynamic> json) =>
       _$LinkageItemFromJson(json);
 }
@@ -197,43 +214,44 @@ abstract class LinkageItem with _$LinkageItem {
 abstract class Media with Resource implements _$Media {
   Media._();
   factory Media({
-    @JsonKey(required: true, defaultValue: 'Media')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'Media') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> basedOn,
-    @JsonKey(unknownEnumValue: MediaType.unknown) MediaType type,
+    MediaType type,
+    @JsonKey(name: '_type') Element typeElement,
     CodeableConcept subtype,
     CodeableConcept view,
     Reference subject,
     Reference context,
     FhirDateTime occurrenceDateTime,
+    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
     Period occurrencePeriod,
     Reference operator,
     List<CodeableConcept> reasonCode,
     CodeableConcept bodySite,
     Reference device,
-    PositiveInt height,
-    PositiveInt width,
-    PositiveInt frames,
-    UnsignedInt duration,
-    @JsonKey(required: true) Attachment content,
-    List<Annotation> note,
-    @JsonKey(name: '_type') Element typeElement,
-    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+    Decimal height,
     @JsonKey(name: '_height') Element heightElement,
+    Id width,
     @JsonKey(name: '_width') Element widthElement,
+    Decimal frames,
     @JsonKey(name: '_frames') Element framesElement,
+    Decimal duration,
     @JsonKey(name: '_duration') Element durationElement,
+    @required Attachment content,
+    List<Annotation> note,
   }) = _Media;
+
   factory Media.fromJson(Map<String, dynamic> json) => _$MediaFromJson(json);
 }
 
@@ -241,74 +259,81 @@ abstract class Media with Resource implements _$Media {
 abstract class MessageHeader with Resource implements _$MessageHeader {
   MessageHeader._();
   factory MessageHeader({
-    @JsonKey(required: true, defaultValue: 'MessageHeader')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'MessageHeader') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) Coding event,
+    @required Coding event,
     List<MessageHeaderDestination> destination,
     Reference receiver,
     Reference sender,
     String timestamp,
+    @JsonKey(name: '_timestamp') Element timestampElement,
     Reference enterer,
     Reference author,
-    @JsonKey(required: true) MessageHeaderSource source,
+    @required MessageHeaderSource source,
     Reference responsible,
     CodeableConcept reason,
     MessageHeaderResponse response,
     List<Reference> focus,
-    @JsonKey(name: '_timestamp') Element timestampElement,
   }) = _MessageHeader;
+
   factory MessageHeader.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderFromJson(json);
 }
 
 @freezed
-abstract class MessageHeaderDestination with _$MessageHeaderDestination {
+abstract class MessageHeaderDestination implements _$MessageHeaderDestination {
+  MessageHeaderDestination._();
   factory MessageHeaderDestination({
     String name,
+    @JsonKey(name: '_name') Element nameElement,
     Reference target,
     String endpoint,
-    @JsonKey(name: '_name') Element nameElement,
     @JsonKey(name: '_endpoint') Element endpointElement,
   }) = _MessageHeaderDestination;
+
   factory MessageHeaderDestination.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderDestinationFromJson(json);
 }
 
 @freezed
-abstract class MessageHeaderSource with _$MessageHeaderSource {
+abstract class MessageHeaderSource implements _$MessageHeaderSource {
+  MessageHeaderSource._();
   factory MessageHeaderSource({
     String name,
+    @JsonKey(name: '_name') Element nameElement,
     String software,
+    @JsonKey(name: '_software') Element softwareElement,
     String version,
+    @JsonKey(name: '_version') Element versionElement,
     ContactPoint contact,
     String endpoint,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_software') Element softwareElement,
-    @JsonKey(name: '_version') Element versionElement,
     @JsonKey(name: '_endpoint') Element endpointElement,
   }) = _MessageHeaderSource;
+
   factory MessageHeaderSource.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderSourceFromJson(json);
 }
 
 @freezed
-abstract class MessageHeaderResponse with _$MessageHeaderResponse {
+abstract class MessageHeaderResponse implements _$MessageHeaderResponse {
+  MessageHeaderResponse._();
   factory MessageHeaderResponse({
     Id identifier,
-    @JsonKey(unknownEnumValue: ResponseCode.unknown) ResponseCode code,
-    Reference details,
     @JsonKey(name: '_identifier') Element identifierElement,
+    MessageHeaderResponseCode code,
     @JsonKey(name: '_code') Element codeElement,
+    Reference details,
   }) = _MessageHeaderResponse;
+
   factory MessageHeaderResponse.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderResponseFromJson(json);
 }
@@ -317,38 +342,41 @@ abstract class MessageHeaderResponse with _$MessageHeaderResponse {
 abstract class OperationOutcome with Resource implements _$OperationOutcome {
   OperationOutcome._();
   factory OperationOutcome({
-    @JsonKey(required: true, defaultValue: 'OperationOutcome')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'OperationOutcome') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) List<OperationOutcomeIssue> issue,
+    @required List<OperationOutcomeIssue> issue,
   }) = _OperationOutcome;
+
   factory OperationOutcome.fromJson(Map<String, dynamic> json) =>
       _$OperationOutcomeFromJson(json);
 }
 
 @freezed
-abstract class OperationOutcomeIssue with _$OperationOutcomeIssue {
+abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
+  OperationOutcomeIssue._();
   factory OperationOutcomeIssue({
-    @JsonKey(unknownEnumValue: IssueSeverity.unknown) IssueSeverity severity,
-    @JsonKey(unknownEnumValue: IssueCode.unknown) IssueCode code,
+    OperationOutcomeIssueSeverity severity,
+    @JsonKey(name: '_severity') Element severityElement,
+    OperationOutcomeIssueCode code,
+    @JsonKey(name: '_code') Element codeElement,
     CodeableConcept details,
     String diagnostics,
-    List<String> location,
-    List<String> expression,
-    @JsonKey(name: '_severity') Element severityElement,
-    @JsonKey(name: '_code') Element codeElement,
     @JsonKey(name: '_diagnostics') Element diagnosticsElement,
-    @JsonKey(name: '_location') Element locationElement,
-    @JsonKey(name: '_expression') Element expressionElement,
+    List<String> location,
+    @JsonKey(name: '_location') List<Element> locationElement,
+    List<String> expression,
+    @JsonKey(name: '_expression') List<Element> expressionElement,
   }) = _OperationOutcomeIssue;
+
   factory OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =>
       _$OperationOutcomeIssueFromJson(json);
 }
@@ -357,40 +385,64 @@ abstract class OperationOutcomeIssue with _$OperationOutcomeIssue {
 abstract class Parameters with Resource implements _$Parameters {
   Parameters._();
   factory Parameters({
-    @JsonKey(required: true, defaultValue: 'Parameters')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'Parameters') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<ParametersParameter> parameter,
   }) = _Parameters;
+
   factory Parameters.fromJson(Map<String, dynamic> json) =>
       _$ParametersFromJson(json);
 }
 
 @freezed
-abstract class ParametersParameter with _$ParametersParameter {
+abstract class ParametersParameter implements _$ParametersParameter {
+  ParametersParameter._();
   factory ParametersParameter({
     String name,
+    @JsonKey(name: '_name') Element nameElement,
     Boolean valueBoolean,
-    Integer valueInteger,
+    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+    Decimal valueInteger,
+    @JsonKey(name: '_valueInteger') Element valueIntegerElement,
     Decimal valueDecimal,
+    @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
     String valueBase64Binary,
+    @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
     String valueInstant,
+    @JsonKey(name: '_valueInstant') Element valueInstantElement,
     String valueString,
+    @JsonKey(name: '_valueString') Element valueStringElement,
     String valueUri,
+    @JsonKey(name: '_valueUri') Element valueUriElement,
     Date valueDate,
+    @JsonKey(name: '_valueDate') Element valueDateElement,
     FhirDateTime valueDateTime,
+    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
     Time valueTime,
+    @JsonKey(name: '_valueTime') Element valueTimeElement,
     Code valueCode,
-    Oid valueOid,
-    Uuid valueUuid,
+    @JsonKey(name: '_valueCode') Element valueCodeElement,
+    Id valueOid,
+    @JsonKey(name: '_valueOid') Element valueOidElement,
+    Id valueUuid,
+    @JsonKey(name: '_valueUuid') Element valueUuidElement,
     Id valueId,
-    UnsignedInt valueUnsignedInt,
-    PositiveInt valuePositiveInt,
+    @JsonKey(name: '_valueId') Element valueIdElement,
+    Decimal valueUnsignedInt,
+    @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
+    Decimal valuePositiveInt,
+    @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
     String valueMarkdown,
+    @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
     Element valueElement,
     FhirExtension valueExtension,
     BackboneElement valueBackboneElement,
@@ -429,25 +481,8 @@ abstract class ParametersParameter with _$ParametersParameter {
     TriggerDefinition valueTriggerDefinition,
     Resource resource,
     List<ParametersParameter> part,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-    @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-    @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-    @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
-    @JsonKey(name: '_valueInstant') Element valueInstantElement,
-    @JsonKey(name: '_valueString') Element valueStringElement,
-    @JsonKey(name: '_valueUri') Element valueUriElement,
-    @JsonKey(name: '_valueDate') Element valueDateElement,
-    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-    @JsonKey(name: '_valueTime') Element valueTimeElement,
-    @JsonKey(name: '_valueCode') Element valueCodeElement,
-    @JsonKey(name: '_valueOid') Element valueOidElement,
-    @JsonKey(name: '_valueUuid') Element valueUuidElement,
-    @JsonKey(name: '_valueId') Element valueIdElement,
-    @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
-    @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
-    @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
   }) = _ParametersParameter;
+
   factory ParametersParameter.fromJson(Map<String, dynamic> json) =>
       _$ParametersParameterFromJson(json);
 }
@@ -456,48 +491,50 @@ abstract class ParametersParameter with _$ParametersParameter {
 abstract class Subscription with Resource implements _$Subscription {
   Subscription._();
   factory Subscription({
-    @JsonKey(required: true, defaultValue: 'Subscription')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'Subscription') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
-    @JsonKey(unknownEnumValue: SubscriptionStatus.unknown)
-        SubscriptionStatus status,
+    SubscriptionStatus status,
+    @JsonKey(name: '_status') Element statusElement,
     List<ContactPoint> contact,
     String end,
-    String reason,
-    String criteria,
-    String error,
-    @JsonKey(required: true) SubscriptionChannel channel,
-    List<Coding> tag,
-    @JsonKey(name: '_status') Element statusElement,
     @JsonKey(name: '_end') Element endElement,
+    String reason,
     @JsonKey(name: '_reason') Element reasonElement,
+    String criteria,
     @JsonKey(name: '_criteria') Element criteriaElement,
+    String error,
     @JsonKey(name: '_error') Element errorElement,
+    @required SubscriptionChannel channel,
+    List<Coding> tag,
   }) = _Subscription;
+
   factory Subscription.fromJson(Map<String, dynamic> json) =>
       _$SubscriptionFromJson(json);
 }
 
 @freezed
-abstract class SubscriptionChannel with _$SubscriptionChannel {
+abstract class SubscriptionChannel implements _$SubscriptionChannel {
+  SubscriptionChannel._();
   factory SubscriptionChannel({
-    @JsonKey(unknownEnumValue: ChannelType.unknown) ChannelType type,
-    String endpoint,
-    String payload,
-    List<String> header,
+    SubscriptionChannelType type,
     @JsonKey(name: '_type') Element typeElement,
+    String endpoint,
     @JsonKey(name: '_endpoint') Element endpointElement,
+    String payload,
     @JsonKey(name: '_payload') Element payloadElement,
-    @JsonKey(name: '_header') Element headerElement,
+    List<String> header,
+    @JsonKey(name: '_header') List<Element> headerElement,
   }) = _SubscriptionChannel;
+
   factory SubscriptionChannel.fromJson(Map<String, dynamic> json) =>
       _$SubscriptionChannelFromJson(json);
 }

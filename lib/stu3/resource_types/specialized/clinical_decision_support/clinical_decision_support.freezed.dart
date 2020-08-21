@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'clinical_decision_support.dart';
 
@@ -15,28 +15,29 @@ GuidanceResponse _$GuidanceResponseFromJson(Map<String, dynamic> json) {
 class _$GuidanceResponseTearOff {
   const _$GuidanceResponseTearOff();
 
+// ignore: unused_element
   _GuidanceResponse call(
-      {@required
-      @JsonKey(required: true, defaultValue: 'GuidanceResponse')
-          String resourceType,
+      {@required @JsonKey(defaultValue: 'GuidanceResponse') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Id requestId,
+      @JsonKey(name: '_requestId') Element requestIdElement,
       Identifier identifier,
-      @JsonKey(required: true)
-          Reference module,
-      @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
-          GuidanceResponseStatus status,
+      @required Reference module,
+      GuidanceResponseStatus status,
+      @JsonKey(name: '_status') Element statusElement,
       Reference subject,
       Reference context,
       FhirDateTime occurrenceDateTime,
+      @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
       Reference performer,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
@@ -44,30 +45,29 @@ class _$GuidanceResponseTearOff {
       List<Reference> evaluationMessage,
       Reference outputParameters,
       Reference result,
-      List<DataRequirement> dataRequirement,
-      @JsonKey(name: '_requestId')
-          Element requestIdElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_occurrenceDateTime')
-          Element occurrenceDateTimeElement}) {
+      List<DataRequirement> dataRequirement}) {
     return _GuidanceResponse(
       resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
+      implicitRulesElement: implicitRulesElement,
       language: language,
+      languageElement: languageElement,
       text: text,
       contained: contained,
       extension_: extension_,
       modifierExtension: modifierExtension,
       requestId: requestId,
+      requestIdElement: requestIdElement,
       identifier: identifier,
       module: module,
       status: status,
+      statusElement: statusElement,
       subject: subject,
       context: context,
       occurrenceDateTime: occurrenceDateTime,
+      occurrenceDateTimeElement: occurrenceDateTimeElement,
       performer: performer,
       reasonCodeableConcept: reasonCodeableConcept,
       reasonReference: reasonReference,
@@ -76,9 +76,6 @@ class _$GuidanceResponseTearOff {
       outputParameters: outputParameters,
       result: result,
       dataRequirement: dataRequirement,
-      requestIdElement: requestIdElement,
-      statusElement: statusElement,
-      occurrenceDateTimeElement: occurrenceDateTimeElement,
     );
   }
 }
@@ -87,26 +84,34 @@ class _$GuidanceResponseTearOff {
 const $GuidanceResponse = _$GuidanceResponseTearOff();
 
 mixin _$GuidanceResponse {
-  @JsonKey(required: true, defaultValue: 'GuidanceResponse')
+  @JsonKey(defaultValue: 'GuidanceResponse')
   String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
   Code get language;
+  @JsonKey(name: '_language')
+  Element get languageElement;
   Narrative get text;
   List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   Id get requestId;
+  @JsonKey(name: '_requestId')
+  Element get requestIdElement;
   Identifier get identifier;
-  @JsonKey(required: true)
   Reference get module;
-  @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
   GuidanceResponseStatus get status;
+  @JsonKey(name: '_status')
+  Element get statusElement;
   Reference get subject;
   Reference get context;
   FhirDateTime get occurrenceDateTime;
+  @JsonKey(name: '_occurrenceDateTime')
+  Element get occurrenceDateTimeElement;
   Reference get performer;
   CodeableConcept get reasonCodeableConcept;
   Reference get reasonReference;
@@ -115,12 +120,6 @@ mixin _$GuidanceResponse {
   Reference get outputParameters;
   Reference get result;
   List<DataRequirement> get dataRequirement;
-  @JsonKey(name: '_requestId')
-  Element get requestIdElement;
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @JsonKey(name: '_occurrenceDateTime')
-  Element get occurrenceDateTimeElement;
 
   Map<String, dynamic> toJson();
   $GuidanceResponseCopyWith<GuidanceResponse> get copyWith;
@@ -131,26 +130,27 @@ abstract class $GuidanceResponseCopyWith<$Res> {
           GuidanceResponse value, $Res Function(GuidanceResponse) then) =
       _$GuidanceResponseCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'GuidanceResponse')
-          String resourceType,
+      {@JsonKey(defaultValue: 'GuidanceResponse') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Id requestId,
+      @JsonKey(name: '_requestId') Element requestIdElement,
       Identifier identifier,
-      @JsonKey(required: true)
-          Reference module,
-      @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
-          GuidanceResponseStatus status,
+      Reference module,
+      GuidanceResponseStatus status,
+      @JsonKey(name: '_status') Element statusElement,
       Reference subject,
       Reference context,
       FhirDateTime occurrenceDateTime,
+      @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
       Reference performer,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
@@ -158,28 +158,24 @@ abstract class $GuidanceResponseCopyWith<$Res> {
       List<Reference> evaluationMessage,
       Reference outputParameters,
       Reference result,
-      List<DataRequirement> dataRequirement,
-      @JsonKey(name: '_requestId')
-          Element requestIdElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_occurrenceDateTime')
-          Element occurrenceDateTimeElement});
+      List<DataRequirement> dataRequirement});
 
   $MetaCopyWith<$Res> get meta;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
+  $ElementCopyWith<$Res> get requestIdElement;
   $IdentifierCopyWith<$Res> get identifier;
   $ReferenceCopyWith<$Res> get module;
+  $ElementCopyWith<$Res> get statusElement;
   $ReferenceCopyWith<$Res> get subject;
   $ReferenceCopyWith<$Res> get context;
+  $ElementCopyWith<$Res> get occurrenceDateTimeElement;
   $ReferenceCopyWith<$Res> get performer;
   $CodeableConceptCopyWith<$Res> get reasonCodeableConcept;
   $ReferenceCopyWith<$Res> get reasonReference;
   $ReferenceCopyWith<$Res> get outputParameters;
   $ReferenceCopyWith<$Res> get result;
-  $ElementCopyWith<$Res> get requestIdElement;
-  $ElementCopyWith<$Res> get statusElement;
-  $ElementCopyWith<$Res> get occurrenceDateTimeElement;
 }
 
 class _$GuidanceResponseCopyWithImpl<$Res>
@@ -196,18 +192,23 @@ class _$GuidanceResponseCopyWithImpl<$Res>
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object requestId = freezed,
+    Object requestIdElement = freezed,
     Object identifier = freezed,
     Object module = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object subject = freezed,
     Object context = freezed,
     Object occurrenceDateTime = freezed,
+    Object occurrenceDateTimeElement = freezed,
     Object performer = freezed,
     Object reasonCodeableConcept = freezed,
     Object reasonReference = freezed,
@@ -216,9 +217,6 @@ class _$GuidanceResponseCopyWithImpl<$Res>
     Object outputParameters = freezed,
     Object result = freezed,
     Object dataRequirement = freezed,
-    Object requestIdElement = freezed,
-    Object statusElement = freezed,
-    Object occurrenceDateTimeElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -229,7 +227,13 @@ class _$GuidanceResponseCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -240,16 +244,25 @@ class _$GuidanceResponseCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       requestId: requestId == freezed ? _value.requestId : requestId as Id,
+      requestIdElement: requestIdElement == freezed
+          ? _value.requestIdElement
+          : requestIdElement as Element,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       module: module == freezed ? _value.module : module as Reference,
       status:
           status == freezed ? _value.status : status as GuidanceResponseStatus,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       subject: subject == freezed ? _value.subject : subject as Reference,
       context: context == freezed ? _value.context : context as Reference,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
           : occurrenceDateTime as FhirDateTime,
+      occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
+          ? _value.occurrenceDateTimeElement
+          : occurrenceDateTimeElement as Element,
       performer:
           performer == freezed ? _value.performer : performer as Reference,
       reasonCodeableConcept: reasonCodeableConcept == freezed
@@ -269,15 +282,6 @@ class _$GuidanceResponseCopyWithImpl<$Res>
       dataRequirement: dataRequirement == freezed
           ? _value.dataRequirement
           : dataRequirement as List<DataRequirement>,
-      requestIdElement: requestIdElement == freezed
-          ? _value.requestIdElement
-          : requestIdElement as Element,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
-          ? _value.occurrenceDateTimeElement
-          : occurrenceDateTimeElement as Element,
     ));
   }
 
@@ -292,12 +296,42 @@ class _$GuidanceResponseCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
   $NarrativeCopyWith<$Res> get text {
     if (_value.text == null) {
       return null;
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get requestIdElement {
+    if (_value.requestIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.requestIdElement, (value) {
+      return _then(_value.copyWith(requestIdElement: value));
     });
   }
 
@@ -322,6 +356,16 @@ class _$GuidanceResponseCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
   $ReferenceCopyWith<$Res> get subject {
     if (_value.subject == null) {
       return null;
@@ -338,6 +382,16 @@ class _$GuidanceResponseCopyWithImpl<$Res>
     }
     return $ReferenceCopyWith<$Res>(_value.context, (value) {
       return _then(_value.copyWith(context: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get occurrenceDateTimeElement {
+    if (_value.occurrenceDateTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.occurrenceDateTimeElement, (value) {
+      return _then(_value.copyWith(occurrenceDateTimeElement: value));
     });
   }
 
@@ -391,36 +445,6 @@ class _$GuidanceResponseCopyWithImpl<$Res>
       return _then(_value.copyWith(result: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get requestIdElement {
-    if (_value.requestIdElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.requestIdElement, (value) {
-      return _then(_value.copyWith(requestIdElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get statusElement {
-    if (_value.statusElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
-      return _then(_value.copyWith(statusElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get occurrenceDateTimeElement {
-    if (_value.occurrenceDateTimeElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.occurrenceDateTimeElement, (value) {
-      return _then(_value.copyWith(occurrenceDateTimeElement: value));
-    });
-  }
 }
 
 abstract class _$GuidanceResponseCopyWith<$Res>
@@ -430,26 +454,27 @@ abstract class _$GuidanceResponseCopyWith<$Res>
       __$GuidanceResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'GuidanceResponse')
-          String resourceType,
+      {@JsonKey(defaultValue: 'GuidanceResponse') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Id requestId,
+      @JsonKey(name: '_requestId') Element requestIdElement,
       Identifier identifier,
-      @JsonKey(required: true)
-          Reference module,
-      @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
-          GuidanceResponseStatus status,
+      Reference module,
+      GuidanceResponseStatus status,
+      @JsonKey(name: '_status') Element statusElement,
       Reference subject,
       Reference context,
       FhirDateTime occurrenceDateTime,
+      @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
       Reference performer,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
@@ -457,26 +482,30 @@ abstract class _$GuidanceResponseCopyWith<$Res>
       List<Reference> evaluationMessage,
       Reference outputParameters,
       Reference result,
-      List<DataRequirement> dataRequirement,
-      @JsonKey(name: '_requestId')
-          Element requestIdElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_occurrenceDateTime')
-          Element occurrenceDateTimeElement});
+      List<DataRequirement> dataRequirement});
 
   @override
   $MetaCopyWith<$Res> get meta;
   @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
   $NarrativeCopyWith<$Res> get text;
+  @override
+  $ElementCopyWith<$Res> get requestIdElement;
   @override
   $IdentifierCopyWith<$Res> get identifier;
   @override
   $ReferenceCopyWith<$Res> get module;
   @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
   $ReferenceCopyWith<$Res> get subject;
   @override
   $ReferenceCopyWith<$Res> get context;
+  @override
+  $ElementCopyWith<$Res> get occurrenceDateTimeElement;
   @override
   $ReferenceCopyWith<$Res> get performer;
   @override
@@ -487,12 +516,6 @@ abstract class _$GuidanceResponseCopyWith<$Res>
   $ReferenceCopyWith<$Res> get outputParameters;
   @override
   $ReferenceCopyWith<$Res> get result;
-  @override
-  $ElementCopyWith<$Res> get requestIdElement;
-  @override
-  $ElementCopyWith<$Res> get statusElement;
-  @override
-  $ElementCopyWith<$Res> get occurrenceDateTimeElement;
 }
 
 class __$GuidanceResponseCopyWithImpl<$Res>
@@ -511,18 +534,23 @@ class __$GuidanceResponseCopyWithImpl<$Res>
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object requestId = freezed,
+    Object requestIdElement = freezed,
     Object identifier = freezed,
     Object module = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object subject = freezed,
     Object context = freezed,
     Object occurrenceDateTime = freezed,
+    Object occurrenceDateTimeElement = freezed,
     Object performer = freezed,
     Object reasonCodeableConcept = freezed,
     Object reasonReference = freezed,
@@ -531,9 +559,6 @@ class __$GuidanceResponseCopyWithImpl<$Res>
     Object outputParameters = freezed,
     Object result = freezed,
     Object dataRequirement = freezed,
-    Object requestIdElement = freezed,
-    Object statusElement = freezed,
-    Object occurrenceDateTimeElement = freezed,
   }) {
     return _then(_GuidanceResponse(
       resourceType: resourceType == freezed
@@ -544,7 +569,13 @@ class __$GuidanceResponseCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -555,16 +586,25 @@ class __$GuidanceResponseCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       requestId: requestId == freezed ? _value.requestId : requestId as Id,
+      requestIdElement: requestIdElement == freezed
+          ? _value.requestIdElement
+          : requestIdElement as Element,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       module: module == freezed ? _value.module : module as Reference,
       status:
           status == freezed ? _value.status : status as GuidanceResponseStatus,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       subject: subject == freezed ? _value.subject : subject as Reference,
       context: context == freezed ? _value.context : context as Reference,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
           : occurrenceDateTime as FhirDateTime,
+      occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
+          ? _value.occurrenceDateTimeElement
+          : occurrenceDateTimeElement as Element,
       performer:
           performer == freezed ? _value.performer : performer as Reference,
       reasonCodeableConcept: reasonCodeableConcept == freezed
@@ -584,15 +624,6 @@ class __$GuidanceResponseCopyWithImpl<$Res>
       dataRequirement: dataRequirement == freezed
           ? _value.dataRequirement
           : dataRequirement as List<DataRequirement>,
-      requestIdElement: requestIdElement == freezed
-          ? _value.requestIdElement
-          : requestIdElement as Element,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
-          ? _value.occurrenceDateTimeElement
-          : occurrenceDateTimeElement as Element,
     ));
   }
 }
@@ -600,27 +631,27 @@ class __$GuidanceResponseCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_GuidanceResponse extends _GuidanceResponse {
   _$_GuidanceResponse(
-      {@required
-      @JsonKey(required: true, defaultValue: 'GuidanceResponse')
-          this.resourceType,
+      {@required @JsonKey(defaultValue: 'GuidanceResponse') this.resourceType,
       this.id,
       this.meta,
       this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.requestId,
+      @JsonKey(name: '_requestId') this.requestIdElement,
       this.identifier,
-      @JsonKey(required: true)
-          this.module,
-      @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
-          this.status,
+      @required this.module,
+      this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.subject,
       this.context,
       this.occurrenceDateTime,
+      @JsonKey(name: '_occurrenceDateTime') this.occurrenceDateTimeElement,
       this.performer,
       this.reasonCodeableConcept,
       this.reasonReference,
@@ -628,21 +659,16 @@ class _$_GuidanceResponse extends _GuidanceResponse {
       this.evaluationMessage,
       this.outputParameters,
       this.result,
-      this.dataRequirement,
-      @JsonKey(name: '_requestId')
-          this.requestIdElement,
-      @JsonKey(name: '_status')
-          this.statusElement,
-      @JsonKey(name: '_occurrenceDateTime')
-          this.occurrenceDateTimeElement})
+      this.dataRequirement})
       : assert(resourceType != null),
+        assert(module != null),
         super._();
 
   factory _$_GuidanceResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_GuidanceResponseFromJson(json);
 
   @override
-  @JsonKey(required: true, defaultValue: 'GuidanceResponse')
+  @JsonKey(defaultValue: 'GuidanceResponse')
   final String resourceType;
   @override
   final Id id;
@@ -651,7 +677,13 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   @override
   final FhirUri implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
   final Code language;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
   @override
   final Narrative text;
   @override
@@ -664,19 +696,26 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   @override
   final Id requestId;
   @override
+  @JsonKey(name: '_requestId')
+  final Element requestIdElement;
+  @override
   final Identifier identifier;
   @override
-  @JsonKey(required: true)
   final Reference module;
   @override
-  @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
   final GuidanceResponseStatus status;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
   @override
   final Reference subject;
   @override
   final Reference context;
   @override
   final FhirDateTime occurrenceDateTime;
+  @override
+  @JsonKey(name: '_occurrenceDateTime')
+  final Element occurrenceDateTimeElement;
   @override
   final Reference performer;
   @override
@@ -693,19 +732,10 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   final Reference result;
   @override
   final List<DataRequirement> dataRequirement;
-  @override
-  @JsonKey(name: '_requestId')
-  final Element requestIdElement;
-  @override
-  @JsonKey(name: '_status')
-  final Element statusElement;
-  @override
-  @JsonKey(name: '_occurrenceDateTime')
-  final Element occurrenceDateTimeElement;
 
   @override
   String toString() {
-    return 'GuidanceResponse(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, requestId: $requestId, identifier: $identifier, module: $module, status: $status, subject: $subject, context: $context, occurrenceDateTime: $occurrenceDateTime, performer: $performer, reasonCodeableConcept: $reasonCodeableConcept, reasonReference: $reasonReference, note: $note, evaluationMessage: $evaluationMessage, outputParameters: $outputParameters, result: $result, dataRequirement: $dataRequirement, requestIdElement: $requestIdElement, statusElement: $statusElement, occurrenceDateTimeElement: $occurrenceDateTimeElement)';
+    return 'GuidanceResponse(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, requestId: $requestId, requestIdElement: $requestIdElement, identifier: $identifier, module: $module, status: $status, statusElement: $statusElement, subject: $subject, context: $context, occurrenceDateTime: $occurrenceDateTime, occurrenceDateTimeElement: $occurrenceDateTimeElement, performer: $performer, reasonCodeableConcept: $reasonCodeableConcept, reasonReference: $reasonReference, note: $note, evaluationMessage: $evaluationMessage, outputParameters: $outputParameters, result: $result, dataRequirement: $dataRequirement)';
   }
 
   @override
@@ -722,9 +752,15 @@ class _$_GuidanceResponse extends _GuidanceResponse {
             (identical(other.implicitRules, implicitRules) ||
                 const DeepCollectionEquality()
                     .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
             (identical(other.language, language) ||
                 const DeepCollectionEquality()
                     .equals(other.language, language)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
             (identical(other.text, text) ||
                 const DeepCollectionEquality().equals(other.text, text)) &&
             (identical(other.contained, contained) ||
@@ -739,6 +775,9 @@ class _$_GuidanceResponse extends _GuidanceResponse {
             (identical(other.requestId, requestId) ||
                 const DeepCollectionEquality()
                     .equals(other.requestId, requestId)) &&
+            (identical(other.requestIdElement, requestIdElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.requestIdElement, requestIdElement)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
@@ -746,6 +785,9 @@ class _$_GuidanceResponse extends _GuidanceResponse {
                 const DeepCollectionEquality().equals(other.module, module)) &&
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
             (identical(other.subject, subject) ||
                 const DeepCollectionEquality()
                     .equals(other.subject, subject)) &&
@@ -755,33 +797,22 @@ class _$_GuidanceResponse extends _GuidanceResponse {
             (identical(other.occurrenceDateTime, occurrenceDateTime) ||
                 const DeepCollectionEquality()
                     .equals(other.occurrenceDateTime, occurrenceDateTime)) &&
+            (identical(other.occurrenceDateTimeElement, occurrenceDateTimeElement) ||
+                const DeepCollectionEquality().equals(
+                    other.occurrenceDateTimeElement,
+                    occurrenceDateTimeElement)) &&
             (identical(other.performer, performer) ||
                 const DeepCollectionEquality()
                     .equals(other.performer, performer)) &&
             (identical(other.reasonCodeableConcept, reasonCodeableConcept) ||
                 const DeepCollectionEquality().equals(
                     other.reasonCodeableConcept, reasonCodeableConcept)) &&
-            (identical(other.reasonReference, reasonReference) ||
-                const DeepCollectionEquality()
-                    .equals(other.reasonReference, reasonReference)) &&
-            (identical(other.note, note) ||
-                const DeepCollectionEquality().equals(other.note, note)) &&
-            (identical(other.evaluationMessage, evaluationMessage) ||
-                const DeepCollectionEquality()
-                    .equals(other.evaluationMessage, evaluationMessage)) &&
-            (identical(other.outputParameters, outputParameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.outputParameters, outputParameters)) &&
-            (identical(other.result, result) ||
-                const DeepCollectionEquality().equals(other.result, result)) &&
-            (identical(other.dataRequirement, dataRequirement) ||
-                const DeepCollectionEquality()
-                    .equals(other.dataRequirement, dataRequirement)) &&
-            (identical(other.requestIdElement, requestIdElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.requestIdElement, requestIdElement)) &&
-            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
-            (identical(other.occurrenceDateTimeElement, occurrenceDateTimeElement) || const DeepCollectionEquality().equals(other.occurrenceDateTimeElement, occurrenceDateTimeElement)));
+            (identical(other.reasonReference, reasonReference) || const DeepCollectionEquality().equals(other.reasonReference, reasonReference)) &&
+            (identical(other.note, note) || const DeepCollectionEquality().equals(other.note, note)) &&
+            (identical(other.evaluationMessage, evaluationMessage) || const DeepCollectionEquality().equals(other.evaluationMessage, evaluationMessage)) &&
+            (identical(other.outputParameters, outputParameters) || const DeepCollectionEquality().equals(other.outputParameters, outputParameters)) &&
+            (identical(other.result, result) || const DeepCollectionEquality().equals(other.result, result)) &&
+            (identical(other.dataRequirement, dataRequirement) || const DeepCollectionEquality().equals(other.dataRequirement, dataRequirement)));
   }
 
   @override
@@ -791,18 +822,23 @@ class _$_GuidanceResponse extends _GuidanceResponse {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
       const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(requestId) ^
+      const DeepCollectionEquality().hash(requestIdElement) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(module) ^
       const DeepCollectionEquality().hash(status) ^
+      const DeepCollectionEquality().hash(statusElement) ^
       const DeepCollectionEquality().hash(subject) ^
       const DeepCollectionEquality().hash(context) ^
       const DeepCollectionEquality().hash(occurrenceDateTime) ^
+      const DeepCollectionEquality().hash(occurrenceDateTimeElement) ^
       const DeepCollectionEquality().hash(performer) ^
       const DeepCollectionEquality().hash(reasonCodeableConcept) ^
       const DeepCollectionEquality().hash(reasonReference) ^
@@ -810,10 +846,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
       const DeepCollectionEquality().hash(evaluationMessage) ^
       const DeepCollectionEquality().hash(outputParameters) ^
       const DeepCollectionEquality().hash(result) ^
-      const DeepCollectionEquality().hash(dataRequirement) ^
-      const DeepCollectionEquality().hash(requestIdElement) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(occurrenceDateTimeElement);
+      const DeepCollectionEquality().hash(dataRequirement);
 
   @override
   _$GuidanceResponseCopyWith<_GuidanceResponse> get copyWith =>
@@ -828,27 +861,27 @@ class _$_GuidanceResponse extends _GuidanceResponse {
 abstract class _GuidanceResponse extends GuidanceResponse {
   _GuidanceResponse._() : super._();
   factory _GuidanceResponse(
-      {@required
-      @JsonKey(required: true, defaultValue: 'GuidanceResponse')
-          String resourceType,
+      {@required @JsonKey(defaultValue: 'GuidanceResponse') String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Id requestId,
+      @JsonKey(name: '_requestId') Element requestIdElement,
       Identifier identifier,
-      @JsonKey(required: true)
-          Reference module,
-      @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
-          GuidanceResponseStatus status,
+      @required Reference module,
+      GuidanceResponseStatus status,
+      @JsonKey(name: '_status') Element statusElement,
       Reference subject,
       Reference context,
       FhirDateTime occurrenceDateTime,
+      @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
       Reference performer,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
@@ -856,19 +889,13 @@ abstract class _GuidanceResponse extends GuidanceResponse {
       List<Reference> evaluationMessage,
       Reference outputParameters,
       Reference result,
-      List<DataRequirement> dataRequirement,
-      @JsonKey(name: '_requestId')
-          Element requestIdElement,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_occurrenceDateTime')
-          Element occurrenceDateTimeElement}) = _$_GuidanceResponse;
+      List<DataRequirement> dataRequirement}) = _$_GuidanceResponse;
 
   factory _GuidanceResponse.fromJson(Map<String, dynamic> json) =
       _$_GuidanceResponse.fromJson;
 
   @override
-  @JsonKey(required: true, defaultValue: 'GuidanceResponse')
+  @JsonKey(defaultValue: 'GuidanceResponse')
   String get resourceType;
   @override
   Id get id;
@@ -877,7 +904,13 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   @override
   FhirUri get implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
   Code get language;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
   @override
   Narrative get text;
   @override
@@ -890,19 +923,26 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   @override
   Id get requestId;
   @override
+  @JsonKey(name: '_requestId')
+  Element get requestIdElement;
+  @override
   Identifier get identifier;
   @override
-  @JsonKey(required: true)
   Reference get module;
   @override
-  @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
   GuidanceResponseStatus get status;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
   @override
   Reference get subject;
   @override
   Reference get context;
   @override
   FhirDateTime get occurrenceDateTime;
+  @override
+  @JsonKey(name: '_occurrenceDateTime')
+  Element get occurrenceDateTimeElement;
   @override
   Reference get performer;
   @override
@@ -920,528 +960,5 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   @override
   List<DataRequirement> get dataRequirement;
   @override
-  @JsonKey(name: '_requestId')
-  Element get requestIdElement;
-  @override
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @override
-  @JsonKey(name: '_occurrenceDateTime')
-  Element get occurrenceDateTimeElement;
-  @override
   _$GuidanceResponseCopyWith<_GuidanceResponse> get copyWith;
-}
-
-Contributor _$ContributorFromJson(Map<String, dynamic> json) {
-  return _Contributor.fromJson(json);
-}
-
-class _$ContributorTearOff {
-  const _$ContributorTearOff();
-
-  _Contributor call(
-      {@required
-      @JsonKey(defaultValue: 'Contributor')
-          String resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
-      Code language,
-      Narrative text,
-      List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required
-      @JsonKey(unknownEnumValue: ContributorType.unknown, required: true)
-          ContributorType type,
-      @required
-      @JsonKey(required: true)
-          String name,
-      List<ContactDetail> contact,
-      @JsonKey(name: '_type')
-          Element typeElement,
-      @JsonKey(name: '_name')
-          Element nameElement}) {
-    return _Contributor(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      language: language,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      name: name,
-      contact: contact,
-      typeElement: typeElement,
-      nameElement: nameElement,
-    );
-  }
-}
-
-// ignore: unused_element
-const $Contributor = _$ContributorTearOff();
-
-mixin _$Contributor {
-  @JsonKey(defaultValue: 'Contributor')
-  String get resourceType;
-  Id get id;
-  Meta get meta;
-  FhirUri get implicitRules;
-  Code get language;
-  Narrative get text;
-  List<Resource> get contained;
-  @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  @JsonKey(unknownEnumValue: ContributorType.unknown, required: true)
-  ContributorType get type;
-  @JsonKey(required: true)
-  String get name;
-  List<ContactDetail> get contact;
-  @JsonKey(name: '_type')
-  Element get typeElement;
-  @JsonKey(name: '_name')
-  Element get nameElement;
-
-  Map<String, dynamic> toJson();
-  $ContributorCopyWith<Contributor> get copyWith;
-}
-
-abstract class $ContributorCopyWith<$Res> {
-  factory $ContributorCopyWith(
-          Contributor value, $Res Function(Contributor) then) =
-      _$ContributorCopyWithImpl<$Res>;
-  $Res call(
-      {@JsonKey(defaultValue: 'Contributor')
-          String resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
-      Code language,
-      Narrative text,
-      List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @JsonKey(unknownEnumValue: ContributorType.unknown, required: true)
-          ContributorType type,
-      @JsonKey(required: true)
-          String name,
-      List<ContactDetail> contact,
-      @JsonKey(name: '_type')
-          Element typeElement,
-      @JsonKey(name: '_name')
-          Element nameElement});
-
-  $MetaCopyWith<$Res> get meta;
-  $NarrativeCopyWith<$Res> get text;
-  $ElementCopyWith<$Res> get typeElement;
-  $ElementCopyWith<$Res> get nameElement;
-}
-
-class _$ContributorCopyWithImpl<$Res> implements $ContributorCopyWith<$Res> {
-  _$ContributorCopyWithImpl(this._value, this._then);
-
-  final Contributor _value;
-  // ignore: unused_field
-  final $Res Function(Contributor) _then;
-
-  @override
-  $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object language = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object type = freezed,
-    Object name = freezed,
-    Object contact = freezed,
-    Object typeElement = freezed,
-    Object nameElement = freezed,
-  }) {
-    return _then(_value.copyWith(
-      resourceType: resourceType == freezed
-          ? _value.resourceType
-          : resourceType as String,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
-      implicitRules: implicitRules == freezed
-          ? _value.implicitRules
-          : implicitRules as FhirUri,
-      language: language == freezed ? _value.language : language as Code,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as List<FhirExtension>,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      type: type == freezed ? _value.type : type as ContributorType,
-      name: name == freezed ? _value.name : name as String,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-    ));
-  }
-
-  @override
-  $MetaCopyWith<$Res> get meta {
-    if (_value.meta == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.meta, (value) {
-      return _then(_value.copyWith(meta: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get text {
-    if (_value.text == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.text, (value) {
-      return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get typeElement {
-    if (_value.typeElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.typeElement, (value) {
-      return _then(_value.copyWith(typeElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get nameElement {
-    if (_value.nameElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
-      return _then(_value.copyWith(nameElement: value));
-    });
-  }
-}
-
-abstract class _$ContributorCopyWith<$Res>
-    implements $ContributorCopyWith<$Res> {
-  factory _$ContributorCopyWith(
-          _Contributor value, $Res Function(_Contributor) then) =
-      __$ContributorCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {@JsonKey(defaultValue: 'Contributor')
-          String resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
-      Code language,
-      Narrative text,
-      List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @JsonKey(unknownEnumValue: ContributorType.unknown, required: true)
-          ContributorType type,
-      @JsonKey(required: true)
-          String name,
-      List<ContactDetail> contact,
-      @JsonKey(name: '_type')
-          Element typeElement,
-      @JsonKey(name: '_name')
-          Element nameElement});
-
-  @override
-  $MetaCopyWith<$Res> get meta;
-  @override
-  $NarrativeCopyWith<$Res> get text;
-  @override
-  $ElementCopyWith<$Res> get typeElement;
-  @override
-  $ElementCopyWith<$Res> get nameElement;
-}
-
-class __$ContributorCopyWithImpl<$Res> extends _$ContributorCopyWithImpl<$Res>
-    implements _$ContributorCopyWith<$Res> {
-  __$ContributorCopyWithImpl(
-      _Contributor _value, $Res Function(_Contributor) _then)
-      : super(_value, (v) => _then(v as _Contributor));
-
-  @override
-  _Contributor get _value => super._value as _Contributor;
-
-  @override
-  $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object language = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object type = freezed,
-    Object name = freezed,
-    Object contact = freezed,
-    Object typeElement = freezed,
-    Object nameElement = freezed,
-  }) {
-    return _then(_Contributor(
-      resourceType: resourceType == freezed
-          ? _value.resourceType
-          : resourceType as String,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
-      implicitRules: implicitRules == freezed
-          ? _value.implicitRules
-          : implicitRules as FhirUri,
-      language: language == freezed ? _value.language : language as Code,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as List<FhirExtension>,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      type: type == freezed ? _value.type : type as ContributorType,
-      name: name == freezed ? _value.name : name as String,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-    ));
-  }
-}
-
-@JsonSerializable()
-class _$_Contributor extends _Contributor {
-  _$_Contributor(
-      {@required
-      @JsonKey(defaultValue: 'Contributor')
-          this.resourceType,
-      this.id,
-      this.meta,
-      this.implicitRules,
-      this.language,
-      this.text,
-      this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      @required
-      @JsonKey(unknownEnumValue: ContributorType.unknown, required: true)
-          this.type,
-      @required
-      @JsonKey(required: true)
-          this.name,
-      this.contact,
-      @JsonKey(name: '_type')
-          this.typeElement,
-      @JsonKey(name: '_name')
-          this.nameElement})
-      : assert(resourceType != null),
-        assert(type != null),
-        assert(name != null),
-        super._();
-
-  factory _$_Contributor.fromJson(Map<String, dynamic> json) =>
-      _$_$_ContributorFromJson(json);
-
-  @override
-  @JsonKey(defaultValue: 'Contributor')
-  final String resourceType;
-  @override
-  final Id id;
-  @override
-  final Meta meta;
-  @override
-  final FhirUri implicitRules;
-  @override
-  final Code language;
-  @override
-  final Narrative text;
-  @override
-  final List<Resource> contained;
-  @override
-  @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
-  @override
-  final List<FhirExtension> modifierExtension;
-  @override
-  @JsonKey(unknownEnumValue: ContributorType.unknown, required: true)
-  final ContributorType type;
-  @override
-  @JsonKey(required: true)
-  final String name;
-  @override
-  final List<ContactDetail> contact;
-  @override
-  @JsonKey(name: '_type')
-  final Element typeElement;
-  @override
-  @JsonKey(name: '_name')
-  final Element nameElement;
-
-  @override
-  String toString() {
-    return 'Contributor(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, name: $name, contact: $contact, typeElement: $typeElement, nameElement: $nameElement)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is _Contributor &&
-            (identical(other.resourceType, resourceType) ||
-                const DeepCollectionEquality()
-                    .equals(other.resourceType, resourceType)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.meta, meta) ||
-                const DeepCollectionEquality().equals(other.meta, meta)) &&
-            (identical(other.implicitRules, implicitRules) ||
-                const DeepCollectionEquality()
-                    .equals(other.implicitRules, implicitRules)) &&
-            (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.contained, contained) ||
-                const DeepCollectionEquality()
-                    .equals(other.contained, contained)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.contact, contact) ||
-                const DeepCollectionEquality()
-                    .equals(other.contact, contact)) &&
-            (identical(other.typeElement, typeElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.typeElement, typeElement)) &&
-            (identical(other.nameElement, nameElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.nameElement, nameElement)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(resourceType) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(meta) ^
-      const DeepCollectionEquality().hash(implicitRules) ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(contact) ^
-      const DeepCollectionEquality().hash(typeElement) ^
-      const DeepCollectionEquality().hash(nameElement);
-
-  @override
-  _$ContributorCopyWith<_Contributor> get copyWith =>
-      __$ContributorCopyWithImpl<_Contributor>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$_$_ContributorToJson(this);
-  }
-}
-
-abstract class _Contributor extends Contributor {
-  _Contributor._() : super._();
-  factory _Contributor(
-      {@required
-      @JsonKey(defaultValue: 'Contributor')
-          String resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
-      Code language,
-      Narrative text,
-      List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required
-      @JsonKey(unknownEnumValue: ContributorType.unknown, required: true)
-          ContributorType type,
-      @required
-      @JsonKey(required: true)
-          String name,
-      List<ContactDetail> contact,
-      @JsonKey(name: '_type')
-          Element typeElement,
-      @JsonKey(name: '_name')
-          Element nameElement}) = _$_Contributor;
-
-  factory _Contributor.fromJson(Map<String, dynamic> json) =
-      _$_Contributor.fromJson;
-
-  @override
-  @JsonKey(defaultValue: 'Contributor')
-  String get resourceType;
-  @override
-  Id get id;
-  @override
-  Meta get meta;
-  @override
-  FhirUri get implicitRules;
-  @override
-  Code get language;
-  @override
-  Narrative get text;
-  @override
-  List<Resource> get contained;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  @override
-  List<FhirExtension> get modifierExtension;
-  @override
-  @JsonKey(unknownEnumValue: ContributorType.unknown, required: true)
-  ContributorType get type;
-  @override
-  @JsonKey(required: true)
-  String get name;
-  @override
-  List<ContactDetail> get contact;
-  @override
-  @JsonKey(name: '_type')
-  Element get typeElement;
-  @override
-  @JsonKey(name: '_name')
-  Element get nameElement;
-  @override
-  _$ContributorCopyWith<_Contributor> get copyWith;
 }

@@ -1,8 +1,9 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
 import '../../../../stu3.dart';
-import 'clinical_decision_support.enums.dart';
 
+part 'clinical_decision_support.enums.dart';
 part 'clinical_decision_support.freezed.dart';
 part 'clinical_decision_support.g.dart';
 
@@ -10,25 +11,27 @@ part 'clinical_decision_support.g.dart';
 abstract class GuidanceResponse with Resource implements _$GuidanceResponse {
   GuidanceResponse._();
   factory GuidanceResponse({
-    @JsonKey(required: true, defaultValue: 'GuidanceResponse')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'GuidanceResponse') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     Id requestId,
+    @JsonKey(name: '_requestId') Element requestIdElement,
     Identifier identifier,
-    @JsonKey(required: true) Reference module,
-    @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
-        GuidanceResponseStatus status,
+    @required Reference module,
+    GuidanceResponseStatus status,
+    @JsonKey(name: '_status') Element statusElement,
     Reference subject,
     Reference context,
     FhirDateTime occurrenceDateTime,
+    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
     Reference performer,
     CodeableConcept reasonCodeableConcept,
     Reference reasonReference,
@@ -37,35 +40,8 @@ abstract class GuidanceResponse with Resource implements _$GuidanceResponse {
     Reference outputParameters,
     Reference result,
     List<DataRequirement> dataRequirement,
-    @JsonKey(name: '_requestId') Element requestIdElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
   }) = _GuidanceResponse;
+
   factory GuidanceResponse.fromJson(Map<String, dynamic> json) =>
       _$GuidanceResponseFromJson(json);
-}
-
-@freezed
-abstract class Contributor with Resource implements _$Contributor {
-  Contributor._();
-  factory Contributor({
-    @JsonKey(defaultValue: 'Contributor') @required String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(unknownEnumValue: ContributorType.unknown, required: true)
-    @required
-        ContributorType type,
-    @JsonKey(required: true) @required String name,
-    List<ContactDetail> contact,
-    @JsonKey(name: '_type') Element typeElement,
-    @JsonKey(name: '_name') Element nameElement,
-  }) = _Contributor;
-  factory Contributor.fromJson(Map<String, dynamic> json) =>
-      _$ContributorFromJson(json);
 }

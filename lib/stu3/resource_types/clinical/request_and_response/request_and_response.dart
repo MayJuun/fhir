@@ -1,8 +1,9 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
 import '../../../../stu3.dart';
-import 'request_and_response.enums.dart';
 
+part 'request_and_response.enums.dart';
 part 'request_and_response.freezed.dart';
 part 'request_and_response.g.dart';
 
@@ -10,13 +11,13 @@ part 'request_and_response.g.dart';
 abstract class Communication with Resource implements _$Communication {
   Communication._();
   factory Communication({
-    @JsonKey(required: true, defaultValue: 'Communication')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'Communication') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -25,8 +26,10 @@ abstract class Communication with Resource implements _$Communication {
     List<Reference> definition,
     List<Reference> basedOn,
     List<Reference> partOf,
-    Code status,
+    String status,
+    @JsonKey(name: '_status') Element statusElement,
     Boolean notDone,
+    @JsonKey(name: '_notDone') Element notDoneElement,
     CodeableConcept notDoneReason,
     List<CodeableConcept> category,
     List<CodeableConcept> medium,
@@ -34,30 +37,31 @@ abstract class Communication with Resource implements _$Communication {
     List<Reference> recipient,
     List<Reference> topic,
     Reference context,
-    FhirDateTime sent,
-    FhirDateTime received,
+    String sent,
+    @JsonKey(name: '_sent') Element sentElement,
+    String received,
+    @JsonKey(name: '_received') Element receivedElement,
     Reference sender,
     List<CodeableConcept> reasonCode,
     List<Reference> reasonReference,
     List<CommunicationPayload> payload,
     List<Annotation> note,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_notDone') Element notDoneElement,
-    @JsonKey(name: '_sent') Element sentElement,
-    @JsonKey(name: '_received') Element receivedElement,
   }) = _Communication;
+
   factory Communication.fromJson(Map<String, dynamic> json) =>
       _$CommunicationFromJson(json);
 }
 
 @freezed
-abstract class CommunicationPayload with _$CommunicationPayload {
+abstract class CommunicationPayload implements _$CommunicationPayload {
+  CommunicationPayload._();
   factory CommunicationPayload({
     String contentString,
+    @JsonKey(name: '_contentString') Element contentStringElement,
     Attachment contentAttachment,
     Reference contentReference,
-    @JsonKey(name: '_contentString') Element contentStringElement,
   }) = _CommunicationPayload;
+
   factory CommunicationPayload.fromJson(Map<String, dynamic> json) =>
       _$CommunicationPayloadFromJson(json);
 }
@@ -68,13 +72,15 @@ abstract class CommunicationRequest
     implements _$CommunicationRequest {
   CommunicationRequest._();
   factory CommunicationRequest({
-    @JsonKey(required: true, defaultValue: 'CommunicationRequest')
+    @JsonKey(defaultValue: 'CommunicationRequest')
     @required
         String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -83,9 +89,11 @@ abstract class CommunicationRequest
     List<Reference> basedOn,
     List<Reference> replaces,
     Identifier groupIdentifier,
-    Code status,
+    String status,
+    @JsonKey(name: '_status') Element statusElement,
     List<CodeableConcept> category,
-    Code priority,
+    String priority,
+    @JsonKey(name: '_priority') Element priorityElement,
     List<CodeableConcept> medium,
     Reference subject,
     List<Reference> recipient,
@@ -93,41 +101,45 @@ abstract class CommunicationRequest
     Reference context,
     List<CommunicationRequestPayload> payload,
     FhirDateTime occurrenceDateTime,
+    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
     Period occurrencePeriod,
-    FhirDateTime authoredOn,
+    String authoredOn,
+    @JsonKey(name: '_authoredOn') Element authoredOnElement,
     Reference sender,
     CommunicationRequestRequester requester,
     List<CodeableConcept> reasonCode,
     List<Reference> reasonReference,
     List<Annotation> note,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_priority') Element priorityElement,
-    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
-    @JsonKey(name: '_authoredOn') Element authoredOnElement,
   }) = _CommunicationRequest;
+
   factory CommunicationRequest.fromJson(Map<String, dynamic> json) =>
       _$CommunicationRequestFromJson(json);
 }
 
 @freezed
-abstract class CommunicationRequestPayload with _$CommunicationRequestPayload {
+abstract class CommunicationRequestPayload
+    implements _$CommunicationRequestPayload {
+  CommunicationRequestPayload._();
   factory CommunicationRequestPayload({
     String contentString,
+    @JsonKey(name: '_contentString') Element contentStringElement,
     Attachment contentAttachment,
     Reference contentReference,
-    @JsonKey(name: '_contentString') Element contentStringElement,
   }) = _CommunicationRequestPayload;
+
   factory CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>
       _$CommunicationRequestPayloadFromJson(json);
 }
 
 @freezed
 abstract class CommunicationRequestRequester
-    with _$CommunicationRequestRequester {
+    implements _$CommunicationRequestRequester {
+  CommunicationRequestRequester._();
   factory CommunicationRequestRequester({
-    @JsonKey(required: true) Reference agent,
+    @required Reference agent,
     Reference onBehalfOf,
   }) = _CommunicationRequestRequester;
+
   factory CommunicationRequestRequester.fromJson(Map<String, dynamic> json) =>
       _$CommunicationRequestRequesterFromJson(json);
 }
@@ -136,13 +148,13 @@ abstract class CommunicationRequestRequester
 abstract class DeviceRequest with Resource implements _$DeviceRequest {
   DeviceRequest._();
   factory DeviceRequest({
-    @JsonKey(required: true, defaultValue: 'DeviceRequest')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'DeviceRequest') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -152,17 +164,21 @@ abstract class DeviceRequest with Resource implements _$DeviceRequest {
     List<Reference> basedOn,
     List<Reference> priorRequest,
     Identifier groupIdentifier,
-    Code status,
-    @JsonKey(required: true) CodeableConcept intent,
-    Code priority,
+    String status,
+    @JsonKey(name: '_status') Element statusElement,
+    @required CodeableConcept intent,
+    String priority,
+    @JsonKey(name: '_priority') Element priorityElement,
     Reference codeReference,
     CodeableConcept codeCodeableConcept,
-    @JsonKey(required: true) Reference subject,
+    @required Reference subject,
     Reference context,
     FhirDateTime occurrenceDateTime,
+    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
     Period occurrencePeriod,
     Timing occurrenceTiming,
-    FhirDateTime authoredOn,
+    String authoredOn,
+    @JsonKey(name: '_authoredOn') Element authoredOnElement,
     DeviceRequestRequester requester,
     CodeableConcept performerType,
     Reference performer,
@@ -171,21 +187,20 @@ abstract class DeviceRequest with Resource implements _$DeviceRequest {
     List<Reference> supportingInfo,
     List<Annotation> note,
     List<Reference> relevantHistory,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_priority') Element priorityElement,
-    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
-    @JsonKey(name: '_authoredOn') Element authoredOnElement,
   }) = _DeviceRequest;
+
   factory DeviceRequest.fromJson(Map<String, dynamic> json) =>
       _$DeviceRequestFromJson(json);
 }
 
 @freezed
-abstract class DeviceRequestRequester with _$DeviceRequestRequester {
+abstract class DeviceRequestRequester implements _$DeviceRequestRequester {
+  DeviceRequestRequester._();
   factory DeviceRequestRequester({
-    @JsonKey(required: true) Reference agent,
+    @required Reference agent,
     Reference onBehalfOf,
   }) = _DeviceRequestRequester;
+
   factory DeviceRequestRequester.fromJson(Map<String, dynamic> json) =>
       _$DeviceRequestRequesterFromJson(json);
 }
@@ -196,34 +211,35 @@ abstract class DeviceUseStatement
     implements _$DeviceUseStatement {
   DeviceUseStatement._();
   factory DeviceUseStatement({
-    @JsonKey(required: true, defaultValue: 'DeviceUseStatement')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'DeviceUseStatement') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: StatementStatus.unknown) StatementStatus status,
-    @JsonKey(required: true) Reference subject,
+    DeviceUseStatementStatus status,
+    @JsonKey(name: '_status') Element statusElement,
+    @required Reference subject,
     Period whenUsed,
     Timing timingTiming,
     Period timingPeriod,
     FhirDateTime timingDateTime,
-    FhirDateTime recordedOn,
+    @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
+    String recordedOn,
+    @JsonKey(name: '_recordedOn') Element recordedOnElement,
     Reference source,
-    @JsonKey(required: true) Reference device,
+    @required Reference device,
     List<CodeableConcept> indication,
     CodeableConcept bodySite,
     List<Annotation> note,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
-    @JsonKey(name: '_recordedOn') Element recordedOnElement,
   }) = _DeviceUseStatement;
+
   factory DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
       _$DeviceUseStatementFromJson(json);
 }
@@ -232,13 +248,13 @@ abstract class DeviceUseStatement
 abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
   SupplyDelivery._();
   factory SupplyDelivery({
-    @JsonKey(required: true, defaultValue: 'SupplyDelivery')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'SupplyDelivery') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -246,31 +262,34 @@ abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
     Identifier identifier,
     List<Reference> basedOn,
     List<Reference> partOf,
-    @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-        SupplyDeliveryStatus status,
+    SupplyDeliveryStatus status,
+    @JsonKey(name: '_status') Element statusElement,
     Reference patient,
     CodeableConcept type,
     SupplyDeliverySuppliedItem suppliedItem,
     FhirDateTime occurrenceDateTime,
+    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
     Period occurrencePeriod,
     Timing occurrenceTiming,
     Reference supplier,
     Reference destination,
     List<Reference> receiver,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
   }) = _SupplyDelivery;
+
   factory SupplyDelivery.fromJson(Map<String, dynamic> json) =>
       _$SupplyDeliveryFromJson(json);
 }
 
 @freezed
-abstract class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
+abstract class SupplyDeliverySuppliedItem
+    implements _$SupplyDeliverySuppliedItem {
+  SupplyDeliverySuppliedItem._();
   factory SupplyDeliverySuppliedItem({
     Quantity quantity,
     CodeableConcept itemCodeableConcept,
     Reference itemReference,
   }) = _SupplyDeliverySuppliedItem;
+
   factory SupplyDeliverySuppliedItem.fromJson(Map<String, dynamic> json) =>
       _$SupplyDeliverySuppliedItemFromJson(json);
 }
@@ -279,59 +298,63 @@ abstract class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
 abstract class SupplyRequest with Resource implements _$SupplyRequest {
   SupplyRequest._();
   factory SupplyRequest({
-    @JsonKey(required: true, defaultValue: 'SupplyRequest')
-    @required
-        String resourceType,
+    @JsonKey(defaultValue: 'SupplyRequest') @required String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     Identifier identifier,
-    @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
-        SupplyRequestStatus status,
+    SupplyRequestStatus status,
+    @JsonKey(name: '_status') Element statusElement,
     CodeableConcept category,
-    Code priority,
+    String priority,
+    @JsonKey(name: '_priority') Element priorityElement,
     SupplyRequestOrderedItem orderedItem,
     FhirDateTime occurrenceDateTime,
+    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
     Period occurrencePeriod,
     Timing occurrenceTiming,
-    FhirDateTime authoredOn,
+    String authoredOn,
+    @JsonKey(name: '_authoredOn') Element authoredOnElement,
     SupplyRequestRequester requester,
     List<Reference> supplier,
     CodeableConcept reasonCodeableConcept,
     Reference reasonReference,
     Reference deliverFrom,
     Reference deliverTo,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_priority') Element priorityElement,
-    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
-    @JsonKey(name: '_authoredOn') Element authoredOnElement,
   }) = _SupplyRequest;
+
   factory SupplyRequest.fromJson(Map<String, dynamic> json) =>
       _$SupplyRequestFromJson(json);
 }
 
 @freezed
-abstract class SupplyRequestOrderedItem with _$SupplyRequestOrderedItem {
+abstract class SupplyRequestOrderedItem implements _$SupplyRequestOrderedItem {
+  SupplyRequestOrderedItem._();
   factory SupplyRequestOrderedItem({
-    @JsonKey(required: true) Quantity quantity,
+    @required Quantity quantity,
     CodeableConcept itemCodeableConcept,
     Reference itemReference,
   }) = _SupplyRequestOrderedItem;
+
   factory SupplyRequestOrderedItem.fromJson(Map<String, dynamic> json) =>
       _$SupplyRequestOrderedItemFromJson(json);
 }
 
 @freezed
-abstract class SupplyRequestRequester with _$SupplyRequestRequester {
+abstract class SupplyRequestRequester implements _$SupplyRequestRequester {
+  SupplyRequestRequester._();
   factory SupplyRequestRequester({
-    @JsonKey(required: true) Reference agent,
+    @required Reference agent,
     Reference onBehalfOf,
   }) = _SupplyRequestRequester;
+
   factory SupplyRequestRequester.fromJson(Map<String, dynamic> json) =>
       _$SupplyRequestRequesterFromJson(json);
 }
