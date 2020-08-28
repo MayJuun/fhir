@@ -1,7 +1,6 @@
 name: fhir
 description: cFHIR library of versions R4, STU3, DSTU2, and R5 (draft) for Dart & Flutter.
 version: 0.0.1
-author: Grey Faulkenberry, John Manning
 homepage: https://github.com/Dokotela/fhir/tree/main
 repository: https://github.com/Dokotela
 
