@@ -1,3 +1,6 @@
-## [0.0.1] - TODO: Add release date.
+## [0.0.1]
+* 2020-08-28.
 
-* TODO: Describe initial release.
+## [0.0.2]
+
+* Immediately had to update it because of mispellings in pubspec.yaml
