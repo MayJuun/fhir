@@ -10,7 +10,7 @@ It contains packages for the 3 released FHIR versions:
 
 As well as the R5 Preview #1:
 
-- [v4.2.0: R5 Draft](http://hl7.org/fhir/2020Feb/)
+- [v4.2.0: R5 Draft](https://hl7.org/fhir/2020Feb/)
 
 ## How To Use
 
@@ -44,7 +44,7 @@ var newPatient = Patient(
   gender: PatientGender.female,
 );
 ```
-If you're instead trying to get data from a server (currently I haven't implemented SMART on FHIR so it would need to be an open server, [HAPI](http://hapi.fhir.org/) for instance - make sure you choose the right version you're interested in), a very simple example of querying and then printing the result:
+If you're instead trying to get data from a server (currently I haven't implemented SMART on FHIR so it would need to be an open server, [HAPI](https://hapi.fhir.org/) for instance - make sure you choose the right version you're interested in), a very simple example of querying and then printing the result:
 ```
 import 'dart:convert';
 
@@ -78,31 +78,31 @@ There are two big items I would really like to get to work to add functionality:
 
 ### R5
 
-- These are non-resource files that my parser won't do (well, it won't read it as a resource). [package-min-ver.json](test/r5/r5_examples/package-min-ver.json), [uml.json](test/r5/r5_examples/uml.json), [hl7.fhir.r5.corexml.manifest.json](test/r5/r5_examples/hl7.fhir.r5.corexml.manifest.json), [hl7.fhir.r5.core.manifest.json](test/r5/r5_examples/hl7.fhir.r5.core.manifest.json), [hl7.fhir.r5.expansions.manifest.json](test/r5/r5_examples/hl7.fhir.r5.expansions.manifest.json)
-- It still finds that the Id field in [this file](test/r5/r5_examples/questionnaireresponse-extensions-QuestionnaireResponse-item-subject.json) is too long
-- And the padding on this [Base64Binary](test/r5/r5_examples/binary-example.json) field renders it invalid
+- These are non-resource files that my package doesn't know how to read. From the sample files here: https://hl7.org/fhir/2020Feb/downloads.html, it won't properly serialize/deserialize *package-min-ver.json*, *uml.json*, *hl7.fhir*, *hl7.fhir.r5.core.manifest.json*, *hl7.fhir.r5.expansions.manifest.json*
+- It finds that the Id field is too long for *questionnaireresponse-extensions-QuestionnaireResponse-item-subject.json*
+- The padding in *binary-example.json* field renders it invalid
 
 ### R4
 
-- All of the downloadable [R4 HL7 Examples](https://www.hl7.org/fhir/examples-json.zip) have been run through the classes via this [tester](test/r4/validation.dart).
+- All of the downloads here: https://www.hl7.org/fhir/examples-json.zip have been run through a tester to ensure proper serialization/deserialization using this FHIR package
 - I've compared each field from the input to the output and output to input as Maps. This should have revealed if any fields were created or deleted. It also avoids issues with fields in a different order from input to output.
 - Known problems:
 
-1. There is an [Id field](test/r4/r4_examples/questionnaireresponse-extensions-QuestionnaireResponse-item-subject.json) in the examples seems to be too long
-2. There is a [Base64Binary](test/r4/r4_examples/binary-example.json) field that has padding which renders it invalid
-3. There's also [this file](test/r4/r4_examples/package-min-ver.json) I have no idea what to do with.
+1. There is an ID field in *questionnaireresponse-extensions-QuestionnaireResponse-item-subject.json* in the examples seems to be too long
+2. There is a Base64Binary *binary-example.json* field that has padding which renders it invalid
+3. There's also this file, *package-min-ver.json*, that I have no idea what to do with.
 
 ### Stu3
 
-- All of the downloadable [STU3 HL7 Examples](https://hl7.org/fhir/STU3/examples-json.zip) have been run through this [tester](test/stu3/validation.dart). Amazingly, it seemed to correctly run through all of them.
+- All of the downloadable STU3 HL7 Examples, https://hl7.org/fhir/STU3/examples-json.zip have been run through the tester. Amazingly, it seemed to correctly run through all of them.
 
 ### Dstu2
 
-- All of the downloadale [DSTU2 HL7 Examples](http://hl7.org/fhir/dstu2/validation-min.json.zip) have been run through this [tester](test/dstu2/validation.dart).
-- [SearchParameter](https://www.hl7.org/fhir/DSTU2/searchparameter.html): at least according to this website, it does appear that the field "base" and "description" should be required. However, many, many of the examples that are provided on the website do not have those fields, so I have not made them mandatory.
-- [ElementDefinition](https://www.hl7.org/fhir/DSTU2/elementdefinition.html#ElementDefinition) It seems that in the type field, "code" is required, but if "\_code" is present, this does not seem to be the case in the examples. I have therefore removed the requirement from the code field.
+- All of the DSTU2 HL7 Examples from https://hl7.org/fhir/dstu2/validation-min.json.zip
+- In https://www.hl7.org/fhir/DSTU2/searchparameter.html there is an issue with the SearchParameter: at least according to this website, it does appear that the field "base" and "description" should be required. However, many, many of the examples that are provided on the website do not have those fields, so I have not made them mandatory.
+- In https://www.hl7.org/fhir/DSTU2/elementdefinition.html#ElementDefinition, it seems that in the type field, "code" is required, but if "\_code" is present, this does not seem to be the case in the examples. I have therefore removed the requirement from the code field.
 - There are private fields in this FHIR version that appear to correlate to the private Element fields in R4. I cannot find these specifically stated anywhere, so I'm going to assume all R4 private fields are valid as long as there is a corresponding public field. A few of these should actually be lists. But if they are not in the examples, then I do not know which. So there are likely some that should be lists that I have not implemented as such.
-- Known Problems, a number of files appear to have Ids that are too long, all observations: [Observation1](test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change.json), [Observation2](test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart.json), [Observation3](test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant.canonical.json), [Observation4](test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant.json), [Observation5](test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change.canonical.json), [Observation6](test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart.canonical.json).
+- Known Problems, a number of files appear to have Ids that are too long, all observations: *observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change.json*, *observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart.json*, *observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant.canonical.json*, *observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant.json*, *observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change.canonical.json*, *observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart.canonical.json*.
 
 ## First Package
 
