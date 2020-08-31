@@ -12,7 +12,9 @@ abstract class PrimitiveObject<T> {
   @override
   bool operator ==(Object o) {
     if (identical(this, o)) return true;
-    return o is PrimitiveObject<T> && o.value == value;
+    return o is PrimitiveObject<T>
+        ? o.value == value
+        : value.fold((isLeft) => false, (isRight) => o == isRight);
   }
 
   @override
