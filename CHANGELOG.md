@@ -9,3 +9,6 @@
 
 ## [0.0.4]
 * Changed primitive equality, returns true for Code('code') == Code('code') AND Code('code') == 'code
+
+## [0.0.5]
+* Refactored Dstu2 to be more consistent with other versions, field names are the same, some class names changed

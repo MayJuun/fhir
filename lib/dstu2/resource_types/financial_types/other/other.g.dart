@@ -17,9 +17,15 @@ _$_ExplanationOfBenefit _$_$_ExplanationOfBenefitFromJson(
     implicitRules: json['implicitRules'] == null
         ? null
         : FhirUri.fromJson(json['implicitRules'] as String),
+    implicitRulesElement: json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
     language: json['language'] == null
         ? null
         : Code.fromJson(json['language'] as String),
+    languageElement: json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>),
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -32,10 +38,11 @@ _$_ExplanationOfBenefit _$_$_ExplanationOfBenefitFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    modifierExtension: json['modifierExtension'] == null
-        ? null
-        : FhirExtension.fromJson(
-            json['modifierExtension'] as Map<String, dynamic>),
+    modifierExtension: (json['modifierExtension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     identifier: (json['identifier'] as List)
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
@@ -46,7 +53,13 @@ _$_ExplanationOfBenefit _$_$_ExplanationOfBenefitFromJson(
     outcome: _$enumDecodeNullable(
         _$ExplanationOfBenefitOutcomeEnumMap, json['outcome'],
         unknownValue: ExplanationOfBenefitOutcome.unknown),
+    outcomeElement: json['_outcome'] == null
+        ? null
+        : Element.fromJson(json['_outcome'] as Map<String, dynamic>),
     disposition: json['disposition'] as String,
+    dispositionElement: json['_disposition'] == null
+        ? null
+        : Element.fromJson(json['_disposition'] as Map<String, dynamic>),
     ruleset: json['ruleset'] == null
         ? null
         : Coding.fromJson(json['ruleset'] as Map<String, dynamic>),
@@ -56,6 +69,9 @@ _$_ExplanationOfBenefit _$_$_ExplanationOfBenefitFromJson(
     created: json['created'] == null
         ? null
         : FhirDateTime.fromJson(json['created'] as String),
+    createdElement: json['_created'] == null
+        ? null
+        : Element.fromJson(json['_created'] as Map<String, dynamic>),
     organization: json['organization'] == null
         ? null
         : Reference.fromJson(json['organization'] as Map<String, dynamic>),
@@ -66,21 +82,6 @@ _$_ExplanationOfBenefit _$_$_ExplanationOfBenefitFromJson(
         ? null
         : Reference.fromJson(
             json['requestOrganization'] as Map<String, dynamic>),
-    implicitRulesElement: json['_implicitRules'] == null
-        ? null
-        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    languageElement: json['_language'] == null
-        ? null
-        : Element.fromJson(json['_language'] as Map<String, dynamic>),
-    createdElement: json['_created'] == null
-        ? null
-        : Element.fromJson(json['_created'] as Map<String, dynamic>),
-    outcomeElement: json['_outcome'] == null
-        ? null
-        : Element.fromJson(json['_outcome'] as Map<String, dynamic>),
-    dispositionElement: json['_disposition'] == null
-        ? null
-        : Element.fromJson(json['_disposition'] as Map<String, dynamic>),
   );
 }
 
@@ -98,30 +99,31 @@ Map<String, dynamic> _$_$_ExplanationOfBenefitToJson(
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
   writeNotNull('language', instance.language?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
       'contained', instance.contained?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('request', instance.request?.toJson());
   writeNotNull(
       'outcome', _$ExplanationOfBenefitOutcomeEnumMap[instance.outcome]);
+  writeNotNull('_outcome', instance.outcomeElement?.toJson());
   writeNotNull('disposition', instance.disposition);
+  writeNotNull('_disposition', instance.dispositionElement?.toJson());
   writeNotNull('ruleset', instance.ruleset?.toJson());
   writeNotNull('originalRuleset', instance.originalRuleset?.toJson());
   writeNotNull('created', instance.created?.toJson());
+  writeNotNull('_created', instance.createdElement?.toJson());
   writeNotNull('organization', instance.organization?.toJson());
   writeNotNull('requestProvider', instance.requestProvider?.toJson());
   writeNotNull('requestOrganization', instance.requestOrganization?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('_created', instance.createdElement?.toJson());
-  writeNotNull('_outcome', instance.outcomeElement?.toJson());
-  writeNotNull('_disposition', instance.dispositionElement?.toJson());
   return val;
 }
 

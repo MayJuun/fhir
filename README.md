@@ -16,6 +16,11 @@ As well as the R5 Preview #1:
 
 In order to use this package in your app, you must include the following in your pubspec.yaml file under dependencies:
 ```
+dependencies:
+  fhir: ^0.0.5
+```
+Or if you want to include the most recent unreleased version from Github
+```
 fhir:
   git:
     url: git://github.com/Dokotela/fhir.git
@@ -108,12 +113,6 @@ There are two big items I would really like to get to work to add functionality:
 
 This is the first time I've ever created a package, feedback and pull requests are welcome. I've also been started to implement type checking using [Freezed](https://pub.dev/packages/freezed). But if you run into any issues with this, either incorrect validation, or frustrating to work with returned failures, please let me know.
 
-## Things I'm working on
-
-Currently working on refactoring and abstracting some classes with the help of [Dr. John Manning](https://github.com/FireJuun).
-
-Nevermind about the previous thing about [Aidbox](https://www.health-samurai.io/aidbox), my favorite FHIR server. They have changed some of the endpoints for their server as they feel it works better, however, if you append fhir before the rest, then it returns the normal FHIR json (i.e. GET /fhir/Patient)
-
 ## Code Generation
 
 I think it's the new compiling. It's actually great though, [json_serializable](https://pub.dev/packages/json_serializable) and [freezed](https://pub.dev/packages/freezed) are used extensively throughout. Note that sometimes freezed will give a stack overflow error if you try to do all code generation for the entire package at the same time. Also note that for fields that can take any resource, they have to be manually assigned. Currently this is done by passing the json object to resourceList. The fromJson code has to be changed in the 'g.dart' file.
@@ -122,12 +121,20 @@ I think it's the new compiling. It's actually great though, [json_serializable](
 
 - Class names: upper camel case.
 - Variables: lower camel case.
-- File names: lower camel case.
+- File names: snake case.
 - FHIR nested classes (including enums) listed under the primary class
 - There are a number of FHIR fields that are reserved words in Dart. For these, I have added a '_' to the end of the field. (note that this does not change the json format, as when that happens the @JsonKey has been added to the field like so:
 ```
 @JsonKey(name: 'extension') List<FhirExtension> extension_,
 ```
+
+### A couple special notes about DSTU2
+- Because Dstu2 is not formatted as well as the newer versions, a number of the names end up being extremely long. What I have decided to do is the following:
+  - If the field/class id in the schema is a single word("id": "integer" or "id": "ValueSet"), that word is used as the field or class name.
+  - If the id is more than a single word AND it is a primitive type ("id": "ValueSet.expansion.contains.display" which is a string), the last word is used as the type, in this case the field would be:  ```String display```
+  - If the id is 2 words and is NOT a primitive type ("id": "ValueSet.expansion"), the type is the two words combined with upper camel case, and the field is the last word: ```ValueSetExpansion expansion```
+  - if the id is more than 2 words and NOT a primitive type ("id": "TestScript.setup.action.operation.requestHeader"), the type is the first, next to last and last word combined with upper camel case, and the field is the last word: ```TestScriptOperationRequestHeader requestHeader```
+- Many of the element fields I have included because they are included as part of the test resources. I could not find a full list online, so there may still be some element fields that I have missed.
 
 ### FHIR datatypes (these are R4 (which is what everyone should be using, but since EHR vendors are doing everything they can to not share data, I am also working on stu3 and dstu2 as well)
 
@@ -215,8 +222,3 @@ I think it's the new compiling. It's actually great though, [json_serializable](
 |                                                             |                          |                            |                                 | SubstanceReferenceInformation     |
 |                                                             |                          |                            |                                 | SubstanceSpecification            |
 |                                                             |                          |                            |                                 | SubstanceSourceMaterial           |
-
-# ToDos - not emergent or necessary
-
-1. Order of classes in files (just because I have some OCD tendencies).
-2. I have shortened subclass names of DSTU2. Should I have left the long original names?

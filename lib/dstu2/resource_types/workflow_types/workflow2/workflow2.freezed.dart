@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'workflow2.dart';
 
@@ -15,6 +15,7 @@ ProcessRequest _$ProcessRequestFromJson(Map<String, dynamic> json) {
 class _$ProcessRequestTearOff {
   const _$ProcessRequestTearOff();
 
+// ignore: unused_element
   _ProcessRequest call(
       {@required
       @JsonKey(defaultValue: 'ProcessRequest')
@@ -27,7 +28,7 @@ class _$ProcessRequestTearOff {
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
+      List<FhirExtension> modifierExtension,
       @required
       @JsonKey(required: true, unknownEnumValue: ProcessRequestAction.unknown)
           ProcessRequestAction action,
@@ -90,7 +91,7 @@ mixin _$ProcessRequest {
   List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  FhirExtension get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   @JsonKey(required: true, unknownEnumValue: ProcessRequestAction.unknown)
   ProcessRequestAction get action;
   List<Identifier> get identifier;
@@ -128,7 +129,7 @@ abstract class $ProcessRequestCopyWith<$Res> {
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
+      List<FhirExtension> modifierExtension,
       @JsonKey(required: true, unknownEnumValue: ProcessRequestAction.unknown)
           ProcessRequestAction action,
       List<Identifier> identifier,
@@ -149,7 +150,6 @@ abstract class $ProcessRequestCopyWith<$Res> {
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodingCopyWith<$Res> get ruleset;
   $CodingCopyWith<$Res> get originalRuleset;
   $ReferenceCopyWith<$Res> get target;
@@ -214,7 +214,7 @@ class _$ProcessRequestCopyWithImpl<$Res>
           : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
+          : modifierExtension as List<FhirExtension>,
       action:
           action == freezed ? _value.action : action as ProcessRequestAction,
       identifier: identifier == freezed
@@ -258,16 +258,6 @@ class _$ProcessRequestCopyWithImpl<$Res>
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension {
-    if (_value.modifierExtension == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
-      return _then(_value.copyWith(modifierExtension: value));
     });
   }
 
@@ -369,7 +359,7 @@ abstract class _$ProcessRequestCopyWith<$Res>
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
+      List<FhirExtension> modifierExtension,
       @JsonKey(required: true, unknownEnumValue: ProcessRequestAction.unknown)
           ProcessRequestAction action,
       List<Identifier> identifier,
@@ -392,8 +382,6 @@ abstract class _$ProcessRequestCopyWith<$Res>
   $MetaCopyWith<$Res> get meta;
   @override
   $NarrativeCopyWith<$Res> get text;
-  @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
   $CodingCopyWith<$Res> get ruleset;
   @override
@@ -468,7 +456,7 @@ class __$ProcessRequestCopyWithImpl<$Res>
           : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
+          : modifierExtension as List<FhirExtension>,
       action:
           action == freezed ? _value.action : action as ProcessRequestAction,
       identifier: identifier == freezed
@@ -555,7 +543,7 @@ class _$_ProcessRequest extends _ProcessRequest {
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  final FhirExtension modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   @JsonKey(required: true, unknownEnumValue: ProcessRequestAction.unknown)
   final ProcessRequestAction action;
@@ -722,7 +710,7 @@ abstract class _ProcessRequest extends ProcessRequest {
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
+      List<FhirExtension> modifierExtension,
       @required
       @JsonKey(required: true, unknownEnumValue: ProcessRequestAction.unknown)
           ProcessRequestAction action,
@@ -764,7 +752,7 @@ abstract class _ProcessRequest extends ProcessRequest {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  FhirExtension get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   @override
   @JsonKey(required: true, unknownEnumValue: ProcessRequestAction.unknown)
   ProcessRequestAction get action;
@@ -802,829 +790,217 @@ abstract class _ProcessRequest extends ProcessRequest {
   _$ProcessRequestCopyWith<_ProcessRequest> get copyWith;
 }
 
-SupplyDelivery _$SupplyDeliveryFromJson(Map<String, dynamic> json) {
-  return _SupplyDelivery.fromJson(json);
+ProcessRequestItem _$ProcessRequestItemFromJson(Map<String, dynamic> json) {
+  return _ProcessRequestItem.fromJson(json);
 }
 
-class _$SupplyDeliveryTearOff {
-  const _$SupplyDeliveryTearOff();
+class _$ProcessRequestItemTearOff {
+  const _$ProcessRequestItemTearOff();
 
-  _SupplyDelivery call(
-      {@required
-      @JsonKey(defaultValue: 'SupplyDelivery')
-          String resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
-      Code language,
-      Narrative text,
-      List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
-      Identifier identifier,
-      @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-          SupplyDeliveryStatus status,
-      Reference patient,
-      CodeableConcept type,
-      Quantity quantity,
-      Reference suppliedItem,
-      Reference supplier,
-      Period whenPrepared,
-      FhirDateTime time,
-      Reference destination,
-      List<Reference> receiver,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      @JsonKey(name: '_language')
-          Element languageElement,
-      @JsonKey(name: '_status')
-          Element statusElement}) {
-    return _SupplyDelivery(
-      resourceType: resourceType,
+// ignore: unused_element
+  _ProcessRequestItem call(
+      {Id id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      @required @JsonKey(required: true) Integer sequenceLinkId}) {
+    return _ProcessRequestItem(
       id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      language: language,
-      text: text,
-      contained: contained,
       extension_: extension_,
       modifierExtension: modifierExtension,
-      identifier: identifier,
-      status: status,
-      patient: patient,
-      type: type,
-      quantity: quantity,
-      suppliedItem: suppliedItem,
-      supplier: supplier,
-      whenPrepared: whenPrepared,
-      time: time,
-      destination: destination,
-      receiver: receiver,
-      implicitRulesElement: implicitRulesElement,
-      languageElement: languageElement,
-      statusElement: statusElement,
+      sequenceLinkId: sequenceLinkId,
     );
   }
 }
 
 // ignore: unused_element
-const $SupplyDelivery = _$SupplyDeliveryTearOff();
+const $ProcessRequestItem = _$ProcessRequestItemTearOff();
 
-mixin _$SupplyDelivery {
-  @JsonKey(defaultValue: 'SupplyDelivery')
-  String get resourceType;
+mixin _$ProcessRequestItem {
   Id get id;
-  Meta get meta;
-  FhirUri get implicitRules;
-  Code get language;
-  Narrative get text;
-  List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  FhirExtension get modifierExtension;
-  Identifier get identifier;
-  @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-  SupplyDeliveryStatus get status;
-  Reference get patient;
-  CodeableConcept get type;
-  Quantity get quantity;
-  Reference get suppliedItem;
-  Reference get supplier;
-  Period get whenPrepared;
-  FhirDateTime get time;
-  Reference get destination;
-  List<Reference> get receiver;
-  @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  @JsonKey(name: '_language')
-  Element get languageElement;
-  @JsonKey(name: '_status')
-  Element get statusElement;
+  List<FhirExtension> get modifierExtension;
+  @JsonKey(required: true)
+  Integer get sequenceLinkId;
 
   Map<String, dynamic> toJson();
-  $SupplyDeliveryCopyWith<SupplyDelivery> get copyWith;
+  $ProcessRequestItemCopyWith<ProcessRequestItem> get copyWith;
 }
 
-abstract class $SupplyDeliveryCopyWith<$Res> {
-  factory $SupplyDeliveryCopyWith(
-          SupplyDelivery value, $Res Function(SupplyDelivery) then) =
-      _$SupplyDeliveryCopyWithImpl<$Res>;
+abstract class $ProcessRequestItemCopyWith<$Res> {
+  factory $ProcessRequestItemCopyWith(
+          ProcessRequestItem value, $Res Function(ProcessRequestItem) then) =
+      _$ProcessRequestItemCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'SupplyDelivery')
-          String resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
-      Code language,
-      Narrative text,
-      List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
-      Identifier identifier,
-      @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-          SupplyDeliveryStatus status,
-      Reference patient,
-      CodeableConcept type,
-      Quantity quantity,
-      Reference suppliedItem,
-      Reference supplier,
-      Period whenPrepared,
-      FhirDateTime time,
-      Reference destination,
-      List<Reference> receiver,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      @JsonKey(name: '_language')
-          Element languageElement,
-      @JsonKey(name: '_status')
-          Element statusElement});
-
-  $MetaCopyWith<$Res> get meta;
-  $NarrativeCopyWith<$Res> get text;
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $IdentifierCopyWith<$Res> get identifier;
-  $ReferenceCopyWith<$Res> get patient;
-  $CodeableConceptCopyWith<$Res> get type;
-  $QuantityCopyWith<$Res> get quantity;
-  $ReferenceCopyWith<$Res> get suppliedItem;
-  $ReferenceCopyWith<$Res> get supplier;
-  $PeriodCopyWith<$Res> get whenPrepared;
-  $ReferenceCopyWith<$Res> get destination;
-  $ElementCopyWith<$Res> get implicitRulesElement;
-  $ElementCopyWith<$Res> get languageElement;
-  $ElementCopyWith<$Res> get statusElement;
+      {Id id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      @JsonKey(required: true) Integer sequenceLinkId});
 }
 
-class _$SupplyDeliveryCopyWithImpl<$Res>
-    implements $SupplyDeliveryCopyWith<$Res> {
-  _$SupplyDeliveryCopyWithImpl(this._value, this._then);
+class _$ProcessRequestItemCopyWithImpl<$Res>
+    implements $ProcessRequestItemCopyWith<$Res> {
+  _$ProcessRequestItemCopyWithImpl(this._value, this._then);
 
-  final SupplyDelivery _value;
+  final ProcessRequestItem _value;
   // ignore: unused_field
-  final $Res Function(SupplyDelivery) _then;
+  final $Res Function(ProcessRequestItem) _then;
 
   @override
   $Res call({
-    Object resourceType = freezed,
     Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object language = freezed,
-    Object text = freezed,
-    Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object status = freezed,
-    Object patient = freezed,
-    Object type = freezed,
-    Object quantity = freezed,
-    Object suppliedItem = freezed,
-    Object supplier = freezed,
-    Object whenPrepared = freezed,
-    Object time = freezed,
-    Object destination = freezed,
-    Object receiver = freezed,
-    Object implicitRulesElement = freezed,
-    Object languageElement = freezed,
-    Object statusElement = freezed,
+    Object sequenceLinkId = freezed,
   }) {
     return _then(_value.copyWith(
-      resourceType: resourceType == freezed
-          ? _value.resourceType
-          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
-      implicitRules: implicitRules == freezed
-          ? _value.implicitRules
-          : implicitRules as FhirUri,
-      language: language == freezed ? _value.language : language as Code,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
-      status:
-          status == freezed ? _value.status : status as SupplyDeliveryStatus,
-      patient: patient == freezed ? _value.patient : patient as Reference,
-      type: type == freezed ? _value.type : type as CodeableConcept,
-      quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
-      suppliedItem: suppliedItem == freezed
-          ? _value.suppliedItem
-          : suppliedItem as Reference,
-      supplier: supplier == freezed ? _value.supplier : supplier as Reference,
-      whenPrepared: whenPrepared == freezed
-          ? _value.whenPrepared
-          : whenPrepared as Period,
-      time: time == freezed ? _value.time : time as FhirDateTime,
-      destination: destination == freezed
-          ? _value.destination
-          : destination as Reference,
-      receiver:
-          receiver == freezed ? _value.receiver : receiver as List<Reference>,
-      implicitRulesElement: implicitRulesElement == freezed
-          ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      languageElement: languageElement == freezed
-          ? _value.languageElement
-          : languageElement as Element,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
+          : modifierExtension as List<FhirExtension>,
+      sequenceLinkId: sequenceLinkId == freezed
+          ? _value.sequenceLinkId
+          : sequenceLinkId as Integer,
     ));
   }
-
-  @override
-  $MetaCopyWith<$Res> get meta {
-    if (_value.meta == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.meta, (value) {
-      return _then(_value.copyWith(meta: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get text {
-    if (_value.text == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.text, (value) {
-      return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension {
-    if (_value.modifierExtension == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
-      return _then(_value.copyWith(modifierExtension: value));
-    });
-  }
-
-  @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get patient {
-    if (_value.patient == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.patient, (value) {
-      return _then(_value.copyWith(patient: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get type {
-    if (_value.type == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
-      return _then(_value.copyWith(type: value));
-    });
-  }
-
-  @override
-  $QuantityCopyWith<$Res> get quantity {
-    if (_value.quantity == null) {
-      return null;
-    }
-    return $QuantityCopyWith<$Res>(_value.quantity, (value) {
-      return _then(_value.copyWith(quantity: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get suppliedItem {
-    if (_value.suppliedItem == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.suppliedItem, (value) {
-      return _then(_value.copyWith(suppliedItem: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get supplier {
-    if (_value.supplier == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.supplier, (value) {
-      return _then(_value.copyWith(supplier: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get whenPrepared {
-    if (_value.whenPrepared == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.whenPrepared, (value) {
-      return _then(_value.copyWith(whenPrepared: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get destination {
-    if (_value.destination == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.destination, (value) {
-      return _then(_value.copyWith(destination: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get implicitRulesElement {
-    if (_value.implicitRulesElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
-      return _then(_value.copyWith(implicitRulesElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get languageElement {
-    if (_value.languageElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
-      return _then(_value.copyWith(languageElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get statusElement {
-    if (_value.statusElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
-      return _then(_value.copyWith(statusElement: value));
-    });
-  }
 }
 
-abstract class _$SupplyDeliveryCopyWith<$Res>
-    implements $SupplyDeliveryCopyWith<$Res> {
-  factory _$SupplyDeliveryCopyWith(
-          _SupplyDelivery value, $Res Function(_SupplyDelivery) then) =
-      __$SupplyDeliveryCopyWithImpl<$Res>;
+abstract class _$ProcessRequestItemCopyWith<$Res>
+    implements $ProcessRequestItemCopyWith<$Res> {
+  factory _$ProcessRequestItemCopyWith(
+          _ProcessRequestItem value, $Res Function(_ProcessRequestItem) then) =
+      __$ProcessRequestItemCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'SupplyDelivery')
-          String resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
-      Code language,
-      Narrative text,
-      List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
-      Identifier identifier,
-      @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-          SupplyDeliveryStatus status,
-      Reference patient,
-      CodeableConcept type,
-      Quantity quantity,
-      Reference suppliedItem,
-      Reference supplier,
-      Period whenPrepared,
-      FhirDateTime time,
-      Reference destination,
-      List<Reference> receiver,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      @JsonKey(name: '_language')
-          Element languageElement,
-      @JsonKey(name: '_status')
-          Element statusElement});
-
-  @override
-  $MetaCopyWith<$Res> get meta;
-  @override
-  $NarrativeCopyWith<$Res> get text;
-  @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $IdentifierCopyWith<$Res> get identifier;
-  @override
-  $ReferenceCopyWith<$Res> get patient;
-  @override
-  $CodeableConceptCopyWith<$Res> get type;
-  @override
-  $QuantityCopyWith<$Res> get quantity;
-  @override
-  $ReferenceCopyWith<$Res> get suppliedItem;
-  @override
-  $ReferenceCopyWith<$Res> get supplier;
-  @override
-  $PeriodCopyWith<$Res> get whenPrepared;
-  @override
-  $ReferenceCopyWith<$Res> get destination;
-  @override
-  $ElementCopyWith<$Res> get implicitRulesElement;
-  @override
-  $ElementCopyWith<$Res> get languageElement;
-  @override
-  $ElementCopyWith<$Res> get statusElement;
+      {Id id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      @JsonKey(required: true) Integer sequenceLinkId});
 }
 
-class __$SupplyDeliveryCopyWithImpl<$Res>
-    extends _$SupplyDeliveryCopyWithImpl<$Res>
-    implements _$SupplyDeliveryCopyWith<$Res> {
-  __$SupplyDeliveryCopyWithImpl(
-      _SupplyDelivery _value, $Res Function(_SupplyDelivery) _then)
-      : super(_value, (v) => _then(v as _SupplyDelivery));
+class __$ProcessRequestItemCopyWithImpl<$Res>
+    extends _$ProcessRequestItemCopyWithImpl<$Res>
+    implements _$ProcessRequestItemCopyWith<$Res> {
+  __$ProcessRequestItemCopyWithImpl(
+      _ProcessRequestItem _value, $Res Function(_ProcessRequestItem) _then)
+      : super(_value, (v) => _then(v as _ProcessRequestItem));
 
   @override
-  _SupplyDelivery get _value => super._value as _SupplyDelivery;
+  _ProcessRequestItem get _value => super._value as _ProcessRequestItem;
 
   @override
   $Res call({
-    Object resourceType = freezed,
     Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object language = freezed,
-    Object text = freezed,
-    Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object status = freezed,
-    Object patient = freezed,
-    Object type = freezed,
-    Object quantity = freezed,
-    Object suppliedItem = freezed,
-    Object supplier = freezed,
-    Object whenPrepared = freezed,
-    Object time = freezed,
-    Object destination = freezed,
-    Object receiver = freezed,
-    Object implicitRulesElement = freezed,
-    Object languageElement = freezed,
-    Object statusElement = freezed,
+    Object sequenceLinkId = freezed,
   }) {
-    return _then(_SupplyDelivery(
-      resourceType: resourceType == freezed
-          ? _value.resourceType
-          : resourceType as String,
+    return _then(_ProcessRequestItem(
       id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
-      implicitRules: implicitRules == freezed
-          ? _value.implicitRules
-          : implicitRules as FhirUri,
-      language: language == freezed ? _value.language : language as Code,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
-      status:
-          status == freezed ? _value.status : status as SupplyDeliveryStatus,
-      patient: patient == freezed ? _value.patient : patient as Reference,
-      type: type == freezed ? _value.type : type as CodeableConcept,
-      quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
-      suppliedItem: suppliedItem == freezed
-          ? _value.suppliedItem
-          : suppliedItem as Reference,
-      supplier: supplier == freezed ? _value.supplier : supplier as Reference,
-      whenPrepared: whenPrepared == freezed
-          ? _value.whenPrepared
-          : whenPrepared as Period,
-      time: time == freezed ? _value.time : time as FhirDateTime,
-      destination: destination == freezed
-          ? _value.destination
-          : destination as Reference,
-      receiver:
-          receiver == freezed ? _value.receiver : receiver as List<Reference>,
-      implicitRulesElement: implicitRulesElement == freezed
-          ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      languageElement: languageElement == freezed
-          ? _value.languageElement
-          : languageElement as Element,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
+          : modifierExtension as List<FhirExtension>,
+      sequenceLinkId: sequenceLinkId == freezed
+          ? _value.sequenceLinkId
+          : sequenceLinkId as Integer,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_SupplyDelivery extends _SupplyDelivery {
-  _$_SupplyDelivery(
-      {@required @JsonKey(defaultValue: 'SupplyDelivery') this.resourceType,
-      this.id,
-      this.meta,
-      this.implicitRules,
-      this.language,
-      this.text,
-      this.contained,
+class _$_ProcessRequestItem extends _ProcessRequestItem {
+  _$_ProcessRequestItem(
+      {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      this.identifier,
-      @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown) this.status,
-      this.patient,
-      this.type,
-      this.quantity,
-      this.suppliedItem,
-      this.supplier,
-      this.whenPrepared,
-      this.time,
-      this.destination,
-      this.receiver,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
-      @JsonKey(name: '_language') this.languageElement,
-      @JsonKey(name: '_status') this.statusElement})
-      : assert(resourceType != null),
+      @required @JsonKey(required: true) this.sequenceLinkId})
+      : assert(sequenceLinkId != null),
         super._();
 
-  factory _$_SupplyDelivery.fromJson(Map<String, dynamic> json) =>
-      _$_$_SupplyDeliveryFromJson(json);
+  factory _$_ProcessRequestItem.fromJson(Map<String, dynamic> json) =>
+      _$_$_ProcessRequestItemFromJson(json);
 
   @override
-  @JsonKey(defaultValue: 'SupplyDelivery')
-  final String resourceType;
-  @override
   final Id id;
-  @override
-  final Meta meta;
-  @override
-  final FhirUri implicitRules;
-  @override
-  final Code language;
-  @override
-  final Narrative text;
-  @override
-  final List<Resource> contained;
   @override
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  final FhirExtension modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
-  final Identifier identifier;
-  @override
-  @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-  final SupplyDeliveryStatus status;
-  @override
-  final Reference patient;
-  @override
-  final CodeableConcept type;
-  @override
-  final Quantity quantity;
-  @override
-  final Reference suppliedItem;
-  @override
-  final Reference supplier;
-  @override
-  final Period whenPrepared;
-  @override
-  final FhirDateTime time;
-  @override
-  final Reference destination;
-  @override
-  final List<Reference> receiver;
-  @override
-  @JsonKey(name: '_implicitRules')
-  final Element implicitRulesElement;
-  @override
-  @JsonKey(name: '_language')
-  final Element languageElement;
-  @override
-  @JsonKey(name: '_status')
-  final Element statusElement;
+  @JsonKey(required: true)
+  final Integer sequenceLinkId;
 
   @override
   String toString() {
-    return 'SupplyDelivery(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, patient: $patient, type: $type, quantity: $quantity, suppliedItem: $suppliedItem, supplier: $supplier, whenPrepared: $whenPrepared, time: $time, destination: $destination, receiver: $receiver, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, statusElement: $statusElement)';
+    return 'ProcessRequestItem(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, sequenceLinkId: $sequenceLinkId)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _SupplyDelivery &&
-            (identical(other.resourceType, resourceType) ||
-                const DeepCollectionEquality()
-                    .equals(other.resourceType, resourceType)) &&
+        (other is _ProcessRequestItem &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.meta, meta) ||
-                const DeepCollectionEquality().equals(other.meta, meta)) &&
-            (identical(other.implicitRules, implicitRules) ||
-                const DeepCollectionEquality()
-                    .equals(other.implicitRules, implicitRules)) &&
-            (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.contained, contained) ||
-                const DeepCollectionEquality()
-                    .equals(other.contained, contained)) &&
             (identical(other.extension_, extension_) ||
                 const DeepCollectionEquality()
                     .equals(other.extension_, extension_)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.identifier, identifier) ||
+            (identical(other.sequenceLinkId, sequenceLinkId) ||
                 const DeepCollectionEquality()
-                    .equals(other.identifier, identifier)) &&
-            (identical(other.status, status) ||
-                const DeepCollectionEquality().equals(other.status, status)) &&
-            (identical(other.patient, patient) ||
-                const DeepCollectionEquality()
-                    .equals(other.patient, patient)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.quantity, quantity) ||
-                const DeepCollectionEquality()
-                    .equals(other.quantity, quantity)) &&
-            (identical(other.suppliedItem, suppliedItem) ||
-                const DeepCollectionEquality()
-                    .equals(other.suppliedItem, suppliedItem)) &&
-            (identical(other.supplier, supplier) ||
-                const DeepCollectionEquality()
-                    .equals(other.supplier, supplier)) &&
-            (identical(other.whenPrepared, whenPrepared) ||
-                const DeepCollectionEquality()
-                    .equals(other.whenPrepared, whenPrepared)) &&
-            (identical(other.time, time) ||
-                const DeepCollectionEquality().equals(other.time, time)) &&
-            (identical(other.destination, destination) ||
-                const DeepCollectionEquality()
-                    .equals(other.destination, destination)) &&
-            (identical(other.receiver, receiver) ||
-                const DeepCollectionEquality()
-                    .equals(other.receiver, receiver)) &&
-            (identical(other.implicitRulesElement, implicitRulesElement) ||
-                const DeepCollectionEquality().equals(
-                    other.implicitRulesElement, implicitRulesElement)) &&
-            (identical(other.languageElement, languageElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.languageElement, languageElement)) &&
-            (identical(other.statusElement, statusElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusElement, statusElement)));
+                    .equals(other.sequenceLinkId, sequenceLinkId)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(meta) ^
-      const DeepCollectionEquality().hash(implicitRules) ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(contained) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(identifier) ^
-      const DeepCollectionEquality().hash(status) ^
-      const DeepCollectionEquality().hash(patient) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(quantity) ^
-      const DeepCollectionEquality().hash(suppliedItem) ^
-      const DeepCollectionEquality().hash(supplier) ^
-      const DeepCollectionEquality().hash(whenPrepared) ^
-      const DeepCollectionEquality().hash(time) ^
-      const DeepCollectionEquality().hash(destination) ^
-      const DeepCollectionEquality().hash(receiver) ^
-      const DeepCollectionEquality().hash(implicitRulesElement) ^
-      const DeepCollectionEquality().hash(languageElement) ^
-      const DeepCollectionEquality().hash(statusElement);
+      const DeepCollectionEquality().hash(sequenceLinkId);
 
   @override
-  _$SupplyDeliveryCopyWith<_SupplyDelivery> get copyWith =>
-      __$SupplyDeliveryCopyWithImpl<_SupplyDelivery>(this, _$identity);
+  _$ProcessRequestItemCopyWith<_ProcessRequestItem> get copyWith =>
+      __$ProcessRequestItemCopyWithImpl<_ProcessRequestItem>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SupplyDeliveryToJson(this);
+    return _$_$_ProcessRequestItemToJson(this);
   }
 }
 
-abstract class _SupplyDelivery extends SupplyDelivery {
-  _SupplyDelivery._() : super._();
-  factory _SupplyDelivery(
-      {@required
-      @JsonKey(defaultValue: 'SupplyDelivery')
-          String resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
-      Code language,
-      Narrative text,
-      List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
-      Identifier identifier,
-      @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-          SupplyDeliveryStatus status,
-      Reference patient,
-      CodeableConcept type,
-      Quantity quantity,
-      Reference suppliedItem,
-      Reference supplier,
-      Period whenPrepared,
-      FhirDateTime time,
-      Reference destination,
-      List<Reference> receiver,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      @JsonKey(name: '_language')
-          Element languageElement,
-      @JsonKey(name: '_status')
-          Element statusElement}) = _$_SupplyDelivery;
+abstract class _ProcessRequestItem extends ProcessRequestItem {
+  _ProcessRequestItem._() : super._();
+  factory _ProcessRequestItem(
+          {Id id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          @required @JsonKey(required: true) Integer sequenceLinkId}) =
+      _$_ProcessRequestItem;
 
-  factory _SupplyDelivery.fromJson(Map<String, dynamic> json) =
-      _$_SupplyDelivery.fromJson;
+  factory _ProcessRequestItem.fromJson(Map<String, dynamic> json) =
+      _$_ProcessRequestItem.fromJson;
 
-  @override
-  @JsonKey(defaultValue: 'SupplyDelivery')
-  String get resourceType;
   @override
   Id get id;
-  @override
-  Meta get meta;
-  @override
-  FhirUri get implicitRules;
-  @override
-  Code get language;
-  @override
-  Narrative get text;
-  @override
-  List<Resource> get contained;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  FhirExtension get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   @override
-  Identifier get identifier;
+  @JsonKey(required: true)
+  Integer get sequenceLinkId;
   @override
-  @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-  SupplyDeliveryStatus get status;
-  @override
-  Reference get patient;
-  @override
-  CodeableConcept get type;
-  @override
-  Quantity get quantity;
-  @override
-  Reference get suppliedItem;
-  @override
-  Reference get supplier;
-  @override
-  Period get whenPrepared;
-  @override
-  FhirDateTime get time;
-  @override
-  Reference get destination;
-  @override
-  List<Reference> get receiver;
-  @override
-  @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  @override
-  @JsonKey(name: '_language')
-  Element get languageElement;
-  @override
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @override
-  _$SupplyDeliveryCopyWith<_SupplyDelivery> get copyWith;
+  _$ProcessRequestItemCopyWith<_ProcessRequestItem> get copyWith;
 }
 
 ProcessResponse _$ProcessResponseFromJson(Map<String, dynamic> json) {
@@ -1634,6 +1010,7 @@ ProcessResponse _$ProcessResponseFromJson(Map<String, dynamic> json) {
 class _$ProcessResponseTearOff {
   const _$ProcessResponseTearOff();
 
+// ignore: unused_element
   _ProcessResponse call(
       {@required @JsonKey(defaultValue: 'ProcessResponse') String resourceType,
       Id id,
@@ -1643,7 +1020,7 @@ class _$ProcessResponseTearOff {
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Reference request,
       Coding outcome,
@@ -1698,7 +1075,7 @@ mixin _$ProcessResponse {
   List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  FhirExtension get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
   Reference get request;
   Coding get outcome;
@@ -1730,7 +1107,7 @@ abstract class $ProcessResponseCopyWith<$Res> {
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Reference request,
       Coding outcome,
@@ -1747,7 +1124,6 @@ abstract class $ProcessResponseCopyWith<$Res> {
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ReferenceCopyWith<$Res> get request;
   $CodingCopyWith<$Res> get outcome;
   $CodingCopyWith<$Res> get ruleset;
@@ -1809,7 +1185,7 @@ class _$ProcessResponseCopyWithImpl<$Res>
           : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -1855,16 +1231,6 @@ class _$ProcessResponseCopyWithImpl<$Res>
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension {
-    if (_value.modifierExtension == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
-      return _then(_value.copyWith(modifierExtension: value));
     });
   }
 
@@ -1964,7 +1330,7 @@ abstract class _$ProcessResponseCopyWith<$Res>
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Reference request,
       Coding outcome,
@@ -1983,8 +1349,6 @@ abstract class _$ProcessResponseCopyWith<$Res>
   $MetaCopyWith<$Res> get meta;
   @override
   $NarrativeCopyWith<$Res> get text;
-  @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
   $ReferenceCopyWith<$Res> get request;
   @override
@@ -2056,7 +1420,7 @@ class __$ProcessResponseCopyWithImpl<$Res>
           : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -2136,7 +1500,7 @@ class _$_ProcessResponse extends _ProcessResponse {
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  final FhirExtension modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final List<Identifier> identifier;
   @override
@@ -2282,7 +1646,7 @@ abstract class _ProcessResponse extends ProcessResponse {
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Reference request,
       Coding outcome,
@@ -2319,7 +1683,7 @@ abstract class _ProcessResponse extends ProcessResponse {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  FhirExtension get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   @override
   List<Identifier> get identifier;
   @override
@@ -2350,6 +1714,243 @@ abstract class _ProcessResponse extends ProcessResponse {
   _$ProcessResponseCopyWith<_ProcessResponse> get copyWith;
 }
 
+ProcessResponseNotes _$ProcessResponseNotesFromJson(Map<String, dynamic> json) {
+  return _ProcessResponseNotes.fromJson(json);
+}
+
+class _$ProcessResponseNotesTearOff {
+  const _$ProcessResponseNotesTearOff();
+
+// ignore: unused_element
+  _ProcessResponseNotes call(
+      {Id id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Coding type,
+      String text}) {
+    return _ProcessResponseNotes(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      type: type,
+      text: text,
+    );
+  }
+}
+
+// ignore: unused_element
+const $ProcessResponseNotes = _$ProcessResponseNotesTearOff();
+
+mixin _$ProcessResponseNotes {
+  Id get id;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
+  Coding get type;
+  String get text;
+
+  Map<String, dynamic> toJson();
+  $ProcessResponseNotesCopyWith<ProcessResponseNotes> get copyWith;
+}
+
+abstract class $ProcessResponseNotesCopyWith<$Res> {
+  factory $ProcessResponseNotesCopyWith(ProcessResponseNotes value,
+          $Res Function(ProcessResponseNotes) then) =
+      _$ProcessResponseNotesCopyWithImpl<$Res>;
+  $Res call(
+      {Id id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Coding type,
+      String text});
+
+  $CodingCopyWith<$Res> get type;
+}
+
+class _$ProcessResponseNotesCopyWithImpl<$Res>
+    implements $ProcessResponseNotesCopyWith<$Res> {
+  _$ProcessResponseNotesCopyWithImpl(this._value, this._then);
+
+  final ProcessResponseNotes _value;
+  // ignore: unused_field
+  final $Res Function(ProcessResponseNotes) _then;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object type = freezed,
+    Object text = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed ? _value.id : id as Id,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      type: type == freezed ? _value.type : type as Coding,
+      text: text == freezed ? _value.text : text as String,
+    ));
+  }
+
+  @override
+  $CodingCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+}
+
+abstract class _$ProcessResponseNotesCopyWith<$Res>
+    implements $ProcessResponseNotesCopyWith<$Res> {
+  factory _$ProcessResponseNotesCopyWith(_ProcessResponseNotes value,
+          $Res Function(_ProcessResponseNotes) then) =
+      __$ProcessResponseNotesCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {Id id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Coding type,
+      String text});
+
+  @override
+  $CodingCopyWith<$Res> get type;
+}
+
+class __$ProcessResponseNotesCopyWithImpl<$Res>
+    extends _$ProcessResponseNotesCopyWithImpl<$Res>
+    implements _$ProcessResponseNotesCopyWith<$Res> {
+  __$ProcessResponseNotesCopyWithImpl(
+      _ProcessResponseNotes _value, $Res Function(_ProcessResponseNotes) _then)
+      : super(_value, (v) => _then(v as _ProcessResponseNotes));
+
+  @override
+  _ProcessResponseNotes get _value => super._value as _ProcessResponseNotes;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object type = freezed,
+    Object text = freezed,
+  }) {
+    return _then(_ProcessResponseNotes(
+      id: id == freezed ? _value.id : id as Id,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      type: type == freezed ? _value.type : type as Coding,
+      text: text == freezed ? _value.text : text as String,
+    ));
+  }
+}
+
+@JsonSerializable()
+class _$_ProcessResponseNotes extends _ProcessResponseNotes {
+  _$_ProcessResponseNotes(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.type,
+      this.text})
+      : super._();
+
+  factory _$_ProcessResponseNotes.fromJson(Map<String, dynamic> json) =>
+      _$_$_ProcessResponseNotesFromJson(json);
+
+  @override
+  final Id id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
+  @override
+  final Coding type;
+  @override
+  final String text;
+
+  @override
+  String toString() {
+    return 'ProcessResponseNotes(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, text: $text)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _ProcessResponseNotes &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.type, type) ||
+                const DeepCollectionEquality().equals(other.type, type)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(type) ^
+      const DeepCollectionEquality().hash(text);
+
+  @override
+  _$ProcessResponseNotesCopyWith<_ProcessResponseNotes> get copyWith =>
+      __$ProcessResponseNotesCopyWithImpl<_ProcessResponseNotes>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_ProcessResponseNotesToJson(this);
+  }
+}
+
+abstract class _ProcessResponseNotes extends ProcessResponseNotes {
+  _ProcessResponseNotes._() : super._();
+  factory _ProcessResponseNotes(
+      {Id id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Coding type,
+      String text}) = _$_ProcessResponseNotes;
+
+  factory _ProcessResponseNotes.fromJson(Map<String, dynamic> json) =
+      _$_ProcessResponseNotes.fromJson;
+
+  @override
+  Id get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
+  @override
+  Coding get type;
+  @override
+  String get text;
+  @override
+  _$ProcessResponseNotesCopyWith<_ProcessResponseNotes> get copyWith;
+}
+
 SupplyRequest _$SupplyRequestFromJson(Map<String, dynamic> json) {
   return _SupplyRequest.fromJson(json);
 }
@@ -2357,6 +1958,7 @@ SupplyRequest _$SupplyRequestFromJson(Map<String, dynamic> json) {
 class _$SupplyRequestTearOff {
   const _$SupplyRequestTearOff();
 
+// ignore: unused_element
   _SupplyRequest call(
       {@required
       @JsonKey(defaultValue: 'SupplyRequest')
@@ -2364,36 +1966,38 @@ class _$SupplyRequestTearOff {
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
+      List<FhirExtension> modifierExtension,
       Reference patient,
       Reference source,
       FhirDateTime date,
       Identifier identifier,
       @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
           SupplyRequestStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept kind,
       Reference orderedItem,
       List<Reference> supplier,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
-      SupplyRequestWhen when,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      @JsonKey(name: '_language')
-          Element languageElement,
-      @JsonKey(name: '_status')
-          Element statusElement}) {
+      SupplyRequestWhen when}) {
     return _SupplyRequest(
       resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
+      implicitRulesElement: implicitRulesElement,
       language: language,
+      languageElement: languageElement,
       text: text,
       contained: contained,
       extension_: extension_,
@@ -2403,15 +2007,13 @@ class _$SupplyRequestTearOff {
       date: date,
       identifier: identifier,
       status: status,
+      statusElement: statusElement,
       kind: kind,
       orderedItem: orderedItem,
       supplier: supplier,
       reasonCodeableConcept: reasonCodeableConcept,
       reasonReference: reasonReference,
       when: when,
-      implicitRulesElement: implicitRulesElement,
-      languageElement: languageElement,
-      statusElement: statusElement,
     );
   }
 }
@@ -2425,30 +2027,30 @@ mixin _$SupplyRequest {
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
   Code get language;
+  @JsonKey(name: '_language')
+  Element get languageElement;
   Narrative get text;
   List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  FhirExtension get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   Reference get patient;
   Reference get source;
   FhirDateTime get date;
   Identifier get identifier;
   @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
   SupplyRequestStatus get status;
+  @JsonKey(name: '_status')
+  Element get statusElement;
   CodeableConcept get kind;
   Reference get orderedItem;
   List<Reference> get supplier;
   CodeableConcept get reasonCodeableConcept;
   Reference get reasonReference;
   SupplyRequestWhen get when;
-  @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  @JsonKey(name: '_language')
-  Element get languageElement;
-  @JsonKey(name: '_status')
-  Element get statusElement;
 
   Map<String, dynamic> toJson();
   $SupplyRequestCopyWith<SupplyRequest> get copyWith;
@@ -2464,45 +2066,44 @@ abstract class $SupplyRequestCopyWith<$Res> {
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
+      List<FhirExtension> modifierExtension,
       Reference patient,
       Reference source,
       FhirDateTime date,
       Identifier identifier,
       @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
           SupplyRequestStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept kind,
       Reference orderedItem,
       List<Reference> supplier,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
-      SupplyRequestWhen when,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      @JsonKey(name: '_language')
-          Element languageElement,
-      @JsonKey(name: '_status')
-          Element statusElement});
+      SupplyRequestWhen when});
 
   $MetaCopyWith<$Res> get meta;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ReferenceCopyWith<$Res> get patient;
   $ReferenceCopyWith<$Res> get source;
   $IdentifierCopyWith<$Res> get identifier;
+  $ElementCopyWith<$Res> get statusElement;
   $CodeableConceptCopyWith<$Res> get kind;
   $ReferenceCopyWith<$Res> get orderedItem;
   $CodeableConceptCopyWith<$Res> get reasonCodeableConcept;
   $ReferenceCopyWith<$Res> get reasonReference;
   $SupplyRequestWhenCopyWith<$Res> get when;
-  $ElementCopyWith<$Res> get implicitRulesElement;
-  $ElementCopyWith<$Res> get languageElement;
-  $ElementCopyWith<$Res> get statusElement;
 }
 
 class _$SupplyRequestCopyWithImpl<$Res>
@@ -2519,7 +2120,9 @@ class _$SupplyRequestCopyWithImpl<$Res>
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
@@ -2529,15 +2132,13 @@ class _$SupplyRequestCopyWithImpl<$Res>
     Object date = freezed,
     Object identifier = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object kind = freezed,
     Object orderedItem = freezed,
     Object supplier = freezed,
     Object reasonCodeableConcept = freezed,
     Object reasonReference = freezed,
     Object when = freezed,
-    Object implicitRulesElement = freezed,
-    Object languageElement = freezed,
-    Object statusElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -2548,7 +2149,13 @@ class _$SupplyRequestCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -2557,13 +2164,16 @@ class _$SupplyRequestCopyWithImpl<$Res>
           : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
+          : modifierExtension as List<FhirExtension>,
       patient: patient == freezed ? _value.patient : patient as Reference,
       source: source == freezed ? _value.source : source as Reference,
       date: date == freezed ? _value.date : date as FhirDateTime,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       status: status == freezed ? _value.status : status as SupplyRequestStatus,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       kind: kind == freezed ? _value.kind : kind as CodeableConcept,
       orderedItem: orderedItem == freezed
           ? _value.orderedItem
@@ -2577,15 +2187,6 @@ class _$SupplyRequestCopyWithImpl<$Res>
           ? _value.reasonReference
           : reasonReference as Reference,
       when: when == freezed ? _value.when : when as SupplyRequestWhen,
-      implicitRulesElement: implicitRulesElement == freezed
-          ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      languageElement: languageElement == freezed
-          ? _value.languageElement
-          : languageElement as Element,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
     ));
   }
 
@@ -2600,22 +2201,32 @@ class _$SupplyRequestCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
   $NarrativeCopyWith<$Res> get text {
     if (_value.text == null) {
       return null;
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension {
-    if (_value.modifierExtension == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
-      return _then(_value.copyWith(modifierExtension: value));
     });
   }
 
@@ -2646,6 +2257,16 @@ class _$SupplyRequestCopyWithImpl<$Res>
     }
     return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
       return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
     });
   }
 
@@ -2699,36 +2320,6 @@ class _$SupplyRequestCopyWithImpl<$Res>
       return _then(_value.copyWith(when: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get implicitRulesElement {
-    if (_value.implicitRulesElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
-      return _then(_value.copyWith(implicitRulesElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get languageElement {
-    if (_value.languageElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
-      return _then(_value.copyWith(languageElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get statusElement {
-    if (_value.statusElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
-      return _then(_value.copyWith(statusElement: value));
-    });
-  }
 }
 
 abstract class _$SupplyRequestCopyWith<$Res>
@@ -2743,43 +2334,47 @@ abstract class _$SupplyRequestCopyWith<$Res>
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
+      List<FhirExtension> modifierExtension,
       Reference patient,
       Reference source,
       FhirDateTime date,
       Identifier identifier,
       @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
           SupplyRequestStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept kind,
       Reference orderedItem,
       List<Reference> supplier,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
-      SupplyRequestWhen when,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      @JsonKey(name: '_language')
-          Element languageElement,
-      @JsonKey(name: '_status')
-          Element statusElement});
+      SupplyRequestWhen when});
 
   @override
   $MetaCopyWith<$Res> get meta;
   @override
-  $NarrativeCopyWith<$Res> get text;
+  $ElementCopyWith<$Res> get implicitRulesElement;
   @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $NarrativeCopyWith<$Res> get text;
   @override
   $ReferenceCopyWith<$Res> get patient;
   @override
   $ReferenceCopyWith<$Res> get source;
   @override
   $IdentifierCopyWith<$Res> get identifier;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
   @override
   $CodeableConceptCopyWith<$Res> get kind;
   @override
@@ -2790,12 +2385,6 @@ abstract class _$SupplyRequestCopyWith<$Res>
   $ReferenceCopyWith<$Res> get reasonReference;
   @override
   $SupplyRequestWhenCopyWith<$Res> get when;
-  @override
-  $ElementCopyWith<$Res> get implicitRulesElement;
-  @override
-  $ElementCopyWith<$Res> get languageElement;
-  @override
-  $ElementCopyWith<$Res> get statusElement;
 }
 
 class __$SupplyRequestCopyWithImpl<$Res>
@@ -2814,7 +2403,9 @@ class __$SupplyRequestCopyWithImpl<$Res>
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
     Object language = freezed,
+    Object languageElement = freezed,
     Object text = freezed,
     Object contained = freezed,
     Object extension_ = freezed,
@@ -2824,15 +2415,13 @@ class __$SupplyRequestCopyWithImpl<$Res>
     Object date = freezed,
     Object identifier = freezed,
     Object status = freezed,
+    Object statusElement = freezed,
     Object kind = freezed,
     Object orderedItem = freezed,
     Object supplier = freezed,
     Object reasonCodeableConcept = freezed,
     Object reasonReference = freezed,
     Object when = freezed,
-    Object implicitRulesElement = freezed,
-    Object languageElement = freezed,
-    Object statusElement = freezed,
   }) {
     return _then(_SupplyRequest(
       resourceType: resourceType == freezed
@@ -2843,7 +2432,13 @@ class __$SupplyRequestCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
       language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<Resource>,
@@ -2852,13 +2447,16 @@ class __$SupplyRequestCopyWithImpl<$Res>
           : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
+          : modifierExtension as List<FhirExtension>,
       patient: patient == freezed ? _value.patient : patient as Reference,
       source: source == freezed ? _value.source : source as Reference,
       date: date == freezed ? _value.date : date as FhirDateTime,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       status: status == freezed ? _value.status : status as SupplyRequestStatus,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       kind: kind == freezed ? _value.kind : kind as CodeableConcept,
       orderedItem: orderedItem == freezed
           ? _value.orderedItem
@@ -2872,15 +2470,6 @@ class __$SupplyRequestCopyWithImpl<$Res>
           ? _value.reasonReference
           : reasonReference as Reference,
       when: when == freezed ? _value.when : when as SupplyRequestWhen,
-      implicitRulesElement: implicitRulesElement == freezed
-          ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      languageElement: languageElement == freezed
-          ? _value.languageElement
-          : languageElement as Element,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
     ));
   }
 }
@@ -2892,7 +2481,9 @@ class _$_SupplyRequest extends _SupplyRequest {
       this.id,
       this.meta,
       this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
       @JsonKey(name: 'extension') this.extension_,
@@ -2902,15 +2493,13 @@ class _$_SupplyRequest extends _SupplyRequest {
       this.date,
       this.identifier,
       @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown) this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.kind,
       this.orderedItem,
       this.supplier,
       this.reasonCodeableConcept,
       this.reasonReference,
-      this.when,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
-      @JsonKey(name: '_language') this.languageElement,
-      @JsonKey(name: '_status') this.statusElement})
+      this.when})
       : assert(resourceType != null),
         super._();
 
@@ -2927,7 +2516,13 @@ class _$_SupplyRequest extends _SupplyRequest {
   @override
   final FhirUri implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
   final Code language;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
   @override
   final Narrative text;
   @override
@@ -2936,7 +2531,7 @@ class _$_SupplyRequest extends _SupplyRequest {
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  final FhirExtension modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final Reference patient;
   @override
@@ -2949,6 +2544,9 @@ class _$_SupplyRequest extends _SupplyRequest {
   @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
   final SupplyRequestStatus status;
   @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
   final CodeableConcept kind;
   @override
   final Reference orderedItem;
@@ -2960,19 +2558,10 @@ class _$_SupplyRequest extends _SupplyRequest {
   final Reference reasonReference;
   @override
   final SupplyRequestWhen when;
-  @override
-  @JsonKey(name: '_implicitRules')
-  final Element implicitRulesElement;
-  @override
-  @JsonKey(name: '_language')
-  final Element languageElement;
-  @override
-  @JsonKey(name: '_status')
-  final Element statusElement;
 
   @override
   String toString() {
-    return 'SupplyRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, patient: $patient, source: $source, date: $date, identifier: $identifier, status: $status, kind: $kind, orderedItem: $orderedItem, supplier: $supplier, reasonCodeableConcept: $reasonCodeableConcept, reasonReference: $reasonReference, when: $when, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, statusElement: $statusElement)';
+    return 'SupplyRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, patient: $patient, source: $source, date: $date, identifier: $identifier, status: $status, statusElement: $statusElement, kind: $kind, orderedItem: $orderedItem, supplier: $supplier, reasonCodeableConcept: $reasonCodeableConcept, reasonReference: $reasonReference, when: $when)';
   }
 
   @override
@@ -2989,9 +2578,15 @@ class _$_SupplyRequest extends _SupplyRequest {
             (identical(other.implicitRules, implicitRules) ||
                 const DeepCollectionEquality()
                     .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
             (identical(other.language, language) ||
                 const DeepCollectionEquality()
                     .equals(other.language, language)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
             (identical(other.text, text) ||
                 const DeepCollectionEquality().equals(other.text, text)) &&
             (identical(other.contained, contained) ||
@@ -3015,6 +2610,9 @@ class _$_SupplyRequest extends _SupplyRequest {
                     .equals(other.identifier, identifier)) &&
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
             (identical(other.kind, kind) ||
                 const DeepCollectionEquality().equals(other.kind, kind)) &&
             (identical(other.orderedItem, orderedItem) ||
@@ -3030,16 +2628,7 @@ class _$_SupplyRequest extends _SupplyRequest {
                 const DeepCollectionEquality()
                     .equals(other.reasonReference, reasonReference)) &&
             (identical(other.when, when) ||
-                const DeepCollectionEquality().equals(other.when, when)) &&
-            (identical(other.implicitRulesElement, implicitRulesElement) ||
-                const DeepCollectionEquality().equals(
-                    other.implicitRulesElement, implicitRulesElement)) &&
-            (identical(other.languageElement, languageElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.languageElement, languageElement)) &&
-            (identical(other.statusElement, statusElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusElement, statusElement)));
+                const DeepCollectionEquality().equals(other.when, when)));
   }
 
   @override
@@ -3049,7 +2638,9 @@ class _$_SupplyRequest extends _SupplyRequest {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
       const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
       const DeepCollectionEquality().hash(extension_) ^
@@ -3059,15 +2650,13 @@ class _$_SupplyRequest extends _SupplyRequest {
       const DeepCollectionEquality().hash(date) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(status) ^
+      const DeepCollectionEquality().hash(statusElement) ^
       const DeepCollectionEquality().hash(kind) ^
       const DeepCollectionEquality().hash(orderedItem) ^
       const DeepCollectionEquality().hash(supplier) ^
       const DeepCollectionEquality().hash(reasonCodeableConcept) ^
       const DeepCollectionEquality().hash(reasonReference) ^
-      const DeepCollectionEquality().hash(when) ^
-      const DeepCollectionEquality().hash(implicitRulesElement) ^
-      const DeepCollectionEquality().hash(languageElement) ^
-      const DeepCollectionEquality().hash(statusElement);
+      const DeepCollectionEquality().hash(when);
 
   @override
   _$SupplyRequestCopyWith<_SupplyRequest> get copyWith =>
@@ -3088,30 +2677,30 @@ abstract class _SupplyRequest extends SupplyRequest {
       Id id,
       Meta meta,
       FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
+      List<FhirExtension> modifierExtension,
       Reference patient,
       Reference source,
       FhirDateTime date,
       Identifier identifier,
       @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
           SupplyRequestStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept kind,
       Reference orderedItem,
       List<Reference> supplier,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
-      SupplyRequestWhen when,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      @JsonKey(name: '_language')
-          Element languageElement,
-      @JsonKey(name: '_status')
-          Element statusElement}) = _$_SupplyRequest;
+      SupplyRequestWhen when}) = _$_SupplyRequest;
 
   factory _SupplyRequest.fromJson(Map<String, dynamic> json) =
       _$_SupplyRequest.fromJson;
@@ -3126,7 +2715,13 @@ abstract class _SupplyRequest extends SupplyRequest {
   @override
   FhirUri get implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
   Code get language;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
   @override
   Narrative get text;
   @override
@@ -3135,7 +2730,7 @@ abstract class _SupplyRequest extends SupplyRequest {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  FhirExtension get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   @override
   Reference get patient;
   @override
@@ -3147,6 +2742,9 @@ abstract class _SupplyRequest extends SupplyRequest {
   @override
   @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
   SupplyRequestStatus get status;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
   @override
   CodeableConcept get kind;
   @override
@@ -3160,488 +2758,7 @@ abstract class _SupplyRequest extends SupplyRequest {
   @override
   SupplyRequestWhen get when;
   @override
-  @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  @override
-  @JsonKey(name: '_language')
-  Element get languageElement;
-  @override
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @override
   _$SupplyRequestCopyWith<_SupplyRequest> get copyWith;
-}
-
-ProcessRequestItem _$ProcessRequestItemFromJson(Map<String, dynamic> json) {
-  return _ProcessRequestItem.fromJson(json);
-}
-
-class _$ProcessRequestItemTearOff {
-  const _$ProcessRequestItemTearOff();
-
-  _ProcessRequestItem call(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
-      @required @JsonKey(required: true) Integer sequenceLinkId}) {
-    return _ProcessRequestItem(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      sequenceLinkId: sequenceLinkId,
-    );
-  }
-}
-
-// ignore: unused_element
-const $ProcessRequestItem = _$ProcessRequestItemTearOff();
-
-mixin _$ProcessRequestItem {
-  Id get id;
-  @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  FhirExtension get modifierExtension;
-  @JsonKey(required: true)
-  Integer get sequenceLinkId;
-
-  Map<String, dynamic> toJson();
-  $ProcessRequestItemCopyWith<ProcessRequestItem> get copyWith;
-}
-
-abstract class $ProcessRequestItemCopyWith<$Res> {
-  factory $ProcessRequestItemCopyWith(
-          ProcessRequestItem value, $Res Function(ProcessRequestItem) then) =
-      _$ProcessRequestItemCopyWithImpl<$Res>;
-  $Res call(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
-      @JsonKey(required: true) Integer sequenceLinkId});
-
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
-}
-
-class _$ProcessRequestItemCopyWithImpl<$Res>
-    implements $ProcessRequestItemCopyWith<$Res> {
-  _$ProcessRequestItemCopyWithImpl(this._value, this._then);
-
-  final ProcessRequestItem _value;
-  // ignore: unused_field
-  final $Res Function(ProcessRequestItem) _then;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object sequenceLinkId = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as List<FhirExtension>,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
-      sequenceLinkId: sequenceLinkId == freezed
-          ? _value.sequenceLinkId
-          : sequenceLinkId as Integer,
-    ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension {
-    if (_value.modifierExtension == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
-      return _then(_value.copyWith(modifierExtension: value));
-    });
-  }
-}
-
-abstract class _$ProcessRequestItemCopyWith<$Res>
-    implements $ProcessRequestItemCopyWith<$Res> {
-  factory _$ProcessRequestItemCopyWith(
-          _ProcessRequestItem value, $Res Function(_ProcessRequestItem) then) =
-      __$ProcessRequestItemCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
-      @JsonKey(required: true) Integer sequenceLinkId});
-
-  @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
-}
-
-class __$ProcessRequestItemCopyWithImpl<$Res>
-    extends _$ProcessRequestItemCopyWithImpl<$Res>
-    implements _$ProcessRequestItemCopyWith<$Res> {
-  __$ProcessRequestItemCopyWithImpl(
-      _ProcessRequestItem _value, $Res Function(_ProcessRequestItem) _then)
-      : super(_value, (v) => _then(v as _ProcessRequestItem));
-
-  @override
-  _ProcessRequestItem get _value => super._value as _ProcessRequestItem;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object sequenceLinkId = freezed,
-  }) {
-    return _then(_ProcessRequestItem(
-      id: id == freezed ? _value.id : id as Id,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as List<FhirExtension>,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
-      sequenceLinkId: sequenceLinkId == freezed
-          ? _value.sequenceLinkId
-          : sequenceLinkId as Integer,
-    ));
-  }
-}
-
-@JsonSerializable()
-class _$_ProcessRequestItem implements _ProcessRequestItem {
-  _$_ProcessRequestItem(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      @required @JsonKey(required: true) this.sequenceLinkId})
-      : assert(sequenceLinkId != null);
-
-  factory _$_ProcessRequestItem.fromJson(Map<String, dynamic> json) =>
-      _$_$_ProcessRequestItemFromJson(json);
-
-  @override
-  final Id id;
-  @override
-  @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
-  @override
-  final FhirExtension modifierExtension;
-  @override
-  @JsonKey(required: true)
-  final Integer sequenceLinkId;
-
-  @override
-  String toString() {
-    return 'ProcessRequestItem(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, sequenceLinkId: $sequenceLinkId)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is _ProcessRequestItem &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.sequenceLinkId, sequenceLinkId) ||
-                const DeepCollectionEquality()
-                    .equals(other.sequenceLinkId, sequenceLinkId)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(sequenceLinkId);
-
-  @override
-  _$ProcessRequestItemCopyWith<_ProcessRequestItem> get copyWith =>
-      __$ProcessRequestItemCopyWithImpl<_ProcessRequestItem>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$_$_ProcessRequestItemToJson(this);
-  }
-}
-
-abstract class _ProcessRequestItem implements ProcessRequestItem {
-  factory _ProcessRequestItem(
-          {Id id,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          FhirExtension modifierExtension,
-          @required @JsonKey(required: true) Integer sequenceLinkId}) =
-      _$_ProcessRequestItem;
-
-  factory _ProcessRequestItem.fromJson(Map<String, dynamic> json) =
-      _$_ProcessRequestItem.fromJson;
-
-  @override
-  Id get id;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  @override
-  FhirExtension get modifierExtension;
-  @override
-  @JsonKey(required: true)
-  Integer get sequenceLinkId;
-  @override
-  _$ProcessRequestItemCopyWith<_ProcessRequestItem> get copyWith;
-}
-
-ProcessResponseNotes _$ProcessResponseNotesFromJson(Map<String, dynamic> json) {
-  return _ProcessResponseNotes.fromJson(json);
-}
-
-class _$ProcessResponseNotesTearOff {
-  const _$ProcessResponseNotesTearOff();
-
-  _ProcessResponseNotes call(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
-      Coding type,
-      String text}) {
-    return _ProcessResponseNotes(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      text: text,
-    );
-  }
-}
-
-// ignore: unused_element
-const $ProcessResponseNotes = _$ProcessResponseNotesTearOff();
-
-mixin _$ProcessResponseNotes {
-  Id get id;
-  @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  FhirExtension get modifierExtension;
-  Coding get type;
-  String get text;
-
-  Map<String, dynamic> toJson();
-  $ProcessResponseNotesCopyWith<ProcessResponseNotes> get copyWith;
-}
-
-abstract class $ProcessResponseNotesCopyWith<$Res> {
-  factory $ProcessResponseNotesCopyWith(ProcessResponseNotes value,
-          $Res Function(ProcessResponseNotes) then) =
-      _$ProcessResponseNotesCopyWithImpl<$Res>;
-  $Res call(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
-      Coding type,
-      String text});
-
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $CodingCopyWith<$Res> get type;
-}
-
-class _$ProcessResponseNotesCopyWithImpl<$Res>
-    implements $ProcessResponseNotesCopyWith<$Res> {
-  _$ProcessResponseNotesCopyWithImpl(this._value, this._then);
-
-  final ProcessResponseNotes _value;
-  // ignore: unused_field
-  final $Res Function(ProcessResponseNotes) _then;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object type = freezed,
-    Object text = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as List<FhirExtension>,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
-      type: type == freezed ? _value.type : type as Coding,
-      text: text == freezed ? _value.text : text as String,
-    ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension {
-    if (_value.modifierExtension == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
-      return _then(_value.copyWith(modifierExtension: value));
-    });
-  }
-
-  @override
-  $CodingCopyWith<$Res> get type {
-    if (_value.type == null) {
-      return null;
-    }
-    return $CodingCopyWith<$Res>(_value.type, (value) {
-      return _then(_value.copyWith(type: value));
-    });
-  }
-}
-
-abstract class _$ProcessResponseNotesCopyWith<$Res>
-    implements $ProcessResponseNotesCopyWith<$Res> {
-  factory _$ProcessResponseNotesCopyWith(_ProcessResponseNotes value,
-          $Res Function(_ProcessResponseNotes) then) =
-      __$ProcessResponseNotesCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
-      Coding type,
-      String text});
-
-  @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $CodingCopyWith<$Res> get type;
-}
-
-class __$ProcessResponseNotesCopyWithImpl<$Res>
-    extends _$ProcessResponseNotesCopyWithImpl<$Res>
-    implements _$ProcessResponseNotesCopyWith<$Res> {
-  __$ProcessResponseNotesCopyWithImpl(
-      _ProcessResponseNotes _value, $Res Function(_ProcessResponseNotes) _then)
-      : super(_value, (v) => _then(v as _ProcessResponseNotes));
-
-  @override
-  _ProcessResponseNotes get _value => super._value as _ProcessResponseNotes;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object type = freezed,
-    Object text = freezed,
-  }) {
-    return _then(_ProcessResponseNotes(
-      id: id == freezed ? _value.id : id as Id,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as List<FhirExtension>,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
-      type: type == freezed ? _value.type : type as Coding,
-      text: text == freezed ? _value.text : text as String,
-    ));
-  }
-}
-
-@JsonSerializable()
-class _$_ProcessResponseNotes implements _ProcessResponseNotes {
-  _$_ProcessResponseNotes(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.type,
-      this.text});
-
-  factory _$_ProcessResponseNotes.fromJson(Map<String, dynamic> json) =>
-      _$_$_ProcessResponseNotesFromJson(json);
-
-  @override
-  final Id id;
-  @override
-  @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
-  @override
-  final FhirExtension modifierExtension;
-  @override
-  final Coding type;
-  @override
-  final String text;
-
-  @override
-  String toString() {
-    return 'ProcessResponseNotes(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, text: $text)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is _ProcessResponseNotes &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(text);
-
-  @override
-  _$ProcessResponseNotesCopyWith<_ProcessResponseNotes> get copyWith =>
-      __$ProcessResponseNotesCopyWithImpl<_ProcessResponseNotes>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$_$_ProcessResponseNotesToJson(this);
-  }
-}
-
-abstract class _ProcessResponseNotes implements ProcessResponseNotes {
-  factory _ProcessResponseNotes(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
-      Coding type,
-      String text}) = _$_ProcessResponseNotes;
-
-  factory _ProcessResponseNotes.fromJson(Map<String, dynamic> json) =
-      _$_ProcessResponseNotes.fromJson;
-
-  @override
-  Id get id;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  @override
-  FhirExtension get modifierExtension;
-  @override
-  Coding get type;
-  @override
-  String get text;
-  @override
-  _$ProcessResponseNotesCopyWith<_ProcessResponseNotes> get copyWith;
 }
 
 SupplyRequestWhen _$SupplyRequestWhenFromJson(Map<String, dynamic> json) {
@@ -3651,10 +2768,11 @@ SupplyRequestWhen _$SupplyRequestWhenFromJson(Map<String, dynamic> json) {
 class _$SupplyRequestWhenTearOff {
   const _$SupplyRequestWhenTearOff();
 
+// ignore: unused_element
   _SupplyRequestWhen call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept code,
       Timing schedule}) {
     return _SupplyRequestWhen(
@@ -3674,7 +2792,7 @@ mixin _$SupplyRequestWhen {
   Id get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  FhirExtension get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   CodeableConcept get code;
   Timing get schedule;
 
@@ -3689,11 +2807,10 @@ abstract class $SupplyRequestWhenCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept code,
       Timing schedule});
 
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodeableConceptCopyWith<$Res> get code;
   $TimingCopyWith<$Res> get schedule;
 }
@@ -3721,20 +2838,10 @@ class _$SupplyRequestWhenCopyWithImpl<$Res>
           : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
+          : modifierExtension as List<FhirExtension>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       schedule: schedule == freezed ? _value.schedule : schedule as Timing,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension {
-    if (_value.modifierExtension == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
-      return _then(_value.copyWith(modifierExtension: value));
-    });
   }
 
   @override
@@ -3767,12 +2874,10 @@ abstract class _$SupplyRequestWhenCopyWith<$Res>
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept code,
       Timing schedule});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
   $CodeableConceptCopyWith<$Res> get code;
   @override
@@ -3804,7 +2909,7 @@ class __$SupplyRequestWhenCopyWithImpl<$Res>
           : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
+          : modifierExtension as List<FhirExtension>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       schedule: schedule == freezed ? _value.schedule : schedule as Timing,
     ));
@@ -3812,13 +2917,14 @@ class __$SupplyRequestWhenCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_SupplyRequestWhen implements _SupplyRequestWhen {
+class _$_SupplyRequestWhen extends _SupplyRequestWhen {
   _$_SupplyRequestWhen(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.code,
-      this.schedule});
+      this.schedule})
+      : super._();
 
   factory _$_SupplyRequestWhen.fromJson(Map<String, dynamic> json) =>
       _$_$_SupplyRequestWhenFromJson(json);
@@ -3829,7 +2935,7 @@ class _$_SupplyRequestWhen implements _SupplyRequestWhen {
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  final FhirExtension modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final CodeableConcept code;
   @override
@@ -3878,11 +2984,12 @@ class _$_SupplyRequestWhen implements _SupplyRequestWhen {
   }
 }
 
-abstract class _SupplyRequestWhen implements SupplyRequestWhen {
+abstract class _SupplyRequestWhen extends SupplyRequestWhen {
+  _SupplyRequestWhen._() : super._();
   factory _SupplyRequestWhen(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept code,
       Timing schedule}) = _$_SupplyRequestWhen;
 
@@ -3895,11 +3002,824 @@ abstract class _SupplyRequestWhen implements SupplyRequestWhen {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  FhirExtension get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   @override
   CodeableConcept get code;
   @override
   Timing get schedule;
   @override
   _$SupplyRequestWhenCopyWith<_SupplyRequestWhen> get copyWith;
+}
+
+SupplyDelivery _$SupplyDeliveryFromJson(Map<String, dynamic> json) {
+  return _SupplyDelivery.fromJson(json);
+}
+
+class _$SupplyDeliveryTearOff {
+  const _$SupplyDeliveryTearOff();
+
+// ignore: unused_element
+  _SupplyDelivery call(
+      {@required
+      @JsonKey(defaultValue: 'SupplyDelivery')
+          String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Identifier identifier,
+      @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
+          SupplyDeliveryStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      Reference patient,
+      CodeableConcept type,
+      Quantity quantity,
+      Reference suppliedItem,
+      Reference supplier,
+      Period whenPrepared,
+      FhirDateTime time,
+      Reference destination,
+      List<Reference> receiver}) {
+    return _SupplyDelivery(
+      resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      implicitRulesElement: implicitRulesElement,
+      language: language,
+      languageElement: languageElement,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      identifier: identifier,
+      status: status,
+      statusElement: statusElement,
+      patient: patient,
+      type: type,
+      quantity: quantity,
+      suppliedItem: suppliedItem,
+      supplier: supplier,
+      whenPrepared: whenPrepared,
+      time: time,
+      destination: destination,
+      receiver: receiver,
+    );
+  }
+}
+
+// ignore: unused_element
+const $SupplyDelivery = _$SupplyDeliveryTearOff();
+
+mixin _$SupplyDelivery {
+  @JsonKey(defaultValue: 'SupplyDelivery')
+  String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  Code get language;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
+  Identifier get identifier;
+  @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
+  SupplyDeliveryStatus get status;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  Reference get patient;
+  CodeableConcept get type;
+  Quantity get quantity;
+  Reference get suppliedItem;
+  Reference get supplier;
+  Period get whenPrepared;
+  FhirDateTime get time;
+  Reference get destination;
+  List<Reference> get receiver;
+
+  Map<String, dynamic> toJson();
+  $SupplyDeliveryCopyWith<SupplyDelivery> get copyWith;
+}
+
+abstract class $SupplyDeliveryCopyWith<$Res> {
+  factory $SupplyDeliveryCopyWith(
+          SupplyDelivery value, $Res Function(SupplyDelivery) then) =
+      _$SupplyDeliveryCopyWithImpl<$Res>;
+  $Res call(
+      {@JsonKey(defaultValue: 'SupplyDelivery')
+          String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Identifier identifier,
+      @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
+          SupplyDeliveryStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      Reference patient,
+      CodeableConcept type,
+      Quantity quantity,
+      Reference suppliedItem,
+      Reference supplier,
+      Period whenPrepared,
+      FhirDateTime time,
+      Reference destination,
+      List<Reference> receiver});
+
+  $MetaCopyWith<$Res> get meta;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $NarrativeCopyWith<$Res> get text;
+  $IdentifierCopyWith<$Res> get identifier;
+  $ElementCopyWith<$Res> get statusElement;
+  $ReferenceCopyWith<$Res> get patient;
+  $CodeableConceptCopyWith<$Res> get type;
+  $QuantityCopyWith<$Res> get quantity;
+  $ReferenceCopyWith<$Res> get suppliedItem;
+  $ReferenceCopyWith<$Res> get supplier;
+  $PeriodCopyWith<$Res> get whenPrepared;
+  $ReferenceCopyWith<$Res> get destination;
+}
+
+class _$SupplyDeliveryCopyWithImpl<$Res>
+    implements $SupplyDeliveryCopyWith<$Res> {
+  _$SupplyDeliveryCopyWithImpl(this._value, this._then);
+
+  final SupplyDelivery _value;
+  // ignore: unused_field
+  final $Res Function(SupplyDelivery) _then;
+
+  @override
+  $Res call({
+    Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
+    Object language = freezed,
+    Object languageElement = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object identifier = freezed,
+    Object status = freezed,
+    Object statusElement = freezed,
+    Object patient = freezed,
+    Object type = freezed,
+    Object quantity = freezed,
+    Object suppliedItem = freezed,
+    Object supplier = freezed,
+    Object whenPrepared = freezed,
+    Object time = freezed,
+    Object destination = freezed,
+    Object receiver = freezed,
+  }) {
+    return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      identifier:
+          identifier == freezed ? _value.identifier : identifier as Identifier,
+      status:
+          status == freezed ? _value.status : status as SupplyDeliveryStatus,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      patient: patient == freezed ? _value.patient : patient as Reference,
+      type: type == freezed ? _value.type : type as CodeableConcept,
+      quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
+      suppliedItem: suppliedItem == freezed
+          ? _value.suppliedItem
+          : suppliedItem as Reference,
+      supplier: supplier == freezed ? _value.supplier : supplier as Reference,
+      whenPrepared: whenPrepared == freezed
+          ? _value.whenPrepared
+          : whenPrepared as Period,
+      time: time == freezed ? _value.time : time as FhirDateTime,
+      destination: destination == freezed
+          ? _value.destination
+          : destination as Reference,
+      receiver:
+          receiver == freezed ? _value.receiver : receiver as List<Reference>,
+    ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get patient {
+    if (_value.patient == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.patient, (value) {
+      return _then(_value.copyWith(patient: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get quantity {
+    if (_value.quantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.quantity, (value) {
+      return _then(_value.copyWith(quantity: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get suppliedItem {
+    if (_value.suppliedItem == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.suppliedItem, (value) {
+      return _then(_value.copyWith(suppliedItem: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get supplier {
+    if (_value.supplier == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.supplier, (value) {
+      return _then(_value.copyWith(supplier: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get whenPrepared {
+    if (_value.whenPrepared == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.whenPrepared, (value) {
+      return _then(_value.copyWith(whenPrepared: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get destination {
+    if (_value.destination == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.destination, (value) {
+      return _then(_value.copyWith(destination: value));
+    });
+  }
+}
+
+abstract class _$SupplyDeliveryCopyWith<$Res>
+    implements $SupplyDeliveryCopyWith<$Res> {
+  factory _$SupplyDeliveryCopyWith(
+          _SupplyDelivery value, $Res Function(_SupplyDelivery) then) =
+      __$SupplyDeliveryCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {@JsonKey(defaultValue: 'SupplyDelivery')
+          String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Identifier identifier,
+      @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
+          SupplyDeliveryStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      Reference patient,
+      CodeableConcept type,
+      Quantity quantity,
+      Reference suppliedItem,
+      Reference supplier,
+      Period whenPrepared,
+      FhirDateTime time,
+      Reference destination,
+      List<Reference> receiver});
+
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ReferenceCopyWith<$Res> get patient;
+  @override
+  $CodeableConceptCopyWith<$Res> get type;
+  @override
+  $QuantityCopyWith<$Res> get quantity;
+  @override
+  $ReferenceCopyWith<$Res> get suppliedItem;
+  @override
+  $ReferenceCopyWith<$Res> get supplier;
+  @override
+  $PeriodCopyWith<$Res> get whenPrepared;
+  @override
+  $ReferenceCopyWith<$Res> get destination;
+}
+
+class __$SupplyDeliveryCopyWithImpl<$Res>
+    extends _$SupplyDeliveryCopyWithImpl<$Res>
+    implements _$SupplyDeliveryCopyWith<$Res> {
+  __$SupplyDeliveryCopyWithImpl(
+      _SupplyDelivery _value, $Res Function(_SupplyDelivery) _then)
+      : super(_value, (v) => _then(v as _SupplyDelivery));
+
+  @override
+  _SupplyDelivery get _value => super._value as _SupplyDelivery;
+
+  @override
+  $Res call({
+    Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
+    Object language = freezed,
+    Object languageElement = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object identifier = freezed,
+    Object status = freezed,
+    Object statusElement = freezed,
+    Object patient = freezed,
+    Object type = freezed,
+    Object quantity = freezed,
+    Object suppliedItem = freezed,
+    Object supplier = freezed,
+    Object whenPrepared = freezed,
+    Object time = freezed,
+    Object destination = freezed,
+    Object receiver = freezed,
+  }) {
+    return _then(_SupplyDelivery(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      identifier:
+          identifier == freezed ? _value.identifier : identifier as Identifier,
+      status:
+          status == freezed ? _value.status : status as SupplyDeliveryStatus,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      patient: patient == freezed ? _value.patient : patient as Reference,
+      type: type == freezed ? _value.type : type as CodeableConcept,
+      quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
+      suppliedItem: suppliedItem == freezed
+          ? _value.suppliedItem
+          : suppliedItem as Reference,
+      supplier: supplier == freezed ? _value.supplier : supplier as Reference,
+      whenPrepared: whenPrepared == freezed
+          ? _value.whenPrepared
+          : whenPrepared as Period,
+      time: time == freezed ? _value.time : time as FhirDateTime,
+      destination: destination == freezed
+          ? _value.destination
+          : destination as Reference,
+      receiver:
+          receiver == freezed ? _value.receiver : receiver as List<Reference>,
+    ));
+  }
+}
+
+@JsonSerializable()
+class _$_SupplyDelivery extends _SupplyDelivery {
+  _$_SupplyDelivery(
+      {@required @JsonKey(defaultValue: 'SupplyDelivery') this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      this.language,
+      @JsonKey(name: '_language') this.languageElement,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.identifier,
+      @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown) this.status,
+      @JsonKey(name: '_status') this.statusElement,
+      this.patient,
+      this.type,
+      this.quantity,
+      this.suppliedItem,
+      this.supplier,
+      this.whenPrepared,
+      this.time,
+      this.destination,
+      this.receiver})
+      : assert(resourceType != null),
+        super._();
+
+  factory _$_SupplyDelivery.fromJson(Map<String, dynamic> json) =>
+      _$_$_SupplyDeliveryFromJson(json);
+
+  @override
+  @JsonKey(defaultValue: 'SupplyDelivery')
+  final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  final Code language;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
+  @override
+  final Identifier identifier;
+  @override
+  @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
+  final SupplyDeliveryStatus status;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  final Reference patient;
+  @override
+  final CodeableConcept type;
+  @override
+  final Quantity quantity;
+  @override
+  final Reference suppliedItem;
+  @override
+  final Reference supplier;
+  @override
+  final Period whenPrepared;
+  @override
+  final FhirDateTime time;
+  @override
+  final Reference destination;
+  @override
+  final List<Reference> receiver;
+
+  @override
+  String toString() {
+    return 'SupplyDelivery(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, patient: $patient, type: $type, quantity: $quantity, suppliedItem: $suppliedItem, supplier: $supplier, whenPrepared: $whenPrepared, time: $time, destination: $destination, receiver: $receiver)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _SupplyDelivery &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.identifier, identifier) ||
+                const DeepCollectionEquality()
+                    .equals(other.identifier, identifier)) &&
+            (identical(other.status, status) ||
+                const DeepCollectionEquality().equals(other.status, status)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
+            (identical(other.patient, patient) ||
+                const DeepCollectionEquality()
+                    .equals(other.patient, patient)) &&
+            (identical(other.type, type) ||
+                const DeepCollectionEquality().equals(other.type, type)) &&
+            (identical(other.quantity, quantity) ||
+                const DeepCollectionEquality()
+                    .equals(other.quantity, quantity)) &&
+            (identical(other.suppliedItem, suppliedItem) ||
+                const DeepCollectionEquality()
+                    .equals(other.suppliedItem, suppliedItem)) &&
+            (identical(other.supplier, supplier) ||
+                const DeepCollectionEquality()
+                    .equals(other.supplier, supplier)) &&
+            (identical(other.whenPrepared, whenPrepared) ||
+                const DeepCollectionEquality()
+                    .equals(other.whenPrepared, whenPrepared)) &&
+            (identical(other.time, time) ||
+                const DeepCollectionEquality().equals(other.time, time)) &&
+            (identical(other.destination, destination) ||
+                const DeepCollectionEquality()
+                    .equals(other.destination, destination)) &&
+            (identical(other.receiver, receiver) ||
+                const DeepCollectionEquality()
+                    .equals(other.receiver, receiver)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(identifier) ^
+      const DeepCollectionEquality().hash(status) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(patient) ^
+      const DeepCollectionEquality().hash(type) ^
+      const DeepCollectionEquality().hash(quantity) ^
+      const DeepCollectionEquality().hash(suppliedItem) ^
+      const DeepCollectionEquality().hash(supplier) ^
+      const DeepCollectionEquality().hash(whenPrepared) ^
+      const DeepCollectionEquality().hash(time) ^
+      const DeepCollectionEquality().hash(destination) ^
+      const DeepCollectionEquality().hash(receiver);
+
+  @override
+  _$SupplyDeliveryCopyWith<_SupplyDelivery> get copyWith =>
+      __$SupplyDeliveryCopyWithImpl<_SupplyDelivery>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_SupplyDeliveryToJson(this);
+  }
+}
+
+abstract class _SupplyDelivery extends SupplyDelivery {
+  _SupplyDelivery._() : super._();
+  factory _SupplyDelivery(
+      {@required
+      @JsonKey(defaultValue: 'SupplyDelivery')
+          String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Identifier identifier,
+      @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
+          SupplyDeliveryStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      Reference patient,
+      CodeableConcept type,
+      Quantity quantity,
+      Reference suppliedItem,
+      Reference supplier,
+      Period whenPrepared,
+      FhirDateTime time,
+      Reference destination,
+      List<Reference> receiver}) = _$_SupplyDelivery;
+
+  factory _SupplyDelivery.fromJson(Map<String, dynamic> json) =
+      _$_SupplyDelivery.fromJson;
+
+  @override
+  @JsonKey(defaultValue: 'SupplyDelivery')
+  String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  Code get language;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
+  @override
+  Identifier get identifier;
+  @override
+  @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
+  SupplyDeliveryStatus get status;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  Reference get patient;
+  @override
+  CodeableConcept get type;
+  @override
+  Quantity get quantity;
+  @override
+  Reference get suppliedItem;
+  @override
+  Reference get supplier;
+  @override
+  Period get whenPrepared;
+  @override
+  FhirDateTime get time;
+  @override
+  Reference get destination;
+  @override
+  List<Reference> get receiver;
+  @override
+  _$SupplyDeliveryCopyWith<_SupplyDelivery> get copyWith;
 }

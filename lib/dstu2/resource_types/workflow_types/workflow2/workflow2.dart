@@ -19,7 +19,7 @@ abstract class ProcessRequest with Resource implements _$ProcessRequest {
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     @JsonKey(required: true, unknownEnumValue: ProcessRequestAction.unknown)
     @required
         ProcessRequestAction action,
@@ -45,37 +45,17 @@ abstract class ProcessRequest with Resource implements _$ProcessRequest {
 }
 
 @freezed
-abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
-  SupplyDelivery._();
-  factory SupplyDelivery({
-    @JsonKey(defaultValue: 'SupplyDelivery') @required String resourceType,
+abstract class ProcessRequestItem with _$ProcessRequestItem {
+  ProcessRequestItem._();
+  factory ProcessRequestItem({
     Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
-    Identifier identifier,
-    @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-        SupplyDeliveryStatus status,
-    Reference patient,
-    CodeableConcept type,
-    Quantity quantity,
-    Reference suppliedItem,
-    Reference supplier,
-    Period whenPrepared,
-    FhirDateTime time,
-    Reference destination,
-    List<Reference> receiver,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    @JsonKey(name: '_language') Element languageElement,
-    @JsonKey(name: '_status') Element statusElement,
-  }) = _SupplyDelivery;
+    List<FhirExtension> modifierExtension,
+    @JsonKey(required: true) @required Integer sequenceLinkId,
+  }) = _ProcessRequestItem;
 
-  factory SupplyDelivery.fromJson(Map<String, dynamic> json) =>
-      _$SupplyDeliveryFromJson(json);
+  factory ProcessRequestItem.fromJson(Map<String, dynamic> json) =>
+      _$ProcessRequestItemFromJson(json);
 }
 
 @freezed
@@ -90,7 +70,7 @@ abstract class ProcessResponse with Resource implements _$ProcessResponse {
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Reference request,
     Coding outcome,
@@ -111,58 +91,12 @@ abstract class ProcessResponse with Resource implements _$ProcessResponse {
 }
 
 @freezed
-abstract class SupplyRequest with Resource implements _$SupplyRequest {
-  SupplyRequest._();
-  factory SupplyRequest({
-    @JsonKey(defaultValue: 'SupplyRequest') @required String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
-    Reference patient,
-    Reference source,
-    FhirDateTime date,
-    Identifier identifier,
-    @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
-        SupplyRequestStatus status,
-    CodeableConcept kind,
-    Reference orderedItem,
-    List<Reference> supplier,
-    CodeableConcept reasonCodeableConcept,
-    Reference reasonReference,
-    SupplyRequestWhen when,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    @JsonKey(name: '_language') Element languageElement,
-    @JsonKey(name: '_status') Element statusElement,
-  }) = _SupplyRequest;
-
-  factory SupplyRequest.fromJson(Map<String, dynamic> json) =>
-      _$SupplyRequestFromJson(json);
-}
-
-@freezed
-abstract class ProcessRequestItem with _$ProcessRequestItem {
-  factory ProcessRequestItem({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
-    @JsonKey(required: true) @required Integer sequenceLinkId,
-  }) = _ProcessRequestItem;
-
-  factory ProcessRequestItem.fromJson(Map<String, dynamic> json) =>
-      _$ProcessRequestItemFromJson(json);
-}
-
-@freezed
 abstract class ProcessResponseNotes with _$ProcessResponseNotes {
+  ProcessResponseNotes._();
   factory ProcessResponseNotes({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     Coding type,
     String text,
   }) = _ProcessResponseNotes;
@@ -172,15 +106,84 @@ abstract class ProcessResponseNotes with _$ProcessResponseNotes {
 }
 
 @freezed
+abstract class SupplyRequest with Resource implements _$SupplyRequest {
+  SupplyRequest._();
+  factory SupplyRequest({
+    @JsonKey(defaultValue: 'SupplyRequest') @required String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    Code language,
+    @JsonKey(name: '_language') Element languageElement,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
+    Reference patient,
+    Reference source,
+    FhirDateTime date,
+    Identifier identifier,
+    @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
+        SupplyRequestStatus status,
+    @JsonKey(name: '_status') Element statusElement,
+    CodeableConcept kind,
+    Reference orderedItem,
+    List<Reference> supplier,
+    CodeableConcept reasonCodeableConcept,
+    Reference reasonReference,
+    SupplyRequestWhen when,
+  }) = _SupplyRequest;
+
+  factory SupplyRequest.fromJson(Map<String, dynamic> json) =>
+      _$SupplyRequestFromJson(json);
+}
+
+@freezed
 abstract class SupplyRequestWhen with _$SupplyRequestWhen {
+  SupplyRequestWhen._();
   factory SupplyRequestWhen({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     CodeableConcept code,
     Timing schedule,
   }) = _SupplyRequestWhen;
 
   factory SupplyRequestWhen.fromJson(Map<String, dynamic> json) =>
       _$SupplyRequestWhenFromJson(json);
+}
+
+@freezed
+abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
+  SupplyDelivery._();
+  factory SupplyDelivery({
+    @JsonKey(defaultValue: 'SupplyDelivery') @required String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    Code language,
+    @JsonKey(name: '_language') Element languageElement,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
+    Identifier identifier,
+    @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
+        SupplyDeliveryStatus status,
+    @JsonKey(name: '_status') Element statusElement,
+    Reference patient,
+    CodeableConcept type,
+    Quantity quantity,
+    Reference suppliedItem,
+    Reference supplier,
+    Period whenPrepared,
+    FhirDateTime time,
+    Reference destination,
+    List<Reference> receiver,
+  }) = _SupplyDelivery;
+
+  factory SupplyDelivery.fromJson(Map<String, dynamic> json) =>
+      _$SupplyDeliveryFromJson(json);
 }

@@ -15,11 +15,13 @@ abstract class Media with Resource implements _$Media {
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     @JsonKey(required: true, unknownEnumValue: MediaType.unknown)
     @required
         MediaType type,
@@ -29,47 +31,19 @@ abstract class Media with Resource implements _$Media {
     @JsonKey(name: 'operator') Reference operator_,
     CodeableConcept view,
     String deviceName,
-    PositiveInt height,
-    PositiveInt width,
-    PositiveInt frames,
-    UnsignedInt duration,
-    @JsonKey(required: true) @required Attachment content,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    @JsonKey(name: '_language') Element languageElement,
     @JsonKey(name: '_deviceName') Element deviceNameElement,
+    PositiveInt height,
     @JsonKey(name: '_height') Element heightElement,
+    PositiveInt width,
     @JsonKey(name: '_width') Element widthElement,
+    PositiveInt frames,
     @JsonKey(name: '_frames') Element framesElement,
+    UnsignedInt duration,
     @JsonKey(name: '_duration') Element durationElement,
+    @JsonKey(required: true) @required Attachment content,
   }) = _Media;
 
   factory Media.fromJson(Map<String, dynamic> json) => _$MediaFromJson(json);
-}
-
-@freezed
-abstract class Basic with Resource implements _$Basic {
-  Basic._();
-  factory Basic({
-    @JsonKey(defaultValue: 'Basic') @required String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    @JsonKey(required: true) @required CodeableConcept code,
-    Reference subject,
-    Reference author,
-    Date created,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    @JsonKey(name: '_language') Element languageElement,
-    @JsonKey(name: '_created') Element createdElement,
-  }) = _Basic;
-
-  factory Basic.fromJson(Map<String, dynamic> json) => _$BasicFromJson(json);
 }
 
 @freezed
@@ -80,12 +54,12 @@ abstract class Binary with Resource implements _$Binary {
     Id id,
     Meta meta,
     FhirUri implicitRules,
-    Code language,
-    Code contentType,
-    Base64Binary content,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    Code language,
     @JsonKey(name: '_language') Element languageElement,
+    Code contentType,
     @JsonKey(name: '_contentType') Element contentTypeElement,
+    Base64Binary content,
   }) = _Binary;
 
   factory Binary.fromJson(Map<String, dynamic> json) => _$BinaryFromJson(json);
@@ -99,18 +73,18 @@ abstract class Bundle with Resource implements _$Bundle {
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     @JsonKey(required: true, unknownEnumValue: BundleType.unknown)
     @required
         BundleType type,
+    @JsonKey(name: '_type') Element typeElement,
     UnsignedInt total,
+    @JsonKey(name: '_total') Element totalElement,
     List<BundleLink> link,
     List<BundleEntry> entry,
     Signature signature,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    @JsonKey(name: '_language') Element languageElement,
-    @JsonKey(name: '_type') Element typeElement,
-    @JsonKey(name: '_total') Element totalElement,
   }) = _Bundle;
 
   factory Bundle.fromJson(Map<String, dynamic> json) => _$BundleFromJson(json);
@@ -118,14 +92,15 @@ abstract class Bundle with Resource implements _$Bundle {
 
 @freezed
 abstract class BundleLink with _$BundleLink {
+  BundleLink._();
   factory BundleLink({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true) @required String relation,
-    @JsonKey(required: true) @required FhirUri url,
     @JsonKey(name: '_relation') Element relationElement,
+    @JsonKey(required: true) @required FhirUri url,
     @JsonKey(name: '_url') Element urlElement,
   }) = _BundleLink;
 
@@ -135,18 +110,19 @@ abstract class BundleLink with _$BundleLink {
 
 @freezed
 abstract class BundleEntry with _$BundleEntry {
+  BundleEntry._();
   factory BundleEntry({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     List<BundleLink> link,
     FhirUri fullUrl,
-    Resource resource,
-    BundleSearch search,
-    BundleRequest request,
-    BundleResponse response,
     @JsonKey(name: '_fullUrl') Element fullUrlElement,
+    Resource resource,
+    BundleEntrySearch search,
+    BundleEntryRequest request,
+    BundleEntryResponse response,
   }) = _BundleEntry;
 
   factory BundleEntry.fromJson(Map<String, dynamic> json) =>
@@ -154,66 +130,95 @@ abstract class BundleEntry with _$BundleEntry {
 }
 
 @freezed
-abstract class BundleSearch with _$BundleSearch {
-  factory BundleSearch({
+abstract class BundleEntrySearch with _$BundleEntrySearch {
+  BundleEntrySearch._();
+  factory BundleEntrySearch({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(unknownEnumValue: SearchMode.unknown) SearchMode mode,
-    Decimal score,
     @JsonKey(name: '_mode') Element modeElement,
+    Decimal score,
     @JsonKey(name: '_score') Element scoreElement,
-  }) = _BundleSearch;
+  }) = _BundleEntrySearch;
 
-  factory BundleSearch.fromJson(Map<String, dynamic> json) =>
-      _$BundleSearchFromJson(json);
+  factory BundleEntrySearch.fromJson(Map<String, dynamic> json) =>
+      _$BundleEntrySearchFromJson(json);
 }
 
 @freezed
-abstract class BundleRequest with _$BundleRequest {
-  factory BundleRequest({
+abstract class BundleEntryRequest with _$BundleEntryRequest {
+  BundleEntryRequest._();
+  factory BundleEntryRequest({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true, unknownEnumValue: RequestMethod.unknown)
     @required
         RequestMethod method,
-    @JsonKey(required: true) @required FhirUri url,
-    String ifNoneMatch,
-    Instant ifModifiedSince,
-    String ifMatch,
-    String ifNoneExist,
     @JsonKey(name: '_method') Element methodElement,
+    @JsonKey(required: true) @required FhirUri url,
     @JsonKey(name: '_url') Element urlElement,
+    String ifNoneMatch,
     @JsonKey(name: '_ifNoneMatch') Element ifNoneMatchElement,
+    Instant ifModifiedSince,
     @JsonKey(name: '_ifModifiedSince') Element ifModifiedSinceElement,
+    String ifMatch,
     @JsonKey(name: '_ifMatch') Element ifMatchElement,
+    String ifNoneExist,
     @JsonKey(name: '_ifNoneExist') Element ifNoneExistElement,
-  }) = _BundleRequest;
+  }) = _BundleEntryRequest;
 
-  factory BundleRequest.fromJson(Map<String, dynamic> json) =>
-      _$BundleRequestFromJson(json);
+  factory BundleEntryRequest.fromJson(Map<String, dynamic> json) =>
+      _$BundleEntryRequestFromJson(json);
 }
 
 @freezed
-abstract class BundleResponse with _$BundleResponse {
-  factory BundleResponse({
+abstract class BundleEntryResponse with _$BundleEntryResponse {
+  BundleEntryResponse._();
+  factory BundleEntryResponse({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true) @required String status,
-    FhirUri location,
-    String etag,
-    Instant lastModified,
     @JsonKey(name: '_status') Element statusElement,
+    FhirUri location,
     @JsonKey(name: '_location') Element locationElement,
+    String etag,
     @JsonKey(name: '_etag') Element etagElement,
+    Instant lastModified,
     @JsonKey(name: '_lastModified') Element lastModifiedElement,
-  }) = _BundleResponse;
+  }) = _BundleEntryResponse;
 
-  factory BundleResponse.fromJson(Map<String, dynamic> json) =>
-      _$BundleResponseFromJson(json);
+  factory BundleEntryResponse.fromJson(Map<String, dynamic> json) =>
+      _$BundleEntryResponseFromJson(json);
+}
+
+@freezed
+abstract class Basic with Resource implements _$Basic {
+  Basic._();
+  factory Basic({
+    @JsonKey(defaultValue: 'Basic') @required String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    Code language,
+    @JsonKey(name: '_language') Element languageElement,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
+    List<Identifier> identifier,
+    @JsonKey(required: true) @required CodeableConcept code,
+    Reference subject,
+    Reference author,
+    Date created,
+    @JsonKey(name: '_created') Element createdElement,
+  }) = _Basic;
+
+  factory Basic.fromJson(Map<String, dynamic> json) => _$BasicFromJson(json);
 }

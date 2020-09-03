@@ -15,15 +15,19 @@ abstract class Account with Resource implements _$Account {
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     String name,
+    @JsonKey(name: '_name') Element nameElement,
     CodeableConcept type,
     @JsonKey(unknownEnumValue: AccountStatus.unknown) AccountStatus status,
+    @JsonKey(name: '_status') Element statusElement,
     Period activePeriod,
     Coding currency,
     Quantity balance,
@@ -31,10 +35,6 @@ abstract class Account with Resource implements _$Account {
     Reference subject,
     Reference owner,
     String description,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    @JsonKey(name: '_language') Element languageElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_name') Element nameElement,
     @JsonKey(name: '_description') Element descriptionElement,
   }) = _Account;
 
@@ -50,11 +50,13 @@ abstract class Claim with Resource implements _$Claim {
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     @JsonKey(required: true, unknownEnumValue: ClaimType.unknown)
     @required
         ClaimType type,
@@ -62,10 +64,12 @@ abstract class Claim with Resource implements _$Claim {
     Coding ruleset,
     Coding originalRuleset,
     FhirDateTime created,
+    @JsonKey(name: '_created') Element createdElement,
     Reference target,
     Reference provider,
     Reference organization,
     @JsonKey(unknownEnumValue: ClaimUse.unknown) ClaimUse use,
+    @JsonKey(name: '_use') Element useElement,
     Coding priority,
     Coding fundsReserve,
     Reference enterer,
@@ -86,10 +90,6 @@ abstract class Claim with Resource implements _$Claim {
     List<ClaimItem> item,
     List<Coding> additionalMaterials,
     List<ClaimMissingTeeth> missingTeeth,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    @JsonKey(name: '_language') Element languageElement,
-    @JsonKey(name: '_use') Element useElement,
-    @JsonKey(name: '_created') Element createdElement,
   }) = _Claim;
 
   factory Claim.fromJson(Map<String, dynamic> json) => _$ClaimFromJson(json);
@@ -97,10 +97,11 @@ abstract class Claim with Resource implements _$Claim {
 
 @freezed
 abstract class ClaimPayee with _$ClaimPayee {
+  ClaimPayee._();
   factory ClaimPayee({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     Coding type,
     Reference provider,
     Reference organization,
@@ -113,13 +114,14 @@ abstract class ClaimPayee with _$ClaimPayee {
 
 @freezed
 abstract class ClaimDiagnosis with _$ClaimDiagnosis {
+  ClaimDiagnosis._();
   factory ClaimDiagnosis({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     @JsonKey(required: true) @required PositiveInt sequence,
-    @JsonKey(required: true) @required Coding diagnosis,
     @JsonKey(name: '_sequence') Element sequenceElement,
+    @JsonKey(required: true) @required Coding diagnosis,
   }) = _ClaimDiagnosis;
 
   factory ClaimDiagnosis.fromJson(Map<String, dynamic> json) =>
@@ -128,10 +130,11 @@ abstract class ClaimDiagnosis with _$ClaimDiagnosis {
 
 @freezed
 abstract class ClaimCoverage with _$ClaimCoverage {
+  ClaimCoverage._();
   factory ClaimCoverage({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     @JsonKey(required: true) @required PositiveInt sequence,
     @JsonKey(required: true) @required Boolean focal,
     @JsonKey(required: true) @required Reference coverage,
@@ -148,30 +151,31 @@ abstract class ClaimCoverage with _$ClaimCoverage {
 
 @freezed
 abstract class ClaimItem with _$ClaimItem {
+  ClaimItem._();
   factory ClaimItem({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     @JsonKey(required: true) @required PositiveInt sequence,
+    @JsonKey(name: '_sequence') Element sequenceElement,
     @JsonKey(required: true) @required Coding type,
     Reference provider,
     List<PositiveInt> diagnosisLinkId,
     @JsonKey(required: true) @required Coding service,
+    @JsonKey(name: '_servicedDate') Element servicedDateElement,
     Date serviceDate,
     Quantity quantity,
     Quantity unitPrice,
     Decimal factor,
+    @JsonKey(name: '_factor') Element factorElement,
     Decimal points,
     Quantity net,
     Coding udi,
     Coding bodySite,
     List<Coding> subSite,
     List<Coding> modifier,
-    List<ClaimDetail> detail,
-    ClaimProsthesis prosthesis,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    @JsonKey(name: '_servicedDate') Element servicedDateElement,
-    @JsonKey(name: '_factor') Element factorElement,
+    List<ClaimItemDetail> detail,
+    ClaimItemProsthesis prosthesis,
   }) = _ClaimItem;
 
   factory ClaimItem.fromJson(Map<String, dynamic> json) =>
@@ -179,73 +183,77 @@ abstract class ClaimItem with _$ClaimItem {
 }
 
 @freezed
-abstract class ClaimDetail with _$ClaimDetail {
-  factory ClaimDetail({
+abstract class ClaimItemDetail with _$ClaimItemDetail {
+  ClaimItemDetail._();
+  factory ClaimItemDetail({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     @JsonKey(required: true) @required PositiveInt sequence,
+    @JsonKey(name: '_sequence') Element sequenceElement,
     @JsonKey(required: true) @required Coding type,
     @JsonKey(required: true) @required Coding service,
     Quantity quantity,
     Quantity unitPrice,
     Decimal factor,
+    @JsonKey(name: '_factor') Element factorElement,
     Decimal points,
     Quantity net,
     Coding udi,
-    List<ClaimSubDetail> subDetail,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    @JsonKey(name: '_factor') Element factorElement,
-  }) = _ClaimDetail;
+    List<ClaimDetailSubDetail> subDetail,
+  }) = _ClaimItemDetail;
 
-  factory ClaimDetail.fromJson(Map<String, dynamic> json) =>
-      _$ClaimDetailFromJson(json);
+  factory ClaimItemDetail.fromJson(Map<String, dynamic> json) =>
+      _$ClaimItemDetailFromJson(json);
 }
 
 @freezed
-abstract class ClaimSubDetail with _$ClaimSubDetail {
-  factory ClaimSubDetail({
+abstract class ClaimDetailSubDetail with _$ClaimDetailSubDetail {
+  ClaimDetailSubDetail._();
+  factory ClaimDetailSubDetail({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     @JsonKey(required: true) @required PositiveInt sequence,
+    @JsonKey(name: '_sequence') Element sequenceElement,
     @JsonKey(required: true) @required Coding type,
     @JsonKey(required: true) @required Coding service,
     Quantity quantity,
     Quantity unitPrice,
     Decimal factor,
+    @JsonKey(name: '_factor') Element factorElement,
     Decimal points,
     Quantity net,
     Coding udi,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    @JsonKey(name: '_factor') Element factorElement,
-  }) = _ClaimSubDetail;
+  }) = _ClaimDetailSubDetail;
 
-  factory ClaimSubDetail.fromJson(Map<String, dynamic> json) =>
-      _$ClaimSubDetailFromJson(json);
+  factory ClaimDetailSubDetail.fromJson(Map<String, dynamic> json) =>
+      _$ClaimDetailSubDetailFromJson(json);
 }
 
 @freezed
-abstract class ClaimProsthesis with _$ClaimProsthesis {
-  factory ClaimProsthesis({
+abstract class ClaimItemProsthesis with _$ClaimItemProsthesis {
+  ClaimItemProsthesis._();
+  factory ClaimItemProsthesis({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     Boolean initial,
     Date priorDate,
     Coding priorMaterial,
-  }) = _ClaimProsthesis;
+  }) = _ClaimItemProsthesis;
 
-  factory ClaimProsthesis.fromJson(Map<String, dynamic> json) =>
-      _$ClaimProsthesisFromJson(json);
+  factory ClaimItemProsthesis.fromJson(Map<String, dynamic> json) =>
+      _$ClaimItemProsthesisFromJson(json);
 }
 
 @freezed
 abstract class ClaimMissingTeeth with _$ClaimMissingTeeth {
+  ClaimMissingTeeth._();
   factory ClaimMissingTeeth({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     @JsonKey(required: true) @required Coding tooth,
     Coding reason,
     Date extractionDate,
@@ -263,22 +271,27 @@ abstract class ClaimResponse with Resource implements _$ClaimResponse {
     Id id,
     Meta meta,
     FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
+    @JsonKey(name: '_language') Element languageElement,
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Reference request,
     Coding ruleset,
     Coding originalRuleset,
     FhirDateTime created,
+    @JsonKey(name: '_created') Element createdElement,
     Reference organization,
     Reference requestProvider,
     Reference requestOrganization,
     @JsonKey(unknownEnumValue: ClaimResponseOutcome.unknown)
         ClaimResponseOutcome outcome,
+    @JsonKey(name: '_outcome') Element outcomeElement,
     String disposition,
+    @JsonKey(name: '_disposition') Element dispositionElement,
     Coding payeeType,
     List<ClaimResponseItem> item,
     List<ClaimResponseAddItem> addItem,
@@ -289,18 +302,13 @@ abstract class ClaimResponse with Resource implements _$ClaimResponse {
     Quantity paymentAdjustment,
     Coding paymentAdjustmentReason,
     Date paymentDate,
+    @JsonKey(name: '_paymentDate') Element paymentDateElement,
     Quantity paymentAmount,
     Identifier paymentRef,
     Coding reserved,
     Coding form,
     List<ClaimResponseNote> note,
     List<ClaimResponseCoverage> coverage,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    @JsonKey(name: '_language') Element languageElement,
-    @JsonKey(name: '_created') Element createdElement,
-    @JsonKey(name: '_outcome') Element outcomeElement,
-    @JsonKey(name: '_disposition') Element dispositionElement,
-    @JsonKey(name: '_paymentDate') Element paymentDateElement,
   }) = _ClaimResponse;
 
   factory ClaimResponse.fromJson(Map<String, dynamic> json) =>
@@ -309,16 +317,17 @@ abstract class ClaimResponse with Resource implements _$ClaimResponse {
 
 @freezed
 abstract class ClaimResponseItem with _$ClaimResponseItem {
+  ClaimResponseItem._();
   factory ClaimResponseItem({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true) @required PositiveInt sequenceLinkId,
     List<PositiveInt> noteNumber,
-    List<ClaimResponseAdjudication> adjudication,
-    List<ItemDetail> detail,
     @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
+    List<ClaimResponseItemAdjudication> adjudication,
+    List<ClaimResponseItemDetail> detail,
   }) = _ClaimResponseItem;
 
   factory ClaimResponseItem.fromJson(Map<String, dynamic> json) =>
@@ -326,62 +335,68 @@ abstract class ClaimResponseItem with _$ClaimResponseItem {
 }
 
 @freezed
-abstract class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
-  factory ClaimResponseAdjudication({
+abstract class ClaimResponseItemAdjudication
+    with _$ClaimResponseItemAdjudication {
+  ClaimResponseItemAdjudication._();
+  factory ClaimResponseItemAdjudication({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     @JsonKey(required: true) @required Coding code,
     Quantity amount,
     Decimal value,
     @JsonKey(name: '_value') Element valueElement,
-  }) = _ClaimResponseAdjudication;
+  }) = _ClaimResponseItemAdjudication;
 
-  factory ClaimResponseAdjudication.fromJson(Map<String, dynamic> json) =>
-      _$ClaimResponseAdjudicationFromJson(json);
+  factory ClaimResponseItemAdjudication.fromJson(Map<String, dynamic> json) =>
+      _$ClaimResponseItemAdjudicationFromJson(json);
 }
 
 @freezed
-abstract class ItemDetail with _$ItemDetail {
-  factory ItemDetail({
+abstract class ClaimResponseItemDetail with _$ClaimResponseItemDetail {
+  ClaimResponseItemDetail._();
+  factory ClaimResponseItemDetail({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     @JsonKey(required: true) @required PositiveInt sequenceLinkId,
-    List<ClaimResponseAdjudication> adjudication,
-    List<ClaimResponseSubDetail> subDetail,
-  }) = _ItemDetail;
+    List<ClaimResponseItemAdjudication> adjudication,
+    List<ClaimResponseDetailSubDetail> subDetail,
+  }) = _ClaimResponseItemDetail;
 
-  factory ItemDetail.fromJson(Map<String, dynamic> json) =>
-      _$ItemDetailFromJson(json);
+  factory ClaimResponseItemDetail.fromJson(Map<String, dynamic> json) =>
+      _$ClaimResponseItemDetailFromJson(json);
 }
 
 @freezed
-abstract class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
-  factory ClaimResponseSubDetail({
+abstract class ClaimResponseDetailSubDetail
+    with _$ClaimResponseDetailSubDetail {
+  ClaimResponseDetailSubDetail._();
+  factory ClaimResponseDetailSubDetail({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     @JsonKey(required: true) @required PositiveInt sequenceLinkId,
-    List<ClaimResponseAdjudication> adjudication,
-  }) = _ClaimResponseSubDetail;
+    List<ClaimResponseItemAdjudication> adjudication,
+  }) = _ClaimResponseDetailSubDetail;
 
-  factory ClaimResponseSubDetail.fromJson(Map<String, dynamic> json) =>
-      _$ClaimResponseSubDetailFromJson(json);
+  factory ClaimResponseDetailSubDetail.fromJson(Map<String, dynamic> json) =>
+      _$ClaimResponseDetailSubDetailFromJson(json);
 }
 
 @freezed
 abstract class ClaimResponseAddItem with _$ClaimResponseAddItem {
+  ClaimResponseAddItem._();
   factory ClaimResponseAddItem({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     List<PositiveInt> sequenceLinkId,
     @JsonKey(required: true) @required Coding service,
     Quantity fee,
     List<PositiveInt> noteNumberLinkId,
-    List<ClaimResponseAdjudication> adjudication,
-    AddItemDetail detail,
+    List<ClaimResponseItemAdjudication> adjudication,
+    ClaimResponseAddItemDetail detail,
   }) = _ClaimResponseAddItem;
 
   factory ClaimResponseAddItem.fromJson(Map<String, dynamic> json) =>
@@ -389,26 +404,28 @@ abstract class ClaimResponseAddItem with _$ClaimResponseAddItem {
 }
 
 @freezed
-abstract class AddItemDetail with _$AddItemDetail {
-  factory AddItemDetail({
+abstract class ClaimResponseAddItemDetail with _$ClaimResponseAddItemDetail {
+  ClaimResponseAddItemDetail._();
+  factory ClaimResponseAddItemDetail({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     @JsonKey(required: true) @required Coding service,
     Quantity fee,
-    List<ClaimResponseAdjudication> adjudication,
-  }) = _AddItemDetail;
+    List<ClaimResponseItemAdjudication> adjudication,
+  }) = _ClaimResponseAddItemDetail;
 
-  factory AddItemDetail.fromJson(Map<String, dynamic> json) =>
-      _$AddItemDetailFromJson(json);
+  factory ClaimResponseAddItemDetail.fromJson(Map<String, dynamic> json) =>
+      _$ClaimResponseAddItemDetailFromJson(json);
 }
 
 @freezed
 abstract class ClaimResponseError with _$ClaimResponseError {
+  ClaimResponseError._();
   factory ClaimResponseError({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     PositiveInt sequenceLinkId,
     PositiveInt detailSequenceLinkId,
     PositiveInt subdetailSequenceLinkId,
@@ -421,15 +438,16 @@ abstract class ClaimResponseError with _$ClaimResponseError {
 
 @freezed
 abstract class ClaimResponseNote with _$ClaimResponseNote {
+  ClaimResponseNote._();
   factory ClaimResponseNote({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     PositiveInt number,
-    Coding type,
-    String text,
     @JsonKey(name: '_number') Element numberElement,
+    Coding type,
     @JsonKey(name: '_type') Element typeElement,
+    String text,
     @JsonKey(name: '_text') Element textElement,
   }) = _ClaimResponseNote;
 
@@ -439,10 +457,11 @@ abstract class ClaimResponseNote with _$ClaimResponseNote {
 
 @freezed
 abstract class ClaimResponseCoverage with _$ClaimResponseCoverage {
+  ClaimResponseCoverage._();
   factory ClaimResponseCoverage({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     @JsonKey(required: true) @required PositiveInt sequence,
     @JsonKey(required: true) @required Boolean focal,
     @JsonKey(required: true) @required Reference coverage,
