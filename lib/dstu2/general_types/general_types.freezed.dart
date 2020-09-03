@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'general_types.dart';
 
@@ -15,7 +15,6 @@ Period _$PeriodFromJson(Map<String, dynamic> json) {
 class _$PeriodTearOff {
   const _$PeriodTearOff();
 
-// ignore: unused_element
   _Period call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -310,7 +309,6 @@ Coding _$CodingFromJson(Map<String, dynamic> json) {
 class _$CodingTearOff {
   const _$CodingTearOff();
 
-// ignore: unused_element
   _Coding call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -783,7 +781,6 @@ Range _$RangeFromJson(Map<String, dynamic> json) {
 class _$RangeTearOff {
   const _$RangeTearOff();
 
-// ignore: unused_element
   _Range call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1002,7 +999,6 @@ Quantity _$QuantityFromJson(Map<String, dynamic> json) {
 class _$QuantityTearOff {
   const _$QuantityTearOff();
 
-// ignore: unused_element
   _Quantity call(
       {Id id,
       @JsonKey(name: 'extension')
@@ -1506,7 +1502,6 @@ Attachment _$AttachmentFromJson(Map<String, dynamic> json) {
 class _$AttachmentTearOff {
   const _$AttachmentTearOff();
 
-// ignore: unused_element
   _Attachment call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2148,7 +2143,6 @@ Ratio _$RatioFromJson(Map<String, dynamic> json) {
 class _$RatioTearOff {
   const _$RatioTearOff();
 
-// ignore: unused_element
   _Ratio call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2373,7 +2367,6 @@ Annotation _$AnnotationFromJson(Map<String, dynamic> json) {
 class _$AnnotationTearOff {
   const _$AnnotationTearOff();
 
-// ignore: unused_element
   _Annotation call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2772,7 +2765,6 @@ SampledData _$SampledDataFromJson(Map<String, dynamic> json) {
 class _$SampledDataTearOff {
   const _$SampledDataTearOff();
 
-// ignore: unused_element
   _SampledData call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3330,7 +3322,6 @@ CodeableConcept _$CodeableConceptFromJson(Map<String, dynamic> json) {
 class _$CodeableConceptTearOff {
   const _$CodeableConceptTearOff();
 
-// ignore: unused_element
   _CodeableConcept call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3593,7 +3584,6 @@ Identifier _$IdentifierFromJson(Map<String, dynamic> json) {
 class _$IdentifierTearOff {
   const _$IdentifierTearOff();
 
-// ignore: unused_element
   _Identifier call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -4046,7 +4036,6 @@ Signature _$SignatureFromJson(Map<String, dynamic> json) {
 class _$SignatureTearOff {
   const _$SignatureTearOff();
 
-// ignore: unused_element
   _Signature call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -4542,7 +4531,6 @@ Timing _$TimingFromJson(Map<String, dynamic> json) {
 class _$TimingTearOff {
   const _$TimingTearOff();
 
-// ignore: unused_element
   _Timing call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -4844,7 +4832,6 @@ Address _$AddressFromJson(Map<String, dynamic> json) {
 class _$AddressTearOff {
   const _$AddressTearOff();
 
-// ignore: unused_element
   _Address call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5572,7 +5559,6 @@ HumanName _$HumanNameFromJson(Map<String, dynamic> json) {
 class _$HumanNameTearOff {
   const _$HumanNameTearOff();
 
-// ignore: unused_element
   _HumanName call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -6103,7 +6089,6 @@ ContactPoint _$ContactPointFromJson(Map<String, dynamic> json) {
 class _$ContactPointTearOff {
   const _$ContactPointTearOff();
 
-// ignore: unused_element
   _ContactPoint call(
       {Id id,
       @JsonKey(name: 'extension')
@@ -6584,7 +6569,6 @@ TimingRepeat _$TimingRepeatFromJson(Map<String, dynamic> json) {
 class _$TimingRepeatTearOff {
   const _$TimingRepeatTearOff();
 
-// ignore: unused_element
   _TimingRepeat call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,

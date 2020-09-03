@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'diagnostics.dart';
 
@@ -15,7 +15,6 @@ BodySite _$BodySiteFromJson(Map<String, dynamic> json) {
 class _$BodySiteTearOff {
   const _$BodySiteTearOff();
 
-// ignore: unused_element
   _BodySite call(
       {@required @JsonKey(defaultValue: 'BodySite') String resourceType,
       Id id,
@@ -669,7 +668,6 @@ DiagnosticReport _$DiagnosticReportFromJson(Map<String, dynamic> json) {
 class _$DiagnosticReportTearOff {
   const _$DiagnosticReportTearOff();
 
-// ignore: unused_element
   _DiagnosticReport call(
       {@required @JsonKey(defaultValue: 'DiagnosticReport') String resourceType,
       Id id,
@@ -1670,7 +1668,6 @@ DiagnosticReportPerformer _$DiagnosticReportPerformerFromJson(
 class _$DiagnosticReportPerformerTearOff {
   const _$DiagnosticReportPerformerTearOff();
 
-// ignore: unused_element
   _DiagnosticReportPerformer call(
       {CodeableConcept role, @required Reference actor}) {
     return _DiagnosticReportPerformer(
@@ -1850,7 +1847,6 @@ DiagnosticReportImage _$DiagnosticReportImageFromJson(
 class _$DiagnosticReportImageTearOff {
   const _$DiagnosticReportImageTearOff();
 
-// ignore: unused_element
   _DiagnosticReportImage call(
       {String comment,
       @JsonKey(name: '_comment') Element commentElement,
@@ -2061,7 +2057,6 @@ ImagingManifest _$ImagingManifestFromJson(Map<String, dynamic> json) {
 class _$ImagingManifestTearOff {
   const _$ImagingManifestTearOff();
 
-// ignore: unused_element
   _ImagingManifest call(
       {@required @JsonKey(defaultValue: 'ImagingManifest') String resourceType,
       Id id,
@@ -2719,7 +2714,6 @@ ImagingManifestStudy _$ImagingManifestStudyFromJson(Map<String, dynamic> json) {
 class _$ImagingManifestStudyTearOff {
   const _$ImagingManifestStudyTearOff();
 
-// ignore: unused_element
   _ImagingManifestStudy call(
       {Id uid,
       @JsonKey(name: '_uid') Element uidElement,
@@ -2976,7 +2970,6 @@ ImagingManifestSeries _$ImagingManifestSeriesFromJson(
 class _$ImagingManifestSeriesTearOff {
   const _$ImagingManifestSeriesTearOff();
 
-// ignore: unused_element
   _ImagingManifestSeries call(
       {Id uid,
       @JsonKey(name: '_uid') Element uidElement,
@@ -3199,7 +3192,6 @@ ImagingManifestInstance _$ImagingManifestInstanceFromJson(
 class _$ImagingManifestInstanceTearOff {
   const _$ImagingManifestInstanceTearOff();
 
-// ignore: unused_element
   _ImagingManifestInstance call(
       {String sopClass,
       @JsonKey(name: '_sopClass') Element sopClassElement,
@@ -3434,7 +3426,6 @@ ImagingStudy _$ImagingStudyFromJson(Map<String, dynamic> json) {
 class _$ImagingStudyTearOff {
   const _$ImagingStudyTearOff();
 
-// ignore: unused_element
   _ImagingStudy call(
       {@required @JsonKey(defaultValue: 'ImagingStudy') String resourceType,
       Id id,
@@ -4524,7 +4515,6 @@ ImagingStudySeries _$ImagingStudySeriesFromJson(Map<String, dynamic> json) {
 class _$ImagingStudySeriesTearOff {
   const _$ImagingStudySeriesTearOff();
 
-// ignore: unused_element
   _ImagingStudySeries call(
       {Id uid,
       @JsonKey(name: '_uid') Element uidElement,
@@ -5166,7 +5156,6 @@ ImagingStudyInstance _$ImagingStudyInstanceFromJson(Map<String, dynamic> json) {
 class _$ImagingStudyInstanceTearOff {
   const _$ImagingStudyInstanceTearOff();
 
-// ignore: unused_element
   _ImagingStudyInstance call(
       {Id uid,
       @JsonKey(name: '_uid') Element uidElement,
@@ -5514,7 +5503,6 @@ Observation _$ObservationFromJson(Map<String, dynamic> json) {
 class _$ObservationTearOff {
   const _$ObservationTearOff();
 
-// ignore: unused_element
   _Observation call(
       {@required @JsonKey(defaultValue: 'Observation') String resourceType,
       Id id,
@@ -7089,7 +7077,6 @@ ObservationReferenceRange _$ObservationReferenceRangeFromJson(
 class _$ObservationReferenceRangeTearOff {
   const _$ObservationReferenceRangeTearOff();
 
-// ignore: unused_element
   _ObservationReferenceRange call(
       {Quantity low,
       Quantity high,
@@ -7415,7 +7402,6 @@ ObservationRelated _$ObservationRelatedFromJson(Map<String, dynamic> json) {
 class _$ObservationRelatedTearOff {
   const _$ObservationRelatedTearOff();
 
-// ignore: unused_element
   _ObservationRelated call(
       {ObservationRelatedType type,
       @JsonKey(name: '_type') Element typeElement,
@@ -7622,7 +7608,6 @@ ObservationComponent _$ObservationComponentFromJson(Map<String, dynamic> json) {
 class _$ObservationComponentTearOff {
   const _$ObservationComponentTearOff();
 
-// ignore: unused_element
   _ObservationComponent call(
       {@required CodeableConcept code,
       Quantity valueQuantity,
@@ -8298,7 +8283,6 @@ QuestionnaireResponse _$QuestionnaireResponseFromJson(
 class _$QuestionnaireResponseTearOff {
   const _$QuestionnaireResponseTearOff();
 
-// ignore: unused_element
   _QuestionnaireResponse call(
       {@required
       @JsonKey(defaultValue: 'QuestionnaireResponse')
@@ -9112,7 +9096,6 @@ QuestionnaireResponseItem _$QuestionnaireResponseItemFromJson(
 class _$QuestionnaireResponseItemTearOff {
   const _$QuestionnaireResponseItemTearOff();
 
-// ignore: unused_element
   _QuestionnaireResponseItem call(
       {String linkId,
       @JsonKey(name: '_linkId') Element linkIdElement,
@@ -9484,7 +9467,6 @@ QuestionnaireResponseAnswer _$QuestionnaireResponseAnswerFromJson(
 class _$QuestionnaireResponseAnswerTearOff {
   const _$QuestionnaireResponseAnswerTearOff();
 
-// ignore: unused_element
   _QuestionnaireResponseAnswer call(
       {Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
@@ -10258,7 +10240,6 @@ Sequence _$SequenceFromJson(Map<String, dynamic> json) {
 class _$SequenceTearOff {
   const _$SequenceTearOff();
 
-// ignore: unused_element
   _Sequence call(
       {@required @JsonKey(defaultValue: 'Sequence') String resourceType,
       Id id,
@@ -11200,7 +11181,6 @@ SequenceReferenceSeq _$SequenceReferenceSeqFromJson(Map<String, dynamic> json) {
 class _$SequenceReferenceSeqTearOff {
   const _$SequenceReferenceSeqTearOff();
 
-// ignore: unused_element
   _SequenceReferenceSeq call(
       {CodeableConcept chromosome,
       String genomeBuild,
@@ -11733,7 +11713,6 @@ SequenceVariant _$SequenceVariantFromJson(Map<String, dynamic> json) {
 class _$SequenceVariantTearOff {
   const _$SequenceVariantTearOff();
 
-// ignore: unused_element
   _SequenceVariant call(
       {Decimal start,
       @JsonKey(name: '_start') Element startElement,
@@ -12182,7 +12161,6 @@ SequenceQuality _$SequenceQualityFromJson(Map<String, dynamic> json) {
 class _$SequenceQualityTearOff {
   const _$SequenceQualityTearOff();
 
-// ignore: unused_element
   _SequenceQuality call(
       {SequenceQualityType type,
       @JsonKey(name: '_type') Element typeElement,
@@ -13026,7 +13004,6 @@ SequenceRepository _$SequenceRepositoryFromJson(Map<String, dynamic> json) {
 class _$SequenceRepositoryTearOff {
   const _$SequenceRepositoryTearOff();
 
-// ignore: unused_element
   _SequenceRepository call(
       {SequenceRepositoryType type,
       @JsonKey(name: '_type') Element typeElement,
@@ -13490,7 +13467,6 @@ Specimen _$SpecimenFromJson(Map<String, dynamic> json) {
 class _$SpecimenTearOff {
   const _$SpecimenTearOff();
 
-// ignore: unused_element
   _Specimen call(
       {@required @JsonKey(defaultValue: 'Specimen') String resourceType,
       Id id,
@@ -14277,7 +14253,6 @@ SpecimenCollection _$SpecimenCollectionFromJson(Map<String, dynamic> json) {
 class _$SpecimenCollectionTearOff {
   const _$SpecimenCollectionTearOff();
 
-// ignore: unused_element
   _SpecimenCollection call(
       {Reference collector,
       FhirDateTime collectedDateTime,
@@ -14628,7 +14603,6 @@ SpecimenProcessing _$SpecimenProcessingFromJson(Map<String, dynamic> json) {
 class _$SpecimenProcessingTearOff {
   const _$SpecimenProcessingTearOff();
 
-// ignore: unused_element
   _SpecimenProcessing call(
       {String description,
       @JsonKey(name: '_description') Element descriptionElement,
@@ -14961,7 +14935,6 @@ SpecimenContainer _$SpecimenContainerFromJson(Map<String, dynamic> json) {
 class _$SpecimenContainerTearOff {
   const _$SpecimenContainerTearOff();
 
-// ignore: unused_element
   _SpecimenContainer call(
       {List<Identifier> identifier,
       String description,

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'documents.dart';
 
@@ -15,7 +15,6 @@ CatalogEntry _$CatalogEntryFromJson(Map<String, dynamic> json) {
 class _$CatalogEntryTearOff {
   const _$CatalogEntryTearOff();
 
-// ignore: unused_element
   _CatalogEntry call(
       {@required
       @JsonKey(defaultValue: 'CatalogEntry')
@@ -942,7 +941,6 @@ CatalogEntryRelatedEntry _$CatalogEntryRelatedEntryFromJson(
 class _$CatalogEntryRelatedEntryTearOff {
   const _$CatalogEntryRelatedEntryTearOff();
 
-// ignore: unused_element
   _CatalogEntryRelatedEntry call(
       {String id,
       @JsonKey(name: 'extension')
@@ -1246,7 +1244,6 @@ Composition _$CompositionFromJson(Map<String, dynamic> json) {
 class _$CompositionTearOff {
   const _$CompositionTearOff();
 
-// ignore: unused_element
   _Composition call(
       {@required
       @JsonKey(defaultValue: 'Composition')
@@ -2223,7 +2220,6 @@ CompositionAttester _$CompositionAttesterFromJson(Map<String, dynamic> json) {
 class _$CompositionAttesterTearOff {
   const _$CompositionAttesterTearOff();
 
-// ignore: unused_element
   _CompositionAttester call(
       {String id,
       @JsonKey(name: 'extension')
@@ -2571,7 +2567,6 @@ CompositionRelatesTo _$CompositionRelatesToFromJson(Map<String, dynamic> json) {
 class _$CompositionRelatesToTearOff {
   const _$CompositionRelatesToTearOff();
 
-// ignore: unused_element
   _CompositionRelatesTo call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2886,7 +2881,6 @@ CompositionEvent _$CompositionEventFromJson(Map<String, dynamic> json) {
 class _$CompositionEventTearOff {
   const _$CompositionEventTearOff();
 
-// ignore: unused_element
   _CompositionEvent call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3140,7 +3134,6 @@ CompositionSection _$CompositionSectionFromJson(Map<String, dynamic> json) {
 class _$CompositionSectionTearOff {
   const _$CompositionSectionTearOff();
 
-// ignore: unused_element
   _CompositionSection call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3662,7 +3655,6 @@ DocumentManifest _$DocumentManifestFromJson(Map<String, dynamic> json) {
 class _$DocumentManifestTearOff {
   const _$DocumentManifestTearOff();
 
-// ignore: unused_element
   _DocumentManifest call(
       {@required
       @JsonKey(defaultValue: 'DocumentManifest')
@@ -4559,7 +4551,6 @@ DocumentManifestRelated _$DocumentManifestRelatedFromJson(
 class _$DocumentManifestRelatedTearOff {
   const _$DocumentManifestRelatedTearOff();
 
-// ignore: unused_element
   _DocumentManifestRelated call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -4813,7 +4804,6 @@ DocumentReference _$DocumentReferenceFromJson(Map<String, dynamic> json) {
 class _$DocumentReferenceTearOff {
   const _$DocumentReferenceTearOff();
 
-// ignore: unused_element
   _DocumentReference call(
       {@required
       @JsonKey(defaultValue: 'DocumentReference')
@@ -5833,7 +5823,6 @@ DocumentReferenceRelatesTo _$DocumentReferenceRelatesToFromJson(
 class _$DocumentReferenceRelatesToTearOff {
   const _$DocumentReferenceRelatesToTearOff();
 
-// ignore: unused_element
   _DocumentReferenceRelatesTo call(
       {String id,
       @JsonKey(name: 'extension')
@@ -6137,7 +6126,6 @@ DocumentReferenceContent _$DocumentReferenceContentFromJson(
 class _$DocumentReferenceContentTearOff {
   const _$DocumentReferenceContentTearOff();
 
-// ignore: unused_element
   _DocumentReferenceContent call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -6393,7 +6381,6 @@ DocumentReferenceContext _$DocumentReferenceContextFromJson(
 class _$DocumentReferenceContextTearOff {
   const _$DocumentReferenceContextTearOff();
 
-// ignore: unused_element
   _DocumentReferenceContext call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,

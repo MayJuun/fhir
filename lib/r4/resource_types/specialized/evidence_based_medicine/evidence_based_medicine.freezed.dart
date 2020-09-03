@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'evidence_based_medicine.dart';
 
@@ -16,7 +16,6 @@ EffectEvidenceSynthesis _$EffectEvidenceSynthesisFromJson(
 class _$EffectEvidenceSynthesisTearOff {
   const _$EffectEvidenceSynthesisTearOff();
 
-// ignore: unused_element
   _EffectEvidenceSynthesis call(
       {@required
       @JsonKey(defaultValue: 'EffectEvidenceSynthesis')
@@ -1704,7 +1703,6 @@ EffectEvidenceSynthesisSampleSize _$EffectEvidenceSynthesisSampleSizeFromJson(
 class _$EffectEvidenceSynthesisSampleSizeTearOff {
   const _$EffectEvidenceSynthesisSampleSizeTearOff();
 
-// ignore: unused_element
   _EffectEvidenceSynthesisSampleSize call(
       {String id,
       @JsonKey(name: 'extension')
@@ -2109,7 +2107,6 @@ EffectEvidenceSynthesisResultsByExposure
 class _$EffectEvidenceSynthesisResultsByExposureTearOff {
   const _$EffectEvidenceSynthesisResultsByExposureTearOff();
 
-// ignore: unused_element
   _EffectEvidenceSynthesisResultsByExposure call(
       {String id,
       @JsonKey(name: 'extension')
@@ -2552,7 +2549,6 @@ EffectEvidenceSynthesisEffectEstimate
 class _$EffectEvidenceSynthesisEffectEstimateTearOff {
   const _$EffectEvidenceSynthesisEffectEstimateTearOff();
 
-// ignore: unused_element
   _EffectEvidenceSynthesisEffectEstimate call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2999,7 +2995,6 @@ EffectEvidenceSynthesisPrecisionEstimate
 class _$EffectEvidenceSynthesisPrecisionEstimateTearOff {
   const _$EffectEvidenceSynthesisPrecisionEstimateTearOff();
 
-// ignore: unused_element
   _EffectEvidenceSynthesisPrecisionEstimate call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3399,7 +3394,6 @@ EffectEvidenceSynthesisCertainty _$EffectEvidenceSynthesisCertaintyFromJson(
 class _$EffectEvidenceSynthesisCertaintyTearOff {
   const _$EffectEvidenceSynthesisCertaintyTearOff();
 
-// ignore: unused_element
   _EffectEvidenceSynthesisCertainty call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3665,7 +3659,6 @@ EffectEvidenceSynthesisCertaintySubcomponent
 class _$EffectEvidenceSynthesisCertaintySubcomponentTearOff {
   const _$EffectEvidenceSynthesisCertaintySubcomponentTearOff();
 
-// ignore: unused_element
   _EffectEvidenceSynthesisCertaintySubcomponent call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3937,7 +3930,6 @@ Evidence _$EvidenceFromJson(Map<String, dynamic> json) {
 class _$EvidenceTearOff {
   const _$EvidenceTearOff();
 
-// ignore: unused_element
   _Evidence call(
       {@required @JsonKey(defaultValue: 'Evidence') String resourceType,
       Id id,
@@ -5402,7 +5394,6 @@ EvidenceVariable _$EvidenceVariableFromJson(Map<String, dynamic> json) {
 class _$EvidenceVariableTearOff {
   const _$EvidenceVariableTearOff();
 
-// ignore: unused_element
   _EvidenceVariable call(
       {@required
       @JsonKey(defaultValue: 'EvidenceVariable')
@@ -6966,7 +6957,6 @@ EvidenceVariableCharacteristic _$EvidenceVariableCharacteristicFromJson(
 class _$EvidenceVariableCharacteristicTearOff {
   const _$EvidenceVariableCharacteristicTearOff();
 
-// ignore: unused_element
   _EvidenceVariableCharacteristic
       call(
           {String id,
@@ -7856,7 +7846,6 @@ ResearchDefinition _$ResearchDefinitionFromJson(Map<String, dynamic> json) {
 class _$ResearchDefinitionTearOff {
   const _$ResearchDefinitionTearOff();
 
-// ignore: unused_element
   _ResearchDefinition call(
       {@required
       @JsonKey(defaultValue: 'ResearchDefinition')
@@ -9764,7 +9753,6 @@ ResearchElementDefinition _$ResearchElementDefinitionFromJson(
 class _$ResearchElementDefinitionTearOff {
   const _$ResearchElementDefinitionTearOff();
 
-// ignore: unused_element
   _ResearchElementDefinition call(
       {@required
       @JsonKey(defaultValue: 'ResearchElementDefinition')
@@ -11735,7 +11723,6 @@ ResearchElementDefinitionCharacteristic
 class _$ResearchElementDefinitionCharacteristicTearOff {
   const _$ResearchElementDefinitionCharacteristicTearOff();
 
-// ignore: unused_element
   _ResearchElementDefinitionCharacteristic call(
       {String id,
       @JsonKey(name: 'extension')
@@ -13010,7 +12997,6 @@ RiskEvidenceSynthesis _$RiskEvidenceSynthesisFromJson(
 class _$RiskEvidenceSynthesisTearOff {
   const _$RiskEvidenceSynthesisTearOff();
 
-// ignore: unused_element
   _RiskEvidenceSynthesis call(
       {@required
       @JsonKey(defaultValue: 'RiskEvidenceSynthesis')
@@ -14648,7 +14634,6 @@ RiskEvidenceSynthesisSampleSize _$RiskEvidenceSynthesisSampleSizeFromJson(
 class _$RiskEvidenceSynthesisSampleSizeTearOff {
   const _$RiskEvidenceSynthesisSampleSizeTearOff();
 
-// ignore: unused_element
   _RiskEvidenceSynthesisSampleSize call(
       {String id,
       @JsonKey(name: 'extension')
@@ -15050,7 +15035,6 @@ RiskEvidenceSynthesisRiskEstimate _$RiskEvidenceSynthesisRiskEstimateFromJson(
 class _$RiskEvidenceSynthesisRiskEstimateTearOff {
   const _$RiskEvidenceSynthesisRiskEstimateTearOff();
 
-// ignore: unused_element
   _RiskEvidenceSynthesisRiskEstimate call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -15585,7 +15569,6 @@ RiskEvidenceSynthesisPrecisionEstimate
 class _$RiskEvidenceSynthesisPrecisionEstimateTearOff {
   const _$RiskEvidenceSynthesisPrecisionEstimateTearOff();
 
-// ignore: unused_element
   _RiskEvidenceSynthesisPrecisionEstimate call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -15984,7 +15967,6 @@ RiskEvidenceSynthesisCertainty _$RiskEvidenceSynthesisCertaintyFromJson(
 class _$RiskEvidenceSynthesisCertaintyTearOff {
   const _$RiskEvidenceSynthesisCertaintyTearOff();
 
-// ignore: unused_element
   _RiskEvidenceSynthesisCertainty call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -16246,7 +16228,6 @@ RiskEvidenceSynthesisCertaintySubcomponent
 class _$RiskEvidenceSynthesisCertaintySubcomponentTearOff {
   const _$RiskEvidenceSynthesisCertaintySubcomponentTearOff();
 
-// ignore: unused_element
   _RiskEvidenceSynthesisCertaintySubcomponent call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,

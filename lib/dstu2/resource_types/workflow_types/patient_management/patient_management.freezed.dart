@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'patient_management.dart';
 
@@ -15,7 +15,6 @@ Encounter _$EncounterFromJson(Map<String, dynamic> json) {
 class _$EncounterTearOff {
   const _$EncounterTearOff();
 
-// ignore: unused_element
   _Encounter call(
       {@required
       @JsonKey(defaultValue: 'Encounter')
@@ -1051,7 +1050,6 @@ EncounterStatusHistory _$EncounterStatusHistoryFromJson(
 class _$EncounterStatusHistoryTearOff {
   const _$EncounterStatusHistoryTearOff();
 
-// ignore: unused_element
   _EncounterStatusHistory call(
       {Id id,
       @JsonKey(name: 'extension')
@@ -1363,7 +1361,6 @@ EncounterParticipant _$EncounterParticipantFromJson(Map<String, dynamic> json) {
 class _$EncounterParticipantTearOff {
   const _$EncounterParticipantTearOff();
 
-// ignore: unused_element
   _EncounterParticipant call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1635,7 +1632,6 @@ EncounterHospitalization _$EncounterHospitalizationFromJson(
 class _$EncounterHospitalizationTearOff {
   const _$EncounterHospitalizationTearOff();
 
-// ignore: unused_element
   _EncounterHospitalization call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2176,7 +2172,6 @@ EncounterLocation _$EncounterLocationFromJson(Map<String, dynamic> json) {
 class _$EncounterLocationTearOff {
   const _$EncounterLocationTearOff();
 
-// ignore: unused_element
   _EncounterLocation call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2490,7 +2485,6 @@ EpisodeOfCare _$EpisodeOfCareFromJson(Map<String, dynamic> json) {
 class _$EpisodeOfCareTearOff {
   const _$EpisodeOfCareTearOff();
 
-// ignore: unused_element
   _EpisodeOfCare call(
       {@required
       @JsonKey(defaultValue: 'EpisodeOfCare')
@@ -3285,7 +3279,6 @@ EpisodeOfCareStatusHistory _$EpisodeOfCareStatusHistoryFromJson(
 class _$EpisodeOfCareStatusHistoryTearOff {
   const _$EpisodeOfCareStatusHistoryTearOff();
 
-// ignore: unused_element
   _EpisodeOfCareStatusHistory call(
       {Id id,
       @JsonKey(name: 'extension')
@@ -3603,7 +3596,6 @@ EpisodeOfCareCareTeam _$EpisodeOfCareCareTeamFromJson(
 class _$EpisodeOfCareCareTeamTearOff {
   const _$EpisodeOfCareCareTeamTearOff();
 
-// ignore: unused_element
   _EpisodeOfCareCareTeam call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3871,7 +3863,6 @@ Communication _$CommunicationFromJson(Map<String, dynamic> json) {
 class _$CommunicationTearOff {
   const _$CommunicationTearOff();
 
-// ignore: unused_element
   _Communication call(
       {@required
       @JsonKey(defaultValue: 'Communication')
@@ -4770,7 +4761,6 @@ CommunicationPayload _$CommunicationPayloadFromJson(Map<String, dynamic> json) {
 class _$CommunicationPayloadTearOff {
   const _$CommunicationPayloadTearOff();
 
-// ignore: unused_element
   _CommunicationPayload call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5092,7 +5082,6 @@ Flag _$FlagFromJson(Map<String, dynamic> json) {
 class _$FlagTearOff {
   const _$FlagTearOff();
 
-// ignore: unused_element
   _Flag call(
       {@required
       @JsonKey(defaultValue: 'Flag')

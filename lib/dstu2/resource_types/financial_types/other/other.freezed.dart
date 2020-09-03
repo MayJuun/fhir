@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'other.dart';
 
@@ -15,7 +15,6 @@ ExplanationOfBenefit _$ExplanationOfBenefitFromJson(Map<String, dynamic> json) {
 class _$ExplanationOfBenefitTearOff {
   const _$ExplanationOfBenefitTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefit call(
       {@required
       @JsonKey(defaultValue: 'ExplanationOfBenefit')

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'summary.dart';
 
@@ -15,7 +15,6 @@ AdverseEvent _$AdverseEventFromJson(Map<String, dynamic> json) {
 class _$AdverseEventTearOff {
   const _$AdverseEventTearOff();
 
-// ignore: unused_element
   _AdverseEvent call(
       {@required @JsonKey(defaultValue: 'AdverseEvent') String resourceType,
       Id id,
@@ -970,7 +969,6 @@ AdverseEventSuspectEntity _$AdverseEventSuspectEntityFromJson(
 class _$AdverseEventSuspectEntityTearOff {
   const _$AdverseEventSuspectEntityTearOff();
 
-// ignore: unused_element
   _AdverseEventSuspectEntity call(
       {@required
           Reference instance,
@@ -1414,7 +1412,6 @@ AllergyIntolerance _$AllergyIntoleranceFromJson(Map<String, dynamic> json) {
 class _$AllergyIntoleranceTearOff {
   const _$AllergyIntoleranceTearOff();
 
-// ignore: unused_element
   _AllergyIntolerance call(
       {@required
       @JsonKey(defaultValue: 'AllergyIntolerance')
@@ -2657,7 +2654,6 @@ AllergyIntoleranceReaction _$AllergyIntoleranceReactionFromJson(
 class _$AllergyIntoleranceReactionTearOff {
   const _$AllergyIntoleranceReactionTearOff();
 
-// ignore: unused_element
   _AllergyIntoleranceReaction call(
       {CodeableConcept substance,
       @required List<CodeableConcept> manifestation,
@@ -3074,7 +3070,6 @@ ClinicalImpression _$ClinicalImpressionFromJson(Map<String, dynamic> json) {
 class _$ClinicalImpressionTearOff {
   const _$ClinicalImpressionTearOff();
 
-// ignore: unused_element
   _ClinicalImpression call(
       {@required
       @JsonKey(defaultValue: 'ClinicalImpression')
@@ -4201,7 +4196,6 @@ ClinicalImpressionInvestigation _$ClinicalImpressionInvestigationFromJson(
 class _$ClinicalImpressionInvestigationTearOff {
   const _$ClinicalImpressionInvestigationTearOff();
 
-// ignore: unused_element
   _ClinicalImpressionInvestigation call(
       {@required CodeableConcept code, List<Reference> item}) {
     return _ClinicalImpressionInvestigation(
@@ -4376,7 +4370,6 @@ ClinicalImpressionFinding _$ClinicalImpressionFindingFromJson(
 class _$ClinicalImpressionFindingTearOff {
   const _$ClinicalImpressionFindingTearOff();
 
-// ignore: unused_element
   _ClinicalImpressionFinding call(
       {CodeableConcept itemCodeableConcept,
       Reference itemReference,
@@ -4629,7 +4622,6 @@ Condition _$ConditionFromJson(Map<String, dynamic> json) {
 class _$ConditionTearOff {
   const _$ConditionTearOff();
 
-// ignore: unused_element
   _Condition call(
       {@required @JsonKey(defaultValue: 'Condition') String resourceType,
       Id id,
@@ -6001,7 +5993,6 @@ ConditionStage _$ConditionStageFromJson(Map<String, dynamic> json) {
 class _$ConditionStageTearOff {
   const _$ConditionStageTearOff();
 
-// ignore: unused_element
   _ConditionStage call({CodeableConcept summary, List<Reference> assessment}) {
     return _ConditionStage(
       summary: summary,
@@ -6167,7 +6158,6 @@ ConditionEvidence _$ConditionEvidenceFromJson(Map<String, dynamic> json) {
 class _$ConditionEvidenceTearOff {
   const _$ConditionEvidenceTearOff();
 
-// ignore: unused_element
   _ConditionEvidence call(
       {List<CodeableConcept> code, List<Reference> detail}) {
     return _ConditionEvidence(
@@ -6313,7 +6303,6 @@ DetectedIssue _$DetectedIssueFromJson(Map<String, dynamic> json) {
 class _$DetectedIssueTearOff {
   const _$DetectedIssueTearOff();
 
-// ignore: unused_element
   _DetectedIssue call(
       {@required @JsonKey(defaultValue: 'DetectedIssue') String resourceType,
       Id id,
@@ -7193,7 +7182,6 @@ DetectedIssueMitigation _$DetectedIssueMitigationFromJson(
 class _$DetectedIssueMitigationTearOff {
   const _$DetectedIssueMitigationTearOff();
 
-// ignore: unused_element
   _DetectedIssueMitigation call(
       {@required CodeableConcept action,
       Date date,
@@ -7433,7 +7421,6 @@ FamilyMemberHistory _$FamilyMemberHistoryFromJson(Map<String, dynamic> json) {
 class _$FamilyMemberHistoryTearOff {
   const _$FamilyMemberHistoryTearOff();
 
-// ignore: unused_element
   _FamilyMemberHistory call(
       {@required
       @JsonKey(defaultValue: 'FamilyMemberHistory')
@@ -8981,7 +8968,6 @@ FamilyMemberHistoryCondition _$FamilyMemberHistoryConditionFromJson(
 class _$FamilyMemberHistoryConditionTearOff {
   const _$FamilyMemberHistoryConditionTearOff();
 
-// ignore: unused_element
   _FamilyMemberHistoryCondition call(
       {@required CodeableConcept code,
       CodeableConcept outcome,
@@ -9351,7 +9337,6 @@ Procedure _$ProcedureFromJson(Map<String, dynamic> json) {
 class _$ProcedureTearOff {
   const _$ProcedureTearOff();
 
-// ignore: unused_element
   _Procedure call(
       {@required @JsonKey(defaultValue: 'Procedure') String resourceType,
       Id id,
@@ -10524,7 +10509,6 @@ ProcedurePerformer _$ProcedurePerformerFromJson(Map<String, dynamic> json) {
 class _$ProcedurePerformerTearOff {
   const _$ProcedurePerformerTearOff();
 
-// ignore: unused_element
   _ProcedurePerformer call(
       {CodeableConcept role, @required Reference actor, Reference onBehalfOf}) {
     return _ProcedurePerformer(
@@ -10730,7 +10714,6 @@ ProcedureFocalDevice _$ProcedureFocalDeviceFromJson(Map<String, dynamic> json) {
 class _$ProcedureFocalDeviceTearOff {
   const _$ProcedureFocalDeviceTearOff();
 
-// ignore: unused_element
   _ProcedureFocalDevice call(
       {CodeableConcept action, @required Reference manipulated}) {
     return _ProcedureFocalDevice(

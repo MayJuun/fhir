@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'draft_types.dart';
 
@@ -15,7 +15,6 @@ Population _$PopulationFromJson(Map<String, dynamic> json) {
 class _$PopulationTearOff {
   const _$PopulationTearOff();
 
-// ignore: unused_element
   _Population call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -366,7 +365,6 @@ ProductShelfLife _$ProductShelfLifeFromJson(Map<String, dynamic> json) {
 class _$ProductShelfLifeTearOff {
   const _$ProductShelfLifeTearOff();
 
-// ignore: unused_element
   _ProductShelfLife call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -677,7 +675,6 @@ ProdCharacteristic _$ProdCharacteristicFromJson(Map<String, dynamic> json) {
 class _$ProdCharacteristicTearOff {
   const _$ProdCharacteristicTearOff();
 
-// ignore: unused_element
   _ProdCharacteristic call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1255,7 +1252,6 @@ MarketingStatus _$MarketingStatusFromJson(Map<String, dynamic> json) {
 class _$MarketingStatusTearOff {
   const _$MarketingStatusTearOff();
 
-// ignore: unused_element
   _MarketingStatus call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1639,7 +1635,6 @@ SubstanceAmount _$SubstanceAmountFromJson(Map<String, dynamic> json) {
 class _$SubstanceAmountTearOff {
   const _$SubstanceAmountTearOff();
 
-// ignore: unused_element
   _SubstanceAmount call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2092,7 +2087,6 @@ SubstanceAmountReferenceRange _$SubstanceAmountReferenceRangeFromJson(
 class _$SubstanceAmountReferenceRangeTearOff {
   const _$SubstanceAmountReferenceRangeTearOff();
 
-// ignore: unused_element
   _SubstanceAmountReferenceRange call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'billing.dart';
 
@@ -15,7 +15,6 @@ Claim _$ClaimFromJson(Map<String, dynamic> json) {
 class _$ClaimTearOff {
   const _$ClaimTearOff();
 
-// ignore: unused_element
   _Claim call(
       {@required @JsonKey(defaultValue: 'Claim') String resourceType,
       Id id,
@@ -1364,7 +1363,6 @@ ClaimRelated _$ClaimRelatedFromJson(Map<String, dynamic> json) {
 class _$ClaimRelatedTearOff {
   const _$ClaimRelatedTearOff();
 
-// ignore: unused_element
   _ClaimRelated call(
       {Reference claim, CodeableConcept relationship, Identifier reference}) {
     return _ClaimRelated(
@@ -1573,7 +1571,6 @@ ClaimPayee _$ClaimPayeeFromJson(Map<String, dynamic> json) {
 class _$ClaimPayeeTearOff {
   const _$ClaimPayeeTearOff();
 
-// ignore: unused_element
   _ClaimPayee call({@required CodeableConcept type, Reference party}) {
     return _ClaimPayee(
       type: type,
@@ -1744,7 +1741,6 @@ ClaimCareTeam _$ClaimCareTeamFromJson(Map<String, dynamic> json) {
 class _$ClaimCareTeamTearOff {
   const _$ClaimCareTeamTearOff();
 
-// ignore: unused_element
   _ClaimCareTeam call(
       {Decimal sequence,
       @JsonKey(name: '_sequence') Element sequenceElement,
@@ -2082,7 +2078,6 @@ ClaimInformation _$ClaimInformationFromJson(Map<String, dynamic> json) {
 class _$ClaimInformationTearOff {
   const _$ClaimInformationTearOff();
 
-// ignore: unused_element
   _ClaimInformation call(
       {Decimal sequence,
       @JsonKey(name: '_sequence') Element sequenceElement,
@@ -2621,7 +2616,6 @@ ClaimDiagnosis _$ClaimDiagnosisFromJson(Map<String, dynamic> json) {
 class _$ClaimDiagnosisTearOff {
   const _$ClaimDiagnosisTearOff();
 
-// ignore: unused_element
   _ClaimDiagnosis call(
       {Decimal sequence,
       @JsonKey(name: '_sequence') Element sequenceElement,
@@ -2928,7 +2922,6 @@ ClaimProcedure _$ClaimProcedureFromJson(Map<String, dynamic> json) {
 class _$ClaimProcedureTearOff {
   const _$ClaimProcedureTearOff();
 
-// ignore: unused_element
   _ClaimProcedure call(
       {Decimal sequence,
       @JsonKey(name: '_sequence') Element sequenceElement,
@@ -3236,7 +3229,6 @@ ClaimInsurance _$ClaimInsuranceFromJson(Map<String, dynamic> json) {
 class _$ClaimInsuranceTearOff {
   const _$ClaimInsuranceTearOff();
 
-// ignore: unused_element
   _ClaimInsurance call(
       {Decimal sequence,
       @JsonKey(name: '_sequence') Element sequenceElement,
@@ -3653,7 +3645,6 @@ ClaimAccident _$ClaimAccidentFromJson(Map<String, dynamic> json) {
 class _$ClaimAccidentTearOff {
   const _$ClaimAccidentTearOff();
 
-// ignore: unused_element
   _ClaimAccident call(
       {Date date,
       @JsonKey(name: '_date') Element dateElement,
@@ -3931,7 +3922,6 @@ ClaimItem _$ClaimItemFromJson(Map<String, dynamic> json) {
 class _$ClaimItemTearOff {
   const _$ClaimItemTearOff();
 
-// ignore: unused_element
   _ClaimItem call(
       {Decimal sequence,
       @JsonKey(name: '_sequence')
@@ -4925,7 +4915,6 @@ ClaimDetail _$ClaimDetailFromJson(Map<String, dynamic> json) {
 class _$ClaimDetailTearOff {
   const _$ClaimDetailTearOff();
 
-// ignore: unused_element
   _ClaimDetail call(
       {Decimal sequence,
       @JsonKey(name: '_sequence') Element sequenceElement,
@@ -5438,7 +5427,6 @@ ClaimSubDetail _$ClaimSubDetailFromJson(Map<String, dynamic> json) {
 class _$ClaimSubDetailTearOff {
   const _$ClaimSubDetailTearOff();
 
-// ignore: unused_element
   _ClaimSubDetail call(
       {Decimal sequence,
       @JsonKey(name: '_sequence') Element sequenceElement,
@@ -5930,7 +5918,6 @@ ClaimResponse _$ClaimResponseFromJson(Map<String, dynamic> json) {
 class _$ClaimResponseTearOff {
   const _$ClaimResponseTearOff();
 
-// ignore: unused_element
   _ClaimResponse call(
       {@required @JsonKey(defaultValue: 'ClaimResponse') String resourceType,
       Id id,
@@ -7086,7 +7073,6 @@ ClaimResponseItem _$ClaimResponseItemFromJson(Map<String, dynamic> json) {
 class _$ClaimResponseItemTearOff {
   const _$ClaimResponseItemTearOff();
 
-// ignore: unused_element
   _ClaimResponseItem call(
       {Id sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement,
@@ -7363,7 +7349,6 @@ ClaimResponseAdjudication _$ClaimResponseAdjudicationFromJson(
 class _$ClaimResponseAdjudicationTearOff {
   const _$ClaimResponseAdjudicationTearOff();
 
-// ignore: unused_element
   _ClaimResponseAdjudication call(
       {@required CodeableConcept category,
       CodeableConcept reason,
@@ -7641,7 +7626,6 @@ ClaimResponseDetail _$ClaimResponseDetailFromJson(Map<String, dynamic> json) {
 class _$ClaimResponseDetailTearOff {
   const _$ClaimResponseDetailTearOff();
 
-// ignore: unused_element
   _ClaimResponseDetail call(
       {Id sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement,
@@ -7920,7 +7904,6 @@ ClaimResponseSubDetail _$ClaimResponseSubDetailFromJson(
 class _$ClaimResponseSubDetailTearOff {
   const _$ClaimResponseSubDetailTearOff();
 
-// ignore: unused_element
   _ClaimResponseSubDetail call(
       {Id sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement,
@@ -8176,7 +8159,6 @@ ClaimResponseAddItem _$ClaimResponseAddItemFromJson(Map<String, dynamic> json) {
 class _$ClaimResponseAddItemTearOff {
   const _$ClaimResponseAddItemTearOff();
 
-// ignore: unused_element
   _ClaimResponseAddItem call(
       {List<Id> sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId') List<Element> sequenceLinkIdElement,
@@ -8592,7 +8574,6 @@ ClaimResponseDetail1 _$ClaimResponseDetail1FromJson(Map<String, dynamic> json) {
 class _$ClaimResponseDetail1TearOff {
   const _$ClaimResponseDetail1TearOff();
 
-// ignore: unused_element
   _ClaimResponseDetail1 call(
       {CodeableConcept revenue,
       CodeableConcept category,
@@ -8937,7 +8918,6 @@ ClaimResponseError _$ClaimResponseErrorFromJson(Map<String, dynamic> json) {
 class _$ClaimResponseErrorTearOff {
   const _$ClaimResponseErrorTearOff();
 
-// ignore: unused_element
   _ClaimResponseError call(
       {Id sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId')
@@ -9299,7 +9279,6 @@ ClaimResponsePayment _$ClaimResponsePaymentFromJson(Map<String, dynamic> json) {
 class _$ClaimResponsePaymentTearOff {
   const _$ClaimResponsePaymentTearOff();
 
-// ignore: unused_element
   _ClaimResponsePayment call(
       {CodeableConcept type,
       Money adjustment,
@@ -9642,7 +9621,6 @@ ClaimResponseProcessNote _$ClaimResponseProcessNoteFromJson(
 class _$ClaimResponseProcessNoteTearOff {
   const _$ClaimResponseProcessNoteTearOff();
 
-// ignore: unused_element
   _ClaimResponseProcessNote call(
       {Decimal number,
       @JsonKey(name: '_number') Element numberElement,
@@ -9942,7 +9920,6 @@ ClaimResponseInsurance _$ClaimResponseInsuranceFromJson(
 class _$ClaimResponseInsuranceTearOff {
   const _$ClaimResponseInsuranceTearOff();
 
-// ignore: unused_element
   _ClaimResponseInsurance call(
       {Decimal sequence,
       @JsonKey(name: '_sequence') Element sequenceElement,

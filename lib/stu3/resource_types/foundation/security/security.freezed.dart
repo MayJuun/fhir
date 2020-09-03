@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'security.dart';
 
@@ -15,7 +15,6 @@ AuditEvent _$AuditEventFromJson(Map<String, dynamic> json) {
 class _$AuditEventTearOff {
   const _$AuditEventTearOff();
 
-// ignore: unused_element
   _AuditEvent call(
       {@required @JsonKey(defaultValue: 'AuditEvent') String resourceType,
       Id id,
@@ -809,7 +808,6 @@ AuditEventAgent _$AuditEventAgentFromJson(Map<String, dynamic> json) {
 class _$AuditEventAgentTearOff {
   const _$AuditEventAgentTearOff();
 
-// ignore: unused_element
   _AuditEventAgent call(
       {List<CodeableConcept> role,
       Reference reference,
@@ -1346,7 +1344,6 @@ AuditEventNetwork _$AuditEventNetworkFromJson(Map<String, dynamic> json) {
 class _$AuditEventNetworkTearOff {
   const _$AuditEventNetworkTearOff();
 
-// ignore: unused_element
   _AuditEventNetwork call(
       {String address,
       @JsonKey(name: '_address') Element addressElement,
@@ -1579,7 +1576,6 @@ AuditEventSource _$AuditEventSourceFromJson(Map<String, dynamic> json) {
 class _$AuditEventSourceTearOff {
   const _$AuditEventSourceTearOff();
 
-// ignore: unused_element
   _AuditEventSource call(
       {String site,
       @JsonKey(name: '_site') Element siteElement,
@@ -1807,7 +1803,6 @@ AuditEventEntity _$AuditEventEntityFromJson(Map<String, dynamic> json) {
 class _$AuditEventEntityTearOff {
   const _$AuditEventEntityTearOff();
 
-// ignore: unused_element
   _AuditEventEntity call(
       {Identifier identifier,
       Reference reference,
@@ -2304,7 +2299,6 @@ AuditEventDetail _$AuditEventDetailFromJson(Map<String, dynamic> json) {
 class _$AuditEventDetailTearOff {
   const _$AuditEventDetailTearOff();
 
-// ignore: unused_element
   _AuditEventDetail call(
       {String type,
       @JsonKey(name: '_type') Element typeElement,
@@ -2536,7 +2530,6 @@ Consent _$ConsentFromJson(Map<String, dynamic> json) {
 class _$ConsentTearOff {
   const _$ConsentTearOff();
 
-// ignore: unused_element
   _Consent call(
       {@required @JsonKey(defaultValue: 'Consent') String resourceType,
       Id id,
@@ -3551,7 +3544,6 @@ ConsentActor _$ConsentActorFromJson(Map<String, dynamic> json) {
 class _$ConsentActorTearOff {
   const _$ConsentActorTearOff();
 
-// ignore: unused_element
   _ConsentActor call(
       {@required CodeableConcept role, @required Reference reference}) {
     return _ConsentActor(
@@ -3729,7 +3721,6 @@ ConsentPolicy _$ConsentPolicyFromJson(Map<String, dynamic> json) {
 class _$ConsentPolicyTearOff {
   const _$ConsentPolicyTearOff();
 
-// ignore: unused_element
   _ConsentPolicy call(
       {String authority,
       @JsonKey(name: '_authority') Element authorityElement,
@@ -3962,7 +3953,6 @@ ConsentData _$ConsentDataFromJson(Map<String, dynamic> json) {
 class _$ConsentDataTearOff {
   const _$ConsentDataTearOff();
 
-// ignore: unused_element
   _ConsentData call(
       {ConsentDataMeaning meaning,
       @JsonKey(name: '_meaning') Element meaningElement,
@@ -4175,7 +4165,6 @@ ConsentExcept _$ConsentExceptFromJson(Map<String, dynamic> json) {
 class _$ConsentExceptTearOff {
   const _$ConsentExceptTearOff();
 
-// ignore: unused_element
   _ConsentExcept call(
       {ConsentExceptType type,
       @JsonKey(name: '_type') Element typeElement,
@@ -4552,7 +4541,6 @@ ConsentActor1 _$ConsentActor1FromJson(Map<String, dynamic> json) {
 class _$ConsentActor1TearOff {
   const _$ConsentActor1TearOff();
 
-// ignore: unused_element
   _ConsentActor1 call(
       {@required CodeableConcept role, @required Reference reference}) {
     return _ConsentActor1(
@@ -4732,7 +4720,6 @@ ConsentData1 _$ConsentData1FromJson(Map<String, dynamic> json) {
 class _$ConsentData1TearOff {
   const _$ConsentData1TearOff();
 
-// ignore: unused_element
   _ConsentData1 call(
       {ConsentData1Meaning meaning,
       @JsonKey(name: '_meaning') Element meaningElement,
@@ -4945,7 +4932,6 @@ Provenance _$ProvenanceFromJson(Map<String, dynamic> json) {
 class _$ProvenanceTearOff {
   const _$ProvenanceTearOff();
 
-// ignore: unused_element
   _Provenance call(
       {@required @JsonKey(defaultValue: 'Provenance') String resourceType,
       Id id,
@@ -5655,7 +5641,6 @@ ProvenanceAgent _$ProvenanceAgentFromJson(Map<String, dynamic> json) {
 class _$ProvenanceAgentTearOff {
   const _$ProvenanceAgentTearOff();
 
-// ignore: unused_element
   _ProvenanceAgent call(
       {List<CodeableConcept> role,
       String whoUri,
@@ -6020,7 +6005,6 @@ ProvenanceEntity _$ProvenanceEntityFromJson(Map<String, dynamic> json) {
 class _$ProvenanceEntityTearOff {
   const _$ProvenanceEntityTearOff();
 
-// ignore: unused_element
   _ProvenanceEntity call(
       {ProvenanceEntityRole role,
       @JsonKey(name: '_role') Element roleElement,

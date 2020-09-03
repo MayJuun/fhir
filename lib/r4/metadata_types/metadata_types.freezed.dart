@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'metadata_types.dart';
 
@@ -15,7 +15,6 @@ ContactDetail _$ContactDetailFromJson(Map<String, dynamic> json) {
 class _$ContactDetailTearOff {
   const _$ContactDetailTearOff();
 
-// ignore: unused_element
   _ContactDetail call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -254,7 +253,6 @@ Contributor _$ContributorFromJson(Map<String, dynamic> json) {
 class _$ContributorTearOff {
   const _$ContributorTearOff();
 
-// ignore: unused_element
   _Contributor call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -549,7 +547,6 @@ DataRequirement _$DataRequirementFromJson(Map<String, dynamic> json) {
 class _$DataRequirementTearOff {
   const _$DataRequirementTearOff();
 
-// ignore: unused_element
   _DataRequirement call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1031,7 +1028,6 @@ DataRequirementCodeFilter _$DataRequirementCodeFilterFromJson(
 class _$DataRequirementCodeFilterTearOff {
   const _$DataRequirementCodeFilterTearOff();
 
-// ignore: unused_element
   _DataRequirementCodeFilter call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1374,7 +1370,6 @@ DataRequirementDateFilter _$DataRequirementDateFilterFromJson(
 class _$DataRequirementDateFilterTearOff {
   const _$DataRequirementDateFilterTearOff();
 
-// ignore: unused_element
   _DataRequirementDateFilter call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1811,7 +1806,6 @@ DataRequirementSort _$DataRequirementSortFromJson(Map<String, dynamic> json) {
 class _$DataRequirementSortTearOff {
   const _$DataRequirementSortTearOff();
 
-// ignore: unused_element
   _DataRequirementSort call(
       {String id,
       @JsonKey(name: 'extension')
@@ -2139,7 +2133,6 @@ ParameterDefinition _$ParameterDefinitionFromJson(Map<String, dynamic> json) {
 class _$ParameterDefinitionTearOff {
   const _$ParameterDefinitionTearOff();
 
-// ignore: unused_element
   _ParameterDefinition call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2659,7 +2652,6 @@ RelatedArtifact _$RelatedArtifactFromJson(Map<String, dynamic> json) {
 class _$RelatedArtifactTearOff {
   const _$RelatedArtifactTearOff();
 
-// ignore: unused_element
   _RelatedArtifact call(
       {String id,
       @JsonKey(name: 'extension')
@@ -3188,7 +3180,6 @@ TriggerDefinition _$TriggerDefinitionFromJson(Map<String, dynamic> json) {
 class _$TriggerDefinitionTearOff {
   const _$TriggerDefinitionTearOff();
 
-// ignore: unused_element
   _TriggerDefinition call(
       {String id,
       @JsonKey(name: 'extension')
@@ -3735,7 +3726,6 @@ UsageContext _$UsageContextFromJson(Map<String, dynamic> json) {
 class _$UsageContextTearOff {
   const _$UsageContextTearOff();
 
-// ignore: unused_element
   _UsageContext call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -4071,7 +4061,6 @@ Expression _$ExpressionFromJson(Map<String, dynamic> json) {
 class _$ExpressionTearOff {
   const _$ExpressionTearOff();
 
-// ignore: unused_element
   _Expression call(
       {String id,
       @JsonKey(name: 'extension')

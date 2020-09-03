@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'terminology.dart';
 
@@ -15,7 +15,6 @@ ValueSet _$ValueSetFromJson(Map<String, dynamic> json) {
 class _$ValueSetTearOff {
   const _$ValueSetTearOff();
 
-// ignore: unused_element
   _ValueSet call(
       {@required
       @JsonKey(defaultValue: 'ValueSet')
@@ -1385,7 +1384,6 @@ ValueSetContact _$ValueSetContactFromJson(Map<String, dynamic> json) {
 class _$ValueSetContactTearOff {
   const _$ValueSetContactTearOff();
 
-// ignore: unused_element
   _ValueSetContact call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1634,7 +1632,6 @@ ValueSetCodeSystem _$ValueSetCodeSystemFromJson(Map<String, dynamic> json) {
 class _$ValueSetCodeSystemTearOff {
   const _$ValueSetCodeSystemTearOff();
 
-// ignore: unused_element
   _ValueSetCodeSystem call(
       {Id id,
       @JsonKey(name: 'extension')
@@ -2073,7 +2070,6 @@ ValueSetCodeSystemConcept _$ValueSetCodeSystemConceptFromJson(
 class _$ValueSetCodeSystemConceptTearOff {
   const _$ValueSetCodeSystemConceptTearOff();
 
-// ignore: unused_element
   _ValueSetCodeSystemConcept call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2495,7 +2491,6 @@ ValueSetConceptDesignation _$ValueSetConceptDesignationFromJson(
 class _$ValueSetConceptDesignationTearOff {
   const _$ValueSetConceptDesignationTearOff();
 
-// ignore: unused_element
   _ValueSetConceptDesignation call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2837,7 +2832,6 @@ ValueSetCompose _$ValueSetComposeFromJson(Map<String, dynamic> json) {
 class _$ValueSetComposeTearOff {
   const _$ValueSetComposeTearOff();
 
-// ignore: unused_element
   _ValueSetCompose call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3112,7 +3106,6 @@ ValueSetComposeInclude _$ValueSetComposeIncludeFromJson(
 class _$ValueSetComposeIncludeTearOff {
   const _$ValueSetComposeIncludeTearOff();
 
-// ignore: unused_element
   _ValueSetComposeInclude call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3491,7 +3484,6 @@ ValueSetIncludeConcept _$ValueSetIncludeConceptFromJson(
 class _$ValueSetIncludeConceptTearOff {
   const _$ValueSetIncludeConceptTearOff();
 
-// ignore: unused_element
   _ValueSetIncludeConcept call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3847,7 +3839,6 @@ ValueSetIncludeFilter _$ValueSetIncludeFilterFromJson(
 class _$ValueSetIncludeFilterTearOff {
   const _$ValueSetIncludeFilterTearOff();
 
-// ignore: unused_element
   _ValueSetIncludeFilter call(
       {Id id,
       @JsonKey(name: 'extension')
@@ -4274,7 +4265,6 @@ ValueSetExpansion _$ValueSetExpansionFromJson(Map<String, dynamic> json) {
 class _$ValueSetExpansionTearOff {
   const _$ValueSetExpansionTearOff();
 
-// ignore: unused_element
   _ValueSetExpansion call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -4776,7 +4766,6 @@ ValueSetExpansionParameter _$ValueSetExpansionParameterFromJson(
 class _$ValueSetExpansionParameterTearOff {
   const _$ValueSetExpansionParameterTearOff();
 
-// ignore: unused_element
   _ValueSetExpansionParameter call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5416,7 +5405,6 @@ ValueSetExpansionContains _$ValueSetExpansionContainsFromJson(
 class _$ValueSetExpansionContainsTearOff {
   const _$ValueSetExpansionContainsTearOff();
 
-// ignore: unused_element
   _ValueSetExpansionContains call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5944,7 +5932,6 @@ ConceptMap _$ConceptMapFromJson(Map<String, dynamic> json) {
 class _$ConceptMapTearOff {
   const _$ConceptMapTearOff();
 
-// ignore: unused_element
   _ConceptMap call(
       {@required
       @JsonKey(defaultValue: 'ConceptMap')
@@ -7250,7 +7237,6 @@ ConceptMapContact _$ConceptMapContactFromJson(Map<String, dynamic> json) {
 class _$ConceptMapContactTearOff {
   const _$ConceptMapContactTearOff();
 
-// ignore: unused_element
   _ConceptMapContact call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -7473,7 +7459,6 @@ ConceptMapElement _$ConceptMapElementFromJson(Map<String, dynamic> json) {
 class _$ConceptMapElementTearOff {
   const _$ConceptMapElementTearOff();
 
-// ignore: unused_element
   _ConceptMapElement call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -7759,7 +7744,6 @@ ConceptMapElementTarget _$ConceptMapElementTargetFromJson(
 class _$ConceptMapElementTargetTearOff {
   const _$ConceptMapElementTargetTearOff();
 
-// ignore: unused_element
   _ConceptMapElementTarget call(
       {Id id,
       @JsonKey(name: 'extension')
@@ -8222,7 +8206,6 @@ ConceptMapTargetDependsOn _$ConceptMapTargetDependsOnFromJson(
 class _$ConceptMapTargetDependsOnTearOff {
   const _$ConceptMapTargetDependsOnTearOff();
 
-// ignore: unused_element
   _ConceptMapTargetDependsOn call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -8481,7 +8464,6 @@ NamingSystem _$NamingSystemFromJson(Map<String, dynamic> json) {
 class _$NamingSystemTearOff {
   const _$NamingSystemTearOff();
 
-// ignore: unused_element
   _NamingSystem call(
       {@required
       @JsonKey(defaultValue: 'NamingSystem')
@@ -9598,7 +9580,6 @@ NamingSystemContact _$NamingSystemContactFromJson(Map<String, dynamic> json) {
 class _$NamingSystemContactTearOff {
   const _$NamingSystemContactTearOff();
 
-// ignore: unused_element
   _NamingSystemContact call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -9822,7 +9803,6 @@ NamingSystemUniqueId _$NamingSystemUniqueIdFromJson(Map<String, dynamic> json) {
 class _$NamingSystemUniqueIdTearOff {
   const _$NamingSystemUniqueIdTearOff();
 
-// ignore: unused_element
   _NamingSystemUniqueId call(
       {Id id,
       @JsonKey(name: 'extension')

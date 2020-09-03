@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'entities2.dart';
 
@@ -16,7 +16,6 @@ BiologicallyDerivedProduct _$BiologicallyDerivedProductFromJson(
 class _$BiologicallyDerivedProductTearOff {
   const _$BiologicallyDerivedProductTearOff();
 
-// ignore: unused_element
   _BiologicallyDerivedProduct
       call(
           {@required
@@ -895,7 +894,6 @@ BiologicallyDerivedProductCollection
 class _$BiologicallyDerivedProductCollectionTearOff {
   const _$BiologicallyDerivedProductCollectionTearOff();
 
-// ignore: unused_element
   _BiologicallyDerivedProductCollection call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1261,7 +1259,6 @@ BiologicallyDerivedProductProcessing
 class _$BiologicallyDerivedProductProcessingTearOff {
   const _$BiologicallyDerivedProductProcessingTearOff();
 
-// ignore: unused_element
   _BiologicallyDerivedProductProcessing call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1687,7 +1684,6 @@ BiologicallyDerivedProductManipulation
 class _$BiologicallyDerivedProductManipulationTearOff {
   const _$BiologicallyDerivedProductManipulationTearOff();
 
-// ignore: unused_element
   _BiologicallyDerivedProductManipulation call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2045,7 +2041,6 @@ BiologicallyDerivedProductStorage _$BiologicallyDerivedProductStorageFromJson(
 class _$BiologicallyDerivedProductStorageTearOff {
   const _$BiologicallyDerivedProductStorageTearOff();
 
-// ignore: unused_element
   _BiologicallyDerivedProductStorage call(
       {String id,
       @JsonKey(name: 'extension')
@@ -2486,7 +2481,6 @@ Device _$DeviceFromJson(Map<String, dynamic> json) {
 class _$DeviceTearOff {
   const _$DeviceTearOff();
 
-// ignore: unused_element
   _Device call(
       {@required @JsonKey(defaultValue: 'Device') String resourceType,
       Id id,
@@ -3866,7 +3860,6 @@ DeviceUdiCarrier _$DeviceUdiCarrierFromJson(Map<String, dynamic> json) {
 class _$DeviceUdiCarrierTearOff {
   const _$DeviceUdiCarrierTearOff();
 
-// ignore: unused_element
   _DeviceUdiCarrier call(
       {String id,
       @JsonKey(name: 'extension')
@@ -4462,7 +4455,6 @@ DeviceDeviceName _$DeviceDeviceNameFromJson(Map<String, dynamic> json) {
 class _$DeviceDeviceNameTearOff {
   const _$DeviceDeviceNameTearOff();
 
-// ignore: unused_element
   _DeviceDeviceName call(
       {String id,
       @JsonKey(name: 'extension')
@@ -4778,7 +4770,6 @@ DeviceSpecialization _$DeviceSpecializationFromJson(Map<String, dynamic> json) {
 class _$DeviceSpecializationTearOff {
   const _$DeviceSpecializationTearOff();
 
-// ignore: unused_element
   _DeviceSpecialization call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5062,7 +5053,6 @@ DeviceVersion _$DeviceVersionFromJson(Map<String, dynamic> json) {
 class _$DeviceVersionTearOff {
   const _$DeviceVersionTearOff();
 
-// ignore: unused_element
   _DeviceVersion call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5371,7 +5361,6 @@ DeviceProperty _$DevicePropertyFromJson(Map<String, dynamic> json) {
 class _$DevicePropertyTearOff {
   const _$DevicePropertyTearOff();
 
-// ignore: unused_element
   _DeviceProperty call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5636,7 +5625,6 @@ DeviceMetric _$DeviceMetricFromJson(Map<String, dynamic> json) {
 class _$DeviceMetricTearOff {
   const _$DeviceMetricTearOff();
 
-// ignore: unused_element
   _DeviceMetric call(
       {@required
       @JsonKey(defaultValue: 'DeviceMetric')
@@ -6506,7 +6494,6 @@ DeviceMetricCalibration _$DeviceMetricCalibrationFromJson(
 class _$DeviceMetricCalibrationTearOff {
   const _$DeviceMetricCalibrationTearOff();
 
-// ignore: unused_element
   _DeviceMetricCalibration call(
       {String id,
       @JsonKey(name: 'extension')
@@ -6902,7 +6889,6 @@ Substance _$SubstanceFromJson(Map<String, dynamic> json) {
 class _$SubstanceTearOff {
   const _$SubstanceTearOff();
 
-// ignore: unused_element
   _Substance call(
       {@required
       @JsonKey(defaultValue: 'Substance')
@@ -7590,7 +7576,6 @@ SubstanceInstance _$SubstanceInstanceFromJson(Map<String, dynamic> json) {
 class _$SubstanceInstanceTearOff {
   const _$SubstanceInstanceTearOff();
 
-// ignore: unused_element
   _SubstanceInstance call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -7900,7 +7885,6 @@ SubstanceIngredient _$SubstanceIngredientFromJson(Map<String, dynamic> json) {
 class _$SubstanceIngredientTearOff {
   const _$SubstanceIngredientTearOff();
 
-// ignore: unused_element
   _SubstanceIngredient call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,

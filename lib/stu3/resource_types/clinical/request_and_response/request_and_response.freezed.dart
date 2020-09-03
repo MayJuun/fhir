@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'request_and_response.dart';
 
@@ -15,7 +15,6 @@ Communication _$CommunicationFromJson(Map<String, dynamic> json) {
 class _$CommunicationTearOff {
   const _$CommunicationTearOff();
 
-// ignore: unused_element
   _Communication call(
       {@required @JsonKey(defaultValue: 'Communication') String resourceType,
       Id id,
@@ -1028,7 +1027,6 @@ CommunicationPayload _$CommunicationPayloadFromJson(Map<String, dynamic> json) {
 class _$CommunicationPayloadTearOff {
   const _$CommunicationPayloadTearOff();
 
-// ignore: unused_element
   _CommunicationPayload call(
       {String contentString,
       @JsonKey(name: '_contentString') Element contentStringElement,
@@ -1283,7 +1281,6 @@ CommunicationRequest _$CommunicationRequestFromJson(Map<String, dynamic> json) {
 class _$CommunicationRequestTearOff {
   const _$CommunicationRequestTearOff();
 
-// ignore: unused_element
   _CommunicationRequest call(
       {@required
       @JsonKey(defaultValue: 'CommunicationRequest')
@@ -2383,7 +2380,6 @@ CommunicationRequestPayload _$CommunicationRequestPayloadFromJson(
 class _$CommunicationRequestPayloadTearOff {
   const _$CommunicationRequestPayloadTearOff();
 
-// ignore: unused_element
   _CommunicationRequestPayload call(
       {String contentString,
       @JsonKey(name: '_contentString') Element contentStringElement,
@@ -2646,7 +2642,6 @@ CommunicationRequestRequester _$CommunicationRequestRequesterFromJson(
 class _$CommunicationRequestRequesterTearOff {
   const _$CommunicationRequestRequesterTearOff();
 
-// ignore: unused_element
   _CommunicationRequestRequester call(
       {@required Reference agent, Reference onBehalfOf}) {
     return _CommunicationRequestRequester(
@@ -2834,7 +2829,6 @@ DeviceRequest _$DeviceRequestFromJson(Map<String, dynamic> json) {
 class _$DeviceRequestTearOff {
   const _$DeviceRequestTearOff();
 
-// ignore: unused_element
   _DeviceRequest call(
       {@required @JsonKey(defaultValue: 'DeviceRequest') String resourceType,
       Id id,
@@ -4041,7 +4035,6 @@ DeviceRequestRequester _$DeviceRequestRequesterFromJson(
 class _$DeviceRequestRequesterTearOff {
   const _$DeviceRequestRequesterTearOff();
 
-// ignore: unused_element
   _DeviceRequestRequester call(
       {@required Reference agent, Reference onBehalfOf}) {
     return _DeviceRequestRequester(
@@ -4221,7 +4214,6 @@ DeviceUseStatement _$DeviceUseStatementFromJson(Map<String, dynamic> json) {
 class _$DeviceUseStatementTearOff {
   const _$DeviceUseStatementTearOff();
 
-// ignore: unused_element
   _DeviceUseStatement call(
       {@required
       @JsonKey(defaultValue: 'DeviceUseStatement')
@@ -5134,7 +5126,6 @@ SupplyDelivery _$SupplyDeliveryFromJson(Map<String, dynamic> json) {
 class _$SupplyDeliveryTearOff {
   const _$SupplyDeliveryTearOff();
 
-// ignore: unused_element
   _SupplyDelivery call(
       {@required @JsonKey(defaultValue: 'SupplyDelivery') String resourceType,
       Id id,
@@ -6001,7 +5992,6 @@ SupplyDeliverySuppliedItem _$SupplyDeliverySuppliedItemFromJson(
 class _$SupplyDeliverySuppliedItemTearOff {
   const _$SupplyDeliverySuppliedItemTearOff();
 
-// ignore: unused_element
   _SupplyDeliverySuppliedItem call(
       {Quantity quantity,
       CodeableConcept itemCodeableConcept,
@@ -6227,7 +6217,6 @@ SupplyRequest _$SupplyRequestFromJson(Map<String, dynamic> json) {
 class _$SupplyRequestTearOff {
   const _$SupplyRequestTearOff();
 
-// ignore: unused_element
   _SupplyRequest call(
       {@required @JsonKey(defaultValue: 'SupplyRequest') String resourceType,
       Id id,
@@ -7244,7 +7233,6 @@ SupplyRequestOrderedItem _$SupplyRequestOrderedItemFromJson(
 class _$SupplyRequestOrderedItemTearOff {
   const _$SupplyRequestOrderedItemTearOff();
 
-// ignore: unused_element
   _SupplyRequestOrderedItem call(
       {@required Quantity quantity,
       CodeableConcept itemCodeableConcept,
@@ -7470,7 +7458,6 @@ SupplyRequestRequester _$SupplyRequestRequesterFromJson(
 class _$SupplyRequestRequesterTearOff {
   const _$SupplyRequestRequesterTearOff();
 
-// ignore: unused_element
   _SupplyRequestRequester call(
       {@required Reference agent, Reference onBehalfOf}) {
     return _SupplyRequestRequester(

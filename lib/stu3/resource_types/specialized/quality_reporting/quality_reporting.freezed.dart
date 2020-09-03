@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'quality_reporting.dart';
 
@@ -15,7 +15,6 @@ Measure _$MeasureFromJson(Map<String, dynamic> json) {
 class _$MeasureTearOff {
   const _$MeasureTearOff();
 
-// ignore: unused_element
   _Measure call(
       {@required
       @JsonKey(defaultValue: 'Measure')
@@ -2171,7 +2170,6 @@ MeasureGroup _$MeasureGroupFromJson(Map<String, dynamic> json) {
 class _$MeasureGroupTearOff {
   const _$MeasureGroupTearOff();
 
-// ignore: unused_element
   _MeasureGroup call(
       {@required Identifier identifier,
       String name,
@@ -2485,7 +2483,6 @@ MeasurePopulation _$MeasurePopulationFromJson(Map<String, dynamic> json) {
 class _$MeasurePopulationTearOff {
   const _$MeasurePopulationTearOff();
 
-// ignore: unused_element
   _MeasurePopulation call(
       {Identifier identifier,
       CodeableConcept code,
@@ -2844,7 +2841,6 @@ MeasureStratifier _$MeasureStratifierFromJson(Map<String, dynamic> json) {
 class _$MeasureStratifierTearOff {
   const _$MeasureStratifierTearOff();
 
-// ignore: unused_element
   _MeasureStratifier call(
       {Identifier identifier,
       String criteria,
@@ -3112,7 +3108,6 @@ MeasureSupplementalData _$MeasureSupplementalDataFromJson(
 class _$MeasureSupplementalDataTearOff {
   const _$MeasureSupplementalDataTearOff();
 
-// ignore: unused_element
   _MeasureSupplementalData call(
       {Identifier identifier,
       List<CodeableConcept> usage,
@@ -3400,7 +3395,6 @@ MeasureReport _$MeasureReportFromJson(Map<String, dynamic> json) {
 class _$MeasureReportTearOff {
   const _$MeasureReportTearOff();
 
-// ignore: unused_element
   _MeasureReport call(
       {@required @JsonKey(defaultValue: 'MeasureReport') String resourceType,
       Id id,
@@ -4207,7 +4201,6 @@ MeasureReportGroup _$MeasureReportGroupFromJson(Map<String, dynamic> json) {
 class _$MeasureReportGroupTearOff {
   const _$MeasureReportGroupTearOff();
 
-// ignore: unused_element
   _MeasureReportGroup call(
       {@required Identifier identifier,
       List<MeasureReportPopulation> population,
@@ -4471,7 +4464,6 @@ MeasureReportPopulation _$MeasureReportPopulationFromJson(
 class _$MeasureReportPopulationTearOff {
   const _$MeasureReportPopulationTearOff();
 
-// ignore: unused_element
   _MeasureReportPopulation call(
       {Identifier identifier,
       CodeableConcept code,
@@ -4748,7 +4740,6 @@ MeasureReportStratifier _$MeasureReportStratifierFromJson(
 class _$MeasureReportStratifierTearOff {
   const _$MeasureReportStratifierTearOff();
 
-// ignore: unused_element
   _MeasureReportStratifier call(
       {Identifier identifier, List<MeasureReportStratum> stratum}) {
     return _MeasureReportStratifier(
@@ -4918,7 +4909,6 @@ MeasureReportStratum _$MeasureReportStratumFromJson(Map<String, dynamic> json) {
 class _$MeasureReportStratumTearOff {
   const _$MeasureReportStratumTearOff();
 
-// ignore: unused_element
   _MeasureReportStratum call(
       {String value,
       @JsonKey(name: '_value') Element valueElement,
@@ -5183,7 +5173,6 @@ MeasureReportPopulation1 _$MeasureReportPopulation1FromJson(
 class _$MeasureReportPopulation1TearOff {
   const _$MeasureReportPopulation1TearOff();
 
-// ignore: unused_element
   _MeasureReportPopulation1 call(
       {Identifier identifier,
       CodeableConcept code,

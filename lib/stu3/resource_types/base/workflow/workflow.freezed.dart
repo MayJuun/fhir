@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'workflow.dart';
 
@@ -15,7 +15,6 @@ Appointment _$AppointmentFromJson(Map<String, dynamic> json) {
 class _$AppointmentTearOff {
   const _$AppointmentTearOff();
 
-// ignore: unused_element
   _Appointment call(
       {@required @JsonKey(defaultValue: 'Appointment') String resourceType,
       Id id,
@@ -1164,7 +1163,6 @@ AppointmentParticipant _$AppointmentParticipantFromJson(
 class _$AppointmentParticipantTearOff {
   const _$AppointmentParticipantTearOff();
 
-// ignore: unused_element
   _AppointmentParticipant call(
       {List<CodeableConcept> type,
       Reference actor,
@@ -1461,7 +1459,6 @@ AppointmentResponse _$AppointmentResponseFromJson(Map<String, dynamic> json) {
 class _$AppointmentResponseTearOff {
   const _$AppointmentResponseTearOff();
 
-// ignore: unused_element
   _AppointmentResponse call(
       {@required
       @JsonKey(defaultValue: 'AppointmentResponse')
@@ -2257,7 +2254,6 @@ ProcessRequest _$ProcessRequestFromJson(Map<String, dynamic> json) {
 class _$ProcessRequestTearOff {
   const _$ProcessRequestTearOff();
 
-// ignore: unused_element
   _ProcessRequest call(
       {@required @JsonKey(defaultValue: 'ProcessRequest') String resourceType,
       Id id,
@@ -3274,7 +3270,6 @@ ProcessRequestItem _$ProcessRequestItemFromJson(Map<String, dynamic> json) {
 class _$ProcessRequestItemTearOff {
   const _$ProcessRequestItemTearOff();
 
-// ignore: unused_element
   _ProcessRequestItem call(
       {Id sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement}) {
@@ -3457,7 +3452,6 @@ ProcessResponse _$ProcessResponseFromJson(Map<String, dynamic> json) {
 class _$ProcessResponseTearOff {
   const _$ProcessResponseTearOff();
 
-// ignore: unused_element
   _ProcessResponse call(
       {@required @JsonKey(defaultValue: 'ProcessResponse') String resourceType,
       Id id,
@@ -4335,7 +4329,6 @@ ProcessResponseProcessNote _$ProcessResponseProcessNoteFromJson(
 class _$ProcessResponseProcessNoteTearOff {
   const _$ProcessResponseProcessNoteTearOff();
 
-// ignore: unused_element
   _ProcessResponseProcessNote call(
       {CodeableConcept type,
       String text,
@@ -4544,7 +4537,6 @@ RequestGroup _$RequestGroupFromJson(Map<String, dynamic> json) {
 class _$RequestGroupTearOff {
   const _$RequestGroupTearOff();
 
-// ignore: unused_element
   _RequestGroup call(
       {@required @JsonKey(defaultValue: 'RequestGroup') String resourceType,
       Id id,
@@ -5510,7 +5502,6 @@ RequestGroupAction _$RequestGroupActionFromJson(Map<String, dynamic> json) {
 class _$RequestGroupActionTearOff {
   const _$RequestGroupActionTearOff();
 
-// ignore: unused_element
   _RequestGroupAction call(
       {String label,
       @JsonKey(name: '_label') Element labelElement,
@@ -6559,7 +6550,6 @@ RequestGroupCondition _$RequestGroupConditionFromJson(
 class _$RequestGroupConditionTearOff {
   const _$RequestGroupConditionTearOff();
 
-// ignore: unused_element
   _RequestGroupCondition call(
       {String kind,
       @JsonKey(name: '_kind') Element kindElement,
@@ -6915,7 +6905,6 @@ RequestGroupRelatedAction _$RequestGroupRelatedActionFromJson(
 class _$RequestGroupRelatedActionTearOff {
   const _$RequestGroupRelatedActionTearOff();
 
-// ignore: unused_element
   _RequestGroupRelatedAction call(
       {Id actionId,
       @JsonKey(name: '_actionId') Element actionIdElement,
@@ -7228,7 +7217,6 @@ Schedule _$ScheduleFromJson(Map<String, dynamic> json) {
 class _$ScheduleTearOff {
   const _$ScheduleTearOff();
 
-// ignore: unused_element
   _Schedule call(
       {@required @JsonKey(defaultValue: 'Schedule') String resourceType,
       Id id,
@@ -7913,7 +7901,6 @@ Slot _$SlotFromJson(Map<String, dynamic> json) {
 class _$SlotTearOff {
   const _$SlotTearOff();
 
-// ignore: unused_element
   _Slot call(
       {@required @JsonKey(defaultValue: 'Slot') String resourceType,
       Id id,
@@ -8779,7 +8766,6 @@ Task _$TaskFromJson(Map<String, dynamic> json) {
 class _$TaskTearOff {
   const _$TaskTearOff();
 
-// ignore: unused_element
   _Task call(
       {@required @JsonKey(defaultValue: 'Task') String resourceType,
       Id id,
@@ -10169,7 +10155,6 @@ TaskRequester _$TaskRequesterFromJson(Map<String, dynamic> json) {
 class _$TaskRequesterTearOff {
   const _$TaskRequesterTearOff();
 
-// ignore: unused_element
   _TaskRequester call({@required Reference agent, Reference onBehalfOf}) {
     return _TaskRequester(
       agent: agent,
@@ -10346,7 +10331,6 @@ TaskRestriction _$TaskRestrictionFromJson(Map<String, dynamic> json) {
 class _$TaskRestrictionTearOff {
   const _$TaskRestrictionTearOff();
 
-// ignore: unused_element
   _TaskRestriction call(
       {Decimal repetitions,
       @JsonKey(name: '_repetitions') Element repetitionsElement,
@@ -10580,7 +10564,6 @@ TaskInput _$TaskInputFromJson(Map<String, dynamic> json) {
 class _$TaskInputTearOff {
   const _$TaskInputTearOff();
 
-// ignore: unused_element
   _TaskInput call(
       {@required CodeableConcept type,
       Boolean valueBoolean,
@@ -12922,7 +12905,6 @@ TaskOutput _$TaskOutputFromJson(Map<String, dynamic> json) {
 class _$TaskOutputTearOff {
   const _$TaskOutputTearOff();
 
-// ignore: unused_element
   _TaskOutput call(
       {@required CodeableConcept type,
       Boolean valueBoolean,

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'support.dart';
 
@@ -15,7 +15,6 @@ Coverage _$CoverageFromJson(Map<String, dynamic> json) {
 class _$CoverageTearOff {
   const _$CoverageTearOff();
 
-// ignore: unused_element
   _Coverage call(
       {@required @JsonKey(defaultValue: 'Coverage') String resourceType,
       Id id,
@@ -1073,7 +1072,6 @@ CoverageClass _$CoverageClassFromJson(Map<String, dynamic> json) {
 class _$CoverageClassTearOff {
   const _$CoverageClassTearOff();
 
-// ignore: unused_element
   _CoverageClass call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1405,7 +1403,6 @@ CoverageCostToBeneficiary _$CoverageCostToBeneficiaryFromJson(
 class _$CoverageCostToBeneficiaryTearOff {
   const _$CoverageCostToBeneficiaryTearOff();
 
-// ignore: unused_element
   _CoverageCostToBeneficiary call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1719,7 +1716,6 @@ CoverageException _$CoverageExceptionFromJson(Map<String, dynamic> json) {
 class _$CoverageExceptionTearOff {
   const _$CoverageExceptionTearOff();
 
-// ignore: unused_element
   _CoverageException call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1970,7 +1966,6 @@ CoverageEligibilityRequest _$CoverageEligibilityRequestFromJson(
 class _$CoverageEligibilityRequestTearOff {
   const _$CoverageEligibilityRequestTearOff();
 
-// ignore: unused_element
   _CoverageEligibilityRequest call(
       {@required
       @JsonKey(defaultValue: 'CoverageEligibilityRequest')
@@ -2962,7 +2957,6 @@ CoverageEligibilityRequestSupportingInfo
 class _$CoverageEligibilityRequestSupportingInfoTearOff {
   const _$CoverageEligibilityRequestSupportingInfoTearOff();
 
-// ignore: unused_element
   _CoverageEligibilityRequestSupportingInfo call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3323,7 +3317,6 @@ CoverageEligibilityRequestInsurance
 class _$CoverageEligibilityRequestInsuranceTearOff {
   const _$CoverageEligibilityRequestInsuranceTearOff();
 
-// ignore: unused_element
   _CoverageEligibilityRequestInsurance call(
       {String id,
       @JsonKey(name: 'extension')
@@ -3693,7 +3686,6 @@ CoverageEligibilityRequestItem _$CoverageEligibilityRequestItemFromJson(
 class _$CoverageEligibilityRequestItemTearOff {
   const _$CoverageEligibilityRequestItemTearOff();
 
-// ignore: unused_element
   _CoverageEligibilityRequestItem call(
       {String id,
       @JsonKey(name: 'extension')
@@ -4215,7 +4207,6 @@ CoverageEligibilityRequestDiagnosis
 class _$CoverageEligibilityRequestDiagnosisTearOff {
   const _$CoverageEligibilityRequestDiagnosisTearOff();
 
-// ignore: unused_element
   _CoverageEligibilityRequestDiagnosis call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -4491,7 +4482,6 @@ CoverageEligibilityResponse _$CoverageEligibilityResponseFromJson(
 class _$CoverageEligibilityResponseTearOff {
   const _$CoverageEligibilityResponseTearOff();
 
-// ignore: unused_element
   _CoverageEligibilityResponse call(
       {@required
       @JsonKey(defaultValue: 'CoverageEligibilityResponse')
@@ -5648,7 +5638,6 @@ CoverageEligibilityResponseInsurance
 class _$CoverageEligibilityResponseInsuranceTearOff {
   const _$CoverageEligibilityResponseInsuranceTearOff();
 
-// ignore: unused_element
   _CoverageEligibilityResponseInsurance call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5999,7 +5988,6 @@ CoverageEligibilityResponseItem _$CoverageEligibilityResponseItemFromJson(
 class _$CoverageEligibilityResponseItemTearOff {
   const _$CoverageEligibilityResponseItemTearOff();
 
-// ignore: unused_element
   _CoverageEligibilityResponseItem call(
       {String id,
       @JsonKey(name: 'extension')
@@ -6792,7 +6780,6 @@ CoverageEligibilityResponseBenefit _$CoverageEligibilityResponseBenefitFromJson(
 class _$CoverageEligibilityResponseBenefitTearOff {
   const _$CoverageEligibilityResponseBenefitTearOff();
 
-// ignore: unused_element
   _CoverageEligibilityResponseBenefit call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -7339,7 +7326,6 @@ CoverageEligibilityResponseError _$CoverageEligibilityResponseErrorFromJson(
 class _$CoverageEligibilityResponseErrorTearOff {
   const _$CoverageEligibilityResponseErrorTearOff();
 
-// ignore: unused_element
   _CoverageEligibilityResponseError call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -7569,7 +7555,6 @@ EnrollmentRequest _$EnrollmentRequestFromJson(Map<String, dynamic> json) {
 class _$EnrollmentRequestTearOff {
   const _$EnrollmentRequestTearOff();
 
-// ignore: unused_element
   _EnrollmentRequest call(
       {@required
       @JsonKey(defaultValue: 'EnrollmentRequest')
@@ -8268,7 +8253,6 @@ EnrollmentResponse _$EnrollmentResponseFromJson(Map<String, dynamic> json) {
 class _$EnrollmentResponseTearOff {
   const _$EnrollmentResponseTearOff();
 
-// ignore: unused_element
   _EnrollmentResponse call(
       {@required
       @JsonKey(defaultValue: 'EnrollmentResponse')

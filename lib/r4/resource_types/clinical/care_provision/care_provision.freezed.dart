@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'care_provision.dart';
 
@@ -15,7 +15,6 @@ CarePlan _$CarePlanFromJson(Map<String, dynamic> json) {
 class _$CarePlanTearOff {
   const _$CarePlanTearOff();
 
-// ignore: unused_element
   _CarePlan call(
       {@required @JsonKey(defaultValue: 'CarePlan') String resourceType,
       Id id,
@@ -1141,7 +1140,6 @@ CarePlanActivity _$CarePlanActivityFromJson(Map<String, dynamic> json) {
 class _$CarePlanActivityTearOff {
   const _$CarePlanActivityTearOff();
 
-// ignore: unused_element
   _CarePlanActivity call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1460,7 +1458,6 @@ CarePlanDetail _$CarePlanDetailFromJson(Map<String, dynamic> json) {
 class _$CarePlanDetailTearOff {
   const _$CarePlanDetailTearOff();
 
-// ignore: unused_element
   _CarePlanDetail call(
       {String id,
       @JsonKey(name: 'extension')
@@ -2438,7 +2435,6 @@ CareTeam _$CareTeamFromJson(Map<String, dynamic> json) {
 class _$CareTeamTearOff {
   const _$CareTeamTearOff();
 
-// ignore: unused_element
   _CareTeam call(
       {@required @JsonKey(defaultValue: 'CareTeam') String resourceType,
       Id id,
@@ -3234,7 +3230,6 @@ CareTeamParticipant _$CareTeamParticipantFromJson(Map<String, dynamic> json) {
 class _$CareTeamParticipantTearOff {
   const _$CareTeamParticipantTearOff();
 
-// ignore: unused_element
   _CareTeamParticipant call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3536,7 +3531,6 @@ Goal _$GoalFromJson(Map<String, dynamic> json) {
 class _$GoalTearOff {
   const _$GoalTearOff();
 
-// ignore: unused_element
   _Goal call(
       {@required
       @JsonKey(defaultValue: 'Goal')
@@ -4591,7 +4585,6 @@ GoalTarget _$GoalTargetFromJson(Map<String, dynamic> json) {
 class _$GoalTargetTearOff {
   const _$GoalTargetTearOff();
 
-// ignore: unused_element
   _GoalTarget call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5226,7 +5219,6 @@ NutritionOrder _$NutritionOrderFromJson(Map<String, dynamic> json) {
 class _$NutritionOrderTearOff {
   const _$NutritionOrderTearOff();
 
-// ignore: unused_element
   _NutritionOrder call(
       {@required @JsonKey(defaultValue: 'NutritionOrder') String resourceType,
       Id id,
@@ -6226,7 +6218,6 @@ NutritionOrderOralDiet _$NutritionOrderOralDietFromJson(
 class _$NutritionOrderOralDietTearOff {
   const _$NutritionOrderOralDietTearOff();
 
-// ignore: unused_element
   _NutritionOrderOralDiet call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -6584,7 +6575,6 @@ NutritionOrderNutrient _$NutritionOrderNutrientFromJson(
 class _$NutritionOrderNutrientTearOff {
   const _$NutritionOrderNutrientTearOff();
 
-// ignore: unused_element
   _NutritionOrderNutrient call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -6838,7 +6828,6 @@ NutritionOrderTexture _$NutritionOrderTextureFromJson(
 class _$NutritionOrderTextureTearOff {
   const _$NutritionOrderTextureTearOff();
 
-// ignore: unused_element
   _NutritionOrderTexture call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -7095,7 +7084,6 @@ NutritionOrderSupplement _$NutritionOrderSupplementFromJson(
 class _$NutritionOrderSupplementTearOff {
   const _$NutritionOrderSupplementTearOff();
 
-// ignore: unused_element
   _NutritionOrderSupplement call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -7490,7 +7478,6 @@ NutritionOrderEnteralFormula _$NutritionOrderEnteralFormulaFromJson(
 class _$NutritionOrderEnteralFormulaTearOff {
   const _$NutritionOrderEnteralFormulaTearOff();
 
-// ignore: unused_element
   _NutritionOrderEnteralFormula call(
       {String id,
       @JsonKey(name: 'extension')
@@ -8104,7 +8091,6 @@ NutritionOrderAdministration _$NutritionOrderAdministrationFromJson(
 class _$NutritionOrderAdministrationTearOff {
   const _$NutritionOrderAdministrationTearOff();
 
-// ignore: unused_element
   _NutritionOrderAdministration call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -8431,7 +8417,6 @@ RequestGroup _$RequestGroupFromJson(Map<String, dynamic> json) {
 class _$RequestGroupTearOff {
   const _$RequestGroupTearOff();
 
-// ignore: unused_element
   _RequestGroup call(
       {@required
       @JsonKey(defaultValue: 'RequestGroup')
@@ -9522,7 +9507,6 @@ RequestGroupAction _$RequestGroupActionFromJson(Map<String, dynamic> json) {
 class _$RequestGroupActionTearOff {
   const _$RequestGroupActionTearOff();
 
-// ignore: unused_element
   _RequestGroupAction call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -10717,7 +10701,6 @@ RequestGroupCondition _$RequestGroupConditionFromJson(
 class _$RequestGroupConditionTearOff {
   const _$RequestGroupConditionTearOff();
 
-// ignore: unused_element
   _RequestGroupCondition call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -10995,7 +10978,6 @@ RequestGroupRelatedAction _$RequestGroupRelatedActionFromJson(
 class _$RequestGroupRelatedActionTearOff {
   const _$RequestGroupRelatedActionTearOff();
 
-// ignore: unused_element
   _RequestGroupRelatedAction call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -11373,7 +11355,6 @@ RiskAssessment _$RiskAssessmentFromJson(Map<String, dynamic> json) {
 class _$RiskAssessmentTearOff {
   const _$RiskAssessmentTearOff();
 
-// ignore: unused_element
   _RiskAssessment call(
       {@required @JsonKey(defaultValue: 'RiskAssessment') String resourceType,
       Id id,
@@ -12381,7 +12362,6 @@ RiskAssessmentPrediction _$RiskAssessmentPredictionFromJson(
 class _$RiskAssessmentPredictionTearOff {
   const _$RiskAssessmentPredictionTearOff();
 
-// ignore: unused_element
   _RiskAssessmentPrediction call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -12928,7 +12908,6 @@ ServiceRequest _$ServiceRequestFromJson(Map<String, dynamic> json) {
 class _$ServiceRequestTearOff {
   const _$ServiceRequestTearOff();
 
-// ignore: unused_element
   _ServiceRequest call(
       {@required @JsonKey(defaultValue: 'ServiceRequest') String resourceType,
       Id id,
@@ -14608,7 +14587,6 @@ VisionPrescription _$VisionPrescriptionFromJson(Map<String, dynamic> json) {
 class _$VisionPrescriptionTearOff {
   const _$VisionPrescriptionTearOff();
 
-// ignore: unused_element
   _VisionPrescription call(
       {@required
       @JsonKey(defaultValue: 'VisionPrescription')
@@ -15375,7 +15353,6 @@ VisionPrescriptionLensSpecification
 class _$VisionPrescriptionLensSpecificationTearOff {
   const _$VisionPrescriptionLensSpecificationTearOff();
 
-// ignore: unused_element
   _VisionPrescriptionLensSpecification call(
       {String id,
       @JsonKey(name: 'extension')
@@ -16317,7 +16294,6 @@ VisionPrescriptionPrism _$VisionPrescriptionPrismFromJson(
 class _$VisionPrescriptionPrismTearOff {
   const _$VisionPrescriptionPrismTearOff();
 
-// ignore: unused_element
   _VisionPrescriptionPrism call(
       {String id,
       @JsonKey(name: 'extension')

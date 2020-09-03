@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'management.dart';
 
@@ -15,7 +15,6 @@ Encounter _$EncounterFromJson(Map<String, dynamic> json) {
 class _$EncounterTearOff {
   const _$EncounterTearOff();
 
-// ignore: unused_element
   _Encounter call(
       {@required @JsonKey(defaultValue: 'Encounter') String resourceType,
       Id id,
@@ -1015,7 +1014,6 @@ EncounterStatusHistory _$EncounterStatusHistoryFromJson(
 class _$EncounterStatusHistoryTearOff {
   const _$EncounterStatusHistoryTearOff();
 
-// ignore: unused_element
   _EncounterStatusHistory call(
       {EncounterStatusHistoryStatus status,
       @JsonKey(name: '_status') Element statusElement,
@@ -1230,7 +1228,6 @@ EncounterClassHistory _$EncounterClassHistoryFromJson(
 class _$EncounterClassHistoryTearOff {
   const _$EncounterClassHistoryTearOff();
 
-// ignore: unused_element
   _EncounterClassHistory call(
       {@required @JsonKey(name: 'class') Coding class_,
       @required Period period}) {
@@ -1413,7 +1410,6 @@ EncounterParticipant _$EncounterParticipantFromJson(Map<String, dynamic> json) {
 class _$EncounterParticipantTearOff {
   const _$EncounterParticipantTearOff();
 
-// ignore: unused_element
   _EncounterParticipant call(
       {List<CodeableConcept> type, Period period, Reference individual}) {
     return _EncounterParticipant(
@@ -1606,7 +1602,6 @@ EncounterDiagnosis _$EncounterDiagnosisFromJson(Map<String, dynamic> json) {
 class _$EncounterDiagnosisTearOff {
   const _$EncounterDiagnosisTearOff();
 
-// ignore: unused_element
   _EncounterDiagnosis call(
       {@required Reference condition,
       CodeableConcept role,
@@ -1848,7 +1843,6 @@ EncounterHospitalization _$EncounterHospitalizationFromJson(
 class _$EncounterHospitalizationTearOff {
   const _$EncounterHospitalizationTearOff();
 
-// ignore: unused_element
   _EncounterHospitalization call(
       {Identifier preAdmissionIdentifier,
       Reference origin,
@@ -2250,7 +2244,6 @@ EncounterLocation _$EncounterLocationFromJson(Map<String, dynamic> json) {
 class _$EncounterLocationTearOff {
   const _$EncounterLocationTearOff();
 
-// ignore: unused_element
   _EncounterLocation call(
       {@required Reference location,
       EncounterLocationStatus status,
@@ -2493,7 +2486,6 @@ EpisodeOfCare _$EpisodeOfCareFromJson(Map<String, dynamic> json) {
 class _$EpisodeOfCareTearOff {
   const _$EpisodeOfCareTearOff();
 
-// ignore: unused_element
   _EpisodeOfCare call(
       {@required @JsonKey(defaultValue: 'EpisodeOfCare') String resourceType,
       Id id,
@@ -3250,7 +3242,6 @@ EpisodeOfCareStatusHistory _$EpisodeOfCareStatusHistoryFromJson(
 class _$EpisodeOfCareStatusHistoryTearOff {
   const _$EpisodeOfCareStatusHistoryTearOff();
 
-// ignore: unused_element
   _EpisodeOfCareStatusHistory call(
       {EpisodeOfCareStatusHistoryStatus status,
       @JsonKey(name: '_status') Element statusElement,
@@ -3468,7 +3459,6 @@ EpisodeOfCareDiagnosis _$EpisodeOfCareDiagnosisFromJson(
 class _$EpisodeOfCareDiagnosisTearOff {
   const _$EpisodeOfCareDiagnosisTearOff();
 
-// ignore: unused_element
   _EpisodeOfCareDiagnosis call(
       {@required Reference condition,
       CodeableConcept role,
@@ -3710,7 +3700,6 @@ Flag _$FlagFromJson(Map<String, dynamic> json) {
 class _$FlagTearOff {
   const _$FlagTearOff();
 
-// ignore: unused_element
   _Flag call(
       {@required @JsonKey(defaultValue: 'Flag') String resourceType,
       Id id,
@@ -4395,7 +4384,6 @@ Library _$LibraryFromJson(Map<String, dynamic> json) {
 class _$LibraryTearOff {
   const _$LibraryTearOff();
 
-// ignore: unused_element
   _Library call(
       {@required @JsonKey(defaultValue: 'Library') String resourceType,
       Id id,
@@ -5858,7 +5846,6 @@ List_ _$List_FromJson(Map<String, dynamic> json) {
 class _$List_TearOff {
   const _$List_TearOff();
 
-// ignore: unused_element
   _List_ call(
       {@required @JsonKey(defaultValue: 'List') String resourceType,
       Id id,
@@ -6749,7 +6736,6 @@ ListEntry _$ListEntryFromJson(Map<String, dynamic> json) {
 class _$ListEntryTearOff {
   const _$ListEntryTearOff();
 
-// ignore: unused_element
   _ListEntry call(
       {CodeableConcept flag,
       Boolean deleted,

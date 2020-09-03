@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'conformance.dart';
 
@@ -15,7 +15,6 @@ CapabilityStatement _$CapabilityStatementFromJson(Map<String, dynamic> json) {
 class _$CapabilityStatementTearOff {
   const _$CapabilityStatementTearOff();
 
-// ignore: unused_element
   _CapabilityStatement call(
       {@required
       @JsonKey(defaultValue: 'CapabilityStatement')
@@ -1626,7 +1625,6 @@ CapabilityStatementSoftware _$CapabilityStatementSoftwareFromJson(
 class _$CapabilityStatementSoftwareTearOff {
   const _$CapabilityStatementSoftwareTearOff();
 
-// ignore: unused_element
   _CapabilityStatementSoftware call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1998,7 +1996,6 @@ CapabilityStatementImplementation _$CapabilityStatementImplementationFromJson(
 class _$CapabilityStatementImplementationTearOff {
   const _$CapabilityStatementImplementationTearOff();
 
-// ignore: unused_element
   _CapabilityStatementImplementation call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2348,7 +2345,6 @@ CapabilityStatementRest _$CapabilityStatementRestFromJson(
 class _$CapabilityStatementRestTearOff {
   const _$CapabilityStatementRestTearOff();
 
-// ignore: unused_element
   _CapabilityStatementRest call(
       {String id,
       @JsonKey(name: 'extension')
@@ -2825,7 +2821,6 @@ CapabilityStatementSecurity _$CapabilityStatementSecurityFromJson(
 class _$CapabilityStatementSecurityTearOff {
   const _$CapabilityStatementSecurityTearOff();
 
-// ignore: unused_element
   _CapabilityStatementSecurity call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3160,7 +3155,6 @@ CapabilityStatementResource _$CapabilityStatementResourceFromJson(
 class _$CapabilityStatementResourceTearOff {
   const _$CapabilityStatementResourceTearOff();
 
-// ignore: unused_element
   _CapabilityStatementResource call(
       {String id,
       @JsonKey(name: 'extension')
@@ -4234,7 +4228,6 @@ CapabilityStatementInteraction _$CapabilityStatementInteractionFromJson(
 class _$CapabilityStatementInteractionTearOff {
   const _$CapabilityStatementInteractionTearOff();
 
-// ignore: unused_element
   _CapabilityStatementInteraction call(
       {String id,
       @JsonKey(name: 'extension')
@@ -4577,7 +4570,6 @@ CapabilityStatementSearchParam _$CapabilityStatementSearchParamFromJson(
 class _$CapabilityStatementSearchParamTearOff {
   const _$CapabilityStatementSearchParamTearOff();
 
-// ignore: unused_element
   _CapabilityStatementSearchParam call(
       {String id,
       @JsonKey(name: 'extension')
@@ -5001,7 +4993,6 @@ CapabilityStatementOperation _$CapabilityStatementOperationFromJson(
 class _$CapabilityStatementOperationTearOff {
   const _$CapabilityStatementOperationTearOff();
 
-// ignore: unused_element
   _CapabilityStatementOperation call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5337,7 +5328,6 @@ CapabilityStatementInteraction1 _$CapabilityStatementInteraction1FromJson(
 class _$CapabilityStatementInteraction1TearOff {
   const _$CapabilityStatementInteraction1TearOff();
 
-// ignore: unused_element
   _CapabilityStatementInteraction1 call(
       {String id,
       @JsonKey(name: 'extension')
@@ -5680,7 +5670,6 @@ CapabilityStatementMessaging _$CapabilityStatementMessagingFromJson(
 class _$CapabilityStatementMessagingTearOff {
   const _$CapabilityStatementMessagingTearOff();
 
-// ignore: unused_element
   _CapabilityStatementMessaging call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -6047,7 +6036,6 @@ CapabilityStatementEndpoint _$CapabilityStatementEndpointFromJson(
 class _$CapabilityStatementEndpointTearOff {
   const _$CapabilityStatementEndpointTearOff();
 
-// ignore: unused_element
   _CapabilityStatementEndpoint call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -6335,7 +6323,6 @@ CapabilityStatementSupportedMessage
 class _$CapabilityStatementSupportedMessageTearOff {
   const _$CapabilityStatementSupportedMessageTearOff();
 
-// ignore: unused_element
   _CapabilityStatementSupportedMessage call(
       {String id,
       @JsonKey(name: 'extension')
@@ -6638,7 +6625,6 @@ CapabilityStatementDocument _$CapabilityStatementDocumentFromJson(
 class _$CapabilityStatementDocumentTearOff {
   const _$CapabilityStatementDocumentTearOff();
 
-// ignore: unused_element
   _CapabilityStatementDocument call(
       {String id,
       @JsonKey(name: 'extension')
@@ -7000,7 +6986,6 @@ CompartmentDefinition _$CompartmentDefinitionFromJson(
 class _$CompartmentDefinitionTearOff {
   const _$CompartmentDefinitionTearOff();
 
-// ignore: unused_element
   _CompartmentDefinition call(
       {@required
       @JsonKey(defaultValue: 'CompartmentDefinition')
@@ -8194,7 +8179,6 @@ CompartmentDefinitionResource _$CompartmentDefinitionResourceFromJson(
 class _$CompartmentDefinitionResourceTearOff {
   const _$CompartmentDefinitionResourceTearOff();
 
-// ignore: unused_element
   _CompartmentDefinitionResource call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -8552,7 +8536,6 @@ ExampleScenario _$ExampleScenarioFromJson(Map<String, dynamic> json) {
 class _$ExampleScenarioTearOff {
   const _$ExampleScenarioTearOff();
 
-// ignore: unused_element
   _ExampleScenario call(
       {@required
       @JsonKey(defaultValue: 'ExampleScenario')
@@ -9704,7 +9687,6 @@ ExampleScenarioActor _$ExampleScenarioActorFromJson(Map<String, dynamic> json) {
 class _$ExampleScenarioActorTearOff {
   const _$ExampleScenarioActorTearOff();
 
-// ignore: unused_element
   _ExampleScenarioActor call(
       {String id,
       @JsonKey(name: 'extension')
@@ -10148,7 +10130,6 @@ ExampleScenarioInstance _$ExampleScenarioInstanceFromJson(
 class _$ExampleScenarioInstanceTearOff {
   const _$ExampleScenarioInstanceTearOff();
 
-// ignore: unused_element
   _ExampleScenarioInstance call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -10620,7 +10601,6 @@ ExampleScenarioVersion _$ExampleScenarioVersionFromJson(
 class _$ExampleScenarioVersionTearOff {
   const _$ExampleScenarioVersionTearOff();
 
-// ignore: unused_element
   _ExampleScenarioVersion call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -10928,7 +10908,6 @@ ExampleScenarioContainedInstance _$ExampleScenarioContainedInstanceFromJson(
 class _$ExampleScenarioContainedInstanceTearOff {
   const _$ExampleScenarioContainedInstanceTearOff();
 
-// ignore: unused_element
   _ExampleScenarioContainedInstance call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -11246,7 +11225,6 @@ ExampleScenarioProcess _$ExampleScenarioProcessFromJson(
 class _$ExampleScenarioProcessTearOff {
   const _$ExampleScenarioProcessTearOff();
 
-// ignore: unused_element
   _ExampleScenarioProcess call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -11693,7 +11671,6 @@ ExampleScenarioStep _$ExampleScenarioStepFromJson(Map<String, dynamic> json) {
 class _$ExampleScenarioStepTearOff {
   const _$ExampleScenarioStepTearOff();
 
-// ignore: unused_element
   _ExampleScenarioStep call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -12021,7 +11998,6 @@ ExampleScenarioOperation _$ExampleScenarioOperationFromJson(
 class _$ExampleScenarioOperationTearOff {
   const _$ExampleScenarioOperationTearOff();
 
-// ignore: unused_element
   _ExampleScenarioOperation call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -12752,7 +12728,6 @@ ExampleScenarioAlternative _$ExampleScenarioAlternativeFromJson(
 class _$ExampleScenarioAlternativeTearOff {
   const _$ExampleScenarioAlternativeTearOff();
 
-// ignore: unused_element
   _ExampleScenarioAlternative call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -13078,7 +13053,6 @@ GraphDefinition _$GraphDefinitionFromJson(Map<String, dynamic> json) {
 class _$GraphDefinitionTearOff {
   const _$GraphDefinitionTearOff();
 
-// ignore: unused_element
   _GraphDefinition call(
       {@required
       @JsonKey(defaultValue: 'GraphDefinition')
@@ -14221,7 +14195,6 @@ GraphDefinitionLink _$GraphDefinitionLinkFromJson(Map<String, dynamic> json) {
 class _$GraphDefinitionLinkTearOff {
   const _$GraphDefinitionLinkTearOff();
 
-// ignore: unused_element
   _GraphDefinitionLink call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -14715,7 +14688,6 @@ GraphDefinitionTarget _$GraphDefinitionTargetFromJson(
 class _$GraphDefinitionTargetTearOff {
   const _$GraphDefinitionTargetTearOff();
 
-// ignore: unused_element
   _GraphDefinitionTarget call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -15076,7 +15048,6 @@ GraphDefinitionCompartment _$GraphDefinitionCompartmentFromJson(
 class _$GraphDefinitionCompartmentTearOff {
   const _$GraphDefinitionCompartmentTearOff();
 
-// ignore: unused_element
   _GraphDefinitionCompartment call(
       {String id,
       @JsonKey(name: 'extension')
@@ -15602,7 +15573,6 @@ ImplementationGuide _$ImplementationGuideFromJson(Map<String, dynamic> json) {
 class _$ImplementationGuideTearOff {
   const _$ImplementationGuideTearOff();
 
-// ignore: unused_element
   _ImplementationGuide call(
       {@required
       @JsonKey(defaultValue: 'ImplementationGuide')
@@ -17024,7 +16994,6 @@ ImplementationGuideDependsOn _$ImplementationGuideDependsOnFromJson(
 class _$ImplementationGuideDependsOnTearOff {
   const _$ImplementationGuideDependsOnTearOff();
 
-// ignore: unused_element
   _ImplementationGuideDependsOn call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -17356,7 +17325,6 @@ ImplementationGuideGlobal _$ImplementationGuideGlobalFromJson(
 class _$ImplementationGuideGlobalTearOff {
   const _$ImplementationGuideGlobalTearOff();
 
-// ignore: unused_element
   _ImplementationGuideGlobal call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -17621,7 +17589,6 @@ ImplementationGuideDefinition _$ImplementationGuideDefinitionFromJson(
 class _$ImplementationGuideDefinitionTearOff {
   const _$ImplementationGuideDefinitionTearOff();
 
-// ignore: unused_element
   _ImplementationGuideDefinition call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -17943,7 +17910,6 @@ ImplementationGuideGrouping _$ImplementationGuideGroupingFromJson(
 class _$ImplementationGuideGroupingTearOff {
   const _$ImplementationGuideGroupingTearOff();
 
-// ignore: unused_element
   _ImplementationGuideGrouping call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -18255,7 +18221,6 @@ ImplementationGuideResource _$ImplementationGuideResourceFromJson(
 class _$ImplementationGuideResourceTearOff {
   const _$ImplementationGuideResourceTearOff();
 
-// ignore: unused_element
   _ImplementationGuideResource call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -18834,7 +18799,6 @@ ImplementationGuidePage _$ImplementationGuidePageFromJson(
 class _$ImplementationGuidePageTearOff {
   const _$ImplementationGuidePageTearOff();
 
-// ignore: unused_element
   _ImplementationGuidePage call(
       {String id,
       @JsonKey(name: 'extension')
@@ -19285,7 +19249,6 @@ ImplementationGuideParameter _$ImplementationGuideParameterFromJson(
 class _$ImplementationGuideParameterTearOff {
   const _$ImplementationGuideParameterTearOff();
 
-// ignore: unused_element
   _ImplementationGuideParameter call(
       {String id,
       @JsonKey(name: 'extension')
@@ -19620,7 +19583,6 @@ ImplementationGuideTemplate _$ImplementationGuideTemplateFromJson(
 class _$ImplementationGuideTemplateTearOff {
   const _$ImplementationGuideTemplateTearOff();
 
-// ignore: unused_element
   _ImplementationGuideTemplate call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -19986,7 +19948,6 @@ ImplementationGuideManifest _$ImplementationGuideManifestFromJson(
 class _$ImplementationGuideManifestTearOff {
   const _$ImplementationGuideManifestTearOff();
 
-// ignore: unused_element
   _ImplementationGuideManifest call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -20376,7 +20337,6 @@ ImplementationGuideResource1 _$ImplementationGuideResource1FromJson(
 class _$ImplementationGuideResource1TearOff {
   const _$ImplementationGuideResource1TearOff();
 
-// ignore: unused_element
   _ImplementationGuideResource1 call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -20795,7 +20755,6 @@ ImplementationGuidePage1 _$ImplementationGuidePage1FromJson(
 class _$ImplementationGuidePage1TearOff {
   const _$ImplementationGuidePage1TearOff();
 
-// ignore: unused_element
   _ImplementationGuidePage1 call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -21141,7 +21100,6 @@ MessageDefinition _$MessageDefinitionFromJson(Map<String, dynamic> json) {
 class _$MessageDefinitionTearOff {
   const _$MessageDefinitionTearOff();
 
-// ignore: unused_element
   _MessageDefinition call(
       {@required
       @JsonKey(defaultValue: 'MessageDefinition')
@@ -22694,7 +22652,6 @@ MessageDefinitionFocus _$MessageDefinitionFocusFromJson(
 class _$MessageDefinitionFocusTearOff {
   const _$MessageDefinitionFocusTearOff();
 
-// ignore: unused_element
   _MessageDefinitionFocus call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -23067,7 +23024,6 @@ MessageDefinitionAllowedResponse _$MessageDefinitionAllowedResponseFromJson(
 class _$MessageDefinitionAllowedResponseTearOff {
   const _$MessageDefinitionAllowedResponseTearOff();
 
-// ignore: unused_element
   _MessageDefinitionAllowedResponse call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -23346,7 +23302,6 @@ OperationDefinition _$OperationDefinitionFromJson(Map<String, dynamic> json) {
 class _$OperationDefinitionTearOff {
   const _$OperationDefinitionTearOff();
 
-// ignore: unused_element
   _OperationDefinition call(
       {@required
       @JsonKey(defaultValue: 'OperationDefinition')
@@ -25041,7 +24996,6 @@ OperationDefinitionParameter _$OperationDefinitionParameterFromJson(
 class _$OperationDefinitionParameterTearOff {
   const _$OperationDefinitionParameterTearOff();
 
-// ignore: unused_element
   _OperationDefinitionParameter call(
       {String id,
       @JsonKey(name: 'extension')
@@ -25797,7 +25751,6 @@ OperationDefinitionBinding _$OperationDefinitionBindingFromJson(
 class _$OperationDefinitionBindingTearOff {
   const _$OperationDefinitionBindingTearOff();
 
-// ignore: unused_element
   _OperationDefinitionBinding call(
       {String id,
       @JsonKey(name: 'extension')
@@ -26092,7 +26045,6 @@ OperationDefinitionReferencedFrom _$OperationDefinitionReferencedFromFromJson(
 class _$OperationDefinitionReferencedFromTearOff {
   const _$OperationDefinitionReferencedFromTearOff();
 
-// ignore: unused_element
   _OperationDefinitionReferencedFrom call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -26409,7 +26361,6 @@ OperationDefinitionOverload _$OperationDefinitionOverloadFromJson(
 class _$OperationDefinitionOverloadTearOff {
   const _$OperationDefinitionOverloadTearOff();
 
-// ignore: unused_element
   _OperationDefinitionOverload call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -26712,7 +26663,6 @@ SearchParameter _$SearchParameterFromJson(Map<String, dynamic> json) {
 class _$SearchParameterTearOff {
   const _$SearchParameterTearOff();
 
-// ignore: unused_element
   _SearchParameter call(
       {@required
       @JsonKey(defaultValue: 'SearchParameter')
@@ -28494,7 +28444,6 @@ SearchParameterComponent _$SearchParameterComponentFromJson(
 class _$SearchParameterComponentTearOff {
   const _$SearchParameterComponentTearOff();
 
-// ignore: unused_element
   _SearchParameterComponent call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -28766,7 +28715,6 @@ StructureDefinition _$StructureDefinitionFromJson(Map<String, dynamic> json) {
 class _$StructureDefinitionTearOff {
   const _$StructureDefinitionTearOff();
 
-// ignore: unused_element
   _StructureDefinition call(
       {@required
       @JsonKey(defaultValue: 'StructureDefinition')
@@ -30549,7 +30497,6 @@ StructureDefinitionMapping _$StructureDefinitionMappingFromJson(
 class _$StructureDefinitionMappingTearOff {
   const _$StructureDefinitionMappingTearOff();
 
-// ignore: unused_element
   _StructureDefinitionMapping call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -30968,7 +30915,6 @@ StructureDefinitionContext _$StructureDefinitionContextFromJson(
 class _$StructureDefinitionContextTearOff {
   const _$StructureDefinitionContextTearOff();
 
-// ignore: unused_element
   _StructureDefinitionContext call(
       {String id,
       @JsonKey(name: 'extension')
@@ -31302,7 +31248,6 @@ StructureDefinitionSnapshot _$StructureDefinitionSnapshotFromJson(
 class _$StructureDefinitionSnapshotTearOff {
   const _$StructureDefinitionSnapshotTearOff();
 
-// ignore: unused_element
   _StructureDefinitionSnapshot call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -31520,7 +31465,6 @@ StructureDefinitionDifferential _$StructureDefinitionDifferentialFromJson(
 class _$StructureDefinitionDifferentialTearOff {
   const _$StructureDefinitionDifferentialTearOff();
 
-// ignore: unused_element
   _StructureDefinitionDifferential call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -31740,7 +31684,6 @@ StructureMap _$StructureMapFromJson(Map<String, dynamic> json) {
 class _$StructureMapTearOff {
   const _$StructureMapTearOff();
 
-// ignore: unused_element
   _StructureMap call(
       {@required
       @JsonKey(defaultValue: 'StructureMap')
@@ -32985,7 +32928,6 @@ StructureMapStructure _$StructureMapStructureFromJson(
 class _$StructureMapStructureTearOff {
   const _$StructureMapStructureTearOff();
 
-// ignore: unused_element
   _StructureMapStructure call(
       {String id,
       @JsonKey(name: 'extension')
@@ -33391,7 +33333,6 @@ StructureMapGroup _$StructureMapGroupFromJson(Map<String, dynamic> json) {
 class _$StructureMapGroupTearOff {
   const _$StructureMapGroupTearOff();
 
-// ignore: unused_element
   _StructureMapGroup call(
       {String id,
       @JsonKey(name: 'extension')
@@ -33900,7 +33841,6 @@ StructureMapInput _$StructureMapInputFromJson(Map<String, dynamic> json) {
 class _$StructureMapInputTearOff {
   const _$StructureMapInputTearOff();
 
-// ignore: unused_element
   _StructureMapInput call(
       {String id,
       @JsonKey(name: 'extension')
@@ -34341,7 +34281,6 @@ StructureMapRule _$StructureMapRuleFromJson(Map<String, dynamic> json) {
 class _$StructureMapRuleTearOff {
   const _$StructureMapRuleTearOff();
 
-// ignore: unused_element
   _StructureMapRule call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -34732,7 +34671,6 @@ StructureMapSource _$StructureMapSourceFromJson(Map<String, dynamic> json) {
 class _$StructureMapSourceTearOff {
   const _$StructureMapSourceTearOff();
 
-// ignore: unused_element
   _StructureMapSource call(
       {String id,
       @JsonKey(name: 'extension')
@@ -37818,7 +37756,6 @@ StructureMapTarget _$StructureMapTargetFromJson(Map<String, dynamic> json) {
 class _$StructureMapTargetTearOff {
   const _$StructureMapTargetTearOff();
 
-// ignore: unused_element
   _StructureMapTarget call(
       {String id,
       @JsonKey(name: 'extension')
@@ -38490,7 +38427,6 @@ StructureMapParameter _$StructureMapParameterFromJson(
 class _$StructureMapParameterTearOff {
   const _$StructureMapParameterTearOff();
 
-// ignore: unused_element
   _StructureMapParameter call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -38984,7 +38920,6 @@ StructureMapDependent _$StructureMapDependentFromJson(
 class _$StructureMapDependentTearOff {
   const _$StructureMapDependentTearOff();
 
-// ignore: unused_element
   _StructureMapDependent call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,

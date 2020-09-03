@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'devices.dart';
 
@@ -15,7 +15,6 @@ Device _$DeviceFromJson(Map<String, dynamic> json) {
 class _$DeviceTearOff {
   const _$DeviceTearOff();
 
-// ignore: unused_element
   _Device call(
       {@required @JsonKey(defaultValue: 'Device') String resourceType,
       Id id,
@@ -1011,7 +1010,6 @@ DeviceComponent _$DeviceComponentFromJson(Map<String, dynamic> json) {
 class _$DeviceComponentTearOff {
   const _$DeviceComponentTearOff();
 
-// ignore: unused_element
   _DeviceComponent call(
       {@required
       @JsonKey(defaultValue: 'DeviceComponent')
@@ -1743,7 +1741,6 @@ DeviceComponentProductionSpecification
 class _$DeviceComponentProductionSpecificationTearOff {
   const _$DeviceComponentProductionSpecificationTearOff();
 
-// ignore: unused_element
   _DeviceComponentProductionSpecification call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2037,7 +2034,6 @@ DeviceMetric _$DeviceMetricFromJson(Map<String, dynamic> json) {
 class _$DeviceMetricTearOff {
   const _$DeviceMetricTearOff();
 
-// ignore: unused_element
   _DeviceMetric call(
       {@required
       @JsonKey(defaultValue: 'DeviceMetric')
@@ -2942,7 +2938,6 @@ DeviceMetricCalibration _$DeviceMetricCalibrationFromJson(
 class _$DeviceMetricCalibrationTearOff {
   const _$DeviceMetricCalibrationTearOff();
 
-// ignore: unused_element
   _DeviceMetricCalibration call(
       {Id id,
       @JsonKey(name: 'extension')

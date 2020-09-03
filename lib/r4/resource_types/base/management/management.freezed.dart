@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'management.dart';
 
@@ -15,7 +15,6 @@ Encounter _$EncounterFromJson(Map<String, dynamic> json) {
 class _$EncounterTearOff {
   const _$EncounterTearOff();
 
-// ignore: unused_element
   _Encounter call(
       {@required
       @JsonKey(defaultValue: 'Encounter')
@@ -1091,7 +1090,6 @@ EncounterStatusHistory _$EncounterStatusHistoryFromJson(
 class _$EncounterStatusHistoryTearOff {
   const _$EncounterStatusHistoryTearOff();
 
-// ignore: unused_element
   _EncounterStatusHistory call(
       {String id,
       @JsonKey(name: 'extension')
@@ -1394,7 +1392,6 @@ EncounterClassHistory _$EncounterClassHistoryFromJson(
 class _$EncounterClassHistoryTearOff {
   const _$EncounterClassHistoryTearOff();
 
-// ignore: unused_element
   _EncounterClassHistory call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1649,7 +1646,6 @@ EncounterParticipant _$EncounterParticipantFromJson(Map<String, dynamic> json) {
 class _$EncounterParticipantTearOff {
   const _$EncounterParticipantTearOff();
 
-// ignore: unused_element
   _EncounterParticipant call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1920,7 +1916,6 @@ EncounterDiagnosis _$EncounterDiagnosisFromJson(Map<String, dynamic> json) {
 class _$EncounterDiagnosisTearOff {
   const _$EncounterDiagnosisTearOff();
 
-// ignore: unused_element
   _EncounterDiagnosis call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2229,7 +2224,6 @@ EncounterHospitalization _$EncounterHospitalizationFromJson(
 class _$EncounterHospitalizationTearOff {
   const _$EncounterHospitalizationTearOff();
 
-// ignore: unused_element
   _EncounterHospitalization call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2698,7 +2692,6 @@ EncounterLocation _$EncounterLocationFromJson(Map<String, dynamic> json) {
 class _$EncounterLocationTearOff {
   const _$EncounterLocationTearOff();
 
-// ignore: unused_element
   _EncounterLocation call(
       {String id,
       @JsonKey(name: 'extension')
@@ -3061,7 +3054,6 @@ EpisodeOfCare _$EpisodeOfCareFromJson(Map<String, dynamic> json) {
 class _$EpisodeOfCareTearOff {
   const _$EpisodeOfCareTearOff();
 
-// ignore: unused_element
   _EpisodeOfCare call(
       {@required
       @JsonKey(defaultValue: 'EpisodeOfCare')
@@ -3849,7 +3841,6 @@ EpisodeOfCareStatusHistory _$EpisodeOfCareStatusHistoryFromJson(
 class _$EpisodeOfCareStatusHistoryTearOff {
   const _$EpisodeOfCareStatusHistoryTearOff();
 
-// ignore: unused_element
   _EpisodeOfCareStatusHistory call(
       {String id,
       @JsonKey(name: 'extension')
@@ -4155,7 +4146,6 @@ EpisodeOfCareDiagnosis _$EpisodeOfCareDiagnosisFromJson(
 class _$EpisodeOfCareDiagnosisTearOff {
   const _$EpisodeOfCareDiagnosisTearOff();
 
-// ignore: unused_element
   _EpisodeOfCareDiagnosis call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -4464,7 +4454,6 @@ Flag _$FlagFromJson(Map<String, dynamic> json) {
 class _$FlagTearOff {
   const _$FlagTearOff();
 
-// ignore: unused_element
   _Flag call(
       {@required @JsonKey(defaultValue: 'Flag') String resourceType,
       Id id,
@@ -5141,7 +5130,6 @@ Library _$LibraryFromJson(Map<String, dynamic> json) {
 class _$LibraryTearOff {
   const _$LibraryTearOff();
 
-// ignore: unused_element
   _Library call(
       {@required @JsonKey(defaultValue: 'Library') String resourceType,
       Id id,
@@ -6787,7 +6775,6 @@ List_ _$List_FromJson(Map<String, dynamic> json) {
 class _$List_TearOff {
   const _$List_TearOff();
 
-// ignore: unused_element
   _List_ call(
       {@required @JsonKey(defaultValue: 'List_') String resourceType,
       Id id,
@@ -7684,7 +7671,6 @@ ListEntry _$ListEntryFromJson(Map<String, dynamic> json) {
 class _$ListEntryTearOff {
   const _$ListEntryTearOff();
 
-// ignore: unused_element
   _ListEntry call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,

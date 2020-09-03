@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'medications.dart';
 
@@ -15,7 +15,6 @@ Immunization _$ImmunizationFromJson(Map<String, dynamic> json) {
 class _$ImmunizationTearOff {
   const _$ImmunizationTearOff();
 
-// ignore: unused_element
   _Immunization call(
       {@required @JsonKey(defaultValue: 'Immunization') String resourceType,
       Id id,
@@ -1210,7 +1209,6 @@ ImmunizationPractitioner _$ImmunizationPractitionerFromJson(
 class _$ImmunizationPractitionerTearOff {
   const _$ImmunizationPractitionerTearOff();
 
-// ignore: unused_element
   _ImmunizationPractitioner call(
       {CodeableConcept role, @required Reference actor}) {
     return _ImmunizationPractitioner(
@@ -1389,7 +1387,6 @@ ImmunizationExplanation _$ImmunizationExplanationFromJson(
 class _$ImmunizationExplanationTearOff {
   const _$ImmunizationExplanationTearOff();
 
-// ignore: unused_element
   _ImmunizationExplanation call(
       {List<CodeableConcept> reason, List<CodeableConcept> reasonNotGiven}) {
     return _ImmunizationExplanation(
@@ -1546,7 +1543,6 @@ ImmunizationReaction _$ImmunizationReactionFromJson(Map<String, dynamic> json) {
 class _$ImmunizationReactionTearOff {
   const _$ImmunizationReactionTearOff();
 
-// ignore: unused_element
   _ImmunizationReaction call(
       {Date date,
       @JsonKey(name: '_date') Element dateElement,
@@ -1813,7 +1809,6 @@ ImmunizationVaccinationProtocol _$ImmunizationVaccinationProtocolFromJson(
 class _$ImmunizationVaccinationProtocolTearOff {
   const _$ImmunizationVaccinationProtocolTearOff();
 
-// ignore: unused_element
   _ImmunizationVaccinationProtocol call(
       {Decimal doseSequence,
       @JsonKey(name: '_doseSequence') Element doseSequenceElement,
@@ -2315,7 +2310,6 @@ ImmunizationRecommendation _$ImmunizationRecommendationFromJson(
 class _$ImmunizationRecommendationTearOff {
   const _$ImmunizationRecommendationTearOff();
 
-// ignore: unused_element
   _ImmunizationRecommendation call(
       {@required
       @JsonKey(defaultValue: 'ImmunizationRecommendation')
@@ -2840,7 +2834,6 @@ ImmunizationRecommendationRecommendation
 class _$ImmunizationRecommendationRecommendationTearOff {
   const _$ImmunizationRecommendationRecommendationTearOff();
 
-// ignore: unused_element
   _ImmunizationRecommendationRecommendation call(
       {Date date,
       @JsonKey(name: '_date') Element dateElement,
@@ -3310,7 +3303,6 @@ ImmunizationRecommendationDateCriterion
 class _$ImmunizationRecommendationDateCriterionTearOff {
   const _$ImmunizationRecommendationDateCriterionTearOff();
 
-// ignore: unused_element
   _ImmunizationRecommendationDateCriterion call(
       {@required CodeableConcept code,
       String value,
@@ -3536,7 +3528,6 @@ ImmunizationRecommendationProtocol _$ImmunizationRecommendationProtocolFromJson(
 class _$ImmunizationRecommendationProtocolTearOff {
   const _$ImmunizationRecommendationProtocolTearOff();
 
-// ignore: unused_element
   _ImmunizationRecommendationProtocol call(
       {Decimal doseSequence,
       @JsonKey(name: '_doseSequence') Element doseSequenceElement,
@@ -3883,7 +3874,6 @@ Medication _$MedicationFromJson(Map<String, dynamic> json) {
 class _$MedicationTearOff {
   const _$MedicationTearOff();
 
-// ignore: unused_element
   _Medication call(
       {@required @JsonKey(defaultValue: 'Medication') String resourceType,
       Id id,
@@ -4648,7 +4638,6 @@ MedicationIngredient _$MedicationIngredientFromJson(Map<String, dynamic> json) {
 class _$MedicationIngredientTearOff {
   const _$MedicationIngredientTearOff();
 
-// ignore: unused_element
   _MedicationIngredient call(
       {CodeableConcept itemCodeableConcept,
       Reference itemReference,
@@ -4930,7 +4919,6 @@ MedicationPackage _$MedicationPackageFromJson(Map<String, dynamic> json) {
 class _$MedicationPackageTearOff {
   const _$MedicationPackageTearOff();
 
-// ignore: unused_element
   _MedicationPackage call(
       {CodeableConcept container,
       List<MedicationContent> content,
@@ -5123,7 +5111,6 @@ MedicationContent _$MedicationContentFromJson(Map<String, dynamic> json) {
 class _$MedicationContentTearOff {
   const _$MedicationContentTearOff();
 
-// ignore: unused_element
   _MedicationContent call(
       {CodeableConcept itemCodeableConcept,
       Reference itemReference,
@@ -5344,7 +5331,6 @@ MedicationBatch _$MedicationBatchFromJson(Map<String, dynamic> json) {
 class _$MedicationBatchTearOff {
   const _$MedicationBatchTearOff();
 
-// ignore: unused_element
   _MedicationBatch call(
       {String lotNumber,
       @JsonKey(name: '_lotNumber') Element lotNumberElement,
@@ -5586,7 +5572,6 @@ MedicationAdministration _$MedicationAdministrationFromJson(
 class _$MedicationAdministrationTearOff {
   const _$MedicationAdministrationTearOff();
 
-// ignore: unused_element
   _MedicationAdministration call(
       {@required
       @JsonKey(defaultValue: 'MedicationAdministration')
@@ -6709,7 +6694,6 @@ MedicationAdministrationPerformer _$MedicationAdministrationPerformerFromJson(
 class _$MedicationAdministrationPerformerTearOff {
   const _$MedicationAdministrationPerformerTearOff();
 
-// ignore: unused_element
   _MedicationAdministrationPerformer call(
       {@required Reference actor, Reference onBehalfOf}) {
     return _MedicationAdministrationPerformer(
@@ -6902,7 +6886,6 @@ MedicationAdministrationDosage _$MedicationAdministrationDosageFromJson(
 class _$MedicationAdministrationDosageTearOff {
   const _$MedicationAdministrationDosageTearOff();
 
-// ignore: unused_element
   _MedicationAdministrationDosage call(
       {String text,
       @JsonKey(name: '_text') Element textElement,
@@ -7280,7 +7263,6 @@ MedicationDispense _$MedicationDispenseFromJson(Map<String, dynamic> json) {
 class _$MedicationDispenseTearOff {
   const _$MedicationDispenseTearOff();
 
-// ignore: unused_element
   _MedicationDispense call(
       {@required
       @JsonKey(defaultValue: 'MedicationDispense')
@@ -8557,7 +8539,6 @@ MedicationDispensePerformer _$MedicationDispensePerformerFromJson(
 class _$MedicationDispensePerformerTearOff {
   const _$MedicationDispensePerformerTearOff();
 
-// ignore: unused_element
   _MedicationDispensePerformer call(
       {@required Reference actor, Reference onBehalfOf}) {
     return _MedicationDispensePerformer(
@@ -8745,7 +8726,6 @@ MedicationDispenseSubstitution _$MedicationDispenseSubstitutionFromJson(
 class _$MedicationDispenseSubstitutionTearOff {
   const _$MedicationDispenseSubstitutionTearOff();
 
-// ignore: unused_element
   _MedicationDispenseSubstitution call(
       {Boolean wasSubstituted,
       @JsonKey(name: '_wasSubstituted') Element wasSubstitutedElement,
@@ -9012,7 +8992,6 @@ MedicationRequest _$MedicationRequestFromJson(Map<String, dynamic> json) {
 class _$MedicationRequestTearOff {
   const _$MedicationRequestTearOff();
 
-// ignore: unused_element
   _MedicationRequest call(
       {@required
       @JsonKey(defaultValue: 'MedicationRequest')
@@ -10265,7 +10244,6 @@ MedicationRequestRequester _$MedicationRequestRequesterFromJson(
 class _$MedicationRequestRequesterTearOff {
   const _$MedicationRequestRequesterTearOff();
 
-// ignore: unused_element
   _MedicationRequestRequester call(
       {@required Reference agent, Reference onBehalfOf}) {
     return _MedicationRequestRequester(
@@ -10449,7 +10427,6 @@ MedicationRequestDispenseRequest _$MedicationRequestDispenseRequestFromJson(
 class _$MedicationRequestDispenseRequestTearOff {
   const _$MedicationRequestDispenseRequestTearOff();
 
-// ignore: unused_element
   _MedicationRequestDispenseRequest call(
       {Period validityPeriod,
       Decimal numberOfRepeatsAllowed,
@@ -10789,7 +10766,6 @@ MedicationRequestSubstitution _$MedicationRequestSubstitutionFromJson(
 class _$MedicationRequestSubstitutionTearOff {
   const _$MedicationRequestSubstitutionTearOff();
 
-// ignore: unused_element
   _MedicationRequestSubstitution call(
       {Boolean allowed,
       @JsonKey(name: '_allowed') Element allowedElement,
@@ -11007,7 +10983,6 @@ MedicationStatement _$MedicationStatementFromJson(Map<String, dynamic> json) {
 class _$MedicationStatementTearOff {
   const _$MedicationStatementTearOff();
 
-// ignore: unused_element
   _MedicationStatement call(
       {@required
       @JsonKey(defaultValue: 'MedicationStatement')

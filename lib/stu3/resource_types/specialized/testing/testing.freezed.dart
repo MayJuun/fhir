@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'testing.dart';
 
@@ -15,7 +15,6 @@ TestReport _$TestReportFromJson(Map<String, dynamic> json) {
 class _$TestReportTearOff {
   const _$TestReportTearOff();
 
-// ignore: unused_element
   _TestReport call(
       {@required @JsonKey(defaultValue: 'TestReport') String resourceType,
       Id id,
@@ -943,7 +942,6 @@ TestReportParticipant _$TestReportParticipantFromJson(
 class _$TestReportParticipantTearOff {
   const _$TestReportParticipantTearOff();
 
-// ignore: unused_element
   _TestReportParticipant call(
       {TestReportParticipantType type,
       @JsonKey(name: '_type') Element typeElement,
@@ -1233,7 +1231,6 @@ TestReportSetup _$TestReportSetupFromJson(Map<String, dynamic> json) {
 class _$TestReportSetupTearOff {
   const _$TestReportSetupTearOff();
 
-// ignore: unused_element
   _TestReportSetup call({@required List<TestReportAction> action}) {
     return _TestReportSetup(
       action: action,
@@ -1367,7 +1364,6 @@ TestReportAction _$TestReportActionFromJson(Map<String, dynamic> json) {
 class _$TestReportActionTearOff {
   const _$TestReportActionTearOff();
 
-// ignore: unused_element
   _TestReportAction call(
       {TestReportOperation operation,
       @JsonKey(name: 'assert') TestReportAssert assert_}) {
@@ -1557,7 +1553,6 @@ TestReportOperation _$TestReportOperationFromJson(Map<String, dynamic> json) {
 class _$TestReportOperationTearOff {
   const _$TestReportOperationTearOff();
 
-// ignore: unused_element
   _TestReportOperation call(
       {TestReportOperationResult result,
       @JsonKey(name: '_result') Element resultElement,
@@ -1855,7 +1850,6 @@ TestReportAssert _$TestReportAssertFromJson(Map<String, dynamic> json) {
 class _$TestReportAssertTearOff {
   const _$TestReportAssertTearOff();
 
-// ignore: unused_element
   _TestReportAssert call(
       {TestReportAssertResult result,
       @JsonKey(name: '_result') Element resultElement,
@@ -2149,7 +2143,6 @@ TestReportTest _$TestReportTestFromJson(Map<String, dynamic> json) {
 class _$TestReportTestTearOff {
   const _$TestReportTestTearOff();
 
-// ignore: unused_element
   _TestReportTest call(
       {String name,
       @JsonKey(name: '_name') Element nameElement,
@@ -2405,7 +2398,6 @@ TestReportAction1 _$TestReportAction1FromJson(Map<String, dynamic> json) {
 class _$TestReportAction1TearOff {
   const _$TestReportAction1TearOff();
 
-// ignore: unused_element
   _TestReportAction1 call(
       {TestReportOperation operation,
       @JsonKey(name: 'assert') TestReportAssert assert_}) {
@@ -2596,7 +2588,6 @@ TestReportTeardown _$TestReportTeardownFromJson(Map<String, dynamic> json) {
 class _$TestReportTeardownTearOff {
   const _$TestReportTeardownTearOff();
 
-// ignore: unused_element
   _TestReportTeardown call({@required List<TestReportAction2> action}) {
     return _TestReportTeardown(
       action: action,
@@ -2730,7 +2721,6 @@ TestReportAction2 _$TestReportAction2FromJson(Map<String, dynamic> json) {
 class _$TestReportAction2TearOff {
   const _$TestReportAction2TearOff();
 
-// ignore: unused_element
   _TestReportAction2 call({@required TestReportOperation operation}) {
     return _TestReportAction2(
       operation: operation,
@@ -2882,7 +2872,6 @@ TestScript _$TestScriptFromJson(Map<String, dynamic> json) {
 class _$TestScriptTearOff {
   const _$TestScriptTearOff();
 
-// ignore: unused_element
   _TestScript call(
       {@required @JsonKey(defaultValue: 'TestScript') String resourceType,
       Id id,
@@ -4259,7 +4248,6 @@ TestScriptOrigin _$TestScriptOriginFromJson(Map<String, dynamic> json) {
 class _$TestScriptOriginTearOff {
   const _$TestScriptOriginTearOff();
 
-// ignore: unused_element
   _TestScriptOrigin call(
       {Decimal index,
       @JsonKey(name: '_index') Element indexElement,
@@ -4469,7 +4457,6 @@ TestScriptDestination _$TestScriptDestinationFromJson(
 class _$TestScriptDestinationTearOff {
   const _$TestScriptDestinationTearOff();
 
-// ignore: unused_element
   _TestScriptDestination call(
       {Decimal index,
       @JsonKey(name: '_index') Element indexElement,
@@ -4679,7 +4666,6 @@ TestScriptMetadata _$TestScriptMetadataFromJson(Map<String, dynamic> json) {
 class _$TestScriptMetadataTearOff {
   const _$TestScriptMetadataTearOff();
 
-// ignore: unused_element
   _TestScriptMetadata call(
       {List<TestScriptLink> link,
       @required List<TestScriptCapability> capability}) {
@@ -4833,7 +4819,6 @@ TestScriptLink _$TestScriptLinkFromJson(Map<String, dynamic> json) {
 class _$TestScriptLinkTearOff {
   const _$TestScriptLinkTearOff();
 
-// ignore: unused_element
   _TestScriptLink call(
       {String url,
       @JsonKey(name: '_url') Element urlElement,
@@ -5069,7 +5054,6 @@ TestScriptCapability _$TestScriptCapabilityFromJson(Map<String, dynamic> json) {
 class _$TestScriptCapabilityTearOff {
   const _$TestScriptCapabilityTearOff();
 
-// ignore: unused_element
   _TestScriptCapability call(
       {@JsonKey(name: 'required') Boolean required_,
       @JsonKey(name: '_required') Element requiredElement,
@@ -5554,7 +5538,6 @@ TestScriptFixture _$TestScriptFixtureFromJson(Map<String, dynamic> json) {
 class _$TestScriptFixtureTearOff {
   const _$TestScriptFixtureTearOff();
 
-// ignore: unused_element
   _TestScriptFixture call(
       {Boolean autocreate,
       @JsonKey(name: '_autocreate') Element autocreateElement,
@@ -5826,7 +5809,6 @@ TestScriptVariable _$TestScriptVariableFromJson(Map<String, dynamic> json) {
 class _$TestScriptVariableTearOff {
   const _$TestScriptVariableTearOff();
 
-// ignore: unused_element
   _TestScriptVariable call(
       {String name,
       @JsonKey(name: '_name') Element nameElement,
@@ -6412,7 +6394,6 @@ TestScriptRule _$TestScriptRuleFromJson(Map<String, dynamic> json) {
 class _$TestScriptRuleTearOff {
   const _$TestScriptRuleTearOff();
 
-// ignore: unused_element
   _TestScriptRule call(
       {@required Reference resource, List<TestScriptParam> param}) {
     return _TestScriptRule(
@@ -6576,7 +6557,6 @@ TestScriptParam _$TestScriptParamFromJson(Map<String, dynamic> json) {
 class _$TestScriptParamTearOff {
   const _$TestScriptParamTearOff();
 
-// ignore: unused_element
   _TestScriptParam call(
       {String name,
       @JsonKey(name: '_name') Element nameElement,
@@ -6808,7 +6788,6 @@ TestScriptRuleset _$TestScriptRulesetFromJson(Map<String, dynamic> json) {
 class _$TestScriptRulesetTearOff {
   const _$TestScriptRulesetTearOff();
 
-// ignore: unused_element
   _TestScriptRuleset call(
       {@required Reference resource, @required List<TestScriptRule1> rule}) {
     return _TestScriptRuleset(
@@ -6973,7 +6952,6 @@ TestScriptRule1 _$TestScriptRule1FromJson(Map<String, dynamic> json) {
 class _$TestScriptRule1TearOff {
   const _$TestScriptRule1TearOff();
 
-// ignore: unused_element
   _TestScriptRule1 call(
       {Id ruleId,
       @JsonKey(name: '_ruleId') Element ruleIdElement,
@@ -7166,7 +7144,6 @@ TestScriptParam1 _$TestScriptParam1FromJson(Map<String, dynamic> json) {
 class _$TestScriptParam1TearOff {
   const _$TestScriptParam1TearOff();
 
-// ignore: unused_element
   _TestScriptParam1 call(
       {String name,
       @JsonKey(name: '_name') Element nameElement,
@@ -7398,7 +7375,6 @@ TestScriptSetup _$TestScriptSetupFromJson(Map<String, dynamic> json) {
 class _$TestScriptSetupTearOff {
   const _$TestScriptSetupTearOff();
 
-// ignore: unused_element
   _TestScriptSetup call({@required List<TestScriptAction> action}) {
     return _TestScriptSetup(
       action: action,
@@ -7532,7 +7508,6 @@ TestScriptAction _$TestScriptActionFromJson(Map<String, dynamic> json) {
 class _$TestScriptActionTearOff {
   const _$TestScriptActionTearOff();
 
-// ignore: unused_element
   _TestScriptAction call(
       {TestScriptOperation operation,
       @JsonKey(name: 'assert') TestScriptAssert assert_}) {
@@ -7722,7 +7697,6 @@ TestScriptOperation _$TestScriptOperationFromJson(Map<String, dynamic> json) {
 class _$TestScriptOperationTearOff {
   const _$TestScriptOperationTearOff();
 
-// ignore: unused_element
   _TestScriptOperation call(
       {Coding type,
       String resource,
@@ -8705,7 +8679,6 @@ TestScriptRequestHeader _$TestScriptRequestHeaderFromJson(
 class _$TestScriptRequestHeaderTearOff {
   const _$TestScriptRequestHeaderTearOff();
 
-// ignore: unused_element
   _TestScriptRequestHeader call(
       {String field,
       @JsonKey(name: '_field') Element fieldElement,
@@ -8942,7 +8915,6 @@ TestScriptAssert _$TestScriptAssertFromJson(Map<String, dynamic> json) {
 class _$TestScriptAssertTearOff {
   const _$TestScriptAssertTearOff();
 
-// ignore: unused_element
   _TestScriptAssert call(
       {String label,
       @JsonKey(name: '_label')
@@ -10508,7 +10480,6 @@ TestScriptRule2 _$TestScriptRule2FromJson(Map<String, dynamic> json) {
 class _$TestScriptRule2TearOff {
   const _$TestScriptRule2TearOff();
 
-// ignore: unused_element
   _TestScriptRule2 call(
       {Id ruleId,
       @JsonKey(name: '_ruleId') Element ruleIdElement,
@@ -10701,7 +10672,6 @@ TestScriptParam2 _$TestScriptParam2FromJson(Map<String, dynamic> json) {
 class _$TestScriptParam2TearOff {
   const _$TestScriptParam2TearOff();
 
-// ignore: unused_element
   _TestScriptParam2 call(
       {String name,
       @JsonKey(name: '_name') Element nameElement,
@@ -10933,7 +10903,6 @@ TestScriptRuleset1 _$TestScriptRuleset1FromJson(Map<String, dynamic> json) {
 class _$TestScriptRuleset1TearOff {
   const _$TestScriptRuleset1TearOff();
 
-// ignore: unused_element
   _TestScriptRuleset1 call(
       {Id rulesetId,
       @JsonKey(name: '_rulesetId') Element rulesetIdElement,
@@ -11129,7 +11098,6 @@ TestScriptRule3 _$TestScriptRule3FromJson(Map<String, dynamic> json) {
 class _$TestScriptRule3TearOff {
   const _$TestScriptRule3TearOff();
 
-// ignore: unused_element
   _TestScriptRule3 call(
       {Id ruleId,
       @JsonKey(name: '_ruleId') Element ruleIdElement,
@@ -11322,7 +11290,6 @@ TestScriptParam3 _$TestScriptParam3FromJson(Map<String, dynamic> json) {
 class _$TestScriptParam3TearOff {
   const _$TestScriptParam3TearOff();
 
-// ignore: unused_element
   _TestScriptParam3 call(
       {String name,
       @JsonKey(name: '_name') Element nameElement,
@@ -11554,7 +11521,6 @@ TestScriptTest _$TestScriptTestFromJson(Map<String, dynamic> json) {
 class _$TestScriptTestTearOff {
   const _$TestScriptTestTearOff();
 
-// ignore: unused_element
   _TestScriptTest call(
       {String name,
       @JsonKey(name: '_name') Element nameElement,
@@ -11810,7 +11776,6 @@ TestScriptAction1 _$TestScriptAction1FromJson(Map<String, dynamic> json) {
 class _$TestScriptAction1TearOff {
   const _$TestScriptAction1TearOff();
 
-// ignore: unused_element
   _TestScriptAction1 call(
       {TestScriptOperation operation,
       @JsonKey(name: 'assert') TestScriptAssert assert_}) {
@@ -12001,7 +11966,6 @@ TestScriptTeardown _$TestScriptTeardownFromJson(Map<String, dynamic> json) {
 class _$TestScriptTeardownTearOff {
   const _$TestScriptTeardownTearOff();
 
-// ignore: unused_element
   _TestScriptTeardown call({@required List<TestScriptAction2> action}) {
     return _TestScriptTeardown(
       action: action,
@@ -12135,7 +12099,6 @@ TestScriptAction2 _$TestScriptAction2FromJson(Map<String, dynamic> json) {
 class _$TestScriptAction2TearOff {
   const _$TestScriptAction2TearOff();
 
-// ignore: unused_element
   _TestScriptAction2 call({@required TestScriptOperation operation}) {
     return _TestScriptAction2(
       operation: operation,

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'individuals.dart';
 
@@ -15,7 +15,6 @@ Group _$GroupFromJson(Map<String, dynamic> json) {
 class _$GroupTearOff {
   const _$GroupTearOff();
 
-// ignore: unused_element
   _Group call(
       {@required @JsonKey(defaultValue: 'Group') String resourceType,
       Id id,
@@ -802,7 +801,6 @@ GroupCharacteristic _$GroupCharacteristicFromJson(Map<String, dynamic> json) {
 class _$GroupCharacteristicTearOff {
   const _$GroupCharacteristicTearOff();
 
-// ignore: unused_element
   _GroupCharacteristic call(
       {@required CodeableConcept code,
       CodeableConcept valueCodeableConcept,
@@ -1212,7 +1210,6 @@ GroupMember _$GroupMemberFromJson(Map<String, dynamic> json) {
 class _$GroupMemberTearOff {
   const _$GroupMemberTearOff();
 
-// ignore: unused_element
   _GroupMember call(
       {@required Reference entity,
       Period period,
@@ -1451,7 +1448,6 @@ Patient _$PatientFromJson(Map<String, dynamic> json) {
 class _$PatientTearOff {
   const _$PatientTearOff();
 
-// ignore: unused_element
   _Patient call(
       {@required
       @JsonKey(defaultValue: 'Patient')
@@ -2591,7 +2587,6 @@ PatientContact _$PatientContactFromJson(Map<String, dynamic> json) {
 class _$PatientContactTearOff {
   const _$PatientContactTearOff();
 
-// ignore: unused_element
   _PatientContact call(
       {List<CodeableConcept> relationship,
       HumanName name,
@@ -2944,7 +2939,6 @@ PatientAnimal _$PatientAnimalFromJson(Map<String, dynamic> json) {
 class _$PatientAnimalTearOff {
   const _$PatientAnimalTearOff();
 
-// ignore: unused_element
   _PatientAnimal call(
       {@required CodeableConcept species,
       CodeableConcept breed,
@@ -3161,7 +3155,6 @@ PatientCommunication _$PatientCommunicationFromJson(Map<String, dynamic> json) {
 class _$PatientCommunicationTearOff {
   const _$PatientCommunicationTearOff();
 
-// ignore: unused_element
   _PatientCommunication call(
       {@required CodeableConcept language,
       Boolean preferred,
@@ -3376,7 +3369,6 @@ PatientLink _$PatientLinkFromJson(Map<String, dynamic> json) {
 class _$PatientLinkTearOff {
   const _$PatientLinkTearOff();
 
-// ignore: unused_element
   _PatientLink call(
       {@required Reference other,
       PatientLinkType type,
@@ -3582,7 +3574,6 @@ Person _$PersonFromJson(Map<String, dynamic> json) {
 class _$PersonTearOff {
   const _$PersonTearOff();
 
-// ignore: unused_element
   _Person call(
       {@required @JsonKey(defaultValue: 'Person') String resourceType,
       Id id,
@@ -4330,7 +4321,6 @@ PersonLink _$PersonLinkFromJson(Map<String, dynamic> json) {
 class _$PersonLinkTearOff {
   const _$PersonLinkTearOff();
 
-// ignore: unused_element
   _PersonLink call(
       {@required Reference target,
       PersonLinkAssurance assurance,
@@ -4541,7 +4531,6 @@ Practitioner _$PractitionerFromJson(Map<String, dynamic> json) {
 class _$PractitionerTearOff {
   const _$PractitionerTearOff();
 
-// ignore: unused_element
   _Practitioner call(
       {@required @JsonKey(defaultValue: 'Practitioner') String resourceType,
       Id id,
@@ -5274,7 +5263,6 @@ PractitionerQualification _$PractitionerQualificationFromJson(
 class _$PractitionerQualificationTearOff {
   const _$PractitionerQualificationTearOff();
 
-// ignore: unused_element
   _PractitionerQualification call(
       {List<Identifier> identifier,
       @required CodeableConcept code,
@@ -5511,7 +5499,6 @@ PractitionerRole _$PractitionerRoleFromJson(Map<String, dynamic> json) {
 class _$PractitionerRoleTearOff {
   const _$PractitionerRoleTearOff();
 
-// ignore: unused_element
   _PractitionerRole call(
       {@required
       @JsonKey(defaultValue: 'PractitionerRole')
@@ -6376,7 +6363,6 @@ PractitionerRoleAvailableTime _$PractitionerRoleAvailableTimeFromJson(
 class _$PractitionerRoleAvailableTimeTearOff {
   const _$PractitionerRoleAvailableTimeTearOff();
 
-// ignore: unused_element
   _PractitionerRoleAvailableTime call(
       {List<String> daysOfWeek,
       @JsonKey(name: '_daysOfWeek') List<Element> daysOfWeekElement,
@@ -6743,7 +6729,6 @@ PractitionerRoleNotAvailable _$PractitionerRoleNotAvailableFromJson(
 class _$PractitionerRoleNotAvailableTearOff {
   const _$PractitionerRoleNotAvailableTearOff();
 
-// ignore: unused_element
   _PractitionerRoleNotAvailable call(
       {String description,
       @JsonKey(name: '_description') Element descriptionElement,
@@ -6962,7 +6947,6 @@ RelatedPerson _$RelatedPersonFromJson(Map<String, dynamic> json) {
 class _$RelatedPersonTearOff {
   const _$RelatedPersonTearOff();
 
-// ignore: unused_element
   _RelatedPerson call(
       {@required @JsonKey(defaultValue: 'RelatedPerson') String resourceType,
       Id id,

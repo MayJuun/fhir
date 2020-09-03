@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'entities.dart';
 
@@ -15,7 +15,6 @@ Device _$DeviceFromJson(Map<String, dynamic> json) {
 class _$DeviceTearOff {
   const _$DeviceTearOff();
 
-// ignore: unused_element
   _Device call(
       {@required @JsonKey(defaultValue: 'Device') String resourceType,
       Id id,
@@ -1116,7 +1115,6 @@ DeviceUdi _$DeviceUdiFromJson(Map<String, dynamic> json) {
 class _$DeviceUdiTearOff {
   const _$DeviceUdiTearOff();
 
-// ignore: unused_element
   _DeviceUdi call(
       {String deviceIdentifier,
       @JsonKey(name: '_deviceIdentifier') Element deviceIdentifierElement,
@@ -1650,7 +1648,6 @@ DeviceComponent _$DeviceComponentFromJson(Map<String, dynamic> json) {
 class _$DeviceComponentTearOff {
   const _$DeviceComponentTearOff();
 
-// ignore: unused_element
   _DeviceComponent call(
       {@required
       @JsonKey(defaultValue: 'DeviceComponent')
@@ -2471,7 +2468,6 @@ DeviceComponentProductionSpecification
 class _$DeviceComponentProductionSpecificationTearOff {
   const _$DeviceComponentProductionSpecificationTearOff();
 
-// ignore: unused_element
   _DeviceComponentProductionSpecification call(
       {CodeableConcept specType,
       Identifier componentId,
@@ -2738,7 +2734,6 @@ DeviceMetric _$DeviceMetricFromJson(Map<String, dynamic> json) {
 class _$DeviceMetricTearOff {
   const _$DeviceMetricTearOff();
 
-// ignore: unused_element
   _DeviceMetric call(
       {@required @JsonKey(defaultValue: 'DeviceMetric') String resourceType,
       Id id,
@@ -3555,7 +3550,6 @@ DeviceMetricCalibration _$DeviceMetricCalibrationFromJson(
 class _$DeviceMetricCalibrationTearOff {
   const _$DeviceMetricCalibrationTearOff();
 
-// ignore: unused_element
   _DeviceMetricCalibration call(
       {DeviceMetricCalibrationType type,
       @JsonKey(name: '_type') Element typeElement,
@@ -3849,7 +3843,6 @@ Endpoint _$EndpointFromJson(Map<String, dynamic> json) {
 class _$EndpointTearOff {
   const _$EndpointTearOff();
 
-// ignore: unused_element
   _Endpoint call(
       {@required @JsonKey(defaultValue: 'Endpoint') String resourceType,
       Id id,
@@ -4689,7 +4682,6 @@ HealthcareService _$HealthcareServiceFromJson(Map<String, dynamic> json) {
 class _$HealthcareServiceTearOff {
   const _$HealthcareServiceTearOff();
 
-// ignore: unused_element
   _HealthcareService call(
       {@required
       @JsonKey(defaultValue: 'HealthcareService')
@@ -6002,7 +5994,6 @@ HealthcareServiceAvailableTime _$HealthcareServiceAvailableTimeFromJson(
 class _$HealthcareServiceAvailableTimeTearOff {
   const _$HealthcareServiceAvailableTimeTearOff();
 
-// ignore: unused_element
   _HealthcareServiceAvailableTime call(
       {List<HealthcareServiceAvailableTimeDaysOfWeek> daysOfWeek,
       @JsonKey(name: '_daysOfWeek') List<Element> daysOfWeekElement,
@@ -6371,7 +6362,6 @@ HealthcareServiceNotAvailable _$HealthcareServiceNotAvailableFromJson(
 class _$HealthcareServiceNotAvailableTearOff {
   const _$HealthcareServiceNotAvailableTearOff();
 
-// ignore: unused_element
   _HealthcareServiceNotAvailable call(
       {String description,
       @JsonKey(name: '_description') Element descriptionElement,
@@ -6591,7 +6581,6 @@ Location _$LocationFromJson(Map<String, dynamic> json) {
 class _$LocationTearOff {
   const _$LocationTearOff();
 
-// ignore: unused_element
   _Location call(
       {@required @JsonKey(defaultValue: 'Location') String resourceType,
       Id id,
@@ -7563,7 +7552,6 @@ LocationPosition _$LocationPositionFromJson(Map<String, dynamic> json) {
 class _$LocationPositionTearOff {
   const _$LocationPositionTearOff();
 
-// ignore: unused_element
   _LocationPosition call(
       {Decimal longitude,
       @JsonKey(name: '_longitude') Element longitudeElement,
@@ -7858,7 +7846,6 @@ Organization _$OrganizationFromJson(Map<String, dynamic> json) {
 class _$OrganizationTearOff {
   const _$OrganizationTearOff();
 
-// ignore: unused_element
   _Organization call(
       {@required @JsonKey(defaultValue: 'Organization') String resourceType,
       Id id,
@@ -8585,7 +8572,6 @@ OrganizationContact _$OrganizationContactFromJson(Map<String, dynamic> json) {
 class _$OrganizationContactTearOff {
   const _$OrganizationContactTearOff();
 
-// ignore: unused_element
   _OrganizationContact call(
       {CodeableConcept purpose,
       HumanName name,
@@ -8817,7 +8803,6 @@ Substance _$SubstanceFromJson(Map<String, dynamic> json) {
 class _$SubstanceTearOff {
   const _$SubstanceTearOff();
 
-// ignore: unused_element
   _Substance call(
       {@required @JsonKey(defaultValue: 'Substance') String resourceType,
       Id id,
@@ -9470,7 +9455,6 @@ SubstanceInstance _$SubstanceInstanceFromJson(Map<String, dynamic> json) {
 class _$SubstanceInstanceTearOff {
   const _$SubstanceInstanceTearOff();
 
-// ignore: unused_element
   _SubstanceInstance call(
       {Identifier identifier,
       String expiry,
@@ -9713,7 +9697,6 @@ SubstanceIngredient _$SubstanceIngredientFromJson(Map<String, dynamic> json) {
 class _$SubstanceIngredientTearOff {
   const _$SubstanceIngredientTearOff();
 
-// ignore: unused_element
   _SubstanceIngredient call(
       {Ratio quantity,
       CodeableConcept substanceCodeableConcept,

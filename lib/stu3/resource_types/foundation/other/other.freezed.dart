@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'other.dart';
 
@@ -15,7 +15,6 @@ Basic _$BasicFromJson(Map<String, dynamic> json) {
 class _$BasicTearOff {
   const _$BasicTearOff();
 
-// ignore: unused_element
   _Basic call(
       {@required @JsonKey(defaultValue: 'Basic') String resourceType,
       Id id,
@@ -601,7 +600,6 @@ Binary _$BinaryFromJson(Map<String, dynamic> json) {
 class _$BinaryTearOff {
   const _$BinaryTearOff();
 
-// ignore: unused_element
   _Binary call(
       {@required @JsonKey(defaultValue: 'Binary') String resourceType,
       Id id,
@@ -1165,7 +1163,6 @@ Bundle _$BundleFromJson(Map<String, dynamic> json) {
 class _$BundleTearOff {
   const _$BundleTearOff();
 
-// ignore: unused_element
   _Bundle call(
       {@required @JsonKey(defaultValue: 'Bundle') String resourceType,
       Id id,
@@ -1791,7 +1788,6 @@ BundleLink _$BundleLinkFromJson(Map<String, dynamic> json) {
 class _$BundleLinkTearOff {
   const _$BundleLinkTearOff();
 
-// ignore: unused_element
   _BundleLink call(
       {String relation,
       @JsonKey(name: '_relation') Element relationElement,
@@ -2021,7 +2017,6 @@ BundleEntry _$BundleEntryFromJson(Map<String, dynamic> json) {
 class _$BundleEntryTearOff {
   const _$BundleEntryTearOff();
 
-// ignore: unused_element
   _BundleEntry call(
       {List<BundleLink> link,
       String fullUrl,
@@ -2331,7 +2326,6 @@ BundleSearch _$BundleSearchFromJson(Map<String, dynamic> json) {
 class _$BundleSearchTearOff {
   const _$BundleSearchTearOff();
 
-// ignore: unused_element
   _BundleSearch call(
       {BundleSearchMode mode,
       @JsonKey(name: '_mode') Element modeElement,
@@ -2561,7 +2555,6 @@ BundleRequest _$BundleRequestFromJson(Map<String, dynamic> json) {
 class _$BundleRequestTearOff {
   const _$BundleRequestTearOff();
 
-// ignore: unused_element
   _BundleRequest call(
       {BundleRequestMethod method,
       @JsonKey(name: '_method') Element methodElement,
@@ -3034,7 +3027,6 @@ BundleResponse _$BundleResponseFromJson(Map<String, dynamic> json) {
 class _$BundleResponseTearOff {
   const _$BundleResponseTearOff();
 
-// ignore: unused_element
   _BundleResponse call(
       {String status,
       @JsonKey(name: '_status') Element statusElement,
@@ -3404,7 +3396,6 @@ Linkage _$LinkageFromJson(Map<String, dynamic> json) {
 class _$LinkageTearOff {
   const _$LinkageTearOff();
 
-// ignore: unused_element
   _Linkage call(
       {@required @JsonKey(defaultValue: 'Linkage') String resourceType,
       Id id,
@@ -3921,7 +3912,6 @@ LinkageItem _$LinkageItemFromJson(Map<String, dynamic> json) {
 class _$LinkageItemTearOff {
   const _$LinkageItemTearOff();
 
-// ignore: unused_element
   _LinkageItem call(
       {LinkageItemType type,
       @JsonKey(name: '_type') Element typeElement,
@@ -4127,7 +4117,6 @@ Media _$MediaFromJson(Map<String, dynamic> json) {
 class _$MediaTearOff {
   const _$MediaTearOff();
 
-// ignore: unused_element
   _Media call(
       {@required @JsonKey(defaultValue: 'Media') String resourceType,
       Id id,
@@ -5239,7 +5228,6 @@ MessageHeader _$MessageHeaderFromJson(Map<String, dynamic> json) {
 class _$MessageHeaderTearOff {
   const _$MessageHeaderTearOff();
 
-// ignore: unused_element
   _MessageHeader call(
       {@required @JsonKey(defaultValue: 'MessageHeader') String resourceType,
       Id id,
@@ -6049,7 +6037,6 @@ MessageHeaderDestination _$MessageHeaderDestinationFromJson(
 class _$MessageHeaderDestinationTearOff {
   const _$MessageHeaderDestinationTearOff();
 
-// ignore: unused_element
   _MessageHeaderDestination call(
       {String name,
       @JsonKey(name: '_name') Element nameElement,
@@ -6316,7 +6303,6 @@ MessageHeaderSource _$MessageHeaderSourceFromJson(Map<String, dynamic> json) {
 class _$MessageHeaderSourceTearOff {
   const _$MessageHeaderSourceTearOff();
 
-// ignore: unused_element
   _MessageHeaderSource call(
       {String name,
       @JsonKey(name: '_name') Element nameElement,
@@ -6700,7 +6686,6 @@ MessageHeaderResponse _$MessageHeaderResponseFromJson(
 class _$MessageHeaderResponseTearOff {
   const _$MessageHeaderResponseTearOff();
 
-// ignore: unused_element
   _MessageHeaderResponse call(
       {Id identifier,
       @JsonKey(name: '_identifier') Element identifierElement,
@@ -6965,7 +6950,6 @@ OperationOutcome _$OperationOutcomeFromJson(Map<String, dynamic> json) {
 class _$OperationOutcomeTearOff {
   const _$OperationOutcomeTearOff();
 
-// ignore: unused_element
   _OperationOutcome call(
       {@required @JsonKey(defaultValue: 'OperationOutcome') String resourceType,
       Id id,
@@ -7406,7 +7390,6 @@ OperationOutcomeIssue _$OperationOutcomeIssueFromJson(
 class _$OperationOutcomeIssueTearOff {
   const _$OperationOutcomeIssueTearOff();
 
-// ignore: unused_element
   _OperationOutcomeIssue call(
       {OperationOutcomeIssueSeverity severity,
       @JsonKey(name: '_severity') Element severityElement,
@@ -7833,7 +7816,6 @@ Parameters _$ParametersFromJson(Map<String, dynamic> json) {
 class _$ParametersTearOff {
   const _$ParametersTearOff();
 
-// ignore: unused_element
   _Parameters call(
       {@required @JsonKey(defaultValue: 'Parameters') String resourceType,
       Id id,
@@ -8270,7 +8252,6 @@ ParametersParameter _$ParametersParameterFromJson(Map<String, dynamic> json) {
 class _$ParametersParameterTearOff {
   const _$ParametersParameterTearOff();
 
-// ignore: unused_element
   _ParametersParameter call(
       {String name,
       @JsonKey(name: '_name') Element nameElement,
@@ -10674,7 +10655,6 @@ Subscription _$SubscriptionFromJson(Map<String, dynamic> json) {
 class _$SubscriptionTearOff {
   const _$SubscriptionTearOff();
 
-// ignore: unused_element
   _Subscription call(
       {@required @JsonKey(defaultValue: 'Subscription') String resourceType,
       Id id,
@@ -11447,7 +11427,6 @@ SubscriptionChannel _$SubscriptionChannelFromJson(Map<String, dynamic> json) {
 class _$SubscriptionChannelTearOff {
   const _$SubscriptionChannelTearOff();
 
-// ignore: unused_element
   _SubscriptionChannel call(
       {SubscriptionChannelType type,
       @JsonKey(name: '_type') Element typeElement,

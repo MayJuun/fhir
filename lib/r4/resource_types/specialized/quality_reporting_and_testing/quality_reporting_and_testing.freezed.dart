@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'quality_reporting_and_testing.dart';
 
@@ -15,7 +15,6 @@ Measure _$MeasureFromJson(Map<String, dynamic> json) {
 class _$MeasureTearOff {
   const _$MeasureTearOff();
 
-// ignore: unused_element
   _Measure call(
       {@required
       @JsonKey(defaultValue: 'Measure')
@@ -2280,7 +2279,6 @@ MeasureGroup _$MeasureGroupFromJson(Map<String, dynamic> json) {
 class _$MeasureGroupTearOff {
   const _$MeasureGroupTearOff();
 
-// ignore: unused_element
   _MeasureGroup call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2602,7 +2600,6 @@ MeasurePopulation _$MeasurePopulationFromJson(Map<String, dynamic> json) {
 class _$MeasurePopulationTearOff {
   const _$MeasurePopulationTearOff();
 
-// ignore: unused_element
   _MeasurePopulation call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2913,7 +2910,6 @@ MeasureStratifier _$MeasureStratifierFromJson(Map<String, dynamic> json) {
 class _$MeasureStratifierTearOff {
   const _$MeasureStratifierTearOff();
 
-// ignore: unused_element
   _MeasureStratifier call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3246,7 +3242,6 @@ MeasureComponent _$MeasureComponentFromJson(Map<String, dynamic> json) {
 class _$MeasureComponentTearOff {
   const _$MeasureComponentTearOff();
 
-// ignore: unused_element
   _MeasureComponent call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3558,7 +3553,6 @@ MeasureSupplementalData _$MeasureSupplementalDataFromJson(
 class _$MeasureSupplementalDataTearOff {
   const _$MeasureSupplementalDataTearOff();
 
-// ignore: unused_element
   _MeasureSupplementalData call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3889,7 +3883,6 @@ MeasureReport _$MeasureReportFromJson(Map<String, dynamic> json) {
 class _$MeasureReportTearOff {
   const _$MeasureReportTearOff();
 
-// ignore: unused_element
   _MeasureReport call(
       {@required
       @JsonKey(defaultValue: 'MeasureReport')
@@ -4739,7 +4732,6 @@ MeasureReportGroup _$MeasureReportGroupFromJson(Map<String, dynamic> json) {
 class _$MeasureReportGroupTearOff {
   const _$MeasureReportGroupTearOff();
 
-// ignore: unused_element
   _MeasureReportGroup call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5040,7 +5032,6 @@ MeasureReportPopulation _$MeasureReportPopulationFromJson(
 class _$MeasureReportPopulationTearOff {
   const _$MeasureReportPopulationTearOff();
 
-// ignore: unused_element
   _MeasureReportPopulation call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5354,7 +5345,6 @@ MeasureReportStratifier _$MeasureReportStratifierFromJson(
 class _$MeasureReportStratifierTearOff {
   const _$MeasureReportStratifierTearOff();
 
-// ignore: unused_element
   _MeasureReportStratifier call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5581,7 +5571,6 @@ MeasureReportStratum _$MeasureReportStratumFromJson(Map<String, dynamic> json) {
 class _$MeasureReportStratumTearOff {
   const _$MeasureReportStratumTearOff();
 
-// ignore: unused_element
   _MeasureReportStratum call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5883,7 +5872,6 @@ MeasureReportComponent _$MeasureReportComponentFromJson(
 class _$MeasureReportComponentTearOff {
   const _$MeasureReportComponentTearOff();
 
-// ignore: unused_element
   _MeasureReportComponent call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -6136,7 +6124,6 @@ MeasureReportPopulation1 _$MeasureReportPopulation1FromJson(
 class _$MeasureReportPopulation1TearOff {
   const _$MeasureReportPopulation1TearOff();
 
-// ignore: unused_element
   _MeasureReportPopulation1 call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -6449,7 +6436,6 @@ TestReport _$TestReportFromJson(Map<String, dynamic> json) {
 class _$TestReportTearOff {
   const _$TestReportTearOff();
 
-// ignore: unused_element
   _TestReport call(
       {@required
       @JsonKey(defaultValue: 'TestReport')
@@ -7435,7 +7421,6 @@ TestReportParticipant _$TestReportParticipantFromJson(
 class _$TestReportParticipantTearOff {
   const _$TestReportParticipantTearOff();
 
-// ignore: unused_element
   _TestReportParticipant call(
       {String id,
       @JsonKey(name: 'extension')
@@ -7814,7 +7799,6 @@ TestReportSetup _$TestReportSetupFromJson(Map<String, dynamic> json) {
 class _$TestReportSetupTearOff {
   const _$TestReportSetupTearOff();
 
-// ignore: unused_element
   _TestReportSetup call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -8020,7 +8004,6 @@ TestReportAction _$TestReportActionFromJson(Map<String, dynamic> json) {
 class _$TestReportActionTearOff {
   const _$TestReportActionTearOff();
 
-// ignore: unused_element
   _TestReportAction call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -8279,7 +8262,6 @@ TestReportOperation _$TestReportOperationFromJson(Map<String, dynamic> json) {
 class _$TestReportOperationTearOff {
   const _$TestReportOperationTearOff();
 
-// ignore: unused_element
   _TestReportOperation call(
       {String id,
       @JsonKey(name: 'extension')
@@ -8666,7 +8648,6 @@ TestReportAssert _$TestReportAssertFromJson(Map<String, dynamic> json) {
 class _$TestReportAssertTearOff {
   const _$TestReportAssertTearOff();
 
-// ignore: unused_element
   _TestReportAssert call(
       {String id,
       @JsonKey(name: 'extension')
@@ -9050,7 +9031,6 @@ TestReportTest _$TestReportTestFromJson(Map<String, dynamic> json) {
 class _$TestReportTestTearOff {
   const _$TestReportTestTearOff();
 
-// ignore: unused_element
   _TestReportTest call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -9373,7 +9353,6 @@ TestReportAction1 _$TestReportAction1FromJson(Map<String, dynamic> json) {
 class _$TestReportAction1TearOff {
   const _$TestReportAction1TearOff();
 
-// ignore: unused_element
   _TestReportAction1 call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -9633,7 +9612,6 @@ TestReportTeardown _$TestReportTeardownFromJson(Map<String, dynamic> json) {
 class _$TestReportTeardownTearOff {
   const _$TestReportTeardownTearOff();
 
-// ignore: unused_element
   _TestReportTeardown call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -9839,7 +9817,6 @@ TestReportAction2 _$TestReportAction2FromJson(Map<String, dynamic> json) {
 class _$TestReportAction2TearOff {
   const _$TestReportAction2TearOff();
 
-// ignore: unused_element
   _TestReportAction2 call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -10063,7 +10040,6 @@ TestScript _$TestScriptFromJson(Map<String, dynamic> json) {
 class _$TestScriptTearOff {
   const _$TestScriptTearOff();
 
-// ignore: unused_element
   _TestScript call(
       {@required
       @JsonKey(defaultValue: 'TestScript')
@@ -11473,7 +11449,6 @@ TestScriptOrigin _$TestScriptOriginFromJson(Map<String, dynamic> json) {
 class _$TestScriptOriginTearOff {
   const _$TestScriptOriginTearOff();
 
-// ignore: unused_element
   _TestScriptOrigin call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -11750,7 +11725,6 @@ TestScriptDestination _$TestScriptDestinationFromJson(
 class _$TestScriptDestinationTearOff {
   const _$TestScriptDestinationTearOff();
 
-// ignore: unused_element
   _TestScriptDestination call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -12027,7 +12001,6 @@ TestScriptMetadata _$TestScriptMetadataFromJson(Map<String, dynamic> json) {
 class _$TestScriptMetadataTearOff {
   const _$TestScriptMetadataTearOff();
 
-// ignore: unused_element
   _TestScriptMetadata call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -12254,7 +12227,6 @@ TestScriptLink _$TestScriptLinkFromJson(Map<String, dynamic> json) {
 class _$TestScriptLinkTearOff {
   const _$TestScriptLinkTearOff();
 
-// ignore: unused_element
   _TestScriptLink call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -12557,7 +12529,6 @@ TestScriptCapability _$TestScriptCapabilityFromJson(Map<String, dynamic> json) {
 class _$TestScriptCapabilityTearOff {
   const _$TestScriptCapabilityTearOff();
 
-// ignore: unused_element
   _TestScriptCapability call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -13096,7 +13067,6 @@ TestScriptFixture _$TestScriptFixtureFromJson(Map<String, dynamic> json) {
 class _$TestScriptFixtureTearOff {
   const _$TestScriptFixtureTearOff();
 
-// ignore: unused_element
   _TestScriptFixture call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -13435,7 +13405,6 @@ TestScriptVariable _$TestScriptVariableFromJson(Map<String, dynamic> json) {
 class _$TestScriptVariableTearOff {
   const _$TestScriptVariableTearOff();
 
-// ignore: unused_element
   _TestScriptVariable call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -14088,7 +14057,6 @@ TestScriptSetup _$TestScriptSetupFromJson(Map<String, dynamic> json) {
 class _$TestScriptSetupTearOff {
   const _$TestScriptSetupTearOff();
 
-// ignore: unused_element
   _TestScriptSetup call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -14294,7 +14262,6 @@ TestScriptAction _$TestScriptActionFromJson(Map<String, dynamic> json) {
 class _$TestScriptActionTearOff {
   const _$TestScriptActionTearOff();
 
-// ignore: unused_element
   _TestScriptAction call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -14553,7 +14520,6 @@ TestScriptOperation _$TestScriptOperationFromJson(Map<String, dynamic> json) {
 class _$TestScriptOperationTearOff {
   const _$TestScriptOperationTearOff();
 
-// ignore: unused_element
   _TestScriptOperation call(
       {String id,
       @JsonKey(name: 'extension')
@@ -15722,7 +15688,6 @@ TestScriptRequestHeader _$TestScriptRequestHeaderFromJson(
 class _$TestScriptRequestHeaderTearOff {
   const _$TestScriptRequestHeaderTearOff();
 
-// ignore: unused_element
   _TestScriptRequestHeader call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -16026,7 +15991,6 @@ TestScriptAssert _$TestScriptAssertFromJson(Map<String, dynamic> json) {
 class _$TestScriptAssertTearOff {
   const _$TestScriptAssertTearOff();
 
-// ignore: unused_element
   _TestScriptAssert call(
       {String id,
       @JsonKey(name: 'extension')
@@ -17631,7 +17595,6 @@ TestScriptTest _$TestScriptTestFromJson(Map<String, dynamic> json) {
 class _$TestScriptTestTearOff {
   const _$TestScriptTestTearOff();
 
-// ignore: unused_element
   _TestScriptTest call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -17954,7 +17917,6 @@ TestScriptAction1 _$TestScriptAction1FromJson(Map<String, dynamic> json) {
 class _$TestScriptAction1TearOff {
   const _$TestScriptAction1TearOff();
 
-// ignore: unused_element
   _TestScriptAction1 call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -18214,7 +18176,6 @@ TestScriptTeardown _$TestScriptTeardownFromJson(Map<String, dynamic> json) {
 class _$TestScriptTeardownTearOff {
   const _$TestScriptTeardownTearOff();
 
-// ignore: unused_element
   _TestScriptTeardown call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -18420,7 +18381,6 @@ TestScriptAction2 _$TestScriptAction2FromJson(Map<String, dynamic> json) {
 class _$TestScriptAction2TearOff {
   const _$TestScriptAction2TearOff();
 
-// ignore: unused_element
   _TestScriptAction2 call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,

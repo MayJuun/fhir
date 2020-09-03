@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'medication_and_immunization.dart';
 
@@ -15,7 +15,6 @@ Medication _$MedicationFromJson(Map<String, dynamic> json) {
 class _$MedicationTearOff {
   const _$MedicationTearOff();
 
-// ignore: unused_element
   _Medication call(
       {@required @JsonKey(defaultValue: 'Medication') String resourceType,
       Id id,
@@ -582,7 +581,6 @@ MedicationProduct _$MedicationProductFromJson(Map<String, dynamic> json) {
 class _$MedicationProductTearOff {
   const _$MedicationProductTearOff();
 
-// ignore: unused_element
   _MedicationProduct call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -872,7 +870,6 @@ MedicationProductIngredient _$MedicationProductIngredientFromJson(
 class _$MedicationProductIngredientTearOff {
   const _$MedicationProductIngredientTearOff();
 
-// ignore: unused_element
   _MedicationProductIngredient call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1134,7 +1131,6 @@ MedicationProductBatch _$MedicationProductBatchFromJson(
 class _$MedicationProductBatchTearOff {
   const _$MedicationProductBatchTearOff();
 
-// ignore: unused_element
   _MedicationProductBatch call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1443,7 +1439,6 @@ MedicationPackage _$MedicationPackageFromJson(Map<String, dynamic> json) {
 class _$MedicationPackageTearOff {
   const _$MedicationPackageTearOff();
 
-// ignore: unused_element
   _MedicationPackage call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1715,7 +1710,6 @@ MedicationPackageContent _$MedicationPackageContentFromJson(
 class _$MedicationPackageContentTearOff {
   const _$MedicationPackageContentTearOff();
 
-// ignore: unused_element
   _MedicationPackageContent call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1970,7 +1964,6 @@ MedicationOrder _$MedicationOrderFromJson(Map<String, dynamic> json) {
 class _$MedicationOrderTearOff {
   const _$MedicationOrderTearOff();
 
-// ignore: unused_element
   _MedicationOrder call(
       {@required
       @JsonKey(defaultValue: 'MedicationOrder')
@@ -2920,7 +2913,6 @@ MedicationOrderDosageInstruction _$MedicationOrderDosageInstructionFromJson(
 class _$MedicationOrderDosageInstructionTearOff {
   const _$MedicationOrderDosageInstructionTearOff();
 
-// ignore: unused_element
   _MedicationOrderDosageInstruction call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3568,7 +3560,6 @@ MedicationOrderDispenseRequest _$MedicationOrderDispenseRequestFromJson(
 class _$MedicationOrderDispenseRequestTearOff {
   const _$MedicationOrderDispenseRequestTearOff();
 
-// ignore: unused_element
   _MedicationOrderDispenseRequest call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3969,7 +3960,6 @@ MedicationOrderSubstitution _$MedicationOrderSubstitutionFromJson(
 class _$MedicationOrderSubstitutionTearOff {
   const _$MedicationOrderSubstitutionTearOff();
 
-// ignore: unused_element
   _MedicationOrderSubstitution call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -4231,7 +4221,6 @@ MedicationAdministration _$MedicationAdministrationFromJson(
 class _$MedicationAdministrationTearOff {
   const _$MedicationAdministrationTearOff();
 
-// ignore: unused_element
   _MedicationAdministration call(
       {@required
       @JsonKey(defaultValue: 'MedicationAdministration')
@@ -5234,7 +5223,6 @@ MedicationAdministrationDosage _$MedicationAdministrationDosageFromJson(
 class _$MedicationAdministrationDosageTearOff {
   const _$MedicationAdministrationDosageTearOff();
 
-// ignore: unused_element
   _MedicationAdministrationDosage call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5717,7 +5705,6 @@ MedicationDispense _$MedicationDispenseFromJson(Map<String, dynamic> json) {
 class _$MedicationDispenseTearOff {
   const _$MedicationDispenseTearOff();
 
-// ignore: unused_element
   _MedicationDispense call(
       {@required
       @JsonKey(defaultValue: 'MedicationDispense')
@@ -6769,7 +6756,6 @@ MedicationDispenseDosageInstruction
 class _$MedicationDispenseDosageInstructionTearOff {
   const _$MedicationDispenseDosageInstructionTearOff();
 
-// ignore: unused_element
   _MedicationDispenseDosageInstruction call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -7419,7 +7405,6 @@ MedicationDispenseSubstitution _$MedicationDispenseSubstitutionFromJson(
 class _$MedicationDispenseSubstitutionTearOff {
   const _$MedicationDispenseSubstitutionTearOff();
 
-// ignore: unused_element
   _MedicationDispenseSubstitution call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -7695,7 +7680,6 @@ MedicationStatement _$MedicationStatementFromJson(Map<String, dynamic> json) {
 class _$MedicationStatementTearOff {
   const _$MedicationStatementTearOff();
 
-// ignore: unused_element
   _MedicationStatement call(
       {@required
       @JsonKey(defaultValue: 'MedicationStatement')
@@ -8729,7 +8713,6 @@ MedicationStatementDosage _$MedicationStatementDosageFromJson(
 class _$MedicationStatementDosageTearOff {
   const _$MedicationStatementDosageTearOff();
 
-// ignore: unused_element
   _MedicationStatementDosage call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -9335,7 +9318,6 @@ Immunization _$ImmunizationFromJson(Map<String, dynamic> json) {
 class _$ImmunizationTearOff {
   const _$ImmunizationTearOff();
 
-// ignore: unused_element
   _Immunization call(
       {@required
       @JsonKey(defaultValue: 'Immunization')
@@ -10525,7 +10507,6 @@ ImmunizationExplanation _$ImmunizationExplanationFromJson(
 class _$ImmunizationExplanationTearOff {
   const _$ImmunizationExplanationTearOff();
 
-// ignore: unused_element
   _ImmunizationExplanation call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -10755,7 +10736,6 @@ ImmunizationReaction _$ImmunizationReactionFromJson(Map<String, dynamic> json) {
 class _$ImmunizationReactionTearOff {
   const _$ImmunizationReactionTearOff();
 
-// ignore: unused_element
   _ImmunizationReaction call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -11089,7 +11069,6 @@ ImmunizationVaccinationProtocol _$ImmunizationVaccinationProtocolFromJson(
 class _$ImmunizationVaccinationProtocolTearOff {
   const _$ImmunizationVaccinationProtocolTearOff();
 
-// ignore: unused_element
   _ImmunizationVaccinationProtocol call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -11549,7 +11528,6 @@ ImmunizationRecommendation _$ImmunizationRecommendationFromJson(
 class _$ImmunizationRecommendationTearOff {
   const _$ImmunizationRecommendationTearOff();
 
-// ignore: unused_element
   _ImmunizationRecommendation call(
       {@required
       @JsonKey(defaultValue: 'ImmunizationRecommendation')
@@ -12098,7 +12076,6 @@ ImmunizationRecommendationRecommendation
 class _$ImmunizationRecommendationRecommendationTearOff {
   const _$ImmunizationRecommendationRecommendationTearOff();
 
-// ignore: unused_element
   _ImmunizationRecommendationRecommendation call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -12535,7 +12512,6 @@ ImmunizationRecommendationRecommendationDateCriterion
 class _$ImmunizationRecommendationRecommendationDateCriterionTearOff {
   const _$ImmunizationRecommendationRecommendationDateCriterionTearOff();
 
-// ignore: unused_element
   _ImmunizationRecommendationRecommendationDateCriterion call(
       {Id id,
       FhirExtension extensio,
@@ -12871,7 +12847,6 @@ ImmunizationRecommendationRecommendationProtocol
 class _$ImmunizationRecommendationRecommendationProtocolTearOff {
   const _$ImmunizationRecommendationRecommendationProtocolTearOff();
 
-// ignore: unused_element
   _ImmunizationRecommendationRecommendationProtocol call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,

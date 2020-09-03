@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'terminology.dart';
 
@@ -15,7 +15,6 @@ CodeSystem _$CodeSystemFromJson(Map<String, dynamic> json) {
 class _$CodeSystemTearOff {
   const _$CodeSystemTearOff();
 
-// ignore: unused_element
   _CodeSystem call(
       {@required
       @JsonKey(defaultValue: 'CodeSystem')
@@ -1704,7 +1703,6 @@ CodeSystemFilter _$CodeSystemFilterFromJson(Map<String, dynamic> json) {
 class _$CodeSystemFilterTearOff {
   const _$CodeSystemFilterTearOff();
 
-// ignore: unused_element
   _CodeSystemFilter call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2108,7 +2106,6 @@ CodeSystemProperty _$CodeSystemPropertyFromJson(Map<String, dynamic> json) {
 class _$CodeSystemPropertyTearOff {
   const _$CodeSystemPropertyTearOff();
 
-// ignore: unused_element
   _CodeSystemProperty call(
       {String id,
       @JsonKey(name: 'extension')
@@ -2547,7 +2544,6 @@ CodeSystemConcept _$CodeSystemConceptFromJson(Map<String, dynamic> json) {
 class _$CodeSystemConceptTearOff {
   const _$CodeSystemConceptTearOff();
 
-// ignore: unused_element
   _CodeSystemConcept call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2976,7 +2972,6 @@ CodeSystemDesignation _$CodeSystemDesignationFromJson(
 class _$CodeSystemDesignationTearOff {
   const _$CodeSystemDesignationTearOff();
 
-// ignore: unused_element
   _CodeSystemDesignation call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3311,7 +3306,6 @@ CodeSystemProperty1 _$CodeSystemProperty1FromJson(Map<String, dynamic> json) {
 class _$CodeSystemProperty1TearOff {
   const _$CodeSystemProperty1TearOff();
 
-// ignore: unused_element
   _CodeSystemProperty1 call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3955,7 +3949,6 @@ ConceptMap _$ConceptMapFromJson(Map<String, dynamic> json) {
 class _$ConceptMapTearOff {
   const _$ConceptMapTearOff();
 
-// ignore: unused_element
   _ConceptMap call(
       {@required
       @JsonKey(defaultValue: 'ConceptMap')
@@ -5408,7 +5401,6 @@ ConceptMapGroup _$ConceptMapGroupFromJson(Map<String, dynamic> json) {
 class _$ConceptMapGroupTearOff {
   const _$ConceptMapGroupTearOff();
 
-// ignore: unused_element
   _ConceptMapGroup call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5893,7 +5885,6 @@ ConceptMapElement _$ConceptMapElementFromJson(Map<String, dynamic> json) {
 class _$ConceptMapElementTearOff {
   const _$ConceptMapElementTearOff();
 
-// ignore: unused_element
   _ConceptMapElement call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -6213,7 +6204,6 @@ ConceptMapTarget _$ConceptMapTargetFromJson(Map<String, dynamic> json) {
 class _$ConceptMapTargetTearOff {
   const _$ConceptMapTargetTearOff();
 
-// ignore: unused_element
   _ConceptMapTarget call(
       {String id,
       @JsonKey(name: 'extension')
@@ -6711,7 +6701,6 @@ ConceptMapDependsOn _$ConceptMapDependsOnFromJson(Map<String, dynamic> json) {
 class _$ConceptMapDependsOnTearOff {
   const _$ConceptMapDependsOnTearOff();
 
-// ignore: unused_element
   _ConceptMapDependsOn call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -7091,7 +7080,6 @@ ConceptMapUnmapped _$ConceptMapUnmappedFromJson(Map<String, dynamic> json) {
 class _$ConceptMapUnmappedTearOff {
   const _$ConceptMapUnmappedTearOff();
 
-// ignore: unused_element
   _ConceptMapUnmapped call(
       {String id,
       @JsonKey(name: 'extension')
@@ -7487,7 +7475,6 @@ NamingSystem _$NamingSystemFromJson(Map<String, dynamic> json) {
 class _$NamingSystemTearOff {
   const _$NamingSystemTearOff();
 
-// ignore: unused_element
   _NamingSystem call(
       {@required
       @JsonKey(defaultValue: 'NamingSystem')
@@ -8535,7 +8522,6 @@ NamingSystemUniqueId _$NamingSystemUniqueIdFromJson(Map<String, dynamic> json) {
 class _$NamingSystemUniqueIdTearOff {
   const _$NamingSystemUniqueIdTearOff();
 
-// ignore: unused_element
   _NamingSystemUniqueId call(
       {String id,
       @JsonKey(name: 'extension')
@@ -9010,7 +8996,6 @@ TerminologyCapabilities _$TerminologyCapabilitiesFromJson(
 class _$TerminologyCapabilitiesTearOff {
   const _$TerminologyCapabilitiesTearOff();
 
-// ignore: unused_element
   _TerminologyCapabilities call(
       {@required
       @JsonKey(defaultValue: 'TerminologyCapabilities')
@@ -10621,7 +10606,6 @@ TerminologyCapabilitiesSoftware _$TerminologyCapabilitiesSoftwareFromJson(
 class _$TerminologyCapabilitiesSoftwareTearOff {
   const _$TerminologyCapabilitiesSoftwareTearOff();
 
-// ignore: unused_element
   _TerminologyCapabilitiesSoftware call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -10934,7 +10918,6 @@ TerminologyCapabilitiesImplementation
 class _$TerminologyCapabilitiesImplementationTearOff {
   const _$TerminologyCapabilitiesImplementationTearOff();
 
-// ignore: unused_element
   _TerminologyCapabilitiesImplementation call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -11252,7 +11235,6 @@ TerminologyCapabilitiesCodeSystem _$TerminologyCapabilitiesCodeSystemFromJson(
 class _$TerminologyCapabilitiesCodeSystemTearOff {
   const _$TerminologyCapabilitiesCodeSystemTearOff();
 
-// ignore: unused_element
   _TerminologyCapabilitiesCodeSystem call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -11555,7 +11537,6 @@ TerminologyCapabilitiesVersion _$TerminologyCapabilitiesVersionFromJson(
 class _$TerminologyCapabilitiesVersionTearOff {
   const _$TerminologyCapabilitiesVersionTearOff();
 
-// ignore: unused_element
   _TerminologyCapabilitiesVersion call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -12042,7 +12023,6 @@ TerminologyCapabilitiesFilter _$TerminologyCapabilitiesFilterFromJson(
 class _$TerminologyCapabilitiesFilterTearOff {
   const _$TerminologyCapabilitiesFilterTearOff();
 
-// ignore: unused_element
   _TerminologyCapabilitiesFilter call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -12337,7 +12317,6 @@ TerminologyCapabilitiesExpansion _$TerminologyCapabilitiesExpansionFromJson(
 class _$TerminologyCapabilitiesExpansionTearOff {
   const _$TerminologyCapabilitiesExpansionTearOff();
 
-// ignore: unused_element
   _TerminologyCapabilitiesExpansion call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -12799,7 +12778,6 @@ TerminologyCapabilitiesParameter _$TerminologyCapabilitiesParameterFromJson(
 class _$TerminologyCapabilitiesParameterTearOff {
   const _$TerminologyCapabilitiesParameterTearOff();
 
-// ignore: unused_element
   _TerminologyCapabilitiesParameter call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -13116,7 +13094,6 @@ TerminologyCapabilitiesValidateCode
 class _$TerminologyCapabilitiesValidateCodeTearOff {
   const _$TerminologyCapabilitiesValidateCodeTearOff();
 
-// ignore: unused_element
   _TerminologyCapabilitiesValidateCode call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -13380,7 +13357,6 @@ TerminologyCapabilitiesTranslation _$TerminologyCapabilitiesTranslationFromJson(
 class _$TerminologyCapabilitiesTranslationTearOff {
   const _$TerminologyCapabilitiesTranslationTearOff();
 
-// ignore: unused_element
   _TerminologyCapabilitiesTranslation call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -13640,7 +13616,6 @@ TerminologyCapabilitiesClosure _$TerminologyCapabilitiesClosureFromJson(
 class _$TerminologyCapabilitiesClosureTearOff {
   const _$TerminologyCapabilitiesClosureTearOff();
 
-// ignore: unused_element
   _TerminologyCapabilitiesClosure call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -13899,7 +13874,6 @@ ValueSet _$ValueSetFromJson(Map<String, dynamic> json) {
 class _$ValueSetTearOff {
   const _$ValueSetTearOff();
 
-// ignore: unused_element
   _ValueSet call(
       {@required @JsonKey(defaultValue: 'ValueSet') String resourceType,
       Id id,
@@ -15132,7 +15106,6 @@ ValueSetCompose _$ValueSetComposeFromJson(Map<String, dynamic> json) {
 class _$ValueSetComposeTearOff {
   const _$ValueSetComposeTearOff();
 
-// ignore: unused_element
   _ValueSetCompose call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -15483,7 +15456,6 @@ ValueSetInclude _$ValueSetIncludeFromJson(Map<String, dynamic> json) {
 class _$ValueSetIncludeTearOff {
   const _$ValueSetIncludeTearOff();
 
-// ignore: unused_element
   _ValueSetInclude call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -15849,7 +15821,6 @@ ValueSetConcept _$ValueSetConceptFromJson(Map<String, dynamic> json) {
 class _$ValueSetConceptTearOff {
   const _$ValueSetConceptTearOff();
 
-// ignore: unused_element
   _ValueSetConcept call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -16172,7 +16143,6 @@ ValueSetDesignation _$ValueSetDesignationFromJson(Map<String, dynamic> json) {
 class _$ValueSetDesignationTearOff {
   const _$ValueSetDesignationTearOff();
 
-// ignore: unused_element
   _ValueSetDesignation call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -16506,7 +16476,6 @@ ValueSetFilter _$ValueSetFilterFromJson(Map<String, dynamic> json) {
 class _$ValueSetFilterTearOff {
   const _$ValueSetFilterTearOff();
 
-// ignore: unused_element
   _ValueSetFilter call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -16864,7 +16833,6 @@ ValueSetExpansion _$ValueSetExpansionFromJson(Map<String, dynamic> json) {
 class _$ValueSetExpansionTearOff {
   const _$ValueSetExpansionTearOff();
 
-// ignore: unused_element
   _ValueSetExpansion call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -17331,7 +17299,6 @@ ValueSetParameter _$ValueSetParameterFromJson(Map<String, dynamic> json) {
 class _$ValueSetParameterTearOff {
   const _$ValueSetParameterTearOff();
 
-// ignore: unused_element
   _ValueSetParameter call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -17998,7 +17965,6 @@ ValueSetContains _$ValueSetContainsFromJson(Map<String, dynamic> json) {
 class _$ValueSetContainsTearOff {
   const _$ValueSetContainsTearOff();
 
-// ignore: unused_element
   _ValueSetContains call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,

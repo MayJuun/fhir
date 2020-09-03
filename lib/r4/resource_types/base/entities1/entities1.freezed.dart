@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'entities1.dart';
 
@@ -15,7 +15,6 @@ Endpoint _$EndpointFromJson(Map<String, dynamic> json) {
 class _$EndpointTearOff {
   const _$EndpointTearOff();
 
-// ignore: unused_element
   _Endpoint call(
       {@required @JsonKey(defaultValue: 'Endpoint') String resourceType,
       Id id,
@@ -858,7 +857,6 @@ HealthcareService _$HealthcareServiceFromJson(Map<String, dynamic> json) {
 class _$HealthcareServiceTearOff {
   const _$HealthcareServiceTearOff();
 
-// ignore: unused_element
   _HealthcareService call(
       {@required
       @JsonKey(defaultValue: 'HealthcareService')
@@ -2076,7 +2074,6 @@ HealthcareServiceEligibility _$HealthcareServiceEligibilityFromJson(
 class _$HealthcareServiceEligibilityTearOff {
   const _$HealthcareServiceEligibilityTearOff();
 
-// ignore: unused_element
   _HealthcareServiceEligibility call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2362,7 +2359,6 @@ HealthcareServiceAvailableTime _$HealthcareServiceAvailableTimeFromJson(
 class _$HealthcareServiceAvailableTimeTearOff {
   const _$HealthcareServiceAvailableTimeTearOff();
 
-// ignore: unused_element
   _HealthcareServiceAvailableTime call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2799,7 +2795,6 @@ HealthcareServiceNotAvailable _$HealthcareServiceNotAvailableFromJson(
 class _$HealthcareServiceNotAvailableTearOff {
   const _$HealthcareServiceNotAvailableTearOff();
 
-// ignore: unused_element
   _HealthcareServiceNotAvailable call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3086,7 +3081,6 @@ Location _$LocationFromJson(Map<String, dynamic> json) {
 class _$LocationTearOff {
   const _$LocationTearOff();
 
-// ignore: unused_element
   _Location call(
       {@required
       @JsonKey(defaultValue: 'Location')
@@ -4194,7 +4188,6 @@ LocationPosition _$LocationPositionFromJson(Map<String, dynamic> json) {
 class _$LocationPositionTearOff {
   const _$LocationPositionTearOff();
 
-// ignore: unused_element
   _LocationPosition call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -4557,7 +4550,6 @@ LocationHoursOfOperation _$LocationHoursOfOperationFromJson(
 class _$LocationHoursOfOperationTearOff {
   const _$LocationHoursOfOperationTearOff();
 
-// ignore: unused_element
   _LocationHoursOfOperation call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -4971,7 +4963,6 @@ Organization _$OrganizationFromJson(Map<String, dynamic> json) {
 class _$OrganizationTearOff {
   const _$OrganizationTearOff();
 
-// ignore: unused_element
   _Organization call(
       {@required @JsonKey(defaultValue: 'Organization') String resourceType,
       Id id,
@@ -5698,7 +5689,6 @@ OrganizationContact _$OrganizationContactFromJson(Map<String, dynamic> json) {
 class _$OrganizationContactTearOff {
   const _$OrganizationContactTearOff();
 
-// ignore: unused_element
   _OrganizationContact call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -6002,7 +5992,6 @@ OrganizationAffiliation _$OrganizationAffiliationFromJson(
 class _$OrganizationAffiliationTearOff {
   const _$OrganizationAffiliationTearOff();
 
-// ignore: unused_element
   _OrganizationAffiliation call(
       {@required
       @JsonKey(defaultValue: 'OrganizationAffiliation')

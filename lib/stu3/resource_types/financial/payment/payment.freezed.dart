@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'payment.dart';
 
@@ -15,7 +15,6 @@ PaymentNotice _$PaymentNoticeFromJson(Map<String, dynamic> json) {
 class _$PaymentNoticeTearOff {
   const _$PaymentNoticeTearOff();
 
-// ignore: unused_element
   _PaymentNotice call(
       {@required @JsonKey(defaultValue: 'PaymentNotice') String resourceType,
       Id id,
@@ -830,7 +829,6 @@ PaymentReconciliation _$PaymentReconciliationFromJson(
 class _$PaymentReconciliationTearOff {
   const _$PaymentReconciliationTearOff();
 
-// ignore: unused_element
   _PaymentReconciliation call(
       {@required
       @JsonKey(defaultValue: 'PaymentReconciliation')
@@ -1777,7 +1775,6 @@ PaymentReconciliationDetail _$PaymentReconciliationDetailFromJson(
 class _$PaymentReconciliationDetailTearOff {
   const _$PaymentReconciliationDetailTearOff();
 
-// ignore: unused_element
   _PaymentReconciliationDetail call(
       {@required CodeableConcept type,
       Reference request,
@@ -2153,7 +2150,6 @@ PaymentReconciliationProcessNote _$PaymentReconciliationProcessNoteFromJson(
 class _$PaymentReconciliationProcessNoteTearOff {
   const _$PaymentReconciliationProcessNoteTearOff();
 
-// ignore: unused_element
   _PaymentReconciliationProcessNote call(
       {CodeableConcept type,
       String text,

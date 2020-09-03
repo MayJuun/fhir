@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'primitive_failures.dart';
 
@@ -12,140 +12,120 @@ T _$identity<T>(T value) => value;
 class _$PrimitiveFailureTearOff {
   const _$PrimitiveFailureTearOff();
 
-// ignore: unused_element
   InvalidBase64Binary<T> invalidBase64Binary<T>({@required T failedValue}) {
     return InvalidBase64Binary<T>(
       failedValue: failedValue,
     );
   }
 
-// ignore: unused_element
   InvalidBoolean<T> invalidBoolean<T>({@required T failedValue}) {
     return InvalidBoolean<T>(
       failedValue: failedValue,
     );
   }
 
-// ignore: unused_element
   InvalidCanonical<T> invalidCanonical<T>({@required T failedValue}) {
     return InvalidCanonical<T>(
       failedValue: failedValue,
     );
   }
 
-// ignore: unused_element
   InvalidCode<T> invalidCode<T>({@required T failedValue}) {
     return InvalidCode<T>(
       failedValue: failedValue,
     );
   }
 
-// ignore: unused_element
   InvalidDate<T> invalidDate<T>({@required T failedValue}) {
     return InvalidDate<T>(
       failedValue: failedValue,
     );
   }
 
-// ignore: unused_element
   InvalidDateTime<T> invalidFhirDateTime<T>({@required T failedValue}) {
     return InvalidDateTime<T>(
       failedValue: failedValue,
     );
   }
 
-// ignore: unused_element
   InvalidDecimal<T> invalidDecimal<T>({@required T failedValue}) {
     return InvalidDecimal<T>(
       failedValue: failedValue,
     );
   }
 
-// ignore: unused_element
   InvalidId<T> invalidId<T>({@required T failedValue}) {
     return InvalidId<T>(
       failedValue: failedValue,
     );
   }
 
-// ignore: unused_element
   InvalidInstant<T> invalidInstant<T>({@required T failedValue}) {
     return InvalidInstant<T>(
       failedValue: failedValue,
     );
   }
 
-// ignore: unused_element
   InvalidInteger64<T> invalidInteger64<T>({@required T failedValue}) {
     return InvalidInteger64<T>(
       failedValue: failedValue,
     );
   }
 
-// ignore: unused_element
   InvalidInteger<T> invalidInteger<T>({@required T failedValue}) {
     return InvalidInteger<T>(
       failedValue: failedValue,
     );
   }
 
-// ignore: unused_element
   InvalidMarkdown<T> invalidMarkdown<T>({@required T failedValue}) {
     return InvalidMarkdown<T>(
       failedValue: failedValue,
     );
   }
 
-// ignore: unused_element
   InvalidOid<T> invalidOid<T>({@required T failedValue}) {
     return InvalidOid<T>(
       failedValue: failedValue,
     );
   }
 
-// ignore: unused_element
   InvalidPositiveInt<T> invalidPositiveInt<T>({@required T failedValue}) {
     return InvalidPositiveInt<T>(
       failedValue: failedValue,
     );
   }
 
-// ignore: unused_element
   InvalidTime<T> invalidTime<T>({@required T failedValue}) {
     return InvalidTime<T>(
       failedValue: failedValue,
     );
   }
 
-// ignore: unused_element
   InvalidUnsignedInt<T> invalidUnsignedInt<T>({@required T failedValue}) {
     return InvalidUnsignedInt<T>(
       failedValue: failedValue,
     );
   }
 
-// ignore: unused_element
   InvalidFhirUri<T> invalidFhirUri<T>({@required T failedValue}) {
     return InvalidFhirUri<T>(
       failedValue: failedValue,
     );
   }
 
-// ignore: unused_element
   InvalidFhirUrl<T> invalidFhirUrl<T>({@required T failedValue}) {
     return InvalidFhirUrl<T>(
       failedValue: failedValue,
     );
   }
 
-// ignore: unused_element
   InvalidUuid<T> invalidUuid<T>({@required T failedValue}) {
     return InvalidUuid<T>(
       failedValue: failedValue,
     );
   }
 
-// ignore: unused_element
   InvalidEnum<T> invalidEnum<T>({@required T failedValue}) {
     return InvalidEnum<T>(
       failedValue: failedValue,

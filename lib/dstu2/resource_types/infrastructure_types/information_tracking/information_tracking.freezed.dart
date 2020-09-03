@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'information_tracking.dart';
 
@@ -15,7 +15,6 @@ Questionnaire _$QuestionnaireFromJson(Map<String, dynamic> json) {
 class _$QuestionnaireTearOff {
   const _$QuestionnaireTearOff();
 
-// ignore: unused_element
   _Questionnaire call(
       {@required
       @JsonKey(defaultValue: 'Questionnaire')
@@ -895,7 +894,6 @@ QuestionnaireGroup _$QuestionnaireGroupFromJson(Map<String, dynamic> json) {
 class _$QuestionnaireGroupTearOff {
   const _$QuestionnaireGroupTearOff();
 
-// ignore: unused_element
   _QuestionnaireGroup call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1344,7 +1342,6 @@ QuestionnaireGroupQuestion _$QuestionnaireGroupQuestionFromJson(
 class _$QuestionnaireGroupQuestionTearOff {
   const _$QuestionnaireGroupQuestionTearOff();
 
-// ignore: unused_element
   _QuestionnaireGroupQuestion call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1788,7 +1785,6 @@ QuestionnaireResponse _$QuestionnaireResponseFromJson(
 class _$QuestionnaireResponseTearOff {
   const _$QuestionnaireResponseTearOff();
 
-// ignore: unused_element
   _QuestionnaireResponse call(
       {@required
       @JsonKey(defaultValue: 'QuestionnaireResponse')
@@ -2647,7 +2643,6 @@ QuestionnaireResponseGroup _$QuestionnaireResponseGroupFromJson(
 class _$QuestionnaireResponseGroupTearOff {
   const _$QuestionnaireResponseGroupTearOff();
 
-// ignore: unused_element
   _QuestionnaireResponseGroup call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3075,7 +3070,6 @@ QuestionnaireResponseGroupQuestion _$QuestionnaireResponseGroupQuestionFromJson(
 class _$QuestionnaireResponseGroupQuestionTearOff {
   const _$QuestionnaireResponseGroupQuestionTearOff();
 
-// ignore: unused_element
   _QuestionnaireResponseGroupQuestion call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3400,7 +3394,6 @@ QuestionnaireResponseQuestionAnswer
 class _$QuestionnaireResponseQuestionAnswerTearOff {
   const _$QuestionnaireResponseQuestionAnswerTearOff();
 
-// ignore: unused_element
   _QuestionnaireResponseQuestionAnswer call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -4326,7 +4319,6 @@ Provenance _$ProvenanceFromJson(Map<String, dynamic> json) {
 class _$ProvenanceTearOff {
   const _$ProvenanceTearOff();
 
-// ignore: unused_element
   _Provenance call(
       {@required @JsonKey(defaultValue: 'Provenance') String resourceType,
       Id id,
@@ -5046,7 +5038,6 @@ ProvenanceAgent _$ProvenanceAgentFromJson(Map<String, dynamic> json) {
 class _$ProvenanceAgentTearOff {
   const _$ProvenanceAgentTearOff();
 
-// ignore: unused_element
   _ProvenanceAgent call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5379,7 +5370,6 @@ ProvenanceEntity _$ProvenanceEntityFromJson(Map<String, dynamic> json) {
 class _$ProvenanceEntityTearOff {
   const _$ProvenanceEntityTearOff();
 
-// ignore: unused_element
   _ProvenanceEntity call(
       {Id id,
       @JsonKey(name: 'extension')
@@ -5843,7 +5833,6 @@ ProvenanceAgentRelatedAgent _$ProvenanceAgentRelatedAgentFromJson(
 class _$ProvenanceAgentRelatedAgentTearOff {
   const _$ProvenanceAgentRelatedAgentTearOff();
 
-// ignore: unused_element
   _ProvenanceAgentRelatedAgent call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -6096,7 +6085,6 @@ AuditEvent _$AuditEventFromJson(Map<String, dynamic> json) {
 class _$AuditEventTearOff {
   const _$AuditEventTearOff();
 
-// ignore: unused_element
   _AuditEvent call(
       {@required
       @JsonKey(defaultValue: 'AuditEvent')
@@ -6649,7 +6637,6 @@ AuditEventEvent _$AuditEventEventFromJson(Map<String, dynamic> json) {
 class _$AuditEventEventTearOff {
   const _$AuditEventEventTearOff();
 
-// ignore: unused_element
   _AuditEventEvent call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -6995,7 +6982,6 @@ AuditEventParticipant _$AuditEventParticipantFromJson(
 class _$AuditEventParticipantTearOff {
   const _$AuditEventParticipantTearOff();
 
-// ignore: unused_element
   _AuditEventParticipant call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -7502,7 +7488,6 @@ AuditEventSource _$AuditEventSourceFromJson(Map<String, dynamic> json) {
 class _$AuditEventSourceTearOff {
   const _$AuditEventSourceTearOff();
 
-// ignore: unused_element
   _AuditEventSource call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -7800,7 +7785,6 @@ AuditEventObject _$AuditEventObjectFromJson(Map<String, dynamic> json) {
 class _$AuditEventObjectTearOff {
   const _$AuditEventObjectTearOff();
 
-// ignore: unused_element
   _AuditEventObject call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -8291,7 +8275,6 @@ AuditEventParticipantNetwork _$AuditEventParticipantNetworkFromJson(
 class _$AuditEventParticipantNetworkTearOff {
   const _$AuditEventParticipantNetworkTearOff();
 
-// ignore: unused_element
   _AuditEventParticipantNetwork call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -8601,7 +8584,6 @@ AuditEventObjectDetail _$AuditEventObjectDetailFromJson(
 class _$AuditEventObjectDetailTearOff {
   const _$AuditEventObjectDetailTearOff();
 
-// ignore: unused_element
   _AuditEventObjectDetail call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,

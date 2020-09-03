@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'diagnostics.dart';
 
@@ -15,7 +15,6 @@ BodyStructure _$BodyStructureFromJson(Map<String, dynamic> json) {
 class _$BodyStructureTearOff {
   const _$BodyStructureTearOff();
 
-// ignore: unused_element
   _BodyStructure call(
       {@required @JsonKey(defaultValue: 'BodyStructure') String resourceType,
       Id id,
@@ -715,7 +714,6 @@ DiagnosticReport _$DiagnosticReportFromJson(Map<String, dynamic> json) {
 class _$DiagnosticReportTearOff {
   const _$DiagnosticReportTearOff();
 
-// ignore: unused_element
   _DiagnosticReport call(
       {@required
       @JsonKey(defaultValue: 'DiagnosticReport')
@@ -1771,7 +1769,6 @@ DiagnosticReportMedia _$DiagnosticReportMediaFromJson(
 class _$DiagnosticReportMediaTearOff {
   const _$DiagnosticReportMediaTearOff();
 
-// ignore: unused_element
   _DiagnosticReportMedia call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2049,7 +2046,6 @@ ImagingStudy _$ImagingStudyFromJson(Map<String, dynamic> json) {
 class _$ImagingStudyTearOff {
   const _$ImagingStudyTearOff();
 
-// ignore: unused_element
   _ImagingStudy call(
       {@required
       @JsonKey(defaultValue: 'ImagingStudy')
@@ -3170,7 +3166,6 @@ ImagingStudySeries _$ImagingStudySeriesFromJson(Map<String, dynamic> json) {
 class _$ImagingStudySeriesTearOff {
   const _$ImagingStudySeriesTearOff();
 
-// ignore: unused_element
   _ImagingStudySeries call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3838,7 +3833,6 @@ ImagingStudyPerformer _$ImagingStudyPerformerFromJson(
 class _$ImagingStudyPerformerTearOff {
   const _$ImagingStudyPerformerTearOff();
 
-// ignore: unused_element
   _ImagingStudyPerformer call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -4092,7 +4086,6 @@ ImagingStudyInstance _$ImagingStudyInstanceFromJson(Map<String, dynamic> json) {
 class _$ImagingStudyInstanceTearOff {
   const _$ImagingStudyInstanceTearOff();
 
-// ignore: unused_element
   _ImagingStudyInstance call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -4482,7 +4475,6 @@ Media _$MediaFromJson(Map<String, dynamic> json) {
 class _$MediaTearOff {
   const _$MediaTearOff();
 
-// ignore: unused_element
   _Media call(
       {@required @JsonKey(defaultValue: 'Media') String resourceType,
       Id id,
@@ -5757,7 +5749,6 @@ MolecularSequence _$MolecularSequenceFromJson(Map<String, dynamic> json) {
 class _$MolecularSequenceTearOff {
   const _$MolecularSequenceTearOff();
 
-// ignore: unused_element
   _MolecularSequence call(
       {@required
       @JsonKey(defaultValue: 'MolecularSequence')
@@ -6771,7 +6762,6 @@ MolecularSequenceReferenceSeq _$MolecularSequenceReferenceSeqFromJson(
 class _$MolecularSequenceReferenceSeqTearOff {
   const _$MolecularSequenceReferenceSeqTearOff();
 
-// ignore: unused_element
   _MolecularSequenceReferenceSeq
       call(
           {String id,
@@ -7501,7 +7491,6 @@ MolecularSequenceVariant _$MolecularSequenceVariantFromJson(
 class _$MolecularSequenceVariantTearOff {
   const _$MolecularSequenceVariantTearOff();
 
-// ignore: unused_element
   _MolecularSequenceVariant call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -8020,7 +8009,6 @@ MolecularSequenceQuality _$MolecularSequenceQualityFromJson(
 class _$MolecularSequenceQualityTearOff {
   const _$MolecularSequenceQualityTearOff();
 
-// ignore: unused_element
   _MolecularSequenceQuality call(
       {String id,
       @JsonKey(name: 'extension')
@@ -9029,7 +9017,6 @@ MolecularSequenceRoc _$MolecularSequenceRocFromJson(Map<String, dynamic> json) {
 class _$MolecularSequenceRocTearOff {
   const _$MolecularSequenceRocTearOff();
 
-// ignore: unused_element
   _MolecularSequenceRoc call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -9536,7 +9523,6 @@ MolecularSequenceRepository _$MolecularSequenceRepositoryFromJson(
 class _$MolecularSequenceRepositoryTearOff {
   const _$MolecularSequenceRepositoryTearOff();
 
-// ignore: unused_element
   _MolecularSequenceRepository call(
       {String id,
       @JsonKey(name: 'extension')
@@ -10122,7 +10108,6 @@ MolecularSequenceStructureVariant _$MolecularSequenceStructureVariantFromJson(
 class _$MolecularSequenceStructureVariantTearOff {
   const _$MolecularSequenceStructureVariantTearOff();
 
-// ignore: unused_element
   _MolecularSequenceStructureVariant call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -10535,7 +10520,6 @@ MolecularSequenceOuter _$MolecularSequenceOuterFromJson(
 class _$MolecularSequenceOuterTearOff {
   const _$MolecularSequenceOuterTearOff();
 
-// ignore: unused_element
   _MolecularSequenceOuter call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -10836,7 +10820,6 @@ MolecularSequenceInner _$MolecularSequenceInnerFromJson(
 class _$MolecularSequenceInnerTearOff {
   const _$MolecularSequenceInnerTearOff();
 
-// ignore: unused_element
   _MolecularSequenceInner call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -11136,7 +11119,6 @@ Observation _$ObservationFromJson(Map<String, dynamic> json) {
 class _$ObservationTearOff {
   const _$ObservationTearOff();
 
-// ignore: unused_element
   _Observation call(
       {@required
       @JsonKey(defaultValue: 'Observation')
@@ -12897,7 +12879,6 @@ ObservationReferenceRange _$ObservationReferenceRangeFromJson(
 class _$ObservationReferenceRangeTearOff {
   const _$ObservationReferenceRangeTearOff();
 
-// ignore: unused_element
   _ObservationReferenceRange call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -13290,7 +13271,6 @@ ObservationComponent _$ObservationComponentFromJson(Map<String, dynamic> json) {
 class _$ObservationComponentTearOff {
   const _$ObservationComponentTearOff();
 
-// ignore: unused_element
   _ObservationComponent call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -14106,7 +14086,6 @@ QuestionnaireResponse _$QuestionnaireResponseFromJson(
 class _$QuestionnaireResponseTearOff {
   const _$QuestionnaireResponseTearOff();
 
-// ignore: unused_element
   _QuestionnaireResponse call(
       {@required
       @JsonKey(defaultValue: 'QuestionnaireResponse')
@@ -14931,7 +14910,6 @@ QuestionnaireResponseItem _$QuestionnaireResponseItemFromJson(
 class _$QuestionnaireResponseItemTearOff {
   const _$QuestionnaireResponseItemTearOff();
 
-// ignore: unused_element
   _QuestionnaireResponseItem call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -15338,7 +15316,6 @@ QuestionnaireResponseAnswer _$QuestionnaireResponseAnswerFromJson(
 class _$QuestionnaireResponseAnswerTearOff {
   const _$QuestionnaireResponseAnswerTearOff();
 
-// ignore: unused_element
   _QuestionnaireResponseAnswer call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -16176,7 +16153,6 @@ Specimen _$SpecimenFromJson(Map<String, dynamic> json) {
 class _$SpecimenTearOff {
   const _$SpecimenTearOff();
 
-// ignore: unused_element
   _Specimen call(
       {@required @JsonKey(defaultValue: 'Specimen') String resourceType,
       Id id,
@@ -16988,7 +16964,6 @@ SpecimenCollection _$SpecimenCollectionFromJson(Map<String, dynamic> json) {
 class _$SpecimenCollectionTearOff {
   const _$SpecimenCollectionTearOff();
 
-// ignore: unused_element
   _SpecimenCollection call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -17513,7 +17488,6 @@ SpecimenProcessing _$SpecimenProcessingFromJson(Map<String, dynamic> json) {
 class _$SpecimenProcessingTearOff {
   const _$SpecimenProcessingTearOff();
 
-// ignore: unused_element
   _SpecimenProcessing call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -17913,7 +17887,6 @@ SpecimenContainer _$SpecimenContainerFromJson(Map<String, dynamic> json) {
 class _$SpecimenContainerTearOff {
   const _$SpecimenContainerTearOff();
 
-// ignore: unused_element
   _SpecimenContainer call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,

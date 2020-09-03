@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'medication_definition.dart';
 
@@ -15,7 +15,6 @@ MedicinalProduct _$MedicinalProductFromJson(Map<String, dynamic> json) {
 class _$MedicinalProductTearOff {
   const _$MedicinalProductTearOff();
 
-// ignore: unused_element
   _MedicinalProduct call(
       {@required @JsonKey(defaultValue: 'MedicinalProduct') String resourceType,
       Id id,
@@ -971,7 +970,6 @@ MedicinalProductName _$MedicinalProductNameFromJson(Map<String, dynamic> json) {
 class _$MedicinalProductNameTearOff {
   const _$MedicinalProductNameTearOff();
 
-// ignore: unused_element
   _MedicinalProductName call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1267,7 +1265,6 @@ MedicinalProductNamePart _$MedicinalProductNamePartFromJson(
 class _$MedicinalProductNamePartTearOff {
   const _$MedicinalProductNamePartTearOff();
 
-// ignore: unused_element
   _MedicinalProductNamePart call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1544,7 +1541,6 @@ MedicinalProductCountryLanguage _$MedicinalProductCountryLanguageFromJson(
 class _$MedicinalProductCountryLanguageTearOff {
   const _$MedicinalProductCountryLanguageTearOff();
 
-// ignore: unused_element
   _MedicinalProductCountryLanguage call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1848,7 +1844,6 @@ MedicinalProductManufacturingBusinessOperation
 class _$MedicinalProductManufacturingBusinessOperationTearOff {
   const _$MedicinalProductManufacturingBusinessOperationTearOff();
 
-// ignore: unused_element
   _MedicinalProductManufacturingBusinessOperation call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2286,7 +2281,6 @@ MedicinalProductSpecialDesignation _$MedicinalProductSpecialDesignationFromJson(
 class _$MedicinalProductSpecialDesignationTearOff {
   const _$MedicinalProductSpecialDesignationTearOff();
 
-// ignore: unused_element
   _MedicinalProductSpecialDesignation call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2769,7 +2763,6 @@ MedicinalProductAuthorization _$MedicinalProductAuthorizationFromJson(
 class _$MedicinalProductAuthorizationTearOff {
   const _$MedicinalProductAuthorizationTearOff();
 
-// ignore: unused_element
   _MedicinalProductAuthorization call(
       {@required
       @JsonKey(defaultValue: 'MedicinalProductAuthorization')
@@ -3853,7 +3846,6 @@ MedicinalProductAuthorizationJurisdictionalAuthorization
 class _$MedicinalProductAuthorizationJurisdictionalAuthorizationTearOff {
   const _$MedicinalProductAuthorizationJurisdictionalAuthorizationTearOff();
 
-// ignore: unused_element
   _MedicinalProductAuthorizationJurisdictionalAuthorization call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -4233,7 +4225,6 @@ MedicinalProductAuthorizationProcedure
 class _$MedicinalProductAuthorizationProcedureTearOff {
   const _$MedicinalProductAuthorizationProcedureTearOff();
 
-// ignore: unused_element
   _MedicinalProductAuthorizationProcedure call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -4621,7 +4612,6 @@ MedicinalProductContraindication _$MedicinalProductContraindicationFromJson(
 class _$MedicinalProductContraindicationTearOff {
   const _$MedicinalProductContraindicationTearOff();
 
-// ignore: unused_element
   _MedicinalProductContraindication call(
       {@required
       @JsonKey(defaultValue: 'MedicinalProductContraindication')
@@ -5253,7 +5243,6 @@ MedicinalProductContraindicationOtherTherapy
 class _$MedicinalProductContraindicationOtherTherapyTearOff {
   const _$MedicinalProductContraindicationOtherTherapyTearOff();
 
-// ignore: unused_element
   _MedicinalProductContraindicationOtherTherapy call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5572,7 +5561,6 @@ MedicinalProductIndication _$MedicinalProductIndicationFromJson(
 class _$MedicinalProductIndicationTearOff {
   const _$MedicinalProductIndicationTearOff();
 
-// ignore: unused_element
   _MedicinalProductIndication call(
       {@required
       @JsonKey(defaultValue: 'MedicinalProductIndication')
@@ -6263,7 +6251,6 @@ MedicinalProductIndicationOtherTherapy
 class _$MedicinalProductIndicationOtherTherapyTearOff {
   const _$MedicinalProductIndicationOtherTherapyTearOff();
 
-// ignore: unused_element
   _MedicinalProductIndicationOtherTherapy call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -6580,7 +6567,6 @@ MedicinalProductIngredient _$MedicinalProductIngredientFromJson(
 class _$MedicinalProductIngredientTearOff {
   const _$MedicinalProductIngredientTearOff();
 
-// ignore: unused_element
   _MedicinalProductIngredient call(
       {@required
       @JsonKey(defaultValue: 'MedicinalProductIngredient')
@@ -7240,7 +7226,6 @@ MedicinalProductIngredientSpecifiedSubstance
 class _$MedicinalProductIngredientSpecifiedSubstanceTearOff {
   const _$MedicinalProductIngredientSpecifiedSubstanceTearOff();
 
-// ignore: unused_element
   _MedicinalProductIngredientSpecifiedSubstance call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -7568,7 +7553,6 @@ MedicinalProductIngredientStrength _$MedicinalProductIngredientStrengthFromJson(
 class _$MedicinalProductIngredientStrengthTearOff {
   const _$MedicinalProductIngredientStrengthTearOff();
 
-// ignore: unused_element
   _MedicinalProductIngredientStrength call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -8025,7 +8009,6 @@ MedicinalProductIngredientReferenceStrength
 class _$MedicinalProductIngredientReferenceStrengthTearOff {
   const _$MedicinalProductIngredientReferenceStrengthTearOff();
 
-// ignore: unused_element
   _MedicinalProductIngredientReferenceStrength call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -8420,7 +8403,6 @@ MedicinalProductIngredientSubstance
 class _$MedicinalProductIngredientSubstanceTearOff {
   const _$MedicinalProductIngredientSubstanceTearOff();
 
-// ignore: unused_element
   _MedicinalProductIngredientSubstance call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -8677,7 +8659,6 @@ MedicinalProductInteraction _$MedicinalProductInteractionFromJson(
 class _$MedicinalProductInteractionTearOff {
   const _$MedicinalProductInteractionTearOff();
 
-// ignore: unused_element
   _MedicinalProductInteraction call(
       {@required
       @JsonKey(defaultValue: 'MedicinalProductInteraction')
@@ -9368,7 +9349,6 @@ MedicinalProductInteractionInteractant
 class _$MedicinalProductInteractionInteractantTearOff {
   const _$MedicinalProductInteractionInteractantTearOff();
 
-// ignore: unused_element
   _MedicinalProductInteractionInteractant call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -9643,7 +9623,6 @@ MedicinalProductManufactured _$MedicinalProductManufacturedFromJson(
 class _$MedicinalProductManufacturedTearOff {
   const _$MedicinalProductManufacturedTearOff();
 
-// ignore: unused_element
   _MedicinalProductManufactured call(
       {@required
       @JsonKey(defaultValue: 'MedicinalProductManufactured')
@@ -10312,7 +10291,6 @@ MedicinalProductPackaged _$MedicinalProductPackagedFromJson(
 class _$MedicinalProductPackagedTearOff {
   const _$MedicinalProductPackagedTearOff();
 
-// ignore: unused_element
   _MedicinalProductPackaged call(
       {@required
       @JsonKey(defaultValue: 'MedicinalProductPackaged')
@@ -11022,7 +11000,6 @@ MedicinalProductPackagedBatchIdentifier
 class _$MedicinalProductPackagedBatchIdentifierTearOff {
   const _$MedicinalProductPackagedBatchIdentifierTearOff();
 
-// ignore: unused_element
   _MedicinalProductPackagedBatchIdentifier call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -11299,7 +11276,6 @@ MedicinalProductPackagedPackageItem
 class _$MedicinalProductPackagedPackageItemTearOff {
   const _$MedicinalProductPackagedPackageItemTearOff();
 
-// ignore: unused_element
   _MedicinalProductPackagedPackageItem call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -11805,7 +11781,6 @@ MedicinalProductPharmaceutical _$MedicinalProductPharmaceuticalFromJson(
 class _$MedicinalProductPharmaceuticalTearOff {
   const _$MedicinalProductPharmaceuticalTearOff();
 
-// ignore: unused_element
   _MedicinalProductPharmaceutical call(
       {@required
       @JsonKey(defaultValue: 'MedicinalProductPharmaceutical')
@@ -12460,7 +12435,6 @@ MedicinalProductPharmaceuticalCharacteristics
 class _$MedicinalProductPharmaceuticalCharacteristicsTearOff {
   const _$MedicinalProductPharmaceuticalCharacteristicsTearOff();
 
-// ignore: unused_element
   _MedicinalProductPharmaceuticalCharacteristics call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -12729,7 +12703,6 @@ MedicinalProductPharmaceuticalRouteOfAdministration
 class _$MedicinalProductPharmaceuticalRouteOfAdministrationTearOff {
   const _$MedicinalProductPharmaceuticalRouteOfAdministrationTearOff();
 
-// ignore: unused_element
   _MedicinalProductPharmaceuticalRouteOfAdministration call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -13182,7 +13155,6 @@ MedicinalProductPharmaceuticalTargetSpecies
 class _$MedicinalProductPharmaceuticalTargetSpeciesTearOff {
   const _$MedicinalProductPharmaceuticalTargetSpeciesTearOff();
 
-// ignore: unused_element
   _MedicinalProductPharmaceuticalTargetSpecies call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -13445,7 +13417,6 @@ MedicinalProductPharmaceuticalWithdrawalPeriod
 class _$MedicinalProductPharmaceuticalWithdrawalPeriodTearOff {
   const _$MedicinalProductPharmaceuticalWithdrawalPeriodTearOff();
 
-// ignore: unused_element
   _MedicinalProductPharmaceuticalWithdrawalPeriod call(
       {String id,
       @JsonKey(name: 'extension')
@@ -13795,7 +13766,6 @@ MedicinalProductUndesirableEffect _$MedicinalProductUndesirableEffectFromJson(
 class _$MedicinalProductUndesirableEffectTearOff {
   const _$MedicinalProductUndesirableEffectTearOff();
 
-// ignore: unused_element
   _MedicinalProductUndesirableEffect call(
       {@required
       @JsonKey(defaultValue: 'MedicinalProductUndesirableEffect')
@@ -14400,7 +14370,6 @@ SubstanceNucleicAcid _$SubstanceNucleicAcidFromJson(Map<String, dynamic> json) {
 class _$SubstanceNucleicAcidTearOff {
   const _$SubstanceNucleicAcidTearOff();
 
-// ignore: unused_element
   _SubstanceNucleicAcid call(
       {@required
       @JsonKey(defaultValue: 'SubstanceNucleicAcid')
@@ -15061,7 +15030,6 @@ SubstanceNucleicAcidSubunit _$SubstanceNucleicAcidSubunitFromJson(
 class _$SubstanceNucleicAcidSubunitTearOff {
   const _$SubstanceNucleicAcidSubunitTearOff();
 
-// ignore: unused_element
   _SubstanceNucleicAcidSubunit call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -15583,7 +15551,6 @@ SubstanceNucleicAcidLinkage _$SubstanceNucleicAcidLinkageFromJson(
 class _$SubstanceNucleicAcidLinkageTearOff {
   const _$SubstanceNucleicAcidLinkageTearOff();
 
-// ignore: unused_element
   _SubstanceNucleicAcidLinkage call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -15991,7 +15958,6 @@ SubstanceNucleicAcidSugar _$SubstanceNucleicAcidSugarFromJson(
 class _$SubstanceNucleicAcidSugarTearOff {
   const _$SubstanceNucleicAcidSugarTearOff();
 
-// ignore: unused_element
   _SubstanceNucleicAcidSugar call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -16331,7 +16297,6 @@ SubstancePolymer _$SubstancePolymerFromJson(Map<String, dynamic> json) {
 class _$SubstancePolymerTearOff {
   const _$SubstancePolymerTearOff();
 
-// ignore: unused_element
   _SubstancePolymer call(
       {@required @JsonKey(defaultValue: 'SubstancePolymer') String resourceType,
       Id id,
@@ -16934,7 +16899,6 @@ SubstancePolymerMonomerSet _$SubstancePolymerMonomerSetFromJson(
 class _$SubstancePolymerMonomerSetTearOff {
   const _$SubstancePolymerMonomerSetTearOff();
 
-// ignore: unused_element
   _SubstancePolymerMonomerSet call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -17186,7 +17150,6 @@ SubstancePolymerStartingMaterial _$SubstancePolymerStartingMaterialFromJson(
 class _$SubstancePolymerStartingMaterialTearOff {
   const _$SubstancePolymerStartingMaterialTearOff();
 
-// ignore: unused_element
   _SubstancePolymerStartingMaterial call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -17541,7 +17504,6 @@ SubstancePolymerRepeat _$SubstancePolymerRepeatFromJson(
 class _$SubstancePolymerRepeatTearOff {
   const _$SubstancePolymerRepeatTearOff();
 
-// ignore: unused_element
   _SubstancePolymerRepeat call(
       {String id,
       @JsonKey(name: 'extension')
@@ -17932,7 +17894,6 @@ SubstancePolymerRepeatUnit _$SubstancePolymerRepeatUnitFromJson(
 class _$SubstancePolymerRepeatUnitTearOff {
   const _$SubstancePolymerRepeatUnitTearOff();
 
-// ignore: unused_element
   _SubstancePolymerRepeatUnit call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -18308,7 +18269,6 @@ SubstancePolymerDegreeOfPolymerisation
 class _$SubstancePolymerDegreeOfPolymerisationTearOff {
   const _$SubstancePolymerDegreeOfPolymerisationTearOff();
 
-// ignore: unused_element
   _SubstancePolymerDegreeOfPolymerisation call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -18573,7 +18533,6 @@ SubstancePolymerStructuralRepresentation
 class _$SubstancePolymerStructuralRepresentationTearOff {
   const _$SubstancePolymerStructuralRepresentationTearOff();
 
-// ignore: unused_element
   _SubstancePolymerStructuralRepresentation call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -18902,7 +18861,6 @@ SubstanceProtein _$SubstanceProteinFromJson(Map<String, dynamic> json) {
 class _$SubstanceProteinTearOff {
   const _$SubstanceProteinTearOff();
 
-// ignore: unused_element
   _SubstanceProtein call(
       {@required @JsonKey(defaultValue: 'SubstanceProtein') String resourceType,
       Id id,
@@ -19491,7 +19449,6 @@ SubstanceProteinSubunit _$SubstanceProteinSubunitFromJson(
 class _$SubstanceProteinSubunitTearOff {
   const _$SubstanceProteinSubunitTearOff();
 
-// ignore: unused_element
   _SubstanceProteinSubunit call(
       {String id,
       @JsonKey(name: 'extension')
@@ -20118,7 +20075,6 @@ SubstanceReferenceInformation _$SubstanceReferenceInformationFromJson(
 class _$SubstanceReferenceInformationTearOff {
   const _$SubstanceReferenceInformationTearOff();
 
-// ignore: unused_element
   _SubstanceReferenceInformation call(
       {@required
       @JsonKey(defaultValue: 'SubstanceReferenceInformation')
@@ -20722,7 +20678,6 @@ SubstanceReferenceInformationGene _$SubstanceReferenceInformationGeneFromJson(
 class _$SubstanceReferenceInformationGeneTearOff {
   const _$SubstanceReferenceInformationGeneTearOff();
 
-// ignore: unused_element
   _SubstanceReferenceInformationGene call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -21009,7 +20964,6 @@ SubstanceReferenceInformationGeneElement
 class _$SubstanceReferenceInformationGeneElementTearOff {
   const _$SubstanceReferenceInformationGeneElementTearOff();
 
-// ignore: unused_element
   _SubstanceReferenceInformationGeneElement call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -21294,7 +21248,6 @@ SubstanceReferenceInformationClassification
 class _$SubstanceReferenceInformationClassificationTearOff {
   const _$SubstanceReferenceInformationClassificationTearOff();
 
-// ignore: unused_element
   _SubstanceReferenceInformationClassification call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -21606,7 +21559,6 @@ SubstanceReferenceInformationTarget
 class _$SubstanceReferenceInformationTargetTearOff {
   const _$SubstanceReferenceInformationTargetTearOff();
 
-// ignore: unused_element
   _SubstanceReferenceInformationTarget call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -22161,7 +22113,6 @@ SubstanceSourceMaterial _$SubstanceSourceMaterialFromJson(
 class _$SubstanceSourceMaterialTearOff {
   const _$SubstanceSourceMaterialTearOff();
 
-// ignore: unused_element
   _SubstanceSourceMaterial call(
       {@required
       @JsonKey(defaultValue: 'SubstanceSourceMaterial')
@@ -23081,7 +23032,6 @@ SubstanceSourceMaterialFractionDescription
 class _$SubstanceSourceMaterialFractionDescriptionTearOff {
   const _$SubstanceSourceMaterialFractionDescriptionTearOff();
 
-// ignore: unused_element
   _SubstanceSourceMaterialFractionDescription call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -23379,7 +23329,6 @@ SubstanceSourceMaterialOrganism _$SubstanceSourceMaterialOrganismFromJson(
 class _$SubstanceSourceMaterialOrganismTearOff {
   const _$SubstanceSourceMaterialOrganismTearOff();
 
-// ignore: unused_element
   _SubstanceSourceMaterialOrganism call(
       {String id,
       @JsonKey(name: 'extension')
@@ -23882,7 +23831,6 @@ SubstanceSourceMaterialAuthor _$SubstanceSourceMaterialAuthorFromJson(
 class _$SubstanceSourceMaterialAuthorTearOff {
   const _$SubstanceSourceMaterialAuthorTearOff();
 
-// ignore: unused_element
   _SubstanceSourceMaterialAuthor call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -24180,7 +24128,6 @@ SubstanceSourceMaterialHybrid _$SubstanceSourceMaterialHybridFromJson(
 class _$SubstanceSourceMaterialHybridTearOff {
   const _$SubstanceSourceMaterialHybridTearOff();
 
-// ignore: unused_element
   _SubstanceSourceMaterialHybrid call(
       {String id,
       @JsonKey(name: 'extension')
@@ -24687,7 +24634,6 @@ SubstanceSourceMaterialOrganismGeneral
 class _$SubstanceSourceMaterialOrganismGeneralTearOff {
   const _$SubstanceSourceMaterialOrganismGeneralTearOff();
 
-// ignore: unused_element
   _SubstanceSourceMaterialOrganismGeneral call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -25018,7 +24964,6 @@ SubstanceSourceMaterialPartDescription
 class _$SubstanceSourceMaterialPartDescriptionTearOff {
   const _$SubstanceSourceMaterialPartDescriptionTearOff();
 
-// ignore: unused_element
   _SubstanceSourceMaterialPartDescription call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -25288,7 +25233,6 @@ SubstanceSpecification _$SubstanceSpecificationFromJson(
 class _$SubstanceSpecificationTearOff {
   const _$SubstanceSpecificationTearOff();
 
-// ignore: unused_element
   _SubstanceSpecification call(
       {@required
       @JsonKey(defaultValue: 'SubstanceSpecification')
@@ -26323,7 +26267,6 @@ SubstanceSpecificationMoiety _$SubstanceSpecificationMoietyFromJson(
 class _$SubstanceSpecificationMoietyTearOff {
   const _$SubstanceSpecificationMoietyTearOff();
 
-// ignore: unused_element
   _SubstanceSpecificationMoiety call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -26873,7 +26816,6 @@ SubstanceSpecificationProperty _$SubstanceSpecificationPropertyFromJson(
 class _$SubstanceSpecificationPropertyTearOff {
   const _$SubstanceSpecificationPropertyTearOff();
 
-// ignore: unused_element
   _SubstanceSpecificationProperty call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -27375,7 +27317,6 @@ SubstanceSpecificationStructure _$SubstanceSpecificationStructureFromJson(
 class _$SubstanceSpecificationStructureTearOff {
   const _$SubstanceSpecificationStructureTearOff();
 
-// ignore: unused_element
   _SubstanceSpecificationStructure call(
       {String id,
       @JsonKey(name: 'extension')
@@ -27893,7 +27834,6 @@ SubstanceSpecificationIsotope _$SubstanceSpecificationIsotopeFromJson(
 class _$SubstanceSpecificationIsotopeTearOff {
   const _$SubstanceSpecificationIsotopeTearOff();
 
-// ignore: unused_element
   _SubstanceSpecificationIsotope call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -28261,7 +28201,6 @@ SubstanceSpecificationMolecularWeight
 class _$SubstanceSpecificationMolecularWeightTearOff {
   const _$SubstanceSpecificationMolecularWeightTearOff();
 
-// ignore: unused_element
   _SubstanceSpecificationMolecularWeight call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -28556,7 +28495,6 @@ SubstanceSpecificationRepresentation
 class _$SubstanceSpecificationRepresentationTearOff {
   const _$SubstanceSpecificationRepresentationTearOff();
 
-// ignore: unused_element
   _SubstanceSpecificationRepresentation call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -28884,7 +28822,6 @@ SubstanceSpecificationCode _$SubstanceSpecificationCodeFromJson(
 class _$SubstanceSpecificationCodeTearOff {
   const _$SubstanceSpecificationCodeTearOff();
 
-// ignore: unused_element
   _SubstanceSpecificationCode call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -29276,7 +29213,6 @@ SubstanceSpecificationName _$SubstanceSpecificationNameFromJson(
 class _$SubstanceSpecificationNameTearOff {
   const _$SubstanceSpecificationNameTearOff();
 
-// ignore: unused_element
   _SubstanceSpecificationName call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -29796,7 +29732,6 @@ SubstanceSpecificationOfficial _$SubstanceSpecificationOfficialFromJson(
 class _$SubstanceSpecificationOfficialTearOff {
   const _$SubstanceSpecificationOfficialTearOff();
 
-// ignore: unused_element
   _SubstanceSpecificationOfficial call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -30118,7 +30053,6 @@ SubstanceSpecificationRelationship _$SubstanceSpecificationRelationshipFromJson(
 class _$SubstanceSpecificationRelationshipTearOff {
   const _$SubstanceSpecificationRelationshipTearOff();
 
-// ignore: unused_element
   _SubstanceSpecificationRelationship call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,

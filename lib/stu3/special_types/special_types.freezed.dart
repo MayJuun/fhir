@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'special_types.dart';
 
@@ -15,7 +15,6 @@ Narrative _$NarrativeFromJson(Map<String, dynamic> json) {
 class _$NarrativeTearOff {
   const _$NarrativeTearOff();
 
-// ignore: unused_element
   _Narrative call(
       {NarrativeStatus status,
       @JsonKey(name: '_status') Element statusElement,
@@ -206,7 +205,6 @@ Reference _$ReferenceFromJson(Map<String, dynamic> json) {
 class _$ReferenceTearOff {
   const _$ReferenceTearOff();
 
-// ignore: unused_element
   _Reference call(
       {String reference,
       @JsonKey(name: '_reference') Element referenceElement,
@@ -471,7 +469,6 @@ Meta _$MetaFromJson(Map<String, dynamic> json) {
 class _$MetaTearOff {
   const _$MetaTearOff();
 
-// ignore: unused_element
   _Meta call(
       {Id versionId,
       @JsonKey(name: '_versionId') Element versionIdElement,
@@ -786,7 +783,6 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) {
 class _$ElementDefinitionTearOff {
   const _$ElementDefinitionTearOff();
 
-// ignore: unused_element
   _ElementDefinition call(
       {String path,
       @JsonKey(name: '_path')
@@ -10101,7 +10097,6 @@ ElementDefinitionSlicing _$ElementDefinitionSlicingFromJson(
 class _$ElementDefinitionSlicingTearOff {
   const _$ElementDefinitionSlicingTearOff();
 
-// ignore: unused_element
   _ElementDefinitionSlicing call(
       {List<ElementDefinitionDiscriminator> discriminator,
       String description,
@@ -10427,7 +10422,6 @@ ElementDefinitionDiscriminator _$ElementDefinitionDiscriminatorFromJson(
 class _$ElementDefinitionDiscriminatorTearOff {
   const _$ElementDefinitionDiscriminatorTearOff();
 
-// ignore: unused_element
   _ElementDefinitionDiscriminator call(
       {ElementDefinitionDiscriminatorType type,
       @JsonKey(name: '_type') Element typeElement,
@@ -10674,7 +10668,6 @@ ElementDefinitionBase _$ElementDefinitionBaseFromJson(
 class _$ElementDefinitionBaseTearOff {
   const _$ElementDefinitionBaseTearOff();
 
-// ignore: unused_element
   _ElementDefinitionBase call(
       {String path,
       @JsonKey(name: '_path') Element pathElement,
@@ -10961,7 +10954,6 @@ ElementDefinitionType _$ElementDefinitionTypeFromJson(
 class _$ElementDefinitionTypeTearOff {
   const _$ElementDefinitionTypeTearOff();
 
-// ignore: unused_element
   _ElementDefinitionType call(
       {String code,
       @JsonKey(name: '_code') Element codeElement,
@@ -11370,7 +11362,6 @@ ElementDefinitionExample _$ElementDefinitionExampleFromJson(
 class _$ElementDefinitionExampleTearOff {
   const _$ElementDefinitionExampleTearOff();
 
-// ignore: unused_element
   _ElementDefinitionExample call(
       {String label,
       @JsonKey(name: '_label') Element labelElement,
@@ -13744,7 +13735,6 @@ ElementDefinitionConstraint _$ElementDefinitionConstraintFromJson(
 class _$ElementDefinitionConstraintTearOff {
   const _$ElementDefinitionConstraintTearOff();
 
-// ignore: unused_element
   _ElementDefinitionConstraint call(
       {String key,
       @JsonKey(name: '_key') Element keyElement,
@@ -14284,7 +14274,6 @@ ElementDefinitionBinding _$ElementDefinitionBindingFromJson(
 class _$ElementDefinitionBindingTearOff {
   const _$ElementDefinitionBindingTearOff();
 
-// ignore: unused_element
   _ElementDefinitionBinding call(
       {ElementDefinitionBindingStrength strength,
       @JsonKey(name: '_strength') Element strengthElement,
@@ -14625,7 +14614,6 @@ ElementDefinitionMapping _$ElementDefinitionMappingFromJson(
 class _$ElementDefinitionMappingTearOff {
   const _$ElementDefinitionMappingTearOff();
 
-// ignore: unused_element
   _ElementDefinitionMapping call(
       {Id identity,
       @JsonKey(name: '_identity') Element identityElement,
@@ -14977,7 +14965,6 @@ Dosage _$DosageFromJson(Map<String, dynamic> json) {
 class _$DosageTearOff {
   const _$DosageTearOff();
 
-// ignore: unused_element
   _Dosage call(
       {Decimal sequence,
       @JsonKey(name: '_sequence') Element sequenceElement,

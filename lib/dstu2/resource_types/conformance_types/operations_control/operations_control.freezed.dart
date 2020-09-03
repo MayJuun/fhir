@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'operations_control.dart';
 
@@ -15,7 +15,6 @@ Conformance _$ConformanceFromJson(Map<String, dynamic> json) {
 class _$ConformanceTearOff {
   const _$ConformanceTearOff();
 
-// ignore: unused_element
   _Conformance call(
       {@required
       @JsonKey(defaultValue: 'Conformance')
@@ -1007,7 +1006,6 @@ ConformanceContact _$ConformanceContactFromJson(Map<String, dynamic> json) {
 class _$ConformanceContactTearOff {
   const _$ConformanceContactTearOff();
 
-// ignore: unused_element
   _ConformanceContact call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1228,7 +1226,6 @@ ConformanceSoftware _$ConformanceSoftwareFromJson(Map<String, dynamic> json) {
 class _$ConformanceSoftwareTearOff {
   const _$ConformanceSoftwareTearOff();
 
-// ignore: unused_element
   _ConformanceSoftware call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1477,7 +1474,6 @@ ConformanceImplementation _$ConformanceImplementationFromJson(
 class _$ConformanceImplementationTearOff {
   const _$ConformanceImplementationTearOff();
 
-// ignore: unused_element
   _ConformanceImplementation call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1706,7 +1702,6 @@ ConformanceRest _$ConformanceRestFromJson(Map<String, dynamic> json) {
 class _$ConformanceRestTearOff {
   const _$ConformanceRestTearOff();
 
-// ignore: unused_element
   _ConformanceRest call(
       {Id id,
       @JsonKey(name: 'extension')
@@ -2216,7 +2211,6 @@ ConformanceMessaging _$ConformanceMessagingFromJson(Map<String, dynamic> json) {
 class _$ConformanceMessagingTearOff {
   const _$ConformanceMessagingTearOff();
 
-// ignore: unused_element
   _ConformanceMessaging call(
       {Id id,
       @JsonKey(name: 'extension')
@@ -2529,7 +2523,6 @@ ConformanceDocument _$ConformanceDocumentFromJson(Map<String, dynamic> json) {
 class _$ConformanceDocumentTearOff {
   const _$ConformanceDocumentTearOff();
 
-// ignore: unused_element
   _ConformanceDocument call(
       {Id id,
       @JsonKey(name: 'extension')
@@ -2848,7 +2841,6 @@ ConformanceRestSecurity _$ConformanceRestSecurityFromJson(
 class _$ConformanceRestSecurityTearOff {
   const _$ConformanceRestSecurityTearOff();
 
-// ignore: unused_element
   _ConformanceRestSecurity call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3159,7 +3151,6 @@ ConformanceRestResource _$ConformanceRestResourceFromJson(
 class _$ConformanceRestResourceTearOff {
   const _$ConformanceRestResourceTearOff();
 
-// ignore: unused_element
   _ConformanceRestResource call(
       {Id id,
       @JsonKey(name: 'extension')
@@ -3878,7 +3869,6 @@ ConformanceResourceInteraction _$ConformanceResourceInteractionFromJson(
 class _$ConformanceResourceInteractionTearOff {
   const _$ConformanceResourceInteractionTearOff();
 
-// ignore: unused_element
   _ConformanceResourceInteraction call(
       {Id id,
       @JsonKey(name: 'extension')
@@ -4131,7 +4121,6 @@ ConformanceRestOperation _$ConformanceRestOperationFromJson(
 class _$ConformanceRestOperationTearOff {
   const _$ConformanceRestOperationTearOff();
 
-// ignore: unused_element
   _ConformanceRestOperation call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -4406,7 +4395,6 @@ ConformanceMessagingEndpoint _$ConformanceMessagingEndpointFromJson(
 class _$ConformanceMessagingEndpointTearOff {
   const _$ConformanceMessagingEndpointTearOff();
 
-// ignore: unused_element
   _ConformanceMessagingEndpoint call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -4699,7 +4687,6 @@ ConformanceMessagingEvent _$ConformanceMessagingEventFromJson(
 class _$ConformanceMessagingEventTearOff {
   const _$ConformanceMessagingEventTearOff();
 
-// ignore: unused_element
   _ConformanceMessagingEvent call(
       {Id id,
       @JsonKey(name: 'extension')
@@ -5178,7 +5165,6 @@ ConformanceSecurityCertificate _$ConformanceSecurityCertificateFromJson(
 class _$ConformanceSecurityCertificateTearOff {
   const _$ConformanceSecurityCertificateTearOff();
 
-// ignore: unused_element
   _ConformanceSecurityCertificate call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5449,7 +5435,6 @@ ConformanceRestInteraction _$ConformanceRestInteractionFromJson(
 class _$ConformanceRestInteractionTearOff {
   const _$ConformanceRestInteractionTearOff();
 
-// ignore: unused_element
   _ConformanceRestInteraction call(
       {Id id,
       @JsonKey(name: 'extension')
@@ -5696,7 +5681,6 @@ ConformanceResourceSearchParam _$ConformanceResourceSearchParamFromJson(
 class _$ConformanceResourceSearchParamTearOff {
   const _$ConformanceResourceSearchParamTearOff();
 
-// ignore: unused_element
   _ConformanceResourceSearchParam call(
       {Id id,
       @JsonKey(name: 'extension')
@@ -6089,7 +6073,6 @@ OperationDefinition _$OperationDefinitionFromJson(Map<String, dynamic> json) {
 class _$OperationDefinitionTearOff {
   const _$OperationDefinitionTearOff();
 
-// ignore: unused_element
   _OperationDefinition call(
       {@required
       @JsonKey(defaultValue: 'OperationDefinition')
@@ -6903,7 +6886,6 @@ OperationDefinitionContact _$OperationDefinitionContactFromJson(
 class _$OperationDefinitionContactTearOff {
   const _$OperationDefinitionContactTearOff();
 
-// ignore: unused_element
   _OperationDefinitionContact call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -7130,7 +7112,6 @@ OperationDefinitionParameter _$OperationDefinitionParameterFromJson(
 class _$OperationDefinitionParameterTearOff {
   const _$OperationDefinitionParameterTearOff();
 
-// ignore: unused_element
   _OperationDefinitionParameter call(
       {Id id,
       @JsonKey(name: 'extension')
@@ -7613,7 +7594,6 @@ OperationDefinitionParameterBinding
 class _$OperationDefinitionParameterBindingTearOff {
   const _$OperationDefinitionParameterBindingTearOff();
 
-// ignore: unused_element
   _OperationDefinitionParameterBinding call(
       {Id id,
       @JsonKey(name: 'extension')
@@ -7914,7 +7894,6 @@ SearchParameter _$SearchParameterFromJson(Map<String, dynamic> json) {
 class _$SearchParameterTearOff {
   const _$SearchParameterTearOff();
 
-// ignore: unused_element
   _SearchParameter call(
       {@required
       @JsonKey(defaultValue: 'SearchParameter')
@@ -8671,7 +8650,6 @@ SearchParameterContact _$SearchParameterContactFromJson(
 class _$SearchParameterContactTearOff {
   const _$SearchParameterContactTearOff();
 
-// ignore: unused_element
   _SearchParameterContact call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,

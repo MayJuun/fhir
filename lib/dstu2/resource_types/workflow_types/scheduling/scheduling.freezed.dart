@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'scheduling.dart';
 
@@ -15,7 +15,6 @@ Appointment _$AppointmentFromJson(Map<String, dynamic> json) {
 class _$AppointmentTearOff {
   const _$AppointmentTearOff();
 
-// ignore: unused_element
   _Appointment call(
       {@required
       @JsonKey(defaultValue: 'Appointment')
@@ -1038,7 +1037,6 @@ AppointmentParticipant _$AppointmentParticipantFromJson(
 class _$AppointmentParticipantTearOff {
   const _$AppointmentParticipantTearOff();
 
-// ignore: unused_element
   _AppointmentParticipant call(
       {Id id,
       @JsonKey(name: 'extension')
@@ -1429,7 +1427,6 @@ AppointmentResponse _$AppointmentResponseFromJson(Map<String, dynamic> json) {
 class _$AppointmentResponseTearOff {
   const _$AppointmentResponseTearOff();
 
-// ignore: unused_element
   _AppointmentResponse call(
       {@required
       @JsonKey(defaultValue: 'AppointmentResponse')
@@ -2267,7 +2264,6 @@ Schedule _$ScheduleFromJson(Map<String, dynamic> json) {
 class _$ScheduleTearOff {
   const _$ScheduleTearOff();
 
-// ignore: unused_element
   _Schedule call(
       {@required @JsonKey(defaultValue: 'Schedule') String resourceType,
       Id id,
@@ -2847,7 +2843,6 @@ Slot _$SlotFromJson(Map<String, dynamic> json) {
 class _$SlotTearOff {
   const _$SlotTearOff();
 
-// ignore: unused_element
   _Slot call(
       {@required
       @JsonKey(defaultValue: 'Slot')

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'conformance.dart';
 
@@ -15,7 +15,6 @@ CapabilityStatement _$CapabilityStatementFromJson(Map<String, dynamic> json) {
 class _$CapabilityStatementTearOff {
   const _$CapabilityStatementTearOff();
 
-// ignore: unused_element
   _CapabilityStatement call(
       {@required
       @JsonKey(defaultValue: 'CapabilityStatement')
@@ -1719,7 +1718,6 @@ CapabilityStatementSoftware _$CapabilityStatementSoftwareFromJson(
 class _$CapabilityStatementSoftwareTearOff {
   const _$CapabilityStatementSoftwareTearOff();
 
-// ignore: unused_element
   _CapabilityStatementSoftware call(
       {String name,
       @JsonKey(name: '_name') Element nameElement,
@@ -2022,7 +2020,6 @@ CapabilityStatementImplementation _$CapabilityStatementImplementationFromJson(
 class _$CapabilityStatementImplementationTearOff {
   const _$CapabilityStatementImplementationTearOff();
 
-// ignore: unused_element
   _CapabilityStatementImplementation call(
       {String description,
       @JsonKey(name: '_description') Element descriptionElement,
@@ -2272,7 +2269,6 @@ CapabilityStatementRest _$CapabilityStatementRestFromJson(
 class _$CapabilityStatementRestTearOff {
   const _$CapabilityStatementRestTearOff();
 
-// ignore: unused_element
   _CapabilityStatementRest call(
       {CapabilityStatementRestMode mode,
       @JsonKey(name: '_mode') Element modeElement,
@@ -2690,7 +2686,6 @@ CapabilityStatementSecurity _$CapabilityStatementSecurityFromJson(
 class _$CapabilityStatementSecurityTearOff {
   const _$CapabilityStatementSecurityTearOff();
 
-// ignore: unused_element
   _CapabilityStatementSecurity call(
       {Boolean cors,
       @JsonKey(name: '_cors') Element corsElement,
@@ -2981,7 +2976,6 @@ CapabilityStatementCertificate _$CapabilityStatementCertificateFromJson(
 class _$CapabilityStatementCertificateTearOff {
   const _$CapabilityStatementCertificateTearOff();
 
-// ignore: unused_element
   _CapabilityStatementCertificate call(
       {String type,
       @JsonKey(name: '_type') Element typeElement,
@@ -3224,7 +3218,6 @@ CapabilityStatementResource _$CapabilityStatementResourceFromJson(
 class _$CapabilityStatementResourceTearOff {
   const _$CapabilityStatementResourceTearOff();
 
-// ignore: unused_element
   _CapabilityStatementResource call(
       {String type,
       @JsonKey(name: '_type') Element typeElement,
@@ -4115,7 +4108,6 @@ CapabilityStatementInteraction _$CapabilityStatementInteractionFromJson(
 class _$CapabilityStatementInteractionTearOff {
   const _$CapabilityStatementInteractionTearOff();
 
-// ignore: unused_element
   _CapabilityStatementInteraction call(
       {CapabilityStatementInteractionCode code,
       @JsonKey(name: '_code') Element codeElement,
@@ -4369,7 +4361,6 @@ CapabilityStatementSearchParam _$CapabilityStatementSearchParamFromJson(
 class _$CapabilityStatementSearchParamTearOff {
   const _$CapabilityStatementSearchParamTearOff();
 
-// ignore: unused_element
   _CapabilityStatementSearchParam call(
       {String name,
       @JsonKey(name: '_name') Element nameElement,
@@ -4738,7 +4729,6 @@ CapabilityStatementInteraction1 _$CapabilityStatementInteraction1FromJson(
 class _$CapabilityStatementInteraction1TearOff {
   const _$CapabilityStatementInteraction1TearOff();
 
-// ignore: unused_element
   _CapabilityStatementInteraction1 call(
       {CapabilityStatementInteraction1Code code,
       @JsonKey(name: '_code') Element codeElement,
@@ -4992,7 +4982,6 @@ CapabilityStatementOperation _$CapabilityStatementOperationFromJson(
 class _$CapabilityStatementOperationTearOff {
   const _$CapabilityStatementOperationTearOff();
 
-// ignore: unused_element
   _CapabilityStatementOperation call(
       {String name,
       @JsonKey(name: '_name') Element nameElement,
@@ -5211,7 +5200,6 @@ CapabilityStatementMessaging _$CapabilityStatementMessagingFromJson(
 class _$CapabilityStatementMessagingTearOff {
   const _$CapabilityStatementMessagingTearOff();
 
-// ignore: unused_element
   _CapabilityStatementMessaging call(
       {List<CapabilityStatementEndpoint> endpoint,
       Decimal reliableCache,
@@ -5532,7 +5520,6 @@ CapabilityStatementEndpoint _$CapabilityStatementEndpointFromJson(
 class _$CapabilityStatementEndpointTearOff {
   const _$CapabilityStatementEndpointTearOff();
 
-// ignore: unused_element
   _CapabilityStatementEndpoint call(
       {@required Coding protocol,
       String address,
@@ -5753,7 +5740,6 @@ CapabilityStatementSupportedMessage
 class _$CapabilityStatementSupportedMessageTearOff {
   const _$CapabilityStatementSupportedMessageTearOff();
 
-// ignore: unused_element
   _CapabilityStatementSupportedMessage call(
       {CapabilityStatementSupportedMessageMode mode,
       @JsonKey(name: '_mode') Element modeElement,
@@ -5981,7 +5967,6 @@ CapabilityStatementEvent _$CapabilityStatementEventFromJson(
 class _$CapabilityStatementEventTearOff {
   const _$CapabilityStatementEventTearOff();
 
-// ignore: unused_element
   _CapabilityStatementEvent call(
       {@required Coding code,
       CapabilityStatementEventCategory category,
@@ -6441,7 +6426,6 @@ CapabilityStatementDocument _$CapabilityStatementDocumentFromJson(
 class _$CapabilityStatementDocumentTearOff {
   const _$CapabilityStatementDocumentTearOff();
 
-// ignore: unused_element
   _CapabilityStatementDocument call(
       {CapabilityStatementDocumentMode mode,
       @JsonKey(name: '_mode') Element modeElement,
@@ -6723,7 +6707,6 @@ CompartmentDefinition _$CompartmentDefinitionFromJson(
 class _$CompartmentDefinitionTearOff {
   const _$CompartmentDefinitionTearOff();
 
-// ignore: unused_element
   _CompartmentDefinition call(
       {@required
       @JsonKey(defaultValue: 'CompartmentDefinition')
@@ -7892,7 +7875,6 @@ CompartmentDefinitionResource _$CompartmentDefinitionResourceFromJson(
 class _$CompartmentDefinitionResourceTearOff {
   const _$CompartmentDefinitionResourceTearOff();
 
-// ignore: unused_element
   _CompartmentDefinitionResource call(
       {Code code,
       @JsonKey(name: '_code') Element codeElement,
@@ -8183,7 +8165,6 @@ DataElement _$DataElementFromJson(Map<String, dynamic> json) {
 class _$DataElementTearOff {
   const _$DataElementTearOff();
 
-// ignore: unused_element
   _DataElement call(
       {@required @JsonKey(defaultValue: 'DataElement') String resourceType,
       Id id,
@@ -9289,7 +9270,6 @@ DataElementMapping _$DataElementMappingFromJson(Map<String, dynamic> json) {
 class _$DataElementMappingTearOff {
   const _$DataElementMappingTearOff();
 
-// ignore: unused_element
   _DataElementMapping call(
       {Id identity,
       @JsonKey(name: '_identity') Element identityElement,
@@ -9636,7 +9616,6 @@ GraphDefinition _$GraphDefinitionFromJson(Map<String, dynamic> json) {
 class _$GraphDefinitionTearOff {
   const _$GraphDefinitionTearOff();
 
-// ignore: unused_element
   _GraphDefinition call(
       {@required @JsonKey(defaultValue: 'GraphDefinition') String resourceType,
       Id id,
@@ -10751,7 +10730,6 @@ GraphDefinitionLink _$GraphDefinitionLinkFromJson(Map<String, dynamic> json) {
 class _$GraphDefinitionLinkTearOff {
   const _$GraphDefinitionLinkTearOff();
 
-// ignore: unused_element
   _GraphDefinitionLink call(
       {String path,
       @JsonKey(name: '_path') Element pathElement,
@@ -11179,7 +11157,6 @@ GraphDefinitionTarget _$GraphDefinitionTargetFromJson(
 class _$GraphDefinitionTargetTearOff {
   const _$GraphDefinitionTargetTearOff();
 
-// ignore: unused_element
   _GraphDefinitionTarget call(
       {String type,
       @JsonKey(name: '_type') Element typeElement,
@@ -11455,7 +11432,6 @@ GraphDefinitionCompartment _$GraphDefinitionCompartmentFromJson(
 class _$GraphDefinitionCompartmentTearOff {
   const _$GraphDefinitionCompartmentTearOff();
 
-// ignore: unused_element
   _GraphDefinitionCompartment call(
       {Code code,
       @JsonKey(name: '_code') Element codeElement,
@@ -11814,7 +11790,6 @@ ImplementationGuide _$ImplementationGuideFromJson(Map<String, dynamic> json) {
 class _$ImplementationGuideTearOff {
   const _$ImplementationGuideTearOff();
 
-// ignore: unused_element
   _ImplementationGuide call(
       {@required
       @JsonKey(defaultValue: 'ImplementationGuide')
@@ -13046,7 +13021,6 @@ ImplementationGuideDependency _$ImplementationGuideDependencyFromJson(
 class _$ImplementationGuideDependencyTearOff {
   const _$ImplementationGuideDependencyTearOff();
 
-// ignore: unused_element
   _ImplementationGuideDependency call(
       {ImplementationGuideDependencyType type,
       @JsonKey(name: '_type') Element typeElement,
@@ -13291,7 +13265,6 @@ ImplementationGuidePackage _$ImplementationGuidePackageFromJson(
 class _$ImplementationGuidePackageTearOff {
   const _$ImplementationGuidePackageTearOff();
 
-// ignore: unused_element
   _ImplementationGuidePackage call(
       {String name,
       @JsonKey(name: '_name') Element nameElement,
@@ -13556,7 +13529,6 @@ ImplementationGuideResource _$ImplementationGuideResourceFromJson(
 class _$ImplementationGuideResourceTearOff {
   const _$ImplementationGuideResourceTearOff();
 
-// ignore: unused_element
   _ImplementationGuideResource call(
       {Boolean example,
       @JsonKey(name: '_example') Element exampleElement,
@@ -14044,7 +14016,6 @@ ImplementationGuideGlobal _$ImplementationGuideGlobalFromJson(
 class _$ImplementationGuideGlobalTearOff {
   const _$ImplementationGuideGlobalTearOff();
 
-// ignore: unused_element
   _ImplementationGuideGlobal call(
       {String type,
       @JsonKey(name: '_type') Element typeElement,
@@ -14255,7 +14226,6 @@ ImplementationGuidePage _$ImplementationGuidePageFromJson(
 class _$ImplementationGuidePageTearOff {
   const _$ImplementationGuidePageTearOff();
 
-// ignore: unused_element
   _ImplementationGuidePage call(
       {String source,
       @JsonKey(name: '_source') Element sourceElement,
@@ -14712,7 +14682,6 @@ MessageDefinition _$MessageDefinitionFromJson(Map<String, dynamic> json) {
 class _$MessageDefinitionTearOff {
   const _$MessageDefinitionTearOff();
 
-// ignore: unused_element
   _MessageDefinition call(
       {@required
       @JsonKey(defaultValue: 'MessageDefinition')
@@ -16133,7 +16102,6 @@ MessageDefinitionFocus _$MessageDefinitionFocusFromJson(
 class _$MessageDefinitionFocusTearOff {
   const _$MessageDefinitionFocusTearOff();
 
-// ignore: unused_element
   _MessageDefinitionFocus call(
       {Code code,
       @JsonKey(name: '_code') Element codeElement,
@@ -16452,7 +16420,6 @@ MessageDefinitionAllowedResponse _$MessageDefinitionAllowedResponseFromJson(
 class _$MessageDefinitionAllowedResponseTearOff {
   const _$MessageDefinitionAllowedResponseTearOff();
 
-// ignore: unused_element
   _MessageDefinitionAllowedResponse call(
       {@required Reference message,
       String situation,
@@ -16675,7 +16642,6 @@ OperationDefinition _$OperationDefinitionFromJson(Map<String, dynamic> json) {
 class _$OperationDefinitionTearOff {
   const _$OperationDefinitionTearOff();
 
-// ignore: unused_element
   _OperationDefinition call(
       {@required
       @JsonKey(defaultValue: 'OperationDefinition')
@@ -18224,7 +18190,6 @@ OperationDefinitionParameter _$OperationDefinitionParameterFromJson(
 class _$OperationDefinitionParameterTearOff {
   const _$OperationDefinitionParameterTearOff();
 
-// ignore: unused_element
   _OperationDefinitionParameter call(
       {String name,
       @JsonKey(name: '_name') Element nameElement,
@@ -18843,7 +18808,6 @@ OperationDefinitionBinding _$OperationDefinitionBindingFromJson(
 class _$OperationDefinitionBindingTearOff {
   const _$OperationDefinitionBindingTearOff();
 
-// ignore: unused_element
   _OperationDefinitionBinding call(
       {OperationDefinitionBindingStrength strength,
       @JsonKey(name: '_strength') Element strengthElement,
@@ -19126,7 +19090,6 @@ OperationDefinitionOverload _$OperationDefinitionOverloadFromJson(
 class _$OperationDefinitionOverloadTearOff {
   const _$OperationDefinitionOverloadTearOff();
 
-// ignore: unused_element
   _OperationDefinitionOverload call(
       {List<String> parameterName,
       @JsonKey(name: '_parameterName') List<Element> parameterNameElement,
@@ -19362,7 +19325,6 @@ SearchParameter _$SearchParameterFromJson(Map<String, dynamic> json) {
 class _$SearchParameterTearOff {
   const _$SearchParameterTearOff();
 
-// ignore: unused_element
   _SearchParameter call(
       {@required @JsonKey(defaultValue: 'SearchParameter') String resourceType,
       Id id,
@@ -20915,7 +20877,6 @@ SearchParameterComponent _$SearchParameterComponentFromJson(
 class _$SearchParameterComponentTearOff {
   const _$SearchParameterComponentTearOff();
 
-// ignore: unused_element
   _SearchParameterComponent call(
       {@required Reference definition,
       String expression,
@@ -21133,7 +21094,6 @@ StructureDefinition _$StructureDefinitionFromJson(Map<String, dynamic> json) {
 class _$StructureDefinitionTearOff {
   const _$StructureDefinitionTearOff();
 
-// ignore: unused_element
   _StructureDefinition call(
       {@required
       @JsonKey(defaultValue: 'StructureDefinition')
@@ -22918,7 +22878,6 @@ StructureDefinitionMapping _$StructureDefinitionMappingFromJson(
 class _$StructureDefinitionMappingTearOff {
   const _$StructureDefinitionMappingTearOff();
 
-// ignore: unused_element
   _StructureDefinitionMapping call(
       {Id identity,
       @JsonKey(name: '_identity') Element identityElement,
@@ -23270,7 +23229,6 @@ StructureDefinitionSnapshot _$StructureDefinitionSnapshotFromJson(
 class _$StructureDefinitionSnapshotTearOff {
   const _$StructureDefinitionSnapshotTearOff();
 
-// ignore: unused_element
   _StructureDefinitionSnapshot call(
       {@required List<ElementDefinition> element}) {
     return _StructureDefinitionSnapshot(
@@ -23417,7 +23375,6 @@ StructureDefinitionDifferential _$StructureDefinitionDifferentialFromJson(
 class _$StructureDefinitionDifferentialTearOff {
   const _$StructureDefinitionDifferentialTearOff();
 
-// ignore: unused_element
   _StructureDefinitionDifferential call(
       {@required List<ElementDefinition> element}) {
     return _StructureDefinitionDifferential(
@@ -23566,7 +23523,6 @@ StructureMap _$StructureMapFromJson(Map<String, dynamic> json) {
 class _$StructureMapTearOff {
   const _$StructureMapTearOff();
 
-// ignore: unused_element
   _StructureMap call(
       {@required @JsonKey(defaultValue: 'StructureMap') String resourceType,
       Id id,
@@ -24762,7 +24718,6 @@ StructureMapStructure _$StructureMapStructureFromJson(
 class _$StructureMapStructureTearOff {
   const _$StructureMapStructureTearOff();
 
-// ignore: unused_element
   _StructureMapStructure call(
       {String url,
       @JsonKey(name: '_url') Element urlElement,
@@ -25113,7 +25068,6 @@ StructureMapGroup _$StructureMapGroupFromJson(Map<String, dynamic> json) {
 class _$StructureMapGroupTearOff {
   const _$StructureMapGroupTearOff();
 
-// ignore: unused_element
   _StructureMapGroup call(
       {String name,
       @JsonKey(name: '_name') Element nameElement,
@@ -25511,7 +25465,6 @@ StructureMapInput _$StructureMapInputFromJson(Map<String, dynamic> json) {
 class _$StructureMapInputTearOff {
   const _$StructureMapInputTearOff();
 
-// ignore: unused_element
   _StructureMapInput call(
       {String name,
       @JsonKey(name: '_name') Element nameElement,
@@ -25859,7 +25812,6 @@ StructureMapRule _$StructureMapRuleFromJson(Map<String, dynamic> json) {
 class _$StructureMapRuleTearOff {
   const _$StructureMapRuleTearOff();
 
-// ignore: unused_element
   _StructureMapRule call(
       {String name,
       @JsonKey(name: '_name') Element nameElement,
@@ -26183,7 +26135,6 @@ StructureMapSource _$StructureMapSourceFromJson(Map<String, dynamic> json) {
 class _$StructureMapSourceTearOff {
   const _$StructureMapSourceTearOff();
 
-// ignore: unused_element
   _StructureMapSource call(
       {String context,
       @JsonKey(name: '_context')
@@ -29179,7 +29130,6 @@ StructureMapTarget _$StructureMapTargetFromJson(Map<String, dynamic> json) {
 class _$StructureMapTargetTearOff {
   const _$StructureMapTargetTearOff();
 
-// ignore: unused_element
   _StructureMapTarget call(
       {String context,
       @JsonKey(name: '_context') Element contextElement,
@@ -29728,7 +29678,6 @@ StructureMapParameter _$StructureMapParameterFromJson(
 class _$StructureMapParameterTearOff {
   const _$StructureMapParameterTearOff();
 
-// ignore: unused_element
   _StructureMapParameter call(
       {Id valueId,
       @JsonKey(name: '_valueId') Element valueIdElement,
@@ -30155,7 +30104,6 @@ StructureMapDependent _$StructureMapDependentFromJson(
 class _$StructureMapDependentTearOff {
   const _$StructureMapDependentTearOff();
 
-// ignore: unused_element
   _StructureMapDependent call(
       {String name,
       @JsonKey(name: '_name') Element nameElement,

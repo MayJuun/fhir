@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'general.dart';
 
@@ -15,7 +15,6 @@ Account _$AccountFromJson(Map<String, dynamic> json) {
 class _$AccountTearOff {
   const _$AccountTearOff();
 
-// ignore: unused_element
   _Account call(
       {@required @JsonKey(defaultValue: 'Account') String resourceType,
       Id id,
@@ -817,7 +816,6 @@ AccountCoverage _$AccountCoverageFromJson(Map<String, dynamic> json) {
 class _$AccountCoverageTearOff {
   const _$AccountCoverageTearOff();
 
-// ignore: unused_element
   _AccountCoverage call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1096,7 +1094,6 @@ AccountGuarantor _$AccountGuarantorFromJson(Map<String, dynamic> json) {
 class _$AccountGuarantorTearOff {
   const _$AccountGuarantorTearOff();
 
-// ignore: unused_element
   _AccountGuarantor call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1403,7 +1400,6 @@ ChargeItem _$ChargeItemFromJson(Map<String, dynamic> json) {
 class _$ChargeItemTearOff {
   const _$ChargeItemTearOff();
 
-// ignore: unused_element
   _ChargeItem call(
       {@required
       @JsonKey(defaultValue: 'ChargeItem')
@@ -2839,7 +2835,6 @@ ChargeItemPerformer _$ChargeItemPerformerFromJson(Map<String, dynamic> json) {
 class _$ChargeItemPerformerTearOff {
   const _$ChargeItemPerformerTearOff();
 
-// ignore: unused_element
   _ChargeItemPerformer call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3093,7 +3088,6 @@ ChargeItemDefinition _$ChargeItemDefinitionFromJson(Map<String, dynamic> json) {
 class _$ChargeItemDefinitionTearOff {
   const _$ChargeItemDefinitionTearOff();
 
-// ignore: unused_element
   _ChargeItemDefinition call(
       {@required
       @JsonKey(defaultValue: 'ChargeItemDefinition')
@@ -4523,7 +4517,6 @@ ChargeItemDefinitionApplicability _$ChargeItemDefinitionApplicabilityFromJson(
 class _$ChargeItemDefinitionApplicabilityTearOff {
   const _$ChargeItemDefinitionApplicabilityTearOff();
 
-// ignore: unused_element
   _ChargeItemDefinitionApplicability call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -4903,7 +4896,6 @@ ChargeItemDefinitionPropertyGroup _$ChargeItemDefinitionPropertyGroupFromJson(
 class _$ChargeItemDefinitionPropertyGroupTearOff {
   const _$ChargeItemDefinitionPropertyGroupTearOff();
 
-// ignore: unused_element
   _ChargeItemDefinitionPropertyGroup call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5149,7 +5141,6 @@ ChargeItemDefinitionPriceComponent _$ChargeItemDefinitionPriceComponentFromJson(
 class _$ChargeItemDefinitionPriceComponentTearOff {
   const _$ChargeItemDefinitionPriceComponentTearOff();
 
-// ignore: unused_element
   _ChargeItemDefinitionPriceComponent call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5523,7 +5514,6 @@ Contract _$ContractFromJson(Map<String, dynamic> json) {
 class _$ContractTearOff {
   const _$ContractTearOff();
 
-// ignore: unused_element
   _Contract call(
       {@required @JsonKey(defaultValue: 'Contract') String resourceType,
       Id id,
@@ -7104,7 +7094,6 @@ ContractContentDefinition _$ContractContentDefinitionFromJson(
 class _$ContractContentDefinitionTearOff {
   const _$ContractContentDefinitionTearOff();
 
-// ignore: unused_element
   _ContractContentDefinition call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -7579,7 +7568,6 @@ ContractTerm _$ContractTermFromJson(Map<String, dynamic> json) {
 class _$ContractTermTearOff {
   const _$ContractTermTearOff();
 
-// ignore: unused_element
   _ContractTerm call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -8189,7 +8177,6 @@ ContractSecurityLabel _$ContractSecurityLabelFromJson(
 class _$ContractSecurityLabelTearOff {
   const _$ContractSecurityLabelTearOff();
 
-// ignore: unused_element
   _ContractSecurityLabel call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -8497,7 +8484,6 @@ ContractOffer _$ContractOfferFromJson(Map<String, dynamic> json) {
 class _$ContractOfferTearOff {
   const _$ContractOfferTearOff();
 
-// ignore: unused_element
   _ContractOffer call(
       {String id,
       @JsonKey(name: 'extension')
@@ -9030,7 +9016,6 @@ ContractParty _$ContractPartyFromJson(Map<String, dynamic> json) {
 class _$ContractPartyTearOff {
   const _$ContractPartyTearOff();
 
-// ignore: unused_element
   _ContractParty call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -9273,7 +9258,6 @@ ContractAnswer _$ContractAnswerFromJson(Map<String, dynamic> json) {
 class _$ContractAnswerTearOff {
   const _$ContractAnswerTearOff();
 
-// ignore: unused_element
   _ContractAnswer call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -10082,7 +10066,6 @@ ContractAsset _$ContractAssetFromJson(Map<String, dynamic> json) {
 class _$ContractAssetTearOff {
   const _$ContractAssetTearOff();
 
-// ignore: unused_element
   _ContractAsset call(
       {String id,
       @JsonKey(name: 'extension')
@@ -10756,7 +10739,6 @@ ContractContext _$ContractContextFromJson(Map<String, dynamic> json) {
 class _$ContractContextTearOff {
   const _$ContractContextTearOff();
 
-// ignore: unused_element
   _ContractContext call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -11050,7 +11032,6 @@ ContractValuedItem _$ContractValuedItemFromJson(Map<String, dynamic> json) {
 class _$ContractValuedItemTearOff {
   const _$ContractValuedItemTearOff();
 
-// ignore: unused_element
   _ContractValuedItem call(
       {String id,
       @JsonKey(name: 'extension')
@@ -11928,7 +11909,6 @@ ContractAction _$ContractActionFromJson(Map<String, dynamic> json) {
 class _$ContractActionTearOff {
   const _$ContractActionTearOff();
 
-// ignore: unused_element
   _ContractAction call(
       {String id,
       @JsonKey(name: 'extension')
@@ -12998,7 +12978,6 @@ ContractSubject _$ContractSubjectFromJson(Map<String, dynamic> json) {
 class _$ContractSubjectTearOff {
   const _$ContractSubjectTearOff();
 
-// ignore: unused_element
   _ContractSubject call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -13240,7 +13219,6 @@ ContractSigner _$ContractSignerFromJson(Map<String, dynamic> json) {
 class _$ContractSignerTearOff {
   const _$ContractSignerTearOff();
 
-// ignore: unused_element
   _ContractSigner call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -13515,7 +13493,6 @@ ContractFriendly _$ContractFriendlyFromJson(Map<String, dynamic> json) {
 class _$ContractFriendlyTearOff {
   const _$ContractFriendlyTearOff();
 
-// ignore: unused_element
   _ContractFriendly call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -13774,7 +13751,6 @@ ContractLegal _$ContractLegalFromJson(Map<String, dynamic> json) {
 class _$ContractLegalTearOff {
   const _$ContractLegalTearOff();
 
-// ignore: unused_element
   _ContractLegal call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -14033,7 +14009,6 @@ ContractRule _$ContractRuleFromJson(Map<String, dynamic> json) {
 class _$ContractRuleTearOff {
   const _$ContractRuleTearOff();
 
-// ignore: unused_element
   _ContractRule call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -14290,7 +14265,6 @@ ExplanationOfBenefit _$ExplanationOfBenefitFromJson(Map<String, dynamic> json) {
 class _$ExplanationOfBenefitTearOff {
   const _$ExplanationOfBenefitTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefit call(
       {@required
       @JsonKey(defaultValue: 'ExplanationOfBenefit')
@@ -16193,7 +16167,6 @@ ExplanationOfBenefitRelated _$ExplanationOfBenefitRelatedFromJson(
 class _$ExplanationOfBenefitRelatedTearOff {
   const _$ExplanationOfBenefitRelatedTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitRelated call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -16490,7 +16463,6 @@ ExplanationOfBenefitPayee _$ExplanationOfBenefitPayeeFromJson(
 class _$ExplanationOfBenefitPayeeTearOff {
   const _$ExplanationOfBenefitPayeeTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitPayee call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -16743,7 +16715,6 @@ ExplanationOfBenefitCareTeam _$ExplanationOfBenefitCareTeamFromJson(
 class _$ExplanationOfBenefitCareTeamTearOff {
   const _$ExplanationOfBenefitCareTeamTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitCareTeam call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -17157,7 +17128,6 @@ ExplanationOfBenefitSupportingInfo _$ExplanationOfBenefitSupportingInfoFromJson(
 class _$ExplanationOfBenefitSupportingInfoTearOff {
   const _$ExplanationOfBenefitSupportingInfoTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitSupportingInfo call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -17839,7 +17809,6 @@ ExplanationOfBenefitDiagnosis _$ExplanationOfBenefitDiagnosisFromJson(
 class _$ExplanationOfBenefitDiagnosisTearOff {
   const _$ExplanationOfBenefitDiagnosisTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitDiagnosis call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -18259,7 +18228,6 @@ ExplanationOfBenefitProcedure _$ExplanationOfBenefitProcedureFromJson(
 class _$ExplanationOfBenefitProcedureTearOff {
   const _$ExplanationOfBenefitProcedureTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitProcedure call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -18680,7 +18648,6 @@ ExplanationOfBenefitInsurance _$ExplanationOfBenefitInsuranceFromJson(
 class _$ExplanationOfBenefitInsuranceTearOff {
   const _$ExplanationOfBenefitInsuranceTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitInsurance call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -19017,7 +18984,6 @@ ExplanationOfBenefitAccident _$ExplanationOfBenefitAccidentFromJson(
 class _$ExplanationOfBenefitAccidentTearOff {
   const _$ExplanationOfBenefitAccidentTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitAccident call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -19371,7 +19337,6 @@ ExplanationOfBenefitItem _$ExplanationOfBenefitItemFromJson(
 class _$ExplanationOfBenefitItemTearOff {
   const _$ExplanationOfBenefitItemTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitItem call(
       {String id,
       @JsonKey(name: 'extension')
@@ -20513,7 +20478,6 @@ ExplanationOfBenefitAdjudication _$ExplanationOfBenefitAdjudicationFromJson(
 class _$ExplanationOfBenefitAdjudicationTearOff {
   const _$ExplanationOfBenefitAdjudicationTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitAdjudication call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -20867,7 +20831,6 @@ ExplanationOfBenefitDetail _$ExplanationOfBenefitDetailFromJson(
 class _$ExplanationOfBenefitDetailTearOff {
   const _$ExplanationOfBenefitDetailTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitDetail call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -21532,7 +21495,6 @@ ExplanationOfBenefitSubDetail _$ExplanationOfBenefitSubDetailFromJson(
 class _$ExplanationOfBenefitSubDetailTearOff {
   const _$ExplanationOfBenefitSubDetailTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitSubDetail call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -22179,7 +22141,6 @@ ExplanationOfBenefitAddItem _$ExplanationOfBenefitAddItemFromJson(
 class _$ExplanationOfBenefitAddItemTearOff {
   const _$ExplanationOfBenefitAddItemTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitAddItem call(
       {String id,
       @JsonKey(name: 'extension')
@@ -23146,7 +23107,6 @@ ExplanationOfBenefitDetail1 _$ExplanationOfBenefitDetail1FromJson(
 class _$ExplanationOfBenefitDetail1TearOff {
   const _$ExplanationOfBenefitDetail1TearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitDetail1 call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -23650,7 +23610,6 @@ ExplanationOfBenefitSubDetail1 _$ExplanationOfBenefitSubDetail1FromJson(
 class _$ExplanationOfBenefitSubDetail1TearOff {
   const _$ExplanationOfBenefitSubDetail1TearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitSubDetail1 call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -24134,7 +24093,6 @@ ExplanationOfBenefitTotal _$ExplanationOfBenefitTotalFromJson(
 class _$ExplanationOfBenefitTotalTearOff {
   const _$ExplanationOfBenefitTotalTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitTotal call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -24392,7 +24350,6 @@ ExplanationOfBenefitPayment _$ExplanationOfBenefitPaymentFromJson(
 class _$ExplanationOfBenefitPaymentTearOff {
   const _$ExplanationOfBenefitPaymentTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitPayment call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -24809,7 +24766,6 @@ ExplanationOfBenefitProcessNote _$ExplanationOfBenefitProcessNoteFromJson(
 class _$ExplanationOfBenefitProcessNoteTearOff {
   const _$ExplanationOfBenefitProcessNoteTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitProcessNote call(
       {String id,
       @JsonKey(name: 'extension')
@@ -25241,7 +25197,6 @@ ExplanationOfBenefitBenefitBalance _$ExplanationOfBenefitBenefitBalanceFromJson(
 class _$ExplanationOfBenefitBenefitBalanceTearOff {
   const _$ExplanationOfBenefitBenefitBalanceTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitBenefitBalance call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -25768,7 +25723,6 @@ ExplanationOfBenefitFinancial _$ExplanationOfBenefitFinancialFromJson(
 class _$ExplanationOfBenefitFinancialTearOff {
   const _$ExplanationOfBenefitFinancialTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitFinancial call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -26250,7 +26204,6 @@ InsurancePlan _$InsurancePlanFromJson(Map<String, dynamic> json) {
 class _$InsurancePlanTearOff {
   const _$InsurancePlanTearOff();
 
-// ignore: unused_element
   _InsurancePlan call(
       {@required
       @JsonKey(defaultValue: 'InsurancePlan')
@@ -27123,7 +27076,6 @@ InsurancePlanContact _$InsurancePlanContactFromJson(Map<String, dynamic> json) {
 class _$InsurancePlanContactTearOff {
   const _$InsurancePlanContactTearOff();
 
-// ignore: unused_element
   _InsurancePlanContact call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -27427,7 +27379,6 @@ InsurancePlanCoverage _$InsurancePlanCoverageFromJson(
 class _$InsurancePlanCoverageTearOff {
   const _$InsurancePlanCoverageTearOff();
 
-// ignore: unused_element
   _InsurancePlanCoverage call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -27689,7 +27640,6 @@ InsurancePlanBenefit _$InsurancePlanBenefitFromJson(Map<String, dynamic> json) {
 class _$InsurancePlanBenefitTearOff {
   const _$InsurancePlanBenefitTearOff();
 
-// ignore: unused_element
   _InsurancePlanBenefit call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -27989,7 +27939,6 @@ InsurancePlanLimit _$InsurancePlanLimitFromJson(Map<String, dynamic> json) {
 class _$InsurancePlanLimitTearOff {
   const _$InsurancePlanLimitTearOff();
 
-// ignore: unused_element
   _InsurancePlanLimit call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -28238,7 +28187,6 @@ InsurancePlanPlan _$InsurancePlanPlanFromJson(Map<String, dynamic> json) {
 class _$InsurancePlanPlanTearOff {
   const _$InsurancePlanPlanTearOff();
 
-// ignore: unused_element
   _InsurancePlanPlan call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -28568,7 +28516,6 @@ InsurancePlanGeneralCost _$InsurancePlanGeneralCostFromJson(
 class _$InsurancePlanGeneralCostTearOff {
   const _$InsurancePlanGeneralCostTearOff();
 
-// ignore: unused_element
   _InsurancePlanGeneralCost call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -28939,7 +28886,6 @@ InsurancePlanSpecificCost _$InsurancePlanSpecificCostFromJson(
 class _$InsurancePlanSpecificCostTearOff {
   const _$InsurancePlanSpecificCostTearOff();
 
-// ignore: unused_element
   _InsurancePlanSpecificCost call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -29187,7 +29133,6 @@ InsurancePlanBenefit1 _$InsurancePlanBenefit1FromJson(
 class _$InsurancePlanBenefit1TearOff {
   const _$InsurancePlanBenefit1TearOff();
 
-// ignore: unused_element
   _InsurancePlanBenefit1 call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -29425,7 +29370,6 @@ InsurancePlanCost _$InsurancePlanCostFromJson(Map<String, dynamic> json) {
 class _$InsurancePlanCostTearOff {
   const _$InsurancePlanCostTearOff();
 
-// ignore: unused_element
   _InsurancePlanCost call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,

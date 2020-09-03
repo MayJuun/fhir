@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'groups.dart';
 
@@ -15,7 +15,6 @@ Organization _$OrganizationFromJson(Map<String, dynamic> json) {
 class _$OrganizationTearOff {
   const _$OrganizationTearOff();
 
-// ignore: unused_element
   _Organization call(
       {@required @JsonKey(defaultValue: 'Organization') String resourceType,
       Id id,
@@ -689,7 +688,6 @@ OrganizationContact _$OrganizationContactFromJson(Map<String, dynamic> json) {
 class _$OrganizationContactTearOff {
   const _$OrganizationContactTearOff();
 
-// ignore: unused_element
   _OrganizationContact call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1018,7 +1016,6 @@ HealthcareService _$HealthcareServiceFromJson(Map<String, dynamic> json) {
 class _$HealthcareServiceTearOff {
   const _$HealthcareServiceTearOff();
 
-// ignore: unused_element
   _HealthcareService call(
       {@required
       @JsonKey(defaultValue: 'HealthcareService')
@@ -2169,7 +2166,6 @@ HealthcareServiceServiceType _$HealthcareServiceServiceTypeFromJson(
 class _$HealthcareServiceServiceTypeTearOff {
   const _$HealthcareServiceServiceTypeTearOff();
 
-// ignore: unused_element
   _HealthcareServiceServiceType call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2423,7 +2419,6 @@ HealthcareServiceAvailableTime _$HealthcareServiceAvailableTimeFromJson(
 class _$HealthcareServiceAvailableTimeTearOff {
   const _$HealthcareServiceAvailableTimeTearOff();
 
-// ignore: unused_element
   _HealthcareServiceAvailableTime call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2873,7 +2868,6 @@ HealthcareServiceNotAvailable _$HealthcareServiceNotAvailableFromJson(
 class _$HealthcareServiceNotAvailableTearOff {
   const _$HealthcareServiceNotAvailableTearOff();
 
-// ignore: unused_element
   _HealthcareServiceNotAvailable call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3164,7 +3158,6 @@ Group _$GroupFromJson(Map<String, dynamic> json) {
 class _$GroupTearOff {
   const _$GroupTearOff();
 
-// ignore: unused_element
   _Group call(
       {@required
       @JsonKey(defaultValue: 'Group')
@@ -3961,7 +3954,6 @@ GroupCharacteristic _$GroupCharacteristicFromJson(Map<String, dynamic> json) {
 class _$GroupCharacteristicTearOff {
   const _$GroupCharacteristicTearOff();
 
-// ignore: unused_element
   _GroupCharacteristic call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -4406,7 +4398,6 @@ GroupMember _$GroupMemberFromJson(Map<String, dynamic> json) {
 class _$GroupMemberTearOff {
   const _$GroupMemberTearOff();
 
-// ignore: unused_element
   _GroupMember call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'public_health_and_research.dart';
 
@@ -15,7 +15,6 @@ ResearchStudy _$ResearchStudyFromJson(Map<String, dynamic> json) {
 class _$ResearchStudyTearOff {
   const _$ResearchStudyTearOff();
 
-// ignore: unused_element
   _ResearchStudy call(
       {@required
       @JsonKey(defaultValue: 'ResearchStudy')
@@ -1140,7 +1139,6 @@ ResearchStudyArm _$ResearchStudyArmFromJson(Map<String, dynamic> json) {
 class _$ResearchStudyArmTearOff {
   const _$ResearchStudyArmTearOff();
 
-// ignore: unused_element
   _ResearchStudyArm call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1475,7 +1473,6 @@ ResearchStudyObjective _$ResearchStudyObjectiveFromJson(
 class _$ResearchStudyObjectiveTearOff {
   const _$ResearchStudyObjectiveTearOff();
 
-// ignore: unused_element
   _ResearchStudyObjective call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1749,7 +1746,6 @@ ResearchSubject _$ResearchSubjectFromJson(Map<String, dynamic> json) {
 class _$ResearchSubjectTearOff {
   const _$ResearchSubjectTearOff();
 
-// ignore: unused_element
   _ResearchSubject call(
       {@required
       @JsonKey(defaultValue: 'ResearchSubject')

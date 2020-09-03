@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'special_types.dart';
 
@@ -15,7 +15,6 @@ Narrative _$NarrativeFromJson(Map<String, dynamic> json) {
 class _$NarrativeTearOff {
   const _$NarrativeTearOff();
 
-// ignore: unused_element
   _Narrative call(
       {String id,
       @JsonKey(name: 'extension')
@@ -267,7 +266,6 @@ Reference _$ReferenceFromJson(Map<String, dynamic> json) {
 class _$ReferenceTearOff {
   const _$ReferenceTearOff();
 
-// ignore: unused_element
   _Reference call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -631,7 +629,6 @@ Meta _$MetaFromJson(Map<String, dynamic> json) {
 class _$MetaTearOff {
   const _$MetaTearOff();
 
-// ignore: unused_element
   _Meta call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1021,7 +1018,6 @@ Dosage _$DosageFromJson(Map<String, dynamic> json) {
 class _$DosageTearOff {
   const _$DosageTearOff();
 
-// ignore: unused_element
   _Dosage call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1752,7 +1748,6 @@ DosageDoseAndRate _$DosageDoseAndRateFromJson(Map<String, dynamic> json) {
 class _$DosageDoseAndRateTearOff {
   const _$DosageDoseAndRateTearOff();
 
-// ignore: unused_element
   _DosageDoseAndRate call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2138,7 +2133,6 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) {
 class _$ElementDefinitionTearOff {
   const _$ElementDefinitionTearOff();
 
-// ignore: unused_element
   _ElementDefinition call(
       {String id,
       @JsonKey(name: 'extension')
@@ -11541,7 +11535,6 @@ ElementDefinitionSlicing _$ElementDefinitionSlicingFromJson(
 class _$ElementDefinitionSlicingTearOff {
   const _$ElementDefinitionSlicingTearOff();
 
-// ignore: unused_element
   _ElementDefinitionSlicing call(
       {String id,
       @JsonKey(name: 'extension')
@@ -11961,7 +11954,6 @@ ElementDefinitionDiscriminator _$ElementDefinitionDiscriminatorFromJson(
 class _$ElementDefinitionDiscriminatorTearOff {
   const _$ElementDefinitionDiscriminatorTearOff();
 
-// ignore: unused_element
   _ElementDefinitionDiscriminator call(
       {String id,
       @JsonKey(name: 'extension')
@@ -12297,7 +12289,6 @@ ElementDefinitionBase _$ElementDefinitionBaseFromJson(
 class _$ElementDefinitionBaseTearOff {
   const _$ElementDefinitionBaseTearOff();
 
-// ignore: unused_element
   _ElementDefinitionBase call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -12651,7 +12642,6 @@ ElementDefinitionType _$ElementDefinitionTypeFromJson(
 class _$ElementDefinitionTypeTearOff {
   const _$ElementDefinitionTypeTearOff();
 
-// ignore: unused_element
   _ElementDefinitionType call(
       {String id,
       @JsonKey(name: 'extension')
@@ -13076,7 +13066,6 @@ ElementDefinitionExample _$ElementDefinitionExampleFromJson(
 class _$ElementDefinitionExampleTearOff {
   const _$ElementDefinitionExampleTearOff();
 
-// ignore: unused_element
   _ElementDefinitionExample call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -15449,7 +15438,6 @@ ElementDefinitionConstraint _$ElementDefinitionConstraintFromJson(
 class _$ElementDefinitionConstraintTearOff {
   const _$ElementDefinitionConstraintTearOff();
 
-// ignore: unused_element
   _ElementDefinitionConstraint call(
       {String id,
       @JsonKey(name: 'extension')
@@ -16059,7 +16047,6 @@ ElementDefinitionBinding _$ElementDefinitionBindingFromJson(
 class _$ElementDefinitionBindingTearOff {
   const _$ElementDefinitionBindingTearOff();
 
-// ignore: unused_element
   _ElementDefinitionBinding call(
       {String id,
       @JsonKey(name: 'extension')
@@ -16413,7 +16400,6 @@ ElementDefinitionMapping _$ElementDefinitionMappingFromJson(
 class _$ElementDefinitionMappingTearOff {
   const _$ElementDefinitionMappingTearOff();
 
-// ignore: unused_element
   _ElementDefinitionMapping call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,

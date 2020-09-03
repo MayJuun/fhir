@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'workflow1.dart';
 
@@ -15,7 +15,6 @@ Order _$OrderFromJson(Map<String, dynamic> json) {
 class _$OrderTearOff {
   const _$OrderTearOff();
 
-// ignore: unused_element
   _Order call(
       {@required @JsonKey(defaultValue: 'Order') String resourceType,
       Id id,
@@ -608,7 +607,6 @@ OrderWhen _$OrderWhenFromJson(Map<String, dynamic> json) {
 class _$OrderWhenTearOff {
   const _$OrderWhenTearOff();
 
-// ignore: unused_element
   _OrderWhen call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -879,7 +877,6 @@ OrderResponse _$OrderResponseFromJson(Map<String, dynamic> json) {
 class _$OrderResponseTearOff {
   const _$OrderResponseTearOff();
 
-// ignore: unused_element
   _OrderResponse call(
       {@required
       @JsonKey(defaultValue: 'OrderResponse')
@@ -1470,7 +1467,6 @@ CommunicationRequest _$CommunicationRequestFromJson(Map<String, dynamic> json) {
 class _$CommunicationRequestTearOff {
   const _$CommunicationRequestTearOff();
 
-// ignore: unused_element
   _CommunicationRequest call(
       {@required
       @JsonKey(defaultValue: 'CommunicationRequest')
@@ -2427,7 +2423,6 @@ CommunicationRequestPayload _$CommunicationRequestPayloadFromJson(
 class _$CommunicationRequestPayloadTearOff {
   const _$CommunicationRequestPayloadTearOff();
 
-// ignore: unused_element
   _CommunicationRequestPayload call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2756,7 +2751,6 @@ DeviceUseRequest _$DeviceUseRequestFromJson(Map<String, dynamic> json) {
 class _$DeviceUseRequestTearOff {
   const _$DeviceUseRequestTearOff();
 
-// ignore: unused_element
   _DeviceUseRequest call(
       {@required
       @JsonKey(defaultValue: 'DeviceUseRequest')
@@ -3749,7 +3743,6 @@ DeviceUseStatement _$DeviceUseStatementFromJson(Map<String, dynamic> json) {
 class _$DeviceUseStatementTearOff {
   const _$DeviceUseStatementTearOff();
 
-// ignore: unused_element
   _DeviceUseStatement call(
       {@required
       @JsonKey(defaultValue: 'DeviceUseStatement')

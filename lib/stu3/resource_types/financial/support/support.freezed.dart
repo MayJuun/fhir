@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'support.dart';
 
@@ -15,7 +15,6 @@ Coverage _$CoverageFromJson(Map<String, dynamic> json) {
 class _$CoverageTearOff {
   const _$CoverageTearOff();
 
-// ignore: unused_element
   _Coverage call(
       {@required @JsonKey(defaultValue: 'Coverage') String resourceType,
       Id id,
@@ -1060,7 +1059,6 @@ CoverageGrouping _$CoverageGroupingFromJson(Map<String, dynamic> json) {
 class _$CoverageGroupingTearOff {
   const _$CoverageGroupingTearOff();
 
-// ignore: unused_element
   _CoverageGrouping call(
       {String group,
       @JsonKey(name: '_group') Element groupElement,
@@ -1894,7 +1892,6 @@ EligibilityRequest _$EligibilityRequestFromJson(Map<String, dynamic> json) {
 class _$EligibilityRequestTearOff {
   const _$EligibilityRequestTearOff();
 
-// ignore: unused_element
   _EligibilityRequest call(
       {@required
       @JsonKey(defaultValue: 'EligibilityRequest')
@@ -2944,7 +2941,6 @@ EligibilityResponse _$EligibilityResponseFromJson(Map<String, dynamic> json) {
 class _$EligibilityResponseTearOff {
   const _$EligibilityResponseTearOff();
 
-// ignore: unused_element
   _EligibilityResponse call(
       {@required
       @JsonKey(defaultValue: 'EligibilityResponse')
@@ -3883,7 +3879,6 @@ EligibilityResponseInsurance _$EligibilityResponseInsuranceFromJson(
 class _$EligibilityResponseInsuranceTearOff {
   const _$EligibilityResponseInsuranceTearOff();
 
-// ignore: unused_element
   _EligibilityResponseInsurance call(
       {Reference coverage,
       Reference contract,
@@ -4098,7 +4093,6 @@ EligibilityResponseBenefitBalance _$EligibilityResponseBenefitBalanceFromJson(
 class _$EligibilityResponseBenefitBalanceTearOff {
   const _$EligibilityResponseBenefitBalanceTearOff();
 
-// ignore: unused_element
   _EligibilityResponseBenefitBalance call(
       {@required CodeableConcept category,
       CodeableConcept subCategory,
@@ -4594,7 +4588,6 @@ EligibilityResponseFinancial _$EligibilityResponseFinancialFromJson(
 class _$EligibilityResponseFinancialTearOff {
   const _$EligibilityResponseFinancialTearOff();
 
-// ignore: unused_element
   _EligibilityResponseFinancial call(
       {@required CodeableConcept type,
       Decimal allowedUnsignedInt,
@@ -5009,7 +5002,6 @@ EligibilityResponseError _$EligibilityResponseErrorFromJson(
 class _$EligibilityResponseErrorTearOff {
   const _$EligibilityResponseErrorTearOff();
 
-// ignore: unused_element
   _EligibilityResponseError call({@required CodeableConcept code}) {
     return _EligibilityResponseError(
       code: code,
@@ -5158,7 +5150,6 @@ EnrollmentRequest _$EnrollmentRequestFromJson(Map<String, dynamic> json) {
 class _$EnrollmentRequestTearOff {
   const _$EnrollmentRequestTearOff();
 
-// ignore: unused_element
   _EnrollmentRequest call(
       {@required
       @JsonKey(defaultValue: 'EnrollmentRequest')
@@ -5891,7 +5882,6 @@ EnrollmentResponse _$EnrollmentResponseFromJson(Map<String, dynamic> json) {
 class _$EnrollmentResponseTearOff {
   const _$EnrollmentResponseTearOff();
 
-// ignore: unused_element
   _EnrollmentResponse call(
       {@required
       @JsonKey(defaultValue: 'EnrollmentResponse')

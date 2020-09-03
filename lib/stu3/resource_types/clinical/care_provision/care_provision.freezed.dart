@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'care_provision.dart';
 
@@ -16,7 +16,6 @@ VisionPrescriptionDispense _$VisionPrescriptionDispenseFromJson(
 class _$VisionPrescriptionDispenseTearOff {
   const _$VisionPrescriptionDispenseTearOff();
 
-// ignore: unused_element
   _VisionPrescriptionDispense call(
       {CodeableConcept product,
       VisionPrescriptionDispenseEye eye,
@@ -904,7 +903,6 @@ CarePlan _$CarePlanFromJson(Map<String, dynamic> json) {
 class _$CarePlanTearOff {
   const _$CarePlanTearOff();
 
-// ignore: unused_element
   _CarePlan call(
       {@required @JsonKey(defaultValue: 'CarePlan') String resourceType,
       Id id,
@@ -1896,7 +1894,6 @@ CarePlanActivity _$CarePlanActivityFromJson(Map<String, dynamic> json) {
 class _$CarePlanActivityTearOff {
   const _$CarePlanActivityTearOff();
 
-// ignore: unused_element
   _CarePlanActivity call(
       {List<CodeableConcept> outcomeCodeableConcept,
       List<Reference> outcomeReference,
@@ -2148,7 +2145,6 @@ CarePlanDetail _$CarePlanDetailFromJson(Map<String, dynamic> json) {
 class _$CarePlanDetailTearOff {
   const _$CarePlanDetailTearOff();
 
-// ignore: unused_element
   _CarePlanDetail call(
       {CodeableConcept category,
       Reference definition,
@@ -2998,7 +2994,6 @@ CareTeam _$CareTeamFromJson(Map<String, dynamic> json) {
 class _$CareTeamTearOff {
   const _$CareTeamTearOff();
 
-// ignore: unused_element
   _CareTeam call(
       {@required @JsonKey(defaultValue: 'CareTeam') String resourceType,
       Id id,
@@ -3770,7 +3765,6 @@ CareTeamParticipant _$CareTeamParticipantFromJson(Map<String, dynamic> json) {
 class _$CareTeamParticipantTearOff {
   const _$CareTeamParticipantTearOff();
 
-// ignore: unused_element
   _CareTeamParticipant call(
       {CodeableConcept role,
       Reference member,
@@ -4014,7 +4008,6 @@ Goal _$GoalFromJson(Map<String, dynamic> json) {
 class _$GoalTearOff {
   const _$GoalTearOff();
 
-// ignore: unused_element
   _Goal call(
       {@required @JsonKey(defaultValue: 'Goal') String resourceType,
       Id id,
@@ -4986,7 +4979,6 @@ GoalTarget _$GoalTargetFromJson(Map<String, dynamic> json) {
 class _$GoalTargetTearOff {
   const _$GoalTargetTearOff();
 
-// ignore: unused_element
   _GoalTarget call(
       {CodeableConcept measure,
       Quantity detailQuantity,
@@ -5334,7 +5326,6 @@ NutritionOrder _$NutritionOrderFromJson(Map<String, dynamic> json) {
 class _$NutritionOrderTearOff {
   const _$NutritionOrderTearOff();
 
-// ignore: unused_element
   _NutritionOrder call(
       {@required @JsonKey(defaultValue: 'NutritionOrder') String resourceType,
       Id id,
@@ -6154,7 +6145,6 @@ NutritionOrderOralDiet _$NutritionOrderOralDietFromJson(
 class _$NutritionOrderOralDietTearOff {
   const _$NutritionOrderOralDietTearOff();
 
-// ignore: unused_element
   _NutritionOrderOralDiet call(
       {List<CodeableConcept> type,
       List<Timing> schedule,
@@ -6445,7 +6435,6 @@ NutritionOrderNutrient _$NutritionOrderNutrientFromJson(
 class _$NutritionOrderNutrientTearOff {
   const _$NutritionOrderNutrientTearOff();
 
-// ignore: unused_element
   _NutritionOrderNutrient call({CodeableConcept modifier, Quantity amount}) {
     return _NutritionOrderNutrient(
       modifier: modifier,
@@ -6622,7 +6611,6 @@ NutritionOrderTexture _$NutritionOrderTextureFromJson(
 class _$NutritionOrderTextureTearOff {
   const _$NutritionOrderTextureTearOff();
 
-// ignore: unused_element
   _NutritionOrderTexture call(
       {CodeableConcept modifier, CodeableConcept foodType}) {
     return _NutritionOrderTexture(
@@ -6804,7 +6792,6 @@ NutritionOrderSupplement _$NutritionOrderSupplementFromJson(
 class _$NutritionOrderSupplementTearOff {
   const _$NutritionOrderSupplementTearOff();
 
-// ignore: unused_element
   _NutritionOrderSupplement call(
       {CodeableConcept type,
       String productName,
@@ -7132,7 +7119,6 @@ NutritionOrderEnteralFormula _$NutritionOrderEnteralFormulaFromJson(
 class _$NutritionOrderEnteralFormulaTearOff {
   const _$NutritionOrderEnteralFormulaTearOff();
 
-// ignore: unused_element
   _NutritionOrderEnteralFormula call(
       {CodeableConcept baseFormulaType,
       String baseFormulaProductName,
@@ -7675,7 +7661,6 @@ NutritionOrderAdministration _$NutritionOrderAdministrationFromJson(
 class _$NutritionOrderAdministrationTearOff {
   const _$NutritionOrderAdministrationTearOff();
 
-// ignore: unused_element
   _NutritionOrderAdministration call(
       {Timing schedule,
       Quantity quantity,
@@ -7932,7 +7917,6 @@ ProcedureRequest _$ProcedureRequestFromJson(Map<String, dynamic> json) {
 class _$ProcedureRequestTearOff {
   const _$ProcedureRequestTearOff();
 
-// ignore: unused_element
   _ProcedureRequest call(
       {@required @JsonKey(defaultValue: 'ProcedureRequest') String resourceType,
       Id id,
@@ -9335,7 +9319,6 @@ ProcedureRequestRequester _$ProcedureRequestRequesterFromJson(
 class _$ProcedureRequestRequesterTearOff {
   const _$ProcedureRequestRequesterTearOff();
 
-// ignore: unused_element
   _ProcedureRequestRequester call(
       {@required Reference agent, Reference onBehalfOf}) {
     return _ProcedureRequestRequester(
@@ -9517,7 +9500,6 @@ ReferralRequest _$ReferralRequestFromJson(Map<String, dynamic> json) {
 class _$ReferralRequestTearOff {
   const _$ReferralRequestTearOff();
 
-// ignore: unused_element
   _ReferralRequest call(
       {@required @JsonKey(defaultValue: 'ReferralRequest') String resourceType,
       Id id,
@@ -10739,7 +10721,6 @@ ReferralRequestRequester _$ReferralRequestRequesterFromJson(
 class _$ReferralRequestRequesterTearOff {
   const _$ReferralRequestRequesterTearOff();
 
-// ignore: unused_element
   _ReferralRequestRequester call(
       {@required Reference agent, Reference onBehalfOf}) {
     return _ReferralRequestRequester(
@@ -10920,7 +10901,6 @@ RiskAssessment _$RiskAssessmentFromJson(Map<String, dynamic> json) {
 class _$RiskAssessmentTearOff {
   const _$RiskAssessmentTearOff();
 
-// ignore: unused_element
   _RiskAssessment call(
       {@required @JsonKey(defaultValue: 'RiskAssessment') String resourceType,
       Id id,
@@ -12000,7 +11980,6 @@ RiskAssessmentPrediction _$RiskAssessmentPredictionFromJson(
 class _$RiskAssessmentPredictionTearOff {
   const _$RiskAssessmentPredictionTearOff();
 
-// ignore: unused_element
   _RiskAssessmentPrediction call(
       {@required CodeableConcept outcome,
       Decimal probabilityDecimal,
@@ -12481,7 +12460,6 @@ VisionPrescription _$VisionPrescriptionFromJson(Map<String, dynamic> json) {
 class _$VisionPrescriptionTearOff {
   const _$VisionPrescriptionTearOff();
 
-// ignore: unused_element
   _VisionPrescription call(
       {@required
       @JsonKey(defaultValue: 'VisionPrescription')

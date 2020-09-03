@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'general_types.dart';
 
@@ -15,7 +15,6 @@ BackboneElement _$BackboneElementFromJson(Map<String, dynamic> json) {
 class _$BackboneElementTearOff {
   const _$BackboneElementTearOff();
 
-// ignore: unused_element
   _BackboneElement call({List<FhirExtension> modifierExtension}) {
     return _BackboneElement(
       modifierExtension: modifierExtension,
@@ -151,7 +150,6 @@ Annotation _$AnnotationFromJson(Map<String, dynamic> json) {
 class _$AnnotationTearOff {
   const _$AnnotationTearOff();
 
-// ignore: unused_element
   _Annotation call(
       {Reference authorReference,
       String authorString,
@@ -476,7 +474,6 @@ Attachment _$AttachmentFromJson(Map<String, dynamic> json) {
 class _$AttachmentTearOff {
   const _$AttachmentTearOff();
 
-// ignore: unused_element
   _Attachment call(
       {String contentType,
       @JsonKey(name: '_contentType') Element contentTypeElement,
@@ -1046,7 +1043,6 @@ Identifier _$IdentifierFromJson(Map<String, dynamic> json) {
 class _$IdentifierTearOff {
   const _$IdentifierTearOff();
 
-// ignore: unused_element
   _Identifier call(
       {IdentifierUse use,
       @JsonKey(name: '_use') Element useElement,
@@ -1426,7 +1422,6 @@ CodeableConcept _$CodeableConceptFromJson(Map<String, dynamic> json) {
 class _$CodeableConceptTearOff {
   const _$CodeableConceptTearOff();
 
-// ignore: unused_element
   _CodeableConcept call(
       {List<Coding> coding,
       String text,
@@ -1617,7 +1612,6 @@ Coding _$CodingFromJson(Map<String, dynamic> json) {
 class _$CodingTearOff {
   const _$CodingTearOff();
 
-// ignore: unused_element
   _Coding call(
       {String system,
       @JsonKey(name: '_system') Element systemElement,
@@ -2020,7 +2014,6 @@ Quantity _$QuantityFromJson(Map<String, dynamic> json) {
 class _$QuantityTearOff {
   const _$QuantityTearOff();
 
-// ignore: unused_element
   _Quantity call(
       {Decimal value,
       @JsonKey(name: '_value') Element valueElement,
@@ -2419,7 +2412,6 @@ Duration _$DurationFromJson(Map<String, dynamic> json) {
 class _$DurationTearOff {
   const _$DurationTearOff();
 
-// ignore: unused_element
   _Duration call(
       {Decimal value,
       @JsonKey(name: '_value') Element valueElement,
@@ -2818,7 +2810,6 @@ Distance _$DistanceFromJson(Map<String, dynamic> json) {
 class _$DistanceTearOff {
   const _$DistanceTearOff();
 
-// ignore: unused_element
   _Distance call(
       {Decimal value,
       @JsonKey(name: '_value') Element valueElement,
@@ -3217,7 +3208,6 @@ Count _$CountFromJson(Map<String, dynamic> json) {
 class _$CountTearOff {
   const _$CountTearOff();
 
-// ignore: unused_element
   _Count call(
       {Decimal value,
       @JsonKey(name: '_value') Element valueElement,
@@ -3616,7 +3606,6 @@ Money _$MoneyFromJson(Map<String, dynamic> json) {
 class _$MoneyTearOff {
   const _$MoneyTearOff();
 
-// ignore: unused_element
   _Money call(
       {Decimal value,
       @JsonKey(name: '_value') Element valueElement,
@@ -4015,7 +4004,6 @@ Age _$AgeFromJson(Map<String, dynamic> json) {
 class _$AgeTearOff {
   const _$AgeTearOff();
 
-// ignore: unused_element
   _Age call(
       {Decimal value,
       @JsonKey(name: '_value') Element valueElement,
@@ -4413,7 +4401,6 @@ Range _$RangeFromJson(Map<String, dynamic> json) {
 class _$RangeTearOff {
   const _$RangeTearOff();
 
-// ignore: unused_element
   _Range call({Quantity low, Quantity high}) {
     return _Range(
       low: low,
@@ -4577,7 +4564,6 @@ Period _$PeriodFromJson(Map<String, dynamic> json) {
 class _$PeriodTearOff {
   const _$PeriodTearOff();
 
-// ignore: unused_element
   _Period call(
       {String start,
       @JsonKey(name: '_start') Element startElement,
@@ -4802,7 +4788,6 @@ Ratio _$RatioFromJson(Map<String, dynamic> json) {
 class _$RatioTearOff {
   const _$RatioTearOff();
 
-// ignore: unused_element
   _Ratio call({Quantity numerator, Quantity denominator}) {
     return _Ratio(
       numerator: numerator,
@@ -4972,7 +4957,6 @@ SampledData _$SampledDataFromJson(Map<String, dynamic> json) {
 class _$SampledDataTearOff {
   const _$SampledDataTearOff();
 
-// ignore: unused_element
   _SampledData call(
       {@required Quantity origin,
       Decimal period,
@@ -5471,7 +5455,6 @@ Signature _$SignatureFromJson(Map<String, dynamic> json) {
 class _$SignatureTearOff {
   const _$SignatureTearOff();
 
-// ignore: unused_element
   _Signature call(
       {@required List<Coding> type,
       String when,
@@ -5966,7 +5949,6 @@ HumanName _$HumanNameFromJson(Map<String, dynamic> json) {
 class _$HumanNameTearOff {
   const _$HumanNameTearOff();
 
-// ignore: unused_element
   _HumanName call(
       {HumanNameUse use,
       @JsonKey(name: '_use') Element useElement,
@@ -6411,7 +6393,6 @@ Address _$AddressFromJson(Map<String, dynamic> json) {
 class _$AddressTearOff {
   const _$AddressTearOff();
 
-// ignore: unused_element
   _Address call(
       {AddressUse use,
       @JsonKey(name: '_use') Element useElement,
@@ -7052,7 +7033,6 @@ ContactPoint _$ContactPointFromJson(Map<String, dynamic> json) {
 class _$ContactPointTearOff {
   const _$ContactPointTearOff();
 
-// ignore: unused_element
   _ContactPoint call(
       {ContactPointSystem system,
       @JsonKey(name: '_system') Element systemElement,
@@ -7425,7 +7405,6 @@ Timing _$TimingFromJson(Map<String, dynamic> json) {
 class _$TimingTearOff {
   const _$TimingTearOff();
 
-// ignore: unused_element
   _Timing call(
       {List<String> event,
       @JsonKey(name: '_event') List<Element> eventElement,
@@ -7644,7 +7623,6 @@ TimingRepeat _$TimingRepeatFromJson(Map<String, dynamic> json) {
 class _$TimingRepeatTearOff {
   const _$TimingRepeatTearOff();
 
-// ignore: unused_element
   _TimingRepeat call(
       {Duration boundsDuration,
       Range boundsRange,

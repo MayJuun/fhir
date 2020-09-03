@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'billing.dart';
 
@@ -15,7 +15,6 @@ Claim _$ClaimFromJson(Map<String, dynamic> json) {
 class _$ClaimTearOff {
   const _$ClaimTearOff();
 
-// ignore: unused_element
   _Claim call(
       {@required @JsonKey(defaultValue: 'Claim') String resourceType,
       Id id,
@@ -1279,7 +1278,6 @@ ClaimRelated _$ClaimRelatedFromJson(Map<String, dynamic> json) {
 class _$ClaimRelatedTearOff {
   const _$ClaimRelatedTearOff();
 
-// ignore: unused_element
   _ClaimRelated call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1565,7 +1563,6 @@ ClaimPayee _$ClaimPayeeFromJson(Map<String, dynamic> json) {
 class _$ClaimPayeeTearOff {
   const _$ClaimPayeeTearOff();
 
-// ignore: unused_element
   _ClaimPayee call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1812,7 +1809,6 @@ ClaimCareTeam _$ClaimCareTeamFromJson(Map<String, dynamic> json) {
 class _$ClaimCareTeamTearOff {
   const _$ClaimCareTeamTearOff();
 
-// ignore: unused_element
   _ClaimCareTeam call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2217,7 +2213,6 @@ ClaimSupportingInfo _$ClaimSupportingInfoFromJson(Map<String, dynamic> json) {
 class _$ClaimSupportingInfoTearOff {
   const _$ClaimSupportingInfoTearOff();
 
-// ignore: unused_element
   _ClaimSupportingInfo call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2886,7 +2881,6 @@ ClaimDiagnosis _$ClaimDiagnosisFromJson(Map<String, dynamic> json) {
 class _$ClaimDiagnosisTearOff {
   const _$ClaimDiagnosisTearOff();
 
-// ignore: unused_element
   _ClaimDiagnosis call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3296,7 +3290,6 @@ ClaimProcedure _$ClaimProcedureFromJson(Map<String, dynamic> json) {
 class _$ClaimProcedureTearOff {
   const _$ClaimProcedureTearOff();
 
-// ignore: unused_element
   _ClaimProcedure call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3707,7 +3700,6 @@ ClaimInsurance _$ClaimInsuranceFromJson(Map<String, dynamic> json) {
 class _$ClaimInsuranceTearOff {
   const _$ClaimInsuranceTearOff();
 
-// ignore: unused_element
   _ClaimInsurance call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -4225,7 +4217,6 @@ ClaimAccident _$ClaimAccidentFromJson(Map<String, dynamic> json) {
 class _$ClaimAccidentTearOff {
   const _$ClaimAccidentTearOff();
 
-// ignore: unused_element
   _ClaimAccident call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -4570,7 +4561,6 @@ ClaimItem _$ClaimItemFromJson(Map<String, dynamic> json) {
 class _$ClaimItemTearOff {
   const _$ClaimItemTearOff();
 
-// ignore: unused_element
   _ClaimItem call(
       {String id,
       @JsonKey(name: 'extension')
@@ -5630,7 +5620,6 @@ ClaimDetail _$ClaimDetailFromJson(Map<String, dynamic> json) {
 class _$ClaimDetailTearOff {
   const _$ClaimDetailTearOff();
 
-// ignore: unused_element
   _ClaimDetail call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -6215,7 +6204,6 @@ ClaimSubDetail _$ClaimSubDetailFromJson(Map<String, dynamic> json) {
 class _$ClaimSubDetailTearOff {
   const _$ClaimSubDetailTearOff();
 
-// ignore: unused_element
   _ClaimSubDetail call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -6779,7 +6767,6 @@ ClaimResponse _$ClaimResponseFromJson(Map<String, dynamic> json) {
 class _$ClaimResponseTearOff {
   const _$ClaimResponseTearOff();
 
-// ignore: unused_element
   _ClaimResponse call(
       {@required @JsonKey(defaultValue: 'ClaimResponse') String resourceType,
       Id id,
@@ -8108,7 +8095,6 @@ ClaimResponseItem _$ClaimResponseItemFromJson(Map<String, dynamic> json) {
 class _$ClaimResponseItemTearOff {
   const _$ClaimResponseItemTearOff();
 
-// ignore: unused_element
   _ClaimResponseItem call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -8453,7 +8439,6 @@ ClaimResponseAdjudication _$ClaimResponseAdjudicationFromJson(
 class _$ClaimResponseAdjudicationTearOff {
   const _$ClaimResponseAdjudicationTearOff();
 
-// ignore: unused_element
   _ClaimResponseAdjudication call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -8798,7 +8783,6 @@ ClaimResponseDetail _$ClaimResponseDetailFromJson(Map<String, dynamic> json) {
 class _$ClaimResponseDetailTearOff {
   const _$ClaimResponseDetailTearOff();
 
-// ignore: unused_element
   _ClaimResponseDetail call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -9145,7 +9129,6 @@ ClaimResponseSubDetail _$ClaimResponseSubDetailFromJson(
 class _$ClaimResponseSubDetailTearOff {
   const _$ClaimResponseSubDetailTearOff();
 
-// ignore: unused_element
   _ClaimResponseSubDetail call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -9470,7 +9453,6 @@ ClaimResponseAddItem _$ClaimResponseAddItemFromJson(Map<String, dynamic> json) {
 class _$ClaimResponseAddItemTearOff {
   const _$ClaimResponseAddItemTearOff();
 
-// ignore: unused_element
   _ClaimResponseAddItem call(
       {String id,
       @JsonKey(name: 'extension')
@@ -10431,7 +10413,6 @@ ClaimResponseDetail1 _$ClaimResponseDetail1FromJson(Map<String, dynamic> json) {
 class _$ClaimResponseDetail1TearOff {
   const _$ClaimResponseDetail1TearOff();
 
-// ignore: unused_element
   _ClaimResponseDetail1 call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -10928,7 +10909,6 @@ ClaimResponseSubDetail1 _$ClaimResponseSubDetail1FromJson(
 class _$ClaimResponseSubDetail1TearOff {
   const _$ClaimResponseSubDetail1TearOff();
 
-// ignore: unused_element
   _ClaimResponseSubDetail1 call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -11403,7 +11383,6 @@ ClaimResponseTotal _$ClaimResponseTotalFromJson(Map<String, dynamic> json) {
 class _$ClaimResponseTotalTearOff {
   const _$ClaimResponseTotalTearOff();
 
-// ignore: unused_element
   _ClaimResponseTotal call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -11657,7 +11636,6 @@ ClaimResponsePayment _$ClaimResponsePaymentFromJson(Map<String, dynamic> json) {
 class _$ClaimResponsePaymentTearOff {
   const _$ClaimResponsePaymentTearOff();
 
-// ignore: unused_element
   _ClaimResponsePayment call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -12069,7 +12047,6 @@ ClaimResponseProcessNote _$ClaimResponseProcessNoteFromJson(
 class _$ClaimResponseProcessNoteTearOff {
   const _$ClaimResponseProcessNoteTearOff();
 
-// ignore: unused_element
   _ClaimResponseProcessNote call(
       {String id,
       @JsonKey(name: 'extension')
@@ -12490,7 +12467,6 @@ ClaimResponseInsurance _$ClaimResponseInsuranceFromJson(
 class _$ClaimResponseInsuranceTearOff {
   const _$ClaimResponseInsuranceTearOff();
 
-// ignore: unused_element
   _ClaimResponseInsurance call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -12926,7 +12902,6 @@ ClaimResponseError _$ClaimResponseErrorFromJson(Map<String, dynamic> json) {
 class _$ClaimResponseErrorTearOff {
   const _$ClaimResponseErrorTearOff();
 
-// ignore: unused_element
   _ClaimResponseError call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -13333,7 +13308,6 @@ Invoice _$InvoiceFromJson(Map<String, dynamic> json) {
 class _$InvoiceTearOff {
   const _$InvoiceTearOff();
 
-// ignore: unused_element
   _Invoice call(
       {@required @JsonKey(defaultValue: 'Invoice') String resourceType,
       Id id,
@@ -14306,7 +14280,6 @@ InvoiceParticipant _$InvoiceParticipantFromJson(Map<String, dynamic> json) {
 class _$InvoiceParticipantTearOff {
   const _$InvoiceParticipantTearOff();
 
-// ignore: unused_element
   _InvoiceParticipant call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -14556,7 +14529,6 @@ InvoiceLineItem _$InvoiceLineItemFromJson(Map<String, dynamic> json) {
 class _$InvoiceLineItemTearOff {
   const _$InvoiceLineItemTearOff();
 
-// ignore: unused_element
   _InvoiceLineItem call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -14900,7 +14872,6 @@ InvoicePriceComponent _$InvoicePriceComponentFromJson(
 class _$InvoicePriceComponentTearOff {
   const _$InvoicePriceComponentTearOff();
 
-// ignore: unused_element
   _InvoicePriceComponent call(
       {String id,
       @JsonKey(name: 'extension')

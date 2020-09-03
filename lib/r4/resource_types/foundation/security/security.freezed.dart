@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'security.dart';
 
@@ -15,7 +15,6 @@ AuditEvent _$AuditEventFromJson(Map<String, dynamic> json) {
 class _$AuditEventTearOff {
   const _$AuditEventTearOff();
 
-// ignore: unused_element
   _AuditEvent call(
       {@required
       @JsonKey(defaultValue: 'AuditEvent')
@@ -894,7 +893,6 @@ AuditEventAgent _$AuditEventAgentFromJson(Map<String, dynamic> json) {
 class _$AuditEventAgentTearOff {
   const _$AuditEventAgentTearOff();
 
-// ignore: unused_element
   _AuditEventAgent call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1495,7 +1493,6 @@ AuditEventNetwork _$AuditEventNetworkFromJson(Map<String, dynamic> json) {
 class _$AuditEventNetworkTearOff {
   const _$AuditEventNetworkTearOff();
 
-// ignore: unused_element
   _AuditEventNetwork call(
       {String id,
       @JsonKey(name: 'extension')
@@ -1814,7 +1811,6 @@ AuditEventSource _$AuditEventSourceFromJson(Map<String, dynamic> json) {
 class _$AuditEventSourceTearOff {
   const _$AuditEventSourceTearOff();
 
-// ignore: unused_element
   _AuditEventSource call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2107,7 +2103,6 @@ AuditEventEntity _$AuditEventEntityFromJson(Map<String, dynamic> json) {
 class _$AuditEventEntityTearOff {
   const _$AuditEventEntityTearOff();
 
-// ignore: unused_element
   _AuditEventEntity call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2634,7 +2629,6 @@ AuditEventDetail _$AuditEventDetailFromJson(Map<String, dynamic> json) {
 class _$AuditEventDetailTearOff {
   const _$AuditEventDetailTearOff();
 
-// ignore: unused_element
   _AuditEventDetail call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3003,7 +2997,6 @@ Consent _$ConsentFromJson(Map<String, dynamic> json) {
 class _$ConsentTearOff {
   const _$ConsentTearOff();
 
-// ignore: unused_element
   _Consent call(
       {@required @JsonKey(defaultValue: 'Consent') String resourceType,
       Id id,
@@ -3870,7 +3863,6 @@ ConsentPolicy _$ConsentPolicyFromJson(Map<String, dynamic> json) {
 class _$ConsentPolicyTearOff {
   const _$ConsentPolicyTearOff();
 
-// ignore: unused_element
   _ConsentPolicy call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -4170,7 +4162,6 @@ ConsentVerification _$ConsentVerificationFromJson(Map<String, dynamic> json) {
 class _$ConsentVerificationTearOff {
   const _$ConsentVerificationTearOff();
 
-// ignore: unused_element
   _ConsentVerification call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -4518,7 +4509,6 @@ ConsentProvision _$ConsentProvisionFromJson(Map<String, dynamic> json) {
 class _$ConsentProvisionTearOff {
   const _$ConsentProvisionTearOff();
 
-// ignore: unused_element
   _ConsentProvision call(
       {String id,
       @JsonKey(name: 'extension')
@@ -5004,7 +4994,6 @@ ConsentActor _$ConsentActorFromJson(Map<String, dynamic> json) {
 class _$ConsentActorTearOff {
   const _$ConsentActorTearOff();
 
-// ignore: unused_element
   _ConsentActor call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5256,7 +5245,6 @@ ConsentData _$ConsentDataFromJson(Map<String, dynamic> json) {
 class _$ConsentDataTearOff {
   const _$ConsentDataTearOff();
 
-// ignore: unused_element
   _ConsentData call(
       {String id,
       @JsonKey(name: 'extension')
@@ -5553,7 +5541,6 @@ Provenance _$ProvenanceFromJson(Map<String, dynamic> json) {
 class _$ProvenanceTearOff {
   const _$ProvenanceTearOff();
 
-// ignore: unused_element
   _Provenance call(
       {@required @JsonKey(defaultValue: 'Provenance') String resourceType,
       Id id,
@@ -6332,7 +6319,6 @@ ProvenanceAgent _$ProvenanceAgentFromJson(Map<String, dynamic> json) {
 class _$ProvenanceAgentTearOff {
   const _$ProvenanceAgentTearOff();
 
-// ignore: unused_element
   _ProvenanceAgent call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -6634,7 +6620,6 @@ ProvenanceEntity _$ProvenanceEntityFromJson(Map<String, dynamic> json) {
 class _$ProvenanceEntityTearOff {
   const _$ProvenanceEntityTearOff();
 
-// ignore: unused_element
   _ProvenanceEntity call(
       {String id,
       @JsonKey(name: 'extension')

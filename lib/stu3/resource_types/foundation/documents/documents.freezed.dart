@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'documents.dart';
 
@@ -15,7 +15,6 @@ Composition _$CompositionFromJson(Map<String, dynamic> json) {
 class _$CompositionTearOff {
   const _$CompositionTearOff();
 
-// ignore: unused_element
   _Composition call(
       {@required @JsonKey(defaultValue: 'Composition') String resourceType,
       Id id,
@@ -960,7 +959,6 @@ CompositionAttester _$CompositionAttesterFromJson(Map<String, dynamic> json) {
 class _$CompositionAttesterTearOff {
   const _$CompositionAttesterTearOff();
 
-// ignore: unused_element
   _CompositionAttester call(
       {List<CompositionAttesterMode> mode,
       @JsonKey(name: '_mode') List<Element> modeElement,
@@ -1213,7 +1211,6 @@ CompositionRelatesTo _$CompositionRelatesToFromJson(Map<String, dynamic> json) {
 class _$CompositionRelatesToTearOff {
   const _$CompositionRelatesToTearOff();
 
-// ignore: unused_element
   _CompositionRelatesTo call(
       {Code code,
       @JsonKey(name: '_code') Element codeElement,
@@ -1461,7 +1458,6 @@ CompositionEvent _$CompositionEventFromJson(Map<String, dynamic> json) {
 class _$CompositionEventTearOff {
   const _$CompositionEventTearOff();
 
-// ignore: unused_element
   _CompositionEvent call(
       {List<CodeableConcept> code, Period period, List<Reference> detail}) {
     return _CompositionEvent(
@@ -1638,7 +1634,6 @@ CompositionSection _$CompositionSectionFromJson(Map<String, dynamic> json) {
 class _$CompositionSectionTearOff {
   const _$CompositionSectionTearOff();
 
-// ignore: unused_element
   _CompositionSection call(
       {String title,
       @JsonKey(name: '_title') Element titleElement,
@@ -2044,7 +2039,6 @@ DocumentManifest _$DocumentManifestFromJson(Map<String, dynamic> json) {
 class _$DocumentManifestTearOff {
   const _$DocumentManifestTearOff();
 
-// ignore: unused_element
   _DocumentManifest call(
       {@required @JsonKey(defaultValue: 'DocumentManifest') String resourceType,
       Id id,
@@ -2902,7 +2896,6 @@ DocumentManifestContent _$DocumentManifestContentFromJson(
 class _$DocumentManifestContentTearOff {
   const _$DocumentManifestContentTearOff();
 
-// ignore: unused_element
   _DocumentManifestContent call(
       {Attachment pAttachment, Reference pReference}) {
     return _DocumentManifestContent(
@@ -3087,7 +3080,6 @@ DocumentManifestRelated _$DocumentManifestRelatedFromJson(
 class _$DocumentManifestRelatedTearOff {
   const _$DocumentManifestRelatedTearOff();
 
-// ignore: unused_element
   _DocumentManifestRelated call({Identifier identifier, Reference ref}) {
     return _DocumentManifestRelated(
       identifier: identifier,
@@ -3264,7 +3256,6 @@ DocumentReference _$DocumentReferenceFromJson(Map<String, dynamic> json) {
 class _$DocumentReferenceTearOff {
   const _$DocumentReferenceTearOff();
 
-// ignore: unused_element
   _DocumentReference call(
       {@required
       @JsonKey(defaultValue: 'DocumentReference')
@@ -4336,7 +4327,6 @@ DocumentReferenceRelatesTo _$DocumentReferenceRelatesToFromJson(
 class _$DocumentReferenceRelatesToTearOff {
   const _$DocumentReferenceRelatesToTearOff();
 
-// ignore: unused_element
   _DocumentReferenceRelatesTo call(
       {DocumentReferenceRelatesToCode code,
       @JsonKey(name: '_code') Element codeElement,
@@ -4552,7 +4542,6 @@ DocumentReferenceContent _$DocumentReferenceContentFromJson(
 class _$DocumentReferenceContentTearOff {
   const _$DocumentReferenceContentTearOff();
 
-// ignore: unused_element
   _DocumentReferenceContent call(
       {@required Attachment attachment, Coding format}) {
     return _DocumentReferenceContent(
@@ -4734,7 +4723,6 @@ DocumentReferenceContext _$DocumentReferenceContextFromJson(
 class _$DocumentReferenceContextTearOff {
   const _$DocumentReferenceContextTearOff();
 
-// ignore: unused_element
   _DocumentReferenceContext call(
       {Reference encounter,
       List<CodeableConcept> event,
@@ -5070,7 +5058,6 @@ DocumentReferenceRelated _$DocumentReferenceRelatedFromJson(
 class _$DocumentReferenceRelatedTearOff {
   const _$DocumentReferenceRelatedTearOff();
 
-// ignore: unused_element
   _DocumentReferenceRelated call({Identifier identifier, Reference ref}) {
     return _DocumentReferenceRelated(
       identifier: identifier,

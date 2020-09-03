@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'definitional_artifacts.dart';
 
@@ -15,7 +15,6 @@ ActivityDefinition _$ActivityDefinitionFromJson(Map<String, dynamic> json) {
 class _$ActivityDefinitionTearOff {
   const _$ActivityDefinitionTearOff();
 
-// ignore: unused_element
   _ActivityDefinition call(
       {@required
       @JsonKey(defaultValue: 'ActivityDefinition')
@@ -1946,7 +1945,6 @@ ActivityDefinitionParticipant _$ActivityDefinitionParticipantFromJson(
 class _$ActivityDefinitionParticipantTearOff {
   const _$ActivityDefinitionParticipantTearOff();
 
-// ignore: unused_element
   _ActivityDefinitionParticipant call(
       {String type,
       @JsonKey(name: '_type') Element typeElement,
@@ -2160,7 +2158,6 @@ ActivityDefinitionDynamicValue _$ActivityDefinitionDynamicValueFromJson(
 class _$ActivityDefinitionDynamicValueTearOff {
   const _$ActivityDefinitionDynamicValueTearOff();
 
-// ignore: unused_element
   _ActivityDefinitionDynamicValue call(
       {String description,
       @JsonKey(name: '_description') Element descriptionElement,
@@ -2525,7 +2522,6 @@ PlanDefinition _$PlanDefinitionFromJson(Map<String, dynamic> json) {
 class _$PlanDefinitionTearOff {
   const _$PlanDefinitionTearOff();
 
-// ignore: unused_element
   _PlanDefinition call(
       {@required @JsonKey(defaultValue: 'PlanDefinition') String resourceType,
       Id id,
@@ -3995,7 +3991,6 @@ PlanDefinitionGoal _$PlanDefinitionGoalFromJson(Map<String, dynamic> json) {
 class _$PlanDefinitionGoalTearOff {
   const _$PlanDefinitionGoalTearOff();
 
-// ignore: unused_element
   _PlanDefinitionGoal call(
       {CodeableConcept category,
       @required CodeableConcept description,
@@ -4319,7 +4314,6 @@ PlanDefinitionTarget _$PlanDefinitionTargetFromJson(Map<String, dynamic> json) {
 class _$PlanDefinitionTargetTearOff {
   const _$PlanDefinitionTargetTearOff();
 
-// ignore: unused_element
   _PlanDefinitionTarget call(
       {CodeableConcept measure,
       Quantity detailQuantity,
@@ -4610,7 +4604,6 @@ PlanDefinitionAction _$PlanDefinitionActionFromJson(Map<String, dynamic> json) {
 class _$PlanDefinitionActionTearOff {
   const _$PlanDefinitionActionTearOff();
 
-// ignore: unused_element
   _PlanDefinitionAction call(
       {String label,
       @JsonKey(name: '_label') Element labelElement,
@@ -5832,7 +5825,6 @@ PlanDefinitionCondition _$PlanDefinitionConditionFromJson(
 class _$PlanDefinitionConditionTearOff {
   const _$PlanDefinitionConditionTearOff();
 
-// ignore: unused_element
   _PlanDefinitionCondition call(
       {PlanDefinitionConditionKind kind,
       @JsonKey(name: '_kind') Element kindElement,
@@ -6189,7 +6181,6 @@ PlanDefinitionRelatedAction _$PlanDefinitionRelatedActionFromJson(
 class _$PlanDefinitionRelatedActionTearOff {
   const _$PlanDefinitionRelatedActionTearOff();
 
-// ignore: unused_element
   _PlanDefinitionRelatedAction call(
       {Id actionId,
       @JsonKey(name: '_actionId') Element actionIdElement,
@@ -6508,7 +6499,6 @@ PlanDefinitionParticipant _$PlanDefinitionParticipantFromJson(
 class _$PlanDefinitionParticipantTearOff {
   const _$PlanDefinitionParticipantTearOff();
 
-// ignore: unused_element
   _PlanDefinitionParticipant call(
       {PlanDefinitionParticipantType type,
       @JsonKey(name: '_type') Element typeElement,
@@ -6718,7 +6708,6 @@ PlanDefinitionDynamicValue _$PlanDefinitionDynamicValueFromJson(
 class _$PlanDefinitionDynamicValueTearOff {
   const _$PlanDefinitionDynamicValueTearOff();
 
-// ignore: unused_element
   _PlanDefinitionDynamicValue call(
       {String description,
       @JsonKey(name: '_description') Element descriptionElement,
@@ -7076,7 +7065,6 @@ Questionnaire _$QuestionnaireFromJson(Map<String, dynamic> json) {
 class _$QuestionnaireTearOff {
   const _$QuestionnaireTearOff();
 
-// ignore: unused_element
   _Questionnaire call(
       {@required @JsonKey(defaultValue: 'Questionnaire') String resourceType,
       Id id,
@@ -8420,7 +8408,6 @@ QuestionnaireItem _$QuestionnaireItemFromJson(Map<String, dynamic> json) {
 class _$QuestionnaireItemTearOff {
   const _$QuestionnaireItemTearOff();
 
-// ignore: unused_element
   _QuestionnaireItem call(
       {String linkId,
       @JsonKey(name: '_linkId') Element linkIdElement,
@@ -9771,7 +9758,6 @@ QuestionnaireEnableWhen _$QuestionnaireEnableWhenFromJson(
 class _$QuestionnaireEnableWhenTearOff {
   const _$QuestionnaireEnableWhenTearOff();
 
-// ignore: unused_element
   _QuestionnaireEnableWhen call(
       {String question,
       @JsonKey(name: '_question') Element questionElement,
@@ -10635,7 +10621,6 @@ QuestionnaireOption _$QuestionnaireOptionFromJson(Map<String, dynamic> json) {
 class _$QuestionnaireOptionTearOff {
   const _$QuestionnaireOptionTearOff();
 
-// ignore: unused_element
   _QuestionnaireOption call(
       {Decimal valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
@@ -11028,7 +11013,6 @@ ServiceDefinition _$ServiceDefinitionFromJson(Map<String, dynamic> json) {
 class _$ServiceDefinitionTearOff {
   const _$ServiceDefinitionTearOff();
 
-// ignore: unused_element
   _ServiceDefinition call(
       {@required
       @JsonKey(defaultValue: 'ServiceDefinition')

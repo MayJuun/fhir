@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'workflow.dart';
 
@@ -15,7 +15,6 @@ Appointment _$AppointmentFromJson(Map<String, dynamic> json) {
 class _$AppointmentTearOff {
   const _$AppointmentTearOff();
 
-// ignore: unused_element
   _Appointment call(
       {@required
       @JsonKey(defaultValue: 'Appointment')
@@ -1304,7 +1303,6 @@ AppointmentParticipant _$AppointmentParticipantFromJson(
 class _$AppointmentParticipantTearOff {
   const _$AppointmentParticipantTearOff();
 
-// ignore: unused_element
   _AppointmentParticipant call(
       {String id,
       @JsonKey(name: 'extension')
@@ -1726,7 +1724,6 @@ AppointmentResponse _$AppointmentResponseFromJson(Map<String, dynamic> json) {
 class _$AppointmentResponseTearOff {
   const _$AppointmentResponseTearOff();
 
-// ignore: unused_element
   _AppointmentResponse call(
       {@required
       @JsonKey(defaultValue: 'AppointmentResponse')
@@ -2522,7 +2519,6 @@ Schedule _$ScheduleFromJson(Map<String, dynamic> json) {
 class _$ScheduleTearOff {
   const _$ScheduleTearOff();
 
-// ignore: unused_element
   _Schedule call(
       {@required @JsonKey(defaultValue: 'Schedule') String resourceType,
       Id id,
@@ -3194,7 +3190,6 @@ Slot _$SlotFromJson(Map<String, dynamic> json) {
 class _$SlotTearOff {
   const _$SlotTearOff();
 
-// ignore: unused_element
   _Slot call(
       {@required @JsonKey(defaultValue: 'Slot') String resourceType,
       Id id,
@@ -4050,7 +4045,6 @@ Task _$TaskFromJson(Map<String, dynamic> json) {
 class _$TaskTearOff {
   const _$TaskTearOff();
 
-// ignore: unused_element
   _Task call(
       {@required @JsonKey(defaultValue: 'Task') String resourceType,
       Id id,
@@ -5526,7 +5520,6 @@ TaskRestriction _$TaskRestrictionFromJson(Map<String, dynamic> json) {
 class _$TaskRestrictionTearOff {
   const _$TaskRestrictionTearOff();
 
-// ignore: unused_element
   _TaskRestriction call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5829,7 +5822,6 @@ TaskInput _$TaskInputFromJson(Map<String, dynamic> json) {
 class _$TaskInputTearOff {
   const _$TaskInputTearOff();
 
-// ignore: unused_element
   _TaskInput call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -8170,7 +8162,6 @@ TaskOutput _$TaskOutputFromJson(Map<String, dynamic> json) {
 class _$TaskOutputTearOff {
   const _$TaskOutputTearOff();
 
-// ignore: unused_element
   _TaskOutput call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -10513,7 +10504,6 @@ VerificationResult _$VerificationResultFromJson(Map<String, dynamic> json) {
 class _$VerificationResultTearOff {
   const _$VerificationResultTearOff();
 
-// ignore: unused_element
   _VerificationResult call(
       {@required
       @JsonKey(defaultValue: 'VerificationResult')
@@ -11490,7 +11480,6 @@ VerificationResultPrimarySource _$VerificationResultPrimarySourceFromJson(
 class _$VerificationResultPrimarySourceTearOff {
   const _$VerificationResultPrimarySourceTearOff();
 
-// ignore: unused_element
   _VerificationResultPrimarySource call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -11919,7 +11908,6 @@ VerificationResultAttestation _$VerificationResultAttestationFromJson(
 class _$VerificationResultAttestationTearOff {
   const _$VerificationResultAttestationTearOff();
 
-// ignore: unused_element
   _VerificationResultAttestation call(
       {String id,
       @JsonKey(name: 'extension')
@@ -12499,7 +12487,6 @@ VerificationResultValidator _$VerificationResultValidatorFromJson(
 class _$VerificationResultValidatorTearOff {
   const _$VerificationResultValidatorTearOff();
 
-// ignore: unused_element
   _VerificationResultValidator call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,

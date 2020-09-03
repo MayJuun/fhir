@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'structure.dart';
 
@@ -15,7 +15,6 @@ Media _$MediaFromJson(Map<String, dynamic> json) {
 class _$MediaTearOff {
   const _$MediaTearOff();
 
-// ignore: unused_element
   _Media call(
       {@required
       @JsonKey(defaultValue: 'Media')
@@ -991,7 +990,6 @@ Binary _$BinaryFromJson(Map<String, dynamic> json) {
 class _$BinaryTearOff {
   const _$BinaryTearOff();
 
-// ignore: unused_element
   _Binary call(
       {@required @JsonKey(defaultValue: 'Binary') String resourceType,
       Id id,
@@ -1378,7 +1376,6 @@ Bundle _$BundleFromJson(Map<String, dynamic> json) {
 class _$BundleTearOff {
   const _$BundleTearOff();
 
-// ignore: unused_element
   _Bundle call(
       {@required
       @JsonKey(defaultValue: 'Bundle')
@@ -1909,7 +1906,6 @@ BundleLink _$BundleLinkFromJson(Map<String, dynamic> json) {
 class _$BundleLinkTearOff {
   const _$BundleLinkTearOff();
 
-// ignore: unused_element
   _BundleLink call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2240,7 +2236,6 @@ BundleEntry _$BundleEntryFromJson(Map<String, dynamic> json) {
 class _$BundleEntryTearOff {
   const _$BundleEntryTearOff();
 
-// ignore: unused_element
   _BundleEntry call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2647,7 +2642,6 @@ BundleEntrySearch _$BundleEntrySearchFromJson(Map<String, dynamic> json) {
 class _$BundleEntrySearchTearOff {
   const _$BundleEntrySearchTearOff();
 
-// ignore: unused_element
   _BundleEntrySearch call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2975,7 +2969,6 @@ BundleEntryRequest _$BundleEntryRequestFromJson(Map<String, dynamic> json) {
 class _$BundleEntryRequestTearOff {
   const _$BundleEntryRequestTearOff();
 
-// ignore: unused_element
   _BundleEntryRequest call(
       {Id id,
       @JsonKey(name: 'extension')
@@ -3604,7 +3597,6 @@ BundleEntryResponse _$BundleEntryResponseFromJson(Map<String, dynamic> json) {
 class _$BundleEntryResponseTearOff {
   const _$BundleEntryResponseTearOff();
 
-// ignore: unused_element
   _BundleEntryResponse call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -4055,7 +4047,6 @@ Basic _$BasicFromJson(Map<String, dynamic> json) {
 class _$BasicTearOff {
   const _$BasicTearOff();
 
-// ignore: unused_element
   _Basic call(
       {@required @JsonKey(defaultValue: 'Basic') String resourceType,
       Id id,

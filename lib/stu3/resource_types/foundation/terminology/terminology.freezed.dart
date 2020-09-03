@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'terminology.dart';
 
@@ -15,7 +15,6 @@ CodeSystem _$CodeSystemFromJson(Map<String, dynamic> json) {
 class _$CodeSystemTearOff {
   const _$CodeSystemTearOff();
 
-// ignore: unused_element
   _CodeSystem call(
       {@required @JsonKey(defaultValue: 'CodeSystem') String resourceType,
       Id id,
@@ -1597,7 +1596,6 @@ CodeSystemFilter _$CodeSystemFilterFromJson(Map<String, dynamic> json) {
 class _$CodeSystemFilterTearOff {
   const _$CodeSystemFilterTearOff();
 
-// ignore: unused_element
   _CodeSystemFilter call(
       {Code code,
       @JsonKey(name: '_code') Element codeElement,
@@ -1936,7 +1934,6 @@ CodeSystemProperty _$CodeSystemPropertyFromJson(Map<String, dynamic> json) {
 class _$CodeSystemPropertyTearOff {
   const _$CodeSystemPropertyTearOff();
 
-// ignore: unused_element
   _CodeSystemProperty call(
       {Code code,
       @JsonKey(name: '_code') Element codeElement,
@@ -2281,7 +2278,6 @@ CodeSystemConcept _$CodeSystemConceptFromJson(Map<String, dynamic> json) {
 class _$CodeSystemConceptTearOff {
   const _$CodeSystemConceptTearOff();
 
-// ignore: unused_element
   _CodeSystemConcept call(
       {Code code,
       @JsonKey(name: '_code') Element codeElement,
@@ -2643,7 +2639,6 @@ CodeSystemDesignation _$CodeSystemDesignationFromJson(
 class _$CodeSystemDesignationTearOff {
   const _$CodeSystemDesignationTearOff();
 
-// ignore: unused_element
   _CodeSystemDesignation call(
       {String language,
       @JsonKey(name: '_language') Element languageElement,
@@ -2911,7 +2906,6 @@ CodeSystemProperty1 _$CodeSystemProperty1FromJson(Map<String, dynamic> json) {
 class _$CodeSystemProperty1TearOff {
   const _$CodeSystemProperty1TearOff();
 
-// ignore: unused_element
   _CodeSystemProperty1 call(
       {Code code,
       @JsonKey(name: '_code') Element codeElement,
@@ -3426,7 +3420,6 @@ ConceptMap _$ConceptMapFromJson(Map<String, dynamic> json) {
 class _$ConceptMapTearOff {
   const _$ConceptMapTearOff();
 
-// ignore: unused_element
   _ConceptMap call(
       {@required @JsonKey(defaultValue: 'ConceptMap') String resourceType,
       Id id,
@@ -4744,7 +4737,6 @@ ConceptMapGroup _$ConceptMapGroupFromJson(Map<String, dynamic> json) {
 class _$ConceptMapGroupTearOff {
   const _$ConceptMapGroupTearOff();
 
-// ignore: unused_element
   _ConceptMapGroup call(
       {String source,
       @JsonKey(name: '_source') Element sourceElement,
@@ -5162,7 +5154,6 @@ ConceptMapElement _$ConceptMapElementFromJson(Map<String, dynamic> json) {
 class _$ConceptMapElementTearOff {
   const _$ConceptMapElementTearOff();
 
-// ignore: unused_element
   _ConceptMapElement call(
       {Code code,
       @JsonKey(name: '_code') Element codeElement,
@@ -5415,7 +5406,6 @@ ConceptMapTarget _$ConceptMapTargetFromJson(Map<String, dynamic> json) {
 class _$ConceptMapTargetTearOff {
   const _$ConceptMapTargetTearOff();
 
-// ignore: unused_element
   _ConceptMapTarget call(
       {Code code,
       @JsonKey(name: '_code') Element codeElement,
@@ -5813,7 +5803,6 @@ ConceptMapDependsOn _$ConceptMapDependsOnFromJson(Map<String, dynamic> json) {
 class _$ConceptMapDependsOnTearOff {
   const _$ConceptMapDependsOnTearOff();
 
-// ignore: unused_element
   _ConceptMapDependsOn call(
       {String property,
       @JsonKey(name: '_property') Element propertyElement,
@@ -6163,7 +6152,6 @@ ConceptMapUnmapped _$ConceptMapUnmappedFromJson(Map<String, dynamic> json) {
 class _$ConceptMapUnmappedTearOff {
   const _$ConceptMapUnmappedTearOff();
 
-// ignore: unused_element
   _ConceptMapUnmapped call(
       {ConceptMapUnmappedMode mode,
       @JsonKey(name: '_mode') Element modeElement,
@@ -6506,7 +6494,6 @@ ExpansionProfile _$ExpansionProfileFromJson(Map<String, dynamic> json) {
 class _$ExpansionProfileTearOff {
   const _$ExpansionProfileTearOff();
 
-// ignore: unused_element
   _ExpansionProfile call(
       {@required
       @JsonKey(defaultValue: 'ExpansionProfile')
@@ -8132,7 +8119,6 @@ ExpansionProfileFixedVersion _$ExpansionProfileFixedVersionFromJson(
 class _$ExpansionProfileFixedVersionTearOff {
   const _$ExpansionProfileFixedVersionTearOff();
 
-// ignore: unused_element
   _ExpansionProfileFixedVersion call(
       {String system,
       @JsonKey(name: '_system') Element systemElement,
@@ -8436,7 +8422,6 @@ ExpansionProfileExcludedSystem _$ExpansionProfileExcludedSystemFromJson(
 class _$ExpansionProfileExcludedSystemTearOff {
   const _$ExpansionProfileExcludedSystemTearOff();
 
-// ignore: unused_element
   _ExpansionProfileExcludedSystem call(
       {String system,
       @JsonKey(name: '_system') Element systemElement,
@@ -8684,7 +8669,6 @@ ExpansionProfileDesignation _$ExpansionProfileDesignationFromJson(
 class _$ExpansionProfileDesignationTearOff {
   const _$ExpansionProfileDesignationTearOff();
 
-// ignore: unused_element
   _ExpansionProfileDesignation call(
       {ExpansionProfileInclude include, ExpansionProfileExclude exclude}) {
     return _ExpansionProfileDesignation(
@@ -8876,7 +8860,6 @@ ExpansionProfileInclude _$ExpansionProfileIncludeFromJson(
 class _$ExpansionProfileIncludeTearOff {
   const _$ExpansionProfileIncludeTearOff();
 
-// ignore: unused_element
   _ExpansionProfileInclude call(
       {List<ExpansionProfileDesignation1> designation}) {
     return _ExpansionProfileInclude(
@@ -9016,7 +8999,6 @@ ExpansionProfileDesignation1 _$ExpansionProfileDesignation1FromJson(
 class _$ExpansionProfileDesignation1TearOff {
   const _$ExpansionProfileDesignation1TearOff();
 
-// ignore: unused_element
   _ExpansionProfileDesignation1 call(
       {String language,
       @JsonKey(name: '_language') Element languageElement,
@@ -9234,7 +9216,6 @@ ExpansionProfileExclude _$ExpansionProfileExcludeFromJson(
 class _$ExpansionProfileExcludeTearOff {
   const _$ExpansionProfileExcludeTearOff();
 
-// ignore: unused_element
   _ExpansionProfileExclude call(
       {List<ExpansionProfileDesignation2> designation}) {
     return _ExpansionProfileExclude(
@@ -9374,7 +9355,6 @@ ExpansionProfileDesignation2 _$ExpansionProfileDesignation2FromJson(
 class _$ExpansionProfileDesignation2TearOff {
   const _$ExpansionProfileDesignation2TearOff();
 
-// ignore: unused_element
   _ExpansionProfileDesignation2 call(
       {String language,
       @JsonKey(name: '_language') Element languageElement,
@@ -9591,7 +9571,6 @@ NamingSystem _$NamingSystemFromJson(Map<String, dynamic> json) {
 class _$NamingSystemTearOff {
   const _$NamingSystemTearOff();
 
-// ignore: unused_element
   _NamingSystem call(
       {@required @JsonKey(defaultValue: 'NamingSystem') String resourceType,
       Id id,
@@ -10605,7 +10584,6 @@ NamingSystemUniqueId _$NamingSystemUniqueIdFromJson(Map<String, dynamic> json) {
 class _$NamingSystemUniqueIdTearOff {
   const _$NamingSystemUniqueIdTearOff();
 
-// ignore: unused_element
   _NamingSystemUniqueId call(
       {NamingSystemUniqueIdType type,
       @JsonKey(name: '_type') Element typeElement,
@@ -10985,7 +10963,6 @@ ValueSet _$ValueSetFromJson(Map<String, dynamic> json) {
 class _$ValueSetTearOff {
   const _$ValueSetTearOff();
 
-// ignore: unused_element
   _ValueSet call(
       {@required @JsonKey(defaultValue: 'ValueSet') String resourceType,
       Id id,
@@ -12269,7 +12246,6 @@ ValueSetCompose _$ValueSetComposeFromJson(Map<String, dynamic> json) {
 class _$ValueSetComposeTearOff {
   const _$ValueSetComposeTearOff();
 
-// ignore: unused_element
   _ValueSetCompose call(
       {Date lockedDate,
       @JsonKey(name: '_lockedDate') Element lockedDateElement,
@@ -12553,7 +12529,6 @@ ValueSetInclude _$ValueSetIncludeFromJson(Map<String, dynamic> json) {
 class _$ValueSetIncludeTearOff {
   const _$ValueSetIncludeTearOff();
 
-// ignore: unused_element
   _ValueSetInclude call(
       {String system,
       @JsonKey(name: '_system') Element systemElement,
@@ -12879,7 +12854,6 @@ ValueSetConcept _$ValueSetConceptFromJson(Map<String, dynamic> json) {
 class _$ValueSetConceptTearOff {
   const _$ValueSetConceptTearOff();
 
-// ignore: unused_element
   _ValueSetConcept call(
       {Code code,
       @JsonKey(name: '_code') Element codeElement,
@@ -13135,7 +13109,6 @@ ValueSetDesignation _$ValueSetDesignationFromJson(Map<String, dynamic> json) {
 class _$ValueSetDesignationTearOff {
   const _$ValueSetDesignationTearOff();
 
-// ignore: unused_element
   _ValueSetDesignation call(
       {String language,
       @JsonKey(name: '_language') Element languageElement,
@@ -13402,7 +13375,6 @@ ValueSetFilter _$ValueSetFilterFromJson(Map<String, dynamic> json) {
 class _$ValueSetFilterTearOff {
   const _$ValueSetFilterTearOff();
 
-// ignore: unused_element
   _ValueSetFilter call(
       {String property,
       @JsonKey(name: '_property') Element propertyElement,
@@ -13690,7 +13662,6 @@ ValueSetExpansion _$ValueSetExpansionFromJson(Map<String, dynamic> json) {
 class _$ValueSetExpansionTearOff {
   const _$ValueSetExpansionTearOff();
 
-// ignore: unused_element
   _ValueSetExpansion call(
       {String identifier,
       @JsonKey(name: '_identifier') Element identifierElement,
@@ -14088,7 +14059,6 @@ ValueSetParameter _$ValueSetParameterFromJson(Map<String, dynamic> json) {
 class _$ValueSetParameterTearOff {
   const _$ValueSetParameterTearOff();
 
-// ignore: unused_element
   _ValueSetParameter call(
       {String name,
       @JsonKey(name: '_name') Element nameElement,
@@ -14626,7 +14596,6 @@ ValueSetContains _$ValueSetContainsFromJson(Map<String, dynamic> json) {
 class _$ValueSetContainsTearOff {
   const _$ValueSetContainsTearOff();
 
-// ignore: unused_element
   _ValueSetContains call(
       {String system,
       @JsonKey(name: '_system') Element systemElement,

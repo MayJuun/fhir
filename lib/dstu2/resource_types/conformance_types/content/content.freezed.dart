@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'content.dart';
 
@@ -15,7 +15,6 @@ StructureDefinition _$StructureDefinitionFromJson(Map<String, dynamic> json) {
 class _$StructureDefinitionTearOff {
   const _$StructureDefinitionTearOff();
 
-// ignore: unused_element
   _StructureDefinition call(
       {@required
       @JsonKey(defaultValue: 'StructureDefinition')
@@ -1587,7 +1586,6 @@ StructureDefinitionContact _$StructureDefinitionContactFromJson(
 class _$StructureDefinitionContactTearOff {
   const _$StructureDefinitionContactTearOff();
 
-// ignore: unused_element
   _StructureDefinitionContact call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1815,7 +1813,6 @@ StructureDefinitionMapping _$StructureDefinitionMappingFromJson(
 class _$StructureDefinitionMappingTearOff {
   const _$StructureDefinitionMappingTearOff();
 
-// ignore: unused_element
   _StructureDefinitionMapping call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2264,7 +2261,6 @@ StructureDefinitionSnapshot _$StructureDefinitionSnapshotFromJson(
 class _$StructureDefinitionSnapshotTearOff {
   const _$StructureDefinitionSnapshotTearOff();
 
-// ignore: unused_element
   _StructureDefinitionSnapshot call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2485,7 +2481,6 @@ StructureDefinitionDifferential _$StructureDefinitionDifferentialFromJson(
 class _$StructureDefinitionDifferentialTearOff {
   const _$StructureDefinitionDifferentialTearOff();
 
-// ignore: unused_element
   _StructureDefinitionDifferential call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2708,7 +2703,6 @@ DataElement _$DataElementFromJson(Map<String, dynamic> json) {
 class _$DataElementTearOff {
   const _$DataElementTearOff();
 
-// ignore: unused_element
   _DataElement call(
       {@required
       @JsonKey(defaultValue: 'DataElement')
@@ -3379,7 +3373,6 @@ DataElementContact _$DataElementContactFromJson(Map<String, dynamic> json) {
 class _$DataElementContactTearOff {
   const _$DataElementContactTearOff();
 
-// ignore: unused_element
   _DataElementContact call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3602,7 +3595,6 @@ DataElementMapping _$DataElementMappingFromJson(Map<String, dynamic> json) {
 class _$DataElementMappingTearOff {
   const _$DataElementMappingTearOff();
 
-// ignore: unused_element
   _DataElementMapping call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'general.dart';
 
@@ -15,7 +15,6 @@ AllergyIntolerance _$AllergyIntoleranceFromJson(Map<String, dynamic> json) {
 class _$AllergyIntoleranceTearOff {
   const _$AllergyIntoleranceTearOff();
 
-// ignore: unused_element
   _AllergyIntolerance call(
       {@required
       @JsonKey(defaultValue: 'AllergyIntolerance')
@@ -1121,7 +1120,6 @@ AllergyIntoleranceReaction _$AllergyIntoleranceReactionFromJson(
 class _$AllergyIntoleranceReactionTearOff {
   const _$AllergyIntoleranceReactionTearOff();
 
-// ignore: unused_element
   _AllergyIntoleranceReaction call(
       {Id id,
       @JsonKey(name: 'extension')
@@ -1751,7 +1749,6 @@ Condition _$ConditionFromJson(Map<String, dynamic> json) {
 class _$ConditionTearOff {
   const _$ConditionTearOff();
 
-// ignore: unused_element
   _Condition call(
       {@required
       @JsonKey(defaultValue: 'Condition')
@@ -3127,7 +3124,6 @@ ConditionStage _$ConditionStageFromJson(Map<String, dynamic> json) {
 class _$ConditionStageTearOff {
   const _$ConditionStageTearOff();
 
-// ignore: unused_element
   _ConditionStage call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3395,7 +3391,6 @@ ConditionEvidence _$ConditionEvidenceFromJson(Map<String, dynamic> json) {
 class _$ConditionEvidenceTearOff {
   const _$ConditionEvidenceTearOff();
 
-// ignore: unused_element
   _ConditionEvidence call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3657,7 +3652,6 @@ Procedure _$ProcedureFromJson(Map<String, dynamic> json) {
 class _$ProcedureTearOff {
   const _$ProcedureTearOff();
 
-// ignore: unused_element
   _Procedure call(
       {@required
       @JsonKey(defaultValue: 'Procedure')
@@ -4809,7 +4803,6 @@ ProcedurePerformer _$ProcedurePerformerFromJson(Map<String, dynamic> json) {
 class _$ProcedurePerformerTearOff {
   const _$ProcedurePerformerTearOff();
 
-// ignore: unused_element
   _ProcedurePerformer call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5084,7 +5077,6 @@ ProcedureFocalDevice _$ProcedureFocalDeviceFromJson(Map<String, dynamic> json) {
 class _$ProcedureFocalDeviceTearOff {
   const _$ProcedureFocalDeviceTearOff();
 
-// ignore: unused_element
   _ProcedureFocalDevice call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5344,7 +5336,6 @@ ClinicalImpression _$ClinicalImpressionFromJson(Map<String, dynamic> json) {
 class _$ClinicalImpressionTearOff {
   const _$ClinicalImpressionTearOff();
 
-// ignore: unused_element
   _ClinicalImpression call(
       {@required
       @JsonKey(defaultValue: 'ClinicalImpression')
@@ -6429,7 +6420,6 @@ ClinicalImpressionInvestigations _$ClinicalImpressionInvestigationsFromJson(
 class _$ClinicalImpressionInvestigationsTearOff {
   const _$ClinicalImpressionInvestigationsTearOff();
 
-// ignore: unused_element
   _ClinicalImpressionInvestigations call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -6681,7 +6671,6 @@ ClinicalImpressionFinding _$ClinicalImpressionFindingFromJson(
 class _$ClinicalImpressionFindingTearOff {
   const _$ClinicalImpressionFindingTearOff();
 
-// ignore: unused_element
   _ClinicalImpressionFinding call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -6925,7 +6914,6 @@ ClinicalImpressionRuledOut _$ClinicalImpressionRuledOutFromJson(
 class _$ClinicalImpressionRuledOutTearOff {
   const _$ClinicalImpressionRuledOutTearOff();
 
-// ignore: unused_element
   _ClinicalImpressionRuledOut call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -7169,7 +7157,6 @@ FamilyMemberHistory _$FamilyMemberHistoryFromJson(Map<String, dynamic> json) {
 class _$FamilyMemberHistoryTearOff {
   const _$FamilyMemberHistoryTearOff();
 
-// ignore: unused_element
   _FamilyMemberHistory call(
       {@required
       @JsonKey(defaultValue: 'FamilyMemberHistory')
@@ -8541,7 +8528,6 @@ FamilyMemberHistoryCondition _$FamilyMemberHistoryConditionFromJson(
 class _$FamilyMemberHistoryConditionTearOff {
   const _$FamilyMemberHistoryConditionTearOff();
 
-// ignore: unused_element
   _FamilyMemberHistoryCondition call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -8998,7 +8984,6 @@ RiskAssessment _$RiskAssessmentFromJson(Map<String, dynamic> json) {
 class _$RiskAssessmentTearOff {
   const _$RiskAssessmentTearOff();
 
-// ignore: unused_element
   _RiskAssessment call(
       {@required @JsonKey(defaultValue: 'RiskAssessment') String resourceType,
       Id id,
@@ -9740,7 +9725,6 @@ RiskAssessmentPrediction _$RiskAssessmentPredictionFromJson(
 class _$RiskAssessmentPredictionTearOff {
   const _$RiskAssessmentPredictionTearOff();
 
-// ignore: unused_element
   _RiskAssessmentPrediction call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -10295,7 +10279,6 @@ DetectedIssue _$DetectedIssueFromJson(Map<String, dynamic> json) {
 class _$DetectedIssueTearOff {
   const _$DetectedIssueTearOff();
 
-// ignore: unused_element
   _DetectedIssue call(
       {@required
       @JsonKey(defaultValue: 'DetectedIssue')
@@ -11122,7 +11105,6 @@ DetectedIssueMitigation _$DetectedIssueMitigationFromJson(
 class _$DetectedIssueMitigationTearOff {
   const _$DetectedIssueMitigationTearOff();
 
-// ignore: unused_element
   _DetectedIssueMitigation call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,

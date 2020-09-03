@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'definitional_artifacts.dart';
 
@@ -15,7 +15,6 @@ ActivityDefinition _$ActivityDefinitionFromJson(Map<String, dynamic> json) {
 class _$ActivityDefinitionTearOff {
   const _$ActivityDefinitionTearOff();
 
-// ignore: unused_element
   _ActivityDefinition call(
       {@required
       @JsonKey(defaultValue: 'ActivityDefinition')
@@ -2488,7 +2487,6 @@ ActivityDefinitionParticipant _$ActivityDefinitionParticipantFromJson(
 class _$ActivityDefinitionParticipantTearOff {
   const _$ActivityDefinitionParticipantTearOff();
 
-// ignore: unused_element
   _ActivityDefinitionParticipant call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2771,7 +2769,6 @@ ActivityDefinitionDynamicValue _$ActivityDefinitionDynamicValueFromJson(
 class _$ActivityDefinitionDynamicValueTearOff {
   const _$ActivityDefinitionDynamicValueTearOff();
 
-// ignore: unused_element
   _ActivityDefinitionDynamicValue call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3059,7 +3056,6 @@ DeviceDefinition _$DeviceDefinitionFromJson(Map<String, dynamic> json) {
 class _$DeviceDefinitionTearOff {
   const _$DeviceDefinitionTearOff();
 
-// ignore: unused_element
   _DeviceDefinition call(
       {@required @JsonKey(defaultValue: 'DeviceDefinition') String resourceType,
       Id id,
@@ -4200,7 +4196,6 @@ DeviceDefinitionUdiDeviceIdentifier
 class _$DeviceDefinitionUdiDeviceIdentifierTearOff {
   const _$DeviceDefinitionUdiDeviceIdentifierTearOff();
 
-// ignore: unused_element
   _DeviceDefinitionUdiDeviceIdentifier call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -4584,7 +4579,6 @@ DeviceDefinitionDeviceName _$DeviceDefinitionDeviceNameFromJson(
 class _$DeviceDefinitionDeviceNameTearOff {
   const _$DeviceDefinitionDeviceNameTearOff();
 
-// ignore: unused_element
   _DeviceDefinitionDeviceName call(
       {String id,
       @JsonKey(name: 'extension')
@@ -4913,7 +4907,6 @@ DeviceDefinitionSpecialization _$DeviceDefinitionSpecializationFromJson(
 class _$DeviceDefinitionSpecializationTearOff {
   const _$DeviceDefinitionSpecializationTearOff();
 
-// ignore: unused_element
   _DeviceDefinitionSpecialization call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5231,7 +5224,6 @@ DeviceDefinitionCapability _$DeviceDefinitionCapabilityFromJson(
 class _$DeviceDefinitionCapabilityTearOff {
   const _$DeviceDefinitionCapabilityTearOff();
 
-// ignore: unused_element
   _DeviceDefinitionCapability call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5478,7 +5470,6 @@ DeviceDefinitionProperty _$DeviceDefinitionPropertyFromJson(
 class _$DeviceDefinitionPropertyTearOff {
   const _$DeviceDefinitionPropertyTearOff();
 
-// ignore: unused_element
   _DeviceDefinitionProperty call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5746,7 +5737,6 @@ DeviceDefinitionMaterial _$DeviceDefinitionMaterialFromJson(
 class _$DeviceDefinitionMaterialTearOff {
   const _$DeviceDefinitionMaterialTearOff();
 
-// ignore: unused_element
   _DeviceDefinitionMaterial call(
       {String id,
       @JsonKey(name: 'extension')
@@ -6108,7 +6098,6 @@ EventDefinition _$EventDefinitionFromJson(Map<String, dynamic> json) {
 class _$EventDefinitionTearOff {
   const _$EventDefinitionTearOff();
 
-// ignore: unused_element
   _EventDefinition call(
       {@required
       @JsonKey(defaultValue: 'EventDefinition')
@@ -7778,7 +7767,6 @@ ObservationDefinition _$ObservationDefinitionFromJson(
 class _$ObservationDefinitionTearOff {
   const _$ObservationDefinitionTearOff();
 
-// ignore: unused_element
   _ObservationDefinition call(
       {@required
       @JsonKey(defaultValue: 'ObservationDefinition')
@@ -8719,7 +8707,6 @@ ObservationDefinitionQuantitativeDetails
 class _$ObservationDefinitionQuantitativeDetailsTearOff {
   const _$ObservationDefinitionQuantitativeDetailsTearOff();
 
-// ignore: unused_element
   _ObservationDefinitionQuantitativeDetails call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -9120,7 +9107,6 @@ ObservationDefinitionQualifiedInterval
 class _$ObservationDefinitionQualifiedIntervalTearOff {
   const _$ObservationDefinitionQualifiedIntervalTearOff();
 
-// ignore: unused_element
   _ObservationDefinitionQualifiedInterval call(
       {String id,
       @JsonKey(name: 'extension')
@@ -9718,7 +9704,6 @@ PlanDefinition _$PlanDefinitionFromJson(Map<String, dynamic> json) {
 class _$PlanDefinitionTearOff {
   const _$PlanDefinitionTearOff();
 
-// ignore: unused_element
   _PlanDefinition call(
       {@required
       @JsonKey(defaultValue: 'PlanDefinition')
@@ -11457,7 +11442,6 @@ PlanDefinitionGoal _$PlanDefinitionGoalFromJson(Map<String, dynamic> json) {
 class _$PlanDefinitionGoalTearOff {
   const _$PlanDefinitionGoalTearOff();
 
-// ignore: unused_element
   _PlanDefinitionGoal call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -11848,7 +11832,6 @@ PlanDefinitionTarget _$PlanDefinitionTargetFromJson(Map<String, dynamic> json) {
 class _$PlanDefinitionTargetTearOff {
   const _$PlanDefinitionTargetTearOff();
 
-// ignore: unused_element
   _PlanDefinitionTarget call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -12206,7 +12189,6 @@ PlanDefinitionAction _$PlanDefinitionActionFromJson(Map<String, dynamic> json) {
 class _$PlanDefinitionActionTearOff {
   const _$PlanDefinitionActionTearOff();
 
-// ignore: unused_element
   _PlanDefinitionAction call(
       {String id,
       @JsonKey(name: 'extension')
@@ -13829,7 +13811,6 @@ PlanDefinitionCondition _$PlanDefinitionConditionFromJson(
 class _$PlanDefinitionConditionTearOff {
   const _$PlanDefinitionConditionTearOff();
 
-// ignore: unused_element
   _PlanDefinitionCondition call(
       {String id,
       @JsonKey(name: 'extension')
@@ -14123,7 +14104,6 @@ PlanDefinitionRelatedAction _$PlanDefinitionRelatedActionFromJson(
 class _$PlanDefinitionRelatedActionTearOff {
   const _$PlanDefinitionRelatedActionTearOff();
 
-// ignore: unused_element
   _PlanDefinitionRelatedAction call(
       {String id,
       @JsonKey(name: 'extension')
@@ -14532,7 +14512,6 @@ PlanDefinitionParticipant _$PlanDefinitionParticipantFromJson(
 class _$PlanDefinitionParticipantTearOff {
   const _$PlanDefinitionParticipantTearOff();
 
-// ignore: unused_element
   _PlanDefinitionParticipant call(
       {String id,
       @JsonKey(name: 'extension')
@@ -14829,7 +14808,6 @@ PlanDefinitionDynamicValue _$PlanDefinitionDynamicValueFromJson(
 class _$PlanDefinitionDynamicValueTearOff {
   const _$PlanDefinitionDynamicValueTearOff();
 
-// ignore: unused_element
   _PlanDefinitionDynamicValue call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -15109,7 +15087,6 @@ Questionnaire _$QuestionnaireFromJson(Map<String, dynamic> json) {
 class _$QuestionnaireTearOff {
   const _$QuestionnaireTearOff();
 
-// ignore: unused_element
   _Questionnaire call(
       {@required
       @JsonKey(defaultValue: 'Questionnaire')
@@ -16557,7 +16534,6 @@ QuestionnaireItem _$QuestionnaireItemFromJson(Map<String, dynamic> json) {
 class _$QuestionnaireItemTearOff {
   const _$QuestionnaireItemTearOff();
 
-// ignore: unused_element
   _QuestionnaireItem call(
       {String id,
       @JsonKey(name: 'extension')
@@ -17522,7 +17498,6 @@ QuestionnaireEnableWhen _$QuestionnaireEnableWhenFromJson(
 class _$QuestionnaireEnableWhenTearOff {
   const _$QuestionnaireEnableWhenTearOff();
 
-// ignore: unused_element
   _QuestionnaireEnableWhen call(
       {String id,
       @JsonKey(name: 'extension')
@@ -18423,7 +18398,6 @@ QuestionnaireAnswerOption _$QuestionnaireAnswerOptionFromJson(
 class _$QuestionnaireAnswerOptionTearOff {
   const _$QuestionnaireAnswerOptionTearOff();
 
-// ignore: unused_element
   _QuestionnaireAnswerOption call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -18984,7 +18958,6 @@ QuestionnaireInitial _$QuestionnaireInitialFromJson(Map<String, dynamic> json) {
 class _$QuestionnaireInitialTearOff {
   const _$QuestionnaireInitialTearOff();
 
-// ignore: unused_element
   _QuestionnaireInitial call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -19794,7 +19767,6 @@ SpecimenDefinition _$SpecimenDefinitionFromJson(Map<String, dynamic> json) {
 class _$SpecimenDefinitionTearOff {
   const _$SpecimenDefinitionTearOff();
 
-// ignore: unused_element
   _SpecimenDefinition call(
       {@required
       @JsonKey(defaultValue: 'SpecimenDefinition')
@@ -20423,7 +20395,6 @@ SpecimenDefinitionTypeTested _$SpecimenDefinitionTypeTestedFromJson(
 class _$SpecimenDefinitionTypeTestedTearOff {
   const _$SpecimenDefinitionTypeTestedTearOff();
 
-// ignore: unused_element
   _SpecimenDefinitionTypeTested call(
       {String id,
       @JsonKey(name: 'extension')
@@ -20978,7 +20949,6 @@ SpecimenDefinitionContainer _$SpecimenDefinitionContainerFromJson(
 class _$SpecimenDefinitionContainerTearOff {
   const _$SpecimenDefinitionContainerTearOff();
 
-// ignore: unused_element
   _SpecimenDefinitionContainer call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -21549,7 +21519,6 @@ SpecimenDefinitionAdditive _$SpecimenDefinitionAdditiveFromJson(
 class _$SpecimenDefinitionAdditiveTearOff {
   const _$SpecimenDefinitionAdditiveTearOff();
 
-// ignore: unused_element
   _SpecimenDefinitionAdditive call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -21815,7 +21784,6 @@ SpecimenDefinitionHandling _$SpecimenDefinitionHandlingFromJson(
 class _$SpecimenDefinitionHandlingTearOff {
   const _$SpecimenDefinitionHandlingTearOff();
 
-// ignore: unused_element
   _SpecimenDefinitionHandling call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,

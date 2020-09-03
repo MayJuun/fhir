@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'workflow2.dart';
 
@@ -15,7 +15,6 @@ ProcessRequest _$ProcessRequestFromJson(Map<String, dynamic> json) {
 class _$ProcessRequestTearOff {
   const _$ProcessRequestTearOff();
 
-// ignore: unused_element
   _ProcessRequest call(
       {@required
       @JsonKey(defaultValue: 'ProcessRequest')
@@ -797,7 +796,6 @@ ProcessRequestItem _$ProcessRequestItemFromJson(Map<String, dynamic> json) {
 class _$ProcessRequestItemTearOff {
   const _$ProcessRequestItemTearOff();
 
-// ignore: unused_element
   _ProcessRequestItem call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1010,7 +1008,6 @@ ProcessResponse _$ProcessResponseFromJson(Map<String, dynamic> json) {
 class _$ProcessResponseTearOff {
   const _$ProcessResponseTearOff();
 
-// ignore: unused_element
   _ProcessResponse call(
       {@required @JsonKey(defaultValue: 'ProcessResponse') String resourceType,
       Id id,
@@ -1721,7 +1718,6 @@ ProcessResponseNotes _$ProcessResponseNotesFromJson(Map<String, dynamic> json) {
 class _$ProcessResponseNotesTearOff {
   const _$ProcessResponseNotesTearOff();
 
-// ignore: unused_element
   _ProcessResponseNotes call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1958,7 +1954,6 @@ SupplyRequest _$SupplyRequestFromJson(Map<String, dynamic> json) {
 class _$SupplyRequestTearOff {
   const _$SupplyRequestTearOff();
 
-// ignore: unused_element
   _SupplyRequest call(
       {@required
       @JsonKey(defaultValue: 'SupplyRequest')
@@ -2768,7 +2763,6 @@ SupplyRequestWhen _$SupplyRequestWhenFromJson(Map<String, dynamic> json) {
 class _$SupplyRequestWhenTearOff {
   const _$SupplyRequestWhenTearOff();
 
-// ignore: unused_element
   _SupplyRequestWhen call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3018,7 +3012,6 @@ SupplyDelivery _$SupplyDeliveryFromJson(Map<String, dynamic> json) {
 class _$SupplyDeliveryTearOff {
   const _$SupplyDeliveryTearOff();
 
-// ignore: unused_element
   _SupplyDelivery call(
       {@required
       @JsonKey(defaultValue: 'SupplyDelivery')

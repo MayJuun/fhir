@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'entities.dart';
 
@@ -15,7 +15,6 @@ Location _$LocationFromJson(Map<String, dynamic> json) {
 class _$LocationTearOff {
   const _$LocationTearOff();
 
-// ignore: unused_element
   _Location call(
       {@required @JsonKey(defaultValue: 'Location') String resourceType,
       Id id,
@@ -899,7 +898,6 @@ LocationPosition _$LocationPositionFromJson(Map<String, dynamic> json) {
 class _$LocationPositionTearOff {
   const _$LocationPositionTearOff();
 
-// ignore: unused_element
   _LocationPosition call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1269,7 +1267,6 @@ Substance _$SubstanceFromJson(Map<String, dynamic> json) {
 class _$SubstanceTearOff {
   const _$SubstanceTearOff();
 
-// ignore: unused_element
   _Substance call(
       {@required @JsonKey(defaultValue: 'Substance') String resourceType,
       Id id,
@@ -1868,7 +1865,6 @@ SubstanceInstance _$SubstanceInstanceFromJson(Map<String, dynamic> json) {
 class _$SubstanceInstanceTearOff {
   const _$SubstanceInstanceTearOff();
 
-// ignore: unused_element
   _SubstanceInstance call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2178,7 +2174,6 @@ SubstanceIngredient _$SubstanceIngredientFromJson(Map<String, dynamic> json) {
 class _$SubstanceIngredientTearOff {
   const _$SubstanceIngredientTearOff();
 
-// ignore: unused_element
   _SubstanceIngredient call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2437,7 +2432,6 @@ Person _$PersonFromJson(Map<String, dynamic> json) {
 class _$PersonTearOff {
   const _$PersonTearOff();
 
-// ignore: unused_element
   _Person call(
       {@required @JsonKey(defaultValue: 'Person') String resourceType,
       Id id,
@@ -3188,7 +3182,6 @@ PersonLink _$PersonLinkFromJson(Map<String, dynamic> json) {
 class _$PersonLinkTearOff {
   const _$PersonLinkTearOff();
 
-// ignore: unused_element
   _PersonLink call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3470,7 +3463,6 @@ Contract _$ContractFromJson(Map<String, dynamic> json) {
 class _$ContractTearOff {
   const _$ContractTearOff();
 
-// ignore: unused_element
   _Contract call(
       {@required @JsonKey(defaultValue: 'Contract') String resourceType,
       Id id,
@@ -4363,7 +4355,6 @@ ContractActor _$ContractActorFromJson(Map<String, dynamic> json) {
 class _$ContractActorTearOff {
   const _$ContractActorTearOff();
 
-// ignore: unused_element
   _ContractActor call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -4603,7 +4594,6 @@ ContractValuedItem _$ContractValuedItemFromJson(Map<String, dynamic> json) {
 class _$ContractValuedItemTearOff {
   const _$ContractValuedItemTearOff();
 
-// ignore: unused_element
   _ContractValuedItem call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5195,7 +5185,6 @@ ContractSigner _$ContractSignerFromJson(Map<String, dynamic> json) {
 class _$ContractSignerTearOff {
   const _$ContractSignerTearOff();
 
-// ignore: unused_element
   _ContractSigner call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5475,7 +5464,6 @@ ContractTerm _$ContractTermFromJson(Map<String, dynamic> json) {
 class _$ContractTermTearOff {
   const _$ContractTermTearOff();
 
-// ignore: unused_element
   _ContractTerm call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -6035,7 +6023,6 @@ ContractTermActor _$ContractTermActorFromJson(Map<String, dynamic> json) {
 class _$ContractTermActorTearOff {
   const _$ContractTermActorTearOff();
 
-// ignore: unused_element
   _ContractTermActor call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -6275,7 +6262,6 @@ ContractFriendly _$ContractFriendlyFromJson(Map<String, dynamic> json) {
 class _$ContractFriendlyTearOff {
   const _$ContractFriendlyTearOff();
 
-// ignore: unused_element
   _ContractFriendly call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -6534,7 +6520,6 @@ ContractLegal _$ContractLegalFromJson(Map<String, dynamic> json) {
 class _$ContractLegalTearOff {
   const _$ContractLegalTearOff();
 
-// ignore: unused_element
   _ContractLegal call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -6788,7 +6773,6 @@ ContractRule _$ContractRuleFromJson(Map<String, dynamic> json) {
 class _$ContractRuleTearOff {
   const _$ContractRuleTearOff();
 
-// ignore: unused_element
   _ContractRule call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,

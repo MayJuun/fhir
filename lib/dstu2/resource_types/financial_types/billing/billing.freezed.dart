@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'billing.dart';
 
@@ -15,7 +15,6 @@ Account _$AccountFromJson(Map<String, dynamic> json) {
 class _$AccountTearOff {
   const _$AccountTearOff();
 
-// ignore: unused_element
   _Account call(
       {@required @JsonKey(defaultValue: 'Account') String resourceType,
       Id id,
@@ -853,7 +852,6 @@ Claim _$ClaimFromJson(Map<String, dynamic> json) {
 class _$ClaimTearOff {
   const _$ClaimTearOff();
 
-// ignore: unused_element
   _Claim call(
       {@required
       @JsonKey(defaultValue: 'Claim')
@@ -2164,7 +2162,6 @@ ClaimPayee _$ClaimPayeeFromJson(Map<String, dynamic> json) {
 class _$ClaimPayeeTearOff {
   const _$ClaimPayeeTearOff();
 
-// ignore: unused_element
   _ClaimPayee call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2478,7 +2475,6 @@ ClaimDiagnosis _$ClaimDiagnosisFromJson(Map<String, dynamic> json) {
 class _$ClaimDiagnosisTearOff {
   const _$ClaimDiagnosisTearOff();
 
-// ignore: unused_element
   _ClaimDiagnosis call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2763,7 +2759,6 @@ ClaimCoverage _$ClaimCoverageFromJson(Map<String, dynamic> json) {
 class _$ClaimCoverageTearOff {
   const _$ClaimCoverageTearOff();
 
-// ignore: unused_element
   _ClaimCoverage call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3189,7 +3184,6 @@ ClaimItem _$ClaimItemFromJson(Map<String, dynamic> json) {
 class _$ClaimItemTearOff {
   const _$ClaimItemTearOff();
 
-// ignore: unused_element
   _ClaimItem call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3950,7 +3944,6 @@ ClaimItemDetail _$ClaimItemDetailFromJson(Map<String, dynamic> json) {
 class _$ClaimItemDetailTearOff {
   const _$ClaimItemDetailTearOff();
 
-// ignore: unused_element
   _ClaimItemDetail call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -4496,7 +4489,6 @@ ClaimDetailSubDetail _$ClaimDetailSubDetailFromJson(Map<String, dynamic> json) {
 class _$ClaimDetailSubDetailTearOff {
   const _$ClaimDetailSubDetailTearOff();
 
-// ignore: unused_element
   _ClaimDetailSubDetail call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5020,7 +5012,6 @@ ClaimItemProsthesis _$ClaimItemProsthesisFromJson(Map<String, dynamic> json) {
 class _$ClaimItemProsthesisTearOff {
   const _$ClaimItemProsthesisTearOff();
 
-// ignore: unused_element
   _ClaimItemProsthesis call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5282,7 +5273,6 @@ ClaimMissingTeeth _$ClaimMissingTeethFromJson(Map<String, dynamic> json) {
 class _$ClaimMissingTeethTearOff {
   const _$ClaimMissingTeethTearOff();
 
-// ignore: unused_element
   _ClaimMissingTeeth call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5558,7 +5548,6 @@ ClaimResponse _$ClaimResponseFromJson(Map<String, dynamic> json) {
 class _$ClaimResponseTearOff {
   const _$ClaimResponseTearOff();
 
-// ignore: unused_element
   _ClaimResponse call(
       {@required
       @JsonKey(defaultValue: 'ClaimResponse')
@@ -6898,7 +6887,6 @@ ClaimResponseItem _$ClaimResponseItemFromJson(Map<String, dynamic> json) {
 class _$ClaimResponseItemTearOff {
   const _$ClaimResponseItemTearOff();
 
-// ignore: unused_element
   _ClaimResponseItem call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -7231,7 +7219,6 @@ ClaimResponseItemAdjudication _$ClaimResponseItemAdjudicationFromJson(
 class _$ClaimResponseItemAdjudicationTearOff {
   const _$ClaimResponseItemAdjudicationTearOff();
 
-// ignore: unused_element
   _ClaimResponseItemAdjudication call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -7552,7 +7539,6 @@ ClaimResponseItemDetail _$ClaimResponseItemDetailFromJson(
 class _$ClaimResponseItemDetailTearOff {
   const _$ClaimResponseItemDetailTearOff();
 
-// ignore: unused_element
   _ClaimResponseItemDetail call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -7814,7 +7800,6 @@ ClaimResponseDetailSubDetail _$ClaimResponseDetailSubDetailFromJson(
 class _$ClaimResponseDetailSubDetailTearOff {
   const _$ClaimResponseDetailSubDetailTearOff();
 
-// ignore: unused_element
   _ClaimResponseDetailSubDetail call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -8058,7 +8043,6 @@ ClaimResponseAddItem _$ClaimResponseAddItemFromJson(Map<String, dynamic> json) {
 class _$ClaimResponseAddItemTearOff {
   const _$ClaimResponseAddItemTearOff();
 
-// ignore: unused_element
   _ClaimResponseAddItem call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -8418,7 +8402,6 @@ ClaimResponseAddItemDetail _$ClaimResponseAddItemDetailFromJson(
 class _$ClaimResponseAddItemDetailTearOff {
   const _$ClaimResponseAddItemDetailTearOff();
 
-// ignore: unused_element
   _ClaimResponseAddItemDetail call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -8700,7 +8683,6 @@ ClaimResponseError _$ClaimResponseErrorFromJson(Map<String, dynamic> json) {
 class _$ClaimResponseErrorTearOff {
   const _$ClaimResponseErrorTearOff();
 
-// ignore: unused_element
   _ClaimResponseError call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -8992,7 +8974,6 @@ ClaimResponseNote _$ClaimResponseNoteFromJson(Map<String, dynamic> json) {
 class _$ClaimResponseNoteTearOff {
   const _$ClaimResponseNoteTearOff();
 
-// ignore: unused_element
   _ClaimResponseNote call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -9360,7 +9341,6 @@ ClaimResponseCoverage _$ClaimResponseCoverageFromJson(
 class _$ClaimResponseCoverageTearOff {
   const _$ClaimResponseCoverageTearOff();
 
-// ignore: unused_element
   _ClaimResponseCoverage call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'exchange.dart';
 
@@ -15,7 +15,6 @@ MessageHeader _$MessageHeaderFromJson(Map<String, dynamic> json) {
 class _$MessageHeaderTearOff {
   const _$MessageHeaderTearOff();
 
-// ignore: unused_element
   _MessageHeader call(
       {@required @JsonKey(defaultValue: 'MessageHeader') String resourceType,
       Id id,
@@ -765,7 +764,6 @@ MessageHeaderResponse _$MessageHeaderResponseFromJson(
 class _$MessageHeaderResponseTearOff {
   const _$MessageHeaderResponseTearOff();
 
-// ignore: unused_element
   _MessageHeaderResponse call(
       {Id id,
       @JsonKey(name: 'extension')
@@ -1136,7 +1134,6 @@ MessageHeaderSource _$MessageHeaderSourceFromJson(Map<String, dynamic> json) {
 class _$MessageHeaderSourceTearOff {
   const _$MessageHeaderSourceTearOff();
 
-// ignore: unused_element
   _MessageHeaderSource call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1591,7 +1588,6 @@ MessageHeaderDestination _$MessageHeaderDestinationFromJson(
 class _$MessageHeaderDestinationTearOff {
   const _$MessageHeaderDestinationTearOff();
 
-// ignore: unused_element
   _MessageHeaderDestination call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1929,7 +1925,6 @@ OperationOutcome _$OperationOutcomeFromJson(Map<String, dynamic> json) {
 class _$OperationOutcomeTearOff {
   const _$OperationOutcomeTearOff();
 
-// ignore: unused_element
   _OperationOutcome call(
       {@required @JsonKey(defaultValue: 'OperationOutcome') String resourceType,
       Id id,
@@ -2416,7 +2411,6 @@ OperationOutcomeIssue _$OperationOutcomeIssueFromJson(
 class _$OperationOutcomeIssueTearOff {
   const _$OperationOutcomeIssueTearOff();
 
-// ignore: unused_element
   _OperationOutcomeIssue call(
       {Id id,
       @JsonKey(name: 'extension')
@@ -2746,7 +2740,6 @@ Parameters _$ParametersFromJson(Map<String, dynamic> json) {
 class _$ParametersTearOff {
   const _$ParametersTearOff();
 
-// ignore: unused_element
   _Parameters call(
       {@required @JsonKey(defaultValue: 'Parameters') String resourceType,
       Id id,
@@ -3082,7 +3075,6 @@ ParametersParameter _$ParametersParameterFromJson(Map<String, dynamic> json) {
 class _$ParametersParameterTearOff {
   const _$ParametersParameterTearOff();
 
-// ignore: unused_element
   _ParametersParameter call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -4398,7 +4390,6 @@ Subscription _$SubscriptionFromJson(Map<String, dynamic> json) {
 class _$SubscriptionTearOff {
   const _$SubscriptionTearOff();
 
-// ignore: unused_element
   _Subscription call(
       {@required
       @JsonKey(defaultValue: 'Subscription')
@@ -5266,7 +5257,6 @@ SubscriptionChannel _$SubscriptionChannelFromJson(Map<String, dynamic> json) {
 class _$SubscriptionChannelTearOff {
   const _$SubscriptionChannelTearOff();
 
-// ignore: unused_element
   _SubscriptionChannel call(
       {Id id,
       @JsonKey(name: 'extension')

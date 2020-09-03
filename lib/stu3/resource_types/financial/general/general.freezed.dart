@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'general.dart';
 
@@ -15,7 +15,6 @@ Account _$AccountFromJson(Map<String, dynamic> json) {
 class _$AccountTearOff {
   const _$AccountTearOff();
 
-// ignore: unused_element
   _Account call(
       {@required @JsonKey(defaultValue: 'Account') String resourceType,
       Id id,
@@ -854,7 +853,6 @@ AccountCoverage _$AccountCoverageFromJson(Map<String, dynamic> json) {
 class _$AccountCoverageTearOff {
   const _$AccountCoverageTearOff();
 
-// ignore: unused_element
   _AccountCoverage call(
       {@required Reference coverage,
       Decimal priority,
@@ -1066,7 +1064,6 @@ AccountGuarantor _$AccountGuarantorFromJson(Map<String, dynamic> json) {
 class _$AccountGuarantorTearOff {
   const _$AccountGuarantorTearOff();
 
-// ignore: unused_element
   _AccountGuarantor call(
       {@required Reference party,
       Boolean onHold,
@@ -1306,7 +1303,6 @@ ChargeItem _$ChargeItemFromJson(Map<String, dynamic> json) {
 class _$ChargeItemTearOff {
   const _$ChargeItemTearOff();
 
-// ignore: unused_element
   _ChargeItem call(
       {@required @JsonKey(defaultValue: 'ChargeItem') String resourceType,
       Id id,
@@ -2577,7 +2573,6 @@ ChargeItemParticipant _$ChargeItemParticipantFromJson(
 class _$ChargeItemParticipantTearOff {
   const _$ChargeItemParticipantTearOff();
 
-// ignore: unused_element
   _ChargeItemParticipant call(
       {CodeableConcept role, @required Reference actor}) {
     return _ChargeItemParticipant(
@@ -2754,7 +2749,6 @@ Contract _$ContractFromJson(Map<String, dynamic> json) {
 class _$ContractTearOff {
   const _$ContractTearOff();
 
-// ignore: unused_element
   _Contract call(
       {@required @JsonKey(defaultValue: 'Contract') String resourceType,
       Id id,
@@ -3807,7 +3801,6 @@ ContractAgent _$ContractAgentFromJson(Map<String, dynamic> json) {
 class _$ContractAgentTearOff {
   const _$ContractAgentTearOff();
 
-// ignore: unused_element
   _ContractAgent call({@required Reference actor, List<CodeableConcept> role}) {
     return _ContractAgent(
       actor: actor,
@@ -3969,7 +3962,6 @@ ContractSigner _$ContractSignerFromJson(Map<String, dynamic> json) {
 class _$ContractSignerTearOff {
   const _$ContractSignerTearOff();
 
-// ignore: unused_element
   _ContractSigner call(
       {@required Coding type,
       @required Reference party,
@@ -4169,7 +4161,6 @@ ContractValuedItem _$ContractValuedItemFromJson(Map<String, dynamic> json) {
 class _$ContractValuedItemTearOff {
   const _$ContractValuedItemTearOff();
 
-// ignore: unused_element
   _ContractValuedItem call(
       {CodeableConcept entityCodeableConcept,
       Reference entityReference,
@@ -4667,7 +4658,6 @@ ContractTerm _$ContractTermFromJson(Map<String, dynamic> json) {
 class _$ContractTermTearOff {
   const _$ContractTermTearOff();
 
-// ignore: unused_element
   _ContractTerm call(
       {Identifier identifier,
       String issued,
@@ -5169,7 +5159,6 @@ ContractAgent1 _$ContractAgent1FromJson(Map<String, dynamic> json) {
 class _$ContractAgent1TearOff {
   const _$ContractAgent1TearOff();
 
-// ignore: unused_element
   _ContractAgent1 call(
       {@required Reference actor, List<CodeableConcept> role}) {
     return _ContractAgent1(
@@ -5332,7 +5321,6 @@ ContractValuedItem1 _$ContractValuedItem1FromJson(Map<String, dynamic> json) {
 class _$ContractValuedItem1TearOff {
   const _$ContractValuedItem1TearOff();
 
-// ignore: unused_element
   _ContractValuedItem1 call(
       {CodeableConcept entityCodeableConcept,
       Reference entityReference,
@@ -5831,7 +5819,6 @@ ContractFriendly _$ContractFriendlyFromJson(Map<String, dynamic> json) {
 class _$ContractFriendlyTearOff {
   const _$ContractFriendlyTearOff();
 
-// ignore: unused_element
   _ContractFriendly call(
       {Attachment contentAttachment, Reference contentReference}) {
     return _ContractFriendly(
@@ -6016,7 +6003,6 @@ ContractLegal _$ContractLegalFromJson(Map<String, dynamic> json) {
 class _$ContractLegalTearOff {
   const _$ContractLegalTearOff();
 
-// ignore: unused_element
   _ContractLegal call(
       {Attachment contentAttachment, Reference contentReference}) {
     return _ContractLegal(
@@ -6200,7 +6186,6 @@ ContractRule _$ContractRuleFromJson(Map<String, dynamic> json) {
 class _$ContractRuleTearOff {
   const _$ContractRuleTearOff();
 
-// ignore: unused_element
   _ContractRule call(
       {Attachment contentAttachment, Reference contentReference}) {
     return _ContractRule(
@@ -6382,7 +6367,6 @@ ExplanationOfBenefit _$ExplanationOfBenefitFromJson(Map<String, dynamic> json) {
 class _$ExplanationOfBenefitTearOff {
   const _$ExplanationOfBenefitTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefit call(
       {@required
       @JsonKey(defaultValue: 'ExplanationOfBenefit')
@@ -8078,7 +8062,6 @@ ExplanationOfBenefitRelated _$ExplanationOfBenefitRelatedFromJson(
 class _$ExplanationOfBenefitRelatedTearOff {
   const _$ExplanationOfBenefitRelatedTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitRelated call(
       {Reference claim, CodeableConcept relationship, Identifier reference}) {
     return _ExplanationOfBenefitRelated(
@@ -8300,7 +8283,6 @@ ExplanationOfBenefitPayee _$ExplanationOfBenefitPayeeFromJson(
 class _$ExplanationOfBenefitPayeeTearOff {
   const _$ExplanationOfBenefitPayeeTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitPayee call({CodeableConcept type, Reference party}) {
     return _ExplanationOfBenefitPayee(
       type: type,
@@ -8476,7 +8458,6 @@ ExplanationOfBenefitInformation _$ExplanationOfBenefitInformationFromJson(
 class _$ExplanationOfBenefitInformationTearOff {
   const _$ExplanationOfBenefitInformationTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitInformation call(
       {Decimal sequence,
       @JsonKey(name: '_sequence') Element sequenceElement,
@@ -9027,7 +9008,6 @@ ExplanationOfBenefitCareTeam _$ExplanationOfBenefitCareTeamFromJson(
 class _$ExplanationOfBenefitCareTeamTearOff {
   const _$ExplanationOfBenefitCareTeamTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitCareTeam call(
       {Decimal sequence,
       @JsonKey(name: '_sequence') Element sequenceElement,
@@ -9374,7 +9354,6 @@ ExplanationOfBenefitDiagnosis _$ExplanationOfBenefitDiagnosisFromJson(
 class _$ExplanationOfBenefitDiagnosisTearOff {
   const _$ExplanationOfBenefitDiagnosisTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitDiagnosis call(
       {Decimal sequence,
       @JsonKey(name: '_sequence') Element sequenceElement,
@@ -9691,7 +9670,6 @@ ExplanationOfBenefitProcedure _$ExplanationOfBenefitProcedureFromJson(
 class _$ExplanationOfBenefitProcedureTearOff {
   const _$ExplanationOfBenefitProcedureTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitProcedure call(
       {Decimal sequence,
       @JsonKey(name: '_sequence') Element sequenceElement,
@@ -10009,7 +9987,6 @@ ExplanationOfBenefitInsurance _$ExplanationOfBenefitInsuranceFromJson(
 class _$ExplanationOfBenefitInsuranceTearOff {
   const _$ExplanationOfBenefitInsuranceTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitInsurance call(
       {Reference coverage,
       List<String> preAuthRef,
@@ -10221,7 +10198,6 @@ ExplanationOfBenefitAccident _$ExplanationOfBenefitAccidentFromJson(
 class _$ExplanationOfBenefitAccidentTearOff {
   const _$ExplanationOfBenefitAccidentTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitAccident call(
       {Date date,
       @JsonKey(name: '_date') Element dateElement,
@@ -10508,7 +10484,6 @@ ExplanationOfBenefitItem _$ExplanationOfBenefitItemFromJson(
 class _$ExplanationOfBenefitItemTearOff {
   const _$ExplanationOfBenefitItemTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitItem call(
       {Decimal sequence,
       @JsonKey(name: '_sequence')
@@ -11584,7 +11559,6 @@ ExplanationOfBenefitAdjudication _$ExplanationOfBenefitAdjudicationFromJson(
 class _$ExplanationOfBenefitAdjudicationTearOff {
   const _$ExplanationOfBenefitAdjudicationTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitAdjudication call(
       {@required CodeableConcept category,
       CodeableConcept reason,
@@ -11871,7 +11845,6 @@ ExplanationOfBenefitDetail _$ExplanationOfBenefitDetailFromJson(
 class _$ExplanationOfBenefitDetailTearOff {
   const _$ExplanationOfBenefitDetailTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitDetail call(
       {Decimal sequence,
       @JsonKey(name: '_sequence') Element sequenceElement,
@@ -12496,7 +12469,6 @@ ExplanationOfBenefitSubDetail _$ExplanationOfBenefitSubDetailFromJson(
 class _$ExplanationOfBenefitSubDetailTearOff {
   const _$ExplanationOfBenefitSubDetailTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitSubDetail call(
       {Decimal sequence,
       @JsonKey(name: '_sequence') Element sequenceElement,
@@ -13103,7 +13075,6 @@ ExplanationOfBenefitAddItem _$ExplanationOfBenefitAddItemFromJson(
 class _$ExplanationOfBenefitAddItemTearOff {
   const _$ExplanationOfBenefitAddItemTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitAddItem call(
       {List<Id> sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId') List<Element> sequenceLinkIdElement,
@@ -13528,7 +13499,6 @@ ExplanationOfBenefitDetail1 _$ExplanationOfBenefitDetail1FromJson(
 class _$ExplanationOfBenefitDetail1TearOff {
   const _$ExplanationOfBenefitDetail1TearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitDetail1 call(
       {CodeableConcept revenue,
       CodeableConcept category,
@@ -13882,7 +13852,6 @@ ExplanationOfBenefitPayment _$ExplanationOfBenefitPaymentFromJson(
 class _$ExplanationOfBenefitPaymentTearOff {
   const _$ExplanationOfBenefitPaymentTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitPayment call(
       {CodeableConcept type,
       Money adjustment,
@@ -14232,7 +14201,6 @@ ExplanationOfBenefitProcessNote _$ExplanationOfBenefitProcessNoteFromJson(
 class _$ExplanationOfBenefitProcessNoteTearOff {
   const _$ExplanationOfBenefitProcessNoteTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitProcessNote call(
       {Decimal number,
       @JsonKey(name: '_number') Element numberElement,
@@ -14541,7 +14509,6 @@ ExplanationOfBenefitBenefitBalance _$ExplanationOfBenefitBenefitBalanceFromJson(
 class _$ExplanationOfBenefitBenefitBalanceTearOff {
   const _$ExplanationOfBenefitBenefitBalanceTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitBenefitBalance call(
       {@required CodeableConcept category,
       CodeableConcept subCategory,
@@ -15037,7 +15004,6 @@ ExplanationOfBenefitFinancial _$ExplanationOfBenefitFinancialFromJson(
 class _$ExplanationOfBenefitFinancialTearOff {
   const _$ExplanationOfBenefitFinancialTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefitFinancial call(
       {@required CodeableConcept type,
       Decimal allowedUnsignedInt,
