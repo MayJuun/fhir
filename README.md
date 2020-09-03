@@ -12,6 +12,11 @@ As well as the R5 Preview #1:
 
 - [v4.2.0: R5 Draft](https://hl7.org/fhir/2020Feb/)
 
+## Say Hello!
+
+- As all parts of this are new (FHIR, Flutter, using the two together), I'd love to hear from you if you're working in this space.
+You can email me at jgfaulkenberry@gmail.com.
+
 ## How To Use
 
 In order to use this package in your app, you must include the following in your pubspec.yaml file under dependencies:
