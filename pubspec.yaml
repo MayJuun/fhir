@@ -11,9 +11,9 @@ dependencies:
   json_annotation: ^3.0.1
   dartz: ^0.9.1
   string_validator: ^0.1.4
-  freezed_annotation: ^0.11.0
+  freezed_annotation: ^0.12.0
 
 dev_dependencies:
-  json_serializable: ^3.3.0
-  build_runner: ^1.8.1
-  freezed: ^0.11.0
+  json_serializable: ^3.4.1
+  build_runner:
+  freezed: ^0.12.1
