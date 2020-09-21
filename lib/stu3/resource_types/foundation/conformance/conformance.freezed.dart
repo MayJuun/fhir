@@ -52,7 +52,7 @@ class _$CapabilityStatementTearOff {
       Boolean experimental,
       @JsonKey(name: '_experimental')
           Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date')
           Element dateElement,
       String publisher,
@@ -202,7 +202,7 @@ mixin _$CapabilityStatement {
   Boolean get experimental;
   @JsonKey(name: '_experimental')
   Element get experimentalElement;
-  Date get date;
+  FhirDateTime get date;
   @JsonKey(name: '_date')
   Element get dateElement;
   String get publisher;
@@ -291,7 +291,7 @@ abstract class $CapabilityStatementCopyWith<$Res> {
       Boolean experimental,
       @JsonKey(name: '_experimental')
           Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date')
           Element dateElement,
       String publisher,
@@ -478,7 +478,7 @@ class _$CapabilityStatementCopyWithImpl<$Res>
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
           : experimentalElement as Element,
-      date: date == freezed ? _value.date : date as Date,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
@@ -803,7 +803,7 @@ abstract class _$CapabilityStatementCopyWith<$Res>
       Boolean experimental,
       @JsonKey(name: '_experimental')
           Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date')
           Element dateElement,
       String publisher,
@@ -1012,7 +1012,7 @@ class __$CapabilityStatementCopyWithImpl<$Res>
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
           : experimentalElement as Element,
-      date: date == freezed ? _value.date : date as Date,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
@@ -1242,7 +1242,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   @JsonKey(name: '_experimental')
   final Element experimentalElement;
   @override
-  final Date date;
+  final FhirDateTime date;
   @override
   @JsonKey(name: '_date')
   final Element dateElement;
@@ -1538,7 +1538,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
       Boolean experimental,
       @JsonKey(name: '_experimental')
           Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date')
           Element dateElement,
       String publisher,
@@ -1644,7 +1644,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   @JsonKey(name: '_experimental')
   Element get experimentalElement;
   @override
-  Date get date;
+  FhirDateTime get date;
   @override
   @JsonKey(name: '_date')
   Element get dateElement;
@@ -6981,7 +6981,7 @@ class _$CompartmentDefinitionTearOff {
       Boolean experimental,
       @JsonKey(name: '_experimental')
           Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date')
           Element dateElement,
       String publisher,
@@ -7086,7 +7086,7 @@ mixin _$CompartmentDefinition {
   Boolean get experimental;
   @JsonKey(name: '_experimental')
   Element get experimentalElement;
-  Date get date;
+  FhirDateTime get date;
   @JsonKey(name: '_date')
   Element get dateElement;
   String get publisher;
@@ -7140,7 +7140,7 @@ abstract class $CompartmentDefinitionCopyWith<$Res> {
       @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
       @JsonKey(name: '_experimental') Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date') Element dateElement,
       String publisher,
       @JsonKey(name: '_publisher') Element publisherElement,
@@ -7270,7 +7270,7 @@ class _$CompartmentDefinitionCopyWithImpl<$Res>
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
           : experimentalElement as Element,
-      date: date == freezed ? _value.date : date as Date,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
@@ -7487,7 +7487,7 @@ abstract class _$CompartmentDefinitionCopyWith<$Res>
       @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
       @JsonKey(name: '_experimental') Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date') Element dateElement,
       String publisher,
       @JsonKey(name: '_publisher') Element publisherElement,
@@ -7634,7 +7634,7 @@ class __$CompartmentDefinitionCopyWithImpl<$Res>
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
           : experimentalElement as Element,
-      date: date == freezed ? _value.date : date as Date,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
@@ -7788,7 +7788,7 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   @JsonKey(name: '_experimental')
   final Element experimentalElement;
   @override
-  final Date date;
+  final FhirDateTime date;
   @override
   @JsonKey(name: '_date')
   final Element dateElement;
@@ -8003,7 +8003,7 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
       Boolean experimental,
       @JsonKey(name: '_experimental')
           Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date')
           Element dateElement,
       String publisher,
@@ -8081,7 +8081,7 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
   @JsonKey(name: '_experimental')
   Element get experimentalElement;
   @override
-  Date get date;
+  FhirDateTime get date;
   @override
   @JsonKey(name: '_date')
   Element get dateElement;
@@ -17174,7 +17174,7 @@ class _$OperationDefinitionTearOff {
       Boolean experimental,
       @JsonKey(name: '_experimental')
           Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date')
           Element dateElement,
       String publisher,
@@ -17313,7 +17313,7 @@ mixin _$OperationDefinition {
   Boolean get experimental;
   @JsonKey(name: '_experimental')
   Element get experimentalElement;
-  Date get date;
+  FhirDateTime get date;
   @JsonKey(name: '_date')
   Element get dateElement;
   String get publisher;
@@ -17386,7 +17386,7 @@ abstract class $OperationDefinitionCopyWith<$Res> {
       @JsonKey(name: '_kind') Element kindElement,
       Boolean experimental,
       @JsonKey(name: '_experimental') Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date') Element dateElement,
       String publisher,
       @JsonKey(name: '_publisher') Element publisherElement,
@@ -17551,7 +17551,7 @@ class _$OperationDefinitionCopyWithImpl<$Res>
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
           : experimentalElement as Element,
-      date: date == freezed ? _value.date : date as Date,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
@@ -17855,7 +17855,7 @@ abstract class _$OperationDefinitionCopyWith<$Res>
       @JsonKey(name: '_kind') Element kindElement,
       Boolean experimental,
       @JsonKey(name: '_experimental') Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date') Element dateElement,
       String publisher,
       @JsonKey(name: '_publisher') Element publisherElement,
@@ -18043,7 +18043,7 @@ class __$OperationDefinitionCopyWithImpl<$Res>
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
           : experimentalElement as Element,
-      date: date == freezed ? _value.date : date as Date,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
@@ -18247,7 +18247,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   @JsonKey(name: '_experimental')
   final Element experimentalElement;
   @override
-  final Date date;
+  final FhirDateTime date;
   @override
   @JsonKey(name: '_date')
   final Element dateElement;
@@ -18522,7 +18522,7 @@ abstract class _OperationDefinition extends OperationDefinition {
       Boolean experimental,
       @JsonKey(name: '_experimental')
           Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date')
           Element dateElement,
       String publisher,
@@ -18622,7 +18622,7 @@ abstract class _OperationDefinition extends OperationDefinition {
   @JsonKey(name: '_experimental')
   Element get experimentalElement;
   @override
-  Date get date;
+  FhirDateTime get date;
   @override
   @JsonKey(name: '_date')
   Element get dateElement;
@@ -21717,7 +21717,7 @@ class _$StructureDefinitionTearOff {
       Boolean experimental,
       @JsonKey(name: '_experimental')
           Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date')
           Element dateElement,
       String publisher,
@@ -21876,7 +21876,7 @@ mixin _$StructureDefinition {
   Boolean get experimental;
   @JsonKey(name: '_experimental')
   Element get experimentalElement;
-  Date get date;
+  FhirDateTime get date;
   @JsonKey(name: '_date')
   Element get dateElement;
   String get publisher;
@@ -21961,7 +21961,7 @@ abstract class $StructureDefinitionCopyWith<$Res> {
       @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
       @JsonKey(name: '_experimental') Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date') Element dateElement,
       String publisher,
       @JsonKey(name: '_publisher') Element publisherElement,
@@ -22148,7 +22148,7 @@ class _$StructureDefinitionCopyWithImpl<$Res>
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
           : experimentalElement as Element,
-      date: date == freezed ? _value.date : date as Date,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
@@ -22506,7 +22506,7 @@ abstract class _$StructureDefinitionCopyWith<$Res>
       @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
       @JsonKey(name: '_experimental') Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date') Element dateElement,
       String publisher,
       @JsonKey(name: '_publisher') Element publisherElement,
@@ -22719,7 +22719,7 @@ class __$StructureDefinitionCopyWithImpl<$Res>
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
           : experimentalElement as Element,
-      date: date == freezed ? _value.date : date as Date,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
@@ -22959,7 +22959,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   @JsonKey(name: '_experimental')
   final Element experimentalElement;
   @override
-  final Date date;
+  final FhirDateTime date;
   @override
   @JsonKey(name: '_date')
   final Element dateElement;
@@ -23269,7 +23269,7 @@ abstract class _StructureDefinition extends StructureDefinition {
       Boolean experimental,
       @JsonKey(name: '_experimental')
           Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date')
           Element dateElement,
       String publisher,
@@ -23382,7 +23382,7 @@ abstract class _StructureDefinition extends StructureDefinition {
   @JsonKey(name: '_experimental')
   Element get experimentalElement;
   @override
-  Date get date;
+  FhirDateTime get date;
   @override
   @JsonKey(name: '_date')
   Element get dateElement;

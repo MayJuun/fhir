@@ -4,8 +4,8 @@ import 'r5/validation.dart';
 import 'stu3/validation.dart';
 
 Future main() async {
-  // await dstu2Validation();
+  await dstu2Validation();
   // await r4Validation();
-  await r5Validation();
   // await stu3Validation();
+//   await r5Validation();
 }

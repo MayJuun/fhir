@@ -71,7 +71,9 @@ _$_CodeSystem _$_$_CodeSystemFromJson(Map<String, dynamic> json) {
     experimentalElement: json['_experimental'] == null
         ? null
         : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -605,7 +607,9 @@ _$_ConceptMap _$_$_ConceptMapFromJson(Map<String, dynamic> json) {
     experimentalElement: json['_experimental'] == null
         ? null
         : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),

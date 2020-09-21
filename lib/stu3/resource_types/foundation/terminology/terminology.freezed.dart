@@ -42,7 +42,7 @@ class _$CodeSystemTearOff {
       @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
       @JsonKey(name: '_experimental') Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date') Element dateElement,
       String publisher,
       @JsonKey(name: '_publisher') Element publisherElement,
@@ -176,7 +176,7 @@ mixin _$CodeSystem {
   Boolean get experimental;
   @JsonKey(name: '_experimental')
   Element get experimentalElement;
-  Date get date;
+  FhirDateTime get date;
   @JsonKey(name: '_date')
   Element get dateElement;
   String get publisher;
@@ -253,7 +253,7 @@ abstract class $CodeSystemCopyWith<$Res> {
       @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
       @JsonKey(name: '_experimental') Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date') Element dateElement,
       String publisher,
       @JsonKey(name: '_publisher') Element publisherElement,
@@ -425,7 +425,7 @@ class _$CodeSystemCopyWithImpl<$Res> implements $CodeSystemCopyWith<$Res> {
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
           : experimentalElement as Element,
-      date: date == freezed ? _value.date : date as Date,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
@@ -763,7 +763,7 @@ abstract class _$CodeSystemCopyWith<$Res> implements $CodeSystemCopyWith<$Res> {
       @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
       @JsonKey(name: '_experimental') Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date') Element dateElement,
       String publisher,
       @JsonKey(name: '_publisher') Element publisherElement,
@@ -960,7 +960,7 @@ class __$CodeSystemCopyWithImpl<$Res> extends _$CodeSystemCopyWithImpl<$Res>
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
           : experimentalElement as Element,
-      date: date == freezed ? _value.date : date as Date,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
@@ -1161,7 +1161,7 @@ class _$_CodeSystem extends _CodeSystem {
   @JsonKey(name: '_experimental')
   final Element experimentalElement;
   @override
-  final Date date;
+  final FhirDateTime date;
   @override
   @JsonKey(name: '_date')
   final Element dateElement;
@@ -1436,7 +1436,7 @@ abstract class _CodeSystem extends CodeSystem {
       @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
       @JsonKey(name: '_experimental') Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date') Element dateElement,
       String publisher,
       @JsonKey(name: '_publisher') Element publisherElement,
@@ -1529,7 +1529,7 @@ abstract class _CodeSystem extends CodeSystem {
   @JsonKey(name: '_experimental')
   Element get experimentalElement;
   @override
-  Date get date;
+  FhirDateTime get date;
   @override
   @JsonKey(name: '_date')
   Element get dateElement;
@@ -3537,7 +3537,7 @@ class _$ConceptMapTearOff {
       @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
       @JsonKey(name: '_experimental') Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date') Element dateElement,
       String publisher,
       @JsonKey(name: '_publisher') Element publisherElement,
@@ -3651,7 +3651,7 @@ mixin _$ConceptMap {
   Boolean get experimental;
   @JsonKey(name: '_experimental')
   Element get experimentalElement;
-  Date get date;
+  FhirDateTime get date;
   @JsonKey(name: '_date')
   Element get dateElement;
   String get publisher;
@@ -3713,7 +3713,7 @@ abstract class $ConceptMapCopyWith<$Res> {
       @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
       @JsonKey(name: '_experimental') Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date') Element dateElement,
       String publisher,
       @JsonKey(name: '_publisher') Element publisherElement,
@@ -3862,7 +3862,7 @@ class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
           : experimentalElement as Element,
-      date: date == freezed ? _value.date : date as Date,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
@@ -4140,7 +4140,7 @@ abstract class _$ConceptMapCopyWith<$Res> implements $ConceptMapCopyWith<$Res> {
       @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
       @JsonKey(name: '_experimental') Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date') Element dateElement,
       String publisher,
       @JsonKey(name: '_publisher') Element publisherElement,
@@ -4311,7 +4311,7 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
           : experimentalElement as Element,
-      date: date == freezed ? _value.date : date as Date,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
@@ -4472,7 +4472,7 @@ class _$_ConceptMap extends _ConceptMap {
   @JsonKey(name: '_experimental')
   final Element experimentalElement;
   @override
-  final Date date;
+  final FhirDateTime date;
   @override
   @JsonKey(name: '_date')
   final Element dateElement;
@@ -4702,7 +4702,7 @@ abstract class _ConceptMap extends ConceptMap {
       @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
       @JsonKey(name: '_experimental') Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date') Element dateElement,
       String publisher,
       @JsonKey(name: '_publisher') Element publisherElement,
@@ -4785,7 +4785,7 @@ abstract class _ConceptMap extends ConceptMap {
   @JsonKey(name: '_experimental')
   Element get experimentalElement;
   @override
-  Date get date;
+  FhirDateTime get date;
   @override
   @JsonKey(name: '_date')
   Element get dateElement;

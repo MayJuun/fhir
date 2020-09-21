@@ -70,7 +70,9 @@ _$_CapabilityStatement _$_$_CapabilityStatementFromJson(
     experimentalElement: json['_experimental'] == null
         ? null
         : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -1184,7 +1186,9 @@ _$_CompartmentDefinition _$_$_CompartmentDefinitionFromJson(
     experimentalElement: json['_experimental'] == null
         ? null
         : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -2662,7 +2666,9 @@ _$_OperationDefinition _$_$_OperationDefinitionFromJson(
     experimentalElement: json['_experimental'] == null
         ? null
         : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -3392,7 +3398,9 @@ _$_StructureDefinition _$_$_StructureDefinitionFromJson(
     experimentalElement: json['_experimental'] == null
         ? null
         : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),

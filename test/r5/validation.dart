@@ -79,15 +79,21 @@ Future<String> checkJsonEquality(Map<String, dynamic> input,
         }
       } else {
         if (input[k] != output[k]) {
-          print(input[k]);
-          print(output[k]);
-          if (isDate(input[k])) {
-            if (DateTime.tryParse(input[k]) != DateTime.tryParse(output[k])) {
-              string += '\n\n$file\n$source:$k:'
-                  '${DateTime.tryParse(input[k])}:'
-                  '${DateTime.tryParse(output[k])}';
+          if (input[k].runtimeType == String) {
+            if (isDate(input[k])) {
+              if (DateTime.tryParse(input[k]) != DateTime.tryParse(output[k])) {
+                string += '\n\n$file\n$source:$k:'
+                    '${DateTime.tryParse(input[k])}:'
+                    '${DateTime.tryParse(output[k])}';
+              }
+            } else {
+              print(input[k]);
+              print(output[k]);
+              string += '\n\n$file\n$source:$k:${input[k]}:${output[k]}';
             }
           } else {
+            print(input[k]);
+            print(output[k]);
             string += '\n\n$file\n$source:$k:${input[k]}:${output[k]}';
           }
         }
