@@ -1,0 +1,8 @@
+{
+    "id": "example",
+    "resourceType": "Account",
+    "text": {
+        "div": "<div>[Put rendering here]</div>",
+        "status": "generated"
+    }
+}
