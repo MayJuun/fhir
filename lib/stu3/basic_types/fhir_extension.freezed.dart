@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'fhir_extension.dart';
 
@@ -12,9 +12,11 @@ FhirExtension _$FhirExtensionFromJson(Map<String, dynamic> json) {
   return _FhirExtension.fromJson(json);
 }
 
+/// @nodoc
 class _$FhirExtensionTearOff {
   const _$FhirExtensionTearOff();
 
+// ignore: unused_element
   _FhirExtension call(
       {String url,
       Boolean valueBoolean,
@@ -163,11 +165,18 @@ class _$FhirExtensionTearOff {
       valueMarkdownElement: valueMarkdownElement,
     );
   }
+
+// ignore: unused_element
+  FhirExtension fromJson(Map<String, Object> json) {
+    return FhirExtension.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $FhirExtension = _$FhirExtensionTearOff();
 
+/// @nodoc
 mixin _$FhirExtension {
   String get url;
   Boolean get valueBoolean;
@@ -264,6 +273,7 @@ mixin _$FhirExtension {
   $FhirExtensionCopyWith<FhirExtension> get copyWith;
 }
 
+/// @nodoc
 abstract class $FhirExtensionCopyWith<$Res> {
   factory $FhirExtensionCopyWith(
           FhirExtension value, $Res Function(FhirExtension) then) =
@@ -343,6 +353,7 @@ abstract class $FhirExtensionCopyWith<$Res> {
       @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement});
 
   $ElementCopyWith<$Res> get valueElement;
+  $FhirExtensionCopyWith<$Res> get valueExtension;
   $BackboneElementCopyWith<$Res> get valueBackboneElement;
   $NarrativeCopyWith<$Res> get valueNarrative;
   $AnnotationCopyWith<$Res> get valueAnnotation;
@@ -397,6 +408,7 @@ abstract class $FhirExtensionCopyWith<$Res> {
   $ElementCopyWith<$Res> get valueMarkdownElement;
 }
 
+/// @nodoc
 class _$FhirExtensionCopyWithImpl<$Res>
     implements $FhirExtensionCopyWith<$Res> {
   _$FhirExtensionCopyWithImpl(this._value, this._then);
@@ -677,6 +689,16 @@ class _$FhirExtensionCopyWithImpl<$Res>
     }
     return $ElementCopyWith<$Res>(_value.valueElement, (value) {
       return _then(_value.copyWith(valueElement: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get valueExtension {
+    if (_value.valueExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.valueExtension, (value) {
+      return _then(_value.copyWith(valueExtension: value));
     });
   }
 
@@ -1204,6 +1226,7 @@ class _$FhirExtensionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$FhirExtensionCopyWith<$Res>
     implements $FhirExtensionCopyWith<$Res> {
   factory _$FhirExtensionCopyWith(
@@ -1286,6 +1309,8 @@ abstract class _$FhirExtensionCopyWith<$Res>
 
   @override
   $ElementCopyWith<$Res> get valueElement;
+  @override
+  $FhirExtensionCopyWith<$Res> get valueExtension;
   @override
   $BackboneElementCopyWith<$Res> get valueBackboneElement;
   @override
@@ -1392,6 +1417,7 @@ abstract class _$FhirExtensionCopyWith<$Res>
   $ElementCopyWith<$Res> get valueMarkdownElement;
 }
 
+/// @nodoc
 class __$FhirExtensionCopyWithImpl<$Res>
     extends _$FhirExtensionCopyWithImpl<$Res>
     implements _$FhirExtensionCopyWith<$Res> {
@@ -1669,6 +1695,8 @@ class __$FhirExtensionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_FhirExtension implements _FhirExtension {
   _$_FhirExtension(
       {this.url,

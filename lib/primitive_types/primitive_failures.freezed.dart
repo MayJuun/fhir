@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'primitive_failures.dart';
 
@@ -9,123 +9,144 @@ part of 'primitive_failures.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$PrimitiveFailureTearOff {
   const _$PrimitiveFailureTearOff();
 
+// ignore: unused_element
   InvalidBase64Binary<T> invalidBase64Binary<T>({@required T failedValue}) {
     return InvalidBase64Binary<T>(
       failedValue: failedValue,
     );
   }
 
+// ignore: unused_element
   InvalidBoolean<T> invalidBoolean<T>({@required T failedValue}) {
     return InvalidBoolean<T>(
       failedValue: failedValue,
     );
   }
 
+// ignore: unused_element
   InvalidCanonical<T> invalidCanonical<T>({@required T failedValue}) {
     return InvalidCanonical<T>(
       failedValue: failedValue,
     );
   }
 
+// ignore: unused_element
   InvalidCode<T> invalidCode<T>({@required T failedValue}) {
     return InvalidCode<T>(
       failedValue: failedValue,
     );
   }
 
+// ignore: unused_element
   InvalidDate<T> invalidDate<T>({@required T failedValue}) {
     return InvalidDate<T>(
       failedValue: failedValue,
     );
   }
 
+// ignore: unused_element
   InvalidDateTime<T> invalidFhirDateTime<T>({@required T failedValue}) {
     return InvalidDateTime<T>(
       failedValue: failedValue,
     );
   }
 
+// ignore: unused_element
   InvalidDecimal<T> invalidDecimal<T>({@required T failedValue}) {
     return InvalidDecimal<T>(
       failedValue: failedValue,
     );
   }
 
+// ignore: unused_element
   InvalidId<T> invalidId<T>({@required T failedValue}) {
     return InvalidId<T>(
       failedValue: failedValue,
     );
   }
 
+// ignore: unused_element
   InvalidInstant<T> invalidInstant<T>({@required T failedValue}) {
     return InvalidInstant<T>(
       failedValue: failedValue,
     );
   }
 
+// ignore: unused_element
   InvalidInteger64<T> invalidInteger64<T>({@required T failedValue}) {
     return InvalidInteger64<T>(
       failedValue: failedValue,
     );
   }
 
+// ignore: unused_element
   InvalidInteger<T> invalidInteger<T>({@required T failedValue}) {
     return InvalidInteger<T>(
       failedValue: failedValue,
     );
   }
 
+// ignore: unused_element
   InvalidMarkdown<T> invalidMarkdown<T>({@required T failedValue}) {
     return InvalidMarkdown<T>(
       failedValue: failedValue,
     );
   }
 
+// ignore: unused_element
   InvalidOid<T> invalidOid<T>({@required T failedValue}) {
     return InvalidOid<T>(
       failedValue: failedValue,
     );
   }
 
+// ignore: unused_element
   InvalidPositiveInt<T> invalidPositiveInt<T>({@required T failedValue}) {
     return InvalidPositiveInt<T>(
       failedValue: failedValue,
     );
   }
 
+// ignore: unused_element
   InvalidTime<T> invalidTime<T>({@required T failedValue}) {
     return InvalidTime<T>(
       failedValue: failedValue,
     );
   }
 
+// ignore: unused_element
   InvalidUnsignedInt<T> invalidUnsignedInt<T>({@required T failedValue}) {
     return InvalidUnsignedInt<T>(
       failedValue: failedValue,
     );
   }
 
+// ignore: unused_element
   InvalidFhirUri<T> invalidFhirUri<T>({@required T failedValue}) {
     return InvalidFhirUri<T>(
       failedValue: failedValue,
     );
   }
 
+// ignore: unused_element
   InvalidFhirUrl<T> invalidFhirUrl<T>({@required T failedValue}) {
     return InvalidFhirUrl<T>(
       failedValue: failedValue,
     );
   }
 
+// ignore: unused_element
   InvalidUuid<T> invalidUuid<T>({@required T failedValue}) {
     return InvalidUuid<T>(
       failedValue: failedValue,
     );
   }
 
+// ignore: unused_element
   InvalidEnum<T> invalidEnum<T>({@required T failedValue}) {
     return InvalidEnum<T>(
       failedValue: failedValue,
@@ -133,9 +154,11 @@ class _$PrimitiveFailureTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $PrimitiveFailure = _$PrimitiveFailureTearOff();
 
+/// @nodoc
 mixin _$PrimitiveFailure<T> {
   T get failedValue;
 
@@ -237,6 +260,7 @@ mixin _$PrimitiveFailure<T> {
   $PrimitiveFailureCopyWith<T, PrimitiveFailure<T>> get copyWith;
 }
 
+/// @nodoc
 abstract class $PrimitiveFailureCopyWith<T, $Res> {
   factory $PrimitiveFailureCopyWith(
           PrimitiveFailure<T> value, $Res Function(PrimitiveFailure<T>) then) =
@@ -244,6 +268,7 @@ abstract class $PrimitiveFailureCopyWith<T, $Res> {
   $Res call({T failedValue});
 }
 
+/// @nodoc
 class _$PrimitiveFailureCopyWithImpl<T, $Res>
     implements $PrimitiveFailureCopyWith<T, $Res> {
   _$PrimitiveFailureCopyWithImpl(this._value, this._then);
@@ -263,6 +288,7 @@ class _$PrimitiveFailureCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 abstract class $InvalidBase64BinaryCopyWith<T, $Res>
     implements $PrimitiveFailureCopyWith<T, $Res> {
   factory $InvalidBase64BinaryCopyWith(InvalidBase64Binary<T> value,
@@ -272,6 +298,7 @@ abstract class $InvalidBase64BinaryCopyWith<T, $Res>
   $Res call({T failedValue});
 }
 
+/// @nodoc
 class _$InvalidBase64BinaryCopyWithImpl<T, $Res>
     extends _$PrimitiveFailureCopyWithImpl<T, $Res>
     implements $InvalidBase64BinaryCopyWith<T, $Res> {
@@ -293,6 +320,7 @@ class _$InvalidBase64BinaryCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 class _$InvalidBase64Binary<T> implements InvalidBase64Binary<T> {
   const _$InvalidBase64Binary({@required this.failedValue})
       : assert(failedValue != null);
@@ -492,6 +520,7 @@ abstract class InvalidBase64Binary<T> implements PrimitiveFailure<T> {
   $InvalidBase64BinaryCopyWith<T, InvalidBase64Binary<T>> get copyWith;
 }
 
+/// @nodoc
 abstract class $InvalidBooleanCopyWith<T, $Res>
     implements $PrimitiveFailureCopyWith<T, $Res> {
   factory $InvalidBooleanCopyWith(
@@ -501,6 +530,7 @@ abstract class $InvalidBooleanCopyWith<T, $Res>
   $Res call({T failedValue});
 }
 
+/// @nodoc
 class _$InvalidBooleanCopyWithImpl<T, $Res>
     extends _$PrimitiveFailureCopyWithImpl<T, $Res>
     implements $InvalidBooleanCopyWith<T, $Res> {
@@ -522,6 +552,7 @@ class _$InvalidBooleanCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 class _$InvalidBoolean<T> implements InvalidBoolean<T> {
   const _$InvalidBoolean({@required this.failedValue})
       : assert(failedValue != null);
@@ -719,6 +750,7 @@ abstract class InvalidBoolean<T> implements PrimitiveFailure<T> {
   $InvalidBooleanCopyWith<T, InvalidBoolean<T>> get copyWith;
 }
 
+/// @nodoc
 abstract class $InvalidCanonicalCopyWith<T, $Res>
     implements $PrimitiveFailureCopyWith<T, $Res> {
   factory $InvalidCanonicalCopyWith(
@@ -728,6 +760,7 @@ abstract class $InvalidCanonicalCopyWith<T, $Res>
   $Res call({T failedValue});
 }
 
+/// @nodoc
 class _$InvalidCanonicalCopyWithImpl<T, $Res>
     extends _$PrimitiveFailureCopyWithImpl<T, $Res>
     implements $InvalidCanonicalCopyWith<T, $Res> {
@@ -749,6 +782,7 @@ class _$InvalidCanonicalCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 class _$InvalidCanonical<T> implements InvalidCanonical<T> {
   const _$InvalidCanonical({@required this.failedValue})
       : assert(failedValue != null);
@@ -947,6 +981,7 @@ abstract class InvalidCanonical<T> implements PrimitiveFailure<T> {
   $InvalidCanonicalCopyWith<T, InvalidCanonical<T>> get copyWith;
 }
 
+/// @nodoc
 abstract class $InvalidCodeCopyWith<T, $Res>
     implements $PrimitiveFailureCopyWith<T, $Res> {
   factory $InvalidCodeCopyWith(
@@ -956,6 +991,7 @@ abstract class $InvalidCodeCopyWith<T, $Res>
   $Res call({T failedValue});
 }
 
+/// @nodoc
 class _$InvalidCodeCopyWithImpl<T, $Res>
     extends _$PrimitiveFailureCopyWithImpl<T, $Res>
     implements $InvalidCodeCopyWith<T, $Res> {
@@ -977,6 +1013,7 @@ class _$InvalidCodeCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 class _$InvalidCode<T> implements InvalidCode<T> {
   const _$InvalidCode({@required this.failedValue})
       : assert(failedValue != null);
@@ -1174,6 +1211,7 @@ abstract class InvalidCode<T> implements PrimitiveFailure<T> {
   $InvalidCodeCopyWith<T, InvalidCode<T>> get copyWith;
 }
 
+/// @nodoc
 abstract class $InvalidDateCopyWith<T, $Res>
     implements $PrimitiveFailureCopyWith<T, $Res> {
   factory $InvalidDateCopyWith(
@@ -1183,6 +1221,7 @@ abstract class $InvalidDateCopyWith<T, $Res>
   $Res call({T failedValue});
 }
 
+/// @nodoc
 class _$InvalidDateCopyWithImpl<T, $Res>
     extends _$PrimitiveFailureCopyWithImpl<T, $Res>
     implements $InvalidDateCopyWith<T, $Res> {
@@ -1204,6 +1243,7 @@ class _$InvalidDateCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 class _$InvalidDate<T> implements InvalidDate<T> {
   const _$InvalidDate({@required this.failedValue})
       : assert(failedValue != null);
@@ -1401,6 +1441,7 @@ abstract class InvalidDate<T> implements PrimitiveFailure<T> {
   $InvalidDateCopyWith<T, InvalidDate<T>> get copyWith;
 }
 
+/// @nodoc
 abstract class $InvalidDateTimeCopyWith<T, $Res>
     implements $PrimitiveFailureCopyWith<T, $Res> {
   factory $InvalidDateTimeCopyWith(
@@ -1410,6 +1451,7 @@ abstract class $InvalidDateTimeCopyWith<T, $Res>
   $Res call({T failedValue});
 }
 
+/// @nodoc
 class _$InvalidDateTimeCopyWithImpl<T, $Res>
     extends _$PrimitiveFailureCopyWithImpl<T, $Res>
     implements $InvalidDateTimeCopyWith<T, $Res> {
@@ -1431,6 +1473,7 @@ class _$InvalidDateTimeCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 class _$InvalidDateTime<T> implements InvalidDateTime<T> {
   const _$InvalidDateTime({@required this.failedValue})
       : assert(failedValue != null);
@@ -1629,6 +1672,7 @@ abstract class InvalidDateTime<T> implements PrimitiveFailure<T> {
   $InvalidDateTimeCopyWith<T, InvalidDateTime<T>> get copyWith;
 }
 
+/// @nodoc
 abstract class $InvalidDecimalCopyWith<T, $Res>
     implements $PrimitiveFailureCopyWith<T, $Res> {
   factory $InvalidDecimalCopyWith(
@@ -1638,6 +1682,7 @@ abstract class $InvalidDecimalCopyWith<T, $Res>
   $Res call({T failedValue});
 }
 
+/// @nodoc
 class _$InvalidDecimalCopyWithImpl<T, $Res>
     extends _$PrimitiveFailureCopyWithImpl<T, $Res>
     implements $InvalidDecimalCopyWith<T, $Res> {
@@ -1659,6 +1704,7 @@ class _$InvalidDecimalCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 class _$InvalidDecimal<T> implements InvalidDecimal<T> {
   const _$InvalidDecimal({@required this.failedValue})
       : assert(failedValue != null);
@@ -1856,6 +1902,7 @@ abstract class InvalidDecimal<T> implements PrimitiveFailure<T> {
   $InvalidDecimalCopyWith<T, InvalidDecimal<T>> get copyWith;
 }
 
+/// @nodoc
 abstract class $InvalidIdCopyWith<T, $Res>
     implements $PrimitiveFailureCopyWith<T, $Res> {
   factory $InvalidIdCopyWith(
@@ -1865,6 +1912,7 @@ abstract class $InvalidIdCopyWith<T, $Res>
   $Res call({T failedValue});
 }
 
+/// @nodoc
 class _$InvalidIdCopyWithImpl<T, $Res>
     extends _$PrimitiveFailureCopyWithImpl<T, $Res>
     implements $InvalidIdCopyWith<T, $Res> {
@@ -1886,6 +1934,7 @@ class _$InvalidIdCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 class _$InvalidId<T> implements InvalidId<T> {
   const _$InvalidId({@required this.failedValue}) : assert(failedValue != null);
 
@@ -2082,6 +2131,7 @@ abstract class InvalidId<T> implements PrimitiveFailure<T> {
   $InvalidIdCopyWith<T, InvalidId<T>> get copyWith;
 }
 
+/// @nodoc
 abstract class $InvalidInstantCopyWith<T, $Res>
     implements $PrimitiveFailureCopyWith<T, $Res> {
   factory $InvalidInstantCopyWith(
@@ -2091,6 +2141,7 @@ abstract class $InvalidInstantCopyWith<T, $Res>
   $Res call({T failedValue});
 }
 
+/// @nodoc
 class _$InvalidInstantCopyWithImpl<T, $Res>
     extends _$PrimitiveFailureCopyWithImpl<T, $Res>
     implements $InvalidInstantCopyWith<T, $Res> {
@@ -2112,6 +2163,7 @@ class _$InvalidInstantCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 class _$InvalidInstant<T> implements InvalidInstant<T> {
   const _$InvalidInstant({@required this.failedValue})
       : assert(failedValue != null);
@@ -2309,6 +2361,7 @@ abstract class InvalidInstant<T> implements PrimitiveFailure<T> {
   $InvalidInstantCopyWith<T, InvalidInstant<T>> get copyWith;
 }
 
+/// @nodoc
 abstract class $InvalidInteger64CopyWith<T, $Res>
     implements $PrimitiveFailureCopyWith<T, $Res> {
   factory $InvalidInteger64CopyWith(
@@ -2318,6 +2371,7 @@ abstract class $InvalidInteger64CopyWith<T, $Res>
   $Res call({T failedValue});
 }
 
+/// @nodoc
 class _$InvalidInteger64CopyWithImpl<T, $Res>
     extends _$PrimitiveFailureCopyWithImpl<T, $Res>
     implements $InvalidInteger64CopyWith<T, $Res> {
@@ -2339,6 +2393,7 @@ class _$InvalidInteger64CopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 class _$InvalidInteger64<T> implements InvalidInteger64<T> {
   const _$InvalidInteger64({@required this.failedValue})
       : assert(failedValue != null);
@@ -2537,6 +2592,7 @@ abstract class InvalidInteger64<T> implements PrimitiveFailure<T> {
   $InvalidInteger64CopyWith<T, InvalidInteger64<T>> get copyWith;
 }
 
+/// @nodoc
 abstract class $InvalidIntegerCopyWith<T, $Res>
     implements $PrimitiveFailureCopyWith<T, $Res> {
   factory $InvalidIntegerCopyWith(
@@ -2546,6 +2602,7 @@ abstract class $InvalidIntegerCopyWith<T, $Res>
   $Res call({T failedValue});
 }
 
+/// @nodoc
 class _$InvalidIntegerCopyWithImpl<T, $Res>
     extends _$PrimitiveFailureCopyWithImpl<T, $Res>
     implements $InvalidIntegerCopyWith<T, $Res> {
@@ -2567,6 +2624,7 @@ class _$InvalidIntegerCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 class _$InvalidInteger<T> implements InvalidInteger<T> {
   const _$InvalidInteger({@required this.failedValue})
       : assert(failedValue != null);
@@ -2764,6 +2822,7 @@ abstract class InvalidInteger<T> implements PrimitiveFailure<T> {
   $InvalidIntegerCopyWith<T, InvalidInteger<T>> get copyWith;
 }
 
+/// @nodoc
 abstract class $InvalidMarkdownCopyWith<T, $Res>
     implements $PrimitiveFailureCopyWith<T, $Res> {
   factory $InvalidMarkdownCopyWith(
@@ -2773,6 +2832,7 @@ abstract class $InvalidMarkdownCopyWith<T, $Res>
   $Res call({T failedValue});
 }
 
+/// @nodoc
 class _$InvalidMarkdownCopyWithImpl<T, $Res>
     extends _$PrimitiveFailureCopyWithImpl<T, $Res>
     implements $InvalidMarkdownCopyWith<T, $Res> {
@@ -2794,6 +2854,7 @@ class _$InvalidMarkdownCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 class _$InvalidMarkdown<T> implements InvalidMarkdown<T> {
   const _$InvalidMarkdown({@required this.failedValue})
       : assert(failedValue != null);
@@ -2992,6 +3053,7 @@ abstract class InvalidMarkdown<T> implements PrimitiveFailure<T> {
   $InvalidMarkdownCopyWith<T, InvalidMarkdown<T>> get copyWith;
 }
 
+/// @nodoc
 abstract class $InvalidOidCopyWith<T, $Res>
     implements $PrimitiveFailureCopyWith<T, $Res> {
   factory $InvalidOidCopyWith(
@@ -3001,6 +3063,7 @@ abstract class $InvalidOidCopyWith<T, $Res>
   $Res call({T failedValue});
 }
 
+/// @nodoc
 class _$InvalidOidCopyWithImpl<T, $Res>
     extends _$PrimitiveFailureCopyWithImpl<T, $Res>
     implements $InvalidOidCopyWith<T, $Res> {
@@ -3022,6 +3085,7 @@ class _$InvalidOidCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 class _$InvalidOid<T> implements InvalidOid<T> {
   const _$InvalidOid({@required this.failedValue})
       : assert(failedValue != null);
@@ -3219,6 +3283,7 @@ abstract class InvalidOid<T> implements PrimitiveFailure<T> {
   $InvalidOidCopyWith<T, InvalidOid<T>> get copyWith;
 }
 
+/// @nodoc
 abstract class $InvalidPositiveIntCopyWith<T, $Res>
     implements $PrimitiveFailureCopyWith<T, $Res> {
   factory $InvalidPositiveIntCopyWith(InvalidPositiveInt<T> value,
@@ -3228,6 +3293,7 @@ abstract class $InvalidPositiveIntCopyWith<T, $Res>
   $Res call({T failedValue});
 }
 
+/// @nodoc
 class _$InvalidPositiveIntCopyWithImpl<T, $Res>
     extends _$PrimitiveFailureCopyWithImpl<T, $Res>
     implements $InvalidPositiveIntCopyWith<T, $Res> {
@@ -3249,6 +3315,7 @@ class _$InvalidPositiveIntCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 class _$InvalidPositiveInt<T> implements InvalidPositiveInt<T> {
   const _$InvalidPositiveInt({@required this.failedValue})
       : assert(failedValue != null);
@@ -3448,6 +3515,7 @@ abstract class InvalidPositiveInt<T> implements PrimitiveFailure<T> {
   $InvalidPositiveIntCopyWith<T, InvalidPositiveInt<T>> get copyWith;
 }
 
+/// @nodoc
 abstract class $InvalidTimeCopyWith<T, $Res>
     implements $PrimitiveFailureCopyWith<T, $Res> {
   factory $InvalidTimeCopyWith(
@@ -3457,6 +3525,7 @@ abstract class $InvalidTimeCopyWith<T, $Res>
   $Res call({T failedValue});
 }
 
+/// @nodoc
 class _$InvalidTimeCopyWithImpl<T, $Res>
     extends _$PrimitiveFailureCopyWithImpl<T, $Res>
     implements $InvalidTimeCopyWith<T, $Res> {
@@ -3478,6 +3547,7 @@ class _$InvalidTimeCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 class _$InvalidTime<T> implements InvalidTime<T> {
   const _$InvalidTime({@required this.failedValue})
       : assert(failedValue != null);
@@ -3675,6 +3745,7 @@ abstract class InvalidTime<T> implements PrimitiveFailure<T> {
   $InvalidTimeCopyWith<T, InvalidTime<T>> get copyWith;
 }
 
+/// @nodoc
 abstract class $InvalidUnsignedIntCopyWith<T, $Res>
     implements $PrimitiveFailureCopyWith<T, $Res> {
   factory $InvalidUnsignedIntCopyWith(InvalidUnsignedInt<T> value,
@@ -3684,6 +3755,7 @@ abstract class $InvalidUnsignedIntCopyWith<T, $Res>
   $Res call({T failedValue});
 }
 
+/// @nodoc
 class _$InvalidUnsignedIntCopyWithImpl<T, $Res>
     extends _$PrimitiveFailureCopyWithImpl<T, $Res>
     implements $InvalidUnsignedIntCopyWith<T, $Res> {
@@ -3705,6 +3777,7 @@ class _$InvalidUnsignedIntCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 class _$InvalidUnsignedInt<T> implements InvalidUnsignedInt<T> {
   const _$InvalidUnsignedInt({@required this.failedValue})
       : assert(failedValue != null);
@@ -3904,6 +3977,7 @@ abstract class InvalidUnsignedInt<T> implements PrimitiveFailure<T> {
   $InvalidUnsignedIntCopyWith<T, InvalidUnsignedInt<T>> get copyWith;
 }
 
+/// @nodoc
 abstract class $InvalidFhirUriCopyWith<T, $Res>
     implements $PrimitiveFailureCopyWith<T, $Res> {
   factory $InvalidFhirUriCopyWith(
@@ -3913,6 +3987,7 @@ abstract class $InvalidFhirUriCopyWith<T, $Res>
   $Res call({T failedValue});
 }
 
+/// @nodoc
 class _$InvalidFhirUriCopyWithImpl<T, $Res>
     extends _$PrimitiveFailureCopyWithImpl<T, $Res>
     implements $InvalidFhirUriCopyWith<T, $Res> {
@@ -3934,6 +4009,7 @@ class _$InvalidFhirUriCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 class _$InvalidFhirUri<T> implements InvalidFhirUri<T> {
   const _$InvalidFhirUri({@required this.failedValue})
       : assert(failedValue != null);
@@ -4131,6 +4207,7 @@ abstract class InvalidFhirUri<T> implements PrimitiveFailure<T> {
   $InvalidFhirUriCopyWith<T, InvalidFhirUri<T>> get copyWith;
 }
 
+/// @nodoc
 abstract class $InvalidFhirUrlCopyWith<T, $Res>
     implements $PrimitiveFailureCopyWith<T, $Res> {
   factory $InvalidFhirUrlCopyWith(
@@ -4140,6 +4217,7 @@ abstract class $InvalidFhirUrlCopyWith<T, $Res>
   $Res call({T failedValue});
 }
 
+/// @nodoc
 class _$InvalidFhirUrlCopyWithImpl<T, $Res>
     extends _$PrimitiveFailureCopyWithImpl<T, $Res>
     implements $InvalidFhirUrlCopyWith<T, $Res> {
@@ -4161,6 +4239,7 @@ class _$InvalidFhirUrlCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 class _$InvalidFhirUrl<T> implements InvalidFhirUrl<T> {
   const _$InvalidFhirUrl({@required this.failedValue})
       : assert(failedValue != null);
@@ -4358,6 +4437,7 @@ abstract class InvalidFhirUrl<T> implements PrimitiveFailure<T> {
   $InvalidFhirUrlCopyWith<T, InvalidFhirUrl<T>> get copyWith;
 }
 
+/// @nodoc
 abstract class $InvalidUuidCopyWith<T, $Res>
     implements $PrimitiveFailureCopyWith<T, $Res> {
   factory $InvalidUuidCopyWith(
@@ -4367,6 +4447,7 @@ abstract class $InvalidUuidCopyWith<T, $Res>
   $Res call({T failedValue});
 }
 
+/// @nodoc
 class _$InvalidUuidCopyWithImpl<T, $Res>
     extends _$PrimitiveFailureCopyWithImpl<T, $Res>
     implements $InvalidUuidCopyWith<T, $Res> {
@@ -4388,6 +4469,7 @@ class _$InvalidUuidCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 class _$InvalidUuid<T> implements InvalidUuid<T> {
   const _$InvalidUuid({@required this.failedValue})
       : assert(failedValue != null);
@@ -4585,6 +4667,7 @@ abstract class InvalidUuid<T> implements PrimitiveFailure<T> {
   $InvalidUuidCopyWith<T, InvalidUuid<T>> get copyWith;
 }
 
+/// @nodoc
 abstract class $InvalidEnumCopyWith<T, $Res>
     implements $PrimitiveFailureCopyWith<T, $Res> {
   factory $InvalidEnumCopyWith(
@@ -4594,6 +4677,7 @@ abstract class $InvalidEnumCopyWith<T, $Res>
   $Res call({T failedValue});
 }
 
+/// @nodoc
 class _$InvalidEnumCopyWithImpl<T, $Res>
     extends _$PrimitiveFailureCopyWithImpl<T, $Res>
     implements $InvalidEnumCopyWith<T, $Res> {
@@ -4615,6 +4699,7 @@ class _$InvalidEnumCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 class _$InvalidEnum<T> implements InvalidEnum<T> {
   const _$InvalidEnum({@required this.failedValue})
       : assert(failedValue != null);

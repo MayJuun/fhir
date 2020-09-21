@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'draft_types.dart';
 
@@ -12,9 +12,11 @@ Population _$PopulationFromJson(Map<String, dynamic> json) {
   return _Population.fromJson(json);
 }
 
+/// @nodoc
 class _$PopulationTearOff {
   const _$PopulationTearOff();
 
+// ignore: unused_element
   _Population call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -35,11 +37,18 @@ class _$PopulationTearOff {
       physiologicalCondition: physiologicalCondition,
     );
   }
+
+// ignore: unused_element
+  Population fromJson(Map<String, Object> json) {
+    return Population.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Population = _$PopulationTearOff();
 
+/// @nodoc
 mixin _$Population {
   String get id;
   @JsonKey(name: 'extension')
@@ -55,6 +64,7 @@ mixin _$Population {
   $PopulationCopyWith<Population> get copyWith;
 }
 
+/// @nodoc
 abstract class $PopulationCopyWith<$Res> {
   factory $PopulationCopyWith(
           Population value, $Res Function(Population) then) =
@@ -76,6 +86,7 @@ abstract class $PopulationCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get physiologicalCondition;
 }
 
+/// @nodoc
 class _$PopulationCopyWithImpl<$Res> implements $PopulationCopyWith<$Res> {
   _$PopulationCopyWithImpl(this._value, this._then);
 
@@ -166,6 +177,7 @@ class _$PopulationCopyWithImpl<$Res> implements $PopulationCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$PopulationCopyWith<$Res> implements $PopulationCopyWith<$Res> {
   factory _$PopulationCopyWith(
           _Population value, $Res Function(_Population) then) =
@@ -193,6 +205,7 @@ abstract class _$PopulationCopyWith<$Res> implements $PopulationCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get physiologicalCondition;
 }
 
+/// @nodoc
 class __$PopulationCopyWithImpl<$Res> extends _$PopulationCopyWithImpl<$Res>
     implements _$PopulationCopyWith<$Res> {
   __$PopulationCopyWithImpl(
@@ -235,6 +248,8 @@ class __$PopulationCopyWithImpl<$Res> extends _$PopulationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Population extends _Population {
   _$_Population(
       {this.id,
@@ -362,9 +377,11 @@ ProductShelfLife _$ProductShelfLifeFromJson(Map<String, dynamic> json) {
   return _ProductShelfLife.fromJson(json);
 }
 
+/// @nodoc
 class _$ProductShelfLifeTearOff {
   const _$ProductShelfLifeTearOff();
 
+// ignore: unused_element
   _ProductShelfLife call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -383,11 +400,18 @@ class _$ProductShelfLifeTearOff {
       specialPrecautionsForStorage: specialPrecautionsForStorage,
     );
   }
+
+// ignore: unused_element
+  ProductShelfLife fromJson(Map<String, Object> json) {
+    return ProductShelfLife.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ProductShelfLife = _$ProductShelfLifeTearOff();
 
+/// @nodoc
 mixin _$ProductShelfLife {
   String get id;
   @JsonKey(name: 'extension')
@@ -402,6 +426,7 @@ mixin _$ProductShelfLife {
   $ProductShelfLifeCopyWith<ProductShelfLife> get copyWith;
 }
 
+/// @nodoc
 abstract class $ProductShelfLifeCopyWith<$Res> {
   factory $ProductShelfLifeCopyWith(
           ProductShelfLife value, $Res Function(ProductShelfLife) then) =
@@ -420,6 +445,7 @@ abstract class $ProductShelfLifeCopyWith<$Res> {
   $QuantityCopyWith<$Res> get period;
 }
 
+/// @nodoc
 class _$ProductShelfLifeCopyWithImpl<$Res>
     implements $ProductShelfLifeCopyWith<$Res> {
   _$ProductShelfLifeCopyWithImpl(this._value, this._then);
@@ -487,6 +513,7 @@ class _$ProductShelfLifeCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ProductShelfLifeCopyWith<$Res>
     implements $ProductShelfLifeCopyWith<$Res> {
   factory _$ProductShelfLifeCopyWith(
@@ -510,6 +537,7 @@ abstract class _$ProductShelfLifeCopyWith<$Res>
   $QuantityCopyWith<$Res> get period;
 }
 
+/// @nodoc
 class __$ProductShelfLifeCopyWithImpl<$Res>
     extends _$ProductShelfLifeCopyWithImpl<$Res>
     implements _$ProductShelfLifeCopyWith<$Res> {
@@ -550,6 +578,8 @@ class __$ProductShelfLifeCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ProductShelfLife extends _ProductShelfLife {
   _$_ProductShelfLife(
       {this.id,
@@ -672,9 +702,11 @@ ProdCharacteristic _$ProdCharacteristicFromJson(Map<String, dynamic> json) {
   return _ProdCharacteristic.fromJson(json);
 }
 
+/// @nodoc
 class _$ProdCharacteristicTearOff {
   const _$ProdCharacteristicTearOff();
 
+// ignore: unused_element
   _ProdCharacteristic call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -713,11 +745,18 @@ class _$ProdCharacteristicTearOff {
       scoring: scoring,
     );
   }
+
+// ignore: unused_element
+  ProdCharacteristic fromJson(Map<String, Object> json) {
+    return ProdCharacteristic.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ProdCharacteristic = _$ProdCharacteristicTearOff();
 
+/// @nodoc
 mixin _$ProdCharacteristic {
   String get id;
   @JsonKey(name: 'extension')
@@ -745,6 +784,7 @@ mixin _$ProdCharacteristic {
   $ProdCharacteristicCopyWith<ProdCharacteristic> get copyWith;
 }
 
+/// @nodoc
 abstract class $ProdCharacteristicCopyWith<$Res> {
   factory $ProdCharacteristicCopyWith(
           ProdCharacteristic value, $Res Function(ProdCharacteristic) then) =
@@ -778,6 +818,7 @@ abstract class $ProdCharacteristicCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get scoring;
 }
 
+/// @nodoc
 class _$ProdCharacteristicCopyWithImpl<$Res>
     implements $ProdCharacteristicCopyWith<$Res> {
   _$ProdCharacteristicCopyWithImpl(this._value, this._then);
@@ -922,6 +963,7 @@ class _$ProdCharacteristicCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ProdCharacteristicCopyWith<$Res>
     implements $ProdCharacteristicCopyWith<$Res> {
   factory _$ProdCharacteristicCopyWith(
@@ -965,6 +1007,7 @@ abstract class _$ProdCharacteristicCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get scoring;
 }
 
+/// @nodoc
 class __$ProdCharacteristicCopyWithImpl<$Res>
     extends _$ProdCharacteristicCopyWithImpl<$Res>
     implements _$ProdCharacteristicCopyWith<$Res> {
@@ -1032,6 +1075,8 @@ class __$ProdCharacteristicCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ProdCharacteristic extends _ProdCharacteristic {
   _$_ProdCharacteristic(
       {this.id,
@@ -1249,9 +1294,11 @@ MarketingStatus _$MarketingStatusFromJson(Map<String, dynamic> json) {
   return _MarketingStatus.fromJson(json);
 }
 
+/// @nodoc
 class _$MarketingStatusTearOff {
   const _$MarketingStatusTearOff();
 
+// ignore: unused_element
   _MarketingStatus call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1274,11 +1321,18 @@ class _$MarketingStatusTearOff {
       restoreDateElement: restoreDateElement,
     );
   }
+
+// ignore: unused_element
+  MarketingStatus fromJson(Map<String, Object> json) {
+    return MarketingStatus.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MarketingStatus = _$MarketingStatusTearOff();
 
+/// @nodoc
 mixin _$MarketingStatus {
   String get id;
   @JsonKey(name: 'extension')
@@ -1296,6 +1350,7 @@ mixin _$MarketingStatus {
   $MarketingStatusCopyWith<MarketingStatus> get copyWith;
 }
 
+/// @nodoc
 abstract class $MarketingStatusCopyWith<$Res> {
   factory $MarketingStatusCopyWith(
           MarketingStatus value, $Res Function(MarketingStatus) then) =
@@ -1318,6 +1373,7 @@ abstract class $MarketingStatusCopyWith<$Res> {
   $ElementCopyWith<$Res> get restoreDateElement;
 }
 
+/// @nodoc
 class _$MarketingStatusCopyWithImpl<$Res>
     implements $MarketingStatusCopyWith<$Res> {
   _$MarketingStatusCopyWithImpl(this._value, this._then);
@@ -1412,6 +1468,7 @@ class _$MarketingStatusCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MarketingStatusCopyWith<$Res>
     implements $MarketingStatusCopyWith<$Res> {
   factory _$MarketingStatusCopyWith(
@@ -1441,6 +1498,7 @@ abstract class _$MarketingStatusCopyWith<$Res>
   $ElementCopyWith<$Res> get restoreDateElement;
 }
 
+/// @nodoc
 class __$MarketingStatusCopyWithImpl<$Res>
     extends _$MarketingStatusCopyWithImpl<$Res>
     implements _$MarketingStatusCopyWith<$Res> {
@@ -1488,6 +1546,8 @@ class __$MarketingStatusCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MarketingStatus extends _MarketingStatus {
   _$_MarketingStatus(
       {this.id,
@@ -1632,9 +1692,11 @@ SubstanceAmount _$SubstanceAmountFromJson(Map<String, dynamic> json) {
   return _SubstanceAmount.fromJson(json);
 }
 
+/// @nodoc
 class _$SubstanceAmountTearOff {
   const _$SubstanceAmountTearOff();
 
+// ignore: unused_element
   _SubstanceAmount call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1661,11 +1723,18 @@ class _$SubstanceAmountTearOff {
       referenceRange: referenceRange,
     );
   }
+
+// ignore: unused_element
+  SubstanceAmount fromJson(Map<String, Object> json) {
+    return SubstanceAmount.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $SubstanceAmount = _$SubstanceAmountTearOff();
 
+/// @nodoc
 mixin _$SubstanceAmount {
   String get id;
   @JsonKey(name: 'extension')
@@ -1686,6 +1755,7 @@ mixin _$SubstanceAmount {
   $SubstanceAmountCopyWith<SubstanceAmount> get copyWith;
 }
 
+/// @nodoc
 abstract class $SubstanceAmountCopyWith<$Res> {
   factory $SubstanceAmountCopyWith(
           SubstanceAmount value, $Res Function(SubstanceAmount) then) =
@@ -1711,6 +1781,7 @@ abstract class $SubstanceAmountCopyWith<$Res> {
   $SubstanceAmountReferenceRangeCopyWith<$Res> get referenceRange;
 }
 
+/// @nodoc
 class _$SubstanceAmountCopyWithImpl<$Res>
     implements $SubstanceAmountCopyWith<$Res> {
   _$SubstanceAmountCopyWithImpl(this._value, this._then);
@@ -1828,6 +1899,7 @@ class _$SubstanceAmountCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$SubstanceAmountCopyWith<$Res>
     implements $SubstanceAmountCopyWith<$Res> {
   factory _$SubstanceAmountCopyWith(
@@ -1861,6 +1933,7 @@ abstract class _$SubstanceAmountCopyWith<$Res>
   $SubstanceAmountReferenceRangeCopyWith<$Res> get referenceRange;
 }
 
+/// @nodoc
 class __$SubstanceAmountCopyWithImpl<$Res>
     extends _$SubstanceAmountCopyWithImpl<$Res>
     implements _$SubstanceAmountCopyWith<$Res> {
@@ -1920,6 +1993,8 @@ class __$SubstanceAmountCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_SubstanceAmount extends _SubstanceAmount {
   _$_SubstanceAmount(
       {this.id,
@@ -2084,9 +2159,11 @@ SubstanceAmountReferenceRange _$SubstanceAmountReferenceRangeFromJson(
   return _SubstanceAmountReferenceRange.fromJson(json);
 }
 
+/// @nodoc
 class _$SubstanceAmountReferenceRangeTearOff {
   const _$SubstanceAmountReferenceRangeTearOff();
 
+// ignore: unused_element
   _SubstanceAmountReferenceRange call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2101,11 +2178,18 @@ class _$SubstanceAmountReferenceRangeTearOff {
       highLimit: highLimit,
     );
   }
+
+// ignore: unused_element
+  SubstanceAmountReferenceRange fromJson(Map<String, Object> json) {
+    return SubstanceAmountReferenceRange.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $SubstanceAmountReferenceRange = _$SubstanceAmountReferenceRangeTearOff();
 
+/// @nodoc
 mixin _$SubstanceAmountReferenceRange {
   String get id;
   @JsonKey(name: 'extension')
@@ -2119,6 +2203,7 @@ mixin _$SubstanceAmountReferenceRange {
       get copyWith;
 }
 
+/// @nodoc
 abstract class $SubstanceAmountReferenceRangeCopyWith<$Res> {
   factory $SubstanceAmountReferenceRangeCopyWith(
           SubstanceAmountReferenceRange value,
@@ -2135,6 +2220,7 @@ abstract class $SubstanceAmountReferenceRangeCopyWith<$Res> {
   $QuantityCopyWith<$Res> get highLimit;
 }
 
+/// @nodoc
 class _$SubstanceAmountReferenceRangeCopyWithImpl<$Res>
     implements $SubstanceAmountReferenceRangeCopyWith<$Res> {
   _$SubstanceAmountReferenceRangeCopyWithImpl(this._value, this._then);
@@ -2186,6 +2272,7 @@ class _$SubstanceAmountReferenceRangeCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$SubstanceAmountReferenceRangeCopyWith<$Res>
     implements $SubstanceAmountReferenceRangeCopyWith<$Res> {
   factory _$SubstanceAmountReferenceRangeCopyWith(
@@ -2206,6 +2293,7 @@ abstract class _$SubstanceAmountReferenceRangeCopyWith<$Res>
   $QuantityCopyWith<$Res> get highLimit;
 }
 
+/// @nodoc
 class __$SubstanceAmountReferenceRangeCopyWithImpl<$Res>
     extends _$SubstanceAmountReferenceRangeCopyWithImpl<$Res>
     implements _$SubstanceAmountReferenceRangeCopyWith<$Res> {
@@ -2242,6 +2330,8 @@ class __$SubstanceAmountReferenceRangeCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_SubstanceAmountReferenceRange extends _SubstanceAmountReferenceRange {
   _$_SubstanceAmountReferenceRange(
       {this.id,

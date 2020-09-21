@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'definitional_artifacts.dart';
 
@@ -12,9 +12,11 @@ ActivityDefinition _$ActivityDefinitionFromJson(Map<String, dynamic> json) {
   return _ActivityDefinition.fromJson(json);
 }
 
+/// @nodoc
 class _$ActivityDefinitionTearOff {
   const _$ActivityDefinitionTearOff();
 
+// ignore: unused_element
   _ActivityDefinition call(
       {@required
       @JsonKey(defaultValue: 'ActivityDefinition')
@@ -171,11 +173,18 @@ class _$ActivityDefinitionTearOff {
       dynamicValue: dynamicValue,
     );
   }
+
+// ignore: unused_element
+  ActivityDefinition fromJson(Map<String, Object> json) {
+    return ActivityDefinition.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ActivityDefinition = _$ActivityDefinitionTearOff();
 
+/// @nodoc
 mixin _$ActivityDefinition {
   @JsonKey(defaultValue: 'ActivityDefinition')
   String get resourceType;
@@ -268,6 +277,7 @@ mixin _$ActivityDefinition {
   $ActivityDefinitionCopyWith<ActivityDefinition> get copyWith;
 }
 
+/// @nodoc
 abstract class $ActivityDefinitionCopyWith<$Res> {
   factory $ActivityDefinitionCopyWith(
           ActivityDefinition value, $Res Function(ActivityDefinition) then) =
@@ -371,6 +381,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get transform;
 }
 
+/// @nodoc
 class _$ActivityDefinitionCopyWithImpl<$Res>
     implements $ActivityDefinitionCopyWith<$Res> {
   _$ActivityDefinitionCopyWithImpl(this._value, this._then);
@@ -899,6 +910,7 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ActivityDefinitionCopyWith<$Res>
     implements $ActivityDefinitionCopyWith<$Res> {
   factory _$ActivityDefinitionCopyWith(
@@ -1034,6 +1046,7 @@ abstract class _$ActivityDefinitionCopyWith<$Res>
   $ReferenceCopyWith<$Res> get transform;
 }
 
+/// @nodoc
 class __$ActivityDefinitionCopyWithImpl<$Res>
     extends _$ActivityDefinitionCopyWithImpl<$Res>
     implements _$ActivityDefinitionCopyWith<$Res> {
@@ -1264,6 +1277,8 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ActivityDefinition extends _ActivityDefinition {
   _$_ActivityDefinition(
       {@required @JsonKey(defaultValue: 'ActivityDefinition') this.resourceType,
@@ -1942,9 +1957,11 @@ ActivityDefinitionParticipant _$ActivityDefinitionParticipantFromJson(
   return _ActivityDefinitionParticipant.fromJson(json);
 }
 
+/// @nodoc
 class _$ActivityDefinitionParticipantTearOff {
   const _$ActivityDefinitionParticipantTearOff();
 
+// ignore: unused_element
   _ActivityDefinitionParticipant call(
       {String type,
       @JsonKey(name: '_type') Element typeElement,
@@ -1955,11 +1972,18 @@ class _$ActivityDefinitionParticipantTearOff {
       role: role,
     );
   }
+
+// ignore: unused_element
+  ActivityDefinitionParticipant fromJson(Map<String, Object> json) {
+    return ActivityDefinitionParticipant.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ActivityDefinitionParticipant = _$ActivityDefinitionParticipantTearOff();
 
+/// @nodoc
 mixin _$ActivityDefinitionParticipant {
   String get type;
   @JsonKey(name: '_type')
@@ -1971,6 +1995,7 @@ mixin _$ActivityDefinitionParticipant {
       get copyWith;
 }
 
+/// @nodoc
 abstract class $ActivityDefinitionParticipantCopyWith<$Res> {
   factory $ActivityDefinitionParticipantCopyWith(
           ActivityDefinitionParticipant value,
@@ -1985,6 +2010,7 @@ abstract class $ActivityDefinitionParticipantCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get role;
 }
 
+/// @nodoc
 class _$ActivityDefinitionParticipantCopyWithImpl<$Res>
     implements $ActivityDefinitionParticipantCopyWith<$Res> {
   _$ActivityDefinitionParticipantCopyWithImpl(this._value, this._then);
@@ -2028,6 +2054,7 @@ class _$ActivityDefinitionParticipantCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ActivityDefinitionParticipantCopyWith<$Res>
     implements $ActivityDefinitionParticipantCopyWith<$Res> {
   factory _$ActivityDefinitionParticipantCopyWith(
@@ -2046,6 +2073,7 @@ abstract class _$ActivityDefinitionParticipantCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get role;
 }
 
+/// @nodoc
 class __$ActivityDefinitionParticipantCopyWithImpl<$Res>
     extends _$ActivityDefinitionParticipantCopyWithImpl<$Res>
     implements _$ActivityDefinitionParticipantCopyWith<$Res> {
@@ -2074,6 +2102,8 @@ class __$ActivityDefinitionParticipantCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ActivityDefinitionParticipant extends _ActivityDefinitionParticipant {
   _$_ActivityDefinitionParticipant(
       {this.type, @JsonKey(name: '_type') this.typeElement, this.role})
@@ -2155,9 +2185,11 @@ ActivityDefinitionDynamicValue _$ActivityDefinitionDynamicValueFromJson(
   return _ActivityDefinitionDynamicValue.fromJson(json);
 }
 
+/// @nodoc
 class _$ActivityDefinitionDynamicValueTearOff {
   const _$ActivityDefinitionDynamicValueTearOff();
 
+// ignore: unused_element
   _ActivityDefinitionDynamicValue call(
       {String description,
       @JsonKey(name: '_description') Element descriptionElement,
@@ -2178,12 +2210,19 @@ class _$ActivityDefinitionDynamicValueTearOff {
       expressionElement: expressionElement,
     );
   }
+
+// ignore: unused_element
+  ActivityDefinitionDynamicValue fromJson(Map<String, Object> json) {
+    return ActivityDefinitionDynamicValue.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ActivityDefinitionDynamicValue =
     _$ActivityDefinitionDynamicValueTearOff();
 
+/// @nodoc
 mixin _$ActivityDefinitionDynamicValue {
   String get description;
   @JsonKey(name: '_description')
@@ -2203,6 +2242,7 @@ mixin _$ActivityDefinitionDynamicValue {
       get copyWith;
 }
 
+/// @nodoc
 abstract class $ActivityDefinitionDynamicValueCopyWith<$Res> {
   factory $ActivityDefinitionDynamicValueCopyWith(
           ActivityDefinitionDynamicValue value,
@@ -2224,6 +2264,7 @@ abstract class $ActivityDefinitionDynamicValueCopyWith<$Res> {
   $ElementCopyWith<$Res> get expressionElement;
 }
 
+/// @nodoc
 class _$ActivityDefinitionDynamicValueCopyWithImpl<$Res>
     implements $ActivityDefinitionDynamicValueCopyWith<$Res> {
   _$ActivityDefinitionDynamicValueCopyWithImpl(this._value, this._then);
@@ -2305,6 +2346,7 @@ class _$ActivityDefinitionDynamicValueCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ActivityDefinitionDynamicValueCopyWith<$Res>
     implements $ActivityDefinitionDynamicValueCopyWith<$Res> {
   factory _$ActivityDefinitionDynamicValueCopyWith(
@@ -2332,6 +2374,7 @@ abstract class _$ActivityDefinitionDynamicValueCopyWith<$Res>
   $ElementCopyWith<$Res> get expressionElement;
 }
 
+/// @nodoc
 class __$ActivityDefinitionDynamicValueCopyWithImpl<$Res>
     extends _$ActivityDefinitionDynamicValueCopyWithImpl<$Res>
     implements _$ActivityDefinitionDynamicValueCopyWith<$Res> {
@@ -2378,6 +2421,8 @@ class __$ActivityDefinitionDynamicValueCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ActivityDefinitionDynamicValue
     extends _ActivityDefinitionDynamicValue {
   _$_ActivityDefinitionDynamicValue(
@@ -2519,9 +2564,11 @@ PlanDefinition _$PlanDefinitionFromJson(Map<String, dynamic> json) {
   return _PlanDefinition.fromJson(json);
 }
 
+/// @nodoc
 class _$PlanDefinitionTearOff {
   const _$PlanDefinitionTearOff();
 
+// ignore: unused_element
   _PlanDefinition call(
       {@required @JsonKey(defaultValue: 'PlanDefinition') String resourceType,
       Id id,
@@ -2628,11 +2675,18 @@ class _$PlanDefinitionTearOff {
       action: action,
     );
   }
+
+// ignore: unused_element
+  PlanDefinition fromJson(Map<String, Object> json) {
+    return PlanDefinition.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $PlanDefinition = _$PlanDefinitionTearOff();
 
+/// @nodoc
 mixin _$PlanDefinition {
   @JsonKey(defaultValue: 'PlanDefinition')
   String get resourceType;
@@ -2709,6 +2763,7 @@ mixin _$PlanDefinition {
   $PlanDefinitionCopyWith<PlanDefinition> get copyWith;
 }
 
+/// @nodoc
 abstract class $PlanDefinitionCopyWith<$Res> {
   factory $PlanDefinitionCopyWith(
           PlanDefinition value, $Res Function(PlanDefinition) then) =
@@ -2788,6 +2843,7 @@ abstract class $PlanDefinitionCopyWith<$Res> {
   $ElementCopyWith<$Res> get copyrightElement;
 }
 
+/// @nodoc
 class _$PlanDefinitionCopyWithImpl<$Res>
     implements $PlanDefinitionCopyWith<$Res> {
   _$PlanDefinitionCopyWithImpl(this._value, this._then);
@@ -3167,6 +3223,7 @@ class _$PlanDefinitionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$PlanDefinitionCopyWith<$Res>
     implements $PlanDefinitionCopyWith<$Res> {
   factory _$PlanDefinitionCopyWith(
@@ -3268,6 +3325,7 @@ abstract class _$PlanDefinitionCopyWith<$Res>
   $ElementCopyWith<$Res> get copyrightElement;
 }
 
+/// @nodoc
 class __$PlanDefinitionCopyWithImpl<$Res>
     extends _$PlanDefinitionCopyWithImpl<$Res>
     implements _$PlanDefinitionCopyWith<$Res> {
@@ -3450,6 +3508,8 @@ class __$PlanDefinitionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_PlanDefinition extends _PlanDefinition {
   _$_PlanDefinition(
       {@required @JsonKey(defaultValue: 'PlanDefinition') this.resourceType,
@@ -3988,9 +4048,11 @@ PlanDefinitionGoal _$PlanDefinitionGoalFromJson(Map<String, dynamic> json) {
   return _PlanDefinitionGoal.fromJson(json);
 }
 
+/// @nodoc
 class _$PlanDefinitionGoalTearOff {
   const _$PlanDefinitionGoalTearOff();
 
+// ignore: unused_element
   _PlanDefinitionGoal call(
       {CodeableConcept category,
       @required CodeableConcept description,
@@ -4009,11 +4071,18 @@ class _$PlanDefinitionGoalTearOff {
       target: target,
     );
   }
+
+// ignore: unused_element
+  PlanDefinitionGoal fromJson(Map<String, Object> json) {
+    return PlanDefinitionGoal.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $PlanDefinitionGoal = _$PlanDefinitionGoalTearOff();
 
+/// @nodoc
 mixin _$PlanDefinitionGoal {
   CodeableConcept get category;
   CodeableConcept get description;
@@ -4027,6 +4096,7 @@ mixin _$PlanDefinitionGoal {
   $PlanDefinitionGoalCopyWith<PlanDefinitionGoal> get copyWith;
 }
 
+/// @nodoc
 abstract class $PlanDefinitionGoalCopyWith<$Res> {
   factory $PlanDefinitionGoalCopyWith(
           PlanDefinitionGoal value, $Res Function(PlanDefinitionGoal) then) =
@@ -4046,6 +4116,7 @@ abstract class $PlanDefinitionGoalCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get start;
 }
 
+/// @nodoc
 class _$PlanDefinitionGoalCopyWithImpl<$Res>
     implements $PlanDefinitionGoalCopyWith<$Res> {
   _$PlanDefinitionGoalCopyWithImpl(this._value, this._then);
@@ -4126,6 +4197,7 @@ class _$PlanDefinitionGoalCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$PlanDefinitionGoalCopyWith<$Res>
     implements $PlanDefinitionGoalCopyWith<$Res> {
   factory _$PlanDefinitionGoalCopyWith(
@@ -4151,6 +4223,7 @@ abstract class _$PlanDefinitionGoalCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get start;
 }
 
+/// @nodoc
 class __$PlanDefinitionGoalCopyWithImpl<$Res>
     extends _$PlanDefinitionGoalCopyWithImpl<$Res>
     implements _$PlanDefinitionGoalCopyWith<$Res> {
@@ -4194,6 +4267,8 @@ class __$PlanDefinitionGoalCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_PlanDefinitionGoal extends _PlanDefinitionGoal {
   _$_PlanDefinitionGoal(
       {this.category,
@@ -4311,9 +4386,11 @@ PlanDefinitionTarget _$PlanDefinitionTargetFromJson(Map<String, dynamic> json) {
   return _PlanDefinitionTarget.fromJson(json);
 }
 
+/// @nodoc
 class _$PlanDefinitionTargetTearOff {
   const _$PlanDefinitionTargetTearOff();
 
+// ignore: unused_element
   _PlanDefinitionTarget call(
       {CodeableConcept measure,
       Quantity detailQuantity,
@@ -4328,11 +4405,18 @@ class _$PlanDefinitionTargetTearOff {
       due: due,
     );
   }
+
+// ignore: unused_element
+  PlanDefinitionTarget fromJson(Map<String, Object> json) {
+    return PlanDefinitionTarget.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $PlanDefinitionTarget = _$PlanDefinitionTargetTearOff();
 
+/// @nodoc
 mixin _$PlanDefinitionTarget {
   CodeableConcept get measure;
   Quantity get detailQuantity;
@@ -4344,6 +4428,7 @@ mixin _$PlanDefinitionTarget {
   $PlanDefinitionTargetCopyWith<PlanDefinitionTarget> get copyWith;
 }
 
+/// @nodoc
 abstract class $PlanDefinitionTargetCopyWith<$Res> {
   factory $PlanDefinitionTargetCopyWith(PlanDefinitionTarget value,
           $Res Function(PlanDefinitionTarget) then) =
@@ -4362,6 +4447,7 @@ abstract class $PlanDefinitionTargetCopyWith<$Res> {
   $DurationCopyWith<$Res> get due;
 }
 
+/// @nodoc
 class _$PlanDefinitionTargetCopyWithImpl<$Res>
     implements $PlanDefinitionTargetCopyWith<$Res> {
   _$PlanDefinitionTargetCopyWithImpl(this._value, this._then);
@@ -4444,6 +4530,7 @@ class _$PlanDefinitionTargetCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$PlanDefinitionTargetCopyWith<$Res>
     implements $PlanDefinitionTargetCopyWith<$Res> {
   factory _$PlanDefinitionTargetCopyWith(_PlanDefinitionTarget value,
@@ -4469,6 +4556,7 @@ abstract class _$PlanDefinitionTargetCopyWith<$Res>
   $DurationCopyWith<$Res> get due;
 }
 
+/// @nodoc
 class __$PlanDefinitionTargetCopyWithImpl<$Res>
     extends _$PlanDefinitionTargetCopyWithImpl<$Res>
     implements _$PlanDefinitionTargetCopyWith<$Res> {
@@ -4503,6 +4591,8 @@ class __$PlanDefinitionTargetCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_PlanDefinitionTarget extends _PlanDefinitionTarget {
   _$_PlanDefinitionTarget(
       {this.measure,
@@ -4601,9 +4691,11 @@ PlanDefinitionAction _$PlanDefinitionActionFromJson(Map<String, dynamic> json) {
   return _PlanDefinitionAction.fromJson(json);
 }
 
+/// @nodoc
 class _$PlanDefinitionActionTearOff {
   const _$PlanDefinitionActionTearOff();
 
+// ignore: unused_element
   _PlanDefinitionAction call(
       {String label,
       @JsonKey(name: '_label') Element labelElement,
@@ -4688,11 +4780,18 @@ class _$PlanDefinitionActionTearOff {
       action: action,
     );
   }
+
+// ignore: unused_element
+  PlanDefinitionAction fromJson(Map<String, Object> json) {
+    return PlanDefinitionAction.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $PlanDefinitionAction = _$PlanDefinitionActionTearOff();
 
+/// @nodoc
 mixin _$PlanDefinitionAction {
   String get label;
   @JsonKey(name: '_label')
@@ -4750,6 +4849,7 @@ mixin _$PlanDefinitionAction {
   $PlanDefinitionActionCopyWith<PlanDefinitionAction> get copyWith;
 }
 
+/// @nodoc
 abstract class $PlanDefinitionActionCopyWith<$Res> {
   factory $PlanDefinitionActionCopyWith(PlanDefinitionAction value,
           $Res Function(PlanDefinitionAction) then) =
@@ -4815,6 +4915,7 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get transform;
 }
 
+/// @nodoc
 class _$PlanDefinitionActionCopyWithImpl<$Res>
     implements $PlanDefinitionActionCopyWith<$Res> {
   _$PlanDefinitionActionCopyWithImpl(this._value, this._then);
@@ -5143,6 +5244,7 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$PlanDefinitionActionCopyWith<$Res>
     implements $PlanDefinitionActionCopyWith<$Res> {
   factory _$PlanDefinitionActionCopyWith(_PlanDefinitionAction value,
@@ -5227,6 +5329,7 @@ abstract class _$PlanDefinitionActionCopyWith<$Res>
   $ReferenceCopyWith<$Res> get transform;
 }
 
+/// @nodoc
 class __$PlanDefinitionActionCopyWithImpl<$Res>
     extends _$PlanDefinitionActionCopyWithImpl<$Res>
     implements _$PlanDefinitionActionCopyWith<$Res> {
@@ -5388,6 +5491,8 @@ class __$PlanDefinitionActionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_PlanDefinitionAction extends _PlanDefinitionAction {
   _$_PlanDefinitionAction(
       {this.label,
@@ -5822,9 +5927,11 @@ PlanDefinitionCondition _$PlanDefinitionConditionFromJson(
   return _PlanDefinitionCondition.fromJson(json);
 }
 
+/// @nodoc
 class _$PlanDefinitionConditionTearOff {
   const _$PlanDefinitionConditionTearOff();
 
+// ignore: unused_element
   _PlanDefinitionCondition call(
       {PlanDefinitionConditionKind kind,
       @JsonKey(name: '_kind') Element kindElement,
@@ -5845,11 +5952,18 @@ class _$PlanDefinitionConditionTearOff {
       expressionElement: expressionElement,
     );
   }
+
+// ignore: unused_element
+  PlanDefinitionCondition fromJson(Map<String, Object> json) {
+    return PlanDefinitionCondition.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $PlanDefinitionCondition = _$PlanDefinitionConditionTearOff();
 
+/// @nodoc
 mixin _$PlanDefinitionCondition {
   PlanDefinitionConditionKind get kind;
   @JsonKey(name: '_kind')
@@ -5868,6 +5982,7 @@ mixin _$PlanDefinitionCondition {
   $PlanDefinitionConditionCopyWith<PlanDefinitionCondition> get copyWith;
 }
 
+/// @nodoc
 abstract class $PlanDefinitionConditionCopyWith<$Res> {
   factory $PlanDefinitionConditionCopyWith(PlanDefinitionCondition value,
           $Res Function(PlanDefinitionCondition) then) =
@@ -5888,6 +6003,7 @@ abstract class $PlanDefinitionConditionCopyWith<$Res> {
   $ElementCopyWith<$Res> get expressionElement;
 }
 
+/// @nodoc
 class _$PlanDefinitionConditionCopyWithImpl<$Res>
     implements $PlanDefinitionConditionCopyWith<$Res> {
   _$PlanDefinitionConditionCopyWithImpl(this._value, this._then);
@@ -5969,6 +6085,7 @@ class _$PlanDefinitionConditionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$PlanDefinitionConditionCopyWith<$Res>
     implements $PlanDefinitionConditionCopyWith<$Res> {
   factory _$PlanDefinitionConditionCopyWith(_PlanDefinitionCondition value,
@@ -5995,6 +6112,7 @@ abstract class _$PlanDefinitionConditionCopyWith<$Res>
   $ElementCopyWith<$Res> get expressionElement;
 }
 
+/// @nodoc
 class __$PlanDefinitionConditionCopyWithImpl<$Res>
     extends _$PlanDefinitionConditionCopyWithImpl<$Res>
     implements _$PlanDefinitionConditionCopyWith<$Res> {
@@ -6040,6 +6158,8 @@ class __$PlanDefinitionConditionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_PlanDefinitionCondition extends _PlanDefinitionCondition {
   _$_PlanDefinitionCondition(
       {this.kind,
@@ -6178,9 +6298,11 @@ PlanDefinitionRelatedAction _$PlanDefinitionRelatedActionFromJson(
   return _PlanDefinitionRelatedAction.fromJson(json);
 }
 
+/// @nodoc
 class _$PlanDefinitionRelatedActionTearOff {
   const _$PlanDefinitionRelatedActionTearOff();
 
+// ignore: unused_element
   _PlanDefinitionRelatedAction call(
       {Id actionId,
       @JsonKey(name: '_actionId') Element actionIdElement,
@@ -6197,11 +6319,18 @@ class _$PlanDefinitionRelatedActionTearOff {
       offsetRange: offsetRange,
     );
   }
+
+// ignore: unused_element
+  PlanDefinitionRelatedAction fromJson(Map<String, Object> json) {
+    return PlanDefinitionRelatedAction.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $PlanDefinitionRelatedAction = _$PlanDefinitionRelatedActionTearOff();
 
+/// @nodoc
 mixin _$PlanDefinitionRelatedAction {
   Id get actionId;
   @JsonKey(name: '_actionId')
@@ -6217,6 +6346,7 @@ mixin _$PlanDefinitionRelatedAction {
       get copyWith;
 }
 
+/// @nodoc
 abstract class $PlanDefinitionRelatedActionCopyWith<$Res> {
   factory $PlanDefinitionRelatedActionCopyWith(
           PlanDefinitionRelatedAction value,
@@ -6236,6 +6366,7 @@ abstract class $PlanDefinitionRelatedActionCopyWith<$Res> {
   $RangeCopyWith<$Res> get offsetRange;
 }
 
+/// @nodoc
 class _$PlanDefinitionRelatedActionCopyWithImpl<$Res>
     implements $PlanDefinitionRelatedActionCopyWith<$Res> {
   _$PlanDefinitionRelatedActionCopyWithImpl(this._value, this._then);
@@ -6313,6 +6444,7 @@ class _$PlanDefinitionRelatedActionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$PlanDefinitionRelatedActionCopyWith<$Res>
     implements $PlanDefinitionRelatedActionCopyWith<$Res> {
   factory _$PlanDefinitionRelatedActionCopyWith(
@@ -6338,6 +6470,7 @@ abstract class _$PlanDefinitionRelatedActionCopyWith<$Res>
   $RangeCopyWith<$Res> get offsetRange;
 }
 
+/// @nodoc
 class __$PlanDefinitionRelatedActionCopyWithImpl<$Res>
     extends _$PlanDefinitionRelatedActionCopyWithImpl<$Res>
     implements _$PlanDefinitionRelatedActionCopyWith<$Res> {
@@ -6380,6 +6513,8 @@ class __$PlanDefinitionRelatedActionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_PlanDefinitionRelatedAction extends _PlanDefinitionRelatedAction {
   _$_PlanDefinitionRelatedAction(
       {this.actionId,
@@ -6496,9 +6631,11 @@ PlanDefinitionParticipant _$PlanDefinitionParticipantFromJson(
   return _PlanDefinitionParticipant.fromJson(json);
 }
 
+/// @nodoc
 class _$PlanDefinitionParticipantTearOff {
   const _$PlanDefinitionParticipantTearOff();
 
+// ignore: unused_element
   _PlanDefinitionParticipant call(
       {PlanDefinitionParticipantType type,
       @JsonKey(name: '_type') Element typeElement,
@@ -6509,11 +6646,18 @@ class _$PlanDefinitionParticipantTearOff {
       role: role,
     );
   }
+
+// ignore: unused_element
+  PlanDefinitionParticipant fromJson(Map<String, Object> json) {
+    return PlanDefinitionParticipant.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $PlanDefinitionParticipant = _$PlanDefinitionParticipantTearOff();
 
+/// @nodoc
 mixin _$PlanDefinitionParticipant {
   PlanDefinitionParticipantType get type;
   @JsonKey(name: '_type')
@@ -6524,6 +6668,7 @@ mixin _$PlanDefinitionParticipant {
   $PlanDefinitionParticipantCopyWith<PlanDefinitionParticipant> get copyWith;
 }
 
+/// @nodoc
 abstract class $PlanDefinitionParticipantCopyWith<$Res> {
   factory $PlanDefinitionParticipantCopyWith(PlanDefinitionParticipant value,
           $Res Function(PlanDefinitionParticipant) then) =
@@ -6537,6 +6682,7 @@ abstract class $PlanDefinitionParticipantCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get role;
 }
 
+/// @nodoc
 class _$PlanDefinitionParticipantCopyWithImpl<$Res>
     implements $PlanDefinitionParticipantCopyWith<$Res> {
   _$PlanDefinitionParticipantCopyWithImpl(this._value, this._then);
@@ -6581,6 +6727,7 @@ class _$PlanDefinitionParticipantCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$PlanDefinitionParticipantCopyWith<$Res>
     implements $PlanDefinitionParticipantCopyWith<$Res> {
   factory _$PlanDefinitionParticipantCopyWith(_PlanDefinitionParticipant value,
@@ -6598,6 +6745,7 @@ abstract class _$PlanDefinitionParticipantCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get role;
 }
 
+/// @nodoc
 class __$PlanDefinitionParticipantCopyWithImpl<$Res>
     extends _$PlanDefinitionParticipantCopyWithImpl<$Res>
     implements _$PlanDefinitionParticipantCopyWith<$Res> {
@@ -6626,6 +6774,8 @@ class __$PlanDefinitionParticipantCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_PlanDefinitionParticipant extends _PlanDefinitionParticipant {
   _$_PlanDefinitionParticipant(
       {this.type, @JsonKey(name: '_type') this.typeElement, this.role})
@@ -6705,9 +6855,11 @@ PlanDefinitionDynamicValue _$PlanDefinitionDynamicValueFromJson(
   return _PlanDefinitionDynamicValue.fromJson(json);
 }
 
+/// @nodoc
 class _$PlanDefinitionDynamicValueTearOff {
   const _$PlanDefinitionDynamicValueTearOff();
 
+// ignore: unused_element
   _PlanDefinitionDynamicValue call(
       {String description,
       @JsonKey(name: '_description') Element descriptionElement,
@@ -6728,11 +6880,18 @@ class _$PlanDefinitionDynamicValueTearOff {
       expressionElement: expressionElement,
     );
   }
+
+// ignore: unused_element
+  PlanDefinitionDynamicValue fromJson(Map<String, Object> json) {
+    return PlanDefinitionDynamicValue.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $PlanDefinitionDynamicValue = _$PlanDefinitionDynamicValueTearOff();
 
+/// @nodoc
 mixin _$PlanDefinitionDynamicValue {
   String get description;
   @JsonKey(name: '_description')
@@ -6751,6 +6910,7 @@ mixin _$PlanDefinitionDynamicValue {
   $PlanDefinitionDynamicValueCopyWith<PlanDefinitionDynamicValue> get copyWith;
 }
 
+/// @nodoc
 abstract class $PlanDefinitionDynamicValueCopyWith<$Res> {
   factory $PlanDefinitionDynamicValueCopyWith(PlanDefinitionDynamicValue value,
           $Res Function(PlanDefinitionDynamicValue) then) =
@@ -6771,6 +6931,7 @@ abstract class $PlanDefinitionDynamicValueCopyWith<$Res> {
   $ElementCopyWith<$Res> get expressionElement;
 }
 
+/// @nodoc
 class _$PlanDefinitionDynamicValueCopyWithImpl<$Res>
     implements $PlanDefinitionDynamicValueCopyWith<$Res> {
   _$PlanDefinitionDynamicValueCopyWithImpl(this._value, this._then);
@@ -6852,6 +7013,7 @@ class _$PlanDefinitionDynamicValueCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$PlanDefinitionDynamicValueCopyWith<$Res>
     implements $PlanDefinitionDynamicValueCopyWith<$Res> {
   factory _$PlanDefinitionDynamicValueCopyWith(
@@ -6879,6 +7041,7 @@ abstract class _$PlanDefinitionDynamicValueCopyWith<$Res>
   $ElementCopyWith<$Res> get expressionElement;
 }
 
+/// @nodoc
 class __$PlanDefinitionDynamicValueCopyWithImpl<$Res>
     extends _$PlanDefinitionDynamicValueCopyWithImpl<$Res>
     implements _$PlanDefinitionDynamicValueCopyWith<$Res> {
@@ -6924,6 +7087,8 @@ class __$PlanDefinitionDynamicValueCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_PlanDefinitionDynamicValue extends _PlanDefinitionDynamicValue {
   _$_PlanDefinitionDynamicValue(
       {this.description,
@@ -7062,9 +7227,11 @@ Questionnaire _$QuestionnaireFromJson(Map<String, dynamic> json) {
   return _Questionnaire.fromJson(json);
 }
 
+/// @nodoc
 class _$QuestionnaireTearOff {
   const _$QuestionnaireTearOff();
 
+// ignore: unused_element
   _Questionnaire call(
       {@required @JsonKey(defaultValue: 'Questionnaire') String resourceType,
       Id id,
@@ -7161,11 +7328,18 @@ class _$QuestionnaireTearOff {
       item: item,
     );
   }
+
+// ignore: unused_element
+  Questionnaire fromJson(Map<String, Object> json) {
+    return Questionnaire.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Questionnaire = _$QuestionnaireTearOff();
 
+/// @nodoc
 mixin _$Questionnaire {
   @JsonKey(defaultValue: 'Questionnaire')
   String get resourceType;
@@ -7236,6 +7410,7 @@ mixin _$Questionnaire {
   $QuestionnaireCopyWith<Questionnaire> get copyWith;
 }
 
+/// @nodoc
 abstract class $QuestionnaireCopyWith<$Res> {
   factory $QuestionnaireCopyWith(
           Questionnaire value, $Res Function(Questionnaire) then) =
@@ -7308,6 +7483,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
   $ElementCopyWith<$Res> get copyrightElement;
 }
 
+/// @nodoc
 class _$QuestionnaireCopyWithImpl<$Res>
     implements $QuestionnaireCopyWith<$Res> {
   _$QuestionnaireCopyWithImpl(this._value, this._then);
@@ -7651,6 +7827,7 @@ class _$QuestionnaireCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$QuestionnaireCopyWith<$Res>
     implements $QuestionnaireCopyWith<$Res> {
   factory _$QuestionnaireCopyWith(
@@ -7743,6 +7920,7 @@ abstract class _$QuestionnaireCopyWith<$Res>
   $ElementCopyWith<$Res> get copyrightElement;
 }
 
+/// @nodoc
 class __$QuestionnaireCopyWithImpl<$Res>
     extends _$QuestionnaireCopyWithImpl<$Res>
     implements _$QuestionnaireCopyWith<$Res> {
@@ -7909,6 +8087,8 @@ class __$QuestionnaireCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Questionnaire extends _Questionnaire {
   _$_Questionnaire(
       {@required @JsonKey(defaultValue: 'Questionnaire') this.resourceType,
@@ -8405,9 +8585,11 @@ QuestionnaireItem _$QuestionnaireItemFromJson(Map<String, dynamic> json) {
   return _QuestionnaireItem.fromJson(json);
 }
 
+/// @nodoc
 class _$QuestionnaireItemTearOff {
   const _$QuestionnaireItemTearOff();
 
+// ignore: unused_element
   _QuestionnaireItem call(
       {String linkId,
       @JsonKey(name: '_linkId') Element linkIdElement,
@@ -8498,11 +8680,18 @@ class _$QuestionnaireItemTearOff {
       item: item,
     );
   }
+
+// ignore: unused_element
+  QuestionnaireItem fromJson(Map<String, Object> json) {
+    return QuestionnaireItem.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $QuestionnaireItem = _$QuestionnaireItemTearOff();
 
+/// @nodoc
 mixin _$QuestionnaireItem {
   String get linkId;
   @JsonKey(name: '_linkId')
@@ -8570,6 +8759,7 @@ mixin _$QuestionnaireItem {
   $QuestionnaireItemCopyWith<QuestionnaireItem> get copyWith;
 }
 
+/// @nodoc
 abstract class $QuestionnaireItemCopyWith<$Res> {
   factory $QuestionnaireItemCopyWith(
           QuestionnaireItem value, $Res Function(QuestionnaireItem) then) =
@@ -8643,6 +8833,7 @@ abstract class $QuestionnaireItemCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get initialReference;
 }
 
+/// @nodoc
 class _$QuestionnaireItemCopyWithImpl<$Res>
     implements $QuestionnaireItemCopyWith<$Res> {
   _$QuestionnaireItemCopyWithImpl(this._value, this._then);
@@ -9023,6 +9214,7 @@ class _$QuestionnaireItemCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$QuestionnaireItemCopyWith<$Res>
     implements $QuestionnaireItemCopyWith<$Res> {
   factory _$QuestionnaireItemCopyWith(
@@ -9120,6 +9312,7 @@ abstract class _$QuestionnaireItemCopyWith<$Res>
   $ReferenceCopyWith<$Res> get initialReference;
 }
 
+/// @nodoc
 class __$QuestionnaireItemCopyWithImpl<$Res>
     extends _$QuestionnaireItemCopyWithImpl<$Res>
     implements _$QuestionnaireItemCopyWith<$Res> {
@@ -9283,6 +9476,8 @@ class __$QuestionnaireItemCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_QuestionnaireItem extends _QuestionnaireItem {
   _$_QuestionnaireItem(
       {this.linkId,
@@ -9755,9 +9950,11 @@ QuestionnaireEnableWhen _$QuestionnaireEnableWhenFromJson(
   return _QuestionnaireEnableWhen.fromJson(json);
 }
 
+/// @nodoc
 class _$QuestionnaireEnableWhenTearOff {
   const _$QuestionnaireEnableWhenTearOff();
 
+// ignore: unused_element
   _QuestionnaireEnableWhen call(
       {String question,
       @JsonKey(name: '_question') Element questionElement,
@@ -9810,11 +10007,18 @@ class _$QuestionnaireEnableWhenTearOff {
       answerReference: answerReference,
     );
   }
+
+// ignore: unused_element
+  QuestionnaireEnableWhen fromJson(Map<String, Object> json) {
+    return QuestionnaireEnableWhen.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $QuestionnaireEnableWhen = _$QuestionnaireEnableWhenTearOff();
 
+/// @nodoc
 mixin _$QuestionnaireEnableWhen {
   String get question;
   @JsonKey(name: '_question')
@@ -9855,6 +10059,7 @@ mixin _$QuestionnaireEnableWhen {
   $QuestionnaireEnableWhenCopyWith<QuestionnaireEnableWhen> get copyWith;
 }
 
+/// @nodoc
 abstract class $QuestionnaireEnableWhenCopyWith<$Res> {
   factory $QuestionnaireEnableWhenCopyWith(QuestionnaireEnableWhen value,
           $Res Function(QuestionnaireEnableWhen) then) =
@@ -9901,6 +10106,7 @@ abstract class $QuestionnaireEnableWhenCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get answerReference;
 }
 
+/// @nodoc
 class _$QuestionnaireEnableWhenCopyWithImpl<$Res>
     implements $QuestionnaireEnableWhenCopyWith<$Res> {
   _$QuestionnaireEnableWhenCopyWithImpl(this._value, this._then);
@@ -10145,6 +10351,7 @@ class _$QuestionnaireEnableWhenCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$QuestionnaireEnableWhenCopyWith<$Res>
     implements $QuestionnaireEnableWhenCopyWith<$Res> {
   factory _$QuestionnaireEnableWhenCopyWith(_QuestionnaireEnableWhen value,
@@ -10207,6 +10414,7 @@ abstract class _$QuestionnaireEnableWhenCopyWith<$Res>
   $ReferenceCopyWith<$Res> get answerReference;
 }
 
+/// @nodoc
 class __$QuestionnaireEnableWhenCopyWithImpl<$Res>
     extends _$QuestionnaireEnableWhenCopyWithImpl<$Res>
     implements _$QuestionnaireEnableWhenCopyWith<$Res> {
@@ -10315,6 +10523,8 @@ class __$QuestionnaireEnableWhenCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
   _$_QuestionnaireEnableWhen(
       {this.question,
@@ -10618,9 +10828,11 @@ QuestionnaireOption _$QuestionnaireOptionFromJson(Map<String, dynamic> json) {
   return _QuestionnaireOption.fromJson(json);
 }
 
+/// @nodoc
 class _$QuestionnaireOptionTearOff {
   const _$QuestionnaireOptionTearOff();
 
+// ignore: unused_element
   _QuestionnaireOption call(
       {Decimal valueInteger,
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
@@ -10643,11 +10855,18 @@ class _$QuestionnaireOptionTearOff {
       valueCoding: valueCoding,
     );
   }
+
+// ignore: unused_element
+  QuestionnaireOption fromJson(Map<String, Object> json) {
+    return QuestionnaireOption.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $QuestionnaireOption = _$QuestionnaireOptionTearOff();
 
+/// @nodoc
 mixin _$QuestionnaireOption {
   Decimal get valueInteger;
   @JsonKey(name: '_valueInteger')
@@ -10667,6 +10886,7 @@ mixin _$QuestionnaireOption {
   $QuestionnaireOptionCopyWith<QuestionnaireOption> get copyWith;
 }
 
+/// @nodoc
 abstract class $QuestionnaireOptionCopyWith<$Res> {
   factory $QuestionnaireOptionCopyWith(
           QuestionnaireOption value, $Res Function(QuestionnaireOption) then) =
@@ -10689,6 +10909,7 @@ abstract class $QuestionnaireOptionCopyWith<$Res> {
   $CodingCopyWith<$Res> get valueCoding;
 }
 
+/// @nodoc
 class _$QuestionnaireOptionCopyWithImpl<$Res>
     implements $QuestionnaireOptionCopyWith<$Res> {
   _$QuestionnaireOptionCopyWithImpl(this._value, this._then);
@@ -10785,6 +11006,7 @@ class _$QuestionnaireOptionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$QuestionnaireOptionCopyWith<$Res>
     implements $QuestionnaireOptionCopyWith<$Res> {
   factory _$QuestionnaireOptionCopyWith(_QuestionnaireOption value,
@@ -10814,6 +11036,7 @@ abstract class _$QuestionnaireOptionCopyWith<$Res>
   $CodingCopyWith<$Res> get valueCoding;
 }
 
+/// @nodoc
 class __$QuestionnaireOptionCopyWithImpl<$Res>
     extends _$QuestionnaireOptionCopyWithImpl<$Res>
     implements _$QuestionnaireOptionCopyWith<$Res> {
@@ -10863,6 +11086,8 @@ class __$QuestionnaireOptionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_QuestionnaireOption extends _QuestionnaireOption {
   _$_QuestionnaireOption(
       {this.valueInteger,
@@ -11010,9 +11235,11 @@ ServiceDefinition _$ServiceDefinitionFromJson(Map<String, dynamic> json) {
   return _ServiceDefinition.fromJson(json);
 }
 
+/// @nodoc
 class _$ServiceDefinitionTearOff {
   const _$ServiceDefinitionTearOff();
 
+// ignore: unused_element
   _ServiceDefinition call(
       {@required
       @JsonKey(defaultValue: 'ServiceDefinition')
@@ -11136,11 +11363,18 @@ class _$ServiceDefinitionTearOff {
       operationDefinition: operationDefinition,
     );
   }
+
+// ignore: unused_element
+  ServiceDefinition fromJson(Map<String, Object> json) {
+    return ServiceDefinition.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ServiceDefinition = _$ServiceDefinitionTearOff();
 
+/// @nodoc
 mixin _$ServiceDefinition {
   @JsonKey(defaultValue: 'ServiceDefinition')
   String get resourceType;
@@ -11215,6 +11449,7 @@ mixin _$ServiceDefinition {
   $ServiceDefinitionCopyWith<ServiceDefinition> get copyWith;
 }
 
+/// @nodoc
 abstract class $ServiceDefinitionCopyWith<$Res> {
   factory $ServiceDefinitionCopyWith(
           ServiceDefinition value, $Res Function(ServiceDefinition) then) =
@@ -11293,6 +11528,7 @@ abstract class $ServiceDefinitionCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get operationDefinition;
 }
 
+/// @nodoc
 class _$ServiceDefinitionCopyWithImpl<$Res>
     implements $ServiceDefinitionCopyWith<$Res> {
   _$ServiceDefinitionCopyWithImpl(this._value, this._then);
@@ -11673,6 +11909,7 @@ class _$ServiceDefinitionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ServiceDefinitionCopyWith<$Res>
     implements $ServiceDefinitionCopyWith<$Res> {
   factory _$ServiceDefinitionCopyWith(
@@ -11773,6 +12010,7 @@ abstract class _$ServiceDefinitionCopyWith<$Res>
   $ReferenceCopyWith<$Res> get operationDefinition;
 }
 
+/// @nodoc
 class __$ServiceDefinitionCopyWithImpl<$Res>
     extends _$ServiceDefinitionCopyWithImpl<$Res>
     implements _$ServiceDefinitionCopyWith<$Res> {
@@ -11956,6 +12194,8 @@ class __$ServiceDefinitionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ServiceDefinition extends _ServiceDefinition {
   _$_ServiceDefinition(
       {@required @JsonKey(defaultValue: 'ServiceDefinition') this.resourceType,

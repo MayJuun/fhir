@@ -29,22 +29,8 @@ abstract class Dates extends PrimitiveObject<DateTime> {
         return '${value.year}-'
             '${value.month.toString().padLeft(2, '0')}-'
             '${value.day.toString().padLeft(2, '0')}';
-      case DateTimeFormat.utc:
-        return '${value.toIso8601String()}';
-      case DateTimeFormat.incorrect_format:
-        return 'incorrect format';
       default:
-        {
-          var offsetter = formatToOffset(format);
-          var posNeg = offsetter[0] == '+' ? 1 : -1;
-          var offset = offsetter.substring(1, offsetter.length);
-          var hours = int.parse(offset.split(':')[0]) * posNeg;
-          var min = int.parse(offset.split(':')[1]) * posNeg;
-          return value
-              .add(Duration(hours: hours, minutes: min))
-              .toIso8601String()
-              .replaceAll('Z', offsetter);
-        }
+        return '${value.toIso8601String()}';
     }
   }
 }

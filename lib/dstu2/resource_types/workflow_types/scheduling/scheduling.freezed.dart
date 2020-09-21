@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'scheduling.dart';
 
@@ -12,9 +12,11 @@ Appointment _$AppointmentFromJson(Map<String, dynamic> json) {
   return _Appointment.fromJson(json);
 }
 
+/// @nodoc
 class _$AppointmentTearOff {
   const _$AppointmentTearOff();
 
+// ignore: unused_element
   _Appointment call(
       {@required
       @JsonKey(defaultValue: 'Appointment')
@@ -95,11 +97,18 @@ class _$AppointmentTearOff {
       participant: participant,
     );
   }
+
+// ignore: unused_element
+  Appointment fromJson(Map<String, Object> json) {
+    return Appointment.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Appointment = _$AppointmentTearOff();
 
+/// @nodoc
 mixin _$Appointment {
   @JsonKey(defaultValue: 'Appointment')
   String get resourceType;
@@ -149,6 +158,7 @@ mixin _$Appointment {
   $AppointmentCopyWith<Appointment> get copyWith;
 }
 
+/// @nodoc
 abstract class $AppointmentCopyWith<$Res> {
   factory $AppointmentCopyWith(
           Appointment value, $Res Function(Appointment) then) =
@@ -213,6 +223,7 @@ abstract class $AppointmentCopyWith<$Res> {
   $ElementCopyWith<$Res> get commentElement;
 }
 
+/// @nodoc
 class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
   _$AppointmentCopyWithImpl(this._value, this._then);
 
@@ -451,6 +462,7 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$AppointmentCopyWith<$Res>
     implements $AppointmentCopyWith<$Res> {
   factory _$AppointmentCopyWith(
@@ -530,6 +542,7 @@ abstract class _$AppointmentCopyWith<$Res>
   $ElementCopyWith<$Res> get commentElement;
 }
 
+/// @nodoc
 class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
     implements _$AppointmentCopyWith<$Res> {
   __$AppointmentCopyWithImpl(
@@ -641,6 +654,8 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Appointment extends _Appointment {
   _$_Appointment(
       {@required
@@ -1034,9 +1049,11 @@ AppointmentParticipant _$AppointmentParticipantFromJson(
   return _AppointmentParticipant.fromJson(json);
 }
 
+/// @nodoc
 class _$AppointmentParticipantTearOff {
   const _$AppointmentParticipantTearOff();
 
+// ignore: unused_element
   _AppointmentParticipant call(
       {Id id,
       @JsonKey(name: 'extension')
@@ -1065,11 +1082,18 @@ class _$AppointmentParticipantTearOff {
       statusElement: statusElement,
     );
   }
+
+// ignore: unused_element
+  AppointmentParticipant fromJson(Map<String, Object> json) {
+    return AppointmentParticipant.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $AppointmentParticipant = _$AppointmentParticipantTearOff();
 
+/// @nodoc
 mixin _$AppointmentParticipant {
   Id get id;
   @JsonKey(name: 'extension')
@@ -1090,6 +1114,7 @@ mixin _$AppointmentParticipant {
   $AppointmentParticipantCopyWith<AppointmentParticipant> get copyWith;
 }
 
+/// @nodoc
 abstract class $AppointmentParticipantCopyWith<$Res> {
   factory $AppointmentParticipantCopyWith(AppointmentParticipant value,
           $Res Function(AppointmentParticipant) then) =
@@ -1115,6 +1140,7 @@ abstract class $AppointmentParticipantCopyWith<$Res> {
   $ElementCopyWith<$Res> get statusElement;
 }
 
+/// @nodoc
 class _$AppointmentParticipantCopyWithImpl<$Res>
     implements $AppointmentParticipantCopyWith<$Res> {
   _$AppointmentParticipantCopyWithImpl(this._value, this._then);
@@ -1189,6 +1215,7 @@ class _$AppointmentParticipantCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$AppointmentParticipantCopyWith<$Res>
     implements $AppointmentParticipantCopyWith<$Res> {
   factory _$AppointmentParticipantCopyWith(_AppointmentParticipant value,
@@ -1219,6 +1246,7 @@ abstract class _$AppointmentParticipantCopyWith<$Res>
   $ElementCopyWith<$Res> get statusElement;
 }
 
+/// @nodoc
 class __$AppointmentParticipantCopyWithImpl<$Res>
     extends _$AppointmentParticipantCopyWithImpl<$Res>
     implements _$AppointmentParticipantCopyWith<$Res> {
@@ -1266,6 +1294,8 @@ class __$AppointmentParticipantCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_AppointmentParticipant extends _AppointmentParticipant {
   _$_AppointmentParticipant(
       {this.id,
@@ -1424,9 +1454,11 @@ AppointmentResponse _$AppointmentResponseFromJson(Map<String, dynamic> json) {
   return _AppointmentResponse.fromJson(json);
 }
 
+/// @nodoc
 class _$AppointmentResponseTearOff {
   const _$AppointmentResponseTearOff();
 
+// ignore: unused_element
   _AppointmentResponse call(
       {@required
       @JsonKey(defaultValue: 'AppointmentResponse')
@@ -1490,11 +1522,18 @@ class _$AppointmentResponseTearOff {
       commentElement: commentElement,
     );
   }
+
+// ignore: unused_element
+  AppointmentResponse fromJson(Map<String, Object> json) {
+    return AppointmentResponse.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $AppointmentResponse = _$AppointmentResponseTearOff();
 
+/// @nodoc
 mixin _$AppointmentResponse {
   @JsonKey(defaultValue: 'AppointmentResponse')
   String get resourceType;
@@ -1536,6 +1575,7 @@ mixin _$AppointmentResponse {
   $AppointmentResponseCopyWith<AppointmentResponse> get copyWith;
 }
 
+/// @nodoc
 abstract class $AppointmentResponseCopyWith<$Res> {
   factory $AppointmentResponseCopyWith(
           AppointmentResponse value, $Res Function(AppointmentResponse) then) =
@@ -1587,6 +1627,7 @@ abstract class $AppointmentResponseCopyWith<$Res> {
   $ElementCopyWith<$Res> get commentElement;
 }
 
+/// @nodoc
 class _$AppointmentResponseCopyWithImpl<$Res>
     implements $AppointmentResponseCopyWith<$Res> {
   _$AppointmentResponseCopyWithImpl(this._value, this._then);
@@ -1777,6 +1818,7 @@ class _$AppointmentResponseCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$AppointmentResponseCopyWith<$Res>
     implements $AppointmentResponseCopyWith<$Res> {
   factory _$AppointmentResponseCopyWith(_AppointmentResponse value,
@@ -1840,6 +1882,7 @@ abstract class _$AppointmentResponseCopyWith<$Res>
   $ElementCopyWith<$Res> get commentElement;
 }
 
+/// @nodoc
 class __$AppointmentResponseCopyWithImpl<$Res>
     extends _$AppointmentResponseCopyWithImpl<$Res>
     implements _$AppointmentResponseCopyWith<$Res> {
@@ -1933,6 +1976,8 @@ class __$AppointmentResponseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_AppointmentResponse extends _AppointmentResponse {
   _$_AppointmentResponse(
       {@required
@@ -2261,9 +2306,11 @@ Schedule _$ScheduleFromJson(Map<String, dynamic> json) {
   return _Schedule.fromJson(json);
 }
 
+/// @nodoc
 class _$ScheduleTearOff {
   const _$ScheduleTearOff();
 
+// ignore: unused_element
   _Schedule call(
       {@required @JsonKey(defaultValue: 'Schedule') String resourceType,
       Id id,
@@ -2302,11 +2349,18 @@ class _$ScheduleTearOff {
       commentElement: commentElement,
     );
   }
+
+// ignore: unused_element
+  Schedule fromJson(Map<String, Object> json) {
+    return Schedule.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Schedule = _$ScheduleTearOff();
 
+/// @nodoc
 mixin _$Schedule {
   @JsonKey(defaultValue: 'Schedule')
   String get resourceType;
@@ -2336,6 +2390,7 @@ mixin _$Schedule {
   $ScheduleCopyWith<Schedule> get copyWith;
 }
 
+/// @nodoc
 abstract class $ScheduleCopyWith<$Res> {
   factory $ScheduleCopyWith(Schedule value, $Res Function(Schedule) then) =
       _$ScheduleCopyWithImpl<$Res>;
@@ -2367,6 +2422,7 @@ abstract class $ScheduleCopyWith<$Res> {
   $ElementCopyWith<$Res> get commentElement;
 }
 
+/// @nodoc
 class _$ScheduleCopyWithImpl<$Res> implements $ScheduleCopyWith<$Res> {
   _$ScheduleCopyWithImpl(this._value, this._then);
 
@@ -2505,6 +2561,7 @@ class _$ScheduleCopyWithImpl<$Res> implements $ScheduleCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
   factory _$ScheduleCopyWith(_Schedule value, $Res Function(_Schedule) then) =
       __$ScheduleCopyWithImpl<$Res>;
@@ -2544,6 +2601,7 @@ abstract class _$ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
   $ElementCopyWith<$Res> get commentElement;
 }
 
+/// @nodoc
 class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
     implements _$ScheduleCopyWith<$Res> {
   __$ScheduleCopyWithImpl(_Schedule _value, $Res Function(_Schedule) _then)
@@ -2614,6 +2672,8 @@ class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Schedule extends _Schedule {
   _$_Schedule(
       {@required @JsonKey(defaultValue: 'Schedule') this.resourceType,
@@ -2840,9 +2900,11 @@ Slot _$SlotFromJson(Map<String, dynamic> json) {
   return _Slot.fromJson(json);
 }
 
+/// @nodoc
 class _$SlotTearOff {
   const _$SlotTearOff();
 
+// ignore: unused_element
   _Slot call(
       {@required
       @JsonKey(defaultValue: 'Slot')
@@ -2910,11 +2972,18 @@ class _$SlotTearOff {
       commentElement: commentElement,
     );
   }
+
+// ignore: unused_element
+  Slot fromJson(Map<String, Object> json) {
+    return Slot.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Slot = _$SlotTearOff();
 
+/// @nodoc
 mixin _$Slot {
   @JsonKey(defaultValue: 'Slot')
   String get resourceType;
@@ -2956,6 +3025,7 @@ mixin _$Slot {
   $SlotCopyWith<Slot> get copyWith;
 }
 
+/// @nodoc
 abstract class $SlotCopyWith<$Res> {
   factory $SlotCopyWith(Slot value, $Res Function(Slot) then) =
       _$SlotCopyWithImpl<$Res>;
@@ -3008,6 +3078,7 @@ abstract class $SlotCopyWith<$Res> {
   $ElementCopyWith<$Res> get commentElement;
 }
 
+/// @nodoc
 class _$SlotCopyWithImpl<$Res> implements $SlotCopyWith<$Res> {
   _$SlotCopyWithImpl(this._value, this._then);
 
@@ -3194,6 +3265,7 @@ class _$SlotCopyWithImpl<$Res> implements $SlotCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
   factory _$SlotCopyWith(_Slot value, $Res Function(_Slot) then) =
       __$SlotCopyWithImpl<$Res>;
@@ -3257,6 +3329,7 @@ abstract class _$SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
   $ElementCopyWith<$Res> get commentElement;
 }
 
+/// @nodoc
 class __$SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
     implements _$SlotCopyWith<$Res> {
   __$SlotCopyWithImpl(_Slot _value, $Res Function(_Slot) _then)
@@ -3345,6 +3418,8 @@ class __$SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Slot extends _Slot {
   _$_Slot(
       {@required

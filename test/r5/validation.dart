@@ -10,6 +10,7 @@ void r5Validation() async {
   var string = '';
   for (var file in await dir.list().toList()) {
     var contents = await File(file.path).readAsString();
+    print(file);
     var resource = Resource.fromJson(json.decode(contents));
     if (resource == null) {
       print(file);
@@ -78,7 +79,9 @@ Future<String> checkJsonEquality(Map<String, dynamic> input,
         }
       } else {
         if (input[k] != output[k]) {
-          if (isDate(input[k].toString())) {
+          print(input[k]);
+          print(output[k]);
+          if (isDate(input[k])) {
             if (DateTime.tryParse(input[k]) != DateTime.tryParse(output[k])) {
               string += '\n\n$file\n$source:$k:'
                   '${DateTime.tryParse(input[k])}:'

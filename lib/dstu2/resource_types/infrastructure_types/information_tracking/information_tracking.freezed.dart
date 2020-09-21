@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'information_tracking.dart';
 
@@ -12,9 +12,11 @@ Questionnaire _$QuestionnaireFromJson(Map<String, dynamic> json) {
   return _Questionnaire.fromJson(json);
 }
 
+/// @nodoc
 class _$QuestionnaireTearOff {
   const _$QuestionnaireTearOff();
 
+// ignore: unused_element
   _Questionnaire call(
       {@required
       @JsonKey(defaultValue: 'Questionnaire')
@@ -84,11 +86,18 @@ class _$QuestionnaireTearOff {
       group: group,
     );
   }
+
+// ignore: unused_element
+  Questionnaire fromJson(Map<String, Object> json) {
+    return Questionnaire.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Questionnaire = _$QuestionnaireTearOff();
 
+/// @nodoc
 mixin _$Questionnaire {
   @JsonKey(defaultValue: 'Questionnaire')
   String get resourceType;
@@ -132,6 +141,7 @@ mixin _$Questionnaire {
   $QuestionnaireCopyWith<Questionnaire> get copyWith;
 }
 
+/// @nodoc
 abstract class $QuestionnaireCopyWith<$Res> {
   factory $QuestionnaireCopyWith(
           Questionnaire value, $Res Function(Questionnaire) then) =
@@ -187,6 +197,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
   $QuestionnaireGroupCopyWith<$Res> get group;
 }
 
+/// @nodoc
 class _$QuestionnaireCopyWithImpl<$Res>
     implements $QuestionnaireCopyWith<$Res> {
   _$QuestionnaireCopyWithImpl(this._value, this._then);
@@ -380,6 +391,7 @@ class _$QuestionnaireCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$QuestionnaireCopyWith<$Res>
     implements $QuestionnaireCopyWith<$Res> {
   factory _$QuestionnaireCopyWith(
@@ -447,6 +459,7 @@ abstract class _$QuestionnaireCopyWith<$Res>
   $QuestionnaireGroupCopyWith<$Res> get group;
 }
 
+/// @nodoc
 class __$QuestionnaireCopyWithImpl<$Res>
     extends _$QuestionnaireCopyWithImpl<$Res>
     implements _$QuestionnaireCopyWith<$Res> {
@@ -543,6 +556,8 @@ class __$QuestionnaireCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Questionnaire extends _Questionnaire {
   _$_Questionnaire(
       {@required
@@ -891,9 +906,11 @@ QuestionnaireGroup _$QuestionnaireGroupFromJson(Map<String, dynamic> json) {
   return _QuestionnaireGroup.fromJson(json);
 }
 
+/// @nodoc
 class _$QuestionnaireGroupTearOff {
   const _$QuestionnaireGroupTearOff();
 
+// ignore: unused_element
   _QuestionnaireGroup call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -926,11 +943,18 @@ class _$QuestionnaireGroupTearOff {
       question: question,
     );
   }
+
+// ignore: unused_element
+  QuestionnaireGroup fromJson(Map<String, Object> json) {
+    return QuestionnaireGroup.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $QuestionnaireGroup = _$QuestionnaireGroupTearOff();
 
+/// @nodoc
 mixin _$QuestionnaireGroup {
   Id get id;
   @JsonKey(name: 'extension')
@@ -956,6 +980,7 @@ mixin _$QuestionnaireGroup {
   $QuestionnaireGroupCopyWith<QuestionnaireGroup> get copyWith;
 }
 
+/// @nodoc
 abstract class $QuestionnaireGroupCopyWith<$Res> {
   factory $QuestionnaireGroupCopyWith(
           QuestionnaireGroup value, $Res Function(QuestionnaireGroup) then) =
@@ -980,6 +1005,7 @@ abstract class $QuestionnaireGroupCopyWith<$Res> {
   $ElementCopyWith<$Res> get titleElement;
 }
 
+/// @nodoc
 class _$QuestionnaireGroupCopyWithImpl<$Res>
     implements $QuestionnaireGroupCopyWith<$Res> {
   _$QuestionnaireGroupCopyWithImpl(this._value, this._then);
@@ -1057,6 +1083,7 @@ class _$QuestionnaireGroupCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$QuestionnaireGroupCopyWith<$Res>
     implements $QuestionnaireGroupCopyWith<$Res> {
   factory _$QuestionnaireGroupCopyWith(
@@ -1085,6 +1112,7 @@ abstract class _$QuestionnaireGroupCopyWith<$Res>
   $ElementCopyWith<$Res> get titleElement;
 }
 
+/// @nodoc
 class __$QuestionnaireGroupCopyWithImpl<$Res>
     extends _$QuestionnaireGroupCopyWithImpl<$Res>
     implements _$QuestionnaireGroupCopyWith<$Res> {
@@ -1145,6 +1173,8 @@ class __$QuestionnaireGroupCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_QuestionnaireGroup extends _QuestionnaireGroup {
   _$_QuestionnaireGroup(
       {this.id,
@@ -1339,9 +1369,11 @@ QuestionnaireGroupQuestion _$QuestionnaireGroupQuestionFromJson(
   return _QuestionnaireGroupQuestion.fromJson(json);
 }
 
+/// @nodoc
 class _$QuestionnaireGroupQuestionTearOff {
   const _$QuestionnaireGroupQuestionTearOff();
 
+// ignore: unused_element
   _QuestionnaireGroupQuestion call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1374,11 +1406,18 @@ class _$QuestionnaireGroupQuestionTearOff {
       group: group,
     );
   }
+
+// ignore: unused_element
+  QuestionnaireGroupQuestion fromJson(Map<String, Object> json) {
+    return QuestionnaireGroupQuestion.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $QuestionnaireGroupQuestion = _$QuestionnaireGroupQuestionTearOff();
 
+/// @nodoc
 mixin _$QuestionnaireGroupQuestion {
   Id get id;
   @JsonKey(name: 'extension')
@@ -1404,6 +1443,7 @@ mixin _$QuestionnaireGroupQuestion {
   $QuestionnaireGroupQuestionCopyWith<QuestionnaireGroupQuestion> get copyWith;
 }
 
+/// @nodoc
 abstract class $QuestionnaireGroupQuestionCopyWith<$Res> {
   factory $QuestionnaireGroupQuestionCopyWith(QuestionnaireGroupQuestion value,
           $Res Function(QuestionnaireGroupQuestion) then) =
@@ -1428,6 +1468,7 @@ abstract class $QuestionnaireGroupQuestionCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get options;
 }
 
+/// @nodoc
 class _$QuestionnaireGroupQuestionCopyWithImpl<$Res>
     implements $QuestionnaireGroupQuestionCopyWith<$Res> {
   _$QuestionnaireGroupQuestionCopyWithImpl(this._value, this._then);
@@ -1501,6 +1542,7 @@ class _$QuestionnaireGroupQuestionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$QuestionnaireGroupQuestionCopyWith<$Res>
     implements $QuestionnaireGroupQuestionCopyWith<$Res> {
   factory _$QuestionnaireGroupQuestionCopyWith(
@@ -1530,6 +1572,7 @@ abstract class _$QuestionnaireGroupQuestionCopyWith<$Res>
   $ReferenceCopyWith<$Res> get options;
 }
 
+/// @nodoc
 class __$QuestionnaireGroupQuestionCopyWithImpl<$Res>
     extends _$QuestionnaireGroupQuestionCopyWithImpl<$Res>
     implements _$QuestionnaireGroupQuestionCopyWith<$Res> {
@@ -1587,6 +1630,8 @@ class __$QuestionnaireGroupQuestionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_QuestionnaireGroupQuestion extends _QuestionnaireGroupQuestion {
   _$_QuestionnaireGroupQuestion(
       {this.id,
@@ -1782,9 +1827,11 @@ QuestionnaireResponse _$QuestionnaireResponseFromJson(
   return _QuestionnaireResponse.fromJson(json);
 }
 
+/// @nodoc
 class _$QuestionnaireResponseTearOff {
   const _$QuestionnaireResponseTearOff();
 
+// ignore: unused_element
   _QuestionnaireResponse call(
       {@required
       @JsonKey(defaultValue: 'QuestionnaireResponse')
@@ -1845,11 +1892,18 @@ class _$QuestionnaireResponseTearOff {
       group: group,
     );
   }
+
+// ignore: unused_element
+  QuestionnaireResponse fromJson(Map<String, Object> json) {
+    return QuestionnaireResponse.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $QuestionnaireResponse = _$QuestionnaireResponseTearOff();
 
+/// @nodoc
 mixin _$QuestionnaireResponse {
   @JsonKey(defaultValue: 'QuestionnaireResponse')
   String get resourceType;
@@ -1888,6 +1942,7 @@ mixin _$QuestionnaireResponse {
   $QuestionnaireResponseCopyWith<QuestionnaireResponse> get copyWith;
 }
 
+/// @nodoc
 abstract class $QuestionnaireResponseCopyWith<$Res> {
   factory $QuestionnaireResponseCopyWith(QuestionnaireResponse value,
           $Res Function(QuestionnaireResponse) then) =
@@ -1941,6 +1996,7 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
   $QuestionnaireResponseGroupCopyWith<$Res> get group;
 }
 
+/// @nodoc
 class _$QuestionnaireResponseCopyWithImpl<$Res>
     implements $QuestionnaireResponseCopyWith<$Res> {
   _$QuestionnaireResponseCopyWithImpl(this._value, this._then);
@@ -2168,6 +2224,7 @@ class _$QuestionnaireResponseCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$QuestionnaireResponseCopyWith<$Res>
     implements $QuestionnaireResponseCopyWith<$Res> {
   factory _$QuestionnaireResponseCopyWith(_QuestionnaireResponse value,
@@ -2237,6 +2294,7 @@ abstract class _$QuestionnaireResponseCopyWith<$Res>
   $QuestionnaireResponseGroupCopyWith<$Res> get group;
 }
 
+/// @nodoc
 class __$QuestionnaireResponseCopyWithImpl<$Res>
     extends _$QuestionnaireResponseCopyWithImpl<$Res>
     implements _$QuestionnaireResponseCopyWith<$Res> {
@@ -2327,6 +2385,8 @@ class __$QuestionnaireResponseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   _$_QuestionnaireResponse(
       {@required
@@ -2640,9 +2700,11 @@ QuestionnaireResponseGroup _$QuestionnaireResponseGroupFromJson(
   return _QuestionnaireResponseGroup.fromJson(json);
 }
 
+/// @nodoc
 class _$QuestionnaireResponseGroupTearOff {
   const _$QuestionnaireResponseGroupTearOff();
 
+// ignore: unused_element
   _QuestionnaireResponseGroup call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2671,11 +2733,18 @@ class _$QuestionnaireResponseGroupTearOff {
       question: question,
     );
   }
+
+// ignore: unused_element
+  QuestionnaireResponseGroup fromJson(Map<String, Object> json) {
+    return QuestionnaireResponseGroup.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $QuestionnaireResponseGroup = _$QuestionnaireResponseGroupTearOff();
 
+/// @nodoc
 mixin _$QuestionnaireResponseGroup {
   Id get id;
   @JsonKey(name: 'extension')
@@ -2698,6 +2767,7 @@ mixin _$QuestionnaireResponseGroup {
   $QuestionnaireResponseGroupCopyWith<QuestionnaireResponseGroup> get copyWith;
 }
 
+/// @nodoc
 abstract class $QuestionnaireResponseGroupCopyWith<$Res> {
   factory $QuestionnaireResponseGroupCopyWith(QuestionnaireResponseGroup value,
           $Res Function(QuestionnaireResponseGroup) then) =
@@ -2721,6 +2791,7 @@ abstract class $QuestionnaireResponseGroupCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get subject;
 }
 
+/// @nodoc
 class _$QuestionnaireResponseGroupCopyWithImpl<$Res>
     implements $QuestionnaireResponseGroupCopyWith<$Res> {
   _$QuestionnaireResponseGroupCopyWithImpl(this._value, this._then);
@@ -2805,6 +2876,7 @@ class _$QuestionnaireResponseGroupCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$QuestionnaireResponseGroupCopyWith<$Res>
     implements $QuestionnaireResponseGroupCopyWith<$Res> {
   factory _$QuestionnaireResponseGroupCopyWith(
@@ -2834,6 +2906,7 @@ abstract class _$QuestionnaireResponseGroupCopyWith<$Res>
   $ReferenceCopyWith<$Res> get subject;
 }
 
+/// @nodoc
 class __$QuestionnaireResponseGroupCopyWithImpl<$Res>
     extends _$QuestionnaireResponseGroupCopyWithImpl<$Res>
     implements _$QuestionnaireResponseGroupCopyWith<$Res> {
@@ -2892,6 +2965,8 @@ class __$QuestionnaireResponseGroupCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_QuestionnaireResponseGroup extends _QuestionnaireResponseGroup {
   _$_QuestionnaireResponseGroup(
       {this.id,
@@ -3067,9 +3142,11 @@ QuestionnaireResponseGroupQuestion _$QuestionnaireResponseGroupQuestionFromJson(
   return _QuestionnaireResponseGroupQuestion.fromJson(json);
 }
 
+/// @nodoc
 class _$QuestionnaireResponseGroupQuestionTearOff {
   const _$QuestionnaireResponseGroupQuestionTearOff();
 
+// ignore: unused_element
   _QuestionnaireResponseGroupQuestion call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3090,12 +3167,19 @@ class _$QuestionnaireResponseGroupQuestionTearOff {
       answer: answer,
     );
   }
+
+// ignore: unused_element
+  QuestionnaireResponseGroupQuestion fromJson(Map<String, Object> json) {
+    return QuestionnaireResponseGroupQuestion.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $QuestionnaireResponseGroupQuestion =
     _$QuestionnaireResponseGroupQuestionTearOff();
 
+/// @nodoc
 mixin _$QuestionnaireResponseGroupQuestion {
   Id get id;
   @JsonKey(name: 'extension')
@@ -3114,6 +3198,7 @@ mixin _$QuestionnaireResponseGroupQuestion {
       QuestionnaireResponseGroupQuestion> get copyWith;
 }
 
+/// @nodoc
 abstract class $QuestionnaireResponseGroupQuestionCopyWith<$Res> {
   factory $QuestionnaireResponseGroupQuestionCopyWith(
           QuestionnaireResponseGroupQuestion value,
@@ -3132,6 +3217,7 @@ abstract class $QuestionnaireResponseGroupQuestionCopyWith<$Res> {
   $ElementCopyWith<$Res> get linkIdElement;
 }
 
+/// @nodoc
 class _$QuestionnaireResponseGroupQuestionCopyWithImpl<$Res>
     implements $QuestionnaireResponseGroupQuestionCopyWith<$Res> {
   _$QuestionnaireResponseGroupQuestionCopyWithImpl(this._value, this._then);
@@ -3184,6 +3270,7 @@ class _$QuestionnaireResponseGroupQuestionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$QuestionnaireResponseGroupQuestionCopyWith<$Res>
     implements $QuestionnaireResponseGroupQuestionCopyWith<$Res> {
   factory _$QuestionnaireResponseGroupQuestionCopyWith(
@@ -3205,6 +3292,7 @@ abstract class _$QuestionnaireResponseGroupQuestionCopyWith<$Res>
   $ElementCopyWith<$Res> get linkIdElement;
 }
 
+/// @nodoc
 class __$QuestionnaireResponseGroupQuestionCopyWithImpl<$Res>
     extends _$QuestionnaireResponseGroupQuestionCopyWithImpl<$Res>
     implements _$QuestionnaireResponseGroupQuestionCopyWith<$Res> {
@@ -3252,6 +3340,8 @@ class __$QuestionnaireResponseGroupQuestionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_QuestionnaireResponseGroupQuestion
     extends _QuestionnaireResponseGroupQuestion {
   _$_QuestionnaireResponseGroupQuestion(
@@ -3391,9 +3481,11 @@ QuestionnaireResponseQuestionAnswer
   return _QuestionnaireResponseQuestionAnswer.fromJson(json);
 }
 
+/// @nodoc
 class _$QuestionnaireResponseQuestionAnswerTearOff {
   const _$QuestionnaireResponseQuestionAnswerTearOff();
 
+// ignore: unused_element
   _QuestionnaireResponseQuestionAnswer call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3452,12 +3544,19 @@ class _$QuestionnaireResponseQuestionAnswerTearOff {
       group: group,
     );
   }
+
+// ignore: unused_element
+  QuestionnaireResponseQuestionAnswer fromJson(Map<String, Object> json) {
+    return QuestionnaireResponseQuestionAnswer.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $QuestionnaireResponseQuestionAnswer =
     _$QuestionnaireResponseQuestionAnswerTearOff();
 
+/// @nodoc
 mixin _$QuestionnaireResponseQuestionAnswer {
   Id get id;
   @JsonKey(name: 'extension')
@@ -3503,6 +3602,7 @@ mixin _$QuestionnaireResponseQuestionAnswer {
       QuestionnaireResponseQuestionAnswer> get copyWith;
 }
 
+/// @nodoc
 abstract class $QuestionnaireResponseQuestionAnswerCopyWith<$Res> {
   factory $QuestionnaireResponseQuestionAnswerCopyWith(
           QuestionnaireResponseQuestionAnswer value,
@@ -3552,6 +3652,7 @@ abstract class $QuestionnaireResponseQuestionAnswerCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get valueReference;
 }
 
+/// @nodoc
 class _$QuestionnaireResponseQuestionAnswerCopyWithImpl<$Res>
     implements $QuestionnaireResponseQuestionAnswerCopyWith<$Res> {
   _$QuestionnaireResponseQuestionAnswerCopyWithImpl(this._value, this._then);
@@ -3796,6 +3897,7 @@ class _$QuestionnaireResponseQuestionAnswerCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$QuestionnaireResponseQuestionAnswerCopyWith<$Res>
     implements $QuestionnaireResponseQuestionAnswerCopyWith<$Res> {
   factory _$QuestionnaireResponseQuestionAnswerCopyWith(
@@ -3860,6 +3962,7 @@ abstract class _$QuestionnaireResponseQuestionAnswerCopyWith<$Res>
   $ReferenceCopyWith<$Res> get valueReference;
 }
 
+/// @nodoc
 class __$QuestionnaireResponseQuestionAnswerCopyWithImpl<$Res>
     extends _$QuestionnaireResponseQuestionAnswerCopyWithImpl<$Res>
     implements _$QuestionnaireResponseQuestionAnswerCopyWith<$Res> {
@@ -3979,6 +4082,8 @@ class __$QuestionnaireResponseQuestionAnswerCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_QuestionnaireResponseQuestionAnswer
     extends _QuestionnaireResponseQuestionAnswer {
   _$_QuestionnaireResponseQuestionAnswer(
@@ -4316,9 +4421,11 @@ Provenance _$ProvenanceFromJson(Map<String, dynamic> json) {
   return _Provenance.fromJson(json);
 }
 
+/// @nodoc
 class _$ProvenanceTearOff {
   const _$ProvenanceTearOff();
 
+// ignore: unused_element
   _Provenance call(
       {@required @JsonKey(defaultValue: 'Provenance') String resourceType,
       Id id,
@@ -4369,11 +4476,18 @@ class _$ProvenanceTearOff {
       signature: signature,
     );
   }
+
+// ignore: unused_element
+  Provenance fromJson(Map<String, Object> json) {
+    return Provenance.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Provenance = _$ProvenanceTearOff();
 
+/// @nodoc
 mixin _$Provenance {
   @JsonKey(defaultValue: 'Provenance')
   String get resourceType;
@@ -4411,6 +4525,7 @@ mixin _$Provenance {
   $ProvenanceCopyWith<Provenance> get copyWith;
 }
 
+/// @nodoc
 abstract class $ProvenanceCopyWith<$Res> {
   factory $ProvenanceCopyWith(
           Provenance value, $Res Function(Provenance) then) =
@@ -4450,6 +4565,7 @@ abstract class $ProvenanceCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get location;
 }
 
+/// @nodoc
 class _$ProvenanceCopyWithImpl<$Res> implements $ProvenanceCopyWith<$Res> {
   _$ProvenanceCopyWithImpl(this._value, this._then);
 
@@ -4613,6 +4729,7 @@ class _$ProvenanceCopyWithImpl<$Res> implements $ProvenanceCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$ProvenanceCopyWith<$Res> implements $ProvenanceCopyWith<$Res> {
   factory _$ProvenanceCopyWith(
           _Provenance value, $Res Function(_Provenance) then) =
@@ -4661,6 +4778,7 @@ abstract class _$ProvenanceCopyWith<$Res> implements $ProvenanceCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get location;
 }
 
+/// @nodoc
 class __$ProvenanceCopyWithImpl<$Res> extends _$ProvenanceCopyWithImpl<$Res>
     implements _$ProvenanceCopyWith<$Res> {
   __$ProvenanceCopyWithImpl(
@@ -4747,6 +4865,8 @@ class __$ProvenanceCopyWithImpl<$Res> extends _$ProvenanceCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Provenance extends _Provenance {
   _$_Provenance(
       {@required @JsonKey(defaultValue: 'Provenance') this.resourceType,
@@ -5035,9 +5155,11 @@ ProvenanceAgent _$ProvenanceAgentFromJson(Map<String, dynamic> json) {
   return _ProvenanceAgent.fromJson(json);
 }
 
+/// @nodoc
 class _$ProvenanceAgentTearOff {
   const _$ProvenanceAgentTearOff();
 
+// ignore: unused_element
   _ProvenanceAgent call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5058,11 +5180,18 @@ class _$ProvenanceAgentTearOff {
       relatedAgent: relatedAgent,
     );
   }
+
+// ignore: unused_element
+  ProvenanceAgent fromJson(Map<String, Object> json) {
+    return ProvenanceAgent.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ProvenanceAgent = _$ProvenanceAgentTearOff();
 
+/// @nodoc
 mixin _$ProvenanceAgent {
   Id get id;
   @JsonKey(name: 'extension')
@@ -5080,6 +5209,7 @@ mixin _$ProvenanceAgent {
   $ProvenanceAgentCopyWith<ProvenanceAgent> get copyWith;
 }
 
+/// @nodoc
 abstract class $ProvenanceAgentCopyWith<$Res> {
   factory $ProvenanceAgentCopyWith(
           ProvenanceAgent value, $Res Function(ProvenanceAgent) then) =
@@ -5099,6 +5229,7 @@ abstract class $ProvenanceAgentCopyWith<$Res> {
   $IdentifierCopyWith<$Res> get userId;
 }
 
+/// @nodoc
 class _$ProvenanceAgentCopyWithImpl<$Res>
     implements $ProvenanceAgentCopyWith<$Res> {
   _$ProvenanceAgentCopyWithImpl(this._value, this._then);
@@ -5169,6 +5300,7 @@ class _$ProvenanceAgentCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ProvenanceAgentCopyWith<$Res>
     implements $ProvenanceAgentCopyWith<$Res> {
   factory _$ProvenanceAgentCopyWith(
@@ -5193,6 +5325,7 @@ abstract class _$ProvenanceAgentCopyWith<$Res>
   $IdentifierCopyWith<$Res> get userId;
 }
 
+/// @nodoc
 class __$ProvenanceAgentCopyWithImpl<$Res>
     extends _$ProvenanceAgentCopyWithImpl<$Res>
     implements _$ProvenanceAgentCopyWith<$Res> {
@@ -5236,6 +5369,8 @@ class __$ProvenanceAgentCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ProvenanceAgent extends _ProvenanceAgent {
   _$_ProvenanceAgent(
       {this.id,
@@ -5367,9 +5502,11 @@ ProvenanceEntity _$ProvenanceEntityFromJson(Map<String, dynamic> json) {
   return _ProvenanceEntity.fromJson(json);
 }
 
+/// @nodoc
 class _$ProvenanceEntityTearOff {
   const _$ProvenanceEntityTearOff();
 
+// ignore: unused_element
   _ProvenanceEntity call(
       {Id id,
       @JsonKey(name: 'extension')
@@ -5406,11 +5543,18 @@ class _$ProvenanceEntityTearOff {
       agent: agent,
     );
   }
+
+// ignore: unused_element
+  ProvenanceEntity fromJson(Map<String, Object> json) {
+    return ProvenanceEntity.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ProvenanceEntity = _$ProvenanceEntityTearOff();
 
+/// @nodoc
 mixin _$ProvenanceEntity {
   Id get id;
   @JsonKey(name: 'extension')
@@ -5435,6 +5579,7 @@ mixin _$ProvenanceEntity {
   $ProvenanceEntityCopyWith<ProvenanceEntity> get copyWith;
 }
 
+/// @nodoc
 abstract class $ProvenanceEntityCopyWith<$Res> {
   factory $ProvenanceEntityCopyWith(
           ProvenanceEntity value, $Res Function(ProvenanceEntity) then) =
@@ -5465,6 +5610,7 @@ abstract class $ProvenanceEntityCopyWith<$Res> {
   $ProvenanceAgentCopyWith<$Res> get agent;
 }
 
+/// @nodoc
 class _$ProvenanceEntityCopyWithImpl<$Res>
     implements $ProvenanceEntityCopyWith<$Res> {
   _$ProvenanceEntityCopyWithImpl(this._value, this._then);
@@ -5552,6 +5698,7 @@ class _$ProvenanceEntityCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ProvenanceEntityCopyWith<$Res>
     implements $ProvenanceEntityCopyWith<$Res> {
   factory _$ProvenanceEntityCopyWith(
@@ -5588,6 +5735,7 @@ abstract class _$ProvenanceEntityCopyWith<$Res>
   $ProvenanceAgentCopyWith<$Res> get agent;
 }
 
+/// @nodoc
 class __$ProvenanceEntityCopyWithImpl<$Res>
     extends _$ProvenanceEntityCopyWithImpl<$Res>
     implements _$ProvenanceEntityCopyWith<$Res> {
@@ -5638,6 +5786,8 @@ class __$ProvenanceEntityCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ProvenanceEntity extends _ProvenanceEntity {
   _$_ProvenanceEntity(
       {this.id,
@@ -5830,9 +5980,11 @@ ProvenanceAgentRelatedAgent _$ProvenanceAgentRelatedAgentFromJson(
   return _ProvenanceAgentRelatedAgent.fromJson(json);
 }
 
+/// @nodoc
 class _$ProvenanceAgentRelatedAgentTearOff {
   const _$ProvenanceAgentRelatedAgentTearOff();
 
+// ignore: unused_element
   _ProvenanceAgentRelatedAgent call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5847,11 +5999,18 @@ class _$ProvenanceAgentRelatedAgentTearOff {
       target: target,
     );
   }
+
+// ignore: unused_element
+  ProvenanceAgentRelatedAgent fromJson(Map<String, Object> json) {
+    return ProvenanceAgentRelatedAgent.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ProvenanceAgentRelatedAgent = _$ProvenanceAgentRelatedAgentTearOff();
 
+/// @nodoc
 mixin _$ProvenanceAgentRelatedAgent {
   Id get id;
   @JsonKey(name: 'extension')
@@ -5867,6 +6026,7 @@ mixin _$ProvenanceAgentRelatedAgent {
       get copyWith;
 }
 
+/// @nodoc
 abstract class $ProvenanceAgentRelatedAgentCopyWith<$Res> {
   factory $ProvenanceAgentRelatedAgentCopyWith(
           ProvenanceAgentRelatedAgent value,
@@ -5882,6 +6042,7 @@ abstract class $ProvenanceAgentRelatedAgentCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get type;
 }
 
+/// @nodoc
 class _$ProvenanceAgentRelatedAgentCopyWithImpl<$Res>
     implements $ProvenanceAgentRelatedAgentCopyWith<$Res> {
   _$ProvenanceAgentRelatedAgentCopyWithImpl(this._value, this._then);
@@ -5922,6 +6083,7 @@ class _$ProvenanceAgentRelatedAgentCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ProvenanceAgentRelatedAgentCopyWith<$Res>
     implements $ProvenanceAgentRelatedAgentCopyWith<$Res> {
   factory _$ProvenanceAgentRelatedAgentCopyWith(
@@ -5940,6 +6102,7 @@ abstract class _$ProvenanceAgentRelatedAgentCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get type;
 }
 
+/// @nodoc
 class __$ProvenanceAgentRelatedAgentCopyWithImpl<$Res>
     extends _$ProvenanceAgentRelatedAgentCopyWithImpl<$Res>
     implements _$ProvenanceAgentRelatedAgentCopyWith<$Res> {
@@ -5975,6 +6138,8 @@ class __$ProvenanceAgentRelatedAgentCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ProvenanceAgentRelatedAgent extends _ProvenanceAgentRelatedAgent {
   _$_ProvenanceAgentRelatedAgent(
       {this.id,
@@ -6082,9 +6247,11 @@ AuditEvent _$AuditEventFromJson(Map<String, dynamic> json) {
   return _AuditEvent.fromJson(json);
 }
 
+/// @nodoc
 class _$AuditEventTearOff {
   const _$AuditEventTearOff();
 
+// ignore: unused_element
   _AuditEvent call(
       {@required
       @JsonKey(defaultValue: 'AuditEvent')
@@ -6130,11 +6297,18 @@ class _$AuditEventTearOff {
       object: object,
     );
   }
+
+// ignore: unused_element
+  AuditEvent fromJson(Map<String, Object> json) {
+    return AuditEvent.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $AuditEvent = _$AuditEventTearOff();
 
+/// @nodoc
 mixin _$AuditEvent {
   @JsonKey(defaultValue: 'AuditEvent')
   String get resourceType;
@@ -6163,6 +6337,7 @@ mixin _$AuditEvent {
   $AuditEventCopyWith<AuditEvent> get copyWith;
 }
 
+/// @nodoc
 abstract class $AuditEventCopyWith<$Res> {
   factory $AuditEventCopyWith(
           AuditEvent value, $Res Function(AuditEvent) then) =
@@ -6192,6 +6367,7 @@ abstract class $AuditEventCopyWith<$Res> {
   $AuditEventSourceCopyWith<$Res> get source;
 }
 
+/// @nodoc
 class _$AuditEventCopyWithImpl<$Res> implements $AuditEventCopyWith<$Res> {
   _$AuditEventCopyWithImpl(this._value, this._then);
 
@@ -6313,6 +6489,7 @@ class _$AuditEventCopyWithImpl<$Res> implements $AuditEventCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$AuditEventCopyWith<$Res> implements $AuditEventCopyWith<$Res> {
   factory _$AuditEventCopyWith(
           _AuditEvent value, $Res Function(_AuditEvent) then) =
@@ -6349,6 +6526,7 @@ abstract class _$AuditEventCopyWith<$Res> implements $AuditEventCopyWith<$Res> {
   $AuditEventSourceCopyWith<$Res> get source;
 }
 
+/// @nodoc
 class __$AuditEventCopyWithImpl<$Res> extends _$AuditEventCopyWithImpl<$Res>
     implements _$AuditEventCopyWith<$Res> {
   __$AuditEventCopyWithImpl(
@@ -6413,6 +6591,8 @@ class __$AuditEventCopyWithImpl<$Res> extends _$AuditEventCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_AuditEvent extends _AuditEvent {
   _$_AuditEvent(
       {@required @JsonKey(defaultValue: 'AuditEvent') this.resourceType,
@@ -6634,9 +6814,11 @@ AuditEventEvent _$AuditEventEventFromJson(Map<String, dynamic> json) {
   return _AuditEventEvent.fromJson(json);
 }
 
+/// @nodoc
 class _$AuditEventEventTearOff {
   const _$AuditEventEventTearOff();
 
+// ignore: unused_element
   _AuditEventEvent call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -6661,11 +6843,18 @@ class _$AuditEventEventTearOff {
       purposeOfEvent: purposeOfEvent,
     );
   }
+
+// ignore: unused_element
+  AuditEventEvent fromJson(Map<String, Object> json) {
+    return AuditEventEvent.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $AuditEventEvent = _$AuditEventEventTearOff();
 
+/// @nodoc
 mixin _$AuditEventEvent {
   Id get id;
   @JsonKey(name: 'extension')
@@ -6685,6 +6874,7 @@ mixin _$AuditEventEvent {
   $AuditEventEventCopyWith<AuditEventEvent> get copyWith;
 }
 
+/// @nodoc
 abstract class $AuditEventEventCopyWith<$Res> {
   factory $AuditEventEventCopyWith(
           AuditEventEvent value, $Res Function(AuditEventEvent) then) =
@@ -6704,6 +6894,7 @@ abstract class $AuditEventEventCopyWith<$Res> {
   $CodingCopyWith<$Res> get type;
 }
 
+/// @nodoc
 class _$AuditEventEventCopyWithImpl<$Res>
     implements $AuditEventEventCopyWith<$Res> {
   _$AuditEventEventCopyWithImpl(this._value, this._then);
@@ -6757,6 +6948,7 @@ class _$AuditEventEventCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$AuditEventEventCopyWith<$Res>
     implements $AuditEventEventCopyWith<$Res> {
   factory _$AuditEventEventCopyWith(
@@ -6779,6 +6971,7 @@ abstract class _$AuditEventEventCopyWith<$Res>
   $CodingCopyWith<$Res> get type;
 }
 
+/// @nodoc
 class __$AuditEventEventCopyWithImpl<$Res>
     extends _$AuditEventEventCopyWithImpl<$Res>
     implements _$AuditEventEventCopyWith<$Res> {
@@ -6825,6 +7018,8 @@ class __$AuditEventEventCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_AuditEventEvent extends _AuditEventEvent {
   _$_AuditEventEvent(
       {this.id,
@@ -6979,9 +7174,11 @@ AuditEventParticipant _$AuditEventParticipantFromJson(
   return _AuditEventParticipant.fromJson(json);
 }
 
+/// @nodoc
 class _$AuditEventParticipantTearOff {
   const _$AuditEventParticipantTearOff();
 
+// ignore: unused_element
   _AuditEventParticipant call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -7016,11 +7213,18 @@ class _$AuditEventParticipantTearOff {
       purposeOfUse: purposeOfUse,
     );
   }
+
+// ignore: unused_element
+  AuditEventParticipant fromJson(Map<String, Object> json) {
+    return AuditEventParticipant.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $AuditEventParticipant = _$AuditEventParticipantTearOff();
 
+/// @nodoc
 mixin _$AuditEventParticipant {
   Id get id;
   @JsonKey(name: 'extension')
@@ -7045,6 +7249,7 @@ mixin _$AuditEventParticipant {
   $AuditEventParticipantCopyWith<AuditEventParticipant> get copyWith;
 }
 
+/// @nodoc
 abstract class $AuditEventParticipantCopyWith<$Res> {
   factory $AuditEventParticipantCopyWith(AuditEventParticipant value,
           $Res Function(AuditEventParticipant) then) =
@@ -7074,6 +7279,7 @@ abstract class $AuditEventParticipantCopyWith<$Res> {
   $AuditEventParticipantNetworkCopyWith<$Res> get network;
 }
 
+/// @nodoc
 class _$AuditEventParticipantCopyWithImpl<$Res>
     implements $AuditEventParticipantCopyWith<$Res> {
   _$AuditEventParticipantCopyWithImpl(this._value, this._then);
@@ -7190,6 +7396,7 @@ class _$AuditEventParticipantCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$AuditEventParticipantCopyWith<$Res>
     implements $AuditEventParticipantCopyWith<$Res> {
   factory _$AuditEventParticipantCopyWith(_AuditEventParticipant value,
@@ -7227,6 +7434,7 @@ abstract class _$AuditEventParticipantCopyWith<$Res>
   $AuditEventParticipantNetworkCopyWith<$Res> get network;
 }
 
+/// @nodoc
 class __$AuditEventParticipantCopyWithImpl<$Res>
     extends _$AuditEventParticipantCopyWithImpl<$Res>
     implements _$AuditEventParticipantCopyWith<$Res> {
@@ -7286,6 +7494,8 @@ class __$AuditEventParticipantCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_AuditEventParticipant extends _AuditEventParticipant {
   _$_AuditEventParticipant(
       {this.id,
@@ -7485,9 +7695,11 @@ AuditEventSource _$AuditEventSourceFromJson(Map<String, dynamic> json) {
   return _AuditEventSource.fromJson(json);
 }
 
+/// @nodoc
 class _$AuditEventSourceTearOff {
   const _$AuditEventSourceTearOff();
 
+// ignore: unused_element
   _AuditEventSource call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -7506,11 +7718,18 @@ class _$AuditEventSourceTearOff {
       type: type,
     );
   }
+
+// ignore: unused_element
+  AuditEventSource fromJson(Map<String, Object> json) {
+    return AuditEventSource.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $AuditEventSource = _$AuditEventSourceTearOff();
 
+/// @nodoc
 mixin _$AuditEventSource {
   Id get id;
   @JsonKey(name: 'extension')
@@ -7527,6 +7746,7 @@ mixin _$AuditEventSource {
   $AuditEventSourceCopyWith<AuditEventSource> get copyWith;
 }
 
+/// @nodoc
 abstract class $AuditEventSourceCopyWith<$Res> {
   factory $AuditEventSourceCopyWith(
           AuditEventSource value, $Res Function(AuditEventSource) then) =
@@ -7544,6 +7764,7 @@ abstract class $AuditEventSourceCopyWith<$Res> {
   $IdentifierCopyWith<$Res> get identifier;
 }
 
+/// @nodoc
 class _$AuditEventSourceCopyWithImpl<$Res>
     implements $AuditEventSourceCopyWith<$Res> {
   _$AuditEventSourceCopyWithImpl(this._value, this._then);
@@ -7600,6 +7821,7 @@ class _$AuditEventSourceCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$AuditEventSourceCopyWith<$Res>
     implements $AuditEventSourceCopyWith<$Res> {
   factory _$AuditEventSourceCopyWith(
@@ -7621,6 +7843,7 @@ abstract class _$AuditEventSourceCopyWith<$Res>
   $IdentifierCopyWith<$Res> get identifier;
 }
 
+/// @nodoc
 class __$AuditEventSourceCopyWithImpl<$Res>
     extends _$AuditEventSourceCopyWithImpl<$Res>
     implements _$AuditEventSourceCopyWith<$Res> {
@@ -7660,6 +7883,8 @@ class __$AuditEventSourceCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_AuditEventSource extends _AuditEventSource {
   _$_AuditEventSource(
       {this.id,
@@ -7782,9 +8007,11 @@ AuditEventObject _$AuditEventObjectFromJson(Map<String, dynamic> json) {
   return _AuditEventObject.fromJson(json);
 }
 
+/// @nodoc
 class _$AuditEventObjectTearOff {
   const _$AuditEventObjectTearOff();
 
+// ignore: unused_element
   _AuditEventObject call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -7817,11 +8044,18 @@ class _$AuditEventObjectTearOff {
       detail: detail,
     );
   }
+
+// ignore: unused_element
+  AuditEventObject fromJson(Map<String, Object> json) {
+    return AuditEventObject.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $AuditEventObject = _$AuditEventObjectTearOff();
 
+/// @nodoc
 mixin _$AuditEventObject {
   Id get id;
   @JsonKey(name: 'extension')
@@ -7844,6 +8078,7 @@ mixin _$AuditEventObject {
   $AuditEventObjectCopyWith<AuditEventObject> get copyWith;
 }
 
+/// @nodoc
 abstract class $AuditEventObjectCopyWith<$Res> {
   factory $AuditEventObjectCopyWith(
           AuditEventObject value, $Res Function(AuditEventObject) then) =
@@ -7872,6 +8107,7 @@ abstract class $AuditEventObjectCopyWith<$Res> {
   $ElementCopyWith<$Res> get queryElement;
 }
 
+/// @nodoc
 class _$AuditEventObjectCopyWithImpl<$Res>
     implements $AuditEventObjectCopyWith<$Res> {
   _$AuditEventObjectCopyWithImpl(this._value, this._then);
@@ -7989,6 +8225,7 @@ class _$AuditEventObjectCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$AuditEventObjectCopyWith<$Res>
     implements $AuditEventObjectCopyWith<$Res> {
   factory _$AuditEventObjectCopyWith(
@@ -8025,6 +8262,7 @@ abstract class _$AuditEventObjectCopyWith<$Res>
   $ElementCopyWith<$Res> get queryElement;
 }
 
+/// @nodoc
 class __$AuditEventObjectCopyWithImpl<$Res>
     extends _$AuditEventObjectCopyWithImpl<$Res>
     implements _$AuditEventObjectCopyWith<$Res> {
@@ -8085,6 +8323,8 @@ class __$AuditEventObjectCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_AuditEventObject extends _AuditEventObject {
   _$_AuditEventObject(
       {this.id,
@@ -8272,9 +8512,11 @@ AuditEventParticipantNetwork _$AuditEventParticipantNetworkFromJson(
   return _AuditEventParticipantNetwork.fromJson(json);
 }
 
+/// @nodoc
 class _$AuditEventParticipantNetworkTearOff {
   const _$AuditEventParticipantNetworkTearOff();
 
+// ignore: unused_element
   _AuditEventParticipantNetwork call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -8293,11 +8535,18 @@ class _$AuditEventParticipantNetworkTearOff {
       typeElement: typeElement,
     );
   }
+
+// ignore: unused_element
+  AuditEventParticipantNetwork fromJson(Map<String, Object> json) {
+    return AuditEventParticipantNetwork.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $AuditEventParticipantNetwork = _$AuditEventParticipantNetworkTearOff();
 
+/// @nodoc
 mixin _$AuditEventParticipantNetwork {
   Id get id;
   @JsonKey(name: 'extension')
@@ -8315,6 +8564,7 @@ mixin _$AuditEventParticipantNetwork {
       get copyWith;
 }
 
+/// @nodoc
 abstract class $AuditEventParticipantNetworkCopyWith<$Res> {
   factory $AuditEventParticipantNetworkCopyWith(
           AuditEventParticipantNetwork value,
@@ -8333,6 +8583,7 @@ abstract class $AuditEventParticipantNetworkCopyWith<$Res> {
   $ElementCopyWith<$Res> get typeElement;
 }
 
+/// @nodoc
 class _$AuditEventParticipantNetworkCopyWithImpl<$Res>
     implements $AuditEventParticipantNetworkCopyWith<$Res> {
   _$AuditEventParticipantNetworkCopyWithImpl(this._value, this._then);
@@ -8390,6 +8641,7 @@ class _$AuditEventParticipantNetworkCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$AuditEventParticipantNetworkCopyWith<$Res>
     implements $AuditEventParticipantNetworkCopyWith<$Res> {
   factory _$AuditEventParticipantNetworkCopyWith(
@@ -8412,6 +8664,7 @@ abstract class _$AuditEventParticipantNetworkCopyWith<$Res>
   $ElementCopyWith<$Res> get typeElement;
 }
 
+/// @nodoc
 class __$AuditEventParticipantNetworkCopyWithImpl<$Res>
     extends _$AuditEventParticipantNetworkCopyWithImpl<$Res>
     implements _$AuditEventParticipantNetworkCopyWith<$Res> {
@@ -8454,6 +8707,8 @@ class __$AuditEventParticipantNetworkCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_AuditEventParticipantNetwork extends _AuditEventParticipantNetwork {
   _$_AuditEventParticipantNetwork(
       {this.id,
@@ -8581,9 +8836,11 @@ AuditEventObjectDetail _$AuditEventObjectDetailFromJson(
   return _AuditEventObjectDetail.fromJson(json);
 }
 
+/// @nodoc
 class _$AuditEventObjectDetailTearOff {
   const _$AuditEventObjectDetailTearOff();
 
+// ignore: unused_element
   _AuditEventObjectDetail call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -8600,11 +8857,18 @@ class _$AuditEventObjectDetailTearOff {
       value: value,
     );
   }
+
+// ignore: unused_element
+  AuditEventObjectDetail fromJson(Map<String, Object> json) {
+    return AuditEventObjectDetail.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $AuditEventObjectDetail = _$AuditEventObjectDetailTearOff();
 
+/// @nodoc
 mixin _$AuditEventObjectDetail {
   Id get id;
   @JsonKey(name: 'extension')
@@ -8621,6 +8885,7 @@ mixin _$AuditEventObjectDetail {
   $AuditEventObjectDetailCopyWith<AuditEventObjectDetail> get copyWith;
 }
 
+/// @nodoc
 abstract class $AuditEventObjectDetailCopyWith<$Res> {
   factory $AuditEventObjectDetailCopyWith(AuditEventObjectDetail value,
           $Res Function(AuditEventObjectDetail) then) =
@@ -8636,6 +8901,7 @@ abstract class $AuditEventObjectDetailCopyWith<$Res> {
   $ElementCopyWith<$Res> get typeElement;
 }
 
+/// @nodoc
 class _$AuditEventObjectDetailCopyWithImpl<$Res>
     implements $AuditEventObjectDetailCopyWith<$Res> {
   _$AuditEventObjectDetailCopyWithImpl(this._value, this._then);
@@ -8679,6 +8945,7 @@ class _$AuditEventObjectDetailCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$AuditEventObjectDetailCopyWith<$Res>
     implements $AuditEventObjectDetailCopyWith<$Res> {
   factory _$AuditEventObjectDetailCopyWith(_AuditEventObjectDetail value,
@@ -8697,6 +8964,7 @@ abstract class _$AuditEventObjectDetailCopyWith<$Res>
   $ElementCopyWith<$Res> get typeElement;
 }
 
+/// @nodoc
 class __$AuditEventObjectDetailCopyWithImpl<$Res>
     extends _$AuditEventObjectDetailCopyWithImpl<$Res>
     implements _$AuditEventObjectDetailCopyWith<$Res> {
@@ -8733,6 +9001,8 @@ class __$AuditEventObjectDetailCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_AuditEventObjectDetail extends _AuditEventObjectDetail {
   _$_AuditEventObjectDetail(
       {this.id,

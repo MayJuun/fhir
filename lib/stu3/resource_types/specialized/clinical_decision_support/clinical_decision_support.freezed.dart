@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'clinical_decision_support.dart';
 
@@ -12,9 +12,11 @@ GuidanceResponse _$GuidanceResponseFromJson(Map<String, dynamic> json) {
   return _GuidanceResponse.fromJson(json);
 }
 
+/// @nodoc
 class _$GuidanceResponseTearOff {
   const _$GuidanceResponseTearOff();
 
+// ignore: unused_element
   _GuidanceResponse call(
       {@required @JsonKey(defaultValue: 'GuidanceResponse') String resourceType,
       Id id,
@@ -77,11 +79,18 @@ class _$GuidanceResponseTearOff {
       dataRequirement: dataRequirement,
     );
   }
+
+// ignore: unused_element
+  GuidanceResponse fromJson(Map<String, Object> json) {
+    return GuidanceResponse.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $GuidanceResponse = _$GuidanceResponseTearOff();
 
+/// @nodoc
 mixin _$GuidanceResponse {
   @JsonKey(defaultValue: 'GuidanceResponse')
   String get resourceType;
@@ -124,6 +133,7 @@ mixin _$GuidanceResponse {
   $GuidanceResponseCopyWith<GuidanceResponse> get copyWith;
 }
 
+/// @nodoc
 abstract class $GuidanceResponseCopyWith<$Res> {
   factory $GuidanceResponseCopyWith(
           GuidanceResponse value, $Res Function(GuidanceResponse) then) =
@@ -177,6 +187,7 @@ abstract class $GuidanceResponseCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get result;
 }
 
+/// @nodoc
 class _$GuidanceResponseCopyWithImpl<$Res>
     implements $GuidanceResponseCopyWith<$Res> {
   _$GuidanceResponseCopyWithImpl(this._value, this._then);
@@ -446,6 +457,7 @@ class _$GuidanceResponseCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$GuidanceResponseCopyWith<$Res>
     implements $GuidanceResponseCopyWith<$Res> {
   factory _$GuidanceResponseCopyWith(
@@ -517,6 +529,7 @@ abstract class _$GuidanceResponseCopyWith<$Res>
   $ReferenceCopyWith<$Res> get result;
 }
 
+/// @nodoc
 class __$GuidanceResponseCopyWithImpl<$Res>
     extends _$GuidanceResponseCopyWithImpl<$Res>
     implements _$GuidanceResponseCopyWith<$Res> {
@@ -628,6 +641,8 @@ class __$GuidanceResponseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_GuidanceResponse extends _GuidanceResponse {
   _$_GuidanceResponse(
       {@required @JsonKey(defaultValue: 'GuidanceResponse') this.resourceType,

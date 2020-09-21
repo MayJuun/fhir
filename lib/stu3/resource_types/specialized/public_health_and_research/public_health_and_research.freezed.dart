@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'public_health_and_research.dart';
 
@@ -12,9 +12,11 @@ ResearchStudy _$ResearchStudyFromJson(Map<String, dynamic> json) {
   return _ResearchStudy.fromJson(json);
 }
 
+/// @nodoc
 class _$ResearchStudyTearOff {
   const _$ResearchStudyTearOff();
 
+// ignore: unused_element
   _ResearchStudy call(
       {@required @JsonKey(defaultValue: 'ResearchStudy') String resourceType,
       Id id,
@@ -87,11 +89,18 @@ class _$ResearchStudyTearOff {
       arm: arm,
     );
   }
+
+// ignore: unused_element
+  ResearchStudy fromJson(Map<String, Object> json) {
+    return ResearchStudy.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ResearchStudy = _$ResearchStudyTearOff();
 
+/// @nodoc
 mixin _$ResearchStudy {
   @JsonKey(defaultValue: 'ResearchStudy')
   String get resourceType;
@@ -139,6 +148,7 @@ mixin _$ResearchStudy {
   $ResearchStudyCopyWith<ResearchStudy> get copyWith;
 }
 
+/// @nodoc
 abstract class $ResearchStudyCopyWith<$Res> {
   factory $ResearchStudyCopyWith(
           ResearchStudy value, $Res Function(ResearchStudy) then) =
@@ -192,6 +202,7 @@ abstract class $ResearchStudyCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get reasonStopped;
 }
 
+/// @nodoc
 class _$ResearchStudyCopyWithImpl<$Res>
     implements $ResearchStudyCopyWith<$Res> {
   _$ResearchStudyCopyWithImpl(this._value, this._then);
@@ -424,6 +435,7 @@ class _$ResearchStudyCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ResearchStudyCopyWith<$Res>
     implements $ResearchStudyCopyWith<$Res> {
   factory _$ResearchStudyCopyWith(
@@ -490,6 +502,7 @@ abstract class _$ResearchStudyCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get reasonStopped;
 }
 
+/// @nodoc
 class __$ResearchStudyCopyWithImpl<$Res>
     extends _$ResearchStudyCopyWithImpl<$Res>
     implements _$ResearchStudyCopyWith<$Res> {
@@ -615,6 +628,8 @@ class __$ResearchStudyCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ResearchStudy extends _ResearchStudy {
   _$_ResearchStudy(
       {@required @JsonKey(defaultValue: 'ResearchStudy') this.resourceType,
@@ -993,9 +1008,11 @@ ResearchStudyArm _$ResearchStudyArmFromJson(Map<String, dynamic> json) {
   return _ResearchStudyArm.fromJson(json);
 }
 
+/// @nodoc
 class _$ResearchStudyArmTearOff {
   const _$ResearchStudyArmTearOff();
 
+// ignore: unused_element
   _ResearchStudyArm call(
       {String name,
       @JsonKey(name: '_name') Element nameElement,
@@ -1010,11 +1027,18 @@ class _$ResearchStudyArmTearOff {
       descriptionElement: descriptionElement,
     );
   }
+
+// ignore: unused_element
+  ResearchStudyArm fromJson(Map<String, Object> json) {
+    return ResearchStudyArm.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ResearchStudyArm = _$ResearchStudyArmTearOff();
 
+/// @nodoc
 mixin _$ResearchStudyArm {
   String get name;
   @JsonKey(name: '_name')
@@ -1028,6 +1052,7 @@ mixin _$ResearchStudyArm {
   $ResearchStudyArmCopyWith<ResearchStudyArm> get copyWith;
 }
 
+/// @nodoc
 abstract class $ResearchStudyArmCopyWith<$Res> {
   factory $ResearchStudyArmCopyWith(
           ResearchStudyArm value, $Res Function(ResearchStudyArm) then) =
@@ -1044,6 +1069,7 @@ abstract class $ResearchStudyArmCopyWith<$Res> {
   $ElementCopyWith<$Res> get descriptionElement;
 }
 
+/// @nodoc
 class _$ResearchStudyArmCopyWithImpl<$Res>
     implements $ResearchStudyArmCopyWith<$Res> {
   _$ResearchStudyArmCopyWithImpl(this._value, this._then);
@@ -1104,6 +1130,7 @@ class _$ResearchStudyArmCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ResearchStudyArmCopyWith<$Res>
     implements $ResearchStudyArmCopyWith<$Res> {
   factory _$ResearchStudyArmCopyWith(
@@ -1125,6 +1152,7 @@ abstract class _$ResearchStudyArmCopyWith<$Res>
   $ElementCopyWith<$Res> get descriptionElement;
 }
 
+/// @nodoc
 class __$ResearchStudyArmCopyWithImpl<$Res>
     extends _$ResearchStudyArmCopyWithImpl<$Res>
     implements _$ResearchStudyArmCopyWith<$Res> {
@@ -1158,6 +1186,8 @@ class __$ResearchStudyArmCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ResearchStudyArm extends _ResearchStudyArm {
   _$_ResearchStudyArm(
       {this.name,
@@ -1259,9 +1289,11 @@ ResearchSubject _$ResearchSubjectFromJson(Map<String, dynamic> json) {
   return _ResearchSubject.fromJson(json);
 }
 
+/// @nodoc
 class _$ResearchSubjectTearOff {
   const _$ResearchSubjectTearOff();
 
+// ignore: unused_element
   _ResearchSubject call(
       {@required @JsonKey(defaultValue: 'ResearchSubject') String resourceType,
       Id id,
@@ -1310,11 +1342,18 @@ class _$ResearchSubjectTearOff {
       consent: consent,
     );
   }
+
+// ignore: unused_element
+  ResearchSubject fromJson(Map<String, Object> json) {
+    return ResearchSubject.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ResearchSubject = _$ResearchSubjectTearOff();
 
+/// @nodoc
 mixin _$ResearchSubject {
   @JsonKey(defaultValue: 'ResearchSubject')
   String get resourceType;
@@ -1350,6 +1389,7 @@ mixin _$ResearchSubject {
   $ResearchSubjectCopyWith<ResearchSubject> get copyWith;
 }
 
+/// @nodoc
 abstract class $ResearchSubjectCopyWith<$Res> {
   factory $ResearchSubjectCopyWith(
           ResearchSubject value, $Res Function(ResearchSubject) then) =
@@ -1392,6 +1432,7 @@ abstract class $ResearchSubjectCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get consent;
 }
 
+/// @nodoc
 class _$ResearchSubjectCopyWithImpl<$Res>
     implements $ResearchSubjectCopyWith<$Res> {
   _$ResearchSubjectCopyWithImpl(this._value, this._then);
@@ -1595,6 +1636,7 @@ class _$ResearchSubjectCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ResearchSubjectCopyWith<$Res>
     implements $ResearchSubjectCopyWith<$Res> {
   factory _$ResearchSubjectCopyWith(
@@ -1651,6 +1693,7 @@ abstract class _$ResearchSubjectCopyWith<$Res>
   $ReferenceCopyWith<$Res> get consent;
 }
 
+/// @nodoc
 class __$ResearchSubjectCopyWithImpl<$Res>
     extends _$ResearchSubjectCopyWithImpl<$Res>
     implements _$ResearchSubjectCopyWith<$Res> {
@@ -1737,6 +1780,8 @@ class __$ResearchSubjectCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ResearchSubject extends _ResearchSubject {
   _$_ResearchSubject(
       {@required @JsonKey(defaultValue: 'ResearchSubject') this.resourceType,

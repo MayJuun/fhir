@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'medication_and_immunization.dart';
 
@@ -12,9 +12,11 @@ Medication _$MedicationFromJson(Map<String, dynamic> json) {
   return _Medication.fromJson(json);
 }
 
+/// @nodoc
 class _$MedicationTearOff {
   const _$MedicationTearOff();
 
+// ignore: unused_element
   _Medication call(
       {@required @JsonKey(defaultValue: 'Medication') String resourceType,
       Id id,
@@ -51,11 +53,18 @@ class _$MedicationTearOff {
       package: package,
     );
   }
+
+// ignore: unused_element
+  Medication fromJson(Map<String, Object> json) {
+    return Medication.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Medication = _$MedicationTearOff();
 
+/// @nodoc
 mixin _$Medication {
   @JsonKey(defaultValue: 'Medication')
   String get resourceType;
@@ -82,6 +91,7 @@ mixin _$Medication {
   $MedicationCopyWith<Medication> get copyWith;
 }
 
+/// @nodoc
 abstract class $MedicationCopyWith<$Res> {
   factory $MedicationCopyWith(
           Medication value, $Res Function(Medication) then) =
@@ -114,6 +124,7 @@ abstract class $MedicationCopyWith<$Res> {
   $MedicationPackageCopyWith<$Res> get package;
 }
 
+/// @nodoc
 class _$MedicationCopyWithImpl<$Res> implements $MedicationCopyWith<$Res> {
   _$MedicationCopyWithImpl(this._value, this._then);
 
@@ -258,6 +269,7 @@ class _$MedicationCopyWithImpl<$Res> implements $MedicationCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$MedicationCopyWith<$Res> implements $MedicationCopyWith<$Res> {
   factory _$MedicationCopyWith(
           _Medication value, $Res Function(_Medication) then) =
@@ -299,6 +311,7 @@ abstract class _$MedicationCopyWith<$Res> implements $MedicationCopyWith<$Res> {
   $MedicationPackageCopyWith<$Res> get package;
 }
 
+/// @nodoc
 class __$MedicationCopyWithImpl<$Res> extends _$MedicationCopyWithImpl<$Res>
     implements _$MedicationCopyWith<$Res> {
   __$MedicationCopyWithImpl(
@@ -366,6 +379,8 @@ class __$MedicationCopyWithImpl<$Res> extends _$MedicationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Medication extends _Medication {
   _$_Medication(
       {@required @JsonKey(defaultValue: 'Medication') this.resourceType,
@@ -578,9 +593,11 @@ MedicationProduct _$MedicationProductFromJson(Map<String, dynamic> json) {
   return _MedicationProduct.fromJson(json);
 }
 
+/// @nodoc
 class _$MedicationProductTearOff {
   const _$MedicationProductTearOff();
 
+// ignore: unused_element
   _MedicationProduct call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -599,11 +616,18 @@ class _$MedicationProductTearOff {
       batch: batch,
     );
   }
+
+// ignore: unused_element
+  MedicationProduct fromJson(Map<String, Object> json) {
+    return MedicationProduct.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MedicationProduct = _$MedicationProductTearOff();
 
+/// @nodoc
 mixin _$MedicationProduct {
   Id get id;
   @JsonKey(name: 'extension')
@@ -619,6 +643,7 @@ mixin _$MedicationProduct {
   $MedicationProductCopyWith<MedicationProduct> get copyWith;
 }
 
+/// @nodoc
 abstract class $MedicationProductCopyWith<$Res> {
   factory $MedicationProductCopyWith(
           MedicationProduct value, $Res Function(MedicationProduct) then) =
@@ -635,6 +660,7 @@ abstract class $MedicationProductCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get form;
 }
 
+/// @nodoc
 class _$MedicationProductCopyWithImpl<$Res>
     implements $MedicationProductCopyWith<$Res> {
   _$MedicationProductCopyWithImpl(this._value, this._then);
@@ -685,6 +711,7 @@ class _$MedicationProductCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MedicationProductCopyWith<$Res>
     implements $MedicationProductCopyWith<$Res> {
   factory _$MedicationProductCopyWith(
@@ -704,6 +731,7 @@ abstract class _$MedicationProductCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get form;
 }
 
+/// @nodoc
 class __$MedicationProductCopyWithImpl<$Res>
     extends _$MedicationProductCopyWithImpl<$Res>
     implements _$MedicationProductCopyWith<$Res> {
@@ -747,6 +775,8 @@ class __$MedicationProductCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MedicationProduct extends _MedicationProduct {
   _$_MedicationProduct(
       {this.id,
@@ -867,9 +897,11 @@ MedicationProductIngredient _$MedicationProductIngredientFromJson(
   return _MedicationProductIngredient.fromJson(json);
 }
 
+/// @nodoc
 class _$MedicationProductIngredientTearOff {
   const _$MedicationProductIngredientTearOff();
 
+// ignore: unused_element
   _MedicationProductIngredient call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -884,11 +916,18 @@ class _$MedicationProductIngredientTearOff {
       amount: amount,
     );
   }
+
+// ignore: unused_element
+  MedicationProductIngredient fromJson(Map<String, Object> json) {
+    return MedicationProductIngredient.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MedicationProductIngredient = _$MedicationProductIngredientTearOff();
 
+/// @nodoc
 mixin _$MedicationProductIngredient {
   Id get id;
   @JsonKey(name: 'extension')
@@ -903,6 +942,7 @@ mixin _$MedicationProductIngredient {
       get copyWith;
 }
 
+/// @nodoc
 abstract class $MedicationProductIngredientCopyWith<$Res> {
   factory $MedicationProductIngredientCopyWith(
           MedicationProductIngredient value,
@@ -919,6 +959,7 @@ abstract class $MedicationProductIngredientCopyWith<$Res> {
   $RatioCopyWith<$Res> get amount;
 }
 
+/// @nodoc
 class _$MedicationProductIngredientCopyWithImpl<$Res>
     implements $MedicationProductIngredientCopyWith<$Res> {
   _$MedicationProductIngredientCopyWithImpl(this._value, this._then);
@@ -969,6 +1010,7 @@ class _$MedicationProductIngredientCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MedicationProductIngredientCopyWith<$Res>
     implements $MedicationProductIngredientCopyWith<$Res> {
   factory _$MedicationProductIngredientCopyWith(
@@ -989,6 +1031,7 @@ abstract class _$MedicationProductIngredientCopyWith<$Res>
   $RatioCopyWith<$Res> get amount;
 }
 
+/// @nodoc
 class __$MedicationProductIngredientCopyWithImpl<$Res>
     extends _$MedicationProductIngredientCopyWithImpl<$Res>
     implements _$MedicationProductIngredientCopyWith<$Res> {
@@ -1024,6 +1067,8 @@ class __$MedicationProductIngredientCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MedicationProductIngredient extends _MedicationProductIngredient {
   _$_MedicationProductIngredient(
       {this.id,
@@ -1128,9 +1173,11 @@ MedicationProductBatch _$MedicationProductBatchFromJson(
   return _MedicationProductBatch.fromJson(json);
 }
 
+/// @nodoc
 class _$MedicationProductBatchTearOff {
   const _$MedicationProductBatchTearOff();
 
+// ignore: unused_element
   _MedicationProductBatch call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1149,11 +1196,18 @@ class _$MedicationProductBatchTearOff {
       expirationDateElement: expirationDateElement,
     );
   }
+
+// ignore: unused_element
+  MedicationProductBatch fromJson(Map<String, Object> json) {
+    return MedicationProductBatch.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MedicationProductBatch = _$MedicationProductBatchTearOff();
 
+/// @nodoc
 mixin _$MedicationProductBatch {
   Id get id;
   @JsonKey(name: 'extension')
@@ -1170,6 +1224,7 @@ mixin _$MedicationProductBatch {
   $MedicationProductBatchCopyWith<MedicationProductBatch> get copyWith;
 }
 
+/// @nodoc
 abstract class $MedicationProductBatchCopyWith<$Res> {
   factory $MedicationProductBatchCopyWith(MedicationProductBatch value,
           $Res Function(MedicationProductBatch) then) =
@@ -1187,6 +1242,7 @@ abstract class $MedicationProductBatchCopyWith<$Res> {
   $ElementCopyWith<$Res> get expirationDateElement;
 }
 
+/// @nodoc
 class _$MedicationProductBatchCopyWithImpl<$Res>
     implements $MedicationProductBatchCopyWith<$Res> {
   _$MedicationProductBatchCopyWithImpl(this._value, this._then);
@@ -1247,6 +1303,7 @@ class _$MedicationProductBatchCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MedicationProductBatchCopyWith<$Res>
     implements $MedicationProductBatchCopyWith<$Res> {
   factory _$MedicationProductBatchCopyWith(_MedicationProductBatch value,
@@ -1268,6 +1325,7 @@ abstract class _$MedicationProductBatchCopyWith<$Res>
   $ElementCopyWith<$Res> get expirationDateElement;
 }
 
+/// @nodoc
 class __$MedicationProductBatchCopyWithImpl<$Res>
     extends _$MedicationProductBatchCopyWithImpl<$Res>
     implements _$MedicationProductBatchCopyWith<$Res> {
@@ -1311,6 +1369,8 @@ class __$MedicationProductBatchCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MedicationProductBatch extends _MedicationProductBatch {
   _$_MedicationProductBatch(
       {this.id,
@@ -1436,9 +1496,11 @@ MedicationPackage _$MedicationPackageFromJson(Map<String, dynamic> json) {
   return _MedicationPackage.fromJson(json);
 }
 
+/// @nodoc
 class _$MedicationPackageTearOff {
   const _$MedicationPackageTearOff();
 
+// ignore: unused_element
   _MedicationPackage call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1455,11 +1517,18 @@ class _$MedicationPackageTearOff {
       content: content,
     );
   }
+
+// ignore: unused_element
+  MedicationPackage fromJson(Map<String, Object> json) {
+    return MedicationPackage.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MedicationPackage = _$MedicationPackageTearOff();
 
+/// @nodoc
 mixin _$MedicationPackage {
   Id get id;
   @JsonKey(name: 'extension')
@@ -1474,6 +1543,7 @@ mixin _$MedicationPackage {
   $MedicationPackageCopyWith<MedicationPackage> get copyWith;
 }
 
+/// @nodoc
 abstract class $MedicationPackageCopyWith<$Res> {
   factory $MedicationPackageCopyWith(
           MedicationPackage value, $Res Function(MedicationPackage) then) =
@@ -1489,6 +1559,7 @@ abstract class $MedicationPackageCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get container;
 }
 
+/// @nodoc
 class _$MedicationPackageCopyWithImpl<$Res>
     implements $MedicationPackageCopyWith<$Res> {
   _$MedicationPackageCopyWithImpl(this._value, this._then);
@@ -1537,6 +1608,7 @@ class _$MedicationPackageCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MedicationPackageCopyWith<$Res>
     implements $MedicationPackageCopyWith<$Res> {
   factory _$MedicationPackageCopyWith(
@@ -1555,6 +1627,7 @@ abstract class _$MedicationPackageCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get container;
 }
 
+/// @nodoc
 class __$MedicationPackageCopyWithImpl<$Res>
     extends _$MedicationPackageCopyWithImpl<$Res>
     implements _$MedicationPackageCopyWith<$Res> {
@@ -1596,6 +1669,8 @@ class __$MedicationPackageCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MedicationPackage extends _MedicationPackage {
   _$_MedicationPackage(
       {this.id,
@@ -1707,9 +1782,11 @@ MedicationPackageContent _$MedicationPackageContentFromJson(
   return _MedicationPackageContent.fromJson(json);
 }
 
+/// @nodoc
 class _$MedicationPackageContentTearOff {
   const _$MedicationPackageContentTearOff();
 
+// ignore: unused_element
   _MedicationPackageContent call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1724,11 +1801,18 @@ class _$MedicationPackageContentTearOff {
       amount: amount,
     );
   }
+
+// ignore: unused_element
+  MedicationPackageContent fromJson(Map<String, Object> json) {
+    return MedicationPackageContent.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MedicationPackageContent = _$MedicationPackageContentTearOff();
 
+/// @nodoc
 mixin _$MedicationPackageContent {
   Id get id;
   @JsonKey(name: 'extension')
@@ -1742,6 +1826,7 @@ mixin _$MedicationPackageContent {
   $MedicationPackageContentCopyWith<MedicationPackageContent> get copyWith;
 }
 
+/// @nodoc
 abstract class $MedicationPackageContentCopyWith<$Res> {
   factory $MedicationPackageContentCopyWith(MedicationPackageContent value,
           $Res Function(MedicationPackageContent) then) =
@@ -1757,6 +1842,7 @@ abstract class $MedicationPackageContentCopyWith<$Res> {
   $QuantityCopyWith<$Res> get amount;
 }
 
+/// @nodoc
 class _$MedicationPackageContentCopyWithImpl<$Res>
     implements $MedicationPackageContentCopyWith<$Res> {
   _$MedicationPackageContentCopyWithImpl(this._value, this._then);
@@ -1807,6 +1893,7 @@ class _$MedicationPackageContentCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MedicationPackageContentCopyWith<$Res>
     implements $MedicationPackageContentCopyWith<$Res> {
   factory _$MedicationPackageContentCopyWith(_MedicationPackageContent value,
@@ -1826,6 +1913,7 @@ abstract class _$MedicationPackageContentCopyWith<$Res>
   $QuantityCopyWith<$Res> get amount;
 }
 
+/// @nodoc
 class __$MedicationPackageContentCopyWithImpl<$Res>
     extends _$MedicationPackageContentCopyWithImpl<$Res>
     implements _$MedicationPackageContentCopyWith<$Res> {
@@ -1860,6 +1948,8 @@ class __$MedicationPackageContentCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MedicationPackageContent extends _MedicationPackageContent {
   _$_MedicationPackageContent(
       {this.id,
@@ -1961,9 +2051,11 @@ MedicationOrder _$MedicationOrderFromJson(Map<String, dynamic> json) {
   return _MedicationOrder.fromJson(json);
 }
 
+/// @nodoc
 class _$MedicationOrderTearOff {
   const _$MedicationOrderTearOff();
 
+// ignore: unused_element
   _MedicationOrder call(
       {@required
       @JsonKey(defaultValue: 'MedicationOrder')
@@ -2030,11 +2122,18 @@ class _$MedicationOrderTearOff {
       priorPrescription: priorPrescription,
     );
   }
+
+// ignore: unused_element
+  MedicationOrder fromJson(Map<String, Object> json) {
+    return MedicationOrder.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MedicationOrder = _$MedicationOrderTearOff();
 
+/// @nodoc
 mixin _$MedicationOrder {
   @JsonKey(defaultValue: 'MedicationOrder')
   String get resourceType;
@@ -2074,6 +2173,7 @@ mixin _$MedicationOrder {
   $MedicationOrderCopyWith<MedicationOrder> get copyWith;
 }
 
+/// @nodoc
 abstract class $MedicationOrderCopyWith<$Res> {
   factory $MedicationOrderCopyWith(
           MedicationOrder value, $Res Function(MedicationOrder) then) =
@@ -2130,6 +2230,7 @@ abstract class $MedicationOrderCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get priorPrescription;
 }
 
+/// @nodoc
 class _$MedicationOrderCopyWithImpl<$Res>
     implements $MedicationOrderCopyWith<$Res> {
   _$MedicationOrderCopyWithImpl(this._value, this._then);
@@ -2393,6 +2494,7 @@ class _$MedicationOrderCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MedicationOrderCopyWith<$Res>
     implements $MedicationOrderCopyWith<$Res> {
   factory _$MedicationOrderCopyWith(
@@ -2466,6 +2568,7 @@ abstract class _$MedicationOrderCopyWith<$Res>
   $ReferenceCopyWith<$Res> get priorPrescription;
 }
 
+/// @nodoc
 class __$MedicationOrderCopyWithImpl<$Res>
     extends _$MedicationOrderCopyWithImpl<$Res>
     implements _$MedicationOrderCopyWith<$Res> {
@@ -2578,6 +2681,8 @@ class __$MedicationOrderCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MedicationOrder extends _MedicationOrder {
   _$_MedicationOrder(
       {@required @JsonKey(defaultValue: 'MedicationOrder') this.resourceType,
@@ -2910,9 +3015,11 @@ MedicationOrderDosageInstruction _$MedicationOrderDosageInstructionFromJson(
   return _MedicationOrderDosageInstruction.fromJson(json);
 }
 
+/// @nodoc
 class _$MedicationOrderDosageInstructionTearOff {
   const _$MedicationOrderDosageInstructionTearOff();
 
+// ignore: unused_element
   _MedicationOrderDosageInstruction call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2951,12 +3058,19 @@ class _$MedicationOrderDosageInstructionTearOff {
       maxDosePerPeriod: maxDosePerPeriod,
     );
   }
+
+// ignore: unused_element
+  MedicationOrderDosageInstruction fromJson(Map<String, Object> json) {
+    return MedicationOrderDosageInstruction.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MedicationOrderDosageInstruction =
     _$MedicationOrderDosageInstructionTearOff();
 
+/// @nodoc
 mixin _$MedicationOrderDosageInstruction {
   Id get id;
   @JsonKey(name: 'extension')
@@ -2982,6 +3096,7 @@ mixin _$MedicationOrderDosageInstruction {
       get copyWith;
 }
 
+/// @nodoc
 abstract class $MedicationOrderDosageInstructionCopyWith<$Res> {
   factory $MedicationOrderDosageInstructionCopyWith(
           MedicationOrderDosageInstruction value,
@@ -3020,6 +3135,7 @@ abstract class $MedicationOrderDosageInstructionCopyWith<$Res> {
   $RatioCopyWith<$Res> get maxDosePerPeriod;
 }
 
+/// @nodoc
 class _$MedicationOrderDosageInstructionCopyWithImpl<$Res>
     implements $MedicationOrderDosageInstructionCopyWith<$Res> {
   _$MedicationOrderDosageInstructionCopyWithImpl(this._value, this._then);
@@ -3210,6 +3326,7 @@ class _$MedicationOrderDosageInstructionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MedicationOrderDosageInstructionCopyWith<$Res>
     implements $MedicationOrderDosageInstructionCopyWith<$Res> {
   factory _$MedicationOrderDosageInstructionCopyWith(
@@ -3262,6 +3379,7 @@ abstract class _$MedicationOrderDosageInstructionCopyWith<$Res>
   $RatioCopyWith<$Res> get maxDosePerPeriod;
 }
 
+/// @nodoc
 class __$MedicationOrderDosageInstructionCopyWithImpl<$Res>
     extends _$MedicationOrderDosageInstructionCopyWithImpl<$Res>
     implements _$MedicationOrderDosageInstructionCopyWith<$Res> {
@@ -3335,6 +3453,8 @@ class __$MedicationOrderDosageInstructionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MedicationOrderDosageInstruction
     extends _MedicationOrderDosageInstruction {
   _$_MedicationOrderDosageInstruction(
@@ -3557,9 +3677,11 @@ MedicationOrderDispenseRequest _$MedicationOrderDispenseRequestFromJson(
   return _MedicationOrderDispenseRequest.fromJson(json);
 }
 
+/// @nodoc
 class _$MedicationOrderDispenseRequestTearOff {
   const _$MedicationOrderDispenseRequestTearOff();
 
+// ignore: unused_element
   _MedicationOrderDispenseRequest call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3582,12 +3704,19 @@ class _$MedicationOrderDispenseRequestTearOff {
       expectedSupplyDuration: expectedSupplyDuration,
     );
   }
+
+// ignore: unused_element
+  MedicationOrderDispenseRequest fromJson(Map<String, Object> json) {
+    return MedicationOrderDispenseRequest.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MedicationOrderDispenseRequest =
     _$MedicationOrderDispenseRequestTearOff();
 
+/// @nodoc
 mixin _$MedicationOrderDispenseRequest {
   Id get id;
   @JsonKey(name: 'extension')
@@ -3605,6 +3734,7 @@ mixin _$MedicationOrderDispenseRequest {
       get copyWith;
 }
 
+/// @nodoc
 abstract class $MedicationOrderDispenseRequestCopyWith<$Res> {
   factory $MedicationOrderDispenseRequestCopyWith(
           MedicationOrderDispenseRequest value,
@@ -3628,6 +3758,7 @@ abstract class $MedicationOrderDispenseRequestCopyWith<$Res> {
   $QuantityCopyWith<$Res> get expectedSupplyDuration;
 }
 
+/// @nodoc
 class _$MedicationOrderDispenseRequestCopyWithImpl<$Res>
     implements $MedicationOrderDispenseRequestCopyWith<$Res> {
   _$MedicationOrderDispenseRequestCopyWithImpl(this._value, this._then);
@@ -3727,6 +3858,7 @@ class _$MedicationOrderDispenseRequestCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MedicationOrderDispenseRequestCopyWith<$Res>
     implements $MedicationOrderDispenseRequestCopyWith<$Res> {
   factory _$MedicationOrderDispenseRequestCopyWith(
@@ -3757,6 +3889,7 @@ abstract class _$MedicationOrderDispenseRequestCopyWith<$Res>
   $QuantityCopyWith<$Res> get expectedSupplyDuration;
 }
 
+/// @nodoc
 class __$MedicationOrderDispenseRequestCopyWithImpl<$Res>
     extends _$MedicationOrderDispenseRequestCopyWithImpl<$Res>
     implements _$MedicationOrderDispenseRequestCopyWith<$Res> {
@@ -3810,6 +3943,8 @@ class __$MedicationOrderDispenseRequestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MedicationOrderDispenseRequest
     extends _MedicationOrderDispenseRequest {
   _$_MedicationOrderDispenseRequest(
@@ -3957,9 +4092,11 @@ MedicationOrderSubstitution _$MedicationOrderSubstitutionFromJson(
   return _MedicationOrderSubstitution.fromJson(json);
 }
 
+/// @nodoc
 class _$MedicationOrderSubstitutionTearOff {
   const _$MedicationOrderSubstitutionTearOff();
 
+// ignore: unused_element
   _MedicationOrderSubstitution call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3974,11 +4111,18 @@ class _$MedicationOrderSubstitutionTearOff {
       reason: reason,
     );
   }
+
+// ignore: unused_element
+  MedicationOrderSubstitution fromJson(Map<String, Object> json) {
+    return MedicationOrderSubstitution.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MedicationOrderSubstitution = _$MedicationOrderSubstitutionTearOff();
 
+/// @nodoc
 mixin _$MedicationOrderSubstitution {
   Id get id;
   @JsonKey(name: 'extension')
@@ -3993,6 +4137,7 @@ mixin _$MedicationOrderSubstitution {
       get copyWith;
 }
 
+/// @nodoc
 abstract class $MedicationOrderSubstitutionCopyWith<$Res> {
   factory $MedicationOrderSubstitutionCopyWith(
           MedicationOrderSubstitution value,
@@ -4009,6 +4154,7 @@ abstract class $MedicationOrderSubstitutionCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get reason;
 }
 
+/// @nodoc
 class _$MedicationOrderSubstitutionCopyWithImpl<$Res>
     implements $MedicationOrderSubstitutionCopyWith<$Res> {
   _$MedicationOrderSubstitutionCopyWithImpl(this._value, this._then);
@@ -4059,6 +4205,7 @@ class _$MedicationOrderSubstitutionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MedicationOrderSubstitutionCopyWith<$Res>
     implements $MedicationOrderSubstitutionCopyWith<$Res> {
   factory _$MedicationOrderSubstitutionCopyWith(
@@ -4079,6 +4226,7 @@ abstract class _$MedicationOrderSubstitutionCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get reason;
 }
 
+/// @nodoc
 class __$MedicationOrderSubstitutionCopyWithImpl<$Res>
     extends _$MedicationOrderSubstitutionCopyWithImpl<$Res>
     implements _$MedicationOrderSubstitutionCopyWith<$Res> {
@@ -4114,6 +4262,8 @@ class __$MedicationOrderSubstitutionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MedicationOrderSubstitution extends _MedicationOrderSubstitution {
   _$_MedicationOrderSubstitution(
       {this.id,
@@ -4218,9 +4368,11 @@ MedicationAdministration _$MedicationAdministrationFromJson(
   return _MedicationAdministration.fromJson(json);
 }
 
+/// @nodoc
 class _$MedicationAdministrationTearOff {
   const _$MedicationAdministrationTearOff();
 
+// ignore: unused_element
   _MedicationAdministration call(
       {@required
       @JsonKey(defaultValue: 'MedicationAdministration')
@@ -4294,11 +4446,18 @@ class _$MedicationAdministrationTearOff {
       dosage: dosage,
     );
   }
+
+// ignore: unused_element
+  MedicationAdministration fromJson(Map<String, Object> json) {
+    return MedicationAdministration.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MedicationAdministration = _$MedicationAdministrationTearOff();
 
+/// @nodoc
 mixin _$MedicationAdministration {
   @JsonKey(defaultValue: 'MedicationAdministration')
   String get resourceType;
@@ -4343,6 +4502,7 @@ mixin _$MedicationAdministration {
   $MedicationAdministrationCopyWith<MedicationAdministration> get copyWith;
 }
 
+/// @nodoc
 abstract class $MedicationAdministrationCopyWith<$Res> {
   factory $MedicationAdministrationCopyWith(MedicationAdministration value,
           $Res Function(MedicationAdministration) then) =
@@ -4402,6 +4562,7 @@ abstract class $MedicationAdministrationCopyWith<$Res> {
   $MedicationAdministrationDosageCopyWith<$Res> get dosage;
 }
 
+/// @nodoc
 class _$MedicationAdministrationCopyWithImpl<$Res>
     implements $MedicationAdministrationCopyWith<$Res> {
   _$MedicationAdministrationCopyWithImpl(this._value, this._then);
@@ -4659,6 +4820,7 @@ class _$MedicationAdministrationCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MedicationAdministrationCopyWith<$Res>
     implements $MedicationAdministrationCopyWith<$Res> {
   factory _$MedicationAdministrationCopyWith(_MedicationAdministration value,
@@ -4734,6 +4896,7 @@ abstract class _$MedicationAdministrationCopyWith<$Res>
   $MedicationAdministrationDosageCopyWith<$Res> get dosage;
 }
 
+/// @nodoc
 class __$MedicationAdministrationCopyWithImpl<$Res>
     extends _$MedicationAdministrationCopyWithImpl<$Res>
     implements _$MedicationAdministrationCopyWith<$Res> {
@@ -4853,6 +5016,8 @@ class __$MedicationAdministrationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MedicationAdministration extends _MedicationAdministration {
   _$_MedicationAdministration(
       {@required
@@ -5220,9 +5385,11 @@ MedicationAdministrationDosage _$MedicationAdministrationDosageFromJson(
   return _MedicationAdministrationDosage.fromJson(json);
 }
 
+/// @nodoc
 class _$MedicationAdministrationDosageTearOff {
   const _$MedicationAdministrationDosageTearOff();
 
+// ignore: unused_element
   _MedicationAdministrationDosage call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5251,12 +5418,19 @@ class _$MedicationAdministrationDosageTearOff {
       rateRange: rateRange,
     );
   }
+
+// ignore: unused_element
+  MedicationAdministrationDosage fromJson(Map<String, Object> json) {
+    return MedicationAdministrationDosage.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MedicationAdministrationDosage =
     _$MedicationAdministrationDosageTearOff();
 
+/// @nodoc
 mixin _$MedicationAdministrationDosage {
   Id get id;
   @JsonKey(name: 'extension')
@@ -5278,6 +5452,7 @@ mixin _$MedicationAdministrationDosage {
       get copyWith;
 }
 
+/// @nodoc
 abstract class $MedicationAdministrationDosageCopyWith<$Res> {
   factory $MedicationAdministrationDosageCopyWith(
           MedicationAdministrationDosage value,
@@ -5307,6 +5482,7 @@ abstract class $MedicationAdministrationDosageCopyWith<$Res> {
   $RangeCopyWith<$Res> get rateRange;
 }
 
+/// @nodoc
 class _$MedicationAdministrationDosageCopyWithImpl<$Res>
     implements $MedicationAdministrationDosageCopyWith<$Res> {
   _$MedicationAdministrationDosageCopyWithImpl(this._value, this._then);
@@ -5436,6 +5612,7 @@ class _$MedicationAdministrationDosageCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MedicationAdministrationDosageCopyWith<$Res>
     implements $MedicationAdministrationDosageCopyWith<$Res> {
   factory _$MedicationAdministrationDosageCopyWith(
@@ -5475,6 +5652,7 @@ abstract class _$MedicationAdministrationDosageCopyWith<$Res>
   $RangeCopyWith<$Res> get rateRange;
 }
 
+/// @nodoc
 class __$MedicationAdministrationDosageCopyWithImpl<$Res>
     extends _$MedicationAdministrationDosageCopyWithImpl<$Res>
     implements _$MedicationAdministrationDosageCopyWith<$Res> {
@@ -5529,6 +5707,8 @@ class __$MedicationAdministrationDosageCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MedicationAdministrationDosage
     extends _MedicationAdministrationDosage {
   _$_MedicationAdministrationDosage(
@@ -5702,9 +5882,11 @@ MedicationDispense _$MedicationDispenseFromJson(Map<String, dynamic> json) {
   return _MedicationDispense.fromJson(json);
 }
 
+/// @nodoc
 class _$MedicationDispenseTearOff {
   const _$MedicationDispenseTearOff();
 
+// ignore: unused_element
   _MedicationDispense call(
       {@required
       @JsonKey(defaultValue: 'MedicationDispense')
@@ -5780,11 +5962,18 @@ class _$MedicationDispenseTearOff {
       substitution: substitution,
     );
   }
+
+// ignore: unused_element
+  MedicationDispense fromJson(Map<String, Object> json) {
+    return MedicationDispense.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MedicationDispense = _$MedicationDispenseTearOff();
 
+/// @nodoc
 mixin _$MedicationDispense {
   @JsonKey(defaultValue: 'MedicationDispense')
   String get resourceType;
@@ -5830,6 +6019,7 @@ mixin _$MedicationDispense {
   $MedicationDispenseCopyWith<MedicationDispense> get copyWith;
 }
 
+/// @nodoc
 abstract class $MedicationDispenseCopyWith<$Res> {
   factory $MedicationDispenseCopyWith(
           MedicationDispense value, $Res Function(MedicationDispense) then) =
@@ -5894,6 +6084,7 @@ abstract class $MedicationDispenseCopyWith<$Res> {
   $MedicationDispenseSubstitutionCopyWith<$Res> get substitution;
 }
 
+/// @nodoc
 class _$MedicationDispenseCopyWithImpl<$Res>
     implements $MedicationDispenseCopyWith<$Res> {
   _$MedicationDispenseCopyWithImpl(this._value, this._then);
@@ -6185,6 +6376,7 @@ class _$MedicationDispenseCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MedicationDispenseCopyWith<$Res>
     implements $MedicationDispenseCopyWith<$Res> {
   factory _$MedicationDispenseCopyWith(
@@ -6268,6 +6460,7 @@ abstract class _$MedicationDispenseCopyWith<$Res>
   $MedicationDispenseSubstitutionCopyWith<$Res> get substitution;
 }
 
+/// @nodoc
 class __$MedicationDispenseCopyWithImpl<$Res>
     extends _$MedicationDispenseCopyWithImpl<$Res>
     implements _$MedicationDispenseCopyWith<$Res> {
@@ -6390,6 +6583,8 @@ class __$MedicationDispenseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MedicationDispense extends _MedicationDispense {
   _$_MedicationDispense(
       {@required @JsonKey(defaultValue: 'MedicationDispense') this.resourceType,
@@ -6753,9 +6948,11 @@ MedicationDispenseDosageInstruction
   return _MedicationDispenseDosageInstruction.fromJson(json);
 }
 
+/// @nodoc
 class _$MedicationDispenseDosageInstructionTearOff {
   const _$MedicationDispenseDosageInstructionTearOff();
 
+// ignore: unused_element
   _MedicationDispenseDosageInstruction call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -6794,12 +6991,19 @@ class _$MedicationDispenseDosageInstructionTearOff {
       maxDosePerPeriod: maxDosePerPeriod,
     );
   }
+
+// ignore: unused_element
+  MedicationDispenseDosageInstruction fromJson(Map<String, Object> json) {
+    return MedicationDispenseDosageInstruction.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MedicationDispenseDosageInstruction =
     _$MedicationDispenseDosageInstructionTearOff();
 
+/// @nodoc
 mixin _$MedicationDispenseDosageInstruction {
   Id get id;
   @JsonKey(name: 'extension')
@@ -6825,6 +7029,7 @@ mixin _$MedicationDispenseDosageInstruction {
       MedicationDispenseDosageInstruction> get copyWith;
 }
 
+/// @nodoc
 abstract class $MedicationDispenseDosageInstructionCopyWith<$Res> {
   factory $MedicationDispenseDosageInstructionCopyWith(
           MedicationDispenseDosageInstruction value,
@@ -6863,6 +7068,7 @@ abstract class $MedicationDispenseDosageInstructionCopyWith<$Res> {
   $RatioCopyWith<$Res> get maxDosePerPeriod;
 }
 
+/// @nodoc
 class _$MedicationDispenseDosageInstructionCopyWithImpl<$Res>
     implements $MedicationDispenseDosageInstructionCopyWith<$Res> {
   _$MedicationDispenseDosageInstructionCopyWithImpl(this._value, this._then);
@@ -7053,6 +7259,7 @@ class _$MedicationDispenseDosageInstructionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MedicationDispenseDosageInstructionCopyWith<$Res>
     implements $MedicationDispenseDosageInstructionCopyWith<$Res> {
   factory _$MedicationDispenseDosageInstructionCopyWith(
@@ -7105,6 +7312,7 @@ abstract class _$MedicationDispenseDosageInstructionCopyWith<$Res>
   $RatioCopyWith<$Res> get maxDosePerPeriod;
 }
 
+/// @nodoc
 class __$MedicationDispenseDosageInstructionCopyWithImpl<$Res>
     extends _$MedicationDispenseDosageInstructionCopyWithImpl<$Res>
     implements _$MedicationDispenseDosageInstructionCopyWith<$Res> {
@@ -7178,6 +7386,8 @@ class __$MedicationDispenseDosageInstructionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MedicationDispenseDosageInstruction
     extends _MedicationDispenseDosageInstruction {
   _$_MedicationDispenseDosageInstruction(
@@ -7402,9 +7612,11 @@ MedicationDispenseSubstitution _$MedicationDispenseSubstitutionFromJson(
   return _MedicationDispenseSubstitution.fromJson(json);
 }
 
+/// @nodoc
 class _$MedicationDispenseSubstitutionTearOff {
   const _$MedicationDispenseSubstitutionTearOff();
 
+// ignore: unused_element
   _MedicationDispenseSubstitution call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -7421,12 +7633,19 @@ class _$MedicationDispenseSubstitutionTearOff {
       responsibleParty: responsibleParty,
     );
   }
+
+// ignore: unused_element
+  MedicationDispenseSubstitution fromJson(Map<String, Object> json) {
+    return MedicationDispenseSubstitution.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MedicationDispenseSubstitution =
     _$MedicationDispenseSubstitutionTearOff();
 
+/// @nodoc
 mixin _$MedicationDispenseSubstitution {
   Id get id;
   @JsonKey(name: 'extension')
@@ -7442,6 +7661,7 @@ mixin _$MedicationDispenseSubstitution {
       get copyWith;
 }
 
+/// @nodoc
 abstract class $MedicationDispenseSubstitutionCopyWith<$Res> {
   factory $MedicationDispenseSubstitutionCopyWith(
           MedicationDispenseSubstitution value,
@@ -7458,6 +7678,7 @@ abstract class $MedicationDispenseSubstitutionCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get type;
 }
 
+/// @nodoc
 class _$MedicationDispenseSubstitutionCopyWithImpl<$Res>
     implements $MedicationDispenseSubstitutionCopyWith<$Res> {
   _$MedicationDispenseSubstitutionCopyWithImpl(this._value, this._then);
@@ -7503,6 +7724,7 @@ class _$MedicationDispenseSubstitutionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MedicationDispenseSubstitutionCopyWith<$Res>
     implements $MedicationDispenseSubstitutionCopyWith<$Res> {
   factory _$MedicationDispenseSubstitutionCopyWith(
@@ -7522,6 +7744,7 @@ abstract class _$MedicationDispenseSubstitutionCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get type;
 }
 
+/// @nodoc
 class __$MedicationDispenseSubstitutionCopyWithImpl<$Res>
     extends _$MedicationDispenseSubstitutionCopyWithImpl<$Res>
     implements _$MedicationDispenseSubstitutionCopyWith<$Res> {
@@ -7562,6 +7785,8 @@ class __$MedicationDispenseSubstitutionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MedicationDispenseSubstitution
     extends _MedicationDispenseSubstitution {
   _$_MedicationDispenseSubstitution(
@@ -7677,9 +7902,11 @@ MedicationStatement _$MedicationStatementFromJson(Map<String, dynamic> json) {
   return _MedicationStatement.fromJson(json);
 }
 
+/// @nodoc
 class _$MedicationStatementTearOff {
   const _$MedicationStatementTearOff();
 
+// ignore: unused_element
   _MedicationStatement call(
       {@required
       @JsonKey(defaultValue: 'MedicationStatement')
@@ -7756,11 +7983,18 @@ class _$MedicationStatementTearOff {
       dosage: dosage,
     );
   }
+
+// ignore: unused_element
+  MedicationStatement fromJson(Map<String, Object> json) {
+    return MedicationStatement.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MedicationStatement = _$MedicationStatementTearOff();
 
+/// @nodoc
 mixin _$MedicationStatement {
   @JsonKey(defaultValue: 'MedicationStatement')
   String get resourceType;
@@ -7806,6 +8040,7 @@ mixin _$MedicationStatement {
   $MedicationStatementCopyWith<MedicationStatement> get copyWith;
 }
 
+/// @nodoc
 abstract class $MedicationStatementCopyWith<$Res> {
   factory $MedicationStatementCopyWith(
           MedicationStatement value, $Res Function(MedicationStatement) then) =
@@ -7867,6 +8102,7 @@ abstract class $MedicationStatementCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get medicationReference;
 }
 
+/// @nodoc
 class _$MedicationStatementCopyWithImpl<$Res>
     implements $MedicationStatementCopyWith<$Res> {
   _$MedicationStatementCopyWithImpl(this._value, this._then);
@@ -8131,6 +8367,7 @@ class _$MedicationStatementCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MedicationStatementCopyWith<$Res>
     implements $MedicationStatementCopyWith<$Res> {
   factory _$MedicationStatementCopyWith(_MedicationStatement value,
@@ -8208,6 +8445,7 @@ abstract class _$MedicationStatementCopyWith<$Res>
   $ReferenceCopyWith<$Res> get medicationReference;
 }
 
+/// @nodoc
 class __$MedicationStatementCopyWithImpl<$Res>
     extends _$MedicationStatementCopyWithImpl<$Res>
     implements _$MedicationStatementCopyWith<$Res> {
@@ -8333,6 +8571,8 @@ class __$MedicationStatementCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MedicationStatement extends _MedicationStatement {
   _$_MedicationStatement(
       {@required
@@ -8710,9 +8950,11 @@ MedicationStatementDosage _$MedicationStatementDosageFromJson(
   return _MedicationStatementDosage.fromJson(json);
 }
 
+/// @nodoc
 class _$MedicationStatementDosageTearOff {
   const _$MedicationStatementDosageTearOff();
 
+// ignore: unused_element
   _MedicationStatementDosage call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -8749,11 +8991,18 @@ class _$MedicationStatementDosageTearOff {
       maxDosePerPeriod: maxDosePerPeriod,
     );
   }
+
+// ignore: unused_element
+  MedicationStatementDosage fromJson(Map<String, Object> json) {
+    return MedicationStatementDosage.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MedicationStatementDosage = _$MedicationStatementDosageTearOff();
 
+/// @nodoc
 mixin _$MedicationStatementDosage {
   Id get id;
   @JsonKey(name: 'extension')
@@ -8777,6 +9026,7 @@ mixin _$MedicationStatementDosage {
   $MedicationStatementDosageCopyWith<MedicationStatementDosage> get copyWith;
 }
 
+/// @nodoc
 abstract class $MedicationStatementDosageCopyWith<$Res> {
   factory $MedicationStatementDosageCopyWith(MedicationStatementDosage value,
           $Res Function(MedicationStatementDosage) then) =
@@ -8812,6 +9062,7 @@ abstract class $MedicationStatementDosageCopyWith<$Res> {
   $RatioCopyWith<$Res> get maxDosePerPeriod;
 }
 
+/// @nodoc
 class _$MedicationStatementDosageCopyWithImpl<$Res>
     implements $MedicationStatementDosageCopyWith<$Res> {
   _$MedicationStatementDosageCopyWithImpl(this._value, this._then);
@@ -8989,6 +9240,7 @@ class _$MedicationStatementDosageCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MedicationStatementDosageCopyWith<$Res>
     implements $MedicationStatementDosageCopyWith<$Res> {
   factory _$MedicationStatementDosageCopyWith(_MedicationStatementDosage value,
@@ -9037,6 +9289,7 @@ abstract class _$MedicationStatementDosageCopyWith<$Res>
   $RatioCopyWith<$Res> get maxDosePerPeriod;
 }
 
+/// @nodoc
 class __$MedicationStatementDosageCopyWithImpl<$Res>
     extends _$MedicationStatementDosageCopyWithImpl<$Res>
     implements _$MedicationStatementDosageCopyWith<$Res> {
@@ -9107,6 +9360,8 @@ class __$MedicationStatementDosageCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MedicationStatementDosage extends _MedicationStatementDosage {
   _$_MedicationStatementDosage(
       {this.id,
@@ -9315,9 +9570,11 @@ Immunization _$ImmunizationFromJson(Map<String, dynamic> json) {
   return _Immunization.fromJson(json);
 }
 
+/// @nodoc
 class _$ImmunizationTearOff {
   const _$ImmunizationTearOff();
 
+// ignore: unused_element
   _Immunization call(
       {@required
       @JsonKey(defaultValue: 'Immunization')
@@ -9410,11 +9667,18 @@ class _$ImmunizationTearOff {
       vaccinationProtocol: vaccinationProtocol,
     );
   }
+
+// ignore: unused_element
+  Immunization fromJson(Map<String, Object> json) {
+    return Immunization.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Immunization = _$ImmunizationTearOff();
 
+/// @nodoc
 mixin _$Immunization {
   @JsonKey(defaultValue: 'Immunization')
   String get resourceType;
@@ -9468,6 +9732,7 @@ mixin _$Immunization {
   $ImmunizationCopyWith<Immunization> get copyWith;
 }
 
+/// @nodoc
 abstract class $ImmunizationCopyWith<$Res> {
   factory $ImmunizationCopyWith(
           Immunization value, $Res Function(Immunization) then) =
@@ -9541,6 +9806,7 @@ abstract class $ImmunizationCopyWith<$Res> {
   $ImmunizationExplanationCopyWith<$Res> get explanation;
 }
 
+/// @nodoc
 class _$ImmunizationCopyWithImpl<$Res> implements $ImmunizationCopyWith<$Res> {
   _$ImmunizationCopyWithImpl(this._value, this._then);
 
@@ -9845,6 +10111,7 @@ class _$ImmunizationCopyWithImpl<$Res> implements $ImmunizationCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$ImmunizationCopyWith<$Res>
     implements $ImmunizationCopyWith<$Res> {
   factory _$ImmunizationCopyWith(
@@ -9938,6 +10205,7 @@ abstract class _$ImmunizationCopyWith<$Res>
   $ImmunizationExplanationCopyWith<$Res> get explanation;
 }
 
+/// @nodoc
 class __$ImmunizationCopyWithImpl<$Res> extends _$ImmunizationCopyWithImpl<$Res>
     implements _$ImmunizationCopyWith<$Res> {
   __$ImmunizationCopyWithImpl(
@@ -10065,6 +10333,8 @@ class __$ImmunizationCopyWithImpl<$Res> extends _$ImmunizationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Immunization extends _Immunization {
   _$_Immunization(
       {@required
@@ -10504,9 +10774,11 @@ ImmunizationExplanation _$ImmunizationExplanationFromJson(
   return _ImmunizationExplanation.fromJson(json);
 }
 
+/// @nodoc
 class _$ImmunizationExplanationTearOff {
   const _$ImmunizationExplanationTearOff();
 
+// ignore: unused_element
   _ImmunizationExplanation call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -10521,11 +10793,18 @@ class _$ImmunizationExplanationTearOff {
       reasonNotGiven: reasonNotGiven,
     );
   }
+
+// ignore: unused_element
+  ImmunizationExplanation fromJson(Map<String, Object> json) {
+    return ImmunizationExplanation.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ImmunizationExplanation = _$ImmunizationExplanationTearOff();
 
+/// @nodoc
 mixin _$ImmunizationExplanation {
   Id get id;
   @JsonKey(name: 'extension')
@@ -10538,6 +10817,7 @@ mixin _$ImmunizationExplanation {
   $ImmunizationExplanationCopyWith<ImmunizationExplanation> get copyWith;
 }
 
+/// @nodoc
 abstract class $ImmunizationExplanationCopyWith<$Res> {
   factory $ImmunizationExplanationCopyWith(ImmunizationExplanation value,
           $Res Function(ImmunizationExplanation) then) =
@@ -10550,6 +10830,7 @@ abstract class $ImmunizationExplanationCopyWith<$Res> {
       List<CodeableConcept> reasonNotGiven});
 }
 
+/// @nodoc
 class _$ImmunizationExplanationCopyWithImpl<$Res>
     implements $ImmunizationExplanationCopyWith<$Res> {
   _$ImmunizationExplanationCopyWithImpl(this._value, this._then);
@@ -10583,6 +10864,7 @@ class _$ImmunizationExplanationCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ImmunizationExplanationCopyWith<$Res>
     implements $ImmunizationExplanationCopyWith<$Res> {
   factory _$ImmunizationExplanationCopyWith(_ImmunizationExplanation value,
@@ -10597,6 +10879,7 @@ abstract class _$ImmunizationExplanationCopyWith<$Res>
       List<CodeableConcept> reasonNotGiven});
 }
 
+/// @nodoc
 class __$ImmunizationExplanationCopyWithImpl<$Res>
     extends _$ImmunizationExplanationCopyWithImpl<$Res>
     implements _$ImmunizationExplanationCopyWith<$Res> {
@@ -10634,6 +10917,8 @@ class __$ImmunizationExplanationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ImmunizationExplanation extends _ImmunizationExplanation {
   _$_ImmunizationExplanation(
       {this.id,
@@ -10733,9 +11018,11 @@ ImmunizationReaction _$ImmunizationReactionFromJson(Map<String, dynamic> json) {
   return _ImmunizationReaction.fromJson(json);
 }
 
+/// @nodoc
 class _$ImmunizationReactionTearOff {
   const _$ImmunizationReactionTearOff();
 
+// ignore: unused_element
   _ImmunizationReaction call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -10756,11 +11043,18 @@ class _$ImmunizationReactionTearOff {
       reportedElement: reportedElement,
     );
   }
+
+// ignore: unused_element
+  ImmunizationReaction fromJson(Map<String, Object> json) {
+    return ImmunizationReaction.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ImmunizationReaction = _$ImmunizationReactionTearOff();
 
+/// @nodoc
 mixin _$ImmunizationReaction {
   Id get id;
   @JsonKey(name: 'extension')
@@ -10778,6 +11072,7 @@ mixin _$ImmunizationReaction {
   $ImmunizationReactionCopyWith<ImmunizationReaction> get copyWith;
 }
 
+/// @nodoc
 abstract class $ImmunizationReactionCopyWith<$Res> {
   factory $ImmunizationReactionCopyWith(ImmunizationReaction value,
           $Res Function(ImmunizationReaction) then) =
@@ -10797,6 +11092,7 @@ abstract class $ImmunizationReactionCopyWith<$Res> {
   $ElementCopyWith<$Res> get reportedElement;
 }
 
+/// @nodoc
 class _$ImmunizationReactionCopyWithImpl<$Res>
     implements $ImmunizationReactionCopyWith<$Res> {
   _$ImmunizationReactionCopyWithImpl(this._value, this._then);
@@ -10866,6 +11162,7 @@ class _$ImmunizationReactionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ImmunizationReactionCopyWith<$Res>
     implements $ImmunizationReactionCopyWith<$Res> {
   factory _$ImmunizationReactionCopyWith(_ImmunizationReaction value,
@@ -10890,6 +11187,7 @@ abstract class _$ImmunizationReactionCopyWith<$Res>
   $ElementCopyWith<$Res> get reportedElement;
 }
 
+/// @nodoc
 class __$ImmunizationReactionCopyWithImpl<$Res>
     extends _$ImmunizationReactionCopyWithImpl<$Res>
     implements _$ImmunizationReactionCopyWith<$Res> {
@@ -10932,6 +11230,8 @@ class __$ImmunizationReactionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ImmunizationReaction extends _ImmunizationReaction {
   _$_ImmunizationReaction(
       {this.id,
@@ -11066,9 +11366,11 @@ ImmunizationVaccinationProtocol _$ImmunizationVaccinationProtocolFromJson(
   return _ImmunizationVaccinationProtocol.fromJson(json);
 }
 
+/// @nodoc
 class _$ImmunizationVaccinationProtocolTearOff {
   const _$ImmunizationVaccinationProtocolTearOff();
 
+// ignore: unused_element
   _ImmunizationVaccinationProtocol call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -11097,12 +11399,19 @@ class _$ImmunizationVaccinationProtocolTearOff {
       doseStatusReason: doseStatusReason,
     );
   }
+
+// ignore: unused_element
+  ImmunizationVaccinationProtocol fromJson(Map<String, Object> json) {
+    return ImmunizationVaccinationProtocol.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ImmunizationVaccinationProtocol =
     _$ImmunizationVaccinationProtocolTearOff();
 
+/// @nodoc
 mixin _$ImmunizationVaccinationProtocol {
   Id get id;
   @JsonKey(name: 'extension')
@@ -11126,6 +11435,7 @@ mixin _$ImmunizationVaccinationProtocol {
       get copyWith;
 }
 
+/// @nodoc
 abstract class $ImmunizationVaccinationProtocolCopyWith<$Res> {
   factory $ImmunizationVaccinationProtocolCopyWith(
           ImmunizationVaccinationProtocol value,
@@ -11151,6 +11461,7 @@ abstract class $ImmunizationVaccinationProtocolCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get doseStatusReason;
 }
 
+/// @nodoc
 class _$ImmunizationVaccinationProtocolCopyWithImpl<$Res>
     implements $ImmunizationVaccinationProtocolCopyWith<$Res> {
   _$ImmunizationVaccinationProtocolCopyWithImpl(this._value, this._then);
@@ -11249,6 +11560,7 @@ class _$ImmunizationVaccinationProtocolCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ImmunizationVaccinationProtocolCopyWith<$Res>
     implements $ImmunizationVaccinationProtocolCopyWith<$Res> {
   factory _$ImmunizationVaccinationProtocolCopyWith(
@@ -11280,6 +11592,7 @@ abstract class _$ImmunizationVaccinationProtocolCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get doseStatusReason;
 }
 
+/// @nodoc
 class __$ImmunizationVaccinationProtocolCopyWithImpl<$Res>
     extends _$ImmunizationVaccinationProtocolCopyWithImpl<$Res>
     implements _$ImmunizationVaccinationProtocolCopyWith<$Res> {
@@ -11343,6 +11656,8 @@ class __$ImmunizationVaccinationProtocolCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ImmunizationVaccinationProtocol
     extends _ImmunizationVaccinationProtocol {
   _$_ImmunizationVaccinationProtocol(
@@ -11525,9 +11840,11 @@ ImmunizationRecommendation _$ImmunizationRecommendationFromJson(
   return _ImmunizationRecommendation.fromJson(json);
 }
 
+/// @nodoc
 class _$ImmunizationRecommendationTearOff {
   const _$ImmunizationRecommendationTearOff();
 
+// ignore: unused_element
   _ImmunizationRecommendation call(
       {@required
       @JsonKey(defaultValue: 'ImmunizationRecommendation')
@@ -11569,11 +11886,18 @@ class _$ImmunizationRecommendationTearOff {
       recommendation: recommendation,
     );
   }
+
+// ignore: unused_element
+  ImmunizationRecommendation fromJson(Map<String, Object> json) {
+    return ImmunizationRecommendation.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ImmunizationRecommendation = _$ImmunizationRecommendationTearOff();
 
+/// @nodoc
 mixin _$ImmunizationRecommendation {
   @JsonKey(defaultValue: 'ImmunizationRecommendation')
   String get resourceType;
@@ -11600,6 +11924,7 @@ mixin _$ImmunizationRecommendation {
   $ImmunizationRecommendationCopyWith<ImmunizationRecommendation> get copyWith;
 }
 
+/// @nodoc
 abstract class $ImmunizationRecommendationCopyWith<$Res> {
   factory $ImmunizationRecommendationCopyWith(ImmunizationRecommendation value,
           $Res Function(ImmunizationRecommendation) then) =
@@ -11633,6 +11958,7 @@ abstract class $ImmunizationRecommendationCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get patient;
 }
 
+/// @nodoc
 class _$ImmunizationRecommendationCopyWithImpl<$Res>
     implements $ImmunizationRecommendationCopyWith<$Res> {
   _$ImmunizationRecommendationCopyWithImpl(this._value, this._then);
@@ -11744,6 +12070,7 @@ class _$ImmunizationRecommendationCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ImmunizationRecommendationCopyWith<$Res>
     implements $ImmunizationRecommendationCopyWith<$Res> {
   factory _$ImmunizationRecommendationCopyWith(
@@ -11785,6 +12112,7 @@ abstract class _$ImmunizationRecommendationCopyWith<$Res>
   $ReferenceCopyWith<$Res> get patient;
 }
 
+/// @nodoc
 class __$ImmunizationRecommendationCopyWithImpl<$Res>
     extends _$ImmunizationRecommendationCopyWithImpl<$Res>
     implements _$ImmunizationRecommendationCopyWith<$Res> {
@@ -11850,6 +12178,8 @@ class __$ImmunizationRecommendationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
   _$_ImmunizationRecommendation(
       {@required
@@ -12073,9 +12403,11 @@ ImmunizationRecommendationRecommendation
   return _ImmunizationRecommendationRecommendation.fromJson(json);
 }
 
+/// @nodoc
 class _$ImmunizationRecommendationRecommendationTearOff {
   const _$ImmunizationRecommendationRecommendationTearOff();
 
+// ignore: unused_element
   _ImmunizationRecommendationRecommendation call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -12102,12 +12434,19 @@ class _$ImmunizationRecommendationRecommendationTearOff {
       supportingPatientInfor: supportingPatientInfor,
     );
   }
+
+// ignore: unused_element
+  ImmunizationRecommendationRecommendation fromJson(Map<String, Object> json) {
+    return ImmunizationRecommendationRecommendation.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ImmunizationRecommendationRecommendation =
     _$ImmunizationRecommendationRecommendationTearOff();
 
+/// @nodoc
 mixin _$ImmunizationRecommendationRecommendation {
   Id get id;
   @JsonKey(name: 'extension')
@@ -12130,6 +12469,7 @@ mixin _$ImmunizationRecommendationRecommendation {
       ImmunizationRecommendationRecommendation> get copyWith;
 }
 
+/// @nodoc
 abstract class $ImmunizationRecommendationRecommendationCopyWith<$Res> {
   factory $ImmunizationRecommendationRecommendationCopyWith(
           ImmunizationRecommendationRecommendation value,
@@ -12153,6 +12493,7 @@ abstract class $ImmunizationRecommendationRecommendationCopyWith<$Res> {
   $ImmunizationRecommendationRecommendationProtocolCopyWith<$Res> get protocol;
 }
 
+/// @nodoc
 class _$ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
     implements $ImmunizationRecommendationRecommendationCopyWith<$Res> {
   _$ImmunizationRecommendationRecommendationCopyWithImpl(
@@ -12241,6 +12582,7 @@ class _$ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ImmunizationRecommendationRecommendationCopyWith<$Res>
     implements $ImmunizationRecommendationRecommendationCopyWith<$Res> {
   factory _$ImmunizationRecommendationRecommendationCopyWith(
@@ -12269,6 +12611,7 @@ abstract class _$ImmunizationRecommendationRecommendationCopyWith<$Res>
   $ImmunizationRecommendationRecommendationProtocolCopyWith<$Res> get protocol;
 }
 
+/// @nodoc
 class __$ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
     extends _$ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
     implements _$ImmunizationRecommendationRecommendationCopyWith<$Res> {
@@ -12331,6 +12674,8 @@ class __$ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ImmunizationRecommendationRecommendation
     extends _ImmunizationRecommendationRecommendation {
   _$_ImmunizationRecommendationRecommendation(
@@ -12509,9 +12854,11 @@ ImmunizationRecommendationRecommendationDateCriterion
   return _ImmunizationRecommendationRecommendationDateCriterion.fromJson(json);
 }
 
+/// @nodoc
 class _$ImmunizationRecommendationRecommendationDateCriterionTearOff {
   const _$ImmunizationRecommendationRecommendationDateCriterionTearOff();
 
+// ignore: unused_element
   _ImmunizationRecommendationRecommendationDateCriterion call(
       {Id id,
       FhirExtension extensio,
@@ -12528,12 +12875,20 @@ class _$ImmunizationRecommendationRecommendationDateCriterionTearOff {
       valueElement: valueElement,
     );
   }
+
+// ignore: unused_element
+  ImmunizationRecommendationRecommendationDateCriterion fromJson(
+      Map<String, Object> json) {
+    return ImmunizationRecommendationRecommendationDateCriterion.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ImmunizationRecommendationRecommendationDateCriterion =
     _$ImmunizationRecommendationRecommendationDateCriterionTearOff();
 
+/// @nodoc
 mixin _$ImmunizationRecommendationRecommendationDateCriterion {
   Id get id;
   FhirExtension get extensio;
@@ -12550,6 +12905,7 @@ mixin _$ImmunizationRecommendationRecommendationDateCriterion {
       ImmunizationRecommendationRecommendationDateCriterion> get copyWith;
 }
 
+/// @nodoc
 abstract class $ImmunizationRecommendationRecommendationDateCriterionCopyWith<
     $Res> {
   factory $ImmunizationRecommendationRecommendationDateCriterionCopyWith(
@@ -12571,6 +12927,7 @@ abstract class $ImmunizationRecommendationRecommendationDateCriterionCopyWith<
   $ElementCopyWith<$Res> get valueElement;
 }
 
+/// @nodoc
 class _$ImmunizationRecommendationRecommendationDateCriterionCopyWithImpl<$Res>
     implements
         $ImmunizationRecommendationRecommendationDateCriterionCopyWith<$Res> {
@@ -12646,6 +13003,7 @@ class _$ImmunizationRecommendationRecommendationDateCriterionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ImmunizationRecommendationRecommendationDateCriterionCopyWith<
         $Res>
     implements
@@ -12675,6 +13033,7 @@ abstract class _$ImmunizationRecommendationRecommendationDateCriterionCopyWith<
   $ElementCopyWith<$Res> get valueElement;
 }
 
+/// @nodoc
 class __$ImmunizationRecommendationRecommendationDateCriterionCopyWithImpl<$Res>
     extends _$ImmunizationRecommendationRecommendationDateCriterionCopyWithImpl<
         $Res>
@@ -12718,6 +13077,8 @@ class __$ImmunizationRecommendationRecommendationDateCriterionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ImmunizationRecommendationRecommendationDateCriterion
     extends _ImmunizationRecommendationRecommendationDateCriterion {
   _$_ImmunizationRecommendationRecommendationDateCriterion(
@@ -12844,9 +13205,11 @@ ImmunizationRecommendationRecommendationProtocol
   return _ImmunizationRecommendationRecommendationProtocol.fromJson(json);
 }
 
+/// @nodoc
 class _$ImmunizationRecommendationRecommendationProtocolTearOff {
   const _$ImmunizationRecommendationRecommendationProtocolTearOff();
 
+// ignore: unused_element
   _ImmunizationRecommendationRecommendationProtocol call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -12867,12 +13230,20 @@ class _$ImmunizationRecommendationRecommendationProtocolTearOff {
       seriesElement: seriesElement,
     );
   }
+
+// ignore: unused_element
+  ImmunizationRecommendationRecommendationProtocol fromJson(
+      Map<String, Object> json) {
+    return ImmunizationRecommendationRecommendationProtocol.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ImmunizationRecommendationRecommendationProtocol =
     _$ImmunizationRecommendationRecommendationProtocolTearOff();
 
+/// @nodoc
 mixin _$ImmunizationRecommendationRecommendationProtocol {
   Id get id;
   @JsonKey(name: 'extension')
@@ -12890,6 +13261,7 @@ mixin _$ImmunizationRecommendationRecommendationProtocol {
       ImmunizationRecommendationRecommendationProtocol> get copyWith;
 }
 
+/// @nodoc
 abstract class $ImmunizationRecommendationRecommendationProtocolCopyWith<$Res> {
   factory $ImmunizationRecommendationRecommendationProtocolCopyWith(
           ImmunizationRecommendationRecommendationProtocol value,
@@ -12911,6 +13283,7 @@ abstract class $ImmunizationRecommendationRecommendationProtocolCopyWith<$Res> {
   $ElementCopyWith<$Res> get seriesElement;
 }
 
+/// @nodoc
 class _$ImmunizationRecommendationRecommendationProtocolCopyWithImpl<$Res>
     implements $ImmunizationRecommendationRecommendationProtocolCopyWith<$Res> {
   _$ImmunizationRecommendationRecommendationProtocolCopyWithImpl(
@@ -12984,6 +13357,7 @@ class _$ImmunizationRecommendationRecommendationProtocolCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ImmunizationRecommendationRecommendationProtocolCopyWith<$Res>
     implements $ImmunizationRecommendationRecommendationProtocolCopyWith<$Res> {
   factory _$ImmunizationRecommendationRecommendationProtocolCopyWith(
@@ -13010,6 +13384,7 @@ abstract class _$ImmunizationRecommendationRecommendationProtocolCopyWith<$Res>
   $ElementCopyWith<$Res> get seriesElement;
 }
 
+/// @nodoc
 class __$ImmunizationRecommendationRecommendationProtocolCopyWithImpl<$Res>
     extends _$ImmunizationRecommendationRecommendationProtocolCopyWithImpl<$Res>
     implements
@@ -13061,6 +13436,8 @@ class __$ImmunizationRecommendationRecommendationProtocolCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ImmunizationRecommendationRecommendationProtocol
     extends _ImmunizationRecommendationRecommendationProtocol {
   _$_ImmunizationRecommendationRecommendationProtocol(

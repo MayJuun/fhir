@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'quality_reporting.dart';
 
@@ -12,9 +12,11 @@ Measure _$MeasureFromJson(Map<String, dynamic> json) {
   return _Measure.fromJson(json);
 }
 
+/// @nodoc
 class _$MeasureTearOff {
   const _$MeasureTearOff();
 
+// ignore: unused_element
   _Measure call(
       {@required
       @JsonKey(defaultValue: 'Measure')
@@ -191,11 +193,18 @@ class _$MeasureTearOff {
       supplementalData: supplementalData,
     );
   }
+
+// ignore: unused_element
+  Measure fromJson(Map<String, Object> json) {
+    return Measure.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Measure = _$MeasureTearOff();
 
+/// @nodoc
 mixin _$Measure {
   @JsonKey(defaultValue: 'Measure')
   String get resourceType;
@@ -301,6 +310,7 @@ mixin _$Measure {
   $MeasureCopyWith<Measure> get copyWith;
 }
 
+/// @nodoc
 abstract class $MeasureCopyWith<$Res> {
   factory $MeasureCopyWith(Measure value, $Res Function(Measure) then) =
       _$MeasureCopyWithImpl<$Res>;
@@ -436,6 +446,7 @@ abstract class $MeasureCopyWith<$Res> {
   $ElementCopyWith<$Res> get setElement;
 }
 
+/// @nodoc
 class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
   _$MeasureCopyWithImpl(this._value, this._then);
 
@@ -977,6 +988,7 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
   factory _$MeasureCopyWith(_Measure value, $Res Function(_Measure) then) =
       __$MeasureCopyWithImpl<$Res>;
@@ -1142,6 +1154,7 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
   $ElementCopyWith<$Res> get setElement;
 }
 
+/// @nodoc
 class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
     implements _$MeasureCopyWith<$Res> {
   __$MeasureCopyWithImpl(_Measure _value, $Res Function(_Measure) _then)
@@ -1393,6 +1406,8 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Measure extends _Measure {
   _$_Measure(
       {@required
@@ -2167,9 +2182,11 @@ MeasureGroup _$MeasureGroupFromJson(Map<String, dynamic> json) {
   return _MeasureGroup.fromJson(json);
 }
 
+/// @nodoc
 class _$MeasureGroupTearOff {
   const _$MeasureGroupTearOff();
 
+// ignore: unused_element
   _MeasureGroup call(
       {@required Identifier identifier,
       String name,
@@ -2188,11 +2205,18 @@ class _$MeasureGroupTearOff {
       stratifier: stratifier,
     );
   }
+
+// ignore: unused_element
+  MeasureGroup fromJson(Map<String, Object> json) {
+    return MeasureGroup.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MeasureGroup = _$MeasureGroupTearOff();
 
+/// @nodoc
 mixin _$MeasureGroup {
   Identifier get identifier;
   String get name;
@@ -2208,6 +2232,7 @@ mixin _$MeasureGroup {
   $MeasureGroupCopyWith<MeasureGroup> get copyWith;
 }
 
+/// @nodoc
 abstract class $MeasureGroupCopyWith<$Res> {
   factory $MeasureGroupCopyWith(
           MeasureGroup value, $Res Function(MeasureGroup) then) =
@@ -2226,6 +2251,7 @@ abstract class $MeasureGroupCopyWith<$Res> {
   $ElementCopyWith<$Res> get descriptionElement;
 }
 
+/// @nodoc
 class _$MeasureGroupCopyWithImpl<$Res> implements $MeasureGroupCopyWith<$Res> {
   _$MeasureGroupCopyWithImpl(this._value, this._then);
 
@@ -2294,6 +2320,7 @@ class _$MeasureGroupCopyWithImpl<$Res> implements $MeasureGroupCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$MeasureGroupCopyWith<$Res>
     implements $MeasureGroupCopyWith<$Res> {
   factory _$MeasureGroupCopyWith(
@@ -2317,6 +2344,7 @@ abstract class _$MeasureGroupCopyWith<$Res>
   $ElementCopyWith<$Res> get descriptionElement;
 }
 
+/// @nodoc
 class __$MeasureGroupCopyWithImpl<$Res> extends _$MeasureGroupCopyWithImpl<$Res>
     implements _$MeasureGroupCopyWith<$Res> {
   __$MeasureGroupCopyWithImpl(
@@ -2358,6 +2386,8 @@ class __$MeasureGroupCopyWithImpl<$Res> extends _$MeasureGroupCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MeasureGroup extends _MeasureGroup {
   _$_MeasureGroup(
       {@required this.identifier,
@@ -2480,9 +2510,11 @@ MeasurePopulation _$MeasurePopulationFromJson(Map<String, dynamic> json) {
   return _MeasurePopulation.fromJson(json);
 }
 
+/// @nodoc
 class _$MeasurePopulationTearOff {
   const _$MeasurePopulationTearOff();
 
+// ignore: unused_element
   _MeasurePopulation call(
       {Identifier identifier,
       CodeableConcept code,
@@ -2503,11 +2535,18 @@ class _$MeasurePopulationTearOff {
       criteriaElement: criteriaElement,
     );
   }
+
+// ignore: unused_element
+  MeasurePopulation fromJson(Map<String, Object> json) {
+    return MeasurePopulation.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MeasurePopulation = _$MeasurePopulationTearOff();
 
+/// @nodoc
 mixin _$MeasurePopulation {
   Identifier get identifier;
   CodeableConcept get code;
@@ -2525,6 +2564,7 @@ mixin _$MeasurePopulation {
   $MeasurePopulationCopyWith<MeasurePopulation> get copyWith;
 }
 
+/// @nodoc
 abstract class $MeasurePopulationCopyWith<$Res> {
   factory $MeasurePopulationCopyWith(
           MeasurePopulation value, $Res Function(MeasurePopulation) then) =
@@ -2546,6 +2586,7 @@ abstract class $MeasurePopulationCopyWith<$Res> {
   $ElementCopyWith<$Res> get criteriaElement;
 }
 
+/// @nodoc
 class _$MeasurePopulationCopyWithImpl<$Res>
     implements $MeasurePopulationCopyWith<$Res> {
   _$MeasurePopulationCopyWithImpl(this._value, this._then);
@@ -2635,6 +2676,7 @@ class _$MeasurePopulationCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MeasurePopulationCopyWith<$Res>
     implements $MeasurePopulationCopyWith<$Res> {
   factory _$MeasurePopulationCopyWith(
@@ -2663,6 +2705,7 @@ abstract class _$MeasurePopulationCopyWith<$Res>
   $ElementCopyWith<$Res> get criteriaElement;
 }
 
+/// @nodoc
 class __$MeasurePopulationCopyWithImpl<$Res>
     extends _$MeasurePopulationCopyWithImpl<$Res>
     implements _$MeasurePopulationCopyWith<$Res> {
@@ -2705,6 +2748,8 @@ class __$MeasurePopulationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MeasurePopulation extends _MeasurePopulation {
   _$_MeasurePopulation(
       {this.identifier,
@@ -2838,9 +2883,11 @@ MeasureStratifier _$MeasureStratifierFromJson(Map<String, dynamic> json) {
   return _MeasureStratifier.fromJson(json);
 }
 
+/// @nodoc
 class _$MeasureStratifierTearOff {
   const _$MeasureStratifierTearOff();
 
+// ignore: unused_element
   _MeasureStratifier call(
       {Identifier identifier,
       String criteria,
@@ -2855,11 +2902,18 @@ class _$MeasureStratifierTearOff {
       pathElement: pathElement,
     );
   }
+
+// ignore: unused_element
+  MeasureStratifier fromJson(Map<String, Object> json) {
+    return MeasureStratifier.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MeasureStratifier = _$MeasureStratifierTearOff();
 
+/// @nodoc
 mixin _$MeasureStratifier {
   Identifier get identifier;
   String get criteria;
@@ -2873,6 +2927,7 @@ mixin _$MeasureStratifier {
   $MeasureStratifierCopyWith<MeasureStratifier> get copyWith;
 }
 
+/// @nodoc
 abstract class $MeasureStratifierCopyWith<$Res> {
   factory $MeasureStratifierCopyWith(
           MeasureStratifier value, $Res Function(MeasureStratifier) then) =
@@ -2889,6 +2944,7 @@ abstract class $MeasureStratifierCopyWith<$Res> {
   $ElementCopyWith<$Res> get pathElement;
 }
 
+/// @nodoc
 class _$MeasureStratifierCopyWithImpl<$Res>
     implements $MeasureStratifierCopyWith<$Res> {
   _$MeasureStratifierCopyWithImpl(this._value, this._then);
@@ -2949,6 +3005,7 @@ class _$MeasureStratifierCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MeasureStratifierCopyWith<$Res>
     implements $MeasureStratifierCopyWith<$Res> {
   factory _$MeasureStratifierCopyWith(
@@ -2970,6 +3027,7 @@ abstract class _$MeasureStratifierCopyWith<$Res>
   $ElementCopyWith<$Res> get pathElement;
 }
 
+/// @nodoc
 class __$MeasureStratifierCopyWithImpl<$Res>
     extends _$MeasureStratifierCopyWithImpl<$Res>
     implements _$MeasureStratifierCopyWith<$Res> {
@@ -3003,6 +3061,8 @@ class __$MeasureStratifierCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MeasureStratifier extends _MeasureStratifier {
   _$_MeasureStratifier(
       {this.identifier,
@@ -3105,9 +3165,11 @@ MeasureSupplementalData _$MeasureSupplementalDataFromJson(
   return _MeasureSupplementalData.fromJson(json);
 }
 
+/// @nodoc
 class _$MeasureSupplementalDataTearOff {
   const _$MeasureSupplementalDataTearOff();
 
+// ignore: unused_element
   _MeasureSupplementalData call(
       {Identifier identifier,
       List<CodeableConcept> usage,
@@ -3124,11 +3186,18 @@ class _$MeasureSupplementalDataTearOff {
       pathElement: pathElement,
     );
   }
+
+// ignore: unused_element
+  MeasureSupplementalData fromJson(Map<String, Object> json) {
+    return MeasureSupplementalData.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MeasureSupplementalData = _$MeasureSupplementalDataTearOff();
 
+/// @nodoc
 mixin _$MeasureSupplementalData {
   Identifier get identifier;
   List<CodeableConcept> get usage;
@@ -3143,6 +3212,7 @@ mixin _$MeasureSupplementalData {
   $MeasureSupplementalDataCopyWith<MeasureSupplementalData> get copyWith;
 }
 
+/// @nodoc
 abstract class $MeasureSupplementalDataCopyWith<$Res> {
   factory $MeasureSupplementalDataCopyWith(MeasureSupplementalData value,
           $Res Function(MeasureSupplementalData) then) =
@@ -3160,6 +3230,7 @@ abstract class $MeasureSupplementalDataCopyWith<$Res> {
   $ElementCopyWith<$Res> get pathElement;
 }
 
+/// @nodoc
 class _$MeasureSupplementalDataCopyWithImpl<$Res>
     implements $MeasureSupplementalDataCopyWith<$Res> {
   _$MeasureSupplementalDataCopyWithImpl(this._value, this._then);
@@ -3222,6 +3293,7 @@ class _$MeasureSupplementalDataCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MeasureSupplementalDataCopyWith<$Res>
     implements $MeasureSupplementalDataCopyWith<$Res> {
   factory _$MeasureSupplementalDataCopyWith(_MeasureSupplementalData value,
@@ -3244,6 +3316,7 @@ abstract class _$MeasureSupplementalDataCopyWith<$Res>
   $ElementCopyWith<$Res> get pathElement;
 }
 
+/// @nodoc
 class __$MeasureSupplementalDataCopyWithImpl<$Res>
     extends _$MeasureSupplementalDataCopyWithImpl<$Res>
     implements _$MeasureSupplementalDataCopyWith<$Res> {
@@ -3280,6 +3353,8 @@ class __$MeasureSupplementalDataCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MeasureSupplementalData extends _MeasureSupplementalData {
   _$_MeasureSupplementalData(
       {this.identifier,
@@ -3392,9 +3467,11 @@ MeasureReport _$MeasureReportFromJson(Map<String, dynamic> json) {
   return _MeasureReport.fromJson(json);
 }
 
+/// @nodoc
 class _$MeasureReportTearOff {
   const _$MeasureReportTearOff();
 
+// ignore: unused_element
   _MeasureReport call(
       {@required @JsonKey(defaultValue: 'MeasureReport') String resourceType,
       Id id,
@@ -3447,11 +3524,18 @@ class _$MeasureReportTearOff {
       evaluatedResources: evaluatedResources,
     );
   }
+
+// ignore: unused_element
+  MeasureReport fromJson(Map<String, Object> json) {
+    return MeasureReport.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MeasureReport = _$MeasureReportTearOff();
 
+/// @nodoc
 mixin _$MeasureReport {
   @JsonKey(defaultValue: 'MeasureReport')
   String get resourceType;
@@ -3489,6 +3573,7 @@ mixin _$MeasureReport {
   $MeasureReportCopyWith<MeasureReport> get copyWith;
 }
 
+/// @nodoc
 abstract class $MeasureReportCopyWith<$Res> {
   factory $MeasureReportCopyWith(
           MeasureReport value, $Res Function(MeasureReport) then) =
@@ -3534,6 +3619,7 @@ abstract class $MeasureReportCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get evaluatedResources;
 }
 
+/// @nodoc
 class _$MeasureReportCopyWithImpl<$Res>
     implements $MeasureReportCopyWith<$Res> {
   _$MeasureReportCopyWithImpl(this._value, this._then);
@@ -3751,6 +3837,7 @@ class _$MeasureReportCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MeasureReportCopyWith<$Res>
     implements $MeasureReportCopyWith<$Res> {
   factory _$MeasureReportCopyWith(
@@ -3811,6 +3898,7 @@ abstract class _$MeasureReportCopyWith<$Res>
   $ReferenceCopyWith<$Res> get evaluatedResources;
 }
 
+/// @nodoc
 class __$MeasureReportCopyWithImpl<$Res>
     extends _$MeasureReportCopyWithImpl<$Res>
     implements _$MeasureReportCopyWith<$Res> {
@@ -3901,6 +3989,8 @@ class __$MeasureReportCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MeasureReport extends _MeasureReport {
   _$_MeasureReport(
       {@required @JsonKey(defaultValue: 'MeasureReport') this.resourceType,
@@ -4198,9 +4288,11 @@ MeasureReportGroup _$MeasureReportGroupFromJson(Map<String, dynamic> json) {
   return _MeasureReportGroup.fromJson(json);
 }
 
+/// @nodoc
 class _$MeasureReportGroupTearOff {
   const _$MeasureReportGroupTearOff();
 
+// ignore: unused_element
   _MeasureReportGroup call(
       {@required Identifier identifier,
       List<MeasureReportPopulation> population,
@@ -4215,11 +4307,18 @@ class _$MeasureReportGroupTearOff {
       stratifier: stratifier,
     );
   }
+
+// ignore: unused_element
+  MeasureReportGroup fromJson(Map<String, Object> json) {
+    return MeasureReportGroup.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MeasureReportGroup = _$MeasureReportGroupTearOff();
 
+/// @nodoc
 mixin _$MeasureReportGroup {
   Identifier get identifier;
   List<MeasureReportPopulation> get population;
@@ -4232,6 +4331,7 @@ mixin _$MeasureReportGroup {
   $MeasureReportGroupCopyWith<MeasureReportGroup> get copyWith;
 }
 
+/// @nodoc
 abstract class $MeasureReportGroupCopyWith<$Res> {
   factory $MeasureReportGroupCopyWith(
           MeasureReportGroup value, $Res Function(MeasureReportGroup) then) =
@@ -4247,6 +4347,7 @@ abstract class $MeasureReportGroupCopyWith<$Res> {
   $ElementCopyWith<$Res> get measureScoreElement;
 }
 
+/// @nodoc
 class _$MeasureReportGroupCopyWithImpl<$Res>
     implements $MeasureReportGroupCopyWith<$Res> {
   _$MeasureReportGroupCopyWithImpl(this._value, this._then);
@@ -4302,6 +4403,7 @@ class _$MeasureReportGroupCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MeasureReportGroupCopyWith<$Res>
     implements $MeasureReportGroupCopyWith<$Res> {
   factory _$MeasureReportGroupCopyWith(
@@ -4321,6 +4423,7 @@ abstract class _$MeasureReportGroupCopyWith<$Res>
   $ElementCopyWith<$Res> get measureScoreElement;
 }
 
+/// @nodoc
 class __$MeasureReportGroupCopyWithImpl<$Res>
     extends _$MeasureReportGroupCopyWithImpl<$Res>
     implements _$MeasureReportGroupCopyWith<$Res> {
@@ -4359,6 +4462,8 @@ class __$MeasureReportGroupCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MeasureReportGroup extends _MeasureReportGroup {
   _$_MeasureReportGroup(
       {@required this.identifier,
@@ -4461,9 +4566,11 @@ MeasureReportPopulation _$MeasureReportPopulationFromJson(
   return _MeasureReportPopulation.fromJson(json);
 }
 
+/// @nodoc
 class _$MeasureReportPopulationTearOff {
   const _$MeasureReportPopulationTearOff();
 
+// ignore: unused_element
   _MeasureReportPopulation call(
       {Identifier identifier,
       CodeableConcept code,
@@ -4478,11 +4585,18 @@ class _$MeasureReportPopulationTearOff {
       patients: patients,
     );
   }
+
+// ignore: unused_element
+  MeasureReportPopulation fromJson(Map<String, Object> json) {
+    return MeasureReportPopulation.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MeasureReportPopulation = _$MeasureReportPopulationTearOff();
 
+/// @nodoc
 mixin _$MeasureReportPopulation {
   Identifier get identifier;
   CodeableConcept get code;
@@ -4495,6 +4609,7 @@ mixin _$MeasureReportPopulation {
   $MeasureReportPopulationCopyWith<MeasureReportPopulation> get copyWith;
 }
 
+/// @nodoc
 abstract class $MeasureReportPopulationCopyWith<$Res> {
   factory $MeasureReportPopulationCopyWith(MeasureReportPopulation value,
           $Res Function(MeasureReportPopulation) then) =
@@ -4512,6 +4627,7 @@ abstract class $MeasureReportPopulationCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get patients;
 }
 
+/// @nodoc
 class _$MeasureReportPopulationCopyWithImpl<$Res>
     implements $MeasureReportPopulationCopyWith<$Res> {
   _$MeasureReportPopulationCopyWithImpl(this._value, this._then);
@@ -4581,6 +4697,7 @@ class _$MeasureReportPopulationCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MeasureReportPopulationCopyWith<$Res>
     implements $MeasureReportPopulationCopyWith<$Res> {
   factory _$MeasureReportPopulationCopyWith(_MeasureReportPopulation value,
@@ -4604,6 +4721,7 @@ abstract class _$MeasureReportPopulationCopyWith<$Res>
   $ReferenceCopyWith<$Res> get patients;
 }
 
+/// @nodoc
 class __$MeasureReportPopulationCopyWithImpl<$Res>
     extends _$MeasureReportPopulationCopyWithImpl<$Res>
     implements _$MeasureReportPopulationCopyWith<$Res> {
@@ -4637,6 +4755,8 @@ class __$MeasureReportPopulationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MeasureReportPopulation extends _MeasureReportPopulation {
   _$_MeasureReportPopulation(
       {this.identifier,
@@ -4737,9 +4857,11 @@ MeasureReportStratifier _$MeasureReportStratifierFromJson(
   return _MeasureReportStratifier.fromJson(json);
 }
 
+/// @nodoc
 class _$MeasureReportStratifierTearOff {
   const _$MeasureReportStratifierTearOff();
 
+// ignore: unused_element
   _MeasureReportStratifier call(
       {Identifier identifier, List<MeasureReportStratum> stratum}) {
     return _MeasureReportStratifier(
@@ -4747,11 +4869,18 @@ class _$MeasureReportStratifierTearOff {
       stratum: stratum,
     );
   }
+
+// ignore: unused_element
+  MeasureReportStratifier fromJson(Map<String, Object> json) {
+    return MeasureReportStratifier.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MeasureReportStratifier = _$MeasureReportStratifierTearOff();
 
+/// @nodoc
 mixin _$MeasureReportStratifier {
   Identifier get identifier;
   List<MeasureReportStratum> get stratum;
@@ -4760,6 +4889,7 @@ mixin _$MeasureReportStratifier {
   $MeasureReportStratifierCopyWith<MeasureReportStratifier> get copyWith;
 }
 
+/// @nodoc
 abstract class $MeasureReportStratifierCopyWith<$Res> {
   factory $MeasureReportStratifierCopyWith(MeasureReportStratifier value,
           $Res Function(MeasureReportStratifier) then) =
@@ -4769,6 +4899,7 @@ abstract class $MeasureReportStratifierCopyWith<$Res> {
   $IdentifierCopyWith<$Res> get identifier;
 }
 
+/// @nodoc
 class _$MeasureReportStratifierCopyWithImpl<$Res>
     implements $MeasureReportStratifierCopyWith<$Res> {
   _$MeasureReportStratifierCopyWithImpl(this._value, this._then);
@@ -4802,6 +4933,7 @@ class _$MeasureReportStratifierCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MeasureReportStratifierCopyWith<$Res>
     implements $MeasureReportStratifierCopyWith<$Res> {
   factory _$MeasureReportStratifierCopyWith(_MeasureReportStratifier value,
@@ -4814,6 +4946,7 @@ abstract class _$MeasureReportStratifierCopyWith<$Res>
   $IdentifierCopyWith<$Res> get identifier;
 }
 
+/// @nodoc
 class __$MeasureReportStratifierCopyWithImpl<$Res>
     extends _$MeasureReportStratifierCopyWithImpl<$Res>
     implements _$MeasureReportStratifierCopyWith<$Res> {
@@ -4841,6 +4974,8 @@ class __$MeasureReportStratifierCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MeasureReportStratifier extends _MeasureReportStratifier {
   _$_MeasureReportStratifier({this.identifier, this.stratum}) : super._();
 
@@ -4906,9 +5041,11 @@ MeasureReportStratum _$MeasureReportStratumFromJson(Map<String, dynamic> json) {
   return _MeasureReportStratum.fromJson(json);
 }
 
+/// @nodoc
 class _$MeasureReportStratumTearOff {
   const _$MeasureReportStratumTearOff();
 
+// ignore: unused_element
   _MeasureReportStratum call(
       {String value,
       @JsonKey(name: '_value') Element valueElement,
@@ -4923,11 +5060,18 @@ class _$MeasureReportStratumTearOff {
       measureScoreElement: measureScoreElement,
     );
   }
+
+// ignore: unused_element
+  MeasureReportStratum fromJson(Map<String, Object> json) {
+    return MeasureReportStratum.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MeasureReportStratum = _$MeasureReportStratumTearOff();
 
+/// @nodoc
 mixin _$MeasureReportStratum {
   String get value;
   @JsonKey(name: '_value')
@@ -4941,6 +5085,7 @@ mixin _$MeasureReportStratum {
   $MeasureReportStratumCopyWith<MeasureReportStratum> get copyWith;
 }
 
+/// @nodoc
 abstract class $MeasureReportStratumCopyWith<$Res> {
   factory $MeasureReportStratumCopyWith(MeasureReportStratum value,
           $Res Function(MeasureReportStratum) then) =
@@ -4956,6 +5101,7 @@ abstract class $MeasureReportStratumCopyWith<$Res> {
   $ElementCopyWith<$Res> get measureScoreElement;
 }
 
+/// @nodoc
 class _$MeasureReportStratumCopyWithImpl<$Res>
     implements $MeasureReportStratumCopyWith<$Res> {
   _$MeasureReportStratumCopyWithImpl(this._value, this._then);
@@ -5010,6 +5156,7 @@ class _$MeasureReportStratumCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MeasureReportStratumCopyWith<$Res>
     implements $MeasureReportStratumCopyWith<$Res> {
   factory _$MeasureReportStratumCopyWith(_MeasureReportStratum value,
@@ -5029,6 +5176,7 @@ abstract class _$MeasureReportStratumCopyWith<$Res>
   $ElementCopyWith<$Res> get measureScoreElement;
 }
 
+/// @nodoc
 class __$MeasureReportStratumCopyWithImpl<$Res>
     extends _$MeasureReportStratumCopyWithImpl<$Res>
     implements _$MeasureReportStratumCopyWith<$Res> {
@@ -5066,6 +5214,8 @@ class __$MeasureReportStratumCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MeasureReportStratum extends _MeasureReportStratum {
   _$_MeasureReportStratum(
       {this.value,
@@ -5170,9 +5320,11 @@ MeasureReportPopulation1 _$MeasureReportPopulation1FromJson(
   return _MeasureReportPopulation1.fromJson(json);
 }
 
+/// @nodoc
 class _$MeasureReportPopulation1TearOff {
   const _$MeasureReportPopulation1TearOff();
 
+// ignore: unused_element
   _MeasureReportPopulation1 call(
       {Identifier identifier,
       CodeableConcept code,
@@ -5187,11 +5339,18 @@ class _$MeasureReportPopulation1TearOff {
       patients: patients,
     );
   }
+
+// ignore: unused_element
+  MeasureReportPopulation1 fromJson(Map<String, Object> json) {
+    return MeasureReportPopulation1.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MeasureReportPopulation1 = _$MeasureReportPopulation1TearOff();
 
+/// @nodoc
 mixin _$MeasureReportPopulation1 {
   Identifier get identifier;
   CodeableConcept get code;
@@ -5204,6 +5363,7 @@ mixin _$MeasureReportPopulation1 {
   $MeasureReportPopulation1CopyWith<MeasureReportPopulation1> get copyWith;
 }
 
+/// @nodoc
 abstract class $MeasureReportPopulation1CopyWith<$Res> {
   factory $MeasureReportPopulation1CopyWith(MeasureReportPopulation1 value,
           $Res Function(MeasureReportPopulation1) then) =
@@ -5221,6 +5381,7 @@ abstract class $MeasureReportPopulation1CopyWith<$Res> {
   $ReferenceCopyWith<$Res> get patients;
 }
 
+/// @nodoc
 class _$MeasureReportPopulation1CopyWithImpl<$Res>
     implements $MeasureReportPopulation1CopyWith<$Res> {
   _$MeasureReportPopulation1CopyWithImpl(this._value, this._then);
@@ -5290,6 +5451,7 @@ class _$MeasureReportPopulation1CopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MeasureReportPopulation1CopyWith<$Res>
     implements $MeasureReportPopulation1CopyWith<$Res> {
   factory _$MeasureReportPopulation1CopyWith(_MeasureReportPopulation1 value,
@@ -5313,6 +5475,7 @@ abstract class _$MeasureReportPopulation1CopyWith<$Res>
   $ReferenceCopyWith<$Res> get patients;
 }
 
+/// @nodoc
 class __$MeasureReportPopulation1CopyWithImpl<$Res>
     extends _$MeasureReportPopulation1CopyWithImpl<$Res>
     implements _$MeasureReportPopulation1CopyWith<$Res> {
@@ -5346,6 +5509,8 @@ class __$MeasureReportPopulation1CopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MeasureReportPopulation1 extends _MeasureReportPopulation1 {
   _$_MeasureReportPopulation1(
       {this.identifier,

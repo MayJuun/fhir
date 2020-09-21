@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'other.dart';
 
@@ -12,9 +12,11 @@ ExplanationOfBenefit _$ExplanationOfBenefitFromJson(Map<String, dynamic> json) {
   return _ExplanationOfBenefit.fromJson(json);
 }
 
+/// @nodoc
 class _$ExplanationOfBenefitTearOff {
   const _$ExplanationOfBenefitTearOff();
 
+// ignore: unused_element
   _ExplanationOfBenefit call(
       {@required
       @JsonKey(defaultValue: 'ExplanationOfBenefit')
@@ -76,11 +78,18 @@ class _$ExplanationOfBenefitTearOff {
       requestOrganization: requestOrganization,
     );
   }
+
+// ignore: unused_element
+  ExplanationOfBenefit fromJson(Map<String, Object> json) {
+    return ExplanationOfBenefit.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ExplanationOfBenefit = _$ExplanationOfBenefitTearOff();
 
+/// @nodoc
 mixin _$ExplanationOfBenefit {
   @JsonKey(defaultValue: 'ExplanationOfBenefit')
   String get resourceType;
@@ -119,6 +128,7 @@ mixin _$ExplanationOfBenefit {
   $ExplanationOfBenefitCopyWith<ExplanationOfBenefit> get copyWith;
 }
 
+/// @nodoc
 abstract class $ExplanationOfBenefitCopyWith<$Res> {
   factory $ExplanationOfBenefitCopyWith(ExplanationOfBenefit value,
           $Res Function(ExplanationOfBenefit) then) =
@@ -172,6 +182,7 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get requestOrganization;
 }
 
+/// @nodoc
 class _$ExplanationOfBenefitCopyWithImpl<$Res>
     implements $ExplanationOfBenefitCopyWith<$Res> {
   _$ExplanationOfBenefitCopyWithImpl(this._value, this._then);
@@ -398,6 +409,7 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ExplanationOfBenefitCopyWith<$Res>
     implements $ExplanationOfBenefitCopyWith<$Res> {
   factory _$ExplanationOfBenefitCopyWith(_ExplanationOfBenefit value,
@@ -466,6 +478,7 @@ abstract class _$ExplanationOfBenefitCopyWith<$Res>
   $ReferenceCopyWith<$Res> get requestOrganization;
 }
 
+/// @nodoc
 class __$ExplanationOfBenefitCopyWithImpl<$Res>
     extends _$ExplanationOfBenefitCopyWithImpl<$Res>
     implements _$ExplanationOfBenefitCopyWith<$Res> {
@@ -565,6 +578,8 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   _$_ExplanationOfBenefit(
       {@required

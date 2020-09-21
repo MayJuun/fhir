@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'metadata_types.dart';
 
@@ -12,9 +12,11 @@ ContactDetail _$ContactDetailFromJson(Map<String, dynamic> json) {
   return _ContactDetail.fromJson(json);
 }
 
+/// @nodoc
 class _$ContactDetailTearOff {
   const _$ContactDetailTearOff();
 
+// ignore: unused_element
   _ContactDetail call(
       {String name,
       @JsonKey(name: '_name') Element nameElement,
@@ -25,11 +27,18 @@ class _$ContactDetailTearOff {
       telecom: telecom,
     );
   }
+
+// ignore: unused_element
+  ContactDetail fromJson(Map<String, Object> json) {
+    return ContactDetail.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ContactDetail = _$ContactDetailTearOff();
 
+/// @nodoc
 mixin _$ContactDetail {
   String get name;
   @JsonKey(name: '_name')
@@ -40,6 +49,7 @@ mixin _$ContactDetail {
   $ContactDetailCopyWith<ContactDetail> get copyWith;
 }
 
+/// @nodoc
 abstract class $ContactDetailCopyWith<$Res> {
   factory $ContactDetailCopyWith(
           ContactDetail value, $Res Function(ContactDetail) then) =
@@ -52,6 +62,7 @@ abstract class $ContactDetailCopyWith<$Res> {
   $ElementCopyWith<$Res> get nameElement;
 }
 
+/// @nodoc
 class _$ContactDetailCopyWithImpl<$Res>
     implements $ContactDetailCopyWith<$Res> {
   _$ContactDetailCopyWithImpl(this._value, this._then);
@@ -86,6 +97,7 @@ class _$ContactDetailCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ContactDetailCopyWith<$Res>
     implements $ContactDetailCopyWith<$Res> {
   factory _$ContactDetailCopyWith(
@@ -101,6 +113,7 @@ abstract class _$ContactDetailCopyWith<$Res>
   $ElementCopyWith<$Res> get nameElement;
 }
 
+/// @nodoc
 class __$ContactDetailCopyWithImpl<$Res>
     extends _$ContactDetailCopyWithImpl<$Res>
     implements _$ContactDetailCopyWith<$Res> {
@@ -128,6 +141,8 @@ class __$ContactDetailCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ContactDetail extends _ContactDetail {
   _$_ContactDetail(
       {this.name, @JsonKey(name: '_name') this.nameElement, this.telecom})
@@ -204,9 +219,11 @@ Contributor _$ContributorFromJson(Map<String, dynamic> json) {
   return _Contributor.fromJson(json);
 }
 
+/// @nodoc
 class _$ContributorTearOff {
   const _$ContributorTearOff();
 
+// ignore: unused_element
   _Contributor call(
       {ContributorType type,
       @JsonKey(name: '_type') Element typeElement,
@@ -221,11 +238,18 @@ class _$ContributorTearOff {
       contact: contact,
     );
   }
+
+// ignore: unused_element
+  Contributor fromJson(Map<String, Object> json) {
+    return Contributor.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Contributor = _$ContributorTearOff();
 
+/// @nodoc
 mixin _$Contributor {
   ContributorType get type;
   @JsonKey(name: '_type')
@@ -239,6 +263,7 @@ mixin _$Contributor {
   $ContributorCopyWith<Contributor> get copyWith;
 }
 
+/// @nodoc
 abstract class $ContributorCopyWith<$Res> {
   factory $ContributorCopyWith(
           Contributor value, $Res Function(Contributor) then) =
@@ -254,6 +279,7 @@ abstract class $ContributorCopyWith<$Res> {
   $ElementCopyWith<$Res> get nameElement;
 }
 
+/// @nodoc
 class _$ContributorCopyWithImpl<$Res> implements $ContributorCopyWith<$Res> {
   _$ContributorCopyWithImpl(this._value, this._then);
 
@@ -302,6 +328,7 @@ class _$ContributorCopyWithImpl<$Res> implements $ContributorCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$ContributorCopyWith<$Res>
     implements $ContributorCopyWith<$Res> {
   factory _$ContributorCopyWith(
@@ -321,6 +348,7 @@ abstract class _$ContributorCopyWith<$Res>
   $ElementCopyWith<$Res> get nameElement;
 }
 
+/// @nodoc
 class __$ContributorCopyWithImpl<$Res> extends _$ContributorCopyWithImpl<$Res>
     implements _$ContributorCopyWith<$Res> {
   __$ContributorCopyWithImpl(
@@ -352,6 +380,8 @@ class __$ContributorCopyWithImpl<$Res> extends _$ContributorCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Contributor extends _Contributor {
   _$_Contributor(
       {this.type,
@@ -451,9 +481,11 @@ RelatedArtifact _$RelatedArtifactFromJson(Map<String, dynamic> json) {
   return _RelatedArtifact.fromJson(json);
 }
 
+/// @nodoc
 class _$RelatedArtifactTearOff {
   const _$RelatedArtifactTearOff();
 
+// ignore: unused_element
   _RelatedArtifact call(
       {RelatedArtifactType type,
       @JsonKey(name: '_type') Element typeElement,
@@ -478,11 +510,18 @@ class _$RelatedArtifactTearOff {
       resource: resource,
     );
   }
+
+// ignore: unused_element
+  RelatedArtifact fromJson(Map<String, Object> json) {
+    return RelatedArtifact.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $RelatedArtifact = _$RelatedArtifactTearOff();
 
+/// @nodoc
 mixin _$RelatedArtifact {
   RelatedArtifactType get type;
   @JsonKey(name: '_type')
@@ -503,6 +542,7 @@ mixin _$RelatedArtifact {
   $RelatedArtifactCopyWith<RelatedArtifact> get copyWith;
 }
 
+/// @nodoc
 abstract class $RelatedArtifactCopyWith<$Res> {
   factory $RelatedArtifactCopyWith(
           RelatedArtifact value, $Res Function(RelatedArtifact) then) =
@@ -527,6 +567,7 @@ abstract class $RelatedArtifactCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get resource;
 }
 
+/// @nodoc
 class _$RelatedArtifactCopyWithImpl<$Res>
     implements $RelatedArtifactCopyWith<$Res> {
   _$RelatedArtifactCopyWithImpl(this._value, this._then);
@@ -629,6 +670,7 @@ class _$RelatedArtifactCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$RelatedArtifactCopyWith<$Res>
     implements $RelatedArtifactCopyWith<$Res> {
   factory _$RelatedArtifactCopyWith(
@@ -661,6 +703,7 @@ abstract class _$RelatedArtifactCopyWith<$Res>
   $ReferenceCopyWith<$Res> get resource;
 }
 
+/// @nodoc
 class __$RelatedArtifactCopyWithImpl<$Res>
     extends _$RelatedArtifactCopyWithImpl<$Res>
     implements _$RelatedArtifactCopyWith<$Res> {
@@ -706,6 +749,8 @@ class __$RelatedArtifactCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_RelatedArtifact extends _RelatedArtifact {
   _$_RelatedArtifact(
       {this.type,
@@ -860,9 +905,11 @@ UsageContext _$UsageContextFromJson(Map<String, dynamic> json) {
   return _UsageContext.fromJson(json);
 }
 
+/// @nodoc
 class _$UsageContextTearOff {
   const _$UsageContextTearOff();
 
+// ignore: unused_element
   _UsageContext call(
       {@required Coding code,
       CodeableConcept valueCodeableConcept,
@@ -875,11 +922,18 @@ class _$UsageContextTearOff {
       valueRange: valueRange,
     );
   }
+
+// ignore: unused_element
+  UsageContext fromJson(Map<String, Object> json) {
+    return UsageContext.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $UsageContext = _$UsageContextTearOff();
 
+/// @nodoc
 mixin _$UsageContext {
   Coding get code;
   CodeableConcept get valueCodeableConcept;
@@ -890,6 +944,7 @@ mixin _$UsageContext {
   $UsageContextCopyWith<UsageContext> get copyWith;
 }
 
+/// @nodoc
 abstract class $UsageContextCopyWith<$Res> {
   factory $UsageContextCopyWith(
           UsageContext value, $Res Function(UsageContext) then) =
@@ -906,6 +961,7 @@ abstract class $UsageContextCopyWith<$Res> {
   $RangeCopyWith<$Res> get valueRange;
 }
 
+/// @nodoc
 class _$UsageContextCopyWithImpl<$Res> implements $UsageContextCopyWith<$Res> {
   _$UsageContextCopyWithImpl(this._value, this._then);
 
@@ -974,6 +1030,7 @@ class _$UsageContextCopyWithImpl<$Res> implements $UsageContextCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$UsageContextCopyWith<$Res>
     implements $UsageContextCopyWith<$Res> {
   factory _$UsageContextCopyWith(
@@ -996,6 +1053,7 @@ abstract class _$UsageContextCopyWith<$Res>
   $RangeCopyWith<$Res> get valueRange;
 }
 
+/// @nodoc
 class __$UsageContextCopyWithImpl<$Res> extends _$UsageContextCopyWithImpl<$Res>
     implements _$UsageContextCopyWith<$Res> {
   __$UsageContextCopyWithImpl(
@@ -1027,6 +1085,8 @@ class __$UsageContextCopyWithImpl<$Res> extends _$UsageContextCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_UsageContext extends _UsageContext {
   _$_UsageContext(
       {@required this.code,
@@ -1115,9 +1175,11 @@ DataRequirement _$DataRequirementFromJson(Map<String, dynamic> json) {
   return _DataRequirement.fromJson(json);
 }
 
+/// @nodoc
 class _$DataRequirementTearOff {
   const _$DataRequirementTearOff();
 
+// ignore: unused_element
   _DataRequirement call(
       {String type,
       @JsonKey(name: '_type') Element typeElement,
@@ -1138,11 +1200,18 @@ class _$DataRequirementTearOff {
       dateFilter: dateFilter,
     );
   }
+
+// ignore: unused_element
+  DataRequirement fromJson(Map<String, Object> json) {
+    return DataRequirement.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $DataRequirement = _$DataRequirementTearOff();
 
+/// @nodoc
 mixin _$DataRequirement {
   String get type;
   @JsonKey(name: '_type')
@@ -1160,6 +1229,7 @@ mixin _$DataRequirement {
   $DataRequirementCopyWith<DataRequirement> get copyWith;
 }
 
+/// @nodoc
 abstract class $DataRequirementCopyWith<$Res> {
   factory $DataRequirementCopyWith(
           DataRequirement value, $Res Function(DataRequirement) then) =
@@ -1177,6 +1247,7 @@ abstract class $DataRequirementCopyWith<$Res> {
   $ElementCopyWith<$Res> get typeElement;
 }
 
+/// @nodoc
 class _$DataRequirementCopyWithImpl<$Res>
     implements $DataRequirementCopyWith<$Res> {
   _$DataRequirementCopyWithImpl(this._value, this._then);
@@ -1230,6 +1301,7 @@ class _$DataRequirementCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$DataRequirementCopyWith<$Res>
     implements $DataRequirementCopyWith<$Res> {
   factory _$DataRequirementCopyWith(
@@ -1250,6 +1322,7 @@ abstract class _$DataRequirementCopyWith<$Res>
   $ElementCopyWith<$Res> get typeElement;
 }
 
+/// @nodoc
 class __$DataRequirementCopyWithImpl<$Res>
     extends _$DataRequirementCopyWithImpl<$Res>
     implements _$DataRequirementCopyWith<$Res> {
@@ -1296,6 +1369,8 @@ class __$DataRequirementCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_DataRequirement extends _DataRequirement {
   _$_DataRequirement(
       {this.type,
@@ -1430,9 +1505,11 @@ DataRequirementCodeFilter _$DataRequirementCodeFilterFromJson(
   return _DataRequirementCodeFilter.fromJson(json);
 }
 
+/// @nodoc
 class _$DataRequirementCodeFilterTearOff {
   const _$DataRequirementCodeFilterTearOff();
 
+// ignore: unused_element
   _DataRequirementCodeFilter call(
       {String path,
       @JsonKey(name: '_path') Element pathElement,
@@ -1455,11 +1532,18 @@ class _$DataRequirementCodeFilterTearOff {
       valueCodeableConcept: valueCodeableConcept,
     );
   }
+
+// ignore: unused_element
+  DataRequirementCodeFilter fromJson(Map<String, Object> json) {
+    return DataRequirementCodeFilter.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $DataRequirementCodeFilter = _$DataRequirementCodeFilterTearOff();
 
+/// @nodoc
 mixin _$DataRequirementCodeFilter {
   String get path;
   @JsonKey(name: '_path')
@@ -1478,6 +1562,7 @@ mixin _$DataRequirementCodeFilter {
   $DataRequirementCodeFilterCopyWith<DataRequirementCodeFilter> get copyWith;
 }
 
+/// @nodoc
 abstract class $DataRequirementCodeFilterCopyWith<$Res> {
   factory $DataRequirementCodeFilterCopyWith(DataRequirementCodeFilter value,
           $Res Function(DataRequirementCodeFilter) then) =
@@ -1498,6 +1583,7 @@ abstract class $DataRequirementCodeFilterCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get valueSetReference;
 }
 
+/// @nodoc
 class _$DataRequirementCodeFilterCopyWithImpl<$Res>
     implements $DataRequirementCodeFilterCopyWith<$Res> {
   _$DataRequirementCodeFilterCopyWithImpl(this._value, this._then);
@@ -1576,6 +1662,7 @@ class _$DataRequirementCodeFilterCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$DataRequirementCodeFilterCopyWith<$Res>
     implements $DataRequirementCodeFilterCopyWith<$Res> {
   factory _$DataRequirementCodeFilterCopyWith(_DataRequirementCodeFilter value,
@@ -1601,6 +1688,7 @@ abstract class _$DataRequirementCodeFilterCopyWith<$Res>
   $ReferenceCopyWith<$Res> get valueSetReference;
 }
 
+/// @nodoc
 class __$DataRequirementCodeFilterCopyWithImpl<$Res>
     extends _$DataRequirementCodeFilterCopyWithImpl<$Res>
     implements _$DataRequirementCodeFilterCopyWith<$Res> {
@@ -1653,6 +1741,8 @@ class __$DataRequirementCodeFilterCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
   _$_DataRequirementCodeFilter(
       {this.path,
@@ -1800,9 +1890,11 @@ DataRequirementDateFilter _$DataRequirementDateFilterFromJson(
   return _DataRequirementDateFilter.fromJson(json);
 }
 
+/// @nodoc
 class _$DataRequirementDateFilterTearOff {
   const _$DataRequirementDateFilterTearOff();
 
+// ignore: unused_element
   _DataRequirementDateFilter call(
       {String path,
       @JsonKey(name: '_path') Element pathElement,
@@ -1819,11 +1911,18 @@ class _$DataRequirementDateFilterTearOff {
       valueDuration: valueDuration,
     );
   }
+
+// ignore: unused_element
+  DataRequirementDateFilter fromJson(Map<String, Object> json) {
+    return DataRequirementDateFilter.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $DataRequirementDateFilter = _$DataRequirementDateFilterTearOff();
 
+/// @nodoc
 mixin _$DataRequirementDateFilter {
   String get path;
   @JsonKey(name: '_path')
@@ -1838,6 +1937,7 @@ mixin _$DataRequirementDateFilter {
   $DataRequirementDateFilterCopyWith<DataRequirementDateFilter> get copyWith;
 }
 
+/// @nodoc
 abstract class $DataRequirementDateFilterCopyWith<$Res> {
   factory $DataRequirementDateFilterCopyWith(DataRequirementDateFilter value,
           $Res Function(DataRequirementDateFilter) then) =
@@ -1856,6 +1956,7 @@ abstract class $DataRequirementDateFilterCopyWith<$Res> {
   $DurationCopyWith<$Res> get valueDuration;
 }
 
+/// @nodoc
 class _$DataRequirementDateFilterCopyWithImpl<$Res>
     implements $DataRequirementDateFilterCopyWith<$Res> {
   _$DataRequirementDateFilterCopyWithImpl(this._value, this._then);
@@ -1932,6 +2033,7 @@ class _$DataRequirementDateFilterCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$DataRequirementDateFilterCopyWith<$Res>
     implements $DataRequirementDateFilterCopyWith<$Res> {
   factory _$DataRequirementDateFilterCopyWith(_DataRequirementDateFilter value,
@@ -1956,6 +2058,7 @@ abstract class _$DataRequirementDateFilterCopyWith<$Res>
   $DurationCopyWith<$Res> get valueDuration;
 }
 
+/// @nodoc
 class __$DataRequirementDateFilterCopyWithImpl<$Res>
     extends _$DataRequirementDateFilterCopyWithImpl<$Res>
     implements _$DataRequirementDateFilterCopyWith<$Res> {
@@ -1996,6 +2099,8 @@ class __$DataRequirementDateFilterCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
   _$_DataRequirementDateFilter(
       {this.path,
@@ -2109,9 +2214,11 @@ ParameterDefinition _$ParameterDefinitionFromJson(Map<String, dynamic> json) {
   return _ParameterDefinition.fromJson(json);
 }
 
+/// @nodoc
 class _$ParameterDefinitionTearOff {
   const _$ParameterDefinitionTearOff();
 
+// ignore: unused_element
   _ParameterDefinition call(
       {String name,
       @JsonKey(name: '_name') Element nameElement,
@@ -2142,11 +2249,18 @@ class _$ParameterDefinitionTearOff {
       profile: profile,
     );
   }
+
+// ignore: unused_element
+  ParameterDefinition fromJson(Map<String, Object> json) {
+    return ParameterDefinition.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ParameterDefinition = _$ParameterDefinitionTearOff();
 
+/// @nodoc
 mixin _$ParameterDefinition {
   String get name;
   @JsonKey(name: '_name')
@@ -2172,6 +2286,7 @@ mixin _$ParameterDefinition {
   $ParameterDefinitionCopyWith<ParameterDefinition> get copyWith;
 }
 
+/// @nodoc
 abstract class $ParameterDefinitionCopyWith<$Res> {
   factory $ParameterDefinitionCopyWith(
           ParameterDefinition value, $Res Function(ParameterDefinition) then) =
@@ -2200,6 +2315,7 @@ abstract class $ParameterDefinitionCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get profile;
 }
 
+/// @nodoc
 class _$ParameterDefinitionCopyWithImpl<$Res>
     implements $ParameterDefinitionCopyWith<$Res> {
   _$ParameterDefinitionCopyWithImpl(this._value, this._then);
@@ -2321,6 +2437,7 @@ class _$ParameterDefinitionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ParameterDefinitionCopyWith<$Res>
     implements $ParameterDefinitionCopyWith<$Res> {
   factory _$ParameterDefinitionCopyWith(_ParameterDefinition value,
@@ -2358,6 +2475,7 @@ abstract class _$ParameterDefinitionCopyWith<$Res>
   $ReferenceCopyWith<$Res> get profile;
 }
 
+/// @nodoc
 class __$ParameterDefinitionCopyWithImpl<$Res>
     extends _$ParameterDefinitionCopyWithImpl<$Res>
     implements _$ParameterDefinitionCopyWith<$Res> {
@@ -2412,6 +2530,8 @@ class __$ParameterDefinitionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ParameterDefinition extends _ParameterDefinition {
   _$_ParameterDefinition(
       {this.name,
@@ -2597,9 +2717,11 @@ TriggerDefinition _$TriggerDefinitionFromJson(Map<String, dynamic> json) {
   return _TriggerDefinition.fromJson(json);
 }
 
+/// @nodoc
 class _$TriggerDefinitionTearOff {
   const _$TriggerDefinitionTearOff();
 
+// ignore: unused_element
   _TriggerDefinition call(
       {TriggerDefinitionType type,
       @JsonKey(name: '_type') Element typeElement,
@@ -2626,11 +2748,18 @@ class _$TriggerDefinitionTearOff {
       eventData: eventData,
     );
   }
+
+// ignore: unused_element
+  TriggerDefinition fromJson(Map<String, Object> json) {
+    return TriggerDefinition.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TriggerDefinition = _$TriggerDefinitionTearOff();
 
+/// @nodoc
 mixin _$TriggerDefinition {
   TriggerDefinitionType get type;
   @JsonKey(name: '_type')
@@ -2652,6 +2781,7 @@ mixin _$TriggerDefinition {
   $TriggerDefinitionCopyWith<TriggerDefinition> get copyWith;
 }
 
+/// @nodoc
 abstract class $TriggerDefinitionCopyWith<$Res> {
   factory $TriggerDefinitionCopyWith(
           TriggerDefinition value, $Res Function(TriggerDefinition) then) =
@@ -2678,6 +2808,7 @@ abstract class $TriggerDefinitionCopyWith<$Res> {
   $DataRequirementCopyWith<$Res> get eventData;
 }
 
+/// @nodoc
 class _$TriggerDefinitionCopyWithImpl<$Res>
     implements $TriggerDefinitionCopyWith<$Res> {
   _$TriggerDefinitionCopyWithImpl(this._value, this._then);
@@ -2803,6 +2934,7 @@ class _$TriggerDefinitionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$TriggerDefinitionCopyWith<$Res>
     implements $TriggerDefinitionCopyWith<$Res> {
   factory _$TriggerDefinitionCopyWith(
@@ -2838,6 +2970,7 @@ abstract class _$TriggerDefinitionCopyWith<$Res>
   $DataRequirementCopyWith<$Res> get eventData;
 }
 
+/// @nodoc
 class __$TriggerDefinitionCopyWithImpl<$Res>
     extends _$TriggerDefinitionCopyWithImpl<$Res>
     implements _$TriggerDefinitionCopyWith<$Res> {
@@ -2896,6 +3029,8 @@ class __$TriggerDefinitionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TriggerDefinition extends _TriggerDefinition {
   _$_TriggerDefinition(
       {this.type,

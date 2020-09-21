@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'evidence_based_medicine.dart';
 
@@ -13,9 +13,11 @@ EffectEvidenceSynthesis _$EffectEvidenceSynthesisFromJson(
   return _EffectEvidenceSynthesis.fromJson(json);
 }
 
+/// @nodoc
 class _$EffectEvidenceSynthesisTearOff {
   const _$EffectEvidenceSynthesisTearOff();
 
+// ignore: unused_element
   _EffectEvidenceSynthesis call(
       {@required
       @JsonKey(defaultValue: 'EffectEvidenceSynthesis')
@@ -151,11 +153,18 @@ class _$EffectEvidenceSynthesisTearOff {
       certainty: certainty,
     );
   }
+
+// ignore: unused_element
+  EffectEvidenceSynthesis fromJson(Map<String, Object> json) {
+    return EffectEvidenceSynthesis.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $EffectEvidenceSynthesis = _$EffectEvidenceSynthesisTearOff();
 
+/// @nodoc
 mixin _$EffectEvidenceSynthesis {
   @JsonKey(defaultValue: 'EffectEvidenceSynthesis')
   String get resourceType;
@@ -233,6 +242,7 @@ mixin _$EffectEvidenceSynthesis {
   $EffectEvidenceSynthesisCopyWith<EffectEvidenceSynthesis> get copyWith;
 }
 
+/// @nodoc
 abstract class $EffectEvidenceSynthesisCopyWith<$Res> {
   factory $EffectEvidenceSynthesisCopyWith(EffectEvidenceSynthesis value,
           $Res Function(EffectEvidenceSynthesis) then) =
@@ -335,6 +345,7 @@ abstract class $EffectEvidenceSynthesisCopyWith<$Res> {
   $EffectEvidenceSynthesisSampleSizeCopyWith<$Res> get sampleSize;
 }
 
+/// @nodoc
 class _$EffectEvidenceSynthesisCopyWithImpl<$Res>
     implements $EffectEvidenceSynthesisCopyWith<$Res> {
   _$EffectEvidenceSynthesisCopyWithImpl(this._value, this._then);
@@ -761,6 +772,7 @@ class _$EffectEvidenceSynthesisCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$EffectEvidenceSynthesisCopyWith<$Res>
     implements $EffectEvidenceSynthesisCopyWith<$Res> {
   factory _$EffectEvidenceSynthesisCopyWith(_EffectEvidenceSynthesis value,
@@ -888,6 +900,7 @@ abstract class _$EffectEvidenceSynthesisCopyWith<$Res>
   $EffectEvidenceSynthesisSampleSizeCopyWith<$Res> get sampleSize;
 }
 
+/// @nodoc
 class __$EffectEvidenceSynthesisCopyWithImpl<$Res>
     extends _$EffectEvidenceSynthesisCopyWithImpl<$Res>
     implements _$EffectEvidenceSynthesisCopyWith<$Res> {
@@ -1087,6 +1100,8 @@ class __$EffectEvidenceSynthesisCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
   _$_EffectEvidenceSynthesis(
       {@required
@@ -1700,9 +1715,11 @@ EffectEvidenceSynthesisSampleSize _$EffectEvidenceSynthesisSampleSizeFromJson(
   return _EffectEvidenceSynthesisSampleSize.fromJson(json);
 }
 
+/// @nodoc
 class _$EffectEvidenceSynthesisSampleSizeTearOff {
   const _$EffectEvidenceSynthesisSampleSizeTearOff();
 
+// ignore: unused_element
   _EffectEvidenceSynthesisSampleSize call(
       {String id,
       @JsonKey(name: 'extension')
@@ -1729,12 +1746,19 @@ class _$EffectEvidenceSynthesisSampleSizeTearOff {
       numberOfParticipantsElement: numberOfParticipantsElement,
     );
   }
+
+// ignore: unused_element
+  EffectEvidenceSynthesisSampleSize fromJson(Map<String, Object> json) {
+    return EffectEvidenceSynthesisSampleSize.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $EffectEvidenceSynthesisSampleSize =
     _$EffectEvidenceSynthesisSampleSizeTearOff();
 
+/// @nodoc
 mixin _$EffectEvidenceSynthesisSampleSize {
   String get id;
   @JsonKey(name: 'extension')
@@ -1755,6 +1779,7 @@ mixin _$EffectEvidenceSynthesisSampleSize {
       get copyWith;
 }
 
+/// @nodoc
 abstract class $EffectEvidenceSynthesisSampleSizeCopyWith<$Res> {
   factory $EffectEvidenceSynthesisSampleSizeCopyWith(
           EffectEvidenceSynthesisSampleSize value,
@@ -1780,6 +1805,7 @@ abstract class $EffectEvidenceSynthesisSampleSizeCopyWith<$Res> {
   $ElementCopyWith<$Res> get numberOfParticipantsElement;
 }
 
+/// @nodoc
 class _$EffectEvidenceSynthesisSampleSizeCopyWithImpl<$Res>
     implements $EffectEvidenceSynthesisSampleSizeCopyWith<$Res> {
   _$EffectEvidenceSynthesisSampleSizeCopyWithImpl(this._value, this._then);
@@ -1859,6 +1885,7 @@ class _$EffectEvidenceSynthesisSampleSizeCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$EffectEvidenceSynthesisSampleSizeCopyWith<$Res>
     implements $EffectEvidenceSynthesisSampleSizeCopyWith<$Res> {
   factory _$EffectEvidenceSynthesisSampleSizeCopyWith(
@@ -1889,6 +1916,7 @@ abstract class _$EffectEvidenceSynthesisSampleSizeCopyWith<$Res>
   $ElementCopyWith<$Res> get numberOfParticipantsElement;
 }
 
+/// @nodoc
 class __$EffectEvidenceSynthesisSampleSizeCopyWithImpl<$Res>
     extends _$EffectEvidenceSynthesisSampleSizeCopyWithImpl<$Res>
     implements _$EffectEvidenceSynthesisSampleSizeCopyWith<$Res> {
@@ -1943,6 +1971,8 @@ class __$EffectEvidenceSynthesisSampleSizeCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_EffectEvidenceSynthesisSampleSize
     extends _EffectEvidenceSynthesisSampleSize {
   _$_EffectEvidenceSynthesisSampleSize(
@@ -2104,9 +2134,11 @@ EffectEvidenceSynthesisResultsByExposure
   return _EffectEvidenceSynthesisResultsByExposure.fromJson(json);
 }
 
+/// @nodoc
 class _$EffectEvidenceSynthesisResultsByExposureTearOff {
   const _$EffectEvidenceSynthesisResultsByExposureTearOff();
 
+// ignore: unused_element
   _EffectEvidenceSynthesisResultsByExposure call(
       {String id,
       @JsonKey(name: 'extension')
@@ -2136,12 +2168,19 @@ class _$EffectEvidenceSynthesisResultsByExposureTearOff {
       riskEvidenceSynthesis: riskEvidenceSynthesis,
     );
   }
+
+// ignore: unused_element
+  EffectEvidenceSynthesisResultsByExposure fromJson(Map<String, Object> json) {
+    return EffectEvidenceSynthesisResultsByExposure.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $EffectEvidenceSynthesisResultsByExposure =
     _$EffectEvidenceSynthesisResultsByExposureTearOff();
 
+/// @nodoc
 mixin _$EffectEvidenceSynthesisResultsByExposure {
   String get id;
   @JsonKey(name: 'extension')
@@ -2164,6 +2203,7 @@ mixin _$EffectEvidenceSynthesisResultsByExposure {
       EffectEvidenceSynthesisResultsByExposure> get copyWith;
 }
 
+/// @nodoc
 abstract class $EffectEvidenceSynthesisResultsByExposureCopyWith<$Res> {
   factory $EffectEvidenceSynthesisResultsByExposureCopyWith(
           EffectEvidenceSynthesisResultsByExposure value,
@@ -2192,6 +2232,7 @@ abstract class $EffectEvidenceSynthesisResultsByExposureCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get riskEvidenceSynthesis;
 }
 
+/// @nodoc
 class _$EffectEvidenceSynthesisResultsByExposureCopyWithImpl<$Res>
     implements $EffectEvidenceSynthesisResultsByExposureCopyWith<$Res> {
   _$EffectEvidenceSynthesisResultsByExposureCopyWithImpl(
@@ -2283,6 +2324,7 @@ class _$EffectEvidenceSynthesisResultsByExposureCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$EffectEvidenceSynthesisResultsByExposureCopyWith<$Res>
     implements $EffectEvidenceSynthesisResultsByExposureCopyWith<$Res> {
   factory _$EffectEvidenceSynthesisResultsByExposureCopyWith(
@@ -2317,6 +2359,7 @@ abstract class _$EffectEvidenceSynthesisResultsByExposureCopyWith<$Res>
   $ReferenceCopyWith<$Res> get riskEvidenceSynthesis;
 }
 
+/// @nodoc
 class __$EffectEvidenceSynthesisResultsByExposureCopyWithImpl<$Res>
     extends _$EffectEvidenceSynthesisResultsByExposureCopyWithImpl<$Res>
     implements _$EffectEvidenceSynthesisResultsByExposureCopyWith<$Res> {
@@ -2373,6 +2416,8 @@ class __$EffectEvidenceSynthesisResultsByExposureCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_EffectEvidenceSynthesisResultsByExposure
     extends _EffectEvidenceSynthesisResultsByExposure {
   _$_EffectEvidenceSynthesisResultsByExposure(
@@ -2546,9 +2591,11 @@ EffectEvidenceSynthesisEffectEstimate
   return _EffectEvidenceSynthesisEffectEstimate.fromJson(json);
 }
 
+/// @nodoc
 class _$EffectEvidenceSynthesisEffectEstimateTearOff {
   const _$EffectEvidenceSynthesisEffectEstimateTearOff();
 
+// ignore: unused_element
   _EffectEvidenceSynthesisEffectEstimate call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2575,12 +2622,19 @@ class _$EffectEvidenceSynthesisEffectEstimateTearOff {
       precisionEstimate: precisionEstimate,
     );
   }
+
+// ignore: unused_element
+  EffectEvidenceSynthesisEffectEstimate fromJson(Map<String, Object> json) {
+    return EffectEvidenceSynthesisEffectEstimate.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $EffectEvidenceSynthesisEffectEstimate =
     _$EffectEvidenceSynthesisEffectEstimateTearOff();
 
+/// @nodoc
 mixin _$EffectEvidenceSynthesisEffectEstimate {
   String get id;
   @JsonKey(name: 'extension')
@@ -2602,6 +2656,7 @@ mixin _$EffectEvidenceSynthesisEffectEstimate {
       EffectEvidenceSynthesisEffectEstimate> get copyWith;
 }
 
+/// @nodoc
 abstract class $EffectEvidenceSynthesisEffectEstimateCopyWith<$Res> {
   factory $EffectEvidenceSynthesisEffectEstimateCopyWith(
           EffectEvidenceSynthesisEffectEstimate value,
@@ -2627,6 +2682,7 @@ abstract class $EffectEvidenceSynthesisEffectEstimateCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get unitOfMeasure;
 }
 
+/// @nodoc
 class _$EffectEvidenceSynthesisEffectEstimateCopyWithImpl<$Res>
     implements $EffectEvidenceSynthesisEffectEstimateCopyWith<$Res> {
   _$EffectEvidenceSynthesisEffectEstimateCopyWithImpl(this._value, this._then);
@@ -2730,6 +2786,7 @@ class _$EffectEvidenceSynthesisEffectEstimateCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$EffectEvidenceSynthesisEffectEstimateCopyWith<$Res>
     implements $EffectEvidenceSynthesisEffectEstimateCopyWith<$Res> {
   factory _$EffectEvidenceSynthesisEffectEstimateCopyWith(
@@ -2762,6 +2819,7 @@ abstract class _$EffectEvidenceSynthesisEffectEstimateCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get unitOfMeasure;
 }
 
+/// @nodoc
 class __$EffectEvidenceSynthesisEffectEstimateCopyWithImpl<$Res>
     extends _$EffectEvidenceSynthesisEffectEstimateCopyWithImpl<$Res>
     implements _$EffectEvidenceSynthesisEffectEstimateCopyWith<$Res> {
@@ -2821,6 +2879,8 @@ class __$EffectEvidenceSynthesisEffectEstimateCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_EffectEvidenceSynthesisEffectEstimate
     extends _EffectEvidenceSynthesisEffectEstimate {
   _$_EffectEvidenceSynthesisEffectEstimate(
@@ -2992,9 +3052,11 @@ EffectEvidenceSynthesisPrecisionEstimate
   return _EffectEvidenceSynthesisPrecisionEstimate.fromJson(json);
 }
 
+/// @nodoc
 class _$EffectEvidenceSynthesisPrecisionEstimateTearOff {
   const _$EffectEvidenceSynthesisPrecisionEstimateTearOff();
 
+// ignore: unused_element
   _EffectEvidenceSynthesisPrecisionEstimate call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3019,12 +3081,19 @@ class _$EffectEvidenceSynthesisPrecisionEstimateTearOff {
       toElement: toElement,
     );
   }
+
+// ignore: unused_element
+  EffectEvidenceSynthesisPrecisionEstimate fromJson(Map<String, Object> json) {
+    return EffectEvidenceSynthesisPrecisionEstimate.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $EffectEvidenceSynthesisPrecisionEstimate =
     _$EffectEvidenceSynthesisPrecisionEstimateTearOff();
 
+/// @nodoc
 mixin _$EffectEvidenceSynthesisPrecisionEstimate {
   String get id;
   @JsonKey(name: 'extension')
@@ -3046,6 +3115,7 @@ mixin _$EffectEvidenceSynthesisPrecisionEstimate {
       EffectEvidenceSynthesisPrecisionEstimate> get copyWith;
 }
 
+/// @nodoc
 abstract class $EffectEvidenceSynthesisPrecisionEstimateCopyWith<$Res> {
   factory $EffectEvidenceSynthesisPrecisionEstimateCopyWith(
           EffectEvidenceSynthesisPrecisionEstimate value,
@@ -3069,6 +3139,7 @@ abstract class $EffectEvidenceSynthesisPrecisionEstimateCopyWith<$Res> {
   $ElementCopyWith<$Res> get toElement;
 }
 
+/// @nodoc
 class _$EffectEvidenceSynthesisPrecisionEstimateCopyWithImpl<$Res>
     implements $EffectEvidenceSynthesisPrecisionEstimateCopyWith<$Res> {
   _$EffectEvidenceSynthesisPrecisionEstimateCopyWithImpl(
@@ -3153,6 +3224,7 @@ class _$EffectEvidenceSynthesisPrecisionEstimateCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$EffectEvidenceSynthesisPrecisionEstimateCopyWith<$Res>
     implements $EffectEvidenceSynthesisPrecisionEstimateCopyWith<$Res> {
   factory _$EffectEvidenceSynthesisPrecisionEstimateCopyWith(
@@ -3182,6 +3254,7 @@ abstract class _$EffectEvidenceSynthesisPrecisionEstimateCopyWith<$Res>
   $ElementCopyWith<$Res> get toElement;
 }
 
+/// @nodoc
 class __$EffectEvidenceSynthesisPrecisionEstimateCopyWithImpl<$Res>
     extends _$EffectEvidenceSynthesisPrecisionEstimateCopyWithImpl<$Res>
     implements _$EffectEvidenceSynthesisPrecisionEstimateCopyWith<$Res> {
@@ -3231,6 +3304,8 @@ class __$EffectEvidenceSynthesisPrecisionEstimateCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_EffectEvidenceSynthesisPrecisionEstimate
     extends _EffectEvidenceSynthesisPrecisionEstimate {
   _$_EffectEvidenceSynthesisPrecisionEstimate(
@@ -3391,9 +3466,11 @@ EffectEvidenceSynthesisCertainty _$EffectEvidenceSynthesisCertaintyFromJson(
   return _EffectEvidenceSynthesisCertainty.fromJson(json);
 }
 
+/// @nodoc
 class _$EffectEvidenceSynthesisCertaintyTearOff {
   const _$EffectEvidenceSynthesisCertaintyTearOff();
 
+// ignore: unused_element
   _EffectEvidenceSynthesisCertainty call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3411,12 +3488,19 @@ class _$EffectEvidenceSynthesisCertaintyTearOff {
       certaintySubcomponent: certaintySubcomponent,
     );
   }
+
+// ignore: unused_element
+  EffectEvidenceSynthesisCertainty fromJson(Map<String, Object> json) {
+    return EffectEvidenceSynthesisCertainty.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $EffectEvidenceSynthesisCertainty =
     _$EffectEvidenceSynthesisCertaintyTearOff();
 
+/// @nodoc
 mixin _$EffectEvidenceSynthesisCertainty {
   String get id;
   @JsonKey(name: 'extension')
@@ -3431,6 +3515,7 @@ mixin _$EffectEvidenceSynthesisCertainty {
       get copyWith;
 }
 
+/// @nodoc
 abstract class $EffectEvidenceSynthesisCertaintyCopyWith<$Res> {
   factory $EffectEvidenceSynthesisCertaintyCopyWith(
           EffectEvidenceSynthesisCertainty value,
@@ -3446,6 +3531,7 @@ abstract class $EffectEvidenceSynthesisCertaintyCopyWith<$Res> {
           certaintySubcomponent});
 }
 
+/// @nodoc
 class _$EffectEvidenceSynthesisCertaintyCopyWithImpl<$Res>
     implements $EffectEvidenceSynthesisCertaintyCopyWith<$Res> {
   _$EffectEvidenceSynthesisCertaintyCopyWithImpl(this._value, this._then);
@@ -3482,6 +3568,7 @@ class _$EffectEvidenceSynthesisCertaintyCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$EffectEvidenceSynthesisCertaintyCopyWith<$Res>
     implements $EffectEvidenceSynthesisCertaintyCopyWith<$Res> {
   factory _$EffectEvidenceSynthesisCertaintyCopyWith(
@@ -3499,6 +3586,7 @@ abstract class _$EffectEvidenceSynthesisCertaintyCopyWith<$Res>
           certaintySubcomponent});
 }
 
+/// @nodoc
 class __$EffectEvidenceSynthesisCertaintyCopyWithImpl<$Res>
     extends _$EffectEvidenceSynthesisCertaintyCopyWithImpl<$Res>
     implements _$EffectEvidenceSynthesisCertaintyCopyWith<$Res> {
@@ -3540,6 +3628,8 @@ class __$EffectEvidenceSynthesisCertaintyCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_EffectEvidenceSynthesisCertainty
     extends _EffectEvidenceSynthesisCertainty {
   _$_EffectEvidenceSynthesisCertainty(
@@ -3656,9 +3746,11 @@ EffectEvidenceSynthesisCertaintySubcomponent
   return _EffectEvidenceSynthesisCertaintySubcomponent.fromJson(json);
 }
 
+/// @nodoc
 class _$EffectEvidenceSynthesisCertaintySubcomponentTearOff {
   const _$EffectEvidenceSynthesisCertaintySubcomponentTearOff();
 
+// ignore: unused_element
   _EffectEvidenceSynthesisCertaintySubcomponent call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3675,12 +3767,20 @@ class _$EffectEvidenceSynthesisCertaintySubcomponentTearOff {
       note: note,
     );
   }
+
+// ignore: unused_element
+  EffectEvidenceSynthesisCertaintySubcomponent fromJson(
+      Map<String, Object> json) {
+    return EffectEvidenceSynthesisCertaintySubcomponent.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $EffectEvidenceSynthesisCertaintySubcomponent =
     _$EffectEvidenceSynthesisCertaintySubcomponentTearOff();
 
+/// @nodoc
 mixin _$EffectEvidenceSynthesisCertaintySubcomponent {
   String get id;
   @JsonKey(name: 'extension')
@@ -3695,6 +3795,7 @@ mixin _$EffectEvidenceSynthesisCertaintySubcomponent {
       EffectEvidenceSynthesisCertaintySubcomponent> get copyWith;
 }
 
+/// @nodoc
 abstract class $EffectEvidenceSynthesisCertaintySubcomponentCopyWith<$Res> {
   factory $EffectEvidenceSynthesisCertaintySubcomponentCopyWith(
           EffectEvidenceSynthesisCertaintySubcomponent value,
@@ -3711,6 +3812,7 @@ abstract class $EffectEvidenceSynthesisCertaintySubcomponentCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get type;
 }
 
+/// @nodoc
 class _$EffectEvidenceSynthesisCertaintySubcomponentCopyWithImpl<$Res>
     implements $EffectEvidenceSynthesisCertaintySubcomponentCopyWith<$Res> {
   _$EffectEvidenceSynthesisCertaintySubcomponentCopyWithImpl(
@@ -3755,6 +3857,7 @@ class _$EffectEvidenceSynthesisCertaintySubcomponentCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$EffectEvidenceSynthesisCertaintySubcomponentCopyWith<$Res>
     implements $EffectEvidenceSynthesisCertaintySubcomponentCopyWith<$Res> {
   factory _$EffectEvidenceSynthesisCertaintySubcomponentCopyWith(
@@ -3774,6 +3877,7 @@ abstract class _$EffectEvidenceSynthesisCertaintySubcomponentCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get type;
 }
 
+/// @nodoc
 class __$EffectEvidenceSynthesisCertaintySubcomponentCopyWithImpl<$Res>
     extends _$EffectEvidenceSynthesisCertaintySubcomponentCopyWithImpl<$Res>
     implements _$EffectEvidenceSynthesisCertaintySubcomponentCopyWith<$Res> {
@@ -3813,6 +3917,8 @@ class __$EffectEvidenceSynthesisCertaintySubcomponentCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_EffectEvidenceSynthesisCertaintySubcomponent
     extends _EffectEvidenceSynthesisCertaintySubcomponent {
   _$_EffectEvidenceSynthesisCertaintySubcomponent(
@@ -3927,9 +4033,11 @@ Evidence _$EvidenceFromJson(Map<String, dynamic> json) {
   return _Evidence.fromJson(json);
 }
 
+/// @nodoc
 class _$EvidenceTearOff {
   const _$EvidenceTearOff();
 
+// ignore: unused_element
   _Evidence call(
       {@required @JsonKey(defaultValue: 'Evidence') String resourceType,
       Id id,
@@ -4038,11 +4146,18 @@ class _$EvidenceTearOff {
       outcome: outcome,
     );
   }
+
+// ignore: unused_element
+  Evidence fromJson(Map<String, Object> json) {
+    return Evidence.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Evidence = _$EvidenceTearOff();
 
+/// @nodoc
 mixin _$Evidence {
   @JsonKey(defaultValue: 'Evidence')
   String get resourceType;
@@ -4119,6 +4234,7 @@ mixin _$Evidence {
   $EvidenceCopyWith<Evidence> get copyWith;
 }
 
+/// @nodoc
 abstract class $EvidenceCopyWith<$Res> {
   factory $EvidenceCopyWith(Evidence value, $Res Function(Evidence) then) =
       _$EvidenceCopyWithImpl<$Res>;
@@ -4197,6 +4313,7 @@ abstract class $EvidenceCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get exposureBackground;
 }
 
+/// @nodoc
 class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
   _$EvidenceCopyWithImpl(this._value, this._then);
 
@@ -4567,6 +4684,7 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
   factory _$EvidenceCopyWith(_Evidence value, $Res Function(_Evidence) then) =
       __$EvidenceCopyWithImpl<$Res>;
@@ -4665,6 +4783,7 @@ abstract class _$EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get exposureBackground;
 }
 
+/// @nodoc
 class __$EvidenceCopyWithImpl<$Res> extends _$EvidenceCopyWithImpl<$Res>
     implements _$EvidenceCopyWith<$Res> {
   __$EvidenceCopyWithImpl(_Evidence _value, $Res Function(_Evidence) _then)
@@ -4847,6 +4966,8 @@ class __$EvidenceCopyWithImpl<$Res> extends _$EvidenceCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Evidence extends _Evidence {
   _$_Evidence(
       {@required @JsonKey(defaultValue: 'Evidence') this.resourceType,
@@ -5391,9 +5512,11 @@ EvidenceVariable _$EvidenceVariableFromJson(Map<String, dynamic> json) {
   return _EvidenceVariable.fromJson(json);
 }
 
+/// @nodoc
 class _$EvidenceVariableTearOff {
   const _$EvidenceVariableTearOff();
 
+// ignore: unused_element
   _EvidenceVariable call(
       {@required
       @JsonKey(defaultValue: 'EvidenceVariable')
@@ -5524,11 +5647,18 @@ class _$EvidenceVariableTearOff {
       characteristic: characteristic,
     );
   }
+
+// ignore: unused_element
+  EvidenceVariable fromJson(Map<String, Object> json) {
+    return EvidenceVariable.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $EvidenceVariable = _$EvidenceVariableTearOff();
 
+/// @nodoc
 mixin _$EvidenceVariable {
   @JsonKey(defaultValue: 'EvidenceVariable')
   String get resourceType;
@@ -5607,6 +5737,7 @@ mixin _$EvidenceVariable {
   $EvidenceVariableCopyWith<EvidenceVariable> get copyWith;
 }
 
+/// @nodoc
 abstract class $EvidenceVariableCopyWith<$Res> {
   factory $EvidenceVariableCopyWith(
           EvidenceVariable value, $Res Function(EvidenceVariable) then) =
@@ -5706,6 +5837,7 @@ abstract class $EvidenceVariableCopyWith<$Res> {
   $ElementCopyWith<$Res> get typeElement;
 }
 
+/// @nodoc
 class _$EvidenceVariableCopyWithImpl<$Res>
     implements $EvidenceVariableCopyWith<$Res> {
   _$EvidenceVariableCopyWithImpl(this._value, this._then);
@@ -6077,6 +6209,7 @@ class _$EvidenceVariableCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$EvidenceVariableCopyWith<$Res>
     implements $EvidenceVariableCopyWith<$Res> {
   factory _$EvidenceVariableCopyWith(
@@ -6197,6 +6330,7 @@ abstract class _$EvidenceVariableCopyWith<$Res>
   $ElementCopyWith<$Res> get typeElement;
 }
 
+/// @nodoc
 class __$EvidenceVariableCopyWithImpl<$Res>
     extends _$EvidenceVariableCopyWithImpl<$Res>
     implements _$EvidenceVariableCopyWith<$Res> {
@@ -6381,6 +6515,8 @@ class __$EvidenceVariableCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_EvidenceVariable extends _EvidenceVariable {
   _$_EvidenceVariable(
       {@required @JsonKey(defaultValue: 'EvidenceVariable') this.resourceType,
@@ -6954,9 +7090,11 @@ EvidenceVariableCharacteristic _$EvidenceVariableCharacteristicFromJson(
   return _EvidenceVariableCharacteristic.fromJson(json);
 }
 
+/// @nodoc
 class _$EvidenceVariableCharacteristicTearOff {
   const _$EvidenceVariableCharacteristicTearOff();
 
+// ignore: unused_element
   _EvidenceVariableCharacteristic
       call(
           {String id,
@@ -7017,12 +7155,19 @@ class _$EvidenceVariableCharacteristicTearOff {
       groupMeasureElement: groupMeasureElement,
     );
   }
+
+// ignore: unused_element
+  EvidenceVariableCharacteristic fromJson(Map<String, Object> json) {
+    return EvidenceVariableCharacteristic.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $EvidenceVariableCharacteristic =
     _$EvidenceVariableCharacteristicTearOff();
 
+/// @nodoc
 mixin _$EvidenceVariableCharacteristic {
   String get id;
   @JsonKey(name: 'extension')
@@ -7060,6 +7205,7 @@ mixin _$EvidenceVariableCharacteristic {
       get copyWith;
 }
 
+/// @nodoc
 abstract class $EvidenceVariableCharacteristicCopyWith<$Res> {
   factory $EvidenceVariableCharacteristicCopyWith(
           EvidenceVariableCharacteristic value,
@@ -7116,6 +7262,7 @@ abstract class $EvidenceVariableCharacteristicCopyWith<$Res> {
   $ElementCopyWith<$Res> get groupMeasureElement;
 }
 
+/// @nodoc
 class _$EvidenceVariableCharacteristicCopyWithImpl<$Res>
     implements $EvidenceVariableCharacteristicCopyWith<$Res> {
   _$EvidenceVariableCharacteristicCopyWithImpl(this._value, this._then);
@@ -7365,6 +7512,7 @@ class _$EvidenceVariableCharacteristicCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$EvidenceVariableCharacteristicCopyWith<$Res>
     implements $EvidenceVariableCharacteristicCopyWith<$Res> {
   factory _$EvidenceVariableCharacteristicCopyWith(
@@ -7437,6 +7585,7 @@ abstract class _$EvidenceVariableCharacteristicCopyWith<$Res>
   $ElementCopyWith<$Res> get groupMeasureElement;
 }
 
+/// @nodoc
 class __$EvidenceVariableCharacteristicCopyWithImpl<$Res>
     extends _$EvidenceVariableCharacteristicCopyWithImpl<$Res>
     implements _$EvidenceVariableCharacteristicCopyWith<$Res> {
@@ -7546,6 +7695,8 @@ class __$EvidenceVariableCharacteristicCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_EvidenceVariableCharacteristic
     extends _EvidenceVariableCharacteristic {
   _$_EvidenceVariableCharacteristic(
@@ -7843,9 +7994,11 @@ ResearchDefinition _$ResearchDefinitionFromJson(Map<String, dynamic> json) {
   return _ResearchDefinition.fromJson(json);
 }
 
+/// @nodoc
 class _$ResearchDefinitionTearOff {
   const _$ResearchDefinitionTearOff();
 
+// ignore: unused_element
   _ResearchDefinition call(
       {@required
       @JsonKey(defaultValue: 'ResearchDefinition')
@@ -8001,11 +8154,18 @@ class _$ResearchDefinitionTearOff {
       outcome: outcome,
     );
   }
+
+// ignore: unused_element
+  ResearchDefinition fromJson(Map<String, Object> json) {
+    return ResearchDefinition.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ResearchDefinition = _$ResearchDefinitionTearOff();
 
+/// @nodoc
 mixin _$ResearchDefinition {
   @JsonKey(defaultValue: 'ResearchDefinition')
   String get resourceType;
@@ -8098,6 +8258,7 @@ mixin _$ResearchDefinition {
   $ResearchDefinitionCopyWith<ResearchDefinition> get copyWith;
 }
 
+/// @nodoc
 abstract class $ResearchDefinitionCopyWith<$Res> {
   factory $ResearchDefinitionCopyWith(
           ResearchDefinition value, $Res Function(ResearchDefinition) then) =
@@ -8219,6 +8380,7 @@ abstract class $ResearchDefinitionCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get outcome;
 }
 
+/// @nodoc
 class _$ResearchDefinitionCopyWithImpl<$Res>
     implements $ResearchDefinitionCopyWith<$Res> {
   _$ResearchDefinitionCopyWithImpl(this._value, this._then);
@@ -8709,6 +8871,7 @@ class _$ResearchDefinitionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ResearchDefinitionCopyWith<$Res>
     implements $ResearchDefinitionCopyWith<$Res> {
   factory _$ResearchDefinitionCopyWith(
@@ -8859,6 +9022,7 @@ abstract class _$ResearchDefinitionCopyWith<$Res>
   $ReferenceCopyWith<$Res> get outcome;
 }
 
+/// @nodoc
 class __$ResearchDefinitionCopyWithImpl<$Res>
     extends _$ResearchDefinitionCopyWithImpl<$Res>
     implements _$ResearchDefinitionCopyWith<$Res> {
@@ -9081,6 +9245,8 @@ class __$ResearchDefinitionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ResearchDefinition extends _ResearchDefinition {
   _$_ResearchDefinition(
       {@required @JsonKey(defaultValue: 'ResearchDefinition') this.resourceType,
@@ -9750,9 +9916,11 @@ ResearchElementDefinition _$ResearchElementDefinitionFromJson(
   return _ResearchElementDefinition.fromJson(json);
 }
 
+/// @nodoc
 class _$ResearchElementDefinitionTearOff {
   const _$ResearchElementDefinitionTearOff();
 
+// ignore: unused_element
   _ResearchElementDefinition call(
       {@required
       @JsonKey(defaultValue: 'ResearchElementDefinition')
@@ -9914,11 +10082,18 @@ class _$ResearchElementDefinitionTearOff {
       characteristic: characteristic,
     );
   }
+
+// ignore: unused_element
+  ResearchElementDefinition fromJson(Map<String, Object> json) {
+    return ResearchElementDefinition.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ResearchElementDefinition = _$ResearchElementDefinitionTearOff();
 
+/// @nodoc
 mixin _$ResearchElementDefinition {
   @JsonKey(defaultValue: 'ResearchElementDefinition')
   String get resourceType;
@@ -10016,6 +10191,7 @@ mixin _$ResearchElementDefinition {
   $ResearchElementDefinitionCopyWith<ResearchElementDefinition> get copyWith;
 }
 
+/// @nodoc
 abstract class $ResearchElementDefinitionCopyWith<$Res> {
   factory $ResearchElementDefinitionCopyWith(ResearchElementDefinition value,
           $Res Function(ResearchElementDefinition) then) =
@@ -10140,6 +10316,7 @@ abstract class $ResearchElementDefinitionCopyWith<$Res> {
   $ElementCopyWith<$Res> get variableTypeElement;
 }
 
+/// @nodoc
 class _$ResearchElementDefinitionCopyWithImpl<$Res>
     implements $ResearchElementDefinitionCopyWith<$Res> {
   _$ResearchElementDefinitionCopyWithImpl(this._value, this._then);
@@ -10617,6 +10794,7 @@ class _$ResearchElementDefinitionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ResearchElementDefinitionCopyWith<$Res>
     implements $ResearchElementDefinitionCopyWith<$Res> {
   factory _$ResearchElementDefinitionCopyWith(_ResearchElementDefinition value,
@@ -10768,6 +10946,7 @@ abstract class _$ResearchElementDefinitionCopyWith<$Res>
   $ElementCopyWith<$Res> get variableTypeElement;
 }
 
+/// @nodoc
 class __$ResearchElementDefinitionCopyWithImpl<$Res>
     extends _$ResearchElementDefinitionCopyWithImpl<$Res>
     implements _$ResearchElementDefinitionCopyWith<$Res> {
@@ -10998,6 +11177,8 @@ class __$ResearchElementDefinitionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ResearchElementDefinition extends _ResearchElementDefinition {
   _$_ResearchElementDefinition(
       {@required
@@ -11720,9 +11901,11 @@ ResearchElementDefinitionCharacteristic
   return _ResearchElementDefinitionCharacteristic.fromJson(json);
 }
 
+/// @nodoc
 class _$ResearchElementDefinitionCharacteristicTearOff {
   const _$ResearchElementDefinitionCharacteristicTearOff();
 
+// ignore: unused_element
   _ResearchElementDefinitionCharacteristic call(
       {String id,
       @JsonKey(name: 'extension')
@@ -11812,12 +11995,19 @@ class _$ResearchElementDefinitionCharacteristicTearOff {
           participantEffectiveGroupMeasureElement,
     );
   }
+
+// ignore: unused_element
+  ResearchElementDefinitionCharacteristic fromJson(Map<String, Object> json) {
+    return ResearchElementDefinitionCharacteristic.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ResearchElementDefinitionCharacteristic =
     _$ResearchElementDefinitionCharacteristicTearOff();
 
+/// @nodoc
 mixin _$ResearchElementDefinitionCharacteristic {
   String get id;
   @JsonKey(name: 'extension')
@@ -11876,6 +12066,7 @@ mixin _$ResearchElementDefinitionCharacteristic {
       ResearchElementDefinitionCharacteristic> get copyWith;
 }
 
+/// @nodoc
 abstract class $ResearchElementDefinitionCharacteristicCopyWith<$Res> {
   factory $ResearchElementDefinitionCharacteristicCopyWith(
           ResearchElementDefinitionCharacteristic value,
@@ -11956,6 +12147,7 @@ abstract class $ResearchElementDefinitionCharacteristicCopyWith<$Res> {
   $ElementCopyWith<$Res> get participantEffectiveGroupMeasureElement;
 }
 
+/// @nodoc
 class _$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
     implements $ResearchElementDefinitionCharacteristicCopyWith<$Res> {
   _$ResearchElementDefinitionCharacteristicCopyWithImpl(
@@ -12319,6 +12511,7 @@ class _$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ResearchElementDefinitionCharacteristicCopyWith<$Res>
     implements $ResearchElementDefinitionCharacteristicCopyWith<$Res> {
   factory _$ResearchElementDefinitionCharacteristicCopyWith(
@@ -12421,6 +12614,7 @@ abstract class _$ResearchElementDefinitionCharacteristicCopyWith<$Res>
   $ElementCopyWith<$Res> get participantEffectiveGroupMeasureElement;
 }
 
+/// @nodoc
 class __$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
     extends _$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
     implements _$ResearchElementDefinitionCharacteristicCopyWith<$Res> {
@@ -12577,6 +12771,8 @@ class __$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ResearchElementDefinitionCharacteristic
     extends _ResearchElementDefinitionCharacteristic {
   _$_ResearchElementDefinitionCharacteristic(
@@ -12994,9 +13190,11 @@ RiskEvidenceSynthesis _$RiskEvidenceSynthesisFromJson(
   return _RiskEvidenceSynthesis.fromJson(json);
 }
 
+/// @nodoc
 class _$RiskEvidenceSynthesisTearOff {
   const _$RiskEvidenceSynthesisTearOff();
 
+// ignore: unused_element
   _RiskEvidenceSynthesis call(
       {@required
       @JsonKey(defaultValue: 'RiskEvidenceSynthesis')
@@ -13126,11 +13324,18 @@ class _$RiskEvidenceSynthesisTearOff {
       certainty: certainty,
     );
   }
+
+// ignore: unused_element
+  RiskEvidenceSynthesis fromJson(Map<String, Object> json) {
+    return RiskEvidenceSynthesis.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $RiskEvidenceSynthesis = _$RiskEvidenceSynthesisTearOff();
 
+/// @nodoc
 mixin _$RiskEvidenceSynthesis {
   @JsonKey(defaultValue: 'RiskEvidenceSynthesis')
   String get resourceType;
@@ -13206,6 +13411,7 @@ mixin _$RiskEvidenceSynthesis {
   $RiskEvidenceSynthesisCopyWith<RiskEvidenceSynthesis> get copyWith;
 }
 
+/// @nodoc
 abstract class $RiskEvidenceSynthesisCopyWith<$Res> {
   factory $RiskEvidenceSynthesisCopyWith(RiskEvidenceSynthesis value,
           $Res Function(RiskEvidenceSynthesis) then) =
@@ -13306,6 +13512,7 @@ abstract class $RiskEvidenceSynthesisCopyWith<$Res> {
   $RiskEvidenceSynthesisRiskEstimateCopyWith<$Res> get riskEstimate;
 }
 
+/// @nodoc
 class _$RiskEvidenceSynthesisCopyWithImpl<$Res>
     implements $RiskEvidenceSynthesisCopyWith<$Res> {
   _$RiskEvidenceSynthesisCopyWithImpl(this._value, this._then);
@@ -13725,6 +13932,7 @@ class _$RiskEvidenceSynthesisCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$RiskEvidenceSynthesisCopyWith<$Res>
     implements $RiskEvidenceSynthesisCopyWith<$Res> {
   factory _$RiskEvidenceSynthesisCopyWith(_RiskEvidenceSynthesis value,
@@ -13850,6 +14058,7 @@ abstract class _$RiskEvidenceSynthesisCopyWith<$Res>
   $RiskEvidenceSynthesisRiskEstimateCopyWith<$Res> get riskEstimate;
 }
 
+/// @nodoc
 class __$RiskEvidenceSynthesisCopyWithImpl<$Res>
     extends _$RiskEvidenceSynthesisCopyWithImpl<$Res>
     implements _$RiskEvidenceSynthesisCopyWith<$Res> {
@@ -14040,6 +14249,8 @@ class __$RiskEvidenceSynthesisCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
   _$_RiskEvidenceSynthesis(
       {@required
@@ -14631,9 +14842,11 @@ RiskEvidenceSynthesisSampleSize _$RiskEvidenceSynthesisSampleSizeFromJson(
   return _RiskEvidenceSynthesisSampleSize.fromJson(json);
 }
 
+/// @nodoc
 class _$RiskEvidenceSynthesisSampleSizeTearOff {
   const _$RiskEvidenceSynthesisSampleSizeTearOff();
 
+// ignore: unused_element
   _RiskEvidenceSynthesisSampleSize call(
       {String id,
       @JsonKey(name: 'extension')
@@ -14660,12 +14873,19 @@ class _$RiskEvidenceSynthesisSampleSizeTearOff {
       numberOfParticipantsElement: numberOfParticipantsElement,
     );
   }
+
+// ignore: unused_element
+  RiskEvidenceSynthesisSampleSize fromJson(Map<String, Object> json) {
+    return RiskEvidenceSynthesisSampleSize.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $RiskEvidenceSynthesisSampleSize =
     _$RiskEvidenceSynthesisSampleSizeTearOff();
 
+/// @nodoc
 mixin _$RiskEvidenceSynthesisSampleSize {
   String get id;
   @JsonKey(name: 'extension')
@@ -14686,6 +14906,7 @@ mixin _$RiskEvidenceSynthesisSampleSize {
       get copyWith;
 }
 
+/// @nodoc
 abstract class $RiskEvidenceSynthesisSampleSizeCopyWith<$Res> {
   factory $RiskEvidenceSynthesisSampleSizeCopyWith(
           RiskEvidenceSynthesisSampleSize value,
@@ -14711,6 +14932,7 @@ abstract class $RiskEvidenceSynthesisSampleSizeCopyWith<$Res> {
   $ElementCopyWith<$Res> get numberOfParticipantsElement;
 }
 
+/// @nodoc
 class _$RiskEvidenceSynthesisSampleSizeCopyWithImpl<$Res>
     implements $RiskEvidenceSynthesisSampleSizeCopyWith<$Res> {
   _$RiskEvidenceSynthesisSampleSizeCopyWithImpl(this._value, this._then);
@@ -14790,6 +15012,7 @@ class _$RiskEvidenceSynthesisSampleSizeCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$RiskEvidenceSynthesisSampleSizeCopyWith<$Res>
     implements $RiskEvidenceSynthesisSampleSizeCopyWith<$Res> {
   factory _$RiskEvidenceSynthesisSampleSizeCopyWith(
@@ -14820,6 +15043,7 @@ abstract class _$RiskEvidenceSynthesisSampleSizeCopyWith<$Res>
   $ElementCopyWith<$Res> get numberOfParticipantsElement;
 }
 
+/// @nodoc
 class __$RiskEvidenceSynthesisSampleSizeCopyWithImpl<$Res>
     extends _$RiskEvidenceSynthesisSampleSizeCopyWithImpl<$Res>
     implements _$RiskEvidenceSynthesisSampleSizeCopyWith<$Res> {
@@ -14874,6 +15098,8 @@ class __$RiskEvidenceSynthesisSampleSizeCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_RiskEvidenceSynthesisSampleSize
     extends _RiskEvidenceSynthesisSampleSize {
   _$_RiskEvidenceSynthesisSampleSize(
@@ -15032,9 +15258,11 @@ RiskEvidenceSynthesisRiskEstimate _$RiskEvidenceSynthesisRiskEstimateFromJson(
   return _RiskEvidenceSynthesisRiskEstimate.fromJson(json);
 }
 
+/// @nodoc
 class _$RiskEvidenceSynthesisRiskEstimateTearOff {
   const _$RiskEvidenceSynthesisRiskEstimateTearOff();
 
+// ignore: unused_element
   _RiskEvidenceSynthesisRiskEstimate call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -15067,12 +15295,19 @@ class _$RiskEvidenceSynthesisRiskEstimateTearOff {
       precisionEstimate: precisionEstimate,
     );
   }
+
+// ignore: unused_element
+  RiskEvidenceSynthesisRiskEstimate fromJson(Map<String, Object> json) {
+    return RiskEvidenceSynthesisRiskEstimate.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $RiskEvidenceSynthesisRiskEstimate =
     _$RiskEvidenceSynthesisRiskEstimateTearOff();
 
+/// @nodoc
 mixin _$RiskEvidenceSynthesisRiskEstimate {
   String get id;
   @JsonKey(name: 'extension')
@@ -15099,6 +15334,7 @@ mixin _$RiskEvidenceSynthesisRiskEstimate {
       get copyWith;
 }
 
+/// @nodoc
 abstract class $RiskEvidenceSynthesisRiskEstimateCopyWith<$Res> {
   factory $RiskEvidenceSynthesisRiskEstimateCopyWith(
           RiskEvidenceSynthesisRiskEstimate value,
@@ -15128,6 +15364,7 @@ abstract class $RiskEvidenceSynthesisRiskEstimateCopyWith<$Res> {
   $ElementCopyWith<$Res> get numeratorCountElement;
 }
 
+/// @nodoc
 class _$RiskEvidenceSynthesisRiskEstimateCopyWithImpl<$Res>
     implements $RiskEvidenceSynthesisRiskEstimateCopyWith<$Res> {
   _$RiskEvidenceSynthesisRiskEstimateCopyWithImpl(this._value, this._then);
@@ -15253,6 +15490,7 @@ class _$RiskEvidenceSynthesisRiskEstimateCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$RiskEvidenceSynthesisRiskEstimateCopyWith<$Res>
     implements $RiskEvidenceSynthesisRiskEstimateCopyWith<$Res> {
   factory _$RiskEvidenceSynthesisRiskEstimateCopyWith(
@@ -15290,6 +15528,7 @@ abstract class _$RiskEvidenceSynthesisRiskEstimateCopyWith<$Res>
   $ElementCopyWith<$Res> get numeratorCountElement;
 }
 
+/// @nodoc
 class __$RiskEvidenceSynthesisRiskEstimateCopyWithImpl<$Res>
     extends _$RiskEvidenceSynthesisRiskEstimateCopyWithImpl<$Res>
     implements _$RiskEvidenceSynthesisRiskEstimateCopyWith<$Res> {
@@ -15360,6 +15599,8 @@ class __$RiskEvidenceSynthesisRiskEstimateCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_RiskEvidenceSynthesisRiskEstimate
     extends _RiskEvidenceSynthesisRiskEstimate {
   _$_RiskEvidenceSynthesisRiskEstimate(
@@ -15566,9 +15807,11 @@ RiskEvidenceSynthesisPrecisionEstimate
   return _RiskEvidenceSynthesisPrecisionEstimate.fromJson(json);
 }
 
+/// @nodoc
 class _$RiskEvidenceSynthesisPrecisionEstimateTearOff {
   const _$RiskEvidenceSynthesisPrecisionEstimateTearOff();
 
+// ignore: unused_element
   _RiskEvidenceSynthesisPrecisionEstimate call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -15593,12 +15836,19 @@ class _$RiskEvidenceSynthesisPrecisionEstimateTearOff {
       toElement: toElement,
     );
   }
+
+// ignore: unused_element
+  RiskEvidenceSynthesisPrecisionEstimate fromJson(Map<String, Object> json) {
+    return RiskEvidenceSynthesisPrecisionEstimate.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $RiskEvidenceSynthesisPrecisionEstimate =
     _$RiskEvidenceSynthesisPrecisionEstimateTearOff();
 
+/// @nodoc
 mixin _$RiskEvidenceSynthesisPrecisionEstimate {
   String get id;
   @JsonKey(name: 'extension')
@@ -15620,6 +15870,7 @@ mixin _$RiskEvidenceSynthesisPrecisionEstimate {
       RiskEvidenceSynthesisPrecisionEstimate> get copyWith;
 }
 
+/// @nodoc
 abstract class $RiskEvidenceSynthesisPrecisionEstimateCopyWith<$Res> {
   factory $RiskEvidenceSynthesisPrecisionEstimateCopyWith(
           RiskEvidenceSynthesisPrecisionEstimate value,
@@ -15643,6 +15894,7 @@ abstract class $RiskEvidenceSynthesisPrecisionEstimateCopyWith<$Res> {
   $ElementCopyWith<$Res> get toElement;
 }
 
+/// @nodoc
 class _$RiskEvidenceSynthesisPrecisionEstimateCopyWithImpl<$Res>
     implements $RiskEvidenceSynthesisPrecisionEstimateCopyWith<$Res> {
   _$RiskEvidenceSynthesisPrecisionEstimateCopyWithImpl(this._value, this._then);
@@ -15726,6 +15978,7 @@ class _$RiskEvidenceSynthesisPrecisionEstimateCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$RiskEvidenceSynthesisPrecisionEstimateCopyWith<$Res>
     implements $RiskEvidenceSynthesisPrecisionEstimateCopyWith<$Res> {
   factory _$RiskEvidenceSynthesisPrecisionEstimateCopyWith(
@@ -15755,6 +16008,7 @@ abstract class _$RiskEvidenceSynthesisPrecisionEstimateCopyWith<$Res>
   $ElementCopyWith<$Res> get toElement;
 }
 
+/// @nodoc
 class __$RiskEvidenceSynthesisPrecisionEstimateCopyWithImpl<$Res>
     extends _$RiskEvidenceSynthesisPrecisionEstimateCopyWithImpl<$Res>
     implements _$RiskEvidenceSynthesisPrecisionEstimateCopyWith<$Res> {
@@ -15804,6 +16058,8 @@ class __$RiskEvidenceSynthesisPrecisionEstimateCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_RiskEvidenceSynthesisPrecisionEstimate
     extends _RiskEvidenceSynthesisPrecisionEstimate {
   _$_RiskEvidenceSynthesisPrecisionEstimate(
@@ -15964,9 +16220,11 @@ RiskEvidenceSynthesisCertainty _$RiskEvidenceSynthesisCertaintyFromJson(
   return _RiskEvidenceSynthesisCertainty.fromJson(json);
 }
 
+/// @nodoc
 class _$RiskEvidenceSynthesisCertaintyTearOff {
   const _$RiskEvidenceSynthesisCertaintyTearOff();
 
+// ignore: unused_element
   _RiskEvidenceSynthesisCertainty call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -15983,12 +16241,19 @@ class _$RiskEvidenceSynthesisCertaintyTearOff {
       certaintySubcomponent: certaintySubcomponent,
     );
   }
+
+// ignore: unused_element
+  RiskEvidenceSynthesisCertainty fromJson(Map<String, Object> json) {
+    return RiskEvidenceSynthesisCertainty.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $RiskEvidenceSynthesisCertainty =
     _$RiskEvidenceSynthesisCertaintyTearOff();
 
+/// @nodoc
 mixin _$RiskEvidenceSynthesisCertainty {
   String get id;
   @JsonKey(name: 'extension')
@@ -16003,6 +16268,7 @@ mixin _$RiskEvidenceSynthesisCertainty {
       get copyWith;
 }
 
+/// @nodoc
 abstract class $RiskEvidenceSynthesisCertaintyCopyWith<$Res> {
   factory $RiskEvidenceSynthesisCertaintyCopyWith(
           RiskEvidenceSynthesisCertainty value,
@@ -16017,6 +16283,7 @@ abstract class $RiskEvidenceSynthesisCertaintyCopyWith<$Res> {
       List<RiskEvidenceSynthesisCertaintySubcomponent> certaintySubcomponent});
 }
 
+/// @nodoc
 class _$RiskEvidenceSynthesisCertaintyCopyWithImpl<$Res>
     implements $RiskEvidenceSynthesisCertaintyCopyWith<$Res> {
   _$RiskEvidenceSynthesisCertaintyCopyWithImpl(this._value, this._then);
@@ -16053,6 +16320,7 @@ class _$RiskEvidenceSynthesisCertaintyCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$RiskEvidenceSynthesisCertaintyCopyWith<$Res>
     implements $RiskEvidenceSynthesisCertaintyCopyWith<$Res> {
   factory _$RiskEvidenceSynthesisCertaintyCopyWith(
@@ -16069,6 +16337,7 @@ abstract class _$RiskEvidenceSynthesisCertaintyCopyWith<$Res>
       List<RiskEvidenceSynthesisCertaintySubcomponent> certaintySubcomponent});
 }
 
+/// @nodoc
 class __$RiskEvidenceSynthesisCertaintyCopyWithImpl<$Res>
     extends _$RiskEvidenceSynthesisCertaintyCopyWithImpl<$Res>
     implements _$RiskEvidenceSynthesisCertaintyCopyWith<$Res> {
@@ -16110,6 +16379,8 @@ class __$RiskEvidenceSynthesisCertaintyCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_RiskEvidenceSynthesisCertainty
     extends _RiskEvidenceSynthesisCertainty {
   _$_RiskEvidenceSynthesisCertainty(
@@ -16225,9 +16496,11 @@ RiskEvidenceSynthesisCertaintySubcomponent
   return _RiskEvidenceSynthesisCertaintySubcomponent.fromJson(json);
 }
 
+/// @nodoc
 class _$RiskEvidenceSynthesisCertaintySubcomponentTearOff {
   const _$RiskEvidenceSynthesisCertaintySubcomponentTearOff();
 
+// ignore: unused_element
   _RiskEvidenceSynthesisCertaintySubcomponent call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -16244,12 +16517,20 @@ class _$RiskEvidenceSynthesisCertaintySubcomponentTearOff {
       note: note,
     );
   }
+
+// ignore: unused_element
+  RiskEvidenceSynthesisCertaintySubcomponent fromJson(
+      Map<String, Object> json) {
+    return RiskEvidenceSynthesisCertaintySubcomponent.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $RiskEvidenceSynthesisCertaintySubcomponent =
     _$RiskEvidenceSynthesisCertaintySubcomponentTearOff();
 
+/// @nodoc
 mixin _$RiskEvidenceSynthesisCertaintySubcomponent {
   String get id;
   @JsonKey(name: 'extension')
@@ -16264,6 +16545,7 @@ mixin _$RiskEvidenceSynthesisCertaintySubcomponent {
       RiskEvidenceSynthesisCertaintySubcomponent> get copyWith;
 }
 
+/// @nodoc
 abstract class $RiskEvidenceSynthesisCertaintySubcomponentCopyWith<$Res> {
   factory $RiskEvidenceSynthesisCertaintySubcomponentCopyWith(
           RiskEvidenceSynthesisCertaintySubcomponent value,
@@ -16280,6 +16562,7 @@ abstract class $RiskEvidenceSynthesisCertaintySubcomponentCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get type;
 }
 
+/// @nodoc
 class _$RiskEvidenceSynthesisCertaintySubcomponentCopyWithImpl<$Res>
     implements $RiskEvidenceSynthesisCertaintySubcomponentCopyWith<$Res> {
   _$RiskEvidenceSynthesisCertaintySubcomponentCopyWithImpl(
@@ -16324,6 +16607,7 @@ class _$RiskEvidenceSynthesisCertaintySubcomponentCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$RiskEvidenceSynthesisCertaintySubcomponentCopyWith<$Res>
     implements $RiskEvidenceSynthesisCertaintySubcomponentCopyWith<$Res> {
   factory _$RiskEvidenceSynthesisCertaintySubcomponentCopyWith(
@@ -16343,6 +16627,7 @@ abstract class _$RiskEvidenceSynthesisCertaintySubcomponentCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get type;
 }
 
+/// @nodoc
 class __$RiskEvidenceSynthesisCertaintySubcomponentCopyWithImpl<$Res>
     extends _$RiskEvidenceSynthesisCertaintySubcomponentCopyWithImpl<$Res>
     implements _$RiskEvidenceSynthesisCertaintySubcomponentCopyWith<$Res> {
@@ -16382,6 +16667,8 @@ class __$RiskEvidenceSynthesisCertaintySubcomponentCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_RiskEvidenceSynthesisCertaintySubcomponent
     extends _RiskEvidenceSynthesisCertaintySubcomponent {
   _$_RiskEvidenceSynthesisCertaintySubcomponent(

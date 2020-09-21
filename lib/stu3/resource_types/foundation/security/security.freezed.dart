@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'security.dart';
 
@@ -12,9 +12,11 @@ AuditEvent _$AuditEventFromJson(Map<String, dynamic> json) {
   return _AuditEvent.fromJson(json);
 }
 
+/// @nodoc
 class _$AuditEventTearOff {
   const _$AuditEventTearOff();
 
+// ignore: unused_element
   _AuditEvent call(
       {@required @JsonKey(defaultValue: 'AuditEvent') String resourceType,
       Id id,
@@ -69,11 +71,18 @@ class _$AuditEventTearOff {
       entity: entity,
     );
   }
+
+// ignore: unused_element
+  AuditEvent fromJson(Map<String, Object> json) {
+    return AuditEvent.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $AuditEvent = _$AuditEventTearOff();
 
+/// @nodoc
 mixin _$AuditEvent {
   @JsonKey(defaultValue: 'AuditEvent')
   String get resourceType;
@@ -113,6 +122,7 @@ mixin _$AuditEvent {
   $AuditEventCopyWith<AuditEvent> get copyWith;
 }
 
+/// @nodoc
 abstract class $AuditEventCopyWith<$Res> {
   factory $AuditEventCopyWith(
           AuditEvent value, $Res Function(AuditEvent) then) =
@@ -156,6 +166,7 @@ abstract class $AuditEventCopyWith<$Res> {
   $AuditEventSourceCopyWith<$Res> get source;
 }
 
+/// @nodoc
 class _$AuditEventCopyWithImpl<$Res> implements $AuditEventCopyWith<$Res> {
   _$AuditEventCopyWithImpl(this._value, this._then);
 
@@ -347,6 +358,7 @@ class _$AuditEventCopyWithImpl<$Res> implements $AuditEventCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$AuditEventCopyWith<$Res> implements $AuditEventCopyWith<$Res> {
   factory _$AuditEventCopyWith(
           _AuditEvent value, $Res Function(_AuditEvent) then) =
@@ -401,6 +413,7 @@ abstract class _$AuditEventCopyWith<$Res> implements $AuditEventCopyWith<$Res> {
   $AuditEventSourceCopyWith<$Res> get source;
 }
 
+/// @nodoc
 class __$AuditEventCopyWithImpl<$Res> extends _$AuditEventCopyWithImpl<$Res>
     implements _$AuditEventCopyWith<$Res> {
   __$AuditEventCopyWithImpl(
@@ -495,6 +508,8 @@ class __$AuditEventCopyWithImpl<$Res> extends _$AuditEventCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_AuditEvent extends _AuditEvent {
   _$_AuditEvent(
       {@required @JsonKey(defaultValue: 'AuditEvent') this.resourceType,
@@ -805,9 +820,11 @@ AuditEventAgent _$AuditEventAgentFromJson(Map<String, dynamic> json) {
   return _AuditEventAgent.fromJson(json);
 }
 
+/// @nodoc
 class _$AuditEventAgentTearOff {
   const _$AuditEventAgentTearOff();
 
+// ignore: unused_element
   _AuditEventAgent call(
       {List<CodeableConcept> role,
       Reference reference,
@@ -842,11 +859,18 @@ class _$AuditEventAgentTearOff {
       purposeOfUse: purposeOfUse,
     );
   }
+
+// ignore: unused_element
+  AuditEventAgent fromJson(Map<String, Object> json) {
+    return AuditEventAgent.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $AuditEventAgent = _$AuditEventAgentTearOff();
 
+/// @nodoc
 mixin _$AuditEventAgent {
   List<CodeableConcept> get role;
   Reference get reference;
@@ -872,6 +896,7 @@ mixin _$AuditEventAgent {
   $AuditEventAgentCopyWith<AuditEventAgent> get copyWith;
 }
 
+/// @nodoc
 abstract class $AuditEventAgentCopyWith<$Res> {
   factory $AuditEventAgentCopyWith(
           AuditEventAgent value, $Res Function(AuditEventAgent) then) =
@@ -903,6 +928,7 @@ abstract class $AuditEventAgentCopyWith<$Res> {
   $AuditEventNetworkCopyWith<$Res> get network;
 }
 
+/// @nodoc
 class _$AuditEventAgentCopyWithImpl<$Res>
     implements $AuditEventAgentCopyWith<$Res> {
   _$AuditEventAgentCopyWithImpl(this._value, this._then);
@@ -1040,6 +1066,7 @@ class _$AuditEventAgentCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$AuditEventAgentCopyWith<$Res>
     implements $AuditEventAgentCopyWith<$Res> {
   factory _$AuditEventAgentCopyWith(
@@ -1081,6 +1108,7 @@ abstract class _$AuditEventAgentCopyWith<$Res>
   $AuditEventNetworkCopyWith<$Res> get network;
 }
 
+/// @nodoc
 class __$AuditEventAgentCopyWithImpl<$Res>
     extends _$AuditEventAgentCopyWithImpl<$Res>
     implements _$AuditEventAgentCopyWith<$Res> {
@@ -1141,6 +1169,8 @@ class __$AuditEventAgentCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_AuditEventAgent extends _AuditEventAgent {
   _$_AuditEventAgent(
       {this.role,
@@ -1341,9 +1371,11 @@ AuditEventNetwork _$AuditEventNetworkFromJson(Map<String, dynamic> json) {
   return _AuditEventNetwork.fromJson(json);
 }
 
+/// @nodoc
 class _$AuditEventNetworkTearOff {
   const _$AuditEventNetworkTearOff();
 
+// ignore: unused_element
   _AuditEventNetwork call(
       {String address,
       @JsonKey(name: '_address') Element addressElement,
@@ -1356,11 +1388,18 @@ class _$AuditEventNetworkTearOff {
       typeElement: typeElement,
     );
   }
+
+// ignore: unused_element
+  AuditEventNetwork fromJson(Map<String, Object> json) {
+    return AuditEventNetwork.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $AuditEventNetwork = _$AuditEventNetworkTearOff();
 
+/// @nodoc
 mixin _$AuditEventNetwork {
   String get address;
   @JsonKey(name: '_address')
@@ -1373,6 +1412,7 @@ mixin _$AuditEventNetwork {
   $AuditEventNetworkCopyWith<AuditEventNetwork> get copyWith;
 }
 
+/// @nodoc
 abstract class $AuditEventNetworkCopyWith<$Res> {
   factory $AuditEventNetworkCopyWith(
           AuditEventNetwork value, $Res Function(AuditEventNetwork) then) =
@@ -1387,6 +1427,7 @@ abstract class $AuditEventNetworkCopyWith<$Res> {
   $ElementCopyWith<$Res> get typeElement;
 }
 
+/// @nodoc
 class _$AuditEventNetworkCopyWithImpl<$Res>
     implements $AuditEventNetworkCopyWith<$Res> {
   _$AuditEventNetworkCopyWithImpl(this._value, this._then);
@@ -1434,6 +1475,7 @@ class _$AuditEventNetworkCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$AuditEventNetworkCopyWith<$Res>
     implements $AuditEventNetworkCopyWith<$Res> {
   factory _$AuditEventNetworkCopyWith(
@@ -1452,6 +1494,7 @@ abstract class _$AuditEventNetworkCopyWith<$Res>
   $ElementCopyWith<$Res> get typeElement;
 }
 
+/// @nodoc
 class __$AuditEventNetworkCopyWithImpl<$Res>
     extends _$AuditEventNetworkCopyWithImpl<$Res>
     implements _$AuditEventNetworkCopyWith<$Res> {
@@ -1482,6 +1525,8 @@ class __$AuditEventNetworkCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_AuditEventNetwork extends _AuditEventNetwork {
   _$_AuditEventNetwork(
       {this.address,
@@ -1573,9 +1618,11 @@ AuditEventSource _$AuditEventSourceFromJson(Map<String, dynamic> json) {
   return _AuditEventSource.fromJson(json);
 }
 
+/// @nodoc
 class _$AuditEventSourceTearOff {
   const _$AuditEventSourceTearOff();
 
+// ignore: unused_element
   _AuditEventSource call(
       {String site,
       @JsonKey(name: '_site') Element siteElement,
@@ -1588,11 +1635,18 @@ class _$AuditEventSourceTearOff {
       type: type,
     );
   }
+
+// ignore: unused_element
+  AuditEventSource fromJson(Map<String, Object> json) {
+    return AuditEventSource.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $AuditEventSource = _$AuditEventSourceTearOff();
 
+/// @nodoc
 mixin _$AuditEventSource {
   String get site;
   @JsonKey(name: '_site')
@@ -1604,6 +1658,7 @@ mixin _$AuditEventSource {
   $AuditEventSourceCopyWith<AuditEventSource> get copyWith;
 }
 
+/// @nodoc
 abstract class $AuditEventSourceCopyWith<$Res> {
   factory $AuditEventSourceCopyWith(
           AuditEventSource value, $Res Function(AuditEventSource) then) =
@@ -1618,6 +1673,7 @@ abstract class $AuditEventSourceCopyWith<$Res> {
   $IdentifierCopyWith<$Res> get identifier;
 }
 
+/// @nodoc
 class _$AuditEventSourceCopyWithImpl<$Res>
     implements $AuditEventSourceCopyWith<$Res> {
   _$AuditEventSourceCopyWithImpl(this._value, this._then);
@@ -1664,6 +1720,7 @@ class _$AuditEventSourceCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$AuditEventSourceCopyWith<$Res>
     implements $AuditEventSourceCopyWith<$Res> {
   factory _$AuditEventSourceCopyWith(
@@ -1682,6 +1739,7 @@ abstract class _$AuditEventSourceCopyWith<$Res>
   $IdentifierCopyWith<$Res> get identifier;
 }
 
+/// @nodoc
 class __$AuditEventSourceCopyWithImpl<$Res>
     extends _$AuditEventSourceCopyWithImpl<$Res>
     implements _$AuditEventSourceCopyWith<$Res> {
@@ -1711,6 +1769,8 @@ class __$AuditEventSourceCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_AuditEventSource extends _AuditEventSource {
   _$_AuditEventSource(
       {this.site,
@@ -1800,9 +1860,11 @@ AuditEventEntity _$AuditEventEntityFromJson(Map<String, dynamic> json) {
   return _AuditEventEntity.fromJson(json);
 }
 
+/// @nodoc
 class _$AuditEventEntityTearOff {
   const _$AuditEventEntityTearOff();
 
+// ignore: unused_element
   _AuditEventEntity call(
       {Identifier identifier,
       Reference reference,
@@ -1833,11 +1895,18 @@ class _$AuditEventEntityTearOff {
       detail: detail,
     );
   }
+
+// ignore: unused_element
+  AuditEventEntity fromJson(Map<String, Object> json) {
+    return AuditEventEntity.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $AuditEventEntity = _$AuditEventEntityTearOff();
 
+/// @nodoc
 mixin _$AuditEventEntity {
   Identifier get identifier;
   Reference get reference;
@@ -1860,6 +1929,7 @@ mixin _$AuditEventEntity {
   $AuditEventEntityCopyWith<AuditEventEntity> get copyWith;
 }
 
+/// @nodoc
 abstract class $AuditEventEntityCopyWith<$Res> {
   factory $AuditEventEntityCopyWith(
           AuditEventEntity value, $Res Function(AuditEventEntity) then) =
@@ -1889,6 +1959,7 @@ abstract class $AuditEventEntityCopyWith<$Res> {
   $ElementCopyWith<$Res> get queryElement;
 }
 
+/// @nodoc
 class _$AuditEventEntityCopyWithImpl<$Res>
     implements $AuditEventEntityCopyWith<$Res> {
   _$AuditEventEntityCopyWithImpl(this._value, this._then);
@@ -2022,6 +2093,7 @@ class _$AuditEventEntityCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$AuditEventEntityCopyWith<$Res>
     implements $AuditEventEntityCopyWith<$Res> {
   factory _$AuditEventEntityCopyWith(
@@ -2061,6 +2133,7 @@ abstract class _$AuditEventEntityCopyWith<$Res>
   $ElementCopyWith<$Res> get queryElement;
 }
 
+/// @nodoc
 class __$AuditEventEntityCopyWithImpl<$Res>
     extends _$AuditEventEntityCopyWithImpl<$Res>
     implements _$AuditEventEntityCopyWith<$Res> {
@@ -2117,6 +2190,8 @@ class __$AuditEventEntityCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_AuditEventEntity extends _AuditEventEntity {
   _$_AuditEventEntity(
       {this.identifier,
@@ -2296,9 +2371,11 @@ AuditEventDetail _$AuditEventDetailFromJson(Map<String, dynamic> json) {
   return _AuditEventDetail.fromJson(json);
 }
 
+/// @nodoc
 class _$AuditEventDetailTearOff {
   const _$AuditEventDetailTearOff();
 
+// ignore: unused_element
   _AuditEventDetail call(
       {String type,
       @JsonKey(name: '_type') Element typeElement,
@@ -2311,11 +2388,18 @@ class _$AuditEventDetailTearOff {
       valueElement: valueElement,
     );
   }
+
+// ignore: unused_element
+  AuditEventDetail fromJson(Map<String, Object> json) {
+    return AuditEventDetail.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $AuditEventDetail = _$AuditEventDetailTearOff();
 
+/// @nodoc
 mixin _$AuditEventDetail {
   String get type;
   @JsonKey(name: '_type')
@@ -2328,6 +2412,7 @@ mixin _$AuditEventDetail {
   $AuditEventDetailCopyWith<AuditEventDetail> get copyWith;
 }
 
+/// @nodoc
 abstract class $AuditEventDetailCopyWith<$Res> {
   factory $AuditEventDetailCopyWith(
           AuditEventDetail value, $Res Function(AuditEventDetail) then) =
@@ -2342,6 +2427,7 @@ abstract class $AuditEventDetailCopyWith<$Res> {
   $ElementCopyWith<$Res> get valueElement;
 }
 
+/// @nodoc
 class _$AuditEventDetailCopyWithImpl<$Res>
     implements $AuditEventDetailCopyWith<$Res> {
   _$AuditEventDetailCopyWithImpl(this._value, this._then);
@@ -2389,6 +2475,7 @@ class _$AuditEventDetailCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$AuditEventDetailCopyWith<$Res>
     implements $AuditEventDetailCopyWith<$Res> {
   factory _$AuditEventDetailCopyWith(
@@ -2407,6 +2494,7 @@ abstract class _$AuditEventDetailCopyWith<$Res>
   $ElementCopyWith<$Res> get valueElement;
 }
 
+/// @nodoc
 class __$AuditEventDetailCopyWithImpl<$Res>
     extends _$AuditEventDetailCopyWithImpl<$Res>
     implements _$AuditEventDetailCopyWith<$Res> {
@@ -2437,6 +2525,8 @@ class __$AuditEventDetailCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_AuditEventDetail extends _AuditEventDetail {
   _$_AuditEventDetail(
       {this.type,
@@ -2527,9 +2617,11 @@ Consent _$ConsentFromJson(Map<String, dynamic> json) {
   return _Consent.fromJson(json);
 }
 
+/// @nodoc
 class _$ConsentTearOff {
   const _$ConsentTearOff();
 
+// ignore: unused_element
   _Consent call(
       {@required @JsonKey(defaultValue: 'Consent') String resourceType,
       Id id,
@@ -2602,11 +2694,18 @@ class _$ConsentTearOff {
       except: except,
     );
   }
+
+// ignore: unused_element
+  Consent fromJson(Map<String, Object> json) {
+    return Consent.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Consent = _$ConsentTearOff();
 
+/// @nodoc
 mixin _$Consent {
   @JsonKey(defaultValue: 'Consent')
   String get resourceType;
@@ -2654,6 +2753,7 @@ mixin _$Consent {
   $ConsentCopyWith<Consent> get copyWith;
 }
 
+/// @nodoc
 abstract class $ConsentCopyWith<$Res> {
   factory $ConsentCopyWith(Consent value, $Res Function(Consent) then) =
       _$ConsentCopyWithImpl<$Res>;
@@ -2709,6 +2809,7 @@ abstract class $ConsentCopyWith<$Res> {
   $PeriodCopyWith<$Res> get dataPeriod;
 }
 
+/// @nodoc
 class _$ConsentCopyWithImpl<$Res> implements $ConsentCopyWith<$Res> {
   _$ConsentCopyWithImpl(this._value, this._then);
 
@@ -2970,6 +3071,7 @@ class _$ConsentCopyWithImpl<$Res> implements $ConsentCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$ConsentCopyWith<$Res> implements $ConsentCopyWith<$Res> {
   factory _$ConsentCopyWith(_Consent value, $Res Function(_Consent) then) =
       __$ConsentCopyWithImpl<$Res>;
@@ -3040,6 +3142,7 @@ abstract class _$ConsentCopyWith<$Res> implements $ConsentCopyWith<$Res> {
   $PeriodCopyWith<$Res> get dataPeriod;
 }
 
+/// @nodoc
 class __$ConsentCopyWithImpl<$Res> extends _$ConsentCopyWithImpl<$Res>
     implements _$ConsentCopyWith<$Res> {
   __$ConsentCopyWithImpl(_Consent _value, $Res Function(_Consent) _then)
@@ -3163,6 +3266,8 @@ class __$ConsentCopyWithImpl<$Res> extends _$ConsentCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Consent extends _Consent {
   _$_Consent(
       {@required @JsonKey(defaultValue: 'Consent') this.resourceType,
@@ -3541,9 +3646,11 @@ ConsentActor _$ConsentActorFromJson(Map<String, dynamic> json) {
   return _ConsentActor.fromJson(json);
 }
 
+/// @nodoc
 class _$ConsentActorTearOff {
   const _$ConsentActorTearOff();
 
+// ignore: unused_element
   _ConsentActor call(
       {@required CodeableConcept role, @required Reference reference}) {
     return _ConsentActor(
@@ -3551,11 +3658,18 @@ class _$ConsentActorTearOff {
       reference: reference,
     );
   }
+
+// ignore: unused_element
+  ConsentActor fromJson(Map<String, Object> json) {
+    return ConsentActor.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ConsentActor = _$ConsentActorTearOff();
 
+/// @nodoc
 mixin _$ConsentActor {
   CodeableConcept get role;
   Reference get reference;
@@ -3564,6 +3678,7 @@ mixin _$ConsentActor {
   $ConsentActorCopyWith<ConsentActor> get copyWith;
 }
 
+/// @nodoc
 abstract class $ConsentActorCopyWith<$Res> {
   factory $ConsentActorCopyWith(
           ConsentActor value, $Res Function(ConsentActor) then) =
@@ -3574,6 +3689,7 @@ abstract class $ConsentActorCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get reference;
 }
 
+/// @nodoc
 class _$ConsentActorCopyWithImpl<$Res> implements $ConsentActorCopyWith<$Res> {
   _$ConsentActorCopyWithImpl(this._value, this._then);
 
@@ -3614,6 +3730,7 @@ class _$ConsentActorCopyWithImpl<$Res> implements $ConsentActorCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$ConsentActorCopyWith<$Res>
     implements $ConsentActorCopyWith<$Res> {
   factory _$ConsentActorCopyWith(
@@ -3628,6 +3745,7 @@ abstract class _$ConsentActorCopyWith<$Res>
   $ReferenceCopyWith<$Res> get reference;
 }
 
+/// @nodoc
 class __$ConsentActorCopyWithImpl<$Res> extends _$ConsentActorCopyWithImpl<$Res>
     implements _$ConsentActorCopyWith<$Res> {
   __$ConsentActorCopyWithImpl(
@@ -3651,6 +3769,8 @@ class __$ConsentActorCopyWithImpl<$Res> extends _$ConsentActorCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ConsentActor extends _ConsentActor {
   _$_ConsentActor({@required this.role, @required this.reference})
       : assert(role != null),
@@ -3718,9 +3838,11 @@ ConsentPolicy _$ConsentPolicyFromJson(Map<String, dynamic> json) {
   return _ConsentPolicy.fromJson(json);
 }
 
+/// @nodoc
 class _$ConsentPolicyTearOff {
   const _$ConsentPolicyTearOff();
 
+// ignore: unused_element
   _ConsentPolicy call(
       {String authority,
       @JsonKey(name: '_authority') Element authorityElement,
@@ -3733,11 +3855,18 @@ class _$ConsentPolicyTearOff {
       uriElement: uriElement,
     );
   }
+
+// ignore: unused_element
+  ConsentPolicy fromJson(Map<String, Object> json) {
+    return ConsentPolicy.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ConsentPolicy = _$ConsentPolicyTearOff();
 
+/// @nodoc
 mixin _$ConsentPolicy {
   String get authority;
   @JsonKey(name: '_authority')
@@ -3750,6 +3879,7 @@ mixin _$ConsentPolicy {
   $ConsentPolicyCopyWith<ConsentPolicy> get copyWith;
 }
 
+/// @nodoc
 abstract class $ConsentPolicyCopyWith<$Res> {
   factory $ConsentPolicyCopyWith(
           ConsentPolicy value, $Res Function(ConsentPolicy) then) =
@@ -3764,6 +3894,7 @@ abstract class $ConsentPolicyCopyWith<$Res> {
   $ElementCopyWith<$Res> get uriElement;
 }
 
+/// @nodoc
 class _$ConsentPolicyCopyWithImpl<$Res>
     implements $ConsentPolicyCopyWith<$Res> {
   _$ConsentPolicyCopyWithImpl(this._value, this._then);
@@ -3811,6 +3942,7 @@ class _$ConsentPolicyCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ConsentPolicyCopyWith<$Res>
     implements $ConsentPolicyCopyWith<$Res> {
   factory _$ConsentPolicyCopyWith(
@@ -3829,6 +3961,7 @@ abstract class _$ConsentPolicyCopyWith<$Res>
   $ElementCopyWith<$Res> get uriElement;
 }
 
+/// @nodoc
 class __$ConsentPolicyCopyWithImpl<$Res>
     extends _$ConsentPolicyCopyWithImpl<$Res>
     implements _$ConsentPolicyCopyWith<$Res> {
@@ -3859,6 +3992,8 @@ class __$ConsentPolicyCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ConsentPolicy extends _ConsentPolicy {
   _$_ConsentPolicy(
       {this.authority,
@@ -3950,9 +4085,11 @@ ConsentData _$ConsentDataFromJson(Map<String, dynamic> json) {
   return _ConsentData.fromJson(json);
 }
 
+/// @nodoc
 class _$ConsentDataTearOff {
   const _$ConsentDataTearOff();
 
+// ignore: unused_element
   _ConsentData call(
       {ConsentDataMeaning meaning,
       @JsonKey(name: '_meaning') Element meaningElement,
@@ -3963,11 +4100,18 @@ class _$ConsentDataTearOff {
       reference: reference,
     );
   }
+
+// ignore: unused_element
+  ConsentData fromJson(Map<String, Object> json) {
+    return ConsentData.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ConsentData = _$ConsentDataTearOff();
 
+/// @nodoc
 mixin _$ConsentData {
   ConsentDataMeaning get meaning;
   @JsonKey(name: '_meaning')
@@ -3978,6 +4122,7 @@ mixin _$ConsentData {
   $ConsentDataCopyWith<ConsentData> get copyWith;
 }
 
+/// @nodoc
 abstract class $ConsentDataCopyWith<$Res> {
   factory $ConsentDataCopyWith(
           ConsentData value, $Res Function(ConsentData) then) =
@@ -3991,6 +4136,7 @@ abstract class $ConsentDataCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get reference;
 }
 
+/// @nodoc
 class _$ConsentDataCopyWithImpl<$Res> implements $ConsentDataCopyWith<$Res> {
   _$ConsentDataCopyWithImpl(this._value, this._then);
 
@@ -4036,6 +4182,7 @@ class _$ConsentDataCopyWithImpl<$Res> implements $ConsentDataCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$ConsentDataCopyWith<$Res>
     implements $ConsentDataCopyWith<$Res> {
   factory _$ConsentDataCopyWith(
@@ -4053,6 +4200,7 @@ abstract class _$ConsentDataCopyWith<$Res>
   $ReferenceCopyWith<$Res> get reference;
 }
 
+/// @nodoc
 class __$ConsentDataCopyWithImpl<$Res> extends _$ConsentDataCopyWithImpl<$Res>
     implements _$ConsentDataCopyWith<$Res> {
   __$ConsentDataCopyWithImpl(
@@ -4081,6 +4229,8 @@ class __$ConsentDataCopyWithImpl<$Res> extends _$ConsentDataCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ConsentData extends _ConsentData {
   _$_ConsentData(
       {this.meaning,
@@ -4162,9 +4312,11 @@ ConsentExcept _$ConsentExceptFromJson(Map<String, dynamic> json) {
   return _ConsentExcept.fromJson(json);
 }
 
+/// @nodoc
 class _$ConsentExceptTearOff {
   const _$ConsentExceptTearOff();
 
+// ignore: unused_element
   _ConsentExcept call(
       {ConsentExceptType type,
       @JsonKey(name: '_type') Element typeElement,
@@ -4191,11 +4343,18 @@ class _$ConsentExceptTearOff {
       data: data,
     );
   }
+
+// ignore: unused_element
+  ConsentExcept fromJson(Map<String, Object> json) {
+    return ConsentExcept.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ConsentExcept = _$ConsentExceptTearOff();
 
+/// @nodoc
 mixin _$ConsentExcept {
   ConsentExceptType get type;
   @JsonKey(name: '_type')
@@ -4215,6 +4374,7 @@ mixin _$ConsentExcept {
   $ConsentExceptCopyWith<ConsentExcept> get copyWith;
 }
 
+/// @nodoc
 abstract class $ConsentExceptCopyWith<$Res> {
   factory $ConsentExceptCopyWith(
           ConsentExcept value, $Res Function(ConsentExcept) then) =
@@ -4237,6 +4397,7 @@ abstract class $ConsentExceptCopyWith<$Res> {
   $PeriodCopyWith<$Res> get dataPeriod;
 }
 
+/// @nodoc
 class _$ConsentExceptCopyWithImpl<$Res>
     implements $ConsentExceptCopyWith<$Res> {
   _$ConsentExceptCopyWithImpl(this._value, this._then);
@@ -4310,6 +4471,7 @@ class _$ConsentExceptCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ConsentExceptCopyWith<$Res>
     implements $ConsentExceptCopyWith<$Res> {
   factory _$ConsentExceptCopyWith(
@@ -4337,6 +4499,7 @@ abstract class _$ConsentExceptCopyWith<$Res>
   $PeriodCopyWith<$Res> get dataPeriod;
 }
 
+/// @nodoc
 class __$ConsentExceptCopyWithImpl<$Res>
     extends _$ConsentExceptCopyWithImpl<$Res>
     implements _$ConsentExceptCopyWith<$Res> {
@@ -4383,6 +4546,8 @@ class __$ConsentExceptCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ConsentExcept extends _ConsentExcept {
   _$_ConsentExcept(
       {this.type,
@@ -4538,9 +4703,11 @@ ConsentActor1 _$ConsentActor1FromJson(Map<String, dynamic> json) {
   return _ConsentActor1.fromJson(json);
 }
 
+/// @nodoc
 class _$ConsentActor1TearOff {
   const _$ConsentActor1TearOff();
 
+// ignore: unused_element
   _ConsentActor1 call(
       {@required CodeableConcept role, @required Reference reference}) {
     return _ConsentActor1(
@@ -4548,11 +4715,18 @@ class _$ConsentActor1TearOff {
       reference: reference,
     );
   }
+
+// ignore: unused_element
+  ConsentActor1 fromJson(Map<String, Object> json) {
+    return ConsentActor1.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ConsentActor1 = _$ConsentActor1TearOff();
 
+/// @nodoc
 mixin _$ConsentActor1 {
   CodeableConcept get role;
   Reference get reference;
@@ -4561,6 +4735,7 @@ mixin _$ConsentActor1 {
   $ConsentActor1CopyWith<ConsentActor1> get copyWith;
 }
 
+/// @nodoc
 abstract class $ConsentActor1CopyWith<$Res> {
   factory $ConsentActor1CopyWith(
           ConsentActor1 value, $Res Function(ConsentActor1) then) =
@@ -4571,6 +4746,7 @@ abstract class $ConsentActor1CopyWith<$Res> {
   $ReferenceCopyWith<$Res> get reference;
 }
 
+/// @nodoc
 class _$ConsentActor1CopyWithImpl<$Res>
     implements $ConsentActor1CopyWith<$Res> {
   _$ConsentActor1CopyWithImpl(this._value, this._then);
@@ -4612,6 +4788,7 @@ class _$ConsentActor1CopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ConsentActor1CopyWith<$Res>
     implements $ConsentActor1CopyWith<$Res> {
   factory _$ConsentActor1CopyWith(
@@ -4626,6 +4803,7 @@ abstract class _$ConsentActor1CopyWith<$Res>
   $ReferenceCopyWith<$Res> get reference;
 }
 
+/// @nodoc
 class __$ConsentActor1CopyWithImpl<$Res>
     extends _$ConsentActor1CopyWithImpl<$Res>
     implements _$ConsentActor1CopyWith<$Res> {
@@ -4650,6 +4828,8 @@ class __$ConsentActor1CopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ConsentActor1 extends _ConsentActor1 {
   _$_ConsentActor1({@required this.role, @required this.reference})
       : assert(role != null),
@@ -4717,9 +4897,11 @@ ConsentData1 _$ConsentData1FromJson(Map<String, dynamic> json) {
   return _ConsentData1.fromJson(json);
 }
 
+/// @nodoc
 class _$ConsentData1TearOff {
   const _$ConsentData1TearOff();
 
+// ignore: unused_element
   _ConsentData1 call(
       {ConsentData1Meaning meaning,
       @JsonKey(name: '_meaning') Element meaningElement,
@@ -4730,11 +4912,18 @@ class _$ConsentData1TearOff {
       reference: reference,
     );
   }
+
+// ignore: unused_element
+  ConsentData1 fromJson(Map<String, Object> json) {
+    return ConsentData1.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ConsentData1 = _$ConsentData1TearOff();
 
+/// @nodoc
 mixin _$ConsentData1 {
   ConsentData1Meaning get meaning;
   @JsonKey(name: '_meaning')
@@ -4745,6 +4934,7 @@ mixin _$ConsentData1 {
   $ConsentData1CopyWith<ConsentData1> get copyWith;
 }
 
+/// @nodoc
 abstract class $ConsentData1CopyWith<$Res> {
   factory $ConsentData1CopyWith(
           ConsentData1 value, $Res Function(ConsentData1) then) =
@@ -4758,6 +4948,7 @@ abstract class $ConsentData1CopyWith<$Res> {
   $ReferenceCopyWith<$Res> get reference;
 }
 
+/// @nodoc
 class _$ConsentData1CopyWithImpl<$Res> implements $ConsentData1CopyWith<$Res> {
   _$ConsentData1CopyWithImpl(this._value, this._then);
 
@@ -4803,6 +4994,7 @@ class _$ConsentData1CopyWithImpl<$Res> implements $ConsentData1CopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$ConsentData1CopyWith<$Res>
     implements $ConsentData1CopyWith<$Res> {
   factory _$ConsentData1CopyWith(
@@ -4820,6 +5012,7 @@ abstract class _$ConsentData1CopyWith<$Res>
   $ReferenceCopyWith<$Res> get reference;
 }
 
+/// @nodoc
 class __$ConsentData1CopyWithImpl<$Res> extends _$ConsentData1CopyWithImpl<$Res>
     implements _$ConsentData1CopyWith<$Res> {
   __$ConsentData1CopyWithImpl(
@@ -4848,6 +5041,8 @@ class __$ConsentData1CopyWithImpl<$Res> extends _$ConsentData1CopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ConsentData1 extends _ConsentData1 {
   _$_ConsentData1(
       {this.meaning,
@@ -4929,9 +5124,11 @@ Provenance _$ProvenanceFromJson(Map<String, dynamic> json) {
   return _Provenance.fromJson(json);
 }
 
+/// @nodoc
 class _$ProvenanceTearOff {
   const _$ProvenanceTearOff();
 
+// ignore: unused_element
   _Provenance call(
       {@required @JsonKey(defaultValue: 'Provenance') String resourceType,
       Id id,
@@ -4982,11 +5179,18 @@ class _$ProvenanceTearOff {
       signature: signature,
     );
   }
+
+// ignore: unused_element
+  Provenance fromJson(Map<String, Object> json) {
+    return Provenance.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Provenance = _$ProvenanceTearOff();
 
+/// @nodoc
 mixin _$Provenance {
   @JsonKey(defaultValue: 'Provenance')
   String get resourceType;
@@ -5022,6 +5226,7 @@ mixin _$Provenance {
   $ProvenanceCopyWith<Provenance> get copyWith;
 }
 
+/// @nodoc
 abstract class $ProvenanceCopyWith<$Res> {
   factory $ProvenanceCopyWith(
           Provenance value, $Res Function(Provenance) then) =
@@ -5061,6 +5266,7 @@ abstract class $ProvenanceCopyWith<$Res> {
   $CodingCopyWith<$Res> get activity;
 }
 
+/// @nodoc
 class _$ProvenanceCopyWithImpl<$Res> implements $ProvenanceCopyWith<$Res> {
   _$ProvenanceCopyWithImpl(this._value, this._then);
 
@@ -5222,6 +5428,7 @@ class _$ProvenanceCopyWithImpl<$Res> implements $ProvenanceCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$ProvenanceCopyWith<$Res> implements $ProvenanceCopyWith<$Res> {
   factory _$ProvenanceCopyWith(
           _Provenance value, $Res Function(_Provenance) then) =
@@ -5270,6 +5477,7 @@ abstract class _$ProvenanceCopyWith<$Res> implements $ProvenanceCopyWith<$Res> {
   $CodingCopyWith<$Res> get activity;
 }
 
+/// @nodoc
 class __$ProvenanceCopyWithImpl<$Res> extends _$ProvenanceCopyWithImpl<$Res>
     implements _$ProvenanceCopyWith<$Res> {
   __$ProvenanceCopyWithImpl(
@@ -5354,6 +5562,8 @@ class __$ProvenanceCopyWithImpl<$Res> extends _$ProvenanceCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Provenance extends _Provenance {
   _$_Provenance(
       {@required @JsonKey(defaultValue: 'Provenance') this.resourceType,
@@ -5638,9 +5848,11 @@ ProvenanceAgent _$ProvenanceAgentFromJson(Map<String, dynamic> json) {
   return _ProvenanceAgent.fromJson(json);
 }
 
+/// @nodoc
 class _$ProvenanceAgentTearOff {
   const _$ProvenanceAgentTearOff();
 
+// ignore: unused_element
   _ProvenanceAgent call(
       {List<CodeableConcept> role,
       String whoUri,
@@ -5661,11 +5873,18 @@ class _$ProvenanceAgentTearOff {
       relatedAgentType: relatedAgentType,
     );
   }
+
+// ignore: unused_element
+  ProvenanceAgent fromJson(Map<String, Object> json) {
+    return ProvenanceAgent.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ProvenanceAgent = _$ProvenanceAgentTearOff();
 
+/// @nodoc
 mixin _$ProvenanceAgent {
   List<CodeableConcept> get role;
   String get whoUri;
@@ -5682,6 +5901,7 @@ mixin _$ProvenanceAgent {
   $ProvenanceAgentCopyWith<ProvenanceAgent> get copyWith;
 }
 
+/// @nodoc
 abstract class $ProvenanceAgentCopyWith<$Res> {
   factory $ProvenanceAgentCopyWith(
           ProvenanceAgent value, $Res Function(ProvenanceAgent) then) =
@@ -5703,6 +5923,7 @@ abstract class $ProvenanceAgentCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get relatedAgentType;
 }
 
+/// @nodoc
 class _$ProvenanceAgentCopyWithImpl<$Res>
     implements $ProvenanceAgentCopyWith<$Res> {
   _$ProvenanceAgentCopyWithImpl(this._value, this._then);
@@ -5797,6 +6018,7 @@ class _$ProvenanceAgentCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ProvenanceAgentCopyWith<$Res>
     implements $ProvenanceAgentCopyWith<$Res> {
   factory _$ProvenanceAgentCopyWith(
@@ -5825,6 +6047,7 @@ abstract class _$ProvenanceAgentCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get relatedAgentType;
 }
 
+/// @nodoc
 class __$ProvenanceAgentCopyWithImpl<$Res>
     extends _$ProvenanceAgentCopyWithImpl<$Res>
     implements _$ProvenanceAgentCopyWith<$Res> {
@@ -5872,6 +6095,8 @@ class __$ProvenanceAgentCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ProvenanceAgent extends _ProvenanceAgent {
   _$_ProvenanceAgent(
       {this.role,
@@ -6002,9 +6227,11 @@ ProvenanceEntity _$ProvenanceEntityFromJson(Map<String, dynamic> json) {
   return _ProvenanceEntity.fromJson(json);
 }
 
+/// @nodoc
 class _$ProvenanceEntityTearOff {
   const _$ProvenanceEntityTearOff();
 
+// ignore: unused_element
   _ProvenanceEntity call(
       {ProvenanceEntityRole role,
       @JsonKey(name: '_role') Element roleElement,
@@ -6023,11 +6250,18 @@ class _$ProvenanceEntityTearOff {
       agent: agent,
     );
   }
+
+// ignore: unused_element
+  ProvenanceEntity fromJson(Map<String, Object> json) {
+    return ProvenanceEntity.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ProvenanceEntity = _$ProvenanceEntityTearOff();
 
+/// @nodoc
 mixin _$ProvenanceEntity {
   ProvenanceEntityRole get role;
   @JsonKey(name: '_role')
@@ -6043,6 +6277,7 @@ mixin _$ProvenanceEntity {
   $ProvenanceEntityCopyWith<ProvenanceEntity> get copyWith;
 }
 
+/// @nodoc
 abstract class $ProvenanceEntityCopyWith<$Res> {
   factory $ProvenanceEntityCopyWith(
           ProvenanceEntity value, $Res Function(ProvenanceEntity) then) =
@@ -6062,6 +6297,7 @@ abstract class $ProvenanceEntityCopyWith<$Res> {
   $IdentifierCopyWith<$Res> get whatIdentifier;
 }
 
+/// @nodoc
 class _$ProvenanceEntityCopyWithImpl<$Res>
     implements $ProvenanceEntityCopyWith<$Res> {
   _$ProvenanceEntityCopyWithImpl(this._value, this._then);
@@ -6139,6 +6375,7 @@ class _$ProvenanceEntityCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ProvenanceEntityCopyWith<$Res>
     implements $ProvenanceEntityCopyWith<$Res> {
   factory _$ProvenanceEntityCopyWith(
@@ -6164,6 +6401,7 @@ abstract class _$ProvenanceEntityCopyWith<$Res>
   $IdentifierCopyWith<$Res> get whatIdentifier;
 }
 
+/// @nodoc
 class __$ProvenanceEntityCopyWithImpl<$Res>
     extends _$ProvenanceEntityCopyWithImpl<$Res>
     implements _$ProvenanceEntityCopyWith<$Res> {
@@ -6204,6 +6442,8 @@ class __$ProvenanceEntityCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ProvenanceEntity extends _ProvenanceEntity {
   _$_ProvenanceEntity(
       {this.role,

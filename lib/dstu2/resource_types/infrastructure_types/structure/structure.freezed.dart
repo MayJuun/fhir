@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'structure.dart';
 
@@ -12,9 +12,11 @@ Media _$MediaFromJson(Map<String, dynamic> json) {
   return _Media.fromJson(json);
 }
 
+/// @nodoc
 class _$MediaTearOff {
   const _$MediaTearOff();
 
+// ignore: unused_element
   _Media call(
       {@required
       @JsonKey(defaultValue: 'Media')
@@ -90,11 +92,18 @@ class _$MediaTearOff {
       content: content,
     );
   }
+
+// ignore: unused_element
+  Media fromJson(Map<String, Object> json) {
+    return Media.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Media = _$MediaTearOff();
 
+/// @nodoc
 mixin _$Media {
   @JsonKey(defaultValue: 'Media')
   String get resourceType;
@@ -141,6 +150,7 @@ mixin _$Media {
   $MediaCopyWith<Media> get copyWith;
 }
 
+/// @nodoc
 abstract class $MediaCopyWith<$Res> {
   factory $MediaCopyWith(Media value, $Res Function(Media) then) =
       _$MediaCopyWithImpl<$Res>;
@@ -202,6 +212,7 @@ abstract class $MediaCopyWith<$Res> {
   $AttachmentCopyWith<$Res> get content;
 }
 
+/// @nodoc
 class _$MediaCopyWithImpl<$Res> implements $MediaCopyWith<$Res> {
   _$MediaCopyWithImpl(this._value, this._then);
 
@@ -440,6 +451,7 @@ class _$MediaCopyWithImpl<$Res> implements $MediaCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
   factory _$MediaCopyWith(_Media value, $Res Function(_Media) then) =
       __$MediaCopyWithImpl<$Res>;
@@ -516,6 +528,7 @@ abstract class _$MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
   $AttachmentCopyWith<$Res> get content;
 }
 
+/// @nodoc
 class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
     implements _$MediaCopyWith<$Res> {
   __$MediaCopyWithImpl(_Media _value, $Res Function(_Media) _then)
@@ -616,6 +629,8 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Media extends _Media {
   _$_Media(
       {@required
@@ -987,9 +1002,11 @@ Binary _$BinaryFromJson(Map<String, dynamic> json) {
   return _Binary.fromJson(json);
 }
 
+/// @nodoc
 class _$BinaryTearOff {
   const _$BinaryTearOff();
 
+// ignore: unused_element
   _Binary call(
       {@required @JsonKey(defaultValue: 'Binary') String resourceType,
       Id id,
@@ -1014,11 +1031,18 @@ class _$BinaryTearOff {
       content: content,
     );
   }
+
+// ignore: unused_element
+  Binary fromJson(Map<String, Object> json) {
+    return Binary.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Binary = _$BinaryTearOff();
 
+/// @nodoc
 mixin _$Binary {
   @JsonKey(defaultValue: 'Binary')
   String get resourceType;
@@ -1039,6 +1063,7 @@ mixin _$Binary {
   $BinaryCopyWith<Binary> get copyWith;
 }
 
+/// @nodoc
 abstract class $BinaryCopyWith<$Res> {
   factory $BinaryCopyWith(Binary value, $Res Function(Binary) then) =
       _$BinaryCopyWithImpl<$Res>;
@@ -1060,6 +1085,7 @@ abstract class $BinaryCopyWith<$Res> {
   $ElementCopyWith<$Res> get contentTypeElement;
 }
 
+/// @nodoc
 class _$BinaryCopyWithImpl<$Res> implements $BinaryCopyWith<$Res> {
   _$BinaryCopyWithImpl(this._value, this._then);
 
@@ -1146,6 +1172,7 @@ class _$BinaryCopyWithImpl<$Res> implements $BinaryCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$BinaryCopyWith<$Res> implements $BinaryCopyWith<$Res> {
   factory _$BinaryCopyWith(_Binary value, $Res Function(_Binary) then) =
       __$BinaryCopyWithImpl<$Res>;
@@ -1172,6 +1199,7 @@ abstract class _$BinaryCopyWith<$Res> implements $BinaryCopyWith<$Res> {
   $ElementCopyWith<$Res> get contentTypeElement;
 }
 
+/// @nodoc
 class __$BinaryCopyWithImpl<$Res> extends _$BinaryCopyWithImpl<$Res>
     implements _$BinaryCopyWith<$Res> {
   __$BinaryCopyWithImpl(_Binary _value, $Res Function(_Binary) _then)
@@ -1220,6 +1248,8 @@ class __$BinaryCopyWithImpl<$Res> extends _$BinaryCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Binary extends _Binary {
   _$_Binary(
       {@required @JsonKey(defaultValue: 'Binary') this.resourceType,
@@ -1373,9 +1403,11 @@ Bundle _$BundleFromJson(Map<String, dynamic> json) {
   return _Bundle.fromJson(json);
 }
 
+/// @nodoc
 class _$BundleTearOff {
   const _$BundleTearOff();
 
+// ignore: unused_element
   _Bundle call(
       {@required
       @JsonKey(defaultValue: 'Bundle')
@@ -1416,11 +1448,18 @@ class _$BundleTearOff {
       signature: signature,
     );
   }
+
+// ignore: unused_element
+  Bundle fromJson(Map<String, Object> json) {
+    return Bundle.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Bundle = _$BundleTearOff();
 
+/// @nodoc
 mixin _$Bundle {
   @JsonKey(defaultValue: 'Bundle')
   String get resourceType;
@@ -1447,6 +1486,7 @@ mixin _$Bundle {
   $BundleCopyWith<Bundle> get copyWith;
 }
 
+/// @nodoc
 abstract class $BundleCopyWith<$Res> {
   factory $BundleCopyWith(Bundle value, $Res Function(Bundle) then) =
       _$BundleCopyWithImpl<$Res>;
@@ -1480,6 +1520,7 @@ abstract class $BundleCopyWith<$Res> {
   $SignatureCopyWith<$Res> get signature;
 }
 
+/// @nodoc
 class _$BundleCopyWithImpl<$Res> implements $BundleCopyWith<$Res> {
   _$BundleCopyWithImpl(this._value, this._then);
 
@@ -1595,6 +1636,7 @@ class _$BundleCopyWithImpl<$Res> implements $BundleCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$BundleCopyWith<$Res> implements $BundleCopyWith<$Res> {
   factory _$BundleCopyWith(_Bundle value, $Res Function(_Bundle) then) =
       __$BundleCopyWithImpl<$Res>;
@@ -1635,6 +1677,7 @@ abstract class _$BundleCopyWith<$Res> implements $BundleCopyWith<$Res> {
   $SignatureCopyWith<$Res> get signature;
 }
 
+/// @nodoc
 class __$BundleCopyWithImpl<$Res> extends _$BundleCopyWithImpl<$Res>
     implements _$BundleCopyWith<$Res> {
   __$BundleCopyWithImpl(_Bundle _value, $Res Function(_Bundle) _then)
@@ -1692,6 +1735,8 @@ class __$BundleCopyWithImpl<$Res> extends _$BundleCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Bundle extends _Bundle {
   _$_Bundle(
       {@required
@@ -1903,9 +1948,11 @@ BundleLink _$BundleLinkFromJson(Map<String, dynamic> json) {
   return _BundleLink.fromJson(json);
 }
 
+/// @nodoc
 class _$BundleLinkTearOff {
   const _$BundleLinkTearOff();
 
+// ignore: unused_element
   _BundleLink call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1926,11 +1973,18 @@ class _$BundleLinkTearOff {
       urlElement: urlElement,
     );
   }
+
+// ignore: unused_element
+  BundleLink fromJson(Map<String, Object> json) {
+    return BundleLink.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $BundleLink = _$BundleLinkTearOff();
 
+/// @nodoc
 mixin _$BundleLink {
   Id get id;
   @JsonKey(name: 'extension')
@@ -1951,6 +2005,7 @@ mixin _$BundleLink {
   $BundleLinkCopyWith<BundleLink> get copyWith;
 }
 
+/// @nodoc
 abstract class $BundleLinkCopyWith<$Res> {
   factory $BundleLinkCopyWith(
           BundleLink value, $Res Function(BundleLink) then) =
@@ -1969,6 +2024,7 @@ abstract class $BundleLinkCopyWith<$Res> {
   $ElementCopyWith<$Res> get urlElement;
 }
 
+/// @nodoc
 class _$BundleLinkCopyWithImpl<$Res> implements $BundleLinkCopyWith<$Res> {
   _$BundleLinkCopyWithImpl(this._value, this._then);
 
@@ -2029,6 +2085,7 @@ class _$BundleLinkCopyWithImpl<$Res> implements $BundleLinkCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$BundleLinkCopyWith<$Res> implements $BundleLinkCopyWith<$Res> {
   factory _$BundleLinkCopyWith(
           _BundleLink value, $Res Function(_BundleLink) then) =
@@ -2050,6 +2107,7 @@ abstract class _$BundleLinkCopyWith<$Res> implements $BundleLinkCopyWith<$Res> {
   $ElementCopyWith<$Res> get urlElement;
 }
 
+/// @nodoc
 class __$BundleLinkCopyWithImpl<$Res> extends _$BundleLinkCopyWithImpl<$Res>
     implements _$BundleLinkCopyWith<$Res> {
   __$BundleLinkCopyWithImpl(
@@ -2093,6 +2151,8 @@ class __$BundleLinkCopyWithImpl<$Res> extends _$BundleLinkCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_BundleLink extends _BundleLink {
   _$_BundleLink(
       {this.id,
@@ -2233,9 +2293,11 @@ BundleEntry _$BundleEntryFromJson(Map<String, dynamic> json) {
   return _BundleEntry.fromJson(json);
 }
 
+/// @nodoc
 class _$BundleEntryTearOff {
   const _$BundleEntryTearOff();
 
+// ignore: unused_element
   _BundleEntry call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2262,11 +2324,18 @@ class _$BundleEntryTearOff {
       response: response,
     );
   }
+
+// ignore: unused_element
+  BundleEntry fromJson(Map<String, Object> json) {
+    return BundleEntry.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $BundleEntry = _$BundleEntryTearOff();
 
+/// @nodoc
 mixin _$BundleEntry {
   Id get id;
   @JsonKey(name: 'extension')
@@ -2287,6 +2356,7 @@ mixin _$BundleEntry {
   $BundleEntryCopyWith<BundleEntry> get copyWith;
 }
 
+/// @nodoc
 abstract class $BundleEntryCopyWith<$Res> {
   factory $BundleEntryCopyWith(
           BundleEntry value, $Res Function(BundleEntry) then) =
@@ -2310,6 +2380,7 @@ abstract class $BundleEntryCopyWith<$Res> {
   $BundleEntryResponseCopyWith<$Res> get response;
 }
 
+/// @nodoc
 class _$BundleEntryCopyWithImpl<$Res> implements $BundleEntryCopyWith<$Res> {
   _$BundleEntryCopyWithImpl(this._value, this._then);
 
@@ -2398,6 +2469,7 @@ class _$BundleEntryCopyWithImpl<$Res> implements $BundleEntryCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$BundleEntryCopyWith<$Res>
     implements $BundleEntryCopyWith<$Res> {
   factory _$BundleEntryCopyWith(
@@ -2427,6 +2499,7 @@ abstract class _$BundleEntryCopyWith<$Res>
   $BundleEntryResponseCopyWith<$Res> get response;
 }
 
+/// @nodoc
 class __$BundleEntryCopyWithImpl<$Res> extends _$BundleEntryCopyWithImpl<$Res>
     implements _$BundleEntryCopyWith<$Res> {
   __$BundleEntryCopyWithImpl(
@@ -2478,6 +2551,8 @@ class __$BundleEntryCopyWithImpl<$Res> extends _$BundleEntryCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_BundleEntry extends _BundleEntry {
   _$_BundleEntry(
       {this.id,
@@ -2639,9 +2714,11 @@ BundleEntrySearch _$BundleEntrySearchFromJson(Map<String, dynamic> json) {
   return _BundleEntrySearch.fromJson(json);
 }
 
+/// @nodoc
 class _$BundleEntrySearchTearOff {
   const _$BundleEntrySearchTearOff();
 
+// ignore: unused_element
   _BundleEntrySearch call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2662,11 +2739,18 @@ class _$BundleEntrySearchTearOff {
       scoreElement: scoreElement,
     );
   }
+
+// ignore: unused_element
+  BundleEntrySearch fromJson(Map<String, Object> json) {
+    return BundleEntrySearch.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $BundleEntrySearch = _$BundleEntrySearchTearOff();
 
+/// @nodoc
 mixin _$BundleEntrySearch {
   Id get id;
   @JsonKey(name: 'extension')
@@ -2686,6 +2770,7 @@ mixin _$BundleEntrySearch {
   $BundleEntrySearchCopyWith<BundleEntrySearch> get copyWith;
 }
 
+/// @nodoc
 abstract class $BundleEntrySearchCopyWith<$Res> {
   factory $BundleEntrySearchCopyWith(
           BundleEntrySearch value, $Res Function(BundleEntrySearch) then) =
@@ -2704,6 +2789,7 @@ abstract class $BundleEntrySearchCopyWith<$Res> {
   $ElementCopyWith<$Res> get scoreElement;
 }
 
+/// @nodoc
 class _$BundleEntrySearchCopyWithImpl<$Res>
     implements $BundleEntrySearchCopyWith<$Res> {
   _$BundleEntrySearchCopyWithImpl(this._value, this._then);
@@ -2765,6 +2851,7 @@ class _$BundleEntrySearchCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$BundleEntrySearchCopyWith<$Res>
     implements $BundleEntrySearchCopyWith<$Res> {
   factory _$BundleEntrySearchCopyWith(
@@ -2787,6 +2874,7 @@ abstract class _$BundleEntrySearchCopyWith<$Res>
   $ElementCopyWith<$Res> get scoreElement;
 }
 
+/// @nodoc
 class __$BundleEntrySearchCopyWithImpl<$Res>
     extends _$BundleEntrySearchCopyWithImpl<$Res>
     implements _$BundleEntrySearchCopyWith<$Res> {
@@ -2831,6 +2919,8 @@ class __$BundleEntrySearchCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_BundleEntrySearch extends _BundleEntrySearch {
   _$_BundleEntrySearch(
       {this.id,
@@ -2966,9 +3056,11 @@ BundleEntryRequest _$BundleEntryRequestFromJson(Map<String, dynamic> json) {
   return _BundleEntryRequest.fromJson(json);
 }
 
+/// @nodoc
 class _$BundleEntryRequestTearOff {
   const _$BundleEntryRequestTearOff();
 
+// ignore: unused_element
   _BundleEntryRequest call(
       {Id id,
       @JsonKey(name: 'extension')
@@ -3017,11 +3109,18 @@ class _$BundleEntryRequestTearOff {
       ifNoneExistElement: ifNoneExistElement,
     );
   }
+
+// ignore: unused_element
+  BundleEntryRequest fromJson(Map<String, Object> json) {
+    return BundleEntryRequest.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $BundleEntryRequest = _$BundleEntryRequestTearOff();
 
+/// @nodoc
 mixin _$BundleEntryRequest {
   Id get id;
   @JsonKey(name: 'extension')
@@ -3054,6 +3153,7 @@ mixin _$BundleEntryRequest {
   $BundleEntryRequestCopyWith<BundleEntryRequest> get copyWith;
 }
 
+/// @nodoc
 abstract class $BundleEntryRequestCopyWith<$Res> {
   factory $BundleEntryRequestCopyWith(
           BundleEntryRequest value, $Res Function(BundleEntryRequest) then) =
@@ -3094,6 +3194,7 @@ abstract class $BundleEntryRequestCopyWith<$Res> {
   $ElementCopyWith<$Res> get ifNoneExistElement;
 }
 
+/// @nodoc
 class _$BundleEntryRequestCopyWithImpl<$Res>
     implements $BundleEntryRequestCopyWith<$Res> {
   _$BundleEntryRequestCopyWithImpl(this._value, this._then);
@@ -3223,6 +3324,7 @@ class _$BundleEntryRequestCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$BundleEntryRequestCopyWith<$Res>
     implements $BundleEntryRequestCopyWith<$Res> {
   factory _$BundleEntryRequestCopyWith(
@@ -3271,6 +3373,7 @@ abstract class _$BundleEntryRequestCopyWith<$Res>
   $ElementCopyWith<$Res> get ifNoneExistElement;
 }
 
+/// @nodoc
 class __$BundleEntryRequestCopyWithImpl<$Res>
     extends _$BundleEntryRequestCopyWithImpl<$Res>
     implements _$BundleEntryRequestCopyWith<$Res> {
@@ -3343,6 +3446,8 @@ class __$BundleEntryRequestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_BundleEntryRequest extends _BundleEntryRequest {
   _$_BundleEntryRequest(
       {this.id,
@@ -3594,9 +3699,11 @@ BundleEntryResponse _$BundleEntryResponseFromJson(Map<String, dynamic> json) {
   return _BundleEntryResponse.fromJson(json);
 }
 
+/// @nodoc
 class _$BundleEntryResponseTearOff {
   const _$BundleEntryResponseTearOff();
 
+// ignore: unused_element
   _BundleEntryResponse call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3625,11 +3732,18 @@ class _$BundleEntryResponseTearOff {
       lastModifiedElement: lastModifiedElement,
     );
   }
+
+// ignore: unused_element
+  BundleEntryResponse fromJson(Map<String, Object> json) {
+    return BundleEntryResponse.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $BundleEntryResponse = _$BundleEntryResponseTearOff();
 
+/// @nodoc
 mixin _$BundleEntryResponse {
   Id get id;
   @JsonKey(name: 'extension')
@@ -3655,6 +3769,7 @@ mixin _$BundleEntryResponse {
   $BundleEntryResponseCopyWith<BundleEntryResponse> get copyWith;
 }
 
+/// @nodoc
 abstract class $BundleEntryResponseCopyWith<$Res> {
   factory $BundleEntryResponseCopyWith(
           BundleEntryResponse value, $Res Function(BundleEntryResponse) then) =
@@ -3679,6 +3794,7 @@ abstract class $BundleEntryResponseCopyWith<$Res> {
   $ElementCopyWith<$Res> get lastModifiedElement;
 }
 
+/// @nodoc
 class _$BundleEntryResponseCopyWithImpl<$Res>
     implements $BundleEntryResponseCopyWith<$Res> {
   _$BundleEntryResponseCopyWithImpl(this._value, this._then);
@@ -3774,6 +3890,7 @@ class _$BundleEntryResponseCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$BundleEntryResponseCopyWith<$Res>
     implements $BundleEntryResponseCopyWith<$Res> {
   factory _$BundleEntryResponseCopyWith(_BundleEntryResponse value,
@@ -3804,6 +3921,7 @@ abstract class _$BundleEntryResponseCopyWith<$Res>
   $ElementCopyWith<$Res> get lastModifiedElement;
 }
 
+/// @nodoc
 class __$BundleEntryResponseCopyWithImpl<$Res>
     extends _$BundleEntryResponseCopyWithImpl<$Res>
     implements _$BundleEntryResponseCopyWith<$Res> {
@@ -3862,6 +3980,8 @@ class __$BundleEntryResponseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_BundleEntryResponse extends _BundleEntryResponse {
   _$_BundleEntryResponse(
       {this.id,
@@ -4044,9 +4164,11 @@ Basic _$BasicFromJson(Map<String, dynamic> json) {
   return _Basic.fromJson(json);
 }
 
+/// @nodoc
 class _$BasicTearOff {
   const _$BasicTearOff();
 
+// ignore: unused_element
   _Basic call(
       {@required @JsonKey(defaultValue: 'Basic') String resourceType,
       Id id,
@@ -4085,11 +4207,18 @@ class _$BasicTearOff {
       createdElement: createdElement,
     );
   }
+
+// ignore: unused_element
+  Basic fromJson(Map<String, Object> json) {
+    return Basic.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Basic = _$BasicTearOff();
 
+/// @nodoc
 mixin _$Basic {
   @JsonKey(defaultValue: 'Basic')
   String get resourceType;
@@ -4119,6 +4248,7 @@ mixin _$Basic {
   $BasicCopyWith<Basic> get copyWith;
 }
 
+/// @nodoc
 abstract class $BasicCopyWith<$Res> {
   factory $BasicCopyWith(Basic value, $Res Function(Basic) then) =
       _$BasicCopyWithImpl<$Res>;
@@ -4151,6 +4281,7 @@ abstract class $BasicCopyWith<$Res> {
   $ElementCopyWith<$Res> get createdElement;
 }
 
+/// @nodoc
 class _$BasicCopyWithImpl<$Res> implements $BasicCopyWith<$Res> {
   _$BasicCopyWithImpl(this._value, this._then);
 
@@ -4297,6 +4428,7 @@ class _$BasicCopyWithImpl<$Res> implements $BasicCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$BasicCopyWith<$Res> implements $BasicCopyWith<$Res> {
   factory _$BasicCopyWith(_Basic value, $Res Function(_Basic) then) =
       __$BasicCopyWithImpl<$Res>;
@@ -4338,6 +4470,7 @@ abstract class _$BasicCopyWith<$Res> implements $BasicCopyWith<$Res> {
   $ElementCopyWith<$Res> get createdElement;
 }
 
+/// @nodoc
 class __$BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res>
     implements _$BasicCopyWith<$Res> {
   __$BasicCopyWithImpl(_Basic _value, $Res Function(_Basic) _then)
@@ -4406,6 +4539,8 @@ class __$BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Basic extends _Basic {
   _$_Basic(
       {@required @JsonKey(defaultValue: 'Basic') this.resourceType,

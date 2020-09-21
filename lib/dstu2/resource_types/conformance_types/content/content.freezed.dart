@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'content.dart';
 
@@ -12,9 +12,11 @@ StructureDefinition _$StructureDefinitionFromJson(Map<String, dynamic> json) {
   return _StructureDefinition.fromJson(json);
 }
 
+/// @nodoc
 class _$StructureDefinitionTearOff {
   const _$StructureDefinitionTearOff();
 
+// ignore: unused_element
   _StructureDefinition call(
       {@required
       @JsonKey(defaultValue: 'StructureDefinition')
@@ -146,11 +148,18 @@ class _$StructureDefinitionTearOff {
       differential: differential,
     );
   }
+
+// ignore: unused_element
+  StructureDefinition fromJson(Map<String, Object> json) {
+    return StructureDefinition.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $StructureDefinition = _$StructureDefinitionTearOff();
 
+/// @nodoc
 mixin _$StructureDefinition {
   @JsonKey(defaultValue: 'StructureDefinition')
   String get resourceType;
@@ -229,6 +238,7 @@ mixin _$StructureDefinition {
   $StructureDefinitionCopyWith<StructureDefinition> get copyWith;
 }
 
+/// @nodoc
 abstract class $StructureDefinitionCopyWith<$Res> {
   factory $StructureDefinitionCopyWith(
           StructureDefinition value, $Res Function(StructureDefinition) then) =
@@ -328,6 +338,7 @@ abstract class $StructureDefinitionCopyWith<$Res> {
   $StructureDefinitionDifferentialCopyWith<$Res> get differential;
 }
 
+/// @nodoc
 class _$StructureDefinitionCopyWithImpl<$Res>
     implements $StructureDefinitionCopyWith<$Res> {
   _$StructureDefinitionCopyWithImpl(this._value, this._then);
@@ -692,6 +703,7 @@ class _$StructureDefinitionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$StructureDefinitionCopyWith<$Res>
     implements $StructureDefinitionCopyWith<$Res> {
   factory _$StructureDefinitionCopyWith(_StructureDefinition value,
@@ -812,6 +824,7 @@ abstract class _$StructureDefinitionCopyWith<$Res>
   $StructureDefinitionDifferentialCopyWith<$Res> get differential;
 }
 
+/// @nodoc
 class __$StructureDefinitionCopyWithImpl<$Res>
     extends _$StructureDefinitionCopyWithImpl<$Res>
     implements _$StructureDefinitionCopyWith<$Res> {
@@ -988,6 +1001,8 @@ class __$StructureDefinitionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_StructureDefinition extends _StructureDefinition {
   _$_StructureDefinition(
       {@required
@@ -1583,9 +1598,11 @@ StructureDefinitionContact _$StructureDefinitionContactFromJson(
   return _StructureDefinitionContact.fromJson(json);
 }
 
+/// @nodoc
 class _$StructureDefinitionContactTearOff {
   const _$StructureDefinitionContactTearOff();
 
+// ignore: unused_element
   _StructureDefinitionContact call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1600,11 +1617,18 @@ class _$StructureDefinitionContactTearOff {
       telecom: telecom,
     );
   }
+
+// ignore: unused_element
+  StructureDefinitionContact fromJson(Map<String, Object> json) {
+    return StructureDefinitionContact.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $StructureDefinitionContact = _$StructureDefinitionContactTearOff();
 
+/// @nodoc
 mixin _$StructureDefinitionContact {
   Id get id;
   @JsonKey(name: 'extension')
@@ -1617,6 +1641,7 @@ mixin _$StructureDefinitionContact {
   $StructureDefinitionContactCopyWith<StructureDefinitionContact> get copyWith;
 }
 
+/// @nodoc
 abstract class $StructureDefinitionContactCopyWith<$Res> {
   factory $StructureDefinitionContactCopyWith(StructureDefinitionContact value,
           $Res Function(StructureDefinitionContact) then) =
@@ -1629,6 +1654,7 @@ abstract class $StructureDefinitionContactCopyWith<$Res> {
       List<ContactPoint> telecom});
 }
 
+/// @nodoc
 class _$StructureDefinitionContactCopyWithImpl<$Res>
     implements $StructureDefinitionContactCopyWith<$Res> {
   _$StructureDefinitionContactCopyWithImpl(this._value, this._then);
@@ -1660,6 +1686,7 @@ class _$StructureDefinitionContactCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$StructureDefinitionContactCopyWith<$Res>
     implements $StructureDefinitionContactCopyWith<$Res> {
   factory _$StructureDefinitionContactCopyWith(
@@ -1675,6 +1702,7 @@ abstract class _$StructureDefinitionContactCopyWith<$Res>
       List<ContactPoint> telecom});
 }
 
+/// @nodoc
 class __$StructureDefinitionContactCopyWithImpl<$Res>
     extends _$StructureDefinitionContactCopyWithImpl<$Res>
     implements _$StructureDefinitionContactCopyWith<$Res> {
@@ -1710,6 +1738,8 @@ class __$StructureDefinitionContactCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_StructureDefinitionContact extends _StructureDefinitionContact {
   _$_StructureDefinitionContact(
       {this.id,
@@ -1810,9 +1840,11 @@ StructureDefinitionMapping _$StructureDefinitionMappingFromJson(
   return _StructureDefinitionMapping.fromJson(json);
 }
 
+/// @nodoc
 class _$StructureDefinitionMappingTearOff {
   const _$StructureDefinitionMappingTearOff();
 
+// ignore: unused_element
   _StructureDefinitionMapping call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1841,11 +1873,18 @@ class _$StructureDefinitionMappingTearOff {
       commentElement: commentElement,
     );
   }
+
+// ignore: unused_element
+  StructureDefinitionMapping fromJson(Map<String, Object> json) {
+    return StructureDefinitionMapping.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $StructureDefinitionMapping = _$StructureDefinitionMappingTearOff();
 
+/// @nodoc
 mixin _$StructureDefinitionMapping {
   Id get id;
   @JsonKey(name: 'extension')
@@ -1871,6 +1910,7 @@ mixin _$StructureDefinitionMapping {
   $StructureDefinitionMappingCopyWith<StructureDefinitionMapping> get copyWith;
 }
 
+/// @nodoc
 abstract class $StructureDefinitionMappingCopyWith<$Res> {
   factory $StructureDefinitionMappingCopyWith(StructureDefinitionMapping value,
           $Res Function(StructureDefinitionMapping) then) =
@@ -1895,6 +1935,7 @@ abstract class $StructureDefinitionMappingCopyWith<$Res> {
   $ElementCopyWith<$Res> get commentElement;
 }
 
+/// @nodoc
 class _$StructureDefinitionMappingCopyWithImpl<$Res>
     implements $StructureDefinitionMappingCopyWith<$Res> {
   _$StructureDefinitionMappingCopyWithImpl(this._value, this._then);
@@ -1987,6 +2028,7 @@ class _$StructureDefinitionMappingCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$StructureDefinitionMappingCopyWith<$Res>
     implements $StructureDefinitionMappingCopyWith<$Res> {
   factory _$StructureDefinitionMappingCopyWith(
@@ -2018,6 +2060,7 @@ abstract class _$StructureDefinitionMappingCopyWith<$Res>
   $ElementCopyWith<$Res> get commentElement;
 }
 
+/// @nodoc
 class __$StructureDefinitionMappingCopyWithImpl<$Res>
     extends _$StructureDefinitionMappingCopyWithImpl<$Res>
     implements _$StructureDefinitionMappingCopyWith<$Res> {
@@ -2074,6 +2117,8 @@ class __$StructureDefinitionMappingCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_StructureDefinitionMapping extends _StructureDefinitionMapping {
   _$_StructureDefinitionMapping(
       {this.id,
@@ -2258,9 +2303,11 @@ StructureDefinitionSnapshot _$StructureDefinitionSnapshotFromJson(
   return _StructureDefinitionSnapshot.fromJson(json);
 }
 
+/// @nodoc
 class _$StructureDefinitionSnapshotTearOff {
   const _$StructureDefinitionSnapshotTearOff();
 
+// ignore: unused_element
   _StructureDefinitionSnapshot call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2273,11 +2320,18 @@ class _$StructureDefinitionSnapshotTearOff {
       element: element,
     );
   }
+
+// ignore: unused_element
+  StructureDefinitionSnapshot fromJson(Map<String, Object> json) {
+    return StructureDefinitionSnapshot.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $StructureDefinitionSnapshot = _$StructureDefinitionSnapshotTearOff();
 
+/// @nodoc
 mixin _$StructureDefinitionSnapshot {
   Id get id;
   @JsonKey(name: 'extension')
@@ -2291,6 +2345,7 @@ mixin _$StructureDefinitionSnapshot {
       get copyWith;
 }
 
+/// @nodoc
 abstract class $StructureDefinitionSnapshotCopyWith<$Res> {
   factory $StructureDefinitionSnapshotCopyWith(
           StructureDefinitionSnapshot value,
@@ -2303,6 +2358,7 @@ abstract class $StructureDefinitionSnapshotCopyWith<$Res> {
       @JsonKey(required: true) List<ElementDefinition> element});
 }
 
+/// @nodoc
 class _$StructureDefinitionSnapshotCopyWithImpl<$Res>
     implements $StructureDefinitionSnapshotCopyWith<$Res> {
   _$StructureDefinitionSnapshotCopyWithImpl(this._value, this._then);
@@ -2333,6 +2389,7 @@ class _$StructureDefinitionSnapshotCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$StructureDefinitionSnapshotCopyWith<$Res>
     implements $StructureDefinitionSnapshotCopyWith<$Res> {
   factory _$StructureDefinitionSnapshotCopyWith(
@@ -2347,6 +2404,7 @@ abstract class _$StructureDefinitionSnapshotCopyWith<$Res>
       @JsonKey(required: true) List<ElementDefinition> element});
 }
 
+/// @nodoc
 class __$StructureDefinitionSnapshotCopyWithImpl<$Res>
     extends _$StructureDefinitionSnapshotCopyWithImpl<$Res>
     implements _$StructureDefinitionSnapshotCopyWith<$Res> {
@@ -2382,6 +2440,8 @@ class __$StructureDefinitionSnapshotCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_StructureDefinitionSnapshot extends _StructureDefinitionSnapshot {
   _$_StructureDefinitionSnapshot(
       {this.id,
@@ -2478,9 +2538,11 @@ StructureDefinitionDifferential _$StructureDefinitionDifferentialFromJson(
   return _StructureDefinitionDifferential.fromJson(json);
 }
 
+/// @nodoc
 class _$StructureDefinitionDifferentialTearOff {
   const _$StructureDefinitionDifferentialTearOff();
 
+// ignore: unused_element
   _StructureDefinitionDifferential call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2493,12 +2555,19 @@ class _$StructureDefinitionDifferentialTearOff {
       element: element,
     );
   }
+
+// ignore: unused_element
+  StructureDefinitionDifferential fromJson(Map<String, Object> json) {
+    return StructureDefinitionDifferential.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $StructureDefinitionDifferential =
     _$StructureDefinitionDifferentialTearOff();
 
+/// @nodoc
 mixin _$StructureDefinitionDifferential {
   Id get id;
   @JsonKey(name: 'extension')
@@ -2512,6 +2581,7 @@ mixin _$StructureDefinitionDifferential {
       get copyWith;
 }
 
+/// @nodoc
 abstract class $StructureDefinitionDifferentialCopyWith<$Res> {
   factory $StructureDefinitionDifferentialCopyWith(
           StructureDefinitionDifferential value,
@@ -2524,6 +2594,7 @@ abstract class $StructureDefinitionDifferentialCopyWith<$Res> {
       @JsonKey(required: true) List<ElementDefinition> element});
 }
 
+/// @nodoc
 class _$StructureDefinitionDifferentialCopyWithImpl<$Res>
     implements $StructureDefinitionDifferentialCopyWith<$Res> {
   _$StructureDefinitionDifferentialCopyWithImpl(this._value, this._then);
@@ -2554,6 +2625,7 @@ class _$StructureDefinitionDifferentialCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$StructureDefinitionDifferentialCopyWith<$Res>
     implements $StructureDefinitionDifferentialCopyWith<$Res> {
   factory _$StructureDefinitionDifferentialCopyWith(
@@ -2568,6 +2640,7 @@ abstract class _$StructureDefinitionDifferentialCopyWith<$Res>
       @JsonKey(required: true) List<ElementDefinition> element});
 }
 
+/// @nodoc
 class __$StructureDefinitionDifferentialCopyWithImpl<$Res>
     extends _$StructureDefinitionDifferentialCopyWithImpl<$Res>
     implements _$StructureDefinitionDifferentialCopyWith<$Res> {
@@ -2603,6 +2676,8 @@ class __$StructureDefinitionDifferentialCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_StructureDefinitionDifferential
     extends _StructureDefinitionDifferential {
   _$_StructureDefinitionDifferential(
@@ -2700,9 +2775,11 @@ DataElement _$DataElementFromJson(Map<String, dynamic> json) {
   return _DataElement.fromJson(json);
 }
 
+/// @nodoc
 class _$DataElementTearOff {
   const _$DataElementTearOff();
 
+// ignore: unused_element
   _DataElement call(
       {@required
       @JsonKey(defaultValue: 'DataElement')
@@ -2761,11 +2838,18 @@ class _$DataElementTearOff {
       element: element,
     );
   }
+
+// ignore: unused_element
+  DataElement fromJson(Map<String, Object> json) {
+    return DataElement.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $DataElement = _$DataElementTearOff();
 
+/// @nodoc
 mixin _$DataElement {
   @JsonKey(defaultValue: 'DataElement')
   String get resourceType;
@@ -2800,6 +2884,7 @@ mixin _$DataElement {
   $DataElementCopyWith<DataElement> get copyWith;
 }
 
+/// @nodoc
 abstract class $DataElementCopyWith<$Res> {
   factory $DataElementCopyWith(
           DataElement value, $Res Function(DataElement) then) =
@@ -2838,6 +2923,7 @@ abstract class $DataElementCopyWith<$Res> {
   $NarrativeCopyWith<$Res> get text;
 }
 
+/// @nodoc
 class _$DataElementCopyWithImpl<$Res> implements $DataElementCopyWith<$Res> {
   _$DataElementCopyWithImpl(this._value, this._then);
 
@@ -2942,6 +3028,7 @@ class _$DataElementCopyWithImpl<$Res> implements $DataElementCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$DataElementCopyWith<$Res>
     implements $DataElementCopyWith<$Res> {
   factory _$DataElementCopyWith(
@@ -2984,6 +3071,7 @@ abstract class _$DataElementCopyWith<$Res>
   $NarrativeCopyWith<$Res> get text;
 }
 
+/// @nodoc
 class __$DataElementCopyWithImpl<$Res> extends _$DataElementCopyWithImpl<$Res>
     implements _$DataElementCopyWith<$Res> {
   __$DataElementCopyWithImpl(
@@ -3071,6 +3159,8 @@ class __$DataElementCopyWithImpl<$Res> extends _$DataElementCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_DataElement extends _DataElement {
   _$_DataElement(
       {@required
@@ -3370,9 +3460,11 @@ DataElementContact _$DataElementContactFromJson(Map<String, dynamic> json) {
   return _DataElementContact.fromJson(json);
 }
 
+/// @nodoc
 class _$DataElementContactTearOff {
   const _$DataElementContactTearOff();
 
+// ignore: unused_element
   _DataElementContact call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3387,11 +3479,18 @@ class _$DataElementContactTearOff {
       telecom: telecom,
     );
   }
+
+// ignore: unused_element
+  DataElementContact fromJson(Map<String, Object> json) {
+    return DataElementContact.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $DataElementContact = _$DataElementContactTearOff();
 
+/// @nodoc
 mixin _$DataElementContact {
   Id get id;
   @JsonKey(name: 'extension')
@@ -3404,6 +3503,7 @@ mixin _$DataElementContact {
   $DataElementContactCopyWith<DataElementContact> get copyWith;
 }
 
+/// @nodoc
 abstract class $DataElementContactCopyWith<$Res> {
   factory $DataElementContactCopyWith(
           DataElementContact value, $Res Function(DataElementContact) then) =
@@ -3416,6 +3516,7 @@ abstract class $DataElementContactCopyWith<$Res> {
       List<ContactPoint> telecom});
 }
 
+/// @nodoc
 class _$DataElementContactCopyWithImpl<$Res>
     implements $DataElementContactCopyWith<$Res> {
   _$DataElementContactCopyWithImpl(this._value, this._then);
@@ -3447,6 +3548,7 @@ class _$DataElementContactCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$DataElementContactCopyWith<$Res>
     implements $DataElementContactCopyWith<$Res> {
   factory _$DataElementContactCopyWith(
@@ -3461,6 +3563,7 @@ abstract class _$DataElementContactCopyWith<$Res>
       List<ContactPoint> telecom});
 }
 
+/// @nodoc
 class __$DataElementContactCopyWithImpl<$Res>
     extends _$DataElementContactCopyWithImpl<$Res>
     implements _$DataElementContactCopyWith<$Res> {
@@ -3495,6 +3598,8 @@ class __$DataElementContactCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_DataElementContact extends _DataElementContact {
   _$_DataElementContact(
       {this.id,
@@ -3592,9 +3697,11 @@ DataElementMapping _$DataElementMappingFromJson(Map<String, dynamic> json) {
   return _DataElementMapping.fromJson(json);
 }
 
+/// @nodoc
 class _$DataElementMappingTearOff {
   const _$DataElementMappingTearOff();
 
+// ignore: unused_element
   _DataElementMapping call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3623,11 +3730,18 @@ class _$DataElementMappingTearOff {
       commentElement: commentElement,
     );
   }
+
+// ignore: unused_element
+  DataElementMapping fromJson(Map<String, Object> json) {
+    return DataElementMapping.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $DataElementMapping = _$DataElementMappingTearOff();
 
+/// @nodoc
 mixin _$DataElementMapping {
   Id get id;
   @JsonKey(name: 'extension')
@@ -3653,6 +3767,7 @@ mixin _$DataElementMapping {
   $DataElementMappingCopyWith<DataElementMapping> get copyWith;
 }
 
+/// @nodoc
 abstract class $DataElementMappingCopyWith<$Res> {
   factory $DataElementMappingCopyWith(
           DataElementMapping value, $Res Function(DataElementMapping) then) =
@@ -3677,6 +3792,7 @@ abstract class $DataElementMappingCopyWith<$Res> {
   $ElementCopyWith<$Res> get commentElement;
 }
 
+/// @nodoc
 class _$DataElementMappingCopyWithImpl<$Res>
     implements $DataElementMappingCopyWith<$Res> {
   _$DataElementMappingCopyWithImpl(this._value, this._then);
@@ -3769,6 +3885,7 @@ class _$DataElementMappingCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$DataElementMappingCopyWith<$Res>
     implements $DataElementMappingCopyWith<$Res> {
   factory _$DataElementMappingCopyWith(
@@ -3799,6 +3916,7 @@ abstract class _$DataElementMappingCopyWith<$Res>
   $ElementCopyWith<$Res> get commentElement;
 }
 
+/// @nodoc
 class __$DataElementMappingCopyWithImpl<$Res>
     extends _$DataElementMappingCopyWithImpl<$Res>
     implements _$DataElementMappingCopyWith<$Res> {
@@ -3854,6 +3972,8 @@ class __$DataElementMappingCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_DataElementMapping extends _DataElementMapping {
   _$_DataElementMapping(
       {this.id,

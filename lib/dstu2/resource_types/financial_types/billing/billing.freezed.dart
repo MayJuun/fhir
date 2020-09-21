@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'billing.dart';
 
@@ -12,9 +12,11 @@ Account _$AccountFromJson(Map<String, dynamic> json) {
   return _Account.fromJson(json);
 }
 
+/// @nodoc
 class _$AccountTearOff {
   const _$AccountTearOff();
 
+// ignore: unused_element
   _Account call(
       {@required @JsonKey(defaultValue: 'Account') String resourceType,
       Id id,
@@ -69,11 +71,18 @@ class _$AccountTearOff {
       descriptionElement: descriptionElement,
     );
   }
+
+// ignore: unused_element
+  Account fromJson(Map<String, Object> json) {
+    return Account.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Account = _$AccountTearOff();
 
+/// @nodoc
 mixin _$Account {
   @JsonKey(defaultValue: 'Account')
   String get resourceType;
@@ -113,6 +122,7 @@ mixin _$Account {
   $AccountCopyWith<Account> get copyWith;
 }
 
+/// @nodoc
 abstract class $AccountCopyWith<$Res> {
   factory $AccountCopyWith(Account value, $Res Function(Account) then) =
       _$AccountCopyWithImpl<$Res>;
@@ -159,6 +169,7 @@ abstract class $AccountCopyWith<$Res> {
   $ElementCopyWith<$Res> get descriptionElement;
 }
 
+/// @nodoc
 class _$AccountCopyWithImpl<$Res> implements $AccountCopyWith<$Res> {
   _$AccountCopyWithImpl(this._value, this._then);
 
@@ -389,6 +400,7 @@ class _$AccountCopyWithImpl<$Res> implements $AccountCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
   factory _$AccountCopyWith(_Account value, $Res Function(_Account) then) =
       __$AccountCopyWithImpl<$Res>;
@@ -450,6 +462,7 @@ abstract class _$AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
   $ElementCopyWith<$Res> get descriptionElement;
 }
 
+/// @nodoc
 class __$AccountCopyWithImpl<$Res> extends _$AccountCopyWithImpl<$Res>
     implements _$AccountCopyWith<$Res> {
   __$AccountCopyWithImpl(_Account _value, $Res Function(_Account) _then)
@@ -542,6 +555,8 @@ class __$AccountCopyWithImpl<$Res> extends _$AccountCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Account extends _Account {
   _$_Account(
       {@required @JsonKey(defaultValue: 'Account') this.resourceType,
@@ -849,9 +864,11 @@ Claim _$ClaimFromJson(Map<String, dynamic> json) {
   return _Claim.fromJson(json);
 }
 
+/// @nodoc
 class _$ClaimTearOff {
   const _$ClaimTearOff();
 
+// ignore: unused_element
   _Claim call(
       {@required
       @JsonKey(defaultValue: 'Claim')
@@ -952,11 +969,18 @@ class _$ClaimTearOff {
       missingTeeth: missingTeeth,
     );
   }
+
+// ignore: unused_element
+  Claim fromJson(Map<String, Object> json) {
+    return Claim.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Claim = _$ClaimTearOff();
 
+/// @nodoc
 mixin _$Claim {
   @JsonKey(defaultValue: 'Claim')
   String get resourceType;
@@ -1014,6 +1038,7 @@ mixin _$Claim {
   $ClaimCopyWith<Claim> get copyWith;
 }
 
+/// @nodoc
 abstract class $ClaimCopyWith<$Res> {
   factory $ClaimCopyWith(Claim value, $Res Function(Claim) then) =
       _$ClaimCopyWithImpl<$Res>;
@@ -1093,6 +1118,7 @@ abstract class $ClaimCopyWith<$Res> {
   $CodingCopyWith<$Res> get accidentType;
 }
 
+/// @nodoc
 class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
   _$ClaimCopyWithImpl(this._value, this._then);
 
@@ -1444,6 +1470,7 @@ class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
   factory _$ClaimCopyWith(_Claim value, $Res Function(_Claim) then) =
       __$ClaimCopyWithImpl<$Res>;
@@ -1545,6 +1572,7 @@ abstract class _$ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
   $CodingCopyWith<$Res> get accidentType;
 }
 
+/// @nodoc
 class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
     implements _$ClaimCopyWith<$Res> {
   __$ClaimCopyWithImpl(_Claim _value, $Res Function(_Claim) _then)
@@ -1688,6 +1716,8 @@ class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Claim extends _Claim {
   _$_Claim(
       {@required
@@ -2159,9 +2189,11 @@ ClaimPayee _$ClaimPayeeFromJson(Map<String, dynamic> json) {
   return _ClaimPayee.fromJson(json);
 }
 
+/// @nodoc
 class _$ClaimPayeeTearOff {
   const _$ClaimPayeeTearOff();
 
+// ignore: unused_element
   _ClaimPayee call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2180,11 +2212,18 @@ class _$ClaimPayeeTearOff {
       person: person,
     );
   }
+
+// ignore: unused_element
+  ClaimPayee fromJson(Map<String, Object> json) {
+    return ClaimPayee.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ClaimPayee = _$ClaimPayeeTearOff();
 
+/// @nodoc
 mixin _$ClaimPayee {
   Id get id;
   @JsonKey(name: 'extension')
@@ -2199,6 +2238,7 @@ mixin _$ClaimPayee {
   $ClaimPayeeCopyWith<ClaimPayee> get copyWith;
 }
 
+/// @nodoc
 abstract class $ClaimPayeeCopyWith<$Res> {
   factory $ClaimPayeeCopyWith(
           ClaimPayee value, $Res Function(ClaimPayee) then) =
@@ -2218,6 +2258,7 @@ abstract class $ClaimPayeeCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get person;
 }
 
+/// @nodoc
 class _$ClaimPayeeCopyWithImpl<$Res> implements $ClaimPayeeCopyWith<$Res> {
   _$ClaimPayeeCopyWithImpl(this._value, this._then);
 
@@ -2293,6 +2334,7 @@ class _$ClaimPayeeCopyWithImpl<$Res> implements $ClaimPayeeCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$ClaimPayeeCopyWith<$Res> implements $ClaimPayeeCopyWith<$Res> {
   factory _$ClaimPayeeCopyWith(
           _ClaimPayee value, $Res Function(_ClaimPayee) then) =
@@ -2317,6 +2359,7 @@ abstract class _$ClaimPayeeCopyWith<$Res> implements $ClaimPayeeCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get person;
 }
 
+/// @nodoc
 class __$ClaimPayeeCopyWithImpl<$Res> extends _$ClaimPayeeCopyWithImpl<$Res>
     implements _$ClaimPayeeCopyWith<$Res> {
   __$ClaimPayeeCopyWithImpl(
@@ -2355,6 +2398,8 @@ class __$ClaimPayeeCopyWithImpl<$Res> extends _$ClaimPayeeCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ClaimPayee extends _ClaimPayee {
   _$_ClaimPayee(
       {this.id,
@@ -2472,9 +2517,11 @@ ClaimDiagnosis _$ClaimDiagnosisFromJson(Map<String, dynamic> json) {
   return _ClaimDiagnosis.fromJson(json);
 }
 
+/// @nodoc
 class _$ClaimDiagnosisTearOff {
   const _$ClaimDiagnosisTearOff();
 
+// ignore: unused_element
   _ClaimDiagnosis call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2491,11 +2538,18 @@ class _$ClaimDiagnosisTearOff {
       diagnosis: diagnosis,
     );
   }
+
+// ignore: unused_element
+  ClaimDiagnosis fromJson(Map<String, Object> json) {
+    return ClaimDiagnosis.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ClaimDiagnosis = _$ClaimDiagnosisTearOff();
 
+/// @nodoc
 mixin _$ClaimDiagnosis {
   Id get id;
   @JsonKey(name: 'extension')
@@ -2512,6 +2566,7 @@ mixin _$ClaimDiagnosis {
   $ClaimDiagnosisCopyWith<ClaimDiagnosis> get copyWith;
 }
 
+/// @nodoc
 abstract class $ClaimDiagnosisCopyWith<$Res> {
   factory $ClaimDiagnosisCopyWith(
           ClaimDiagnosis value, $Res Function(ClaimDiagnosis) then) =
@@ -2528,6 +2583,7 @@ abstract class $ClaimDiagnosisCopyWith<$Res> {
   $CodingCopyWith<$Res> get diagnosis;
 }
 
+/// @nodoc
 class _$ClaimDiagnosisCopyWithImpl<$Res>
     implements $ClaimDiagnosisCopyWith<$Res> {
   _$ClaimDiagnosisCopyWithImpl(this._value, this._then);
@@ -2582,6 +2638,7 @@ class _$ClaimDiagnosisCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ClaimDiagnosisCopyWith<$Res>
     implements $ClaimDiagnosisCopyWith<$Res> {
   factory _$ClaimDiagnosisCopyWith(
@@ -2602,6 +2659,7 @@ abstract class _$ClaimDiagnosisCopyWith<$Res>
   $CodingCopyWith<$Res> get diagnosis;
 }
 
+/// @nodoc
 class __$ClaimDiagnosisCopyWithImpl<$Res>
     extends _$ClaimDiagnosisCopyWithImpl<$Res>
     implements _$ClaimDiagnosisCopyWith<$Res> {
@@ -2639,6 +2697,8 @@ class __$ClaimDiagnosisCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ClaimDiagnosis extends _ClaimDiagnosis {
   _$_ClaimDiagnosis(
       {this.id,
@@ -2756,9 +2816,11 @@ ClaimCoverage _$ClaimCoverageFromJson(Map<String, dynamic> json) {
   return _ClaimCoverage.fromJson(json);
 }
 
+/// @nodoc
 class _$ClaimCoverageTearOff {
   const _$ClaimCoverageTearOff();
 
+// ignore: unused_element
   _ClaimCoverage call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2785,11 +2847,18 @@ class _$ClaimCoverageTearOff {
       originalRuleset: originalRuleset,
     );
   }
+
+// ignore: unused_element
+  ClaimCoverage fromJson(Map<String, Object> json) {
+    return ClaimCoverage.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ClaimCoverage = _$ClaimCoverageTearOff();
 
+/// @nodoc
 mixin _$ClaimCoverage {
   Id get id;
   @JsonKey(name: 'extension')
@@ -2812,6 +2881,7 @@ mixin _$ClaimCoverage {
   $ClaimCoverageCopyWith<ClaimCoverage> get copyWith;
 }
 
+/// @nodoc
 abstract class $ClaimCoverageCopyWith<$Res> {
   factory $ClaimCoverageCopyWith(
           ClaimCoverage value, $Res Function(ClaimCoverage) then) =
@@ -2835,6 +2905,7 @@ abstract class $ClaimCoverageCopyWith<$Res> {
   $CodingCopyWith<$Res> get originalRuleset;
 }
 
+/// @nodoc
 class _$ClaimCoverageCopyWithImpl<$Res>
     implements $ClaimCoverageCopyWith<$Res> {
   _$ClaimCoverageCopyWithImpl(this._value, this._then);
@@ -2927,6 +2998,7 @@ class _$ClaimCoverageCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ClaimCoverageCopyWith<$Res>
     implements $ClaimCoverageCopyWith<$Res> {
   factory _$ClaimCoverageCopyWith(
@@ -2956,6 +3028,7 @@ abstract class _$ClaimCoverageCopyWith<$Res>
   $CodingCopyWith<$Res> get originalRuleset;
 }
 
+/// @nodoc
 class __$ClaimCoverageCopyWithImpl<$Res>
     extends _$ClaimCoverageCopyWithImpl<$Res>
     implements _$ClaimCoverageCopyWith<$Res> {
@@ -3011,6 +3084,8 @@ class __$ClaimCoverageCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ClaimCoverage extends _ClaimCoverage {
   _$_ClaimCoverage(
       {this.id,
@@ -3181,9 +3256,11 @@ ClaimItem _$ClaimItemFromJson(Map<String, dynamic> json) {
   return _ClaimItem.fromJson(json);
 }
 
+/// @nodoc
 class _$ClaimItemTearOff {
   const _$ClaimItemTearOff();
 
+// ignore: unused_element
   _ClaimItem call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3234,11 +3311,18 @@ class _$ClaimItemTearOff {
       prosthesis: prosthesis,
     );
   }
+
+// ignore: unused_element
+  ClaimItem fromJson(Map<String, Object> json) {
+    return ClaimItem.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ClaimItem = _$ClaimItemTearOff();
 
+/// @nodoc
 mixin _$ClaimItem {
   Id get id;
   @JsonKey(name: 'extension')
@@ -3275,6 +3359,7 @@ mixin _$ClaimItem {
   $ClaimItemCopyWith<ClaimItem> get copyWith;
 }
 
+/// @nodoc
 abstract class $ClaimItemCopyWith<$Res> {
   factory $ClaimItemCopyWith(ClaimItem value, $Res Function(ClaimItem) then) =
       _$ClaimItemCopyWithImpl<$Res>;
@@ -3317,6 +3402,7 @@ abstract class $ClaimItemCopyWith<$Res> {
   $ClaimItemProsthesisCopyWith<$Res> get prosthesis;
 }
 
+/// @nodoc
 class _$ClaimItemCopyWithImpl<$Res> implements $ClaimItemCopyWith<$Res> {
   _$ClaimItemCopyWithImpl(this._value, this._then);
 
@@ -3516,6 +3602,7 @@ class _$ClaimItemCopyWithImpl<$Res> implements $ClaimItemCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$ClaimItemCopyWith<$Res> implements $ClaimItemCopyWith<$Res> {
   factory _$ClaimItemCopyWith(
           _ClaimItem value, $Res Function(_ClaimItem) then) =
@@ -3572,6 +3659,7 @@ abstract class _$ClaimItemCopyWith<$Res> implements $ClaimItemCopyWith<$Res> {
   $ClaimItemProsthesisCopyWith<$Res> get prosthesis;
 }
 
+/// @nodoc
 class __$ClaimItemCopyWithImpl<$Res> extends _$ClaimItemCopyWithImpl<$Res>
     implements _$ClaimItemCopyWith<$Res> {
   __$ClaimItemCopyWithImpl(_ClaimItem _value, $Res Function(_ClaimItem) _then)
@@ -3653,6 +3741,8 @@ class __$ClaimItemCopyWithImpl<$Res> extends _$ClaimItemCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ClaimItem extends _ClaimItem {
   _$_ClaimItem(
       {this.id,
@@ -3941,9 +4031,11 @@ ClaimItemDetail _$ClaimItemDetailFromJson(Map<String, dynamic> json) {
   return _ClaimItemDetail.fromJson(json);
 }
 
+/// @nodoc
 class _$ClaimItemDetailTearOff {
   const _$ClaimItemDetailTearOff();
 
+// ignore: unused_element
   _ClaimItemDetail call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3978,11 +4070,18 @@ class _$ClaimItemDetailTearOff {
       subDetail: subDetail,
     );
   }
+
+// ignore: unused_element
+  ClaimItemDetail fromJson(Map<String, Object> json) {
+    return ClaimItemDetail.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ClaimItemDetail = _$ClaimItemDetailTearOff();
 
+/// @nodoc
 mixin _$ClaimItemDetail {
   Id get id;
   @JsonKey(name: 'extension')
@@ -4010,6 +4109,7 @@ mixin _$ClaimItemDetail {
   $ClaimItemDetailCopyWith<ClaimItemDetail> get copyWith;
 }
 
+/// @nodoc
 abstract class $ClaimItemDetailCopyWith<$Res> {
   factory $ClaimItemDetailCopyWith(
           ClaimItemDetail value, $Res Function(ClaimItemDetail) then) =
@@ -4041,6 +4141,7 @@ abstract class $ClaimItemDetailCopyWith<$Res> {
   $CodingCopyWith<$Res> get udi;
 }
 
+/// @nodoc
 class _$ClaimItemDetailCopyWithImpl<$Res>
     implements $ClaimItemDetailCopyWith<$Res> {
   _$ClaimItemDetailCopyWithImpl(this._value, this._then);
@@ -4178,6 +4279,7 @@ class _$ClaimItemDetailCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ClaimItemDetailCopyWith<$Res>
     implements $ClaimItemDetailCopyWith<$Res> {
   factory _$ClaimItemDetailCopyWith(
@@ -4219,6 +4321,7 @@ abstract class _$ClaimItemDetailCopyWith<$Res>
   $CodingCopyWith<$Res> get udi;
 }
 
+/// @nodoc
 class __$ClaimItemDetailCopyWithImpl<$Res>
     extends _$ClaimItemDetailCopyWithImpl<$Res>
     implements _$ClaimItemDetailCopyWith<$Res> {
@@ -4279,6 +4382,8 @@ class __$ClaimItemDetailCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ClaimItemDetail extends _ClaimItemDetail {
   _$_ClaimItemDetail(
       {this.id,
@@ -4486,9 +4591,11 @@ ClaimDetailSubDetail _$ClaimDetailSubDetailFromJson(Map<String, dynamic> json) {
   return _ClaimDetailSubDetail.fromJson(json);
 }
 
+/// @nodoc
 class _$ClaimDetailSubDetailTearOff {
   const _$ClaimDetailSubDetailTearOff();
 
+// ignore: unused_element
   _ClaimDetailSubDetail call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -4521,11 +4628,18 @@ class _$ClaimDetailSubDetailTearOff {
       udi: udi,
     );
   }
+
+// ignore: unused_element
+  ClaimDetailSubDetail fromJson(Map<String, Object> json) {
+    return ClaimDetailSubDetail.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ClaimDetailSubDetail = _$ClaimDetailSubDetailTearOff();
 
+/// @nodoc
 mixin _$ClaimDetailSubDetail {
   Id get id;
   @JsonKey(name: 'extension')
@@ -4552,6 +4666,7 @@ mixin _$ClaimDetailSubDetail {
   $ClaimDetailSubDetailCopyWith<ClaimDetailSubDetail> get copyWith;
 }
 
+/// @nodoc
 abstract class $ClaimDetailSubDetailCopyWith<$Res> {
   factory $ClaimDetailSubDetailCopyWith(ClaimDetailSubDetail value,
           $Res Function(ClaimDetailSubDetail) then) =
@@ -4582,6 +4697,7 @@ abstract class $ClaimDetailSubDetailCopyWith<$Res> {
   $CodingCopyWith<$Res> get udi;
 }
 
+/// @nodoc
 class _$ClaimDetailSubDetailCopyWithImpl<$Res>
     implements $ClaimDetailSubDetailCopyWith<$Res> {
   _$ClaimDetailSubDetailCopyWithImpl(this._value, this._then);
@@ -4715,6 +4831,7 @@ class _$ClaimDetailSubDetailCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ClaimDetailSubDetailCopyWith<$Res>
     implements $ClaimDetailSubDetailCopyWith<$Res> {
   factory _$ClaimDetailSubDetailCopyWith(_ClaimDetailSubDetail value,
@@ -4755,6 +4872,7 @@ abstract class _$ClaimDetailSubDetailCopyWith<$Res>
   $CodingCopyWith<$Res> get udi;
 }
 
+/// @nodoc
 class __$ClaimDetailSubDetailCopyWithImpl<$Res>
     extends _$ClaimDetailSubDetailCopyWithImpl<$Res>
     implements _$ClaimDetailSubDetailCopyWith<$Res> {
@@ -4811,6 +4929,8 @@ class __$ClaimDetailSubDetailCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ClaimDetailSubDetail extends _ClaimDetailSubDetail {
   _$_ClaimDetailSubDetail(
       {this.id,
@@ -5009,9 +5129,11 @@ ClaimItemProsthesis _$ClaimItemProsthesisFromJson(Map<String, dynamic> json) {
   return _ClaimItemProsthesis.fromJson(json);
 }
 
+/// @nodoc
 class _$ClaimItemProsthesisTearOff {
   const _$ClaimItemProsthesisTearOff();
 
+// ignore: unused_element
   _ClaimItemProsthesis call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5028,11 +5150,18 @@ class _$ClaimItemProsthesisTearOff {
       priorMaterial: priorMaterial,
     );
   }
+
+// ignore: unused_element
+  ClaimItemProsthesis fromJson(Map<String, Object> json) {
+    return ClaimItemProsthesis.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ClaimItemProsthesis = _$ClaimItemProsthesisTearOff();
 
+/// @nodoc
 mixin _$ClaimItemProsthesis {
   Id get id;
   @JsonKey(name: 'extension')
@@ -5046,6 +5175,7 @@ mixin _$ClaimItemProsthesis {
   $ClaimItemProsthesisCopyWith<ClaimItemProsthesis> get copyWith;
 }
 
+/// @nodoc
 abstract class $ClaimItemProsthesisCopyWith<$Res> {
   factory $ClaimItemProsthesisCopyWith(
           ClaimItemProsthesis value, $Res Function(ClaimItemProsthesis) then) =
@@ -5061,6 +5191,7 @@ abstract class $ClaimItemProsthesisCopyWith<$Res> {
   $CodingCopyWith<$Res> get priorMaterial;
 }
 
+/// @nodoc
 class _$ClaimItemProsthesisCopyWithImpl<$Res>
     implements $ClaimItemProsthesisCopyWith<$Res> {
   _$ClaimItemProsthesisCopyWithImpl(this._value, this._then);
@@ -5105,6 +5236,7 @@ class _$ClaimItemProsthesisCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ClaimItemProsthesisCopyWith<$Res>
     implements $ClaimItemProsthesisCopyWith<$Res> {
   factory _$ClaimItemProsthesisCopyWith(_ClaimItemProsthesis value,
@@ -5123,6 +5255,7 @@ abstract class _$ClaimItemProsthesisCopyWith<$Res>
   $CodingCopyWith<$Res> get priorMaterial;
 }
 
+/// @nodoc
 class __$ClaimItemProsthesisCopyWithImpl<$Res>
     extends _$ClaimItemProsthesisCopyWithImpl<$Res>
     implements _$ClaimItemProsthesisCopyWith<$Res> {
@@ -5160,6 +5293,8 @@ class __$ClaimItemProsthesisCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ClaimItemProsthesis extends _ClaimItemProsthesis {
   _$_ClaimItemProsthesis(
       {this.id,
@@ -5270,9 +5405,11 @@ ClaimMissingTeeth _$ClaimMissingTeethFromJson(Map<String, dynamic> json) {
   return _ClaimMissingTeeth.fromJson(json);
 }
 
+/// @nodoc
 class _$ClaimMissingTeethTearOff {
   const _$ClaimMissingTeethTearOff();
 
+// ignore: unused_element
   _ClaimMissingTeeth call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -5289,11 +5426,18 @@ class _$ClaimMissingTeethTearOff {
       extractionDate: extractionDate,
     );
   }
+
+// ignore: unused_element
+  ClaimMissingTeeth fromJson(Map<String, Object> json) {
+    return ClaimMissingTeeth.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ClaimMissingTeeth = _$ClaimMissingTeethTearOff();
 
+/// @nodoc
 mixin _$ClaimMissingTeeth {
   Id get id;
   @JsonKey(name: 'extension')
@@ -5308,6 +5452,7 @@ mixin _$ClaimMissingTeeth {
   $ClaimMissingTeethCopyWith<ClaimMissingTeeth> get copyWith;
 }
 
+/// @nodoc
 abstract class $ClaimMissingTeethCopyWith<$Res> {
   factory $ClaimMissingTeethCopyWith(
           ClaimMissingTeeth value, $Res Function(ClaimMissingTeeth) then) =
@@ -5324,6 +5469,7 @@ abstract class $ClaimMissingTeethCopyWith<$Res> {
   $CodingCopyWith<$Res> get reason;
 }
 
+/// @nodoc
 class _$ClaimMissingTeethCopyWithImpl<$Res>
     implements $ClaimMissingTeethCopyWith<$Res> {
   _$ClaimMissingTeethCopyWithImpl(this._value, this._then);
@@ -5378,6 +5524,7 @@ class _$ClaimMissingTeethCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ClaimMissingTeethCopyWith<$Res>
     implements $ClaimMissingTeethCopyWith<$Res> {
   factory _$ClaimMissingTeethCopyWith(
@@ -5398,6 +5545,7 @@ abstract class _$ClaimMissingTeethCopyWith<$Res>
   $CodingCopyWith<$Res> get reason;
 }
 
+/// @nodoc
 class __$ClaimMissingTeethCopyWithImpl<$Res>
     extends _$ClaimMissingTeethCopyWithImpl<$Res>
     implements _$ClaimMissingTeethCopyWith<$Res> {
@@ -5435,6 +5583,8 @@ class __$ClaimMissingTeethCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ClaimMissingTeeth extends _ClaimMissingTeeth {
   _$_ClaimMissingTeeth(
       {this.id,
@@ -5545,9 +5695,11 @@ ClaimResponse _$ClaimResponseFromJson(Map<String, dynamic> json) {
   return _ClaimResponse.fromJson(json);
 }
 
+/// @nodoc
 class _$ClaimResponseTearOff {
   const _$ClaimResponseTearOff();
 
+// ignore: unused_element
   _ClaimResponse call(
       {@required
       @JsonKey(defaultValue: 'ClaimResponse')
@@ -5644,11 +5796,18 @@ class _$ClaimResponseTearOff {
       coverage: coverage,
     );
   }
+
+// ignore: unused_element
+  ClaimResponse fromJson(Map<String, Object> json) {
+    return ClaimResponse.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ClaimResponse = _$ClaimResponseTearOff();
 
+/// @nodoc
 mixin _$ClaimResponse {
   @JsonKey(defaultValue: 'ClaimResponse')
   String get resourceType;
@@ -5705,6 +5864,7 @@ mixin _$ClaimResponse {
   $ClaimResponseCopyWith<ClaimResponse> get copyWith;
 }
 
+/// @nodoc
 abstract class $ClaimResponseCopyWith<$Res> {
   factory $ClaimResponseCopyWith(
           ClaimResponse value, $Res Function(ClaimResponse) then) =
@@ -5787,6 +5947,7 @@ abstract class $ClaimResponseCopyWith<$Res> {
   $CodingCopyWith<$Res> get form;
 }
 
+/// @nodoc
 class _$ClaimResponseCopyWithImpl<$Res>
     implements $ClaimResponseCopyWith<$Res> {
   _$ClaimResponseCopyWithImpl(this._value, this._then);
@@ -6176,6 +6337,7 @@ class _$ClaimResponseCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ClaimResponseCopyWith<$Res>
     implements $ClaimResponseCopyWith<$Res> {
   factory _$ClaimResponseCopyWith(
@@ -6284,6 +6446,7 @@ abstract class _$ClaimResponseCopyWith<$Res>
   $CodingCopyWith<$Res> get form;
 }
 
+/// @nodoc
 class __$ClaimResponseCopyWithImpl<$Res>
     extends _$ClaimResponseCopyWithImpl<$Res>
     implements _$ClaimResponseCopyWith<$Res> {
@@ -6436,6 +6599,8 @@ class __$ClaimResponseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ClaimResponse extends _ClaimResponse {
   _$_ClaimResponse(
       {@required @JsonKey(defaultValue: 'ClaimResponse') this.resourceType,
@@ -6884,9 +7049,11 @@ ClaimResponseItem _$ClaimResponseItemFromJson(Map<String, dynamic> json) {
   return _ClaimResponseItem.fromJson(json);
 }
 
+/// @nodoc
 class _$ClaimResponseItemTearOff {
   const _$ClaimResponseItemTearOff();
 
+// ignore: unused_element
   _ClaimResponseItem call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -6909,11 +7076,18 @@ class _$ClaimResponseItemTearOff {
       detail: detail,
     );
   }
+
+// ignore: unused_element
+  ClaimResponseItem fromJson(Map<String, Object> json) {
+    return ClaimResponseItem.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ClaimResponseItem = _$ClaimResponseItemTearOff();
 
+/// @nodoc
 mixin _$ClaimResponseItem {
   Id get id;
   @JsonKey(name: 'extension')
@@ -6933,6 +7107,7 @@ mixin _$ClaimResponseItem {
   $ClaimResponseItemCopyWith<ClaimResponseItem> get copyWith;
 }
 
+/// @nodoc
 abstract class $ClaimResponseItemCopyWith<$Res> {
   factory $ClaimResponseItemCopyWith(
           ClaimResponseItem value, $Res Function(ClaimResponseItem) then) =
@@ -6949,6 +7124,7 @@ abstract class $ClaimResponseItemCopyWith<$Res> {
       List<ClaimResponseItemDetail> detail});
 }
 
+/// @nodoc
 class _$ClaimResponseItemCopyWithImpl<$Res>
     implements $ClaimResponseItemCopyWith<$Res> {
   _$ClaimResponseItemCopyWithImpl(this._value, this._then);
@@ -6999,6 +7175,7 @@ class _$ClaimResponseItemCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ClaimResponseItemCopyWith<$Res>
     implements $ClaimResponseItemCopyWith<$Res> {
   factory _$ClaimResponseItemCopyWith(
@@ -7017,6 +7194,7 @@ abstract class _$ClaimResponseItemCopyWith<$Res>
       List<ClaimResponseItemDetail> detail});
 }
 
+/// @nodoc
 class __$ClaimResponseItemCopyWithImpl<$Res>
     extends _$ClaimResponseItemCopyWithImpl<$Res>
     implements _$ClaimResponseItemCopyWith<$Res> {
@@ -7070,6 +7248,8 @@ class __$ClaimResponseItemCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ClaimResponseItem extends _ClaimResponseItem {
   _$_ClaimResponseItem(
       {this.id,
@@ -7216,9 +7396,11 @@ ClaimResponseItemAdjudication _$ClaimResponseItemAdjudicationFromJson(
   return _ClaimResponseItemAdjudication.fromJson(json);
 }
 
+/// @nodoc
 class _$ClaimResponseItemAdjudicationTearOff {
   const _$ClaimResponseItemAdjudicationTearOff();
 
+// ignore: unused_element
   _ClaimResponseItemAdjudication call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -7237,11 +7419,18 @@ class _$ClaimResponseItemAdjudicationTearOff {
       valueElement: valueElement,
     );
   }
+
+// ignore: unused_element
+  ClaimResponseItemAdjudication fromJson(Map<String, Object> json) {
+    return ClaimResponseItemAdjudication.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ClaimResponseItemAdjudication = _$ClaimResponseItemAdjudicationTearOff();
 
+/// @nodoc
 mixin _$ClaimResponseItemAdjudication {
   Id get id;
   @JsonKey(name: 'extension')
@@ -7259,6 +7448,7 @@ mixin _$ClaimResponseItemAdjudication {
       get copyWith;
 }
 
+/// @nodoc
 abstract class $ClaimResponseItemAdjudicationCopyWith<$Res> {
   factory $ClaimResponseItemAdjudicationCopyWith(
           ClaimResponseItemAdjudication value,
@@ -7278,6 +7468,7 @@ abstract class $ClaimResponseItemAdjudicationCopyWith<$Res> {
   $ElementCopyWith<$Res> get valueElement;
 }
 
+/// @nodoc
 class _$ClaimResponseItemAdjudicationCopyWithImpl<$Res>
     implements $ClaimResponseItemAdjudicationCopyWith<$Res> {
   _$ClaimResponseItemAdjudicationCopyWithImpl(this._value, this._then);
@@ -7344,6 +7535,7 @@ class _$ClaimResponseItemAdjudicationCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ClaimResponseItemAdjudicationCopyWith<$Res>
     implements $ClaimResponseItemAdjudicationCopyWith<$Res> {
   factory _$ClaimResponseItemAdjudicationCopyWith(
@@ -7368,6 +7560,7 @@ abstract class _$ClaimResponseItemAdjudicationCopyWith<$Res>
   $ElementCopyWith<$Res> get valueElement;
 }
 
+/// @nodoc
 class __$ClaimResponseItemAdjudicationCopyWithImpl<$Res>
     extends _$ClaimResponseItemAdjudicationCopyWithImpl<$Res>
     implements _$ClaimResponseItemAdjudicationCopyWith<$Res> {
@@ -7409,6 +7602,8 @@ class __$ClaimResponseItemAdjudicationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ClaimResponseItemAdjudication extends _ClaimResponseItemAdjudication {
   _$_ClaimResponseItemAdjudication(
       {this.id,
@@ -7536,9 +7731,11 @@ ClaimResponseItemDetail _$ClaimResponseItemDetailFromJson(
   return _ClaimResponseItemDetail.fromJson(json);
 }
 
+/// @nodoc
 class _$ClaimResponseItemDetailTearOff {
   const _$ClaimResponseItemDetailTearOff();
 
+// ignore: unused_element
   _ClaimResponseItemDetail call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -7555,11 +7752,18 @@ class _$ClaimResponseItemDetailTearOff {
       subDetail: subDetail,
     );
   }
+
+// ignore: unused_element
+  ClaimResponseItemDetail fromJson(Map<String, Object> json) {
+    return ClaimResponseItemDetail.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ClaimResponseItemDetail = _$ClaimResponseItemDetailTearOff();
 
+/// @nodoc
 mixin _$ClaimResponseItemDetail {
   Id get id;
   @JsonKey(name: 'extension')
@@ -7574,6 +7778,7 @@ mixin _$ClaimResponseItemDetail {
   $ClaimResponseItemDetailCopyWith<ClaimResponseItemDetail> get copyWith;
 }
 
+/// @nodoc
 abstract class $ClaimResponseItemDetailCopyWith<$Res> {
   factory $ClaimResponseItemDetailCopyWith(ClaimResponseItemDetail value,
           $Res Function(ClaimResponseItemDetail) then) =
@@ -7587,6 +7792,7 @@ abstract class $ClaimResponseItemDetailCopyWith<$Res> {
       List<ClaimResponseDetailSubDetail> subDetail});
 }
 
+/// @nodoc
 class _$ClaimResponseItemDetailCopyWithImpl<$Res>
     implements $ClaimResponseItemDetailCopyWith<$Res> {
   _$ClaimResponseItemDetailCopyWithImpl(this._value, this._then);
@@ -7625,6 +7831,7 @@ class _$ClaimResponseItemDetailCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ClaimResponseItemDetailCopyWith<$Res>
     implements $ClaimResponseItemDetailCopyWith<$Res> {
   factory _$ClaimResponseItemDetailCopyWith(_ClaimResponseItemDetail value,
@@ -7640,6 +7847,7 @@ abstract class _$ClaimResponseItemDetailCopyWith<$Res>
       List<ClaimResponseDetailSubDetail> subDetail});
 }
 
+/// @nodoc
 class __$ClaimResponseItemDetailCopyWithImpl<$Res>
     extends _$ClaimResponseItemDetailCopyWithImpl<$Res>
     implements _$ClaimResponseItemDetailCopyWith<$Res> {
@@ -7682,6 +7890,8 @@ class __$ClaimResponseItemDetailCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ClaimResponseItemDetail extends _ClaimResponseItemDetail {
   _$_ClaimResponseItemDetail(
       {this.id,
@@ -7797,9 +8007,11 @@ ClaimResponseDetailSubDetail _$ClaimResponseDetailSubDetailFromJson(
   return _ClaimResponseDetailSubDetail.fromJson(json);
 }
 
+/// @nodoc
 class _$ClaimResponseDetailSubDetailTearOff {
   const _$ClaimResponseDetailSubDetailTearOff();
 
+// ignore: unused_element
   _ClaimResponseDetailSubDetail call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -7814,11 +8026,18 @@ class _$ClaimResponseDetailSubDetailTearOff {
       adjudication: adjudication,
     );
   }
+
+// ignore: unused_element
+  ClaimResponseDetailSubDetail fromJson(Map<String, Object> json) {
+    return ClaimResponseDetailSubDetail.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ClaimResponseDetailSubDetail = _$ClaimResponseDetailSubDetailTearOff();
 
+/// @nodoc
 mixin _$ClaimResponseDetailSubDetail {
   Id get id;
   @JsonKey(name: 'extension')
@@ -7833,6 +8052,7 @@ mixin _$ClaimResponseDetailSubDetail {
       get copyWith;
 }
 
+/// @nodoc
 abstract class $ClaimResponseDetailSubDetailCopyWith<$Res> {
   factory $ClaimResponseDetailSubDetailCopyWith(
           ClaimResponseDetailSubDetail value,
@@ -7846,6 +8066,7 @@ abstract class $ClaimResponseDetailSubDetailCopyWith<$Res> {
       List<ClaimResponseItemAdjudication> adjudication});
 }
 
+/// @nodoc
 class _$ClaimResponseDetailSubDetailCopyWithImpl<$Res>
     implements $ClaimResponseDetailSubDetailCopyWith<$Res> {
   _$ClaimResponseDetailSubDetailCopyWithImpl(this._value, this._then);
@@ -7880,6 +8101,7 @@ class _$ClaimResponseDetailSubDetailCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ClaimResponseDetailSubDetailCopyWith<$Res>
     implements $ClaimResponseDetailSubDetailCopyWith<$Res> {
   factory _$ClaimResponseDetailSubDetailCopyWith(
@@ -7895,6 +8117,7 @@ abstract class _$ClaimResponseDetailSubDetailCopyWith<$Res>
       List<ClaimResponseItemAdjudication> adjudication});
 }
 
+/// @nodoc
 class __$ClaimResponseDetailSubDetailCopyWithImpl<$Res>
     extends _$ClaimResponseDetailSubDetailCopyWithImpl<$Res>
     implements _$ClaimResponseDetailSubDetailCopyWith<$Res> {
@@ -7934,6 +8157,8 @@ class __$ClaimResponseDetailSubDetailCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ClaimResponseDetailSubDetail extends _ClaimResponseDetailSubDetail {
   _$_ClaimResponseDetailSubDetail(
       {this.id,
@@ -8040,9 +8265,11 @@ ClaimResponseAddItem _$ClaimResponseAddItemFromJson(Map<String, dynamic> json) {
   return _ClaimResponseAddItem.fromJson(json);
 }
 
+/// @nodoc
 class _$ClaimResponseAddItemTearOff {
   const _$ClaimResponseAddItemTearOff();
 
+// ignore: unused_element
   _ClaimResponseAddItem call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -8065,11 +8292,18 @@ class _$ClaimResponseAddItemTearOff {
       detail: detail,
     );
   }
+
+// ignore: unused_element
+  ClaimResponseAddItem fromJson(Map<String, Object> json) {
+    return ClaimResponseAddItem.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ClaimResponseAddItem = _$ClaimResponseAddItemTearOff();
 
+/// @nodoc
 mixin _$ClaimResponseAddItem {
   Id get id;
   @JsonKey(name: 'extension')
@@ -8087,6 +8321,7 @@ mixin _$ClaimResponseAddItem {
   $ClaimResponseAddItemCopyWith<ClaimResponseAddItem> get copyWith;
 }
 
+/// @nodoc
 abstract class $ClaimResponseAddItemCopyWith<$Res> {
   factory $ClaimResponseAddItemCopyWith(ClaimResponseAddItem value,
           $Res Function(ClaimResponseAddItem) then) =
@@ -8107,6 +8342,7 @@ abstract class $ClaimResponseAddItemCopyWith<$Res> {
   $ClaimResponseAddItemDetailCopyWith<$Res> get detail;
 }
 
+/// @nodoc
 class _$ClaimResponseAddItemCopyWithImpl<$Res>
     implements $ClaimResponseAddItemCopyWith<$Res> {
   _$ClaimResponseAddItemCopyWithImpl(this._value, this._then);
@@ -8183,6 +8419,7 @@ class _$ClaimResponseAddItemCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ClaimResponseAddItemCopyWith<$Res>
     implements $ClaimResponseAddItemCopyWith<$Res> {
   factory _$ClaimResponseAddItemCopyWith(_ClaimResponseAddItem value,
@@ -8208,6 +8445,7 @@ abstract class _$ClaimResponseAddItemCopyWith<$Res>
   $ClaimResponseAddItemDetailCopyWith<$Res> get detail;
 }
 
+/// @nodoc
 class __$ClaimResponseAddItemCopyWithImpl<$Res>
     extends _$ClaimResponseAddItemCopyWithImpl<$Res>
     implements _$ClaimResponseAddItemCopyWith<$Res> {
@@ -8257,6 +8495,8 @@ class __$ClaimResponseAddItemCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
   _$_ClaimResponseAddItem(
       {this.id,
@@ -8399,9 +8639,11 @@ ClaimResponseAddItemDetail _$ClaimResponseAddItemDetailFromJson(
   return _ClaimResponseAddItemDetail.fromJson(json);
 }
 
+/// @nodoc
 class _$ClaimResponseAddItemDetailTearOff {
   const _$ClaimResponseAddItemDetailTearOff();
 
+// ignore: unused_element
   _ClaimResponseAddItemDetail call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -8418,11 +8660,18 @@ class _$ClaimResponseAddItemDetailTearOff {
       adjudication: adjudication,
     );
   }
+
+// ignore: unused_element
+  ClaimResponseAddItemDetail fromJson(Map<String, Object> json) {
+    return ClaimResponseAddItemDetail.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ClaimResponseAddItemDetail = _$ClaimResponseAddItemDetailTearOff();
 
+/// @nodoc
 mixin _$ClaimResponseAddItemDetail {
   Id get id;
   @JsonKey(name: 'extension')
@@ -8437,6 +8686,7 @@ mixin _$ClaimResponseAddItemDetail {
   $ClaimResponseAddItemDetailCopyWith<ClaimResponseAddItemDetail> get copyWith;
 }
 
+/// @nodoc
 abstract class $ClaimResponseAddItemDetailCopyWith<$Res> {
   factory $ClaimResponseAddItemDetailCopyWith(ClaimResponseAddItemDetail value,
           $Res Function(ClaimResponseAddItemDetail) then) =
@@ -8453,6 +8703,7 @@ abstract class $ClaimResponseAddItemDetailCopyWith<$Res> {
   $QuantityCopyWith<$Res> get fee;
 }
 
+/// @nodoc
 class _$ClaimResponseAddItemDetailCopyWithImpl<$Res>
     implements $ClaimResponseAddItemDetailCopyWith<$Res> {
   _$ClaimResponseAddItemDetailCopyWithImpl(this._value, this._then);
@@ -8507,6 +8758,7 @@ class _$ClaimResponseAddItemDetailCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ClaimResponseAddItemDetailCopyWith<$Res>
     implements $ClaimResponseAddItemDetailCopyWith<$Res> {
   factory _$ClaimResponseAddItemDetailCopyWith(
@@ -8528,6 +8780,7 @@ abstract class _$ClaimResponseAddItemDetailCopyWith<$Res>
   $QuantityCopyWith<$Res> get fee;
 }
 
+/// @nodoc
 class __$ClaimResponseAddItemDetailCopyWithImpl<$Res>
     extends _$ClaimResponseAddItemDetailCopyWithImpl<$Res>
     implements _$ClaimResponseAddItemDetailCopyWith<$Res> {
@@ -8566,6 +8819,8 @@ class __$ClaimResponseAddItemDetailCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ClaimResponseAddItemDetail extends _ClaimResponseAddItemDetail {
   _$_ClaimResponseAddItemDetail(
       {this.id,
@@ -8680,9 +8935,11 @@ ClaimResponseError _$ClaimResponseErrorFromJson(Map<String, dynamic> json) {
   return _ClaimResponseError.fromJson(json);
 }
 
+/// @nodoc
 class _$ClaimResponseErrorTearOff {
   const _$ClaimResponseErrorTearOff();
 
+// ignore: unused_element
   _ClaimResponseError call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -8701,11 +8958,18 @@ class _$ClaimResponseErrorTearOff {
       code: code,
     );
   }
+
+// ignore: unused_element
+  ClaimResponseError fromJson(Map<String, Object> json) {
+    return ClaimResponseError.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ClaimResponseError = _$ClaimResponseErrorTearOff();
 
+/// @nodoc
 mixin _$ClaimResponseError {
   Id get id;
   @JsonKey(name: 'extension')
@@ -8721,6 +8985,7 @@ mixin _$ClaimResponseError {
   $ClaimResponseErrorCopyWith<ClaimResponseError> get copyWith;
 }
 
+/// @nodoc
 abstract class $ClaimResponseErrorCopyWith<$Res> {
   factory $ClaimResponseErrorCopyWith(
           ClaimResponseError value, $Res Function(ClaimResponseError) then) =
@@ -8737,6 +9002,7 @@ abstract class $ClaimResponseErrorCopyWith<$Res> {
   $CodingCopyWith<$Res> get code;
 }
 
+/// @nodoc
 class _$ClaimResponseErrorCopyWithImpl<$Res>
     implements $ClaimResponseErrorCopyWith<$Res> {
   _$ClaimResponseErrorCopyWithImpl(this._value, this._then);
@@ -8787,6 +9053,7 @@ class _$ClaimResponseErrorCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ClaimResponseErrorCopyWith<$Res>
     implements $ClaimResponseErrorCopyWith<$Res> {
   factory _$ClaimResponseErrorCopyWith(
@@ -8806,6 +9073,7 @@ abstract class _$ClaimResponseErrorCopyWith<$Res>
   $CodingCopyWith<$Res> get code;
 }
 
+/// @nodoc
 class __$ClaimResponseErrorCopyWithImpl<$Res>
     extends _$ClaimResponseErrorCopyWithImpl<$Res>
     implements _$ClaimResponseErrorCopyWith<$Res> {
@@ -8849,6 +9117,8 @@ class __$ClaimResponseErrorCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ClaimResponseError extends _ClaimResponseError {
   _$_ClaimResponseError(
       {this.id,
@@ -8971,9 +9241,11 @@ ClaimResponseNote _$ClaimResponseNoteFromJson(Map<String, dynamic> json) {
   return _ClaimResponseNote.fromJson(json);
 }
 
+/// @nodoc
 class _$ClaimResponseNoteTearOff {
   const _$ClaimResponseNoteTearOff();
 
+// ignore: unused_element
   _ClaimResponseNote call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -8996,11 +9268,18 @@ class _$ClaimResponseNoteTearOff {
       textElement: textElement,
     );
   }
+
+// ignore: unused_element
+  ClaimResponseNote fromJson(Map<String, Object> json) {
+    return ClaimResponseNote.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ClaimResponseNote = _$ClaimResponseNoteTearOff();
 
+/// @nodoc
 mixin _$ClaimResponseNote {
   Id get id;
   @JsonKey(name: 'extension')
@@ -9020,6 +9299,7 @@ mixin _$ClaimResponseNote {
   $ClaimResponseNoteCopyWith<ClaimResponseNote> get copyWith;
 }
 
+/// @nodoc
 abstract class $ClaimResponseNoteCopyWith<$Res> {
   factory $ClaimResponseNoteCopyWith(
           ClaimResponseNote value, $Res Function(ClaimResponseNote) then) =
@@ -9041,6 +9321,7 @@ abstract class $ClaimResponseNoteCopyWith<$Res> {
   $ElementCopyWith<$Res> get textElement;
 }
 
+/// @nodoc
 class _$ClaimResponseNoteCopyWithImpl<$Res>
     implements $ClaimResponseNoteCopyWith<$Res> {
   _$ClaimResponseNoteCopyWithImpl(this._value, this._then);
@@ -9123,6 +9404,7 @@ class _$ClaimResponseNoteCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ClaimResponseNoteCopyWith<$Res>
     implements $ClaimResponseNoteCopyWith<$Res> {
   factory _$ClaimResponseNoteCopyWith(
@@ -9150,6 +9432,7 @@ abstract class _$ClaimResponseNoteCopyWith<$Res>
   $ElementCopyWith<$Res> get textElement;
 }
 
+/// @nodoc
 class __$ClaimResponseNoteCopyWithImpl<$Res>
     extends _$ClaimResponseNoteCopyWithImpl<$Res>
     implements _$ClaimResponseNoteCopyWith<$Res> {
@@ -9195,6 +9478,8 @@ class __$ClaimResponseNoteCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ClaimResponseNote extends _ClaimResponseNote {
   _$_ClaimResponseNote(
       {this.id,
@@ -9338,9 +9623,11 @@ ClaimResponseCoverage _$ClaimResponseCoverageFromJson(
   return _ClaimResponseCoverage.fromJson(json);
 }
 
+/// @nodoc
 class _$ClaimResponseCoverageTearOff {
   const _$ClaimResponseCoverageTearOff();
 
+// ignore: unused_element
   _ClaimResponseCoverage call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -9367,11 +9654,18 @@ class _$ClaimResponseCoverageTearOff {
       originalRuleset: originalRuleset,
     );
   }
+
+// ignore: unused_element
+  ClaimResponseCoverage fromJson(Map<String, Object> json) {
+    return ClaimResponseCoverage.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ClaimResponseCoverage = _$ClaimResponseCoverageTearOff();
 
+/// @nodoc
 mixin _$ClaimResponseCoverage {
   Id get id;
   @JsonKey(name: 'extension')
@@ -9394,6 +9688,7 @@ mixin _$ClaimResponseCoverage {
   $ClaimResponseCoverageCopyWith<ClaimResponseCoverage> get copyWith;
 }
 
+/// @nodoc
 abstract class $ClaimResponseCoverageCopyWith<$Res> {
   factory $ClaimResponseCoverageCopyWith(ClaimResponseCoverage value,
           $Res Function(ClaimResponseCoverage) then) =
@@ -9417,6 +9712,7 @@ abstract class $ClaimResponseCoverageCopyWith<$Res> {
   $CodingCopyWith<$Res> get originalRuleset;
 }
 
+/// @nodoc
 class _$ClaimResponseCoverageCopyWithImpl<$Res>
     implements $ClaimResponseCoverageCopyWith<$Res> {
   _$ClaimResponseCoverageCopyWithImpl(this._value, this._then);
@@ -9509,6 +9805,7 @@ class _$ClaimResponseCoverageCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ClaimResponseCoverageCopyWith<$Res>
     implements $ClaimResponseCoverageCopyWith<$Res> {
   factory _$ClaimResponseCoverageCopyWith(_ClaimResponseCoverage value,
@@ -9538,6 +9835,7 @@ abstract class _$ClaimResponseCoverageCopyWith<$Res>
   $CodingCopyWith<$Res> get originalRuleset;
 }
 
+/// @nodoc
 class __$ClaimResponseCoverageCopyWithImpl<$Res>
     extends _$ClaimResponseCoverageCopyWithImpl<$Res>
     implements _$ClaimResponseCoverageCopyWith<$Res> {
@@ -9593,6 +9891,8 @@ class __$ClaimResponseCoverageCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ClaimResponseCoverage extends _ClaimResponseCoverage {
   _$_ClaimResponseCoverage(
       {this.id,

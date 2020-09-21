@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'workflow2.dart';
 
@@ -12,9 +12,11 @@ ProcessRequest _$ProcessRequestFromJson(Map<String, dynamic> json) {
   return _ProcessRequest.fromJson(json);
 }
 
+/// @nodoc
 class _$ProcessRequestTearOff {
   const _$ProcessRequestTearOff();
 
+// ignore: unused_element
   _ProcessRequest call(
       {@required
       @JsonKey(defaultValue: 'ProcessRequest')
@@ -74,11 +76,18 @@ class _$ProcessRequestTearOff {
       period: period,
     );
   }
+
+// ignore: unused_element
+  ProcessRequest fromJson(Map<String, Object> json) {
+    return ProcessRequest.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ProcessRequest = _$ProcessRequestTearOff();
 
+/// @nodoc
 mixin _$ProcessRequest {
   @JsonKey(defaultValue: 'ProcessRequest')
   String get resourceType;
@@ -113,6 +122,7 @@ mixin _$ProcessRequest {
   $ProcessRequestCopyWith<ProcessRequest> get copyWith;
 }
 
+/// @nodoc
 abstract class $ProcessRequestCopyWith<$Res> {
   factory $ProcessRequestCopyWith(
           ProcessRequest value, $Res Function(ProcessRequest) then) =
@@ -159,6 +169,7 @@ abstract class $ProcessRequestCopyWith<$Res> {
   $PeriodCopyWith<$Res> get period;
 }
 
+/// @nodoc
 class _$ProcessRequestCopyWithImpl<$Res>
     implements $ProcessRequestCopyWith<$Res> {
   _$ProcessRequestCopyWithImpl(this._value, this._then);
@@ -341,6 +352,7 @@ class _$ProcessRequestCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ProcessRequestCopyWith<$Res>
     implements $ProcessRequestCopyWith<$Res> {
   factory _$ProcessRequestCopyWith(
@@ -399,6 +411,7 @@ abstract class _$ProcessRequestCopyWith<$Res>
   $PeriodCopyWith<$Res> get period;
 }
 
+/// @nodoc
 class __$ProcessRequestCopyWithImpl<$Res>
     extends _$ProcessRequestCopyWithImpl<$Res>
     implements _$ProcessRequestCopyWith<$Res> {
@@ -484,6 +497,8 @@ class __$ProcessRequestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ProcessRequest extends _ProcessRequest {
   _$_ProcessRequest(
       {@required
@@ -793,9 +808,11 @@ ProcessRequestItem _$ProcessRequestItemFromJson(Map<String, dynamic> json) {
   return _ProcessRequestItem.fromJson(json);
 }
 
+/// @nodoc
 class _$ProcessRequestItemTearOff {
   const _$ProcessRequestItemTearOff();
 
+// ignore: unused_element
   _ProcessRequestItem call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -808,11 +825,18 @@ class _$ProcessRequestItemTearOff {
       sequenceLinkId: sequenceLinkId,
     );
   }
+
+// ignore: unused_element
+  ProcessRequestItem fromJson(Map<String, Object> json) {
+    return ProcessRequestItem.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ProcessRequestItem = _$ProcessRequestItemTearOff();
 
+/// @nodoc
 mixin _$ProcessRequestItem {
   Id get id;
   @JsonKey(name: 'extension')
@@ -825,6 +849,7 @@ mixin _$ProcessRequestItem {
   $ProcessRequestItemCopyWith<ProcessRequestItem> get copyWith;
 }
 
+/// @nodoc
 abstract class $ProcessRequestItemCopyWith<$Res> {
   factory $ProcessRequestItemCopyWith(
           ProcessRequestItem value, $Res Function(ProcessRequestItem) then) =
@@ -836,6 +861,7 @@ abstract class $ProcessRequestItemCopyWith<$Res> {
       @JsonKey(required: true) Integer sequenceLinkId});
 }
 
+/// @nodoc
 class _$ProcessRequestItemCopyWithImpl<$Res>
     implements $ProcessRequestItemCopyWith<$Res> {
   _$ProcessRequestItemCopyWithImpl(this._value, this._then);
@@ -866,6 +892,7 @@ class _$ProcessRequestItemCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ProcessRequestItemCopyWith<$Res>
     implements $ProcessRequestItemCopyWith<$Res> {
   factory _$ProcessRequestItemCopyWith(
@@ -879,6 +906,7 @@ abstract class _$ProcessRequestItemCopyWith<$Res>
       @JsonKey(required: true) Integer sequenceLinkId});
 }
 
+/// @nodoc
 class __$ProcessRequestItemCopyWithImpl<$Res>
     extends _$ProcessRequestItemCopyWithImpl<$Res>
     implements _$ProcessRequestItemCopyWith<$Res> {
@@ -912,6 +940,8 @@ class __$ProcessRequestItemCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ProcessRequestItem extends _ProcessRequestItem {
   _$_ProcessRequestItem(
       {this.id,
@@ -1005,9 +1035,11 @@ ProcessResponse _$ProcessResponseFromJson(Map<String, dynamic> json) {
   return _ProcessResponse.fromJson(json);
 }
 
+/// @nodoc
 class _$ProcessResponseTearOff {
   const _$ProcessResponseTearOff();
 
+// ignore: unused_element
   _ProcessResponse call(
       {@required @JsonKey(defaultValue: 'ProcessResponse') String resourceType,
       Id id,
@@ -1056,11 +1088,18 @@ class _$ProcessResponseTearOff {
       error: error,
     );
   }
+
+// ignore: unused_element
+  ProcessResponse fromJson(Map<String, Object> json) {
+    return ProcessResponse.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ProcessResponse = _$ProcessResponseTearOff();
 
+/// @nodoc
 mixin _$ProcessResponse {
   @JsonKey(defaultValue: 'ProcessResponse')
   String get resourceType;
@@ -1091,6 +1130,7 @@ mixin _$ProcessResponse {
   $ProcessResponseCopyWith<ProcessResponse> get copyWith;
 }
 
+/// @nodoc
 abstract class $ProcessResponseCopyWith<$Res> {
   factory $ProcessResponseCopyWith(
           ProcessResponse value, $Res Function(ProcessResponse) then) =
@@ -1131,6 +1171,7 @@ abstract class $ProcessResponseCopyWith<$Res> {
   $CodingCopyWith<$Res> get form;
 }
 
+/// @nodoc
 class _$ProcessResponseCopyWithImpl<$Res>
     implements $ProcessResponseCopyWith<$Res> {
   _$ProcessResponseCopyWithImpl(this._value, this._then);
@@ -1312,6 +1353,7 @@ class _$ProcessResponseCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ProcessResponseCopyWith<$Res>
     implements $ProcessResponseCopyWith<$Res> {
   factory _$ProcessResponseCopyWith(
@@ -1364,6 +1406,7 @@ abstract class _$ProcessResponseCopyWith<$Res>
   $CodingCopyWith<$Res> get form;
 }
 
+/// @nodoc
 class __$ProcessResponseCopyWithImpl<$Res>
     extends _$ProcessResponseCopyWithImpl<$Res>
     implements _$ProcessResponseCopyWith<$Res> {
@@ -1448,6 +1491,8 @@ class __$ProcessResponseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ProcessResponse extends _ProcessResponse {
   _$_ProcessResponse(
       {@required @JsonKey(defaultValue: 'ProcessResponse') this.resourceType,
@@ -1715,9 +1760,11 @@ ProcessResponseNotes _$ProcessResponseNotesFromJson(Map<String, dynamic> json) {
   return _ProcessResponseNotes.fromJson(json);
 }
 
+/// @nodoc
 class _$ProcessResponseNotesTearOff {
   const _$ProcessResponseNotesTearOff();
 
+// ignore: unused_element
   _ProcessResponseNotes call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1732,11 +1779,18 @@ class _$ProcessResponseNotesTearOff {
       text: text,
     );
   }
+
+// ignore: unused_element
+  ProcessResponseNotes fromJson(Map<String, Object> json) {
+    return ProcessResponseNotes.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ProcessResponseNotes = _$ProcessResponseNotesTearOff();
 
+/// @nodoc
 mixin _$ProcessResponseNotes {
   Id get id;
   @JsonKey(name: 'extension')
@@ -1749,6 +1803,7 @@ mixin _$ProcessResponseNotes {
   $ProcessResponseNotesCopyWith<ProcessResponseNotes> get copyWith;
 }
 
+/// @nodoc
 abstract class $ProcessResponseNotesCopyWith<$Res> {
   factory $ProcessResponseNotesCopyWith(ProcessResponseNotes value,
           $Res Function(ProcessResponseNotes) then) =
@@ -1763,6 +1818,7 @@ abstract class $ProcessResponseNotesCopyWith<$Res> {
   $CodingCopyWith<$Res> get type;
 }
 
+/// @nodoc
 class _$ProcessResponseNotesCopyWithImpl<$Res>
     implements $ProcessResponseNotesCopyWith<$Res> {
   _$ProcessResponseNotesCopyWithImpl(this._value, this._then);
@@ -1803,6 +1859,7 @@ class _$ProcessResponseNotesCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ProcessResponseNotesCopyWith<$Res>
     implements $ProcessResponseNotesCopyWith<$Res> {
   factory _$ProcessResponseNotesCopyWith(_ProcessResponseNotes value,
@@ -1820,6 +1877,7 @@ abstract class _$ProcessResponseNotesCopyWith<$Res>
   $CodingCopyWith<$Res> get type;
 }
 
+/// @nodoc
 class __$ProcessResponseNotesCopyWithImpl<$Res>
     extends _$ProcessResponseNotesCopyWithImpl<$Res>
     implements _$ProcessResponseNotesCopyWith<$Res> {
@@ -1853,6 +1911,8 @@ class __$ProcessResponseNotesCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ProcessResponseNotes extends _ProcessResponseNotes {
   _$_ProcessResponseNotes(
       {this.id,
@@ -1951,9 +2011,11 @@ SupplyRequest _$SupplyRequestFromJson(Map<String, dynamic> json) {
   return _SupplyRequest.fromJson(json);
 }
 
+/// @nodoc
 class _$SupplyRequestTearOff {
   const _$SupplyRequestTearOff();
 
+// ignore: unused_element
   _SupplyRequest call(
       {@required
       @JsonKey(defaultValue: 'SupplyRequest')
@@ -2011,11 +2073,18 @@ class _$SupplyRequestTearOff {
       when: when,
     );
   }
+
+// ignore: unused_element
+  SupplyRequest fromJson(Map<String, Object> json) {
+    return SupplyRequest.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $SupplyRequest = _$SupplyRequestTearOff();
 
+/// @nodoc
 mixin _$SupplyRequest {
   @JsonKey(defaultValue: 'SupplyRequest')
   String get resourceType;
@@ -2051,6 +2120,7 @@ mixin _$SupplyRequest {
   $SupplyRequestCopyWith<SupplyRequest> get copyWith;
 }
 
+/// @nodoc
 abstract class $SupplyRequestCopyWith<$Res> {
   factory $SupplyRequestCopyWith(
           SupplyRequest value, $Res Function(SupplyRequest) then) =
@@ -2101,6 +2171,7 @@ abstract class $SupplyRequestCopyWith<$Res> {
   $SupplyRequestWhenCopyWith<$Res> get when;
 }
 
+/// @nodoc
 class _$SupplyRequestCopyWithImpl<$Res>
     implements $SupplyRequestCopyWith<$Res> {
   _$SupplyRequestCopyWithImpl(this._value, this._then);
@@ -2317,6 +2388,7 @@ class _$SupplyRequestCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$SupplyRequestCopyWith<$Res>
     implements $SupplyRequestCopyWith<$Res> {
   factory _$SupplyRequestCopyWith(
@@ -2382,6 +2454,7 @@ abstract class _$SupplyRequestCopyWith<$Res>
   $SupplyRequestWhenCopyWith<$Res> get when;
 }
 
+/// @nodoc
 class __$SupplyRequestCopyWithImpl<$Res>
     extends _$SupplyRequestCopyWithImpl<$Res>
     implements _$SupplyRequestCopyWith<$Res> {
@@ -2470,6 +2543,8 @@ class __$SupplyRequestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_SupplyRequest extends _SupplyRequest {
   _$_SupplyRequest(
       {@required @JsonKey(defaultValue: 'SupplyRequest') this.resourceType,
@@ -2760,9 +2835,11 @@ SupplyRequestWhen _$SupplyRequestWhenFromJson(Map<String, dynamic> json) {
   return _SupplyRequestWhen.fromJson(json);
 }
 
+/// @nodoc
 class _$SupplyRequestWhenTearOff {
   const _$SupplyRequestWhenTearOff();
 
+// ignore: unused_element
   _SupplyRequestWhen call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2777,11 +2854,18 @@ class _$SupplyRequestWhenTearOff {
       schedule: schedule,
     );
   }
+
+// ignore: unused_element
+  SupplyRequestWhen fromJson(Map<String, Object> json) {
+    return SupplyRequestWhen.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $SupplyRequestWhen = _$SupplyRequestWhenTearOff();
 
+/// @nodoc
 mixin _$SupplyRequestWhen {
   Id get id;
   @JsonKey(name: 'extension')
@@ -2794,6 +2878,7 @@ mixin _$SupplyRequestWhen {
   $SupplyRequestWhenCopyWith<SupplyRequestWhen> get copyWith;
 }
 
+/// @nodoc
 abstract class $SupplyRequestWhenCopyWith<$Res> {
   factory $SupplyRequestWhenCopyWith(
           SupplyRequestWhen value, $Res Function(SupplyRequestWhen) then) =
@@ -2809,6 +2894,7 @@ abstract class $SupplyRequestWhenCopyWith<$Res> {
   $TimingCopyWith<$Res> get schedule;
 }
 
+/// @nodoc
 class _$SupplyRequestWhenCopyWithImpl<$Res>
     implements $SupplyRequestWhenCopyWith<$Res> {
   _$SupplyRequestWhenCopyWithImpl(this._value, this._then);
@@ -2859,6 +2945,7 @@ class _$SupplyRequestWhenCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$SupplyRequestWhenCopyWith<$Res>
     implements $SupplyRequestWhenCopyWith<$Res> {
   factory _$SupplyRequestWhenCopyWith(
@@ -2878,6 +2965,7 @@ abstract class _$SupplyRequestWhenCopyWith<$Res>
   $TimingCopyWith<$Res> get schedule;
 }
 
+/// @nodoc
 class __$SupplyRequestWhenCopyWithImpl<$Res>
     extends _$SupplyRequestWhenCopyWithImpl<$Res>
     implements _$SupplyRequestWhenCopyWith<$Res> {
@@ -2911,6 +2999,8 @@ class __$SupplyRequestWhenCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_SupplyRequestWhen extends _SupplyRequestWhen {
   _$_SupplyRequestWhen(
       {this.id,
@@ -3009,9 +3099,11 @@ SupplyDelivery _$SupplyDeliveryFromJson(Map<String, dynamic> json) {
   return _SupplyDelivery.fromJson(json);
 }
 
+/// @nodoc
 class _$SupplyDeliveryTearOff {
   const _$SupplyDeliveryTearOff();
 
+// ignore: unused_element
   _SupplyDelivery call(
       {@required
       @JsonKey(defaultValue: 'SupplyDelivery')
@@ -3069,11 +3161,18 @@ class _$SupplyDeliveryTearOff {
       receiver: receiver,
     );
   }
+
+// ignore: unused_element
+  SupplyDelivery fromJson(Map<String, Object> json) {
+    return SupplyDelivery.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $SupplyDelivery = _$SupplyDeliveryTearOff();
 
+/// @nodoc
 mixin _$SupplyDelivery {
   @JsonKey(defaultValue: 'SupplyDelivery')
   String get resourceType;
@@ -3109,6 +3208,7 @@ mixin _$SupplyDelivery {
   $SupplyDeliveryCopyWith<SupplyDelivery> get copyWith;
 }
 
+/// @nodoc
 abstract class $SupplyDeliveryCopyWith<$Res> {
   factory $SupplyDeliveryCopyWith(
           SupplyDelivery value, $Res Function(SupplyDelivery) then) =
@@ -3159,6 +3259,7 @@ abstract class $SupplyDeliveryCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get destination;
 }
 
+/// @nodoc
 class _$SupplyDeliveryCopyWithImpl<$Res>
     implements $SupplyDeliveryCopyWith<$Res> {
   _$SupplyDeliveryCopyWithImpl(this._value, this._then);
@@ -3375,6 +3476,7 @@ class _$SupplyDeliveryCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$SupplyDeliveryCopyWith<$Res>
     implements $SupplyDeliveryCopyWith<$Res> {
   factory _$SupplyDeliveryCopyWith(
@@ -3440,6 +3542,7 @@ abstract class _$SupplyDeliveryCopyWith<$Res>
   $ReferenceCopyWith<$Res> get destination;
 }
 
+/// @nodoc
 class __$SupplyDeliveryCopyWithImpl<$Res>
     extends _$SupplyDeliveryCopyWithImpl<$Res>
     implements _$SupplyDeliveryCopyWith<$Res> {
@@ -3529,6 +3632,8 @@ class __$SupplyDeliveryCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_SupplyDelivery extends _SupplyDelivery {
   _$_SupplyDelivery(
       {@required @JsonKey(defaultValue: 'SupplyDelivery') this.resourceType,

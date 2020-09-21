@@ -15,5 +15,5 @@ dependencies:
 
 dev_dependencies:
   json_serializable: ^3.4.1
-  build_runner:
+  build_runner: ^1.10.1
   freezed: ^0.12.1

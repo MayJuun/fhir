@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'exchange.dart';
 
@@ -12,9 +12,11 @@ MessageHeader _$MessageHeaderFromJson(Map<String, dynamic> json) {
   return _MessageHeader.fromJson(json);
 }
 
+/// @nodoc
 class _$MessageHeaderTearOff {
   const _$MessageHeaderTearOff();
 
+// ignore: unused_element
   _MessageHeader call(
       {@required @JsonKey(defaultValue: 'MessageHeader') String resourceType,
       Id id,
@@ -63,11 +65,18 @@ class _$MessageHeaderTearOff {
       data: data,
     );
   }
+
+// ignore: unused_element
+  MessageHeader fromJson(Map<String, Object> json) {
+    return MessageHeader.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MessageHeader = _$MessageHeaderTearOff();
 
+/// @nodoc
 mixin _$MessageHeader {
   @JsonKey(defaultValue: 'MessageHeader')
   String get resourceType;
@@ -103,6 +112,7 @@ mixin _$MessageHeader {
   $MessageHeaderCopyWith<MessageHeader> get copyWith;
 }
 
+/// @nodoc
 abstract class $MessageHeaderCopyWith<$Res> {
   factory $MessageHeaderCopyWith(
           MessageHeader value, $Res Function(MessageHeader) then) =
@@ -145,6 +155,7 @@ abstract class $MessageHeaderCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get reason;
 }
 
+/// @nodoc
 class _$MessageHeaderCopyWithImpl<$Res>
     implements $MessageHeaderCopyWith<$Res> {
   _$MessageHeaderCopyWithImpl(this._value, this._then);
@@ -344,6 +355,7 @@ class _$MessageHeaderCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MessageHeaderCopyWith<$Res>
     implements $MessageHeaderCopyWith<$Res> {
   factory _$MessageHeaderCopyWith(
@@ -400,6 +412,7 @@ abstract class _$MessageHeaderCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get reason;
 }
 
+/// @nodoc
 class __$MessageHeaderCopyWithImpl<$Res>
     extends _$MessageHeaderCopyWithImpl<$Res>
     implements _$MessageHeaderCopyWith<$Res> {
@@ -482,6 +495,8 @@ class __$MessageHeaderCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MessageHeader extends _MessageHeader {
   _$_MessageHeader(
       {@required @JsonKey(defaultValue: 'MessageHeader') this.resourceType,
@@ -761,9 +776,11 @@ MessageHeaderResponse _$MessageHeaderResponseFromJson(
   return _MessageHeaderResponse.fromJson(json);
 }
 
+/// @nodoc
 class _$MessageHeaderResponseTearOff {
   const _$MessageHeaderResponseTearOff();
 
+// ignore: unused_element
   _MessageHeaderResponse call(
       {Id id,
       @JsonKey(name: 'extension')
@@ -791,11 +808,18 @@ class _$MessageHeaderResponseTearOff {
       details: details,
     );
   }
+
+// ignore: unused_element
+  MessageHeaderResponse fromJson(Map<String, Object> json) {
+    return MessageHeaderResponse.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MessageHeaderResponse = _$MessageHeaderResponseTearOff();
 
+/// @nodoc
 mixin _$MessageHeaderResponse {
   Id get id;
   @JsonKey(name: 'extension')
@@ -815,6 +839,7 @@ mixin _$MessageHeaderResponse {
   $MessageHeaderResponseCopyWith<MessageHeaderResponse> get copyWith;
 }
 
+/// @nodoc
 abstract class $MessageHeaderResponseCopyWith<$Res> {
   factory $MessageHeaderResponseCopyWith(MessageHeaderResponse value,
           $Res Function(MessageHeaderResponse) then) =
@@ -839,6 +864,7 @@ abstract class $MessageHeaderResponseCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get details;
 }
 
+/// @nodoc
 class _$MessageHeaderResponseCopyWithImpl<$Res>
     implements $MessageHeaderResponseCopyWith<$Res> {
   _$MessageHeaderResponseCopyWithImpl(this._value, this._then);
@@ -908,6 +934,7 @@ class _$MessageHeaderResponseCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MessageHeaderResponseCopyWith<$Res>
     implements $MessageHeaderResponseCopyWith<$Res> {
   factory _$MessageHeaderResponseCopyWith(_MessageHeaderResponse value,
@@ -937,6 +964,7 @@ abstract class _$MessageHeaderResponseCopyWith<$Res>
   $ReferenceCopyWith<$Res> get details;
 }
 
+/// @nodoc
 class __$MessageHeaderResponseCopyWithImpl<$Res>
     extends _$MessageHeaderResponseCopyWithImpl<$Res>
     implements _$MessageHeaderResponseCopyWith<$Res> {
@@ -979,6 +1007,8 @@ class __$MessageHeaderResponseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MessageHeaderResponse extends _MessageHeaderResponse {
   _$_MessageHeaderResponse(
       {this.id,
@@ -1131,9 +1161,11 @@ MessageHeaderSource _$MessageHeaderSourceFromJson(Map<String, dynamic> json) {
   return _MessageHeaderSource.fromJson(json);
 }
 
+/// @nodoc
 class _$MessageHeaderSourceTearOff {
   const _$MessageHeaderSourceTearOff();
 
+// ignore: unused_element
   _MessageHeaderSource call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1162,11 +1194,18 @@ class _$MessageHeaderSourceTearOff {
       endpointElement: endpointElement,
     );
   }
+
+// ignore: unused_element
+  MessageHeaderSource fromJson(Map<String, Object> json) {
+    return MessageHeaderSource.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MessageHeaderSource = _$MessageHeaderSourceTearOff();
 
+/// @nodoc
 mixin _$MessageHeaderSource {
   Id get id;
   @JsonKey(name: 'extension')
@@ -1191,6 +1230,7 @@ mixin _$MessageHeaderSource {
   $MessageHeaderSourceCopyWith<MessageHeaderSource> get copyWith;
 }
 
+/// @nodoc
 abstract class $MessageHeaderSourceCopyWith<$Res> {
   factory $MessageHeaderSourceCopyWith(
           MessageHeaderSource value, $Res Function(MessageHeaderSource) then) =
@@ -1216,6 +1256,7 @@ abstract class $MessageHeaderSourceCopyWith<$Res> {
   $ElementCopyWith<$Res> get endpointElement;
 }
 
+/// @nodoc
 class _$MessageHeaderSourceCopyWithImpl<$Res>
     implements $MessageHeaderSourceCopyWith<$Res> {
   _$MessageHeaderSourceCopyWithImpl(this._value, this._then);
@@ -1317,6 +1358,7 @@ class _$MessageHeaderSourceCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MessageHeaderSourceCopyWith<$Res>
     implements $MessageHeaderSourceCopyWith<$Res> {
   factory _$MessageHeaderSourceCopyWith(_MessageHeaderSource value,
@@ -1349,6 +1391,7 @@ abstract class _$MessageHeaderSourceCopyWith<$Res>
   $ElementCopyWith<$Res> get endpointElement;
 }
 
+/// @nodoc
 class __$MessageHeaderSourceCopyWithImpl<$Res>
     extends _$MessageHeaderSourceCopyWithImpl<$Res>
     implements _$MessageHeaderSourceCopyWith<$Res> {
@@ -1403,6 +1446,8 @@ class __$MessageHeaderSourceCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MessageHeaderSource extends _MessageHeaderSource {
   _$_MessageHeaderSource(
       {this.id,
@@ -1585,9 +1630,11 @@ MessageHeaderDestination _$MessageHeaderDestinationFromJson(
   return _MessageHeaderDestination.fromJson(json);
 }
 
+/// @nodoc
 class _$MessageHeaderDestinationTearOff {
   const _$MessageHeaderDestinationTearOff();
 
+// ignore: unused_element
   _MessageHeaderDestination call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1608,11 +1655,18 @@ class _$MessageHeaderDestinationTearOff {
       endpointElement: endpointElement,
     );
   }
+
+// ignore: unused_element
+  MessageHeaderDestination fromJson(Map<String, Object> json) {
+    return MessageHeaderDestination.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MessageHeaderDestination = _$MessageHeaderDestinationTearOff();
 
+/// @nodoc
 mixin _$MessageHeaderDestination {
   Id get id;
   @JsonKey(name: 'extension')
@@ -1631,6 +1685,7 @@ mixin _$MessageHeaderDestination {
   $MessageHeaderDestinationCopyWith<MessageHeaderDestination> get copyWith;
 }
 
+/// @nodoc
 abstract class $MessageHeaderDestinationCopyWith<$Res> {
   factory $MessageHeaderDestinationCopyWith(MessageHeaderDestination value,
           $Res Function(MessageHeaderDestination) then) =
@@ -1650,6 +1705,7 @@ abstract class $MessageHeaderDestinationCopyWith<$Res> {
   $ElementCopyWith<$Res> get endpointElement;
 }
 
+/// @nodoc
 class _$MessageHeaderDestinationCopyWithImpl<$Res>
     implements $MessageHeaderDestinationCopyWith<$Res> {
   _$MessageHeaderDestinationCopyWithImpl(this._value, this._then);
@@ -1719,6 +1775,7 @@ class _$MessageHeaderDestinationCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MessageHeaderDestinationCopyWith<$Res>
     implements $MessageHeaderDestinationCopyWith<$Res> {
   factory _$MessageHeaderDestinationCopyWith(_MessageHeaderDestination value,
@@ -1743,6 +1800,7 @@ abstract class _$MessageHeaderDestinationCopyWith<$Res>
   $ElementCopyWith<$Res> get endpointElement;
 }
 
+/// @nodoc
 class __$MessageHeaderDestinationCopyWithImpl<$Res>
     extends _$MessageHeaderDestinationCopyWithImpl<$Res>
     implements _$MessageHeaderDestinationCopyWith<$Res> {
@@ -1786,6 +1844,8 @@ class __$MessageHeaderDestinationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MessageHeaderDestination extends _MessageHeaderDestination {
   _$_MessageHeaderDestination(
       {this.id,
@@ -1922,9 +1982,11 @@ OperationOutcome _$OperationOutcomeFromJson(Map<String, dynamic> json) {
   return _OperationOutcome.fromJson(json);
 }
 
+/// @nodoc
 class _$OperationOutcomeTearOff {
   const _$OperationOutcomeTearOff();
 
+// ignore: unused_element
   _OperationOutcome call(
       {@required @JsonKey(defaultValue: 'OperationOutcome') String resourceType,
       Id id,
@@ -1955,11 +2017,18 @@ class _$OperationOutcomeTearOff {
       issue: issue,
     );
   }
+
+// ignore: unused_element
+  OperationOutcome fromJson(Map<String, Object> json) {
+    return OperationOutcome.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $OperationOutcome = _$OperationOutcomeTearOff();
 
+/// @nodoc
 mixin _$OperationOutcome {
   @JsonKey(defaultValue: 'OperationOutcome')
   String get resourceType;
@@ -1985,6 +2054,7 @@ mixin _$OperationOutcome {
   $OperationOutcomeCopyWith<OperationOutcome> get copyWith;
 }
 
+/// @nodoc
 abstract class $OperationOutcomeCopyWith<$Res> {
   factory $OperationOutcomeCopyWith(
           OperationOutcome value, $Res Function(OperationOutcome) then) =
@@ -2011,6 +2081,7 @@ abstract class $OperationOutcomeCopyWith<$Res> {
   $NarrativeCopyWith<$Res> get text;
 }
 
+/// @nodoc
 class _$OperationOutcomeCopyWithImpl<$Res>
     implements $OperationOutcomeCopyWith<$Res> {
   _$OperationOutcomeCopyWithImpl(this._value, this._then);
@@ -2118,6 +2189,7 @@ class _$OperationOutcomeCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$OperationOutcomeCopyWith<$Res>
     implements $OperationOutcomeCopyWith<$Res> {
   factory _$OperationOutcomeCopyWith(
@@ -2151,6 +2223,7 @@ abstract class _$OperationOutcomeCopyWith<$Res>
   $NarrativeCopyWith<$Res> get text;
 }
 
+/// @nodoc
 class __$OperationOutcomeCopyWithImpl<$Res>
     extends _$OperationOutcomeCopyWithImpl<$Res>
     implements _$OperationOutcomeCopyWith<$Res> {
@@ -2211,6 +2284,8 @@ class __$OperationOutcomeCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_OperationOutcome extends _OperationOutcome {
   _$_OperationOutcome(
       {@required @JsonKey(defaultValue: 'OperationOutcome') this.resourceType,
@@ -2408,9 +2483,11 @@ OperationOutcomeIssue _$OperationOutcomeIssueFromJson(
   return _OperationOutcomeIssue.fromJson(json);
 }
 
+/// @nodoc
 class _$OperationOutcomeIssueTearOff {
   const _$OperationOutcomeIssueTearOff();
 
+// ignore: unused_element
   _OperationOutcomeIssue call(
       {Id id,
       @JsonKey(name: 'extension')
@@ -2436,11 +2513,18 @@ class _$OperationOutcomeIssueTearOff {
       location: location,
     );
   }
+
+// ignore: unused_element
+  OperationOutcomeIssue fromJson(Map<String, Object> json) {
+    return OperationOutcomeIssue.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $OperationOutcomeIssue = _$OperationOutcomeIssueTearOff();
 
+/// @nodoc
 mixin _$OperationOutcomeIssue {
   Id get id;
   @JsonKey(name: 'extension')
@@ -2458,6 +2542,7 @@ mixin _$OperationOutcomeIssue {
   $OperationOutcomeIssueCopyWith<OperationOutcomeIssue> get copyWith;
 }
 
+/// @nodoc
 abstract class $OperationOutcomeIssueCopyWith<$Res> {
   factory $OperationOutcomeIssueCopyWith(OperationOutcomeIssue value,
           $Res Function(OperationOutcomeIssue) then) =
@@ -2478,6 +2563,7 @@ abstract class $OperationOutcomeIssueCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get details;
 }
 
+/// @nodoc
 class _$OperationOutcomeIssueCopyWithImpl<$Res>
     implements $OperationOutcomeIssueCopyWith<$Res> {
   _$OperationOutcomeIssueCopyWithImpl(this._value, this._then);
@@ -2527,6 +2613,7 @@ class _$OperationOutcomeIssueCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$OperationOutcomeIssueCopyWith<$Res>
     implements $OperationOutcomeIssueCopyWith<$Res> {
   factory _$OperationOutcomeIssueCopyWith(_OperationOutcomeIssue value,
@@ -2550,6 +2637,7 @@ abstract class _$OperationOutcomeIssueCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get details;
 }
 
+/// @nodoc
 class __$OperationOutcomeIssueCopyWithImpl<$Res>
     extends _$OperationOutcomeIssueCopyWithImpl<$Res>
     implements _$OperationOutcomeIssueCopyWith<$Res> {
@@ -2592,6 +2680,8 @@ class __$OperationOutcomeIssueCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
   _$_OperationOutcomeIssue(
       {this.id,
@@ -2737,9 +2827,11 @@ Parameters _$ParametersFromJson(Map<String, dynamic> json) {
   return _Parameters.fromJson(json);
 }
 
+/// @nodoc
 class _$ParametersTearOff {
   const _$ParametersTearOff();
 
+// ignore: unused_element
   _Parameters call(
       {@required @JsonKey(defaultValue: 'Parameters') String resourceType,
       Id id,
@@ -2760,11 +2852,18 @@ class _$ParametersTearOff {
       parameter: parameter,
     );
   }
+
+// ignore: unused_element
+  Parameters fromJson(Map<String, Object> json) {
+    return Parameters.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Parameters = _$ParametersTearOff();
 
+/// @nodoc
 mixin _$Parameters {
   @JsonKey(defaultValue: 'Parameters')
   String get resourceType;
@@ -2782,6 +2881,7 @@ mixin _$Parameters {
   $ParametersCopyWith<Parameters> get copyWith;
 }
 
+/// @nodoc
 abstract class $ParametersCopyWith<$Res> {
   factory $ParametersCopyWith(
           Parameters value, $Res Function(Parameters) then) =
@@ -2801,6 +2901,7 @@ abstract class $ParametersCopyWith<$Res> {
   $ElementCopyWith<$Res> get languageElement;
 }
 
+/// @nodoc
 class _$ParametersCopyWithImpl<$Res> implements $ParametersCopyWith<$Res> {
   _$ParametersCopyWithImpl(this._value, this._then);
 
@@ -2872,6 +2973,7 @@ class _$ParametersCopyWithImpl<$Res> implements $ParametersCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$ParametersCopyWith<$Res> implements $ParametersCopyWith<$Res> {
   factory _$ParametersCopyWith(
           _Parameters value, $Res Function(_Parameters) then) =
@@ -2895,6 +2997,7 @@ abstract class _$ParametersCopyWith<$Res> implements $ParametersCopyWith<$Res> {
   $ElementCopyWith<$Res> get languageElement;
 }
 
+/// @nodoc
 class __$ParametersCopyWithImpl<$Res> extends _$ParametersCopyWithImpl<$Res>
     implements _$ParametersCopyWith<$Res> {
   __$ParametersCopyWithImpl(
@@ -2939,6 +3042,8 @@ class __$ParametersCopyWithImpl<$Res> extends _$ParametersCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Parameters extends _Parameters {
   _$_Parameters(
       {@required @JsonKey(defaultValue: 'Parameters') this.resourceType,
@@ -3072,9 +3177,11 @@ ParametersParameter _$ParametersParameterFromJson(Map<String, dynamic> json) {
   return _ParametersParameter.fromJson(json);
 }
 
+/// @nodoc
 class _$ParametersParameterTearOff {
   const _$ParametersParameterTearOff();
 
+// ignore: unused_element
   _ParametersParameter call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -3159,11 +3266,18 @@ class _$ParametersParameterTearOff {
       part: part,
     );
   }
+
+// ignore: unused_element
+  ParametersParameter fromJson(Map<String, Object> json) {
+    return ParametersParameter.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ParametersParameter = _$ParametersParameterTearOff();
 
+/// @nodoc
 mixin _$ParametersParameter {
   Id get id;
   @JsonKey(name: 'extension')
@@ -3223,6 +3337,7 @@ mixin _$ParametersParameter {
   $ParametersParameterCopyWith<ParametersParameter> get copyWith;
 }
 
+/// @nodoc
 abstract class $ParametersParameterCopyWith<$Res> {
   factory $ParametersParameterCopyWith(
           ParametersParameter value, $Res Function(ParametersParameter) then) =
@@ -3295,6 +3410,7 @@ abstract class $ParametersParameterCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get valueReference;
 }
 
+/// @nodoc
 class _$ParametersParameterCopyWithImpl<$Res>
     implements $ParametersParameterCopyWith<$Res> {
   _$ParametersParameterCopyWithImpl(this._value, this._then);
@@ -3691,6 +3807,7 @@ class _$ParametersParameterCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ParametersParameterCopyWith<$Res>
     implements $ParametersParameterCopyWith<$Res> {
   factory _$ParametersParameterCopyWith(_ParametersParameter value,
@@ -3789,6 +3906,7 @@ abstract class _$ParametersParameterCopyWith<$Res>
   $ReferenceCopyWith<$Res> get valueReference;
 }
 
+/// @nodoc
 class __$ParametersParameterCopyWithImpl<$Res>
     extends _$ParametersParameterCopyWithImpl<$Res>
     implements _$ParametersParameterCopyWith<$Res> {
@@ -3948,6 +4066,8 @@ class __$ParametersParameterCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ParametersParameter extends _ParametersParameter {
   _$_ParametersParameter(
       {this.id,
@@ -4387,9 +4507,11 @@ Subscription _$SubscriptionFromJson(Map<String, dynamic> json) {
   return _Subscription.fromJson(json);
 }
 
+/// @nodoc
 class _$SubscriptionTearOff {
   const _$SubscriptionTearOff();
 
+// ignore: unused_element
   _Subscription call(
       {@required
       @JsonKey(defaultValue: 'Subscription')
@@ -4460,11 +4582,18 @@ class _$SubscriptionTearOff {
       tag: tag,
     );
   }
+
+// ignore: unused_element
+  Subscription fromJson(Map<String, Object> json) {
+    return Subscription.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Subscription = _$SubscriptionTearOff();
 
+/// @nodoc
 mixin _$Subscription {
   @JsonKey(defaultValue: 'Subscription')
   String get resourceType;
@@ -4508,6 +4637,7 @@ mixin _$Subscription {
   $SubscriptionCopyWith<Subscription> get copyWith;
 }
 
+/// @nodoc
 abstract class $SubscriptionCopyWith<$Res> {
   factory $SubscriptionCopyWith(
           Subscription value, $Res Function(Subscription) then) =
@@ -4563,6 +4693,7 @@ abstract class $SubscriptionCopyWith<$Res> {
   $ElementCopyWith<$Res> get endElement;
 }
 
+/// @nodoc
 class _$SubscriptionCopyWithImpl<$Res> implements $SubscriptionCopyWith<$Res> {
   _$SubscriptionCopyWithImpl(this._value, this._then);
 
@@ -4750,6 +4881,7 @@ class _$SubscriptionCopyWithImpl<$Res> implements $SubscriptionCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$SubscriptionCopyWith<$Res>
     implements $SubscriptionCopyWith<$Res> {
   factory _$SubscriptionCopyWith(
@@ -4817,6 +4949,7 @@ abstract class _$SubscriptionCopyWith<$Res>
   $ElementCopyWith<$Res> get endElement;
 }
 
+/// @nodoc
 class __$SubscriptionCopyWithImpl<$Res> extends _$SubscriptionCopyWithImpl<$Res>
     implements _$SubscriptionCopyWith<$Res> {
   __$SubscriptionCopyWithImpl(
@@ -4907,6 +5040,8 @@ class __$SubscriptionCopyWithImpl<$Res> extends _$SubscriptionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Subscription extends _Subscription {
   _$_Subscription(
       {@required
@@ -5254,9 +5389,11 @@ SubscriptionChannel _$SubscriptionChannelFromJson(Map<String, dynamic> json) {
   return _SubscriptionChannel.fromJson(json);
 }
 
+/// @nodoc
 class _$SubscriptionChannelTearOff {
   const _$SubscriptionChannelTearOff();
 
+// ignore: unused_element
   _SubscriptionChannel call(
       {Id id,
       @JsonKey(name: 'extension')
@@ -5292,11 +5429,18 @@ class _$SubscriptionChannelTearOff {
       headerElement: headerElement,
     );
   }
+
+// ignore: unused_element
+  SubscriptionChannel fromJson(Map<String, Object> json) {
+    return SubscriptionChannel.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $SubscriptionChannel = _$SubscriptionChannelTearOff();
 
+/// @nodoc
 mixin _$SubscriptionChannel {
   Id get id;
   @JsonKey(name: 'extension')
@@ -5321,6 +5465,7 @@ mixin _$SubscriptionChannel {
   $SubscriptionChannelCopyWith<SubscriptionChannel> get copyWith;
 }
 
+/// @nodoc
 abstract class $SubscriptionChannelCopyWith<$Res> {
   factory $SubscriptionChannelCopyWith(
           SubscriptionChannel value, $Res Function(SubscriptionChannel) then) =
@@ -5350,6 +5495,7 @@ abstract class $SubscriptionChannelCopyWith<$Res> {
   $ElementCopyWith<$Res> get payloadElement;
 }
 
+/// @nodoc
 class _$SubscriptionChannelCopyWithImpl<$Res>
     implements $SubscriptionChannelCopyWith<$Res> {
   _$SubscriptionChannelCopyWithImpl(this._value, this._then);
@@ -5429,6 +5575,7 @@ class _$SubscriptionChannelCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$SubscriptionChannelCopyWith<$Res>
     implements $SubscriptionChannelCopyWith<$Res> {
   factory _$SubscriptionChannelCopyWith(_SubscriptionChannel value,
@@ -5463,6 +5610,7 @@ abstract class _$SubscriptionChannelCopyWith<$Res>
   $ElementCopyWith<$Res> get payloadElement;
 }
 
+/// @nodoc
 class __$SubscriptionChannelCopyWithImpl<$Res>
     extends _$SubscriptionChannelCopyWithImpl<$Res>
     implements _$SubscriptionChannelCopyWith<$Res> {
@@ -5515,6 +5663,8 @@ class __$SubscriptionChannelCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_SubscriptionChannel extends _SubscriptionChannel {
   _$_SubscriptionChannel(
       {this.id,

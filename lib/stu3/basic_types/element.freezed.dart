@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'element.dart';
 
@@ -12,9 +12,11 @@ Element _$ElementFromJson(Map<String, dynamic> json) {
   return _Element.fromJson(json);
 }
 
+/// @nodoc
 class _$ElementTearOff {
   const _$ElementTearOff();
 
+// ignore: unused_element
   _Element call(
       {String id, @JsonKey(name: 'extension') List<FhirExtension> extension_}) {
     return _Element(
@@ -22,11 +24,18 @@ class _$ElementTearOff {
       extension_: extension_,
     );
   }
+
+// ignore: unused_element
+  Element fromJson(Map<String, Object> json) {
+    return Element.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Element = _$ElementTearOff();
 
+/// @nodoc
 mixin _$Element {
   String get id;
   @JsonKey(name: 'extension')
@@ -36,6 +45,7 @@ mixin _$Element {
   $ElementCopyWith<Element> get copyWith;
 }
 
+/// @nodoc
 abstract class $ElementCopyWith<$Res> {
   factory $ElementCopyWith(Element value, $Res Function(Element) then) =
       _$ElementCopyWithImpl<$Res>;
@@ -43,6 +53,7 @@ abstract class $ElementCopyWith<$Res> {
       {String id, @JsonKey(name: 'extension') List<FhirExtension> extension_});
 }
 
+/// @nodoc
 class _$ElementCopyWithImpl<$Res> implements $ElementCopyWith<$Res> {
   _$ElementCopyWithImpl(this._value, this._then);
 
@@ -64,6 +75,7 @@ class _$ElementCopyWithImpl<$Res> implements $ElementCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$ElementCopyWith<$Res> implements $ElementCopyWith<$Res> {
   factory _$ElementCopyWith(_Element value, $Res Function(_Element) then) =
       __$ElementCopyWithImpl<$Res>;
@@ -72,6 +84,7 @@ abstract class _$ElementCopyWith<$Res> implements $ElementCopyWith<$Res> {
       {String id, @JsonKey(name: 'extension') List<FhirExtension> extension_});
 }
 
+/// @nodoc
 class __$ElementCopyWithImpl<$Res> extends _$ElementCopyWithImpl<$Res>
     implements _$ElementCopyWith<$Res> {
   __$ElementCopyWithImpl(_Element _value, $Res Function(_Element) _then)
@@ -95,6 +108,8 @@ class __$ElementCopyWithImpl<$Res> extends _$ElementCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Element implements _Element {
   _$_Element({this.id, @JsonKey(name: 'extension') this.extension_});
 

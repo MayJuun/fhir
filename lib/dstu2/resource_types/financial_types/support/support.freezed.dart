@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'support.dart';
 
@@ -12,9 +12,11 @@ Coverage _$CoverageFromJson(Map<String, dynamic> json) {
   return _Coverage.fromJson(json);
 }
 
+/// @nodoc
 class _$CoverageTearOff {
   const _$CoverageTearOff();
 
+// ignore: unused_element
   _Coverage call(
       {@required @JsonKey(defaultValue: 'Coverage') String resourceType,
       Id id,
@@ -75,11 +77,18 @@ class _$CoverageTearOff {
       contract: contract,
     );
   }
+
+// ignore: unused_element
+  Coverage fromJson(Map<String, Object> json) {
+    return Coverage.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Coverage = _$CoverageTearOff();
 
+/// @nodoc
 mixin _$Coverage {
   @JsonKey(defaultValue: 'Coverage')
   String get resourceType;
@@ -121,6 +130,7 @@ mixin _$Coverage {
   $CoverageCopyWith<Coverage> get copyWith;
 }
 
+/// @nodoc
 abstract class $CoverageCopyWith<$Res> {
   factory $CoverageCopyWith(Coverage value, $Res Function(Coverage) then) =
       _$CoverageCopyWithImpl<$Res>;
@@ -170,6 +180,7 @@ abstract class $CoverageCopyWith<$Res> {
   $ElementCopyWith<$Res> get networkElement;
 }
 
+/// @nodoc
 class _$CoverageCopyWithImpl<$Res> implements $CoverageCopyWith<$Res> {
   _$CoverageCopyWithImpl(this._value, this._then);
 
@@ -407,6 +418,7 @@ class _$CoverageCopyWithImpl<$Res> implements $CoverageCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
   factory _$CoverageCopyWith(_Coverage value, $Res Function(_Coverage) then) =
       __$CoverageCopyWithImpl<$Res>;
@@ -471,6 +483,7 @@ abstract class _$CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
   $ElementCopyWith<$Res> get networkElement;
 }
 
+/// @nodoc
 class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
     implements _$CoverageCopyWith<$Res> {
   __$CoverageCopyWithImpl(_Coverage _value, $Res Function(_Coverage) _then)
@@ -570,6 +583,8 @@ class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Coverage extends _Coverage {
   _$_Coverage(
       {@required @JsonKey(defaultValue: 'Coverage') this.resourceType,
@@ -899,9 +914,11 @@ EligibilityRequest _$EligibilityRequestFromJson(Map<String, dynamic> json) {
   return _EligibilityRequest.fromJson(json);
 }
 
+/// @nodoc
 class _$EligibilityRequestTearOff {
   const _$EligibilityRequestTearOff();
 
+// ignore: unused_element
   _EligibilityRequest call(
       {@required
       @JsonKey(defaultValue: 'EligibilityRequest')
@@ -950,11 +967,18 @@ class _$EligibilityRequestTearOff {
       organization: organization,
     );
   }
+
+// ignore: unused_element
+  EligibilityRequest fromJson(Map<String, Object> json) {
+    return EligibilityRequest.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $EligibilityRequest = _$EligibilityRequestTearOff();
 
+/// @nodoc
 mixin _$EligibilityRequest {
   @JsonKey(defaultValue: 'EligibilityRequest')
   String get resourceType;
@@ -985,6 +1009,7 @@ mixin _$EligibilityRequest {
   $EligibilityRequestCopyWith<EligibilityRequest> get copyWith;
 }
 
+/// @nodoc
 abstract class $EligibilityRequestCopyWith<$Res> {
   factory $EligibilityRequestCopyWith(
           EligibilityRequest value, $Res Function(EligibilityRequest) then) =
@@ -1022,6 +1047,7 @@ abstract class $EligibilityRequestCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get organization;
 }
 
+/// @nodoc
 class _$EligibilityRequestCopyWithImpl<$Res>
     implements $EligibilityRequestCopyWith<$Res> {
   _$EligibilityRequestCopyWithImpl(this._value, this._then);
@@ -1197,6 +1223,7 @@ class _$EligibilityRequestCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$EligibilityRequestCopyWith<$Res>
     implements $EligibilityRequestCopyWith<$Res> {
   factory _$EligibilityRequestCopyWith(
@@ -1246,6 +1273,7 @@ abstract class _$EligibilityRequestCopyWith<$Res>
   $ReferenceCopyWith<$Res> get organization;
 }
 
+/// @nodoc
 class __$EligibilityRequestCopyWithImpl<$Res>
     extends _$EligibilityRequestCopyWithImpl<$Res>
     implements _$EligibilityRequestCopyWith<$Res> {
@@ -1324,6 +1352,8 @@ class __$EligibilityRequestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_EligibilityRequest extends _EligibilityRequest {
   _$_EligibilityRequest(
       {@required @JsonKey(defaultValue: 'EligibilityRequest') this.resourceType,
@@ -1575,9 +1605,11 @@ EligibilityResponse _$EligibilityResponseFromJson(Map<String, dynamic> json) {
   return _EligibilityResponse.fromJson(json);
 }
 
+/// @nodoc
 class _$EligibilityResponseTearOff {
   const _$EligibilityResponseTearOff();
 
+// ignore: unused_element
   _EligibilityResponse call(
       {@required
       @JsonKey(defaultValue: 'EligibilityResponse')
@@ -1639,11 +1671,18 @@ class _$EligibilityResponseTearOff {
       requestOrganization: requestOrganization,
     );
   }
+
+// ignore: unused_element
+  EligibilityResponse fromJson(Map<String, Object> json) {
+    return EligibilityResponse.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $EligibilityResponse = _$EligibilityResponseTearOff();
 
+/// @nodoc
 mixin _$EligibilityResponse {
   @JsonKey(defaultValue: 'EligibilityResponse')
   String get resourceType;
@@ -1682,6 +1721,7 @@ mixin _$EligibilityResponse {
   $EligibilityResponseCopyWith<EligibilityResponse> get copyWith;
 }
 
+/// @nodoc
 abstract class $EligibilityResponseCopyWith<$Res> {
   factory $EligibilityResponseCopyWith(
           EligibilityResponse value, $Res Function(EligibilityResponse) then) =
@@ -1735,6 +1775,7 @@ abstract class $EligibilityResponseCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get requestOrganization;
 }
 
+/// @nodoc
 class _$EligibilityResponseCopyWithImpl<$Res>
     implements $EligibilityResponseCopyWith<$Res> {
   _$EligibilityResponseCopyWithImpl(this._value, this._then);
@@ -1961,6 +2002,7 @@ class _$EligibilityResponseCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$EligibilityResponseCopyWith<$Res>
     implements $EligibilityResponseCopyWith<$Res> {
   factory _$EligibilityResponseCopyWith(_EligibilityResponse value,
@@ -2029,6 +2071,7 @@ abstract class _$EligibilityResponseCopyWith<$Res>
   $ReferenceCopyWith<$Res> get requestOrganization;
 }
 
+/// @nodoc
 class __$EligibilityResponseCopyWithImpl<$Res>
     extends _$EligibilityResponseCopyWithImpl<$Res>
     implements _$EligibilityResponseCopyWith<$Res> {
@@ -2128,6 +2171,8 @@ class __$EligibilityResponseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_EligibilityResponse extends _EligibilityResponse {
   _$_EligibilityResponse(
       {@required
@@ -2447,9 +2492,11 @@ EnrollmentRequest _$EnrollmentRequestFromJson(Map<String, dynamic> json) {
   return _EnrollmentRequest.fromJson(json);
 }
 
+/// @nodoc
 class _$EnrollmentRequestTearOff {
   const _$EnrollmentRequestTearOff();
 
+// ignore: unused_element
   _EnrollmentRequest call(
       {@required
       @JsonKey(defaultValue: 'EnrollmentRequest')
@@ -2510,11 +2557,18 @@ class _$EnrollmentRequestTearOff {
       relationship: relationship,
     );
   }
+
+// ignore: unused_element
+  EnrollmentRequest fromJson(Map<String, Object> json) {
+    return EnrollmentRequest.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $EnrollmentRequest = _$EnrollmentRequestTearOff();
 
+/// @nodoc
 mixin _$EnrollmentRequest {
   @JsonKey(defaultValue: 'EnrollmentRequest')
   String get resourceType;
@@ -2551,6 +2605,7 @@ mixin _$EnrollmentRequest {
   $EnrollmentRequestCopyWith<EnrollmentRequest> get copyWith;
 }
 
+/// @nodoc
 abstract class $EnrollmentRequestCopyWith<$Res> {
   factory $EnrollmentRequestCopyWith(
           EnrollmentRequest value, $Res Function(EnrollmentRequest) then) =
@@ -2594,6 +2649,7 @@ abstract class $EnrollmentRequestCopyWith<$Res> {
   $CodingCopyWith<$Res> get relationship;
 }
 
+/// @nodoc
 class _$EnrollmentRequestCopyWithImpl<$Res>
     implements $EnrollmentRequestCopyWith<$Res> {
   _$EnrollmentRequestCopyWithImpl(this._value, this._then);
@@ -2807,6 +2863,7 @@ class _$EnrollmentRequestCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$EnrollmentRequestCopyWith<$Res>
     implements $EnrollmentRequestCopyWith<$Res> {
   factory _$EnrollmentRequestCopyWith(
@@ -2865,6 +2922,7 @@ abstract class _$EnrollmentRequestCopyWith<$Res>
   $CodingCopyWith<$Res> get relationship;
 }
 
+/// @nodoc
 class __$EnrollmentRequestCopyWithImpl<$Res>
     extends _$EnrollmentRequestCopyWithImpl<$Res>
     implements _$EnrollmentRequestCopyWith<$Res> {
@@ -2951,6 +3009,8 @@ class __$EnrollmentRequestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_EnrollmentRequest extends _EnrollmentRequest {
   _$_EnrollmentRequest(
       {@required @JsonKey(defaultValue: 'EnrollmentRequest') this.resourceType,
@@ -3247,9 +3307,11 @@ EnrollmentResponse _$EnrollmentResponseFromJson(Map<String, dynamic> json) {
   return _EnrollmentResponse.fromJson(json);
 }
 
+/// @nodoc
 class _$EnrollmentResponseTearOff {
   const _$EnrollmentResponseTearOff();
 
+// ignore: unused_element
   _EnrollmentResponse call(
       {@required
       @JsonKey(defaultValue: 'EnrollmentResponse')
@@ -3311,11 +3373,18 @@ class _$EnrollmentResponseTearOff {
       requestOrganization: requestOrganization,
     );
   }
+
+// ignore: unused_element
+  EnrollmentResponse fromJson(Map<String, Object> json) {
+    return EnrollmentResponse.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $EnrollmentResponse = _$EnrollmentResponseTearOff();
 
+/// @nodoc
 mixin _$EnrollmentResponse {
   @JsonKey(defaultValue: 'EnrollmentResponse')
   String get resourceType;
@@ -3354,6 +3423,7 @@ mixin _$EnrollmentResponse {
   $EnrollmentResponseCopyWith<EnrollmentResponse> get copyWith;
 }
 
+/// @nodoc
 abstract class $EnrollmentResponseCopyWith<$Res> {
   factory $EnrollmentResponseCopyWith(
           EnrollmentResponse value, $Res Function(EnrollmentResponse) then) =
@@ -3407,6 +3477,7 @@ abstract class $EnrollmentResponseCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get requestOrganization;
 }
 
+/// @nodoc
 class _$EnrollmentResponseCopyWithImpl<$Res>
     implements $EnrollmentResponseCopyWith<$Res> {
   _$EnrollmentResponseCopyWithImpl(this._value, this._then);
@@ -3633,6 +3704,7 @@ class _$EnrollmentResponseCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$EnrollmentResponseCopyWith<$Res>
     implements $EnrollmentResponseCopyWith<$Res> {
   factory _$EnrollmentResponseCopyWith(
@@ -3701,6 +3773,7 @@ abstract class _$EnrollmentResponseCopyWith<$Res>
   $ReferenceCopyWith<$Res> get requestOrganization;
 }
 
+/// @nodoc
 class __$EnrollmentResponseCopyWithImpl<$Res>
     extends _$EnrollmentResponseCopyWithImpl<$Res>
     implements _$EnrollmentResponseCopyWith<$Res> {
@@ -3800,6 +3873,8 @@ class __$EnrollmentResponseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_EnrollmentResponse extends _EnrollmentResponse {
   _$_EnrollmentResponse(
       {@required
