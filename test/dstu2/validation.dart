@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:fhir/dstu2.dart';
 import 'package:string_validator/string_validator.dart';
 
-void main() async {
+void dstu2Validation() async {
   var dir = Directory('./test/dstu2/dstu2_examples');
   await File('./test/dstu2/errors.txt').writeAsString('');
   var string = '';

@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:fhir/stu3.dart';
 import 'package:string_validator/string_validator.dart';
 
-void main() async {
+void stu3Validation() async {
   var dir = Directory('./test/stu3/stu3_examples');
   await File('./test/stu3/errors.txt').writeAsString('');
   var string = '';

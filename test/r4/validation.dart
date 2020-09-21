@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:fhir/r4.dart';
 import 'package:string_validator/string_validator.dart';
 
-void main() async {
+void r4Validation() async {
   var dir = Directory('./test/r4/r4_examples');
   await File('./test/r4/errors.txt').writeAsString('');
   var string = '';

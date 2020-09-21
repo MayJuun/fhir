@@ -1,37 +1,37 @@
 
 
-File: './test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change.json'
+File: './test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change.json'
 input:id:observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change:_$InvalidId<String>:observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change
 
-File: './test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change.json'
+File: './test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change.json'
 output:id:_$InvalidId<String>:observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change:observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change
 
-File: './test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant.json'
+File: './test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant.json'
 input:id:observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant:_$InvalidId<String>:observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant
 
-File: './test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant.json'
+File: './test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant.json'
 output:id:_$InvalidId<String>:observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant:observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant
 
-File: './test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart.canonical.json'
+File: './test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart.canonical.json'
 input:id:observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart:_$InvalidId<String>:observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart
 
-File: './test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart.canonical.json'
+File: './test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart.canonical.json'
 output:id:_$InvalidId<String>:observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart:observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart
 
-File: './test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart.json'
+File: './test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart.json'
 input:id:observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart:_$InvalidId<String>:observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart
 
-File: './test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart.json'
+File: './test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart.json'
 output:id:_$InvalidId<String>:observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart:observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart
 
-File: './test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant.canonical.json'
+File: './test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant.canonical.json'
 input:id:observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant:_$InvalidId<String>:observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant
 
-File: './test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant.canonical.json'
+File: './test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant.canonical.json'
 output:id:_$InvalidId<String>:observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant:observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant
 
-File: './test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change.canonical.json'
+File: './test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change.canonical.json'
 input:id:observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change:_$InvalidId<String>:observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change
 
-File: './test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change.canonical.json'
+File: './test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change.canonical.json'
 output:id:_$InvalidId<String>:observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change:observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change
