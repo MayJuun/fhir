@@ -1,7 +1,8 @@
 import 'package:dartz/dartz.dart';
 
-import 'dates/dates_export.dart';
+import 'dates.dart';
 import 'primitive_failures.dart';
+import 'primitive_objects.dart';
 
 class FhirDateTime extends Dates {
   @override
@@ -10,7 +11,7 @@ class FhirDateTime extends Dates {
 
   factory FhirDateTime(value) {
     assert(value != null);
-    var dateTuple = validateDate(value.toString());
+    var dateTuple = validateDateTime(value.toString());
     return FhirDateTime._(dateTuple.value1, dateTuple.value2);
   }
 

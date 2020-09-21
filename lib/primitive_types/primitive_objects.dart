@@ -31,7 +31,7 @@ abstract class PrimitiveObject<T> {
       );
 }
 
-bool hasMatch(String pattern, String input) => RegExp(pattern).hasMatch(input);
+bool _hasMatch(String pattern, String input) => RegExp(pattern).hasMatch(input);
 
 Either<PrimitiveFailure<String>, String> validateBase64Binary(String value) =>
     isBase64(value)
@@ -44,12 +44,12 @@ Either<PrimitiveFailure<String>, bool> validateBoolean(dynamic value) =>
         : left(PrimitiveFailure.invalidBoolean(failedValue: value));
 
 Either<PrimitiveFailure<String>, String> validateCanonical(String value) =>
-    hasMatch(r"""^\S*$""", value)
+    _hasMatch(r"""^\S*$""", value)
         ? right(value)
         : left(PrimitiveFailure.invalidCanonical(failedValue: value));
 
 Either<PrimitiveFailure<String>, String> validateCode(String value) =>
-    hasMatch(r"""^[^\s]+(\s[^\s]+)*$""", value)
+    _hasMatch(r"""^[^\s]+(\s[^\s]+)*$""", value)
         ? right(value)
         : left(PrimitiveFailure.invalidCode(failedValue: value));
 
@@ -59,7 +59,7 @@ Either<PrimitiveFailure<String>, double> validateDecimal(dynamic value) =>
         : left(PrimitiveFailure.invalidDecimal(failedValue: value.toString()));
 
 Either<PrimitiveFailure<String>, String> validateId(String value) =>
-    hasMatch(r"""^[A-Za-z0-9\-\.]{1,64}$""", value)
+    _hasMatch(r"""^[A-Za-z0-9\-\.]{1,64}$""", value)
         ? right(value)
         : left(PrimitiveFailure.invalidId(failedValue: value));
 
@@ -75,12 +75,12 @@ Either<PrimitiveFailure<String>, int> validateInteger(dynamic value) =>
         : left(PrimitiveFailure.invalidInteger(failedValue: value.toString()));
 
 Either<PrimitiveFailure<String>, String> validateMarkdown(String value) =>
-    hasMatch(r"""^[ \r\n\t\S]+$""", value)
+    _hasMatch(r"""^[ \r\n\t\S]+$""", value)
         ? right(value)
         : left(PrimitiveFailure.invalidMarkdown(failedValue: value));
 
 Either<PrimitiveFailure<String>, String> validateOid(String value) =>
-    hasMatch(r"""^urn:oid:[0-2](\.(0|[1-9][0-9]*))+$""", value)
+    _hasMatch(r"""^urn:oid:[0-2](\.(0|[1-9][0-9]*))+$""", value)
         ? right(value)
         : left(PrimitiveFailure.invalidOid(failedValue: value));
 
@@ -95,7 +95,7 @@ Either<PrimitiveFailure<String>, int> validatePositiveInt(dynamic value) {
           PrimitiveFailure.invalidPositiveInt(failedValue: value.toString()));
 }
 
-Either<PrimitiveFailure<String>, String> validateTime(String value) => hasMatch(
+Either<PrimitiveFailure<String>, String> validateTime(String value) => _hasMatch(
         r"""^([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\.[0-9]+)?$""",
         value)
     ? right(value)
@@ -132,3 +132,4 @@ Either<PrimitiveFailure<String>, String> validateEnum(
     enums.contains(value)
         ? right(value)
         : left(PrimitiveFailure.invalidEnum(failedValue: value));
+

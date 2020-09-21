@@ -5693,7 +5693,7 @@ class _$ObservationTearOff {
       FhirDateTime effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
       Period effectivePeriod,
-      String issued,
+      Instant issued,
       @JsonKey(name: '_issued') Element issuedElement,
       List<Reference> performer,
       Quantity valueQuantity,
@@ -5817,7 +5817,7 @@ mixin _$Observation {
   @JsonKey(name: '_effectiveDateTime')
   Element get effectiveDateTimeElement;
   Period get effectivePeriod;
-  String get issued;
+  Instant get issued;
   @JsonKey(name: '_issued')
   Element get issuedElement;
   List<Reference> get performer;
@@ -5885,7 +5885,7 @@ abstract class $ObservationCopyWith<$Res> {
       FhirDateTime effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
       Period effectivePeriod,
-      String issued,
+      Instant issued,
       @JsonKey(name: '_issued') Element issuedElement,
       List<Reference> performer,
       Quantity valueQuantity,
@@ -6056,7 +6056,7 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period,
-      issued: issued == freezed ? _value.issued : issued as String,
+      issued: issued == freezed ? _value.issued : issued as Instant,
       issuedElement: issuedElement == freezed
           ? _value.issuedElement
           : issuedElement as Element,
@@ -6450,7 +6450,7 @@ abstract class _$ObservationCopyWith<$Res>
       FhirDateTime effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
       Period effectivePeriod,
-      String issued,
+      Instant issued,
       @JsonKey(name: '_issued') Element issuedElement,
       List<Reference> performer,
       Quantity valueQuantity,
@@ -6652,7 +6652,7 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period,
-      issued: issued == freezed ? _value.issued : issued as String,
+      issued: issued == freezed ? _value.issued : issued as Instant,
       issuedElement: issuedElement == freezed
           ? _value.issuedElement
           : issuedElement as Element,
@@ -6840,7 +6840,7 @@ class _$_Observation extends _Observation {
   @override
   final Period effectivePeriod;
   @override
-  final String issued;
+  final Instant issued;
   @override
   @JsonKey(name: '_issued')
   final Element issuedElement;
@@ -7098,7 +7098,7 @@ abstract class _Observation extends Observation {
       FhirDateTime effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
       Period effectivePeriod,
-      String issued,
+      Instant issued,
       @JsonKey(name: '_issued') Element issuedElement,
       List<Reference> performer,
       Quantity valueQuantity,
@@ -7182,7 +7182,7 @@ abstract class _Observation extends Observation {
   @override
   Period get effectivePeriod;
   @override
-  String get issued;
+  Instant get issued;
   @override
   @JsonKey(name: '_issued')
   Element get issuedElement;

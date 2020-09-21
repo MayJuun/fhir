@@ -981,7 +981,9 @@ _$_Observation _$_$_ObservationFromJson(Map<String, dynamic> json) {
     effectivePeriod: json['effectivePeriod'] == null
         ? null
         : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
-    issued: json['issued'] as String,
+    issued: json['issued'] == null
+        ? null
+        : Instant.fromJson(json['issued'] as String),
     issuedElement: json['_issued'] == null
         ? null
         : Element.fromJson(json['_issued'] as Map<String, dynamic>),
@@ -1113,7 +1115,7 @@ Map<String, dynamic> _$_$_ObservationToJson(_$_Observation instance) {
   writeNotNull(
       '_effectiveDateTime', instance.effectiveDateTimeElement?.toJson());
   writeNotNull('effectivePeriod', instance.effectivePeriod?.toJson());
-  writeNotNull('issued', instance.issued);
+  writeNotNull('issued', instance.issued?.toJson());
   writeNotNull('_issued', instance.issuedElement?.toJson());
   writeNotNull(
       'performer', instance.performer?.map((e) => e?.toJson())?.toList());

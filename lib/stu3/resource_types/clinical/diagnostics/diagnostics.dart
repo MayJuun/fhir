@@ -296,7 +296,7 @@ abstract class Observation with Resource implements _$Observation {
     FhirDateTime effectiveDateTime,
     @JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
     Period effectivePeriod,
-    String issued,
+    Instant issued,
     @JsonKey(name: '_issued') Element issuedElement,
     List<Reference> performer,
     Quantity valueQuantity,

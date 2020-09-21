@@ -356,7 +356,7 @@ abstract class Questionnaire with Resource implements _$Questionnaire {
     @JsonKey(name: '_status') Element statusElement,
     Boolean experimental,
     @JsonKey(name: '_experimental') Element experimentalElement,
-    Date date,
+    FhirDateTime date,
     @JsonKey(name: '_date') Element dateElement,
     String publisher,
     @JsonKey(name: '_publisher') Element publisherElement,

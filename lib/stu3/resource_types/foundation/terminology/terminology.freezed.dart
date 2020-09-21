@@ -11320,7 +11320,7 @@ class _$ValueSetTearOff {
       @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
       @JsonKey(name: '_experimental') Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date') Element dateElement,
       String publisher,
       @JsonKey(name: '_publisher') Element publisherElement,
@@ -11432,7 +11432,7 @@ mixin _$ValueSet {
   Boolean get experimental;
   @JsonKey(name: '_experimental')
   Element get experimentalElement;
-  Date get date;
+  FhirDateTime get date;
   @JsonKey(name: '_date')
   Element get dateElement;
   String get publisher;
@@ -11492,7 +11492,7 @@ abstract class $ValueSetCopyWith<$Res> {
       @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
       @JsonKey(name: '_experimental') Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date') Element dateElement,
       String publisher,
       @JsonKey(name: '_publisher') Element publisherElement,
@@ -11639,7 +11639,7 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
           : experimentalElement as Element,
-      date: date == freezed ? _value.date : date as Date,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
@@ -11904,7 +11904,7 @@ abstract class _$ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
       @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
       @JsonKey(name: '_experimental') Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date') Element dateElement,
       String publisher,
       @JsonKey(name: '_publisher') Element publisherElement,
@@ -12071,7 +12071,7 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
           : experimentalElement as Element,
-      date: date == freezed ? _value.date : date as Date,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
@@ -12229,7 +12229,7 @@ class _$_ValueSet extends _ValueSet {
   @JsonKey(name: '_experimental')
   final Element experimentalElement;
   @override
-  final Date date;
+  final FhirDateTime date;
   @override
   @JsonKey(name: '_date')
   final Element dateElement;
@@ -12455,7 +12455,7 @@ abstract class _ValueSet extends ValueSet {
       @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
       @JsonKey(name: '_experimental') Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date') Element dateElement,
       String publisher,
       @JsonKey(name: '_publisher') Element publisherElement,
@@ -12536,7 +12536,7 @@ abstract class _ValueSet extends ValueSet {
   @JsonKey(name: '_experimental')
   Element get experimentalElement;
   @override
-  Date get date;
+  FhirDateTime get date;
   @override
   @JsonKey(name: '_date')
   Element get dateElement;
@@ -14087,7 +14087,7 @@ class _$ValueSetExpansionTearOff {
   _ValueSetExpansion call(
       {String identifier,
       @JsonKey(name: '_identifier') Element identifierElement,
-      Time timestamp,
+      FhirDateTime timestamp,
       @JsonKey(name: '_timestamp') Element timestampElement,
       Decimal total,
       @JsonKey(name: '_total') Element totalElement,
@@ -14124,7 +14124,7 @@ mixin _$ValueSetExpansion {
   String get identifier;
   @JsonKey(name: '_identifier')
   Element get identifierElement;
-  Time get timestamp;
+  FhirDateTime get timestamp;
   @JsonKey(name: '_timestamp')
   Element get timestampElement;
   Decimal get total;
@@ -14148,7 +14148,7 @@ abstract class $ValueSetExpansionCopyWith<$Res> {
   $Res call(
       {String identifier,
       @JsonKey(name: '_identifier') Element identifierElement,
-      Time timestamp,
+      FhirDateTime timestamp,
       @JsonKey(name: '_timestamp') Element timestampElement,
       Decimal total,
       @JsonKey(name: '_total') Element totalElement,
@@ -14191,7 +14191,8 @@ class _$ValueSetExpansionCopyWithImpl<$Res>
       identifierElement: identifierElement == freezed
           ? _value.identifierElement
           : identifierElement as Element,
-      timestamp: timestamp == freezed ? _value.timestamp : timestamp as Time,
+      timestamp:
+          timestamp == freezed ? _value.timestamp : timestamp as FhirDateTime,
       timestampElement: timestampElement == freezed
           ? _value.timestampElement
           : timestampElement as Element,
@@ -14263,7 +14264,7 @@ abstract class _$ValueSetExpansionCopyWith<$Res>
   $Res call(
       {String identifier,
       @JsonKey(name: '_identifier') Element identifierElement,
-      Time timestamp,
+      FhirDateTime timestamp,
       @JsonKey(name: '_timestamp') Element timestampElement,
       Decimal total,
       @JsonKey(name: '_total') Element totalElement,
@@ -14312,7 +14313,8 @@ class __$ValueSetExpansionCopyWithImpl<$Res>
       identifierElement: identifierElement == freezed
           ? _value.identifierElement
           : identifierElement as Element,
-      timestamp: timestamp == freezed ? _value.timestamp : timestamp as Time,
+      timestamp:
+          timestamp == freezed ? _value.timestamp : timestamp as FhirDateTime,
       timestampElement: timestampElement == freezed
           ? _value.timestampElement
           : timestampElement as Element,
@@ -14360,7 +14362,7 @@ class _$_ValueSetExpansion extends _ValueSetExpansion {
   @JsonKey(name: '_identifier')
   final Element identifierElement;
   @override
-  final Time timestamp;
+  final FhirDateTime timestamp;
   @override
   @JsonKey(name: '_timestamp')
   final Element timestampElement;
@@ -14447,7 +14449,7 @@ abstract class _ValueSetExpansion extends ValueSetExpansion {
   factory _ValueSetExpansion(
       {String identifier,
       @JsonKey(name: '_identifier') Element identifierElement,
-      Time timestamp,
+      FhirDateTime timestamp,
       @JsonKey(name: '_timestamp') Element timestampElement,
       Decimal total,
       @JsonKey(name: '_total') Element totalElement,
@@ -14465,7 +14467,7 @@ abstract class _ValueSetExpansion extends ValueSetExpansion {
   @JsonKey(name: '_identifier')
   Element get identifierElement;
   @override
-  Time get timestamp;
+  FhirDateTime get timestamp;
   @override
   @JsonKey(name: '_timestamp')
   Element get timestampElement;

@@ -1,8 +1,9 @@
 import 'package:dartz/dartz.dart';
 
+import 'dates.dart';
 import 'primitive_failures.dart';
 
-import 'dates/dates_export.dart';
+import 'primitive_objects.dart';
 
 class Instant extends Dates {
   @override
@@ -11,7 +12,7 @@ class Instant extends Dates {
 
   factory Instant(value) {
     assert(value != null);
-    var dateTuple = validateDate(value.toString());
+    var dateTuple = validateInstant(value.toString());
     return Instant._(dateTuple.value1, dateTuple.value2);
   }
 

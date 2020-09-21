@@ -1709,7 +1709,9 @@ _$_ValueSet _$_$_ValueSetFromJson(Map<String, dynamic> json) {
     experimentalElement: json['_experimental'] == null
         ? null
         : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -2051,7 +2053,7 @@ _$_ValueSetExpansion _$_$_ValueSetExpansionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_identifier'] as Map<String, dynamic>),
     timestamp: json['timestamp'] == null
         ? null
-        : Time.fromJson(json['timestamp'] as String),
+        : FhirDateTime.fromJson(json['timestamp'] as String),
     timestampElement: json['_timestamp'] == null
         ? null
         : Element.fromJson(json['_timestamp'] as Map<String, dynamic>),

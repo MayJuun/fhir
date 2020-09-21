@@ -1,34 +1,16 @@
 
 
-File: './test/dstu2/dstu2_examples/questionnaire-example-f201-lifelines.canonical.json'
-input:date:2010:_$InvalidInstant<String>:2010
-
-File: './test/dstu2/dstu2_examples/questionnaire-example-f201-lifelines.canonical.json'
-output:date:_$InvalidInstant<String>:2010:2010
-
 File: './test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change.json'
 input:id:observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change:_$InvalidId<String>:observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change
 
 File: './test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change.json'
 output:id:_$InvalidId<String>:observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change:observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change
 
-File: './test/dstu2/dstu2_examples/relatedperson-example-f002-ariadne.json'
-input:birthDate:1963:_$InvalidInstant<String>:1963
-
-File: './test/dstu2/dstu2_examples/relatedperson-example-f002-ariadne.json'
-output:birthDate:_$InvalidInstant<String>:1963:1963
-
 File: './test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant.json'
 input:id:observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant:_$InvalidId<String>:observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant
 
 File: './test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant.json'
 output:id:_$InvalidId<String>:observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant:observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant
-
-File: './test/dstu2/dstu2_examples/person-example-f002-ariadne.canonical.json'
-input:birthDate:1963:_$InvalidInstant<String>:1963
-
-File: './test/dstu2/dstu2_examples/person-example-f002-ariadne.canonical.json'
-output:birthDate:_$InvalidInstant<String>:1963:1963
 
 File: './test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart.canonical.json'
 input:id:observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart:_$InvalidId<String>:observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart
@@ -42,18 +24,6 @@ input:id:observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart:_$In
 File: './test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart.json'
 output:id:_$InvalidId<String>:observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart:observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart
 
-File: './test/dstu2/dstu2_examples/allergyintolerance-example.canonical.json'
-input:lastOccurence:2012-06:_$InvalidInstant<String>:2012-06
-
-File: './test/dstu2/dstu2_examples/allergyintolerance-example.canonical.json'
-output:lastOccurence:_$InvalidInstant<String>:2012-06:2012-06
-
-File: './test/dstu2/dstu2_examples/json-edge-cases.json'
-input:birthDate:1974-12:_$InvalidInstant<String>:1974-12
-
-File: './test/dstu2/dstu2_examples/json-edge-cases.json'
-output:birthDate:_$InvalidInstant<String>:1974-12:1974-12
-
 File: './test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant.canonical.json'
 input:id:observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant:_$InvalidId<String>:observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant
 
@@ -65,39 +35,3 @@ input:id:observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change:_$Inv
 
 File: './test/dstu2/dstu2_examples/observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change.canonical.json'
 output:id:_$InvalidId<String>:observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change:observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change
-
-File: './test/dstu2/dstu2_examples/questionnaire-example.canonical.json'
-input:date:2012-01:_$InvalidInstant<String>:2012-01
-
-File: './test/dstu2/dstu2_examples/questionnaire-example.canonical.json'
-output:date:_$InvalidInstant<String>:2012-01:2012-01
-
-File: './test/dstu2/dstu2_examples/allergyintolerance-example.json'
-input:lastOccurence:2012-06:_$InvalidInstant<String>:2012-06
-
-File: './test/dstu2/dstu2_examples/allergyintolerance-example.json'
-output:lastOccurence:_$InvalidInstant<String>:2012-06:2012-06
-
-File: './test/dstu2/dstu2_examples/questionnaire-example.json'
-input:date:2012-01:_$InvalidInstant<String>:2012-01
-
-File: './test/dstu2/dstu2_examples/questionnaire-example.json'
-output:date:_$InvalidInstant<String>:2012-01:2012-01
-
-File: './test/dstu2/dstu2_examples/questionnaire-example-f201-lifelines.json'
-input:date:2010:_$InvalidInstant<String>:2010
-
-File: './test/dstu2/dstu2_examples/questionnaire-example-f201-lifelines.json'
-output:date:_$InvalidInstant<String>:2010:2010
-
-File: './test/dstu2/dstu2_examples/person-example-f002-ariadne.json'
-input:birthDate:1963:_$InvalidInstant<String>:1963
-
-File: './test/dstu2/dstu2_examples/person-example-f002-ariadne.json'
-output:birthDate:_$InvalidInstant<String>:1963:1963
-
-File: './test/dstu2/dstu2_examples/relatedperson-example-f002-ariadne.canonical.json'
-input:birthDate:1963:_$InvalidInstant<String>:1963
-
-File: './test/dstu2/dstu2_examples/relatedperson-example-f002-ariadne.canonical.json'
-output:birthDate:_$InvalidInstant<String>:1963:1963

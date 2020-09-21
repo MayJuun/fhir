@@ -555,7 +555,7 @@ abstract class ValueSet with Resource implements _$ValueSet {
     @JsonKey(name: '_status') Element statusElement,
     Boolean experimental,
     @JsonKey(name: '_experimental') Element experimentalElement,
-    Date date,
+    FhirDateTime date,
     @JsonKey(name: '_date') Element dateElement,
     String publisher,
     @JsonKey(name: '_publisher') Element publisherElement,
@@ -666,7 +666,7 @@ abstract class ValueSetExpansion implements _$ValueSetExpansion {
   factory ValueSetExpansion({
     String identifier,
     @JsonKey(name: '_identifier') Element identifierElement,
-    Time timestamp,
+    FhirDateTime timestamp,
     @JsonKey(name: '_timestamp') Element timestampElement,
     Decimal total,
     @JsonKey(name: '_total') Element totalElement,

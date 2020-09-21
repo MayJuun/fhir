@@ -7257,7 +7257,7 @@ class _$QuestionnaireTearOff {
       @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
       @JsonKey(name: '_experimental') Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date') Element dateElement,
       String publisher,
       @JsonKey(name: '_publisher') Element publisherElement,
@@ -7375,7 +7375,7 @@ mixin _$Questionnaire {
   Boolean get experimental;
   @JsonKey(name: '_experimental')
   Element get experimentalElement;
-  Date get date;
+  FhirDateTime get date;
   @JsonKey(name: '_date')
   Element get dateElement;
   String get publisher;
@@ -7440,7 +7440,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
       @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
       @JsonKey(name: '_experimental') Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date') Element dateElement,
       String publisher,
       @JsonKey(name: '_publisher') Element publisherElement,
@@ -7593,7 +7593,7 @@ class _$QuestionnaireCopyWithImpl<$Res>
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
           : experimentalElement as Element,
-      date: date == freezed ? _value.date : date as Date,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
@@ -7859,7 +7859,7 @@ abstract class _$QuestionnaireCopyWith<$Res>
       @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
       @JsonKey(name: '_experimental') Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date') Element dateElement,
       String publisher,
       @JsonKey(name: '_publisher') Element publisherElement,
@@ -8032,7 +8032,7 @@ class __$QuestionnaireCopyWithImpl<$Res>
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
           : experimentalElement as Element,
-      date: date == freezed ? _value.date : date as Date,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
@@ -8202,7 +8202,7 @@ class _$_Questionnaire extends _Questionnaire {
   @JsonKey(name: '_experimental')
   final Element experimentalElement;
   @override
-  final Date date;
+  final FhirDateTime date;
   @override
   @JsonKey(name: '_date')
   final Element dateElement;
@@ -8441,7 +8441,7 @@ abstract class _Questionnaire extends Questionnaire {
       @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
       @JsonKey(name: '_experimental') Element experimentalElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date') Element dateElement,
       String publisher,
       @JsonKey(name: '_publisher') Element publisherElement,
@@ -8526,7 +8526,7 @@ abstract class _Questionnaire extends Questionnaire {
   @JsonKey(name: '_experimental')
   Element get experimentalElement;
   @override
-  Date get date;
+  FhirDateTime get date;
   @override
   @JsonKey(name: '_date')
   Element get dateElement;
