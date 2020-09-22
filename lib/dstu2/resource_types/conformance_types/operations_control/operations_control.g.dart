@@ -745,8 +745,7 @@ const _$ResourceVersioningEnumMap = {
 const _$ResourceConditionalDeleteEnumMap = {
   ResourceConditionalDelete.not_supported: 'not-supported',
   ResourceConditionalDelete.single: 'single',
-  ResourceConditionalDelete.multiple_howconditionaldeleteissupported:
-      'multiple-howconditionaldeleteissupported',
+  ResourceConditionalDelete.multiple: 'multiple',
   ResourceConditionalDelete.unknown: 'unknown',
 };
 
@@ -765,8 +764,8 @@ _$_ConformanceResourceInteraction _$_$_ConformanceResourceInteractionFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    code: _$enumDecodeNullable(_$InteractionCodeEnumMap, json['code'],
-        unknownValue: InteractionCode.unknown),
+    code: _$enumDecodeNullable(_$ResourceInteractionCodeEnumMap, json['code'],
+        unknownValue: ResourceInteractionCode.unknown),
     documentation: json['documentation'] as String,
   );
 }
@@ -786,16 +785,22 @@ Map<String, dynamic> _$_$_ConformanceResourceInteractionToJson(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('code', _$InteractionCodeEnumMap[instance.code]);
+  writeNotNull('code', _$ResourceInteractionCodeEnumMap[instance.code]);
   writeNotNull('documentation', instance.documentation);
   return val;
 }
 
-const _$InteractionCodeEnumMap = {
-  InteractionCode.transaction: 'transaction',
-  InteractionCode.search_system: 'search-system',
-  InteractionCode.history_system: 'history-system',
-  InteractionCode.unknown: 'unknown',
+const _$ResourceInteractionCodeEnumMap = {
+  ResourceInteractionCode.read: 'read',
+  ResourceInteractionCode.vread: 'vread',
+  ResourceInteractionCode.update: 'update',
+  ResourceInteractionCode.delete: 'delete',
+  ResourceInteractionCode.history_instance: 'history-instance',
+  ResourceInteractionCode.validate: 'validate',
+  ResourceInteractionCode.history_type: 'history-type',
+  ResourceInteractionCode.create: 'create',
+  ResourceInteractionCode.search_type: 'search-type',
+  ResourceInteractionCode.unknown: 'unknown',
 };
 
 _$_ConformanceRestOperation _$_$_ConformanceRestOperationFromJson(
@@ -1028,8 +1033,8 @@ _$_ConformanceRestInteraction _$_$_ConformanceRestInteractionFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    code: _$enumDecodeNullable(_$InteractionCodeEnumMap, json['code'],
-        unknownValue: InteractionCode.unknown),
+    code: _$enumDecodeNullable(_$RestInteractionCodeEnumMap, json['code'],
+        unknownValue: RestInteractionCode.unknown),
     documentation: json['documentation'] as String,
   );
 }
@@ -1049,10 +1054,17 @@ Map<String, dynamic> _$_$_ConformanceRestInteractionToJson(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('code', _$InteractionCodeEnumMap[instance.code]);
+  writeNotNull('code', _$RestInteractionCodeEnumMap[instance.code]);
   writeNotNull('documentation', instance.documentation);
   return val;
 }
+
+const _$RestInteractionCodeEnumMap = {
+  RestInteractionCode.transaction: 'transaction',
+  RestInteractionCode.search_system: 'search-system',
+  RestInteractionCode.history_system: 'history-system',
+  RestInteractionCode.unknown: 'unknown',
+};
 
 _$_ConformanceResourceSearchParam _$_$_ConformanceResourceSearchParamFromJson(
     Map<String, dynamic> json) {

@@ -45,8 +45,8 @@ enum LinkType {
   replace,
   @JsonValue('refer')
   refer,
-  @JsonValue('seealso-typeoflink')
-  seealso_typeoflink,
+  @JsonValue('seealso')
+  seealso,
   @JsonValue('unknown')
   unknown,
 }

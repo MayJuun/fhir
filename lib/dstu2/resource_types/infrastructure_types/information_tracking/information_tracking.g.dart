@@ -323,6 +323,16 @@ const _$QuestionTypeEnumMap = {
   QuestionType.integer: 'integer',
   QuestionType.date: 'date',
   QuestionType.datetime: 'dateTime',
+  QuestionType.instant: 'instant',
+  QuestionType.time: 'time',
+  QuestionType.string: 'string',
+  QuestionType.text: 'text',
+  QuestionType.url: 'url',
+  QuestionType.choice: 'choice',
+  QuestionType.open_choice: 'open-choice',
+  QuestionType.attachment: 'attachment',
+  QuestionType.reference: 'reference',
+  QuestionType.quantity: 'quantity',
   QuestionType.unknown: 'unknown',
 };
 

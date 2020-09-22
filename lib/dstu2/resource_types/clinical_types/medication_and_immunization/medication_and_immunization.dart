@@ -595,7 +595,7 @@ abstract class ImmunizationRecommendationRecommendation
     List<ImmunizationRecommendationRecommendationDateCriterion> dateCriterion,
     ImmunizationRecommendationRecommendationProtocol protocol,
     List<Reference> supportingImmunization,
-    List<Reference> supportingPatientInfor,
+    List<Reference> supportingPatientInformation,
   }) = _ImmunizationRecommendationRecommendation;
 
   factory ImmunizationRecommendationRecommendation.fromJson(

@@ -216,9 +216,9 @@ abstract class ConformanceResourceInteraction
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
-    @JsonKey(required: true, unknownEnumValue: InteractionCode.unknown)
+    @JsonKey(required: true, unknownEnumValue: ResourceInteractionCode.unknown)
     @required
-        InteractionCode code,
+        ResourceInteractionCode code,
     String documentation,
   }) = _ConformanceResourceInteraction;
 
@@ -301,9 +301,9 @@ abstract class ConformanceRestInteraction with _$ConformanceRestInteraction {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
-    @JsonKey(required: true, unknownEnumValue: InteractionCode.unknown)
+    @JsonKey(required: true, unknownEnumValue: RestInteractionCode.unknown)
     @required
-        InteractionCode code,
+        RestInteractionCode code,
     String documentation,
   }) = _ConformanceRestInteraction;
 

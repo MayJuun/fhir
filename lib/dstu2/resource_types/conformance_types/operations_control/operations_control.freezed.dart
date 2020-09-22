@@ -4012,8 +4012,8 @@ class _$ConformanceResourceInteractionTearOff {
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @required
-      @JsonKey(required: true, unknownEnumValue: InteractionCode.unknown)
-          InteractionCode code,
+      @JsonKey(required: true, unknownEnumValue: ResourceInteractionCode.unknown)
+          ResourceInteractionCode code,
       String documentation}) {
     return _ConformanceResourceInteraction(
       id: id,
@@ -4041,8 +4041,8 @@ mixin _$ConformanceResourceInteraction {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
-  @JsonKey(required: true, unknownEnumValue: InteractionCode.unknown)
-  InteractionCode get code;
+  @JsonKey(required: true, unknownEnumValue: ResourceInteractionCode.unknown)
+  ResourceInteractionCode get code;
   String get documentation;
 
   Map<String, dynamic> toJson();
@@ -4061,8 +4061,8 @@ abstract class $ConformanceResourceInteractionCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @JsonKey(required: true, unknownEnumValue: InteractionCode.unknown)
-          InteractionCode code,
+      @JsonKey(required: true, unknownEnumValue: ResourceInteractionCode.unknown)
+          ResourceInteractionCode code,
       String documentation});
 }
 
@@ -4091,7 +4091,7 @@ class _$ConformanceResourceInteractionCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      code: code == freezed ? _value.code : code as InteractionCode,
+      code: code == freezed ? _value.code : code as ResourceInteractionCode,
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as String,
@@ -4112,8 +4112,8 @@ abstract class _$ConformanceResourceInteractionCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @JsonKey(required: true, unknownEnumValue: InteractionCode.unknown)
-          InteractionCode code,
+      @JsonKey(required: true, unknownEnumValue: ResourceInteractionCode.unknown)
+          ResourceInteractionCode code,
       String documentation});
 }
 
@@ -4146,7 +4146,7 @@ class __$ConformanceResourceInteractionCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      code: code == freezed ? _value.code : code as InteractionCode,
+      code: code == freezed ? _value.code : code as ResourceInteractionCode,
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as String,
@@ -4165,7 +4165,7 @@ class _$_ConformanceResourceInteraction
           this.extension_,
       this.modifierExtension,
       @required
-      @JsonKey(required: true, unknownEnumValue: InteractionCode.unknown)
+      @JsonKey(required: true, unknownEnumValue: ResourceInteractionCode.unknown)
           this.code,
       this.documentation})
       : assert(code != null);
@@ -4182,8 +4182,8 @@ class _$_ConformanceResourceInteraction
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  @JsonKey(required: true, unknownEnumValue: InteractionCode.unknown)
-  final InteractionCode code;
+  @JsonKey(required: true, unknownEnumValue: ResourceInteractionCode.unknown)
+  final ResourceInteractionCode code;
   @override
   final String documentation;
 
@@ -4239,8 +4239,8 @@ abstract class _ConformanceResourceInteraction
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @required
-      @JsonKey(required: true, unknownEnumValue: InteractionCode.unknown)
-          InteractionCode code,
+      @JsonKey(required: true, unknownEnumValue: ResourceInteractionCode.unknown)
+          ResourceInteractionCode code,
       String documentation}) = _$_ConformanceResourceInteraction;
 
   factory _ConformanceResourceInteraction.fromJson(Map<String, dynamic> json) =
@@ -4254,8 +4254,8 @@ abstract class _ConformanceResourceInteraction
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  @JsonKey(required: true, unknownEnumValue: InteractionCode.unknown)
-  InteractionCode get code;
+  @JsonKey(required: true, unknownEnumValue: ResourceInteractionCode.unknown)
+  ResourceInteractionCode get code;
   @override
   String get documentation;
   @override
@@ -5653,8 +5653,8 @@ class _$ConformanceRestInteractionTearOff {
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @required
-      @JsonKey(required: true, unknownEnumValue: InteractionCode.unknown)
-          InteractionCode code,
+      @JsonKey(required: true, unknownEnumValue: RestInteractionCode.unknown)
+          RestInteractionCode code,
       String documentation}) {
     return _ConformanceRestInteraction(
       id: id,
@@ -5681,8 +5681,8 @@ mixin _$ConformanceRestInteraction {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
-  @JsonKey(required: true, unknownEnumValue: InteractionCode.unknown)
-  InteractionCode get code;
+  @JsonKey(required: true, unknownEnumValue: RestInteractionCode.unknown)
+  RestInteractionCode get code;
   String get documentation;
 
   Map<String, dynamic> toJson();
@@ -5699,8 +5699,8 @@ abstract class $ConformanceRestInteractionCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @JsonKey(required: true, unknownEnumValue: InteractionCode.unknown)
-          InteractionCode code,
+      @JsonKey(required: true, unknownEnumValue: RestInteractionCode.unknown)
+          RestInteractionCode code,
       String documentation});
 }
 
@@ -5729,7 +5729,7 @@ class _$ConformanceRestInteractionCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      code: code == freezed ? _value.code : code as InteractionCode,
+      code: code == freezed ? _value.code : code as RestInteractionCode,
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as String,
@@ -5750,8 +5750,8 @@ abstract class _$ConformanceRestInteractionCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @JsonKey(required: true, unknownEnumValue: InteractionCode.unknown)
-          InteractionCode code,
+      @JsonKey(required: true, unknownEnumValue: RestInteractionCode.unknown)
+          RestInteractionCode code,
       String documentation});
 }
 
@@ -5783,7 +5783,7 @@ class __$ConformanceRestInteractionCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      code: code == freezed ? _value.code : code as InteractionCode,
+      code: code == freezed ? _value.code : code as RestInteractionCode,
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as String,
@@ -5801,7 +5801,7 @@ class _$_ConformanceRestInteraction implements _ConformanceRestInteraction {
           this.extension_,
       this.modifierExtension,
       @required
-      @JsonKey(required: true, unknownEnumValue: InteractionCode.unknown)
+      @JsonKey(required: true, unknownEnumValue: RestInteractionCode.unknown)
           this.code,
       this.documentation})
       : assert(code != null);
@@ -5817,8 +5817,8 @@ class _$_ConformanceRestInteraction implements _ConformanceRestInteraction {
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  @JsonKey(required: true, unknownEnumValue: InteractionCode.unknown)
-  final InteractionCode code;
+  @JsonKey(required: true, unknownEnumValue: RestInteractionCode.unknown)
+  final RestInteractionCode code;
   @override
   final String documentation;
 
@@ -5874,8 +5874,8 @@ abstract class _ConformanceRestInteraction
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @required
-      @JsonKey(required: true, unknownEnumValue: InteractionCode.unknown)
-          InteractionCode code,
+      @JsonKey(required: true, unknownEnumValue: RestInteractionCode.unknown)
+          RestInteractionCode code,
       String documentation}) = _$_ConformanceRestInteraction;
 
   factory _ConformanceRestInteraction.fromJson(Map<String, dynamic> json) =
@@ -5889,8 +5889,8 @@ abstract class _ConformanceRestInteraction
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  @JsonKey(required: true, unknownEnumValue: InteractionCode.unknown)
-  InteractionCode get code;
+  @JsonKey(required: true, unknownEnumValue: RestInteractionCode.unknown)
+  RestInteractionCode get code;
   @override
   String get documentation;
   @override

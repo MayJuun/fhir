@@ -155,12 +155,34 @@ enum ResourceConditionalDelete {
   not_supported,
   @JsonValue('single')
   single,
-  @JsonValue('multiple-howconditionaldeleteissupported')
-  multiple_howconditionaldeleteissupported,
+  @JsonValue('multiple')
+  multiple,
   @JsonValue('unknown')
   unknown,
 }
-enum InteractionCode {
+enum ResourceInteractionCode {
+  @JsonValue('read')
+  read,
+  @JsonValue('vread')
+  vread,
+  @JsonValue('update')
+  update,
+  @JsonValue('delete')
+  delete,
+  @JsonValue('history-instance')
+  history_instance,
+  @JsonValue('validate')
+  validate,
+  @JsonValue('history-type')
+  history_type,
+  @JsonValue('create')
+  create,
+  @JsonValue('search-type')
+  search_type,
+  @JsonValue('unknown')
+  unknown,
+}
+enum RestInteractionCode {
   @JsonValue('transaction')
   transaction,
   @JsonValue('search-system')
@@ -200,28 +222,7 @@ enum BindingStrength {
   @JsonValue('unknown')
   unknown,
 }
-enum ResourceInteractionCode {
-  @JsonValue('read')
-  read,
-  @JsonValue('vread')
-  vread,
-  @JsonValue('update')
-  update,
-  @JsonValue('delete')
-  delete,
-  @JsonValue('history-instance')
-  history_instance,
-  @JsonValue('validate')
-  validate,
-  @JsonValue('history-type')
-  history_type,
-  @JsonValue('create')
-  create,
-  @JsonValue('search-type')
-  search_type,
-  @JsonValue('unknown')
-  unknown,
-}
+
 enum SearchParamType {
   @JsonValue('number')
   number,

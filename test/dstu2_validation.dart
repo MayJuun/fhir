@@ -6,7 +6,7 @@ Future<String> dstu2Validation() async {
   var j = 0;
   for (var file in await dir.list().toList()) {
     j++;
-    if (j > 10) break;
+    if (j > 2000) break;
     var contents = await File(file.path).readAsString();
     var resource = dstu2.Resource.fromJson(json.decode(contents));
     if (resource == null) {

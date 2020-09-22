@@ -988,8 +988,7 @@ const _$ContactPointUseEnumMap = {
   ContactPointUse.work: 'work',
   ContactPointUse.temp: 'temp',
   ContactPointUse.old: 'old',
-  ContactPointUse.mobile_purposeofthiscontactpoint:
-      'mobile-purposeofthiscontactpoint',
+  ContactPointUse.mobile: 'mobile',
   ContactPointUse.unknown: 'unknown',
 };
 

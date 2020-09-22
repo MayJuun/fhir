@@ -452,7 +452,7 @@ Map<String, dynamic> _$_$_PatientLinkToJson(_$_PatientLink instance) {
 const _$LinkTypeEnumMap = {
   LinkType.replace: 'replace',
   LinkType.refer: 'refer',
-  LinkType.seealso_typeoflink: 'seealso-typeoflink',
+  LinkType.seealso: 'seealso',
   LinkType.unknown: 'unknown',
 };
 

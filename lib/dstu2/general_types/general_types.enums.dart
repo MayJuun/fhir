@@ -87,8 +87,8 @@ enum ContactPointUse {
   temp,
   @JsonValue('old')
   old,
-  @JsonValue('mobile-purposeofthiscontactpoint')
-  mobile_purposeofthiscontactpoint,
+  @JsonValue('mobile')
+  mobile,
   @JsonValue('unknown')
   unknown,
 }

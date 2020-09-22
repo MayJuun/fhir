@@ -1,94 +1,18 @@
 DSTU2
 ---------------------------------------------------------------------------
 
-input: string :: output:unknown
+input: CHESTÂ  :: output:_$InvalidCode<String>:CHESTÂ 
 
-input: string :: output:unknown
+input: KIDNÂ  :: output:_$InvalidCode<String>:KIDNÂ 
 
-input: choice :: output:unknown
+input:   :: output:_$InvalidCode<String>: 
 
-input: string :: output:unknown
+input: Â  :: output:_$InvalidCode<String>:Â 
 
-input: string :: output:unknown
+input: observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change :: output:_$InvalidId<String>:observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change
 
-input: string :: output:unknown
+input: observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant :: output:_$InvalidId<String>:observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant
 
-input: reference :: output:unknown
+input: observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart :: output:_$InvalidId<String>:observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart
 
-input: reference :: output:unknown
-
-input: reference :: output:unknown
-
-input: reference :: output:unknown
-
-input: choice :: output:unknown
-
-input: choice :: output:unknown
-
-input: string :: output:unknown
-
-input: reference :: output:unknown
-
-input: string :: output:unknown
-
-input: string :: output:unknown
-
-input: choice :: output:unknown
-
-input: reference :: output:unknown
-
-input: string :: output:unknown
-
-input: string :: output:unknown
-
-input: string :: output:unknown
-
-input: string :: output:unknown
-
-input: string :: output:unknown
-
-input: string :: output:unknown
-
-input: string :: output:unknown
-
-input: reference :: output:unknown
-
-input: open-choice :: output:unknown
-
-input: reference :: output:unknown
-
-input: choice :: output:unknown
-
-input: string :: output:unknown
-
-input: reference :: output:unknown
-
-input: reference :: output:unknown
-
-input: string :: output:unknown
-
-input: string :: output:unknown
-
-input: open-choice :: output:unknown
-
-input: string :: output:unknown
-
-input: string :: output:unknown
-
-input: choice :: output:unknown
-
-input: string :: output:unknown
-
-input: open-choice :: output:unknown
-
-input: open-choice :: output:unknown
-
-input: string :: output:unknown
-
-input: string :: output:unknown
-
-input: string :: output:unknown
-
-input: string :: output:unknown
-
-input: string :: output:unknown
+input: observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart :: output:_$InvalidId<String>:observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart
