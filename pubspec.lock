@@ -114,7 +114,7 @@ packages:
     source: hosted
     version: "3.4.1"
   collection:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: collection
       url: "https://pub.dartlang.org"
