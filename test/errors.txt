@@ -1,0 +1,94 @@
+DSTU2
+---------------------------------------------------------------------------
+
+input: string :: output:unknown
+
+input: string :: output:unknown
+
+input: choice :: output:unknown
+
+input: string :: output:unknown
+
+input: string :: output:unknown
+
+input: string :: output:unknown
+
+input: reference :: output:unknown
+
+input: reference :: output:unknown
+
+input: reference :: output:unknown
+
+input: reference :: output:unknown
+
+input: choice :: output:unknown
+
+input: choice :: output:unknown
+
+input: string :: output:unknown
+
+input: reference :: output:unknown
+
+input: string :: output:unknown
+
+input: string :: output:unknown
+
+input: choice :: output:unknown
+
+input: reference :: output:unknown
+
+input: string :: output:unknown
+
+input: string :: output:unknown
+
+input: string :: output:unknown
+
+input: string :: output:unknown
+
+input: string :: output:unknown
+
+input: string :: output:unknown
+
+input: string :: output:unknown
+
+input: reference :: output:unknown
+
+input: open-choice :: output:unknown
+
+input: reference :: output:unknown
+
+input: choice :: output:unknown
+
+input: string :: output:unknown
+
+input: reference :: output:unknown
+
+input: reference :: output:unknown
+
+input: string :: output:unknown
+
+input: string :: output:unknown
+
+input: open-choice :: output:unknown
+
+input: string :: output:unknown
+
+input: string :: output:unknown
+
+input: choice :: output:unknown
+
+input: string :: output:unknown
+
+input: open-choice :: output:unknown
+
+input: open-choice :: output:unknown
+
+input: string :: output:unknown
+
+input: string :: output:unknown
+
+input: string :: output:unknown
+
+input: string :: output:unknown
+
+input: string :: output:unknown

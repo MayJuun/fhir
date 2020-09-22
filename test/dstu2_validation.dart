@@ -1,4 +1,4 @@
-part of 'run_validation.dart';
+part of 'validation.dart';
 
 Future<String> dstu2Validation() async {
   var dir = Directory('./test/dstu2_examples');
@@ -6,14 +6,14 @@ Future<String> dstu2Validation() async {
   var j = 0;
   for (var file in await dir.list().toList()) {
     j++;
-    if (j > 1) break;
+    if (j > 10) break;
     var contents = await File(file.path).readAsString();
     var resource = dstu2.Resource.fromJson(json.decode(contents));
     if (resource == null) {
       print(file);
     } else {
-      string +=
-          await checkMapEquality(json.decode(contents), resource.toJson());
+      string += await checkMapEquality(
+          json.decode(contents), resource.toJson(), file.toString());
     }
   }
   return string;

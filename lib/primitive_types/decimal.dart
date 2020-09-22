@@ -19,8 +19,10 @@ class Decimal extends PrimitiveObject<double> {
   factory Decimal.fromJson(dynamic json) => Decimal(json);
 
   @override
+  String toString() => toJson().toString();
+
+  @override
   dynamic toJson() => value.fold(
-        (failure) => '${failure.runtimeType}:${failure.failedValue.toString()}',
-        (value) => value,
-      );
+      (failure) => '${failure.runtimeType}:${failure.failedValue.toString()}',
+      (value) => value - value.floor() == 0 ? value.floor() : value);
 }

@@ -31,44 +31,54 @@ Future main() async {
   await file.writeAsString(string);
 }
 
-Future<String> checkMapEquality(
-    Map<String, dynamic> input, Map<String, dynamic> output) async {
+Future<String> checkMapEquality(Map<String, dynamic> input,
+    Map<String, dynamic> output, String file) async {
   var string = '';
   if (input.keys.length == output.keys.length) {
     for (final k in input.keys) {
-      string += await checkByTypes(input[k], output[k]);
+      string += await checkByTypes(input[k], output[k], file);
     }
   } else
     print('*****************Different Length Keys***************************');
   return string;
 }
 
-Future<String> checkListEquality(List input, List output) async {
+Future<String> checkListEquality(List input, List output, String file) async {
   var string = '';
   if (input.length == output.length) {
     for (var i = 0; i < input.length; i++) {
-      string += await checkByTypes(input[i], output[i]);
+      string += await checkByTypes(input[i], output[i], file);
     }
   } else
     print('*****************Different Length Lists***************************');
   return string;
 }
 
-Future<String> checkByTypes(dynamic input, dynamic output) async {
-  if (input.runtimeType == output.runtimeType) {
-    return input.runtimeType == {}.runtimeType ||
-            input.runtimeType.toString() ==
-                '_InternalLinkedHashMap<String, dynamic>'
-        ? await checkMapEquality(input, output)
-        : input.runtimeType == [].runtimeType
-            ? await checkListEquality(input, output)
-            : await checkEquality(input, output, 'map');
-  } else
-    print('*******************Different runtimeTypes********************');
-  return null;
+Future<String> checkByTypes(dynamic input, dynamic output, String file) async {
+  if ((input.runtimeType == {}.runtimeType ||
+          input.runtimeType.toString() ==
+              '_InternalLinkedHashMap<String, dynamic>') &&
+      (output.runtimeType == {}.runtimeType ||
+          output.runtimeType.toString() ==
+              '_InternalLinkedHashMap<String, dynamic>')) {
+    return await checkMapEquality(input, output, file);
+  } else if (input is List && output is List) {
+    return await checkListEquality(input, output, file);
+  } else if (input.runtimeType == output.runtimeType) {
+    return await checkEquality(input, output);
+  } else {
+    print(file);
+    print('*******************Different runtimeTypes*************************');
+    print(input);
+    print(output);
+  }
+  return '';
 }
 
-String checkEquality(dynamic input, dynamic output, String type) =>
-    input.runtimeType == output.runtimeType && input == output
-        ? ''
+String checkEquality(dynamic input, dynamic output) => input == output
+    ? ''
+    : DateTime.tryParse(input) != null && DateTime.tryParse(output) != null
+        ? DateTime.tryParse(input) == DateTime.tryParse(output)
+            ? ''
+            : '\n\ninput: $input :: output:$output'
         : '\n\ninput: $input :: output:$output';
