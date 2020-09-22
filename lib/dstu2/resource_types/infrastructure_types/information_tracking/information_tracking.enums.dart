@@ -43,6 +43,26 @@ enum QuestionType {
   date,
   @JsonValue('dateTime')
   datetime,
+  @JsonValue('instant')
+  instant,
+  @JsonValue('time')
+  time,
+  @JsonValue('string')
+  string,
+  @JsonValue('text')
+  text,
+  @JsonValue('url')
+  url,
+  @JsonValue('choice')
+  choice,
+  @JsonValue('open-choice')
+  open_choice,
+  @JsonValue('attachment')
+  attachment,
+  @JsonValue('reference')
+  reference,
+  @JsonValue('quantity')
+  quantity,
   @JsonValue('unknown')
   unknown,
 }

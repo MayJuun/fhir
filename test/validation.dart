@@ -65,12 +65,13 @@ Future<String> checkByTypes(dynamic input, dynamic output, String file) async {
   } else if (input is List && output is List) {
     return await checkListEquality(input, output, file);
   } else if (input.runtimeType == output.runtimeType) {
-    return await checkEquality(input, output);
+    String returnValue = await checkEquality(input, output);
+    if (returnValue != '') {
+      print(file);
+    }
+    return returnValue;
   } else {
-    print(file);
     print('*******************Different runtimeTypes*************************');
-    print(input);
-    print(output);
   }
   return '';
 }
