@@ -393,6 +393,7 @@ abstract class QuestionnaireItem implements _$QuestionnaireItem {
     String definition,
     @JsonKey(name: '_definition') Element definitionElement,
     List<Coding> code,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     String prefix,
     @JsonKey(name: '_prefix') Element prefixElement,
     String text,

@@ -34,9 +34,7 @@ abstract class PrimitiveObject<T> {
 bool _hasMatch(String pattern, String input) => RegExp(pattern).hasMatch(input);
 
 Either<PrimitiveFailure<String>, String> validateBase64Binary(String value) =>
-    isBase64(value)
-        ? right(value)
-        : left(PrimitiveFailure.invalidBase64Binary(failedValue: value));
+    right(value);
 
 Either<PrimitiveFailure<String>, bool> validateBoolean(dynamic value) =>
     ['true', 'false'].contains(value.toString().toLowerCase())
@@ -75,7 +73,7 @@ Either<PrimitiveFailure<String>, int> validateInteger(dynamic value) =>
         : left(PrimitiveFailure.invalidInteger(failedValue: value.toString()));
 
 Either<PrimitiveFailure<String>, String> validateMarkdown(String value) =>
-    _hasMatch(r"""^\s*(\S|\s)*$""", value)
+    _hasMatch(r"""[ \r\n\t\S]+""", value)
         ? right(value)
         : left(PrimitiveFailure.invalidMarkdown(failedValue: value));
 
@@ -118,7 +116,7 @@ Either<PrimitiveFailure<String>, Uri> validateFhirUri(String value) =>
         : left(PrimitiveFailure.invalidFhirUri(failedValue: value));
 
 Either<PrimitiveFailure<String>, Uri> validateFhirUrl(String value) =>
-    Uri.tryParse(value).isAbsolute
+    Uri.tryParse(value) != null
         ? right(Uri.parse(value))
         : left(PrimitiveFailure.invalidFhirUrl(failedValue: value));
 

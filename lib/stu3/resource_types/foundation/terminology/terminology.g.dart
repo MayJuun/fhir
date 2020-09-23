@@ -1478,7 +1478,9 @@ _$_NamingSystem _$_$_NamingSystemFromJson(Map<String, dynamic> json) {
     kindElement: json['_kind'] == null
         ? null
         : Element.fromJson(json['_kind'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),

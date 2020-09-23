@@ -56,6 +56,7 @@ abstract class Meta implements _$Meta {
 abstract class ElementDefinition implements _$ElementDefinition {
   ElementDefinition._();
   factory ElementDefinition({
+    Id id,
     String path,
     @JsonKey(name: '_path') Element pathElement,
     List<ElementDefinitionRepresentation> representation,

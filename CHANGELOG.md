@@ -1,7 +1,10 @@
 ## [0.0.6]
 * Simplified date, dateTime, instant (now implementers will have to deal with display instead of me)
 * rewrote testing function (it's a pain to do deep comparisons of maps)
+* doesn't follow classic check-test patterns, writes errors to file (makes it easier for me to debug)
 * fixed some enums in dstu2
+* expanded definition of url because dart's definition doesn't match with FHIR's
+* relaxed base64binary (just a String now) requirements because Dart's is more narrow than FHIR's
 
 ## [0.0.5]
 * Refactored Dstu2 to be more consistent with other versions, field names are the same, some class names changed

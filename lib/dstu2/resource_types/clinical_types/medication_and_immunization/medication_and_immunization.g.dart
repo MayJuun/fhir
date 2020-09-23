@@ -2005,7 +2005,7 @@ _$_ImmunizationRecommendationRecommendation
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    supportingPatientInfor: (json['supportingPatientInfor'] as List)
+    supportingPatientInformation: (json['supportingPatientInformation'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
@@ -2036,8 +2036,8 @@ Map<String, dynamic> _$_$_ImmunizationRecommendationRecommendationToJson(
   writeNotNull('protocol', instance.protocol?.toJson());
   writeNotNull('supportingImmunization',
       instance.supportingImmunization?.map((e) => e?.toJson())?.toList());
-  writeNotNull('supportingPatientInfor',
-      instance.supportingPatientInfor?.map((e) => e?.toJson())?.toList());
+  writeNotNull('supportingPatientInformation',
+      instance.supportingPatientInformation?.map((e) => e?.toJson())?.toList());
   return val;
 }
 

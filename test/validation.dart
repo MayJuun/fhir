@@ -5,7 +5,6 @@ import 'package:fhir/dstu2.dart' as dstu2;
 import 'package:fhir/r4.dart' as r4;
 import 'package:fhir/r5.dart' as r5;
 import 'package:fhir/stu3.dart' as stu3;
-import 'package:string_validator/string_validator.dart';
 
 part 'dstu2_validation.dart';
 part 'r4_validation.dart';
@@ -16,17 +15,15 @@ Future main() async {
   var string = 'DSTU2\n'
       '---------------------------------------------------------------------------';
   string += await dstu2Validation();
-  // string += '\n\nR4\n'
-  //     '---------------------------------------------------------------------------';
-  // string += await r4Validation();
-  // string += '\n\nR4\n'
-  //     '---------------------------------------------------------------------------';
-  // string += await stu3Validation();
-  // string += '\n\nR4\n'
-  //     '---------------------------------------------------------------------------';
-  // string += await r5Validation();
-  // string += '\n\nR4\n'
-  //     '---------------------------------------------------------------------------';
+  string += '\n\nR4\n'
+      '---------------------------------------------------------------------------';
+  string += await r4Validation();
+  string += '\n\nSTU3\n'
+      '---------------------------------------------------------------------------';
+  string += await stu3Validation();
+  string += '\n\nR5\n'
+      '---------------------------------------------------------------------------';
+  string += await r5Validation();
   final file = File('./test/errors.txt');
   await file.writeAsString('');
   await file.writeAsString(string);
@@ -77,7 +74,7 @@ Future<String> checkByTypes(dynamic input, dynamic output, String file) async {
 
     /// checks if the two items are both of the same type, then passes the two
   } else if (input.runtimeType == output.runtimeType) {
-    String returnValue = await checkEquality(input, output);
+    String returnValue = await checkEquality(input, output, file);
     if (returnValue != '') {
       print(file);
     }
@@ -87,7 +84,7 @@ Future<String> checkByTypes(dynamic input, dynamic output, String file) async {
     /// results in a map thinking an int is a decimal or vice versa, even
     /// thought the value is the same, this just checks to see if that's true
   } else if (input is num && output is num) {
-    return await checkEquality(input.toDouble(), output.toDouble());
+    return await checkEquality(input.toDouble(), output.toDouble(), file);
   } else {
     print('*******************Different runtimeTypes***********************');
     print(input.runtimeType);
@@ -97,7 +94,7 @@ Future<String> checkByTypes(dynamic input, dynamic output, String file) async {
 }
 
 /// checks if the two values are equal
-String checkEquality(dynamic input, dynamic output) {
+String checkEquality(dynamic input, dynamic output, String file) {
   ///if equal, return empty string
   if (input == output)
     return '';
@@ -123,5 +120,5 @@ String checkEquality(dynamic input, dynamic output) {
     if (Uri.parse(input) == Uri.parse(output)) return '';
   }
 
-  return '\n\ninput: $input :: output:$output';
+  return '\n\n$file\ninput: $input :: output:$output';
 }

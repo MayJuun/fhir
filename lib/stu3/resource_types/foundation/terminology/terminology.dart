@@ -486,7 +486,7 @@ abstract class NamingSystem with Resource implements _$NamingSystem {
     @JsonKey(name: '_status') Element statusElement,
     NamingSystemKind kind,
     @JsonKey(name: '_kind') Element kindElement,
-    Date date,
+    FhirDateTime date,
     @JsonKey(name: '_date') Element dateElement,
     String publisher,
     @JsonKey(name: '_publisher') Element publisherElement,

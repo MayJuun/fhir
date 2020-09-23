@@ -15,7 +15,7 @@ As well as the R5 Preview #1:
 ## Say Hello!
 
 - As all parts of this are new (FHIR, Flutter, using the two together), I'd love to hear from you if you're working in this space.
-You can email me at jgfaulkenberry@gmail.com.
+You can email me at [jgfaulkenberry@gmail.com](jgfaulkenberry@gmail.com).
 
 ## How To Use
 
@@ -85,6 +85,7 @@ There are two big items I would really like to get to work to add functionality:
 
 
 ## Validation
+- For validation testing, I run all of the sample files from hl7 through a tester. 
 
 ### R5
 

@@ -9891,7 +9891,7 @@ class _$NamingSystemTearOff {
       @JsonKey(name: '_status') Element statusElement,
       NamingSystemKind kind,
       @JsonKey(name: '_kind') Element kindElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date') Element dateElement,
       String publisher,
       @JsonKey(name: '_publisher') Element publisherElement,
@@ -9980,7 +9980,7 @@ mixin _$NamingSystem {
   NamingSystemKind get kind;
   @JsonKey(name: '_kind')
   Element get kindElement;
-  Date get date;
+  FhirDateTime get date;
   @JsonKey(name: '_date')
   Element get dateElement;
   String get publisher;
@@ -10029,7 +10029,7 @@ abstract class $NamingSystemCopyWith<$Res> {
       @JsonKey(name: '_status') Element statusElement,
       NamingSystemKind kind,
       @JsonKey(name: '_kind') Element kindElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date') Element dateElement,
       String publisher,
       @JsonKey(name: '_publisher') Element publisherElement,
@@ -10141,7 +10141,7 @@ class _$NamingSystemCopyWithImpl<$Res> implements $NamingSystemCopyWith<$Res> {
       kind: kind == freezed ? _value.kind : kind as NamingSystemKind,
       kindElement:
           kindElement == freezed ? _value.kindElement : kindElement as Element,
-      date: date == freezed ? _value.date : date as Date,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
@@ -10345,7 +10345,7 @@ abstract class _$NamingSystemCopyWith<$Res>
       @JsonKey(name: '_status') Element statusElement,
       NamingSystemKind kind,
       @JsonKey(name: '_kind') Element kindElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date') Element dateElement,
       String publisher,
       @JsonKey(name: '_publisher') Element publisherElement,
@@ -10473,7 +10473,7 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
       kind: kind == freezed ? _value.kind : kind as NamingSystemKind,
       kindElement:
           kindElement == freezed ? _value.kindElement : kindElement as Element,
-      date: date == freezed ? _value.date : date as Date,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
@@ -10599,7 +10599,7 @@ class _$_NamingSystem extends _NamingSystem {
   @JsonKey(name: '_kind')
   final Element kindElement;
   @override
-  final Date date;
+  final FhirDateTime date;
   @override
   @JsonKey(name: '_date')
   final Element dateElement;
@@ -10790,7 +10790,7 @@ abstract class _NamingSystem extends NamingSystem {
       @JsonKey(name: '_status') Element statusElement,
       NamingSystemKind kind,
       @JsonKey(name: '_kind') Element kindElement,
-      Date date,
+      FhirDateTime date,
       @JsonKey(name: '_date') Element dateElement,
       String publisher,
       @JsonKey(name: '_publisher') Element publisherElement,
@@ -10852,7 +10852,7 @@ abstract class _NamingSystem extends NamingSystem {
   @JsonKey(name: '_kind')
   Element get kindElement;
   @override
-  Date get date;
+  FhirDateTime get date;
   @override
   @JsonKey(name: '_date')
   Element get dateElement;

@@ -156,6 +156,7 @@ Map<String, dynamic> _$_$_MetaToJson(_$_Meta instance) {
 
 _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
   return _$_ElementDefinition(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     path: json['path'] as String,
     pathElement: json['_path'] == null
         ? null
@@ -1059,6 +1060,7 @@ Map<String, dynamic> _$_$_ElementDefinitionToJson(
     }
   }
 
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('path', instance.path);
   writeNotNull('_path', instance.pathElement?.toJson());
   writeNotNull(

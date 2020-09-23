@@ -1394,6 +1394,11 @@ _$_QuestionnaireItem _$_$_QuestionnaireItemFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     prefix: json['prefix'] as String,
     prefixElement: json['_prefix'] == null
         ? null
@@ -1518,6 +1523,8 @@ Map<String, dynamic> _$_$_QuestionnaireItemToJson(
   writeNotNull('definition', instance.definition);
   writeNotNull('_definition', instance.definitionElement?.toJson());
   writeNotNull('code', instance.code?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('prefix', instance.prefix);
   writeNotNull('_prefix', instance.prefixElement?.toJson());
   writeNotNull('text', instance.text);

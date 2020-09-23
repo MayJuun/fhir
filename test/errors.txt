@@ -1,18 +1,2894 @@
 DSTU2
 ---------------------------------------------------------------------------
 
+File: './test/dstu2_examples/v2-tables.json'
 input: CHESTÂ  :: output:_$InvalidCode<String>:CHESTÂ 
 
+File: './test/dstu2_examples/v2-tables.json'
 input: KIDNÂ  :: output:_$InvalidCode<String>:KIDNÂ 
 
+File: './test/dstu2_examples/v2-tables.json'
 input:   :: output:_$InvalidCode<String>: 
 
+File: './test/dstu2_examples/v2-tables.json'
 input: Â  :: output:_$InvalidCode<String>:Â 
 
+File: './test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change.json'
 input: observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change :: output:_$InvalidId<String>:observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change
 
+File: './test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant.json'
 input: observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant :: output:_$InvalidId<String>:observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant
 
+File: './test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart.canonical.json'
 input: observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart :: output:_$InvalidId<String>:observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart
 
+File: './test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart.json'
 input: observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart :: output:_$InvalidId<String>:observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart
+
+File: './test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant.canonical.json'
+input: observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant :: output:_$InvalidId<String>:observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant
+
+File: './test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change.canonical.json'
+input: observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change :: output:_$InvalidId<String>:observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change
+
+R4
+---------------------------------------------------------------------------
+
+File: './test/r4_examples/v2-tables.json'
+input: CHESTÂ  :: output:_$InvalidCode<String>:CHESTÂ 
+
+File: './test/r4_examples/v2-tables.json'
+input: KIDNÂ  :: output:_$InvalidCode<String>:KIDNÂ 
+
+File: './test/r4_examples/v2-tables.json'
+input:   :: output:_$InvalidCode<String>: 
+
+File: './test/r4_examples/v2-tables.json'
+input: Â  :: output:_$InvalidCode<String>:Â 
+
+File: './test/r4_examples/questionnaireresponse-extensions-QuestionnaireResponse-item-subject.json'
+input: questionnaireresponse-extensions-QuestionnaireResponse-item-subject :: output:_$InvalidId<String>:questionnaireresponse-extensions-QuestionnaireResponse-item-subject
+
+STU3
+---------------------------------------------------------------------------
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2015-04-20T00:00:00+10:00 :: output:2015-04-19
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2010-01-29T00:00:00+11:00 :: output:2010-01-28
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-01-28T00:00:00+11:00 :: output:2016-01-27
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2017-03-10T09:44:54+11:00 :: output:2017-03-09
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2015-03-26T00:00:00+11:00 :: output:2015-03-25
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2015-08-31T09:04:04+10:00 :: output:2015-08-30
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2017-02-13T00:00:00+11:00 :: output:2017-02-12
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2010-08-26T00:00:00+10:00 :: output:2010-08-25
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2016-11-11T00:00:00+11:00 :: output:2016-11-10
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2017-02-19T00:00:00+11:00 :: output:2017-02-18
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+File: './test/stu3_examples/bundle-namingsystem-terminologies(terminologies).json'
+input: 2019-10-24T11:53:00+11:00 :: output:2019-10-24
+
+R5
+---------------------------------------------------------------------------
+
+File: './test/r5_examples/v2-tables.json'
+input: CHESTÂ  :: output:_$InvalidCode<String>:CHESTÂ 
+
+File: './test/r5_examples/v2-tables.json'
+input: KIDNÂ  :: output:_$InvalidCode<String>:KIDNÂ 
+
+File: './test/r5_examples/v2-tables.json'
+input:   :: output:_$InvalidCode<String>: 
+
+File: './test/r5_examples/v2-tables.json'
+input: Â  :: output:_$InvalidCode<String>:Â 
+
+File: './test/r5_examples/questionnaireresponse-extensions-QuestionnaireResponse-item-subject.json'
+input: questionnaireresponse-extensions-QuestionnaireResponse-item-subject :: output:_$InvalidId<String>:questionnaireresponse-extensions-QuestionnaireResponse-item-subject

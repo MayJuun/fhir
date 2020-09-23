@@ -8596,6 +8596,7 @@ class _$QuestionnaireItemTearOff {
       String definition,
       @JsonKey(name: '_definition') Element definitionElement,
       List<Coding> code,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       String prefix,
       @JsonKey(name: '_prefix') Element prefixElement,
       String text,
@@ -8640,6 +8641,7 @@ class _$QuestionnaireItemTearOff {
       definition: definition,
       definitionElement: definitionElement,
       code: code,
+      extension_: extension_,
       prefix: prefix,
       prefixElement: prefixElement,
       text: text,
@@ -8700,6 +8702,8 @@ mixin _$QuestionnaireItem {
   @JsonKey(name: '_definition')
   Element get definitionElement;
   List<Coding> get code;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
   String get prefix;
   @JsonKey(name: '_prefix')
   Element get prefixElement;
@@ -8770,6 +8774,7 @@ abstract class $QuestionnaireItemCopyWith<$Res> {
       String definition,
       @JsonKey(name: '_definition') Element definitionElement,
       List<Coding> code,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       String prefix,
       @JsonKey(name: '_prefix') Element prefixElement,
       String text,
@@ -8849,6 +8854,7 @@ class _$QuestionnaireItemCopyWithImpl<$Res>
     Object definition = freezed,
     Object definitionElement = freezed,
     Object code = freezed,
+    Object extension_ = freezed,
     Object prefix = freezed,
     Object prefixElement = freezed,
     Object text = freezed,
@@ -8899,6 +8905,9 @@ class _$QuestionnaireItemCopyWithImpl<$Res>
           ? _value.definitionElement
           : definitionElement as Element,
       code: code == freezed ? _value.code : code as List<Coding>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
       prefix: prefix == freezed ? _value.prefix : prefix as String,
       prefixElement: prefixElement == freezed
           ? _value.prefixElement
@@ -9227,6 +9236,7 @@ abstract class _$QuestionnaireItemCopyWith<$Res>
       String definition,
       @JsonKey(name: '_definition') Element definitionElement,
       List<Coding> code,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       String prefix,
       @JsonKey(name: '_prefix') Element prefixElement,
       String text,
@@ -9330,6 +9340,7 @@ class __$QuestionnaireItemCopyWithImpl<$Res>
     Object definition = freezed,
     Object definitionElement = freezed,
     Object code = freezed,
+    Object extension_ = freezed,
     Object prefix = freezed,
     Object prefixElement = freezed,
     Object text = freezed,
@@ -9380,6 +9391,9 @@ class __$QuestionnaireItemCopyWithImpl<$Res>
           ? _value.definitionElement
           : definitionElement as Element,
       code: code == freezed ? _value.code : code as List<Coding>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
       prefix: prefix == freezed ? _value.prefix : prefix as String,
       prefixElement: prefixElement == freezed
           ? _value.prefixElement
@@ -9485,6 +9499,7 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
       this.definition,
       @JsonKey(name: '_definition') this.definitionElement,
       this.code,
+      @JsonKey(name: 'extension') this.extension_,
       this.prefix,
       @JsonKey(name: '_prefix') this.prefixElement,
       this.text,
@@ -9540,6 +9555,9 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
   final Element definitionElement;
   @override
   final List<Coding> code;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
   @override
   final String prefix;
   @override
@@ -9635,7 +9653,7 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
 
   @override
   String toString() {
-    return 'QuestionnaireItem(linkId: $linkId, linkIdElement: $linkIdElement, definition: $definition, definitionElement: $definitionElement, code: $code, prefix: $prefix, prefixElement: $prefixElement, text: $text, textElement: $textElement, type: $type, typeElement: $typeElement, enableWhen: $enableWhen, required_: $required_, requiredElement: $requiredElement, repeats: $repeats, repeatsElement: $repeatsElement, readOnly: $readOnly, readOnlyElement: $readOnlyElement, maxLength: $maxLength, maxLengthElement: $maxLengthElement, options: $options, option: $option, initialBoolean: $initialBoolean, initialBooleanElement: $initialBooleanElement, initialDecimal: $initialDecimal, initialDecimalElement: $initialDecimalElement, initialInteger: $initialInteger, initialIntegerElement: $initialIntegerElement, initialDate: $initialDate, initialDateElement: $initialDateElement, initialDateTime: $initialDateTime, initialDateTimeElement: $initialDateTimeElement, initialTime: $initialTime, initialTimeElement: $initialTimeElement, initialString: $initialString, initialStringElement: $initialStringElement, initialUri: $initialUri, initialUriElement: $initialUriElement, initialAttachment: $initialAttachment, initialCoding: $initialCoding, initialQuantity: $initialQuantity, initialReference: $initialReference, item: $item)';
+    return 'QuestionnaireItem(linkId: $linkId, linkIdElement: $linkIdElement, definition: $definition, definitionElement: $definitionElement, code: $code, extension_: $extension_, prefix: $prefix, prefixElement: $prefixElement, text: $text, textElement: $textElement, type: $type, typeElement: $typeElement, enableWhen: $enableWhen, required_: $required_, requiredElement: $requiredElement, repeats: $repeats, repeatsElement: $repeatsElement, readOnly: $readOnly, readOnlyElement: $readOnlyElement, maxLength: $maxLength, maxLengthElement: $maxLengthElement, options: $options, option: $option, initialBoolean: $initialBoolean, initialBooleanElement: $initialBooleanElement, initialDecimal: $initialDecimal, initialDecimalElement: $initialDecimalElement, initialInteger: $initialInteger, initialIntegerElement: $initialIntegerElement, initialDate: $initialDate, initialDateElement: $initialDateElement, initialDateTime: $initialDateTime, initialDateTimeElement: $initialDateTimeElement, initialTime: $initialTime, initialTimeElement: $initialTimeElement, initialString: $initialString, initialStringElement: $initialStringElement, initialUri: $initialUri, initialUriElement: $initialUriElement, initialAttachment: $initialAttachment, initialCoding: $initialCoding, initialQuantity: $initialQuantity, initialReference: $initialReference, item: $item)';
   }
 
   @override
@@ -9655,6 +9673,9 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
                     .equals(other.definitionElement, definitionElement)) &&
             (identical(other.code, code) ||
                 const DeepCollectionEquality().equals(other.code, code)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
             (identical(other.prefix, prefix) ||
                 const DeepCollectionEquality().equals(other.prefix, prefix)) &&
             (identical(other.prefixElement, prefixElement) ||
@@ -9706,10 +9727,8 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
                 const DeepCollectionEquality()
                     .equals(other.initialBoolean, initialBoolean)) &&
             (identical(other.initialBooleanElement, initialBooleanElement) ||
-                const DeepCollectionEquality().equals(
-                    other.initialBooleanElement, initialBooleanElement)) &&
-            (identical(other.initialDecimal, initialDecimal) ||
-                const DeepCollectionEquality().equals(other.initialDecimal, initialDecimal)) &&
+                const DeepCollectionEquality().equals(other.initialBooleanElement, initialBooleanElement)) &&
+            (identical(other.initialDecimal, initialDecimal) || const DeepCollectionEquality().equals(other.initialDecimal, initialDecimal)) &&
             (identical(other.initialDecimalElement, initialDecimalElement) || const DeepCollectionEquality().equals(other.initialDecimalElement, initialDecimalElement)) &&
             (identical(other.initialInteger, initialInteger) || const DeepCollectionEquality().equals(other.initialInteger, initialInteger)) &&
             (identical(other.initialIntegerElement, initialIntegerElement) || const DeepCollectionEquality().equals(other.initialIntegerElement, initialIntegerElement)) &&
@@ -9738,6 +9757,7 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
       const DeepCollectionEquality().hash(definition) ^
       const DeepCollectionEquality().hash(definitionElement) ^
       const DeepCollectionEquality().hash(code) ^
+      const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(prefix) ^
       const DeepCollectionEquality().hash(prefixElement) ^
       const DeepCollectionEquality().hash(text) ^
@@ -9795,6 +9815,7 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
       String definition,
       @JsonKey(name: '_definition') Element definitionElement,
       List<Coding> code,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       String prefix,
       @JsonKey(name: '_prefix') Element prefixElement,
       String text,
@@ -9849,6 +9870,9 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
   Element get definitionElement;
   @override
   List<Coding> get code;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
   @override
   String get prefix;
   @override

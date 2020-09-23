@@ -12419,7 +12419,7 @@ class _$ImmunizationRecommendationRecommendationTearOff {
       List<ImmunizationRecommendationRecommendationDateCriterion> dateCriterion,
       ImmunizationRecommendationRecommendationProtocol protocol,
       List<Reference> supportingImmunization,
-      List<Reference> supportingPatientInfor}) {
+      List<Reference> supportingPatientInformation}) {
     return _ImmunizationRecommendationRecommendation(
       id: id,
       extension_: extension_,
@@ -12431,7 +12431,7 @@ class _$ImmunizationRecommendationRecommendationTearOff {
       dateCriterion: dateCriterion,
       protocol: protocol,
       supportingImmunization: supportingImmunization,
-      supportingPatientInfor: supportingPatientInfor,
+      supportingPatientInformation: supportingPatientInformation,
     );
   }
 
@@ -12462,7 +12462,7 @@ mixin _$ImmunizationRecommendationRecommendation {
   List<ImmunizationRecommendationRecommendationDateCriterion> get dateCriterion;
   ImmunizationRecommendationRecommendationProtocol get protocol;
   List<Reference> get supportingImmunization;
-  List<Reference> get supportingPatientInfor;
+  List<Reference> get supportingPatientInformation;
 
   Map<String, dynamic> toJson();
   $ImmunizationRecommendationRecommendationCopyWith<
@@ -12486,7 +12486,7 @@ abstract class $ImmunizationRecommendationRecommendationCopyWith<$Res> {
       List<ImmunizationRecommendationRecommendationDateCriterion> dateCriterion,
       ImmunizationRecommendationRecommendationProtocol protocol,
       List<Reference> supportingImmunization,
-      List<Reference> supportingPatientInfor});
+      List<Reference> supportingPatientInformation});
 
   $CodeableConceptCopyWith<$Res> get vaccineCode;
   $CodeableConceptCopyWith<$Res> get forecastStatus;
@@ -12515,7 +12515,7 @@ class _$ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
     Object dateCriterion = freezed,
     Object protocol = freezed,
     Object supportingImmunization = freezed,
-    Object supportingPatientInfor = freezed,
+    Object supportingPatientInformation = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -12544,9 +12544,9 @@ class _$ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
       supportingImmunization: supportingImmunization == freezed
           ? _value.supportingImmunization
           : supportingImmunization as List<Reference>,
-      supportingPatientInfor: supportingPatientInfor == freezed
-          ? _value.supportingPatientInfor
-          : supportingPatientInfor as List<Reference>,
+      supportingPatientInformation: supportingPatientInformation == freezed
+          ? _value.supportingPatientInformation
+          : supportingPatientInformation as List<Reference>,
     ));
   }
 
@@ -12601,7 +12601,7 @@ abstract class _$ImmunizationRecommendationRecommendationCopyWith<$Res>
       List<ImmunizationRecommendationRecommendationDateCriterion> dateCriterion,
       ImmunizationRecommendationRecommendationProtocol protocol,
       List<Reference> supportingImmunization,
-      List<Reference> supportingPatientInfor});
+      List<Reference> supportingPatientInformation});
 
   @override
   $CodeableConceptCopyWith<$Res> get vaccineCode;
@@ -12637,7 +12637,7 @@ class __$ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
     Object dateCriterion = freezed,
     Object protocol = freezed,
     Object supportingImmunization = freezed,
-    Object supportingPatientInfor = freezed,
+    Object supportingPatientInformation = freezed,
   }) {
     return _then(_ImmunizationRecommendationRecommendation(
       id: id == freezed ? _value.id : id as Id,
@@ -12666,9 +12666,9 @@ class __$ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
       supportingImmunization: supportingImmunization == freezed
           ? _value.supportingImmunization
           : supportingImmunization as List<Reference>,
-      supportingPatientInfor: supportingPatientInfor == freezed
-          ? _value.supportingPatientInfor
-          : supportingPatientInfor as List<Reference>,
+      supportingPatientInformation: supportingPatientInformation == freezed
+          ? _value.supportingPatientInformation
+          : supportingPatientInformation as List<Reference>,
     ));
   }
 }
@@ -12689,7 +12689,7 @@ class _$_ImmunizationRecommendationRecommendation
       this.dateCriterion,
       this.protocol,
       this.supportingImmunization,
-      this.supportingPatientInfor})
+      this.supportingPatientInformation})
       : assert(date != null),
         assert(vaccineCode != null),
         assert(forecastStatus != null),
@@ -12725,11 +12725,11 @@ class _$_ImmunizationRecommendationRecommendation
   @override
   final List<Reference> supportingImmunization;
   @override
-  final List<Reference> supportingPatientInfor;
+  final List<Reference> supportingPatientInformation;
 
   @override
   String toString() {
-    return 'ImmunizationRecommendationRecommendation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, date: $date, vaccineCode: $vaccineCode, doseNumber: $doseNumber, forecastStatus: $forecastStatus, dateCriterion: $dateCriterion, protocol: $protocol, supportingImmunization: $supportingImmunization, supportingPatientInfor: $supportingPatientInfor)';
+    return 'ImmunizationRecommendationRecommendation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, date: $date, vaccineCode: $vaccineCode, doseNumber: $doseNumber, forecastStatus: $forecastStatus, dateCriterion: $dateCriterion, protocol: $protocol, supportingImmunization: $supportingImmunization, supportingPatientInformation: $supportingPatientInformation)';
   }
 
   @override
@@ -12764,9 +12764,11 @@ class _$_ImmunizationRecommendationRecommendation
             (identical(other.supportingImmunization, supportingImmunization) ||
                 const DeepCollectionEquality().equals(
                     other.supportingImmunization, supportingImmunization)) &&
-            (identical(other.supportingPatientInfor, supportingPatientInfor) ||
+            (identical(other.supportingPatientInformation,
+                    supportingPatientInformation) ||
                 const DeepCollectionEquality().equals(
-                    other.supportingPatientInfor, supportingPatientInfor)));
+                    other.supportingPatientInformation,
+                    supportingPatientInformation)));
   }
 
   @override
@@ -12782,7 +12784,7 @@ class _$_ImmunizationRecommendationRecommendation
       const DeepCollectionEquality().hash(dateCriterion) ^
       const DeepCollectionEquality().hash(protocol) ^
       const DeepCollectionEquality().hash(supportingImmunization) ^
-      const DeepCollectionEquality().hash(supportingPatientInfor);
+      const DeepCollectionEquality().hash(supportingPatientInformation);
 
   @override
   _$ImmunizationRecommendationRecommendationCopyWith<
@@ -12800,18 +12802,18 @@ abstract class _ImmunizationRecommendationRecommendation
     extends ImmunizationRecommendationRecommendation {
   _ImmunizationRecommendationRecommendation._() : super._();
   factory _ImmunizationRecommendationRecommendation(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required @JsonKey(required: true) FhirDateTime date,
-      @required @JsonKey(required: true) CodeableConcept vaccineCode,
-      PositiveInt doseNumber,
-      @required @JsonKey(required: true) CodeableConcept forecastStatus,
-      List<ImmunizationRecommendationRecommendationDateCriterion> dateCriterion,
-      ImmunizationRecommendationRecommendationProtocol protocol,
-      List<Reference> supportingImmunization,
-      List<Reference>
-          supportingPatientInfor}) = _$_ImmunizationRecommendationRecommendation;
+          {Id id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          @required @JsonKey(required: true) FhirDateTime date,
+          @required @JsonKey(required: true) CodeableConcept vaccineCode,
+          PositiveInt doseNumber,
+          @required @JsonKey(required: true) CodeableConcept forecastStatus,
+          List<ImmunizationRecommendationRecommendationDateCriterion> dateCriterion,
+          ImmunizationRecommendationRecommendationProtocol protocol,
+          List<Reference> supportingImmunization,
+          List<Reference> supportingPatientInformation}) =
+      _$_ImmunizationRecommendationRecommendation;
 
   factory _ImmunizationRecommendationRecommendation.fromJson(
           Map<String, dynamic> json) =
@@ -12842,7 +12844,7 @@ abstract class _ImmunizationRecommendationRecommendation
   @override
   List<Reference> get supportingImmunization;
   @override
-  List<Reference> get supportingPatientInfor;
+  List<Reference> get supportingPatientInformation;
   @override
   _$ImmunizationRecommendationRecommendationCopyWith<
       _ImmunizationRecommendationRecommendation> get copyWith;

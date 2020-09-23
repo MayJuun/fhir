@@ -487,6 +487,7 @@ abstract class ElementDefinitionType implements _$ElementDefinitionType {
     FhirUri code,
     @JsonKey(name: '_code') Element codeElement,
     List<Canonical> profile,
+    @JsonKey(name: '_profile') List<Element> profileElement,
     List<Canonical> targetProfile,
     List<ElementDefinitionTypeAggregation> aggregation,
     @JsonKey(name: '_aggregation') List<Element> aggregationElement,
