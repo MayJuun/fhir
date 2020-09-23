@@ -18346,7 +18346,7 @@ class _$ElementDefinitionTypeTearOff {
           Element codeElement,
       List<Canonical> profile,
       @JsonKey(name: '_profile')
-          Element profileElement,
+          List<Element> profileElement,
       List<Canonical> targetProfile,
       List<ElementDefinitionTypeAggregation> aggregation,
       @JsonKey(name: '_aggregation')
@@ -18392,7 +18392,7 @@ mixin _$ElementDefinitionType {
   Element get codeElement;
   List<Canonical> get profile;
   @JsonKey(name: '_profile')
-  Element get profileElement;
+  List<Element> get profileElement;
   List<Canonical> get targetProfile;
   List<ElementDefinitionTypeAggregation> get aggregation;
   @JsonKey(name: '_aggregation')
@@ -18421,7 +18421,7 @@ abstract class $ElementDefinitionTypeCopyWith<$Res> {
           Element codeElement,
       List<Canonical> profile,
       @JsonKey(name: '_profile')
-          Element profileElement,
+          List<Element> profileElement,
       List<Canonical> targetProfile,
       List<ElementDefinitionTypeAggregation> aggregation,
       @JsonKey(name: '_aggregation')
@@ -18432,7 +18432,6 @@ abstract class $ElementDefinitionTypeCopyWith<$Res> {
           Element versioningElement});
 
   $ElementCopyWith<$Res> get codeElement;
-  $ElementCopyWith<$Res> get profileElement;
   $ElementCopyWith<$Res> get versioningElement;
 }
 
@@ -18474,7 +18473,7 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res>
       profile: profile == freezed ? _value.profile : profile as List<Canonical>,
       profileElement: profileElement == freezed
           ? _value.profileElement
-          : profileElement as Element,
+          : profileElement as List<Element>,
       targetProfile: targetProfile == freezed
           ? _value.targetProfile
           : targetProfile as List<Canonical>,
@@ -18500,16 +18499,6 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res>
     }
     return $ElementCopyWith<$Res>(_value.codeElement, (value) {
       return _then(_value.copyWith(codeElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get profileElement {
-    if (_value.profileElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.profileElement, (value) {
-      return _then(_value.copyWith(profileElement: value));
     });
   }
 
@@ -18541,7 +18530,7 @@ abstract class _$ElementDefinitionTypeCopyWith<$Res>
           Element codeElement,
       List<Canonical> profile,
       @JsonKey(name: '_profile')
-          Element profileElement,
+          List<Element> profileElement,
       List<Canonical> targetProfile,
       List<ElementDefinitionTypeAggregation> aggregation,
       @JsonKey(name: '_aggregation')
@@ -18553,8 +18542,6 @@ abstract class _$ElementDefinitionTypeCopyWith<$Res>
 
   @override
   $ElementCopyWith<$Res> get codeElement;
-  @override
-  $ElementCopyWith<$Res> get profileElement;
   @override
   $ElementCopyWith<$Res> get versioningElement;
 }
@@ -18599,7 +18586,7 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
       profile: profile == freezed ? _value.profile : profile as List<Canonical>,
       profileElement: profileElement == freezed
           ? _value.profileElement
-          : profileElement as Element,
+          : profileElement as List<Element>,
       targetProfile: targetProfile == freezed
           ? _value.targetProfile
           : targetProfile as List<Canonical>,
@@ -18663,7 +18650,7 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
   final List<Canonical> profile;
   @override
   @JsonKey(name: '_profile')
-  final Element profileElement;
+  final List<Element> profileElement;
   @override
   final List<Canonical> targetProfile;
   @override
@@ -18762,7 +18749,7 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
           Element codeElement,
       List<Canonical> profile,
       @JsonKey(name: '_profile')
-          Element profileElement,
+          List<Element> profileElement,
       List<Canonical> targetProfile,
       List<ElementDefinitionTypeAggregation> aggregation,
       @JsonKey(name: '_aggregation')
@@ -18791,7 +18778,7 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
   List<Canonical> get profile;
   @override
   @JsonKey(name: '_profile')
-  Element get profileElement;
+  List<Element> get profileElement;
   @override
   List<Canonical> get targetProfile;
   @override

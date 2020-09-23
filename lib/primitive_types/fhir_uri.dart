@@ -14,18 +14,6 @@ class FhirUri extends PrimitiveObject<Uri> {
     );
   }
 
-  @override
-  String toString() => result();
-
-  @override
-  dynamic toJson() => result();
-
-  @override
-  dynamic result() => value.fold(
-        (ifLeft) => '${ifLeft.runtimeType}:${ifLeft.failedValue.toString()}',
-        (isRight) => isRight.toString(),
-      );
-
   const FhirUri._(this.value);
 
   factory FhirUri.fromJson(String json) => FhirUri(json);

@@ -109,7 +109,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
     @JsonKey(name: '_defaultValueTime') Element defaultValueTimeElement,
     Code defaultValueCode,
     @JsonKey(name: '_defaultValueCode') Element defaultValueCodeElement,
-    Id defaultValueOid,
+    Oid defaultValueOid,
     @JsonKey(name: '_defaultValueOid') Element defaultValueOidElement,
     Id defaultValueUuid,
     @JsonKey(name: '_defaultValueUuid') Element defaultValueUuidElement,
@@ -185,7 +185,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
     @JsonKey(name: '_fixedTime') Element fixedTimeElement,
     Code fixedCode,
     @JsonKey(name: '_fixedCode') Element fixedCodeElement,
-    Id fixedOid,
+    Oid fixedOid,
     @JsonKey(name: '_fixedOid') Element fixedOidElement,
     Id fixedUuid,
     @JsonKey(name: '_fixedUuid') Element fixedUuidElement,
@@ -255,7 +255,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
     @JsonKey(name: '_patternTime') Element patternTimeElement,
     Code patternCode,
     @JsonKey(name: '_patternCode') Element patternCodeElement,
-    Id patternOid,
+    Oid patternOid,
     @JsonKey(name: '_patternOid') Element patternOidElement,
     Id patternUuid,
     @JsonKey(name: '_patternUuid') Element patternUuidElement,
@@ -409,6 +409,7 @@ abstract class ElementDefinitionBase implements _$ElementDefinitionBase {
 abstract class ElementDefinitionType implements _$ElementDefinitionType {
   ElementDefinitionType._();
   factory ElementDefinitionType({
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     String code,
     @JsonKey(name: '_code') Element codeElement,
     String profile,
@@ -453,7 +454,7 @@ abstract class ElementDefinitionExample implements _$ElementDefinitionExample {
     @JsonKey(name: '_valueTime') Element valueTimeElement,
     Code valueCode,
     @JsonKey(name: '_valueCode') Element valueCodeElement,
-    Id valueOid,
+    Oid valueOid,
     @JsonKey(name: '_valueOid') Element valueOidElement,
     Id valueUuid,
     @JsonKey(name: '_valueUuid') Element valueUuidElement,

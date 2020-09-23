@@ -2326,7 +2326,8 @@ class _$CodeSystemConceptTearOff {
 
 // ignore: unused_element
   _CodeSystemConcept call(
-      {Code code,
+      {@JsonKey(name: 'extension') List<FhirExtension> extension_,
+      Code code,
       @JsonKey(name: '_code') Element codeElement,
       String display,
       @JsonKey(name: '_display') Element displayElement,
@@ -2336,6 +2337,7 @@ class _$CodeSystemConceptTearOff {
       List<CodeSystemProperty1> property,
       List<CodeSystemConcept> concept}) {
     return _CodeSystemConcept(
+      extension_: extension_,
       code: code,
       codeElement: codeElement,
       display: display,
@@ -2360,6 +2362,8 @@ const $CodeSystemConcept = _$CodeSystemConceptTearOff();
 
 /// @nodoc
 mixin _$CodeSystemConcept {
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
   Code get code;
   @JsonKey(name: '_code')
   Element get codeElement;
@@ -2383,7 +2387,8 @@ abstract class $CodeSystemConceptCopyWith<$Res> {
           CodeSystemConcept value, $Res Function(CodeSystemConcept) then) =
       _$CodeSystemConceptCopyWithImpl<$Res>;
   $Res call(
-      {Code code,
+      {@JsonKey(name: 'extension') List<FhirExtension> extension_,
+      Code code,
       @JsonKey(name: '_code') Element codeElement,
       String display,
       @JsonKey(name: '_display') Element displayElement,
@@ -2409,6 +2414,7 @@ class _$CodeSystemConceptCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object extension_ = freezed,
     Object code = freezed,
     Object codeElement = freezed,
     Object display = freezed,
@@ -2420,6 +2426,9 @@ class _$CodeSystemConceptCopyWithImpl<$Res>
     Object concept = freezed,
   }) {
     return _then(_value.copyWith(
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
       code: code == freezed ? _value.code : code as Code,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
@@ -2483,7 +2492,8 @@ abstract class _$CodeSystemConceptCopyWith<$Res>
       __$CodeSystemConceptCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Code code,
+      {@JsonKey(name: 'extension') List<FhirExtension> extension_,
+      Code code,
       @JsonKey(name: '_code') Element codeElement,
       String display,
       @JsonKey(name: '_display') Element displayElement,
@@ -2514,6 +2524,7 @@ class __$CodeSystemConceptCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object extension_ = freezed,
     Object code = freezed,
     Object codeElement = freezed,
     Object display = freezed,
@@ -2525,6 +2536,9 @@ class __$CodeSystemConceptCopyWithImpl<$Res>
     Object concept = freezed,
   }) {
     return _then(_CodeSystemConcept(
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
       code: code == freezed ? _value.code : code as Code,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
@@ -2555,7 +2569,8 @@ class __$CodeSystemConceptCopyWithImpl<$Res>
 /// @nodoc
 class _$_CodeSystemConcept extends _CodeSystemConcept {
   _$_CodeSystemConcept(
-      {this.code,
+      {@JsonKey(name: 'extension') this.extension_,
+      this.code,
       @JsonKey(name: '_code') this.codeElement,
       this.display,
       @JsonKey(name: '_display') this.displayElement,
@@ -2569,6 +2584,9 @@ class _$_CodeSystemConcept extends _CodeSystemConcept {
   factory _$_CodeSystemConcept.fromJson(Map<String, dynamic> json) =>
       _$_$_CodeSystemConceptFromJson(json);
 
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
   @override
   final Code code;
   @override
@@ -2593,13 +2611,16 @@ class _$_CodeSystemConcept extends _CodeSystemConcept {
 
   @override
   String toString() {
-    return 'CodeSystemConcept(code: $code, codeElement: $codeElement, display: $display, displayElement: $displayElement, definition: $definition, definitionElement: $definitionElement, designation: $designation, property: $property, concept: $concept)';
+    return 'CodeSystemConcept(extension_: $extension_, code: $code, codeElement: $codeElement, display: $display, displayElement: $displayElement, definition: $definition, definitionElement: $definitionElement, designation: $designation, property: $property, concept: $concept)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _CodeSystemConcept &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
             (identical(other.code, code) ||
                 const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.codeElement, codeElement) ||
@@ -2630,6 +2651,7 @@ class _$_CodeSystemConcept extends _CodeSystemConcept {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(codeElement) ^
       const DeepCollectionEquality().hash(display) ^
@@ -2653,7 +2675,8 @@ class _$_CodeSystemConcept extends _CodeSystemConcept {
 abstract class _CodeSystemConcept extends CodeSystemConcept {
   _CodeSystemConcept._() : super._();
   factory _CodeSystemConcept(
-      {Code code,
+      {@JsonKey(name: 'extension') List<FhirExtension> extension_,
+      Code code,
       @JsonKey(name: '_code') Element codeElement,
       String display,
       @JsonKey(name: '_display') Element displayElement,
@@ -2666,6 +2689,9 @@ abstract class _CodeSystemConcept extends CodeSystemConcept {
   factory _CodeSystemConcept.fromJson(Map<String, dynamic> json) =
       _$_CodeSystemConcept.fromJson;
 
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
   @override
   Code get code;
   @override
@@ -12892,7 +12918,8 @@ class _$ValueSetIncludeTearOff {
 
 // ignore: unused_element
   _ValueSetInclude call(
-      {String system,
+      {@JsonKey(name: 'extension') List<FhirExtension> extension_,
+      String system,
       @JsonKey(name: '_system') Element systemElement,
       String version,
       @JsonKey(name: '_version') Element versionElement,
@@ -12901,6 +12928,7 @@ class _$ValueSetIncludeTearOff {
       List<String> valueSet,
       @JsonKey(name: '_valueSet') List<Element> valueSetElement}) {
     return _ValueSetInclude(
+      extension_: extension_,
       system: system,
       systemElement: systemElement,
       version: version,
@@ -12924,6 +12952,8 @@ const $ValueSetInclude = _$ValueSetIncludeTearOff();
 
 /// @nodoc
 mixin _$ValueSetInclude {
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
   String get system;
   @JsonKey(name: '_system')
   Element get systemElement;
@@ -12946,7 +12976,8 @@ abstract class $ValueSetIncludeCopyWith<$Res> {
           ValueSetInclude value, $Res Function(ValueSetInclude) then) =
       _$ValueSetIncludeCopyWithImpl<$Res>;
   $Res call(
-      {String system,
+      {@JsonKey(name: 'extension') List<FhirExtension> extension_,
+      String system,
       @JsonKey(name: '_system') Element systemElement,
       String version,
       @JsonKey(name: '_version') Element versionElement,
@@ -12970,6 +13001,7 @@ class _$ValueSetIncludeCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object extension_ = freezed,
     Object system = freezed,
     Object systemElement = freezed,
     Object version = freezed,
@@ -12980,6 +13012,9 @@ class _$ValueSetIncludeCopyWithImpl<$Res>
     Object valueSetElement = freezed,
   }) {
     return _then(_value.copyWith(
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
       system: system == freezed ? _value.system : system as String,
       systemElement: systemElement == freezed
           ? _value.systemElement
@@ -13030,7 +13065,8 @@ abstract class _$ValueSetIncludeCopyWith<$Res>
       __$ValueSetIncludeCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String system,
+      {@JsonKey(name: 'extension') List<FhirExtension> extension_,
+      String system,
       @JsonKey(name: '_system') Element systemElement,
       String version,
       @JsonKey(name: '_version') Element versionElement,
@@ -13058,6 +13094,7 @@ class __$ValueSetIncludeCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object extension_ = freezed,
     Object system = freezed,
     Object systemElement = freezed,
     Object version = freezed,
@@ -13068,6 +13105,9 @@ class __$ValueSetIncludeCopyWithImpl<$Res>
     Object valueSetElement = freezed,
   }) {
     return _then(_ValueSetInclude(
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
       system: system == freezed ? _value.system : system as String,
       systemElement: systemElement == freezed
           ? _value.systemElement
@@ -13095,7 +13135,8 @@ class __$ValueSetIncludeCopyWithImpl<$Res>
 /// @nodoc
 class _$_ValueSetInclude extends _ValueSetInclude {
   _$_ValueSetInclude(
-      {this.system,
+      {@JsonKey(name: 'extension') this.extension_,
+      this.system,
       @JsonKey(name: '_system') this.systemElement,
       this.version,
       @JsonKey(name: '_version') this.versionElement,
@@ -13108,6 +13149,9 @@ class _$_ValueSetInclude extends _ValueSetInclude {
   factory _$_ValueSetInclude.fromJson(Map<String, dynamic> json) =>
       _$_$_ValueSetIncludeFromJson(json);
 
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
   @override
   final String system;
   @override
@@ -13130,13 +13174,16 @@ class _$_ValueSetInclude extends _ValueSetInclude {
 
   @override
   String toString() {
-    return 'ValueSetInclude(system: $system, systemElement: $systemElement, version: $version, versionElement: $versionElement, concept: $concept, filter: $filter, valueSet: $valueSet, valueSetElement: $valueSetElement)';
+    return 'ValueSetInclude(extension_: $extension_, system: $system, systemElement: $systemElement, version: $version, versionElement: $versionElement, concept: $concept, filter: $filter, valueSet: $valueSet, valueSetElement: $valueSetElement)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _ValueSetInclude &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
             (identical(other.system, system) ||
                 const DeepCollectionEquality().equals(other.system, system)) &&
             (identical(other.systemElement, systemElement) ||
@@ -13164,6 +13211,7 @@ class _$_ValueSetInclude extends _ValueSetInclude {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(system) ^
       const DeepCollectionEquality().hash(systemElement) ^
       const DeepCollectionEquality().hash(version) ^
@@ -13186,7 +13234,8 @@ class _$_ValueSetInclude extends _ValueSetInclude {
 abstract class _ValueSetInclude extends ValueSetInclude {
   _ValueSetInclude._() : super._();
   factory _ValueSetInclude(
-          {String system,
+          {@JsonKey(name: 'extension') List<FhirExtension> extension_,
+          String system,
           @JsonKey(name: '_system') Element systemElement,
           String version,
           @JsonKey(name: '_version') Element versionElement,
@@ -13199,6 +13248,9 @@ abstract class _ValueSetInclude extends ValueSetInclude {
   factory _ValueSetInclude.fromJson(Map<String, dynamic> json) =
       _$_ValueSetInclude.fromJson;
 
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
   @override
   String get system;
   @override

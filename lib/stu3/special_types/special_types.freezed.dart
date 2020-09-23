@@ -907,7 +907,7 @@ class _$ElementDefinitionTearOff {
       Code defaultValueCode,
       @JsonKey(name: '_defaultValueCode')
           Element defaultValueCodeElement,
-      Id defaultValueOid,
+      Oid defaultValueOid,
       @JsonKey(name: '_defaultValueOid')
           Element defaultValueOidElement,
       Id defaultValueUuid,
@@ -1000,7 +1000,7 @@ class _$ElementDefinitionTearOff {
       Code fixedCode,
       @JsonKey(name: '_fixedCode')
           Element fixedCodeElement,
-      Id fixedOid,
+      Oid fixedOid,
       @JsonKey(name: '_fixedOid')
           Element fixedOidElement,
       Id fixedUuid,
@@ -1087,7 +1087,7 @@ class _$ElementDefinitionTearOff {
       Code patternCode,
       @JsonKey(name: '_patternCode')
           Element patternCodeElement,
-      Id patternOid,
+      Oid patternOid,
       @JsonKey(name: '_patternOid')
           Element patternOidElement,
       Id patternUuid,
@@ -1594,7 +1594,7 @@ mixin _$ElementDefinition {
   Code get defaultValueCode;
   @JsonKey(name: '_defaultValueCode')
   Element get defaultValueCodeElement;
-  Id get defaultValueOid;
+  Oid get defaultValueOid;
   @JsonKey(name: '_defaultValueOid')
   Element get defaultValueOidElement;
   Id get defaultValueUuid;
@@ -1687,7 +1687,7 @@ mixin _$ElementDefinition {
   Code get fixedCode;
   @JsonKey(name: '_fixedCode')
   Element get fixedCodeElement;
-  Id get fixedOid;
+  Oid get fixedOid;
   @JsonKey(name: '_fixedOid')
   Element get fixedOidElement;
   Id get fixedUuid;
@@ -1774,7 +1774,7 @@ mixin _$ElementDefinition {
   Code get patternCode;
   @JsonKey(name: '_patternCode')
   Element get patternCodeElement;
-  Id get patternOid;
+  Oid get patternOid;
   @JsonKey(name: '_patternOid')
   Element get patternOidElement;
   Id get patternUuid;
@@ -1984,7 +1984,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Code defaultValueCode,
       @JsonKey(name: '_defaultValueCode')
           Element defaultValueCodeElement,
-      Id defaultValueOid,
+      Oid defaultValueOid,
       @JsonKey(name: '_defaultValueOid')
           Element defaultValueOidElement,
       Id defaultValueUuid,
@@ -2077,7 +2077,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Code fixedCode,
       @JsonKey(name: '_fixedCode')
           Element fixedCodeElement,
-      Id fixedOid,
+      Oid fixedOid,
       @JsonKey(name: '_fixedOid')
           Element fixedOidElement,
       Id fixedUuid,
@@ -2164,7 +2164,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Code patternCode,
       @JsonKey(name: '_patternCode')
           Element patternCodeElement,
-      Id patternOid,
+      Oid patternOid,
       @JsonKey(name: '_patternOid')
           Element patternOidElement,
       Id patternUuid,
@@ -2922,7 +2922,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           : defaultValueCodeElement as Element,
       defaultValueOid: defaultValueOid == freezed
           ? _value.defaultValueOid
-          : defaultValueOid as Id,
+          : defaultValueOid as Oid,
       defaultValueOidElement: defaultValueOidElement == freezed
           ? _value.defaultValueOidElement
           : defaultValueOidElement as Element,
@@ -3134,7 +3134,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
       fixedCodeElement: fixedCodeElement == freezed
           ? _value.fixedCodeElement
           : fixedCodeElement as Element,
-      fixedOid: fixedOid == freezed ? _value.fixedOid : fixedOid as Id,
+      fixedOid: fixedOid == freezed ? _value.fixedOid : fixedOid as Oid,
       fixedOidElement: fixedOidElement == freezed
           ? _value.fixedOidElement
           : fixedOidElement as Element,
@@ -3322,7 +3322,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
       patternCodeElement: patternCodeElement == freezed
           ? _value.patternCodeElement
           : patternCodeElement as Element,
-      patternOid: patternOid == freezed ? _value.patternOid : patternOid as Id,
+      patternOid: patternOid == freezed ? _value.patternOid : patternOid as Oid,
       patternOidElement: patternOidElement == freezed
           ? _value.patternOidElement
           : patternOidElement as Element,
@@ -5658,7 +5658,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       Code defaultValueCode,
       @JsonKey(name: '_defaultValueCode')
           Element defaultValueCodeElement,
-      Id defaultValueOid,
+      Oid defaultValueOid,
       @JsonKey(name: '_defaultValueOid')
           Element defaultValueOidElement,
       Id defaultValueUuid,
@@ -5751,7 +5751,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       Code fixedCode,
       @JsonKey(name: '_fixedCode')
           Element fixedCodeElement,
-      Id fixedOid,
+      Oid fixedOid,
       @JsonKey(name: '_fixedOid')
           Element fixedOidElement,
       Id fixedUuid,
@@ -5838,7 +5838,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       Code patternCode,
       @JsonKey(name: '_patternCode')
           Element patternCodeElement,
-      Id patternOid,
+      Oid patternOid,
       @JsonKey(name: '_patternOid')
           Element patternOidElement,
       Id patternUuid,
@@ -6794,7 +6794,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           : defaultValueCodeElement as Element,
       defaultValueOid: defaultValueOid == freezed
           ? _value.defaultValueOid
-          : defaultValueOid as Id,
+          : defaultValueOid as Oid,
       defaultValueOidElement: defaultValueOidElement == freezed
           ? _value.defaultValueOidElement
           : defaultValueOidElement as Element,
@@ -7006,7 +7006,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
       fixedCodeElement: fixedCodeElement == freezed
           ? _value.fixedCodeElement
           : fixedCodeElement as Element,
-      fixedOid: fixedOid == freezed ? _value.fixedOid : fixedOid as Id,
+      fixedOid: fixedOid == freezed ? _value.fixedOid : fixedOid as Oid,
       fixedOidElement: fixedOidElement == freezed
           ? _value.fixedOidElement
           : fixedOidElement as Element,
@@ -7194,7 +7194,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
       patternCodeElement: patternCodeElement == freezed
           ? _value.patternCodeElement
           : patternCodeElement as Element,
-      patternOid: patternOid == freezed ? _value.patternOid : patternOid as Id,
+      patternOid: patternOid == freezed ? _value.patternOid : patternOid as Oid,
       patternOidElement: patternOidElement == freezed
           ? _value.patternOidElement
           : patternOidElement as Element,
@@ -7981,7 +7981,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_defaultValueCode')
   final Element defaultValueCodeElement;
   @override
-  final Id defaultValueOid;
+  final Oid defaultValueOid;
   @override
   @JsonKey(name: '_defaultValueOid')
   final Element defaultValueOidElement;
@@ -8148,7 +8148,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_fixedCode')
   final Element fixedCodeElement;
   @override
-  final Id fixedOid;
+  final Oid fixedOid;
   @override
   @JsonKey(name: '_fixedOid')
   final Element fixedOidElement;
@@ -8305,7 +8305,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_patternCode')
   final Element patternCodeElement;
   @override
-  final Id patternOid;
+  final Oid patternOid;
   @override
   @JsonKey(name: '_patternOid')
   final Element patternOidElement;
@@ -9255,7 +9255,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       Code defaultValueCode,
       @JsonKey(name: '_defaultValueCode')
           Element defaultValueCodeElement,
-      Id defaultValueOid,
+      Oid defaultValueOid,
       @JsonKey(name: '_defaultValueOid')
           Element defaultValueOidElement,
       Id defaultValueUuid,
@@ -9348,7 +9348,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       Code fixedCode,
       @JsonKey(name: '_fixedCode')
           Element fixedCodeElement,
-      Id fixedOid,
+      Oid fixedOid,
       @JsonKey(name: '_fixedOid')
           Element fixedOidElement,
       Id fixedUuid,
@@ -9435,7 +9435,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       Code patternCode,
       @JsonKey(name: '_patternCode')
           Element patternCodeElement,
-      Id patternOid,
+      Oid patternOid,
       @JsonKey(name: '_patternOid')
           Element patternOidElement,
       Id patternUuid,
@@ -9691,7 +9691,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_defaultValueCode')
   Element get defaultValueCodeElement;
   @override
-  Id get defaultValueOid;
+  Oid get defaultValueOid;
   @override
   @JsonKey(name: '_defaultValueOid')
   Element get defaultValueOidElement;
@@ -9858,7 +9858,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_fixedCode')
   Element get fixedCodeElement;
   @override
-  Id get fixedOid;
+  Oid get fixedOid;
   @override
   @JsonKey(name: '_fixedOid')
   Element get fixedOidElement;
@@ -10015,7 +10015,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_patternCode')
   Element get patternCodeElement;
   @override
-  Id get patternOid;
+  Oid get patternOid;
   @override
   @JsonKey(name: '_patternOid')
   Element get patternOidElement;
@@ -11150,7 +11150,8 @@ class _$ElementDefinitionTypeTearOff {
 
 // ignore: unused_element
   _ElementDefinitionType call(
-      {String code,
+      {@JsonKey(name: 'extension') List<FhirExtension> extension_,
+      String code,
       @JsonKey(name: '_code') Element codeElement,
       String profile,
       @JsonKey(name: '_profile') Element profileElement,
@@ -11161,6 +11162,7 @@ class _$ElementDefinitionTypeTearOff {
       ElementDefinitionTypeVersioning versioning,
       @JsonKey(name: '_versioning') Element versioningElement}) {
     return _ElementDefinitionType(
+      extension_: extension_,
       code: code,
       codeElement: codeElement,
       profile: profile,
@@ -11186,6 +11188,8 @@ const $ElementDefinitionType = _$ElementDefinitionTypeTearOff();
 
 /// @nodoc
 mixin _$ElementDefinitionType {
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
   String get code;
   @JsonKey(name: '_code')
   Element get codeElement;
@@ -11212,7 +11216,8 @@ abstract class $ElementDefinitionTypeCopyWith<$Res> {
           $Res Function(ElementDefinitionType) then) =
       _$ElementDefinitionTypeCopyWithImpl<$Res>;
   $Res call(
-      {String code,
+      {@JsonKey(name: 'extension') List<FhirExtension> extension_,
+      String code,
       @JsonKey(name: '_code') Element codeElement,
       String profile,
       @JsonKey(name: '_profile') Element profileElement,
@@ -11240,6 +11245,7 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object extension_ = freezed,
     Object code = freezed,
     Object codeElement = freezed,
     Object profile = freezed,
@@ -11252,6 +11258,9 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res>
     Object versioningElement = freezed,
   }) {
     return _then(_value.copyWith(
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
       code: code == freezed ? _value.code : code as String,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
@@ -11329,7 +11338,8 @@ abstract class _$ElementDefinitionTypeCopyWith<$Res>
       __$ElementDefinitionTypeCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String code,
+      {@JsonKey(name: 'extension') List<FhirExtension> extension_,
+      String code,
       @JsonKey(name: '_code') Element codeElement,
       String profile,
       @JsonKey(name: '_profile') Element profileElement,
@@ -11363,6 +11373,7 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object extension_ = freezed,
     Object code = freezed,
     Object codeElement = freezed,
     Object profile = freezed,
@@ -11375,6 +11386,9 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
     Object versioningElement = freezed,
   }) {
     return _then(_ElementDefinitionType(
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
       code: code == freezed ? _value.code : code as String,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
@@ -11409,7 +11423,8 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
 /// @nodoc
 class _$_ElementDefinitionType extends _ElementDefinitionType {
   _$_ElementDefinitionType(
-      {this.code,
+      {@JsonKey(name: 'extension') this.extension_,
+      this.code,
       @JsonKey(name: '_code') this.codeElement,
       this.profile,
       @JsonKey(name: '_profile') this.profileElement,
@@ -11424,6 +11439,9 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
   factory _$_ElementDefinitionType.fromJson(Map<String, dynamic> json) =>
       _$_$_ElementDefinitionTypeFromJson(json);
 
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
   @override
   final String code;
   @override
@@ -11452,13 +11470,16 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
 
   @override
   String toString() {
-    return 'ElementDefinitionType(code: $code, codeElement: $codeElement, profile: $profile, profileElement: $profileElement, targetProfile: $targetProfile, targetProfileElement: $targetProfileElement, aggregation: $aggregation, aggregationElement: $aggregationElement, versioning: $versioning, versioningElement: $versioningElement)';
+    return 'ElementDefinitionType(extension_: $extension_, code: $code, codeElement: $codeElement, profile: $profile, profileElement: $profileElement, targetProfile: $targetProfile, targetProfileElement: $targetProfileElement, aggregation: $aggregation, aggregationElement: $aggregationElement, versioning: $versioning, versioningElement: $versioningElement)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _ElementDefinitionType &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
             (identical(other.code, code) ||
                 const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.codeElement, codeElement) ||
@@ -11493,6 +11514,7 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(codeElement) ^
       const DeepCollectionEquality().hash(profile) ^
@@ -11518,7 +11540,8 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
 abstract class _ElementDefinitionType extends ElementDefinitionType {
   _ElementDefinitionType._() : super._();
   factory _ElementDefinitionType(
-          {String code,
+          {@JsonKey(name: 'extension') List<FhirExtension> extension_,
+          String code,
           @JsonKey(name: '_code') Element codeElement,
           String profile,
           @JsonKey(name: '_profile') Element profileElement,
@@ -11533,6 +11556,9 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
   factory _ElementDefinitionType.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionType.fromJson;
 
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
   @override
   String get code;
   @override
@@ -11597,7 +11623,7 @@ class _$ElementDefinitionExampleTearOff {
       @JsonKey(name: '_valueTime') Element valueTimeElement,
       Code valueCode,
       @JsonKey(name: '_valueCode') Element valueCodeElement,
-      Id valueOid,
+      Oid valueOid,
       @JsonKey(name: '_valueOid') Element valueOidElement,
       Id valueUuid,
       @JsonKey(name: '_valueUuid') Element valueUuidElement,
@@ -11769,7 +11795,7 @@ mixin _$ElementDefinitionExample {
   Code get valueCode;
   @JsonKey(name: '_valueCode')
   Element get valueCodeElement;
-  Id get valueOid;
+  Oid get valueOid;
   @JsonKey(name: '_valueOid')
   Element get valueOidElement;
   Id get valueUuid;
@@ -11858,7 +11884,7 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
       @JsonKey(name: '_valueTime') Element valueTimeElement,
       Code valueCode,
       @JsonKey(name: '_valueCode') Element valueCodeElement,
-      Id valueOid,
+      Oid valueOid,
       @JsonKey(name: '_valueOid') Element valueOidElement,
       Id valueUuid,
       @JsonKey(name: '_valueUuid') Element valueUuidElement,
@@ -12109,7 +12135,7 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
       valueCodeElement: valueCodeElement == freezed
           ? _value.valueCodeElement
           : valueCodeElement as Element,
-      valueOid: valueOid == freezed ? _value.valueOid : valueOid as Id,
+      valueOid: valueOid == freezed ? _value.valueOid : valueOid as Oid,
       valueOidElement: valueOidElement == freezed
           ? _value.valueOidElement
           : valueOidElement as Element,
@@ -12814,7 +12840,7 @@ abstract class _$ElementDefinitionExampleCopyWith<$Res>
       @JsonKey(name: '_valueTime') Element valueTimeElement,
       Code valueCode,
       @JsonKey(name: '_valueCode') Element valueCodeElement,
-      Id valueOid,
+      Oid valueOid,
       @JsonKey(name: '_valueOid') Element valueOidElement,
       Id valueUuid,
       @JsonKey(name: '_valueUuid') Element valueUuidElement,
@@ -13122,7 +13148,7 @@ class __$ElementDefinitionExampleCopyWithImpl<$Res>
       valueCodeElement: valueCodeElement == freezed
           ? _value.valueCodeElement
           : valueCodeElement as Element,
-      valueOid: valueOid == freezed ? _value.valueOid : valueOid as Id,
+      valueOid: valueOid == freezed ? _value.valueOid : valueOid as Oid,
       valueOidElement: valueOidElement == freezed
           ? _value.valueOidElement
           : valueOidElement as Element,
@@ -13395,7 +13421,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
   @JsonKey(name: '_valueCode')
   final Element valueCodeElement;
   @override
-  final Id valueOid;
+  final Oid valueOid;
   @override
   @JsonKey(name: '_valueOid')
   final Element valueOidElement;
@@ -13732,7 +13758,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
       @JsonKey(name: '_valueTime') Element valueTimeElement,
       Code valueCode,
       @JsonKey(name: '_valueCode') Element valueCodeElement,
-      Id valueOid,
+      Oid valueOid,
       @JsonKey(name: '_valueOid') Element valueOidElement,
       Id valueUuid,
       @JsonKey(name: '_valueUuid') Element valueUuidElement,
@@ -13845,7 +13871,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
   @JsonKey(name: '_valueCode')
   Element get valueCodeElement;
   @override
-  Id get valueOid;
+  Oid get valueOid;
   @override
   @JsonKey(name: '_valueOid')
   Element get valueOidElement;

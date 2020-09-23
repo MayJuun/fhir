@@ -52,26 +52,20 @@ input: questionnaireresponse-extensions-QuestionnaireResponse-item-subject :: ou
 STU3
 ---------------------------------------------------------------------------
 
-File: './test/stu3_examples/structuredefinition-imagingstudy(ImagingStudy).json'
-input: urn:oid:2.16.124.113543.6003.1154777499.30246.19789.3503430045 :: output:_$InvalidId<String>:urn:oid:2.16.124.113543.6003.1154777499.30246.19789.3503430045
+R5
+---------------------------------------------------------------------------
 
-File: './test/stu3_examples/structuredefinition-imagingstudy(ImagingStudy).json'
-input: urn:oid:2.16.124.113543.6003.2588828330.45298.17418.2723805630 :: output:_$InvalidId<String>:urn:oid:2.16.124.113543.6003.2588828330.45298.17418.2723805630
+File: './test/r5_examples/v2-tables.json'
+input: CHESTÂ  :: output:_$InvalidCode<String>:CHESTÂ 
 
-File: './test/stu3_examples/structuredefinition-imagingstudy(ImagingStudy).json'
-input: urn:oid:2.16.124.113543.6003.189642796.63084.16748.2599092903 :: output:_$InvalidId<String>:urn:oid:2.16.124.113543.6003.189642796.63084.16748.2599092903
+File: './test/r5_examples/v2-tables.json'
+input: KIDNÂ  :: output:_$InvalidCode<String>:KIDNÂ 
 
-File: './test/stu3_examples/structuredefinition-imagingstudy(ImagingStudy).json'
-input: urn:oid:1.2.840.10008.5.1.4.1.1.2 :: output:_$InvalidId<String>:urn:oid:1.2.840.10008.5.1.4.1.1.2
+File: './test/r5_examples/v2-tables.json'
+input:   :: output:_$InvalidCode<String>: 
 
-File: './test/stu3_examples/structuredefinition-imagingstudy(ImagingStudy).json'
-input: urn:oid:2.16.124.113543.6003.1154777499.30246.19789.3503430045 :: output:_$InvalidId<String>:urn:oid:2.16.124.113543.6003.1154777499.30246.19789.3503430045
+File: './test/r5_examples/v2-tables.json'
+input: Â  :: output:_$InvalidCode<String>:Â 
 
-File: './test/stu3_examples/structuredefinition-imagingstudy(ImagingStudy).json'
-input: urn:oid:2.16.124.113543.6003.2588828330.45298.17418.2723805630 :: output:_$InvalidId<String>:urn:oid:2.16.124.113543.6003.2588828330.45298.17418.2723805630
-
-File: './test/stu3_examples/structuredefinition-imagingstudy(ImagingStudy).json'
-input: urn:oid:2.16.124.113543.6003.189642796.63084.16748.2599092903 :: output:_$InvalidId<String>:urn:oid:2.16.124.113543.6003.189642796.63084.16748.2599092903
-
-File: './test/stu3_examples/structuredefinition-imagingstudy(ImagingStudy).json'
-input: urn:oid:1.2.840.10008.5.1.4.1.1.2 :: output:_$InvalidId<String>:urn:oid:1.2.840.10008.5.1.4.1.1.2
+File: './test/r5_examples/questionnaireresponse-extensions-QuestionnaireResponse-item-subject.json'
+input: questionnaireresponse-extensions-QuestionnaireResponse-item-subject :: output:_$InvalidId<String>:questionnaireresponse-extensions-QuestionnaireResponse-item-subject

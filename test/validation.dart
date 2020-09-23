@@ -12,7 +12,8 @@ part 'r5_validation.dart';
 part 'stu3_validation.dart';
 
 Future main() async {
-  var string = 'DSTU2\n'
+  var string = '';
+  string += 'DSTU2\n'
       '---------------------------------------------------------------------------';
   string += await dstu2Validation();
   string += '\n\nR4\n'
@@ -21,9 +22,9 @@ Future main() async {
   string += '\n\nSTU3\n'
       '---------------------------------------------------------------------------';
   string += await stu3Validation();
-  // string += '\n\nR5\n'
-  //     '---------------------------------------------------------------------------';
-  // string += await r5Validation();
+  string += '\n\nR5\n'
+      '---------------------------------------------------------------------------';
+  string += await r5Validation();
   final file = File('./test/errors.txt');
   await file.writeAsString('');
   await file.writeAsString(string);
@@ -87,7 +88,10 @@ Future<String> checkByTypes(dynamic input, dynamic output, String file) async {
     return await checkEquality(input.toDouble(), output.toDouble(), file);
   } else {
     print('*******************Different runtimeTypes***********************');
+    print(file.toString());
+    print(input);
     print(input.runtimeType);
+    print(output);
     print(output.runtimeType);
   }
   return '';

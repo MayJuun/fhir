@@ -21,13 +21,13 @@ abstract class PrimitiveObject<T> {
   int get hashCode => value.hashCode;
 
   @override
-  String toString() => result().toString();
+  String toString() => result();
 
   dynamic toJson() => result();
 
   dynamic result() => value.fold(
         (ifLeft) => '${ifLeft.runtimeType}:${ifLeft.failedValue.toString()}',
-        (isRight) => isRight,
+        (isRight) => isRight.toString(),
       );
 }
 

@@ -386,6 +386,11 @@ const _$CodeSystemPropertyTypeEnumMap = {
 
 _$_CodeSystemConcept _$_$_CodeSystemConceptFromJson(Map<String, dynamic> json) {
   return _$_CodeSystemConcept(
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
     codeElement: json['_code'] == null
         ? null
@@ -426,6 +431,8 @@ Map<String, dynamic> _$_$_CodeSystemConceptToJson(
     }
   }
 
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('_code', instance.codeElement?.toJson());
   writeNotNull('display', instance.display);
@@ -1885,6 +1892,11 @@ Map<String, dynamic> _$_$_ValueSetComposeToJson(_$_ValueSetCompose instance) {
 
 _$_ValueSetInclude _$_$_ValueSetIncludeFromJson(Map<String, dynamic> json) {
   return _$_ValueSetInclude(
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     system: json['system'] as String,
     systemElement: json['_system'] == null
         ? null
@@ -1920,6 +1932,8 @@ Map<String, dynamic> _$_$_ValueSetIncludeToJson(_$_ValueSetInclude instance) {
     }
   }
 
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('system', instance.system);
   writeNotNull('_system', instance.systemElement?.toJson());
   writeNotNull('version', instance.version);

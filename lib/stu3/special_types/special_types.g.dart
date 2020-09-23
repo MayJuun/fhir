@@ -297,7 +297,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_defaultValueCode'] as Map<String, dynamic>),
     defaultValueOid: json['defaultValueOid'] == null
         ? null
-        : Id.fromJson(json['defaultValueOid'] as String),
+        : Oid.fromJson(json['defaultValueOid'] as String),
     defaultValueOidElement: json['_defaultValueOid'] == null
         ? null
         : Element.fromJson(json['_defaultValueOid'] as Map<String, dynamic>),
@@ -533,7 +533,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_fixedCode'] as Map<String, dynamic>),
     fixedOid: json['fixedOid'] == null
         ? null
-        : Id.fromJson(json['fixedOid'] as String),
+        : Oid.fromJson(json['fixedOid'] as String),
     fixedOidElement: json['_fixedOid'] == null
         ? null
         : Element.fromJson(json['_fixedOid'] as Map<String, dynamic>),
@@ -747,7 +747,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_patternCode'] as Map<String, dynamic>),
     patternOid: json['patternOid'] == null
         ? null
-        : Id.fromJson(json['patternOid'] as String),
+        : Oid.fromJson(json['patternOid'] as String),
     patternOidElement: json['_patternOid'] == null
         ? null
         : Element.fromJson(json['_patternOid'] as Map<String, dynamic>),
@@ -1566,6 +1566,11 @@ Map<String, dynamic> _$_$_ElementDefinitionBaseToJson(
 _$_ElementDefinitionType _$_$_ElementDefinitionTypeFromJson(
     Map<String, dynamic> json) {
   return _$_ElementDefinitionType(
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     code: json['code'] as String,
     codeElement: json['_code'] == null
         ? null
@@ -1604,6 +1609,8 @@ Map<String, dynamic> _$_$_ElementDefinitionTypeToJson(
     }
   }
 
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('code', instance.code);
   writeNotNull('_code', instance.codeElement?.toJson());
   writeNotNull('profile', instance.profile);
@@ -1704,7 +1711,7 @@ _$_ElementDefinitionExample _$_$_ElementDefinitionExampleFromJson(
         : Element.fromJson(json['_valueCode'] as Map<String, dynamic>),
     valueOid: json['valueOid'] == null
         ? null
-        : Id.fromJson(json['valueOid'] as String),
+        : Oid.fromJson(json['valueOid'] as String),
     valueOidElement: json['_valueOid'] == null
         ? null
         : Element.fromJson(json['_valueOid'] as Map<String, dynamic>),

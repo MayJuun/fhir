@@ -111,6 +111,7 @@ abstract class CodeSystemProperty implements _$CodeSystemProperty {
 abstract class CodeSystemConcept implements _$CodeSystemConcept {
   CodeSystemConcept._();
   factory CodeSystemConcept({
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     Code code,
     @JsonKey(name: '_code') Element codeElement,
     String display,
@@ -600,6 +601,7 @@ abstract class ValueSetCompose implements _$ValueSetCompose {
 abstract class ValueSetInclude implements _$ValueSetInclude {
   ValueSetInclude._();
   factory ValueSetInclude({
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     String system,
     @JsonKey(name: '_system') Element systemElement,
     String version,

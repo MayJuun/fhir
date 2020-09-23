@@ -21,6 +21,6 @@ class Integer64 extends PrimitiveObject<int> {
   @override
   dynamic toJson() => value.fold(
         (failure) => '${failure.runtimeType}:${failure.failedValue.toString()}',
-        (value) => value,
+        (value) => value.toString(),
       );
 }

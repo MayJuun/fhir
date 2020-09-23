@@ -85,35 +85,7 @@ There are two big items I would really like to get to work to add functionality:
 
 
 ## Validation
-- For validation testing, I run all of the sample files from hl7 through a tester. 
-
-### R5
-
-- These are non-resource files that my package doesn't know how to read. From the sample files here: https://hl7.org/fhir/2020Feb/downloads.html, it won't properly serialize/deserialize *package-min-ver.json*, *uml.json*, *hl7.fhir*, *hl7.fhir.r5.core.manifest.json*, *hl7.fhir.r5.expansions.manifest.json*
-- It finds that the Id field is too long for *questionnaireresponse-extensions-QuestionnaireResponse-item-subject.json*
-- The padding in *binary-example.json* field renders it invalid
-
-### R4
-
-- All of the downloads here: https://www.hl7.org/fhir/examples-json.zip have been run through a tester to ensure proper serialization/deserialization using this FHIR package
-- I've compared each field from the input to the output and output to input as Maps. This should have revealed if any fields were created or deleted. It also avoids issues with fields in a different order from input to output.
-- Known problems:
-
-1. There is an ID field in *questionnaireresponse-extensions-QuestionnaireResponse-item-subject.json* in the examples seems to be too long
-2. There is a Base64Binary *binary-example.json* field that has padding which renders it invalid
-3. There's also this file, *package-min-ver.json*, that I have no idea what to do with.
-
-### Stu3
-
-- All of the downloadable STU3 HL7 Examples, https://hl7.org/fhir/STU3/examples-json.zip have been run through the tester. Amazingly, it seemed to correctly run through all of them.
-
-### Dstu2
-
-- All of the DSTU2 HL7 Examples from https://hl7.org/fhir/dstu2/validation-min.json.zip
-- In https://www.hl7.org/fhir/DSTU2/searchparameter.html there is an issue with the SearchParameter: at least according to this website, it does appear that the field "base" and "description" should be required. However, many, many of the examples that are provided on the website do not have those fields, so I have not made them mandatory.
-- In https://www.hl7.org/fhir/DSTU2/elementdefinition.html#ElementDefinition, it seems that in the type field, "code" is required, but if "\_code" is present, this does not seem to be the case in the examples. I have therefore removed the requirement from the code field.
-- There are private fields in this FHIR version that appear to correlate to the private Element fields in R4. I cannot find these specifically stated anywhere, so I'm going to assume all R4 private fields are valid as long as there is a corresponding public field. A few of these should actually be lists. But if they are not in the examples, then I do not know which. So there are likely some that should be lists that I have not implemented as such.
-- Known Problems, a number of files appear to have Ids that are too long, all observations: *observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change.json*, *observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart.json*, *observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant.canonical.json*, *observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant.json*, *observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change.canonical.json*, *observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart.canonical.json*.
+- For validation testing, I run all of the sample files from hl7 through a tester. There is an errors.txt file in the test folder where all of the errors are reported (the file name and then the specific field). Currently the only errors involve Codes and IDs. The Codes have to due with the fact that [code is not supposed to have leading or trailing white space](https://www.hl7.org/fhir/datatypes.html#code). The issues with the IDs are that [IDs are not supposed to be more than 64 characters](https://www.hl7.org/fhir/datatypes.html#id), and these are 65. However, if it turns out that no one wants to enforce these as strictly as I do, I may relax them.
 
 ## First Package
 
@@ -121,7 +93,7 @@ This is the first time I've ever created a package, feedback and pull requests a
 
 ## Code Generation
 
-I think it's the new compiling. It's actually great though, [json_serializable](https://pub.dev/packages/json_serializable) and [freezed](https://pub.dev/packages/freezed) are used extensively throughout. Note that sometimes freezed will give a stack overflow error if you try to do all code generation for the entire package at the same time. Also note that for fields that can take any resource, they have to be manually assigned. Currently this is done by passing the json object to resourceList. The fromJson code has to be changed in the 'g.dart' file.
+I think it's the new compiling. It's actually great though, [json_serializable](https://pub.dev/packages/json_serializable) and [freezed](https://pub.dev/packages/freezed) are used extensively throughout. In order to allow a field to contain any resource, it is passed to the resource class and is passed to a switch case statement (which feels a little clunky, but I haven't managed a better way yet).
 
 ## Formatting Notes
 
