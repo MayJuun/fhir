@@ -3,8 +3,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 import '../../dstu2.dart';
 
-part 'resource.g.dart';
-
 @JsonSerializable()
 class Resource {
   Id id;

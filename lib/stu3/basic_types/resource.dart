@@ -3,8 +3,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 import '../../stu3.dart';
 
-part 'resource.g.dart';
-
 @JsonSerializable()
 class Resource {
   String resourceType;

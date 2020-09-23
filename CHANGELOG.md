@@ -5,6 +5,7 @@
 * fixed some enums in dstu2
 * expanded definition of url because dart's definition doesn't match with FHIR's
 * relaxed base64binary (just a String now) requirements because Dart's is more narrow than FHIR's
+* taking out resource.g.dart (not used, doesn't seem to change functionality)
 
 ## [0.0.5]
 * Refactored Dstu2 to be more consistent with other versions, field names are the same, some class names changed

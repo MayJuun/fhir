@@ -2,8 +2,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 import '../../r4.dart';
 
-part 'resource.g.dart';
-
 @JsonSerializable()
 class Resource {
   String resourceType;

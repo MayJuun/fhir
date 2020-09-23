@@ -2,8 +2,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 import '../../r5.dart';
 
-part 'resource.g.dart';
-
 @JsonSerializable()
 class Resource {
   Id id;
