@@ -56,7 +56,8 @@ abstract class Meta implements _$Meta {
 abstract class ElementDefinition implements _$ElementDefinition {
   ElementDefinition._();
   factory ElementDefinition({
-    Id id,
+    String id,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     String path,
     @JsonKey(name: '_path') Element pathElement,
     List<ElementDefinitionRepresentation> representation,
@@ -535,6 +536,7 @@ abstract class ElementDefinitionConstraint
 abstract class ElementDefinitionBinding implements _$ElementDefinitionBinding {
   ElementDefinitionBinding._();
   factory ElementDefinitionBinding({
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     ElementDefinitionBindingStrength strength,
     @JsonKey(name: '_strength') Element strengthElement,
     String description,

@@ -21,9 +21,9 @@ Future main() async {
   string += '\n\nSTU3\n'
       '---------------------------------------------------------------------------';
   string += await stu3Validation();
-  string += '\n\nR5\n'
-      '---------------------------------------------------------------------------';
-  string += await r5Validation();
+  // string += '\n\nR5\n'
+  //     '---------------------------------------------------------------------------';
+  // string += await r5Validation();
   final file = File('./test/errors.txt');
   await file.writeAsString('');
   await file.writeAsString(string);

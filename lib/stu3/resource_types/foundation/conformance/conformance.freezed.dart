@@ -19336,12 +19336,14 @@ class _$OperationDefinitionBindingTearOff {
 
 // ignore: unused_element
   _OperationDefinitionBinding call(
-      {OperationDefinitionBindingStrength strength,
+      {@JsonKey(name: 'extension') List<FhirExtension> extension_,
+      OperationDefinitionBindingStrength strength,
       @JsonKey(name: '_strength') Element strengthElement,
       String valueSetUri,
       @JsonKey(name: '_valueSetUri') Element valueSetUriElement,
       Reference valueSetReference}) {
     return _OperationDefinitionBinding(
+      extension_: extension_,
       strength: strength,
       strengthElement: strengthElement,
       valueSetUri: valueSetUri,
@@ -19362,6 +19364,8 @@ const $OperationDefinitionBinding = _$OperationDefinitionBindingTearOff();
 
 /// @nodoc
 mixin _$OperationDefinitionBinding {
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
   OperationDefinitionBindingStrength get strength;
   @JsonKey(name: '_strength')
   Element get strengthElement;
@@ -19380,7 +19384,8 @@ abstract class $OperationDefinitionBindingCopyWith<$Res> {
           $Res Function(OperationDefinitionBinding) then) =
       _$OperationDefinitionBindingCopyWithImpl<$Res>;
   $Res call(
-      {OperationDefinitionBindingStrength strength,
+      {@JsonKey(name: 'extension') List<FhirExtension> extension_,
+      OperationDefinitionBindingStrength strength,
       @JsonKey(name: '_strength') Element strengthElement,
       String valueSetUri,
       @JsonKey(name: '_valueSetUri') Element valueSetUriElement,
@@ -19402,6 +19407,7 @@ class _$OperationDefinitionBindingCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object extension_ = freezed,
     Object strength = freezed,
     Object strengthElement = freezed,
     Object valueSetUri = freezed,
@@ -19409,6 +19415,9 @@ class _$OperationDefinitionBindingCopyWithImpl<$Res>
     Object valueSetReference = freezed,
   }) {
     return _then(_value.copyWith(
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
       strength: strength == freezed
           ? _value.strength
           : strength as OperationDefinitionBindingStrength,
@@ -19466,7 +19475,8 @@ abstract class _$OperationDefinitionBindingCopyWith<$Res>
       __$OperationDefinitionBindingCopyWithImpl<$Res>;
   @override
   $Res call(
-      {OperationDefinitionBindingStrength strength,
+      {@JsonKey(name: 'extension') List<FhirExtension> extension_,
+      OperationDefinitionBindingStrength strength,
       @JsonKey(name: '_strength') Element strengthElement,
       String valueSetUri,
       @JsonKey(name: '_valueSetUri') Element valueSetUriElement,
@@ -19494,6 +19504,7 @@ class __$OperationDefinitionBindingCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object extension_ = freezed,
     Object strength = freezed,
     Object strengthElement = freezed,
     Object valueSetUri = freezed,
@@ -19501,6 +19512,9 @@ class __$OperationDefinitionBindingCopyWithImpl<$Res>
     Object valueSetReference = freezed,
   }) {
     return _then(_OperationDefinitionBinding(
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
       strength: strength == freezed
           ? _value.strength
           : strength as OperationDefinitionBindingStrength,
@@ -19524,7 +19538,8 @@ class __$OperationDefinitionBindingCopyWithImpl<$Res>
 /// @nodoc
 class _$_OperationDefinitionBinding extends _OperationDefinitionBinding {
   _$_OperationDefinitionBinding(
-      {this.strength,
+      {@JsonKey(name: 'extension') this.extension_,
+      this.strength,
       @JsonKey(name: '_strength') this.strengthElement,
       this.valueSetUri,
       @JsonKey(name: '_valueSetUri') this.valueSetUriElement,
@@ -19534,6 +19549,9 @@ class _$_OperationDefinitionBinding extends _OperationDefinitionBinding {
   factory _$_OperationDefinitionBinding.fromJson(Map<String, dynamic> json) =>
       _$_$_OperationDefinitionBindingFromJson(json);
 
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
   @override
   final OperationDefinitionBindingStrength strength;
   @override
@@ -19549,13 +19567,16 @@ class _$_OperationDefinitionBinding extends _OperationDefinitionBinding {
 
   @override
   String toString() {
-    return 'OperationDefinitionBinding(strength: $strength, strengthElement: $strengthElement, valueSetUri: $valueSetUri, valueSetUriElement: $valueSetUriElement, valueSetReference: $valueSetReference)';
+    return 'OperationDefinitionBinding(extension_: $extension_, strength: $strength, strengthElement: $strengthElement, valueSetUri: $valueSetUri, valueSetUriElement: $valueSetUriElement, valueSetReference: $valueSetReference)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _OperationDefinitionBinding &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
             (identical(other.strength, strength) ||
                 const DeepCollectionEquality()
                     .equals(other.strength, strength)) &&
@@ -19576,6 +19597,7 @@ class _$_OperationDefinitionBinding extends _OperationDefinitionBinding {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(strength) ^
       const DeepCollectionEquality().hash(strengthElement) ^
       const DeepCollectionEquality().hash(valueSetUri) ^
@@ -19596,7 +19618,8 @@ class _$_OperationDefinitionBinding extends _OperationDefinitionBinding {
 abstract class _OperationDefinitionBinding extends OperationDefinitionBinding {
   _OperationDefinitionBinding._() : super._();
   factory _OperationDefinitionBinding(
-      {OperationDefinitionBindingStrength strength,
+      {@JsonKey(name: 'extension') List<FhirExtension> extension_,
+      OperationDefinitionBindingStrength strength,
       @JsonKey(name: '_strength') Element strengthElement,
       String valueSetUri,
       @JsonKey(name: '_valueSetUri') Element valueSetUriElement,
@@ -19605,6 +19628,9 @@ abstract class _OperationDefinitionBinding extends OperationDefinitionBinding {
   factory _OperationDefinitionBinding.fromJson(Map<String, dynamic> json) =
       _$_OperationDefinitionBinding.fromJson;
 
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
   @override
   OperationDefinitionBindingStrength get strength;
   @override

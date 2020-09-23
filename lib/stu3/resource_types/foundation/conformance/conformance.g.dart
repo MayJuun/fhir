@@ -2931,6 +2931,11 @@ const _$OperationDefinitionParameterSearchTypeEnumMap = {
 _$_OperationDefinitionBinding _$_$_OperationDefinitionBindingFromJson(
     Map<String, dynamic> json) {
   return _$_OperationDefinitionBinding(
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     strength: _$enumDecodeNullable(
         _$OperationDefinitionBindingStrengthEnumMap, json['strength']),
     strengthElement: json['_strength'] == null
@@ -2956,6 +2961,8 @@ Map<String, dynamic> _$_$_OperationDefinitionBindingToJson(
     }
   }
 
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('strength',
       _$OperationDefinitionBindingStrengthEnumMap[instance.strength]);
   writeNotNull('_strength', instance.strengthElement?.toJson());

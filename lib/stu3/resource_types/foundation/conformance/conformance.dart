@@ -911,6 +911,7 @@ abstract class OperationDefinitionBinding
     implements _$OperationDefinitionBinding {
   OperationDefinitionBinding._();
   factory OperationDefinitionBinding({
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     OperationDefinitionBindingStrength strength,
     @JsonKey(name: '_strength') Element strengthElement,
     String valueSetUri,

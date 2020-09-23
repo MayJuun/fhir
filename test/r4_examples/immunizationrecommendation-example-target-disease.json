@@ -20,16 +20,14 @@
   },
   "recommendation": [
     {
-      "targetDisease": [
-        {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "40468003"
-            }
-          ]
-        }
-      ],
+      "targetDisease": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "40468003"
+          }
+        ]
+      },
       "forecastStatus": {
         "text": "Not Complete"
       },

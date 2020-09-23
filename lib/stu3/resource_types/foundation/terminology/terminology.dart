@@ -618,6 +618,7 @@ abstract class ValueSetInclude implements _$ValueSetInclude {
 abstract class ValueSetConcept implements _$ValueSetConcept {
   ValueSetConcept._();
   factory ValueSetConcept({
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     Code code,
     @JsonKey(name: '_code') Element codeElement,
     String display,

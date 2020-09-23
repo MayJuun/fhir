@@ -774,11 +774,10 @@ _$_ImmunizationRecommendationRecommendation
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    targetDisease: (json['targetDisease'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    targetDisease: json['targetDisease'] == null
+        ? null
+        : CodeableConcept.fromJson(
+            json['targetDisease'] as Map<String, dynamic>),
     contraindicatedVaccineCode: (json['contraindicatedVaccineCode'] as List)
         ?.map((e) => e == null
             ? null
@@ -857,8 +856,7 @@ Map<String, dynamic> _$_$_ImmunizationRecommendationRecommendationToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'vaccineCode', instance.vaccineCode?.map((e) => e?.toJson())?.toList());
-  writeNotNull('targetDisease',
-      instance.targetDisease?.map((e) => e?.toJson())?.toList());
+  writeNotNull('targetDisease', instance.targetDisease?.toJson());
   writeNotNull('contraindicatedVaccineCode',
       instance.contraindicatedVaccineCode?.map((e) => e?.toJson())?.toList());
   writeNotNull('forecastStatus', instance.forecastStatus?.toJson());

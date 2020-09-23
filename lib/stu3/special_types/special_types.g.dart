@@ -156,7 +156,12 @@ Map<String, dynamic> _$_$_MetaToJson(_$_Meta instance) {
 
 _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
   return _$_ElementDefinition(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] as String,
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     path: json['path'] as String,
     pathElement: json['_path'] == null
         ? null
@@ -1060,7 +1065,9 @@ Map<String, dynamic> _$_$_ElementDefinitionToJson(
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('path', instance.path);
   writeNotNull('_path', instance.pathElement?.toJson());
   writeNotNull(
@@ -2014,6 +2021,11 @@ const _$ElementDefinitionConstraintSeverityEnumMap = {
 _$_ElementDefinitionBinding _$_$_ElementDefinitionBindingFromJson(
     Map<String, dynamic> json) {
   return _$_ElementDefinitionBinding(
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     strength: _$enumDecodeNullable(
         _$ElementDefinitionBindingStrengthEnumMap, json['strength']),
     strengthElement: json['_strength'] == null
@@ -2043,6 +2055,8 @@ Map<String, dynamic> _$_$_ElementDefinitionBindingToJson(
     }
   }
 
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'strength', _$ElementDefinitionBindingStrengthEnumMap[instance.strength]);
   writeNotNull('_strength', instance.strengthElement?.toJson());

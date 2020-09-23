@@ -13232,12 +13232,14 @@ class _$ValueSetConceptTearOff {
 
 // ignore: unused_element
   _ValueSetConcept call(
-      {Code code,
+      {@JsonKey(name: 'extension') List<FhirExtension> extension_,
+      Code code,
       @JsonKey(name: '_code') Element codeElement,
       String display,
       @JsonKey(name: '_display') Element displayElement,
       List<ValueSetDesignation> designation}) {
     return _ValueSetConcept(
+      extension_: extension_,
       code: code,
       codeElement: codeElement,
       display: display,
@@ -13258,6 +13260,8 @@ const $ValueSetConcept = _$ValueSetConceptTearOff();
 
 /// @nodoc
 mixin _$ValueSetConcept {
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
   Code get code;
   @JsonKey(name: '_code')
   Element get codeElement;
@@ -13276,7 +13280,8 @@ abstract class $ValueSetConceptCopyWith<$Res> {
           ValueSetConcept value, $Res Function(ValueSetConcept) then) =
       _$ValueSetConceptCopyWithImpl<$Res>;
   $Res call(
-      {Code code,
+      {@JsonKey(name: 'extension') List<FhirExtension> extension_,
+      Code code,
       @JsonKey(name: '_code') Element codeElement,
       String display,
       @JsonKey(name: '_display') Element displayElement,
@@ -13297,6 +13302,7 @@ class _$ValueSetConceptCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object extension_ = freezed,
     Object code = freezed,
     Object codeElement = freezed,
     Object display = freezed,
@@ -13304,6 +13310,9 @@ class _$ValueSetConceptCopyWithImpl<$Res>
     Object designation = freezed,
   }) {
     return _then(_value.copyWith(
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
       code: code == freezed ? _value.code : code as Code,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
@@ -13346,7 +13355,8 @@ abstract class _$ValueSetConceptCopyWith<$Res>
       __$ValueSetConceptCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Code code,
+      {@JsonKey(name: 'extension') List<FhirExtension> extension_,
+      Code code,
       @JsonKey(name: '_code') Element codeElement,
       String display,
       @JsonKey(name: '_display') Element displayElement,
@@ -13371,6 +13381,7 @@ class __$ValueSetConceptCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object extension_ = freezed,
     Object code = freezed,
     Object codeElement = freezed,
     Object display = freezed,
@@ -13378,6 +13389,9 @@ class __$ValueSetConceptCopyWithImpl<$Res>
     Object designation = freezed,
   }) {
     return _then(_ValueSetConcept(
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
       code: code == freezed ? _value.code : code as Code,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
@@ -13397,7 +13411,8 @@ class __$ValueSetConceptCopyWithImpl<$Res>
 /// @nodoc
 class _$_ValueSetConcept extends _ValueSetConcept {
   _$_ValueSetConcept(
-      {this.code,
+      {@JsonKey(name: 'extension') this.extension_,
+      this.code,
       @JsonKey(name: '_code') this.codeElement,
       this.display,
       @JsonKey(name: '_display') this.displayElement,
@@ -13407,6 +13422,9 @@ class _$_ValueSetConcept extends _ValueSetConcept {
   factory _$_ValueSetConcept.fromJson(Map<String, dynamic> json) =>
       _$_$_ValueSetConceptFromJson(json);
 
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
   @override
   final Code code;
   @override
@@ -13422,13 +13440,16 @@ class _$_ValueSetConcept extends _ValueSetConcept {
 
   @override
   String toString() {
-    return 'ValueSetConcept(code: $code, codeElement: $codeElement, display: $display, displayElement: $displayElement, designation: $designation)';
+    return 'ValueSetConcept(extension_: $extension_, code: $code, codeElement: $codeElement, display: $display, displayElement: $displayElement, designation: $designation)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _ValueSetConcept &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
             (identical(other.code, code) ||
                 const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.codeElement, codeElement) ||
@@ -13448,6 +13469,7 @@ class _$_ValueSetConcept extends _ValueSetConcept {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(codeElement) ^
       const DeepCollectionEquality().hash(display) ^
@@ -13467,7 +13489,8 @@ class _$_ValueSetConcept extends _ValueSetConcept {
 abstract class _ValueSetConcept extends ValueSetConcept {
   _ValueSetConcept._() : super._();
   factory _ValueSetConcept(
-      {Code code,
+      {@JsonKey(name: 'extension') List<FhirExtension> extension_,
+      Code code,
       @JsonKey(name: '_code') Element codeElement,
       String display,
       @JsonKey(name: '_display') Element displayElement,
@@ -13476,6 +13499,9 @@ abstract class _ValueSetConcept extends ValueSetConcept {
   factory _ValueSetConcept.fromJson(Map<String, dynamic> json) =
       _$_ValueSetConcept.fromJson;
 
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
   @override
   Code get code;
   @override

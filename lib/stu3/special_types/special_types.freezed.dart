@@ -831,7 +831,9 @@ class _$ElementDefinitionTearOff {
 
 // ignore: unused_element
   _ElementDefinition call(
-      {Id id,
+      {String id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       String path,
       @JsonKey(name: '_path')
           Element pathElement,
@@ -1210,6 +1212,7 @@ class _$ElementDefinitionTearOff {
       List<ElementDefinitionMapping> mapping}) {
     return _ElementDefinition(
       id: id,
+      extension_: extension_,
       path: path,
       pathElement: pathElement,
       representation: representation,
@@ -1515,7 +1518,9 @@ const $ElementDefinition = _$ElementDefinitionTearOff();
 
 /// @nodoc
 mixin _$ElementDefinition {
-  Id get id;
+  String get id;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
   String get path;
   @JsonKey(name: '_path')
   Element get pathElement;
@@ -1903,7 +1908,9 @@ abstract class $ElementDefinitionCopyWith<$Res> {
           ElementDefinition value, $Res Function(ElementDefinition) then) =
       _$ElementDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {String id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       String path,
       @JsonKey(name: '_path')
           Element pathElement,
@@ -2491,6 +2498,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
+    Object extension_ = freezed,
     Object path = freezed,
     Object pathElement = freezed,
     Object representation = freezed,
@@ -2783,7 +2791,10 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object mapping = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id,
+      id: id == freezed ? _value.id : id as String,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
       path: path == freezed ? _value.path : path as String,
       pathElement:
           pathElement == freezed ? _value.pathElement : pathElement as Element,
@@ -5571,7 +5582,9 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       __$ElementDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {String id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       String path,
       @JsonKey(name: '_path')
           Element pathElement,
@@ -6357,6 +6370,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
+    Object extension_ = freezed,
     Object path = freezed,
     Object pathElement = freezed,
     Object representation = freezed,
@@ -6649,7 +6663,10 @@ class __$ElementDefinitionCopyWithImpl<$Res>
     Object mapping = freezed,
   }) {
     return _then(_ElementDefinition(
-      id: id == freezed ? _value.id : id as Id,
+      id: id == freezed ? _value.id : id as String,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
       path: path == freezed ? _value.path : path as String,
       pathElement:
           pathElement == freezed ? _value.pathElement : pathElement as Element,
@@ -7452,6 +7469,8 @@ class __$ElementDefinitionCopyWithImpl<$Res>
 class _$_ElementDefinition extends _ElementDefinition {
   _$_ElementDefinition(
       {this.id,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.path,
       @JsonKey(name: '_path')
           this.pathElement,
@@ -7834,7 +7853,10 @@ class _$_ElementDefinition extends _ElementDefinition {
       _$_$_ElementDefinitionFromJson(json);
 
   @override
-  final Id id;
+  final String id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
   @override
   final String path;
   @override
@@ -8504,7 +8526,7 @@ class _$_ElementDefinition extends _ElementDefinition {
 
   @override
   String toString() {
-    return 'ElementDefinition(id: $id, path: $path, pathElement: $pathElement, representation: $representation, representationElement: $representationElement, sliceName: $sliceName, sliceNameElement: $sliceNameElement, label: $label, labelElement: $labelElement, code: $code, slicing: $slicing, short: $short, shortElement: $shortElement, definition: $definition, definitionElement: $definitionElement, comment: $comment, commentElement: $commentElement, requirements: $requirements, requirementsElement: $requirementsElement, alias: $alias, aliasElement: $aliasElement, min: $min, minElement: $minElement, max: $max, maxElement: $maxElement, base: $base, contentReference: $contentReference, contentReferenceElement: $contentReferenceElement, type: $type, defaultValueBoolean: $defaultValueBoolean, defaultValueBooleanElement: $defaultValueBooleanElement, defaultValueInteger: $defaultValueInteger, defaultValueIntegerElement: $defaultValueIntegerElement, defaultValueDecimal: $defaultValueDecimal, defaultValueDecimalElement: $defaultValueDecimalElement, defaultValueBase64Binary: $defaultValueBase64Binary, defaultValueBase64BinaryElement: $defaultValueBase64BinaryElement, defaultValueInstant: $defaultValueInstant, defaultValueInstantElement: $defaultValueInstantElement, defaultValueString: $defaultValueString, defaultValueStringElement: $defaultValueStringElement, defaultValueUri: $defaultValueUri, defaultValueUriElement: $defaultValueUriElement, defaultValueDate: $defaultValueDate, defaultValueDateElement: $defaultValueDateElement, defaultValueDateTime: $defaultValueDateTime, defaultValueDateTimeElement: $defaultValueDateTimeElement, defaultValueTime: $defaultValueTime, defaultValueTimeElement: $defaultValueTimeElement, defaultValueCode: $defaultValueCode, defaultValueCodeElement: $defaultValueCodeElement, defaultValueOid: $defaultValueOid, defaultValueOidElement: $defaultValueOidElement, defaultValueUuid: $defaultValueUuid, defaultValueUuidElement: $defaultValueUuidElement, defaultValueId: $defaultValueId, defaultValueIdElement: $defaultValueIdElement, defaultValueUnsignedInt: $defaultValueUnsignedInt, defaultValueUnsignedIntElement: $defaultValueUnsignedIntElement, defaultValuePositiveInt: $defaultValuePositiveInt, defaultValuePositiveIntElement: $defaultValuePositiveIntElement, defaultValueMarkdown: $defaultValueMarkdown, defaultValueMarkdownElement: $defaultValueMarkdownElement, defaultValueElement: $defaultValueElement, defaultValueExtension: $defaultValueExtension, defaultValueBackboneElement: $defaultValueBackboneElement, defaultValueNarrative: $defaultValueNarrative, defaultValueAnnotation: $defaultValueAnnotation, defaultValueAttachment: $defaultValueAttachment, defaultValueIdentifier: $defaultValueIdentifier, defaultValueCodeableConcept: $defaultValueCodeableConcept, defaultValueCoding: $defaultValueCoding, defaultValueQuantity: $defaultValueQuantity, defaultValueDuration: $defaultValueDuration, defaultValueSimpleQuantity: $defaultValueSimpleQuantity, defaultValueDistance: $defaultValueDistance, defaultValueCount: $defaultValueCount, defaultValueMoney: $defaultValueMoney, defaultValueAge: $defaultValueAge, defaultValueRange: $defaultValueRange, defaultValuePeriod: $defaultValuePeriod, defaultValueRatio: $defaultValueRatio, defaultValueReference: $defaultValueReference, defaultValueSampledData: $defaultValueSampledData, defaultValueSignature: $defaultValueSignature, defaultValueHumanName: $defaultValueHumanName, defaultValueAddress: $defaultValueAddress, defaultValueContactPoint: $defaultValueContactPoint, defaultValueTiming: $defaultValueTiming, defaultValueMeta: $defaultValueMeta, defaultValueElementDefinition: $defaultValueElementDefinition, defaultValueContactDetail: $defaultValueContactDetail, defaultValueContributor: $defaultValueContributor, defaultValueDosage: $defaultValueDosage, defaultValueRelatedArtifact: $defaultValueRelatedArtifact, defaultValueUsageContext: $defaultValueUsageContext, defaultValueDataRequirement: $defaultValueDataRequirement, defaultValueParameterDefinition: $defaultValueParameterDefinition, defaultValueTriggerDefinition: $defaultValueTriggerDefinition, meaningWhenMissing: $meaningWhenMissing, meaningWhenMissingElement: $meaningWhenMissingElement, orderMeaning: $orderMeaning, orderMeaningElement: $orderMeaningElement, fixedBoolean: $fixedBoolean, fixedBooleanElement: $fixedBooleanElement, fixedInteger: $fixedInteger, fixedIntegerElement: $fixedIntegerElement, fixedDecimal: $fixedDecimal, fixedDecimalElement: $fixedDecimalElement, fixedBase64Binary: $fixedBase64Binary, fixedBase64BinaryElement: $fixedBase64BinaryElement, fixedInstant: $fixedInstant, fixedInstantElement: $fixedInstantElement, fixedString: $fixedString, fixedStringElement: $fixedStringElement, fixedUri: $fixedUri, fixedUriElement: $fixedUriElement, fixedDate: $fixedDate, fixedDateElement: $fixedDateElement, fixedDateTime: $fixedDateTime, fixedDateTimeElement: $fixedDateTimeElement, fixedTime: $fixedTime, fixedTimeElement: $fixedTimeElement, fixedCode: $fixedCode, fixedCodeElement: $fixedCodeElement, fixedOid: $fixedOid, fixedOidElement: $fixedOidElement, fixedUuid: $fixedUuid, fixedUuidElement: $fixedUuidElement, fixedId: $fixedId, fixedIdElement: $fixedIdElement, fixedUnsignedInt: $fixedUnsignedInt, fixedUnsignedIntElement: $fixedUnsignedIntElement, fixedPositiveInt: $fixedPositiveInt, fixedPositiveIntElement: $fixedPositiveIntElement, fixedMarkdown: $fixedMarkdown, fixedMarkdownElement: $fixedMarkdownElement, fixedElement: $fixedElement, fixedExtension: $fixedExtension, fixedBackboneElement: $fixedBackboneElement, fixedNarrative: $fixedNarrative, fixedAnnotation: $fixedAnnotation, fixedAttachment: $fixedAttachment, fixedIdentifier: $fixedIdentifier, fixedCodeableConcept: $fixedCodeableConcept, fixedCoding: $fixedCoding, fixedQuantity: $fixedQuantity, fixedDuration: $fixedDuration, fixedSimpleQuantity: $fixedSimpleQuantity, fixedDistance: $fixedDistance, fixedCount: $fixedCount, fixedMoney: $fixedMoney, fixedAge: $fixedAge, fixedRange: $fixedRange, fixedPeriod: $fixedPeriod, fixedRatio: $fixedRatio, fixedReference: $fixedReference, fixedSampledData: $fixedSampledData, fixedSignature: $fixedSignature, fixedHumanName: $fixedHumanName, fixedAddress: $fixedAddress, fixedContactPoint: $fixedContactPoint, fixedTiming: $fixedTiming, fixedMeta: $fixedMeta, fixedElementDefinition: $fixedElementDefinition, fixedContactDetail: $fixedContactDetail, fixedContributor: $fixedContributor, fixedDosage: $fixedDosage, fixedRelatedArtifact: $fixedRelatedArtifact, fixedUsageContext: $fixedUsageContext, fixedDataRequirement: $fixedDataRequirement, fixedParameterDefinition: $fixedParameterDefinition, fixedTriggerDefinition: $fixedTriggerDefinition, patternBoolean: $patternBoolean, patternBooleanElement: $patternBooleanElement, patternInteger: $patternInteger, patternIntegerElement: $patternIntegerElement, patternDecimal: $patternDecimal, patternDecimalElement: $patternDecimalElement, patternBase64Binary: $patternBase64Binary, patternBase64BinaryElement: $patternBase64BinaryElement, patternInstant: $patternInstant, patternInstantElement: $patternInstantElement, patternString: $patternString, patternStringElement: $patternStringElement, patternUri: $patternUri, patternUriElement: $patternUriElement, patternDate: $patternDate, patternDateElement: $patternDateElement, patternDateTime: $patternDateTime, patternDateTimeElement: $patternDateTimeElement, patternTime: $patternTime, patternTimeElement: $patternTimeElement, patternCode: $patternCode, patternCodeElement: $patternCodeElement, patternOid: $patternOid, patternOidElement: $patternOidElement, patternUuid: $patternUuid, patternUuidElement: $patternUuidElement, patternId: $patternId, patternIdElement: $patternIdElement, patternUnsignedInt: $patternUnsignedInt, patternUnsignedIntElement: $patternUnsignedIntElement, patternPositiveInt: $patternPositiveInt, patternPositiveIntElement: $patternPositiveIntElement, patternMarkdown: $patternMarkdown, patternMarkdownElement: $patternMarkdownElement, patternElement: $patternElement, patternExtension: $patternExtension, patternBackboneElement: $patternBackboneElement, patternNarrative: $patternNarrative, patternAnnotation: $patternAnnotation, patternAttachment: $patternAttachment, patternIdentifier: $patternIdentifier, patternCodeableConcept: $patternCodeableConcept, patternCoding: $patternCoding, patternQuantity: $patternQuantity, patternDuration: $patternDuration, patternSimpleQuantity: $patternSimpleQuantity, patternDistance: $patternDistance, patternCount: $patternCount, patternMoney: $patternMoney, patternAge: $patternAge, patternRange: $patternRange, patternPeriod: $patternPeriod, patternRatio: $patternRatio, patternReference: $patternReference, patternSampledData: $patternSampledData, patternSignature: $patternSignature, patternHumanName: $patternHumanName, patternAddress: $patternAddress, patternContactPoint: $patternContactPoint, patternTiming: $patternTiming, patternMeta: $patternMeta, patternElementDefinition: $patternElementDefinition, patternContactDetail: $patternContactDetail, patternContributor: $patternContributor, patternDosage: $patternDosage, patternRelatedArtifact: $patternRelatedArtifact, patternUsageContext: $patternUsageContext, patternDataRequirement: $patternDataRequirement, patternParameterDefinition: $patternParameterDefinition, patternTriggerDefinition: $patternTriggerDefinition, example: $example, minValueDate: $minValueDate, minValueDateElement: $minValueDateElement, minValueDateTime: $minValueDateTime, minValueDateTimeElement: $minValueDateTimeElement, minValueInstant: $minValueInstant, minValueInstantElement: $minValueInstantElement, minValueTime: $minValueTime, minValueTimeElement: $minValueTimeElement, minValueDecimal: $minValueDecimal, minValueDecimalElement: $minValueDecimalElement, minValueInteger: $minValueInteger, minValueIntegerElement: $minValueIntegerElement, minValuePositiveInt: $minValuePositiveInt, minValuePositiveIntElement: $minValuePositiveIntElement, minValueUnsignedInt: $minValueUnsignedInt, minValueUnsignedIntElement: $minValueUnsignedIntElement, minValueQuantity: $minValueQuantity, maxValueDate: $maxValueDate, maxValueDateElement: $maxValueDateElement, maxValueDateTime: $maxValueDateTime, maxValueDateTimeElement: $maxValueDateTimeElement, maxValueInstant: $maxValueInstant, maxValueInstantElement: $maxValueInstantElement, maxValueTime: $maxValueTime, maxValueTimeElement: $maxValueTimeElement, maxValueDecimal: $maxValueDecimal, maxValueDecimalElement: $maxValueDecimalElement, maxValueInteger: $maxValueInteger, maxValueIntegerElement: $maxValueIntegerElement, maxValuePositiveInt: $maxValuePositiveInt, maxValuePositiveIntElement: $maxValuePositiveIntElement, maxValueUnsignedInt: $maxValueUnsignedInt, maxValueUnsignedIntElement: $maxValueUnsignedIntElement, maxValueQuantity: $maxValueQuantity, maxLength: $maxLength, maxLengthElement: $maxLengthElement, condition: $condition, conditionElement: $conditionElement, constraint: $constraint, mustSupport: $mustSupport, mustSupportElement: $mustSupportElement, isModifier: $isModifier, isModifierElement: $isModifierElement, isSummary: $isSummary, isSummaryElement: $isSummaryElement, binding: $binding, mapping: $mapping)';
+    return 'ElementDefinition(id: $id, extension_: $extension_, path: $path, pathElement: $pathElement, representation: $representation, representationElement: $representationElement, sliceName: $sliceName, sliceNameElement: $sliceNameElement, label: $label, labelElement: $labelElement, code: $code, slicing: $slicing, short: $short, shortElement: $shortElement, definition: $definition, definitionElement: $definitionElement, comment: $comment, commentElement: $commentElement, requirements: $requirements, requirementsElement: $requirementsElement, alias: $alias, aliasElement: $aliasElement, min: $min, minElement: $minElement, max: $max, maxElement: $maxElement, base: $base, contentReference: $contentReference, contentReferenceElement: $contentReferenceElement, type: $type, defaultValueBoolean: $defaultValueBoolean, defaultValueBooleanElement: $defaultValueBooleanElement, defaultValueInteger: $defaultValueInteger, defaultValueIntegerElement: $defaultValueIntegerElement, defaultValueDecimal: $defaultValueDecimal, defaultValueDecimalElement: $defaultValueDecimalElement, defaultValueBase64Binary: $defaultValueBase64Binary, defaultValueBase64BinaryElement: $defaultValueBase64BinaryElement, defaultValueInstant: $defaultValueInstant, defaultValueInstantElement: $defaultValueInstantElement, defaultValueString: $defaultValueString, defaultValueStringElement: $defaultValueStringElement, defaultValueUri: $defaultValueUri, defaultValueUriElement: $defaultValueUriElement, defaultValueDate: $defaultValueDate, defaultValueDateElement: $defaultValueDateElement, defaultValueDateTime: $defaultValueDateTime, defaultValueDateTimeElement: $defaultValueDateTimeElement, defaultValueTime: $defaultValueTime, defaultValueTimeElement: $defaultValueTimeElement, defaultValueCode: $defaultValueCode, defaultValueCodeElement: $defaultValueCodeElement, defaultValueOid: $defaultValueOid, defaultValueOidElement: $defaultValueOidElement, defaultValueUuid: $defaultValueUuid, defaultValueUuidElement: $defaultValueUuidElement, defaultValueId: $defaultValueId, defaultValueIdElement: $defaultValueIdElement, defaultValueUnsignedInt: $defaultValueUnsignedInt, defaultValueUnsignedIntElement: $defaultValueUnsignedIntElement, defaultValuePositiveInt: $defaultValuePositiveInt, defaultValuePositiveIntElement: $defaultValuePositiveIntElement, defaultValueMarkdown: $defaultValueMarkdown, defaultValueMarkdownElement: $defaultValueMarkdownElement, defaultValueElement: $defaultValueElement, defaultValueExtension: $defaultValueExtension, defaultValueBackboneElement: $defaultValueBackboneElement, defaultValueNarrative: $defaultValueNarrative, defaultValueAnnotation: $defaultValueAnnotation, defaultValueAttachment: $defaultValueAttachment, defaultValueIdentifier: $defaultValueIdentifier, defaultValueCodeableConcept: $defaultValueCodeableConcept, defaultValueCoding: $defaultValueCoding, defaultValueQuantity: $defaultValueQuantity, defaultValueDuration: $defaultValueDuration, defaultValueSimpleQuantity: $defaultValueSimpleQuantity, defaultValueDistance: $defaultValueDistance, defaultValueCount: $defaultValueCount, defaultValueMoney: $defaultValueMoney, defaultValueAge: $defaultValueAge, defaultValueRange: $defaultValueRange, defaultValuePeriod: $defaultValuePeriod, defaultValueRatio: $defaultValueRatio, defaultValueReference: $defaultValueReference, defaultValueSampledData: $defaultValueSampledData, defaultValueSignature: $defaultValueSignature, defaultValueHumanName: $defaultValueHumanName, defaultValueAddress: $defaultValueAddress, defaultValueContactPoint: $defaultValueContactPoint, defaultValueTiming: $defaultValueTiming, defaultValueMeta: $defaultValueMeta, defaultValueElementDefinition: $defaultValueElementDefinition, defaultValueContactDetail: $defaultValueContactDetail, defaultValueContributor: $defaultValueContributor, defaultValueDosage: $defaultValueDosage, defaultValueRelatedArtifact: $defaultValueRelatedArtifact, defaultValueUsageContext: $defaultValueUsageContext, defaultValueDataRequirement: $defaultValueDataRequirement, defaultValueParameterDefinition: $defaultValueParameterDefinition, defaultValueTriggerDefinition: $defaultValueTriggerDefinition, meaningWhenMissing: $meaningWhenMissing, meaningWhenMissingElement: $meaningWhenMissingElement, orderMeaning: $orderMeaning, orderMeaningElement: $orderMeaningElement, fixedBoolean: $fixedBoolean, fixedBooleanElement: $fixedBooleanElement, fixedInteger: $fixedInteger, fixedIntegerElement: $fixedIntegerElement, fixedDecimal: $fixedDecimal, fixedDecimalElement: $fixedDecimalElement, fixedBase64Binary: $fixedBase64Binary, fixedBase64BinaryElement: $fixedBase64BinaryElement, fixedInstant: $fixedInstant, fixedInstantElement: $fixedInstantElement, fixedString: $fixedString, fixedStringElement: $fixedStringElement, fixedUri: $fixedUri, fixedUriElement: $fixedUriElement, fixedDate: $fixedDate, fixedDateElement: $fixedDateElement, fixedDateTime: $fixedDateTime, fixedDateTimeElement: $fixedDateTimeElement, fixedTime: $fixedTime, fixedTimeElement: $fixedTimeElement, fixedCode: $fixedCode, fixedCodeElement: $fixedCodeElement, fixedOid: $fixedOid, fixedOidElement: $fixedOidElement, fixedUuid: $fixedUuid, fixedUuidElement: $fixedUuidElement, fixedId: $fixedId, fixedIdElement: $fixedIdElement, fixedUnsignedInt: $fixedUnsignedInt, fixedUnsignedIntElement: $fixedUnsignedIntElement, fixedPositiveInt: $fixedPositiveInt, fixedPositiveIntElement: $fixedPositiveIntElement, fixedMarkdown: $fixedMarkdown, fixedMarkdownElement: $fixedMarkdownElement, fixedElement: $fixedElement, fixedExtension: $fixedExtension, fixedBackboneElement: $fixedBackboneElement, fixedNarrative: $fixedNarrative, fixedAnnotation: $fixedAnnotation, fixedAttachment: $fixedAttachment, fixedIdentifier: $fixedIdentifier, fixedCodeableConcept: $fixedCodeableConcept, fixedCoding: $fixedCoding, fixedQuantity: $fixedQuantity, fixedDuration: $fixedDuration, fixedSimpleQuantity: $fixedSimpleQuantity, fixedDistance: $fixedDistance, fixedCount: $fixedCount, fixedMoney: $fixedMoney, fixedAge: $fixedAge, fixedRange: $fixedRange, fixedPeriod: $fixedPeriod, fixedRatio: $fixedRatio, fixedReference: $fixedReference, fixedSampledData: $fixedSampledData, fixedSignature: $fixedSignature, fixedHumanName: $fixedHumanName, fixedAddress: $fixedAddress, fixedContactPoint: $fixedContactPoint, fixedTiming: $fixedTiming, fixedMeta: $fixedMeta, fixedElementDefinition: $fixedElementDefinition, fixedContactDetail: $fixedContactDetail, fixedContributor: $fixedContributor, fixedDosage: $fixedDosage, fixedRelatedArtifact: $fixedRelatedArtifact, fixedUsageContext: $fixedUsageContext, fixedDataRequirement: $fixedDataRequirement, fixedParameterDefinition: $fixedParameterDefinition, fixedTriggerDefinition: $fixedTriggerDefinition, patternBoolean: $patternBoolean, patternBooleanElement: $patternBooleanElement, patternInteger: $patternInteger, patternIntegerElement: $patternIntegerElement, patternDecimal: $patternDecimal, patternDecimalElement: $patternDecimalElement, patternBase64Binary: $patternBase64Binary, patternBase64BinaryElement: $patternBase64BinaryElement, patternInstant: $patternInstant, patternInstantElement: $patternInstantElement, patternString: $patternString, patternStringElement: $patternStringElement, patternUri: $patternUri, patternUriElement: $patternUriElement, patternDate: $patternDate, patternDateElement: $patternDateElement, patternDateTime: $patternDateTime, patternDateTimeElement: $patternDateTimeElement, patternTime: $patternTime, patternTimeElement: $patternTimeElement, patternCode: $patternCode, patternCodeElement: $patternCodeElement, patternOid: $patternOid, patternOidElement: $patternOidElement, patternUuid: $patternUuid, patternUuidElement: $patternUuidElement, patternId: $patternId, patternIdElement: $patternIdElement, patternUnsignedInt: $patternUnsignedInt, patternUnsignedIntElement: $patternUnsignedIntElement, patternPositiveInt: $patternPositiveInt, patternPositiveIntElement: $patternPositiveIntElement, patternMarkdown: $patternMarkdown, patternMarkdownElement: $patternMarkdownElement, patternElement: $patternElement, patternExtension: $patternExtension, patternBackboneElement: $patternBackboneElement, patternNarrative: $patternNarrative, patternAnnotation: $patternAnnotation, patternAttachment: $patternAttachment, patternIdentifier: $patternIdentifier, patternCodeableConcept: $patternCodeableConcept, patternCoding: $patternCoding, patternQuantity: $patternQuantity, patternDuration: $patternDuration, patternSimpleQuantity: $patternSimpleQuantity, patternDistance: $patternDistance, patternCount: $patternCount, patternMoney: $patternMoney, patternAge: $patternAge, patternRange: $patternRange, patternPeriod: $patternPeriod, patternRatio: $patternRatio, patternReference: $patternReference, patternSampledData: $patternSampledData, patternSignature: $patternSignature, patternHumanName: $patternHumanName, patternAddress: $patternAddress, patternContactPoint: $patternContactPoint, patternTiming: $patternTiming, patternMeta: $patternMeta, patternElementDefinition: $patternElementDefinition, patternContactDetail: $patternContactDetail, patternContributor: $patternContributor, patternDosage: $patternDosage, patternRelatedArtifact: $patternRelatedArtifact, patternUsageContext: $patternUsageContext, patternDataRequirement: $patternDataRequirement, patternParameterDefinition: $patternParameterDefinition, patternTriggerDefinition: $patternTriggerDefinition, example: $example, minValueDate: $minValueDate, minValueDateElement: $minValueDateElement, minValueDateTime: $minValueDateTime, minValueDateTimeElement: $minValueDateTimeElement, minValueInstant: $minValueInstant, minValueInstantElement: $minValueInstantElement, minValueTime: $minValueTime, minValueTimeElement: $minValueTimeElement, minValueDecimal: $minValueDecimal, minValueDecimalElement: $minValueDecimalElement, minValueInteger: $minValueInteger, minValueIntegerElement: $minValueIntegerElement, minValuePositiveInt: $minValuePositiveInt, minValuePositiveIntElement: $minValuePositiveIntElement, minValueUnsignedInt: $minValueUnsignedInt, minValueUnsignedIntElement: $minValueUnsignedIntElement, minValueQuantity: $minValueQuantity, maxValueDate: $maxValueDate, maxValueDateElement: $maxValueDateElement, maxValueDateTime: $maxValueDateTime, maxValueDateTimeElement: $maxValueDateTimeElement, maxValueInstant: $maxValueInstant, maxValueInstantElement: $maxValueInstantElement, maxValueTime: $maxValueTime, maxValueTimeElement: $maxValueTimeElement, maxValueDecimal: $maxValueDecimal, maxValueDecimalElement: $maxValueDecimalElement, maxValueInteger: $maxValueInteger, maxValueIntegerElement: $maxValueIntegerElement, maxValuePositiveInt: $maxValuePositiveInt, maxValuePositiveIntElement: $maxValuePositiveIntElement, maxValueUnsignedInt: $maxValueUnsignedInt, maxValueUnsignedIntElement: $maxValueUnsignedIntElement, maxValueQuantity: $maxValueQuantity, maxLength: $maxLength, maxLengthElement: $maxLengthElement, condition: $condition, conditionElement: $conditionElement, constraint: $constraint, mustSupport: $mustSupport, mustSupportElement: $mustSupportElement, isModifier: $isModifier, isModifierElement: $isModifierElement, isSummary: $isSummary, isSummaryElement: $isSummaryElement, binding: $binding, mapping: $mapping)';
   }
 
   @override
@@ -8513,6 +8535,9 @@ class _$_ElementDefinition extends _ElementDefinition {
         (other is _ElementDefinition &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
             (identical(other.path, path) ||
                 const DeepCollectionEquality().equals(other.path, path)) &&
             (identical(other.pathElement, pathElement) ||
@@ -8576,10 +8601,8 @@ class _$_ElementDefinition extends _ElementDefinition {
             (identical(other.max, max) ||
                 const DeepCollectionEquality().equals(other.max, max)) &&
             (identical(other.maxElement, maxElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.maxElement, maxElement)) &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
+                const DeepCollectionEquality().equals(other.maxElement, maxElement)) &&
+            (identical(other.base, base) || const DeepCollectionEquality().equals(other.base, base)) &&
             (identical(other.contentReference, contentReference) || const DeepCollectionEquality().equals(other.contentReference, contentReference)) &&
             (identical(other.contentReferenceElement, contentReferenceElement) || const DeepCollectionEquality().equals(other.contentReferenceElement, contentReferenceElement)) &&
             (identical(other.type, type) || const DeepCollectionEquality().equals(other.type, type)) &&
@@ -8851,6 +8874,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(path) ^
       const DeepCollectionEquality().hash(pathElement) ^
       const DeepCollectionEquality().hash(representation) ^
@@ -9155,7 +9179,9 @@ class _$_ElementDefinition extends _ElementDefinition {
 abstract class _ElementDefinition extends ElementDefinition {
   _ElementDefinition._() : super._();
   factory _ElementDefinition(
-      {Id id,
+      {String id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       String path,
       @JsonKey(name: '_path')
           Element pathElement,
@@ -9537,7 +9563,10 @@ abstract class _ElementDefinition extends ElementDefinition {
       _$_ElementDefinition.fromJson;
 
   @override
-  Id get id;
+  String get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
   @override
   String get path;
   @override
@@ -14486,7 +14515,8 @@ class _$ElementDefinitionBindingTearOff {
 
 // ignore: unused_element
   _ElementDefinitionBinding call(
-      {ElementDefinitionBindingStrength strength,
+      {@JsonKey(name: 'extension') List<FhirExtension> extension_,
+      ElementDefinitionBindingStrength strength,
       @JsonKey(name: '_strength') Element strengthElement,
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
@@ -14494,6 +14524,7 @@ class _$ElementDefinitionBindingTearOff {
       @JsonKey(name: '_valueSetUri') Element valueSetUriElement,
       Reference valueSetReference}) {
     return _ElementDefinitionBinding(
+      extension_: extension_,
       strength: strength,
       strengthElement: strengthElement,
       description: description,
@@ -14516,6 +14547,8 @@ const $ElementDefinitionBinding = _$ElementDefinitionBindingTearOff();
 
 /// @nodoc
 mixin _$ElementDefinitionBinding {
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
   ElementDefinitionBindingStrength get strength;
   @JsonKey(name: '_strength')
   Element get strengthElement;
@@ -14537,7 +14570,8 @@ abstract class $ElementDefinitionBindingCopyWith<$Res> {
           $Res Function(ElementDefinitionBinding) then) =
       _$ElementDefinitionBindingCopyWithImpl<$Res>;
   $Res call(
-      {ElementDefinitionBindingStrength strength,
+      {@JsonKey(name: 'extension') List<FhirExtension> extension_,
+      ElementDefinitionBindingStrength strength,
       @JsonKey(name: '_strength') Element strengthElement,
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
@@ -14562,6 +14596,7 @@ class _$ElementDefinitionBindingCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object extension_ = freezed,
     Object strength = freezed,
     Object strengthElement = freezed,
     Object description = freezed,
@@ -14571,6 +14606,9 @@ class _$ElementDefinitionBindingCopyWithImpl<$Res>
     Object valueSetReference = freezed,
   }) {
     return _then(_value.copyWith(
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
       strength: strength == freezed
           ? _value.strength
           : strength as ElementDefinitionBindingStrength,
@@ -14642,7 +14680,8 @@ abstract class _$ElementDefinitionBindingCopyWith<$Res>
       __$ElementDefinitionBindingCopyWithImpl<$Res>;
   @override
   $Res call(
-      {ElementDefinitionBindingStrength strength,
+      {@JsonKey(name: 'extension') List<FhirExtension> extension_,
+      ElementDefinitionBindingStrength strength,
       @JsonKey(name: '_strength') Element strengthElement,
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
@@ -14674,6 +14713,7 @@ class __$ElementDefinitionBindingCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object extension_ = freezed,
     Object strength = freezed,
     Object strengthElement = freezed,
     Object description = freezed,
@@ -14683,6 +14723,9 @@ class __$ElementDefinitionBindingCopyWithImpl<$Res>
     Object valueSetReference = freezed,
   }) {
     return _then(_ElementDefinitionBinding(
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
       strength: strength == freezed
           ? _value.strength
           : strength as ElementDefinitionBindingStrength,
@@ -14711,7 +14754,8 @@ class __$ElementDefinitionBindingCopyWithImpl<$Res>
 /// @nodoc
 class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
   _$_ElementDefinitionBinding(
-      {this.strength,
+      {@JsonKey(name: 'extension') this.extension_,
+      this.strength,
       @JsonKey(name: '_strength') this.strengthElement,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
@@ -14723,6 +14767,9 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
   factory _$_ElementDefinitionBinding.fromJson(Map<String, dynamic> json) =>
       _$_$_ElementDefinitionBindingFromJson(json);
 
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
   @override
   final ElementDefinitionBindingStrength strength;
   @override
@@ -14743,13 +14790,16 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
 
   @override
   String toString() {
-    return 'ElementDefinitionBinding(strength: $strength, strengthElement: $strengthElement, description: $description, descriptionElement: $descriptionElement, valueSetUri: $valueSetUri, valueSetUriElement: $valueSetUriElement, valueSetReference: $valueSetReference)';
+    return 'ElementDefinitionBinding(extension_: $extension_, strength: $strength, strengthElement: $strengthElement, description: $description, descriptionElement: $descriptionElement, valueSetUri: $valueSetUri, valueSetUriElement: $valueSetUriElement, valueSetReference: $valueSetReference)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _ElementDefinitionBinding &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
             (identical(other.strength, strength) ||
                 const DeepCollectionEquality()
                     .equals(other.strength, strength)) &&
@@ -14776,6 +14826,7 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(strength) ^
       const DeepCollectionEquality().hash(strengthElement) ^
       const DeepCollectionEquality().hash(description) ^
@@ -14798,7 +14849,8 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
 abstract class _ElementDefinitionBinding extends ElementDefinitionBinding {
   _ElementDefinitionBinding._() : super._();
   factory _ElementDefinitionBinding(
-      {ElementDefinitionBindingStrength strength,
+      {@JsonKey(name: 'extension') List<FhirExtension> extension_,
+      ElementDefinitionBindingStrength strength,
       @JsonKey(name: '_strength') Element strengthElement,
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
@@ -14809,6 +14861,9 @@ abstract class _ElementDefinitionBinding extends ElementDefinitionBinding {
   factory _ElementDefinitionBinding.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionBinding.fromJson;
 
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
   @override
   ElementDefinitionBindingStrength get strength;
   @override
