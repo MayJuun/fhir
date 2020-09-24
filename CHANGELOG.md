@@ -6,6 +6,7 @@
 * Don't use this.toJson in Resource class (it's never used anyway)
 * Always use braces on if statements (otherwise dartfmt may not run)
 * got rid of primitive_types folder in r5 that I had forgotten to delete
+* dartfmt and dartdoc won't run in pana (I think because of too many files)
 
 ## [0.0.6]
 
