@@ -6,6 +6,7 @@ import 'primitive_failures.dart';
 class FhirDateTime extends Dates {
   @override
   final Either<PrimitiveFailure<String>, DateTime> value;
+  @override
   final DateTimeFormat format;
 
   factory FhirDateTime(value) {

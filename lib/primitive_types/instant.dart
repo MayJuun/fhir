@@ -6,6 +6,7 @@ import 'primitive_failures.dart';
 class Instant extends Dates {
   @override
   final Either<PrimitiveFailure<String>, DateTime> value;
+  @override
   final DateTimeFormat format;
 
   factory Instant(value) {
