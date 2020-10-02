@@ -1,9 +1,9 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 // import 'package:flutter/foundation.dart';
 
-import 'scheduling.enums.dart';
 import '../../../../dstu2.dart';
 
+part 'scheduling.enums.dart';
 part 'scheduling.freezed.dart';
 part 'scheduling.g.dart';
 

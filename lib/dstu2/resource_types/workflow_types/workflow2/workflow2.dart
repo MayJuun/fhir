@@ -1,9 +1,9 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 // import 'package:flutter/foundation.dart';
 
-import 'workflow2.enums.dart';
 import '../../../../dstu2.dart';
 
+part 'workflow2.enums.dart';
 part 'workflow2.freezed.dart';
 part 'workflow2.g.dart';
 

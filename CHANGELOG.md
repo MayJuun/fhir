@@ -1,6 +1,7 @@
 ## [0.0.8]
 
 * Eased restrictions on Instant
+* made dstu2 enums part of instead of importing (easier to use dstu2 Enums in other projects)
 
 ## [0.0.7]
 

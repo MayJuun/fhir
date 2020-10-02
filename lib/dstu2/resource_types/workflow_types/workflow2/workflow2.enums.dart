@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'workflow2.dart';
 
 enum ProcessRequestAction {
   @JsonValue('cancel')

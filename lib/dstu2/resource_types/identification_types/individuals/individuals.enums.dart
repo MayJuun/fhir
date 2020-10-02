@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'individuals.dart';
 
 enum PractitionerGender {
   @JsonValue('male')

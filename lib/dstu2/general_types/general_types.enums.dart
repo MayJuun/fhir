@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'general_types.dart';
 
 enum QuantityComparator {
   @JsonValue('<')

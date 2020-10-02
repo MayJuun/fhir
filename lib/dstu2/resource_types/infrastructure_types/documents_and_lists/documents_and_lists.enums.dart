@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'documents_and_lists.dart';
 
 enum CompositionStatus {
   @JsonValue('preliminary')

@@ -1,9 +1,9 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 // import 'package:flutter/foundation.dart';
 
-import 'billing.enums.dart';
 import '../../../../dstu2.dart';
 
+part 'billing.enums.dart';
 part 'billing.freezed.dart';
 part 'billing.g.dart';
 

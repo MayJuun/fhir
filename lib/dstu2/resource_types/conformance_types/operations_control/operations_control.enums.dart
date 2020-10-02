@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'operations_control.dart';
 
 enum ConformanceStatus {
   @JsonValue('draft')

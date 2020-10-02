@@ -3,7 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../dstu2.dart';
 
-import 'general_types.enums.dart';
+part 'general_types.enums.dart';
 part 'general_types.freezed.dart';
 part 'general_types.g.dart';
 

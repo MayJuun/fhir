@@ -1,9 +1,9 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 // import 'package:flutter/foundation.dart';
 
-import 'patient_management.enums.dart';
 import '../../../../dstu2.dart';
 
+part 'patient_management.enums.dart';
 part 'patient_management.freezed.dart';
 part 'patient_management.g.dart';
 

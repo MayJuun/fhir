@@ -1,9 +1,9 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 // import 'package:flutter/foundation.dart';
 
-import 'terminology.enums.dart';
 import '../../../../dstu2.dart';
 
+part 'terminology.enums.dart';
 part 'terminology.freezed.dart';
 part 'terminology.g.dart';
 

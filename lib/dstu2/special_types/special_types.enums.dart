@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'special_types.dart';
 
 enum NarrativeStatus {
   @JsonValue('generated')

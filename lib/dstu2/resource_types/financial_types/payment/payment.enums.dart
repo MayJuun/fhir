@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'payment.dart';
 
 enum PaymentReconciliationOutcome {
   @JsonValue('complete')

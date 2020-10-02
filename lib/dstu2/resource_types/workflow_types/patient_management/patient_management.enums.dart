@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'patient_management.dart';
 
 enum CommunicationStatus {
   @JsonValue('in-progress')

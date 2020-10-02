@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'workflow1.dart';
 
 enum OrderResponseOrderStatus {
   @JsonValue('pending')

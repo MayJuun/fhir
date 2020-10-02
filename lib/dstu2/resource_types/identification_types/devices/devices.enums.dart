@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'devices.dart';
 
 enum DeviceComponentMeasurementPrinciple {
   @JsonValue('other')

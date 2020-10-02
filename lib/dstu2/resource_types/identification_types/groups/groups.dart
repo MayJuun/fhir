@@ -1,9 +1,9 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 // import 'package:flutter/foundation.dart';
 
-import 'groups.enums.dart';
 import '../../../../dstu2.dart';
 
+part 'groups.enums.dart';
 part 'groups.freezed.dart';
 part 'groups.g.dart';
 
