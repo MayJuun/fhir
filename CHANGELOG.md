@@ -1,3 +1,7 @@
+## [0.0.8]
+
+* Eased restrictions on Instant
+
 ## [0.0.7]
 
 * Trying for more pubdev points

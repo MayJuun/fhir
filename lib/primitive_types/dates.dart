@@ -37,17 +37,32 @@ abstract class Dates extends PrimitiveObject<DateTime> {
 bool _hasMatch(String pattern, String input) => RegExp(pattern).hasMatch(input);
 
 Tuple2<Either<PrimitiveFailure<String>, DateTime>, DateTimeFormat>
-    validateInstant(String value) => isDate(value)
-        ? _hasMatch(
-                _instantString,
-                value.length <= 10
-                    ? value
-                    : value[10] == ' ' ? value.replaceFirst(' ', 'T') : value)
-            ? Tuple2(right(DateTime.parse(value)), DateTimeFormat.utc)
-            : Tuple2(left(PrimitiveFailure.invalidInstant(failedValue: value)),
-                DateTimeFormat.incorrect_format)
+    validateInstant(dynamic value) {
+  //changes all values to String to allow for validation
+  var stringValue = value is String ? value : value.toString();
+
+  //if it is a date
+  if (isDate(stringValue)) {
+    // first change it to a UTC value
+    stringValue = DateTime.parse(stringValue).toUtc().toString();
+
+    //Add the T instead of a space as FHIR specification requires
+    stringValue = stringValue.length <= 10
+        ? stringValue
+        : stringValue[10] != ' '
+            ? stringValue
+            : stringValue.replaceFirst(' ', 'T');
+
+    //then check if it matches
+    return _hasMatch(_instantString, stringValue)
+        ? Tuple2(right(DateTime.parse(value)), DateTimeFormat.utc)
         : Tuple2(left(PrimitiveFailure.invalidInstant(failedValue: value)),
             DateTimeFormat.incorrect_format);
+  } else {
+    return Tuple2(left(PrimitiveFailure.invalidInstant(failedValue: value)),
+        DateTimeFormat.incorrect_format);
+  }
+}
 
 Tuple2<Either<PrimitiveFailure<String>, DateTime>, DateTimeFormat>
     validateDateTime(String value) => isDate(value)
@@ -55,7 +70,9 @@ Tuple2<Either<PrimitiveFailure<String>, DateTime>, DateTimeFormat>
                 _dateTimeString,
                 value.length <= 10
                     ? value
-                    : value[10] == ' ' ? value.replaceFirst(' ', 'T') : value)
+                    : value[10] == ' '
+                        ? value.replaceFirst(' ', 'T')
+                        : value)
             ? Tuple2(right(DateTime.parse(value)), DateTimeFormat.utc)
             : Tuple2(left(PrimitiveFailure.invalidInstant(failedValue: value)),
                 DateTimeFormat.incorrect_format)
