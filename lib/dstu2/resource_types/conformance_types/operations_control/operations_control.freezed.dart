@@ -7887,9 +7887,11 @@ class _$OperationDefinitionParameterBindingTearOff {
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @required
-      @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
+      @JsonKey(
+          required: true,
+          unknownEnumValue: OperationDefinitionBindingStrength.unknown)
       @JsonKey(required: true)
-          BindingStrength strength,
+          OperationDefinitionBindingStrength strength,
       FhirUri valueSetUri,
       Reference valueSetReference}) {
     return _OperationDefinitionParameterBinding(
@@ -7919,9 +7921,11 @@ mixin _$OperationDefinitionParameterBinding {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
-  @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
+  @JsonKey(
+      required: true,
+      unknownEnumValue: OperationDefinitionBindingStrength.unknown)
   @JsonKey(required: true)
-  BindingStrength get strength;
+  OperationDefinitionBindingStrength get strength;
   FhirUri get valueSetUri;
   Reference get valueSetReference;
 
@@ -7941,9 +7945,11 @@ abstract class $OperationDefinitionParameterBindingCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
+      @JsonKey(
+          required: true,
+          unknownEnumValue: OperationDefinitionBindingStrength.unknown)
       @JsonKey(required: true)
-          BindingStrength strength,
+          OperationDefinitionBindingStrength strength,
       FhirUri valueSetUri,
       Reference valueSetReference});
 
@@ -7976,8 +7982,9 @@ class _$OperationDefinitionParameterBindingCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      strength:
-          strength == freezed ? _value.strength : strength as BindingStrength,
+      strength: strength == freezed
+          ? _value.strength
+          : strength as OperationDefinitionBindingStrength,
       valueSetUri:
           valueSetUri == freezed ? _value.valueSetUri : valueSetUri as FhirUri,
       valueSetReference: valueSetReference == freezed
@@ -8010,9 +8017,11 @@ abstract class _$OperationDefinitionParameterBindingCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
+      @JsonKey(
+          required: true,
+          unknownEnumValue: OperationDefinitionBindingStrength.unknown)
       @JsonKey(required: true)
-          BindingStrength strength,
+          OperationDefinitionBindingStrength strength,
       FhirUri valueSetUri,
       Reference valueSetReference});
 
@@ -8050,8 +8059,9 @@ class __$OperationDefinitionParameterBindingCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      strength:
-          strength == freezed ? _value.strength : strength as BindingStrength,
+      strength: strength == freezed
+          ? _value.strength
+          : strength as OperationDefinitionBindingStrength,
       valueSetUri:
           valueSetUri == freezed ? _value.valueSetUri : valueSetUri as FhirUri,
       valueSetReference: valueSetReference == freezed
@@ -8072,7 +8082,9 @@ class _$_OperationDefinitionParameterBinding
           this.extension_,
       this.modifierExtension,
       @required
-      @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
+      @JsonKey(
+          required: true,
+          unknownEnumValue: OperationDefinitionBindingStrength.unknown)
       @JsonKey(required: true)
           this.strength,
       this.valueSetUri,
@@ -8091,9 +8103,11 @@ class _$_OperationDefinitionParameterBinding
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
+  @JsonKey(
+      required: true,
+      unknownEnumValue: OperationDefinitionBindingStrength.unknown)
   @JsonKey(required: true)
-  final BindingStrength strength;
+  final OperationDefinitionBindingStrength strength;
   @override
   final FhirUri valueSetUri;
   @override
@@ -8157,9 +8171,11 @@ abstract class _OperationDefinitionParameterBinding
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @required
-      @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
+      @JsonKey(
+          required: true,
+          unknownEnumValue: OperationDefinitionBindingStrength.unknown)
       @JsonKey(required: true)
-          BindingStrength strength,
+          OperationDefinitionBindingStrength strength,
       FhirUri valueSetUri,
       Reference valueSetReference}) = _$_OperationDefinitionParameterBinding;
 
@@ -8175,9 +8191,11 @@ abstract class _OperationDefinitionParameterBinding
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
+  @JsonKey(
+      required: true,
+      unknownEnumValue: OperationDefinitionBindingStrength.unknown)
   @JsonKey(required: true)
-  BindingStrength get strength;
+  OperationDefinitionBindingStrength get strength;
   @override
   FhirUri get valueSetUri;
   @override

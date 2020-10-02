@@ -507,9 +507,11 @@ abstract class ElementDefinitionBinding implements _$ElementDefinitionBinding {
   factory ElementDefinitionBinding({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
+    @JsonKey(
+        required: true,
+        unknownEnumValue: ElementDefinitionBindingStrength.unknown)
     @required
-        BindingStrength strength,
+        ElementDefinitionBindingStrength strength,
     @JsonKey(name: '_strength') Element strengthElement,
     String description,
     @JsonKey(name: '_description') Element descriptionElement,

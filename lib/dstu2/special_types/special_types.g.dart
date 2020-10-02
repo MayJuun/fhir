@@ -1883,8 +1883,9 @@ _$_ElementDefinitionBinding _$_$_ElementDefinitionBindingFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    strength: _$enumDecodeNullable(_$BindingStrengthEnumMap, json['strength'],
-        unknownValue: BindingStrength.unknown),
+    strength: _$enumDecodeNullable(
+        _$ElementDefinitionBindingStrengthEnumMap, json['strength'],
+        unknownValue: ElementDefinitionBindingStrength.unknown),
     strengthElement: json['_strength'] == null
         ? null
         : Element.fromJson(json['_strength'] as Map<String, dynamic>),
@@ -1914,7 +1915,8 @@ Map<String, dynamic> _$_$_ElementDefinitionBindingToJson(
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
-  writeNotNull('strength', _$BindingStrengthEnumMap[instance.strength]);
+  writeNotNull(
+      'strength', _$ElementDefinitionBindingStrengthEnumMap[instance.strength]);
   writeNotNull('_strength', instance.strengthElement?.toJson());
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
@@ -1923,12 +1925,12 @@ Map<String, dynamic> _$_$_ElementDefinitionBindingToJson(
   return val;
 }
 
-const _$BindingStrengthEnumMap = {
-  BindingStrength.required: 'required',
-  BindingStrength.extensible: 'extensible',
-  BindingStrength.preferred: 'preferred',
-  BindingStrength.example: 'example',
-  BindingStrength.unknown: 'unknown',
+const _$ElementDefinitionBindingStrengthEnumMap = {
+  ElementDefinitionBindingStrength.required: 'required',
+  ElementDefinitionBindingStrength.extensible: 'extensible',
+  ElementDefinitionBindingStrength.preferred: 'preferred',
+  ElementDefinitionBindingStrength.example: 'example',
+  ElementDefinitionBindingStrength.unknown: 'unknown',
 };
 
 _$_ElementDefinitionMapping _$_$_ElementDefinitionMappingFromJson(

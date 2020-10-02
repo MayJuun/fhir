@@ -210,7 +210,7 @@ enum EventMode {
   @JsonValue('unknown')
   unknown,
 }
-enum BindingStrength {
+enum OperationDefinitionBindingStrength {
   @JsonValue('required')
   required,
   @JsonValue('extensible')

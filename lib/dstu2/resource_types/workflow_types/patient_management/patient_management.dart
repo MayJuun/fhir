@@ -119,7 +119,8 @@ abstract class EncounterLocation with _$EncounterLocation {
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     @JsonKey(required: true) @required Reference location,
-    @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus status,
+    @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
+        EncounterLocationStatus status,
     @JsonKey(name: '_status') Element statusElement,
     Period period,
   }) = _EncounterLocation;

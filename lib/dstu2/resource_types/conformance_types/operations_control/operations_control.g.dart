@@ -1425,8 +1425,9 @@ _$_OperationDefinitionParameterBinding
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    strength: _$enumDecodeNullable(_$BindingStrengthEnumMap, json['strength'],
-        unknownValue: BindingStrength.unknown),
+    strength: _$enumDecodeNullable(
+        _$OperationDefinitionBindingStrengthEnumMap, json['strength'],
+        unknownValue: OperationDefinitionBindingStrength.unknown),
     valueSetUri: json['valueSetUri'] == null
         ? null
         : FhirUri.fromJson(json['valueSetUri'] as String),
@@ -1451,18 +1452,19 @@ Map<String, dynamic> _$_$_OperationDefinitionParameterBindingToJson(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('strength', _$BindingStrengthEnumMap[instance.strength]);
+  writeNotNull('strength',
+      _$OperationDefinitionBindingStrengthEnumMap[instance.strength]);
   writeNotNull('valueSetUri', instance.valueSetUri?.toJson());
   writeNotNull('valueSetReference', instance.valueSetReference?.toJson());
   return val;
 }
 
-const _$BindingStrengthEnumMap = {
-  BindingStrength.required: 'required',
-  BindingStrength.extensible: 'extensible',
-  BindingStrength.preferred: 'preferred',
-  BindingStrength.example: 'example',
-  BindingStrength.unknown: 'unknown',
+const _$OperationDefinitionBindingStrengthEnumMap = {
+  OperationDefinitionBindingStrength.required: 'required',
+  OperationDefinitionBindingStrength.extensible: 'extensible',
+  OperationDefinitionBindingStrength.preferred: 'preferred',
+  OperationDefinitionBindingStrength.example: 'example',
+  OperationDefinitionBindingStrength.unknown: 'unknown',
 };
 
 _$_SearchParameter _$_$_SearchParameterFromJson(Map<String, dynamic> json) {

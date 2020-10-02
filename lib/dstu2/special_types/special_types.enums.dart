@@ -40,7 +40,7 @@ enum ConstraintSeverity {
   @JsonValue('unknown')
   unknown,
 }
-enum BindingStrength {
+enum ElementDefinitionBindingStrength {
   @JsonValue('required')
   required,
   @JsonValue('extensible')

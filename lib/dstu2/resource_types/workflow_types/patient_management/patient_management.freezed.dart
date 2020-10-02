@@ -2236,11 +2236,16 @@ class _$EncounterLocationTearOff {
 // ignore: unused_element
   _EncounterLocation call(
       {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @required @JsonKey(required: true) Reference location,
-      @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @required
+      @JsonKey(required: true)
+          Reference location,
+      @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
+          EncounterLocationStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Period period}) {
     return _EncounterLocation(
       id: id,
@@ -2271,8 +2276,8 @@ mixin _$EncounterLocation {
   List<FhirExtension> get modifierExtension;
   @JsonKey(required: true)
   Reference get location;
-  @JsonKey(unknownEnumValue: LocationStatus.unknown)
-  LocationStatus get status;
+  @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
+  EncounterLocationStatus get status;
   @JsonKey(name: '_status')
   Element get statusElement;
   Period get period;
@@ -2288,11 +2293,15 @@ abstract class $EncounterLocationCopyWith<$Res> {
       _$EncounterLocationCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @JsonKey(required: true) Reference location,
-      @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(required: true)
+          Reference location,
+      @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
+          EncounterLocationStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Period period});
 
   $ReferenceCopyWith<$Res> get location;
@@ -2328,7 +2337,8 @@ class _$EncounterLocationCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       location: location == freezed ? _value.location : location as Reference,
-      status: status == freezed ? _value.status : status as LocationStatus,
+      status:
+          status == freezed ? _value.status : status as EncounterLocationStatus,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element,
@@ -2376,11 +2386,15 @@ abstract class _$EncounterLocationCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @JsonKey(required: true) Reference location,
-      @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(required: true)
+          Reference location,
+      @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
+          EncounterLocationStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Period period});
 
   @override
@@ -2421,7 +2435,8 @@ class __$EncounterLocationCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       location: location == freezed ? _value.location : location as Reference,
-      status: status == freezed ? _value.status : status as LocationStatus,
+      status:
+          status == freezed ? _value.status : status as EncounterLocationStatus,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element,
@@ -2439,7 +2454,7 @@ class _$_EncounterLocation extends _EncounterLocation {
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @required @JsonKey(required: true) this.location,
-      @JsonKey(unknownEnumValue: LocationStatus.unknown) this.status,
+      @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown) this.status,
       @JsonKey(name: '_status') this.statusElement,
       this.period})
       : assert(location != null),
@@ -2459,8 +2474,8 @@ class _$_EncounterLocation extends _EncounterLocation {
   @JsonKey(required: true)
   final Reference location;
   @override
-  @JsonKey(unknownEnumValue: LocationStatus.unknown)
-  final LocationStatus status;
+  @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
+  final EncounterLocationStatus status;
   @override
   @JsonKey(name: '_status')
   final Element statusElement;
@@ -2521,11 +2536,16 @@ abstract class _EncounterLocation extends EncounterLocation {
   _EncounterLocation._() : super._();
   factory _EncounterLocation(
       {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @required @JsonKey(required: true) Reference location,
-      @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @required
+      @JsonKey(required: true)
+          Reference location,
+      @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
+          EncounterLocationStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Period period}) = _$_EncounterLocation;
 
   factory _EncounterLocation.fromJson(Map<String, dynamic> json) =
@@ -2542,8 +2562,8 @@ abstract class _EncounterLocation extends EncounterLocation {
   @JsonKey(required: true)
   Reference get location;
   @override
-  @JsonKey(unknownEnumValue: LocationStatus.unknown)
-  LocationStatus get status;
+  @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
+  EncounterLocationStatus get status;
   @override
   @JsonKey(name: '_status')
   Element get statusElement;

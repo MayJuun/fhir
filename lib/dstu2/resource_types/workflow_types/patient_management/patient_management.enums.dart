@@ -103,7 +103,7 @@ enum EncounterHistoryStatus {
   @JsonValue('unknown')
   unknown,
 }
-enum LocationStatus {
+enum EncounterLocationStatus {
   @JsonValue('planned')
   planned,
   @JsonValue('active')

@@ -449,8 +449,9 @@ _$_EncounterLocation _$_$_EncounterLocationFromJson(Map<String, dynamic> json) {
     location: json['location'] == null
         ? null
         : Reference.fromJson(json['location'] as Map<String, dynamic>),
-    status: _$enumDecodeNullable(_$LocationStatusEnumMap, json['status'],
-        unknownValue: LocationStatus.unknown),
+    status: _$enumDecodeNullable(
+        _$EncounterLocationStatusEnumMap, json['status'],
+        unknownValue: EncounterLocationStatus.unknown),
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -476,18 +477,18 @@ Map<String, dynamic> _$_$_EncounterLocationToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('location', instance.location?.toJson());
-  writeNotNull('status', _$LocationStatusEnumMap[instance.status]);
+  writeNotNull('status', _$EncounterLocationStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('period', instance.period?.toJson());
   return val;
 }
 
-const _$LocationStatusEnumMap = {
-  LocationStatus.planned: 'planned',
-  LocationStatus.active: 'active',
-  LocationStatus.reserved: 'reserved',
-  LocationStatus.completed: 'completed',
-  LocationStatus.unknown: 'unknown',
+const _$EncounterLocationStatusEnumMap = {
+  EncounterLocationStatus.planned: 'planned',
+  EncounterLocationStatus.active: 'active',
+  EncounterLocationStatus.reserved: 'reserved',
+  EncounterLocationStatus.completed: 'completed',
+  EncounterLocationStatus.unknown: 'unknown',
 };
 
 _$_EpisodeOfCare _$_$_EpisodeOfCareFromJson(Map<String, dynamic> json) {

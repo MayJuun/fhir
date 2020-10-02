@@ -425,10 +425,12 @@ abstract class OperationDefinitionParameterBinding
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
-    @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
+    @JsonKey(
+        required: true,
+        unknownEnumValue: OperationDefinitionBindingStrength.unknown)
     @JsonKey(required: true)
     @required
-        BindingStrength strength,
+        OperationDefinitionBindingStrength strength,
     FhirUri valueSetUri,
     Reference valueSetReference,
   }) = _OperationDefinitionParameterBinding;
