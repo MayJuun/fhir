@@ -17,6 +17,8 @@ abstract class PrimitiveObject<T> {
         : value.fold((isLeft) => false, (isRight) => o == isRight);
   }
 
+  bool get isValid => value.isRight();
+
   @override
   int get hashCode => value.hashCode;
 
