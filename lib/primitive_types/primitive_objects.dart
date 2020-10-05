@@ -22,8 +22,6 @@ abstract class PrimitiveObject<T> {
   @override
   int get hashCode => value.hashCode;
 
-  bool get isValid => value.isRight();
-
   @override
   String toString() => result();
 

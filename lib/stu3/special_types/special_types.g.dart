@@ -112,11 +112,15 @@ _$_Meta _$_$_MetaFromJson(Map<String, dynamic> json) {
     versionIdElement: json['_versionId'] == null
         ? null
         : Element.fromJson(json['_versionId'] as Map<String, dynamic>),
-    lastUpdated: json['lastUpdated'] as String,
+    lastUpdated: json['lastUpdated'] == null
+        ? null
+        : Instant.fromJson(json['lastUpdated'] as String),
     lastUpdatedElement: json['_lastUpdated'] == null
         ? null
         : Element.fromJson(json['_lastUpdated'] as Map<String, dynamic>),
-    profile: (json['profile'] as List)?.map((e) => e as String)?.toList(),
+    profile: (json['profile'] as List)
+        ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
+        ?.toList(),
     profileElement: (json['_profile'] as List)
         ?.map((e) =>
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
@@ -143,9 +147,9 @@ Map<String, dynamic> _$_$_MetaToJson(_$_Meta instance) {
 
   writeNotNull('versionId', instance.versionId?.toJson());
   writeNotNull('_versionId', instance.versionIdElement?.toJson());
-  writeNotNull('lastUpdated', instance.lastUpdated);
+  writeNotNull('lastUpdated', instance.lastUpdated?.toJson());
   writeNotNull('_lastUpdated', instance.lastUpdatedElement?.toJson());
-  writeNotNull('profile', instance.profile);
+  writeNotNull('profile', instance.profile?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       '_profile', instance.profileElement?.map((e) => e?.toJson())?.toList());
   writeNotNull(

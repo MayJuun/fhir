@@ -41,9 +41,9 @@ abstract class Meta implements _$Meta {
   factory Meta({
     Id versionId,
     @JsonKey(name: '_versionId') Element versionIdElement,
-    String lastUpdated,
+    Instant lastUpdated,
     @JsonKey(name: '_lastUpdated') Element lastUpdatedElement,
-    List<String> profile,
+    List<FhirUri> profile,
     @JsonKey(name: '_profile') List<Element> profileElement,
     List<Coding> security,
     List<Coding> tag,

@@ -4,6 +4,8 @@
 * Made dstu2 enums 'part of' instead of importing (easier to use dstu2 Enums in other projects)
 * Added an errorMessage() method to primitiveFailures
 * Added an isValid getter to primitiveObjects
+* Updated some dependencies
+* Changed two types in Meta for Stu3
 
 ## [0.0.7]
 

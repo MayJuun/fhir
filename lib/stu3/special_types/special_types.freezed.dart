@@ -504,9 +504,9 @@ class _$MetaTearOff {
   _Meta call(
       {Id versionId,
       @JsonKey(name: '_versionId') Element versionIdElement,
-      String lastUpdated,
+      Instant lastUpdated,
       @JsonKey(name: '_lastUpdated') Element lastUpdatedElement,
-      List<String> profile,
+      List<FhirUri> profile,
       @JsonKey(name: '_profile') List<Element> profileElement,
       List<Coding> security,
       List<Coding> tag}) {
@@ -537,10 +537,10 @@ mixin _$Meta {
   Id get versionId;
   @JsonKey(name: '_versionId')
   Element get versionIdElement;
-  String get lastUpdated;
+  Instant get lastUpdated;
   @JsonKey(name: '_lastUpdated')
   Element get lastUpdatedElement;
-  List<String> get profile;
+  List<FhirUri> get profile;
   @JsonKey(name: '_profile')
   List<Element> get profileElement;
   List<Coding> get security;
@@ -557,9 +557,9 @@ abstract class $MetaCopyWith<$Res> {
   $Res call(
       {Id versionId,
       @JsonKey(name: '_versionId') Element versionIdElement,
-      String lastUpdated,
+      Instant lastUpdated,
       @JsonKey(name: '_lastUpdated') Element lastUpdatedElement,
-      List<String> profile,
+      List<FhirUri> profile,
       @JsonKey(name: '_profile') List<Element> profileElement,
       List<Coding> security,
       List<Coding> tag});
@@ -593,11 +593,11 @@ class _$MetaCopyWithImpl<$Res> implements $MetaCopyWith<$Res> {
           ? _value.versionIdElement
           : versionIdElement as Element,
       lastUpdated:
-          lastUpdated == freezed ? _value.lastUpdated : lastUpdated as String,
+          lastUpdated == freezed ? _value.lastUpdated : lastUpdated as Instant,
       lastUpdatedElement: lastUpdatedElement == freezed
           ? _value.lastUpdatedElement
           : lastUpdatedElement as Element,
-      profile: profile == freezed ? _value.profile : profile as List<String>,
+      profile: profile == freezed ? _value.profile : profile as List<FhirUri>,
       profileElement: profileElement == freezed
           ? _value.profileElement
           : profileElement as List<Element>,
@@ -636,9 +636,9 @@ abstract class _$MetaCopyWith<$Res> implements $MetaCopyWith<$Res> {
   $Res call(
       {Id versionId,
       @JsonKey(name: '_versionId') Element versionIdElement,
-      String lastUpdated,
+      Instant lastUpdated,
       @JsonKey(name: '_lastUpdated') Element lastUpdatedElement,
-      List<String> profile,
+      List<FhirUri> profile,
       @JsonKey(name: '_profile') List<Element> profileElement,
       List<Coding> security,
       List<Coding> tag});
@@ -675,11 +675,11 @@ class __$MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res>
           ? _value.versionIdElement
           : versionIdElement as Element,
       lastUpdated:
-          lastUpdated == freezed ? _value.lastUpdated : lastUpdated as String,
+          lastUpdated == freezed ? _value.lastUpdated : lastUpdated as Instant,
       lastUpdatedElement: lastUpdatedElement == freezed
           ? _value.lastUpdatedElement
           : lastUpdatedElement as Element,
-      profile: profile == freezed ? _value.profile : profile as List<String>,
+      profile: profile == freezed ? _value.profile : profile as List<FhirUri>,
       profileElement: profileElement == freezed
           ? _value.profileElement
           : profileElement as List<Element>,
@@ -714,12 +714,12 @@ class _$_Meta extends _Meta {
   @JsonKey(name: '_versionId')
   final Element versionIdElement;
   @override
-  final String lastUpdated;
+  final Instant lastUpdated;
   @override
   @JsonKey(name: '_lastUpdated')
   final Element lastUpdatedElement;
   @override
-  final List<String> profile;
+  final List<FhirUri> profile;
   @override
   @JsonKey(name: '_profile')
   final List<Element> profileElement;
@@ -789,9 +789,9 @@ abstract class _Meta extends Meta {
   factory _Meta(
       {Id versionId,
       @JsonKey(name: '_versionId') Element versionIdElement,
-      String lastUpdated,
+      Instant lastUpdated,
       @JsonKey(name: '_lastUpdated') Element lastUpdatedElement,
-      List<String> profile,
+      List<FhirUri> profile,
       @JsonKey(name: '_profile') List<Element> profileElement,
       List<Coding> security,
       List<Coding> tag}) = _$_Meta;
@@ -804,12 +804,12 @@ abstract class _Meta extends Meta {
   @JsonKey(name: '_versionId')
   Element get versionIdElement;
   @override
-  String get lastUpdated;
+  Instant get lastUpdated;
   @override
   @JsonKey(name: '_lastUpdated')
   Element get lastUpdatedElement;
   @override
-  List<String> get profile;
+  List<FhirUri> get profile;
   @override
   @JsonKey(name: '_profile')
   List<Element> get profileElement;
