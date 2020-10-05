@@ -321,9 +321,10 @@ class _$InvalidBase64BinaryCopyWithImpl<T, $Res>
 }
 
 /// @nodoc
-class _$InvalidBase64Binary<T> implements InvalidBase64Binary<T> {
+class _$InvalidBase64Binary<T> extends InvalidBase64Binary<T> {
   const _$InvalidBase64Binary({@required this.failedValue})
-      : assert(failedValue != null);
+      : assert(failedValue != null),
+        super._();
 
   @override
   final T failedValue;
@@ -510,7 +511,8 @@ class _$InvalidBase64Binary<T> implements InvalidBase64Binary<T> {
   }
 }
 
-abstract class InvalidBase64Binary<T> implements PrimitiveFailure<T> {
+abstract class InvalidBase64Binary<T> extends PrimitiveFailure<T> {
+  const InvalidBase64Binary._() : super._();
   const factory InvalidBase64Binary({@required T failedValue}) =
       _$InvalidBase64Binary<T>;
 
@@ -553,9 +555,10 @@ class _$InvalidBooleanCopyWithImpl<T, $Res>
 }
 
 /// @nodoc
-class _$InvalidBoolean<T> implements InvalidBoolean<T> {
+class _$InvalidBoolean<T> extends InvalidBoolean<T> {
   const _$InvalidBoolean({@required this.failedValue})
-      : assert(failedValue != null);
+      : assert(failedValue != null),
+        super._();
 
   @override
   final T failedValue;
@@ -741,7 +744,8 @@ class _$InvalidBoolean<T> implements InvalidBoolean<T> {
   }
 }
 
-abstract class InvalidBoolean<T> implements PrimitiveFailure<T> {
+abstract class InvalidBoolean<T> extends PrimitiveFailure<T> {
+  const InvalidBoolean._() : super._();
   const factory InvalidBoolean({@required T failedValue}) = _$InvalidBoolean<T>;
 
   @override
@@ -783,9 +787,10 @@ class _$InvalidCanonicalCopyWithImpl<T, $Res>
 }
 
 /// @nodoc
-class _$InvalidCanonical<T> implements InvalidCanonical<T> {
+class _$InvalidCanonical<T> extends InvalidCanonical<T> {
   const _$InvalidCanonical({@required this.failedValue})
-      : assert(failedValue != null);
+      : assert(failedValue != null),
+        super._();
 
   @override
   final T failedValue;
@@ -971,7 +976,8 @@ class _$InvalidCanonical<T> implements InvalidCanonical<T> {
   }
 }
 
-abstract class InvalidCanonical<T> implements PrimitiveFailure<T> {
+abstract class InvalidCanonical<T> extends PrimitiveFailure<T> {
+  const InvalidCanonical._() : super._();
   const factory InvalidCanonical({@required T failedValue}) =
       _$InvalidCanonical<T>;
 
@@ -1014,9 +1020,10 @@ class _$InvalidCodeCopyWithImpl<T, $Res>
 }
 
 /// @nodoc
-class _$InvalidCode<T> implements InvalidCode<T> {
+class _$InvalidCode<T> extends InvalidCode<T> {
   const _$InvalidCode({@required this.failedValue})
-      : assert(failedValue != null);
+      : assert(failedValue != null),
+        super._();
 
   @override
   final T failedValue;
@@ -1202,7 +1209,8 @@ class _$InvalidCode<T> implements InvalidCode<T> {
   }
 }
 
-abstract class InvalidCode<T> implements PrimitiveFailure<T> {
+abstract class InvalidCode<T> extends PrimitiveFailure<T> {
+  const InvalidCode._() : super._();
   const factory InvalidCode({@required T failedValue}) = _$InvalidCode<T>;
 
   @override
@@ -1244,9 +1252,10 @@ class _$InvalidDateCopyWithImpl<T, $Res>
 }
 
 /// @nodoc
-class _$InvalidDate<T> implements InvalidDate<T> {
+class _$InvalidDate<T> extends InvalidDate<T> {
   const _$InvalidDate({@required this.failedValue})
-      : assert(failedValue != null);
+      : assert(failedValue != null),
+        super._();
 
   @override
   final T failedValue;
@@ -1432,7 +1441,8 @@ class _$InvalidDate<T> implements InvalidDate<T> {
   }
 }
 
-abstract class InvalidDate<T> implements PrimitiveFailure<T> {
+abstract class InvalidDate<T> extends PrimitiveFailure<T> {
+  const InvalidDate._() : super._();
   const factory InvalidDate({@required T failedValue}) = _$InvalidDate<T>;
 
   @override
@@ -1474,9 +1484,10 @@ class _$InvalidDateTimeCopyWithImpl<T, $Res>
 }
 
 /// @nodoc
-class _$InvalidDateTime<T> implements InvalidDateTime<T> {
+class _$InvalidDateTime<T> extends InvalidDateTime<T> {
   const _$InvalidDateTime({@required this.failedValue})
-      : assert(failedValue != null);
+      : assert(failedValue != null),
+        super._();
 
   @override
   final T failedValue;
@@ -1662,7 +1673,8 @@ class _$InvalidDateTime<T> implements InvalidDateTime<T> {
   }
 }
 
-abstract class InvalidDateTime<T> implements PrimitiveFailure<T> {
+abstract class InvalidDateTime<T> extends PrimitiveFailure<T> {
+  const InvalidDateTime._() : super._();
   const factory InvalidDateTime({@required T failedValue}) =
       _$InvalidDateTime<T>;
 
@@ -1705,9 +1717,10 @@ class _$InvalidDecimalCopyWithImpl<T, $Res>
 }
 
 /// @nodoc
-class _$InvalidDecimal<T> implements InvalidDecimal<T> {
+class _$InvalidDecimal<T> extends InvalidDecimal<T> {
   const _$InvalidDecimal({@required this.failedValue})
-      : assert(failedValue != null);
+      : assert(failedValue != null),
+        super._();
 
   @override
   final T failedValue;
@@ -1893,7 +1906,8 @@ class _$InvalidDecimal<T> implements InvalidDecimal<T> {
   }
 }
 
-abstract class InvalidDecimal<T> implements PrimitiveFailure<T> {
+abstract class InvalidDecimal<T> extends PrimitiveFailure<T> {
+  const InvalidDecimal._() : super._();
   const factory InvalidDecimal({@required T failedValue}) = _$InvalidDecimal<T>;
 
   @override
@@ -1935,8 +1949,10 @@ class _$InvalidIdCopyWithImpl<T, $Res>
 }
 
 /// @nodoc
-class _$InvalidId<T> implements InvalidId<T> {
-  const _$InvalidId({@required this.failedValue}) : assert(failedValue != null);
+class _$InvalidId<T> extends InvalidId<T> {
+  const _$InvalidId({@required this.failedValue})
+      : assert(failedValue != null),
+        super._();
 
   @override
   final T failedValue;
@@ -2122,7 +2138,8 @@ class _$InvalidId<T> implements InvalidId<T> {
   }
 }
 
-abstract class InvalidId<T> implements PrimitiveFailure<T> {
+abstract class InvalidId<T> extends PrimitiveFailure<T> {
+  const InvalidId._() : super._();
   const factory InvalidId({@required T failedValue}) = _$InvalidId<T>;
 
   @override
@@ -2164,9 +2181,10 @@ class _$InvalidInstantCopyWithImpl<T, $Res>
 }
 
 /// @nodoc
-class _$InvalidInstant<T> implements InvalidInstant<T> {
+class _$InvalidInstant<T> extends InvalidInstant<T> {
   const _$InvalidInstant({@required this.failedValue})
-      : assert(failedValue != null);
+      : assert(failedValue != null),
+        super._();
 
   @override
   final T failedValue;
@@ -2352,7 +2370,8 @@ class _$InvalidInstant<T> implements InvalidInstant<T> {
   }
 }
 
-abstract class InvalidInstant<T> implements PrimitiveFailure<T> {
+abstract class InvalidInstant<T> extends PrimitiveFailure<T> {
+  const InvalidInstant._() : super._();
   const factory InvalidInstant({@required T failedValue}) = _$InvalidInstant<T>;
 
   @override
@@ -2394,9 +2413,10 @@ class _$InvalidInteger64CopyWithImpl<T, $Res>
 }
 
 /// @nodoc
-class _$InvalidInteger64<T> implements InvalidInteger64<T> {
+class _$InvalidInteger64<T> extends InvalidInteger64<T> {
   const _$InvalidInteger64({@required this.failedValue})
-      : assert(failedValue != null);
+      : assert(failedValue != null),
+        super._();
 
   @override
   final T failedValue;
@@ -2582,7 +2602,8 @@ class _$InvalidInteger64<T> implements InvalidInteger64<T> {
   }
 }
 
-abstract class InvalidInteger64<T> implements PrimitiveFailure<T> {
+abstract class InvalidInteger64<T> extends PrimitiveFailure<T> {
+  const InvalidInteger64._() : super._();
   const factory InvalidInteger64({@required T failedValue}) =
       _$InvalidInteger64<T>;
 
@@ -2625,9 +2646,10 @@ class _$InvalidIntegerCopyWithImpl<T, $Res>
 }
 
 /// @nodoc
-class _$InvalidInteger<T> implements InvalidInteger<T> {
+class _$InvalidInteger<T> extends InvalidInteger<T> {
   const _$InvalidInteger({@required this.failedValue})
-      : assert(failedValue != null);
+      : assert(failedValue != null),
+        super._();
 
   @override
   final T failedValue;
@@ -2813,7 +2835,8 @@ class _$InvalidInteger<T> implements InvalidInteger<T> {
   }
 }
 
-abstract class InvalidInteger<T> implements PrimitiveFailure<T> {
+abstract class InvalidInteger<T> extends PrimitiveFailure<T> {
+  const InvalidInteger._() : super._();
   const factory InvalidInteger({@required T failedValue}) = _$InvalidInteger<T>;
 
   @override
@@ -2855,9 +2878,10 @@ class _$InvalidMarkdownCopyWithImpl<T, $Res>
 }
 
 /// @nodoc
-class _$InvalidMarkdown<T> implements InvalidMarkdown<T> {
+class _$InvalidMarkdown<T> extends InvalidMarkdown<T> {
   const _$InvalidMarkdown({@required this.failedValue})
-      : assert(failedValue != null);
+      : assert(failedValue != null),
+        super._();
 
   @override
   final T failedValue;
@@ -3043,7 +3067,8 @@ class _$InvalidMarkdown<T> implements InvalidMarkdown<T> {
   }
 }
 
-abstract class InvalidMarkdown<T> implements PrimitiveFailure<T> {
+abstract class InvalidMarkdown<T> extends PrimitiveFailure<T> {
+  const InvalidMarkdown._() : super._();
   const factory InvalidMarkdown({@required T failedValue}) =
       _$InvalidMarkdown<T>;
 
@@ -3086,9 +3111,10 @@ class _$InvalidOidCopyWithImpl<T, $Res>
 }
 
 /// @nodoc
-class _$InvalidOid<T> implements InvalidOid<T> {
+class _$InvalidOid<T> extends InvalidOid<T> {
   const _$InvalidOid({@required this.failedValue})
-      : assert(failedValue != null);
+      : assert(failedValue != null),
+        super._();
 
   @override
   final T failedValue;
@@ -3274,7 +3300,8 @@ class _$InvalidOid<T> implements InvalidOid<T> {
   }
 }
 
-abstract class InvalidOid<T> implements PrimitiveFailure<T> {
+abstract class InvalidOid<T> extends PrimitiveFailure<T> {
+  const InvalidOid._() : super._();
   const factory InvalidOid({@required T failedValue}) = _$InvalidOid<T>;
 
   @override
@@ -3316,9 +3343,10 @@ class _$InvalidPositiveIntCopyWithImpl<T, $Res>
 }
 
 /// @nodoc
-class _$InvalidPositiveInt<T> implements InvalidPositiveInt<T> {
+class _$InvalidPositiveInt<T> extends InvalidPositiveInt<T> {
   const _$InvalidPositiveInt({@required this.failedValue})
-      : assert(failedValue != null);
+      : assert(failedValue != null),
+        super._();
 
   @override
   final T failedValue;
@@ -3505,7 +3533,8 @@ class _$InvalidPositiveInt<T> implements InvalidPositiveInt<T> {
   }
 }
 
-abstract class InvalidPositiveInt<T> implements PrimitiveFailure<T> {
+abstract class InvalidPositiveInt<T> extends PrimitiveFailure<T> {
+  const InvalidPositiveInt._() : super._();
   const factory InvalidPositiveInt({@required T failedValue}) =
       _$InvalidPositiveInt<T>;
 
@@ -3548,9 +3577,10 @@ class _$InvalidTimeCopyWithImpl<T, $Res>
 }
 
 /// @nodoc
-class _$InvalidTime<T> implements InvalidTime<T> {
+class _$InvalidTime<T> extends InvalidTime<T> {
   const _$InvalidTime({@required this.failedValue})
-      : assert(failedValue != null);
+      : assert(failedValue != null),
+        super._();
 
   @override
   final T failedValue;
@@ -3736,7 +3766,8 @@ class _$InvalidTime<T> implements InvalidTime<T> {
   }
 }
 
-abstract class InvalidTime<T> implements PrimitiveFailure<T> {
+abstract class InvalidTime<T> extends PrimitiveFailure<T> {
+  const InvalidTime._() : super._();
   const factory InvalidTime({@required T failedValue}) = _$InvalidTime<T>;
 
   @override
@@ -3778,9 +3809,10 @@ class _$InvalidUnsignedIntCopyWithImpl<T, $Res>
 }
 
 /// @nodoc
-class _$InvalidUnsignedInt<T> implements InvalidUnsignedInt<T> {
+class _$InvalidUnsignedInt<T> extends InvalidUnsignedInt<T> {
   const _$InvalidUnsignedInt({@required this.failedValue})
-      : assert(failedValue != null);
+      : assert(failedValue != null),
+        super._();
 
   @override
   final T failedValue;
@@ -3967,7 +3999,8 @@ class _$InvalidUnsignedInt<T> implements InvalidUnsignedInt<T> {
   }
 }
 
-abstract class InvalidUnsignedInt<T> implements PrimitiveFailure<T> {
+abstract class InvalidUnsignedInt<T> extends PrimitiveFailure<T> {
+  const InvalidUnsignedInt._() : super._();
   const factory InvalidUnsignedInt({@required T failedValue}) =
       _$InvalidUnsignedInt<T>;
 
@@ -4010,9 +4043,10 @@ class _$InvalidFhirUriCopyWithImpl<T, $Res>
 }
 
 /// @nodoc
-class _$InvalidFhirUri<T> implements InvalidFhirUri<T> {
+class _$InvalidFhirUri<T> extends InvalidFhirUri<T> {
   const _$InvalidFhirUri({@required this.failedValue})
-      : assert(failedValue != null);
+      : assert(failedValue != null),
+        super._();
 
   @override
   final T failedValue;
@@ -4198,7 +4232,8 @@ class _$InvalidFhirUri<T> implements InvalidFhirUri<T> {
   }
 }
 
-abstract class InvalidFhirUri<T> implements PrimitiveFailure<T> {
+abstract class InvalidFhirUri<T> extends PrimitiveFailure<T> {
+  const InvalidFhirUri._() : super._();
   const factory InvalidFhirUri({@required T failedValue}) = _$InvalidFhirUri<T>;
 
   @override
@@ -4240,9 +4275,10 @@ class _$InvalidFhirUrlCopyWithImpl<T, $Res>
 }
 
 /// @nodoc
-class _$InvalidFhirUrl<T> implements InvalidFhirUrl<T> {
+class _$InvalidFhirUrl<T> extends InvalidFhirUrl<T> {
   const _$InvalidFhirUrl({@required this.failedValue})
-      : assert(failedValue != null);
+      : assert(failedValue != null),
+        super._();
 
   @override
   final T failedValue;
@@ -4428,7 +4464,8 @@ class _$InvalidFhirUrl<T> implements InvalidFhirUrl<T> {
   }
 }
 
-abstract class InvalidFhirUrl<T> implements PrimitiveFailure<T> {
+abstract class InvalidFhirUrl<T> extends PrimitiveFailure<T> {
+  const InvalidFhirUrl._() : super._();
   const factory InvalidFhirUrl({@required T failedValue}) = _$InvalidFhirUrl<T>;
 
   @override
@@ -4470,9 +4507,10 @@ class _$InvalidUuidCopyWithImpl<T, $Res>
 }
 
 /// @nodoc
-class _$InvalidUuid<T> implements InvalidUuid<T> {
+class _$InvalidUuid<T> extends InvalidUuid<T> {
   const _$InvalidUuid({@required this.failedValue})
-      : assert(failedValue != null);
+      : assert(failedValue != null),
+        super._();
 
   @override
   final T failedValue;
@@ -4658,7 +4696,8 @@ class _$InvalidUuid<T> implements InvalidUuid<T> {
   }
 }
 
-abstract class InvalidUuid<T> implements PrimitiveFailure<T> {
+abstract class InvalidUuid<T> extends PrimitiveFailure<T> {
+  const InvalidUuid._() : super._();
   const factory InvalidUuid({@required T failedValue}) = _$InvalidUuid<T>;
 
   @override
@@ -4700,9 +4739,10 @@ class _$InvalidEnumCopyWithImpl<T, $Res>
 }
 
 /// @nodoc
-class _$InvalidEnum<T> implements InvalidEnum<T> {
+class _$InvalidEnum<T> extends InvalidEnum<T> {
   const _$InvalidEnum({@required this.failedValue})
-      : assert(failedValue != null);
+      : assert(failedValue != null),
+        super._();
 
   @override
   final T failedValue;
@@ -4888,7 +4928,8 @@ class _$InvalidEnum<T> implements InvalidEnum<T> {
   }
 }
 
-abstract class InvalidEnum<T> implements PrimitiveFailure<T> {
+abstract class InvalidEnum<T> extends PrimitiveFailure<T> {
+  const InvalidEnum._() : super._();
   const factory InvalidEnum({@required T failedValue}) = _$InvalidEnum<T>;
 
   @override

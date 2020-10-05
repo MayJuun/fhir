@@ -23,6 +23,5 @@ class Decimal extends PrimitiveObject<double> {
 
   @override
   dynamic toJson() => value.fold(
-      (failure) => '${failure.runtimeType}:${failure.failedValue.toString()}',
-      (value) => value - value.floor() == 0 ? value.floor() : value);
+      (l) => '${l.errorMessage()}', (r) => r - r.floor() == 0 ? r.floor() : r);
 }

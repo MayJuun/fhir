@@ -20,7 +20,7 @@ class PositiveInt extends PrimitiveObject<int> {
 
   @override
   dynamic toJson() => value.fold(
-        (failure) => '${failure.runtimeType}:${failure.failedValue.toString()}',
-        (value) => value,
+        (l) => '${l.errorMessage()}',
+        (r) => r,
       );
 }

@@ -14,8 +14,8 @@ abstract class Dates extends PrimitiveObject<DateTime> {
 
   @override
   String toString() => value.fold(
-        (failure) => '${failure.runtimeType}:${failure.failedValue.toString()}',
-        (value) => _formattedDate(value),
+        (l) => '${l.errorMessage()}',
+        (r) => _formattedDate(r),
       );
 
   String _formattedDate(value) {

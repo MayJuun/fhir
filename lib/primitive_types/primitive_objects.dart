@@ -20,14 +20,16 @@ abstract class PrimitiveObject<T> {
   @override
   int get hashCode => value.hashCode;
 
+  bool get isValid => value.isRight();
+
   @override
   String toString() => result();
 
   dynamic toJson() => result();
 
   dynamic result() => value.fold(
-        (ifLeft) => '${ifLeft.runtimeType}:${ifLeft.failedValue.toString()}',
-        (isRight) => isRight.toString(),
+        (l) => '${l.errorMessage()}',
+        (r) => r.toString(),
       );
 }
 
@@ -88,7 +90,8 @@ Either<PrimitiveFailure<String>, int> validatePositiveInt(dynamic value) {
       ? val > 0
           ? right(val)
           : left(PrimitiveFailure.invalidPositiveInt(
-              failedValue: value.toString()))
+              failedValue: value.toString(),
+            ))
       : left(
           PrimitiveFailure.invalidPositiveInt(failedValue: value.toString()));
 }

@@ -1,7 +1,9 @@
 ## [0.0.8]
 
 * Eased restrictions on Instant
-* made dstu2 enums part of instead of importing (easier to use dstu2 Enums in other projects)
+* Made dstu2 enums 'part of' instead of importing (easier to use dstu2 Enums in other projects)
+* Added an errorMessage() method to primitiveFailures
+* Added an isValid getter to primitiveObjects
 
 ## [0.0.7]
 

@@ -4,6 +4,7 @@ part 'primitive_failures.freezed.dart';
 
 @freezed
 abstract class PrimitiveFailure<T> with _$PrimitiveFailure<T> {
+  const PrimitiveFailure._();
   const factory PrimitiveFailure.invalidBase64Binary({
     @required T failedValue,
   }) = InvalidBase64Binary<T>;
@@ -64,4 +65,27 @@ abstract class PrimitiveFailure<T> with _$PrimitiveFailure<T> {
   const factory PrimitiveFailure.invalidEnum({
     @required T failedValue,
   }) = InvalidEnum<T>;
+
+  String errorMessage() => this.map(
+        invalidBase64Binary: (f) => '$failedValue is not a valid Base64Binary',
+        invalidBoolean: (f) => '$failedValue is not a valid Boolean',
+        invalidCanonical: (f) => '$failedValue is not a valid Canonical',
+        invalidCode: (f) => '$failedValue is not a valid Code',
+        invalidDate: (f) => '$failedValue is not a valid Date',
+        invalidFhirDateTime: (f) => '$failedValue is not a valid DateTime',
+        invalidDecimal: (f) => '$failedValue is not a valid Decimal',
+        invalidId: (f) => '$failedValue is not a valid Id',
+        invalidInstant: (f) => '$failedValue is not a valid Instant',
+        invalidInteger64: (f) => '$failedValue is not a Integer64',
+        invalidInteger: (f) => '$failedValue is not a valid Integer',
+        invalidMarkdown: (f) => '$failedValue is not a valid Markdown',
+        invalidOid: (f) => '$failedValue is not a valid Oid',
+        invalidPositiveInt: (f) => '$failedValue is not a valid PositiveInt',
+        invalidTime: (f) => '$failedValue is not a valid Time',
+        invalidUnsignedInt: (f) => '$failedValue is not a valid UnsignedInt',
+        invalidFhirUri: (f) => '$failedValue is not a valid Uri',
+        invalidFhirUrl: (f) => '$failedValue is not a valid Url',
+        invalidUuid: (f) => '$failedValue is not a valid Uuid',
+        invalidEnum: (f) => '$failedValue is not a valid Enum',
+      );
 }
