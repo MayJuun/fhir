@@ -11,7 +11,7 @@ part 'r4_validation.dart';
 part 'r5_validation.dart';
 part 'stu3_validation.dart';
 
-Future main() async {
+Future validation() async {
   var string = '';
   string += 'DSTU2\n'
       '---------------------------------------------------------------------------';
@@ -25,7 +25,7 @@ Future main() async {
   string += '\n\nR5\n'
       '---------------------------------------------------------------------------';
   string += await r5Validation();
-  final file = File('./test/errors.txt');
+  final file = File('./test/tested.txt');
   await file.writeAsString('');
   await file.writeAsString(string);
 }

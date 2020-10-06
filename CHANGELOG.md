@@ -6,6 +6,7 @@
 * Added an isValid getter to primitiveObjects
 * Updated some dependencies
 * Changed two types in Meta for Stu3
+* Added a simple test file
 
 ## [0.0.7]
 
