@@ -7,6 +7,8 @@
 * Updated some dependencies
 * Changed two types in Meta for Stu3
 * Added a simple test file
+* Changed Dates to its own PrimitiveClass, simplified formatting (just counting length)
+* updated R5 to v4.5.0
 
 ## [0.0.7]
 

@@ -19,6 +19,8 @@ enum BundleType {
   searchset,
   @JsonValue('collection')
   collection,
+  @JsonValue('subscription-notification')
+  subscription_notification,
   @JsonValue('unknown')
   unknown,
 }
@@ -151,67 +153,13 @@ enum OperationOutcomeIssueCode {
   informational,
 }
 
-enum SubscriptionStatus {
-  @JsonValue('requested')
-  requested,
-  @JsonValue('active')
-  active,
-  @JsonValue('error')
-  error,
-  @JsonValue('off')
-  off,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum SubscriptionFilterByMatchType {
-  @JsonValue('=')
-  eq,
-  @JsonValue('in')
-  in_,
-  @JsonValue('not-in')
-  not_in,
-  @JsonValue('above')
-  above,
-  @JsonValue('below')
-  below,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum SubscriptionPayloadContent {
+enum SubscriptionContent {
   @JsonValue('empty')
   empty,
   @JsonValue('id-only')
   id_only,
   @JsonValue('full-resource')
   full_resource,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum TopicStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum TopicCanFilterByMatchType {
-  @JsonValue('=')
-  eq,
-  @JsonValue('in')
-  in_,
-  @JsonValue('not-in')
-  not_in,
-  @JsonValue('above')
-  above,
-  @JsonValue('below')
-  below,
   @JsonValue('unknown')
   unknown,
 }

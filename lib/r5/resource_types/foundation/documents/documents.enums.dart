@@ -103,6 +103,19 @@ enum DocumentReferenceStatus {
   unknown,
 }
 
+enum DocumentReferenceAttesterMode {
+  @JsonValue('personal')
+  personal,
+  @JsonValue('professional')
+  professional,
+  @JsonValue('legal')
+  legal,
+  @JsonValue('official')
+  official,
+  @JsonValue('unknown')
+  unknown,
+}
+
 enum DocumentReferenceRelatesToCode {
   @JsonValue('replaces')
   replaces,

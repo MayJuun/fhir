@@ -12,7 +12,6 @@ Coverage _$CoverageFromJson(Map<String, dynamic> json) {
   return _Coverage.fromJson(json);
 }
 
-/// @nodoc
 class _$CoverageTearOff {
   const _$CoverageTearOff();
 
@@ -87,18 +86,11 @@ class _$CoverageTearOff {
       contract: contract,
     );
   }
-
-// ignore: unused_element
-  Coverage fromJson(Map<String, Object> json) {
-    return Coverage.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $Coverage = _$CoverageTearOff();
 
-/// @nodoc
 mixin _$Coverage {
   @JsonKey(defaultValue: 'Coverage')
   String get resourceType;
@@ -148,7 +140,6 @@ mixin _$Coverage {
   $CoverageCopyWith<Coverage> get copyWith;
 }
 
-/// @nodoc
 abstract class $CoverageCopyWith<$Res> {
   factory $CoverageCopyWith(Coverage value, $Res Function(Coverage) then) =
       _$CoverageCopyWithImpl<$Res>;
@@ -205,7 +196,6 @@ abstract class $CoverageCopyWith<$Res> {
   $ElementCopyWith<$Res> get subrogationElement;
 }
 
-/// @nodoc
 class _$CoverageCopyWithImpl<$Res> implements $CoverageCopyWith<$Res> {
   _$CoverageCopyWithImpl(this._value, this._then);
 
@@ -485,7 +475,6 @@ class _$CoverageCopyWithImpl<$Res> implements $CoverageCopyWith<$Res> {
   }
 }
 
-/// @nodoc
 abstract class _$CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
   factory _$CoverageCopyWith(_Coverage value, $Res Function(_Coverage) then) =
       __$CoverageCopyWithImpl<$Res>;
@@ -559,7 +548,6 @@ abstract class _$CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
   $ElementCopyWith<$Res> get subrogationElement;
 }
 
-/// @nodoc
 class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
     implements _$CoverageCopyWith<$Res> {
   __$CoverageCopyWithImpl(_Coverage _value, $Res Function(_Coverage) _then)
@@ -681,8 +669,6 @@ class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_Coverage extends _Coverage {
   _$_Coverage(
       {@required @JsonKey(defaultValue: 'Coverage') this.resourceType,
@@ -1060,7 +1046,6 @@ CoverageClass _$CoverageClassFromJson(Map<String, dynamic> json) {
   return _CoverageClass.fromJson(json);
 }
 
-/// @nodoc
 class _$CoverageClassTearOff {
   const _$CoverageClassTearOff();
 
@@ -1085,18 +1070,11 @@ class _$CoverageClassTearOff {
       nameElement: nameElement,
     );
   }
-
-// ignore: unused_element
-  CoverageClass fromJson(Map<String, Object> json) {
-    return CoverageClass.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $CoverageClass = _$CoverageClassTearOff();
 
-/// @nodoc
 mixin _$CoverageClass {
   String get id;
   @JsonKey(name: 'extension')
@@ -1114,7 +1092,6 @@ mixin _$CoverageClass {
   $CoverageClassCopyWith<CoverageClass> get copyWith;
 }
 
-/// @nodoc
 abstract class $CoverageClassCopyWith<$Res> {
   factory $CoverageClassCopyWith(
           CoverageClass value, $Res Function(CoverageClass) then) =
@@ -1134,7 +1111,6 @@ abstract class $CoverageClassCopyWith<$Res> {
   $ElementCopyWith<$Res> get nameElement;
 }
 
-/// @nodoc
 class _$CoverageClassCopyWithImpl<$Res>
     implements $CoverageClassCopyWith<$Res> {
   _$CoverageClassCopyWithImpl(this._value, this._then);
@@ -1204,7 +1180,6 @@ class _$CoverageClassCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$CoverageClassCopyWith<$Res>
     implements $CoverageClassCopyWith<$Res> {
   factory _$CoverageClassCopyWith(
@@ -1229,7 +1204,6 @@ abstract class _$CoverageClassCopyWith<$Res>
   $ElementCopyWith<$Res> get nameElement;
 }
 
-/// @nodoc
 class __$CoverageClassCopyWithImpl<$Res>
     extends _$CoverageClassCopyWithImpl<$Res>
     implements _$CoverageClassCopyWith<$Res> {
@@ -1272,8 +1246,6 @@ class __$CoverageClassCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_CoverageClass extends _CoverageClass {
   _$_CoverageClass(
       {this.id,
@@ -1406,7 +1378,6 @@ CoverageCostToBeneficiary _$CoverageCostToBeneficiaryFromJson(
   return _CoverageCostToBeneficiary.fromJson(json);
 }
 
-/// @nodoc
 class _$CoverageCostToBeneficiaryTearOff {
   const _$CoverageCostToBeneficiaryTearOff();
 
@@ -1429,18 +1400,11 @@ class _$CoverageCostToBeneficiaryTearOff {
       exception: exception,
     );
   }
-
-// ignore: unused_element
-  CoverageCostToBeneficiary fromJson(Map<String, Object> json) {
-    return CoverageCostToBeneficiary.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $CoverageCostToBeneficiary = _$CoverageCostToBeneficiaryTearOff();
 
-/// @nodoc
 mixin _$CoverageCostToBeneficiary {
   String get id;
   @JsonKey(name: 'extension')
@@ -1455,7 +1419,6 @@ mixin _$CoverageCostToBeneficiary {
   $CoverageCostToBeneficiaryCopyWith<CoverageCostToBeneficiary> get copyWith;
 }
 
-/// @nodoc
 abstract class $CoverageCostToBeneficiaryCopyWith<$Res> {
   factory $CoverageCostToBeneficiaryCopyWith(CoverageCostToBeneficiary value,
           $Res Function(CoverageCostToBeneficiary) then) =
@@ -1474,7 +1437,6 @@ abstract class $CoverageCostToBeneficiaryCopyWith<$Res> {
   $MoneyCopyWith<$Res> get valueMoney;
 }
 
-/// @nodoc
 class _$CoverageCostToBeneficiaryCopyWithImpl<$Res>
     implements $CoverageCostToBeneficiaryCopyWith<$Res> {
   _$CoverageCostToBeneficiaryCopyWithImpl(this._value, this._then);
@@ -1544,7 +1506,6 @@ class _$CoverageCostToBeneficiaryCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$CoverageCostToBeneficiaryCopyWith<$Res>
     implements $CoverageCostToBeneficiaryCopyWith<$Res> {
   factory _$CoverageCostToBeneficiaryCopyWith(_CoverageCostToBeneficiary value,
@@ -1568,7 +1529,6 @@ abstract class _$CoverageCostToBeneficiaryCopyWith<$Res>
   $MoneyCopyWith<$Res> get valueMoney;
 }
 
-/// @nodoc
 class __$CoverageCostToBeneficiaryCopyWithImpl<$Res>
     extends _$CoverageCostToBeneficiaryCopyWithImpl<$Res>
     implements _$CoverageCostToBeneficiaryCopyWith<$Res> {
@@ -1612,8 +1572,6 @@ class __$CoverageCostToBeneficiaryCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_CoverageCostToBeneficiary extends _CoverageCostToBeneficiary {
   _$_CoverageCostToBeneficiary(
       {this.id,
@@ -1734,7 +1692,6 @@ CoverageException _$CoverageExceptionFromJson(Map<String, dynamic> json) {
   return _CoverageException.fromJson(json);
 }
 
-/// @nodoc
 class _$CoverageExceptionTearOff {
   const _$CoverageExceptionTearOff();
 
@@ -1753,18 +1710,11 @@ class _$CoverageExceptionTearOff {
       period: period,
     );
   }
-
-// ignore: unused_element
-  CoverageException fromJson(Map<String, Object> json) {
-    return CoverageException.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $CoverageException = _$CoverageExceptionTearOff();
 
-/// @nodoc
 mixin _$CoverageException {
   String get id;
   @JsonKey(name: 'extension')
@@ -1777,7 +1727,6 @@ mixin _$CoverageException {
   $CoverageExceptionCopyWith<CoverageException> get copyWith;
 }
 
-/// @nodoc
 abstract class $CoverageExceptionCopyWith<$Res> {
   factory $CoverageExceptionCopyWith(
           CoverageException value, $Res Function(CoverageException) then) =
@@ -1793,7 +1742,6 @@ abstract class $CoverageExceptionCopyWith<$Res> {
   $PeriodCopyWith<$Res> get period;
 }
 
-/// @nodoc
 class _$CoverageExceptionCopyWithImpl<$Res>
     implements $CoverageExceptionCopyWith<$Res> {
   _$CoverageExceptionCopyWithImpl(this._value, this._then);
@@ -1844,7 +1792,6 @@ class _$CoverageExceptionCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$CoverageExceptionCopyWith<$Res>
     implements $CoverageExceptionCopyWith<$Res> {
   factory _$CoverageExceptionCopyWith(
@@ -1864,7 +1811,6 @@ abstract class _$CoverageExceptionCopyWith<$Res>
   $PeriodCopyWith<$Res> get period;
 }
 
-/// @nodoc
 class __$CoverageExceptionCopyWithImpl<$Res>
     extends _$CoverageExceptionCopyWithImpl<$Res>
     implements _$CoverageExceptionCopyWith<$Res> {
@@ -1898,8 +1844,6 @@ class __$CoverageExceptionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_CoverageException extends _CoverageException {
   _$_CoverageException(
       {this.id,
@@ -1999,7 +1943,6 @@ CoverageEligibilityRequest _$CoverageEligibilityRequestFromJson(
   return _CoverageEligibilityRequest.fromJson(json);
 }
 
-/// @nodoc
 class _$CoverageEligibilityRequestTearOff {
   const _$CoverageEligibilityRequestTearOff();
 
@@ -2079,18 +2022,11 @@ class _$CoverageEligibilityRequestTearOff {
       item: item,
     );
   }
-
-// ignore: unused_element
-  CoverageEligibilityRequest fromJson(Map<String, Object> json) {
-    return CoverageEligibilityRequest.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $CoverageEligibilityRequest = _$CoverageEligibilityRequestTearOff();
 
-/// @nodoc
 mixin _$CoverageEligibilityRequest {
   @JsonKey(defaultValue: 'CoverageEligibilityRequest')
   String get resourceType;
@@ -2135,7 +2071,6 @@ mixin _$CoverageEligibilityRequest {
   $CoverageEligibilityRequestCopyWith<CoverageEligibilityRequest> get copyWith;
 }
 
-/// @nodoc
 abstract class $CoverageEligibilityRequestCopyWith<$Res> {
   factory $CoverageEligibilityRequestCopyWith(CoverageEligibilityRequest value,
           $Res Function(CoverageEligibilityRequest) then) =
@@ -2188,7 +2123,6 @@ abstract class $CoverageEligibilityRequestCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get facility;
 }
 
-/// @nodoc
 class _$CoverageEligibilityRequestCopyWithImpl<$Res>
     implements $CoverageEligibilityRequestCopyWith<$Res> {
   _$CoverageEligibilityRequestCopyWithImpl(this._value, this._then);
@@ -2440,7 +2374,6 @@ class _$CoverageEligibilityRequestCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$CoverageEligibilityRequestCopyWith<$Res>
     implements $CoverageEligibilityRequestCopyWith<$Res> {
   factory _$CoverageEligibilityRequestCopyWith(
@@ -2510,7 +2443,6 @@ abstract class _$CoverageEligibilityRequestCopyWith<$Res>
   $ReferenceCopyWith<$Res> get facility;
 }
 
-/// @nodoc
 class __$CoverageEligibilityRequestCopyWithImpl<$Res>
     extends _$CoverageEligibilityRequestCopyWithImpl<$Res>
     implements _$CoverageEligibilityRequestCopyWith<$Res> {
@@ -2626,8 +2558,6 @@ class __$CoverageEligibilityRequestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   _$_CoverageEligibilityRequest(
       {@required
@@ -3005,7 +2935,6 @@ CoverageEligibilityRequestSupportingInfo
   return _CoverageEligibilityRequestSupportingInfo.fromJson(json);
 }
 
-/// @nodoc
 class _$CoverageEligibilityRequestSupportingInfoTearOff {
   const _$CoverageEligibilityRequestSupportingInfoTearOff();
 
@@ -3030,19 +2959,12 @@ class _$CoverageEligibilityRequestSupportingInfoTearOff {
       appliesToAllElement: appliesToAllElement,
     );
   }
-
-// ignore: unused_element
-  CoverageEligibilityRequestSupportingInfo fromJson(Map<String, Object> json) {
-    return CoverageEligibilityRequestSupportingInfo.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $CoverageEligibilityRequestSupportingInfo =
     _$CoverageEligibilityRequestSupportingInfoTearOff();
 
-/// @nodoc
 mixin _$CoverageEligibilityRequestSupportingInfo {
   String get id;
   @JsonKey(name: 'extension')
@@ -3061,7 +2983,6 @@ mixin _$CoverageEligibilityRequestSupportingInfo {
       CoverageEligibilityRequestSupportingInfo> get copyWith;
 }
 
-/// @nodoc
 abstract class $CoverageEligibilityRequestSupportingInfoCopyWith<$Res> {
   factory $CoverageEligibilityRequestSupportingInfoCopyWith(
           CoverageEligibilityRequestSupportingInfo value,
@@ -3082,7 +3003,6 @@ abstract class $CoverageEligibilityRequestSupportingInfoCopyWith<$Res> {
   $ElementCopyWith<$Res> get appliesToAllElement;
 }
 
-/// @nodoc
 class _$CoverageEligibilityRequestSupportingInfoCopyWithImpl<$Res>
     implements $CoverageEligibilityRequestSupportingInfoCopyWith<$Res> {
   _$CoverageEligibilityRequestSupportingInfoCopyWithImpl(
@@ -3158,7 +3078,6 @@ class _$CoverageEligibilityRequestSupportingInfoCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$CoverageEligibilityRequestSupportingInfoCopyWith<$Res>
     implements $CoverageEligibilityRequestSupportingInfoCopyWith<$Res> {
   factory _$CoverageEligibilityRequestSupportingInfoCopyWith(
@@ -3184,7 +3103,6 @@ abstract class _$CoverageEligibilityRequestSupportingInfoCopyWith<$Res>
   $ElementCopyWith<$Res> get appliesToAllElement;
 }
 
-/// @nodoc
 class __$CoverageEligibilityRequestSupportingInfoCopyWithImpl<$Res>
     extends _$CoverageEligibilityRequestSupportingInfoCopyWithImpl<$Res>
     implements _$CoverageEligibilityRequestSupportingInfoCopyWith<$Res> {
@@ -3235,8 +3153,6 @@ class __$CoverageEligibilityRequestSupportingInfoCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_CoverageEligibilityRequestSupportingInfo
     extends _CoverageEligibilityRequestSupportingInfo {
   _$_CoverageEligibilityRequestSupportingInfo(
@@ -3380,7 +3296,6 @@ CoverageEligibilityRequestInsurance
   return _CoverageEligibilityRequestInsurance.fromJson(json);
 }
 
-/// @nodoc
 class _$CoverageEligibilityRequestInsuranceTearOff {
   const _$CoverageEligibilityRequestInsuranceTearOff();
 
@@ -3409,19 +3324,12 @@ class _$CoverageEligibilityRequestInsuranceTearOff {
       businessArrangementElement: businessArrangementElement,
     );
   }
-
-// ignore: unused_element
-  CoverageEligibilityRequestInsurance fromJson(Map<String, Object> json) {
-    return CoverageEligibilityRequestInsurance.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $CoverageEligibilityRequestInsurance =
     _$CoverageEligibilityRequestInsuranceTearOff();
 
-/// @nodoc
 mixin _$CoverageEligibilityRequestInsurance {
   String get id;
   @JsonKey(name: 'extension')
@@ -3440,7 +3348,6 @@ mixin _$CoverageEligibilityRequestInsurance {
       CoverageEligibilityRequestInsurance> get copyWith;
 }
 
-/// @nodoc
 abstract class $CoverageEligibilityRequestInsuranceCopyWith<$Res> {
   factory $CoverageEligibilityRequestInsuranceCopyWith(
           CoverageEligibilityRequestInsurance value,
@@ -3464,7 +3371,6 @@ abstract class $CoverageEligibilityRequestInsuranceCopyWith<$Res> {
   $ElementCopyWith<$Res> get businessArrangementElement;
 }
 
-/// @nodoc
 class _$CoverageEligibilityRequestInsuranceCopyWithImpl<$Res>
     implements $CoverageEligibilityRequestInsuranceCopyWith<$Res> {
   _$CoverageEligibilityRequestInsuranceCopyWithImpl(this._value, this._then);
@@ -3537,7 +3443,6 @@ class _$CoverageEligibilityRequestInsuranceCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$CoverageEligibilityRequestInsuranceCopyWith<$Res>
     implements $CoverageEligibilityRequestInsuranceCopyWith<$Res> {
   factory _$CoverageEligibilityRequestInsuranceCopyWith(
@@ -3566,7 +3471,6 @@ abstract class _$CoverageEligibilityRequestInsuranceCopyWith<$Res>
   $ElementCopyWith<$Res> get businessArrangementElement;
 }
 
-/// @nodoc
 class __$CoverageEligibilityRequestInsuranceCopyWithImpl<$Res>
     extends _$CoverageEligibilityRequestInsuranceCopyWithImpl<$Res>
     implements _$CoverageEligibilityRequestInsuranceCopyWith<$Res> {
@@ -3614,8 +3518,6 @@ class __$CoverageEligibilityRequestInsuranceCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_CoverageEligibilityRequestInsurance
     extends _CoverageEligibilityRequestInsurance {
   _$_CoverageEligibilityRequestInsurance(
@@ -3764,7 +3666,6 @@ CoverageEligibilityRequestItem _$CoverageEligibilityRequestItemFromJson(
   return _CoverageEligibilityRequestItem.fromJson(json);
 }
 
-/// @nodoc
 class _$CoverageEligibilityRequestItemTearOff {
   const _$CoverageEligibilityRequestItemTearOff();
 
@@ -3803,19 +3704,12 @@ class _$CoverageEligibilityRequestItemTearOff {
       detail: detail,
     );
   }
-
-// ignore: unused_element
-  CoverageEligibilityRequestItem fromJson(Map<String, Object> json) {
-    return CoverageEligibilityRequestItem.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $CoverageEligibilityRequestItem =
     _$CoverageEligibilityRequestItemTearOff();
 
-/// @nodoc
 mixin _$CoverageEligibilityRequestItem {
   String get id;
   @JsonKey(name: 'extension')
@@ -3839,7 +3733,6 @@ mixin _$CoverageEligibilityRequestItem {
       get copyWith;
 }
 
-/// @nodoc
 abstract class $CoverageEligibilityRequestItemCopyWith<$Res> {
   factory $CoverageEligibilityRequestItemCopyWith(
           CoverageEligibilityRequestItem value,
@@ -3871,7 +3764,6 @@ abstract class $CoverageEligibilityRequestItemCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get facility;
 }
 
-/// @nodoc
 class _$CoverageEligibilityRequestItemCopyWithImpl<$Res>
     implements $CoverageEligibilityRequestItemCopyWith<$Res> {
   _$CoverageEligibilityRequestItemCopyWithImpl(this._value, this._then);
@@ -3991,7 +3883,6 @@ class _$CoverageEligibilityRequestItemCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$CoverageEligibilityRequestItemCopyWith<$Res>
     implements $CoverageEligibilityRequestItemCopyWith<$Res> {
   factory _$CoverageEligibilityRequestItemCopyWith(
@@ -4031,7 +3922,6 @@ abstract class _$CoverageEligibilityRequestItemCopyWith<$Res>
   $ReferenceCopyWith<$Res> get facility;
 }
 
-/// @nodoc
 class __$CoverageEligibilityRequestItemCopyWithImpl<$Res>
     extends _$CoverageEligibilityRequestItemCopyWithImpl<$Res>
     implements _$CoverageEligibilityRequestItemCopyWith<$Res> {
@@ -4096,8 +3986,6 @@ class __$CoverageEligibilityRequestItemCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_CoverageEligibilityRequestItem
     extends _CoverageEligibilityRequestItem {
   _$_CoverageEligibilityRequestItem(
@@ -4300,7 +4188,6 @@ CoverageEligibilityRequestDiagnosis
   return _CoverageEligibilityRequestDiagnosis.fromJson(json);
 }
 
-/// @nodoc
 class _$CoverageEligibilityRequestDiagnosisTearOff {
   const _$CoverageEligibilityRequestDiagnosisTearOff();
 
@@ -4319,19 +4206,12 @@ class _$CoverageEligibilityRequestDiagnosisTearOff {
       diagnosisReference: diagnosisReference,
     );
   }
-
-// ignore: unused_element
-  CoverageEligibilityRequestDiagnosis fromJson(Map<String, Object> json) {
-    return CoverageEligibilityRequestDiagnosis.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $CoverageEligibilityRequestDiagnosis =
     _$CoverageEligibilityRequestDiagnosisTearOff();
 
-/// @nodoc
 mixin _$CoverageEligibilityRequestDiagnosis {
   String get id;
   @JsonKey(name: 'extension')
@@ -4345,7 +4225,6 @@ mixin _$CoverageEligibilityRequestDiagnosis {
       CoverageEligibilityRequestDiagnosis> get copyWith;
 }
 
-/// @nodoc
 abstract class $CoverageEligibilityRequestDiagnosisCopyWith<$Res> {
   factory $CoverageEligibilityRequestDiagnosisCopyWith(
           CoverageEligibilityRequestDiagnosis value,
@@ -4362,7 +4241,6 @@ abstract class $CoverageEligibilityRequestDiagnosisCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get diagnosisReference;
 }
 
-/// @nodoc
 class _$CoverageEligibilityRequestDiagnosisCopyWithImpl<$Res>
     implements $CoverageEligibilityRequestDiagnosisCopyWith<$Res> {
   _$CoverageEligibilityRequestDiagnosisCopyWithImpl(this._value, this._then);
@@ -4418,7 +4296,6 @@ class _$CoverageEligibilityRequestDiagnosisCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$CoverageEligibilityRequestDiagnosisCopyWith<$Res>
     implements $CoverageEligibilityRequestDiagnosisCopyWith<$Res> {
   factory _$CoverageEligibilityRequestDiagnosisCopyWith(
@@ -4439,7 +4316,6 @@ abstract class _$CoverageEligibilityRequestDiagnosisCopyWith<$Res>
   $ReferenceCopyWith<$Res> get diagnosisReference;
 }
 
-/// @nodoc
 class __$CoverageEligibilityRequestDiagnosisCopyWithImpl<$Res>
     extends _$CoverageEligibilityRequestDiagnosisCopyWithImpl<$Res>
     implements _$CoverageEligibilityRequestDiagnosisCopyWith<$Res> {
@@ -4479,8 +4355,6 @@ class __$CoverageEligibilityRequestDiagnosisCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_CoverageEligibilityRequestDiagnosis
     extends _CoverageEligibilityRequestDiagnosis {
   _$_CoverageEligibilityRequestDiagnosis(
@@ -4590,7 +4464,6 @@ CoverageEligibilityResponse _$CoverageEligibilityResponseFromJson(
   return _CoverageEligibilityResponse.fromJson(json);
 }
 
-/// @nodoc
 class _$CoverageEligibilityResponseTearOff {
   const _$CoverageEligibilityResponseTearOff();
 
@@ -4683,18 +4556,11 @@ class _$CoverageEligibilityResponseTearOff {
       error: error,
     );
   }
-
-// ignore: unused_element
-  CoverageEligibilityResponse fromJson(Map<String, Object> json) {
-    return CoverageEligibilityResponse.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $CoverageEligibilityResponse = _$CoverageEligibilityResponseTearOff();
 
-/// @nodoc
 mixin _$CoverageEligibilityResponse {
   @JsonKey(defaultValue: 'CoverageEligibilityResponse')
   String get resourceType;
@@ -4748,7 +4614,6 @@ mixin _$CoverageEligibilityResponse {
       get copyWith;
 }
 
-/// @nodoc
 abstract class $CoverageEligibilityResponseCopyWith<$Res> {
   factory $CoverageEligibilityResponseCopyWith(
           CoverageEligibilityResponse value,
@@ -4820,7 +4685,6 @@ abstract class $CoverageEligibilityResponseCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get form;
 }
 
-/// @nodoc
 class _$CoverageEligibilityResponseCopyWithImpl<$Res>
     implements $CoverageEligibilityResponseCopyWith<$Res> {
   _$CoverageEligibilityResponseCopyWithImpl(this._value, this._then);
@@ -5108,7 +4972,6 @@ class _$CoverageEligibilityResponseCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$CoverageEligibilityResponseCopyWith<$Res>
     implements $CoverageEligibilityResponseCopyWith<$Res> {
   factory _$CoverageEligibilityResponseCopyWith(
@@ -5198,7 +5061,6 @@ abstract class _$CoverageEligibilityResponseCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get form;
 }
 
-/// @nodoc
 class __$CoverageEligibilityResponseCopyWithImpl<$Res>
     extends _$CoverageEligibilityResponseCopyWithImpl<$Res>
     implements _$CoverageEligibilityResponseCopyWith<$Res> {
@@ -5331,8 +5193,6 @@ class __$CoverageEligibilityResponseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   _$_CoverageEligibilityResponse(
       {@required
@@ -5761,7 +5621,6 @@ CoverageEligibilityResponseInsurance
   return _CoverageEligibilityResponseInsurance.fromJson(json);
 }
 
-/// @nodoc
 class _$CoverageEligibilityResponseInsuranceTearOff {
   const _$CoverageEligibilityResponseInsuranceTearOff();
 
@@ -5786,19 +5645,12 @@ class _$CoverageEligibilityResponseInsuranceTearOff {
       item: item,
     );
   }
-
-// ignore: unused_element
-  CoverageEligibilityResponseInsurance fromJson(Map<String, Object> json) {
-    return CoverageEligibilityResponseInsurance.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $CoverageEligibilityResponseInsurance =
     _$CoverageEligibilityResponseInsuranceTearOff();
 
-/// @nodoc
 mixin _$CoverageEligibilityResponseInsurance {
   String get id;
   @JsonKey(name: 'extension')
@@ -5816,7 +5668,6 @@ mixin _$CoverageEligibilityResponseInsurance {
       CoverageEligibilityResponseInsurance> get copyWith;
 }
 
-/// @nodoc
 abstract class $CoverageEligibilityResponseInsuranceCopyWith<$Res> {
   factory $CoverageEligibilityResponseInsuranceCopyWith(
           CoverageEligibilityResponseInsurance value,
@@ -5837,7 +5688,6 @@ abstract class $CoverageEligibilityResponseInsuranceCopyWith<$Res> {
   $PeriodCopyWith<$Res> get benefitPeriod;
 }
 
-/// @nodoc
 class _$CoverageEligibilityResponseInsuranceCopyWithImpl<$Res>
     implements $CoverageEligibilityResponseInsuranceCopyWith<$Res> {
   _$CoverageEligibilityResponseInsuranceCopyWithImpl(this._value, this._then);
@@ -5910,7 +5760,6 @@ class _$CoverageEligibilityResponseInsuranceCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$CoverageEligibilityResponseInsuranceCopyWith<$Res>
     implements $CoverageEligibilityResponseInsuranceCopyWith<$Res> {
   factory _$CoverageEligibilityResponseInsuranceCopyWith(
@@ -5936,7 +5785,6 @@ abstract class _$CoverageEligibilityResponseInsuranceCopyWith<$Res>
   $PeriodCopyWith<$Res> get benefitPeriod;
 }
 
-/// @nodoc
 class __$CoverageEligibilityResponseInsuranceCopyWithImpl<$Res>
     extends _$CoverageEligibilityResponseInsuranceCopyWithImpl<$Res>
     implements _$CoverageEligibilityResponseInsuranceCopyWith<$Res> {
@@ -5984,8 +5832,6 @@ class __$CoverageEligibilityResponseInsuranceCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_CoverageEligibilityResponseInsurance
     extends _CoverageEligibilityResponseInsurance {
   _$_CoverageEligibilityResponseInsurance(
@@ -6126,7 +5972,6 @@ CoverageEligibilityResponseItem _$CoverageEligibilityResponseItemFromJson(
   return _CoverageEligibilityResponseItem.fromJson(json);
 }
 
-/// @nodoc
 class _$CoverageEligibilityResponseItemTearOff {
   const _$CoverageEligibilityResponseItemTearOff();
 
@@ -6185,19 +6030,12 @@ class _$CoverageEligibilityResponseItemTearOff {
       authorizationUrlElement: authorizationUrlElement,
     );
   }
-
-// ignore: unused_element
-  CoverageEligibilityResponseItem fromJson(Map<String, Object> json) {
-    return CoverageEligibilityResponseItem.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $CoverageEligibilityResponseItem =
     _$CoverageEligibilityResponseItemTearOff();
 
-/// @nodoc
 mixin _$CoverageEligibilityResponseItem {
   String get id;
   @JsonKey(name: 'extension')
@@ -6233,7 +6071,6 @@ mixin _$CoverageEligibilityResponseItem {
       get copyWith;
 }
 
-/// @nodoc
 abstract class $CoverageEligibilityResponseItemCopyWith<$Res> {
   factory $CoverageEligibilityResponseItemCopyWith(
           CoverageEligibilityResponseItem value,
@@ -6282,7 +6119,6 @@ abstract class $CoverageEligibilityResponseItemCopyWith<$Res> {
   $ElementCopyWith<$Res> get authorizationUrlElement;
 }
 
-/// @nodoc
 class _$CoverageEligibilityResponseItemCopyWithImpl<$Res>
     implements $CoverageEligibilityResponseItemCopyWith<$Res> {
   _$CoverageEligibilityResponseItemCopyWithImpl(this._value, this._then);
@@ -6480,7 +6316,6 @@ class _$CoverageEligibilityResponseItemCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$CoverageEligibilityResponseItemCopyWith<$Res>
     implements $CoverageEligibilityResponseItemCopyWith<$Res> {
   factory _$CoverageEligibilityResponseItemCopyWith(
@@ -6542,7 +6377,6 @@ abstract class _$CoverageEligibilityResponseItemCopyWith<$Res>
   $ElementCopyWith<$Res> get authorizationUrlElement;
 }
 
-/// @nodoc
 class __$CoverageEligibilityResponseItemCopyWithImpl<$Res>
     extends _$CoverageEligibilityResponseItemCopyWithImpl<$Res>
     implements _$CoverageEligibilityResponseItemCopyWith<$Res> {
@@ -6635,8 +6469,6 @@ class __$CoverageEligibilityResponseItemCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_CoverageEligibilityResponseItem
     extends _CoverageEligibilityResponseItem {
   _$_CoverageEligibilityResponseItem(
@@ -6933,7 +6765,6 @@ CoverageEligibilityResponseBenefit _$CoverageEligibilityResponseBenefitFromJson(
   return _CoverageEligibilityResponseBenefit.fromJson(json);
 }
 
-/// @nodoc
 class _$CoverageEligibilityResponseBenefitTearOff {
   const _$CoverageEligibilityResponseBenefitTearOff();
 
@@ -6970,19 +6801,12 @@ class _$CoverageEligibilityResponseBenefitTearOff {
       usedMoney: usedMoney,
     );
   }
-
-// ignore: unused_element
-  CoverageEligibilityResponseBenefit fromJson(Map<String, Object> json) {
-    return CoverageEligibilityResponseBenefit.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $CoverageEligibilityResponseBenefit =
     _$CoverageEligibilityResponseBenefitTearOff();
 
-/// @nodoc
 mixin _$CoverageEligibilityResponseBenefit {
   String get id;
   @JsonKey(name: 'extension')
@@ -7009,7 +6833,6 @@ mixin _$CoverageEligibilityResponseBenefit {
       CoverageEligibilityResponseBenefit> get copyWith;
 }
 
-/// @nodoc
 abstract class $CoverageEligibilityResponseBenefitCopyWith<$Res> {
   factory $CoverageEligibilityResponseBenefitCopyWith(
           CoverageEligibilityResponseBenefit value,
@@ -7040,7 +6863,6 @@ abstract class $CoverageEligibilityResponseBenefitCopyWith<$Res> {
   $MoneyCopyWith<$Res> get usedMoney;
 }
 
-/// @nodoc
 class _$CoverageEligibilityResponseBenefitCopyWithImpl<$Res>
     implements $CoverageEligibilityResponseBenefitCopyWith<$Res> {
   _$CoverageEligibilityResponseBenefitCopyWithImpl(this._value, this._then);
@@ -7175,7 +6997,6 @@ class _$CoverageEligibilityResponseBenefitCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$CoverageEligibilityResponseBenefitCopyWith<$Res>
     implements $CoverageEligibilityResponseBenefitCopyWith<$Res> {
   factory _$CoverageEligibilityResponseBenefitCopyWith(
@@ -7215,7 +7036,6 @@ abstract class _$CoverageEligibilityResponseBenefitCopyWith<$Res>
   $MoneyCopyWith<$Res> get usedMoney;
 }
 
-/// @nodoc
 class __$CoverageEligibilityResponseBenefitCopyWithImpl<$Res>
     extends _$CoverageEligibilityResponseBenefitCopyWithImpl<$Res>
     implements _$CoverageEligibilityResponseBenefitCopyWith<$Res> {
@@ -7285,8 +7105,6 @@ class __$CoverageEligibilityResponseBenefitCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_CoverageEligibilityResponseBenefit
     extends _CoverageEligibilityResponseBenefit {
   _$_CoverageEligibilityResponseBenefit(
@@ -7494,7 +7312,6 @@ CoverageEligibilityResponseError _$CoverageEligibilityResponseErrorFromJson(
   return _CoverageEligibilityResponseError.fromJson(json);
 }
 
-/// @nodoc
 class _$CoverageEligibilityResponseErrorTearOff {
   const _$CoverageEligibilityResponseErrorTearOff();
 
@@ -7511,19 +7328,12 @@ class _$CoverageEligibilityResponseErrorTearOff {
       code: code,
     );
   }
-
-// ignore: unused_element
-  CoverageEligibilityResponseError fromJson(Map<String, Object> json) {
-    return CoverageEligibilityResponseError.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $CoverageEligibilityResponseError =
     _$CoverageEligibilityResponseErrorTearOff();
 
-/// @nodoc
 mixin _$CoverageEligibilityResponseError {
   String get id;
   @JsonKey(name: 'extension')
@@ -7536,7 +7346,6 @@ mixin _$CoverageEligibilityResponseError {
       get copyWith;
 }
 
-/// @nodoc
 abstract class $CoverageEligibilityResponseErrorCopyWith<$Res> {
   factory $CoverageEligibilityResponseErrorCopyWith(
           CoverageEligibilityResponseError value,
@@ -7551,7 +7360,6 @@ abstract class $CoverageEligibilityResponseErrorCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get code;
 }
 
-/// @nodoc
 class _$CoverageEligibilityResponseErrorCopyWithImpl<$Res>
     implements $CoverageEligibilityResponseErrorCopyWith<$Res> {
   _$CoverageEligibilityResponseErrorCopyWithImpl(this._value, this._then);
@@ -7590,7 +7398,6 @@ class _$CoverageEligibilityResponseErrorCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$CoverageEligibilityResponseErrorCopyWith<$Res>
     implements $CoverageEligibilityResponseErrorCopyWith<$Res> {
   factory _$CoverageEligibilityResponseErrorCopyWith(
@@ -7608,7 +7415,6 @@ abstract class _$CoverageEligibilityResponseErrorCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get code;
 }
 
-/// @nodoc
 class __$CoverageEligibilityResponseErrorCopyWithImpl<$Res>
     extends _$CoverageEligibilityResponseErrorCopyWithImpl<$Res>
     implements _$CoverageEligibilityResponseErrorCopyWith<$Res> {
@@ -7642,8 +7448,6 @@ class __$CoverageEligibilityResponseErrorCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_CoverageEligibilityResponseError
     extends _CoverageEligibilityResponseError {
   _$_CoverageEligibilityResponseError(
@@ -7738,7 +7542,6 @@ EnrollmentRequest _$EnrollmentRequestFromJson(Map<String, dynamic> json) {
   return _EnrollmentRequest.fromJson(json);
 }
 
-/// @nodoc
 class _$EnrollmentRequestTearOff {
   const _$EnrollmentRequestTearOff();
 
@@ -7794,18 +7597,11 @@ class _$EnrollmentRequestTearOff {
       coverage: coverage,
     );
   }
-
-// ignore: unused_element
-  EnrollmentRequest fromJson(Map<String, Object> json) {
-    return EnrollmentRequest.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $EnrollmentRequest = _$EnrollmentRequestTearOff();
 
-/// @nodoc
 mixin _$EnrollmentRequest {
   @JsonKey(defaultValue: 'EnrollmentRequest')
   String get resourceType;
@@ -7838,7 +7634,6 @@ mixin _$EnrollmentRequest {
   $EnrollmentRequestCopyWith<EnrollmentRequest> get copyWith;
 }
 
-/// @nodoc
 abstract class $EnrollmentRequestCopyWith<$Res> {
   factory $EnrollmentRequestCopyWith(
           EnrollmentRequest value, $Res Function(EnrollmentRequest) then) =
@@ -7877,7 +7672,6 @@ abstract class $EnrollmentRequestCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get coverage;
 }
 
-/// @nodoc
 class _$EnrollmentRequestCopyWithImpl<$Res>
     implements $EnrollmentRequestCopyWith<$Res> {
   _$EnrollmentRequestCopyWithImpl(this._value, this._then);
@@ -8054,7 +7848,6 @@ class _$EnrollmentRequestCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$EnrollmentRequestCopyWith<$Res>
     implements $EnrollmentRequestCopyWith<$Res> {
   factory _$EnrollmentRequestCopyWith(
@@ -8105,7 +7898,6 @@ abstract class _$EnrollmentRequestCopyWith<$Res>
   $ReferenceCopyWith<$Res> get coverage;
 }
 
-/// @nodoc
 class __$EnrollmentRequestCopyWithImpl<$Res>
     extends _$EnrollmentRequestCopyWithImpl<$Res>
     implements _$EnrollmentRequestCopyWith<$Res> {
@@ -8185,8 +7977,6 @@ class __$EnrollmentRequestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_EnrollmentRequest extends _EnrollmentRequest {
   _$_EnrollmentRequest(
       {@required @JsonKey(defaultValue: 'EnrollmentRequest') this.resourceType,
@@ -8451,7 +8241,6 @@ EnrollmentResponse _$EnrollmentResponseFromJson(Map<String, dynamic> json) {
   return _EnrollmentResponse.fromJson(json);
 }
 
-/// @nodoc
 class _$EnrollmentResponseTearOff {
   const _$EnrollmentResponseTearOff();
 
@@ -8516,18 +8305,11 @@ class _$EnrollmentResponseTearOff {
       requestProvider: requestProvider,
     );
   }
-
-// ignore: unused_element
-  EnrollmentResponse fromJson(Map<String, Object> json) {
-    return EnrollmentResponse.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $EnrollmentResponse = _$EnrollmentResponseTearOff();
 
-/// @nodoc
 mixin _$EnrollmentResponse {
   @JsonKey(defaultValue: 'EnrollmentResponse')
   String get resourceType;
@@ -8566,7 +8348,6 @@ mixin _$EnrollmentResponse {
   $EnrollmentResponseCopyWith<EnrollmentResponse> get copyWith;
 }
 
-/// @nodoc
 abstract class $EnrollmentResponseCopyWith<$Res> {
   factory $EnrollmentResponseCopyWith(
           EnrollmentResponse value, $Res Function(EnrollmentResponse) then) =
@@ -8618,7 +8399,6 @@ abstract class $EnrollmentResponseCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get requestProvider;
 }
 
-/// @nodoc
 class _$EnrollmentResponseCopyWithImpl<$Res>
     implements $EnrollmentResponseCopyWith<$Res> {
   _$EnrollmentResponseCopyWithImpl(this._value, this._then);
@@ -8821,7 +8601,6 @@ class _$EnrollmentResponseCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$EnrollmentResponseCopyWith<$Res>
     implements $EnrollmentResponseCopyWith<$Res> {
   factory _$EnrollmentResponseCopyWith(
@@ -8886,7 +8665,6 @@ abstract class _$EnrollmentResponseCopyWith<$Res>
   $ReferenceCopyWith<$Res> get requestProvider;
 }
 
-/// @nodoc
 class __$EnrollmentResponseCopyWithImpl<$Res>
     extends _$EnrollmentResponseCopyWithImpl<$Res>
     implements _$EnrollmentResponseCopyWith<$Res> {
@@ -8982,8 +8760,6 @@ class __$EnrollmentResponseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_EnrollmentResponse extends _EnrollmentResponse {
   _$_EnrollmentResponse(
       {@required

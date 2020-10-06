@@ -2,12 +2,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 import '../../r5.dart';
 
-/// This class ends up functioning mostly like an abstract superclass. Some of
-/// the fields in other classes contain a generic resource, so in order for
-/// them to be able to implement a resource.toJson() function, it also has to
-/// be implemented here (although it is always overridden). Each resource
-/// class also has it's own fromJson() function as well. The fromJson function
-/// in this class is only used if the resourceType is not previously known
 @JsonSerializable()
 class Resource {
   Id id;
@@ -321,8 +315,6 @@ class Resource {
         return TestReport.fromJson(json);
       case 'TestScript':
         return TestScript.fromJson(json);
-      case 'Topic':
-        return Topic.fromJson(json);
       case 'ValueSet':
         return ValueSet.fromJson(json);
       case 'VerificationResult':

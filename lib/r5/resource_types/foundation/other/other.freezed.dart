@@ -12,7 +12,6 @@ Basic _$BasicFromJson(Map<String, dynamic> json) {
   return _Basic.fromJson(json);
 }
 
-/// @nodoc
 class _$BasicTearOff {
   const _$BasicTearOff();
 
@@ -55,18 +54,11 @@ class _$BasicTearOff {
       author: author,
     );
   }
-
-// ignore: unused_element
-  Basic fromJson(Map<String, Object> json) {
-    return Basic.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $Basic = _$BasicTearOff();
 
-/// @nodoc
 mixin _$Basic {
   @JsonKey(defaultValue: 'Basic')
   String get resourceType;
@@ -95,7 +87,6 @@ mixin _$Basic {
   $BasicCopyWith<Basic> get copyWith;
 }
 
-/// @nodoc
 abstract class $BasicCopyWith<$Res> {
   factory $BasicCopyWith(Basic value, $Res Function(Basic) then) =
       _$BasicCopyWithImpl<$Res>;
@@ -128,7 +119,6 @@ abstract class $BasicCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get author;
 }
 
-/// @nodoc
 class _$BasicCopyWithImpl<$Res> implements $BasicCopyWith<$Res> {
   _$BasicCopyWithImpl(this._value, this._then);
 
@@ -275,7 +265,6 @@ class _$BasicCopyWithImpl<$Res> implements $BasicCopyWith<$Res> {
   }
 }
 
-/// @nodoc
 abstract class _$BasicCopyWith<$Res> implements $BasicCopyWith<$Res> {
   factory _$BasicCopyWith(_Basic value, $Res Function(_Basic) then) =
       __$BasicCopyWithImpl<$Res>;
@@ -317,7 +306,6 @@ abstract class _$BasicCopyWith<$Res> implements $BasicCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get author;
 }
 
-/// @nodoc
 class __$BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res>
     implements _$BasicCopyWith<$Res> {
   __$BasicCopyWithImpl(_Basic _value, $Res Function(_Basic) _then)
@@ -386,8 +374,6 @@ class __$BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_Basic extends _Basic {
   _$_Basic(
       {@required @JsonKey(defaultValue: 'Basic') this.resourceType,
@@ -612,7 +598,6 @@ Binary _$BinaryFromJson(Map<String, dynamic> json) {
   return _Binary.fromJson(json);
 }
 
-/// @nodoc
 class _$BinaryTearOff {
   const _$BinaryTearOff();
 
@@ -645,18 +630,11 @@ class _$BinaryTearOff {
       dataElement: dataElement,
     );
   }
-
-// ignore: unused_element
-  Binary fromJson(Map<String, Object> json) {
-    return Binary.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $Binary = _$BinaryTearOff();
 
-/// @nodoc
 mixin _$Binary {
   @JsonKey(defaultValue: 'Binary')
   String get resourceType;
@@ -680,7 +658,6 @@ mixin _$Binary {
   $BinaryCopyWith<Binary> get copyWith;
 }
 
-/// @nodoc
 abstract class $BinaryCopyWith<$Res> {
   factory $BinaryCopyWith(Binary value, $Res Function(Binary) then) =
       _$BinaryCopyWithImpl<$Res>;
@@ -706,7 +683,6 @@ abstract class $BinaryCopyWith<$Res> {
   $ElementCopyWith<$Res> get dataElement;
 }
 
-/// @nodoc
 class _$BinaryCopyWithImpl<$Res> implements $BinaryCopyWith<$Res> {
   _$BinaryCopyWithImpl(this._value, this._then);
 
@@ -820,7 +796,6 @@ class _$BinaryCopyWithImpl<$Res> implements $BinaryCopyWith<$Res> {
   }
 }
 
-/// @nodoc
 abstract class _$BinaryCopyWith<$Res> implements $BinaryCopyWith<$Res> {
   factory _$BinaryCopyWith(_Binary value, $Res Function(_Binary) then) =
       __$BinaryCopyWithImpl<$Res>;
@@ -853,7 +828,6 @@ abstract class _$BinaryCopyWith<$Res> implements $BinaryCopyWith<$Res> {
   $ElementCopyWith<$Res> get dataElement;
 }
 
-/// @nodoc
 class __$BinaryCopyWithImpl<$Res> extends _$BinaryCopyWithImpl<$Res>
     implements _$BinaryCopyWith<$Res> {
   __$BinaryCopyWithImpl(_Binary _value, $Res Function(_Binary) _then)
@@ -909,8 +883,6 @@ class __$BinaryCopyWithImpl<$Res> extends _$BinaryCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_Binary extends _Binary {
   _$_Binary(
       {@required @JsonKey(defaultValue: 'Binary') this.resourceType,
@@ -1086,7 +1058,6 @@ Bundle _$BundleFromJson(Map<String, dynamic> json) {
   return _Bundle.fromJson(json);
 }
 
-/// @nodoc
 class _$BundleTearOff {
   const _$BundleTearOff();
 
@@ -1129,18 +1100,11 @@ class _$BundleTearOff {
       signature: signature,
     );
   }
-
-// ignore: unused_element
-  Bundle fromJson(Map<String, Object> json) {
-    return Bundle.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $Bundle = _$BundleTearOff();
 
-/// @nodoc
 mixin _$Bundle {
   @JsonKey(defaultValue: 'Bundle')
   String get resourceType;
@@ -1171,7 +1135,6 @@ mixin _$Bundle {
   $BundleCopyWith<Bundle> get copyWith;
 }
 
-/// @nodoc
 abstract class $BundleCopyWith<$Res> {
   factory $BundleCopyWith(Bundle value, $Res Function(Bundle) then) =
       _$BundleCopyWithImpl<$Res>;
@@ -1204,7 +1167,6 @@ abstract class $BundleCopyWith<$Res> {
   $SignatureCopyWith<$Res> get signature;
 }
 
-/// @nodoc
 class _$BundleCopyWithImpl<$Res> implements $BundleCopyWith<$Res> {
   _$BundleCopyWithImpl(this._value, this._then);
 
@@ -1349,7 +1311,6 @@ class _$BundleCopyWithImpl<$Res> implements $BundleCopyWith<$Res> {
   }
 }
 
-/// @nodoc
 abstract class _$BundleCopyWith<$Res> implements $BundleCopyWith<$Res> {
   factory _$BundleCopyWith(_Bundle value, $Res Function(_Bundle) then) =
       __$BundleCopyWithImpl<$Res>;
@@ -1391,7 +1352,6 @@ abstract class _$BundleCopyWith<$Res> implements $BundleCopyWith<$Res> {
   $SignatureCopyWith<$Res> get signature;
 }
 
-/// @nodoc
 class __$BundleCopyWithImpl<$Res> extends _$BundleCopyWithImpl<$Res>
     implements _$BundleCopyWith<$Res> {
   __$BundleCopyWithImpl(_Bundle _value, $Res Function(_Bundle) _then)
@@ -1458,8 +1418,6 @@ class __$BundleCopyWithImpl<$Res> extends _$BundleCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_Bundle extends _Bundle {
   _$_Bundle(
       {@required @JsonKey(defaultValue: 'Bundle') this.resourceType,
@@ -1686,7 +1644,6 @@ BundleLink _$BundleLinkFromJson(Map<String, dynamic> json) {
   return _BundleLink.fromJson(json);
 }
 
-/// @nodoc
 class _$BundleLinkTearOff {
   const _$BundleLinkTearOff();
 
@@ -1709,18 +1666,11 @@ class _$BundleLinkTearOff {
       urlElement: urlElement,
     );
   }
-
-// ignore: unused_element
-  BundleLink fromJson(Map<String, Object> json) {
-    return BundleLink.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $BundleLink = _$BundleLinkTearOff();
 
-/// @nodoc
 mixin _$BundleLink {
   String get id;
   @JsonKey(name: 'extension')
@@ -1737,7 +1687,6 @@ mixin _$BundleLink {
   $BundleLinkCopyWith<BundleLink> get copyWith;
 }
 
-/// @nodoc
 abstract class $BundleLinkCopyWith<$Res> {
   factory $BundleLinkCopyWith(
           BundleLink value, $Res Function(BundleLink) then) =
@@ -1755,7 +1704,6 @@ abstract class $BundleLinkCopyWith<$Res> {
   $ElementCopyWith<$Res> get urlElement;
 }
 
-/// @nodoc
 class _$BundleLinkCopyWithImpl<$Res> implements $BundleLinkCopyWith<$Res> {
   _$BundleLinkCopyWithImpl(this._value, this._then);
 
@@ -1812,7 +1760,6 @@ class _$BundleLinkCopyWithImpl<$Res> implements $BundleLinkCopyWith<$Res> {
   }
 }
 
-/// @nodoc
 abstract class _$BundleLinkCopyWith<$Res> implements $BundleLinkCopyWith<$Res> {
   factory _$BundleLinkCopyWith(
           _BundleLink value, $Res Function(_BundleLink) then) =
@@ -1833,7 +1780,6 @@ abstract class _$BundleLinkCopyWith<$Res> implements $BundleLinkCopyWith<$Res> {
   $ElementCopyWith<$Res> get urlElement;
 }
 
-/// @nodoc
 class __$BundleLinkCopyWithImpl<$Res> extends _$BundleLinkCopyWithImpl<$Res>
     implements _$BundleLinkCopyWith<$Res> {
   __$BundleLinkCopyWithImpl(
@@ -1873,8 +1819,6 @@ class __$BundleLinkCopyWithImpl<$Res> extends _$BundleLinkCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_BundleLink extends _BundleLink {
   _$_BundleLink(
       {this.id,
@@ -1997,7 +1941,6 @@ BundleEntry _$BundleEntryFromJson(Map<String, dynamic> json) {
   return _BundleEntry.fromJson(json);
 }
 
-/// @nodoc
 class _$BundleEntryTearOff {
   const _$BundleEntryTearOff();
 
@@ -2026,18 +1969,11 @@ class _$BundleEntryTearOff {
       response: response,
     );
   }
-
-// ignore: unused_element
-  BundleEntry fromJson(Map<String, Object> json) {
-    return BundleEntry.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $BundleEntry = _$BundleEntryTearOff();
 
-/// @nodoc
 mixin _$BundleEntry {
   String get id;
   @JsonKey(name: 'extension')
@@ -2056,7 +1992,6 @@ mixin _$BundleEntry {
   $BundleEntryCopyWith<BundleEntry> get copyWith;
 }
 
-/// @nodoc
 abstract class $BundleEntryCopyWith<$Res> {
   factory $BundleEntryCopyWith(
           BundleEntry value, $Res Function(BundleEntry) then) =
@@ -2079,7 +2014,6 @@ abstract class $BundleEntryCopyWith<$Res> {
   $BundleResponseCopyWith<$Res> get response;
 }
 
-/// @nodoc
 class _$BundleEntryCopyWithImpl<$Res> implements $BundleEntryCopyWith<$Res> {
   _$BundleEntryCopyWithImpl(this._value, this._then);
 
@@ -2162,7 +2096,6 @@ class _$BundleEntryCopyWithImpl<$Res> implements $BundleEntryCopyWith<$Res> {
   }
 }
 
-/// @nodoc
 abstract class _$BundleEntryCopyWith<$Res>
     implements $BundleEntryCopyWith<$Res> {
   factory _$BundleEntryCopyWith(
@@ -2191,7 +2124,6 @@ abstract class _$BundleEntryCopyWith<$Res>
   $BundleResponseCopyWith<$Res> get response;
 }
 
-/// @nodoc
 class __$BundleEntryCopyWithImpl<$Res> extends _$BundleEntryCopyWithImpl<$Res>
     implements _$BundleEntryCopyWith<$Res> {
   __$BundleEntryCopyWithImpl(
@@ -2237,8 +2169,6 @@ class __$BundleEntryCopyWithImpl<$Res> extends _$BundleEntryCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_BundleEntry extends _BundleEntry {
   _$_BundleEntry(
       {this.id,
@@ -2388,7 +2318,6 @@ BundleSearch _$BundleSearchFromJson(Map<String, dynamic> json) {
   return _BundleSearch.fromJson(json);
 }
 
-/// @nodoc
 class _$BundleSearchTearOff {
   const _$BundleSearchTearOff();
 
@@ -2415,18 +2344,11 @@ class _$BundleSearchTearOff {
       scoreElement: scoreElement,
     );
   }
-
-// ignore: unused_element
-  BundleSearch fromJson(Map<String, Object> json) {
-    return BundleSearch.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $BundleSearch = _$BundleSearchTearOff();
 
-/// @nodoc
 mixin _$BundleSearch {
   String get id;
   @JsonKey(name: 'extension')
@@ -2444,7 +2366,6 @@ mixin _$BundleSearch {
   $BundleSearchCopyWith<BundleSearch> get copyWith;
 }
 
-/// @nodoc
 abstract class $BundleSearchCopyWith<$Res> {
   factory $BundleSearchCopyWith(
           BundleSearch value, $Res Function(BundleSearch) then) =
@@ -2466,7 +2387,6 @@ abstract class $BundleSearchCopyWith<$Res> {
   $ElementCopyWith<$Res> get scoreElement;
 }
 
-/// @nodoc
 class _$BundleSearchCopyWithImpl<$Res> implements $BundleSearchCopyWith<$Res> {
   _$BundleSearchCopyWithImpl(this._value, this._then);
 
@@ -2523,7 +2443,6 @@ class _$BundleSearchCopyWithImpl<$Res> implements $BundleSearchCopyWith<$Res> {
   }
 }
 
-/// @nodoc
 abstract class _$BundleSearchCopyWith<$Res>
     implements $BundleSearchCopyWith<$Res> {
   factory _$BundleSearchCopyWith(
@@ -2549,7 +2468,6 @@ abstract class _$BundleSearchCopyWith<$Res>
   $ElementCopyWith<$Res> get scoreElement;
 }
 
-/// @nodoc
 class __$BundleSearchCopyWithImpl<$Res> extends _$BundleSearchCopyWithImpl<$Res>
     implements _$BundleSearchCopyWith<$Res> {
   __$BundleSearchCopyWithImpl(
@@ -2589,8 +2507,6 @@ class __$BundleSearchCopyWithImpl<$Res> extends _$BundleSearchCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_BundleSearch extends _BundleSearch {
   _$_BundleSearch(
       {this.id,
@@ -2718,7 +2634,6 @@ BundleRequest _$BundleRequestFromJson(Map<String, dynamic> json) {
   return _BundleRequest.fromJson(json);
 }
 
-/// @nodoc
 class _$BundleRequestTearOff {
   const _$BundleRequestTearOff();
 
@@ -2765,18 +2680,11 @@ class _$BundleRequestTearOff {
       ifNoneExistElement: ifNoneExistElement,
     );
   }
-
-// ignore: unused_element
-  BundleRequest fromJson(Map<String, Object> json) {
-    return BundleRequest.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $BundleRequest = _$BundleRequestTearOff();
 
-/// @nodoc
 mixin _$BundleRequest {
   String get id;
   @JsonKey(name: 'extension')
@@ -2806,7 +2714,6 @@ mixin _$BundleRequest {
   $BundleRequestCopyWith<BundleRequest> get copyWith;
 }
 
-/// @nodoc
 abstract class $BundleRequestCopyWith<$Res> {
   factory $BundleRequestCopyWith(
           BundleRequest value, $Res Function(BundleRequest) then) =
@@ -2844,7 +2751,6 @@ abstract class $BundleRequestCopyWith<$Res> {
   $ElementCopyWith<$Res> get ifNoneExistElement;
 }
 
-/// @nodoc
 class _$BundleRequestCopyWithImpl<$Res>
     implements $BundleRequestCopyWith<$Res> {
   _$BundleRequestCopyWithImpl(this._value, this._then);
@@ -2970,7 +2876,6 @@ class _$BundleRequestCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$BundleRequestCopyWith<$Res>
     implements $BundleRequestCopyWith<$Res> {
   factory _$BundleRequestCopyWith(
@@ -3016,7 +2921,6 @@ abstract class _$BundleRequestCopyWith<$Res>
   $ElementCopyWith<$Res> get ifNoneExistElement;
 }
 
-/// @nodoc
 class __$BundleRequestCopyWithImpl<$Res>
     extends _$BundleRequestCopyWithImpl<$Res>
     implements _$BundleRequestCopyWith<$Res> {
@@ -3085,8 +2989,6 @@ class __$BundleRequestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_BundleRequest extends _BundleRequest {
   _$_BundleRequest(
       {this.id,
@@ -3306,7 +3208,6 @@ BundleResponse _$BundleResponseFromJson(Map<String, dynamic> json) {
   return _BundleResponse.fromJson(json);
 }
 
-/// @nodoc
 class _$BundleResponseTearOff {
   const _$BundleResponseTearOff();
 
@@ -3339,18 +3240,11 @@ class _$BundleResponseTearOff {
       outcome: outcome,
     );
   }
-
-// ignore: unused_element
-  BundleResponse fromJson(Map<String, Object> json) {
-    return BundleResponse.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $BundleResponse = _$BundleResponseTearOff();
 
-/// @nodoc
 mixin _$BundleResponse {
   String get id;
   @JsonKey(name: 'extension')
@@ -3374,7 +3268,6 @@ mixin _$BundleResponse {
   $BundleResponseCopyWith<BundleResponse> get copyWith;
 }
 
-/// @nodoc
 abstract class $BundleResponseCopyWith<$Res> {
   factory $BundleResponseCopyWith(
           BundleResponse value, $Res Function(BundleResponse) then) =
@@ -3399,7 +3292,6 @@ abstract class $BundleResponseCopyWith<$Res> {
   $ElementCopyWith<$Res> get lastModifiedElement;
 }
 
-/// @nodoc
 class _$BundleResponseCopyWithImpl<$Res>
     implements $BundleResponseCopyWith<$Res> {
   _$BundleResponseCopyWithImpl(this._value, this._then);
@@ -3493,7 +3385,6 @@ class _$BundleResponseCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$BundleResponseCopyWith<$Res>
     implements $BundleResponseCopyWith<$Res> {
   factory _$BundleResponseCopyWith(
@@ -3524,7 +3415,6 @@ abstract class _$BundleResponseCopyWith<$Res>
   $ElementCopyWith<$Res> get lastModifiedElement;
 }
 
-/// @nodoc
 class __$BundleResponseCopyWithImpl<$Res>
     extends _$BundleResponseCopyWithImpl<$Res>
     implements _$BundleResponseCopyWith<$Res> {
@@ -3581,8 +3471,6 @@ class __$BundleResponseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_BundleResponse extends _BundleResponse {
   _$_BundleResponse(
       {this.id,
@@ -3757,7 +3645,6 @@ Linkage _$LinkageFromJson(Map<String, dynamic> json) {
   return _Linkage.fromJson(json);
 }
 
-/// @nodoc
 class _$LinkageTearOff {
   const _$LinkageTearOff();
 
@@ -3796,18 +3683,11 @@ class _$LinkageTearOff {
       item: item,
     );
   }
-
-// ignore: unused_element
-  Linkage fromJson(Map<String, Object> json) {
-    return Linkage.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $Linkage = _$LinkageTearOff();
 
-/// @nodoc
 mixin _$Linkage {
   @JsonKey(defaultValue: 'Linkage')
   String get resourceType;
@@ -3834,7 +3714,6 @@ mixin _$Linkage {
   $LinkageCopyWith<Linkage> get copyWith;
 }
 
-/// @nodoc
 abstract class $LinkageCopyWith<$Res> {
   factory $LinkageCopyWith(Linkage value, $Res Function(Linkage) then) =
       _$LinkageCopyWithImpl<$Res>;
@@ -3863,7 +3742,6 @@ abstract class $LinkageCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get author;
 }
 
-/// @nodoc
 class _$LinkageCopyWithImpl<$Res> implements $LinkageCopyWith<$Res> {
   _$LinkageCopyWithImpl(this._value, this._then);
 
@@ -3984,7 +3862,6 @@ class _$LinkageCopyWithImpl<$Res> implements $LinkageCopyWith<$Res> {
   }
 }
 
-/// @nodoc
 abstract class _$LinkageCopyWith<$Res> implements $LinkageCopyWith<$Res> {
   factory _$LinkageCopyWith(_Linkage value, $Res Function(_Linkage) then) =
       __$LinkageCopyWithImpl<$Res>;
@@ -4020,7 +3897,6 @@ abstract class _$LinkageCopyWith<$Res> implements $LinkageCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get author;
 }
 
-/// @nodoc
 class __$LinkageCopyWithImpl<$Res> extends _$LinkageCopyWithImpl<$Res>
     implements _$LinkageCopyWith<$Res> {
   __$LinkageCopyWithImpl(_Linkage _value, $Res Function(_Linkage) _then)
@@ -4083,8 +3959,6 @@ class __$LinkageCopyWithImpl<$Res> extends _$LinkageCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_Linkage extends _Linkage {
   _$_Linkage(
       {@required @JsonKey(defaultValue: 'Linkage') this.resourceType,
@@ -4288,7 +4162,6 @@ LinkageItem _$LinkageItemFromJson(Map<String, dynamic> json) {
   return _LinkageItem.fromJson(json);
 }
 
-/// @nodoc
 class _$LinkageItemTearOff {
   const _$LinkageItemTearOff();
 
@@ -4309,18 +4182,11 @@ class _$LinkageItemTearOff {
       resource: resource,
     );
   }
-
-// ignore: unused_element
-  LinkageItem fromJson(Map<String, Object> json) {
-    return LinkageItem.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $LinkageItem = _$LinkageItemTearOff();
 
-/// @nodoc
 mixin _$LinkageItem {
   String get id;
   @JsonKey(name: 'extension')
@@ -4336,7 +4202,6 @@ mixin _$LinkageItem {
   $LinkageItemCopyWith<LinkageItem> get copyWith;
 }
 
-/// @nodoc
 abstract class $LinkageItemCopyWith<$Res> {
   factory $LinkageItemCopyWith(
           LinkageItem value, $Res Function(LinkageItem) then) =
@@ -4353,7 +4218,6 @@ abstract class $LinkageItemCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get resource;
 }
 
-/// @nodoc
 class _$LinkageItemCopyWithImpl<$Res> implements $LinkageItemCopyWith<$Res> {
   _$LinkageItemCopyWithImpl(this._value, this._then);
 
@@ -4406,7 +4270,6 @@ class _$LinkageItemCopyWithImpl<$Res> implements $LinkageItemCopyWith<$Res> {
   }
 }
 
-/// @nodoc
 abstract class _$LinkageItemCopyWith<$Res>
     implements $LinkageItemCopyWith<$Res> {
   factory _$LinkageItemCopyWith(
@@ -4427,7 +4290,6 @@ abstract class _$LinkageItemCopyWith<$Res>
   $ReferenceCopyWith<$Res> get resource;
 }
 
-/// @nodoc
 class __$LinkageItemCopyWithImpl<$Res> extends _$LinkageItemCopyWithImpl<$Res>
     implements _$LinkageItemCopyWith<$Res> {
   __$LinkageItemCopyWithImpl(
@@ -4463,8 +4325,6 @@ class __$LinkageItemCopyWithImpl<$Res> extends _$LinkageItemCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_LinkageItem extends _LinkageItem {
   _$_LinkageItem(
       {this.id,
@@ -4578,7 +4438,6 @@ MessageHeader _$MessageHeaderFromJson(Map<String, dynamic> json) {
   return _MessageHeader.fromJson(json);
 }
 
-/// @nodoc
 class _$MessageHeaderTearOff {
   const _$MessageHeaderTearOff();
 
@@ -4635,18 +4494,11 @@ class _$MessageHeaderTearOff {
       definition: definition,
     );
   }
-
-// ignore: unused_element
-  MessageHeader fromJson(Map<String, Object> json) {
-    return MessageHeader.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $MessageHeader = _$MessageHeaderTearOff();
 
-/// @nodoc
 mixin _$MessageHeader {
   @JsonKey(defaultValue: 'MessageHeader')
   String get resourceType;
@@ -4682,7 +4534,6 @@ mixin _$MessageHeader {
   $MessageHeaderCopyWith<MessageHeader> get copyWith;
 }
 
-/// @nodoc
 abstract class $MessageHeaderCopyWith<$Res> {
   factory $MessageHeaderCopyWith(
           MessageHeader value, $Res Function(MessageHeader) then) =
@@ -4728,7 +4579,6 @@ abstract class $MessageHeaderCopyWith<$Res> {
   $MessageHeaderResponseCopyWith<$Res> get response;
 }
 
-/// @nodoc
 class _$MessageHeaderCopyWithImpl<$Res>
     implements $MessageHeaderCopyWith<$Res> {
   _$MessageHeaderCopyWithImpl(this._value, this._then);
@@ -4946,7 +4796,6 @@ class _$MessageHeaderCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$MessageHeaderCopyWith<$Res>
     implements $MessageHeaderCopyWith<$Res> {
   factory _$MessageHeaderCopyWith(
@@ -5007,7 +4856,6 @@ abstract class _$MessageHeaderCopyWith<$Res>
   $MessageHeaderResponseCopyWith<$Res> get response;
 }
 
-/// @nodoc
 class __$MessageHeaderCopyWithImpl<$Res>
     extends _$MessageHeaderCopyWithImpl<$Res>
     implements _$MessageHeaderCopyWith<$Res> {
@@ -5098,8 +4946,6 @@ class __$MessageHeaderCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_MessageHeader extends _MessageHeader {
   _$_MessageHeader(
       {@required @JsonKey(defaultValue: 'MessageHeader') this.resourceType,
@@ -5393,7 +5239,6 @@ MessageHeaderDestination _$MessageHeaderDestinationFromJson(
   return _MessageHeaderDestination.fromJson(json);
 }
 
-/// @nodoc
 class _$MessageHeaderDestinationTearOff {
   const _$MessageHeaderDestinationTearOff();
 
@@ -5420,18 +5265,11 @@ class _$MessageHeaderDestinationTearOff {
       receiver: receiver,
     );
   }
-
-// ignore: unused_element
-  MessageHeaderDestination fromJson(Map<String, Object> json) {
-    return MessageHeaderDestination.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $MessageHeaderDestination = _$MessageHeaderDestinationTearOff();
 
-/// @nodoc
 mixin _$MessageHeaderDestination {
   String get id;
   @JsonKey(name: 'extension')
@@ -5450,7 +5288,6 @@ mixin _$MessageHeaderDestination {
   $MessageHeaderDestinationCopyWith<MessageHeaderDestination> get copyWith;
 }
 
-/// @nodoc
 abstract class $MessageHeaderDestinationCopyWith<$Res> {
   factory $MessageHeaderDestinationCopyWith(MessageHeaderDestination value,
           $Res Function(MessageHeaderDestination) then) =
@@ -5472,7 +5309,6 @@ abstract class $MessageHeaderDestinationCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get receiver;
 }
 
-/// @nodoc
 class _$MessageHeaderDestinationCopyWithImpl<$Res>
     implements $MessageHeaderDestinationCopyWith<$Res> {
   _$MessageHeaderDestinationCopyWithImpl(this._value, this._then);
@@ -5554,7 +5390,6 @@ class _$MessageHeaderDestinationCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$MessageHeaderDestinationCopyWith<$Res>
     implements $MessageHeaderDestinationCopyWith<$Res> {
   factory _$MessageHeaderDestinationCopyWith(_MessageHeaderDestination value,
@@ -5582,7 +5417,6 @@ abstract class _$MessageHeaderDestinationCopyWith<$Res>
   $ReferenceCopyWith<$Res> get receiver;
 }
 
-/// @nodoc
 class __$MessageHeaderDestinationCopyWithImpl<$Res>
     extends _$MessageHeaderDestinationCopyWithImpl<$Res>
     implements _$MessageHeaderDestinationCopyWith<$Res> {
@@ -5628,8 +5462,6 @@ class __$MessageHeaderDestinationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_MessageHeaderDestination extends _MessageHeaderDestination {
   _$_MessageHeaderDestination(
       {this.id,
@@ -5772,7 +5604,6 @@ MessageHeaderSource _$MessageHeaderSourceFromJson(Map<String, dynamic> json) {
   return _MessageHeaderSource.fromJson(json);
 }
 
-/// @nodoc
 class _$MessageHeaderSourceTearOff {
   const _$MessageHeaderSourceTearOff();
 
@@ -5805,18 +5636,11 @@ class _$MessageHeaderSourceTearOff {
       endpointElement: endpointElement,
     );
   }
-
-// ignore: unused_element
-  MessageHeaderSource fromJson(Map<String, Object> json) {
-    return MessageHeaderSource.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $MessageHeaderSource = _$MessageHeaderSourceTearOff();
 
-/// @nodoc
 mixin _$MessageHeaderSource {
   String get id;
   @JsonKey(name: 'extension')
@@ -5840,7 +5664,6 @@ mixin _$MessageHeaderSource {
   $MessageHeaderSourceCopyWith<MessageHeaderSource> get copyWith;
 }
 
-/// @nodoc
 abstract class $MessageHeaderSourceCopyWith<$Res> {
   factory $MessageHeaderSourceCopyWith(
           MessageHeaderSource value, $Res Function(MessageHeaderSource) then) =
@@ -5866,7 +5689,6 @@ abstract class $MessageHeaderSourceCopyWith<$Res> {
   $ElementCopyWith<$Res> get endpointElement;
 }
 
-/// @nodoc
 class _$MessageHeaderSourceCopyWithImpl<$Res>
     implements $MessageHeaderSourceCopyWith<$Res> {
   _$MessageHeaderSourceCopyWithImpl(this._value, this._then);
@@ -5968,7 +5790,6 @@ class _$MessageHeaderSourceCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$MessageHeaderSourceCopyWith<$Res>
     implements $MessageHeaderSourceCopyWith<$Res> {
   factory _$MessageHeaderSourceCopyWith(_MessageHeaderSource value,
@@ -6001,7 +5822,6 @@ abstract class _$MessageHeaderSourceCopyWith<$Res>
   $ElementCopyWith<$Res> get endpointElement;
 }
 
-/// @nodoc
 class __$MessageHeaderSourceCopyWithImpl<$Res>
     extends _$MessageHeaderSourceCopyWithImpl<$Res>
     implements _$MessageHeaderSourceCopyWith<$Res> {
@@ -6056,8 +5876,6 @@ class __$MessageHeaderSourceCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_MessageHeaderSource extends _MessageHeaderSource {
   _$_MessageHeaderSource(
       {this.id,
@@ -6237,7 +6055,6 @@ MessageHeaderResponse _$MessageHeaderResponseFromJson(
   return _MessageHeaderResponse.fromJson(json);
 }
 
-/// @nodoc
 class _$MessageHeaderResponseTearOff {
   const _$MessageHeaderResponseTearOff();
 
@@ -6266,18 +6083,11 @@ class _$MessageHeaderResponseTearOff {
       details: details,
     );
   }
-
-// ignore: unused_element
-  MessageHeaderResponse fromJson(Map<String, Object> json) {
-    return MessageHeaderResponse.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $MessageHeaderResponse = _$MessageHeaderResponseTearOff();
 
-/// @nodoc
 mixin _$MessageHeaderResponse {
   String get id;
   @JsonKey(name: 'extension')
@@ -6296,7 +6106,6 @@ mixin _$MessageHeaderResponse {
   $MessageHeaderResponseCopyWith<MessageHeaderResponse> get copyWith;
 }
 
-/// @nodoc
 abstract class $MessageHeaderResponseCopyWith<$Res> {
   factory $MessageHeaderResponseCopyWith(MessageHeaderResponse value,
           $Res Function(MessageHeaderResponse) then) =
@@ -6320,7 +6129,6 @@ abstract class $MessageHeaderResponseCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get details;
 }
 
-/// @nodoc
 class _$MessageHeaderResponseCopyWithImpl<$Res>
     implements $MessageHeaderResponseCopyWith<$Res> {
   _$MessageHeaderResponseCopyWithImpl(this._value, this._then);
@@ -6390,7 +6198,6 @@ class _$MessageHeaderResponseCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$MessageHeaderResponseCopyWith<$Res>
     implements $MessageHeaderResponseCopyWith<$Res> {
   factory _$MessageHeaderResponseCopyWith(_MessageHeaderResponse value,
@@ -6419,7 +6226,6 @@ abstract class _$MessageHeaderResponseCopyWith<$Res>
   $ReferenceCopyWith<$Res> get details;
 }
 
-/// @nodoc
 class __$MessageHeaderResponseCopyWithImpl<$Res>
     extends _$MessageHeaderResponseCopyWithImpl<$Res>
     implements _$MessageHeaderResponseCopyWith<$Res> {
@@ -6462,8 +6268,6 @@ class __$MessageHeaderResponseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_MessageHeaderResponse extends _MessageHeaderResponse {
   _$_MessageHeaderResponse(
       {this.id,
@@ -6602,7 +6406,6 @@ OperationOutcome _$OperationOutcomeFromJson(Map<String, dynamic> json) {
   return _OperationOutcome.fromJson(json);
 }
 
-/// @nodoc
 class _$OperationOutcomeTearOff {
   const _$OperationOutcomeTearOff();
 
@@ -6635,18 +6438,11 @@ class _$OperationOutcomeTearOff {
       issue: issue,
     );
   }
-
-// ignore: unused_element
-  OperationOutcome fromJson(Map<String, Object> json) {
-    return OperationOutcome.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $OperationOutcome = _$OperationOutcomeTearOff();
 
-/// @nodoc
 mixin _$OperationOutcome {
   @JsonKey(defaultValue: 'OperationOutcome')
   String get resourceType;
@@ -6669,7 +6465,6 @@ mixin _$OperationOutcome {
   $OperationOutcomeCopyWith<OperationOutcome> get copyWith;
 }
 
-/// @nodoc
 abstract class $OperationOutcomeCopyWith<$Res> {
   factory $OperationOutcomeCopyWith(
           OperationOutcome value, $Res Function(OperationOutcome) then) =
@@ -6694,7 +6489,6 @@ abstract class $OperationOutcomeCopyWith<$Res> {
   $NarrativeCopyWith<$Res> get text;
 }
 
-/// @nodoc
 class _$OperationOutcomeCopyWithImpl<$Res>
     implements $OperationOutcomeCopyWith<$Res> {
   _$OperationOutcomeCopyWithImpl(this._value, this._then);
@@ -6790,7 +6584,6 @@ class _$OperationOutcomeCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$OperationOutcomeCopyWith<$Res>
     implements $OperationOutcomeCopyWith<$Res> {
   factory _$OperationOutcomeCopyWith(
@@ -6821,7 +6614,6 @@ abstract class _$OperationOutcomeCopyWith<$Res>
   $NarrativeCopyWith<$Res> get text;
 }
 
-/// @nodoc
 class __$OperationOutcomeCopyWithImpl<$Res>
     extends _$OperationOutcomeCopyWithImpl<$Res>
     implements _$OperationOutcomeCopyWith<$Res> {
@@ -6880,8 +6672,6 @@ class __$OperationOutcomeCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_OperationOutcome extends _OperationOutcome {
   _$_OperationOutcome(
       {@required @JsonKey(defaultValue: 'OperationOutcome') this.resourceType,
@@ -7057,7 +6847,6 @@ OperationOutcomeIssue _$OperationOutcomeIssueFromJson(
   return _OperationOutcomeIssue.fromJson(json);
 }
 
-/// @nodoc
 class _$OperationOutcomeIssueTearOff {
   const _$OperationOutcomeIssueTearOff();
 
@@ -7102,18 +6891,11 @@ class _$OperationOutcomeIssueTearOff {
       expressionElement: expressionElement,
     );
   }
-
-// ignore: unused_element
-  OperationOutcomeIssue fromJson(Map<String, Object> json) {
-    return OperationOutcomeIssue.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $OperationOutcomeIssue = _$OperationOutcomeIssueTearOff();
 
-/// @nodoc
 mixin _$OperationOutcomeIssue {
   String get id;
   @JsonKey(name: 'extension')
@@ -7142,7 +6924,6 @@ mixin _$OperationOutcomeIssue {
   $OperationOutcomeIssueCopyWith<OperationOutcomeIssue> get copyWith;
 }
 
-/// @nodoc
 abstract class $OperationOutcomeIssueCopyWith<$Res> {
   factory $OperationOutcomeIssueCopyWith(OperationOutcomeIssue value,
           $Res Function(OperationOutcomeIssue) then) =
@@ -7177,7 +6958,6 @@ abstract class $OperationOutcomeIssueCopyWith<$Res> {
   $ElementCopyWith<$Res> get diagnosticsElement;
 }
 
-/// @nodoc
 class _$OperationOutcomeIssueCopyWithImpl<$Res>
     implements $OperationOutcomeIssueCopyWith<$Res> {
   _$OperationOutcomeIssueCopyWithImpl(this._value, this._then);
@@ -7281,7 +7061,6 @@ class _$OperationOutcomeIssueCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$OperationOutcomeIssueCopyWith<$Res>
     implements $OperationOutcomeIssueCopyWith<$Res> {
   factory _$OperationOutcomeIssueCopyWith(_OperationOutcomeIssue value,
@@ -7322,7 +7101,6 @@ abstract class _$OperationOutcomeIssueCopyWith<$Res>
   $ElementCopyWith<$Res> get diagnosticsElement;
 }
 
-/// @nodoc
 class __$OperationOutcomeIssueCopyWithImpl<$Res>
     extends _$OperationOutcomeIssueCopyWithImpl<$Res>
     implements _$OperationOutcomeIssueCopyWith<$Res> {
@@ -7389,8 +7167,6 @@ class __$OperationOutcomeIssueCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
   _$_OperationOutcomeIssue(
       {this.id,
@@ -7610,7 +7386,6 @@ Parameters _$ParametersFromJson(Map<String, dynamic> json) {
   return _Parameters.fromJson(json);
 }
 
-/// @nodoc
 class _$ParametersTearOff {
   const _$ParametersTearOff();
 
@@ -7635,18 +7410,11 @@ class _$ParametersTearOff {
       parameter: parameter,
     );
   }
-
-// ignore: unused_element
-  Parameters fromJson(Map<String, Object> json) {
-    return Parameters.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $Parameters = _$ParametersTearOff();
 
-/// @nodoc
 mixin _$Parameters {
   @JsonKey(defaultValue: 'Parameters')
   String get resourceType;
@@ -7664,7 +7432,6 @@ mixin _$Parameters {
   $ParametersCopyWith<Parameters> get copyWith;
 }
 
-/// @nodoc
 abstract class $ParametersCopyWith<$Res> {
   factory $ParametersCopyWith(
           Parameters value, $Res Function(Parameters) then) =
@@ -7684,7 +7451,6 @@ abstract class $ParametersCopyWith<$Res> {
   $ElementCopyWith<$Res> get languageElement;
 }
 
-/// @nodoc
 class _$ParametersCopyWithImpl<$Res> implements $ParametersCopyWith<$Res> {
   _$ParametersCopyWithImpl(this._value, this._then);
 
@@ -7756,7 +7522,6 @@ class _$ParametersCopyWithImpl<$Res> implements $ParametersCopyWith<$Res> {
   }
 }
 
-/// @nodoc
 abstract class _$ParametersCopyWith<$Res> implements $ParametersCopyWith<$Res> {
   factory _$ParametersCopyWith(
           _Parameters value, $Res Function(_Parameters) then) =
@@ -7780,7 +7545,6 @@ abstract class _$ParametersCopyWith<$Res> implements $ParametersCopyWith<$Res> {
   $ElementCopyWith<$Res> get languageElement;
 }
 
-/// @nodoc
 class __$ParametersCopyWithImpl<$Res> extends _$ParametersCopyWithImpl<$Res>
     implements _$ParametersCopyWith<$Res> {
   __$ParametersCopyWithImpl(
@@ -7825,8 +7589,6 @@ class __$ParametersCopyWithImpl<$Res> extends _$ParametersCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_Parameters extends _Parameters {
   _$_Parameters(
       {@required @JsonKey(defaultValue: 'Parameters') this.resourceType,
@@ -7960,7 +7722,6 @@ ParametersParameter _$ParametersParameterFromJson(Map<String, dynamic> json) {
   return _ParametersParameter.fromJson(json);
 }
 
-/// @nodoc
 class _$ParametersParameterTearOff {
   const _$ParametersParameterTearOff();
 
@@ -8125,18 +7886,11 @@ class _$ParametersParameterTearOff {
       part: part,
     );
   }
-
-// ignore: unused_element
-  ParametersParameter fromJson(Map<String, Object> json) {
-    return ParametersParameter.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $ParametersParameter = _$ParametersParameterTearOff();
 
-/// @nodoc
 mixin _$ParametersParameter {
   String get id;
   @JsonKey(name: 'extension')
@@ -8243,7 +7997,6 @@ mixin _$ParametersParameter {
   $ParametersParameterCopyWith<ParametersParameter> get copyWith;
 }
 
-/// @nodoc
 abstract class $ParametersParameterCopyWith<$Res> {
   factory $ParametersParameterCopyWith(
           ParametersParameter value, $Res Function(ParametersParameter) then) =
@@ -8382,7 +8135,6 @@ abstract class $ParametersParameterCopyWith<$Res> {
   $MetaCopyWith<$Res> get valueMeta;
 }
 
-/// @nodoc
 class _$ParametersParameterCopyWithImpl<$Res>
     implements $ParametersParameterCopyWith<$Res> {
   _$ParametersParameterCopyWithImpl(this._value, this._then);
@@ -9195,7 +8947,6 @@ class _$ParametersParameterCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$ParametersParameterCopyWith<$Res>
     implements $ParametersParameterCopyWith<$Res> {
   factory _$ParametersParameterCopyWith(_ParametersParameter value,
@@ -9388,7 +9139,6 @@ abstract class _$ParametersParameterCopyWith<$Res>
   $MetaCopyWith<$Res> get valueMeta;
 }
 
-/// @nodoc
 class __$ParametersParameterCopyWithImpl<$Res>
     extends _$ParametersParameterCopyWithImpl<$Res>
     implements _$ParametersParameterCopyWith<$Res> {
@@ -9682,8 +9432,6 @@ class __$ParametersParameterCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_ParametersParameter extends _ParametersParameter {
   _$_ParametersParameter(
       {this.id,
@@ -10435,7 +10183,6 @@ Subscription _$SubscriptionFromJson(Map<String, dynamic> json) {
   return _Subscription.fromJson(json);
 }
 
-/// @nodoc
 class _$SubscriptionTearOff {
   const _$SubscriptionTearOff();
 
@@ -10461,8 +10208,7 @@ class _$SubscriptionTearOff {
       String name,
       @JsonKey(name: '_name')
           Element nameElement,
-      @JsonKey(unknownEnumValue: SubscriptionStatus.unknown)
-          SubscriptionStatus status,
+      Code status,
       @JsonKey(name: '_status')
           Element statusElement,
       @required
@@ -10475,12 +10221,27 @@ class _$SubscriptionTearOff {
       @JsonKey(name: '_reason')
           Element reasonElement,
       List<SubscriptionFilterBy> filterBy,
-      List<CodeableConcept> error,
-      UnsignedInt eventCount,
-      @JsonKey(name: '_eventCount')
-          Element eventCountElement,
       @required
-          SubscriptionChannel channel}) {
+          Coding channelType,
+      FhirUrl endpoint,
+      @JsonKey(name: '_endpoint')
+          Element endpointElement,
+      List<String> header,
+      @JsonKey(name: '_header')
+          List<Element> headerElement,
+      UnsignedInt heartbeatPeriod,
+      @JsonKey(name: '_heartbeatPeriod')
+          Element heartbeatPeriodElement,
+      UnsignedInt timeout,
+      @JsonKey(name: '_timeout')
+          Element timeoutElement,
+      Code contentType,
+      @JsonKey(name: '_contentType')
+          Element contentTypeElement,
+      @JsonKey(unknownEnumValue: SubscriptionContent.unknown)
+          SubscriptionContent content,
+      @JsonKey(name: '_content')
+          Element contentElement}) {
     return _Subscription(
       resourceType: resourceType,
       id: id,
@@ -10505,24 +10266,26 @@ class _$SubscriptionTearOff {
       reason: reason,
       reasonElement: reasonElement,
       filterBy: filterBy,
-      error: error,
-      eventCount: eventCount,
-      eventCountElement: eventCountElement,
-      channel: channel,
+      channelType: channelType,
+      endpoint: endpoint,
+      endpointElement: endpointElement,
+      header: header,
+      headerElement: headerElement,
+      heartbeatPeriod: heartbeatPeriod,
+      heartbeatPeriodElement: heartbeatPeriodElement,
+      timeout: timeout,
+      timeoutElement: timeoutElement,
+      contentType: contentType,
+      contentTypeElement: contentTypeElement,
+      content: content,
+      contentElement: contentElement,
     );
-  }
-
-// ignore: unused_element
-  Subscription fromJson(Map<String, Object> json) {
-    return Subscription.fromJson(json);
   }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $Subscription = _$SubscriptionTearOff();
 
-/// @nodoc
 mixin _$Subscription {
   @JsonKey(defaultValue: 'Subscription')
   String get resourceType;
@@ -10543,8 +10306,7 @@ mixin _$Subscription {
   String get name;
   @JsonKey(name: '_name')
   Element get nameElement;
-  @JsonKey(unknownEnumValue: SubscriptionStatus.unknown)
-  SubscriptionStatus get status;
+  Code get status;
   @JsonKey(name: '_status')
   Element get statusElement;
   Reference get topic;
@@ -10556,17 +10318,31 @@ mixin _$Subscription {
   @JsonKey(name: '_reason')
   Element get reasonElement;
   List<SubscriptionFilterBy> get filterBy;
-  List<CodeableConcept> get error;
-  UnsignedInt get eventCount;
-  @JsonKey(name: '_eventCount')
-  Element get eventCountElement;
-  SubscriptionChannel get channel;
+  Coding get channelType;
+  FhirUrl get endpoint;
+  @JsonKey(name: '_endpoint')
+  Element get endpointElement;
+  List<String> get header;
+  @JsonKey(name: '_header')
+  List<Element> get headerElement;
+  UnsignedInt get heartbeatPeriod;
+  @JsonKey(name: '_heartbeatPeriod')
+  Element get heartbeatPeriodElement;
+  UnsignedInt get timeout;
+  @JsonKey(name: '_timeout')
+  Element get timeoutElement;
+  Code get contentType;
+  @JsonKey(name: '_contentType')
+  Element get contentTypeElement;
+  @JsonKey(unknownEnumValue: SubscriptionContent.unknown)
+  SubscriptionContent get content;
+  @JsonKey(name: '_content')
+  Element get contentElement;
 
   Map<String, dynamic> toJson();
   $SubscriptionCopyWith<Subscription> get copyWith;
 }
 
-/// @nodoc
 abstract class $SubscriptionCopyWith<$Res> {
   factory $SubscriptionCopyWith(
           Subscription value, $Res Function(Subscription) then) =
@@ -10591,8 +10367,7 @@ abstract class $SubscriptionCopyWith<$Res> {
       String name,
       @JsonKey(name: '_name')
           Element nameElement,
-      @JsonKey(unknownEnumValue: SubscriptionStatus.unknown)
-          SubscriptionStatus status,
+      Code status,
       @JsonKey(name: '_status')
           Element statusElement,
       Reference topic,
@@ -10604,11 +10379,26 @@ abstract class $SubscriptionCopyWith<$Res> {
       @JsonKey(name: '_reason')
           Element reasonElement,
       List<SubscriptionFilterBy> filterBy,
-      List<CodeableConcept> error,
-      UnsignedInt eventCount,
-      @JsonKey(name: '_eventCount')
-          Element eventCountElement,
-      SubscriptionChannel channel});
+      Coding channelType,
+      FhirUrl endpoint,
+      @JsonKey(name: '_endpoint')
+          Element endpointElement,
+      List<String> header,
+      @JsonKey(name: '_header')
+          List<Element> headerElement,
+      UnsignedInt heartbeatPeriod,
+      @JsonKey(name: '_heartbeatPeriod')
+          Element heartbeatPeriodElement,
+      UnsignedInt timeout,
+      @JsonKey(name: '_timeout')
+          Element timeoutElement,
+      Code contentType,
+      @JsonKey(name: '_contentType')
+          Element contentTypeElement,
+      @JsonKey(unknownEnumValue: SubscriptionContent.unknown)
+          SubscriptionContent content,
+      @JsonKey(name: '_content')
+          Element contentElement});
 
   $MetaCopyWith<$Res> get meta;
   $ElementCopyWith<$Res> get implicitRulesElement;
@@ -10619,11 +10409,14 @@ abstract class $SubscriptionCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get topic;
   $ElementCopyWith<$Res> get endElement;
   $ElementCopyWith<$Res> get reasonElement;
-  $ElementCopyWith<$Res> get eventCountElement;
-  $SubscriptionChannelCopyWith<$Res> get channel;
+  $CodingCopyWith<$Res> get channelType;
+  $ElementCopyWith<$Res> get endpointElement;
+  $ElementCopyWith<$Res> get heartbeatPeriodElement;
+  $ElementCopyWith<$Res> get timeoutElement;
+  $ElementCopyWith<$Res> get contentTypeElement;
+  $ElementCopyWith<$Res> get contentElement;
 }
 
-/// @nodoc
 class _$SubscriptionCopyWithImpl<$Res> implements $SubscriptionCopyWith<$Res> {
   _$SubscriptionCopyWithImpl(this._value, this._then);
 
@@ -10656,10 +10449,19 @@ class _$SubscriptionCopyWithImpl<$Res> implements $SubscriptionCopyWith<$Res> {
     Object reason = freezed,
     Object reasonElement = freezed,
     Object filterBy = freezed,
-    Object error = freezed,
-    Object eventCount = freezed,
-    Object eventCountElement = freezed,
-    Object channel = freezed,
+    Object channelType = freezed,
+    Object endpoint = freezed,
+    Object endpointElement = freezed,
+    Object header = freezed,
+    Object headerElement = freezed,
+    Object heartbeatPeriod = freezed,
+    Object heartbeatPeriodElement = freezed,
+    Object timeout = freezed,
+    Object timeoutElement = freezed,
+    Object contentType = freezed,
+    Object contentTypeElement = freezed,
+    Object content = freezed,
+    Object contentElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -10692,7 +10494,7 @@ class _$SubscriptionCopyWithImpl<$Res> implements $SubscriptionCopyWith<$Res> {
       name: name == freezed ? _value.name : name as String,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element,
-      status: status == freezed ? _value.status : status as SubscriptionStatus,
+      status: status == freezed ? _value.status : status as Code,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element,
@@ -10709,14 +10511,36 @@ class _$SubscriptionCopyWithImpl<$Res> implements $SubscriptionCopyWith<$Res> {
       filterBy: filterBy == freezed
           ? _value.filterBy
           : filterBy as List<SubscriptionFilterBy>,
-      error: error == freezed ? _value.error : error as List<CodeableConcept>,
-      eventCount:
-          eventCount == freezed ? _value.eventCount : eventCount as UnsignedInt,
-      eventCountElement: eventCountElement == freezed
-          ? _value.eventCountElement
-          : eventCountElement as Element,
-      channel:
-          channel == freezed ? _value.channel : channel as SubscriptionChannel,
+      channelType:
+          channelType == freezed ? _value.channelType : channelType as Coding,
+      endpoint: endpoint == freezed ? _value.endpoint : endpoint as FhirUrl,
+      endpointElement: endpointElement == freezed
+          ? _value.endpointElement
+          : endpointElement as Element,
+      header: header == freezed ? _value.header : header as List<String>,
+      headerElement: headerElement == freezed
+          ? _value.headerElement
+          : headerElement as List<Element>,
+      heartbeatPeriod: heartbeatPeriod == freezed
+          ? _value.heartbeatPeriod
+          : heartbeatPeriod as UnsignedInt,
+      heartbeatPeriodElement: heartbeatPeriodElement == freezed
+          ? _value.heartbeatPeriodElement
+          : heartbeatPeriodElement as Element,
+      timeout: timeout == freezed ? _value.timeout : timeout as UnsignedInt,
+      timeoutElement: timeoutElement == freezed
+          ? _value.timeoutElement
+          : timeoutElement as Element,
+      contentType:
+          contentType == freezed ? _value.contentType : contentType as Code,
+      contentTypeElement: contentTypeElement == freezed
+          ? _value.contentTypeElement
+          : contentTypeElement as Element,
+      content:
+          content == freezed ? _value.content : content as SubscriptionContent,
+      contentElement: contentElement == freezed
+          ? _value.contentElement
+          : contentElement as Element,
     ));
   }
 
@@ -10811,27 +10635,66 @@ class _$SubscriptionCopyWithImpl<$Res> implements $SubscriptionCopyWith<$Res> {
   }
 
   @override
-  $ElementCopyWith<$Res> get eventCountElement {
-    if (_value.eventCountElement == null) {
+  $CodingCopyWith<$Res> get channelType {
+    if (_value.channelType == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.eventCountElement, (value) {
-      return _then(_value.copyWith(eventCountElement: value));
+    return $CodingCopyWith<$Res>(_value.channelType, (value) {
+      return _then(_value.copyWith(channelType: value));
     });
   }
 
   @override
-  $SubscriptionChannelCopyWith<$Res> get channel {
-    if (_value.channel == null) {
+  $ElementCopyWith<$Res> get endpointElement {
+    if (_value.endpointElement == null) {
       return null;
     }
-    return $SubscriptionChannelCopyWith<$Res>(_value.channel, (value) {
-      return _then(_value.copyWith(channel: value));
+    return $ElementCopyWith<$Res>(_value.endpointElement, (value) {
+      return _then(_value.copyWith(endpointElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get heartbeatPeriodElement {
+    if (_value.heartbeatPeriodElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.heartbeatPeriodElement, (value) {
+      return _then(_value.copyWith(heartbeatPeriodElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get timeoutElement {
+    if (_value.timeoutElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.timeoutElement, (value) {
+      return _then(_value.copyWith(timeoutElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get contentTypeElement {
+    if (_value.contentTypeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.contentTypeElement, (value) {
+      return _then(_value.copyWith(contentTypeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get contentElement {
+    if (_value.contentElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.contentElement, (value) {
+      return _then(_value.copyWith(contentElement: value));
     });
   }
 }
 
-/// @nodoc
 abstract class _$SubscriptionCopyWith<$Res>
     implements $SubscriptionCopyWith<$Res> {
   factory _$SubscriptionCopyWith(
@@ -10858,8 +10721,7 @@ abstract class _$SubscriptionCopyWith<$Res>
       String name,
       @JsonKey(name: '_name')
           Element nameElement,
-      @JsonKey(unknownEnumValue: SubscriptionStatus.unknown)
-          SubscriptionStatus status,
+      Code status,
       @JsonKey(name: '_status')
           Element statusElement,
       Reference topic,
@@ -10871,11 +10733,26 @@ abstract class _$SubscriptionCopyWith<$Res>
       @JsonKey(name: '_reason')
           Element reasonElement,
       List<SubscriptionFilterBy> filterBy,
-      List<CodeableConcept> error,
-      UnsignedInt eventCount,
-      @JsonKey(name: '_eventCount')
-          Element eventCountElement,
-      SubscriptionChannel channel});
+      Coding channelType,
+      FhirUrl endpoint,
+      @JsonKey(name: '_endpoint')
+          Element endpointElement,
+      List<String> header,
+      @JsonKey(name: '_header')
+          List<Element> headerElement,
+      UnsignedInt heartbeatPeriod,
+      @JsonKey(name: '_heartbeatPeriod')
+          Element heartbeatPeriodElement,
+      UnsignedInt timeout,
+      @JsonKey(name: '_timeout')
+          Element timeoutElement,
+      Code contentType,
+      @JsonKey(name: '_contentType')
+          Element contentTypeElement,
+      @JsonKey(unknownEnumValue: SubscriptionContent.unknown)
+          SubscriptionContent content,
+      @JsonKey(name: '_content')
+          Element contentElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -10896,12 +10773,19 @@ abstract class _$SubscriptionCopyWith<$Res>
   @override
   $ElementCopyWith<$Res> get reasonElement;
   @override
-  $ElementCopyWith<$Res> get eventCountElement;
+  $CodingCopyWith<$Res> get channelType;
   @override
-  $SubscriptionChannelCopyWith<$Res> get channel;
+  $ElementCopyWith<$Res> get endpointElement;
+  @override
+  $ElementCopyWith<$Res> get heartbeatPeriodElement;
+  @override
+  $ElementCopyWith<$Res> get timeoutElement;
+  @override
+  $ElementCopyWith<$Res> get contentTypeElement;
+  @override
+  $ElementCopyWith<$Res> get contentElement;
 }
 
-/// @nodoc
 class __$SubscriptionCopyWithImpl<$Res> extends _$SubscriptionCopyWithImpl<$Res>
     implements _$SubscriptionCopyWith<$Res> {
   __$SubscriptionCopyWithImpl(
@@ -10936,10 +10820,19 @@ class __$SubscriptionCopyWithImpl<$Res> extends _$SubscriptionCopyWithImpl<$Res>
     Object reason = freezed,
     Object reasonElement = freezed,
     Object filterBy = freezed,
-    Object error = freezed,
-    Object eventCount = freezed,
-    Object eventCountElement = freezed,
-    Object channel = freezed,
+    Object channelType = freezed,
+    Object endpoint = freezed,
+    Object endpointElement = freezed,
+    Object header = freezed,
+    Object headerElement = freezed,
+    Object heartbeatPeriod = freezed,
+    Object heartbeatPeriodElement = freezed,
+    Object timeout = freezed,
+    Object timeoutElement = freezed,
+    Object contentType = freezed,
+    Object contentTypeElement = freezed,
+    Object content = freezed,
+    Object contentElement = freezed,
   }) {
     return _then(_Subscription(
       resourceType: resourceType == freezed
@@ -10972,7 +10865,7 @@ class __$SubscriptionCopyWithImpl<$Res> extends _$SubscriptionCopyWithImpl<$Res>
       name: name == freezed ? _value.name : name as String,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element,
-      status: status == freezed ? _value.status : status as SubscriptionStatus,
+      status: status == freezed ? _value.status : status as Code,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element,
@@ -10989,21 +10882,41 @@ class __$SubscriptionCopyWithImpl<$Res> extends _$SubscriptionCopyWithImpl<$Res>
       filterBy: filterBy == freezed
           ? _value.filterBy
           : filterBy as List<SubscriptionFilterBy>,
-      error: error == freezed ? _value.error : error as List<CodeableConcept>,
-      eventCount:
-          eventCount == freezed ? _value.eventCount : eventCount as UnsignedInt,
-      eventCountElement: eventCountElement == freezed
-          ? _value.eventCountElement
-          : eventCountElement as Element,
-      channel:
-          channel == freezed ? _value.channel : channel as SubscriptionChannel,
+      channelType:
+          channelType == freezed ? _value.channelType : channelType as Coding,
+      endpoint: endpoint == freezed ? _value.endpoint : endpoint as FhirUrl,
+      endpointElement: endpointElement == freezed
+          ? _value.endpointElement
+          : endpointElement as Element,
+      header: header == freezed ? _value.header : header as List<String>,
+      headerElement: headerElement == freezed
+          ? _value.headerElement
+          : headerElement as List<Element>,
+      heartbeatPeriod: heartbeatPeriod == freezed
+          ? _value.heartbeatPeriod
+          : heartbeatPeriod as UnsignedInt,
+      heartbeatPeriodElement: heartbeatPeriodElement == freezed
+          ? _value.heartbeatPeriodElement
+          : heartbeatPeriodElement as Element,
+      timeout: timeout == freezed ? _value.timeout : timeout as UnsignedInt,
+      timeoutElement: timeoutElement == freezed
+          ? _value.timeoutElement
+          : timeoutElement as Element,
+      contentType:
+          contentType == freezed ? _value.contentType : contentType as Code,
+      contentTypeElement: contentTypeElement == freezed
+          ? _value.contentTypeElement
+          : contentTypeElement as Element,
+      content:
+          content == freezed ? _value.content : content as SubscriptionContent,
+      contentElement: contentElement == freezed
+          ? _value.contentElement
+          : contentElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_Subscription extends _Subscription {
   _$_Subscription(
       {@required @JsonKey(defaultValue: 'Subscription') this.resourceType,
@@ -11020,7 +10933,7 @@ class _$_Subscription extends _Subscription {
       this.identifier,
       this.name,
       @JsonKey(name: '_name') this.nameElement,
-      @JsonKey(unknownEnumValue: SubscriptionStatus.unknown) this.status,
+      this.status,
       @JsonKey(name: '_status') this.statusElement,
       @required this.topic,
       this.contact,
@@ -11029,13 +10942,22 @@ class _$_Subscription extends _Subscription {
       this.reason,
       @JsonKey(name: '_reason') this.reasonElement,
       this.filterBy,
-      this.error,
-      this.eventCount,
-      @JsonKey(name: '_eventCount') this.eventCountElement,
-      @required this.channel})
+      @required this.channelType,
+      this.endpoint,
+      @JsonKey(name: '_endpoint') this.endpointElement,
+      this.header,
+      @JsonKey(name: '_header') this.headerElement,
+      this.heartbeatPeriod,
+      @JsonKey(name: '_heartbeatPeriod') this.heartbeatPeriodElement,
+      this.timeout,
+      @JsonKey(name: '_timeout') this.timeoutElement,
+      this.contentType,
+      @JsonKey(name: '_contentType') this.contentTypeElement,
+      @JsonKey(unknownEnumValue: SubscriptionContent.unknown) this.content,
+      @JsonKey(name: '_content') this.contentElement})
       : assert(resourceType != null),
         assert(topic != null),
-        assert(channel != null),
+        assert(channelType != null),
         super._();
 
   factory _$_Subscription.fromJson(Map<String, dynamic> json) =>
@@ -11075,8 +10997,7 @@ class _$_Subscription extends _Subscription {
   @JsonKey(name: '_name')
   final Element nameElement;
   @override
-  @JsonKey(unknownEnumValue: SubscriptionStatus.unknown)
-  final SubscriptionStatus status;
+  final Code status;
   @override
   @JsonKey(name: '_status')
   final Element statusElement;
@@ -11097,18 +11018,42 @@ class _$_Subscription extends _Subscription {
   @override
   final List<SubscriptionFilterBy> filterBy;
   @override
-  final List<CodeableConcept> error;
+  final Coding channelType;
   @override
-  final UnsignedInt eventCount;
+  final FhirUrl endpoint;
   @override
-  @JsonKey(name: '_eventCount')
-  final Element eventCountElement;
+  @JsonKey(name: '_endpoint')
+  final Element endpointElement;
   @override
-  final SubscriptionChannel channel;
+  final List<String> header;
+  @override
+  @JsonKey(name: '_header')
+  final List<Element> headerElement;
+  @override
+  final UnsignedInt heartbeatPeriod;
+  @override
+  @JsonKey(name: '_heartbeatPeriod')
+  final Element heartbeatPeriodElement;
+  @override
+  final UnsignedInt timeout;
+  @override
+  @JsonKey(name: '_timeout')
+  final Element timeoutElement;
+  @override
+  final Code contentType;
+  @override
+  @JsonKey(name: '_contentType')
+  final Element contentTypeElement;
+  @override
+  @JsonKey(unknownEnumValue: SubscriptionContent.unknown)
+  final SubscriptionContent content;
+  @override
+  @JsonKey(name: '_content')
+  final Element contentElement;
 
   @override
   String toString() {
-    return 'Subscription(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, name: $name, nameElement: $nameElement, status: $status, statusElement: $statusElement, topic: $topic, contact: $contact, end: $end, endElement: $endElement, reason: $reason, reasonElement: $reasonElement, filterBy: $filterBy, error: $error, eventCount: $eventCount, eventCountElement: $eventCountElement, channel: $channel)';
+    return 'Subscription(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, name: $name, nameElement: $nameElement, status: $status, statusElement: $statusElement, topic: $topic, contact: $contact, end: $end, endElement: $endElement, reason: $reason, reasonElement: $reasonElement, filterBy: $filterBy, channelType: $channelType, endpoint: $endpoint, endpointElement: $endpointElement, header: $header, headerElement: $headerElement, heartbeatPeriod: $heartbeatPeriod, heartbeatPeriodElement: $heartbeatPeriodElement, timeout: $timeout, timeoutElement: $timeoutElement, contentType: $contentType, contentTypeElement: $contentTypeElement, content: $content, contentElement: $contentElement)';
   }
 
   @override
@@ -11176,15 +11121,24 @@ class _$_Subscription extends _Subscription {
             (identical(other.filterBy, filterBy) ||
                 const DeepCollectionEquality()
                     .equals(other.filterBy, filterBy)) &&
-            (identical(other.error, error) ||
-                const DeepCollectionEquality().equals(other.error, error)) &&
-            (identical(other.eventCount, eventCount) ||
+            (identical(other.channelType, channelType) ||
                 const DeepCollectionEquality()
-                    .equals(other.eventCount, eventCount)) &&
-            (identical(other.eventCountElement, eventCountElement) ||
+                    .equals(other.channelType, channelType)) &&
+            (identical(other.endpoint, endpoint) ||
                 const DeepCollectionEquality()
-                    .equals(other.eventCountElement, eventCountElement)) &&
-            (identical(other.channel, channel) || const DeepCollectionEquality().equals(other.channel, channel)));
+                    .equals(other.endpoint, endpoint)) &&
+            (identical(other.endpointElement, endpointElement) ||
+                const DeepCollectionEquality().equals(other.endpointElement, endpointElement)) &&
+            (identical(other.header, header) || const DeepCollectionEquality().equals(other.header, header)) &&
+            (identical(other.headerElement, headerElement) || const DeepCollectionEquality().equals(other.headerElement, headerElement)) &&
+            (identical(other.heartbeatPeriod, heartbeatPeriod) || const DeepCollectionEquality().equals(other.heartbeatPeriod, heartbeatPeriod)) &&
+            (identical(other.heartbeatPeriodElement, heartbeatPeriodElement) || const DeepCollectionEquality().equals(other.heartbeatPeriodElement, heartbeatPeriodElement)) &&
+            (identical(other.timeout, timeout) || const DeepCollectionEquality().equals(other.timeout, timeout)) &&
+            (identical(other.timeoutElement, timeoutElement) || const DeepCollectionEquality().equals(other.timeoutElement, timeoutElement)) &&
+            (identical(other.contentType, contentType) || const DeepCollectionEquality().equals(other.contentType, contentType)) &&
+            (identical(other.contentTypeElement, contentTypeElement) || const DeepCollectionEquality().equals(other.contentTypeElement, contentTypeElement)) &&
+            (identical(other.content, content) || const DeepCollectionEquality().equals(other.content, content)) &&
+            (identical(other.contentElement, contentElement) || const DeepCollectionEquality().equals(other.contentElement, contentElement)));
   }
 
   @override
@@ -11213,10 +11167,19 @@ class _$_Subscription extends _Subscription {
       const DeepCollectionEquality().hash(reason) ^
       const DeepCollectionEquality().hash(reasonElement) ^
       const DeepCollectionEquality().hash(filterBy) ^
-      const DeepCollectionEquality().hash(error) ^
-      const DeepCollectionEquality().hash(eventCount) ^
-      const DeepCollectionEquality().hash(eventCountElement) ^
-      const DeepCollectionEquality().hash(channel);
+      const DeepCollectionEquality().hash(channelType) ^
+      const DeepCollectionEquality().hash(endpoint) ^
+      const DeepCollectionEquality().hash(endpointElement) ^
+      const DeepCollectionEquality().hash(header) ^
+      const DeepCollectionEquality().hash(headerElement) ^
+      const DeepCollectionEquality().hash(heartbeatPeriod) ^
+      const DeepCollectionEquality().hash(heartbeatPeriodElement) ^
+      const DeepCollectionEquality().hash(timeout) ^
+      const DeepCollectionEquality().hash(timeoutElement) ^
+      const DeepCollectionEquality().hash(contentType) ^
+      const DeepCollectionEquality().hash(contentTypeElement) ^
+      const DeepCollectionEquality().hash(content) ^
+      const DeepCollectionEquality().hash(contentElement);
 
   @override
   _$SubscriptionCopyWith<_Subscription> get copyWith =>
@@ -11251,8 +11214,7 @@ abstract class _Subscription extends Subscription {
       String name,
       @JsonKey(name: '_name')
           Element nameElement,
-      @JsonKey(unknownEnumValue: SubscriptionStatus.unknown)
-          SubscriptionStatus status,
+      Code status,
       @JsonKey(name: '_status')
           Element statusElement,
       @required
@@ -11265,12 +11227,27 @@ abstract class _Subscription extends Subscription {
       @JsonKey(name: '_reason')
           Element reasonElement,
       List<SubscriptionFilterBy> filterBy,
-      List<CodeableConcept> error,
-      UnsignedInt eventCount,
-      @JsonKey(name: '_eventCount')
-          Element eventCountElement,
       @required
-          SubscriptionChannel channel}) = _$_Subscription;
+          Coding channelType,
+      FhirUrl endpoint,
+      @JsonKey(name: '_endpoint')
+          Element endpointElement,
+      List<String> header,
+      @JsonKey(name: '_header')
+          List<Element> headerElement,
+      UnsignedInt heartbeatPeriod,
+      @JsonKey(name: '_heartbeatPeriod')
+          Element heartbeatPeriodElement,
+      UnsignedInt timeout,
+      @JsonKey(name: '_timeout')
+          Element timeoutElement,
+      Code contentType,
+      @JsonKey(name: '_contentType')
+          Element contentTypeElement,
+      @JsonKey(unknownEnumValue: SubscriptionContent.unknown)
+          SubscriptionContent content,
+      @JsonKey(name: '_content')
+          Element contentElement}) = _$_Subscription;
 
   factory _Subscription.fromJson(Map<String, dynamic> json) =
       _$_Subscription.fromJson;
@@ -11309,8 +11286,7 @@ abstract class _Subscription extends Subscription {
   @JsonKey(name: '_name')
   Element get nameElement;
   @override
-  @JsonKey(unknownEnumValue: SubscriptionStatus.unknown)
-  SubscriptionStatus get status;
+  Code get status;
   @override
   @JsonKey(name: '_status')
   Element get statusElement;
@@ -11331,14 +11307,38 @@ abstract class _Subscription extends Subscription {
   @override
   List<SubscriptionFilterBy> get filterBy;
   @override
-  List<CodeableConcept> get error;
+  Coding get channelType;
   @override
-  UnsignedInt get eventCount;
+  FhirUrl get endpoint;
   @override
-  @JsonKey(name: '_eventCount')
-  Element get eventCountElement;
+  @JsonKey(name: '_endpoint')
+  Element get endpointElement;
   @override
-  SubscriptionChannel get channel;
+  List<String> get header;
+  @override
+  @JsonKey(name: '_header')
+  List<Element> get headerElement;
+  @override
+  UnsignedInt get heartbeatPeriod;
+  @override
+  @JsonKey(name: '_heartbeatPeriod')
+  Element get heartbeatPeriodElement;
+  @override
+  UnsignedInt get timeout;
+  @override
+  @JsonKey(name: '_timeout')
+  Element get timeoutElement;
+  @override
+  Code get contentType;
+  @override
+  @JsonKey(name: '_contentType')
+  Element get contentTypeElement;
+  @override
+  @JsonKey(unknownEnumValue: SubscriptionContent.unknown)
+  SubscriptionContent get content;
+  @override
+  @JsonKey(name: '_content')
+  Element get contentElement;
   @override
   _$SubscriptionCopyWith<_Subscription> get copyWith;
 }
@@ -11347,62 +11347,48 @@ SubscriptionFilterBy _$SubscriptionFilterByFromJson(Map<String, dynamic> json) {
   return _SubscriptionFilterBy.fromJson(json);
 }
 
-/// @nodoc
 class _$SubscriptionFilterByTearOff {
   const _$SubscriptionFilterByTearOff();
 
 // ignore: unused_element
   _SubscriptionFilterBy call(
       {String id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      String name,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(unknownEnumValue: SubscriptionFilterByMatchType.unknown)
-          SubscriptionFilterByMatchType matchType,
-      @JsonKey(name: '_matchType')
-          Element matchTypeElement,
+      String searchParamName,
+      @JsonKey(name: '_searchParamName') Element searchParamNameElement,
+      Code searchModifier,
+      @JsonKey(name: '_searchModifier') Element searchModifierElement,
       String value,
-      @JsonKey(name: '_value')
-          Element valueElement}) {
+      @JsonKey(name: '_value') Element valueElement}) {
     return _SubscriptionFilterBy(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
-      name: name,
-      nameElement: nameElement,
-      matchType: matchType,
-      matchTypeElement: matchTypeElement,
+      searchParamName: searchParamName,
+      searchParamNameElement: searchParamNameElement,
+      searchModifier: searchModifier,
+      searchModifierElement: searchModifierElement,
       value: value,
       valueElement: valueElement,
     );
   }
-
-// ignore: unused_element
-  SubscriptionFilterBy fromJson(Map<String, Object> json) {
-    return SubscriptionFilterBy.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $SubscriptionFilterBy = _$SubscriptionFilterByTearOff();
 
-/// @nodoc
 mixin _$SubscriptionFilterBy {
   String get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
-  String get name;
-  @JsonKey(name: '_name')
-  Element get nameElement;
-  @JsonKey(unknownEnumValue: SubscriptionFilterByMatchType.unknown)
-  SubscriptionFilterByMatchType get matchType;
-  @JsonKey(name: '_matchType')
-  Element get matchTypeElement;
+  String get searchParamName;
+  @JsonKey(name: '_searchParamName')
+  Element get searchParamNameElement;
+  Code get searchModifier;
+  @JsonKey(name: '_searchModifier')
+  Element get searchModifierElement;
   String get value;
   @JsonKey(name: '_value')
   Element get valueElement;
@@ -11411,33 +11397,26 @@ mixin _$SubscriptionFilterBy {
   $SubscriptionFilterByCopyWith<SubscriptionFilterBy> get copyWith;
 }
 
-/// @nodoc
 abstract class $SubscriptionFilterByCopyWith<$Res> {
   factory $SubscriptionFilterByCopyWith(SubscriptionFilterBy value,
           $Res Function(SubscriptionFilterBy) then) =
       _$SubscriptionFilterByCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      String name,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(unknownEnumValue: SubscriptionFilterByMatchType.unknown)
-          SubscriptionFilterByMatchType matchType,
-      @JsonKey(name: '_matchType')
-          Element matchTypeElement,
+      String searchParamName,
+      @JsonKey(name: '_searchParamName') Element searchParamNameElement,
+      Code searchModifier,
+      @JsonKey(name: '_searchModifier') Element searchModifierElement,
       String value,
-      @JsonKey(name: '_value')
-          Element valueElement});
+      @JsonKey(name: '_value') Element valueElement});
 
-  $ElementCopyWith<$Res> get nameElement;
-  $ElementCopyWith<$Res> get matchTypeElement;
+  $ElementCopyWith<$Res> get searchParamNameElement;
+  $ElementCopyWith<$Res> get searchModifierElement;
   $ElementCopyWith<$Res> get valueElement;
 }
 
-/// @nodoc
 class _$SubscriptionFilterByCopyWithImpl<$Res>
     implements $SubscriptionFilterByCopyWith<$Res> {
   _$SubscriptionFilterByCopyWithImpl(this._value, this._then);
@@ -11451,10 +11430,10 @@ class _$SubscriptionFilterByCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object name = freezed,
-    Object nameElement = freezed,
-    Object matchType = freezed,
-    Object matchTypeElement = freezed,
+    Object searchParamName = freezed,
+    Object searchParamNameElement = freezed,
+    Object searchModifier = freezed,
+    Object searchModifierElement = freezed,
     Object value = freezed,
     Object valueElement = freezed,
   }) {
@@ -11466,15 +11445,18 @@ class _$SubscriptionFilterByCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      name: name == freezed ? _value.name : name as String,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      matchType: matchType == freezed
-          ? _value.matchType
-          : matchType as SubscriptionFilterByMatchType,
-      matchTypeElement: matchTypeElement == freezed
-          ? _value.matchTypeElement
-          : matchTypeElement as Element,
+      searchParamName: searchParamName == freezed
+          ? _value.searchParamName
+          : searchParamName as String,
+      searchParamNameElement: searchParamNameElement == freezed
+          ? _value.searchParamNameElement
+          : searchParamNameElement as Element,
+      searchModifier: searchModifier == freezed
+          ? _value.searchModifier
+          : searchModifier as Code,
+      searchModifierElement: searchModifierElement == freezed
+          ? _value.searchModifierElement
+          : searchModifierElement as Element,
       value: value == freezed ? _value.value : value as String,
       valueElement: valueElement == freezed
           ? _value.valueElement
@@ -11483,22 +11465,22 @@ class _$SubscriptionFilterByCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get nameElement {
-    if (_value.nameElement == null) {
+  $ElementCopyWith<$Res> get searchParamNameElement {
+    if (_value.searchParamNameElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
-      return _then(_value.copyWith(nameElement: value));
+    return $ElementCopyWith<$Res>(_value.searchParamNameElement, (value) {
+      return _then(_value.copyWith(searchParamNameElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get matchTypeElement {
-    if (_value.matchTypeElement == null) {
+  $ElementCopyWith<$Res> get searchModifierElement {
+    if (_value.searchModifierElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.matchTypeElement, (value) {
-      return _then(_value.copyWith(matchTypeElement: value));
+    return $ElementCopyWith<$Res>(_value.searchModifierElement, (value) {
+      return _then(_value.copyWith(searchModifierElement: value));
     });
   }
 
@@ -11513,7 +11495,6 @@ class _$SubscriptionFilterByCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$SubscriptionFilterByCopyWith<$Res>
     implements $SubscriptionFilterByCopyWith<$Res> {
   factory _$SubscriptionFilterByCopyWith(_SubscriptionFilterBy value,
@@ -11522,29 +11503,23 @@ abstract class _$SubscriptionFilterByCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      String name,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(unknownEnumValue: SubscriptionFilterByMatchType.unknown)
-          SubscriptionFilterByMatchType matchType,
-      @JsonKey(name: '_matchType')
-          Element matchTypeElement,
+      String searchParamName,
+      @JsonKey(name: '_searchParamName') Element searchParamNameElement,
+      Code searchModifier,
+      @JsonKey(name: '_searchModifier') Element searchModifierElement,
       String value,
-      @JsonKey(name: '_value')
-          Element valueElement});
+      @JsonKey(name: '_value') Element valueElement});
 
   @override
-  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get searchParamNameElement;
   @override
-  $ElementCopyWith<$Res> get matchTypeElement;
+  $ElementCopyWith<$Res> get searchModifierElement;
   @override
   $ElementCopyWith<$Res> get valueElement;
 }
 
-/// @nodoc
 class __$SubscriptionFilterByCopyWithImpl<$Res>
     extends _$SubscriptionFilterByCopyWithImpl<$Res>
     implements _$SubscriptionFilterByCopyWith<$Res> {
@@ -11560,10 +11535,10 @@ class __$SubscriptionFilterByCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object name = freezed,
-    Object nameElement = freezed,
-    Object matchType = freezed,
-    Object matchTypeElement = freezed,
+    Object searchParamName = freezed,
+    Object searchParamNameElement = freezed,
+    Object searchModifier = freezed,
+    Object searchModifierElement = freezed,
     Object value = freezed,
     Object valueElement = freezed,
   }) {
@@ -11575,15 +11550,18 @@ class __$SubscriptionFilterByCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      name: name == freezed ? _value.name : name as String,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      matchType: matchType == freezed
-          ? _value.matchType
-          : matchType as SubscriptionFilterByMatchType,
-      matchTypeElement: matchTypeElement == freezed
-          ? _value.matchTypeElement
-          : matchTypeElement as Element,
+      searchParamName: searchParamName == freezed
+          ? _value.searchParamName
+          : searchParamName as String,
+      searchParamNameElement: searchParamNameElement == freezed
+          ? _value.searchParamNameElement
+          : searchParamNameElement as Element,
+      searchModifier: searchModifier == freezed
+          ? _value.searchModifier
+          : searchModifier as Code,
+      searchModifierElement: searchModifierElement == freezed
+          ? _value.searchModifierElement
+          : searchModifierElement as Element,
       value: value == freezed ? _value.value : value as String,
       valueElement: valueElement == freezed
           ? _value.valueElement
@@ -11593,24 +11571,17 @@ class __$SubscriptionFilterByCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_SubscriptionFilterBy extends _SubscriptionFilterBy {
   _$_SubscriptionFilterBy(
       {this.id,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
-      @JsonKey(unknownEnumValue: SubscriptionFilterByMatchType.unknown)
-          this.matchType,
-      @JsonKey(name: '_matchType')
-          this.matchTypeElement,
+      this.searchParamName,
+      @JsonKey(name: '_searchParamName') this.searchParamNameElement,
+      this.searchModifier,
+      @JsonKey(name: '_searchModifier') this.searchModifierElement,
       this.value,
-      @JsonKey(name: '_value')
-          this.valueElement})
+      @JsonKey(name: '_value') this.valueElement})
       : super._();
 
   factory _$_SubscriptionFilterBy.fromJson(Map<String, dynamic> json) =>
@@ -11624,16 +11595,15 @@ class _$_SubscriptionFilterBy extends _SubscriptionFilterBy {
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  final String name;
+  final String searchParamName;
   @override
-  @JsonKey(name: '_name')
-  final Element nameElement;
+  @JsonKey(name: '_searchParamName')
+  final Element searchParamNameElement;
   @override
-  @JsonKey(unknownEnumValue: SubscriptionFilterByMatchType.unknown)
-  final SubscriptionFilterByMatchType matchType;
+  final Code searchModifier;
   @override
-  @JsonKey(name: '_matchType')
-  final Element matchTypeElement;
+  @JsonKey(name: '_searchModifier')
+  final Element searchModifierElement;
   @override
   final String value;
   @override
@@ -11642,7 +11612,7 @@ class _$_SubscriptionFilterBy extends _SubscriptionFilterBy {
 
   @override
   String toString() {
-    return 'SubscriptionFilterBy(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, matchType: $matchType, matchTypeElement: $matchTypeElement, value: $value, valueElement: $valueElement)';
+    return 'SubscriptionFilterBy(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, searchParamName: $searchParamName, searchParamNameElement: $searchParamNameElement, searchModifier: $searchModifier, searchModifierElement: $searchModifierElement, value: $value, valueElement: $valueElement)';
   }
 
   @override
@@ -11657,17 +11627,18 @@ class _$_SubscriptionFilterBy extends _SubscriptionFilterBy {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.nameElement, nameElement) ||
+            (identical(other.searchParamName, searchParamName) ||
                 const DeepCollectionEquality()
-                    .equals(other.nameElement, nameElement)) &&
-            (identical(other.matchType, matchType) ||
+                    .equals(other.searchParamName, searchParamName)) &&
+            (identical(other.searchParamNameElement, searchParamNameElement) ||
+                const DeepCollectionEquality().equals(
+                    other.searchParamNameElement, searchParamNameElement)) &&
+            (identical(other.searchModifier, searchModifier) ||
                 const DeepCollectionEquality()
-                    .equals(other.matchType, matchType)) &&
-            (identical(other.matchTypeElement, matchTypeElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.matchTypeElement, matchTypeElement)) &&
+                    .equals(other.searchModifier, searchModifier)) &&
+            (identical(other.searchModifierElement, searchModifierElement) ||
+                const DeepCollectionEquality().equals(
+                    other.searchModifierElement, searchModifierElement)) &&
             (identical(other.value, value) ||
                 const DeepCollectionEquality().equals(other.value, value)) &&
             (identical(other.valueElement, valueElement) ||
@@ -11681,10 +11652,10 @@ class _$_SubscriptionFilterBy extends _SubscriptionFilterBy {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(nameElement) ^
-      const DeepCollectionEquality().hash(matchType) ^
-      const DeepCollectionEquality().hash(matchTypeElement) ^
+      const DeepCollectionEquality().hash(searchParamName) ^
+      const DeepCollectionEquality().hash(searchParamNameElement) ^
+      const DeepCollectionEquality().hash(searchModifier) ^
+      const DeepCollectionEquality().hash(searchModifierElement) ^
       const DeepCollectionEquality().hash(value) ^
       const DeepCollectionEquality().hash(valueElement);
 
@@ -11703,19 +11674,14 @@ abstract class _SubscriptionFilterBy extends SubscriptionFilterBy {
   _SubscriptionFilterBy._() : super._();
   factory _SubscriptionFilterBy(
       {String id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      String name,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @JsonKey(unknownEnumValue: SubscriptionFilterByMatchType.unknown)
-          SubscriptionFilterByMatchType matchType,
-      @JsonKey(name: '_matchType')
-          Element matchTypeElement,
+      String searchParamName,
+      @JsonKey(name: '_searchParamName') Element searchParamNameElement,
+      Code searchModifier,
+      @JsonKey(name: '_searchModifier') Element searchModifierElement,
       String value,
-      @JsonKey(name: '_value')
-          Element valueElement}) = _$_SubscriptionFilterBy;
+      @JsonKey(name: '_value') Element valueElement}) = _$_SubscriptionFilterBy;
 
   factory _SubscriptionFilterBy.fromJson(Map<String, dynamic> json) =
       _$_SubscriptionFilterBy.fromJson;
@@ -11728,16 +11694,15 @@ abstract class _SubscriptionFilterBy extends SubscriptionFilterBy {
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  String get name;
+  String get searchParamName;
   @override
-  @JsonKey(name: '_name')
-  Element get nameElement;
+  @JsonKey(name: '_searchParamName')
+  Element get searchParamNameElement;
   @override
-  @JsonKey(unknownEnumValue: SubscriptionFilterByMatchType.unknown)
-  SubscriptionFilterByMatchType get matchType;
+  Code get searchModifier;
   @override
-  @JsonKey(name: '_matchType')
-  Element get matchTypeElement;
+  @JsonKey(name: '_searchModifier')
+  Element get searchModifierElement;
   @override
   String get value;
   @override
@@ -11745,3315 +11710,4 @@ abstract class _SubscriptionFilterBy extends SubscriptionFilterBy {
   Element get valueElement;
   @override
   _$SubscriptionFilterByCopyWith<_SubscriptionFilterBy> get copyWith;
-}
-
-SubscriptionChannel _$SubscriptionChannelFromJson(Map<String, dynamic> json) {
-  return _SubscriptionChannel.fromJson(json);
-}
-
-/// @nodoc
-class _$SubscriptionChannelTearOff {
-  const _$SubscriptionChannelTearOff();
-
-// ignore: unused_element
-  _SubscriptionChannel call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required CodeableConcept type,
-      FhirUrl endpoint,
-      @JsonKey(name: '_endpoint') Element endpointElement,
-      List<String> header,
-      @JsonKey(name: '_header') List<Element> headerElement,
-      UnsignedInt heartbeatPeriod,
-      @JsonKey(name: '_heartbeatPeriod') Element heartbeatPeriodElement,
-      SubscriptionPayload payload}) {
-    return _SubscriptionChannel(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      endpoint: endpoint,
-      endpointElement: endpointElement,
-      header: header,
-      headerElement: headerElement,
-      heartbeatPeriod: heartbeatPeriod,
-      heartbeatPeriodElement: heartbeatPeriodElement,
-      payload: payload,
-    );
-  }
-
-// ignore: unused_element
-  SubscriptionChannel fromJson(Map<String, Object> json) {
-    return SubscriptionChannel.fromJson(json);
-  }
-}
-
-/// @nodoc
-// ignore: unused_element
-const $SubscriptionChannel = _$SubscriptionChannelTearOff();
-
-/// @nodoc
-mixin _$SubscriptionChannel {
-  String get id;
-  @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  CodeableConcept get type;
-  FhirUrl get endpoint;
-  @JsonKey(name: '_endpoint')
-  Element get endpointElement;
-  List<String> get header;
-  @JsonKey(name: '_header')
-  List<Element> get headerElement;
-  UnsignedInt get heartbeatPeriod;
-  @JsonKey(name: '_heartbeatPeriod')
-  Element get heartbeatPeriodElement;
-  SubscriptionPayload get payload;
-
-  Map<String, dynamic> toJson();
-  $SubscriptionChannelCopyWith<SubscriptionChannel> get copyWith;
-}
-
-/// @nodoc
-abstract class $SubscriptionChannelCopyWith<$Res> {
-  factory $SubscriptionChannelCopyWith(
-          SubscriptionChannel value, $Res Function(SubscriptionChannel) then) =
-      _$SubscriptionChannelCopyWithImpl<$Res>;
-  $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      CodeableConcept type,
-      FhirUrl endpoint,
-      @JsonKey(name: '_endpoint') Element endpointElement,
-      List<String> header,
-      @JsonKey(name: '_header') List<Element> headerElement,
-      UnsignedInt heartbeatPeriod,
-      @JsonKey(name: '_heartbeatPeriod') Element heartbeatPeriodElement,
-      SubscriptionPayload payload});
-
-  $CodeableConceptCopyWith<$Res> get type;
-  $ElementCopyWith<$Res> get endpointElement;
-  $ElementCopyWith<$Res> get heartbeatPeriodElement;
-  $SubscriptionPayloadCopyWith<$Res> get payload;
-}
-
-/// @nodoc
-class _$SubscriptionChannelCopyWithImpl<$Res>
-    implements $SubscriptionChannelCopyWith<$Res> {
-  _$SubscriptionChannelCopyWithImpl(this._value, this._then);
-
-  final SubscriptionChannel _value;
-  // ignore: unused_field
-  final $Res Function(SubscriptionChannel) _then;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object type = freezed,
-    Object endpoint = freezed,
-    Object endpointElement = freezed,
-    Object header = freezed,
-    Object headerElement = freezed,
-    Object heartbeatPeriod = freezed,
-    Object heartbeatPeriodElement = freezed,
-    Object payload = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as List<FhirExtension>,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      type: type == freezed ? _value.type : type as CodeableConcept,
-      endpoint: endpoint == freezed ? _value.endpoint : endpoint as FhirUrl,
-      endpointElement: endpointElement == freezed
-          ? _value.endpointElement
-          : endpointElement as Element,
-      header: header == freezed ? _value.header : header as List<String>,
-      headerElement: headerElement == freezed
-          ? _value.headerElement
-          : headerElement as List<Element>,
-      heartbeatPeriod: heartbeatPeriod == freezed
-          ? _value.heartbeatPeriod
-          : heartbeatPeriod as UnsignedInt,
-      heartbeatPeriodElement: heartbeatPeriodElement == freezed
-          ? _value.heartbeatPeriodElement
-          : heartbeatPeriodElement as Element,
-      payload:
-          payload == freezed ? _value.payload : payload as SubscriptionPayload,
-    ));
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get type {
-    if (_value.type == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
-      return _then(_value.copyWith(type: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get endpointElement {
-    if (_value.endpointElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.endpointElement, (value) {
-      return _then(_value.copyWith(endpointElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get heartbeatPeriodElement {
-    if (_value.heartbeatPeriodElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.heartbeatPeriodElement, (value) {
-      return _then(_value.copyWith(heartbeatPeriodElement: value));
-    });
-  }
-
-  @override
-  $SubscriptionPayloadCopyWith<$Res> get payload {
-    if (_value.payload == null) {
-      return null;
-    }
-    return $SubscriptionPayloadCopyWith<$Res>(_value.payload, (value) {
-      return _then(_value.copyWith(payload: value));
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$SubscriptionChannelCopyWith<$Res>
-    implements $SubscriptionChannelCopyWith<$Res> {
-  factory _$SubscriptionChannelCopyWith(_SubscriptionChannel value,
-          $Res Function(_SubscriptionChannel) then) =
-      __$SubscriptionChannelCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      CodeableConcept type,
-      FhirUrl endpoint,
-      @JsonKey(name: '_endpoint') Element endpointElement,
-      List<String> header,
-      @JsonKey(name: '_header') List<Element> headerElement,
-      UnsignedInt heartbeatPeriod,
-      @JsonKey(name: '_heartbeatPeriod') Element heartbeatPeriodElement,
-      SubscriptionPayload payload});
-
-  @override
-  $CodeableConceptCopyWith<$Res> get type;
-  @override
-  $ElementCopyWith<$Res> get endpointElement;
-  @override
-  $ElementCopyWith<$Res> get heartbeatPeriodElement;
-  @override
-  $SubscriptionPayloadCopyWith<$Res> get payload;
-}
-
-/// @nodoc
-class __$SubscriptionChannelCopyWithImpl<$Res>
-    extends _$SubscriptionChannelCopyWithImpl<$Res>
-    implements _$SubscriptionChannelCopyWith<$Res> {
-  __$SubscriptionChannelCopyWithImpl(
-      _SubscriptionChannel _value, $Res Function(_SubscriptionChannel) _then)
-      : super(_value, (v) => _then(v as _SubscriptionChannel));
-
-  @override
-  _SubscriptionChannel get _value => super._value as _SubscriptionChannel;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object type = freezed,
-    Object endpoint = freezed,
-    Object endpointElement = freezed,
-    Object header = freezed,
-    Object headerElement = freezed,
-    Object heartbeatPeriod = freezed,
-    Object heartbeatPeriodElement = freezed,
-    Object payload = freezed,
-  }) {
-    return _then(_SubscriptionChannel(
-      id: id == freezed ? _value.id : id as String,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as List<FhirExtension>,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      type: type == freezed ? _value.type : type as CodeableConcept,
-      endpoint: endpoint == freezed ? _value.endpoint : endpoint as FhirUrl,
-      endpointElement: endpointElement == freezed
-          ? _value.endpointElement
-          : endpointElement as Element,
-      header: header == freezed ? _value.header : header as List<String>,
-      headerElement: headerElement == freezed
-          ? _value.headerElement
-          : headerElement as List<Element>,
-      heartbeatPeriod: heartbeatPeriod == freezed
-          ? _value.heartbeatPeriod
-          : heartbeatPeriod as UnsignedInt,
-      heartbeatPeriodElement: heartbeatPeriodElement == freezed
-          ? _value.heartbeatPeriodElement
-          : heartbeatPeriodElement as Element,
-      payload:
-          payload == freezed ? _value.payload : payload as SubscriptionPayload,
-    ));
-  }
-}
-
-@JsonSerializable()
-
-/// @nodoc
-class _$_SubscriptionChannel extends _SubscriptionChannel {
-  _$_SubscriptionChannel(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      @required this.type,
-      this.endpoint,
-      @JsonKey(name: '_endpoint') this.endpointElement,
-      this.header,
-      @JsonKey(name: '_header') this.headerElement,
-      this.heartbeatPeriod,
-      @JsonKey(name: '_heartbeatPeriod') this.heartbeatPeriodElement,
-      this.payload})
-      : assert(type != null),
-        super._();
-
-  factory _$_SubscriptionChannel.fromJson(Map<String, dynamic> json) =>
-      _$_$_SubscriptionChannelFromJson(json);
-
-  @override
-  final String id;
-  @override
-  @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
-  @override
-  final List<FhirExtension> modifierExtension;
-  @override
-  final CodeableConcept type;
-  @override
-  final FhirUrl endpoint;
-  @override
-  @JsonKey(name: '_endpoint')
-  final Element endpointElement;
-  @override
-  final List<String> header;
-  @override
-  @JsonKey(name: '_header')
-  final List<Element> headerElement;
-  @override
-  final UnsignedInt heartbeatPeriod;
-  @override
-  @JsonKey(name: '_heartbeatPeriod')
-  final Element heartbeatPeriodElement;
-  @override
-  final SubscriptionPayload payload;
-
-  @override
-  String toString() {
-    return 'SubscriptionChannel(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, endpoint: $endpoint, endpointElement: $endpointElement, header: $header, headerElement: $headerElement, heartbeatPeriod: $heartbeatPeriod, heartbeatPeriodElement: $heartbeatPeriodElement, payload: $payload)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is _SubscriptionChannel &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.endpoint, endpoint) ||
-                const DeepCollectionEquality()
-                    .equals(other.endpoint, endpoint)) &&
-            (identical(other.endpointElement, endpointElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.endpointElement, endpointElement)) &&
-            (identical(other.header, header) ||
-                const DeepCollectionEquality().equals(other.header, header)) &&
-            (identical(other.headerElement, headerElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.headerElement, headerElement)) &&
-            (identical(other.heartbeatPeriod, heartbeatPeriod) ||
-                const DeepCollectionEquality()
-                    .equals(other.heartbeatPeriod, heartbeatPeriod)) &&
-            (identical(other.heartbeatPeriodElement, heartbeatPeriodElement) ||
-                const DeepCollectionEquality().equals(
-                    other.heartbeatPeriodElement, heartbeatPeriodElement)) &&
-            (identical(other.payload, payload) ||
-                const DeepCollectionEquality().equals(other.payload, payload)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(endpoint) ^
-      const DeepCollectionEquality().hash(endpointElement) ^
-      const DeepCollectionEquality().hash(header) ^
-      const DeepCollectionEquality().hash(headerElement) ^
-      const DeepCollectionEquality().hash(heartbeatPeriod) ^
-      const DeepCollectionEquality().hash(heartbeatPeriodElement) ^
-      const DeepCollectionEquality().hash(payload);
-
-  @override
-  _$SubscriptionChannelCopyWith<_SubscriptionChannel> get copyWith =>
-      __$SubscriptionChannelCopyWithImpl<_SubscriptionChannel>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$_$_SubscriptionChannelToJson(this);
-  }
-}
-
-abstract class _SubscriptionChannel extends SubscriptionChannel {
-  _SubscriptionChannel._() : super._();
-  factory _SubscriptionChannel(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required CodeableConcept type,
-      FhirUrl endpoint,
-      @JsonKey(name: '_endpoint') Element endpointElement,
-      List<String> header,
-      @JsonKey(name: '_header') List<Element> headerElement,
-      UnsignedInt heartbeatPeriod,
-      @JsonKey(name: '_heartbeatPeriod') Element heartbeatPeriodElement,
-      SubscriptionPayload payload}) = _$_SubscriptionChannel;
-
-  factory _SubscriptionChannel.fromJson(Map<String, dynamic> json) =
-      _$_SubscriptionChannel.fromJson;
-
-  @override
-  String get id;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  @override
-  List<FhirExtension> get modifierExtension;
-  @override
-  CodeableConcept get type;
-  @override
-  FhirUrl get endpoint;
-  @override
-  @JsonKey(name: '_endpoint')
-  Element get endpointElement;
-  @override
-  List<String> get header;
-  @override
-  @JsonKey(name: '_header')
-  List<Element> get headerElement;
-  @override
-  UnsignedInt get heartbeatPeriod;
-  @override
-  @JsonKey(name: '_heartbeatPeriod')
-  Element get heartbeatPeriodElement;
-  @override
-  SubscriptionPayload get payload;
-  @override
-  _$SubscriptionChannelCopyWith<_SubscriptionChannel> get copyWith;
-}
-
-SubscriptionPayload _$SubscriptionPayloadFromJson(Map<String, dynamic> json) {
-  return _SubscriptionPayload.fromJson(json);
-}
-
-/// @nodoc
-class _$SubscriptionPayloadTearOff {
-  const _$SubscriptionPayloadTearOff();
-
-// ignore: unused_element
-  _SubscriptionPayload call(
-      {String id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Code contentType,
-      @JsonKey(name: '_contentType')
-          Element contentTypeElement,
-      @JsonKey(unknownEnumValue: SubscriptionPayloadContent.unknown)
-          SubscriptionPayloadContent content,
-      @JsonKey(name: '_content')
-          Element contentElement}) {
-    return _SubscriptionPayload(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      contentType: contentType,
-      contentTypeElement: contentTypeElement,
-      content: content,
-      contentElement: contentElement,
-    );
-  }
-
-// ignore: unused_element
-  SubscriptionPayload fromJson(Map<String, Object> json) {
-    return SubscriptionPayload.fromJson(json);
-  }
-}
-
-/// @nodoc
-// ignore: unused_element
-const $SubscriptionPayload = _$SubscriptionPayloadTearOff();
-
-/// @nodoc
-mixin _$SubscriptionPayload {
-  String get id;
-  @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  Code get contentType;
-  @JsonKey(name: '_contentType')
-  Element get contentTypeElement;
-  @JsonKey(unknownEnumValue: SubscriptionPayloadContent.unknown)
-  SubscriptionPayloadContent get content;
-  @JsonKey(name: '_content')
-  Element get contentElement;
-
-  Map<String, dynamic> toJson();
-  $SubscriptionPayloadCopyWith<SubscriptionPayload> get copyWith;
-}
-
-/// @nodoc
-abstract class $SubscriptionPayloadCopyWith<$Res> {
-  factory $SubscriptionPayloadCopyWith(
-          SubscriptionPayload value, $Res Function(SubscriptionPayload) then) =
-      _$SubscriptionPayloadCopyWithImpl<$Res>;
-  $Res call(
-      {String id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Code contentType,
-      @JsonKey(name: '_contentType')
-          Element contentTypeElement,
-      @JsonKey(unknownEnumValue: SubscriptionPayloadContent.unknown)
-          SubscriptionPayloadContent content,
-      @JsonKey(name: '_content')
-          Element contentElement});
-
-  $ElementCopyWith<$Res> get contentTypeElement;
-  $ElementCopyWith<$Res> get contentElement;
-}
-
-/// @nodoc
-class _$SubscriptionPayloadCopyWithImpl<$Res>
-    implements $SubscriptionPayloadCopyWith<$Res> {
-  _$SubscriptionPayloadCopyWithImpl(this._value, this._then);
-
-  final SubscriptionPayload _value;
-  // ignore: unused_field
-  final $Res Function(SubscriptionPayload) _then;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object contentType = freezed,
-    Object contentTypeElement = freezed,
-    Object content = freezed,
-    Object contentElement = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as List<FhirExtension>,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      contentType:
-          contentType == freezed ? _value.contentType : contentType as Code,
-      contentTypeElement: contentTypeElement == freezed
-          ? _value.contentTypeElement
-          : contentTypeElement as Element,
-      content: content == freezed
-          ? _value.content
-          : content as SubscriptionPayloadContent,
-      contentElement: contentElement == freezed
-          ? _value.contentElement
-          : contentElement as Element,
-    ));
-  }
-
-  @override
-  $ElementCopyWith<$Res> get contentTypeElement {
-    if (_value.contentTypeElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.contentTypeElement, (value) {
-      return _then(_value.copyWith(contentTypeElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get contentElement {
-    if (_value.contentElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.contentElement, (value) {
-      return _then(_value.copyWith(contentElement: value));
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$SubscriptionPayloadCopyWith<$Res>
-    implements $SubscriptionPayloadCopyWith<$Res> {
-  factory _$SubscriptionPayloadCopyWith(_SubscriptionPayload value,
-          $Res Function(_SubscriptionPayload) then) =
-      __$SubscriptionPayloadCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {String id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Code contentType,
-      @JsonKey(name: '_contentType')
-          Element contentTypeElement,
-      @JsonKey(unknownEnumValue: SubscriptionPayloadContent.unknown)
-          SubscriptionPayloadContent content,
-      @JsonKey(name: '_content')
-          Element contentElement});
-
-  @override
-  $ElementCopyWith<$Res> get contentTypeElement;
-  @override
-  $ElementCopyWith<$Res> get contentElement;
-}
-
-/// @nodoc
-class __$SubscriptionPayloadCopyWithImpl<$Res>
-    extends _$SubscriptionPayloadCopyWithImpl<$Res>
-    implements _$SubscriptionPayloadCopyWith<$Res> {
-  __$SubscriptionPayloadCopyWithImpl(
-      _SubscriptionPayload _value, $Res Function(_SubscriptionPayload) _then)
-      : super(_value, (v) => _then(v as _SubscriptionPayload));
-
-  @override
-  _SubscriptionPayload get _value => super._value as _SubscriptionPayload;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object contentType = freezed,
-    Object contentTypeElement = freezed,
-    Object content = freezed,
-    Object contentElement = freezed,
-  }) {
-    return _then(_SubscriptionPayload(
-      id: id == freezed ? _value.id : id as String,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as List<FhirExtension>,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      contentType:
-          contentType == freezed ? _value.contentType : contentType as Code,
-      contentTypeElement: contentTypeElement == freezed
-          ? _value.contentTypeElement
-          : contentTypeElement as Element,
-      content: content == freezed
-          ? _value.content
-          : content as SubscriptionPayloadContent,
-      contentElement: contentElement == freezed
-          ? _value.contentElement
-          : contentElement as Element,
-    ));
-  }
-}
-
-@JsonSerializable()
-
-/// @nodoc
-class _$_SubscriptionPayload extends _SubscriptionPayload {
-  _$_SubscriptionPayload(
-      {this.id,
-      @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.contentType,
-      @JsonKey(name: '_contentType')
-          this.contentTypeElement,
-      @JsonKey(unknownEnumValue: SubscriptionPayloadContent.unknown)
-          this.content,
-      @JsonKey(name: '_content')
-          this.contentElement})
-      : super._();
-
-  factory _$_SubscriptionPayload.fromJson(Map<String, dynamic> json) =>
-      _$_$_SubscriptionPayloadFromJson(json);
-
-  @override
-  final String id;
-  @override
-  @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
-  @override
-  final List<FhirExtension> modifierExtension;
-  @override
-  final Code contentType;
-  @override
-  @JsonKey(name: '_contentType')
-  final Element contentTypeElement;
-  @override
-  @JsonKey(unknownEnumValue: SubscriptionPayloadContent.unknown)
-  final SubscriptionPayloadContent content;
-  @override
-  @JsonKey(name: '_content')
-  final Element contentElement;
-
-  @override
-  String toString() {
-    return 'SubscriptionPayload(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, contentType: $contentType, contentTypeElement: $contentTypeElement, content: $content, contentElement: $contentElement)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is _SubscriptionPayload &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.contentType, contentType) ||
-                const DeepCollectionEquality()
-                    .equals(other.contentType, contentType)) &&
-            (identical(other.contentTypeElement, contentTypeElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.contentTypeElement, contentTypeElement)) &&
-            (identical(other.content, content) ||
-                const DeepCollectionEquality()
-                    .equals(other.content, content)) &&
-            (identical(other.contentElement, contentElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.contentElement, contentElement)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(contentType) ^
-      const DeepCollectionEquality().hash(contentTypeElement) ^
-      const DeepCollectionEquality().hash(content) ^
-      const DeepCollectionEquality().hash(contentElement);
-
-  @override
-  _$SubscriptionPayloadCopyWith<_SubscriptionPayload> get copyWith =>
-      __$SubscriptionPayloadCopyWithImpl<_SubscriptionPayload>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$_$_SubscriptionPayloadToJson(this);
-  }
-}
-
-abstract class _SubscriptionPayload extends SubscriptionPayload {
-  _SubscriptionPayload._() : super._();
-  factory _SubscriptionPayload(
-      {String id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Code contentType,
-      @JsonKey(name: '_contentType')
-          Element contentTypeElement,
-      @JsonKey(unknownEnumValue: SubscriptionPayloadContent.unknown)
-          SubscriptionPayloadContent content,
-      @JsonKey(name: '_content')
-          Element contentElement}) = _$_SubscriptionPayload;
-
-  factory _SubscriptionPayload.fromJson(Map<String, dynamic> json) =
-      _$_SubscriptionPayload.fromJson;
-
-  @override
-  String get id;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  @override
-  List<FhirExtension> get modifierExtension;
-  @override
-  Code get contentType;
-  @override
-  @JsonKey(name: '_contentType')
-  Element get contentTypeElement;
-  @override
-  @JsonKey(unknownEnumValue: SubscriptionPayloadContent.unknown)
-  SubscriptionPayloadContent get content;
-  @override
-  @JsonKey(name: '_content')
-  Element get contentElement;
-  @override
-  _$SubscriptionPayloadCopyWith<_SubscriptionPayload> get copyWith;
-}
-
-Topic _$TopicFromJson(Map<String, dynamic> json) {
-  return _Topic.fromJson(json);
-}
-
-/// @nodoc
-class _$TopicTearOff {
-  const _$TopicTearOff();
-
-// ignore: unused_element
-  _Topic call(
-      {@required @JsonKey(defaultValue: 'Topic') String resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-      Code language,
-      @JsonKey(name: '_language') Element languageElement,
-      Narrative text,
-      List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      FhirUri url,
-      @JsonKey(name: '_url') Element urlElement,
-      List<Identifier> identifier,
-      String version,
-      @JsonKey(name: '_version') Element versionElement,
-      String title,
-      @JsonKey(name: '_title') Element titleElement,
-      List<Canonical> derivedFromCanonical,
-      List<FhirUri> derivedFromUri,
-      @JsonKey(name: '_derivedFromUri') List<Element> derivedFromUriElement,
-      @JsonKey(unknownEnumValue: TopicStatus.unknown) TopicStatus status,
-      @JsonKey(name: '_status') Element statusElement,
-      Boolean experimental,
-      @JsonKey(name: '_experimental') Element experimentalElement,
-      FhirDateTime date,
-      @JsonKey(name: '_date') Element dateElement,
-      Reference publisher,
-      List<ContactDetail> contact,
-      Markdown description,
-      @JsonKey(name: '_description') Element descriptionElement,
-      List<UsageContext> useContext,
-      List<CodeableConcept> jurisdiction,
-      Markdown purpose,
-      @JsonKey(name: '_purpose') Element purposeElement,
-      Markdown copyright,
-      @JsonKey(name: '_copyright') Element copyrightElement,
-      Date approvalDate,
-      @JsonKey(name: '_approvalDate') Element approvalDateElement,
-      Date lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
-      Period effectivePeriod,
-      TopicResourceTrigger resourceTrigger,
-      List<TopicCanFilterBy> canFilterBy}) {
-    return _Topic(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      url: url,
-      urlElement: urlElement,
-      identifier: identifier,
-      version: version,
-      versionElement: versionElement,
-      title: title,
-      titleElement: titleElement,
-      derivedFromCanonical: derivedFromCanonical,
-      derivedFromUri: derivedFromUri,
-      derivedFromUriElement: derivedFromUriElement,
-      status: status,
-      statusElement: statusElement,
-      experimental: experimental,
-      experimentalElement: experimentalElement,
-      date: date,
-      dateElement: dateElement,
-      publisher: publisher,
-      contact: contact,
-      description: description,
-      descriptionElement: descriptionElement,
-      useContext: useContext,
-      jurisdiction: jurisdiction,
-      purpose: purpose,
-      purposeElement: purposeElement,
-      copyright: copyright,
-      copyrightElement: copyrightElement,
-      approvalDate: approvalDate,
-      approvalDateElement: approvalDateElement,
-      lastReviewDate: lastReviewDate,
-      lastReviewDateElement: lastReviewDateElement,
-      effectivePeriod: effectivePeriod,
-      resourceTrigger: resourceTrigger,
-      canFilterBy: canFilterBy,
-    );
-  }
-
-// ignore: unused_element
-  Topic fromJson(Map<String, Object> json) {
-    return Topic.fromJson(json);
-  }
-}
-
-/// @nodoc
-// ignore: unused_element
-const $Topic = _$TopicTearOff();
-
-/// @nodoc
-mixin _$Topic {
-  @JsonKey(defaultValue: 'Topic')
-  String get resourceType;
-  Id get id;
-  Meta get meta;
-  FhirUri get implicitRules;
-  @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  Code get language;
-  @JsonKey(name: '_language')
-  Element get languageElement;
-  Narrative get text;
-  List<Resource> get contained;
-  @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  FhirUri get url;
-  @JsonKey(name: '_url')
-  Element get urlElement;
-  List<Identifier> get identifier;
-  String get version;
-  @JsonKey(name: '_version')
-  Element get versionElement;
-  String get title;
-  @JsonKey(name: '_title')
-  Element get titleElement;
-  List<Canonical> get derivedFromCanonical;
-  List<FhirUri> get derivedFromUri;
-  @JsonKey(name: '_derivedFromUri')
-  List<Element> get derivedFromUriElement;
-  @JsonKey(unknownEnumValue: TopicStatus.unknown)
-  TopicStatus get status;
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  Boolean get experimental;
-  @JsonKey(name: '_experimental')
-  Element get experimentalElement;
-  FhirDateTime get date;
-  @JsonKey(name: '_date')
-  Element get dateElement;
-  Reference get publisher;
-  List<ContactDetail> get contact;
-  Markdown get description;
-  @JsonKey(name: '_description')
-  Element get descriptionElement;
-  List<UsageContext> get useContext;
-  List<CodeableConcept> get jurisdiction;
-  Markdown get purpose;
-  @JsonKey(name: '_purpose')
-  Element get purposeElement;
-  Markdown get copyright;
-  @JsonKey(name: '_copyright')
-  Element get copyrightElement;
-  Date get approvalDate;
-  @JsonKey(name: '_approvalDate')
-  Element get approvalDateElement;
-  Date get lastReviewDate;
-  @JsonKey(name: '_lastReviewDate')
-  Element get lastReviewDateElement;
-  Period get effectivePeriod;
-  TopicResourceTrigger get resourceTrigger;
-  List<TopicCanFilterBy> get canFilterBy;
-
-  Map<String, dynamic> toJson();
-  $TopicCopyWith<Topic> get copyWith;
-}
-
-/// @nodoc
-abstract class $TopicCopyWith<$Res> {
-  factory $TopicCopyWith(Topic value, $Res Function(Topic) then) =
-      _$TopicCopyWithImpl<$Res>;
-  $Res call(
-      {@JsonKey(defaultValue: 'Topic') String resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-      Code language,
-      @JsonKey(name: '_language') Element languageElement,
-      Narrative text,
-      List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      FhirUri url,
-      @JsonKey(name: '_url') Element urlElement,
-      List<Identifier> identifier,
-      String version,
-      @JsonKey(name: '_version') Element versionElement,
-      String title,
-      @JsonKey(name: '_title') Element titleElement,
-      List<Canonical> derivedFromCanonical,
-      List<FhirUri> derivedFromUri,
-      @JsonKey(name: '_derivedFromUri') List<Element> derivedFromUriElement,
-      @JsonKey(unknownEnumValue: TopicStatus.unknown) TopicStatus status,
-      @JsonKey(name: '_status') Element statusElement,
-      Boolean experimental,
-      @JsonKey(name: '_experimental') Element experimentalElement,
-      FhirDateTime date,
-      @JsonKey(name: '_date') Element dateElement,
-      Reference publisher,
-      List<ContactDetail> contact,
-      Markdown description,
-      @JsonKey(name: '_description') Element descriptionElement,
-      List<UsageContext> useContext,
-      List<CodeableConcept> jurisdiction,
-      Markdown purpose,
-      @JsonKey(name: '_purpose') Element purposeElement,
-      Markdown copyright,
-      @JsonKey(name: '_copyright') Element copyrightElement,
-      Date approvalDate,
-      @JsonKey(name: '_approvalDate') Element approvalDateElement,
-      Date lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
-      Period effectivePeriod,
-      TopicResourceTrigger resourceTrigger,
-      List<TopicCanFilterBy> canFilterBy});
-
-  $MetaCopyWith<$Res> get meta;
-  $ElementCopyWith<$Res> get implicitRulesElement;
-  $ElementCopyWith<$Res> get languageElement;
-  $NarrativeCopyWith<$Res> get text;
-  $ElementCopyWith<$Res> get urlElement;
-  $ElementCopyWith<$Res> get versionElement;
-  $ElementCopyWith<$Res> get titleElement;
-  $ElementCopyWith<$Res> get statusElement;
-  $ElementCopyWith<$Res> get experimentalElement;
-  $ElementCopyWith<$Res> get dateElement;
-  $ReferenceCopyWith<$Res> get publisher;
-  $ElementCopyWith<$Res> get descriptionElement;
-  $ElementCopyWith<$Res> get purposeElement;
-  $ElementCopyWith<$Res> get copyrightElement;
-  $ElementCopyWith<$Res> get approvalDateElement;
-  $ElementCopyWith<$Res> get lastReviewDateElement;
-  $PeriodCopyWith<$Res> get effectivePeriod;
-  $TopicResourceTriggerCopyWith<$Res> get resourceTrigger;
-}
-
-/// @nodoc
-class _$TopicCopyWithImpl<$Res> implements $TopicCopyWith<$Res> {
-  _$TopicCopyWithImpl(this._value, this._then);
-
-  final Topic _value;
-  // ignore: unused_field
-  final $Res Function(Topic) _then;
-
-  @override
-  $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object url = freezed,
-    Object urlElement = freezed,
-    Object identifier = freezed,
-    Object version = freezed,
-    Object versionElement = freezed,
-    Object title = freezed,
-    Object titleElement = freezed,
-    Object derivedFromCanonical = freezed,
-    Object derivedFromUri = freezed,
-    Object derivedFromUriElement = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
-    Object experimental = freezed,
-    Object experimentalElement = freezed,
-    Object date = freezed,
-    Object dateElement = freezed,
-    Object publisher = freezed,
-    Object contact = freezed,
-    Object description = freezed,
-    Object descriptionElement = freezed,
-    Object useContext = freezed,
-    Object jurisdiction = freezed,
-    Object purpose = freezed,
-    Object purposeElement = freezed,
-    Object copyright = freezed,
-    Object copyrightElement = freezed,
-    Object approvalDate = freezed,
-    Object approvalDateElement = freezed,
-    Object lastReviewDate = freezed,
-    Object lastReviewDateElement = freezed,
-    Object effectivePeriod = freezed,
-    Object resourceTrigger = freezed,
-    Object canFilterBy = freezed,
-  }) {
-    return _then(_value.copyWith(
-      resourceType: resourceType == freezed
-          ? _value.resourceType
-          : resourceType as String,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
-      implicitRules: implicitRules == freezed
-          ? _value.implicitRules
-          : implicitRules as FhirUri,
-      implicitRulesElement: implicitRulesElement == freezed
-          ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
-      languageElement: languageElement == freezed
-          ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as List<FhirExtension>,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      url: url == freezed ? _value.url : url as FhirUri,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element,
-      identifier: identifier == freezed
-          ? _value.identifier
-          : identifier as List<Identifier>,
-      version: version == freezed ? _value.version : version as String,
-      versionElement: versionElement == freezed
-          ? _value.versionElement
-          : versionElement as Element,
-      title: title == freezed ? _value.title : title as String,
-      titleElement: titleElement == freezed
-          ? _value.titleElement
-          : titleElement as Element,
-      derivedFromCanonical: derivedFromCanonical == freezed
-          ? _value.derivedFromCanonical
-          : derivedFromCanonical as List<Canonical>,
-      derivedFromUri: derivedFromUri == freezed
-          ? _value.derivedFromUri
-          : derivedFromUri as List<FhirUri>,
-      derivedFromUriElement: derivedFromUriElement == freezed
-          ? _value.derivedFromUriElement
-          : derivedFromUriElement as List<Element>,
-      status: status == freezed ? _value.status : status as TopicStatus,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      experimental: experimental == freezed
-          ? _value.experimental
-          : experimental as Boolean,
-      experimentalElement: experimentalElement == freezed
-          ? _value.experimentalElement
-          : experimentalElement as Element,
-      date: date == freezed ? _value.date : date as FhirDateTime,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element,
-      publisher:
-          publisher == freezed ? _value.publisher : publisher as Reference,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>,
-      description:
-          description == freezed ? _value.description : description as Markdown,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement as Element,
-      useContext: useContext == freezed
-          ? _value.useContext
-          : useContext as List<UsageContext>,
-      jurisdiction: jurisdiction == freezed
-          ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept>,
-      purpose: purpose == freezed ? _value.purpose : purpose as Markdown,
-      purposeElement: purposeElement == freezed
-          ? _value.purposeElement
-          : purposeElement as Element,
-      copyright:
-          copyright == freezed ? _value.copyright : copyright as Markdown,
-      copyrightElement: copyrightElement == freezed
-          ? _value.copyrightElement
-          : copyrightElement as Element,
-      approvalDate:
-          approvalDate == freezed ? _value.approvalDate : approvalDate as Date,
-      approvalDateElement: approvalDateElement == freezed
-          ? _value.approvalDateElement
-          : approvalDateElement as Element,
-      lastReviewDate: lastReviewDate == freezed
-          ? _value.lastReviewDate
-          : lastReviewDate as Date,
-      lastReviewDateElement: lastReviewDateElement == freezed
-          ? _value.lastReviewDateElement
-          : lastReviewDateElement as Element,
-      effectivePeriod: effectivePeriod == freezed
-          ? _value.effectivePeriod
-          : effectivePeriod as Period,
-      resourceTrigger: resourceTrigger == freezed
-          ? _value.resourceTrigger
-          : resourceTrigger as TopicResourceTrigger,
-      canFilterBy: canFilterBy == freezed
-          ? _value.canFilterBy
-          : canFilterBy as List<TopicCanFilterBy>,
-    ));
-  }
-
-  @override
-  $MetaCopyWith<$Res> get meta {
-    if (_value.meta == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.meta, (value) {
-      return _then(_value.copyWith(meta: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get implicitRulesElement {
-    if (_value.implicitRulesElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
-      return _then(_value.copyWith(implicitRulesElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get languageElement {
-    if (_value.languageElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
-      return _then(_value.copyWith(languageElement: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get text {
-    if (_value.text == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.text, (value) {
-      return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get urlElement {
-    if (_value.urlElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.urlElement, (value) {
-      return _then(_value.copyWith(urlElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get versionElement {
-    if (_value.versionElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.versionElement, (value) {
-      return _then(_value.copyWith(versionElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get titleElement {
-    if (_value.titleElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.titleElement, (value) {
-      return _then(_value.copyWith(titleElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get statusElement {
-    if (_value.statusElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
-      return _then(_value.copyWith(statusElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get experimentalElement {
-    if (_value.experimentalElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.experimentalElement, (value) {
-      return _then(_value.copyWith(experimentalElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get dateElement {
-    if (_value.dateElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.dateElement, (value) {
-      return _then(_value.copyWith(dateElement: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get publisher {
-    if (_value.publisher == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.publisher, (value) {
-      return _then(_value.copyWith(publisher: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get descriptionElement {
-    if (_value.descriptionElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
-      return _then(_value.copyWith(descriptionElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get purposeElement {
-    if (_value.purposeElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.purposeElement, (value) {
-      return _then(_value.copyWith(purposeElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get copyrightElement {
-    if (_value.copyrightElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.copyrightElement, (value) {
-      return _then(_value.copyWith(copyrightElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get approvalDateElement {
-    if (_value.approvalDateElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.approvalDateElement, (value) {
-      return _then(_value.copyWith(approvalDateElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get lastReviewDateElement {
-    if (_value.lastReviewDateElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.lastReviewDateElement, (value) {
-      return _then(_value.copyWith(lastReviewDateElement: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get effectivePeriod {
-    if (_value.effectivePeriod == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.effectivePeriod, (value) {
-      return _then(_value.copyWith(effectivePeriod: value));
-    });
-  }
-
-  @override
-  $TopicResourceTriggerCopyWith<$Res> get resourceTrigger {
-    if (_value.resourceTrigger == null) {
-      return null;
-    }
-    return $TopicResourceTriggerCopyWith<$Res>(_value.resourceTrigger, (value) {
-      return _then(_value.copyWith(resourceTrigger: value));
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$TopicCopyWith<$Res> implements $TopicCopyWith<$Res> {
-  factory _$TopicCopyWith(_Topic value, $Res Function(_Topic) then) =
-      __$TopicCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {@JsonKey(defaultValue: 'Topic') String resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-      Code language,
-      @JsonKey(name: '_language') Element languageElement,
-      Narrative text,
-      List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      FhirUri url,
-      @JsonKey(name: '_url') Element urlElement,
-      List<Identifier> identifier,
-      String version,
-      @JsonKey(name: '_version') Element versionElement,
-      String title,
-      @JsonKey(name: '_title') Element titleElement,
-      List<Canonical> derivedFromCanonical,
-      List<FhirUri> derivedFromUri,
-      @JsonKey(name: '_derivedFromUri') List<Element> derivedFromUriElement,
-      @JsonKey(unknownEnumValue: TopicStatus.unknown) TopicStatus status,
-      @JsonKey(name: '_status') Element statusElement,
-      Boolean experimental,
-      @JsonKey(name: '_experimental') Element experimentalElement,
-      FhirDateTime date,
-      @JsonKey(name: '_date') Element dateElement,
-      Reference publisher,
-      List<ContactDetail> contact,
-      Markdown description,
-      @JsonKey(name: '_description') Element descriptionElement,
-      List<UsageContext> useContext,
-      List<CodeableConcept> jurisdiction,
-      Markdown purpose,
-      @JsonKey(name: '_purpose') Element purposeElement,
-      Markdown copyright,
-      @JsonKey(name: '_copyright') Element copyrightElement,
-      Date approvalDate,
-      @JsonKey(name: '_approvalDate') Element approvalDateElement,
-      Date lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
-      Period effectivePeriod,
-      TopicResourceTrigger resourceTrigger,
-      List<TopicCanFilterBy> canFilterBy});
-
-  @override
-  $MetaCopyWith<$Res> get meta;
-  @override
-  $ElementCopyWith<$Res> get implicitRulesElement;
-  @override
-  $ElementCopyWith<$Res> get languageElement;
-  @override
-  $NarrativeCopyWith<$Res> get text;
-  @override
-  $ElementCopyWith<$Res> get urlElement;
-  @override
-  $ElementCopyWith<$Res> get versionElement;
-  @override
-  $ElementCopyWith<$Res> get titleElement;
-  @override
-  $ElementCopyWith<$Res> get statusElement;
-  @override
-  $ElementCopyWith<$Res> get experimentalElement;
-  @override
-  $ElementCopyWith<$Res> get dateElement;
-  @override
-  $ReferenceCopyWith<$Res> get publisher;
-  @override
-  $ElementCopyWith<$Res> get descriptionElement;
-  @override
-  $ElementCopyWith<$Res> get purposeElement;
-  @override
-  $ElementCopyWith<$Res> get copyrightElement;
-  @override
-  $ElementCopyWith<$Res> get approvalDateElement;
-  @override
-  $ElementCopyWith<$Res> get lastReviewDateElement;
-  @override
-  $PeriodCopyWith<$Res> get effectivePeriod;
-  @override
-  $TopicResourceTriggerCopyWith<$Res> get resourceTrigger;
-}
-
-/// @nodoc
-class __$TopicCopyWithImpl<$Res> extends _$TopicCopyWithImpl<$Res>
-    implements _$TopicCopyWith<$Res> {
-  __$TopicCopyWithImpl(_Topic _value, $Res Function(_Topic) _then)
-      : super(_value, (v) => _then(v as _Topic));
-
-  @override
-  _Topic get _value => super._value as _Topic;
-
-  @override
-  $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object url = freezed,
-    Object urlElement = freezed,
-    Object identifier = freezed,
-    Object version = freezed,
-    Object versionElement = freezed,
-    Object title = freezed,
-    Object titleElement = freezed,
-    Object derivedFromCanonical = freezed,
-    Object derivedFromUri = freezed,
-    Object derivedFromUriElement = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
-    Object experimental = freezed,
-    Object experimentalElement = freezed,
-    Object date = freezed,
-    Object dateElement = freezed,
-    Object publisher = freezed,
-    Object contact = freezed,
-    Object description = freezed,
-    Object descriptionElement = freezed,
-    Object useContext = freezed,
-    Object jurisdiction = freezed,
-    Object purpose = freezed,
-    Object purposeElement = freezed,
-    Object copyright = freezed,
-    Object copyrightElement = freezed,
-    Object approvalDate = freezed,
-    Object approvalDateElement = freezed,
-    Object lastReviewDate = freezed,
-    Object lastReviewDateElement = freezed,
-    Object effectivePeriod = freezed,
-    Object resourceTrigger = freezed,
-    Object canFilterBy = freezed,
-  }) {
-    return _then(_Topic(
-      resourceType: resourceType == freezed
-          ? _value.resourceType
-          : resourceType as String,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
-      implicitRules: implicitRules == freezed
-          ? _value.implicitRules
-          : implicitRules as FhirUri,
-      implicitRulesElement: implicitRulesElement == freezed
-          ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
-      languageElement: languageElement == freezed
-          ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as List<FhirExtension>,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      url: url == freezed ? _value.url : url as FhirUri,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element,
-      identifier: identifier == freezed
-          ? _value.identifier
-          : identifier as List<Identifier>,
-      version: version == freezed ? _value.version : version as String,
-      versionElement: versionElement == freezed
-          ? _value.versionElement
-          : versionElement as Element,
-      title: title == freezed ? _value.title : title as String,
-      titleElement: titleElement == freezed
-          ? _value.titleElement
-          : titleElement as Element,
-      derivedFromCanonical: derivedFromCanonical == freezed
-          ? _value.derivedFromCanonical
-          : derivedFromCanonical as List<Canonical>,
-      derivedFromUri: derivedFromUri == freezed
-          ? _value.derivedFromUri
-          : derivedFromUri as List<FhirUri>,
-      derivedFromUriElement: derivedFromUriElement == freezed
-          ? _value.derivedFromUriElement
-          : derivedFromUriElement as List<Element>,
-      status: status == freezed ? _value.status : status as TopicStatus,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement as Element,
-      experimental: experimental == freezed
-          ? _value.experimental
-          : experimental as Boolean,
-      experimentalElement: experimentalElement == freezed
-          ? _value.experimentalElement
-          : experimentalElement as Element,
-      date: date == freezed ? _value.date : date as FhirDateTime,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element,
-      publisher:
-          publisher == freezed ? _value.publisher : publisher as Reference,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>,
-      description:
-          description == freezed ? _value.description : description as Markdown,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement as Element,
-      useContext: useContext == freezed
-          ? _value.useContext
-          : useContext as List<UsageContext>,
-      jurisdiction: jurisdiction == freezed
-          ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept>,
-      purpose: purpose == freezed ? _value.purpose : purpose as Markdown,
-      purposeElement: purposeElement == freezed
-          ? _value.purposeElement
-          : purposeElement as Element,
-      copyright:
-          copyright == freezed ? _value.copyright : copyright as Markdown,
-      copyrightElement: copyrightElement == freezed
-          ? _value.copyrightElement
-          : copyrightElement as Element,
-      approvalDate:
-          approvalDate == freezed ? _value.approvalDate : approvalDate as Date,
-      approvalDateElement: approvalDateElement == freezed
-          ? _value.approvalDateElement
-          : approvalDateElement as Element,
-      lastReviewDate: lastReviewDate == freezed
-          ? _value.lastReviewDate
-          : lastReviewDate as Date,
-      lastReviewDateElement: lastReviewDateElement == freezed
-          ? _value.lastReviewDateElement
-          : lastReviewDateElement as Element,
-      effectivePeriod: effectivePeriod == freezed
-          ? _value.effectivePeriod
-          : effectivePeriod as Period,
-      resourceTrigger: resourceTrigger == freezed
-          ? _value.resourceTrigger
-          : resourceTrigger as TopicResourceTrigger,
-      canFilterBy: canFilterBy == freezed
-          ? _value.canFilterBy
-          : canFilterBy as List<TopicCanFilterBy>,
-    ));
-  }
-}
-
-@JsonSerializable()
-
-/// @nodoc
-class _$_Topic extends _Topic {
-  _$_Topic(
-      {@required @JsonKey(defaultValue: 'Topic') this.resourceType,
-      this.id,
-      this.meta,
-      this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
-      this.language,
-      @JsonKey(name: '_language') this.languageElement,
-      this.text,
-      this.contained,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.url,
-      @JsonKey(name: '_url') this.urlElement,
-      this.identifier,
-      this.version,
-      @JsonKey(name: '_version') this.versionElement,
-      this.title,
-      @JsonKey(name: '_title') this.titleElement,
-      this.derivedFromCanonical,
-      this.derivedFromUri,
-      @JsonKey(name: '_derivedFromUri') this.derivedFromUriElement,
-      @JsonKey(unknownEnumValue: TopicStatus.unknown) this.status,
-      @JsonKey(name: '_status') this.statusElement,
-      this.experimental,
-      @JsonKey(name: '_experimental') this.experimentalElement,
-      this.date,
-      @JsonKey(name: '_date') this.dateElement,
-      this.publisher,
-      this.contact,
-      this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
-      this.useContext,
-      this.jurisdiction,
-      this.purpose,
-      @JsonKey(name: '_purpose') this.purposeElement,
-      this.copyright,
-      @JsonKey(name: '_copyright') this.copyrightElement,
-      this.approvalDate,
-      @JsonKey(name: '_approvalDate') this.approvalDateElement,
-      this.lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') this.lastReviewDateElement,
-      this.effectivePeriod,
-      this.resourceTrigger,
-      this.canFilterBy})
-      : assert(resourceType != null),
-        super._();
-
-  factory _$_Topic.fromJson(Map<String, dynamic> json) =>
-      _$_$_TopicFromJson(json);
-
-  @override
-  @JsonKey(defaultValue: 'Topic')
-  final String resourceType;
-  @override
-  final Id id;
-  @override
-  final Meta meta;
-  @override
-  final FhirUri implicitRules;
-  @override
-  @JsonKey(name: '_implicitRules')
-  final Element implicitRulesElement;
-  @override
-  final Code language;
-  @override
-  @JsonKey(name: '_language')
-  final Element languageElement;
-  @override
-  final Narrative text;
-  @override
-  final List<Resource> contained;
-  @override
-  @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
-  @override
-  final List<FhirExtension> modifierExtension;
-  @override
-  final FhirUri url;
-  @override
-  @JsonKey(name: '_url')
-  final Element urlElement;
-  @override
-  final List<Identifier> identifier;
-  @override
-  final String version;
-  @override
-  @JsonKey(name: '_version')
-  final Element versionElement;
-  @override
-  final String title;
-  @override
-  @JsonKey(name: '_title')
-  final Element titleElement;
-  @override
-  final List<Canonical> derivedFromCanonical;
-  @override
-  final List<FhirUri> derivedFromUri;
-  @override
-  @JsonKey(name: '_derivedFromUri')
-  final List<Element> derivedFromUriElement;
-  @override
-  @JsonKey(unknownEnumValue: TopicStatus.unknown)
-  final TopicStatus status;
-  @override
-  @JsonKey(name: '_status')
-  final Element statusElement;
-  @override
-  final Boolean experimental;
-  @override
-  @JsonKey(name: '_experimental')
-  final Element experimentalElement;
-  @override
-  final FhirDateTime date;
-  @override
-  @JsonKey(name: '_date')
-  final Element dateElement;
-  @override
-  final Reference publisher;
-  @override
-  final List<ContactDetail> contact;
-  @override
-  final Markdown description;
-  @override
-  @JsonKey(name: '_description')
-  final Element descriptionElement;
-  @override
-  final List<UsageContext> useContext;
-  @override
-  final List<CodeableConcept> jurisdiction;
-  @override
-  final Markdown purpose;
-  @override
-  @JsonKey(name: '_purpose')
-  final Element purposeElement;
-  @override
-  final Markdown copyright;
-  @override
-  @JsonKey(name: '_copyright')
-  final Element copyrightElement;
-  @override
-  final Date approvalDate;
-  @override
-  @JsonKey(name: '_approvalDate')
-  final Element approvalDateElement;
-  @override
-  final Date lastReviewDate;
-  @override
-  @JsonKey(name: '_lastReviewDate')
-  final Element lastReviewDateElement;
-  @override
-  final Period effectivePeriod;
-  @override
-  final TopicResourceTrigger resourceTrigger;
-  @override
-  final List<TopicCanFilterBy> canFilterBy;
-
-  @override
-  String toString() {
-    return 'Topic(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, title: $title, titleElement: $titleElement, derivedFromCanonical: $derivedFromCanonical, derivedFromUri: $derivedFromUri, derivedFromUriElement: $derivedFromUriElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, resourceTrigger: $resourceTrigger, canFilterBy: $canFilterBy)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is _Topic &&
-            (identical(other.resourceType, resourceType) ||
-                const DeepCollectionEquality()
-                    .equals(other.resourceType, resourceType)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.meta, meta) ||
-                const DeepCollectionEquality().equals(other.meta, meta)) &&
-            (identical(other.implicitRules, implicitRules) ||
-                const DeepCollectionEquality()
-                    .equals(other.implicitRules, implicitRules)) &&
-            (identical(other.implicitRulesElement, implicitRulesElement) ||
-                const DeepCollectionEquality().equals(
-                    other.implicitRulesElement, implicitRulesElement)) &&
-            (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
-            (identical(other.languageElement, languageElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.languageElement, languageElement)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.contained, contained) ||
-                const DeepCollectionEquality()
-                    .equals(other.contained, contained)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.url, url) ||
-                const DeepCollectionEquality().equals(other.url, url)) &&
-            (identical(other.urlElement, urlElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.urlElement, urlElement)) &&
-            (identical(other.identifier, identifier) ||
-                const DeepCollectionEquality()
-                    .equals(other.identifier, identifier)) &&
-            (identical(other.version, version) ||
-                const DeepCollectionEquality()
-                    .equals(other.version, version)) &&
-            (identical(other.versionElement, versionElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.versionElement, versionElement)) &&
-            (identical(other.title, title) ||
-                const DeepCollectionEquality().equals(other.title, title)) &&
-            (identical(other.titleElement, titleElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.titleElement, titleElement)) &&
-            (identical(other.derivedFromCanonical, derivedFromCanonical) ||
-                const DeepCollectionEquality().equals(
-                    other.derivedFromCanonical, derivedFromCanonical)) &&
-            (identical(other.derivedFromUri, derivedFromUri) ||
-                const DeepCollectionEquality()
-                    .equals(other.derivedFromUri, derivedFromUri)) &&
-            (identical(other.derivedFromUriElement, derivedFromUriElement) ||
-                const DeepCollectionEquality().equals(
-                    other.derivedFromUriElement, derivedFromUriElement)) &&
-            (identical(other.status, status) ||
-                const DeepCollectionEquality().equals(other.status, status)) &&
-            (identical(other.statusElement, statusElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusElement, statusElement)) &&
-            (identical(other.experimental, experimental) ||
-                const DeepCollectionEquality()
-                    .equals(other.experimental, experimental)) &&
-            (identical(other.experimentalElement, experimentalElement) || const DeepCollectionEquality().equals(other.experimentalElement, experimentalElement)) &&
-            (identical(other.date, date) || const DeepCollectionEquality().equals(other.date, date)) &&
-            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
-            (identical(other.publisher, publisher) || const DeepCollectionEquality().equals(other.publisher, publisher)) &&
-            (identical(other.contact, contact) || const DeepCollectionEquality().equals(other.contact, contact)) &&
-            (identical(other.description, description) || const DeepCollectionEquality().equals(other.description, description)) &&
-            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
-            (identical(other.useContext, useContext) || const DeepCollectionEquality().equals(other.useContext, useContext)) &&
-            (identical(other.jurisdiction, jurisdiction) || const DeepCollectionEquality().equals(other.jurisdiction, jurisdiction)) &&
-            (identical(other.purpose, purpose) || const DeepCollectionEquality().equals(other.purpose, purpose)) &&
-            (identical(other.purposeElement, purposeElement) || const DeepCollectionEquality().equals(other.purposeElement, purposeElement)) &&
-            (identical(other.copyright, copyright) || const DeepCollectionEquality().equals(other.copyright, copyright)) &&
-            (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)) &&
-            (identical(other.approvalDate, approvalDate) || const DeepCollectionEquality().equals(other.approvalDate, approvalDate)) &&
-            (identical(other.approvalDateElement, approvalDateElement) || const DeepCollectionEquality().equals(other.approvalDateElement, approvalDateElement)) &&
-            (identical(other.lastReviewDate, lastReviewDate) || const DeepCollectionEquality().equals(other.lastReviewDate, lastReviewDate)) &&
-            (identical(other.lastReviewDateElement, lastReviewDateElement) || const DeepCollectionEquality().equals(other.lastReviewDateElement, lastReviewDateElement)) &&
-            (identical(other.effectivePeriod, effectivePeriod) || const DeepCollectionEquality().equals(other.effectivePeriod, effectivePeriod)) &&
-            (identical(other.resourceTrigger, resourceTrigger) || const DeepCollectionEquality().equals(other.resourceTrigger, resourceTrigger)) &&
-            (identical(other.canFilterBy, canFilterBy) || const DeepCollectionEquality().equals(other.canFilterBy, canFilterBy)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(resourceType) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(meta) ^
-      const DeepCollectionEquality().hash(implicitRules) ^
-      const DeepCollectionEquality().hash(implicitRulesElement) ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(languageElement) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(url) ^
-      const DeepCollectionEquality().hash(urlElement) ^
-      const DeepCollectionEquality().hash(identifier) ^
-      const DeepCollectionEquality().hash(version) ^
-      const DeepCollectionEquality().hash(versionElement) ^
-      const DeepCollectionEquality().hash(title) ^
-      const DeepCollectionEquality().hash(titleElement) ^
-      const DeepCollectionEquality().hash(derivedFromCanonical) ^
-      const DeepCollectionEquality().hash(derivedFromUri) ^
-      const DeepCollectionEquality().hash(derivedFromUriElement) ^
-      const DeepCollectionEquality().hash(status) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(experimental) ^
-      const DeepCollectionEquality().hash(experimentalElement) ^
-      const DeepCollectionEquality().hash(date) ^
-      const DeepCollectionEquality().hash(dateElement) ^
-      const DeepCollectionEquality().hash(publisher) ^
-      const DeepCollectionEquality().hash(contact) ^
-      const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(descriptionElement) ^
-      const DeepCollectionEquality().hash(useContext) ^
-      const DeepCollectionEquality().hash(jurisdiction) ^
-      const DeepCollectionEquality().hash(purpose) ^
-      const DeepCollectionEquality().hash(purposeElement) ^
-      const DeepCollectionEquality().hash(copyright) ^
-      const DeepCollectionEquality().hash(copyrightElement) ^
-      const DeepCollectionEquality().hash(approvalDate) ^
-      const DeepCollectionEquality().hash(approvalDateElement) ^
-      const DeepCollectionEquality().hash(lastReviewDate) ^
-      const DeepCollectionEquality().hash(lastReviewDateElement) ^
-      const DeepCollectionEquality().hash(effectivePeriod) ^
-      const DeepCollectionEquality().hash(resourceTrigger) ^
-      const DeepCollectionEquality().hash(canFilterBy);
-
-  @override
-  _$TopicCopyWith<_Topic> get copyWith =>
-      __$TopicCopyWithImpl<_Topic>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$_$_TopicToJson(this);
-  }
-}
-
-abstract class _Topic extends Topic {
-  _Topic._() : super._();
-  factory _Topic(
-      {@required @JsonKey(defaultValue: 'Topic') String resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-      Code language,
-      @JsonKey(name: '_language') Element languageElement,
-      Narrative text,
-      List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      FhirUri url,
-      @JsonKey(name: '_url') Element urlElement,
-      List<Identifier> identifier,
-      String version,
-      @JsonKey(name: '_version') Element versionElement,
-      String title,
-      @JsonKey(name: '_title') Element titleElement,
-      List<Canonical> derivedFromCanonical,
-      List<FhirUri> derivedFromUri,
-      @JsonKey(name: '_derivedFromUri') List<Element> derivedFromUriElement,
-      @JsonKey(unknownEnumValue: TopicStatus.unknown) TopicStatus status,
-      @JsonKey(name: '_status') Element statusElement,
-      Boolean experimental,
-      @JsonKey(name: '_experimental') Element experimentalElement,
-      FhirDateTime date,
-      @JsonKey(name: '_date') Element dateElement,
-      Reference publisher,
-      List<ContactDetail> contact,
-      Markdown description,
-      @JsonKey(name: '_description') Element descriptionElement,
-      List<UsageContext> useContext,
-      List<CodeableConcept> jurisdiction,
-      Markdown purpose,
-      @JsonKey(name: '_purpose') Element purposeElement,
-      Markdown copyright,
-      @JsonKey(name: '_copyright') Element copyrightElement,
-      Date approvalDate,
-      @JsonKey(name: '_approvalDate') Element approvalDateElement,
-      Date lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
-      Period effectivePeriod,
-      TopicResourceTrigger resourceTrigger,
-      List<TopicCanFilterBy> canFilterBy}) = _$_Topic;
-
-  factory _Topic.fromJson(Map<String, dynamic> json) = _$_Topic.fromJson;
-
-  @override
-  @JsonKey(defaultValue: 'Topic')
-  String get resourceType;
-  @override
-  Id get id;
-  @override
-  Meta get meta;
-  @override
-  FhirUri get implicitRules;
-  @override
-  @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  @override
-  Code get language;
-  @override
-  @JsonKey(name: '_language')
-  Element get languageElement;
-  @override
-  Narrative get text;
-  @override
-  List<Resource> get contained;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  @override
-  List<FhirExtension> get modifierExtension;
-  @override
-  FhirUri get url;
-  @override
-  @JsonKey(name: '_url')
-  Element get urlElement;
-  @override
-  List<Identifier> get identifier;
-  @override
-  String get version;
-  @override
-  @JsonKey(name: '_version')
-  Element get versionElement;
-  @override
-  String get title;
-  @override
-  @JsonKey(name: '_title')
-  Element get titleElement;
-  @override
-  List<Canonical> get derivedFromCanonical;
-  @override
-  List<FhirUri> get derivedFromUri;
-  @override
-  @JsonKey(name: '_derivedFromUri')
-  List<Element> get derivedFromUriElement;
-  @override
-  @JsonKey(unknownEnumValue: TopicStatus.unknown)
-  TopicStatus get status;
-  @override
-  @JsonKey(name: '_status')
-  Element get statusElement;
-  @override
-  Boolean get experimental;
-  @override
-  @JsonKey(name: '_experimental')
-  Element get experimentalElement;
-  @override
-  FhirDateTime get date;
-  @override
-  @JsonKey(name: '_date')
-  Element get dateElement;
-  @override
-  Reference get publisher;
-  @override
-  List<ContactDetail> get contact;
-  @override
-  Markdown get description;
-  @override
-  @JsonKey(name: '_description')
-  Element get descriptionElement;
-  @override
-  List<UsageContext> get useContext;
-  @override
-  List<CodeableConcept> get jurisdiction;
-  @override
-  Markdown get purpose;
-  @override
-  @JsonKey(name: '_purpose')
-  Element get purposeElement;
-  @override
-  Markdown get copyright;
-  @override
-  @JsonKey(name: '_copyright')
-  Element get copyrightElement;
-  @override
-  Date get approvalDate;
-  @override
-  @JsonKey(name: '_approvalDate')
-  Element get approvalDateElement;
-  @override
-  Date get lastReviewDate;
-  @override
-  @JsonKey(name: '_lastReviewDate')
-  Element get lastReviewDateElement;
-  @override
-  Period get effectivePeriod;
-  @override
-  TopicResourceTrigger get resourceTrigger;
-  @override
-  List<TopicCanFilterBy> get canFilterBy;
-  @override
-  _$TopicCopyWith<_Topic> get copyWith;
-}
-
-TopicResourceTrigger _$TopicResourceTriggerFromJson(Map<String, dynamic> json) {
-  return _TopicResourceTrigger.fromJson(json);
-}
-
-/// @nodoc
-class _$TopicResourceTriggerTearOff {
-  const _$TopicResourceTriggerTearOff();
-
-// ignore: unused_element
-  _TopicResourceTrigger call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      String description,
-      @JsonKey(name: '_description') Element descriptionElement,
-      List<Code> resourceType,
-      @JsonKey(name: '_resourceType') List<Element> resourceTypeElement,
-      List<Code> methodCriteria,
-      @JsonKey(name: '_methodCriteria') List<Element> methodCriteriaElement,
-      TopicQueryCriteria queryCriteria,
-      String fhirPathCriteria,
-      @JsonKey(name: '_fhirPathCriteria') Element fhirPathCriteriaElement}) {
-    return _TopicResourceTrigger(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      description: description,
-      descriptionElement: descriptionElement,
-      resourceType: resourceType,
-      resourceTypeElement: resourceTypeElement,
-      methodCriteria: methodCriteria,
-      methodCriteriaElement: methodCriteriaElement,
-      queryCriteria: queryCriteria,
-      fhirPathCriteria: fhirPathCriteria,
-      fhirPathCriteriaElement: fhirPathCriteriaElement,
-    );
-  }
-
-// ignore: unused_element
-  TopicResourceTrigger fromJson(Map<String, Object> json) {
-    return TopicResourceTrigger.fromJson(json);
-  }
-}
-
-/// @nodoc
-// ignore: unused_element
-const $TopicResourceTrigger = _$TopicResourceTriggerTearOff();
-
-/// @nodoc
-mixin _$TopicResourceTrigger {
-  String get id;
-  @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  String get description;
-  @JsonKey(name: '_description')
-  Element get descriptionElement;
-  List<Code> get resourceType;
-  @JsonKey(name: '_resourceType')
-  List<Element> get resourceTypeElement;
-  List<Code> get methodCriteria;
-  @JsonKey(name: '_methodCriteria')
-  List<Element> get methodCriteriaElement;
-  TopicQueryCriteria get queryCriteria;
-  String get fhirPathCriteria;
-  @JsonKey(name: '_fhirPathCriteria')
-  Element get fhirPathCriteriaElement;
-
-  Map<String, dynamic> toJson();
-  $TopicResourceTriggerCopyWith<TopicResourceTrigger> get copyWith;
-}
-
-/// @nodoc
-abstract class $TopicResourceTriggerCopyWith<$Res> {
-  factory $TopicResourceTriggerCopyWith(TopicResourceTrigger value,
-          $Res Function(TopicResourceTrigger) then) =
-      _$TopicResourceTriggerCopyWithImpl<$Res>;
-  $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      String description,
-      @JsonKey(name: '_description') Element descriptionElement,
-      List<Code> resourceType,
-      @JsonKey(name: '_resourceType') List<Element> resourceTypeElement,
-      List<Code> methodCriteria,
-      @JsonKey(name: '_methodCriteria') List<Element> methodCriteriaElement,
-      TopicQueryCriteria queryCriteria,
-      String fhirPathCriteria,
-      @JsonKey(name: '_fhirPathCriteria') Element fhirPathCriteriaElement});
-
-  $ElementCopyWith<$Res> get descriptionElement;
-  $TopicQueryCriteriaCopyWith<$Res> get queryCriteria;
-  $ElementCopyWith<$Res> get fhirPathCriteriaElement;
-}
-
-/// @nodoc
-class _$TopicResourceTriggerCopyWithImpl<$Res>
-    implements $TopicResourceTriggerCopyWith<$Res> {
-  _$TopicResourceTriggerCopyWithImpl(this._value, this._then);
-
-  final TopicResourceTrigger _value;
-  // ignore: unused_field
-  final $Res Function(TopicResourceTrigger) _then;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object description = freezed,
-    Object descriptionElement = freezed,
-    Object resourceType = freezed,
-    Object resourceTypeElement = freezed,
-    Object methodCriteria = freezed,
-    Object methodCriteriaElement = freezed,
-    Object queryCriteria = freezed,
-    Object fhirPathCriteria = freezed,
-    Object fhirPathCriteriaElement = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as List<FhirExtension>,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      description:
-          description == freezed ? _value.description : description as String,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement as Element,
-      resourceType: resourceType == freezed
-          ? _value.resourceType
-          : resourceType as List<Code>,
-      resourceTypeElement: resourceTypeElement == freezed
-          ? _value.resourceTypeElement
-          : resourceTypeElement as List<Element>,
-      methodCriteria: methodCriteria == freezed
-          ? _value.methodCriteria
-          : methodCriteria as List<Code>,
-      methodCriteriaElement: methodCriteriaElement == freezed
-          ? _value.methodCriteriaElement
-          : methodCriteriaElement as List<Element>,
-      queryCriteria: queryCriteria == freezed
-          ? _value.queryCriteria
-          : queryCriteria as TopicQueryCriteria,
-      fhirPathCriteria: fhirPathCriteria == freezed
-          ? _value.fhirPathCriteria
-          : fhirPathCriteria as String,
-      fhirPathCriteriaElement: fhirPathCriteriaElement == freezed
-          ? _value.fhirPathCriteriaElement
-          : fhirPathCriteriaElement as Element,
-    ));
-  }
-
-  @override
-  $ElementCopyWith<$Res> get descriptionElement {
-    if (_value.descriptionElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
-      return _then(_value.copyWith(descriptionElement: value));
-    });
-  }
-
-  @override
-  $TopicQueryCriteriaCopyWith<$Res> get queryCriteria {
-    if (_value.queryCriteria == null) {
-      return null;
-    }
-    return $TopicQueryCriteriaCopyWith<$Res>(_value.queryCriteria, (value) {
-      return _then(_value.copyWith(queryCriteria: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get fhirPathCriteriaElement {
-    if (_value.fhirPathCriteriaElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.fhirPathCriteriaElement, (value) {
-      return _then(_value.copyWith(fhirPathCriteriaElement: value));
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$TopicResourceTriggerCopyWith<$Res>
-    implements $TopicResourceTriggerCopyWith<$Res> {
-  factory _$TopicResourceTriggerCopyWith(_TopicResourceTrigger value,
-          $Res Function(_TopicResourceTrigger) then) =
-      __$TopicResourceTriggerCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      String description,
-      @JsonKey(name: '_description') Element descriptionElement,
-      List<Code> resourceType,
-      @JsonKey(name: '_resourceType') List<Element> resourceTypeElement,
-      List<Code> methodCriteria,
-      @JsonKey(name: '_methodCriteria') List<Element> methodCriteriaElement,
-      TopicQueryCriteria queryCriteria,
-      String fhirPathCriteria,
-      @JsonKey(name: '_fhirPathCriteria') Element fhirPathCriteriaElement});
-
-  @override
-  $ElementCopyWith<$Res> get descriptionElement;
-  @override
-  $TopicQueryCriteriaCopyWith<$Res> get queryCriteria;
-  @override
-  $ElementCopyWith<$Res> get fhirPathCriteriaElement;
-}
-
-/// @nodoc
-class __$TopicResourceTriggerCopyWithImpl<$Res>
-    extends _$TopicResourceTriggerCopyWithImpl<$Res>
-    implements _$TopicResourceTriggerCopyWith<$Res> {
-  __$TopicResourceTriggerCopyWithImpl(
-      _TopicResourceTrigger _value, $Res Function(_TopicResourceTrigger) _then)
-      : super(_value, (v) => _then(v as _TopicResourceTrigger));
-
-  @override
-  _TopicResourceTrigger get _value => super._value as _TopicResourceTrigger;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object description = freezed,
-    Object descriptionElement = freezed,
-    Object resourceType = freezed,
-    Object resourceTypeElement = freezed,
-    Object methodCriteria = freezed,
-    Object methodCriteriaElement = freezed,
-    Object queryCriteria = freezed,
-    Object fhirPathCriteria = freezed,
-    Object fhirPathCriteriaElement = freezed,
-  }) {
-    return _then(_TopicResourceTrigger(
-      id: id == freezed ? _value.id : id as String,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as List<FhirExtension>,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      description:
-          description == freezed ? _value.description : description as String,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement as Element,
-      resourceType: resourceType == freezed
-          ? _value.resourceType
-          : resourceType as List<Code>,
-      resourceTypeElement: resourceTypeElement == freezed
-          ? _value.resourceTypeElement
-          : resourceTypeElement as List<Element>,
-      methodCriteria: methodCriteria == freezed
-          ? _value.methodCriteria
-          : methodCriteria as List<Code>,
-      methodCriteriaElement: methodCriteriaElement == freezed
-          ? _value.methodCriteriaElement
-          : methodCriteriaElement as List<Element>,
-      queryCriteria: queryCriteria == freezed
-          ? _value.queryCriteria
-          : queryCriteria as TopicQueryCriteria,
-      fhirPathCriteria: fhirPathCriteria == freezed
-          ? _value.fhirPathCriteria
-          : fhirPathCriteria as String,
-      fhirPathCriteriaElement: fhirPathCriteriaElement == freezed
-          ? _value.fhirPathCriteriaElement
-          : fhirPathCriteriaElement as Element,
-    ));
-  }
-}
-
-@JsonSerializable()
-
-/// @nodoc
-class _$_TopicResourceTrigger extends _TopicResourceTrigger {
-  _$_TopicResourceTrigger(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
-      this.resourceType,
-      @JsonKey(name: '_resourceType') this.resourceTypeElement,
-      this.methodCriteria,
-      @JsonKey(name: '_methodCriteria') this.methodCriteriaElement,
-      this.queryCriteria,
-      this.fhirPathCriteria,
-      @JsonKey(name: '_fhirPathCriteria') this.fhirPathCriteriaElement})
-      : super._();
-
-  factory _$_TopicResourceTrigger.fromJson(Map<String, dynamic> json) =>
-      _$_$_TopicResourceTriggerFromJson(json);
-
-  @override
-  final String id;
-  @override
-  @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
-  @override
-  final List<FhirExtension> modifierExtension;
-  @override
-  final String description;
-  @override
-  @JsonKey(name: '_description')
-  final Element descriptionElement;
-  @override
-  final List<Code> resourceType;
-  @override
-  @JsonKey(name: '_resourceType')
-  final List<Element> resourceTypeElement;
-  @override
-  final List<Code> methodCriteria;
-  @override
-  @JsonKey(name: '_methodCriteria')
-  final List<Element> methodCriteriaElement;
-  @override
-  final TopicQueryCriteria queryCriteria;
-  @override
-  final String fhirPathCriteria;
-  @override
-  @JsonKey(name: '_fhirPathCriteria')
-  final Element fhirPathCriteriaElement;
-
-  @override
-  String toString() {
-    return 'TopicResourceTrigger(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, resourceType: $resourceType, resourceTypeElement: $resourceTypeElement, methodCriteria: $methodCriteria, methodCriteriaElement: $methodCriteriaElement, queryCriteria: $queryCriteria, fhirPathCriteria: $fhirPathCriteria, fhirPathCriteriaElement: $fhirPathCriteriaElement)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is _TopicResourceTrigger &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.description, description) ||
-                const DeepCollectionEquality()
-                    .equals(other.description, description)) &&
-            (identical(other.descriptionElement, descriptionElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.descriptionElement, descriptionElement)) &&
-            (identical(other.resourceType, resourceType) ||
-                const DeepCollectionEquality()
-                    .equals(other.resourceType, resourceType)) &&
-            (identical(other.resourceTypeElement, resourceTypeElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.resourceTypeElement, resourceTypeElement)) &&
-            (identical(other.methodCriteria, methodCriteria) ||
-                const DeepCollectionEquality()
-                    .equals(other.methodCriteria, methodCriteria)) &&
-            (identical(other.methodCriteriaElement, methodCriteriaElement) ||
-                const DeepCollectionEquality().equals(
-                    other.methodCriteriaElement, methodCriteriaElement)) &&
-            (identical(other.queryCriteria, queryCriteria) ||
-                const DeepCollectionEquality()
-                    .equals(other.queryCriteria, queryCriteria)) &&
-            (identical(other.fhirPathCriteria, fhirPathCriteria) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirPathCriteria, fhirPathCriteria)) &&
-            (identical(
-                    other.fhirPathCriteriaElement, fhirPathCriteriaElement) ||
-                const DeepCollectionEquality().equals(
-                    other.fhirPathCriteriaElement, fhirPathCriteriaElement)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(descriptionElement) ^
-      const DeepCollectionEquality().hash(resourceType) ^
-      const DeepCollectionEquality().hash(resourceTypeElement) ^
-      const DeepCollectionEquality().hash(methodCriteria) ^
-      const DeepCollectionEquality().hash(methodCriteriaElement) ^
-      const DeepCollectionEquality().hash(queryCriteria) ^
-      const DeepCollectionEquality().hash(fhirPathCriteria) ^
-      const DeepCollectionEquality().hash(fhirPathCriteriaElement);
-
-  @override
-  _$TopicResourceTriggerCopyWith<_TopicResourceTrigger> get copyWith =>
-      __$TopicResourceTriggerCopyWithImpl<_TopicResourceTrigger>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$_$_TopicResourceTriggerToJson(this);
-  }
-}
-
-abstract class _TopicResourceTrigger extends TopicResourceTrigger {
-  _TopicResourceTrigger._() : super._();
-  factory _TopicResourceTrigger(
-      {String id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      String description,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      List<Code> resourceType,
-      @JsonKey(name: '_resourceType')
-          List<Element> resourceTypeElement,
-      List<Code> methodCriteria,
-      @JsonKey(name: '_methodCriteria')
-          List<Element> methodCriteriaElement,
-      TopicQueryCriteria queryCriteria,
-      String fhirPathCriteria,
-      @JsonKey(name: '_fhirPathCriteria')
-          Element fhirPathCriteriaElement}) = _$_TopicResourceTrigger;
-
-  factory _TopicResourceTrigger.fromJson(Map<String, dynamic> json) =
-      _$_TopicResourceTrigger.fromJson;
-
-  @override
-  String get id;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  @override
-  List<FhirExtension> get modifierExtension;
-  @override
-  String get description;
-  @override
-  @JsonKey(name: '_description')
-  Element get descriptionElement;
-  @override
-  List<Code> get resourceType;
-  @override
-  @JsonKey(name: '_resourceType')
-  List<Element> get resourceTypeElement;
-  @override
-  List<Code> get methodCriteria;
-  @override
-  @JsonKey(name: '_methodCriteria')
-  List<Element> get methodCriteriaElement;
-  @override
-  TopicQueryCriteria get queryCriteria;
-  @override
-  String get fhirPathCriteria;
-  @override
-  @JsonKey(name: '_fhirPathCriteria')
-  Element get fhirPathCriteriaElement;
-  @override
-  _$TopicResourceTriggerCopyWith<_TopicResourceTrigger> get copyWith;
-}
-
-TopicQueryCriteria _$TopicQueryCriteriaFromJson(Map<String, dynamic> json) {
-  return _TopicQueryCriteria.fromJson(json);
-}
-
-/// @nodoc
-class _$TopicQueryCriteriaTearOff {
-  const _$TopicQueryCriteriaTearOff();
-
-// ignore: unused_element
-  _TopicQueryCriteria call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      String previous,
-      @JsonKey(name: '_previous') Element previousElement,
-      String current,
-      @JsonKey(name: '_current') Element currentElement,
-      Boolean requireBoth,
-      @JsonKey(name: '_requireBoth') Element requireBothElement}) {
-    return _TopicQueryCriteria(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      previous: previous,
-      previousElement: previousElement,
-      current: current,
-      currentElement: currentElement,
-      requireBoth: requireBoth,
-      requireBothElement: requireBothElement,
-    );
-  }
-
-// ignore: unused_element
-  TopicQueryCriteria fromJson(Map<String, Object> json) {
-    return TopicQueryCriteria.fromJson(json);
-  }
-}
-
-/// @nodoc
-// ignore: unused_element
-const $TopicQueryCriteria = _$TopicQueryCriteriaTearOff();
-
-/// @nodoc
-mixin _$TopicQueryCriteria {
-  String get id;
-  @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  String get previous;
-  @JsonKey(name: '_previous')
-  Element get previousElement;
-  String get current;
-  @JsonKey(name: '_current')
-  Element get currentElement;
-  Boolean get requireBoth;
-  @JsonKey(name: '_requireBoth')
-  Element get requireBothElement;
-
-  Map<String, dynamic> toJson();
-  $TopicQueryCriteriaCopyWith<TopicQueryCriteria> get copyWith;
-}
-
-/// @nodoc
-abstract class $TopicQueryCriteriaCopyWith<$Res> {
-  factory $TopicQueryCriteriaCopyWith(
-          TopicQueryCriteria value, $Res Function(TopicQueryCriteria) then) =
-      _$TopicQueryCriteriaCopyWithImpl<$Res>;
-  $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      String previous,
-      @JsonKey(name: '_previous') Element previousElement,
-      String current,
-      @JsonKey(name: '_current') Element currentElement,
-      Boolean requireBoth,
-      @JsonKey(name: '_requireBoth') Element requireBothElement});
-
-  $ElementCopyWith<$Res> get previousElement;
-  $ElementCopyWith<$Res> get currentElement;
-  $ElementCopyWith<$Res> get requireBothElement;
-}
-
-/// @nodoc
-class _$TopicQueryCriteriaCopyWithImpl<$Res>
-    implements $TopicQueryCriteriaCopyWith<$Res> {
-  _$TopicQueryCriteriaCopyWithImpl(this._value, this._then);
-
-  final TopicQueryCriteria _value;
-  // ignore: unused_field
-  final $Res Function(TopicQueryCriteria) _then;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object previous = freezed,
-    Object previousElement = freezed,
-    Object current = freezed,
-    Object currentElement = freezed,
-    Object requireBoth = freezed,
-    Object requireBothElement = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as List<FhirExtension>,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      previous: previous == freezed ? _value.previous : previous as String,
-      previousElement: previousElement == freezed
-          ? _value.previousElement
-          : previousElement as Element,
-      current: current == freezed ? _value.current : current as String,
-      currentElement: currentElement == freezed
-          ? _value.currentElement
-          : currentElement as Element,
-      requireBoth:
-          requireBoth == freezed ? _value.requireBoth : requireBoth as Boolean,
-      requireBothElement: requireBothElement == freezed
-          ? _value.requireBothElement
-          : requireBothElement as Element,
-    ));
-  }
-
-  @override
-  $ElementCopyWith<$Res> get previousElement {
-    if (_value.previousElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.previousElement, (value) {
-      return _then(_value.copyWith(previousElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get currentElement {
-    if (_value.currentElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.currentElement, (value) {
-      return _then(_value.copyWith(currentElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get requireBothElement {
-    if (_value.requireBothElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.requireBothElement, (value) {
-      return _then(_value.copyWith(requireBothElement: value));
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$TopicQueryCriteriaCopyWith<$Res>
-    implements $TopicQueryCriteriaCopyWith<$Res> {
-  factory _$TopicQueryCriteriaCopyWith(
-          _TopicQueryCriteria value, $Res Function(_TopicQueryCriteria) then) =
-      __$TopicQueryCriteriaCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      String previous,
-      @JsonKey(name: '_previous') Element previousElement,
-      String current,
-      @JsonKey(name: '_current') Element currentElement,
-      Boolean requireBoth,
-      @JsonKey(name: '_requireBoth') Element requireBothElement});
-
-  @override
-  $ElementCopyWith<$Res> get previousElement;
-  @override
-  $ElementCopyWith<$Res> get currentElement;
-  @override
-  $ElementCopyWith<$Res> get requireBothElement;
-}
-
-/// @nodoc
-class __$TopicQueryCriteriaCopyWithImpl<$Res>
-    extends _$TopicQueryCriteriaCopyWithImpl<$Res>
-    implements _$TopicQueryCriteriaCopyWith<$Res> {
-  __$TopicQueryCriteriaCopyWithImpl(
-      _TopicQueryCriteria _value, $Res Function(_TopicQueryCriteria) _then)
-      : super(_value, (v) => _then(v as _TopicQueryCriteria));
-
-  @override
-  _TopicQueryCriteria get _value => super._value as _TopicQueryCriteria;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object previous = freezed,
-    Object previousElement = freezed,
-    Object current = freezed,
-    Object currentElement = freezed,
-    Object requireBoth = freezed,
-    Object requireBothElement = freezed,
-  }) {
-    return _then(_TopicQueryCriteria(
-      id: id == freezed ? _value.id : id as String,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as List<FhirExtension>,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      previous: previous == freezed ? _value.previous : previous as String,
-      previousElement: previousElement == freezed
-          ? _value.previousElement
-          : previousElement as Element,
-      current: current == freezed ? _value.current : current as String,
-      currentElement: currentElement == freezed
-          ? _value.currentElement
-          : currentElement as Element,
-      requireBoth:
-          requireBoth == freezed ? _value.requireBoth : requireBoth as Boolean,
-      requireBothElement: requireBothElement == freezed
-          ? _value.requireBothElement
-          : requireBothElement as Element,
-    ));
-  }
-}
-
-@JsonSerializable()
-
-/// @nodoc
-class _$_TopicQueryCriteria extends _TopicQueryCriteria {
-  _$_TopicQueryCriteria(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.previous,
-      @JsonKey(name: '_previous') this.previousElement,
-      this.current,
-      @JsonKey(name: '_current') this.currentElement,
-      this.requireBoth,
-      @JsonKey(name: '_requireBoth') this.requireBothElement})
-      : super._();
-
-  factory _$_TopicQueryCriteria.fromJson(Map<String, dynamic> json) =>
-      _$_$_TopicQueryCriteriaFromJson(json);
-
-  @override
-  final String id;
-  @override
-  @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
-  @override
-  final List<FhirExtension> modifierExtension;
-  @override
-  final String previous;
-  @override
-  @JsonKey(name: '_previous')
-  final Element previousElement;
-  @override
-  final String current;
-  @override
-  @JsonKey(name: '_current')
-  final Element currentElement;
-  @override
-  final Boolean requireBoth;
-  @override
-  @JsonKey(name: '_requireBoth')
-  final Element requireBothElement;
-
-  @override
-  String toString() {
-    return 'TopicQueryCriteria(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, previous: $previous, previousElement: $previousElement, current: $current, currentElement: $currentElement, requireBoth: $requireBoth, requireBothElement: $requireBothElement)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is _TopicQueryCriteria &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.previous, previous) ||
-                const DeepCollectionEquality()
-                    .equals(other.previous, previous)) &&
-            (identical(other.previousElement, previousElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.previousElement, previousElement)) &&
-            (identical(other.current, current) ||
-                const DeepCollectionEquality()
-                    .equals(other.current, current)) &&
-            (identical(other.currentElement, currentElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.currentElement, currentElement)) &&
-            (identical(other.requireBoth, requireBoth) ||
-                const DeepCollectionEquality()
-                    .equals(other.requireBoth, requireBoth)) &&
-            (identical(other.requireBothElement, requireBothElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.requireBothElement, requireBothElement)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(previous) ^
-      const DeepCollectionEquality().hash(previousElement) ^
-      const DeepCollectionEquality().hash(current) ^
-      const DeepCollectionEquality().hash(currentElement) ^
-      const DeepCollectionEquality().hash(requireBoth) ^
-      const DeepCollectionEquality().hash(requireBothElement);
-
-  @override
-  _$TopicQueryCriteriaCopyWith<_TopicQueryCriteria> get copyWith =>
-      __$TopicQueryCriteriaCopyWithImpl<_TopicQueryCriteria>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$_$_TopicQueryCriteriaToJson(this);
-  }
-}
-
-abstract class _TopicQueryCriteria extends TopicQueryCriteria {
-  _TopicQueryCriteria._() : super._();
-  factory _TopicQueryCriteria(
-          {String id,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          List<FhirExtension> modifierExtension,
-          String previous,
-          @JsonKey(name: '_previous') Element previousElement,
-          String current,
-          @JsonKey(name: '_current') Element currentElement,
-          Boolean requireBoth,
-          @JsonKey(name: '_requireBoth') Element requireBothElement}) =
-      _$_TopicQueryCriteria;
-
-  factory _TopicQueryCriteria.fromJson(Map<String, dynamic> json) =
-      _$_TopicQueryCriteria.fromJson;
-
-  @override
-  String get id;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  @override
-  List<FhirExtension> get modifierExtension;
-  @override
-  String get previous;
-  @override
-  @JsonKey(name: '_previous')
-  Element get previousElement;
-  @override
-  String get current;
-  @override
-  @JsonKey(name: '_current')
-  Element get currentElement;
-  @override
-  Boolean get requireBoth;
-  @override
-  @JsonKey(name: '_requireBoth')
-  Element get requireBothElement;
-  @override
-  _$TopicQueryCriteriaCopyWith<_TopicQueryCriteria> get copyWith;
-}
-
-TopicCanFilterBy _$TopicCanFilterByFromJson(Map<String, dynamic> json) {
-  return _TopicCanFilterBy.fromJson(json);
-}
-
-/// @nodoc
-class _$TopicCanFilterByTearOff {
-  const _$TopicCanFilterByTearOff();
-
-// ignore: unused_element
-  _TopicCanFilterBy call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      String name,
-      @JsonKey(name: '_name') Element nameElement,
-      List<TopicCanFilterByMatchType> matchType,
-      @JsonKey(name: '_matchType') List<Element> matchTypeElement,
-      Markdown documentation,
-      @JsonKey(name: '_documentation') Element documentationElement}) {
-    return _TopicCanFilterBy(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      name: name,
-      nameElement: nameElement,
-      matchType: matchType,
-      matchTypeElement: matchTypeElement,
-      documentation: documentation,
-      documentationElement: documentationElement,
-    );
-  }
-
-// ignore: unused_element
-  TopicCanFilterBy fromJson(Map<String, Object> json) {
-    return TopicCanFilterBy.fromJson(json);
-  }
-}
-
-/// @nodoc
-// ignore: unused_element
-const $TopicCanFilterBy = _$TopicCanFilterByTearOff();
-
-/// @nodoc
-mixin _$TopicCanFilterBy {
-  String get id;
-  @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  String get name;
-  @JsonKey(name: '_name')
-  Element get nameElement;
-  List<TopicCanFilterByMatchType> get matchType;
-  @JsonKey(name: '_matchType')
-  List<Element> get matchTypeElement;
-  Markdown get documentation;
-  @JsonKey(name: '_documentation')
-  Element get documentationElement;
-
-  Map<String, dynamic> toJson();
-  $TopicCanFilterByCopyWith<TopicCanFilterBy> get copyWith;
-}
-
-/// @nodoc
-abstract class $TopicCanFilterByCopyWith<$Res> {
-  factory $TopicCanFilterByCopyWith(
-          TopicCanFilterBy value, $Res Function(TopicCanFilterBy) then) =
-      _$TopicCanFilterByCopyWithImpl<$Res>;
-  $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      String name,
-      @JsonKey(name: '_name') Element nameElement,
-      List<TopicCanFilterByMatchType> matchType,
-      @JsonKey(name: '_matchType') List<Element> matchTypeElement,
-      Markdown documentation,
-      @JsonKey(name: '_documentation') Element documentationElement});
-
-  $ElementCopyWith<$Res> get nameElement;
-  $ElementCopyWith<$Res> get documentationElement;
-}
-
-/// @nodoc
-class _$TopicCanFilterByCopyWithImpl<$Res>
-    implements $TopicCanFilterByCopyWith<$Res> {
-  _$TopicCanFilterByCopyWithImpl(this._value, this._then);
-
-  final TopicCanFilterBy _value;
-  // ignore: unused_field
-  final $Res Function(TopicCanFilterBy) _then;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object name = freezed,
-    Object nameElement = freezed,
-    Object matchType = freezed,
-    Object matchTypeElement = freezed,
-    Object documentation = freezed,
-    Object documentationElement = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as List<FhirExtension>,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      name: name == freezed ? _value.name : name as String,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      matchType: matchType == freezed
-          ? _value.matchType
-          : matchType as List<TopicCanFilterByMatchType>,
-      matchTypeElement: matchTypeElement == freezed
-          ? _value.matchTypeElement
-          : matchTypeElement as List<Element>,
-      documentation: documentation == freezed
-          ? _value.documentation
-          : documentation as Markdown,
-      documentationElement: documentationElement == freezed
-          ? _value.documentationElement
-          : documentationElement as Element,
-    ));
-  }
-
-  @override
-  $ElementCopyWith<$Res> get nameElement {
-    if (_value.nameElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
-      return _then(_value.copyWith(nameElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get documentationElement {
-    if (_value.documentationElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.documentationElement, (value) {
-      return _then(_value.copyWith(documentationElement: value));
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$TopicCanFilterByCopyWith<$Res>
-    implements $TopicCanFilterByCopyWith<$Res> {
-  factory _$TopicCanFilterByCopyWith(
-          _TopicCanFilterBy value, $Res Function(_TopicCanFilterBy) then) =
-      __$TopicCanFilterByCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      String name,
-      @JsonKey(name: '_name') Element nameElement,
-      List<TopicCanFilterByMatchType> matchType,
-      @JsonKey(name: '_matchType') List<Element> matchTypeElement,
-      Markdown documentation,
-      @JsonKey(name: '_documentation') Element documentationElement});
-
-  @override
-  $ElementCopyWith<$Res> get nameElement;
-  @override
-  $ElementCopyWith<$Res> get documentationElement;
-}
-
-/// @nodoc
-class __$TopicCanFilterByCopyWithImpl<$Res>
-    extends _$TopicCanFilterByCopyWithImpl<$Res>
-    implements _$TopicCanFilterByCopyWith<$Res> {
-  __$TopicCanFilterByCopyWithImpl(
-      _TopicCanFilterBy _value, $Res Function(_TopicCanFilterBy) _then)
-      : super(_value, (v) => _then(v as _TopicCanFilterBy));
-
-  @override
-  _TopicCanFilterBy get _value => super._value as _TopicCanFilterBy;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object name = freezed,
-    Object nameElement = freezed,
-    Object matchType = freezed,
-    Object matchTypeElement = freezed,
-    Object documentation = freezed,
-    Object documentationElement = freezed,
-  }) {
-    return _then(_TopicCanFilterBy(
-      id: id == freezed ? _value.id : id as String,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as List<FhirExtension>,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      name: name == freezed ? _value.name : name as String,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      matchType: matchType == freezed
-          ? _value.matchType
-          : matchType as List<TopicCanFilterByMatchType>,
-      matchTypeElement: matchTypeElement == freezed
-          ? _value.matchTypeElement
-          : matchTypeElement as List<Element>,
-      documentation: documentation == freezed
-          ? _value.documentation
-          : documentation as Markdown,
-      documentationElement: documentationElement == freezed
-          ? _value.documentationElement
-          : documentationElement as Element,
-    ));
-  }
-}
-
-@JsonSerializable()
-
-/// @nodoc
-class _$_TopicCanFilterBy extends _TopicCanFilterBy {
-  _$_TopicCanFilterBy(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.name,
-      @JsonKey(name: '_name') this.nameElement,
-      this.matchType,
-      @JsonKey(name: '_matchType') this.matchTypeElement,
-      this.documentation,
-      @JsonKey(name: '_documentation') this.documentationElement})
-      : super._();
-
-  factory _$_TopicCanFilterBy.fromJson(Map<String, dynamic> json) =>
-      _$_$_TopicCanFilterByFromJson(json);
-
-  @override
-  final String id;
-  @override
-  @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
-  @override
-  final List<FhirExtension> modifierExtension;
-  @override
-  final String name;
-  @override
-  @JsonKey(name: '_name')
-  final Element nameElement;
-  @override
-  final List<TopicCanFilterByMatchType> matchType;
-  @override
-  @JsonKey(name: '_matchType')
-  final List<Element> matchTypeElement;
-  @override
-  final Markdown documentation;
-  @override
-  @JsonKey(name: '_documentation')
-  final Element documentationElement;
-
-  @override
-  String toString() {
-    return 'TopicCanFilterBy(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, matchType: $matchType, matchTypeElement: $matchTypeElement, documentation: $documentation, documentationElement: $documentationElement)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is _TopicCanFilterBy &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.nameElement, nameElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.nameElement, nameElement)) &&
-            (identical(other.matchType, matchType) ||
-                const DeepCollectionEquality()
-                    .equals(other.matchType, matchType)) &&
-            (identical(other.matchTypeElement, matchTypeElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.matchTypeElement, matchTypeElement)) &&
-            (identical(other.documentation, documentation) ||
-                const DeepCollectionEquality()
-                    .equals(other.documentation, documentation)) &&
-            (identical(other.documentationElement, documentationElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.documentationElement, documentationElement)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(nameElement) ^
-      const DeepCollectionEquality().hash(matchType) ^
-      const DeepCollectionEquality().hash(matchTypeElement) ^
-      const DeepCollectionEquality().hash(documentation) ^
-      const DeepCollectionEquality().hash(documentationElement);
-
-  @override
-  _$TopicCanFilterByCopyWith<_TopicCanFilterBy> get copyWith =>
-      __$TopicCanFilterByCopyWithImpl<_TopicCanFilterBy>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$_$_TopicCanFilterByToJson(this);
-  }
-}
-
-abstract class _TopicCanFilterBy extends TopicCanFilterBy {
-  _TopicCanFilterBy._() : super._();
-  factory _TopicCanFilterBy(
-          {String id,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          List<FhirExtension> modifierExtension,
-          String name,
-          @JsonKey(name: '_name') Element nameElement,
-          List<TopicCanFilterByMatchType> matchType,
-          @JsonKey(name: '_matchType') List<Element> matchTypeElement,
-          Markdown documentation,
-          @JsonKey(name: '_documentation') Element documentationElement}) =
-      _$_TopicCanFilterBy;
-
-  factory _TopicCanFilterBy.fromJson(Map<String, dynamic> json) =
-      _$_TopicCanFilterBy.fromJson;
-
-  @override
-  String get id;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  @override
-  List<FhirExtension> get modifierExtension;
-  @override
-  String get name;
-  @override
-  @JsonKey(name: '_name')
-  Element get nameElement;
-  @override
-  List<TopicCanFilterByMatchType> get matchType;
-  @override
-  @JsonKey(name: '_matchType')
-  List<Element> get matchTypeElement;
-  @override
-  Markdown get documentation;
-  @override
-  @JsonKey(name: '_documentation')
-  Element get documentationElement;
-  @override
-  _$TopicCanFilterByCopyWith<_TopicCanFilterBy> get copyWith;
 }

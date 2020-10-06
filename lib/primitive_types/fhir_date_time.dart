@@ -7,12 +7,14 @@ class FhirDateTime extends Dates {
   @override
   final Either<PrimitiveFailure<String>, DateTime> value;
   @override
-  final DateTimeFormat format;
+  final int format;
 
   factory FhirDateTime(value) {
     assert(value != null);
-    var dateTuple = validateDateTime(value.toString());
-    return FhirDateTime._(dateTuple.value1, dateTuple.value2);
+    return FhirDateTime._(
+      validateDateTime(value.toString()),
+      value.toString().length,
+    );
   }
 
   FhirDateTime._(this.value, this.format);

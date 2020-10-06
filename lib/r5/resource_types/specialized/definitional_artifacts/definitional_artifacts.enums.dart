@@ -277,6 +277,8 @@ enum QuestionnaireItemType {
   group,
   @JsonValue('display')
   display,
+  @JsonValue('question')
+  question,
   @JsonValue('boolean')
   boolean,
   @JsonValue('decimal')

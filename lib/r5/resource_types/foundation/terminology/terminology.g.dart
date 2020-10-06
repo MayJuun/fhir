@@ -1066,8 +1066,10 @@ Map<String, dynamic> _$_$_ConceptMapTargetToJson(_$_ConceptMapTarget instance) {
 const _$ConceptMapTargetRelationshipEnumMap = {
   ConceptMapTargetRelationship.related_to: 'related-to',
   ConceptMapTargetRelationship.equivalent: 'equivalent',
-  ConceptMapTargetRelationship.broader: 'broader',
-  ConceptMapTargetRelationship.narrower: 'narrower',
+  ConceptMapTargetRelationship.source_is_narrower_than_target:
+      'source-is-narrower-than-target',
+  ConceptMapTargetRelationship.source_is_broader_than_target:
+      'source-is-broader-than-target',
   ConceptMapTargetRelationship.not_related_to: 'not-related-to',
   ConceptMapTargetRelationship.unknown: 'unknown',
 };

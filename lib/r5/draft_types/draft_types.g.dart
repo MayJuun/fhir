@@ -75,15 +75,16 @@ _$_ProductShelfLife _$_$_ProductShelfLifeFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    identifier: json['identifier'] == null
-        ? null
-        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    period: json['period'] == null
+    periodQuantity: json['periodQuantity'] == null
         ? null
-        : Quantity.fromJson(json['period'] as Map<String, dynamic>),
+        : Quantity.fromJson(json['periodQuantity'] as Map<String, dynamic>),
+    periodString: json['periodString'] as String,
+    periodStringElement: json['_periodString'] == null
+        ? null
+        : Element.fromJson(json['_periodString'] as Map<String, dynamic>),
     specialPrecautionsForStorage: (json['specialPrecautionsForStorage'] as List)
         ?.map((e) => e == null
             ? null
@@ -106,9 +107,10 @@ Map<String, dynamic> _$_$_ProductShelfLifeToJson(_$_ProductShelfLife instance) {
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('type', instance.type?.toJson());
-  writeNotNull('period', instance.period?.toJson());
+  writeNotNull('periodQuantity', instance.periodQuantity?.toJson());
+  writeNotNull('periodString', instance.periodString);
+  writeNotNull('_periodString', instance.periodStringElement?.toJson());
   writeNotNull('specialPrecautionsForStorage',
       instance.specialPrecautionsForStorage?.map((e) => e?.toJson())?.toList());
   return val;
@@ -259,110 +261,5 @@ Map<String, dynamic> _$_$_MarketingStatusToJson(_$_MarketingStatus instance) {
   writeNotNull('dateRange', instance.dateRange?.toJson());
   writeNotNull('restoreDate', instance.restoreDate?.toJson());
   writeNotNull('_restoreDate', instance.restoreDateElement?.toJson());
-  return val;
-}
-
-_$_SubstanceAmount _$_$_SubstanceAmountFromJson(Map<String, dynamic> json) {
-  return _$_SubstanceAmount(
-    id: json['id'] as String,
-    extension_: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    amountQuantity: json['amountQuantity'] == null
-        ? null
-        : Quantity.fromJson(json['amountQuantity'] as Map<String, dynamic>),
-    amountRange: json['amountRange'] == null
-        ? null
-        : Range.fromJson(json['amountRange'] as Map<String, dynamic>),
-    amountString: json['amountString'] as String,
-    amountStringElement: json['_amountString'] == null
-        ? null
-        : Element.fromJson(json['_amountString'] as Map<String, dynamic>),
-    amountType: json['amountType'] == null
-        ? null
-        : CodeableConcept.fromJson(json['amountType'] as Map<String, dynamic>),
-    amountText: json['amountText'] as String,
-    amountTextElement: json['_amountText'] == null
-        ? null
-        : Element.fromJson(json['_amountText'] as Map<String, dynamic>),
-    referenceRange: json['referenceRange'] == null
-        ? null
-        : SubstanceAmountReferenceRange.fromJson(
-            json['referenceRange'] as Map<String, dynamic>),
-  );
-}
-
-Map<String, dynamic> _$_$_SubstanceAmountToJson(_$_SubstanceAmount instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('amountQuantity', instance.amountQuantity?.toJson());
-  writeNotNull('amountRange', instance.amountRange?.toJson());
-  writeNotNull('amountString', instance.amountString);
-  writeNotNull('_amountString', instance.amountStringElement?.toJson());
-  writeNotNull('amountType', instance.amountType?.toJson());
-  writeNotNull('amountText', instance.amountText);
-  writeNotNull('_amountText', instance.amountTextElement?.toJson());
-  writeNotNull('referenceRange', instance.referenceRange?.toJson());
-  return val;
-}
-
-_$_SubstanceAmountReferenceRange _$_$_SubstanceAmountReferenceRangeFromJson(
-    Map<String, dynamic> json) {
-  return _$_SubstanceAmountReferenceRange(
-    id: json['id'] as String,
-    extension_: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    lowLimit: json['lowLimit'] == null
-        ? null
-        : Quantity.fromJson(json['lowLimit'] as Map<String, dynamic>),
-    highLimit: json['highLimit'] == null
-        ? null
-        : Quantity.fromJson(json['highLimit'] as Map<String, dynamic>),
-  );
-}
-
-Map<String, dynamic> _$_$_SubstanceAmountReferenceRangeToJson(
-    _$_SubstanceAmountReferenceRange instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('lowLimit', instance.lowLimit?.toJson());
-  writeNotNull('highLimit', instance.highLimit?.toJson());
   return val;
 }

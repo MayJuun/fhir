@@ -329,6 +329,8 @@ const _$CapabilityStatementFhirVersionEnumMap = {
   CapabilityStatementFhirVersion.v4_0_1: '4.0.1',
   CapabilityStatementFhirVersion.v4_1_0: '4.1.0',
   CapabilityStatementFhirVersion.v4_2_0: '4.2.0',
+  CapabilityStatementFhirVersion.v4_4_0: '4.4.0',
+  CapabilityStatementFhirVersion.v4_5_0: '4.5.0',
   CapabilityStatementFhirVersion.unknown: 'unknown',
 };
 
@@ -1554,6 +1556,8 @@ const _$CapabilityStatement2FhirVersionEnumMap = {
   CapabilityStatement2FhirVersion.v4_0_1: '4.0.1',
   CapabilityStatement2FhirVersion.v4_1_0: '4.1.0',
   CapabilityStatement2FhirVersion.v4_2_0: '4.2.0',
+  CapabilityStatement2FhirVersion.v4_4_0: '4.4.0',
+  CapabilityStatement2FhirVersion.v4_5_0: '4.5.0',
   CapabilityStatement2FhirVersion.unknown: 'unknown',
 };
 
@@ -4061,6 +4065,8 @@ const _$ImplementationGuideFhirVersionEnumMap = {
   ImplementationGuideFhirVersion.v4_0_1: '4.0.1',
   ImplementationGuideFhirVersion.v4_1_0: '4.1.0',
   ImplementationGuideFhirVersion.v4_2_0: '4.2.0',
+  ImplementationGuideFhirVersion.v4_4_0: '4.4.0',
+  ImplementationGuideFhirVersion.v4_5_0: '4.5.0',
   ImplementationGuideFhirVersion.unknown: 'unknown',
 };
 
@@ -4391,6 +4397,8 @@ const _$ImplementationGuideResourceFhirVersionEnumMap = {
   ImplementationGuideResourceFhirVersion.v4_0_1: '4.0.1',
   ImplementationGuideResourceFhirVersion.v4_1_0: '4.1.0',
   ImplementationGuideResourceFhirVersion.v4_2_0: '4.2.0',
+  ImplementationGuideResourceFhirVersion.v4_4_0: '4.4.0',
+  ImplementationGuideResourceFhirVersion.v4_5_0: '4.5.0',
   ImplementationGuideResourceFhirVersion.unknown: 'unknown',
 };
 
@@ -6205,9 +6213,6 @@ _$_StructureDefinition _$_$_StructureDefinitionFromJson(
     baseDefinition: json['baseDefinition'] == null
         ? null
         : Canonical.fromJson(json['baseDefinition'] as String),
-    baseDefinitionElement: json['_baseDefinition'] == null
-        ? null
-        : Element.fromJson(json['_baseDefinition'] as Map<String, dynamic>),
     derivation: _$enumDecodeNullable(
         _$StructureDefinitionDerivationEnumMap, json['derivation'],
         unknownValue: StructureDefinitionDerivation.unknown),
@@ -6294,7 +6299,6 @@ Map<String, dynamic> _$_$_StructureDefinitionToJson(
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('baseDefinition', instance.baseDefinition?.toJson());
-  writeNotNull('_baseDefinition', instance.baseDefinitionElement?.toJson());
   writeNotNull('derivation',
       _$StructureDefinitionDerivationEnumMap[instance.derivation]);
   writeNotNull('_derivation', instance.derivationElement?.toJson());
@@ -6336,6 +6340,8 @@ const _$StructureDefinitionFhirVersionEnumMap = {
   StructureDefinitionFhirVersion.v4_0_1: '4.0.1',
   StructureDefinitionFhirVersion.v4_1_0: '4.1.0',
   StructureDefinitionFhirVersion.v4_2_0: '4.2.0',
+  StructureDefinitionFhirVersion.v4_4_0: '4.4.0',
+  StructureDefinitionFhirVersion.v4_5_0: '4.5.0',
   StructureDefinitionFhirVersion.unknown: 'unknown',
 };
 
@@ -6882,7 +6888,6 @@ Map<String, dynamic> _$_$_StructureMapGroupToJson(
 }
 
 const _$StructureMapGroupTypeModeEnumMap = {
-  StructureMapGroupTypeMode.none: 'none',
   StructureMapGroupTypeMode.types: 'types',
   StructureMapGroupTypeMode.type_and_types: 'type-and-types',
   StructureMapGroupTypeMode.unknown: 'unknown',

@@ -680,9 +680,9 @@ _$_Expression _$_$_ExpressionFromJson(Map<String, dynamic> json) {
     nameElement: json['_name'] == null
         ? null
         : Element.fromJson(json['_name'] as Map<String, dynamic>),
-    language: _$enumDecodeNullable(
-        _$ExpressionLanguageEnumMap, json['language'],
-        unknownValue: ExpressionLanguage.unknown),
+    language: json['language'] == null
+        ? null
+        : Code.fromJson(json['language'] as String),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -715,7 +715,7 @@ Map<String, dynamic> _$_$_ExpressionToJson(_$_Expression instance) {
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('name', instance.name?.toJson());
   writeNotNull('_name', instance.nameElement?.toJson());
-  writeNotNull('language', _$ExpressionLanguageEnumMap[instance.language]);
+  writeNotNull('language', instance.language?.toJson());
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('expression', instance.expression);
   writeNotNull('_expression', instance.expressionElement?.toJson());
@@ -723,10 +723,3 @@ Map<String, dynamic> _$_$_ExpressionToJson(_$_Expression instance) {
   writeNotNull('_reference', instance.referenceElement?.toJson());
   return val;
 }
-
-const _$ExpressionLanguageEnumMap = {
-  ExpressionLanguage.text_cql: 'text/cql',
-  ExpressionLanguage.text_fhirpath: 'text/fhirpath',
-  ExpressionLanguage.application_x_fhir_query: 'application/x-fhir-query',
-  ExpressionLanguage.unknown: 'unknown',
-};

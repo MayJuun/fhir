@@ -1177,10 +1177,6 @@ _$_DeviceDefinition _$_$_DeviceDefinitionFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
-    urlElement: json['_url'] == null
-        ? null
-        : Element.fromJson(json['_url'] as Map<String, dynamic>),
     onlineInformation: json['onlineInformation'] == null
         ? null
         : FhirUri.fromJson(json['onlineInformation'] as String),
@@ -1260,8 +1256,6 @@ Map<String, dynamic> _$_$_DeviceDefinitionToJson(_$_DeviceDefinition instance) {
       'property', instance.property?.map((e) => e?.toJson())?.toList());
   writeNotNull('owner', instance.owner?.toJson());
   writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
-  writeNotNull('url', instance.url?.toJson());
-  writeNotNull('_url', instance.urlElement?.toJson());
   writeNotNull('onlineInformation', instance.onlineInformation?.toJson());
   writeNotNull(
       '_onlineInformation', instance.onlineInformationElement?.toJson());
@@ -3729,6 +3723,7 @@ Map<String, dynamic> _$_$_QuestionnaireItemToJson(
 const _$QuestionnaireItemTypeEnumMap = {
   QuestionnaireItemType.group: 'group',
   QuestionnaireItemType.display: 'display',
+  QuestionnaireItemType.question: 'question',
   QuestionnaireItemType.boolean: 'boolean',
   QuestionnaireItemType.decimal: 'decimal',
   QuestionnaireItemType.integer: 'integer',

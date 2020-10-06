@@ -57,6 +57,8 @@ enum DeviceUdiCarrierEntryType {
   card,
   @JsonValue('self-reported')
   self_reported,
+  @JsonValue('electronic-transmission')
+  electronic_transmission,
   @JsonValue('unknown')
   unknown,
 }

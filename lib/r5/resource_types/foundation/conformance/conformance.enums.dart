@@ -73,6 +73,10 @@ enum CapabilityStatementFhirVersion {
   v4_1_0,
   @JsonValue('4.2.0')
   v4_2_0,
+  @JsonValue('4.4.0')
+  v4_4_0,
+  @JsonValue('4.5.0')
+  v4_5_0,
   @JsonValue('unknown')
   unknown,
 }
@@ -275,6 +279,10 @@ enum CapabilityStatement2FhirVersion {
   v4_1_0,
   @JsonValue('4.2.0')
   v4_2_0,
+  @JsonValue('4.4.0')
+  v4_4_0,
+  @JsonValue('4.5.0')
+  v4_5_0,
   @JsonValue('unknown')
   unknown,
 }
@@ -1140,6 +1148,10 @@ enum ImplementationGuideFhirVersion {
   v4_1_0,
   @JsonValue('4.2.0')
   v4_2_0,
+  @JsonValue('4.4.0')
+  v4_4_0,
+  @JsonValue('4.5.0')
+  v4_5_0,
   @JsonValue('unknown')
   unknown,
 }
@@ -1195,6 +1207,10 @@ enum ImplementationGuideResourceFhirVersion {
   v4_1_0,
   @JsonValue('4.2.0')
   v4_2_0,
+  @JsonValue('4.4.0')
+  v4_4_0,
+  @JsonValue('4.5.0')
+  v4_5_0,
   @JsonValue('unknown')
   unknown,
 }
@@ -1475,6 +1491,10 @@ enum StructureDefinitionFhirVersion {
   v4_1_0,
   @JsonValue('4.2.0')
   v4_2_0,
+  @JsonValue('4.4.0')
+  v4_4_0,
+  @JsonValue('4.5.0')
+  v4_5_0,
   @JsonValue('unknown')
   unknown,
 }
@@ -1537,8 +1557,6 @@ enum StructureMapStructureMode {
 }
 
 enum StructureMapGroupTypeMode {
-  @JsonValue('none')
-  none,
   @JsonValue('types')
   types,
   @JsonValue('type-and-types')

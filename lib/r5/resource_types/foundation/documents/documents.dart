@@ -256,8 +256,8 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
-    Identifier masterIdentifier,
     List<Identifier> identifier,
+    List<Reference> basedOn,
     @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
         DocumentReferenceStatus status,
     @JsonKey(name: '_status') Element statusElement,
@@ -266,21 +266,47 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
     CodeableConcept type,
     List<CodeableConcept> category,
     Reference subject,
+    List<Reference> encounter,
+    List<CodeableConcept> event,
+    CodeableConcept facilityType,
+    CodeableConcept practiceSetting,
+    Period period,
     Instant date,
     @JsonKey(name: '_date') Element dateElement,
     List<Reference> author,
-    Reference authenticator,
+    List<DocumentReferenceAttester> attester,
     Reference custodian,
     List<DocumentReferenceRelatesTo> relatesTo,
-    String description,
+    Markdown description,
     @JsonKey(name: '_description') Element descriptionElement,
     List<CodeableConcept> securityLabel,
     @required List<DocumentReferenceContent> content,
-    DocumentReferenceContext context,
+    Reference sourcePatientInfo,
+    List<Reference> related,
   }) = _DocumentReference;
 
   factory DocumentReference.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceFromJson(json);
+}
+
+@freezed
+abstract class DocumentReferenceAttester
+    implements _$DocumentReferenceAttester {
+  DocumentReferenceAttester._();
+  factory DocumentReferenceAttester({
+    String id,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
+    @JsonKey(unknownEnumValue: DocumentReferenceAttesterMode.unknown)
+        DocumentReferenceAttesterMode mode,
+    @JsonKey(name: '_mode') Element modeElement,
+    FhirDateTime time,
+    @JsonKey(name: '_time') Element timeElement,
+    Reference party,
+  }) = _DocumentReferenceAttester;
+
+  factory DocumentReferenceAttester.fromJson(Map<String, dynamic> json) =>
+      _$DocumentReferenceAttesterFromJson(json);
 }
 
 @freezed
@@ -310,29 +336,9 @@ abstract class DocumentReferenceContent implements _$DocumentReferenceContent {
     List<FhirExtension> modifierExtension,
     @required Attachment attachment,
     Coding format,
+    Identifier identifier,
   }) = _DocumentReferenceContent;
 
   factory DocumentReferenceContent.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceContentFromJson(json);
-}
-
-@freezed
-abstract class DocumentReferenceContext implements _$DocumentReferenceContext {
-  DocumentReferenceContext._();
-  factory DocumentReferenceContext({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Reference> encounter,
-    List<CodeableConcept> event,
-    Period period,
-    CodeableConcept facilityType,
-    CodeableConcept practiceSetting,
-    Reference sourcePatientInfo,
-    List<Reference> related,
-    List<Reference> basedOn,
-  }) = _DocumentReferenceContext;
-
-  factory DocumentReferenceContext.fromJson(Map<String, dynamic> json) =>
-      _$DocumentReferenceContextFromJson(json);
 }

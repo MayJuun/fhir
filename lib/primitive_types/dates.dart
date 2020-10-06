@@ -1,43 +1,47 @@
 import 'package:dartz/dartz.dart';
+import 'package:fhir/primitive_types/primitive_failures.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:string_validator/string_validator.dart';
 
-import 'primitive_failures.dart';
-import 'primitive_objects.dart';
-
-abstract class Dates extends PrimitiveObject<DateTime> {
-  @override
+@immutable
+abstract class Dates<DateTime> {
+  const Dates();
   Either<PrimitiveFailure<String>, DateTime> get value;
-  DateTimeFormat get format;
+  int get format;
 
   @override
-  String toJson() => toString();
+  bool operator ==(Object o) {
+    if (identical(this, o)) return true;
+    return o is Dates<DateTime>
+        ? o.value == value
+        : value.fold((isLeft) => false, (isRight) => o == isRight);
+  }
+
+  bool get isValid => value.isRight();
 
   @override
-  String toString() => value.fold(
+  int get hashCode => value.hashCode;
+
+  @override
+  String toString() => result();
+
+  dynamic toJson() => result();
+
+  dynamic result() => value.fold(
         (l) => '${l.errorMessage()}',
         (r) => _formattedDate(r),
       );
 
-  String _formattedDate(value) {
-    switch (format) {
-      case DateTimeFormat.y:
-        return '${value.year}';
-      case DateTimeFormat.ym:
-        return '${value.year}-${value.month.toString().padLeft(2, '0')}';
-      case DateTimeFormat.ymd:
-        return '${value.year}-'
-            '${value.month.toString().padLeft(2, '0')}-'
-            '${value.day.toString().padLeft(2, '0')}';
-      default:
-        return '${value.toIso8601String()}';
-    }
-  }
+  String _formattedDate(value) => value.toIso8601String().substring(
+      0,
+      format > value.toIso8601String().length
+          ? value.toIso8601String().length
+          : format);
 }
 
 bool _hasMatch(String pattern, String input) => RegExp(pattern).hasMatch(input);
 
-Tuple2<Either<PrimitiveFailure<String>, DateTime>, DateTimeFormat>
-    validateInstant(dynamic value) {
+Either<PrimitiveFailure<String>, DateTime> validateInstant(dynamic value) {
   //changes all values to String to allow for validation
   var stringValue = value is String ? value : value.toString();
 
@@ -55,17 +59,15 @@ Tuple2<Either<PrimitiveFailure<String>, DateTime>, DateTimeFormat>
 
     //then check if it matches
     return _hasMatch(_instantString, stringValue)
-        ? Tuple2(right(DateTime.parse(value)), DateTimeFormat.utc)
-        : Tuple2(left(PrimitiveFailure.invalidInstant(failedValue: value)),
-            DateTimeFormat.incorrect_format);
+        ? right(DateTime.parse(value))
+        : left(PrimitiveFailure.invalidInstant(failedValue: value));
   } else {
-    return Tuple2(left(PrimitiveFailure.invalidInstant(failedValue: value)),
-        DateTimeFormat.incorrect_format);
+    return left(PrimitiveFailure.invalidInstant(failedValue: value));
   }
 }
 
-Tuple2<Either<PrimitiveFailure<String>, DateTime>, DateTimeFormat>
-    validateDateTime(String value) => isDate(value)
+Either<PrimitiveFailure<String>, DateTime> validateDateTime(String value) =>
+    isDate(value)
         ? _hasMatch(
                 _dateTimeString,
                 value.length <= 10
@@ -73,44 +75,34 @@ Tuple2<Either<PrimitiveFailure<String>, DateTime>, DateTimeFormat>
                     : value[10] == ' '
                         ? value.replaceFirst(' ', 'T')
                         : value)
-            ? Tuple2(right(DateTime.parse(value)), DateTimeFormat.utc)
-            : Tuple2(left(PrimitiveFailure.invalidInstant(failedValue: value)),
-                DateTimeFormat.incorrect_format)
+            ? right(DateTime.parse(value))
+            : left(PrimitiveFailure.invalidInstant(failedValue: value))
         : _partialDateTime(value);
 
-Tuple2<Either<PrimitiveFailure<String>, DateTime>, DateTimeFormat> validateDate(
-        String value) =>
+Either<PrimitiveFailure<String>, DateTime> validateDate(String value) =>
     isDate(value)
         ? _hasMatch(_dateString, value)
-            ? Tuple2(right(DateTime.parse(value)), DateTimeFormat.ymd)
-            : Tuple2(left(PrimitiveFailure.invalidInstant(failedValue: value)),
-                DateTimeFormat.incorrect_format)
+            ? right(DateTime.parse(value))
+            : left(PrimitiveFailure.invalidInstant(failedValue: value))
         : _partialDateTime(value);
 
-Tuple2<Either<PrimitiveFailure<String>, DateTime>, DateTimeFormat>
-    _partialDateTime(String value) {
+Either<PrimitiveFailure<String>, DateTime> _partialDateTime(String value) {
   assert(value != null);
-  Either<PrimitiveFailure<String>, DateTime> dateTime;
-  DateTimeFormat dateTimeFormat;
 
   if (_hasMatch(
       r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)$', value)) {
-    dateTimeFormat = DateTimeFormat.y;
-    dateTime = right(DateTime(int.parse(value)));
+    return right(DateTime(int.parse(value)));
   } else if (_hasMatch(
       r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(0[1-9]|1[0-2])$',
       value)) {
     var year = int.parse(value.split('-')[0]);
     var month = int.parse(value.split('-')[1]);
-    dateTimeFormat = DateTimeFormat.ym;
-    dateTime = right(
+    return right(
       DateTime(year, month),
     );
   } else {
-    dateTimeFormat = DateTimeFormat.incorrect_format;
-    dateTime = left(PrimitiveFailure.invalidFhirDateTime(failedValue: value));
+    return left(PrimitiveFailure.invalidFhirDateTime(failedValue: value));
   }
-  return Tuple2(dateTime, dateTimeFormat);
 }
 
 enum DateTimeFormat {

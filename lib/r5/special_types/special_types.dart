@@ -67,8 +67,11 @@ abstract class Statistic implements _$Statistic {
     List<Annotation> note,
     CodeableConcept statisticType,
     Quantity quantity,
+    Integer numberOfEvents,
+    @JsonKey(name: '_numberOfEvents') Element numberOfEventsElement,
     StatisticSampleSize sampleSize,
     List<StatisticAttributeEstimate> attributeEstimate,
+    List<StatisticModelCharacteristic> modelCharacteristic,
   }) = _Statistic;
 
   factory Statistic.fromJson(Map<String, dynamic> json) =>
@@ -91,8 +94,6 @@ abstract class StatisticSampleSize implements _$StatisticSampleSize {
     @JsonKey(name: '_numberOfParticipants') Element numberOfParticipantsElement,
     Integer knownDataCount,
     @JsonKey(name: '_knownDataCount') Element knownDataCountElement,
-    Integer numeratorCount,
-    @JsonKey(name: '_numeratorCount') Element numeratorCountElement,
   }) = _StatisticSampleSize;
 
   factory StatisticSampleSize.fromJson(Map<String, dynamic> json) =>
@@ -115,7 +116,7 @@ abstract class StatisticAttributeEstimate
     Decimal level,
     @JsonKey(name: '_level') Element levelElement,
     Range range,
-    List<StatisticEstimateQualifier> estimateQualifier,
+    List<StatisticAttributeEstimate1> attributeEstimate,
   }) = _StatisticAttributeEstimate;
 
   factory StatisticAttributeEstimate.fromJson(Map<String, dynamic> json) =>
@@ -123,10 +124,10 @@ abstract class StatisticAttributeEstimate
 }
 
 @freezed
-abstract class StatisticEstimateQualifier
-    implements _$StatisticEstimateQualifier {
-  StatisticEstimateQualifier._();
-  factory StatisticEstimateQualifier({
+abstract class StatisticAttributeEstimate1
+    implements _$StatisticAttributeEstimate1 {
+  StatisticAttributeEstimate1._();
+  factory StatisticAttributeEstimate1({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
@@ -138,10 +139,50 @@ abstract class StatisticEstimateQualifier
     Decimal level,
     @JsonKey(name: '_level') Element levelElement,
     Range range,
-  }) = _StatisticEstimateQualifier;
+  }) = _StatisticAttributeEstimate1;
 
-  factory StatisticEstimateQualifier.fromJson(Map<String, dynamic> json) =>
-      _$StatisticEstimateQualifierFromJson(json);
+  factory StatisticAttributeEstimate1.fromJson(Map<String, dynamic> json) =>
+      _$StatisticAttributeEstimate1FromJson(json);
+}
+
+@freezed
+abstract class StatisticModelCharacteristic
+    implements _$StatisticModelCharacteristic {
+  StatisticModelCharacteristic._();
+  factory StatisticModelCharacteristic({
+    String id,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
+    CodeableConcept code,
+    CodeableConcept valueCodeableConcept,
+    Boolean valueBoolean,
+    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+    Quantity valueQuantity,
+    Range valueRange,
+    List<StatisticVariable> variable,
+  }) = _StatisticModelCharacteristic;
+
+  factory StatisticModelCharacteristic.fromJson(Map<String, dynamic> json) =>
+      _$StatisticModelCharacteristicFromJson(json);
+}
+
+@freezed
+abstract class StatisticVariable implements _$StatisticVariable {
+  StatisticVariable._();
+  factory StatisticVariable({
+    String id,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
+    @required Reference variableDefinition,
+    Code handling,
+    @JsonKey(name: '_handling') Element handlingElement,
+    List<CodeableConcept> valueCategory,
+    List<Quantity> valueQuantity,
+    List<Range> valueRange,
+  }) = _StatisticVariable;
+
+  factory StatisticVariable.fromJson(Map<String, dynamic> json) =>
+      _$StatisticVariableFromJson(json);
 }
 
 @freezed
@@ -639,7 +680,6 @@ abstract class ElementDefinitionType implements _$ElementDefinitionType {
     FhirUri code,
     @JsonKey(name: '_code') Element codeElement,
     List<Canonical> profile,
-    @JsonKey(name: '_profile') List<Element> profileElement,
     List<Canonical> targetProfile,
     List<ElementDefinitionTypeAggregation> aggregation,
     @JsonKey(name: '_aggregation') List<Element> aggregationElement,

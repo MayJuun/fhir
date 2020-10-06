@@ -28,12 +28,12 @@ abstract class AdministrableProductDefinition
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> subject,
-    @required CodeableConcept administrableDoseForm,
+    CodeableConcept administrableDoseForm,
     CodeableConcept unitOfPresentation,
     List<Reference> producedFrom,
     List<Reference> ingredient,
     List<Reference> device,
-    List<AdministrableProductDefinitionCharacteristic> characteristic,
+    List<AdministrableProductDefinitionProperty> property,
     @required
         List<AdministrableProductDefinitionRouteOfAdministration>
             routeOfAdministration,
@@ -44,29 +44,27 @@ abstract class AdministrableProductDefinition
 }
 
 @freezed
-abstract class AdministrableProductDefinitionCharacteristic
-    implements _$AdministrableProductDefinitionCharacteristic {
-  AdministrableProductDefinitionCharacteristic._();
-  factory AdministrableProductDefinitionCharacteristic({
+abstract class AdministrableProductDefinitionProperty
+    implements _$AdministrableProductDefinitionProperty {
+  AdministrableProductDefinitionProperty._();
+  factory AdministrableProductDefinitionProperty({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
-    @required CodeableConcept code,
-    Coding valueCoding,
+    @required CodeableConcept type,
+    CodeableConcept valueCodeableConcept,
     Quantity valueQuantity,
-    String valueString,
-    @JsonKey(name: '_valueString') Element valueStringElement,
     Date valueDate,
     @JsonKey(name: '_valueDate') Element valueDateElement,
     Boolean valueBoolean,
     @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
     Attachment valueAttachment,
     CodeableConcept status,
-  }) = _AdministrableProductDefinitionCharacteristic;
+  }) = _AdministrableProductDefinitionProperty;
 
-  factory AdministrableProductDefinitionCharacteristic.fromJson(
+  factory AdministrableProductDefinitionProperty.fromJson(
           Map<String, dynamic> json) =>
-      _$AdministrableProductDefinitionCharacteristicFromJson(json);
+      _$AdministrableProductDefinitionPropertyFromJson(json);
 }
 
 @freezed
@@ -147,6 +145,7 @@ abstract class ClinicalUseIssue with Resource implements _$ClinicalUseIssue {
     @JsonKey(unknownEnumValue: ClinicalUseIssueType.unknown)
         ClinicalUseIssueType type,
     @JsonKey(name: '_type') Element typeElement,
+    CodeableConcept category,
     List<Reference> subject,
     CodeableConcept status,
     Markdown description,
@@ -290,11 +289,14 @@ abstract class Ingredient with Resource implements _$Ingredient {
     List<FhirExtension> modifierExtension,
     Identifier identifier,
     @required CodeableConcept role,
+    List<CodeableConcept> function,
+    Markdown description,
+    @JsonKey(name: '_description') Element descriptionElement,
     Boolean allergenicIndicator,
     @JsonKey(name: '_allergenicIndicator') Element allergenicIndicatorElement,
     List<Reference> manufacturer,
-    List<IngredientSpecifiedSubstance> specifiedSubstance,
     IngredientSubstance substance,
+    List<IngredientSpecifiedSubstance> specifiedSubstance,
   }) = _Ingredient;
 
   factory Ingredient.fromJson(Map<String, dynamic> json) =>
@@ -302,22 +304,19 @@ abstract class Ingredient with Resource implements _$Ingredient {
 }
 
 @freezed
-abstract class IngredientSpecifiedSubstance
-    implements _$IngredientSpecifiedSubstance {
-  IngredientSpecifiedSubstance._();
-  factory IngredientSpecifiedSubstance({
+abstract class IngredientSubstance implements _$IngredientSubstance {
+  IngredientSubstance._();
+  factory IngredientSubstance({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     CodeableConcept codeCodeableConcept,
     Reference codeReference,
-    @required CodeableConcept group,
-    CodeableConcept confidentiality,
     List<IngredientStrength> strength,
-  }) = _IngredientSpecifiedSubstance;
+  }) = _IngredientSubstance;
 
-  factory IngredientSpecifiedSubstance.fromJson(Map<String, dynamic> json) =>
-      _$IngredientSpecifiedSubstanceFromJson(json);
+  factory IngredientSubstance.fromJson(Map<String, dynamic> json) =>
+      _$IngredientSubstanceFromJson(json);
 }
 
 @freezed
@@ -329,8 +328,12 @@ abstract class IngredientStrength implements _$IngredientStrength {
     List<FhirExtension> modifierExtension,
     Ratio presentation,
     Ratio presentationHighLimit,
+    String presentationText,
+    @JsonKey(name: '_presentationText') Element presentationTextElement,
     Ratio concentration,
     Ratio concentrationHighLimit,
+    String concentrationText,
+    @JsonKey(name: '_concentrationText') Element concentrationTextElement,
     String measurementPoint,
     @JsonKey(name: '_measurementPoint') Element measurementPointElement,
     List<CodeableConcept> country,
@@ -363,19 +366,22 @@ abstract class IngredientReferenceStrength
 }
 
 @freezed
-abstract class IngredientSubstance implements _$IngredientSubstance {
-  IngredientSubstance._();
-  factory IngredientSubstance({
+abstract class IngredientSpecifiedSubstance
+    implements _$IngredientSpecifiedSubstance {
+  IngredientSpecifiedSubstance._();
+  factory IngredientSpecifiedSubstance({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     CodeableConcept codeCodeableConcept,
     Reference codeReference,
+    @required CodeableConcept group,
+    CodeableConcept confidentiality,
     List<IngredientStrength> strength,
-  }) = _IngredientSubstance;
+  }) = _IngredientSpecifiedSubstance;
 
-  factory IngredientSubstance.fromJson(Map<String, dynamic> json) =>
-      _$IngredientSubstanceFromJson(json);
+  factory IngredientSpecifiedSubstance.fromJson(Map<String, dynamic> json) =>
+      _$IngredientSpecifiedSubstanceFromJson(json);
 }
 
 @freezed
@@ -402,7 +408,7 @@ abstract class ManufacturedItemDefinition
     CodeableConcept unitOfPresentation,
     List<Reference> manufacturer,
     List<Reference> ingredient,
-    List<ManufacturedItemDefinitionCharacteristic> characteristic,
+    List<ManufacturedItemDefinitionProperty> property,
   }) = _ManufacturedItemDefinition;
 
   factory ManufacturedItemDefinition.fromJson(Map<String, dynamic> json) =>
@@ -410,28 +416,26 @@ abstract class ManufacturedItemDefinition
 }
 
 @freezed
-abstract class ManufacturedItemDefinitionCharacteristic
-    implements _$ManufacturedItemDefinitionCharacteristic {
-  ManufacturedItemDefinitionCharacteristic._();
-  factory ManufacturedItemDefinitionCharacteristic({
+abstract class ManufacturedItemDefinitionProperty
+    implements _$ManufacturedItemDefinitionProperty {
+  ManufacturedItemDefinitionProperty._();
+  factory ManufacturedItemDefinitionProperty({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
-    @required CodeableConcept code,
-    Coding valueCoding,
+    @required CodeableConcept type,
+    CodeableConcept valueCodeableConcept,
     Quantity valueQuantity,
-    String valueString,
-    @JsonKey(name: '_valueString') Element valueStringElement,
     Date valueDate,
     @JsonKey(name: '_valueDate') Element valueDateElement,
     Boolean valueBoolean,
     @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
     Attachment valueAttachment,
-  }) = _ManufacturedItemDefinitionCharacteristic;
+  }) = _ManufacturedItemDefinitionProperty;
 
-  factory ManufacturedItemDefinitionCharacteristic.fromJson(
+  factory ManufacturedItemDefinitionProperty.fromJson(
           Map<String, dynamic> json) =>
-      _$ManufacturedItemDefinitionCharacteristicFromJson(json);
+      _$ManufacturedItemDefinitionPropertyFromJson(json);
 }
 
 @freezed
@@ -455,10 +459,12 @@ abstract class MedicinalProductDefinition
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     CodeableConcept type,
-    Coding domain,
+    CodeableConcept domain,
     String version,
     @JsonKey(name: '_version') Element versionElement,
-    Coding status,
+    CodeableConcept status,
+    FhirDateTime statusDate,
+    @JsonKey(name: '_statusDate') Element statusDateElement,
     Markdown description,
     @JsonKey(name: '_description') Element descriptionElement,
     CodeableConcept combinedPharmaceuticalDoseForm,
@@ -468,11 +474,13 @@ abstract class MedicinalProductDefinition
     CodeableConcept additionalMonitoringIndicator,
     List<CodeableConcept> specialMeasures,
     CodeableConcept paediatricUseIndicator,
-    List<CodeableConcept> productClassification,
+    List<CodeableConcept> classification,
+    List<CodeableConcept> characteristic,
     List<MarketingStatus> marketingStatus,
     List<Reference> pharmaceuticalProduct,
     List<Reference> packagedMedicinalProduct,
     List<Reference> ingredient,
+    List<Reference> impurity,
     List<Reference> attachedDocument,
     List<Reference> masterFile,
     List<MedicinalProductDefinitionContact> contact,
@@ -514,7 +522,7 @@ abstract class MedicinalProductDefinitionName
     List<FhirExtension> modifierExtension,
     String productName,
     @JsonKey(name: '_productName') Element productNameElement,
-    Coding type,
+    CodeableConcept type,
     List<MedicinalProductDefinitionNamePart> namePart,
     List<MedicinalProductDefinitionCountryLanguage> countryLanguage,
   }) = _MedicinalProductDefinitionName;
@@ -533,7 +541,7 @@ abstract class MedicinalProductDefinitionNamePart
     List<FhirExtension> modifierExtension,
     String part,
     @JsonKey(name: '_part') Element partElement,
-    @required Coding type,
+    @required CodeableConcept type,
   }) = _MedicinalProductDefinitionNamePart;
 
   factory MedicinalProductDefinitionNamePart.fromJson(
@@ -567,9 +575,8 @@ abstract class MedicinalProductDefinitionCrossReference
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
-    Identifier productIdentifier,
-    Reference productReference,
-    Coding type,
+    @required CodeableReference product,
+    CodeableConcept type,
   }) = _MedicinalProductDefinitionCrossReference;
 
   factory MedicinalProductDefinitionCrossReference.fromJson(
@@ -585,8 +592,7 @@ abstract class MedicinalProductDefinitionManufacturingBusinessOperation
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
-    Coding typeCoding,
-    Reference typeReference,
+    CodeableReference type,
     Period effectiveDate,
     List<Reference> manufacturer,
     Reference authorization,
@@ -618,11 +624,18 @@ abstract class PackagedProductDefinition
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
+    String name,
+    @JsonKey(name: '_name') Element nameElement,
+    CodeableConcept type,
     List<Reference> subject,
-    String description,
+    CodeableConcept status,
+    FhirDateTime statusDate,
+    @JsonKey(name: '_statusDate') Element statusDateElement,
+    Markdown description,
     @JsonKey(name: '_description') Element descriptionElement,
     CodeableConcept legalStatusOfSupply,
     List<MarketingStatus> marketingStatus,
+    List<CodeableConcept> characteristic,
     Boolean copackagedIndicator,
     @JsonKey(name: '_copackagedIndicator') Element copackagedIndicatorElement,
     Reference marketingAuthorization,
@@ -662,12 +675,13 @@ abstract class PackagedProductDefinitionPackage
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     CodeableConcept type,
-    Quantity quantity,
+    Integer quantity,
+    @JsonKey(name: '_quantity') Element quantityElement,
     List<CodeableConcept> material,
     List<CodeableConcept> alternateMaterial,
     List<ProductShelfLife> shelfLifeStorage,
     List<Reference> manufacturer,
-    List<PackagedProductDefinitionCharacteristic> characteristic,
+    List<PackagedProductDefinitionProperty> property,
     List<PackagedProductDefinitionContainedItem> containedItem,
     List<PackagedProductDefinitionPackage> package,
   }) = _PackagedProductDefinitionPackage;
@@ -678,28 +692,26 @@ abstract class PackagedProductDefinitionPackage
 }
 
 @freezed
-abstract class PackagedProductDefinitionCharacteristic
-    implements _$PackagedProductDefinitionCharacteristic {
-  PackagedProductDefinitionCharacteristic._();
-  factory PackagedProductDefinitionCharacteristic({
+abstract class PackagedProductDefinitionProperty
+    implements _$PackagedProductDefinitionProperty {
+  PackagedProductDefinitionProperty._();
+  factory PackagedProductDefinitionProperty({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
-    @required CodeableConcept code,
-    Coding valueCoding,
+    @required CodeableConcept type,
+    CodeableConcept valueCodeableConcept,
     Quantity valueQuantity,
-    String valueString,
-    @JsonKey(name: '_valueString') Element valueStringElement,
     Date valueDate,
     @JsonKey(name: '_valueDate') Element valueDateElement,
     Boolean valueBoolean,
     @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
     Attachment valueAttachment,
-  }) = _PackagedProductDefinitionCharacteristic;
+  }) = _PackagedProductDefinitionProperty;
 
-  factory PackagedProductDefinitionCharacteristic.fromJson(
+  factory PackagedProductDefinitionProperty.fromJson(
           Map<String, dynamic> json) =>
-      _$PackagedProductDefinitionCharacteristicFromJson(json);
+      _$PackagedProductDefinitionPropertyFromJson(json);
 }
 
 @freezed
@@ -750,6 +762,9 @@ abstract class RegulatedAuthorization
     FhirDateTime statusDate,
     @JsonKey(name: '_statusDate') Element statusDateElement,
     Period validityPeriod,
+    CodeableConcept indicationCodeableConcept,
+    Reference indicationReference,
+    CodeableConcept intendedUse,
     List<CodeableConcept> basis,
     List<RegulatedAuthorizationRelatedDate> relatedDate,
     List<Reference> jurisdictionalAuthorization,
@@ -824,6 +839,7 @@ abstract class SubstanceDefinition
     @JsonKey(name: '_version') Element versionElement,
     CodeableConcept status,
     CodeableConcept category,
+    List<CodeableConcept> classification,
     CodeableConcept domain,
     Markdown description,
     @JsonKey(name: '_description') Element descriptionElement,
@@ -887,8 +903,7 @@ abstract class SubstanceDefinitionProperty
     CodeableConcept code,
     String parameters,
     @JsonKey(name: '_parameters') Element parametersElement,
-    Reference definingSubstanceReference,
-    CodeableConcept definingSubstanceCodeableConcept,
+    CodeableReference definingSubstance,
     Quantity amountQuantity,
     String amountString,
     @JsonKey(name: '_amountString') Element amountStringElement,
@@ -917,7 +932,7 @@ abstract class SubstanceDefinitionStructure
         Element molecularFormulaByMoietyElement,
     List<SubstanceDefinitionIsotope> isotope,
     SubstanceDefinitionMolecularWeight molecularWeight,
-    List<Coding> sourceCoding,
+    List<CodeableConcept> technique,
     List<Reference> sourceDocument,
     List<SubstanceDefinitionRepresentation> representation,
   }) = _SubstanceDefinitionStructure;
@@ -974,7 +989,8 @@ abstract class SubstanceDefinitionRepresentation
     CodeableConcept type,
     String representation,
     @JsonKey(name: '_representation') Element representationElement,
-    Attachment attachment,
+    CodeableConcept format,
+    Reference document,
   }) = _SubstanceDefinitionRepresentation;
 
   factory SubstanceDefinitionRepresentation.fromJson(
@@ -1184,11 +1200,12 @@ abstract class SubstancePolymer with Resource implements _$SubstancePolymer {
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
+    Identifier identifier,
     @JsonKey(name: 'class') CodeableConcept class_,
     CodeableConcept geometry,
     List<CodeableConcept> copolymerConnectivity,
-    List<String> modification,
-    @JsonKey(name: '_modification') List<Element> modificationElement,
+    String modification,
+    @JsonKey(name: '_modification') Element modificationElement,
     List<SubstancePolymerMonomerSet> monomerSet,
     List<SubstancePolymerRepeat> repeat,
   }) = _SubstancePolymer;
@@ -1221,11 +1238,11 @@ abstract class SubstancePolymerStartingMaterial
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
-    CodeableConcept material,
-    CodeableConcept type,
+    CodeableConcept code,
+    CodeableConcept category,
     Boolean isDefining,
     @JsonKey(name: '_isDefining') Element isDefiningElement,
-    SubstanceAmount amount,
+    Quantity amount,
   }) = _SubstancePolymerStartingMaterial;
 
   factory SubstancePolymerStartingMaterial.fromJson(
@@ -1240,8 +1257,6 @@ abstract class SubstancePolymerRepeat implements _$SubstancePolymerRepeat {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
-    Integer numberOfUnits,
-    @JsonKey(name: '_numberOfUnits') Element numberOfUnitsElement,
     String averageMolecularFormula,
     @JsonKey(name: '_averageMolecularFormula')
         Element averageMolecularFormulaElement,
@@ -1261,10 +1276,11 @@ abstract class SubstancePolymerRepeatUnit
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
-    CodeableConcept orientationOfPolymerisation,
-    String repeatUnit,
-    @JsonKey(name: '_repeatUnit') Element repeatUnitElement,
-    SubstanceAmount amount,
+    String unit,
+    @JsonKey(name: '_unit') Element unitElement,
+    CodeableConcept orientation,
+    Integer amount,
+    @JsonKey(name: '_amount') Element amountElement,
     List<SubstancePolymerDegreeOfPolymerisation> degreeOfPolymerisation,
     List<SubstancePolymerStructuralRepresentation> structuralRepresentation,
   }) = _SubstancePolymerRepeatUnit;
@@ -1281,8 +1297,13 @@ abstract class SubstancePolymerDegreeOfPolymerisation
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
-    CodeableConcept degree,
-    SubstanceAmount amount,
+    CodeableConcept type,
+    Integer average,
+    @JsonKey(name: '_average') Element averageElement,
+    Integer low,
+    @JsonKey(name: '_low') Element lowElement,
+    Integer high,
+    @JsonKey(name: '_high') Element highElement,
   }) = _SubstancePolymerDegreeOfPolymerisation;
 
   factory SubstancePolymerDegreeOfPolymerisation.fromJson(
@@ -1301,6 +1322,7 @@ abstract class SubstancePolymerStructuralRepresentation
     CodeableConcept type,
     String representation,
     @JsonKey(name: '_representation') Element representationElement,
+    CodeableConcept format,
     Attachment attachment,
   }) = _SubstancePolymerStructuralRepresentation;
 
@@ -1387,7 +1409,6 @@ abstract class SubstanceReferenceInformation
     @JsonKey(name: '_comment') Element commentElement,
     List<SubstanceReferenceInformationGene> gene,
     List<SubstanceReferenceInformationGeneElement> geneElement,
-    List<SubstanceReferenceInformationClassification> classification,
     List<SubstanceReferenceInformationTarget> target,
   }) = _SubstanceReferenceInformation;
 
@@ -1429,25 +1450,6 @@ abstract class SubstanceReferenceInformationGeneElement
   factory SubstanceReferenceInformationGeneElement.fromJson(
           Map<String, dynamic> json) =>
       _$SubstanceReferenceInformationGeneElementFromJson(json);
-}
-
-@freezed
-abstract class SubstanceReferenceInformationClassification
-    implements _$SubstanceReferenceInformationClassification {
-  SubstanceReferenceInformationClassification._();
-  factory SubstanceReferenceInformationClassification({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept domain,
-    CodeableConcept classification,
-    List<CodeableConcept> subtype,
-    List<Reference> source,
-  }) = _SubstanceReferenceInformationClassification;
-
-  factory SubstanceReferenceInformationClassification.fromJson(
-          Map<String, dynamic> json) =>
-      _$SubstanceReferenceInformationClassificationFromJson(json);
 }
 
 @freezed

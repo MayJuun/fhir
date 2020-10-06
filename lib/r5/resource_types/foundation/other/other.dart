@@ -489,8 +489,7 @@ abstract class Subscription with Resource implements _$Subscription {
     List<Identifier> identifier,
     String name,
     @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(unknownEnumValue: SubscriptionStatus.unknown)
-        SubscriptionStatus status,
+    Code status,
     @JsonKey(name: '_status') Element statusElement,
     @required Reference topic,
     List<ContactPoint> contact,
@@ -499,10 +498,20 @@ abstract class Subscription with Resource implements _$Subscription {
     String reason,
     @JsonKey(name: '_reason') Element reasonElement,
     List<SubscriptionFilterBy> filterBy,
-    List<CodeableConcept> error,
-    UnsignedInt eventCount,
-    @JsonKey(name: '_eventCount') Element eventCountElement,
-    @required SubscriptionChannel channel,
+    @required Coding channelType,
+    FhirUrl endpoint,
+    @JsonKey(name: '_endpoint') Element endpointElement,
+    List<String> header,
+    @JsonKey(name: '_header') List<Element> headerElement,
+    UnsignedInt heartbeatPeriod,
+    @JsonKey(name: '_heartbeatPeriod') Element heartbeatPeriodElement,
+    UnsignedInt timeout,
+    @JsonKey(name: '_timeout') Element timeoutElement,
+    Code contentType,
+    @JsonKey(name: '_contentType') Element contentTypeElement,
+    @JsonKey(unknownEnumValue: SubscriptionContent.unknown)
+        SubscriptionContent content,
+    @JsonKey(name: '_content') Element contentElement,
   }) = _Subscription;
 
   factory Subscription.fromJson(Map<String, dynamic> json) =>
@@ -516,167 +525,14 @@ abstract class SubscriptionFilterBy implements _$SubscriptionFilterBy {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(unknownEnumValue: SubscriptionFilterByMatchType.unknown)
-        SubscriptionFilterByMatchType matchType,
-    @JsonKey(name: '_matchType') Element matchTypeElement,
+    String searchParamName,
+    @JsonKey(name: '_searchParamName') Element searchParamNameElement,
+    Code searchModifier,
+    @JsonKey(name: '_searchModifier') Element searchModifierElement,
     String value,
     @JsonKey(name: '_value') Element valueElement,
   }) = _SubscriptionFilterBy;
 
   factory SubscriptionFilterBy.fromJson(Map<String, dynamic> json) =>
       _$SubscriptionFilterByFromJson(json);
-}
-
-@freezed
-abstract class SubscriptionChannel implements _$SubscriptionChannel {
-  SubscriptionChannel._();
-  factory SubscriptionChannel({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept type,
-    FhirUrl endpoint,
-    @JsonKey(name: '_endpoint') Element endpointElement,
-    List<String> header,
-    @JsonKey(name: '_header') List<Element> headerElement,
-    UnsignedInt heartbeatPeriod,
-    @JsonKey(name: '_heartbeatPeriod') Element heartbeatPeriodElement,
-    SubscriptionPayload payload,
-  }) = _SubscriptionChannel;
-
-  factory SubscriptionChannel.fromJson(Map<String, dynamic> json) =>
-      _$SubscriptionChannelFromJson(json);
-}
-
-@freezed
-abstract class SubscriptionPayload implements _$SubscriptionPayload {
-  SubscriptionPayload._();
-  factory SubscriptionPayload({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Code contentType,
-    @JsonKey(name: '_contentType') Element contentTypeElement,
-    @JsonKey(unknownEnumValue: SubscriptionPayloadContent.unknown)
-        SubscriptionPayloadContent content,
-    @JsonKey(name: '_content') Element contentElement,
-  }) = _SubscriptionPayload;
-
-  factory SubscriptionPayload.fromJson(Map<String, dynamic> json) =>
-      _$SubscriptionPayloadFromJson(json);
-}
-
-@freezed
-abstract class Topic with Resource implements _$Topic {
-  Topic._();
-  factory Topic({
-    @JsonKey(defaultValue: 'Topic') @required String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    FhirUri url,
-    @JsonKey(name: '_url') Element urlElement,
-    List<Identifier> identifier,
-    String version,
-    @JsonKey(name: '_version') Element versionElement,
-    String title,
-    @JsonKey(name: '_title') Element titleElement,
-    List<Canonical> derivedFromCanonical,
-    List<FhirUri> derivedFromUri,
-    @JsonKey(name: '_derivedFromUri') List<Element> derivedFromUriElement,
-    @JsonKey(unknownEnumValue: TopicStatus.unknown) TopicStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    Boolean experimental,
-    @JsonKey(name: '_experimental') Element experimentalElement,
-    FhirDateTime date,
-    @JsonKey(name: '_date') Element dateElement,
-    Reference publisher,
-    List<ContactDetail> contact,
-    Markdown description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    List<UsageContext> useContext,
-    List<CodeableConcept> jurisdiction,
-    Markdown purpose,
-    @JsonKey(name: '_purpose') Element purposeElement,
-    Markdown copyright,
-    @JsonKey(name: '_copyright') Element copyrightElement,
-    Date approvalDate,
-    @JsonKey(name: '_approvalDate') Element approvalDateElement,
-    Date lastReviewDate,
-    @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
-    Period effectivePeriod,
-    TopicResourceTrigger resourceTrigger,
-    List<TopicCanFilterBy> canFilterBy,
-  }) = _Topic;
-
-  factory Topic.fromJson(Map<String, dynamic> json) => _$TopicFromJson(json);
-}
-
-@freezed
-abstract class TopicResourceTrigger implements _$TopicResourceTrigger {
-  TopicResourceTrigger._();
-  factory TopicResourceTrigger({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    List<Code> resourceType,
-    @JsonKey(name: '_resourceType') List<Element> resourceTypeElement,
-    List<Code> methodCriteria,
-    @JsonKey(name: '_methodCriteria') List<Element> methodCriteriaElement,
-    TopicQueryCriteria queryCriteria,
-    String fhirPathCriteria,
-    @JsonKey(name: '_fhirPathCriteria') Element fhirPathCriteriaElement,
-  }) = _TopicResourceTrigger;
-
-  factory TopicResourceTrigger.fromJson(Map<String, dynamic> json) =>
-      _$TopicResourceTriggerFromJson(json);
-}
-
-@freezed
-abstract class TopicQueryCriteria implements _$TopicQueryCriteria {
-  TopicQueryCriteria._();
-  factory TopicQueryCriteria({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String previous,
-    @JsonKey(name: '_previous') Element previousElement,
-    String current,
-    @JsonKey(name: '_current') Element currentElement,
-    Boolean requireBoth,
-    @JsonKey(name: '_requireBoth') Element requireBothElement,
-  }) = _TopicQueryCriteria;
-
-  factory TopicQueryCriteria.fromJson(Map<String, dynamic> json) =>
-      _$TopicQueryCriteriaFromJson(json);
-}
-
-@freezed
-abstract class TopicCanFilterBy implements _$TopicCanFilterBy {
-  TopicCanFilterBy._();
-  factory TopicCanFilterBy({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    List<TopicCanFilterByMatchType> matchType,
-    @JsonKey(name: '_matchType') List<Element> matchTypeElement,
-    Markdown documentation,
-    @JsonKey(name: '_documentation') Element documentationElement,
-  }) = _TopicCanFilterBy;
-
-  factory TopicCanFilterBy.fromJson(Map<String, dynamic> json) =>
-      _$TopicCanFilterByFromJson(json);
 }

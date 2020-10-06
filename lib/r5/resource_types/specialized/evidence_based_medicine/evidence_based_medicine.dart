@@ -53,13 +53,15 @@ abstract class Evidence with Resource implements _$Evidence {
     Date lastReviewDate,
     @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
     Period effectivePeriod,
-    List<Contributor> contributor,
+    List<ContactDetail> author,
+    List<ContactDetail> editor,
+    List<ContactDetail> reviewer,
+    List<ContactDetail> endorser,
     List<RelatedArtifact> relatedArtifact,
     Markdown assertion,
     @JsonKey(name: '_assertion') Element assertionElement,
     List<Annotation> note,
-    @required EvidenceReferentGroup referentGroup,
-    List<EvidenceVariableDefinition> variableDefinition,
+    @required List<EvidenceVariableDefinition> variableDefinition,
     CodeableConcept synthesisType,
     CodeableConcept studyType,
     List<Statistic> statistic,
@@ -69,25 +71,6 @@ abstract class Evidence with Resource implements _$Evidence {
 
   factory Evidence.fromJson(Map<String, dynamic> json) =>
       _$EvidenceFromJson(json);
-}
-
-@freezed
-abstract class EvidenceReferentGroup implements _$EvidenceReferentGroup {
-  EvidenceReferentGroup._();
-  factory EvidenceReferentGroup({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Markdown description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    List<Annotation> note,
-    Reference evidenceSource,
-    Reference intendedGroup,
-    CodeableConcept directnessMatch,
-  }) = _EvidenceReferentGroup;
-
-  factory EvidenceReferentGroup.fromJson(Map<String, dynamic> json) =>
-      _$EvidenceReferentGroupFromJson(json);
 }
 
 @freezed
@@ -101,9 +84,9 @@ abstract class EvidenceVariableDefinition
     Markdown description,
     @JsonKey(name: '_description') Element descriptionElement,
     List<Annotation> note,
-    CodeableConcept variableRole,
-    Reference actualDefinition,
-    Reference intendedDefinition,
+    @required CodeableConcept variableRole,
+    Reference observed,
+    Reference intended,
     CodeableConcept directnessMatch,
   }) = _EvidenceVariableDefinition;
 
@@ -120,7 +103,7 @@ abstract class EvidenceCertainty implements _$EvidenceCertainty {
     List<FhirExtension> modifierExtension,
     String description,
     @JsonKey(name: '_description') Element descriptionElement,
-    Annotation note,
+    List<Annotation> note,
     List<CodeableConcept> rating,
     List<EvidenceCertaintySubcomponent> certaintySubcomponent,
   }) = _EvidenceCertainty;
@@ -139,7 +122,7 @@ abstract class EvidenceCertaintySubcomponent
     List<FhirExtension> modifierExtension,
     String description,
     @JsonKey(name: '_description') Element descriptionElement,
-    Annotation note,
+    List<Annotation> note,
     List<CodeableConcept> type,
     List<CodeableConcept> rating,
   }) = _EvidenceCertaintySubcomponent;
@@ -200,18 +183,22 @@ abstract class EvidenceVariable with Resource implements _$EvidenceVariable {
     String subtitle,
     @JsonKey(name: '_subtitle') Element subtitleElement,
     List<Annotation> note,
-    List<CodeableConcept> topic,
     List<ContactDetail> author,
     List<ContactDetail> editor,
     List<ContactDetail> reviewer,
     List<ContactDetail> endorser,
     List<RelatedArtifact> relatedArtifact,
-    @JsonKey(unknownEnumValue: EvidenceVariableType.unknown)
-        EvidenceVariableType type,
-    @JsonKey(name: '_type') Element typeElement,
     Boolean actual,
     @JsonKey(name: '_actual') Element actualElement,
+    @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicCombination.unknown)
+        EvidenceVariableCharacteristicCombination characteristicCombination,
+    @JsonKey(name: '_characteristicCombination')
+        Element characteristicCombinationElement,
     List<EvidenceVariableCharacteristic> characteristic,
+    @JsonKey(unknownEnumValue: EvidenceVariableHandling.unknown)
+        EvidenceVariableHandling handling,
+    @JsonKey(name: '_handling') Element handlingElement,
+    List<EvidenceVariableCategory> category,
   }) = _EvidenceVariable;
 
   factory EvidenceVariable.fromJson(Map<String, dynamic> json) =>
@@ -233,21 +220,11 @@ abstract class EvidenceVariableCharacteristic
     @JsonKey(name: '_definitionCanonical') Element definitionCanonicalElement,
     CodeableConcept definitionCodeableConcept,
     Expression definitionExpression,
-    DataRequirement definitionDataRequirement,
-    TriggerDefinition definitionTriggerDefinition,
     CodeableConcept method,
     Reference device,
-    List<String> booleanSet,
-    @JsonKey(name: '_booleanSet') List<Element> booleanSetElement,
     Boolean exclude,
     @JsonKey(name: '_exclude') Element excludeElement,
-    FhirDateTime participantEffectiveDateTime,
-    @JsonKey(name: '_participantEffectiveDateTime')
-        Element participantEffectiveDateTimeElement,
-    Period participantEffectivePeriod,
-    Duration participantEffectiveDuration,
-    Timing participantEffectiveTiming,
-    Duration timeFromStart,
+    EvidenceVariableTimeFromStart timeFromStart,
     @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicGroupMeasure.unknown)
         EvidenceVariableCharacteristicGroupMeasure groupMeasure,
     @JsonKey(name: '_groupMeasure') Element groupMeasureElement,
@@ -255,4 +232,41 @@ abstract class EvidenceVariableCharacteristic
 
   factory EvidenceVariableCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVariableCharacteristicFromJson(json);
+}
+
+@freezed
+abstract class EvidenceVariableTimeFromStart
+    implements _$EvidenceVariableTimeFromStart {
+  EvidenceVariableTimeFromStart._();
+  factory EvidenceVariableTimeFromStart({
+    String id,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
+    String description,
+    @JsonKey(name: '_description') Element descriptionElement,
+    Quantity quantity,
+    Range range,
+    List<Annotation> note,
+  }) = _EvidenceVariableTimeFromStart;
+
+  factory EvidenceVariableTimeFromStart.fromJson(Map<String, dynamic> json) =>
+      _$EvidenceVariableTimeFromStartFromJson(json);
+}
+
+@freezed
+abstract class EvidenceVariableCategory implements _$EvidenceVariableCategory {
+  EvidenceVariableCategory._();
+  factory EvidenceVariableCategory({
+    String id,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
+    String name,
+    @JsonKey(name: '_name') Element nameElement,
+    CodeableConcept valueCodeableConcept,
+    Quantity valueQuantity,
+    Range valueRange,
+  }) = _EvidenceVariableCategory;
+
+  factory EvidenceVariableCategory.fromJson(Map<String, dynamic> json) =>
+      _$EvidenceVariableCategoryFromJson(json);
 }

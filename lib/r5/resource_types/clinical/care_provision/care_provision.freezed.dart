@@ -12,7 +12,6 @@ CarePlan _$CarePlanFromJson(Map<String, dynamic> json) {
   return _CarePlan.fromJson(json);
 }
 
-/// @nodoc
 class _$CarePlanTearOff {
   const _$CarePlanTearOff();
 
@@ -101,18 +100,11 @@ class _$CarePlanTearOff {
       note: note,
     );
   }
-
-// ignore: unused_element
-  CarePlan fromJson(Map<String, Object> json) {
-    return CarePlan.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $CarePlan = _$CarePlanTearOff();
 
-/// @nodoc
 mixin _$CarePlan {
   @JsonKey(defaultValue: 'CarePlan')
   String get resourceType;
@@ -169,7 +161,6 @@ mixin _$CarePlan {
   $CarePlanCopyWith<CarePlan> get copyWith;
 }
 
-/// @nodoc
 abstract class $CarePlanCopyWith<$Res> {
   factory $CarePlanCopyWith(CarePlan value, $Res Function(CarePlan) then) =
       _$CarePlanCopyWithImpl<$Res>;
@@ -230,7 +221,6 @@ abstract class $CarePlanCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get author;
 }
 
-/// @nodoc
 class _$CarePlanCopyWithImpl<$Res> implements $CarePlanCopyWith<$Res> {
   _$CarePlanCopyWithImpl(this._value, this._then);
 
@@ -501,7 +491,6 @@ class _$CarePlanCopyWithImpl<$Res> implements $CarePlanCopyWith<$Res> {
   }
 }
 
-/// @nodoc
 abstract class _$CarePlanCopyWith<$Res> implements $CarePlanCopyWith<$Res> {
   factory _$CarePlanCopyWith(_CarePlan value, $Res Function(_CarePlan) then) =
       __$CarePlanCopyWithImpl<$Res>;
@@ -576,7 +565,6 @@ abstract class _$CarePlanCopyWith<$Res> implements $CarePlanCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get author;
 }
 
-/// @nodoc
 class __$CarePlanCopyWithImpl<$Res> extends _$CarePlanCopyWithImpl<$Res>
     implements _$CarePlanCopyWith<$Res> {
   __$CarePlanCopyWithImpl(_CarePlan _value, $Res Function(_CarePlan) _then)
@@ -719,8 +707,6 @@ class __$CarePlanCopyWithImpl<$Res> extends _$CarePlanCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_CarePlan extends _CarePlan {
   _$_CarePlan(
       {@required @JsonKey(defaultValue: 'CarePlan') this.resourceType,
@@ -1152,7 +1138,6 @@ CarePlanActivity _$CarePlanActivityFromJson(Map<String, dynamic> json) {
   return _CarePlanActivity.fromJson(json);
 }
 
-/// @nodoc
 class _$CarePlanActivityTearOff {
   const _$CarePlanActivityTearOff();
 
@@ -1175,18 +1160,11 @@ class _$CarePlanActivityTearOff {
       detail: detail,
     );
   }
-
-// ignore: unused_element
-  CarePlanActivity fromJson(Map<String, Object> json) {
-    return CarePlanActivity.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $CarePlanActivity = _$CarePlanActivityTearOff();
 
-/// @nodoc
 mixin _$CarePlanActivity {
   String get id;
   @JsonKey(name: 'extension')
@@ -1201,7 +1179,6 @@ mixin _$CarePlanActivity {
   $CarePlanActivityCopyWith<CarePlanActivity> get copyWith;
 }
 
-/// @nodoc
 abstract class $CarePlanActivityCopyWith<$Res> {
   factory $CarePlanActivityCopyWith(
           CarePlanActivity value, $Res Function(CarePlanActivity) then) =
@@ -1219,7 +1196,6 @@ abstract class $CarePlanActivityCopyWith<$Res> {
   $CarePlanDetailCopyWith<$Res> get detail;
 }
 
-/// @nodoc
 class _$CarePlanActivityCopyWithImpl<$Res>
     implements $CarePlanActivityCopyWith<$Res> {
   _$CarePlanActivityCopyWithImpl(this._value, this._then);
@@ -1278,7 +1254,6 @@ class _$CarePlanActivityCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$CarePlanActivityCopyWith<$Res>
     implements $CarePlanActivityCopyWith<$Res> {
   factory _$CarePlanActivityCopyWith(
@@ -1300,7 +1275,6 @@ abstract class _$CarePlanActivityCopyWith<$Res>
   $CarePlanDetailCopyWith<$Res> get detail;
 }
 
-/// @nodoc
 class __$CarePlanActivityCopyWithImpl<$Res>
     extends _$CarePlanActivityCopyWithImpl<$Res>
     implements _$CarePlanActivityCopyWith<$Res> {
@@ -1342,8 +1316,6 @@ class __$CarePlanActivityCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_CarePlanActivity extends _CarePlanActivity {
   _$_CarePlanActivity(
       {this.id,
@@ -1462,7 +1434,6 @@ CarePlanDetail _$CarePlanDetailFromJson(Map<String, dynamic> json) {
   return _CarePlanDetail.fromJson(json);
 }
 
-/// @nodoc
 class _$CarePlanDetailTearOff {
   const _$CarePlanDetailTearOff();
 
@@ -1495,7 +1466,7 @@ class _$CarePlanDetailTearOff {
       String scheduledString,
       @JsonKey(name: '_scheduledString')
           Element scheduledStringElement,
-      Reference location,
+      CodeableReference location,
       Boolean reportedBoolean,
       @JsonKey(name: '_reportedBoolean')
           Element reportedBooleanElement,
@@ -1542,18 +1513,11 @@ class _$CarePlanDetailTearOff {
       descriptionElement: descriptionElement,
     );
   }
-
-// ignore: unused_element
-  CarePlanDetail fromJson(Map<String, Object> json) {
-    return CarePlanDetail.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $CarePlanDetail = _$CarePlanDetailTearOff();
 
-/// @nodoc
 mixin _$CarePlanDetail {
   String get id;
   @JsonKey(name: 'extension')
@@ -1582,7 +1546,7 @@ mixin _$CarePlanDetail {
   String get scheduledString;
   @JsonKey(name: '_scheduledString')
   Element get scheduledStringElement;
-  Reference get location;
+  CodeableReference get location;
   Boolean get reportedBoolean;
   @JsonKey(name: '_reportedBoolean')
   Element get reportedBooleanElement;
@@ -1600,7 +1564,6 @@ mixin _$CarePlanDetail {
   $CarePlanDetailCopyWith<CarePlanDetail> get copyWith;
 }
 
-/// @nodoc
 abstract class $CarePlanDetailCopyWith<$Res> {
   factory $CarePlanDetailCopyWith(
           CarePlanDetail value, $Res Function(CarePlanDetail) then) =
@@ -1633,7 +1596,7 @@ abstract class $CarePlanDetailCopyWith<$Res> {
       String scheduledString,
       @JsonKey(name: '_scheduledString')
           Element scheduledStringElement,
-      Reference location,
+      CodeableReference location,
       Boolean reportedBoolean,
       @JsonKey(name: '_reportedBoolean')
           Element reportedBooleanElement,
@@ -1655,7 +1618,7 @@ abstract class $CarePlanDetailCopyWith<$Res> {
   $TimingCopyWith<$Res> get scheduledTiming;
   $PeriodCopyWith<$Res> get scheduledPeriod;
   $ElementCopyWith<$Res> get scheduledStringElement;
-  $ReferenceCopyWith<$Res> get location;
+  $CodeableReferenceCopyWith<$Res> get location;
   $ElementCopyWith<$Res> get reportedBooleanElement;
   $ReferenceCopyWith<$Res> get reportedReference;
   $CodeableConceptCopyWith<$Res> get productCodeableConcept;
@@ -1665,7 +1628,6 @@ abstract class $CarePlanDetailCopyWith<$Res> {
   $ElementCopyWith<$Res> get descriptionElement;
 }
 
-/// @nodoc
 class _$CarePlanDetailCopyWithImpl<$Res>
     implements $CarePlanDetailCopyWith<$Res> {
   _$CarePlanDetailCopyWithImpl(this._value, this._then);
@@ -1758,7 +1720,8 @@ class _$CarePlanDetailCopyWithImpl<$Res>
       scheduledStringElement: scheduledStringElement == freezed
           ? _value.scheduledStringElement
           : scheduledStringElement as Element,
-      location: location == freezed ? _value.location : location as Reference,
+      location:
+          location == freezed ? _value.location : location as CodeableReference,
       reportedBoolean: reportedBoolean == freezed
           ? _value.reportedBoolean
           : reportedBoolean as Boolean,
@@ -1869,11 +1832,11 @@ class _$CarePlanDetailCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res> get location {
+  $CodeableReferenceCopyWith<$Res> get location {
     if (_value.location == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.location, (value) {
+    return $CodeableReferenceCopyWith<$Res>(_value.location, (value) {
       return _then(_value.copyWith(location: value));
     });
   }
@@ -1950,7 +1913,6 @@ class _$CarePlanDetailCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$CarePlanDetailCopyWith<$Res>
     implements $CarePlanDetailCopyWith<$Res> {
   factory _$CarePlanDetailCopyWith(
@@ -1985,7 +1947,7 @@ abstract class _$CarePlanDetailCopyWith<$Res>
       String scheduledString,
       @JsonKey(name: '_scheduledString')
           Element scheduledStringElement,
-      Reference location,
+      CodeableReference location,
       Boolean reportedBoolean,
       @JsonKey(name: '_reportedBoolean')
           Element reportedBooleanElement,
@@ -2016,7 +1978,7 @@ abstract class _$CarePlanDetailCopyWith<$Res>
   @override
   $ElementCopyWith<$Res> get scheduledStringElement;
   @override
-  $ReferenceCopyWith<$Res> get location;
+  $CodeableReferenceCopyWith<$Res> get location;
   @override
   $ElementCopyWith<$Res> get reportedBooleanElement;
   @override
@@ -2033,7 +1995,6 @@ abstract class _$CarePlanDetailCopyWith<$Res>
   $ElementCopyWith<$Res> get descriptionElement;
 }
 
-/// @nodoc
 class __$CarePlanDetailCopyWithImpl<$Res>
     extends _$CarePlanDetailCopyWithImpl<$Res>
     implements _$CarePlanDetailCopyWith<$Res> {
@@ -2128,7 +2089,8 @@ class __$CarePlanDetailCopyWithImpl<$Res>
       scheduledStringElement: scheduledStringElement == freezed
           ? _value.scheduledStringElement
           : scheduledStringElement as Element,
-      location: location == freezed ? _value.location : location as Reference,
+      location:
+          location == freezed ? _value.location : location as CodeableReference,
       reportedBoolean: reportedBoolean == freezed
           ? _value.reportedBoolean
           : reportedBoolean as Boolean,
@@ -2160,8 +2122,6 @@ class __$CarePlanDetailCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_CarePlanDetail extends _CarePlanDetail {
   _$_CarePlanDetail(
       {this.id,
@@ -2248,7 +2208,7 @@ class _$_CarePlanDetail extends _CarePlanDetail {
   @JsonKey(name: '_scheduledString')
   final Element scheduledStringElement;
   @override
-  final Reference location;
+  final CodeableReference location;
   @override
   final Boolean reportedBoolean;
   @override
@@ -2430,7 +2390,7 @@ abstract class _CarePlanDetail extends CarePlanDetail {
       String scheduledString,
       @JsonKey(name: '_scheduledString')
           Element scheduledStringElement,
-      Reference location,
+      CodeableReference location,
       Boolean reportedBoolean,
       @JsonKey(name: '_reportedBoolean')
           Element reportedBooleanElement,
@@ -2495,7 +2455,7 @@ abstract class _CarePlanDetail extends CarePlanDetail {
   @JsonKey(name: '_scheduledString')
   Element get scheduledStringElement;
   @override
-  Reference get location;
+  CodeableReference get location;
   @override
   Boolean get reportedBoolean;
   @override
@@ -2526,7 +2486,6 @@ CareTeam _$CareTeamFromJson(Map<String, dynamic> json) {
   return _CareTeam.fromJson(json);
 }
 
-/// @nodoc
 class _$CareTeamTearOff {
   const _$CareTeamTearOff();
 
@@ -2583,18 +2542,11 @@ class _$CareTeamTearOff {
       note: note,
     );
   }
-
-// ignore: unused_element
-  CareTeam fromJson(Map<String, Object> json) {
-    return CareTeam.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $CareTeam = _$CareTeamTearOff();
 
-/// @nodoc
 mixin _$CareTeam {
   @JsonKey(defaultValue: 'CareTeam')
   String get resourceType;
@@ -2632,7 +2584,6 @@ mixin _$CareTeam {
   $CareTeamCopyWith<CareTeam> get copyWith;
 }
 
-/// @nodoc
 abstract class $CareTeamCopyWith<$Res> {
   factory $CareTeamCopyWith(CareTeam value, $Res Function(CareTeam) then) =
       _$CareTeamCopyWithImpl<$Res>;
@@ -2672,7 +2623,6 @@ abstract class $CareTeamCopyWith<$Res> {
   $PeriodCopyWith<$Res> get period;
 }
 
-/// @nodoc
 class _$CareTeamCopyWithImpl<$Res> implements $CareTeamCopyWith<$Res> {
   _$CareTeamCopyWithImpl(this._value, this._then);
 
@@ -2842,7 +2792,6 @@ class _$CareTeamCopyWithImpl<$Res> implements $CareTeamCopyWith<$Res> {
   }
 }
 
-/// @nodoc
 abstract class _$CareTeamCopyWith<$Res> implements $CareTeamCopyWith<$Res> {
   factory _$CareTeamCopyWith(_CareTeam value, $Res Function(_CareTeam) then) =
       __$CareTeamCopyWithImpl<$Res>;
@@ -2891,7 +2840,6 @@ abstract class _$CareTeamCopyWith<$Res> implements $CareTeamCopyWith<$Res> {
   $PeriodCopyWith<$Res> get period;
 }
 
-/// @nodoc
 class __$CareTeamCopyWithImpl<$Res> extends _$CareTeamCopyWithImpl<$Res>
     implements _$CareTeamCopyWith<$Res> {
   __$CareTeamCopyWithImpl(_CareTeam _value, $Res Function(_CareTeam) _then)
@@ -2983,8 +2931,6 @@ class __$CareTeamCopyWithImpl<$Res> extends _$CareTeamCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_CareTeam extends _CareTeam {
   _$_CareTeam(
       {@required @JsonKey(defaultValue: 'CareTeam') this.resourceType,
@@ -3279,7 +3225,6 @@ CareTeamParticipant _$CareTeamParticipantFromJson(Map<String, dynamic> json) {
   return _CareTeamParticipant.fromJson(json);
 }
 
-/// @nodoc
 class _$CareTeamParticipantTearOff {
   const _$CareTeamParticipantTearOff();
 
@@ -3304,18 +3249,11 @@ class _$CareTeamParticipantTearOff {
       coverageTiming: coverageTiming,
     );
   }
-
-// ignore: unused_element
-  CareTeamParticipant fromJson(Map<String, Object> json) {
-    return CareTeamParticipant.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $CareTeamParticipant = _$CareTeamParticipantTearOff();
 
-/// @nodoc
 mixin _$CareTeamParticipant {
   String get id;
   @JsonKey(name: 'extension')
@@ -3331,7 +3269,6 @@ mixin _$CareTeamParticipant {
   $CareTeamParticipantCopyWith<CareTeamParticipant> get copyWith;
 }
 
-/// @nodoc
 abstract class $CareTeamParticipantCopyWith<$Res> {
   factory $CareTeamParticipantCopyWith(
           CareTeamParticipant value, $Res Function(CareTeamParticipant) then) =
@@ -3353,7 +3290,6 @@ abstract class $CareTeamParticipantCopyWith<$Res> {
   $TimingCopyWith<$Res> get coverageTiming;
 }
 
-/// @nodoc
 class _$CareTeamParticipantCopyWithImpl<$Res>
     implements $CareTeamParticipantCopyWith<$Res> {
   _$CareTeamParticipantCopyWithImpl(this._value, this._then);
@@ -3445,7 +3381,6 @@ class _$CareTeamParticipantCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$CareTeamParticipantCopyWith<$Res>
     implements $CareTeamParticipantCopyWith<$Res> {
   factory _$CareTeamParticipantCopyWith(_CareTeamParticipant value,
@@ -3474,7 +3409,6 @@ abstract class _$CareTeamParticipantCopyWith<$Res>
   $TimingCopyWith<$Res> get coverageTiming;
 }
 
-/// @nodoc
 class __$CareTeamParticipantCopyWithImpl<$Res>
     extends _$CareTeamParticipantCopyWithImpl<$Res>
     implements _$CareTeamParticipantCopyWith<$Res> {
@@ -3519,8 +3453,6 @@ class __$CareTeamParticipantCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_CareTeamParticipant extends _CareTeamParticipant {
   _$_CareTeamParticipant(
       {this.id,
@@ -3649,7 +3581,6 @@ Goal _$GoalFromJson(Map<String, dynamic> json) {
   return _Goal.fromJson(json);
 }
 
-/// @nodoc
 class _$GoalTearOff {
   const _$GoalTearOff();
 
@@ -3737,18 +3668,11 @@ class _$GoalTearOff {
       outcome: outcome,
     );
   }
-
-// ignore: unused_element
-  Goal fromJson(Map<String, Object> json) {
-    return Goal.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $Goal = _$GoalTearOff();
 
-/// @nodoc
 mixin _$Goal {
   @JsonKey(defaultValue: 'Goal')
   String get resourceType;
@@ -3798,7 +3722,6 @@ mixin _$Goal {
   $GoalCopyWith<Goal> get copyWith;
 }
 
-/// @nodoc
 abstract class $GoalCopyWith<$Res> {
   factory $GoalCopyWith(Goal value, $Res Function(Goal) then) =
       _$GoalCopyWithImpl<$Res>;
@@ -3864,7 +3787,6 @@ abstract class $GoalCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get expressedBy;
 }
 
-/// @nodoc
 class _$GoalCopyWithImpl<$Res> implements $GoalCopyWith<$Res> {
   _$GoalCopyWithImpl(this._value, this._then);
 
@@ -4142,7 +4064,6 @@ class _$GoalCopyWithImpl<$Res> implements $GoalCopyWith<$Res> {
   }
 }
 
-/// @nodoc
 abstract class _$GoalCopyWith<$Res> implements $GoalCopyWith<$Res> {
   factory _$GoalCopyWith(_Goal value, $Res Function(_Goal) then) =
       __$GoalCopyWithImpl<$Res>;
@@ -4224,7 +4145,6 @@ abstract class _$GoalCopyWith<$Res> implements $GoalCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get expressedBy;
 }
 
-/// @nodoc
 class __$GoalCopyWithImpl<$Res> extends _$GoalCopyWithImpl<$Res>
     implements _$GoalCopyWith<$Res> {
   __$GoalCopyWithImpl(_Goal _value, $Res Function(_Goal) _then)
@@ -4354,8 +4274,6 @@ class __$GoalCopyWithImpl<$Res> extends _$GoalCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_Goal extends _Goal {
   _$_Goal(
       {@required
@@ -4758,7 +4676,6 @@ GoalTarget _$GoalTargetFromJson(Map<String, dynamic> json) {
   return _GoalTarget.fromJson(json);
 }
 
-/// @nodoc
 class _$GoalTargetTearOff {
   const _$GoalTargetTearOff();
 
@@ -4801,18 +4718,11 @@ class _$GoalTargetTearOff {
       dueDuration: dueDuration,
     );
   }
-
-// ignore: unused_element
-  GoalTarget fromJson(Map<String, Object> json) {
-    return GoalTarget.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $GoalTarget = _$GoalTargetTearOff();
 
-/// @nodoc
 mixin _$GoalTarget {
   String get id;
   @JsonKey(name: 'extension')
@@ -4841,7 +4751,6 @@ mixin _$GoalTarget {
   $GoalTargetCopyWith<GoalTarget> get copyWith;
 }
 
-/// @nodoc
 abstract class $GoalTargetCopyWith<$Res> {
   factory $GoalTargetCopyWith(
           GoalTarget value, $Res Function(GoalTarget) then) =
@@ -4877,7 +4786,6 @@ abstract class $GoalTargetCopyWith<$Res> {
   $DurationCopyWith<$Res> get dueDuration;
 }
 
-/// @nodoc
 class _$GoalTargetCopyWithImpl<$Res> implements $GoalTargetCopyWith<$Res> {
   _$GoalTargetCopyWithImpl(this._value, this._then);
 
@@ -5053,7 +4961,6 @@ class _$GoalTargetCopyWithImpl<$Res> implements $GoalTargetCopyWith<$Res> {
   }
 }
 
-/// @nodoc
 abstract class _$GoalTargetCopyWith<$Res> implements $GoalTargetCopyWith<$Res> {
   factory _$GoalTargetCopyWith(
           _GoalTarget value, $Res Function(_GoalTarget) then) =
@@ -5100,7 +5007,6 @@ abstract class _$GoalTargetCopyWith<$Res> implements $GoalTargetCopyWith<$Res> {
   $DurationCopyWith<$Res> get dueDuration;
 }
 
-/// @nodoc
 class __$GoalTargetCopyWithImpl<$Res> extends _$GoalTargetCopyWithImpl<$Res>
     implements _$GoalTargetCopyWith<$Res> {
   __$GoalTargetCopyWithImpl(
@@ -5178,8 +5084,6 @@ class __$GoalTargetCopyWithImpl<$Res> extends _$GoalTargetCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_GoalTarget extends _GoalTarget {
   _$_GoalTarget(
       {this.id,
@@ -5407,7 +5311,6 @@ NutritionIntake _$NutritionIntakeFromJson(Map<String, dynamic> json) {
   return _NutritionIntake.fromJson(json);
 }
 
-/// @nodoc
 class _$NutritionIntakeTearOff {
   const _$NutritionIntakeTearOff();
 
@@ -5425,24 +5328,31 @@ class _$NutritionIntakeTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
+      List<Canonical> instantiatesCanonical,
+      List<FhirUri> instantiatesUri,
+      @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
       List<Reference> basedOn,
       List<Reference> partOf,
       Code status,
       @JsonKey(name: '_status') Element statusElement,
       List<CodeableConcept> statusReason,
-      List<CodeableConcept> category,
-      @required List<NutritionIntakeConsumedItem> consumedItem,
-      List<NutritionIntakeIngredientLabel> ingredientLabel,
+      CodeableConcept code,
       @required Reference subject,
       Reference encounter,
-      FhirDateTime effectiveDateTime,
-      @JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
-      Period effectivePeriod,
-      FhirDateTime dateAsserted,
-      @JsonKey(name: '_dateAsserted') Element dateAssertedElement,
-      Reference informationSource,
+      FhirDateTime occurrenceDateTime,
+      @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+      Period occurrencePeriod,
+      FhirDateTime recorded,
+      @JsonKey(name: '_recorded') Element recordedElement,
+      Boolean reportedBoolean,
+      @JsonKey(name: '_reportedBoolean') Element reportedBooleanElement,
+      Reference reportedReference,
+      @required List<NutritionIntakeConsumedItem> consumedItem,
+      List<NutritionIntakeIngredientLabel> ingredientLabel,
+      List<NutritionIntakePerformer> performer,
+      Reference location,
       List<Reference> derivedFrom,
-      List<CodeableReference> reasonCode,
+      List<CodeableReference> reason,
       List<Annotation> note}) {
     return _NutritionIntake(
       resourceType: resourceType,
@@ -5457,39 +5367,39 @@ class _$NutritionIntakeTearOff {
       extension_: extension_,
       modifierExtension: modifierExtension,
       identifier: identifier,
+      instantiatesCanonical: instantiatesCanonical,
+      instantiatesUri: instantiatesUri,
+      instantiatesUriElement: instantiatesUriElement,
       basedOn: basedOn,
       partOf: partOf,
       status: status,
       statusElement: statusElement,
       statusReason: statusReason,
-      category: category,
-      consumedItem: consumedItem,
-      ingredientLabel: ingredientLabel,
+      code: code,
       subject: subject,
       encounter: encounter,
-      effectiveDateTime: effectiveDateTime,
-      effectiveDateTimeElement: effectiveDateTimeElement,
-      effectivePeriod: effectivePeriod,
-      dateAsserted: dateAsserted,
-      dateAssertedElement: dateAssertedElement,
-      informationSource: informationSource,
+      occurrenceDateTime: occurrenceDateTime,
+      occurrenceDateTimeElement: occurrenceDateTimeElement,
+      occurrencePeriod: occurrencePeriod,
+      recorded: recorded,
+      recordedElement: recordedElement,
+      reportedBoolean: reportedBoolean,
+      reportedBooleanElement: reportedBooleanElement,
+      reportedReference: reportedReference,
+      consumedItem: consumedItem,
+      ingredientLabel: ingredientLabel,
+      performer: performer,
+      location: location,
       derivedFrom: derivedFrom,
-      reasonCode: reasonCode,
+      reason: reason,
       note: note,
     );
   }
-
-// ignore: unused_element
-  NutritionIntake fromJson(Map<String, Object> json) {
-    return NutritionIntake.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $NutritionIntake = _$NutritionIntakeTearOff();
 
-/// @nodoc
 mixin _$NutritionIntake {
   @JsonKey(defaultValue: 'NutritionIntake')
   String get resourceType;
@@ -5507,34 +5417,42 @@ mixin _$NutritionIntake {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
+  List<Canonical> get instantiatesCanonical;
+  List<FhirUri> get instantiatesUri;
+  @JsonKey(name: '_instantiatesUri')
+  List<Element> get instantiatesUriElement;
   List<Reference> get basedOn;
   List<Reference> get partOf;
   Code get status;
   @JsonKey(name: '_status')
   Element get statusElement;
   List<CodeableConcept> get statusReason;
-  List<CodeableConcept> get category;
-  List<NutritionIntakeConsumedItem> get consumedItem;
-  List<NutritionIntakeIngredientLabel> get ingredientLabel;
+  CodeableConcept get code;
   Reference get subject;
   Reference get encounter;
-  FhirDateTime get effectiveDateTime;
-  @JsonKey(name: '_effectiveDateTime')
-  Element get effectiveDateTimeElement;
-  Period get effectivePeriod;
-  FhirDateTime get dateAsserted;
-  @JsonKey(name: '_dateAsserted')
-  Element get dateAssertedElement;
-  Reference get informationSource;
+  FhirDateTime get occurrenceDateTime;
+  @JsonKey(name: '_occurrenceDateTime')
+  Element get occurrenceDateTimeElement;
+  Period get occurrencePeriod;
+  FhirDateTime get recorded;
+  @JsonKey(name: '_recorded')
+  Element get recordedElement;
+  Boolean get reportedBoolean;
+  @JsonKey(name: '_reportedBoolean')
+  Element get reportedBooleanElement;
+  Reference get reportedReference;
+  List<NutritionIntakeConsumedItem> get consumedItem;
+  List<NutritionIntakeIngredientLabel> get ingredientLabel;
+  List<NutritionIntakePerformer> get performer;
+  Reference get location;
   List<Reference> get derivedFrom;
-  List<CodeableReference> get reasonCode;
+  List<CodeableReference> get reason;
   List<Annotation> get note;
 
   Map<String, dynamic> toJson();
   $NutritionIntakeCopyWith<NutritionIntake> get copyWith;
 }
 
-/// @nodoc
 abstract class $NutritionIntakeCopyWith<$Res> {
   factory $NutritionIntakeCopyWith(
           NutritionIntake value, $Res Function(NutritionIntake) then) =
@@ -5552,24 +5470,31 @@ abstract class $NutritionIntakeCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
+      List<Canonical> instantiatesCanonical,
+      List<FhirUri> instantiatesUri,
+      @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
       List<Reference> basedOn,
       List<Reference> partOf,
       Code status,
       @JsonKey(name: '_status') Element statusElement,
       List<CodeableConcept> statusReason,
-      List<CodeableConcept> category,
-      List<NutritionIntakeConsumedItem> consumedItem,
-      List<NutritionIntakeIngredientLabel> ingredientLabel,
+      CodeableConcept code,
       Reference subject,
       Reference encounter,
-      FhirDateTime effectiveDateTime,
-      @JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
-      Period effectivePeriod,
-      FhirDateTime dateAsserted,
-      @JsonKey(name: '_dateAsserted') Element dateAssertedElement,
-      Reference informationSource,
+      FhirDateTime occurrenceDateTime,
+      @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+      Period occurrencePeriod,
+      FhirDateTime recorded,
+      @JsonKey(name: '_recorded') Element recordedElement,
+      Boolean reportedBoolean,
+      @JsonKey(name: '_reportedBoolean') Element reportedBooleanElement,
+      Reference reportedReference,
+      List<NutritionIntakeConsumedItem> consumedItem,
+      List<NutritionIntakeIngredientLabel> ingredientLabel,
+      List<NutritionIntakePerformer> performer,
+      Reference location,
       List<Reference> derivedFrom,
-      List<CodeableReference> reasonCode,
+      List<CodeableReference> reason,
       List<Annotation> note});
 
   $MetaCopyWith<$Res> get meta;
@@ -5577,15 +5502,17 @@ abstract class $NutritionIntakeCopyWith<$Res> {
   $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
   $ElementCopyWith<$Res> get statusElement;
+  $CodeableConceptCopyWith<$Res> get code;
   $ReferenceCopyWith<$Res> get subject;
   $ReferenceCopyWith<$Res> get encounter;
-  $ElementCopyWith<$Res> get effectiveDateTimeElement;
-  $PeriodCopyWith<$Res> get effectivePeriod;
-  $ElementCopyWith<$Res> get dateAssertedElement;
-  $ReferenceCopyWith<$Res> get informationSource;
+  $ElementCopyWith<$Res> get occurrenceDateTimeElement;
+  $PeriodCopyWith<$Res> get occurrencePeriod;
+  $ElementCopyWith<$Res> get recordedElement;
+  $ElementCopyWith<$Res> get reportedBooleanElement;
+  $ReferenceCopyWith<$Res> get reportedReference;
+  $ReferenceCopyWith<$Res> get location;
 }
 
-/// @nodoc
 class _$NutritionIntakeCopyWithImpl<$Res>
     implements $NutritionIntakeCopyWith<$Res> {
   _$NutritionIntakeCopyWithImpl(this._value, this._then);
@@ -5608,24 +5535,31 @@ class _$NutritionIntakeCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
+    Object instantiatesCanonical = freezed,
+    Object instantiatesUri = freezed,
+    Object instantiatesUriElement = freezed,
     Object basedOn = freezed,
     Object partOf = freezed,
     Object status = freezed,
     Object statusElement = freezed,
     Object statusReason = freezed,
-    Object category = freezed,
-    Object consumedItem = freezed,
-    Object ingredientLabel = freezed,
+    Object code = freezed,
     Object subject = freezed,
     Object encounter = freezed,
-    Object effectiveDateTime = freezed,
-    Object effectiveDateTimeElement = freezed,
-    Object effectivePeriod = freezed,
-    Object dateAsserted = freezed,
-    Object dateAssertedElement = freezed,
-    Object informationSource = freezed,
+    Object occurrenceDateTime = freezed,
+    Object occurrenceDateTimeElement = freezed,
+    Object occurrencePeriod = freezed,
+    Object recorded = freezed,
+    Object recordedElement = freezed,
+    Object reportedBoolean = freezed,
+    Object reportedBooleanElement = freezed,
+    Object reportedReference = freezed,
+    Object consumedItem = freezed,
+    Object ingredientLabel = freezed,
+    Object performer = freezed,
+    Object location = freezed,
     Object derivedFrom = freezed,
-    Object reasonCode = freezed,
+    Object reason = freezed,
     Object note = freezed,
   }) {
     return _then(_value.copyWith(
@@ -5656,6 +5590,15 @@ class _$NutritionIntakeCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
+      instantiatesCanonical: instantiatesCanonical == freezed
+          ? _value.instantiatesCanonical
+          : instantiatesCanonical as List<Canonical>,
+      instantiatesUri: instantiatesUri == freezed
+          ? _value.instantiatesUri
+          : instantiatesUri as List<FhirUri>,
+      instantiatesUriElement: instantiatesUriElement == freezed
+          ? _value.instantiatesUriElement
+          : instantiatesUriElement as List<Element>,
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<Reference>,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>,
       status: status == freezed ? _value.status : status as Code,
@@ -5665,42 +5608,48 @@ class _$NutritionIntakeCopyWithImpl<$Res>
       statusReason: statusReason == freezed
           ? _value.statusReason
           : statusReason as List<CodeableConcept>,
-      category: category == freezed
-          ? _value.category
-          : category as List<CodeableConcept>,
+      code: code == freezed ? _value.code : code as CodeableConcept,
+      subject: subject == freezed ? _value.subject : subject as Reference,
+      encounter:
+          encounter == freezed ? _value.encounter : encounter as Reference,
+      occurrenceDateTime: occurrenceDateTime == freezed
+          ? _value.occurrenceDateTime
+          : occurrenceDateTime as FhirDateTime,
+      occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
+          ? _value.occurrenceDateTimeElement
+          : occurrenceDateTimeElement as Element,
+      occurrencePeriod: occurrencePeriod == freezed
+          ? _value.occurrencePeriod
+          : occurrencePeriod as Period,
+      recorded:
+          recorded == freezed ? _value.recorded : recorded as FhirDateTime,
+      recordedElement: recordedElement == freezed
+          ? _value.recordedElement
+          : recordedElement as Element,
+      reportedBoolean: reportedBoolean == freezed
+          ? _value.reportedBoolean
+          : reportedBoolean as Boolean,
+      reportedBooleanElement: reportedBooleanElement == freezed
+          ? _value.reportedBooleanElement
+          : reportedBooleanElement as Element,
+      reportedReference: reportedReference == freezed
+          ? _value.reportedReference
+          : reportedReference as Reference,
       consumedItem: consumedItem == freezed
           ? _value.consumedItem
           : consumedItem as List<NutritionIntakeConsumedItem>,
       ingredientLabel: ingredientLabel == freezed
           ? _value.ingredientLabel
           : ingredientLabel as List<NutritionIntakeIngredientLabel>,
-      subject: subject == freezed ? _value.subject : subject as Reference,
-      encounter:
-          encounter == freezed ? _value.encounter : encounter as Reference,
-      effectiveDateTime: effectiveDateTime == freezed
-          ? _value.effectiveDateTime
-          : effectiveDateTime as FhirDateTime,
-      effectiveDateTimeElement: effectiveDateTimeElement == freezed
-          ? _value.effectiveDateTimeElement
-          : effectiveDateTimeElement as Element,
-      effectivePeriod: effectivePeriod == freezed
-          ? _value.effectivePeriod
-          : effectivePeriod as Period,
-      dateAsserted: dateAsserted == freezed
-          ? _value.dateAsserted
-          : dateAsserted as FhirDateTime,
-      dateAssertedElement: dateAssertedElement == freezed
-          ? _value.dateAssertedElement
-          : dateAssertedElement as Element,
-      informationSource: informationSource == freezed
-          ? _value.informationSource
-          : informationSource as Reference,
+      performer: performer == freezed
+          ? _value.performer
+          : performer as List<NutritionIntakePerformer>,
+      location: location == freezed ? _value.location : location as Reference,
       derivedFrom: derivedFrom == freezed
           ? _value.derivedFrom
           : derivedFrom as List<Reference>,
-      reasonCode: reasonCode == freezed
-          ? _value.reasonCode
-          : reasonCode as List<CodeableReference>,
+      reason:
+          reason == freezed ? _value.reason : reason as List<CodeableReference>,
       note: note == freezed ? _value.note : note as List<Annotation>,
     ));
   }
@@ -5756,6 +5705,16 @@ class _$NutritionIntakeCopyWithImpl<$Res>
   }
 
   @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
+  }
+
+  @override
   $ReferenceCopyWith<$Res> get subject {
     if (_value.subject == null) {
       return null;
@@ -5776,47 +5735,66 @@ class _$NutritionIntakeCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get effectiveDateTimeElement {
-    if (_value.effectiveDateTimeElement == null) {
+  $ElementCopyWith<$Res> get occurrenceDateTimeElement {
+    if (_value.occurrenceDateTimeElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.effectiveDateTimeElement, (value) {
-      return _then(_value.copyWith(effectiveDateTimeElement: value));
+    return $ElementCopyWith<$Res>(_value.occurrenceDateTimeElement, (value) {
+      return _then(_value.copyWith(occurrenceDateTimeElement: value));
     });
   }
 
   @override
-  $PeriodCopyWith<$Res> get effectivePeriod {
-    if (_value.effectivePeriod == null) {
+  $PeriodCopyWith<$Res> get occurrencePeriod {
+    if (_value.occurrencePeriod == null) {
       return null;
     }
-    return $PeriodCopyWith<$Res>(_value.effectivePeriod, (value) {
-      return _then(_value.copyWith(effectivePeriod: value));
+    return $PeriodCopyWith<$Res>(_value.occurrencePeriod, (value) {
+      return _then(_value.copyWith(occurrencePeriod: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get dateAssertedElement {
-    if (_value.dateAssertedElement == null) {
+  $ElementCopyWith<$Res> get recordedElement {
+    if (_value.recordedElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.dateAssertedElement, (value) {
-      return _then(_value.copyWith(dateAssertedElement: value));
+    return $ElementCopyWith<$Res>(_value.recordedElement, (value) {
+      return _then(_value.copyWith(recordedElement: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get informationSource {
-    if (_value.informationSource == null) {
+  $ElementCopyWith<$Res> get reportedBooleanElement {
+    if (_value.reportedBooleanElement == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.informationSource, (value) {
-      return _then(_value.copyWith(informationSource: value));
+    return $ElementCopyWith<$Res>(_value.reportedBooleanElement, (value) {
+      return _then(_value.copyWith(reportedBooleanElement: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get reportedReference {
+    if (_value.reportedReference == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.reportedReference, (value) {
+      return _then(_value.copyWith(reportedReference: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get location {
+    if (_value.location == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.location, (value) {
+      return _then(_value.copyWith(location: value));
     });
   }
 }
 
-/// @nodoc
 abstract class _$NutritionIntakeCopyWith<$Res>
     implements $NutritionIntakeCopyWith<$Res> {
   factory _$NutritionIntakeCopyWith(
@@ -5836,24 +5814,31 @@ abstract class _$NutritionIntakeCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
+      List<Canonical> instantiatesCanonical,
+      List<FhirUri> instantiatesUri,
+      @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
       List<Reference> basedOn,
       List<Reference> partOf,
       Code status,
       @JsonKey(name: '_status') Element statusElement,
       List<CodeableConcept> statusReason,
-      List<CodeableConcept> category,
-      List<NutritionIntakeConsumedItem> consumedItem,
-      List<NutritionIntakeIngredientLabel> ingredientLabel,
+      CodeableConcept code,
       Reference subject,
       Reference encounter,
-      FhirDateTime effectiveDateTime,
-      @JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
-      Period effectivePeriod,
-      FhirDateTime dateAsserted,
-      @JsonKey(name: '_dateAsserted') Element dateAssertedElement,
-      Reference informationSource,
+      FhirDateTime occurrenceDateTime,
+      @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+      Period occurrencePeriod,
+      FhirDateTime recorded,
+      @JsonKey(name: '_recorded') Element recordedElement,
+      Boolean reportedBoolean,
+      @JsonKey(name: '_reportedBoolean') Element reportedBooleanElement,
+      Reference reportedReference,
+      List<NutritionIntakeConsumedItem> consumedItem,
+      List<NutritionIntakeIngredientLabel> ingredientLabel,
+      List<NutritionIntakePerformer> performer,
+      Reference location,
       List<Reference> derivedFrom,
-      List<CodeableReference> reasonCode,
+      List<CodeableReference> reason,
       List<Annotation> note});
 
   @override
@@ -5867,20 +5852,25 @@ abstract class _$NutritionIntakeCopyWith<$Res>
   @override
   $ElementCopyWith<$Res> get statusElement;
   @override
+  $CodeableConceptCopyWith<$Res> get code;
+  @override
   $ReferenceCopyWith<$Res> get subject;
   @override
   $ReferenceCopyWith<$Res> get encounter;
   @override
-  $ElementCopyWith<$Res> get effectiveDateTimeElement;
+  $ElementCopyWith<$Res> get occurrenceDateTimeElement;
   @override
-  $PeriodCopyWith<$Res> get effectivePeriod;
+  $PeriodCopyWith<$Res> get occurrencePeriod;
   @override
-  $ElementCopyWith<$Res> get dateAssertedElement;
+  $ElementCopyWith<$Res> get recordedElement;
   @override
-  $ReferenceCopyWith<$Res> get informationSource;
+  $ElementCopyWith<$Res> get reportedBooleanElement;
+  @override
+  $ReferenceCopyWith<$Res> get reportedReference;
+  @override
+  $ReferenceCopyWith<$Res> get location;
 }
 
-/// @nodoc
 class __$NutritionIntakeCopyWithImpl<$Res>
     extends _$NutritionIntakeCopyWithImpl<$Res>
     implements _$NutritionIntakeCopyWith<$Res> {
@@ -5905,24 +5895,31 @@ class __$NutritionIntakeCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
+    Object instantiatesCanonical = freezed,
+    Object instantiatesUri = freezed,
+    Object instantiatesUriElement = freezed,
     Object basedOn = freezed,
     Object partOf = freezed,
     Object status = freezed,
     Object statusElement = freezed,
     Object statusReason = freezed,
-    Object category = freezed,
-    Object consumedItem = freezed,
-    Object ingredientLabel = freezed,
+    Object code = freezed,
     Object subject = freezed,
     Object encounter = freezed,
-    Object effectiveDateTime = freezed,
-    Object effectiveDateTimeElement = freezed,
-    Object effectivePeriod = freezed,
-    Object dateAsserted = freezed,
-    Object dateAssertedElement = freezed,
-    Object informationSource = freezed,
+    Object occurrenceDateTime = freezed,
+    Object occurrenceDateTimeElement = freezed,
+    Object occurrencePeriod = freezed,
+    Object recorded = freezed,
+    Object recordedElement = freezed,
+    Object reportedBoolean = freezed,
+    Object reportedBooleanElement = freezed,
+    Object reportedReference = freezed,
+    Object consumedItem = freezed,
+    Object ingredientLabel = freezed,
+    Object performer = freezed,
+    Object location = freezed,
     Object derivedFrom = freezed,
-    Object reasonCode = freezed,
+    Object reason = freezed,
     Object note = freezed,
   }) {
     return _then(_NutritionIntake(
@@ -5953,6 +5950,15 @@ class __$NutritionIntakeCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
+      instantiatesCanonical: instantiatesCanonical == freezed
+          ? _value.instantiatesCanonical
+          : instantiatesCanonical as List<Canonical>,
+      instantiatesUri: instantiatesUri == freezed
+          ? _value.instantiatesUri
+          : instantiatesUri as List<FhirUri>,
+      instantiatesUriElement: instantiatesUriElement == freezed
+          ? _value.instantiatesUriElement
+          : instantiatesUriElement as List<Element>,
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<Reference>,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>,
       status: status == freezed ? _value.status : status as Code,
@@ -5962,50 +5968,54 @@ class __$NutritionIntakeCopyWithImpl<$Res>
       statusReason: statusReason == freezed
           ? _value.statusReason
           : statusReason as List<CodeableConcept>,
-      category: category == freezed
-          ? _value.category
-          : category as List<CodeableConcept>,
+      code: code == freezed ? _value.code : code as CodeableConcept,
+      subject: subject == freezed ? _value.subject : subject as Reference,
+      encounter:
+          encounter == freezed ? _value.encounter : encounter as Reference,
+      occurrenceDateTime: occurrenceDateTime == freezed
+          ? _value.occurrenceDateTime
+          : occurrenceDateTime as FhirDateTime,
+      occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
+          ? _value.occurrenceDateTimeElement
+          : occurrenceDateTimeElement as Element,
+      occurrencePeriod: occurrencePeriod == freezed
+          ? _value.occurrencePeriod
+          : occurrencePeriod as Period,
+      recorded:
+          recorded == freezed ? _value.recorded : recorded as FhirDateTime,
+      recordedElement: recordedElement == freezed
+          ? _value.recordedElement
+          : recordedElement as Element,
+      reportedBoolean: reportedBoolean == freezed
+          ? _value.reportedBoolean
+          : reportedBoolean as Boolean,
+      reportedBooleanElement: reportedBooleanElement == freezed
+          ? _value.reportedBooleanElement
+          : reportedBooleanElement as Element,
+      reportedReference: reportedReference == freezed
+          ? _value.reportedReference
+          : reportedReference as Reference,
       consumedItem: consumedItem == freezed
           ? _value.consumedItem
           : consumedItem as List<NutritionIntakeConsumedItem>,
       ingredientLabel: ingredientLabel == freezed
           ? _value.ingredientLabel
           : ingredientLabel as List<NutritionIntakeIngredientLabel>,
-      subject: subject == freezed ? _value.subject : subject as Reference,
-      encounter:
-          encounter == freezed ? _value.encounter : encounter as Reference,
-      effectiveDateTime: effectiveDateTime == freezed
-          ? _value.effectiveDateTime
-          : effectiveDateTime as FhirDateTime,
-      effectiveDateTimeElement: effectiveDateTimeElement == freezed
-          ? _value.effectiveDateTimeElement
-          : effectiveDateTimeElement as Element,
-      effectivePeriod: effectivePeriod == freezed
-          ? _value.effectivePeriod
-          : effectivePeriod as Period,
-      dateAsserted: dateAsserted == freezed
-          ? _value.dateAsserted
-          : dateAsserted as FhirDateTime,
-      dateAssertedElement: dateAssertedElement == freezed
-          ? _value.dateAssertedElement
-          : dateAssertedElement as Element,
-      informationSource: informationSource == freezed
-          ? _value.informationSource
-          : informationSource as Reference,
+      performer: performer == freezed
+          ? _value.performer
+          : performer as List<NutritionIntakePerformer>,
+      location: location == freezed ? _value.location : location as Reference,
       derivedFrom: derivedFrom == freezed
           ? _value.derivedFrom
           : derivedFrom as List<Reference>,
-      reasonCode: reasonCode == freezed
-          ? _value.reasonCode
-          : reasonCode as List<CodeableReference>,
+      reason:
+          reason == freezed ? _value.reason : reason as List<CodeableReference>,
       note: note == freezed ? _value.note : note as List<Annotation>,
     ));
   }
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_NutritionIntake extends _NutritionIntake {
   _$_NutritionIntake(
       {@required @JsonKey(defaultValue: 'NutritionIntake') this.resourceType,
@@ -6020,28 +6030,35 @@ class _$_NutritionIntake extends _NutritionIntake {
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
+      this.instantiatesCanonical,
+      this.instantiatesUri,
+      @JsonKey(name: '_instantiatesUri') this.instantiatesUriElement,
       this.basedOn,
       this.partOf,
       this.status,
       @JsonKey(name: '_status') this.statusElement,
       this.statusReason,
-      this.category,
-      @required this.consumedItem,
-      this.ingredientLabel,
+      this.code,
       @required this.subject,
       this.encounter,
-      this.effectiveDateTime,
-      @JsonKey(name: '_effectiveDateTime') this.effectiveDateTimeElement,
-      this.effectivePeriod,
-      this.dateAsserted,
-      @JsonKey(name: '_dateAsserted') this.dateAssertedElement,
-      this.informationSource,
+      this.occurrenceDateTime,
+      @JsonKey(name: '_occurrenceDateTime') this.occurrenceDateTimeElement,
+      this.occurrencePeriod,
+      this.recorded,
+      @JsonKey(name: '_recorded') this.recordedElement,
+      this.reportedBoolean,
+      @JsonKey(name: '_reportedBoolean') this.reportedBooleanElement,
+      this.reportedReference,
+      @required this.consumedItem,
+      this.ingredientLabel,
+      this.performer,
+      this.location,
       this.derivedFrom,
-      this.reasonCode,
+      this.reason,
       this.note})
       : assert(resourceType != null),
-        assert(consumedItem != null),
         assert(subject != null),
+        assert(consumedItem != null),
         super._();
 
   factory _$_NutritionIntake.fromJson(Map<String, dynamic> json) =>
@@ -6076,6 +6093,13 @@ class _$_NutritionIntake extends _NutritionIntake {
   @override
   final List<Identifier> identifier;
   @override
+  final List<Canonical> instantiatesCanonical;
+  @override
+  final List<FhirUri> instantiatesUri;
+  @override
+  @JsonKey(name: '_instantiatesUri')
+  final List<Element> instantiatesUriElement;
+  @override
   final List<Reference> basedOn;
   @override
   final List<Reference> partOf;
@@ -6087,39 +6111,48 @@ class _$_NutritionIntake extends _NutritionIntake {
   @override
   final List<CodeableConcept> statusReason;
   @override
-  final List<CodeableConcept> category;
-  @override
-  final List<NutritionIntakeConsumedItem> consumedItem;
-  @override
-  final List<NutritionIntakeIngredientLabel> ingredientLabel;
+  final CodeableConcept code;
   @override
   final Reference subject;
   @override
   final Reference encounter;
   @override
-  final FhirDateTime effectiveDateTime;
+  final FhirDateTime occurrenceDateTime;
   @override
-  @JsonKey(name: '_effectiveDateTime')
-  final Element effectiveDateTimeElement;
+  @JsonKey(name: '_occurrenceDateTime')
+  final Element occurrenceDateTimeElement;
   @override
-  final Period effectivePeriod;
+  final Period occurrencePeriod;
   @override
-  final FhirDateTime dateAsserted;
+  final FhirDateTime recorded;
   @override
-  @JsonKey(name: '_dateAsserted')
-  final Element dateAssertedElement;
+  @JsonKey(name: '_recorded')
+  final Element recordedElement;
   @override
-  final Reference informationSource;
+  final Boolean reportedBoolean;
+  @override
+  @JsonKey(name: '_reportedBoolean')
+  final Element reportedBooleanElement;
+  @override
+  final Reference reportedReference;
+  @override
+  final List<NutritionIntakeConsumedItem> consumedItem;
+  @override
+  final List<NutritionIntakeIngredientLabel> ingredientLabel;
+  @override
+  final List<NutritionIntakePerformer> performer;
+  @override
+  final Reference location;
   @override
   final List<Reference> derivedFrom;
   @override
-  final List<CodeableReference> reasonCode;
+  final List<CodeableReference> reason;
   @override
   final List<Annotation> note;
 
   @override
   String toString() {
-    return 'NutritionIntake(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, basedOn: $basedOn, partOf: $partOf, status: $status, statusElement: $statusElement, statusReason: $statusReason, category: $category, consumedItem: $consumedItem, ingredientLabel: $ingredientLabel, subject: $subject, encounter: $encounter, effectiveDateTime: $effectiveDateTime, effectiveDateTimeElement: $effectiveDateTimeElement, effectivePeriod: $effectivePeriod, dateAsserted: $dateAsserted, dateAssertedElement: $dateAssertedElement, informationSource: $informationSource, derivedFrom: $derivedFrom, reasonCode: $reasonCode, note: $note)';
+    return 'NutritionIntake(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, instantiatesUriElement: $instantiatesUriElement, basedOn: $basedOn, partOf: $partOf, status: $status, statusElement: $statusElement, statusReason: $statusReason, code: $code, subject: $subject, encounter: $encounter, occurrenceDateTime: $occurrenceDateTime, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrencePeriod: $occurrencePeriod, recorded: $recorded, recordedElement: $recordedElement, reportedBoolean: $reportedBoolean, reportedBooleanElement: $reportedBooleanElement, reportedReference: $reportedReference, consumedItem: $consumedItem, ingredientLabel: $ingredientLabel, performer: $performer, location: $location, derivedFrom: $derivedFrom, reason: $reason, note: $note)';
   }
 
   @override
@@ -6159,6 +6192,15 @@ class _$_NutritionIntake extends _NutritionIntake {
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
+            (identical(other.instantiatesCanonical, instantiatesCanonical) ||
+                const DeepCollectionEquality().equals(
+                    other.instantiatesCanonical, instantiatesCanonical)) &&
+            (identical(other.instantiatesUri, instantiatesUri) ||
+                const DeepCollectionEquality()
+                    .equals(other.instantiatesUri, instantiatesUri)) &&
+            (identical(other.instantiatesUriElement, instantiatesUriElement) ||
+                const DeepCollectionEquality().equals(
+                    other.instantiatesUriElement, instantiatesUriElement)) &&
             (identical(other.basedOn, basedOn) ||
                 const DeepCollectionEquality()
                     .equals(other.basedOn, basedOn)) &&
@@ -6172,33 +6214,30 @@ class _$_NutritionIntake extends _NutritionIntake {
             (identical(other.statusReason, statusReason) ||
                 const DeepCollectionEquality()
                     .equals(other.statusReason, statusReason)) &&
-            (identical(other.category, category) ||
-                const DeepCollectionEquality()
-                    .equals(other.category, category)) &&
-            (identical(other.consumedItem, consumedItem) ||
-                const DeepCollectionEquality()
-                    .equals(other.consumedItem, consumedItem)) &&
-            (identical(other.ingredientLabel, ingredientLabel) ||
-                const DeepCollectionEquality()
-                    .equals(other.ingredientLabel, ingredientLabel)) &&
+            (identical(other.code, code) ||
+                const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.subject, subject) ||
                 const DeepCollectionEquality()
                     .equals(other.subject, subject)) &&
             (identical(other.encounter, encounter) ||
                 const DeepCollectionEquality()
                     .equals(other.encounter, encounter)) &&
-            (identical(other.effectiveDateTime, effectiveDateTime) ||
+            (identical(other.occurrenceDateTime, occurrenceDateTime) ||
                 const DeepCollectionEquality()
-                    .equals(other.effectiveDateTime, effectiveDateTime)) &&
-            (identical(other.effectiveDateTimeElement, effectiveDateTimeElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.effectiveDateTimeElement, effectiveDateTimeElement)) &&
-            (identical(other.effectivePeriod, effectivePeriod) || const DeepCollectionEquality().equals(other.effectivePeriod, effectivePeriod)) &&
-            (identical(other.dateAsserted, dateAsserted) || const DeepCollectionEquality().equals(other.dateAsserted, dateAsserted)) &&
-            (identical(other.dateAssertedElement, dateAssertedElement) || const DeepCollectionEquality().equals(other.dateAssertedElement, dateAssertedElement)) &&
-            (identical(other.informationSource, informationSource) || const DeepCollectionEquality().equals(other.informationSource, informationSource)) &&
+                    .equals(other.occurrenceDateTime, occurrenceDateTime)) &&
+            (identical(other.occurrenceDateTimeElement, occurrenceDateTimeElement) || const DeepCollectionEquality().equals(other.occurrenceDateTimeElement, occurrenceDateTimeElement)) &&
+            (identical(other.occurrencePeriod, occurrencePeriod) || const DeepCollectionEquality().equals(other.occurrencePeriod, occurrencePeriod)) &&
+            (identical(other.recorded, recorded) || const DeepCollectionEquality().equals(other.recorded, recorded)) &&
+            (identical(other.recordedElement, recordedElement) || const DeepCollectionEquality().equals(other.recordedElement, recordedElement)) &&
+            (identical(other.reportedBoolean, reportedBoolean) || const DeepCollectionEquality().equals(other.reportedBoolean, reportedBoolean)) &&
+            (identical(other.reportedBooleanElement, reportedBooleanElement) || const DeepCollectionEquality().equals(other.reportedBooleanElement, reportedBooleanElement)) &&
+            (identical(other.reportedReference, reportedReference) || const DeepCollectionEquality().equals(other.reportedReference, reportedReference)) &&
+            (identical(other.consumedItem, consumedItem) || const DeepCollectionEquality().equals(other.consumedItem, consumedItem)) &&
+            (identical(other.ingredientLabel, ingredientLabel) || const DeepCollectionEquality().equals(other.ingredientLabel, ingredientLabel)) &&
+            (identical(other.performer, performer) || const DeepCollectionEquality().equals(other.performer, performer)) &&
+            (identical(other.location, location) || const DeepCollectionEquality().equals(other.location, location)) &&
             (identical(other.derivedFrom, derivedFrom) || const DeepCollectionEquality().equals(other.derivedFrom, derivedFrom)) &&
-            (identical(other.reasonCode, reasonCode) || const DeepCollectionEquality().equals(other.reasonCode, reasonCode)) &&
+            (identical(other.reason, reason) || const DeepCollectionEquality().equals(other.reason, reason)) &&
             (identical(other.note, note) || const DeepCollectionEquality().equals(other.note, note)));
   }
 
@@ -6217,24 +6256,31 @@ class _$_NutritionIntake extends _NutritionIntake {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
+      const DeepCollectionEquality().hash(instantiatesCanonical) ^
+      const DeepCollectionEquality().hash(instantiatesUri) ^
+      const DeepCollectionEquality().hash(instantiatesUriElement) ^
       const DeepCollectionEquality().hash(basedOn) ^
       const DeepCollectionEquality().hash(partOf) ^
       const DeepCollectionEquality().hash(status) ^
       const DeepCollectionEquality().hash(statusElement) ^
       const DeepCollectionEquality().hash(statusReason) ^
-      const DeepCollectionEquality().hash(category) ^
-      const DeepCollectionEquality().hash(consumedItem) ^
-      const DeepCollectionEquality().hash(ingredientLabel) ^
+      const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(subject) ^
       const DeepCollectionEquality().hash(encounter) ^
-      const DeepCollectionEquality().hash(effectiveDateTime) ^
-      const DeepCollectionEquality().hash(effectiveDateTimeElement) ^
-      const DeepCollectionEquality().hash(effectivePeriod) ^
-      const DeepCollectionEquality().hash(dateAsserted) ^
-      const DeepCollectionEquality().hash(dateAssertedElement) ^
-      const DeepCollectionEquality().hash(informationSource) ^
+      const DeepCollectionEquality().hash(occurrenceDateTime) ^
+      const DeepCollectionEquality().hash(occurrenceDateTimeElement) ^
+      const DeepCollectionEquality().hash(occurrencePeriod) ^
+      const DeepCollectionEquality().hash(recorded) ^
+      const DeepCollectionEquality().hash(recordedElement) ^
+      const DeepCollectionEquality().hash(reportedBoolean) ^
+      const DeepCollectionEquality().hash(reportedBooleanElement) ^
+      const DeepCollectionEquality().hash(reportedReference) ^
+      const DeepCollectionEquality().hash(consumedItem) ^
+      const DeepCollectionEquality().hash(ingredientLabel) ^
+      const DeepCollectionEquality().hash(performer) ^
+      const DeepCollectionEquality().hash(location) ^
       const DeepCollectionEquality().hash(derivedFrom) ^
-      const DeepCollectionEquality().hash(reasonCode) ^
+      const DeepCollectionEquality().hash(reason) ^
       const DeepCollectionEquality().hash(note);
 
   @override
@@ -6262,24 +6308,31 @@ abstract class _NutritionIntake extends NutritionIntake {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
+      List<Canonical> instantiatesCanonical,
+      List<FhirUri> instantiatesUri,
+      @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
       List<Reference> basedOn,
       List<Reference> partOf,
       Code status,
       @JsonKey(name: '_status') Element statusElement,
       List<CodeableConcept> statusReason,
-      List<CodeableConcept> category,
-      @required List<NutritionIntakeConsumedItem> consumedItem,
-      List<NutritionIntakeIngredientLabel> ingredientLabel,
+      CodeableConcept code,
       @required Reference subject,
       Reference encounter,
-      FhirDateTime effectiveDateTime,
-      @JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
-      Period effectivePeriod,
-      FhirDateTime dateAsserted,
-      @JsonKey(name: '_dateAsserted') Element dateAssertedElement,
-      Reference informationSource,
+      FhirDateTime occurrenceDateTime,
+      @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+      Period occurrencePeriod,
+      FhirDateTime recorded,
+      @JsonKey(name: '_recorded') Element recordedElement,
+      Boolean reportedBoolean,
+      @JsonKey(name: '_reportedBoolean') Element reportedBooleanElement,
+      Reference reportedReference,
+      @required List<NutritionIntakeConsumedItem> consumedItem,
+      List<NutritionIntakeIngredientLabel> ingredientLabel,
+      List<NutritionIntakePerformer> performer,
+      Reference location,
       List<Reference> derivedFrom,
-      List<CodeableReference> reasonCode,
+      List<CodeableReference> reason,
       List<Annotation> note}) = _$_NutritionIntake;
 
   factory _NutritionIntake.fromJson(Map<String, dynamic> json) =
@@ -6314,6 +6367,13 @@ abstract class _NutritionIntake extends NutritionIntake {
   @override
   List<Identifier> get identifier;
   @override
+  List<Canonical> get instantiatesCanonical;
+  @override
+  List<FhirUri> get instantiatesUri;
+  @override
+  @JsonKey(name: '_instantiatesUri')
+  List<Element> get instantiatesUriElement;
+  @override
   List<Reference> get basedOn;
   @override
   List<Reference> get partOf;
@@ -6325,33 +6385,42 @@ abstract class _NutritionIntake extends NutritionIntake {
   @override
   List<CodeableConcept> get statusReason;
   @override
-  List<CodeableConcept> get category;
-  @override
-  List<NutritionIntakeConsumedItem> get consumedItem;
-  @override
-  List<NutritionIntakeIngredientLabel> get ingredientLabel;
+  CodeableConcept get code;
   @override
   Reference get subject;
   @override
   Reference get encounter;
   @override
-  FhirDateTime get effectiveDateTime;
+  FhirDateTime get occurrenceDateTime;
   @override
-  @JsonKey(name: '_effectiveDateTime')
-  Element get effectiveDateTimeElement;
+  @JsonKey(name: '_occurrenceDateTime')
+  Element get occurrenceDateTimeElement;
   @override
-  Period get effectivePeriod;
+  Period get occurrencePeriod;
   @override
-  FhirDateTime get dateAsserted;
+  FhirDateTime get recorded;
   @override
-  @JsonKey(name: '_dateAsserted')
-  Element get dateAssertedElement;
+  @JsonKey(name: '_recorded')
+  Element get recordedElement;
   @override
-  Reference get informationSource;
+  Boolean get reportedBoolean;
+  @override
+  @JsonKey(name: '_reportedBoolean')
+  Element get reportedBooleanElement;
+  @override
+  Reference get reportedReference;
+  @override
+  List<NutritionIntakeConsumedItem> get consumedItem;
+  @override
+  List<NutritionIntakeIngredientLabel> get ingredientLabel;
+  @override
+  List<NutritionIntakePerformer> get performer;
+  @override
+  Reference get location;
   @override
   List<Reference> get derivedFrom;
   @override
-  List<CodeableReference> get reasonCode;
+  List<CodeableReference> get reason;
   @override
   List<Annotation> get note;
   @override
@@ -6363,7 +6432,6 @@ NutritionIntakeConsumedItem _$NutritionIntakeConsumedItemFromJson(
   return _NutritionIntakeConsumedItem.fromJson(json);
 }
 
-/// @nodoc
 class _$NutritionIntakeConsumedItemTearOff {
   const _$NutritionIntakeConsumedItemTearOff();
 
@@ -6373,7 +6441,7 @@ class _$NutritionIntakeConsumedItemTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @required CodeableConcept type,
-      @required CodeableConcept nutritionProduct,
+      @required CodeableReference nutritionProduct,
       Timing schedule,
       Quantity amount,
       Quantity rate,
@@ -6394,25 +6462,18 @@ class _$NutritionIntakeConsumedItemTearOff {
       notConsumedReason: notConsumedReason,
     );
   }
-
-// ignore: unused_element
-  NutritionIntakeConsumedItem fromJson(Map<String, Object> json) {
-    return NutritionIntakeConsumedItem.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $NutritionIntakeConsumedItem = _$NutritionIntakeConsumedItemTearOff();
 
-/// @nodoc
 mixin _$NutritionIntakeConsumedItem {
   String get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   CodeableConcept get type;
-  CodeableConcept get nutritionProduct;
+  CodeableReference get nutritionProduct;
   Timing get schedule;
   Quantity get amount;
   Quantity get rate;
@@ -6426,7 +6487,6 @@ mixin _$NutritionIntakeConsumedItem {
       get copyWith;
 }
 
-/// @nodoc
 abstract class $NutritionIntakeConsumedItemCopyWith<$Res> {
   factory $NutritionIntakeConsumedItemCopyWith(
           NutritionIntakeConsumedItem value,
@@ -6437,7 +6497,7 @@ abstract class $NutritionIntakeConsumedItemCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept type,
-      CodeableConcept nutritionProduct,
+      CodeableReference nutritionProduct,
       Timing schedule,
       Quantity amount,
       Quantity rate,
@@ -6446,7 +6506,7 @@ abstract class $NutritionIntakeConsumedItemCopyWith<$Res> {
       CodeableConcept notConsumedReason});
 
   $CodeableConceptCopyWith<$Res> get type;
-  $CodeableConceptCopyWith<$Res> get nutritionProduct;
+  $CodeableReferenceCopyWith<$Res> get nutritionProduct;
   $TimingCopyWith<$Res> get schedule;
   $QuantityCopyWith<$Res> get amount;
   $QuantityCopyWith<$Res> get rate;
@@ -6454,7 +6514,6 @@ abstract class $NutritionIntakeConsumedItemCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get notConsumedReason;
 }
 
-/// @nodoc
 class _$NutritionIntakeConsumedItemCopyWithImpl<$Res>
     implements $NutritionIntakeConsumedItemCopyWith<$Res> {
   _$NutritionIntakeConsumedItemCopyWithImpl(this._value, this._then);
@@ -6488,7 +6547,7 @@ class _$NutritionIntakeConsumedItemCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as CodeableConcept,
       nutritionProduct: nutritionProduct == freezed
           ? _value.nutritionProduct
-          : nutritionProduct as CodeableConcept,
+          : nutritionProduct as CodeableReference,
       schedule: schedule == freezed ? _value.schedule : schedule as Timing,
       amount: amount == freezed ? _value.amount : amount as Quantity,
       rate: rate == freezed ? _value.rate : rate as Quantity,
@@ -6514,11 +6573,11 @@ class _$NutritionIntakeConsumedItemCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get nutritionProduct {
+  $CodeableReferenceCopyWith<$Res> get nutritionProduct {
     if (_value.nutritionProduct == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.nutritionProduct, (value) {
+    return $CodeableReferenceCopyWith<$Res>(_value.nutritionProduct, (value) {
       return _then(_value.copyWith(nutritionProduct: value));
     });
   }
@@ -6574,7 +6633,6 @@ class _$NutritionIntakeConsumedItemCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$NutritionIntakeConsumedItemCopyWith<$Res>
     implements $NutritionIntakeConsumedItemCopyWith<$Res> {
   factory _$NutritionIntakeConsumedItemCopyWith(
@@ -6587,7 +6645,7 @@ abstract class _$NutritionIntakeConsumedItemCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept type,
-      CodeableConcept nutritionProduct,
+      CodeableReference nutritionProduct,
       Timing schedule,
       Quantity amount,
       Quantity rate,
@@ -6598,7 +6656,7 @@ abstract class _$NutritionIntakeConsumedItemCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res> get type;
   @override
-  $CodeableConceptCopyWith<$Res> get nutritionProduct;
+  $CodeableReferenceCopyWith<$Res> get nutritionProduct;
   @override
   $TimingCopyWith<$Res> get schedule;
   @override
@@ -6611,7 +6669,6 @@ abstract class _$NutritionIntakeConsumedItemCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get notConsumedReason;
 }
 
-/// @nodoc
 class __$NutritionIntakeConsumedItemCopyWithImpl<$Res>
     extends _$NutritionIntakeConsumedItemCopyWithImpl<$Res>
     implements _$NutritionIntakeConsumedItemCopyWith<$Res> {
@@ -6649,7 +6706,7 @@ class __$NutritionIntakeConsumedItemCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as CodeableConcept,
       nutritionProduct: nutritionProduct == freezed
           ? _value.nutritionProduct
-          : nutritionProduct as CodeableConcept,
+          : nutritionProduct as CodeableReference,
       schedule: schedule == freezed ? _value.schedule : schedule as Timing,
       amount: amount == freezed ? _value.amount : amount as Quantity,
       rate: rate == freezed ? _value.rate : rate as Quantity,
@@ -6666,8 +6723,6 @@ class __$NutritionIntakeConsumedItemCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_NutritionIntakeConsumedItem extends _NutritionIntakeConsumedItem {
   _$_NutritionIntakeConsumedItem(
       {this.id,
@@ -6698,7 +6753,7 @@ class _$_NutritionIntakeConsumedItem extends _NutritionIntakeConsumedItem {
   @override
   final CodeableConcept type;
   @override
-  final CodeableConcept nutritionProduct;
+  final CodeableReference nutritionProduct;
   @override
   final Timing schedule;
   @override
@@ -6787,7 +6842,7 @@ abstract class _NutritionIntakeConsumedItem
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @required CodeableConcept type,
-      @required CodeableConcept nutritionProduct,
+      @required CodeableReference nutritionProduct,
       Timing schedule,
       Quantity amount,
       Quantity rate,
@@ -6808,7 +6863,7 @@ abstract class _NutritionIntakeConsumedItem
   @override
   CodeableConcept get type;
   @override
-  CodeableConcept get nutritionProduct;
+  CodeableReference get nutritionProduct;
   @override
   Timing get schedule;
   @override
@@ -6832,7 +6887,6 @@ NutritionIntakeIngredientLabel _$NutritionIntakeIngredientLabelFromJson(
   return _NutritionIntakeIngredientLabel.fromJson(json);
 }
 
-/// @nodoc
 class _$NutritionIntakeIngredientLabelTearOff {
   const _$NutritionIntakeIngredientLabelTearOff();
 
@@ -6841,7 +6895,7 @@ class _$NutritionIntakeIngredientLabelTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @required CodeableConcept nutrient,
+      @required CodeableReference nutrient,
       @required Quantity amount}) {
     return _NutritionIntakeIngredientLabel(
       id: id,
@@ -6851,25 +6905,18 @@ class _$NutritionIntakeIngredientLabelTearOff {
       amount: amount,
     );
   }
-
-// ignore: unused_element
-  NutritionIntakeIngredientLabel fromJson(Map<String, Object> json) {
-    return NutritionIntakeIngredientLabel.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $NutritionIntakeIngredientLabel =
     _$NutritionIntakeIngredientLabelTearOff();
 
-/// @nodoc
 mixin _$NutritionIntakeIngredientLabel {
   String get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
-  CodeableConcept get nutrient;
+  CodeableReference get nutrient;
   Quantity get amount;
 
   Map<String, dynamic> toJson();
@@ -6877,7 +6924,6 @@ mixin _$NutritionIntakeIngredientLabel {
       get copyWith;
 }
 
-/// @nodoc
 abstract class $NutritionIntakeIngredientLabelCopyWith<$Res> {
   factory $NutritionIntakeIngredientLabelCopyWith(
           NutritionIntakeIngredientLabel value,
@@ -6887,14 +6933,13 @@ abstract class $NutritionIntakeIngredientLabelCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      CodeableConcept nutrient,
+      CodeableReference nutrient,
       Quantity amount});
 
-  $CodeableConceptCopyWith<$Res> get nutrient;
+  $CodeableReferenceCopyWith<$Res> get nutrient;
   $QuantityCopyWith<$Res> get amount;
 }
 
-/// @nodoc
 class _$NutritionIntakeIngredientLabelCopyWithImpl<$Res>
     implements $NutritionIntakeIngredientLabelCopyWith<$Res> {
   _$NutritionIntakeIngredientLabelCopyWithImpl(this._value, this._then);
@@ -6920,17 +6965,17 @@ class _$NutritionIntakeIngredientLabelCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       nutrient:
-          nutrient == freezed ? _value.nutrient : nutrient as CodeableConcept,
+          nutrient == freezed ? _value.nutrient : nutrient as CodeableReference,
       amount: amount == freezed ? _value.amount : amount as Quantity,
     ));
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get nutrient {
+  $CodeableReferenceCopyWith<$Res> get nutrient {
     if (_value.nutrient == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.nutrient, (value) {
+    return $CodeableReferenceCopyWith<$Res>(_value.nutrient, (value) {
       return _then(_value.copyWith(nutrient: value));
     });
   }
@@ -6946,7 +6991,6 @@ class _$NutritionIntakeIngredientLabelCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$NutritionIntakeIngredientLabelCopyWith<$Res>
     implements $NutritionIntakeIngredientLabelCopyWith<$Res> {
   factory _$NutritionIntakeIngredientLabelCopyWith(
@@ -6958,16 +7002,15 @@ abstract class _$NutritionIntakeIngredientLabelCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      CodeableConcept nutrient,
+      CodeableReference nutrient,
       Quantity amount});
 
   @override
-  $CodeableConceptCopyWith<$Res> get nutrient;
+  $CodeableReferenceCopyWith<$Res> get nutrient;
   @override
   $QuantityCopyWith<$Res> get amount;
 }
 
-/// @nodoc
 class __$NutritionIntakeIngredientLabelCopyWithImpl<$Res>
     extends _$NutritionIntakeIngredientLabelCopyWithImpl<$Res>
     implements _$NutritionIntakeIngredientLabelCopyWith<$Res> {
@@ -6997,15 +7040,13 @@ class __$NutritionIntakeIngredientLabelCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       nutrient:
-          nutrient == freezed ? _value.nutrient : nutrient as CodeableConcept,
+          nutrient == freezed ? _value.nutrient : nutrient as CodeableReference,
       amount: amount == freezed ? _value.amount : amount as Quantity,
     ));
   }
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_NutritionIntakeIngredientLabel
     extends _NutritionIntakeIngredientLabel {
   _$_NutritionIntakeIngredientLabel(
@@ -7030,7 +7071,7 @@ class _$_NutritionIntakeIngredientLabel
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  final CodeableConcept nutrient;
+  final CodeableReference nutrient;
   @override
   final Quantity amount;
 
@@ -7085,7 +7126,7 @@ abstract class _NutritionIntakeIngredientLabel
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @required CodeableConcept nutrient,
+      @required CodeableReference nutrient,
       @required Quantity amount}) = _$_NutritionIntakeIngredientLabel;
 
   factory _NutritionIntakeIngredientLabel.fromJson(Map<String, dynamic> json) =
@@ -7099,7 +7140,7 @@ abstract class _NutritionIntakeIngredientLabel
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  CodeableConcept get nutrient;
+  CodeableReference get nutrient;
   @override
   Quantity get amount;
   @override
@@ -7107,11 +7148,266 @@ abstract class _NutritionIntakeIngredientLabel
       get copyWith;
 }
 
+NutritionIntakePerformer _$NutritionIntakePerformerFromJson(
+    Map<String, dynamic> json) {
+  return _NutritionIntakePerformer.fromJson(json);
+}
+
+class _$NutritionIntakePerformerTearOff {
+  const _$NutritionIntakePerformerTearOff();
+
+// ignore: unused_element
+  _NutritionIntakePerformer call(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      CodeableConcept function,
+      @required Reference actor}) {
+    return _NutritionIntakePerformer(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      function: function,
+      actor: actor,
+    );
+  }
+}
+
+// ignore: unused_element
+const $NutritionIntakePerformer = _$NutritionIntakePerformerTearOff();
+
+mixin _$NutritionIntakePerformer {
+  String get id;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
+  CodeableConcept get function;
+  Reference get actor;
+
+  Map<String, dynamic> toJson();
+  $NutritionIntakePerformerCopyWith<NutritionIntakePerformer> get copyWith;
+}
+
+abstract class $NutritionIntakePerformerCopyWith<$Res> {
+  factory $NutritionIntakePerformerCopyWith(NutritionIntakePerformer value,
+          $Res Function(NutritionIntakePerformer) then) =
+      _$NutritionIntakePerformerCopyWithImpl<$Res>;
+  $Res call(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      CodeableConcept function,
+      Reference actor});
+
+  $CodeableConceptCopyWith<$Res> get function;
+  $ReferenceCopyWith<$Res> get actor;
+}
+
+class _$NutritionIntakePerformerCopyWithImpl<$Res>
+    implements $NutritionIntakePerformerCopyWith<$Res> {
+  _$NutritionIntakePerformerCopyWithImpl(this._value, this._then);
+
+  final NutritionIntakePerformer _value;
+  // ignore: unused_field
+  final $Res Function(NutritionIntakePerformer) _then;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object function = freezed,
+    Object actor = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed ? _value.id : id as String,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      function:
+          function == freezed ? _value.function : function as CodeableConcept,
+      actor: actor == freezed ? _value.actor : actor as Reference,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get function {
+    if (_value.function == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.function, (value) {
+      return _then(_value.copyWith(function: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get actor {
+    if (_value.actor == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.actor, (value) {
+      return _then(_value.copyWith(actor: value));
+    });
+  }
+}
+
+abstract class _$NutritionIntakePerformerCopyWith<$Res>
+    implements $NutritionIntakePerformerCopyWith<$Res> {
+  factory _$NutritionIntakePerformerCopyWith(_NutritionIntakePerformer value,
+          $Res Function(_NutritionIntakePerformer) then) =
+      __$NutritionIntakePerformerCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      CodeableConcept function,
+      Reference actor});
+
+  @override
+  $CodeableConceptCopyWith<$Res> get function;
+  @override
+  $ReferenceCopyWith<$Res> get actor;
+}
+
+class __$NutritionIntakePerformerCopyWithImpl<$Res>
+    extends _$NutritionIntakePerformerCopyWithImpl<$Res>
+    implements _$NutritionIntakePerformerCopyWith<$Res> {
+  __$NutritionIntakePerformerCopyWithImpl(_NutritionIntakePerformer _value,
+      $Res Function(_NutritionIntakePerformer) _then)
+      : super(_value, (v) => _then(v as _NutritionIntakePerformer));
+
+  @override
+  _NutritionIntakePerformer get _value =>
+      super._value as _NutritionIntakePerformer;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object function = freezed,
+    Object actor = freezed,
+  }) {
+    return _then(_NutritionIntakePerformer(
+      id: id == freezed ? _value.id : id as String,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      function:
+          function == freezed ? _value.function : function as CodeableConcept,
+      actor: actor == freezed ? _value.actor : actor as Reference,
+    ));
+  }
+}
+
+@JsonSerializable()
+class _$_NutritionIntakePerformer extends _NutritionIntakePerformer {
+  _$_NutritionIntakePerformer(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.function,
+      @required this.actor})
+      : assert(actor != null),
+        super._();
+
+  factory _$_NutritionIntakePerformer.fromJson(Map<String, dynamic> json) =>
+      _$_$_NutritionIntakePerformerFromJson(json);
+
+  @override
+  final String id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
+  @override
+  final CodeableConcept function;
+  @override
+  final Reference actor;
+
+  @override
+  String toString() {
+    return 'NutritionIntakePerformer(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, function: $function, actor: $actor)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _NutritionIntakePerformer &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.function, function) ||
+                const DeepCollectionEquality()
+                    .equals(other.function, function)) &&
+            (identical(other.actor, actor) ||
+                const DeepCollectionEquality().equals(other.actor, actor)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(function) ^
+      const DeepCollectionEquality().hash(actor);
+
+  @override
+  _$NutritionIntakePerformerCopyWith<_NutritionIntakePerformer> get copyWith =>
+      __$NutritionIntakePerformerCopyWithImpl<_NutritionIntakePerformer>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_NutritionIntakePerformerToJson(this);
+  }
+}
+
+abstract class _NutritionIntakePerformer extends NutritionIntakePerformer {
+  _NutritionIntakePerformer._() : super._();
+  factory _NutritionIntakePerformer(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      CodeableConcept function,
+      @required Reference actor}) = _$_NutritionIntakePerformer;
+
+  factory _NutritionIntakePerformer.fromJson(Map<String, dynamic> json) =
+      _$_NutritionIntakePerformer.fromJson;
+
+  @override
+  String get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
+  @override
+  CodeableConcept get function;
+  @override
+  Reference get actor;
+  @override
+  _$NutritionIntakePerformerCopyWith<_NutritionIntakePerformer> get copyWith;
+}
+
 NutritionOrder _$NutritionOrderFromJson(Map<String, dynamic> json) {
   return _NutritionOrder.fromJson(json);
 }
 
-/// @nodoc
 class _$NutritionOrderTearOff {
   const _$NutritionOrderTearOff();
 
@@ -7186,18 +7482,11 @@ class _$NutritionOrderTearOff {
       note: note,
     );
   }
-
-// ignore: unused_element
-  NutritionOrder fromJson(Map<String, Object> json) {
-    return NutritionOrder.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $NutritionOrder = _$NutritionOrderTearOff();
 
-/// @nodoc
 mixin _$NutritionOrder {
   @JsonKey(defaultValue: 'NutritionOrder')
   String get resourceType;
@@ -7246,7 +7535,6 @@ mixin _$NutritionOrder {
   $NutritionOrderCopyWith<NutritionOrder> get copyWith;
 }
 
-/// @nodoc
 abstract class $NutritionOrderCopyWith<$Res> {
   factory $NutritionOrderCopyWith(
           NutritionOrder value, $Res Function(NutritionOrder) then) =
@@ -7300,7 +7588,6 @@ abstract class $NutritionOrderCopyWith<$Res> {
   $NutritionOrderEnteralFormulaCopyWith<$Res> get enteralFormula;
 }
 
-/// @nodoc
 class _$NutritionOrderCopyWithImpl<$Res>
     implements $NutritionOrderCopyWith<$Res> {
   _$NutritionOrderCopyWithImpl(this._value, this._then);
@@ -7549,7 +7836,6 @@ class _$NutritionOrderCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$NutritionOrderCopyWith<$Res>
     implements $NutritionOrderCopyWith<$Res> {
   factory _$NutritionOrderCopyWith(
@@ -7617,7 +7903,6 @@ abstract class _$NutritionOrderCopyWith<$Res>
   $NutritionOrderEnteralFormulaCopyWith<$Res> get enteralFormula;
 }
 
-/// @nodoc
 class __$NutritionOrderCopyWithImpl<$Res>
     extends _$NutritionOrderCopyWithImpl<$Res>
     implements _$NutritionOrderCopyWith<$Res> {
@@ -7748,8 +8033,6 @@ class __$NutritionOrderCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_NutritionOrder extends _NutritionOrder {
   _$_NutritionOrder(
       {@required @JsonKey(defaultValue: 'NutritionOrder') this.resourceType,
@@ -8125,7 +8408,6 @@ NutritionOrderOralDiet _$NutritionOrderOralDietFromJson(
   return _NutritionOrderOralDiet.fromJson(json);
 }
 
-/// @nodoc
 class _$NutritionOrderOralDietTearOff {
   const _$NutritionOrderOralDietTearOff();
 
@@ -8154,18 +8436,11 @@ class _$NutritionOrderOralDietTearOff {
       instructionElement: instructionElement,
     );
   }
-
-// ignore: unused_element
-  NutritionOrderOralDiet fromJson(Map<String, Object> json) {
-    return NutritionOrderOralDiet.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $NutritionOrderOralDiet = _$NutritionOrderOralDietTearOff();
 
-/// @nodoc
 mixin _$NutritionOrderOralDiet {
   String get id;
   @JsonKey(name: 'extension')
@@ -8184,7 +8459,6 @@ mixin _$NutritionOrderOralDiet {
   $NutritionOrderOralDietCopyWith<NutritionOrderOralDiet> get copyWith;
 }
 
-/// @nodoc
 abstract class $NutritionOrderOralDietCopyWith<$Res> {
   factory $NutritionOrderOralDietCopyWith(NutritionOrderOralDiet value,
           $Res Function(NutritionOrderOralDiet) then) =
@@ -8204,7 +8478,6 @@ abstract class $NutritionOrderOralDietCopyWith<$Res> {
   $ElementCopyWith<$Res> get instructionElement;
 }
 
-/// @nodoc
 class _$NutritionOrderOralDietCopyWithImpl<$Res>
     implements $NutritionOrderOralDietCopyWith<$Res> {
   _$NutritionOrderOralDietCopyWithImpl(this._value, this._then);
@@ -8265,7 +8538,6 @@ class _$NutritionOrderOralDietCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$NutritionOrderOralDietCopyWith<$Res>
     implements $NutritionOrderOralDietCopyWith<$Res> {
   factory _$NutritionOrderOralDietCopyWith(_NutritionOrderOralDiet value,
@@ -8288,7 +8560,6 @@ abstract class _$NutritionOrderOralDietCopyWith<$Res>
   $ElementCopyWith<$Res> get instructionElement;
 }
 
-/// @nodoc
 class __$NutritionOrderOralDietCopyWithImpl<$Res>
     extends _$NutritionOrderOralDietCopyWithImpl<$Res>
     implements _$NutritionOrderOralDietCopyWith<$Res> {
@@ -8342,8 +8613,6 @@ class __$NutritionOrderOralDietCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_NutritionOrderOralDiet extends _NutritionOrderOralDiet {
   _$_NutritionOrderOralDiet(
       {this.id,
@@ -8497,7 +8766,6 @@ NutritionOrderNutrient _$NutritionOrderNutrientFromJson(
   return _NutritionOrderNutrient.fromJson(json);
 }
 
-/// @nodoc
 class _$NutritionOrderNutrientTearOff {
   const _$NutritionOrderNutrientTearOff();
 
@@ -8516,18 +8784,11 @@ class _$NutritionOrderNutrientTearOff {
       amount: amount,
     );
   }
-
-// ignore: unused_element
-  NutritionOrderNutrient fromJson(Map<String, Object> json) {
-    return NutritionOrderNutrient.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $NutritionOrderNutrient = _$NutritionOrderNutrientTearOff();
 
-/// @nodoc
 mixin _$NutritionOrderNutrient {
   String get id;
   @JsonKey(name: 'extension')
@@ -8540,7 +8801,6 @@ mixin _$NutritionOrderNutrient {
   $NutritionOrderNutrientCopyWith<NutritionOrderNutrient> get copyWith;
 }
 
-/// @nodoc
 abstract class $NutritionOrderNutrientCopyWith<$Res> {
   factory $NutritionOrderNutrientCopyWith(NutritionOrderNutrient value,
           $Res Function(NutritionOrderNutrient) then) =
@@ -8556,7 +8816,6 @@ abstract class $NutritionOrderNutrientCopyWith<$Res> {
   $QuantityCopyWith<$Res> get amount;
 }
 
-/// @nodoc
 class _$NutritionOrderNutrientCopyWithImpl<$Res>
     implements $NutritionOrderNutrientCopyWith<$Res> {
   _$NutritionOrderNutrientCopyWithImpl(this._value, this._then);
@@ -8608,7 +8867,6 @@ class _$NutritionOrderNutrientCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$NutritionOrderNutrientCopyWith<$Res>
     implements $NutritionOrderNutrientCopyWith<$Res> {
   factory _$NutritionOrderNutrientCopyWith(_NutritionOrderNutrient value,
@@ -8628,7 +8886,6 @@ abstract class _$NutritionOrderNutrientCopyWith<$Res>
   $QuantityCopyWith<$Res> get amount;
 }
 
-/// @nodoc
 class __$NutritionOrderNutrientCopyWithImpl<$Res>
     extends _$NutritionOrderNutrientCopyWithImpl<$Res>
     implements _$NutritionOrderNutrientCopyWith<$Res> {
@@ -8663,8 +8920,6 @@ class __$NutritionOrderNutrientCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_NutritionOrderNutrient extends _NutritionOrderNutrient {
   _$_NutritionOrderNutrient(
       {this.id,
@@ -8765,7 +9020,6 @@ NutritionOrderTexture _$NutritionOrderTextureFromJson(
   return _NutritionOrderTexture.fromJson(json);
 }
 
-/// @nodoc
 class _$NutritionOrderTextureTearOff {
   const _$NutritionOrderTextureTearOff();
 
@@ -8784,18 +9038,11 @@ class _$NutritionOrderTextureTearOff {
       foodType: foodType,
     );
   }
-
-// ignore: unused_element
-  NutritionOrderTexture fromJson(Map<String, Object> json) {
-    return NutritionOrderTexture.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $NutritionOrderTexture = _$NutritionOrderTextureTearOff();
 
-/// @nodoc
 mixin _$NutritionOrderTexture {
   String get id;
   @JsonKey(name: 'extension')
@@ -8808,7 +9055,6 @@ mixin _$NutritionOrderTexture {
   $NutritionOrderTextureCopyWith<NutritionOrderTexture> get copyWith;
 }
 
-/// @nodoc
 abstract class $NutritionOrderTextureCopyWith<$Res> {
   factory $NutritionOrderTextureCopyWith(NutritionOrderTexture value,
           $Res Function(NutritionOrderTexture) then) =
@@ -8824,7 +9070,6 @@ abstract class $NutritionOrderTextureCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get foodType;
 }
 
-/// @nodoc
 class _$NutritionOrderTextureCopyWithImpl<$Res>
     implements $NutritionOrderTextureCopyWith<$Res> {
   _$NutritionOrderTextureCopyWithImpl(this._value, this._then);
@@ -8877,7 +9122,6 @@ class _$NutritionOrderTextureCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$NutritionOrderTextureCopyWith<$Res>
     implements $NutritionOrderTextureCopyWith<$Res> {
   factory _$NutritionOrderTextureCopyWith(_NutritionOrderTexture value,
@@ -8897,7 +9141,6 @@ abstract class _$NutritionOrderTextureCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get foodType;
 }
 
-/// @nodoc
 class __$NutritionOrderTextureCopyWithImpl<$Res>
     extends _$NutritionOrderTextureCopyWithImpl<$Res>
     implements _$NutritionOrderTextureCopyWith<$Res> {
@@ -8933,8 +9176,6 @@ class __$NutritionOrderTextureCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_NutritionOrderTexture extends _NutritionOrderTexture {
   _$_NutritionOrderTexture(
       {this.id,
@@ -9036,7 +9277,6 @@ NutritionOrderSupplement _$NutritionOrderSupplementFromJson(
   return _NutritionOrderSupplement.fromJson(json);
 }
 
-/// @nodoc
 class _$NutritionOrderSupplementTearOff {
   const _$NutritionOrderSupplementTearOff();
 
@@ -9065,18 +9305,11 @@ class _$NutritionOrderSupplementTearOff {
       instructionElement: instructionElement,
     );
   }
-
-// ignore: unused_element
-  NutritionOrderSupplement fromJson(Map<String, Object> json) {
-    return NutritionOrderSupplement.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $NutritionOrderSupplement = _$NutritionOrderSupplementTearOff();
 
-/// @nodoc
 mixin _$NutritionOrderSupplement {
   String get id;
   @JsonKey(name: 'extension')
@@ -9096,7 +9329,6 @@ mixin _$NutritionOrderSupplement {
   $NutritionOrderSupplementCopyWith<NutritionOrderSupplement> get copyWith;
 }
 
-/// @nodoc
 abstract class $NutritionOrderSupplementCopyWith<$Res> {
   factory $NutritionOrderSupplementCopyWith(NutritionOrderSupplement value,
           $Res Function(NutritionOrderSupplement) then) =
@@ -9119,7 +9351,6 @@ abstract class $NutritionOrderSupplementCopyWith<$Res> {
   $ElementCopyWith<$Res> get instructionElement;
 }
 
-/// @nodoc
 class _$NutritionOrderSupplementCopyWithImpl<$Res>
     implements $NutritionOrderSupplementCopyWith<$Res> {
   _$NutritionOrderSupplementCopyWithImpl(this._value, this._then);
@@ -9207,7 +9438,6 @@ class _$NutritionOrderSupplementCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$NutritionOrderSupplementCopyWith<$Res>
     implements $NutritionOrderSupplementCopyWith<$Res> {
   factory _$NutritionOrderSupplementCopyWith(_NutritionOrderSupplement value,
@@ -9236,7 +9466,6 @@ abstract class _$NutritionOrderSupplementCopyWith<$Res>
   $ElementCopyWith<$Res> get instructionElement;
 }
 
-/// @nodoc
 class __$NutritionOrderSupplementCopyWithImpl<$Res>
     extends _$NutritionOrderSupplementCopyWithImpl<$Res>
     implements _$NutritionOrderSupplementCopyWith<$Res> {
@@ -9288,8 +9517,6 @@ class __$NutritionOrderSupplementCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_NutritionOrderSupplement extends _NutritionOrderSupplement {
   _$_NutritionOrderSupplement(
       {this.id,
@@ -9445,7 +9672,6 @@ NutritionOrderEnteralFormula _$NutritionOrderEnteralFormulaFromJson(
   return _NutritionOrderEnteralFormula.fromJson(json);
 }
 
-/// @nodoc
 class _$NutritionOrderEnteralFormulaTearOff {
   const _$NutritionOrderEnteralFormulaTearOff();
 
@@ -9488,18 +9714,11 @@ class _$NutritionOrderEnteralFormulaTearOff {
       administrationInstructionElement: administrationInstructionElement,
     );
   }
-
-// ignore: unused_element
-  NutritionOrderEnteralFormula fromJson(Map<String, Object> json) {
-    return NutritionOrderEnteralFormula.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $NutritionOrderEnteralFormula = _$NutritionOrderEnteralFormulaTearOff();
 
-/// @nodoc
 mixin _$NutritionOrderEnteralFormula {
   String get id;
   @JsonKey(name: 'extension')
@@ -9526,7 +9745,6 @@ mixin _$NutritionOrderEnteralFormula {
       get copyWith;
 }
 
-/// @nodoc
 abstract class $NutritionOrderEnteralFormulaCopyWith<$Res> {
   factory $NutritionOrderEnteralFormulaCopyWith(
           NutritionOrderEnteralFormula value,
@@ -9563,7 +9781,6 @@ abstract class $NutritionOrderEnteralFormulaCopyWith<$Res> {
   $ElementCopyWith<$Res> get administrationInstructionElement;
 }
 
-/// @nodoc
 class _$NutritionOrderEnteralFormulaCopyWithImpl<$Res>
     implements $NutritionOrderEnteralFormulaCopyWith<$Res> {
   _$NutritionOrderEnteralFormulaCopyWithImpl(this._value, this._then);
@@ -9722,7 +9939,6 @@ class _$NutritionOrderEnteralFormulaCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$NutritionOrderEnteralFormulaCopyWith<$Res>
     implements $NutritionOrderEnteralFormulaCopyWith<$Res> {
   factory _$NutritionOrderEnteralFormulaCopyWith(
@@ -9769,7 +9985,6 @@ abstract class _$NutritionOrderEnteralFormulaCopyWith<$Res>
   $ElementCopyWith<$Res> get administrationInstructionElement;
 }
 
-/// @nodoc
 class __$NutritionOrderEnteralFormulaCopyWithImpl<$Res>
     extends _$NutritionOrderEnteralFormulaCopyWithImpl<$Res>
     implements _$NutritionOrderEnteralFormulaCopyWith<$Res> {
@@ -9850,8 +10065,6 @@ class __$NutritionOrderEnteralFormulaCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_NutritionOrderEnteralFormula extends _NutritionOrderEnteralFormula {
   _$_NutritionOrderEnteralFormula(
       {this.id,
@@ -10073,7 +10286,6 @@ NutritionOrderAdministration _$NutritionOrderAdministrationFromJson(
   return _NutritionOrderAdministration.fromJson(json);
 }
 
-/// @nodoc
 class _$NutritionOrderAdministrationTearOff {
   const _$NutritionOrderAdministrationTearOff();
 
@@ -10096,18 +10308,11 @@ class _$NutritionOrderAdministrationTearOff {
       rateRatio: rateRatio,
     );
   }
-
-// ignore: unused_element
-  NutritionOrderAdministration fromJson(Map<String, Object> json) {
-    return NutritionOrderAdministration.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $NutritionOrderAdministration = _$NutritionOrderAdministrationTearOff();
 
-/// @nodoc
 mixin _$NutritionOrderAdministration {
   String get id;
   @JsonKey(name: 'extension')
@@ -10123,7 +10328,6 @@ mixin _$NutritionOrderAdministration {
       get copyWith;
 }
 
-/// @nodoc
 abstract class $NutritionOrderAdministrationCopyWith<$Res> {
   factory $NutritionOrderAdministrationCopyWith(
           NutritionOrderAdministration value,
@@ -10144,7 +10348,6 @@ abstract class $NutritionOrderAdministrationCopyWith<$Res> {
   $RatioCopyWith<$Res> get rateRatio;
 }
 
-/// @nodoc
 class _$NutritionOrderAdministrationCopyWithImpl<$Res>
     implements $NutritionOrderAdministrationCopyWith<$Res> {
   _$NutritionOrderAdministrationCopyWithImpl(this._value, this._then);
@@ -10221,7 +10424,6 @@ class _$NutritionOrderAdministrationCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$NutritionOrderAdministrationCopyWith<$Res>
     implements $NutritionOrderAdministrationCopyWith<$Res> {
   factory _$NutritionOrderAdministrationCopyWith(
@@ -10248,7 +10450,6 @@ abstract class _$NutritionOrderAdministrationCopyWith<$Res>
   $RatioCopyWith<$Res> get rateRatio;
 }
 
-/// @nodoc
 class __$NutritionOrderAdministrationCopyWithImpl<$Res>
     extends _$NutritionOrderAdministrationCopyWithImpl<$Res>
     implements _$NutritionOrderAdministrationCopyWith<$Res> {
@@ -10290,8 +10491,6 @@ class __$NutritionOrderAdministrationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_NutritionOrderAdministration extends _NutritionOrderAdministration {
   _$_NutritionOrderAdministration(
       {this.id,
@@ -10414,7 +10613,6 @@ RequestGroup _$RequestGroupFromJson(Map<String, dynamic> json) {
   return _RequestGroup.fromJson(json);
 }
 
-/// @nodoc
 class _$RequestGroupTearOff {
   const _$RequestGroupTearOff();
 
@@ -10502,18 +10700,11 @@ class _$RequestGroupTearOff {
       action: action,
     );
   }
-
-// ignore: unused_element
-  RequestGroup fromJson(Map<String, Object> json) {
-    return RequestGroup.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $RequestGroup = _$RequestGroupTearOff();
 
-/// @nodoc
 mixin _$RequestGroup {
   @JsonKey(defaultValue: 'RequestGroup')
   String get resourceType;
@@ -10564,7 +10755,6 @@ mixin _$RequestGroup {
   $RequestGroupCopyWith<RequestGroup> get copyWith;
 }
 
-/// @nodoc
 abstract class $RequestGroupCopyWith<$Res> {
   factory $RequestGroupCopyWith(
           RequestGroup value, $Res Function(RequestGroup) then) =
@@ -10630,7 +10820,6 @@ abstract class $RequestGroupCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get author;
 }
 
-/// @nodoc
 class _$RequestGroupCopyWithImpl<$Res> implements $RequestGroupCopyWith<$Res> {
   _$RequestGroupCopyWithImpl(this._value, this._then);
 
@@ -10884,7 +11073,6 @@ class _$RequestGroupCopyWithImpl<$Res> implements $RequestGroupCopyWith<$Res> {
   }
 }
 
-/// @nodoc
 abstract class _$RequestGroupCopyWith<$Res>
     implements $RequestGroupCopyWith<$Res> {
   factory _$RequestGroupCopyWith(
@@ -10965,7 +11153,6 @@ abstract class _$RequestGroupCopyWith<$Res>
   $ReferenceCopyWith<$Res> get author;
 }
 
-/// @nodoc
 class __$RequestGroupCopyWithImpl<$Res> extends _$RequestGroupCopyWithImpl<$Res>
     implements _$RequestGroupCopyWith<$Res> {
   __$RequestGroupCopyWithImpl(
@@ -11092,8 +11279,6 @@ class __$RequestGroupCopyWithImpl<$Res> extends _$RequestGroupCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_RequestGroup extends _RequestGroup {
   _$_RequestGroup(
       {@required
@@ -11496,7 +11681,6 @@ RequestGroupAction _$RequestGroupActionFromJson(Map<String, dynamic> json) {
   return _RequestGroupAction.fromJson(json);
 }
 
-/// @nodoc
 class _$RequestGroupActionTearOff {
   const _$RequestGroupActionTearOff();
 
@@ -11581,18 +11765,11 @@ class _$RequestGroupActionTearOff {
       action: action,
     );
   }
-
-// ignore: unused_element
-  RequestGroupAction fromJson(Map<String, Object> json) {
-    return RequestGroupAction.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $RequestGroupAction = _$RequestGroupActionTearOff();
 
-/// @nodoc
 mixin _$RequestGroupAction {
   String get id;
   @JsonKey(name: 'extension')
@@ -11649,7 +11826,6 @@ mixin _$RequestGroupAction {
   $RequestGroupActionCopyWith<RequestGroupAction> get copyWith;
 }
 
-/// @nodoc
 abstract class $RequestGroupActionCopyWith<$Res> {
   factory $RequestGroupActionCopyWith(
           RequestGroupAction value, $Res Function(RequestGroupAction) then) =
@@ -11714,7 +11890,6 @@ abstract class $RequestGroupActionCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get resource;
 }
 
-/// @nodoc
 class _$RequestGroupActionCopyWithImpl<$Res>
     implements $RequestGroupActionCopyWith<$Res> {
   _$RequestGroupActionCopyWithImpl(this._value, this._then);
@@ -12045,7 +12220,6 @@ class _$RequestGroupActionCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$RequestGroupActionCopyWith<$Res>
     implements $RequestGroupActionCopyWith<$Res> {
   factory _$RequestGroupActionCopyWith(
@@ -12130,7 +12304,6 @@ abstract class _$RequestGroupActionCopyWith<$Res>
   $ReferenceCopyWith<$Res> get resource;
 }
 
-/// @nodoc
 class __$RequestGroupActionCopyWithImpl<$Res>
     extends _$RequestGroupActionCopyWithImpl<$Res>
     implements _$RequestGroupActionCopyWith<$Res> {
@@ -12284,8 +12457,6 @@ class __$RequestGroupActionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_RequestGroupAction extends _RequestGroupAction {
   _$_RequestGroupAction(
       {this.id,
@@ -12705,7 +12876,6 @@ RequestGroupCondition _$RequestGroupConditionFromJson(
   return _RequestGroupCondition.fromJson(json);
 }
 
-/// @nodoc
 class _$RequestGroupConditionTearOff {
   const _$RequestGroupConditionTearOff();
 
@@ -12726,18 +12896,11 @@ class _$RequestGroupConditionTearOff {
       expression: expression,
     );
   }
-
-// ignore: unused_element
-  RequestGroupCondition fromJson(Map<String, Object> json) {
-    return RequestGroupCondition.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $RequestGroupCondition = _$RequestGroupConditionTearOff();
 
-/// @nodoc
 mixin _$RequestGroupCondition {
   String get id;
   @JsonKey(name: 'extension')
@@ -12752,7 +12915,6 @@ mixin _$RequestGroupCondition {
   $RequestGroupConditionCopyWith<RequestGroupCondition> get copyWith;
 }
 
-/// @nodoc
 abstract class $RequestGroupConditionCopyWith<$Res> {
   factory $RequestGroupConditionCopyWith(RequestGroupCondition value,
           $Res Function(RequestGroupCondition) then) =
@@ -12769,7 +12931,6 @@ abstract class $RequestGroupConditionCopyWith<$Res> {
   $ExpressionCopyWith<$Res> get expression;
 }
 
-/// @nodoc
 class _$RequestGroupConditionCopyWithImpl<$Res>
     implements $RequestGroupConditionCopyWith<$Res> {
   _$RequestGroupConditionCopyWithImpl(this._value, this._then);
@@ -12824,7 +12985,6 @@ class _$RequestGroupConditionCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$RequestGroupConditionCopyWith<$Res>
     implements $RequestGroupConditionCopyWith<$Res> {
   factory _$RequestGroupConditionCopyWith(_RequestGroupCondition value,
@@ -12845,7 +13005,6 @@ abstract class _$RequestGroupConditionCopyWith<$Res>
   $ExpressionCopyWith<$Res> get expression;
 }
 
-/// @nodoc
 class __$RequestGroupConditionCopyWithImpl<$Res>
     extends _$RequestGroupConditionCopyWithImpl<$Res>
     implements _$RequestGroupConditionCopyWith<$Res> {
@@ -12883,8 +13042,6 @@ class __$RequestGroupConditionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_RequestGroupCondition extends _RequestGroupCondition {
   _$_RequestGroupCondition(
       {this.id,
@@ -12997,7 +13154,6 @@ RequestGroupRelatedAction _$RequestGroupRelatedActionFromJson(
   return _RequestGroupRelatedAction.fromJson(json);
 }
 
-/// @nodoc
 class _$RequestGroupRelatedActionTearOff {
   const _$RequestGroupRelatedActionTearOff();
 
@@ -13024,18 +13180,11 @@ class _$RequestGroupRelatedActionTearOff {
       offsetRange: offsetRange,
     );
   }
-
-// ignore: unused_element
-  RequestGroupRelatedAction fromJson(Map<String, Object> json) {
-    return RequestGroupRelatedAction.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $RequestGroupRelatedAction = _$RequestGroupRelatedActionTearOff();
 
-/// @nodoc
 mixin _$RequestGroupRelatedAction {
   String get id;
   @JsonKey(name: 'extension')
@@ -13054,7 +13203,6 @@ mixin _$RequestGroupRelatedAction {
   $RequestGroupRelatedActionCopyWith<RequestGroupRelatedAction> get copyWith;
 }
 
-/// @nodoc
 abstract class $RequestGroupRelatedActionCopyWith<$Res> {
   factory $RequestGroupRelatedActionCopyWith(RequestGroupRelatedAction value,
           $Res Function(RequestGroupRelatedAction) then) =
@@ -13076,7 +13224,6 @@ abstract class $RequestGroupRelatedActionCopyWith<$Res> {
   $RangeCopyWith<$Res> get offsetRange;
 }
 
-/// @nodoc
 class _$RequestGroupRelatedActionCopyWithImpl<$Res>
     implements $RequestGroupRelatedActionCopyWith<$Res> {
   _$RequestGroupRelatedActionCopyWithImpl(this._value, this._then);
@@ -13163,7 +13310,6 @@ class _$RequestGroupRelatedActionCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$RequestGroupRelatedActionCopyWith<$Res>
     implements $RequestGroupRelatedActionCopyWith<$Res> {
   factory _$RequestGroupRelatedActionCopyWith(_RequestGroupRelatedAction value,
@@ -13191,7 +13337,6 @@ abstract class _$RequestGroupRelatedActionCopyWith<$Res>
   $RangeCopyWith<$Res> get offsetRange;
 }
 
-/// @nodoc
 class __$RequestGroupRelatedActionCopyWithImpl<$Res>
     extends _$RequestGroupRelatedActionCopyWithImpl<$Res>
     implements _$RequestGroupRelatedActionCopyWith<$Res> {
@@ -13242,8 +13387,6 @@ class __$RequestGroupRelatedActionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_RequestGroupRelatedAction extends _RequestGroupRelatedAction {
   _$_RequestGroupRelatedAction(
       {this.id,
@@ -13389,7 +13532,6 @@ RiskAssessment _$RiskAssessmentFromJson(Map<String, dynamic> json) {
   return _RiskAssessment.fromJson(json);
 }
 
-/// @nodoc
 class _$RiskAssessmentTearOff {
   const _$RiskAssessmentTearOff();
 
@@ -13460,18 +13602,11 @@ class _$RiskAssessmentTearOff {
       note: note,
     );
   }
-
-// ignore: unused_element
-  RiskAssessment fromJson(Map<String, Object> json) {
-    return RiskAssessment.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $RiskAssessment = _$RiskAssessmentTearOff();
 
-/// @nodoc
 mixin _$RiskAssessment {
   @JsonKey(defaultValue: 'RiskAssessment')
   String get resourceType;
@@ -13516,7 +13651,6 @@ mixin _$RiskAssessment {
   $RiskAssessmentCopyWith<RiskAssessment> get copyWith;
 }
 
-/// @nodoc
 abstract class $RiskAssessmentCopyWith<$Res> {
   factory $RiskAssessmentCopyWith(
           RiskAssessment value, $Res Function(RiskAssessment) then) =
@@ -13572,7 +13706,6 @@ abstract class $RiskAssessmentCopyWith<$Res> {
   $ElementCopyWith<$Res> get mitigationElement;
 }
 
-/// @nodoc
 class _$RiskAssessmentCopyWithImpl<$Res>
     implements $RiskAssessmentCopyWith<$Res> {
   _$RiskAssessmentCopyWithImpl(this._value, this._then);
@@ -13843,7 +13976,6 @@ class _$RiskAssessmentCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$RiskAssessmentCopyWith<$Res>
     implements $RiskAssessmentCopyWith<$Res> {
   factory _$RiskAssessmentCopyWith(
@@ -13917,7 +14049,6 @@ abstract class _$RiskAssessmentCopyWith<$Res>
   $ElementCopyWith<$Res> get mitigationElement;
 }
 
-/// @nodoc
 class __$RiskAssessmentCopyWithImpl<$Res>
     extends _$RiskAssessmentCopyWithImpl<$Res>
     implements _$RiskAssessmentCopyWith<$Res> {
@@ -14031,8 +14162,6 @@ class __$RiskAssessmentCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_RiskAssessment extends _RiskAssessment {
   _$_RiskAssessment(
       {@required @JsonKey(defaultValue: 'RiskAssessment') this.resourceType,
@@ -14388,7 +14517,6 @@ RiskAssessmentPrediction _$RiskAssessmentPredictionFromJson(
   return _RiskAssessmentPrediction.fromJson(json);
 }
 
-/// @nodoc
 class _$RiskAssessmentPredictionTearOff {
   const _$RiskAssessmentPredictionTearOff();
 
@@ -14425,18 +14553,11 @@ class _$RiskAssessmentPredictionTearOff {
       rationaleElement: rationaleElement,
     );
   }
-
-// ignore: unused_element
-  RiskAssessmentPrediction fromJson(Map<String, Object> json) {
-    return RiskAssessmentPrediction.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $RiskAssessmentPrediction = _$RiskAssessmentPredictionTearOff();
 
-/// @nodoc
 mixin _$RiskAssessmentPrediction {
   String get id;
   @JsonKey(name: 'extension')
@@ -14461,7 +14582,6 @@ mixin _$RiskAssessmentPrediction {
   $RiskAssessmentPredictionCopyWith<RiskAssessmentPrediction> get copyWith;
 }
 
-/// @nodoc
 abstract class $RiskAssessmentPredictionCopyWith<$Res> {
   factory $RiskAssessmentPredictionCopyWith(RiskAssessmentPrediction value,
           $Res Function(RiskAssessmentPrediction) then) =
@@ -14492,7 +14612,6 @@ abstract class $RiskAssessmentPredictionCopyWith<$Res> {
   $ElementCopyWith<$Res> get rationaleElement;
 }
 
-/// @nodoc
 class _$RiskAssessmentPredictionCopyWithImpl<$Res>
     implements $RiskAssessmentPredictionCopyWith<$Res> {
   _$RiskAssessmentPredictionCopyWithImpl(this._value, this._then);
@@ -14636,7 +14755,6 @@ class _$RiskAssessmentPredictionCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$RiskAssessmentPredictionCopyWith<$Res>
     implements $RiskAssessmentPredictionCopyWith<$Res> {
   factory _$RiskAssessmentPredictionCopyWith(_RiskAssessmentPrediction value,
@@ -14677,7 +14795,6 @@ abstract class _$RiskAssessmentPredictionCopyWith<$Res>
   $ElementCopyWith<$Res> get rationaleElement;
 }
 
-/// @nodoc
 class __$RiskAssessmentPredictionCopyWithImpl<$Res>
     extends _$RiskAssessmentPredictionCopyWithImpl<$Res>
     implements _$RiskAssessmentPredictionCopyWith<$Res> {
@@ -14745,8 +14862,6 @@ class __$RiskAssessmentPredictionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_RiskAssessmentPrediction extends _RiskAssessmentPrediction {
   _$_RiskAssessmentPrediction(
       {this.id,
@@ -14949,7 +15064,6 @@ ServiceRequest _$ServiceRequestFromJson(Map<String, dynamic> json) {
   return _ServiceRequest.fromJson(json);
 }
 
-/// @nodoc
 class _$ServiceRequestTearOff {
   const _$ServiceRequestTearOff();
 
@@ -15070,18 +15184,11 @@ class _$ServiceRequestTearOff {
       relevantHistory: relevantHistory,
     );
   }
-
-// ignore: unused_element
-  ServiceRequest fromJson(Map<String, Object> json) {
-    return ServiceRequest.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $ServiceRequest = _$ServiceRequestTearOff();
 
-/// @nodoc
 mixin _$ServiceRequest {
   @JsonKey(defaultValue: 'ServiceRequest')
   String get resourceType;
@@ -15157,7 +15264,6 @@ mixin _$ServiceRequest {
   $ServiceRequestCopyWith<ServiceRequest> get copyWith;
 }
 
-/// @nodoc
 abstract class $ServiceRequestCopyWith<$Res> {
   factory $ServiceRequestCopyWith(
           ServiceRequest value, $Res Function(ServiceRequest) then) =
@@ -15246,7 +15352,6 @@ abstract class $ServiceRequestCopyWith<$Res> {
   $ElementCopyWith<$Res> get patientInstructionElement;
 }
 
-/// @nodoc
 class _$ServiceRequestCopyWithImpl<$Res>
     implements $ServiceRequestCopyWith<$Res> {
   _$ServiceRequestCopyWithImpl(this._value, this._then);
@@ -15700,7 +15805,6 @@ class _$ServiceRequestCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$ServiceRequestCopyWith<$Res>
     implements $ServiceRequestCopyWith<$Res> {
   factory _$ServiceRequestCopyWith(
@@ -15815,7 +15919,6 @@ abstract class _$ServiceRequestCopyWith<$Res>
   $ElementCopyWith<$Res> get patientInstructionElement;
 }
 
-/// @nodoc
 class __$ServiceRequestCopyWithImpl<$Res>
     extends _$ServiceRequestCopyWithImpl<$Res>
     implements _$ServiceRequestCopyWith<$Res> {
@@ -16031,8 +16134,6 @@ class __$ServiceRequestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_ServiceRequest extends _ServiceRequest {
   _$_ServiceRequest(
       {@required @JsonKey(defaultValue: 'ServiceRequest') this.resourceType,
@@ -16599,7 +16700,6 @@ VisionPrescription _$VisionPrescriptionFromJson(Map<String, dynamic> json) {
   return _VisionPrescription.fromJson(json);
 }
 
-/// @nodoc
 class _$VisionPrescriptionTearOff {
   const _$VisionPrescriptionTearOff();
 
@@ -16663,18 +16763,11 @@ class _$VisionPrescriptionTearOff {
       lensSpecification: lensSpecification,
     );
   }
-
-// ignore: unused_element
-  VisionPrescription fromJson(Map<String, Object> json) {
-    return VisionPrescription.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $VisionPrescription = _$VisionPrescriptionTearOff();
 
-/// @nodoc
 mixin _$VisionPrescription {
   @JsonKey(defaultValue: 'VisionPrescription')
   String get resourceType;
@@ -16710,7 +16803,6 @@ mixin _$VisionPrescription {
   $VisionPrescriptionCopyWith<VisionPrescription> get copyWith;
 }
 
-/// @nodoc
 abstract class $VisionPrescriptionCopyWith<$Res> {
   factory $VisionPrescriptionCopyWith(
           VisionPrescription value, $Res Function(VisionPrescription) then) =
@@ -16751,7 +16843,6 @@ abstract class $VisionPrescriptionCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get prescriber;
 }
 
-/// @nodoc
 class _$VisionPrescriptionCopyWithImpl<$Res>
     implements $VisionPrescriptionCopyWith<$Res> {
   _$VisionPrescriptionCopyWithImpl(this._value, this._then);
@@ -16939,7 +17030,6 @@ class _$VisionPrescriptionCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$VisionPrescriptionCopyWith<$Res>
     implements $VisionPrescriptionCopyWith<$Res> {
   factory _$VisionPrescriptionCopyWith(
@@ -16992,7 +17082,6 @@ abstract class _$VisionPrescriptionCopyWith<$Res>
   $ReferenceCopyWith<$Res> get prescriber;
 }
 
-/// @nodoc
 class __$VisionPrescriptionCopyWithImpl<$Res>
     extends _$VisionPrescriptionCopyWithImpl<$Res>
     implements _$VisionPrescriptionCopyWith<$Res> {
@@ -17083,8 +17172,6 @@ class __$VisionPrescriptionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_VisionPrescription extends _VisionPrescription {
   _$_VisionPrescription(
       {@required @JsonKey(defaultValue: 'VisionPrescription') this.resourceType,
@@ -17380,7 +17467,6 @@ VisionPrescriptionLensSpecification
   return _VisionPrescriptionLensSpecification.fromJson(json);
 }
 
-/// @nodoc
 class _$VisionPrescriptionLensSpecificationTearOff {
   const _$VisionPrescriptionLensSpecificationTearOff();
 
@@ -17456,19 +17542,12 @@ class _$VisionPrescriptionLensSpecificationTearOff {
       note: note,
     );
   }
-
-// ignore: unused_element
-  VisionPrescriptionLensSpecification fromJson(Map<String, Object> json) {
-    return VisionPrescriptionLensSpecification.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $VisionPrescriptionLensSpecification =
     _$VisionPrescriptionLensSpecificationTearOff();
 
-/// @nodoc
 mixin _$VisionPrescriptionLensSpecification {
   String get id;
   @JsonKey(name: 'extension')
@@ -17515,7 +17594,6 @@ mixin _$VisionPrescriptionLensSpecification {
       VisionPrescriptionLensSpecification> get copyWith;
 }
 
-/// @nodoc
 abstract class $VisionPrescriptionLensSpecificationCopyWith<$Res> {
   factory $VisionPrescriptionLensSpecificationCopyWith(
           VisionPrescriptionLensSpecification value,
@@ -17576,7 +17654,6 @@ abstract class $VisionPrescriptionLensSpecificationCopyWith<$Res> {
   $ElementCopyWith<$Res> get brandElement;
 }
 
-/// @nodoc
 class _$VisionPrescriptionLensSpecificationCopyWithImpl<$Res>
     implements $VisionPrescriptionLensSpecificationCopyWith<$Res> {
   _$VisionPrescriptionLensSpecificationCopyWithImpl(this._value, this._then);
@@ -17792,7 +17869,6 @@ class _$VisionPrescriptionLensSpecificationCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$VisionPrescriptionLensSpecificationCopyWith<$Res>
     implements $VisionPrescriptionLensSpecificationCopyWith<$Res> {
   factory _$VisionPrescriptionLensSpecificationCopyWith(
@@ -17867,7 +17943,6 @@ abstract class _$VisionPrescriptionLensSpecificationCopyWith<$Res>
   $ElementCopyWith<$Res> get brandElement;
 }
 
-/// @nodoc
 class __$VisionPrescriptionLensSpecificationCopyWithImpl<$Res>
     extends _$VisionPrescriptionLensSpecificationCopyWithImpl<$Res>
     implements _$VisionPrescriptionLensSpecificationCopyWith<$Res> {
@@ -17968,8 +18043,6 @@ class __$VisionPrescriptionLensSpecificationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_VisionPrescriptionLensSpecification
     extends _VisionPrescriptionLensSpecification {
   _$_VisionPrescriptionLensSpecification(
@@ -18336,7 +18409,6 @@ VisionPrescriptionPrism _$VisionPrescriptionPrismFromJson(
   return _VisionPrescriptionPrism.fromJson(json);
 }
 
-/// @nodoc
 class _$VisionPrescriptionPrismTearOff {
   const _$VisionPrescriptionPrismTearOff();
 
@@ -18363,18 +18435,11 @@ class _$VisionPrescriptionPrismTearOff {
       baseElement: baseElement,
     );
   }
-
-// ignore: unused_element
-  VisionPrescriptionPrism fromJson(Map<String, Object> json) {
-    return VisionPrescriptionPrism.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $VisionPrescriptionPrism = _$VisionPrescriptionPrismTearOff();
 
-/// @nodoc
 mixin _$VisionPrescriptionPrism {
   String get id;
   @JsonKey(name: 'extension')
@@ -18392,7 +18457,6 @@ mixin _$VisionPrescriptionPrism {
   $VisionPrescriptionPrismCopyWith<VisionPrescriptionPrism> get copyWith;
 }
 
-/// @nodoc
 abstract class $VisionPrescriptionPrismCopyWith<$Res> {
   factory $VisionPrescriptionPrismCopyWith(VisionPrescriptionPrism value,
           $Res Function(VisionPrescriptionPrism) then) =
@@ -18414,7 +18478,6 @@ abstract class $VisionPrescriptionPrismCopyWith<$Res> {
   $ElementCopyWith<$Res> get baseElement;
 }
 
-/// @nodoc
 class _$VisionPrescriptionPrismCopyWithImpl<$Res>
     implements $VisionPrescriptionPrismCopyWith<$Res> {
   _$VisionPrescriptionPrismCopyWithImpl(this._value, this._then);
@@ -18472,7 +18535,6 @@ class _$VisionPrescriptionPrismCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$VisionPrescriptionPrismCopyWith<$Res>
     implements $VisionPrescriptionPrismCopyWith<$Res> {
   factory _$VisionPrescriptionPrismCopyWith(_VisionPrescriptionPrism value,
@@ -18498,7 +18560,6 @@ abstract class _$VisionPrescriptionPrismCopyWith<$Res>
   $ElementCopyWith<$Res> get baseElement;
 }
 
-/// @nodoc
 class __$VisionPrescriptionPrismCopyWithImpl<$Res>
     extends _$VisionPrescriptionPrismCopyWithImpl<$Res>
     implements _$VisionPrescriptionPrismCopyWith<$Res> {
@@ -18540,8 +18601,6 @@ class __$VisionPrescriptionPrismCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_VisionPrescriptionPrism extends _VisionPrescriptionPrism {
   _$_VisionPrescriptionPrism(
       {this.id,

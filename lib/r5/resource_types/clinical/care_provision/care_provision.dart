@@ -99,7 +99,7 @@ abstract class CarePlanDetail implements _$CarePlanDetail {
     Period scheduledPeriod,
     String scheduledString,
     @JsonKey(name: '_scheduledString') Element scheduledStringElement,
-    Reference location,
+    CodeableReference location,
     Boolean reportedBoolean,
     @JsonKey(name: '_reportedBoolean') Element reportedBooleanElement,
     Reference reportedReference,
@@ -254,24 +254,31 @@ abstract class NutritionIntake with Resource implements _$NutritionIntake {
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
+    List<Canonical> instantiatesCanonical,
+    List<FhirUri> instantiatesUri,
+    @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
     List<Reference> basedOn,
     List<Reference> partOf,
     Code status,
     @JsonKey(name: '_status') Element statusElement,
     List<CodeableConcept> statusReason,
-    List<CodeableConcept> category,
-    @required List<NutritionIntakeConsumedItem> consumedItem,
-    List<NutritionIntakeIngredientLabel> ingredientLabel,
+    CodeableConcept code,
     @required Reference subject,
     Reference encounter,
-    FhirDateTime effectiveDateTime,
-    @JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
-    Period effectivePeriod,
-    FhirDateTime dateAsserted,
-    @JsonKey(name: '_dateAsserted') Element dateAssertedElement,
-    Reference informationSource,
+    FhirDateTime occurrenceDateTime,
+    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+    Period occurrencePeriod,
+    FhirDateTime recorded,
+    @JsonKey(name: '_recorded') Element recordedElement,
+    Boolean reportedBoolean,
+    @JsonKey(name: '_reportedBoolean') Element reportedBooleanElement,
+    Reference reportedReference,
+    @required List<NutritionIntakeConsumedItem> consumedItem,
+    List<NutritionIntakeIngredientLabel> ingredientLabel,
+    List<NutritionIntakePerformer> performer,
+    Reference location,
     List<Reference> derivedFrom,
-    List<CodeableReference> reasonCode,
+    List<CodeableReference> reason,
     List<Annotation> note,
   }) = _NutritionIntake;
 
@@ -288,7 +295,7 @@ abstract class NutritionIntakeConsumedItem
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     @required CodeableConcept type,
-    @required CodeableConcept nutritionProduct,
+    @required CodeableReference nutritionProduct,
     Timing schedule,
     Quantity amount,
     Quantity rate,
@@ -309,12 +316,27 @@ abstract class NutritionIntakeIngredientLabel
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
-    @required CodeableConcept nutrient,
+    @required CodeableReference nutrient,
     @required Quantity amount,
   }) = _NutritionIntakeIngredientLabel;
 
   factory NutritionIntakeIngredientLabel.fromJson(Map<String, dynamic> json) =>
       _$NutritionIntakeIngredientLabelFromJson(json);
+}
+
+@freezed
+abstract class NutritionIntakePerformer implements _$NutritionIntakePerformer {
+  NutritionIntakePerformer._();
+  factory NutritionIntakePerformer({
+    String id,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
+    CodeableConcept function,
+    @required Reference actor,
+  }) = _NutritionIntakePerformer;
+
+  factory NutritionIntakePerformer.fromJson(Map<String, dynamic> json) =>
+      _$NutritionIntakePerformerFromJson(json);
 }
 
 @freezed

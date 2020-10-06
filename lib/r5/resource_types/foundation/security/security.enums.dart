@@ -16,35 +16,22 @@ enum AuditEventAction {
 }
 
 enum AuditEventSeverity {
-  @JsonValue('Emergency')
+  @JsonValue('emergency')
   emergency,
-  @JsonValue('Alert')
+  @JsonValue('alert')
   alert,
-  @JsonValue('Critical')
+  @JsonValue('critical')
   critical,
-  @JsonValue('Error')
+  @JsonValue('error')
   error,
-  @JsonValue('Warning')
+  @JsonValue('warning')
   warning,
-  @JsonValue('Notice')
+  @JsonValue('notice')
   notice,
-  @JsonValue('Informational')
+  @JsonValue('informational')
   informational,
-  @JsonValue('Debug')
+  @JsonValue('debug')
   debug,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum AuditEventOutcome {
-  @JsonValue('0')
-  zero,
-  @JsonValue('4')
-  four,
-  @JsonValue('8')
-  eight,
-  @JsonValue('12')
-  twelve,
   @JsonValue('unknown')
   unknown,
 }

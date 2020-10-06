@@ -22,13 +22,24 @@ enum EvidenceVariableStatus {
   unknown,
 }
 
-enum EvidenceVariableType {
-  @JsonValue('dichotomous')
-  dichotomous,
+enum EvidenceVariableCharacteristicCombination {
+  @JsonValue('intersection')
+  intersection,
+  @JsonValue('union')
+  union,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum EvidenceVariableHandling {
   @JsonValue('continuous')
   continuous,
-  @JsonValue('descriptive')
-  descriptive,
+  @JsonValue('dichotomous')
+  dichotomous,
+  @JsonValue('ordinal')
+  ordinal,
+  @JsonValue('polychotomous')
+  polychotomous,
   @JsonValue('unknown')
   unknown,
 }

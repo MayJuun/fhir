@@ -225,8 +225,7 @@ abstract class Expression implements _$Expression {
     @JsonKey(name: '_description') Element descriptionElement,
     Id name,
     @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-        ExpressionLanguage language,
+    Code language,
     @JsonKey(name: '_language') Element languageElement,
     String expression,
     @JsonKey(name: '_expression') Element expressionElement,

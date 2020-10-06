@@ -69,15 +69,9 @@ _$_AuditEvent _$_$_AuditEventFromJson(Map<String, dynamic> json) {
     recordedElement: json['_recorded'] == null
         ? null
         : Element.fromJson(json['_recorded'] as Map<String, dynamic>),
-    outcome: _$enumDecodeNullable(_$AuditEventOutcomeEnumMap, json['outcome'],
-        unknownValue: AuditEventOutcome.unknown),
-    outcomeElement: json['_outcome'] == null
+    outcome: json['outcome'] == null
         ? null
-        : Element.fromJson(json['_outcome'] as Map<String, dynamic>),
-    outcomeDesc: json['outcomeDesc'] as String,
-    outcomeDescElement: json['_outcomeDesc'] == null
-        ? null
-        : Element.fromJson(json['_outcomeDesc'] as Map<String, dynamic>),
+        : CodeableConcept.fromJson(json['outcome'] as Map<String, dynamic>),
     purposeOfEvent: (json['purposeOfEvent'] as List)
         ?.map((e) => e == null
             ? null
@@ -131,10 +125,7 @@ Map<String, dynamic> _$_$_AuditEventToJson(_$_AuditEvent instance) {
   writeNotNull('period', instance.period?.toJson());
   writeNotNull('recorded', instance.recorded?.toJson());
   writeNotNull('_recorded', instance.recordedElement?.toJson());
-  writeNotNull('outcome', _$AuditEventOutcomeEnumMap[instance.outcome]);
-  writeNotNull('_outcome', instance.outcomeElement?.toJson());
-  writeNotNull('outcomeDesc', instance.outcomeDesc);
-  writeNotNull('_outcomeDesc', instance.outcomeDescElement?.toJson());
+  writeNotNull('outcome', instance.outcome?.toJson());
   writeNotNull('purposeOfEvent',
       instance.purposeOfEvent?.map((e) => e?.toJson())?.toList());
   writeNotNull('agent', instance.agent?.map((e) => e?.toJson())?.toList());
@@ -185,23 +176,15 @@ const _$AuditEventActionEnumMap = {
 };
 
 const _$AuditEventSeverityEnumMap = {
-  AuditEventSeverity.emergency: 'Emergency',
-  AuditEventSeverity.alert: 'Alert',
-  AuditEventSeverity.critical: 'Critical',
-  AuditEventSeverity.error: 'Error',
-  AuditEventSeverity.warning: 'Warning',
-  AuditEventSeverity.notice: 'Notice',
-  AuditEventSeverity.informational: 'Informational',
-  AuditEventSeverity.debug: 'Debug',
+  AuditEventSeverity.emergency: 'emergency',
+  AuditEventSeverity.alert: 'alert',
+  AuditEventSeverity.critical: 'critical',
+  AuditEventSeverity.error: 'error',
+  AuditEventSeverity.warning: 'warning',
+  AuditEventSeverity.notice: 'notice',
+  AuditEventSeverity.informational: 'informational',
+  AuditEventSeverity.debug: 'debug',
   AuditEventSeverity.unknown: 'unknown',
-};
-
-const _$AuditEventOutcomeEnumMap = {
-  AuditEventOutcome.zero: '0',
-  AuditEventOutcome.four: '4',
-  AuditEventOutcome.eight: '8',
-  AuditEventOutcome.twelve: '12',
-  AuditEventOutcome.unknown: 'unknown',
 };
 
 _$_AuditEventAgent _$_$_AuditEventAgentFromJson(Map<String, dynamic> json) {
@@ -585,9 +568,9 @@ _$_Consent _$_$_ConsentFromJson(Map<String, dynamic> json) {
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    patient: json['patient'] == null
+    subject: json['subject'] == null
         ? null
-        : Reference.fromJson(json['patient'] as Map<String, dynamic>),
+        : Reference.fromJson(json['subject'] as Map<String, dynamic>),
     dateTime: json['dateTime'] == null
         ? null
         : FhirDateTime.fromJson(json['dateTime'] as String),
@@ -598,7 +581,11 @@ _$_Consent _$_$_ConsentFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    organization: (json['organization'] as List)
+    manager: (json['manager'] as List)
+        ?.map((e) =>
+            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    controller: (json['controller'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
@@ -659,13 +646,14 @@ Map<String, dynamic> _$_$_ConsentToJson(_$_Consent instance) {
   writeNotNull('scope', instance.scope?.toJson());
   writeNotNull(
       'category', instance.category?.map((e) => e?.toJson())?.toList());
-  writeNotNull('patient', instance.patient?.toJson());
+  writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('dateTime', instance.dateTime?.toJson());
   writeNotNull('_dateTime', instance.dateTimeElement?.toJson());
   writeNotNull(
       'performer', instance.performer?.map((e) => e?.toJson())?.toList());
+  writeNotNull('manager', instance.manager?.map((e) => e?.toJson())?.toList());
   writeNotNull(
-      'organization', instance.organization?.map((e) => e?.toJson())?.toList());
+      'controller', instance.controller?.map((e) => e?.toJson())?.toList());
   writeNotNull('sourceAttachment',
       instance.sourceAttachment?.map((e) => e?.toJson())?.toList());
   writeNotNull('sourceReference',

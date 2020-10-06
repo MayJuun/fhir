@@ -9,8 +9,8 @@ enum ClinicalUseIssueType {
   interaction,
   @JsonValue('undesirable-effect')
   undesirable_effect,
-  @JsonValue('other')
-  other,
+  @JsonValue('warning')
+  warning,
   @JsonValue('unknown')
   unknown,
 }

@@ -1709,7 +1709,6 @@ abstract class StructureDefinition
     FhirUri type,
     @JsonKey(name: '_type') Element typeElement,
     Canonical baseDefinition,
-    @JsonKey(name: '_baseDefinition') Element baseDefinitionElement,
     @JsonKey(unknownEnumValue: StructureDefinitionDerivation.unknown)
         StructureDefinitionDerivation derivation,
     @JsonKey(name: '_derivation') Element derivationElement,
@@ -1881,7 +1880,7 @@ abstract class StructureMapGroup implements _$StructureMapGroup {
     String documentation,
     @JsonKey(name: '_documentation') Element documentationElement,
     @required List<StructureMapInput> input,
-    @required List<StructureMapRule> rule,
+    List<StructureMapRule> rule,
   }) = _StructureMapGroup;
 
   factory StructureMapGroup.fromJson(Map<String, dynamic> json) =>

@@ -334,8 +334,6 @@ abstract class DeviceDefinition with Resource implements _$DeviceDefinition {
     List<DeviceDefinitionProperty> property,
     Reference owner,
     List<ContactPoint> contact,
-    FhirUri url,
-    @JsonKey(name: '_url') Element urlElement,
     FhirUri onlineInformation,
     @JsonKey(name: '_onlineInformation') Element onlineInformationElement,
     List<Annotation> note,

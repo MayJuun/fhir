@@ -12,7 +12,6 @@ Narrative _$NarrativeFromJson(Map<String, dynamic> json) {
   return _Narrative.fromJson(json);
 }
 
-/// @nodoc
 class _$NarrativeTearOff {
   const _$NarrativeTearOff();
 
@@ -35,18 +34,11 @@ class _$NarrativeTearOff {
       div: div,
     );
   }
-
-// ignore: unused_element
-  Narrative fromJson(Map<String, Object> json) {
-    return Narrative.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $Narrative = _$NarrativeTearOff();
 
-/// @nodoc
 mixin _$Narrative {
   String get id;
   @JsonKey(name: 'extension')
@@ -61,7 +53,6 @@ mixin _$Narrative {
   $NarrativeCopyWith<Narrative> get copyWith;
 }
 
-/// @nodoc
 abstract class $NarrativeCopyWith<$Res> {
   factory $NarrativeCopyWith(Narrative value, $Res Function(Narrative) then) =
       _$NarrativeCopyWithImpl<$Res>;
@@ -78,7 +69,6 @@ abstract class $NarrativeCopyWith<$Res> {
   $ElementCopyWith<$Res> get statusElement;
 }
 
-/// @nodoc
 class _$NarrativeCopyWithImpl<$Res> implements $NarrativeCopyWith<$Res> {
   _$NarrativeCopyWithImpl(this._value, this._then);
 
@@ -118,7 +108,6 @@ class _$NarrativeCopyWithImpl<$Res> implements $NarrativeCopyWith<$Res> {
   }
 }
 
-/// @nodoc
 abstract class _$NarrativeCopyWith<$Res> implements $NarrativeCopyWith<$Res> {
   factory _$NarrativeCopyWith(
           _Narrative value, $Res Function(_Narrative) then) =
@@ -138,7 +127,6 @@ abstract class _$NarrativeCopyWith<$Res> implements $NarrativeCopyWith<$Res> {
   $ElementCopyWith<$Res> get statusElement;
 }
 
-/// @nodoc
 class __$NarrativeCopyWithImpl<$Res> extends _$NarrativeCopyWithImpl<$Res>
     implements _$NarrativeCopyWith<$Res> {
   __$NarrativeCopyWithImpl(_Narrative _value, $Res Function(_Narrative) _then)
@@ -170,8 +158,6 @@ class __$NarrativeCopyWithImpl<$Res> extends _$NarrativeCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_Narrative extends _Narrative {
   _$_Narrative(
       {this.id,
@@ -278,7 +264,6 @@ CodeableReference _$CodeableReferenceFromJson(Map<String, dynamic> json) {
   return _CodeableReference.fromJson(json);
 }
 
-/// @nodoc
 class _$CodeableReferenceTearOff {
   const _$CodeableReferenceTearOff();
 
@@ -295,18 +280,11 @@ class _$CodeableReferenceTearOff {
       reference: reference,
     );
   }
-
-// ignore: unused_element
-  CodeableReference fromJson(Map<String, Object> json) {
-    return CodeableReference.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $CodeableReference = _$CodeableReferenceTearOff();
 
-/// @nodoc
 mixin _$CodeableReference {
   String get id;
   @JsonKey(name: 'extension')
@@ -318,7 +296,6 @@ mixin _$CodeableReference {
   $CodeableReferenceCopyWith<CodeableReference> get copyWith;
 }
 
-/// @nodoc
 abstract class $CodeableReferenceCopyWith<$Res> {
   factory $CodeableReferenceCopyWith(
           CodeableReference value, $Res Function(CodeableReference) then) =
@@ -333,7 +310,6 @@ abstract class $CodeableReferenceCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get reference;
 }
 
-/// @nodoc
 class _$CodeableReferenceCopyWithImpl<$Res>
     implements $CodeableReferenceCopyWith<$Res> {
   _$CodeableReferenceCopyWithImpl(this._value, this._then);
@@ -381,7 +357,6 @@ class _$CodeableReferenceCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$CodeableReferenceCopyWith<$Res>
     implements $CodeableReferenceCopyWith<$Res> {
   factory _$CodeableReferenceCopyWith(
@@ -400,7 +375,6 @@ abstract class _$CodeableReferenceCopyWith<$Res>
   $ReferenceCopyWith<$Res> get reference;
 }
 
-/// @nodoc
 class __$CodeableReferenceCopyWithImpl<$Res>
     extends _$CodeableReferenceCopyWithImpl<$Res>
     implements _$CodeableReferenceCopyWith<$Res> {
@@ -431,8 +405,6 @@ class __$CodeableReferenceCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_CodeableReference extends _CodeableReference {
   _$_CodeableReference(
       {this.id,
@@ -522,7 +494,6 @@ Reference _$ReferenceFromJson(Map<String, dynamic> json) {
   return _Reference.fromJson(json);
 }
 
-/// @nodoc
 class _$ReferenceTearOff {
   const _$ReferenceTearOff();
 
@@ -549,18 +520,11 @@ class _$ReferenceTearOff {
       displayElement: displayElement,
     );
   }
-
-// ignore: unused_element
-  Reference fromJson(Map<String, Object> json) {
-    return Reference.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $Reference = _$ReferenceTearOff();
 
-/// @nodoc
 mixin _$Reference {
   String get id;
   @JsonKey(name: 'extension')
@@ -580,7 +544,6 @@ mixin _$Reference {
   $ReferenceCopyWith<Reference> get copyWith;
 }
 
-/// @nodoc
 abstract class $ReferenceCopyWith<$Res> {
   factory $ReferenceCopyWith(Reference value, $Res Function(Reference) then) =
       _$ReferenceCopyWithImpl<$Res>;
@@ -601,7 +564,6 @@ abstract class $ReferenceCopyWith<$Res> {
   $ElementCopyWith<$Res> get displayElement;
 }
 
-/// @nodoc
 class _$ReferenceCopyWithImpl<$Res> implements $ReferenceCopyWith<$Res> {
   _$ReferenceCopyWithImpl(this._value, this._then);
 
@@ -683,7 +645,6 @@ class _$ReferenceCopyWithImpl<$Res> implements $ReferenceCopyWith<$Res> {
   }
 }
 
-/// @nodoc
 abstract class _$ReferenceCopyWith<$Res> implements $ReferenceCopyWith<$Res> {
   factory _$ReferenceCopyWith(
           _Reference value, $Res Function(_Reference) then) =
@@ -710,7 +671,6 @@ abstract class _$ReferenceCopyWith<$Res> implements $ReferenceCopyWith<$Res> {
   $ElementCopyWith<$Res> get displayElement;
 }
 
-/// @nodoc
 class __$ReferenceCopyWithImpl<$Res> extends _$ReferenceCopyWithImpl<$Res>
     implements _$ReferenceCopyWith<$Res> {
   __$ReferenceCopyWithImpl(_Reference _value, $Res Function(_Reference) _then)
@@ -754,8 +714,6 @@ class __$ReferenceCopyWithImpl<$Res> extends _$ReferenceCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_Reference extends _Reference {
   _$_Reference(
       {this.id,
@@ -900,7 +858,6 @@ Statistic _$StatisticFromJson(Map<String, dynamic> json) {
   return _Statistic.fromJson(json);
 }
 
-/// @nodoc
 class _$StatisticTearOff {
   const _$StatisticTearOff();
 
@@ -914,8 +871,11 @@ class _$StatisticTearOff {
       List<Annotation> note,
       CodeableConcept statisticType,
       Quantity quantity,
+      Integer numberOfEvents,
+      @JsonKey(name: '_numberOfEvents') Element numberOfEventsElement,
       StatisticSampleSize sampleSize,
-      List<StatisticAttributeEstimate> attributeEstimate}) {
+      List<StatisticAttributeEstimate> attributeEstimate,
+      List<StatisticModelCharacteristic> modelCharacteristic}) {
     return _Statistic(
       id: id,
       extension_: extension_,
@@ -925,22 +885,18 @@ class _$StatisticTearOff {
       note: note,
       statisticType: statisticType,
       quantity: quantity,
+      numberOfEvents: numberOfEvents,
+      numberOfEventsElement: numberOfEventsElement,
       sampleSize: sampleSize,
       attributeEstimate: attributeEstimate,
+      modelCharacteristic: modelCharacteristic,
     );
-  }
-
-// ignore: unused_element
-  Statistic fromJson(Map<String, Object> json) {
-    return Statistic.fromJson(json);
   }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $Statistic = _$StatisticTearOff();
 
-/// @nodoc
 mixin _$Statistic {
   String get id;
   @JsonKey(name: 'extension')
@@ -952,14 +908,17 @@ mixin _$Statistic {
   List<Annotation> get note;
   CodeableConcept get statisticType;
   Quantity get quantity;
+  Integer get numberOfEvents;
+  @JsonKey(name: '_numberOfEvents')
+  Element get numberOfEventsElement;
   StatisticSampleSize get sampleSize;
   List<StatisticAttributeEstimate> get attributeEstimate;
+  List<StatisticModelCharacteristic> get modelCharacteristic;
 
   Map<String, dynamic> toJson();
   $StatisticCopyWith<Statistic> get copyWith;
 }
 
-/// @nodoc
 abstract class $StatisticCopyWith<$Res> {
   factory $StatisticCopyWith(Statistic value, $Res Function(Statistic) then) =
       _$StatisticCopyWithImpl<$Res>;
@@ -972,16 +931,19 @@ abstract class $StatisticCopyWith<$Res> {
       List<Annotation> note,
       CodeableConcept statisticType,
       Quantity quantity,
+      Integer numberOfEvents,
+      @JsonKey(name: '_numberOfEvents') Element numberOfEventsElement,
       StatisticSampleSize sampleSize,
-      List<StatisticAttributeEstimate> attributeEstimate});
+      List<StatisticAttributeEstimate> attributeEstimate,
+      List<StatisticModelCharacteristic> modelCharacteristic});
 
   $ElementCopyWith<$Res> get descriptionElement;
   $CodeableConceptCopyWith<$Res> get statisticType;
   $QuantityCopyWith<$Res> get quantity;
+  $ElementCopyWith<$Res> get numberOfEventsElement;
   $StatisticSampleSizeCopyWith<$Res> get sampleSize;
 }
 
-/// @nodoc
 class _$StatisticCopyWithImpl<$Res> implements $StatisticCopyWith<$Res> {
   _$StatisticCopyWithImpl(this._value, this._then);
 
@@ -999,8 +961,11 @@ class _$StatisticCopyWithImpl<$Res> implements $StatisticCopyWith<$Res> {
     Object note = freezed,
     Object statisticType = freezed,
     Object quantity = freezed,
+    Object numberOfEvents = freezed,
+    Object numberOfEventsElement = freezed,
     Object sampleSize = freezed,
     Object attributeEstimate = freezed,
+    Object modelCharacteristic = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -1020,12 +985,21 @@ class _$StatisticCopyWithImpl<$Res> implements $StatisticCopyWith<$Res> {
           ? _value.statisticType
           : statisticType as CodeableConcept,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
+      numberOfEvents: numberOfEvents == freezed
+          ? _value.numberOfEvents
+          : numberOfEvents as Integer,
+      numberOfEventsElement: numberOfEventsElement == freezed
+          ? _value.numberOfEventsElement
+          : numberOfEventsElement as Element,
       sampleSize: sampleSize == freezed
           ? _value.sampleSize
           : sampleSize as StatisticSampleSize,
       attributeEstimate: attributeEstimate == freezed
           ? _value.attributeEstimate
           : attributeEstimate as List<StatisticAttributeEstimate>,
+      modelCharacteristic: modelCharacteristic == freezed
+          ? _value.modelCharacteristic
+          : modelCharacteristic as List<StatisticModelCharacteristic>,
     ));
   }
 
@@ -1060,6 +1034,16 @@ class _$StatisticCopyWithImpl<$Res> implements $StatisticCopyWith<$Res> {
   }
 
   @override
+  $ElementCopyWith<$Res> get numberOfEventsElement {
+    if (_value.numberOfEventsElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.numberOfEventsElement, (value) {
+      return _then(_value.copyWith(numberOfEventsElement: value));
+    });
+  }
+
+  @override
   $StatisticSampleSizeCopyWith<$Res> get sampleSize {
     if (_value.sampleSize == null) {
       return null;
@@ -1070,7 +1054,6 @@ class _$StatisticCopyWithImpl<$Res> implements $StatisticCopyWith<$Res> {
   }
 }
 
-/// @nodoc
 abstract class _$StatisticCopyWith<$Res> implements $StatisticCopyWith<$Res> {
   factory _$StatisticCopyWith(
           _Statistic value, $Res Function(_Statistic) then) =
@@ -1085,8 +1068,11 @@ abstract class _$StatisticCopyWith<$Res> implements $StatisticCopyWith<$Res> {
       List<Annotation> note,
       CodeableConcept statisticType,
       Quantity quantity,
+      Integer numberOfEvents,
+      @JsonKey(name: '_numberOfEvents') Element numberOfEventsElement,
       StatisticSampleSize sampleSize,
-      List<StatisticAttributeEstimate> attributeEstimate});
+      List<StatisticAttributeEstimate> attributeEstimate,
+      List<StatisticModelCharacteristic> modelCharacteristic});
 
   @override
   $ElementCopyWith<$Res> get descriptionElement;
@@ -1095,10 +1081,11 @@ abstract class _$StatisticCopyWith<$Res> implements $StatisticCopyWith<$Res> {
   @override
   $QuantityCopyWith<$Res> get quantity;
   @override
+  $ElementCopyWith<$Res> get numberOfEventsElement;
+  @override
   $StatisticSampleSizeCopyWith<$Res> get sampleSize;
 }
 
-/// @nodoc
 class __$StatisticCopyWithImpl<$Res> extends _$StatisticCopyWithImpl<$Res>
     implements _$StatisticCopyWith<$Res> {
   __$StatisticCopyWithImpl(_Statistic _value, $Res Function(_Statistic) _then)
@@ -1117,8 +1104,11 @@ class __$StatisticCopyWithImpl<$Res> extends _$StatisticCopyWithImpl<$Res>
     Object note = freezed,
     Object statisticType = freezed,
     Object quantity = freezed,
+    Object numberOfEvents = freezed,
+    Object numberOfEventsElement = freezed,
     Object sampleSize = freezed,
     Object attributeEstimate = freezed,
+    Object modelCharacteristic = freezed,
   }) {
     return _then(_Statistic(
       id: id == freezed ? _value.id : id as String,
@@ -1138,19 +1128,26 @@ class __$StatisticCopyWithImpl<$Res> extends _$StatisticCopyWithImpl<$Res>
           ? _value.statisticType
           : statisticType as CodeableConcept,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
+      numberOfEvents: numberOfEvents == freezed
+          ? _value.numberOfEvents
+          : numberOfEvents as Integer,
+      numberOfEventsElement: numberOfEventsElement == freezed
+          ? _value.numberOfEventsElement
+          : numberOfEventsElement as Element,
       sampleSize: sampleSize == freezed
           ? _value.sampleSize
           : sampleSize as StatisticSampleSize,
       attributeEstimate: attributeEstimate == freezed
           ? _value.attributeEstimate
           : attributeEstimate as List<StatisticAttributeEstimate>,
+      modelCharacteristic: modelCharacteristic == freezed
+          ? _value.modelCharacteristic
+          : modelCharacteristic as List<StatisticModelCharacteristic>,
     ));
   }
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_Statistic extends _Statistic {
   _$_Statistic(
       {this.id,
@@ -1161,8 +1158,11 @@ class _$_Statistic extends _Statistic {
       this.note,
       this.statisticType,
       this.quantity,
+      this.numberOfEvents,
+      @JsonKey(name: '_numberOfEvents') this.numberOfEventsElement,
       this.sampleSize,
-      this.attributeEstimate})
+      this.attributeEstimate,
+      this.modelCharacteristic})
       : super._();
 
   factory _$_Statistic.fromJson(Map<String, dynamic> json) =>
@@ -1187,13 +1187,20 @@ class _$_Statistic extends _Statistic {
   @override
   final Quantity quantity;
   @override
+  final Integer numberOfEvents;
+  @override
+  @JsonKey(name: '_numberOfEvents')
+  final Element numberOfEventsElement;
+  @override
   final StatisticSampleSize sampleSize;
   @override
   final List<StatisticAttributeEstimate> attributeEstimate;
+  @override
+  final List<StatisticModelCharacteristic> modelCharacteristic;
 
   @override
   String toString() {
-    return 'Statistic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, note: $note, statisticType: $statisticType, quantity: $quantity, sampleSize: $sampleSize, attributeEstimate: $attributeEstimate)';
+    return 'Statistic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, note: $note, statisticType: $statisticType, quantity: $quantity, numberOfEvents: $numberOfEvents, numberOfEventsElement: $numberOfEventsElement, sampleSize: $sampleSize, attributeEstimate: $attributeEstimate, modelCharacteristic: $modelCharacteristic)';
   }
 
   @override
@@ -1222,12 +1229,21 @@ class _$_Statistic extends _Statistic {
             (identical(other.quantity, quantity) ||
                 const DeepCollectionEquality()
                     .equals(other.quantity, quantity)) &&
+            (identical(other.numberOfEvents, numberOfEvents) ||
+                const DeepCollectionEquality()
+                    .equals(other.numberOfEvents, numberOfEvents)) &&
+            (identical(other.numberOfEventsElement, numberOfEventsElement) ||
+                const DeepCollectionEquality().equals(
+                    other.numberOfEventsElement, numberOfEventsElement)) &&
             (identical(other.sampleSize, sampleSize) ||
                 const DeepCollectionEquality()
                     .equals(other.sampleSize, sampleSize)) &&
             (identical(other.attributeEstimate, attributeEstimate) ||
                 const DeepCollectionEquality()
-                    .equals(other.attributeEstimate, attributeEstimate)));
+                    .equals(other.attributeEstimate, attributeEstimate)) &&
+            (identical(other.modelCharacteristic, modelCharacteristic) ||
+                const DeepCollectionEquality()
+                    .equals(other.modelCharacteristic, modelCharacteristic)));
   }
 
   @override
@@ -1241,8 +1257,11 @@ class _$_Statistic extends _Statistic {
       const DeepCollectionEquality().hash(note) ^
       const DeepCollectionEquality().hash(statisticType) ^
       const DeepCollectionEquality().hash(quantity) ^
+      const DeepCollectionEquality().hash(numberOfEvents) ^
+      const DeepCollectionEquality().hash(numberOfEventsElement) ^
       const DeepCollectionEquality().hash(sampleSize) ^
-      const DeepCollectionEquality().hash(attributeEstimate);
+      const DeepCollectionEquality().hash(attributeEstimate) ^
+      const DeepCollectionEquality().hash(modelCharacteristic);
 
   @override
   _$StatisticCopyWith<_Statistic> get copyWith =>
@@ -1265,8 +1284,11 @@ abstract class _Statistic extends Statistic {
       List<Annotation> note,
       CodeableConcept statisticType,
       Quantity quantity,
+      Integer numberOfEvents,
+      @JsonKey(name: '_numberOfEvents') Element numberOfEventsElement,
       StatisticSampleSize sampleSize,
-      List<StatisticAttributeEstimate> attributeEstimate}) = _$_Statistic;
+      List<StatisticAttributeEstimate> attributeEstimate,
+      List<StatisticModelCharacteristic> modelCharacteristic}) = _$_Statistic;
 
   factory _Statistic.fromJson(Map<String, dynamic> json) =
       _$_Statistic.fromJson;
@@ -1290,9 +1312,16 @@ abstract class _Statistic extends Statistic {
   @override
   Quantity get quantity;
   @override
+  Integer get numberOfEvents;
+  @override
+  @JsonKey(name: '_numberOfEvents')
+  Element get numberOfEventsElement;
+  @override
   StatisticSampleSize get sampleSize;
   @override
   List<StatisticAttributeEstimate> get attributeEstimate;
+  @override
+  List<StatisticModelCharacteristic> get modelCharacteristic;
   @override
   _$StatisticCopyWith<_Statistic> get copyWith;
 }
@@ -1301,7 +1330,6 @@ StatisticSampleSize _$StatisticSampleSizeFromJson(Map<String, dynamic> json) {
   return _StatisticSampleSize.fromJson(json);
 }
 
-/// @nodoc
 class _$StatisticSampleSizeTearOff {
   const _$StatisticSampleSizeTearOff();
 
@@ -1323,10 +1351,7 @@ class _$StatisticSampleSizeTearOff {
           Element numberOfParticipantsElement,
       Integer knownDataCount,
       @JsonKey(name: '_knownDataCount')
-          Element knownDataCountElement,
-      Integer numeratorCount,
-      @JsonKey(name: '_numeratorCount')
-          Element numeratorCountElement}) {
+          Element knownDataCountElement}) {
     return _StatisticSampleSize(
       id: id,
       extension_: extension_,
@@ -1340,22 +1365,13 @@ class _$StatisticSampleSizeTearOff {
       numberOfParticipantsElement: numberOfParticipantsElement,
       knownDataCount: knownDataCount,
       knownDataCountElement: knownDataCountElement,
-      numeratorCount: numeratorCount,
-      numeratorCountElement: numeratorCountElement,
     );
-  }
-
-// ignore: unused_element
-  StatisticSampleSize fromJson(Map<String, Object> json) {
-    return StatisticSampleSize.fromJson(json);
   }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $StatisticSampleSize = _$StatisticSampleSizeTearOff();
 
-/// @nodoc
 mixin _$StatisticSampleSize {
   String get id;
   @JsonKey(name: 'extension')
@@ -1374,15 +1390,11 @@ mixin _$StatisticSampleSize {
   Integer get knownDataCount;
   @JsonKey(name: '_knownDataCount')
   Element get knownDataCountElement;
-  Integer get numeratorCount;
-  @JsonKey(name: '_numeratorCount')
-  Element get numeratorCountElement;
 
   Map<String, dynamic> toJson();
   $StatisticSampleSizeCopyWith<StatisticSampleSize> get copyWith;
 }
 
-/// @nodoc
 abstract class $StatisticSampleSizeCopyWith<$Res> {
   factory $StatisticSampleSizeCopyWith(
           StatisticSampleSize value, $Res Function(StatisticSampleSize) then) =
@@ -1404,19 +1416,14 @@ abstract class $StatisticSampleSizeCopyWith<$Res> {
           Element numberOfParticipantsElement,
       Integer knownDataCount,
       @JsonKey(name: '_knownDataCount')
-          Element knownDataCountElement,
-      Integer numeratorCount,
-      @JsonKey(name: '_numeratorCount')
-          Element numeratorCountElement});
+          Element knownDataCountElement});
 
   $ElementCopyWith<$Res> get descriptionElement;
   $ElementCopyWith<$Res> get numberOfStudiesElement;
   $ElementCopyWith<$Res> get numberOfParticipantsElement;
   $ElementCopyWith<$Res> get knownDataCountElement;
-  $ElementCopyWith<$Res> get numeratorCountElement;
 }
 
-/// @nodoc
 class _$StatisticSampleSizeCopyWithImpl<$Res>
     implements $StatisticSampleSizeCopyWith<$Res> {
   _$StatisticSampleSizeCopyWithImpl(this._value, this._then);
@@ -1439,8 +1446,6 @@ class _$StatisticSampleSizeCopyWithImpl<$Res>
     Object numberOfParticipantsElement = freezed,
     Object knownDataCount = freezed,
     Object knownDataCountElement = freezed,
-    Object numeratorCount = freezed,
-    Object numeratorCountElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -1474,12 +1479,6 @@ class _$StatisticSampleSizeCopyWithImpl<$Res>
       knownDataCountElement: knownDataCountElement == freezed
           ? _value.knownDataCountElement
           : knownDataCountElement as Element,
-      numeratorCount: numeratorCount == freezed
-          ? _value.numeratorCount
-          : numeratorCount as Integer,
-      numeratorCountElement: numeratorCountElement == freezed
-          ? _value.numeratorCountElement
-          : numeratorCountElement as Element,
     ));
   }
 
@@ -1522,19 +1521,8 @@ class _$StatisticSampleSizeCopyWithImpl<$Res>
       return _then(_value.copyWith(knownDataCountElement: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get numeratorCountElement {
-    if (_value.numeratorCountElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.numeratorCountElement, (value) {
-      return _then(_value.copyWith(numeratorCountElement: value));
-    });
-  }
 }
 
-/// @nodoc
 abstract class _$StatisticSampleSizeCopyWith<$Res>
     implements $StatisticSampleSizeCopyWith<$Res> {
   factory _$StatisticSampleSizeCopyWith(_StatisticSampleSize value,
@@ -1558,10 +1546,7 @@ abstract class _$StatisticSampleSizeCopyWith<$Res>
           Element numberOfParticipantsElement,
       Integer knownDataCount,
       @JsonKey(name: '_knownDataCount')
-          Element knownDataCountElement,
-      Integer numeratorCount,
-      @JsonKey(name: '_numeratorCount')
-          Element numeratorCountElement});
+          Element knownDataCountElement});
 
   @override
   $ElementCopyWith<$Res> get descriptionElement;
@@ -1571,11 +1556,8 @@ abstract class _$StatisticSampleSizeCopyWith<$Res>
   $ElementCopyWith<$Res> get numberOfParticipantsElement;
   @override
   $ElementCopyWith<$Res> get knownDataCountElement;
-  @override
-  $ElementCopyWith<$Res> get numeratorCountElement;
 }
 
-/// @nodoc
 class __$StatisticSampleSizeCopyWithImpl<$Res>
     extends _$StatisticSampleSizeCopyWithImpl<$Res>
     implements _$StatisticSampleSizeCopyWith<$Res> {
@@ -1600,8 +1582,6 @@ class __$StatisticSampleSizeCopyWithImpl<$Res>
     Object numberOfParticipantsElement = freezed,
     Object knownDataCount = freezed,
     Object knownDataCountElement = freezed,
-    Object numeratorCount = freezed,
-    Object numeratorCountElement = freezed,
   }) {
     return _then(_StatisticSampleSize(
       id: id == freezed ? _value.id : id as String,
@@ -1635,19 +1615,11 @@ class __$StatisticSampleSizeCopyWithImpl<$Res>
       knownDataCountElement: knownDataCountElement == freezed
           ? _value.knownDataCountElement
           : knownDataCountElement as Element,
-      numeratorCount: numeratorCount == freezed
-          ? _value.numeratorCount
-          : numeratorCount as Integer,
-      numeratorCountElement: numeratorCountElement == freezed
-          ? _value.numeratorCountElement
-          : numeratorCountElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_StatisticSampleSize extends _StatisticSampleSize {
   _$_StatisticSampleSize(
       {this.id,
@@ -1661,9 +1633,7 @@ class _$_StatisticSampleSize extends _StatisticSampleSize {
       this.numberOfParticipants,
       @JsonKey(name: '_numberOfParticipants') this.numberOfParticipantsElement,
       this.knownDataCount,
-      @JsonKey(name: '_knownDataCount') this.knownDataCountElement,
-      this.numeratorCount,
-      @JsonKey(name: '_numeratorCount') this.numeratorCountElement})
+      @JsonKey(name: '_knownDataCount') this.knownDataCountElement})
       : super._();
 
   factory _$_StatisticSampleSize.fromJson(Map<String, dynamic> json) =>
@@ -1698,15 +1668,10 @@ class _$_StatisticSampleSize extends _StatisticSampleSize {
   @override
   @JsonKey(name: '_knownDataCount')
   final Element knownDataCountElement;
-  @override
-  final Integer numeratorCount;
-  @override
-  @JsonKey(name: '_numeratorCount')
-  final Element numeratorCountElement;
 
   @override
   String toString() {
-    return 'StatisticSampleSize(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, note: $note, numberOfStudies: $numberOfStudies, numberOfStudiesElement: $numberOfStudiesElement, numberOfParticipants: $numberOfParticipants, numberOfParticipantsElement: $numberOfParticipantsElement, knownDataCount: $knownDataCount, knownDataCountElement: $knownDataCountElement, numeratorCount: $numeratorCount, numeratorCountElement: $numeratorCountElement)';
+    return 'StatisticSampleSize(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, note: $note, numberOfStudies: $numberOfStudies, numberOfStudiesElement: $numberOfStudiesElement, numberOfParticipants: $numberOfParticipants, numberOfParticipantsElement: $numberOfParticipantsElement, knownDataCount: $knownDataCount, knownDataCountElement: $knownDataCountElement)';
   }
 
   @override
@@ -1748,13 +1713,7 @@ class _$_StatisticSampleSize extends _StatisticSampleSize {
                     .equals(other.knownDataCount, knownDataCount)) &&
             (identical(other.knownDataCountElement, knownDataCountElement) ||
                 const DeepCollectionEquality().equals(
-                    other.knownDataCountElement, knownDataCountElement)) &&
-            (identical(other.numeratorCount, numeratorCount) ||
-                const DeepCollectionEquality()
-                    .equals(other.numeratorCount, numeratorCount)) &&
-            (identical(other.numeratorCountElement, numeratorCountElement) ||
-                const DeepCollectionEquality().equals(
-                    other.numeratorCountElement, numeratorCountElement)));
+                    other.knownDataCountElement, knownDataCountElement)));
   }
 
   @override
@@ -1771,9 +1730,7 @@ class _$_StatisticSampleSize extends _StatisticSampleSize {
       const DeepCollectionEquality().hash(numberOfParticipants) ^
       const DeepCollectionEquality().hash(numberOfParticipantsElement) ^
       const DeepCollectionEquality().hash(knownDataCount) ^
-      const DeepCollectionEquality().hash(knownDataCountElement) ^
-      const DeepCollectionEquality().hash(numeratorCount) ^
-      const DeepCollectionEquality().hash(numeratorCountElement);
+      const DeepCollectionEquality().hash(knownDataCountElement);
 
   @override
   _$StatisticSampleSizeCopyWith<_StatisticSampleSize> get copyWith =>
@@ -1805,10 +1762,7 @@ abstract class _StatisticSampleSize extends StatisticSampleSize {
           Element numberOfParticipantsElement,
       Integer knownDataCount,
       @JsonKey(name: '_knownDataCount')
-          Element knownDataCountElement,
-      Integer numeratorCount,
-      @JsonKey(name: '_numeratorCount')
-          Element numeratorCountElement}) = _$_StatisticSampleSize;
+          Element knownDataCountElement}) = _$_StatisticSampleSize;
 
   factory _StatisticSampleSize.fromJson(Map<String, dynamic> json) =
       _$_StatisticSampleSize.fromJson;
@@ -1843,11 +1797,6 @@ abstract class _StatisticSampleSize extends StatisticSampleSize {
   @JsonKey(name: '_knownDataCount')
   Element get knownDataCountElement;
   @override
-  Integer get numeratorCount;
-  @override
-  @JsonKey(name: '_numeratorCount')
-  Element get numeratorCountElement;
-  @override
   _$StatisticSampleSizeCopyWith<_StatisticSampleSize> get copyWith;
 }
 
@@ -1856,7 +1805,6 @@ StatisticAttributeEstimate _$StatisticAttributeEstimateFromJson(
   return _StatisticAttributeEstimate.fromJson(json);
 }
 
-/// @nodoc
 class _$StatisticAttributeEstimateTearOff {
   const _$StatisticAttributeEstimateTearOff();
 
@@ -1873,7 +1821,7 @@ class _$StatisticAttributeEstimateTearOff {
       Decimal level,
       @JsonKey(name: '_level') Element levelElement,
       Range range,
-      List<StatisticEstimateQualifier> estimateQualifier}) {
+      List<StatisticAttributeEstimate1> attributeEstimate}) {
     return _StatisticAttributeEstimate(
       id: id,
       extension_: extension_,
@@ -1886,21 +1834,14 @@ class _$StatisticAttributeEstimateTearOff {
       level: level,
       levelElement: levelElement,
       range: range,
-      estimateQualifier: estimateQualifier,
+      attributeEstimate: attributeEstimate,
     );
-  }
-
-// ignore: unused_element
-  StatisticAttributeEstimate fromJson(Map<String, Object> json) {
-    return StatisticAttributeEstimate.fromJson(json);
   }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $StatisticAttributeEstimate = _$StatisticAttributeEstimateTearOff();
 
-/// @nodoc
 mixin _$StatisticAttributeEstimate {
   String get id;
   @JsonKey(name: 'extension')
@@ -1916,13 +1857,12 @@ mixin _$StatisticAttributeEstimate {
   @JsonKey(name: '_level')
   Element get levelElement;
   Range get range;
-  List<StatisticEstimateQualifier> get estimateQualifier;
+  List<StatisticAttributeEstimate1> get attributeEstimate;
 
   Map<String, dynamic> toJson();
   $StatisticAttributeEstimateCopyWith<StatisticAttributeEstimate> get copyWith;
 }
 
-/// @nodoc
 abstract class $StatisticAttributeEstimateCopyWith<$Res> {
   factory $StatisticAttributeEstimateCopyWith(StatisticAttributeEstimate value,
           $Res Function(StatisticAttributeEstimate) then) =
@@ -1939,7 +1879,7 @@ abstract class $StatisticAttributeEstimateCopyWith<$Res> {
       Decimal level,
       @JsonKey(name: '_level') Element levelElement,
       Range range,
-      List<StatisticEstimateQualifier> estimateQualifier});
+      List<StatisticAttributeEstimate1> attributeEstimate});
 
   $ElementCopyWith<$Res> get descriptionElement;
   $CodeableConceptCopyWith<$Res> get type;
@@ -1948,7 +1888,6 @@ abstract class $StatisticAttributeEstimateCopyWith<$Res> {
   $RangeCopyWith<$Res> get range;
 }
 
-/// @nodoc
 class _$StatisticAttributeEstimateCopyWithImpl<$Res>
     implements $StatisticAttributeEstimateCopyWith<$Res> {
   _$StatisticAttributeEstimateCopyWithImpl(this._value, this._then);
@@ -1970,7 +1909,7 @@ class _$StatisticAttributeEstimateCopyWithImpl<$Res>
     Object level = freezed,
     Object levelElement = freezed,
     Object range = freezed,
-    Object estimateQualifier = freezed,
+    Object attributeEstimate = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -1993,9 +1932,9 @@ class _$StatisticAttributeEstimateCopyWithImpl<$Res>
           ? _value.levelElement
           : levelElement as Element,
       range: range == freezed ? _value.range : range as Range,
-      estimateQualifier: estimateQualifier == freezed
-          ? _value.estimateQualifier
-          : estimateQualifier as List<StatisticEstimateQualifier>,
+      attributeEstimate: attributeEstimate == freezed
+          ? _value.attributeEstimate
+          : attributeEstimate as List<StatisticAttributeEstimate1>,
     ));
   }
 
@@ -2050,7 +1989,6 @@ class _$StatisticAttributeEstimateCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$StatisticAttributeEstimateCopyWith<$Res>
     implements $StatisticAttributeEstimateCopyWith<$Res> {
   factory _$StatisticAttributeEstimateCopyWith(
@@ -2070,7 +2008,7 @@ abstract class _$StatisticAttributeEstimateCopyWith<$Res>
       Decimal level,
       @JsonKey(name: '_level') Element levelElement,
       Range range,
-      List<StatisticEstimateQualifier> estimateQualifier});
+      List<StatisticAttributeEstimate1> attributeEstimate});
 
   @override
   $ElementCopyWith<$Res> get descriptionElement;
@@ -2084,7 +2022,6 @@ abstract class _$StatisticAttributeEstimateCopyWith<$Res>
   $RangeCopyWith<$Res> get range;
 }
 
-/// @nodoc
 class __$StatisticAttributeEstimateCopyWithImpl<$Res>
     extends _$StatisticAttributeEstimateCopyWithImpl<$Res>
     implements _$StatisticAttributeEstimateCopyWith<$Res> {
@@ -2109,7 +2046,7 @@ class __$StatisticAttributeEstimateCopyWithImpl<$Res>
     Object level = freezed,
     Object levelElement = freezed,
     Object range = freezed,
-    Object estimateQualifier = freezed,
+    Object attributeEstimate = freezed,
   }) {
     return _then(_StatisticAttributeEstimate(
       id: id == freezed ? _value.id : id as String,
@@ -2132,16 +2069,14 @@ class __$StatisticAttributeEstimateCopyWithImpl<$Res>
           ? _value.levelElement
           : levelElement as Element,
       range: range == freezed ? _value.range : range as Range,
-      estimateQualifier: estimateQualifier == freezed
-          ? _value.estimateQualifier
-          : estimateQualifier as List<StatisticEstimateQualifier>,
+      attributeEstimate: attributeEstimate == freezed
+          ? _value.attributeEstimate
+          : attributeEstimate as List<StatisticAttributeEstimate1>,
     ));
   }
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_StatisticAttributeEstimate extends _StatisticAttributeEstimate {
   _$_StatisticAttributeEstimate(
       {this.id,
@@ -2155,7 +2090,7 @@ class _$_StatisticAttributeEstimate extends _StatisticAttributeEstimate {
       this.level,
       @JsonKey(name: '_level') this.levelElement,
       this.range,
-      this.estimateQualifier})
+      this.attributeEstimate})
       : super._();
 
   factory _$_StatisticAttributeEstimate.fromJson(Map<String, dynamic> json) =>
@@ -2187,11 +2122,11 @@ class _$_StatisticAttributeEstimate extends _StatisticAttributeEstimate {
   @override
   final Range range;
   @override
-  final List<StatisticEstimateQualifier> estimateQualifier;
+  final List<StatisticAttributeEstimate1> attributeEstimate;
 
   @override
   String toString() {
-    return 'StatisticAttributeEstimate(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, note: $note, type: $type, quantity: $quantity, level: $level, levelElement: $levelElement, range: $range, estimateQualifier: $estimateQualifier)';
+    return 'StatisticAttributeEstimate(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, note: $note, type: $type, quantity: $quantity, level: $level, levelElement: $levelElement, range: $range, attributeEstimate: $attributeEstimate)';
   }
 
   @override
@@ -2226,9 +2161,9 @@ class _$_StatisticAttributeEstimate extends _StatisticAttributeEstimate {
                     .equals(other.levelElement, levelElement)) &&
             (identical(other.range, range) ||
                 const DeepCollectionEquality().equals(other.range, range)) &&
-            (identical(other.estimateQualifier, estimateQualifier) ||
+            (identical(other.attributeEstimate, attributeEstimate) ||
                 const DeepCollectionEquality()
-                    .equals(other.estimateQualifier, estimateQualifier)));
+                    .equals(other.attributeEstimate, attributeEstimate)));
   }
 
   @override
@@ -2245,7 +2180,7 @@ class _$_StatisticAttributeEstimate extends _StatisticAttributeEstimate {
       const DeepCollectionEquality().hash(level) ^
       const DeepCollectionEquality().hash(levelElement) ^
       const DeepCollectionEquality().hash(range) ^
-      const DeepCollectionEquality().hash(estimateQualifier);
+      const DeepCollectionEquality().hash(attributeEstimate);
 
   @override
   _$StatisticAttributeEstimateCopyWith<_StatisticAttributeEstimate>
@@ -2272,7 +2207,7 @@ abstract class _StatisticAttributeEstimate extends StatisticAttributeEstimate {
           Decimal level,
           @JsonKey(name: '_level') Element levelElement,
           Range range,
-          List<StatisticEstimateQualifier> estimateQualifier}) =
+          List<StatisticAttributeEstimate1> attributeEstimate}) =
       _$_StatisticAttributeEstimate;
 
   factory _StatisticAttributeEstimate.fromJson(Map<String, dynamic> json) =
@@ -2304,23 +2239,22 @@ abstract class _StatisticAttributeEstimate extends StatisticAttributeEstimate {
   @override
   Range get range;
   @override
-  List<StatisticEstimateQualifier> get estimateQualifier;
+  List<StatisticAttributeEstimate1> get attributeEstimate;
   @override
   _$StatisticAttributeEstimateCopyWith<_StatisticAttributeEstimate>
       get copyWith;
 }
 
-StatisticEstimateQualifier _$StatisticEstimateQualifierFromJson(
+StatisticAttributeEstimate1 _$StatisticAttributeEstimate1FromJson(
     Map<String, dynamic> json) {
-  return _StatisticEstimateQualifier.fromJson(json);
+  return _StatisticAttributeEstimate1.fromJson(json);
 }
 
-/// @nodoc
-class _$StatisticEstimateQualifierTearOff {
-  const _$StatisticEstimateQualifierTearOff();
+class _$StatisticAttributeEstimate1TearOff {
+  const _$StatisticAttributeEstimate1TearOff();
 
 // ignore: unused_element
-  _StatisticEstimateQualifier call(
+  _StatisticAttributeEstimate1 call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
@@ -2332,7 +2266,7 @@ class _$StatisticEstimateQualifierTearOff {
       Decimal level,
       @JsonKey(name: '_level') Element levelElement,
       Range range}) {
-    return _StatisticEstimateQualifier(
+    return _StatisticAttributeEstimate1(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
@@ -2346,19 +2280,12 @@ class _$StatisticEstimateQualifierTearOff {
       range: range,
     );
   }
-
-// ignore: unused_element
-  StatisticEstimateQualifier fromJson(Map<String, Object> json) {
-    return StatisticEstimateQualifier.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
-const $StatisticEstimateQualifier = _$StatisticEstimateQualifierTearOff();
+const $StatisticAttributeEstimate1 = _$StatisticAttributeEstimate1TearOff();
 
-/// @nodoc
-mixin _$StatisticEstimateQualifier {
+mixin _$StatisticAttributeEstimate1 {
   String get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
@@ -2375,14 +2302,15 @@ mixin _$StatisticEstimateQualifier {
   Range get range;
 
   Map<String, dynamic> toJson();
-  $StatisticEstimateQualifierCopyWith<StatisticEstimateQualifier> get copyWith;
+  $StatisticAttributeEstimate1CopyWith<StatisticAttributeEstimate1>
+      get copyWith;
 }
 
-/// @nodoc
-abstract class $StatisticEstimateQualifierCopyWith<$Res> {
-  factory $StatisticEstimateQualifierCopyWith(StatisticEstimateQualifier value,
-          $Res Function(StatisticEstimateQualifier) then) =
-      _$StatisticEstimateQualifierCopyWithImpl<$Res>;
+abstract class $StatisticAttributeEstimate1CopyWith<$Res> {
+  factory $StatisticAttributeEstimate1CopyWith(
+          StatisticAttributeEstimate1 value,
+          $Res Function(StatisticAttributeEstimate1) then) =
+      _$StatisticAttributeEstimate1CopyWithImpl<$Res>;
   $Res call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2403,14 +2331,13 @@ abstract class $StatisticEstimateQualifierCopyWith<$Res> {
   $RangeCopyWith<$Res> get range;
 }
 
-/// @nodoc
-class _$StatisticEstimateQualifierCopyWithImpl<$Res>
-    implements $StatisticEstimateQualifierCopyWith<$Res> {
-  _$StatisticEstimateQualifierCopyWithImpl(this._value, this._then);
+class _$StatisticAttributeEstimate1CopyWithImpl<$Res>
+    implements $StatisticAttributeEstimate1CopyWith<$Res> {
+  _$StatisticAttributeEstimate1CopyWithImpl(this._value, this._then);
 
-  final StatisticEstimateQualifier _value;
+  final StatisticAttributeEstimate1 _value;
   // ignore: unused_field
-  final $Res Function(StatisticEstimateQualifier) _then;
+  final $Res Function(StatisticAttributeEstimate1) _then;
 
   @override
   $Res call({
@@ -2501,13 +2428,12 @@ class _$StatisticEstimateQualifierCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
-abstract class _$StatisticEstimateQualifierCopyWith<$Res>
-    implements $StatisticEstimateQualifierCopyWith<$Res> {
-  factory _$StatisticEstimateQualifierCopyWith(
-          _StatisticEstimateQualifier value,
-          $Res Function(_StatisticEstimateQualifier) then) =
-      __$StatisticEstimateQualifierCopyWithImpl<$Res>;
+abstract class _$StatisticAttributeEstimate1CopyWith<$Res>
+    implements $StatisticAttributeEstimate1CopyWith<$Res> {
+  factory _$StatisticAttributeEstimate1CopyWith(
+          _StatisticAttributeEstimate1 value,
+          $Res Function(_StatisticAttributeEstimate1) then) =
+      __$StatisticAttributeEstimate1CopyWithImpl<$Res>;
   @override
   $Res call(
       {String id,
@@ -2534,17 +2460,17 @@ abstract class _$StatisticEstimateQualifierCopyWith<$Res>
   $RangeCopyWith<$Res> get range;
 }
 
-/// @nodoc
-class __$StatisticEstimateQualifierCopyWithImpl<$Res>
-    extends _$StatisticEstimateQualifierCopyWithImpl<$Res>
-    implements _$StatisticEstimateQualifierCopyWith<$Res> {
-  __$StatisticEstimateQualifierCopyWithImpl(_StatisticEstimateQualifier _value,
-      $Res Function(_StatisticEstimateQualifier) _then)
-      : super(_value, (v) => _then(v as _StatisticEstimateQualifier));
+class __$StatisticAttributeEstimate1CopyWithImpl<$Res>
+    extends _$StatisticAttributeEstimate1CopyWithImpl<$Res>
+    implements _$StatisticAttributeEstimate1CopyWith<$Res> {
+  __$StatisticAttributeEstimate1CopyWithImpl(
+      _StatisticAttributeEstimate1 _value,
+      $Res Function(_StatisticAttributeEstimate1) _then)
+      : super(_value, (v) => _then(v as _StatisticAttributeEstimate1));
 
   @override
-  _StatisticEstimateQualifier get _value =>
-      super._value as _StatisticEstimateQualifier;
+  _StatisticAttributeEstimate1 get _value =>
+      super._value as _StatisticAttributeEstimate1;
 
   @override
   $Res call({
@@ -2560,7 +2486,7 @@ class __$StatisticEstimateQualifierCopyWithImpl<$Res>
     Object levelElement = freezed,
     Object range = freezed,
   }) {
-    return _then(_StatisticEstimateQualifier(
+    return _then(_StatisticAttributeEstimate1(
       id: id == freezed ? _value.id : id as String,
       extension_: extension_ == freezed
           ? _value.extension_
@@ -2586,10 +2512,8 @@ class __$StatisticEstimateQualifierCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
-class _$_StatisticEstimateQualifier extends _StatisticEstimateQualifier {
-  _$_StatisticEstimateQualifier(
+class _$_StatisticAttributeEstimate1 extends _StatisticAttributeEstimate1 {
+  _$_StatisticAttributeEstimate1(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -2603,8 +2527,8 @@ class _$_StatisticEstimateQualifier extends _StatisticEstimateQualifier {
       this.range})
       : super._();
 
-  factory _$_StatisticEstimateQualifier.fromJson(Map<String, dynamic> json) =>
-      _$_$_StatisticEstimateQualifierFromJson(json);
+  factory _$_StatisticAttributeEstimate1.fromJson(Map<String, dynamic> json) =>
+      _$_$_StatisticAttributeEstimate1FromJson(json);
 
   @override
   final String id;
@@ -2634,13 +2558,13 @@ class _$_StatisticEstimateQualifier extends _StatisticEstimateQualifier {
 
   @override
   String toString() {
-    return 'StatisticEstimateQualifier(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, note: $note, type: $type, quantity: $quantity, level: $level, levelElement: $levelElement, range: $range)';
+    return 'StatisticAttributeEstimate1(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, note: $note, type: $type, quantity: $quantity, level: $level, levelElement: $levelElement, range: $range)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _StatisticEstimateQualifier &&
+        (other is _StatisticAttributeEstimate1 &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.extension_, extension_) ||
@@ -2687,19 +2611,20 @@ class _$_StatisticEstimateQualifier extends _StatisticEstimateQualifier {
       const DeepCollectionEquality().hash(range);
 
   @override
-  _$StatisticEstimateQualifierCopyWith<_StatisticEstimateQualifier>
-      get copyWith => __$StatisticEstimateQualifierCopyWithImpl<
-          _StatisticEstimateQualifier>(this, _$identity);
+  _$StatisticAttributeEstimate1CopyWith<_StatisticAttributeEstimate1>
+      get copyWith => __$StatisticAttributeEstimate1CopyWithImpl<
+          _StatisticAttributeEstimate1>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_StatisticEstimateQualifierToJson(this);
+    return _$_$_StatisticAttributeEstimate1ToJson(this);
   }
 }
 
-abstract class _StatisticEstimateQualifier extends StatisticEstimateQualifier {
-  _StatisticEstimateQualifier._() : super._();
-  factory _StatisticEstimateQualifier(
+abstract class _StatisticAttributeEstimate1
+    extends StatisticAttributeEstimate1 {
+  _StatisticAttributeEstimate1._() : super._();
+  factory _StatisticAttributeEstimate1(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
@@ -2710,10 +2635,10 @@ abstract class _StatisticEstimateQualifier extends StatisticEstimateQualifier {
       Quantity quantity,
       Decimal level,
       @JsonKey(name: '_level') Element levelElement,
-      Range range}) = _$_StatisticEstimateQualifier;
+      Range range}) = _$_StatisticAttributeEstimate1;
 
-  factory _StatisticEstimateQualifier.fromJson(Map<String, dynamic> json) =
-      _$_StatisticEstimateQualifier.fromJson;
+  factory _StatisticAttributeEstimate1.fromJson(Map<String, dynamic> json) =
+      _$_StatisticAttributeEstimate1.fromJson;
 
   @override
   String get id;
@@ -2741,15 +2666,781 @@ abstract class _StatisticEstimateQualifier extends StatisticEstimateQualifier {
   @override
   Range get range;
   @override
-  _$StatisticEstimateQualifierCopyWith<_StatisticEstimateQualifier>
+  _$StatisticAttributeEstimate1CopyWith<_StatisticAttributeEstimate1>
       get copyWith;
+}
+
+StatisticModelCharacteristic _$StatisticModelCharacteristicFromJson(
+    Map<String, dynamic> json) {
+  return _StatisticModelCharacteristic.fromJson(json);
+}
+
+class _$StatisticModelCharacteristicTearOff {
+  const _$StatisticModelCharacteristicTearOff();
+
+// ignore: unused_element
+  _StatisticModelCharacteristic call(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      CodeableConcept code,
+      CodeableConcept valueCodeableConcept,
+      Boolean valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Quantity valueQuantity,
+      Range valueRange,
+      List<StatisticVariable> variable}) {
+    return _StatisticModelCharacteristic(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      code: code,
+      valueCodeableConcept: valueCodeableConcept,
+      valueBoolean: valueBoolean,
+      valueBooleanElement: valueBooleanElement,
+      valueQuantity: valueQuantity,
+      valueRange: valueRange,
+      variable: variable,
+    );
+  }
+}
+
+// ignore: unused_element
+const $StatisticModelCharacteristic = _$StatisticModelCharacteristicTearOff();
+
+mixin _$StatisticModelCharacteristic {
+  String get id;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
+  CodeableConcept get code;
+  CodeableConcept get valueCodeableConcept;
+  Boolean get valueBoolean;
+  @JsonKey(name: '_valueBoolean')
+  Element get valueBooleanElement;
+  Quantity get valueQuantity;
+  Range get valueRange;
+  List<StatisticVariable> get variable;
+
+  Map<String, dynamic> toJson();
+  $StatisticModelCharacteristicCopyWith<StatisticModelCharacteristic>
+      get copyWith;
+}
+
+abstract class $StatisticModelCharacteristicCopyWith<$Res> {
+  factory $StatisticModelCharacteristicCopyWith(
+          StatisticModelCharacteristic value,
+          $Res Function(StatisticModelCharacteristic) then) =
+      _$StatisticModelCharacteristicCopyWithImpl<$Res>;
+  $Res call(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      CodeableConcept code,
+      CodeableConcept valueCodeableConcept,
+      Boolean valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Quantity valueQuantity,
+      Range valueRange,
+      List<StatisticVariable> variable});
+
+  $CodeableConceptCopyWith<$Res> get code;
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
+  $ElementCopyWith<$Res> get valueBooleanElement;
+  $QuantityCopyWith<$Res> get valueQuantity;
+  $RangeCopyWith<$Res> get valueRange;
+}
+
+class _$StatisticModelCharacteristicCopyWithImpl<$Res>
+    implements $StatisticModelCharacteristicCopyWith<$Res> {
+  _$StatisticModelCharacteristicCopyWithImpl(this._value, this._then);
+
+  final StatisticModelCharacteristic _value;
+  // ignore: unused_field
+  final $Res Function(StatisticModelCharacteristic) _then;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object code = freezed,
+    Object valueCodeableConcept = freezed,
+    Object valueBoolean = freezed,
+    Object valueBooleanElement = freezed,
+    Object valueQuantity = freezed,
+    Object valueRange = freezed,
+    Object variable = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed ? _value.id : id as String,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      code: code == freezed ? _value.code : code as CodeableConcept,
+      valueCodeableConcept: valueCodeableConcept == freezed
+          ? _value.valueCodeableConcept
+          : valueCodeableConcept as CodeableConcept,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
+      valueBooleanElement: valueBooleanElement == freezed
+          ? _value.valueBooleanElement
+          : valueBooleanElement as Element,
+      valueQuantity: valueQuantity == freezed
+          ? _value.valueQuantity
+          : valueQuantity as Quantity,
+      valueRange:
+          valueRange == freezed ? _value.valueRange : valueRange as Range,
+      variable: variable == freezed
+          ? _value.variable
+          : variable as List<StatisticVariable>,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept {
+    if (_value.valueCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept, (value) {
+      return _then(_value.copyWith(valueCodeableConcept: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueBooleanElement {
+    if (_value.valueBooleanElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueBooleanElement, (value) {
+      return _then(_value.copyWith(valueBooleanElement: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get valueQuantity {
+    if (_value.valueQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.valueQuantity, (value) {
+      return _then(_value.copyWith(valueQuantity: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res> get valueRange {
+    if (_value.valueRange == null) {
+      return null;
+    }
+    return $RangeCopyWith<$Res>(_value.valueRange, (value) {
+      return _then(_value.copyWith(valueRange: value));
+    });
+  }
+}
+
+abstract class _$StatisticModelCharacteristicCopyWith<$Res>
+    implements $StatisticModelCharacteristicCopyWith<$Res> {
+  factory _$StatisticModelCharacteristicCopyWith(
+          _StatisticModelCharacteristic value,
+          $Res Function(_StatisticModelCharacteristic) then) =
+      __$StatisticModelCharacteristicCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      CodeableConcept code,
+      CodeableConcept valueCodeableConcept,
+      Boolean valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Quantity valueQuantity,
+      Range valueRange,
+      List<StatisticVariable> variable});
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code;
+  @override
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
+  @override
+  $ElementCopyWith<$Res> get valueBooleanElement;
+  @override
+  $QuantityCopyWith<$Res> get valueQuantity;
+  @override
+  $RangeCopyWith<$Res> get valueRange;
+}
+
+class __$StatisticModelCharacteristicCopyWithImpl<$Res>
+    extends _$StatisticModelCharacteristicCopyWithImpl<$Res>
+    implements _$StatisticModelCharacteristicCopyWith<$Res> {
+  __$StatisticModelCharacteristicCopyWithImpl(
+      _StatisticModelCharacteristic _value,
+      $Res Function(_StatisticModelCharacteristic) _then)
+      : super(_value, (v) => _then(v as _StatisticModelCharacteristic));
+
+  @override
+  _StatisticModelCharacteristic get _value =>
+      super._value as _StatisticModelCharacteristic;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object code = freezed,
+    Object valueCodeableConcept = freezed,
+    Object valueBoolean = freezed,
+    Object valueBooleanElement = freezed,
+    Object valueQuantity = freezed,
+    Object valueRange = freezed,
+    Object variable = freezed,
+  }) {
+    return _then(_StatisticModelCharacteristic(
+      id: id == freezed ? _value.id : id as String,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      code: code == freezed ? _value.code : code as CodeableConcept,
+      valueCodeableConcept: valueCodeableConcept == freezed
+          ? _value.valueCodeableConcept
+          : valueCodeableConcept as CodeableConcept,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
+      valueBooleanElement: valueBooleanElement == freezed
+          ? _value.valueBooleanElement
+          : valueBooleanElement as Element,
+      valueQuantity: valueQuantity == freezed
+          ? _value.valueQuantity
+          : valueQuantity as Quantity,
+      valueRange:
+          valueRange == freezed ? _value.valueRange : valueRange as Range,
+      variable: variable == freezed
+          ? _value.variable
+          : variable as List<StatisticVariable>,
+    ));
+  }
+}
+
+@JsonSerializable()
+class _$_StatisticModelCharacteristic extends _StatisticModelCharacteristic {
+  _$_StatisticModelCharacteristic(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.code,
+      this.valueCodeableConcept,
+      this.valueBoolean,
+      @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+      this.valueQuantity,
+      this.valueRange,
+      this.variable})
+      : super._();
+
+  factory _$_StatisticModelCharacteristic.fromJson(Map<String, dynamic> json) =>
+      _$_$_StatisticModelCharacteristicFromJson(json);
+
+  @override
+  final String id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
+  @override
+  final CodeableConcept code;
+  @override
+  final CodeableConcept valueCodeableConcept;
+  @override
+  final Boolean valueBoolean;
+  @override
+  @JsonKey(name: '_valueBoolean')
+  final Element valueBooleanElement;
+  @override
+  final Quantity valueQuantity;
+  @override
+  final Range valueRange;
+  @override
+  final List<StatisticVariable> variable;
+
+  @override
+  String toString() {
+    return 'StatisticModelCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, valueCodeableConcept: $valueCodeableConcept, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueQuantity: $valueQuantity, valueRange: $valueRange, variable: $variable)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _StatisticModelCharacteristic &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.code, code) ||
+                const DeepCollectionEquality().equals(other.code, code)) &&
+            (identical(other.valueCodeableConcept, valueCodeableConcept) ||
+                const DeepCollectionEquality().equals(
+                    other.valueCodeableConcept, valueCodeableConcept)) &&
+            (identical(other.valueBoolean, valueBoolean) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBoolean, valueBoolean)) &&
+            (identical(other.valueBooleanElement, valueBooleanElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBooleanElement, valueBooleanElement)) &&
+            (identical(other.valueQuantity, valueQuantity) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueQuantity, valueQuantity)) &&
+            (identical(other.valueRange, valueRange) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueRange, valueRange)) &&
+            (identical(other.variable, variable) ||
+                const DeepCollectionEquality()
+                    .equals(other.variable, variable)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(code) ^
+      const DeepCollectionEquality().hash(valueCodeableConcept) ^
+      const DeepCollectionEquality().hash(valueBoolean) ^
+      const DeepCollectionEquality().hash(valueBooleanElement) ^
+      const DeepCollectionEquality().hash(valueQuantity) ^
+      const DeepCollectionEquality().hash(valueRange) ^
+      const DeepCollectionEquality().hash(variable);
+
+  @override
+  _$StatisticModelCharacteristicCopyWith<_StatisticModelCharacteristic>
+      get copyWith => __$StatisticModelCharacteristicCopyWithImpl<
+          _StatisticModelCharacteristic>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_StatisticModelCharacteristicToJson(this);
+  }
+}
+
+abstract class _StatisticModelCharacteristic
+    extends StatisticModelCharacteristic {
+  _StatisticModelCharacteristic._() : super._();
+  factory _StatisticModelCharacteristic(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      CodeableConcept code,
+      CodeableConcept valueCodeableConcept,
+      Boolean valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      Quantity valueQuantity,
+      Range valueRange,
+      List<StatisticVariable> variable}) = _$_StatisticModelCharacteristic;
+
+  factory _StatisticModelCharacteristic.fromJson(Map<String, dynamic> json) =
+      _$_StatisticModelCharacteristic.fromJson;
+
+  @override
+  String get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
+  @override
+  CodeableConcept get code;
+  @override
+  CodeableConcept get valueCodeableConcept;
+  @override
+  Boolean get valueBoolean;
+  @override
+  @JsonKey(name: '_valueBoolean')
+  Element get valueBooleanElement;
+  @override
+  Quantity get valueQuantity;
+  @override
+  Range get valueRange;
+  @override
+  List<StatisticVariable> get variable;
+  @override
+  _$StatisticModelCharacteristicCopyWith<_StatisticModelCharacteristic>
+      get copyWith;
+}
+
+StatisticVariable _$StatisticVariableFromJson(Map<String, dynamic> json) {
+  return _StatisticVariable.fromJson(json);
+}
+
+class _$StatisticVariableTearOff {
+  const _$StatisticVariableTearOff();
+
+// ignore: unused_element
+  _StatisticVariable call(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      @required Reference variableDefinition,
+      Code handling,
+      @JsonKey(name: '_handling') Element handlingElement,
+      List<CodeableConcept> valueCategory,
+      List<Quantity> valueQuantity,
+      List<Range> valueRange}) {
+    return _StatisticVariable(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      variableDefinition: variableDefinition,
+      handling: handling,
+      handlingElement: handlingElement,
+      valueCategory: valueCategory,
+      valueQuantity: valueQuantity,
+      valueRange: valueRange,
+    );
+  }
+}
+
+// ignore: unused_element
+const $StatisticVariable = _$StatisticVariableTearOff();
+
+mixin _$StatisticVariable {
+  String get id;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
+  Reference get variableDefinition;
+  Code get handling;
+  @JsonKey(name: '_handling')
+  Element get handlingElement;
+  List<CodeableConcept> get valueCategory;
+  List<Quantity> get valueQuantity;
+  List<Range> get valueRange;
+
+  Map<String, dynamic> toJson();
+  $StatisticVariableCopyWith<StatisticVariable> get copyWith;
+}
+
+abstract class $StatisticVariableCopyWith<$Res> {
+  factory $StatisticVariableCopyWith(
+          StatisticVariable value, $Res Function(StatisticVariable) then) =
+      _$StatisticVariableCopyWithImpl<$Res>;
+  $Res call(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Reference variableDefinition,
+      Code handling,
+      @JsonKey(name: '_handling') Element handlingElement,
+      List<CodeableConcept> valueCategory,
+      List<Quantity> valueQuantity,
+      List<Range> valueRange});
+
+  $ReferenceCopyWith<$Res> get variableDefinition;
+  $ElementCopyWith<$Res> get handlingElement;
+}
+
+class _$StatisticVariableCopyWithImpl<$Res>
+    implements $StatisticVariableCopyWith<$Res> {
+  _$StatisticVariableCopyWithImpl(this._value, this._then);
+
+  final StatisticVariable _value;
+  // ignore: unused_field
+  final $Res Function(StatisticVariable) _then;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object variableDefinition = freezed,
+    Object handling = freezed,
+    Object handlingElement = freezed,
+    Object valueCategory = freezed,
+    Object valueQuantity = freezed,
+    Object valueRange = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed ? _value.id : id as String,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      variableDefinition: variableDefinition == freezed
+          ? _value.variableDefinition
+          : variableDefinition as Reference,
+      handling: handling == freezed ? _value.handling : handling as Code,
+      handlingElement: handlingElement == freezed
+          ? _value.handlingElement
+          : handlingElement as Element,
+      valueCategory: valueCategory == freezed
+          ? _value.valueCategory
+          : valueCategory as List<CodeableConcept>,
+      valueQuantity: valueQuantity == freezed
+          ? _value.valueQuantity
+          : valueQuantity as List<Quantity>,
+      valueRange:
+          valueRange == freezed ? _value.valueRange : valueRange as List<Range>,
+    ));
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get variableDefinition {
+    if (_value.variableDefinition == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.variableDefinition, (value) {
+      return _then(_value.copyWith(variableDefinition: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get handlingElement {
+    if (_value.handlingElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.handlingElement, (value) {
+      return _then(_value.copyWith(handlingElement: value));
+    });
+  }
+}
+
+abstract class _$StatisticVariableCopyWith<$Res>
+    implements $StatisticVariableCopyWith<$Res> {
+  factory _$StatisticVariableCopyWith(
+          _StatisticVariable value, $Res Function(_StatisticVariable) then) =
+      __$StatisticVariableCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Reference variableDefinition,
+      Code handling,
+      @JsonKey(name: '_handling') Element handlingElement,
+      List<CodeableConcept> valueCategory,
+      List<Quantity> valueQuantity,
+      List<Range> valueRange});
+
+  @override
+  $ReferenceCopyWith<$Res> get variableDefinition;
+  @override
+  $ElementCopyWith<$Res> get handlingElement;
+}
+
+class __$StatisticVariableCopyWithImpl<$Res>
+    extends _$StatisticVariableCopyWithImpl<$Res>
+    implements _$StatisticVariableCopyWith<$Res> {
+  __$StatisticVariableCopyWithImpl(
+      _StatisticVariable _value, $Res Function(_StatisticVariable) _then)
+      : super(_value, (v) => _then(v as _StatisticVariable));
+
+  @override
+  _StatisticVariable get _value => super._value as _StatisticVariable;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object variableDefinition = freezed,
+    Object handling = freezed,
+    Object handlingElement = freezed,
+    Object valueCategory = freezed,
+    Object valueQuantity = freezed,
+    Object valueRange = freezed,
+  }) {
+    return _then(_StatisticVariable(
+      id: id == freezed ? _value.id : id as String,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      variableDefinition: variableDefinition == freezed
+          ? _value.variableDefinition
+          : variableDefinition as Reference,
+      handling: handling == freezed ? _value.handling : handling as Code,
+      handlingElement: handlingElement == freezed
+          ? _value.handlingElement
+          : handlingElement as Element,
+      valueCategory: valueCategory == freezed
+          ? _value.valueCategory
+          : valueCategory as List<CodeableConcept>,
+      valueQuantity: valueQuantity == freezed
+          ? _value.valueQuantity
+          : valueQuantity as List<Quantity>,
+      valueRange:
+          valueRange == freezed ? _value.valueRange : valueRange as List<Range>,
+    ));
+  }
+}
+
+@JsonSerializable()
+class _$_StatisticVariable extends _StatisticVariable {
+  _$_StatisticVariable(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      @required this.variableDefinition,
+      this.handling,
+      @JsonKey(name: '_handling') this.handlingElement,
+      this.valueCategory,
+      this.valueQuantity,
+      this.valueRange})
+      : assert(variableDefinition != null),
+        super._();
+
+  factory _$_StatisticVariable.fromJson(Map<String, dynamic> json) =>
+      _$_$_StatisticVariableFromJson(json);
+
+  @override
+  final String id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
+  @override
+  final Reference variableDefinition;
+  @override
+  final Code handling;
+  @override
+  @JsonKey(name: '_handling')
+  final Element handlingElement;
+  @override
+  final List<CodeableConcept> valueCategory;
+  @override
+  final List<Quantity> valueQuantity;
+  @override
+  final List<Range> valueRange;
+
+  @override
+  String toString() {
+    return 'StatisticVariable(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, variableDefinition: $variableDefinition, handling: $handling, handlingElement: $handlingElement, valueCategory: $valueCategory, valueQuantity: $valueQuantity, valueRange: $valueRange)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _StatisticVariable &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.variableDefinition, variableDefinition) ||
+                const DeepCollectionEquality()
+                    .equals(other.variableDefinition, variableDefinition)) &&
+            (identical(other.handling, handling) ||
+                const DeepCollectionEquality()
+                    .equals(other.handling, handling)) &&
+            (identical(other.handlingElement, handlingElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.handlingElement, handlingElement)) &&
+            (identical(other.valueCategory, valueCategory) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueCategory, valueCategory)) &&
+            (identical(other.valueQuantity, valueQuantity) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueQuantity, valueQuantity)) &&
+            (identical(other.valueRange, valueRange) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueRange, valueRange)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(variableDefinition) ^
+      const DeepCollectionEquality().hash(handling) ^
+      const DeepCollectionEquality().hash(handlingElement) ^
+      const DeepCollectionEquality().hash(valueCategory) ^
+      const DeepCollectionEquality().hash(valueQuantity) ^
+      const DeepCollectionEquality().hash(valueRange);
+
+  @override
+  _$StatisticVariableCopyWith<_StatisticVariable> get copyWith =>
+      __$StatisticVariableCopyWithImpl<_StatisticVariable>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_StatisticVariableToJson(this);
+  }
+}
+
+abstract class _StatisticVariable extends StatisticVariable {
+  _StatisticVariable._() : super._();
+  factory _StatisticVariable(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      @required Reference variableDefinition,
+      Code handling,
+      @JsonKey(name: '_handling') Element handlingElement,
+      List<CodeableConcept> valueCategory,
+      List<Quantity> valueQuantity,
+      List<Range> valueRange}) = _$_StatisticVariable;
+
+  factory _StatisticVariable.fromJson(Map<String, dynamic> json) =
+      _$_StatisticVariable.fromJson;
+
+  @override
+  String get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
+  @override
+  Reference get variableDefinition;
+  @override
+  Code get handling;
+  @override
+  @JsonKey(name: '_handling')
+  Element get handlingElement;
+  @override
+  List<CodeableConcept> get valueCategory;
+  @override
+  List<Quantity> get valueQuantity;
+  @override
+  List<Range> get valueRange;
+  @override
+  _$StatisticVariableCopyWith<_StatisticVariable> get copyWith;
 }
 
 OrderedDistribution _$OrderedDistributionFromJson(Map<String, dynamic> json) {
   return _OrderedDistribution.fromJson(json);
 }
 
-/// @nodoc
 class _$OrderedDistributionTearOff {
   const _$OrderedDistributionTearOff();
 
@@ -2780,18 +3471,11 @@ class _$OrderedDistributionTearOff {
       topOfInterval: topOfInterval,
     );
   }
-
-// ignore: unused_element
-  OrderedDistribution fromJson(Map<String, Object> json) {
-    return OrderedDistribution.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $OrderedDistribution = _$OrderedDistributionTearOff();
 
-/// @nodoc
 mixin _$OrderedDistribution {
   String get id;
   @JsonKey(name: 'extension')
@@ -2812,7 +3496,6 @@ mixin _$OrderedDistribution {
   $OrderedDistributionCopyWith<OrderedDistribution> get copyWith;
 }
 
-/// @nodoc
 abstract class $OrderedDistributionCopyWith<$Res> {
   factory $OrderedDistributionCopyWith(
           OrderedDistribution value, $Res Function(OrderedDistribution) then) =
@@ -2836,7 +3519,6 @@ abstract class $OrderedDistributionCopyWith<$Res> {
   $QuantityCopyWith<$Res> get topOfInterval;
 }
 
-/// @nodoc
 class _$OrderedDistributionCopyWithImpl<$Res>
     implements $OrderedDistributionCopyWith<$Res> {
   _$OrderedDistributionCopyWithImpl(this._value, this._then);
@@ -2932,7 +3614,6 @@ class _$OrderedDistributionCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$OrderedDistributionCopyWith<$Res>
     implements $OrderedDistributionCopyWith<$Res> {
   factory _$OrderedDistributionCopyWith(_OrderedDistribution value,
@@ -2962,7 +3643,6 @@ abstract class _$OrderedDistributionCopyWith<$Res>
   $QuantityCopyWith<$Res> get topOfInterval;
 }
 
-/// @nodoc
 class __$OrderedDistributionCopyWithImpl<$Res>
     extends _$OrderedDistributionCopyWithImpl<$Res>
     implements _$OrderedDistributionCopyWith<$Res> {
@@ -3021,8 +3701,6 @@ class __$OrderedDistributionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_OrderedDistribution extends _OrderedDistribution {
   _$_OrderedDistribution(
       {this.id,
@@ -3190,7 +3868,6 @@ OrderedDistributionInterval _$OrderedDistributionIntervalFromJson(
   return _OrderedDistributionInterval.fromJson(json);
 }
 
-/// @nodoc
 class _$OrderedDistributionIntervalTearOff {
   const _$OrderedDistributionIntervalTearOff();
 
@@ -3211,18 +3888,11 @@ class _$OrderedDistributionIntervalTearOff {
       intervalStatistic: intervalStatistic,
     );
   }
-
-// ignore: unused_element
-  OrderedDistributionInterval fromJson(Map<String, Object> json) {
-    return OrderedDistributionInterval.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $OrderedDistributionInterval = _$OrderedDistributionIntervalTearOff();
 
-/// @nodoc
 mixin _$OrderedDistributionInterval {
   String get id;
   @JsonKey(name: 'extension')
@@ -3238,7 +3908,6 @@ mixin _$OrderedDistributionInterval {
       get copyWith;
 }
 
-/// @nodoc
 abstract class $OrderedDistributionIntervalCopyWith<$Res> {
   factory $OrderedDistributionIntervalCopyWith(
           OrderedDistributionInterval value,
@@ -3255,7 +3924,6 @@ abstract class $OrderedDistributionIntervalCopyWith<$Res> {
   $ElementCopyWith<$Res> get rankOrderElement;
 }
 
-/// @nodoc
 class _$OrderedDistributionIntervalCopyWithImpl<$Res>
     implements $OrderedDistributionIntervalCopyWith<$Res> {
   _$OrderedDistributionIntervalCopyWithImpl(this._value, this._then);
@@ -3302,7 +3970,6 @@ class _$OrderedDistributionIntervalCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$OrderedDistributionIntervalCopyWith<$Res>
     implements $OrderedDistributionIntervalCopyWith<$Res> {
   factory _$OrderedDistributionIntervalCopyWith(
@@ -3322,7 +3989,6 @@ abstract class _$OrderedDistributionIntervalCopyWith<$Res>
   $ElementCopyWith<$Res> get rankOrderElement;
 }
 
-/// @nodoc
 class __$OrderedDistributionIntervalCopyWithImpl<$Res>
     extends _$OrderedDistributionIntervalCopyWithImpl<$Res>
     implements _$OrderedDistributionIntervalCopyWith<$Res> {
@@ -3364,8 +4030,6 @@ class __$OrderedDistributionIntervalCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_OrderedDistributionInterval extends _OrderedDistributionInterval {
   _$_OrderedDistributionInterval(
       {this.id,
@@ -3480,7 +4144,6 @@ Meta _$MetaFromJson(Map<String, dynamic> json) {
   return _Meta.fromJson(json);
 }
 
-/// @nodoc
 class _$MetaTearOff {
   const _$MetaTearOff();
 
@@ -3511,18 +4174,11 @@ class _$MetaTearOff {
       tag: tag,
     );
   }
-
-// ignore: unused_element
-  Meta fromJson(Map<String, Object> json) {
-    return Meta.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $Meta = _$MetaTearOff();
 
-/// @nodoc
 mixin _$Meta {
   String get id;
   @JsonKey(name: 'extension')
@@ -3544,7 +4200,6 @@ mixin _$Meta {
   $MetaCopyWith<Meta> get copyWith;
 }
 
-/// @nodoc
 abstract class $MetaCopyWith<$Res> {
   factory $MetaCopyWith(Meta value, $Res Function(Meta) then) =
       _$MetaCopyWithImpl<$Res>;
@@ -3566,7 +4221,6 @@ abstract class $MetaCopyWith<$Res> {
   $ElementCopyWith<$Res> get sourceElement;
 }
 
-/// @nodoc
 class _$MetaCopyWithImpl<$Res> implements $MetaCopyWith<$Res> {
   _$MetaCopyWithImpl(this._value, this._then);
 
@@ -3644,7 +4298,6 @@ class _$MetaCopyWithImpl<$Res> implements $MetaCopyWith<$Res> {
   }
 }
 
-/// @nodoc
 abstract class _$MetaCopyWith<$Res> implements $MetaCopyWith<$Res> {
   factory _$MetaCopyWith(_Meta value, $Res Function(_Meta) then) =
       __$MetaCopyWithImpl<$Res>;
@@ -3670,7 +4323,6 @@ abstract class _$MetaCopyWith<$Res> implements $MetaCopyWith<$Res> {
   $ElementCopyWith<$Res> get sourceElement;
 }
 
-/// @nodoc
 class __$MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res>
     implements _$MetaCopyWith<$Res> {
   __$MetaCopyWithImpl(_Meta _value, $Res Function(_Meta) _then)
@@ -3720,8 +4372,6 @@ class __$MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_Meta extends _Meta {
   _$_Meta(
       {this.id,
@@ -3884,7 +4534,6 @@ Dosage _$DosageFromJson(Map<String, dynamic> json) {
   return _Dosage.fromJson(json);
 }
 
-/// @nodoc
 class _$DosageTearOff {
   const _$DosageTearOff();
 
@@ -3935,18 +4584,11 @@ class _$DosageTearOff {
       maxDosePerLifetime: maxDosePerLifetime,
     );
   }
-
-// ignore: unused_element
-  Dosage fromJson(Map<String, Object> json) {
-    return Dosage.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $Dosage = _$DosageTearOff();
 
-/// @nodoc
 mixin _$Dosage {
   String get id;
   @JsonKey(name: 'extension')
@@ -3979,7 +4621,6 @@ mixin _$Dosage {
   $DosageCopyWith<Dosage> get copyWith;
 }
 
-/// @nodoc
 abstract class $DosageCopyWith<$Res> {
   factory $DosageCopyWith(Dosage value, $Res Function(Dosage) then) =
       _$DosageCopyWithImpl<$Res>;
@@ -4020,7 +4661,6 @@ abstract class $DosageCopyWith<$Res> {
   $QuantityCopyWith<$Res> get maxDosePerLifetime;
 }
 
-/// @nodoc
 class _$DosageCopyWithImpl<$Res> implements $DosageCopyWith<$Res> {
   _$DosageCopyWithImpl(this._value, this._then);
 
@@ -4226,7 +4866,6 @@ class _$DosageCopyWithImpl<$Res> implements $DosageCopyWith<$Res> {
   }
 }
 
-/// @nodoc
 abstract class _$DosageCopyWith<$Res> implements $DosageCopyWith<$Res> {
   factory _$DosageCopyWith(_Dosage value, $Res Function(_Dosage) then) =
       __$DosageCopyWithImpl<$Res>;
@@ -4280,7 +4919,6 @@ abstract class _$DosageCopyWith<$Res> implements $DosageCopyWith<$Res> {
   $QuantityCopyWith<$Res> get maxDosePerLifetime;
 }
 
-/// @nodoc
 class __$DosageCopyWithImpl<$Res> extends _$DosageCopyWithImpl<$Res>
     implements _$DosageCopyWith<$Res> {
   __$DosageCopyWithImpl(_Dosage _value, $Res Function(_Dosage) _then)
@@ -4367,8 +5005,6 @@ class __$DosageCopyWithImpl<$Res> extends _$DosageCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_Dosage extends _Dosage {
   _$_Dosage(
       {this.id,
@@ -4629,7 +5265,6 @@ DosageDoseAndRate _$DosageDoseAndRateFromJson(Map<String, dynamic> json) {
   return _DosageDoseAndRate.fromJson(json);
 }
 
-/// @nodoc
 class _$DosageDoseAndRateTearOff {
   const _$DosageDoseAndRateTearOff();
 
@@ -4656,18 +5291,11 @@ class _$DosageDoseAndRateTearOff {
       rateQuantity: rateQuantity,
     );
   }
-
-// ignore: unused_element
-  DosageDoseAndRate fromJson(Map<String, Object> json) {
-    return DosageDoseAndRate.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $DosageDoseAndRate = _$DosageDoseAndRateTearOff();
 
-/// @nodoc
 mixin _$DosageDoseAndRate {
   String get id;
   @JsonKey(name: 'extension')
@@ -4684,7 +5312,6 @@ mixin _$DosageDoseAndRate {
   $DosageDoseAndRateCopyWith<DosageDoseAndRate> get copyWith;
 }
 
-/// @nodoc
 abstract class $DosageDoseAndRateCopyWith<$Res> {
   factory $DosageDoseAndRateCopyWith(
           DosageDoseAndRate value, $Res Function(DosageDoseAndRate) then) =
@@ -4708,7 +5335,6 @@ abstract class $DosageDoseAndRateCopyWith<$Res> {
   $QuantityCopyWith<$Res> get rateQuantity;
 }
 
-/// @nodoc
 class _$DosageDoseAndRateCopyWithImpl<$Res>
     implements $DosageDoseAndRateCopyWith<$Res> {
   _$DosageDoseAndRateCopyWithImpl(this._value, this._then);
@@ -4811,7 +5437,6 @@ class _$DosageDoseAndRateCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$DosageDoseAndRateCopyWith<$Res>
     implements $DosageDoseAndRateCopyWith<$Res> {
   factory _$DosageDoseAndRateCopyWith(
@@ -4843,7 +5468,6 @@ abstract class _$DosageDoseAndRateCopyWith<$Res>
   $QuantityCopyWith<$Res> get rateQuantity;
 }
 
-/// @nodoc
 class __$DosageDoseAndRateCopyWithImpl<$Res>
     extends _$DosageDoseAndRateCopyWithImpl<$Res>
     implements _$DosageDoseAndRateCopyWith<$Res> {
@@ -4889,8 +5513,6 @@ class __$DosageDoseAndRateCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_DosageDoseAndRate extends _DosageDoseAndRate {
   _$_DosageDoseAndRate(
       {this.id,
@@ -5029,7 +5651,6 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) {
   return _ElementDefinition.fromJson(json);
 }
 
-/// @nodoc
 class _$ElementDefinitionTearOff {
   const _$ElementDefinitionTearOff();
 
@@ -5746,18 +6367,11 @@ class _$ElementDefinitionTearOff {
       mapping: mapping,
     );
   }
-
-// ignore: unused_element
-  ElementDefinition fromJson(Map<String, Object> json) {
-    return ElementDefinition.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $ElementDefinition = _$ElementDefinitionTearOff();
 
-/// @nodoc
 mixin _$ElementDefinition {
   String get id;
   @JsonKey(name: 'extension')
@@ -6168,7 +6782,6 @@ mixin _$ElementDefinition {
   $ElementDefinitionCopyWith<ElementDefinition> get copyWith;
 }
 
-/// @nodoc
 abstract class $ElementDefinitionCopyWith<$Res> {
   factory $ElementDefinitionCopyWith(
           ElementDefinition value, $Res Function(ElementDefinition) then) =
@@ -6775,7 +7388,6 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $ElementDefinitionBindingCopyWith<$Res> get binding;
 }
 
-/// @nodoc
 class _$ElementDefinitionCopyWithImpl<$Res>
     implements $ElementDefinitionCopyWith<$Res> {
   _$ElementDefinitionCopyWithImpl(this._value, this._then);
@@ -9883,7 +10495,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$ElementDefinitionCopyWith<$Res>
     implements $ElementDefinitionCopyWith<$Res> {
   factory _$ElementDefinitionCopyWith(
@@ -10686,7 +11297,6 @@ abstract class _$ElementDefinitionCopyWith<$Res>
   $ElementDefinitionBindingCopyWith<$Res> get binding;
 }
 
-/// @nodoc
 class __$ElementDefinitionCopyWithImpl<$Res>
     extends _$ElementDefinitionCopyWithImpl<$Res>
     implements _$ElementDefinitionCopyWith<$Res> {
@@ -11839,8 +12449,6 @@ class __$ElementDefinitionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_ElementDefinition extends _ElementDefinition {
   _$_ElementDefinition(
       {this.id,
@@ -14761,7 +15369,6 @@ ElementDefinitionSlicing _$ElementDefinitionSlicingFromJson(
   return _ElementDefinitionSlicing.fromJson(json);
 }
 
-/// @nodoc
 class _$ElementDefinitionSlicingTearOff {
   const _$ElementDefinitionSlicingTearOff();
 
@@ -14795,18 +15402,11 @@ class _$ElementDefinitionSlicingTearOff {
       rulesElement: rulesElement,
     );
   }
-
-// ignore: unused_element
-  ElementDefinitionSlicing fromJson(Map<String, Object> json) {
-    return ElementDefinitionSlicing.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $ElementDefinitionSlicing = _$ElementDefinitionSlicingTearOff();
 
-/// @nodoc
 mixin _$ElementDefinitionSlicing {
   String get id;
   @JsonKey(name: 'extension')
@@ -14828,7 +15428,6 @@ mixin _$ElementDefinitionSlicing {
   $ElementDefinitionSlicingCopyWith<ElementDefinitionSlicing> get copyWith;
 }
 
-/// @nodoc
 abstract class $ElementDefinitionSlicingCopyWith<$Res> {
   factory $ElementDefinitionSlicingCopyWith(ElementDefinitionSlicing value,
           $Res Function(ElementDefinitionSlicing) then) =
@@ -14855,7 +15454,6 @@ abstract class $ElementDefinitionSlicingCopyWith<$Res> {
   $ElementCopyWith<$Res> get rulesElement;
 }
 
-/// @nodoc
 class _$ElementDefinitionSlicingCopyWithImpl<$Res>
     implements $ElementDefinitionSlicingCopyWith<$Res> {
   _$ElementDefinitionSlicingCopyWithImpl(this._value, this._then);
@@ -14937,7 +15535,6 @@ class _$ElementDefinitionSlicingCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$ElementDefinitionSlicingCopyWith<$Res>
     implements $ElementDefinitionSlicingCopyWith<$Res> {
   factory _$ElementDefinitionSlicingCopyWith(_ElementDefinitionSlicing value,
@@ -14969,7 +15566,6 @@ abstract class _$ElementDefinitionSlicingCopyWith<$Res>
   $ElementCopyWith<$Res> get rulesElement;
 }
 
-/// @nodoc
 class __$ElementDefinitionSlicingCopyWithImpl<$Res>
     extends _$ElementDefinitionSlicingCopyWithImpl<$Res>
     implements _$ElementDefinitionSlicingCopyWith<$Res> {
@@ -15025,8 +15621,6 @@ class __$ElementDefinitionSlicingCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
   _$_ElementDefinitionSlicing(
       {this.id,
@@ -15195,7 +15789,6 @@ ElementDefinitionDiscriminator _$ElementDefinitionDiscriminatorFromJson(
   return _ElementDefinitionDiscriminator.fromJson(json);
 }
 
-/// @nodoc
 class _$ElementDefinitionDiscriminatorTearOff {
   const _$ElementDefinitionDiscriminatorTearOff();
 
@@ -15222,19 +15815,12 @@ class _$ElementDefinitionDiscriminatorTearOff {
       pathElement: pathElement,
     );
   }
-
-// ignore: unused_element
-  ElementDefinitionDiscriminator fromJson(Map<String, Object> json) {
-    return ElementDefinitionDiscriminator.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $ElementDefinitionDiscriminator =
     _$ElementDefinitionDiscriminatorTearOff();
 
-/// @nodoc
 mixin _$ElementDefinitionDiscriminator {
   String get id;
   @JsonKey(name: 'extension')
@@ -15253,7 +15839,6 @@ mixin _$ElementDefinitionDiscriminator {
       get copyWith;
 }
 
-/// @nodoc
 abstract class $ElementDefinitionDiscriminatorCopyWith<$Res> {
   factory $ElementDefinitionDiscriminatorCopyWith(
           ElementDefinitionDiscriminator value,
@@ -15276,7 +15861,6 @@ abstract class $ElementDefinitionDiscriminatorCopyWith<$Res> {
   $ElementCopyWith<$Res> get pathElement;
 }
 
-/// @nodoc
 class _$ElementDefinitionDiscriminatorCopyWithImpl<$Res>
     implements $ElementDefinitionDiscriminatorCopyWith<$Res> {
   _$ElementDefinitionDiscriminatorCopyWithImpl(this._value, this._then);
@@ -15335,7 +15919,6 @@ class _$ElementDefinitionDiscriminatorCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$ElementDefinitionDiscriminatorCopyWith<$Res>
     implements $ElementDefinitionDiscriminatorCopyWith<$Res> {
   factory _$ElementDefinitionDiscriminatorCopyWith(
@@ -15362,7 +15945,6 @@ abstract class _$ElementDefinitionDiscriminatorCopyWith<$Res>
   $ElementCopyWith<$Res> get pathElement;
 }
 
-/// @nodoc
 class __$ElementDefinitionDiscriminatorCopyWithImpl<$Res>
     extends _$ElementDefinitionDiscriminatorCopyWithImpl<$Res>
     implements _$ElementDefinitionDiscriminatorCopyWith<$Res> {
@@ -15406,8 +15988,6 @@ class __$ElementDefinitionDiscriminatorCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_ElementDefinitionDiscriminator
     extends _ElementDefinitionDiscriminator {
   _$_ElementDefinitionDiscriminator(
@@ -15545,7 +16125,6 @@ ElementDefinitionBase _$ElementDefinitionBaseFromJson(
   return _ElementDefinitionBase.fromJson(json);
 }
 
-/// @nodoc
 class _$ElementDefinitionBaseTearOff {
   const _$ElementDefinitionBaseTearOff();
 
@@ -15572,18 +16151,11 @@ class _$ElementDefinitionBaseTearOff {
       maxElement: maxElement,
     );
   }
-
-// ignore: unused_element
-  ElementDefinitionBase fromJson(Map<String, Object> json) {
-    return ElementDefinitionBase.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $ElementDefinitionBase = _$ElementDefinitionBaseTearOff();
 
-/// @nodoc
 mixin _$ElementDefinitionBase {
   String get id;
   @JsonKey(name: 'extension')
@@ -15603,7 +16175,6 @@ mixin _$ElementDefinitionBase {
   $ElementDefinitionBaseCopyWith<ElementDefinitionBase> get copyWith;
 }
 
-/// @nodoc
 abstract class $ElementDefinitionBaseCopyWith<$Res> {
   factory $ElementDefinitionBaseCopyWith(ElementDefinitionBase value,
           $Res Function(ElementDefinitionBase) then) =
@@ -15624,7 +16195,6 @@ abstract class $ElementDefinitionBaseCopyWith<$Res> {
   $ElementCopyWith<$Res> get maxElement;
 }
 
-/// @nodoc
 class _$ElementDefinitionBaseCopyWithImpl<$Res>
     implements $ElementDefinitionBaseCopyWith<$Res> {
   _$ElementDefinitionBaseCopyWithImpl(this._value, this._then);
@@ -15696,7 +16266,6 @@ class _$ElementDefinitionBaseCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$ElementDefinitionBaseCopyWith<$Res>
     implements $ElementDefinitionBaseCopyWith<$Res> {
   factory _$ElementDefinitionBaseCopyWith(_ElementDefinitionBase value,
@@ -15722,7 +16291,6 @@ abstract class _$ElementDefinitionBaseCopyWith<$Res>
   $ElementCopyWith<$Res> get maxElement;
 }
 
-/// @nodoc
 class __$ElementDefinitionBaseCopyWithImpl<$Res>
     extends _$ElementDefinitionBaseCopyWithImpl<$Res>
     implements _$ElementDefinitionBaseCopyWith<$Res> {
@@ -15767,8 +16335,6 @@ class __$ElementDefinitionBaseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_ElementDefinitionBase extends _ElementDefinitionBase {
   _$_ElementDefinitionBase(
       {this.id,
@@ -15913,7 +16479,6 @@ ElementDefinitionType _$ElementDefinitionTypeFromJson(
   return _ElementDefinitionType.fromJson(json);
 }
 
-/// @nodoc
 class _$ElementDefinitionTypeTearOff {
   const _$ElementDefinitionTypeTearOff();
 
@@ -15927,8 +16492,6 @@ class _$ElementDefinitionTypeTearOff {
       @JsonKey(name: '_code')
           Element codeElement,
       List<Canonical> profile,
-      @JsonKey(name: '_profile')
-          List<Element> profileElement,
       List<Canonical> targetProfile,
       List<ElementDefinitionTypeAggregation> aggregation,
       @JsonKey(name: '_aggregation')
@@ -15944,7 +16507,6 @@ class _$ElementDefinitionTypeTearOff {
       code: code,
       codeElement: codeElement,
       profile: profile,
-      profileElement: profileElement,
       targetProfile: targetProfile,
       aggregation: aggregation,
       aggregationElement: aggregationElement,
@@ -15952,18 +16514,11 @@ class _$ElementDefinitionTypeTearOff {
       versioningElement: versioningElement,
     );
   }
-
-// ignore: unused_element
-  ElementDefinitionType fromJson(Map<String, Object> json) {
-    return ElementDefinitionType.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $ElementDefinitionType = _$ElementDefinitionTypeTearOff();
 
-/// @nodoc
 mixin _$ElementDefinitionType {
   String get id;
   @JsonKey(name: 'extension')
@@ -15973,8 +16528,6 @@ mixin _$ElementDefinitionType {
   @JsonKey(name: '_code')
   Element get codeElement;
   List<Canonical> get profile;
-  @JsonKey(name: '_profile')
-  List<Element> get profileElement;
   List<Canonical> get targetProfile;
   List<ElementDefinitionTypeAggregation> get aggregation;
   @JsonKey(name: '_aggregation')
@@ -15988,7 +16541,6 @@ mixin _$ElementDefinitionType {
   $ElementDefinitionTypeCopyWith<ElementDefinitionType> get copyWith;
 }
 
-/// @nodoc
 abstract class $ElementDefinitionTypeCopyWith<$Res> {
   factory $ElementDefinitionTypeCopyWith(ElementDefinitionType value,
           $Res Function(ElementDefinitionType) then) =
@@ -16002,8 +16554,6 @@ abstract class $ElementDefinitionTypeCopyWith<$Res> {
       @JsonKey(name: '_code')
           Element codeElement,
       List<Canonical> profile,
-      @JsonKey(name: '_profile')
-          List<Element> profileElement,
       List<Canonical> targetProfile,
       List<ElementDefinitionTypeAggregation> aggregation,
       @JsonKey(name: '_aggregation')
@@ -16017,7 +16567,6 @@ abstract class $ElementDefinitionTypeCopyWith<$Res> {
   $ElementCopyWith<$Res> get versioningElement;
 }
 
-/// @nodoc
 class _$ElementDefinitionTypeCopyWithImpl<$Res>
     implements $ElementDefinitionTypeCopyWith<$Res> {
   _$ElementDefinitionTypeCopyWithImpl(this._value, this._then);
@@ -16034,7 +16583,6 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res>
     Object code = freezed,
     Object codeElement = freezed,
     Object profile = freezed,
-    Object profileElement = freezed,
     Object targetProfile = freezed,
     Object aggregation = freezed,
     Object aggregationElement = freezed,
@@ -16053,9 +16601,6 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res>
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
       profile: profile == freezed ? _value.profile : profile as List<Canonical>,
-      profileElement: profileElement == freezed
-          ? _value.profileElement
-          : profileElement as List<Element>,
       targetProfile: targetProfile == freezed
           ? _value.targetProfile
           : targetProfile as List<Canonical>,
@@ -16095,7 +16640,6 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$ElementDefinitionTypeCopyWith<$Res>
     implements $ElementDefinitionTypeCopyWith<$Res> {
   factory _$ElementDefinitionTypeCopyWith(_ElementDefinitionType value,
@@ -16111,8 +16655,6 @@ abstract class _$ElementDefinitionTypeCopyWith<$Res>
       @JsonKey(name: '_code')
           Element codeElement,
       List<Canonical> profile,
-      @JsonKey(name: '_profile')
-          List<Element> profileElement,
       List<Canonical> targetProfile,
       List<ElementDefinitionTypeAggregation> aggregation,
       @JsonKey(name: '_aggregation')
@@ -16128,7 +16670,6 @@ abstract class _$ElementDefinitionTypeCopyWith<$Res>
   $ElementCopyWith<$Res> get versioningElement;
 }
 
-/// @nodoc
 class __$ElementDefinitionTypeCopyWithImpl<$Res>
     extends _$ElementDefinitionTypeCopyWithImpl<$Res>
     implements _$ElementDefinitionTypeCopyWith<$Res> {
@@ -16147,7 +16688,6 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
     Object code = freezed,
     Object codeElement = freezed,
     Object profile = freezed,
-    Object profileElement = freezed,
     Object targetProfile = freezed,
     Object aggregation = freezed,
     Object aggregationElement = freezed,
@@ -16166,9 +16706,6 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
       profile: profile == freezed ? _value.profile : profile as List<Canonical>,
-      profileElement: profileElement == freezed
-          ? _value.profileElement
-          : profileElement as List<Element>,
       targetProfile: targetProfile == freezed
           ? _value.targetProfile
           : targetProfile as List<Canonical>,
@@ -16189,8 +16726,6 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_ElementDefinitionType extends _ElementDefinitionType {
   _$_ElementDefinitionType(
       {this.id,
@@ -16201,8 +16736,6 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
       @JsonKey(name: '_code')
           this.codeElement,
       this.profile,
-      @JsonKey(name: '_profile')
-          this.profileElement,
       this.targetProfile,
       this.aggregation,
       @JsonKey(name: '_aggregation')
@@ -16231,9 +16764,6 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
   @override
   final List<Canonical> profile;
   @override
-  @JsonKey(name: '_profile')
-  final List<Element> profileElement;
-  @override
   final List<Canonical> targetProfile;
   @override
   final List<ElementDefinitionTypeAggregation> aggregation;
@@ -16249,7 +16779,7 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
 
   @override
   String toString() {
-    return 'ElementDefinitionType(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, codeElement: $codeElement, profile: $profile, profileElement: $profileElement, targetProfile: $targetProfile, aggregation: $aggregation, aggregationElement: $aggregationElement, versioning: $versioning, versioningElement: $versioningElement)';
+    return 'ElementDefinitionType(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, codeElement: $codeElement, profile: $profile, targetProfile: $targetProfile, aggregation: $aggregation, aggregationElement: $aggregationElement, versioning: $versioning, versioningElement: $versioningElement)';
   }
 
   @override
@@ -16272,9 +16802,6 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
             (identical(other.profile, profile) ||
                 const DeepCollectionEquality()
                     .equals(other.profile, profile)) &&
-            (identical(other.profileElement, profileElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.profileElement, profileElement)) &&
             (identical(other.targetProfile, targetProfile) ||
                 const DeepCollectionEquality()
                     .equals(other.targetProfile, targetProfile)) &&
@@ -16301,7 +16828,6 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(codeElement) ^
       const DeepCollectionEquality().hash(profile) ^
-      const DeepCollectionEquality().hash(profileElement) ^
       const DeepCollectionEquality().hash(targetProfile) ^
       const DeepCollectionEquality().hash(aggregation) ^
       const DeepCollectionEquality().hash(aggregationElement) ^
@@ -16330,8 +16856,6 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
       @JsonKey(name: '_code')
           Element codeElement,
       List<Canonical> profile,
-      @JsonKey(name: '_profile')
-          List<Element> profileElement,
       List<Canonical> targetProfile,
       List<ElementDefinitionTypeAggregation> aggregation,
       @JsonKey(name: '_aggregation')
@@ -16359,9 +16883,6 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
   @override
   List<Canonical> get profile;
   @override
-  @JsonKey(name: '_profile')
-  List<Element> get profileElement;
-  @override
   List<Canonical> get targetProfile;
   @override
   List<ElementDefinitionTypeAggregation> get aggregation;
@@ -16383,7 +16904,6 @@ ElementDefinitionExample _$ElementDefinitionExampleFromJson(
   return _ElementDefinitionExample.fromJson(json);
 }
 
-/// @nodoc
 class _$ElementDefinitionExampleTearOff {
   const _$ElementDefinitionExampleTearOff();
 
@@ -16544,18 +17064,11 @@ class _$ElementDefinitionExampleTearOff {
       valueMeta: valueMeta,
     );
   }
-
-// ignore: unused_element
-  ElementDefinitionExample fromJson(Map<String, Object> json) {
-    return ElementDefinitionExample.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $ElementDefinitionExample = _$ElementDefinitionExampleTearOff();
 
-/// @nodoc
 mixin _$ElementDefinitionExample {
   String get id;
   @JsonKey(name: 'extension')
@@ -16660,7 +17173,6 @@ mixin _$ElementDefinitionExample {
   $ElementDefinitionExampleCopyWith<ElementDefinitionExample> get copyWith;
 }
 
-/// @nodoc
 abstract class $ElementDefinitionExampleCopyWith<$Res> {
   factory $ElementDefinitionExampleCopyWith(ElementDefinitionExample value,
           $Res Function(ElementDefinitionExample) then) =
@@ -16797,7 +17309,6 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
   $MetaCopyWith<$Res> get valueMeta;
 }
 
-/// @nodoc
 class _$ElementDefinitionExampleCopyWithImpl<$Res>
     implements $ElementDefinitionExampleCopyWith<$Res> {
   _$ElementDefinitionExampleCopyWithImpl(this._value, this._then);
@@ -17607,7 +18118,6 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$ElementDefinitionExampleCopyWith<$Res>
     implements $ElementDefinitionExampleCopyWith<$Res> {
   factory _$ElementDefinitionExampleCopyWith(_ElementDefinitionExample value,
@@ -17798,7 +18308,6 @@ abstract class _$ElementDefinitionExampleCopyWith<$Res>
   $MetaCopyWith<$Res> get valueMeta;
 }
 
-/// @nodoc
 class __$ElementDefinitionExampleCopyWithImpl<$Res>
     extends _$ElementDefinitionExampleCopyWithImpl<$Res>
     implements _$ElementDefinitionExampleCopyWith<$Res> {
@@ -18090,8 +18599,6 @@ class __$ElementDefinitionExampleCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_ElementDefinitionExample extends _ElementDefinitionExample {
   _$_ElementDefinitionExample(
       {this.id,
@@ -18828,7 +19335,6 @@ ElementDefinitionConstraint _$ElementDefinitionConstraintFromJson(
   return _ElementDefinitionConstraint.fromJson(json);
 }
 
-/// @nodoc
 class _$ElementDefinitionConstraintTearOff {
   const _$ElementDefinitionConstraintTearOff();
 
@@ -18877,18 +19383,11 @@ class _$ElementDefinitionConstraintTearOff {
       source: source,
     );
   }
-
-// ignore: unused_element
-  ElementDefinitionConstraint fromJson(Map<String, Object> json) {
-    return ElementDefinitionConstraint.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $ElementDefinitionConstraint = _$ElementDefinitionConstraintTearOff();
 
-/// @nodoc
 mixin _$ElementDefinitionConstraint {
   String get id;
   @JsonKey(name: 'extension')
@@ -18920,7 +19419,6 @@ mixin _$ElementDefinitionConstraint {
       get copyWith;
 }
 
-/// @nodoc
 abstract class $ElementDefinitionConstraintCopyWith<$Res> {
   factory $ElementDefinitionConstraintCopyWith(
           ElementDefinitionConstraint value,
@@ -18960,7 +19458,6 @@ abstract class $ElementDefinitionConstraintCopyWith<$Res> {
   $ElementCopyWith<$Res> get xpathElement;
 }
 
-/// @nodoc
 class _$ElementDefinitionConstraintCopyWithImpl<$Res>
     implements $ElementDefinitionConstraintCopyWith<$Res> {
   _$ElementDefinitionConstraintCopyWithImpl(this._value, this._then);
@@ -19089,7 +19586,6 @@ class _$ElementDefinitionConstraintCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$ElementDefinitionConstraintCopyWith<$Res>
     implements $ElementDefinitionConstraintCopyWith<$Res> {
   factory _$ElementDefinitionConstraintCopyWith(
@@ -19137,7 +19633,6 @@ abstract class _$ElementDefinitionConstraintCopyWith<$Res>
   $ElementCopyWith<$Res> get xpathElement;
 }
 
-/// @nodoc
 class __$ElementDefinitionConstraintCopyWithImpl<$Res>
     extends _$ElementDefinitionConstraintCopyWithImpl<$Res>
     implements _$ElementDefinitionConstraintCopyWith<$Res> {
@@ -19211,8 +19706,6 @@ class __$ElementDefinitionConstraintCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
   _$_ElementDefinitionConstraint(
       {this.id,
@@ -19452,7 +19945,6 @@ ElementDefinitionBinding _$ElementDefinitionBindingFromJson(
   return _ElementDefinitionBinding.fromJson(json);
 }
 
-/// @nodoc
 class _$ElementDefinitionBindingTearOff {
   const _$ElementDefinitionBindingTearOff();
 
@@ -19481,18 +19973,11 @@ class _$ElementDefinitionBindingTearOff {
       valueSet: valueSet,
     );
   }
-
-// ignore: unused_element
-  ElementDefinitionBinding fromJson(Map<String, Object> json) {
-    return ElementDefinitionBinding.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $ElementDefinitionBinding = _$ElementDefinitionBindingTearOff();
 
-/// @nodoc
 mixin _$ElementDefinitionBinding {
   String get id;
   @JsonKey(name: 'extension')
@@ -19511,7 +19996,6 @@ mixin _$ElementDefinitionBinding {
   $ElementDefinitionBindingCopyWith<ElementDefinitionBinding> get copyWith;
 }
 
-/// @nodoc
 abstract class $ElementDefinitionBindingCopyWith<$Res> {
   factory $ElementDefinitionBindingCopyWith(ElementDefinitionBinding value,
           $Res Function(ElementDefinitionBinding) then) =
@@ -19534,7 +20018,6 @@ abstract class $ElementDefinitionBindingCopyWith<$Res> {
   $ElementCopyWith<$Res> get descriptionElement;
 }
 
-/// @nodoc
 class _$ElementDefinitionBindingCopyWithImpl<$Res>
     implements $ElementDefinitionBindingCopyWith<$Res> {
   _$ElementDefinitionBindingCopyWithImpl(this._value, this._then);
@@ -19598,7 +20081,6 @@ class _$ElementDefinitionBindingCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$ElementDefinitionBindingCopyWith<$Res>
     implements $ElementDefinitionBindingCopyWith<$Res> {
   factory _$ElementDefinitionBindingCopyWith(_ElementDefinitionBinding value,
@@ -19625,7 +20107,6 @@ abstract class _$ElementDefinitionBindingCopyWith<$Res>
   $ElementCopyWith<$Res> get descriptionElement;
 }
 
-/// @nodoc
 class __$ElementDefinitionBindingCopyWithImpl<$Res>
     extends _$ElementDefinitionBindingCopyWithImpl<$Res>
     implements _$ElementDefinitionBindingCopyWith<$Res> {
@@ -19673,8 +20154,6 @@ class __$ElementDefinitionBindingCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
   _$_ElementDefinitionBinding(
       {this.id,
@@ -19820,7 +20299,6 @@ ElementDefinitionMapping _$ElementDefinitionMappingFromJson(
   return _ElementDefinitionMapping.fromJson(json);
 }
 
-/// @nodoc
 class _$ElementDefinitionMappingTearOff {
   const _$ElementDefinitionMappingTearOff();
 
@@ -19851,18 +20329,11 @@ class _$ElementDefinitionMappingTearOff {
       commentElement: commentElement,
     );
   }
-
-// ignore: unused_element
-  ElementDefinitionMapping fromJson(Map<String, Object> json) {
-    return ElementDefinitionMapping.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $ElementDefinitionMapping = _$ElementDefinitionMappingTearOff();
 
-/// @nodoc
 mixin _$ElementDefinitionMapping {
   String get id;
   @JsonKey(name: 'extension')
@@ -19885,7 +20356,6 @@ mixin _$ElementDefinitionMapping {
   $ElementDefinitionMappingCopyWith<ElementDefinitionMapping> get copyWith;
 }
 
-/// @nodoc
 abstract class $ElementDefinitionMappingCopyWith<$Res> {
   factory $ElementDefinitionMappingCopyWith(ElementDefinitionMapping value,
           $Res Function(ElementDefinitionMapping) then) =
@@ -19909,7 +20379,6 @@ abstract class $ElementDefinitionMappingCopyWith<$Res> {
   $ElementCopyWith<$Res> get commentElement;
 }
 
-/// @nodoc
 class _$ElementDefinitionMappingCopyWithImpl<$Res>
     implements $ElementDefinitionMappingCopyWith<$Res> {
   _$ElementDefinitionMappingCopyWithImpl(this._value, this._then);
@@ -19999,7 +20468,6 @@ class _$ElementDefinitionMappingCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$ElementDefinitionMappingCopyWith<$Res>
     implements $ElementDefinitionMappingCopyWith<$Res> {
   factory _$ElementDefinitionMappingCopyWith(_ElementDefinitionMapping value,
@@ -20029,7 +20497,6 @@ abstract class _$ElementDefinitionMappingCopyWith<$Res>
   $ElementCopyWith<$Res> get commentElement;
 }
 
-/// @nodoc
 class __$ElementDefinitionMappingCopyWithImpl<$Res>
     extends _$ElementDefinitionMappingCopyWithImpl<$Res>
     implements _$ElementDefinitionMappingCopyWith<$Res> {
@@ -20083,8 +20550,6 @@ class __$ElementDefinitionMappingCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
   _$_ElementDefinitionMapping(
       {this.id,

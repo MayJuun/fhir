@@ -12,7 +12,6 @@ PaymentNotice _$PaymentNoticeFromJson(Map<String, dynamic> json) {
   return _PaymentNotice.fromJson(json);
 }
 
-/// @nodoc
 class _$PaymentNoticeTearOff {
   const _$PaymentNoticeTearOff();
 
@@ -73,18 +72,11 @@ class _$PaymentNoticeTearOff {
       paymentStatus: paymentStatus,
     );
   }
-
-// ignore: unused_element
-  PaymentNotice fromJson(Map<String, Object> json) {
-    return PaymentNotice.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $PaymentNotice = _$PaymentNoticeTearOff();
 
-/// @nodoc
 mixin _$PaymentNotice {
   @JsonKey(defaultValue: 'PaymentNotice')
   String get resourceType;
@@ -124,7 +116,6 @@ mixin _$PaymentNotice {
   $PaymentNoticeCopyWith<PaymentNotice> get copyWith;
 }
 
-/// @nodoc
 abstract class $PaymentNoticeCopyWith<$Res> {
   factory $PaymentNoticeCopyWith(
           PaymentNotice value, $Res Function(PaymentNotice) then) =
@@ -174,7 +165,6 @@ abstract class $PaymentNoticeCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get paymentStatus;
 }
 
-/// @nodoc
 class _$PaymentNoticeCopyWithImpl<$Res>
     implements $PaymentNoticeCopyWith<$Res> {
   _$PaymentNoticeCopyWithImpl(this._value, this._then);
@@ -418,7 +408,6 @@ class _$PaymentNoticeCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$PaymentNoticeCopyWith<$Res>
     implements $PaymentNoticeCopyWith<$Res> {
   factory _$PaymentNoticeCopyWith(
@@ -485,7 +474,6 @@ abstract class _$PaymentNoticeCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get paymentStatus;
 }
 
-/// @nodoc
 class __$PaymentNoticeCopyWithImpl<$Res>
     extends _$PaymentNoticeCopyWithImpl<$Res>
     implements _$PaymentNoticeCopyWith<$Res> {
@@ -582,8 +570,6 @@ class __$PaymentNoticeCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_PaymentNotice extends _PaymentNotice {
   _$_PaymentNotice(
       {@required @JsonKey(defaultValue: 'PaymentNotice') this.resourceType,
@@ -902,7 +888,6 @@ PaymentReconciliation _$PaymentReconciliationFromJson(
   return _PaymentReconciliation.fromJson(json);
 }
 
-/// @nodoc
 class _$PaymentReconciliationTearOff {
   const _$PaymentReconciliationTearOff();
 
@@ -985,18 +970,11 @@ class _$PaymentReconciliationTearOff {
       processNote: processNote,
     );
   }
-
-// ignore: unused_element
-  PaymentReconciliation fromJson(Map<String, Object> json) {
-    return PaymentReconciliation.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $PaymentReconciliation = _$PaymentReconciliationTearOff();
 
-/// @nodoc
 mixin _$PaymentReconciliation {
   @JsonKey(defaultValue: 'PaymentReconciliation')
   String get resourceType;
@@ -1044,7 +1022,6 @@ mixin _$PaymentReconciliation {
   $PaymentReconciliationCopyWith<PaymentReconciliation> get copyWith;
 }
 
-/// @nodoc
 abstract class $PaymentReconciliationCopyWith<$Res> {
   factory $PaymentReconciliationCopyWith(PaymentReconciliation value,
           $Res Function(PaymentReconciliation) then) =
@@ -1110,7 +1087,6 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get formCode;
 }
 
-/// @nodoc
 class _$PaymentReconciliationCopyWithImpl<$Res>
     implements $PaymentReconciliationCopyWith<$Res> {
   _$PaymentReconciliationCopyWithImpl(this._value, this._then);
@@ -1390,7 +1366,6 @@ class _$PaymentReconciliationCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$PaymentReconciliationCopyWith<$Res>
     implements $PaymentReconciliationCopyWith<$Res> {
   factory _$PaymentReconciliationCopyWith(_PaymentReconciliation value,
@@ -1474,7 +1449,6 @@ abstract class _$PaymentReconciliationCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get formCode;
 }
 
-/// @nodoc
 class __$PaymentReconciliationCopyWithImpl<$Res>
     extends _$PaymentReconciliationCopyWithImpl<$Res>
     implements _$PaymentReconciliationCopyWith<$Res> {
@@ -1597,8 +1571,6 @@ class __$PaymentReconciliationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_PaymentReconciliation extends _PaymentReconciliation {
   _$_PaymentReconciliation(
       {@required
@@ -1987,7 +1959,6 @@ PaymentReconciliationDetail _$PaymentReconciliationDetailFromJson(
   return _PaymentReconciliationDetail.fromJson(json);
 }
 
-/// @nodoc
 class _$PaymentReconciliationDetailTearOff {
   const _$PaymentReconciliationDetailTearOff();
 
@@ -2024,18 +1995,11 @@ class _$PaymentReconciliationDetailTearOff {
       amount: amount,
     );
   }
-
-// ignore: unused_element
-  PaymentReconciliationDetail fromJson(Map<String, Object> json) {
-    return PaymentReconciliationDetail.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $PaymentReconciliationDetail = _$PaymentReconciliationDetailTearOff();
 
-/// @nodoc
 mixin _$PaymentReconciliationDetail {
   String get id;
   @JsonKey(name: 'extension')
@@ -2059,7 +2023,6 @@ mixin _$PaymentReconciliationDetail {
       get copyWith;
 }
 
-/// @nodoc
 abstract class $PaymentReconciliationDetailCopyWith<$Res> {
   factory $PaymentReconciliationDetailCopyWith(
           PaymentReconciliationDetail value,
@@ -2093,7 +2056,6 @@ abstract class $PaymentReconciliationDetailCopyWith<$Res> {
   $MoneyCopyWith<$Res> get amount;
 }
 
-/// @nodoc
 class _$PaymentReconciliationDetailCopyWithImpl<$Res>
     implements $PaymentReconciliationDetailCopyWith<$Res> {
   _$PaymentReconciliationDetailCopyWithImpl(this._value, this._then);
@@ -2249,7 +2211,6 @@ class _$PaymentReconciliationDetailCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$PaymentReconciliationDetailCopyWith<$Res>
     implements $PaymentReconciliationDetailCopyWith<$Res> {
   factory _$PaymentReconciliationDetailCopyWith(
@@ -2295,7 +2256,6 @@ abstract class _$PaymentReconciliationDetailCopyWith<$Res>
   $MoneyCopyWith<$Res> get amount;
 }
 
-/// @nodoc
 class __$PaymentReconciliationDetailCopyWithImpl<$Res>
     extends _$PaymentReconciliationDetailCopyWithImpl<$Res>
     implements _$PaymentReconciliationDetailCopyWith<$Res> {
@@ -2356,8 +2316,6 @@ class __$PaymentReconciliationDetailCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_PaymentReconciliationDetail extends _PaymentReconciliationDetail {
   _$_PaymentReconciliationDetail(
       {this.id,
@@ -2550,7 +2508,6 @@ PaymentReconciliationProcessNote _$PaymentReconciliationProcessNoteFromJson(
   return _PaymentReconciliationProcessNote.fromJson(json);
 }
 
-/// @nodoc
 class _$PaymentReconciliationProcessNoteTearOff {
   const _$PaymentReconciliationProcessNoteTearOff();
 
@@ -2577,19 +2534,12 @@ class _$PaymentReconciliationProcessNoteTearOff {
       textElement: textElement,
     );
   }
-
-// ignore: unused_element
-  PaymentReconciliationProcessNote fromJson(Map<String, Object> json) {
-    return PaymentReconciliationProcessNote.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $PaymentReconciliationProcessNote =
     _$PaymentReconciliationProcessNoteTearOff();
 
-/// @nodoc
 mixin _$PaymentReconciliationProcessNote {
   String get id;
   @JsonKey(name: 'extension')
@@ -2608,7 +2558,6 @@ mixin _$PaymentReconciliationProcessNote {
       get copyWith;
 }
 
-/// @nodoc
 abstract class $PaymentReconciliationProcessNoteCopyWith<$Res> {
   factory $PaymentReconciliationProcessNoteCopyWith(
           PaymentReconciliationProcessNote value,
@@ -2631,7 +2580,6 @@ abstract class $PaymentReconciliationProcessNoteCopyWith<$Res> {
   $ElementCopyWith<$Res> get textElement;
 }
 
-/// @nodoc
 class _$PaymentReconciliationProcessNoteCopyWithImpl<$Res>
     implements $PaymentReconciliationProcessNoteCopyWith<$Res> {
   _$PaymentReconciliationProcessNoteCopyWithImpl(this._value, this._then);
@@ -2690,7 +2638,6 @@ class _$PaymentReconciliationProcessNoteCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$PaymentReconciliationProcessNoteCopyWith<$Res>
     implements $PaymentReconciliationProcessNoteCopyWith<$Res> {
   factory _$PaymentReconciliationProcessNoteCopyWith(
@@ -2717,7 +2664,6 @@ abstract class _$PaymentReconciliationProcessNoteCopyWith<$Res>
   $ElementCopyWith<$Res> get textElement;
 }
 
-/// @nodoc
 class __$PaymentReconciliationProcessNoteCopyWithImpl<$Res>
     extends _$PaymentReconciliationProcessNoteCopyWithImpl<$Res>
     implements _$PaymentReconciliationProcessNoteCopyWith<$Res> {
@@ -2761,8 +2707,6 @@ class __$PaymentReconciliationProcessNoteCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_PaymentReconciliationProcessNote
     extends _PaymentReconciliationProcessNote {
   _$_PaymentReconciliationProcessNote(

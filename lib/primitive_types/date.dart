@@ -7,12 +7,14 @@ class Date extends Dates {
   @override
   final Either<PrimitiveFailure<String>, DateTime> value;
   @override
-  final DateTimeFormat format;
+  final int format;
 
   factory Date(value) {
     assert(value != null);
-    var dateTuple = validateDate(value.toString());
-    return Date._(dateTuple.value1, dateTuple.value2);
+    return Date._(
+      validateDate(value.toString()),
+      value.toString().length,
+    );
   }
 
   Date._(this.value, this.format);

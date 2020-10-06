@@ -149,6 +149,8 @@ abstract class Device with Resource implements _$Device {
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
+    String displayName,
+    @JsonKey(name: '_displayName') Element displayNameElement,
     Reference definition,
     List<DeviceUdiCarrier> udiCarrier,
     @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus status,
@@ -171,11 +173,13 @@ abstract class Device with Resource implements _$Device {
     @JsonKey(name: '_modelNumber') Element modelNumberElement,
     String partNumber,
     @JsonKey(name: '_partNumber') Element partNumberElement,
-    CodeableConcept type,
+    List<CodeableConcept> type,
     List<DeviceSpecialization> specialization,
     List<DeviceVersion> version,
     List<DeviceProperty> property,
     Reference patient,
+    DeviceOperationalStatus operationalStatus,
+    DeviceAssociationStatus associationStatus,
     Reference owner,
     List<ContactPoint> contact,
     Reference location,
@@ -280,6 +284,36 @@ abstract class DeviceProperty implements _$DeviceProperty {
 
   factory DeviceProperty.fromJson(Map<String, dynamic> json) =>
       _$DevicePropertyFromJson(json);
+}
+
+@freezed
+abstract class DeviceOperationalStatus implements _$DeviceOperationalStatus {
+  DeviceOperationalStatus._();
+  factory DeviceOperationalStatus({
+    String id,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
+    CodeableConcept value,
+    List<CodeableConcept> reason,
+  }) = _DeviceOperationalStatus;
+
+  factory DeviceOperationalStatus.fromJson(Map<String, dynamic> json) =>
+      _$DeviceOperationalStatusFromJson(json);
+}
+
+@freezed
+abstract class DeviceAssociationStatus implements _$DeviceAssociationStatus {
+  DeviceAssociationStatus._();
+  factory DeviceAssociationStatus({
+    String id,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
+    CodeableConcept value,
+    List<CodeableConcept> reason,
+  }) = _DeviceAssociationStatus;
+
+  factory DeviceAssociationStatus.fromJson(Map<String, dynamic> json) =>
+      _$DeviceAssociationStatusFromJson(json);
 }
 
 @freezed

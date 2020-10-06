@@ -74,10 +74,10 @@ enum ConceptMapTargetRelationship {
   related_to,
   @JsonValue('equivalent')
   equivalent,
-  @JsonValue('broader')
-  broader,
-  @JsonValue('narrower')
-  narrower,
+  @JsonValue('source-is-narrower-than-target')
+  source_is_narrower_than_target,
+  @JsonValue('source-is-broader-than-target')
+  source_is_broader_than_target,
   @JsonValue('not-related-to')
   not_related_to,
   @JsonValue('unknown')

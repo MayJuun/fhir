@@ -12,7 +12,6 @@ Population _$PopulationFromJson(Map<String, dynamic> json) {
   return _Population.fromJson(json);
 }
 
-/// @nodoc
 class _$PopulationTearOff {
   const _$PopulationTearOff();
 
@@ -37,18 +36,11 @@ class _$PopulationTearOff {
       physiologicalCondition: physiologicalCondition,
     );
   }
-
-// ignore: unused_element
-  Population fromJson(Map<String, Object> json) {
-    return Population.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $Population = _$PopulationTearOff();
 
-/// @nodoc
 mixin _$Population {
   String get id;
   @JsonKey(name: 'extension')
@@ -64,7 +56,6 @@ mixin _$Population {
   $PopulationCopyWith<Population> get copyWith;
 }
 
-/// @nodoc
 abstract class $PopulationCopyWith<$Res> {
   factory $PopulationCopyWith(
           Population value, $Res Function(Population) then) =
@@ -86,7 +77,6 @@ abstract class $PopulationCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get physiologicalCondition;
 }
 
-/// @nodoc
 class _$PopulationCopyWithImpl<$Res> implements $PopulationCopyWith<$Res> {
   _$PopulationCopyWithImpl(this._value, this._then);
 
@@ -177,7 +167,6 @@ class _$PopulationCopyWithImpl<$Res> implements $PopulationCopyWith<$Res> {
   }
 }
 
-/// @nodoc
 abstract class _$PopulationCopyWith<$Res> implements $PopulationCopyWith<$Res> {
   factory _$PopulationCopyWith(
           _Population value, $Res Function(_Population) then) =
@@ -205,7 +194,6 @@ abstract class _$PopulationCopyWith<$Res> implements $PopulationCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get physiologicalCondition;
 }
 
-/// @nodoc
 class __$PopulationCopyWithImpl<$Res> extends _$PopulationCopyWithImpl<$Res>
     implements _$PopulationCopyWith<$Res> {
   __$PopulationCopyWithImpl(
@@ -248,8 +236,6 @@ class __$PopulationCopyWithImpl<$Res> extends _$PopulationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_Population extends _Population {
   _$_Population(
       {this.id,
@@ -377,7 +363,6 @@ ProductShelfLife _$ProductShelfLifeFromJson(Map<String, dynamic> json) {
   return _ProductShelfLife.fromJson(json);
 }
 
-/// @nodoc
 class _$ProductShelfLifeTearOff {
   const _$ProductShelfLifeTearOff();
 
@@ -386,47 +371,43 @@ class _$ProductShelfLifeTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      Identifier identifier,
-      @required CodeableConcept type,
-      @required Quantity period,
+      CodeableConcept type,
+      Quantity periodQuantity,
+      String periodString,
+      @JsonKey(name: '_periodString') Element periodStringElement,
       List<CodeableConcept> specialPrecautionsForStorage}) {
     return _ProductShelfLife(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
-      identifier: identifier,
       type: type,
-      period: period,
+      periodQuantity: periodQuantity,
+      periodString: periodString,
+      periodStringElement: periodStringElement,
       specialPrecautionsForStorage: specialPrecautionsForStorage,
     );
   }
-
-// ignore: unused_element
-  ProductShelfLife fromJson(Map<String, Object> json) {
-    return ProductShelfLife.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $ProductShelfLife = _$ProductShelfLifeTearOff();
 
-/// @nodoc
 mixin _$ProductShelfLife {
   String get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
-  Identifier get identifier;
   CodeableConcept get type;
-  Quantity get period;
+  Quantity get periodQuantity;
+  String get periodString;
+  @JsonKey(name: '_periodString')
+  Element get periodStringElement;
   List<CodeableConcept> get specialPrecautionsForStorage;
 
   Map<String, dynamic> toJson();
   $ProductShelfLifeCopyWith<ProductShelfLife> get copyWith;
 }
 
-/// @nodoc
 abstract class $ProductShelfLifeCopyWith<$Res> {
   factory $ProductShelfLifeCopyWith(
           ProductShelfLife value, $Res Function(ProductShelfLife) then) =
@@ -435,17 +416,17 @@ abstract class $ProductShelfLifeCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      Identifier identifier,
       CodeableConcept type,
-      Quantity period,
+      Quantity periodQuantity,
+      String periodString,
+      @JsonKey(name: '_periodString') Element periodStringElement,
       List<CodeableConcept> specialPrecautionsForStorage});
 
-  $IdentifierCopyWith<$Res> get identifier;
   $CodeableConceptCopyWith<$Res> get type;
-  $QuantityCopyWith<$Res> get period;
+  $QuantityCopyWith<$Res> get periodQuantity;
+  $ElementCopyWith<$Res> get periodStringElement;
 }
 
-/// @nodoc
 class _$ProductShelfLifeCopyWithImpl<$Res>
     implements $ProductShelfLifeCopyWith<$Res> {
   _$ProductShelfLifeCopyWithImpl(this._value, this._then);
@@ -459,9 +440,10 @@ class _$ProductShelfLifeCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object identifier = freezed,
     Object type = freezed,
-    Object period = freezed,
+    Object periodQuantity = freezed,
+    Object periodString = freezed,
+    Object periodStringElement = freezed,
     Object specialPrecautionsForStorage = freezed,
   }) {
     return _then(_value.copyWith(
@@ -472,24 +454,20 @@ class _$ProductShelfLifeCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
       type: type == freezed ? _value.type : type as CodeableConcept,
-      period: period == freezed ? _value.period : period as Quantity,
+      periodQuantity: periodQuantity == freezed
+          ? _value.periodQuantity
+          : periodQuantity as Quantity,
+      periodString: periodString == freezed
+          ? _value.periodString
+          : periodString as String,
+      periodStringElement: periodStringElement == freezed
+          ? _value.periodStringElement
+          : periodStringElement as Element,
       specialPrecautionsForStorage: specialPrecautionsForStorage == freezed
           ? _value.specialPrecautionsForStorage
           : specialPrecautionsForStorage as List<CodeableConcept>,
     ));
-  }
-
-  @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
-    });
   }
 
   @override
@@ -503,17 +481,26 @@ class _$ProductShelfLifeCopyWithImpl<$Res>
   }
 
   @override
-  $QuantityCopyWith<$Res> get period {
-    if (_value.period == null) {
+  $QuantityCopyWith<$Res> get periodQuantity {
+    if (_value.periodQuantity == null) {
       return null;
     }
-    return $QuantityCopyWith<$Res>(_value.period, (value) {
-      return _then(_value.copyWith(period: value));
+    return $QuantityCopyWith<$Res>(_value.periodQuantity, (value) {
+      return _then(_value.copyWith(periodQuantity: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get periodStringElement {
+    if (_value.periodStringElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.periodStringElement, (value) {
+      return _then(_value.copyWith(periodStringElement: value));
     });
   }
 }
 
-/// @nodoc
 abstract class _$ProductShelfLifeCopyWith<$Res>
     implements $ProductShelfLifeCopyWith<$Res> {
   factory _$ProductShelfLifeCopyWith(
@@ -524,20 +511,20 @@ abstract class _$ProductShelfLifeCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      Identifier identifier,
       CodeableConcept type,
-      Quantity period,
+      Quantity periodQuantity,
+      String periodString,
+      @JsonKey(name: '_periodString') Element periodStringElement,
       List<CodeableConcept> specialPrecautionsForStorage});
 
   @override
-  $IdentifierCopyWith<$Res> get identifier;
-  @override
   $CodeableConceptCopyWith<$Res> get type;
   @override
-  $QuantityCopyWith<$Res> get period;
+  $QuantityCopyWith<$Res> get periodQuantity;
+  @override
+  $ElementCopyWith<$Res> get periodStringElement;
 }
 
-/// @nodoc
 class __$ProductShelfLifeCopyWithImpl<$Res>
     extends _$ProductShelfLifeCopyWithImpl<$Res>
     implements _$ProductShelfLifeCopyWith<$Res> {
@@ -553,9 +540,10 @@ class __$ProductShelfLifeCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object identifier = freezed,
     Object type = freezed,
-    Object period = freezed,
+    Object periodQuantity = freezed,
+    Object periodString = freezed,
+    Object periodStringElement = freezed,
     Object specialPrecautionsForStorage = freezed,
   }) {
     return _then(_ProductShelfLife(
@@ -566,10 +554,16 @@ class __$ProductShelfLifeCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
       type: type == freezed ? _value.type : type as CodeableConcept,
-      period: period == freezed ? _value.period : period as Quantity,
+      periodQuantity: periodQuantity == freezed
+          ? _value.periodQuantity
+          : periodQuantity as Quantity,
+      periodString: periodString == freezed
+          ? _value.periodString
+          : periodString as String,
+      periodStringElement: periodStringElement == freezed
+          ? _value.periodStringElement
+          : periodStringElement as Element,
       specialPrecautionsForStorage: specialPrecautionsForStorage == freezed
           ? _value.specialPrecautionsForStorage
           : specialPrecautionsForStorage as List<CodeableConcept>,
@@ -578,20 +572,17 @@ class __$ProductShelfLifeCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_ProductShelfLife extends _ProductShelfLife {
   _$_ProductShelfLife(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      this.identifier,
-      @required this.type,
-      @required this.period,
+      this.type,
+      this.periodQuantity,
+      this.periodString,
+      @JsonKey(name: '_periodString') this.periodStringElement,
       this.specialPrecautionsForStorage})
-      : assert(type != null),
-        assert(period != null),
-        super._();
+      : super._();
 
   factory _$_ProductShelfLife.fromJson(Map<String, dynamic> json) =>
       _$_$_ProductShelfLifeFromJson(json);
@@ -604,17 +595,20 @@ class _$_ProductShelfLife extends _ProductShelfLife {
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  final Identifier identifier;
-  @override
   final CodeableConcept type;
   @override
-  final Quantity period;
+  final Quantity periodQuantity;
+  @override
+  final String periodString;
+  @override
+  @JsonKey(name: '_periodString')
+  final Element periodStringElement;
   @override
   final List<CodeableConcept> specialPrecautionsForStorage;
 
   @override
   String toString() {
-    return 'ProductShelfLife(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, type: $type, period: $period, specialPrecautionsForStorage: $specialPrecautionsForStorage)';
+    return 'ProductShelfLife(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, periodQuantity: $periodQuantity, periodString: $periodString, periodStringElement: $periodStringElement, specialPrecautionsForStorage: $specialPrecautionsForStorage)';
   }
 
   @override
@@ -629,13 +623,17 @@ class _$_ProductShelfLife extends _ProductShelfLife {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.identifier, identifier) ||
-                const DeepCollectionEquality()
-                    .equals(other.identifier, identifier)) &&
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.period, period) ||
-                const DeepCollectionEquality().equals(other.period, period)) &&
+            (identical(other.periodQuantity, periodQuantity) ||
+                const DeepCollectionEquality()
+                    .equals(other.periodQuantity, periodQuantity)) &&
+            (identical(other.periodString, periodString) ||
+                const DeepCollectionEquality()
+                    .equals(other.periodString, periodString)) &&
+            (identical(other.periodStringElement, periodStringElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.periodStringElement, periodStringElement)) &&
             (identical(other.specialPrecautionsForStorage,
                     specialPrecautionsForStorage) ||
                 const DeepCollectionEquality().equals(
@@ -649,9 +647,10 @@ class _$_ProductShelfLife extends _ProductShelfLife {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(period) ^
+      const DeepCollectionEquality().hash(periodQuantity) ^
+      const DeepCollectionEquality().hash(periodString) ^
+      const DeepCollectionEquality().hash(periodStringElement) ^
       const DeepCollectionEquality().hash(specialPrecautionsForStorage);
 
   @override
@@ -670,9 +669,10 @@ abstract class _ProductShelfLife extends ProductShelfLife {
           {String id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
-          Identifier identifier,
-          @required CodeableConcept type,
-          @required Quantity period,
+          CodeableConcept type,
+          Quantity periodQuantity,
+          String periodString,
+          @JsonKey(name: '_periodString') Element periodStringElement,
           List<CodeableConcept> specialPrecautionsForStorage}) =
       _$_ProductShelfLife;
 
@@ -687,11 +687,14 @@ abstract class _ProductShelfLife extends ProductShelfLife {
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  Identifier get identifier;
-  @override
   CodeableConcept get type;
   @override
-  Quantity get period;
+  Quantity get periodQuantity;
+  @override
+  String get periodString;
+  @override
+  @JsonKey(name: '_periodString')
+  Element get periodStringElement;
   @override
   List<CodeableConcept> get specialPrecautionsForStorage;
   @override
@@ -702,7 +705,6 @@ ProdCharacteristic _$ProdCharacteristicFromJson(Map<String, dynamic> json) {
   return _ProdCharacteristic.fromJson(json);
 }
 
-/// @nodoc
 class _$ProdCharacteristicTearOff {
   const _$ProdCharacteristicTearOff();
 
@@ -745,18 +747,11 @@ class _$ProdCharacteristicTearOff {
       scoring: scoring,
     );
   }
-
-// ignore: unused_element
-  ProdCharacteristic fromJson(Map<String, Object> json) {
-    return ProdCharacteristic.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $ProdCharacteristic = _$ProdCharacteristicTearOff();
 
-/// @nodoc
 mixin _$ProdCharacteristic {
   String get id;
   @JsonKey(name: 'extension')
@@ -784,7 +779,6 @@ mixin _$ProdCharacteristic {
   $ProdCharacteristicCopyWith<ProdCharacteristic> get copyWith;
 }
 
-/// @nodoc
 abstract class $ProdCharacteristicCopyWith<$Res> {
   factory $ProdCharacteristicCopyWith(
           ProdCharacteristic value, $Res Function(ProdCharacteristic) then) =
@@ -818,7 +812,6 @@ abstract class $ProdCharacteristicCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get scoring;
 }
 
-/// @nodoc
 class _$ProdCharacteristicCopyWithImpl<$Res>
     implements $ProdCharacteristicCopyWith<$Res> {
   _$ProdCharacteristicCopyWithImpl(this._value, this._then);
@@ -963,7 +956,6 @@ class _$ProdCharacteristicCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$ProdCharacteristicCopyWith<$Res>
     implements $ProdCharacteristicCopyWith<$Res> {
   factory _$ProdCharacteristicCopyWith(
@@ -1007,7 +999,6 @@ abstract class _$ProdCharacteristicCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get scoring;
 }
 
-/// @nodoc
 class __$ProdCharacteristicCopyWithImpl<$Res>
     extends _$ProdCharacteristicCopyWithImpl<$Res>
     implements _$ProdCharacteristicCopyWith<$Res> {
@@ -1075,8 +1066,6 @@ class __$ProdCharacteristicCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_ProdCharacteristic extends _ProdCharacteristic {
   _$_ProdCharacteristic(
       {this.id,
@@ -1294,7 +1283,6 @@ MarketingStatus _$MarketingStatusFromJson(Map<String, dynamic> json) {
   return _MarketingStatus.fromJson(json);
 }
 
-/// @nodoc
 class _$MarketingStatusTearOff {
   const _$MarketingStatusTearOff();
 
@@ -1303,10 +1291,10 @@ class _$MarketingStatusTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @required CodeableConcept country,
+      CodeableConcept country,
       CodeableConcept jurisdiction,
       @required CodeableConcept status,
-      @required Period dateRange,
+      Period dateRange,
       FhirDateTime restoreDate,
       @JsonKey(name: '_restoreDate') Element restoreDateElement}) {
     return _MarketingStatus(
@@ -1321,18 +1309,11 @@ class _$MarketingStatusTearOff {
       restoreDateElement: restoreDateElement,
     );
   }
-
-// ignore: unused_element
-  MarketingStatus fromJson(Map<String, Object> json) {
-    return MarketingStatus.fromJson(json);
-  }
 }
 
-/// @nodoc
 // ignore: unused_element
 const $MarketingStatus = _$MarketingStatusTearOff();
 
-/// @nodoc
 mixin _$MarketingStatus {
   String get id;
   @JsonKey(name: 'extension')
@@ -1350,7 +1331,6 @@ mixin _$MarketingStatus {
   $MarketingStatusCopyWith<MarketingStatus> get copyWith;
 }
 
-/// @nodoc
 abstract class $MarketingStatusCopyWith<$Res> {
   factory $MarketingStatusCopyWith(
           MarketingStatus value, $Res Function(MarketingStatus) then) =
@@ -1373,7 +1353,6 @@ abstract class $MarketingStatusCopyWith<$Res> {
   $ElementCopyWith<$Res> get restoreDateElement;
 }
 
-/// @nodoc
 class _$MarketingStatusCopyWithImpl<$Res>
     implements $MarketingStatusCopyWith<$Res> {
   _$MarketingStatusCopyWithImpl(this._value, this._then);
@@ -1468,7 +1447,6 @@ class _$MarketingStatusCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
 abstract class _$MarketingStatusCopyWith<$Res>
     implements $MarketingStatusCopyWith<$Res> {
   factory _$MarketingStatusCopyWith(
@@ -1498,7 +1476,6 @@ abstract class _$MarketingStatusCopyWith<$Res>
   $ElementCopyWith<$Res> get restoreDateElement;
 }
 
-/// @nodoc
 class __$MarketingStatusCopyWithImpl<$Res>
     extends _$MarketingStatusCopyWithImpl<$Res>
     implements _$MarketingStatusCopyWith<$Res> {
@@ -1546,22 +1523,18 @@ class __$MarketingStatusCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-
-/// @nodoc
 class _$_MarketingStatus extends _MarketingStatus {
   _$_MarketingStatus(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @required this.country,
+      this.country,
       this.jurisdiction,
       @required this.status,
-      @required this.dateRange,
+      this.dateRange,
       this.restoreDate,
       @JsonKey(name: '_restoreDate') this.restoreDateElement})
-      : assert(country != null),
-        assert(status != null),
-        assert(dateRange != null),
+      : assert(status != null),
         super._();
 
   factory _$_MarketingStatus.fromJson(Map<String, dynamic> json) =>
@@ -1653,10 +1626,10 @@ abstract class _MarketingStatus extends MarketingStatus {
           {String id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
-          @required CodeableConcept country,
+          CodeableConcept country,
           CodeableConcept jurisdiction,
           @required CodeableConcept status,
-          @required Period dateRange,
+          Period dateRange,
           FhirDateTime restoreDate,
           @JsonKey(name: '_restoreDate') Element restoreDateElement}) =
       _$_MarketingStatus;
@@ -1686,747 +1659,4 @@ abstract class _MarketingStatus extends MarketingStatus {
   Element get restoreDateElement;
   @override
   _$MarketingStatusCopyWith<_MarketingStatus> get copyWith;
-}
-
-SubstanceAmount _$SubstanceAmountFromJson(Map<String, dynamic> json) {
-  return _SubstanceAmount.fromJson(json);
-}
-
-/// @nodoc
-class _$SubstanceAmountTearOff {
-  const _$SubstanceAmountTearOff();
-
-// ignore: unused_element
-  _SubstanceAmount call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Quantity amountQuantity,
-      Range amountRange,
-      String amountString,
-      @JsonKey(name: '_amountString') Element amountStringElement,
-      CodeableConcept amountType,
-      String amountText,
-      @JsonKey(name: '_amountText') Element amountTextElement,
-      SubstanceAmountReferenceRange referenceRange}) {
-    return _SubstanceAmount(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      amountQuantity: amountQuantity,
-      amountRange: amountRange,
-      amountString: amountString,
-      amountStringElement: amountStringElement,
-      amountType: amountType,
-      amountText: amountText,
-      amountTextElement: amountTextElement,
-      referenceRange: referenceRange,
-    );
-  }
-
-// ignore: unused_element
-  SubstanceAmount fromJson(Map<String, Object> json) {
-    return SubstanceAmount.fromJson(json);
-  }
-}
-
-/// @nodoc
-// ignore: unused_element
-const $SubstanceAmount = _$SubstanceAmountTearOff();
-
-/// @nodoc
-mixin _$SubstanceAmount {
-  String get id;
-  @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  Quantity get amountQuantity;
-  Range get amountRange;
-  String get amountString;
-  @JsonKey(name: '_amountString')
-  Element get amountStringElement;
-  CodeableConcept get amountType;
-  String get amountText;
-  @JsonKey(name: '_amountText')
-  Element get amountTextElement;
-  SubstanceAmountReferenceRange get referenceRange;
-
-  Map<String, dynamic> toJson();
-  $SubstanceAmountCopyWith<SubstanceAmount> get copyWith;
-}
-
-/// @nodoc
-abstract class $SubstanceAmountCopyWith<$Res> {
-  factory $SubstanceAmountCopyWith(
-          SubstanceAmount value, $Res Function(SubstanceAmount) then) =
-      _$SubstanceAmountCopyWithImpl<$Res>;
-  $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Quantity amountQuantity,
-      Range amountRange,
-      String amountString,
-      @JsonKey(name: '_amountString') Element amountStringElement,
-      CodeableConcept amountType,
-      String amountText,
-      @JsonKey(name: '_amountText') Element amountTextElement,
-      SubstanceAmountReferenceRange referenceRange});
-
-  $QuantityCopyWith<$Res> get amountQuantity;
-  $RangeCopyWith<$Res> get amountRange;
-  $ElementCopyWith<$Res> get amountStringElement;
-  $CodeableConceptCopyWith<$Res> get amountType;
-  $ElementCopyWith<$Res> get amountTextElement;
-  $SubstanceAmountReferenceRangeCopyWith<$Res> get referenceRange;
-}
-
-/// @nodoc
-class _$SubstanceAmountCopyWithImpl<$Res>
-    implements $SubstanceAmountCopyWith<$Res> {
-  _$SubstanceAmountCopyWithImpl(this._value, this._then);
-
-  final SubstanceAmount _value;
-  // ignore: unused_field
-  final $Res Function(SubstanceAmount) _then;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object amountQuantity = freezed,
-    Object amountRange = freezed,
-    Object amountString = freezed,
-    Object amountStringElement = freezed,
-    Object amountType = freezed,
-    Object amountText = freezed,
-    Object amountTextElement = freezed,
-    Object referenceRange = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as List<FhirExtension>,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      amountQuantity: amountQuantity == freezed
-          ? _value.amountQuantity
-          : amountQuantity as Quantity,
-      amountRange:
-          amountRange == freezed ? _value.amountRange : amountRange as Range,
-      amountString: amountString == freezed
-          ? _value.amountString
-          : amountString as String,
-      amountStringElement: amountStringElement == freezed
-          ? _value.amountStringElement
-          : amountStringElement as Element,
-      amountType: amountType == freezed
-          ? _value.amountType
-          : amountType as CodeableConcept,
-      amountText:
-          amountText == freezed ? _value.amountText : amountText as String,
-      amountTextElement: amountTextElement == freezed
-          ? _value.amountTextElement
-          : amountTextElement as Element,
-      referenceRange: referenceRange == freezed
-          ? _value.referenceRange
-          : referenceRange as SubstanceAmountReferenceRange,
-    ));
-  }
-
-  @override
-  $QuantityCopyWith<$Res> get amountQuantity {
-    if (_value.amountQuantity == null) {
-      return null;
-    }
-    return $QuantityCopyWith<$Res>(_value.amountQuantity, (value) {
-      return _then(_value.copyWith(amountQuantity: value));
-    });
-  }
-
-  @override
-  $RangeCopyWith<$Res> get amountRange {
-    if (_value.amountRange == null) {
-      return null;
-    }
-    return $RangeCopyWith<$Res>(_value.amountRange, (value) {
-      return _then(_value.copyWith(amountRange: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get amountStringElement {
-    if (_value.amountStringElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.amountStringElement, (value) {
-      return _then(_value.copyWith(amountStringElement: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get amountType {
-    if (_value.amountType == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.amountType, (value) {
-      return _then(_value.copyWith(amountType: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get amountTextElement {
-    if (_value.amountTextElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.amountTextElement, (value) {
-      return _then(_value.copyWith(amountTextElement: value));
-    });
-  }
-
-  @override
-  $SubstanceAmountReferenceRangeCopyWith<$Res> get referenceRange {
-    if (_value.referenceRange == null) {
-      return null;
-    }
-    return $SubstanceAmountReferenceRangeCopyWith<$Res>(_value.referenceRange,
-        (value) {
-      return _then(_value.copyWith(referenceRange: value));
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$SubstanceAmountCopyWith<$Res>
-    implements $SubstanceAmountCopyWith<$Res> {
-  factory _$SubstanceAmountCopyWith(
-          _SubstanceAmount value, $Res Function(_SubstanceAmount) then) =
-      __$SubstanceAmountCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Quantity amountQuantity,
-      Range amountRange,
-      String amountString,
-      @JsonKey(name: '_amountString') Element amountStringElement,
-      CodeableConcept amountType,
-      String amountText,
-      @JsonKey(name: '_amountText') Element amountTextElement,
-      SubstanceAmountReferenceRange referenceRange});
-
-  @override
-  $QuantityCopyWith<$Res> get amountQuantity;
-  @override
-  $RangeCopyWith<$Res> get amountRange;
-  @override
-  $ElementCopyWith<$Res> get amountStringElement;
-  @override
-  $CodeableConceptCopyWith<$Res> get amountType;
-  @override
-  $ElementCopyWith<$Res> get amountTextElement;
-  @override
-  $SubstanceAmountReferenceRangeCopyWith<$Res> get referenceRange;
-}
-
-/// @nodoc
-class __$SubstanceAmountCopyWithImpl<$Res>
-    extends _$SubstanceAmountCopyWithImpl<$Res>
-    implements _$SubstanceAmountCopyWith<$Res> {
-  __$SubstanceAmountCopyWithImpl(
-      _SubstanceAmount _value, $Res Function(_SubstanceAmount) _then)
-      : super(_value, (v) => _then(v as _SubstanceAmount));
-
-  @override
-  _SubstanceAmount get _value => super._value as _SubstanceAmount;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object amountQuantity = freezed,
-    Object amountRange = freezed,
-    Object amountString = freezed,
-    Object amountStringElement = freezed,
-    Object amountType = freezed,
-    Object amountText = freezed,
-    Object amountTextElement = freezed,
-    Object referenceRange = freezed,
-  }) {
-    return _then(_SubstanceAmount(
-      id: id == freezed ? _value.id : id as String,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as List<FhirExtension>,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      amountQuantity: amountQuantity == freezed
-          ? _value.amountQuantity
-          : amountQuantity as Quantity,
-      amountRange:
-          amountRange == freezed ? _value.amountRange : amountRange as Range,
-      amountString: amountString == freezed
-          ? _value.amountString
-          : amountString as String,
-      amountStringElement: amountStringElement == freezed
-          ? _value.amountStringElement
-          : amountStringElement as Element,
-      amountType: amountType == freezed
-          ? _value.amountType
-          : amountType as CodeableConcept,
-      amountText:
-          amountText == freezed ? _value.amountText : amountText as String,
-      amountTextElement: amountTextElement == freezed
-          ? _value.amountTextElement
-          : amountTextElement as Element,
-      referenceRange: referenceRange == freezed
-          ? _value.referenceRange
-          : referenceRange as SubstanceAmountReferenceRange,
-    ));
-  }
-}
-
-@JsonSerializable()
-
-/// @nodoc
-class _$_SubstanceAmount extends _SubstanceAmount {
-  _$_SubstanceAmount(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.amountQuantity,
-      this.amountRange,
-      this.amountString,
-      @JsonKey(name: '_amountString') this.amountStringElement,
-      this.amountType,
-      this.amountText,
-      @JsonKey(name: '_amountText') this.amountTextElement,
-      this.referenceRange})
-      : super._();
-
-  factory _$_SubstanceAmount.fromJson(Map<String, dynamic> json) =>
-      _$_$_SubstanceAmountFromJson(json);
-
-  @override
-  final String id;
-  @override
-  @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
-  @override
-  final List<FhirExtension> modifierExtension;
-  @override
-  final Quantity amountQuantity;
-  @override
-  final Range amountRange;
-  @override
-  final String amountString;
-  @override
-  @JsonKey(name: '_amountString')
-  final Element amountStringElement;
-  @override
-  final CodeableConcept amountType;
-  @override
-  final String amountText;
-  @override
-  @JsonKey(name: '_amountText')
-  final Element amountTextElement;
-  @override
-  final SubstanceAmountReferenceRange referenceRange;
-
-  @override
-  String toString() {
-    return 'SubstanceAmount(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, amountQuantity: $amountQuantity, amountRange: $amountRange, amountString: $amountString, amountStringElement: $amountStringElement, amountType: $amountType, amountText: $amountText, amountTextElement: $amountTextElement, referenceRange: $referenceRange)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is _SubstanceAmount &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.amountQuantity, amountQuantity) ||
-                const DeepCollectionEquality()
-                    .equals(other.amountQuantity, amountQuantity)) &&
-            (identical(other.amountRange, amountRange) ||
-                const DeepCollectionEquality()
-                    .equals(other.amountRange, amountRange)) &&
-            (identical(other.amountString, amountString) ||
-                const DeepCollectionEquality()
-                    .equals(other.amountString, amountString)) &&
-            (identical(other.amountStringElement, amountStringElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.amountStringElement, amountStringElement)) &&
-            (identical(other.amountType, amountType) ||
-                const DeepCollectionEquality()
-                    .equals(other.amountType, amountType)) &&
-            (identical(other.amountText, amountText) ||
-                const DeepCollectionEquality()
-                    .equals(other.amountText, amountText)) &&
-            (identical(other.amountTextElement, amountTextElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.amountTextElement, amountTextElement)) &&
-            (identical(other.referenceRange, referenceRange) ||
-                const DeepCollectionEquality()
-                    .equals(other.referenceRange, referenceRange)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(amountQuantity) ^
-      const DeepCollectionEquality().hash(amountRange) ^
-      const DeepCollectionEquality().hash(amountString) ^
-      const DeepCollectionEquality().hash(amountStringElement) ^
-      const DeepCollectionEquality().hash(amountType) ^
-      const DeepCollectionEquality().hash(amountText) ^
-      const DeepCollectionEquality().hash(amountTextElement) ^
-      const DeepCollectionEquality().hash(referenceRange);
-
-  @override
-  _$SubstanceAmountCopyWith<_SubstanceAmount> get copyWith =>
-      __$SubstanceAmountCopyWithImpl<_SubstanceAmount>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$_$_SubstanceAmountToJson(this);
-  }
-}
-
-abstract class _SubstanceAmount extends SubstanceAmount {
-  _SubstanceAmount._() : super._();
-  factory _SubstanceAmount(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Quantity amountQuantity,
-      Range amountRange,
-      String amountString,
-      @JsonKey(name: '_amountString') Element amountStringElement,
-      CodeableConcept amountType,
-      String amountText,
-      @JsonKey(name: '_amountText') Element amountTextElement,
-      SubstanceAmountReferenceRange referenceRange}) = _$_SubstanceAmount;
-
-  factory _SubstanceAmount.fromJson(Map<String, dynamic> json) =
-      _$_SubstanceAmount.fromJson;
-
-  @override
-  String get id;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  @override
-  List<FhirExtension> get modifierExtension;
-  @override
-  Quantity get amountQuantity;
-  @override
-  Range get amountRange;
-  @override
-  String get amountString;
-  @override
-  @JsonKey(name: '_amountString')
-  Element get amountStringElement;
-  @override
-  CodeableConcept get amountType;
-  @override
-  String get amountText;
-  @override
-  @JsonKey(name: '_amountText')
-  Element get amountTextElement;
-  @override
-  SubstanceAmountReferenceRange get referenceRange;
-  @override
-  _$SubstanceAmountCopyWith<_SubstanceAmount> get copyWith;
-}
-
-SubstanceAmountReferenceRange _$SubstanceAmountReferenceRangeFromJson(
-    Map<String, dynamic> json) {
-  return _SubstanceAmountReferenceRange.fromJson(json);
-}
-
-/// @nodoc
-class _$SubstanceAmountReferenceRangeTearOff {
-  const _$SubstanceAmountReferenceRangeTearOff();
-
-// ignore: unused_element
-  _SubstanceAmountReferenceRange call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Quantity lowLimit,
-      Quantity highLimit}) {
-    return _SubstanceAmountReferenceRange(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      lowLimit: lowLimit,
-      highLimit: highLimit,
-    );
-  }
-
-// ignore: unused_element
-  SubstanceAmountReferenceRange fromJson(Map<String, Object> json) {
-    return SubstanceAmountReferenceRange.fromJson(json);
-  }
-}
-
-/// @nodoc
-// ignore: unused_element
-const $SubstanceAmountReferenceRange = _$SubstanceAmountReferenceRangeTearOff();
-
-/// @nodoc
-mixin _$SubstanceAmountReferenceRange {
-  String get id;
-  @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  Quantity get lowLimit;
-  Quantity get highLimit;
-
-  Map<String, dynamic> toJson();
-  $SubstanceAmountReferenceRangeCopyWith<SubstanceAmountReferenceRange>
-      get copyWith;
-}
-
-/// @nodoc
-abstract class $SubstanceAmountReferenceRangeCopyWith<$Res> {
-  factory $SubstanceAmountReferenceRangeCopyWith(
-          SubstanceAmountReferenceRange value,
-          $Res Function(SubstanceAmountReferenceRange) then) =
-      _$SubstanceAmountReferenceRangeCopyWithImpl<$Res>;
-  $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Quantity lowLimit,
-      Quantity highLimit});
-
-  $QuantityCopyWith<$Res> get lowLimit;
-  $QuantityCopyWith<$Res> get highLimit;
-}
-
-/// @nodoc
-class _$SubstanceAmountReferenceRangeCopyWithImpl<$Res>
-    implements $SubstanceAmountReferenceRangeCopyWith<$Res> {
-  _$SubstanceAmountReferenceRangeCopyWithImpl(this._value, this._then);
-
-  final SubstanceAmountReferenceRange _value;
-  // ignore: unused_field
-  final $Res Function(SubstanceAmountReferenceRange) _then;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object lowLimit = freezed,
-    Object highLimit = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as List<FhirExtension>,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      lowLimit: lowLimit == freezed ? _value.lowLimit : lowLimit as Quantity,
-      highLimit:
-          highLimit == freezed ? _value.highLimit : highLimit as Quantity,
-    ));
-  }
-
-  @override
-  $QuantityCopyWith<$Res> get lowLimit {
-    if (_value.lowLimit == null) {
-      return null;
-    }
-    return $QuantityCopyWith<$Res>(_value.lowLimit, (value) {
-      return _then(_value.copyWith(lowLimit: value));
-    });
-  }
-
-  @override
-  $QuantityCopyWith<$Res> get highLimit {
-    if (_value.highLimit == null) {
-      return null;
-    }
-    return $QuantityCopyWith<$Res>(_value.highLimit, (value) {
-      return _then(_value.copyWith(highLimit: value));
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$SubstanceAmountReferenceRangeCopyWith<$Res>
-    implements $SubstanceAmountReferenceRangeCopyWith<$Res> {
-  factory _$SubstanceAmountReferenceRangeCopyWith(
-          _SubstanceAmountReferenceRange value,
-          $Res Function(_SubstanceAmountReferenceRange) then) =
-      __$SubstanceAmountReferenceRangeCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Quantity lowLimit,
-      Quantity highLimit});
-
-  @override
-  $QuantityCopyWith<$Res> get lowLimit;
-  @override
-  $QuantityCopyWith<$Res> get highLimit;
-}
-
-/// @nodoc
-class __$SubstanceAmountReferenceRangeCopyWithImpl<$Res>
-    extends _$SubstanceAmountReferenceRangeCopyWithImpl<$Res>
-    implements _$SubstanceAmountReferenceRangeCopyWith<$Res> {
-  __$SubstanceAmountReferenceRangeCopyWithImpl(
-      _SubstanceAmountReferenceRange _value,
-      $Res Function(_SubstanceAmountReferenceRange) _then)
-      : super(_value, (v) => _then(v as _SubstanceAmountReferenceRange));
-
-  @override
-  _SubstanceAmountReferenceRange get _value =>
-      super._value as _SubstanceAmountReferenceRange;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object lowLimit = freezed,
-    Object highLimit = freezed,
-  }) {
-    return _then(_SubstanceAmountReferenceRange(
-      id: id == freezed ? _value.id : id as String,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as List<FhirExtension>,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      lowLimit: lowLimit == freezed ? _value.lowLimit : lowLimit as Quantity,
-      highLimit:
-          highLimit == freezed ? _value.highLimit : highLimit as Quantity,
-    ));
-  }
-}
-
-@JsonSerializable()
-
-/// @nodoc
-class _$_SubstanceAmountReferenceRange extends _SubstanceAmountReferenceRange {
-  _$_SubstanceAmountReferenceRange(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.lowLimit,
-      this.highLimit})
-      : super._();
-
-  factory _$_SubstanceAmountReferenceRange.fromJson(
-          Map<String, dynamic> json) =>
-      _$_$_SubstanceAmountReferenceRangeFromJson(json);
-
-  @override
-  final String id;
-  @override
-  @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
-  @override
-  final List<FhirExtension> modifierExtension;
-  @override
-  final Quantity lowLimit;
-  @override
-  final Quantity highLimit;
-
-  @override
-  String toString() {
-    return 'SubstanceAmountReferenceRange(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, lowLimit: $lowLimit, highLimit: $highLimit)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is _SubstanceAmountReferenceRange &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.lowLimit, lowLimit) ||
-                const DeepCollectionEquality()
-                    .equals(other.lowLimit, lowLimit)) &&
-            (identical(other.highLimit, highLimit) ||
-                const DeepCollectionEquality()
-                    .equals(other.highLimit, highLimit)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(lowLimit) ^
-      const DeepCollectionEquality().hash(highLimit);
-
-  @override
-  _$SubstanceAmountReferenceRangeCopyWith<_SubstanceAmountReferenceRange>
-      get copyWith => __$SubstanceAmountReferenceRangeCopyWithImpl<
-          _SubstanceAmountReferenceRange>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$_$_SubstanceAmountReferenceRangeToJson(this);
-  }
-}
-
-abstract class _SubstanceAmountReferenceRange
-    extends SubstanceAmountReferenceRange {
-  _SubstanceAmountReferenceRange._() : super._();
-  factory _SubstanceAmountReferenceRange(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Quantity lowLimit,
-      Quantity highLimit}) = _$_SubstanceAmountReferenceRange;
-
-  factory _SubstanceAmountReferenceRange.fromJson(Map<String, dynamic> json) =
-      _$_SubstanceAmountReferenceRange.fromJson;
-
-  @override
-  String get id;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  @override
-  List<FhirExtension> get modifierExtension;
-  @override
-  Quantity get lowLimit;
-  @override
-  Quantity get highLimit;
-  @override
-  _$SubstanceAmountReferenceRangeCopyWith<_SubstanceAmountReferenceRange>
-      get copyWith;
 }
