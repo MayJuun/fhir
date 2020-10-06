@@ -1,0 +1,67 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "medication-ingredientstrength",
+  "meta": {
+    "lastUpdated": "2019-12-31T21:03:40.621+11:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003ch2\u003eMedication  ingredient  strength  codes\u003c/h2\u003e\u003cdiv\u003e\u003cp\u003eMedication Ingredient Strength Codes\u003c/p\u003e\n\u003c/div\u003e\u003cp\u003eThis code system http://hl7.org/fhir/CodeSystem/medication-ingredientstrength defines the following codes:\u003c/p\u003e\u003ctable class\u003d\"codes\"\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDisplay\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDefinition\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eqs\u003ca name\u003d\"medication-ingredientstrength-qs\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eQS\u003c/td\u003e\u003ctd\u003eAs much as is sufficient.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003etrace\u003ca name\u003d\"medication-ingredientstrength-trace\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eTrace\u003c/td\u003e\u003ctd\u003eVery small amount.\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "phx"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "draft"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "url": "http://hl7.org/fhir/CodeSystem/medication-ingredientstrength",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.1.1427"
+    }
+  ],
+  "version": "4.2.0",
+  "name": "Medication Ingredient Strength Codes",
+  "title": "Medication  ingredient  strength  codes",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "FHIR Project team",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/fhir"
+        }
+      ]
+    }
+  ],
+  "description": "Medication Ingredient Strength Codes",
+  "caseSensitive": true,
+  "valueSet": "http://hl7.org/fhir/ValueSet/medication-ingredientstrength",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "qs",
+      "display": "QS",
+      "definition": "As much as is sufficient."
+    },
+    {
+      "code": "trace",
+      "display": "Trace",
+      "definition": "Very small amount."
+    }
+  ]
+}

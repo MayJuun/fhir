@@ -13,6 +13,7 @@ BiologicallyDerivedProduct _$BiologicallyDerivedProductFromJson(
   return _BiologicallyDerivedProduct.fromJson(json);
 }
 
+/// @nodoc
 class _$BiologicallyDerivedProductTearOff {
   const _$BiologicallyDerivedProductTearOff();
 
@@ -84,11 +85,18 @@ class _$BiologicallyDerivedProductTearOff {
       storage: storage,
     );
   }
+
+// ignore: unused_element
+  BiologicallyDerivedProduct fromJson(Map<String, Object> json) {
+    return BiologicallyDerivedProduct.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $BiologicallyDerivedProduct = _$BiologicallyDerivedProductTearOff();
 
+/// @nodoc
 mixin _$BiologicallyDerivedProduct {
   @JsonKey(defaultValue: 'BiologicallyDerivedProduct')
   String get resourceType;
@@ -129,6 +137,7 @@ mixin _$BiologicallyDerivedProduct {
   $BiologicallyDerivedProductCopyWith<BiologicallyDerivedProduct> get copyWith;
 }
 
+/// @nodoc
 abstract class $BiologicallyDerivedProductCopyWith<$Res> {
   factory $BiologicallyDerivedProductCopyWith(BiologicallyDerivedProduct value,
           $Res Function(BiologicallyDerivedProduct) then) =
@@ -184,6 +193,7 @@ abstract class $BiologicallyDerivedProductCopyWith<$Res> {
   $BiologicallyDerivedProductManipulationCopyWith<$Res> get manipulation;
 }
 
+/// @nodoc
 class _$BiologicallyDerivedProductCopyWithImpl<$Res>
     implements $BiologicallyDerivedProductCopyWith<$Res> {
   _$BiologicallyDerivedProductCopyWithImpl(this._value, this._then);
@@ -387,6 +397,7 @@ class _$BiologicallyDerivedProductCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$BiologicallyDerivedProductCopyWith<$Res>
     implements $BiologicallyDerivedProductCopyWith<$Res> {
   factory _$BiologicallyDerivedProductCopyWith(
@@ -455,6 +466,7 @@ abstract class _$BiologicallyDerivedProductCopyWith<$Res>
   $BiologicallyDerivedProductManipulationCopyWith<$Res> get manipulation;
 }
 
+/// @nodoc
 class __$BiologicallyDerivedProductCopyWithImpl<$Res>
     extends _$BiologicallyDerivedProductCopyWithImpl<$Res>
     implements _$BiologicallyDerivedProductCopyWith<$Res> {
@@ -560,6 +572,8 @@ class __$BiologicallyDerivedProductCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   _$_BiologicallyDerivedProduct(
       {@required
@@ -892,6 +906,7 @@ BiologicallyDerivedProductCollection
   return _BiologicallyDerivedProductCollection.fromJson(json);
 }
 
+/// @nodoc
 class _$BiologicallyDerivedProductCollectionTearOff {
   const _$BiologicallyDerivedProductCollectionTearOff();
 
@@ -916,12 +931,19 @@ class _$BiologicallyDerivedProductCollectionTearOff {
       collectedPeriod: collectedPeriod,
     );
   }
+
+// ignore: unused_element
+  BiologicallyDerivedProductCollection fromJson(Map<String, Object> json) {
+    return BiologicallyDerivedProductCollection.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $BiologicallyDerivedProductCollection =
     _$BiologicallyDerivedProductCollectionTearOff();
 
+/// @nodoc
 mixin _$BiologicallyDerivedProductCollection {
   String get id;
   @JsonKey(name: 'extension')
@@ -939,6 +961,7 @@ mixin _$BiologicallyDerivedProductCollection {
       BiologicallyDerivedProductCollection> get copyWith;
 }
 
+/// @nodoc
 abstract class $BiologicallyDerivedProductCollectionCopyWith<$Res> {
   factory $BiologicallyDerivedProductCollectionCopyWith(
           BiologicallyDerivedProductCollection value,
@@ -960,6 +983,7 @@ abstract class $BiologicallyDerivedProductCollectionCopyWith<$Res> {
   $PeriodCopyWith<$Res> get collectedPeriod;
 }
 
+/// @nodoc
 class _$BiologicallyDerivedProductCollectionCopyWithImpl<$Res>
     implements $BiologicallyDerivedProductCollectionCopyWith<$Res> {
   _$BiologicallyDerivedProductCollectionCopyWithImpl(this._value, this._then);
@@ -1043,6 +1067,7 @@ class _$BiologicallyDerivedProductCollectionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$BiologicallyDerivedProductCollectionCopyWith<$Res>
     implements $BiologicallyDerivedProductCollectionCopyWith<$Res> {
   factory _$BiologicallyDerivedProductCollectionCopyWith(
@@ -1070,6 +1095,7 @@ abstract class _$BiologicallyDerivedProductCollectionCopyWith<$Res>
   $PeriodCopyWith<$Res> get collectedPeriod;
 }
 
+/// @nodoc
 class __$BiologicallyDerivedProductCollectionCopyWithImpl<$Res>
     extends _$BiologicallyDerivedProductCollectionCopyWithImpl<$Res>
     implements _$BiologicallyDerivedProductCollectionCopyWith<$Res> {
@@ -1118,6 +1144,8 @@ class __$BiologicallyDerivedProductCollectionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_BiologicallyDerivedProductCollection
     extends _BiologicallyDerivedProductCollection {
   _$_BiologicallyDerivedProductCollection(
@@ -1258,6 +1286,7 @@ BiologicallyDerivedProductProcessing
   return _BiologicallyDerivedProductProcessing.fromJson(json);
 }
 
+/// @nodoc
 class _$BiologicallyDerivedProductProcessingTearOff {
   const _$BiologicallyDerivedProductProcessingTearOff();
 
@@ -1286,12 +1315,19 @@ class _$BiologicallyDerivedProductProcessingTearOff {
       timePeriod: timePeriod,
     );
   }
+
+// ignore: unused_element
+  BiologicallyDerivedProductProcessing fromJson(Map<String, Object> json) {
+    return BiologicallyDerivedProductProcessing.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $BiologicallyDerivedProductProcessing =
     _$BiologicallyDerivedProductProcessingTearOff();
 
+/// @nodoc
 mixin _$BiologicallyDerivedProductProcessing {
   String get id;
   @JsonKey(name: 'extension')
@@ -1312,6 +1348,7 @@ mixin _$BiologicallyDerivedProductProcessing {
       BiologicallyDerivedProductProcessing> get copyWith;
 }
 
+/// @nodoc
 abstract class $BiologicallyDerivedProductProcessingCopyWith<$Res> {
   factory $BiologicallyDerivedProductProcessingCopyWith(
           BiologicallyDerivedProductProcessing value,
@@ -1336,6 +1373,7 @@ abstract class $BiologicallyDerivedProductProcessingCopyWith<$Res> {
   $PeriodCopyWith<$Res> get timePeriod;
 }
 
+/// @nodoc
 class _$BiologicallyDerivedProductProcessingCopyWithImpl<$Res>
     implements $BiologicallyDerivedProductProcessingCopyWith<$Res> {
   _$BiologicallyDerivedProductProcessingCopyWithImpl(this._value, this._then);
@@ -1436,6 +1474,7 @@ class _$BiologicallyDerivedProductProcessingCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$BiologicallyDerivedProductProcessingCopyWith<$Res>
     implements $BiologicallyDerivedProductProcessingCopyWith<$Res> {
   factory _$BiologicallyDerivedProductProcessingCopyWith(
@@ -1467,6 +1506,7 @@ abstract class _$BiologicallyDerivedProductProcessingCopyWith<$Res>
   $PeriodCopyWith<$Res> get timePeriod;
 }
 
+/// @nodoc
 class __$BiologicallyDerivedProductProcessingCopyWithImpl<$Res>
     extends _$BiologicallyDerivedProductProcessingCopyWithImpl<$Res>
     implements _$BiologicallyDerivedProductProcessingCopyWith<$Res> {
@@ -1522,6 +1562,8 @@ class __$BiologicallyDerivedProductProcessingCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_BiologicallyDerivedProductProcessing
     extends _BiologicallyDerivedProductProcessing {
   _$_BiologicallyDerivedProductProcessing(
@@ -1684,6 +1726,7 @@ BiologicallyDerivedProductManipulation
   return _BiologicallyDerivedProductManipulation.fromJson(json);
 }
 
+/// @nodoc
 class _$BiologicallyDerivedProductManipulationTearOff {
   const _$BiologicallyDerivedProductManipulationTearOff();
 
@@ -1708,12 +1751,19 @@ class _$BiologicallyDerivedProductManipulationTearOff {
       timePeriod: timePeriod,
     );
   }
+
+// ignore: unused_element
+  BiologicallyDerivedProductManipulation fromJson(Map<String, Object> json) {
+    return BiologicallyDerivedProductManipulation.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $BiologicallyDerivedProductManipulation =
     _$BiologicallyDerivedProductManipulationTearOff();
 
+/// @nodoc
 mixin _$BiologicallyDerivedProductManipulation {
   String get id;
   @JsonKey(name: 'extension')
@@ -1732,6 +1782,7 @@ mixin _$BiologicallyDerivedProductManipulation {
       BiologicallyDerivedProductManipulation> get copyWith;
 }
 
+/// @nodoc
 abstract class $BiologicallyDerivedProductManipulationCopyWith<$Res> {
   factory $BiologicallyDerivedProductManipulationCopyWith(
           BiologicallyDerivedProductManipulation value,
@@ -1752,6 +1803,7 @@ abstract class $BiologicallyDerivedProductManipulationCopyWith<$Res> {
   $PeriodCopyWith<$Res> get timePeriod;
 }
 
+/// @nodoc
 class _$BiologicallyDerivedProductManipulationCopyWithImpl<$Res>
     implements $BiologicallyDerivedProductManipulationCopyWith<$Res> {
   _$BiologicallyDerivedProductManipulationCopyWithImpl(this._value, this._then);
@@ -1826,6 +1878,7 @@ class _$BiologicallyDerivedProductManipulationCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$BiologicallyDerivedProductManipulationCopyWith<$Res>
     implements $BiologicallyDerivedProductManipulationCopyWith<$Res> {
   factory _$BiologicallyDerivedProductManipulationCopyWith(
@@ -1851,6 +1904,7 @@ abstract class _$BiologicallyDerivedProductManipulationCopyWith<$Res>
   $PeriodCopyWith<$Res> get timePeriod;
 }
 
+/// @nodoc
 class __$BiologicallyDerivedProductManipulationCopyWithImpl<$Res>
     extends _$BiologicallyDerivedProductManipulationCopyWithImpl<$Res>
     implements _$BiologicallyDerivedProductManipulationCopyWith<$Res> {
@@ -1901,6 +1955,8 @@ class __$BiologicallyDerivedProductManipulationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_BiologicallyDerivedProductManipulation
     extends _BiologicallyDerivedProductManipulation {
   _$_BiologicallyDerivedProductManipulation(
@@ -2042,6 +2098,7 @@ BiologicallyDerivedProductStorage _$BiologicallyDerivedProductStorageFromJson(
   return _BiologicallyDerivedProductStorage.fromJson(json);
 }
 
+/// @nodoc
 class _$BiologicallyDerivedProductStorageTearOff {
   const _$BiologicallyDerivedProductStorageTearOff();
 
@@ -2075,12 +2132,19 @@ class _$BiologicallyDerivedProductStorageTearOff {
       duration: duration,
     );
   }
+
+// ignore: unused_element
+  BiologicallyDerivedProductStorage fromJson(Map<String, Object> json) {
+    return BiologicallyDerivedProductStorage.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $BiologicallyDerivedProductStorage =
     _$BiologicallyDerivedProductStorageTearOff();
 
+/// @nodoc
 mixin _$BiologicallyDerivedProductStorage {
   String get id;
   @JsonKey(name: 'extension')
@@ -2103,6 +2167,7 @@ mixin _$BiologicallyDerivedProductStorage {
       get copyWith;
 }
 
+/// @nodoc
 abstract class $BiologicallyDerivedProductStorageCopyWith<$Res> {
   factory $BiologicallyDerivedProductStorageCopyWith(
           BiologicallyDerivedProductStorage value,
@@ -2131,6 +2196,7 @@ abstract class $BiologicallyDerivedProductStorageCopyWith<$Res> {
   $PeriodCopyWith<$Res> get duration;
 }
 
+/// @nodoc
 class _$BiologicallyDerivedProductStorageCopyWithImpl<$Res>
     implements $BiologicallyDerivedProductStorageCopyWith<$Res> {
   _$BiologicallyDerivedProductStorageCopyWithImpl(this._value, this._then);
@@ -2221,6 +2287,7 @@ class _$BiologicallyDerivedProductStorageCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$BiologicallyDerivedProductStorageCopyWith<$Res>
     implements $BiologicallyDerivedProductStorageCopyWith<$Res> {
   factory _$BiologicallyDerivedProductStorageCopyWith(
@@ -2255,6 +2322,7 @@ abstract class _$BiologicallyDerivedProductStorageCopyWith<$Res>
   $PeriodCopyWith<$Res> get duration;
 }
 
+/// @nodoc
 class __$BiologicallyDerivedProductStorageCopyWithImpl<$Res>
     extends _$BiologicallyDerivedProductStorageCopyWithImpl<$Res>
     implements _$BiologicallyDerivedProductStorageCopyWith<$Res> {
@@ -2310,6 +2378,8 @@ class __$BiologicallyDerivedProductStorageCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_BiologicallyDerivedProductStorage
     extends _BiologicallyDerivedProductStorage {
   _$_BiologicallyDerivedProductStorage(
@@ -2483,6 +2553,7 @@ Device _$DeviceFromJson(Map<String, dynamic> json) {
   return _Device.fromJson(json);
 }
 
+/// @nodoc
 class _$DeviceTearOff {
   const _$DeviceTearOff();
 
@@ -2593,11 +2664,18 @@ class _$DeviceTearOff {
       parent: parent,
     );
   }
+
+// ignore: unused_element
+  Device fromJson(Map<String, Object> json) {
+    return Device.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Device = _$DeviceTearOff();
 
+/// @nodoc
 mixin _$Device {
   @JsonKey(defaultValue: 'Device')
   String get resourceType;
@@ -2671,6 +2749,7 @@ mixin _$Device {
   $DeviceCopyWith<Device> get copyWith;
 }
 
+/// @nodoc
 abstract class $DeviceCopyWith<$Res> {
   factory $DeviceCopyWith(Device value, $Res Function(Device) then) =
       _$DeviceCopyWithImpl<$Res>;
@@ -2751,6 +2830,7 @@ abstract class $DeviceCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get parent;
 }
 
+/// @nodoc
 class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
   _$DeviceCopyWithImpl(this._value, this._then);
 
@@ -3157,6 +3237,7 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
   factory _$DeviceCopyWith(_Device value, $Res Function(_Device) then) =
       __$DeviceCopyWithImpl<$Res>;
@@ -3260,6 +3341,7 @@ abstract class _$DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get parent;
 }
 
+/// @nodoc
 class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
     implements _$DeviceCopyWith<$Res> {
   __$DeviceCopyWithImpl(_Device _value, $Res Function(_Device) _then)
@@ -3446,6 +3528,8 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Device extends _Device {
   _$_Device(
       {@required @JsonKey(defaultValue: 'Device') this.resourceType,
@@ -3976,6 +4060,7 @@ DeviceUdiCarrier _$DeviceUdiCarrierFromJson(Map<String, dynamic> json) {
   return _DeviceUdiCarrier.fromJson(json);
 }
 
+/// @nodoc
 class _$DeviceUdiCarrierTearOff {
   const _$DeviceUdiCarrierTearOff();
 
@@ -4022,11 +4107,18 @@ class _$DeviceUdiCarrierTearOff {
       entryTypeElement: entryTypeElement,
     );
   }
+
+// ignore: unused_element
+  DeviceUdiCarrier fromJson(Map<String, Object> json) {
+    return DeviceUdiCarrier.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $DeviceUdiCarrier = _$DeviceUdiCarrierTearOff();
 
+/// @nodoc
 mixin _$DeviceUdiCarrier {
   String get id;
   @JsonKey(name: 'extension')
@@ -4056,6 +4148,7 @@ mixin _$DeviceUdiCarrier {
   $DeviceUdiCarrierCopyWith<DeviceUdiCarrier> get copyWith;
 }
 
+/// @nodoc
 abstract class $DeviceUdiCarrierCopyWith<$Res> {
   factory $DeviceUdiCarrierCopyWith(
           DeviceUdiCarrier value, $Res Function(DeviceUdiCarrier) then) =
@@ -4093,6 +4186,7 @@ abstract class $DeviceUdiCarrierCopyWith<$Res> {
   $ElementCopyWith<$Res> get entryTypeElement;
 }
 
+/// @nodoc
 class _$DeviceUdiCarrierCopyWithImpl<$Res>
     implements $DeviceUdiCarrierCopyWith<$Res> {
   _$DeviceUdiCarrierCopyWithImpl(this._value, this._then);
@@ -4224,6 +4318,7 @@ class _$DeviceUdiCarrierCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$DeviceUdiCarrierCopyWith<$Res>
     implements $DeviceUdiCarrierCopyWith<$Res> {
   factory _$DeviceUdiCarrierCopyWith(
@@ -4269,6 +4364,7 @@ abstract class _$DeviceUdiCarrierCopyWith<$Res>
   $ElementCopyWith<$Res> get entryTypeElement;
 }
 
+/// @nodoc
 class __$DeviceUdiCarrierCopyWithImpl<$Res>
     extends _$DeviceUdiCarrierCopyWithImpl<$Res>
     implements _$DeviceUdiCarrierCopyWith<$Res> {
@@ -4343,6 +4439,8 @@ class __$DeviceUdiCarrierCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_DeviceUdiCarrier extends _DeviceUdiCarrier {
   _$_DeviceUdiCarrier(
       {this.id,
@@ -4572,6 +4670,7 @@ DeviceDeviceName _$DeviceDeviceNameFromJson(Map<String, dynamic> json) {
   return _DeviceDeviceName.fromJson(json);
 }
 
+/// @nodoc
 class _$DeviceDeviceNameTearOff {
   const _$DeviceDeviceNameTearOff();
 
@@ -4598,11 +4697,18 @@ class _$DeviceDeviceNameTearOff {
       typeElement: typeElement,
     );
   }
+
+// ignore: unused_element
+  DeviceDeviceName fromJson(Map<String, Object> json) {
+    return DeviceDeviceName.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $DeviceDeviceName = _$DeviceDeviceNameTearOff();
 
+/// @nodoc
 mixin _$DeviceDeviceName {
   String get id;
   @JsonKey(name: 'extension')
@@ -4620,6 +4726,7 @@ mixin _$DeviceDeviceName {
   $DeviceDeviceNameCopyWith<DeviceDeviceName> get copyWith;
 }
 
+/// @nodoc
 abstract class $DeviceDeviceNameCopyWith<$Res> {
   factory $DeviceDeviceNameCopyWith(
           DeviceDeviceName value, $Res Function(DeviceDeviceName) then) =
@@ -4641,6 +4748,7 @@ abstract class $DeviceDeviceNameCopyWith<$Res> {
   $ElementCopyWith<$Res> get typeElement;
 }
 
+/// @nodoc
 class _$DeviceDeviceNameCopyWithImpl<$Res>
     implements $DeviceDeviceNameCopyWith<$Res> {
   _$DeviceDeviceNameCopyWithImpl(this._value, this._then);
@@ -4697,6 +4805,7 @@ class _$DeviceDeviceNameCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$DeviceDeviceNameCopyWith<$Res>
     implements $DeviceDeviceNameCopyWith<$Res> {
   factory _$DeviceDeviceNameCopyWith(
@@ -4722,6 +4831,7 @@ abstract class _$DeviceDeviceNameCopyWith<$Res>
   $ElementCopyWith<$Res> get typeElement;
 }
 
+/// @nodoc
 class __$DeviceDeviceNameCopyWithImpl<$Res>
     extends _$DeviceDeviceNameCopyWithImpl<$Res>
     implements _$DeviceDeviceNameCopyWith<$Res> {
@@ -4761,6 +4871,8 @@ class __$DeviceDeviceNameCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_DeviceDeviceName extends _DeviceDeviceName {
   _$_DeviceDeviceName(
       {this.id,
@@ -4888,6 +5000,7 @@ DeviceSpecialization _$DeviceSpecializationFromJson(Map<String, dynamic> json) {
   return _DeviceSpecialization.fromJson(json);
 }
 
+/// @nodoc
 class _$DeviceSpecializationTearOff {
   const _$DeviceSpecializationTearOff();
 
@@ -4908,11 +5021,18 @@ class _$DeviceSpecializationTearOff {
       versionElement: versionElement,
     );
   }
+
+// ignore: unused_element
+  DeviceSpecialization fromJson(Map<String, Object> json) {
+    return DeviceSpecialization.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $DeviceSpecialization = _$DeviceSpecializationTearOff();
 
+/// @nodoc
 mixin _$DeviceSpecialization {
   String get id;
   @JsonKey(name: 'extension')
@@ -4927,6 +5047,7 @@ mixin _$DeviceSpecialization {
   $DeviceSpecializationCopyWith<DeviceSpecialization> get copyWith;
 }
 
+/// @nodoc
 abstract class $DeviceSpecializationCopyWith<$Res> {
   factory $DeviceSpecializationCopyWith(DeviceSpecialization value,
           $Res Function(DeviceSpecialization) then) =
@@ -4943,6 +5064,7 @@ abstract class $DeviceSpecializationCopyWith<$Res> {
   $ElementCopyWith<$Res> get versionElement;
 }
 
+/// @nodoc
 class _$DeviceSpecializationCopyWithImpl<$Res>
     implements $DeviceSpecializationCopyWith<$Res> {
   _$DeviceSpecializationCopyWithImpl(this._value, this._then);
@@ -4999,6 +5121,7 @@ class _$DeviceSpecializationCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$DeviceSpecializationCopyWith<$Res>
     implements $DeviceSpecializationCopyWith<$Res> {
   factory _$DeviceSpecializationCopyWith(_DeviceSpecialization value,
@@ -5019,6 +5142,7 @@ abstract class _$DeviceSpecializationCopyWith<$Res>
   $ElementCopyWith<$Res> get versionElement;
 }
 
+/// @nodoc
 class __$DeviceSpecializationCopyWithImpl<$Res>
     extends _$DeviceSpecializationCopyWithImpl<$Res>
     implements _$DeviceSpecializationCopyWith<$Res> {
@@ -5058,6 +5182,8 @@ class __$DeviceSpecializationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_DeviceSpecialization extends _DeviceSpecialization {
   _$_DeviceSpecialization(
       {this.id,
@@ -5172,6 +5298,7 @@ DeviceVersion _$DeviceVersionFromJson(Map<String, dynamic> json) {
   return _DeviceVersion.fromJson(json);
 }
 
+/// @nodoc
 class _$DeviceVersionTearOff {
   const _$DeviceVersionTearOff();
 
@@ -5194,11 +5321,18 @@ class _$DeviceVersionTearOff {
       valueElement: valueElement,
     );
   }
+
+// ignore: unused_element
+  DeviceVersion fromJson(Map<String, Object> json) {
+    return DeviceVersion.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $DeviceVersion = _$DeviceVersionTearOff();
 
+/// @nodoc
 mixin _$DeviceVersion {
   String get id;
   @JsonKey(name: 'extension')
@@ -5214,6 +5348,7 @@ mixin _$DeviceVersion {
   $DeviceVersionCopyWith<DeviceVersion> get copyWith;
 }
 
+/// @nodoc
 abstract class $DeviceVersionCopyWith<$Res> {
   factory $DeviceVersionCopyWith(
           DeviceVersion value, $Res Function(DeviceVersion) then) =
@@ -5232,6 +5367,7 @@ abstract class $DeviceVersionCopyWith<$Res> {
   $ElementCopyWith<$Res> get valueElement;
 }
 
+/// @nodoc
 class _$DeviceVersionCopyWithImpl<$Res>
     implements $DeviceVersionCopyWith<$Res> {
   _$DeviceVersionCopyWithImpl(this._value, this._then);
@@ -5299,6 +5435,7 @@ class _$DeviceVersionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$DeviceVersionCopyWith<$Res>
     implements $DeviceVersionCopyWith<$Res> {
   factory _$DeviceVersionCopyWith(
@@ -5322,6 +5459,7 @@ abstract class _$DeviceVersionCopyWith<$Res>
   $ElementCopyWith<$Res> get valueElement;
 }
 
+/// @nodoc
 class __$DeviceVersionCopyWithImpl<$Res>
     extends _$DeviceVersionCopyWithImpl<$Res>
     implements _$DeviceVersionCopyWith<$Res> {
@@ -5362,6 +5500,8 @@ class __$DeviceVersionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_DeviceVersion extends _DeviceVersion {
   _$_DeviceVersion(
       {this.id,
@@ -5481,6 +5621,7 @@ DeviceProperty _$DevicePropertyFromJson(Map<String, dynamic> json) {
   return _DeviceProperty.fromJson(json);
 }
 
+/// @nodoc
 class _$DevicePropertyTearOff {
   const _$DevicePropertyTearOff();
 
@@ -5501,11 +5642,18 @@ class _$DevicePropertyTearOff {
       valueCode: valueCode,
     );
   }
+
+// ignore: unused_element
+  DeviceProperty fromJson(Map<String, Object> json) {
+    return DeviceProperty.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $DeviceProperty = _$DevicePropertyTearOff();
 
+/// @nodoc
 mixin _$DeviceProperty {
   String get id;
   @JsonKey(name: 'extension')
@@ -5519,6 +5667,7 @@ mixin _$DeviceProperty {
   $DevicePropertyCopyWith<DeviceProperty> get copyWith;
 }
 
+/// @nodoc
 abstract class $DevicePropertyCopyWith<$Res> {
   factory $DevicePropertyCopyWith(
           DeviceProperty value, $Res Function(DeviceProperty) then) =
@@ -5534,6 +5683,7 @@ abstract class $DevicePropertyCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get type;
 }
 
+/// @nodoc
 class _$DevicePropertyCopyWithImpl<$Res>
     implements $DevicePropertyCopyWith<$Res> {
   _$DevicePropertyCopyWithImpl(this._value, this._then);
@@ -5580,6 +5730,7 @@ class _$DevicePropertyCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$DevicePropertyCopyWith<$Res>
     implements $DevicePropertyCopyWith<$Res> {
   factory _$DevicePropertyCopyWith(
@@ -5598,6 +5749,7 @@ abstract class _$DevicePropertyCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get type;
 }
 
+/// @nodoc
 class __$DevicePropertyCopyWithImpl<$Res>
     extends _$DevicePropertyCopyWithImpl<$Res>
     implements _$DevicePropertyCopyWith<$Res> {
@@ -5637,6 +5789,8 @@ class __$DevicePropertyCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_DeviceProperty extends _DeviceProperty {
   _$_DeviceProperty(
       {this.id,
@@ -5747,6 +5901,7 @@ DeviceOperationalStatus _$DeviceOperationalStatusFromJson(
   return _DeviceOperationalStatus.fromJson(json);
 }
 
+/// @nodoc
 class _$DeviceOperationalStatusTearOff {
   const _$DeviceOperationalStatusTearOff();
 
@@ -5765,11 +5920,18 @@ class _$DeviceOperationalStatusTearOff {
       reason: reason,
     );
   }
+
+// ignore: unused_element
+  DeviceOperationalStatus fromJson(Map<String, Object> json) {
+    return DeviceOperationalStatus.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $DeviceOperationalStatus = _$DeviceOperationalStatusTearOff();
 
+/// @nodoc
 mixin _$DeviceOperationalStatus {
   String get id;
   @JsonKey(name: 'extension')
@@ -5782,6 +5944,7 @@ mixin _$DeviceOperationalStatus {
   $DeviceOperationalStatusCopyWith<DeviceOperationalStatus> get copyWith;
 }
 
+/// @nodoc
 abstract class $DeviceOperationalStatusCopyWith<$Res> {
   factory $DeviceOperationalStatusCopyWith(DeviceOperationalStatus value,
           $Res Function(DeviceOperationalStatus) then) =
@@ -5796,6 +5959,7 @@ abstract class $DeviceOperationalStatusCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get value;
 }
 
+/// @nodoc
 class _$DeviceOperationalStatusCopyWithImpl<$Res>
     implements $DeviceOperationalStatusCopyWith<$Res> {
   _$DeviceOperationalStatusCopyWithImpl(this._value, this._then);
@@ -5837,6 +6001,7 @@ class _$DeviceOperationalStatusCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$DeviceOperationalStatusCopyWith<$Res>
     implements $DeviceOperationalStatusCopyWith<$Res> {
   factory _$DeviceOperationalStatusCopyWith(_DeviceOperationalStatus value,
@@ -5854,6 +6019,7 @@ abstract class _$DeviceOperationalStatusCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get value;
 }
 
+/// @nodoc
 class __$DeviceOperationalStatusCopyWithImpl<$Res>
     extends _$DeviceOperationalStatusCopyWithImpl<$Res>
     implements _$DeviceOperationalStatusCopyWith<$Res> {
@@ -5889,6 +6055,8 @@ class __$DeviceOperationalStatusCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_DeviceOperationalStatus extends _DeviceOperationalStatus {
   _$_DeviceOperationalStatus(
       {this.id,
@@ -5988,6 +6156,7 @@ DeviceAssociationStatus _$DeviceAssociationStatusFromJson(
   return _DeviceAssociationStatus.fromJson(json);
 }
 
+/// @nodoc
 class _$DeviceAssociationStatusTearOff {
   const _$DeviceAssociationStatusTearOff();
 
@@ -6006,11 +6175,18 @@ class _$DeviceAssociationStatusTearOff {
       reason: reason,
     );
   }
+
+// ignore: unused_element
+  DeviceAssociationStatus fromJson(Map<String, Object> json) {
+    return DeviceAssociationStatus.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $DeviceAssociationStatus = _$DeviceAssociationStatusTearOff();
 
+/// @nodoc
 mixin _$DeviceAssociationStatus {
   String get id;
   @JsonKey(name: 'extension')
@@ -6023,6 +6199,7 @@ mixin _$DeviceAssociationStatus {
   $DeviceAssociationStatusCopyWith<DeviceAssociationStatus> get copyWith;
 }
 
+/// @nodoc
 abstract class $DeviceAssociationStatusCopyWith<$Res> {
   factory $DeviceAssociationStatusCopyWith(DeviceAssociationStatus value,
           $Res Function(DeviceAssociationStatus) then) =
@@ -6037,6 +6214,7 @@ abstract class $DeviceAssociationStatusCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get value;
 }
 
+/// @nodoc
 class _$DeviceAssociationStatusCopyWithImpl<$Res>
     implements $DeviceAssociationStatusCopyWith<$Res> {
   _$DeviceAssociationStatusCopyWithImpl(this._value, this._then);
@@ -6078,6 +6256,7 @@ class _$DeviceAssociationStatusCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$DeviceAssociationStatusCopyWith<$Res>
     implements $DeviceAssociationStatusCopyWith<$Res> {
   factory _$DeviceAssociationStatusCopyWith(_DeviceAssociationStatus value,
@@ -6095,6 +6274,7 @@ abstract class _$DeviceAssociationStatusCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get value;
 }
 
+/// @nodoc
 class __$DeviceAssociationStatusCopyWithImpl<$Res>
     extends _$DeviceAssociationStatusCopyWithImpl<$Res>
     implements _$DeviceAssociationStatusCopyWith<$Res> {
@@ -6130,6 +6310,8 @@ class __$DeviceAssociationStatusCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_DeviceAssociationStatus extends _DeviceAssociationStatus {
   _$_DeviceAssociationStatus(
       {this.id,
@@ -6228,6 +6410,7 @@ DeviceMetric _$DeviceMetricFromJson(Map<String, dynamic> json) {
   return _DeviceMetric.fromJson(json);
 }
 
+/// @nodoc
 class _$DeviceMetricTearOff {
   const _$DeviceMetricTearOff();
 
@@ -6296,11 +6479,18 @@ class _$DeviceMetricTearOff {
       calibration: calibration,
     );
   }
+
+// ignore: unused_element
+  DeviceMetric fromJson(Map<String, Object> json) {
+    return DeviceMetric.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $DeviceMetric = _$DeviceMetricTearOff();
 
+/// @nodoc
 mixin _$DeviceMetric {
   @JsonKey(defaultValue: 'DeviceMetric')
   String get resourceType;
@@ -6341,6 +6531,7 @@ mixin _$DeviceMetric {
   $DeviceMetricCopyWith<DeviceMetric> get copyWith;
 }
 
+/// @nodoc
 abstract class $DeviceMetricCopyWith<$Res> {
   factory $DeviceMetricCopyWith(
           DeviceMetric value, $Res Function(DeviceMetric) then) =
@@ -6395,6 +6586,7 @@ abstract class $DeviceMetricCopyWith<$Res> {
   $TimingCopyWith<$Res> get measurementPeriod;
 }
 
+/// @nodoc
 class _$DeviceMetricCopyWithImpl<$Res> implements $DeviceMetricCopyWith<$Res> {
   _$DeviceMetricCopyWithImpl(this._value, this._then);
 
@@ -6607,6 +6799,7 @@ class _$DeviceMetricCopyWithImpl<$Res> implements $DeviceMetricCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$DeviceMetricCopyWith<$Res>
     implements $DeviceMetricCopyWith<$Res> {
   factory _$DeviceMetricCopyWith(
@@ -6675,6 +6868,7 @@ abstract class _$DeviceMetricCopyWith<$Res>
   $TimingCopyWith<$Res> get measurementPeriod;
 }
 
+/// @nodoc
 class __$DeviceMetricCopyWithImpl<$Res> extends _$DeviceMetricCopyWithImpl<$Res>
     implements _$DeviceMetricCopyWith<$Res> {
   __$DeviceMetricCopyWithImpl(
@@ -6770,6 +6964,8 @@ class __$DeviceMetricCopyWithImpl<$Res> extends _$DeviceMetricCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_DeviceMetric extends _DeviceMetric {
   _$_DeviceMetric(
       {@required
@@ -7098,6 +7294,7 @@ DeviceMetricCalibration _$DeviceMetricCalibrationFromJson(
   return _DeviceMetricCalibration.fromJson(json);
 }
 
+/// @nodoc
 class _$DeviceMetricCalibrationTearOff {
   const _$DeviceMetricCalibrationTearOff();
 
@@ -7130,11 +7327,18 @@ class _$DeviceMetricCalibrationTearOff {
       timeElement: timeElement,
     );
   }
+
+// ignore: unused_element
+  DeviceMetricCalibration fromJson(Map<String, Object> json) {
+    return DeviceMetricCalibration.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $DeviceMetricCalibration = _$DeviceMetricCalibrationTearOff();
 
+/// @nodoc
 mixin _$DeviceMetricCalibration {
   String get id;
   @JsonKey(name: 'extension')
@@ -7156,6 +7360,7 @@ mixin _$DeviceMetricCalibration {
   $DeviceMetricCalibrationCopyWith<DeviceMetricCalibration> get copyWith;
 }
 
+/// @nodoc
 abstract class $DeviceMetricCalibrationCopyWith<$Res> {
   factory $DeviceMetricCalibrationCopyWith(DeviceMetricCalibration value,
           $Res Function(DeviceMetricCalibration) then) =
@@ -7182,6 +7387,7 @@ abstract class $DeviceMetricCalibrationCopyWith<$Res> {
   $ElementCopyWith<$Res> get timeElement;
 }
 
+/// @nodoc
 class _$DeviceMetricCalibrationCopyWithImpl<$Res>
     implements $DeviceMetricCalibrationCopyWith<$Res> {
   _$DeviceMetricCalibrationCopyWithImpl(this._value, this._then);
@@ -7256,6 +7462,7 @@ class _$DeviceMetricCalibrationCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$DeviceMetricCalibrationCopyWith<$Res>
     implements $DeviceMetricCalibrationCopyWith<$Res> {
   factory _$DeviceMetricCalibrationCopyWith(_DeviceMetricCalibration value,
@@ -7287,6 +7494,7 @@ abstract class _$DeviceMetricCalibrationCopyWith<$Res>
   $ElementCopyWith<$Res> get timeElement;
 }
 
+/// @nodoc
 class __$DeviceMetricCalibrationCopyWithImpl<$Res>
     extends _$DeviceMetricCalibrationCopyWithImpl<$Res>
     implements _$DeviceMetricCalibrationCopyWith<$Res> {
@@ -7335,6 +7543,8 @@ class __$DeviceMetricCalibrationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
   _$_DeviceMetricCalibration(
       {this.id,
@@ -7494,6 +7704,7 @@ Substance _$SubstanceFromJson(Map<String, dynamic> json) {
   return _Substance.fromJson(json);
 }
 
+/// @nodoc
 class _$SubstanceTearOff {
   const _$SubstanceTearOff();
 
@@ -7551,11 +7762,18 @@ class _$SubstanceTearOff {
       ingredient: ingredient,
     );
   }
+
+// ignore: unused_element
+  Substance fromJson(Map<String, Object> json) {
+    return Substance.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Substance = _$SubstanceTearOff();
 
+/// @nodoc
 mixin _$Substance {
   @JsonKey(defaultValue: 'Substance')
   String get resourceType;
@@ -7589,6 +7807,7 @@ mixin _$Substance {
   $SubstanceCopyWith<Substance> get copyWith;
 }
 
+/// @nodoc
 abstract class $SubstanceCopyWith<$Res> {
   factory $SubstanceCopyWith(Substance value, $Res Function(Substance) then) =
       _$SubstanceCopyWithImpl<$Res>;
@@ -7630,6 +7849,7 @@ abstract class $SubstanceCopyWith<$Res> {
   $ElementCopyWith<$Res> get descriptionElement;
 }
 
+/// @nodoc
 class _$SubstanceCopyWithImpl<$Res> implements $SubstanceCopyWith<$Res> {
   _$SubstanceCopyWithImpl(this._value, this._then);
 
@@ -7781,6 +8001,7 @@ class _$SubstanceCopyWithImpl<$Res> implements $SubstanceCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$SubstanceCopyWith<$Res> implements $SubstanceCopyWith<$Res> {
   factory _$SubstanceCopyWith(
           _Substance value, $Res Function(_Substance) then) =
@@ -7831,6 +8052,7 @@ abstract class _$SubstanceCopyWith<$Res> implements $SubstanceCopyWith<$Res> {
   $ElementCopyWith<$Res> get descriptionElement;
 }
 
+/// @nodoc
 class __$SubstanceCopyWithImpl<$Res> extends _$SubstanceCopyWithImpl<$Res>
     implements _$SubstanceCopyWith<$Res> {
   __$SubstanceCopyWithImpl(_Substance _value, $Res Function(_Substance) _then)
@@ -7914,6 +8136,8 @@ class __$SubstanceCopyWithImpl<$Res> extends _$SubstanceCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Substance extends _Substance {
   _$_Substance(
       {@required @JsonKey(defaultValue: 'Substance') this.resourceType,
@@ -8182,6 +8406,7 @@ SubstanceInstance _$SubstanceInstanceFromJson(Map<String, dynamic> json) {
   return _SubstanceInstance.fromJson(json);
 }
 
+/// @nodoc
 class _$SubstanceInstanceTearOff {
   const _$SubstanceInstanceTearOff();
 
@@ -8204,11 +8429,18 @@ class _$SubstanceInstanceTearOff {
       quantity: quantity,
     );
   }
+
+// ignore: unused_element
+  SubstanceInstance fromJson(Map<String, Object> json) {
+    return SubstanceInstance.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $SubstanceInstance = _$SubstanceInstanceTearOff();
 
+/// @nodoc
 mixin _$SubstanceInstance {
   String get id;
   @JsonKey(name: 'extension')
@@ -8224,6 +8456,7 @@ mixin _$SubstanceInstance {
   $SubstanceInstanceCopyWith<SubstanceInstance> get copyWith;
 }
 
+/// @nodoc
 abstract class $SubstanceInstanceCopyWith<$Res> {
   factory $SubstanceInstanceCopyWith(
           SubstanceInstance value, $Res Function(SubstanceInstance) then) =
@@ -8242,6 +8475,7 @@ abstract class $SubstanceInstanceCopyWith<$Res> {
   $QuantityCopyWith<$Res> get quantity;
 }
 
+/// @nodoc
 class _$SubstanceInstanceCopyWithImpl<$Res>
     implements $SubstanceInstanceCopyWith<$Res> {
   _$SubstanceInstanceCopyWithImpl(this._value, this._then);
@@ -8309,6 +8543,7 @@ class _$SubstanceInstanceCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$SubstanceInstanceCopyWith<$Res>
     implements $SubstanceInstanceCopyWith<$Res> {
   factory _$SubstanceInstanceCopyWith(
@@ -8332,6 +8567,7 @@ abstract class _$SubstanceInstanceCopyWith<$Res>
   $QuantityCopyWith<$Res> get quantity;
 }
 
+/// @nodoc
 class __$SubstanceInstanceCopyWithImpl<$Res>
     extends _$SubstanceInstanceCopyWithImpl<$Res>
     implements _$SubstanceInstanceCopyWith<$Res> {
@@ -8372,6 +8608,8 @@ class __$SubstanceInstanceCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_SubstanceInstance extends _SubstanceInstance {
   _$_SubstanceInstance(
       {this.id,
@@ -8492,6 +8730,7 @@ SubstanceIngredient _$SubstanceIngredientFromJson(Map<String, dynamic> json) {
   return _SubstanceIngredient.fromJson(json);
 }
 
+/// @nodoc
 class _$SubstanceIngredientTearOff {
   const _$SubstanceIngredientTearOff();
 
@@ -8512,11 +8751,18 @@ class _$SubstanceIngredientTearOff {
       substanceReference: substanceReference,
     );
   }
+
+// ignore: unused_element
+  SubstanceIngredient fromJson(Map<String, Object> json) {
+    return SubstanceIngredient.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $SubstanceIngredient = _$SubstanceIngredientTearOff();
 
+/// @nodoc
 mixin _$SubstanceIngredient {
   String get id;
   @JsonKey(name: 'extension')
@@ -8530,6 +8776,7 @@ mixin _$SubstanceIngredient {
   $SubstanceIngredientCopyWith<SubstanceIngredient> get copyWith;
 }
 
+/// @nodoc
 abstract class $SubstanceIngredientCopyWith<$Res> {
   factory $SubstanceIngredientCopyWith(
           SubstanceIngredient value, $Res Function(SubstanceIngredient) then) =
@@ -8547,6 +8794,7 @@ abstract class $SubstanceIngredientCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get substanceReference;
 }
 
+/// @nodoc
 class _$SubstanceIngredientCopyWithImpl<$Res>
     implements $SubstanceIngredientCopyWith<$Res> {
   _$SubstanceIngredientCopyWithImpl(this._value, this._then);
@@ -8614,6 +8862,7 @@ class _$SubstanceIngredientCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$SubstanceIngredientCopyWith<$Res>
     implements $SubstanceIngredientCopyWith<$Res> {
   factory _$SubstanceIngredientCopyWith(_SubstanceIngredient value,
@@ -8636,6 +8885,7 @@ abstract class _$SubstanceIngredientCopyWith<$Res>
   $ReferenceCopyWith<$Res> get substanceReference;
 }
 
+/// @nodoc
 class __$SubstanceIngredientCopyWithImpl<$Res>
     extends _$SubstanceIngredientCopyWithImpl<$Res>
     implements _$SubstanceIngredientCopyWith<$Res> {
@@ -8675,6 +8925,8 @@ class __$SubstanceIngredientCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_SubstanceIngredient extends _SubstanceIngredient {
   _$_SubstanceIngredient(
       {this.id,

@@ -12,6 +12,7 @@ Measure _$MeasureFromJson(Map<String, dynamic> json) {
   return _Measure.fromJson(json);
 }
 
+/// @nodoc
 class _$MeasureTearOff {
   const _$MeasureTearOff();
 
@@ -200,11 +201,18 @@ class _$MeasureTearOff {
       supplementalData: supplementalData,
     );
   }
+
+// ignore: unused_element
+  Measure fromJson(Map<String, Object> json) {
+    return Measure.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Measure = _$MeasureTearOff();
 
+/// @nodoc
 mixin _$Measure {
   @JsonKey(defaultValue: 'Measure')
   String get resourceType;
@@ -314,6 +322,7 @@ mixin _$Measure {
   $MeasureCopyWith<Measure> get copyWith;
 }
 
+/// @nodoc
 abstract class $MeasureCopyWith<$Res> {
   factory $MeasureCopyWith(Measure value, $Res Function(Measure) then) =
       _$MeasureCopyWithImpl<$Res>;
@@ -455,6 +464,7 @@ abstract class $MeasureCopyWith<$Res> {
   $ElementCopyWith<$Res> get guidanceElement;
 }
 
+/// @nodoc
 class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
   _$MeasureCopyWithImpl(this._value, this._then);
 
@@ -1032,6 +1042,7 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
   factory _$MeasureCopyWith(_Measure value, $Res Function(_Measure) then) =
       __$MeasureCopyWithImpl<$Res>;
@@ -1205,6 +1216,7 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
   $ElementCopyWith<$Res> get guidanceElement;
 }
 
+/// @nodoc
 class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
     implements _$MeasureCopyWith<$Res> {
   __$MeasureCopyWithImpl(_Measure _value, $Res Function(_Measure) _then)
@@ -1471,6 +1483,8 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Measure extends _Measure {
   _$_Measure(
       {@required
@@ -2277,6 +2291,7 @@ MeasureGroup _$MeasureGroupFromJson(Map<String, dynamic> json) {
   return _MeasureGroup.fromJson(json);
 }
 
+/// @nodoc
 class _$MeasureGroupTearOff {
   const _$MeasureGroupTearOff();
 
@@ -2301,11 +2316,18 @@ class _$MeasureGroupTearOff {
       stratifier: stratifier,
     );
   }
+
+// ignore: unused_element
+  MeasureGroup fromJson(Map<String, Object> json) {
+    return MeasureGroup.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MeasureGroup = _$MeasureGroupTearOff();
 
+/// @nodoc
 mixin _$MeasureGroup {
   String get id;
   @JsonKey(name: 'extension')
@@ -2322,6 +2344,7 @@ mixin _$MeasureGroup {
   $MeasureGroupCopyWith<MeasureGroup> get copyWith;
 }
 
+/// @nodoc
 abstract class $MeasureGroupCopyWith<$Res> {
   factory $MeasureGroupCopyWith(
           MeasureGroup value, $Res Function(MeasureGroup) then) =
@@ -2340,6 +2363,7 @@ abstract class $MeasureGroupCopyWith<$Res> {
   $ElementCopyWith<$Res> get descriptionElement;
 }
 
+/// @nodoc
 class _$MeasureGroupCopyWithImpl<$Res> implements $MeasureGroupCopyWith<$Res> {
   _$MeasureGroupCopyWithImpl(this._value, this._then);
 
@@ -2402,6 +2426,7 @@ class _$MeasureGroupCopyWithImpl<$Res> implements $MeasureGroupCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$MeasureGroupCopyWith<$Res>
     implements $MeasureGroupCopyWith<$Res> {
   factory _$MeasureGroupCopyWith(
@@ -2424,6 +2449,7 @@ abstract class _$MeasureGroupCopyWith<$Res>
   $ElementCopyWith<$Res> get descriptionElement;
 }
 
+/// @nodoc
 class __$MeasureGroupCopyWithImpl<$Res> extends _$MeasureGroupCopyWithImpl<$Res>
     implements _$MeasureGroupCopyWith<$Res> {
   __$MeasureGroupCopyWithImpl(
@@ -2469,6 +2495,8 @@ class __$MeasureGroupCopyWithImpl<$Res> extends _$MeasureGroupCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MeasureGroup extends _MeasureGroup {
   _$_MeasureGroup(
       {this.id,
@@ -2599,6 +2627,7 @@ MeasurePopulation _$MeasurePopulationFromJson(Map<String, dynamic> json) {
   return _MeasurePopulation.fromJson(json);
 }
 
+/// @nodoc
 class _$MeasurePopulationTearOff {
   const _$MeasurePopulationTearOff();
 
@@ -2621,11 +2650,18 @@ class _$MeasurePopulationTearOff {
       criteria: criteria,
     );
   }
+
+// ignore: unused_element
+  MeasurePopulation fromJson(Map<String, Object> json) {
+    return MeasurePopulation.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MeasurePopulation = _$MeasurePopulationTearOff();
 
+/// @nodoc
 mixin _$MeasurePopulation {
   String get id;
   @JsonKey(name: 'extension')
@@ -2641,6 +2677,7 @@ mixin _$MeasurePopulation {
   $MeasurePopulationCopyWith<MeasurePopulation> get copyWith;
 }
 
+/// @nodoc
 abstract class $MeasurePopulationCopyWith<$Res> {
   factory $MeasurePopulationCopyWith(
           MeasurePopulation value, $Res Function(MeasurePopulation) then) =
@@ -2659,6 +2696,7 @@ abstract class $MeasurePopulationCopyWith<$Res> {
   $ExpressionCopyWith<$Res> get criteria;
 }
 
+/// @nodoc
 class _$MeasurePopulationCopyWithImpl<$Res>
     implements $MeasurePopulationCopyWith<$Res> {
   _$MeasurePopulationCopyWithImpl(this._value, this._then);
@@ -2726,6 +2764,7 @@ class _$MeasurePopulationCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MeasurePopulationCopyWith<$Res>
     implements $MeasurePopulationCopyWith<$Res> {
   factory _$MeasurePopulationCopyWith(
@@ -2749,6 +2788,7 @@ abstract class _$MeasurePopulationCopyWith<$Res>
   $ExpressionCopyWith<$Res> get criteria;
 }
 
+/// @nodoc
 class __$MeasurePopulationCopyWithImpl<$Res>
     extends _$MeasurePopulationCopyWithImpl<$Res>
     implements _$MeasurePopulationCopyWith<$Res> {
@@ -2789,6 +2829,8 @@ class __$MeasurePopulationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MeasurePopulation extends _MeasurePopulation {
   _$_MeasurePopulation(
       {this.id,
@@ -2910,6 +2952,7 @@ MeasureStratifier _$MeasureStratifierFromJson(Map<String, dynamic> json) {
   return _MeasureStratifier.fromJson(json);
 }
 
+/// @nodoc
 class _$MeasureStratifierTearOff {
   const _$MeasureStratifierTearOff();
 
@@ -2934,11 +2977,18 @@ class _$MeasureStratifierTearOff {
       component: component,
     );
   }
+
+// ignore: unused_element
+  MeasureStratifier fromJson(Map<String, Object> json) {
+    return MeasureStratifier.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MeasureStratifier = _$MeasureStratifierTearOff();
 
+/// @nodoc
 mixin _$MeasureStratifier {
   String get id;
   @JsonKey(name: 'extension')
@@ -2955,6 +3005,7 @@ mixin _$MeasureStratifier {
   $MeasureStratifierCopyWith<MeasureStratifier> get copyWith;
 }
 
+/// @nodoc
 abstract class $MeasureStratifierCopyWith<$Res> {
   factory $MeasureStratifierCopyWith(
           MeasureStratifier value, $Res Function(MeasureStratifier) then) =
@@ -2974,6 +3025,7 @@ abstract class $MeasureStratifierCopyWith<$Res> {
   $ExpressionCopyWith<$Res> get criteria;
 }
 
+/// @nodoc
 class _$MeasureStratifierCopyWithImpl<$Res>
     implements $MeasureStratifierCopyWith<$Res> {
   _$MeasureStratifierCopyWithImpl(this._value, this._then);
@@ -3045,6 +3097,7 @@ class _$MeasureStratifierCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MeasureStratifierCopyWith<$Res>
     implements $MeasureStratifierCopyWith<$Res> {
   factory _$MeasureStratifierCopyWith(
@@ -3069,6 +3122,7 @@ abstract class _$MeasureStratifierCopyWith<$Res>
   $ExpressionCopyWith<$Res> get criteria;
 }
 
+/// @nodoc
 class __$MeasureStratifierCopyWithImpl<$Res>
     extends _$MeasureStratifierCopyWithImpl<$Res>
     implements _$MeasureStratifierCopyWith<$Res> {
@@ -3113,6 +3167,8 @@ class __$MeasureStratifierCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MeasureStratifier extends _MeasureStratifier {
   _$_MeasureStratifier(
       {this.id,
@@ -3243,6 +3299,7 @@ MeasureComponent _$MeasureComponentFromJson(Map<String, dynamic> json) {
   return _MeasureComponent.fromJson(json);
 }
 
+/// @nodoc
 class _$MeasureComponentTearOff {
   const _$MeasureComponentTearOff();
 
@@ -3265,11 +3322,18 @@ class _$MeasureComponentTearOff {
       criteria: criteria,
     );
   }
+
+// ignore: unused_element
+  MeasureComponent fromJson(Map<String, Object> json) {
+    return MeasureComponent.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MeasureComponent = _$MeasureComponentTearOff();
 
+/// @nodoc
 mixin _$MeasureComponent {
   String get id;
   @JsonKey(name: 'extension')
@@ -3285,6 +3349,7 @@ mixin _$MeasureComponent {
   $MeasureComponentCopyWith<MeasureComponent> get copyWith;
 }
 
+/// @nodoc
 abstract class $MeasureComponentCopyWith<$Res> {
   factory $MeasureComponentCopyWith(
           MeasureComponent value, $Res Function(MeasureComponent) then) =
@@ -3303,6 +3368,7 @@ abstract class $MeasureComponentCopyWith<$Res> {
   $ExpressionCopyWith<$Res> get criteria;
 }
 
+/// @nodoc
 class _$MeasureComponentCopyWithImpl<$Res>
     implements $MeasureComponentCopyWith<$Res> {
   _$MeasureComponentCopyWithImpl(this._value, this._then);
@@ -3370,6 +3436,7 @@ class _$MeasureComponentCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MeasureComponentCopyWith<$Res>
     implements $MeasureComponentCopyWith<$Res> {
   factory _$MeasureComponentCopyWith(
@@ -3393,6 +3460,7 @@ abstract class _$MeasureComponentCopyWith<$Res>
   $ExpressionCopyWith<$Res> get criteria;
 }
 
+/// @nodoc
 class __$MeasureComponentCopyWithImpl<$Res>
     extends _$MeasureComponentCopyWithImpl<$Res>
     implements _$MeasureComponentCopyWith<$Res> {
@@ -3433,6 +3501,8 @@ class __$MeasureComponentCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MeasureComponent extends _MeasureComponent {
   _$_MeasureComponent(
       {this.id,
@@ -3555,6 +3625,7 @@ MeasureSupplementalData _$MeasureSupplementalDataFromJson(
   return _MeasureSupplementalData.fromJson(json);
 }
 
+/// @nodoc
 class _$MeasureSupplementalDataTearOff {
   const _$MeasureSupplementalDataTearOff();
 
@@ -3579,11 +3650,18 @@ class _$MeasureSupplementalDataTearOff {
       criteria: criteria,
     );
   }
+
+// ignore: unused_element
+  MeasureSupplementalData fromJson(Map<String, Object> json) {
+    return MeasureSupplementalData.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MeasureSupplementalData = _$MeasureSupplementalDataTearOff();
 
+/// @nodoc
 mixin _$MeasureSupplementalData {
   String get id;
   @JsonKey(name: 'extension')
@@ -3600,6 +3678,7 @@ mixin _$MeasureSupplementalData {
   $MeasureSupplementalDataCopyWith<MeasureSupplementalData> get copyWith;
 }
 
+/// @nodoc
 abstract class $MeasureSupplementalDataCopyWith<$Res> {
   factory $MeasureSupplementalDataCopyWith(MeasureSupplementalData value,
           $Res Function(MeasureSupplementalData) then) =
@@ -3619,6 +3698,7 @@ abstract class $MeasureSupplementalDataCopyWith<$Res> {
   $ExpressionCopyWith<$Res> get criteria;
 }
 
+/// @nodoc
 class _$MeasureSupplementalDataCopyWithImpl<$Res>
     implements $MeasureSupplementalDataCopyWith<$Res> {
   _$MeasureSupplementalDataCopyWithImpl(this._value, this._then);
@@ -3688,6 +3768,7 @@ class _$MeasureSupplementalDataCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MeasureSupplementalDataCopyWith<$Res>
     implements $MeasureSupplementalDataCopyWith<$Res> {
   factory _$MeasureSupplementalDataCopyWith(_MeasureSupplementalData value,
@@ -3712,6 +3793,7 @@ abstract class _$MeasureSupplementalDataCopyWith<$Res>
   $ExpressionCopyWith<$Res> get criteria;
 }
 
+/// @nodoc
 class __$MeasureSupplementalDataCopyWithImpl<$Res>
     extends _$MeasureSupplementalDataCopyWithImpl<$Res>
     implements _$MeasureSupplementalDataCopyWith<$Res> {
@@ -3755,6 +3837,8 @@ class __$MeasureSupplementalDataCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MeasureSupplementalData extends _MeasureSupplementalData {
   _$_MeasureSupplementalData(
       {this.id,
@@ -3886,6 +3970,7 @@ MeasureReport _$MeasureReportFromJson(Map<String, dynamic> json) {
   return _MeasureReport.fromJson(json);
 }
 
+/// @nodoc
 class _$MeasureReportTearOff {
   const _$MeasureReportTearOff();
 
@@ -3956,11 +4041,18 @@ class _$MeasureReportTearOff {
       evaluatedResource: evaluatedResource,
     );
   }
+
+// ignore: unused_element
+  MeasureReport fromJson(Map<String, Object> json) {
+    return MeasureReport.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MeasureReport = _$MeasureReportTearOff();
 
+/// @nodoc
 mixin _$MeasureReport {
   @JsonKey(defaultValue: 'MeasureReport')
   String get resourceType;
@@ -4001,6 +4093,7 @@ mixin _$MeasureReport {
   $MeasureReportCopyWith<MeasureReport> get copyWith;
 }
 
+/// @nodoc
 abstract class $MeasureReportCopyWith<$Res> {
   factory $MeasureReportCopyWith(
           MeasureReport value, $Res Function(MeasureReport) then) =
@@ -4054,6 +4147,7 @@ abstract class $MeasureReportCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get improvementNotation;
 }
 
+/// @nodoc
 class _$MeasureReportCopyWithImpl<$Res>
     implements $MeasureReportCopyWith<$Res> {
   _$MeasureReportCopyWithImpl(this._value, this._then);
@@ -4254,6 +4348,7 @@ class _$MeasureReportCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MeasureReportCopyWith<$Res>
     implements $MeasureReportCopyWith<$Res> {
   factory _$MeasureReportCopyWith(
@@ -4320,6 +4415,7 @@ abstract class _$MeasureReportCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get improvementNotation;
 }
 
+/// @nodoc
 class __$MeasureReportCopyWithImpl<$Res>
     extends _$MeasureReportCopyWithImpl<$Res>
     implements _$MeasureReportCopyWith<$Res> {
@@ -4413,6 +4509,8 @@ class __$MeasureReportCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MeasureReport extends _MeasureReport {
   _$_MeasureReport(
       {@required @JsonKey(defaultValue: 'MeasureReport') this.resourceType,
@@ -4736,6 +4834,7 @@ MeasureReportGroup _$MeasureReportGroupFromJson(Map<String, dynamic> json) {
   return _MeasureReportGroup.fromJson(json);
 }
 
+/// @nodoc
 class _$MeasureReportGroupTearOff {
   const _$MeasureReportGroupTearOff();
 
@@ -4758,11 +4857,18 @@ class _$MeasureReportGroupTearOff {
       stratifier: stratifier,
     );
   }
+
+// ignore: unused_element
+  MeasureReportGroup fromJson(Map<String, Object> json) {
+    return MeasureReportGroup.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MeasureReportGroup = _$MeasureReportGroupTearOff();
 
+/// @nodoc
 mixin _$MeasureReportGroup {
   String get id;
   @JsonKey(name: 'extension')
@@ -4777,6 +4883,7 @@ mixin _$MeasureReportGroup {
   $MeasureReportGroupCopyWith<MeasureReportGroup> get copyWith;
 }
 
+/// @nodoc
 abstract class $MeasureReportGroupCopyWith<$Res> {
   factory $MeasureReportGroupCopyWith(
           MeasureReportGroup value, $Res Function(MeasureReportGroup) then) =
@@ -4794,6 +4901,7 @@ abstract class $MeasureReportGroupCopyWith<$Res> {
   $QuantityCopyWith<$Res> get measureScore;
 }
 
+/// @nodoc
 class _$MeasureReportGroupCopyWithImpl<$Res>
     implements $MeasureReportGroupCopyWith<$Res> {
   _$MeasureReportGroupCopyWithImpl(this._value, this._then);
@@ -4854,6 +4962,7 @@ class _$MeasureReportGroupCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MeasureReportGroupCopyWith<$Res>
     implements $MeasureReportGroupCopyWith<$Res> {
   factory _$MeasureReportGroupCopyWith(
@@ -4875,6 +4984,7 @@ abstract class _$MeasureReportGroupCopyWith<$Res>
   $QuantityCopyWith<$Res> get measureScore;
 }
 
+/// @nodoc
 class __$MeasureReportGroupCopyWithImpl<$Res>
     extends _$MeasureReportGroupCopyWithImpl<$Res>
     implements _$MeasureReportGroupCopyWith<$Res> {
@@ -4918,6 +5028,8 @@ class __$MeasureReportGroupCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MeasureReportGroup extends _MeasureReportGroup {
   _$_MeasureReportGroup(
       {this.id,
@@ -5037,6 +5149,7 @@ MeasureReportPopulation _$MeasureReportPopulationFromJson(
   return _MeasureReportPopulation.fromJson(json);
 }
 
+/// @nodoc
 class _$MeasureReportPopulationTearOff {
   const _$MeasureReportPopulationTearOff();
 
@@ -5059,11 +5172,18 @@ class _$MeasureReportPopulationTearOff {
       subjectResults: subjectResults,
     );
   }
+
+// ignore: unused_element
+  MeasureReportPopulation fromJson(Map<String, Object> json) {
+    return MeasureReportPopulation.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MeasureReportPopulation = _$MeasureReportPopulationTearOff();
 
+/// @nodoc
 mixin _$MeasureReportPopulation {
   String get id;
   @JsonKey(name: 'extension')
@@ -5079,6 +5199,7 @@ mixin _$MeasureReportPopulation {
   $MeasureReportPopulationCopyWith<MeasureReportPopulation> get copyWith;
 }
 
+/// @nodoc
 abstract class $MeasureReportPopulationCopyWith<$Res> {
   factory $MeasureReportPopulationCopyWith(MeasureReportPopulation value,
           $Res Function(MeasureReportPopulation) then) =
@@ -5097,6 +5218,7 @@ abstract class $MeasureReportPopulationCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get subjectResults;
 }
 
+/// @nodoc
 class _$MeasureReportPopulationCopyWithImpl<$Res>
     implements $MeasureReportPopulationCopyWith<$Res> {
   _$MeasureReportPopulationCopyWithImpl(this._value, this._then);
@@ -5165,6 +5287,7 @@ class _$MeasureReportPopulationCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MeasureReportPopulationCopyWith<$Res>
     implements $MeasureReportPopulationCopyWith<$Res> {
   factory _$MeasureReportPopulationCopyWith(_MeasureReportPopulation value,
@@ -5188,6 +5311,7 @@ abstract class _$MeasureReportPopulationCopyWith<$Res>
   $ReferenceCopyWith<$Res> get subjectResults;
 }
 
+/// @nodoc
 class __$MeasureReportPopulationCopyWithImpl<$Res>
     extends _$MeasureReportPopulationCopyWithImpl<$Res>
     implements _$MeasureReportPopulationCopyWith<$Res> {
@@ -5230,6 +5354,8 @@ class __$MeasureReportPopulationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MeasureReportPopulation extends _MeasureReportPopulation {
   _$_MeasureReportPopulation(
       {this.id,
@@ -5351,6 +5477,7 @@ MeasureReportStratifier _$MeasureReportStratifierFromJson(
   return _MeasureReportStratifier.fromJson(json);
 }
 
+/// @nodoc
 class _$MeasureReportStratifierTearOff {
   const _$MeasureReportStratifierTearOff();
 
@@ -5369,11 +5496,18 @@ class _$MeasureReportStratifierTearOff {
       stratum: stratum,
     );
   }
+
+// ignore: unused_element
+  MeasureReportStratifier fromJson(Map<String, Object> json) {
+    return MeasureReportStratifier.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MeasureReportStratifier = _$MeasureReportStratifierTearOff();
 
+/// @nodoc
 mixin _$MeasureReportStratifier {
   String get id;
   @JsonKey(name: 'extension')
@@ -5386,6 +5520,7 @@ mixin _$MeasureReportStratifier {
   $MeasureReportStratifierCopyWith<MeasureReportStratifier> get copyWith;
 }
 
+/// @nodoc
 abstract class $MeasureReportStratifierCopyWith<$Res> {
   factory $MeasureReportStratifierCopyWith(MeasureReportStratifier value,
           $Res Function(MeasureReportStratifier) then) =
@@ -5398,6 +5533,7 @@ abstract class $MeasureReportStratifierCopyWith<$Res> {
       List<MeasureReportStratum> stratum});
 }
 
+/// @nodoc
 class _$MeasureReportStratifierCopyWithImpl<$Res>
     implements $MeasureReportStratifierCopyWith<$Res> {
   _$MeasureReportStratifierCopyWithImpl(this._value, this._then);
@@ -5430,6 +5566,7 @@ class _$MeasureReportStratifierCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MeasureReportStratifierCopyWith<$Res>
     implements $MeasureReportStratifierCopyWith<$Res> {
   factory _$MeasureReportStratifierCopyWith(_MeasureReportStratifier value,
@@ -5444,6 +5581,7 @@ abstract class _$MeasureReportStratifierCopyWith<$Res>
       List<MeasureReportStratum> stratum});
 }
 
+/// @nodoc
 class __$MeasureReportStratifierCopyWithImpl<$Res>
     extends _$MeasureReportStratifierCopyWithImpl<$Res>
     implements _$MeasureReportStratifierCopyWith<$Res> {
@@ -5480,6 +5618,8 @@ class __$MeasureReportStratifierCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MeasureReportStratifier extends _MeasureReportStratifier {
   _$_MeasureReportStratifier(
       {this.id,
@@ -5578,6 +5718,7 @@ MeasureReportStratum _$MeasureReportStratumFromJson(Map<String, dynamic> json) {
   return _MeasureReportStratum.fromJson(json);
 }
 
+/// @nodoc
 class _$MeasureReportStratumTearOff {
   const _$MeasureReportStratumTearOff();
 
@@ -5600,11 +5741,18 @@ class _$MeasureReportStratumTearOff {
       measureScore: measureScore,
     );
   }
+
+// ignore: unused_element
+  MeasureReportStratum fromJson(Map<String, Object> json) {
+    return MeasureReportStratum.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MeasureReportStratum = _$MeasureReportStratumTearOff();
 
+/// @nodoc
 mixin _$MeasureReportStratum {
   String get id;
   @JsonKey(name: 'extension')
@@ -5619,6 +5767,7 @@ mixin _$MeasureReportStratum {
   $MeasureReportStratumCopyWith<MeasureReportStratum> get copyWith;
 }
 
+/// @nodoc
 abstract class $MeasureReportStratumCopyWith<$Res> {
   factory $MeasureReportStratumCopyWith(MeasureReportStratum value,
           $Res Function(MeasureReportStratum) then) =
@@ -5636,6 +5785,7 @@ abstract class $MeasureReportStratumCopyWith<$Res> {
   $QuantityCopyWith<$Res> get measureScore;
 }
 
+/// @nodoc
 class _$MeasureReportStratumCopyWithImpl<$Res>
     implements $MeasureReportStratumCopyWith<$Res> {
   _$MeasureReportStratumCopyWithImpl(this._value, this._then);
@@ -5696,6 +5846,7 @@ class _$MeasureReportStratumCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MeasureReportStratumCopyWith<$Res>
     implements $MeasureReportStratumCopyWith<$Res> {
   factory _$MeasureReportStratumCopyWith(_MeasureReportStratum value,
@@ -5717,6 +5868,7 @@ abstract class _$MeasureReportStratumCopyWith<$Res>
   $QuantityCopyWith<$Res> get measureScore;
 }
 
+/// @nodoc
 class __$MeasureReportStratumCopyWithImpl<$Res>
     extends _$MeasureReportStratumCopyWithImpl<$Res>
     implements _$MeasureReportStratumCopyWith<$Res> {
@@ -5760,6 +5912,8 @@ class __$MeasureReportStratumCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MeasureReportStratum extends _MeasureReportStratum {
   _$_MeasureReportStratum(
       {this.id,
@@ -5880,6 +6034,7 @@ MeasureReportComponent _$MeasureReportComponentFromJson(
   return _MeasureReportComponent.fromJson(json);
 }
 
+/// @nodoc
 class _$MeasureReportComponentTearOff {
   const _$MeasureReportComponentTearOff();
 
@@ -5898,11 +6053,18 @@ class _$MeasureReportComponentTearOff {
       value: value,
     );
   }
+
+// ignore: unused_element
+  MeasureReportComponent fromJson(Map<String, Object> json) {
+    return MeasureReportComponent.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MeasureReportComponent = _$MeasureReportComponentTearOff();
 
+/// @nodoc
 mixin _$MeasureReportComponent {
   String get id;
   @JsonKey(name: 'extension')
@@ -5915,6 +6077,7 @@ mixin _$MeasureReportComponent {
   $MeasureReportComponentCopyWith<MeasureReportComponent> get copyWith;
 }
 
+/// @nodoc
 abstract class $MeasureReportComponentCopyWith<$Res> {
   factory $MeasureReportComponentCopyWith(MeasureReportComponent value,
           $Res Function(MeasureReportComponent) then) =
@@ -5930,6 +6093,7 @@ abstract class $MeasureReportComponentCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get value;
 }
 
+/// @nodoc
 class _$MeasureReportComponentCopyWithImpl<$Res>
     implements $MeasureReportComponentCopyWith<$Res> {
   _$MeasureReportComponentCopyWithImpl(this._value, this._then);
@@ -5980,6 +6144,7 @@ class _$MeasureReportComponentCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MeasureReportComponentCopyWith<$Res>
     implements $MeasureReportComponentCopyWith<$Res> {
   factory _$MeasureReportComponentCopyWith(_MeasureReportComponent value,
@@ -5999,6 +6164,7 @@ abstract class _$MeasureReportComponentCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get value;
 }
 
+/// @nodoc
 class __$MeasureReportComponentCopyWithImpl<$Res>
     extends _$MeasureReportComponentCopyWithImpl<$Res>
     implements _$MeasureReportComponentCopyWith<$Res> {
@@ -6032,6 +6198,8 @@ class __$MeasureReportComponentCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MeasureReportComponent extends _MeasureReportComponent {
   _$_MeasureReportComponent(
       {this.id,
@@ -6133,6 +6301,7 @@ MeasureReportPopulation1 _$MeasureReportPopulation1FromJson(
   return _MeasureReportPopulation1.fromJson(json);
 }
 
+/// @nodoc
 class _$MeasureReportPopulation1TearOff {
   const _$MeasureReportPopulation1TearOff();
 
@@ -6155,11 +6324,18 @@ class _$MeasureReportPopulation1TearOff {
       subjectResults: subjectResults,
     );
   }
+
+// ignore: unused_element
+  MeasureReportPopulation1 fromJson(Map<String, Object> json) {
+    return MeasureReportPopulation1.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MeasureReportPopulation1 = _$MeasureReportPopulation1TearOff();
 
+/// @nodoc
 mixin _$MeasureReportPopulation1 {
   String get id;
   @JsonKey(name: 'extension')
@@ -6175,6 +6351,7 @@ mixin _$MeasureReportPopulation1 {
   $MeasureReportPopulation1CopyWith<MeasureReportPopulation1> get copyWith;
 }
 
+/// @nodoc
 abstract class $MeasureReportPopulation1CopyWith<$Res> {
   factory $MeasureReportPopulation1CopyWith(MeasureReportPopulation1 value,
           $Res Function(MeasureReportPopulation1) then) =
@@ -6193,6 +6370,7 @@ abstract class $MeasureReportPopulation1CopyWith<$Res> {
   $ReferenceCopyWith<$Res> get subjectResults;
 }
 
+/// @nodoc
 class _$MeasureReportPopulation1CopyWithImpl<$Res>
     implements $MeasureReportPopulation1CopyWith<$Res> {
   _$MeasureReportPopulation1CopyWithImpl(this._value, this._then);
@@ -6261,6 +6439,7 @@ class _$MeasureReportPopulation1CopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$MeasureReportPopulation1CopyWith<$Res>
     implements $MeasureReportPopulation1CopyWith<$Res> {
   factory _$MeasureReportPopulation1CopyWith(_MeasureReportPopulation1 value,
@@ -6284,6 +6463,7 @@ abstract class _$MeasureReportPopulation1CopyWith<$Res>
   $ReferenceCopyWith<$Res> get subjectResults;
 }
 
+/// @nodoc
 class __$MeasureReportPopulation1CopyWithImpl<$Res>
     extends _$MeasureReportPopulation1CopyWithImpl<$Res>
     implements _$MeasureReportPopulation1CopyWith<$Res> {
@@ -6326,6 +6506,8 @@ class __$MeasureReportPopulation1CopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_MeasureReportPopulation1 extends _MeasureReportPopulation1 {
   _$_MeasureReportPopulation1(
       {this.id,
@@ -6446,6 +6628,7 @@ TestReport _$TestReportFromJson(Map<String, dynamic> json) {
   return _TestReport.fromJson(json);
 }
 
+/// @nodoc
 class _$TestReportTearOff {
   const _$TestReportTearOff();
 
@@ -6526,11 +6709,18 @@ class _$TestReportTearOff {
       teardown: teardown,
     );
   }
+
+// ignore: unused_element
+  TestReport fromJson(Map<String, Object> json) {
+    return TestReport.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TestReport = _$TestReportTearOff();
 
+/// @nodoc
 mixin _$TestReport {
   @JsonKey(defaultValue: 'TestReport')
   String get resourceType;
@@ -6578,6 +6768,7 @@ mixin _$TestReport {
   $TestReportCopyWith<TestReport> get copyWith;
 }
 
+/// @nodoc
 abstract class $TestReportCopyWith<$Res> {
   factory $TestReportCopyWith(
           TestReport value, $Res Function(TestReport) then) =
@@ -6641,6 +6832,7 @@ abstract class $TestReportCopyWith<$Res> {
   $TestReportTeardownCopyWith<$Res> get teardown;
 }
 
+/// @nodoc
 class _$TestReportCopyWithImpl<$Res> implements $TestReportCopyWith<$Res> {
   _$TestReportCopyWithImpl(this._value, this._then);
 
@@ -6884,6 +7076,7 @@ class _$TestReportCopyWithImpl<$Res> implements $TestReportCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$TestReportCopyWith<$Res> implements $TestReportCopyWith<$Res> {
   factory _$TestReportCopyWith(
           _TestReport value, $Res Function(_TestReport) then) =
@@ -6962,6 +7155,7 @@ abstract class _$TestReportCopyWith<$Res> implements $TestReportCopyWith<$Res> {
   $TestReportTeardownCopyWith<$Res> get teardown;
 }
 
+/// @nodoc
 class __$TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
     implements _$TestReportCopyWith<$Res> {
   __$TestReportCopyWithImpl(
@@ -7068,6 +7262,8 @@ class __$TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TestReport extends _TestReport {
   _$_TestReport(
       {@required @JsonKey(defaultValue: 'TestReport') this.resourceType,
@@ -7432,6 +7628,7 @@ TestReportParticipant _$TestReportParticipantFromJson(
   return _TestReportParticipant.fromJson(json);
 }
 
+/// @nodoc
 class _$TestReportParticipantTearOff {
   const _$TestReportParticipantTearOff();
 
@@ -7463,11 +7660,18 @@ class _$TestReportParticipantTearOff {
       displayElement: displayElement,
     );
   }
+
+// ignore: unused_element
+  TestReportParticipant fromJson(Map<String, Object> json) {
+    return TestReportParticipant.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TestReportParticipant = _$TestReportParticipantTearOff();
 
+/// @nodoc
 mixin _$TestReportParticipant {
   String get id;
   @JsonKey(name: 'extension')
@@ -7488,6 +7692,7 @@ mixin _$TestReportParticipant {
   $TestReportParticipantCopyWith<TestReportParticipant> get copyWith;
 }
 
+/// @nodoc
 abstract class $TestReportParticipantCopyWith<$Res> {
   factory $TestReportParticipantCopyWith(TestReportParticipant value,
           $Res Function(TestReportParticipant) then) =
@@ -7513,6 +7718,7 @@ abstract class $TestReportParticipantCopyWith<$Res> {
   $ElementCopyWith<$Res> get displayElement;
 }
 
+/// @nodoc
 class _$TestReportParticipantCopyWithImpl<$Res>
     implements $TestReportParticipantCopyWith<$Res> {
   _$TestReportParticipantCopyWithImpl(this._value, this._then);
@@ -7585,6 +7791,7 @@ class _$TestReportParticipantCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$TestReportParticipantCopyWith<$Res>
     implements $TestReportParticipantCopyWith<$Res> {
   factory _$TestReportParticipantCopyWith(_TestReportParticipant value,
@@ -7615,6 +7822,7 @@ abstract class _$TestReportParticipantCopyWith<$Res>
   $ElementCopyWith<$Res> get displayElement;
 }
 
+/// @nodoc
 class __$TestReportParticipantCopyWithImpl<$Res>
     extends _$TestReportParticipantCopyWithImpl<$Res>
     implements _$TestReportParticipantCopyWith<$Res> {
@@ -7660,6 +7868,8 @@ class __$TestReportParticipantCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TestReportParticipant extends _TestReportParticipant {
   _$_TestReportParticipant(
       {this.id,
@@ -7811,6 +8021,7 @@ TestReportSetup _$TestReportSetupFromJson(Map<String, dynamic> json) {
   return _TestReportSetup.fromJson(json);
 }
 
+/// @nodoc
 class _$TestReportSetupTearOff {
   const _$TestReportSetupTearOff();
 
@@ -7827,11 +8038,18 @@ class _$TestReportSetupTearOff {
       action: action,
     );
   }
+
+// ignore: unused_element
+  TestReportSetup fromJson(Map<String, Object> json) {
+    return TestReportSetup.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TestReportSetup = _$TestReportSetupTearOff();
 
+/// @nodoc
 mixin _$TestReportSetup {
   String get id;
   @JsonKey(name: 'extension')
@@ -7843,6 +8061,7 @@ mixin _$TestReportSetup {
   $TestReportSetupCopyWith<TestReportSetup> get copyWith;
 }
 
+/// @nodoc
 abstract class $TestReportSetupCopyWith<$Res> {
   factory $TestReportSetupCopyWith(
           TestReportSetup value, $Res Function(TestReportSetup) then) =
@@ -7854,6 +8073,7 @@ abstract class $TestReportSetupCopyWith<$Res> {
       List<TestReportAction> action});
 }
 
+/// @nodoc
 class _$TestReportSetupCopyWithImpl<$Res>
     implements $TestReportSetupCopyWith<$Res> {
   _$TestReportSetupCopyWithImpl(this._value, this._then);
@@ -7883,6 +8103,7 @@ class _$TestReportSetupCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$TestReportSetupCopyWith<$Res>
     implements $TestReportSetupCopyWith<$Res> {
   factory _$TestReportSetupCopyWith(
@@ -7896,6 +8117,7 @@ abstract class _$TestReportSetupCopyWith<$Res>
       List<TestReportAction> action});
 }
 
+/// @nodoc
 class __$TestReportSetupCopyWithImpl<$Res>
     extends _$TestReportSetupCopyWithImpl<$Res>
     implements _$TestReportSetupCopyWith<$Res> {
@@ -7928,6 +8150,8 @@ class __$TestReportSetupCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TestReportSetup extends _TestReportSetup {
   _$_TestReportSetup(
       {this.id,
@@ -8017,6 +8241,7 @@ TestReportAction _$TestReportActionFromJson(Map<String, dynamic> json) {
   return _TestReportAction.fromJson(json);
 }
 
+/// @nodoc
 class _$TestReportActionTearOff {
   const _$TestReportActionTearOff();
 
@@ -8035,11 +8260,18 @@ class _$TestReportActionTearOff {
       assert_: assert_,
     );
   }
+
+// ignore: unused_element
+  TestReportAction fromJson(Map<String, Object> json) {
+    return TestReportAction.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TestReportAction = _$TestReportActionTearOff();
 
+/// @nodoc
 mixin _$TestReportAction {
   String get id;
   @JsonKey(name: 'extension')
@@ -8053,6 +8285,7 @@ mixin _$TestReportAction {
   $TestReportActionCopyWith<TestReportAction> get copyWith;
 }
 
+/// @nodoc
 abstract class $TestReportActionCopyWith<$Res> {
   factory $TestReportActionCopyWith(
           TestReportAction value, $Res Function(TestReportAction) then) =
@@ -8068,6 +8301,7 @@ abstract class $TestReportActionCopyWith<$Res> {
   $TestReportAssertCopyWith<$Res> get assert_;
 }
 
+/// @nodoc
 class _$TestReportActionCopyWithImpl<$Res>
     implements $TestReportActionCopyWith<$Res> {
   _$TestReportActionCopyWithImpl(this._value, this._then);
@@ -8121,6 +8355,7 @@ class _$TestReportActionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$TestReportActionCopyWith<$Res>
     implements $TestReportActionCopyWith<$Res> {
   factory _$TestReportActionCopyWith(
@@ -8140,6 +8375,7 @@ abstract class _$TestReportActionCopyWith<$Res>
   $TestReportAssertCopyWith<$Res> get assert_;
 }
 
+/// @nodoc
 class __$TestReportActionCopyWithImpl<$Res>
     extends _$TestReportActionCopyWithImpl<$Res>
     implements _$TestReportActionCopyWith<$Res> {
@@ -8176,6 +8412,8 @@ class __$TestReportActionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TestReportAction extends _TestReportAction {
   _$_TestReportAction(
       {this.id,
@@ -8276,6 +8514,7 @@ TestReportOperation _$TestReportOperationFromJson(Map<String, dynamic> json) {
   return _TestReportOperation.fromJson(json);
 }
 
+/// @nodoc
 class _$TestReportOperationTearOff {
   const _$TestReportOperationTearOff();
 
@@ -8307,11 +8546,18 @@ class _$TestReportOperationTearOff {
       detailElement: detailElement,
     );
   }
+
+// ignore: unused_element
+  TestReportOperation fromJson(Map<String, Object> json) {
+    return TestReportOperation.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TestReportOperation = _$TestReportOperationTearOff();
 
+/// @nodoc
 mixin _$TestReportOperation {
   String get id;
   @JsonKey(name: 'extension')
@@ -8332,6 +8578,7 @@ mixin _$TestReportOperation {
   $TestReportOperationCopyWith<TestReportOperation> get copyWith;
 }
 
+/// @nodoc
 abstract class $TestReportOperationCopyWith<$Res> {
   factory $TestReportOperationCopyWith(
           TestReportOperation value, $Res Function(TestReportOperation) then) =
@@ -8357,6 +8604,7 @@ abstract class $TestReportOperationCopyWith<$Res> {
   $ElementCopyWith<$Res> get detailElement;
 }
 
+/// @nodoc
 class _$TestReportOperationCopyWithImpl<$Res>
     implements $TestReportOperationCopyWith<$Res> {
   _$TestReportOperationCopyWithImpl(this._value, this._then);
@@ -8433,6 +8681,7 @@ class _$TestReportOperationCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$TestReportOperationCopyWith<$Res>
     implements $TestReportOperationCopyWith<$Res> {
   factory _$TestReportOperationCopyWith(_TestReportOperation value,
@@ -8463,6 +8712,7 @@ abstract class _$TestReportOperationCopyWith<$Res>
   $ElementCopyWith<$Res> get detailElement;
 }
 
+/// @nodoc
 class __$TestReportOperationCopyWithImpl<$Res>
     extends _$TestReportOperationCopyWithImpl<$Res>
     implements _$TestReportOperationCopyWith<$Res> {
@@ -8512,6 +8762,8 @@ class __$TestReportOperationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TestReportOperation extends _TestReportOperation {
   _$_TestReportOperation(
       {this.id,
@@ -8663,6 +8915,7 @@ TestReportAssert _$TestReportAssertFromJson(Map<String, dynamic> json) {
   return _TestReportAssert.fromJson(json);
 }
 
+/// @nodoc
 class _$TestReportAssertTearOff {
   const _$TestReportAssertTearOff();
 
@@ -8694,11 +8947,18 @@ class _$TestReportAssertTearOff {
       detailElement: detailElement,
     );
   }
+
+// ignore: unused_element
+  TestReportAssert fromJson(Map<String, Object> json) {
+    return TestReportAssert.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TestReportAssert = _$TestReportAssertTearOff();
 
+/// @nodoc
 mixin _$TestReportAssert {
   String get id;
   @JsonKey(name: 'extension')
@@ -8719,6 +8979,7 @@ mixin _$TestReportAssert {
   $TestReportAssertCopyWith<TestReportAssert> get copyWith;
 }
 
+/// @nodoc
 abstract class $TestReportAssertCopyWith<$Res> {
   factory $TestReportAssertCopyWith(
           TestReportAssert value, $Res Function(TestReportAssert) then) =
@@ -8744,6 +9005,7 @@ abstract class $TestReportAssertCopyWith<$Res> {
   $ElementCopyWith<$Res> get detailElement;
 }
 
+/// @nodoc
 class _$TestReportAssertCopyWithImpl<$Res>
     implements $TestReportAssertCopyWith<$Res> {
   _$TestReportAssertCopyWithImpl(this._value, this._then);
@@ -8819,6 +9081,7 @@ class _$TestReportAssertCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$TestReportAssertCopyWith<$Res>
     implements $TestReportAssertCopyWith<$Res> {
   factory _$TestReportAssertCopyWith(
@@ -8849,6 +9112,7 @@ abstract class _$TestReportAssertCopyWith<$Res>
   $ElementCopyWith<$Res> get detailElement;
 }
 
+/// @nodoc
 class __$TestReportAssertCopyWithImpl<$Res>
     extends _$TestReportAssertCopyWithImpl<$Res>
     implements _$TestReportAssertCopyWith<$Res> {
@@ -8897,6 +9161,8 @@ class __$TestReportAssertCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TestReportAssert extends _TestReportAssert {
   _$_TestReportAssert(
       {this.id,
@@ -9047,6 +9313,7 @@ TestReportTest _$TestReportTestFromJson(Map<String, dynamic> json) {
   return _TestReportTest.fromJson(json);
 }
 
+/// @nodoc
 class _$TestReportTestTearOff {
   const _$TestReportTestTearOff();
 
@@ -9071,11 +9338,18 @@ class _$TestReportTestTearOff {
       action: action,
     );
   }
+
+// ignore: unused_element
+  TestReportTest fromJson(Map<String, Object> json) {
+    return TestReportTest.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TestReportTest = _$TestReportTestTearOff();
 
+/// @nodoc
 mixin _$TestReportTest {
   String get id;
   @JsonKey(name: 'extension')
@@ -9093,6 +9367,7 @@ mixin _$TestReportTest {
   $TestReportTestCopyWith<TestReportTest> get copyWith;
 }
 
+/// @nodoc
 abstract class $TestReportTestCopyWith<$Res> {
   factory $TestReportTestCopyWith(
           TestReportTest value, $Res Function(TestReportTest) then) =
@@ -9111,6 +9386,7 @@ abstract class $TestReportTestCopyWith<$Res> {
   $ElementCopyWith<$Res> get descriptionElement;
 }
 
+/// @nodoc
 class _$TestReportTestCopyWithImpl<$Res>
     implements $TestReportTestCopyWith<$Res> {
   _$TestReportTestCopyWithImpl(this._value, this._then);
@@ -9172,6 +9448,7 @@ class _$TestReportTestCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$TestReportTestCopyWith<$Res>
     implements $TestReportTestCopyWith<$Res> {
   factory _$TestReportTestCopyWith(
@@ -9194,6 +9471,7 @@ abstract class _$TestReportTestCopyWith<$Res>
   $ElementCopyWith<$Res> get descriptionElement;
 }
 
+/// @nodoc
 class __$TestReportTestCopyWithImpl<$Res>
     extends _$TestReportTestCopyWithImpl<$Res>
     implements _$TestReportTestCopyWith<$Res> {
@@ -9238,6 +9516,8 @@ class __$TestReportTestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TestReportTest extends _TestReportTest {
   _$_TestReportTest(
       {this.id,
@@ -9370,6 +9650,7 @@ TestReportAction1 _$TestReportAction1FromJson(Map<String, dynamic> json) {
   return _TestReportAction1.fromJson(json);
 }
 
+/// @nodoc
 class _$TestReportAction1TearOff {
   const _$TestReportAction1TearOff();
 
@@ -9388,11 +9669,18 @@ class _$TestReportAction1TearOff {
       assert_: assert_,
     );
   }
+
+// ignore: unused_element
+  TestReportAction1 fromJson(Map<String, Object> json) {
+    return TestReportAction1.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TestReportAction1 = _$TestReportAction1TearOff();
 
+/// @nodoc
 mixin _$TestReportAction1 {
   String get id;
   @JsonKey(name: 'extension')
@@ -9406,6 +9694,7 @@ mixin _$TestReportAction1 {
   $TestReportAction1CopyWith<TestReportAction1> get copyWith;
 }
 
+/// @nodoc
 abstract class $TestReportAction1CopyWith<$Res> {
   factory $TestReportAction1CopyWith(
           TestReportAction1 value, $Res Function(TestReportAction1) then) =
@@ -9421,6 +9710,7 @@ abstract class $TestReportAction1CopyWith<$Res> {
   $TestReportAssertCopyWith<$Res> get assert_;
 }
 
+/// @nodoc
 class _$TestReportAction1CopyWithImpl<$Res>
     implements $TestReportAction1CopyWith<$Res> {
   _$TestReportAction1CopyWithImpl(this._value, this._then);
@@ -9474,6 +9764,7 @@ class _$TestReportAction1CopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$TestReportAction1CopyWith<$Res>
     implements $TestReportAction1CopyWith<$Res> {
   factory _$TestReportAction1CopyWith(
@@ -9493,6 +9784,7 @@ abstract class _$TestReportAction1CopyWith<$Res>
   $TestReportAssertCopyWith<$Res> get assert_;
 }
 
+/// @nodoc
 class __$TestReportAction1CopyWithImpl<$Res>
     extends _$TestReportAction1CopyWithImpl<$Res>
     implements _$TestReportAction1CopyWith<$Res> {
@@ -9529,6 +9821,8 @@ class __$TestReportAction1CopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TestReportAction1 extends _TestReportAction1 {
   _$_TestReportAction1(
       {this.id,
@@ -9630,6 +9924,7 @@ TestReportTeardown _$TestReportTeardownFromJson(Map<String, dynamic> json) {
   return _TestReportTeardown.fromJson(json);
 }
 
+/// @nodoc
 class _$TestReportTeardownTearOff {
   const _$TestReportTeardownTearOff();
 
@@ -9646,11 +9941,18 @@ class _$TestReportTeardownTearOff {
       action: action,
     );
   }
+
+// ignore: unused_element
+  TestReportTeardown fromJson(Map<String, Object> json) {
+    return TestReportTeardown.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TestReportTeardown = _$TestReportTeardownTearOff();
 
+/// @nodoc
 mixin _$TestReportTeardown {
   String get id;
   @JsonKey(name: 'extension')
@@ -9662,6 +9964,7 @@ mixin _$TestReportTeardown {
   $TestReportTeardownCopyWith<TestReportTeardown> get copyWith;
 }
 
+/// @nodoc
 abstract class $TestReportTeardownCopyWith<$Res> {
   factory $TestReportTeardownCopyWith(
           TestReportTeardown value, $Res Function(TestReportTeardown) then) =
@@ -9673,6 +9976,7 @@ abstract class $TestReportTeardownCopyWith<$Res> {
       List<TestReportAction2> action});
 }
 
+/// @nodoc
 class _$TestReportTeardownCopyWithImpl<$Res>
     implements $TestReportTeardownCopyWith<$Res> {
   _$TestReportTeardownCopyWithImpl(this._value, this._then);
@@ -9702,6 +10006,7 @@ class _$TestReportTeardownCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$TestReportTeardownCopyWith<$Res>
     implements $TestReportTeardownCopyWith<$Res> {
   factory _$TestReportTeardownCopyWith(
@@ -9715,6 +10020,7 @@ abstract class _$TestReportTeardownCopyWith<$Res>
       List<TestReportAction2> action});
 }
 
+/// @nodoc
 class __$TestReportTeardownCopyWithImpl<$Res>
     extends _$TestReportTeardownCopyWithImpl<$Res>
     implements _$TestReportTeardownCopyWith<$Res> {
@@ -9747,6 +10053,8 @@ class __$TestReportTeardownCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TestReportTeardown extends _TestReportTeardown {
   _$_TestReportTeardown(
       {this.id,
@@ -9836,6 +10144,7 @@ TestReportAction2 _$TestReportAction2FromJson(Map<String, dynamic> json) {
   return _TestReportAction2.fromJson(json);
 }
 
+/// @nodoc
 class _$TestReportAction2TearOff {
   const _$TestReportAction2TearOff();
 
@@ -9852,11 +10161,18 @@ class _$TestReportAction2TearOff {
       operation: operation,
     );
   }
+
+// ignore: unused_element
+  TestReportAction2 fromJson(Map<String, Object> json) {
+    return TestReportAction2.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TestReportAction2 = _$TestReportAction2TearOff();
 
+/// @nodoc
 mixin _$TestReportAction2 {
   String get id;
   @JsonKey(name: 'extension')
@@ -9868,6 +10184,7 @@ mixin _$TestReportAction2 {
   $TestReportAction2CopyWith<TestReportAction2> get copyWith;
 }
 
+/// @nodoc
 abstract class $TestReportAction2CopyWith<$Res> {
   factory $TestReportAction2CopyWith(
           TestReportAction2 value, $Res Function(TestReportAction2) then) =
@@ -9881,6 +10198,7 @@ abstract class $TestReportAction2CopyWith<$Res> {
   $TestReportOperationCopyWith<$Res> get operation;
 }
 
+/// @nodoc
 class _$TestReportAction2CopyWithImpl<$Res>
     implements $TestReportAction2CopyWith<$Res> {
   _$TestReportAction2CopyWithImpl(this._value, this._then);
@@ -9921,6 +10239,7 @@ class _$TestReportAction2CopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$TestReportAction2CopyWith<$Res>
     implements $TestReportAction2CopyWith<$Res> {
   factory _$TestReportAction2CopyWith(
@@ -9937,6 +10256,7 @@ abstract class _$TestReportAction2CopyWith<$Res>
   $TestReportOperationCopyWith<$Res> get operation;
 }
 
+/// @nodoc
 class __$TestReportAction2CopyWithImpl<$Res>
     extends _$TestReportAction2CopyWithImpl<$Res>
     implements _$TestReportAction2CopyWith<$Res> {
@@ -9970,6 +10290,8 @@ class __$TestReportAction2CopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TestReportAction2 extends _TestReportAction2 {
   _$_TestReportAction2(
       {this.id,
@@ -10060,6 +10382,7 @@ TestScript _$TestScriptFromJson(Map<String, dynamic> json) {
   return _TestScript.fromJson(json);
 }
 
+/// @nodoc
 class _$TestScriptTearOff {
   const _$TestScriptTearOff();
 
@@ -10177,11 +10500,18 @@ class _$TestScriptTearOff {
       teardown: teardown,
     );
   }
+
+// ignore: unused_element
+  TestScript fromJson(Map<String, Object> json) {
+    return TestScript.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TestScript = _$TestScriptTearOff();
 
+/// @nodoc
 mixin _$TestScript {
   @JsonKey(defaultValue: 'TestScript')
   String get resourceType;
@@ -10250,6 +10580,7 @@ mixin _$TestScript {
   $TestScriptCopyWith<TestScript> get copyWith;
 }
 
+/// @nodoc
 abstract class $TestScriptCopyWith<$Res> {
   factory $TestScriptCopyWith(
           TestScript value, $Res Function(TestScript) then) =
@@ -10339,6 +10670,7 @@ abstract class $TestScriptCopyWith<$Res> {
   $TestScriptTeardownCopyWith<$Res> get teardown;
 }
 
+/// @nodoc
 class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
   _$TestScriptCopyWithImpl(this._value, this._then);
 
@@ -10689,6 +11021,7 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$TestScriptCopyWith<$Res> implements $TestScriptCopyWith<$Res> {
   factory _$TestScriptCopyWith(
           _TestScript value, $Res Function(_TestScript) then) =
@@ -10798,6 +11131,7 @@ abstract class _$TestScriptCopyWith<$Res> implements $TestScriptCopyWith<$Res> {
   $TestScriptTeardownCopyWith<$Res> get teardown;
 }
 
+/// @nodoc
 class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
     implements _$TestScriptCopyWith<$Res> {
   __$TestScriptCopyWithImpl(
@@ -10961,6 +11295,8 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TestScript extends _TestScript {
   _$_TestScript(
       {@required @JsonKey(defaultValue: 'TestScript') this.resourceType,
@@ -11470,6 +11806,7 @@ TestScriptOrigin _$TestScriptOriginFromJson(Map<String, dynamic> json) {
   return _TestScriptOrigin.fromJson(json);
 }
 
+/// @nodoc
 class _$TestScriptOriginTearOff {
   const _$TestScriptOriginTearOff();
 
@@ -11490,11 +11827,18 @@ class _$TestScriptOriginTearOff {
       profile: profile,
     );
   }
+
+// ignore: unused_element
+  TestScriptOrigin fromJson(Map<String, Object> json) {
+    return TestScriptOrigin.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TestScriptOrigin = _$TestScriptOriginTearOff();
 
+/// @nodoc
 mixin _$TestScriptOrigin {
   String get id;
   @JsonKey(name: 'extension')
@@ -11509,6 +11853,7 @@ mixin _$TestScriptOrigin {
   $TestScriptOriginCopyWith<TestScriptOrigin> get copyWith;
 }
 
+/// @nodoc
 abstract class $TestScriptOriginCopyWith<$Res> {
   factory $TestScriptOriginCopyWith(
           TestScriptOrigin value, $Res Function(TestScriptOrigin) then) =
@@ -11525,6 +11870,7 @@ abstract class $TestScriptOriginCopyWith<$Res> {
   $CodingCopyWith<$Res> get profile;
 }
 
+/// @nodoc
 class _$TestScriptOriginCopyWithImpl<$Res>
     implements $TestScriptOriginCopyWith<$Res> {
   _$TestScriptOriginCopyWithImpl(this._value, this._then);
@@ -11579,6 +11925,7 @@ class _$TestScriptOriginCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$TestScriptOriginCopyWith<$Res>
     implements $TestScriptOriginCopyWith<$Res> {
   factory _$TestScriptOriginCopyWith(
@@ -11599,6 +11946,7 @@ abstract class _$TestScriptOriginCopyWith<$Res>
   $CodingCopyWith<$Res> get profile;
 }
 
+/// @nodoc
 class __$TestScriptOriginCopyWithImpl<$Res>
     extends _$TestScriptOriginCopyWithImpl<$Res>
     implements _$TestScriptOriginCopyWith<$Res> {
@@ -11636,6 +11984,8 @@ class __$TestScriptOriginCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TestScriptOrigin extends _TestScriptOrigin {
   _$_TestScriptOrigin(
       {this.id,
@@ -11747,6 +12097,7 @@ TestScriptDestination _$TestScriptDestinationFromJson(
   return _TestScriptDestination.fromJson(json);
 }
 
+/// @nodoc
 class _$TestScriptDestinationTearOff {
   const _$TestScriptDestinationTearOff();
 
@@ -11767,11 +12118,18 @@ class _$TestScriptDestinationTearOff {
       profile: profile,
     );
   }
+
+// ignore: unused_element
+  TestScriptDestination fromJson(Map<String, Object> json) {
+    return TestScriptDestination.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TestScriptDestination = _$TestScriptDestinationTearOff();
 
+/// @nodoc
 mixin _$TestScriptDestination {
   String get id;
   @JsonKey(name: 'extension')
@@ -11786,6 +12144,7 @@ mixin _$TestScriptDestination {
   $TestScriptDestinationCopyWith<TestScriptDestination> get copyWith;
 }
 
+/// @nodoc
 abstract class $TestScriptDestinationCopyWith<$Res> {
   factory $TestScriptDestinationCopyWith(TestScriptDestination value,
           $Res Function(TestScriptDestination) then) =
@@ -11802,6 +12161,7 @@ abstract class $TestScriptDestinationCopyWith<$Res> {
   $CodingCopyWith<$Res> get profile;
 }
 
+/// @nodoc
 class _$TestScriptDestinationCopyWithImpl<$Res>
     implements $TestScriptDestinationCopyWith<$Res> {
   _$TestScriptDestinationCopyWithImpl(this._value, this._then);
@@ -11856,6 +12216,7 @@ class _$TestScriptDestinationCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$TestScriptDestinationCopyWith<$Res>
     implements $TestScriptDestinationCopyWith<$Res> {
   factory _$TestScriptDestinationCopyWith(_TestScriptDestination value,
@@ -11876,6 +12237,7 @@ abstract class _$TestScriptDestinationCopyWith<$Res>
   $CodingCopyWith<$Res> get profile;
 }
 
+/// @nodoc
 class __$TestScriptDestinationCopyWithImpl<$Res>
     extends _$TestScriptDestinationCopyWithImpl<$Res>
     implements _$TestScriptDestinationCopyWith<$Res> {
@@ -11913,6 +12275,8 @@ class __$TestScriptDestinationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TestScriptDestination extends _TestScriptDestination {
   _$_TestScriptDestination(
       {this.id,
@@ -12024,6 +12388,7 @@ TestScriptMetadata _$TestScriptMetadataFromJson(Map<String, dynamic> json) {
   return _TestScriptMetadata.fromJson(json);
 }
 
+/// @nodoc
 class _$TestScriptMetadataTearOff {
   const _$TestScriptMetadataTearOff();
 
@@ -12042,11 +12407,18 @@ class _$TestScriptMetadataTearOff {
       capability: capability,
     );
   }
+
+// ignore: unused_element
+  TestScriptMetadata fromJson(Map<String, Object> json) {
+    return TestScriptMetadata.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TestScriptMetadata = _$TestScriptMetadataTearOff();
 
+/// @nodoc
 mixin _$TestScriptMetadata {
   String get id;
   @JsonKey(name: 'extension')
@@ -12059,6 +12431,7 @@ mixin _$TestScriptMetadata {
   $TestScriptMetadataCopyWith<TestScriptMetadata> get copyWith;
 }
 
+/// @nodoc
 abstract class $TestScriptMetadataCopyWith<$Res> {
   factory $TestScriptMetadataCopyWith(
           TestScriptMetadata value, $Res Function(TestScriptMetadata) then) =
@@ -12071,6 +12444,7 @@ abstract class $TestScriptMetadataCopyWith<$Res> {
       List<TestScriptCapability> capability});
 }
 
+/// @nodoc
 class _$TestScriptMetadataCopyWithImpl<$Res>
     implements $TestScriptMetadataCopyWith<$Res> {
   _$TestScriptMetadataCopyWithImpl(this._value, this._then);
@@ -12103,6 +12477,7 @@ class _$TestScriptMetadataCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$TestScriptMetadataCopyWith<$Res>
     implements $TestScriptMetadataCopyWith<$Res> {
   factory _$TestScriptMetadataCopyWith(
@@ -12117,6 +12492,7 @@ abstract class _$TestScriptMetadataCopyWith<$Res>
       List<TestScriptCapability> capability});
 }
 
+/// @nodoc
 class __$TestScriptMetadataCopyWithImpl<$Res>
     extends _$TestScriptMetadataCopyWithImpl<$Res>
     implements _$TestScriptMetadataCopyWith<$Res> {
@@ -12152,6 +12528,8 @@ class __$TestScriptMetadataCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TestScriptMetadata extends _TestScriptMetadata {
   _$_TestScriptMetadata(
       {this.id,
@@ -12251,6 +12629,7 @@ TestScriptLink _$TestScriptLinkFromJson(Map<String, dynamic> json) {
   return _TestScriptLink.fromJson(json);
 }
 
+/// @nodoc
 class _$TestScriptLinkTearOff {
   const _$TestScriptLinkTearOff();
 
@@ -12273,11 +12652,18 @@ class _$TestScriptLinkTearOff {
       descriptionElement: descriptionElement,
     );
   }
+
+// ignore: unused_element
+  TestScriptLink fromJson(Map<String, Object> json) {
+    return TestScriptLink.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TestScriptLink = _$TestScriptLinkTearOff();
 
+/// @nodoc
 mixin _$TestScriptLink {
   String get id;
   @JsonKey(name: 'extension')
@@ -12294,6 +12680,7 @@ mixin _$TestScriptLink {
   $TestScriptLinkCopyWith<TestScriptLink> get copyWith;
 }
 
+/// @nodoc
 abstract class $TestScriptLinkCopyWith<$Res> {
   factory $TestScriptLinkCopyWith(
           TestScriptLink value, $Res Function(TestScriptLink) then) =
@@ -12311,6 +12698,7 @@ abstract class $TestScriptLinkCopyWith<$Res> {
   $ElementCopyWith<$Res> get descriptionElement;
 }
 
+/// @nodoc
 class _$TestScriptLinkCopyWithImpl<$Res>
     implements $TestScriptLinkCopyWith<$Res> {
   _$TestScriptLinkCopyWithImpl(this._value, this._then);
@@ -12369,6 +12757,7 @@ class _$TestScriptLinkCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$TestScriptLinkCopyWith<$Res>
     implements $TestScriptLinkCopyWith<$Res> {
   factory _$TestScriptLinkCopyWith(
@@ -12390,6 +12779,7 @@ abstract class _$TestScriptLinkCopyWith<$Res>
   $ElementCopyWith<$Res> get descriptionElement;
 }
 
+/// @nodoc
 class __$TestScriptLinkCopyWithImpl<$Res>
     extends _$TestScriptLinkCopyWithImpl<$Res>
     implements _$TestScriptLinkCopyWith<$Res> {
@@ -12431,6 +12821,8 @@ class __$TestScriptLinkCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TestScriptLink extends _TestScriptLink {
   _$_TestScriptLink(
       {this.id,
@@ -12554,6 +12946,7 @@ TestScriptCapability _$TestScriptCapabilityFromJson(Map<String, dynamic> json) {
   return _TestScriptCapability.fromJson(json);
 }
 
+/// @nodoc
 class _$TestScriptCapabilityTearOff {
   const _$TestScriptCapabilityTearOff();
 
@@ -12594,11 +12987,18 @@ class _$TestScriptCapabilityTearOff {
       capabilities: capabilities,
     );
   }
+
+// ignore: unused_element
+  TestScriptCapability fromJson(Map<String, Object> json) {
+    return TestScriptCapability.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TestScriptCapability = _$TestScriptCapabilityTearOff();
 
+/// @nodoc
 mixin _$TestScriptCapability {
   String get id;
   @JsonKey(name: 'extension')
@@ -12629,6 +13029,7 @@ mixin _$TestScriptCapability {
   $TestScriptCapabilityCopyWith<TestScriptCapability> get copyWith;
 }
 
+/// @nodoc
 abstract class $TestScriptCapabilityCopyWith<$Res> {
   factory $TestScriptCapabilityCopyWith(TestScriptCapability value,
           $Res Function(TestScriptCapability) then) =
@@ -12657,6 +13058,7 @@ abstract class $TestScriptCapabilityCopyWith<$Res> {
   $ElementCopyWith<$Res> get destinationElement;
 }
 
+/// @nodoc
 class _$TestScriptCapabilityCopyWithImpl<$Res>
     implements $TestScriptCapabilityCopyWith<$Res> {
   _$TestScriptCapabilityCopyWithImpl(this._value, this._then);
@@ -12765,6 +13167,7 @@ class _$TestScriptCapabilityCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$TestScriptCapabilityCopyWith<$Res>
     implements $TestScriptCapabilityCopyWith<$Res> {
   factory _$TestScriptCapabilityCopyWith(_TestScriptCapability value,
@@ -12799,6 +13202,7 @@ abstract class _$TestScriptCapabilityCopyWith<$Res>
   $ElementCopyWith<$Res> get destinationElement;
 }
 
+/// @nodoc
 class __$TestScriptCapabilityCopyWithImpl<$Res>
     extends _$TestScriptCapabilityCopyWithImpl<$Res>
     implements _$TestScriptCapabilityCopyWith<$Res> {
@@ -12870,6 +13274,8 @@ class __$TestScriptCapabilityCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TestScriptCapability extends _TestScriptCapability {
   _$_TestScriptCapability(
       {this.id,
@@ -13093,6 +13499,7 @@ TestScriptFixture _$TestScriptFixtureFromJson(Map<String, dynamic> json) {
   return _TestScriptFixture.fromJson(json);
 }
 
+/// @nodoc
 class _$TestScriptFixtureTearOff {
   const _$TestScriptFixtureTearOff();
 
@@ -13117,11 +13524,18 @@ class _$TestScriptFixtureTearOff {
       resource: resource,
     );
   }
+
+// ignore: unused_element
+  TestScriptFixture fromJson(Map<String, Object> json) {
+    return TestScriptFixture.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TestScriptFixture = _$TestScriptFixtureTearOff();
 
+/// @nodoc
 mixin _$TestScriptFixture {
   String get id;
   @JsonKey(name: 'extension')
@@ -13139,6 +13553,7 @@ mixin _$TestScriptFixture {
   $TestScriptFixtureCopyWith<TestScriptFixture> get copyWith;
 }
 
+/// @nodoc
 abstract class $TestScriptFixtureCopyWith<$Res> {
   factory $TestScriptFixtureCopyWith(
           TestScriptFixture value, $Res Function(TestScriptFixture) then) =
@@ -13158,6 +13573,7 @@ abstract class $TestScriptFixtureCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get resource;
 }
 
+/// @nodoc
 class _$TestScriptFixtureCopyWithImpl<$Res>
     implements $TestScriptFixtureCopyWith<$Res> {
   _$TestScriptFixtureCopyWithImpl(this._value, this._then);
@@ -13230,6 +13646,7 @@ class _$TestScriptFixtureCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$TestScriptFixtureCopyWith<$Res>
     implements $TestScriptFixtureCopyWith<$Res> {
   factory _$TestScriptFixtureCopyWith(
@@ -13254,6 +13671,7 @@ abstract class _$TestScriptFixtureCopyWith<$Res>
   $ReferenceCopyWith<$Res> get resource;
 }
 
+/// @nodoc
 class __$TestScriptFixtureCopyWithImpl<$Res>
     extends _$TestScriptFixtureCopyWithImpl<$Res>
     implements _$TestScriptFixtureCopyWith<$Res> {
@@ -13299,6 +13717,8 @@ class __$TestScriptFixtureCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TestScriptFixture extends _TestScriptFixture {
   _$_TestScriptFixture(
       {this.id,
@@ -13432,6 +13852,7 @@ TestScriptVariable _$TestScriptVariableFromJson(Map<String, dynamic> json) {
   return _TestScriptVariable.fromJson(json);
 }
 
+/// @nodoc
 class _$TestScriptVariableTearOff {
   const _$TestScriptVariableTearOff();
 
@@ -13478,11 +13899,18 @@ class _$TestScriptVariableTearOff {
       sourceIdElement: sourceIdElement,
     );
   }
+
+// ignore: unused_element
+  TestScriptVariable fromJson(Map<String, Object> json) {
+    return TestScriptVariable.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TestScriptVariable = _$TestScriptVariableTearOff();
 
+/// @nodoc
 mixin _$TestScriptVariable {
   String get id;
   @JsonKey(name: 'extension')
@@ -13517,6 +13945,7 @@ mixin _$TestScriptVariable {
   $TestScriptVariableCopyWith<TestScriptVariable> get copyWith;
 }
 
+/// @nodoc
 abstract class $TestScriptVariableCopyWith<$Res> {
   factory $TestScriptVariableCopyWith(
           TestScriptVariable value, $Res Function(TestScriptVariable) then) =
@@ -13552,6 +13981,7 @@ abstract class $TestScriptVariableCopyWith<$Res> {
   $ElementCopyWith<$Res> get sourceIdElement;
 }
 
+/// @nodoc
 class _$TestScriptVariableCopyWithImpl<$Res>
     implements $TestScriptVariableCopyWith<$Res> {
   _$TestScriptVariableCopyWithImpl(this._value, this._then);
@@ -13708,6 +14138,7 @@ class _$TestScriptVariableCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$TestScriptVariableCopyWith<$Res>
     implements $TestScriptVariableCopyWith<$Res> {
   factory _$TestScriptVariableCopyWith(
@@ -13753,6 +14184,7 @@ abstract class _$TestScriptVariableCopyWith<$Res>
   $ElementCopyWith<$Res> get sourceIdElement;
 }
 
+/// @nodoc
 class __$TestScriptVariableCopyWithImpl<$Res>
     extends _$TestScriptVariableCopyWithImpl<$Res>
     implements _$TestScriptVariableCopyWith<$Res> {
@@ -13832,6 +14264,8 @@ class __$TestScriptVariableCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TestScriptVariable extends _TestScriptVariable {
   _$_TestScriptVariable(
       {this.id,
@@ -14085,6 +14519,7 @@ TestScriptSetup _$TestScriptSetupFromJson(Map<String, dynamic> json) {
   return _TestScriptSetup.fromJson(json);
 }
 
+/// @nodoc
 class _$TestScriptSetupTearOff {
   const _$TestScriptSetupTearOff();
 
@@ -14101,11 +14536,18 @@ class _$TestScriptSetupTearOff {
       action: action,
     );
   }
+
+// ignore: unused_element
+  TestScriptSetup fromJson(Map<String, Object> json) {
+    return TestScriptSetup.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TestScriptSetup = _$TestScriptSetupTearOff();
 
+/// @nodoc
 mixin _$TestScriptSetup {
   String get id;
   @JsonKey(name: 'extension')
@@ -14117,6 +14559,7 @@ mixin _$TestScriptSetup {
   $TestScriptSetupCopyWith<TestScriptSetup> get copyWith;
 }
 
+/// @nodoc
 abstract class $TestScriptSetupCopyWith<$Res> {
   factory $TestScriptSetupCopyWith(
           TestScriptSetup value, $Res Function(TestScriptSetup) then) =
@@ -14128,6 +14571,7 @@ abstract class $TestScriptSetupCopyWith<$Res> {
       List<TestScriptAction> action});
 }
 
+/// @nodoc
 class _$TestScriptSetupCopyWithImpl<$Res>
     implements $TestScriptSetupCopyWith<$Res> {
   _$TestScriptSetupCopyWithImpl(this._value, this._then);
@@ -14157,6 +14601,7 @@ class _$TestScriptSetupCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$TestScriptSetupCopyWith<$Res>
     implements $TestScriptSetupCopyWith<$Res> {
   factory _$TestScriptSetupCopyWith(
@@ -14170,6 +14615,7 @@ abstract class _$TestScriptSetupCopyWith<$Res>
       List<TestScriptAction> action});
 }
 
+/// @nodoc
 class __$TestScriptSetupCopyWithImpl<$Res>
     extends _$TestScriptSetupCopyWithImpl<$Res>
     implements _$TestScriptSetupCopyWith<$Res> {
@@ -14202,6 +14648,8 @@ class __$TestScriptSetupCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TestScriptSetup extends _TestScriptSetup {
   _$_TestScriptSetup(
       {this.id,
@@ -14291,6 +14739,7 @@ TestScriptAction _$TestScriptActionFromJson(Map<String, dynamic> json) {
   return _TestScriptAction.fromJson(json);
 }
 
+/// @nodoc
 class _$TestScriptActionTearOff {
   const _$TestScriptActionTearOff();
 
@@ -14309,11 +14758,18 @@ class _$TestScriptActionTearOff {
       assert_: assert_,
     );
   }
+
+// ignore: unused_element
+  TestScriptAction fromJson(Map<String, Object> json) {
+    return TestScriptAction.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TestScriptAction = _$TestScriptActionTearOff();
 
+/// @nodoc
 mixin _$TestScriptAction {
   String get id;
   @JsonKey(name: 'extension')
@@ -14327,6 +14783,7 @@ mixin _$TestScriptAction {
   $TestScriptActionCopyWith<TestScriptAction> get copyWith;
 }
 
+/// @nodoc
 abstract class $TestScriptActionCopyWith<$Res> {
   factory $TestScriptActionCopyWith(
           TestScriptAction value, $Res Function(TestScriptAction) then) =
@@ -14342,6 +14799,7 @@ abstract class $TestScriptActionCopyWith<$Res> {
   $TestScriptAssertCopyWith<$Res> get assert_;
 }
 
+/// @nodoc
 class _$TestScriptActionCopyWithImpl<$Res>
     implements $TestScriptActionCopyWith<$Res> {
   _$TestScriptActionCopyWithImpl(this._value, this._then);
@@ -14395,6 +14853,7 @@ class _$TestScriptActionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$TestScriptActionCopyWith<$Res>
     implements $TestScriptActionCopyWith<$Res> {
   factory _$TestScriptActionCopyWith(
@@ -14414,6 +14873,7 @@ abstract class _$TestScriptActionCopyWith<$Res>
   $TestScriptAssertCopyWith<$Res> get assert_;
 }
 
+/// @nodoc
 class __$TestScriptActionCopyWithImpl<$Res>
     extends _$TestScriptActionCopyWithImpl<$Res>
     implements _$TestScriptActionCopyWith<$Res> {
@@ -14450,6 +14910,8 @@ class __$TestScriptActionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TestScriptAction extends _TestScriptAction {
   _$_TestScriptAction(
       {this.id,
@@ -14550,6 +15012,7 @@ TestScriptOperation _$TestScriptOperationFromJson(Map<String, dynamic> json) {
   return _TestScriptOperation.fromJson(json);
 }
 
+/// @nodoc
 class _$TestScriptOperationTearOff {
   const _$TestScriptOperationTearOff();
 
@@ -14645,11 +15108,18 @@ class _$TestScriptOperationTearOff {
       urlElement: urlElement,
     );
   }
+
+// ignore: unused_element
+  TestScriptOperation fromJson(Map<String, Object> json) {
+    return TestScriptOperation.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TestScriptOperation = _$TestScriptOperationTearOff();
 
+/// @nodoc
 mixin _$TestScriptOperation {
   String get id;
   @JsonKey(name: 'extension')
@@ -14708,6 +15178,7 @@ mixin _$TestScriptOperation {
   $TestScriptOperationCopyWith<TestScriptOperation> get copyWith;
 }
 
+/// @nodoc
 abstract class $TestScriptOperationCopyWith<$Res> {
   factory $TestScriptOperationCopyWith(
           TestScriptOperation value, $Res Function(TestScriptOperation) then) =
@@ -14784,6 +15255,7 @@ abstract class $TestScriptOperationCopyWith<$Res> {
   $ElementCopyWith<$Res> get urlElement;
 }
 
+/// @nodoc
 class _$TestScriptOperationCopyWithImpl<$Res>
     implements $TestScriptOperationCopyWith<$Res> {
   _$TestScriptOperationCopyWithImpl(this._value, this._then);
@@ -15072,6 +15544,7 @@ class _$TestScriptOperationCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$TestScriptOperationCopyWith<$Res>
     implements $TestScriptOperationCopyWith<$Res> {
   factory _$TestScriptOperationCopyWith(_TestScriptOperation value,
@@ -15166,6 +15639,7 @@ abstract class _$TestScriptOperationCopyWith<$Res>
   $ElementCopyWith<$Res> get urlElement;
 }
 
+/// @nodoc
 class __$TestScriptOperationCopyWithImpl<$Res>
     extends _$TestScriptOperationCopyWithImpl<$Res>
     implements _$TestScriptOperationCopyWith<$Res> {
@@ -15297,6 +15771,8 @@ class __$TestScriptOperationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TestScriptOperation extends _TestScriptOperation {
   _$_TestScriptOperation(
       {this.id,
@@ -15719,6 +16195,7 @@ TestScriptRequestHeader _$TestScriptRequestHeaderFromJson(
   return _TestScriptRequestHeader.fromJson(json);
 }
 
+/// @nodoc
 class _$TestScriptRequestHeaderTearOff {
   const _$TestScriptRequestHeaderTearOff();
 
@@ -15741,11 +16218,18 @@ class _$TestScriptRequestHeaderTearOff {
       valueElement: valueElement,
     );
   }
+
+// ignore: unused_element
+  TestScriptRequestHeader fromJson(Map<String, Object> json) {
+    return TestScriptRequestHeader.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TestScriptRequestHeader = _$TestScriptRequestHeaderTearOff();
 
+/// @nodoc
 mixin _$TestScriptRequestHeader {
   String get id;
   @JsonKey(name: 'extension')
@@ -15762,6 +16246,7 @@ mixin _$TestScriptRequestHeader {
   $TestScriptRequestHeaderCopyWith<TestScriptRequestHeader> get copyWith;
 }
 
+/// @nodoc
 abstract class $TestScriptRequestHeaderCopyWith<$Res> {
   factory $TestScriptRequestHeaderCopyWith(TestScriptRequestHeader value,
           $Res Function(TestScriptRequestHeader) then) =
@@ -15779,6 +16264,7 @@ abstract class $TestScriptRequestHeaderCopyWith<$Res> {
   $ElementCopyWith<$Res> get valueElement;
 }
 
+/// @nodoc
 class _$TestScriptRequestHeaderCopyWithImpl<$Res>
     implements $TestScriptRequestHeaderCopyWith<$Res> {
   _$TestScriptRequestHeaderCopyWithImpl(this._value, this._then);
@@ -15837,6 +16323,7 @@ class _$TestScriptRequestHeaderCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$TestScriptRequestHeaderCopyWith<$Res>
     implements $TestScriptRequestHeaderCopyWith<$Res> {
   factory _$TestScriptRequestHeaderCopyWith(_TestScriptRequestHeader value,
@@ -15858,6 +16345,7 @@ abstract class _$TestScriptRequestHeaderCopyWith<$Res>
   $ElementCopyWith<$Res> get valueElement;
 }
 
+/// @nodoc
 class __$TestScriptRequestHeaderCopyWithImpl<$Res>
     extends _$TestScriptRequestHeaderCopyWithImpl<$Res>
     implements _$TestScriptRequestHeaderCopyWith<$Res> {
@@ -15900,6 +16388,8 @@ class __$TestScriptRequestHeaderCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TestScriptRequestHeader extends _TestScriptRequestHeader {
   _$_TestScriptRequestHeader(
       {this.id,
@@ -16023,6 +16513,7 @@ TestScriptAssert _$TestScriptAssertFromJson(Map<String, dynamic> json) {
   return _TestScriptAssert.fromJson(json);
 }
 
+/// @nodoc
 class _$TestScriptAssertTearOff {
   const _$TestScriptAssertTearOff();
 
@@ -16152,11 +16643,18 @@ class _$TestScriptAssertTearOff {
       warningOnlyElement: warningOnlyElement,
     );
   }
+
+// ignore: unused_element
+  TestScriptAssert fromJson(Map<String, Object> json) {
+    return TestScriptAssert.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TestScriptAssert = _$TestScriptAssertTearOff();
 
+/// @nodoc
 mixin _$TestScriptAssert {
   String get id;
   @JsonKey(name: 'extension')
@@ -16237,6 +16735,7 @@ mixin _$TestScriptAssert {
   $TestScriptAssertCopyWith<TestScriptAssert> get copyWith;
 }
 
+/// @nodoc
 abstract class $TestScriptAssertCopyWith<$Res> {
   factory $TestScriptAssertCopyWith(
           TestScriptAssert value, $Res Function(TestScriptAssert) then) =
@@ -16341,6 +16840,7 @@ abstract class $TestScriptAssertCopyWith<$Res> {
   $ElementCopyWith<$Res> get warningOnlyElement;
 }
 
+/// @nodoc
 class _$TestScriptAssertCopyWithImpl<$Res>
     implements $TestScriptAssertCopyWith<$Res> {
   _$TestScriptAssertCopyWithImpl(this._value, this._then);
@@ -16746,6 +17246,7 @@ class _$TestScriptAssertCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$TestScriptAssertCopyWith<$Res>
     implements $TestScriptAssertCopyWith<$Res> {
   factory _$TestScriptAssertCopyWith(
@@ -16874,6 +17375,7 @@ abstract class _$TestScriptAssertCopyWith<$Res>
   $ElementCopyWith<$Res> get warningOnlyElement;
 }
 
+/// @nodoc
 class __$TestScriptAssertCopyWithImpl<$Res>
     extends _$TestScriptAssertCopyWithImpl<$Res>
     implements _$TestScriptAssertCopyWith<$Res> {
@@ -17061,6 +17563,8 @@ class __$TestScriptAssertCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TestScriptAssert extends _TestScriptAssert {
   _$_TestScriptAssert(
       {this.id,
@@ -17628,6 +18132,7 @@ TestScriptTest _$TestScriptTestFromJson(Map<String, dynamic> json) {
   return _TestScriptTest.fromJson(json);
 }
 
+/// @nodoc
 class _$TestScriptTestTearOff {
   const _$TestScriptTestTearOff();
 
@@ -17652,11 +18157,18 @@ class _$TestScriptTestTearOff {
       action: action,
     );
   }
+
+// ignore: unused_element
+  TestScriptTest fromJson(Map<String, Object> json) {
+    return TestScriptTest.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TestScriptTest = _$TestScriptTestTearOff();
 
+/// @nodoc
 mixin _$TestScriptTest {
   String get id;
   @JsonKey(name: 'extension')
@@ -17674,6 +18186,7 @@ mixin _$TestScriptTest {
   $TestScriptTestCopyWith<TestScriptTest> get copyWith;
 }
 
+/// @nodoc
 abstract class $TestScriptTestCopyWith<$Res> {
   factory $TestScriptTestCopyWith(
           TestScriptTest value, $Res Function(TestScriptTest) then) =
@@ -17692,6 +18205,7 @@ abstract class $TestScriptTestCopyWith<$Res> {
   $ElementCopyWith<$Res> get descriptionElement;
 }
 
+/// @nodoc
 class _$TestScriptTestCopyWithImpl<$Res>
     implements $TestScriptTestCopyWith<$Res> {
   _$TestScriptTestCopyWithImpl(this._value, this._then);
@@ -17753,6 +18267,7 @@ class _$TestScriptTestCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$TestScriptTestCopyWith<$Res>
     implements $TestScriptTestCopyWith<$Res> {
   factory _$TestScriptTestCopyWith(
@@ -17775,6 +18290,7 @@ abstract class _$TestScriptTestCopyWith<$Res>
   $ElementCopyWith<$Res> get descriptionElement;
 }
 
+/// @nodoc
 class __$TestScriptTestCopyWithImpl<$Res>
     extends _$TestScriptTestCopyWithImpl<$Res>
     implements _$TestScriptTestCopyWith<$Res> {
@@ -17819,6 +18335,8 @@ class __$TestScriptTestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TestScriptTest extends _TestScriptTest {
   _$_TestScriptTest(
       {this.id,
@@ -17951,6 +18469,7 @@ TestScriptAction1 _$TestScriptAction1FromJson(Map<String, dynamic> json) {
   return _TestScriptAction1.fromJson(json);
 }
 
+/// @nodoc
 class _$TestScriptAction1TearOff {
   const _$TestScriptAction1TearOff();
 
@@ -17969,11 +18488,18 @@ class _$TestScriptAction1TearOff {
       assert_: assert_,
     );
   }
+
+// ignore: unused_element
+  TestScriptAction1 fromJson(Map<String, Object> json) {
+    return TestScriptAction1.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TestScriptAction1 = _$TestScriptAction1TearOff();
 
+/// @nodoc
 mixin _$TestScriptAction1 {
   String get id;
   @JsonKey(name: 'extension')
@@ -17987,6 +18513,7 @@ mixin _$TestScriptAction1 {
   $TestScriptAction1CopyWith<TestScriptAction1> get copyWith;
 }
 
+/// @nodoc
 abstract class $TestScriptAction1CopyWith<$Res> {
   factory $TestScriptAction1CopyWith(
           TestScriptAction1 value, $Res Function(TestScriptAction1) then) =
@@ -18002,6 +18529,7 @@ abstract class $TestScriptAction1CopyWith<$Res> {
   $TestScriptAssertCopyWith<$Res> get assert_;
 }
 
+/// @nodoc
 class _$TestScriptAction1CopyWithImpl<$Res>
     implements $TestScriptAction1CopyWith<$Res> {
   _$TestScriptAction1CopyWithImpl(this._value, this._then);
@@ -18055,6 +18583,7 @@ class _$TestScriptAction1CopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$TestScriptAction1CopyWith<$Res>
     implements $TestScriptAction1CopyWith<$Res> {
   factory _$TestScriptAction1CopyWith(
@@ -18074,6 +18603,7 @@ abstract class _$TestScriptAction1CopyWith<$Res>
   $TestScriptAssertCopyWith<$Res> get assert_;
 }
 
+/// @nodoc
 class __$TestScriptAction1CopyWithImpl<$Res>
     extends _$TestScriptAction1CopyWithImpl<$Res>
     implements _$TestScriptAction1CopyWith<$Res> {
@@ -18110,6 +18640,8 @@ class __$TestScriptAction1CopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TestScriptAction1 extends _TestScriptAction1 {
   _$_TestScriptAction1(
       {this.id,
@@ -18211,6 +18743,7 @@ TestScriptTeardown _$TestScriptTeardownFromJson(Map<String, dynamic> json) {
   return _TestScriptTeardown.fromJson(json);
 }
 
+/// @nodoc
 class _$TestScriptTeardownTearOff {
   const _$TestScriptTeardownTearOff();
 
@@ -18227,11 +18760,18 @@ class _$TestScriptTeardownTearOff {
       action: action,
     );
   }
+
+// ignore: unused_element
+  TestScriptTeardown fromJson(Map<String, Object> json) {
+    return TestScriptTeardown.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TestScriptTeardown = _$TestScriptTeardownTearOff();
 
+/// @nodoc
 mixin _$TestScriptTeardown {
   String get id;
   @JsonKey(name: 'extension')
@@ -18243,6 +18783,7 @@ mixin _$TestScriptTeardown {
   $TestScriptTeardownCopyWith<TestScriptTeardown> get copyWith;
 }
 
+/// @nodoc
 abstract class $TestScriptTeardownCopyWith<$Res> {
   factory $TestScriptTeardownCopyWith(
           TestScriptTeardown value, $Res Function(TestScriptTeardown) then) =
@@ -18254,6 +18795,7 @@ abstract class $TestScriptTeardownCopyWith<$Res> {
       List<TestScriptAction2> action});
 }
 
+/// @nodoc
 class _$TestScriptTeardownCopyWithImpl<$Res>
     implements $TestScriptTeardownCopyWith<$Res> {
   _$TestScriptTeardownCopyWithImpl(this._value, this._then);
@@ -18283,6 +18825,7 @@ class _$TestScriptTeardownCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$TestScriptTeardownCopyWith<$Res>
     implements $TestScriptTeardownCopyWith<$Res> {
   factory _$TestScriptTeardownCopyWith(
@@ -18296,6 +18839,7 @@ abstract class _$TestScriptTeardownCopyWith<$Res>
       List<TestScriptAction2> action});
 }
 
+/// @nodoc
 class __$TestScriptTeardownCopyWithImpl<$Res>
     extends _$TestScriptTeardownCopyWithImpl<$Res>
     implements _$TestScriptTeardownCopyWith<$Res> {
@@ -18328,6 +18872,8 @@ class __$TestScriptTeardownCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TestScriptTeardown extends _TestScriptTeardown {
   _$_TestScriptTeardown(
       {this.id,
@@ -18417,6 +18963,7 @@ TestScriptAction2 _$TestScriptAction2FromJson(Map<String, dynamic> json) {
   return _TestScriptAction2.fromJson(json);
 }
 
+/// @nodoc
 class _$TestScriptAction2TearOff {
   const _$TestScriptAction2TearOff();
 
@@ -18433,11 +18980,18 @@ class _$TestScriptAction2TearOff {
       operation: operation,
     );
   }
+
+// ignore: unused_element
+  TestScriptAction2 fromJson(Map<String, Object> json) {
+    return TestScriptAction2.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TestScriptAction2 = _$TestScriptAction2TearOff();
 
+/// @nodoc
 mixin _$TestScriptAction2 {
   String get id;
   @JsonKey(name: 'extension')
@@ -18449,6 +19003,7 @@ mixin _$TestScriptAction2 {
   $TestScriptAction2CopyWith<TestScriptAction2> get copyWith;
 }
 
+/// @nodoc
 abstract class $TestScriptAction2CopyWith<$Res> {
   factory $TestScriptAction2CopyWith(
           TestScriptAction2 value, $Res Function(TestScriptAction2) then) =
@@ -18462,6 +19017,7 @@ abstract class $TestScriptAction2CopyWith<$Res> {
   $TestScriptOperationCopyWith<$Res> get operation;
 }
 
+/// @nodoc
 class _$TestScriptAction2CopyWithImpl<$Res>
     implements $TestScriptAction2CopyWith<$Res> {
   _$TestScriptAction2CopyWithImpl(this._value, this._then);
@@ -18502,6 +19058,7 @@ class _$TestScriptAction2CopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$TestScriptAction2CopyWith<$Res>
     implements $TestScriptAction2CopyWith<$Res> {
   factory _$TestScriptAction2CopyWith(
@@ -18518,6 +19075,7 @@ abstract class _$TestScriptAction2CopyWith<$Res>
   $TestScriptOperationCopyWith<$Res> get operation;
 }
 
+/// @nodoc
 class __$TestScriptAction2CopyWithImpl<$Res>
     extends _$TestScriptAction2CopyWithImpl<$Res>
     implements _$TestScriptAction2CopyWith<$Res> {
@@ -18551,6 +19109,8 @@ class __$TestScriptAction2CopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TestScriptAction2 extends _TestScriptAction2 {
   _$_TestScriptAction2(
       {this.id,

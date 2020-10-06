@@ -12,6 +12,7 @@ Appointment _$AppointmentFromJson(Map<String, dynamic> json) {
   return _Appointment.fromJson(json);
 }
 
+/// @nodoc
 class _$AppointmentTearOff {
   const _$AppointmentTearOff();
 
@@ -118,11 +119,18 @@ class _$AppointmentTearOff {
       requestedPeriod: requestedPeriod,
     );
   }
+
+// ignore: unused_element
+  Appointment fromJson(Map<String, Object> json) {
+    return Appointment.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Appointment = _$AppointmentTearOff();
 
+/// @nodoc
 mixin _$Appointment {
   @JsonKey(defaultValue: 'Appointment')
   String get resourceType;
@@ -184,6 +192,7 @@ mixin _$Appointment {
   $AppointmentCopyWith<Appointment> get copyWith;
 }
 
+/// @nodoc
 abstract class $AppointmentCopyWith<$Res> {
   factory $AppointmentCopyWith(
           Appointment value, $Res Function(Appointment) then) =
@@ -262,6 +271,7 @@ abstract class $AppointmentCopyWith<$Res> {
   $ElementCopyWith<$Res> get patientInstructionElement;
 }
 
+/// @nodoc
 class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
   _$AppointmentCopyWithImpl(this._value, this._then);
 
@@ -563,6 +573,7 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$AppointmentCopyWith<$Res>
     implements $AppointmentCopyWith<$Res> {
   factory _$AppointmentCopyWith(
@@ -658,6 +669,7 @@ abstract class _$AppointmentCopyWith<$Res>
   $ElementCopyWith<$Res> get patientInstructionElement;
 }
 
+/// @nodoc
 class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
     implements _$AppointmentCopyWith<$Res> {
   __$AppointmentCopyWithImpl(
@@ -812,6 +824,8 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Appointment extends _Appointment {
   _$_Appointment(
       {@required @JsonKey(defaultValue: 'Appointment') this.resourceType,
@@ -1278,6 +1292,7 @@ AppointmentParticipant _$AppointmentParticipantFromJson(
   return _AppointmentParticipant.fromJson(json);
 }
 
+/// @nodoc
 class _$AppointmentParticipantTearOff {
   const _$AppointmentParticipantTearOff();
 
@@ -1311,11 +1326,18 @@ class _$AppointmentParticipantTearOff {
       period: period,
     );
   }
+
+// ignore: unused_element
+  AppointmentParticipant fromJson(Map<String, Object> json) {
+    return AppointmentParticipant.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $AppointmentParticipant = _$AppointmentParticipantTearOff();
 
+/// @nodoc
 mixin _$AppointmentParticipant {
   String get id;
   @JsonKey(name: 'extension')
@@ -1337,6 +1359,7 @@ mixin _$AppointmentParticipant {
   $AppointmentParticipantCopyWith<AppointmentParticipant> get copyWith;
 }
 
+/// @nodoc
 abstract class $AppointmentParticipantCopyWith<$Res> {
   factory $AppointmentParticipantCopyWith(AppointmentParticipant value,
           $Res Function(AppointmentParticipant) then) =
@@ -1364,6 +1387,7 @@ abstract class $AppointmentParticipantCopyWith<$Res> {
   $PeriodCopyWith<$Res> get period;
 }
 
+/// @nodoc
 class _$AppointmentParticipantCopyWithImpl<$Res>
     implements $AppointmentParticipantCopyWith<$Res> {
   _$AppointmentParticipantCopyWithImpl(this._value, this._then);
@@ -1452,6 +1476,7 @@ class _$AppointmentParticipantCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$AppointmentParticipantCopyWith<$Res>
     implements $AppointmentParticipantCopyWith<$Res> {
   factory _$AppointmentParticipantCopyWith(_AppointmentParticipant value,
@@ -1485,6 +1510,7 @@ abstract class _$AppointmentParticipantCopyWith<$Res>
   $PeriodCopyWith<$Res> get period;
 }
 
+/// @nodoc
 class __$AppointmentParticipantCopyWithImpl<$Res>
     extends _$AppointmentParticipantCopyWithImpl<$Res>
     implements _$AppointmentParticipantCopyWith<$Res> {
@@ -1536,6 +1562,8 @@ class __$AppointmentParticipantCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_AppointmentParticipant extends _AppointmentParticipant {
   _$_AppointmentParticipant(
       {this.id,
@@ -1700,6 +1728,7 @@ AppointmentResponse _$AppointmentResponseFromJson(Map<String, dynamic> json) {
   return _AppointmentResponse.fromJson(json);
 }
 
+/// @nodoc
 class _$AppointmentResponseTearOff {
   const _$AppointmentResponseTearOff();
 
@@ -1764,11 +1793,18 @@ class _$AppointmentResponseTearOff {
       commentElement: commentElement,
     );
   }
+
+// ignore: unused_element
+  AppointmentResponse fromJson(Map<String, Object> json) {
+    return AppointmentResponse.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $AppointmentResponse = _$AppointmentResponseTearOff();
 
+/// @nodoc
 mixin _$AppointmentResponse {
   @JsonKey(defaultValue: 'AppointmentResponse')
   String get resourceType;
@@ -1806,6 +1842,7 @@ mixin _$AppointmentResponse {
   $AppointmentResponseCopyWith<AppointmentResponse> get copyWith;
 }
 
+/// @nodoc
 abstract class $AppointmentResponseCopyWith<$Res> {
   factory $AppointmentResponseCopyWith(
           AppointmentResponse value, $Res Function(AppointmentResponse) then) =
@@ -1847,6 +1884,7 @@ abstract class $AppointmentResponseCopyWith<$Res> {
   $ElementCopyWith<$Res> get commentElement;
 }
 
+/// @nodoc
 class _$AppointmentResponseCopyWithImpl<$Res>
     implements $AppointmentResponseCopyWith<$Res> {
   _$AppointmentResponseCopyWithImpl(this._value, this._then);
@@ -2037,6 +2075,7 @@ class _$AppointmentResponseCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$AppointmentResponseCopyWith<$Res>
     implements $AppointmentResponseCopyWith<$Res> {
   factory _$AppointmentResponseCopyWith(_AppointmentResponse value,
@@ -2090,6 +2129,7 @@ abstract class _$AppointmentResponseCopyWith<$Res>
   $ElementCopyWith<$Res> get commentElement;
 }
 
+/// @nodoc
 class __$AppointmentResponseCopyWithImpl<$Res>
     extends _$AppointmentResponseCopyWithImpl<$Res>
     implements _$AppointmentResponseCopyWith<$Res> {
@@ -2183,6 +2223,8 @@ class __$AppointmentResponseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_AppointmentResponse extends _AppointmentResponse {
   _$_AppointmentResponse(
       {@required
@@ -2496,6 +2538,7 @@ Schedule _$ScheduleFromJson(Map<String, dynamic> json) {
   return _Schedule.fromJson(json);
 }
 
+/// @nodoc
 class _$ScheduleTearOff {
   const _$ScheduleTearOff();
 
@@ -2546,11 +2589,18 @@ class _$ScheduleTearOff {
       commentElement: commentElement,
     );
   }
+
+// ignore: unused_element
+  Schedule fromJson(Map<String, Object> json) {
+    return Schedule.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Schedule = _$ScheduleTearOff();
 
+/// @nodoc
 mixin _$Schedule {
   @JsonKey(defaultValue: 'Schedule')
   String get resourceType;
@@ -2584,6 +2634,7 @@ mixin _$Schedule {
   $ScheduleCopyWith<Schedule> get copyWith;
 }
 
+/// @nodoc
 abstract class $ScheduleCopyWith<$Res> {
   factory $ScheduleCopyWith(Schedule value, $Res Function(Schedule) then) =
       _$ScheduleCopyWithImpl<$Res>;
@@ -2619,6 +2670,7 @@ abstract class $ScheduleCopyWith<$Res> {
   $ElementCopyWith<$Res> get commentElement;
 }
 
+/// @nodoc
 class _$ScheduleCopyWithImpl<$Res> implements $ScheduleCopyWith<$Res> {
   _$ScheduleCopyWithImpl(this._value, this._then);
 
@@ -2773,6 +2825,7 @@ class _$ScheduleCopyWithImpl<$Res> implements $ScheduleCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
   factory _$ScheduleCopyWith(_Schedule value, $Res Function(_Schedule) then) =
       __$ScheduleCopyWithImpl<$Res>;
@@ -2816,6 +2869,7 @@ abstract class _$ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
   $ElementCopyWith<$Res> get commentElement;
 }
 
+/// @nodoc
 class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
     implements _$ScheduleCopyWith<$Res> {
   __$ScheduleCopyWithImpl(_Schedule _value, $Res Function(_Schedule) _then)
@@ -2902,6 +2956,8 @@ class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Schedule extends _Schedule {
   _$_Schedule(
       {@required @JsonKey(defaultValue: 'Schedule') this.resourceType,
@@ -3168,6 +3224,7 @@ Slot _$SlotFromJson(Map<String, dynamic> json) {
   return _Slot.fromJson(json);
 }
 
+/// @nodoc
 class _$SlotTearOff {
   const _$SlotTearOff();
 
@@ -3230,11 +3287,18 @@ class _$SlotTearOff {
       commentElement: commentElement,
     );
   }
+
+// ignore: unused_element
+  Slot fromJson(Map<String, Object> json) {
+    return Slot.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Slot = _$SlotTearOff();
 
+/// @nodoc
 mixin _$Slot {
   @JsonKey(defaultValue: 'Slot')
   String get resourceType;
@@ -3278,6 +3342,7 @@ mixin _$Slot {
   $SlotCopyWith<Slot> get copyWith;
 }
 
+/// @nodoc
 abstract class $SlotCopyWith<$Res> {
   factory $SlotCopyWith(Slot value, $Res Function(Slot) then) =
       _$SlotCopyWithImpl<$Res>;
@@ -3323,6 +3388,7 @@ abstract class $SlotCopyWith<$Res> {
   $ElementCopyWith<$Res> get commentElement;
 }
 
+/// @nodoc
 class _$SlotCopyWithImpl<$Res> implements $SlotCopyWith<$Res> {
   _$SlotCopyWithImpl(this._value, this._then);
 
@@ -3535,6 +3601,7 @@ class _$SlotCopyWithImpl<$Res> implements $SlotCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
   factory _$SlotCopyWith(_Slot value, $Res Function(_Slot) then) =
       __$SlotCopyWithImpl<$Res>;
@@ -3592,6 +3659,7 @@ abstract class _$SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
   $ElementCopyWith<$Res> get commentElement;
 }
 
+/// @nodoc
 class __$SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
     implements _$SlotCopyWith<$Res> {
   __$SlotCopyWithImpl(_Slot _value, $Res Function(_Slot) _then)
@@ -3696,6 +3764,8 @@ class __$SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Slot extends _Slot {
   _$_Slot(
       {@required @JsonKey(defaultValue: 'Slot') this.resourceType,
@@ -4024,6 +4094,7 @@ Task _$TaskFromJson(Map<String, dynamic> json) {
   return _Task.fromJson(json);
 }
 
+/// @nodoc
 class _$TaskTearOff {
   const _$TaskTearOff();
 
@@ -4130,11 +4201,18 @@ class _$TaskTearOff {
       output: output,
     );
   }
+
+// ignore: unused_element
+  Task fromJson(Map<String, Object> json) {
+    return Task.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Task = _$TaskTearOff();
 
+/// @nodoc
 mixin _$Task {
   @JsonKey(defaultValue: 'Task')
   String get resourceType;
@@ -4204,6 +4282,7 @@ mixin _$Task {
   $TaskCopyWith<Task> get copyWith;
 }
 
+/// @nodoc
 abstract class $TaskCopyWith<$Res> {
   factory $TaskCopyWith(Task value, $Res Function(Task) then) =
       _$TaskCopyWithImpl<$Res>;
@@ -4285,6 +4364,7 @@ abstract class $TaskCopyWith<$Res> {
   $TaskRestrictionCopyWith<$Res> get restriction;
 }
 
+/// @nodoc
 class _$TaskCopyWithImpl<$Res> implements $TaskCopyWith<$Res> {
   _$TaskCopyWithImpl(this._value, this._then);
 
@@ -4708,6 +4788,7 @@ class _$TaskCopyWithImpl<$Res> implements $TaskCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$TaskCopyWith<$Res> implements $TaskCopyWith<$Res> {
   factory _$TaskCopyWith(_Task value, $Res Function(_Task) then) =
       __$TaskCopyWithImpl<$Res>;
@@ -4815,6 +4896,7 @@ abstract class _$TaskCopyWith<$Res> implements $TaskCopyWith<$Res> {
   $TaskRestrictionCopyWith<$Res> get restriction;
 }
 
+/// @nodoc
 class __$TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res>
     implements _$TaskCopyWith<$Res> {
   __$TaskCopyWithImpl(_Task _value, $Res Function(_Task) _then)
@@ -4990,6 +5072,8 @@ class __$TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Task extends _Task {
   _$_Task(
       {@required @JsonKey(defaultValue: 'Task') this.resourceType,
@@ -5500,6 +5584,7 @@ TaskRestriction _$TaskRestrictionFromJson(Map<String, dynamic> json) {
   return _TaskRestriction.fromJson(json);
 }
 
+/// @nodoc
 class _$TaskRestrictionTearOff {
   const _$TaskRestrictionTearOff();
 
@@ -5522,11 +5607,18 @@ class _$TaskRestrictionTearOff {
       recipient: recipient,
     );
   }
+
+// ignore: unused_element
+  TaskRestriction fromJson(Map<String, Object> json) {
+    return TaskRestriction.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TaskRestriction = _$TaskRestrictionTearOff();
 
+/// @nodoc
 mixin _$TaskRestriction {
   String get id;
   @JsonKey(name: 'extension')
@@ -5542,6 +5634,7 @@ mixin _$TaskRestriction {
   $TaskRestrictionCopyWith<TaskRestriction> get copyWith;
 }
 
+/// @nodoc
 abstract class $TaskRestrictionCopyWith<$Res> {
   factory $TaskRestrictionCopyWith(
           TaskRestriction value, $Res Function(TaskRestriction) then) =
@@ -5559,6 +5652,7 @@ abstract class $TaskRestrictionCopyWith<$Res> {
   $PeriodCopyWith<$Res> get period;
 }
 
+/// @nodoc
 class _$TaskRestrictionCopyWithImpl<$Res>
     implements $TaskRestrictionCopyWith<$Res> {
   _$TaskRestrictionCopyWithImpl(this._value, this._then);
@@ -5619,6 +5713,7 @@ class _$TaskRestrictionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$TaskRestrictionCopyWith<$Res>
     implements $TaskRestrictionCopyWith<$Res> {
   factory _$TaskRestrictionCopyWith(
@@ -5640,6 +5735,7 @@ abstract class _$TaskRestrictionCopyWith<$Res>
   $PeriodCopyWith<$Res> get period;
 }
 
+/// @nodoc
 class __$TaskRestrictionCopyWithImpl<$Res>
     extends _$TaskRestrictionCopyWithImpl<$Res>
     implements _$TaskRestrictionCopyWith<$Res> {
@@ -5683,6 +5779,8 @@ class __$TaskRestrictionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TaskRestriction extends _TaskRestriction {
   _$_TaskRestriction(
       {this.id,
@@ -5803,6 +5901,7 @@ TaskInput _$TaskInputFromJson(Map<String, dynamic> json) {
   return _TaskInput.fromJson(json);
 }
 
+/// @nodoc
 class _$TaskInputTearOff {
   const _$TaskInputTearOff();
 
@@ -5961,11 +6060,18 @@ class _$TaskInputTearOff {
       valueMeta: valueMeta,
     );
   }
+
+// ignore: unused_element
+  TaskInput fromJson(Map<String, Object> json) {
+    return TaskInput.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TaskInput = _$TaskInputTearOff();
 
+/// @nodoc
 mixin _$TaskInput {
   String get id;
   @JsonKey(name: 'extension')
@@ -6068,6 +6174,7 @@ mixin _$TaskInput {
   $TaskInputCopyWith<TaskInput> get copyWith;
 }
 
+/// @nodoc
 abstract class $TaskInputCopyWith<$Res> {
   factory $TaskInputCopyWith(TaskInput value, $Res Function(TaskInput) then) =
       _$TaskInputCopyWithImpl<$Res>;
@@ -6202,6 +6309,7 @@ abstract class $TaskInputCopyWith<$Res> {
   $MetaCopyWith<$Res> get valueMeta;
 }
 
+/// @nodoc
 class _$TaskInputCopyWithImpl<$Res> implements $TaskInputCopyWith<$Res> {
   _$TaskInputCopyWithImpl(this._value, this._then);
 
@@ -7006,6 +7114,7 @@ class _$TaskInputCopyWithImpl<$Res> implements $TaskInputCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
   factory _$TaskInputCopyWith(
           _TaskInput value, $Res Function(_TaskInput) then) =
@@ -7194,6 +7303,7 @@ abstract class _$TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
   $MetaCopyWith<$Res> get valueMeta;
 }
 
+/// @nodoc
 class __$TaskInputCopyWithImpl<$Res> extends _$TaskInputCopyWithImpl<$Res>
     implements _$TaskInputCopyWith<$Res> {
   __$TaskInputCopyWithImpl(_TaskInput _value, $Res Function(_TaskInput) _then)
@@ -7478,6 +7588,8 @@ class __$TaskInputCopyWithImpl<$Res> extends _$TaskInputCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TaskInput extends _TaskInput {
   _$_TaskInput(
       {this.id,
@@ -8202,6 +8314,7 @@ TaskOutput _$TaskOutputFromJson(Map<String, dynamic> json) {
   return _TaskOutput.fromJson(json);
 }
 
+/// @nodoc
 class _$TaskOutputTearOff {
   const _$TaskOutputTearOff();
 
@@ -8360,11 +8473,18 @@ class _$TaskOutputTearOff {
       valueMeta: valueMeta,
     );
   }
+
+// ignore: unused_element
+  TaskOutput fromJson(Map<String, Object> json) {
+    return TaskOutput.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TaskOutput = _$TaskOutputTearOff();
 
+/// @nodoc
 mixin _$TaskOutput {
   String get id;
   @JsonKey(name: 'extension')
@@ -8467,6 +8587,7 @@ mixin _$TaskOutput {
   $TaskOutputCopyWith<TaskOutput> get copyWith;
 }
 
+/// @nodoc
 abstract class $TaskOutputCopyWith<$Res> {
   factory $TaskOutputCopyWith(
           TaskOutput value, $Res Function(TaskOutput) then) =
@@ -8602,6 +8723,7 @@ abstract class $TaskOutputCopyWith<$Res> {
   $MetaCopyWith<$Res> get valueMeta;
 }
 
+/// @nodoc
 class _$TaskOutputCopyWithImpl<$Res> implements $TaskOutputCopyWith<$Res> {
   _$TaskOutputCopyWithImpl(this._value, this._then);
 
@@ -9406,6 +9528,7 @@ class _$TaskOutputCopyWithImpl<$Res> implements $TaskOutputCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$TaskOutputCopyWith<$Res> implements $TaskOutputCopyWith<$Res> {
   factory _$TaskOutputCopyWith(
           _TaskOutput value, $Res Function(_TaskOutput) then) =
@@ -9594,6 +9717,7 @@ abstract class _$TaskOutputCopyWith<$Res> implements $TaskOutputCopyWith<$Res> {
   $MetaCopyWith<$Res> get valueMeta;
 }
 
+/// @nodoc
 class __$TaskOutputCopyWithImpl<$Res> extends _$TaskOutputCopyWithImpl<$Res>
     implements _$TaskOutputCopyWith<$Res> {
   __$TaskOutputCopyWithImpl(
@@ -9879,6 +10003,8 @@ class __$TaskOutputCopyWithImpl<$Res> extends _$TaskOutputCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TaskOutput extends _TaskOutput {
   _$_TaskOutput(
       {this.id,
@@ -10603,6 +10729,7 @@ VerificationResult _$VerificationResultFromJson(Map<String, dynamic> json) {
   return _VerificationResult.fromJson(json);
 }
 
+/// @nodoc
 class _$VerificationResultTearOff {
   const _$VerificationResultTearOff();
 
@@ -10681,11 +10808,18 @@ class _$VerificationResultTearOff {
       validator: validator,
     );
   }
+
+// ignore: unused_element
+  VerificationResult fromJson(Map<String, Object> json) {
+    return VerificationResult.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $VerificationResult = _$VerificationResultTearOff();
 
+/// @nodoc
 mixin _$VerificationResult {
   @JsonKey(defaultValue: 'VerificationResult')
   String get resourceType;
@@ -10731,6 +10865,7 @@ mixin _$VerificationResult {
   $VerificationResultCopyWith<VerificationResult> get copyWith;
 }
 
+/// @nodoc
 abstract class $VerificationResultCopyWith<$Res> {
   factory $VerificationResultCopyWith(
           VerificationResult value, $Res Function(VerificationResult) then) =
@@ -10782,6 +10917,7 @@ abstract class $VerificationResultCopyWith<$Res> {
   $VerificationResultAttestationCopyWith<$Res> get attestation;
 }
 
+/// @nodoc
 class _$VerificationResultCopyWithImpl<$Res>
     implements $VerificationResultCopyWith<$Res> {
   _$VerificationResultCopyWithImpl(this._value, this._then);
@@ -11032,6 +11168,7 @@ class _$VerificationResultCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$VerificationResultCopyWith<$Res>
     implements $VerificationResultCopyWith<$Res> {
   factory _$VerificationResultCopyWith(
@@ -11098,6 +11235,7 @@ abstract class _$VerificationResultCopyWith<$Res>
   $VerificationResultAttestationCopyWith<$Res> get attestation;
 }
 
+/// @nodoc
 class __$VerificationResultCopyWithImpl<$Res>
     extends _$VerificationResultCopyWithImpl<$Res>
     implements _$VerificationResultCopyWith<$Res> {
@@ -11220,6 +11358,8 @@ class __$VerificationResultCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_VerificationResult extends _VerificationResult {
   _$_VerificationResult(
       {@required @JsonKey(defaultValue: 'VerificationResult') this.resourceType,
@@ -11580,6 +11720,7 @@ VerificationResultPrimarySource _$VerificationResultPrimarySourceFromJson(
   return _VerificationResultPrimarySource.fromJson(json);
 }
 
+/// @nodoc
 class _$VerificationResultPrimarySourceTearOff {
   const _$VerificationResultPrimarySourceTearOff();
 
@@ -11610,12 +11751,19 @@ class _$VerificationResultPrimarySourceTearOff {
       pushTypeAvailable: pushTypeAvailable,
     );
   }
+
+// ignore: unused_element
+  VerificationResultPrimarySource fromJson(Map<String, Object> json) {
+    return VerificationResultPrimarySource.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $VerificationResultPrimarySource =
     _$VerificationResultPrimarySourceTearOff();
 
+/// @nodoc
 mixin _$VerificationResultPrimarySource {
   String get id;
   @JsonKey(name: 'extension')
@@ -11636,6 +11784,7 @@ mixin _$VerificationResultPrimarySource {
       get copyWith;
 }
 
+/// @nodoc
 abstract class $VerificationResultPrimarySourceCopyWith<$Res> {
   factory $VerificationResultPrimarySourceCopyWith(
           VerificationResultPrimarySource value,
@@ -11660,6 +11809,7 @@ abstract class $VerificationResultPrimarySourceCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get canPushUpdates;
 }
 
+/// @nodoc
 class _$VerificationResultPrimarySourceCopyWithImpl<$Res>
     implements $VerificationResultPrimarySourceCopyWith<$Res> {
   _$VerificationResultPrimarySourceCopyWithImpl(this._value, this._then);
@@ -11754,6 +11904,7 @@ class _$VerificationResultPrimarySourceCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$VerificationResultPrimarySourceCopyWith<$Res>
     implements $VerificationResultPrimarySourceCopyWith<$Res> {
   factory _$VerificationResultPrimarySourceCopyWith(
@@ -11784,6 +11935,7 @@ abstract class _$VerificationResultPrimarySourceCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get canPushUpdates;
 }
 
+/// @nodoc
 class __$VerificationResultPrimarySourceCopyWithImpl<$Res>
     extends _$VerificationResultPrimarySourceCopyWithImpl<$Res>
     implements _$VerificationResultPrimarySourceCopyWith<$Res> {
@@ -11843,6 +11995,8 @@ class __$VerificationResultPrimarySourceCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_VerificationResultPrimarySource
     extends _VerificationResultPrimarySource {
   _$_VerificationResultPrimarySource(
@@ -12009,6 +12163,7 @@ VerificationResultAttestation _$VerificationResultAttestationFromJson(
   return _VerificationResultAttestation.fromJson(json);
 }
 
+/// @nodoc
 class _$VerificationResultAttestationTearOff {
   const _$VerificationResultAttestationTearOff();
 
@@ -12049,11 +12204,18 @@ class _$VerificationResultAttestationTearOff {
       sourceSignature: sourceSignature,
     );
   }
+
+// ignore: unused_element
+  VerificationResultAttestation fromJson(Map<String, Object> json) {
+    return VerificationResultAttestation.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $VerificationResultAttestation = _$VerificationResultAttestationTearOff();
 
+/// @nodoc
 mixin _$VerificationResultAttestation {
   String get id;
   @JsonKey(name: 'extension')
@@ -12079,6 +12241,7 @@ mixin _$VerificationResultAttestation {
       get copyWith;
 }
 
+/// @nodoc
 abstract class $VerificationResultAttestationCopyWith<$Res> {
   factory $VerificationResultAttestationCopyWith(
           VerificationResultAttestation value,
@@ -12114,6 +12277,7 @@ abstract class $VerificationResultAttestationCopyWith<$Res> {
   $SignatureCopyWith<$Res> get sourceSignature;
 }
 
+/// @nodoc
 class _$VerificationResultAttestationCopyWithImpl<$Res>
     implements $VerificationResultAttestationCopyWith<$Res> {
   _$VerificationResultAttestationCopyWithImpl(this._value, this._then);
@@ -12262,6 +12426,7 @@ class _$VerificationResultAttestationCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$VerificationResultAttestationCopyWith<$Res>
     implements $VerificationResultAttestationCopyWith<$Res> {
   factory _$VerificationResultAttestationCopyWith(
@@ -12307,6 +12472,7 @@ abstract class _$VerificationResultAttestationCopyWith<$Res>
   $SignatureCopyWith<$Res> get sourceSignature;
 }
 
+/// @nodoc
 class __$VerificationResultAttestationCopyWithImpl<$Res>
     extends _$VerificationResultAttestationCopyWithImpl<$Res>
     implements _$VerificationResultAttestationCopyWith<$Res> {
@@ -12378,6 +12544,8 @@ class __$VerificationResultAttestationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_VerificationResultAttestation extends _VerificationResultAttestation {
   _$_VerificationResultAttestation(
       {this.id,
@@ -12589,6 +12757,7 @@ VerificationResultValidator _$VerificationResultValidatorFromJson(
   return _VerificationResultValidator.fromJson(json);
 }
 
+/// @nodoc
 class _$VerificationResultValidatorTearOff {
   const _$VerificationResultValidatorTearOff();
 
@@ -12611,11 +12780,18 @@ class _$VerificationResultValidatorTearOff {
       attestationSignature: attestationSignature,
     );
   }
+
+// ignore: unused_element
+  VerificationResultValidator fromJson(Map<String, Object> json) {
+    return VerificationResultValidator.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $VerificationResultValidator = _$VerificationResultValidatorTearOff();
 
+/// @nodoc
 mixin _$VerificationResultValidator {
   String get id;
   @JsonKey(name: 'extension')
@@ -12632,6 +12808,7 @@ mixin _$VerificationResultValidator {
       get copyWith;
 }
 
+/// @nodoc
 abstract class $VerificationResultValidatorCopyWith<$Res> {
   factory $VerificationResultValidatorCopyWith(
           VerificationResultValidator value,
@@ -12651,6 +12828,7 @@ abstract class $VerificationResultValidatorCopyWith<$Res> {
   $SignatureCopyWith<$Res> get attestationSignature;
 }
 
+/// @nodoc
 class _$VerificationResultValidatorCopyWithImpl<$Res>
     implements $VerificationResultValidatorCopyWith<$Res> {
   _$VerificationResultValidatorCopyWithImpl(this._value, this._then);
@@ -12723,6 +12901,7 @@ class _$VerificationResultValidatorCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$VerificationResultValidatorCopyWith<$Res>
     implements $VerificationResultValidatorCopyWith<$Res> {
   factory _$VerificationResultValidatorCopyWith(
@@ -12747,6 +12926,7 @@ abstract class _$VerificationResultValidatorCopyWith<$Res>
   $SignatureCopyWith<$Res> get attestationSignature;
 }
 
+/// @nodoc
 class __$VerificationResultValidatorCopyWithImpl<$Res>
     extends _$VerificationResultValidatorCopyWithImpl<$Res>
     implements _$VerificationResultValidatorCopyWith<$Res> {
@@ -12794,6 +12974,8 @@ class __$VerificationResultValidatorCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_VerificationResultValidator extends _VerificationResultValidator {
   _$_VerificationResultValidator(
       {this.id,
