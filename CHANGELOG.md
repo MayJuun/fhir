@@ -9,7 +9,6 @@
 * Added a simple test file
 * Changed Dates to its own PrimitiveClass, simplified formatting (just counting length)
 * updated R5 to v4.5.0 (included adding new resources: Permission, NutritionProduct, SubscriptionStatus and SubscriptionTopic, and the draft resource Citation and EvidenceReport) - is still not ready for production (mostly because the downloadable specs, examples and online reference do not all agree).
-* changed a field in CapabilityStatement for r4
 
 ## [0.0.7]
 
