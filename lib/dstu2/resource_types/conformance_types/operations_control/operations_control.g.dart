@@ -222,6 +222,10 @@ const _$ConformanceAcceptUnknownEnumMap = {
 const _$ConformanceFormatEnumMap = {
   ConformanceFormat.xml: 'xml',
   ConformanceFormat.json: 'json',
+  ConformanceFormat.yaml: 'yaml',
+  ConformanceFormat.edn: 'edn',
+  ConformanceFormat.xml_fhir: 'application/xml+fhir',
+  ConformanceFormat.json_fhir: 'application/json+fhir',
   ConformanceFormat.mimetype: 'mimetype',
   ConformanceFormat.unknown: 'unknown',
 };

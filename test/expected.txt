@@ -51,21 +51,3 @@ input: questionnaireresponse-extensions-QuestionnaireResponse-item-subject :: ou
 
 STU3
 ---------------------------------------------------------------------------
-
-R5
----------------------------------------------------------------------------
-
-File: './test/r5_examples/v2-tables.json'
-input: CHESTÂ  :: output:CHESTÂ  is not a valid Code
-
-File: './test/r5_examples/v2-tables.json'
-input: KIDNÂ  :: output:KIDNÂ  is not a valid Code
-
-File: './test/r5_examples/v2-tables.json'
-input:   :: output:  is not a valid Code
-
-File: './test/r5_examples/v2-tables.json'
-input: Â  :: output:Â  is not a valid Code
-
-File: './test/r5_examples/questionnaireresponse-extensions-QuestionnaireResponse-item-subject.json'
-input: questionnaireresponse-extensions-QuestionnaireResponse-item-subject :: output:questionnaireresponse-extensions-QuestionnaireResponse-item-subject is not a valid Id

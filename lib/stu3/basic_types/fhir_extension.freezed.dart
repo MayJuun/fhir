@@ -20,7 +20,7 @@ class _$FhirExtensionTearOff {
   _FhirExtension call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      String url,
+      FhirUri url,
       @JsonKey(name: '_url') Element urlElement,
       Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
@@ -28,13 +28,13 @@ class _$FhirExtensionTearOff {
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
       Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-      String valueBase64Binary,
+      Base64Binary valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
-      String valueInstant,
+      Instant valueInstant,
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
       String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
-      String valueUri,
+      FhirUri valueUri,
       @JsonKey(name: '_valueUri') Element valueUriElement,
       Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
@@ -185,7 +185,7 @@ mixin _$FhirExtension {
   String get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  String get url;
+  FhirUri get url;
   @JsonKey(name: '_url')
   Element get urlElement;
   Boolean get valueBoolean;
@@ -197,16 +197,16 @@ mixin _$FhirExtension {
   Decimal get valueDecimal;
   @JsonKey(name: '_valueDecimal')
   Element get valueDecimalElement;
-  String get valueBase64Binary;
+  Base64Binary get valueBase64Binary;
   @JsonKey(name: '_valueBase64Binary')
   Element get valueBase64BinaryElement;
-  String get valueInstant;
+  Instant get valueInstant;
   @JsonKey(name: '_valueInstant')
   Element get valueInstantElement;
   String get valueString;
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
-  String get valueUri;
+  FhirUri get valueUri;
   @JsonKey(name: '_valueUri')
   Element get valueUriElement;
   Date get valueDate;
@@ -288,7 +288,7 @@ abstract class $FhirExtensionCopyWith<$Res> {
   $Res call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      String url,
+      FhirUri url,
       @JsonKey(name: '_url') Element urlElement,
       Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
@@ -296,13 +296,13 @@ abstract class $FhirExtensionCopyWith<$Res> {
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
       Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-      String valueBase64Binary,
+      Base64Binary valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
-      String valueInstant,
+      Instant valueInstant,
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
       String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
-      String valueUri,
+      FhirUri valueUri,
       @JsonKey(name: '_valueUri') Element valueUriElement,
       Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
@@ -508,7 +508,7 @@ class _$FhirExtensionCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
-      url: url == freezed ? _value.url : url as String,
+      url: url == freezed ? _value.url : url as FhirUri,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element,
       valueBoolean: valueBoolean == freezed
@@ -531,13 +531,13 @@ class _$FhirExtensionCopyWithImpl<$Res>
           : valueDecimalElement as Element,
       valueBase64Binary: valueBase64Binary == freezed
           ? _value.valueBase64Binary
-          : valueBase64Binary as String,
+          : valueBase64Binary as Base64Binary,
       valueBase64BinaryElement: valueBase64BinaryElement == freezed
           ? _value.valueBase64BinaryElement
           : valueBase64BinaryElement as Element,
       valueInstant: valueInstant == freezed
           ? _value.valueInstant
-          : valueInstant as String,
+          : valueInstant as Instant,
       valueInstantElement: valueInstantElement == freezed
           ? _value.valueInstantElement
           : valueInstantElement as Element,
@@ -546,7 +546,7 @@ class _$FhirExtensionCopyWithImpl<$Res>
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
-      valueUri: valueUri == freezed ? _value.valueUri : valueUri as String,
+      valueUri: valueUri == freezed ? _value.valueUri : valueUri as FhirUri,
       valueUriElement: valueUriElement == freezed
           ? _value.valueUriElement
           : valueUriElement as Element,
@@ -1251,7 +1251,7 @@ abstract class _$FhirExtensionCopyWith<$Res>
   $Res call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      String url,
+      FhirUri url,
       @JsonKey(name: '_url') Element urlElement,
       Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
@@ -1259,13 +1259,13 @@ abstract class _$FhirExtensionCopyWith<$Res>
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
       Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-      String valueBase64Binary,
+      Base64Binary valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
-      String valueInstant,
+      Instant valueInstant,
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
       String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
-      String valueUri,
+      FhirUri valueUri,
       @JsonKey(name: '_valueUri') Element valueUriElement,
       Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
@@ -1527,7 +1527,7 @@ class __$FhirExtensionCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
-      url: url == freezed ? _value.url : url as String,
+      url: url == freezed ? _value.url : url as FhirUri,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element,
       valueBoolean: valueBoolean == freezed
@@ -1550,13 +1550,13 @@ class __$FhirExtensionCopyWithImpl<$Res>
           : valueDecimalElement as Element,
       valueBase64Binary: valueBase64Binary == freezed
           ? _value.valueBase64Binary
-          : valueBase64Binary as String,
+          : valueBase64Binary as Base64Binary,
       valueBase64BinaryElement: valueBase64BinaryElement == freezed
           ? _value.valueBase64BinaryElement
           : valueBase64BinaryElement as Element,
       valueInstant: valueInstant == freezed
           ? _value.valueInstant
-          : valueInstant as String,
+          : valueInstant as Instant,
       valueInstantElement: valueInstantElement == freezed
           ? _value.valueInstantElement
           : valueInstantElement as Element,
@@ -1565,7 +1565,7 @@ class __$FhirExtensionCopyWithImpl<$Res>
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
           : valueStringElement as Element,
-      valueUri: valueUri == freezed ? _value.valueUri : valueUri as String,
+      valueUri: valueUri == freezed ? _value.valueUri : valueUri as FhirUri,
       valueUriElement: valueUriElement == freezed
           ? _value.valueUriElement
           : valueUriElement as Element,
@@ -1806,7 +1806,7 @@ class _$_FhirExtension implements _FhirExtension {
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  final String url;
+  final FhirUri url;
   @override
   @JsonKey(name: '_url')
   final Element urlElement;
@@ -1826,12 +1826,12 @@ class _$_FhirExtension implements _FhirExtension {
   @JsonKey(name: '_valueDecimal')
   final Element valueDecimalElement;
   @override
-  final String valueBase64Binary;
+  final Base64Binary valueBase64Binary;
   @override
   @JsonKey(name: '_valueBase64Binary')
   final Element valueBase64BinaryElement;
   @override
-  final String valueInstant;
+  final Instant valueInstant;
   @override
   @JsonKey(name: '_valueInstant')
   final Element valueInstantElement;
@@ -1841,7 +1841,7 @@ class _$_FhirExtension implements _FhirExtension {
   @JsonKey(name: '_valueString')
   final Element valueStringElement;
   @override
-  final String valueUri;
+  final FhirUri valueUri;
   @override
   @JsonKey(name: '_valueUri')
   final Element valueUriElement;
@@ -2184,7 +2184,7 @@ abstract class _FhirExtension implements FhirExtension {
   factory _FhirExtension(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      String url,
+      FhirUri url,
       @JsonKey(name: '_url') Element urlElement,
       Boolean valueBoolean,
       @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
@@ -2192,13 +2192,13 @@ abstract class _FhirExtension implements FhirExtension {
       @JsonKey(name: '_valueInteger') Element valueIntegerElement,
       Decimal valueDecimal,
       @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-      String valueBase64Binary,
+      Base64Binary valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
-      String valueInstant,
+      Instant valueInstant,
       @JsonKey(name: '_valueInstant') Element valueInstantElement,
       String valueString,
       @JsonKey(name: '_valueString') Element valueStringElement,
-      String valueUri,
+      FhirUri valueUri,
       @JsonKey(name: '_valueUri') Element valueUriElement,
       Date valueDate,
       @JsonKey(name: '_valueDate') Element valueDateElement,
@@ -2266,7 +2266,7 @@ abstract class _FhirExtension implements FhirExtension {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  String get url;
+  FhirUri get url;
   @override
   @JsonKey(name: '_url')
   Element get urlElement;
@@ -2286,12 +2286,12 @@ abstract class _FhirExtension implements FhirExtension {
   @JsonKey(name: '_valueDecimal')
   Element get valueDecimalElement;
   @override
-  String get valueBase64Binary;
+  Base64Binary get valueBase64Binary;
   @override
   @JsonKey(name: '_valueBase64Binary')
   Element get valueBase64BinaryElement;
   @override
-  String get valueInstant;
+  Instant get valueInstant;
   @override
   @JsonKey(name: '_valueInstant')
   Element get valueInstantElement;
@@ -2301,7 +2301,7 @@ abstract class _FhirExtension implements FhirExtension {
   @JsonKey(name: '_valueString')
   Element get valueStringElement;
   @override
-  String get valueUri;
+  FhirUri get valueUri;
   @override
   @JsonKey(name: '_valueUri')
   Element get valueUriElement;

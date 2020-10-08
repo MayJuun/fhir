@@ -37,6 +37,14 @@ enum ConformanceFormat {
   xml,
   @JsonValue('json')
   json,
+  @JsonValue('yaml')
+  yaml,
+  @JsonValue('edn')
+  edn,
+  @JsonValue('application/xml+fhir')
+  xml_fhir,
+  @JsonValue('application/json+fhir')
+  json_fhir,
   @JsonValue('mimetype')
   mimetype,
   @JsonValue('unknown')

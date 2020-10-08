@@ -8,7 +8,10 @@
 * Changed two types in Meta for Stu3
 * Added a simple test file
 * Changed Dates to its own PrimitiveClass, simplified formatting (just counting length)
-* updated R5 to v4.5.0 (included adding new resources: Permission, NutritionProduct, SubscriptionStatus and SubscriptionTopic, and the draft resource Citation and EvidenceReport) - is still not ready for production (mostly because the downloadable specs, examples and online reference do not all agree).
+* updated R5 to v4.5.0 
+*   - new resources: Permission, NutritionProduct, SubscriptionStatus and SubscriptionTopic
+*   - new draft resource Citation and EvidenceReport
+*   - does not pass all tests (becuase downloadable specs, examples and online references do not agree)
 
 ## [0.0.7]
 

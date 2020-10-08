@@ -22,9 +22,9 @@ Future validation() async {
   string += '\n\nSTU3\n'
       '---------------------------------------------------------------------------';
   string += await stu3Validation();
-  string += '\n\nR5\n'
-      '---------------------------------------------------------------------------';
-  string += await r5Validation();
+  // string += '\n\nR5\n'
+  //     '---------------------------------------------------------------------------';
+  // string += await r5Validation();
   final file = File('./test/tested.txt');
   await file.writeAsString('');
   await file.writeAsString(string);

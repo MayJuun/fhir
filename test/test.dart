@@ -13,7 +13,7 @@ Future main() async {
       await validation();
       final expected = await File('./test/expected.txt').readAsString();
       final tested = await File('./test/tested.txt').readAsString();
-      // expect(expected, tested);
+      expect(expected, tested);
     },
     timeout: Timeout(Duration(minutes: 10)),
   );

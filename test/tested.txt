@@ -1,25 +1,53 @@
-
-
-R5
+DSTU2
 ---------------------------------------------------------------------------
 
-File: './test/r5_examples/v2-tables.json'
+File: './test/dstu2_examples/v2-tables.json'
 input: CHESTÂ  :: output:CHESTÂ  is not a valid Code
 
-File: './test/r5_examples/v2-tables.json'
+File: './test/dstu2_examples/v2-tables.json'
 input: KIDNÂ  :: output:KIDNÂ  is not a valid Code
 
-File: './test/r5_examples/v2-tables.json'
+File: './test/dstu2_examples/v2-tables.json'
 input:   :: output:  is not a valid Code
 
-File: './test/r5_examples/v2-tables.json'
+File: './test/dstu2_examples/v2-tables.json'
 input: Â  :: output:Â  is not a valid Code
 
-File: './test/r5_examples/questionnaireresponse-extensions-QuestionnaireResponse-item-subject.json'
+File: './test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change.json'
+input: observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change :: output:observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change is not a valid Id
+
+File: './test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant.json'
+input: observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant :: output:observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant is not a valid Id
+
+File: './test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart.canonical.json'
+input: observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart :: output:observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart is not a valid Id
+
+File: './test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart.json'
+input: observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart :: output:observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart is not a valid Id
+
+File: './test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant.canonical.json'
+input: observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant :: output:observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant is not a valid Id
+
+File: './test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change.canonical.json'
+input: observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change :: output:observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change is not a valid Id
+
+R4
+---------------------------------------------------------------------------
+
+File: './test/r4_examples/v2-tables.json'
+input: CHESTÂ  :: output:CHESTÂ  is not a valid Code
+
+File: './test/r4_examples/v2-tables.json'
+input: KIDNÂ  :: output:KIDNÂ  is not a valid Code
+
+File: './test/r4_examples/v2-tables.json'
+input:   :: output:  is not a valid Code
+
+File: './test/r4_examples/v2-tables.json'
+input: Â  :: output:Â  is not a valid Code
+
+File: './test/r4_examples/questionnaireresponse-extensions-QuestionnaireResponse-item-subject.json'
 input: questionnaireresponse-extensions-QuestionnaireResponse-item-subject :: output:questionnaireresponse-extensions-QuestionnaireResponse-item-subject is not a valid Id
 
-File: './test/r5_examples/structuremap-supplyrequest-transform.json'
-input: none :: output:unknown
-
-File: './test/r5_examples/structuremap-example.json'
-input: none :: output:unknown
+STU3
+---------------------------------------------------------------------------
