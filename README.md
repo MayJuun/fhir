@@ -10,7 +10,7 @@ It contains packages for the 3 released FHIR versions:
 
 As well as the R5 Preview #1:
 
-- [v4.2.0: R5 Draft](https://hl7.org/fhir/2020Feb/)
+- [v4.5.0: R5 Preview #3](https://hl7.org/fhir/2020Feb/)
 
 ## Say Hello!
 
@@ -78,6 +78,16 @@ All of the FHIR resources are immutable classes using the [freezed package](http
 ```
 And that's essentially all there is at this point. This is still very much a developing package, so there are likely to be breaking changes as I try and figure out how it should all work. I welcome any and all feedback, suggestions or pull requests.
 
+## Primitive Values
+Primitive values are [these](https://www.hl7.org/fhir/datatypes.html), things like instant, string, integer, etc. Howevever, because FHIR has some definitions of how they define some of these values that differ from Dart, I've made all of them (except String) and primitiveObject. This has a couple of useful things (and one or two annoying ones). In order to make something like an integer, you have to write it like this: ```Integer(128)``` or ```Integer('128)```. Yes, a little annoying, but it prevents inappropriate formatting, especially for things like dates that are a lot trickier. You can, however, check equality without this. For instance, ```Integer(128) == 128``` will evaluate to true. 
+
+As I was saying, dates are tricker. For ```Date or DateTime``` you're allowed to use values of 2020, 2020-06, or 2020-06-01 (written of course ```Date('2020-06-01')```). For ```Instant and DateTime``` you're also allowed to specify hours, minutes, seconds, milliseconds. For ```Instant``` at least hour, minute and second is required. So, the way I've decided to deal with dates is to first turn them into Strings. I then see if they are a Date with the isDate function. If they are, I check if they're more or less than 10 characters. If they're less than 10 characters, I store however many characters they are, and return this number when I print it out. If they're more than 10 characters, I check if there's a space in the 10 position and replaces it with a ```"T"``` (because FHIR doesn't allow ```2017-01-01 00:00:00.000Z``` but will allow ```2017-01-01T00:00:00.000Z```.) I then parse it to a DateTime and then I change it to UTC. This is also how I return the value. ***THIS IS IMPORTANT*** because it means that if you specify anything with an hour, minute, second or millisecond, whether or not you assign it a timezone, this package will still change it and output it in UTC. This is mostly because I think that makes it easier to do any calculations with, because all times are going to be in UTC. Then, all you have to do is change it to the local timezone when you display it (if you want to).
+
+Thus   
+input: ```FhirDateTime('2015-02-07T13:28:17-05:00')```, output: ```2015-02-07T18:28:17.000Z```  
+input: ```FhirDateTime('2015-02-07T13:28:17')```, output: ```2015-02-07T13:28:17.000``` - you're technically supposed to have a time zone when you specify more than a simple date  
+input: ```FhirDateTime('2017-01-01T00:00:00.000Z')```, output: ```2017-01-01T00:00:00.000Z```
+
 ## Upcoming
 There are two big items I would really like to get to work to add functionality:
 1. Database - I'm working on a locally embedded, encrypted database using [Sembast](https://pub.dev/packages/sembast) and [SQFlite](https://pub.dev/packages/sqflite). Feel free to take a look, it's in the basic branch of my [vigor repository](https://github.com/Dokotela/vigor).
@@ -85,7 +95,7 @@ There are two big items I would really like to get to work to add functionality:
 
 
 ## Validation
-- For validation testing, I run all of the sample files from hl7 through a tester. There is an errors.txt file in the test folder where all of the errors are reported (the file name and then the specific field). Currently the only errors involve Codes and IDs. The Codes have to due with the fact that [code is not supposed to have leading or trailing white space](https://www.hl7.org/fhir/datatypes.html#code). The issues with the IDs are that [IDs are not supposed to be more than 64 characters](https://www.hl7.org/fhir/datatypes.html#id), and these are 65. However, if it turns out that no one wants to enforce these as strictly as I do, I may relax them.
+- For validation testing, I run all of the sample files from hl7 through a tester. There is an errors.txt file in the test folder where all of the errors are reported (the file name and then the specific field). Currently the only errors involve Codes and IDs. The Codes have to due with the fact that [code is not supposed to have leading or trailing white space](https://www.hl7.org/fhir/datatypes.html#code). The issues with the IDs are that [IDs are not supposed to be more than 64 characters](https://www.hl7.org/fhir/datatypes.html#id), and these are 65. However, if it turns out that no one wants to enforce these as strictly as I do, I may relax them. Also, for r5, there are some fields that I'm not sure if they're supposed to be lists or not, and there are a number of reference I'm not sure if I have the correct name (because the names differe on the website vs. the downloadable schema). I've kept whichever one seemed to be present in the examples.
 
 ## First Package
 

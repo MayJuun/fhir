@@ -1059,9 +1059,13 @@ _$_ClinicalImpressionFinding _$_$_ClinicalImpressionFindingFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    item: json['item'] == null
+    itemCodeableConcept: json['itemCodeableConcept'] == null
         ? null
-        : CodeableReference.fromJson(json['item'] as Map<String, dynamic>),
+        : CodeableConcept.fromJson(
+            json['itemCodeableConcept'] as Map<String, dynamic>),
+    itemReference: json['itemReference'] == null
+        ? null
+        : Reference.fromJson(json['itemReference'] as Map<String, dynamic>),
     basis: json['basis'] as String,
     basisElement: json['_basis'] == null
         ? null
@@ -1084,7 +1088,8 @@ Map<String, dynamic> _$_$_ClinicalImpressionFindingToJson(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('item', instance.item?.toJson());
+  writeNotNull('itemCodeableConcept', instance.itemCodeableConcept?.toJson());
+  writeNotNull('itemReference', instance.itemReference?.toJson());
   writeNotNull('basis', instance.basis);
   writeNotNull('_basis', instance.basisElement?.toJson());
   return val;

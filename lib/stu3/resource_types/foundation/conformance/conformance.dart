@@ -135,6 +135,7 @@ abstract class CapabilityStatementSecurity
     implements _$CapabilityStatementSecurity {
   CapabilityStatementSecurity._();
   factory CapabilityStatementSecurity({
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     Boolean cors,
     @JsonKey(name: '_cors') Element corsElement,
     List<CodeableConcept> service,

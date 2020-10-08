@@ -49,7 +49,7 @@ class _$AuditEventTearOff {
       Instant recorded,
       @JsonKey(name: '_recorded')
           Element recordedElement,
-      CodeableConcept outcome,
+      Integer outcome,
       List<CodeableConcept> purposeOfEvent,
       @required
           List<AuditEventAgent> agent,
@@ -125,8 +125,9 @@ mixin _$AuditEvent {
   Period get period;
   Instant get recorded;
   @JsonKey(name: '_recorded')
-  Element get recordedElement;
-  CodeableConcept get outcome;
+  Element get recordedElement; // ToDo
+//  CodeableConcept outcome,
+  Integer get outcome;
   List<CodeableConcept> get purposeOfEvent;
   List<AuditEventAgent> get agent;
   AuditEventSource get source;
@@ -171,7 +172,7 @@ abstract class $AuditEventCopyWith<$Res> {
       Instant recorded,
       @JsonKey(name: '_recorded')
           Element recordedElement,
-      CodeableConcept outcome,
+      Integer outcome,
       List<CodeableConcept> purposeOfEvent,
       List<AuditEventAgent> agent,
       AuditEventSource source,
@@ -186,7 +187,6 @@ abstract class $AuditEventCopyWith<$Res> {
   $ElementCopyWith<$Res> get severityElement;
   $PeriodCopyWith<$Res> get period;
   $ElementCopyWith<$Res> get recordedElement;
-  $CodeableConceptCopyWith<$Res> get outcome;
   $AuditEventSourceCopyWith<$Res> get source;
 }
 
@@ -268,7 +268,7 @@ class _$AuditEventCopyWithImpl<$Res> implements $AuditEventCopyWith<$Res> {
       recordedElement: recordedElement == freezed
           ? _value.recordedElement
           : recordedElement as Element,
-      outcome: outcome == freezed ? _value.outcome : outcome as CodeableConcept,
+      outcome: outcome == freezed ? _value.outcome : outcome as Integer,
       purposeOfEvent: purposeOfEvent == freezed
           ? _value.purposeOfEvent
           : purposeOfEvent as List<CodeableConcept>,
@@ -370,16 +370,6 @@ class _$AuditEventCopyWithImpl<$Res> implements $AuditEventCopyWith<$Res> {
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get outcome {
-    if (_value.outcome == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.outcome, (value) {
-      return _then(_value.copyWith(outcome: value));
-    });
-  }
-
-  @override
   $AuditEventSourceCopyWith<$Res> get source {
     if (_value.source == null) {
       return null;
@@ -426,7 +416,7 @@ abstract class _$AuditEventCopyWith<$Res> implements $AuditEventCopyWith<$Res> {
       Instant recorded,
       @JsonKey(name: '_recorded')
           Element recordedElement,
-      CodeableConcept outcome,
+      Integer outcome,
       List<CodeableConcept> purposeOfEvent,
       List<AuditEventAgent> agent,
       AuditEventSource source,
@@ -450,8 +440,6 @@ abstract class _$AuditEventCopyWith<$Res> implements $AuditEventCopyWith<$Res> {
   $PeriodCopyWith<$Res> get period;
   @override
   $ElementCopyWith<$Res> get recordedElement;
-  @override
-  $CodeableConceptCopyWith<$Res> get outcome;
   @override
   $AuditEventSourceCopyWith<$Res> get source;
 }
@@ -536,7 +524,7 @@ class __$AuditEventCopyWithImpl<$Res> extends _$AuditEventCopyWithImpl<$Res>
       recordedElement: recordedElement == freezed
           ? _value.recordedElement
           : recordedElement as Element,
-      outcome: outcome == freezed ? _value.outcome : outcome as CodeableConcept,
+      outcome: outcome == freezed ? _value.outcome : outcome as Integer,
       purposeOfEvent: purposeOfEvent == freezed
           ? _value.purposeOfEvent
           : purposeOfEvent as List<CodeableConcept>,
@@ -636,8 +624,9 @@ class _$_AuditEvent extends _AuditEvent {
   @override
   @JsonKey(name: '_recorded')
   final Element recordedElement;
-  @override
-  final CodeableConcept outcome;
+  @override // ToDo
+//  CodeableConcept outcome,
+  final Integer outcome;
   @override
   final List<CodeableConcept> purposeOfEvent;
   @override
@@ -797,7 +786,7 @@ abstract class _AuditEvent extends AuditEvent {
       Instant recorded,
       @JsonKey(name: '_recorded')
           Element recordedElement,
-      CodeableConcept outcome,
+      Integer outcome,
       List<CodeableConcept> purposeOfEvent,
       @required
           List<AuditEventAgent> agent,
@@ -857,8 +846,9 @@ abstract class _AuditEvent extends AuditEvent {
   @override
   @JsonKey(name: '_recorded')
   Element get recordedElement;
-  @override
-  CodeableConcept get outcome;
+  @override // ToDo
+//  CodeableConcept outcome,
+  Integer get outcome;
   @override
   List<CodeableConcept> get purposeOfEvent;
   @override
@@ -5679,6 +5669,1318 @@ abstract class _ConsentData extends ConsentData {
   Reference get reference;
   @override
   _$ConsentDataCopyWith<_ConsentData> get copyWith;
+}
+
+Permission _$PermissionFromJson(Map<String, dynamic> json) {
+  return _Permission.fromJson(json);
+}
+
+/// @nodoc
+class _$PermissionTearOff {
+  const _$PermissionTearOff();
+
+// ignore: unused_element
+  _Permission call(
+      {@required
+      @JsonKey(defaultValue: 'Permission')
+          String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      @JsonKey(unknownEnumValue: PermissionStatus.unknown)
+          PermissionStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      CodeableConcept intent,
+      Reference asserter,
+      List<FhirDateTime> assertionDate,
+      @JsonKey(name: '_assertionDate')
+          List<Element> assertionDateElement,
+      Period validity,
+      List<CodeableConcept> purpose,
+      List<Expression> dataScope,
+      List<PermissionProcessingActivity> processingActivity,
+      PermissionJustification justification,
+      List<CodeableConcept> usageLimitations}) {
+    return _Permission(
+      resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      implicitRulesElement: implicitRulesElement,
+      language: language,
+      languageElement: languageElement,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      status: status,
+      statusElement: statusElement,
+      intent: intent,
+      asserter: asserter,
+      assertionDate: assertionDate,
+      assertionDateElement: assertionDateElement,
+      validity: validity,
+      purpose: purpose,
+      dataScope: dataScope,
+      processingActivity: processingActivity,
+      justification: justification,
+      usageLimitations: usageLimitations,
+    );
+  }
+
+// ignore: unused_element
+  Permission fromJson(Map<String, Object> json) {
+    return Permission.fromJson(json);
+  }
+}
+
+/// @nodoc
+// ignore: unused_element
+const $Permission = _$PermissionTearOff();
+
+/// @nodoc
+mixin _$Permission {
+  @JsonKey(defaultValue: 'Permission')
+  String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  Code get language;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
+  @JsonKey(unknownEnumValue: PermissionStatus.unknown)
+  PermissionStatus get status;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  CodeableConcept get intent;
+  Reference get asserter;
+  List<FhirDateTime> get assertionDate;
+  @JsonKey(name: '_assertionDate')
+  List<Element> get assertionDateElement;
+  Period get validity;
+  List<CodeableConcept> get purpose;
+  List<Expression> get dataScope;
+  List<PermissionProcessingActivity> get processingActivity;
+  PermissionJustification get justification;
+  List<CodeableConcept> get usageLimitations;
+
+  Map<String, dynamic> toJson();
+  $PermissionCopyWith<Permission> get copyWith;
+}
+
+/// @nodoc
+abstract class $PermissionCopyWith<$Res> {
+  factory $PermissionCopyWith(
+          Permission value, $Res Function(Permission) then) =
+      _$PermissionCopyWithImpl<$Res>;
+  $Res call(
+      {@JsonKey(defaultValue: 'Permission')
+          String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      @JsonKey(unknownEnumValue: PermissionStatus.unknown)
+          PermissionStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      CodeableConcept intent,
+      Reference asserter,
+      List<FhirDateTime> assertionDate,
+      @JsonKey(name: '_assertionDate')
+          List<Element> assertionDateElement,
+      Period validity,
+      List<CodeableConcept> purpose,
+      List<Expression> dataScope,
+      List<PermissionProcessingActivity> processingActivity,
+      PermissionJustification justification,
+      List<CodeableConcept> usageLimitations});
+
+  $MetaCopyWith<$Res> get meta;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $NarrativeCopyWith<$Res> get text;
+  $ElementCopyWith<$Res> get statusElement;
+  $CodeableConceptCopyWith<$Res> get intent;
+  $ReferenceCopyWith<$Res> get asserter;
+  $PeriodCopyWith<$Res> get validity;
+  $PermissionJustificationCopyWith<$Res> get justification;
+}
+
+/// @nodoc
+class _$PermissionCopyWithImpl<$Res> implements $PermissionCopyWith<$Res> {
+  _$PermissionCopyWithImpl(this._value, this._then);
+
+  final Permission _value;
+  // ignore: unused_field
+  final $Res Function(Permission) _then;
+
+  @override
+  $Res call({
+    Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
+    Object language = freezed,
+    Object languageElement = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object status = freezed,
+    Object statusElement = freezed,
+    Object intent = freezed,
+    Object asserter = freezed,
+    Object assertionDate = freezed,
+    Object assertionDateElement = freezed,
+    Object validity = freezed,
+    Object purpose = freezed,
+    Object dataScope = freezed,
+    Object processingActivity = freezed,
+    Object justification = freezed,
+    Object usageLimitations = freezed,
+  }) {
+    return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      status: status == freezed ? _value.status : status as PermissionStatus,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      intent: intent == freezed ? _value.intent : intent as CodeableConcept,
+      asserter: asserter == freezed ? _value.asserter : asserter as Reference,
+      assertionDate: assertionDate == freezed
+          ? _value.assertionDate
+          : assertionDate as List<FhirDateTime>,
+      assertionDateElement: assertionDateElement == freezed
+          ? _value.assertionDateElement
+          : assertionDateElement as List<Element>,
+      validity: validity == freezed ? _value.validity : validity as Period,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose as List<CodeableConcept>,
+      dataScope: dataScope == freezed
+          ? _value.dataScope
+          : dataScope as List<Expression>,
+      processingActivity: processingActivity == freezed
+          ? _value.processingActivity
+          : processingActivity as List<PermissionProcessingActivity>,
+      justification: justification == freezed
+          ? _value.justification
+          : justification as PermissionJustification,
+      usageLimitations: usageLimitations == freezed
+          ? _value.usageLimitations
+          : usageLimitations as List<CodeableConcept>,
+    ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get intent {
+    if (_value.intent == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.intent, (value) {
+      return _then(_value.copyWith(intent: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get asserter {
+    if (_value.asserter == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.asserter, (value) {
+      return _then(_value.copyWith(asserter: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get validity {
+    if (_value.validity == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.validity, (value) {
+      return _then(_value.copyWith(validity: value));
+    });
+  }
+
+  @override
+  $PermissionJustificationCopyWith<$Res> get justification {
+    if (_value.justification == null) {
+      return null;
+    }
+    return $PermissionJustificationCopyWith<$Res>(_value.justification,
+        (value) {
+      return _then(_value.copyWith(justification: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$PermissionCopyWith<$Res> implements $PermissionCopyWith<$Res> {
+  factory _$PermissionCopyWith(
+          _Permission value, $Res Function(_Permission) then) =
+      __$PermissionCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {@JsonKey(defaultValue: 'Permission')
+          String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      @JsonKey(unknownEnumValue: PermissionStatus.unknown)
+          PermissionStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      CodeableConcept intent,
+      Reference asserter,
+      List<FhirDateTime> assertionDate,
+      @JsonKey(name: '_assertionDate')
+          List<Element> assertionDateElement,
+      Period validity,
+      List<CodeableConcept> purpose,
+      List<Expression> dataScope,
+      List<PermissionProcessingActivity> processingActivity,
+      PermissionJustification justification,
+      List<CodeableConcept> usageLimitations});
+
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $CodeableConceptCopyWith<$Res> get intent;
+  @override
+  $ReferenceCopyWith<$Res> get asserter;
+  @override
+  $PeriodCopyWith<$Res> get validity;
+  @override
+  $PermissionJustificationCopyWith<$Res> get justification;
+}
+
+/// @nodoc
+class __$PermissionCopyWithImpl<$Res> extends _$PermissionCopyWithImpl<$Res>
+    implements _$PermissionCopyWith<$Res> {
+  __$PermissionCopyWithImpl(
+      _Permission _value, $Res Function(_Permission) _then)
+      : super(_value, (v) => _then(v as _Permission));
+
+  @override
+  _Permission get _value => super._value as _Permission;
+
+  @override
+  $Res call({
+    Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
+    Object language = freezed,
+    Object languageElement = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object status = freezed,
+    Object statusElement = freezed,
+    Object intent = freezed,
+    Object asserter = freezed,
+    Object assertionDate = freezed,
+    Object assertionDateElement = freezed,
+    Object validity = freezed,
+    Object purpose = freezed,
+    Object dataScope = freezed,
+    Object processingActivity = freezed,
+    Object justification = freezed,
+    Object usageLimitations = freezed,
+  }) {
+    return _then(_Permission(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      status: status == freezed ? _value.status : status as PermissionStatus,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      intent: intent == freezed ? _value.intent : intent as CodeableConcept,
+      asserter: asserter == freezed ? _value.asserter : asserter as Reference,
+      assertionDate: assertionDate == freezed
+          ? _value.assertionDate
+          : assertionDate as List<FhirDateTime>,
+      assertionDateElement: assertionDateElement == freezed
+          ? _value.assertionDateElement
+          : assertionDateElement as List<Element>,
+      validity: validity == freezed ? _value.validity : validity as Period,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose as List<CodeableConcept>,
+      dataScope: dataScope == freezed
+          ? _value.dataScope
+          : dataScope as List<Expression>,
+      processingActivity: processingActivity == freezed
+          ? _value.processingActivity
+          : processingActivity as List<PermissionProcessingActivity>,
+      justification: justification == freezed
+          ? _value.justification
+          : justification as PermissionJustification,
+      usageLimitations: usageLimitations == freezed
+          ? _value.usageLimitations
+          : usageLimitations as List<CodeableConcept>,
+    ));
+  }
+}
+
+@JsonSerializable()
+
+/// @nodoc
+class _$_Permission extends _Permission {
+  _$_Permission(
+      {@required @JsonKey(defaultValue: 'Permission') this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      this.language,
+      @JsonKey(name: '_language') this.languageElement,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      @JsonKey(unknownEnumValue: PermissionStatus.unknown) this.status,
+      @JsonKey(name: '_status') this.statusElement,
+      this.intent,
+      this.asserter,
+      this.assertionDate,
+      @JsonKey(name: '_assertionDate') this.assertionDateElement,
+      this.validity,
+      this.purpose,
+      this.dataScope,
+      this.processingActivity,
+      this.justification,
+      this.usageLimitations})
+      : assert(resourceType != null),
+        super._();
+
+  factory _$_Permission.fromJson(Map<String, dynamic> json) =>
+      _$_$_PermissionFromJson(json);
+
+  @override
+  @JsonKey(defaultValue: 'Permission')
+  final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  final Code language;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
+  @override
+  @JsonKey(unknownEnumValue: PermissionStatus.unknown)
+  final PermissionStatus status;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  final CodeableConcept intent;
+  @override
+  final Reference asserter;
+  @override
+  final List<FhirDateTime> assertionDate;
+  @override
+  @JsonKey(name: '_assertionDate')
+  final List<Element> assertionDateElement;
+  @override
+  final Period validity;
+  @override
+  final List<CodeableConcept> purpose;
+  @override
+  final List<Expression> dataScope;
+  @override
+  final List<PermissionProcessingActivity> processingActivity;
+  @override
+  final PermissionJustification justification;
+  @override
+  final List<CodeableConcept> usageLimitations;
+
+  @override
+  String toString() {
+    return 'Permission(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, status: $status, statusElement: $statusElement, intent: $intent, asserter: $asserter, assertionDate: $assertionDate, assertionDateElement: $assertionDateElement, validity: $validity, purpose: $purpose, dataScope: $dataScope, processingActivity: $processingActivity, justification: $justification, usageLimitations: $usageLimitations)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _Permission &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.status, status) ||
+                const DeepCollectionEquality().equals(other.status, status)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
+            (identical(other.intent, intent) ||
+                const DeepCollectionEquality().equals(other.intent, intent)) &&
+            (identical(other.asserter, asserter) ||
+                const DeepCollectionEquality()
+                    .equals(other.asserter, asserter)) &&
+            (identical(other.assertionDate, assertionDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.assertionDate, assertionDate)) &&
+            (identical(other.assertionDateElement, assertionDateElement) ||
+                const DeepCollectionEquality().equals(
+                    other.assertionDateElement, assertionDateElement)) &&
+            (identical(other.validity, validity) ||
+                const DeepCollectionEquality()
+                    .equals(other.validity, validity)) &&
+            (identical(other.purpose, purpose) ||
+                const DeepCollectionEquality()
+                    .equals(other.purpose, purpose)) &&
+            (identical(other.dataScope, dataScope) ||
+                const DeepCollectionEquality()
+                    .equals(other.dataScope, dataScope)) &&
+            (identical(other.processingActivity, processingActivity) ||
+                const DeepCollectionEquality()
+                    .equals(other.processingActivity, processingActivity)) &&
+            (identical(other.justification, justification) ||
+                const DeepCollectionEquality()
+                    .equals(other.justification, justification)) &&
+            (identical(other.usageLimitations, usageLimitations) ||
+                const DeepCollectionEquality()
+                    .equals(other.usageLimitations, usageLimitations)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(status) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(intent) ^
+      const DeepCollectionEquality().hash(asserter) ^
+      const DeepCollectionEquality().hash(assertionDate) ^
+      const DeepCollectionEquality().hash(assertionDateElement) ^
+      const DeepCollectionEquality().hash(validity) ^
+      const DeepCollectionEquality().hash(purpose) ^
+      const DeepCollectionEquality().hash(dataScope) ^
+      const DeepCollectionEquality().hash(processingActivity) ^
+      const DeepCollectionEquality().hash(justification) ^
+      const DeepCollectionEquality().hash(usageLimitations);
+
+  @override
+  _$PermissionCopyWith<_Permission> get copyWith =>
+      __$PermissionCopyWithImpl<_Permission>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_PermissionToJson(this);
+  }
+}
+
+abstract class _Permission extends Permission {
+  _Permission._() : super._();
+  factory _Permission(
+      {@required
+      @JsonKey(defaultValue: 'Permission')
+          String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      @JsonKey(unknownEnumValue: PermissionStatus.unknown)
+          PermissionStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      CodeableConcept intent,
+      Reference asserter,
+      List<FhirDateTime> assertionDate,
+      @JsonKey(name: '_assertionDate')
+          List<Element> assertionDateElement,
+      Period validity,
+      List<CodeableConcept> purpose,
+      List<Expression> dataScope,
+      List<PermissionProcessingActivity> processingActivity,
+      PermissionJustification justification,
+      List<CodeableConcept> usageLimitations}) = _$_Permission;
+
+  factory _Permission.fromJson(Map<String, dynamic> json) =
+      _$_Permission.fromJson;
+
+  @override
+  @JsonKey(defaultValue: 'Permission')
+  String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  Code get language;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
+  @override
+  @JsonKey(unknownEnumValue: PermissionStatus.unknown)
+  PermissionStatus get status;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  CodeableConcept get intent;
+  @override
+  Reference get asserter;
+  @override
+  List<FhirDateTime> get assertionDate;
+  @override
+  @JsonKey(name: '_assertionDate')
+  List<Element> get assertionDateElement;
+  @override
+  Period get validity;
+  @override
+  List<CodeableConcept> get purpose;
+  @override
+  List<Expression> get dataScope;
+  @override
+  List<PermissionProcessingActivity> get processingActivity;
+  @override
+  PermissionJustification get justification;
+  @override
+  List<CodeableConcept> get usageLimitations;
+  @override
+  _$PermissionCopyWith<_Permission> get copyWith;
+}
+
+PermissionProcessingActivity _$PermissionProcessingActivityFromJson(
+    Map<String, dynamic> json) {
+  return _PermissionProcessingActivity.fromJson(json);
+}
+
+/// @nodoc
+class _$PermissionProcessingActivityTearOff {
+  const _$PermissionProcessingActivityTearOff();
+
+// ignore: unused_element
+  _PermissionProcessingActivity call(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      List<Reference> partyReference,
+      List<CodeableConcept> partyCodeableConcept,
+      List<CodeableConcept> purpose}) {
+    return _PermissionProcessingActivity(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      partyReference: partyReference,
+      partyCodeableConcept: partyCodeableConcept,
+      purpose: purpose,
+    );
+  }
+
+// ignore: unused_element
+  PermissionProcessingActivity fromJson(Map<String, Object> json) {
+    return PermissionProcessingActivity.fromJson(json);
+  }
+}
+
+/// @nodoc
+// ignore: unused_element
+const $PermissionProcessingActivity = _$PermissionProcessingActivityTearOff();
+
+/// @nodoc
+mixin _$PermissionProcessingActivity {
+  String get id;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
+  List<Reference> get partyReference;
+  List<CodeableConcept> get partyCodeableConcept;
+  List<CodeableConcept> get purpose;
+
+  Map<String, dynamic> toJson();
+  $PermissionProcessingActivityCopyWith<PermissionProcessingActivity>
+      get copyWith;
+}
+
+/// @nodoc
+abstract class $PermissionProcessingActivityCopyWith<$Res> {
+  factory $PermissionProcessingActivityCopyWith(
+          PermissionProcessingActivity value,
+          $Res Function(PermissionProcessingActivity) then) =
+      _$PermissionProcessingActivityCopyWithImpl<$Res>;
+  $Res call(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      List<Reference> partyReference,
+      List<CodeableConcept> partyCodeableConcept,
+      List<CodeableConcept> purpose});
+}
+
+/// @nodoc
+class _$PermissionProcessingActivityCopyWithImpl<$Res>
+    implements $PermissionProcessingActivityCopyWith<$Res> {
+  _$PermissionProcessingActivityCopyWithImpl(this._value, this._then);
+
+  final PermissionProcessingActivity _value;
+  // ignore: unused_field
+  final $Res Function(PermissionProcessingActivity) _then;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object partyReference = freezed,
+    Object partyCodeableConcept = freezed,
+    Object purpose = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed ? _value.id : id as String,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      partyReference: partyReference == freezed
+          ? _value.partyReference
+          : partyReference as List<Reference>,
+      partyCodeableConcept: partyCodeableConcept == freezed
+          ? _value.partyCodeableConcept
+          : partyCodeableConcept as List<CodeableConcept>,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose as List<CodeableConcept>,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$PermissionProcessingActivityCopyWith<$Res>
+    implements $PermissionProcessingActivityCopyWith<$Res> {
+  factory _$PermissionProcessingActivityCopyWith(
+          _PermissionProcessingActivity value,
+          $Res Function(_PermissionProcessingActivity) then) =
+      __$PermissionProcessingActivityCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      List<Reference> partyReference,
+      List<CodeableConcept> partyCodeableConcept,
+      List<CodeableConcept> purpose});
+}
+
+/// @nodoc
+class __$PermissionProcessingActivityCopyWithImpl<$Res>
+    extends _$PermissionProcessingActivityCopyWithImpl<$Res>
+    implements _$PermissionProcessingActivityCopyWith<$Res> {
+  __$PermissionProcessingActivityCopyWithImpl(
+      _PermissionProcessingActivity _value,
+      $Res Function(_PermissionProcessingActivity) _then)
+      : super(_value, (v) => _then(v as _PermissionProcessingActivity));
+
+  @override
+  _PermissionProcessingActivity get _value =>
+      super._value as _PermissionProcessingActivity;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object partyReference = freezed,
+    Object partyCodeableConcept = freezed,
+    Object purpose = freezed,
+  }) {
+    return _then(_PermissionProcessingActivity(
+      id: id == freezed ? _value.id : id as String,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      partyReference: partyReference == freezed
+          ? _value.partyReference
+          : partyReference as List<Reference>,
+      partyCodeableConcept: partyCodeableConcept == freezed
+          ? _value.partyCodeableConcept
+          : partyCodeableConcept as List<CodeableConcept>,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose as List<CodeableConcept>,
+    ));
+  }
+}
+
+@JsonSerializable()
+
+/// @nodoc
+class _$_PermissionProcessingActivity extends _PermissionProcessingActivity {
+  _$_PermissionProcessingActivity(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.partyReference,
+      this.partyCodeableConcept,
+      this.purpose})
+      : super._();
+
+  factory _$_PermissionProcessingActivity.fromJson(Map<String, dynamic> json) =>
+      _$_$_PermissionProcessingActivityFromJson(json);
+
+  @override
+  final String id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
+  @override
+  final List<Reference> partyReference;
+  @override
+  final List<CodeableConcept> partyCodeableConcept;
+  @override
+  final List<CodeableConcept> purpose;
+
+  @override
+  String toString() {
+    return 'PermissionProcessingActivity(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, partyReference: $partyReference, partyCodeableConcept: $partyCodeableConcept, purpose: $purpose)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _PermissionProcessingActivity &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.partyReference, partyReference) ||
+                const DeepCollectionEquality()
+                    .equals(other.partyReference, partyReference)) &&
+            (identical(other.partyCodeableConcept, partyCodeableConcept) ||
+                const DeepCollectionEquality().equals(
+                    other.partyCodeableConcept, partyCodeableConcept)) &&
+            (identical(other.purpose, purpose) ||
+                const DeepCollectionEquality().equals(other.purpose, purpose)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(partyReference) ^
+      const DeepCollectionEquality().hash(partyCodeableConcept) ^
+      const DeepCollectionEquality().hash(purpose);
+
+  @override
+  _$PermissionProcessingActivityCopyWith<_PermissionProcessingActivity>
+      get copyWith => __$PermissionProcessingActivityCopyWithImpl<
+          _PermissionProcessingActivity>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_PermissionProcessingActivityToJson(this);
+  }
+}
+
+abstract class _PermissionProcessingActivity
+    extends PermissionProcessingActivity {
+  _PermissionProcessingActivity._() : super._();
+  factory _PermissionProcessingActivity(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      List<Reference> partyReference,
+      List<CodeableConcept> partyCodeableConcept,
+      List<CodeableConcept> purpose}) = _$_PermissionProcessingActivity;
+
+  factory _PermissionProcessingActivity.fromJson(Map<String, dynamic> json) =
+      _$_PermissionProcessingActivity.fromJson;
+
+  @override
+  String get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
+  @override
+  List<Reference> get partyReference;
+  @override
+  List<CodeableConcept> get partyCodeableConcept;
+  @override
+  List<CodeableConcept> get purpose;
+  @override
+  _$PermissionProcessingActivityCopyWith<_PermissionProcessingActivity>
+      get copyWith;
+}
+
+PermissionJustification _$PermissionJustificationFromJson(
+    Map<String, dynamic> json) {
+  return _PermissionJustification.fromJson(json);
+}
+
+/// @nodoc
+class _$PermissionJustificationTearOff {
+  const _$PermissionJustificationTearOff();
+
+// ignore: unused_element
+  _PermissionJustification call(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      List<Reference> evidence,
+      List<CodeableConcept> grounds}) {
+    return _PermissionJustification(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      evidence: evidence,
+      grounds: grounds,
+    );
+  }
+
+// ignore: unused_element
+  PermissionJustification fromJson(Map<String, Object> json) {
+    return PermissionJustification.fromJson(json);
+  }
+}
+
+/// @nodoc
+// ignore: unused_element
+const $PermissionJustification = _$PermissionJustificationTearOff();
+
+/// @nodoc
+mixin _$PermissionJustification {
+  String get id;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
+  List<Reference> get evidence;
+  List<CodeableConcept> get grounds;
+
+  Map<String, dynamic> toJson();
+  $PermissionJustificationCopyWith<PermissionJustification> get copyWith;
+}
+
+/// @nodoc
+abstract class $PermissionJustificationCopyWith<$Res> {
+  factory $PermissionJustificationCopyWith(PermissionJustification value,
+          $Res Function(PermissionJustification) then) =
+      _$PermissionJustificationCopyWithImpl<$Res>;
+  $Res call(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      List<Reference> evidence,
+      List<CodeableConcept> grounds});
+}
+
+/// @nodoc
+class _$PermissionJustificationCopyWithImpl<$Res>
+    implements $PermissionJustificationCopyWith<$Res> {
+  _$PermissionJustificationCopyWithImpl(this._value, this._then);
+
+  final PermissionJustification _value;
+  // ignore: unused_field
+  final $Res Function(PermissionJustification) _then;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object evidence = freezed,
+    Object grounds = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed ? _value.id : id as String,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      evidence:
+          evidence == freezed ? _value.evidence : evidence as List<Reference>,
+      grounds: grounds == freezed
+          ? _value.grounds
+          : grounds as List<CodeableConcept>,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$PermissionJustificationCopyWith<$Res>
+    implements $PermissionJustificationCopyWith<$Res> {
+  factory _$PermissionJustificationCopyWith(_PermissionJustification value,
+          $Res Function(_PermissionJustification) then) =
+      __$PermissionJustificationCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      List<Reference> evidence,
+      List<CodeableConcept> grounds});
+}
+
+/// @nodoc
+class __$PermissionJustificationCopyWithImpl<$Res>
+    extends _$PermissionJustificationCopyWithImpl<$Res>
+    implements _$PermissionJustificationCopyWith<$Res> {
+  __$PermissionJustificationCopyWithImpl(_PermissionJustification _value,
+      $Res Function(_PermissionJustification) _then)
+      : super(_value, (v) => _then(v as _PermissionJustification));
+
+  @override
+  _PermissionJustification get _value =>
+      super._value as _PermissionJustification;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object evidence = freezed,
+    Object grounds = freezed,
+  }) {
+    return _then(_PermissionJustification(
+      id: id == freezed ? _value.id : id as String,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      evidence:
+          evidence == freezed ? _value.evidence : evidence as List<Reference>,
+      grounds: grounds == freezed
+          ? _value.grounds
+          : grounds as List<CodeableConcept>,
+    ));
+  }
+}
+
+@JsonSerializable()
+
+/// @nodoc
+class _$_PermissionJustification extends _PermissionJustification {
+  _$_PermissionJustification(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.evidence,
+      this.grounds})
+      : super._();
+
+  factory _$_PermissionJustification.fromJson(Map<String, dynamic> json) =>
+      _$_$_PermissionJustificationFromJson(json);
+
+  @override
+  final String id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
+  @override
+  final List<Reference> evidence;
+  @override
+  final List<CodeableConcept> grounds;
+
+  @override
+  String toString() {
+    return 'PermissionJustification(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, evidence: $evidence, grounds: $grounds)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _PermissionJustification &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.evidence, evidence) ||
+                const DeepCollectionEquality()
+                    .equals(other.evidence, evidence)) &&
+            (identical(other.grounds, grounds) ||
+                const DeepCollectionEquality().equals(other.grounds, grounds)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(evidence) ^
+      const DeepCollectionEquality().hash(grounds);
+
+  @override
+  _$PermissionJustificationCopyWith<_PermissionJustification> get copyWith =>
+      __$PermissionJustificationCopyWithImpl<_PermissionJustification>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_PermissionJustificationToJson(this);
+  }
+}
+
+abstract class _PermissionJustification extends PermissionJustification {
+  _PermissionJustification._() : super._();
+  factory _PermissionJustification(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      List<Reference> evidence,
+      List<CodeableConcept> grounds}) = _$_PermissionJustification;
+
+  factory _PermissionJustification.fromJson(Map<String, dynamic> json) =
+      _$_PermissionJustification.fromJson;
+
+  @override
+  String get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
+  @override
+  List<Reference> get evidence;
+  @override
+  List<CodeableConcept> get grounds;
+  @override
+  _$PermissionJustificationCopyWith<_PermissionJustification> get copyWith;
 }
 
 Provenance _$ProvenanceFromJson(Map<String, dynamic> json) {

@@ -60,7 +60,9 @@ abstract class Evidence with Resource implements _$Evidence {
     List<RelatedArtifact> relatedArtifact,
     Markdown assertion,
     @JsonKey(name: '_assertion') Element assertionElement,
-    List<Annotation> note,
+    // ToDo
+    //  List<Annotation> note,
+    Annotation note,
     @required List<EvidenceVariableDefinition> variableDefinition,
     CodeableConcept synthesisType,
     CodeableConcept studyType,
@@ -103,7 +105,9 @@ abstract class EvidenceCertainty implements _$EvidenceCertainty {
     List<FhirExtension> modifierExtension,
     String description,
     @JsonKey(name: '_description') Element descriptionElement,
-    List<Annotation> note,
+    // ToDo
+    // List<Annotation> note,
+    Annotation note,
     List<CodeableConcept> rating,
     List<EvidenceCertaintySubcomponent> certaintySubcomponent,
   }) = _EvidenceCertainty;
@@ -122,7 +126,9 @@ abstract class EvidenceCertaintySubcomponent
     List<FhirExtension> modifierExtension,
     String description,
     @JsonKey(name: '_description') Element descriptionElement,
-    List<Annotation> note,
+    // ToDo
+    // List<Annotation> note,
+    Annotation note,
     List<CodeableConcept> type,
     List<CodeableConcept> rating,
   }) = _EvidenceCertaintySubcomponent;

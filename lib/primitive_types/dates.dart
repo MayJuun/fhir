@@ -32,11 +32,9 @@ abstract class Dates<DateTime> {
         (r) => _formattedDate(r),
       );
 
-  String _formattedDate(value) => value.toIso8601String().substring(
-      0,
-      format > value.toIso8601String().length
-          ? value.toIso8601String().length
-          : format);
+  String _formattedDate(value) => format == -1
+      ? value.toIso8601String()
+      : value.toIso8601String().substring(0, format);
 }
 
 bool _hasMatch(String pattern, String input) => RegExp(pattern).hasMatch(input);

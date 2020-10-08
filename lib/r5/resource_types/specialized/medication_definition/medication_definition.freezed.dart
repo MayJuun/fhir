@@ -11324,13 +11324,15 @@ class _$MedicinalProductDefinitionCrossReferenceTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @required CodeableReference product,
+      CodeableConcept productCodeableConcept,
+      Reference productReference,
       CodeableConcept type}) {
     return _MedicinalProductDefinitionCrossReference(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
-      product: product,
+      productCodeableConcept: productCodeableConcept,
+      productReference: productReference,
       type: type,
     );
   }
@@ -11352,7 +11354,8 @@ mixin _$MedicinalProductDefinitionCrossReference {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
-  CodeableReference get product;
+  CodeableConcept get productCodeableConcept;
+  Reference get productReference;
   CodeableConcept get type;
 
   Map<String, dynamic> toJson();
@@ -11370,10 +11373,12 @@ abstract class $MedicinalProductDefinitionCrossReferenceCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      CodeableReference product,
+      CodeableConcept productCodeableConcept,
+      Reference productReference,
       CodeableConcept type});
 
-  $CodeableReferenceCopyWith<$Res> get product;
+  $CodeableConceptCopyWith<$Res> get productCodeableConcept;
+  $ReferenceCopyWith<$Res> get productReference;
   $CodeableConceptCopyWith<$Res> get type;
 }
 
@@ -11392,7 +11397,8 @@ class _$MedicinalProductDefinitionCrossReferenceCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object product = freezed,
+    Object productCodeableConcept = freezed,
+    Object productReference = freezed,
     Object type = freezed,
   }) {
     return _then(_value.copyWith(
@@ -11403,19 +11409,34 @@ class _$MedicinalProductDefinitionCrossReferenceCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      product:
-          product == freezed ? _value.product : product as CodeableReference,
+      productCodeableConcept: productCodeableConcept == freezed
+          ? _value.productCodeableConcept
+          : productCodeableConcept as CodeableConcept,
+      productReference: productReference == freezed
+          ? _value.productReference
+          : productReference as Reference,
       type: type == freezed ? _value.type : type as CodeableConcept,
     ));
   }
 
   @override
-  $CodeableReferenceCopyWith<$Res> get product {
-    if (_value.product == null) {
+  $CodeableConceptCopyWith<$Res> get productCodeableConcept {
+    if (_value.productCodeableConcept == null) {
       return null;
     }
-    return $CodeableReferenceCopyWith<$Res>(_value.product, (value) {
-      return _then(_value.copyWith(product: value));
+    return $CodeableConceptCopyWith<$Res>(_value.productCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(productCodeableConcept: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get productReference {
+    if (_value.productReference == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.productReference, (value) {
+      return _then(_value.copyWith(productReference: value));
     });
   }
 
@@ -11442,11 +11463,14 @@ abstract class _$MedicinalProductDefinitionCrossReferenceCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      CodeableReference product,
+      CodeableConcept productCodeableConcept,
+      Reference productReference,
       CodeableConcept type});
 
   @override
-  $CodeableReferenceCopyWith<$Res> get product;
+  $CodeableConceptCopyWith<$Res> get productCodeableConcept;
+  @override
+  $ReferenceCopyWith<$Res> get productReference;
   @override
   $CodeableConceptCopyWith<$Res> get type;
 }
@@ -11470,7 +11494,8 @@ class __$MedicinalProductDefinitionCrossReferenceCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object product = freezed,
+    Object productCodeableConcept = freezed,
+    Object productReference = freezed,
     Object type = freezed,
   }) {
     return _then(_MedicinalProductDefinitionCrossReference(
@@ -11481,8 +11506,12 @@ class __$MedicinalProductDefinitionCrossReferenceCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      product:
-          product == freezed ? _value.product : product as CodeableReference,
+      productCodeableConcept: productCodeableConcept == freezed
+          ? _value.productCodeableConcept
+          : productCodeableConcept as CodeableConcept,
+      productReference: productReference == freezed
+          ? _value.productReference
+          : productReference as Reference,
       type: type == freezed ? _value.type : type as CodeableConcept,
     ));
   }
@@ -11497,10 +11526,10 @@ class _$_MedicinalProductDefinitionCrossReference
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @required this.product,
+      this.productCodeableConcept,
+      this.productReference,
       this.type})
-      : assert(product != null),
-        super._();
+      : super._();
 
   factory _$_MedicinalProductDefinitionCrossReference.fromJson(
           Map<String, dynamic> json) =>
@@ -11514,13 +11543,15 @@ class _$_MedicinalProductDefinitionCrossReference
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  final CodeableReference product;
+  final CodeableConcept productCodeableConcept;
+  @override
+  final Reference productReference;
   @override
   final CodeableConcept type;
 
   @override
   String toString() {
-    return 'MedicinalProductDefinitionCrossReference(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, product: $product, type: $type)';
+    return 'MedicinalProductDefinitionCrossReference(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, productCodeableConcept: $productCodeableConcept, productReference: $productReference, type: $type)';
   }
 
   @override
@@ -11535,9 +11566,12 @@ class _$_MedicinalProductDefinitionCrossReference
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.product, product) ||
+            (identical(other.productCodeableConcept, productCodeableConcept) ||
+                const DeepCollectionEquality().equals(
+                    other.productCodeableConcept, productCodeableConcept)) &&
+            (identical(other.productReference, productReference) ||
                 const DeepCollectionEquality()
-                    .equals(other.product, product)) &&
+                    .equals(other.productReference, productReference)) &&
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)));
   }
@@ -11548,7 +11582,8 @@ class _$_MedicinalProductDefinitionCrossReference
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(product) ^
+      const DeepCollectionEquality().hash(productCodeableConcept) ^
+      const DeepCollectionEquality().hash(productReference) ^
       const DeepCollectionEquality().hash(type);
 
   @override
@@ -11570,7 +11605,8 @@ abstract class _MedicinalProductDefinitionCrossReference
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @required CodeableReference product,
+      CodeableConcept productCodeableConcept,
+      Reference productReference,
       CodeableConcept type}) = _$_MedicinalProductDefinitionCrossReference;
 
   factory _MedicinalProductDefinitionCrossReference.fromJson(
@@ -11585,7 +11621,9 @@ abstract class _MedicinalProductDefinitionCrossReference
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  CodeableReference get product;
+  CodeableConcept get productCodeableConcept;
+  @override
+  Reference get productReference;
   @override
   CodeableConcept get type;
   @override
@@ -11609,7 +11647,8 @@ class _$MedicinalProductDefinitionManufacturingBusinessOperationTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      CodeableReference type,
+      CodeableConcept typeCodeableConcept,
+      Reference typeReference,
       Period effectiveDate,
       List<Reference> manufacturer,
       Reference authorization,
@@ -11618,7 +11657,8 @@ class _$MedicinalProductDefinitionManufacturingBusinessOperationTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
-      type: type,
+      typeCodeableConcept: typeCodeableConcept,
+      typeReference: typeReference,
       effectiveDate: effectiveDate,
       manufacturer: manufacturer,
       authorization: authorization,
@@ -11645,7 +11685,8 @@ mixin _$MedicinalProductDefinitionManufacturingBusinessOperation {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
-  CodeableReference get type;
+  CodeableConcept get typeCodeableConcept;
+  Reference get typeReference;
   Period get effectiveDate;
   List<Reference> get manufacturer;
   Reference get authorization;
@@ -11670,13 +11711,15 @@ abstract class $MedicinalProductDefinitionManufacturingBusinessOperationCopyWith
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      CodeableReference type,
+      CodeableConcept typeCodeableConcept,
+      Reference typeReference,
       Period effectiveDate,
       List<Reference> manufacturer,
       Reference authorization,
       CodeableConcept confidentialityIndicator});
 
-  $CodeableReferenceCopyWith<$Res> get type;
+  $CodeableConceptCopyWith<$Res> get typeCodeableConcept;
+  $ReferenceCopyWith<$Res> get typeReference;
   $PeriodCopyWith<$Res> get effectiveDate;
   $ReferenceCopyWith<$Res> get authorization;
   $CodeableConceptCopyWith<$Res> get confidentialityIndicator;
@@ -11701,7 +11744,8 @@ class _$MedicinalProductDefinitionManufacturingBusinessOperationCopyWithImpl<
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object type = freezed,
+    Object typeCodeableConcept = freezed,
+    Object typeReference = freezed,
     Object effectiveDate = freezed,
     Object manufacturer = freezed,
     Object authorization = freezed,
@@ -11715,7 +11759,12 @@ class _$MedicinalProductDefinitionManufacturingBusinessOperationCopyWithImpl<
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      type: type == freezed ? _value.type : type as CodeableReference,
+      typeCodeableConcept: typeCodeableConcept == freezed
+          ? _value.typeCodeableConcept
+          : typeCodeableConcept as CodeableConcept,
+      typeReference: typeReference == freezed
+          ? _value.typeReference
+          : typeReference as Reference,
       effectiveDate: effectiveDate == freezed
           ? _value.effectiveDate
           : effectiveDate as Period,
@@ -11732,12 +11781,22 @@ class _$MedicinalProductDefinitionManufacturingBusinessOperationCopyWithImpl<
   }
 
   @override
-  $CodeableReferenceCopyWith<$Res> get type {
-    if (_value.type == null) {
+  $CodeableConceptCopyWith<$Res> get typeCodeableConcept {
+    if (_value.typeCodeableConcept == null) {
       return null;
     }
-    return $CodeableReferenceCopyWith<$Res>(_value.type, (value) {
-      return _then(_value.copyWith(type: value));
+    return $CodeableConceptCopyWith<$Res>(_value.typeCodeableConcept, (value) {
+      return _then(_value.copyWith(typeCodeableConcept: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get typeReference {
+    if (_value.typeReference == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.typeReference, (value) {
+      return _then(_value.copyWith(typeReference: value));
     });
   }
 
@@ -11791,14 +11850,17 @@ abstract class _$MedicinalProductDefinitionManufacturingBusinessOperationCopyWit
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      CodeableReference type,
+      CodeableConcept typeCodeableConcept,
+      Reference typeReference,
       Period effectiveDate,
       List<Reference> manufacturer,
       Reference authorization,
       CodeableConcept confidentialityIndicator});
 
   @override
-  $CodeableReferenceCopyWith<$Res> get type;
+  $CodeableConceptCopyWith<$Res> get typeCodeableConcept;
+  @override
+  $ReferenceCopyWith<$Res> get typeReference;
   @override
   $PeriodCopyWith<$Res> get effectiveDate;
   @override
@@ -11833,7 +11895,8 @@ class __$MedicinalProductDefinitionManufacturingBusinessOperationCopyWithImpl<
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object type = freezed,
+    Object typeCodeableConcept = freezed,
+    Object typeReference = freezed,
     Object effectiveDate = freezed,
     Object manufacturer = freezed,
     Object authorization = freezed,
@@ -11847,7 +11910,12 @@ class __$MedicinalProductDefinitionManufacturingBusinessOperationCopyWithImpl<
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      type: type == freezed ? _value.type : type as CodeableReference,
+      typeCodeableConcept: typeCodeableConcept == freezed
+          ? _value.typeCodeableConcept
+          : typeCodeableConcept as CodeableConcept,
+      typeReference: typeReference == freezed
+          ? _value.typeReference
+          : typeReference as Reference,
       effectiveDate: effectiveDate == freezed
           ? _value.effectiveDate
           : effectiveDate as Period,
@@ -11873,7 +11941,8 @@ class _$_MedicinalProductDefinitionManufacturingBusinessOperation
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      this.type,
+      this.typeCodeableConcept,
+      this.typeReference,
       this.effectiveDate,
       this.manufacturer,
       this.authorization,
@@ -11893,7 +11962,9 @@ class _$_MedicinalProductDefinitionManufacturingBusinessOperation
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  final CodeableReference type;
+  final CodeableConcept typeCodeableConcept;
+  @override
+  final Reference typeReference;
   @override
   final Period effectiveDate;
   @override
@@ -11905,7 +11976,7 @@ class _$_MedicinalProductDefinitionManufacturingBusinessOperation
 
   @override
   String toString() {
-    return 'MedicinalProductDefinitionManufacturingBusinessOperation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, effectiveDate: $effectiveDate, manufacturer: $manufacturer, authorization: $authorization, confidentialityIndicator: $confidentialityIndicator)';
+    return 'MedicinalProductDefinitionManufacturingBusinessOperation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, typeCodeableConcept: $typeCodeableConcept, typeReference: $typeReference, effectiveDate: $effectiveDate, manufacturer: $manufacturer, authorization: $authorization, confidentialityIndicator: $confidentialityIndicator)';
   }
 
   @override
@@ -11920,8 +11991,12 @@ class _$_MedicinalProductDefinitionManufacturingBusinessOperation
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
+            (identical(other.typeCodeableConcept, typeCodeableConcept) ||
+                const DeepCollectionEquality()
+                    .equals(other.typeCodeableConcept, typeCodeableConcept)) &&
+            (identical(other.typeReference, typeReference) ||
+                const DeepCollectionEquality()
+                    .equals(other.typeReference, typeReference)) &&
             (identical(other.effectiveDate, effectiveDate) ||
                 const DeepCollectionEquality()
                     .equals(other.effectiveDate, effectiveDate)) &&
@@ -11943,7 +12018,8 @@ class _$_MedicinalProductDefinitionManufacturingBusinessOperation
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(type) ^
+      const DeepCollectionEquality().hash(typeCodeableConcept) ^
+      const DeepCollectionEquality().hash(typeReference) ^
       const DeepCollectionEquality().hash(effectiveDate) ^
       const DeepCollectionEquality().hash(manufacturer) ^
       const DeepCollectionEquality().hash(authorization) ^
@@ -11971,7 +12047,8 @@ abstract class _MedicinalProductDefinitionManufacturingBusinessOperation
           {String id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
-          CodeableReference type,
+          CodeableConcept typeCodeableConcept,
+          Reference typeReference,
           Period effectiveDate,
           List<Reference> manufacturer,
           Reference authorization,
@@ -11990,7 +12067,9 @@ abstract class _MedicinalProductDefinitionManufacturingBusinessOperation
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  CodeableReference get type;
+  CodeableConcept get typeCodeableConcept;
+  @override
+  Reference get typeReference;
   @override
   Period get effectiveDate;
   @override
@@ -18092,7 +18171,8 @@ class _$SubstanceDefinitionPropertyTearOff {
       CodeableConcept code,
       String parameters,
       @JsonKey(name: '_parameters') Element parametersElement,
-      CodeableReference definingSubstance,
+      CodeableConcept definingSubstanceCodeableConcept,
+      Reference definingSubstanceReference,
       Quantity amountQuantity,
       String amountString,
       @JsonKey(name: '_amountString') Element amountStringElement,
@@ -18106,7 +18186,8 @@ class _$SubstanceDefinitionPropertyTearOff {
       code: code,
       parameters: parameters,
       parametersElement: parametersElement,
-      definingSubstance: definingSubstance,
+      definingSubstanceCodeableConcept: definingSubstanceCodeableConcept,
+      definingSubstanceReference: definingSubstanceReference,
       amountQuantity: amountQuantity,
       amountString: amountString,
       amountStringElement: amountStringElement,
@@ -18136,7 +18217,8 @@ mixin _$SubstanceDefinitionProperty {
   String get parameters;
   @JsonKey(name: '_parameters')
   Element get parametersElement;
-  CodeableReference get definingSubstance;
+  CodeableConcept get definingSubstanceCodeableConcept;
+  Reference get definingSubstanceReference;
   Quantity get amountQuantity;
   String get amountString;
   @JsonKey(name: '_amountString')
@@ -18163,7 +18245,8 @@ abstract class $SubstanceDefinitionPropertyCopyWith<$Res> {
       CodeableConcept code,
       String parameters,
       @JsonKey(name: '_parameters') Element parametersElement,
-      CodeableReference definingSubstance,
+      CodeableConcept definingSubstanceCodeableConcept,
+      Reference definingSubstanceReference,
       Quantity amountQuantity,
       String amountString,
       @JsonKey(name: '_amountString') Element amountStringElement,
@@ -18173,7 +18256,8 @@ abstract class $SubstanceDefinitionPropertyCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get category;
   $CodeableConceptCopyWith<$Res> get code;
   $ElementCopyWith<$Res> get parametersElement;
-  $CodeableReferenceCopyWith<$Res> get definingSubstance;
+  $CodeableConceptCopyWith<$Res> get definingSubstanceCodeableConcept;
+  $ReferenceCopyWith<$Res> get definingSubstanceReference;
   $QuantityCopyWith<$Res> get amountQuantity;
   $ElementCopyWith<$Res> get amountStringElement;
   $RangeCopyWith<$Res> get referenceRange;
@@ -18197,7 +18281,8 @@ class _$SubstanceDefinitionPropertyCopyWithImpl<$Res>
     Object code = freezed,
     Object parameters = freezed,
     Object parametersElement = freezed,
-    Object definingSubstance = freezed,
+    Object definingSubstanceCodeableConcept = freezed,
+    Object definingSubstanceReference = freezed,
     Object amountQuantity = freezed,
     Object amountString = freezed,
     Object amountStringElement = freezed,
@@ -18220,9 +18305,13 @@ class _$SubstanceDefinitionPropertyCopyWithImpl<$Res>
       parametersElement: parametersElement == freezed
           ? _value.parametersElement
           : parametersElement as Element,
-      definingSubstance: definingSubstance == freezed
-          ? _value.definingSubstance
-          : definingSubstance as CodeableReference,
+      definingSubstanceCodeableConcept:
+          definingSubstanceCodeableConcept == freezed
+              ? _value.definingSubstanceCodeableConcept
+              : definingSubstanceCodeableConcept as CodeableConcept,
+      definingSubstanceReference: definingSubstanceReference == freezed
+          ? _value.definingSubstanceReference
+          : definingSubstanceReference as Reference,
       amountQuantity: amountQuantity == freezed
           ? _value.amountQuantity
           : amountQuantity as Quantity,
@@ -18270,12 +18359,23 @@ class _$SubstanceDefinitionPropertyCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableReferenceCopyWith<$Res> get definingSubstance {
-    if (_value.definingSubstance == null) {
+  $CodeableConceptCopyWith<$Res> get definingSubstanceCodeableConcept {
+    if (_value.definingSubstanceCodeableConcept == null) {
       return null;
     }
-    return $CodeableReferenceCopyWith<$Res>(_value.definingSubstance, (value) {
-      return _then(_value.copyWith(definingSubstance: value));
+    return $CodeableConceptCopyWith<$Res>(
+        _value.definingSubstanceCodeableConcept, (value) {
+      return _then(_value.copyWith(definingSubstanceCodeableConcept: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get definingSubstanceReference {
+    if (_value.definingSubstanceReference == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.definingSubstanceReference, (value) {
+      return _then(_value.copyWith(definingSubstanceReference: value));
     });
   }
 
@@ -18326,7 +18426,8 @@ abstract class _$SubstanceDefinitionPropertyCopyWith<$Res>
       CodeableConcept code,
       String parameters,
       @JsonKey(name: '_parameters') Element parametersElement,
-      CodeableReference definingSubstance,
+      CodeableConcept definingSubstanceCodeableConcept,
+      Reference definingSubstanceReference,
       Quantity amountQuantity,
       String amountString,
       @JsonKey(name: '_amountString') Element amountStringElement,
@@ -18340,7 +18441,9 @@ abstract class _$SubstanceDefinitionPropertyCopyWith<$Res>
   @override
   $ElementCopyWith<$Res> get parametersElement;
   @override
-  $CodeableReferenceCopyWith<$Res> get definingSubstance;
+  $CodeableConceptCopyWith<$Res> get definingSubstanceCodeableConcept;
+  @override
+  $ReferenceCopyWith<$Res> get definingSubstanceReference;
   @override
   $QuantityCopyWith<$Res> get amountQuantity;
   @override
@@ -18371,7 +18474,8 @@ class __$SubstanceDefinitionPropertyCopyWithImpl<$Res>
     Object code = freezed,
     Object parameters = freezed,
     Object parametersElement = freezed,
-    Object definingSubstance = freezed,
+    Object definingSubstanceCodeableConcept = freezed,
+    Object definingSubstanceReference = freezed,
     Object amountQuantity = freezed,
     Object amountString = freezed,
     Object amountStringElement = freezed,
@@ -18394,9 +18498,13 @@ class __$SubstanceDefinitionPropertyCopyWithImpl<$Res>
       parametersElement: parametersElement == freezed
           ? _value.parametersElement
           : parametersElement as Element,
-      definingSubstance: definingSubstance == freezed
-          ? _value.definingSubstance
-          : definingSubstance as CodeableReference,
+      definingSubstanceCodeableConcept:
+          definingSubstanceCodeableConcept == freezed
+              ? _value.definingSubstanceCodeableConcept
+              : definingSubstanceCodeableConcept as CodeableConcept,
+      definingSubstanceReference: definingSubstanceReference == freezed
+          ? _value.definingSubstanceReference
+          : definingSubstanceReference as Reference,
       amountQuantity: amountQuantity == freezed
           ? _value.amountQuantity
           : amountQuantity as Quantity,
@@ -18426,7 +18534,8 @@ class _$_SubstanceDefinitionProperty extends _SubstanceDefinitionProperty {
       this.code,
       this.parameters,
       @JsonKey(name: '_parameters') this.parametersElement,
-      this.definingSubstance,
+      this.definingSubstanceCodeableConcept,
+      this.definingSubstanceReference,
       this.amountQuantity,
       this.amountString,
       @JsonKey(name: '_amountString') this.amountStringElement,
@@ -18454,7 +18563,9 @@ class _$_SubstanceDefinitionProperty extends _SubstanceDefinitionProperty {
   @JsonKey(name: '_parameters')
   final Element parametersElement;
   @override
-  final CodeableReference definingSubstance;
+  final CodeableConcept definingSubstanceCodeableConcept;
+  @override
+  final Reference definingSubstanceReference;
   @override
   final Quantity amountQuantity;
   @override
@@ -18469,7 +18580,7 @@ class _$_SubstanceDefinitionProperty extends _SubstanceDefinitionProperty {
 
   @override
   String toString() {
-    return 'SubstanceDefinitionProperty(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, category: $category, code: $code, parameters: $parameters, parametersElement: $parametersElement, definingSubstance: $definingSubstance, amountQuantity: $amountQuantity, amountString: $amountString, amountStringElement: $amountStringElement, referenceRange: $referenceRange, source: $source)';
+    return 'SubstanceDefinitionProperty(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, category: $category, code: $code, parameters: $parameters, parametersElement: $parametersElement, definingSubstanceCodeableConcept: $definingSubstanceCodeableConcept, definingSubstanceReference: $definingSubstanceReference, amountQuantity: $amountQuantity, amountString: $amountString, amountStringElement: $amountStringElement, referenceRange: $referenceRange, source: $source)';
   }
 
   @override
@@ -18495,9 +18606,16 @@ class _$_SubstanceDefinitionProperty extends _SubstanceDefinitionProperty {
             (identical(other.parametersElement, parametersElement) ||
                 const DeepCollectionEquality()
                     .equals(other.parametersElement, parametersElement)) &&
-            (identical(other.definingSubstance, definingSubstance) ||
-                const DeepCollectionEquality()
-                    .equals(other.definingSubstance, definingSubstance)) &&
+            (identical(other.definingSubstanceCodeableConcept,
+                    definingSubstanceCodeableConcept) ||
+                const DeepCollectionEquality().equals(
+                    other.definingSubstanceCodeableConcept,
+                    definingSubstanceCodeableConcept)) &&
+            (identical(other.definingSubstanceReference,
+                    definingSubstanceReference) ||
+                const DeepCollectionEquality().equals(
+                    other.definingSubstanceReference,
+                    definingSubstanceReference)) &&
             (identical(other.amountQuantity, amountQuantity) ||
                 const DeepCollectionEquality()
                     .equals(other.amountQuantity, amountQuantity)) &&
@@ -18524,7 +18642,8 @@ class _$_SubstanceDefinitionProperty extends _SubstanceDefinitionProperty {
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(parameters) ^
       const DeepCollectionEquality().hash(parametersElement) ^
-      const DeepCollectionEquality().hash(definingSubstance) ^
+      const DeepCollectionEquality().hash(definingSubstanceCodeableConcept) ^
+      const DeepCollectionEquality().hash(definingSubstanceReference) ^
       const DeepCollectionEquality().hash(amountQuantity) ^
       const DeepCollectionEquality().hash(amountString) ^
       const DeepCollectionEquality().hash(amountStringElement) ^
@@ -18553,7 +18672,8 @@ abstract class _SubstanceDefinitionProperty
       CodeableConcept code,
       String parameters,
       @JsonKey(name: '_parameters') Element parametersElement,
-      CodeableReference definingSubstance,
+      CodeableConcept definingSubstanceCodeableConcept,
+      Reference definingSubstanceReference,
       Quantity amountQuantity,
       String amountString,
       @JsonKey(name: '_amountString') Element amountStringElement,
@@ -18580,7 +18700,9 @@ abstract class _SubstanceDefinitionProperty
   @JsonKey(name: '_parameters')
   Element get parametersElement;
   @override
-  CodeableReference get definingSubstance;
+  CodeableConcept get definingSubstanceCodeableConcept;
+  @override
+  Reference get definingSubstanceReference;
   @override
   Quantity get amountQuantity;
   @override

@@ -325,6 +325,10 @@ _$_CarePlanDetail _$_$_CarePlanDetailFromJson(Map<String, dynamic> json) {
     scheduledStringElement: json['_scheduledString'] == null
         ? null
         : Element.fromJson(json['_scheduledString'] as Map<String, dynamic>),
+    locationCodeableConcept: json['locationCodeableConcept'] == null
+        ? null
+        : CodeableConcept.fromJson(
+            json['locationCodeableConcept'] as Map<String, dynamic>),
     location: json['location'] == null
         ? null
         : CodeableReference.fromJson(json['location'] as Map<String, dynamic>),
@@ -395,6 +399,8 @@ Map<String, dynamic> _$_$_CarePlanDetailToJson(_$_CarePlanDetail instance) {
   writeNotNull('scheduledPeriod', instance.scheduledPeriod?.toJson());
   writeNotNull('scheduledString', instance.scheduledString);
   writeNotNull('_scheduledString', instance.scheduledStringElement?.toJson());
+  writeNotNull(
+      'locationCodeableConcept', instance.locationCodeableConcept?.toJson());
   writeNotNull('location', instance.location?.toJson());
   writeNotNull('reportedBoolean', instance.reportedBoolean?.toJson());
   writeNotNull('_reportedBoolean', instance.reportedBooleanElement?.toJson());
@@ -1130,10 +1136,15 @@ _$_NutritionIntakeConsumedItem _$_$_NutritionIntakeConsumedItemFromJson(
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    nutritionProduct: json['nutritionProduct'] == null
+    nutritionProductCodeableConcept: json['nutritionProductCodeableConcept'] ==
+            null
         ? null
-        : CodeableReference.fromJson(
-            json['nutritionProduct'] as Map<String, dynamic>),
+        : CodeableConcept.fromJson(
+            json['nutritionProductCodeableConcept'] as Map<String, dynamic>),
+    nutritionProductReference: json['nutritionProductReference'] == null
+        ? null
+        : Reference.fromJson(
+            json['nutritionProductReference'] as Map<String, dynamic>),
     schedule: json['schedule'] == null
         ? null
         : Timing.fromJson(json['schedule'] as Map<String, dynamic>),
@@ -1172,7 +1183,10 @@ Map<String, dynamic> _$_$_NutritionIntakeConsumedItemToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('type', instance.type?.toJson());
-  writeNotNull('nutritionProduct', instance.nutritionProduct?.toJson());
+  writeNotNull('nutritionProductCodeableConcept',
+      instance.nutritionProductCodeableConcept?.toJson());
+  writeNotNull('nutritionProductReference',
+      instance.nutritionProductReference?.toJson());
   writeNotNull('schedule', instance.schedule?.toJson());
   writeNotNull('amount', instance.amount?.toJson());
   writeNotNull('rate', instance.rate?.toJson());
@@ -1196,9 +1210,13 @@ _$_NutritionIntakeIngredientLabel _$_$_NutritionIntakeIngredientLabelFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    nutrient: json['nutrient'] == null
+    nutrientCodeableConcept: json['nutrientCodeableConcept'] == null
         ? null
-        : CodeableReference.fromJson(json['nutrient'] as Map<String, dynamic>),
+        : CodeableConcept.fromJson(
+            json['nutrientCodeableConcept'] as Map<String, dynamic>),
+    nutrientReference: json['nutrientReference'] == null
+        ? null
+        : Reference.fromJson(json['nutrientReference'] as Map<String, dynamic>),
     amount: json['amount'] == null
         ? null
         : Quantity.fromJson(json['amount'] as Map<String, dynamic>),
@@ -1220,7 +1238,9 @@ Map<String, dynamic> _$_$_NutritionIntakeIngredientLabelToJson(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('nutrient', instance.nutrient?.toJson());
+  writeNotNull(
+      'nutrientCodeableConcept', instance.nutrientCodeableConcept?.toJson());
+  writeNotNull('nutrientReference', instance.nutrientReference?.toJson());
   writeNotNull('amount', instance.amount?.toJson());
   return val;
 }

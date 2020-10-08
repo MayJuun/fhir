@@ -41,6 +41,12 @@ Future<String> checkMapEquality(Map<String, dynamic> input,
   } else {
     print('*****************Different Length Keys***************************');
     print(file);
+    for (var k in input.keys) {
+      print(k);
+    }
+    for (var k in output.keys) {
+      print(k);
+    }
     print(input.keys);
     print(output.keys);
   }
@@ -108,7 +114,8 @@ String checkEquality(dynamic input, dynamic output, String file) {
   else if (DateTime.tryParse(input) != null &&
       DateTime.tryParse(output) != null) {
     /// if they're dates and they mean the same dateTime return empty string
-    if (DateTime.tryParse(input) == DateTime.tryParse(output)) return '';
+    if (DateTime.tryParse(input).isAtSameMomentAs(DateTime.tryParse(output)))
+      return '';
   }
 
   /// some of the URLs have spaces, which are translated as '%20',

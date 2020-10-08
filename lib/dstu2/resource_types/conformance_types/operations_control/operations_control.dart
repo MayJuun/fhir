@@ -56,6 +56,56 @@ abstract class Conformance with Resource implements _$Conformance {
 }
 
 @freezed
+abstract class CapabilityStatement
+    with Resource
+    implements _$CapabilityStatement {
+  CapabilityStatement._();
+  factory CapabilityStatement({
+    @JsonKey(defaultValue: 'CapabilityStatement') @required String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
+    FhirUri url,
+    @JsonKey(name: '_url') Element urlElement,
+    String version,
+    String name,
+    @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
+        ConformanceStatus status,
+    Boolean experimental,
+    String publisher,
+    List<ConformanceContact> contact,
+    @JsonKey(required: true) @required FhirDateTime date,
+    String description,
+    String requirements,
+    String copyright,
+    @JsonKey(required: true, unknownEnumValue: ConformanceKind.unknown)
+    @required
+        ConformanceKind kind,
+    ConformanceSoftware software,
+    ConformanceImplementation implementation,
+    @JsonKey(required: true) @required Id fhirVersion,
+    @JsonKey(name: '_fhirVersion') Element fhirVersionElement,
+    @JsonKey(required: true, unknownEnumValue: ConformanceAcceptUnknown.unknown)
+    @required
+        ConformanceAcceptUnknown acceptUnknown,
+    @JsonKey(name: '_acceptUnknown') Element acceptUnknownElement,
+    @JsonKey(required: true) @required List<ConformanceFormat> format,
+    List<Reference> profile,
+    List<ConformanceRest> rest,
+    List<ConformanceMessaging> messaging,
+    List<ConformanceDocument> document,
+  }) = _CapabilityStatement;
+
+  factory CapabilityStatement.fromJson(Map<String, dynamic> json) =>
+      _$CapabilityStatementFromJson(json);
+}
+
+@freezed
 abstract class ConformanceContact with _$ConformanceContact {
   factory ConformanceContact({
     Id id,

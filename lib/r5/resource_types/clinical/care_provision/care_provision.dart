@@ -99,6 +99,7 @@ abstract class CarePlanDetail implements _$CarePlanDetail {
     Period scheduledPeriod,
     String scheduledString,
     @JsonKey(name: '_scheduledString') Element scheduledStringElement,
+    CodeableConcept locationCodeableConcept,
     CodeableReference location,
     Boolean reportedBoolean,
     @JsonKey(name: '_reportedBoolean') Element reportedBooleanElement,
@@ -295,7 +296,8 @@ abstract class NutritionIntakeConsumedItem
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     @required CodeableConcept type,
-    @required CodeableReference nutritionProduct,
+    CodeableConcept nutritionProductCodeableConcept,
+    Reference nutritionProductReference,
     Timing schedule,
     Quantity amount,
     Quantity rate,
@@ -316,7 +318,8 @@ abstract class NutritionIntakeIngredientLabel
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
-    @required CodeableReference nutrient,
+    CodeableConcept nutrientCodeableConcept,
+    Reference nutrientReference,
     @required Quantity amount,
   }) = _NutritionIntakeIngredientLabel;
 

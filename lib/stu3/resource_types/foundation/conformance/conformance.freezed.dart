@@ -2749,13 +2749,15 @@ class _$CapabilityStatementSecurityTearOff {
 
 // ignore: unused_element
   _CapabilityStatementSecurity call(
-      {Boolean cors,
+      {@JsonKey(name: 'extension') List<FhirExtension> extension_,
+      Boolean cors,
       @JsonKey(name: '_cors') Element corsElement,
       List<CodeableConcept> service,
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
       List<CapabilityStatementCertificate> certificate}) {
     return _CapabilityStatementSecurity(
+      extension_: extension_,
       cors: cors,
       corsElement: corsElement,
       service: service,
@@ -2777,6 +2779,8 @@ const $CapabilityStatementSecurity = _$CapabilityStatementSecurityTearOff();
 
 /// @nodoc
 mixin _$CapabilityStatementSecurity {
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
   Boolean get cors;
   @JsonKey(name: '_cors')
   Element get corsElement;
@@ -2798,7 +2802,8 @@ abstract class $CapabilityStatementSecurityCopyWith<$Res> {
           $Res Function(CapabilityStatementSecurity) then) =
       _$CapabilityStatementSecurityCopyWithImpl<$Res>;
   $Res call(
-      {Boolean cors,
+      {@JsonKey(name: 'extension') List<FhirExtension> extension_,
+      Boolean cors,
       @JsonKey(name: '_cors') Element corsElement,
       List<CodeableConcept> service,
       String description,
@@ -2820,6 +2825,7 @@ class _$CapabilityStatementSecurityCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object extension_ = freezed,
     Object cors = freezed,
     Object corsElement = freezed,
     Object service = freezed,
@@ -2828,6 +2834,9 @@ class _$CapabilityStatementSecurityCopyWithImpl<$Res>
     Object certificate = freezed,
   }) {
     return _then(_value.copyWith(
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
       cors: cors == freezed ? _value.cors : cors as Boolean,
       corsElement:
           corsElement == freezed ? _value.corsElement : corsElement as Element,
@@ -2875,7 +2884,8 @@ abstract class _$CapabilityStatementSecurityCopyWith<$Res>
       __$CapabilityStatementSecurityCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Boolean cors,
+      {@JsonKey(name: 'extension') List<FhirExtension> extension_,
+      Boolean cors,
       @JsonKey(name: '_cors') Element corsElement,
       List<CodeableConcept> service,
       String description,
@@ -2903,6 +2913,7 @@ class __$CapabilityStatementSecurityCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object extension_ = freezed,
     Object cors = freezed,
     Object corsElement = freezed,
     Object service = freezed,
@@ -2911,6 +2922,9 @@ class __$CapabilityStatementSecurityCopyWithImpl<$Res>
     Object certificate = freezed,
   }) {
     return _then(_CapabilityStatementSecurity(
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
       cors: cors == freezed ? _value.cors : cors as Boolean,
       corsElement:
           corsElement == freezed ? _value.corsElement : corsElement as Element,
@@ -2934,7 +2948,8 @@ class __$CapabilityStatementSecurityCopyWithImpl<$Res>
 /// @nodoc
 class _$_CapabilityStatementSecurity extends _CapabilityStatementSecurity {
   _$_CapabilityStatementSecurity(
-      {this.cors,
+      {@JsonKey(name: 'extension') this.extension_,
+      this.cors,
       @JsonKey(name: '_cors') this.corsElement,
       this.service,
       this.description,
@@ -2945,6 +2960,9 @@ class _$_CapabilityStatementSecurity extends _CapabilityStatementSecurity {
   factory _$_CapabilityStatementSecurity.fromJson(Map<String, dynamic> json) =>
       _$_$_CapabilityStatementSecurityFromJson(json);
 
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
   @override
   final Boolean cors;
   @override
@@ -2962,13 +2980,16 @@ class _$_CapabilityStatementSecurity extends _CapabilityStatementSecurity {
 
   @override
   String toString() {
-    return 'CapabilityStatementSecurity(cors: $cors, corsElement: $corsElement, service: $service, description: $description, descriptionElement: $descriptionElement, certificate: $certificate)';
+    return 'CapabilityStatementSecurity(extension_: $extension_, cors: $cors, corsElement: $corsElement, service: $service, description: $description, descriptionElement: $descriptionElement, certificate: $certificate)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _CapabilityStatementSecurity &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
             (identical(other.cors, cors) ||
                 const DeepCollectionEquality().equals(other.cors, cors)) &&
             (identical(other.corsElement, corsElement) ||
@@ -2991,6 +3012,7 @@ class _$_CapabilityStatementSecurity extends _CapabilityStatementSecurity {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(cors) ^
       const DeepCollectionEquality().hash(corsElement) ^
       const DeepCollectionEquality().hash(service) ^
@@ -3013,7 +3035,8 @@ abstract class _CapabilityStatementSecurity
     extends CapabilityStatementSecurity {
   _CapabilityStatementSecurity._() : super._();
   factory _CapabilityStatementSecurity(
-          {Boolean cors,
+          {@JsonKey(name: 'extension') List<FhirExtension> extension_,
+          Boolean cors,
           @JsonKey(name: '_cors') Element corsElement,
           List<CodeableConcept> service,
           String description,
@@ -3024,6 +3047,9 @@ abstract class _CapabilityStatementSecurity
   factory _CapabilityStatementSecurity.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementSecurity.fromJson;
 
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
   @override
   Boolean get cors;
   @override

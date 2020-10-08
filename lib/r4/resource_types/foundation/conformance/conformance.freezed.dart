@@ -3270,7 +3270,8 @@ class _$CapabilityStatementResourceTearOff {
           CapabilityStatementResourceConditionalDelete conditionalDelete,
       @JsonKey(name: '_conditionalDelete')
           Element conditionalDeleteElement,
-      List<CapabilityStatementResourceReferencePolicy> referencePolicy,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceReferencePolicy.unknown)
+          CapabilityStatementResourceReferencePolicy referencePolicy,
       @JsonKey(name: '_referencePolicy')
           List<Element> referencePolicyElement,
       List<String> searchInclude,
@@ -3367,7 +3368,8 @@ mixin _$CapabilityStatementResource {
   CapabilityStatementResourceConditionalDelete get conditionalDelete;
   @JsonKey(name: '_conditionalDelete')
   Element get conditionalDeleteElement;
-  List<CapabilityStatementResourceReferencePolicy> get referencePolicy;
+  @JsonKey(unknownEnumValue: CapabilityStatementResourceReferencePolicy.unknown)
+  CapabilityStatementResourceReferencePolicy get referencePolicy;
   @JsonKey(name: '_referencePolicy')
   List<Element> get referencePolicyElement;
   List<String> get searchInclude;
@@ -3428,7 +3430,8 @@ abstract class $CapabilityStatementResourceCopyWith<$Res> {
           CapabilityStatementResourceConditionalDelete conditionalDelete,
       @JsonKey(name: '_conditionalDelete')
           Element conditionalDeleteElement,
-      List<CapabilityStatementResourceReferencePolicy> referencePolicy,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceReferencePolicy.unknown)
+          CapabilityStatementResourceReferencePolicy referencePolicy,
       @JsonKey(name: '_referencePolicy')
           List<Element> referencePolicyElement,
       List<String> searchInclude,
@@ -3562,7 +3565,7 @@ class _$CapabilityStatementResourceCopyWithImpl<$Res>
           : conditionalDeleteElement as Element,
       referencePolicy: referencePolicy == freezed
           ? _value.referencePolicy
-          : referencePolicy as List<CapabilityStatementResourceReferencePolicy>,
+          : referencePolicy as CapabilityStatementResourceReferencePolicy,
       referencePolicyElement: referencePolicyElement == freezed
           ? _value.referencePolicyElement
           : referencePolicyElement as List<Element>,
@@ -3724,7 +3727,8 @@ abstract class _$CapabilityStatementResourceCopyWith<$Res>
           CapabilityStatementResourceConditionalDelete conditionalDelete,
       @JsonKey(name: '_conditionalDelete')
           Element conditionalDeleteElement,
-      List<CapabilityStatementResourceReferencePolicy> referencePolicy,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceReferencePolicy.unknown)
+          CapabilityStatementResourceReferencePolicy referencePolicy,
       @JsonKey(name: '_referencePolicy')
           List<Element> referencePolicyElement,
       List<String> searchInclude,
@@ -3871,7 +3875,7 @@ class __$CapabilityStatementResourceCopyWithImpl<$Res>
           : conditionalDeleteElement as Element,
       referencePolicy: referencePolicy == freezed
           ? _value.referencePolicy
-          : referencePolicy as List<CapabilityStatementResourceReferencePolicy>,
+          : referencePolicy as CapabilityStatementResourceReferencePolicy,
       referencePolicyElement: referencePolicyElement == freezed
           ? _value.referencePolicyElement
           : referencePolicyElement as List<Element>,
@@ -3939,7 +3943,8 @@ class _$_CapabilityStatementResource extends _CapabilityStatementResource {
           this.conditionalDelete,
       @JsonKey(name: '_conditionalDelete')
           this.conditionalDeleteElement,
-      this.referencePolicy,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceReferencePolicy.unknown)
+          this.referencePolicy,
       @JsonKey(name: '_referencePolicy')
           this.referencePolicyElement,
       this.searchInclude,
@@ -4018,7 +4023,8 @@ class _$_CapabilityStatementResource extends _CapabilityStatementResource {
   @JsonKey(name: '_conditionalDelete')
   final Element conditionalDeleteElement;
   @override
-  final List<CapabilityStatementResourceReferencePolicy> referencePolicy;
+  @JsonKey(unknownEnumValue: CapabilityStatementResourceReferencePolicy.unknown)
+  final CapabilityStatementResourceReferencePolicy referencePolicy;
   @override
   @JsonKey(name: '_referencePolicy')
   final List<Element> referencePolicyElement;
@@ -4209,7 +4215,8 @@ abstract class _CapabilityStatementResource
           CapabilityStatementResourceConditionalDelete conditionalDelete,
       @JsonKey(name: '_conditionalDelete')
           Element conditionalDeleteElement,
-      List<CapabilityStatementResourceReferencePolicy> referencePolicy,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceReferencePolicy.unknown)
+          CapabilityStatementResourceReferencePolicy referencePolicy,
       @JsonKey(name: '_referencePolicy')
           List<Element> referencePolicyElement,
       List<String> searchInclude,
@@ -4287,7 +4294,8 @@ abstract class _CapabilityStatementResource
   @JsonKey(name: '_conditionalDelete')
   Element get conditionalDeleteElement;
   @override
-  List<CapabilityStatementResourceReferencePolicy> get referencePolicy;
+  @JsonKey(unknownEnumValue: CapabilityStatementResourceReferencePolicy.unknown)
+  CapabilityStatementResourceReferencePolicy get referencePolicy;
   @override
   @JsonKey(name: '_referencePolicy')
   List<Element> get referencePolicyElement;

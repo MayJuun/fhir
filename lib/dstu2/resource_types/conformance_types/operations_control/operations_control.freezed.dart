@@ -1014,6 +1014,1015 @@ abstract class _Conformance extends Conformance {
   _$ConformanceCopyWith<_Conformance> get copyWith;
 }
 
+CapabilityStatement _$CapabilityStatementFromJson(Map<String, dynamic> json) {
+  return _CapabilityStatement.fromJson(json);
+}
+
+/// @nodoc
+class _$CapabilityStatementTearOff {
+  const _$CapabilityStatementTearOff();
+
+// ignore: unused_element
+  _CapabilityStatement call(
+      {@required
+      @JsonKey(defaultValue: 'CapabilityStatement')
+          String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      FhirUri url,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      String version,
+      String name,
+      @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
+          ConformanceStatus status,
+      Boolean experimental,
+      String publisher,
+      List<ConformanceContact> contact,
+      @required
+      @JsonKey(required: true)
+          FhirDateTime date,
+      String description,
+      String requirements,
+      String copyright,
+      @required
+      @JsonKey(required: true, unknownEnumValue: ConformanceKind.unknown)
+          ConformanceKind kind,
+      ConformanceSoftware software,
+      ConformanceImplementation implementation,
+      @required
+      @JsonKey(required: true)
+          Id fhirVersion,
+      @JsonKey(name: '_fhirVersion')
+          Element fhirVersionElement,
+      @required
+      @JsonKey(required: true, unknownEnumValue: ConformanceAcceptUnknown.unknown)
+          ConformanceAcceptUnknown acceptUnknown,
+      @JsonKey(name: '_acceptUnknown')
+          Element acceptUnknownElement,
+      @required
+      @JsonKey(required: true)
+          List<ConformanceFormat> format,
+      List<Reference> profile,
+      List<ConformanceRest> rest,
+      List<ConformanceMessaging> messaging,
+      List<ConformanceDocument> document}) {
+    return _CapabilityStatement(
+      resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      url: url,
+      urlElement: urlElement,
+      version: version,
+      name: name,
+      status: status,
+      experimental: experimental,
+      publisher: publisher,
+      contact: contact,
+      date: date,
+      description: description,
+      requirements: requirements,
+      copyright: copyright,
+      kind: kind,
+      software: software,
+      implementation: implementation,
+      fhirVersion: fhirVersion,
+      fhirVersionElement: fhirVersionElement,
+      acceptUnknown: acceptUnknown,
+      acceptUnknownElement: acceptUnknownElement,
+      format: format,
+      profile: profile,
+      rest: rest,
+      messaging: messaging,
+      document: document,
+    );
+  }
+
+// ignore: unused_element
+  CapabilityStatement fromJson(Map<String, Object> json) {
+    return CapabilityStatement.fromJson(json);
+  }
+}
+
+/// @nodoc
+// ignore: unused_element
+const $CapabilityStatement = _$CapabilityStatementTearOff();
+
+/// @nodoc
+mixin _$CapabilityStatement {
+  @JsonKey(defaultValue: 'CapabilityStatement')
+  String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
+  FhirUri get url;
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  String get version;
+  String get name;
+  @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
+  ConformanceStatus get status;
+  Boolean get experimental;
+  String get publisher;
+  List<ConformanceContact> get contact;
+  @JsonKey(required: true)
+  FhirDateTime get date;
+  String get description;
+  String get requirements;
+  String get copyright;
+  @JsonKey(required: true, unknownEnumValue: ConformanceKind.unknown)
+  ConformanceKind get kind;
+  ConformanceSoftware get software;
+  ConformanceImplementation get implementation;
+  @JsonKey(required: true)
+  Id get fhirVersion;
+  @JsonKey(name: '_fhirVersion')
+  Element get fhirVersionElement;
+  @JsonKey(required: true, unknownEnumValue: ConformanceAcceptUnknown.unknown)
+  ConformanceAcceptUnknown get acceptUnknown;
+  @JsonKey(name: '_acceptUnknown')
+  Element get acceptUnknownElement;
+  @JsonKey(required: true)
+  List<ConformanceFormat> get format;
+  List<Reference> get profile;
+  List<ConformanceRest> get rest;
+  List<ConformanceMessaging> get messaging;
+  List<ConformanceDocument> get document;
+
+  Map<String, dynamic> toJson();
+  $CapabilityStatementCopyWith<CapabilityStatement> get copyWith;
+}
+
+/// @nodoc
+abstract class $CapabilityStatementCopyWith<$Res> {
+  factory $CapabilityStatementCopyWith(
+          CapabilityStatement value, $Res Function(CapabilityStatement) then) =
+      _$CapabilityStatementCopyWithImpl<$Res>;
+  $Res call(
+      {@JsonKey(defaultValue: 'CapabilityStatement')
+          String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      FhirUri url,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      String version,
+      String name,
+      @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
+          ConformanceStatus status,
+      Boolean experimental,
+      String publisher,
+      List<ConformanceContact> contact,
+      @JsonKey(required: true)
+          FhirDateTime date,
+      String description,
+      String requirements,
+      String copyright,
+      @JsonKey(required: true, unknownEnumValue: ConformanceKind.unknown)
+          ConformanceKind kind,
+      ConformanceSoftware software,
+      ConformanceImplementation implementation,
+      @JsonKey(required: true)
+          Id fhirVersion,
+      @JsonKey(name: '_fhirVersion')
+          Element fhirVersionElement,
+      @JsonKey(required: true, unknownEnumValue: ConformanceAcceptUnknown.unknown)
+          ConformanceAcceptUnknown acceptUnknown,
+      @JsonKey(name: '_acceptUnknown')
+          Element acceptUnknownElement,
+      @JsonKey(required: true)
+          List<ConformanceFormat> format,
+      List<Reference> profile,
+      List<ConformanceRest> rest,
+      List<ConformanceMessaging> messaging,
+      List<ConformanceDocument> document});
+
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
+  $ElementCopyWith<$Res> get urlElement;
+  $ConformanceSoftwareCopyWith<$Res> get software;
+  $ConformanceImplementationCopyWith<$Res> get implementation;
+  $ElementCopyWith<$Res> get fhirVersionElement;
+  $ElementCopyWith<$Res> get acceptUnknownElement;
+}
+
+/// @nodoc
+class _$CapabilityStatementCopyWithImpl<$Res>
+    implements $CapabilityStatementCopyWith<$Res> {
+  _$CapabilityStatementCopyWithImpl(this._value, this._then);
+
+  final CapabilityStatement _value;
+  // ignore: unused_field
+  final $Res Function(CapabilityStatement) _then;
+
+  @override
+  $Res call({
+    Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object url = freezed,
+    Object urlElement = freezed,
+    Object version = freezed,
+    Object name = freezed,
+    Object status = freezed,
+    Object experimental = freezed,
+    Object publisher = freezed,
+    Object contact = freezed,
+    Object date = freezed,
+    Object description = freezed,
+    Object requirements = freezed,
+    Object copyright = freezed,
+    Object kind = freezed,
+    Object software = freezed,
+    Object implementation = freezed,
+    Object fhirVersion = freezed,
+    Object fhirVersionElement = freezed,
+    Object acceptUnknown = freezed,
+    Object acceptUnknownElement = freezed,
+    Object format = freezed,
+    Object profile = freezed,
+    Object rest = freezed,
+    Object messaging = freezed,
+    Object document = freezed,
+  }) {
+    return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      url: url == freezed ? _value.url : url as FhirUri,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      version: version == freezed ? _value.version : version as String,
+      name: name == freezed ? _value.name : name as String,
+      status: status == freezed ? _value.status : status as ConformanceStatus,
+      experimental: experimental == freezed
+          ? _value.experimental
+          : experimental as Boolean,
+      publisher: publisher == freezed ? _value.publisher : publisher as String,
+      contact: contact == freezed
+          ? _value.contact
+          : contact as List<ConformanceContact>,
+      date: date == freezed ? _value.date : date as FhirDateTime,
+      description:
+          description == freezed ? _value.description : description as String,
+      requirements: requirements == freezed
+          ? _value.requirements
+          : requirements as String,
+      copyright: copyright == freezed ? _value.copyright : copyright as String,
+      kind: kind == freezed ? _value.kind : kind as ConformanceKind,
+      software: software == freezed
+          ? _value.software
+          : software as ConformanceSoftware,
+      implementation: implementation == freezed
+          ? _value.implementation
+          : implementation as ConformanceImplementation,
+      fhirVersion:
+          fhirVersion == freezed ? _value.fhirVersion : fhirVersion as Id,
+      fhirVersionElement: fhirVersionElement == freezed
+          ? _value.fhirVersionElement
+          : fhirVersionElement as Element,
+      acceptUnknown: acceptUnknown == freezed
+          ? _value.acceptUnknown
+          : acceptUnknown as ConformanceAcceptUnknown,
+      acceptUnknownElement: acceptUnknownElement == freezed
+          ? _value.acceptUnknownElement
+          : acceptUnknownElement as Element,
+      format:
+          format == freezed ? _value.format : format as List<ConformanceFormat>,
+      profile: profile == freezed ? _value.profile : profile as List<Reference>,
+      rest: rest == freezed ? _value.rest : rest as List<ConformanceRest>,
+      messaging: messaging == freezed
+          ? _value.messaging
+          : messaging as List<ConformanceMessaging>,
+      document: document == freezed
+          ? _value.document
+          : document as List<ConformanceDocument>,
+    ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get urlElement {
+    if (_value.urlElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.urlElement, (value) {
+      return _then(_value.copyWith(urlElement: value));
+    });
+  }
+
+  @override
+  $ConformanceSoftwareCopyWith<$Res> get software {
+    if (_value.software == null) {
+      return null;
+    }
+    return $ConformanceSoftwareCopyWith<$Res>(_value.software, (value) {
+      return _then(_value.copyWith(software: value));
+    });
+  }
+
+  @override
+  $ConformanceImplementationCopyWith<$Res> get implementation {
+    if (_value.implementation == null) {
+      return null;
+    }
+    return $ConformanceImplementationCopyWith<$Res>(_value.implementation,
+        (value) {
+      return _then(_value.copyWith(implementation: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get fhirVersionElement {
+    if (_value.fhirVersionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.fhirVersionElement, (value) {
+      return _then(_value.copyWith(fhirVersionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get acceptUnknownElement {
+    if (_value.acceptUnknownElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.acceptUnknownElement, (value) {
+      return _then(_value.copyWith(acceptUnknownElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$CapabilityStatementCopyWith<$Res>
+    implements $CapabilityStatementCopyWith<$Res> {
+  factory _$CapabilityStatementCopyWith(_CapabilityStatement value,
+          $Res Function(_CapabilityStatement) then) =
+      __$CapabilityStatementCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {@JsonKey(defaultValue: 'CapabilityStatement')
+          String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      FhirUri url,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      String version,
+      String name,
+      @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
+          ConformanceStatus status,
+      Boolean experimental,
+      String publisher,
+      List<ConformanceContact> contact,
+      @JsonKey(required: true)
+          FhirDateTime date,
+      String description,
+      String requirements,
+      String copyright,
+      @JsonKey(required: true, unknownEnumValue: ConformanceKind.unknown)
+          ConformanceKind kind,
+      ConformanceSoftware software,
+      ConformanceImplementation implementation,
+      @JsonKey(required: true)
+          Id fhirVersion,
+      @JsonKey(name: '_fhirVersion')
+          Element fhirVersionElement,
+      @JsonKey(required: true, unknownEnumValue: ConformanceAcceptUnknown.unknown)
+          ConformanceAcceptUnknown acceptUnknown,
+      @JsonKey(name: '_acceptUnknown')
+          Element acceptUnknownElement,
+      @JsonKey(required: true)
+          List<ConformanceFormat> format,
+      List<Reference> profile,
+      List<ConformanceRest> rest,
+      List<ConformanceMessaging> messaging,
+      List<ConformanceDocument> document});
+
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
+  $ElementCopyWith<$Res> get urlElement;
+  @override
+  $ConformanceSoftwareCopyWith<$Res> get software;
+  @override
+  $ConformanceImplementationCopyWith<$Res> get implementation;
+  @override
+  $ElementCopyWith<$Res> get fhirVersionElement;
+  @override
+  $ElementCopyWith<$Res> get acceptUnknownElement;
+}
+
+/// @nodoc
+class __$CapabilityStatementCopyWithImpl<$Res>
+    extends _$CapabilityStatementCopyWithImpl<$Res>
+    implements _$CapabilityStatementCopyWith<$Res> {
+  __$CapabilityStatementCopyWithImpl(
+      _CapabilityStatement _value, $Res Function(_CapabilityStatement) _then)
+      : super(_value, (v) => _then(v as _CapabilityStatement));
+
+  @override
+  _CapabilityStatement get _value => super._value as _CapabilityStatement;
+
+  @override
+  $Res call({
+    Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object url = freezed,
+    Object urlElement = freezed,
+    Object version = freezed,
+    Object name = freezed,
+    Object status = freezed,
+    Object experimental = freezed,
+    Object publisher = freezed,
+    Object contact = freezed,
+    Object date = freezed,
+    Object description = freezed,
+    Object requirements = freezed,
+    Object copyright = freezed,
+    Object kind = freezed,
+    Object software = freezed,
+    Object implementation = freezed,
+    Object fhirVersion = freezed,
+    Object fhirVersionElement = freezed,
+    Object acceptUnknown = freezed,
+    Object acceptUnknownElement = freezed,
+    Object format = freezed,
+    Object profile = freezed,
+    Object rest = freezed,
+    Object messaging = freezed,
+    Object document = freezed,
+  }) {
+    return _then(_CapabilityStatement(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      url: url == freezed ? _value.url : url as FhirUri,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      version: version == freezed ? _value.version : version as String,
+      name: name == freezed ? _value.name : name as String,
+      status: status == freezed ? _value.status : status as ConformanceStatus,
+      experimental: experimental == freezed
+          ? _value.experimental
+          : experimental as Boolean,
+      publisher: publisher == freezed ? _value.publisher : publisher as String,
+      contact: contact == freezed
+          ? _value.contact
+          : contact as List<ConformanceContact>,
+      date: date == freezed ? _value.date : date as FhirDateTime,
+      description:
+          description == freezed ? _value.description : description as String,
+      requirements: requirements == freezed
+          ? _value.requirements
+          : requirements as String,
+      copyright: copyright == freezed ? _value.copyright : copyright as String,
+      kind: kind == freezed ? _value.kind : kind as ConformanceKind,
+      software: software == freezed
+          ? _value.software
+          : software as ConformanceSoftware,
+      implementation: implementation == freezed
+          ? _value.implementation
+          : implementation as ConformanceImplementation,
+      fhirVersion:
+          fhirVersion == freezed ? _value.fhirVersion : fhirVersion as Id,
+      fhirVersionElement: fhirVersionElement == freezed
+          ? _value.fhirVersionElement
+          : fhirVersionElement as Element,
+      acceptUnknown: acceptUnknown == freezed
+          ? _value.acceptUnknown
+          : acceptUnknown as ConformanceAcceptUnknown,
+      acceptUnknownElement: acceptUnknownElement == freezed
+          ? _value.acceptUnknownElement
+          : acceptUnknownElement as Element,
+      format:
+          format == freezed ? _value.format : format as List<ConformanceFormat>,
+      profile: profile == freezed ? _value.profile : profile as List<Reference>,
+      rest: rest == freezed ? _value.rest : rest as List<ConformanceRest>,
+      messaging: messaging == freezed
+          ? _value.messaging
+          : messaging as List<ConformanceMessaging>,
+      document: document == freezed
+          ? _value.document
+          : document as List<ConformanceDocument>,
+    ));
+  }
+}
+
+@JsonSerializable()
+
+/// @nodoc
+class _$_CapabilityStatement extends _CapabilityStatement {
+  _$_CapabilityStatement(
+      {@required
+      @JsonKey(defaultValue: 'CapabilityStatement')
+          this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
+      this.url,
+      @JsonKey(name: '_url')
+          this.urlElement,
+      this.version,
+      this.name,
+      @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
+          this.status,
+      this.experimental,
+      this.publisher,
+      this.contact,
+      @required
+      @JsonKey(required: true)
+          this.date,
+      this.description,
+      this.requirements,
+      this.copyright,
+      @required
+      @JsonKey(required: true, unknownEnumValue: ConformanceKind.unknown)
+          this.kind,
+      this.software,
+      this.implementation,
+      @required
+      @JsonKey(required: true)
+          this.fhirVersion,
+      @JsonKey(name: '_fhirVersion')
+          this.fhirVersionElement,
+      @required
+      @JsonKey(required: true, unknownEnumValue: ConformanceAcceptUnknown.unknown)
+          this.acceptUnknown,
+      @JsonKey(name: '_acceptUnknown')
+          this.acceptUnknownElement,
+      @required
+      @JsonKey(required: true)
+          this.format,
+      this.profile,
+      this.rest,
+      this.messaging,
+      this.document})
+      : assert(resourceType != null),
+        assert(date != null),
+        assert(kind != null),
+        assert(fhirVersion != null),
+        assert(acceptUnknown != null),
+        assert(format != null),
+        super._();
+
+  factory _$_CapabilityStatement.fromJson(Map<String, dynamic> json) =>
+      _$_$_CapabilityStatementFromJson(json);
+
+  @override
+  @JsonKey(defaultValue: 'CapabilityStatement')
+  final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
+  @override
+  final FhirUri url;
+  @override
+  @JsonKey(name: '_url')
+  final Element urlElement;
+  @override
+  final String version;
+  @override
+  final String name;
+  @override
+  @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
+  final ConformanceStatus status;
+  @override
+  final Boolean experimental;
+  @override
+  final String publisher;
+  @override
+  final List<ConformanceContact> contact;
+  @override
+  @JsonKey(required: true)
+  final FhirDateTime date;
+  @override
+  final String description;
+  @override
+  final String requirements;
+  @override
+  final String copyright;
+  @override
+  @JsonKey(required: true, unknownEnumValue: ConformanceKind.unknown)
+  final ConformanceKind kind;
+  @override
+  final ConformanceSoftware software;
+  @override
+  final ConformanceImplementation implementation;
+  @override
+  @JsonKey(required: true)
+  final Id fhirVersion;
+  @override
+  @JsonKey(name: '_fhirVersion')
+  final Element fhirVersionElement;
+  @override
+  @JsonKey(required: true, unknownEnumValue: ConformanceAcceptUnknown.unknown)
+  final ConformanceAcceptUnknown acceptUnknown;
+  @override
+  @JsonKey(name: '_acceptUnknown')
+  final Element acceptUnknownElement;
+  @override
+  @JsonKey(required: true)
+  final List<ConformanceFormat> format;
+  @override
+  final List<Reference> profile;
+  @override
+  final List<ConformanceRest> rest;
+  @override
+  final List<ConformanceMessaging> messaging;
+  @override
+  final List<ConformanceDocument> document;
+
+  @override
+  String toString() {
+    return 'CapabilityStatement(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, version: $version, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, requirements: $requirements, copyright: $copyright, kind: $kind, software: $software, implementation: $implementation, fhirVersion: $fhirVersion, fhirVersionElement: $fhirVersionElement, acceptUnknown: $acceptUnknown, acceptUnknownElement: $acceptUnknownElement, format: $format, profile: $profile, rest: $rest, messaging: $messaging, document: $document)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _CapabilityStatement &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.url, url) ||
+                const DeepCollectionEquality().equals(other.url, url)) &&
+            (identical(other.urlElement, urlElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.urlElement, urlElement)) &&
+            (identical(other.version, version) ||
+                const DeepCollectionEquality()
+                    .equals(other.version, version)) &&
+            (identical(other.name, name) ||
+                const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.status, status) ||
+                const DeepCollectionEquality().equals(other.status, status)) &&
+            (identical(other.experimental, experimental) ||
+                const DeepCollectionEquality()
+                    .equals(other.experimental, experimental)) &&
+            (identical(other.publisher, publisher) ||
+                const DeepCollectionEquality()
+                    .equals(other.publisher, publisher)) &&
+            (identical(other.contact, contact) ||
+                const DeepCollectionEquality()
+                    .equals(other.contact, contact)) &&
+            (identical(other.date, date) ||
+                const DeepCollectionEquality().equals(other.date, date)) &&
+            (identical(other.description, description) ||
+                const DeepCollectionEquality()
+                    .equals(other.description, description)) &&
+            (identical(other.requirements, requirements) ||
+                const DeepCollectionEquality()
+                    .equals(other.requirements, requirements)) &&
+            (identical(other.copyright, copyright) ||
+                const DeepCollectionEquality()
+                    .equals(other.copyright, copyright)) &&
+            (identical(other.kind, kind) ||
+                const DeepCollectionEquality().equals(other.kind, kind)) &&
+            (identical(other.software, software) ||
+                const DeepCollectionEquality()
+                    .equals(other.software, software)) &&
+            (identical(other.implementation, implementation) ||
+                const DeepCollectionEquality()
+                    .equals(other.implementation, implementation)) &&
+            (identical(other.fhirVersion, fhirVersion) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirVersion, fhirVersion)) &&
+            (identical(other.fhirVersionElement, fhirVersionElement) ||
+                const DeepCollectionEquality().equals(other.fhirVersionElement, fhirVersionElement)) &&
+            (identical(other.acceptUnknown, acceptUnknown) || const DeepCollectionEquality().equals(other.acceptUnknown, acceptUnknown)) &&
+            (identical(other.acceptUnknownElement, acceptUnknownElement) || const DeepCollectionEquality().equals(other.acceptUnknownElement, acceptUnknownElement)) &&
+            (identical(other.format, format) || const DeepCollectionEquality().equals(other.format, format)) &&
+            (identical(other.profile, profile) || const DeepCollectionEquality().equals(other.profile, profile)) &&
+            (identical(other.rest, rest) || const DeepCollectionEquality().equals(other.rest, rest)) &&
+            (identical(other.messaging, messaging) || const DeepCollectionEquality().equals(other.messaging, messaging)) &&
+            (identical(other.document, document) || const DeepCollectionEquality().equals(other.document, document)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(url) ^
+      const DeepCollectionEquality().hash(urlElement) ^
+      const DeepCollectionEquality().hash(version) ^
+      const DeepCollectionEquality().hash(name) ^
+      const DeepCollectionEquality().hash(status) ^
+      const DeepCollectionEquality().hash(experimental) ^
+      const DeepCollectionEquality().hash(publisher) ^
+      const DeepCollectionEquality().hash(contact) ^
+      const DeepCollectionEquality().hash(date) ^
+      const DeepCollectionEquality().hash(description) ^
+      const DeepCollectionEquality().hash(requirements) ^
+      const DeepCollectionEquality().hash(copyright) ^
+      const DeepCollectionEquality().hash(kind) ^
+      const DeepCollectionEquality().hash(software) ^
+      const DeepCollectionEquality().hash(implementation) ^
+      const DeepCollectionEquality().hash(fhirVersion) ^
+      const DeepCollectionEquality().hash(fhirVersionElement) ^
+      const DeepCollectionEquality().hash(acceptUnknown) ^
+      const DeepCollectionEquality().hash(acceptUnknownElement) ^
+      const DeepCollectionEquality().hash(format) ^
+      const DeepCollectionEquality().hash(profile) ^
+      const DeepCollectionEquality().hash(rest) ^
+      const DeepCollectionEquality().hash(messaging) ^
+      const DeepCollectionEquality().hash(document);
+
+  @override
+  _$CapabilityStatementCopyWith<_CapabilityStatement> get copyWith =>
+      __$CapabilityStatementCopyWithImpl<_CapabilityStatement>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_CapabilityStatementToJson(this);
+  }
+}
+
+abstract class _CapabilityStatement extends CapabilityStatement {
+  _CapabilityStatement._() : super._();
+  factory _CapabilityStatement(
+      {@required
+      @JsonKey(defaultValue: 'CapabilityStatement')
+          String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      FhirUri url,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      String version,
+      String name,
+      @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
+          ConformanceStatus status,
+      Boolean experimental,
+      String publisher,
+      List<ConformanceContact> contact,
+      @required
+      @JsonKey(required: true)
+          FhirDateTime date,
+      String description,
+      String requirements,
+      String copyright,
+      @required
+      @JsonKey(required: true, unknownEnumValue: ConformanceKind.unknown)
+          ConformanceKind kind,
+      ConformanceSoftware software,
+      ConformanceImplementation implementation,
+      @required
+      @JsonKey(required: true)
+          Id fhirVersion,
+      @JsonKey(name: '_fhirVersion')
+          Element fhirVersionElement,
+      @required
+      @JsonKey(required: true, unknownEnumValue: ConformanceAcceptUnknown.unknown)
+          ConformanceAcceptUnknown acceptUnknown,
+      @JsonKey(name: '_acceptUnknown')
+          Element acceptUnknownElement,
+      @required
+      @JsonKey(required: true)
+          List<ConformanceFormat> format,
+      List<Reference> profile,
+      List<ConformanceRest> rest,
+      List<ConformanceMessaging> messaging,
+      List<ConformanceDocument> document}) = _$_CapabilityStatement;
+
+  factory _CapabilityStatement.fromJson(Map<String, dynamic> json) =
+      _$_CapabilityStatement.fromJson;
+
+  @override
+  @JsonKey(defaultValue: 'CapabilityStatement')
+  String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
+  @override
+  FhirUri get url;
+  @override
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @override
+  String get version;
+  @override
+  String get name;
+  @override
+  @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
+  ConformanceStatus get status;
+  @override
+  Boolean get experimental;
+  @override
+  String get publisher;
+  @override
+  List<ConformanceContact> get contact;
+  @override
+  @JsonKey(required: true)
+  FhirDateTime get date;
+  @override
+  String get description;
+  @override
+  String get requirements;
+  @override
+  String get copyright;
+  @override
+  @JsonKey(required: true, unknownEnumValue: ConformanceKind.unknown)
+  ConformanceKind get kind;
+  @override
+  ConformanceSoftware get software;
+  @override
+  ConformanceImplementation get implementation;
+  @override
+  @JsonKey(required: true)
+  Id get fhirVersion;
+  @override
+  @JsonKey(name: '_fhirVersion')
+  Element get fhirVersionElement;
+  @override
+  @JsonKey(required: true, unknownEnumValue: ConformanceAcceptUnknown.unknown)
+  ConformanceAcceptUnknown get acceptUnknown;
+  @override
+  @JsonKey(name: '_acceptUnknown')
+  Element get acceptUnknownElement;
+  @override
+  @JsonKey(required: true)
+  List<ConformanceFormat> get format;
+  @override
+  List<Reference> get profile;
+  @override
+  List<ConformanceRest> get rest;
+  @override
+  List<ConformanceMessaging> get messaging;
+  @override
+  List<ConformanceDocument> get document;
+  @override
+  _$CapabilityStatementCopyWith<_CapabilityStatement> get copyWith;
+}
+
 ConformanceContact _$ConformanceContactFromJson(Map<String, dynamic> json) {
   return _ConformanceContact.fromJson(json);
 }

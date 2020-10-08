@@ -7700,6 +7700,2315 @@ abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
   _$DeviceMetricCalibrationCopyWith<_DeviceMetricCalibration> get copyWith;
 }
 
+NutritionProduct _$NutritionProductFromJson(Map<String, dynamic> json) {
+  return _NutritionProduct.fromJson(json);
+}
+
+/// @nodoc
+class _$NutritionProductTearOff {
+  const _$NutritionProductTearOff();
+
+// ignore: unused_element
+  _NutritionProduct call(
+      {@required
+      @JsonKey(defaultValue: 'NutritionProduct')
+          String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      @JsonKey(unknownEnumValue: NutritionProductStatus.unknown)
+          NutritionProductStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      List<CodeableConcept> category,
+      CodeableConcept code,
+      List<Reference> manufacturer,
+      List<NutritionProductNutrient> nutrient,
+      List<NutritionProductIngredient> ingredient,
+      List<CodeableReference> knownAllergen,
+      List<NutritionProductProductCharacteristic> productCharacteristic,
+      NutritionProductInstance instance,
+      List<Annotation> note}) {
+    return _NutritionProduct(
+      resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      implicitRulesElement: implicitRulesElement,
+      language: language,
+      languageElement: languageElement,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      status: status,
+      statusElement: statusElement,
+      category: category,
+      code: code,
+      manufacturer: manufacturer,
+      nutrient: nutrient,
+      ingredient: ingredient,
+      knownAllergen: knownAllergen,
+      productCharacteristic: productCharacteristic,
+      instance: instance,
+      note: note,
+    );
+  }
+
+// ignore: unused_element
+  NutritionProduct fromJson(Map<String, Object> json) {
+    return NutritionProduct.fromJson(json);
+  }
+}
+
+/// @nodoc
+// ignore: unused_element
+const $NutritionProduct = _$NutritionProductTearOff();
+
+/// @nodoc
+mixin _$NutritionProduct {
+  @JsonKey(defaultValue: 'NutritionProduct')
+  String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  Code get language;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
+  @JsonKey(unknownEnumValue: NutritionProductStatus.unknown)
+  NutritionProductStatus get status;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  List<CodeableConcept> get category;
+  CodeableConcept get code;
+  List<Reference> get manufacturer;
+  List<NutritionProductNutrient> get nutrient;
+  List<NutritionProductIngredient> get ingredient;
+  List<CodeableReference> get knownAllergen;
+  List<NutritionProductProductCharacteristic> get productCharacteristic;
+  NutritionProductInstance get instance;
+  List<Annotation> get note;
+
+  Map<String, dynamic> toJson();
+  $NutritionProductCopyWith<NutritionProduct> get copyWith;
+}
+
+/// @nodoc
+abstract class $NutritionProductCopyWith<$Res> {
+  factory $NutritionProductCopyWith(
+          NutritionProduct value, $Res Function(NutritionProduct) then) =
+      _$NutritionProductCopyWithImpl<$Res>;
+  $Res call(
+      {@JsonKey(defaultValue: 'NutritionProduct')
+          String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      @JsonKey(unknownEnumValue: NutritionProductStatus.unknown)
+          NutritionProductStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      List<CodeableConcept> category,
+      CodeableConcept code,
+      List<Reference> manufacturer,
+      List<NutritionProductNutrient> nutrient,
+      List<NutritionProductIngredient> ingredient,
+      List<CodeableReference> knownAllergen,
+      List<NutritionProductProductCharacteristic> productCharacteristic,
+      NutritionProductInstance instance,
+      List<Annotation> note});
+
+  $MetaCopyWith<$Res> get meta;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $NarrativeCopyWith<$Res> get text;
+  $ElementCopyWith<$Res> get statusElement;
+  $CodeableConceptCopyWith<$Res> get code;
+  $NutritionProductInstanceCopyWith<$Res> get instance;
+}
+
+/// @nodoc
+class _$NutritionProductCopyWithImpl<$Res>
+    implements $NutritionProductCopyWith<$Res> {
+  _$NutritionProductCopyWithImpl(this._value, this._then);
+
+  final NutritionProduct _value;
+  // ignore: unused_field
+  final $Res Function(NutritionProduct) _then;
+
+  @override
+  $Res call({
+    Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
+    Object language = freezed,
+    Object languageElement = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object status = freezed,
+    Object statusElement = freezed,
+    Object category = freezed,
+    Object code = freezed,
+    Object manufacturer = freezed,
+    Object nutrient = freezed,
+    Object ingredient = freezed,
+    Object knownAllergen = freezed,
+    Object productCharacteristic = freezed,
+    Object instance = freezed,
+    Object note = freezed,
+  }) {
+    return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      status:
+          status == freezed ? _value.status : status as NutritionProductStatus,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      category: category == freezed
+          ? _value.category
+          : category as List<CodeableConcept>,
+      code: code == freezed ? _value.code : code as CodeableConcept,
+      manufacturer: manufacturer == freezed
+          ? _value.manufacturer
+          : manufacturer as List<Reference>,
+      nutrient: nutrient == freezed
+          ? _value.nutrient
+          : nutrient as List<NutritionProductNutrient>,
+      ingredient: ingredient == freezed
+          ? _value.ingredient
+          : ingredient as List<NutritionProductIngredient>,
+      knownAllergen: knownAllergen == freezed
+          ? _value.knownAllergen
+          : knownAllergen as List<CodeableReference>,
+      productCharacteristic: productCharacteristic == freezed
+          ? _value.productCharacteristic
+          : productCharacteristic
+              as List<NutritionProductProductCharacteristic>,
+      instance: instance == freezed
+          ? _value.instance
+          : instance as NutritionProductInstance,
+      note: note == freezed ? _value.note : note as List<Annotation>,
+    ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
+  }
+
+  @override
+  $NutritionProductInstanceCopyWith<$Res> get instance {
+    if (_value.instance == null) {
+      return null;
+    }
+    return $NutritionProductInstanceCopyWith<$Res>(_value.instance, (value) {
+      return _then(_value.copyWith(instance: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$NutritionProductCopyWith<$Res>
+    implements $NutritionProductCopyWith<$Res> {
+  factory _$NutritionProductCopyWith(
+          _NutritionProduct value, $Res Function(_NutritionProduct) then) =
+      __$NutritionProductCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {@JsonKey(defaultValue: 'NutritionProduct')
+          String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      @JsonKey(unknownEnumValue: NutritionProductStatus.unknown)
+          NutritionProductStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      List<CodeableConcept> category,
+      CodeableConcept code,
+      List<Reference> manufacturer,
+      List<NutritionProductNutrient> nutrient,
+      List<NutritionProductIngredient> ingredient,
+      List<CodeableReference> knownAllergen,
+      List<NutritionProductProductCharacteristic> productCharacteristic,
+      NutritionProductInstance instance,
+      List<Annotation> note});
+
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $CodeableConceptCopyWith<$Res> get code;
+  @override
+  $NutritionProductInstanceCopyWith<$Res> get instance;
+}
+
+/// @nodoc
+class __$NutritionProductCopyWithImpl<$Res>
+    extends _$NutritionProductCopyWithImpl<$Res>
+    implements _$NutritionProductCopyWith<$Res> {
+  __$NutritionProductCopyWithImpl(
+      _NutritionProduct _value, $Res Function(_NutritionProduct) _then)
+      : super(_value, (v) => _then(v as _NutritionProduct));
+
+  @override
+  _NutritionProduct get _value => super._value as _NutritionProduct;
+
+  @override
+  $Res call({
+    Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object implicitRulesElement = freezed,
+    Object language = freezed,
+    Object languageElement = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object status = freezed,
+    Object statusElement = freezed,
+    Object category = freezed,
+    Object code = freezed,
+    Object manufacturer = freezed,
+    Object nutrient = freezed,
+    Object ingredient = freezed,
+    Object knownAllergen = freezed,
+    Object productCharacteristic = freezed,
+    Object instance = freezed,
+    Object note = freezed,
+  }) {
+    return _then(_NutritionProduct(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      language: language == freezed ? _value.language : language as Code,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      status:
+          status == freezed ? _value.status : status as NutritionProductStatus,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      category: category == freezed
+          ? _value.category
+          : category as List<CodeableConcept>,
+      code: code == freezed ? _value.code : code as CodeableConcept,
+      manufacturer: manufacturer == freezed
+          ? _value.manufacturer
+          : manufacturer as List<Reference>,
+      nutrient: nutrient == freezed
+          ? _value.nutrient
+          : nutrient as List<NutritionProductNutrient>,
+      ingredient: ingredient == freezed
+          ? _value.ingredient
+          : ingredient as List<NutritionProductIngredient>,
+      knownAllergen: knownAllergen == freezed
+          ? _value.knownAllergen
+          : knownAllergen as List<CodeableReference>,
+      productCharacteristic: productCharacteristic == freezed
+          ? _value.productCharacteristic
+          : productCharacteristic
+              as List<NutritionProductProductCharacteristic>,
+      instance: instance == freezed
+          ? _value.instance
+          : instance as NutritionProductInstance,
+      note: note == freezed ? _value.note : note as List<Annotation>,
+    ));
+  }
+}
+
+@JsonSerializable()
+
+/// @nodoc
+class _$_NutritionProduct extends _NutritionProduct {
+  _$_NutritionProduct(
+      {@required @JsonKey(defaultValue: 'NutritionProduct') this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      this.language,
+      @JsonKey(name: '_language') this.languageElement,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      @JsonKey(unknownEnumValue: NutritionProductStatus.unknown) this.status,
+      @JsonKey(name: '_status') this.statusElement,
+      this.category,
+      this.code,
+      this.manufacturer,
+      this.nutrient,
+      this.ingredient,
+      this.knownAllergen,
+      this.productCharacteristic,
+      this.instance,
+      this.note})
+      : assert(resourceType != null),
+        super._();
+
+  factory _$_NutritionProduct.fromJson(Map<String, dynamic> json) =>
+      _$_$_NutritionProductFromJson(json);
+
+  @override
+  @JsonKey(defaultValue: 'NutritionProduct')
+  final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  final Code language;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
+  @override
+  @JsonKey(unknownEnumValue: NutritionProductStatus.unknown)
+  final NutritionProductStatus status;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  final List<CodeableConcept> category;
+  @override
+  final CodeableConcept code;
+  @override
+  final List<Reference> manufacturer;
+  @override
+  final List<NutritionProductNutrient> nutrient;
+  @override
+  final List<NutritionProductIngredient> ingredient;
+  @override
+  final List<CodeableReference> knownAllergen;
+  @override
+  final List<NutritionProductProductCharacteristic> productCharacteristic;
+  @override
+  final NutritionProductInstance instance;
+  @override
+  final List<Annotation> note;
+
+  @override
+  String toString() {
+    return 'NutritionProduct(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, status: $status, statusElement: $statusElement, category: $category, code: $code, manufacturer: $manufacturer, nutrient: $nutrient, ingredient: $ingredient, knownAllergen: $knownAllergen, productCharacteristic: $productCharacteristic, instance: $instance, note: $note)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _NutritionProduct &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.status, status) ||
+                const DeepCollectionEquality().equals(other.status, status)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
+            (identical(other.category, category) ||
+                const DeepCollectionEquality()
+                    .equals(other.category, category)) &&
+            (identical(other.code, code) ||
+                const DeepCollectionEquality().equals(other.code, code)) &&
+            (identical(other.manufacturer, manufacturer) ||
+                const DeepCollectionEquality()
+                    .equals(other.manufacturer, manufacturer)) &&
+            (identical(other.nutrient, nutrient) ||
+                const DeepCollectionEquality()
+                    .equals(other.nutrient, nutrient)) &&
+            (identical(other.ingredient, ingredient) ||
+                const DeepCollectionEquality()
+                    .equals(other.ingredient, ingredient)) &&
+            (identical(other.knownAllergen, knownAllergen) ||
+                const DeepCollectionEquality()
+                    .equals(other.knownAllergen, knownAllergen)) &&
+            (identical(other.productCharacteristic, productCharacteristic) ||
+                const DeepCollectionEquality().equals(
+                    other.productCharacteristic, productCharacteristic)) &&
+            (identical(other.instance, instance) ||
+                const DeepCollectionEquality()
+                    .equals(other.instance, instance)) &&
+            (identical(other.note, note) ||
+                const DeepCollectionEquality().equals(other.note, note)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(status) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(category) ^
+      const DeepCollectionEquality().hash(code) ^
+      const DeepCollectionEquality().hash(manufacturer) ^
+      const DeepCollectionEquality().hash(nutrient) ^
+      const DeepCollectionEquality().hash(ingredient) ^
+      const DeepCollectionEquality().hash(knownAllergen) ^
+      const DeepCollectionEquality().hash(productCharacteristic) ^
+      const DeepCollectionEquality().hash(instance) ^
+      const DeepCollectionEquality().hash(note);
+
+  @override
+  _$NutritionProductCopyWith<_NutritionProduct> get copyWith =>
+      __$NutritionProductCopyWithImpl<_NutritionProduct>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_NutritionProductToJson(this);
+  }
+}
+
+abstract class _NutritionProduct extends NutritionProduct {
+  _NutritionProduct._() : super._();
+  factory _NutritionProduct(
+      {@required
+      @JsonKey(defaultValue: 'NutritionProduct')
+          String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      @JsonKey(unknownEnumValue: NutritionProductStatus.unknown)
+          NutritionProductStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      List<CodeableConcept> category,
+      CodeableConcept code,
+      List<Reference> manufacturer,
+      List<NutritionProductNutrient> nutrient,
+      List<NutritionProductIngredient> ingredient,
+      List<CodeableReference> knownAllergen,
+      List<NutritionProductProductCharacteristic> productCharacteristic,
+      NutritionProductInstance instance,
+      List<Annotation> note}) = _$_NutritionProduct;
+
+  factory _NutritionProduct.fromJson(Map<String, dynamic> json) =
+      _$_NutritionProduct.fromJson;
+
+  @override
+  @JsonKey(defaultValue: 'NutritionProduct')
+  String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  Code get language;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
+  @override
+  @JsonKey(unknownEnumValue: NutritionProductStatus.unknown)
+  NutritionProductStatus get status;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  List<CodeableConcept> get category;
+  @override
+  CodeableConcept get code;
+  @override
+  List<Reference> get manufacturer;
+  @override
+  List<NutritionProductNutrient> get nutrient;
+  @override
+  List<NutritionProductIngredient> get ingredient;
+  @override
+  List<CodeableReference> get knownAllergen;
+  @override
+  List<NutritionProductProductCharacteristic> get productCharacteristic;
+  @override
+  NutritionProductInstance get instance;
+  @override
+  List<Annotation> get note;
+  @override
+  _$NutritionProductCopyWith<_NutritionProduct> get copyWith;
+}
+
+NutritionProductNutrient _$NutritionProductNutrientFromJson(
+    Map<String, dynamic> json) {
+  return _NutritionProductNutrient.fromJson(json);
+}
+
+/// @nodoc
+class _$NutritionProductNutrientTearOff {
+  const _$NutritionProductNutrientTearOff();
+
+// ignore: unused_element
+  _NutritionProductNutrient call(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      CodeableConcept itemCodeableConcept,
+      Reference itemReference,
+      List<Ratio> amount}) {
+    return _NutritionProductNutrient(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      itemCodeableConcept: itemCodeableConcept,
+      itemReference: itemReference,
+      amount: amount,
+    );
+  }
+
+// ignore: unused_element
+  NutritionProductNutrient fromJson(Map<String, Object> json) {
+    return NutritionProductNutrient.fromJson(json);
+  }
+}
+
+/// @nodoc
+// ignore: unused_element
+const $NutritionProductNutrient = _$NutritionProductNutrientTearOff();
+
+/// @nodoc
+mixin _$NutritionProductNutrient {
+  String get id;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
+  CodeableConcept get itemCodeableConcept;
+  Reference get itemReference;
+  List<Ratio> get amount;
+
+  Map<String, dynamic> toJson();
+  $NutritionProductNutrientCopyWith<NutritionProductNutrient> get copyWith;
+}
+
+/// @nodoc
+abstract class $NutritionProductNutrientCopyWith<$Res> {
+  factory $NutritionProductNutrientCopyWith(NutritionProductNutrient value,
+          $Res Function(NutritionProductNutrient) then) =
+      _$NutritionProductNutrientCopyWithImpl<$Res>;
+  $Res call(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      CodeableConcept itemCodeableConcept,
+      Reference itemReference,
+      List<Ratio> amount});
+
+  $CodeableConceptCopyWith<$Res> get itemCodeableConcept;
+  $ReferenceCopyWith<$Res> get itemReference;
+}
+
+/// @nodoc
+class _$NutritionProductNutrientCopyWithImpl<$Res>
+    implements $NutritionProductNutrientCopyWith<$Res> {
+  _$NutritionProductNutrientCopyWithImpl(this._value, this._then);
+
+  final NutritionProductNutrient _value;
+  // ignore: unused_field
+  final $Res Function(NutritionProductNutrient) _then;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object itemCodeableConcept = freezed,
+    Object itemReference = freezed,
+    Object amount = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed ? _value.id : id as String,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      itemCodeableConcept: itemCodeableConcept == freezed
+          ? _value.itemCodeableConcept
+          : itemCodeableConcept as CodeableConcept,
+      itemReference: itemReference == freezed
+          ? _value.itemReference
+          : itemReference as Reference,
+      amount: amount == freezed ? _value.amount : amount as List<Ratio>,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get itemCodeableConcept {
+    if (_value.itemCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.itemCodeableConcept, (value) {
+      return _then(_value.copyWith(itemCodeableConcept: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get itemReference {
+    if (_value.itemReference == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.itemReference, (value) {
+      return _then(_value.copyWith(itemReference: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$NutritionProductNutrientCopyWith<$Res>
+    implements $NutritionProductNutrientCopyWith<$Res> {
+  factory _$NutritionProductNutrientCopyWith(_NutritionProductNutrient value,
+          $Res Function(_NutritionProductNutrient) then) =
+      __$NutritionProductNutrientCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      CodeableConcept itemCodeableConcept,
+      Reference itemReference,
+      List<Ratio> amount});
+
+  @override
+  $CodeableConceptCopyWith<$Res> get itemCodeableConcept;
+  @override
+  $ReferenceCopyWith<$Res> get itemReference;
+}
+
+/// @nodoc
+class __$NutritionProductNutrientCopyWithImpl<$Res>
+    extends _$NutritionProductNutrientCopyWithImpl<$Res>
+    implements _$NutritionProductNutrientCopyWith<$Res> {
+  __$NutritionProductNutrientCopyWithImpl(_NutritionProductNutrient _value,
+      $Res Function(_NutritionProductNutrient) _then)
+      : super(_value, (v) => _then(v as _NutritionProductNutrient));
+
+  @override
+  _NutritionProductNutrient get _value =>
+      super._value as _NutritionProductNutrient;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object itemCodeableConcept = freezed,
+    Object itemReference = freezed,
+    Object amount = freezed,
+  }) {
+    return _then(_NutritionProductNutrient(
+      id: id == freezed ? _value.id : id as String,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      itemCodeableConcept: itemCodeableConcept == freezed
+          ? _value.itemCodeableConcept
+          : itemCodeableConcept as CodeableConcept,
+      itemReference: itemReference == freezed
+          ? _value.itemReference
+          : itemReference as Reference,
+      amount: amount == freezed ? _value.amount : amount as List<Ratio>,
+    ));
+  }
+}
+
+@JsonSerializable()
+
+/// @nodoc
+class _$_NutritionProductNutrient extends _NutritionProductNutrient {
+  _$_NutritionProductNutrient(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.itemCodeableConcept,
+      this.itemReference,
+      this.amount})
+      : super._();
+
+  factory _$_NutritionProductNutrient.fromJson(Map<String, dynamic> json) =>
+      _$_$_NutritionProductNutrientFromJson(json);
+
+  @override
+  final String id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
+  @override
+  final CodeableConcept itemCodeableConcept;
+  @override
+  final Reference itemReference;
+  @override
+  final List<Ratio> amount;
+
+  @override
+  String toString() {
+    return 'NutritionProductNutrient(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, itemCodeableConcept: $itemCodeableConcept, itemReference: $itemReference, amount: $amount)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _NutritionProductNutrient &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.itemCodeableConcept, itemCodeableConcept) ||
+                const DeepCollectionEquality()
+                    .equals(other.itemCodeableConcept, itemCodeableConcept)) &&
+            (identical(other.itemReference, itemReference) ||
+                const DeepCollectionEquality()
+                    .equals(other.itemReference, itemReference)) &&
+            (identical(other.amount, amount) ||
+                const DeepCollectionEquality().equals(other.amount, amount)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(itemCodeableConcept) ^
+      const DeepCollectionEquality().hash(itemReference) ^
+      const DeepCollectionEquality().hash(amount);
+
+  @override
+  _$NutritionProductNutrientCopyWith<_NutritionProductNutrient> get copyWith =>
+      __$NutritionProductNutrientCopyWithImpl<_NutritionProductNutrient>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_NutritionProductNutrientToJson(this);
+  }
+}
+
+abstract class _NutritionProductNutrient extends NutritionProductNutrient {
+  _NutritionProductNutrient._() : super._();
+  factory _NutritionProductNutrient(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      CodeableConcept itemCodeableConcept,
+      Reference itemReference,
+      List<Ratio> amount}) = _$_NutritionProductNutrient;
+
+  factory _NutritionProductNutrient.fromJson(Map<String, dynamic> json) =
+      _$_NutritionProductNutrient.fromJson;
+
+  @override
+  String get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
+  @override
+  CodeableConcept get itemCodeableConcept;
+  @override
+  Reference get itemReference;
+  @override
+  List<Ratio> get amount;
+  @override
+  _$NutritionProductNutrientCopyWith<_NutritionProductNutrient> get copyWith;
+}
+
+NutritionProductIngredient _$NutritionProductIngredientFromJson(
+    Map<String, dynamic> json) {
+  return _NutritionProductIngredient.fromJson(json);
+}
+
+/// @nodoc
+class _$NutritionProductIngredientTearOff {
+  const _$NutritionProductIngredientTearOff();
+
+// ignore: unused_element
+  _NutritionProductIngredient call(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      CodeableConcept itemCodeableConcept,
+      Reference itemReference,
+      List<Ratio> amount}) {
+    return _NutritionProductIngredient(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      itemCodeableConcept: itemCodeableConcept,
+      itemReference: itemReference,
+      amount: amount,
+    );
+  }
+
+// ignore: unused_element
+  NutritionProductIngredient fromJson(Map<String, Object> json) {
+    return NutritionProductIngredient.fromJson(json);
+  }
+}
+
+/// @nodoc
+// ignore: unused_element
+const $NutritionProductIngredient = _$NutritionProductIngredientTearOff();
+
+/// @nodoc
+mixin _$NutritionProductIngredient {
+  String get id;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
+  CodeableConcept get itemCodeableConcept;
+  Reference get itemReference;
+  List<Ratio> get amount;
+
+  Map<String, dynamic> toJson();
+  $NutritionProductIngredientCopyWith<NutritionProductIngredient> get copyWith;
+}
+
+/// @nodoc
+abstract class $NutritionProductIngredientCopyWith<$Res> {
+  factory $NutritionProductIngredientCopyWith(NutritionProductIngredient value,
+          $Res Function(NutritionProductIngredient) then) =
+      _$NutritionProductIngredientCopyWithImpl<$Res>;
+  $Res call(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      CodeableConcept itemCodeableConcept,
+      Reference itemReference,
+      List<Ratio> amount});
+
+  $CodeableConceptCopyWith<$Res> get itemCodeableConcept;
+  $ReferenceCopyWith<$Res> get itemReference;
+}
+
+/// @nodoc
+class _$NutritionProductIngredientCopyWithImpl<$Res>
+    implements $NutritionProductIngredientCopyWith<$Res> {
+  _$NutritionProductIngredientCopyWithImpl(this._value, this._then);
+
+  final NutritionProductIngredient _value;
+  // ignore: unused_field
+  final $Res Function(NutritionProductIngredient) _then;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object itemCodeableConcept = freezed,
+    Object itemReference = freezed,
+    Object amount = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed ? _value.id : id as String,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      itemCodeableConcept: itemCodeableConcept == freezed
+          ? _value.itemCodeableConcept
+          : itemCodeableConcept as CodeableConcept,
+      itemReference: itemReference == freezed
+          ? _value.itemReference
+          : itemReference as Reference,
+      amount: amount == freezed ? _value.amount : amount as List<Ratio>,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get itemCodeableConcept {
+    if (_value.itemCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.itemCodeableConcept, (value) {
+      return _then(_value.copyWith(itemCodeableConcept: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get itemReference {
+    if (_value.itemReference == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.itemReference, (value) {
+      return _then(_value.copyWith(itemReference: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$NutritionProductIngredientCopyWith<$Res>
+    implements $NutritionProductIngredientCopyWith<$Res> {
+  factory _$NutritionProductIngredientCopyWith(
+          _NutritionProductIngredient value,
+          $Res Function(_NutritionProductIngredient) then) =
+      __$NutritionProductIngredientCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      CodeableConcept itemCodeableConcept,
+      Reference itemReference,
+      List<Ratio> amount});
+
+  @override
+  $CodeableConceptCopyWith<$Res> get itemCodeableConcept;
+  @override
+  $ReferenceCopyWith<$Res> get itemReference;
+}
+
+/// @nodoc
+class __$NutritionProductIngredientCopyWithImpl<$Res>
+    extends _$NutritionProductIngredientCopyWithImpl<$Res>
+    implements _$NutritionProductIngredientCopyWith<$Res> {
+  __$NutritionProductIngredientCopyWithImpl(_NutritionProductIngredient _value,
+      $Res Function(_NutritionProductIngredient) _then)
+      : super(_value, (v) => _then(v as _NutritionProductIngredient));
+
+  @override
+  _NutritionProductIngredient get _value =>
+      super._value as _NutritionProductIngredient;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object itemCodeableConcept = freezed,
+    Object itemReference = freezed,
+    Object amount = freezed,
+  }) {
+    return _then(_NutritionProductIngredient(
+      id: id == freezed ? _value.id : id as String,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      itemCodeableConcept: itemCodeableConcept == freezed
+          ? _value.itemCodeableConcept
+          : itemCodeableConcept as CodeableConcept,
+      itemReference: itemReference == freezed
+          ? _value.itemReference
+          : itemReference as Reference,
+      amount: amount == freezed ? _value.amount : amount as List<Ratio>,
+    ));
+  }
+}
+
+@JsonSerializable()
+
+/// @nodoc
+class _$_NutritionProductIngredient extends _NutritionProductIngredient {
+  _$_NutritionProductIngredient(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.itemCodeableConcept,
+      this.itemReference,
+      this.amount})
+      : super._();
+
+  factory _$_NutritionProductIngredient.fromJson(Map<String, dynamic> json) =>
+      _$_$_NutritionProductIngredientFromJson(json);
+
+  @override
+  final String id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
+  @override
+  final CodeableConcept itemCodeableConcept;
+  @override
+  final Reference itemReference;
+  @override
+  final List<Ratio> amount;
+
+  @override
+  String toString() {
+    return 'NutritionProductIngredient(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, itemCodeableConcept: $itemCodeableConcept, itemReference: $itemReference, amount: $amount)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _NutritionProductIngredient &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.itemCodeableConcept, itemCodeableConcept) ||
+                const DeepCollectionEquality()
+                    .equals(other.itemCodeableConcept, itemCodeableConcept)) &&
+            (identical(other.itemReference, itemReference) ||
+                const DeepCollectionEquality()
+                    .equals(other.itemReference, itemReference)) &&
+            (identical(other.amount, amount) ||
+                const DeepCollectionEquality().equals(other.amount, amount)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(itemCodeableConcept) ^
+      const DeepCollectionEquality().hash(itemReference) ^
+      const DeepCollectionEquality().hash(amount);
+
+  @override
+  _$NutritionProductIngredientCopyWith<_NutritionProductIngredient>
+      get copyWith => __$NutritionProductIngredientCopyWithImpl<
+          _NutritionProductIngredient>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_NutritionProductIngredientToJson(this);
+  }
+}
+
+abstract class _NutritionProductIngredient extends NutritionProductIngredient {
+  _NutritionProductIngredient._() : super._();
+  factory _NutritionProductIngredient(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      CodeableConcept itemCodeableConcept,
+      Reference itemReference,
+      List<Ratio> amount}) = _$_NutritionProductIngredient;
+
+  factory _NutritionProductIngredient.fromJson(Map<String, dynamic> json) =
+      _$_NutritionProductIngredient.fromJson;
+
+  @override
+  String get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
+  @override
+  CodeableConcept get itemCodeableConcept;
+  @override
+  Reference get itemReference;
+  @override
+  List<Ratio> get amount;
+  @override
+  _$NutritionProductIngredientCopyWith<_NutritionProductIngredient>
+      get copyWith;
+}
+
+NutritionProductProductCharacteristic
+    _$NutritionProductProductCharacteristicFromJson(Map<String, dynamic> json) {
+  return _NutritionProductProductCharacteristic.fromJson(json);
+}
+
+/// @nodoc
+class _$NutritionProductProductCharacteristicTearOff {
+  const _$NutritionProductProductCharacteristicTearOff();
+
+// ignore: unused_element
+  _NutritionProductProductCharacteristic call(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      @required CodeableConcept type,
+      CodeableConcept valueCodeableConcept,
+      String valueString,
+      @JsonKey(name: '_valueString') Element valueStringElement,
+      Quantity valueQuantity,
+      Base64Binary valueBase64Binary,
+      @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
+      Attachment valueAttachment,
+      Boolean valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element valueBooleanElement}) {
+    return _NutritionProductProductCharacteristic(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      type: type,
+      valueCodeableConcept: valueCodeableConcept,
+      valueString: valueString,
+      valueStringElement: valueStringElement,
+      valueQuantity: valueQuantity,
+      valueBase64Binary: valueBase64Binary,
+      valueBase64BinaryElement: valueBase64BinaryElement,
+      valueAttachment: valueAttachment,
+      valueBoolean: valueBoolean,
+      valueBooleanElement: valueBooleanElement,
+    );
+  }
+
+// ignore: unused_element
+  NutritionProductProductCharacteristic fromJson(Map<String, Object> json) {
+    return NutritionProductProductCharacteristic.fromJson(json);
+  }
+}
+
+/// @nodoc
+// ignore: unused_element
+const $NutritionProductProductCharacteristic =
+    _$NutritionProductProductCharacteristicTearOff();
+
+/// @nodoc
+mixin _$NutritionProductProductCharacteristic {
+  String get id;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
+  CodeableConcept get type;
+  CodeableConcept get valueCodeableConcept;
+  String get valueString;
+  @JsonKey(name: '_valueString')
+  Element get valueStringElement;
+  Quantity get valueQuantity;
+  Base64Binary get valueBase64Binary;
+  @JsonKey(name: '_valueBase64Binary')
+  Element get valueBase64BinaryElement;
+  Attachment get valueAttachment;
+  Boolean get valueBoolean;
+  @JsonKey(name: '_valueBoolean')
+  Element get valueBooleanElement;
+
+  Map<String, dynamic> toJson();
+  $NutritionProductProductCharacteristicCopyWith<
+      NutritionProductProductCharacteristic> get copyWith;
+}
+
+/// @nodoc
+abstract class $NutritionProductProductCharacteristicCopyWith<$Res> {
+  factory $NutritionProductProductCharacteristicCopyWith(
+          NutritionProductProductCharacteristic value,
+          $Res Function(NutritionProductProductCharacteristic) then) =
+      _$NutritionProductProductCharacteristicCopyWithImpl<$Res>;
+  $Res call(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      CodeableConcept type,
+      CodeableConcept valueCodeableConcept,
+      String valueString,
+      @JsonKey(name: '_valueString') Element valueStringElement,
+      Quantity valueQuantity,
+      Base64Binary valueBase64Binary,
+      @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
+      Attachment valueAttachment,
+      Boolean valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element valueBooleanElement});
+
+  $CodeableConceptCopyWith<$Res> get type;
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
+  $ElementCopyWith<$Res> get valueStringElement;
+  $QuantityCopyWith<$Res> get valueQuantity;
+  $ElementCopyWith<$Res> get valueBase64BinaryElement;
+  $AttachmentCopyWith<$Res> get valueAttachment;
+  $ElementCopyWith<$Res> get valueBooleanElement;
+}
+
+/// @nodoc
+class _$NutritionProductProductCharacteristicCopyWithImpl<$Res>
+    implements $NutritionProductProductCharacteristicCopyWith<$Res> {
+  _$NutritionProductProductCharacteristicCopyWithImpl(this._value, this._then);
+
+  final NutritionProductProductCharacteristic _value;
+  // ignore: unused_field
+  final $Res Function(NutritionProductProductCharacteristic) _then;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object type = freezed,
+    Object valueCodeableConcept = freezed,
+    Object valueString = freezed,
+    Object valueStringElement = freezed,
+    Object valueQuantity = freezed,
+    Object valueBase64Binary = freezed,
+    Object valueBase64BinaryElement = freezed,
+    Object valueAttachment = freezed,
+    Object valueBoolean = freezed,
+    Object valueBooleanElement = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed ? _value.id : id as String,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      type: type == freezed ? _value.type : type as CodeableConcept,
+      valueCodeableConcept: valueCodeableConcept == freezed
+          ? _value.valueCodeableConcept
+          : valueCodeableConcept as CodeableConcept,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
+      valueStringElement: valueStringElement == freezed
+          ? _value.valueStringElement
+          : valueStringElement as Element,
+      valueQuantity: valueQuantity == freezed
+          ? _value.valueQuantity
+          : valueQuantity as Quantity,
+      valueBase64Binary: valueBase64Binary == freezed
+          ? _value.valueBase64Binary
+          : valueBase64Binary as Base64Binary,
+      valueBase64BinaryElement: valueBase64BinaryElement == freezed
+          ? _value.valueBase64BinaryElement
+          : valueBase64BinaryElement as Element,
+      valueAttachment: valueAttachment == freezed
+          ? _value.valueAttachment
+          : valueAttachment as Attachment,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
+      valueBooleanElement: valueBooleanElement == freezed
+          ? _value.valueBooleanElement
+          : valueBooleanElement as Element,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept {
+    if (_value.valueCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept, (value) {
+      return _then(_value.copyWith(valueCodeableConcept: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueStringElement {
+    if (_value.valueStringElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueStringElement, (value) {
+      return _then(_value.copyWith(valueStringElement: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get valueQuantity {
+    if (_value.valueQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.valueQuantity, (value) {
+      return _then(_value.copyWith(valueQuantity: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueBase64BinaryElement {
+    if (_value.valueBase64BinaryElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueBase64BinaryElement, (value) {
+      return _then(_value.copyWith(valueBase64BinaryElement: value));
+    });
+  }
+
+  @override
+  $AttachmentCopyWith<$Res> get valueAttachment {
+    if (_value.valueAttachment == null) {
+      return null;
+    }
+    return $AttachmentCopyWith<$Res>(_value.valueAttachment, (value) {
+      return _then(_value.copyWith(valueAttachment: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueBooleanElement {
+    if (_value.valueBooleanElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueBooleanElement, (value) {
+      return _then(_value.copyWith(valueBooleanElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$NutritionProductProductCharacteristicCopyWith<$Res>
+    implements $NutritionProductProductCharacteristicCopyWith<$Res> {
+  factory _$NutritionProductProductCharacteristicCopyWith(
+          _NutritionProductProductCharacteristic value,
+          $Res Function(_NutritionProductProductCharacteristic) then) =
+      __$NutritionProductProductCharacteristicCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      CodeableConcept type,
+      CodeableConcept valueCodeableConcept,
+      String valueString,
+      @JsonKey(name: '_valueString') Element valueStringElement,
+      Quantity valueQuantity,
+      Base64Binary valueBase64Binary,
+      @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
+      Attachment valueAttachment,
+      Boolean valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element valueBooleanElement});
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type;
+  @override
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
+  @override
+  $ElementCopyWith<$Res> get valueStringElement;
+  @override
+  $QuantityCopyWith<$Res> get valueQuantity;
+  @override
+  $ElementCopyWith<$Res> get valueBase64BinaryElement;
+  @override
+  $AttachmentCopyWith<$Res> get valueAttachment;
+  @override
+  $ElementCopyWith<$Res> get valueBooleanElement;
+}
+
+/// @nodoc
+class __$NutritionProductProductCharacteristicCopyWithImpl<$Res>
+    extends _$NutritionProductProductCharacteristicCopyWithImpl<$Res>
+    implements _$NutritionProductProductCharacteristicCopyWith<$Res> {
+  __$NutritionProductProductCharacteristicCopyWithImpl(
+      _NutritionProductProductCharacteristic _value,
+      $Res Function(_NutritionProductProductCharacteristic) _then)
+      : super(
+            _value, (v) => _then(v as _NutritionProductProductCharacteristic));
+
+  @override
+  _NutritionProductProductCharacteristic get _value =>
+      super._value as _NutritionProductProductCharacteristic;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object type = freezed,
+    Object valueCodeableConcept = freezed,
+    Object valueString = freezed,
+    Object valueStringElement = freezed,
+    Object valueQuantity = freezed,
+    Object valueBase64Binary = freezed,
+    Object valueBase64BinaryElement = freezed,
+    Object valueAttachment = freezed,
+    Object valueBoolean = freezed,
+    Object valueBooleanElement = freezed,
+  }) {
+    return _then(_NutritionProductProductCharacteristic(
+      id: id == freezed ? _value.id : id as String,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      type: type == freezed ? _value.type : type as CodeableConcept,
+      valueCodeableConcept: valueCodeableConcept == freezed
+          ? _value.valueCodeableConcept
+          : valueCodeableConcept as CodeableConcept,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
+      valueStringElement: valueStringElement == freezed
+          ? _value.valueStringElement
+          : valueStringElement as Element,
+      valueQuantity: valueQuantity == freezed
+          ? _value.valueQuantity
+          : valueQuantity as Quantity,
+      valueBase64Binary: valueBase64Binary == freezed
+          ? _value.valueBase64Binary
+          : valueBase64Binary as Base64Binary,
+      valueBase64BinaryElement: valueBase64BinaryElement == freezed
+          ? _value.valueBase64BinaryElement
+          : valueBase64BinaryElement as Element,
+      valueAttachment: valueAttachment == freezed
+          ? _value.valueAttachment
+          : valueAttachment as Attachment,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean as Boolean,
+      valueBooleanElement: valueBooleanElement == freezed
+          ? _value.valueBooleanElement
+          : valueBooleanElement as Element,
+    ));
+  }
+}
+
+@JsonSerializable()
+
+/// @nodoc
+class _$_NutritionProductProductCharacteristic
+    extends _NutritionProductProductCharacteristic {
+  _$_NutritionProductProductCharacteristic(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      @required this.type,
+      this.valueCodeableConcept,
+      this.valueString,
+      @JsonKey(name: '_valueString') this.valueStringElement,
+      this.valueQuantity,
+      this.valueBase64Binary,
+      @JsonKey(name: '_valueBase64Binary') this.valueBase64BinaryElement,
+      this.valueAttachment,
+      this.valueBoolean,
+      @JsonKey(name: '_valueBoolean') this.valueBooleanElement})
+      : assert(type != null),
+        super._();
+
+  factory _$_NutritionProductProductCharacteristic.fromJson(
+          Map<String, dynamic> json) =>
+      _$_$_NutritionProductProductCharacteristicFromJson(json);
+
+  @override
+  final String id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
+  @override
+  final CodeableConcept type;
+  @override
+  final CodeableConcept valueCodeableConcept;
+  @override
+  final String valueString;
+  @override
+  @JsonKey(name: '_valueString')
+  final Element valueStringElement;
+  @override
+  final Quantity valueQuantity;
+  @override
+  final Base64Binary valueBase64Binary;
+  @override
+  @JsonKey(name: '_valueBase64Binary')
+  final Element valueBase64BinaryElement;
+  @override
+  final Attachment valueAttachment;
+  @override
+  final Boolean valueBoolean;
+  @override
+  @JsonKey(name: '_valueBoolean')
+  final Element valueBooleanElement;
+
+  @override
+  String toString() {
+    return 'NutritionProductProductCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, valueCodeableConcept: $valueCodeableConcept, valueString: $valueString, valueStringElement: $valueStringElement, valueQuantity: $valueQuantity, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueAttachment: $valueAttachment, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _NutritionProductProductCharacteristic &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.type, type) ||
+                const DeepCollectionEquality().equals(other.type, type)) &&
+            (identical(other.valueCodeableConcept, valueCodeableConcept) ||
+                const DeepCollectionEquality().equals(
+                    other.valueCodeableConcept, valueCodeableConcept)) &&
+            (identical(other.valueString, valueString) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueString, valueString)) &&
+            (identical(other.valueStringElement, valueStringElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueStringElement, valueStringElement)) &&
+            (identical(other.valueQuantity, valueQuantity) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueQuantity, valueQuantity)) &&
+            (identical(other.valueBase64Binary, valueBase64Binary) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBase64Binary, valueBase64Binary)) &&
+            (identical(
+                    other.valueBase64BinaryElement, valueBase64BinaryElement) ||
+                const DeepCollectionEquality().equals(
+                    other.valueBase64BinaryElement,
+                    valueBase64BinaryElement)) &&
+            (identical(other.valueAttachment, valueAttachment) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueAttachment, valueAttachment)) &&
+            (identical(other.valueBoolean, valueBoolean) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBoolean, valueBoolean)) &&
+            (identical(other.valueBooleanElement, valueBooleanElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBooleanElement, valueBooleanElement)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(type) ^
+      const DeepCollectionEquality().hash(valueCodeableConcept) ^
+      const DeepCollectionEquality().hash(valueString) ^
+      const DeepCollectionEquality().hash(valueStringElement) ^
+      const DeepCollectionEquality().hash(valueQuantity) ^
+      const DeepCollectionEquality().hash(valueBase64Binary) ^
+      const DeepCollectionEquality().hash(valueBase64BinaryElement) ^
+      const DeepCollectionEquality().hash(valueAttachment) ^
+      const DeepCollectionEquality().hash(valueBoolean) ^
+      const DeepCollectionEquality().hash(valueBooleanElement);
+
+  @override
+  _$NutritionProductProductCharacteristicCopyWith<
+          _NutritionProductProductCharacteristic>
+      get copyWith => __$NutritionProductProductCharacteristicCopyWithImpl<
+          _NutritionProductProductCharacteristic>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_NutritionProductProductCharacteristicToJson(this);
+  }
+}
+
+abstract class _NutritionProductProductCharacteristic
+    extends NutritionProductProductCharacteristic {
+  _NutritionProductProductCharacteristic._() : super._();
+  factory _NutritionProductProductCharacteristic(
+          {String id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          @required CodeableConcept type,
+          CodeableConcept valueCodeableConcept,
+          String valueString,
+          @JsonKey(name: '_valueString') Element valueStringElement,
+          Quantity valueQuantity,
+          Base64Binary valueBase64Binary,
+          @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
+          Attachment valueAttachment,
+          Boolean valueBoolean,
+          @JsonKey(name: '_valueBoolean') Element valueBooleanElement}) =
+      _$_NutritionProductProductCharacteristic;
+
+  factory _NutritionProductProductCharacteristic.fromJson(
+          Map<String, dynamic> json) =
+      _$_NutritionProductProductCharacteristic.fromJson;
+
+  @override
+  String get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
+  @override
+  CodeableConcept get type;
+  @override
+  CodeableConcept get valueCodeableConcept;
+  @override
+  String get valueString;
+  @override
+  @JsonKey(name: '_valueString')
+  Element get valueStringElement;
+  @override
+  Quantity get valueQuantity;
+  @override
+  Base64Binary get valueBase64Binary;
+  @override
+  @JsonKey(name: '_valueBase64Binary')
+  Element get valueBase64BinaryElement;
+  @override
+  Attachment get valueAttachment;
+  @override
+  Boolean get valueBoolean;
+  @override
+  @JsonKey(name: '_valueBoolean')
+  Element get valueBooleanElement;
+  @override
+  _$NutritionProductProductCharacteristicCopyWith<
+      _NutritionProductProductCharacteristic> get copyWith;
+}
+
+NutritionProductInstance _$NutritionProductInstanceFromJson(
+    Map<String, dynamic> json) {
+  return _NutritionProductInstance.fromJson(json);
+}
+
+/// @nodoc
+class _$NutritionProductInstanceTearOff {
+  const _$NutritionProductInstanceTearOff();
+
+// ignore: unused_element
+  _NutritionProductInstance call(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Quantity quantity,
+      List<Identifier> identifier,
+      String lotNumber,
+      @JsonKey(name: '_lotNumber') Element lotNumberElement,
+      FhirDateTime expiry,
+      @JsonKey(name: '_expiry') Element expiryElement,
+      FhirDateTime useBy,
+      @JsonKey(name: '_useBy') Element useByElement}) {
+    return _NutritionProductInstance(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      quantity: quantity,
+      identifier: identifier,
+      lotNumber: lotNumber,
+      lotNumberElement: lotNumberElement,
+      expiry: expiry,
+      expiryElement: expiryElement,
+      useBy: useBy,
+      useByElement: useByElement,
+    );
+  }
+
+// ignore: unused_element
+  NutritionProductInstance fromJson(Map<String, Object> json) {
+    return NutritionProductInstance.fromJson(json);
+  }
+}
+
+/// @nodoc
+// ignore: unused_element
+const $NutritionProductInstance = _$NutritionProductInstanceTearOff();
+
+/// @nodoc
+mixin _$NutritionProductInstance {
+  String get id;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
+  Quantity get quantity;
+  List<Identifier> get identifier;
+  String get lotNumber;
+  @JsonKey(name: '_lotNumber')
+  Element get lotNumberElement;
+  FhirDateTime get expiry;
+  @JsonKey(name: '_expiry')
+  Element get expiryElement;
+  FhirDateTime get useBy;
+  @JsonKey(name: '_useBy')
+  Element get useByElement;
+
+  Map<String, dynamic> toJson();
+  $NutritionProductInstanceCopyWith<NutritionProductInstance> get copyWith;
+}
+
+/// @nodoc
+abstract class $NutritionProductInstanceCopyWith<$Res> {
+  factory $NutritionProductInstanceCopyWith(NutritionProductInstance value,
+          $Res Function(NutritionProductInstance) then) =
+      _$NutritionProductInstanceCopyWithImpl<$Res>;
+  $Res call(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Quantity quantity,
+      List<Identifier> identifier,
+      String lotNumber,
+      @JsonKey(name: '_lotNumber') Element lotNumberElement,
+      FhirDateTime expiry,
+      @JsonKey(name: '_expiry') Element expiryElement,
+      FhirDateTime useBy,
+      @JsonKey(name: '_useBy') Element useByElement});
+
+  $QuantityCopyWith<$Res> get quantity;
+  $ElementCopyWith<$Res> get lotNumberElement;
+  $ElementCopyWith<$Res> get expiryElement;
+  $ElementCopyWith<$Res> get useByElement;
+}
+
+/// @nodoc
+class _$NutritionProductInstanceCopyWithImpl<$Res>
+    implements $NutritionProductInstanceCopyWith<$Res> {
+  _$NutritionProductInstanceCopyWithImpl(this._value, this._then);
+
+  final NutritionProductInstance _value;
+  // ignore: unused_field
+  final $Res Function(NutritionProductInstance) _then;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object quantity = freezed,
+    Object identifier = freezed,
+    Object lotNumber = freezed,
+    Object lotNumberElement = freezed,
+    Object expiry = freezed,
+    Object expiryElement = freezed,
+    Object useBy = freezed,
+    Object useByElement = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed ? _value.id : id as String,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
+      lotNumber: lotNumber == freezed ? _value.lotNumber : lotNumber as String,
+      lotNumberElement: lotNumberElement == freezed
+          ? _value.lotNumberElement
+          : lotNumberElement as Element,
+      expiry: expiry == freezed ? _value.expiry : expiry as FhirDateTime,
+      expiryElement: expiryElement == freezed
+          ? _value.expiryElement
+          : expiryElement as Element,
+      useBy: useBy == freezed ? _value.useBy : useBy as FhirDateTime,
+      useByElement: useByElement == freezed
+          ? _value.useByElement
+          : useByElement as Element,
+    ));
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get quantity {
+    if (_value.quantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.quantity, (value) {
+      return _then(_value.copyWith(quantity: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get lotNumberElement {
+    if (_value.lotNumberElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.lotNumberElement, (value) {
+      return _then(_value.copyWith(lotNumberElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get expiryElement {
+    if (_value.expiryElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.expiryElement, (value) {
+      return _then(_value.copyWith(expiryElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get useByElement {
+    if (_value.useByElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.useByElement, (value) {
+      return _then(_value.copyWith(useByElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$NutritionProductInstanceCopyWith<$Res>
+    implements $NutritionProductInstanceCopyWith<$Res> {
+  factory _$NutritionProductInstanceCopyWith(_NutritionProductInstance value,
+          $Res Function(_NutritionProductInstance) then) =
+      __$NutritionProductInstanceCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Quantity quantity,
+      List<Identifier> identifier,
+      String lotNumber,
+      @JsonKey(name: '_lotNumber') Element lotNumberElement,
+      FhirDateTime expiry,
+      @JsonKey(name: '_expiry') Element expiryElement,
+      FhirDateTime useBy,
+      @JsonKey(name: '_useBy') Element useByElement});
+
+  @override
+  $QuantityCopyWith<$Res> get quantity;
+  @override
+  $ElementCopyWith<$Res> get lotNumberElement;
+  @override
+  $ElementCopyWith<$Res> get expiryElement;
+  @override
+  $ElementCopyWith<$Res> get useByElement;
+}
+
+/// @nodoc
+class __$NutritionProductInstanceCopyWithImpl<$Res>
+    extends _$NutritionProductInstanceCopyWithImpl<$Res>
+    implements _$NutritionProductInstanceCopyWith<$Res> {
+  __$NutritionProductInstanceCopyWithImpl(_NutritionProductInstance _value,
+      $Res Function(_NutritionProductInstance) _then)
+      : super(_value, (v) => _then(v as _NutritionProductInstance));
+
+  @override
+  _NutritionProductInstance get _value =>
+      super._value as _NutritionProductInstance;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object quantity = freezed,
+    Object identifier = freezed,
+    Object lotNumber = freezed,
+    Object lotNumberElement = freezed,
+    Object expiry = freezed,
+    Object expiryElement = freezed,
+    Object useBy = freezed,
+    Object useByElement = freezed,
+  }) {
+    return _then(_NutritionProductInstance(
+      id: id == freezed ? _value.id : id as String,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
+      quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
+      lotNumber: lotNumber == freezed ? _value.lotNumber : lotNumber as String,
+      lotNumberElement: lotNumberElement == freezed
+          ? _value.lotNumberElement
+          : lotNumberElement as Element,
+      expiry: expiry == freezed ? _value.expiry : expiry as FhirDateTime,
+      expiryElement: expiryElement == freezed
+          ? _value.expiryElement
+          : expiryElement as Element,
+      useBy: useBy == freezed ? _value.useBy : useBy as FhirDateTime,
+      useByElement: useByElement == freezed
+          ? _value.useByElement
+          : useByElement as Element,
+    ));
+  }
+}
+
+@JsonSerializable()
+
+/// @nodoc
+class _$_NutritionProductInstance extends _NutritionProductInstance {
+  _$_NutritionProductInstance(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.quantity,
+      this.identifier,
+      this.lotNumber,
+      @JsonKey(name: '_lotNumber') this.lotNumberElement,
+      this.expiry,
+      @JsonKey(name: '_expiry') this.expiryElement,
+      this.useBy,
+      @JsonKey(name: '_useBy') this.useByElement})
+      : super._();
+
+  factory _$_NutritionProductInstance.fromJson(Map<String, dynamic> json) =>
+      _$_$_NutritionProductInstanceFromJson(json);
+
+  @override
+  final String id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
+  @override
+  final Quantity quantity;
+  @override
+  final List<Identifier> identifier;
+  @override
+  final String lotNumber;
+  @override
+  @JsonKey(name: '_lotNumber')
+  final Element lotNumberElement;
+  @override
+  final FhirDateTime expiry;
+  @override
+  @JsonKey(name: '_expiry')
+  final Element expiryElement;
+  @override
+  final FhirDateTime useBy;
+  @override
+  @JsonKey(name: '_useBy')
+  final Element useByElement;
+
+  @override
+  String toString() {
+    return 'NutritionProductInstance(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, quantity: $quantity, identifier: $identifier, lotNumber: $lotNumber, lotNumberElement: $lotNumberElement, expiry: $expiry, expiryElement: $expiryElement, useBy: $useBy, useByElement: $useByElement)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _NutritionProductInstance &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.quantity, quantity) ||
+                const DeepCollectionEquality()
+                    .equals(other.quantity, quantity)) &&
+            (identical(other.identifier, identifier) ||
+                const DeepCollectionEquality()
+                    .equals(other.identifier, identifier)) &&
+            (identical(other.lotNumber, lotNumber) ||
+                const DeepCollectionEquality()
+                    .equals(other.lotNumber, lotNumber)) &&
+            (identical(other.lotNumberElement, lotNumberElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.lotNumberElement, lotNumberElement)) &&
+            (identical(other.expiry, expiry) ||
+                const DeepCollectionEquality().equals(other.expiry, expiry)) &&
+            (identical(other.expiryElement, expiryElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.expiryElement, expiryElement)) &&
+            (identical(other.useBy, useBy) ||
+                const DeepCollectionEquality().equals(other.useBy, useBy)) &&
+            (identical(other.useByElement, useByElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.useByElement, useByElement)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(quantity) ^
+      const DeepCollectionEquality().hash(identifier) ^
+      const DeepCollectionEquality().hash(lotNumber) ^
+      const DeepCollectionEquality().hash(lotNumberElement) ^
+      const DeepCollectionEquality().hash(expiry) ^
+      const DeepCollectionEquality().hash(expiryElement) ^
+      const DeepCollectionEquality().hash(useBy) ^
+      const DeepCollectionEquality().hash(useByElement);
+
+  @override
+  _$NutritionProductInstanceCopyWith<_NutritionProductInstance> get copyWith =>
+      __$NutritionProductInstanceCopyWithImpl<_NutritionProductInstance>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_NutritionProductInstanceToJson(this);
+  }
+}
+
+abstract class _NutritionProductInstance extends NutritionProductInstance {
+  _NutritionProductInstance._() : super._();
+  factory _NutritionProductInstance(
+          {String id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          Quantity quantity,
+          List<Identifier> identifier,
+          String lotNumber,
+          @JsonKey(name: '_lotNumber') Element lotNumberElement,
+          FhirDateTime expiry,
+          @JsonKey(name: '_expiry') Element expiryElement,
+          FhirDateTime useBy,
+          @JsonKey(name: '_useBy') Element useByElement}) =
+      _$_NutritionProductInstance;
+
+  factory _NutritionProductInstance.fromJson(Map<String, dynamic> json) =
+      _$_NutritionProductInstance.fromJson;
+
+  @override
+  String get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
+  @override
+  Quantity get quantity;
+  @override
+  List<Identifier> get identifier;
+  @override
+  String get lotNumber;
+  @override
+  @JsonKey(name: '_lotNumber')
+  Element get lotNumberElement;
+  @override
+  FhirDateTime get expiry;
+  @override
+  @JsonKey(name: '_expiry')
+  Element get expiryElement;
+  @override
+  FhirDateTime get useBy;
+  @override
+  @JsonKey(name: '_useBy')
+  Element get useByElement;
+  @override
+  _$NutritionProductInstanceCopyWith<_NutritionProductInstance> get copyWith;
+}
+
 Substance _$SubstanceFromJson(Map<String, dynamic> json) {
   return _Substance.fromJson(json);
 }

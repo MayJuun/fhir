@@ -67,7 +67,7 @@ class _$EvidenceTearOff {
       List<RelatedArtifact> relatedArtifact,
       Markdown assertion,
       @JsonKey(name: '_assertion') Element assertionElement,
-      List<Annotation> note,
+      Annotation note,
       @required List<EvidenceVariableDefinition> variableDefinition,
       CodeableConcept synthesisType,
       CodeableConcept studyType,
@@ -213,8 +213,9 @@ mixin _$Evidence {
   List<RelatedArtifact> get relatedArtifact;
   Markdown get assertion;
   @JsonKey(name: '_assertion')
-  Element get assertionElement;
-  List<Annotation> get note;
+  Element get assertionElement; // ToDo
+//  List<Annotation> note,
+  Annotation get note;
   List<EvidenceVariableDefinition> get variableDefinition;
   CodeableConcept get synthesisType;
   CodeableConcept get studyType;
@@ -280,7 +281,7 @@ abstract class $EvidenceCopyWith<$Res> {
       List<RelatedArtifact> relatedArtifact,
       Markdown assertion,
       @JsonKey(name: '_assertion') Element assertionElement,
-      List<Annotation> note,
+      Annotation note,
       List<EvidenceVariableDefinition> variableDefinition,
       CodeableConcept synthesisType,
       CodeableConcept studyType,
@@ -307,6 +308,7 @@ abstract class $EvidenceCopyWith<$Res> {
   $ElementCopyWith<$Res> get lastReviewDateElement;
   $PeriodCopyWith<$Res> get effectivePeriod;
   $ElementCopyWith<$Res> get assertionElement;
+  $AnnotationCopyWith<$Res> get note;
   $CodeableConceptCopyWith<$Res> get synthesisType;
   $CodeableConceptCopyWith<$Res> get studyType;
 }
@@ -489,7 +491,7 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
       assertionElement: assertionElement == freezed
           ? _value.assertionElement
           : assertionElement as Element,
-      note: note == freezed ? _value.note : note as List<Annotation>,
+      note: note == freezed ? _value.note : note as Annotation,
       variableDefinition: variableDefinition == freezed
           ? _value.variableDefinition
           : variableDefinition as List<EvidenceVariableDefinition>,
@@ -702,6 +704,16 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
   }
 
   @override
+  $AnnotationCopyWith<$Res> get note {
+    if (_value.note == null) {
+      return null;
+    }
+    return $AnnotationCopyWith<$Res>(_value.note, (value) {
+      return _then(_value.copyWith(note: value));
+    });
+  }
+
+  @override
   $CodeableConceptCopyWith<$Res> get synthesisType {
     if (_value.synthesisType == null) {
       return null;
@@ -777,7 +789,7 @@ abstract class _$EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
       List<RelatedArtifact> relatedArtifact,
       Markdown assertion,
       @JsonKey(name: '_assertion') Element assertionElement,
-      List<Annotation> note,
+      Annotation note,
       List<EvidenceVariableDefinition> variableDefinition,
       CodeableConcept synthesisType,
       CodeableConcept studyType,
@@ -823,6 +835,8 @@ abstract class _$EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
   $PeriodCopyWith<$Res> get effectivePeriod;
   @override
   $ElementCopyWith<$Res> get assertionElement;
+  @override
+  $AnnotationCopyWith<$Res> get note;
   @override
   $CodeableConceptCopyWith<$Res> get synthesisType;
   @override
@@ -1008,7 +1022,7 @@ class __$EvidenceCopyWithImpl<$Res> extends _$EvidenceCopyWithImpl<$Res>
       assertionElement: assertionElement == freezed
           ? _value.assertionElement
           : assertionElement as Element,
-      note: note == freezed ? _value.note : note as List<Annotation>,
+      note: note == freezed ? _value.note : note as Annotation,
       variableDefinition: variableDefinition == freezed
           ? _value.variableDefinition
           : variableDefinition as List<EvidenceVariableDefinition>,
@@ -1216,8 +1230,9 @@ class _$_Evidence extends _Evidence {
   @override
   @JsonKey(name: '_assertion')
   final Element assertionElement;
-  @override
-  final List<Annotation> note;
+  @override // ToDo
+//  List<Annotation> note,
+  final Annotation note;
   @override
   final List<EvidenceVariableDefinition> variableDefinition;
   @override
@@ -1463,7 +1478,7 @@ abstract class _Evidence extends Evidence {
       List<RelatedArtifact> relatedArtifact,
       Markdown assertion,
       @JsonKey(name: '_assertion') Element assertionElement,
-      List<Annotation> note,
+      Annotation note,
       @required List<EvidenceVariableDefinition> variableDefinition,
       CodeableConcept synthesisType,
       CodeableConcept studyType,
@@ -1590,8 +1605,9 @@ abstract class _Evidence extends Evidence {
   @override
   @JsonKey(name: '_assertion')
   Element get assertionElement;
-  @override
-  List<Annotation> get note;
+  @override // ToDo
+//  List<Annotation> note,
+  Annotation get note;
   @override
   List<EvidenceVariableDefinition> get variableDefinition;
   @override
@@ -2044,7 +2060,7 @@ class _$EvidenceCertaintyTearOff {
       List<FhirExtension> modifierExtension,
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
-      List<Annotation> note,
+      Annotation note,
       List<CodeableConcept> rating,
       List<EvidenceCertaintySubcomponent> certaintySubcomponent}) {
     return _EvidenceCertainty(
@@ -2077,8 +2093,9 @@ mixin _$EvidenceCertainty {
   List<FhirExtension> get modifierExtension;
   String get description;
   @JsonKey(name: '_description')
-  Element get descriptionElement;
-  List<Annotation> get note;
+  Element get descriptionElement; // ToDo
+// List<Annotation> note,
+  Annotation get note;
   List<CodeableConcept> get rating;
   List<EvidenceCertaintySubcomponent> get certaintySubcomponent;
 
@@ -2097,11 +2114,12 @@ abstract class $EvidenceCertaintyCopyWith<$Res> {
       List<FhirExtension> modifierExtension,
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
-      List<Annotation> note,
+      Annotation note,
       List<CodeableConcept> rating,
       List<EvidenceCertaintySubcomponent> certaintySubcomponent});
 
   $ElementCopyWith<$Res> get descriptionElement;
+  $AnnotationCopyWith<$Res> get note;
 }
 
 /// @nodoc
@@ -2137,7 +2155,7 @@ class _$EvidenceCertaintyCopyWithImpl<$Res>
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
-      note: note == freezed ? _value.note : note as List<Annotation>,
+      note: note == freezed ? _value.note : note as Annotation,
       rating:
           rating == freezed ? _value.rating : rating as List<CodeableConcept>,
       certaintySubcomponent: certaintySubcomponent == freezed
@@ -2155,6 +2173,16 @@ class _$EvidenceCertaintyCopyWithImpl<$Res>
       return _then(_value.copyWith(descriptionElement: value));
     });
   }
+
+  @override
+  $AnnotationCopyWith<$Res> get note {
+    if (_value.note == null) {
+      return null;
+    }
+    return $AnnotationCopyWith<$Res>(_value.note, (value) {
+      return _then(_value.copyWith(note: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -2170,12 +2198,14 @@ abstract class _$EvidenceCertaintyCopyWith<$Res>
       List<FhirExtension> modifierExtension,
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
-      List<Annotation> note,
+      Annotation note,
       List<CodeableConcept> rating,
       List<EvidenceCertaintySubcomponent> certaintySubcomponent});
 
   @override
   $ElementCopyWith<$Res> get descriptionElement;
+  @override
+  $AnnotationCopyWith<$Res> get note;
 }
 
 /// @nodoc
@@ -2213,7 +2243,7 @@ class __$EvidenceCertaintyCopyWithImpl<$Res>
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
-      note: note == freezed ? _value.note : note as List<Annotation>,
+      note: note == freezed ? _value.note : note as Annotation,
       rating:
           rating == freezed ? _value.rating : rating as List<CodeableConcept>,
       certaintySubcomponent: certaintySubcomponent == freezed
@@ -2253,8 +2283,9 @@ class _$_EvidenceCertainty extends _EvidenceCertainty {
   @override
   @JsonKey(name: '_description')
   final Element descriptionElement;
-  @override
-  final List<Annotation> note;
+  @override // ToDo
+// List<Annotation> note,
+  final Annotation note;
   @override
   final List<CodeableConcept> rating;
   @override
@@ -2322,7 +2353,7 @@ abstract class _EvidenceCertainty extends EvidenceCertainty {
           List<FhirExtension> modifierExtension,
           String description,
           @JsonKey(name: '_description') Element descriptionElement,
-          List<Annotation> note,
+          Annotation note,
           List<CodeableConcept> rating,
           List<EvidenceCertaintySubcomponent> certaintySubcomponent}) =
       _$_EvidenceCertainty;
@@ -2342,8 +2373,9 @@ abstract class _EvidenceCertainty extends EvidenceCertainty {
   @override
   @JsonKey(name: '_description')
   Element get descriptionElement;
-  @override
-  List<Annotation> get note;
+  @override // ToDo
+// List<Annotation> note,
+  Annotation get note;
   @override
   List<CodeableConcept> get rating;
   @override
@@ -2368,7 +2400,7 @@ class _$EvidenceCertaintySubcomponentTearOff {
       List<FhirExtension> modifierExtension,
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
-      List<Annotation> note,
+      Annotation note,
       List<CodeableConcept> type,
       List<CodeableConcept> rating}) {
     return _EvidenceCertaintySubcomponent(
@@ -2401,8 +2433,9 @@ mixin _$EvidenceCertaintySubcomponent {
   List<FhirExtension> get modifierExtension;
   String get description;
   @JsonKey(name: '_description')
-  Element get descriptionElement;
-  List<Annotation> get note;
+  Element get descriptionElement; // ToDo
+// List<Annotation> note,
+  Annotation get note;
   List<CodeableConcept> get type;
   List<CodeableConcept> get rating;
 
@@ -2423,11 +2456,12 @@ abstract class $EvidenceCertaintySubcomponentCopyWith<$Res> {
       List<FhirExtension> modifierExtension,
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
-      List<Annotation> note,
+      Annotation note,
       List<CodeableConcept> type,
       List<CodeableConcept> rating});
 
   $ElementCopyWith<$Res> get descriptionElement;
+  $AnnotationCopyWith<$Res> get note;
 }
 
 /// @nodoc
@@ -2463,7 +2497,7 @@ class _$EvidenceCertaintySubcomponentCopyWithImpl<$Res>
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
-      note: note == freezed ? _value.note : note as List<Annotation>,
+      note: note == freezed ? _value.note : note as Annotation,
       type: type == freezed ? _value.type : type as List<CodeableConcept>,
       rating:
           rating == freezed ? _value.rating : rating as List<CodeableConcept>,
@@ -2477,6 +2511,16 @@ class _$EvidenceCertaintySubcomponentCopyWithImpl<$Res>
     }
     return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
       return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $AnnotationCopyWith<$Res> get note {
+    if (_value.note == null) {
+      return null;
+    }
+    return $AnnotationCopyWith<$Res>(_value.note, (value) {
+      return _then(_value.copyWith(note: value));
     });
   }
 }
@@ -2495,12 +2539,14 @@ abstract class _$EvidenceCertaintySubcomponentCopyWith<$Res>
       List<FhirExtension> modifierExtension,
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
-      List<Annotation> note,
+      Annotation note,
       List<CodeableConcept> type,
       List<CodeableConcept> rating});
 
   @override
   $ElementCopyWith<$Res> get descriptionElement;
+  @override
+  $AnnotationCopyWith<$Res> get note;
 }
 
 /// @nodoc
@@ -2540,7 +2586,7 @@ class __$EvidenceCertaintySubcomponentCopyWithImpl<$Res>
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
-      note: note == freezed ? _value.note : note as List<Annotation>,
+      note: note == freezed ? _value.note : note as Annotation,
       type: type == freezed ? _value.type : type as List<CodeableConcept>,
       rating:
           rating == freezed ? _value.rating : rating as List<CodeableConcept>,
@@ -2579,8 +2625,9 @@ class _$_EvidenceCertaintySubcomponent extends _EvidenceCertaintySubcomponent {
   @override
   @JsonKey(name: '_description')
   final Element descriptionElement;
-  @override
-  final List<Annotation> note;
+  @override // ToDo
+// List<Annotation> note,
+  final Annotation note;
   @override
   final List<CodeableConcept> type;
   @override
@@ -2649,7 +2696,7 @@ abstract class _EvidenceCertaintySubcomponent
       List<FhirExtension> modifierExtension,
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
-      List<Annotation> note,
+      Annotation note,
       List<CodeableConcept> type,
       List<CodeableConcept> rating}) = _$_EvidenceCertaintySubcomponent;
 
@@ -2668,8 +2715,9 @@ abstract class _EvidenceCertaintySubcomponent
   @override
   @JsonKey(name: '_description')
   Element get descriptionElement;
-  @override
-  List<Annotation> get note;
+  @override // ToDo
+// List<Annotation> note,
+  Annotation get note;
   @override
   List<CodeableConcept> get type;
   @override

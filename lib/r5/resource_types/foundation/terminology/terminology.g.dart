@@ -1068,8 +1068,10 @@ const _$ConceptMapTargetRelationshipEnumMap = {
   ConceptMapTargetRelationship.equivalent: 'equivalent',
   ConceptMapTargetRelationship.source_is_narrower_than_target:
       'source-is-narrower-than-target',
+  ConceptMapTargetRelationship.narrower: 'narrower',
   ConceptMapTargetRelationship.source_is_broader_than_target:
       'source-is-broader-than-target',
+  ConceptMapTargetRelationship.broader: 'broader',
   ConceptMapTargetRelationship.not_related_to: 'not-related-to',
   ConceptMapTargetRelationship.unknown: 'unknown',
 };

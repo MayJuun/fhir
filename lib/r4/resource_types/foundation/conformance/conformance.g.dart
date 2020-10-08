@@ -661,10 +661,10 @@ _$_CapabilityStatementResource _$_$_CapabilityStatementResourceFromJson(
     conditionalDeleteElement: json['_conditionalDelete'] == null
         ? null
         : Element.fromJson(json['_conditionalDelete'] as Map<String, dynamic>),
-    referencePolicy: (json['referencePolicy'] as List)
-        ?.map((e) => _$enumDecodeNullable(
-            _$CapabilityStatementResourceReferencePolicyEnumMap, e))
-        ?.toList(),
+    referencePolicy: _$enumDecodeNullable(
+        _$CapabilityStatementResourceReferencePolicyEnumMap,
+        json['referencePolicy'],
+        unknownValue: CapabilityStatementResourceReferencePolicy.unknown),
     referencePolicyElement: (json['_referencePolicy'] as List)
         ?.map((e) =>
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
@@ -745,9 +745,8 @@ Map<String, dynamic> _$_$_CapabilityStatementResourceToJson(
       '_conditionalDelete', instance.conditionalDeleteElement?.toJson());
   writeNotNull(
       'referencePolicy',
-      instance.referencePolicy
-          ?.map((e) => _$CapabilityStatementResourceReferencePolicyEnumMap[e])
-          ?.toList());
+      _$CapabilityStatementResourceReferencePolicyEnumMap[
+          instance.referencePolicy]);
   writeNotNull('_referencePolicy',
       instance.referencePolicyElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('searchInclude', instance.searchInclude);

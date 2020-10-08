@@ -466,6 +466,11 @@ const _$CapabilityStatementRestModeEnumMap = {
 _$_CapabilityStatementSecurity _$_$_CapabilityStatementSecurityFromJson(
     Map<String, dynamic> json) {
   return _$_CapabilityStatementSecurity(
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     cors: json['cors'] == null ? null : Boolean.fromJson(json['cors']),
     corsElement: json['_cors'] == null
         ? null
@@ -498,6 +503,8 @@ Map<String, dynamic> _$_$_CapabilityStatementSecurityToJson(
     }
   }
 
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('cors', instance.cors?.toJson());
   writeNotNull('_cors', instance.corsElement?.toJson());
   writeNotNull('service', instance.service?.map((e) => e?.toJson())?.toList());

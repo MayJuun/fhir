@@ -161,10 +161,9 @@ _$_Evidence _$_$_EvidenceFromJson(Map<String, dynamic> json) {
     assertionElement: json['_assertion'] == null
         ? null
         : Element.fromJson(json['_assertion'] as Map<String, dynamic>),
-    note: (json['note'] as List)
-        ?.map((e) =>
-            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    note: json['note'] == null
+        ? null
+        : Annotation.fromJson(json['note'] as Map<String, dynamic>),
     variableDefinition: (json['variableDefinition'] as List)
         ?.map((e) => e == null
             ? null
@@ -261,7 +260,7 @@ Map<String, dynamic> _$_$_EvidenceToJson(_$_Evidence instance) {
       instance.relatedArtifact?.map((e) => e?.toJson())?.toList());
   writeNotNull('assertion', instance.assertion?.toJson());
   writeNotNull('_assertion', instance.assertionElement?.toJson());
-  writeNotNull('note', instance.note?.map((e) => e?.toJson())?.toList());
+  writeNotNull('note', instance.note?.toJson());
   writeNotNull('variableDefinition',
       instance.variableDefinition?.map((e) => e?.toJson())?.toList());
   writeNotNull('synthesisType', instance.synthesisType?.toJson());
@@ -397,10 +396,9 @@ _$_EvidenceCertainty _$_$_EvidenceCertaintyFromJson(Map<String, dynamic> json) {
     descriptionElement: json['_description'] == null
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
-    note: (json['note'] as List)
-        ?.map((e) =>
-            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    note: json['note'] == null
+        ? null
+        : Annotation.fromJson(json['note'] as Map<String, dynamic>),
     rating: (json['rating'] as List)
         ?.map((e) => e == null
             ? null
@@ -431,7 +429,7 @@ Map<String, dynamic> _$_$_EvidenceCertaintyToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('note', instance.note?.map((e) => e?.toJson())?.toList());
+  writeNotNull('note', instance.note?.toJson());
   writeNotNull('rating', instance.rating?.map((e) => e?.toJson())?.toList());
   writeNotNull('certaintySubcomponent',
       instance.certaintySubcomponent?.map((e) => e?.toJson())?.toList());
@@ -456,10 +454,9 @@ _$_EvidenceCertaintySubcomponent _$_$_EvidenceCertaintySubcomponentFromJson(
     descriptionElement: json['_description'] == null
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
-    note: (json['note'] as List)
-        ?.map((e) =>
-            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    note: json['note'] == null
+        ? null
+        : Annotation.fromJson(json['note'] as Map<String, dynamic>),
     type: (json['type'] as List)
         ?.map((e) => e == null
             ? null
@@ -490,7 +487,7 @@ Map<String, dynamic> _$_$_EvidenceCertaintySubcomponentToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('note', instance.note?.map((e) => e?.toJson())?.toList());
+  writeNotNull('note', instance.note?.toJson());
   writeNotNull('type', instance.type?.map((e) => e?.toJson())?.toList());
   writeNotNull('rating', instance.rating?.map((e) => e?.toJson())?.toList());
   return val;

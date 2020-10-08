@@ -13,7 +13,7 @@ class Instant extends Dates {
     assert(value != null);
     return Instant._(
       validateInstant(value.toString()),
-      value.toString().length,
+      value.toString().length <= 10 ? value.toString().length : -1,
     );
   }
 

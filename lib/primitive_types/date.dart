@@ -13,7 +13,7 @@ class Date extends Dates {
     assert(value != null);
     return Date._(
       validateDate(value.toString()),
-      value.toString().length,
+      value.toString().length <= 10 ? value.toString().length : 10,
     );
   }
 

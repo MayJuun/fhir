@@ -1894,9 +1894,13 @@ _$_MedicinalProductDefinitionCrossReference
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    product: json['product'] == null
+    productCodeableConcept: json['productCodeableConcept'] == null
         ? null
-        : CodeableReference.fromJson(json['product'] as Map<String, dynamic>),
+        : CodeableConcept.fromJson(
+            json['productCodeableConcept'] as Map<String, dynamic>),
+    productReference: json['productReference'] == null
+        ? null
+        : Reference.fromJson(json['productReference'] as Map<String, dynamic>),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -1918,7 +1922,9 @@ Map<String, dynamic> _$_$_MedicinalProductDefinitionCrossReferenceToJson(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('product', instance.product?.toJson());
+  writeNotNull(
+      'productCodeableConcept', instance.productCodeableConcept?.toJson());
+  writeNotNull('productReference', instance.productReference?.toJson());
   writeNotNull('type', instance.type?.toJson());
   return val;
 }
@@ -1938,9 +1944,13 @@ _$_MedicinalProductDefinitionManufacturingBusinessOperation
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    type: json['type'] == null
+    typeCodeableConcept: json['typeCodeableConcept'] == null
         ? null
-        : CodeableReference.fromJson(json['type'] as Map<String, dynamic>),
+        : CodeableConcept.fromJson(
+            json['typeCodeableConcept'] as Map<String, dynamic>),
+    typeReference: json['typeReference'] == null
+        ? null
+        : Reference.fromJson(json['typeReference'] as Map<String, dynamic>),
     effectiveDate: json['effectiveDate'] == null
         ? null
         : Period.fromJson(json['effectiveDate'] as Map<String, dynamic>),
@@ -1974,7 +1984,8 @@ Map<String, dynamic>
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('typeCodeableConcept', instance.typeCodeableConcept?.toJson());
+  writeNotNull('typeReference', instance.typeReference?.toJson());
   writeNotNull('effectiveDate', instance.effectiveDate?.toJson());
   writeNotNull(
       'manufacturer', instance.manufacturer?.map((e) => e?.toJson())?.toList());
@@ -2988,10 +2999,15 @@ _$_SubstanceDefinitionProperty _$_$_SubstanceDefinitionPropertyFromJson(
     parametersElement: json['_parameters'] == null
         ? null
         : Element.fromJson(json['_parameters'] as Map<String, dynamic>),
-    definingSubstance: json['definingSubstance'] == null
+    definingSubstanceCodeableConcept:
+        json['definingSubstanceCodeableConcept'] == null
+            ? null
+            : CodeableConcept.fromJson(json['definingSubstanceCodeableConcept']
+                as Map<String, dynamic>),
+    definingSubstanceReference: json['definingSubstanceReference'] == null
         ? null
-        : CodeableReference.fromJson(
-            json['definingSubstance'] as Map<String, dynamic>),
+        : Reference.fromJson(
+            json['definingSubstanceReference'] as Map<String, dynamic>),
     amountQuantity: json['amountQuantity'] == null
         ? null
         : Quantity.fromJson(json['amountQuantity'] as Map<String, dynamic>),
@@ -3028,7 +3044,10 @@ Map<String, dynamic> _$_$_SubstanceDefinitionPropertyToJson(
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('parameters', instance.parameters);
   writeNotNull('_parameters', instance.parametersElement?.toJson());
-  writeNotNull('definingSubstance', instance.definingSubstance?.toJson());
+  writeNotNull('definingSubstanceCodeableConcept',
+      instance.definingSubstanceCodeableConcept?.toJson());
+  writeNotNull('definingSubstanceReference',
+      instance.definingSubstanceReference?.toJson());
   writeNotNull('amountQuantity', instance.amountQuantity?.toJson());
   writeNotNull('amountString', instance.amountString);
   writeNotNull('_amountString', instance.amountStringElement?.toJson());

@@ -64,6 +64,8 @@ class Resource {
         return BodySite.fromJson(json);
       case 'Bundle':
         return Bundle.fromJson(json);
+      case 'CapabilityStatement':
+        return CapabilityStatement.fromJson(json);
       case 'CarePlan':
         return CarePlan.fromJson(json);
       case 'Claim':

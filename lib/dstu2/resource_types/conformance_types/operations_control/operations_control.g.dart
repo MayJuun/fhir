@@ -226,6 +226,167 @@ const _$ConformanceFormatEnumMap = {
   ConformanceFormat.unknown: 'unknown',
 };
 
+_$_CapabilityStatement _$_$_CapabilityStatementFromJson(
+    Map<String, dynamic> json) {
+  $checkKeys(json, requiredKeys: const [
+    'date',
+    'kind',
+    'fhirVersion',
+    'acceptUnknown',
+    'format'
+  ]);
+  return _$_CapabilityStatement(
+    resourceType: json['resourceType'] as String ?? 'CapabilityStatement',
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    meta: json['meta'] == null
+        ? null
+        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+    implicitRules: json['implicitRules'] == null
+        ? null
+        : FhirUri.fromJson(json['implicitRules'] as String),
+    language: json['language'] == null
+        ? null
+        : Code.fromJson(json['language'] as String),
+    text: json['text'] == null
+        ? null
+        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    urlElement: json['_url'] == null
+        ? null
+        : Element.fromJson(json['_url'] as Map<String, dynamic>),
+    version: json['version'] as String,
+    name: json['name'] as String,
+    status: _$enumDecodeNullable(_$ConformanceStatusEnumMap, json['status'],
+        unknownValue: ConformanceStatus.unknown),
+    experimental: json['experimental'] == null
+        ? null
+        : Boolean.fromJson(json['experimental']),
+    publisher: json['publisher'] as String,
+    contact: (json['contact'] as List)
+        ?.map((e) => e == null
+            ? null
+            : ConformanceContact.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
+    description: json['description'] as String,
+    requirements: json['requirements'] as String,
+    copyright: json['copyright'] as String,
+    kind: _$enumDecodeNullable(_$ConformanceKindEnumMap, json['kind'],
+        unknownValue: ConformanceKind.unknown),
+    software: json['software'] == null
+        ? null
+        : ConformanceSoftware.fromJson(
+            json['software'] as Map<String, dynamic>),
+    implementation: json['implementation'] == null
+        ? null
+        : ConformanceImplementation.fromJson(
+            json['implementation'] as Map<String, dynamic>),
+    fhirVersion: json['fhirVersion'] == null
+        ? null
+        : Id.fromJson(json['fhirVersion'] as String),
+    fhirVersionElement: json['_fhirVersion'] == null
+        ? null
+        : Element.fromJson(json['_fhirVersion'] as Map<String, dynamic>),
+    acceptUnknown: _$enumDecodeNullable(
+        _$ConformanceAcceptUnknownEnumMap, json['acceptUnknown'],
+        unknownValue: ConformanceAcceptUnknown.unknown),
+    acceptUnknownElement: json['_acceptUnknown'] == null
+        ? null
+        : Element.fromJson(json['_acceptUnknown'] as Map<String, dynamic>),
+    format: (json['format'] as List)
+        ?.map((e) => _$enumDecodeNullable(_$ConformanceFormatEnumMap, e))
+        ?.toList(),
+    profile: (json['profile'] as List)
+        ?.map((e) =>
+            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    rest: (json['rest'] as List)
+        ?.map((e) => e == null
+            ? null
+            : ConformanceRest.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    messaging: (json['messaging'] as List)
+        ?.map((e) => e == null
+            ? null
+            : ConformanceMessaging.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    document: (json['document'] as List)
+        ?.map((e) => e == null
+            ? null
+            : ConformanceDocument.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+  );
+}
+
+Map<String, dynamic> _$_$_CapabilityStatementToJson(
+    _$_CapabilityStatement instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull(
+      'contained', instance.contained?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('url', instance.url?.toJson());
+  writeNotNull('_url', instance.urlElement?.toJson());
+  writeNotNull('version', instance.version);
+  writeNotNull('name', instance.name);
+  writeNotNull('status', _$ConformanceStatusEnumMap[instance.status]);
+  writeNotNull('experimental', instance.experimental?.toJson());
+  writeNotNull('publisher', instance.publisher);
+  writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
+  writeNotNull('date', instance.date?.toJson());
+  writeNotNull('description', instance.description);
+  writeNotNull('requirements', instance.requirements);
+  writeNotNull('copyright', instance.copyright);
+  writeNotNull('kind', _$ConformanceKindEnumMap[instance.kind]);
+  writeNotNull('software', instance.software?.toJson());
+  writeNotNull('implementation', instance.implementation?.toJson());
+  writeNotNull('fhirVersion', instance.fhirVersion?.toJson());
+  writeNotNull('_fhirVersion', instance.fhirVersionElement?.toJson());
+  writeNotNull('acceptUnknown',
+      _$ConformanceAcceptUnknownEnumMap[instance.acceptUnknown]);
+  writeNotNull('_acceptUnknown', instance.acceptUnknownElement?.toJson());
+  writeNotNull('format',
+      instance.format?.map((e) => _$ConformanceFormatEnumMap[e])?.toList());
+  writeNotNull('profile', instance.profile?.map((e) => e?.toJson())?.toList());
+  writeNotNull('rest', instance.rest?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'messaging', instance.messaging?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'document', instance.document?.map((e) => e?.toJson())?.toList());
+  return val;
+}
+
 _$_ConformanceContact _$_$_ConformanceContactFromJson(
     Map<String, dynamic> json) {
   return _$_ConformanceContact(

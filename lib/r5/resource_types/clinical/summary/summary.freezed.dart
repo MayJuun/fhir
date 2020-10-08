@@ -6262,14 +6262,16 @@ class _$ClinicalImpressionFindingTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      CodeableReference item,
+      CodeableConcept itemCodeableConcept,
+      Reference itemReference,
       String basis,
       @JsonKey(name: '_basis') Element basisElement}) {
     return _ClinicalImpressionFinding(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
-      item: item,
+      itemCodeableConcept: itemCodeableConcept,
+      itemReference: itemReference,
       basis: basis,
       basisElement: basisElement,
     );
@@ -6291,7 +6293,8 @@ mixin _$ClinicalImpressionFinding {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
-  CodeableReference get item;
+  CodeableConcept get itemCodeableConcept;
+  Reference get itemReference;
   String get basis;
   @JsonKey(name: '_basis')
   Element get basisElement;
@@ -6309,11 +6312,13 @@ abstract class $ClinicalImpressionFindingCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      CodeableReference item,
+      CodeableConcept itemCodeableConcept,
+      Reference itemReference,
       String basis,
       @JsonKey(name: '_basis') Element basisElement});
 
-  $CodeableReferenceCopyWith<$Res> get item;
+  $CodeableConceptCopyWith<$Res> get itemCodeableConcept;
+  $ReferenceCopyWith<$Res> get itemReference;
   $ElementCopyWith<$Res> get basisElement;
 }
 
@@ -6331,7 +6336,8 @@ class _$ClinicalImpressionFindingCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object item = freezed,
+    Object itemCodeableConcept = freezed,
+    Object itemReference = freezed,
     Object basis = freezed,
     Object basisElement = freezed,
   }) {
@@ -6343,7 +6349,12 @@ class _$ClinicalImpressionFindingCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      item: item == freezed ? _value.item : item as CodeableReference,
+      itemCodeableConcept: itemCodeableConcept == freezed
+          ? _value.itemCodeableConcept
+          : itemCodeableConcept as CodeableConcept,
+      itemReference: itemReference == freezed
+          ? _value.itemReference
+          : itemReference as Reference,
       basis: basis == freezed ? _value.basis : basis as String,
       basisElement: basisElement == freezed
           ? _value.basisElement
@@ -6352,12 +6363,22 @@ class _$ClinicalImpressionFindingCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableReferenceCopyWith<$Res> get item {
-    if (_value.item == null) {
+  $CodeableConceptCopyWith<$Res> get itemCodeableConcept {
+    if (_value.itemCodeableConcept == null) {
       return null;
     }
-    return $CodeableReferenceCopyWith<$Res>(_value.item, (value) {
-      return _then(_value.copyWith(item: value));
+    return $CodeableConceptCopyWith<$Res>(_value.itemCodeableConcept, (value) {
+      return _then(_value.copyWith(itemCodeableConcept: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get itemReference {
+    if (_value.itemReference == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.itemReference, (value) {
+      return _then(_value.copyWith(itemReference: value));
     });
   }
 
@@ -6383,12 +6404,15 @@ abstract class _$ClinicalImpressionFindingCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      CodeableReference item,
+      CodeableConcept itemCodeableConcept,
+      Reference itemReference,
       String basis,
       @JsonKey(name: '_basis') Element basisElement});
 
   @override
-  $CodeableReferenceCopyWith<$Res> get item;
+  $CodeableConceptCopyWith<$Res> get itemCodeableConcept;
+  @override
+  $ReferenceCopyWith<$Res> get itemReference;
   @override
   $ElementCopyWith<$Res> get basisElement;
 }
@@ -6410,7 +6434,8 @@ class __$ClinicalImpressionFindingCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object item = freezed,
+    Object itemCodeableConcept = freezed,
+    Object itemReference = freezed,
     Object basis = freezed,
     Object basisElement = freezed,
   }) {
@@ -6422,7 +6447,12 @@ class __$ClinicalImpressionFindingCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      item: item == freezed ? _value.item : item as CodeableReference,
+      itemCodeableConcept: itemCodeableConcept == freezed
+          ? _value.itemCodeableConcept
+          : itemCodeableConcept as CodeableConcept,
+      itemReference: itemReference == freezed
+          ? _value.itemReference
+          : itemReference as Reference,
       basis: basis == freezed ? _value.basis : basis as String,
       basisElement: basisElement == freezed
           ? _value.basisElement
@@ -6439,7 +6469,8 @@ class _$_ClinicalImpressionFinding extends _ClinicalImpressionFinding {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      this.item,
+      this.itemCodeableConcept,
+      this.itemReference,
       this.basis,
       @JsonKey(name: '_basis') this.basisElement})
       : super._();
@@ -6455,7 +6486,9 @@ class _$_ClinicalImpressionFinding extends _ClinicalImpressionFinding {
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  final CodeableReference item;
+  final CodeableConcept itemCodeableConcept;
+  @override
+  final Reference itemReference;
   @override
   final String basis;
   @override
@@ -6464,7 +6497,7 @@ class _$_ClinicalImpressionFinding extends _ClinicalImpressionFinding {
 
   @override
   String toString() {
-    return 'ClinicalImpressionFinding(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, item: $item, basis: $basis, basisElement: $basisElement)';
+    return 'ClinicalImpressionFinding(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, itemCodeableConcept: $itemCodeableConcept, itemReference: $itemReference, basis: $basis, basisElement: $basisElement)';
   }
 
   @override
@@ -6479,8 +6512,12 @@ class _$_ClinicalImpressionFinding extends _ClinicalImpressionFinding {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.item, item) ||
-                const DeepCollectionEquality().equals(other.item, item)) &&
+            (identical(other.itemCodeableConcept, itemCodeableConcept) ||
+                const DeepCollectionEquality()
+                    .equals(other.itemCodeableConcept, itemCodeableConcept)) &&
+            (identical(other.itemReference, itemReference) ||
+                const DeepCollectionEquality()
+                    .equals(other.itemReference, itemReference)) &&
             (identical(other.basis, basis) ||
                 const DeepCollectionEquality().equals(other.basis, basis)) &&
             (identical(other.basisElement, basisElement) ||
@@ -6494,7 +6531,8 @@ class _$_ClinicalImpressionFinding extends _ClinicalImpressionFinding {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(item) ^
+      const DeepCollectionEquality().hash(itemCodeableConcept) ^
+      const DeepCollectionEquality().hash(itemReference) ^
       const DeepCollectionEquality().hash(basis) ^
       const DeepCollectionEquality().hash(basisElement);
 
@@ -6516,7 +6554,8 @@ abstract class _ClinicalImpressionFinding extends ClinicalImpressionFinding {
           {String id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
-          CodeableReference item,
+          CodeableConcept itemCodeableConcept,
+          Reference itemReference,
           String basis,
           @JsonKey(name: '_basis') Element basisElement}) =
       _$_ClinicalImpressionFinding;
@@ -6532,7 +6571,9 @@ abstract class _ClinicalImpressionFinding extends ClinicalImpressionFinding {
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  CodeableReference get item;
+  CodeableConcept get itemCodeableConcept;
+  @override
+  Reference get itemReference;
   @override
   String get basis;
   @override

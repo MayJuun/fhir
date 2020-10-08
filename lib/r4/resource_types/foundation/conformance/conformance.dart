@@ -189,7 +189,8 @@ abstract class CapabilityStatementResource
     @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalDelete.unknown)
         CapabilityStatementResourceConditionalDelete conditionalDelete,
     @JsonKey(name: '_conditionalDelete') Element conditionalDeleteElement,
-    List<CapabilityStatementResourceReferencePolicy> referencePolicy,
+    @JsonKey(unknownEnumValue: CapabilityStatementResourceReferencePolicy.unknown)
+        CapabilityStatementResourceReferencePolicy referencePolicy,
     @JsonKey(name: '_referencePolicy') List<Element> referencePolicyElement,
     List<String> searchInclude,
     @JsonKey(name: '_searchInclude') List<Element> searchIncludeElement,

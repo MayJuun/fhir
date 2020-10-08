@@ -1495,6 +1495,7 @@ class _$CarePlanDetailTearOff {
       String scheduledString,
       @JsonKey(name: '_scheduledString')
           Element scheduledStringElement,
+      CodeableConcept locationCodeableConcept,
       CodeableReference location,
       Boolean reportedBoolean,
       @JsonKey(name: '_reportedBoolean')
@@ -1529,6 +1530,7 @@ class _$CarePlanDetailTearOff {
       scheduledPeriod: scheduledPeriod,
       scheduledString: scheduledString,
       scheduledStringElement: scheduledStringElement,
+      locationCodeableConcept: locationCodeableConcept,
       location: location,
       reportedBoolean: reportedBoolean,
       reportedBooleanElement: reportedBooleanElement,
@@ -1582,6 +1584,7 @@ mixin _$CarePlanDetail {
   String get scheduledString;
   @JsonKey(name: '_scheduledString')
   Element get scheduledStringElement;
+  CodeableConcept get locationCodeableConcept;
   CodeableReference get location;
   Boolean get reportedBoolean;
   @JsonKey(name: '_reportedBoolean')
@@ -1633,6 +1636,7 @@ abstract class $CarePlanDetailCopyWith<$Res> {
       String scheduledString,
       @JsonKey(name: '_scheduledString')
           Element scheduledStringElement,
+      CodeableConcept locationCodeableConcept,
       CodeableReference location,
       Boolean reportedBoolean,
       @JsonKey(name: '_reportedBoolean')
@@ -1655,6 +1659,7 @@ abstract class $CarePlanDetailCopyWith<$Res> {
   $TimingCopyWith<$Res> get scheduledTiming;
   $PeriodCopyWith<$Res> get scheduledPeriod;
   $ElementCopyWith<$Res> get scheduledStringElement;
+  $CodeableConceptCopyWith<$Res> get locationCodeableConcept;
   $CodeableReferenceCopyWith<$Res> get location;
   $ElementCopyWith<$Res> get reportedBooleanElement;
   $ReferenceCopyWith<$Res> get reportedReference;
@@ -1696,6 +1701,7 @@ class _$CarePlanDetailCopyWithImpl<$Res>
     Object scheduledPeriod = freezed,
     Object scheduledString = freezed,
     Object scheduledStringElement = freezed,
+    Object locationCodeableConcept = freezed,
     Object location = freezed,
     Object reportedBoolean = freezed,
     Object reportedBooleanElement = freezed,
@@ -1758,6 +1764,9 @@ class _$CarePlanDetailCopyWithImpl<$Res>
       scheduledStringElement: scheduledStringElement == freezed
           ? _value.scheduledStringElement
           : scheduledStringElement as Element,
+      locationCodeableConcept: locationCodeableConcept == freezed
+          ? _value.locationCodeableConcept
+          : locationCodeableConcept as CodeableConcept,
       location:
           location == freezed ? _value.location : location as CodeableReference,
       reportedBoolean: reportedBoolean == freezed
@@ -1866,6 +1875,17 @@ class _$CarePlanDetailCopyWithImpl<$Res>
     }
     return $ElementCopyWith<$Res>(_value.scheduledStringElement, (value) {
       return _then(_value.copyWith(scheduledStringElement: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get locationCodeableConcept {
+    if (_value.locationCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.locationCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(locationCodeableConcept: value));
     });
   }
 
@@ -1986,6 +2006,7 @@ abstract class _$CarePlanDetailCopyWith<$Res>
       String scheduledString,
       @JsonKey(name: '_scheduledString')
           Element scheduledStringElement,
+      CodeableConcept locationCodeableConcept,
       CodeableReference location,
       Boolean reportedBoolean,
       @JsonKey(name: '_reportedBoolean')
@@ -2016,6 +2037,8 @@ abstract class _$CarePlanDetailCopyWith<$Res>
   $PeriodCopyWith<$Res> get scheduledPeriod;
   @override
   $ElementCopyWith<$Res> get scheduledStringElement;
+  @override
+  $CodeableConceptCopyWith<$Res> get locationCodeableConcept;
   @override
   $CodeableReferenceCopyWith<$Res> get location;
   @override
@@ -2067,6 +2090,7 @@ class __$CarePlanDetailCopyWithImpl<$Res>
     Object scheduledPeriod = freezed,
     Object scheduledString = freezed,
     Object scheduledStringElement = freezed,
+    Object locationCodeableConcept = freezed,
     Object location = freezed,
     Object reportedBoolean = freezed,
     Object reportedBooleanElement = freezed,
@@ -2129,6 +2153,9 @@ class __$CarePlanDetailCopyWithImpl<$Res>
       scheduledStringElement: scheduledStringElement == freezed
           ? _value.scheduledStringElement
           : scheduledStringElement as Element,
+      locationCodeableConcept: locationCodeableConcept == freezed
+          ? _value.locationCodeableConcept
+          : locationCodeableConcept as CodeableConcept,
       location:
           location == freezed ? _value.location : location as CodeableReference,
       reportedBoolean: reportedBoolean == freezed
@@ -2186,6 +2213,7 @@ class _$_CarePlanDetail extends _CarePlanDetail {
       this.scheduledPeriod,
       this.scheduledString,
       @JsonKey(name: '_scheduledString') this.scheduledStringElement,
+      this.locationCodeableConcept,
       this.location,
       this.reportedBoolean,
       @JsonKey(name: '_reportedBoolean') this.reportedBooleanElement,
@@ -2250,6 +2278,8 @@ class _$_CarePlanDetail extends _CarePlanDetail {
   @JsonKey(name: '_scheduledString')
   final Element scheduledStringElement;
   @override
+  final CodeableConcept locationCodeableConcept;
+  @override
   final CodeableReference location;
   @override
   final Boolean reportedBoolean;
@@ -2276,7 +2306,7 @@ class _$_CarePlanDetail extends _CarePlanDetail {
 
   @override
   String toString() {
-    return 'CarePlanDetail(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, kind: $kind, kindElement: $kindElement, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, instantiatesUriElement: $instantiatesUriElement, code: $code, reason: $reason, goal: $goal, status: $status, statusElement: $statusElement, statusReason: $statusReason, doNotPerform: $doNotPerform, doNotPerformElement: $doNotPerformElement, scheduledTiming: $scheduledTiming, scheduledPeriod: $scheduledPeriod, scheduledString: $scheduledString, scheduledStringElement: $scheduledStringElement, location: $location, reportedBoolean: $reportedBoolean, reportedBooleanElement: $reportedBooleanElement, reportedReference: $reportedReference, performer: $performer, productCodeableConcept: $productCodeableConcept, productReference: $productReference, dailyAmount: $dailyAmount, quantity: $quantity, description: $description, descriptionElement: $descriptionElement)';
+    return 'CarePlanDetail(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, kind: $kind, kindElement: $kindElement, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, instantiatesUriElement: $instantiatesUriElement, code: $code, reason: $reason, goal: $goal, status: $status, statusElement: $statusElement, statusReason: $statusReason, doNotPerform: $doNotPerform, doNotPerformElement: $doNotPerformElement, scheduledTiming: $scheduledTiming, scheduledPeriod: $scheduledPeriod, scheduledString: $scheduledString, scheduledStringElement: $scheduledStringElement, locationCodeableConcept: $locationCodeableConcept, location: $location, reportedBoolean: $reportedBoolean, reportedBooleanElement: $reportedBooleanElement, reportedReference: $reportedReference, performer: $performer, productCodeableConcept: $productCodeableConcept, productReference: $productReference, dailyAmount: $dailyAmount, quantity: $quantity, description: $description, descriptionElement: $descriptionElement)';
   }
 
   @override
@@ -2337,6 +2367,9 @@ class _$_CarePlanDetail extends _CarePlanDetail {
             (identical(other.scheduledStringElement, scheduledStringElement) ||
                 const DeepCollectionEquality().equals(
                     other.scheduledStringElement, scheduledStringElement)) &&
+            (identical(other.locationCodeableConcept, locationCodeableConcept) ||
+                const DeepCollectionEquality().equals(
+                    other.locationCodeableConcept, locationCodeableConcept)) &&
             (identical(other.location, location) ||
                 const DeepCollectionEquality()
                     .equals(other.location, location)) &&
@@ -2344,10 +2377,8 @@ class _$_CarePlanDetail extends _CarePlanDetail {
                 const DeepCollectionEquality()
                     .equals(other.reportedBoolean, reportedBoolean)) &&
             (identical(other.reportedBooleanElement, reportedBooleanElement) ||
-                const DeepCollectionEquality().equals(
-                    other.reportedBooleanElement, reportedBooleanElement)) &&
-            (identical(other.reportedReference, reportedReference) ||
-                const DeepCollectionEquality().equals(other.reportedReference, reportedReference)) &&
+                const DeepCollectionEquality().equals(other.reportedBooleanElement, reportedBooleanElement)) &&
+            (identical(other.reportedReference, reportedReference) || const DeepCollectionEquality().equals(other.reportedReference, reportedReference)) &&
             (identical(other.performer, performer) || const DeepCollectionEquality().equals(other.performer, performer)) &&
             (identical(other.productCodeableConcept, productCodeableConcept) || const DeepCollectionEquality().equals(other.productCodeableConcept, productCodeableConcept)) &&
             (identical(other.productReference, productReference) || const DeepCollectionEquality().equals(other.productReference, productReference)) &&
@@ -2380,6 +2411,7 @@ class _$_CarePlanDetail extends _CarePlanDetail {
       const DeepCollectionEquality().hash(scheduledPeriod) ^
       const DeepCollectionEquality().hash(scheduledString) ^
       const DeepCollectionEquality().hash(scheduledStringElement) ^
+      const DeepCollectionEquality().hash(locationCodeableConcept) ^
       const DeepCollectionEquality().hash(location) ^
       const DeepCollectionEquality().hash(reportedBoolean) ^
       const DeepCollectionEquality().hash(reportedBooleanElement) ^
@@ -2432,6 +2464,7 @@ abstract class _CarePlanDetail extends CarePlanDetail {
       String scheduledString,
       @JsonKey(name: '_scheduledString')
           Element scheduledStringElement,
+      CodeableConcept locationCodeableConcept,
       CodeableReference location,
       Boolean reportedBoolean,
       @JsonKey(name: '_reportedBoolean')
@@ -2496,6 +2529,8 @@ abstract class _CarePlanDetail extends CarePlanDetail {
   @override
   @JsonKey(name: '_scheduledString')
   Element get scheduledStringElement;
+  @override
+  CodeableConcept get locationCodeableConcept;
   @override
   CodeableReference get location;
   @override
@@ -6554,7 +6589,8 @@ class _$NutritionIntakeConsumedItemTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @required CodeableConcept type,
-      @required CodeableReference nutritionProduct,
+      CodeableConcept nutritionProductCodeableConcept,
+      Reference nutritionProductReference,
       Timing schedule,
       Quantity amount,
       Quantity rate,
@@ -6566,7 +6602,8 @@ class _$NutritionIntakeConsumedItemTearOff {
       extension_: extension_,
       modifierExtension: modifierExtension,
       type: type,
-      nutritionProduct: nutritionProduct,
+      nutritionProductCodeableConcept: nutritionProductCodeableConcept,
+      nutritionProductReference: nutritionProductReference,
       schedule: schedule,
       amount: amount,
       rate: rate,
@@ -6593,7 +6630,8 @@ mixin _$NutritionIntakeConsumedItem {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   CodeableConcept get type;
-  CodeableReference get nutritionProduct;
+  CodeableConcept get nutritionProductCodeableConcept;
+  Reference get nutritionProductReference;
   Timing get schedule;
   Quantity get amount;
   Quantity get rate;
@@ -6618,7 +6656,8 @@ abstract class $NutritionIntakeConsumedItemCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept type,
-      CodeableReference nutritionProduct,
+      CodeableConcept nutritionProductCodeableConcept,
+      Reference nutritionProductReference,
       Timing schedule,
       Quantity amount,
       Quantity rate,
@@ -6627,7 +6666,8 @@ abstract class $NutritionIntakeConsumedItemCopyWith<$Res> {
       CodeableConcept notConsumedReason});
 
   $CodeableConceptCopyWith<$Res> get type;
-  $CodeableReferenceCopyWith<$Res> get nutritionProduct;
+  $CodeableConceptCopyWith<$Res> get nutritionProductCodeableConcept;
+  $ReferenceCopyWith<$Res> get nutritionProductReference;
   $TimingCopyWith<$Res> get schedule;
   $QuantityCopyWith<$Res> get amount;
   $QuantityCopyWith<$Res> get rate;
@@ -6650,7 +6690,8 @@ class _$NutritionIntakeConsumedItemCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object type = freezed,
-    Object nutritionProduct = freezed,
+    Object nutritionProductCodeableConcept = freezed,
+    Object nutritionProductReference = freezed,
     Object schedule = freezed,
     Object amount = freezed,
     Object rate = freezed,
@@ -6667,9 +6708,13 @@ class _$NutritionIntakeConsumedItemCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       type: type == freezed ? _value.type : type as CodeableConcept,
-      nutritionProduct: nutritionProduct == freezed
-          ? _value.nutritionProduct
-          : nutritionProduct as CodeableReference,
+      nutritionProductCodeableConcept:
+          nutritionProductCodeableConcept == freezed
+              ? _value.nutritionProductCodeableConcept
+              : nutritionProductCodeableConcept as CodeableConcept,
+      nutritionProductReference: nutritionProductReference == freezed
+          ? _value.nutritionProductReference
+          : nutritionProductReference as Reference,
       schedule: schedule == freezed ? _value.schedule : schedule as Timing,
       amount: amount == freezed ? _value.amount : amount as Quantity,
       rate: rate == freezed ? _value.rate : rate as Quantity,
@@ -6695,12 +6740,23 @@ class _$NutritionIntakeConsumedItemCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableReferenceCopyWith<$Res> get nutritionProduct {
-    if (_value.nutritionProduct == null) {
+  $CodeableConceptCopyWith<$Res> get nutritionProductCodeableConcept {
+    if (_value.nutritionProductCodeableConcept == null) {
       return null;
     }
-    return $CodeableReferenceCopyWith<$Res>(_value.nutritionProduct, (value) {
-      return _then(_value.copyWith(nutritionProduct: value));
+    return $CodeableConceptCopyWith<$Res>(
+        _value.nutritionProductCodeableConcept, (value) {
+      return _then(_value.copyWith(nutritionProductCodeableConcept: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get nutritionProductReference {
+    if (_value.nutritionProductReference == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.nutritionProductReference, (value) {
+      return _then(_value.copyWith(nutritionProductReference: value));
     });
   }
 
@@ -6768,7 +6824,8 @@ abstract class _$NutritionIntakeConsumedItemCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept type,
-      CodeableReference nutritionProduct,
+      CodeableConcept nutritionProductCodeableConcept,
+      Reference nutritionProductReference,
       Timing schedule,
       Quantity amount,
       Quantity rate,
@@ -6779,7 +6836,9 @@ abstract class _$NutritionIntakeConsumedItemCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res> get type;
   @override
-  $CodeableReferenceCopyWith<$Res> get nutritionProduct;
+  $CodeableConceptCopyWith<$Res> get nutritionProductCodeableConcept;
+  @override
+  $ReferenceCopyWith<$Res> get nutritionProductReference;
   @override
   $TimingCopyWith<$Res> get schedule;
   @override
@@ -6811,7 +6870,8 @@ class __$NutritionIntakeConsumedItemCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object type = freezed,
-    Object nutritionProduct = freezed,
+    Object nutritionProductCodeableConcept = freezed,
+    Object nutritionProductReference = freezed,
     Object schedule = freezed,
     Object amount = freezed,
     Object rate = freezed,
@@ -6828,9 +6888,13 @@ class __$NutritionIntakeConsumedItemCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       type: type == freezed ? _value.type : type as CodeableConcept,
-      nutritionProduct: nutritionProduct == freezed
-          ? _value.nutritionProduct
-          : nutritionProduct as CodeableReference,
+      nutritionProductCodeableConcept:
+          nutritionProductCodeableConcept == freezed
+              ? _value.nutritionProductCodeableConcept
+              : nutritionProductCodeableConcept as CodeableConcept,
+      nutritionProductReference: nutritionProductReference == freezed
+          ? _value.nutritionProductReference
+          : nutritionProductReference as Reference,
       schedule: schedule == freezed ? _value.schedule : schedule as Timing,
       amount: amount == freezed ? _value.amount : amount as Quantity,
       rate: rate == freezed ? _value.rate : rate as Quantity,
@@ -6855,7 +6919,8 @@ class _$_NutritionIntakeConsumedItem extends _NutritionIntakeConsumedItem {
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @required this.type,
-      @required this.nutritionProduct,
+      this.nutritionProductCodeableConcept,
+      this.nutritionProductReference,
       this.schedule,
       this.amount,
       this.rate,
@@ -6863,7 +6928,6 @@ class _$_NutritionIntakeConsumedItem extends _NutritionIntakeConsumedItem {
       @JsonKey(name: '_notConsumed') this.notConsumedElement,
       this.notConsumedReason})
       : assert(type != null),
-        assert(nutritionProduct != null),
         super._();
 
   factory _$_NutritionIntakeConsumedItem.fromJson(Map<String, dynamic> json) =>
@@ -6879,7 +6943,9 @@ class _$_NutritionIntakeConsumedItem extends _NutritionIntakeConsumedItem {
   @override
   final CodeableConcept type;
   @override
-  final CodeableReference nutritionProduct;
+  final CodeableConcept nutritionProductCodeableConcept;
+  @override
+  final Reference nutritionProductReference;
   @override
   final Timing schedule;
   @override
@@ -6896,7 +6962,7 @@ class _$_NutritionIntakeConsumedItem extends _NutritionIntakeConsumedItem {
 
   @override
   String toString() {
-    return 'NutritionIntakeConsumedItem(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, nutritionProduct: $nutritionProduct, schedule: $schedule, amount: $amount, rate: $rate, notConsumed: $notConsumed, notConsumedElement: $notConsumedElement, notConsumedReason: $notConsumedReason)';
+    return 'NutritionIntakeConsumedItem(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, nutritionProductCodeableConcept: $nutritionProductCodeableConcept, nutritionProductReference: $nutritionProductReference, schedule: $schedule, amount: $amount, rate: $rate, notConsumed: $notConsumed, notConsumedElement: $notConsumedElement, notConsumedReason: $notConsumedReason)';
   }
 
   @override
@@ -6913,9 +6979,16 @@ class _$_NutritionIntakeConsumedItem extends _NutritionIntakeConsumedItem {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.nutritionProduct, nutritionProduct) ||
-                const DeepCollectionEquality()
-                    .equals(other.nutritionProduct, nutritionProduct)) &&
+            (identical(other.nutritionProductCodeableConcept,
+                    nutritionProductCodeableConcept) ||
+                const DeepCollectionEquality().equals(
+                    other.nutritionProductCodeableConcept,
+                    nutritionProductCodeableConcept)) &&
+            (identical(other.nutritionProductReference,
+                    nutritionProductReference) ||
+                const DeepCollectionEquality().equals(
+                    other.nutritionProductReference,
+                    nutritionProductReference)) &&
             (identical(other.schedule, schedule) ||
                 const DeepCollectionEquality()
                     .equals(other.schedule, schedule)) &&
@@ -6941,7 +7014,8 @@ class _$_NutritionIntakeConsumedItem extends _NutritionIntakeConsumedItem {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(nutritionProduct) ^
+      const DeepCollectionEquality().hash(nutritionProductCodeableConcept) ^
+      const DeepCollectionEquality().hash(nutritionProductReference) ^
       const DeepCollectionEquality().hash(schedule) ^
       const DeepCollectionEquality().hash(amount) ^
       const DeepCollectionEquality().hash(rate) ^
@@ -6968,7 +7042,8 @@ abstract class _NutritionIntakeConsumedItem
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @required CodeableConcept type,
-      @required CodeableReference nutritionProduct,
+      CodeableConcept nutritionProductCodeableConcept,
+      Reference nutritionProductReference,
       Timing schedule,
       Quantity amount,
       Quantity rate,
@@ -6989,7 +7064,9 @@ abstract class _NutritionIntakeConsumedItem
   @override
   CodeableConcept get type;
   @override
-  CodeableReference get nutritionProduct;
+  CodeableConcept get nutritionProductCodeableConcept;
+  @override
+  Reference get nutritionProductReference;
   @override
   Timing get schedule;
   @override
@@ -7022,13 +7099,15 @@ class _$NutritionIntakeIngredientLabelTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @required CodeableReference nutrient,
+      CodeableConcept nutrientCodeableConcept,
+      Reference nutrientReference,
       @required Quantity amount}) {
     return _NutritionIntakeIngredientLabel(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
-      nutrient: nutrient,
+      nutrientCodeableConcept: nutrientCodeableConcept,
+      nutrientReference: nutrientReference,
       amount: amount,
     );
   }
@@ -7050,7 +7129,8 @@ mixin _$NutritionIntakeIngredientLabel {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
-  CodeableReference get nutrient;
+  CodeableConcept get nutrientCodeableConcept;
+  Reference get nutrientReference;
   Quantity get amount;
 
   Map<String, dynamic> toJson();
@@ -7068,10 +7148,12 @@ abstract class $NutritionIntakeIngredientLabelCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      CodeableReference nutrient,
+      CodeableConcept nutrientCodeableConcept,
+      Reference nutrientReference,
       Quantity amount});
 
-  $CodeableReferenceCopyWith<$Res> get nutrient;
+  $CodeableConceptCopyWith<$Res> get nutrientCodeableConcept;
+  $ReferenceCopyWith<$Res> get nutrientReference;
   $QuantityCopyWith<$Res> get amount;
 }
 
@@ -7089,7 +7171,8 @@ class _$NutritionIntakeIngredientLabelCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object nutrient = freezed,
+    Object nutrientCodeableConcept = freezed,
+    Object nutrientReference = freezed,
     Object amount = freezed,
   }) {
     return _then(_value.copyWith(
@@ -7100,19 +7183,34 @@ class _$NutritionIntakeIngredientLabelCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      nutrient:
-          nutrient == freezed ? _value.nutrient : nutrient as CodeableReference,
+      nutrientCodeableConcept: nutrientCodeableConcept == freezed
+          ? _value.nutrientCodeableConcept
+          : nutrientCodeableConcept as CodeableConcept,
+      nutrientReference: nutrientReference == freezed
+          ? _value.nutrientReference
+          : nutrientReference as Reference,
       amount: amount == freezed ? _value.amount : amount as Quantity,
     ));
   }
 
   @override
-  $CodeableReferenceCopyWith<$Res> get nutrient {
-    if (_value.nutrient == null) {
+  $CodeableConceptCopyWith<$Res> get nutrientCodeableConcept {
+    if (_value.nutrientCodeableConcept == null) {
       return null;
     }
-    return $CodeableReferenceCopyWith<$Res>(_value.nutrient, (value) {
-      return _then(_value.copyWith(nutrient: value));
+    return $CodeableConceptCopyWith<$Res>(_value.nutrientCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(nutrientCodeableConcept: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get nutrientReference {
+    if (_value.nutrientReference == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.nutrientReference, (value) {
+      return _then(_value.copyWith(nutrientReference: value));
     });
   }
 
@@ -7139,11 +7237,14 @@ abstract class _$NutritionIntakeIngredientLabelCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      CodeableReference nutrient,
+      CodeableConcept nutrientCodeableConcept,
+      Reference nutrientReference,
       Quantity amount});
 
   @override
-  $CodeableReferenceCopyWith<$Res> get nutrient;
+  $CodeableConceptCopyWith<$Res> get nutrientCodeableConcept;
+  @override
+  $ReferenceCopyWith<$Res> get nutrientReference;
   @override
   $QuantityCopyWith<$Res> get amount;
 }
@@ -7166,7 +7267,8 @@ class __$NutritionIntakeIngredientLabelCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object nutrient = freezed,
+    Object nutrientCodeableConcept = freezed,
+    Object nutrientReference = freezed,
     Object amount = freezed,
   }) {
     return _then(_NutritionIntakeIngredientLabel(
@@ -7177,8 +7279,12 @@ class __$NutritionIntakeIngredientLabelCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      nutrient:
-          nutrient == freezed ? _value.nutrient : nutrient as CodeableReference,
+      nutrientCodeableConcept: nutrientCodeableConcept == freezed
+          ? _value.nutrientCodeableConcept
+          : nutrientCodeableConcept as CodeableConcept,
+      nutrientReference: nutrientReference == freezed
+          ? _value.nutrientReference
+          : nutrientReference as Reference,
       amount: amount == freezed ? _value.amount : amount as Quantity,
     ));
   }
@@ -7193,10 +7299,10 @@ class _$_NutritionIntakeIngredientLabel
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @required this.nutrient,
+      this.nutrientCodeableConcept,
+      this.nutrientReference,
       @required this.amount})
-      : assert(nutrient != null),
-        assert(amount != null),
+      : assert(amount != null),
         super._();
 
   factory _$_NutritionIntakeIngredientLabel.fromJson(
@@ -7211,13 +7317,15 @@ class _$_NutritionIntakeIngredientLabel
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  final CodeableReference nutrient;
+  final CodeableConcept nutrientCodeableConcept;
+  @override
+  final Reference nutrientReference;
   @override
   final Quantity amount;
 
   @override
   String toString() {
-    return 'NutritionIntakeIngredientLabel(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, nutrient: $nutrient, amount: $amount)';
+    return 'NutritionIntakeIngredientLabel(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, nutrientCodeableConcept: $nutrientCodeableConcept, nutrientReference: $nutrientReference, amount: $amount)';
   }
 
   @override
@@ -7232,9 +7340,13 @@ class _$_NutritionIntakeIngredientLabel
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.nutrient, nutrient) ||
+            (identical(
+                    other.nutrientCodeableConcept, nutrientCodeableConcept) ||
+                const DeepCollectionEquality().equals(
+                    other.nutrientCodeableConcept, nutrientCodeableConcept)) &&
+            (identical(other.nutrientReference, nutrientReference) ||
                 const DeepCollectionEquality()
-                    .equals(other.nutrient, nutrient)) &&
+                    .equals(other.nutrientReference, nutrientReference)) &&
             (identical(other.amount, amount) ||
                 const DeepCollectionEquality().equals(other.amount, amount)));
   }
@@ -7245,7 +7357,8 @@ class _$_NutritionIntakeIngredientLabel
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(nutrient) ^
+      const DeepCollectionEquality().hash(nutrientCodeableConcept) ^
+      const DeepCollectionEquality().hash(nutrientReference) ^
       const DeepCollectionEquality().hash(amount);
 
   @override
@@ -7266,7 +7379,8 @@ abstract class _NutritionIntakeIngredientLabel
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @required CodeableReference nutrient,
+      CodeableConcept nutrientCodeableConcept,
+      Reference nutrientReference,
       @required Quantity amount}) = _$_NutritionIntakeIngredientLabel;
 
   factory _NutritionIntakeIngredientLabel.fromJson(Map<String, dynamic> json) =
@@ -7280,7 +7394,9 @@ abstract class _NutritionIntakeIngredientLabel
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  CodeableReference get nutrient;
+  CodeableConcept get nutrientCodeableConcept;
+  @override
+  Reference get nutrientReference;
   @override
   Quantity get amount;
   @override
