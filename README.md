@@ -8,7 +8,7 @@ It contains packages for the 3 released FHIR versions:
 - [Stu3 v3.0.2](https://www.hl7.org/fhir/stu3/)
 - [Dstu2 v1.0.2](https://www.hl7.org/fhir/DSTU2/)
 
-As well as the R5 Preview #1:
+As well as the R5 Preview #3:
 
 - [v4.5.0: R5 Preview #3](https://hl7.org/fhir/2020Feb/)
 
