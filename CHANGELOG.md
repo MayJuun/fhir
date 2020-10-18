@@ -1,3 +1,8 @@
+## [0.0.9]
+
+* Ran formatter
+* Generated documentation
+
 ## [0.0.8]
 
 * Eased restrictions on Instant
