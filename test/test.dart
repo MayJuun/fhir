@@ -1,7 +1,6 @@
-import 'dart:io';
-
 import 'package:test/test.dart';
 
+import 'expected.dart';
 import 'validation.dart';
 
 Future main() async {
@@ -10,15 +9,21 @@ Future main() async {
     'examples, json schema, and online description do not currently all match), '
     'does deep comarison of the map produced with the map that was input, field '
     'by field. It then reverses them and runs through the same algorithm. Any '
-    'files with errors are printed out in the debug console, and all notes '
-    'about the error are stored in "tested.txt". This is compared with the '
-    'predefined expected errors in "expected.txt". As long as they agree, the '
-    'test will pass.',
+    'files with errors are printed out in the debug console, and the errors are '
+    'compared with the expected errors stored in the map in "expected.dart". '
+    'the expected errors are removed, and it is checked that each list of erros '
+    'is empty.',
     () async {
-      await validation();
-      final expected = await File('./test/expected.txt').readAsString();
-      final tested = await File('./test/tested.txt').readAsString();
-      expect(expected, tested);
+      var testMap = await validation();
+      var expectMap = expected;
+      for (var k in expectMap.keys) {
+        for (var j in expectMap[k]) {
+          testMap[k].removeWhere((i) => i == j);
+        }
+      }
+      for (var k in testMap.keys) {
+        expect(testMap[k], []);
+      }
     },
     timeout: Timeout(Duration(minutes: 10)),
   );

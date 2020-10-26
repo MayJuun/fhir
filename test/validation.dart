@@ -11,23 +11,14 @@ part 'r4_validation.dart';
 part 'r5_validation.dart';
 part 'stu3_validation.dart';
 
-Future validation() async {
-  var string = '';
-  string += 'DSTU2\n'
-      '---------------------------------------------------------------------------';
-  string += await dstu2Validation();
-  string += '\n\nR4\n'
-      '---------------------------------------------------------------------------';
-  string += await r4Validation();
-  string += '\n\nSTU3\n'
-      '---------------------------------------------------------------------------';
-  string += await stu3Validation();
-  // string += '\n\nR5\n'
-  //     '---------------------------------------------------------------------------';
-  // string += await r5Validation();
-  final file = File('./test/tested.txt');
-  await file.writeAsString('');
-  await file.writeAsString(string);
+Future<Map<String, List<String>>> validation() async {
+  var tested = <String, List<String>>{};
+  tested['dstu2'] = await dstu2Validation();
+  tested['stu3'] = await stu3Validation();
+  tested['r4'] = await r4Validation();
+  // string['r5'] = await r5Validation();
+
+  return tested;
 }
 
 /// checks key by key the maps passed to it
@@ -131,5 +122,5 @@ String checkEquality(dynamic input, dynamic output, String file) {
     if (Uri.parse(input) == Uri.parse(output)) return '';
   }
 
-  return '\n\n$file\ninput: $input :: output:$output';
+  return '$file\ninput: $input :: output:$output';
 }
