@@ -2324,7 +2324,7 @@ class _$ElementDefinitionTearOff {
       ContactPoint defaultValueContactPoint,
       Count defaultValueCount,
       Distance defaultValueDistance,
-      Duration defaultValueDuration,
+      FhirDuration defaultValueDuration,
       HumanName defaultValueHumanName,
       Identifier defaultValueIdentifier,
       Money defaultValueMoney,
@@ -2418,7 +2418,7 @@ class _$ElementDefinitionTearOff {
       ContactPoint fixedContactPoint,
       Count fixedCount,
       Distance fixedDistance,
-      Duration fixedDuration,
+      FhirDuration fixedDuration,
       HumanName fixedHumanName,
       Identifier fixedIdentifier,
       Money fixedMoney,
@@ -2506,7 +2506,7 @@ class _$ElementDefinitionTearOff {
       ContactPoint patternContactPoint,
       Count patternCount,
       Distance patternDistance,
-      Duration patternDuration,
+      FhirDuration patternDuration,
       HumanName patternHumanName,
       Identifier patternIdentifier,
       Money patternMoney,
@@ -3023,7 +3023,7 @@ mixin _$ElementDefinition {
   ContactPoint get defaultValueContactPoint;
   Count get defaultValueCount;
   Distance get defaultValueDistance;
-  Duration get defaultValueDuration;
+  FhirDuration get defaultValueDuration;
   HumanName get defaultValueHumanName;
   Identifier get defaultValueIdentifier;
   Money get defaultValueMoney;
@@ -3117,7 +3117,7 @@ mixin _$ElementDefinition {
   ContactPoint get fixedContactPoint;
   Count get fixedCount;
   Distance get fixedDistance;
-  Duration get fixedDuration;
+  FhirDuration get fixedDuration;
   HumanName get fixedHumanName;
   Identifier get fixedIdentifier;
   Money get fixedMoney;
@@ -3205,7 +3205,7 @@ mixin _$ElementDefinition {
   ContactPoint get patternContactPoint;
   Count get patternCount;
   Distance get patternDistance;
-  Duration get patternDuration;
+  FhirDuration get patternDuration;
   HumanName get patternHumanName;
   Identifier get patternIdentifier;
   Money get patternMoney;
@@ -3423,7 +3423,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       ContactPoint defaultValueContactPoint,
       Count defaultValueCount,
       Distance defaultValueDistance,
-      Duration defaultValueDuration,
+      FhirDuration defaultValueDuration,
       HumanName defaultValueHumanName,
       Identifier defaultValueIdentifier,
       Money defaultValueMoney,
@@ -3517,7 +3517,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       ContactPoint fixedContactPoint,
       Count fixedCount,
       Distance fixedDistance,
-      Duration fixedDuration,
+      FhirDuration fixedDuration,
       HumanName fixedHumanName,
       Identifier fixedIdentifier,
       Money fixedMoney,
@@ -3605,7 +3605,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       ContactPoint patternContactPoint,
       Count patternCount,
       Distance patternDistance,
-      Duration patternDuration,
+      FhirDuration patternDuration,
       HumanName patternHumanName,
       Identifier patternIdentifier,
       Money patternMoney,
@@ -3741,7 +3741,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $ContactPointCopyWith<$Res> get defaultValueContactPoint;
   $CountCopyWith<$Res> get defaultValueCount;
   $DistanceCopyWith<$Res> get defaultValueDistance;
-  $DurationCopyWith<$Res> get defaultValueDuration;
+  $FhirDurationCopyWith<$Res> get defaultValueDuration;
   $HumanNameCopyWith<$Res> get defaultValueHumanName;
   $IdentifierCopyWith<$Res> get defaultValueIdentifier;
   $MoneyCopyWith<$Res> get defaultValueMoney;
@@ -3793,7 +3793,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $ContactPointCopyWith<$Res> get fixedContactPoint;
   $CountCopyWith<$Res> get fixedCount;
   $DistanceCopyWith<$Res> get fixedDistance;
-  $DurationCopyWith<$Res> get fixedDuration;
+  $FhirDurationCopyWith<$Res> get fixedDuration;
   $HumanNameCopyWith<$Res> get fixedHumanName;
   $IdentifierCopyWith<$Res> get fixedIdentifier;
   $MoneyCopyWith<$Res> get fixedMoney;
@@ -3843,7 +3843,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $ContactPointCopyWith<$Res> get patternContactPoint;
   $CountCopyWith<$Res> get patternCount;
   $DistanceCopyWith<$Res> get patternDistance;
-  $DurationCopyWith<$Res> get patternDuration;
+  $FhirDurationCopyWith<$Res> get patternDuration;
   $HumanNameCopyWith<$Res> get patternHumanName;
   $IdentifierCopyWith<$Res> get patternIdentifier;
   $MoneyCopyWith<$Res> get patternMoney;
@@ -4413,7 +4413,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           : defaultValueDistance as Distance,
       defaultValueDuration: defaultValueDuration == freezed
           ? _value.defaultValueDuration
-          : defaultValueDuration as Duration,
+          : defaultValueDuration as FhirDuration,
       defaultValueHumanName: defaultValueHumanName == freezed
           ? _value.defaultValueHumanName
           : defaultValueHumanName as HumanName,
@@ -4612,7 +4612,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           : fixedDistance as Distance,
       fixedDuration: fixedDuration == freezed
           ? _value.fixedDuration
-          : fixedDuration as Duration,
+          : fixedDuration as FhirDuration,
       fixedHumanName: fixedHumanName == freezed
           ? _value.fixedHumanName
           : fixedHumanName as HumanName,
@@ -4798,7 +4798,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           : patternDistance as Distance,
       patternDuration: patternDuration == freezed
           ? _value.patternDuration
-          : patternDuration as Duration,
+          : patternDuration as FhirDuration,
       patternHumanName: patternHumanName == freezed
           ? _value.patternHumanName
           : patternHumanName as HumanName,
@@ -5416,11 +5416,11 @@ class _$ElementDefinitionCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get defaultValueDuration {
+  $FhirDurationCopyWith<$Res> get defaultValueDuration {
     if (_value.defaultValueDuration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.defaultValueDuration, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.defaultValueDuration, (value) {
       return _then(_value.copyWith(defaultValueDuration: value));
     });
   }
@@ -5942,11 +5942,11 @@ class _$ElementDefinitionCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get fixedDuration {
+  $FhirDurationCopyWith<$Res> get fixedDuration {
     if (_value.fixedDuration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.fixedDuration, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.fixedDuration, (value) {
       return _then(_value.copyWith(fixedDuration: value));
     });
   }
@@ -6445,11 +6445,11 @@ class _$ElementDefinitionCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get patternDuration {
+  $FhirDurationCopyWith<$Res> get patternDuration {
     if (_value.patternDuration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.patternDuration, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.patternDuration, (value) {
       return _then(_value.copyWith(patternDuration: value));
     });
   }
@@ -7030,7 +7030,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       ContactPoint defaultValueContactPoint,
       Count defaultValueCount,
       Distance defaultValueDistance,
-      Duration defaultValueDuration,
+      FhirDuration defaultValueDuration,
       HumanName defaultValueHumanName,
       Identifier defaultValueIdentifier,
       Money defaultValueMoney,
@@ -7124,7 +7124,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       ContactPoint fixedContactPoint,
       Count fixedCount,
       Distance fixedDistance,
-      Duration fixedDuration,
+      FhirDuration fixedDuration,
       HumanName fixedHumanName,
       Identifier fixedIdentifier,
       Money fixedMoney,
@@ -7212,7 +7212,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       ContactPoint patternContactPoint,
       Count patternCount,
       Distance patternDistance,
-      Duration patternDuration,
+      FhirDuration patternDuration,
       HumanName patternHumanName,
       Identifier patternIdentifier,
       Money patternMoney,
@@ -7390,7 +7390,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
   @override
   $DistanceCopyWith<$Res> get defaultValueDistance;
   @override
-  $DurationCopyWith<$Res> get defaultValueDuration;
+  $FhirDurationCopyWith<$Res> get defaultValueDuration;
   @override
   $HumanNameCopyWith<$Res> get defaultValueHumanName;
   @override
@@ -7494,7 +7494,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
   @override
   $DistanceCopyWith<$Res> get fixedDistance;
   @override
-  $DurationCopyWith<$Res> get fixedDuration;
+  $FhirDurationCopyWith<$Res> get fixedDuration;
   @override
   $HumanNameCopyWith<$Res> get fixedHumanName;
   @override
@@ -7594,7 +7594,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
   @override
   $DistanceCopyWith<$Res> get patternDistance;
   @override
-  $DurationCopyWith<$Res> get patternDuration;
+  $FhirDurationCopyWith<$Res> get patternDuration;
   @override
   $HumanNameCopyWith<$Res> get patternHumanName;
   @override
@@ -8211,7 +8211,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           : defaultValueDistance as Distance,
       defaultValueDuration: defaultValueDuration == freezed
           ? _value.defaultValueDuration
-          : defaultValueDuration as Duration,
+          : defaultValueDuration as FhirDuration,
       defaultValueHumanName: defaultValueHumanName == freezed
           ? _value.defaultValueHumanName
           : defaultValueHumanName as HumanName,
@@ -8410,7 +8410,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           : fixedDistance as Distance,
       fixedDuration: fixedDuration == freezed
           ? _value.fixedDuration
-          : fixedDuration as Duration,
+          : fixedDuration as FhirDuration,
       fixedHumanName: fixedHumanName == freezed
           ? _value.fixedHumanName
           : fixedHumanName as HumanName,
@@ -8596,7 +8596,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           : patternDistance as Distance,
       patternDuration: patternDuration == freezed
           ? _value.patternDuration
-          : patternDuration as Duration,
+          : patternDuration as FhirDuration,
       patternHumanName: patternHumanName == freezed
           ? _value.patternHumanName
           : patternHumanName as HumanName,
@@ -9392,7 +9392,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   final Distance defaultValueDistance;
   @override
-  final Duration defaultValueDuration;
+  final FhirDuration defaultValueDuration;
   @override
   final HumanName defaultValueHumanName;
   @override
@@ -9559,7 +9559,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   final Distance fixedDistance;
   @override
-  final Duration fixedDuration;
+  final FhirDuration fixedDuration;
   @override
   final HumanName fixedHumanName;
   @override
@@ -9716,7 +9716,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   final Distance patternDistance;
   @override
-  final Duration patternDuration;
+  final FhirDuration patternDuration;
   @override
   final HumanName patternHumanName;
   @override
@@ -10650,7 +10650,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       ContactPoint defaultValueContactPoint,
       Count defaultValueCount,
       Distance defaultValueDistance,
-      Duration defaultValueDuration,
+      FhirDuration defaultValueDuration,
       HumanName defaultValueHumanName,
       Identifier defaultValueIdentifier,
       Money defaultValueMoney,
@@ -10744,7 +10744,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       ContactPoint fixedContactPoint,
       Count fixedCount,
       Distance fixedDistance,
-      Duration fixedDuration,
+      FhirDuration fixedDuration,
       HumanName fixedHumanName,
       Identifier fixedIdentifier,
       Money fixedMoney,
@@ -10832,7 +10832,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       ContactPoint patternContactPoint,
       Count patternCount,
       Distance patternDistance,
-      Duration patternDuration,
+      FhirDuration patternDuration,
       HumanName patternHumanName,
       Identifier patternIdentifier,
       Money patternMoney,
@@ -11124,7 +11124,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @override
   Distance get defaultValueDistance;
   @override
-  Duration get defaultValueDuration;
+  FhirDuration get defaultValueDuration;
   @override
   HumanName get defaultValueHumanName;
   @override
@@ -11291,7 +11291,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @override
   Distance get fixedDistance;
   @override
-  Duration get fixedDuration;
+  FhirDuration get fixedDuration;
   @override
   HumanName get fixedHumanName;
   @override
@@ -11448,7 +11448,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @override
   Distance get patternDistance;
   @override
-  Duration get patternDuration;
+  FhirDuration get patternDuration;
   @override
   HumanName get patternHumanName;
   @override
@@ -13302,7 +13302,7 @@ class _$ElementDefinitionExampleTearOff {
       ContactPoint valueContactPoint,
       Count valueCount,
       Distance valueDistance,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       HumanName valueHumanName,
       Identifier valueIdentifier,
       Money valueMoney,
@@ -13487,7 +13487,7 @@ mixin _$ElementDefinitionExample {
   ContactPoint get valueContactPoint;
   Count get valueCount;
   Distance get valueDistance;
-  Duration get valueDuration;
+  FhirDuration get valueDuration;
   HumanName get valueHumanName;
   Identifier get valueIdentifier;
   Money get valueMoney;
@@ -13572,7 +13572,7 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
       ContactPoint valueContactPoint,
       Count valueCount,
       Distance valueDistance,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       HumanName valueHumanName,
       Identifier valueIdentifier,
       Money valueMoney,
@@ -13624,7 +13624,7 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
   $ContactPointCopyWith<$Res> get valueContactPoint;
   $CountCopyWith<$Res> get valueCount;
   $DistanceCopyWith<$Res> get valueDistance;
-  $DurationCopyWith<$Res> get valueDuration;
+  $FhirDurationCopyWith<$Res> get valueDuration;
   $HumanNameCopyWith<$Res> get valueHumanName;
   $IdentifierCopyWith<$Res> get valueIdentifier;
   $MoneyCopyWith<$Res> get valueMoney;
@@ -13868,7 +13868,7 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
           : valueDistance as Distance,
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
-          : valueDuration as Duration,
+          : valueDuration as FhirDuration,
       valueHumanName: valueHumanName == freezed
           ? _value.valueHumanName
           : valueHumanName as HumanName,
@@ -14218,11 +14218,11 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get valueDuration {
+  $FhirDurationCopyWith<$Res> get valueDuration {
     if (_value.valueDuration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.valueDuration, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.valueDuration, (value) {
       return _then(_value.copyWith(valueDuration: value));
     });
   }
@@ -14500,7 +14500,7 @@ abstract class _$ElementDefinitionExampleCopyWith<$Res>
       ContactPoint valueContactPoint,
       Count valueCount,
       Distance valueDistance,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       HumanName valueHumanName,
       Identifier valueIdentifier,
       Money valueMoney,
@@ -14582,7 +14582,7 @@ abstract class _$ElementDefinitionExampleCopyWith<$Res>
   @override
   $DistanceCopyWith<$Res> get valueDistance;
   @override
-  $DurationCopyWith<$Res> get valueDuration;
+  $FhirDurationCopyWith<$Res> get valueDuration;
   @override
   $HumanNameCopyWith<$Res> get valueHumanName;
   @override
@@ -14850,7 +14850,7 @@ class __$ElementDefinitionExampleCopyWithImpl<$Res>
           : valueDistance as Distance,
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
-          : valueDuration as Duration,
+          : valueDuration as FhirDuration,
       valueHumanName: valueHumanName == freezed
           ? _value.valueHumanName
           : valueHumanName as HumanName,
@@ -15120,7 +15120,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
   @override
   final Distance valueDistance;
   @override
-  final Duration valueDuration;
+  final FhirDuration valueDuration;
   @override
   final HumanName valueHumanName;
   @override
@@ -15427,7 +15427,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
       ContactPoint valueContactPoint,
       Count valueCount,
       Distance valueDistance,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       HumanName valueHumanName,
       Identifier valueIdentifier,
       Money valueMoney,
@@ -15579,7 +15579,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
   @override
   Distance get valueDistance;
   @override
-  Duration get valueDuration;
+  FhirDuration get valueDuration;
   @override
   HumanName get valueHumanName;
   @override

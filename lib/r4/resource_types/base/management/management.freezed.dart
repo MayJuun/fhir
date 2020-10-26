@@ -53,7 +53,7 @@ class _$EncounterTearOff {
       List<EncounterParticipant> participant,
       List<Reference> appointment,
       Period period,
-      Duration length,
+      FhirDuration length,
       List<CodeableConcept> reasonCode,
       List<Reference> reasonReference,
       List<EncounterDiagnosis> diagnosis,
@@ -146,7 +146,7 @@ mixin _$Encounter {
   List<EncounterParticipant> get participant;
   List<Reference> get appointment;
   Period get period;
-  Duration get length;
+  FhirDuration get length;
   List<CodeableConcept> get reasonCode;
   List<Reference> get reasonReference;
   List<EncounterDiagnosis> get diagnosis;
@@ -198,7 +198,7 @@ abstract class $EncounterCopyWith<$Res> {
       List<EncounterParticipant> participant,
       List<Reference> appointment,
       Period period,
-      Duration length,
+      FhirDuration length,
       List<CodeableConcept> reasonCode,
       List<Reference> reasonReference,
       List<EncounterDiagnosis> diagnosis,
@@ -218,7 +218,7 @@ abstract class $EncounterCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get priority;
   $ReferenceCopyWith<$Res> get subject;
   $PeriodCopyWith<$Res> get period;
-  $DurationCopyWith<$Res> get length;
+  $FhirDurationCopyWith<$Res> get length;
   $EncounterHospitalizationCopyWith<$Res> get hospitalization;
   $ReferenceCopyWith<$Res> get serviceProvider;
   $ReferenceCopyWith<$Res> get partOf;
@@ -327,7 +327,7 @@ class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
           ? _value.appointment
           : appointment as List<Reference>,
       period: period == freezed ? _value.period : period as Period,
-      length: length == freezed ? _value.length : length as Duration,
+      length: length == freezed ? _value.length : length as FhirDuration,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
           : reasonCode as List<CodeableConcept>,
@@ -452,11 +452,11 @@ class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
   }
 
   @override
-  $DurationCopyWith<$Res> get length {
+  $FhirDurationCopyWith<$Res> get length {
     if (_value.length == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.length, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.length, (value) {
       return _then(_value.copyWith(length: value));
     });
   }
@@ -533,7 +533,7 @@ abstract class _$EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
       List<EncounterParticipant> participant,
       List<Reference> appointment,
       Period period,
-      Duration length,
+      FhirDuration length,
       List<CodeableConcept> reasonCode,
       List<Reference> reasonReference,
       List<EncounterDiagnosis> diagnosis,
@@ -564,7 +564,7 @@ abstract class _$EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
   @override
   $PeriodCopyWith<$Res> get period;
   @override
-  $DurationCopyWith<$Res> get length;
+  $FhirDurationCopyWith<$Res> get length;
   @override
   $EncounterHospitalizationCopyWith<$Res> get hospitalization;
   @override
@@ -677,7 +677,7 @@ class __$EncounterCopyWithImpl<$Res> extends _$EncounterCopyWithImpl<$Res>
           ? _value.appointment
           : appointment as List<Reference>,
       period: period == freezed ? _value.period : period as Period,
-      length: length == freezed ? _value.length : length as Duration,
+      length: length == freezed ? _value.length : length as FhirDuration,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
           : reasonCode as List<CodeableConcept>,
@@ -809,7 +809,7 @@ class _$_Encounter extends _Encounter {
   @override
   final Period period;
   @override
-  final Duration length;
+  final FhirDuration length;
   @override
   final List<CodeableConcept> reasonCode;
   @override
@@ -1003,7 +1003,7 @@ abstract class _Encounter extends Encounter {
       List<EncounterParticipant> participant,
       List<Reference> appointment,
       Period period,
-      Duration length,
+      FhirDuration length,
       List<CodeableConcept> reasonCode,
       List<Reference> reasonReference,
       List<EncounterDiagnosis> diagnosis,
@@ -1076,7 +1076,7 @@ abstract class _Encounter extends Encounter {
   @override
   Period get period;
   @override
-  Duration get length;
+  FhirDuration get length;
   @override
   List<CodeableConcept> get reasonCode;
   @override

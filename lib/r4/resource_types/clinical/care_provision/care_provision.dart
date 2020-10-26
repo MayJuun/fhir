@@ -230,7 +230,7 @@ abstract class GoalTarget implements _$GoalTarget {
     Ratio detailRatio,
     Date dueDate,
     @JsonKey(name: '_dueDate') Element dueDateElement,
-    Duration dueDuration,
+    FhirDuration dueDuration,
   }) = _GoalTarget;
 
   factory GoalTarget.fromJson(Map<String, dynamic> json) =>
@@ -467,7 +467,7 @@ abstract class RequestGroupAction implements _$RequestGroupAction {
     @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
     Age timingAge,
     Period timingPeriod,
-    Duration timingDuration,
+    FhirDuration timingDuration,
     Range timingRange,
     Timing timingTiming,
     List<Reference> participant,
@@ -518,7 +518,7 @@ abstract class RequestGroupRelatedAction
     @JsonKey(name: '_actionId') Element actionIdElement,
     Code relationship,
     @JsonKey(name: '_relationship') Element relationshipElement,
-    Duration offsetDuration,
+    FhirDuration offsetDuration,
     Range offsetRange,
   }) = _RequestGroupRelatedAction;
 

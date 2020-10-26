@@ -16331,12 +16331,12 @@ class _$SpecimenCollectionTearOff {
       FhirDateTime collectedDateTime,
       @JsonKey(name: '_collectedDateTime') Element collectedDateTimeElement,
       Period collectedPeriod,
-      Duration duration,
+      FhirDuration duration,
       Quantity quantity,
       CodeableConcept method,
       CodeableConcept bodySite,
       CodeableConcept fastingStatusCodeableConcept,
-      Duration fastingStatusDuration}) {
+      FhirDuration fastingStatusDuration}) {
     return _SpecimenCollection(
       id: id,
       extension_: extension_,
@@ -16375,12 +16375,12 @@ mixin _$SpecimenCollection {
   @JsonKey(name: '_collectedDateTime')
   Element get collectedDateTimeElement;
   Period get collectedPeriod;
-  Duration get duration;
+  FhirDuration get duration;
   Quantity get quantity;
   CodeableConcept get method;
   CodeableConcept get bodySite;
   CodeableConcept get fastingStatusCodeableConcept;
-  Duration get fastingStatusDuration;
+  FhirDuration get fastingStatusDuration;
 
   Map<String, dynamic> toJson();
   $SpecimenCollectionCopyWith<SpecimenCollection> get copyWith;
@@ -16399,22 +16399,22 @@ abstract class $SpecimenCollectionCopyWith<$Res> {
       FhirDateTime collectedDateTime,
       @JsonKey(name: '_collectedDateTime') Element collectedDateTimeElement,
       Period collectedPeriod,
-      Duration duration,
+      FhirDuration duration,
       Quantity quantity,
       CodeableConcept method,
       CodeableConcept bodySite,
       CodeableConcept fastingStatusCodeableConcept,
-      Duration fastingStatusDuration});
+      FhirDuration fastingStatusDuration});
 
   $ReferenceCopyWith<$Res> get collector;
   $ElementCopyWith<$Res> get collectedDateTimeElement;
   $PeriodCopyWith<$Res> get collectedPeriod;
-  $DurationCopyWith<$Res> get duration;
+  $FhirDurationCopyWith<$Res> get duration;
   $QuantityCopyWith<$Res> get quantity;
   $CodeableConceptCopyWith<$Res> get method;
   $CodeableConceptCopyWith<$Res> get bodySite;
   $CodeableConceptCopyWith<$Res> get fastingStatusCodeableConcept;
-  $DurationCopyWith<$Res> get fastingStatusDuration;
+  $FhirDurationCopyWith<$Res> get fastingStatusDuration;
 }
 
 /// @nodoc
@@ -16461,7 +16461,8 @@ class _$SpecimenCollectionCopyWithImpl<$Res>
       collectedPeriod: collectedPeriod == freezed
           ? _value.collectedPeriod
           : collectedPeriod as Period,
-      duration: duration == freezed ? _value.duration : duration as Duration,
+      duration:
+          duration == freezed ? _value.duration : duration as FhirDuration,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
       method: method == freezed ? _value.method : method as CodeableConcept,
       bodySite:
@@ -16471,7 +16472,7 @@ class _$SpecimenCollectionCopyWithImpl<$Res>
           : fastingStatusCodeableConcept as CodeableConcept,
       fastingStatusDuration: fastingStatusDuration == freezed
           ? _value.fastingStatusDuration
-          : fastingStatusDuration as Duration,
+          : fastingStatusDuration as FhirDuration,
     ));
   }
 
@@ -16506,11 +16507,11 @@ class _$SpecimenCollectionCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get duration {
+  $FhirDurationCopyWith<$Res> get duration {
     if (_value.duration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.duration, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.duration, (value) {
       return _then(_value.copyWith(duration: value));
     });
   }
@@ -16557,11 +16558,11 @@ class _$SpecimenCollectionCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get fastingStatusDuration {
+  $FhirDurationCopyWith<$Res> get fastingStatusDuration {
     if (_value.fastingStatusDuration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.fastingStatusDuration, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.fastingStatusDuration, (value) {
       return _then(_value.copyWith(fastingStatusDuration: value));
     });
   }
@@ -16582,12 +16583,12 @@ abstract class _$SpecimenCollectionCopyWith<$Res>
       FhirDateTime collectedDateTime,
       @JsonKey(name: '_collectedDateTime') Element collectedDateTimeElement,
       Period collectedPeriod,
-      Duration duration,
+      FhirDuration duration,
       Quantity quantity,
       CodeableConcept method,
       CodeableConcept bodySite,
       CodeableConcept fastingStatusCodeableConcept,
-      Duration fastingStatusDuration});
+      FhirDuration fastingStatusDuration});
 
   @override
   $ReferenceCopyWith<$Res> get collector;
@@ -16596,7 +16597,7 @@ abstract class _$SpecimenCollectionCopyWith<$Res>
   @override
   $PeriodCopyWith<$Res> get collectedPeriod;
   @override
-  $DurationCopyWith<$Res> get duration;
+  $FhirDurationCopyWith<$Res> get duration;
   @override
   $QuantityCopyWith<$Res> get quantity;
   @override
@@ -16606,7 +16607,7 @@ abstract class _$SpecimenCollectionCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res> get fastingStatusCodeableConcept;
   @override
-  $DurationCopyWith<$Res> get fastingStatusDuration;
+  $FhirDurationCopyWith<$Res> get fastingStatusDuration;
 }
 
 /// @nodoc
@@ -16655,7 +16656,8 @@ class __$SpecimenCollectionCopyWithImpl<$Res>
       collectedPeriod: collectedPeriod == freezed
           ? _value.collectedPeriod
           : collectedPeriod as Period,
-      duration: duration == freezed ? _value.duration : duration as Duration,
+      duration:
+          duration == freezed ? _value.duration : duration as FhirDuration,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
       method: method == freezed ? _value.method : method as CodeableConcept,
       bodySite:
@@ -16665,7 +16667,7 @@ class __$SpecimenCollectionCopyWithImpl<$Res>
           : fastingStatusCodeableConcept as CodeableConcept,
       fastingStatusDuration: fastingStatusDuration == freezed
           ? _value.fastingStatusDuration
-          : fastingStatusDuration as Duration,
+          : fastingStatusDuration as FhirDuration,
     ));
   }
 }
@@ -16710,7 +16712,7 @@ class _$_SpecimenCollection extends _SpecimenCollection {
   @override
   final Period collectedPeriod;
   @override
-  final Duration duration;
+  final FhirDuration duration;
   @override
   final Quantity quantity;
   @override
@@ -16720,7 +16722,7 @@ class _$_SpecimenCollection extends _SpecimenCollection {
   @override
   final CodeableConcept fastingStatusCodeableConcept;
   @override
-  final Duration fastingStatusDuration;
+  final FhirDuration fastingStatusDuration;
 
   @override
   String toString() {
@@ -16811,12 +16813,12 @@ abstract class _SpecimenCollection extends SpecimenCollection {
       FhirDateTime collectedDateTime,
       @JsonKey(name: '_collectedDateTime') Element collectedDateTimeElement,
       Period collectedPeriod,
-      Duration duration,
+      FhirDuration duration,
       Quantity quantity,
       CodeableConcept method,
       CodeableConcept bodySite,
       CodeableConcept fastingStatusCodeableConcept,
-      Duration fastingStatusDuration}) = _$_SpecimenCollection;
+      FhirDuration fastingStatusDuration}) = _$_SpecimenCollection;
 
   factory _SpecimenCollection.fromJson(Map<String, dynamic> json) =
       _$_SpecimenCollection.fromJson;
@@ -16838,7 +16840,7 @@ abstract class _SpecimenCollection extends SpecimenCollection {
   @override
   Period get collectedPeriod;
   @override
-  Duration get duration;
+  FhirDuration get duration;
   @override
   Quantity get quantity;
   @override
@@ -16848,7 +16850,7 @@ abstract class _SpecimenCollection extends SpecimenCollection {
   @override
   CodeableConcept get fastingStatusCodeableConcept;
   @override
-  Duration get fastingStatusDuration;
+  FhirDuration get fastingStatusDuration;
   @override
   _$SpecimenCollectionCopyWith<_SpecimenCollection> get copyWith;
 }

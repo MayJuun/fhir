@@ -133,9 +133,9 @@ abstract class Quantity implements _$Quantity {
 }
 
 @freezed
-abstract class Duration implements _$Duration {
-  Duration._();
-  factory Duration({
+abstract class FhirDuration implements _$FhirDuration {
+  FhirDuration._();
+  factory FhirDuration({
     Decimal value,
     @JsonKey(name: '_value') Element valueElement,
     QuantityComparator comparator,
@@ -146,10 +146,10 @@ abstract class Duration implements _$Duration {
     @JsonKey(name: '_system') Element systemElement,
     Code code,
     @JsonKey(name: '_code') Element codeElement,
-  }) = _Duration;
+  }) = _FhirDuration;
 
-  factory Duration.fromJson(Map<String, dynamic> json) =>
-      _$DurationFromJson(json);
+  factory FhirDuration.fromJson(Map<String, dynamic> json) =>
+      _$FhirDurationFromJson(json);
 }
 
 @freezed
@@ -398,7 +398,7 @@ abstract class Timing implements _$Timing {
 abstract class TimingRepeat implements _$TimingRepeat {
   TimingRepeat._();
   factory TimingRepeat({
-    Duration boundsDuration,
+    FhirDuration boundsDuration,
     Range boundsRange,
     Period boundsPeriod,
     Decimal count,

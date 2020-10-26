@@ -896,7 +896,7 @@ _$_GoalTarget _$_$_GoalTargetFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_dueDate'] as Map<String, dynamic>),
     dueDuration: json['dueDuration'] == null
         ? null
-        : Duration.fromJson(json['dueDuration'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(json['dueDuration'] as Map<String, dynamic>),
   );
 }
 

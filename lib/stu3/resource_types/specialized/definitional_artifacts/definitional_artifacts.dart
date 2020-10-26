@@ -203,7 +203,7 @@ abstract class PlanDefinitionTarget implements _$PlanDefinitionTarget {
     Quantity detailQuantity,
     Range detailRange,
     CodeableConcept detailCodeableConcept,
-    Duration due,
+    FhirDuration due,
   }) = _PlanDefinitionTarget;
 
   factory PlanDefinitionTarget.fromJson(Map<String, dynamic> json) =>
@@ -235,7 +235,7 @@ abstract class PlanDefinitionAction implements _$PlanDefinitionAction {
     FhirDateTime timingDateTime,
     @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
     Period timingPeriod,
-    Duration timingDuration,
+    FhirDuration timingDuration,
     Range timingRange,
     Timing timingTiming,
     List<PlanDefinitionParticipant> participant,
@@ -287,7 +287,7 @@ abstract class PlanDefinitionRelatedAction
     @JsonKey(name: '_actionId') Element actionIdElement,
     PlanDefinitionRelatedActionRelationship relationship,
     @JsonKey(name: '_relationship') Element relationshipElement,
-    Duration offsetDuration,
+    FhirDuration offsetDuration,
     Range offsetRange,
   }) = _PlanDefinitionRelatedAction;
 

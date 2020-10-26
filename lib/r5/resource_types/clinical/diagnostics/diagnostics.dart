@@ -738,12 +738,12 @@ abstract class SpecimenCollection implements _$SpecimenCollection {
     FhirDateTime collectedDateTime,
     @JsonKey(name: '_collectedDateTime') Element collectedDateTimeElement,
     Period collectedPeriod,
-    Duration duration,
+    FhirDuration duration,
     Quantity quantity,
     CodeableConcept method,
     CodeableConcept bodySite,
     CodeableConcept fastingStatusCodeableConcept,
-    Duration fastingStatusDuration,
+    FhirDuration fastingStatusDuration,
   }) = _SpecimenCollection;
 
   factory SpecimenCollection.fromJson(Map<String, dynamic> json) =>

@@ -85,7 +85,7 @@ abstract class ActivityDefinition
     Age timingAge,
     Period timingPeriod,
     Range timingRange,
-    Duration timingDuration,
+    FhirDuration timingDuration,
     Reference location,
     List<ActivityDefinitionParticipant> participant,
     Reference productReference,
@@ -770,7 +770,7 @@ abstract class PlanDefinitionTarget implements _$PlanDefinitionTarget {
     Quantity detailQuantity,
     Range detailRange,
     CodeableConcept detailCodeableConcept,
-    Duration due,
+    FhirDuration due,
   }) = _PlanDefinitionTarget;
 
   factory PlanDefinitionTarget.fromJson(Map<String, dynamic> json) =>
@@ -810,7 +810,7 @@ abstract class PlanDefinitionAction implements _$PlanDefinitionAction {
     @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
     Age timingAge,
     Period timingPeriod,
-    Duration timingDuration,
+    FhirDuration timingDuration,
     Range timingRange,
     Timing timingTiming,
     List<PlanDefinitionParticipant> participant,
@@ -873,7 +873,7 @@ abstract class PlanDefinitionRelatedAction
     @JsonKey(unknownEnumValue: PlanDefinitionRelatedActionRelationship.unknown)
         PlanDefinitionRelatedActionRelationship relationship,
     @JsonKey(name: '_relationship') Element relationshipElement,
-    Duration offsetDuration,
+    FhirDuration offsetDuration,
     Range offsetRange,
   }) = _PlanDefinitionRelatedAction;
 
@@ -1188,7 +1188,7 @@ abstract class SpecimenDefinitionTypeTested
     SpecimenDefinitionContainer container,
     String requirement,
     @JsonKey(name: '_requirement') Element requirementElement,
-    Duration retentionTime,
+    FhirDuration retentionTime,
     Boolean singleUse,
     @JsonKey(name: '_singleUse') Element singleUseElement,
     List<CodeableConcept> rejectionCriterion,
@@ -1252,7 +1252,7 @@ abstract class SpecimenDefinitionHandling
     List<FhirExtension> modifierExtension,
     CodeableConcept temperatureQualifier,
     Range temperatureRange,
-    Duration maxDuration,
+    FhirDuration maxDuration,
     String instruction,
     @JsonKey(name: '_instruction') Element instructionElement,
   }) = _SpecimenDefinitionHandling;

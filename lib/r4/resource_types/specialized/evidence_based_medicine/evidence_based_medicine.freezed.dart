@@ -7120,9 +7120,9 @@ class _$EvidenceVariableCharacteristicTearOff {
           @JsonKey(name: '_participantEffectiveDateTime')
               Element participantEffectiveDateTimeElement,
           Period participantEffectivePeriod,
-          Duration participantEffectiveDuration,
+          FhirDuration participantEffectiveDuration,
           Timing participantEffectiveTiming,
-          Duration timeFromStart,
+          FhirDuration timeFromStart,
           @JsonKey(
               unknownEnumValue:
                   EvidenceVariableCharacteristicGroupMeasure.unknown)
@@ -7192,9 +7192,9 @@ mixin _$EvidenceVariableCharacteristic {
   @JsonKey(name: '_participantEffectiveDateTime')
   Element get participantEffectiveDateTimeElement;
   Period get participantEffectivePeriod;
-  Duration get participantEffectiveDuration;
+  FhirDuration get participantEffectiveDuration;
   Timing get participantEffectiveTiming;
-  Duration get timeFromStart;
+  FhirDuration get timeFromStart;
   @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicGroupMeasure.unknown)
   EvidenceVariableCharacteristicGroupMeasure get groupMeasure;
   @JsonKey(name: '_groupMeasure')
@@ -7236,9 +7236,9 @@ abstract class $EvidenceVariableCharacteristicCopyWith<$Res> {
           @JsonKey(name: '_participantEffectiveDateTime')
               Element participantEffectiveDateTimeElement,
           Period participantEffectivePeriod,
-          Duration participantEffectiveDuration,
+          FhirDuration participantEffectiveDuration,
           Timing participantEffectiveTiming,
-          Duration timeFromStart,
+          FhirDuration timeFromStart,
           @JsonKey(
               unknownEnumValue:
                   EvidenceVariableCharacteristicGroupMeasure.unknown)
@@ -7256,9 +7256,9 @@ abstract class $EvidenceVariableCharacteristicCopyWith<$Res> {
   $ElementCopyWith<$Res> get excludeElement;
   $ElementCopyWith<$Res> get participantEffectiveDateTimeElement;
   $PeriodCopyWith<$Res> get participantEffectivePeriod;
-  $DurationCopyWith<$Res> get participantEffectiveDuration;
+  $FhirDurationCopyWith<$Res> get participantEffectiveDuration;
   $TimingCopyWith<$Res> get participantEffectiveTiming;
-  $DurationCopyWith<$Res> get timeFromStart;
+  $FhirDurationCopyWith<$Res> get timeFromStart;
   $ElementCopyWith<$Res> get groupMeasureElement;
 }
 
@@ -7350,13 +7350,13 @@ class _$EvidenceVariableCharacteristicCopyWithImpl<$Res>
           : participantEffectivePeriod as Period,
       participantEffectiveDuration: participantEffectiveDuration == freezed
           ? _value.participantEffectiveDuration
-          : participantEffectiveDuration as Duration,
+          : participantEffectiveDuration as FhirDuration,
       participantEffectiveTiming: participantEffectiveTiming == freezed
           ? _value.participantEffectiveTiming
           : participantEffectiveTiming as Timing,
       timeFromStart: timeFromStart == freezed
           ? _value.timeFromStart
-          : timeFromStart as Duration,
+          : timeFromStart as FhirDuration,
       groupMeasure: groupMeasure == freezed
           ? _value.groupMeasure
           : groupMeasure as EvidenceVariableCharacteristicGroupMeasure,
@@ -7471,11 +7471,11 @@ class _$EvidenceVariableCharacteristicCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get participantEffectiveDuration {
+  $FhirDurationCopyWith<$Res> get participantEffectiveDuration {
     if (_value.participantEffectiveDuration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.participantEffectiveDuration,
+    return $FhirDurationCopyWith<$Res>(_value.participantEffectiveDuration,
         (value) {
       return _then(_value.copyWith(participantEffectiveDuration: value));
     });
@@ -7492,11 +7492,11 @@ class _$EvidenceVariableCharacteristicCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get timeFromStart {
+  $FhirDurationCopyWith<$Res> get timeFromStart {
     if (_value.timeFromStart == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.timeFromStart, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.timeFromStart, (value) {
       return _then(_value.copyWith(timeFromStart: value));
     });
   }
@@ -7545,9 +7545,9 @@ abstract class _$EvidenceVariableCharacteristicCopyWith<$Res>
           @JsonKey(name: '_participantEffectiveDateTime')
               Element participantEffectiveDateTimeElement,
           Period participantEffectivePeriod,
-          Duration participantEffectiveDuration,
+          FhirDuration participantEffectiveDuration,
           Timing participantEffectiveTiming,
-          Duration timeFromStart,
+          FhirDuration timeFromStart,
           @JsonKey(
               unknownEnumValue:
                   EvidenceVariableCharacteristicGroupMeasure.unknown)
@@ -7576,11 +7576,11 @@ abstract class _$EvidenceVariableCharacteristicCopyWith<$Res>
   @override
   $PeriodCopyWith<$Res> get participantEffectivePeriod;
   @override
-  $DurationCopyWith<$Res> get participantEffectiveDuration;
+  $FhirDurationCopyWith<$Res> get participantEffectiveDuration;
   @override
   $TimingCopyWith<$Res> get participantEffectiveTiming;
   @override
-  $DurationCopyWith<$Res> get timeFromStart;
+  $FhirDurationCopyWith<$Res> get timeFromStart;
   @override
   $ElementCopyWith<$Res> get groupMeasureElement;
 }
@@ -7677,13 +7677,13 @@ class __$EvidenceVariableCharacteristicCopyWithImpl<$Res>
           : participantEffectivePeriod as Period,
       participantEffectiveDuration: participantEffectiveDuration == freezed
           ? _value.participantEffectiveDuration
-          : participantEffectiveDuration as Duration,
+          : participantEffectiveDuration as FhirDuration,
       participantEffectiveTiming: participantEffectiveTiming == freezed
           ? _value.participantEffectiveTiming
           : participantEffectiveTiming as Timing,
       timeFromStart: timeFromStart == freezed
           ? _value.timeFromStart
-          : timeFromStart as Duration,
+          : timeFromStart as FhirDuration,
       groupMeasure: groupMeasure == freezed
           ? _value.groupMeasure
           : groupMeasure as EvidenceVariableCharacteristicGroupMeasure,
@@ -7778,11 +7778,11 @@ class _$_EvidenceVariableCharacteristic
   @override
   final Period participantEffectivePeriod;
   @override
-  final Duration participantEffectiveDuration;
+  final FhirDuration participantEffectiveDuration;
   @override
   final Timing participantEffectiveTiming;
   @override
-  final Duration timeFromStart;
+  final FhirDuration timeFromStart;
   @override
   @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicGroupMeasure.unknown)
   final EvidenceVariableCharacteristicGroupMeasure groupMeasure;
@@ -7921,9 +7921,9 @@ abstract class _EvidenceVariableCharacteristic
       @JsonKey(name: '_participantEffectiveDateTime')
           Element participantEffectiveDateTimeElement,
       Period participantEffectivePeriod,
-      Duration participantEffectiveDuration,
+      FhirDuration participantEffectiveDuration,
       Timing participantEffectiveTiming,
-      Duration timeFromStart,
+      FhirDuration timeFromStart,
       @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicGroupMeasure.unknown)
           EvidenceVariableCharacteristicGroupMeasure groupMeasure,
       @JsonKey(name: '_groupMeasure')
@@ -7974,11 +7974,11 @@ abstract class _EvidenceVariableCharacteristic
   @override
   Period get participantEffectivePeriod;
   @override
-  Duration get participantEffectiveDuration;
+  FhirDuration get participantEffectiveDuration;
   @override
   Timing get participantEffectiveTiming;
   @override
-  Duration get timeFromStart;
+  FhirDuration get timeFromStart;
   @override
   @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicGroupMeasure.unknown)
   EvidenceVariableCharacteristicGroupMeasure get groupMeasure;
@@ -11929,9 +11929,9 @@ class _$ResearchElementDefinitionCharacteristicTearOff {
       @JsonKey(name: '_studyEffectiveDateTime')
           Element studyEffectiveDateTimeElement,
       Period studyEffectivePeriod,
-      Duration studyEffectiveDuration,
+      FhirDuration studyEffectiveDuration,
       Timing studyEffectiveTiming,
-      Duration studyEffectiveTimeFromStart,
+      FhirDuration studyEffectiveTimeFromStart,
       @JsonKey(
           unknownEnumValue:
               ResearchElementDefinitionCharacteristicStudyEffectiveGroupMeasure
@@ -11947,9 +11947,9 @@ class _$ResearchElementDefinitionCharacteristicTearOff {
       @JsonKey(name: '_participantEffectiveDateTime')
           Element participantEffectiveDateTimeElement,
       Period participantEffectivePeriod,
-      Duration participantEffectiveDuration,
+      FhirDuration participantEffectiveDuration,
       Timing participantEffectiveTiming,
-      Duration participantEffectiveTimeFromStart,
+      FhirDuration participantEffectiveTimeFromStart,
       @JsonKey(
           unknownEnumValue:
               ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasure
@@ -12031,9 +12031,9 @@ mixin _$ResearchElementDefinitionCharacteristic {
   @JsonKey(name: '_studyEffectiveDateTime')
   Element get studyEffectiveDateTimeElement;
   Period get studyEffectivePeriod;
-  Duration get studyEffectiveDuration;
+  FhirDuration get studyEffectiveDuration;
   Timing get studyEffectiveTiming;
-  Duration get studyEffectiveTimeFromStart;
+  FhirDuration get studyEffectiveTimeFromStart;
   @JsonKey(
       unknownEnumValue:
           ResearchElementDefinitionCharacteristicStudyEffectiveGroupMeasure
@@ -12049,9 +12049,9 @@ mixin _$ResearchElementDefinitionCharacteristic {
   @JsonKey(name: '_participantEffectiveDateTime')
   Element get participantEffectiveDateTimeElement;
   Period get participantEffectivePeriod;
-  Duration get participantEffectiveDuration;
+  FhirDuration get participantEffectiveDuration;
   Timing get participantEffectiveTiming;
-  Duration get participantEffectiveTimeFromStart;
+  FhirDuration get participantEffectiveTimeFromStart;
   @JsonKey(
       unknownEnumValue:
           ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasure
@@ -12095,9 +12095,9 @@ abstract class $ResearchElementDefinitionCharacteristicCopyWith<$Res> {
       @JsonKey(name: '_studyEffectiveDateTime')
           Element studyEffectiveDateTimeElement,
       Period studyEffectivePeriod,
-      Duration studyEffectiveDuration,
+      FhirDuration studyEffectiveDuration,
       Timing studyEffectiveTiming,
-      Duration studyEffectiveTimeFromStart,
+      FhirDuration studyEffectiveTimeFromStart,
       @JsonKey(
           unknownEnumValue:
               ResearchElementDefinitionCharacteristicStudyEffectiveGroupMeasure
@@ -12113,9 +12113,9 @@ abstract class $ResearchElementDefinitionCharacteristicCopyWith<$Res> {
       @JsonKey(name: '_participantEffectiveDateTime')
           Element participantEffectiveDateTimeElement,
       Period participantEffectivePeriod,
-      Duration participantEffectiveDuration,
+      FhirDuration participantEffectiveDuration,
       Timing participantEffectiveTiming,
-      Duration participantEffectiveTimeFromStart,
+      FhirDuration participantEffectiveTimeFromStart,
       @JsonKey(
           unknownEnumValue:
               ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasure
@@ -12134,16 +12134,16 @@ abstract class $ResearchElementDefinitionCharacteristicCopyWith<$Res> {
   $ElementCopyWith<$Res> get studyEffectiveDescriptionElement;
   $ElementCopyWith<$Res> get studyEffectiveDateTimeElement;
   $PeriodCopyWith<$Res> get studyEffectivePeriod;
-  $DurationCopyWith<$Res> get studyEffectiveDuration;
+  $FhirDurationCopyWith<$Res> get studyEffectiveDuration;
   $TimingCopyWith<$Res> get studyEffectiveTiming;
-  $DurationCopyWith<$Res> get studyEffectiveTimeFromStart;
+  $FhirDurationCopyWith<$Res> get studyEffectiveTimeFromStart;
   $ElementCopyWith<$Res> get studyEffectiveGroupMeasureElement;
   $ElementCopyWith<$Res> get participantEffectiveDescriptionElement;
   $ElementCopyWith<$Res> get participantEffectiveDateTimeElement;
   $PeriodCopyWith<$Res> get participantEffectivePeriod;
-  $DurationCopyWith<$Res> get participantEffectiveDuration;
+  $FhirDurationCopyWith<$Res> get participantEffectiveDuration;
   $TimingCopyWith<$Res> get participantEffectiveTiming;
-  $DurationCopyWith<$Res> get participantEffectiveTimeFromStart;
+  $FhirDurationCopyWith<$Res> get participantEffectiveTimeFromStart;
   $ElementCopyWith<$Res> get participantEffectiveGroupMeasureElement;
 }
 
@@ -12243,13 +12243,13 @@ class _$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
           : studyEffectivePeriod as Period,
       studyEffectiveDuration: studyEffectiveDuration == freezed
           ? _value.studyEffectiveDuration
-          : studyEffectiveDuration as Duration,
+          : studyEffectiveDuration as FhirDuration,
       studyEffectiveTiming: studyEffectiveTiming == freezed
           ? _value.studyEffectiveTiming
           : studyEffectiveTiming as Timing,
       studyEffectiveTimeFromStart: studyEffectiveTimeFromStart == freezed
           ? _value.studyEffectiveTimeFromStart
-          : studyEffectiveTimeFromStart as Duration,
+          : studyEffectiveTimeFromStart as FhirDuration,
       studyEffectiveGroupMeasure: studyEffectiveGroupMeasure == freezed
           ? _value.studyEffectiveGroupMeasure
           : studyEffectiveGroupMeasure
@@ -12278,14 +12278,14 @@ class _$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
           : participantEffectivePeriod as Period,
       participantEffectiveDuration: participantEffectiveDuration == freezed
           ? _value.participantEffectiveDuration
-          : participantEffectiveDuration as Duration,
+          : participantEffectiveDuration as FhirDuration,
       participantEffectiveTiming: participantEffectiveTiming == freezed
           ? _value.participantEffectiveTiming
           : participantEffectiveTiming as Timing,
       participantEffectiveTimeFromStart:
           participantEffectiveTimeFromStart == freezed
               ? _value.participantEffectiveTimeFromStart
-              : participantEffectiveTimeFromStart as Duration,
+              : participantEffectiveTimeFromStart as FhirDuration,
       participantEffectiveGroupMeasure: participantEffectiveGroupMeasure ==
               freezed
           ? _value.participantEffectiveGroupMeasure
@@ -12393,11 +12393,11 @@ class _$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get studyEffectiveDuration {
+  $FhirDurationCopyWith<$Res> get studyEffectiveDuration {
     if (_value.studyEffectiveDuration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.studyEffectiveDuration, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.studyEffectiveDuration, (value) {
       return _then(_value.copyWith(studyEffectiveDuration: value));
     });
   }
@@ -12413,11 +12413,12 @@ class _$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get studyEffectiveTimeFromStart {
+  $FhirDurationCopyWith<$Res> get studyEffectiveTimeFromStart {
     if (_value.studyEffectiveTimeFromStart == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.studyEffectiveTimeFromStart, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.studyEffectiveTimeFromStart,
+        (value) {
       return _then(_value.copyWith(studyEffectiveTimeFromStart: value));
     });
   }
@@ -12467,11 +12468,11 @@ class _$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get participantEffectiveDuration {
+  $FhirDurationCopyWith<$Res> get participantEffectiveDuration {
     if (_value.participantEffectiveDuration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.participantEffectiveDuration,
+    return $FhirDurationCopyWith<$Res>(_value.participantEffectiveDuration,
         (value) {
       return _then(_value.copyWith(participantEffectiveDuration: value));
     });
@@ -12488,11 +12489,11 @@ class _$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get participantEffectiveTimeFromStart {
+  $FhirDurationCopyWith<$Res> get participantEffectiveTimeFromStart {
     if (_value.participantEffectiveTimeFromStart == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.participantEffectiveTimeFromStart,
+    return $FhirDurationCopyWith<$Res>(_value.participantEffectiveTimeFromStart,
         (value) {
       return _then(_value.copyWith(participantEffectiveTimeFromStart: value));
     });
@@ -12542,9 +12543,9 @@ abstract class _$ResearchElementDefinitionCharacteristicCopyWith<$Res>
       @JsonKey(name: '_studyEffectiveDateTime')
           Element studyEffectiveDateTimeElement,
       Period studyEffectivePeriod,
-      Duration studyEffectiveDuration,
+      FhirDuration studyEffectiveDuration,
       Timing studyEffectiveTiming,
-      Duration studyEffectiveTimeFromStart,
+      FhirDuration studyEffectiveTimeFromStart,
       @JsonKey(
           unknownEnumValue:
               ResearchElementDefinitionCharacteristicStudyEffectiveGroupMeasure
@@ -12560,9 +12561,9 @@ abstract class _$ResearchElementDefinitionCharacteristicCopyWith<$Res>
       @JsonKey(name: '_participantEffectiveDateTime')
           Element participantEffectiveDateTimeElement,
       Period participantEffectivePeriod,
-      Duration participantEffectiveDuration,
+      FhirDuration participantEffectiveDuration,
       Timing participantEffectiveTiming,
-      Duration participantEffectiveTimeFromStart,
+      FhirDuration participantEffectiveTimeFromStart,
       @JsonKey(
           unknownEnumValue:
               ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasure
@@ -12591,11 +12592,11 @@ abstract class _$ResearchElementDefinitionCharacteristicCopyWith<$Res>
   @override
   $PeriodCopyWith<$Res> get studyEffectivePeriod;
   @override
-  $DurationCopyWith<$Res> get studyEffectiveDuration;
+  $FhirDurationCopyWith<$Res> get studyEffectiveDuration;
   @override
   $TimingCopyWith<$Res> get studyEffectiveTiming;
   @override
-  $DurationCopyWith<$Res> get studyEffectiveTimeFromStart;
+  $FhirDurationCopyWith<$Res> get studyEffectiveTimeFromStart;
   @override
   $ElementCopyWith<$Res> get studyEffectiveGroupMeasureElement;
   @override
@@ -12605,11 +12606,11 @@ abstract class _$ResearchElementDefinitionCharacteristicCopyWith<$Res>
   @override
   $PeriodCopyWith<$Res> get participantEffectivePeriod;
   @override
-  $DurationCopyWith<$Res> get participantEffectiveDuration;
+  $FhirDurationCopyWith<$Res> get participantEffectiveDuration;
   @override
   $TimingCopyWith<$Res> get participantEffectiveTiming;
   @override
-  $DurationCopyWith<$Res> get participantEffectiveTimeFromStart;
+  $FhirDurationCopyWith<$Res> get participantEffectiveTimeFromStart;
   @override
   $ElementCopyWith<$Res> get participantEffectiveGroupMeasureElement;
 }
@@ -12714,13 +12715,13 @@ class __$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
           : studyEffectivePeriod as Period,
       studyEffectiveDuration: studyEffectiveDuration == freezed
           ? _value.studyEffectiveDuration
-          : studyEffectiveDuration as Duration,
+          : studyEffectiveDuration as FhirDuration,
       studyEffectiveTiming: studyEffectiveTiming == freezed
           ? _value.studyEffectiveTiming
           : studyEffectiveTiming as Timing,
       studyEffectiveTimeFromStart: studyEffectiveTimeFromStart == freezed
           ? _value.studyEffectiveTimeFromStart
-          : studyEffectiveTimeFromStart as Duration,
+          : studyEffectiveTimeFromStart as FhirDuration,
       studyEffectiveGroupMeasure: studyEffectiveGroupMeasure == freezed
           ? _value.studyEffectiveGroupMeasure
           : studyEffectiveGroupMeasure
@@ -12749,14 +12750,14 @@ class __$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
           : participantEffectivePeriod as Period,
       participantEffectiveDuration: participantEffectiveDuration == freezed
           ? _value.participantEffectiveDuration
-          : participantEffectiveDuration as Duration,
+          : participantEffectiveDuration as FhirDuration,
       participantEffectiveTiming: participantEffectiveTiming == freezed
           ? _value.participantEffectiveTiming
           : participantEffectiveTiming as Timing,
       participantEffectiveTimeFromStart:
           participantEffectiveTimeFromStart == freezed
               ? _value.participantEffectiveTimeFromStart
-              : participantEffectiveTimeFromStart as Duration,
+              : participantEffectiveTimeFromStart as FhirDuration,
       participantEffectiveGroupMeasure: participantEffectiveGroupMeasure ==
               freezed
           ? _value.participantEffectiveGroupMeasure
@@ -12871,11 +12872,11 @@ class _$_ResearchElementDefinitionCharacteristic
   @override
   final Period studyEffectivePeriod;
   @override
-  final Duration studyEffectiveDuration;
+  final FhirDuration studyEffectiveDuration;
   @override
   final Timing studyEffectiveTiming;
   @override
-  final Duration studyEffectiveTimeFromStart;
+  final FhirDuration studyEffectiveTimeFromStart;
   @override
   @JsonKey(
       unknownEnumValue:
@@ -12899,11 +12900,11 @@ class _$_ResearchElementDefinitionCharacteristic
   @override
   final Period participantEffectivePeriod;
   @override
-  final Duration participantEffectiveDuration;
+  final FhirDuration participantEffectiveDuration;
   @override
   final Timing participantEffectiveTiming;
   @override
-  final Duration participantEffectiveTimeFromStart;
+  final FhirDuration participantEffectiveTimeFromStart;
   @override
   @JsonKey(
       unknownEnumValue:
@@ -13062,9 +13063,9 @@ abstract class _ResearchElementDefinitionCharacteristic
           @JsonKey(name: '_studyEffectiveDateTime')
               Element studyEffectiveDateTimeElement,
           Period studyEffectivePeriod,
-          Duration studyEffectiveDuration,
+          FhirDuration studyEffectiveDuration,
           Timing studyEffectiveTiming,
-          Duration studyEffectiveTimeFromStart,
+          FhirDuration studyEffectiveTimeFromStart,
           @JsonKey(
               unknownEnumValue:
                   ResearchElementDefinitionCharacteristicStudyEffectiveGroupMeasure
@@ -13080,9 +13081,9 @@ abstract class _ResearchElementDefinitionCharacteristic
           @JsonKey(name: '_participantEffectiveDateTime')
               Element participantEffectiveDateTimeElement,
           Period participantEffectivePeriod,
-          Duration participantEffectiveDuration,
+          FhirDuration participantEffectiveDuration,
           Timing participantEffectiveTiming,
-          Duration participantEffectiveTimeFromStart,
+          FhirDuration participantEffectiveTimeFromStart,
           @JsonKey(
               unknownEnumValue:
                   ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasure
@@ -13137,11 +13138,11 @@ abstract class _ResearchElementDefinitionCharacteristic
   @override
   Period get studyEffectivePeriod;
   @override
-  Duration get studyEffectiveDuration;
+  FhirDuration get studyEffectiveDuration;
   @override
   Timing get studyEffectiveTiming;
   @override
-  Duration get studyEffectiveTimeFromStart;
+  FhirDuration get studyEffectiveTimeFromStart;
   @override
   @JsonKey(
       unknownEnumValue:
@@ -13165,11 +13166,11 @@ abstract class _ResearchElementDefinitionCharacteristic
   @override
   Period get participantEffectivePeriod;
   @override
-  Duration get participantEffectiveDuration;
+  FhirDuration get participantEffectiveDuration;
   @override
   Timing get participantEffectiveTiming;
   @override
-  Duration get participantEffectiveTimeFromStart;
+  FhirDuration get participantEffectiveTimeFromStart;
   @override
   @JsonKey(
       unknownEnumValue:

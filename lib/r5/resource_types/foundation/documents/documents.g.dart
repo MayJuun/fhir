@@ -85,7 +85,8 @@ _$_CatalogEntry _$_$_CatalogEntryFromJson(Map<String, dynamic> json) {
         ?.toList(),
     estimatedDuration: json['estimatedDuration'] == null
         ? null
-        : Duration.fromJson(json['estimatedDuration'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(
+            json['estimatedDuration'] as Map<String, dynamic>),
     billingCode: (json['billingCode'] as List)
         ?.map((e) => e == null
             ? null

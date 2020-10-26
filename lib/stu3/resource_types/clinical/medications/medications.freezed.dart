@@ -10765,7 +10765,7 @@ class _$MedicationRequestDispenseRequestTearOff {
       @JsonKey(name: '_numberOfRepeatsAllowed')
           Element numberOfRepeatsAllowedElement,
       Quantity quantity,
-      Duration expectedSupplyDuration,
+      FhirDuration expectedSupplyDuration,
       Reference performer}) {
     return _MedicationRequestDispenseRequest(
       validityPeriod: validityPeriod,
@@ -10795,7 +10795,7 @@ mixin _$MedicationRequestDispenseRequest {
   @JsonKey(name: '_numberOfRepeatsAllowed')
   Element get numberOfRepeatsAllowedElement;
   Quantity get quantity;
-  Duration get expectedSupplyDuration;
+  FhirDuration get expectedSupplyDuration;
   Reference get performer;
 
   Map<String, dynamic> toJson();
@@ -10815,13 +10815,13 @@ abstract class $MedicationRequestDispenseRequestCopyWith<$Res> {
       @JsonKey(name: '_numberOfRepeatsAllowed')
           Element numberOfRepeatsAllowedElement,
       Quantity quantity,
-      Duration expectedSupplyDuration,
+      FhirDuration expectedSupplyDuration,
       Reference performer});
 
   $PeriodCopyWith<$Res> get validityPeriod;
   $ElementCopyWith<$Res> get numberOfRepeatsAllowedElement;
   $QuantityCopyWith<$Res> get quantity;
-  $DurationCopyWith<$Res> get expectedSupplyDuration;
+  $FhirDurationCopyWith<$Res> get expectedSupplyDuration;
   $ReferenceCopyWith<$Res> get performer;
 }
 
@@ -10856,7 +10856,7 @@ class _$MedicationRequestDispenseRequestCopyWithImpl<$Res>
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
       expectedSupplyDuration: expectedSupplyDuration == freezed
           ? _value.expectedSupplyDuration
-          : expectedSupplyDuration as Duration,
+          : expectedSupplyDuration as FhirDuration,
       performer:
           performer == freezed ? _value.performer : performer as Reference,
     ));
@@ -10894,11 +10894,11 @@ class _$MedicationRequestDispenseRequestCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get expectedSupplyDuration {
+  $FhirDurationCopyWith<$Res> get expectedSupplyDuration {
     if (_value.expectedSupplyDuration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.expectedSupplyDuration, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.expectedSupplyDuration, (value) {
       return _then(_value.copyWith(expectedSupplyDuration: value));
     });
   }
@@ -10928,7 +10928,7 @@ abstract class _$MedicationRequestDispenseRequestCopyWith<$Res>
       @JsonKey(name: '_numberOfRepeatsAllowed')
           Element numberOfRepeatsAllowedElement,
       Quantity quantity,
-      Duration expectedSupplyDuration,
+      FhirDuration expectedSupplyDuration,
       Reference performer});
 
   @override
@@ -10938,7 +10938,7 @@ abstract class _$MedicationRequestDispenseRequestCopyWith<$Res>
   @override
   $QuantityCopyWith<$Res> get quantity;
   @override
-  $DurationCopyWith<$Res> get expectedSupplyDuration;
+  $FhirDurationCopyWith<$Res> get expectedSupplyDuration;
   @override
   $ReferenceCopyWith<$Res> get performer;
 }
@@ -10978,7 +10978,7 @@ class __$MedicationRequestDispenseRequestCopyWithImpl<$Res>
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
       expectedSupplyDuration: expectedSupplyDuration == freezed
           ? _value.expectedSupplyDuration
-          : expectedSupplyDuration as Duration,
+          : expectedSupplyDuration as FhirDuration,
       performer:
           performer == freezed ? _value.performer : performer as Reference,
     ));
@@ -11014,7 +11014,7 @@ class _$_MedicationRequestDispenseRequest
   @override
   final Quantity quantity;
   @override
-  final Duration expectedSupplyDuration;
+  final FhirDuration expectedSupplyDuration;
   @override
   final Reference performer;
 
@@ -11079,7 +11079,7 @@ abstract class _MedicationRequestDispenseRequest
       @JsonKey(name: '_numberOfRepeatsAllowed')
           Element numberOfRepeatsAllowedElement,
       Quantity quantity,
-      Duration expectedSupplyDuration,
+      FhirDuration expectedSupplyDuration,
       Reference performer}) = _$_MedicationRequestDispenseRequest;
 
   factory _MedicationRequestDispenseRequest.fromJson(
@@ -11095,7 +11095,7 @@ abstract class _MedicationRequestDispenseRequest
   @override
   Quantity get quantity;
   @override
-  Duration get expectedSupplyDuration;
+  FhirDuration get expectedSupplyDuration;
   @override
   Reference get performer;
   @override

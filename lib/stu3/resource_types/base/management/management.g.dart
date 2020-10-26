@@ -95,7 +95,7 @@ _$_Encounter _$_$_EncounterFromJson(Map<String, dynamic> json) {
         : Period.fromJson(json['period'] as Map<String, dynamic>),
     length: json['length'] == null
         ? null
-        : Duration.fromJson(json['length'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(json['length'] as Map<String, dynamic>),
     reason: (json['reason'] as List)
         ?.map((e) => e == null
             ? null

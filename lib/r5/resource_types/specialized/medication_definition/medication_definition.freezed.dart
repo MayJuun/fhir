@@ -1240,7 +1240,7 @@ class _$AdministrableProductDefinitionRouteOfAdministrationTearOff {
       Quantity maxSingleDose,
       Quantity maxDosePerDay,
       Ratio maxDosePerTreatmentPeriod,
-      Duration maxTreatmentPeriod,
+      FhirDuration maxTreatmentPeriod,
       List<AdministrableProductDefinitionTargetSpecies> targetSpecies}) {
     return _AdministrableProductDefinitionRouteOfAdministration(
       id: id,
@@ -1279,7 +1279,7 @@ mixin _$AdministrableProductDefinitionRouteOfAdministration {
   Quantity get maxSingleDose;
   Quantity get maxDosePerDay;
   Ratio get maxDosePerTreatmentPeriod;
-  Duration get maxTreatmentPeriod;
+  FhirDuration get maxTreatmentPeriod;
   List<AdministrableProductDefinitionTargetSpecies> get targetSpecies;
 
   Map<String, dynamic> toJson();
@@ -1304,7 +1304,7 @@ abstract class $AdministrableProductDefinitionRouteOfAdministrationCopyWith<
       Quantity maxSingleDose,
       Quantity maxDosePerDay,
       Ratio maxDosePerTreatmentPeriod,
-      Duration maxTreatmentPeriod,
+      FhirDuration maxTreatmentPeriod,
       List<AdministrableProductDefinitionTargetSpecies> targetSpecies});
 
   $CodeableConceptCopyWith<$Res> get code;
@@ -1312,7 +1312,7 @@ abstract class $AdministrableProductDefinitionRouteOfAdministrationCopyWith<
   $QuantityCopyWith<$Res> get maxSingleDose;
   $QuantityCopyWith<$Res> get maxDosePerDay;
   $RatioCopyWith<$Res> get maxDosePerTreatmentPeriod;
-  $DurationCopyWith<$Res> get maxTreatmentPeriod;
+  $FhirDurationCopyWith<$Res> get maxTreatmentPeriod;
 }
 
 /// @nodoc
@@ -1362,7 +1362,7 @@ class _$AdministrableProductDefinitionRouteOfAdministrationCopyWithImpl<$Res>
           : maxDosePerTreatmentPeriod as Ratio,
       maxTreatmentPeriod: maxTreatmentPeriod == freezed
           ? _value.maxTreatmentPeriod
-          : maxTreatmentPeriod as Duration,
+          : maxTreatmentPeriod as FhirDuration,
       targetSpecies: targetSpecies == freezed
           ? _value.targetSpecies
           : targetSpecies as List<AdministrableProductDefinitionTargetSpecies>,
@@ -1420,11 +1420,11 @@ class _$AdministrableProductDefinitionRouteOfAdministrationCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get maxTreatmentPeriod {
+  $FhirDurationCopyWith<$Res> get maxTreatmentPeriod {
     if (_value.maxTreatmentPeriod == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.maxTreatmentPeriod, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.maxTreatmentPeriod, (value) {
       return _then(_value.copyWith(maxTreatmentPeriod: value));
     });
   }
@@ -1450,7 +1450,7 @@ abstract class _$AdministrableProductDefinitionRouteOfAdministrationCopyWith<
       Quantity maxSingleDose,
       Quantity maxDosePerDay,
       Ratio maxDosePerTreatmentPeriod,
-      Duration maxTreatmentPeriod,
+      FhirDuration maxTreatmentPeriod,
       List<AdministrableProductDefinitionTargetSpecies> targetSpecies});
 
   @override
@@ -1464,7 +1464,7 @@ abstract class _$AdministrableProductDefinitionRouteOfAdministrationCopyWith<
   @override
   $RatioCopyWith<$Res> get maxDosePerTreatmentPeriod;
   @override
-  $DurationCopyWith<$Res> get maxTreatmentPeriod;
+  $FhirDurationCopyWith<$Res> get maxTreatmentPeriod;
 }
 
 /// @nodoc
@@ -1520,7 +1520,7 @@ class __$AdministrableProductDefinitionRouteOfAdministrationCopyWithImpl<$Res>
           : maxDosePerTreatmentPeriod as Ratio,
       maxTreatmentPeriod: maxTreatmentPeriod == freezed
           ? _value.maxTreatmentPeriod
-          : maxTreatmentPeriod as Duration,
+          : maxTreatmentPeriod as FhirDuration,
       targetSpecies: targetSpecies == freezed
           ? _value.targetSpecies
           : targetSpecies as List<AdministrableProductDefinitionTargetSpecies>,
@@ -1569,7 +1569,7 @@ class _$_AdministrableProductDefinitionRouteOfAdministration
   @override
   final Ratio maxDosePerTreatmentPeriod;
   @override
-  final Duration maxTreatmentPeriod;
+  final FhirDuration maxTreatmentPeriod;
   @override
   final List<AdministrableProductDefinitionTargetSpecies> targetSpecies;
 
@@ -1654,7 +1654,7 @@ abstract class _AdministrableProductDefinitionRouteOfAdministration
           Quantity maxSingleDose,
           Quantity maxDosePerDay,
           Ratio maxDosePerTreatmentPeriod,
-          Duration maxTreatmentPeriod,
+          FhirDuration maxTreatmentPeriod,
           List<AdministrableProductDefinitionTargetSpecies> targetSpecies}) =
       _$_AdministrableProductDefinitionRouteOfAdministration;
 
@@ -1680,7 +1680,7 @@ abstract class _AdministrableProductDefinitionRouteOfAdministration
   @override
   Ratio get maxDosePerTreatmentPeriod;
   @override
-  Duration get maxTreatmentPeriod;
+  FhirDuration get maxTreatmentPeriod;
   @override
   List<AdministrableProductDefinitionTargetSpecies> get targetSpecies;
   @override

@@ -439,7 +439,7 @@ abstract class ParametersParameter implements _$ParametersParameter {
     ContactPoint valueContactPoint,
     Count valueCount,
     Distance valueDistance,
-    Duration valueDuration,
+    FhirDuration valueDuration,
     HumanName valueHumanName,
     Identifier valueIdentifier,
     Money valueMoney,

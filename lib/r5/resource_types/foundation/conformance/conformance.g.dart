@@ -7222,7 +7222,7 @@ _$_StructureMapSource _$_$_StructureMapSourceFromJson(
             json['defaultValueDistance'] as Map<String, dynamic>),
     defaultValueDuration: json['defaultValueDuration'] == null
         ? null
-        : Duration.fromJson(
+        : FhirDuration.fromJson(
             json['defaultValueDuration'] as Map<String, dynamic>),
     defaultValueHumanName: json['defaultValueHumanName'] == null
         ? null

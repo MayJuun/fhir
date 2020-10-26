@@ -954,7 +954,7 @@ _$_RequestGroupAction _$_$_RequestGroupActionFromJson(
         : Period.fromJson(json['timingPeriod'] as Map<String, dynamic>),
     timingDuration: json['timingDuration'] == null
         ? null
-        : Duration.fromJson(json['timingDuration'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(json['timingDuration'] as Map<String, dynamic>),
     timingRange: json['timingRange'] == null
         ? null
         : Range.fromJson(json['timingRange'] as Map<String, dynamic>),
@@ -1109,7 +1109,7 @@ _$_RequestGroupRelatedAction _$_$_RequestGroupRelatedActionFromJson(
         : Element.fromJson(json['_relationship'] as Map<String, dynamic>),
     offsetDuration: json['offsetDuration'] == null
         ? null
-        : Duration.fromJson(json['offsetDuration'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(json['offsetDuration'] as Map<String, dynamic>),
     offsetRange: json['offsetRange'] == null
         ? null
         : Range.fromJson(json['offsetRange'] as Map<String, dynamic>),
@@ -1799,7 +1799,7 @@ _$_TaskInput _$_$_TaskInputFromJson(Map<String, dynamic> json) {
         : Quantity.fromJson(json['valueQuantity'] as Map<String, dynamic>),
     valueDuration: json['valueDuration'] == null
         ? null
-        : Duration.fromJson(json['valueDuration'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(json['valueDuration'] as Map<String, dynamic>),
     valueSimpleQuantity: json['valueSimpleQuantity'] == null
         ? null
         : Quantity.fromJson(
@@ -2107,7 +2107,7 @@ _$_TaskOutput _$_$_TaskOutputFromJson(Map<String, dynamic> json) {
         : Quantity.fromJson(json['valueQuantity'] as Map<String, dynamic>),
     valueDuration: json['valueDuration'] == null
         ? null
-        : Duration.fromJson(json['valueDuration'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(json['valueDuration'] as Map<String, dynamic>),
     valueSimpleQuantity: json['valueSimpleQuantity'] == null
         ? null
         : Quantity.fromJson(

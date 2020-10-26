@@ -238,7 +238,7 @@ abstract class GoalTarget implements _$GoalTarget {
     CodeableConcept detailCodeableConcept,
     Date dueDate,
     @JsonKey(name: '_dueDate') Element dueDateElement,
-    Duration dueDuration,
+    FhirDuration dueDuration,
   }) = _GoalTarget;
 
   factory GoalTarget.fromJson(Map<String, dynamic> json) =>

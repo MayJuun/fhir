@@ -353,9 +353,9 @@ abstract class EvidenceVariableCharacteristic
     @JsonKey(name: '_participantEffectiveDateTime')
         Element participantEffectiveDateTimeElement,
     Period participantEffectivePeriod,
-    Duration participantEffectiveDuration,
+    FhirDuration participantEffectiveDuration,
     Timing participantEffectiveTiming,
-    Duration timeFromStart,
+    FhirDuration timeFromStart,
     @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicGroupMeasure.unknown)
         EvidenceVariableCharacteristicGroupMeasure groupMeasure,
     @JsonKey(name: '_groupMeasure') Element groupMeasureElement,
@@ -546,9 +546,9 @@ abstract class ResearchElementDefinitionCharacteristic
     @JsonKey(name: '_studyEffectiveDateTime')
         Element studyEffectiveDateTimeElement,
     Period studyEffectivePeriod,
-    Duration studyEffectiveDuration,
+    FhirDuration studyEffectiveDuration,
     Timing studyEffectiveTiming,
-    Duration studyEffectiveTimeFromStart,
+    FhirDuration studyEffectiveTimeFromStart,
     @JsonKey(
         unknownEnumValue:
             ResearchElementDefinitionCharacteristicStudyEffectiveGroupMeasure
@@ -564,9 +564,9 @@ abstract class ResearchElementDefinitionCharacteristic
     @JsonKey(name: '_participantEffectiveDateTime')
         Element participantEffectiveDateTimeElement,
     Period participantEffectivePeriod,
-    Duration participantEffectiveDuration,
+    FhirDuration participantEffectiveDuration,
     Timing participantEffectiveTiming,
-    Duration participantEffectiveTimeFromStart,
+    FhirDuration participantEffectiveTimeFromStart,
     @JsonKey(
         unknownEnumValue:
             ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasure

@@ -1315,7 +1315,7 @@ abstract class StructureMapSource implements _$StructureMapSource {
     CodeableConcept defaultValueCodeableConcept,
     Coding defaultValueCoding,
     Quantity defaultValueQuantity,
-    Duration defaultValueDuration,
+    FhirDuration defaultValueDuration,
     Quantity defaultValueSimpleQuantity,
     Distance defaultValueDistance,
     Count defaultValueCount,

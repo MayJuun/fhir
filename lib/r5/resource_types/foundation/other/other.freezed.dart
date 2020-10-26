@@ -8020,7 +8020,7 @@ class _$ParametersParameterTearOff {
       ContactPoint valueContactPoint,
       Count valueCount,
       Distance valueDistance,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       HumanName valueHumanName,
       Identifier valueIdentifier,
       Money valueMoney,
@@ -8214,7 +8214,7 @@ mixin _$ParametersParameter {
   ContactPoint get valueContactPoint;
   Count get valueCount;
   Distance get valueDistance;
-  Duration get valueDuration;
+  FhirDuration get valueDuration;
   HumanName get valueHumanName;
   Identifier get valueIdentifier;
   Money get valueMoney;
@@ -8303,7 +8303,7 @@ abstract class $ParametersParameterCopyWith<$Res> {
       ContactPoint valueContactPoint,
       Count valueCount,
       Distance valueDistance,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       HumanName valueHumanName,
       Identifier valueIdentifier,
       Money valueMoney,
@@ -8358,7 +8358,7 @@ abstract class $ParametersParameterCopyWith<$Res> {
   $ContactPointCopyWith<$Res> get valueContactPoint;
   $CountCopyWith<$Res> get valueCount;
   $DistanceCopyWith<$Res> get valueDistance;
-  $DurationCopyWith<$Res> get valueDuration;
+  $FhirDurationCopyWith<$Res> get valueDuration;
   $HumanNameCopyWith<$Res> get valueHumanName;
   $IdentifierCopyWith<$Res> get valueIdentifier;
   $MoneyCopyWith<$Res> get valueMoney;
@@ -8611,7 +8611,7 @@ class _$ParametersParameterCopyWithImpl<$Res>
           : valueDistance as Distance,
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
-          : valueDuration as Duration,
+          : valueDuration as FhirDuration,
       valueHumanName: valueHumanName == freezed
           ? _value.valueHumanName
           : valueHumanName as HumanName,
@@ -8973,11 +8973,11 @@ class _$ParametersParameterCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get valueDuration {
+  $FhirDurationCopyWith<$Res> get valueDuration {
     if (_value.valueDuration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.valueDuration, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.valueDuration, (value) {
       return _then(_value.copyWith(valueDuration: value));
     });
   }
@@ -9257,7 +9257,7 @@ abstract class _$ParametersParameterCopyWith<$Res>
       ContactPoint valueContactPoint,
       Count valueCount,
       Distance valueDistance,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       HumanName valueHumanName,
       Identifier valueIdentifier,
       Money valueMoney,
@@ -9343,7 +9343,7 @@ abstract class _$ParametersParameterCopyWith<$Res>
   @override
   $DistanceCopyWith<$Res> get valueDistance;
   @override
-  $DurationCopyWith<$Res> get valueDuration;
+  $FhirDurationCopyWith<$Res> get valueDuration;
   @override
   $HumanNameCopyWith<$Res> get valueHumanName;
   @override
@@ -9619,7 +9619,7 @@ class __$ParametersParameterCopyWithImpl<$Res>
           : valueDistance as Distance,
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
-          : valueDuration as Duration,
+          : valueDuration as FhirDuration,
       valueHumanName: valueHumanName == freezed
           ? _value.valueHumanName
           : valueHumanName as HumanName,
@@ -9900,7 +9900,7 @@ class _$_ParametersParameter extends _ParametersParameter {
   @override
   final Distance valueDistance;
   @override
-  final Duration valueDuration;
+  final FhirDuration valueDuration;
   @override
   final HumanName valueHumanName;
   @override
@@ -10221,7 +10221,7 @@ abstract class _ParametersParameter extends ParametersParameter {
       ContactPoint valueContactPoint,
       Count valueCount,
       Distance valueDistance,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       HumanName valueHumanName,
       Identifier valueIdentifier,
       Money valueMoney,
@@ -10380,7 +10380,7 @@ abstract class _ParametersParameter extends ParametersParameter {
   @override
   Distance get valueDistance;
   @override
-  Duration get valueDuration;
+  FhirDuration get valueDuration;
   @override
   HumanName get valueHumanName;
   @override

@@ -827,7 +827,7 @@ abstract class MedicationKnowledgeMaxDispense
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     @required Quantity quantity,
-    Duration period,
+    FhirDuration period,
   }) = _MedicationKnowledgeMaxDispense;
 
   factory MedicationKnowledgeMaxDispense.fromJson(Map<String, dynamic> json) =>
@@ -844,7 +844,7 @@ abstract class MedicationKnowledgeKinetics
     List<FhirExtension> modifierExtension,
     List<Quantity> areaUnderCurve,
     List<Quantity> lethalDose50,
-    Duration halfLifePeriod,
+    FhirDuration halfLifePeriod,
   }) = _MedicationKnowledgeKinetics;
 
   factory MedicationKnowledgeKinetics.fromJson(Map<String, dynamic> json) =>
@@ -924,13 +924,13 @@ abstract class MedicationRequestDispenseRequest
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     MedicationRequestInitialFill initialFill,
-    Duration dispenseInterval,
+    FhirDuration dispenseInterval,
     Period validityPeriod,
     UnsignedInt numberOfRepeatsAllowed,
     @JsonKey(name: '_numberOfRepeatsAllowed')
         Element numberOfRepeatsAllowedElement,
     Quantity quantity,
-    Duration expectedSupplyDuration,
+    FhirDuration expectedSupplyDuration,
     Reference performer,
   }) = _MedicationRequestDispenseRequest;
 
@@ -948,7 +948,7 @@ abstract class MedicationRequestInitialFill
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     Quantity quantity,
-    Duration duration,
+    FhirDuration duration,
   }) = _MedicationRequestInitialFill;
 
   factory MedicationRequestInitialFill.fromJson(Map<String, dynamic> json) =>

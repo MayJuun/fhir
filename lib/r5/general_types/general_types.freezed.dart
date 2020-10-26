@@ -3142,16 +3142,16 @@ abstract class _Quantity extends Quantity {
   _$QuantityCopyWith<_Quantity> get copyWith;
 }
 
-Duration _$DurationFromJson(Map<String, dynamic> json) {
-  return _Duration.fromJson(json);
+FhirDuration _$FhirDurationFromJson(Map<String, dynamic> json) {
+  return _FhirDuration.fromJson(json);
 }
 
 /// @nodoc
-class _$DurationTearOff {
-  const _$DurationTearOff();
+class _$FhirDurationTearOff {
+  const _$FhirDurationTearOff();
 
 // ignore: unused_element
-  _Duration call(
+  _FhirDuration call(
       {String id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -3171,7 +3171,7 @@ class _$DurationTearOff {
       Code code,
       @JsonKey(name: '_code')
           Element codeElement}) {
-    return _Duration(
+    return _FhirDuration(
       id: id,
       extension_: extension_,
       value: value,
@@ -3188,17 +3188,17 @@ class _$DurationTearOff {
   }
 
 // ignore: unused_element
-  Duration fromJson(Map<String, Object> json) {
-    return Duration.fromJson(json);
+  FhirDuration fromJson(Map<String, Object> json) {
+    return FhirDuration.fromJson(json);
   }
 }
 
 /// @nodoc
 // ignore: unused_element
-const $Duration = _$DurationTearOff();
+const $FhirDuration = _$FhirDurationTearOff();
 
 /// @nodoc
-mixin _$Duration {
+mixin _$FhirDuration {
   String get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
@@ -3220,13 +3220,14 @@ mixin _$Duration {
   Element get codeElement;
 
   Map<String, dynamic> toJson();
-  $DurationCopyWith<Duration> get copyWith;
+  $FhirDurationCopyWith<FhirDuration> get copyWith;
 }
 
 /// @nodoc
-abstract class $DurationCopyWith<$Res> {
-  factory $DurationCopyWith(Duration value, $Res Function(Duration) then) =
-      _$DurationCopyWithImpl<$Res>;
+abstract class $FhirDurationCopyWith<$Res> {
+  factory $FhirDurationCopyWith(
+          FhirDuration value, $Res Function(FhirDuration) then) =
+      _$FhirDurationCopyWithImpl<$Res>;
   $Res call(
       {String id,
       @JsonKey(name: 'extension')
@@ -3256,12 +3257,12 @@ abstract class $DurationCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$DurationCopyWithImpl<$Res> implements $DurationCopyWith<$Res> {
-  _$DurationCopyWithImpl(this._value, this._then);
+class _$FhirDurationCopyWithImpl<$Res> implements $FhirDurationCopyWith<$Res> {
+  _$FhirDurationCopyWithImpl(this._value, this._then);
 
-  final Duration _value;
+  final FhirDuration _value;
   // ignore: unused_field
-  final $Res Function(Duration) _then;
+  final $Res Function(FhirDuration) _then;
 
   @override
   $Res call({
@@ -3358,9 +3359,11 @@ class _$DurationCopyWithImpl<$Res> implements $DurationCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$DurationCopyWith<$Res> implements $DurationCopyWith<$Res> {
-  factory _$DurationCopyWith(_Duration value, $Res Function(_Duration) then) =
-      __$DurationCopyWithImpl<$Res>;
+abstract class _$FhirDurationCopyWith<$Res>
+    implements $FhirDurationCopyWith<$Res> {
+  factory _$FhirDurationCopyWith(
+          _FhirDuration value, $Res Function(_FhirDuration) then) =
+      __$FhirDurationCopyWithImpl<$Res>;
   @override
   $Res call(
       {String id,
@@ -3396,13 +3399,14 @@ abstract class _$DurationCopyWith<$Res> implements $DurationCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$DurationCopyWithImpl<$Res> extends _$DurationCopyWithImpl<$Res>
-    implements _$DurationCopyWith<$Res> {
-  __$DurationCopyWithImpl(_Duration _value, $Res Function(_Duration) _then)
-      : super(_value, (v) => _then(v as _Duration));
+class __$FhirDurationCopyWithImpl<$Res> extends _$FhirDurationCopyWithImpl<$Res>
+    implements _$FhirDurationCopyWith<$Res> {
+  __$FhirDurationCopyWithImpl(
+      _FhirDuration _value, $Res Function(_FhirDuration) _then)
+      : super(_value, (v) => _then(v as _FhirDuration));
 
   @override
-  _Duration get _value => super._value as _Duration;
+  _FhirDuration get _value => super._value as _FhirDuration;
 
   @override
   $Res call({
@@ -3419,7 +3423,7 @@ class __$DurationCopyWithImpl<$Res> extends _$DurationCopyWithImpl<$Res>
     Object code = freezed,
     Object codeElement = freezed,
   }) {
-    return _then(_Duration(
+    return _then(_FhirDuration(
       id: id == freezed ? _value.id : id as String,
       extension_: extension_ == freezed
           ? _value.extension_
@@ -3451,8 +3455,8 @@ class __$DurationCopyWithImpl<$Res> extends _$DurationCopyWithImpl<$Res>
 @JsonSerializable()
 
 /// @nodoc
-class _$_Duration extends _Duration {
-  _$_Duration(
+class _$_FhirDuration extends _FhirDuration {
+  _$_FhirDuration(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.value,
@@ -3467,8 +3471,8 @@ class _$_Duration extends _Duration {
       @JsonKey(name: '_code') this.codeElement})
       : super._();
 
-  factory _$_Duration.fromJson(Map<String, dynamic> json) =>
-      _$_$_DurationFromJson(json);
+  factory _$_FhirDuration.fromJson(Map<String, dynamic> json) =>
+      _$_$_FhirDurationFromJson(json);
 
   @override
   final String id;
@@ -3504,13 +3508,13 @@ class _$_Duration extends _Duration {
 
   @override
   String toString() {
-    return 'Duration(id: $id, extension_: $extension_, value: $value, valueElement: $valueElement, comparator: $comparator, comparatorElement: $comparatorElement, unit: $unit, unitElement: $unitElement, system: $system, systemElement: $systemElement, code: $code, codeElement: $codeElement)';
+    return 'FhirDuration(id: $id, extension_: $extension_, value: $value, valueElement: $valueElement, comparator: $comparator, comparatorElement: $comparatorElement, unit: $unit, unitElement: $unitElement, system: $system, systemElement: $systemElement, code: $code, codeElement: $codeElement)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Duration &&
+        (other is _FhirDuration &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.extension_, extension_) ||
@@ -3561,18 +3565,18 @@ class _$_Duration extends _Duration {
       const DeepCollectionEquality().hash(codeElement);
 
   @override
-  _$DurationCopyWith<_Duration> get copyWith =>
-      __$DurationCopyWithImpl<_Duration>(this, _$identity);
+  _$FhirDurationCopyWith<_FhirDuration> get copyWith =>
+      __$FhirDurationCopyWithImpl<_FhirDuration>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DurationToJson(this);
+    return _$_$_FhirDurationToJson(this);
   }
 }
 
-abstract class _Duration extends Duration {
-  _Duration._() : super._();
-  factory _Duration(
+abstract class _FhirDuration extends FhirDuration {
+  _FhirDuration._() : super._();
+  factory _FhirDuration(
       {String id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
@@ -3591,9 +3595,10 @@ abstract class _Duration extends Duration {
           Element systemElement,
       Code code,
       @JsonKey(name: '_code')
-          Element codeElement}) = _$_Duration;
+          Element codeElement}) = _$_FhirDuration;
 
-  factory _Duration.fromJson(Map<String, dynamic> json) = _$_Duration.fromJson;
+  factory _FhirDuration.fromJson(Map<String, dynamic> json) =
+      _$_FhirDuration.fromJson;
 
   @override
   String get id;
@@ -3627,7 +3632,7 @@ abstract class _Duration extends Duration {
   @JsonKey(name: '_code')
   Element get codeElement;
   @override
-  _$DurationCopyWith<_Duration> get copyWith;
+  _$FhirDurationCopyWith<_FhirDuration> get copyWith;
 }
 
 Distance _$DistanceFromJson(Map<String, dynamic> json) {
@@ -9167,7 +9172,7 @@ class _$TimingRepeatTearOff {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      Duration boundsDuration,
+      FhirDuration boundsDuration,
       Range boundsRange,
       Period boundsPeriod,
       PositiveInt count,
@@ -9268,7 +9273,7 @@ mixin _$TimingRepeat {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
-  Duration get boundsDuration;
+  FhirDuration get boundsDuration;
   Range get boundsRange;
   Period get boundsPeriod;
   PositiveInt get count;
@@ -9330,7 +9335,7 @@ abstract class $TimingRepeatCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      Duration boundsDuration,
+      FhirDuration boundsDuration,
       Range boundsRange,
       Period boundsPeriod,
       PositiveInt count,
@@ -9378,7 +9383,7 @@ abstract class $TimingRepeatCopyWith<$Res> {
       @JsonKey(name: '_offset')
           Element offsetElement});
 
-  $DurationCopyWith<$Res> get boundsDuration;
+  $FhirDurationCopyWith<$Res> get boundsDuration;
   $RangeCopyWith<$Res> get boundsRange;
   $PeriodCopyWith<$Res> get boundsPeriod;
   $ElementCopyWith<$Res> get countElement;
@@ -9449,7 +9454,7 @@ class _$TimingRepeatCopyWithImpl<$Res> implements $TimingRepeatCopyWith<$Res> {
           : modifierExtension as List<FhirExtension>,
       boundsDuration: boundsDuration == freezed
           ? _value.boundsDuration
-          : boundsDuration as Duration,
+          : boundsDuration as FhirDuration,
       boundsRange:
           boundsRange == freezed ? _value.boundsRange : boundsRange as Range,
       boundsPeriod: boundsPeriod == freezed
@@ -9525,11 +9530,11 @@ class _$TimingRepeatCopyWithImpl<$Res> implements $TimingRepeatCopyWith<$Res> {
   }
 
   @override
-  $DurationCopyWith<$Res> get boundsDuration {
+  $FhirDurationCopyWith<$Res> get boundsDuration {
     if (_value.boundsDuration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.boundsDuration, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.boundsDuration, (value) {
       return _then(_value.copyWith(boundsDuration: value));
     });
   }
@@ -9677,7 +9682,7 @@ abstract class _$TimingRepeatCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      Duration boundsDuration,
+      FhirDuration boundsDuration,
       Range boundsRange,
       Period boundsPeriod,
       PositiveInt count,
@@ -9726,7 +9731,7 @@ abstract class _$TimingRepeatCopyWith<$Res>
           Element offsetElement});
 
   @override
-  $DurationCopyWith<$Res> get boundsDuration;
+  $FhirDurationCopyWith<$Res> get boundsDuration;
   @override
   $RangeCopyWith<$Res> get boundsRange;
   @override
@@ -9812,7 +9817,7 @@ class __$TimingRepeatCopyWithImpl<$Res> extends _$TimingRepeatCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension>,
       boundsDuration: boundsDuration == freezed
           ? _value.boundsDuration
-          : boundsDuration as Duration,
+          : boundsDuration as FhirDuration,
       boundsRange:
           boundsRange == freezed ? _value.boundsRange : boundsRange as Range,
       boundsPeriod: boundsPeriod == freezed
@@ -9957,7 +9962,7 @@ class _$_TimingRepeat extends _TimingRepeat {
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  final Duration boundsDuration;
+  final FhirDuration boundsDuration;
   @override
   final Range boundsRange;
   @override
@@ -10178,7 +10183,7 @@ abstract class _TimingRepeat extends TimingRepeat {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      Duration boundsDuration,
+      FhirDuration boundsDuration,
       Range boundsRange,
       Period boundsPeriod,
       PositiveInt count,
@@ -10237,7 +10242,7 @@ abstract class _TimingRepeat extends TimingRepeat {
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  Duration get boundsDuration;
+  FhirDuration get boundsDuration;
   @override
   Range get boundsRange;
   @override

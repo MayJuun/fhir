@@ -674,7 +674,7 @@ abstract class MedicinalProductPharmaceuticalRouteOfAdministration
     Quantity maxSingleDose,
     Quantity maxDosePerDay,
     Ratio maxDosePerTreatmentPeriod,
-    Duration maxTreatmentPeriod,
+    FhirDuration maxTreatmentPeriod,
     List<MedicinalProductPharmaceuticalTargetSpecies> targetSpecies,
   }) = _MedicinalProductPharmaceuticalRouteOfAdministration;
 

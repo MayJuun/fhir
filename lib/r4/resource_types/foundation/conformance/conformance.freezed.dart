@@ -35671,7 +35671,7 @@ class _$StructureMapSourceTearOff {
       ContactPoint defaultValueContactPoint,
       Count defaultValueCount,
       Distance defaultValueDistance,
-      Duration defaultValueDuration,
+      FhirDuration defaultValueDuration,
       HumanName defaultValueHumanName,
       Identifier defaultValueIdentifier,
       Money defaultValueMoney,
@@ -35902,7 +35902,7 @@ mixin _$StructureMapSource {
   ContactPoint get defaultValueContactPoint;
   Count get defaultValueCount;
   Distance get defaultValueDistance;
-  Duration get defaultValueDuration;
+  FhirDuration get defaultValueDuration;
   HumanName get defaultValueHumanName;
   Identifier get defaultValueIdentifier;
   Money get defaultValueMoney;
@@ -36036,7 +36036,7 @@ abstract class $StructureMapSourceCopyWith<$Res> {
       ContactPoint defaultValueContactPoint,
       Count defaultValueCount,
       Distance defaultValueDistance,
-      Duration defaultValueDuration,
+      FhirDuration defaultValueDuration,
       HumanName defaultValueHumanName,
       Identifier defaultValueIdentifier,
       Money defaultValueMoney,
@@ -36110,7 +36110,7 @@ abstract class $StructureMapSourceCopyWith<$Res> {
   $ContactPointCopyWith<$Res> get defaultValueContactPoint;
   $CountCopyWith<$Res> get defaultValueCount;
   $DistanceCopyWith<$Res> get defaultValueDistance;
-  $DurationCopyWith<$Res> get defaultValueDuration;
+  $FhirDurationCopyWith<$Res> get defaultValueDuration;
   $HumanNameCopyWith<$Res> get defaultValueHumanName;
   $IdentifierCopyWith<$Res> get defaultValueIdentifier;
   $MoneyCopyWith<$Res> get defaultValueMoney;
@@ -36409,7 +36409,7 @@ class _$StructureMapSourceCopyWithImpl<$Res>
           : defaultValueDistance as Distance,
       defaultValueDuration: defaultValueDuration == freezed
           ? _value.defaultValueDuration
-          : defaultValueDuration as Duration,
+          : defaultValueDuration as FhirDuration,
       defaultValueHumanName: defaultValueHumanName == freezed
           ? _value.defaultValueHumanName
           : defaultValueHumanName as HumanName,
@@ -36830,11 +36830,11 @@ class _$StructureMapSourceCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get defaultValueDuration {
+  $FhirDurationCopyWith<$Res> get defaultValueDuration {
     if (_value.defaultValueDuration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.defaultValueDuration, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.defaultValueDuration, (value) {
       return _then(_value.copyWith(defaultValueDuration: value));
     });
   }
@@ -37206,7 +37206,7 @@ abstract class _$StructureMapSourceCopyWith<$Res>
       ContactPoint defaultValueContactPoint,
       Count defaultValueCount,
       Distance defaultValueDistance,
-      Duration defaultValueDuration,
+      FhirDuration defaultValueDuration,
       HumanName defaultValueHumanName,
       Identifier defaultValueIdentifier,
       Money defaultValueMoney,
@@ -37313,7 +37313,7 @@ abstract class _$StructureMapSourceCopyWith<$Res>
   @override
   $DistanceCopyWith<$Res> get defaultValueDistance;
   @override
-  $DurationCopyWith<$Res> get defaultValueDuration;
+  $FhirDurationCopyWith<$Res> get defaultValueDuration;
   @override
   $HumanNameCopyWith<$Res> get defaultValueHumanName;
   @override
@@ -37641,7 +37641,7 @@ class __$StructureMapSourceCopyWithImpl<$Res>
           : defaultValueDistance as Distance,
       defaultValueDuration: defaultValueDuration == freezed
           ? _value.defaultValueDuration
-          : defaultValueDuration as Duration,
+          : defaultValueDuration as FhirDuration,
       defaultValueHumanName: defaultValueHumanName == freezed
           ? _value.defaultValueHumanName
           : defaultValueHumanName as HumanName,
@@ -38011,7 +38011,7 @@ class _$_StructureMapSource extends _StructureMapSource {
   @override
   final Distance defaultValueDistance;
   @override
-  final Duration defaultValueDuration;
+  final FhirDuration defaultValueDuration;
   @override
   final HumanName defaultValueHumanName;
   @override
@@ -38415,7 +38415,7 @@ abstract class _StructureMapSource extends StructureMapSource {
       ContactPoint defaultValueContactPoint,
       Count defaultValueCount,
       Distance defaultValueDistance,
-      Duration defaultValueDuration,
+      FhirDuration defaultValueDuration,
       HumanName defaultValueHumanName,
       Identifier defaultValueIdentifier,
       Money defaultValueMoney,
@@ -38601,7 +38601,7 @@ abstract class _StructureMapSource extends StructureMapSource {
   @override
   Distance get defaultValueDistance;
   @override
-  Duration get defaultValueDuration;
+  FhirDuration get defaultValueDuration;
   @override
   HumanName get defaultValueHumanName;
   @override

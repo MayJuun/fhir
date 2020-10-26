@@ -711,7 +711,7 @@ _$_PlanDefinitionTarget _$_$_PlanDefinitionTargetFromJson(
             json['detailCodeableConcept'] as Map<String, dynamic>),
     due: json['due'] == null
         ? null
-        : Duration.fromJson(json['due'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(json['due'] as Map<String, dynamic>),
   );
 }
 
@@ -811,7 +811,7 @@ _$_PlanDefinitionAction _$_$_PlanDefinitionActionFromJson(
         : Period.fromJson(json['timingPeriod'] as Map<String, dynamic>),
     timingDuration: json['timingDuration'] == null
         ? null
-        : Duration.fromJson(json['timingDuration'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(json['timingDuration'] as Map<String, dynamic>),
     timingRange: json['timingRange'] == null
         ? null
         : Range.fromJson(json['timingRange'] as Map<String, dynamic>),
@@ -1051,7 +1051,7 @@ _$_PlanDefinitionRelatedAction _$_$_PlanDefinitionRelatedActionFromJson(
         : Element.fromJson(json['_relationship'] as Map<String, dynamic>),
     offsetDuration: json['offsetDuration'] == null
         ? null
-        : Duration.fromJson(json['offsetDuration'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(json['offsetDuration'] as Map<String, dynamic>),
     offsetRange: json['offsetRange'] == null
         ? null
         : Range.fromJson(json['offsetRange'] as Map<String, dynamic>),

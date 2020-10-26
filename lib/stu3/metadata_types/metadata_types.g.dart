@@ -335,7 +335,7 @@ _$_DataRequirementDateFilter _$_$_DataRequirementDateFilterFromJson(
         : Period.fromJson(json['valuePeriod'] as Map<String, dynamic>),
     valueDuration: json['valueDuration'] == null
         ? null
-        : Duration.fromJson(json['valueDuration'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(json['valueDuration'] as Map<String, dynamic>),
   );
 }
 

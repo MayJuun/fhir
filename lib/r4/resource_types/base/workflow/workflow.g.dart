@@ -1184,7 +1184,7 @@ _$_TaskInput _$_$_TaskInputFromJson(Map<String, dynamic> json) {
         : Distance.fromJson(json['valueDistance'] as Map<String, dynamic>),
     valueDuration: json['valueDuration'] == null
         ? null
-        : Duration.fromJson(json['valueDuration'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(json['valueDuration'] as Map<String, dynamic>),
     valueHumanName: json['valueHumanName'] == null
         ? null
         : HumanName.fromJson(json['valueHumanName'] as Map<String, dynamic>),
@@ -1507,7 +1507,7 @@ _$_TaskOutput _$_$_TaskOutputFromJson(Map<String, dynamic> json) {
         : Distance.fromJson(json['valueDistance'] as Map<String, dynamic>),
     valueDuration: json['valueDuration'] == null
         ? null
-        : Duration.fromJson(json['valueDuration'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(json['valueDuration'] as Map<String, dynamic>),
     valueHumanName: json['valueHumanName'] == null
         ? null
         : HumanName.fromJson(json['valueHumanName'] as Map<String, dynamic>),

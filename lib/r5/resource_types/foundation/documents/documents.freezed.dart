@@ -55,7 +55,7 @@ class _$CatalogEntryTearOff {
       List<CatalogEntryRelatedEntry> relatedEntry,
       Reference updatedBy,
       List<Annotation> note,
-      Duration estimatedDuration,
+      FhirDuration estimatedDuration,
       List<CodeableConcept> billingCode,
       String billingSummary,
       @JsonKey(name: '_billingSummary')
@@ -155,7 +155,7 @@ mixin _$CatalogEntry {
   List<CatalogEntryRelatedEntry> get relatedEntry;
   Reference get updatedBy;
   List<Annotation> get note;
-  Duration get estimatedDuration;
+  FhirDuration get estimatedDuration;
   List<CodeableConcept> get billingCode;
   String get billingSummary;
   @JsonKey(name: '_billingSummary')
@@ -215,7 +215,7 @@ abstract class $CatalogEntryCopyWith<$Res> {
       List<CatalogEntryRelatedEntry> relatedEntry,
       Reference updatedBy,
       List<Annotation> note,
-      Duration estimatedDuration,
+      FhirDuration estimatedDuration,
       List<CodeableConcept> billingCode,
       String billingSummary,
       @JsonKey(name: '_billingSummary')
@@ -241,7 +241,7 @@ abstract class $CatalogEntryCopyWith<$Res> {
   $ElementCopyWith<$Res> get orderableElement;
   $ReferenceCopyWith<$Res> get referencedItem;
   $ReferenceCopyWith<$Res> get updatedBy;
-  $DurationCopyWith<$Res> get estimatedDuration;
+  $FhirDurationCopyWith<$Res> get estimatedDuration;
   $ElementCopyWith<$Res> get billingSummaryElement;
   $ElementCopyWith<$Res> get scheduleSummaryElement;
   $ElementCopyWith<$Res> get limitationSummaryElement;
@@ -350,7 +350,7 @@ class _$CatalogEntryCopyWithImpl<$Res> implements $CatalogEntryCopyWith<$Res> {
       note: note == freezed ? _value.note : note as List<Annotation>,
       estimatedDuration: estimatedDuration == freezed
           ? _value.estimatedDuration
-          : estimatedDuration as Duration,
+          : estimatedDuration as FhirDuration,
       billingCode: billingCode == freezed
           ? _value.billingCode
           : billingCode as List<CodeableConcept>,
@@ -492,11 +492,11 @@ class _$CatalogEntryCopyWithImpl<$Res> implements $CatalogEntryCopyWith<$Res> {
   }
 
   @override
-  $DurationCopyWith<$Res> get estimatedDuration {
+  $FhirDurationCopyWith<$Res> get estimatedDuration {
     if (_value.estimatedDuration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.estimatedDuration, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.estimatedDuration, (value) {
       return _then(_value.copyWith(estimatedDuration: value));
     });
   }
@@ -585,7 +585,7 @@ abstract class _$CatalogEntryCopyWith<$Res>
       List<CatalogEntryRelatedEntry> relatedEntry,
       Reference updatedBy,
       List<Annotation> note,
-      Duration estimatedDuration,
+      FhirDuration estimatedDuration,
       List<CodeableConcept> billingCode,
       String billingSummary,
       @JsonKey(name: '_billingSummary')
@@ -623,7 +623,7 @@ abstract class _$CatalogEntryCopyWith<$Res>
   @override
   $ReferenceCopyWith<$Res> get updatedBy;
   @override
-  $DurationCopyWith<$Res> get estimatedDuration;
+  $FhirDurationCopyWith<$Res> get estimatedDuration;
   @override
   $ElementCopyWith<$Res> get billingSummaryElement;
   @override
@@ -738,7 +738,7 @@ class __$CatalogEntryCopyWithImpl<$Res> extends _$CatalogEntryCopyWithImpl<$Res>
       note: note == freezed ? _value.note : note as List<Annotation>,
       estimatedDuration: estimatedDuration == freezed
           ? _value.estimatedDuration
-          : estimatedDuration as Duration,
+          : estimatedDuration as FhirDuration,
       billingCode: billingCode == freezed
           ? _value.billingCode
           : billingCode as List<CodeableConcept>,
@@ -878,7 +878,7 @@ class _$_CatalogEntry extends _CatalogEntry {
   @override
   final List<Annotation> note;
   @override
-  final Duration estimatedDuration;
+  final FhirDuration estimatedDuration;
   @override
   final List<CodeableConcept> billingCode;
   @override
@@ -1080,7 +1080,7 @@ abstract class _CatalogEntry extends CatalogEntry {
       List<CatalogEntryRelatedEntry> relatedEntry,
       Reference updatedBy,
       List<Annotation> note,
-      Duration estimatedDuration,
+      FhirDuration estimatedDuration,
       List<CodeableConcept> billingCode,
       String billingSummary,
       @JsonKey(name: '_billingSummary')
@@ -1159,7 +1159,7 @@ abstract class _CatalogEntry extends CatalogEntry {
   @override
   List<Annotation> get note;
   @override
-  Duration get estimatedDuration;
+  FhirDuration get estimatedDuration;
   @override
   List<CodeableConcept> get billingCode;
   @override

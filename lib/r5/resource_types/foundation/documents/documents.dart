@@ -37,7 +37,7 @@ abstract class CatalogEntry with Resource implements _$CatalogEntry {
     List<CatalogEntryRelatedEntry> relatedEntry,
     Reference updatedBy,
     List<Annotation> note,
-    Duration estimatedDuration,
+    FhirDuration estimatedDuration,
     List<CodeableConcept> billingCode,
     String billingSummary,
     @JsonKey(name: '_billingSummary') Element billingSummaryElement,

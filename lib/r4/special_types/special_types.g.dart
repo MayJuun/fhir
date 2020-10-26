@@ -617,7 +617,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
             json['defaultValueDistance'] as Map<String, dynamic>),
     defaultValueDuration: json['defaultValueDuration'] == null
         ? null
-        : Duration.fromJson(
+        : FhirDuration.fromJson(
             json['defaultValueDuration'] as Map<String, dynamic>),
     defaultValueHumanName: json['defaultValueHumanName'] == null
         ? null
@@ -849,7 +849,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Distance.fromJson(json['fixedDistance'] as Map<String, dynamic>),
     fixedDuration: json['fixedDuration'] == null
         ? null
-        : Duration.fromJson(json['fixedDuration'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(json['fixedDuration'] as Map<String, dynamic>),
     fixedHumanName: json['fixedHumanName'] == null
         ? null
         : HumanName.fromJson(json['fixedHumanName'] as Map<String, dynamic>),
@@ -1067,7 +1067,8 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Distance.fromJson(json['patternDistance'] as Map<String, dynamic>),
     patternDuration: json['patternDuration'] == null
         ? null
-        : Duration.fromJson(json['patternDuration'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(
+            json['patternDuration'] as Map<String, dynamic>),
     patternHumanName: json['patternHumanName'] == null
         ? null
         : HumanName.fromJson(json['patternHumanName'] as Map<String, dynamic>),
@@ -2115,7 +2116,7 @@ _$_ElementDefinitionExample _$_$_ElementDefinitionExampleFromJson(
         : Distance.fromJson(json['valueDistance'] as Map<String, dynamic>),
     valueDuration: json['valueDuration'] == null
         ? null
-        : Duration.fromJson(json['valueDuration'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(json['valueDuration'] as Map<String, dynamic>),
     valueHumanName: json['valueHumanName'] == null
         ? null
         : HumanName.fromJson(json['valueHumanName'] as Map<String, dynamic>),

@@ -2189,7 +2189,8 @@ _$_MedicinalProductPharmaceuticalRouteOfAdministration
             json['maxDosePerTreatmentPeriod'] as Map<String, dynamic>),
     maxTreatmentPeriod: json['maxTreatmentPeriod'] == null
         ? null
-        : Duration.fromJson(json['maxTreatmentPeriod'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(
+            json['maxTreatmentPeriod'] as Map<String, dynamic>),
     targetSpecies: (json['targetSpecies'] as List)
         ?.map((e) => e == null
             ? null

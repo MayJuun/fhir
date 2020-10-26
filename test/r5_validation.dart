@@ -3,6 +3,7 @@ part of 'validation.dart';
 Future<String> r5Validation() async {
   var dir = Directory('./test/r5_examples');
   var string = '';
+
   for (var file in await dir.list().toList()) {
     var contents = await File(file.path).readAsString();
     var resource = r5.Resource.fromJson(json.decode(contents));
@@ -13,5 +14,17 @@ Future<String> r5Validation() async {
           json.decode(contents), resource.toJson(), file.toString());
     }
   }
+
+  for (var file in await dir.list().toList()) {
+    var contents = await File(file.path).readAsString();
+    var resource = r5.Resource.fromJson(json.decode(contents));
+    if (resource == null) {
+      print(file);
+    } else {
+      string += await checkMapEquality(
+          resource.toJson(), json.decode(contents), file.toString());
+    }
+  }
+
   return string;
 }

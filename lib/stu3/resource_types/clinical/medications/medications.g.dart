@@ -1709,7 +1709,7 @@ _$_MedicationRequestDispenseRequest
         : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
     expectedSupplyDuration: json['expectedSupplyDuration'] == null
         ? null
-        : Duration.fromJson(
+        : FhirDuration.fromJson(
             json['expectedSupplyDuration'] as Map<String, dynamic>),
     performer: json['performer'] == null
         ? null

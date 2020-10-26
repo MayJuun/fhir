@@ -8571,7 +8571,7 @@ class _$ParametersParameterTearOff {
       CodeableConcept valueCodeableConcept,
       Coding valueCoding,
       Quantity valueQuantity,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       Quantity valueSimpleQuantity,
       Distance valueDistance,
       Count valueCount,
@@ -8753,7 +8753,7 @@ mixin _$ParametersParameter {
   CodeableConcept get valueCodeableConcept;
   Coding get valueCoding;
   Quantity get valueQuantity;
-  Duration get valueDuration;
+  FhirDuration get valueDuration;
   Quantity get valueSimpleQuantity;
   Distance get valueDistance;
   Count get valueCount;
@@ -8838,7 +8838,7 @@ abstract class $ParametersParameterCopyWith<$Res> {
       CodeableConcept valueCodeableConcept,
       Coding valueCoding,
       Quantity valueQuantity,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       Quantity valueSimpleQuantity,
       Distance valueDistance,
       Count valueCount,
@@ -8895,7 +8895,7 @@ abstract class $ParametersParameterCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
   $CodingCopyWith<$Res> get valueCoding;
   $QuantityCopyWith<$Res> get valueQuantity;
-  $DurationCopyWith<$Res> get valueDuration;
+  $FhirDurationCopyWith<$Res> get valueDuration;
   $QuantityCopyWith<$Res> get valueSimpleQuantity;
   $DistanceCopyWith<$Res> get valueDistance;
   $CountCopyWith<$Res> get valueCount;
@@ -9131,7 +9131,7 @@ class _$ParametersParameterCopyWithImpl<$Res>
           : valueQuantity as Quantity,
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
-          : valueDuration as Duration,
+          : valueDuration as FhirDuration,
       valueSimpleQuantity: valueSimpleQuantity == freezed
           ? _value.valueSimpleQuantity
           : valueSimpleQuantity as Quantity,
@@ -9482,11 +9482,11 @@ class _$ParametersParameterCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get valueDuration {
+  $FhirDurationCopyWith<$Res> get valueDuration {
     if (_value.valueDuration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.valueDuration, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.valueDuration, (value) {
       return _then(_value.copyWith(valueDuration: value));
     });
   }
@@ -9799,7 +9799,7 @@ abstract class _$ParametersParameterCopyWith<$Res>
       CodeableConcept valueCodeableConcept,
       Coding valueCoding,
       Quantity valueQuantity,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       Quantity valueSimpleQuantity,
       Distance valueDistance,
       Count valueCount,
@@ -9885,7 +9885,7 @@ abstract class _$ParametersParameterCopyWith<$Res>
   @override
   $QuantityCopyWith<$Res> get valueQuantity;
   @override
-  $DurationCopyWith<$Res> get valueDuration;
+  $FhirDurationCopyWith<$Res> get valueDuration;
   @override
   $QuantityCopyWith<$Res> get valueSimpleQuantity;
   @override
@@ -10148,7 +10148,7 @@ class __$ParametersParameterCopyWithImpl<$Res>
           : valueQuantity as Quantity,
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
-          : valueDuration as Duration,
+          : valueDuration as FhirDuration,
       valueSimpleQuantity: valueSimpleQuantity == freezed
           ? _value.valueSimpleQuantity
           : valueSimpleQuantity as Quantity,
@@ -10414,7 +10414,7 @@ class _$_ParametersParameter extends _ParametersParameter {
   @override
   final Quantity valueQuantity;
   @override
-  final Duration valueDuration;
+  final FhirDuration valueDuration;
   @override
   final Quantity valueSimpleQuantity;
   @override
@@ -10731,7 +10731,7 @@ abstract class _ParametersParameter extends ParametersParameter {
       CodeableConcept valueCodeableConcept,
       Coding valueCoding,
       Quantity valueQuantity,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       Quantity valueSimpleQuantity,
       Distance valueDistance,
       Count valueCount,
@@ -10874,7 +10874,7 @@ abstract class _ParametersParameter extends ParametersParameter {
   @override
   Quantity get valueQuantity;
   @override
-  Duration get valueDuration;
+  FhirDuration get valueDuration;
   @override
   Quantity get valueSimpleQuantity;
   @override

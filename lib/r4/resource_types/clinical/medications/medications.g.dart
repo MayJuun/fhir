@@ -2684,7 +2684,7 @@ _$_MedicationKnowledgeMaxDispense _$_$_MedicationKnowledgeMaxDispenseFromJson(
         : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
     period: json['period'] == null
         ? null
-        : Duration.fromJson(json['period'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(json['period'] as Map<String, dynamic>),
   );
 }
 
@@ -2732,7 +2732,7 @@ _$_MedicationKnowledgeKinetics _$_$_MedicationKnowledgeKineticsFromJson(
         ?.toList(),
     halfLifePeriod: json['halfLifePeriod'] == null
         ? null
-        : Duration.fromJson(json['halfLifePeriod'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(json['halfLifePeriod'] as Map<String, dynamic>),
   );
 }
 
@@ -3047,7 +3047,8 @@ _$_MedicationRequestDispenseRequest
             json['initialFill'] as Map<String, dynamic>),
     dispenseInterval: json['dispenseInterval'] == null
         ? null
-        : Duration.fromJson(json['dispenseInterval'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(
+            json['dispenseInterval'] as Map<String, dynamic>),
     validityPeriod: json['validityPeriod'] == null
         ? null
         : Period.fromJson(json['validityPeriod'] as Map<String, dynamic>),
@@ -3063,7 +3064,7 @@ _$_MedicationRequestDispenseRequest
         : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
     expectedSupplyDuration: json['expectedSupplyDuration'] == null
         ? null
-        : Duration.fromJson(
+        : FhirDuration.fromJson(
             json['expectedSupplyDuration'] as Map<String, dynamic>),
     performer: json['performer'] == null
         ? null
@@ -3119,7 +3120,7 @@ _$_MedicationRequestInitialFill _$_$_MedicationRequestInitialFillFromJson(
         : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
     duration: json['duration'] == null
         ? null
-        : Duration.fromJson(json['duration'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(json['duration'] as Map<String, dynamic>),
   );
 }
 

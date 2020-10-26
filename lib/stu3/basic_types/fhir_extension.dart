@@ -57,7 +57,7 @@ abstract class FhirExtension with _$FhirExtension {
     CodeableConcept valueCodeableConcept,
     Coding valueCoding,
     Quantity valueQuantity,
-    Duration valueDuration,
+    FhirDuration valueDuration,
     Quantity valueSimpleQuantity,
     Distance valueDistance,
     Count valueCount,

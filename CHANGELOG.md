@@ -1,3 +1,7 @@
+## [0.0.10]
+
+* Changed Duration to FhirDuration because dart core contains Duration and I was tired of dealing with it
+
 ## [0.0.9]
 
 * Ran formatter

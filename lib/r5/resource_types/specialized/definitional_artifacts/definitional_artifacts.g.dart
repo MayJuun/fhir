@@ -227,7 +227,7 @@ _$_ActivityDefinition _$_$_ActivityDefinitionFromJson(
         : Range.fromJson(json['timingRange'] as Map<String, dynamic>),
     timingDuration: json['timingDuration'] == null
         ? null
-        : Duration.fromJson(json['timingDuration'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(json['timingDuration'] as Map<String, dynamic>),
     location: json['location'] == null
         ? null
         : Reference.fromJson(json['location'] as Map<String, dynamic>),
@@ -2801,7 +2801,7 @@ _$_PlanDefinitionTarget _$_$_PlanDefinitionTargetFromJson(
             json['detailCodeableConcept'] as Map<String, dynamic>),
     due: json['due'] == null
         ? null
-        : Duration.fromJson(json['due'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(json['due'] as Map<String, dynamic>),
   );
 }
 
@@ -2933,7 +2933,7 @@ _$_PlanDefinitionAction _$_$_PlanDefinitionActionFromJson(
         : Period.fromJson(json['timingPeriod'] as Map<String, dynamic>),
     timingDuration: json['timingDuration'] == null
         ? null
-        : Duration.fromJson(json['timingDuration'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(json['timingDuration'] as Map<String, dynamic>),
     timingRange: json['timingRange'] == null
         ? null
         : Range.fromJson(json['timingRange'] as Map<String, dynamic>),
@@ -3214,7 +3214,7 @@ _$_PlanDefinitionRelatedAction _$_$_PlanDefinitionRelatedActionFromJson(
         : Element.fromJson(json['_relationship'] as Map<String, dynamic>),
     offsetDuration: json['offsetDuration'] == null
         ? null
-        : Duration.fromJson(json['offsetDuration'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(json['offsetDuration'] as Map<String, dynamic>),
     offsetRange: json['offsetRange'] == null
         ? null
         : Range.fromJson(json['offsetRange'] as Map<String, dynamic>),
@@ -4343,7 +4343,7 @@ _$_SpecimenDefinitionTypeTested _$_$_SpecimenDefinitionTypeTestedFromJson(
         : Element.fromJson(json['_requirement'] as Map<String, dynamic>),
     retentionTime: json['retentionTime'] == null
         ? null
-        : Duration.fromJson(json['retentionTime'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(json['retentionTime'] as Map<String, dynamic>),
     singleUse:
         json['singleUse'] == null ? null : Boolean.fromJson(json['singleUse']),
     singleUseElement: json['_singleUse'] == null
@@ -4561,7 +4561,7 @@ _$_SpecimenDefinitionHandling _$_$_SpecimenDefinitionHandlingFromJson(
         : Range.fromJson(json['temperatureRange'] as Map<String, dynamic>),
     maxDuration: json['maxDuration'] == null
         ? null
-        : Duration.fromJson(json['maxDuration'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(json['maxDuration'] as Map<String, dynamic>),
     instruction: json['instruction'] as String,
     instructionElement: json['_instruction'] == null
         ? null

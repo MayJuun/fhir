@@ -528,7 +528,7 @@ abstract class MedicationRequestDispenseRequest
     @JsonKey(name: '_numberOfRepeatsAllowed')
         Element numberOfRepeatsAllowedElement,
     Quantity quantity,
-    Duration expectedSupplyDuration,
+    FhirDuration expectedSupplyDuration,
     Reference performer,
   }) = _MedicationRequestDispenseRequest;
 

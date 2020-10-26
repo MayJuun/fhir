@@ -98,7 +98,7 @@ abstract class DataRequirementDateFilter
     FhirDateTime valueDateTime,
     @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
     Period valuePeriod,
-    Duration valueDuration,
+    FhirDuration valueDuration,
   }) = _DataRequirementDateFilter;
 
   factory DataRequirementDateFilter.fromJson(Map<String, dynamic> json) =>

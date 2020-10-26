@@ -5093,7 +5093,7 @@ class _$GoalTargetTearOff {
       CodeableConcept detailCodeableConcept,
       Date dueDate,
       @JsonKey(name: '_dueDate') Element dueDateElement,
-      Duration dueDuration}) {
+      FhirDuration dueDuration}) {
     return _GoalTarget(
       measure: measure,
       detailQuantity: detailQuantity,
@@ -5124,7 +5124,7 @@ mixin _$GoalTarget {
   Date get dueDate;
   @JsonKey(name: '_dueDate')
   Element get dueDateElement;
-  Duration get dueDuration;
+  FhirDuration get dueDuration;
 
   Map<String, dynamic> toJson();
   $GoalTargetCopyWith<GoalTarget> get copyWith;
@@ -5142,14 +5142,14 @@ abstract class $GoalTargetCopyWith<$Res> {
       CodeableConcept detailCodeableConcept,
       Date dueDate,
       @JsonKey(name: '_dueDate') Element dueDateElement,
-      Duration dueDuration});
+      FhirDuration dueDuration});
 
   $CodeableConceptCopyWith<$Res> get measure;
   $QuantityCopyWith<$Res> get detailQuantity;
   $RangeCopyWith<$Res> get detailRange;
   $CodeableConceptCopyWith<$Res> get detailCodeableConcept;
   $ElementCopyWith<$Res> get dueDateElement;
-  $DurationCopyWith<$Res> get dueDuration;
+  $FhirDurationCopyWith<$Res> get dueDuration;
 }
 
 /// @nodoc
@@ -5184,8 +5184,9 @@ class _$GoalTargetCopyWithImpl<$Res> implements $GoalTargetCopyWith<$Res> {
       dueDateElement: dueDateElement == freezed
           ? _value.dueDateElement
           : dueDateElement as Element,
-      dueDuration:
-          dueDuration == freezed ? _value.dueDuration : dueDuration as Duration,
+      dueDuration: dueDuration == freezed
+          ? _value.dueDuration
+          : dueDuration as FhirDuration,
     ));
   }
 
@@ -5241,11 +5242,11 @@ class _$GoalTargetCopyWithImpl<$Res> implements $GoalTargetCopyWith<$Res> {
   }
 
   @override
-  $DurationCopyWith<$Res> get dueDuration {
+  $FhirDurationCopyWith<$Res> get dueDuration {
     if (_value.dueDuration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.dueDuration, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.dueDuration, (value) {
       return _then(_value.copyWith(dueDuration: value));
     });
   }
@@ -5264,7 +5265,7 @@ abstract class _$GoalTargetCopyWith<$Res> implements $GoalTargetCopyWith<$Res> {
       CodeableConcept detailCodeableConcept,
       Date dueDate,
       @JsonKey(name: '_dueDate') Element dueDateElement,
-      Duration dueDuration});
+      FhirDuration dueDuration});
 
   @override
   $CodeableConceptCopyWith<$Res> get measure;
@@ -5277,7 +5278,7 @@ abstract class _$GoalTargetCopyWith<$Res> implements $GoalTargetCopyWith<$Res> {
   @override
   $ElementCopyWith<$Res> get dueDateElement;
   @override
-  $DurationCopyWith<$Res> get dueDuration;
+  $FhirDurationCopyWith<$Res> get dueDuration;
 }
 
 /// @nodoc
@@ -5314,8 +5315,9 @@ class __$GoalTargetCopyWithImpl<$Res> extends _$GoalTargetCopyWithImpl<$Res>
       dueDateElement: dueDateElement == freezed
           ? _value.dueDateElement
           : dueDateElement as Element,
-      dueDuration:
-          dueDuration == freezed ? _value.dueDuration : dueDuration as Duration,
+      dueDuration: dueDuration == freezed
+          ? _value.dueDuration
+          : dueDuration as FhirDuration,
     ));
   }
 }
@@ -5351,7 +5353,7 @@ class _$_GoalTarget extends _GoalTarget {
   @JsonKey(name: '_dueDate')
   final Element dueDateElement;
   @override
-  final Duration dueDuration;
+  final FhirDuration dueDuration;
 
   @override
   String toString() {
@@ -5415,7 +5417,7 @@ abstract class _GoalTarget extends GoalTarget {
       CodeableConcept detailCodeableConcept,
       Date dueDate,
       @JsonKey(name: '_dueDate') Element dueDateElement,
-      Duration dueDuration}) = _$_GoalTarget;
+      FhirDuration dueDuration}) = _$_GoalTarget;
 
   factory _GoalTarget.fromJson(Map<String, dynamic> json) =
       _$_GoalTarget.fromJson;
@@ -5434,7 +5436,7 @@ abstract class _GoalTarget extends GoalTarget {
   @JsonKey(name: '_dueDate')
   Element get dueDateElement;
   @override
-  Duration get dueDuration;
+  FhirDuration get dueDuration;
   @override
   _$GoalTargetCopyWith<_GoalTarget> get copyWith;
 }

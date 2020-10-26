@@ -1901,7 +1901,7 @@ class _$DataRequirementDateFilterTearOff {
       FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
       Period valuePeriod,
-      Duration valueDuration}) {
+      FhirDuration valueDuration}) {
     return _DataRequirementDateFilter(
       path: path,
       pathElement: pathElement,
@@ -1931,7 +1931,7 @@ mixin _$DataRequirementDateFilter {
   @JsonKey(name: '_valueDateTime')
   Element get valueDateTimeElement;
   Period get valuePeriod;
-  Duration get valueDuration;
+  FhirDuration get valueDuration;
 
   Map<String, dynamic> toJson();
   $DataRequirementDateFilterCopyWith<DataRequirementDateFilter> get copyWith;
@@ -1948,12 +1948,12 @@ abstract class $DataRequirementDateFilterCopyWith<$Res> {
       FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
       Period valuePeriod,
-      Duration valueDuration});
+      FhirDuration valueDuration});
 
   $ElementCopyWith<$Res> get pathElement;
   $ElementCopyWith<$Res> get valueDateTimeElement;
   $PeriodCopyWith<$Res> get valuePeriod;
-  $DurationCopyWith<$Res> get valueDuration;
+  $FhirDurationCopyWith<$Res> get valueDuration;
 }
 
 /// @nodoc
@@ -1988,7 +1988,7 @@ class _$DataRequirementDateFilterCopyWithImpl<$Res>
           valuePeriod == freezed ? _value.valuePeriod : valuePeriod as Period,
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
-          : valueDuration as Duration,
+          : valueDuration as FhirDuration,
     ));
   }
 
@@ -2023,11 +2023,11 @@ class _$DataRequirementDateFilterCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get valueDuration {
+  $FhirDurationCopyWith<$Res> get valueDuration {
     if (_value.valueDuration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.valueDuration, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.valueDuration, (value) {
       return _then(_value.copyWith(valueDuration: value));
     });
   }
@@ -2046,7 +2046,7 @@ abstract class _$DataRequirementDateFilterCopyWith<$Res>
       FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
       Period valuePeriod,
-      Duration valueDuration});
+      FhirDuration valueDuration});
 
   @override
   $ElementCopyWith<$Res> get pathElement;
@@ -2055,7 +2055,7 @@ abstract class _$DataRequirementDateFilterCopyWith<$Res>
   @override
   $PeriodCopyWith<$Res> get valuePeriod;
   @override
-  $DurationCopyWith<$Res> get valueDuration;
+  $FhirDurationCopyWith<$Res> get valueDuration;
 }
 
 /// @nodoc
@@ -2093,7 +2093,7 @@ class __$DataRequirementDateFilterCopyWithImpl<$Res>
           valuePeriod == freezed ? _value.valuePeriod : valuePeriod as Period,
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
-          : valueDuration as Duration,
+          : valueDuration as FhirDuration,
     ));
   }
 }
@@ -2127,7 +2127,7 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
   @override
   final Period valuePeriod;
   @override
-  final Duration valueDuration;
+  final FhirDuration valueDuration;
 
   @override
   String toString() {
@@ -2187,7 +2187,7 @@ abstract class _DataRequirementDateFilter extends DataRequirementDateFilter {
       FhirDateTime valueDateTime,
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
       Period valuePeriod,
-      Duration valueDuration}) = _$_DataRequirementDateFilter;
+      FhirDuration valueDuration}) = _$_DataRequirementDateFilter;
 
   factory _DataRequirementDateFilter.fromJson(Map<String, dynamic> json) =
       _$_DataRequirementDateFilter.fromJson;
@@ -2205,7 +2205,7 @@ abstract class _DataRequirementDateFilter extends DataRequirementDateFilter {
   @override
   Period get valuePeriod;
   @override
-  Duration get valueDuration;
+  FhirDuration get valueDuration;
   @override
   _$DataRequirementDateFilterCopyWith<_DataRequirementDateFilter> get copyWith;
 }

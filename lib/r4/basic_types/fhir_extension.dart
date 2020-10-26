@@ -61,7 +61,7 @@ abstract class FhirExtension implements _$FhirExtension {
     ContactPoint valueContactPoint,
     Count valueCount,
     Distance valueDistance,
-    Duration valueDuration,
+    FhirDuration valueDuration,
     HumanName valueHumanName,
     Identifier valueIdentifier,
     Money valueMoney,

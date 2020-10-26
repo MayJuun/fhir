@@ -3,6 +3,7 @@ part of 'validation.dart';
 Future<String> stu3Validation() async {
   var dir = Directory('./test/stu3_examples');
   var string = '';
+
   for (var file in await dir.list().toList()) {
     var contents = await File(file.path).readAsString();
     var resource = stu3.Resource.fromJson(json.decode(contents));
@@ -13,5 +14,17 @@ Future<String> stu3Validation() async {
           json.decode(contents), resource.toJson(), file.toString());
     }
   }
+
+  for (var file in await dir.list().toList()) {
+    var contents = await File(file.path).readAsString();
+    var resource = stu3.Resource.fromJson(json.decode(contents));
+    if (resource == null) {
+      print(file);
+    } else {
+      string += await checkMapEquality(
+          resource.toJson(), json.decode(contents), file.toString());
+    }
+  }
+
   return string;
 }

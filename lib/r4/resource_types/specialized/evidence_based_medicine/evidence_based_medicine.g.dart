@@ -1258,7 +1258,7 @@ _$_EvidenceVariableCharacteristic _$_$_EvidenceVariableCharacteristicFromJson(
             json['participantEffectivePeriod'] as Map<String, dynamic>),
     participantEffectiveDuration: json['participantEffectiveDuration'] == null
         ? null
-        : Duration.fromJson(
+        : FhirDuration.fromJson(
             json['participantEffectiveDuration'] as Map<String, dynamic>),
     participantEffectiveTiming: json['participantEffectiveTiming'] == null
         ? null
@@ -1266,7 +1266,7 @@ _$_EvidenceVariableCharacteristic _$_$_EvidenceVariableCharacteristicFromJson(
             json['participantEffectiveTiming'] as Map<String, dynamic>),
     timeFromStart: json['timeFromStart'] == null
         ? null
-        : Duration.fromJson(json['timeFromStart'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(json['timeFromStart'] as Map<String, dynamic>),
     groupMeasure: _$enumDecodeNullable(
         _$EvidenceVariableCharacteristicGroupMeasureEnumMap,
         json['groupMeasure'],
@@ -2011,14 +2011,14 @@ _$_ResearchElementDefinitionCharacteristic
         : Period.fromJson(json['studyEffectivePeriod'] as Map<String, dynamic>),
     studyEffectiveDuration: json['studyEffectiveDuration'] == null
         ? null
-        : Duration.fromJson(
+        : FhirDuration.fromJson(
             json['studyEffectiveDuration'] as Map<String, dynamic>),
     studyEffectiveTiming: json['studyEffectiveTiming'] == null
         ? null
         : Timing.fromJson(json['studyEffectiveTiming'] as Map<String, dynamic>),
     studyEffectiveTimeFromStart: json['studyEffectiveTimeFromStart'] == null
         ? null
-        : Duration.fromJson(
+        : FhirDuration.fromJson(
             json['studyEffectiveTimeFromStart'] as Map<String, dynamic>),
     studyEffectiveGroupMeasure: _$enumDecodeNullable(
         _$ResearchElementDefinitionCharacteristicStudyEffectiveGroupMeasureEnumMap,
@@ -2052,7 +2052,7 @@ _$_ResearchElementDefinitionCharacteristic
             json['participantEffectivePeriod'] as Map<String, dynamic>),
     participantEffectiveDuration: json['participantEffectiveDuration'] == null
         ? null
-        : Duration.fromJson(
+        : FhirDuration.fromJson(
             json['participantEffectiveDuration'] as Map<String, dynamic>),
     participantEffectiveTiming: json['participantEffectiveTiming'] == null
         ? null
@@ -2061,7 +2061,7 @@ _$_ResearchElementDefinitionCharacteristic
     participantEffectiveTimeFromStart:
         json['participantEffectiveTimeFromStart'] == null
             ? null
-            : Duration.fromJson(json['participantEffectiveTimeFromStart']
+            : FhirDuration.fromJson(json['participantEffectiveTimeFromStart']
                 as Map<String, dynamic>),
     participantEffectiveGroupMeasure: _$enumDecodeNullable(
         _$ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasureEnumMap,

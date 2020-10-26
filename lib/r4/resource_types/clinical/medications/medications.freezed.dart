@@ -16686,7 +16686,7 @@ class _$MedicationKnowledgeMaxDispenseTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @required Quantity quantity,
-      Duration period}) {
+      FhirDuration period}) {
     return _MedicationKnowledgeMaxDispense(
       id: id,
       extension_: extension_,
@@ -16714,7 +16714,7 @@ mixin _$MedicationKnowledgeMaxDispense {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   Quantity get quantity;
-  Duration get period;
+  FhirDuration get period;
 
   Map<String, dynamic> toJson();
   $MedicationKnowledgeMaxDispenseCopyWith<MedicationKnowledgeMaxDispense>
@@ -16732,10 +16732,10 @@ abstract class $MedicationKnowledgeMaxDispenseCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Quantity quantity,
-      Duration period});
+      FhirDuration period});
 
   $QuantityCopyWith<$Res> get quantity;
-  $DurationCopyWith<$Res> get period;
+  $FhirDurationCopyWith<$Res> get period;
 }
 
 /// @nodoc
@@ -16764,7 +16764,7 @@ class _$MedicationKnowledgeMaxDispenseCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
-      period: period == freezed ? _value.period : period as Duration,
+      period: period == freezed ? _value.period : period as FhirDuration,
     ));
   }
 
@@ -16779,11 +16779,11 @@ class _$MedicationKnowledgeMaxDispenseCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get period {
+  $FhirDurationCopyWith<$Res> get period {
     if (_value.period == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.period, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.period, (value) {
       return _then(_value.copyWith(period: value));
     });
   }
@@ -16802,12 +16802,12 @@ abstract class _$MedicationKnowledgeMaxDispenseCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Quantity quantity,
-      Duration period});
+      FhirDuration period});
 
   @override
   $QuantityCopyWith<$Res> get quantity;
   @override
-  $DurationCopyWith<$Res> get period;
+  $FhirDurationCopyWith<$Res> get period;
 }
 
 /// @nodoc
@@ -16840,7 +16840,7 @@ class __$MedicationKnowledgeMaxDispenseCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
-      period: period == freezed ? _value.period : period as Duration,
+      period: period == freezed ? _value.period : period as FhirDuration,
     ));
   }
 }
@@ -16873,7 +16873,7 @@ class _$_MedicationKnowledgeMaxDispense
   @override
   final Quantity quantity;
   @override
-  final Duration period;
+  final FhirDuration period;
 
   @override
   String toString() {
@@ -16927,7 +16927,7 @@ abstract class _MedicationKnowledgeMaxDispense
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @required Quantity quantity,
-      Duration period}) = _$_MedicationKnowledgeMaxDispense;
+      FhirDuration period}) = _$_MedicationKnowledgeMaxDispense;
 
   factory _MedicationKnowledgeMaxDispense.fromJson(Map<String, dynamic> json) =
       _$_MedicationKnowledgeMaxDispense.fromJson;
@@ -16942,7 +16942,7 @@ abstract class _MedicationKnowledgeMaxDispense
   @override
   Quantity get quantity;
   @override
-  Duration get period;
+  FhirDuration get period;
   @override
   _$MedicationKnowledgeMaxDispenseCopyWith<_MedicationKnowledgeMaxDispense>
       get copyWith;
@@ -16964,7 +16964,7 @@ class _$MedicationKnowledgeKineticsTearOff {
       List<FhirExtension> modifierExtension,
       List<Quantity> areaUnderCurve,
       List<Quantity> lethalDose50,
-      Duration halfLifePeriod}) {
+      FhirDuration halfLifePeriod}) {
     return _MedicationKnowledgeKinetics(
       id: id,
       extension_: extension_,
@@ -16993,7 +16993,7 @@ mixin _$MedicationKnowledgeKinetics {
   List<FhirExtension> get modifierExtension;
   List<Quantity> get areaUnderCurve;
   List<Quantity> get lethalDose50;
-  Duration get halfLifePeriod;
+  FhirDuration get halfLifePeriod;
 
   Map<String, dynamic> toJson();
   $MedicationKnowledgeKineticsCopyWith<MedicationKnowledgeKinetics>
@@ -17012,9 +17012,9 @@ abstract class $MedicationKnowledgeKineticsCopyWith<$Res> {
       List<FhirExtension> modifierExtension,
       List<Quantity> areaUnderCurve,
       List<Quantity> lethalDose50,
-      Duration halfLifePeriod});
+      FhirDuration halfLifePeriod});
 
-  $DurationCopyWith<$Res> get halfLifePeriod;
+  $FhirDurationCopyWith<$Res> get halfLifePeriod;
 }
 
 /// @nodoc
@@ -17051,16 +17051,16 @@ class _$MedicationKnowledgeKineticsCopyWithImpl<$Res>
           : lethalDose50 as List<Quantity>,
       halfLifePeriod: halfLifePeriod == freezed
           ? _value.halfLifePeriod
-          : halfLifePeriod as Duration,
+          : halfLifePeriod as FhirDuration,
     ));
   }
 
   @override
-  $DurationCopyWith<$Res> get halfLifePeriod {
+  $FhirDurationCopyWith<$Res> get halfLifePeriod {
     if (_value.halfLifePeriod == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.halfLifePeriod, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.halfLifePeriod, (value) {
       return _then(_value.copyWith(halfLifePeriod: value));
     });
   }
@@ -17080,10 +17080,10 @@ abstract class _$MedicationKnowledgeKineticsCopyWith<$Res>
       List<FhirExtension> modifierExtension,
       List<Quantity> areaUnderCurve,
       List<Quantity> lethalDose50,
-      Duration halfLifePeriod});
+      FhirDuration halfLifePeriod});
 
   @override
-  $DurationCopyWith<$Res> get halfLifePeriod;
+  $FhirDurationCopyWith<$Res> get halfLifePeriod;
 }
 
 /// @nodoc
@@ -17124,7 +17124,7 @@ class __$MedicationKnowledgeKineticsCopyWithImpl<$Res>
           : lethalDose50 as List<Quantity>,
       halfLifePeriod: halfLifePeriod == freezed
           ? _value.halfLifePeriod
-          : halfLifePeriod as Duration,
+          : halfLifePeriod as FhirDuration,
     ));
   }
 }
@@ -17157,7 +17157,7 @@ class _$_MedicationKnowledgeKinetics extends _MedicationKnowledgeKinetics {
   @override
   final List<Quantity> lethalDose50;
   @override
-  final Duration halfLifePeriod;
+  final FhirDuration halfLifePeriod;
 
   @override
   String toString() {
@@ -17217,7 +17217,7 @@ abstract class _MedicationKnowledgeKinetics
       List<FhirExtension> modifierExtension,
       List<Quantity> areaUnderCurve,
       List<Quantity> lethalDose50,
-      Duration halfLifePeriod}) = _$_MedicationKnowledgeKinetics;
+      FhirDuration halfLifePeriod}) = _$_MedicationKnowledgeKinetics;
 
   factory _MedicationKnowledgeKinetics.fromJson(Map<String, dynamic> json) =
       _$_MedicationKnowledgeKinetics.fromJson;
@@ -17234,7 +17234,7 @@ abstract class _MedicationKnowledgeKinetics
   @override
   List<Quantity> get lethalDose50;
   @override
-  Duration get halfLifePeriod;
+  FhirDuration get halfLifePeriod;
   @override
   _$MedicationKnowledgeKineticsCopyWith<_MedicationKnowledgeKinetics>
       get copyWith;
@@ -18926,13 +18926,13 @@ class _$MedicationRequestDispenseRequestTearOff {
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       MedicationRequestInitialFill initialFill,
-      Duration dispenseInterval,
+      FhirDuration dispenseInterval,
       Period validityPeriod,
       UnsignedInt numberOfRepeatsAllowed,
       @JsonKey(name: '_numberOfRepeatsAllowed')
           Element numberOfRepeatsAllowedElement,
       Quantity quantity,
-      Duration expectedSupplyDuration,
+      FhirDuration expectedSupplyDuration,
       Reference performer}) {
     return _MedicationRequestDispenseRequest(
       id: id,
@@ -18967,13 +18967,13 @@ mixin _$MedicationRequestDispenseRequest {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   MedicationRequestInitialFill get initialFill;
-  Duration get dispenseInterval;
+  FhirDuration get dispenseInterval;
   Period get validityPeriod;
   UnsignedInt get numberOfRepeatsAllowed;
   @JsonKey(name: '_numberOfRepeatsAllowed')
   Element get numberOfRepeatsAllowedElement;
   Quantity get quantity;
-  Duration get expectedSupplyDuration;
+  FhirDuration get expectedSupplyDuration;
   Reference get performer;
 
   Map<String, dynamic> toJson();
@@ -18993,21 +18993,21 @@ abstract class $MedicationRequestDispenseRequestCopyWith<$Res> {
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       MedicationRequestInitialFill initialFill,
-      Duration dispenseInterval,
+      FhirDuration dispenseInterval,
       Period validityPeriod,
       UnsignedInt numberOfRepeatsAllowed,
       @JsonKey(name: '_numberOfRepeatsAllowed')
           Element numberOfRepeatsAllowedElement,
       Quantity quantity,
-      Duration expectedSupplyDuration,
+      FhirDuration expectedSupplyDuration,
       Reference performer});
 
   $MedicationRequestInitialFillCopyWith<$Res> get initialFill;
-  $DurationCopyWith<$Res> get dispenseInterval;
+  $FhirDurationCopyWith<$Res> get dispenseInterval;
   $PeriodCopyWith<$Res> get validityPeriod;
   $ElementCopyWith<$Res> get numberOfRepeatsAllowedElement;
   $QuantityCopyWith<$Res> get quantity;
-  $DurationCopyWith<$Res> get expectedSupplyDuration;
+  $FhirDurationCopyWith<$Res> get expectedSupplyDuration;
   $ReferenceCopyWith<$Res> get performer;
 }
 
@@ -19047,7 +19047,7 @@ class _$MedicationRequestDispenseRequestCopyWithImpl<$Res>
           : initialFill as MedicationRequestInitialFill,
       dispenseInterval: dispenseInterval == freezed
           ? _value.dispenseInterval
-          : dispenseInterval as Duration,
+          : dispenseInterval as FhirDuration,
       validityPeriod: validityPeriod == freezed
           ? _value.validityPeriod
           : validityPeriod as Period,
@@ -19060,7 +19060,7 @@ class _$MedicationRequestDispenseRequestCopyWithImpl<$Res>
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
       expectedSupplyDuration: expectedSupplyDuration == freezed
           ? _value.expectedSupplyDuration
-          : expectedSupplyDuration as Duration,
+          : expectedSupplyDuration as FhirDuration,
       performer:
           performer == freezed ? _value.performer : performer as Reference,
     ));
@@ -19078,11 +19078,11 @@ class _$MedicationRequestDispenseRequestCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get dispenseInterval {
+  $FhirDurationCopyWith<$Res> get dispenseInterval {
     if (_value.dispenseInterval == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.dispenseInterval, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.dispenseInterval, (value) {
       return _then(_value.copyWith(dispenseInterval: value));
     });
   }
@@ -19119,11 +19119,11 @@ class _$MedicationRequestDispenseRequestCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get expectedSupplyDuration {
+  $FhirDurationCopyWith<$Res> get expectedSupplyDuration {
     if (_value.expectedSupplyDuration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.expectedSupplyDuration, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.expectedSupplyDuration, (value) {
       return _then(_value.copyWith(expectedSupplyDuration: value));
     });
   }
@@ -19153,19 +19153,19 @@ abstract class _$MedicationRequestDispenseRequestCopyWith<$Res>
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       MedicationRequestInitialFill initialFill,
-      Duration dispenseInterval,
+      FhirDuration dispenseInterval,
       Period validityPeriod,
       UnsignedInt numberOfRepeatsAllowed,
       @JsonKey(name: '_numberOfRepeatsAllowed')
           Element numberOfRepeatsAllowedElement,
       Quantity quantity,
-      Duration expectedSupplyDuration,
+      FhirDuration expectedSupplyDuration,
       Reference performer});
 
   @override
   $MedicationRequestInitialFillCopyWith<$Res> get initialFill;
   @override
-  $DurationCopyWith<$Res> get dispenseInterval;
+  $FhirDurationCopyWith<$Res> get dispenseInterval;
   @override
   $PeriodCopyWith<$Res> get validityPeriod;
   @override
@@ -19173,7 +19173,7 @@ abstract class _$MedicationRequestDispenseRequestCopyWith<$Res>
   @override
   $QuantityCopyWith<$Res> get quantity;
   @override
-  $DurationCopyWith<$Res> get expectedSupplyDuration;
+  $FhirDurationCopyWith<$Res> get expectedSupplyDuration;
   @override
   $ReferenceCopyWith<$Res> get performer;
 }
@@ -19218,7 +19218,7 @@ class __$MedicationRequestDispenseRequestCopyWithImpl<$Res>
           : initialFill as MedicationRequestInitialFill,
       dispenseInterval: dispenseInterval == freezed
           ? _value.dispenseInterval
-          : dispenseInterval as Duration,
+          : dispenseInterval as FhirDuration,
       validityPeriod: validityPeriod == freezed
           ? _value.validityPeriod
           : validityPeriod as Period,
@@ -19231,7 +19231,7 @@ class __$MedicationRequestDispenseRequestCopyWithImpl<$Res>
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
       expectedSupplyDuration: expectedSupplyDuration == freezed
           ? _value.expectedSupplyDuration
-          : expectedSupplyDuration as Duration,
+          : expectedSupplyDuration as FhirDuration,
       performer:
           performer == freezed ? _value.performer : performer as Reference,
     ));
@@ -19273,7 +19273,7 @@ class _$_MedicationRequestDispenseRequest
   @override
   final MedicationRequestInitialFill initialFill;
   @override
-  final Duration dispenseInterval;
+  final FhirDuration dispenseInterval;
   @override
   final Period validityPeriod;
   @override
@@ -19284,7 +19284,7 @@ class _$_MedicationRequestDispenseRequest
   @override
   final Quantity quantity;
   @override
-  final Duration expectedSupplyDuration;
+  final FhirDuration expectedSupplyDuration;
   @override
   final Reference performer;
 
@@ -19368,13 +19368,13 @@ abstract class _MedicationRequestDispenseRequest
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       MedicationRequestInitialFill initialFill,
-      Duration dispenseInterval,
+      FhirDuration dispenseInterval,
       Period validityPeriod,
       UnsignedInt numberOfRepeatsAllowed,
       @JsonKey(name: '_numberOfRepeatsAllowed')
           Element numberOfRepeatsAllowedElement,
       Quantity quantity,
-      Duration expectedSupplyDuration,
+      FhirDuration expectedSupplyDuration,
       Reference performer}) = _$_MedicationRequestDispenseRequest;
 
   factory _MedicationRequestDispenseRequest.fromJson(
@@ -19390,7 +19390,7 @@ abstract class _MedicationRequestDispenseRequest
   @override
   MedicationRequestInitialFill get initialFill;
   @override
-  Duration get dispenseInterval;
+  FhirDuration get dispenseInterval;
   @override
   Period get validityPeriod;
   @override
@@ -19401,7 +19401,7 @@ abstract class _MedicationRequestDispenseRequest
   @override
   Quantity get quantity;
   @override
-  Duration get expectedSupplyDuration;
+  FhirDuration get expectedSupplyDuration;
   @override
   Reference get performer;
   @override
@@ -19424,7 +19424,7 @@ class _$MedicationRequestInitialFillTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Quantity quantity,
-      Duration duration}) {
+      FhirDuration duration}) {
     return _MedicationRequestInitialFill(
       id: id,
       extension_: extension_,
@@ -19451,7 +19451,7 @@ mixin _$MedicationRequestInitialFill {
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
   Quantity get quantity;
-  Duration get duration;
+  FhirDuration get duration;
 
   Map<String, dynamic> toJson();
   $MedicationRequestInitialFillCopyWith<MedicationRequestInitialFill>
@@ -19469,10 +19469,10 @@ abstract class $MedicationRequestInitialFillCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Quantity quantity,
-      Duration duration});
+      FhirDuration duration});
 
   $QuantityCopyWith<$Res> get quantity;
-  $DurationCopyWith<$Res> get duration;
+  $FhirDurationCopyWith<$Res> get duration;
 }
 
 /// @nodoc
@@ -19501,7 +19501,8 @@ class _$MedicationRequestInitialFillCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
-      duration: duration == freezed ? _value.duration : duration as Duration,
+      duration:
+          duration == freezed ? _value.duration : duration as FhirDuration,
     ));
   }
 
@@ -19516,11 +19517,11 @@ class _$MedicationRequestInitialFillCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get duration {
+  $FhirDurationCopyWith<$Res> get duration {
     if (_value.duration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.duration, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.duration, (value) {
       return _then(_value.copyWith(duration: value));
     });
   }
@@ -19539,12 +19540,12 @@ abstract class _$MedicationRequestInitialFillCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Quantity quantity,
-      Duration duration});
+      FhirDuration duration});
 
   @override
   $QuantityCopyWith<$Res> get quantity;
   @override
-  $DurationCopyWith<$Res> get duration;
+  $FhirDurationCopyWith<$Res> get duration;
 }
 
 /// @nodoc
@@ -19577,7 +19578,8 @@ class __$MedicationRequestInitialFillCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
-      duration: duration == freezed ? _value.duration : duration as Duration,
+      duration:
+          duration == freezed ? _value.duration : duration as FhirDuration,
     ));
   }
 }
@@ -19607,7 +19609,7 @@ class _$_MedicationRequestInitialFill extends _MedicationRequestInitialFill {
   @override
   final Quantity quantity;
   @override
-  final Duration duration;
+  final FhirDuration duration;
 
   @override
   String toString() {
@@ -19662,7 +19664,7 @@ abstract class _MedicationRequestInitialFill
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Quantity quantity,
-      Duration duration}) = _$_MedicationRequestInitialFill;
+      FhirDuration duration}) = _$_MedicationRequestInitialFill;
 
   factory _MedicationRequestInitialFill.fromJson(Map<String, dynamic> json) =
       _$_MedicationRequestInitialFill.fromJson;
@@ -19677,7 +19679,7 @@ abstract class _MedicationRequestInitialFill
   @override
   Quantity get quantity;
   @override
-  Duration get duration;
+  FhirDuration get duration;
   @override
   _$MedicationRequestInitialFillCopyWith<_MedicationRequestInitialFill>
       get copyWith;

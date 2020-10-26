@@ -13111,7 +13111,7 @@ class _$MedicinalProductPharmaceuticalRouteOfAdministrationTearOff {
       Quantity maxSingleDose,
       Quantity maxDosePerDay,
       Ratio maxDosePerTreatmentPeriod,
-      Duration maxTreatmentPeriod,
+      FhirDuration maxTreatmentPeriod,
       List<MedicinalProductPharmaceuticalTargetSpecies> targetSpecies}) {
     return _MedicinalProductPharmaceuticalRouteOfAdministration(
       id: id,
@@ -13150,7 +13150,7 @@ mixin _$MedicinalProductPharmaceuticalRouteOfAdministration {
   Quantity get maxSingleDose;
   Quantity get maxDosePerDay;
   Ratio get maxDosePerTreatmentPeriod;
-  Duration get maxTreatmentPeriod;
+  FhirDuration get maxTreatmentPeriod;
   List<MedicinalProductPharmaceuticalTargetSpecies> get targetSpecies;
 
   Map<String, dynamic> toJson();
@@ -13175,7 +13175,7 @@ abstract class $MedicinalProductPharmaceuticalRouteOfAdministrationCopyWith<
       Quantity maxSingleDose,
       Quantity maxDosePerDay,
       Ratio maxDosePerTreatmentPeriod,
-      Duration maxTreatmentPeriod,
+      FhirDuration maxTreatmentPeriod,
       List<MedicinalProductPharmaceuticalTargetSpecies> targetSpecies});
 
   $CodeableConceptCopyWith<$Res> get code;
@@ -13183,7 +13183,7 @@ abstract class $MedicinalProductPharmaceuticalRouteOfAdministrationCopyWith<
   $QuantityCopyWith<$Res> get maxSingleDose;
   $QuantityCopyWith<$Res> get maxDosePerDay;
   $RatioCopyWith<$Res> get maxDosePerTreatmentPeriod;
-  $DurationCopyWith<$Res> get maxTreatmentPeriod;
+  $FhirDurationCopyWith<$Res> get maxTreatmentPeriod;
 }
 
 /// @nodoc
@@ -13233,7 +13233,7 @@ class _$MedicinalProductPharmaceuticalRouteOfAdministrationCopyWithImpl<$Res>
           : maxDosePerTreatmentPeriod as Ratio,
       maxTreatmentPeriod: maxTreatmentPeriod == freezed
           ? _value.maxTreatmentPeriod
-          : maxTreatmentPeriod as Duration,
+          : maxTreatmentPeriod as FhirDuration,
       targetSpecies: targetSpecies == freezed
           ? _value.targetSpecies
           : targetSpecies as List<MedicinalProductPharmaceuticalTargetSpecies>,
@@ -13291,11 +13291,11 @@ class _$MedicinalProductPharmaceuticalRouteOfAdministrationCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get maxTreatmentPeriod {
+  $FhirDurationCopyWith<$Res> get maxTreatmentPeriod {
     if (_value.maxTreatmentPeriod == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.maxTreatmentPeriod, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.maxTreatmentPeriod, (value) {
       return _then(_value.copyWith(maxTreatmentPeriod: value));
     });
   }
@@ -13321,7 +13321,7 @@ abstract class _$MedicinalProductPharmaceuticalRouteOfAdministrationCopyWith<
       Quantity maxSingleDose,
       Quantity maxDosePerDay,
       Ratio maxDosePerTreatmentPeriod,
-      Duration maxTreatmentPeriod,
+      FhirDuration maxTreatmentPeriod,
       List<MedicinalProductPharmaceuticalTargetSpecies> targetSpecies});
 
   @override
@@ -13335,7 +13335,7 @@ abstract class _$MedicinalProductPharmaceuticalRouteOfAdministrationCopyWith<
   @override
   $RatioCopyWith<$Res> get maxDosePerTreatmentPeriod;
   @override
-  $DurationCopyWith<$Res> get maxTreatmentPeriod;
+  $FhirDurationCopyWith<$Res> get maxTreatmentPeriod;
 }
 
 /// @nodoc
@@ -13391,7 +13391,7 @@ class __$MedicinalProductPharmaceuticalRouteOfAdministrationCopyWithImpl<$Res>
           : maxDosePerTreatmentPeriod as Ratio,
       maxTreatmentPeriod: maxTreatmentPeriod == freezed
           ? _value.maxTreatmentPeriod
-          : maxTreatmentPeriod as Duration,
+          : maxTreatmentPeriod as FhirDuration,
       targetSpecies: targetSpecies == freezed
           ? _value.targetSpecies
           : targetSpecies as List<MedicinalProductPharmaceuticalTargetSpecies>,
@@ -13440,7 +13440,7 @@ class _$_MedicinalProductPharmaceuticalRouteOfAdministration
   @override
   final Ratio maxDosePerTreatmentPeriod;
   @override
-  final Duration maxTreatmentPeriod;
+  final FhirDuration maxTreatmentPeriod;
   @override
   final List<MedicinalProductPharmaceuticalTargetSpecies> targetSpecies;
 
@@ -13525,7 +13525,7 @@ abstract class _MedicinalProductPharmaceuticalRouteOfAdministration
           Quantity maxSingleDose,
           Quantity maxDosePerDay,
           Ratio maxDosePerTreatmentPeriod,
-          Duration maxTreatmentPeriod,
+          FhirDuration maxTreatmentPeriod,
           List<MedicinalProductPharmaceuticalTargetSpecies> targetSpecies}) =
       _$_MedicinalProductPharmaceuticalRouteOfAdministration;
 
@@ -13551,7 +13551,7 @@ abstract class _MedicinalProductPharmaceuticalRouteOfAdministration
   @override
   Ratio get maxDosePerTreatmentPeriod;
   @override
-  Duration get maxTreatmentPeriod;
+  FhirDuration get maxTreatmentPeriod;
   @override
   List<MedicinalProductPharmaceuticalTargetSpecies> get targetSpecies;
   @override

@@ -4396,7 +4396,7 @@ class _$PlanDefinitionTargetTearOff {
       Quantity detailQuantity,
       Range detailRange,
       CodeableConcept detailCodeableConcept,
-      Duration due}) {
+      FhirDuration due}) {
     return _PlanDefinitionTarget(
       measure: measure,
       detailQuantity: detailQuantity,
@@ -4422,7 +4422,7 @@ mixin _$PlanDefinitionTarget {
   Quantity get detailQuantity;
   Range get detailRange;
   CodeableConcept get detailCodeableConcept;
-  Duration get due;
+  FhirDuration get due;
 
   Map<String, dynamic> toJson();
   $PlanDefinitionTargetCopyWith<PlanDefinitionTarget> get copyWith;
@@ -4438,13 +4438,13 @@ abstract class $PlanDefinitionTargetCopyWith<$Res> {
       Quantity detailQuantity,
       Range detailRange,
       CodeableConcept detailCodeableConcept,
-      Duration due});
+      FhirDuration due});
 
   $CodeableConceptCopyWith<$Res> get measure;
   $QuantityCopyWith<$Res> get detailQuantity;
   $RangeCopyWith<$Res> get detailRange;
   $CodeableConceptCopyWith<$Res> get detailCodeableConcept;
-  $DurationCopyWith<$Res> get due;
+  $FhirDurationCopyWith<$Res> get due;
 }
 
 /// @nodoc
@@ -4474,7 +4474,7 @@ class _$PlanDefinitionTargetCopyWithImpl<$Res>
       detailCodeableConcept: detailCodeableConcept == freezed
           ? _value.detailCodeableConcept
           : detailCodeableConcept as CodeableConcept,
-      due: due == freezed ? _value.due : due as Duration,
+      due: due == freezed ? _value.due : due as FhirDuration,
     ));
   }
 
@@ -4520,11 +4520,11 @@ class _$PlanDefinitionTargetCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get due {
+  $FhirDurationCopyWith<$Res> get due {
     if (_value.due == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.due, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.due, (value) {
       return _then(_value.copyWith(due: value));
     });
   }
@@ -4542,7 +4542,7 @@ abstract class _$PlanDefinitionTargetCopyWith<$Res>
       Quantity detailQuantity,
       Range detailRange,
       CodeableConcept detailCodeableConcept,
-      Duration due});
+      FhirDuration due});
 
   @override
   $CodeableConceptCopyWith<$Res> get measure;
@@ -4553,7 +4553,7 @@ abstract class _$PlanDefinitionTargetCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res> get detailCodeableConcept;
   @override
-  $DurationCopyWith<$Res> get due;
+  $FhirDurationCopyWith<$Res> get due;
 }
 
 /// @nodoc
@@ -4585,7 +4585,7 @@ class __$PlanDefinitionTargetCopyWithImpl<$Res>
       detailCodeableConcept: detailCodeableConcept == freezed
           ? _value.detailCodeableConcept
           : detailCodeableConcept as CodeableConcept,
-      due: due == freezed ? _value.due : due as Duration,
+      due: due == freezed ? _value.due : due as FhirDuration,
     ));
   }
 }
@@ -4614,7 +4614,7 @@ class _$_PlanDefinitionTarget extends _PlanDefinitionTarget {
   @override
   final CodeableConcept detailCodeableConcept;
   @override
-  final Duration due;
+  final FhirDuration due;
 
   @override
   String toString() {
@@ -4668,7 +4668,7 @@ abstract class _PlanDefinitionTarget extends PlanDefinitionTarget {
       Quantity detailQuantity,
       Range detailRange,
       CodeableConcept detailCodeableConcept,
-      Duration due}) = _$_PlanDefinitionTarget;
+      FhirDuration due}) = _$_PlanDefinitionTarget;
 
   factory _PlanDefinitionTarget.fromJson(Map<String, dynamic> json) =
       _$_PlanDefinitionTarget.fromJson;
@@ -4682,7 +4682,7 @@ abstract class _PlanDefinitionTarget extends PlanDefinitionTarget {
   @override
   CodeableConcept get detailCodeableConcept;
   @override
-  Duration get due;
+  FhirDuration get due;
   @override
   _$PlanDefinitionTargetCopyWith<_PlanDefinitionTarget> get copyWith;
 }
@@ -4718,7 +4718,7 @@ class _$PlanDefinitionActionTearOff {
       FhirDateTime timingDateTime,
       @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
       Period timingPeriod,
-      Duration timingDuration,
+      FhirDuration timingDuration,
       Range timingRange,
       Timing timingTiming,
       List<PlanDefinitionParticipant> participant,
@@ -4820,7 +4820,7 @@ mixin _$PlanDefinitionAction {
   @JsonKey(name: '_timingDateTime')
   Element get timingDateTimeElement;
   Period get timingPeriod;
-  Duration get timingDuration;
+  FhirDuration get timingDuration;
   Range get timingRange;
   Timing get timingTiming;
   List<PlanDefinitionParticipant> get participant;
@@ -4876,7 +4876,7 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
       FhirDateTime timingDateTime,
       @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
       Period timingPeriod,
-      Duration timingDuration,
+      FhirDuration timingDuration,
       Range timingRange,
       Timing timingTiming,
       List<PlanDefinitionParticipant> participant,
@@ -4902,7 +4902,7 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
   $ElementCopyWith<$Res> get textEquivalentElement;
   $ElementCopyWith<$Res> get timingDateTimeElement;
   $PeriodCopyWith<$Res> get timingPeriod;
-  $DurationCopyWith<$Res> get timingDuration;
+  $FhirDurationCopyWith<$Res> get timingDuration;
   $RangeCopyWith<$Res> get timingRange;
   $TimingCopyWith<$Res> get timingTiming;
   $CodingCopyWith<$Res> get type;
@@ -5020,7 +5020,7 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
           : timingPeriod as Period,
       timingDuration: timingDuration == freezed
           ? _value.timingDuration
-          : timingDuration as Duration,
+          : timingDuration as FhirDuration,
       timingRange:
           timingRange == freezed ? _value.timingRange : timingRange as Range,
       timingTiming: timingTiming == freezed
@@ -5134,11 +5134,11 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get timingDuration {
+  $FhirDurationCopyWith<$Res> get timingDuration {
     if (_value.timingDuration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.timingDuration, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.timingDuration, (value) {
       return _then(_value.copyWith(timingDuration: value));
     });
   }
@@ -5273,7 +5273,7 @@ abstract class _$PlanDefinitionActionCopyWith<$Res>
       FhirDateTime timingDateTime,
       @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
       Period timingPeriod,
-      Duration timingDuration,
+      FhirDuration timingDuration,
       Range timingRange,
       Timing timingTiming,
       List<PlanDefinitionParticipant> participant,
@@ -5306,7 +5306,7 @@ abstract class _$PlanDefinitionActionCopyWith<$Res>
   @override
   $PeriodCopyWith<$Res> get timingPeriod;
   @override
-  $DurationCopyWith<$Res> get timingDuration;
+  $FhirDurationCopyWith<$Res> get timingDuration;
   @override
   $RangeCopyWith<$Res> get timingRange;
   @override
@@ -5436,7 +5436,7 @@ class __$PlanDefinitionActionCopyWithImpl<$Res>
           : timingPeriod as Period,
       timingDuration: timingDuration == freezed
           ? _value.timingDuration
-          : timingDuration as Duration,
+          : timingDuration as FhirDuration,
       timingRange:
           timingRange == freezed ? _value.timingRange : timingRange as Range,
       timingTiming: timingTiming == freezed
@@ -5589,7 +5589,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
   @override
   final Period timingPeriod;
   @override
-  final Duration timingDuration;
+  final FhirDuration timingDuration;
   @override
   final Range timingRange;
   @override
@@ -5804,7 +5804,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
       FhirDateTime timingDateTime,
       @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
       Period timingPeriod,
-      Duration timingDuration,
+      FhirDuration timingDuration,
       Range timingRange,
       Timing timingTiming,
       List<PlanDefinitionParticipant> participant,
@@ -5876,7 +5876,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
   @override
   Period get timingPeriod;
   @override
-  Duration get timingDuration;
+  FhirDuration get timingDuration;
   @override
   Range get timingRange;
   @override
@@ -6308,7 +6308,7 @@ class _$PlanDefinitionRelatedActionTearOff {
       @JsonKey(name: '_actionId') Element actionIdElement,
       PlanDefinitionRelatedActionRelationship relationship,
       @JsonKey(name: '_relationship') Element relationshipElement,
-      Duration offsetDuration,
+      FhirDuration offsetDuration,
       Range offsetRange}) {
     return _PlanDefinitionRelatedAction(
       actionId: actionId,
@@ -6338,7 +6338,7 @@ mixin _$PlanDefinitionRelatedAction {
   PlanDefinitionRelatedActionRelationship get relationship;
   @JsonKey(name: '_relationship')
   Element get relationshipElement;
-  Duration get offsetDuration;
+  FhirDuration get offsetDuration;
   Range get offsetRange;
 
   Map<String, dynamic> toJson();
@@ -6357,12 +6357,12 @@ abstract class $PlanDefinitionRelatedActionCopyWith<$Res> {
       @JsonKey(name: '_actionId') Element actionIdElement,
       PlanDefinitionRelatedActionRelationship relationship,
       @JsonKey(name: '_relationship') Element relationshipElement,
-      Duration offsetDuration,
+      FhirDuration offsetDuration,
       Range offsetRange});
 
   $ElementCopyWith<$Res> get actionIdElement;
   $ElementCopyWith<$Res> get relationshipElement;
-  $DurationCopyWith<$Res> get offsetDuration;
+  $FhirDurationCopyWith<$Res> get offsetDuration;
   $RangeCopyWith<$Res> get offsetRange;
 }
 
@@ -6397,7 +6397,7 @@ class _$PlanDefinitionRelatedActionCopyWithImpl<$Res>
           : relationshipElement as Element,
       offsetDuration: offsetDuration == freezed
           ? _value.offsetDuration
-          : offsetDuration as Duration,
+          : offsetDuration as FhirDuration,
       offsetRange:
           offsetRange == freezed ? _value.offsetRange : offsetRange as Range,
     ));
@@ -6424,11 +6424,11 @@ class _$PlanDefinitionRelatedActionCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get offsetDuration {
+  $FhirDurationCopyWith<$Res> get offsetDuration {
     if (_value.offsetDuration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.offsetDuration, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.offsetDuration, (value) {
       return _then(_value.copyWith(offsetDuration: value));
     });
   }
@@ -6457,7 +6457,7 @@ abstract class _$PlanDefinitionRelatedActionCopyWith<$Res>
       @JsonKey(name: '_actionId') Element actionIdElement,
       PlanDefinitionRelatedActionRelationship relationship,
       @JsonKey(name: '_relationship') Element relationshipElement,
-      Duration offsetDuration,
+      FhirDuration offsetDuration,
       Range offsetRange});
 
   @override
@@ -6465,7 +6465,7 @@ abstract class _$PlanDefinitionRelatedActionCopyWith<$Res>
   @override
   $ElementCopyWith<$Res> get relationshipElement;
   @override
-  $DurationCopyWith<$Res> get offsetDuration;
+  $FhirDurationCopyWith<$Res> get offsetDuration;
   @override
   $RangeCopyWith<$Res> get offsetRange;
 }
@@ -6505,7 +6505,7 @@ class __$PlanDefinitionRelatedActionCopyWithImpl<$Res>
           : relationshipElement as Element,
       offsetDuration: offsetDuration == freezed
           ? _value.offsetDuration
-          : offsetDuration as Duration,
+          : offsetDuration as FhirDuration,
       offsetRange:
           offsetRange == freezed ? _value.offsetRange : offsetRange as Range,
     ));
@@ -6539,7 +6539,7 @@ class _$_PlanDefinitionRelatedAction extends _PlanDefinitionRelatedAction {
   @JsonKey(name: '_relationship')
   final Element relationshipElement;
   @override
-  final Duration offsetDuration;
+  final FhirDuration offsetDuration;
   @override
   final Range offsetRange;
 
@@ -6601,7 +6601,7 @@ abstract class _PlanDefinitionRelatedAction
       @JsonKey(name: '_actionId') Element actionIdElement,
       PlanDefinitionRelatedActionRelationship relationship,
       @JsonKey(name: '_relationship') Element relationshipElement,
-      Duration offsetDuration,
+      FhirDuration offsetDuration,
       Range offsetRange}) = _$_PlanDefinitionRelatedAction;
 
   factory _PlanDefinitionRelatedAction.fromJson(Map<String, dynamic> json) =
@@ -6618,7 +6618,7 @@ abstract class _PlanDefinitionRelatedAction
   @JsonKey(name: '_relationship')
   Element get relationshipElement;
   @override
-  Duration get offsetDuration;
+  FhirDuration get offsetDuration;
   @override
   Range get offsetRange;
   @override

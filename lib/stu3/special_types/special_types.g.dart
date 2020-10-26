@@ -376,7 +376,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
             json['defaultValueQuantity'] as Map<String, dynamic>),
     defaultValueDuration: json['defaultValueDuration'] == null
         ? null
-        : Duration.fromJson(
+        : FhirDuration.fromJson(
             json['defaultValueDuration'] as Map<String, dynamic>),
     defaultValueSimpleQuantity: json['defaultValueSimpleQuantity'] == null
         ? null
@@ -603,7 +603,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Quantity.fromJson(json['fixedQuantity'] as Map<String, dynamic>),
     fixedDuration: json['fixedDuration'] == null
         ? null
-        : Duration.fromJson(json['fixedDuration'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(json['fixedDuration'] as Map<String, dynamic>),
     fixedSimpleQuantity: json['fixedSimpleQuantity'] == null
         ? null
         : Quantity.fromJson(
@@ -821,7 +821,8 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Quantity.fromJson(json['patternQuantity'] as Map<String, dynamic>),
     patternDuration: json['patternDuration'] == null
         ? null
-        : Duration.fromJson(json['patternDuration'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(
+            json['patternDuration'] as Map<String, dynamic>),
     patternSimpleQuantity: json['patternSimpleQuantity'] == null
         ? null
         : Quantity.fromJson(
@@ -1781,7 +1782,7 @@ _$_ElementDefinitionExample _$_$_ElementDefinitionExampleFromJson(
         : Quantity.fromJson(json['valueQuantity'] as Map<String, dynamic>),
     valueDuration: json['valueDuration'] == null
         ? null
-        : Duration.fromJson(json['valueDuration'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(json['valueDuration'] as Map<String, dynamic>),
     valueSimpleQuantity: json['valueSimpleQuantity'] == null
         ? null
         : Quantity.fromJson(

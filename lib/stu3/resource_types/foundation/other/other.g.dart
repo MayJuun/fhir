@@ -1439,7 +1439,7 @@ _$_ParametersParameter _$_$_ParametersParameterFromJson(
         : Quantity.fromJson(json['valueQuantity'] as Map<String, dynamic>),
     valueDuration: json['valueDuration'] == null
         ? null
-        : Duration.fromJson(json['valueDuration'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(json['valueDuration'] as Map<String, dynamic>),
     valueSimpleQuantity: json['valueSimpleQuantity'] == null
         ? null
         : Quantity.fromJson(

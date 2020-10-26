@@ -935,7 +935,7 @@ class _$ElementDefinitionTearOff {
       CodeableConcept defaultValueCodeableConcept,
       Coding defaultValueCoding,
       Quantity defaultValueQuantity,
-      Duration defaultValueDuration,
+      FhirDuration defaultValueDuration,
       Quantity defaultValueSimpleQuantity,
       Distance defaultValueDistance,
       Count defaultValueCount,
@@ -1028,7 +1028,7 @@ class _$ElementDefinitionTearOff {
       CodeableConcept fixedCodeableConcept,
       Coding fixedCoding,
       Quantity fixedQuantity,
-      Duration fixedDuration,
+      FhirDuration fixedDuration,
       Quantity fixedSimpleQuantity,
       Distance fixedDistance,
       Count fixedCount,
@@ -1115,7 +1115,7 @@ class _$ElementDefinitionTearOff {
       CodeableConcept patternCodeableConcept,
       Coding patternCoding,
       Quantity patternQuantity,
-      Duration patternDuration,
+      FhirDuration patternDuration,
       Quantity patternSimpleQuantity,
       Distance patternDistance,
       Count patternCount,
@@ -1622,7 +1622,7 @@ mixin _$ElementDefinition {
   CodeableConcept get defaultValueCodeableConcept;
   Coding get defaultValueCoding;
   Quantity get defaultValueQuantity;
-  Duration get defaultValueDuration;
+  FhirDuration get defaultValueDuration;
   Quantity get defaultValueSimpleQuantity;
   Distance get defaultValueDistance;
   Count get defaultValueCount;
@@ -1715,7 +1715,7 @@ mixin _$ElementDefinition {
   CodeableConcept get fixedCodeableConcept;
   Coding get fixedCoding;
   Quantity get fixedQuantity;
-  Duration get fixedDuration;
+  FhirDuration get fixedDuration;
   Quantity get fixedSimpleQuantity;
   Distance get fixedDistance;
   Count get fixedCount;
@@ -1802,7 +1802,7 @@ mixin _$ElementDefinition {
   CodeableConcept get patternCodeableConcept;
   Coding get patternCoding;
   Quantity get patternQuantity;
-  Duration get patternDuration;
+  FhirDuration get patternDuration;
   Quantity get patternSimpleQuantity;
   Distance get patternDistance;
   Count get patternCount;
@@ -2012,7 +2012,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       CodeableConcept defaultValueCodeableConcept,
       Coding defaultValueCoding,
       Quantity defaultValueQuantity,
-      Duration defaultValueDuration,
+      FhirDuration defaultValueDuration,
       Quantity defaultValueSimpleQuantity,
       Distance defaultValueDistance,
       Count defaultValueCount,
@@ -2105,7 +2105,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       CodeableConcept fixedCodeableConcept,
       Coding fixedCoding,
       Quantity fixedQuantity,
-      Duration fixedDuration,
+      FhirDuration fixedDuration,
       Quantity fixedSimpleQuantity,
       Distance fixedDistance,
       Count fixedCount,
@@ -2192,7 +2192,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       CodeableConcept patternCodeableConcept,
       Coding patternCoding,
       Quantity patternQuantity,
-      Duration patternDuration,
+      FhirDuration patternDuration,
       Quantity patternSimpleQuantity,
       Distance patternDistance,
       Count patternCount,
@@ -2327,7 +2327,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get defaultValueCodeableConcept;
   $CodingCopyWith<$Res> get defaultValueCoding;
   $QuantityCopyWith<$Res> get defaultValueQuantity;
-  $DurationCopyWith<$Res> get defaultValueDuration;
+  $FhirDurationCopyWith<$Res> get defaultValueDuration;
   $QuantityCopyWith<$Res> get defaultValueSimpleQuantity;
   $DistanceCopyWith<$Res> get defaultValueDistance;
   $CountCopyWith<$Res> get defaultValueCount;
@@ -2382,7 +2382,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get fixedCodeableConcept;
   $CodingCopyWith<$Res> get fixedCoding;
   $QuantityCopyWith<$Res> get fixedQuantity;
-  $DurationCopyWith<$Res> get fixedDuration;
+  $FhirDurationCopyWith<$Res> get fixedDuration;
   $QuantityCopyWith<$Res> get fixedSimpleQuantity;
   $DistanceCopyWith<$Res> get fixedDistance;
   $CountCopyWith<$Res> get fixedCount;
@@ -2435,7 +2435,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get patternCodeableConcept;
   $CodingCopyWith<$Res> get patternCoding;
   $QuantityCopyWith<$Res> get patternQuantity;
-  $DurationCopyWith<$Res> get patternDuration;
+  $FhirDurationCopyWith<$Res> get patternDuration;
   $QuantityCopyWith<$Res> get patternSimpleQuantity;
   $DistanceCopyWith<$Res> get patternDistance;
   $CountCopyWith<$Res> get patternCount;
@@ -2988,7 +2988,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           : defaultValueQuantity as Quantity,
       defaultValueDuration: defaultValueDuration == freezed
           ? _value.defaultValueDuration
-          : defaultValueDuration as Duration,
+          : defaultValueDuration as FhirDuration,
       defaultValueSimpleQuantity: defaultValueSimpleQuantity == freezed
           ? _value.defaultValueSimpleQuantity
           : defaultValueSimpleQuantity as Quantity,
@@ -3195,7 +3195,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           : fixedQuantity as Quantity,
       fixedDuration: fixedDuration == freezed
           ? _value.fixedDuration
-          : fixedDuration as Duration,
+          : fixedDuration as FhirDuration,
       fixedSimpleQuantity: fixedSimpleQuantity == freezed
           ? _value.fixedSimpleQuantity
           : fixedSimpleQuantity as Quantity,
@@ -3385,7 +3385,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           : patternQuantity as Quantity,
       patternDuration: patternDuration == freezed
           ? _value.patternDuration
-          : patternDuration as Duration,
+          : patternDuration as FhirDuration,
       patternSimpleQuantity: patternSimpleQuantity == freezed
           ? _value.patternSimpleQuantity
           : patternSimpleQuantity as Quantity,
@@ -3986,11 +3986,11 @@ class _$ElementDefinitionCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get defaultValueDuration {
+  $FhirDurationCopyWith<$Res> get defaultValueDuration {
     if (_value.defaultValueDuration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.defaultValueDuration, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.defaultValueDuration, (value) {
       return _then(_value.copyWith(defaultValueDuration: value));
     });
   }
@@ -4544,11 +4544,11 @@ class _$ElementDefinitionCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get fixedDuration {
+  $FhirDurationCopyWith<$Res> get fixedDuration {
     if (_value.fixedDuration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.fixedDuration, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.fixedDuration, (value) {
       return _then(_value.copyWith(fixedDuration: value));
     });
   }
@@ -5079,11 +5079,11 @@ class _$ElementDefinitionCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get patternDuration {
+  $FhirDurationCopyWith<$Res> get patternDuration {
     if (_value.patternDuration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.patternDuration, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.patternDuration, (value) {
       return _then(_value.copyWith(patternDuration: value));
     });
   }
@@ -5686,7 +5686,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       CodeableConcept defaultValueCodeableConcept,
       Coding defaultValueCoding,
       Quantity defaultValueQuantity,
-      Duration defaultValueDuration,
+      FhirDuration defaultValueDuration,
       Quantity defaultValueSimpleQuantity,
       Distance defaultValueDistance,
       Count defaultValueCount,
@@ -5779,7 +5779,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       CodeableConcept fixedCodeableConcept,
       Coding fixedCoding,
       Quantity fixedQuantity,
-      Duration fixedDuration,
+      FhirDuration fixedDuration,
       Quantity fixedSimpleQuantity,
       Distance fixedDistance,
       Count fixedCount,
@@ -5866,7 +5866,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       CodeableConcept patternCodeableConcept,
       Coding patternCoding,
       Quantity patternQuantity,
-      Duration patternDuration,
+      FhirDuration patternDuration,
       Quantity patternSimpleQuantity,
       Distance patternDistance,
       Count patternCount,
@@ -6041,7 +6041,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
   @override
   $QuantityCopyWith<$Res> get defaultValueQuantity;
   @override
-  $DurationCopyWith<$Res> get defaultValueDuration;
+  $FhirDurationCopyWith<$Res> get defaultValueDuration;
   @override
   $QuantityCopyWith<$Res> get defaultValueSimpleQuantity;
   @override
@@ -6151,7 +6151,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
   @override
   $QuantityCopyWith<$Res> get fixedQuantity;
   @override
-  $DurationCopyWith<$Res> get fixedDuration;
+  $FhirDurationCopyWith<$Res> get fixedDuration;
   @override
   $QuantityCopyWith<$Res> get fixedSimpleQuantity;
   @override
@@ -6257,7 +6257,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
   @override
   $QuantityCopyWith<$Res> get patternQuantity;
   @override
-  $DurationCopyWith<$Res> get patternDuration;
+  $FhirDurationCopyWith<$Res> get patternDuration;
   @override
   $QuantityCopyWith<$Res> get patternSimpleQuantity;
   @override
@@ -6860,7 +6860,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           : defaultValueQuantity as Quantity,
       defaultValueDuration: defaultValueDuration == freezed
           ? _value.defaultValueDuration
-          : defaultValueDuration as Duration,
+          : defaultValueDuration as FhirDuration,
       defaultValueSimpleQuantity: defaultValueSimpleQuantity == freezed
           ? _value.defaultValueSimpleQuantity
           : defaultValueSimpleQuantity as Quantity,
@@ -7067,7 +7067,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           : fixedQuantity as Quantity,
       fixedDuration: fixedDuration == freezed
           ? _value.fixedDuration
-          : fixedDuration as Duration,
+          : fixedDuration as FhirDuration,
       fixedSimpleQuantity: fixedSimpleQuantity == freezed
           ? _value.fixedSimpleQuantity
           : fixedSimpleQuantity as Quantity,
@@ -7257,7 +7257,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           : patternQuantity as Quantity,
       patternDuration: patternDuration == freezed
           ? _value.patternDuration
-          : patternDuration as Duration,
+          : patternDuration as FhirDuration,
       patternSimpleQuantity: patternSimpleQuantity == freezed
           ? _value.patternSimpleQuantity
           : patternSimpleQuantity as Quantity,
@@ -8031,7 +8031,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   final Quantity defaultValueQuantity;
   @override
-  final Duration defaultValueDuration;
+  final FhirDuration defaultValueDuration;
   @override
   final Quantity defaultValueSimpleQuantity;
   @override
@@ -8198,7 +8198,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   final Quantity fixedQuantity;
   @override
-  final Duration fixedDuration;
+  final FhirDuration fixedDuration;
   @override
   final Quantity fixedSimpleQuantity;
   @override
@@ -8355,7 +8355,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   final Quantity patternQuantity;
   @override
-  final Duration patternDuration;
+  final FhirDuration patternDuration;
   @override
   final Quantity patternSimpleQuantity;
   @override
@@ -9283,7 +9283,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       CodeableConcept defaultValueCodeableConcept,
       Coding defaultValueCoding,
       Quantity defaultValueQuantity,
-      Duration defaultValueDuration,
+      FhirDuration defaultValueDuration,
       Quantity defaultValueSimpleQuantity,
       Distance defaultValueDistance,
       Count defaultValueCount,
@@ -9376,7 +9376,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       CodeableConcept fixedCodeableConcept,
       Coding fixedCoding,
       Quantity fixedQuantity,
-      Duration fixedDuration,
+      FhirDuration fixedDuration,
       Quantity fixedSimpleQuantity,
       Distance fixedDistance,
       Count fixedCount,
@@ -9463,7 +9463,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       CodeableConcept patternCodeableConcept,
       Coding patternCoding,
       Quantity patternQuantity,
-      Duration patternDuration,
+      FhirDuration patternDuration,
       Quantity patternSimpleQuantity,
       Distance patternDistance,
       Count patternCount,
@@ -9741,7 +9741,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @override
   Quantity get defaultValueQuantity;
   @override
-  Duration get defaultValueDuration;
+  FhirDuration get defaultValueDuration;
   @override
   Quantity get defaultValueSimpleQuantity;
   @override
@@ -9908,7 +9908,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @override
   Quantity get fixedQuantity;
   @override
-  Duration get fixedDuration;
+  FhirDuration get fixedDuration;
   @override
   Quantity get fixedSimpleQuantity;
   @override
@@ -10065,7 +10065,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @override
   Quantity get patternQuantity;
   @override
-  Duration get patternDuration;
+  FhirDuration get patternDuration;
   @override
   Quantity get patternSimpleQuantity;
   @override
@@ -11645,7 +11645,7 @@ class _$ElementDefinitionExampleTearOff {
       CodeableConcept valueCodeableConcept,
       Coding valueCoding,
       Quantity valueQuantity,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       Quantity valueSimpleQuantity,
       Distance valueDistance,
       Count valueCount,
@@ -11823,7 +11823,7 @@ mixin _$ElementDefinitionExample {
   CodeableConcept get valueCodeableConcept;
   Coding get valueCoding;
   Quantity get valueQuantity;
-  Duration get valueDuration;
+  FhirDuration get valueDuration;
   Quantity get valueSimpleQuantity;
   Distance get valueDistance;
   Count get valueCount;
@@ -11906,7 +11906,7 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
       CodeableConcept valueCodeableConcept,
       Coding valueCoding,
       Quantity valueQuantity,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       Quantity valueSimpleQuantity,
       Distance valueDistance,
       Count valueCount,
@@ -11961,7 +11961,7 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
   $CodingCopyWith<$Res> get valueCoding;
   $QuantityCopyWith<$Res> get valueQuantity;
-  $DurationCopyWith<$Res> get valueDuration;
+  $FhirDurationCopyWith<$Res> get valueDuration;
   $QuantityCopyWith<$Res> get valueSimpleQuantity;
   $DistanceCopyWith<$Res> get valueDistance;
   $CountCopyWith<$Res> get valueCount;
@@ -12196,7 +12196,7 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
           : valueQuantity as Quantity,
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
-          : valueDuration as Duration,
+          : valueDuration as FhirDuration,
       valueSimpleQuantity: valueSimpleQuantity == freezed
           ? _value.valueSimpleQuantity
           : valueSimpleQuantity as Quantity,
@@ -12545,11 +12545,11 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get valueDuration {
+  $FhirDurationCopyWith<$Res> get valueDuration {
     if (_value.valueDuration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.valueDuration, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.valueDuration, (value) {
       return _then(_value.copyWith(valueDuration: value));
     });
   }
@@ -12862,7 +12862,7 @@ abstract class _$ElementDefinitionExampleCopyWith<$Res>
       CodeableConcept valueCodeableConcept,
       Coding valueCoding,
       Quantity valueQuantity,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       Quantity valueSimpleQuantity,
       Distance valueDistance,
       Count valueCount,
@@ -12946,7 +12946,7 @@ abstract class _$ElementDefinitionExampleCopyWith<$Res>
   @override
   $QuantityCopyWith<$Res> get valueQuantity;
   @override
-  $DurationCopyWith<$Res> get valueDuration;
+  $FhirDurationCopyWith<$Res> get valueDuration;
   @override
   $QuantityCopyWith<$Res> get valueSimpleQuantity;
   @override
@@ -13209,7 +13209,7 @@ class __$ElementDefinitionExampleCopyWithImpl<$Res>
           : valueQuantity as Quantity,
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
-          : valueDuration as Duration,
+          : valueDuration as FhirDuration,
       valueSimpleQuantity: valueSimpleQuantity == freezed
           ? _value.valueSimpleQuantity
           : valueSimpleQuantity as Quantity,
@@ -13471,7 +13471,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
   @override
   final Quantity valueQuantity;
   @override
-  final Duration valueDuration;
+  final FhirDuration valueDuration;
   @override
   final Quantity valueSimpleQuantity;
   @override
@@ -13780,7 +13780,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
       CodeableConcept valueCodeableConcept,
       Coding valueCoding,
       Quantity valueQuantity,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       Quantity valueSimpleQuantity,
       Distance valueDistance,
       Count valueCount,
@@ -13921,7 +13921,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
   @override
   Quantity get valueQuantity;
   @override
-  Duration get valueDuration;
+  FhirDuration get valueDuration;
   @override
   Quantity get valueSimpleQuantity;
   @override

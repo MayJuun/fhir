@@ -4278,7 +4278,7 @@ _$_StructureMapSource _$_$_StructureMapSourceFromJson(
             json['defaultValueQuantity'] as Map<String, dynamic>),
     defaultValueDuration: json['defaultValueDuration'] == null
         ? null
-        : Duration.fromJson(
+        : FhirDuration.fromJson(
             json['defaultValueDuration'] as Map<String, dynamic>),
     defaultValueSimpleQuantity: json['defaultValueSimpleQuantity'] == null
         ? null

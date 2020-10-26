@@ -1503,7 +1503,7 @@ _$_ParametersParameter _$_$_ParametersParameterFromJson(
         : Distance.fromJson(json['valueDistance'] as Map<String, dynamic>),
     valueDuration: json['valueDuration'] == null
         ? null
-        : Duration.fromJson(json['valueDuration'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(json['valueDuration'] as Map<String, dynamic>),
     valueHumanName: json['valueHumanName'] == null
         ? null
         : HumanName.fromJson(json['valueHumanName'] as Map<String, dynamic>),

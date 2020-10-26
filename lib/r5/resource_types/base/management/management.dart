@@ -38,7 +38,7 @@ abstract class Encounter with Resource implements _$Encounter {
     List<EncounterParticipant> participant,
     List<Reference> appointment,
     Period period,
-    Duration length,
+    FhirDuration length,
     List<CodeableReference> reason,
     List<EncounterDiagnosis> diagnosis,
     List<Reference> account,

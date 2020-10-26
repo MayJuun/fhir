@@ -26983,7 +26983,7 @@ class _$StructureMapSourceTearOff {
       CodeableConcept defaultValueCodeableConcept,
       Coding defaultValueCoding,
       Quantity defaultValueQuantity,
-      Duration defaultValueDuration,
+      FhirDuration defaultValueDuration,
       Quantity defaultValueSimpleQuantity,
       Distance defaultValueDistance,
       Count defaultValueCount,
@@ -27201,7 +27201,7 @@ mixin _$StructureMapSource {
   CodeableConcept get defaultValueCodeableConcept;
   Coding get defaultValueCoding;
   Quantity get defaultValueQuantity;
-  Duration get defaultValueDuration;
+  FhirDuration get defaultValueDuration;
   Quantity get defaultValueSimpleQuantity;
   Distance get defaultValueDistance;
   Count get defaultValueCount;
@@ -27326,7 +27326,7 @@ abstract class $StructureMapSourceCopyWith<$Res> {
       CodeableConcept defaultValueCodeableConcept,
       Coding defaultValueCoding,
       Quantity defaultValueQuantity,
-      Duration defaultValueDuration,
+      FhirDuration defaultValueDuration,
       Quantity defaultValueSimpleQuantity,
       Distance defaultValueDistance,
       Count defaultValueCount,
@@ -27399,7 +27399,7 @@ abstract class $StructureMapSourceCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get defaultValueCodeableConcept;
   $CodingCopyWith<$Res> get defaultValueCoding;
   $QuantityCopyWith<$Res> get defaultValueQuantity;
-  $DurationCopyWith<$Res> get defaultValueDuration;
+  $FhirDurationCopyWith<$Res> get defaultValueDuration;
   $QuantityCopyWith<$Res> get defaultValueSimpleQuantity;
   $DistanceCopyWith<$Res> get defaultValueDistance;
   $CountCopyWith<$Res> get defaultValueCount;
@@ -27681,7 +27681,7 @@ class _$StructureMapSourceCopyWithImpl<$Res>
           : defaultValueQuantity as Quantity,
       defaultValueDuration: defaultValueDuration == freezed
           ? _value.defaultValueDuration
-          : defaultValueDuration as Duration,
+          : defaultValueDuration as FhirDuration,
       defaultValueSimpleQuantity: defaultValueSimpleQuantity == freezed
           ? _value.defaultValueSimpleQuantity
           : defaultValueSimpleQuantity as Quantity,
@@ -28099,11 +28099,11 @@ class _$StructureMapSourceCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get defaultValueDuration {
+  $FhirDurationCopyWith<$Res> get defaultValueDuration {
     if (_value.defaultValueDuration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.defaultValueDuration, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.defaultValueDuration, (value) {
       return _then(_value.copyWith(defaultValueDuration: value));
     });
   }
@@ -28498,7 +28498,7 @@ abstract class _$StructureMapSourceCopyWith<$Res>
       CodeableConcept defaultValueCodeableConcept,
       Coding defaultValueCoding,
       Quantity defaultValueQuantity,
-      Duration defaultValueDuration,
+      FhirDuration defaultValueDuration,
       Quantity defaultValueSimpleQuantity,
       Distance defaultValueDistance,
       Count defaultValueCount,
@@ -28603,7 +28603,7 @@ abstract class _$StructureMapSourceCopyWith<$Res>
   @override
   $QuantityCopyWith<$Res> get defaultValueQuantity;
   @override
-  $DurationCopyWith<$Res> get defaultValueDuration;
+  $FhirDurationCopyWith<$Res> get defaultValueDuration;
   @override
   $QuantityCopyWith<$Res> get defaultValueSimpleQuantity;
   @override
@@ -28917,7 +28917,7 @@ class __$StructureMapSourceCopyWithImpl<$Res>
           : defaultValueQuantity as Quantity,
       defaultValueDuration: defaultValueDuration == freezed
           ? _value.defaultValueDuration
-          : defaultValueDuration as Duration,
+          : defaultValueDuration as FhirDuration,
       defaultValueSimpleQuantity: defaultValueSimpleQuantity == freezed
           ? _value.defaultValueSimpleQuantity
           : defaultValueSimpleQuantity as Quantity,
@@ -29270,7 +29270,7 @@ class _$_StructureMapSource extends _StructureMapSource {
   @override
   final Quantity defaultValueQuantity;
   @override
-  final Duration defaultValueDuration;
+  final FhirDuration defaultValueDuration;
   @override
   final Quantity defaultValueSimpleQuantity;
   @override
@@ -29659,7 +29659,7 @@ abstract class _StructureMapSource extends StructureMapSource {
       CodeableConcept defaultValueCodeableConcept,
       Coding defaultValueCoding,
       Quantity defaultValueQuantity,
-      Duration defaultValueDuration,
+      FhirDuration defaultValueDuration,
       Quantity defaultValueSimpleQuantity,
       Distance defaultValueDistance,
       Count defaultValueCount,
@@ -29830,7 +29830,7 @@ abstract class _StructureMapSource extends StructureMapSource {
   @override
   Quantity get defaultValueQuantity;
   @override
-  Duration get defaultValueDuration;
+  FhirDuration get defaultValueDuration;
   @override
   Quantity get defaultValueSimpleQuantity;
   @override

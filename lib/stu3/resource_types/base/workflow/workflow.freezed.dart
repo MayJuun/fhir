@@ -5640,7 +5640,7 @@ class _$RequestGroupActionTearOff {
       FhirDateTime timingDateTime,
       @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
       Period timingPeriod,
-      Duration timingDuration,
+      FhirDuration timingDuration,
       Range timingRange,
       Timing timingTiming,
       List<Reference> participant,
@@ -5725,7 +5725,7 @@ mixin _$RequestGroupAction {
   @JsonKey(name: '_timingDateTime')
   Element get timingDateTimeElement;
   Period get timingPeriod;
-  Duration get timingDuration;
+  FhirDuration get timingDuration;
   Range get timingRange;
   Timing get timingTiming;
   List<Reference> get participant;
@@ -5773,7 +5773,7 @@ abstract class $RequestGroupActionCopyWith<$Res> {
       FhirDateTime timingDateTime,
       @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
       Period timingPeriod,
-      Duration timingDuration,
+      FhirDuration timingDuration,
       Range timingRange,
       Timing timingTiming,
       List<Reference> participant,
@@ -5797,7 +5797,7 @@ abstract class $RequestGroupActionCopyWith<$Res> {
   $ElementCopyWith<$Res> get textEquivalentElement;
   $ElementCopyWith<$Res> get timingDateTimeElement;
   $PeriodCopyWith<$Res> get timingPeriod;
-  $DurationCopyWith<$Res> get timingDuration;
+  $FhirDurationCopyWith<$Res> get timingDuration;
   $RangeCopyWith<$Res> get timingRange;
   $TimingCopyWith<$Res> get timingTiming;
   $CodingCopyWith<$Res> get type;
@@ -5894,7 +5894,7 @@ class _$RequestGroupActionCopyWithImpl<$Res>
           : timingPeriod as Period,
       timingDuration: timingDuration == freezed
           ? _value.timingDuration
-          : timingDuration as Duration,
+          : timingDuration as FhirDuration,
       timingRange:
           timingRange == freezed ? _value.timingRange : timingRange as Range,
       timingTiming: timingTiming == freezed
@@ -6002,11 +6002,11 @@ class _$RequestGroupActionCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get timingDuration {
+  $FhirDurationCopyWith<$Res> get timingDuration {
     if (_value.timingDuration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.timingDuration, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.timingDuration, (value) {
       return _then(_value.copyWith(timingDuration: value));
     });
   }
@@ -6125,7 +6125,7 @@ abstract class _$RequestGroupActionCopyWith<$Res>
       FhirDateTime timingDateTime,
       @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
       Period timingPeriod,
-      Duration timingDuration,
+      FhirDuration timingDuration,
       Range timingRange,
       Timing timingTiming,
       List<Reference> participant,
@@ -6156,7 +6156,7 @@ abstract class _$RequestGroupActionCopyWith<$Res>
   @override
   $PeriodCopyWith<$Res> get timingPeriod;
   @override
-  $DurationCopyWith<$Res> get timingDuration;
+  $FhirDurationCopyWith<$Res> get timingDuration;
   @override
   $RangeCopyWith<$Res> get timingRange;
   @override
@@ -6264,7 +6264,7 @@ class __$RequestGroupActionCopyWithImpl<$Res>
           : timingPeriod as Period,
       timingDuration: timingDuration == freezed
           ? _value.timingDuration
-          : timingDuration as Duration,
+          : timingDuration as FhirDuration,
       timingRange:
           timingRange == freezed ? _value.timingRange : timingRange as Range,
       timingTiming: timingTiming == freezed
@@ -6390,7 +6390,7 @@ class _$_RequestGroupAction extends _RequestGroupAction {
   @override
   final Period timingPeriod;
   @override
-  final Duration timingDuration;
+  final FhirDuration timingDuration;
   @override
   final Range timingRange;
   @override
@@ -6578,7 +6578,7 @@ abstract class _RequestGroupAction extends RequestGroupAction {
       FhirDateTime timingDateTime,
       @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
       Period timingPeriod,
-      Duration timingDuration,
+      FhirDuration timingDuration,
       Range timingRange,
       Timing timingTiming,
       List<Reference> participant,
@@ -6635,7 +6635,7 @@ abstract class _RequestGroupAction extends RequestGroupAction {
   @override
   Period get timingPeriod;
   @override
-  Duration get timingDuration;
+  FhirDuration get timingDuration;
   @override
   Range get timingRange;
   @override
@@ -7062,7 +7062,7 @@ class _$RequestGroupRelatedActionTearOff {
       @JsonKey(name: '_actionId') Element actionIdElement,
       String relationship,
       @JsonKey(name: '_relationship') Element relationshipElement,
-      Duration offsetDuration,
+      FhirDuration offsetDuration,
       Range offsetRange}) {
     return _RequestGroupRelatedAction(
       actionId: actionId,
@@ -7092,7 +7092,7 @@ mixin _$RequestGroupRelatedAction {
   String get relationship;
   @JsonKey(name: '_relationship')
   Element get relationshipElement;
-  Duration get offsetDuration;
+  FhirDuration get offsetDuration;
   Range get offsetRange;
 
   Map<String, dynamic> toJson();
@@ -7109,12 +7109,12 @@ abstract class $RequestGroupRelatedActionCopyWith<$Res> {
       @JsonKey(name: '_actionId') Element actionIdElement,
       String relationship,
       @JsonKey(name: '_relationship') Element relationshipElement,
-      Duration offsetDuration,
+      FhirDuration offsetDuration,
       Range offsetRange});
 
   $ElementCopyWith<$Res> get actionIdElement;
   $ElementCopyWith<$Res> get relationshipElement;
-  $DurationCopyWith<$Res> get offsetDuration;
+  $FhirDurationCopyWith<$Res> get offsetDuration;
   $RangeCopyWith<$Res> get offsetRange;
 }
 
@@ -7149,7 +7149,7 @@ class _$RequestGroupRelatedActionCopyWithImpl<$Res>
           : relationshipElement as Element,
       offsetDuration: offsetDuration == freezed
           ? _value.offsetDuration
-          : offsetDuration as Duration,
+          : offsetDuration as FhirDuration,
       offsetRange:
           offsetRange == freezed ? _value.offsetRange : offsetRange as Range,
     ));
@@ -7176,11 +7176,11 @@ class _$RequestGroupRelatedActionCopyWithImpl<$Res>
   }
 
   @override
-  $DurationCopyWith<$Res> get offsetDuration {
+  $FhirDurationCopyWith<$Res> get offsetDuration {
     if (_value.offsetDuration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.offsetDuration, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.offsetDuration, (value) {
       return _then(_value.copyWith(offsetDuration: value));
     });
   }
@@ -7208,7 +7208,7 @@ abstract class _$RequestGroupRelatedActionCopyWith<$Res>
       @JsonKey(name: '_actionId') Element actionIdElement,
       String relationship,
       @JsonKey(name: '_relationship') Element relationshipElement,
-      Duration offsetDuration,
+      FhirDuration offsetDuration,
       Range offsetRange});
 
   @override
@@ -7216,7 +7216,7 @@ abstract class _$RequestGroupRelatedActionCopyWith<$Res>
   @override
   $ElementCopyWith<$Res> get relationshipElement;
   @override
-  $DurationCopyWith<$Res> get offsetDuration;
+  $FhirDurationCopyWith<$Res> get offsetDuration;
   @override
   $RangeCopyWith<$Res> get offsetRange;
 }
@@ -7255,7 +7255,7 @@ class __$RequestGroupRelatedActionCopyWithImpl<$Res>
           : relationshipElement as Element,
       offsetDuration: offsetDuration == freezed
           ? _value.offsetDuration
-          : offsetDuration as Duration,
+          : offsetDuration as FhirDuration,
       offsetRange:
           offsetRange == freezed ? _value.offsetRange : offsetRange as Range,
     ));
@@ -7289,7 +7289,7 @@ class _$_RequestGroupRelatedAction extends _RequestGroupRelatedAction {
   @JsonKey(name: '_relationship')
   final Element relationshipElement;
   @override
-  final Duration offsetDuration;
+  final FhirDuration offsetDuration;
   @override
   final Range offsetRange;
 
@@ -7351,7 +7351,7 @@ abstract class _RequestGroupRelatedAction extends RequestGroupRelatedAction {
       @JsonKey(name: '_actionId') Element actionIdElement,
       String relationship,
       @JsonKey(name: '_relationship') Element relationshipElement,
-      Duration offsetDuration,
+      FhirDuration offsetDuration,
       Range offsetRange}) = _$_RequestGroupRelatedAction;
 
   factory _RequestGroupRelatedAction.fromJson(Map<String, dynamic> json) =
@@ -7368,7 +7368,7 @@ abstract class _RequestGroupRelatedAction extends RequestGroupRelatedAction {
   @JsonKey(name: '_relationship')
   Element get relationshipElement;
   @override
-  Duration get offsetDuration;
+  FhirDuration get offsetDuration;
   @override
   Range get offsetRange;
   @override
@@ -10852,7 +10852,7 @@ class _$TaskInputTearOff {
       CodeableConcept valueCodeableConcept,
       Coding valueCoding,
       Quantity valueQuantity,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       Quantity valueSimpleQuantity,
       Distance valueDistance,
       Count valueCount,
@@ -11027,7 +11027,7 @@ mixin _$TaskInput {
   CodeableConcept get valueCodeableConcept;
   Coding get valueCoding;
   Quantity get valueQuantity;
-  Duration get valueDuration;
+  FhirDuration get valueDuration;
   Quantity get valueSimpleQuantity;
   Distance get valueDistance;
   Count get valueCount;
@@ -11108,7 +11108,7 @@ abstract class $TaskInputCopyWith<$Res> {
       CodeableConcept valueCodeableConcept,
       Coding valueCoding,
       Quantity valueQuantity,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       Quantity valueSimpleQuantity,
       Distance valueDistance,
       Count valueCount,
@@ -11163,7 +11163,7 @@ abstract class $TaskInputCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
   $CodingCopyWith<$Res> get valueCoding;
   $QuantityCopyWith<$Res> get valueQuantity;
-  $DurationCopyWith<$Res> get valueDuration;
+  $FhirDurationCopyWith<$Res> get valueDuration;
   $QuantityCopyWith<$Res> get valueSimpleQuantity;
   $DistanceCopyWith<$Res> get valueDistance;
   $CountCopyWith<$Res> get valueCount;
@@ -11393,7 +11393,7 @@ class _$TaskInputCopyWithImpl<$Res> implements $TaskInputCopyWith<$Res> {
           : valueQuantity as Quantity,
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
-          : valueDuration as Duration,
+          : valueDuration as FhirDuration,
       valueSimpleQuantity: valueSimpleQuantity == freezed
           ? _value.valueSimpleQuantity
           : valueSimpleQuantity as Quantity,
@@ -11742,11 +11742,11 @@ class _$TaskInputCopyWithImpl<$Res> implements $TaskInputCopyWith<$Res> {
   }
 
   @override
-  $DurationCopyWith<$Res> get valueDuration {
+  $FhirDurationCopyWith<$Res> get valueDuration {
     if (_value.valueDuration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.valueDuration, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.valueDuration, (value) {
       return _then(_value.copyWith(valueDuration: value));
     });
   }
@@ -12057,7 +12057,7 @@ abstract class _$TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
       CodeableConcept valueCodeableConcept,
       Coding valueCoding,
       Quantity valueQuantity,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       Quantity valueSimpleQuantity,
       Distance valueDistance,
       Count valueCount,
@@ -12141,7 +12141,7 @@ abstract class _$TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
   @override
   $QuantityCopyWith<$Res> get valueQuantity;
   @override
-  $DurationCopyWith<$Res> get valueDuration;
+  $FhirDurationCopyWith<$Res> get valueDuration;
   @override
   $QuantityCopyWith<$Res> get valueSimpleQuantity;
   @override
@@ -12397,7 +12397,7 @@ class __$TaskInputCopyWithImpl<$Res> extends _$TaskInputCopyWithImpl<$Res>
           : valueQuantity as Quantity,
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
-          : valueDuration as Duration,
+          : valueDuration as FhirDuration,
       valueSimpleQuantity: valueSimpleQuantity == freezed
           ? _value.valueSimpleQuantity
           : valueSimpleQuantity as Quantity,
@@ -12656,7 +12656,7 @@ class _$_TaskInput extends _TaskInput {
   @override
   final Quantity valueQuantity;
   @override
-  final Duration valueDuration;
+  final FhirDuration valueDuration;
   @override
   final Quantity valueSimpleQuantity;
   @override
@@ -12960,7 +12960,7 @@ abstract class _TaskInput extends TaskInput {
       CodeableConcept valueCodeableConcept,
       Coding valueCoding,
       Quantity valueQuantity,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       Quantity valueSimpleQuantity,
       Distance valueDistance,
       Count valueCount,
@@ -13098,7 +13098,7 @@ abstract class _TaskInput extends TaskInput {
   @override
   Quantity get valueQuantity;
   @override
-  Duration get valueDuration;
+  FhirDuration get valueDuration;
   @override
   Quantity get valueSimpleQuantity;
   @override
@@ -13208,7 +13208,7 @@ class _$TaskOutputTearOff {
       CodeableConcept valueCodeableConcept,
       Coding valueCoding,
       Quantity valueQuantity,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       Quantity valueSimpleQuantity,
       Distance valueDistance,
       Count valueCount,
@@ -13383,7 +13383,7 @@ mixin _$TaskOutput {
   CodeableConcept get valueCodeableConcept;
   Coding get valueCoding;
   Quantity get valueQuantity;
-  Duration get valueDuration;
+  FhirDuration get valueDuration;
   Quantity get valueSimpleQuantity;
   Distance get valueDistance;
   Count get valueCount;
@@ -13465,7 +13465,7 @@ abstract class $TaskOutputCopyWith<$Res> {
       CodeableConcept valueCodeableConcept,
       Coding valueCoding,
       Quantity valueQuantity,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       Quantity valueSimpleQuantity,
       Distance valueDistance,
       Count valueCount,
@@ -13520,7 +13520,7 @@ abstract class $TaskOutputCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
   $CodingCopyWith<$Res> get valueCoding;
   $QuantityCopyWith<$Res> get valueQuantity;
-  $DurationCopyWith<$Res> get valueDuration;
+  $FhirDurationCopyWith<$Res> get valueDuration;
   $QuantityCopyWith<$Res> get valueSimpleQuantity;
   $DistanceCopyWith<$Res> get valueDistance;
   $CountCopyWith<$Res> get valueCount;
@@ -13750,7 +13750,7 @@ class _$TaskOutputCopyWithImpl<$Res> implements $TaskOutputCopyWith<$Res> {
           : valueQuantity as Quantity,
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
-          : valueDuration as Duration,
+          : valueDuration as FhirDuration,
       valueSimpleQuantity: valueSimpleQuantity == freezed
           ? _value.valueSimpleQuantity
           : valueSimpleQuantity as Quantity,
@@ -14099,11 +14099,11 @@ class _$TaskOutputCopyWithImpl<$Res> implements $TaskOutputCopyWith<$Res> {
   }
 
   @override
-  $DurationCopyWith<$Res> get valueDuration {
+  $FhirDurationCopyWith<$Res> get valueDuration {
     if (_value.valueDuration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.valueDuration, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.valueDuration, (value) {
       return _then(_value.copyWith(valueDuration: value));
     });
   }
@@ -14414,7 +14414,7 @@ abstract class _$TaskOutputCopyWith<$Res> implements $TaskOutputCopyWith<$Res> {
       CodeableConcept valueCodeableConcept,
       Coding valueCoding,
       Quantity valueQuantity,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       Quantity valueSimpleQuantity,
       Distance valueDistance,
       Count valueCount,
@@ -14498,7 +14498,7 @@ abstract class _$TaskOutputCopyWith<$Res> implements $TaskOutputCopyWith<$Res> {
   @override
   $QuantityCopyWith<$Res> get valueQuantity;
   @override
-  $DurationCopyWith<$Res> get valueDuration;
+  $FhirDurationCopyWith<$Res> get valueDuration;
   @override
   $QuantityCopyWith<$Res> get valueSimpleQuantity;
   @override
@@ -14755,7 +14755,7 @@ class __$TaskOutputCopyWithImpl<$Res> extends _$TaskOutputCopyWithImpl<$Res>
           : valueQuantity as Quantity,
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
-          : valueDuration as Duration,
+          : valueDuration as FhirDuration,
       valueSimpleQuantity: valueSimpleQuantity == freezed
           ? _value.valueSimpleQuantity
           : valueSimpleQuantity as Quantity,
@@ -15014,7 +15014,7 @@ class _$_TaskOutput extends _TaskOutput {
   @override
   final Quantity valueQuantity;
   @override
-  final Duration valueDuration;
+  final FhirDuration valueDuration;
   @override
   final Quantity valueSimpleQuantity;
   @override
@@ -15318,7 +15318,7 @@ abstract class _TaskOutput extends TaskOutput {
       CodeableConcept valueCodeableConcept,
       Coding valueCoding,
       Quantity valueQuantity,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       Quantity valueSimpleQuantity,
       Distance valueDistance,
       Count valueCount,
@@ -15456,7 +15456,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
   Quantity get valueQuantity;
   @override
-  Duration get valueDuration;
+  FhirDuration get valueDuration;
   @override
   Quantity get valueSimpleQuantity;
   @override

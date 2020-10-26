@@ -5981,7 +5981,7 @@ class _$TaskInputTearOff {
       ContactPoint valueContactPoint,
       Count valueCount,
       Distance valueDistance,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       HumanName valueHumanName,
       Identifier valueIdentifier,
       Money valueMoney,
@@ -6163,7 +6163,7 @@ mixin _$TaskInput {
   ContactPoint get valueContactPoint;
   Count get valueCount;
   Distance get valueDistance;
-  Duration get valueDuration;
+  FhirDuration get valueDuration;
   HumanName get valueHumanName;
   Identifier get valueIdentifier;
   Money get valueMoney;
@@ -6246,7 +6246,7 @@ abstract class $TaskInputCopyWith<$Res> {
       ContactPoint valueContactPoint,
       Count valueCount,
       Distance valueDistance,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       HumanName valueHumanName,
       Identifier valueIdentifier,
       Money valueMoney,
@@ -6298,7 +6298,7 @@ abstract class $TaskInputCopyWith<$Res> {
   $ContactPointCopyWith<$Res> get valueContactPoint;
   $CountCopyWith<$Res> get valueCount;
   $DistanceCopyWith<$Res> get valueDistance;
-  $DurationCopyWith<$Res> get valueDuration;
+  $FhirDurationCopyWith<$Res> get valueDuration;
   $HumanNameCopyWith<$Res> get valueHumanName;
   $IdentifierCopyWith<$Res> get valueIdentifier;
   $MoneyCopyWith<$Res> get valueMoney;
@@ -6537,7 +6537,7 @@ class _$TaskInputCopyWithImpl<$Res> implements $TaskInputCopyWith<$Res> {
           : valueDistance as Distance,
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
-          : valueDuration as Duration,
+          : valueDuration as FhirDuration,
       valueHumanName: valueHumanName == freezed
           ? _value.valueHumanName
           : valueHumanName as HumanName,
@@ -6887,11 +6887,11 @@ class _$TaskInputCopyWithImpl<$Res> implements $TaskInputCopyWith<$Res> {
   }
 
   @override
-  $DurationCopyWith<$Res> get valueDuration {
+  $FhirDurationCopyWith<$Res> get valueDuration {
     if (_value.valueDuration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.valueDuration, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.valueDuration, (value) {
       return _then(_value.copyWith(valueDuration: value));
     });
   }
@@ -7167,7 +7167,7 @@ abstract class _$TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
       ContactPoint valueContactPoint,
       Count valueCount,
       Distance valueDistance,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       HumanName valueHumanName,
       Identifier valueIdentifier,
       Money valueMoney,
@@ -7249,7 +7249,7 @@ abstract class _$TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
   @override
   $DistanceCopyWith<$Res> get valueDistance;
   @override
-  $DurationCopyWith<$Res> get valueDuration;
+  $FhirDurationCopyWith<$Res> get valueDuration;
   @override
   $HumanNameCopyWith<$Res> get valueHumanName;
   @override
@@ -7510,7 +7510,7 @@ class __$TaskInputCopyWithImpl<$Res> extends _$TaskInputCopyWithImpl<$Res>
           : valueDistance as Distance,
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
-          : valueDuration as Duration,
+          : valueDuration as FhirDuration,
       valueHumanName: valueHumanName == freezed
           ? _value.valueHumanName
           : valueHumanName as HumanName,
@@ -7777,7 +7777,7 @@ class _$_TaskInput extends _TaskInput {
   @override
   final Distance valueDistance;
   @override
-  final Duration valueDuration;
+  final FhirDuration valueDuration;
   @override
   final HumanName valueHumanName;
   @override
@@ -8079,7 +8079,7 @@ abstract class _TaskInput extends TaskInput {
       ContactPoint valueContactPoint,
       Count valueCount,
       Distance valueDistance,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       HumanName valueHumanName,
       Identifier valueIdentifier,
       Money valueMoney,
@@ -8228,7 +8228,7 @@ abstract class _TaskInput extends TaskInput {
   @override
   Distance get valueDistance;
   @override
-  Duration get valueDuration;
+  FhirDuration get valueDuration;
   @override
   HumanName get valueHumanName;
   @override
@@ -8336,7 +8336,7 @@ class _$TaskOutputTearOff {
       ContactPoint valueContactPoint,
       Count valueCount,
       Distance valueDistance,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       HumanName valueHumanName,
       Identifier valueIdentifier,
       Money valueMoney,
@@ -8518,7 +8518,7 @@ mixin _$TaskOutput {
   ContactPoint get valueContactPoint;
   Count get valueCount;
   Distance get valueDistance;
-  Duration get valueDuration;
+  FhirDuration get valueDuration;
   HumanName get valueHumanName;
   Identifier get valueIdentifier;
   Money get valueMoney;
@@ -8602,7 +8602,7 @@ abstract class $TaskOutputCopyWith<$Res> {
       ContactPoint valueContactPoint,
       Count valueCount,
       Distance valueDistance,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       HumanName valueHumanName,
       Identifier valueIdentifier,
       Money valueMoney,
@@ -8654,7 +8654,7 @@ abstract class $TaskOutputCopyWith<$Res> {
   $ContactPointCopyWith<$Res> get valueContactPoint;
   $CountCopyWith<$Res> get valueCount;
   $DistanceCopyWith<$Res> get valueDistance;
-  $DurationCopyWith<$Res> get valueDuration;
+  $FhirDurationCopyWith<$Res> get valueDuration;
   $HumanNameCopyWith<$Res> get valueHumanName;
   $IdentifierCopyWith<$Res> get valueIdentifier;
   $MoneyCopyWith<$Res> get valueMoney;
@@ -8893,7 +8893,7 @@ class _$TaskOutputCopyWithImpl<$Res> implements $TaskOutputCopyWith<$Res> {
           : valueDistance as Distance,
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
-          : valueDuration as Duration,
+          : valueDuration as FhirDuration,
       valueHumanName: valueHumanName == freezed
           ? _value.valueHumanName
           : valueHumanName as HumanName,
@@ -9243,11 +9243,11 @@ class _$TaskOutputCopyWithImpl<$Res> implements $TaskOutputCopyWith<$Res> {
   }
 
   @override
-  $DurationCopyWith<$Res> get valueDuration {
+  $FhirDurationCopyWith<$Res> get valueDuration {
     if (_value.valueDuration == null) {
       return null;
     }
-    return $DurationCopyWith<$Res>(_value.valueDuration, (value) {
+    return $FhirDurationCopyWith<$Res>(_value.valueDuration, (value) {
       return _then(_value.copyWith(valueDuration: value));
     });
   }
@@ -9523,7 +9523,7 @@ abstract class _$TaskOutputCopyWith<$Res> implements $TaskOutputCopyWith<$Res> {
       ContactPoint valueContactPoint,
       Count valueCount,
       Distance valueDistance,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       HumanName valueHumanName,
       Identifier valueIdentifier,
       Money valueMoney,
@@ -9605,7 +9605,7 @@ abstract class _$TaskOutputCopyWith<$Res> implements $TaskOutputCopyWith<$Res> {
   @override
   $DistanceCopyWith<$Res> get valueDistance;
   @override
-  $DurationCopyWith<$Res> get valueDuration;
+  $FhirDurationCopyWith<$Res> get valueDuration;
   @override
   $HumanNameCopyWith<$Res> get valueHumanName;
   @override
@@ -9867,7 +9867,7 @@ class __$TaskOutputCopyWithImpl<$Res> extends _$TaskOutputCopyWithImpl<$Res>
           : valueDistance as Distance,
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
-          : valueDuration as Duration,
+          : valueDuration as FhirDuration,
       valueHumanName: valueHumanName == freezed
           ? _value.valueHumanName
           : valueHumanName as HumanName,
@@ -10134,7 +10134,7 @@ class _$_TaskOutput extends _TaskOutput {
   @override
   final Distance valueDistance;
   @override
-  final Duration valueDuration;
+  final FhirDuration valueDuration;
   @override
   final HumanName valueHumanName;
   @override
@@ -10436,7 +10436,7 @@ abstract class _TaskOutput extends TaskOutput {
       ContactPoint valueContactPoint,
       Count valueCount,
       Distance valueDistance,
-      Duration valueDuration,
+      FhirDuration valueDuration,
       HumanName valueHumanName,
       Identifier valueIdentifier,
       Money valueMoney,
@@ -10585,7 +10585,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
   Distance get valueDistance;
   @override
-  Duration get valueDuration;
+  FhirDuration get valueDuration;
   @override
   HumanName get valueHumanName;
   @override

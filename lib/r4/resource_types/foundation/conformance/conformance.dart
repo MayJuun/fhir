@@ -1741,7 +1741,7 @@ abstract class StructureMapSource implements _$StructureMapSource {
     ContactPoint defaultValueContactPoint,
     Count defaultValueCount,
     Distance defaultValueDistance,
-    Duration defaultValueDuration,
+    FhirDuration defaultValueDuration,
     HumanName defaultValueHumanName,
     Identifier defaultValueIdentifier,
     Money defaultValueMoney,

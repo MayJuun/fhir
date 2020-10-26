@@ -406,8 +406,8 @@ const _$QuantityComparatorEnumMap = {
   QuantityComparator.unknown: 'unknown',
 };
 
-_$_Duration _$_$_DurationFromJson(Map<String, dynamic> json) {
-  return _$_Duration(
+_$_FhirDuration _$_$_FhirDurationFromJson(Map<String, dynamic> json) {
+  return _$_FhirDuration(
     id: json['id'] as String,
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
@@ -441,7 +441,7 @@ _$_Duration _$_$_DurationFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_DurationToJson(_$_Duration instance) {
+Map<String, dynamic> _$_$_FhirDurationToJson(_$_FhirDuration instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1299,7 +1299,7 @@ _$_TimingRepeat _$_$_TimingRepeatFromJson(Map<String, dynamic> json) {
         ?.toList(),
     boundsDuration: json['boundsDuration'] == null
         ? null
-        : Duration.fromJson(json['boundsDuration'] as Map<String, dynamic>),
+        : FhirDuration.fromJson(json['boundsDuration'] as Map<String, dynamic>),
     boundsRange: json['boundsRange'] == null
         ? null
         : Range.fromJson(json['boundsRange'] as Map<String, dynamic>),
