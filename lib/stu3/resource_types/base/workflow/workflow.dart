@@ -11,7 +11,7 @@ part 'workflow.g.dart';
 abstract class Appointment with Resource implements _$Appointment {
   Appointment._();
   factory Appointment({
-    @JsonKey(defaultValue: 'Appointment') @required String resourceType,
+    @Default('Appointment') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -78,7 +78,7 @@ abstract class AppointmentResponse
     implements _$AppointmentResponse {
   AppointmentResponse._();
   factory AppointmentResponse({
-    @JsonKey(defaultValue: 'AppointmentResponse') @required String resourceType,
+    @Default('AppointmentResponse') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -111,7 +111,7 @@ abstract class AppointmentResponse
 abstract class ProcessRequest with Resource implements _$ProcessRequest {
   ProcessRequest._();
   factory ProcessRequest({
-    @JsonKey(defaultValue: 'ProcessRequest') @required String resourceType,
+    @Default('ProcessRequest') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -166,7 +166,7 @@ abstract class ProcessRequestItem implements _$ProcessRequestItem {
 abstract class ProcessResponse with Resource implements _$ProcessResponse {
   ProcessResponse._();
   factory ProcessResponse({
-    @JsonKey(defaultValue: 'ProcessResponse') @required String resourceType,
+    @Default('ProcessResponse') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -217,7 +217,7 @@ abstract class ProcessResponseProcessNote
 abstract class RequestGroup with Resource implements _$RequestGroup {
   RequestGroup._();
   factory RequestGroup({
-    @JsonKey(defaultValue: 'RequestGroup') @required String resourceType,
+    @Default('RequestGroup') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -335,7 +335,7 @@ abstract class RequestGroupRelatedAction
 abstract class Schedule with Resource implements _$Schedule {
   Schedule._();
   factory Schedule({
-    @JsonKey(defaultValue: 'Schedule') @required String resourceType,
+    @Default('Schedule') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -366,7 +366,7 @@ abstract class Schedule with Resource implements _$Schedule {
 abstract class Slot with Resource implements _$Slot {
   Slot._();
   factory Slot({
-    @JsonKey(defaultValue: 'Slot') @required String resourceType,
+    @Default('Slot') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -402,7 +402,7 @@ abstract class Slot with Resource implements _$Slot {
 abstract class Task with Resource implements _$Task {
   Task._();
   factory Task({
-    @JsonKey(defaultValue: 'Task') @required String resourceType,
+    @Default('Task') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

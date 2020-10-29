@@ -18,9 +18,7 @@ class _$QuestionnaireTearOff {
 
 // ignore: unused_element
   _Questionnaire call(
-      {@required
-      @JsonKey(defaultValue: 'Questionnaire')
-          String resourceType,
+      {String resourceType = 'Questionnaire',
       Id id,
       @JsonKey(name: '_id')
           Element idElement,
@@ -99,7 +97,6 @@ const $Questionnaire = _$QuestionnaireTearOff();
 
 /// @nodoc
 mixin _$Questionnaire {
-  @JsonKey(defaultValue: 'Questionnaire')
   String get resourceType;
   Id get id;
   @JsonKey(name: '_id')
@@ -147,8 +144,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
           Questionnaire value, $Res Function(Questionnaire) then) =
       _$QuestionnaireCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'Questionnaire')
-          String resourceType,
+      {String resourceType,
       Id id,
       @JsonKey(name: '_id')
           Element idElement,
@@ -399,8 +395,7 @@ abstract class _$QuestionnaireCopyWith<$Res>
       __$QuestionnaireCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'Questionnaire')
-          String resourceType,
+      {String resourceType,
       Id id,
       @JsonKey(name: '_id')
           Element idElement,
@@ -560,9 +555,7 @@ class __$QuestionnaireCopyWithImpl<$Res>
 /// @nodoc
 class _$_Questionnaire extends _Questionnaire {
   _$_Questionnaire(
-      {@required
-      @JsonKey(defaultValue: 'Questionnaire')
-          this.resourceType,
+      {this.resourceType = 'Questionnaire',
       this.id,
       @JsonKey(name: '_id')
           this.idElement,
@@ -608,8 +601,8 @@ class _$_Questionnaire extends _Questionnaire {
   factory _$_Questionnaire.fromJson(Map<String, dynamic> json) =>
       _$_$_QuestionnaireFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'Questionnaire')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -792,9 +785,7 @@ class _$_Questionnaire extends _Questionnaire {
 abstract class _Questionnaire extends Questionnaire {
   _Questionnaire._() : super._();
   factory _Questionnaire(
-      {@required
-      @JsonKey(defaultValue: 'Questionnaire')
-          String resourceType,
+      {String resourceType,
       Id id,
       @JsonKey(name: '_id')
           Element idElement,
@@ -837,7 +828,6 @@ abstract class _Questionnaire extends Questionnaire {
       _$_Questionnaire.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'Questionnaire')
   String get resourceType;
   @override
   Id get id;
@@ -4427,7 +4417,7 @@ class _$ProvenanceTearOff {
 
 // ignore: unused_element
   _Provenance call(
-      {@required @JsonKey(defaultValue: 'Provenance') String resourceType,
+      {String resourceType = 'Provenance',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4489,7 +4479,6 @@ const $Provenance = _$ProvenanceTearOff();
 
 /// @nodoc
 mixin _$Provenance {
-  @JsonKey(defaultValue: 'Provenance')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -4531,7 +4520,7 @@ abstract class $ProvenanceCopyWith<$Res> {
           Provenance value, $Res Function(Provenance) then) =
       _$ProvenanceCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'Provenance') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4736,7 +4725,7 @@ abstract class _$ProvenanceCopyWith<$Res> implements $ProvenanceCopyWith<$Res> {
       __$ProvenanceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'Provenance') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4869,7 +4858,7 @@ class __$ProvenanceCopyWithImpl<$Res> extends _$ProvenanceCopyWithImpl<$Res>
 /// @nodoc
 class _$_Provenance extends _Provenance {
   _$_Provenance(
-      {@required @JsonKey(defaultValue: 'Provenance') this.resourceType,
+      {this.resourceType = 'Provenance',
       this.id,
       this.meta,
       this.implicitRules,
@@ -4900,8 +4889,8 @@ class _$_Provenance extends _Provenance {
   factory _$_Provenance.fromJson(Map<String, dynamic> json) =>
       _$_$_ProvenanceFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'Provenance')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -5066,7 +5055,7 @@ class _$_Provenance extends _Provenance {
 abstract class _Provenance extends Provenance {
   _Provenance._() : super._();
   factory _Provenance(
-      {@required @JsonKey(defaultValue: 'Provenance') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5094,7 +5083,6 @@ abstract class _Provenance extends Provenance {
       _$_Provenance.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'Provenance')
   String get resourceType;
   @override
   Id get id;
@@ -6253,9 +6241,7 @@ class _$AuditEventTearOff {
 
 // ignore: unused_element
   _AuditEvent call(
-      {@required
-      @JsonKey(defaultValue: 'AuditEvent')
-          String resourceType,
+      {String resourceType = 'AuditEvent',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6310,7 +6296,6 @@ const $AuditEvent = _$AuditEventTearOff();
 
 /// @nodoc
 mixin _$AuditEvent {
-  @JsonKey(defaultValue: 'AuditEvent')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -6343,7 +6328,7 @@ abstract class $AuditEventCopyWith<$Res> {
           AuditEvent value, $Res Function(AuditEvent) then) =
       _$AuditEventCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'AuditEvent') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6496,7 +6481,7 @@ abstract class _$AuditEventCopyWith<$Res> implements $AuditEventCopyWith<$Res> {
       __$AuditEventCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'AuditEvent') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6595,7 +6580,7 @@ class __$AuditEventCopyWithImpl<$Res> extends _$AuditEventCopyWithImpl<$Res>
 /// @nodoc
 class _$_AuditEvent extends _AuditEvent {
   _$_AuditEvent(
-      {@required @JsonKey(defaultValue: 'AuditEvent') this.resourceType,
+      {this.resourceType = 'AuditEvent',
       this.id,
       this.meta,
       this.implicitRules,
@@ -6619,8 +6604,8 @@ class _$_AuditEvent extends _AuditEvent {
   factory _$_AuditEvent.fromJson(Map<String, dynamic> json) =>
       _$_$_AuditEventFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'AuditEvent')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -6739,9 +6724,7 @@ class _$_AuditEvent extends _AuditEvent {
 abstract class _AuditEvent extends AuditEvent {
   _AuditEvent._() : super._();
   factory _AuditEvent(
-      {@required
-      @JsonKey(defaultValue: 'AuditEvent')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6770,7 +6753,6 @@ abstract class _AuditEvent extends AuditEvent {
       _$_AuditEvent.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'AuditEvent')
   String get resourceType;
   @override
   Id get id;

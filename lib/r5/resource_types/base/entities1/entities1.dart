@@ -11,7 +11,7 @@ part 'entities1.g.dart';
 abstract class Endpoint with Resource implements _$Endpoint {
   Endpoint._();
   factory Endpoint({
-    @JsonKey(defaultValue: 'Endpoint') @required String resourceType,
+    @Default('Endpoint') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -48,7 +48,7 @@ abstract class Endpoint with Resource implements _$Endpoint {
 abstract class HealthcareService with Resource implements _$HealthcareService {
   HealthcareService._();
   factory HealthcareService({
-    @JsonKey(defaultValue: 'HealthcareService') @required String resourceType,
+    @Default('HealthcareService') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -156,7 +156,7 @@ abstract class HealthcareServiceNotAvailable
 abstract class Location with Resource implements _$Location {
   Location._();
   factory Location({
-    @JsonKey(defaultValue: 'Location') @required String resourceType,
+    @Default('Location') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -241,7 +241,7 @@ abstract class LocationHoursOfOperation implements _$LocationHoursOfOperation {
 abstract class Organization with Resource implements _$Organization {
   Organization._();
   factory Organization({
-    @JsonKey(defaultValue: 'Organization') @required String resourceType,
+    @Default('Organization') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

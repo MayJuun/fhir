@@ -11,7 +11,7 @@ part 'groups.g.dart';
 abstract class Organization with Resource implements _$Organization {
   Organization._();
   factory Organization({
-    @JsonKey(defaultValue: 'Organization') @required String resourceType,
+    @Default('Organization') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -62,7 +62,7 @@ abstract class OrganizationContact with _$OrganizationContact {
 abstract class HealthcareService with Resource implements _$HealthcareService {
   HealthcareService._();
   factory HealthcareService({
-    @JsonKey(defaultValue: 'HealthcareService') @required String resourceType,
+    @Default('HealthcareService') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -165,7 +165,7 @@ abstract class HealthcareServiceNotAvailable
 abstract class Group with Resource implements _$Group {
   Group._();
   factory Group({
-    @JsonKey(defaultValue: 'Group') @required String resourceType,
+    @Default('Group') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

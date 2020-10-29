@@ -11,7 +11,7 @@ part 'information_tracking.g.dart';
 abstract class Questionnaire with Resource implements _$Questionnaire {
   Questionnaire._();
   factory Questionnaire({
-    @JsonKey(defaultValue: 'Questionnaire') @required String resourceType,
+    @Default('Questionnaire') String resourceType,
     Id id,
     @JsonKey(name: '_id') Element idElement,
     Meta meta,
@@ -217,7 +217,7 @@ abstract class QuestionnaireResponseQuestionAnswer
 abstract class Provenance with Resource implements _$Provenance {
   Provenance._();
   factory Provenance({
-    @JsonKey(defaultValue: 'Provenance') @required String resourceType,
+    @Default('Provenance') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -306,7 +306,7 @@ abstract class ProvenanceAgentRelatedAgent with _$ProvenanceAgentRelatedAgent {
 abstract class AuditEvent with Resource implements _$AuditEvent {
   AuditEvent._();
   factory AuditEvent({
-    @JsonKey(defaultValue: 'AuditEvent') @required String resourceType,
+    @Default('AuditEvent') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

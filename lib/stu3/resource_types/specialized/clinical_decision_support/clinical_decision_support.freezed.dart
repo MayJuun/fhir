@@ -18,7 +18,7 @@ class _$GuidanceResponseTearOff {
 
 // ignore: unused_element
   _GuidanceResponse call(
-      {@required @JsonKey(defaultValue: 'GuidanceResponse') String resourceType,
+      {String resourceType = 'GuidanceResponse',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -92,7 +92,6 @@ const $GuidanceResponse = _$GuidanceResponseTearOff();
 
 /// @nodoc
 mixin _$GuidanceResponse {
-  @JsonKey(defaultValue: 'GuidanceResponse')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -139,7 +138,7 @@ abstract class $GuidanceResponseCopyWith<$Res> {
           GuidanceResponse value, $Res Function(GuidanceResponse) then) =
       _$GuidanceResponseCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'GuidanceResponse') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -465,7 +464,7 @@ abstract class _$GuidanceResponseCopyWith<$Res>
       __$GuidanceResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'GuidanceResponse') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -645,7 +644,7 @@ class __$GuidanceResponseCopyWithImpl<$Res>
 /// @nodoc
 class _$_GuidanceResponse extends _GuidanceResponse {
   _$_GuidanceResponse(
-      {@required @JsonKey(defaultValue: 'GuidanceResponse') this.resourceType,
+      {this.resourceType = 'GuidanceResponse',
       this.id,
       this.meta,
       this.implicitRules,
@@ -681,8 +680,8 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   factory _$_GuidanceResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_GuidanceResponseFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'GuidanceResponse')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -875,7 +874,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
 abstract class _GuidanceResponse extends GuidanceResponse {
   _GuidanceResponse._() : super._();
   factory _GuidanceResponse(
-      {@required @JsonKey(defaultValue: 'GuidanceResponse') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -909,7 +908,6 @@ abstract class _GuidanceResponse extends GuidanceResponse {
       _$_GuidanceResponse.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'GuidanceResponse')
   String get resourceType;
   @override
   Id get id;

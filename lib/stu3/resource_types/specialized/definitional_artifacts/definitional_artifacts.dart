@@ -13,7 +13,7 @@ abstract class ActivityDefinition
     implements _$ActivityDefinition {
   ActivityDefinition._();
   factory ActivityDefinition({
-    @JsonKey(defaultValue: 'ActivityDefinition') @required String resourceType,
+    @Default('ActivityDefinition') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -121,7 +121,7 @@ abstract class ActivityDefinitionDynamicValue
 abstract class PlanDefinition with Resource implements _$PlanDefinition {
   PlanDefinition._();
   factory PlanDefinition({
-    @JsonKey(defaultValue: 'PlanDefinition') @required String resourceType,
+    @Default('PlanDefinition') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -332,7 +332,7 @@ abstract class PlanDefinitionDynamicValue
 abstract class Questionnaire with Resource implements _$Questionnaire {
   Questionnaire._();
   factory Questionnaire({
-    @JsonKey(defaultValue: 'Questionnaire') @required String resourceType,
+    @Default('Questionnaire') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -495,7 +495,7 @@ abstract class QuestionnaireOption implements _$QuestionnaireOption {
 abstract class ServiceDefinition with Resource implements _$ServiceDefinition {
   ServiceDefinition._();
   factory ServiceDefinition({
-    @JsonKey(defaultValue: 'ServiceDefinition') @required String resourceType,
+    @Default('ServiceDefinition') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

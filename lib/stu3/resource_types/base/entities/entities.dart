@@ -11,7 +11,7 @@ part 'entities.g.dart';
 abstract class Device with Resource implements _$Device {
   Device._();
   factory Device({
-    @JsonKey(defaultValue: 'Device') @required String resourceType,
+    @Default('Device') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -80,7 +80,7 @@ abstract class DeviceUdi implements _$DeviceUdi {
 abstract class DeviceComponent with Resource implements _$DeviceComponent {
   DeviceComponent._();
   factory DeviceComponent({
-    @JsonKey(defaultValue: 'DeviceComponent') @required String resourceType,
+    @Default('DeviceComponent') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -129,7 +129,7 @@ abstract class DeviceComponentProductionSpecification
 abstract class DeviceMetric with Resource implements _$DeviceMetric {
   DeviceMetric._();
   factory DeviceMetric({
-    @JsonKey(defaultValue: 'DeviceMetric') @required String resourceType,
+    @Default('DeviceMetric') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -179,7 +179,7 @@ abstract class DeviceMetricCalibration implements _$DeviceMetricCalibration {
 abstract class Endpoint with Resource implements _$Endpoint {
   Endpoint._();
   factory Endpoint({
-    @JsonKey(defaultValue: 'Endpoint') @required String resourceType,
+    @Default('Endpoint') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -216,7 +216,7 @@ abstract class Endpoint with Resource implements _$Endpoint {
 abstract class HealthcareService with Resource implements _$HealthcareService {
   HealthcareService._();
   factory HealthcareService({
-    @JsonKey(defaultValue: 'HealthcareService') @required String resourceType,
+    @Default('HealthcareService') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -303,7 +303,7 @@ abstract class HealthcareServiceNotAvailable
 abstract class Location with Resource implements _$Location {
   Location._();
   factory Location({
-    @JsonKey(defaultValue: 'Location') @required String resourceType,
+    @Default('Location') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -360,7 +360,7 @@ abstract class LocationPosition implements _$LocationPosition {
 abstract class Organization with Resource implements _$Organization {
   Organization._();
   factory Organization({
-    @JsonKey(defaultValue: 'Organization') @required String resourceType,
+    @Default('Organization') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -408,7 +408,7 @@ abstract class OrganizationContact implements _$OrganizationContact {
 abstract class Substance with Resource implements _$Substance {
   Substance._();
   factory Substance({
-    @JsonKey(defaultValue: 'Substance') @required String resourceType,
+    @Default('Substance') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

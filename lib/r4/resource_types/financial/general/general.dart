@@ -11,7 +11,7 @@ part 'general.g.dart';
 abstract class Account with Resource implements _$Account {
   Account._();
   factory Account({
-    @JsonKey(defaultValue: 'Account') @required String resourceType,
+    @Default('Account') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -79,7 +79,7 @@ abstract class AccountGuarantor implements _$AccountGuarantor {
 abstract class ChargeItem with Resource implements _$ChargeItem {
   ChargeItem._();
   factory ChargeItem({
-    @JsonKey(defaultValue: 'ChargeItem') @required String resourceType,
+    @Default('ChargeItem') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -271,7 +271,7 @@ abstract class ChargeItemDefinitionPriceComponent
 abstract class Contract with Resource implements _$Contract {
   Contract._();
   factory Contract({
-    @JsonKey(defaultValue: 'Contract') @required String resourceType,
+    @Default('Contract') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1256,7 +1256,7 @@ abstract class ExplanationOfBenefitFinancial
 abstract class InsurancePlan with Resource implements _$InsurancePlan {
   InsurancePlan._();
   factory InsurancePlan({
-    @JsonKey(defaultValue: 'InsurancePlan') @required String resourceType,
+    @Default('InsurancePlan') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

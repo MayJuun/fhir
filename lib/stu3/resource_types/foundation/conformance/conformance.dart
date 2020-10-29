@@ -13,7 +13,7 @@ abstract class CapabilityStatement
     implements _$CapabilityStatement {
   CapabilityStatement._();
   factory CapabilityStatement({
-    @JsonKey(defaultValue: 'CapabilityStatement') @required String resourceType,
+    @Default('CapabilityStatement') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -420,7 +420,7 @@ abstract class CompartmentDefinitionResource
 abstract class DataElement with Resource implements _$DataElement {
   DataElement._();
   factory DataElement({
-    @JsonKey(defaultValue: 'DataElement') @required String resourceType,
+    @Default('DataElement') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -485,7 +485,7 @@ abstract class DataElementMapping implements _$DataElementMapping {
 abstract class GraphDefinition with Resource implements _$GraphDefinition {
   GraphDefinition._();
   factory GraphDefinition({
-    @JsonKey(defaultValue: 'GraphDefinition') @required String resourceType,
+    @Default('GraphDefinition') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -590,7 +590,7 @@ abstract class ImplementationGuide
     implements _$ImplementationGuide {
   ImplementationGuide._();
   factory ImplementationGuide({
-    @JsonKey(defaultValue: 'ImplementationGuide') @required String resourceType,
+    @Default('ImplementationGuide') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -731,7 +731,7 @@ abstract class ImplementationGuidePage implements _$ImplementationGuidePage {
 abstract class MessageDefinition with Resource implements _$MessageDefinition {
   MessageDefinition._();
   factory MessageDefinition({
-    @JsonKey(defaultValue: 'MessageDefinition') @required String resourceType,
+    @Default('MessageDefinition') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -822,7 +822,7 @@ abstract class OperationDefinition
     implements _$OperationDefinition {
   OperationDefinition._();
   factory OperationDefinition({
-    @JsonKey(defaultValue: 'OperationDefinition') @required String resourceType,
+    @Default('OperationDefinition') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -943,7 +943,7 @@ abstract class OperationDefinitionOverload
 abstract class SearchParameter with Resource implements _$SearchParameter {
   SearchParameter._();
   factory SearchParameter({
-    @JsonKey(defaultValue: 'SearchParameter') @required String resourceType,
+    @Default('SearchParameter') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1023,7 +1023,7 @@ abstract class StructureDefinition
     implements _$StructureDefinition {
   StructureDefinition._();
   factory StructureDefinition({
-    @JsonKey(defaultValue: 'StructureDefinition') @required String resourceType,
+    @Default('StructureDefinition') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1135,7 +1135,7 @@ abstract class StructureDefinitionDifferential
 abstract class StructureMap with Resource implements _$StructureMap {
   StructureMap._();
   factory StructureMap({
-    @JsonKey(defaultValue: 'StructureMap') @required String resourceType,
+    @Default('StructureMap') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

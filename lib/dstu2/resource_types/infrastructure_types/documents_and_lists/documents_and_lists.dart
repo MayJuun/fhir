@@ -11,7 +11,7 @@ part 'documents_and_lists.g.dart';
 abstract class Composition with Resource implements _$Composition {
   Composition._();
   factory Composition({
-    @JsonKey(defaultValue: 'Composition') @required String resourceType,
+    @Default('Composition') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -110,7 +110,7 @@ abstract class CompositionSection with _$CompositionSection {
 abstract class DocumentManifest with Resource implements _$DocumentManifest {
   DocumentManifest._();
   factory DocumentManifest({
-    @JsonKey(defaultValue: 'DocumentManifest') @required String resourceType,
+    @Default('DocumentManifest') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -179,7 +179,7 @@ abstract class DocumentManifestRelated with _$DocumentManifestRelated {
 abstract class DocumentReference with Resource implements _$DocumentReference {
   DocumentReference._();
   factory DocumentReference({
-    @JsonKey(defaultValue: 'DocumentReference') @required String resourceType,
+    @Default('DocumentReference') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -291,7 +291,7 @@ abstract class DocumentReferenceContextRelated
 abstract class List_ with Resource implements _$List_ {
   List_._();
   factory List_({
-    @JsonKey(defaultValue: 'List') @required String resourceType,
+    @Default('List') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

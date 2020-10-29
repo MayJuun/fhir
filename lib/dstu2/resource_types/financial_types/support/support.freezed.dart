@@ -18,7 +18,7 @@ class _$CoverageTearOff {
 
 // ignore: unused_element
   _Coverage call(
-      {@required @JsonKey(defaultValue: 'Coverage') String resourceType,
+      {String resourceType = 'Coverage',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -90,7 +90,6 @@ const $Coverage = _$CoverageTearOff();
 
 /// @nodoc
 mixin _$Coverage {
-  @JsonKey(defaultValue: 'Coverage')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -135,7 +134,7 @@ abstract class $CoverageCopyWith<$Res> {
   factory $CoverageCopyWith(Coverage value, $Res Function(Coverage) then) =
       _$CoverageCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'Coverage') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -424,7 +423,7 @@ abstract class _$CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
       __$CoverageCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'Coverage') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -587,7 +586,7 @@ class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
 /// @nodoc
 class _$_Coverage extends _Coverage {
   _$_Coverage(
-      {@required @JsonKey(defaultValue: 'Coverage') this.resourceType,
+      {this.resourceType = 'Coverage',
       this.id,
       this.meta,
       this.implicitRules,
@@ -621,8 +620,8 @@ class _$_Coverage extends _Coverage {
   factory _$_Coverage.fromJson(Map<String, dynamic> json) =>
       _$_$_CoverageFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'Coverage')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -812,7 +811,7 @@ class _$_Coverage extends _Coverage {
 abstract class _Coverage extends Coverage {
   _Coverage._() : super._();
   factory _Coverage(
-      {@required @JsonKey(defaultValue: 'Coverage') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -844,7 +843,6 @@ abstract class _Coverage extends Coverage {
   factory _Coverage.fromJson(Map<String, dynamic> json) = _$_Coverage.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'Coverage')
   String get resourceType;
   @override
   Id get id;
@@ -920,28 +918,22 @@ class _$EligibilityRequestTearOff {
 
 // ignore: unused_element
   _EligibilityRequest call(
-      {@required
-      @JsonKey(defaultValue: 'EligibilityRequest')
-          String resourceType,
+      {String resourceType = 'EligibilityRequest',
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Coding ruleset,
       Coding originalRuleset,
       FhirDateTime created,
-      @JsonKey(name: '_created')
-          Element createdElement,
+      @JsonKey(name: '_created') Element createdElement,
       Reference target,
       Reference provider,
       Reference organization}) {
@@ -980,7 +972,6 @@ const $EligibilityRequest = _$EligibilityRequestTearOff();
 
 /// @nodoc
 mixin _$EligibilityRequest {
-  @JsonKey(defaultValue: 'EligibilityRequest')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -1015,7 +1006,7 @@ abstract class $EligibilityRequestCopyWith<$Res> {
           EligibilityRequest value, $Res Function(EligibilityRequest) then) =
       _$EligibilityRequestCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'EligibilityRequest') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1231,7 +1222,7 @@ abstract class _$EligibilityRequestCopyWith<$Res>
       __$EligibilityRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'EligibilityRequest') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1356,7 +1347,7 @@ class __$EligibilityRequestCopyWithImpl<$Res>
 /// @nodoc
 class _$_EligibilityRequest extends _EligibilityRequest {
   _$_EligibilityRequest(
-      {@required @JsonKey(defaultValue: 'EligibilityRequest') this.resourceType,
+      {this.resourceType = 'EligibilityRequest',
       this.id,
       this.meta,
       this.implicitRules,
@@ -1381,8 +1372,8 @@ class _$_EligibilityRequest extends _EligibilityRequest {
   factory _$_EligibilityRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_EligibilityRequestFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'EligibilityRequest')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -1525,28 +1516,22 @@ class _$_EligibilityRequest extends _EligibilityRequest {
 abstract class _EligibilityRequest extends EligibilityRequest {
   _EligibilityRequest._() : super._();
   factory _EligibilityRequest(
-      {@required
-      @JsonKey(defaultValue: 'EligibilityRequest')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Coding ruleset,
       Coding originalRuleset,
       FhirDateTime created,
-      @JsonKey(name: '_created')
-          Element createdElement,
+      @JsonKey(name: '_created') Element createdElement,
       Reference target,
       Reference provider,
       Reference organization}) = _$_EligibilityRequest;
@@ -1555,7 +1540,6 @@ abstract class _EligibilityRequest extends EligibilityRequest {
       _$_EligibilityRequest.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'EligibilityRequest')
   String get resourceType;
   @override
   Id get id;
@@ -1611,9 +1595,7 @@ class _$EligibilityResponseTearOff {
 
 // ignore: unused_element
   _EligibilityResponse call(
-      {@required
-      @JsonKey(defaultValue: 'EligibilityResponse')
-          String resourceType,
+      {String resourceType = 'EligibilityResponse',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1684,7 +1666,6 @@ const $EligibilityResponse = _$EligibilityResponseTearOff();
 
 /// @nodoc
 mixin _$EligibilityResponse {
-  @JsonKey(defaultValue: 'EligibilityResponse')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -1727,8 +1708,7 @@ abstract class $EligibilityResponseCopyWith<$Res> {
           EligibilityResponse value, $Res Function(EligibilityResponse) then) =
       _$EligibilityResponseCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'EligibilityResponse')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2010,8 +1990,7 @@ abstract class _$EligibilityResponseCopyWith<$Res>
       __$EligibilityResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'EligibilityResponse')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2175,9 +2154,7 @@ class __$EligibilityResponseCopyWithImpl<$Res>
 /// @nodoc
 class _$_EligibilityResponse extends _EligibilityResponse {
   _$_EligibilityResponse(
-      {@required
-      @JsonKey(defaultValue: 'EligibilityResponse')
-          this.resourceType,
+      {this.resourceType = 'EligibilityResponse',
       this.id,
       this.meta,
       this.implicitRules,
@@ -2214,8 +2191,8 @@ class _$_EligibilityResponse extends _EligibilityResponse {
   factory _$_EligibilityResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_EligibilityResponseFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'EligibilityResponse')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -2391,9 +2368,7 @@ class _$_EligibilityResponse extends _EligibilityResponse {
 abstract class _EligibilityResponse extends EligibilityResponse {
   _EligibilityResponse._() : super._();
   factory _EligibilityResponse(
-      {@required
-      @JsonKey(defaultValue: 'EligibilityResponse')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2429,7 +2404,6 @@ abstract class _EligibilityResponse extends EligibilityResponse {
       _$_EligibilityResponse.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'EligibilityResponse')
   String get resourceType;
   @override
   Id get id;
@@ -2498,40 +2472,28 @@ class _$EnrollmentRequestTearOff {
 
 // ignore: unused_element
   _EnrollmentRequest call(
-      {@required
-      @JsonKey(defaultValue: 'EnrollmentRequest')
-          String resourceType,
+      {String resourceType = 'EnrollmentRequest',
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Coding ruleset,
       Coding originalRuleset,
       FhirDateTime created,
-      @JsonKey(name: '_created')
-          Element createdElement,
+      @JsonKey(name: '_created') Element createdElement,
       Reference target,
       Reference provider,
       Reference organization,
-      @required
-      @JsonKey(required: true)
-          Reference subject,
-      @required
-      @JsonKey(required: true)
-          Reference coverage,
-      @required
-      @JsonKey(required: true)
-          Coding relationship}) {
+      @required @JsonKey(required: true) Reference subject,
+      @required @JsonKey(required: true) Reference coverage,
+      @required @JsonKey(required: true) Coding relationship}) {
     return _EnrollmentRequest(
       resourceType: resourceType,
       id: id,
@@ -2570,7 +2532,6 @@ const $EnrollmentRequest = _$EnrollmentRequestTearOff();
 
 /// @nodoc
 mixin _$EnrollmentRequest {
-  @JsonKey(defaultValue: 'EnrollmentRequest')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -2611,7 +2572,7 @@ abstract class $EnrollmentRequestCopyWith<$Res> {
           EnrollmentRequest value, $Res Function(EnrollmentRequest) then) =
       _$EnrollmentRequestCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'EnrollmentRequest') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2871,7 +2832,7 @@ abstract class _$EnrollmentRequestCopyWith<$Res>
       __$EnrollmentRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'EnrollmentRequest') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3013,7 +2974,7 @@ class __$EnrollmentRequestCopyWithImpl<$Res>
 /// @nodoc
 class _$_EnrollmentRequest extends _EnrollmentRequest {
   _$_EnrollmentRequest(
-      {@required @JsonKey(defaultValue: 'EnrollmentRequest') this.resourceType,
+      {this.resourceType = 'EnrollmentRequest',
       this.id,
       this.meta,
       this.implicitRules,
@@ -3044,8 +3005,8 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
   factory _$_EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_EnrollmentRequestFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'EnrollmentRequest')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -3209,46 +3170,34 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
 abstract class _EnrollmentRequest extends EnrollmentRequest {
   _EnrollmentRequest._() : super._();
   factory _EnrollmentRequest(
-      {@required
-      @JsonKey(defaultValue: 'EnrollmentRequest')
-          String resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Coding ruleset,
-      Coding originalRuleset,
-      FhirDateTime created,
-      @JsonKey(name: '_created')
-          Element createdElement,
-      Reference target,
-      Reference provider,
-      Reference organization,
-      @required
-      @JsonKey(required: true)
-          Reference subject,
-      @required
-      @JsonKey(required: true)
-          Reference coverage,
-      @required
-      @JsonKey(required: true)
-          Coding relationship}) = _$_EnrollmentRequest;
+          {String resourceType,
+          Id id,
+          Meta meta,
+          FhirUri implicitRules,
+          @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+          Code language,
+          @JsonKey(name: '_language') Element languageElement,
+          Narrative text,
+          List<Resource> contained,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          List<Identifier> identifier,
+          Coding ruleset,
+          Coding originalRuleset,
+          FhirDateTime created,
+          @JsonKey(name: '_created') Element createdElement,
+          Reference target,
+          Reference provider,
+          Reference organization,
+          @required @JsonKey(required: true) Reference subject,
+          @required @JsonKey(required: true) Reference coverage,
+          @required @JsonKey(required: true) Coding relationship}) =
+      _$_EnrollmentRequest;
 
   factory _EnrollmentRequest.fromJson(Map<String, dynamic> json) =
       _$_EnrollmentRequest.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'EnrollmentRequest')
   String get resourceType;
   @override
   Id get id;
@@ -3313,9 +3262,7 @@ class _$EnrollmentResponseTearOff {
 
 // ignore: unused_element
   _EnrollmentResponse call(
-      {@required
-      @JsonKey(defaultValue: 'EnrollmentResponse')
-          String resourceType,
+      {String resourceType = 'EnrollmentResponse',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3386,7 +3333,6 @@ const $EnrollmentResponse = _$EnrollmentResponseTearOff();
 
 /// @nodoc
 mixin _$EnrollmentResponse {
-  @JsonKey(defaultValue: 'EnrollmentResponse')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -3429,8 +3375,7 @@ abstract class $EnrollmentResponseCopyWith<$Res> {
           EnrollmentResponse value, $Res Function(EnrollmentResponse) then) =
       _$EnrollmentResponseCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'EnrollmentResponse')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3712,8 +3657,7 @@ abstract class _$EnrollmentResponseCopyWith<$Res>
       __$EnrollmentResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'EnrollmentResponse')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3877,9 +3821,7 @@ class __$EnrollmentResponseCopyWithImpl<$Res>
 /// @nodoc
 class _$_EnrollmentResponse extends _EnrollmentResponse {
   _$_EnrollmentResponse(
-      {@required
-      @JsonKey(defaultValue: 'EnrollmentResponse')
-          this.resourceType,
+      {this.resourceType = 'EnrollmentResponse',
       this.id,
       this.meta,
       this.implicitRules,
@@ -3916,8 +3858,8 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
   factory _$_EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_EnrollmentResponseFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'EnrollmentResponse')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -4092,9 +4034,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
 abstract class _EnrollmentResponse extends EnrollmentResponse {
   _EnrollmentResponse._() : super._();
   factory _EnrollmentResponse(
-      {@required
-      @JsonKey(defaultValue: 'EnrollmentResponse')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4130,7 +4070,6 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
       _$_EnrollmentResponse.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'EnrollmentResponse')
   String get resourceType;
   @override
   Id get id;

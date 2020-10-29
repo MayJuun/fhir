@@ -18,9 +18,7 @@ class _$ImplementationGuideTearOff {
 
 // ignore: unused_element
   _ImplementationGuide call(
-      {@required
-      @JsonKey(defaultValue: 'ImplementationGuide')
-          String resourceType,
+      {String resourceType = 'ImplementationGuide',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -135,7 +133,6 @@ const $ImplementationGuide = _$ImplementationGuideTearOff();
 
 /// @nodoc
 mixin _$ImplementationGuide {
-  @JsonKey(defaultValue: 'ImplementationGuide')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -203,8 +200,7 @@ abstract class $ImplementationGuideCopyWith<$Res> {
           ImplementationGuide value, $Res Function(ImplementationGuide) then) =
       _$ImplementationGuideCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'ImplementationGuide')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -564,8 +560,7 @@ abstract class _$ImplementationGuideCopyWith<$Res>
       __$ImplementationGuideCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'ImplementationGuide')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -798,9 +793,7 @@ class __$ImplementationGuideCopyWithImpl<$Res>
 /// @nodoc
 class _$_ImplementationGuide extends _ImplementationGuide {
   _$_ImplementationGuide(
-      {@required
-      @JsonKey(defaultValue: 'ImplementationGuide')
-          this.resourceType,
+      {this.resourceType = 'ImplementationGuide',
       this.id,
       this.meta,
       this.implicitRules,
@@ -872,8 +865,8 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   factory _$_ImplementationGuide.fromJson(Map<String, dynamic> json) =>
       _$_$_ImplementationGuideFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'ImplementationGuide')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -1116,9 +1109,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
 abstract class _ImplementationGuide extends ImplementationGuide {
   _ImplementationGuide._() : super._();
   factory _ImplementationGuide(
-      {@required
-      @JsonKey(defaultValue: 'ImplementationGuide')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1184,7 +1175,6 @@ abstract class _ImplementationGuide extends ImplementationGuide {
       _$_ImplementationGuide.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'ImplementationGuide')
   String get resourceType;
   @override
   Id get id;
@@ -3257,9 +3247,7 @@ class _$TestScriptTearOff {
 
 // ignore: unused_element
   _TestScript call(
-      {@required
-      @JsonKey(defaultValue: 'TestScript')
-          String resourceType,
+      {String resourceType = 'TestScript',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3372,7 +3360,6 @@ const $TestScript = _$TestScriptTearOff();
 
 /// @nodoc
 mixin _$TestScript {
-  @JsonKey(defaultValue: 'TestScript')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -3438,8 +3425,7 @@ abstract class $TestScriptCopyWith<$Res> {
           TestScript value, $Res Function(TestScript) then) =
       _$TestScriptCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'TestScript')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3820,8 +3806,7 @@ abstract class _$TestScriptCopyWith<$Res> implements $TestScriptCopyWith<$Res> {
       __$TestScriptCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'TestScript')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4058,9 +4043,7 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
 /// @nodoc
 class _$_TestScript extends _TestScript {
   _$_TestScript(
-      {@required
-      @JsonKey(defaultValue: 'TestScript')
-          this.resourceType,
+      {this.resourceType = 'TestScript',
       this.id,
       this.meta,
       this.implicitRules,
@@ -4126,8 +4109,8 @@ class _$_TestScript extends _TestScript {
   factory _$_TestScript.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'TestScript')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -4373,9 +4356,7 @@ class _$_TestScript extends _TestScript {
 abstract class _TestScript extends TestScript {
   _TestScript._() : super._();
   factory _TestScript(
-      {@required
-      @JsonKey(defaultValue: 'TestScript')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4437,7 +4418,6 @@ abstract class _TestScript extends TestScript {
       _$_TestScript.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'TestScript')
   String get resourceType;
   @override
   Id get id;

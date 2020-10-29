@@ -18,7 +18,7 @@ class _$AdverseEventTearOff {
 
 // ignore: unused_element
   _AdverseEvent call(
-      {@required @JsonKey(defaultValue: 'AdverseEvent') String resourceType,
+      {String resourceType = 'AdverseEvent',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -94,7 +94,6 @@ const $AdverseEvent = _$AdverseEventTearOff();
 
 /// @nodoc
 mixin _$AdverseEvent {
-  @JsonKey(defaultValue: 'AdverseEvent')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -142,7 +141,7 @@ abstract class $AdverseEventCopyWith<$Res> {
           AdverseEvent value, $Res Function(AdverseEvent) then) =
       _$AdverseEventCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'AdverseEvent') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -457,7 +456,7 @@ abstract class _$AdverseEventCopyWith<$Res>
       __$AdverseEventCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'AdverseEvent') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -636,7 +635,7 @@ class __$AdverseEventCopyWithImpl<$Res> extends _$AdverseEventCopyWithImpl<$Res>
 /// @nodoc
 class _$_AdverseEvent extends _AdverseEvent {
   _$_AdverseEvent(
-      {@required @JsonKey(defaultValue: 'AdverseEvent') this.resourceType,
+      {this.resourceType = 'AdverseEvent',
       this.id,
       this.meta,
       this.implicitRules,
@@ -672,8 +671,8 @@ class _$_AdverseEvent extends _AdverseEvent {
   factory _$_AdverseEvent.fromJson(Map<String, dynamic> json) =>
       _$_$_AdverseEventFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'AdverseEvent')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -871,7 +870,7 @@ class _$_AdverseEvent extends _AdverseEvent {
 abstract class _AdverseEvent extends AdverseEvent {
   _AdverseEvent._() : super._();
   factory _AdverseEvent(
-      {@required @JsonKey(defaultValue: 'AdverseEvent') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -906,7 +905,6 @@ abstract class _AdverseEvent extends AdverseEvent {
       _$_AdverseEvent.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'AdverseEvent')
   String get resourceType;
   @override
   Id get id;
@@ -1445,58 +1443,43 @@ class _$AllergyIntoleranceTearOff {
 
 // ignore: unused_element
   _AllergyIntolerance call(
-      {@required
-      @JsonKey(defaultValue: 'AllergyIntolerance')
-          String resourceType,
+      {String resourceType = 'AllergyIntolerance',
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       AllergyIntoleranceClinicalStatus clinicalStatus,
-      @JsonKey(name: '_clinicalStatus')
-          Element clinicalStatusElement,
+      @JsonKey(name: '_clinicalStatus') Element clinicalStatusElement,
       AllergyIntoleranceVerificationStatus verificationStatus,
-      @JsonKey(name: '_verificationStatus')
-          Element verificationStatusElement,
+      @JsonKey(name: '_verificationStatus') Element verificationStatusElement,
       AllergyIntoleranceType type,
-      @JsonKey(name: '_type')
-          Element typeElement,
+      @JsonKey(name: '_type') Element typeElement,
       List<AllergyIntoleranceCategory> category,
-      @JsonKey(name: '_category')
-          List<Element> categoryElement,
+      @JsonKey(name: '_category') List<Element> categoryElement,
       AllergyIntoleranceCriticality criticality,
-      @JsonKey(name: '_criticality')
-          Element criticalityElement,
+      @JsonKey(name: '_criticality') Element criticalityElement,
       CodeableConcept code,
-      @required
-          Reference patient,
+      @required Reference patient,
       FhirDateTime onsetDateTime,
-      @JsonKey(name: '_onsetDateTime')
-          Element onsetDateTimeElement,
+      @JsonKey(name: '_onsetDateTime') Element onsetDateTimeElement,
       Age onsetAge,
       Period onsetPeriod,
       Range onsetRange,
       String onsetString,
-      @JsonKey(name: '_onsetString')
-          Element onsetStringElement,
+      @JsonKey(name: '_onsetString') Element onsetStringElement,
       Date assertedDate,
-      @JsonKey(name: '_assertedDate')
-          Element assertedDateElement,
+      @JsonKey(name: '_assertedDate') Element assertedDateElement,
       Reference recorder,
       Reference asserter,
       String lastOccurrence,
-      @JsonKey(name: '_lastOccurrence')
-          Element lastOccurrenceElement,
+      @JsonKey(name: '_lastOccurrence') Element lastOccurrenceElement,
       List<Annotation> note,
       List<AllergyIntoleranceReaction> reaction}) {
     return _AllergyIntolerance(
@@ -1554,7 +1537,6 @@ const $AllergyIntolerance = _$AllergyIntoleranceTearOff();
 
 /// @nodoc
 mixin _$AllergyIntolerance {
-  @JsonKey(defaultValue: 'AllergyIntolerance')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -1617,7 +1599,7 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
           AllergyIntolerance value, $Res Function(AllergyIntolerance) then) =
       _$AllergyIntoleranceCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'AllergyIntolerance') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2021,7 +2003,7 @@ abstract class _$AllergyIntoleranceCopyWith<$Res>
       __$AllergyIntoleranceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'AllergyIntolerance') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2253,7 +2235,7 @@ class __$AllergyIntoleranceCopyWithImpl<$Res>
 /// @nodoc
 class _$_AllergyIntolerance extends _AllergyIntolerance {
   _$_AllergyIntolerance(
-      {@required @JsonKey(defaultValue: 'AllergyIntolerance') this.resourceType,
+      {this.resourceType = 'AllergyIntolerance',
       this.id,
       this.meta,
       this.implicitRules,
@@ -2299,8 +2281,8 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
   factory _$_AllergyIntolerance.fromJson(Map<String, dynamic> json) =>
       _$_$_AllergyIntoleranceFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'AllergyIntolerance')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -2538,58 +2520,43 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
 abstract class _AllergyIntolerance extends AllergyIntolerance {
   _AllergyIntolerance._() : super._();
   factory _AllergyIntolerance(
-      {@required
-      @JsonKey(defaultValue: 'AllergyIntolerance')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       AllergyIntoleranceClinicalStatus clinicalStatus,
-      @JsonKey(name: '_clinicalStatus')
-          Element clinicalStatusElement,
+      @JsonKey(name: '_clinicalStatus') Element clinicalStatusElement,
       AllergyIntoleranceVerificationStatus verificationStatus,
-      @JsonKey(name: '_verificationStatus')
-          Element verificationStatusElement,
+      @JsonKey(name: '_verificationStatus') Element verificationStatusElement,
       AllergyIntoleranceType type,
-      @JsonKey(name: '_type')
-          Element typeElement,
+      @JsonKey(name: '_type') Element typeElement,
       List<AllergyIntoleranceCategory> category,
-      @JsonKey(name: '_category')
-          List<Element> categoryElement,
+      @JsonKey(name: '_category') List<Element> categoryElement,
       AllergyIntoleranceCriticality criticality,
-      @JsonKey(name: '_criticality')
-          Element criticalityElement,
+      @JsonKey(name: '_criticality') Element criticalityElement,
       CodeableConcept code,
-      @required
-          Reference patient,
+      @required Reference patient,
       FhirDateTime onsetDateTime,
-      @JsonKey(name: '_onsetDateTime')
-          Element onsetDateTimeElement,
+      @JsonKey(name: '_onsetDateTime') Element onsetDateTimeElement,
       Age onsetAge,
       Period onsetPeriod,
       Range onsetRange,
       String onsetString,
-      @JsonKey(name: '_onsetString')
-          Element onsetStringElement,
+      @JsonKey(name: '_onsetString') Element onsetStringElement,
       Date assertedDate,
-      @JsonKey(name: '_assertedDate')
-          Element assertedDateElement,
+      @JsonKey(name: '_assertedDate') Element assertedDateElement,
       Reference recorder,
       Reference asserter,
       String lastOccurrence,
-      @JsonKey(name: '_lastOccurrence')
-          Element lastOccurrenceElement,
+      @JsonKey(name: '_lastOccurrence') Element lastOccurrenceElement,
       List<Annotation> note,
       List<AllergyIntoleranceReaction> reaction}) = _$_AllergyIntolerance;
 
@@ -2597,7 +2564,6 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
       _$_AllergyIntolerance.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'AllergyIntolerance')
   String get resourceType;
   @override
   Id get id;
@@ -3133,50 +3099,38 @@ class _$ClinicalImpressionTearOff {
 
 // ignore: unused_element
   _ClinicalImpression call(
-      {@required
-      @JsonKey(defaultValue: 'ClinicalImpression')
-          String resourceType,
+      {String resourceType = 'ClinicalImpression',
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       ClinicalImpressionStatus status,
-      @JsonKey(name: '_status')
-          Element statusElement,
+      @JsonKey(name: '_status') Element statusElement,
       CodeableConcept code,
       String description,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @required
-          Reference subject,
+      @JsonKey(name: '_description') Element descriptionElement,
+      @required Reference subject,
       Reference context,
       FhirDateTime effectiveDateTime,
-      @JsonKey(name: '_effectiveDateTime')
-          Element effectiveDateTimeElement,
+      @JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
       Period effectivePeriod,
       Date date,
-      @JsonKey(name: '_date')
-          Element dateElement,
+      @JsonKey(name: '_date') Element dateElement,
       Reference assessor,
       Reference previous,
       List<Reference> problem,
       List<ClinicalImpressionInvestigation> investigation,
       List<String> protocol,
-      @JsonKey(name: '_protocol')
-          List<Element> protocolElement,
+      @JsonKey(name: '_protocol') List<Element> protocolElement,
       String summary,
-      @JsonKey(name: '_summary')
-          Element summaryElement,
+      @JsonKey(name: '_summary') Element summaryElement,
       List<ClinicalImpressionFinding> finding,
       List<CodeableConcept> prognosisCodeableConcept,
       List<Reference> prognosisReference,
@@ -3235,7 +3189,6 @@ const $ClinicalImpression = _$ClinicalImpressionTearOff();
 
 /// @nodoc
 mixin _$ClinicalImpression {
-  @JsonKey(defaultValue: 'ClinicalImpression')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -3293,7 +3246,7 @@ abstract class $ClinicalImpressionCopyWith<$Res> {
           ClinicalImpression value, $Res Function(ClinicalImpression) then) =
       _$ClinicalImpressionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'ClinicalImpression') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3639,7 +3592,7 @@ abstract class _$ClinicalImpressionCopyWith<$Res>
       __$ClinicalImpressionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'ClinicalImpression') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3849,7 +3802,7 @@ class __$ClinicalImpressionCopyWithImpl<$Res>
 /// @nodoc
 class _$_ClinicalImpression extends _ClinicalImpression {
   _$_ClinicalImpression(
-      {@required @JsonKey(defaultValue: 'ClinicalImpression') this.resourceType,
+      {this.resourceType = 'ClinicalImpression',
       this.id,
       this.meta,
       this.implicitRules,
@@ -3893,8 +3846,8 @@ class _$_ClinicalImpression extends _ClinicalImpression {
   factory _$_ClinicalImpression.fromJson(Map<String, dynamic> json) =>
       _$_$_ClinicalImpressionFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'ClinicalImpression')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -4122,50 +4075,38 @@ class _$_ClinicalImpression extends _ClinicalImpression {
 abstract class _ClinicalImpression extends ClinicalImpression {
   _ClinicalImpression._() : super._();
   factory _ClinicalImpression(
-      {@required
-      @JsonKey(defaultValue: 'ClinicalImpression')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       ClinicalImpressionStatus status,
-      @JsonKey(name: '_status')
-          Element statusElement,
+      @JsonKey(name: '_status') Element statusElement,
       CodeableConcept code,
       String description,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
-      @required
-          Reference subject,
+      @JsonKey(name: '_description') Element descriptionElement,
+      @required Reference subject,
       Reference context,
       FhirDateTime effectiveDateTime,
-      @JsonKey(name: '_effectiveDateTime')
-          Element effectiveDateTimeElement,
+      @JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
       Period effectivePeriod,
       Date date,
-      @JsonKey(name: '_date')
-          Element dateElement,
+      @JsonKey(name: '_date') Element dateElement,
       Reference assessor,
       Reference previous,
       List<Reference> problem,
       List<ClinicalImpressionInvestigation> investigation,
       List<String> protocol,
-      @JsonKey(name: '_protocol')
-          List<Element> protocolElement,
+      @JsonKey(name: '_protocol') List<Element> protocolElement,
       String summary,
-      @JsonKey(name: '_summary')
-          Element summaryElement,
+      @JsonKey(name: '_summary') Element summaryElement,
       List<ClinicalImpressionFinding> finding,
       List<CodeableConcept> prognosisCodeableConcept,
       List<Reference> prognosisReference,
@@ -4176,7 +4117,6 @@ abstract class _ClinicalImpression extends ClinicalImpression {
       _$_ClinicalImpression.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'ClinicalImpression')
   String get resourceType;
   @override
   Id get id;
@@ -4730,7 +4670,7 @@ class _$ConditionTearOff {
 
 // ignore: unused_element
   _Condition call(
-      {@required @JsonKey(defaultValue: 'Condition') String resourceType,
+      {String resourceType = 'Condition',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4834,7 +4774,6 @@ const $Condition = _$ConditionTearOff();
 
 /// @nodoc
 mixin _$Condition {
-  @JsonKey(defaultValue: 'Condition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -4900,7 +4839,7 @@ abstract class $ConditionCopyWith<$Res> {
   factory $ConditionCopyWith(Condition value, $Res Function(Condition) then) =
       _$ConditionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'Condition') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5381,7 +5320,7 @@ abstract class _$ConditionCopyWith<$Res> implements $ConditionCopyWith<$Res> {
       __$ConditionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'Condition') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5645,7 +5584,7 @@ class __$ConditionCopyWithImpl<$Res> extends _$ConditionCopyWithImpl<$Res>
 /// @nodoc
 class _$_Condition extends _Condition {
   _$_Condition(
-      {@required @JsonKey(defaultValue: 'Condition') this.resourceType,
+      {this.resourceType = 'Condition',
       this.id,
       this.meta,
       this.implicitRules,
@@ -5696,8 +5635,8 @@ class _$_Condition extends _Condition {
   factory _$_Condition.fromJson(Map<String, dynamic> json) =>
       _$_$_ConditionFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'Condition')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -5954,7 +5893,7 @@ class _$_Condition extends _Condition {
 abstract class _Condition extends Condition {
   _Condition._() : super._();
   factory _Condition(
-      {@required @JsonKey(defaultValue: 'Condition') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6003,7 +5942,6 @@ abstract class _Condition extends Condition {
       _$_Condition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'Condition')
   String get resourceType;
   @override
   Id get id;
@@ -6456,7 +6394,7 @@ class _$DetectedIssueTearOff {
 
 // ignore: unused_element
   _DetectedIssue call(
-      {@required @JsonKey(defaultValue: 'DetectedIssue') String resourceType,
+      {String resourceType = 'DetectedIssue',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6526,7 +6464,6 @@ const $DetectedIssue = _$DetectedIssueTearOff();
 
 /// @nodoc
 mixin _$DetectedIssue {
-  @JsonKey(defaultValue: 'DetectedIssue')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -6573,7 +6510,7 @@ abstract class $DetectedIssueCopyWith<$Res> {
           DetectedIssue value, $Res Function(DetectedIssue) then) =
       _$DetectedIssueCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'DetectedIssue') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6855,7 +6792,7 @@ abstract class _$DetectedIssueCopyWith<$Res>
       __$DetectedIssueCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'DetectedIssue') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7019,7 +6956,7 @@ class __$DetectedIssueCopyWithImpl<$Res>
 /// @nodoc
 class _$_DetectedIssue extends _DetectedIssue {
   _$_DetectedIssue(
-      {@required @JsonKey(defaultValue: 'DetectedIssue') this.resourceType,
+      {this.resourceType = 'DetectedIssue',
       this.id,
       this.meta,
       this.implicitRules,
@@ -7052,8 +6989,8 @@ class _$_DetectedIssue extends _DetectedIssue {
   factory _$_DetectedIssue.fromJson(Map<String, dynamic> json) =>
       _$_$_DetectedIssueFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'DetectedIssue')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -7241,7 +7178,7 @@ class _$_DetectedIssue extends _DetectedIssue {
 abstract class _DetectedIssue extends DetectedIssue {
   _DetectedIssue._() : super._();
   factory _DetectedIssue(
-      {@required @JsonKey(defaultValue: 'DetectedIssue') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7273,7 +7210,6 @@ abstract class _DetectedIssue extends DetectedIssue {
       _$_DetectedIssue.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'DetectedIssue')
   String get resourceType;
   @override
   Id get id;
@@ -7604,70 +7540,51 @@ class _$FamilyMemberHistoryTearOff {
 
 // ignore: unused_element
   _FamilyMemberHistory call(
-      {@required
-      @JsonKey(defaultValue: 'FamilyMemberHistory')
-          String resourceType,
+      {String resourceType = 'FamilyMemberHistory',
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> definition,
       FamilyMemberHistoryStatus status,
-      @JsonKey(name: '_status')
-          Element statusElement,
+      @JsonKey(name: '_status') Element statusElement,
       Boolean notDone,
-      @JsonKey(name: '_notDone')
-          Element notDoneElement,
+      @JsonKey(name: '_notDone') Element notDoneElement,
       CodeableConcept notDoneReason,
-      @required
-          Reference patient,
+      @required Reference patient,
       Date date,
-      @JsonKey(name: '_date')
-          Element dateElement,
+      @JsonKey(name: '_date') Element dateElement,
       String name,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @required
-          CodeableConcept relationship,
+      @JsonKey(name: '_name') Element nameElement,
+      @required CodeableConcept relationship,
       FamilyMemberHistoryGender gender,
-      @JsonKey(name: '_gender')
-          Element genderElement,
+      @JsonKey(name: '_gender') Element genderElement,
       Period bornPeriod,
       Date bornDate,
-      @JsonKey(name: '_bornDate')
-          Element bornDateElement,
+      @JsonKey(name: '_bornDate') Element bornDateElement,
       String bornString,
-      @JsonKey(name: '_bornString')
-          Element bornStringElement,
+      @JsonKey(name: '_bornString') Element bornStringElement,
       Age ageAge,
       Range ageRange,
       String ageString,
-      @JsonKey(name: '_ageString')
-          Element ageStringElement,
+      @JsonKey(name: '_ageString') Element ageStringElement,
       Boolean estimatedAge,
-      @JsonKey(name: '_estimatedAge')
-          Element estimatedAgeElement,
+      @JsonKey(name: '_estimatedAge') Element estimatedAgeElement,
       Boolean deceasedBoolean,
-      @JsonKey(name: '_deceasedBoolean')
-          Element deceasedBooleanElement,
+      @JsonKey(name: '_deceasedBoolean') Element deceasedBooleanElement,
       Age deceasedAge,
       Range deceasedRange,
       Date deceasedDate,
-      @JsonKey(name: '_deceasedDate')
-          Element deceasedDateElement,
+      @JsonKey(name: '_deceasedDate') Element deceasedDateElement,
       String deceasedString,
-      @JsonKey(name: '_deceasedString')
-          Element deceasedStringElement,
+      @JsonKey(name: '_deceasedString') Element deceasedStringElement,
       List<CodeableConcept> reasonCode,
       List<Reference> reasonReference,
       List<Annotation> note,
@@ -7737,7 +7654,6 @@ const $FamilyMemberHistory = _$FamilyMemberHistoryTearOff();
 
 /// @nodoc
 mixin _$FamilyMemberHistory {
-  @JsonKey(defaultValue: 'FamilyMemberHistory')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -7813,7 +7729,7 @@ abstract class $FamilyMemberHistoryCopyWith<$Res> {
           FamilyMemberHistory value, $Res Function(FamilyMemberHistory) then) =
       _$FamilyMemberHistoryCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'FamilyMemberHistory') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8317,7 +8233,7 @@ abstract class _$FamilyMemberHistoryCopyWith<$Res>
       __$FamilyMemberHistoryCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'FamilyMemberHistory') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8604,70 +8520,51 @@ class __$FamilyMemberHistoryCopyWithImpl<$Res>
 /// @nodoc
 class _$_FamilyMemberHistory extends _FamilyMemberHistory {
   _$_FamilyMemberHistory(
-      {@required
-      @JsonKey(defaultValue: 'FamilyMemberHistory')
-          this.resourceType,
+      {this.resourceType = 'FamilyMemberHistory',
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.definition,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.notDone,
-      @JsonKey(name: '_notDone')
-          this.notDoneElement,
+      @JsonKey(name: '_notDone') this.notDoneElement,
       this.notDoneReason,
-      @required
-          this.patient,
+      @required this.patient,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
-      @required
-          this.relationship,
+      @JsonKey(name: '_name') this.nameElement,
+      @required this.relationship,
       this.gender,
-      @JsonKey(name: '_gender')
-          this.genderElement,
+      @JsonKey(name: '_gender') this.genderElement,
       this.bornPeriod,
       this.bornDate,
-      @JsonKey(name: '_bornDate')
-          this.bornDateElement,
+      @JsonKey(name: '_bornDate') this.bornDateElement,
       this.bornString,
-      @JsonKey(name: '_bornString')
-          this.bornStringElement,
+      @JsonKey(name: '_bornString') this.bornStringElement,
       this.ageAge,
       this.ageRange,
       this.ageString,
-      @JsonKey(name: '_ageString')
-          this.ageStringElement,
+      @JsonKey(name: '_ageString') this.ageStringElement,
       this.estimatedAge,
-      @JsonKey(name: '_estimatedAge')
-          this.estimatedAgeElement,
+      @JsonKey(name: '_estimatedAge') this.estimatedAgeElement,
       this.deceasedBoolean,
-      @JsonKey(name: '_deceasedBoolean')
-          this.deceasedBooleanElement,
+      @JsonKey(name: '_deceasedBoolean') this.deceasedBooleanElement,
       this.deceasedAge,
       this.deceasedRange,
       this.deceasedDate,
-      @JsonKey(name: '_deceasedDate')
-          this.deceasedDateElement,
+      @JsonKey(name: '_deceasedDate') this.deceasedDateElement,
       this.deceasedString,
-      @JsonKey(name: '_deceasedString')
-          this.deceasedStringElement,
+      @JsonKey(name: '_deceasedString') this.deceasedStringElement,
       this.reasonCode,
       this.reasonReference,
       this.note,
@@ -8680,8 +8577,8 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
   factory _$_FamilyMemberHistory.fromJson(Map<String, dynamic> json) =>
       _$_$_FamilyMemberHistoryFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'FamilyMemberHistory')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -8965,70 +8862,51 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
 abstract class _FamilyMemberHistory extends FamilyMemberHistory {
   _FamilyMemberHistory._() : super._();
   factory _FamilyMemberHistory(
-      {@required
-      @JsonKey(defaultValue: 'FamilyMemberHistory')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> definition,
       FamilyMemberHistoryStatus status,
-      @JsonKey(name: '_status')
-          Element statusElement,
+      @JsonKey(name: '_status') Element statusElement,
       Boolean notDone,
-      @JsonKey(name: '_notDone')
-          Element notDoneElement,
+      @JsonKey(name: '_notDone') Element notDoneElement,
       CodeableConcept notDoneReason,
-      @required
-          Reference patient,
+      @required Reference patient,
       Date date,
-      @JsonKey(name: '_date')
-          Element dateElement,
+      @JsonKey(name: '_date') Element dateElement,
       String name,
-      @JsonKey(name: '_name')
-          Element nameElement,
-      @required
-          CodeableConcept relationship,
+      @JsonKey(name: '_name') Element nameElement,
+      @required CodeableConcept relationship,
       FamilyMemberHistoryGender gender,
-      @JsonKey(name: '_gender')
-          Element genderElement,
+      @JsonKey(name: '_gender') Element genderElement,
       Period bornPeriod,
       Date bornDate,
-      @JsonKey(name: '_bornDate')
-          Element bornDateElement,
+      @JsonKey(name: '_bornDate') Element bornDateElement,
       String bornString,
-      @JsonKey(name: '_bornString')
-          Element bornStringElement,
+      @JsonKey(name: '_bornString') Element bornStringElement,
       Age ageAge,
       Range ageRange,
       String ageString,
-      @JsonKey(name: '_ageString')
-          Element ageStringElement,
+      @JsonKey(name: '_ageString') Element ageStringElement,
       Boolean estimatedAge,
-      @JsonKey(name: '_estimatedAge')
-          Element estimatedAgeElement,
+      @JsonKey(name: '_estimatedAge') Element estimatedAgeElement,
       Boolean deceasedBoolean,
-      @JsonKey(name: '_deceasedBoolean')
-          Element deceasedBooleanElement,
+      @JsonKey(name: '_deceasedBoolean') Element deceasedBooleanElement,
       Age deceasedAge,
       Range deceasedRange,
       Date deceasedDate,
-      @JsonKey(name: '_deceasedDate')
-          Element deceasedDateElement,
+      @JsonKey(name: '_deceasedDate') Element deceasedDateElement,
       String deceasedString,
-      @JsonKey(name: '_deceasedString')
-          Element deceasedStringElement,
+      @JsonKey(name: '_deceasedString') Element deceasedStringElement,
       List<CodeableConcept> reasonCode,
       List<Reference> reasonReference,
       List<Annotation> note,
@@ -9038,7 +8916,6 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
       _$_FamilyMemberHistory.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'FamilyMemberHistory')
   String get resourceType;
   @override
   Id get id;
@@ -9550,7 +9427,7 @@ class _$ProcedureTearOff {
 
 // ignore: unused_element
   _Procedure call(
-      {@required @JsonKey(defaultValue: 'Procedure') String resourceType,
+      {String resourceType = 'Procedure',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9648,7 +9525,6 @@ const $Procedure = _$ProcedureTearOff();
 
 /// @nodoc
 mixin _$Procedure {
-  @JsonKey(defaultValue: 'Procedure')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -9706,7 +9582,7 @@ abstract class $ProcedureCopyWith<$Res> {
   factory $ProcedureCopyWith(Procedure value, $Res Function(Procedure) then) =
       _$ProcedureCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'Procedure') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -10070,7 +9946,7 @@ abstract class _$ProcedureCopyWith<$Res> implements $ProcedureCopyWith<$Res> {
       __$ProcedureCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'Procedure') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -10298,7 +10174,7 @@ class __$ProcedureCopyWithImpl<$Res> extends _$ProcedureCopyWithImpl<$Res>
 /// @nodoc
 class _$_Procedure extends _Procedure {
   _$_Procedure(
-      {@required @JsonKey(defaultValue: 'Procedure') this.resourceType,
+      {this.resourceType = 'Procedure',
       this.id,
       this.meta,
       this.implicitRules,
@@ -10346,8 +10222,8 @@ class _$_Procedure extends _Procedure {
   factory _$_Procedure.fromJson(Map<String, dynamic> json) =>
       _$_$_ProcedureFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'Procedure')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -10589,7 +10465,7 @@ class _$_Procedure extends _Procedure {
 abstract class _Procedure extends Procedure {
   _Procedure._() : super._();
   factory _Procedure(
-      {@required @JsonKey(defaultValue: 'Procedure') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -10635,7 +10511,6 @@ abstract class _Procedure extends Procedure {
       _$_Procedure.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'Procedure')
   String get resourceType;
   @override
   Id get id;

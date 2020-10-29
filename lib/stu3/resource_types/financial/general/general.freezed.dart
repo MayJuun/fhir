@@ -18,7 +18,7 @@ class _$AccountTearOff {
 
 // ignore: unused_element
   _Account call(
-      {@required @JsonKey(defaultValue: 'Account') String resourceType,
+      {String resourceType = 'Account',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -86,7 +86,6 @@ const $Account = _$AccountTearOff();
 
 /// @nodoc
 mixin _$Account {
-  @JsonKey(defaultValue: 'Account')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -129,7 +128,7 @@ abstract class $AccountCopyWith<$Res> {
   factory $AccountCopyWith(Account value, $Res Function(Account) then) =
       _$AccountCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'Account') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -400,7 +399,7 @@ abstract class _$AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
       __$AccountCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'Account') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -554,7 +553,7 @@ class __$AccountCopyWithImpl<$Res> extends _$AccountCopyWithImpl<$Res>
 /// @nodoc
 class _$_Account extends _Account {
   _$_Account(
-      {@required @JsonKey(defaultValue: 'Account') this.resourceType,
+      {this.resourceType = 'Account',
       this.id,
       this.meta,
       this.implicitRules,
@@ -586,8 +585,8 @@ class _$_Account extends _Account {
   factory _$_Account.fromJson(Map<String, dynamic> json) =>
       _$_$_AccountFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'Account')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -769,7 +768,7 @@ class _$_Account extends _Account {
 abstract class _Account extends Account {
   _Account._() : super._();
   factory _Account(
-      {@required @JsonKey(defaultValue: 'Account') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -799,7 +798,6 @@ abstract class _Account extends Account {
   factory _Account.fromJson(Map<String, dynamic> json) = _$_Account.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'Account')
   String get resourceType;
   @override
   Id get id;
@@ -1351,7 +1349,7 @@ class _$ChargeItemTearOff {
 
 // ignore: unused_element
   _ChargeItem call(
-      {@required @JsonKey(defaultValue: 'ChargeItem') String resourceType,
+      {String resourceType = 'ChargeItem',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1451,7 +1449,6 @@ const $ChargeItem = _$ChargeItemTearOff();
 
 /// @nodoc
 mixin _$ChargeItem {
-  @JsonKey(defaultValue: 'ChargeItem')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -1514,7 +1511,7 @@ abstract class $ChargeItemCopyWith<$Res> {
           ChargeItem value, $Res Function(ChargeItem) then) =
       _$ChargeItemCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'ChargeItem') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1938,7 +1935,7 @@ abstract class _$ChargeItemCopyWith<$Res> implements $ChargeItemCopyWith<$Res> {
       __$ChargeItemCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'ChargeItem') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2182,7 +2179,7 @@ class __$ChargeItemCopyWithImpl<$Res> extends _$ChargeItemCopyWithImpl<$Res>
 /// @nodoc
 class _$_ChargeItem extends _ChargeItem {
   _$_ChargeItem(
-      {@required @JsonKey(defaultValue: 'ChargeItem') this.resourceType,
+      {this.resourceType = 'ChargeItem',
       this.id,
       this.meta,
       this.implicitRules,
@@ -2232,8 +2229,8 @@ class _$_ChargeItem extends _ChargeItem {
   factory _$_ChargeItem.fromJson(Map<String, dynamic> json) =>
       _$_$_ChargeItemFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'ChargeItem')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -2481,7 +2478,7 @@ class _$_ChargeItem extends _ChargeItem {
 abstract class _ChargeItem extends ChargeItem {
   _ChargeItem._() : super._();
   factory _ChargeItem(
-      {@required @JsonKey(defaultValue: 'ChargeItem') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2528,7 +2525,6 @@ abstract class _ChargeItem extends ChargeItem {
       _$_ChargeItem.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'ChargeItem')
   String get resourceType;
   @override
   Id get id;
@@ -2827,7 +2823,7 @@ class _$ContractTearOff {
 
 // ignore: unused_element
   _Contract call(
-      {@required @JsonKey(defaultValue: 'Contract') String resourceType,
+      {String resourceType = 'Contract',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2917,7 +2913,6 @@ const $Contract = _$ContractTearOff();
 
 /// @nodoc
 mixin _$Contract {
-  @JsonKey(defaultValue: 'Contract')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -2970,7 +2965,7 @@ abstract class $ContractCopyWith<$Res> {
   factory $ContractCopyWith(Contract value, $Res Function(Contract) then) =
       _$ContractCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'Contract') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3289,7 +3284,7 @@ abstract class _$ContractCopyWith<$Res> implements $ContractCopyWith<$Res> {
       __$ContractCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'Contract') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3491,7 +3486,7 @@ class __$ContractCopyWithImpl<$Res> extends _$ContractCopyWithImpl<$Res>
 /// @nodoc
 class _$_Contract extends _Contract {
   _$_Contract(
-      {@required @JsonKey(defaultValue: 'Contract') this.resourceType,
+      {this.resourceType = 'Contract',
       this.id,
       this.meta,
       this.implicitRules,
@@ -3534,8 +3529,8 @@ class _$_Contract extends _Contract {
   factory _$_Contract.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'Contract')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -3760,7 +3755,7 @@ class _$_Contract extends _Contract {
 abstract class _Contract extends Contract {
   _Contract._() : super._();
   factory _Contract(
-      {@required @JsonKey(defaultValue: 'Contract') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3801,7 +3796,6 @@ abstract class _Contract extends Contract {
   factory _Contract.fromJson(Map<String, dynamic> json) = _$_Contract.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'Contract')
   String get resourceType;
   @override
   Id get id;

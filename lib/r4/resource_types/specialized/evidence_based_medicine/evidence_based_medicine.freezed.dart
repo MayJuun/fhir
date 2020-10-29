@@ -4039,7 +4039,7 @@ class _$EvidenceTearOff {
 
 // ignore: unused_element
   _Evidence call(
-      {@required @JsonKey(defaultValue: 'Evidence') String resourceType,
+      {String resourceType = 'Evidence',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4159,7 +4159,6 @@ const $Evidence = _$EvidenceTearOff();
 
 /// @nodoc
 mixin _$Evidence {
-  @JsonKey(defaultValue: 'Evidence')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -4239,7 +4238,7 @@ abstract class $EvidenceCopyWith<$Res> {
   factory $EvidenceCopyWith(Evidence value, $Res Function(Evidence) then) =
       _$EvidenceCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'Evidence') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4690,7 +4689,7 @@ abstract class _$EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
       __$EvidenceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'Evidence') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4970,7 +4969,7 @@ class __$EvidenceCopyWithImpl<$Res> extends _$EvidenceCopyWithImpl<$Res>
 /// @nodoc
 class _$_Evidence extends _Evidence {
   _$_Evidence(
-      {@required @JsonKey(defaultValue: 'Evidence') this.resourceType,
+      {this.resourceType = 'Evidence',
       this.id,
       this.meta,
       this.implicitRules,
@@ -5029,8 +5028,8 @@ class _$_Evidence extends _Evidence {
   factory _$_Evidence.fromJson(Map<String, dynamic> json) =>
       _$_$_EvidenceFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'Evidence')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -5327,7 +5326,7 @@ class _$_Evidence extends _Evidence {
 abstract class _Evidence extends Evidence {
   _Evidence._() : super._();
   factory _Evidence(
-      {@required @JsonKey(defaultValue: 'Evidence') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5383,7 +5382,6 @@ abstract class _Evidence extends Evidence {
   factory _Evidence.fromJson(Map<String, dynamic> json) = _$_Evidence.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'Evidence')
   String get resourceType;
   @override
   Id get id;
@@ -5518,9 +5516,7 @@ class _$EvidenceVariableTearOff {
 
 // ignore: unused_element
   _EvidenceVariable call(
-      {@required
-      @JsonKey(defaultValue: 'EvidenceVariable')
-          String resourceType,
+      {String resourceType = 'EvidenceVariable',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5660,7 +5656,6 @@ const $EvidenceVariable = _$EvidenceVariableTearOff();
 
 /// @nodoc
 mixin _$EvidenceVariable {
-  @JsonKey(defaultValue: 'EvidenceVariable')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -5743,8 +5738,7 @@ abstract class $EvidenceVariableCopyWith<$Res> {
           EvidenceVariable value, $Res Function(EvidenceVariable) then) =
       _$EvidenceVariableCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'EvidenceVariable')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6217,8 +6211,7 @@ abstract class _$EvidenceVariableCopyWith<$Res>
       __$EvidenceVariableCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'EvidenceVariable')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6519,7 +6512,7 @@ class __$EvidenceVariableCopyWithImpl<$Res>
 /// @nodoc
 class _$_EvidenceVariable extends _EvidenceVariable {
   _$_EvidenceVariable(
-      {@required @JsonKey(defaultValue: 'EvidenceVariable') this.resourceType,
+      {this.resourceType = 'EvidenceVariable',
       this.id,
       this.meta,
       this.implicitRules,
@@ -6578,8 +6571,8 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   factory _$_EvidenceVariable.fromJson(Map<String, dynamic> json) =>
       _$_$_EvidenceVariableFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'EvidenceVariable')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -6878,9 +6871,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
 abstract class _EvidenceVariable extends EvidenceVariable {
   _EvidenceVariable._() : super._();
   factory _EvidenceVariable(
-          {@required
-          @JsonKey(defaultValue: 'EvidenceVariable')
-              String resourceType,
+          {String resourceType,
           Id id,
           Meta meta,
           FhirUri implicitRules,
@@ -6958,7 +6949,6 @@ abstract class _EvidenceVariable extends EvidenceVariable {
       _$_EvidenceVariable.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'EvidenceVariable')
   String get resourceType;
   @override
   Id get id;
@@ -8000,9 +7990,7 @@ class _$ResearchDefinitionTearOff {
 
 // ignore: unused_element
   _ResearchDefinition call(
-      {@required
-      @JsonKey(defaultValue: 'ResearchDefinition')
-          String resourceType,
+      {String resourceType = 'ResearchDefinition',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8167,7 +8155,6 @@ const $ResearchDefinition = _$ResearchDefinitionTearOff();
 
 /// @nodoc
 mixin _$ResearchDefinition {
-  @JsonKey(defaultValue: 'ResearchDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -8264,8 +8251,7 @@ abstract class $ResearchDefinitionCopyWith<$Res> {
           ResearchDefinition value, $Res Function(ResearchDefinition) then) =
       _$ResearchDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'ResearchDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8879,8 +8865,7 @@ abstract class _$ResearchDefinitionCopyWith<$Res>
       __$ResearchDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'ResearchDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9249,7 +9234,7 @@ class __$ResearchDefinitionCopyWithImpl<$Res>
 /// @nodoc
 class _$_ResearchDefinition extends _ResearchDefinition {
   _$_ResearchDefinition(
-      {@required @JsonKey(defaultValue: 'ResearchDefinition') this.resourceType,
+      {this.resourceType = 'ResearchDefinition',
       this.id,
       this.meta,
       this.implicitRules,
@@ -9319,8 +9304,8 @@ class _$_ResearchDefinition extends _ResearchDefinition {
   factory _$_ResearchDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_ResearchDefinitionFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'ResearchDefinition')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -9666,9 +9651,7 @@ class _$_ResearchDefinition extends _ResearchDefinition {
 abstract class _ResearchDefinition extends ResearchDefinition {
   _ResearchDefinition._() : super._();
   factory _ResearchDefinition(
-      {@required
-      @JsonKey(defaultValue: 'ResearchDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9759,7 +9742,6 @@ abstract class _ResearchDefinition extends ResearchDefinition {
       _$_ResearchDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'ResearchDefinition')
   String get resourceType;
   @override
   Id get id;

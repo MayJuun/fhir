@@ -11,7 +11,7 @@ part 'structure.g.dart';
 abstract class Media with Resource implements _$Media {
   Media._();
   factory Media({
-    @JsonKey(defaultValue: 'Media') @required String resourceType,
+    @Default('Media') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -50,7 +50,7 @@ abstract class Media with Resource implements _$Media {
 abstract class Binary with Resource implements _$Binary {
   Binary._();
   factory Binary({
-    @JsonKey(defaultValue: 'Binary') @required String resourceType,
+    @Default('Binary') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -69,7 +69,7 @@ abstract class Binary with Resource implements _$Binary {
 abstract class Bundle with Resource implements _$Bundle {
   Bundle._();
   factory Bundle({
-    @JsonKey(defaultValue: 'Bundle') @required String resourceType,
+    @Default('Bundle') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -201,7 +201,7 @@ abstract class BundleEntryResponse with _$BundleEntryResponse {
 abstract class Basic with Resource implements _$Basic {
   Basic._();
   factory Basic({
-    @JsonKey(defaultValue: 'Basic') @required String resourceType,
+    @Default('Basic') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

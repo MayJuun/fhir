@@ -11,7 +11,7 @@ part 'clinical_decision_support.g.dart';
 abstract class GuidanceResponse with Resource implements _$GuidanceResponse {
   GuidanceResponse._();
   factory GuidanceResponse({
-    @JsonKey(defaultValue: 'GuidanceResponse') @required String resourceType,
+    @Default('GuidanceResponse') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

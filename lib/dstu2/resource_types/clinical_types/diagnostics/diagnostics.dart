@@ -11,7 +11,7 @@ part 'diagnostics.g.dart';
 abstract class Observation with Resource implements _$Observation {
   Observation._();
   factory Observation({
-    @JsonKey(defaultValue: 'Observation') @required String resourceType,
+    @Default('Observation') String resourceType,
     Id id,
     @JsonKey(name: '_id') Element idElement,
     Meta meta,
@@ -137,7 +137,7 @@ abstract class ObservationComponent with _$ObservationComponent {
 abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
   DiagnosticReport._();
   factory DiagnosticReport({
-    @JsonKey(defaultValue: 'DiagnosticReport') @required String resourceType,
+    @Default('DiagnosticReport') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -198,7 +198,7 @@ abstract class DiagnosticReportImage with _$DiagnosticReportImage {
 abstract class DiagnosticOrder with Resource implements _$DiagnosticOrder {
   DiagnosticOrder._();
   factory DiagnosticOrder({
-    @JsonKey(defaultValue: 'DiagnosticOrder') @required String resourceType,
+    @Default('DiagnosticOrder') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -268,7 +268,7 @@ abstract class DiagnosticOrderItem with _$DiagnosticOrderItem {
 abstract class Specimen with Resource implements _$Specimen {
   Specimen._();
   factory Specimen({
-    @JsonKey(defaultValue: 'Specimen') @required String resourceType,
+    @Default('Specimen') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -360,7 +360,7 @@ abstract class SpecimenContainer with _$SpecimenContainer {
 abstract class BodySite with Resource implements _$BodySite {
   BodySite._();
   factory BodySite({
-    @JsonKey(defaultValue: 'BodySite') @required String resourceType,
+    @Default('BodySite') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -385,7 +385,7 @@ abstract class BodySite with Resource implements _$BodySite {
 abstract class ImagingStudy with Resource implements _$ImagingStudy {
   ImagingStudy._();
   factory ImagingStudy({
-    @JsonKey(defaultValue: 'ImagingStudy') @required String resourceType,
+    @Default('ImagingStudy') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

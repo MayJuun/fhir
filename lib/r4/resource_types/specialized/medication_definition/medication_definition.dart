@@ -10,7 +10,7 @@ part 'medication_definition.g.dart';
 abstract class MedicinalProduct with Resource implements _$MedicinalProduct {
   MedicinalProduct._();
   factory MedicinalProduct({
-    @JsonKey(defaultValue: 'MedicinalProduct') @required String resourceType,
+    @Default('MedicinalProduct') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -852,7 +852,7 @@ abstract class SubstanceNucleicAcidSugar
 abstract class SubstancePolymer with Resource implements _$SubstancePolymer {
   SubstancePolymer._();
   factory SubstancePolymer({
-    @JsonKey(defaultValue: 'SubstancePolymer') @required String resourceType,
+    @Default('SubstancePolymer') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -992,7 +992,7 @@ abstract class SubstancePolymerStructuralRepresentation
 abstract class SubstanceProtein with Resource implements _$SubstanceProtein {
   SubstanceProtein._();
   factory SubstanceProtein({
-    @JsonKey(defaultValue: 'SubstanceProtein') @required String resourceType,
+    @Default('SubstanceProtein') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

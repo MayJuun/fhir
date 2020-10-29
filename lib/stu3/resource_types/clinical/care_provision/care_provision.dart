@@ -49,7 +49,7 @@ abstract class VisionPrescriptionDispense
 abstract class CarePlan with Resource implements _$CarePlan {
   CarePlan._();
   factory CarePlan({
-    @JsonKey(defaultValue: 'CarePlan') @required String resourceType,
+    @Default('CarePlan') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -143,7 +143,7 @@ abstract class CarePlanDetail implements _$CarePlanDetail {
 abstract class CareTeam with Resource implements _$CareTeam {
   CareTeam._();
   factory CareTeam({
-    @JsonKey(defaultValue: 'CareTeam') @required String resourceType,
+    @Default('CareTeam') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -192,7 +192,7 @@ abstract class CareTeamParticipant implements _$CareTeamParticipant {
 abstract class Goal with Resource implements _$Goal {
   Goal._();
   factory Goal({
-    @JsonKey(defaultValue: 'Goal') @required String resourceType,
+    @Default('Goal') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -249,7 +249,7 @@ abstract class GoalTarget implements _$GoalTarget {
 abstract class NutritionOrder with Resource implements _$NutritionOrder {
   NutritionOrder._();
   factory NutritionOrder({
-    @JsonKey(defaultValue: 'NutritionOrder') @required String resourceType,
+    @Default('NutritionOrder') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -382,7 +382,7 @@ abstract class NutritionOrderAdministration
 abstract class ProcedureRequest with Resource implements _$ProcedureRequest {
   ProcedureRequest._();
   factory ProcedureRequest({
-    @JsonKey(defaultValue: 'ProcedureRequest') @required String resourceType,
+    @Default('ProcedureRequest') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -452,7 +452,7 @@ abstract class ProcedureRequestRequester
 abstract class ReferralRequest with Resource implements _$ReferralRequest {
   ReferralRequest._();
   factory ReferralRequest({
-    @JsonKey(defaultValue: 'ReferralRequest') @required String resourceType,
+    @Default('ReferralRequest') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -515,7 +515,7 @@ abstract class ReferralRequestRequester implements _$ReferralRequestRequester {
 abstract class RiskAssessment with Resource implements _$RiskAssessment {
   RiskAssessment._();
   factory RiskAssessment({
-    @JsonKey(defaultValue: 'RiskAssessment') @required String resourceType,
+    @Default('RiskAssessment') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -581,7 +581,7 @@ abstract class VisionPrescription
     implements _$VisionPrescription {
   VisionPrescription._();
   factory VisionPrescription({
-    @JsonKey(defaultValue: 'VisionPrescription') @required String resourceType,
+    @Default('VisionPrescription') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

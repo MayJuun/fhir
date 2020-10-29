@@ -18,9 +18,7 @@ class _$ConformanceTearOff {
 
 // ignore: unused_element
   _Conformance call(
-      {@required
-      @JsonKey(defaultValue: 'Conformance')
-          String resourceType,
+      {String resourceType = 'Conformance',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -117,7 +115,6 @@ const $Conformance = _$ConformanceTearOff();
 
 /// @nodoc
 mixin _$Conformance {
-  @JsonKey(defaultValue: 'Conformance')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -172,8 +169,7 @@ abstract class $ConformanceCopyWith<$Res> {
           Conformance value, $Res Function(Conformance) then) =
       _$ConformanceCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'Conformance')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -420,8 +416,7 @@ abstract class _$ConformanceCopyWith<$Res>
       __$ConformanceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'Conformance')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -603,9 +598,7 @@ class __$ConformanceCopyWithImpl<$Res> extends _$ConformanceCopyWithImpl<$Res>
 /// @nodoc
 class _$_Conformance extends _Conformance {
   _$_Conformance(
-      {@required
-      @JsonKey(defaultValue: 'Conformance')
-          this.resourceType,
+      {this.resourceType = 'Conformance',
       this.id,
       this.meta,
       this.implicitRules,
@@ -664,8 +657,8 @@ class _$_Conformance extends _Conformance {
   factory _$_Conformance.fromJson(Map<String, dynamic> json) =>
       _$_$_ConformanceFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'Conformance')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -879,9 +872,7 @@ class _$_Conformance extends _Conformance {
 abstract class _Conformance extends Conformance {
   _Conformance._() : super._();
   factory _Conformance(
-      {@required
-      @JsonKey(defaultValue: 'Conformance')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -934,7 +925,6 @@ abstract class _Conformance extends Conformance {
       _$_Conformance.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'Conformance')
   String get resourceType;
   @override
   Id get id;
@@ -1024,9 +1014,7 @@ class _$CapabilityStatementTearOff {
 
 // ignore: unused_element
   _CapabilityStatement call(
-      {@required
-      @JsonKey(defaultValue: 'CapabilityStatement')
-          String resourceType,
+      {String resourceType = 'CapabilityStatement',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1123,7 +1111,6 @@ const $CapabilityStatement = _$CapabilityStatementTearOff();
 
 /// @nodoc
 mixin _$CapabilityStatement {
-  @JsonKey(defaultValue: 'CapabilityStatement')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -1178,8 +1165,7 @@ abstract class $CapabilityStatementCopyWith<$Res> {
           CapabilityStatement value, $Res Function(CapabilityStatement) then) =
       _$CapabilityStatementCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'CapabilityStatement')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1427,8 +1413,7 @@ abstract class _$CapabilityStatementCopyWith<$Res>
       __$CapabilityStatementCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'CapabilityStatement')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1611,9 +1596,7 @@ class __$CapabilityStatementCopyWithImpl<$Res>
 /// @nodoc
 class _$_CapabilityStatement extends _CapabilityStatement {
   _$_CapabilityStatement(
-      {@required
-      @JsonKey(defaultValue: 'CapabilityStatement')
-          this.resourceType,
+      {this.resourceType = 'CapabilityStatement',
       this.id,
       this.meta,
       this.implicitRules,
@@ -1672,8 +1655,8 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   factory _$_CapabilityStatement.fromJson(Map<String, dynamic> json) =>
       _$_$_CapabilityStatementFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'CapabilityStatement')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -1888,9 +1871,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
 abstract class _CapabilityStatement extends CapabilityStatement {
   _CapabilityStatement._() : super._();
   factory _CapabilityStatement(
-      {@required
-      @JsonKey(defaultValue: 'CapabilityStatement')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1943,7 +1924,6 @@ abstract class _CapabilityStatement extends CapabilityStatement {
       _$_CapabilityStatement.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'CapabilityStatement')
   String get resourceType;
   @override
   Id get id;
@@ -7325,9 +7305,7 @@ class _$OperationDefinitionTearOff {
 
 // ignore: unused_element
   _OperationDefinition call(
-      {@required
-      @JsonKey(defaultValue: 'OperationDefinition')
-          String resourceType,
+      {String resourceType = 'OperationDefinition',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7412,7 +7390,6 @@ const $OperationDefinition = _$OperationDefinitionTearOff();
 
 /// @nodoc
 mixin _$OperationDefinition {
-  @JsonKey(defaultValue: 'OperationDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -7459,8 +7436,7 @@ abstract class $OperationDefinitionCopyWith<$Res> {
           OperationDefinition value, $Res Function(OperationDefinition) then) =
       _$OperationDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'OperationDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7633,8 +7609,7 @@ abstract class _$OperationDefinitionCopyWith<$Res>
       __$OperationDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'OperationDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7779,9 +7754,7 @@ class __$OperationDefinitionCopyWithImpl<$Res>
 /// @nodoc
 class _$_OperationDefinition extends _OperationDefinition {
   _$_OperationDefinition(
-      {@required
-      @JsonKey(defaultValue: 'OperationDefinition')
-          this.resourceType,
+      {this.resourceType = 'OperationDefinition',
       this.id,
       this.meta,
       this.implicitRules,
@@ -7834,8 +7807,8 @@ class _$_OperationDefinition extends _OperationDefinition {
   factory _$_OperationDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_OperationDefinitionFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'OperationDefinition')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -8027,9 +8000,7 @@ class _$_OperationDefinition extends _OperationDefinition {
 abstract class _OperationDefinition extends OperationDefinition {
   _OperationDefinition._() : super._();
   factory _OperationDefinition(
-      {@required
-      @JsonKey(defaultValue: 'OperationDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8075,7 +8046,6 @@ abstract class _OperationDefinition extends OperationDefinition {
       _$_OperationDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'OperationDefinition')
   String get resourceType;
   @override
   Id get id;
@@ -9224,9 +9194,7 @@ class _$SearchParameterTearOff {
 
 // ignore: unused_element
   _SearchParameter call(
-      {@required
-      @JsonKey(defaultValue: 'SearchParameter')
-          String resourceType,
+      {String resourceType = 'SearchParameter',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9304,7 +9272,6 @@ const $SearchParameter = _$SearchParameterTearOff();
 
 /// @nodoc
 mixin _$SearchParameter {
-  @JsonKey(defaultValue: 'SearchParameter')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -9349,8 +9316,7 @@ abstract class $SearchParameterCopyWith<$Res> {
           SearchParameter value, $Res Function(SearchParameter) then) =
       _$SearchParameterCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'SearchParameter')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9515,8 +9481,7 @@ abstract class _$SearchParameterCopyWith<$Res>
       __$SearchParameterCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'SearchParameter')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9653,9 +9618,7 @@ class __$SearchParameterCopyWithImpl<$Res>
 /// @nodoc
 class _$_SearchParameter extends _SearchParameter {
   _$_SearchParameter(
-      {@required
-      @JsonKey(defaultValue: 'SearchParameter')
-          this.resourceType,
+      {this.resourceType = 'SearchParameter',
       this.id,
       this.meta,
       this.implicitRules,
@@ -9702,8 +9665,8 @@ class _$_SearchParameter extends _SearchParameter {
   factory _$_SearchParameter.fromJson(Map<String, dynamic> json) =>
       _$_$_SearchParameterFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'SearchParameter')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -9878,9 +9841,7 @@ class _$_SearchParameter extends _SearchParameter {
 abstract class _SearchParameter extends SearchParameter {
   _SearchParameter._() : super._();
   factory _SearchParameter(
-      {@required
-      @JsonKey(defaultValue: 'SearchParameter')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9922,7 +9883,6 @@ abstract class _SearchParameter extends SearchParameter {
       _$_SearchParameter.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'SearchParameter')
   String get resourceType;
   @override
   Id get id;

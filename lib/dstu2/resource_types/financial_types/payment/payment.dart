@@ -11,7 +11,7 @@ part 'payment.g.dart';
 abstract class PaymentNotice with Resource implements _$PaymentNotice {
   PaymentNotice._();
   factory PaymentNotice({
-    @JsonKey(defaultValue: 'PaymentNotice') @required String resourceType,
+    @Default('PaymentNotice') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

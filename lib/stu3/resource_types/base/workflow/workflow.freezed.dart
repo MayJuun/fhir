@@ -18,7 +18,7 @@ class _$AppointmentTearOff {
 
 // ignore: unused_element
   _Appointment call(
-      {@required @JsonKey(defaultValue: 'Appointment') String resourceType,
+      {String resourceType = 'Appointment',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -112,7 +112,6 @@ const $Appointment = _$AppointmentTearOff();
 
 /// @nodoc
 mixin _$Appointment {
-  @JsonKey(defaultValue: 'Appointment')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -174,7 +173,7 @@ abstract class $AppointmentCopyWith<$Res> {
           Appointment value, $Res Function(Appointment) then) =
       _$AppointmentCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'Appointment') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -524,7 +523,7 @@ abstract class _$AppointmentCopyWith<$Res>
       __$AppointmentCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'Appointment') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -747,7 +746,7 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
 /// @nodoc
 class _$_Appointment extends _Appointment {
   _$_Appointment(
-      {@required @JsonKey(defaultValue: 'Appointment') this.resourceType,
+      {this.resourceType = 'Appointment',
       this.id,
       this.meta,
       this.implicitRules,
@@ -793,8 +792,8 @@ class _$_Appointment extends _Appointment {
   factory _$_Appointment.fromJson(Map<String, dynamic> json) =>
       _$_$_AppointmentFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'Appointment')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -1033,7 +1032,7 @@ class _$_Appointment extends _Appointment {
 abstract class _Appointment extends Appointment {
   _Appointment._() : super._();
   factory _Appointment(
-      {@required @JsonKey(defaultValue: 'Appointment') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1077,7 +1076,6 @@ abstract class _Appointment extends Appointment {
       _$_Appointment.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'Appointment')
   String get resourceType;
   @override
   Id get id;
@@ -1492,39 +1490,29 @@ class _$AppointmentResponseTearOff {
 
 // ignore: unused_element
   _AppointmentResponse call(
-      {@required
-      @JsonKey(defaultValue: 'AppointmentResponse')
-          String resourceType,
+      {String resourceType = 'AppointmentResponse',
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      @required
-          Reference appointment,
+      @required Reference appointment,
       String start,
-      @JsonKey(name: '_start')
-          Element startElement,
+      @JsonKey(name: '_start') Element startElement,
       String end,
-      @JsonKey(name: '_end')
-          Element endElement,
+      @JsonKey(name: '_end') Element endElement,
       List<CodeableConcept> participantType,
       Reference actor,
       String participantStatus,
-      @JsonKey(name: '_participantStatus')
-          Element participantStatusElement,
+      @JsonKey(name: '_participantStatus') Element participantStatusElement,
       String comment,
-      @JsonKey(name: '_comment')
-          Element commentElement}) {
+      @JsonKey(name: '_comment') Element commentElement}) {
     return _AppointmentResponse(
       resourceType: resourceType,
       id: id,
@@ -1564,7 +1552,6 @@ const $AppointmentResponse = _$AppointmentResponseTearOff();
 
 /// @nodoc
 mixin _$AppointmentResponse {
-  @JsonKey(defaultValue: 'AppointmentResponse')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -1606,7 +1593,7 @@ abstract class $AppointmentResponseCopyWith<$Res> {
           AppointmentResponse value, $Res Function(AppointmentResponse) then) =
       _$AppointmentResponseCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'AppointmentResponse') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1841,7 +1828,7 @@ abstract class _$AppointmentResponseCopyWith<$Res>
       __$AppointmentResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'AppointmentResponse') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1985,39 +1972,29 @@ class __$AppointmentResponseCopyWithImpl<$Res>
 /// @nodoc
 class _$_AppointmentResponse extends _AppointmentResponse {
   _$_AppointmentResponse(
-      {@required
-      @JsonKey(defaultValue: 'AppointmentResponse')
-          this.resourceType,
+      {this.resourceType = 'AppointmentResponse',
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
-      @required
-          this.appointment,
+      @required this.appointment,
       this.start,
-      @JsonKey(name: '_start')
-          this.startElement,
+      @JsonKey(name: '_start') this.startElement,
       this.end,
-      @JsonKey(name: '_end')
-          this.endElement,
+      @JsonKey(name: '_end') this.endElement,
       this.participantType,
       this.actor,
       this.participantStatus,
-      @JsonKey(name: '_participantStatus')
-          this.participantStatusElement,
+      @JsonKey(name: '_participantStatus') this.participantStatusElement,
       this.comment,
-      @JsonKey(name: '_comment')
-          this.commentElement})
+      @JsonKey(name: '_comment') this.commentElement})
       : assert(resourceType != null),
         assert(appointment != null),
         super._();
@@ -2025,8 +2002,8 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   factory _$_AppointmentResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_AppointmentResponseFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'AppointmentResponse')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -2197,45 +2174,35 @@ class _$_AppointmentResponse extends _AppointmentResponse {
 abstract class _AppointmentResponse extends AppointmentResponse {
   _AppointmentResponse._() : super._();
   factory _AppointmentResponse(
-      {@required
-      @JsonKey(defaultValue: 'AppointmentResponse')
-          String resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      @required
-          Reference appointment,
-      String start,
-      @JsonKey(name: '_start')
-          Element startElement,
-      String end,
-      @JsonKey(name: '_end')
-          Element endElement,
-      List<CodeableConcept> participantType,
-      Reference actor,
-      String participantStatus,
-      @JsonKey(name: '_participantStatus')
-          Element participantStatusElement,
-      String comment,
-      @JsonKey(name: '_comment')
-          Element commentElement}) = _$_AppointmentResponse;
+          {String resourceType,
+          Id id,
+          Meta meta,
+          FhirUri implicitRules,
+          @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+          Code language,
+          @JsonKey(name: '_language') Element languageElement,
+          Narrative text,
+          List<Resource> contained,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          List<Identifier> identifier,
+          @required Reference appointment,
+          String start,
+          @JsonKey(name: '_start') Element startElement,
+          String end,
+          @JsonKey(name: '_end') Element endElement,
+          List<CodeableConcept> participantType,
+          Reference actor,
+          String participantStatus,
+          @JsonKey(name: '_participantStatus') Element participantStatusElement,
+          String comment,
+          @JsonKey(name: '_comment') Element commentElement}) =
+      _$_AppointmentResponse;
 
   factory _AppointmentResponse.fromJson(Map<String, dynamic> json) =
       _$_AppointmentResponse.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'AppointmentResponse')
   String get resourceType;
   @override
   Id get id;
@@ -2302,7 +2269,7 @@ class _$ProcessRequestTearOff {
 
 // ignore: unused_element
   _ProcessRequest call(
-      {@required @JsonKey(defaultValue: 'ProcessRequest') String resourceType,
+      {String resourceType = 'ProcessRequest',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2384,7 +2351,6 @@ const $ProcessRequest = _$ProcessRequestTearOff();
 
 /// @nodoc
 mixin _$ProcessRequest {
-  @JsonKey(defaultValue: 'ProcessRequest')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -2439,7 +2405,7 @@ abstract class $ProcessRequestCopyWith<$Res> {
           ProcessRequest value, $Res Function(ProcessRequest) then) =
       _$ProcessRequestCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'ProcessRequest') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2763,7 +2729,7 @@ abstract class _$ProcessRequestCopyWith<$Res>
       __$ProcessRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'ProcessRequest') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2951,7 +2917,7 @@ class __$ProcessRequestCopyWithImpl<$Res>
 /// @nodoc
 class _$_ProcessRequest extends _ProcessRequest {
   _$_ProcessRequest(
-      {@required @JsonKey(defaultValue: 'ProcessRequest') this.resourceType,
+      {this.resourceType = 'ProcessRequest',
       this.id,
       this.meta,
       this.implicitRules,
@@ -2990,8 +2956,8 @@ class _$_ProcessRequest extends _ProcessRequest {
   factory _$_ProcessRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_ProcessRequestFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'ProcessRequest')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -3205,7 +3171,7 @@ class _$_ProcessRequest extends _ProcessRequest {
 abstract class _ProcessRequest extends ProcessRequest {
   _ProcessRequest._() : super._();
   factory _ProcessRequest(
-      {@required @JsonKey(defaultValue: 'ProcessRequest') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3243,7 +3209,6 @@ abstract class _ProcessRequest extends ProcessRequest {
       _$_ProcessRequest.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'ProcessRequest')
   String get resourceType;
   @override
   Id get id;
@@ -3530,7 +3495,7 @@ class _$ProcessResponseTearOff {
 
 // ignore: unused_element
   _ProcessResponse call(
-      {@required @JsonKey(defaultValue: 'ProcessResponse') String resourceType,
+      {String resourceType = 'ProcessResponse',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3600,7 +3565,6 @@ const $ProcessResponse = _$ProcessResponseTearOff();
 
 /// @nodoc
 mixin _$ProcessResponse {
-  @JsonKey(defaultValue: 'ProcessResponse')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -3645,7 +3609,7 @@ abstract class $ProcessResponseCopyWith<$Res> {
           ProcessResponse value, $Res Function(ProcessResponse) then) =
       _$ProcessResponseCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'ProcessResponse') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3929,7 +3893,7 @@ abstract class _$ProcessResponseCopyWith<$Res>
       __$ProcessResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'ProcessResponse') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4095,7 +4059,7 @@ class __$ProcessResponseCopyWithImpl<$Res>
 /// @nodoc
 class _$_ProcessResponse extends _ProcessResponse {
   _$_ProcessResponse(
-      {@required @JsonKey(defaultValue: 'ProcessResponse') this.resourceType,
+      {this.resourceType = 'ProcessResponse',
       this.id,
       this.meta,
       this.implicitRules,
@@ -4128,8 +4092,8 @@ class _$_ProcessResponse extends _ProcessResponse {
   factory _$_ProcessResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_ProcessResponseFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'ProcessResponse')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -4315,7 +4279,7 @@ class _$_ProcessResponse extends _ProcessResponse {
 abstract class _ProcessResponse extends ProcessResponse {
   _ProcessResponse._() : super._();
   factory _ProcessResponse(
-      {@required @JsonKey(defaultValue: 'ProcessResponse') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4347,7 +4311,6 @@ abstract class _ProcessResponse extends ProcessResponse {
       _$_ProcessResponse.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'ProcessResponse')
   String get resourceType;
   @override
   Id get id;
@@ -4645,7 +4608,7 @@ class _$RequestGroupTearOff {
 
 // ignore: unused_element
   _RequestGroup call(
-      {@required @JsonKey(defaultValue: 'RequestGroup') String resourceType,
+      {String resourceType = 'RequestGroup',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4723,7 +4686,6 @@ const $RequestGroup = _$RequestGroupTearOff();
 
 /// @nodoc
 mixin _$RequestGroup {
-  @JsonKey(defaultValue: 'RequestGroup')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -4773,7 +4735,7 @@ abstract class $RequestGroupCopyWith<$Res> {
           RequestGroup value, $Res Function(RequestGroup) then) =
       _$RequestGroupCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'RequestGroup') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5083,7 +5045,7 @@ abstract class _$RequestGroupCopyWith<$Res>
       __$RequestGroupCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'RequestGroup') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5265,7 +5227,7 @@ class __$RequestGroupCopyWithImpl<$Res> extends _$RequestGroupCopyWithImpl<$Res>
 /// @nodoc
 class _$_RequestGroup extends _RequestGroup {
   _$_RequestGroup(
-      {@required @JsonKey(defaultValue: 'RequestGroup') this.resourceType,
+      {this.resourceType = 'RequestGroup',
       this.id,
       this.meta,
       this.implicitRules,
@@ -5302,8 +5264,8 @@ class _$_RequestGroup extends _RequestGroup {
   factory _$_RequestGroup.fromJson(Map<String, dynamic> json) =>
       _$_$_RequestGroupFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'RequestGroup')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -5506,7 +5468,7 @@ class _$_RequestGroup extends _RequestGroup {
 abstract class _RequestGroup extends RequestGroup {
   _RequestGroup._() : super._();
   factory _RequestGroup(
-      {@required @JsonKey(defaultValue: 'RequestGroup') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5542,7 +5504,6 @@ abstract class _RequestGroup extends RequestGroup {
       _$_RequestGroup.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'RequestGroup')
   String get resourceType;
   @override
   Id get id;
@@ -7385,7 +7346,7 @@ class _$ScheduleTearOff {
 
 // ignore: unused_element
   _Schedule call(
-      {@required @JsonKey(defaultValue: 'Schedule') String resourceType,
+      {String resourceType = 'Schedule',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7443,7 +7404,6 @@ const $Schedule = _$ScheduleTearOff();
 
 /// @nodoc
 mixin _$Schedule {
-  @JsonKey(defaultValue: 'Schedule')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -7480,7 +7440,7 @@ abstract class $ScheduleCopyWith<$Res> {
   factory $ScheduleCopyWith(Schedule value, $Res Function(Schedule) then) =
       _$ScheduleCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'Schedule') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7683,7 +7643,7 @@ abstract class _$ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
       __$ScheduleCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'Schedule') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7814,7 +7774,7 @@ class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
 /// @nodoc
 class _$_Schedule extends _Schedule {
   _$_Schedule(
-      {@required @JsonKey(defaultValue: 'Schedule') this.resourceType,
+      {this.resourceType = 'Schedule',
       this.id,
       this.meta,
       this.implicitRules,
@@ -7842,8 +7802,8 @@ class _$_Schedule extends _Schedule {
   factory _$_Schedule.fromJson(Map<String, dynamic> json) =>
       _$_$_ScheduleFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'Schedule')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -7998,7 +7958,7 @@ class _$_Schedule extends _Schedule {
 abstract class _Schedule extends Schedule {
   _Schedule._() : super._();
   factory _Schedule(
-      {@required @JsonKey(defaultValue: 'Schedule') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8023,7 +7983,6 @@ abstract class _Schedule extends Schedule {
   factory _Schedule.fromJson(Map<String, dynamic> json) = _$_Schedule.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'Schedule')
   String get resourceType;
   @override
   Id get id;
@@ -8084,7 +8043,7 @@ class _$SlotTearOff {
 
 // ignore: unused_element
   _Slot call(
-      {@required @JsonKey(defaultValue: 'Slot') String resourceType,
+      {String resourceType = 'Slot',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8154,7 +8113,6 @@ const $Slot = _$SlotTearOff();
 
 /// @nodoc
 mixin _$Slot {
-  @JsonKey(defaultValue: 'Slot')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -8200,7 +8158,7 @@ abstract class $SlotCopyWith<$Res> {
   factory $SlotCopyWith(Slot value, $Res Function(Slot) then) =
       _$SlotCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'Slot') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8471,7 +8429,7 @@ abstract class _$SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
       __$SlotCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'Slot') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8634,7 +8592,7 @@ class __$SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
 /// @nodoc
 class _$_Slot extends _Slot {
   _$_Slot(
-      {@required @JsonKey(defaultValue: 'Slot') this.resourceType,
+      {this.resourceType = 'Slot',
       this.id,
       this.meta,
       this.implicitRules,
@@ -8668,8 +8626,8 @@ class _$_Slot extends _Slot {
   factory _$_Slot.fromJson(Map<String, dynamic> json) =>
       _$_$_SlotFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'Slot')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -8857,7 +8815,7 @@ class _$_Slot extends _Slot {
 abstract class _Slot extends Slot {
   _Slot._() : super._();
   factory _Slot(
-      {@required @JsonKey(defaultValue: 'Slot') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8888,7 +8846,6 @@ abstract class _Slot extends Slot {
   factory _Slot.fromJson(Map<String, dynamic> json) = _$_Slot.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'Slot')
   String get resourceType;
   @override
   Id get id;
@@ -8964,7 +8921,7 @@ class _$TaskTearOff {
 
 // ignore: unused_element
   _Task call(
-      {@required @JsonKey(defaultValue: 'Task') String resourceType,
+      {String resourceType = 'Task',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9072,7 +9029,6 @@ const $Task = _$TaskTearOff();
 
 /// @nodoc
 mixin _$Task {
-  @JsonKey(defaultValue: 'Task')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -9140,7 +9096,7 @@ abstract class $TaskCopyWith<$Res> {
   factory $TaskCopyWith(Task value, $Res Function(Task) then) =
       _$TaskCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'Task') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9619,7 +9575,7 @@ abstract class _$TaskCopyWith<$Res> implements $TaskCopyWith<$Res> {
       __$TaskCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'Task') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9882,7 +9838,7 @@ class __$TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res>
 /// @nodoc
 class _$_Task extends _Task {
   _$_Task(
-      {@required @JsonKey(defaultValue: 'Task') this.resourceType,
+      {this.resourceType = 'Task',
       this.id,
       this.meta,
       this.implicitRules,
@@ -9934,8 +9890,8 @@ class _$_Task extends _Task {
   factory _$_Task.fromJson(Map<String, dynamic> json) =>
       _$_$_TaskFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'Task')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -10201,7 +10157,7 @@ class _$_Task extends _Task {
 abstract class _Task extends Task {
   _Task._() : super._();
   factory _Task(
-      {@required @JsonKey(defaultValue: 'Task') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -10251,7 +10207,6 @@ abstract class _Task extends Task {
   factory _Task.fromJson(Map<String, dynamic> json) = _$_Task.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'Task')
   String get resourceType;
   @override
   Id get id;

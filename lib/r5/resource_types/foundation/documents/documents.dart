@@ -11,7 +11,7 @@ part 'documents.g.dart';
 abstract class CatalogEntry with Resource implements _$CatalogEntry {
   CatalogEntry._();
   factory CatalogEntry({
-    @JsonKey(defaultValue: 'CatalogEntry') @required String resourceType,
+    @Default('CatalogEntry') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -74,7 +74,7 @@ abstract class CatalogEntryRelatedEntry implements _$CatalogEntryRelatedEntry {
 abstract class Composition with Resource implements _$Composition {
   Composition._();
   factory Composition({
-    @JsonKey(defaultValue: 'Composition') @required String resourceType,
+    @Default('Composition') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -192,7 +192,7 @@ abstract class CompositionSection implements _$CompositionSection {
 abstract class DocumentManifest with Resource implements _$DocumentManifest {
   DocumentManifest._();
   factory DocumentManifest({
-    @JsonKey(defaultValue: 'DocumentManifest') @required String resourceType,
+    @Default('DocumentManifest') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -245,7 +245,7 @@ abstract class DocumentManifestRelated implements _$DocumentManifestRelated {
 abstract class DocumentReference with Resource implements _$DocumentReference {
   DocumentReference._();
   factory DocumentReference({
-    @JsonKey(defaultValue: 'DocumentReference') @required String resourceType,
+    @Default('DocumentReference') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

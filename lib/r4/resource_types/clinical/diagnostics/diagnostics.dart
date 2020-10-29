@@ -11,7 +11,7 @@ part 'diagnostics.g.dart';
 abstract class BodyStructure with Resource implements _$BodyStructure {
   BodyStructure._();
   factory BodyStructure({
-    @JsonKey(defaultValue: 'BodyStructure') @required String resourceType,
+    @Default('BodyStructure') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -42,7 +42,7 @@ abstract class BodyStructure with Resource implements _$BodyStructure {
 abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
   DiagnosticReport._();
   factory DiagnosticReport({
-    @JsonKey(defaultValue: 'DiagnosticReport') @required String resourceType,
+    @Default('DiagnosticReport') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -103,7 +103,7 @@ abstract class DiagnosticReportMedia implements _$DiagnosticReportMedia {
 abstract class ImagingStudy with Resource implements _$ImagingStudy {
   ImagingStudy._();
   factory ImagingStudy({
-    @JsonKey(defaultValue: 'ImagingStudy') @required String resourceType,
+    @Default('ImagingStudy') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -215,7 +215,7 @@ abstract class ImagingStudyInstance implements _$ImagingStudyInstance {
 abstract class Media with Resource implements _$Media {
   Media._();
   factory Media({
-    @JsonKey(defaultValue: 'Media') @required String resourceType,
+    @Default('Media') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -266,7 +266,7 @@ abstract class Media with Resource implements _$Media {
 abstract class MolecularSequence with Resource implements _$MolecularSequence {
   MolecularSequence._();
   factory MolecularSequence({
-    @JsonKey(defaultValue: 'MolecularSequence') @required String resourceType,
+    @Default('MolecularSequence') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -513,7 +513,7 @@ abstract class MolecularSequenceInner implements _$MolecularSequenceInner {
 abstract class Observation with Resource implements _$Observation {
   Observation._();
   factory Observation({
-    @JsonKey(defaultValue: 'Observation') @required String resourceType,
+    @Default('Observation') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -731,7 +731,7 @@ abstract class QuestionnaireResponseAnswer
 abstract class Specimen with Resource implements _$Specimen {
   Specimen._();
   factory Specimen({
-    @JsonKey(defaultValue: 'Specimen') @required String resourceType,
+    @Default('Specimen') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

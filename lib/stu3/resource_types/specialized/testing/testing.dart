@@ -11,7 +11,7 @@ part 'testing.g.dart';
 abstract class TestReport with Resource implements _$TestReport {
   TestReport._();
   factory TestReport({
-    @JsonKey(defaultValue: 'TestReport') @required String resourceType,
+    @Default('TestReport') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -170,7 +170,7 @@ abstract class TestReportAction2 implements _$TestReportAction2 {
 abstract class TestScript with Resource implements _$TestScript {
   TestScript._();
   factory TestScript({
-    @JsonKey(defaultValue: 'TestScript') @required String resourceType,
+    @Default('TestScript') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

@@ -11,7 +11,7 @@ part 'patient_management.g.dart';
 abstract class Encounter with Resource implements _$Encounter {
   Encounter._();
   factory Encounter({
-    @JsonKey(defaultValue: 'Encounter') @required String resourceType,
+    @Default('Encounter') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -133,7 +133,7 @@ abstract class EncounterLocation with _$EncounterLocation {
 abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
   EpisodeOfCare._();
   factory EpisodeOfCare({
-    @JsonKey(defaultValue: 'EpisodeOfCare') @required String resourceType,
+    @Default('EpisodeOfCare') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -203,7 +203,7 @@ abstract class EpisodeOfCareCareTeam with _$EpisodeOfCareCareTeam {
 abstract class Communication with Resource implements _$Communication {
   Communication._();
   factory Communication({
-    @JsonKey(defaultValue: 'Communication') @required String resourceType,
+    @Default('Communication') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -258,7 +258,7 @@ abstract class CommunicationPayload with _$CommunicationPayload {
 abstract class Flag with Resource implements _$Flag {
   Flag._();
   factory Flag({
-    @JsonKey(defaultValue: 'Flag') @required String resourceType,
+    @Default('Flag') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

@@ -18,9 +18,7 @@ class _$MeasureTearOff {
 
 // ignore: unused_element
   _Measure call(
-      {@required
-      @JsonKey(defaultValue: 'Measure')
-          String resourceType,
+      {String resourceType = 'Measure',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -206,7 +204,6 @@ const $Measure = _$MeasureTearOff();
 
 /// @nodoc
 mixin _$Measure {
-  @JsonKey(defaultValue: 'Measure')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -315,8 +312,7 @@ abstract class $MeasureCopyWith<$Res> {
   factory $MeasureCopyWith(Measure value, $Res Function(Measure) then) =
       _$MeasureCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'Measure')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -994,8 +990,7 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       __$MeasureCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'Measure')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1410,9 +1405,7 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
 /// @nodoc
 class _$_Measure extends _Measure {
   _$_Measure(
-      {@required
-      @JsonKey(defaultValue: 'Measure')
-          this.resourceType,
+      {this.resourceType = 'Measure',
       this.id,
       this.meta,
       this.implicitRules,
@@ -1516,8 +1509,8 @@ class _$_Measure extends _Measure {
   factory _$_Measure.fromJson(Map<String, dynamic> json) =>
       _$_$_MeasureFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'Measure')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -1901,9 +1894,7 @@ class _$_Measure extends _Measure {
 abstract class _Measure extends Measure {
   _Measure._() : super._();
   factory _Measure(
-      {@required
-      @JsonKey(defaultValue: 'Measure')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2005,7 +1996,6 @@ abstract class _Measure extends Measure {
   factory _Measure.fromJson(Map<String, dynamic> json) = _$_Measure.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'Measure')
   String get resourceType;
   @override
   Id get id;
@@ -3473,7 +3463,7 @@ class _$MeasureReportTearOff {
 
 // ignore: unused_element
   _MeasureReport call(
-      {@required @JsonKey(defaultValue: 'MeasureReport') String resourceType,
+      {String resourceType = 'MeasureReport',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3537,7 +3527,6 @@ const $MeasureReport = _$MeasureReportTearOff();
 
 /// @nodoc
 mixin _$MeasureReport {
-  @JsonKey(defaultValue: 'MeasureReport')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -3579,7 +3568,7 @@ abstract class $MeasureReportCopyWith<$Res> {
           MeasureReport value, $Res Function(MeasureReport) then) =
       _$MeasureReportCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'MeasureReport') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3845,7 +3834,7 @@ abstract class _$MeasureReportCopyWith<$Res>
       __$MeasureReportCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'MeasureReport') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3993,7 +3982,7 @@ class __$MeasureReportCopyWithImpl<$Res>
 /// @nodoc
 class _$_MeasureReport extends _MeasureReport {
   _$_MeasureReport(
-      {@required @JsonKey(defaultValue: 'MeasureReport') this.resourceType,
+      {this.resourceType = 'MeasureReport',
       this.id,
       this.meta,
       this.implicitRules,
@@ -4025,8 +4014,8 @@ class _$_MeasureReport extends _MeasureReport {
   factory _$_MeasureReport.fromJson(Map<String, dynamic> json) =>
       _$_$_MeasureReportFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'MeasureReport')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -4197,7 +4186,7 @@ class _$_MeasureReport extends _MeasureReport {
 abstract class _MeasureReport extends MeasureReport {
   _MeasureReport._() : super._();
   factory _MeasureReport(
-      {@required @JsonKey(defaultValue: 'MeasureReport') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4226,7 +4215,6 @@ abstract class _MeasureReport extends MeasureReport {
       _$_MeasureReport.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'MeasureReport')
   String get resourceType;
   @override
   Id get id;

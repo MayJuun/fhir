@@ -11,7 +11,7 @@ part 'terminology.g.dart';
 abstract class CodeSystem with Resource implements _$CodeSystem {
   CodeSystem._();
   factory CodeSystem({
-    @JsonKey(defaultValue: 'CodeSystem') @required String resourceType,
+    @Default('CodeSystem') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -169,7 +169,7 @@ abstract class CodeSystemProperty1 implements _$CodeSystemProperty1 {
 abstract class ConceptMap with Resource implements _$ConceptMap {
   ConceptMap._();
   factory ConceptMap({
-    @JsonKey(defaultValue: 'ConceptMap') @required String resourceType,
+    @Default('ConceptMap') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -314,7 +314,7 @@ abstract class ConceptMapUnmapped implements _$ConceptMapUnmapped {
 abstract class ExpansionProfile with Resource implements _$ExpansionProfile {
   ExpansionProfile._();
   factory ExpansionProfile({
-    @JsonKey(defaultValue: 'ExpansionProfile') @required String resourceType,
+    @Default('ExpansionProfile') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -470,7 +470,7 @@ abstract class ExpansionProfileDesignation2
 abstract class NamingSystem with Resource implements _$NamingSystem {
   NamingSystem._();
   factory NamingSystem({
-    @JsonKey(defaultValue: 'NamingSystem') @required String resourceType,
+    @Default('NamingSystem') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -532,7 +532,7 @@ abstract class NamingSystemUniqueId implements _$NamingSystemUniqueId {
 abstract class ValueSet with Resource implements _$ValueSet {
   ValueSet._();
   factory ValueSet({
-    @JsonKey(defaultValue: 'ValueSet') @required String resourceType,
+    @Default('ValueSet') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

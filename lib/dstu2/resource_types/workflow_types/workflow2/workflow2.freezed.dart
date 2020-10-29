@@ -18,9 +18,7 @@ class _$ProcessRequestTearOff {
 
 // ignore: unused_element
   _ProcessRequest call(
-      {@required
-      @JsonKey(defaultValue: 'ProcessRequest')
-          String resourceType,
+      {String resourceType = 'ProcessRequest',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -89,7 +87,6 @@ const $ProcessRequest = _$ProcessRequestTearOff();
 
 /// @nodoc
 mixin _$ProcessRequest {
-  @JsonKey(defaultValue: 'ProcessRequest')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -128,8 +125,7 @@ abstract class $ProcessRequestCopyWith<$Res> {
           ProcessRequest value, $Res Function(ProcessRequest) then) =
       _$ProcessRequestCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'ProcessRequest')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -360,8 +356,7 @@ abstract class _$ProcessRequestCopyWith<$Res>
       __$ProcessRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'ProcessRequest')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -501,9 +496,7 @@ class __$ProcessRequestCopyWithImpl<$Res>
 /// @nodoc
 class _$_ProcessRequest extends _ProcessRequest {
   _$_ProcessRequest(
-      {@required
-      @JsonKey(defaultValue: 'ProcessRequest')
-          this.resourceType,
+      {this.resourceType = 'ProcessRequest',
       this.id,
       this.meta,
       this.implicitRules,
@@ -538,8 +531,8 @@ class _$_ProcessRequest extends _ProcessRequest {
   factory _$_ProcessRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_ProcessRequestFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'ProcessRequest')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -713,9 +706,7 @@ class _$_ProcessRequest extends _ProcessRequest {
 abstract class _ProcessRequest extends ProcessRequest {
   _ProcessRequest._() : super._();
   factory _ProcessRequest(
-      {@required
-      @JsonKey(defaultValue: 'ProcessRequest')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -748,7 +739,6 @@ abstract class _ProcessRequest extends ProcessRequest {
       _$_ProcessRequest.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'ProcessRequest')
   String get resourceType;
   @override
   Id get id;
@@ -1041,7 +1031,7 @@ class _$ProcessResponseTearOff {
 
 // ignore: unused_element
   _ProcessResponse call(
-      {@required @JsonKey(defaultValue: 'ProcessResponse') String resourceType,
+      {String resourceType = 'ProcessResponse',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1101,7 +1091,6 @@ const $ProcessResponse = _$ProcessResponseTearOff();
 
 /// @nodoc
 mixin _$ProcessResponse {
-  @JsonKey(defaultValue: 'ProcessResponse')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -1136,7 +1125,7 @@ abstract class $ProcessResponseCopyWith<$Res> {
           ProcessResponse value, $Res Function(ProcessResponse) then) =
       _$ProcessResponseCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'ProcessResponse') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1361,7 +1350,7 @@ abstract class _$ProcessResponseCopyWith<$Res>
       __$ProcessResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'ProcessResponse') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1495,7 +1484,7 @@ class __$ProcessResponseCopyWithImpl<$Res>
 /// @nodoc
 class _$_ProcessResponse extends _ProcessResponse {
   _$_ProcessResponse(
-      {@required @JsonKey(defaultValue: 'ProcessResponse') this.resourceType,
+      {this.resourceType = 'ProcessResponse',
       this.id,
       this.meta,
       this.implicitRules,
@@ -1523,8 +1512,8 @@ class _$_ProcessResponse extends _ProcessResponse {
   factory _$_ProcessResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_ProcessResponseFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'ProcessResponse')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -1680,7 +1669,7 @@ class _$_ProcessResponse extends _ProcessResponse {
 abstract class _ProcessResponse extends ProcessResponse {
   _ProcessResponse._() : super._();
   factory _ProcessResponse(
-      {@required @JsonKey(defaultValue: 'ProcessResponse') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1707,7 +1696,6 @@ abstract class _ProcessResponse extends ProcessResponse {
       _$_ProcessResponse.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'ProcessResponse')
   String get resourceType;
   @override
   Id get id;
@@ -2017,9 +2005,7 @@ class _$SupplyRequestTearOff {
 
 // ignore: unused_element
   _SupplyRequest call(
-      {@required
-      @JsonKey(defaultValue: 'SupplyRequest')
-          String resourceType,
+      {String resourceType = 'SupplyRequest',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2086,7 +2072,6 @@ const $SupplyRequest = _$SupplyRequestTearOff();
 
 /// @nodoc
 mixin _$SupplyRequest {
-  @JsonKey(defaultValue: 'SupplyRequest')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -2126,8 +2111,7 @@ abstract class $SupplyRequestCopyWith<$Res> {
           SupplyRequest value, $Res Function(SupplyRequest) then) =
       _$SupplyRequestCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'SupplyRequest')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2396,8 +2380,7 @@ abstract class _$SupplyRequestCopyWith<$Res>
       __$SupplyRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'SupplyRequest')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2547,7 +2530,7 @@ class __$SupplyRequestCopyWithImpl<$Res>
 /// @nodoc
 class _$_SupplyRequest extends _SupplyRequest {
   _$_SupplyRequest(
-      {@required @JsonKey(defaultValue: 'SupplyRequest') this.resourceType,
+      {this.resourceType = 'SupplyRequest',
       this.id,
       this.meta,
       this.implicitRules,
@@ -2576,8 +2559,8 @@ class _$_SupplyRequest extends _SupplyRequest {
   factory _$_SupplyRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_SupplyRequestFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'SupplyRequest')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -2741,9 +2724,7 @@ class _$_SupplyRequest extends _SupplyRequest {
 abstract class _SupplyRequest extends SupplyRequest {
   _SupplyRequest._() : super._();
   factory _SupplyRequest(
-      {@required
-      @JsonKey(defaultValue: 'SupplyRequest')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2776,7 +2757,6 @@ abstract class _SupplyRequest extends SupplyRequest {
       _$_SupplyRequest.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'SupplyRequest')
   String get resourceType;
   @override
   Id get id;
@@ -3105,9 +3085,7 @@ class _$SupplyDeliveryTearOff {
 
 // ignore: unused_element
   _SupplyDelivery call(
-      {@required
-      @JsonKey(defaultValue: 'SupplyDelivery')
-          String resourceType,
+      {String resourceType = 'SupplyDelivery',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3174,7 +3152,6 @@ const $SupplyDelivery = _$SupplyDeliveryTearOff();
 
 /// @nodoc
 mixin _$SupplyDelivery {
-  @JsonKey(defaultValue: 'SupplyDelivery')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -3214,8 +3191,7 @@ abstract class $SupplyDeliveryCopyWith<$Res> {
           SupplyDelivery value, $Res Function(SupplyDelivery) then) =
       _$SupplyDeliveryCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'SupplyDelivery')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3484,8 +3460,7 @@ abstract class _$SupplyDeliveryCopyWith<$Res>
       __$SupplyDeliveryCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'SupplyDelivery')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3636,7 +3611,7 @@ class __$SupplyDeliveryCopyWithImpl<$Res>
 /// @nodoc
 class _$_SupplyDelivery extends _SupplyDelivery {
   _$_SupplyDelivery(
-      {@required @JsonKey(defaultValue: 'SupplyDelivery') this.resourceType,
+      {this.resourceType = 'SupplyDelivery',
       this.id,
       this.meta,
       this.implicitRules,
@@ -3665,8 +3640,8 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   factory _$_SupplyDelivery.fromJson(Map<String, dynamic> json) =>
       _$_$_SupplyDeliveryFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'SupplyDelivery')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -3832,9 +3807,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
 abstract class _SupplyDelivery extends SupplyDelivery {
   _SupplyDelivery._() : super._();
   factory _SupplyDelivery(
-      {@required
-      @JsonKey(defaultValue: 'SupplyDelivery')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3867,7 +3840,6 @@ abstract class _SupplyDelivery extends SupplyDelivery {
       _$_SupplyDelivery.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'SupplyDelivery')
   String get resourceType;
   @override
   Id get id;
