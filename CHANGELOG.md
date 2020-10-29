@@ -1,3 +1,6 @@
+## [0.0.11]
+* Changed how resourceType handles defaults. It wasn't really functionaing the previous way. In addition, it was required, which mean that you had to include it when you made the resource (which was a pain in the ass). Now if you leave it blank, it will automatically include the correct resourceType. It will still, however, allow you to pass in the incorrect resourceType for that resource if you want to (this can be handled by the individual as far as I'm concerned).
+
 ## [0.0.10]
 
 * Changed Duration to FhirDuration because dart core contains Duration and I was tired of dealing with it

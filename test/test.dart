@@ -10,9 +10,7 @@ Future main() async {
     'does deep comarison of the map produced with the map that was input, field '
     'by field. It then reverses them and runs through the same algorithm. Any '
     'files with errors are printed out in the debug console, and the errors are '
-    'compared with the expected errors stored in the map in "expected.dart". '
-    'the expected errors are removed, and it is checked that each list of erros '
-    'is empty.',
+    'compared with the expected errors stored in the map in "expected.dart". ',
     () async {
       var testMap = await validation();
       var expectMap = expected;
