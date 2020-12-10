@@ -824,8 +824,8 @@ abstract class TestScriptAssert implements _$TestScriptAssert {
     @JsonKey(name: '_minimumId') Element minimumIdElement,
     Boolean navigationLinks,
     @JsonKey(name: '_navigationLinks') Element navigationLinksElement,
-    @JsonKey(unknownEnumValue: TestScriptAssertOperator.unknown)
-        TestScriptAssertOperator operator,
+    @JsonKey(name: 'operator', unknownEnumValue: TestScriptAssertOperator.unknown)
+        TestScriptAssertOperator operator_,
     @JsonKey(name: '_operator') Element operatorElement,
     String path,
     @JsonKey(name: '_path') Element pathElement,

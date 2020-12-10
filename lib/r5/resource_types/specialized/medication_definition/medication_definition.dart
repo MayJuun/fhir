@@ -539,7 +539,7 @@ abstract class MedicinalProductDefinitionNamePart
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
-    String part,
+    @JsonKey(name: 'part') String part_,
     @JsonKey(name: '_part') Element partElement,
     @required CodeableConcept type,
   }) = _MedicinalProductDefinitionNamePart;
@@ -1633,7 +1633,7 @@ abstract class SubstanceSourceMaterialPartDescription
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
-    CodeableConcept part,
+    @JsonKey(name: 'part') CodeableConcept part_,
     CodeableConcept partLocation,
   }) = _SubstanceSourceMaterialPartDescription;
 

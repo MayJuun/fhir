@@ -1024,8 +1024,8 @@ abstract class QuestionnaireEnableWhen implements _$QuestionnaireEnableWhen {
     List<FhirExtension> modifierExtension,
     String question,
     @JsonKey(name: '_question') Element questionElement,
-    @JsonKey(unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
-        QuestionnaireEnableWhenOperator operator,
+    @JsonKey(name: 'operator', unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
+        QuestionnaireEnableWhenOperator operator_,
     @JsonKey(name: '_operator') Element operatorElement,
     Boolean answerBoolean,
     @JsonKey(name: '_answerBoolean') Element answerBooleanElement,

@@ -236,7 +236,7 @@ abstract class Media with Resource implements _$Media {
     FhirDateTime occurrenceDateTime,
     @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
     Period occurrencePeriod,
-    Reference operator,
+    @JsonKey(name: 'operator') Reference operator_,
     List<CodeableConcept> reasonCode,
     CodeableConcept bodySite,
     Reference device,
@@ -480,7 +480,7 @@ abstract class ParametersParameter implements _$ParametersParameter {
     ParameterDefinition valueParameterDefinition,
     TriggerDefinition valueTriggerDefinition,
     Resource resource,
-    List<ParametersParameter> part,
+    @JsonKey(name: 'part') List<ParametersParameter> part_,
   }) = _ParametersParameter;
 
   factory ParametersParameter.fromJson(Map<String, dynamic> json) =>

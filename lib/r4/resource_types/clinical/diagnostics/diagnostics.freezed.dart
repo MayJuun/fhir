@@ -4591,7 +4591,7 @@ class _$MediaTearOff {
       Period createdPeriod,
       Instant issued,
       @JsonKey(name: '_issued') Element issuedElement,
-      Reference operator,
+      @JsonKey(name: 'operator') Reference operator_,
       List<CodeableConcept> reasonCode,
       CodeableConcept bodySite,
       String deviceName,
@@ -4634,7 +4634,7 @@ class _$MediaTearOff {
       createdPeriod: createdPeriod,
       issued: issued,
       issuedElement: issuedElement,
-      operator: operator,
+      operator_: operator_,
       reasonCode: reasonCode,
       bodySite: bodySite,
       deviceName: deviceName,
@@ -4697,7 +4697,8 @@ mixin _$Media {
   Instant get issued;
   @JsonKey(name: '_issued')
   Element get issuedElement;
-  Reference get operator;
+  @JsonKey(name: 'operator')
+  Reference get operator_;
   List<CodeableConcept> get reasonCode;
   CodeableConcept get bodySite;
   String get deviceName;
@@ -4754,7 +4755,7 @@ abstract class $MediaCopyWith<$Res> {
       Period createdPeriod,
       Instant issued,
       @JsonKey(name: '_issued') Element issuedElement,
-      Reference operator,
+      @JsonKey(name: 'operator') Reference operator_,
       List<CodeableConcept> reasonCode,
       CodeableConcept bodySite,
       String deviceName,
@@ -4784,7 +4785,7 @@ abstract class $MediaCopyWith<$Res> {
   $ElementCopyWith<$Res> get createdDateTimeElement;
   $PeriodCopyWith<$Res> get createdPeriod;
   $ElementCopyWith<$Res> get issuedElement;
-  $ReferenceCopyWith<$Res> get operator;
+  $ReferenceCopyWith<$Res> get operator_;
   $CodeableConceptCopyWith<$Res> get bodySite;
   $ElementCopyWith<$Res> get deviceNameElement;
   $ReferenceCopyWith<$Res> get device;
@@ -4831,7 +4832,7 @@ class _$MediaCopyWithImpl<$Res> implements $MediaCopyWith<$Res> {
     Object createdPeriod = freezed,
     Object issued = freezed,
     Object issuedElement = freezed,
-    Object operator = freezed,
+    Object operator_ = freezed,
     Object reasonCode = freezed,
     Object bodySite = freezed,
     Object deviceName = freezed,
@@ -4902,7 +4903,8 @@ class _$MediaCopyWithImpl<$Res> implements $MediaCopyWith<$Res> {
       issuedElement: issuedElement == freezed
           ? _value.issuedElement
           : issuedElement as Element,
-      operator: operator == freezed ? _value.operator : operator as Reference,
+      operator_:
+          operator_ == freezed ? _value.operator_ : operator_ as Reference,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
           : reasonCode as List<CodeableConcept>,
@@ -5066,12 +5068,12 @@ class _$MediaCopyWithImpl<$Res> implements $MediaCopyWith<$Res> {
   }
 
   @override
-  $ReferenceCopyWith<$Res> get operator {
-    if (_value.operator == null) {
+  $ReferenceCopyWith<$Res> get operator_ {
+    if (_value.operator_ == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.operator, (value) {
-      return _then(_value.copyWith(operator: value));
+    return $ReferenceCopyWith<$Res>(_value.operator_, (value) {
+      return _then(_value.copyWith(operator_: value));
     });
   }
 
@@ -5188,7 +5190,7 @@ abstract class _$MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
       Period createdPeriod,
       Instant issued,
       @JsonKey(name: '_issued') Element issuedElement,
-      Reference operator,
+      @JsonKey(name: 'operator') Reference operator_,
       List<CodeableConcept> reasonCode,
       CodeableConcept bodySite,
       String deviceName,
@@ -5232,7 +5234,7 @@ abstract class _$MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
   @override
   $ElementCopyWith<$Res> get issuedElement;
   @override
-  $ReferenceCopyWith<$Res> get operator;
+  $ReferenceCopyWith<$Res> get operator_;
   @override
   $CodeableConceptCopyWith<$Res> get bodySite;
   @override
@@ -5288,7 +5290,7 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
     Object createdPeriod = freezed,
     Object issued = freezed,
     Object issuedElement = freezed,
-    Object operator = freezed,
+    Object operator_ = freezed,
     Object reasonCode = freezed,
     Object bodySite = freezed,
     Object deviceName = freezed,
@@ -5359,7 +5361,8 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
       issuedElement: issuedElement == freezed
           ? _value.issuedElement
           : issuedElement as Element,
-      operator: operator == freezed ? _value.operator : operator as Reference,
+      operator_:
+          operator_ == freezed ? _value.operator_ : operator_ as Reference,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
           : reasonCode as List<CodeableConcept>,
@@ -5424,7 +5427,7 @@ class _$_Media extends _Media {
       this.createdPeriod,
       this.issued,
       @JsonKey(name: '_issued') this.issuedElement,
-      this.operator,
+      @JsonKey(name: 'operator') this.operator_,
       this.reasonCode,
       this.bodySite,
       this.deviceName,
@@ -5507,7 +5510,8 @@ class _$_Media extends _Media {
   @JsonKey(name: '_issued')
   final Element issuedElement;
   @override
-  final Reference operator;
+  @JsonKey(name: 'operator')
+  final Reference operator_;
   @override
   final List<CodeableConcept> reasonCode;
   @override
@@ -5546,7 +5550,7 @@ class _$_Media extends _Media {
 
   @override
   String toString() {
-    return 'Media(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, basedOn: $basedOn, partOf: $partOf, status: $status, statusElement: $statusElement, type: $type, modality: $modality, view: $view, subject: $subject, encounter: $encounter, createdDateTime: $createdDateTime, createdDateTimeElement: $createdDateTimeElement, createdPeriod: $createdPeriod, issued: $issued, issuedElement: $issuedElement, operator: $operator, reasonCode: $reasonCode, bodySite: $bodySite, deviceName: $deviceName, deviceNameElement: $deviceNameElement, device: $device, height: $height, heightElement: $heightElement, width: $width, widthElement: $widthElement, frames: $frames, framesElement: $framesElement, duration: $duration, durationElement: $durationElement, content: $content, note: $note)';
+    return 'Media(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, basedOn: $basedOn, partOf: $partOf, status: $status, statusElement: $statusElement, type: $type, modality: $modality, view: $view, subject: $subject, encounter: $encounter, createdDateTime: $createdDateTime, createdDateTimeElement: $createdDateTimeElement, createdPeriod: $createdPeriod, issued: $issued, issuedElement: $issuedElement, operator_: $operator_, reasonCode: $reasonCode, bodySite: $bodySite, deviceName: $deviceName, deviceNameElement: $deviceNameElement, device: $device, height: $height, heightElement: $heightElement, width: $width, widthElement: $widthElement, frames: $frames, framesElement: $framesElement, duration: $duration, durationElement: $durationElement, content: $content, note: $note)';
   }
 
   @override
@@ -5621,7 +5625,7 @@ class _$_Media extends _Media {
             (identical(other.issued, issued) ||
                 const DeepCollectionEquality().equals(other.issued, issued)) &&
             (identical(other.issuedElement, issuedElement) || const DeepCollectionEquality().equals(other.issuedElement, issuedElement)) &&
-            (identical(other.operator, operator) || const DeepCollectionEquality().equals(other.operator, operator)) &&
+            (identical(other.operator_, operator_) || const DeepCollectionEquality().equals(other.operator_, operator_)) &&
             (identical(other.reasonCode, reasonCode) || const DeepCollectionEquality().equals(other.reasonCode, reasonCode)) &&
             (identical(other.bodySite, bodySite) || const DeepCollectionEquality().equals(other.bodySite, bodySite)) &&
             (identical(other.deviceName, deviceName) || const DeepCollectionEquality().equals(other.deviceName, deviceName)) &&
@@ -5668,7 +5672,7 @@ class _$_Media extends _Media {
       const DeepCollectionEquality().hash(createdPeriod) ^
       const DeepCollectionEquality().hash(issued) ^
       const DeepCollectionEquality().hash(issuedElement) ^
-      const DeepCollectionEquality().hash(operator) ^
+      const DeepCollectionEquality().hash(operator_) ^
       const DeepCollectionEquality().hash(reasonCode) ^
       const DeepCollectionEquality().hash(bodySite) ^
       const DeepCollectionEquality().hash(deviceName) ^
@@ -5724,7 +5728,7 @@ abstract class _Media extends Media {
       Period createdPeriod,
       Instant issued,
       @JsonKey(name: '_issued') Element issuedElement,
-      Reference operator,
+      @JsonKey(name: 'operator') Reference operator_,
       List<CodeableConcept> reasonCode,
       CodeableConcept bodySite,
       String deviceName,
@@ -5802,7 +5806,8 @@ abstract class _Media extends Media {
   @JsonKey(name: '_issued')
   Element get issuedElement;
   @override
-  Reference get operator;
+  @JsonKey(name: 'operator')
+  Reference get operator_;
   @override
   List<CodeableConcept> get reasonCode;
   @override

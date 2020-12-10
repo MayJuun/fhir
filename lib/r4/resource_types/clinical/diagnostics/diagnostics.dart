@@ -241,7 +241,7 @@ abstract class Media with Resource implements _$Media {
     Period createdPeriod,
     Instant issued,
     @JsonKey(name: '_issued') Element issuedElement,
-    Reference operator,
+    @JsonKey(name: 'operator') Reference operator_,
     List<CodeableConcept> reasonCode,
     CodeableConcept bodySite,
     String deviceName,

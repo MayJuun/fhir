@@ -79,7 +79,7 @@ abstract class CodeSystemFilter implements _$CodeSystemFilter {
     @JsonKey(name: '_code') Element codeElement,
     String description,
     @JsonKey(name: '_description') Element descriptionElement,
-    List<String> operator,
+    @JsonKey(name: 'operator') List<String> operator_,
     @JsonKey(name: '_operator') List<Element> operatorElement,
     String value,
     @JsonKey(name: '_value') Element valueElement,

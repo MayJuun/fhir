@@ -714,7 +714,7 @@ _$_Media _$_$_MediaFromJson(Map<String, dynamic> json) {
     occurrencePeriod: json['occurrencePeriod'] == null
         ? null
         : Period.fromJson(json['occurrencePeriod'] as Map<String, dynamic>),
-    operator: json['operator'] == null
+    operator_: json['operator'] == null
         ? null
         : Reference.fromJson(json['operator'] as Map<String, dynamic>),
     reasonCode: (json['reasonCode'] as List)
@@ -791,7 +791,7 @@ Map<String, dynamic> _$_$_MediaToJson(_$_Media instance) {
   writeNotNull(
       '_occurrenceDateTime', instance.occurrenceDateTimeElement?.toJson());
   writeNotNull('occurrencePeriod', instance.occurrencePeriod?.toJson());
-  writeNotNull('operator', instance.operator?.toJson());
+  writeNotNull('operator', instance.operator_?.toJson());
   writeNotNull(
       'reasonCode', instance.reasonCode?.map((e) => e?.toJson())?.toList());
   writeNotNull('bodySite', instance.bodySite?.toJson());

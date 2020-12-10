@@ -1495,7 +1495,7 @@ abstract class OperationDefinitionParameter
     @JsonKey(name: '_searchType') Element searchTypeElement,
     OperationDefinitionBinding binding,
     List<OperationDefinitionReferencedFrom> referencedFrom,
-    List<OperationDefinitionParameter> part,
+    @JsonKey(name: 'part') List<OperationDefinitionParameter> part_,
   }) = _OperationDefinitionParameter;
 
   factory OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =>

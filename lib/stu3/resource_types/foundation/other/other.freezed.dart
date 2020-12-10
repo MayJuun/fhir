@@ -4284,7 +4284,7 @@ class _$MediaTearOff {
       FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
       Period occurrencePeriod,
-      Reference operator,
+      @JsonKey(name: 'operator') Reference operator_,
       List<CodeableConcept> reasonCode,
       CodeableConcept bodySite,
       Reference device,
@@ -4321,7 +4321,7 @@ class _$MediaTearOff {
       occurrenceDateTime: occurrenceDateTime,
       occurrenceDateTimeElement: occurrenceDateTimeElement,
       occurrencePeriod: occurrencePeriod,
-      operator: operator,
+      operator_: operator_,
       reasonCode: reasonCode,
       bodySite: bodySite,
       device: device,
@@ -4377,7 +4377,8 @@ mixin _$Media {
   @JsonKey(name: '_occurrenceDateTime')
   Element get occurrenceDateTimeElement;
   Period get occurrencePeriod;
-  Reference get operator;
+  @JsonKey(name: 'operator')
+  Reference get operator_;
   List<CodeableConcept> get reasonCode;
   CodeableConcept get bodySite;
   Reference get device;
@@ -4427,7 +4428,7 @@ abstract class $MediaCopyWith<$Res> {
       FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
       Period occurrencePeriod,
-      Reference operator,
+      @JsonKey(name: 'operator') Reference operator_,
       List<CodeableConcept> reasonCode,
       CodeableConcept bodySite,
       Reference device,
@@ -4453,7 +4454,7 @@ abstract class $MediaCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get context;
   $ElementCopyWith<$Res> get occurrenceDateTimeElement;
   $PeriodCopyWith<$Res> get occurrencePeriod;
-  $ReferenceCopyWith<$Res> get operator;
+  $ReferenceCopyWith<$Res> get operator_;
   $CodeableConceptCopyWith<$Res> get bodySite;
   $ReferenceCopyWith<$Res> get device;
   $ElementCopyWith<$Res> get heightElement;
@@ -4495,7 +4496,7 @@ class _$MediaCopyWithImpl<$Res> implements $MediaCopyWith<$Res> {
     Object occurrenceDateTime = freezed,
     Object occurrenceDateTimeElement = freezed,
     Object occurrencePeriod = freezed,
-    Object operator = freezed,
+    Object operator_ = freezed,
     Object reasonCode = freezed,
     Object bodySite = freezed,
     Object device = freezed,
@@ -4555,7 +4556,8 @@ class _$MediaCopyWithImpl<$Res> implements $MediaCopyWith<$Res> {
       occurrencePeriod: occurrencePeriod == freezed
           ? _value.occurrencePeriod
           : occurrencePeriod as Period,
-      operator: operator == freezed ? _value.operator : operator as Reference,
+      operator_:
+          operator_ == freezed ? _value.operator_ : operator_ as Reference,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
           : reasonCode as List<CodeableConcept>,
@@ -4694,12 +4696,12 @@ class _$MediaCopyWithImpl<$Res> implements $MediaCopyWith<$Res> {
   }
 
   @override
-  $ReferenceCopyWith<$Res> get operator {
-    if (_value.operator == null) {
+  $ReferenceCopyWith<$Res> get operator_ {
+    if (_value.operator_ == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.operator, (value) {
-      return _then(_value.copyWith(operator: value));
+    return $ReferenceCopyWith<$Res>(_value.operator_, (value) {
+      return _then(_value.copyWith(operator_: value));
     });
   }
 
@@ -4802,7 +4804,7 @@ abstract class _$MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
       FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
       Period occurrencePeriod,
-      Reference operator,
+      @JsonKey(name: 'operator') Reference operator_,
       List<CodeableConcept> reasonCode,
       CodeableConcept bodySite,
       Reference device,
@@ -4840,7 +4842,7 @@ abstract class _$MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
   @override
   $PeriodCopyWith<$Res> get occurrencePeriod;
   @override
-  $ReferenceCopyWith<$Res> get operator;
+  $ReferenceCopyWith<$Res> get operator_;
   @override
   $CodeableConceptCopyWith<$Res> get bodySite;
   @override
@@ -4890,7 +4892,7 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
     Object occurrenceDateTime = freezed,
     Object occurrenceDateTimeElement = freezed,
     Object occurrencePeriod = freezed,
-    Object operator = freezed,
+    Object operator_ = freezed,
     Object reasonCode = freezed,
     Object bodySite = freezed,
     Object device = freezed,
@@ -4950,7 +4952,8 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
       occurrencePeriod: occurrencePeriod == freezed
           ? _value.occurrencePeriod
           : occurrencePeriod as Period,
-      operator: operator == freezed ? _value.operator : operator as Reference,
+      operator_:
+          operator_ == freezed ? _value.operator_ : operator_ as Reference,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
           : reasonCode as List<CodeableConcept>,
@@ -5006,7 +5009,7 @@ class _$_Media extends _Media {
       this.occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') this.occurrenceDateTimeElement,
       this.occurrencePeriod,
-      this.operator,
+      @JsonKey(name: 'operator') this.operator_,
       this.reasonCode,
       this.bodySite,
       this.device,
@@ -5078,7 +5081,8 @@ class _$_Media extends _Media {
   @override
   final Period occurrencePeriod;
   @override
-  final Reference operator;
+  @JsonKey(name: 'operator')
+  final Reference operator_;
   @override
   final List<CodeableConcept> reasonCode;
   @override
@@ -5112,7 +5116,7 @@ class _$_Media extends _Media {
 
   @override
   String toString() {
-    return 'Media(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, basedOn: $basedOn, type: $type, typeElement: $typeElement, subtype: $subtype, view: $view, subject: $subject, context: $context, occurrenceDateTime: $occurrenceDateTime, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrencePeriod: $occurrencePeriod, operator: $operator, reasonCode: $reasonCode, bodySite: $bodySite, device: $device, height: $height, heightElement: $heightElement, width: $width, widthElement: $widthElement, frames: $frames, framesElement: $framesElement, duration: $duration, durationElement: $durationElement, content: $content, note: $note)';
+    return 'Media(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, basedOn: $basedOn, type: $type, typeElement: $typeElement, subtype: $subtype, view: $view, subject: $subject, context: $context, occurrenceDateTime: $occurrenceDateTime, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrencePeriod: $occurrencePeriod, operator_: $operator_, reasonCode: $reasonCode, bodySite: $bodySite, device: $device, height: $height, heightElement: $heightElement, width: $width, widthElement: $widthElement, frames: $frames, framesElement: $framesElement, duration: $duration, durationElement: $durationElement, content: $content, note: $note)';
   }
 
   @override
@@ -5181,9 +5185,9 @@ class _$_Media extends _Media {
             (identical(other.occurrencePeriod, occurrencePeriod) ||
                 const DeepCollectionEquality()
                     .equals(other.occurrencePeriod, occurrencePeriod)) &&
-            (identical(other.operator, operator) ||
+            (identical(other.operator_, operator_) ||
                 const DeepCollectionEquality()
-                    .equals(other.operator, operator)) &&
+                    .equals(other.operator_, operator_)) &&
             (identical(other.reasonCode, reasonCode) || const DeepCollectionEquality().equals(other.reasonCode, reasonCode)) &&
             (identical(other.bodySite, bodySite) || const DeepCollectionEquality().equals(other.bodySite, bodySite)) &&
             (identical(other.device, device) || const DeepCollectionEquality().equals(other.device, device)) &&
@@ -5224,7 +5228,7 @@ class _$_Media extends _Media {
       const DeepCollectionEquality().hash(occurrenceDateTime) ^
       const DeepCollectionEquality().hash(occurrenceDateTimeElement) ^
       const DeepCollectionEquality().hash(occurrencePeriod) ^
-      const DeepCollectionEquality().hash(operator) ^
+      const DeepCollectionEquality().hash(operator_) ^
       const DeepCollectionEquality().hash(reasonCode) ^
       const DeepCollectionEquality().hash(bodySite) ^
       const DeepCollectionEquality().hash(device) ^
@@ -5274,7 +5278,7 @@ abstract class _Media extends Media {
       FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
       Period occurrencePeriod,
-      Reference operator,
+      @JsonKey(name: 'operator') Reference operator_,
       List<CodeableConcept> reasonCode,
       CodeableConcept bodySite,
       Reference device,
@@ -5341,7 +5345,8 @@ abstract class _Media extends Media {
   @override
   Period get occurrencePeriod;
   @override
-  Reference get operator;
+  @JsonKey(name: 'operator')
+  Reference get operator_;
   @override
   List<CodeableConcept> get reasonCode;
   @override

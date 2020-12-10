@@ -2679,7 +2679,7 @@ _$_TestScriptAssert _$_$_TestScriptAssertFromJson(Map<String, dynamic> json) {
     navigationLinksElement: json['_navigationLinks'] == null
         ? null
         : Element.fromJson(json['_navigationLinks'] as Map<String, dynamic>),
-    operator: _$enumDecodeNullable(
+    operator_: _$enumDecodeNullable(
         _$TestScriptAssertOperatorEnumMap, json['operator'],
         unknownValue: TestScriptAssertOperator.unknown),
     operatorElement: json['_operator'] == null
@@ -2781,7 +2781,7 @@ Map<String, dynamic> _$_$_TestScriptAssertToJson(_$_TestScriptAssert instance) {
   writeNotNull('navigationLinks', instance.navigationLinks?.toJson());
   writeNotNull('_navigationLinks', instance.navigationLinksElement?.toJson());
   writeNotNull(
-      'operator', _$TestScriptAssertOperatorEnumMap[instance.operator]);
+      'operator', _$TestScriptAssertOperatorEnumMap[instance.operator_]);
   writeNotNull('_operator', instance.operatorElement?.toJson());
   writeNotNull('path', instance.path);
   writeNotNull('_path', instance.pathElement?.toJson());

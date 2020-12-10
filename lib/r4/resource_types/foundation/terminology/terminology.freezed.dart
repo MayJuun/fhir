@@ -1718,7 +1718,7 @@ class _$CodeSystemFilterTearOff {
       @JsonKey(name: '_code') Element codeElement,
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
-      List<Code> operator,
+      @JsonKey(name: 'operator') List<Code> operator_,
       @JsonKey(name: '_operator') List<Element> operatorElement,
       String value,
       @JsonKey(name: '_value') Element valueElement}) {
@@ -1730,7 +1730,7 @@ class _$CodeSystemFilterTearOff {
       codeElement: codeElement,
       description: description,
       descriptionElement: descriptionElement,
-      operator: operator,
+      operator_: operator_,
       operatorElement: operatorElement,
       value: value,
       valueElement: valueElement,
@@ -1759,7 +1759,8 @@ mixin _$CodeSystemFilter {
   String get description;
   @JsonKey(name: '_description')
   Element get descriptionElement;
-  List<Code> get operator;
+  @JsonKey(name: 'operator')
+  List<Code> get operator_;
   @JsonKey(name: '_operator')
   List<Element> get operatorElement;
   String get value;
@@ -1783,7 +1784,7 @@ abstract class $CodeSystemFilterCopyWith<$Res> {
       @JsonKey(name: '_code') Element codeElement,
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
-      List<Code> operator,
+      @JsonKey(name: 'operator') List<Code> operator_,
       @JsonKey(name: '_operator') List<Element> operatorElement,
       String value,
       @JsonKey(name: '_value') Element valueElement});
@@ -1811,7 +1812,7 @@ class _$CodeSystemFilterCopyWithImpl<$Res>
     Object codeElement = freezed,
     Object description = freezed,
     Object descriptionElement = freezed,
-    Object operator = freezed,
+    Object operator_ = freezed,
     Object operatorElement = freezed,
     Object value = freezed,
     Object valueElement = freezed,
@@ -1832,7 +1833,8 @@ class _$CodeSystemFilterCopyWithImpl<$Res>
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
-      operator: operator == freezed ? _value.operator : operator as List<Code>,
+      operator_:
+          operator_ == freezed ? _value.operator_ : operator_ as List<Code>,
       operatorElement: operatorElement == freezed
           ? _value.operatorElement
           : operatorElement as List<Element>,
@@ -1889,7 +1891,7 @@ abstract class _$CodeSystemFilterCopyWith<$Res>
       @JsonKey(name: '_code') Element codeElement,
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
-      List<Code> operator,
+      @JsonKey(name: 'operator') List<Code> operator_,
       @JsonKey(name: '_operator') List<Element> operatorElement,
       String value,
       @JsonKey(name: '_value') Element valueElement});
@@ -1922,7 +1924,7 @@ class __$CodeSystemFilterCopyWithImpl<$Res>
     Object codeElement = freezed,
     Object description = freezed,
     Object descriptionElement = freezed,
-    Object operator = freezed,
+    Object operator_ = freezed,
     Object operatorElement = freezed,
     Object value = freezed,
     Object valueElement = freezed,
@@ -1943,7 +1945,8 @@ class __$CodeSystemFilterCopyWithImpl<$Res>
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
-      operator: operator == freezed ? _value.operator : operator as List<Code>,
+      operator_:
+          operator_ == freezed ? _value.operator_ : operator_ as List<Code>,
       operatorElement: operatorElement == freezed
           ? _value.operatorElement
           : operatorElement as List<Element>,
@@ -1967,7 +1970,7 @@ class _$_CodeSystemFilter extends _CodeSystemFilter {
       @JsonKey(name: '_code') this.codeElement,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
-      this.operator,
+      @JsonKey(name: 'operator') this.operator_,
       @JsonKey(name: '_operator') this.operatorElement,
       this.value,
       @JsonKey(name: '_value') this.valueElement})
@@ -1994,7 +1997,8 @@ class _$_CodeSystemFilter extends _CodeSystemFilter {
   @JsonKey(name: '_description')
   final Element descriptionElement;
   @override
-  final List<Code> operator;
+  @JsonKey(name: 'operator')
+  final List<Code> operator_;
   @override
   @JsonKey(name: '_operator')
   final List<Element> operatorElement;
@@ -2006,7 +2010,7 @@ class _$_CodeSystemFilter extends _CodeSystemFilter {
 
   @override
   String toString() {
-    return 'CodeSystemFilter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, codeElement: $codeElement, description: $description, descriptionElement: $descriptionElement, operator: $operator, operatorElement: $operatorElement, value: $value, valueElement: $valueElement)';
+    return 'CodeSystemFilter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, codeElement: $codeElement, description: $description, descriptionElement: $descriptionElement, operator_: $operator_, operatorElement: $operatorElement, value: $value, valueElement: $valueElement)';
   }
 
   @override
@@ -2032,9 +2036,9 @@ class _$_CodeSystemFilter extends _CodeSystemFilter {
             (identical(other.descriptionElement, descriptionElement) ||
                 const DeepCollectionEquality()
                     .equals(other.descriptionElement, descriptionElement)) &&
-            (identical(other.operator, operator) ||
+            (identical(other.operator_, operator_) ||
                 const DeepCollectionEquality()
-                    .equals(other.operator, operator)) &&
+                    .equals(other.operator_, operator_)) &&
             (identical(other.operatorElement, operatorElement) ||
                 const DeepCollectionEquality()
                     .equals(other.operatorElement, operatorElement)) &&
@@ -2055,7 +2059,7 @@ class _$_CodeSystemFilter extends _CodeSystemFilter {
       const DeepCollectionEquality().hash(codeElement) ^
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(descriptionElement) ^
-      const DeepCollectionEquality().hash(operator) ^
+      const DeepCollectionEquality().hash(operator_) ^
       const DeepCollectionEquality().hash(operatorElement) ^
       const DeepCollectionEquality().hash(value) ^
       const DeepCollectionEquality().hash(valueElement);
@@ -2080,7 +2084,7 @@ abstract class _CodeSystemFilter extends CodeSystemFilter {
       @JsonKey(name: '_code') Element codeElement,
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
-      List<Code> operator,
+      @JsonKey(name: 'operator') List<Code> operator_,
       @JsonKey(name: '_operator') List<Element> operatorElement,
       String value,
       @JsonKey(name: '_value') Element valueElement}) = _$_CodeSystemFilter;
@@ -2106,7 +2110,8 @@ abstract class _CodeSystemFilter extends CodeSystemFilter {
   @JsonKey(name: '_description')
   Element get descriptionElement;
   @override
-  List<Code> get operator;
+  @JsonKey(name: 'operator')
+  List<Code> get operator_;
   @override
   @JsonKey(name: '_operator')
   List<Element> get operatorElement;

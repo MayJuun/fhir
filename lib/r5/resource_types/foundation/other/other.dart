@@ -464,7 +464,7 @@ abstract class ParametersParameter implements _$ParametersParameter {
     Dosage valueDosage,
     Meta valueMeta,
     Resource resource,
-    List<ParametersParameter> part,
+    @JsonKey(name: 'part') List<ParametersParameter> part_,
   }) = _ParametersParameter;
 
   factory ParametersParameter.fromJson(Map<String, dynamic> json) =>

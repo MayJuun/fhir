@@ -461,7 +461,7 @@ abstract class OperationDefinitionParameter
     Code type,
     Reference profile,
     OperationDefinitionParameterBinding binding,
-    List<OperationDefinitionParameter> part,
+    @JsonKey(name: 'part') List<OperationDefinitionParameter> part_,
   }) = _OperationDefinitionParameter;
 
   factory OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =>
