@@ -8027,7 +8027,7 @@ class _$ParametersParameterTearOff {
       Dosage valueDosage,
       Meta valueMeta,
       Resource resource,
-      List<ParametersParameter> part}) {
+      @JsonKey(name: 'part') List<ParametersParameter> part_}) {
     return _ParametersParameter(
       id: id,
       extension_: extension_,
@@ -8104,7 +8104,7 @@ class _$ParametersParameterTearOff {
       valueDosage: valueDosage,
       valueMeta: valueMeta,
       resource: resource,
-      part: part,
+      part_: part_,
     );
   }
 
@@ -8216,7 +8216,8 @@ mixin _$ParametersParameter {
   Dosage get valueDosage;
   Meta get valueMeta;
   Resource get resource;
-  List<ParametersParameter> get part;
+  @JsonKey(name: 'part')
+  List<ParametersParameter> get part_;
 
   Map<String, dynamic> toJson();
   $ParametersParameterCopyWith<ParametersParameter> get copyWith;
@@ -8303,7 +8304,7 @@ abstract class $ParametersParameterCopyWith<$Res> {
       Dosage valueDosage,
       Meta valueMeta,
       Resource resource,
-      List<ParametersParameter> part});
+      @JsonKey(name: 'part') List<ParametersParameter> part_});
 
   $ElementCopyWith<$Res> get nameElement;
   $ElementCopyWith<$Res> get valueBase64BinaryElement;
@@ -8444,7 +8445,7 @@ class _$ParametersParameterCopyWithImpl<$Res>
     Object valueDosage = freezed,
     Object valueMeta = freezed,
     Object resource = freezed,
-    Object part = freezed,
+    Object part_ = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -8636,7 +8637,8 @@ class _$ParametersParameterCopyWithImpl<$Res>
           valueDosage == freezed ? _value.valueDosage : valueDosage as Dosage,
       valueMeta: valueMeta == freezed ? _value.valueMeta : valueMeta as Meta,
       resource: resource == freezed ? _value.resource : resource as Resource,
-      part: part == freezed ? _value.part : part as List<ParametersParameter>,
+      part_:
+          part_ == freezed ? _value.part_ : part_ as List<ParametersParameter>,
     ));
   }
 
@@ -9236,7 +9238,7 @@ abstract class _$ParametersParameterCopyWith<$Res>
       Dosage valueDosage,
       Meta valueMeta,
       Resource resource,
-      List<ParametersParameter> part});
+      @JsonKey(name: 'part') List<ParametersParameter> part_});
 
   @override
   $ElementCopyWith<$Res> get nameElement;
@@ -9430,7 +9432,7 @@ class __$ParametersParameterCopyWithImpl<$Res>
     Object valueDosage = freezed,
     Object valueMeta = freezed,
     Object resource = freezed,
-    Object part = freezed,
+    Object part_ = freezed,
   }) {
     return _then(_ParametersParameter(
       id: id == freezed ? _value.id : id as String,
@@ -9622,7 +9624,8 @@ class __$ParametersParameterCopyWithImpl<$Res>
           valueDosage == freezed ? _value.valueDosage : valueDosage as Dosage,
       valueMeta: valueMeta == freezed ? _value.valueMeta : valueMeta as Meta,
       resource: resource == freezed ? _value.resource : resource as Resource,
-      part: part == freezed ? _value.part : part as List<ParametersParameter>,
+      part_:
+          part_ == freezed ? _value.part_ : part_ as List<ParametersParameter>,
     ));
   }
 }
@@ -9707,7 +9710,7 @@ class _$_ParametersParameter extends _ParametersParameter {
       this.valueDosage,
       this.valueMeta,
       this.resource,
-      this.part})
+      @JsonKey(name: 'part') this.part_})
       : super._();
 
   factory _$_ParametersParameter.fromJson(Map<String, dynamic> json) =>
@@ -9885,11 +9888,12 @@ class _$_ParametersParameter extends _ParametersParameter {
   @override
   final Resource resource;
   @override
-  final List<ParametersParameter> part;
+  @JsonKey(name: 'part')
+  final List<ParametersParameter> part_;
 
   @override
   String toString() {
-    return 'ParametersParameter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueCanonical: $valueCanonical, valueCanonicalElement: $valueCanonicalElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueId: $valueId, valueIdElement: $valueIdElement, valueInstant: $valueInstant, valueInstantElement: $valueInstantElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueMarkdown: $valueMarkdown, valueMarkdownElement: $valueMarkdownElement, valueOid: $valueOid, valueOidElement: $valueOidElement, valuePositiveInt: $valuePositiveInt, valuePositiveIntElement: $valuePositiveIntElement, valueString: $valueString, valueStringElement: $valueStringElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueUnsignedInt: $valueUnsignedInt, valueUnsignedIntElement: $valueUnsignedIntElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueUrl: $valueUrl, valueUrlElement: $valueUrlElement, valueUuid: $valueUuid, valueUuidElement: $valueUuidElement, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueMeta: $valueMeta, resource: $resource, part: $part)';
+    return 'ParametersParameter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueCanonical: $valueCanonical, valueCanonicalElement: $valueCanonicalElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueId: $valueId, valueIdElement: $valueIdElement, valueInstant: $valueInstant, valueInstantElement: $valueInstantElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueMarkdown: $valueMarkdown, valueMarkdownElement: $valueMarkdownElement, valueOid: $valueOid, valueOidElement: $valueOidElement, valuePositiveInt: $valuePositiveInt, valuePositiveIntElement: $valuePositiveIntElement, valueString: $valueString, valueStringElement: $valueStringElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueUnsignedInt: $valueUnsignedInt, valueUnsignedIntElement: $valueUnsignedIntElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueUrl: $valueUrl, valueUrlElement: $valueUrlElement, valueUuid: $valueUuid, valueUuidElement: $valueUuidElement, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueMeta: $valueMeta, resource: $resource, part_: $part_)';
   }
 
   @override
@@ -10005,7 +10009,7 @@ class _$_ParametersParameter extends _ParametersParameter {
             (identical(other.valueDosage, valueDosage) || const DeepCollectionEquality().equals(other.valueDosage, valueDosage)) &&
             (identical(other.valueMeta, valueMeta) || const DeepCollectionEquality().equals(other.valueMeta, valueMeta)) &&
             (identical(other.resource, resource) || const DeepCollectionEquality().equals(other.resource, resource)) &&
-            (identical(other.part, part) || const DeepCollectionEquality().equals(other.part, part)));
+            (identical(other.part_, part_) || const DeepCollectionEquality().equals(other.part_, part_)));
   }
 
   @override
@@ -10086,7 +10090,7 @@ class _$_ParametersParameter extends _ParametersParameter {
       const DeepCollectionEquality().hash(valueDosage) ^
       const DeepCollectionEquality().hash(valueMeta) ^
       const DeepCollectionEquality().hash(resource) ^
-      const DeepCollectionEquality().hash(part);
+      const DeepCollectionEquality().hash(part_);
 
   @override
   _$ParametersParameterCopyWith<_ParametersParameter> get copyWith =>
@@ -10102,82 +10106,83 @@ class _$_ParametersParameter extends _ParametersParameter {
 abstract class _ParametersParameter extends ParametersParameter {
   _ParametersParameter._() : super._();
   factory _ParametersParameter(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      String name,
-      @JsonKey(name: '_name') Element nameElement,
-      Base64Binary valueBase64Binary,
-      @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
-      Boolean valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-      Canonical valueCanonical,
-      @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
-      Code valueCode,
-      @JsonKey(name: '_valueCode') Element valueCodeElement,
-      Date valueDate,
-      @JsonKey(name: '_valueDate') Element valueDateElement,
-      FhirDateTime valueDateTime,
-      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-      Decimal valueDecimal,
-      @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-      Id valueId,
-      @JsonKey(name: '_valueId') Element valueIdElement,
-      Instant valueInstant,
-      @JsonKey(name: '_valueInstant') Element valueInstantElement,
-      Integer valueInteger,
-      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Markdown valueMarkdown,
-      @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
-      Oid valueOid,
-      @JsonKey(name: '_valueOid') Element valueOidElement,
-      PositiveInt valuePositiveInt,
-      @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
-      String valueString,
-      @JsonKey(name: '_valueString') Element valueStringElement,
-      Time valueTime,
-      @JsonKey(name: '_valueTime') Element valueTimeElement,
-      UnsignedInt valueUnsignedInt,
-      @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
-      FhirUri valueUri,
-      @JsonKey(name: '_valueUri') Element valueUriElement,
-      FhirUrl valueUrl,
-      @JsonKey(name: '_valueUrl') Element valueUrlElement,
-      Uuid valueUuid,
-      @JsonKey(name: '_valueUuid') Element valueUuidElement,
-      Address valueAddress,
-      Age valueAge,
-      Annotation valueAnnotation,
-      Attachment valueAttachment,
-      CodeableConcept valueCodeableConcept,
-      Coding valueCoding,
-      ContactPoint valueContactPoint,
-      Count valueCount,
-      Distance valueDistance,
-      FhirDuration valueDuration,
-      HumanName valueHumanName,
-      Identifier valueIdentifier,
-      Money valueMoney,
-      Period valuePeriod,
-      Quantity valueQuantity,
-      Range valueRange,
-      Ratio valueRatio,
-      Reference valueReference,
-      SampledData valueSampledData,
-      Signature valueSignature,
-      Timing valueTiming,
-      ContactDetail valueContactDetail,
-      Contributor valueContributor,
-      DataRequirement valueDataRequirement,
-      Expression valueExpression,
-      ParameterDefinition valueParameterDefinition,
-      RelatedArtifact valueRelatedArtifact,
-      TriggerDefinition valueTriggerDefinition,
-      UsageContext valueUsageContext,
-      Dosage valueDosage,
-      Meta valueMeta,
-      Resource resource,
-      List<ParametersParameter> part}) = _$_ParametersParameter;
+          {String id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          String name,
+          @JsonKey(name: '_name') Element nameElement,
+          Base64Binary valueBase64Binary,
+          @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
+          Boolean valueBoolean,
+          @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+          Canonical valueCanonical,
+          @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
+          Code valueCode,
+          @JsonKey(name: '_valueCode') Element valueCodeElement,
+          Date valueDate,
+          @JsonKey(name: '_valueDate') Element valueDateElement,
+          FhirDateTime valueDateTime,
+          @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+          Decimal valueDecimal,
+          @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+          Id valueId,
+          @JsonKey(name: '_valueId') Element valueIdElement,
+          Instant valueInstant,
+          @JsonKey(name: '_valueInstant') Element valueInstantElement,
+          Integer valueInteger,
+          @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+          Markdown valueMarkdown,
+          @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
+          Oid valueOid,
+          @JsonKey(name: '_valueOid') Element valueOidElement,
+          PositiveInt valuePositiveInt,
+          @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
+          String valueString,
+          @JsonKey(name: '_valueString') Element valueStringElement,
+          Time valueTime,
+          @JsonKey(name: '_valueTime') Element valueTimeElement,
+          UnsignedInt valueUnsignedInt,
+          @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
+          FhirUri valueUri,
+          @JsonKey(name: '_valueUri') Element valueUriElement,
+          FhirUrl valueUrl,
+          @JsonKey(name: '_valueUrl') Element valueUrlElement,
+          Uuid valueUuid,
+          @JsonKey(name: '_valueUuid') Element valueUuidElement,
+          Address valueAddress,
+          Age valueAge,
+          Annotation valueAnnotation,
+          Attachment valueAttachment,
+          CodeableConcept valueCodeableConcept,
+          Coding valueCoding,
+          ContactPoint valueContactPoint,
+          Count valueCount,
+          Distance valueDistance,
+          FhirDuration valueDuration,
+          HumanName valueHumanName,
+          Identifier valueIdentifier,
+          Money valueMoney,
+          Period valuePeriod,
+          Quantity valueQuantity,
+          Range valueRange,
+          Ratio valueRatio,
+          Reference valueReference,
+          SampledData valueSampledData,
+          Signature valueSignature,
+          Timing valueTiming,
+          ContactDetail valueContactDetail,
+          Contributor valueContributor,
+          DataRequirement valueDataRequirement,
+          Expression valueExpression,
+          ParameterDefinition valueParameterDefinition,
+          RelatedArtifact valueRelatedArtifact,
+          TriggerDefinition valueTriggerDefinition,
+          UsageContext valueUsageContext,
+          Dosage valueDosage,
+          Meta valueMeta,
+          Resource resource,
+          @JsonKey(name: 'part') List<ParametersParameter> part_}) =
+      _$_ParametersParameter;
 
   factory _ParametersParameter.fromJson(Map<String, dynamic> json) =
       _$_ParametersParameter.fromJson;
@@ -10354,7 +10359,8 @@ abstract class _ParametersParameter extends ParametersParameter {
   @override
   Resource get resource;
   @override
-  List<ParametersParameter> get part;
+  @JsonKey(name: 'part')
+  List<ParametersParameter> get part_;
   @override
   _$ParametersParameterCopyWith<_ParametersParameter> get copyWith;
 }

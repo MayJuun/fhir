@@ -1299,14 +1299,14 @@ class _$MedicinalProductNamePartTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      String part,
+      @JsonKey(name: 'part') String part_,
       @JsonKey(name: '_part') Element partElement,
       @required Coding type}) {
     return _MedicinalProductNamePart(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
-      part: part,
+      part_: part_,
       partElement: partElement,
       type: type,
     );
@@ -1328,7 +1328,8 @@ mixin _$MedicinalProductNamePart {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
-  String get part;
+  @JsonKey(name: 'part')
+  String get part_;
   @JsonKey(name: '_part')
   Element get partElement;
   Coding get type;
@@ -1346,7 +1347,7 @@ abstract class $MedicinalProductNamePartCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      String part,
+      @JsonKey(name: 'part') String part_,
       @JsonKey(name: '_part') Element partElement,
       Coding type});
 
@@ -1368,7 +1369,7 @@ class _$MedicinalProductNamePartCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object part = freezed,
+    Object part_ = freezed,
     Object partElement = freezed,
     Object type = freezed,
   }) {
@@ -1380,7 +1381,7 @@ class _$MedicinalProductNamePartCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      part: part == freezed ? _value.part : part as String,
+      part_: part_ == freezed ? _value.part_ : part_ as String,
       partElement:
           partElement == freezed ? _value.partElement : partElement as Element,
       type: type == freezed ? _value.type : type as Coding,
@@ -1419,7 +1420,7 @@ abstract class _$MedicinalProductNamePartCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      String part,
+      @JsonKey(name: 'part') String part_,
       @JsonKey(name: '_part') Element partElement,
       Coding type});
 
@@ -1446,7 +1447,7 @@ class __$MedicinalProductNamePartCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object part = freezed,
+    Object part_ = freezed,
     Object partElement = freezed,
     Object type = freezed,
   }) {
@@ -1458,7 +1459,7 @@ class __$MedicinalProductNamePartCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      part: part == freezed ? _value.part : part as String,
+      part_: part_ == freezed ? _value.part_ : part_ as String,
       partElement:
           partElement == freezed ? _value.partElement : partElement as Element,
       type: type == freezed ? _value.type : type as Coding,
@@ -1474,7 +1475,7 @@ class _$_MedicinalProductNamePart extends _MedicinalProductNamePart {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      this.part,
+      @JsonKey(name: 'part') this.part_,
       @JsonKey(name: '_part') this.partElement,
       @required this.type})
       : assert(type != null),
@@ -1491,7 +1492,8 @@ class _$_MedicinalProductNamePart extends _MedicinalProductNamePart {
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  final String part;
+  @JsonKey(name: 'part')
+  final String part_;
   @override
   @JsonKey(name: '_part')
   final Element partElement;
@@ -1500,7 +1502,7 @@ class _$_MedicinalProductNamePart extends _MedicinalProductNamePart {
 
   @override
   String toString() {
-    return 'MedicinalProductNamePart(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, part: $part, partElement: $partElement, type: $type)';
+    return 'MedicinalProductNamePart(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, part_: $part_, partElement: $partElement, type: $type)';
   }
 
   @override
@@ -1515,8 +1517,8 @@ class _$_MedicinalProductNamePart extends _MedicinalProductNamePart {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.part, part) ||
-                const DeepCollectionEquality().equals(other.part, part)) &&
+            (identical(other.part_, part_) ||
+                const DeepCollectionEquality().equals(other.part_, part_)) &&
             (identical(other.partElement, partElement) ||
                 const DeepCollectionEquality()
                     .equals(other.partElement, partElement)) &&
@@ -1530,7 +1532,7 @@ class _$_MedicinalProductNamePart extends _MedicinalProductNamePart {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(part) ^
+      const DeepCollectionEquality().hash(part_) ^
       const DeepCollectionEquality().hash(partElement) ^
       const DeepCollectionEquality().hash(type);
 
@@ -1551,7 +1553,7 @@ abstract class _MedicinalProductNamePart extends MedicinalProductNamePart {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      String part,
+      @JsonKey(name: 'part') String part_,
       @JsonKey(name: '_part') Element partElement,
       @required Coding type}) = _$_MedicinalProductNamePart;
 
@@ -1566,7 +1568,8 @@ abstract class _MedicinalProductNamePart extends MedicinalProductNamePart {
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  String get part;
+  @JsonKey(name: 'part')
+  String get part_;
   @override
   @JsonKey(name: '_part')
   Element get partElement;
@@ -25786,13 +25789,13 @@ class _$SubstanceSourceMaterialPartDescriptionTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      CodeableConcept part,
+      @JsonKey(name: 'part') CodeableConcept part_,
       CodeableConcept partLocation}) {
     return _SubstanceSourceMaterialPartDescription(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
-      part: part,
+      part_: part_,
       partLocation: partLocation,
     );
   }
@@ -25814,7 +25817,8 @@ mixin _$SubstanceSourceMaterialPartDescription {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
-  CodeableConcept get part;
+  @JsonKey(name: 'part')
+  CodeableConcept get part_;
   CodeableConcept get partLocation;
 
   Map<String, dynamic> toJson();
@@ -25832,10 +25836,10 @@ abstract class $SubstanceSourceMaterialPartDescriptionCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      CodeableConcept part,
+      @JsonKey(name: 'part') CodeableConcept part_,
       CodeableConcept partLocation});
 
-  $CodeableConceptCopyWith<$Res> get part;
+  $CodeableConceptCopyWith<$Res> get part_;
   $CodeableConceptCopyWith<$Res> get partLocation;
 }
 
@@ -25853,7 +25857,7 @@ class _$SubstanceSourceMaterialPartDescriptionCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object part = freezed,
+    Object part_ = freezed,
     Object partLocation = freezed,
   }) {
     return _then(_value.copyWith(
@@ -25864,7 +25868,7 @@ class _$SubstanceSourceMaterialPartDescriptionCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      part: part == freezed ? _value.part : part as CodeableConcept,
+      part_: part_ == freezed ? _value.part_ : part_ as CodeableConcept,
       partLocation: partLocation == freezed
           ? _value.partLocation
           : partLocation as CodeableConcept,
@@ -25872,12 +25876,12 @@ class _$SubstanceSourceMaterialPartDescriptionCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get part {
-    if (_value.part == null) {
+  $CodeableConceptCopyWith<$Res> get part_ {
+    if (_value.part_ == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.part, (value) {
-      return _then(_value.copyWith(part: value));
+    return $CodeableConceptCopyWith<$Res>(_value.part_, (value) {
+      return _then(_value.copyWith(part_: value));
     });
   }
 
@@ -25904,11 +25908,11 @@ abstract class _$SubstanceSourceMaterialPartDescriptionCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      CodeableConcept part,
+      @JsonKey(name: 'part') CodeableConcept part_,
       CodeableConcept partLocation});
 
   @override
-  $CodeableConceptCopyWith<$Res> get part;
+  $CodeableConceptCopyWith<$Res> get part_;
   @override
   $CodeableConceptCopyWith<$Res> get partLocation;
 }
@@ -25932,7 +25936,7 @@ class __$SubstanceSourceMaterialPartDescriptionCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object part = freezed,
+    Object part_ = freezed,
     Object partLocation = freezed,
   }) {
     return _then(_SubstanceSourceMaterialPartDescription(
@@ -25943,7 +25947,7 @@ class __$SubstanceSourceMaterialPartDescriptionCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      part: part == freezed ? _value.part : part as CodeableConcept,
+      part_: part_ == freezed ? _value.part_ : part_ as CodeableConcept,
       partLocation: partLocation == freezed
           ? _value.partLocation
           : partLocation as CodeableConcept,
@@ -25960,7 +25964,7 @@ class _$_SubstanceSourceMaterialPartDescription
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      this.part,
+      @JsonKey(name: 'part') this.part_,
       this.partLocation})
       : super._();
 
@@ -25976,13 +25980,14 @@ class _$_SubstanceSourceMaterialPartDescription
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  final CodeableConcept part;
+  @JsonKey(name: 'part')
+  final CodeableConcept part_;
   @override
   final CodeableConcept partLocation;
 
   @override
   String toString() {
-    return 'SubstanceSourceMaterialPartDescription(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, part: $part, partLocation: $partLocation)';
+    return 'SubstanceSourceMaterialPartDescription(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, part_: $part_, partLocation: $partLocation)';
   }
 
   @override
@@ -25997,8 +26002,8 @@ class _$_SubstanceSourceMaterialPartDescription
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.part, part) ||
-                const DeepCollectionEquality().equals(other.part, part)) &&
+            (identical(other.part_, part_) ||
+                const DeepCollectionEquality().equals(other.part_, part_)) &&
             (identical(other.partLocation, partLocation) ||
                 const DeepCollectionEquality()
                     .equals(other.partLocation, partLocation)));
@@ -26010,7 +26015,7 @@ class _$_SubstanceSourceMaterialPartDescription
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(part) ^
+      const DeepCollectionEquality().hash(part_) ^
       const DeepCollectionEquality().hash(partLocation);
 
   @override
@@ -26032,7 +26037,7 @@ abstract class _SubstanceSourceMaterialPartDescription
           {String id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
-          CodeableConcept part,
+          @JsonKey(name: 'part') CodeableConcept part_,
           CodeableConcept partLocation}) =
       _$_SubstanceSourceMaterialPartDescription;
 
@@ -26048,7 +26053,8 @@ abstract class _SubstanceSourceMaterialPartDescription
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  CodeableConcept get part;
+  @JsonKey(name: 'part')
+  CodeableConcept get part_;
   @override
   CodeableConcept get partLocation;
   @override

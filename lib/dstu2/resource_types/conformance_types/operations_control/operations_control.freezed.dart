@@ -8386,7 +8386,8 @@ class _$OperationDefinitionParameterTearOff {
       Code type,
       Reference profile,
       OperationDefinitionParameterBinding binding,
-      List<OperationDefinitionParameter> part}) {
+      @JsonKey(name: 'part')
+          List<OperationDefinitionParameter> part_}) {
     return _OperationDefinitionParameter(
       id: id,
       extension_: extension_,
@@ -8400,7 +8401,7 @@ class _$OperationDefinitionParameterTearOff {
       type: type,
       profile: profile,
       binding: binding,
-      part: part,
+      part_: part_,
     );
   }
 
@@ -8434,7 +8435,8 @@ mixin _$OperationDefinitionParameter {
   Code get type;
   Reference get profile;
   OperationDefinitionParameterBinding get binding;
-  List<OperationDefinitionParameter> get part;
+  @JsonKey(name: 'part')
+  List<OperationDefinitionParameter> get part_;
 
   Map<String, dynamic> toJson();
   $OperationDefinitionParameterCopyWith<OperationDefinitionParameter>
@@ -8466,7 +8468,8 @@ abstract class $OperationDefinitionParameterCopyWith<$Res> {
       Code type,
       Reference profile,
       OperationDefinitionParameterBinding binding,
-      List<OperationDefinitionParameter> part});
+      @JsonKey(name: 'part')
+          List<OperationDefinitionParameter> part_});
 
   $ReferenceCopyWith<$Res> get profile;
   $OperationDefinitionParameterBindingCopyWith<$Res> get binding;
@@ -8495,7 +8498,7 @@ class _$OperationDefinitionParameterCopyWithImpl<$Res>
     Object type = freezed,
     Object profile = freezed,
     Object binding = freezed,
-    Object part = freezed,
+    Object part_ = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -8520,9 +8523,9 @@ class _$OperationDefinitionParameterCopyWithImpl<$Res>
       binding: binding == freezed
           ? _value.binding
           : binding as OperationDefinitionParameterBinding,
-      part: part == freezed
-          ? _value.part
-          : part as List<OperationDefinitionParameter>,
+      part_: part_ == freezed
+          ? _value.part_
+          : part_ as List<OperationDefinitionParameter>,
     ));
   }
 
@@ -8575,7 +8578,8 @@ abstract class _$OperationDefinitionParameterCopyWith<$Res>
       Code type,
       Reference profile,
       OperationDefinitionParameterBinding binding,
-      List<OperationDefinitionParameter> part});
+      @JsonKey(name: 'part')
+          List<OperationDefinitionParameter> part_});
 
   @override
   $ReferenceCopyWith<$Res> get profile;
@@ -8610,7 +8614,7 @@ class __$OperationDefinitionParameterCopyWithImpl<$Res>
     Object type = freezed,
     Object profile = freezed,
     Object binding = freezed,
-    Object part = freezed,
+    Object part_ = freezed,
   }) {
     return _then(_OperationDefinitionParameter(
       id: id == freezed ? _value.id : id as Id,
@@ -8635,9 +8639,9 @@ class __$OperationDefinitionParameterCopyWithImpl<$Res>
       binding: binding == freezed
           ? _value.binding
           : binding as OperationDefinitionParameterBinding,
-      part: part == freezed
-          ? _value.part
-          : part as List<OperationDefinitionParameter>,
+      part_: part_ == freezed
+          ? _value.part_
+          : part_ as List<OperationDefinitionParameter>,
     ));
   }
 }
@@ -8669,7 +8673,8 @@ class _$_OperationDefinitionParameter implements _OperationDefinitionParameter {
       this.type,
       this.profile,
       this.binding,
-      this.part})
+      @JsonKey(name: 'part')
+          this.part_})
       : assert(name != null),
         assert(use != null),
         assert(min != null),
@@ -8709,11 +8714,12 @@ class _$_OperationDefinitionParameter implements _OperationDefinitionParameter {
   @override
   final OperationDefinitionParameterBinding binding;
   @override
-  final List<OperationDefinitionParameter> part;
+  @JsonKey(name: 'part')
+  final List<OperationDefinitionParameter> part_;
 
   @override
   String toString() {
-    return 'OperationDefinitionParameter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, name: $name, use: $use, min: $min, max: $max, documentation: $documentation, type: $type, profile: $profile, binding: $binding, part: $part)';
+    return 'OperationDefinitionParameter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, name: $name, use: $use, min: $min, max: $max, documentation: $documentation, type: $type, profile: $profile, binding: $binding, part_: $part_)';
   }
 
   @override
@@ -8750,8 +8756,8 @@ class _$_OperationDefinitionParameter implements _OperationDefinitionParameter {
             (identical(other.binding, binding) ||
                 const DeepCollectionEquality()
                     .equals(other.binding, binding)) &&
-            (identical(other.part, part) ||
-                const DeepCollectionEquality().equals(other.part, part)));
+            (identical(other.part_, part_) ||
+                const DeepCollectionEquality().equals(other.part_, part_)));
   }
 
   @override
@@ -8769,7 +8775,7 @@ class _$_OperationDefinitionParameter implements _OperationDefinitionParameter {
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(profile) ^
       const DeepCollectionEquality().hash(binding) ^
-      const DeepCollectionEquality().hash(part);
+      const DeepCollectionEquality().hash(part_);
 
   @override
   _$OperationDefinitionParameterCopyWith<_OperationDefinitionParameter>
@@ -8807,7 +8813,8 @@ abstract class _OperationDefinitionParameter
           Code type,
           Reference profile,
           OperationDefinitionParameterBinding binding,
-          List<OperationDefinitionParameter> part}) =
+          @JsonKey(name: 'part')
+              List<OperationDefinitionParameter> part_}) =
       _$_OperationDefinitionParameter;
 
   factory _OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =
@@ -8844,7 +8851,8 @@ abstract class _OperationDefinitionParameter
   @override
   OperationDefinitionParameterBinding get binding;
   @override
-  List<OperationDefinitionParameter> get part;
+  @JsonKey(name: 'part')
+  List<OperationDefinitionParameter> get part_;
   @override
   _$OperationDefinitionParameterCopyWith<_OperationDefinitionParameter>
       get copyWith;

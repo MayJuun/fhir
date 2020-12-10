@@ -5451,7 +5451,7 @@ _$_OperationDefinitionParameter _$_$_OperationDefinitionParameterFromJson(
             : OperationDefinitionReferencedFrom.fromJson(
                 e as Map<String, dynamic>))
         ?.toList(),
-    part: (json['part'] as List)
+    part_: (json['part'] as List)
         ?.map((e) => e == null
             ? null
             : OperationDefinitionParameter.fromJson(e as Map<String, dynamic>))
@@ -5494,7 +5494,7 @@ Map<String, dynamic> _$_$_OperationDefinitionParameterToJson(
   writeNotNull('binding', instance.binding?.toJson());
   writeNotNull('referencedFrom',
       instance.referencedFrom?.map((e) => e?.toJson())?.toList());
-  writeNotNull('part', instance.part?.map((e) => e?.toJson())?.toList());
+  writeNotNull('part', instance.part_?.map((e) => e?.toJson())?.toList());
   return val;
 }
 

@@ -2878,7 +2878,7 @@ _$_OperationDefinitionParameter _$_$_OperationDefinitionParameterFromJson(
         ? null
         : OperationDefinitionBinding.fromJson(
             json['binding'] as Map<String, dynamic>),
-    part: (json['part'] as List)
+    part_: (json['part'] as List)
         ?.map((e) => e == null
             ? null
             : OperationDefinitionParameter.fromJson(e as Map<String, dynamic>))
@@ -2913,7 +2913,7 @@ Map<String, dynamic> _$_$_OperationDefinitionParameterToJson(
   writeNotNull('_searchType', instance.searchTypeElement?.toJson());
   writeNotNull('profile', instance.profile?.toJson());
   writeNotNull('binding', instance.binding?.toJson());
-  writeNotNull('part', instance.part?.map((e) => e?.toJson())?.toList());
+  writeNotNull('part', instance.part_?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
