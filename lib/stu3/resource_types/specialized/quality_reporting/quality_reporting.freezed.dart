@@ -111,7 +111,8 @@ class _$MeasureTearOff {
       String guidance,
       @JsonKey(name: '_guidance')
           Element guidanceElement,
-      String set,
+      @JsonKey(name: 'set')
+          String set_,
       @JsonKey(name: '_set')
           Element setElement,
       List<MeasureGroup> group,
@@ -185,7 +186,7 @@ class _$MeasureTearOff {
       definitionElement: definitionElement,
       guidance: guidance,
       guidanceElement: guidanceElement,
-      set: set,
+      set_: set_,
       setElement: setElement,
       group: group,
       supplementalData: supplementalData,
@@ -297,7 +298,8 @@ mixin _$Measure {
   String get guidance;
   @JsonKey(name: '_guidance')
   Element get guidanceElement;
-  String get set;
+  @JsonKey(name: 'set')
+  String get set_;
   @JsonKey(name: '_set')
   Element get setElement;
   List<MeasureGroup> get group;
@@ -405,7 +407,8 @@ abstract class $MeasureCopyWith<$Res> {
       String guidance,
       @JsonKey(name: '_guidance')
           Element guidanceElement,
-      String set,
+      @JsonKey(name: 'set')
+          String set_,
       @JsonKey(name: '_set')
           Element setElement,
       List<MeasureGroup> group,
@@ -519,7 +522,7 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
     Object definitionElement = freezed,
     Object guidance = freezed,
     Object guidanceElement = freezed,
-    Object set = freezed,
+    Object set_ = freezed,
     Object setElement = freezed,
     Object group = freezed,
     Object supplementalData = freezed,
@@ -681,7 +684,7 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
       guidanceElement: guidanceElement == freezed
           ? _value.guidanceElement
           : guidanceElement as Element,
-      set: set == freezed ? _value.set : set as String,
+      set_: set_ == freezed ? _value.set_ : set_ as String,
       setElement:
           setElement == freezed ? _value.setElement : setElement as Element,
       group: group == freezed ? _value.group : group as List<MeasureGroup>,
@@ -1083,7 +1086,8 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       String guidance,
       @JsonKey(name: '_guidance')
           Element guidanceElement,
-      String set,
+      @JsonKey(name: 'set')
+          String set_,
       @JsonKey(name: '_set')
           Element setElement,
       List<MeasureGroup> group,
@@ -1227,7 +1231,7 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
     Object definitionElement = freezed,
     Object guidance = freezed,
     Object guidanceElement = freezed,
-    Object set = freezed,
+    Object set_ = freezed,
     Object setElement = freezed,
     Object group = freezed,
     Object supplementalData = freezed,
@@ -1389,7 +1393,7 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
       guidanceElement: guidanceElement == freezed
           ? _value.guidanceElement
           : guidanceElement as Element,
-      set: set == freezed ? _value.set : set as String,
+      set_: set_ == freezed ? _value.set_ : set_ as String,
       setElement:
           setElement == freezed ? _value.setElement : setElement as Element,
       group: group == freezed ? _value.group : group as List<MeasureGroup>,
@@ -1498,7 +1502,8 @@ class _$_Measure extends _Measure {
       this.guidance,
       @JsonKey(name: '_guidance')
           this.guidanceElement,
-      this.set,
+      @JsonKey(name: 'set')
+          this.set_,
       @JsonKey(name: '_set')
           this.setElement,
       this.group,
@@ -1671,7 +1676,8 @@ class _$_Measure extends _Measure {
   @JsonKey(name: '_guidance')
   final Element guidanceElement;
   @override
-  final String set;
+  @JsonKey(name: 'set')
+  final String set_;
   @override
   @JsonKey(name: '_set')
   final Element setElement;
@@ -1682,7 +1688,7 @@ class _$_Measure extends _Measure {
 
   @override
   String toString() {
-    return 'Measure(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, description: $description, descriptionElement: $descriptionElement, purpose: $purpose, purposeElement: $purposeElement, usage: $usage, usageElement: $usageElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, useContext: $useContext, jurisdiction: $jurisdiction, topic: $topic, contributor: $contributor, contact: $contact, copyright: $copyright, copyrightElement: $copyrightElement, relatedArtifact: $relatedArtifact, library_: $library_, disclaimer: $disclaimer, disclaimerElement: $disclaimerElement, scoring: $scoring, compositeScoring: $compositeScoring, type: $type, riskAdjustment: $riskAdjustment, riskAdjustmentElement: $riskAdjustmentElement, rateAggregation: $rateAggregation, rateAggregationElement: $rateAggregationElement, rationale: $rationale, rationaleElement: $rationaleElement, clinicalRecommendationStatement: $clinicalRecommendationStatement, clinicalRecommendationStatementElement: $clinicalRecommendationStatementElement, improvementNotation: $improvementNotation, improvementNotationElement: $improvementNotationElement, definition: $definition, definitionElement: $definitionElement, guidance: $guidance, guidanceElement: $guidanceElement, set: $set, setElement: $setElement, group: $group, supplementalData: $supplementalData)';
+    return 'Measure(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, description: $description, descriptionElement: $descriptionElement, purpose: $purpose, purposeElement: $purposeElement, usage: $usage, usageElement: $usageElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, useContext: $useContext, jurisdiction: $jurisdiction, topic: $topic, contributor: $contributor, contact: $contact, copyright: $copyright, copyrightElement: $copyrightElement, relatedArtifact: $relatedArtifact, library_: $library_, disclaimer: $disclaimer, disclaimerElement: $disclaimerElement, scoring: $scoring, compositeScoring: $compositeScoring, type: $type, riskAdjustment: $riskAdjustment, riskAdjustmentElement: $riskAdjustmentElement, rateAggregation: $rateAggregation, rateAggregationElement: $rateAggregationElement, rationale: $rationale, rationaleElement: $rationaleElement, clinicalRecommendationStatement: $clinicalRecommendationStatement, clinicalRecommendationStatementElement: $clinicalRecommendationStatementElement, improvementNotation: $improvementNotation, improvementNotationElement: $improvementNotationElement, definition: $definition, definitionElement: $definitionElement, guidance: $guidance, guidanceElement: $guidanceElement, set_: $set_, setElement: $setElement, group: $group, supplementalData: $supplementalData)';
   }
 
   @override
@@ -1799,7 +1805,7 @@ class _$_Measure extends _Measure {
             (identical(other.definitionElement, definitionElement) || const DeepCollectionEquality().equals(other.definitionElement, definitionElement)) &&
             (identical(other.guidance, guidance) || const DeepCollectionEquality().equals(other.guidance, guidance)) &&
             (identical(other.guidanceElement, guidanceElement) || const DeepCollectionEquality().equals(other.guidanceElement, guidanceElement)) &&
-            (identical(other.set, set) || const DeepCollectionEquality().equals(other.set, set)) &&
+            (identical(other.set_, set_) || const DeepCollectionEquality().equals(other.set_, set_)) &&
             (identical(other.setElement, setElement) || const DeepCollectionEquality().equals(other.setElement, setElement)) &&
             (identical(other.group, group) || const DeepCollectionEquality().equals(other.group, group)) &&
             (identical(other.supplementalData, supplementalData) || const DeepCollectionEquality().equals(other.supplementalData, supplementalData)));
@@ -1876,7 +1882,7 @@ class _$_Measure extends _Measure {
       const DeepCollectionEquality().hash(definitionElement) ^
       const DeepCollectionEquality().hash(guidance) ^
       const DeepCollectionEquality().hash(guidanceElement) ^
-      const DeepCollectionEquality().hash(set) ^
+      const DeepCollectionEquality().hash(set_) ^
       const DeepCollectionEquality().hash(setElement) ^
       const DeepCollectionEquality().hash(group) ^
       const DeepCollectionEquality().hash(supplementalData);
@@ -1987,7 +1993,8 @@ abstract class _Measure extends Measure {
       String guidance,
       @JsonKey(name: '_guidance')
           Element guidanceElement,
-      String set,
+      @JsonKey(name: 'set')
+          String set_,
       @JsonKey(name: '_set')
           Element setElement,
       List<MeasureGroup> group,
@@ -2156,7 +2163,8 @@ abstract class _Measure extends Measure {
   @JsonKey(name: '_guidance')
   Element get guidanceElement;
   @override
-  String get set;
+  @JsonKey(name: 'set')
+  String get set_;
   @override
   @JsonKey(name: '_set')
   Element get setElement;

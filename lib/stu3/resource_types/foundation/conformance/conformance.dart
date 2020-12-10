@@ -1173,7 +1173,7 @@ abstract class StructureMap with Resource implements _$StructureMap {
     String copyright,
     @JsonKey(name: '_copyright') Element copyrightElement,
     List<StructureMapStructure> structure,
-    List<String> import,
+    @JsonKey(name: 'import') List<String> import_,
     @JsonKey(name: '_import') List<Element> importElement,
     @required List<StructureMapGroup> group,
   }) = _StructureMap;

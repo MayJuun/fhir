@@ -1834,7 +1834,7 @@ abstract class StructureMap with Resource implements _$StructureMap {
     Markdown copyright,
     @JsonKey(name: '_copyright') Element copyrightElement,
     List<StructureMapStructure> structure,
-    List<Canonical> import,
+    @JsonKey(name: 'import') List<Canonical> import_,
     @required List<StructureMapGroup> group,
   }) = _StructureMap;
 

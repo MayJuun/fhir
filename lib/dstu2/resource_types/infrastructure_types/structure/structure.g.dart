@@ -608,7 +608,7 @@ Map<String, dynamic> _$_$_BundleEntryRequestToJson(
 }
 
 const _$RequestMethodEnumMap = {
-  RequestMethod.get: 'GET',
+  RequestMethod.get_: 'GET',
   RequestMethod.post: 'POST',
   RequestMethod.put: 'PUT',
   RequestMethod.delete: 'DELETE',

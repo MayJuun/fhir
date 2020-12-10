@@ -473,7 +473,7 @@ _$_ValueSetCompose _$_$_ValueSetComposeFromJson(Map<String, dynamic> json) {
         ?.toList(),
     fhirComments:
         (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
-    import: (json['import'] as List)
+    import_: (json['import'] as List)
         ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
         ?.toList(),
     include: (json['include'] as List)
@@ -504,7 +504,7 @@ Map<String, dynamic> _$_$_ValueSetComposeToJson(_$_ValueSetCompose instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('fhir_comments', instance.fhirComments);
-  writeNotNull('import', instance.import?.map((e) => e?.toJson())?.toList());
+  writeNotNull('import', instance.import_?.map((e) => e?.toJson())?.toList());
   writeNotNull('include', instance.include?.map((e) => e?.toJson())?.toList());
   writeNotNull('exclude', instance.exclude?.map((e) => e?.toJson())?.toList());
   return val;

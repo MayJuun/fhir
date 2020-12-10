@@ -146,7 +146,7 @@ abstract class ValueSetCompose with _$ValueSetCompose {
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String> fhirComments,
-    List<FhirUri> import,
+    @JsonKey(name: 'import') List<FhirUri> import_,
     List<ValueSetComposeInclude> include,
     List<ValueSetComposeInclude> exclude,
   }) = _ValueSetCompose;

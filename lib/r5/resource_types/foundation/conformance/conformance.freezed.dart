@@ -37837,7 +37837,8 @@ class _$StructureMapTearOff {
       @JsonKey(name: '_copyright')
           Element copyrightElement,
       List<StructureMapStructure> structure,
-      List<Canonical> import,
+      @JsonKey(name: 'import')
+          List<Canonical> import_,
       @required
           List<StructureMapGroup> group}) {
     return _StructureMap(
@@ -37879,7 +37880,7 @@ class _$StructureMapTearOff {
       copyright: copyright,
       copyrightElement: copyrightElement,
       structure: structure,
-      import: import,
+      import_: import_,
       group: group,
     );
   }
@@ -37949,7 +37950,8 @@ mixin _$StructureMap {
   @JsonKey(name: '_copyright')
   Element get copyrightElement;
   List<StructureMapStructure> get structure;
-  List<Canonical> get import;
+  @JsonKey(name: 'import')
+  List<Canonical> get import_;
   List<StructureMapGroup> get group;
 
   Map<String, dynamic> toJson();
@@ -38015,7 +38017,8 @@ abstract class $StructureMapCopyWith<$Res> {
       @JsonKey(name: '_copyright')
           Element copyrightElement,
       List<StructureMapStructure> structure,
-      List<Canonical> import,
+      @JsonKey(name: 'import')
+          List<Canonical> import_,
       List<StructureMapGroup> group});
 
   $MetaCopyWith<$Res> get meta;
@@ -38083,7 +38086,7 @@ class _$StructureMapCopyWithImpl<$Res> implements $StructureMapCopyWith<$Res> {
     Object copyright = freezed,
     Object copyrightElement = freezed,
     Object structure = freezed,
-    Object import = freezed,
+    Object import_ = freezed,
     Object group = freezed,
   }) {
     return _then(_value.copyWith(
@@ -38170,7 +38173,7 @@ class _$StructureMapCopyWithImpl<$Res> implements $StructureMapCopyWith<$Res> {
       structure: structure == freezed
           ? _value.structure
           : structure as List<StructureMapStructure>,
-      import: import == freezed ? _value.import : import as List<Canonical>,
+      import_: import_ == freezed ? _value.import_ : import_ as List<Canonical>,
       group: group == freezed ? _value.group : group as List<StructureMapGroup>,
     ));
   }
@@ -38387,7 +38390,8 @@ abstract class _$StructureMapCopyWith<$Res>
       @JsonKey(name: '_copyright')
           Element copyrightElement,
       List<StructureMapStructure> structure,
-      List<Canonical> import,
+      @JsonKey(name: 'import')
+          List<Canonical> import_,
       List<StructureMapGroup> group});
 
   @override
@@ -38472,7 +38476,7 @@ class __$StructureMapCopyWithImpl<$Res> extends _$StructureMapCopyWithImpl<$Res>
     Object copyright = freezed,
     Object copyrightElement = freezed,
     Object structure = freezed,
-    Object import = freezed,
+    Object import_ = freezed,
     Object group = freezed,
   }) {
     return _then(_StructureMap(
@@ -38559,7 +38563,7 @@ class __$StructureMapCopyWithImpl<$Res> extends _$StructureMapCopyWithImpl<$Res>
       structure: structure == freezed
           ? _value.structure
           : structure as List<StructureMapStructure>,
-      import: import == freezed ? _value.import : import as List<Canonical>,
+      import_: import_ == freezed ? _value.import_ : import_ as List<Canonical>,
       group: group == freezed ? _value.group : group as List<StructureMapGroup>,
     ));
   }
@@ -38608,7 +38612,7 @@ class _$_StructureMap extends _StructureMap {
       this.copyright,
       @JsonKey(name: '_copyright') this.copyrightElement,
       this.structure,
-      this.import,
+      @JsonKey(name: 'import') this.import_,
       @required this.group})
       : assert(resourceType != null),
         assert(group != null),
@@ -38710,13 +38714,14 @@ class _$_StructureMap extends _StructureMap {
   @override
   final List<StructureMapStructure> structure;
   @override
-  final List<Canonical> import;
+  @JsonKey(name: 'import')
+  final List<Canonical> import_;
   @override
   final List<StructureMapGroup> group;
 
   @override
   String toString() {
-    return 'StructureMap(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, structure: $structure, import: $import, group: $group)';
+    return 'StructureMap(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, structure: $structure, import_: $import_, group: $group)';
   }
 
   @override
@@ -38804,7 +38809,7 @@ class _$_StructureMap extends _StructureMap {
             (identical(other.copyright, copyright) || const DeepCollectionEquality().equals(other.copyright, copyright)) &&
             (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)) &&
             (identical(other.structure, structure) || const DeepCollectionEquality().equals(other.structure, structure)) &&
-            (identical(other.import, import) || const DeepCollectionEquality().equals(other.import, import)) &&
+            (identical(other.import_, import_) || const DeepCollectionEquality().equals(other.import_, import_)) &&
             (identical(other.group, group) || const DeepCollectionEquality().equals(other.group, group)));
   }
 
@@ -38849,7 +38854,7 @@ class _$_StructureMap extends _StructureMap {
       const DeepCollectionEquality().hash(copyright) ^
       const DeepCollectionEquality().hash(copyrightElement) ^
       const DeepCollectionEquality().hash(structure) ^
-      const DeepCollectionEquality().hash(import) ^
+      const DeepCollectionEquality().hash(import_) ^
       const DeepCollectionEquality().hash(group);
 
   @override
@@ -38918,7 +38923,8 @@ abstract class _StructureMap extends StructureMap {
       @JsonKey(name: '_copyright')
           Element copyrightElement,
       List<StructureMapStructure> structure,
-      List<Canonical> import,
+      @JsonKey(name: 'import')
+          List<Canonical> import_,
       @required
           List<StructureMapGroup> group}) = _$_StructureMap;
 
@@ -39017,7 +39023,8 @@ abstract class _StructureMap extends StructureMap {
   @override
   List<StructureMapStructure> get structure;
   @override
-  List<Canonical> get import;
+  @JsonKey(name: 'import')
+  List<Canonical> get import_;
   @override
   List<StructureMapGroup> get group;
   @override

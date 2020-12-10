@@ -2904,7 +2904,7 @@ class _$ValueSetComposeTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String> fhirComments,
-      List<FhirUri> import,
+      @JsonKey(name: 'import') List<FhirUri> import_,
       List<ValueSetComposeInclude> include,
       List<ValueSetComposeInclude> exclude}) {
     return _ValueSetCompose(
@@ -2912,7 +2912,7 @@ class _$ValueSetComposeTearOff {
       extension_: extension_,
       modifierExtension: modifierExtension,
       fhirComments: fhirComments,
-      import: import,
+      import_: import_,
       include: include,
       exclude: exclude,
     );
@@ -2936,7 +2936,8 @@ mixin _$ValueSetCompose {
   List<FhirExtension> get modifierExtension;
   @JsonKey(name: 'fhir_comments')
   List<String> get fhirComments;
-  List<FhirUri> get import;
+  @JsonKey(name: 'import')
+  List<FhirUri> get import_;
   List<ValueSetComposeInclude> get include;
   List<ValueSetComposeInclude> get exclude;
 
@@ -2954,7 +2955,7 @@ abstract class $ValueSetComposeCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String> fhirComments,
-      List<FhirUri> import,
+      @JsonKey(name: 'import') List<FhirUri> import_,
       List<ValueSetComposeInclude> include,
       List<ValueSetComposeInclude> exclude});
 }
@@ -2974,7 +2975,7 @@ class _$ValueSetComposeCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object fhirComments = freezed,
-    Object import = freezed,
+    Object import_ = freezed,
     Object include = freezed,
     Object exclude = freezed,
   }) {
@@ -2989,7 +2990,7 @@ class _$ValueSetComposeCopyWithImpl<$Res>
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
           : fhirComments as List<String>,
-      import: import == freezed ? _value.import : import as List<FhirUri>,
+      import_: import_ == freezed ? _value.import_ : import_ as List<FhirUri>,
       include: include == freezed
           ? _value.include
           : include as List<ValueSetComposeInclude>,
@@ -3012,7 +3013,7 @@ abstract class _$ValueSetComposeCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String> fhirComments,
-      List<FhirUri> import,
+      @JsonKey(name: 'import') List<FhirUri> import_,
       List<ValueSetComposeInclude> include,
       List<ValueSetComposeInclude> exclude});
 }
@@ -3034,7 +3035,7 @@ class __$ValueSetComposeCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object fhirComments = freezed,
-    Object import = freezed,
+    Object import_ = freezed,
     Object include = freezed,
     Object exclude = freezed,
   }) {
@@ -3049,7 +3050,7 @@ class __$ValueSetComposeCopyWithImpl<$Res>
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
           : fhirComments as List<String>,
-      import: import == freezed ? _value.import : import as List<FhirUri>,
+      import_: import_ == freezed ? _value.import_ : import_ as List<FhirUri>,
       include: include == freezed
           ? _value.include
           : include as List<ValueSetComposeInclude>,
@@ -3069,7 +3070,7 @@ class _$_ValueSetCompose extends _ValueSetCompose {
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @JsonKey(name: 'fhir_comments') this.fhirComments,
-      this.import,
+      @JsonKey(name: 'import') this.import_,
       this.include,
       this.exclude})
       : super._();
@@ -3088,7 +3089,8 @@ class _$_ValueSetCompose extends _ValueSetCompose {
   @JsonKey(name: 'fhir_comments')
   final List<String> fhirComments;
   @override
-  final List<FhirUri> import;
+  @JsonKey(name: 'import')
+  final List<FhirUri> import_;
   @override
   final List<ValueSetComposeInclude> include;
   @override
@@ -3096,7 +3098,7 @@ class _$_ValueSetCompose extends _ValueSetCompose {
 
   @override
   String toString() {
-    return 'ValueSetCompose(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, import: $import, include: $include, exclude: $exclude)';
+    return 'ValueSetCompose(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, import_: $import_, include: $include, exclude: $exclude)';
   }
 
   @override
@@ -3114,8 +3116,9 @@ class _$_ValueSetCompose extends _ValueSetCompose {
             (identical(other.fhirComments, fhirComments) ||
                 const DeepCollectionEquality()
                     .equals(other.fhirComments, fhirComments)) &&
-            (identical(other.import, import) ||
-                const DeepCollectionEquality().equals(other.import, import)) &&
+            (identical(other.import_, import_) ||
+                const DeepCollectionEquality()
+                    .equals(other.import_, import_)) &&
             (identical(other.include, include) ||
                 const DeepCollectionEquality()
                     .equals(other.include, include)) &&
@@ -3130,7 +3133,7 @@ class _$_ValueSetCompose extends _ValueSetCompose {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(fhirComments) ^
-      const DeepCollectionEquality().hash(import) ^
+      const DeepCollectionEquality().hash(import_) ^
       const DeepCollectionEquality().hash(include) ^
       const DeepCollectionEquality().hash(exclude);
 
@@ -3151,7 +3154,7 @@ abstract class _ValueSetCompose extends ValueSetCompose {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String> fhirComments,
-      List<FhirUri> import,
+      @JsonKey(name: 'import') List<FhirUri> import_,
       List<ValueSetComposeInclude> include,
       List<ValueSetComposeInclude> exclude}) = _$_ValueSetCompose;
 
@@ -3169,7 +3172,8 @@ abstract class _ValueSetCompose extends ValueSetCompose {
   @JsonKey(name: 'fhir_comments')
   List<String> get fhirComments;
   @override
-  List<FhirUri> get import;
+  @JsonKey(name: 'import')
+  List<FhirUri> get import_;
   @override
   List<ValueSetComposeInclude> get include;
   @override
