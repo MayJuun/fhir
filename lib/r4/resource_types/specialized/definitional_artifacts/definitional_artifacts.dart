@@ -809,7 +809,7 @@ abstract class QuestionnaireEnableWhen implements _$QuestionnaireEnableWhen {
     String question,
     @JsonKey(name: '_question') Element questionElement,
     @JsonKey(unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
-        QuestionnaireEnableWhenOperator operator,
+        QuestionnaireEnableWhenOperator enableWhenOperator,
     @JsonKey(name: '_operator') Element operatorElement,
     Boolean answerBoolean,
     @JsonKey(name: '_answerBoolean') Element answerBooleanElement,

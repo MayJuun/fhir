@@ -17835,7 +17835,7 @@ class _$QuestionnaireEnableWhenTearOff {
       @JsonKey(name: '_question')
           Element questionElement,
       @JsonKey(unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
-          QuestionnaireEnableWhenOperator operator,
+          QuestionnaireEnableWhenOperator enableWhenOperator,
       @JsonKey(name: '_operator')
           Element operatorElement,
       Boolean answerBoolean,
@@ -17868,7 +17868,7 @@ class _$QuestionnaireEnableWhenTearOff {
       modifierExtension: modifierExtension,
       question: question,
       questionElement: questionElement,
-      operator: operator,
+      enableWhenOperator: enableWhenOperator,
       operatorElement: operatorElement,
       answerBoolean: answerBoolean,
       answerBooleanElement: answerBooleanElement,
@@ -17910,7 +17910,7 @@ mixin _$QuestionnaireEnableWhen {
   @JsonKey(name: '_question')
   Element get questionElement;
   @JsonKey(unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
-  QuestionnaireEnableWhenOperator get operator;
+  QuestionnaireEnableWhenOperator get enableWhenOperator;
   @JsonKey(name: '_operator')
   Element get operatorElement;
   Boolean get answerBoolean;
@@ -17956,7 +17956,7 @@ abstract class $QuestionnaireEnableWhenCopyWith<$Res> {
       @JsonKey(name: '_question')
           Element questionElement,
       @JsonKey(unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
-          QuestionnaireEnableWhenOperator operator,
+          QuestionnaireEnableWhenOperator enableWhenOperator,
       @JsonKey(name: '_operator')
           Element operatorElement,
       Boolean answerBoolean,
@@ -18014,7 +18014,7 @@ class _$QuestionnaireEnableWhenCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object question = freezed,
     Object questionElement = freezed,
-    Object operator = freezed,
+    Object enableWhenOperator = freezed,
     Object operatorElement = freezed,
     Object answerBoolean = freezed,
     Object answerBooleanElement = freezed,
@@ -18046,9 +18046,9 @@ class _$QuestionnaireEnableWhenCopyWithImpl<$Res>
       questionElement: questionElement == freezed
           ? _value.questionElement
           : questionElement as Element,
-      operator: operator == freezed
-          ? _value.operator
-          : operator as QuestionnaireEnableWhenOperator,
+      enableWhenOperator: enableWhenOperator == freezed
+          ? _value.enableWhenOperator
+          : enableWhenOperator as QuestionnaireEnableWhenOperator,
       operatorElement: operatorElement == freezed
           ? _value.operatorElement
           : operatorElement as Element,
@@ -18241,7 +18241,7 @@ abstract class _$QuestionnaireEnableWhenCopyWith<$Res>
       @JsonKey(name: '_question')
           Element questionElement,
       @JsonKey(unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
-          QuestionnaireEnableWhenOperator operator,
+          QuestionnaireEnableWhenOperator enableWhenOperator,
       @JsonKey(name: '_operator')
           Element operatorElement,
       Boolean answerBoolean,
@@ -18314,7 +18314,7 @@ class __$QuestionnaireEnableWhenCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object question = freezed,
     Object questionElement = freezed,
-    Object operator = freezed,
+    Object enableWhenOperator = freezed,
     Object operatorElement = freezed,
     Object answerBoolean = freezed,
     Object answerBooleanElement = freezed,
@@ -18346,9 +18346,9 @@ class __$QuestionnaireEnableWhenCopyWithImpl<$Res>
       questionElement: questionElement == freezed
           ? _value.questionElement
           : questionElement as Element,
-      operator: operator == freezed
-          ? _value.operator
-          : operator as QuestionnaireEnableWhenOperator,
+      enableWhenOperator: enableWhenOperator == freezed
+          ? _value.enableWhenOperator
+          : enableWhenOperator as QuestionnaireEnableWhenOperator,
       operatorElement: operatorElement == freezed
           ? _value.operatorElement
           : operatorElement as Element,
@@ -18418,7 +18418,7 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
       @JsonKey(name: '_question')
           this.questionElement,
       @JsonKey(unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
-          this.operator,
+          this.enableWhenOperator,
       @JsonKey(name: '_operator')
           this.operatorElement,
       this.answerBoolean,
@@ -18464,7 +18464,7 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
   final Element questionElement;
   @override
   @JsonKey(unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
-  final QuestionnaireEnableWhenOperator operator;
+  final QuestionnaireEnableWhenOperator enableWhenOperator;
   @override
   @JsonKey(name: '_operator')
   final Element operatorElement;
@@ -18512,7 +18512,7 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
 
   @override
   String toString() {
-    return 'QuestionnaireEnableWhen(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, question: $question, questionElement: $questionElement, operator: $operator, operatorElement: $operatorElement, answerBoolean: $answerBoolean, answerBooleanElement: $answerBooleanElement, answerDecimal: $answerDecimal, answerDecimalElement: $answerDecimalElement, answerInteger: $answerInteger, answerIntegerElement: $answerIntegerElement, answerDate: $answerDate, answerDateElement: $answerDateElement, answerDateTime: $answerDateTime, answerDateTimeElement: $answerDateTimeElement, answerTime: $answerTime, answerTimeElement: $answerTimeElement, answerString: $answerString, answerStringElement: $answerStringElement, answerCoding: $answerCoding, answerQuantity: $answerQuantity, answerReference: $answerReference)';
+    return 'QuestionnaireEnableWhen(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, question: $question, questionElement: $questionElement, enableWhenOperator: $enableWhenOperator, operatorElement: $operatorElement, answerBoolean: $answerBoolean, answerBooleanElement: $answerBooleanElement, answerDecimal: $answerDecimal, answerDecimalElement: $answerDecimalElement, answerInteger: $answerInteger, answerIntegerElement: $answerIntegerElement, answerDate: $answerDate, answerDateElement: $answerDateElement, answerDateTime: $answerDateTime, answerDateTimeElement: $answerDateTimeElement, answerTime: $answerTime, answerTimeElement: $answerTimeElement, answerString: $answerString, answerStringElement: $answerStringElement, answerCoding: $answerCoding, answerQuantity: $answerQuantity, answerReference: $answerReference)';
   }
 
   @override
@@ -18533,9 +18533,9 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
             (identical(other.questionElement, questionElement) ||
                 const DeepCollectionEquality()
                     .equals(other.questionElement, questionElement)) &&
-            (identical(other.operator, operator) ||
+            (identical(other.enableWhenOperator, enableWhenOperator) ||
                 const DeepCollectionEquality()
-                    .equals(other.operator, operator)) &&
+                    .equals(other.enableWhenOperator, enableWhenOperator)) &&
             (identical(other.operatorElement, operatorElement) ||
                 const DeepCollectionEquality()
                     .equals(other.operatorElement, operatorElement)) &&
@@ -18595,7 +18595,7 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(question) ^
       const DeepCollectionEquality().hash(questionElement) ^
-      const DeepCollectionEquality().hash(operator) ^
+      const DeepCollectionEquality().hash(enableWhenOperator) ^
       const DeepCollectionEquality().hash(operatorElement) ^
       const DeepCollectionEquality().hash(answerBoolean) ^
       const DeepCollectionEquality().hash(answerBooleanElement) ^
@@ -18637,7 +18637,7 @@ abstract class _QuestionnaireEnableWhen extends QuestionnaireEnableWhen {
       @JsonKey(name: '_question')
           Element questionElement,
       @JsonKey(unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
-          QuestionnaireEnableWhenOperator operator,
+          QuestionnaireEnableWhenOperator enableWhenOperator,
       @JsonKey(name: '_operator')
           Element operatorElement,
       Boolean answerBoolean,
@@ -18682,7 +18682,7 @@ abstract class _QuestionnaireEnableWhen extends QuestionnaireEnableWhen {
   Element get questionElement;
   @override
   @JsonKey(unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
-  QuestionnaireEnableWhenOperator get operator;
+  QuestionnaireEnableWhenOperator get enableWhenOperator;
   @override
   @JsonKey(name: '_operator')
   Element get operatorElement;
