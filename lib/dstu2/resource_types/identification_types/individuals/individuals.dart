@@ -11,7 +11,7 @@ part 'individuals.g.dart';
 abstract class Patient with Resource implements _$Patient {
   Patient._();
   factory Patient({
-    @JsonKey(defaultValue: 'Patient') @required String resourceType,
+    @Default('Patient') String resourceType,
     Id id,
     @JsonKey(name: '_id') Element idElement,
     Meta meta,
@@ -130,7 +130,7 @@ abstract class PatientLink with _$PatientLink {
 abstract class Practitioner with Resource implements _$Practitioner {
   Practitioner._();
   factory Practitioner({
-    @JsonKey(defaultValue: 'Practitioner') @required String resourceType,
+    @Default('Practitioner') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -204,7 +204,7 @@ abstract class PractitionerQualification with _$PractitionerQualification {
 abstract class RelatedPerson with Resource implements _$RelatedPerson {
   RelatedPerson._();
   factory RelatedPerson({
-    @JsonKey(defaultValue: 'RelatedPerson') @required String resourceType,
+    @Default('RelatedPerson') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

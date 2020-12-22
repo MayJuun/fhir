@@ -13,7 +13,7 @@ abstract class ActivityDefinition
     implements _$ActivityDefinition {
   ActivityDefinition._();
   factory ActivityDefinition({
-    @JsonKey(defaultValue: 'ActivityDefinition') @required String resourceType,
+    @Default('ActivityDefinition') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -144,7 +144,7 @@ abstract class ConditionDefinition
     implements _$ConditionDefinition {
   ConditionDefinition._();
   factory ConditionDefinition({
-    @JsonKey(defaultValue: 'ConditionDefinition') @required String resourceType,
+    @Default('ConditionDefinition') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -303,7 +303,7 @@ abstract class ConditionDefinitionPlan implements _$ConditionDefinitionPlan {
 abstract class DeviceDefinition with Resource implements _$DeviceDefinition {
   DeviceDefinition._();
   factory DeviceDefinition({
-    @JsonKey(defaultValue: 'DeviceDefinition') @required String resourceType,
+    @Default('DeviceDefinition') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -458,7 +458,7 @@ abstract class DeviceDefinitionMaterial implements _$DeviceDefinitionMaterial {
 abstract class EventDefinition with Resource implements _$EventDefinition {
   EventDefinition._();
   factory EventDefinition({
-    @JsonKey(defaultValue: 'EventDefinition') @required String resourceType,
+    @Default('EventDefinition') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -674,7 +674,7 @@ abstract class ObservationDefinitionComponent
 abstract class PlanDefinition with Resource implements _$PlanDefinition {
   PlanDefinition._();
   factory PlanDefinition({
-    @JsonKey(defaultValue: 'PlanDefinition') @required String resourceType,
+    @Default('PlanDefinition') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -920,7 +920,7 @@ abstract class PlanDefinitionDynamicValue
 abstract class Questionnaire with Resource implements _$Questionnaire {
   Questionnaire._();
   factory Questionnaire({
-    @JsonKey(defaultValue: 'Questionnaire') @required String resourceType,
+    @Default('Questionnaire') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1024,8 +1024,8 @@ abstract class QuestionnaireEnableWhen implements _$QuestionnaireEnableWhen {
     List<FhirExtension> modifierExtension,
     String question,
     @JsonKey(name: '_question') Element questionElement,
-    @JsonKey(unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
-        QuestionnaireEnableWhenOperator operator,
+    @JsonKey(name: 'operator', unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
+        QuestionnaireEnableWhenOperator operator_,
     @JsonKey(name: '_operator') Element operatorElement,
     Boolean answerBoolean,
     @JsonKey(name: '_answerBoolean') Element answerBooleanElement,
@@ -1115,7 +1115,7 @@ abstract class SpecimenDefinition
     implements _$SpecimenDefinition {
   SpecimenDefinition._();
   factory SpecimenDefinition({
-    @JsonKey(defaultValue: 'SpecimenDefinition') @required String resourceType,
+    @Default('SpecimenDefinition') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

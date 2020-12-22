@@ -18,62 +18,44 @@ class _$ActivityDefinitionTearOff {
 
 // ignore: unused_element
   _ActivityDefinition call(
-      {@required
-      @JsonKey(defaultValue: 'ActivityDefinition')
-          String resourceType,
+      {String resourceType = 'ActivityDefinition',
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String url,
-      @JsonKey(name: '_url')
-          Element urlElement,
+      @JsonKey(name: '_url') Element urlElement,
       List<Identifier> identifier,
       String version,
-      @JsonKey(name: '_version')
-          Element versionElement,
+      @JsonKey(name: '_version') Element versionElement,
       String name,
-      @JsonKey(name: '_name')
-          Element nameElement,
+      @JsonKey(name: '_name') Element nameElement,
       String title,
-      @JsonKey(name: '_title')
-          Element titleElement,
+      @JsonKey(name: '_title') Element titleElement,
       ActivityDefinitionStatus status,
-      @JsonKey(name: '_status')
-          Element statusElement,
+      @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
+      @JsonKey(name: '_experimental') Element experimentalElement,
       Date date,
-      @JsonKey(name: '_date')
-          Element dateElement,
+      @JsonKey(name: '_date') Element dateElement,
       String publisher,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
+      @JsonKey(name: '_publisher') Element publisherElement,
       String description,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
+      @JsonKey(name: '_description') Element descriptionElement,
       String purpose,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
+      @JsonKey(name: '_purpose') Element purposeElement,
       String usage,
-      @JsonKey(name: '_usage')
-          Element usageElement,
+      @JsonKey(name: '_usage') Element usageElement,
       Date approvalDate,
-      @JsonKey(name: '_approvalDate')
-          Element approvalDateElement,
+      @JsonKey(name: '_approvalDate') Element approvalDateElement,
       Date lastReviewDate,
-      @JsonKey(name: '_lastReviewDate')
-          Element lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
       Period effectivePeriod,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
@@ -81,19 +63,15 @@ class _$ActivityDefinitionTearOff {
       List<Contributor> contributor,
       List<ContactDetail> contact,
       String copyright,
-      @JsonKey(name: '_copyright')
-          Element copyrightElement,
+      @JsonKey(name: '_copyright') Element copyrightElement,
       List<RelatedArtifact> relatedArtifact,
-      @JsonKey(name: 'library')
-          List<Reference> library_,
+      @JsonKey(name: 'library') List<Reference> library_,
       String kind,
-      @JsonKey(name: '_kind')
-          Element kindElement,
+      @JsonKey(name: '_kind') Element kindElement,
       CodeableConcept code,
       Timing timingTiming,
       FhirDateTime timingDateTime,
-      @JsonKey(name: '_timingDateTime')
-          Element timingDateTimeElement,
+      @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
       Period timingPeriod,
       Range timingRange,
       Reference location,
@@ -186,7 +164,6 @@ const $ActivityDefinition = _$ActivityDefinitionTearOff();
 
 /// @nodoc
 mixin _$ActivityDefinition {
-  @JsonKey(defaultValue: 'ActivityDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -283,7 +260,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
           ActivityDefinition value, $Res Function(ActivityDefinition) then) =
       _$ActivityDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'ActivityDefinition') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -918,7 +895,7 @@ abstract class _$ActivityDefinitionCopyWith<$Res>
       __$ActivityDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'ActivityDefinition') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1281,7 +1258,7 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
 /// @nodoc
 class _$_ActivityDefinition extends _ActivityDefinition {
   _$_ActivityDefinition(
-      {@required @JsonKey(defaultValue: 'ActivityDefinition') this.resourceType,
+      {this.resourceType = 'ActivityDefinition',
       this.id,
       this.meta,
       this.implicitRules,
@@ -1352,8 +1329,8 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   factory _$_ActivityDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_ActivityDefinitionFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'ActivityDefinition')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -1705,62 +1682,44 @@ class _$_ActivityDefinition extends _ActivityDefinition {
 abstract class _ActivityDefinition extends ActivityDefinition {
   _ActivityDefinition._() : super._();
   factory _ActivityDefinition(
-          {@required
-          @JsonKey(defaultValue: 'ActivityDefinition')
-              String resourceType,
+          {String resourceType,
           Id id,
           Meta meta,
           FhirUri implicitRules,
-          @JsonKey(name: '_implicitRules')
-              Element implicitRulesElement,
+          @JsonKey(name: '_implicitRules') Element implicitRulesElement,
           Code language,
-          @JsonKey(name: '_language')
-              Element languageElement,
+          @JsonKey(name: '_language') Element languageElement,
           Narrative text,
           List<Resource> contained,
-          @JsonKey(name: 'extension')
-              List<FhirExtension> extension_,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
           String url,
-          @JsonKey(name: '_url')
-              Element urlElement,
+          @JsonKey(name: '_url') Element urlElement,
           List<Identifier> identifier,
           String version,
-          @JsonKey(name: '_version')
-              Element versionElement,
+          @JsonKey(name: '_version') Element versionElement,
           String name,
-          @JsonKey(name: '_name')
-              Element nameElement,
+          @JsonKey(name: '_name') Element nameElement,
           String title,
-          @JsonKey(name: '_title')
-              Element titleElement,
+          @JsonKey(name: '_title') Element titleElement,
           ActivityDefinitionStatus status,
-          @JsonKey(name: '_status')
-              Element statusElement,
+          @JsonKey(name: '_status') Element statusElement,
           Boolean experimental,
-          @JsonKey(name: '_experimental')
-              Element experimentalElement,
+          @JsonKey(name: '_experimental') Element experimentalElement,
           Date date,
-          @JsonKey(name: '_date')
-              Element dateElement,
+          @JsonKey(name: '_date') Element dateElement,
           String publisher,
-          @JsonKey(name: '_publisher')
-              Element publisherElement,
+          @JsonKey(name: '_publisher') Element publisherElement,
           String description,
-          @JsonKey(name: '_description')
-              Element descriptionElement,
+          @JsonKey(name: '_description') Element descriptionElement,
           String purpose,
-          @JsonKey(name: '_purpose')
-              Element purposeElement,
+          @JsonKey(name: '_purpose') Element purposeElement,
           String usage,
-          @JsonKey(name: '_usage')
-              Element usageElement,
+          @JsonKey(name: '_usage') Element usageElement,
           Date approvalDate,
-          @JsonKey(name: '_approvalDate')
-              Element approvalDateElement,
+          @JsonKey(name: '_approvalDate') Element approvalDateElement,
           Date lastReviewDate,
-          @JsonKey(name: '_lastReviewDate')
-              Element lastReviewDateElement,
+          @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
           Period effectivePeriod,
           List<UsageContext> useContext,
           List<CodeableConcept> jurisdiction,
@@ -1768,19 +1727,15 @@ abstract class _ActivityDefinition extends ActivityDefinition {
           List<Contributor> contributor,
           List<ContactDetail> contact,
           String copyright,
-          @JsonKey(name: '_copyright')
-              Element copyrightElement,
+          @JsonKey(name: '_copyright') Element copyrightElement,
           List<RelatedArtifact> relatedArtifact,
-          @JsonKey(name: 'library')
-              List<Reference> library_,
+          @JsonKey(name: 'library') List<Reference> library_,
           String kind,
-          @JsonKey(name: '_kind')
-              Element kindElement,
+          @JsonKey(name: '_kind') Element kindElement,
           CodeableConcept code,
           Timing timingTiming,
           FhirDateTime timingDateTime,
-          @JsonKey(name: '_timingDateTime')
-              Element timingDateTimeElement,
+          @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
           Period timingPeriod,
           Range timingRange,
           Reference location,
@@ -1798,7 +1753,6 @@ abstract class _ActivityDefinition extends ActivityDefinition {
       _$_ActivityDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'ActivityDefinition')
   String get resourceType;
   @override
   Id get id;
@@ -2570,7 +2524,7 @@ class _$PlanDefinitionTearOff {
 
 // ignore: unused_element
   _PlanDefinition call(
-      {@required @JsonKey(defaultValue: 'PlanDefinition') String resourceType,
+      {String resourceType = 'PlanDefinition',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2688,7 +2642,6 @@ const $PlanDefinition = _$PlanDefinitionTearOff();
 
 /// @nodoc
 mixin _$PlanDefinition {
-  @JsonKey(defaultValue: 'PlanDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -2769,7 +2722,7 @@ abstract class $PlanDefinitionCopyWith<$Res> {
           PlanDefinition value, $Res Function(PlanDefinition) then) =
       _$PlanDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'PlanDefinition') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3231,7 +3184,7 @@ abstract class _$PlanDefinitionCopyWith<$Res>
       __$PlanDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'PlanDefinition') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3512,7 +3465,7 @@ class __$PlanDefinitionCopyWithImpl<$Res>
 /// @nodoc
 class _$_PlanDefinition extends _PlanDefinition {
   _$_PlanDefinition(
-      {@required @JsonKey(defaultValue: 'PlanDefinition') this.resourceType,
+      {this.resourceType = 'PlanDefinition',
       this.id,
       this.meta,
       this.implicitRules,
@@ -3569,8 +3522,8 @@ class _$_PlanDefinition extends _PlanDefinition {
   factory _$_PlanDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_PlanDefinitionFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'PlanDefinition')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -3864,7 +3817,7 @@ class _$_PlanDefinition extends _PlanDefinition {
 abstract class _PlanDefinition extends PlanDefinition {
   _PlanDefinition._() : super._();
   factory _PlanDefinition(
-      {@required @JsonKey(defaultValue: 'PlanDefinition') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3920,7 +3873,6 @@ abstract class _PlanDefinition extends PlanDefinition {
       _$_PlanDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'PlanDefinition')
   String get resourceType;
   @override
   Id get id;
@@ -7233,7 +7185,7 @@ class _$QuestionnaireTearOff {
 
 // ignore: unused_element
   _Questionnaire call(
-      {@required @JsonKey(defaultValue: 'Questionnaire') String resourceType,
+      {String resourceType = 'Questionnaire',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7341,7 +7293,6 @@ const $Questionnaire = _$QuestionnaireTearOff();
 
 /// @nodoc
 mixin _$Questionnaire {
-  @JsonKey(defaultValue: 'Questionnaire')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -7416,7 +7367,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
           Questionnaire value, $Res Function(Questionnaire) then) =
       _$QuestionnaireCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'Questionnaire') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7835,7 +7786,7 @@ abstract class _$QuestionnaireCopyWith<$Res>
       __$QuestionnaireCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'Questionnaire') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8091,7 +8042,7 @@ class __$QuestionnaireCopyWithImpl<$Res>
 /// @nodoc
 class _$_Questionnaire extends _Questionnaire {
   _$_Questionnaire(
-      {@required @JsonKey(defaultValue: 'Questionnaire') this.resourceType,
+      {this.resourceType = 'Questionnaire',
       this.id,
       this.meta,
       this.implicitRules,
@@ -8143,8 +8094,8 @@ class _$_Questionnaire extends _Questionnaire {
   factory _$_Questionnaire.fromJson(Map<String, dynamic> json) =>
       _$_$_QuestionnaireFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'Questionnaire')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -8417,7 +8368,7 @@ class _$_Questionnaire extends _Questionnaire {
 abstract class _Questionnaire extends Questionnaire {
   _Questionnaire._() : super._();
   factory _Questionnaire(
-      {@required @JsonKey(defaultValue: 'Questionnaire') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8468,7 +8419,6 @@ abstract class _Questionnaire extends Questionnaire {
       _$_Questionnaire.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'Questionnaire')
   String get resourceType;
   @override
   Id get id;
@@ -11265,62 +11215,44 @@ class _$ServiceDefinitionTearOff {
 
 // ignore: unused_element
   _ServiceDefinition call(
-      {@required
-      @JsonKey(defaultValue: 'ServiceDefinition')
-          String resourceType,
+      {String resourceType = 'ServiceDefinition',
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String url,
-      @JsonKey(name: '_url')
-          Element urlElement,
+      @JsonKey(name: '_url') Element urlElement,
       List<Identifier> identifier,
       String version,
-      @JsonKey(name: '_version')
-          Element versionElement,
+      @JsonKey(name: '_version') Element versionElement,
       String name,
-      @JsonKey(name: '_name')
-          Element nameElement,
+      @JsonKey(name: '_name') Element nameElement,
       String title,
-      @JsonKey(name: '_title')
-          Element titleElement,
+      @JsonKey(name: '_title') Element titleElement,
       ServiceDefinitionStatus status,
-      @JsonKey(name: '_status')
-          Element statusElement,
+      @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
+      @JsonKey(name: '_experimental') Element experimentalElement,
       Date date,
-      @JsonKey(name: '_date')
-          Element dateElement,
+      @JsonKey(name: '_date') Element dateElement,
       String publisher,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
+      @JsonKey(name: '_publisher') Element publisherElement,
       String description,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
+      @JsonKey(name: '_description') Element descriptionElement,
       String purpose,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
+      @JsonKey(name: '_purpose') Element purposeElement,
       String usage,
-      @JsonKey(name: '_usage')
-          Element usageElement,
+      @JsonKey(name: '_usage') Element usageElement,
       Date approvalDate,
-      @JsonKey(name: '_approvalDate')
-          Element approvalDateElement,
+      @JsonKey(name: '_approvalDate') Element approvalDateElement,
       Date lastReviewDate,
-      @JsonKey(name: '_lastReviewDate')
-          Element lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
       Period effectivePeriod,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
@@ -11328,8 +11260,7 @@ class _$ServiceDefinitionTearOff {
       List<Contributor> contributor,
       List<ContactDetail> contact,
       String copyright,
-      @JsonKey(name: '_copyright')
-          Element copyrightElement,
+      @JsonKey(name: '_copyright') Element copyrightElement,
       List<RelatedArtifact> relatedArtifact,
       List<TriggerDefinition> trigger,
       List<DataRequirement> dataRequirement,
@@ -11400,7 +11331,6 @@ const $ServiceDefinition = _$ServiceDefinitionTearOff();
 
 /// @nodoc
 mixin _$ServiceDefinition {
-  @JsonKey(defaultValue: 'ServiceDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -11479,7 +11409,7 @@ abstract class $ServiceDefinitionCopyWith<$Res> {
           ServiceDefinition value, $Res Function(ServiceDefinition) then) =
       _$ServiceDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'ServiceDefinition') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -11941,7 +11871,7 @@ abstract class _$ServiceDefinitionCopyWith<$Res>
       __$ServiceDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'ServiceDefinition') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -12222,7 +12152,7 @@ class __$ServiceDefinitionCopyWithImpl<$Res>
 /// @nodoc
 class _$_ServiceDefinition extends _ServiceDefinition {
   _$_ServiceDefinition(
-      {@required @JsonKey(defaultValue: 'ServiceDefinition') this.resourceType,
+      {this.resourceType = 'ServiceDefinition',
       this.id,
       this.meta,
       this.implicitRules,
@@ -12278,8 +12208,8 @@ class _$_ServiceDefinition extends _ServiceDefinition {
   factory _$_ServiceDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_ServiceDefinitionFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'ServiceDefinition')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -12568,62 +12498,44 @@ class _$_ServiceDefinition extends _ServiceDefinition {
 abstract class _ServiceDefinition extends ServiceDefinition {
   _ServiceDefinition._() : super._();
   factory _ServiceDefinition(
-      {@required
-      @JsonKey(defaultValue: 'ServiceDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String url,
-      @JsonKey(name: '_url')
-          Element urlElement,
+      @JsonKey(name: '_url') Element urlElement,
       List<Identifier> identifier,
       String version,
-      @JsonKey(name: '_version')
-          Element versionElement,
+      @JsonKey(name: '_version') Element versionElement,
       String name,
-      @JsonKey(name: '_name')
-          Element nameElement,
+      @JsonKey(name: '_name') Element nameElement,
       String title,
-      @JsonKey(name: '_title')
-          Element titleElement,
+      @JsonKey(name: '_title') Element titleElement,
       ServiceDefinitionStatus status,
-      @JsonKey(name: '_status')
-          Element statusElement,
+      @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
+      @JsonKey(name: '_experimental') Element experimentalElement,
       Date date,
-      @JsonKey(name: '_date')
-          Element dateElement,
+      @JsonKey(name: '_date') Element dateElement,
       String publisher,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
+      @JsonKey(name: '_publisher') Element publisherElement,
       String description,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
+      @JsonKey(name: '_description') Element descriptionElement,
       String purpose,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
+      @JsonKey(name: '_purpose') Element purposeElement,
       String usage,
-      @JsonKey(name: '_usage')
-          Element usageElement,
+      @JsonKey(name: '_usage') Element usageElement,
       Date approvalDate,
-      @JsonKey(name: '_approvalDate')
-          Element approvalDateElement,
+      @JsonKey(name: '_approvalDate') Element approvalDateElement,
       Date lastReviewDate,
-      @JsonKey(name: '_lastReviewDate')
-          Element lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
       Period effectivePeriod,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
@@ -12631,8 +12543,7 @@ abstract class _ServiceDefinition extends ServiceDefinition {
       List<Contributor> contributor,
       List<ContactDetail> contact,
       String copyright,
-      @JsonKey(name: '_copyright')
-          Element copyrightElement,
+      @JsonKey(name: '_copyright') Element copyrightElement,
       List<RelatedArtifact> relatedArtifact,
       List<TriggerDefinition> trigger,
       List<DataRequirement> dataRequirement,
@@ -12642,7 +12553,6 @@ abstract class _ServiceDefinition extends ServiceDefinition {
       _$_ServiceDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'ServiceDefinition')
   String get resourceType;
   @override
   Id get id;

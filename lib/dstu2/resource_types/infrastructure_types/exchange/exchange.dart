@@ -11,7 +11,7 @@ part 'exchange.g.dart';
 abstract class MessageHeader with Resource implements _$MessageHeader {
   MessageHeader._();
   factory MessageHeader({
-    @JsonKey(defaultValue: 'MessageHeader') @required String resourceType,
+    @Default('MessageHeader') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -103,7 +103,7 @@ abstract class MessageHeaderDestination with _$MessageHeaderDestination {
 abstract class OperationOutcome with Resource implements _$OperationOutcome {
   OperationOutcome._();
   factory OperationOutcome({
-    @JsonKey(defaultValue: 'OperationOutcome') @required String resourceType,
+    @Default('OperationOutcome') String resourceType,
     Id id,
     @JsonKey(name: '_id') Element idElement,
     Meta meta,
@@ -146,7 +146,7 @@ abstract class OperationOutcomeIssue with _$OperationOutcomeIssue {
 abstract class Parameters with Resource implements _$Parameters {
   Parameters._();
   factory Parameters({
-    @JsonKey(defaultValue: 'Parameters') @required String resourceType,
+    @Default('Parameters') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -203,7 +203,7 @@ abstract class ParametersParameter with _$ParametersParameter {
     Schedule valueSchedule,
     Reference valueReference,
     Resource resource,
-    List<ParametersParameter> part,
+    @JsonKey(name: 'part') List<ParametersParameter> part_,
   }) = _ParametersParameter;
 
   factory ParametersParameter.fromJson(Map<String, dynamic> json) =>
@@ -214,7 +214,7 @@ abstract class ParametersParameter with _$ParametersParameter {
 abstract class Subscription with Resource implements _$Subscription {
   Subscription._();
   factory Subscription({
-    @JsonKey(defaultValue: 'Subscription') @required String resourceType,
+    @Default('Subscription') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

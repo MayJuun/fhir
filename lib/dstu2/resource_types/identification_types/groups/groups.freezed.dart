@@ -18,7 +18,7 @@ class _$OrganizationTearOff {
 
 // ignore: unused_element
   _Organization call(
-      {@required @JsonKey(defaultValue: 'Organization') String resourceType,
+      {String resourceType = 'Organization',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -76,7 +76,6 @@ const $Organization = _$OrganizationTearOff();
 
 /// @nodoc
 mixin _$Organization {
-  @JsonKey(defaultValue: 'Organization')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -114,7 +113,7 @@ abstract class $OrganizationCopyWith<$Res> {
           Organization value, $Res Function(Organization) then) =
       _$OrganizationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'Organization') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -313,7 +312,7 @@ abstract class _$OrganizationCopyWith<$Res>
       __$OrganizationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'Organization') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -439,7 +438,7 @@ class __$OrganizationCopyWithImpl<$Res> extends _$OrganizationCopyWithImpl<$Res>
 /// @nodoc
 class _$_Organization extends _Organization {
   _$_Organization(
-      {@required @JsonKey(defaultValue: 'Organization') this.resourceType,
+      {this.resourceType = 'Organization',
       this.id,
       this.meta,
       this.implicitRules,
@@ -466,8 +465,8 @@ class _$_Organization extends _Organization {
   factory _$_Organization.fromJson(Map<String, dynamic> json) =>
       _$_$_OrganizationFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'Organization')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -619,7 +618,7 @@ class _$_Organization extends _Organization {
 abstract class _Organization extends Organization {
   _Organization._() : super._();
   factory _Organization(
-      {@required @JsonKey(defaultValue: 'Organization') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -645,7 +644,6 @@ abstract class _Organization extends Organization {
       _$_Organization.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'Organization')
   String get resourceType;
   @override
   Id get id;
@@ -1049,9 +1047,7 @@ class _$HealthcareServiceTearOff {
 
 // ignore: unused_element
   _HealthcareService call(
-      {@required
-      @JsonKey(defaultValue: 'HealthcareService')
-          String resourceType,
+      {String resourceType = 'HealthcareService',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1150,7 +1146,6 @@ const $HealthcareService = _$HealthcareServiceTearOff();
 
 /// @nodoc
 mixin _$HealthcareService {
-  @JsonKey(defaultValue: 'HealthcareService')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -1207,8 +1202,7 @@ abstract class $HealthcareServiceCopyWith<$Res> {
           HealthcareService value, $Res Function(HealthcareService) then) =
       _$HealthcareServiceCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'HealthcareService')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1553,8 +1547,7 @@ abstract class _$HealthcareServiceCopyWith<$Res>
       __$HealthcareServiceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'HealthcareService')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1780,9 +1773,7 @@ class __$HealthcareServiceCopyWithImpl<$Res>
 /// @nodoc
 class _$_HealthcareService extends _HealthcareService {
   _$_HealthcareService(
-      {@required
-      @JsonKey(defaultValue: 'HealthcareService')
-          this.resourceType,
+      {this.resourceType = 'HealthcareService',
       this.id,
       this.meta,
       this.implicitRules,
@@ -1835,8 +1826,8 @@ class _$_HealthcareService extends _HealthcareService {
   factory _$_HealthcareService.fromJson(Map<String, dynamic> json) =>
       _$_$_HealthcareServiceFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'HealthcareService')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -2064,9 +2055,7 @@ class _$_HealthcareService extends _HealthcareService {
 abstract class _HealthcareService extends HealthcareService {
   _HealthcareService._() : super._();
   factory _HealthcareService(
-      {@required
-      @JsonKey(defaultValue: 'HealthcareService')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2117,7 +2106,6 @@ abstract class _HealthcareService extends HealthcareService {
       _$_HealthcareService.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'HealthcareService')
   String get resourceType;
   @override
   Id get id;
@@ -3251,9 +3239,7 @@ class _$GroupTearOff {
 
 // ignore: unused_element
   _Group call(
-      {@required
-      @JsonKey(defaultValue: 'Group')
-          String resourceType,
+      {String resourceType = 'Group',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3326,7 +3312,6 @@ const $Group = _$GroupTearOff();
 
 /// @nodoc
 mixin _$Group {
-  @JsonKey(defaultValue: 'Group')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -3369,8 +3354,7 @@ abstract class $GroupCopyWith<$Res> {
   factory $GroupCopyWith(Group value, $Res Function(Group) then) =
       _$GroupCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'Group')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3595,8 +3579,7 @@ abstract class _$GroupCopyWith<$Res> implements $GroupCopyWith<$Res> {
       __$GroupCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'Group')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3740,9 +3723,7 @@ class __$GroupCopyWithImpl<$Res> extends _$GroupCopyWithImpl<$Res>
 /// @nodoc
 class _$_Group extends _Group {
   _$_Group(
-      {@required
-      @JsonKey(defaultValue: 'Group')
-          this.resourceType,
+      {this.resourceType = 'Group',
       this.id,
       this.meta,
       this.implicitRules,
@@ -3784,8 +3765,8 @@ class _$_Group extends _Group {
   factory _$_Group.fromJson(Map<String, dynamic> json) =>
       _$_$_GroupFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'Group')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -3953,9 +3934,7 @@ class _$_Group extends _Group {
 abstract class _Group extends Group {
   _Group._() : super._();
   factory _Group(
-      {@required
-      @JsonKey(defaultValue: 'Group')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3993,7 +3972,6 @@ abstract class _Group extends Group {
   factory _Group.fromJson(Map<String, dynamic> json) = _$_Group.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'Group')
   String get resourceType;
   @override
   Id get id;

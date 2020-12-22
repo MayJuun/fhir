@@ -18,9 +18,7 @@ class _$ResearchStudyTearOff {
 
 // ignore: unused_element
   _ResearchStudy call(
-      {@required
-      @JsonKey(defaultValue: 'ResearchStudy')
-          String resourceType,
+      {String resourceType = 'ResearchStudy',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -119,7 +117,6 @@ const $ResearchStudy = _$ResearchStudyTearOff();
 
 /// @nodoc
 mixin _$ResearchStudy {
-  @JsonKey(defaultValue: 'ResearchStudy')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -176,8 +173,7 @@ abstract class $ResearchStudyCopyWith<$Res> {
           ResearchStudy value, $Res Function(ResearchStudy) then) =
       _$ResearchStudyCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'ResearchStudy')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -513,8 +509,7 @@ abstract class _$ResearchStudyCopyWith<$Res>
       __$ResearchStudyCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'ResearchStudy')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -732,7 +727,7 @@ class __$ResearchStudyCopyWithImpl<$Res>
 /// @nodoc
 class _$_ResearchStudy extends _ResearchStudy {
   _$_ResearchStudy(
-      {@required @JsonKey(defaultValue: 'ResearchStudy') this.resourceType,
+      {this.resourceType = 'ResearchStudy',
       this.id,
       this.meta,
       this.implicitRules,
@@ -776,8 +771,8 @@ class _$_ResearchStudy extends _ResearchStudy {
   factory _$_ResearchStudy.fromJson(Map<String, dynamic> json) =>
       _$_$_ResearchStudyFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'ResearchStudy')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -1008,9 +1003,7 @@ class _$_ResearchStudy extends _ResearchStudy {
 abstract class _ResearchStudy extends ResearchStudy {
   _ResearchStudy._() : super._();
   factory _ResearchStudy(
-      {@required
-      @JsonKey(defaultValue: 'ResearchStudy')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1060,7 +1053,6 @@ abstract class _ResearchStudy extends ResearchStudy {
       _$_ResearchStudy.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'ResearchStudy')
   String get resourceType;
   @override
   Id get id;
@@ -1794,9 +1786,7 @@ class _$ResearchSubjectTearOff {
 
 // ignore: unused_element
   _ResearchSubject call(
-      {@required
-      @JsonKey(defaultValue: 'ResearchSubject')
-          String resourceType,
+      {String resourceType = 'ResearchSubject',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1867,7 +1857,6 @@ const $ResearchSubject = _$ResearchSubjectTearOff();
 
 /// @nodoc
 mixin _$ResearchSubject {
-  @JsonKey(defaultValue: 'ResearchSubject')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -1909,8 +1898,7 @@ abstract class $ResearchSubjectCopyWith<$Res> {
           ResearchSubject value, $Res Function(ResearchSubject) then) =
       _$ResearchSubjectCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'ResearchSubject')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2161,8 +2149,7 @@ abstract class _$ResearchSubjectCopyWith<$Res>
       __$ResearchSubjectCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'ResearchSubject')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2313,7 +2300,7 @@ class __$ResearchSubjectCopyWithImpl<$Res>
 /// @nodoc
 class _$_ResearchSubject extends _ResearchSubject {
   _$_ResearchSubject(
-      {@required @JsonKey(defaultValue: 'ResearchSubject') this.resourceType,
+      {this.resourceType = 'ResearchSubject',
       this.id,
       this.meta,
       this.implicitRules,
@@ -2344,8 +2331,8 @@ class _$_ResearchSubject extends _ResearchSubject {
   factory _$_ResearchSubject.fromJson(Map<String, dynamic> json) =>
       _$_$_ResearchSubjectFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'ResearchSubject')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -2512,9 +2499,7 @@ class _$_ResearchSubject extends _ResearchSubject {
 abstract class _ResearchSubject extends ResearchSubject {
   _ResearchSubject._() : super._();
   factory _ResearchSubject(
-      {@required
-      @JsonKey(defaultValue: 'ResearchSubject')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2551,7 +2536,6 @@ abstract class _ResearchSubject extends ResearchSubject {
       _$_ResearchSubject.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'ResearchSubject')
   String get resourceType;
   @override
   Id get id;

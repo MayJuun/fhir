@@ -18,7 +18,7 @@ class _$PaymentNoticeTearOff {
 
 // ignore: unused_element
   _PaymentNotice call(
-      {@required @JsonKey(defaultValue: 'PaymentNotice') String resourceType,
+      {String resourceType = 'PaymentNotice',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -82,7 +82,6 @@ const $PaymentNotice = _$PaymentNoticeTearOff();
 
 /// @nodoc
 mixin _$PaymentNotice {
-  @JsonKey(defaultValue: 'PaymentNotice')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -124,7 +123,7 @@ abstract class $PaymentNoticeCopyWith<$Res> {
           PaymentNotice value, $Res Function(PaymentNotice) then) =
       _$PaymentNoticeCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'PaymentNotice') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -393,7 +392,7 @@ abstract class _$PaymentNoticeCopyWith<$Res>
       __$PaymentNoticeCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'PaymentNotice') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -544,7 +543,7 @@ class __$PaymentNoticeCopyWithImpl<$Res>
 /// @nodoc
 class _$_PaymentNotice extends _PaymentNotice {
   _$_PaymentNotice(
-      {@required @JsonKey(defaultValue: 'PaymentNotice') this.resourceType,
+      {this.resourceType = 'PaymentNotice',
       this.id,
       this.meta,
       this.implicitRules,
@@ -574,8 +573,8 @@ class _$_PaymentNotice extends _PaymentNotice {
   factory _$_PaymentNotice.fromJson(Map<String, dynamic> json) =>
       _$_$_PaymentNoticeFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'PaymentNotice')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -749,7 +748,7 @@ class _$_PaymentNotice extends _PaymentNotice {
 abstract class _PaymentNotice extends PaymentNotice {
   _PaymentNotice._() : super._();
   factory _PaymentNotice(
-      {@required @JsonKey(defaultValue: 'PaymentNotice') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -778,7 +777,6 @@ abstract class _PaymentNotice extends PaymentNotice {
       _$_PaymentNotice.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'PaymentNotice')
   String get resourceType;
   @override
   Id get id;

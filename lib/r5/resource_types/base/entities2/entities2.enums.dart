@@ -82,7 +82,7 @@ enum DeviceDeviceNameType {
 
 enum DeviceMetricOperationalStatus {
   @JsonValue('on')
-  on,
+  on_,
   @JsonValue('off')
   off,
   @JsonValue('standby')

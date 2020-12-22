@@ -10,7 +10,7 @@ part 'medication_definition.g.dart';
 abstract class MedicinalProduct with Resource implements _$MedicinalProduct {
   MedicinalProduct._();
   factory MedicinalProduct({
-    @JsonKey(defaultValue: 'MedicinalProduct') @required String resourceType,
+    @Default('MedicinalProduct') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -73,7 +73,7 @@ abstract class MedicinalProductNamePart implements _$MedicinalProductNamePart {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
-    String part,
+    @JsonKey(name: 'part') String part_,
     @JsonKey(name: '_part') Element partElement,
     @required Coding type,
   }) = _MedicinalProductNamePart;
@@ -852,7 +852,7 @@ abstract class SubstanceNucleicAcidSugar
 abstract class SubstancePolymer with Resource implements _$SubstancePolymer {
   SubstancePolymer._();
   factory SubstancePolymer({
-    @JsonKey(defaultValue: 'SubstancePolymer') @required String resourceType,
+    @Default('SubstancePolymer') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -992,7 +992,7 @@ abstract class SubstancePolymerStructuralRepresentation
 abstract class SubstanceProtein with Resource implements _$SubstanceProtein {
   SubstanceProtein._();
   factory SubstanceProtein({
-    @JsonKey(defaultValue: 'SubstanceProtein') @required String resourceType,
+    @Default('SubstanceProtein') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1307,7 +1307,7 @@ abstract class SubstanceSourceMaterialPartDescription
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
-    CodeableConcept part,
+    @JsonKey(name: 'part') CodeableConcept part_,
     CodeableConcept partLocation,
   }) = _SubstanceSourceMaterialPartDescription;
 

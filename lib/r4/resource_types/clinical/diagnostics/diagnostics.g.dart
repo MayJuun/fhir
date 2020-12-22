@@ -866,7 +866,7 @@ _$_Media _$_$_MediaFromJson(Map<String, dynamic> json) {
     issuedElement: json['_issued'] == null
         ? null
         : Element.fromJson(json['_issued'] as Map<String, dynamic>),
-    operator: json['operator'] == null
+    operator_: json['operator'] == null
         ? null
         : Reference.fromJson(json['operator'] as Map<String, dynamic>),
     reasonCode: (json['reasonCode'] as List)
@@ -952,7 +952,7 @@ Map<String, dynamic> _$_$_MediaToJson(_$_Media instance) {
   writeNotNull('createdPeriod', instance.createdPeriod?.toJson());
   writeNotNull('issued', instance.issued?.toJson());
   writeNotNull('_issued', instance.issuedElement?.toJson());
-  writeNotNull('operator', instance.operator?.toJson());
+  writeNotNull('operator', instance.operator_?.toJson());
   writeNotNull(
       'reasonCode', instance.reasonCode?.map((e) => e?.toJson())?.toList());
   writeNotNull('bodySite', instance.bodySite?.toJson());

@@ -18,9 +18,7 @@ class _$CapabilityStatementTearOff {
 
 // ignore: unused_element
   _CapabilityStatement call(
-      {@required
-      @JsonKey(defaultValue: 'CapabilityStatement')
-          String resourceType,
+      {String resourceType = 'CapabilityStatement',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -161,7 +159,6 @@ const $CapabilityStatement = _$CapabilityStatementTearOff();
 
 /// @nodoc
 mixin _$CapabilityStatement {
-  @JsonKey(defaultValue: 'CapabilityStatement')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -246,8 +243,7 @@ abstract class $CapabilityStatementCopyWith<$Res> {
           CapabilityStatement value, $Res Function(CapabilityStatement) then) =
       _$CapabilityStatementCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'CapabilityStatement')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -729,8 +725,7 @@ abstract class _$CapabilityStatementCopyWith<$Res>
       __$CapabilityStatementCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'CapabilityStatement')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1039,9 +1034,7 @@ class __$CapabilityStatementCopyWithImpl<$Res>
 /// @nodoc
 class _$_CapabilityStatement extends _CapabilityStatement {
   _$_CapabilityStatement(
-      {@required
-      @JsonKey(defaultValue: 'CapabilityStatement')
-          this.resourceType,
+      {this.resourceType = 'CapabilityStatement',
       this.id,
       this.meta,
       this.implicitRules,
@@ -1120,8 +1113,8 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   factory _$_CapabilityStatement.fromJson(Map<String, dynamic> json) =>
       _$_$_CapabilityStatementFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'CapabilityStatement')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -1423,9 +1416,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
 abstract class _CapabilityStatement extends CapabilityStatement {
   _CapabilityStatement._() : super._();
   factory _CapabilityStatement(
-      {@required
-      @JsonKey(defaultValue: 'CapabilityStatement')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1503,7 +1494,6 @@ abstract class _CapabilityStatement extends CapabilityStatement {
       _$_CapabilityStatement.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'CapabilityStatement')
   String get resourceType;
   @override
   Id get id;
@@ -8779,9 +8769,7 @@ class _$ExampleScenarioTearOff {
 
 // ignore: unused_element
   _ExampleScenario call(
-      {@required
-      @JsonKey(defaultValue: 'ExampleScenario')
-          String resourceType,
+      {String resourceType = 'ExampleScenario',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8884,7 +8872,6 @@ const $ExampleScenario = _$ExampleScenarioTearOff();
 
 /// @nodoc
 mixin _$ExampleScenario {
-  @JsonKey(defaultValue: 'ExampleScenario')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -8946,8 +8933,7 @@ abstract class $ExampleScenarioCopyWith<$Res> {
           ExampleScenario value, $Res Function(ExampleScenario) then) =
       _$ExampleScenarioCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'ExampleScenario')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9287,8 +9273,7 @@ abstract class _$ExampleScenarioCopyWith<$Res>
       __$ExampleScenarioCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'ExampleScenario')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9510,7 +9495,7 @@ class __$ExampleScenarioCopyWithImpl<$Res>
 /// @nodoc
 class _$_ExampleScenario extends _ExampleScenario {
   _$_ExampleScenario(
-      {@required @JsonKey(defaultValue: 'ExampleScenario') this.resourceType,
+      {this.resourceType = 'ExampleScenario',
       this.id,
       this.meta,
       this.implicitRules,
@@ -9553,8 +9538,8 @@ class _$_ExampleScenario extends _ExampleScenario {
   factory _$_ExampleScenario.fromJson(Map<String, dynamic> json) =>
       _$_$_ExampleScenarioFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'ExampleScenario')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -9787,9 +9772,7 @@ class _$_ExampleScenario extends _ExampleScenario {
 abstract class _ExampleScenario extends ExampleScenario {
   _ExampleScenario._() : super._();
   factory _ExampleScenario(
-      {@required
-      @JsonKey(defaultValue: 'ExampleScenario')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9844,7 +9827,6 @@ abstract class _ExampleScenario extends ExampleScenario {
       _$_ExampleScenario.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'ExampleScenario')
   String get resourceType;
   @override
   Id get id;
@@ -13431,9 +13413,7 @@ class _$GraphDefinitionTearOff {
 
 // ignore: unused_element
   _GraphDefinition call(
-      {@required
-      @JsonKey(defaultValue: 'GraphDefinition')
-          String resourceType,
+      {String resourceType = 'GraphDefinition',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -13535,7 +13515,6 @@ const $GraphDefinition = _$GraphDefinitionTearOff();
 
 /// @nodoc
 mixin _$GraphDefinition {
-  @JsonKey(defaultValue: 'GraphDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -13597,8 +13576,7 @@ abstract class $GraphDefinitionCopyWith<$Res> {
           GraphDefinition value, $Res Function(GraphDefinition) then) =
       _$GraphDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'GraphDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -13941,8 +13919,7 @@ abstract class _$GraphDefinitionCopyWith<$Res>
       __$GraphDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'GraphDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -14158,7 +14135,7 @@ class __$GraphDefinitionCopyWithImpl<$Res>
 /// @nodoc
 class _$_GraphDefinition extends _GraphDefinition {
   _$_GraphDefinition(
-      {@required @JsonKey(defaultValue: 'GraphDefinition') this.resourceType,
+      {this.resourceType = 'GraphDefinition',
       this.id,
       this.meta,
       this.implicitRules,
@@ -14200,8 +14177,8 @@ class _$_GraphDefinition extends _GraphDefinition {
   factory _$_GraphDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_GraphDefinitionFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'GraphDefinition')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -14431,9 +14408,7 @@ class _$_GraphDefinition extends _GraphDefinition {
 abstract class _GraphDefinition extends GraphDefinition {
   _GraphDefinition._() : super._();
   factory _GraphDefinition(
-      {@required
-      @JsonKey(defaultValue: 'GraphDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -14488,7 +14463,6 @@ abstract class _GraphDefinition extends GraphDefinition {
       _$_GraphDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'GraphDefinition')
   String get resourceType;
   @override
   Id get id;
@@ -16011,9 +15985,7 @@ class _$ImplementationGuideTearOff {
 
 // ignore: unused_element
   _ImplementationGuide call(
-      {@required
-      @JsonKey(defaultValue: 'ImplementationGuide')
-          String resourceType,
+      {String resourceType = 'ImplementationGuide',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -16135,7 +16107,6 @@ const $ImplementationGuide = _$ImplementationGuideTearOff();
 
 /// @nodoc
 mixin _$ImplementationGuide {
-  @JsonKey(defaultValue: 'ImplementationGuide')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -16209,8 +16180,7 @@ abstract class $ImplementationGuideCopyWith<$Res> {
           ImplementationGuide value, $Res Function(ImplementationGuide) then) =
       _$ImplementationGuideCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'ImplementationGuide')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -16646,8 +16616,7 @@ abstract class _$ImplementationGuideCopyWith<$Res>
       __$ImplementationGuideCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'ImplementationGuide')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -16919,9 +16888,7 @@ class __$ImplementationGuideCopyWithImpl<$Res>
 /// @nodoc
 class _$_ImplementationGuide extends _ImplementationGuide {
   _$_ImplementationGuide(
-      {@required
-      @JsonKey(defaultValue: 'ImplementationGuide')
-          this.resourceType,
+      {this.resourceType = 'ImplementationGuide',
       this.id,
       this.meta,
       this.implicitRules,
@@ -16989,8 +16956,8 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   factory _$_ImplementationGuide.fromJson(Map<String, dynamic> json) =>
       _$_$_ImplementationGuideFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'ImplementationGuide')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -17257,9 +17224,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
 abstract class _ImplementationGuide extends ImplementationGuide {
   _ImplementationGuide._() : super._();
   factory _ImplementationGuide(
-      {@required
-      @JsonKey(defaultValue: 'ImplementationGuide')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -17326,7 +17291,6 @@ abstract class _ImplementationGuide extends ImplementationGuide {
       _$_ImplementationGuide.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'ImplementationGuide')
   String get resourceType;
   @override
   Id get id;
@@ -21718,9 +21682,7 @@ class _$MessageDefinitionTearOff {
 
 // ignore: unused_element
   _MessageDefinition call(
-      {@required
-      @JsonKey(defaultValue: 'MessageDefinition')
-          String resourceType,
+      {String resourceType = 'MessageDefinition',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -21856,7 +21818,6 @@ const $MessageDefinition = _$MessageDefinitionTearOff();
 
 /// @nodoc
 mixin _$MessageDefinition {
-  @JsonKey(defaultValue: 'MessageDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -21938,8 +21899,7 @@ abstract class $MessageDefinitionCopyWith<$Res> {
           MessageDefinition value, $Res Function(MessageDefinition) then) =
       _$MessageDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'MessageDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -22406,8 +22366,7 @@ abstract class _$MessageDefinitionCopyWith<$Res>
       __$MessageDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'MessageDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -22702,9 +22661,7 @@ class __$MessageDefinitionCopyWithImpl<$Res>
 /// @nodoc
 class _$_MessageDefinition extends _MessageDefinition {
   _$_MessageDefinition(
-      {@required
-      @JsonKey(defaultValue: 'MessageDefinition')
-          this.resourceType,
+      {this.resourceType = 'MessageDefinition',
       this.id,
       this.meta,
       this.implicitRules,
@@ -22780,8 +22737,8 @@ class _$_MessageDefinition extends _MessageDefinition {
   factory _$_MessageDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_MessageDefinitionFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'MessageDefinition')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -23073,9 +23030,7 @@ class _$_MessageDefinition extends _MessageDefinition {
 abstract class _MessageDefinition extends MessageDefinition {
   _MessageDefinition._() : super._();
   factory _MessageDefinition(
-      {@required
-      @JsonKey(defaultValue: 'MessageDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -23150,7 +23105,6 @@ abstract class _MessageDefinition extends MessageDefinition {
       _$_MessageDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'MessageDefinition')
   String get resourceType;
   @override
   Id get id;
@@ -23965,9 +23919,7 @@ class _$OperationDefinitionTearOff {
 
 // ignore: unused_element
   _OperationDefinition call(
-      {@required
-      @JsonKey(defaultValue: 'OperationDefinition')
-          String resourceType,
+      {String resourceType = 'OperationDefinition',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -24116,7 +24068,6 @@ const $OperationDefinition = _$OperationDefinitionTearOff();
 
 /// @nodoc
 mixin _$OperationDefinition {
-  @JsonKey(defaultValue: 'OperationDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -24206,8 +24157,7 @@ abstract class $OperationDefinitionCopyWith<$Res> {
           OperationDefinition value, $Res Function(OperationDefinition) then) =
       _$OperationDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'OperationDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -24717,8 +24667,7 @@ abstract class _$OperationDefinitionCopyWith<$Res>
       __$OperationDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'OperationDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -25038,82 +24987,57 @@ class __$OperationDefinitionCopyWithImpl<$Res>
 /// @nodoc
 class _$_OperationDefinition extends _OperationDefinition {
   _$_OperationDefinition(
-      {@required
-      @JsonKey(defaultValue: 'OperationDefinition')
-          this.resourceType,
+      {this.resourceType = 'OperationDefinition',
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.url,
-      @JsonKey(name: '_url')
-          this.urlElement,
+      @JsonKey(name: '_url') this.urlElement,
       this.version,
-      @JsonKey(name: '_version')
-          this.versionElement,
+      @JsonKey(name: '_version') this.versionElement,
       this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
+      @JsonKey(name: '_name') this.nameElement,
       this.title,
-      @JsonKey(name: '_title')
-          this.titleElement,
-      @JsonKey(unknownEnumValue: OperationDefinitionStatus.unknown)
-          this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
-      @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
-          this.kind,
-      @JsonKey(name: '_kind')
-          this.kindElement,
+      @JsonKey(name: '_title') this.titleElement,
+      @JsonKey(unknownEnumValue: OperationDefinitionStatus.unknown) this.status,
+      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown) this.kind,
+      @JsonKey(name: '_kind') this.kindElement,
       this.experimental,
-      @JsonKey(name: '_experimental')
-          this.experimentalElement,
+      @JsonKey(name: '_experimental') this.experimentalElement,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
+      @JsonKey(name: '_publisher') this.publisherElement,
       this.contact,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       this.useContext,
       this.jurisdiction,
       this.purpose,
-      @JsonKey(name: '_purpose')
-          this.purposeElement,
+      @JsonKey(name: '_purpose') this.purposeElement,
       this.affectsState,
-      @JsonKey(name: '_affectsState')
-          this.affectsStateElement,
+      @JsonKey(name: '_affectsState') this.affectsStateElement,
       this.code,
-      @JsonKey(name: '_code')
-          this.codeElement,
+      @JsonKey(name: '_code') this.codeElement,
       this.comment,
-      @JsonKey(name: '_comment')
-          this.commentElement,
+      @JsonKey(name: '_comment') this.commentElement,
       this.base,
       this.resource,
-      @JsonKey(name: '_resource')
-          this.resourceElement,
+      @JsonKey(name: '_resource') this.resourceElement,
       this.system,
-      @JsonKey(name: '_system')
-          this.systemElement,
+      @JsonKey(name: '_system') this.systemElement,
       this.type,
-      @JsonKey(name: '_type')
-          this.typeElement,
+      @JsonKey(name: '_type') this.typeElement,
       this.instance,
-      @JsonKey(name: '_instance')
-          this.instanceElement,
+      @JsonKey(name: '_instance') this.instanceElement,
       this.inputProfile,
       this.outputProfile,
       this.parameter,
@@ -25124,8 +25048,8 @@ class _$_OperationDefinition extends _OperationDefinition {
   factory _$_OperationDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_OperationDefinitionFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'OperationDefinition')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -25441,9 +25365,7 @@ class _$_OperationDefinition extends _OperationDefinition {
 abstract class _OperationDefinition extends OperationDefinition {
   _OperationDefinition._() : super._();
   factory _OperationDefinition(
-      {@required
-      @JsonKey(defaultValue: 'OperationDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -25526,7 +25448,6 @@ abstract class _OperationDefinition extends OperationDefinition {
       _$_OperationDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'OperationDefinition')
   String get resourceType;
   @override
   Id get id;
@@ -25704,7 +25625,8 @@ class _$OperationDefinitionParameterTearOff {
           Element searchTypeElement,
       OperationDefinitionBinding binding,
       List<OperationDefinitionReferencedFrom> referencedFrom,
-      List<OperationDefinitionParameter> part}) {
+      @JsonKey(name: 'part')
+          List<OperationDefinitionParameter> part_}) {
     return _OperationDefinitionParameter(
       id: id,
       extension_: extension_,
@@ -25726,7 +25648,7 @@ class _$OperationDefinitionParameterTearOff {
       searchTypeElement: searchTypeElement,
       binding: binding,
       referencedFrom: referencedFrom,
-      part: part,
+      part_: part_,
     );
   }
 
@@ -25772,7 +25694,8 @@ mixin _$OperationDefinitionParameter {
   Element get searchTypeElement;
   OperationDefinitionBinding get binding;
   List<OperationDefinitionReferencedFrom> get referencedFrom;
-  List<OperationDefinitionParameter> get part;
+  @JsonKey(name: 'part')
+  List<OperationDefinitionParameter> get part_;
 
   Map<String, dynamic> toJson();
   $OperationDefinitionParameterCopyWith<OperationDefinitionParameter>
@@ -25816,7 +25739,8 @@ abstract class $OperationDefinitionParameterCopyWith<$Res> {
           Element searchTypeElement,
       OperationDefinitionBinding binding,
       List<OperationDefinitionReferencedFrom> referencedFrom,
-      List<OperationDefinitionParameter> part});
+      @JsonKey(name: 'part')
+          List<OperationDefinitionParameter> part_});
 
   $ElementCopyWith<$Res> get nameElement;
   $ElementCopyWith<$Res> get useElement;
@@ -25859,7 +25783,7 @@ class _$OperationDefinitionParameterCopyWithImpl<$Res>
     Object searchTypeElement = freezed,
     Object binding = freezed,
     Object referencedFrom = freezed,
-    Object part = freezed,
+    Object part_ = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -25905,9 +25829,9 @@ class _$OperationDefinitionParameterCopyWithImpl<$Res>
       referencedFrom: referencedFrom == freezed
           ? _value.referencedFrom
           : referencedFrom as List<OperationDefinitionReferencedFrom>,
-      part: part == freezed
-          ? _value.part
-          : part as List<OperationDefinitionParameter>,
+      part_: part_ == freezed
+          ? _value.part_
+          : part_ as List<OperationDefinitionParameter>,
     ));
   }
 
@@ -26031,7 +25955,8 @@ abstract class _$OperationDefinitionParameterCopyWith<$Res>
           Element searchTypeElement,
       OperationDefinitionBinding binding,
       List<OperationDefinitionReferencedFrom> referencedFrom,
-      List<OperationDefinitionParameter> part});
+      @JsonKey(name: 'part')
+          List<OperationDefinitionParameter> part_});
 
   @override
   $ElementCopyWith<$Res> get nameElement;
@@ -26086,7 +26011,7 @@ class __$OperationDefinitionParameterCopyWithImpl<$Res>
     Object searchTypeElement = freezed,
     Object binding = freezed,
     Object referencedFrom = freezed,
-    Object part = freezed,
+    Object part_ = freezed,
   }) {
     return _then(_OperationDefinitionParameter(
       id: id == freezed ? _value.id : id as String,
@@ -26132,9 +26057,9 @@ class __$OperationDefinitionParameterCopyWithImpl<$Res>
       referencedFrom: referencedFrom == freezed
           ? _value.referencedFrom
           : referencedFrom as List<OperationDefinitionReferencedFrom>,
-      part: part == freezed
-          ? _value.part
-          : part as List<OperationDefinitionParameter>,
+      part_: part_ == freezed
+          ? _value.part_
+          : part_ as List<OperationDefinitionParameter>,
     ));
   }
 }
@@ -26174,7 +26099,8 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
           this.searchTypeElement,
       this.binding,
       this.referencedFrom,
-      this.part})
+      @JsonKey(name: 'part')
+          this.part_})
       : super._();
 
   factory _$_OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =>
@@ -26231,11 +26157,12 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
   @override
   final List<OperationDefinitionReferencedFrom> referencedFrom;
   @override
-  final List<OperationDefinitionParameter> part;
+  @JsonKey(name: 'part')
+  final List<OperationDefinitionParameter> part_;
 
   @override
   String toString() {
-    return 'OperationDefinitionParameter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, use: $use, useElement: $useElement, min: $min, minElement: $minElement, max: $max, maxElement: $maxElement, documentation: $documentation, documentationElement: $documentationElement, type: $type, typeElement: $typeElement, targetProfile: $targetProfile, searchType: $searchType, searchTypeElement: $searchTypeElement, binding: $binding, referencedFrom: $referencedFrom, part: $part)';
+    return 'OperationDefinitionParameter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, use: $use, useElement: $useElement, min: $min, minElement: $minElement, max: $max, maxElement: $maxElement, documentation: $documentation, documentationElement: $documentationElement, type: $type, typeElement: $typeElement, targetProfile: $targetProfile, searchType: $searchType, searchTypeElement: $searchTypeElement, binding: $binding, referencedFrom: $referencedFrom, part_: $part_)';
   }
 
   @override
@@ -26296,8 +26223,8 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
             (identical(other.referencedFrom, referencedFrom) ||
                 const DeepCollectionEquality()
                     .equals(other.referencedFrom, referencedFrom)) &&
-            (identical(other.part, part) ||
-                const DeepCollectionEquality().equals(other.part, part)));
+            (identical(other.part_, part_) ||
+                const DeepCollectionEquality().equals(other.part_, part_)));
   }
 
   @override
@@ -26323,7 +26250,7 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
       const DeepCollectionEquality().hash(searchTypeElement) ^
       const DeepCollectionEquality().hash(binding) ^
       const DeepCollectionEquality().hash(referencedFrom) ^
-      const DeepCollectionEquality().hash(part);
+      const DeepCollectionEquality().hash(part_);
 
   @override
   _$OperationDefinitionParameterCopyWith<_OperationDefinitionParameter>
@@ -26370,8 +26297,9 @@ abstract class _OperationDefinitionParameter
           Element searchTypeElement,
       OperationDefinitionBinding binding,
       List<OperationDefinitionReferencedFrom> referencedFrom,
-      List<OperationDefinitionParameter>
-          part}) = _$_OperationDefinitionParameter;
+      @JsonKey(name: 'part')
+          List<OperationDefinitionParameter>
+              part_}) = _$_OperationDefinitionParameter;
 
   factory _OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =
       _$_OperationDefinitionParameter.fromJson;
@@ -26427,7 +26355,8 @@ abstract class _OperationDefinitionParameter
   @override
   List<OperationDefinitionReferencedFrom> get referencedFrom;
   @override
-  List<OperationDefinitionParameter> get part;
+  @JsonKey(name: 'part')
+  List<OperationDefinitionParameter> get part_;
   @override
   _$OperationDefinitionParameterCopyWith<_OperationDefinitionParameter>
       get copyWith;
@@ -27401,9 +27330,7 @@ class _$SearchParameterTearOff {
 
 // ignore: unused_element
   _SearchParameter call(
-      {@required
-      @JsonKey(defaultValue: 'SearchParameter')
-          String resourceType,
+      {String resourceType = 'SearchParameter',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -27562,7 +27489,6 @@ const $SearchParameter = _$SearchParameterTearOff();
 
 /// @nodoc
 mixin _$SearchParameter {
-  @JsonKey(defaultValue: 'SearchParameter')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -27659,8 +27585,7 @@ abstract class $SearchParameterCopyWith<$Res> {
           SearchParameter value, $Res Function(SearchParameter) then) =
       _$SearchParameterCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'SearchParameter')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -28181,8 +28106,7 @@ abstract class _$SearchParameterCopyWith<$Res>
       __$SearchParameterCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'SearchParameter')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -28522,9 +28446,7 @@ class __$SearchParameterCopyWithImpl<$Res>
 /// @nodoc
 class _$_SearchParameter extends _SearchParameter {
   _$_SearchParameter(
-      {@required
-      @JsonKey(defaultValue: 'SearchParameter')
-          this.resourceType,
+      {this.resourceType = 'SearchParameter',
       this.id,
       this.meta,
       this.implicitRules,
@@ -28615,8 +28537,8 @@ class _$_SearchParameter extends _SearchParameter {
   factory _$_SearchParameter.fromJson(Map<String, dynamic> json) =>
       _$_$_SearchParameterFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'SearchParameter')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -28947,9 +28869,7 @@ class _$_SearchParameter extends _SearchParameter {
 abstract class _SearchParameter extends SearchParameter {
   _SearchParameter._() : super._();
   factory _SearchParameter(
-      {@required
-      @JsonKey(defaultValue: 'SearchParameter')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -29039,7 +28959,6 @@ abstract class _SearchParameter extends SearchParameter {
       _$_SearchParameter.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'SearchParameter')
   String get resourceType;
   @override
   Id get id;
@@ -29483,9 +29402,7 @@ class _$StructureDefinitionTearOff {
 
 // ignore: unused_element
   _StructureDefinition call(
-      {@required
-      @JsonKey(defaultValue: 'StructureDefinition')
-          String resourceType,
+      {String resourceType = 'StructureDefinition',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -29639,7 +29556,6 @@ const $StructureDefinition = _$StructureDefinitionTearOff();
 
 /// @nodoc
 mixin _$StructureDefinition {
-  @JsonKey(defaultValue: 'StructureDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -29733,8 +29649,7 @@ abstract class $StructureDefinitionCopyWith<$Res> {
           StructureDefinition value, $Res Function(StructureDefinition) then) =
       _$StructureDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'StructureDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -30283,8 +30198,7 @@ abstract class _$StructureDefinitionCopyWith<$Res>
       __$StructureDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'StructureDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -30624,9 +30538,7 @@ class __$StructureDefinitionCopyWithImpl<$Res>
 /// @nodoc
 class _$_StructureDefinition extends _StructureDefinition {
   _$_StructureDefinition(
-      {@required
-      @JsonKey(defaultValue: 'StructureDefinition')
-          this.resourceType,
+      {this.resourceType = 'StructureDefinition',
       this.id,
       this.meta,
       this.implicitRules,
@@ -30714,8 +30626,8 @@ class _$_StructureDefinition extends _StructureDefinition {
   factory _$_StructureDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_StructureDefinitionFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'StructureDefinition')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -31038,9 +30950,7 @@ class _$_StructureDefinition extends _StructureDefinition {
 abstract class _StructureDefinition extends StructureDefinition {
   _StructureDefinition._() : super._();
   factory _StructureDefinition(
-      {@required
-      @JsonKey(defaultValue: 'StructureDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -31127,7 +31037,6 @@ abstract class _StructureDefinition extends StructureDefinition {
       _$_StructureDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'StructureDefinition')
   String get resourceType;
   @override
   Id get id;
@@ -32527,9 +32436,7 @@ class _$StructureMapTearOff {
 
 // ignore: unused_element
   _StructureMap call(
-      {@required
-      @JsonKey(defaultValue: 'StructureMap')
-          String resourceType,
+      {String resourceType = 'StructureMap',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -32582,7 +32489,8 @@ class _$StructureMapTearOff {
       @JsonKey(name: '_copyright')
           Element copyrightElement,
       List<StructureMapStructure> structure,
-      List<Canonical> import,
+      @JsonKey(name: 'import')
+          List<Canonical> import_,
       @required
           List<StructureMapGroup> group}) {
     return _StructureMap(
@@ -32624,7 +32532,7 @@ class _$StructureMapTearOff {
       copyright: copyright,
       copyrightElement: copyrightElement,
       structure: structure,
-      import: import,
+      import_: import_,
       group: group,
     );
   }
@@ -32641,7 +32549,6 @@ const $StructureMap = _$StructureMapTearOff();
 
 /// @nodoc
 mixin _$StructureMap {
-  @JsonKey(defaultValue: 'StructureMap')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -32695,7 +32602,8 @@ mixin _$StructureMap {
   @JsonKey(name: '_copyright')
   Element get copyrightElement;
   List<StructureMapStructure> get structure;
-  List<Canonical> get import;
+  @JsonKey(name: 'import')
+  List<Canonical> get import_;
   List<StructureMapGroup> get group;
 
   Map<String, dynamic> toJson();
@@ -32708,8 +32616,7 @@ abstract class $StructureMapCopyWith<$Res> {
           StructureMap value, $Res Function(StructureMap) then) =
       _$StructureMapCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'StructureMap')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -32762,7 +32669,8 @@ abstract class $StructureMapCopyWith<$Res> {
       @JsonKey(name: '_copyright')
           Element copyrightElement,
       List<StructureMapStructure> structure,
-      List<Canonical> import,
+      @JsonKey(name: 'import')
+          List<Canonical> import_,
       List<StructureMapGroup> group});
 
   $MetaCopyWith<$Res> get meta;
@@ -32830,7 +32738,7 @@ class _$StructureMapCopyWithImpl<$Res> implements $StructureMapCopyWith<$Res> {
     Object copyright = freezed,
     Object copyrightElement = freezed,
     Object structure = freezed,
-    Object import = freezed,
+    Object import_ = freezed,
     Object group = freezed,
   }) {
     return _then(_value.copyWith(
@@ -32917,7 +32825,7 @@ class _$StructureMapCopyWithImpl<$Res> implements $StructureMapCopyWith<$Res> {
       structure: structure == freezed
           ? _value.structure
           : structure as List<StructureMapStructure>,
-      import: import == freezed ? _value.import : import as List<Canonical>,
+      import_: import_ == freezed ? _value.import_ : import_ as List<Canonical>,
       group: group == freezed ? _value.group : group as List<StructureMapGroup>,
     ));
   }
@@ -33081,8 +32989,7 @@ abstract class _$StructureMapCopyWith<$Res>
       __$StructureMapCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'StructureMap')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -33135,7 +33042,8 @@ abstract class _$StructureMapCopyWith<$Res>
       @JsonKey(name: '_copyright')
           Element copyrightElement,
       List<StructureMapStructure> structure,
-      List<Canonical> import,
+      @JsonKey(name: 'import')
+          List<Canonical> import_,
       List<StructureMapGroup> group});
 
   @override
@@ -33220,7 +33128,7 @@ class __$StructureMapCopyWithImpl<$Res> extends _$StructureMapCopyWithImpl<$Res>
     Object copyright = freezed,
     Object copyrightElement = freezed,
     Object structure = freezed,
-    Object import = freezed,
+    Object import_ = freezed,
     Object group = freezed,
   }) {
     return _then(_StructureMap(
@@ -33307,7 +33215,7 @@ class __$StructureMapCopyWithImpl<$Res> extends _$StructureMapCopyWithImpl<$Res>
       structure: structure == freezed
           ? _value.structure
           : structure as List<StructureMapStructure>,
-      import: import == freezed ? _value.import : import as List<Canonical>,
+      import_: import_ == freezed ? _value.import_ : import_ as List<Canonical>,
       group: group == freezed ? _value.group : group as List<StructureMapGroup>,
     ));
   }
@@ -33318,7 +33226,7 @@ class __$StructureMapCopyWithImpl<$Res> extends _$StructureMapCopyWithImpl<$Res>
 /// @nodoc
 class _$_StructureMap extends _StructureMap {
   _$_StructureMap(
-      {@required @JsonKey(defaultValue: 'StructureMap') this.resourceType,
+      {this.resourceType = 'StructureMap',
       this.id,
       this.meta,
       this.implicitRules,
@@ -33356,7 +33264,7 @@ class _$_StructureMap extends _StructureMap {
       this.copyright,
       @JsonKey(name: '_copyright') this.copyrightElement,
       this.structure,
-      this.import,
+      @JsonKey(name: 'import') this.import_,
       @required this.group})
       : assert(resourceType != null),
         assert(group != null),
@@ -33365,8 +33273,8 @@ class _$_StructureMap extends _StructureMap {
   factory _$_StructureMap.fromJson(Map<String, dynamic> json) =>
       _$_$_StructureMapFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'StructureMap')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -33458,13 +33366,14 @@ class _$_StructureMap extends _StructureMap {
   @override
   final List<StructureMapStructure> structure;
   @override
-  final List<Canonical> import;
+  @JsonKey(name: 'import')
+  final List<Canonical> import_;
   @override
   final List<StructureMapGroup> group;
 
   @override
   String toString() {
-    return 'StructureMap(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, structure: $structure, import: $import, group: $group)';
+    return 'StructureMap(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, structure: $structure, import_: $import_, group: $group)';
   }
 
   @override
@@ -33552,7 +33461,7 @@ class _$_StructureMap extends _StructureMap {
             (identical(other.copyright, copyright) || const DeepCollectionEquality().equals(other.copyright, copyright)) &&
             (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)) &&
             (identical(other.structure, structure) || const DeepCollectionEquality().equals(other.structure, structure)) &&
-            (identical(other.import, import) || const DeepCollectionEquality().equals(other.import, import)) &&
+            (identical(other.import_, import_) || const DeepCollectionEquality().equals(other.import_, import_)) &&
             (identical(other.group, group) || const DeepCollectionEquality().equals(other.group, group)));
   }
 
@@ -33597,7 +33506,7 @@ class _$_StructureMap extends _StructureMap {
       const DeepCollectionEquality().hash(copyright) ^
       const DeepCollectionEquality().hash(copyrightElement) ^
       const DeepCollectionEquality().hash(structure) ^
-      const DeepCollectionEquality().hash(import) ^
+      const DeepCollectionEquality().hash(import_) ^
       const DeepCollectionEquality().hash(group);
 
   @override
@@ -33613,9 +33522,7 @@ class _$_StructureMap extends _StructureMap {
 abstract class _StructureMap extends StructureMap {
   _StructureMap._() : super._();
   factory _StructureMap(
-      {@required
-      @JsonKey(defaultValue: 'StructureMap')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -33668,7 +33575,8 @@ abstract class _StructureMap extends StructureMap {
       @JsonKey(name: '_copyright')
           Element copyrightElement,
       List<StructureMapStructure> structure,
-      List<Canonical> import,
+      @JsonKey(name: 'import')
+          List<Canonical> import_,
       @required
           List<StructureMapGroup> group}) = _$_StructureMap;
 
@@ -33676,7 +33584,6 @@ abstract class _StructureMap extends StructureMap {
       _$_StructureMap.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'StructureMap')
   String get resourceType;
   @override
   Id get id;
@@ -33768,7 +33675,8 @@ abstract class _StructureMap extends StructureMap {
   @override
   List<StructureMapStructure> get structure;
   @override
-  List<Canonical> get import;
+  @JsonKey(name: 'import')
+  List<Canonical> get import_;
   @override
   List<StructureMapGroup> get group;
   @override

@@ -11,7 +11,7 @@ part 'workflow1.g.dart';
 abstract class Order with Resource implements _$Order {
   Order._();
   factory Order({
-    @JsonKey(defaultValue: 'Order') @required String resourceType,
+    @Default('Order') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -54,7 +54,7 @@ abstract class OrderWhen with _$OrderWhen {
 abstract class OrderResponse with Resource implements _$OrderResponse {
   OrderResponse._();
   factory OrderResponse({
-    @JsonKey(defaultValue: 'OrderResponse') @required String resourceType,
+    @Default('OrderResponse') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -143,7 +143,7 @@ abstract class CommunicationRequestPayload with _$CommunicationRequestPayload {
 abstract class DeviceUseRequest with Resource implements _$DeviceUseRequest {
   DeviceUseRequest._();
   factory DeviceUseRequest({
-    @JsonKey(defaultValue: 'DeviceUseRequest') @required String resourceType,
+    @Default('DeviceUseRequest') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -186,7 +186,7 @@ abstract class DeviceUseStatement
     implements _$DeviceUseStatement {
   DeviceUseStatement._();
   factory DeviceUseStatement({
-    @JsonKey(defaultValue: 'DeviceUseStatement') @required String resourceType,
+    @Default('DeviceUseStatement') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

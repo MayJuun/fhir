@@ -1,14 +1,17 @@
-## [0.0.10]
+## [0.0.12]
+* Updating to removed fields that are named using Dart reserved words. I thought I had caught all of them previously, but apparently not. Dart has a number of [words that are reserved](https://dart.dev/guides/language/language-tour#keywords), and I was still using some of them. These included: extension, part, import, get, on, operator and set. As previously, they have had an underscore added (```get``` becomes ```get_```, ```extension``` becomes ```extension_``` etc.). However, these are not changed in the json, so the input and out put remains unchanged.
 
+## [0.0.11]
+* Changed how resourceType handles defaults. It wasn't really functionaing the previous way. In addition, it was required, which mean that you had to include it when you made the resource (which was a pain in the ass). Now if you leave it blank, it will automatically include the correct resourceType. It will still, however, allow you to pass in the incorrect resourceType for that resource if you want to (this can be handled by the individual as far as I'm concerned).
+
+## [0.0.10]
 * Changed Duration to FhirDuration because dart core contains Duration and I was tired of dealing with it
 
 ## [0.0.9]
-
 * Ran formatter
 * Generated documentation
 
 ## [0.0.8]
-
 * Eased restrictions on Instant
 * Made dstu2 enums 'part of' instead of importing (easier to use dstu2 Enums in other projects)
 * Added an errorMessage() method to primitiveFailures
@@ -23,7 +26,6 @@
 *   - does not pass all tests (becuase downloadable specs, examples and online references do not agree)
 
 ## [0.0.7]
-
 * Trying for more pubdev points
 * No double quotes (even for Regex expressions)
 * Ensure @override is present for members
@@ -33,7 +35,6 @@
 * dartfmt and dartdoc won't run in pana (I think because of too many files)
 
 ## [0.0.6]
-
 * Simplified date, dateTime, instant (now implementers will have to deal with display instead of me)
 * rewrote testing function (it's a pain to do deep comparisons of maps)
 * doesn't follow classic check-test patterns, writes errors to file (makes it easier for me to debug)
@@ -43,21 +44,16 @@
 * taking out resource.g.dart (not used, doesn't seem to change functionality)
 
 ## [0.0.5]
-
 * Refactored Dstu2 to be more consistent with other versions, field names are the same, some class names changed
 
 ## [0.0.4]
-
 * Changed primitive equality, returns true for Code('code') == Code('code') AND Code('code') == 'code
-
+ 
 ## [0.0.3]
-
 * Updated pubspec (again), added examples and documentation
 
 ## [0.0.2]
-
 * Immediately had to update it because of mispellings in pubspec.yaml
 
 ## [0.0.1]
-
 * 2020-08-28.

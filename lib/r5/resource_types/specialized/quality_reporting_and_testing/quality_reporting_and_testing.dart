@@ -11,7 +11,7 @@ part 'quality_reporting_and_testing.g.dart';
 abstract class Measure with Resource implements _$Measure {
   Measure._();
   factory Measure({
-    @JsonKey(defaultValue: 'Measure') @required String resourceType,
+    @Default('Measure') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -185,7 +185,7 @@ abstract class MeasureSupplementalData implements _$MeasureSupplementalData {
 abstract class MeasureReport with Resource implements _$MeasureReport {
   MeasureReport._();
   factory MeasureReport({
-    @JsonKey(defaultValue: 'MeasureReport') @required String resourceType,
+    @Default('MeasureReport') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -320,7 +320,7 @@ abstract class MeasureReportPopulation1 implements _$MeasureReportPopulation1 {
 abstract class TestReport with Resource implements _$TestReport {
   TestReport._();
   factory TestReport({
-    @JsonKey(defaultValue: 'TestReport') @required String resourceType,
+    @Default('TestReport') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -511,7 +511,7 @@ abstract class TestReportAction2 implements _$TestReportAction2 {
 abstract class TestScript with Resource implements _$TestScript {
   TestScript._();
   factory TestScript({
-    @JsonKey(defaultValue: 'TestScript') @required String resourceType,
+    @Default('TestScript') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -824,8 +824,8 @@ abstract class TestScriptAssert implements _$TestScriptAssert {
     @JsonKey(name: '_minimumId') Element minimumIdElement,
     Boolean navigationLinks,
     @JsonKey(name: '_navigationLinks') Element navigationLinksElement,
-    @JsonKey(unknownEnumValue: TestScriptAssertOperator.unknown)
-        TestScriptAssertOperator operator,
+    @JsonKey(name: 'operator', unknownEnumValue: TestScriptAssertOperator.unknown)
+        TestScriptAssertOperator operator_,
     @JsonKey(name: '_operator') Element operatorElement,
     String path,
     @JsonKey(name: '_path') Element pathElement,

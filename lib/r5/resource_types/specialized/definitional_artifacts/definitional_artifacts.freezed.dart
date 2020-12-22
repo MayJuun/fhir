@@ -18,9 +18,7 @@ class _$ActivityDefinitionTearOff {
 
 // ignore: unused_element
   _ActivityDefinition call(
-      {@required
-      @JsonKey(defaultValue: 'ActivityDefinition')
-          String resourceType,
+      {String resourceType = 'ActivityDefinition',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -229,7 +227,6 @@ const $ActivityDefinition = _$ActivityDefinitionTearOff();
 
 /// @nodoc
 mixin _$ActivityDefinition {
-  @JsonKey(defaultValue: 'ActivityDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -350,8 +347,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
           ActivityDefinition value, $Res Function(ActivityDefinition) then) =
       _$ActivityDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'ActivityDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1171,8 +1167,7 @@ abstract class _$ActivityDefinitionCopyWith<$Res>
       __$ActivityDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'ActivityDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1656,7 +1651,7 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
 /// @nodoc
 class _$_ActivityDefinition extends _ActivityDefinition {
   _$_ActivityDefinition(
-      {@required @JsonKey(defaultValue: 'ActivityDefinition') this.resourceType,
+      {this.resourceType = 'ActivityDefinition',
       this.id,
       this.meta,
       this.implicitRules,
@@ -1746,8 +1741,8 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   factory _$_ActivityDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_ActivityDefinitionFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'ActivityDefinition')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -2180,9 +2175,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
 abstract class _ActivityDefinition extends ActivityDefinition {
   _ActivityDefinition._() : super._();
   factory _ActivityDefinition(
-          {@required
-          @JsonKey(defaultValue: 'ActivityDefinition')
-              String resourceType,
+          {String resourceType,
           Id id,
           Meta meta,
           FhirUri implicitRules,
@@ -2297,7 +2290,6 @@ abstract class _ActivityDefinition extends ActivityDefinition {
       _$_ActivityDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'ActivityDefinition')
   String get resourceType;
   @override
   Id get id;
@@ -3104,9 +3096,7 @@ class _$ConditionDefinitionTearOff {
 
 // ignore: unused_element
   _ConditionDefinition call(
-      {@required
-      @JsonKey(defaultValue: 'ConditionDefinition')
-          String resourceType,
+      {String resourceType = 'ConditionDefinition',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3269,7 +3259,6 @@ const $ConditionDefinition = _$ConditionDefinitionTearOff();
 
 /// @nodoc
 mixin _$ConditionDefinition {
-  @JsonKey(defaultValue: 'ConditionDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -3365,8 +3354,7 @@ abstract class $ConditionDefinitionCopyWith<$Res> {
           ConditionDefinition value, $Res Function(ConditionDefinition) then) =
       _$ConditionDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'ConditionDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3967,8 +3955,7 @@ abstract class _$ConditionDefinitionCopyWith<$Res>
       __$ConditionDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'ConditionDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4334,87 +4321,62 @@ class __$ConditionDefinitionCopyWithImpl<$Res>
 /// @nodoc
 class _$_ConditionDefinition extends _ConditionDefinition {
   _$_ConditionDefinition(
-      {@required
-      @JsonKey(defaultValue: 'ConditionDefinition')
-          this.resourceType,
+      {this.resourceType = 'ConditionDefinition',
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.url,
-      @JsonKey(name: '_url')
-          this.urlElement,
+      @JsonKey(name: '_url') this.urlElement,
       this.identifier,
       this.version,
-      @JsonKey(name: '_version')
-          this.versionElement,
+      @JsonKey(name: '_version') this.versionElement,
       this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
+      @JsonKey(name: '_name') this.nameElement,
       this.title,
-      @JsonKey(name: '_title')
-          this.titleElement,
-      @JsonKey(unknownEnumValue: ConditionDefinitionStatus.unknown)
-          this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_title') this.titleElement,
+      @JsonKey(unknownEnumValue: ConditionDefinitionStatus.unknown) this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.experimental,
-      @JsonKey(name: '_experimental')
-          this.experimentalElement,
+      @JsonKey(name: '_experimental') this.experimentalElement,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
+      @JsonKey(name: '_publisher') this.publisherElement,
       this.contact,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       this.useContext,
       this.jurisdiction,
       this.purpose,
-      @JsonKey(name: '_purpose')
-          this.purposeElement,
+      @JsonKey(name: '_purpose') this.purposeElement,
       this.copyright,
-      @JsonKey(name: '_copyright')
-          this.copyrightElement,
+      @JsonKey(name: '_copyright') this.copyrightElement,
       this.approvalDate,
-      @JsonKey(name: '_approvalDate')
-          this.approvalDateElement,
+      @JsonKey(name: '_approvalDate') this.approvalDateElement,
       this.lastReviewDate,
-      @JsonKey(name: '_lastReviewDate')
-          this.lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate') this.lastReviewDateElement,
       this.effectivePeriod,
       this.subtitle,
-      @JsonKey(name: '_subtitle')
-          this.subtitleElement,
-      @required
-          this.code,
+      @JsonKey(name: '_subtitle') this.subtitleElement,
+      @required this.code,
       this.severity,
       this.bodySite,
       this.stage,
       this.hasSeverity,
-      @JsonKey(name: '_hasSeverity')
-          this.hasSeverityElement,
+      @JsonKey(name: '_hasSeverity') this.hasSeverityElement,
       this.hasBodySite,
-      @JsonKey(name: '_hasBodySite')
-          this.hasBodySiteElement,
+      @JsonKey(name: '_hasBodySite') this.hasBodySiteElement,
       this.hasStage,
-      @JsonKey(name: '_hasStage')
-          this.hasStageElement,
+      @JsonKey(name: '_hasStage') this.hasStageElement,
       this.definition,
-      @JsonKey(name: '_definition')
-          this.definitionElement,
+      @JsonKey(name: '_definition') this.definitionElement,
       this.observation,
       this.medication,
       this.precondition,
@@ -4428,8 +4390,8 @@ class _$_ConditionDefinition extends _ConditionDefinition {
   factory _$_ConditionDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_ConditionDefinitionFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'ConditionDefinition')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -4772,9 +4734,7 @@ class _$_ConditionDefinition extends _ConditionDefinition {
 abstract class _ConditionDefinition extends ConditionDefinition {
   _ConditionDefinition._() : super._();
   factory _ConditionDefinition(
-      {@required
-      @JsonKey(defaultValue: 'ConditionDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4864,7 +4824,6 @@ abstract class _ConditionDefinition extends ConditionDefinition {
       _$_ConditionDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'ConditionDefinition')
   String get resourceType;
   @override
   Id get id;
@@ -6576,7 +6535,7 @@ class _$DeviceDefinitionTearOff {
 
 // ignore: unused_element
   _DeviceDefinition call(
-      {@required @JsonKey(defaultValue: 'DeviceDefinition') String resourceType,
+      {String resourceType = 'DeviceDefinition',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6666,7 +6625,6 @@ const $DeviceDefinition = _$DeviceDefinitionTearOff();
 
 /// @nodoc
 mixin _$DeviceDefinition {
-  @JsonKey(defaultValue: 'DeviceDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -6722,7 +6680,7 @@ abstract class $DeviceDefinitionCopyWith<$Res> {
           DeviceDefinition value, $Res Function(DeviceDefinition) then) =
       _$DeviceDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'DeviceDefinition') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7057,7 +7015,7 @@ abstract class _$DeviceDefinitionCopyWith<$Res>
       __$DeviceDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'DeviceDefinition') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7273,7 +7231,7 @@ class __$DeviceDefinitionCopyWithImpl<$Res>
 /// @nodoc
 class _$_DeviceDefinition extends _DeviceDefinition {
   _$_DeviceDefinition(
-      {@required @JsonKey(defaultValue: 'DeviceDefinition') this.resourceType,
+      {this.resourceType = 'DeviceDefinition',
       this.id,
       this.meta,
       this.implicitRules,
@@ -7316,8 +7274,8 @@ class _$_DeviceDefinition extends _DeviceDefinition {
   factory _$_DeviceDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_DeviceDefinitionFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'DeviceDefinition')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -7541,7 +7499,7 @@ class _$_DeviceDefinition extends _DeviceDefinition {
 abstract class _DeviceDefinition extends DeviceDefinition {
   _DeviceDefinition._() : super._();
   factory _DeviceDefinition(
-      {@required @JsonKey(defaultValue: 'DeviceDefinition') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7583,7 +7541,6 @@ abstract class _DeviceDefinition extends DeviceDefinition {
       _$_DeviceDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'DeviceDefinition')
   String get resourceType;
   @override
   Id get id;
@@ -9671,9 +9628,7 @@ class _$EventDefinitionTearOff {
 
 // ignore: unused_element
   _EventDefinition call(
-      {@required
-      @JsonKey(defaultValue: 'EventDefinition')
-          String resourceType,
+      {String resourceType = 'EventDefinition',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9819,7 +9774,6 @@ const $EventDefinition = _$EventDefinitionTearOff();
 
 /// @nodoc
 mixin _$EventDefinition {
-  @JsonKey(defaultValue: 'EventDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -9905,8 +9859,7 @@ abstract class $EventDefinitionCopyWith<$Res> {
           EventDefinition value, $Res Function(EventDefinition) then) =
       _$EventDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'EventDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -10430,8 +10383,7 @@ abstract class _$EventDefinitionCopyWith<$Res>
       __$EventDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'EventDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -10755,7 +10707,7 @@ class __$EventDefinitionCopyWithImpl<$Res>
 /// @nodoc
 class _$_EventDefinition extends _EventDefinition {
   _$_EventDefinition(
-      {@required @JsonKey(defaultValue: 'EventDefinition') this.resourceType,
+      {this.resourceType = 'EventDefinition',
       this.id,
       this.meta,
       this.implicitRules,
@@ -10817,8 +10769,8 @@ class _$_EventDefinition extends _EventDefinition {
   factory _$_EventDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_EventDefinitionFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'EventDefinition')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -11129,9 +11081,7 @@ class _$_EventDefinition extends _EventDefinition {
 abstract class _EventDefinition extends EventDefinition {
   _EventDefinition._() : super._();
   factory _EventDefinition(
-      {@required
-      @JsonKey(defaultValue: 'EventDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -11211,7 +11161,6 @@ abstract class _EventDefinition extends EventDefinition {
       _$_EventDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'EventDefinition')
   String get resourceType;
   @override
   Id get id;
@@ -14818,9 +14767,7 @@ class _$PlanDefinitionTearOff {
 
 // ignore: unused_element
   _PlanDefinition call(
-      {@required
-      @JsonKey(defaultValue: 'PlanDefinition')
-          String resourceType,
+      {String resourceType = 'PlanDefinition',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -14972,7 +14919,6 @@ const $PlanDefinition = _$PlanDefinitionTearOff();
 
 /// @nodoc
 mixin _$PlanDefinition {
-  @JsonKey(defaultValue: 'PlanDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -15062,8 +15008,7 @@ abstract class $PlanDefinitionCopyWith<$Res> {
           PlanDefinition value, $Res Function(PlanDefinition) then) =
       _$PlanDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'PlanDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -15609,8 +15554,7 @@ abstract class _$PlanDefinitionCopyWith<$Res>
       __$PlanDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'PlanDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -15947,7 +15891,7 @@ class __$PlanDefinitionCopyWithImpl<$Res>
 /// @nodoc
 class _$_PlanDefinition extends _PlanDefinition {
   _$_PlanDefinition(
-      {@required @JsonKey(defaultValue: 'PlanDefinition') this.resourceType,
+      {this.resourceType = 'PlanDefinition',
       this.id,
       this.meta,
       this.implicitRules,
@@ -16011,8 +15955,8 @@ class _$_PlanDefinition extends _PlanDefinition {
   factory _$_PlanDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_PlanDefinitionFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'PlanDefinition')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -16336,9 +16280,7 @@ class _$_PlanDefinition extends _PlanDefinition {
 abstract class _PlanDefinition extends PlanDefinition {
   _PlanDefinition._() : super._();
   factory _PlanDefinition(
-      {@required
-      @JsonKey(defaultValue: 'PlanDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -16421,7 +16363,6 @@ abstract class _PlanDefinition extends PlanDefinition {
       _$_PlanDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'PlanDefinition')
   String get resourceType;
   @override
   Id get id;
@@ -20321,9 +20262,7 @@ class _$QuestionnaireTearOff {
 
 // ignore: unused_element
   _Questionnaire call(
-      {@required
-      @JsonKey(defaultValue: 'Questionnaire')
-          String resourceType,
+      {String resourceType = 'Questionnaire',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -20451,7 +20390,6 @@ const $Questionnaire = _$QuestionnaireTearOff();
 
 /// @nodoc
 mixin _$Questionnaire {
-  @JsonKey(defaultValue: 'Questionnaire')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -20528,8 +20466,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
           Questionnaire value, $Res Function(Questionnaire) then) =
       _$QuestionnaireCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'Questionnaire')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -20972,8 +20909,7 @@ abstract class _$QuestionnaireCopyWith<$Res>
       __$QuestionnaireCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'Questionnaire')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -21253,7 +21189,7 @@ class __$QuestionnaireCopyWithImpl<$Res>
 /// @nodoc
 class _$_Questionnaire extends _Questionnaire {
   _$_Questionnaire(
-      {@required @JsonKey(defaultValue: 'Questionnaire') this.resourceType,
+      {this.resourceType = 'Questionnaire',
       this.id,
       this.meta,
       this.implicitRules,
@@ -21306,8 +21242,8 @@ class _$_Questionnaire extends _Questionnaire {
   factory _$_Questionnaire.fromJson(Map<String, dynamic> json) =>
       _$_$_QuestionnaireFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'Questionnaire')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -21585,9 +21521,7 @@ class _$_Questionnaire extends _Questionnaire {
 abstract class _Questionnaire extends Questionnaire {
   _Questionnaire._() : super._();
   factory _Questionnaire(
-      {@required
-      @JsonKey(defaultValue: 'Questionnaire')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -21657,7 +21591,6 @@ abstract class _Questionnaire extends Questionnaire {
       _$_Questionnaire.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'Questionnaire')
   String get resourceType;
   @override
   Id get id;
@@ -22769,8 +22702,8 @@ class _$QuestionnaireEnableWhenTearOff {
       String question,
       @JsonKey(name: '_question')
           Element questionElement,
-      @JsonKey(unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
-          QuestionnaireEnableWhenOperator operator,
+      @JsonKey(name: 'operator', unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
+          QuestionnaireEnableWhenOperator operator_,
       @JsonKey(name: '_operator')
           Element operatorElement,
       Boolean answerBoolean,
@@ -22803,7 +22736,7 @@ class _$QuestionnaireEnableWhenTearOff {
       modifierExtension: modifierExtension,
       question: question,
       questionElement: questionElement,
-      operator: operator,
+      operator_: operator_,
       operatorElement: operatorElement,
       answerBoolean: answerBoolean,
       answerBooleanElement: answerBooleanElement,
@@ -22844,8 +22777,10 @@ mixin _$QuestionnaireEnableWhen {
   String get question;
   @JsonKey(name: '_question')
   Element get questionElement;
-  @JsonKey(unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
-  QuestionnaireEnableWhenOperator get operator;
+  @JsonKey(
+      name: 'operator',
+      unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
+  QuestionnaireEnableWhenOperator get operator_;
   @JsonKey(name: '_operator')
   Element get operatorElement;
   Boolean get answerBoolean;
@@ -22890,8 +22825,8 @@ abstract class $QuestionnaireEnableWhenCopyWith<$Res> {
       String question,
       @JsonKey(name: '_question')
           Element questionElement,
-      @JsonKey(unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
-          QuestionnaireEnableWhenOperator operator,
+      @JsonKey(name: 'operator', unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
+          QuestionnaireEnableWhenOperator operator_,
       @JsonKey(name: '_operator')
           Element operatorElement,
       Boolean answerBoolean,
@@ -22949,7 +22884,7 @@ class _$QuestionnaireEnableWhenCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object question = freezed,
     Object questionElement = freezed,
-    Object operator = freezed,
+    Object operator_ = freezed,
     Object operatorElement = freezed,
     Object answerBoolean = freezed,
     Object answerBooleanElement = freezed,
@@ -22981,9 +22916,9 @@ class _$QuestionnaireEnableWhenCopyWithImpl<$Res>
       questionElement: questionElement == freezed
           ? _value.questionElement
           : questionElement as Element,
-      operator: operator == freezed
-          ? _value.operator
-          : operator as QuestionnaireEnableWhenOperator,
+      operator_: operator_ == freezed
+          ? _value.operator_
+          : operator_ as QuestionnaireEnableWhenOperator,
       operatorElement: operatorElement == freezed
           ? _value.operatorElement
           : operatorElement as Element,
@@ -23175,8 +23110,8 @@ abstract class _$QuestionnaireEnableWhenCopyWith<$Res>
       String question,
       @JsonKey(name: '_question')
           Element questionElement,
-      @JsonKey(unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
-          QuestionnaireEnableWhenOperator operator,
+      @JsonKey(name: 'operator', unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
+          QuestionnaireEnableWhenOperator operator_,
       @JsonKey(name: '_operator')
           Element operatorElement,
       Boolean answerBoolean,
@@ -23249,7 +23184,7 @@ class __$QuestionnaireEnableWhenCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object question = freezed,
     Object questionElement = freezed,
-    Object operator = freezed,
+    Object operator_ = freezed,
     Object operatorElement = freezed,
     Object answerBoolean = freezed,
     Object answerBooleanElement = freezed,
@@ -23281,9 +23216,9 @@ class __$QuestionnaireEnableWhenCopyWithImpl<$Res>
       questionElement: questionElement == freezed
           ? _value.questionElement
           : questionElement as Element,
-      operator: operator == freezed
-          ? _value.operator
-          : operator as QuestionnaireEnableWhenOperator,
+      operator_: operator_ == freezed
+          ? _value.operator_
+          : operator_ as QuestionnaireEnableWhenOperator,
       operatorElement: operatorElement == freezed
           ? _value.operatorElement
           : operatorElement as Element,
@@ -23352,8 +23287,8 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
       this.question,
       @JsonKey(name: '_question')
           this.questionElement,
-      @JsonKey(unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
-          this.operator,
+      @JsonKey(name: 'operator', unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
+          this.operator_,
       @JsonKey(name: '_operator')
           this.operatorElement,
       this.answerBoolean,
@@ -23398,8 +23333,10 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
   @JsonKey(name: '_question')
   final Element questionElement;
   @override
-  @JsonKey(unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
-  final QuestionnaireEnableWhenOperator operator;
+  @JsonKey(
+      name: 'operator',
+      unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
+  final QuestionnaireEnableWhenOperator operator_;
   @override
   @JsonKey(name: '_operator')
   final Element operatorElement;
@@ -23447,7 +23384,7 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
 
   @override
   String toString() {
-    return 'QuestionnaireEnableWhen(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, question: $question, questionElement: $questionElement, operator: $operator, operatorElement: $operatorElement, answerBoolean: $answerBoolean, answerBooleanElement: $answerBooleanElement, answerDecimal: $answerDecimal, answerDecimalElement: $answerDecimalElement, answerInteger: $answerInteger, answerIntegerElement: $answerIntegerElement, answerDate: $answerDate, answerDateElement: $answerDateElement, answerDateTime: $answerDateTime, answerDateTimeElement: $answerDateTimeElement, answerTime: $answerTime, answerTimeElement: $answerTimeElement, answerString: $answerString, answerStringElement: $answerStringElement, answerCoding: $answerCoding, answerQuantity: $answerQuantity, answerReference: $answerReference)';
+    return 'QuestionnaireEnableWhen(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, question: $question, questionElement: $questionElement, operator_: $operator_, operatorElement: $operatorElement, answerBoolean: $answerBoolean, answerBooleanElement: $answerBooleanElement, answerDecimal: $answerDecimal, answerDecimalElement: $answerDecimalElement, answerInteger: $answerInteger, answerIntegerElement: $answerIntegerElement, answerDate: $answerDate, answerDateElement: $answerDateElement, answerDateTime: $answerDateTime, answerDateTimeElement: $answerDateTimeElement, answerTime: $answerTime, answerTimeElement: $answerTimeElement, answerString: $answerString, answerStringElement: $answerStringElement, answerCoding: $answerCoding, answerQuantity: $answerQuantity, answerReference: $answerReference)';
   }
 
   @override
@@ -23468,9 +23405,9 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
             (identical(other.questionElement, questionElement) ||
                 const DeepCollectionEquality()
                     .equals(other.questionElement, questionElement)) &&
-            (identical(other.operator, operator) ||
+            (identical(other.operator_, operator_) ||
                 const DeepCollectionEquality()
-                    .equals(other.operator, operator)) &&
+                    .equals(other.operator_, operator_)) &&
             (identical(other.operatorElement, operatorElement) ||
                 const DeepCollectionEquality()
                     .equals(other.operatorElement, operatorElement)) &&
@@ -23530,7 +23467,7 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(question) ^
       const DeepCollectionEquality().hash(questionElement) ^
-      const DeepCollectionEquality().hash(operator) ^
+      const DeepCollectionEquality().hash(operator_) ^
       const DeepCollectionEquality().hash(operatorElement) ^
       const DeepCollectionEquality().hash(answerBoolean) ^
       const DeepCollectionEquality().hash(answerBooleanElement) ^
@@ -23571,8 +23508,8 @@ abstract class _QuestionnaireEnableWhen extends QuestionnaireEnableWhen {
       String question,
       @JsonKey(name: '_question')
           Element questionElement,
-      @JsonKey(unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
-          QuestionnaireEnableWhenOperator operator,
+      @JsonKey(name: 'operator', unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
+          QuestionnaireEnableWhenOperator operator_,
       @JsonKey(name: '_operator')
           Element operatorElement,
       Boolean answerBoolean,
@@ -23616,8 +23553,10 @@ abstract class _QuestionnaireEnableWhen extends QuestionnaireEnableWhen {
   @JsonKey(name: '_question')
   Element get questionElement;
   @override
-  @JsonKey(unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
-  QuestionnaireEnableWhenOperator get operator;
+  @JsonKey(
+      name: 'operator',
+      unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
+  QuestionnaireEnableWhenOperator get operator_;
   @override
   @JsonKey(name: '_operator')
   Element get operatorElement;
@@ -25076,72 +25015,54 @@ class _$SpecimenDefinitionTearOff {
 
 // ignore: unused_element
   _SpecimenDefinition call(
-      {@required
-      @JsonKey(defaultValue: 'SpecimenDefinition')
-          String resourceType,
+      {String resourceType = 'SpecimenDefinition',
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri url,
-      @JsonKey(name: '_url')
-          Element urlElement,
+      @JsonKey(name: '_url') Element urlElement,
       Identifier identifier,
       String version,
-      @JsonKey(name: '_version')
-          Element versionElement,
+      @JsonKey(name: '_version') Element versionElement,
       String title,
-      @JsonKey(name: '_title')
-          Element titleElement,
+      @JsonKey(name: '_title') Element titleElement,
       List<Canonical> derivedFromCanonical,
       List<FhirUri> derivedFromUri,
-      @JsonKey(name: '_derivedFromUri')
-          List<Element> derivedFromUriElement,
+      @JsonKey(name: '_derivedFromUri') List<Element> derivedFromUriElement,
       Code status,
-      @JsonKey(name: '_status')
-          Element statusElement,
+      @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
+      @JsonKey(name: '_experimental') Element experimentalElement,
       CodeableConcept subjectCodeableConcept,
       Reference subjectReference,
       FhirDateTime date,
-      @JsonKey(name: '_date')
-          Element dateElement,
+      @JsonKey(name: '_date') Element dateElement,
       Reference publisher,
       List<ContactDetail> contact,
       Markdown description,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
+      @JsonKey(name: '_description') Element descriptionElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Markdown purpose,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
+      @JsonKey(name: '_purpose') Element purposeElement,
       Markdown copyright,
-      @JsonKey(name: '_copyright')
-          Element copyrightElement,
+      @JsonKey(name: '_copyright') Element copyrightElement,
       Date approvalDate,
-      @JsonKey(name: '_approvalDate')
-          Element approvalDateElement,
+      @JsonKey(name: '_approvalDate') Element approvalDateElement,
       Date lastReviewDate,
-      @JsonKey(name: '_lastReviewDate')
-          Element lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
       Period effectivePeriod,
       CodeableConcept typeCollected,
       List<CodeableConcept> patientPreparation,
       String timeAspect,
-      @JsonKey(name: '_timeAspect')
-          Element timeAspectElement,
+      @JsonKey(name: '_timeAspect') Element timeAspectElement,
       List<CodeableConcept> collection,
       List<SpecimenDefinitionTypeTested> typeTested}) {
     return _SpecimenDefinition(
@@ -25210,7 +25131,6 @@ const $SpecimenDefinition = _$SpecimenDefinitionTearOff();
 
 /// @nodoc
 mixin _$SpecimenDefinition {
-  @JsonKey(defaultValue: 'SpecimenDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -25288,7 +25208,7 @@ abstract class $SpecimenDefinitionCopyWith<$Res> {
           SpecimenDefinition value, $Res Function(SpecimenDefinition) then) =
       _$SpecimenDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'SpecimenDefinition') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -25779,7 +25699,7 @@ abstract class _$SpecimenDefinitionCopyWith<$Res>
       __$SpecimenDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'SpecimenDefinition') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -26070,7 +25990,7 @@ class __$SpecimenDefinitionCopyWithImpl<$Res>
 /// @nodoc
 class _$_SpecimenDefinition extends _SpecimenDefinition {
   _$_SpecimenDefinition(
-      {@required @JsonKey(defaultValue: 'SpecimenDefinition') this.resourceType,
+      {this.resourceType = 'SpecimenDefinition',
       this.id,
       this.meta,
       this.implicitRules,
@@ -26126,8 +26046,8 @@ class _$_SpecimenDefinition extends _SpecimenDefinition {
   factory _$_SpecimenDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_SpecimenDefinitionFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'SpecimenDefinition')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -26414,72 +26334,54 @@ class _$_SpecimenDefinition extends _SpecimenDefinition {
 abstract class _SpecimenDefinition extends SpecimenDefinition {
   _SpecimenDefinition._() : super._();
   factory _SpecimenDefinition(
-      {@required
-      @JsonKey(defaultValue: 'SpecimenDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri url,
-      @JsonKey(name: '_url')
-          Element urlElement,
+      @JsonKey(name: '_url') Element urlElement,
       Identifier identifier,
       String version,
-      @JsonKey(name: '_version')
-          Element versionElement,
+      @JsonKey(name: '_version') Element versionElement,
       String title,
-      @JsonKey(name: '_title')
-          Element titleElement,
+      @JsonKey(name: '_title') Element titleElement,
       List<Canonical> derivedFromCanonical,
       List<FhirUri> derivedFromUri,
-      @JsonKey(name: '_derivedFromUri')
-          List<Element> derivedFromUriElement,
+      @JsonKey(name: '_derivedFromUri') List<Element> derivedFromUriElement,
       Code status,
-      @JsonKey(name: '_status')
-          Element statusElement,
+      @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
+      @JsonKey(name: '_experimental') Element experimentalElement,
       CodeableConcept subjectCodeableConcept,
       Reference subjectReference,
       FhirDateTime date,
-      @JsonKey(name: '_date')
-          Element dateElement,
+      @JsonKey(name: '_date') Element dateElement,
       Reference publisher,
       List<ContactDetail> contact,
       Markdown description,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
+      @JsonKey(name: '_description') Element descriptionElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Markdown purpose,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
+      @JsonKey(name: '_purpose') Element purposeElement,
       Markdown copyright,
-      @JsonKey(name: '_copyright')
-          Element copyrightElement,
+      @JsonKey(name: '_copyright') Element copyrightElement,
       Date approvalDate,
-      @JsonKey(name: '_approvalDate')
-          Element approvalDateElement,
+      @JsonKey(name: '_approvalDate') Element approvalDateElement,
       Date lastReviewDate,
-      @JsonKey(name: '_lastReviewDate')
-          Element lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
       Period effectivePeriod,
       CodeableConcept typeCollected,
       List<CodeableConcept> patientPreparation,
       String timeAspect,
-      @JsonKey(name: '_timeAspect')
-          Element timeAspectElement,
+      @JsonKey(name: '_timeAspect') Element timeAspectElement,
       List<CodeableConcept> collection,
       List<SpecimenDefinitionTypeTested> typeTested}) = _$_SpecimenDefinition;
 
@@ -26487,7 +26389,6 @@ abstract class _SpecimenDefinition extends SpecimenDefinition {
       _$_SpecimenDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'SpecimenDefinition')
   String get resourceType;
   @override
   Id get id;

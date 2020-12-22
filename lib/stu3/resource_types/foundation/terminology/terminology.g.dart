@@ -298,7 +298,7 @@ _$_CodeSystemFilter _$_$_CodeSystemFilterFromJson(Map<String, dynamic> json) {
     descriptionElement: json['_description'] == null
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
-    operator: (json['operator'] as List)?.map((e) => e as String)?.toList(),
+    operator_: (json['operator'] as List)?.map((e) => e as String)?.toList(),
     operatorElement: (json['_operator'] as List)
         ?.map((e) =>
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
@@ -323,7 +323,7 @@ Map<String, dynamic> _$_$_CodeSystemFilterToJson(_$_CodeSystemFilter instance) {
   writeNotNull('_code', instance.codeElement?.toJson());
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('operator', instance.operator);
+  writeNotNull('operator', instance.operator_);
   writeNotNull(
       '_operator', instance.operatorElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('value', instance.value);

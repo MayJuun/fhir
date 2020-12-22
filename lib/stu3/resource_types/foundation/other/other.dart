@@ -11,7 +11,7 @@ part 'other.g.dart';
 abstract class Basic with Resource implements _$Basic {
   Basic._();
   factory Basic({
-    @JsonKey(defaultValue: 'Basic') @required String resourceType,
+    @Default('Basic') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -37,7 +37,7 @@ abstract class Basic with Resource implements _$Basic {
 abstract class Binary with Resource implements _$Binary {
   Binary._();
   factory Binary({
-    @JsonKey(defaultValue: 'Binary') @required String resourceType,
+    @Default('Binary') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -62,7 +62,7 @@ abstract class Binary with Resource implements _$Binary {
 abstract class Bundle with Resource implements _$Bundle {
   Bundle._();
   factory Bundle({
-    @JsonKey(defaultValue: 'Bundle') @required String resourceType,
+    @Default('Bundle') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -176,7 +176,7 @@ abstract class BundleResponse implements _$BundleResponse {
 abstract class Linkage with Resource implements _$Linkage {
   Linkage._();
   factory Linkage({
-    @JsonKey(defaultValue: 'Linkage') @required String resourceType,
+    @Default('Linkage') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -214,7 +214,7 @@ abstract class LinkageItem implements _$LinkageItem {
 abstract class Media with Resource implements _$Media {
   Media._();
   factory Media({
-    @JsonKey(defaultValue: 'Media') @required String resourceType,
+    @Default('Media') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -236,7 +236,7 @@ abstract class Media with Resource implements _$Media {
     FhirDateTime occurrenceDateTime,
     @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
     Period occurrencePeriod,
-    Reference operator,
+    @JsonKey(name: 'operator') Reference operator_,
     List<CodeableConcept> reasonCode,
     CodeableConcept bodySite,
     Reference device,
@@ -259,7 +259,7 @@ abstract class Media with Resource implements _$Media {
 abstract class MessageHeader with Resource implements _$MessageHeader {
   MessageHeader._();
   factory MessageHeader({
-    @JsonKey(defaultValue: 'MessageHeader') @required String resourceType,
+    @Default('MessageHeader') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -342,7 +342,7 @@ abstract class MessageHeaderResponse implements _$MessageHeaderResponse {
 abstract class OperationOutcome with Resource implements _$OperationOutcome {
   OperationOutcome._();
   factory OperationOutcome({
-    @JsonKey(defaultValue: 'OperationOutcome') @required String resourceType,
+    @Default('OperationOutcome') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -385,7 +385,7 @@ abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
 abstract class Parameters with Resource implements _$Parameters {
   Parameters._();
   factory Parameters({
-    @JsonKey(defaultValue: 'Parameters') @required String resourceType,
+    @Default('Parameters') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -480,7 +480,7 @@ abstract class ParametersParameter implements _$ParametersParameter {
     ParameterDefinition valueParameterDefinition,
     TriggerDefinition valueTriggerDefinition,
     Resource resource,
-    List<ParametersParameter> part,
+    @JsonKey(name: 'part') List<ParametersParameter> part_,
   }) = _ParametersParameter;
 
   factory ParametersParameter.fromJson(Map<String, dynamic> json) =>
@@ -491,7 +491,7 @@ abstract class ParametersParameter implements _$ParametersParameter {
 abstract class Subscription with Resource implements _$Subscription {
   Subscription._();
   factory Subscription({
-    @JsonKey(defaultValue: 'Subscription') @required String resourceType,
+    @Default('Subscription') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

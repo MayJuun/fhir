@@ -11,7 +11,7 @@ part 'billing.g.dart';
 abstract class Claim with Resource implements _$Claim {
   Claim._();
   factory Claim({
-    @JsonKey(defaultValue: 'Claim') @required String resourceType,
+    @Default('Claim') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -321,7 +321,7 @@ abstract class ClaimSubDetail implements _$ClaimSubDetail {
 abstract class ClaimResponse with Resource implements _$ClaimResponse {
   ClaimResponse._();
   factory ClaimResponse({
-    @JsonKey(defaultValue: 'ClaimResponse') @required String resourceType,
+    @Default('ClaimResponse') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -634,7 +634,7 @@ abstract class ClaimResponseError implements _$ClaimResponseError {
 abstract class Invoice with Resource implements _$Invoice {
   Invoice._();
   factory Invoice({
-    @JsonKey(defaultValue: 'Invoice') @required String resourceType,
+    @Default('Invoice') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

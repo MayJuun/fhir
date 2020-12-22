@@ -18,9 +18,7 @@ class _$StructureDefinitionTearOff {
 
 // ignore: unused_element
   _StructureDefinition call(
-      {@required
-      @JsonKey(defaultValue: 'StructureDefinition')
-          String resourceType,
+      {String resourceType = 'StructureDefinition',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -161,7 +159,6 @@ const $StructureDefinition = _$StructureDefinitionTearOff();
 
 /// @nodoc
 mixin _$StructureDefinition {
-  @JsonKey(defaultValue: 'StructureDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -244,8 +241,7 @@ abstract class $StructureDefinitionCopyWith<$Res> {
           StructureDefinition value, $Res Function(StructureDefinition) then) =
       _$StructureDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'StructureDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -711,8 +707,7 @@ abstract class _$StructureDefinitionCopyWith<$Res>
       __$StructureDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'StructureDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1005,9 +1000,7 @@ class __$StructureDefinitionCopyWithImpl<$Res>
 /// @nodoc
 class _$_StructureDefinition extends _StructureDefinition {
   _$_StructureDefinition(
-      {@required
-      @JsonKey(defaultValue: 'StructureDefinition')
-          this.resourceType,
+      {this.resourceType = 'StructureDefinition',
       this.id,
       this.meta,
       this.implicitRules,
@@ -1094,8 +1087,8 @@ class _$_StructureDefinition extends _StructureDefinition {
   factory _$_StructureDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_StructureDefinitionFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'StructureDefinition')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -1386,9 +1379,7 @@ class _$_StructureDefinition extends _StructureDefinition {
 abstract class _StructureDefinition extends StructureDefinition {
   _StructureDefinition._() : super._();
   factory _StructureDefinition(
-      {@required
-      @JsonKey(defaultValue: 'StructureDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1469,7 +1460,6 @@ abstract class _StructureDefinition extends StructureDefinition {
       _$_StructureDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'StructureDefinition')
   String get resourceType;
   @override
   Id get id;
@@ -2781,9 +2771,7 @@ class _$DataElementTearOff {
 
 // ignore: unused_element
   _DataElement call(
-      {@required
-      @JsonKey(defaultValue: 'DataElement')
-          String resourceType,
+      {String resourceType = 'DataElement',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2851,7 +2839,6 @@ const $DataElement = _$DataElementTearOff();
 
 /// @nodoc
 mixin _$DataElement {
-  @JsonKey(defaultValue: 'DataElement')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -2890,8 +2877,7 @@ abstract class $DataElementCopyWith<$Res> {
           DataElement value, $Res Function(DataElement) then) =
       _$DataElementCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'DataElement')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3036,8 +3022,7 @@ abstract class _$DataElementCopyWith<$Res>
       __$DataElementCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'DataElement')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3163,9 +3148,7 @@ class __$DataElementCopyWithImpl<$Res> extends _$DataElementCopyWithImpl<$Res>
 /// @nodoc
 class _$_DataElement extends _DataElement {
   _$_DataElement(
-      {@required
-      @JsonKey(defaultValue: 'DataElement')
-          this.resourceType,
+      {this.resourceType = 'DataElement',
       this.id,
       this.meta,
       this.implicitRules,
@@ -3202,8 +3185,8 @@ class _$_DataElement extends _DataElement {
   factory _$_DataElement.fromJson(Map<String, dynamic> json) =>
       _$_$_DataElementFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'DataElement')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -3366,9 +3349,7 @@ class _$_DataElement extends _DataElement {
 abstract class _DataElement extends DataElement {
   _DataElement._() : super._();
   factory _DataElement(
-      {@required
-      @JsonKey(defaultValue: 'DataElement')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3402,7 +3383,6 @@ abstract class _DataElement extends DataElement {
       _$_DataElement.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'DataElement')
   String get resourceType;
   @override
   Id get id;

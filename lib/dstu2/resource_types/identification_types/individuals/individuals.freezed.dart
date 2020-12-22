@@ -18,9 +18,7 @@ class _$PatientTearOff {
 
 // ignore: unused_element
   _Patient call(
-      {@required
-      @JsonKey(defaultValue: 'Patient')
-          String resourceType,
+      {String resourceType = 'Patient',
       Id id,
       @JsonKey(name: '_id')
           Element idElement,
@@ -124,7 +122,6 @@ const $Patient = _$PatientTearOff();
 
 /// @nodoc
 mixin _$Patient {
-  @JsonKey(defaultValue: 'Patient')
   String get resourceType;
   Id get id;
   @JsonKey(name: '_id')
@@ -185,8 +182,7 @@ abstract class $PatientCopyWith<$Res> {
   factory $PatientCopyWith(Patient value, $Res Function(Patient) then) =
       _$PatientCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'Patient')
-          String resourceType,
+      {String resourceType,
       Id id,
       @JsonKey(name: '_id')
           Element idElement,
@@ -549,8 +545,7 @@ abstract class _$PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
       __$PatientCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'Patient')
-          String resourceType,
+      {String resourceType,
       Id id,
       @JsonKey(name: '_id')
           Element idElement,
@@ -778,7 +773,7 @@ class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
 /// @nodoc
 class _$_Patient extends _Patient {
   _$_Patient(
-      {@required @JsonKey(defaultValue: 'Patient') this.resourceType,
+      {this.resourceType = 'Patient',
       this.id,
       @JsonKey(name: '_id') this.idElement,
       this.meta,
@@ -822,8 +817,8 @@ class _$_Patient extends _Patient {
   factory _$_Patient.fromJson(Map<String, dynamic> json) =>
       _$_$_PatientFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'Patient')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -1058,9 +1053,7 @@ class _$_Patient extends _Patient {
 abstract class _Patient extends Patient {
   _Patient._() : super._();
   factory _Patient(
-      {@required
-      @JsonKey(defaultValue: 'Patient')
-          String resourceType,
+      {String resourceType,
       Id id,
       @JsonKey(name: '_id')
           Element idElement,
@@ -1114,7 +1107,6 @@ abstract class _Patient extends Patient {
   factory _Patient.fromJson(Map<String, dynamic> json) = _$_Patient.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'Patient')
   String get resourceType;
   @override
   Id get id;
@@ -2574,9 +2566,7 @@ class _$PractitionerTearOff {
 
 // ignore: unused_element
   _Practitioner call(
-      {@required
-      @JsonKey(defaultValue: 'Practitioner')
-          String resourceType,
+      {String resourceType = 'Practitioner',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2649,7 +2639,6 @@ const $Practitioner = _$PractitionerTearOff();
 
 /// @nodoc
 mixin _$Practitioner {
-  @JsonKey(defaultValue: 'Practitioner')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -2693,8 +2682,7 @@ abstract class $PractitionerCopyWith<$Res> {
           Practitioner value, $Res Function(Practitioner) then) =
       _$PractitionerCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'Practitioner')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2919,8 +2907,7 @@ abstract class _$PractitionerCopyWith<$Res>
       __$PractitionerCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'Practitioner')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3072,7 +3059,7 @@ class __$PractitionerCopyWithImpl<$Res> extends _$PractitionerCopyWithImpl<$Res>
 /// @nodoc
 class _$_Practitioner extends _Practitioner {
   _$_Practitioner(
-      {@required @JsonKey(defaultValue: 'Practitioner') this.resourceType,
+      {this.resourceType = 'Practitioner',
       this.id,
       this.meta,
       this.implicitRules,
@@ -3103,8 +3090,8 @@ class _$_Practitioner extends _Practitioner {
   factory _$_Practitioner.fromJson(Map<String, dynamic> json) =>
       _$_$_PractitionerFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'Practitioner')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -3283,9 +3270,7 @@ class _$_Practitioner extends _Practitioner {
 abstract class _Practitioner extends Practitioner {
   _Practitioner._() : super._();
   factory _Practitioner(
-      {@required
-      @JsonKey(defaultValue: 'Practitioner')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3322,7 +3307,6 @@ abstract class _Practitioner extends Practitioner {
       _$_Practitioner.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'Practitioner')
   String get resourceType;
   @override
   Id get id;
@@ -4119,9 +4103,7 @@ class _$RelatedPersonTearOff {
 
 // ignore: unused_element
   _RelatedPerson call(
-      {@required
-      @JsonKey(defaultValue: 'RelatedPerson')
-          String resourceType,
+      {String resourceType = 'RelatedPerson',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4191,7 +4173,6 @@ const $RelatedPerson = _$RelatedPersonTearOff();
 
 /// @nodoc
 mixin _$RelatedPerson {
-  @JsonKey(defaultValue: 'RelatedPerson')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -4233,8 +4214,7 @@ abstract class $RelatedPersonCopyWith<$Res> {
           RelatedPerson value, $Res Function(RelatedPerson) then) =
       _$RelatedPersonCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'RelatedPerson')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4470,8 +4450,7 @@ abstract class _$RelatedPersonCopyWith<$Res>
       __$RelatedPersonCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'RelatedPerson')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4616,7 +4595,7 @@ class __$RelatedPersonCopyWithImpl<$Res>
 /// @nodoc
 class _$_RelatedPerson extends _RelatedPerson {
   _$_RelatedPerson(
-      {@required @JsonKey(defaultValue: 'RelatedPerson') this.resourceType,
+      {this.resourceType = 'RelatedPerson',
       this.id,
       this.meta,
       this.implicitRules,
@@ -4646,8 +4625,8 @@ class _$_RelatedPerson extends _RelatedPerson {
   factory _$_RelatedPerson.fromJson(Map<String, dynamic> json) =>
       _$_$_RelatedPersonFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'RelatedPerson')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -4814,9 +4793,7 @@ class _$_RelatedPerson extends _RelatedPerson {
 abstract class _RelatedPerson extends RelatedPerson {
   _RelatedPerson._() : super._();
   factory _RelatedPerson(
-      {@required
-      @JsonKey(defaultValue: 'RelatedPerson')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4852,7 +4829,6 @@ abstract class _RelatedPerson extends RelatedPerson {
       _$_RelatedPerson.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'RelatedPerson')
   String get resourceType;
   @override
   Id get id;

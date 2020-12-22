@@ -93,7 +93,7 @@ abstract class MarketingStatus implements _$MarketingStatus {
 abstract class Citation implements _$Citation {
   Citation._();
   factory Citation({
-    @JsonKey(defaultValue: 'Citation') @required String resourceType,
+    @Default('Citation') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -679,7 +679,7 @@ abstract class CitationRelatedArticle implements _$CitationRelatedArticle {
 abstract class EvidenceReport implements _$EvidenceReport {
   EvidenceReport._();
   factory EvidenceReport({
-    @JsonKey(defaultValue: 'EvidenceReport') @required String resourceType,
+    @Default('EvidenceReport') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

@@ -137,7 +137,7 @@ abstract class BiologicallyDerivedProductStorage
 abstract class Device with Resource implements _$Device {
   Device._();
   factory Device({
-    @JsonKey(defaultValue: 'Device') @required String resourceType,
+    @Default('Device') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -286,7 +286,7 @@ abstract class DeviceProperty implements _$DeviceProperty {
 abstract class DeviceMetric with Resource implements _$DeviceMetric {
   DeviceMetric._();
   factory DeviceMetric({
-    @JsonKey(defaultValue: 'DeviceMetric') @required String resourceType,
+    @Default('DeviceMetric') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -344,7 +344,7 @@ abstract class DeviceMetricCalibration implements _$DeviceMetricCalibration {
 abstract class Substance with Resource implements _$Substance {
   Substance._();
   factory Substance({
-    @JsonKey(defaultValue: 'Substance') @required String resourceType,
+    @Default('Substance') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

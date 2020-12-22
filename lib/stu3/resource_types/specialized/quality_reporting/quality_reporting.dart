@@ -11,7 +11,7 @@ part 'quality_reporting.g.dart';
 abstract class Measure with Resource implements _$Measure {
   Measure._();
   factory Measure({
-    @JsonKey(defaultValue: 'Measure') @required String resourceType,
+    @Default('Measure') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -79,7 +79,7 @@ abstract class Measure with Resource implements _$Measure {
     @JsonKey(name: '_definition') List<Element> definitionElement,
     String guidance,
     @JsonKey(name: '_guidance') Element guidanceElement,
-    String set,
+    @JsonKey(name: 'set') String set_,
     @JsonKey(name: '_set') Element setElement,
     List<MeasureGroup> group,
     List<MeasureSupplementalData> supplementalData,
@@ -159,7 +159,7 @@ abstract class MeasureSupplementalData implements _$MeasureSupplementalData {
 abstract class MeasureReport with Resource implements _$MeasureReport {
   MeasureReport._();
   factory MeasureReport({
-    @JsonKey(defaultValue: 'MeasureReport') @required String resourceType,
+    @Default('MeasureReport') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

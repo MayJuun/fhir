@@ -11,7 +11,7 @@ part 'medication_and_immunization.g.dart';
 abstract class Medication with Resource implements _$Medication {
   Medication._();
   factory Medication({
-    @JsonKey(defaultValue: 'Medication') @required String resourceType,
+    @Default('Medication') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -117,7 +117,7 @@ abstract class MedicationPackageContent with _$MedicationPackageContent {
 abstract class MedicationOrder with Resource implements _$MedicationOrder {
   MedicationOrder._();
   factory MedicationOrder({
-    @JsonKey(defaultValue: 'MedicationOrder') @required String resourceType,
+    @Default('MedicationOrder') String resourceType,
     Id id,
     @JsonKey(name: '_id') Element idElement,
     Meta meta,
@@ -292,7 +292,7 @@ abstract class MedicationDispense
     implements _$MedicationDispense {
   MedicationDispense._();
   factory MedicationDispense({
-    @JsonKey(defaultValue: 'MedicationDispense') @required String resourceType,
+    @Default('MedicationDispense') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -382,7 +382,7 @@ abstract class MedicationStatement
     implements _$MedicationStatement {
   MedicationStatement._();
   factory MedicationStatement({
-    @JsonKey(defaultValue: 'MedicationStatement') @required String resourceType,
+    @Default('MedicationStatement') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -451,7 +451,7 @@ abstract class MedicationStatementDosage with _$MedicationStatementDosage {
 abstract class Immunization with Resource implements _$Immunization {
   Immunization._();
   factory Immunization({
-    @JsonKey(defaultValue: 'Immunization') @required String resourceType,
+    @Default('Immunization') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

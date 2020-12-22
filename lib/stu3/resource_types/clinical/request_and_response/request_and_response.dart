@@ -11,7 +11,7 @@ part 'request_and_response.g.dart';
 abstract class Communication with Resource implements _$Communication {
   Communication._();
   factory Communication({
-    @JsonKey(defaultValue: 'Communication') @required String resourceType,
+    @Default('Communication') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -148,7 +148,7 @@ abstract class CommunicationRequestRequester
 abstract class DeviceRequest with Resource implements _$DeviceRequest {
   DeviceRequest._();
   factory DeviceRequest({
-    @JsonKey(defaultValue: 'DeviceRequest') @required String resourceType,
+    @Default('DeviceRequest') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -211,7 +211,7 @@ abstract class DeviceUseStatement
     implements _$DeviceUseStatement {
   DeviceUseStatement._();
   factory DeviceUseStatement({
-    @JsonKey(defaultValue: 'DeviceUseStatement') @required String resourceType,
+    @Default('DeviceUseStatement') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -248,7 +248,7 @@ abstract class DeviceUseStatement
 abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
   SupplyDelivery._();
   factory SupplyDelivery({
-    @JsonKey(defaultValue: 'SupplyDelivery') @required String resourceType,
+    @Default('SupplyDelivery') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -298,7 +298,7 @@ abstract class SupplyDeliverySuppliedItem
 abstract class SupplyRequest with Resource implements _$SupplyRequest {
   SupplyRequest._();
   factory SupplyRequest({
-    @JsonKey(defaultValue: 'SupplyRequest') @required String resourceType,
+    @Default('SupplyRequest') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

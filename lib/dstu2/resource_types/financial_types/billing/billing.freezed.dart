@@ -18,7 +18,7 @@ class _$AccountTearOff {
 
 // ignore: unused_element
   _Account call(
-      {@required @JsonKey(defaultValue: 'Account') String resourceType,
+      {String resourceType = 'Account',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -84,7 +84,6 @@ const $Account = _$AccountTearOff();
 
 /// @nodoc
 mixin _$Account {
-  @JsonKey(defaultValue: 'Account')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -127,7 +126,7 @@ abstract class $AccountCopyWith<$Res> {
   factory $AccountCopyWith(Account value, $Res Function(Account) then) =
       _$AccountCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'Account') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -406,7 +405,7 @@ abstract class _$AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
       __$AccountCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'Account') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -559,7 +558,7 @@ class __$AccountCopyWithImpl<$Res> extends _$AccountCopyWithImpl<$Res>
 /// @nodoc
 class _$_Account extends _Account {
   _$_Account(
-      {@required @JsonKey(defaultValue: 'Account') this.resourceType,
+      {this.resourceType = 'Account',
       this.id,
       this.meta,
       this.implicitRules,
@@ -590,8 +589,8 @@ class _$_Account extends _Account {
   factory _$_Account.fromJson(Map<String, dynamic> json) =>
       _$_$_AccountFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'Account')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -770,7 +769,7 @@ class _$_Account extends _Account {
 abstract class _Account extends Account {
   _Account._() : super._();
   factory _Account(
-      {@required @JsonKey(defaultValue: 'Account') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -799,7 +798,6 @@ abstract class _Account extends Account {
   factory _Account.fromJson(Map<String, dynamic> json) = _$_Account.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'Account')
   String get resourceType;
   @override
   Id get id;
@@ -870,9 +868,7 @@ class _$ClaimTearOff {
 
 // ignore: unused_element
   _Claim call(
-      {@required
-      @JsonKey(defaultValue: 'Claim')
-          String resourceType,
+      {String resourceType = 'Claim',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -982,7 +978,6 @@ const $Claim = _$ClaimTearOff();
 
 /// @nodoc
 mixin _$Claim {
-  @JsonKey(defaultValue: 'Claim')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -1043,8 +1038,7 @@ abstract class $ClaimCopyWith<$Res> {
   factory $ClaimCopyWith(Claim value, $Res Function(Claim) then) =
       _$ClaimCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'Claim')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1476,8 +1470,7 @@ abstract class _$ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
       __$ClaimCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'Claim')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1720,9 +1713,7 @@ class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
 /// @nodoc
 class _$_Claim extends _Claim {
   _$_Claim(
-      {@required
-      @JsonKey(defaultValue: 'Claim')
-          this.resourceType,
+      {this.resourceType = 'Claim',
       this.id,
       this.meta,
       this.implicitRules,
@@ -1782,8 +1773,8 @@ class _$_Claim extends _Claim {
   factory _$_Claim.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'Claim')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -2031,9 +2022,7 @@ class _$_Claim extends _Claim {
 abstract class _Claim extends Claim {
   _Claim._() : super._();
   factory _Claim(
-      {@required
-      @JsonKey(defaultValue: 'Claim')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2089,7 +2078,6 @@ abstract class _Claim extends Claim {
   factory _Claim.fromJson(Map<String, dynamic> json) = _$_Claim.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'Claim')
   String get resourceType;
   @override
   Id get id;
@@ -5701,9 +5689,7 @@ class _$ClaimResponseTearOff {
 
 // ignore: unused_element
   _ClaimResponse call(
-      {@required
-      @JsonKey(defaultValue: 'ClaimResponse')
-          String resourceType,
+      {String resourceType = 'ClaimResponse',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5809,7 +5795,6 @@ const $ClaimResponse = _$ClaimResponseTearOff();
 
 /// @nodoc
 mixin _$ClaimResponse {
-  @JsonKey(defaultValue: 'ClaimResponse')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -5870,8 +5855,7 @@ abstract class $ClaimResponseCopyWith<$Res> {
           ClaimResponse value, $Res Function(ClaimResponse) then) =
       _$ClaimResponseCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'ClaimResponse')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6345,8 +6329,7 @@ abstract class _$ClaimResponseCopyWith<$Res>
       __$ClaimResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'ClaimResponse')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6603,7 +6586,7 @@ class __$ClaimResponseCopyWithImpl<$Res>
 /// @nodoc
 class _$_ClaimResponse extends _ClaimResponse {
   _$_ClaimResponse(
-      {@required @JsonKey(defaultValue: 'ClaimResponse') this.resourceType,
+      {this.resourceType = 'ClaimResponse',
       this.id,
       this.meta,
       this.implicitRules,
@@ -6650,8 +6633,8 @@ class _$_ClaimResponse extends _ClaimResponse {
   factory _$_ClaimResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimResponseFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'ClaimResponse')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -6895,9 +6878,7 @@ class _$_ClaimResponse extends _ClaimResponse {
 abstract class _ClaimResponse extends ClaimResponse {
   _ClaimResponse._() : super._();
   factory _ClaimResponse(
-      {@required
-      @JsonKey(defaultValue: 'ClaimResponse')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6951,7 +6932,6 @@ abstract class _ClaimResponse extends ClaimResponse {
       _$_ClaimResponse.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'ClaimResponse')
   String get resourceType;
   @override
   Id get id;

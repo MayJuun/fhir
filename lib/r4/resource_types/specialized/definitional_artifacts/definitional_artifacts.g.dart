@@ -2981,7 +2981,7 @@ _$_QuestionnaireEnableWhen _$_$_QuestionnaireEnableWhenFromJson(
     questionElement: json['_question'] == null
         ? null
         : Element.fromJson(json['_question'] as Map<String, dynamic>),
-    operator: _$enumDecodeNullable(
+    operator_: _$enumDecodeNullable(
         _$QuestionnaireEnableWhenOperatorEnumMap, json['operator'],
         unknownValue: QuestionnaireEnableWhenOperator.unknown),
     operatorElement: json['_operator'] == null
@@ -3057,7 +3057,7 @@ Map<String, dynamic> _$_$_QuestionnaireEnableWhenToJson(
   writeNotNull('question', instance.question);
   writeNotNull('_question', instance.questionElement?.toJson());
   writeNotNull(
-      'operator', _$QuestionnaireEnableWhenOperatorEnumMap[instance.operator]);
+      'operator', _$QuestionnaireEnableWhenOperatorEnumMap[instance.operator_]);
   writeNotNull('_operator', instance.operatorElement?.toJson());
   writeNotNull('answerBoolean', instance.answerBoolean?.toJson());
   writeNotNull('_answerBoolean', instance.answerBooleanElement?.toJson());

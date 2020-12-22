@@ -11,7 +11,7 @@ part 'workflow2.g.dart';
 abstract class ProcessRequest with Resource implements _$ProcessRequest {
   ProcessRequest._();
   factory ProcessRequest({
-    @JsonKey(defaultValue: 'ProcessRequest') @required String resourceType,
+    @Default('ProcessRequest') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -62,7 +62,7 @@ abstract class ProcessRequestItem with _$ProcessRequestItem {
 abstract class ProcessResponse with Resource implements _$ProcessResponse {
   ProcessResponse._();
   factory ProcessResponse({
-    @JsonKey(defaultValue: 'ProcessResponse') @required String resourceType,
+    @Default('ProcessResponse') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -109,7 +109,7 @@ abstract class ProcessResponseNotes with _$ProcessResponseNotes {
 abstract class SupplyRequest with Resource implements _$SupplyRequest {
   SupplyRequest._();
   factory SupplyRequest({
-    @JsonKey(defaultValue: 'SupplyRequest') @required String resourceType,
+    @Default('SupplyRequest') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -158,7 +158,7 @@ abstract class SupplyRequestWhen with _$SupplyRequestWhen {
 abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
   SupplyDelivery._();
   factory SupplyDelivery({
-    @JsonKey(defaultValue: 'SupplyDelivery') @required String resourceType,
+    @Default('SupplyDelivery') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

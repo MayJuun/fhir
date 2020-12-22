@@ -18,9 +18,7 @@ class _$ValueSetTearOff {
 
 // ignore: unused_element
   _ValueSet call(
-      {@required
-      @JsonKey(defaultValue: 'ValueSet')
-          String resourceType,
+      {String resourceType = 'ValueSet',
       Id id,
       @JsonKey(name: '_id')
           Element idElement,
@@ -137,7 +135,6 @@ const $ValueSet = _$ValueSetTearOff();
 
 /// @nodoc
 mixin _$ValueSet {
-  @JsonKey(defaultValue: 'ValueSet')
   String get resourceType;
   Id get id;
   @JsonKey(name: '_id')
@@ -206,8 +203,7 @@ abstract class $ValueSetCopyWith<$Res> {
   factory $ValueSetCopyWith(ValueSet value, $Res Function(ValueSet) then) =
       _$ValueSetCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'ValueSet')
-          String resourceType,
+      {String resourceType,
       Id id,
       @JsonKey(name: '_id')
           Element idElement,
@@ -642,8 +638,7 @@ abstract class _$ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
       __$ValueSetCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'ValueSet')
-          String resourceType,
+      {String resourceType,
       Id id,
       @JsonKey(name: '_id')
           Element idElement,
@@ -898,9 +893,7 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
 /// @nodoc
 class _$_ValueSet extends _ValueSet {
   _$_ValueSet(
-      {@required
-      @JsonKey(defaultValue: 'ValueSet')
-          this.resourceType,
+      {this.resourceType = 'ValueSet',
       this.id,
       @JsonKey(name: '_id')
           this.idElement,
@@ -966,8 +959,8 @@ class _$_ValueSet extends _ValueSet {
   factory _$_ValueSet.fromJson(Map<String, dynamic> json) =>
       _$_$_ValueSetFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'ValueSet')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -1223,9 +1216,7 @@ class _$_ValueSet extends _ValueSet {
 abstract class _ValueSet extends ValueSet {
   _ValueSet._() : super._();
   factory _ValueSet(
-      {@required
-      @JsonKey(defaultValue: 'ValueSet')
-          String resourceType,
+      {String resourceType,
       Id id,
       @JsonKey(name: '_id')
           Element idElement,
@@ -1288,7 +1279,6 @@ abstract class _ValueSet extends ValueSet {
   factory _ValueSet.fromJson(Map<String, dynamic> json) = _$_ValueSet.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'ValueSet')
   String get resourceType;
   @override
   Id get id;
@@ -2914,7 +2904,7 @@ class _$ValueSetComposeTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String> fhirComments,
-      List<FhirUri> import,
+      @JsonKey(name: 'import') List<FhirUri> import_,
       List<ValueSetComposeInclude> include,
       List<ValueSetComposeInclude> exclude}) {
     return _ValueSetCompose(
@@ -2922,7 +2912,7 @@ class _$ValueSetComposeTearOff {
       extension_: extension_,
       modifierExtension: modifierExtension,
       fhirComments: fhirComments,
-      import: import,
+      import_: import_,
       include: include,
       exclude: exclude,
     );
@@ -2946,7 +2936,8 @@ mixin _$ValueSetCompose {
   List<FhirExtension> get modifierExtension;
   @JsonKey(name: 'fhir_comments')
   List<String> get fhirComments;
-  List<FhirUri> get import;
+  @JsonKey(name: 'import')
+  List<FhirUri> get import_;
   List<ValueSetComposeInclude> get include;
   List<ValueSetComposeInclude> get exclude;
 
@@ -2964,7 +2955,7 @@ abstract class $ValueSetComposeCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String> fhirComments,
-      List<FhirUri> import,
+      @JsonKey(name: 'import') List<FhirUri> import_,
       List<ValueSetComposeInclude> include,
       List<ValueSetComposeInclude> exclude});
 }
@@ -2984,7 +2975,7 @@ class _$ValueSetComposeCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object fhirComments = freezed,
-    Object import = freezed,
+    Object import_ = freezed,
     Object include = freezed,
     Object exclude = freezed,
   }) {
@@ -2999,7 +2990,7 @@ class _$ValueSetComposeCopyWithImpl<$Res>
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
           : fhirComments as List<String>,
-      import: import == freezed ? _value.import : import as List<FhirUri>,
+      import_: import_ == freezed ? _value.import_ : import_ as List<FhirUri>,
       include: include == freezed
           ? _value.include
           : include as List<ValueSetComposeInclude>,
@@ -3022,7 +3013,7 @@ abstract class _$ValueSetComposeCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String> fhirComments,
-      List<FhirUri> import,
+      @JsonKey(name: 'import') List<FhirUri> import_,
       List<ValueSetComposeInclude> include,
       List<ValueSetComposeInclude> exclude});
 }
@@ -3044,7 +3035,7 @@ class __$ValueSetComposeCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object fhirComments = freezed,
-    Object import = freezed,
+    Object import_ = freezed,
     Object include = freezed,
     Object exclude = freezed,
   }) {
@@ -3059,7 +3050,7 @@ class __$ValueSetComposeCopyWithImpl<$Res>
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
           : fhirComments as List<String>,
-      import: import == freezed ? _value.import : import as List<FhirUri>,
+      import_: import_ == freezed ? _value.import_ : import_ as List<FhirUri>,
       include: include == freezed
           ? _value.include
           : include as List<ValueSetComposeInclude>,
@@ -3079,7 +3070,7 @@ class _$_ValueSetCompose extends _ValueSetCompose {
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @JsonKey(name: 'fhir_comments') this.fhirComments,
-      this.import,
+      @JsonKey(name: 'import') this.import_,
       this.include,
       this.exclude})
       : super._();
@@ -3098,7 +3089,8 @@ class _$_ValueSetCompose extends _ValueSetCompose {
   @JsonKey(name: 'fhir_comments')
   final List<String> fhirComments;
   @override
-  final List<FhirUri> import;
+  @JsonKey(name: 'import')
+  final List<FhirUri> import_;
   @override
   final List<ValueSetComposeInclude> include;
   @override
@@ -3106,7 +3098,7 @@ class _$_ValueSetCompose extends _ValueSetCompose {
 
   @override
   String toString() {
-    return 'ValueSetCompose(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, import: $import, include: $include, exclude: $exclude)';
+    return 'ValueSetCompose(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, import_: $import_, include: $include, exclude: $exclude)';
   }
 
   @override
@@ -3124,8 +3116,9 @@ class _$_ValueSetCompose extends _ValueSetCompose {
             (identical(other.fhirComments, fhirComments) ||
                 const DeepCollectionEquality()
                     .equals(other.fhirComments, fhirComments)) &&
-            (identical(other.import, import) ||
-                const DeepCollectionEquality().equals(other.import, import)) &&
+            (identical(other.import_, import_) ||
+                const DeepCollectionEquality()
+                    .equals(other.import_, import_)) &&
             (identical(other.include, include) ||
                 const DeepCollectionEquality()
                     .equals(other.include, include)) &&
@@ -3140,7 +3133,7 @@ class _$_ValueSetCompose extends _ValueSetCompose {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(fhirComments) ^
-      const DeepCollectionEquality().hash(import) ^
+      const DeepCollectionEquality().hash(import_) ^
       const DeepCollectionEquality().hash(include) ^
       const DeepCollectionEquality().hash(exclude);
 
@@ -3161,7 +3154,7 @@ abstract class _ValueSetCompose extends ValueSetCompose {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String> fhirComments,
-      List<FhirUri> import,
+      @JsonKey(name: 'import') List<FhirUri> import_,
       List<ValueSetComposeInclude> include,
       List<ValueSetComposeInclude> exclude}) = _$_ValueSetCompose;
 
@@ -3179,7 +3172,8 @@ abstract class _ValueSetCompose extends ValueSetCompose {
   @JsonKey(name: 'fhir_comments')
   List<String> get fhirComments;
   @override
-  List<FhirUri> get import;
+  @JsonKey(name: 'import')
+  List<FhirUri> get import_;
   @override
   List<ValueSetComposeInclude> get include;
   @override
@@ -6115,9 +6109,7 @@ class _$ConceptMapTearOff {
 
 // ignore: unused_element
   _ConceptMap call(
-      {@required
-      @JsonKey(defaultValue: 'ConceptMap')
-          String resourceType,
+      {String resourceType = 'ConceptMap',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6229,7 +6221,6 @@ const $ConceptMap = _$ConceptMapTearOff();
 
 /// @nodoc
 mixin _$ConceptMap {
-  @JsonKey(defaultValue: 'ConceptMap')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -6296,8 +6287,7 @@ abstract class $ConceptMapCopyWith<$Res> {
           ConceptMap value, $Res Function(ConceptMap) then) =
       _$ConceptMapCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'ConceptMap')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6704,8 +6694,7 @@ abstract class _$ConceptMapCopyWith<$Res> implements $ConceptMapCopyWith<$Res> {
       __$ConceptMapCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'ConceptMap')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6950,9 +6939,7 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
 /// @nodoc
 class _$_ConceptMap extends _ConceptMap {
   _$_ConceptMap(
-      {@required
-      @JsonKey(defaultValue: 'ConceptMap')
-          this.resourceType,
+      {this.resourceType = 'ConceptMap',
       this.id,
       this.meta,
       this.implicitRules,
@@ -7015,8 +7002,8 @@ class _$_ConceptMap extends _ConceptMap {
   factory _$_ConceptMap.fromJson(Map<String, dynamic> json) =>
       _$_$_ConceptMapFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'ConceptMap')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -7263,9 +7250,7 @@ class _$_ConceptMap extends _ConceptMap {
 abstract class _ConceptMap extends ConceptMap {
   _ConceptMap._() : super._();
   factory _ConceptMap(
-      {@required
-      @JsonKey(defaultValue: 'ConceptMap')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7326,7 +7311,6 @@ abstract class _ConceptMap extends ConceptMap {
       _$_ConceptMap.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'ConceptMap')
   String get resourceType;
   @override
   Id get id;
@@ -8722,9 +8706,7 @@ class _$NamingSystemTearOff {
 
 // ignore: unused_element
   _NamingSystem call(
-      {@required
-      @JsonKey(defaultValue: 'NamingSystem')
-          String resourceType,
+      {String resourceType = 'NamingSystem',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8825,7 +8807,6 @@ const $NamingSystem = _$NamingSystemTearOff();
 
 /// @nodoc
 mixin _$NamingSystem {
-  @JsonKey(defaultValue: 'NamingSystem')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -8885,8 +8866,7 @@ abstract class $NamingSystemCopyWith<$Res> {
           NamingSystem value, $Res Function(NamingSystem) then) =
       _$NamingSystemCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'NamingSystem')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9214,8 +9194,7 @@ abstract class _$NamingSystemCopyWith<$Res>
       __$NamingSystemCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'NamingSystem')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9416,9 +9395,7 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
 /// @nodoc
 class _$_NamingSystem extends _NamingSystem {
   _$_NamingSystem(
-      {@required
-      @JsonKey(defaultValue: 'NamingSystem')
-          this.resourceType,
+      {this.resourceType = 'NamingSystem',
       this.id,
       this.meta,
       this.implicitRules,
@@ -9482,8 +9459,8 @@ class _$_NamingSystem extends _NamingSystem {
   factory _$_NamingSystem.fromJson(Map<String, dynamic> json) =>
       _$_$_NamingSystemFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'NamingSystem')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -9699,9 +9676,7 @@ class _$_NamingSystem extends _NamingSystem {
 abstract class _NamingSystem extends NamingSystem {
   _NamingSystem._() : super._();
   factory _NamingSystem(
-      {@required
-      @JsonKey(defaultValue: 'NamingSystem')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9759,7 +9734,6 @@ abstract class _NamingSystem extends NamingSystem {
       _$_NamingSystem.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'NamingSystem')
   String get resourceType;
   @override
   Id get id;

@@ -44,7 +44,7 @@ enum SearchMode {
 }
 enum RequestMethod {
   @JsonValue('GET')
-  get,
+  get_,
   @JsonValue('POST')
   post,
   @JsonValue('PUT')

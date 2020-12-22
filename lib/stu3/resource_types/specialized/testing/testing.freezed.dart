@@ -18,7 +18,7 @@ class _$TestReportTearOff {
 
 // ignore: unused_element
   _TestReport call(
-      {@required @JsonKey(defaultValue: 'TestReport') String resourceType,
+      {String resourceType = 'TestReport',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -92,7 +92,6 @@ const $TestReport = _$TestReportTearOff();
 
 /// @nodoc
 mixin _$TestReport {
-  @JsonKey(defaultValue: 'TestReport')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -142,7 +141,7 @@ abstract class $TestReportCopyWith<$Res> {
           TestReport value, $Res Function(TestReport) then) =
       _$TestReportCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'TestReport') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -439,7 +438,7 @@ abstract class _$TestReportCopyWith<$Res> implements $TestReportCopyWith<$Res> {
       __$TestReportCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'TestReport') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -610,7 +609,7 @@ class __$TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
 /// @nodoc
 class _$_TestReport extends _TestReport {
   _$_TestReport(
-      {@required @JsonKey(defaultValue: 'TestReport') this.resourceType,
+      {this.resourceType = 'TestReport',
       this.id,
       this.meta,
       this.implicitRules,
@@ -646,8 +645,8 @@ class _$_TestReport extends _TestReport {
   factory _$_TestReport.fromJson(Map<String, dynamic> json) =>
       _$_$_TestReportFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'TestReport')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -844,7 +843,7 @@ class _$_TestReport extends _TestReport {
 abstract class _TestReport extends TestReport {
   _TestReport._() : super._();
   factory _TestReport(
-      {@required @JsonKey(defaultValue: 'TestReport') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -878,7 +877,6 @@ abstract class _TestReport extends TestReport {
       _$_TestReport.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'TestReport')
   String get resourceType;
   @override
   Id get id;
@@ -3025,7 +3023,7 @@ class _$TestScriptTearOff {
 
 // ignore: unused_element
   _TestScript call(
-      {@required @JsonKey(defaultValue: 'TestScript') String resourceType,
+      {String resourceType = 'TestScript',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3137,7 +3135,6 @@ const $TestScript = _$TestScriptTearOff();
 
 /// @nodoc
 mixin _$TestScript {
-  @JsonKey(defaultValue: 'TestScript')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -3211,7 +3208,7 @@ abstract class $TestScriptCopyWith<$Res> {
           TestScript value, $Res Function(TestScript) then) =
       _$TestScriptCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'TestScript') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3644,7 +3641,7 @@ abstract class _$TestScriptCopyWith<$Res> implements $TestScriptCopyWith<$Res> {
       __$TestScriptCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'TestScript') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3906,7 +3903,7 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
 /// @nodoc
 class _$_TestScript extends _TestScript {
   _$_TestScript(
-      {@required @JsonKey(defaultValue: 'TestScript') this.resourceType,
+      {this.resourceType = 'TestScript',
       this.id,
       this.meta,
       this.implicitRules,
@@ -3960,8 +3957,8 @@ class _$_TestScript extends _TestScript {
   factory _$_TestScript.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'TestScript')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -4239,7 +4236,7 @@ class _$_TestScript extends _TestScript {
 abstract class _TestScript extends TestScript {
   _TestScript._() : super._();
   factory _TestScript(
-      {@required @JsonKey(defaultValue: 'TestScript') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4292,7 +4289,6 @@ abstract class _TestScript extends TestScript {
       _$_TestScript.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'TestScript')
   String get resourceType;
   @override
   Id get id;
@@ -9356,7 +9352,8 @@ class _$TestScriptAssertTearOff {
       Boolean navigationLinks,
       @JsonKey(name: '_navigationLinks')
           Element navigationLinksElement,
-      TestScriptAssertOperator operator,
+      @JsonKey(name: 'operator')
+          TestScriptAssertOperator operator_,
       @JsonKey(name: '_operator')
           Element operatorElement,
       String path,
@@ -9414,7 +9411,7 @@ class _$TestScriptAssertTearOff {
       minimumIdElement: minimumIdElement,
       navigationLinks: navigationLinks,
       navigationLinksElement: navigationLinksElement,
-      operator: operator,
+      operator_: operator_,
       operatorElement: operatorElement,
       path: path,
       pathElement: pathElement,
@@ -9486,7 +9483,8 @@ mixin _$TestScriptAssert {
   Boolean get navigationLinks;
   @JsonKey(name: '_navigationLinks')
   Element get navigationLinksElement;
-  TestScriptAssertOperator get operator;
+  @JsonKey(name: 'operator')
+  TestScriptAssertOperator get operator_;
   @JsonKey(name: '_operator')
   Element get operatorElement;
   String get path;
@@ -9565,7 +9563,8 @@ abstract class $TestScriptAssertCopyWith<$Res> {
       Boolean navigationLinks,
       @JsonKey(name: '_navigationLinks')
           Element navigationLinksElement,
-      TestScriptAssertOperator operator,
+      @JsonKey(name: 'operator')
+          TestScriptAssertOperator operator_,
       @JsonKey(name: '_operator')
           Element operatorElement,
       String path,
@@ -9660,7 +9659,7 @@ class _$TestScriptAssertCopyWithImpl<$Res>
     Object minimumIdElement = freezed,
     Object navigationLinks = freezed,
     Object navigationLinksElement = freezed,
-    Object operator = freezed,
+    Object operator_ = freezed,
     Object operatorElement = freezed,
     Object path = freezed,
     Object pathElement = freezed,
@@ -9746,9 +9745,9 @@ class _$TestScriptAssertCopyWithImpl<$Res>
       navigationLinksElement: navigationLinksElement == freezed
           ? _value.navigationLinksElement
           : navigationLinksElement as Element,
-      operator: operator == freezed
-          ? _value.operator
-          : operator as TestScriptAssertOperator,
+      operator_: operator_ == freezed
+          ? _value.operator_
+          : operator_ as TestScriptAssertOperator,
       operatorElement: operatorElement == freezed
           ? _value.operatorElement
           : operatorElement as Element,
@@ -10090,7 +10089,8 @@ abstract class _$TestScriptAssertCopyWith<$Res>
       Boolean navigationLinks,
       @JsonKey(name: '_navigationLinks')
           Element navigationLinksElement,
-      TestScriptAssertOperator operator,
+      @JsonKey(name: 'operator')
+          TestScriptAssertOperator operator_,
       @JsonKey(name: '_operator')
           Element operatorElement,
       String path,
@@ -10211,7 +10211,7 @@ class __$TestScriptAssertCopyWithImpl<$Res>
     Object minimumIdElement = freezed,
     Object navigationLinks = freezed,
     Object navigationLinksElement = freezed,
-    Object operator = freezed,
+    Object operator_ = freezed,
     Object operatorElement = freezed,
     Object path = freezed,
     Object pathElement = freezed,
@@ -10297,9 +10297,9 @@ class __$TestScriptAssertCopyWithImpl<$Res>
       navigationLinksElement: navigationLinksElement == freezed
           ? _value.navigationLinksElement
           : navigationLinksElement as Element,
-      operator: operator == freezed
-          ? _value.operator
-          : operator as TestScriptAssertOperator,
+      operator_: operator_ == freezed
+          ? _value.operator_
+          : operator_ as TestScriptAssertOperator,
       operatorElement: operatorElement == freezed
           ? _value.operatorElement
           : operatorElement as Element,
@@ -10397,7 +10397,8 @@ class _$_TestScriptAssert extends _TestScriptAssert {
       this.navigationLinks,
       @JsonKey(name: '_navigationLinks')
           this.navigationLinksElement,
-      this.operator,
+      @JsonKey(name: 'operator')
+          this.operator_,
       @JsonKey(name: '_operator')
           this.operatorElement,
       this.path,
@@ -10493,7 +10494,8 @@ class _$_TestScriptAssert extends _TestScriptAssert {
   @JsonKey(name: '_navigationLinks')
   final Element navigationLinksElement;
   @override
-  final TestScriptAssertOperator operator;
+  @JsonKey(name: 'operator')
+  final TestScriptAssertOperator operator_;
   @override
   @JsonKey(name: '_operator')
   final Element operatorElement;
@@ -10554,7 +10556,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
 
   @override
   String toString() {
-    return 'TestScriptAssert(label: $label, labelElement: $labelElement, description: $description, descriptionElement: $descriptionElement, direction: $direction, directionElement: $directionElement, compareToSourceId: $compareToSourceId, compareToSourceIdElement: $compareToSourceIdElement, compareToSourceExpression: $compareToSourceExpression, compareToSourceExpressionElement: $compareToSourceExpressionElement, compareToSourcePath: $compareToSourcePath, compareToSourcePathElement: $compareToSourcePathElement, contentType: $contentType, contentTypeElement: $contentTypeElement, expression: $expression, expressionElement: $expressionElement, headerField: $headerField, headerFieldElement: $headerFieldElement, minimumId: $minimumId, minimumIdElement: $minimumIdElement, navigationLinks: $navigationLinks, navigationLinksElement: $navigationLinksElement, operator: $operator, operatorElement: $operatorElement, path: $path, pathElement: $pathElement, requestMethod: $requestMethod, requestMethodElement: $requestMethodElement, requestURL: $requestURL, requestURLElement: $requestURLElement, resource: $resource, resourceElement: $resourceElement, response: $response, responseElement: $responseElement, responseCode: $responseCode, responseCodeElement: $responseCodeElement, rule: $rule, ruleset: $ruleset, sourceId: $sourceId, sourceIdElement: $sourceIdElement, validateProfileId: $validateProfileId, validateProfileIdElement: $validateProfileIdElement, value: $value, valueElement: $valueElement, warningOnly: $warningOnly, warningOnlyElement: $warningOnlyElement)';
+    return 'TestScriptAssert(label: $label, labelElement: $labelElement, description: $description, descriptionElement: $descriptionElement, direction: $direction, directionElement: $directionElement, compareToSourceId: $compareToSourceId, compareToSourceIdElement: $compareToSourceIdElement, compareToSourceExpression: $compareToSourceExpression, compareToSourceExpressionElement: $compareToSourceExpressionElement, compareToSourcePath: $compareToSourcePath, compareToSourcePathElement: $compareToSourcePathElement, contentType: $contentType, contentTypeElement: $contentTypeElement, expression: $expression, expressionElement: $expressionElement, headerField: $headerField, headerFieldElement: $headerFieldElement, minimumId: $minimumId, minimumIdElement: $minimumIdElement, navigationLinks: $navigationLinks, navigationLinksElement: $navigationLinksElement, operator_: $operator_, operatorElement: $operatorElement, path: $path, pathElement: $pathElement, requestMethod: $requestMethod, requestMethodElement: $requestMethodElement, requestURL: $requestURL, requestURLElement: $requestURLElement, resource: $resource, resourceElement: $resourceElement, response: $response, responseElement: $responseElement, responseCode: $responseCode, responseCodeElement: $responseCodeElement, rule: $rule, ruleset: $ruleset, sourceId: $sourceId, sourceIdElement: $sourceIdElement, validateProfileId: $validateProfileId, validateProfileIdElement: $validateProfileIdElement, value: $value, valueElement: $valueElement, warningOnly: $warningOnly, warningOnlyElement: $warningOnlyElement)';
   }
 
   @override
@@ -10614,7 +10616,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
             (identical(other.minimumIdElement, minimumIdElement) || const DeepCollectionEquality().equals(other.minimumIdElement, minimumIdElement)) &&
             (identical(other.navigationLinks, navigationLinks) || const DeepCollectionEquality().equals(other.navigationLinks, navigationLinks)) &&
             (identical(other.navigationLinksElement, navigationLinksElement) || const DeepCollectionEquality().equals(other.navigationLinksElement, navigationLinksElement)) &&
-            (identical(other.operator, operator) || const DeepCollectionEquality().equals(other.operator, operator)) &&
+            (identical(other.operator_, operator_) || const DeepCollectionEquality().equals(other.operator_, operator_)) &&
             (identical(other.operatorElement, operatorElement) || const DeepCollectionEquality().equals(other.operatorElement, operatorElement)) &&
             (identical(other.path, path) || const DeepCollectionEquality().equals(other.path, path)) &&
             (identical(other.pathElement, pathElement) || const DeepCollectionEquality().equals(other.pathElement, pathElement)) &&
@@ -10665,7 +10667,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
       const DeepCollectionEquality().hash(minimumIdElement) ^
       const DeepCollectionEquality().hash(navigationLinks) ^
       const DeepCollectionEquality().hash(navigationLinksElement) ^
-      const DeepCollectionEquality().hash(operator) ^
+      const DeepCollectionEquality().hash(operator_) ^
       const DeepCollectionEquality().hash(operatorElement) ^
       const DeepCollectionEquality().hash(path) ^
       const DeepCollectionEquality().hash(pathElement) ^
@@ -10736,7 +10738,8 @@ abstract class _TestScriptAssert extends TestScriptAssert {
       Boolean navigationLinks,
       @JsonKey(name: '_navigationLinks')
           Element navigationLinksElement,
-      TestScriptAssertOperator operator,
+      @JsonKey(name: 'operator')
+          TestScriptAssertOperator operator_,
       @JsonKey(name: '_operator')
           Element operatorElement,
       String path,
@@ -10831,7 +10834,8 @@ abstract class _TestScriptAssert extends TestScriptAssert {
   @JsonKey(name: '_navigationLinks')
   Element get navigationLinksElement;
   @override
-  TestScriptAssertOperator get operator;
+  @JsonKey(name: 'operator')
+  TestScriptAssertOperator get operator_;
   @override
   @JsonKey(name: '_operator')
   Element get operatorElement;

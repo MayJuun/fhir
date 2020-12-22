@@ -18,7 +18,7 @@ class _$CompositionTearOff {
 
 // ignore: unused_element
   _Composition call(
-      {@required @JsonKey(defaultValue: 'Composition') String resourceType,
+      {String resourceType = 'Composition',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -94,7 +94,6 @@ const $Composition = _$CompositionTearOff();
 
 /// @nodoc
 mixin _$Composition {
-  @JsonKey(defaultValue: 'Composition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -144,7 +143,7 @@ abstract class $CompositionCopyWith<$Res> {
           Composition value, $Res Function(Composition) then) =
       _$CompositionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'Composition') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -446,7 +445,7 @@ abstract class _$CompositionCopyWith<$Res>
       __$CompositionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'Composition') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -621,7 +620,7 @@ class __$CompositionCopyWithImpl<$Res> extends _$CompositionCopyWithImpl<$Res>
 /// @nodoc
 class _$_Composition extends _Composition {
   _$_Composition(
-      {@required @JsonKey(defaultValue: 'Composition') this.resourceType,
+      {this.resourceType = 'Composition',
       this.id,
       this.meta,
       this.implicitRules,
@@ -660,8 +659,8 @@ class _$_Composition extends _Composition {
   factory _$_Composition.fromJson(Map<String, dynamic> json) =>
       _$_$_CompositionFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'Composition')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -860,7 +859,7 @@ class _$_Composition extends _Composition {
 abstract class _Composition extends Composition {
   _Composition._() : super._();
   factory _Composition(
-      {@required @JsonKey(defaultValue: 'Composition') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -895,7 +894,6 @@ abstract class _Composition extends Composition {
       _$_Composition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'Composition')
   String get resourceType;
   @override
   Id get id;
@@ -2117,7 +2115,7 @@ class _$DocumentManifestTearOff {
 
 // ignore: unused_element
   _DocumentManifest call(
-      {@required @JsonKey(defaultValue: 'DocumentManifest') String resourceType,
+      {String resourceType = 'DocumentManifest',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2187,7 +2185,6 @@ const $DocumentManifest = _$DocumentManifestTearOff();
 
 /// @nodoc
 mixin _$DocumentManifest {
-  @JsonKey(defaultValue: 'DocumentManifest')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -2233,7 +2230,7 @@ abstract class $DocumentManifestCopyWith<$Res> {
           DocumentManifest value, $Res Function(DocumentManifest) then) =
       _$DocumentManifestCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'DocumentManifest') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2496,7 +2493,7 @@ abstract class _$DocumentManifestCopyWith<$Res>
       __$DocumentManifestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'DocumentManifest') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2659,7 +2656,7 @@ class __$DocumentManifestCopyWithImpl<$Res>
 /// @nodoc
 class _$_DocumentManifest extends _DocumentManifest {
   _$_DocumentManifest(
-      {@required @JsonKey(defaultValue: 'DocumentManifest') this.resourceType,
+      {this.resourceType = 'DocumentManifest',
       this.id,
       this.meta,
       this.implicitRules,
@@ -2693,8 +2690,8 @@ class _$_DocumentManifest extends _DocumentManifest {
   factory _$_DocumentManifest.fromJson(Map<String, dynamic> json) =>
       _$_$_DocumentManifestFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'DocumentManifest')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -2881,7 +2878,7 @@ class _$_DocumentManifest extends _DocumentManifest {
 abstract class _DocumentManifest extends DocumentManifest {
   _DocumentManifest._() : super._();
   factory _DocumentManifest(
-      {@required @JsonKey(defaultValue: 'DocumentManifest') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2913,7 +2910,6 @@ abstract class _DocumentManifest extends DocumentManifest {
       _$_DocumentManifest.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'DocumentManifest')
   String get resourceType;
   @override
   Id get id;
@@ -3379,51 +3375,38 @@ class _$DocumentReferenceTearOff {
 
 // ignore: unused_element
   _DocumentReference call(
-      {@required
-      @JsonKey(defaultValue: 'DocumentReference')
-          String resourceType,
+      {String resourceType = 'DocumentReference',
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier masterIdentifier,
       List<Identifier> identifier,
       DocumentReferenceStatus status,
-      @JsonKey(name: '_status')
-          Element statusElement,
+      @JsonKey(name: '_status') Element statusElement,
       String docStatus,
-      @JsonKey(name: '_docStatus')
-          Element docStatusElement,
-      @required
-          CodeableConcept type,
-      @JsonKey(name: 'class')
-          CodeableConcept class_,
+      @JsonKey(name: '_docStatus') Element docStatusElement,
+      @required CodeableConcept type,
+      @JsonKey(name: 'class') CodeableConcept class_,
       Reference subject,
       String created,
-      @JsonKey(name: '_created')
-          Element createdElement,
+      @JsonKey(name: '_created') Element createdElement,
       String indexed,
-      @JsonKey(name: '_indexed')
-          Element indexedElement,
+      @JsonKey(name: '_indexed') Element indexedElement,
       List<Reference> author,
       Reference authenticator,
       Reference custodian,
       List<DocumentReferenceRelatesTo> relatesTo,
       String description,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
+      @JsonKey(name: '_description') Element descriptionElement,
       List<CodeableConcept> securityLabel,
-      @required
-          List<DocumentReferenceContent> content,
+      @required List<DocumentReferenceContent> content,
       DocumentReferenceContext context}) {
     return _DocumentReference(
       resourceType: resourceType,
@@ -3474,7 +3457,6 @@ const $DocumentReference = _$DocumentReferenceTearOff();
 
 /// @nodoc
 mixin _$DocumentReference {
-  @JsonKey(defaultValue: 'DocumentReference')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -3528,7 +3510,7 @@ abstract class $DocumentReferenceCopyWith<$Res> {
           DocumentReference value, $Res Function(DocumentReference) then) =
       _$DocumentReferenceCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'DocumentReference') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3871,7 +3853,7 @@ abstract class _$DocumentReferenceCopyWith<$Res>
       __$DocumentReferenceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'DocumentReference') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4069,7 +4051,7 @@ class __$DocumentReferenceCopyWithImpl<$Res>
 /// @nodoc
 class _$_DocumentReference extends _DocumentReference {
   _$_DocumentReference(
-      {@required @JsonKey(defaultValue: 'DocumentReference') this.resourceType,
+      {this.resourceType = 'DocumentReference',
       this.id,
       this.meta,
       this.implicitRules,
@@ -4110,8 +4092,8 @@ class _$_DocumentReference extends _DocumentReference {
   factory _$_DocumentReference.fromJson(Map<String, dynamic> json) =>
       _$_$_DocumentReferenceFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'DocumentReference')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -4324,58 +4306,44 @@ class _$_DocumentReference extends _DocumentReference {
 abstract class _DocumentReference extends DocumentReference {
   _DocumentReference._() : super._();
   factory _DocumentReference(
-      {@required
-      @JsonKey(defaultValue: 'DocumentReference')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier masterIdentifier,
       List<Identifier> identifier,
       DocumentReferenceStatus status,
-      @JsonKey(name: '_status')
-          Element statusElement,
+      @JsonKey(name: '_status') Element statusElement,
       String docStatus,
-      @JsonKey(name: '_docStatus')
-          Element docStatusElement,
-      @required
-          CodeableConcept type,
-      @JsonKey(name: 'class')
-          CodeableConcept class_,
+      @JsonKey(name: '_docStatus') Element docStatusElement,
+      @required CodeableConcept type,
+      @JsonKey(name: 'class') CodeableConcept class_,
       Reference subject,
       String created,
-      @JsonKey(name: '_created')
-          Element createdElement,
+      @JsonKey(name: '_created') Element createdElement,
       String indexed,
-      @JsonKey(name: '_indexed')
-          Element indexedElement,
+      @JsonKey(name: '_indexed') Element indexedElement,
       List<Reference> author,
       Reference authenticator,
       Reference custodian,
       List<DocumentReferenceRelatesTo> relatesTo,
       String description,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
+      @JsonKey(name: '_description') Element descriptionElement,
       List<CodeableConcept> securityLabel,
-      @required
-          List<DocumentReferenceContent> content,
+      @required List<DocumentReferenceContent> content,
       DocumentReferenceContext context}) = _$_DocumentReference;
 
   factory _DocumentReference.fromJson(Map<String, dynamic> json) =
       _$_DocumentReference.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'DocumentReference')
   String get resourceType;
   @override
   Id get id;

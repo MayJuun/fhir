@@ -2878,7 +2878,7 @@ _$_OperationDefinitionParameter _$_$_OperationDefinitionParameterFromJson(
         ? null
         : OperationDefinitionBinding.fromJson(
             json['binding'] as Map<String, dynamic>),
-    part: (json['part'] as List)
+    part_: (json['part'] as List)
         ?.map((e) => e == null
             ? null
             : OperationDefinitionParameter.fromJson(e as Map<String, dynamic>))
@@ -2913,7 +2913,7 @@ Map<String, dynamic> _$_$_OperationDefinitionParameterToJson(
   writeNotNull('_searchType', instance.searchTypeElement?.toJson());
   writeNotNull('profile', instance.profile?.toJson());
   writeNotNull('binding', instance.binding?.toJson());
-  writeNotNull('part', instance.part?.map((e) => e?.toJson())?.toList());
+  writeNotNull('part', instance.part_?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
@@ -3820,7 +3820,7 @@ _$_StructureMap _$_$_StructureMapFromJson(Map<String, dynamic> json) {
             ? null
             : StructureMapStructure.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    import: (json['import'] as List)?.map((e) => e as String)?.toList(),
+    import_: (json['import'] as List)?.map((e) => e as String)?.toList(),
     importElement: (json['_import'] as List)
         ?.map((e) =>
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
@@ -3887,7 +3887,7 @@ Map<String, dynamic> _$_$_StructureMapToJson(_$_StructureMap instance) {
   writeNotNull('_copyright', instance.copyrightElement?.toJson());
   writeNotNull(
       'structure', instance.structure?.map((e) => e?.toJson())?.toList());
-  writeNotNull('import', instance.import);
+  writeNotNull('import', instance.import_);
   writeNotNull(
       '_import', instance.importElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('group', instance.group?.map((e) => e?.toJson())?.toList());

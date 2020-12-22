@@ -1800,7 +1800,7 @@ _$_MedicinalProductDefinitionNamePart
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    part: json['part'] as String,
+    part_: json['part'] as String,
     partElement: json['_part'] == null
         ? null
         : Element.fromJson(json['_part'] as Map<String, dynamic>),
@@ -1825,7 +1825,7 @@ Map<String, dynamic> _$_$_MedicinalProductDefinitionNamePartToJson(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('part', instance.part);
+  writeNotNull('part', instance.part_);
   writeNotNull('_part', instance.partElement?.toJson());
   writeNotNull('type', instance.type?.toJson());
   return val;
@@ -5243,7 +5243,7 @@ _$_SubstanceSourceMaterialPartDescription
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    part: json['part'] == null
+    part_: json['part'] == null
         ? null
         : CodeableConcept.fromJson(json['part'] as Map<String, dynamic>),
     partLocation: json['partLocation'] == null
@@ -5268,7 +5268,7 @@ Map<String, dynamic> _$_$_SubstanceSourceMaterialPartDescriptionToJson(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('part', instance.part?.toJson());
+  writeNotNull('part', instance.part_?.toJson());
   writeNotNull('partLocation', instance.partLocation?.toJson());
   return val;
 }

@@ -18,9 +18,7 @@ class _$MeasureTearOff {
 
 // ignore: unused_element
   _Measure call(
-      {@required
-      @JsonKey(defaultValue: 'Measure')
-          String resourceType,
+      {String resourceType = 'Measure',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -113,7 +111,8 @@ class _$MeasureTearOff {
       String guidance,
       @JsonKey(name: '_guidance')
           Element guidanceElement,
-      String set,
+      @JsonKey(name: 'set')
+          String set_,
       @JsonKey(name: '_set')
           Element setElement,
       List<MeasureGroup> group,
@@ -187,7 +186,7 @@ class _$MeasureTearOff {
       definitionElement: definitionElement,
       guidance: guidance,
       guidanceElement: guidanceElement,
-      set: set,
+      set_: set_,
       setElement: setElement,
       group: group,
       supplementalData: supplementalData,
@@ -206,7 +205,6 @@ const $Measure = _$MeasureTearOff();
 
 /// @nodoc
 mixin _$Measure {
-  @JsonKey(defaultValue: 'Measure')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -300,7 +298,8 @@ mixin _$Measure {
   String get guidance;
   @JsonKey(name: '_guidance')
   Element get guidanceElement;
-  String get set;
+  @JsonKey(name: 'set')
+  String get set_;
   @JsonKey(name: '_set')
   Element get setElement;
   List<MeasureGroup> get group;
@@ -315,8 +314,7 @@ abstract class $MeasureCopyWith<$Res> {
   factory $MeasureCopyWith(Measure value, $Res Function(Measure) then) =
       _$MeasureCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'Measure')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -409,7 +407,8 @@ abstract class $MeasureCopyWith<$Res> {
       String guidance,
       @JsonKey(name: '_guidance')
           Element guidanceElement,
-      String set,
+      @JsonKey(name: 'set')
+          String set_,
       @JsonKey(name: '_set')
           Element setElement,
       List<MeasureGroup> group,
@@ -523,7 +522,7 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
     Object definitionElement = freezed,
     Object guidance = freezed,
     Object guidanceElement = freezed,
-    Object set = freezed,
+    Object set_ = freezed,
     Object setElement = freezed,
     Object group = freezed,
     Object supplementalData = freezed,
@@ -685,7 +684,7 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
       guidanceElement: guidanceElement == freezed
           ? _value.guidanceElement
           : guidanceElement as Element,
-      set: set == freezed ? _value.set : set as String,
+      set_: set_ == freezed ? _value.set_ : set_ as String,
       setElement:
           setElement == freezed ? _value.setElement : setElement as Element,
       group: group == freezed ? _value.group : group as List<MeasureGroup>,
@@ -994,8 +993,7 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       __$MeasureCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'Measure')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1088,7 +1086,8 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       String guidance,
       @JsonKey(name: '_guidance')
           Element guidanceElement,
-      String set,
+      @JsonKey(name: 'set')
+          String set_,
       @JsonKey(name: '_set')
           Element setElement,
       List<MeasureGroup> group,
@@ -1232,7 +1231,7 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
     Object definitionElement = freezed,
     Object guidance = freezed,
     Object guidanceElement = freezed,
-    Object set = freezed,
+    Object set_ = freezed,
     Object setElement = freezed,
     Object group = freezed,
     Object supplementalData = freezed,
@@ -1394,7 +1393,7 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
       guidanceElement: guidanceElement == freezed
           ? _value.guidanceElement
           : guidanceElement as Element,
-      set: set == freezed ? _value.set : set as String,
+      set_: set_ == freezed ? _value.set_ : set_ as String,
       setElement:
           setElement == freezed ? _value.setElement : setElement as Element,
       group: group == freezed ? _value.group : group as List<MeasureGroup>,
@@ -1410,9 +1409,7 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
 /// @nodoc
 class _$_Measure extends _Measure {
   _$_Measure(
-      {@required
-      @JsonKey(defaultValue: 'Measure')
-          this.resourceType,
+      {this.resourceType = 'Measure',
       this.id,
       this.meta,
       this.implicitRules,
@@ -1505,7 +1502,8 @@ class _$_Measure extends _Measure {
       this.guidance,
       @JsonKey(name: '_guidance')
           this.guidanceElement,
-      this.set,
+      @JsonKey(name: 'set')
+          this.set_,
       @JsonKey(name: '_set')
           this.setElement,
       this.group,
@@ -1516,8 +1514,8 @@ class _$_Measure extends _Measure {
   factory _$_Measure.fromJson(Map<String, dynamic> json) =>
       _$_$_MeasureFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'Measure')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -1678,7 +1676,8 @@ class _$_Measure extends _Measure {
   @JsonKey(name: '_guidance')
   final Element guidanceElement;
   @override
-  final String set;
+  @JsonKey(name: 'set')
+  final String set_;
   @override
   @JsonKey(name: '_set')
   final Element setElement;
@@ -1689,7 +1688,7 @@ class _$_Measure extends _Measure {
 
   @override
   String toString() {
-    return 'Measure(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, description: $description, descriptionElement: $descriptionElement, purpose: $purpose, purposeElement: $purposeElement, usage: $usage, usageElement: $usageElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, useContext: $useContext, jurisdiction: $jurisdiction, topic: $topic, contributor: $contributor, contact: $contact, copyright: $copyright, copyrightElement: $copyrightElement, relatedArtifact: $relatedArtifact, library_: $library_, disclaimer: $disclaimer, disclaimerElement: $disclaimerElement, scoring: $scoring, compositeScoring: $compositeScoring, type: $type, riskAdjustment: $riskAdjustment, riskAdjustmentElement: $riskAdjustmentElement, rateAggregation: $rateAggregation, rateAggregationElement: $rateAggregationElement, rationale: $rationale, rationaleElement: $rationaleElement, clinicalRecommendationStatement: $clinicalRecommendationStatement, clinicalRecommendationStatementElement: $clinicalRecommendationStatementElement, improvementNotation: $improvementNotation, improvementNotationElement: $improvementNotationElement, definition: $definition, definitionElement: $definitionElement, guidance: $guidance, guidanceElement: $guidanceElement, set: $set, setElement: $setElement, group: $group, supplementalData: $supplementalData)';
+    return 'Measure(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, description: $description, descriptionElement: $descriptionElement, purpose: $purpose, purposeElement: $purposeElement, usage: $usage, usageElement: $usageElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, useContext: $useContext, jurisdiction: $jurisdiction, topic: $topic, contributor: $contributor, contact: $contact, copyright: $copyright, copyrightElement: $copyrightElement, relatedArtifact: $relatedArtifact, library_: $library_, disclaimer: $disclaimer, disclaimerElement: $disclaimerElement, scoring: $scoring, compositeScoring: $compositeScoring, type: $type, riskAdjustment: $riskAdjustment, riskAdjustmentElement: $riskAdjustmentElement, rateAggregation: $rateAggregation, rateAggregationElement: $rateAggregationElement, rationale: $rationale, rationaleElement: $rationaleElement, clinicalRecommendationStatement: $clinicalRecommendationStatement, clinicalRecommendationStatementElement: $clinicalRecommendationStatementElement, improvementNotation: $improvementNotation, improvementNotationElement: $improvementNotationElement, definition: $definition, definitionElement: $definitionElement, guidance: $guidance, guidanceElement: $guidanceElement, set_: $set_, setElement: $setElement, group: $group, supplementalData: $supplementalData)';
   }
 
   @override
@@ -1806,7 +1805,7 @@ class _$_Measure extends _Measure {
             (identical(other.definitionElement, definitionElement) || const DeepCollectionEquality().equals(other.definitionElement, definitionElement)) &&
             (identical(other.guidance, guidance) || const DeepCollectionEquality().equals(other.guidance, guidance)) &&
             (identical(other.guidanceElement, guidanceElement) || const DeepCollectionEquality().equals(other.guidanceElement, guidanceElement)) &&
-            (identical(other.set, set) || const DeepCollectionEquality().equals(other.set, set)) &&
+            (identical(other.set_, set_) || const DeepCollectionEquality().equals(other.set_, set_)) &&
             (identical(other.setElement, setElement) || const DeepCollectionEquality().equals(other.setElement, setElement)) &&
             (identical(other.group, group) || const DeepCollectionEquality().equals(other.group, group)) &&
             (identical(other.supplementalData, supplementalData) || const DeepCollectionEquality().equals(other.supplementalData, supplementalData)));
@@ -1883,7 +1882,7 @@ class _$_Measure extends _Measure {
       const DeepCollectionEquality().hash(definitionElement) ^
       const DeepCollectionEquality().hash(guidance) ^
       const DeepCollectionEquality().hash(guidanceElement) ^
-      const DeepCollectionEquality().hash(set) ^
+      const DeepCollectionEquality().hash(set_) ^
       const DeepCollectionEquality().hash(setElement) ^
       const DeepCollectionEquality().hash(group) ^
       const DeepCollectionEquality().hash(supplementalData);
@@ -1901,9 +1900,7 @@ class _$_Measure extends _Measure {
 abstract class _Measure extends Measure {
   _Measure._() : super._();
   factory _Measure(
-      {@required
-      @JsonKey(defaultValue: 'Measure')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1996,7 +1993,8 @@ abstract class _Measure extends Measure {
       String guidance,
       @JsonKey(name: '_guidance')
           Element guidanceElement,
-      String set,
+      @JsonKey(name: 'set')
+          String set_,
       @JsonKey(name: '_set')
           Element setElement,
       List<MeasureGroup> group,
@@ -2005,7 +2003,6 @@ abstract class _Measure extends Measure {
   factory _Measure.fromJson(Map<String, dynamic> json) = _$_Measure.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'Measure')
   String get resourceType;
   @override
   Id get id;
@@ -2166,7 +2163,8 @@ abstract class _Measure extends Measure {
   @JsonKey(name: '_guidance')
   Element get guidanceElement;
   @override
-  String get set;
+  @JsonKey(name: 'set')
+  String get set_;
   @override
   @JsonKey(name: '_set')
   Element get setElement;
@@ -3473,7 +3471,7 @@ class _$MeasureReportTearOff {
 
 // ignore: unused_element
   _MeasureReport call(
-      {@required @JsonKey(defaultValue: 'MeasureReport') String resourceType,
+      {String resourceType = 'MeasureReport',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3537,7 +3535,6 @@ const $MeasureReport = _$MeasureReportTearOff();
 
 /// @nodoc
 mixin _$MeasureReport {
-  @JsonKey(defaultValue: 'MeasureReport')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -3579,7 +3576,7 @@ abstract class $MeasureReportCopyWith<$Res> {
           MeasureReport value, $Res Function(MeasureReport) then) =
       _$MeasureReportCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'MeasureReport') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3845,7 +3842,7 @@ abstract class _$MeasureReportCopyWith<$Res>
       __$MeasureReportCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'MeasureReport') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3993,7 +3990,7 @@ class __$MeasureReportCopyWithImpl<$Res>
 /// @nodoc
 class _$_MeasureReport extends _MeasureReport {
   _$_MeasureReport(
-      {@required @JsonKey(defaultValue: 'MeasureReport') this.resourceType,
+      {this.resourceType = 'MeasureReport',
       this.id,
       this.meta,
       this.implicitRules,
@@ -4025,8 +4022,8 @@ class _$_MeasureReport extends _MeasureReport {
   factory _$_MeasureReport.fromJson(Map<String, dynamic> json) =>
       _$_$_MeasureReportFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'MeasureReport')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -4197,7 +4194,7 @@ class _$_MeasureReport extends _MeasureReport {
 abstract class _MeasureReport extends MeasureReport {
   _MeasureReport._() : super._();
   factory _MeasureReport(
-      {@required @JsonKey(defaultValue: 'MeasureReport') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4226,7 +4223,6 @@ abstract class _MeasureReport extends MeasureReport {
       _$_MeasureReport.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'MeasureReport')
   String get resourceType;
   @override
   Id get id;

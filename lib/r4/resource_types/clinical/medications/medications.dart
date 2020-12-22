@@ -10,7 +10,7 @@ part 'medications.g.dart';
 abstract class Immunization with Resource implements _$Immunization {
   Immunization._();
   factory Immunization({
-    @JsonKey(defaultValue: 'Immunization') @required String resourceType,
+    @Default('Immunization') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -286,7 +286,7 @@ abstract class ImmunizationRecommendationDateCriterion
 abstract class Medication with Resource implements _$Medication {
   Medication._();
   factory Medication({
-    @JsonKey(defaultValue: 'Medication') @required String resourceType,
+    @Default('Medication') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -441,7 +441,7 @@ abstract class MedicationDispense
     implements _$MedicationDispense {
   MedicationDispense._();
   factory MedicationDispense({
-    @JsonKey(defaultValue: 'MedicationDispense') @required String resourceType,
+    @Default('MedicationDispense') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -528,7 +528,7 @@ abstract class MedicationKnowledge
     implements _$MedicationKnowledge {
   MedicationKnowledge._();
   factory MedicationKnowledge({
-    @JsonKey(defaultValue: 'MedicationKnowledge') @required String resourceType,
+    @Default('MedicationKnowledge') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -855,7 +855,7 @@ abstract class MedicationKnowledgeKinetics
 abstract class MedicationRequest with Resource implements _$MedicationRequest {
   MedicationRequest._();
   factory MedicationRequest({
-    @JsonKey(defaultValue: 'MedicationRequest') @required String resourceType,
+    @Default('MedicationRequest') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -979,7 +979,7 @@ abstract class MedicationStatement
     implements _$MedicationStatement {
   MedicationStatement._();
   factory MedicationStatement({
-    @JsonKey(defaultValue: 'MedicationStatement') @required String resourceType,
+    @Default('MedicationStatement') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

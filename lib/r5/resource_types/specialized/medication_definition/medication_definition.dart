@@ -130,7 +130,7 @@ abstract class AdministrableProductDefinitionWithdrawalPeriod
 abstract class ClinicalUseIssue with Resource implements _$ClinicalUseIssue {
   ClinicalUseIssue._();
   factory ClinicalUseIssue({
-    @JsonKey(defaultValue: 'ClinicalUseIssue') @required String resourceType,
+    @Default('ClinicalUseIssue') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -276,7 +276,7 @@ abstract class ClinicalUseIssueUndesirableEffect
 abstract class Ingredient with Resource implements _$Ingredient {
   Ingredient._();
   factory Ingredient({
-    @JsonKey(defaultValue: 'Ingredient') @required String resourceType,
+    @Default('Ingredient') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -539,7 +539,7 @@ abstract class MedicinalProductDefinitionNamePart
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
-    String part,
+    @JsonKey(name: 'part') String part_,
     @JsonKey(name: '_part') Element partElement,
     @required CodeableConcept type,
   }) = _MedicinalProductDefinitionNamePart;
@@ -825,7 +825,7 @@ abstract class SubstanceDefinition
     implements _$SubstanceDefinition {
   SubstanceDefinition._();
   factory SubstanceDefinition({
-    @JsonKey(defaultValue: 'SubstanceDefinition') @required String resourceType,
+    @Default('SubstanceDefinition') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1192,7 +1192,7 @@ abstract class SubstanceNucleicAcidSugar
 abstract class SubstancePolymer with Resource implements _$SubstancePolymer {
   SubstancePolymer._();
   factory SubstancePolymer({
-    @JsonKey(defaultValue: 'SubstancePolymer') @required String resourceType,
+    @Default('SubstancePolymer') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1338,7 +1338,7 @@ abstract class SubstancePolymerStructuralRepresentation
 abstract class SubstanceProtein with Resource implements _$SubstanceProtein {
   SubstanceProtein._();
   factory SubstanceProtein({
-    @JsonKey(defaultValue: 'SubstanceProtein') @required String resourceType,
+    @Default('SubstanceProtein') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1633,7 +1633,7 @@ abstract class SubstanceSourceMaterialPartDescription
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
-    CodeableConcept part,
+    @JsonKey(name: 'part') CodeableConcept part_,
     CodeableConcept partLocation,
   }) = _SubstanceSourceMaterialPartDescription;
 

@@ -18,9 +18,7 @@ class _$CodeSystemTearOff {
 
 // ignore: unused_element
   _CodeSystem call(
-      {@required
-      @JsonKey(defaultValue: 'CodeSystem')
-          String resourceType,
+      {String resourceType = 'CodeSystem',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -167,7 +165,6 @@ const $CodeSystem = _$CodeSystemTearOff();
 
 /// @nodoc
 mixin _$CodeSystem {
-  @JsonKey(defaultValue: 'CodeSystem')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -256,8 +253,7 @@ abstract class $CodeSystemCopyWith<$Res> {
           CodeSystem value, $Res Function(CodeSystem) then) =
       _$CodeSystemCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'CodeSystem')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -770,8 +766,7 @@ abstract class _$CodeSystemCopyWith<$Res> implements $CodeSystemCopyWith<$Res> {
       __$CodeSystemCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'CodeSystem')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1095,9 +1090,7 @@ class __$CodeSystemCopyWithImpl<$Res> extends _$CodeSystemCopyWithImpl<$Res>
 /// @nodoc
 class _$_CodeSystem extends _CodeSystem {
   _$_CodeSystem(
-      {@required
-      @JsonKey(defaultValue: 'CodeSystem')
-          this.resourceType,
+      {this.resourceType = 'CodeSystem',
       this.id,
       this.meta,
       this.implicitRules,
@@ -1180,8 +1173,8 @@ class _$_CodeSystem extends _CodeSystem {
   factory _$_CodeSystem.fromJson(Map<String, dynamic> json) =>
       _$_$_CodeSystemFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'CodeSystem')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -1492,9 +1485,7 @@ class _$_CodeSystem extends _CodeSystem {
 abstract class _CodeSystem extends CodeSystem {
   _CodeSystem._() : super._();
   factory _CodeSystem(
-      {@required
-      @JsonKey(defaultValue: 'CodeSystem')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1576,7 +1567,6 @@ abstract class _CodeSystem extends CodeSystem {
       _$_CodeSystem.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'CodeSystem')
   String get resourceType;
   @override
   Id get id;
@@ -1728,7 +1718,7 @@ class _$CodeSystemFilterTearOff {
       @JsonKey(name: '_code') Element codeElement,
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
-      List<Code> operator,
+      @JsonKey(name: 'operator') List<Code> operator_,
       @JsonKey(name: '_operator') List<Element> operatorElement,
       String value,
       @JsonKey(name: '_value') Element valueElement}) {
@@ -1740,7 +1730,7 @@ class _$CodeSystemFilterTearOff {
       codeElement: codeElement,
       description: description,
       descriptionElement: descriptionElement,
-      operator: operator,
+      operator_: operator_,
       operatorElement: operatorElement,
       value: value,
       valueElement: valueElement,
@@ -1769,7 +1759,8 @@ mixin _$CodeSystemFilter {
   String get description;
   @JsonKey(name: '_description')
   Element get descriptionElement;
-  List<Code> get operator;
+  @JsonKey(name: 'operator')
+  List<Code> get operator_;
   @JsonKey(name: '_operator')
   List<Element> get operatorElement;
   String get value;
@@ -1793,7 +1784,7 @@ abstract class $CodeSystemFilterCopyWith<$Res> {
       @JsonKey(name: '_code') Element codeElement,
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
-      List<Code> operator,
+      @JsonKey(name: 'operator') List<Code> operator_,
       @JsonKey(name: '_operator') List<Element> operatorElement,
       String value,
       @JsonKey(name: '_value') Element valueElement});
@@ -1821,7 +1812,7 @@ class _$CodeSystemFilterCopyWithImpl<$Res>
     Object codeElement = freezed,
     Object description = freezed,
     Object descriptionElement = freezed,
-    Object operator = freezed,
+    Object operator_ = freezed,
     Object operatorElement = freezed,
     Object value = freezed,
     Object valueElement = freezed,
@@ -1842,7 +1833,8 @@ class _$CodeSystemFilterCopyWithImpl<$Res>
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
-      operator: operator == freezed ? _value.operator : operator as List<Code>,
+      operator_:
+          operator_ == freezed ? _value.operator_ : operator_ as List<Code>,
       operatorElement: operatorElement == freezed
           ? _value.operatorElement
           : operatorElement as List<Element>,
@@ -1899,7 +1891,7 @@ abstract class _$CodeSystemFilterCopyWith<$Res>
       @JsonKey(name: '_code') Element codeElement,
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
-      List<Code> operator,
+      @JsonKey(name: 'operator') List<Code> operator_,
       @JsonKey(name: '_operator') List<Element> operatorElement,
       String value,
       @JsonKey(name: '_value') Element valueElement});
@@ -1932,7 +1924,7 @@ class __$CodeSystemFilterCopyWithImpl<$Res>
     Object codeElement = freezed,
     Object description = freezed,
     Object descriptionElement = freezed,
-    Object operator = freezed,
+    Object operator_ = freezed,
     Object operatorElement = freezed,
     Object value = freezed,
     Object valueElement = freezed,
@@ -1953,7 +1945,8 @@ class __$CodeSystemFilterCopyWithImpl<$Res>
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
-      operator: operator == freezed ? _value.operator : operator as List<Code>,
+      operator_:
+          operator_ == freezed ? _value.operator_ : operator_ as List<Code>,
       operatorElement: operatorElement == freezed
           ? _value.operatorElement
           : operatorElement as List<Element>,
@@ -1977,7 +1970,7 @@ class _$_CodeSystemFilter extends _CodeSystemFilter {
       @JsonKey(name: '_code') this.codeElement,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
-      this.operator,
+      @JsonKey(name: 'operator') this.operator_,
       @JsonKey(name: '_operator') this.operatorElement,
       this.value,
       @JsonKey(name: '_value') this.valueElement})
@@ -2004,7 +1997,8 @@ class _$_CodeSystemFilter extends _CodeSystemFilter {
   @JsonKey(name: '_description')
   final Element descriptionElement;
   @override
-  final List<Code> operator;
+  @JsonKey(name: 'operator')
+  final List<Code> operator_;
   @override
   @JsonKey(name: '_operator')
   final List<Element> operatorElement;
@@ -2016,7 +2010,7 @@ class _$_CodeSystemFilter extends _CodeSystemFilter {
 
   @override
   String toString() {
-    return 'CodeSystemFilter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, codeElement: $codeElement, description: $description, descriptionElement: $descriptionElement, operator: $operator, operatorElement: $operatorElement, value: $value, valueElement: $valueElement)';
+    return 'CodeSystemFilter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, codeElement: $codeElement, description: $description, descriptionElement: $descriptionElement, operator_: $operator_, operatorElement: $operatorElement, value: $value, valueElement: $valueElement)';
   }
 
   @override
@@ -2042,9 +2036,9 @@ class _$_CodeSystemFilter extends _CodeSystemFilter {
             (identical(other.descriptionElement, descriptionElement) ||
                 const DeepCollectionEquality()
                     .equals(other.descriptionElement, descriptionElement)) &&
-            (identical(other.operator, operator) ||
+            (identical(other.operator_, operator_) ||
                 const DeepCollectionEquality()
-                    .equals(other.operator, operator)) &&
+                    .equals(other.operator_, operator_)) &&
             (identical(other.operatorElement, operatorElement) ||
                 const DeepCollectionEquality()
                     .equals(other.operatorElement, operatorElement)) &&
@@ -2065,7 +2059,7 @@ class _$_CodeSystemFilter extends _CodeSystemFilter {
       const DeepCollectionEquality().hash(codeElement) ^
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(descriptionElement) ^
-      const DeepCollectionEquality().hash(operator) ^
+      const DeepCollectionEquality().hash(operator_) ^
       const DeepCollectionEquality().hash(operatorElement) ^
       const DeepCollectionEquality().hash(value) ^
       const DeepCollectionEquality().hash(valueElement);
@@ -2090,7 +2084,7 @@ abstract class _CodeSystemFilter extends CodeSystemFilter {
       @JsonKey(name: '_code') Element codeElement,
       String description,
       @JsonKey(name: '_description') Element descriptionElement,
-      List<Code> operator,
+      @JsonKey(name: 'operator') List<Code> operator_,
       @JsonKey(name: '_operator') List<Element> operatorElement,
       String value,
       @JsonKey(name: '_value') Element valueElement}) = _$_CodeSystemFilter;
@@ -2116,7 +2110,8 @@ abstract class _CodeSystemFilter extends CodeSystemFilter {
   @JsonKey(name: '_description')
   Element get descriptionElement;
   @override
-  List<Code> get operator;
+  @JsonKey(name: 'operator')
+  List<Code> get operator_;
   @override
   @JsonKey(name: '_operator')
   List<Element> get operatorElement;
@@ -4042,9 +4037,7 @@ class _$ConceptMapTearOff {
 
 // ignore: unused_element
   _ConceptMap call(
-      {@required
-      @JsonKey(defaultValue: 'ConceptMap')
-          String resourceType,
+      {String resourceType = 'ConceptMap',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4171,7 +4164,6 @@ const $ConceptMap = _$ConceptMapTearOff();
 
 /// @nodoc
 mixin _$ConceptMap {
-  @JsonKey(defaultValue: 'ConceptMap')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -4248,8 +4240,7 @@ abstract class $ConceptMapCopyWith<$Res> {
           ConceptMap value, $Res Function(ConceptMap) then) =
       _$ConceptMapCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'ConceptMap')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4706,8 +4697,7 @@ abstract class _$ConceptMapCopyWith<$Res> implements $ConceptMapCopyWith<$Res> {
       __$ConceptMapCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'ConceptMap')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4984,7 +4974,7 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
 /// @nodoc
 class _$_ConceptMap extends _ConceptMap {
   _$_ConceptMap(
-      {@required @JsonKey(defaultValue: 'ConceptMap') this.resourceType,
+      {this.resourceType = 'ConceptMap',
       this.id,
       this.meta,
       this.implicitRules,
@@ -5036,8 +5026,8 @@ class _$_ConceptMap extends _ConceptMap {
   factory _$_ConceptMap.fromJson(Map<String, dynamic> json) =>
       _$_$_ConceptMapFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'ConceptMap')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -5312,9 +5302,7 @@ class _$_ConceptMap extends _ConceptMap {
 abstract class _ConceptMap extends ConceptMap {
   _ConceptMap._() : super._();
   factory _ConceptMap(
-      {@required
-      @JsonKey(defaultValue: 'ConceptMap')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5384,7 +5372,6 @@ abstract class _ConceptMap extends ConceptMap {
       _$_ConceptMap.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'ConceptMap')
   String get resourceType;
   @override
   Id get id;
@@ -7658,9 +7645,7 @@ class _$NamingSystemTearOff {
 
 // ignore: unused_element
   _NamingSystem call(
-      {@required
-      @JsonKey(defaultValue: 'NamingSystem')
-          String resourceType,
+      {String resourceType = 'NamingSystem',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7754,7 +7739,6 @@ const $NamingSystem = _$NamingSystemTearOff();
 
 /// @nodoc
 mixin _$NamingSystem {
-  @JsonKey(defaultValue: 'NamingSystem')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -7811,8 +7795,7 @@ abstract class $NamingSystemCopyWith<$Res> {
           NamingSystem value, $Res Function(NamingSystem) then) =
       _$NamingSystemCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'NamingSystem')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8126,8 +8109,7 @@ abstract class _$NamingSystemCopyWith<$Res>
       __$NamingSystemCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'NamingSystem')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8323,7 +8305,7 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
 /// @nodoc
 class _$_NamingSystem extends _NamingSystem {
   _$_NamingSystem(
-      {@required @JsonKey(defaultValue: 'NamingSystem') this.resourceType,
+      {this.resourceType = 'NamingSystem',
       this.id,
       this.meta,
       this.implicitRules,
@@ -8362,8 +8344,8 @@ class _$_NamingSystem extends _NamingSystem {
   factory _$_NamingSystem.fromJson(Map<String, dynamic> json) =>
       _$_$_NamingSystemFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'NamingSystem')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -8576,9 +8558,7 @@ class _$_NamingSystem extends _NamingSystem {
 abstract class _NamingSystem extends NamingSystem {
   _NamingSystem._() : super._();
   factory _NamingSystem(
-      {@required
-      @JsonKey(defaultValue: 'NamingSystem')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8629,7 +8609,6 @@ abstract class _NamingSystem extends NamingSystem {
       _$_NamingSystem.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'NamingSystem')
   String get resourceType;
   @override
   Id get id;
@@ -14252,7 +14231,7 @@ class _$ValueSetTearOff {
 
 // ignore: unused_element
   _ValueSet call(
-      {@required @JsonKey(defaultValue: 'ValueSet') String resourceType,
+      {String resourceType = 'ValueSet',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -14350,7 +14329,6 @@ const $ValueSet = _$ValueSetTearOff();
 
 /// @nodoc
 mixin _$ValueSet {
-  @JsonKey(defaultValue: 'ValueSet')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -14418,7 +14396,7 @@ abstract class $ValueSetCopyWith<$Res> {
   factory $ValueSetCopyWith(ValueSet value, $Res Function(ValueSet) then) =
       _$ValueSetCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'ValueSet') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -14811,7 +14789,7 @@ abstract class _$ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
       __$ValueSetCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'ValueSet') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -15042,7 +15020,7 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
 /// @nodoc
 class _$_ValueSet extends _ValueSet {
   _$_ValueSet(
-      {@required @JsonKey(defaultValue: 'ValueSet') this.resourceType,
+      {this.resourceType = 'ValueSet',
       this.id,
       this.meta,
       this.implicitRules,
@@ -15089,8 +15067,8 @@ class _$_ValueSet extends _ValueSet {
   factory _$_ValueSet.fromJson(Map<String, dynamic> json) =>
       _$_$_ValueSetFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'ValueSet')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -15342,7 +15320,7 @@ class _$_ValueSet extends _ValueSet {
 abstract class _ValueSet extends ValueSet {
   _ValueSet._() : super._();
   factory _ValueSet(
-      {@required @JsonKey(defaultValue: 'ValueSet') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -15387,7 +15365,6 @@ abstract class _ValueSet extends ValueSet {
   factory _ValueSet.fromJson(Map<String, dynamic> json) = _$_ValueSet.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'ValueSet')
   String get resourceType;
   @override
   Id get id;

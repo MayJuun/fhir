@@ -18,7 +18,7 @@ class _$BasicTearOff {
 
 // ignore: unused_element
   _Basic call(
-      {@required @JsonKey(defaultValue: 'Basic') String resourceType,
+      {String resourceType = 'Basic',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -68,7 +68,6 @@ const $Basic = _$BasicTearOff();
 
 /// @nodoc
 mixin _$Basic {
-  @JsonKey(defaultValue: 'Basic')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -100,7 +99,7 @@ abstract class $BasicCopyWith<$Res> {
   factory $BasicCopyWith(Basic value, $Res Function(Basic) then) =
       _$BasicCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'Basic') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -281,7 +280,7 @@ abstract class _$BasicCopyWith<$Res> implements $BasicCopyWith<$Res> {
       __$BasicCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'Basic') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -390,7 +389,7 @@ class __$BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res>
 /// @nodoc
 class _$_Basic extends _Basic {
   _$_Basic(
-      {@required @JsonKey(defaultValue: 'Basic') this.resourceType,
+      {this.resourceType = 'Basic',
       this.id,
       this.meta,
       this.implicitRules,
@@ -414,8 +413,8 @@ class _$_Basic extends _Basic {
   factory _$_Basic.fromJson(Map<String, dynamic> json) =>
       _$_$_BasicFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'Basic')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -545,7 +544,7 @@ class _$_Basic extends _Basic {
 abstract class _Basic extends Basic {
   _Basic._() : super._();
   factory _Basic(
-      {@required @JsonKey(defaultValue: 'Basic') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -566,7 +565,6 @@ abstract class _Basic extends Basic {
   factory _Basic.fromJson(Map<String, dynamic> json) = _$_Basic.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'Basic')
   String get resourceType;
   @override
   Id get id;
@@ -618,7 +616,7 @@ class _$BinaryTearOff {
 
 // ignore: unused_element
   _Binary call(
-      {@required @JsonKey(defaultValue: 'Binary') String resourceType,
+      {String resourceType = 'Binary',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -666,7 +664,6 @@ const $Binary = _$BinaryTearOff();
 
 /// @nodoc
 mixin _$Binary {
-  @JsonKey(defaultValue: 'Binary')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -698,7 +695,7 @@ abstract class $BinaryCopyWith<$Res> {
   factory $BinaryCopyWith(Binary value, $Res Function(Binary) then) =
       _$BinaryCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'Binary') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -868,7 +865,7 @@ abstract class _$BinaryCopyWith<$Res> implements $BinaryCopyWith<$Res> {
       __$BinaryCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'Binary') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -975,7 +972,7 @@ class __$BinaryCopyWithImpl<$Res> extends _$BinaryCopyWithImpl<$Res>
 /// @nodoc
 class _$_Binary extends _Binary {
   _$_Binary(
-      {@required @JsonKey(defaultValue: 'Binary') this.resourceType,
+      {this.resourceType = 'Binary',
       this.id,
       this.meta,
       this.implicitRules,
@@ -997,8 +994,8 @@ class _$_Binary extends _Binary {
   factory _$_Binary.fromJson(Map<String, dynamic> json) =>
       _$_$_BinaryFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'Binary')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -1125,7 +1122,7 @@ class _$_Binary extends _Binary {
 abstract class _Binary extends Binary {
   _Binary._() : super._();
   factory _Binary(
-      {@required @JsonKey(defaultValue: 'Binary') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1145,7 +1142,6 @@ abstract class _Binary extends Binary {
   factory _Binary.fromJson(Map<String, dynamic> json) = _$_Binary.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'Binary')
   String get resourceType;
   @override
   Id get id;
@@ -1196,7 +1192,7 @@ class _$BundleTearOff {
 
 // ignore: unused_element
   _Bundle call(
-      {@required @JsonKey(defaultValue: 'Bundle') String resourceType,
+      {String resourceType = 'Bundle',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1250,7 +1246,6 @@ const $Bundle = _$BundleTearOff();
 
 /// @nodoc
 mixin _$Bundle {
-  @JsonKey(defaultValue: 'Bundle')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -1285,7 +1280,7 @@ abstract class $BundleCopyWith<$Res> {
   factory $BundleCopyWith(Bundle value, $Res Function(Bundle) then) =
       _$BundleCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'Bundle') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1473,7 +1468,7 @@ abstract class _$BundleCopyWith<$Res> implements $BundleCopyWith<$Res> {
       __$BundleCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'Bundle') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1589,7 +1584,7 @@ class __$BundleCopyWithImpl<$Res> extends _$BundleCopyWithImpl<$Res>
 /// @nodoc
 class _$_Bundle extends _Bundle {
   _$_Bundle(
-      {@required @JsonKey(defaultValue: 'Bundle') this.resourceType,
+      {this.resourceType = 'Bundle',
       this.id,
       this.meta,
       this.implicitRules,
@@ -1614,8 +1609,8 @@ class _$_Bundle extends _Bundle {
   factory _$_Bundle.fromJson(Map<String, dynamic> json) =>
       _$_$_BundleFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'Bundle')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -1756,7 +1751,7 @@ class _$_Bundle extends _Bundle {
 abstract class _Bundle extends Bundle {
   _Bundle._() : super._();
   factory _Bundle(
-      {@required @JsonKey(defaultValue: 'Bundle') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1779,7 +1774,6 @@ abstract class _Bundle extends Bundle {
   factory _Bundle.fromJson(Map<String, dynamic> json) = _$_Bundle.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'Bundle')
   String get resourceType;
   @override
   Id get id;
@@ -3519,7 +3513,7 @@ class _$LinkageTearOff {
 
 // ignore: unused_element
   _Linkage call(
-      {@required @JsonKey(defaultValue: 'Linkage') String resourceType,
+      {String resourceType = 'Linkage',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3565,7 +3559,6 @@ const $Linkage = _$LinkageTearOff();
 
 /// @nodoc
 mixin _$Linkage {
-  @JsonKey(defaultValue: 'Linkage')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -3595,7 +3588,7 @@ abstract class $LinkageCopyWith<$Res> {
   factory $LinkageCopyWith(Linkage value, $Res Function(Linkage) then) =
       _$LinkageCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'Linkage') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3746,7 +3739,7 @@ abstract class _$LinkageCopyWith<$Res> implements $LinkageCopyWith<$Res> {
       __$LinkageCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'Linkage') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3843,7 +3836,7 @@ class __$LinkageCopyWithImpl<$Res> extends _$LinkageCopyWithImpl<$Res>
 /// @nodoc
 class _$_Linkage extends _Linkage {
   _$_Linkage(
-      {@required @JsonKey(defaultValue: 'Linkage') this.resourceType,
+      {this.resourceType = 'Linkage',
       this.id,
       this.meta,
       this.implicitRules,
@@ -3865,8 +3858,8 @@ class _$_Linkage extends _Linkage {
   factory _$_Linkage.fromJson(Map<String, dynamic> json) =>
       _$_$_LinkageFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'Linkage')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -3983,7 +3976,7 @@ class _$_Linkage extends _Linkage {
 abstract class _Linkage extends Linkage {
   _Linkage._() : super._();
   factory _Linkage(
-      {@required @JsonKey(defaultValue: 'Linkage') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4002,7 +3995,6 @@ abstract class _Linkage extends Linkage {
   factory _Linkage.fromJson(Map<String, dynamic> json) = _$_Linkage.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'Linkage')
   String get resourceType;
   @override
   Id get id;
@@ -4270,7 +4262,7 @@ class _$MediaTearOff {
 
 // ignore: unused_element
   _Media call(
-      {@required @JsonKey(defaultValue: 'Media') String resourceType,
+      {String resourceType = 'Media',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4292,7 +4284,7 @@ class _$MediaTearOff {
       FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
       Period occurrencePeriod,
-      Reference operator,
+      @JsonKey(name: 'operator') Reference operator_,
       List<CodeableConcept> reasonCode,
       CodeableConcept bodySite,
       Reference device,
@@ -4329,7 +4321,7 @@ class _$MediaTearOff {
       occurrenceDateTime: occurrenceDateTime,
       occurrenceDateTimeElement: occurrenceDateTimeElement,
       occurrencePeriod: occurrencePeriod,
-      operator: operator,
+      operator_: operator_,
       reasonCode: reasonCode,
       bodySite: bodySite,
       device: device,
@@ -4358,7 +4350,6 @@ const $Media = _$MediaTearOff();
 
 /// @nodoc
 mixin _$Media {
-  @JsonKey(defaultValue: 'Media')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -4386,7 +4377,8 @@ mixin _$Media {
   @JsonKey(name: '_occurrenceDateTime')
   Element get occurrenceDateTimeElement;
   Period get occurrencePeriod;
-  Reference get operator;
+  @JsonKey(name: 'operator')
+  Reference get operator_;
   List<CodeableConcept> get reasonCode;
   CodeableConcept get bodySite;
   Reference get device;
@@ -4414,7 +4406,7 @@ abstract class $MediaCopyWith<$Res> {
   factory $MediaCopyWith(Media value, $Res Function(Media) then) =
       _$MediaCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'Media') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4436,7 +4428,7 @@ abstract class $MediaCopyWith<$Res> {
       FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
       Period occurrencePeriod,
-      Reference operator,
+      @JsonKey(name: 'operator') Reference operator_,
       List<CodeableConcept> reasonCode,
       CodeableConcept bodySite,
       Reference device,
@@ -4462,7 +4454,7 @@ abstract class $MediaCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get context;
   $ElementCopyWith<$Res> get occurrenceDateTimeElement;
   $PeriodCopyWith<$Res> get occurrencePeriod;
-  $ReferenceCopyWith<$Res> get operator;
+  $ReferenceCopyWith<$Res> get operator_;
   $CodeableConceptCopyWith<$Res> get bodySite;
   $ReferenceCopyWith<$Res> get device;
   $ElementCopyWith<$Res> get heightElement;
@@ -4504,7 +4496,7 @@ class _$MediaCopyWithImpl<$Res> implements $MediaCopyWith<$Res> {
     Object occurrenceDateTime = freezed,
     Object occurrenceDateTimeElement = freezed,
     Object occurrencePeriod = freezed,
-    Object operator = freezed,
+    Object operator_ = freezed,
     Object reasonCode = freezed,
     Object bodySite = freezed,
     Object device = freezed,
@@ -4564,7 +4556,8 @@ class _$MediaCopyWithImpl<$Res> implements $MediaCopyWith<$Res> {
       occurrencePeriod: occurrencePeriod == freezed
           ? _value.occurrencePeriod
           : occurrencePeriod as Period,
-      operator: operator == freezed ? _value.operator : operator as Reference,
+      operator_:
+          operator_ == freezed ? _value.operator_ : operator_ as Reference,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
           : reasonCode as List<CodeableConcept>,
@@ -4703,12 +4696,12 @@ class _$MediaCopyWithImpl<$Res> implements $MediaCopyWith<$Res> {
   }
 
   @override
-  $ReferenceCopyWith<$Res> get operator {
-    if (_value.operator == null) {
+  $ReferenceCopyWith<$Res> get operator_ {
+    if (_value.operator_ == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.operator, (value) {
-      return _then(_value.copyWith(operator: value));
+    return $ReferenceCopyWith<$Res>(_value.operator_, (value) {
+      return _then(_value.copyWith(operator_: value));
     });
   }
 
@@ -4789,7 +4782,7 @@ abstract class _$MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
       __$MediaCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'Media') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4811,7 +4804,7 @@ abstract class _$MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
       FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
       Period occurrencePeriod,
-      Reference operator,
+      @JsonKey(name: 'operator') Reference operator_,
       List<CodeableConcept> reasonCode,
       CodeableConcept bodySite,
       Reference device,
@@ -4849,7 +4842,7 @@ abstract class _$MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
   @override
   $PeriodCopyWith<$Res> get occurrencePeriod;
   @override
-  $ReferenceCopyWith<$Res> get operator;
+  $ReferenceCopyWith<$Res> get operator_;
   @override
   $CodeableConceptCopyWith<$Res> get bodySite;
   @override
@@ -4899,7 +4892,7 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
     Object occurrenceDateTime = freezed,
     Object occurrenceDateTimeElement = freezed,
     Object occurrencePeriod = freezed,
-    Object operator = freezed,
+    Object operator_ = freezed,
     Object reasonCode = freezed,
     Object bodySite = freezed,
     Object device = freezed,
@@ -4959,7 +4952,8 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
       occurrencePeriod: occurrencePeriod == freezed
           ? _value.occurrencePeriod
           : occurrencePeriod as Period,
-      operator: operator == freezed ? _value.operator : operator as Reference,
+      operator_:
+          operator_ == freezed ? _value.operator_ : operator_ as Reference,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
           : reasonCode as List<CodeableConcept>,
@@ -4993,7 +4987,7 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
 /// @nodoc
 class _$_Media extends _Media {
   _$_Media(
-      {@required @JsonKey(defaultValue: 'Media') this.resourceType,
+      {this.resourceType = 'Media',
       this.id,
       this.meta,
       this.implicitRules,
@@ -5015,7 +5009,7 @@ class _$_Media extends _Media {
       this.occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') this.occurrenceDateTimeElement,
       this.occurrencePeriod,
-      this.operator,
+      @JsonKey(name: 'operator') this.operator_,
       this.reasonCode,
       this.bodySite,
       this.device,
@@ -5036,8 +5030,8 @@ class _$_Media extends _Media {
   factory _$_Media.fromJson(Map<String, dynamic> json) =>
       _$_$_MediaFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'Media')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -5087,7 +5081,8 @@ class _$_Media extends _Media {
   @override
   final Period occurrencePeriod;
   @override
-  final Reference operator;
+  @JsonKey(name: 'operator')
+  final Reference operator_;
   @override
   final List<CodeableConcept> reasonCode;
   @override
@@ -5121,7 +5116,7 @@ class _$_Media extends _Media {
 
   @override
   String toString() {
-    return 'Media(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, basedOn: $basedOn, type: $type, typeElement: $typeElement, subtype: $subtype, view: $view, subject: $subject, context: $context, occurrenceDateTime: $occurrenceDateTime, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrencePeriod: $occurrencePeriod, operator: $operator, reasonCode: $reasonCode, bodySite: $bodySite, device: $device, height: $height, heightElement: $heightElement, width: $width, widthElement: $widthElement, frames: $frames, framesElement: $framesElement, duration: $duration, durationElement: $durationElement, content: $content, note: $note)';
+    return 'Media(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, basedOn: $basedOn, type: $type, typeElement: $typeElement, subtype: $subtype, view: $view, subject: $subject, context: $context, occurrenceDateTime: $occurrenceDateTime, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrencePeriod: $occurrencePeriod, operator_: $operator_, reasonCode: $reasonCode, bodySite: $bodySite, device: $device, height: $height, heightElement: $heightElement, width: $width, widthElement: $widthElement, frames: $frames, framesElement: $framesElement, duration: $duration, durationElement: $durationElement, content: $content, note: $note)';
   }
 
   @override
@@ -5190,9 +5185,9 @@ class _$_Media extends _Media {
             (identical(other.occurrencePeriod, occurrencePeriod) ||
                 const DeepCollectionEquality()
                     .equals(other.occurrencePeriod, occurrencePeriod)) &&
-            (identical(other.operator, operator) ||
+            (identical(other.operator_, operator_) ||
                 const DeepCollectionEquality()
-                    .equals(other.operator, operator)) &&
+                    .equals(other.operator_, operator_)) &&
             (identical(other.reasonCode, reasonCode) || const DeepCollectionEquality().equals(other.reasonCode, reasonCode)) &&
             (identical(other.bodySite, bodySite) || const DeepCollectionEquality().equals(other.bodySite, bodySite)) &&
             (identical(other.device, device) || const DeepCollectionEquality().equals(other.device, device)) &&
@@ -5233,7 +5228,7 @@ class _$_Media extends _Media {
       const DeepCollectionEquality().hash(occurrenceDateTime) ^
       const DeepCollectionEquality().hash(occurrenceDateTimeElement) ^
       const DeepCollectionEquality().hash(occurrencePeriod) ^
-      const DeepCollectionEquality().hash(operator) ^
+      const DeepCollectionEquality().hash(operator_) ^
       const DeepCollectionEquality().hash(reasonCode) ^
       const DeepCollectionEquality().hash(bodySite) ^
       const DeepCollectionEquality().hash(device) ^
@@ -5261,7 +5256,7 @@ class _$_Media extends _Media {
 abstract class _Media extends Media {
   _Media._() : super._();
   factory _Media(
-      {@required @JsonKey(defaultValue: 'Media') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5283,7 +5278,7 @@ abstract class _Media extends Media {
       FhirDateTime occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
       Period occurrencePeriod,
-      Reference operator,
+      @JsonKey(name: 'operator') Reference operator_,
       List<CodeableConcept> reasonCode,
       CodeableConcept bodySite,
       Reference device,
@@ -5301,7 +5296,6 @@ abstract class _Media extends Media {
   factory _Media.fromJson(Map<String, dynamic> json) = _$_Media.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'Media')
   String get resourceType;
   @override
   Id get id;
@@ -5351,7 +5345,8 @@ abstract class _Media extends Media {
   @override
   Period get occurrencePeriod;
   @override
-  Reference get operator;
+  @JsonKey(name: 'operator')
+  Reference get operator_;
   @override
   List<CodeableConcept> get reasonCode;
   @override
@@ -5396,7 +5391,7 @@ class _$MessageHeaderTearOff {
 
 // ignore: unused_element
   _MessageHeader call(
-      {@required @JsonKey(defaultValue: 'MessageHeader') String resourceType,
+      {String resourceType = 'MessageHeader',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5460,7 +5455,6 @@ const $MessageHeader = _$MessageHeaderTearOff();
 
 /// @nodoc
 mixin _$MessageHeader {
-  @JsonKey(defaultValue: 'MessageHeader')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -5500,7 +5494,7 @@ abstract class $MessageHeaderCopyWith<$Res> {
           MessageHeader value, $Res Function(MessageHeader) then) =
       _$MessageHeaderCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'MessageHeader') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5775,7 +5769,7 @@ abstract class _$MessageHeaderCopyWith<$Res>
       __$MessageHeaderCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'MessageHeader') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5923,7 +5917,7 @@ class __$MessageHeaderCopyWithImpl<$Res>
 /// @nodoc
 class _$_MessageHeader extends _MessageHeader {
   _$_MessageHeader(
-      {@required @JsonKey(defaultValue: 'MessageHeader') this.resourceType,
+      {this.resourceType = 'MessageHeader',
       this.id,
       this.meta,
       this.implicitRules,
@@ -5955,8 +5949,8 @@ class _$_MessageHeader extends _MessageHeader {
   factory _$_MessageHeader.fromJson(Map<String, dynamic> json) =>
       _$_$_MessageHeaderFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'MessageHeader')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -6124,7 +6118,7 @@ class _$_MessageHeader extends _MessageHeader {
 abstract class _MessageHeader extends MessageHeader {
   _MessageHeader._() : super._();
   factory _MessageHeader(
-      {@required @JsonKey(defaultValue: 'MessageHeader') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6153,7 +6147,6 @@ abstract class _MessageHeader extends MessageHeader {
       _$_MessageHeader.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'MessageHeader')
   String get resourceType;
   @override
   Id get id;
@@ -7178,7 +7171,7 @@ class _$OperationOutcomeTearOff {
 
 // ignore: unused_element
   _OperationOutcome call(
-      {@required @JsonKey(defaultValue: 'OperationOutcome') String resourceType,
+      {String resourceType = 'OperationOutcome',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7218,7 +7211,6 @@ const $OperationOutcome = _$OperationOutcomeTearOff();
 
 /// @nodoc
 mixin _$OperationOutcome {
-  @JsonKey(defaultValue: 'OperationOutcome')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -7245,7 +7237,7 @@ abstract class $OperationOutcomeCopyWith<$Res> {
           OperationOutcome value, $Res Function(OperationOutcome) then) =
       _$OperationOutcomeCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'OperationOutcome') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7368,7 +7360,7 @@ abstract class _$OperationOutcomeCopyWith<$Res>
       __$OperationOutcomeCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'OperationOutcome') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7454,7 +7446,7 @@ class __$OperationOutcomeCopyWithImpl<$Res>
 /// @nodoc
 class _$_OperationOutcome extends _OperationOutcome {
   _$_OperationOutcome(
-      {@required @JsonKey(defaultValue: 'OperationOutcome') this.resourceType,
+      {this.resourceType = 'OperationOutcome',
       this.id,
       this.meta,
       this.implicitRules,
@@ -7473,8 +7465,8 @@ class _$_OperationOutcome extends _OperationOutcome {
   factory _$_OperationOutcome.fromJson(Map<String, dynamic> json) =>
       _$_$_OperationOutcomeFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'OperationOutcome')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -7574,7 +7566,7 @@ class _$_OperationOutcome extends _OperationOutcome {
 abstract class _OperationOutcome extends OperationOutcome {
   _OperationOutcome._() : super._();
   factory _OperationOutcome(
-      {@required @JsonKey(defaultValue: 'OperationOutcome') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7591,7 +7583,6 @@ abstract class _OperationOutcome extends OperationOutcome {
       _$_OperationOutcome.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'OperationOutcome')
   String get resourceType;
   @override
   Id get id;
@@ -8074,7 +8065,7 @@ class _$ParametersTearOff {
 
 // ignore: unused_element
   _Parameters call(
-      {@required @JsonKey(defaultValue: 'Parameters') String resourceType,
+      {String resourceType = 'Parameters',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8114,7 +8105,6 @@ const $Parameters = _$ParametersTearOff();
 
 /// @nodoc
 mixin _$Parameters {
-  @JsonKey(defaultValue: 'Parameters')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -8141,7 +8131,7 @@ abstract class $ParametersCopyWith<$Res> {
           Parameters value, $Res Function(Parameters) then) =
       _$ParametersCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'Parameters') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8262,7 +8252,7 @@ abstract class _$ParametersCopyWith<$Res> implements $ParametersCopyWith<$Res> {
       __$ParametersCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'Parameters') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8347,7 +8337,7 @@ class __$ParametersCopyWithImpl<$Res> extends _$ParametersCopyWithImpl<$Res>
 /// @nodoc
 class _$_Parameters extends _Parameters {
   _$_Parameters(
-      {@required @JsonKey(defaultValue: 'Parameters') this.resourceType,
+      {this.resourceType = 'Parameters',
       this.id,
       this.meta,
       this.implicitRules,
@@ -8365,8 +8355,8 @@ class _$_Parameters extends _Parameters {
   factory _$_Parameters.fromJson(Map<String, dynamic> json) =>
       _$_$_ParametersFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'Parameters')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -8467,7 +8457,7 @@ class _$_Parameters extends _Parameters {
 abstract class _Parameters extends Parameters {
   _Parameters._() : super._();
   factory _Parameters(
-      {@required @JsonKey(defaultValue: 'Parameters') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8484,7 +8474,6 @@ abstract class _Parameters extends Parameters {
       _$_Parameters.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'Parameters')
   String get resourceType;
   @override
   Id get id;
@@ -8598,7 +8587,7 @@ class _$ParametersParameterTearOff {
       ParameterDefinition valueParameterDefinition,
       TriggerDefinition valueTriggerDefinition,
       Resource resource,
-      List<ParametersParameter> part}) {
+      @JsonKey(name: 'part') List<ParametersParameter> part_}) {
     return _ParametersParameter(
       name: name,
       nameElement: nameElement,
@@ -8673,7 +8662,7 @@ class _$ParametersParameterTearOff {
       valueParameterDefinition: valueParameterDefinition,
       valueTriggerDefinition: valueTriggerDefinition,
       resource: resource,
-      part: part,
+      part_: part_,
     );
   }
 
@@ -8780,7 +8769,8 @@ mixin _$ParametersParameter {
   ParameterDefinition get valueParameterDefinition;
   TriggerDefinition get valueTriggerDefinition;
   Resource get resource;
-  List<ParametersParameter> get part;
+  @JsonKey(name: 'part')
+  List<ParametersParameter> get part_;
 
   Map<String, dynamic> toJson();
   $ParametersParameterCopyWith<ParametersParameter> get copyWith;
@@ -8865,7 +8855,7 @@ abstract class $ParametersParameterCopyWith<$Res> {
       ParameterDefinition valueParameterDefinition,
       TriggerDefinition valueTriggerDefinition,
       Resource resource,
-      List<ParametersParameter> part});
+      @JsonKey(name: 'part') List<ParametersParameter> part_});
 
   $ElementCopyWith<$Res> get nameElement;
   $ElementCopyWith<$Res> get valueBooleanElement;
@@ -9007,7 +8997,7 @@ class _$ParametersParameterCopyWithImpl<$Res>
     Object valueParameterDefinition = freezed,
     Object valueTriggerDefinition = freezed,
     Object resource = freezed,
-    Object part = freezed,
+    Object part_ = freezed,
   }) {
     return _then(_value.copyWith(
       name: name == freezed ? _value.name : name as String,
@@ -9197,7 +9187,8 @@ class _$ParametersParameterCopyWithImpl<$Res>
           ? _value.valueTriggerDefinition
           : valueTriggerDefinition as TriggerDefinition,
       resource: resource == freezed ? _value.resource : resource as Resource,
-      part: part == freezed ? _value.part : part as List<ParametersParameter>,
+      part_:
+          part_ == freezed ? _value.part_ : part_ as List<ParametersParameter>,
     ));
   }
 
@@ -9826,7 +9817,7 @@ abstract class _$ParametersParameterCopyWith<$Res>
       ParameterDefinition valueParameterDefinition,
       TriggerDefinition valueTriggerDefinition,
       Resource resource,
-      List<ParametersParameter> part});
+      @JsonKey(name: 'part') List<ParametersParameter> part_});
 
   @override
   $ElementCopyWith<$Res> get nameElement;
@@ -10024,7 +10015,7 @@ class __$ParametersParameterCopyWithImpl<$Res>
     Object valueParameterDefinition = freezed,
     Object valueTriggerDefinition = freezed,
     Object resource = freezed,
-    Object part = freezed,
+    Object part_ = freezed,
   }) {
     return _then(_ParametersParameter(
       name: name == freezed ? _value.name : name as String,
@@ -10214,7 +10205,8 @@ class __$ParametersParameterCopyWithImpl<$Res>
           ? _value.valueTriggerDefinition
           : valueTriggerDefinition as TriggerDefinition,
       resource: resource == freezed ? _value.resource : resource as Resource,
-      part: part == freezed ? _value.part : part as List<ParametersParameter>,
+      part_:
+          part_ == freezed ? _value.part_ : part_ as List<ParametersParameter>,
     ));
   }
 }
@@ -10297,7 +10289,7 @@ class _$_ParametersParameter extends _ParametersParameter {
       this.valueParameterDefinition,
       this.valueTriggerDefinition,
       this.resource,
-      this.part})
+      @JsonKey(name: 'part') this.part_})
       : super._();
 
   factory _$_ParametersParameter.fromJson(Map<String, dynamic> json) =>
@@ -10468,11 +10460,12 @@ class _$_ParametersParameter extends _ParametersParameter {
   @override
   final Resource resource;
   @override
-  final List<ParametersParameter> part;
+  @JsonKey(name: 'part')
+  final List<ParametersParameter> part_;
 
   @override
   String toString() {
-    return 'ParametersParameter(name: $name, nameElement: $nameElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueInstant: $valueInstant, valueInstantElement: $valueInstantElement, valueString: $valueString, valueStringElement: $valueStringElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueOid: $valueOid, valueOidElement: $valueOidElement, valueUuid: $valueUuid, valueUuidElement: $valueUuidElement, valueId: $valueId, valueIdElement: $valueIdElement, valueUnsignedInt: $valueUnsignedInt, valueUnsignedIntElement: $valueUnsignedIntElement, valuePositiveInt: $valuePositiveInt, valuePositiveIntElement: $valuePositiveIntElement, valueMarkdown: $valueMarkdown, valueMarkdownElement: $valueMarkdownElement, valueElement: $valueElement, valueExtension: $valueExtension, valueBackboneElement: $valueBackboneElement, valueNarrative: $valueNarrative, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueIdentifier: $valueIdentifier, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueQuantity: $valueQuantity, valueDuration: $valueDuration, valueSimpleQuantity: $valueSimpleQuantity, valueDistance: $valueDistance, valueCount: $valueCount, valueMoney: $valueMoney, valueAge: $valueAge, valueRange: $valueRange, valuePeriod: $valuePeriod, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueHumanName: $valueHumanName, valueAddress: $valueAddress, valueContactPoint: $valueContactPoint, valueTiming: $valueTiming, valueMeta: $valueMeta, valueElementDefinition: $valueElementDefinition, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDosage: $valueDosage, valueRelatedArtifact: $valueRelatedArtifact, valueUsageContext: $valueUsageContext, valueDataRequirement: $valueDataRequirement, valueParameterDefinition: $valueParameterDefinition, valueTriggerDefinition: $valueTriggerDefinition, resource: $resource, part: $part)';
+    return 'ParametersParameter(name: $name, nameElement: $nameElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueInstant: $valueInstant, valueInstantElement: $valueInstantElement, valueString: $valueString, valueStringElement: $valueStringElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueOid: $valueOid, valueOidElement: $valueOidElement, valueUuid: $valueUuid, valueUuidElement: $valueUuidElement, valueId: $valueId, valueIdElement: $valueIdElement, valueUnsignedInt: $valueUnsignedInt, valueUnsignedIntElement: $valueUnsignedIntElement, valuePositiveInt: $valuePositiveInt, valuePositiveIntElement: $valuePositiveIntElement, valueMarkdown: $valueMarkdown, valueMarkdownElement: $valueMarkdownElement, valueElement: $valueElement, valueExtension: $valueExtension, valueBackboneElement: $valueBackboneElement, valueNarrative: $valueNarrative, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueIdentifier: $valueIdentifier, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueQuantity: $valueQuantity, valueDuration: $valueDuration, valueSimpleQuantity: $valueSimpleQuantity, valueDistance: $valueDistance, valueCount: $valueCount, valueMoney: $valueMoney, valueAge: $valueAge, valueRange: $valueRange, valuePeriod: $valuePeriod, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueHumanName: $valueHumanName, valueAddress: $valueAddress, valueContactPoint: $valueContactPoint, valueTiming: $valueTiming, valueMeta: $valueMeta, valueElementDefinition: $valueElementDefinition, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDosage: $valueDosage, valueRelatedArtifact: $valueRelatedArtifact, valueUsageContext: $valueUsageContext, valueDataRequirement: $valueDataRequirement, valueParameterDefinition: $valueParameterDefinition, valueTriggerDefinition: $valueTriggerDefinition, resource: $resource, part_: $part_)';
   }
 
   @override
@@ -10590,7 +10583,7 @@ class _$_ParametersParameter extends _ParametersParameter {
             (identical(other.valueParameterDefinition, valueParameterDefinition) || const DeepCollectionEquality().equals(other.valueParameterDefinition, valueParameterDefinition)) &&
             (identical(other.valueTriggerDefinition, valueTriggerDefinition) || const DeepCollectionEquality().equals(other.valueTriggerDefinition, valueTriggerDefinition)) &&
             (identical(other.resource, resource) || const DeepCollectionEquality().equals(other.resource, resource)) &&
-            (identical(other.part, part) || const DeepCollectionEquality().equals(other.part, part)));
+            (identical(other.part_, part_) || const DeepCollectionEquality().equals(other.part_, part_)));
   }
 
   @override
@@ -10669,7 +10662,7 @@ class _$_ParametersParameter extends _ParametersParameter {
       const DeepCollectionEquality().hash(valueParameterDefinition) ^
       const DeepCollectionEquality().hash(valueTriggerDefinition) ^
       const DeepCollectionEquality().hash(resource) ^
-      const DeepCollectionEquality().hash(part);
+      const DeepCollectionEquality().hash(part_);
 
   @override
   _$ParametersParameterCopyWith<_ParametersParameter> get copyWith =>
@@ -10685,80 +10678,81 @@ class _$_ParametersParameter extends _ParametersParameter {
 abstract class _ParametersParameter extends ParametersParameter {
   _ParametersParameter._() : super._();
   factory _ParametersParameter(
-      {String name,
-      @JsonKey(name: '_name') Element nameElement,
-      Boolean valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-      Decimal valueInteger,
-      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Decimal valueDecimal,
-      @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-      String valueBase64Binary,
-      @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
-      String valueInstant,
-      @JsonKey(name: '_valueInstant') Element valueInstantElement,
-      String valueString,
-      @JsonKey(name: '_valueString') Element valueStringElement,
-      String valueUri,
-      @JsonKey(name: '_valueUri') Element valueUriElement,
-      Date valueDate,
-      @JsonKey(name: '_valueDate') Element valueDateElement,
-      FhirDateTime valueDateTime,
-      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-      Time valueTime,
-      @JsonKey(name: '_valueTime') Element valueTimeElement,
-      Code valueCode,
-      @JsonKey(name: '_valueCode') Element valueCodeElement,
-      Id valueOid,
-      @JsonKey(name: '_valueOid') Element valueOidElement,
-      Id valueUuid,
-      @JsonKey(name: '_valueUuid') Element valueUuidElement,
-      Id valueId,
-      @JsonKey(name: '_valueId') Element valueIdElement,
-      Decimal valueUnsignedInt,
-      @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
-      Decimal valuePositiveInt,
-      @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
-      String valueMarkdown,
-      @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
-      Element valueElement,
-      FhirExtension valueExtension,
-      BackboneElement valueBackboneElement,
-      Narrative valueNarrative,
-      Annotation valueAnnotation,
-      Attachment valueAttachment,
-      Identifier valueIdentifier,
-      CodeableConcept valueCodeableConcept,
-      Coding valueCoding,
-      Quantity valueQuantity,
-      FhirDuration valueDuration,
-      Quantity valueSimpleQuantity,
-      Distance valueDistance,
-      Count valueCount,
-      Money valueMoney,
-      Age valueAge,
-      Range valueRange,
-      Period valuePeriod,
-      Ratio valueRatio,
-      Reference valueReference,
-      SampledData valueSampledData,
-      Signature valueSignature,
-      HumanName valueHumanName,
-      Address valueAddress,
-      ContactPoint valueContactPoint,
-      Timing valueTiming,
-      Meta valueMeta,
-      ElementDefinition valueElementDefinition,
-      ContactDetail valueContactDetail,
-      Contributor valueContributor,
-      Dosage valueDosage,
-      RelatedArtifact valueRelatedArtifact,
-      UsageContext valueUsageContext,
-      DataRequirement valueDataRequirement,
-      ParameterDefinition valueParameterDefinition,
-      TriggerDefinition valueTriggerDefinition,
-      Resource resource,
-      List<ParametersParameter> part}) = _$_ParametersParameter;
+          {String name,
+          @JsonKey(name: '_name') Element nameElement,
+          Boolean valueBoolean,
+          @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+          Decimal valueInteger,
+          @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+          Decimal valueDecimal,
+          @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+          String valueBase64Binary,
+          @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
+          String valueInstant,
+          @JsonKey(name: '_valueInstant') Element valueInstantElement,
+          String valueString,
+          @JsonKey(name: '_valueString') Element valueStringElement,
+          String valueUri,
+          @JsonKey(name: '_valueUri') Element valueUriElement,
+          Date valueDate,
+          @JsonKey(name: '_valueDate') Element valueDateElement,
+          FhirDateTime valueDateTime,
+          @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+          Time valueTime,
+          @JsonKey(name: '_valueTime') Element valueTimeElement,
+          Code valueCode,
+          @JsonKey(name: '_valueCode') Element valueCodeElement,
+          Id valueOid,
+          @JsonKey(name: '_valueOid') Element valueOidElement,
+          Id valueUuid,
+          @JsonKey(name: '_valueUuid') Element valueUuidElement,
+          Id valueId,
+          @JsonKey(name: '_valueId') Element valueIdElement,
+          Decimal valueUnsignedInt,
+          @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
+          Decimal valuePositiveInt,
+          @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
+          String valueMarkdown,
+          @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
+          Element valueElement,
+          FhirExtension valueExtension,
+          BackboneElement valueBackboneElement,
+          Narrative valueNarrative,
+          Annotation valueAnnotation,
+          Attachment valueAttachment,
+          Identifier valueIdentifier,
+          CodeableConcept valueCodeableConcept,
+          Coding valueCoding,
+          Quantity valueQuantity,
+          FhirDuration valueDuration,
+          Quantity valueSimpleQuantity,
+          Distance valueDistance,
+          Count valueCount,
+          Money valueMoney,
+          Age valueAge,
+          Range valueRange,
+          Period valuePeriod,
+          Ratio valueRatio,
+          Reference valueReference,
+          SampledData valueSampledData,
+          Signature valueSignature,
+          HumanName valueHumanName,
+          Address valueAddress,
+          ContactPoint valueContactPoint,
+          Timing valueTiming,
+          Meta valueMeta,
+          ElementDefinition valueElementDefinition,
+          ContactDetail valueContactDetail,
+          Contributor valueContributor,
+          Dosage valueDosage,
+          RelatedArtifact valueRelatedArtifact,
+          UsageContext valueUsageContext,
+          DataRequirement valueDataRequirement,
+          ParameterDefinition valueParameterDefinition,
+          TriggerDefinition valueTriggerDefinition,
+          Resource resource,
+          @JsonKey(name: 'part') List<ParametersParameter> part_}) =
+      _$_ParametersParameter;
 
   factory _ParametersParameter.fromJson(Map<String, dynamic> json) =
       _$_ParametersParameter.fromJson;
@@ -10928,7 +10922,8 @@ abstract class _ParametersParameter extends ParametersParameter {
   @override
   Resource get resource;
   @override
-  List<ParametersParameter> get part;
+  @JsonKey(name: 'part')
+  List<ParametersParameter> get part_;
   @override
   _$ParametersParameterCopyWith<_ParametersParameter> get copyWith;
 }
@@ -10943,7 +10938,7 @@ class _$SubscriptionTearOff {
 
 // ignore: unused_element
   _Subscription call(
-      {@required @JsonKey(defaultValue: 'Subscription') String resourceType,
+      {String resourceType = 'Subscription',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -11007,7 +11002,6 @@ const $Subscription = _$SubscriptionTearOff();
 
 /// @nodoc
 mixin _$Subscription {
-  @JsonKey(defaultValue: 'Subscription')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -11051,7 +11045,7 @@ abstract class $SubscriptionCopyWith<$Res> {
           Subscription value, $Res Function(Subscription) then) =
       _$SubscriptionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'Subscription') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -11284,7 +11278,7 @@ abstract class _$SubscriptionCopyWith<$Res>
       __$SubscriptionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'Subscription') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -11426,7 +11420,7 @@ class __$SubscriptionCopyWithImpl<$Res> extends _$SubscriptionCopyWithImpl<$Res>
 /// @nodoc
 class _$_Subscription extends _Subscription {
   _$_Subscription(
-      {@required @JsonKey(defaultValue: 'Subscription') this.resourceType,
+      {this.resourceType = 'Subscription',
       this.id,
       this.meta,
       this.implicitRules,
@@ -11457,8 +11451,8 @@ class _$_Subscription extends _Subscription {
   factory _$_Subscription.fromJson(Map<String, dynamic> json) =>
       _$_$_SubscriptionFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'Subscription')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -11631,7 +11625,7 @@ class _$_Subscription extends _Subscription {
 abstract class _Subscription extends Subscription {
   _Subscription._() : super._();
   factory _Subscription(
-      {@required @JsonKey(defaultValue: 'Subscription') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -11660,7 +11654,6 @@ abstract class _Subscription extends Subscription {
       _$_Subscription.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'Subscription')
   String get resourceType;
   @override
   Id get id;

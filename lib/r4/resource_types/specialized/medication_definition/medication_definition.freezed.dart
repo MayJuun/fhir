@@ -18,7 +18,7 @@ class _$MedicinalProductTearOff {
 
 // ignore: unused_element
   _MedicinalProduct call(
-      {@required @JsonKey(defaultValue: 'MedicinalProduct') String resourceType,
+      {String resourceType = 'MedicinalProduct',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -99,7 +99,6 @@ const $MedicinalProduct = _$MedicinalProductTearOff();
 
 /// @nodoc
 mixin _$MedicinalProduct {
-  @JsonKey(defaultValue: 'MedicinalProduct')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -148,7 +147,7 @@ abstract class $MedicinalProductCopyWith<$Res> {
           MedicinalProduct value, $Res Function(MedicinalProduct) then) =
       _$MedicinalProductCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'MedicinalProduct') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -434,7 +433,7 @@ abstract class _$MedicinalProductCopyWith<$Res>
       __$MedicinalProductCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'MedicinalProduct') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -626,7 +625,7 @@ class __$MedicinalProductCopyWithImpl<$Res>
 /// @nodoc
 class _$_MedicinalProduct extends _MedicinalProduct {
   _$_MedicinalProduct(
-      {@required @JsonKey(defaultValue: 'MedicinalProduct') this.resourceType,
+      {this.resourceType = 'MedicinalProduct',
       this.id,
       this.meta,
       this.implicitRules,
@@ -665,8 +664,8 @@ class _$_MedicinalProduct extends _MedicinalProduct {
   factory _$_MedicinalProduct.fromJson(Map<String, dynamic> json) =>
       _$_$_MedicinalProductFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'MedicinalProduct')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -866,7 +865,7 @@ class _$_MedicinalProduct extends _MedicinalProduct {
 abstract class _MedicinalProduct extends MedicinalProduct {
   _MedicinalProduct._() : super._();
   factory _MedicinalProduct(
-      {@required @JsonKey(defaultValue: 'MedicinalProduct') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -905,7 +904,6 @@ abstract class _MedicinalProduct extends MedicinalProduct {
       _$_MedicinalProduct.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'MedicinalProduct')
   String get resourceType;
   @override
   Id get id;
@@ -1301,14 +1299,14 @@ class _$MedicinalProductNamePartTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      String part,
+      @JsonKey(name: 'part') String part_,
       @JsonKey(name: '_part') Element partElement,
       @required Coding type}) {
     return _MedicinalProductNamePart(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
-      part: part,
+      part_: part_,
       partElement: partElement,
       type: type,
     );
@@ -1330,7 +1328,8 @@ mixin _$MedicinalProductNamePart {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
-  String get part;
+  @JsonKey(name: 'part')
+  String get part_;
   @JsonKey(name: '_part')
   Element get partElement;
   Coding get type;
@@ -1348,7 +1347,7 @@ abstract class $MedicinalProductNamePartCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      String part,
+      @JsonKey(name: 'part') String part_,
       @JsonKey(name: '_part') Element partElement,
       Coding type});
 
@@ -1370,7 +1369,7 @@ class _$MedicinalProductNamePartCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object part = freezed,
+    Object part_ = freezed,
     Object partElement = freezed,
     Object type = freezed,
   }) {
@@ -1382,7 +1381,7 @@ class _$MedicinalProductNamePartCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      part: part == freezed ? _value.part : part as String,
+      part_: part_ == freezed ? _value.part_ : part_ as String,
       partElement:
           partElement == freezed ? _value.partElement : partElement as Element,
       type: type == freezed ? _value.type : type as Coding,
@@ -1421,7 +1420,7 @@ abstract class _$MedicinalProductNamePartCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      String part,
+      @JsonKey(name: 'part') String part_,
       @JsonKey(name: '_part') Element partElement,
       Coding type});
 
@@ -1448,7 +1447,7 @@ class __$MedicinalProductNamePartCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object part = freezed,
+    Object part_ = freezed,
     Object partElement = freezed,
     Object type = freezed,
   }) {
@@ -1460,7 +1459,7 @@ class __$MedicinalProductNamePartCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      part: part == freezed ? _value.part : part as String,
+      part_: part_ == freezed ? _value.part_ : part_ as String,
       partElement:
           partElement == freezed ? _value.partElement : partElement as Element,
       type: type == freezed ? _value.type : type as Coding,
@@ -1476,7 +1475,7 @@ class _$_MedicinalProductNamePart extends _MedicinalProductNamePart {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      this.part,
+      @JsonKey(name: 'part') this.part_,
       @JsonKey(name: '_part') this.partElement,
       @required this.type})
       : assert(type != null),
@@ -1493,7 +1492,8 @@ class _$_MedicinalProductNamePart extends _MedicinalProductNamePart {
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  final String part;
+  @JsonKey(name: 'part')
+  final String part_;
   @override
   @JsonKey(name: '_part')
   final Element partElement;
@@ -1502,7 +1502,7 @@ class _$_MedicinalProductNamePart extends _MedicinalProductNamePart {
 
   @override
   String toString() {
-    return 'MedicinalProductNamePart(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, part: $part, partElement: $partElement, type: $type)';
+    return 'MedicinalProductNamePart(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, part_: $part_, partElement: $partElement, type: $type)';
   }
 
   @override
@@ -1517,8 +1517,8 @@ class _$_MedicinalProductNamePart extends _MedicinalProductNamePart {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.part, part) ||
-                const DeepCollectionEquality().equals(other.part, part)) &&
+            (identical(other.part_, part_) ||
+                const DeepCollectionEquality().equals(other.part_, part_)) &&
             (identical(other.partElement, partElement) ||
                 const DeepCollectionEquality()
                     .equals(other.partElement, partElement)) &&
@@ -1532,7 +1532,7 @@ class _$_MedicinalProductNamePart extends _MedicinalProductNamePart {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(part) ^
+      const DeepCollectionEquality().hash(part_) ^
       const DeepCollectionEquality().hash(partElement) ^
       const DeepCollectionEquality().hash(type);
 
@@ -1553,7 +1553,7 @@ abstract class _MedicinalProductNamePart extends MedicinalProductNamePart {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      String part,
+      @JsonKey(name: 'part') String part_,
       @JsonKey(name: '_part') Element partElement,
       @required Coding type}) = _$_MedicinalProductNamePart;
 
@@ -1568,7 +1568,8 @@ abstract class _MedicinalProductNamePart extends MedicinalProductNamePart {
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  String get part;
+  @JsonKey(name: 'part')
+  String get part_;
   @override
   @JsonKey(name: '_part')
   Element get partElement;
@@ -16820,7 +16821,7 @@ class _$SubstancePolymerTearOff {
 
 // ignore: unused_element
   _SubstancePolymer call(
-      {@required @JsonKey(defaultValue: 'SubstancePolymer') String resourceType,
+      {String resourceType = 'SubstancePolymer',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -16872,7 +16873,6 @@ const $SubstancePolymer = _$SubstancePolymerTearOff();
 
 /// @nodoc
 mixin _$SubstancePolymer {
-  @JsonKey(defaultValue: 'SubstancePolymer')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -16907,7 +16907,7 @@ abstract class $SubstancePolymerCopyWith<$Res> {
           SubstancePolymer value, $Res Function(SubstancePolymer) then) =
       _$SubstancePolymerCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'SubstancePolymer') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -17079,7 +17079,7 @@ abstract class _$SubstancePolymerCopyWith<$Res>
       __$SubstancePolymerCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'SubstancePolymer') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -17196,7 +17196,7 @@ class __$SubstancePolymerCopyWithImpl<$Res>
 /// @nodoc
 class _$_SubstancePolymer extends _SubstancePolymer {
   _$_SubstancePolymer(
-      {@required @JsonKey(defaultValue: 'SubstancePolymer') this.resourceType,
+      {this.resourceType = 'SubstancePolymer',
       this.id,
       this.meta,
       this.implicitRules,
@@ -17220,8 +17220,8 @@ class _$_SubstancePolymer extends _SubstancePolymer {
   factory _$_SubstancePolymer.fromJson(Map<String, dynamic> json) =>
       _$_$_SubstancePolymerFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'SubstancePolymer')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -17358,7 +17358,7 @@ class _$_SubstancePolymer extends _SubstancePolymer {
 abstract class _SubstancePolymer extends SubstancePolymer {
   _SubstancePolymer._() : super._();
   factory _SubstancePolymer(
-      {@required @JsonKey(defaultValue: 'SubstancePolymer') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -17381,7 +17381,6 @@ abstract class _SubstancePolymer extends SubstancePolymer {
       _$_SubstancePolymer.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'SubstancePolymer')
   String get resourceType;
   @override
   Id get id;
@@ -19489,7 +19488,7 @@ class _$SubstanceProteinTearOff {
 
 // ignore: unused_element
   _SubstanceProtein call(
-      {@required @JsonKey(defaultValue: 'SubstanceProtein') String resourceType,
+      {String resourceType = 'SubstanceProtein',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -19539,7 +19538,6 @@ const $SubstanceProtein = _$SubstanceProteinTearOff();
 
 /// @nodoc
 mixin _$SubstanceProtein {
-  @JsonKey(defaultValue: 'SubstanceProtein')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -19573,7 +19571,7 @@ abstract class $SubstanceProteinCopyWith<$Res> {
           SubstanceProtein value, $Res Function(SubstanceProtein) then) =
       _$SubstanceProteinCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'SubstanceProtein') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -19743,7 +19741,7 @@ abstract class _$SubstanceProteinCopyWith<$Res>
       __$SubstanceProteinCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'SubstanceProtein') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -19858,7 +19856,7 @@ class __$SubstanceProteinCopyWithImpl<$Res>
 /// @nodoc
 class _$_SubstanceProtein extends _SubstanceProtein {
   _$_SubstanceProtein(
-      {@required @JsonKey(defaultValue: 'SubstanceProtein') this.resourceType,
+      {this.resourceType = 'SubstanceProtein',
       this.id,
       this.meta,
       this.implicitRules,
@@ -19881,8 +19879,8 @@ class _$_SubstanceProtein extends _SubstanceProtein {
   factory _$_SubstanceProtein.fromJson(Map<String, dynamic> json) =>
       _$_$_SubstanceProteinFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'SubstanceProtein')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -20016,7 +20014,7 @@ class _$_SubstanceProtein extends _SubstanceProtein {
 abstract class _SubstanceProtein extends SubstanceProtein {
   _SubstanceProtein._() : super._();
   factory _SubstanceProtein(
-      {@required @JsonKey(defaultValue: 'SubstanceProtein') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -20038,7 +20036,6 @@ abstract class _SubstanceProtein extends SubstanceProtein {
       _$_SubstanceProtein.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'SubstanceProtein')
   String get resourceType;
   @override
   Id get id;
@@ -25792,13 +25789,13 @@ class _$SubstanceSourceMaterialPartDescriptionTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      CodeableConcept part,
+      @JsonKey(name: 'part') CodeableConcept part_,
       CodeableConcept partLocation}) {
     return _SubstanceSourceMaterialPartDescription(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
-      part: part,
+      part_: part_,
       partLocation: partLocation,
     );
   }
@@ -25820,7 +25817,8 @@ mixin _$SubstanceSourceMaterialPartDescription {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
-  CodeableConcept get part;
+  @JsonKey(name: 'part')
+  CodeableConcept get part_;
   CodeableConcept get partLocation;
 
   Map<String, dynamic> toJson();
@@ -25838,10 +25836,10 @@ abstract class $SubstanceSourceMaterialPartDescriptionCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      CodeableConcept part,
+      @JsonKey(name: 'part') CodeableConcept part_,
       CodeableConcept partLocation});
 
-  $CodeableConceptCopyWith<$Res> get part;
+  $CodeableConceptCopyWith<$Res> get part_;
   $CodeableConceptCopyWith<$Res> get partLocation;
 }
 
@@ -25859,7 +25857,7 @@ class _$SubstanceSourceMaterialPartDescriptionCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object part = freezed,
+    Object part_ = freezed,
     Object partLocation = freezed,
   }) {
     return _then(_value.copyWith(
@@ -25870,7 +25868,7 @@ class _$SubstanceSourceMaterialPartDescriptionCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      part: part == freezed ? _value.part : part as CodeableConcept,
+      part_: part_ == freezed ? _value.part_ : part_ as CodeableConcept,
       partLocation: partLocation == freezed
           ? _value.partLocation
           : partLocation as CodeableConcept,
@@ -25878,12 +25876,12 @@ class _$SubstanceSourceMaterialPartDescriptionCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get part {
-    if (_value.part == null) {
+  $CodeableConceptCopyWith<$Res> get part_ {
+    if (_value.part_ == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.part, (value) {
-      return _then(_value.copyWith(part: value));
+    return $CodeableConceptCopyWith<$Res>(_value.part_, (value) {
+      return _then(_value.copyWith(part_: value));
     });
   }
 
@@ -25910,11 +25908,11 @@ abstract class _$SubstanceSourceMaterialPartDescriptionCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      CodeableConcept part,
+      @JsonKey(name: 'part') CodeableConcept part_,
       CodeableConcept partLocation});
 
   @override
-  $CodeableConceptCopyWith<$Res> get part;
+  $CodeableConceptCopyWith<$Res> get part_;
   @override
   $CodeableConceptCopyWith<$Res> get partLocation;
 }
@@ -25938,7 +25936,7 @@ class __$SubstanceSourceMaterialPartDescriptionCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object part = freezed,
+    Object part_ = freezed,
     Object partLocation = freezed,
   }) {
     return _then(_SubstanceSourceMaterialPartDescription(
@@ -25949,7 +25947,7 @@ class __$SubstanceSourceMaterialPartDescriptionCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      part: part == freezed ? _value.part : part as CodeableConcept,
+      part_: part_ == freezed ? _value.part_ : part_ as CodeableConcept,
       partLocation: partLocation == freezed
           ? _value.partLocation
           : partLocation as CodeableConcept,
@@ -25966,7 +25964,7 @@ class _$_SubstanceSourceMaterialPartDescription
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      this.part,
+      @JsonKey(name: 'part') this.part_,
       this.partLocation})
       : super._();
 
@@ -25982,13 +25980,14 @@ class _$_SubstanceSourceMaterialPartDescription
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  final CodeableConcept part;
+  @JsonKey(name: 'part')
+  final CodeableConcept part_;
   @override
   final CodeableConcept partLocation;
 
   @override
   String toString() {
-    return 'SubstanceSourceMaterialPartDescription(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, part: $part, partLocation: $partLocation)';
+    return 'SubstanceSourceMaterialPartDescription(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, part_: $part_, partLocation: $partLocation)';
   }
 
   @override
@@ -26003,8 +26002,8 @@ class _$_SubstanceSourceMaterialPartDescription
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.part, part) ||
-                const DeepCollectionEquality().equals(other.part, part)) &&
+            (identical(other.part_, part_) ||
+                const DeepCollectionEquality().equals(other.part_, part_)) &&
             (identical(other.partLocation, partLocation) ||
                 const DeepCollectionEquality()
                     .equals(other.partLocation, partLocation)));
@@ -26016,7 +26015,7 @@ class _$_SubstanceSourceMaterialPartDescription
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(part) ^
+      const DeepCollectionEquality().hash(part_) ^
       const DeepCollectionEquality().hash(partLocation);
 
   @override
@@ -26038,7 +26037,7 @@ abstract class _SubstanceSourceMaterialPartDescription
           {String id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
-          CodeableConcept part,
+          @JsonKey(name: 'part') CodeableConcept part_,
           CodeableConcept partLocation}) =
       _$_SubstanceSourceMaterialPartDescription;
 
@@ -26054,7 +26053,8 @@ abstract class _SubstanceSourceMaterialPartDescription
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  CodeableConcept get part;
+  @JsonKey(name: 'part')
+  CodeableConcept get part_;
   @override
   CodeableConcept get partLocation;
   @override

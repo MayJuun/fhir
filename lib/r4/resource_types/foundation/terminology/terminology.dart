@@ -11,7 +11,7 @@ part 'terminology.g.dart';
 abstract class CodeSystem with Resource implements _$CodeSystem {
   CodeSystem._();
   factory CodeSystem({
-    @JsonKey(defaultValue: 'CodeSystem') @required String resourceType,
+    @Default('CodeSystem') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -85,7 +85,7 @@ abstract class CodeSystemFilter implements _$CodeSystemFilter {
     @JsonKey(name: '_code') Element codeElement,
     String description,
     @JsonKey(name: '_description') Element descriptionElement,
-    List<Code> operator,
+    @JsonKey(name: 'operator') List<Code> operator_,
     @JsonKey(name: '_operator') List<Element> operatorElement,
     String value,
     @JsonKey(name: '_value') Element valueElement,
@@ -189,7 +189,7 @@ abstract class CodeSystemProperty1 implements _$CodeSystemProperty1 {
 abstract class ConceptMap with Resource implements _$ConceptMap {
   ConceptMap._();
   factory ConceptMap({
-    @JsonKey(defaultValue: 'ConceptMap') @required String resourceType,
+    @Default('ConceptMap') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -352,7 +352,7 @@ abstract class ConceptMapUnmapped implements _$ConceptMapUnmapped {
 abstract class NamingSystem with Resource implements _$NamingSystem {
   NamingSystem._();
   factory NamingSystem({
-    @JsonKey(defaultValue: 'NamingSystem') @required String resourceType,
+    @Default('NamingSystem') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -675,7 +675,7 @@ abstract class TerminologyCapabilitiesClosure
 abstract class ValueSet with Resource implements _$ValueSet {
   ValueSet._();
   factory ValueSet({
-    @JsonKey(defaultValue: 'ValueSet') @required String resourceType,
+    @Default('ValueSet') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

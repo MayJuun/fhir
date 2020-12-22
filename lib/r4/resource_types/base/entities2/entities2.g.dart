@@ -1070,7 +1070,7 @@ Map<String, dynamic> _$_$_DeviceMetricToJson(_$_DeviceMetric instance) {
 }
 
 const _$DeviceMetricOperationalStatusEnumMap = {
-  DeviceMetricOperationalStatus.on: 'on',
+  DeviceMetricOperationalStatus.on_: 'on',
   DeviceMetricOperationalStatus.off: 'off',
   DeviceMetricOperationalStatus.standby: 'standby',
   DeviceMetricOperationalStatus.entered_in_error: 'entered-in-error',
