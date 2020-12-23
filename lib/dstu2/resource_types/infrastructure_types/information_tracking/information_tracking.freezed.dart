@@ -598,6 +598,16 @@ class _$_Questionnaire extends _Questionnaire {
         assert(group != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_Questionnaire.fromYaml(dynamic yaml) => yaml is String
+      ? _$_Questionnaire.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_Questionnaire.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_Questionnaire.fromJson(Map<String, dynamic> json) =>
       _$_$_QuestionnaireFromJson(json);
 
@@ -823,6 +833,16 @@ abstract class _Questionnaire extends Questionnaire {
       @required
       @JsonKey(required: true)
           QuestionnaireGroup group}) = _$_Questionnaire;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _Questionnaire.fromYaml(dynamic yaml) => yaml is String
+      ? _Questionnaire.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _Questionnaire.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _Questionnaire.fromJson(Map<String, dynamic> json) =
       _$_Questionnaire.fromJson;
@@ -1183,6 +1203,16 @@ class _$_QuestionnaireGroup extends _QuestionnaireGroup {
       this.question})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_QuestionnaireGroup.fromYaml(dynamic yaml) => yaml is String
+      ? _$_QuestionnaireGroup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_QuestionnaireGroup.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_QuestionnaireGroup.fromJson(Map<String, dynamic> json) =>
       _$_$_QuestionnaireGroupFromJson(json);
 
@@ -1313,6 +1343,16 @@ abstract class _QuestionnaireGroup extends QuestionnaireGroup {
       Boolean repeats,
       List<QuestionnaireGroup> group,
       List<QuestionnaireGroupQuestion> question}) = _$_QuestionnaireGroup;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _QuestionnaireGroup.fromYaml(dynamic yaml) => yaml is String
+      ? _QuestionnaireGroup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _QuestionnaireGroup.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _QuestionnaireGroup.fromJson(Map<String, dynamic> json) =
       _$_QuestionnaireGroup.fromJson;
@@ -1640,6 +1680,17 @@ class _$_QuestionnaireGroupQuestion extends _QuestionnaireGroupQuestion {
       this.group})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_QuestionnaireGroupQuestion.fromYaml(dynamic yaml) => yaml is String
+      ? _$_QuestionnaireGroupQuestion
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_QuestionnaireGroupQuestion.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_QuestionnaireGroupQuestion.fromJson(Map<String, dynamic> json) =>
       _$_$_QuestionnaireGroupQuestionFromJson(json);
 
@@ -1770,6 +1821,17 @@ abstract class _QuestionnaireGroupQuestion extends QuestionnaireGroupQuestion {
       Reference options,
       List<Coding> option,
       List<QuestionnaireGroup> group}) = _$_QuestionnaireGroupQuestion;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _QuestionnaireGroupQuestion.fromYaml(dynamic yaml) => yaml is String
+      ? _QuestionnaireGroupQuestion.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _QuestionnaireGroupQuestion.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _QuestionnaireGroupQuestion.fromJson(Map<String, dynamic> json) =
       _$_QuestionnaireGroupQuestion.fromJson;
@@ -2416,6 +2478,17 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
         assert(status != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_QuestionnaireResponse.fromYaml(dynamic yaml) => yaml is String
+      ? _$_QuestionnaireResponse
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_QuestionnaireResponse.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_QuestionnaireResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_QuestionnaireResponseFromJson(json);
 
@@ -2622,6 +2695,16 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
       Reference source,
       Reference encounter,
       QuestionnaireResponseGroup group}) = _$_QuestionnaireResponse;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _QuestionnaireResponse.fromYaml(dynamic yaml) => yaml is String
+      ? _QuestionnaireResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _QuestionnaireResponse.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _QuestionnaireResponse.fromJson(Map<String, dynamic> json) =
       _$_QuestionnaireResponse.fromJson;
@@ -2973,6 +3056,17 @@ class _$_QuestionnaireResponseGroup extends _QuestionnaireResponseGroup {
       this.question})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_QuestionnaireResponseGroup.fromYaml(dynamic yaml) => yaml is String
+      ? _$_QuestionnaireResponseGroup
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_QuestionnaireResponseGroup.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_QuestionnaireResponseGroup.fromJson(Map<String, dynamic> json) =>
       _$_$_QuestionnaireResponseGroupFromJson(json);
 
@@ -3090,6 +3184,17 @@ abstract class _QuestionnaireResponseGroup extends QuestionnaireResponseGroup {
           List<QuestionnaireResponseGroup> group,
           List<QuestionnaireResponseGroupQuestion> question}) =
       _$_QuestionnaireResponseGroup;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _QuestionnaireResponseGroup.fromYaml(dynamic yaml) => yaml is String
+      ? _QuestionnaireResponseGroup.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _QuestionnaireResponseGroup.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _QuestionnaireResponseGroup.fromJson(Map<String, dynamic> json) =
       _$_QuestionnaireResponseGroup.fromJson;
@@ -3345,6 +3450,19 @@ class _$_QuestionnaireResponseGroupQuestion
       this.answer})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_QuestionnaireResponseGroupQuestion.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_QuestionnaireResponseGroupQuestion
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_QuestionnaireResponseGroupQuestion
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_QuestionnaireResponseGroupQuestion.fromJson(
           Map<String, dynamic> json) =>
       _$_$_QuestionnaireResponseGroupQuestionFromJson(json);
@@ -3437,6 +3555,19 @@ abstract class _QuestionnaireResponseGroupQuestion
           String text,
           List<QuestionnaireResponseQuestionAnswer> answer}) =
       _$_QuestionnaireResponseGroupQuestion;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _QuestionnaireResponseGroupQuestion.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _QuestionnaireResponseGroupQuestion.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _QuestionnaireResponseGroupQuestion.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _QuestionnaireResponseGroupQuestion.fromJson(
           Map<String, dynamic> json) =
@@ -4106,6 +4237,19 @@ class _$_QuestionnaireResponseQuestionAnswer
       this.group})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_QuestionnaireResponseQuestionAnswer.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_QuestionnaireResponseQuestionAnswer
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_QuestionnaireResponseQuestionAnswer
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_QuestionnaireResponseQuestionAnswer.fromJson(
           Map<String, dynamic> json) =>
       _$_$_QuestionnaireResponseQuestionAnswerFromJson(json);
@@ -4332,6 +4476,19 @@ abstract class _QuestionnaireResponseQuestionAnswer
           Reference valueReference,
           List<QuestionnaireResponseGroup> group}) =
       _$_QuestionnaireResponseQuestionAnswer;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _QuestionnaireResponseQuestionAnswer.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _QuestionnaireResponseQuestionAnswer.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _QuestionnaireResponseQuestionAnswer.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _QuestionnaireResponseQuestionAnswer.fromJson(
           Map<String, dynamic> json) =
@@ -4886,6 +5043,16 @@ class _$_Provenance extends _Provenance {
         assert(recorded != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_Provenance.fromYaml(dynamic yaml) => yaml is String
+      ? _$_Provenance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_Provenance.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_Provenance.fromJson(Map<String, dynamic> json) =>
       _$_$_ProvenanceFromJson(json);
 
@@ -5078,6 +5245,16 @@ abstract class _Provenance extends Provenance {
       List<ProvenanceAgent> agent,
       List<ProvenanceEntity> entity,
       List<Signature> signature}) = _$_Provenance;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _Provenance.fromYaml(dynamic yaml) => yaml is String
+      ? _Provenance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _Provenance.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _Provenance.fromJson(Map<String, dynamic> json) =
       _$_Provenance.fromJson;
@@ -5372,6 +5549,16 @@ class _$_ProvenanceAgent extends _ProvenanceAgent {
       : assert(role != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ProvenanceAgent.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ProvenanceAgent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ProvenanceAgent.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ProvenanceAgent.fromJson(Map<String, dynamic> json) =>
       _$_$_ProvenanceAgentFromJson(json);
 
@@ -5459,6 +5646,16 @@ abstract class _ProvenanceAgent extends ProvenanceAgent {
       Reference actor,
       Identifier userId,
       List<ProvenanceAgentRelatedAgent> relatedAgent}) = _$_ProvenanceAgent;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ProvenanceAgent.fromYaml(dynamic yaml) => yaml is String
+      ? _ProvenanceAgent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ProvenanceAgent.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ProvenanceAgent.fromJson(Map<String, dynamic> json) =
       _$_ProvenanceAgent.fromJson;
@@ -5804,6 +6001,16 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
         assert(reference != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ProvenanceEntity.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ProvenanceEntity.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ProvenanceEntity.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
       _$_$_ProvenanceEntityFromJson(json);
 
@@ -5926,6 +6133,16 @@ abstract class _ProvenanceEntity extends ProvenanceEntity {
           Element referenceElement,
       String display,
       ProvenanceAgent agent}) = _$_ProvenanceEntity;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ProvenanceEntity.fromYaml(dynamic yaml) => yaml is String
+      ? _ProvenanceEntity.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ProvenanceEntity.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ProvenanceEntity.fromJson(Map<String, dynamic> json) =
       _$_ProvenanceEntity.fromJson;
@@ -6139,6 +6356,19 @@ class _$_ProvenanceAgentRelatedAgent extends _ProvenanceAgentRelatedAgent {
         assert(target != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ProvenanceAgentRelatedAgent.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_ProvenanceAgentRelatedAgent
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_ProvenanceAgentRelatedAgent
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_ProvenanceAgentRelatedAgent.fromJson(Map<String, dynamic> json) =>
       _$_$_ProvenanceAgentRelatedAgentFromJson(json);
 
@@ -6209,6 +6439,17 @@ abstract class _ProvenanceAgentRelatedAgent
           @required @JsonKey(required: true) CodeableConcept type,
           @required @JsonKey(required: true) FhirUri target}) =
       _$_ProvenanceAgentRelatedAgent;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ProvenanceAgentRelatedAgent.fromYaml(dynamic yaml) => yaml is String
+      ? _ProvenanceAgentRelatedAgent.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ProvenanceAgentRelatedAgent.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ProvenanceAgentRelatedAgent.fromJson(Map<String, dynamic> json) =
       _$_ProvenanceAgentRelatedAgent.fromJson;
@@ -6601,6 +6842,16 @@ class _$_AuditEvent extends _AuditEvent {
         assert(source != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_AuditEvent.fromYaml(dynamic yaml) => yaml is String
+      ? _$_AuditEvent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_AuditEvent.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_AuditEvent.fromJson(Map<String, dynamic> json) =>
       _$_$_AuditEventFromJson(json);
 
@@ -6748,6 +6999,16 @@ abstract class _AuditEvent extends AuditEvent {
       @JsonKey(required: true)
           AuditEventSource source,
       List<AuditEventObject> object}) = _$_AuditEvent;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _AuditEvent.fromYaml(dynamic yaml) => yaml is String
+      ? _AuditEvent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _AuditEvent.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _AuditEvent.fromJson(Map<String, dynamic> json) =
       _$_AuditEvent.fromJson;
@@ -7018,6 +7279,16 @@ class _$_AuditEventEvent extends _AuditEventEvent {
         assert(dateTime != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_AuditEventEvent.fromYaml(dynamic yaml) => yaml is String
+      ? _$_AuditEventEvent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_AuditEventEvent.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_AuditEventEvent.fromJson(Map<String, dynamic> json) =>
       _$_$_AuditEventEventFromJson(json);
 
@@ -7120,6 +7391,16 @@ abstract class _AuditEventEvent extends AuditEventEvent {
       Code outcome,
       String outcomeDesc,
       List<Coding> purposeOfEvent}) = _$_AuditEventEvent;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _AuditEventEvent.fromYaml(dynamic yaml) => yaml is String
+      ? _AuditEventEvent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _AuditEventEvent.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _AuditEventEvent.fromJson(Map<String, dynamic> json) =
       _$_AuditEventEvent.fromJson;
@@ -7498,6 +7779,17 @@ class _$_AuditEventParticipant extends _AuditEventParticipant {
       : assert(requestor != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_AuditEventParticipant.fromYaml(dynamic yaml) => yaml is String
+      ? _$_AuditEventParticipant
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_AuditEventParticipant.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_AuditEventParticipant.fromJson(Map<String, dynamic> json) =>
       _$_$_AuditEventParticipantFromJson(json);
 
@@ -7632,6 +7924,16 @@ abstract class _AuditEventParticipant extends AuditEventParticipant {
       Coding media,
       AuditEventParticipantNetwork network,
       List<Coding> purposeOfUse}) = _$_AuditEventParticipant;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _AuditEventParticipant.fromYaml(dynamic yaml) => yaml is String
+      ? _AuditEventParticipant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _AuditEventParticipant.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _AuditEventParticipant.fromJson(Map<String, dynamic> json) =
       _$_AuditEventParticipant.fromJson;
@@ -7879,6 +8181,16 @@ class _$_AuditEventSource extends _AuditEventSource {
       : assert(identifier != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_AuditEventSource.fromYaml(dynamic yaml) => yaml is String
+      ? _$_AuditEventSource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_AuditEventSource.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_AuditEventSource.fromJson(Map<String, dynamic> json) =>
       _$_$_AuditEventSourceFromJson(json);
 
@@ -7960,6 +8272,16 @@ abstract class _AuditEventSource extends AuditEventSource {
       @JsonKey(name: '_site') Element siteElement,
       @required @JsonKey(required: true) Identifier identifier,
       List<Coding> type}) = _$_AuditEventSource;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _AuditEventSource.fromYaml(dynamic yaml) => yaml is String
+      ? _AuditEventSource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _AuditEventSource.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _AuditEventSource.fromJson(Map<String, dynamic> json) =
       _$_AuditEventSource.fromJson;
@@ -8325,6 +8647,16 @@ class _$_AuditEventObject extends _AuditEventObject {
       this.detail})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_AuditEventObject.fromYaml(dynamic yaml) => yaml is String
+      ? _$_AuditEventObject.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_AuditEventObject.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_AuditEventObject.fromJson(Map<String, dynamic> json) =>
       _$_$_AuditEventObjectFromJson(json);
 
@@ -8451,6 +8783,16 @@ abstract class _AuditEventObject extends AuditEventObject {
       Base64Binary query,
       @JsonKey(name: '_query') Element queryElement,
       List<AuditEventObjectDetail> detail}) = _$_AuditEventObject;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _AuditEventObject.fromYaml(dynamic yaml) => yaml is String
+      ? _AuditEventObject.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _AuditEventObject.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _AuditEventObject.fromJson(Map<String, dynamic> json) =
       _$_AuditEventObject.fromJson;
@@ -8702,6 +9044,19 @@ class _$_AuditEventParticipantNetwork extends _AuditEventParticipantNetwork {
       @JsonKey(name: '_type') this.typeElement})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_AuditEventParticipantNetwork.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_AuditEventParticipantNetwork
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_AuditEventParticipantNetwork
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_AuditEventParticipantNetwork.fromJson(Map<String, dynamic> json) =>
       _$_$_AuditEventParticipantNetworkFromJson(json);
 
@@ -8787,6 +9142,17 @@ abstract class _AuditEventParticipantNetwork
           Code type,
           @JsonKey(name: '_type') Element typeElement}) =
       _$_AuditEventParticipantNetwork;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _AuditEventParticipantNetwork.fromYaml(dynamic yaml) => yaml is String
+      ? _AuditEventParticipantNetwork.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _AuditEventParticipantNetwork.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _AuditEventParticipantNetwork.fromJson(Map<String, dynamic> json) =
       _$_AuditEventParticipantNetwork.fromJson;
@@ -8997,6 +9363,17 @@ class _$_AuditEventObjectDetail extends _AuditEventObjectDetail {
         assert(value != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_AuditEventObjectDetail.fromYaml(dynamic yaml) => yaml is String
+      ? _$_AuditEventObjectDetail
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_AuditEventObjectDetail.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_AuditEventObjectDetail.fromJson(Map<String, dynamic> json) =>
       _$_$_AuditEventObjectDetailFromJson(json);
 
@@ -9074,6 +9451,16 @@ abstract class _AuditEventObjectDetail extends AuditEventObjectDetail {
           @JsonKey(name: '_type') Element typeElement,
           @required @JsonKey(required: true) Base64Binary value}) =
       _$_AuditEventObjectDetail;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _AuditEventObjectDetail.fromYaml(dynamic yaml) => yaml is String
+      ? _AuditEventObjectDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _AuditEventObjectDetail.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _AuditEventObjectDetail.fromJson(Map<String, dynamic> json) =
       _$_AuditEventObjectDetail.fromJson;

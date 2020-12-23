@@ -1187,6 +1187,17 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
         assert(outcome != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_EffectEvidenceSynthesis.fromYaml(dynamic yaml) => yaml is String
+      ? _$_EffectEvidenceSynthesis
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_EffectEvidenceSynthesis.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_EffectEvidenceSynthesis.fromJson(Map<String, dynamic> json) =>
       _$_$_EffectEvidenceSynthesisFromJson(json);
 
@@ -1576,6 +1587,17 @@ abstract class _EffectEvidenceSynthesis extends EffectEvidenceSynthesis {
           List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
           List<EffectEvidenceSynthesisCertainty> certainty}) =
       _$_EffectEvidenceSynthesis;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _EffectEvidenceSynthesis.fromYaml(dynamic yaml) => yaml is String
+      ? _EffectEvidenceSynthesis.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _EffectEvidenceSynthesis.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _EffectEvidenceSynthesis.fromJson(Map<String, dynamic> json) =
       _$_EffectEvidenceSynthesis.fromJson;
@@ -1987,6 +2009,19 @@ class _$_EffectEvidenceSynthesisSampleSize
       @JsonKey(name: '_numberOfParticipants') this.numberOfParticipantsElement})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_EffectEvidenceSynthesisSampleSize.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_EffectEvidenceSynthesisSampleSize
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_EffectEvidenceSynthesisSampleSize
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_EffectEvidenceSynthesisSampleSize.fromJson(
           Map<String, dynamic> json) =>
       _$_$_EffectEvidenceSynthesisSampleSizeFromJson(json);
@@ -2096,6 +2131,19 @@ abstract class _EffectEvidenceSynthesisSampleSize
           @JsonKey(name: '_numberOfParticipants')
               Element numberOfParticipantsElement}) =
       _$_EffectEvidenceSynthesisSampleSize;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _EffectEvidenceSynthesisSampleSize.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _EffectEvidenceSynthesisSampleSize.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _EffectEvidenceSynthesisSampleSize.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _EffectEvidenceSynthesisSampleSize.fromJson(
           Map<String, dynamic> json) =
@@ -2440,6 +2488,19 @@ class _$_EffectEvidenceSynthesisResultsByExposure
       : assert(riskEvidenceSynthesis != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_EffectEvidenceSynthesisResultsByExposure.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_EffectEvidenceSynthesisResultsByExposure
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_EffectEvidenceSynthesisResultsByExposure
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_EffectEvidenceSynthesisResultsByExposure.fromJson(
           Map<String, dynamic> json) =>
       _$_$_EffectEvidenceSynthesisResultsByExposureFromJson(json);
@@ -2552,6 +2613,19 @@ abstract class _EffectEvidenceSynthesisResultsByExposure
           @required
               Reference riskEvidenceSynthesis}) =
       _$_EffectEvidenceSynthesisResultsByExposure;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _EffectEvidenceSynthesisResultsByExposure.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _EffectEvidenceSynthesisResultsByExposure.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _EffectEvidenceSynthesisResultsByExposure.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _EffectEvidenceSynthesisResultsByExposure.fromJson(
           Map<String, dynamic> json) =
@@ -2897,6 +2971,19 @@ class _$_EffectEvidenceSynthesisEffectEstimate
       this.precisionEstimate})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_EffectEvidenceSynthesisEffectEstimate.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_EffectEvidenceSynthesisEffectEstimate
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_EffectEvidenceSynthesisEffectEstimate
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_EffectEvidenceSynthesisEffectEstimate.fromJson(
           Map<String, dynamic> json) =>
       _$_$_EffectEvidenceSynthesisEffectEstimateFromJson(json);
@@ -3011,6 +3098,19 @@ abstract class _EffectEvidenceSynthesisEffectEstimate
           CodeableConcept unitOfMeasure,
           List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate}) =
       _$_EffectEvidenceSynthesisEffectEstimate;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _EffectEvidenceSynthesisEffectEstimate.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _EffectEvidenceSynthesisEffectEstimate.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _EffectEvidenceSynthesisEffectEstimate.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _EffectEvidenceSynthesisEffectEstimate.fromJson(
           Map<String, dynamic> json) =
@@ -3321,6 +3421,19 @@ class _$_EffectEvidenceSynthesisPrecisionEstimate
       @JsonKey(name: '_to') this.toElement})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_EffectEvidenceSynthesisPrecisionEstimate.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_EffectEvidenceSynthesisPrecisionEstimate
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_EffectEvidenceSynthesisPrecisionEstimate
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_EffectEvidenceSynthesisPrecisionEstimate.fromJson(
           Map<String, dynamic> json) =>
       _$_$_EffectEvidenceSynthesisPrecisionEstimateFromJson(json);
@@ -3427,6 +3540,19 @@ abstract class _EffectEvidenceSynthesisPrecisionEstimate
           Decimal to,
           @JsonKey(name: '_to') Element toElement}) =
       _$_EffectEvidenceSynthesisPrecisionEstimate;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _EffectEvidenceSynthesisPrecisionEstimate.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _EffectEvidenceSynthesisPrecisionEstimate.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _EffectEvidenceSynthesisPrecisionEstimate.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _EffectEvidenceSynthesisPrecisionEstimate.fromJson(
           Map<String, dynamic> json) =
@@ -3641,6 +3767,19 @@ class _$_EffectEvidenceSynthesisCertainty
       this.certaintySubcomponent})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_EffectEvidenceSynthesisCertainty.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_EffectEvidenceSynthesisCertainty
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_EffectEvidenceSynthesisCertainty
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_EffectEvidenceSynthesisCertainty.fromJson(
           Map<String, dynamic> json) =>
       _$_$_EffectEvidenceSynthesisCertaintyFromJson(json);
@@ -3718,6 +3857,19 @@ abstract class _EffectEvidenceSynthesisCertainty
       List<Annotation> note,
       List<EffectEvidenceSynthesisCertaintySubcomponent>
           certaintySubcomponent}) = _$_EffectEvidenceSynthesisCertainty;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _EffectEvidenceSynthesisCertainty.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _EffectEvidenceSynthesisCertainty.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _EffectEvidenceSynthesisCertainty.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _EffectEvidenceSynthesisCertainty.fromJson(
       Map<String, dynamic> json) = _$_EffectEvidenceSynthesisCertainty.fromJson;
@@ -3930,6 +4082,20 @@ class _$_EffectEvidenceSynthesisCertaintySubcomponent
       this.note})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_EffectEvidenceSynthesisCertaintySubcomponent.fromYaml(
+          dynamic yaml) =>
+      yaml is String
+          ? _$_EffectEvidenceSynthesisCertaintySubcomponent
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_EffectEvidenceSynthesisCertaintySubcomponent
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_EffectEvidenceSynthesisCertaintySubcomponent.fromJson(
           Map<String, dynamic> json) =>
       _$_$_EffectEvidenceSynthesisCertaintySubcomponentFromJson(json);
@@ -4006,6 +4172,20 @@ abstract class _EffectEvidenceSynthesisCertaintySubcomponent
       CodeableConcept type,
       List<CodeableConcept> rating,
       List<Annotation> note}) = _$_EffectEvidenceSynthesisCertaintySubcomponent;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _EffectEvidenceSynthesisCertaintySubcomponent.fromYaml(
+          dynamic yaml) =>
+      yaml is String
+          ? _EffectEvidenceSynthesisCertaintySubcomponent.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _EffectEvidenceSynthesisCertaintySubcomponent.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _EffectEvidenceSynthesisCertaintySubcomponent.fromJson(
           Map<String, dynamic> json) =
@@ -5025,6 +5205,16 @@ class _$_Evidence extends _Evidence {
         assert(exposureBackground != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_Evidence.fromYaml(dynamic yaml) => yaml is String
+      ? _$_Evidence.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_Evidence.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_Evidence.fromJson(Map<String, dynamic> json) =>
       _$_$_EvidenceFromJson(json);
 
@@ -5378,6 +5568,16 @@ abstract class _Evidence extends Evidence {
       @required Reference exposureBackground,
       List<Reference> exposureVariant,
       List<Reference> outcome}) = _$_Evidence;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _Evidence.fromYaml(dynamic yaml) => yaml is String
+      ? _Evidence.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _Evidence.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _Evidence.fromJson(Map<String, dynamic> json) = _$_Evidence.fromJson;
 
@@ -6568,6 +6768,16 @@ class _$_EvidenceVariable extends _EvidenceVariable {
         assert(characteristic != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_EvidenceVariable.fromYaml(dynamic yaml) => yaml is String
+      ? _$_EvidenceVariable.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_EvidenceVariable.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_EvidenceVariable.fromJson(Map<String, dynamic> json) =>
       _$_$_EvidenceVariableFromJson(json);
 
@@ -6944,6 +7154,16 @@ abstract class _EvidenceVariable extends EvidenceVariable {
           @required
               List<EvidenceVariableCharacteristic> characteristic}) =
       _$_EvidenceVariable;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _EvidenceVariable.fromYaml(dynamic yaml) => yaml is String
+      ? _EvidenceVariable.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _EvidenceVariable.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _EvidenceVariable.fromJson(Map<String, dynamic> json) =
       _$_EvidenceVariable.fromJson;
@@ -7722,6 +7942,19 @@ class _$_EvidenceVariableCharacteristic
           this.groupMeasureElement})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_EvidenceVariableCharacteristic.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_EvidenceVariableCharacteristic
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_EvidenceVariableCharacteristic
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_EvidenceVariableCharacteristic.fromJson(
           Map<String, dynamic> json) =>
       _$_$_EvidenceVariableCharacteristicFromJson(json);
@@ -7918,6 +8151,19 @@ abstract class _EvidenceVariableCharacteristic
           EvidenceVariableCharacteristicGroupMeasure groupMeasure,
       @JsonKey(name: '_groupMeasure')
           Element groupMeasureElement}) = _$_EvidenceVariableCharacteristic;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _EvidenceVariableCharacteristic.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _EvidenceVariableCharacteristic.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _EvidenceVariableCharacteristic.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _EvidenceVariableCharacteristic.fromJson(Map<String, dynamic> json) =
       _$_EvidenceVariableCharacteristic.fromJson;
@@ -9301,6 +9547,16 @@ class _$_ResearchDefinition extends _ResearchDefinition {
         assert(population != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ResearchDefinition.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ResearchDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ResearchDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ResearchDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_ResearchDefinitionFromJson(json);
 
@@ -9737,6 +9993,16 @@ abstract class _ResearchDefinition extends ResearchDefinition {
       Reference exposure,
       Reference exposureAlternative,
       Reference outcome}) = _$_ResearchDefinition;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ResearchDefinition.fromYaml(dynamic yaml) => yaml is String
+      ? _ResearchDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ResearchDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ResearchDefinition.fromJson(Map<String, dynamic> json) =
       _$_ResearchDefinition.fromJson;
@@ -11260,6 +11526,17 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
         assert(characteristic != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ResearchElementDefinition.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ResearchElementDefinition
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ResearchElementDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ResearchElementDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_ResearchElementDefinitionFromJson(json);
 
@@ -11714,6 +11991,17 @@ abstract class _ResearchElementDefinition extends ResearchElementDefinition {
       @required
           List<ResearchElementDefinitionCharacteristic>
               characteristic}) = _$_ResearchElementDefinition;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ResearchElementDefinition.fromYaml(dynamic yaml) => yaml is String
+      ? _ResearchElementDefinition.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ResearchElementDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ResearchElementDefinition.fromJson(Map<String, dynamic> json) =
       _$_ResearchElementDefinition.fromJson;
@@ -12810,6 +13098,19 @@ class _$_ResearchElementDefinitionCharacteristic
           this.participantEffectiveGroupMeasureElement})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ResearchElementDefinitionCharacteristic.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_ResearchElementDefinitionCharacteristic
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_ResearchElementDefinitionCharacteristic
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_ResearchElementDefinitionCharacteristic.fromJson(
           Map<String, dynamic> json) =>
       _$_$_ResearchElementDefinitionCharacteristicFromJson(json);
@@ -13075,6 +13376,19 @@ abstract class _ResearchElementDefinitionCharacteristic
           @JsonKey(name: '_participantEffectiveGroupMeasure')
               Element participantEffectiveGroupMeasureElement}) =
       _$_ResearchElementDefinitionCharacteristic;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ResearchElementDefinitionCharacteristic.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _ResearchElementDefinitionCharacteristic.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _ResearchElementDefinitionCharacteristic.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _ResearchElementDefinitionCharacteristic.fromJson(
           Map<String, dynamic> json) =
@@ -14313,6 +14627,17 @@ class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
         assert(outcome != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_RiskEvidenceSynthesis.fromYaml(dynamic yaml) => yaml is String
+      ? _$_RiskEvidenceSynthesis
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_RiskEvidenceSynthesis.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_RiskEvidenceSynthesis.fromJson(Map<String, dynamic> json) =>
       _$_$_RiskEvidenceSynthesisFromJson(json);
 
@@ -14690,6 +15015,16 @@ abstract class _RiskEvidenceSynthesis extends RiskEvidenceSynthesis {
           RiskEvidenceSynthesisRiskEstimate riskEstimate,
           List<RiskEvidenceSynthesisCertainty> certainty}) =
       _$_RiskEvidenceSynthesis;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _RiskEvidenceSynthesis.fromYaml(dynamic yaml) => yaml is String
+      ? _RiskEvidenceSynthesis.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _RiskEvidenceSynthesis.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _RiskEvidenceSynthesis.fromJson(Map<String, dynamic> json) =
       _$_RiskEvidenceSynthesis.fromJson;
@@ -15097,6 +15432,19 @@ class _$_RiskEvidenceSynthesisSampleSize
       @JsonKey(name: '_numberOfParticipants') this.numberOfParticipantsElement})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_RiskEvidenceSynthesisSampleSize.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_RiskEvidenceSynthesisSampleSize
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_RiskEvidenceSynthesisSampleSize
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_RiskEvidenceSynthesisSampleSize.fromJson(
           Map<String, dynamic> json) =>
       _$_$_RiskEvidenceSynthesisSampleSizeFromJson(json);
@@ -15205,6 +15553,19 @@ abstract class _RiskEvidenceSynthesisSampleSize
           @JsonKey(name: '_numberOfParticipants')
               Element numberOfParticipantsElement}) =
       _$_RiskEvidenceSynthesisSampleSize;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _RiskEvidenceSynthesisSampleSize.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _RiskEvidenceSynthesisSampleSize.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _RiskEvidenceSynthesisSampleSize.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _RiskEvidenceSynthesisSampleSize.fromJson(Map<String, dynamic> json) =
       _$_RiskEvidenceSynthesisSampleSize.fromJson;
@@ -15603,6 +15964,19 @@ class _$_RiskEvidenceSynthesisRiskEstimate
       this.precisionEstimate})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_RiskEvidenceSynthesisRiskEstimate.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_RiskEvidenceSynthesisRiskEstimate
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_RiskEvidenceSynthesisRiskEstimate
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_RiskEvidenceSynthesisRiskEstimate.fromJson(
           Map<String, dynamic> json) =>
       _$_$_RiskEvidenceSynthesisRiskEstimateFromJson(json);
@@ -15741,6 +16115,19 @@ abstract class _RiskEvidenceSynthesisRiskEstimate
           @JsonKey(name: '_numeratorCount') Element numeratorCountElement,
           List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate}) =
       _$_RiskEvidenceSynthesisRiskEstimate;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _RiskEvidenceSynthesisRiskEstimate.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _RiskEvidenceSynthesisRiskEstimate.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _RiskEvidenceSynthesisRiskEstimate.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _RiskEvidenceSynthesisRiskEstimate.fromJson(
           Map<String, dynamic> json) =
@@ -16058,6 +16445,19 @@ class _$_RiskEvidenceSynthesisPrecisionEstimate
       @JsonKey(name: '_to') this.toElement})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_RiskEvidenceSynthesisPrecisionEstimate.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_RiskEvidenceSynthesisPrecisionEstimate
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_RiskEvidenceSynthesisPrecisionEstimate
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_RiskEvidenceSynthesisPrecisionEstimate.fromJson(
           Map<String, dynamic> json) =>
       _$_$_RiskEvidenceSynthesisPrecisionEstimateFromJson(json);
@@ -16164,6 +16564,19 @@ abstract class _RiskEvidenceSynthesisPrecisionEstimate
           Decimal to,
           @JsonKey(name: '_to') Element toElement}) =
       _$_RiskEvidenceSynthesisPrecisionEstimate;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _RiskEvidenceSynthesisPrecisionEstimate.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _RiskEvidenceSynthesisPrecisionEstimate.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _RiskEvidenceSynthesisPrecisionEstimate.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _RiskEvidenceSynthesisPrecisionEstimate.fromJson(
           Map<String, dynamic> json) =
@@ -16375,6 +16788,19 @@ class _$_RiskEvidenceSynthesisCertainty
       this.certaintySubcomponent})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_RiskEvidenceSynthesisCertainty.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_RiskEvidenceSynthesisCertainty
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_RiskEvidenceSynthesisCertainty
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_RiskEvidenceSynthesisCertainty.fromJson(
           Map<String, dynamic> json) =>
       _$_$_RiskEvidenceSynthesisCertaintyFromJson(json);
@@ -16451,6 +16877,19 @@ abstract class _RiskEvidenceSynthesisCertainty
       List<Annotation> note,
       List<RiskEvidenceSynthesisCertaintySubcomponent>
           certaintySubcomponent}) = _$_RiskEvidenceSynthesisCertainty;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _RiskEvidenceSynthesisCertainty.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _RiskEvidenceSynthesisCertainty.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _RiskEvidenceSynthesisCertainty.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _RiskEvidenceSynthesisCertainty.fromJson(Map<String, dynamic> json) =
       _$_RiskEvidenceSynthesisCertainty.fromJson;
@@ -16663,6 +17102,20 @@ class _$_RiskEvidenceSynthesisCertaintySubcomponent
       this.note})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_RiskEvidenceSynthesisCertaintySubcomponent.fromYaml(
+          dynamic yaml) =>
+      yaml is String
+          ? _$_RiskEvidenceSynthesisCertaintySubcomponent
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_RiskEvidenceSynthesisCertaintySubcomponent
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_RiskEvidenceSynthesisCertaintySubcomponent.fromJson(
           Map<String, dynamic> json) =>
       _$_$_RiskEvidenceSynthesisCertaintySubcomponentFromJson(json);
@@ -16738,6 +17191,19 @@ abstract class _RiskEvidenceSynthesisCertaintySubcomponent
       CodeableConcept type,
       List<CodeableConcept> rating,
       List<Annotation> note}) = _$_RiskEvidenceSynthesisCertaintySubcomponent;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _RiskEvidenceSynthesisCertaintySubcomponent.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _RiskEvidenceSynthesisCertaintySubcomponent.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _RiskEvidenceSynthesisCertaintySubcomponent.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _RiskEvidenceSynthesisCertaintySubcomponent.fromJson(
           Map<String, dynamic> json) =

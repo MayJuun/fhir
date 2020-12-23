@@ -12,6 +12,16 @@ abstract class Tester implements _$Tester {
     Id id,
   }) = _Tester;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Tester.fromYaml(dynamic yaml) => yaml is String
+      ? Tester.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Tester.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory Tester.fromJson(Map<String, dynamic> json) => _$TesterFromJson(json);
 }
 

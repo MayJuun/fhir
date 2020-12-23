@@ -677,6 +677,16 @@ class _$_GuidanceResponse extends _GuidanceResponse {
         assert(module != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_GuidanceResponse.fromYaml(dynamic yaml) => yaml is String
+      ? _$_GuidanceResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_GuidanceResponse.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_GuidanceResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_GuidanceResponseFromJson(json);
 
@@ -903,6 +913,16 @@ abstract class _GuidanceResponse extends GuidanceResponse {
       Reference outputParameters,
       Reference result,
       List<DataRequirement> dataRequirement}) = _$_GuidanceResponse;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _GuidanceResponse.fromYaml(dynamic yaml) => yaml is String
+      ? _GuidanceResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _GuidanceResponse.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _GuidanceResponse.fromJson(Map<String, dynamic> json) =
       _$_GuidanceResponse.fromJson;

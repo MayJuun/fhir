@@ -614,6 +614,16 @@ class _$_Location extends _Location {
       : assert(resourceType != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_Location.fromYaml(dynamic yaml) => yaml is String
+      ? _$_Location.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_Location.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_Location.fromJson(Map<String, dynamic> json) =>
       _$_$_LocationFromJson(json);
 
@@ -834,6 +844,16 @@ abstract class _Location extends Location {
       LocationPosition position,
       Reference managingOrganization,
       Reference partOf}) = _$_Location;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _Location.fromYaml(dynamic yaml) => yaml is String
+      ? _Location.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _Location.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _Location.fromJson(Map<String, dynamic> json) = _$_Location.fromJson;
 
@@ -1155,6 +1175,16 @@ class _$_LocationPosition extends _LocationPosition {
         assert(latitude != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_LocationPosition.fromYaml(dynamic yaml) => yaml is String
+      ? _$_LocationPosition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_LocationPosition.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_LocationPosition.fromJson(Map<String, dynamic> json) =>
       _$_$_LocationPositionFromJson(json);
 
@@ -1256,6 +1286,16 @@ abstract class _LocationPosition extends LocationPosition {
           Decimal altitude,
           @JsonKey(name: '_altitude') Element altitudeElement}) =
       _$_LocationPosition;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _LocationPosition.fromYaml(dynamic yaml) => yaml is String
+      ? _LocationPosition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _LocationPosition.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _LocationPosition.fromJson(Map<String, dynamic> json) =
       _$_LocationPosition.fromJson;
@@ -1690,6 +1730,16 @@ class _$_Substance extends _Substance {
         assert(code != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_Substance.fromYaml(dynamic yaml) => yaml is String
+      ? _$_Substance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_Substance.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_Substance.fromJson(Map<String, dynamic> json) =>
       _$_$_SubstanceFromJson(json);
 
@@ -1850,6 +1900,16 @@ abstract class _Substance extends Substance {
       @JsonKey(name: '_description') Element descriptionElement,
       List<SubstanceInstance> instance,
       List<SubstanceIngredient> ingredient}) = _$_Substance;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _Substance.fromYaml(dynamic yaml) => yaml is String
+      ? _Substance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _Substance.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _Substance.fromJson(Map<String, dynamic> json) =
       _$_Substance.fromJson;
@@ -2118,6 +2178,16 @@ class _$_SubstanceInstance extends _SubstanceInstance {
       this.quantity})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_SubstanceInstance.fromYaml(dynamic yaml) => yaml is String
+      ? _$_SubstanceInstance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_SubstanceInstance.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_SubstanceInstance.fromJson(Map<String, dynamic> json) =>
       _$_$_SubstanceInstanceFromJson(json);
 
@@ -2199,6 +2269,16 @@ abstract class _SubstanceInstance extends SubstanceInstance {
       FhirDateTime expiry,
       @JsonKey(name: '_expiry') Element expiryElement,
       Quantity quantity}) = _$_SubstanceInstance;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _SubstanceInstance.fromYaml(dynamic yaml) => yaml is String
+      ? _SubstanceInstance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _SubstanceInstance.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _SubstanceInstance.fromJson(Map<String, dynamic> json) =
       _$_SubstanceInstance.fromJson;
@@ -2406,6 +2486,16 @@ class _$_SubstanceIngredient extends _SubstanceIngredient {
       : assert(substance != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_SubstanceIngredient.fromYaml(dynamic yaml) => yaml is String
+      ? _$_SubstanceIngredient.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_SubstanceIngredient.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_SubstanceIngredient.fromJson(Map<String, dynamic> json) =>
       _$_$_SubstanceIngredientFromJson(json);
 
@@ -2476,6 +2566,16 @@ abstract class _SubstanceIngredient extends SubstanceIngredient {
           Ratio quantity,
           @required @JsonKey(required: true) Reference substance}) =
       _$_SubstanceIngredient;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _SubstanceIngredient.fromYaml(dynamic yaml) => yaml is String
+      ? _SubstanceIngredient.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _SubstanceIngredient.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _SubstanceIngredient.fromJson(Map<String, dynamic> json) =
       _$_SubstanceIngredient.fromJson;
@@ -2997,6 +3097,16 @@ class _$_Person extends _Person {
       : assert(resourceType != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_Person.fromYaml(dynamic yaml) => yaml is String
+      ? _$_Person.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_Person.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_Person.fromJson(Map<String, dynamic> json) =>
       _$_$_PersonFromJson(json);
 
@@ -3197,6 +3307,16 @@ abstract class _Person extends Person {
       Boolean active,
       @JsonKey(name: '_active') Element activeElement,
       List<PersonLink> link}) = _$_Person;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _Person.fromYaml(dynamic yaml) => yaml is String
+      ? _Person.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _Person.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _Person.fromJson(Map<String, dynamic> json) = _$_Person.fromJson;
 
@@ -3455,6 +3575,16 @@ class _$_PersonLink extends _PersonLink {
       : assert(target != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_PersonLink.fromYaml(dynamic yaml) => yaml is String
+      ? _$_PersonLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_PersonLink.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_PersonLink.fromJson(Map<String, dynamic> json) =>
       _$_$_PersonLinkFromJson(json);
 
@@ -3531,6 +3661,16 @@ abstract class _PersonLink extends PersonLink {
       @required @JsonKey(required: true) Reference target,
       @JsonKey(unknownEnumValue: LinkAssurance.unknown) LinkAssurance assurance,
       @JsonKey(name: '_assurance') Element assuranceElement}) = _$_PersonLink;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _PersonLink.fromYaml(dynamic yaml) => yaml is String
+      ? _PersonLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _PersonLink.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _PersonLink.fromJson(Map<String, dynamic> json) =
       _$_PersonLink.fromJson;
@@ -4152,6 +4292,16 @@ class _$_Contract extends _Contract {
       : assert(resourceType != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_Contract.fromYaml(dynamic yaml) => yaml is String
+      ? _$_Contract.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_Contract.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_Contract.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractFromJson(json);
 
@@ -4387,6 +4537,16 @@ abstract class _Contract extends Contract {
       List<ContractFriendly> friendly,
       List<ContractLegal> legal,
       List<ContractRule> rule}) = _$_Contract;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _Contract.fromYaml(dynamic yaml) => yaml is String
+      ? _Contract.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _Contract.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _Contract.fromJson(Map<String, dynamic> json) = _$_Contract.fromJson;
 
@@ -4628,6 +4788,16 @@ class _$_ContractActor extends _ContractActor {
       : assert(entity != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ContractActor.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ContractActor.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ContractActor.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ContractActor.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractActorFromJson(json);
 
@@ -4694,6 +4864,16 @@ abstract class _ContractActor extends ContractActor {
       List<FhirExtension> modifierExtension,
       @required @JsonKey(required: true) Reference entity,
       List<CodeableConcept> role}) = _$_ContractActor;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ContractActor.fromYaml(dynamic yaml) => yaml is String
+      ? _ContractActor.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ContractActor.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ContractActor.fromJson(Map<String, dynamic> json) =
       _$_ContractActor.fromJson;
@@ -5130,6 +5310,16 @@ class _$_ContractValuedItem extends _ContractValuedItem {
       this.securityLabelNumberElement})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ContractValuedItem.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ContractValuedItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ContractValuedItem.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ContractValuedItem.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractValuedItemFromJson(json);
 
@@ -5276,6 +5466,16 @@ abstract class _ContractValuedItem extends ContractValuedItem {
       @JsonKey(name: '_points') Element pointsElement,
       Quantity net,
       List<Element> securityLabelNumberElement}) = _$_ContractValuedItem;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ContractValuedItem.fromYaml(dynamic yaml) => yaml is String
+      ? _ContractValuedItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ContractValuedItem.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ContractValuedItem.fromJson(Map<String, dynamic> json) =
       _$_ContractValuedItem.fromJson;
@@ -5515,6 +5715,16 @@ class _$_ContractSigner extends _ContractSigner {
         assert(signature != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ContractSigner.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ContractSigner.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ContractSigner.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ContractSigner.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractSignerFromJson(json);
 
@@ -5590,6 +5800,16 @@ abstract class _ContractSigner extends ContractSigner {
       @required @JsonKey(required: true) Coding type,
       @required @JsonKey(required: true) Reference party,
       @required @JsonKey(required: true) String signature}) = _$_ContractSigner;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ContractSigner.fromYaml(dynamic yaml) => yaml is String
+      ? _ContractSigner.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ContractSigner.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ContractSigner.fromJson(Map<String, dynamic> json) =
       _$_ContractSigner.fromJson;
@@ -5996,6 +6216,16 @@ class _$_ContractTerm extends _ContractTerm {
       this.group})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ContractTerm.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ContractTerm.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ContractTerm.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ContractTerm.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractTermFromJson(json);
 
@@ -6143,6 +6373,16 @@ abstract class _ContractTerm extends ContractTerm {
       @JsonKey(name: '_text') Element textElement,
       List<ContractValuedItem> valuedItem,
       List<ContractTerm> group}) = _$_ContractTerm;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ContractTerm.fromYaml(dynamic yaml) => yaml is String
+      ? _ContractTerm.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ContractTerm.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ContractTerm.fromJson(Map<String, dynamic> json) =
       _$_ContractTerm.fromJson;
@@ -6356,6 +6596,16 @@ class _$_ContractTermActor extends _ContractTermActor {
       : assert(entity != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ContractTermActor.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ContractTermActor.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ContractTermActor.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ContractTermActor.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractTermActorFromJson(json);
 
@@ -6422,6 +6672,16 @@ abstract class _ContractTermActor extends ContractTermActor {
       List<FhirExtension> modifierExtension,
       @required @JsonKey(required: true) Reference entity,
       List<CodeableConcept> role}) = _$_ContractTermActor;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ContractTermActor.fromYaml(dynamic yaml) => yaml is String
+      ? _ContractTermActor.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ContractTermActor.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ContractTermActor.fromJson(Map<String, dynamic> json) =
       _$_ContractTermActor.fromJson;
@@ -6629,6 +6889,16 @@ class _$_ContractFriendly extends _ContractFriendly {
       this.contactReference})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ContractFriendly.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ContractFriendly.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ContractFriendly.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ContractFriendly.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractFriendlyFromJson(json);
 
@@ -6696,6 +6966,16 @@ abstract class _ContractFriendly extends ContractFriendly {
       List<FhirExtension> modifierExtension,
       Attachment contentAttachment,
       Reference contactReference}) = _$_ContractFriendly;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ContractFriendly.fromYaml(dynamic yaml) => yaml is String
+      ? _ContractFriendly.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ContractFriendly.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ContractFriendly.fromJson(Map<String, dynamic> json) =
       _$_ContractFriendly.fromJson;
@@ -6898,6 +7178,16 @@ class _$_ContractLegal extends _ContractLegal {
       this.content})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ContractLegal.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ContractLegal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ContractLegal.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ContractLegal.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractLegalFromJson(json);
 
@@ -6964,6 +7254,16 @@ abstract class _ContractLegal extends ContractLegal {
       List<FhirExtension> modifierExtension,
       Attachment contentAttachment,
       Reference content}) = _$_ContractLegal;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ContractLegal.fromYaml(dynamic yaml) => yaml is String
+      ? _ContractLegal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ContractLegal.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ContractLegal.fromJson(Map<String, dynamic> json) =
       _$_ContractLegal.fromJson;
@@ -7168,6 +7468,16 @@ class _$_ContractRule extends _ContractRule {
       this.contentReference})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ContractRule.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ContractRule.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ContractRule.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ContractRule.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractRuleFromJson(json);
 
@@ -7235,6 +7545,16 @@ abstract class _ContractRule extends ContractRule {
       List<FhirExtension> modifierExtension,
       Attachment contentAttachment,
       Reference contentReference}) = _$_ContractRule;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ContractRule.fromYaml(dynamic yaml) => yaml is String
+      ? _ContractRule.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ContractRule.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ContractRule.fromJson(Map<String, dynamic> json) =
       _$_ContractRule.fromJson;

@@ -789,6 +789,16 @@ class _$_Appointment extends _Appointment {
         assert(participant != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_Appointment.fromYaml(dynamic yaml) => yaml is String
+      ? _$_Appointment.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_Appointment.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_Appointment.fromJson(Map<String, dynamic> json) =>
       _$_$_AppointmentFromJson(json);
 
@@ -1071,6 +1081,16 @@ abstract class _Appointment extends Appointment {
       List<Reference> incomingReferral,
       @required List<AppointmentParticipant> participant,
       List<Period> requestedPeriod}) = _$_Appointment;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _Appointment.fromYaml(dynamic yaml) => yaml is String
+      ? _Appointment.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _Appointment.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _Appointment.fromJson(Map<String, dynamic> json) =
       _$_Appointment.fromJson;
@@ -1381,6 +1401,17 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
       @JsonKey(name: '_status') this.statusElement})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_AppointmentParticipant.fromYaml(dynamic yaml) => yaml is String
+      ? _$_AppointmentParticipant
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_AppointmentParticipant.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
       _$_$_AppointmentParticipantFromJson(json);
 
@@ -1457,6 +1488,16 @@ abstract class _AppointmentParticipant extends AppointmentParticipant {
           AppointmentParticipantStatus status,
           @JsonKey(name: '_status') Element statusElement}) =
       _$_AppointmentParticipant;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _AppointmentParticipant.fromYaml(dynamic yaml) => yaml is String
+      ? _AppointmentParticipant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _AppointmentParticipant.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _AppointmentParticipant.fromJson(Map<String, dynamic> json) =
       _$_AppointmentParticipant.fromJson;
@@ -1999,6 +2040,16 @@ class _$_AppointmentResponse extends _AppointmentResponse {
         assert(appointment != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_AppointmentResponse.fromYaml(dynamic yaml) => yaml is String
+      ? _$_AppointmentResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_AppointmentResponse.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_AppointmentResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_AppointmentResponseFromJson(json);
 
@@ -2198,6 +2249,16 @@ abstract class _AppointmentResponse extends AppointmentResponse {
           String comment,
           @JsonKey(name: '_comment') Element commentElement}) =
       _$_AppointmentResponse;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _AppointmentResponse.fromYaml(dynamic yaml) => yaml is String
+      ? _AppointmentResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _AppointmentResponse.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _AppointmentResponse.fromJson(Map<String, dynamic> json) =
       _$_AppointmentResponse.fromJson;
@@ -2953,6 +3014,16 @@ class _$_ProcessRequest extends _ProcessRequest {
       : assert(resourceType != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ProcessRequest.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ProcessRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ProcessRequest.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ProcessRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_ProcessRequestFromJson(json);
 
@@ -3205,6 +3276,16 @@ abstract class _ProcessRequest extends ProcessRequest {
       @JsonKey(name: '_exclude') List<Element> excludeElement,
       Period period}) = _$_ProcessRequest;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ProcessRequest.fromYaml(dynamic yaml) => yaml is String
+      ? _ProcessRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ProcessRequest.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _ProcessRequest.fromJson(Map<String, dynamic> json) =
       _$_ProcessRequest.fromJson;
 
@@ -3424,6 +3505,16 @@ class _$_ProcessRequestItem extends _ProcessRequestItem {
       @JsonKey(name: '_sequenceLinkId') this.sequenceLinkIdElement})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ProcessRequestItem.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ProcessRequestItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ProcessRequestItem.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ProcessRequestItem.fromJson(Map<String, dynamic> json) =>
       _$_$_ProcessRequestItemFromJson(json);
 
@@ -3472,6 +3563,16 @@ abstract class _ProcessRequestItem extends ProcessRequestItem {
           {Id sequenceLinkId,
           @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement}) =
       _$_ProcessRequestItem;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ProcessRequestItem.fromYaml(dynamic yaml) => yaml is String
+      ? _ProcessRequestItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ProcessRequestItem.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ProcessRequestItem.fromJson(Map<String, dynamic> json) =
       _$_ProcessRequestItem.fromJson;
@@ -4089,6 +4190,16 @@ class _$_ProcessResponse extends _ProcessResponse {
       : assert(resourceType != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ProcessResponse.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ProcessResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ProcessResponse.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ProcessResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_ProcessResponseFromJson(json);
 
@@ -4306,6 +4417,16 @@ abstract class _ProcessResponse extends ProcessResponse {
       List<ProcessResponseProcessNote> processNote,
       List<CodeableConcept> error,
       List<Reference> communicationRequest}) = _$_ProcessResponse;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ProcessResponse.fromYaml(dynamic yaml) => yaml is String
+      ? _ProcessResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ProcessResponse.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ProcessResponse.fromJson(Map<String, dynamic> json) =
       _$_ProcessResponse.fromJson;
@@ -4528,6 +4649,17 @@ class _$_ProcessResponseProcessNote extends _ProcessResponseProcessNote {
       {this.type, this.text, @JsonKey(name: '_text') this.textElement})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ProcessResponseProcessNote.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ProcessResponseProcessNote
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ProcessResponseProcessNote.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ProcessResponseProcessNote.fromJson(Map<String, dynamic> json) =>
       _$_$_ProcessResponseProcessNoteFromJson(json);
 
@@ -4582,6 +4714,17 @@ abstract class _ProcessResponseProcessNote extends ProcessResponseProcessNote {
           String text,
           @JsonKey(name: '_text') Element textElement}) =
       _$_ProcessResponseProcessNote;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ProcessResponseProcessNote.fromYaml(dynamic yaml) => yaml is String
+      ? _ProcessResponseProcessNote.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ProcessResponseProcessNote.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ProcessResponseProcessNote.fromJson(Map<String, dynamic> json) =
       _$_ProcessResponseProcessNote.fromJson;
@@ -5261,6 +5404,16 @@ class _$_RequestGroup extends _RequestGroup {
       : assert(resourceType != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_RequestGroup.fromYaml(dynamic yaml) => yaml is String
+      ? _$_RequestGroup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_RequestGroup.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_RequestGroup.fromJson(Map<String, dynamic> json) =>
       _$_$_RequestGroupFromJson(json);
 
@@ -5499,6 +5652,16 @@ abstract class _RequestGroup extends RequestGroup {
       Reference reasonReference,
       List<Annotation> note,
       List<RequestGroupAction> action}) = _$_RequestGroup;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _RequestGroup.fromYaml(dynamic yaml) => yaml is String
+      ? _RequestGroup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _RequestGroup.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _RequestGroup.fromJson(Map<String, dynamic> json) =
       _$_RequestGroup.fromJson;
@@ -6312,6 +6475,16 @@ class _$_RequestGroupAction extends _RequestGroupAction {
       this.action})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_RequestGroupAction.fromYaml(dynamic yaml) => yaml is String
+      ? _$_RequestGroupAction.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_RequestGroupAction.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_RequestGroupAction.fromJson(Map<String, dynamic> json) =>
       _$_$_RequestGroupActionFromJson(json);
 
@@ -6556,6 +6729,16 @@ abstract class _RequestGroupAction extends RequestGroupAction {
       @JsonKey(name: '_cardinalityBehavior') Element cardinalityBehaviorElement,
       Reference resource,
       List<RequestGroupAction> action}) = _$_RequestGroupAction;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _RequestGroupAction.fromYaml(dynamic yaml) => yaml is String
+      ? _RequestGroupAction.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _RequestGroupAction.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _RequestGroupAction.fromJson(Map<String, dynamic> json) =
       _$_RequestGroupAction.fromJson;
@@ -6887,6 +7070,17 @@ class _$_RequestGroupCondition extends _RequestGroupCondition {
       @JsonKey(name: '_expression') this.expressionElement})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_RequestGroupCondition.fromYaml(dynamic yaml) => yaml is String
+      ? _$_RequestGroupCondition
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_RequestGroupCondition.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_RequestGroupCondition.fromJson(Map<String, dynamic> json) =>
       _$_$_RequestGroupConditionFromJson(json);
 
@@ -6980,6 +7174,16 @@ abstract class _RequestGroupCondition extends RequestGroupCondition {
           String expression,
           @JsonKey(name: '_expression') Element expressionElement}) =
       _$_RequestGroupCondition;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _RequestGroupCondition.fromYaml(dynamic yaml) => yaml is String
+      ? _RequestGroupCondition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _RequestGroupCondition.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _RequestGroupCondition.fromJson(Map<String, dynamic> json) =
       _$_RequestGroupCondition.fromJson;
@@ -7236,6 +7440,17 @@ class _$_RequestGroupRelatedAction extends _RequestGroupRelatedAction {
       this.offsetRange})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_RequestGroupRelatedAction.fromYaml(dynamic yaml) => yaml is String
+      ? _$_RequestGroupRelatedAction
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_RequestGroupRelatedAction.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_RequestGroupRelatedAction.fromJson(Map<String, dynamic> json) =>
       _$_$_RequestGroupRelatedActionFromJson(json);
 
@@ -7314,6 +7529,17 @@ abstract class _RequestGroupRelatedAction extends RequestGroupRelatedAction {
       @JsonKey(name: '_relationship') Element relationshipElement,
       FhirDuration offsetDuration,
       Range offsetRange}) = _$_RequestGroupRelatedAction;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _RequestGroupRelatedAction.fromYaml(dynamic yaml) => yaml is String
+      ? _RequestGroupRelatedAction.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _RequestGroupRelatedAction.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _RequestGroupRelatedAction.fromJson(Map<String, dynamic> json) =
       _$_RequestGroupRelatedAction.fromJson;
@@ -7799,6 +8025,16 @@ class _$_Schedule extends _Schedule {
         assert(actor != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_Schedule.fromYaml(dynamic yaml) => yaml is String
+      ? _$_Schedule.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_Schedule.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_Schedule.fromJson(Map<String, dynamic> json) =>
       _$_$_ScheduleFromJson(json);
 
@@ -7979,6 +8215,16 @@ abstract class _Schedule extends Schedule {
       Period planningHorizon,
       String comment,
       @JsonKey(name: '_comment') Element commentElement}) = _$_Schedule;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _Schedule.fromYaml(dynamic yaml) => yaml is String
+      ? _Schedule.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _Schedule.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _Schedule.fromJson(Map<String, dynamic> json) = _$_Schedule.fromJson;
 
@@ -8623,6 +8869,16 @@ class _$_Slot extends _Slot {
         assert(schedule != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_Slot.fromYaml(dynamic yaml) => yaml is String
+      ? _$_Slot.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_Slot.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_Slot.fromJson(Map<String, dynamic> json) =>
       _$_$_SlotFromJson(json);
 
@@ -8842,6 +9098,16 @@ abstract class _Slot extends Slot {
       @JsonKey(name: '_overbooked') Element overbookedElement,
       String comment,
       @JsonKey(name: '_comment') Element commentElement}) = _$_Slot;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _Slot.fromYaml(dynamic yaml) => yaml is String
+      ? _Slot.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _Slot.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _Slot.fromJson(Map<String, dynamic> json) = _$_Slot.fromJson;
 
@@ -9887,6 +10153,16 @@ class _$_Task extends _Task {
       : assert(resourceType != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_Task.fromYaml(dynamic yaml) => yaml is String
+      ? _$_Task.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_Task.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_Task.fromJson(Map<String, dynamic> json) =>
       _$_$_TaskFromJson(json);
 
@@ -10204,6 +10480,16 @@ abstract class _Task extends Task {
       List<TaskInput> input,
       List<TaskOutput> output}) = _$_Task;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _Task.fromYaml(dynamic yaml) => yaml is String
+      ? _Task.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _Task.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _Task.fromJson(Map<String, dynamic> json) = _$_Task.fromJson;
 
   @override
@@ -10448,6 +10734,16 @@ class _$_TaskRequester extends _TaskRequester {
       : assert(agent != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_TaskRequester.fromYaml(dynamic yaml) => yaml is String
+      ? _$_TaskRequester.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_TaskRequester.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_TaskRequester.fromJson(Map<String, dynamic> json) =>
       _$_$_TaskRequesterFromJson(json);
 
@@ -10492,6 +10788,16 @@ abstract class _TaskRequester extends TaskRequester {
   _TaskRequester._() : super._();
   factory _TaskRequester({@required Reference agent, Reference onBehalfOf}) =
       _$_TaskRequester;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _TaskRequester.fromYaml(dynamic yaml) => yaml is String
+      ? _TaskRequester.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _TaskRequester.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _TaskRequester.fromJson(Map<String, dynamic> json) =
       _$_TaskRequester.fromJson;
@@ -10675,6 +10981,16 @@ class _$_TaskRestriction extends _TaskRestriction {
       this.recipient})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_TaskRestriction.fromYaml(dynamic yaml) => yaml is String
+      ? _$_TaskRestriction.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_TaskRestriction.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_TaskRestriction.fromJson(Map<String, dynamic> json) =>
       _$_$_TaskRestrictionFromJson(json);
 
@@ -10735,6 +11051,16 @@ abstract class _TaskRestriction extends TaskRestriction {
       @JsonKey(name: '_repetitions') Element repetitionsElement,
       Period period,
       List<Reference> recipient}) = _$_TaskRestriction;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _TaskRestriction.fromYaml(dynamic yaml) => yaml is String
+      ? _TaskRestriction.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _TaskRestriction.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _TaskRestriction.fromJson(Map<String, dynamic> json) =
       _$_TaskRestriction.fromJson;
@@ -12500,6 +12826,16 @@ class _$_TaskInput extends _TaskInput {
       : assert(type != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_TaskInput.fromYaml(dynamic yaml) => yaml is String
+      ? _$_TaskInput.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_TaskInput.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_TaskInput.fromJson(Map<String, dynamic> json) =>
       _$_$_TaskInputFromJson(json);
 
@@ -12941,6 +13277,16 @@ abstract class _TaskInput extends TaskInput {
       DataRequirement valueDataRequirement,
       ParameterDefinition valueParameterDefinition,
       TriggerDefinition valueTriggerDefinition}) = _$_TaskInput;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _TaskInput.fromYaml(dynamic yaml) => yaml is String
+      ? _TaskInput.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _TaskInput.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _TaskInput.fromJson(Map<String, dynamic> json) =
       _$_TaskInput.fromJson;
@@ -14858,6 +15204,16 @@ class _$_TaskOutput extends _TaskOutput {
       : assert(type != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_TaskOutput.fromYaml(dynamic yaml) => yaml is String
+      ? _$_TaskOutput.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_TaskOutput.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_TaskOutput.fromJson(Map<String, dynamic> json) =>
       _$_$_TaskOutputFromJson(json);
 
@@ -15299,6 +15655,16 @@ abstract class _TaskOutput extends TaskOutput {
       DataRequirement valueDataRequirement,
       ParameterDefinition valueParameterDefinition,
       TriggerDefinition valueTriggerDefinition}) = _$_TaskOutput;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _TaskOutput.fromYaml(dynamic yaml) => yaml is String
+      ? _TaskOutput.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _TaskOutput.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _TaskOutput.fromJson(Map<String, dynamic> json) =
       _$_TaskOutput.fromJson;

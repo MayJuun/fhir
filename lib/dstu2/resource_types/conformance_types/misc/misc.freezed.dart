@@ -862,6 +862,16 @@ class _$_ImplementationGuide extends _ImplementationGuide {
         assert(page != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ImplementationGuide.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ImplementationGuide.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ImplementationGuide.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ImplementationGuide.fromJson(Map<String, dynamic> json) =>
       _$_$_ImplementationGuideFromJson(json);
 
@@ -1171,6 +1181,16 @@ abstract class _ImplementationGuide extends ImplementationGuide {
       @JsonKey(required: true)
           ImplementationGuidePage page}) = _$_ImplementationGuide;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ImplementationGuide.fromYaml(dynamic yaml) => yaml is String
+      ? _ImplementationGuide.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ImplementationGuide.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _ImplementationGuide.fromJson(Map<String, dynamic> json) =
       _$_ImplementationGuide.fromJson;
 
@@ -1428,6 +1448,17 @@ class _$_ImplementationGuideContact extends _ImplementationGuideContact {
       this.telecom})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ImplementationGuideContact.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ImplementationGuideContact
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ImplementationGuideContact.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ImplementationGuideContact.fromJson(Map<String, dynamic> json) =>
       _$_$_ImplementationGuideContactFromJson(json);
 
@@ -1494,6 +1525,17 @@ abstract class _ImplementationGuideContact extends ImplementationGuideContact {
       List<FhirExtension> modifierExtension,
       String name,
       List<ContactPoint> telecom}) = _$_ImplementationGuideContact;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ImplementationGuideContact.fromYaml(dynamic yaml) => yaml is String
+      ? _ImplementationGuideContact.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ImplementationGuideContact.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ImplementationGuideContact.fromJson(Map<String, dynamic> json) =
       _$_ImplementationGuideContact.fromJson;
@@ -1723,6 +1765,19 @@ class _$_ImplementationGuideDependency extends _ImplementationGuideDependency {
         assert(uri != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ImplementationGuideDependency.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_ImplementationGuideDependency
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_ImplementationGuideDependency
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_ImplementationGuideDependency.fromJson(
           Map<String, dynamic> json) =>
       _$_$_ImplementationGuideDependencyFromJson(json);
@@ -1807,6 +1862,19 @@ abstract class _ImplementationGuideDependency
           FhirUri uri,
       @JsonKey(name: '_uri')
           Element uriElement}) = _$_ImplementationGuideDependency;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ImplementationGuideDependency.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _ImplementationGuideDependency.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _ImplementationGuideDependency.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _ImplementationGuideDependency.fromJson(Map<String, dynamic> json) =
       _$_ImplementationGuideDependency.fromJson;
@@ -2017,6 +2085,17 @@ class _$_ImplementationGuidePackage extends _ImplementationGuidePackage {
         assert(resource != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ImplementationGuidePackage.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ImplementationGuidePackage
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ImplementationGuidePackage.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ImplementationGuidePackage.fromJson(Map<String, dynamic> json) =>
       _$_$_ImplementationGuidePackageFromJson(json);
 
@@ -2099,6 +2178,17 @@ abstract class _ImplementationGuidePackage extends ImplementationGuidePackage {
           @JsonKey(required: true)
               List<ImplementationGuidePackageResource> resource}) =
       _$_ImplementationGuidePackage;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ImplementationGuidePackage.fromYaml(dynamic yaml) => yaml is String
+      ? _ImplementationGuidePackage.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ImplementationGuidePackage.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ImplementationGuidePackage.fromJson(Map<String, dynamic> json) =
       _$_ImplementationGuidePackage.fromJson;
@@ -2321,6 +2411,17 @@ class _$_ImplementationGuideGlobal extends _ImplementationGuideGlobal {
         assert(profile != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ImplementationGuideGlobal.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ImplementationGuideGlobal
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ImplementationGuideGlobal.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ImplementationGuideGlobal.fromJson(Map<String, dynamic> json) =>
       _$_$_ImplementationGuideGlobalFromJson(json);
 
@@ -2399,6 +2500,17 @@ abstract class _ImplementationGuideGlobal extends ImplementationGuideGlobal {
           @JsonKey(name: '_type') Element typeElement,
           @required @JsonKey(required: true) Reference profile}) =
       _$_ImplementationGuideGlobal;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ImplementationGuideGlobal.fromYaml(dynamic yaml) => yaml is String
+      ? _ImplementationGuideGlobal.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ImplementationGuideGlobal.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ImplementationGuideGlobal.fromJson(Map<String, dynamic> json) =
       _$_ImplementationGuideGlobal.fromJson;
@@ -2656,6 +2768,17 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
         assert(kind != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ImplementationGuidePage.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ImplementationGuidePage
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ImplementationGuidePage.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ImplementationGuidePage.fromJson(Map<String, dynamic> json) =>
       _$_$_ImplementationGuidePageFromJson(json);
 
@@ -2763,6 +2886,17 @@ abstract class _ImplementationGuidePage extends ImplementationGuidePage {
       List<String> package,
       Code format,
       List<ImplementationGuidePage> page}) = _$_ImplementationGuidePage;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ImplementationGuidePage.fromYaml(dynamic yaml) => yaml is String
+      ? _ImplementationGuidePage.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ImplementationGuidePage.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ImplementationGuidePage.fromJson(Map<String, dynamic> json) =
       _$_ImplementationGuidePage.fromJson;
@@ -3084,6 +3218,19 @@ class _$_ImplementationGuidePackageResource
       : assert(purpose != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ImplementationGuidePackageResource.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_ImplementationGuidePackageResource
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_ImplementationGuidePackageResource
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_ImplementationGuidePackageResource.fromJson(
           Map<String, dynamic> json) =>
       _$_$_ImplementationGuidePackageResourceFromJson(json);
@@ -3202,6 +3349,19 @@ abstract class _ImplementationGuidePackageResource
       FhirUri sourceUri,
       Reference sourceReference,
       Reference exampleFor}) = _$_ImplementationGuidePackageResource;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ImplementationGuidePackageResource.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _ImplementationGuidePackageResource.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _ImplementationGuidePackageResource.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _ImplementationGuidePackageResource.fromJson(
           Map<String, dynamic> json) =
@@ -4106,6 +4266,16 @@ class _$_TestScript extends _TestScript {
         assert(status != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_TestScript.fromYaml(dynamic yaml) => yaml is String
+      ? _$_TestScript.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_TestScript.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_TestScript.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptFromJson(json);
 
@@ -4414,6 +4584,16 @@ abstract class _TestScript extends TestScript {
       List<TestScriptTest> test,
       TestScriptTeardown teardown}) = _$_TestScript;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _TestScript.fromYaml(dynamic yaml) => yaml is String
+      ? _TestScript.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _TestScript.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _TestScript.fromJson(Map<String, dynamic> json) =
       _$_TestScript.fromJson;
 
@@ -4668,6 +4848,16 @@ class _$_TestScriptContact extends _TestScriptContact {
       this.telecom})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_TestScriptContact.fromYaml(dynamic yaml) => yaml is String
+      ? _$_TestScriptContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_TestScriptContact.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_TestScriptContact.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptContactFromJson(json);
 
@@ -4733,6 +4923,16 @@ abstract class _TestScriptContact extends TestScriptContact {
       List<FhirExtension> modifierExtension,
       String name,
       List<ContactPoint> telecom}) = _$_TestScriptContact;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _TestScriptContact.fromYaml(dynamic yaml) => yaml is String
+      ? _TestScriptContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _TestScriptContact.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _TestScriptContact.fromJson(Map<String, dynamic> json) =
       _$_TestScriptContact.fromJson;
@@ -4914,6 +5114,16 @@ class _$_TestScriptMetadata extends _TestScriptMetadata {
       : assert(capability != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_TestScriptMetadata.fromYaml(dynamic yaml) => yaml is String
+      ? _$_TestScriptMetadata.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_TestScriptMetadata.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_TestScriptMetadata.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptMetadataFromJson(json);
 
@@ -4985,6 +5195,16 @@ abstract class _TestScriptMetadata extends TestScriptMetadata {
           @JsonKey(required: true)
               List<TestScriptMetadataCapability> capability}) =
       _$_TestScriptMetadata;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _TestScriptMetadata.fromYaml(dynamic yaml) => yaml is String
+      ? _TestScriptMetadata.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _TestScriptMetadata.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _TestScriptMetadata.fromJson(Map<String, dynamic> json) =
       _$_TestScriptMetadata.fromJson;
@@ -5217,6 +5437,17 @@ class _$_TestScriptMetadataLink extends _TestScriptMetadataLink {
       : assert(url != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_TestScriptMetadataLink.fromYaml(dynamic yaml) => yaml is String
+      ? _$_TestScriptMetadataLink
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_TestScriptMetadataLink.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_TestScriptMetadataLink.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptMetadataLinkFromJson(json);
 
@@ -5302,6 +5533,16 @@ abstract class _TestScriptMetadataLink extends TestScriptMetadataLink {
           String description,
           @JsonKey(name: '_description') Element descriptionElement}) =
       _$_TestScriptMetadataLink;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _TestScriptMetadataLink.fromYaml(dynamic yaml) => yaml is String
+      ? _TestScriptMetadataLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _TestScriptMetadataLink.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _TestScriptMetadataLink.fromJson(Map<String, dynamic> json) =
       _$_TestScriptMetadataLink.fromJson;
@@ -5678,6 +5919,19 @@ class _$_TestScriptMetadataCapability extends _TestScriptMetadataCapability {
       : assert(conformance != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_TestScriptMetadataCapability.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_TestScriptMetadataCapability
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_TestScriptMetadataCapability
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_TestScriptMetadataCapability.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptMetadataCapabilityFromJson(json);
 
@@ -5817,6 +6071,17 @@ abstract class _TestScriptMetadataCapability
           @JsonKey(name: '_link') List<Element> linkElement,
           @required @JsonKey(required: true) Reference conformance}) =
       _$_TestScriptMetadataCapability;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _TestScriptMetadataCapability.fromYaml(dynamic yaml) => yaml is String
+      ? _TestScriptMetadataCapability.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _TestScriptMetadataCapability.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _TestScriptMetadataCapability.fromJson(Map<String, dynamic> json) =
       _$_TestScriptMetadataCapability.fromJson;
@@ -6098,6 +6363,16 @@ class _$_TestScriptFixture extends _TestScriptFixture {
       this.resource})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_TestScriptFixture.fromYaml(dynamic yaml) => yaml is String
+      ? _$_TestScriptFixture.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_TestScriptFixture.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_TestScriptFixture.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptFixtureFromJson(json);
 
@@ -6188,6 +6463,16 @@ abstract class _TestScriptFixture extends TestScriptFixture {
       Boolean autodelete,
       @JsonKey(name: '_autodelete') Element autodeleteElement,
       Reference resource}) = _$_TestScriptFixture;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _TestScriptFixture.fromYaml(dynamic yaml) => yaml is String
+      ? _TestScriptFixture.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _TestScriptFixture.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _TestScriptFixture.fromJson(Map<String, dynamic> json) =
       _$_TestScriptFixture.fromJson;
@@ -6500,6 +6785,16 @@ class _$_TestScriptVariable extends _TestScriptVariable {
       : assert(name != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_TestScriptVariable.fromYaml(dynamic yaml) => yaml is String
+      ? _$_TestScriptVariable.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_TestScriptVariable.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_TestScriptVariable.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptVariableFromJson(json);
 
@@ -6613,6 +6908,16 @@ abstract class _TestScriptVariable extends TestScriptVariable {
           Id sourceId,
           @JsonKey(name: '_sourceId') Element sourceIdElement}) =
       _$_TestScriptVariable;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _TestScriptVariable.fromYaml(dynamic yaml) => yaml is String
+      ? _TestScriptVariable.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _TestScriptVariable.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _TestScriptVariable.fromJson(Map<String, dynamic> json) =
       _$_TestScriptVariable.fromJson;
@@ -6825,6 +7130,16 @@ class _$_TestScriptSetup extends _TestScriptSetup {
       : assert(action != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_TestScriptSetup.fromYaml(dynamic yaml) => yaml is String
+      ? _$_TestScriptSetup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_TestScriptSetup.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_TestScriptSetup.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptSetupFromJson(json);
 
@@ -6895,6 +7210,16 @@ abstract class _TestScriptSetup extends TestScriptSetup {
       @required
       @JsonKey(required: true)
           List<TestScriptSetupAction> action}) = _$_TestScriptSetup;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _TestScriptSetup.fromYaml(dynamic yaml) => yaml is String
+      ? _TestScriptSetup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _TestScriptSetup.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _TestScriptSetup.fromJson(Map<String, dynamic> json) =
       _$_TestScriptSetup.fromJson;
@@ -7119,6 +7444,17 @@ class _$_TestScriptSetupAction extends _TestScriptSetupAction {
       @JsonKey(name: 'assert') this.assert_})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_TestScriptSetupAction.fromYaml(dynamic yaml) => yaml is String
+      ? _$_TestScriptSetupAction
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_TestScriptSetupAction.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_TestScriptSetupAction.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptSetupActionFromJson(json);
 
@@ -7196,6 +7532,16 @@ abstract class _TestScriptSetupAction extends TestScriptSetupAction {
           TestScriptActionOperation operation,
           @JsonKey(name: 'assert') TestScriptActionAssert assert_}) =
       _$_TestScriptSetupAction;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _TestScriptSetupAction.fromYaml(dynamic yaml) => yaml is String
+      ? _TestScriptSetupAction.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _TestScriptSetupAction.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _TestScriptSetupAction.fromJson(Map<String, dynamic> json) =
       _$_TestScriptSetupAction.fromJson;
@@ -7922,6 +8268,17 @@ class _$_TestScriptActionOperation extends _TestScriptActionOperation {
       @JsonKey(name: '_url') this.urlElement})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_TestScriptActionOperation.fromYaml(dynamic yaml) => yaml is String
+      ? _$_TestScriptActionOperation
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_TestScriptActionOperation.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_TestScriptActionOperation.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptActionOperationFromJson(json);
 
@@ -8180,6 +8537,17 @@ abstract class _TestScriptActionOperation extends TestScriptActionOperation {
       String url,
       @JsonKey(name: '_url')
           Element urlElement}) = _$_TestScriptActionOperation;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _TestScriptActionOperation.fromYaml(dynamic yaml) => yaml is String
+      ? _TestScriptActionOperation.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _TestScriptActionOperation.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _TestScriptActionOperation.fromJson(Map<String, dynamic> json) =
       _$_TestScriptActionOperation.fromJson;
@@ -8498,6 +8866,19 @@ class _$_TestScriptOperationRequestHeader
         assert(value != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_TestScriptOperationRequestHeader.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_TestScriptOperationRequestHeader
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_TestScriptOperationRequestHeader
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_TestScriptOperationRequestHeader.fromJson(
           Map<String, dynamic> json) =>
       _$_$_TestScriptOperationRequestHeaderFromJson(json);
@@ -8585,6 +8966,19 @@ abstract class _TestScriptOperationRequestHeader
           @required @JsonKey(required: true) String value,
           @JsonKey(name: '_value') Element valueElement}) =
       _$_TestScriptOperationRequestHeader;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _TestScriptOperationRequestHeader.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _TestScriptOperationRequestHeader.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _TestScriptOperationRequestHeader.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _TestScriptOperationRequestHeader.fromJson(
       Map<String, dynamic> json) = _$_TestScriptOperationRequestHeader.fromJson;
@@ -9531,6 +9925,17 @@ class _$_TestScriptActionAssert extends _TestScriptActionAssert {
           this.warningOnlyElement})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_TestScriptActionAssert.fromYaml(dynamic yaml) => yaml is String
+      ? _$_TestScriptActionAssert
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_TestScriptActionAssert.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_TestScriptActionAssert.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptActionAssertFromJson(json);
 
@@ -9834,6 +10239,16 @@ abstract class _TestScriptActionAssert extends TestScriptActionAssert {
       Boolean warningOnly,
       @JsonKey(name: '_warningOnly')
           Element warningOnlyElement}) = _$_TestScriptActionAssert;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _TestScriptActionAssert.fromYaml(dynamic yaml) => yaml is String
+      ? _TestScriptActionAssert.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _TestScriptActionAssert.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _TestScriptActionAssert.fromJson(Map<String, dynamic> json) =
       _$_TestScriptActionAssert.fromJson;
@@ -10192,6 +10607,16 @@ class _$_TestScriptTest extends _TestScriptTest {
       : assert(action != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_TestScriptTest.fromYaml(dynamic yaml) => yaml is String
+      ? _$_TestScriptTest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_TestScriptTest.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_TestScriptTest.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptTestFromJson(json);
 
@@ -10293,6 +10718,16 @@ abstract class _TestScriptTest extends TestScriptTest {
       @required
       @JsonKey(required: true)
           List<TestScriptSetupAction> action}) = _$_TestScriptTest;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _TestScriptTest.fromYaml(dynamic yaml) => yaml is String
+      ? _TestScriptTest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _TestScriptTest.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _TestScriptTest.fromJson(Map<String, dynamic> json) =
       _$_TestScriptTest.fromJson;
@@ -10473,6 +10908,16 @@ class _$_TestScriptTeardown extends _TestScriptTeardown {
       : assert(action != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_TestScriptTeardown.fromYaml(dynamic yaml) => yaml is String
+      ? _$_TestScriptTeardown.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_TestScriptTeardown.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_TestScriptTeardown.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptTeardownFromJson(json);
 
@@ -10536,6 +10981,16 @@ abstract class _TestScriptTeardown extends TestScriptTeardown {
       @required
       @JsonKey(required: true)
           List<TestScriptTeardownAction> action}) = _$_TestScriptTeardown;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _TestScriptTeardown.fromYaml(dynamic yaml) => yaml is String
+      ? _TestScriptTeardown.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _TestScriptTeardown.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _TestScriptTeardown.fromJson(Map<String, dynamic> json) =
       _$_TestScriptTeardown.fromJson;
@@ -10731,6 +11186,17 @@ class _$_TestScriptTeardownAction extends _TestScriptTeardownAction {
       this.operation})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_TestScriptTeardownAction.fromYaml(dynamic yaml) => yaml is String
+      ? _$_TestScriptTeardownAction
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_TestScriptTeardownAction.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_TestScriptTeardownAction.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptTeardownActionFromJson(json);
 
@@ -10800,6 +11266,17 @@ abstract class _TestScriptTeardownAction extends TestScriptTeardownAction {
       List<FhirExtension> modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       TestScriptActionOperation operation}) = _$_TestScriptTeardownAction;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _TestScriptTeardownAction.fromYaml(dynamic yaml) => yaml is String
+      ? _TestScriptTeardownAction.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _TestScriptTeardownAction.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _TestScriptTeardownAction.fromJson(Map<String, dynamic> json) =
       _$_TestScriptTeardownAction.fromJson;

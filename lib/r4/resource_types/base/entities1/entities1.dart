@@ -1,4 +1,8 @@
+import 'dart:convert';
+
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:json2yaml/json2yaml.dart';
+import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../r4.dart';
@@ -39,6 +43,16 @@ abstract class Endpoint with Resource implements _$Endpoint {
     List<String> header,
     @JsonKey(name: '_header') List<Element> headerElement,
   }) = _Endpoint;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Endpoint.fromYaml(dynamic yaml) => yaml is String
+      ? Endpoint.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Endpoint.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory Endpoint.fromJson(Map<String, dynamic> json) =>
       _$EndpointFromJson(json);
@@ -92,6 +106,16 @@ abstract class HealthcareService with Resource implements _$HealthcareService {
     List<Reference> endpoint,
   }) = _HealthcareService;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory HealthcareService.fromYaml(dynamic yaml) => yaml is String
+      ? HealthcareService.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? HealthcareService.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory HealthcareService.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceFromJson(json);
 }
@@ -108,6 +132,17 @@ abstract class HealthcareServiceEligibility
     Markdown comment,
     @JsonKey(name: '_comment') Element commentElement,
   }) = _HealthcareServiceEligibility;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory HealthcareServiceEligibility.fromYaml(dynamic yaml) => yaml is String
+      ? HealthcareServiceEligibility.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? HealthcareServiceEligibility.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory HealthcareServiceEligibility.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceEligibilityFromJson(json);
@@ -131,6 +166,19 @@ abstract class HealthcareServiceAvailableTime
     @JsonKey(name: '_availableEndTime') Element availableEndTimeElement,
   }) = _HealthcareServiceAvailableTime;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory HealthcareServiceAvailableTime.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? HealthcareServiceAvailableTime.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? HealthcareServiceAvailableTime.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory HealthcareServiceAvailableTime.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceAvailableTimeFromJson(json);
 }
@@ -147,6 +195,17 @@ abstract class HealthcareServiceNotAvailable
     @JsonKey(name: '_description') Element descriptionElement,
     Period during,
   }) = _HealthcareServiceNotAvailable;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory HealthcareServiceNotAvailable.fromYaml(dynamic yaml) => yaml is String
+      ? HealthcareServiceNotAvailable.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? HealthcareServiceNotAvailable.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory HealthcareServiceNotAvailable.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceNotAvailableFromJson(json);
@@ -193,6 +252,16 @@ abstract class Location with Resource implements _$Location {
     List<Reference> endpoint,
   }) = _Location;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Location.fromYaml(dynamic yaml) => yaml is String
+      ? Location.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Location.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory Location.fromJson(Map<String, dynamic> json) =>
       _$LocationFromJson(json);
 }
@@ -211,6 +280,16 @@ abstract class LocationPosition implements _$LocationPosition {
     Decimal altitude,
     @JsonKey(name: '_altitude') Element altitudeElement,
   }) = _LocationPosition;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory LocationPosition.fromYaml(dynamic yaml) => yaml is String
+      ? LocationPosition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? LocationPosition.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory LocationPosition.fromJson(Map<String, dynamic> json) =>
       _$LocationPositionFromJson(json);
@@ -232,6 +311,17 @@ abstract class LocationHoursOfOperation implements _$LocationHoursOfOperation {
     Time closingTime,
     @JsonKey(name: '_closingTime') Element closingTimeElement,
   }) = _LocationHoursOfOperation;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory LocationHoursOfOperation.fromYaml(dynamic yaml) => yaml is String
+      ? LocationHoursOfOperation.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? LocationHoursOfOperation.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory LocationHoursOfOperation.fromJson(Map<String, dynamic> json) =>
       _$LocationHoursOfOperationFromJson(json);
@@ -267,6 +357,16 @@ abstract class Organization with Resource implements _$Organization {
     List<Reference> endpoint,
   }) = _Organization;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Organization.fromYaml(dynamic yaml) => yaml is String
+      ? Organization.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Organization.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory Organization.fromJson(Map<String, dynamic> json) =>
       _$OrganizationFromJson(json);
 }
@@ -283,6 +383,16 @@ abstract class OrganizationContact implements _$OrganizationContact {
     List<ContactPoint> telecom,
     Address address,
   }) = _OrganizationContact;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory OrganizationContact.fromYaml(dynamic yaml) => yaml is String
+      ? OrganizationContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? OrganizationContact.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory OrganizationContact.fromJson(Map<String, dynamic> json) =>
       _$OrganizationContactFromJson(json);
@@ -321,6 +431,16 @@ abstract class OrganizationAffiliation
     List<ContactPoint> telecom,
     List<Reference> endpoint,
   }) = _OrganizationAffiliation;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory OrganizationAffiliation.fromYaml(dynamic yaml) => yaml is String
+      ? OrganizationAffiliation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? OrganizationAffiliation.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory OrganizationAffiliation.fromJson(Map<String, dynamic> json) =>
       _$OrganizationAffiliationFromJson(json);

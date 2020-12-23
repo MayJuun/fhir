@@ -1784,6 +1784,16 @@ class _$_FhirExtension extends _FhirExtension {
       this.valueMeta})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_FhirExtension.fromYaml(dynamic yaml) => yaml is String
+      ? _$_FhirExtension.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_FhirExtension.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_FhirExtension.fromJson(Map<String, dynamic> json) =>
       _$_$_FhirExtensionFromJson(json);
 
@@ -2246,6 +2256,16 @@ abstract class _FhirExtension extends FhirExtension {
       UsageContext valueUsageContext,
       Dosage valueDosage,
       Meta valueMeta}) = _$_FhirExtension;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _FhirExtension.fromYaml(dynamic yaml) => yaml is String
+      ? _FhirExtension.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _FhirExtension.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _FhirExtension.fromJson(Map<String, dynamic> json) =
       _$_FhirExtension.fromJson;

@@ -182,6 +182,16 @@ class _$_Narrative extends _Narrative {
       : assert(div != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_Narrative.fromYaml(dynamic yaml) => yaml is String
+      ? _$_Narrative.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_Narrative.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_Narrative.fromJson(Map<String, dynamic> json) =>
       _$_$_NarrativeFromJson(json);
 
@@ -253,6 +263,16 @@ abstract class _Narrative extends Narrative {
           Element statusElement,
       @required
           String div}) = _$_Narrative;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _Narrative.fromYaml(dynamic yaml) => yaml is String
+      ? _Narrative.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _Narrative.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _Narrative.fromJson(Map<String, dynamic> json) =
       _$_Narrative.fromJson;
@@ -441,6 +461,16 @@ class _$_CodeableReference extends _CodeableReference {
       this.reference})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_CodeableReference.fromYaml(dynamic yaml) => yaml is String
+      ? _$_CodeableReference.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_CodeableReference.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_CodeableReference.fromJson(Map<String, dynamic> json) =>
       _$_$_CodeableReferenceFromJson(json);
 
@@ -501,6 +531,16 @@ abstract class _CodeableReference extends CodeableReference {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       CodeableConcept concept,
       Reference reference}) = _$_CodeableReference;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _CodeableReference.fromYaml(dynamic yaml) => yaml is String
+      ? _CodeableReference.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _CodeableReference.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _CodeableReference.fromJson(Map<String, dynamic> json) =
       _$_CodeableReference.fromJson;
@@ -769,6 +809,16 @@ class _$_Reference extends _Reference {
       @JsonKey(name: '_display') this.displayElement})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_Reference.fromYaml(dynamic yaml) => yaml is String
+      ? _$_Reference.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_Reference.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_Reference.fromJson(Map<String, dynamic> json) =>
       _$_$_ReferenceFromJson(json);
 
@@ -866,6 +916,16 @@ abstract class _Reference extends Reference {
       Identifier identifier,
       String display,
       @JsonKey(name: '_display') Element displayElement}) = _$_Reference;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _Reference.fromYaml(dynamic yaml) => yaml is String
+      ? _Reference.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _Reference.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _Reference.fromJson(Map<String, dynamic> json) =
       _$_Reference.fromJson;
@@ -1221,6 +1281,16 @@ class _$_Statistic extends _Statistic {
       this.modelCharacteristic})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_Statistic.fromYaml(dynamic yaml) => yaml is String
+      ? _$_Statistic.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_Statistic.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_Statistic.fromJson(Map<String, dynamic> json) =>
       _$_$_StatisticFromJson(json);
 
@@ -1345,6 +1415,16 @@ abstract class _Statistic extends Statistic {
       StatisticSampleSize sampleSize,
       List<StatisticAttributeEstimate> attributeEstimate,
       List<StatisticModelCharacteristic> modelCharacteristic}) = _$_Statistic;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _Statistic.fromYaml(dynamic yaml) => yaml is String
+      ? _Statistic.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _Statistic.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _Statistic.fromJson(Map<String, dynamic> json) =
       _$_Statistic.fromJson;
@@ -1706,6 +1786,16 @@ class _$_StatisticSampleSize extends _StatisticSampleSize {
       @JsonKey(name: '_knownDataCount') this.knownDataCountElement})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_StatisticSampleSize.fromYaml(dynamic yaml) => yaml is String
+      ? _$_StatisticSampleSize.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_StatisticSampleSize.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_StatisticSampleSize.fromJson(Map<String, dynamic> json) =>
       _$_$_StatisticSampleSizeFromJson(json);
 
@@ -1833,6 +1923,16 @@ abstract class _StatisticSampleSize extends StatisticSampleSize {
       Integer knownDataCount,
       @JsonKey(name: '_knownDataCount')
           Element knownDataCountElement}) = _$_StatisticSampleSize;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _StatisticSampleSize.fromYaml(dynamic yaml) => yaml is String
+      ? _StatisticSampleSize.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _StatisticSampleSize.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _StatisticSampleSize.fromJson(Map<String, dynamic> json) =
       _$_StatisticSampleSize.fromJson;
@@ -2177,6 +2277,17 @@ class _$_StatisticAttributeEstimate extends _StatisticAttributeEstimate {
       this.attributeEstimate})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_StatisticAttributeEstimate.fromYaml(dynamic yaml) => yaml is String
+      ? _$_StatisticAttributeEstimate
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_StatisticAttributeEstimate.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_StatisticAttributeEstimate.fromJson(Map<String, dynamic> json) =>
       _$_$_StatisticAttributeEstimateFromJson(json);
 
@@ -2293,6 +2404,17 @@ abstract class _StatisticAttributeEstimate extends StatisticAttributeEstimate {
           Range range,
           List<StatisticAttributeEstimate1> attributeEstimate}) =
       _$_StatisticAttributeEstimate;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _StatisticAttributeEstimate.fromYaml(dynamic yaml) => yaml is String
+      ? _StatisticAttributeEstimate.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _StatisticAttributeEstimate.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _StatisticAttributeEstimate.fromJson(Map<String, dynamic> json) =
       _$_StatisticAttributeEstimate.fromJson;
@@ -2625,6 +2747,19 @@ class _$_StatisticAttributeEstimate1 extends _StatisticAttributeEstimate1 {
       this.range})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_StatisticAttributeEstimate1.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_StatisticAttributeEstimate1
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_StatisticAttributeEstimate1
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_StatisticAttributeEstimate1.fromJson(Map<String, dynamic> json) =>
       _$_$_StatisticAttributeEstimate1FromJson(json);
 
@@ -2734,6 +2869,17 @@ abstract class _StatisticAttributeEstimate1
       Decimal level,
       @JsonKey(name: '_level') Element levelElement,
       Range range}) = _$_StatisticAttributeEstimate1;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _StatisticAttributeEstimate1.fromYaml(dynamic yaml) => yaml is String
+      ? _StatisticAttributeEstimate1.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _StatisticAttributeEstimate1.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _StatisticAttributeEstimate1.fromJson(Map<String, dynamic> json) =
       _$_StatisticAttributeEstimate1.fromJson;
@@ -3065,6 +3211,19 @@ class _$_StatisticModelCharacteristic extends _StatisticModelCharacteristic {
       this.variable})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_StatisticModelCharacteristic.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_StatisticModelCharacteristic
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_StatisticModelCharacteristic
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_StatisticModelCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$_$_StatisticModelCharacteristicFromJson(json);
 
@@ -3169,6 +3328,17 @@ abstract class _StatisticModelCharacteristic
       Quantity valueQuantity,
       Range valueRange,
       List<StatisticVariable> variable}) = _$_StatisticModelCharacteristic;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _StatisticModelCharacteristic.fromYaml(dynamic yaml) => yaml is String
+      ? _StatisticModelCharacteristic.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _StatisticModelCharacteristic.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _StatisticModelCharacteristic.fromJson(Map<String, dynamic> json) =
       _$_StatisticModelCharacteristic.fromJson;
@@ -3439,6 +3609,16 @@ class _$_StatisticVariable extends _StatisticVariable {
       : assert(variableDefinition != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_StatisticVariable.fromYaml(dynamic yaml) => yaml is String
+      ? _$_StatisticVariable.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_StatisticVariable.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_StatisticVariable.fromJson(Map<String, dynamic> json) =>
       _$_$_StatisticVariableFromJson(json);
 
@@ -3535,6 +3715,16 @@ abstract class _StatisticVariable extends StatisticVariable {
       List<CodeableConcept> valueCategory,
       List<Quantity> valueQuantity,
       List<Range> valueRange}) = _$_StatisticVariable;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _StatisticVariable.fromYaml(dynamic yaml) => yaml is String
+      ? _StatisticVariable.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _StatisticVariable.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _StatisticVariable.fromJson(Map<String, dynamic> json) =
       _$_StatisticVariable.fromJson;
@@ -3857,6 +4047,16 @@ class _$_OrderedDistribution extends _OrderedDistribution {
       : assert(interval != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_OrderedDistribution.fromYaml(dynamic yaml) => yaml is String
+      ? _$_OrderedDistribution.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_OrderedDistribution.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_OrderedDistribution.fromJson(Map<String, dynamic> json) =>
       _$_$_OrderedDistributionFromJson(json);
 
@@ -3970,6 +4170,16 @@ abstract class _OrderedDistribution extends OrderedDistribution {
       Quantity bottomOfFirstInterval,
       @required List<OrderedDistributionInterval> interval,
       Quantity topOfInterval}) = _$_OrderedDistribution;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _OrderedDistribution.fromYaml(dynamic yaml) => yaml is String
+      ? _OrderedDistribution.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _OrderedDistribution.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _OrderedDistribution.fromJson(Map<String, dynamic> json) =
       _$_OrderedDistribution.fromJson;
@@ -4194,6 +4404,19 @@ class _$_OrderedDistributionInterval extends _OrderedDistributionInterval {
       this.intervalStatistic})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_OrderedDistributionInterval.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_OrderedDistributionInterval
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_OrderedDistributionInterval
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_OrderedDistributionInterval.fromJson(Map<String, dynamic> json) =>
       _$_$_OrderedDistributionIntervalFromJson(json);
 
@@ -4271,6 +4494,17 @@ abstract class _OrderedDistributionInterval
       Integer rankOrder,
       @JsonKey(name: '_rankOrder') Element rankOrderElement,
       List<Statistic> intervalStatistic}) = _$_OrderedDistributionInterval;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _OrderedDistributionInterval.fromYaml(dynamic yaml) => yaml is String
+      ? _OrderedDistributionInterval.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _OrderedDistributionInterval.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _OrderedDistributionInterval.fromJson(Map<String, dynamic> json) =
       _$_OrderedDistributionInterval.fromJson;
@@ -4555,6 +4789,16 @@ class _$_Meta extends _Meta {
       this.tag})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_Meta.fromYaml(dynamic yaml) => yaml is String
+      ? _$_Meta.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_Meta.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_Meta.fromJson(Map<String, dynamic> json) =>
       _$_$_MetaFromJson(json);
 
@@ -4665,6 +4909,16 @@ abstract class _Meta extends Meta {
       List<Canonical> profile,
       List<Coding> security,
       List<Coding> tag}) = _$_Meta;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _Meta.fromYaml(dynamic yaml) => yaml is String
+      ? _Meta.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _Meta.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _Meta.fromJson(Map<String, dynamic> json) = _$_Meta.fromJson;
 
@@ -5212,6 +5466,16 @@ class _$_Dosage extends _Dosage {
       this.maxDosePerLifetime})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_Dosage.fromYaml(dynamic yaml) => yaml is String
+      ? _$_Dosage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_Dosage.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_Dosage.fromJson(Map<String, dynamic> json) =>
       _$_$_DosageFromJson(json);
 
@@ -5389,6 +5653,16 @@ abstract class _Dosage extends Dosage {
       Ratio maxDosePerPeriod,
       Quantity maxDosePerAdministration,
       Quantity maxDosePerLifetime}) = _$_Dosage;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _Dosage.fromYaml(dynamic yaml) => yaml is String
+      ? _Dosage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _Dosage.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _Dosage.fromJson(Map<String, dynamic> json) = _$_Dosage.fromJson;
 
@@ -5722,6 +5996,16 @@ class _$_DosageDoseAndRate extends _DosageDoseAndRate {
       this.rateQuantity})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_DosageDoseAndRate.fromYaml(dynamic yaml) => yaml is String
+      ? _$_DosageDoseAndRate.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_DosageDoseAndRate.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_DosageDoseAndRate.fromJson(Map<String, dynamic> json) =>
       _$_$_DosageDoseAndRateFromJson(json);
 
@@ -5816,6 +6100,16 @@ abstract class _DosageDoseAndRate extends DosageDoseAndRate {
       Ratio rateRatio,
       Range rateRange,
       Quantity rateQuantity}) = _$_DosageDoseAndRate;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _DosageDoseAndRate.fromYaml(dynamic yaml) => yaml is String
+      ? _DosageDoseAndRate.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _DosageDoseAndRate.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _DosageDoseAndRate.fromJson(Map<String, dynamic> json) =
       _$_DosageDoseAndRate.fromJson;
@@ -13067,6 +13361,16 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.mapping})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ElementDefinition.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ElementDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ElementDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ElementDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_ElementDefinitionFromJson(json);
 
@@ -14859,6 +15163,16 @@ abstract class _ElementDefinition extends ElementDefinition {
       ElementDefinitionBinding binding,
       List<ElementDefinitionMapping> mapping}) = _$_ElementDefinition;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ElementDefinition.fromYaml(dynamic yaml) => yaml is String
+      ? _ElementDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ElementDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _ElementDefinition.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinition.fromJson;
 
@@ -15864,6 +16178,17 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
           this.rulesElement})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ElementDefinitionSlicing.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ElementDefinitionSlicing
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ElementDefinitionSlicing.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ElementDefinitionSlicing.fromJson(Map<String, dynamic> json) =>
       _$_$_ElementDefinitionSlicingFromJson(json);
 
@@ -15975,6 +16300,17 @@ abstract class _ElementDefinitionSlicing extends ElementDefinitionSlicing {
           ElementDefinitionSlicingRules rules,
       @JsonKey(name: '_rules')
           Element rulesElement}) = _$_ElementDefinitionSlicing;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ElementDefinitionSlicing.fromYaml(dynamic yaml) => yaml is String
+      ? _ElementDefinitionSlicing.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ElementDefinitionSlicing.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ElementDefinitionSlicing.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionSlicing.fromJson;
@@ -16242,6 +16578,19 @@ class _$_ElementDefinitionDiscriminator
           this.pathElement})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ElementDefinitionDiscriminator.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_ElementDefinitionDiscriminator
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_ElementDefinitionDiscriminator
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_ElementDefinitionDiscriminator.fromJson(
           Map<String, dynamic> json) =>
       _$_$_ElementDefinitionDiscriminatorFromJson(json);
@@ -16331,6 +16680,19 @@ abstract class _ElementDefinitionDiscriminator
       String path,
       @JsonKey(name: '_path')
           Element pathElement}) = _$_ElementDefinitionDiscriminator;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ElementDefinitionDiscriminator.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _ElementDefinitionDiscriminator.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _ElementDefinitionDiscriminator.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _ElementDefinitionDiscriminator.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionDiscriminator.fromJson;
@@ -16600,6 +16962,17 @@ class _$_ElementDefinitionBase extends _ElementDefinitionBase {
       @JsonKey(name: '_max') this.maxElement})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ElementDefinitionBase.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ElementDefinitionBase
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ElementDefinitionBase.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ElementDefinitionBase.fromJson(Map<String, dynamic> json) =>
       _$_$_ElementDefinitionBaseFromJson(json);
 
@@ -16696,6 +17069,16 @@ abstract class _ElementDefinitionBase extends ElementDefinitionBase {
       @JsonKey(name: '_min') Element minElement,
       String max,
       @JsonKey(name: '_max') Element maxElement}) = _$_ElementDefinitionBase;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ElementDefinitionBase.fromYaml(dynamic yaml) => yaml is String
+      ? _ElementDefinitionBase.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ElementDefinitionBase.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ElementDefinitionBase.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionBase.fromJson;
@@ -17012,6 +17395,17 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
           this.versioningElement})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ElementDefinitionType.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ElementDefinitionType
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ElementDefinitionType.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ElementDefinitionType.fromJson(Map<String, dynamic> json) =>
       _$_$_ElementDefinitionTypeFromJson(json);
 
@@ -17130,6 +17524,16 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
           ElementDefinitionTypeVersioning versioning,
       @JsonKey(name: '_versioning')
           Element versioningElement}) = _$_ElementDefinitionType;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ElementDefinitionType.fromYaml(dynamic yaml) => yaml is String
+      ? _ElementDefinitionType.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ElementDefinitionType.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ElementDefinitionType.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionType.fromJson;
@@ -18959,6 +19363,17 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
       this.valueMeta})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ElementDefinitionExample.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ElementDefinitionExample
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ElementDefinitionExample.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ElementDefinitionExample.fromJson(Map<String, dynamic> json) =>
       _$_$_ElementDefinitionExampleFromJson(json);
 
@@ -19428,6 +19843,17 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
       UsageContext valueUsageContext,
       Dosage valueDosage,
       Meta valueMeta}) = _$_ElementDefinitionExample;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ElementDefinitionExample.fromYaml(dynamic yaml) => yaml is String
+      ? _ElementDefinitionExample.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ElementDefinitionExample.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ElementDefinitionExample.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionExample.fromJson;
@@ -20028,6 +20454,19 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
       this.source})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ElementDefinitionConstraint.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_ElementDefinitionConstraint
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_ElementDefinitionConstraint
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_ElementDefinitionConstraint.fromJson(Map<String, dynamic> json) =>
       _$_$_ElementDefinitionConstraintFromJson(json);
 
@@ -20185,6 +20624,17 @@ abstract class _ElementDefinitionConstraint
       @JsonKey(name: '_xpath')
           Element xpathElement,
       Canonical source}) = _$_ElementDefinitionConstraint;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ElementDefinitionConstraint.fromYaml(dynamic yaml) => yaml is String
+      ? _ElementDefinitionConstraint.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ElementDefinitionConstraint.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ElementDefinitionConstraint.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionConstraint.fromJson;
@@ -20478,6 +20928,17 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
       this.valueSet})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ElementDefinitionBinding.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ElementDefinitionBinding
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ElementDefinitionBinding.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ElementDefinitionBinding.fromJson(Map<String, dynamic> json) =>
       _$_$_ElementDefinitionBindingFromJson(json);
 
@@ -20574,6 +21035,17 @@ abstract class _ElementDefinitionBinding extends ElementDefinitionBinding {
       @JsonKey(name: '_description')
           Element descriptionElement,
       Canonical valueSet}) = _$_ElementDefinitionBinding;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ElementDefinitionBinding.fromYaml(dynamic yaml) => yaml is String
+      ? _ElementDefinitionBinding.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ElementDefinitionBinding.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ElementDefinitionBinding.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionBinding.fromJson;
@@ -20887,6 +21359,17 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
       @JsonKey(name: '_comment') this.commentElement})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ElementDefinitionMapping.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ElementDefinitionMapping
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ElementDefinitionMapping.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ElementDefinitionMapping.fromJson(Map<String, dynamic> json) =>
       _$_$_ElementDefinitionMappingFromJson(json);
 
@@ -21001,6 +21484,17 @@ abstract class _ElementDefinitionMapping extends ElementDefinitionMapping {
           String comment,
           @JsonKey(name: '_comment') Element commentElement}) =
       _$_ElementDefinitionMapping;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ElementDefinitionMapping.fromYaml(dynamic yaml) => yaml is String
+      ? _ElementDefinitionMapping.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ElementDefinitionMapping.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ElementDefinitionMapping.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionMapping.fromJson;

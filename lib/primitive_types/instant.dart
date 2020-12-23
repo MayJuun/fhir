@@ -1,4 +1,9 @@
+import 'dart:convert';
+
 import 'package:dartz/dartz.dart';
+import 'package:json2yaml/json2yaml.dart';
+import 'package:yaml/yaml.dart';
+// import 'package:flutter/foundation.dart';
 
 import 'dates.dart';
 import 'primitive_failures.dart';
@@ -18,5 +23,15 @@ class Instant extends Dates {
   }
 
   Instant._(this.value, this.format);
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Instant.fromYaml(dynamic yaml) => yaml is String
+      ? Instant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Instant.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory Instant.fromJson(String json) => Instant(json);
 }

@@ -551,6 +551,16 @@ class _$_Account extends _Account {
       : assert(resourceType != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_Account.fromYaml(dynamic yaml) => yaml is String
+      ? _$_Account.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_Account.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_Account.fromJson(Map<String, dynamic> json) =>
       _$_$_AccountFromJson(json);
 
@@ -758,6 +768,16 @@ abstract class _Account extends Account {
       @JsonKey(name: '_description') Element descriptionElement,
       List<AccountGuarantor> guarantor,
       Reference partOf}) = _$_Account;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _Account.fromYaml(dynamic yaml) => yaml is String
+      ? _Account.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _Account.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _Account.fromJson(Map<String, dynamic> json) = _$_Account.fromJson;
 
@@ -1017,6 +1037,16 @@ class _$_AccountCoverage extends _AccountCoverage {
       : assert(coverage != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_AccountCoverage.fromYaml(dynamic yaml) => yaml is String
+      ? _$_AccountCoverage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_AccountCoverage.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_AccountCoverage.fromJson(Map<String, dynamic> json) =>
       _$_$_AccountCoverageFromJson(json);
 
@@ -1093,6 +1123,16 @@ abstract class _AccountCoverage extends AccountCoverage {
           PositiveInt priority,
           @JsonKey(name: '_priority') Element priorityElement}) =
       _$_AccountCoverage;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _AccountCoverage.fromYaml(dynamic yaml) => yaml is String
+      ? _AccountCoverage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _AccountCoverage.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _AccountCoverage.fromJson(Map<String, dynamic> json) =
       _$_AccountCoverage.fromJson;
@@ -1333,6 +1373,16 @@ class _$_AccountGuarantor extends _AccountGuarantor {
       : assert(party != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_AccountGuarantor.fromYaml(dynamic yaml) => yaml is String
+      ? _$_AccountGuarantor.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_AccountGuarantor.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_AccountGuarantor.fromJson(Map<String, dynamic> json) =>
       _$_$_AccountGuarantorFromJson(json);
 
@@ -1412,6 +1462,16 @@ abstract class _AccountGuarantor extends AccountGuarantor {
       Boolean onHold,
       @JsonKey(name: '_onHold') Element onHoldElement,
       Period period}) = _$_AccountGuarantor;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _AccountGuarantor.fromYaml(dynamic yaml) => yaml is String
+      ? _AccountGuarantor.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _AccountGuarantor.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _AccountGuarantor.fromJson(Map<String, dynamic> json) =
       _$_AccountGuarantor.fromJson;
@@ -2441,6 +2501,16 @@ class _$_ChargeItem extends _ChargeItem {
         assert(subject != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ChargeItem.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ChargeItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ChargeItem.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ChargeItem.fromJson(Map<String, dynamic> json) =>
       _$_$_ChargeItemFromJson(json);
 
@@ -2769,6 +2839,16 @@ abstract class _ChargeItem extends ChargeItem {
       List<Annotation> note,
       List<Reference> supportingInformation}) = _$_ChargeItem;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ChargeItem.fromYaml(dynamic yaml) => yaml is String
+      ? _ChargeItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ChargeItem.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _ChargeItem.fromJson(Map<String, dynamic> json) =
       _$_ChargeItem.fromJson;
 
@@ -3060,6 +3140,16 @@ class _$_ChargeItemPerformer extends _ChargeItemPerformer {
       : assert(actor != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ChargeItemPerformer.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ChargeItemPerformer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ChargeItemPerformer.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ChargeItemPerformer.fromJson(Map<String, dynamic> json) =>
       _$_$_ChargeItemPerformerFromJson(json);
 
@@ -3127,6 +3217,16 @@ abstract class _ChargeItemPerformer extends ChargeItemPerformer {
       List<FhirExtension> modifierExtension,
       CodeableConcept function,
       @required Reference actor}) = _$_ChargeItemPerformer;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ChargeItemPerformer.fromYaml(dynamic yaml) => yaml is String
+      ? _ChargeItemPerformer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ChargeItemPerformer.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ChargeItemPerformer.fromJson(Map<String, dynamic> json) =
       _$_ChargeItemPerformer.fromJson;
@@ -4131,6 +4231,16 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
       : assert(resourceType != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ChargeItemDefinition.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ChargeItemDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ChargeItemDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ChargeItemDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_ChargeItemDefinitionFromJson(json);
 
@@ -4472,6 +4582,16 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
           List<ChargeItemDefinitionApplicability> applicability,
           List<ChargeItemDefinitionPropertyGroup> propertyGroup}) =
       _$_ChargeItemDefinition;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ChargeItemDefinition.fromYaml(dynamic yaml) => yaml is String
+      ? _ChargeItemDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ChargeItemDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ChargeItemDefinition.fromJson(Map<String, dynamic> json) =
       _$_ChargeItemDefinition.fromJson;
@@ -4848,6 +4968,19 @@ class _$_ChargeItemDefinitionApplicability
       @JsonKey(name: '_expression') this.expressionElement})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ChargeItemDefinitionApplicability.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_ChargeItemDefinitionApplicability
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_ChargeItemDefinitionApplicability
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_ChargeItemDefinitionApplicability.fromJson(
           Map<String, dynamic> json) =>
       _$_$_ChargeItemDefinitionApplicabilityFromJson(json);
@@ -4951,6 +5084,19 @@ abstract class _ChargeItemDefinitionApplicability
           String expression,
           @JsonKey(name: '_expression') Element expressionElement}) =
       _$_ChargeItemDefinitionApplicability;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ChargeItemDefinitionApplicability.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _ChargeItemDefinitionApplicability.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _ChargeItemDefinitionApplicability.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _ChargeItemDefinitionApplicability.fromJson(
           Map<String, dynamic> json) =
@@ -5150,6 +5296,19 @@ class _$_ChargeItemDefinitionPropertyGroup
       this.priceComponent})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ChargeItemDefinitionPropertyGroup.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_ChargeItemDefinitionPropertyGroup
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_ChargeItemDefinitionPropertyGroup
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_ChargeItemDefinitionPropertyGroup.fromJson(
           Map<String, dynamic> json) =>
       _$_$_ChargeItemDefinitionPropertyGroupFromJson(json);
@@ -5222,6 +5381,19 @@ abstract class _ChargeItemDefinitionPropertyGroup
           List<ChargeItemDefinitionApplicability> applicability,
           List<ChargeItemDefinitionPriceComponent> priceComponent}) =
       _$_ChargeItemDefinitionPropertyGroup;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ChargeItemDefinitionPropertyGroup.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _ChargeItemDefinitionPropertyGroup.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _ChargeItemDefinitionPropertyGroup.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _ChargeItemDefinitionPropertyGroup.fromJson(
           Map<String, dynamic> json) =
@@ -5504,6 +5676,19 @@ class _$_ChargeItemDefinitionPriceComponent
       this.amount})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ChargeItemDefinitionPriceComponent.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_ChargeItemDefinitionPriceComponent
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_ChargeItemDefinitionPriceComponent
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_ChargeItemDefinitionPriceComponent.fromJson(
           Map<String, dynamic> json) =>
       _$_$_ChargeItemDefinitionPriceComponentFromJson(json);
@@ -5601,6 +5786,19 @@ abstract class _ChargeItemDefinitionPriceComponent
       Decimal factor,
       @JsonKey(name: '_factor') Element factorElement,
       Money amount}) = _$_ChargeItemDefinitionPriceComponent;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ChargeItemDefinitionPriceComponent.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _ChargeItemDefinitionPriceComponent.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _ChargeItemDefinitionPriceComponent.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _ChargeItemDefinitionPriceComponent.fromJson(
           Map<String, dynamic> json) =
@@ -6733,6 +6931,16 @@ class _$_Contract extends _Contract {
       : assert(resourceType != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_Contract.fromYaml(dynamic yaml) => yaml is String
+      ? _$_Contract.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_Contract.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_Contract.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractFromJson(json);
 
@@ -7095,6 +7303,16 @@ abstract class _Contract extends Contract {
       List<ContractRule> rule,
       Attachment legallyBindingAttachment,
       Reference legallyBindingReference}) = _$_Contract;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _Contract.fromYaml(dynamic yaml) => yaml is String
+      ? _Contract.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _Contract.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _Contract.fromJson(Map<String, dynamic> json) = _$_Contract.fromJson;
 
@@ -7555,6 +7773,17 @@ class _$_ContractContentDefinition extends _ContractContentDefinition {
       : assert(type != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ContractContentDefinition.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ContractContentDefinition
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ContractContentDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ContractContentDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractContentDefinitionFromJson(json);
 
@@ -7678,6 +7907,17 @@ abstract class _ContractContentDefinition extends ContractContentDefinition {
           Markdown copyright,
           @JsonKey(name: '_copyright') Element copyrightElement}) =
       _$_ContractContentDefinition;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ContractContentDefinition.fromYaml(dynamic yaml) => yaml is String
+      ? _ContractContentDefinition.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ContractContentDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ContractContentDefinition.fromJson(Map<String, dynamic> json) =
       _$_ContractContentDefinition.fromJson;
@@ -8137,6 +8377,16 @@ class _$_ContractTerm extends _ContractTerm {
       : assert(offer != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ContractTerm.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ContractTerm.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ContractTerm.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ContractTerm.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractTermFromJson(json);
 
@@ -8290,6 +8540,16 @@ abstract class _ContractTerm extends ContractTerm {
       List<ContractAsset> asset,
       List<ContractAction> action,
       List<ContractTerm> group}) = _$_ContractTerm;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ContractTerm.fromYaml(dynamic yaml) => yaml is String
+      ? _ContractTerm.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ContractTerm.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ContractTerm.fromJson(Map<String, dynamic> json) =
       _$_ContractTerm.fromJson;
@@ -8546,6 +8806,17 @@ class _$_ContractSecurityLabel extends _ContractSecurityLabel {
       : assert(classification != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ContractSecurityLabel.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ContractSecurityLabel
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ContractSecurityLabel.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ContractSecurityLabel.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractSecurityLabelFromJson(json);
 
@@ -8634,6 +8905,16 @@ abstract class _ContractSecurityLabel extends ContractSecurityLabel {
       @required Coding classification,
       List<Coding> category,
       List<Coding> control}) = _$_ContractSecurityLabel;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ContractSecurityLabel.fromYaml(dynamic yaml) => yaml is String
+      ? _ContractSecurityLabel.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ContractSecurityLabel.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ContractSecurityLabel.fromJson(Map<String, dynamic> json) =
       _$_ContractSecurityLabel.fromJson;
@@ -9016,6 +9297,16 @@ class _$_ContractOffer extends _ContractOffer {
       @JsonKey(name: '_securityLabelNumber') this.securityLabelNumberElement})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ContractOffer.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ContractOffer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ContractOffer.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ContractOffer.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractOfferFromJson(json);
 
@@ -9163,6 +9454,16 @@ abstract class _ContractOffer extends ContractOffer {
       List<UnsignedInt> securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
           List<Element> securityLabelNumberElement}) = _$_ContractOffer;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ContractOffer.fromYaml(dynamic yaml) => yaml is String
+      ? _ContractOffer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ContractOffer.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ContractOffer.fromJson(Map<String, dynamic> json) =
       _$_ContractOffer.fromJson;
@@ -9379,6 +9680,16 @@ class _$_ContractParty extends _ContractParty {
         assert(role != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ContractParty.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ContractParty.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ContractParty.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ContractParty.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractPartyFromJson(json);
 
@@ -9445,6 +9756,16 @@ abstract class _ContractParty extends ContractParty {
       List<FhirExtension> modifierExtension,
       @required List<Reference> reference,
       @required CodeableConcept role}) = _$_ContractParty;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ContractParty.fromYaml(dynamic yaml) => yaml is String
+      ? _ContractParty.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ContractParty.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ContractParty.fromJson(Map<String, dynamic> json) =
       _$_ContractParty.fromJson;
@@ -10025,6 +10346,16 @@ class _$_ContractAnswer extends _ContractAnswer {
       this.valueReference})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ContractAnswer.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ContractAnswer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ContractAnswer.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ContractAnswer.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractAnswerFromJson(json);
 
@@ -10224,6 +10555,16 @@ abstract class _ContractAnswer extends ContractAnswer {
       Coding valueCoding,
       Quantity valueQuantity,
       Reference valueReference}) = _$_ContractAnswer;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ContractAnswer.fromYaml(dynamic yaml) => yaml is String
+      ? _ContractAnswer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ContractAnswer.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ContractAnswer.fromJson(Map<String, dynamic> json) =
       _$_ContractAnswer.fromJson;
@@ -10727,6 +11068,16 @@ class _$_ContractAsset extends _ContractAsset {
       this.valuedItem})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ContractAsset.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ContractAsset.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ContractAsset.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ContractAsset.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractAssetFromJson(json);
 
@@ -10918,6 +11269,16 @@ abstract class _ContractAsset extends ContractAsset {
       @JsonKey(name: '_securityLabelNumber')
           List<Element> securityLabelNumberElement,
       List<ContractValuedItem> valuedItem}) = _$_ContractAsset;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ContractAsset.fromYaml(dynamic yaml) => yaml is String
+      ? _ContractAsset.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ContractAsset.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ContractAsset.fromJson(Map<String, dynamic> json) =
       _$_ContractAsset.fromJson;
@@ -11179,6 +11540,16 @@ class _$_ContractContext extends _ContractContext {
       @JsonKey(name: '_text') this.textElement})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ContractContext.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ContractContext.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ContractContext.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ContractContext.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractContextFromJson(json);
 
@@ -11259,6 +11630,16 @@ abstract class _ContractContext extends ContractContext {
       List<CodeableConcept> code,
       String text,
       @JsonKey(name: '_text') Element textElement}) = _$_ContractContext;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ContractContext.fromYaml(dynamic yaml) => yaml is String
+      ? _ContractContext.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ContractContext.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ContractContext.fromJson(Map<String, dynamic> json) =
       _$_ContractContext.fromJson;
@@ -11893,6 +12274,16 @@ class _$_ContractValuedItem extends _ContractValuedItem {
       @JsonKey(name: '_securityLabelNumber') this.securityLabelNumberElement})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ContractValuedItem.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ContractValuedItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ContractValuedItem.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ContractValuedItem.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractValuedItemFromJson(json);
 
@@ -12109,6 +12500,16 @@ abstract class _ContractValuedItem extends ContractValuedItem {
       List<UnsignedInt> securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
           List<Element> securityLabelNumberElement}) = _$_ContractValuedItem;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ContractValuedItem.fromYaml(dynamic yaml) => yaml is String
+      ? _ContractValuedItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ContractValuedItem.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ContractValuedItem.fromJson(Map<String, dynamic> json) =
       _$_ContractValuedItem.fromJson;
@@ -12901,6 +13302,16 @@ class _$_ContractAction extends _ContractAction {
         assert(status != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ContractAction.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ContractAction.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ContractAction.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ContractAction.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractActionFromJson(json);
 
@@ -13172,6 +13583,16 @@ abstract class _ContractAction extends ContractAction {
       @JsonKey(name: '_securityLabelNumber')
           List<Element> securityLabelNumberElement}) = _$_ContractAction;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ContractAction.fromYaml(dynamic yaml) => yaml is String
+      ? _ContractAction.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ContractAction.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _ContractAction.fromJson(Map<String, dynamic> json) =
       _$_ContractAction.fromJson;
 
@@ -13430,6 +13851,16 @@ class _$_ContractSubject extends _ContractSubject {
       : assert(reference != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ContractSubject.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ContractSubject.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ContractSubject.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ContractSubject.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractSubjectFromJson(json);
 
@@ -13496,6 +13927,16 @@ abstract class _ContractSubject extends ContractSubject {
       List<FhirExtension> modifierExtension,
       @required List<Reference> reference,
       CodeableConcept role}) = _$_ContractSubject;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ContractSubject.fromYaml(dynamic yaml) => yaml is String
+      ? _ContractSubject.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ContractSubject.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ContractSubject.fromJson(Map<String, dynamic> json) =
       _$_ContractSubject.fromJson;
@@ -13711,6 +14152,16 @@ class _$_ContractSigner extends _ContractSigner {
         assert(signature != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ContractSigner.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ContractSigner.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ContractSigner.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ContractSigner.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractSignerFromJson(json);
 
@@ -13783,6 +14234,16 @@ abstract class _ContractSigner extends ContractSigner {
       @required Coding type,
       @required Reference party,
       @required List<Signature> signature}) = _$_ContractSigner;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ContractSigner.fromYaml(dynamic yaml) => yaml is String
+      ? _ContractSigner.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ContractSigner.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ContractSigner.fromJson(Map<String, dynamic> json) =
       _$_ContractSigner.fromJson;
@@ -13991,6 +14452,16 @@ class _$_ContractFriendly extends _ContractFriendly {
       this.contentReference})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ContractFriendly.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ContractFriendly.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ContractFriendly.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ContractFriendly.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractFriendlyFromJson(json);
 
@@ -14058,6 +14529,16 @@ abstract class _ContractFriendly extends ContractFriendly {
       List<FhirExtension> modifierExtension,
       Attachment contentAttachment,
       Reference contentReference}) = _$_ContractFriendly;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ContractFriendly.fromYaml(dynamic yaml) => yaml is String
+      ? _ContractFriendly.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ContractFriendly.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ContractFriendly.fromJson(Map<String, dynamic> json) =
       _$_ContractFriendly.fromJson;
@@ -14264,6 +14745,16 @@ class _$_ContractLegal extends _ContractLegal {
       this.contentReference})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ContractLegal.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ContractLegal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ContractLegal.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ContractLegal.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractLegalFromJson(json);
 
@@ -14331,6 +14822,16 @@ abstract class _ContractLegal extends ContractLegal {
       List<FhirExtension> modifierExtension,
       Attachment contentAttachment,
       Reference contentReference}) = _$_ContractLegal;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ContractLegal.fromYaml(dynamic yaml) => yaml is String
+      ? _ContractLegal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ContractLegal.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ContractLegal.fromJson(Map<String, dynamic> json) =
       _$_ContractLegal.fromJson;
@@ -14535,6 +15036,16 @@ class _$_ContractRule extends _ContractRule {
       this.contentReference})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ContractRule.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ContractRule.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ContractRule.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ContractRule.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractRuleFromJson(json);
 
@@ -14602,6 +15113,16 @@ abstract class _ContractRule extends ContractRule {
       List<FhirExtension> modifierExtension,
       Attachment contentAttachment,
       Reference contentReference}) = _$_ContractRule;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ContractRule.fromYaml(dynamic yaml) => yaml is String
+      ? _ContractRule.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ContractRule.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ContractRule.fromJson(Map<String, dynamic> json) =
       _$_ContractRule.fromJson;
@@ -15983,6 +16504,16 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
         assert(insurance != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ExplanationOfBenefit.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ExplanationOfBenefit.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ExplanationOfBenefit.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =>
       _$_$_ExplanationOfBenefitFromJson(json);
 
@@ -16396,6 +16927,16 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
           List<ExplanationOfBenefitBenefitBalance> benefitBalance}) =
       _$_ExplanationOfBenefit;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ExplanationOfBenefit.fromYaml(dynamic yaml) => yaml is String
+      ? _ExplanationOfBenefit.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ExplanationOfBenefit.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefit.fromJson;
 
@@ -16751,6 +17292,19 @@ class _$_ExplanationOfBenefitRelated extends _ExplanationOfBenefitRelated {
       this.reference})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ExplanationOfBenefitRelated.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_ExplanationOfBenefitRelated
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_ExplanationOfBenefitRelated
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_ExplanationOfBenefitRelated.fromJson(Map<String, dynamic> json) =>
       _$_$_ExplanationOfBenefitRelatedFromJson(json);
 
@@ -16826,6 +17380,17 @@ abstract class _ExplanationOfBenefitRelated
       Reference claim,
       CodeableConcept relationship,
       Identifier reference}) = _$_ExplanationOfBenefitRelated;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ExplanationOfBenefitRelated.fromYaml(dynamic yaml) => yaml is String
+      ? _ExplanationOfBenefitRelated.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ExplanationOfBenefitRelated.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ExplanationOfBenefitRelated.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitRelated.fromJson;
@@ -17029,6 +17594,17 @@ class _$_ExplanationOfBenefitPayee extends _ExplanationOfBenefitPayee {
       this.party})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ExplanationOfBenefitPayee.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ExplanationOfBenefitPayee
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ExplanationOfBenefitPayee.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ExplanationOfBenefitPayee.fromJson(Map<String, dynamic> json) =>
       _$_$_ExplanationOfBenefitPayeeFromJson(json);
 
@@ -17096,6 +17672,17 @@ abstract class _ExplanationOfBenefitPayee extends ExplanationOfBenefitPayee {
       List<FhirExtension> modifierExtension,
       CodeableConcept type,
       Reference party}) = _$_ExplanationOfBenefitPayee;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ExplanationOfBenefitPayee.fromYaml(dynamic yaml) => yaml is String
+      ? _ExplanationOfBenefitPayee.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ExplanationOfBenefitPayee.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ExplanationOfBenefitPayee.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitPayee.fromJson;
@@ -17406,6 +17993,19 @@ class _$_ExplanationOfBenefitCareTeam extends _ExplanationOfBenefitCareTeam {
       : assert(provider != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ExplanationOfBenefitCareTeam.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_ExplanationOfBenefitCareTeam
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_ExplanationOfBenefitCareTeam
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_ExplanationOfBenefitCareTeam.fromJson(Map<String, dynamic> json) =>
       _$_$_ExplanationOfBenefitCareTeamFromJson(json);
 
@@ -17511,6 +18111,17 @@ abstract class _ExplanationOfBenefitCareTeam
       @JsonKey(name: '_responsible') Element responsibleElement,
       CodeableConcept role,
       CodeableConcept qualification}) = _$_ExplanationOfBenefitCareTeam;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ExplanationOfBenefitCareTeam.fromYaml(dynamic yaml) => yaml is String
+      ? _ExplanationOfBenefitCareTeam.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ExplanationOfBenefitCareTeam.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ExplanationOfBenefitCareTeam.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitCareTeam.fromJson;
@@ -18024,6 +18635,19 @@ class _$_ExplanationOfBenefitSupportingInfo
       : assert(category != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ExplanationOfBenefitSupportingInfo.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_ExplanationOfBenefitSupportingInfo
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_ExplanationOfBenefitSupportingInfo
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_ExplanationOfBenefitSupportingInfo.fromJson(
           Map<String, dynamic> json) =>
       _$_$_ExplanationOfBenefitSupportingInfoFromJson(json);
@@ -18188,6 +18812,19 @@ abstract class _ExplanationOfBenefitSupportingInfo
       Attachment valueAttachment,
       Reference valueReference,
       Coding reason}) = _$_ExplanationOfBenefitSupportingInfo;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ExplanationOfBenefitSupportingInfo.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _ExplanationOfBenefitSupportingInfo.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _ExplanationOfBenefitSupportingInfo.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _ExplanationOfBenefitSupportingInfo.fromJson(
           Map<String, dynamic> json) =
@@ -18535,6 +19172,19 @@ class _$_ExplanationOfBenefitDiagnosis extends _ExplanationOfBenefitDiagnosis {
       this.packageCode})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ExplanationOfBenefitDiagnosis.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_ExplanationOfBenefitDiagnosis
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_ExplanationOfBenefitDiagnosis
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_ExplanationOfBenefitDiagnosis.fromJson(
           Map<String, dynamic> json) =>
       _$_$_ExplanationOfBenefitDiagnosisFromJson(json);
@@ -18642,6 +19292,19 @@ abstract class _ExplanationOfBenefitDiagnosis
       List<CodeableConcept> type,
       CodeableConcept onAdmission,
       CodeableConcept packageCode}) = _$_ExplanationOfBenefitDiagnosis;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ExplanationOfBenefitDiagnosis.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _ExplanationOfBenefitDiagnosis.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _ExplanationOfBenefitDiagnosis.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _ExplanationOfBenefitDiagnosis.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitDiagnosis.fromJson;
@@ -18961,6 +19624,19 @@ class _$_ExplanationOfBenefitProcedure extends _ExplanationOfBenefitProcedure {
       this.udi})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ExplanationOfBenefitProcedure.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_ExplanationOfBenefitProcedure
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_ExplanationOfBenefitProcedure
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_ExplanationOfBenefitProcedure.fromJson(
           Map<String, dynamic> json) =>
       _$_$_ExplanationOfBenefitProcedureFromJson(json);
@@ -19074,6 +19750,19 @@ abstract class _ExplanationOfBenefitProcedure
       CodeableConcept procedureCodeableConcept,
       Reference procedureReference,
       List<Reference> udi}) = _$_ExplanationOfBenefitProcedure;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ExplanationOfBenefitProcedure.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _ExplanationOfBenefitProcedure.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _ExplanationOfBenefitProcedure.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _ExplanationOfBenefitProcedure.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitProcedure.fromJson;
@@ -19338,6 +20027,19 @@ class _$_ExplanationOfBenefitInsurance extends _ExplanationOfBenefitInsurance {
       : assert(coverage != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ExplanationOfBenefitInsurance.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_ExplanationOfBenefitInsurance
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_ExplanationOfBenefitInsurance
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_ExplanationOfBenefitInsurance.fromJson(
           Map<String, dynamic> json) =>
       _$_$_ExplanationOfBenefitInsuranceFromJson(json);
@@ -19431,6 +20133,19 @@ abstract class _ExplanationOfBenefitInsurance
           List<String> preAuthRef,
           @JsonKey(name: '_preAuthRef') List<Element> preAuthRefElement}) =
       _$_ExplanationOfBenefitInsurance;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ExplanationOfBenefitInsurance.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _ExplanationOfBenefitInsurance.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _ExplanationOfBenefitInsurance.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _ExplanationOfBenefitInsurance.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitInsurance.fromJson;
@@ -19711,6 +20426,19 @@ class _$_ExplanationOfBenefitAccident extends _ExplanationOfBenefitAccident {
       this.locationReference})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ExplanationOfBenefitAccident.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_ExplanationOfBenefitAccident
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_ExplanationOfBenefitAccident
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_ExplanationOfBenefitAccident.fromJson(Map<String, dynamic> json) =>
       _$_$_ExplanationOfBenefitAccidentFromJson(json);
 
@@ -19800,6 +20528,17 @@ abstract class _ExplanationOfBenefitAccident
       CodeableConcept type,
       Address locationAddress,
       Reference locationReference}) = _$_ExplanationOfBenefitAccident;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ExplanationOfBenefitAccident.fromYaml(dynamic yaml) => yaml is String
+      ? _ExplanationOfBenefitAccident.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ExplanationOfBenefitAccident.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ExplanationOfBenefitAccident.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitAccident.fromJson;
@@ -20624,6 +21363,17 @@ class _$_ExplanationOfBenefitItem extends _ExplanationOfBenefitItem {
       : assert(productOrService != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ExplanationOfBenefitItem.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ExplanationOfBenefitItem
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ExplanationOfBenefitItem.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ExplanationOfBenefitItem.fromJson(Map<String, dynamic> json) =>
       _$_$_ExplanationOfBenefitItemFromJson(json);
 
@@ -20892,6 +21642,17 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
           List<Element> noteNumberElement,
       List<ExplanationOfBenefitAdjudication> adjudication,
       List<ExplanationOfBenefitDetail> detail}) = _$_ExplanationOfBenefitItem;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ExplanationOfBenefitItem.fromYaml(dynamic yaml) => yaml is String
+      ? _ExplanationOfBenefitItem.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ExplanationOfBenefitItem.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ExplanationOfBenefitItem.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitItem.fromJson;
@@ -21234,6 +21995,19 @@ class _$_ExplanationOfBenefitAdjudication
       : assert(category != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ExplanationOfBenefitAdjudication.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_ExplanationOfBenefitAdjudication
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_ExplanationOfBenefitAdjudication
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_ExplanationOfBenefitAdjudication.fromJson(
           Map<String, dynamic> json) =>
       _$_$_ExplanationOfBenefitAdjudicationFromJson(json);
@@ -21324,6 +22098,19 @@ abstract class _ExplanationOfBenefitAdjudication
           Decimal value,
           @JsonKey(name: '_value') Element valueElement}) =
       _$_ExplanationOfBenefitAdjudication;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ExplanationOfBenefitAdjudication.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _ExplanationOfBenefitAdjudication.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _ExplanationOfBenefitAdjudication.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _ExplanationOfBenefitAdjudication.fromJson(
       Map<String, dynamic> json) = _$_ExplanationOfBenefitAdjudication.fromJson;
@@ -21803,6 +22590,17 @@ class _$_ExplanationOfBenefitDetail extends _ExplanationOfBenefitDetail {
       : assert(productOrService != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ExplanationOfBenefitDetail.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ExplanationOfBenefitDetail
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ExplanationOfBenefitDetail.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ExplanationOfBenefitDetail.fromJson(Map<String, dynamic> json) =>
       _$_$_ExplanationOfBenefitDetailFromJson(json);
 
@@ -21977,6 +22775,17 @@ abstract class _ExplanationOfBenefitDetail extends ExplanationOfBenefitDetail {
           List<ExplanationOfBenefitAdjudication> adjudication,
           List<ExplanationOfBenefitSubDetail> subDetail}) =
       _$_ExplanationOfBenefitDetail;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ExplanationOfBenefitDetail.fromYaml(dynamic yaml) => yaml is String
+      ? _ExplanationOfBenefitDetail.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ExplanationOfBenefitDetail.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ExplanationOfBenefitDetail.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitDetail.fromJson;
@@ -22471,6 +23280,19 @@ class _$_ExplanationOfBenefitSubDetail extends _ExplanationOfBenefitSubDetail {
       : assert(productOrService != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ExplanationOfBenefitSubDetail.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_ExplanationOfBenefitSubDetail
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_ExplanationOfBenefitSubDetail
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_ExplanationOfBenefitSubDetail.fromJson(
           Map<String, dynamic> json) =>
       _$_$_ExplanationOfBenefitSubDetailFromJson(json);
@@ -22640,6 +23462,19 @@ abstract class _ExplanationOfBenefitSubDetail
           @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
           List<ExplanationOfBenefitAdjudication> adjudication}) =
       _$_ExplanationOfBenefitSubDetail;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ExplanationOfBenefitSubDetail.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _ExplanationOfBenefitSubDetail.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _ExplanationOfBenefitSubDetail.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _ExplanationOfBenefitSubDetail.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitSubDetail.fromJson;
@@ -23359,6 +24194,19 @@ class _$_ExplanationOfBenefitAddItem extends _ExplanationOfBenefitAddItem {
       : assert(productOrService != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ExplanationOfBenefitAddItem.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_ExplanationOfBenefitAddItem
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_ExplanationOfBenefitAddItem
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_ExplanationOfBenefitAddItem.fromJson(Map<String, dynamic> json) =>
       _$_$_ExplanationOfBenefitAddItemFromJson(json);
 
@@ -23596,6 +24444,17 @@ abstract class _ExplanationOfBenefitAddItem
           List<ExplanationOfBenefitAdjudication> adjudication,
           List<ExplanationOfBenefitDetail1> detail}) =
       _$_ExplanationOfBenefitAddItem;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ExplanationOfBenefitAddItem.fromYaml(dynamic yaml) => yaml is String
+      ? _ExplanationOfBenefitAddItem.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ExplanationOfBenefitAddItem.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ExplanationOfBenefitAddItem.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitAddItem.fromJson;
@@ -24017,6 +24876,19 @@ class _$_ExplanationOfBenefitDetail1 extends _ExplanationOfBenefitDetail1 {
       : assert(productOrService != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ExplanationOfBenefitDetail1.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_ExplanationOfBenefitDetail1
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_ExplanationOfBenefitDetail1
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_ExplanationOfBenefitDetail1.fromJson(Map<String, dynamic> json) =>
       _$_$_ExplanationOfBenefitDetail1FromJson(json);
 
@@ -24150,6 +25022,17 @@ abstract class _ExplanationOfBenefitDetail1
           List<ExplanationOfBenefitAdjudication> adjudication,
           List<ExplanationOfBenefitSubDetail1> subDetail}) =
       _$_ExplanationOfBenefitDetail1;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ExplanationOfBenefitDetail1.fromYaml(dynamic yaml) => yaml is String
+      ? _ExplanationOfBenefitDetail1.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ExplanationOfBenefitDetail1.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ExplanationOfBenefitDetail1.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitDetail1.fromJson;
@@ -24523,6 +25406,19 @@ class _$_ExplanationOfBenefitSubDetail1
       : assert(productOrService != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ExplanationOfBenefitSubDetail1.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_ExplanationOfBenefitSubDetail1
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_ExplanationOfBenefitSubDetail1
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_ExplanationOfBenefitSubDetail1.fromJson(
           Map<String, dynamic> json) =>
       _$_$_ExplanationOfBenefitSubDetail1FromJson(json);
@@ -24650,6 +25546,19 @@ abstract class _ExplanationOfBenefitSubDetail1
           @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
           List<ExplanationOfBenefitAdjudication> adjudication}) =
       _$_ExplanationOfBenefitSubDetail1;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ExplanationOfBenefitSubDetail1.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _ExplanationOfBenefitSubDetail1.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _ExplanationOfBenefitSubDetail1.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _ExplanationOfBenefitSubDetail1.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitSubDetail1.fromJson;
@@ -24873,6 +25782,17 @@ class _$_ExplanationOfBenefitTotal extends _ExplanationOfBenefitTotal {
         assert(amount != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ExplanationOfBenefitTotal.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ExplanationOfBenefitTotal
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ExplanationOfBenefitTotal.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ExplanationOfBenefitTotal.fromJson(Map<String, dynamic> json) =>
       _$_$_ExplanationOfBenefitTotalFromJson(json);
 
@@ -24941,6 +25861,17 @@ abstract class _ExplanationOfBenefitTotal extends ExplanationOfBenefitTotal {
       List<FhirExtension> modifierExtension,
       @required CodeableConcept category,
       @required Money amount}) = _$_ExplanationOfBenefitTotal;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ExplanationOfBenefitTotal.fromYaml(dynamic yaml) => yaml is String
+      ? _ExplanationOfBenefitTotal.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ExplanationOfBenefitTotal.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ExplanationOfBenefitTotal.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitTotal.fromJson;
@@ -25258,6 +26189,19 @@ class _$_ExplanationOfBenefitPayment extends _ExplanationOfBenefitPayment {
       this.identifier})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ExplanationOfBenefitPayment.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_ExplanationOfBenefitPayment
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_ExplanationOfBenefitPayment
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_ExplanationOfBenefitPayment.fromJson(Map<String, dynamic> json) =>
       _$_$_ExplanationOfBenefitPaymentFromJson(json);
 
@@ -25360,6 +26304,17 @@ abstract class _ExplanationOfBenefitPayment
       @JsonKey(name: '_date') Element dateElement,
       Money amount,
       Identifier identifier}) = _$_ExplanationOfBenefitPayment;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ExplanationOfBenefitPayment.fromYaml(dynamic yaml) => yaml is String
+      ? _ExplanationOfBenefitPayment.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ExplanationOfBenefitPayment.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ExplanationOfBenefitPayment.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitPayment.fromJson;
@@ -25692,6 +26647,19 @@ class _$_ExplanationOfBenefitProcessNote
       this.language})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ExplanationOfBenefitProcessNote.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_ExplanationOfBenefitProcessNote
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_ExplanationOfBenefitProcessNote
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_ExplanationOfBenefitProcessNote.fromJson(
           Map<String, dynamic> json) =>
       _$_$_ExplanationOfBenefitProcessNoteFromJson(json);
@@ -25803,6 +26771,19 @@ abstract class _ExplanationOfBenefitProcessNote
       @JsonKey(name: '_text')
           Element textElement,
       CodeableConcept language}) = _$_ExplanationOfBenefitProcessNote;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ExplanationOfBenefitProcessNote.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _ExplanationOfBenefitProcessNote.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _ExplanationOfBenefitProcessNote.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _ExplanationOfBenefitProcessNote.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitProcessNote.fromJson;
@@ -26201,6 +27182,19 @@ class _$_ExplanationOfBenefitBenefitBalance
       : assert(category != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ExplanationOfBenefitBenefitBalance.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_ExplanationOfBenefitBenefitBalance
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_ExplanationOfBenefitBenefitBalance
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_ExplanationOfBenefitBenefitBalance.fromJson(
           Map<String, dynamic> json) =>
       _$_$_ExplanationOfBenefitBenefitBalanceFromJson(json);
@@ -26336,6 +27330,19 @@ abstract class _ExplanationOfBenefitBenefitBalance
           CodeableConcept term,
           List<ExplanationOfBenefitFinancial> financial}) =
       _$_ExplanationOfBenefitBenefitBalance;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ExplanationOfBenefitBenefitBalance.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _ExplanationOfBenefitBenefitBalance.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _ExplanationOfBenefitBenefitBalance.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _ExplanationOfBenefitBenefitBalance.fromJson(
           Map<String, dynamic> json) =
@@ -26715,6 +27722,19 @@ class _$_ExplanationOfBenefitFinancial extends _ExplanationOfBenefitFinancial {
       : assert(type != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ExplanationOfBenefitFinancial.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_ExplanationOfBenefitFinancial
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_ExplanationOfBenefitFinancial
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_ExplanationOfBenefitFinancial.fromJson(
           Map<String, dynamic> json) =>
       _$_$_ExplanationOfBenefitFinancialFromJson(json);
@@ -26838,6 +27858,19 @@ abstract class _ExplanationOfBenefitFinancial
       UnsignedInt usedUnsignedInt,
       @JsonKey(name: '_usedUnsignedInt') Element usedUnsignedIntElement,
       Money usedMoney}) = _$_ExplanationOfBenefitFinancial;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ExplanationOfBenefitFinancial.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _ExplanationOfBenefitFinancial.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _ExplanationOfBenefitFinancial.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _ExplanationOfBenefitFinancial.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitFinancial.fromJson;
@@ -27453,6 +28486,16 @@ class _$_InsurancePlan extends _InsurancePlan {
       : assert(resourceType != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_InsurancePlan.fromYaml(dynamic yaml) => yaml is String
+      ? _$_InsurancePlan.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_InsurancePlan.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_InsurancePlan.fromJson(Map<String, dynamic> json) =>
       _$_$_InsurancePlanFromJson(json);
 
@@ -27683,6 +28726,16 @@ abstract class _InsurancePlan extends InsurancePlan {
       List<Reference> network,
       List<InsurancePlanCoverage> coverage,
       List<InsurancePlanPlan> plan}) = _$_InsurancePlan;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _InsurancePlan.fromYaml(dynamic yaml) => yaml is String
+      ? _InsurancePlan.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _InsurancePlan.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _InsurancePlan.fromJson(Map<String, dynamic> json) =
       _$_InsurancePlan.fromJson;
@@ -27968,6 +29021,16 @@ class _$_InsurancePlanContact extends _InsurancePlanContact {
       this.address})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_InsurancePlanContact.fromYaml(dynamic yaml) => yaml is String
+      ? _$_InsurancePlanContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_InsurancePlanContact.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_InsurancePlanContact.fromJson(Map<String, dynamic> json) =>
       _$_$_InsurancePlanContactFromJson(json);
 
@@ -28048,6 +29111,16 @@ abstract class _InsurancePlanContact extends InsurancePlanContact {
       HumanName name,
       List<ContactPoint> telecom,
       Address address}) = _$_InsurancePlanContact;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _InsurancePlanContact.fromYaml(dynamic yaml) => yaml is String
+      ? _InsurancePlanContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _InsurancePlanContact.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _InsurancePlanContact.fromJson(Map<String, dynamic> json) =
       _$_InsurancePlanContact.fromJson;
@@ -28254,6 +29327,17 @@ class _$_InsurancePlanCoverage extends _InsurancePlanCoverage {
         assert(benefit != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_InsurancePlanCoverage.fromYaml(dynamic yaml) => yaml is String
+      ? _$_InsurancePlanCoverage
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_InsurancePlanCoverage.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_InsurancePlanCoverage.fromJson(Map<String, dynamic> json) =>
       _$_$_InsurancePlanCoverageFromJson(json);
 
@@ -28327,6 +29411,16 @@ abstract class _InsurancePlanCoverage extends InsurancePlanCoverage {
       @required CodeableConcept type,
       List<Reference> network,
       @required List<InsurancePlanBenefit> benefit}) = _$_InsurancePlanCoverage;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _InsurancePlanCoverage.fromYaml(dynamic yaml) => yaml is String
+      ? _InsurancePlanCoverage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _InsurancePlanCoverage.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _InsurancePlanCoverage.fromJson(Map<String, dynamic> json) =
       _$_InsurancePlanCoverage.fromJson;
@@ -28557,6 +29651,16 @@ class _$_InsurancePlanBenefit extends _InsurancePlanBenefit {
       : assert(type != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_InsurancePlanBenefit.fromYaml(dynamic yaml) => yaml is String
+      ? _$_InsurancePlanBenefit.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_InsurancePlanBenefit.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_InsurancePlanBenefit.fromJson(Map<String, dynamic> json) =>
       _$_$_InsurancePlanBenefitFromJson(json);
 
@@ -28638,6 +29742,16 @@ abstract class _InsurancePlanBenefit extends InsurancePlanBenefit {
       String requirement,
       @JsonKey(name: '_requirement') Element requirementElement,
       List<InsurancePlanLimit> limit}) = _$_InsurancePlanBenefit;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _InsurancePlanBenefit.fromYaml(dynamic yaml) => yaml is String
+      ? _InsurancePlanBenefit.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _InsurancePlanBenefit.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _InsurancePlanBenefit.fromJson(Map<String, dynamic> json) =
       _$_InsurancePlanBenefit.fromJson;
@@ -28841,6 +29955,16 @@ class _$_InsurancePlanLimit extends _InsurancePlanLimit {
       this.code})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_InsurancePlanLimit.fromYaml(dynamic yaml) => yaml is String
+      ? _$_InsurancePlanLimit.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_InsurancePlanLimit.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_InsurancePlanLimit.fromJson(Map<String, dynamic> json) =>
       _$_$_InsurancePlanLimitFromJson(json);
 
@@ -28906,6 +30030,16 @@ abstract class _InsurancePlanLimit extends InsurancePlanLimit {
       List<FhirExtension> modifierExtension,
       Quantity value,
       CodeableConcept code}) = _$_InsurancePlanLimit;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _InsurancePlanLimit.fromYaml(dynamic yaml) => yaml is String
+      ? _InsurancePlanLimit.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _InsurancePlanLimit.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _InsurancePlanLimit.fromJson(Map<String, dynamic> json) =
       _$_InsurancePlanLimit.fromJson;
@@ -29147,6 +30281,16 @@ class _$_InsurancePlanPlan extends _InsurancePlanPlan {
       this.specificCost})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_InsurancePlanPlan.fromYaml(dynamic yaml) => yaml is String
+      ? _$_InsurancePlanPlan.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_InsurancePlanPlan.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_InsurancePlanPlan.fromJson(Map<String, dynamic> json) =>
       _$_$_InsurancePlanPlanFromJson(json);
 
@@ -29241,6 +30385,16 @@ abstract class _InsurancePlanPlan extends InsurancePlanPlan {
       List<Reference> network,
       List<InsurancePlanGeneralCost> generalCost,
       List<InsurancePlanSpecificCost> specificCost}) = _$_InsurancePlanPlan;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _InsurancePlanPlan.fromYaml(dynamic yaml) => yaml is String
+      ? _InsurancePlanPlan.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _InsurancePlanPlan.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _InsurancePlanPlan.fromJson(Map<String, dynamic> json) =
       _$_InsurancePlanPlan.fromJson;
@@ -29527,6 +30681,17 @@ class _$_InsurancePlanGeneralCost extends _InsurancePlanGeneralCost {
       @JsonKey(name: '_comment') this.commentElement})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_InsurancePlanGeneralCost.fromYaml(dynamic yaml) => yaml is String
+      ? _$_InsurancePlanGeneralCost
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_InsurancePlanGeneralCost.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_InsurancePlanGeneralCost.fromJson(Map<String, dynamic> json) =>
       _$_$_InsurancePlanGeneralCostFromJson(json);
 
@@ -29624,6 +30789,17 @@ abstract class _InsurancePlanGeneralCost extends InsurancePlanGeneralCost {
           String comment,
           @JsonKey(name: '_comment') Element commentElement}) =
       _$_InsurancePlanGeneralCost;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _InsurancePlanGeneralCost.fromYaml(dynamic yaml) => yaml is String
+      ? _InsurancePlanGeneralCost.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _InsurancePlanGeneralCost.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _InsurancePlanGeneralCost.fromJson(Map<String, dynamic> json) =
       _$_InsurancePlanGeneralCost.fromJson;
@@ -29828,6 +31004,17 @@ class _$_InsurancePlanSpecificCost extends _InsurancePlanSpecificCost {
       : assert(category != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_InsurancePlanSpecificCost.fromYaml(dynamic yaml) => yaml is String
+      ? _$_InsurancePlanSpecificCost
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_InsurancePlanSpecificCost.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_InsurancePlanSpecificCost.fromJson(Map<String, dynamic> json) =>
       _$_$_InsurancePlanSpecificCostFromJson(json);
 
@@ -29896,6 +31083,17 @@ abstract class _InsurancePlanSpecificCost extends InsurancePlanSpecificCost {
       List<FhirExtension> modifierExtension,
       @required CodeableConcept category,
       List<InsurancePlanBenefit1> benefit}) = _$_InsurancePlanSpecificCost;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _InsurancePlanSpecificCost.fromYaml(dynamic yaml) => yaml is String
+      ? _InsurancePlanSpecificCost.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _InsurancePlanSpecificCost.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _InsurancePlanSpecificCost.fromJson(Map<String, dynamic> json) =
       _$_InsurancePlanSpecificCost.fromJson;
@@ -30083,6 +31281,17 @@ class _$_InsurancePlanBenefit1 extends _InsurancePlanBenefit1 {
       : assert(type != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_InsurancePlanBenefit1.fromYaml(dynamic yaml) => yaml is String
+      ? _$_InsurancePlanBenefit1
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_InsurancePlanBenefit1.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_InsurancePlanBenefit1.fromJson(Map<String, dynamic> json) =>
       _$_$_InsurancePlanBenefit1FromJson(json);
 
@@ -30149,6 +31358,16 @@ abstract class _InsurancePlanBenefit1 extends InsurancePlanBenefit1 {
       List<FhirExtension> modifierExtension,
       @required CodeableConcept type,
       List<InsurancePlanCost> cost}) = _$_InsurancePlanBenefit1;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _InsurancePlanBenefit1.fromYaml(dynamic yaml) => yaml is String
+      ? _InsurancePlanBenefit1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _InsurancePlanBenefit1.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _InsurancePlanBenefit1.fromJson(Map<String, dynamic> json) =
       _$_InsurancePlanBenefit1.fromJson;
@@ -30389,6 +31608,16 @@ class _$_InsurancePlanCost extends _InsurancePlanCost {
       : assert(type != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_InsurancePlanCost.fromYaml(dynamic yaml) => yaml is String
+      ? _$_InsurancePlanCost.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_InsurancePlanCost.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_InsurancePlanCost.fromJson(Map<String, dynamic> json) =>
       _$_$_InsurancePlanCostFromJson(json);
 
@@ -30468,6 +31697,16 @@ abstract class _InsurancePlanCost extends InsurancePlanCost {
       CodeableConcept applicability,
       List<CodeableConcept> qualifiers,
       Quantity value}) = _$_InsurancePlanCost;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _InsurancePlanCost.fromYaml(dynamic yaml) => yaml is String
+      ? _InsurancePlanCost.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _InsurancePlanCost.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _InsurancePlanCost.fromJson(Map<String, dynamic> json) =
       _$_InsurancePlanCost.fromJson;

@@ -1109,6 +1109,16 @@ class _$_Evidence extends _Evidence {
         assert(variableDefinition != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_Evidence.fromYaml(dynamic yaml) => yaml is String
+      ? _$_Evidence.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_Evidence.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_Evidence.fromJson(Map<String, dynamic> json) =>
       _$_$_EvidenceFromJson(json);
 
@@ -1484,6 +1494,16 @@ abstract class _Evidence extends Evidence {
       List<Statistic> statistic,
       List<OrderedDistribution> distribution,
       List<EvidenceCertainty> certainty}) = _$_Evidence;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _Evidence.fromYaml(dynamic yaml) => yaml is String
+      ? _Evidence.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _Evidence.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _Evidence.fromJson(Map<String, dynamic> json) = _$_Evidence.fromJson;
 
@@ -1909,6 +1929,17 @@ class _$_EvidenceVariableDefinition extends _EvidenceVariableDefinition {
       : assert(variableRole != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_EvidenceVariableDefinition.fromYaml(dynamic yaml) => yaml is String
+      ? _$_EvidenceVariableDefinition
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_EvidenceVariableDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_EvidenceVariableDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_EvidenceVariableDefinitionFromJson(json);
 
@@ -2012,6 +2043,17 @@ abstract class _EvidenceVariableDefinition extends EvidenceVariableDefinition {
       Reference observed,
       Reference intended,
       CodeableConcept directnessMatch}) = _$_EvidenceVariableDefinition;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _EvidenceVariableDefinition.fromYaml(dynamic yaml) => yaml is String
+      ? _EvidenceVariableDefinition.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _EvidenceVariableDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _EvidenceVariableDefinition.fromJson(Map<String, dynamic> json) =
       _$_EvidenceVariableDefinition.fromJson;
@@ -2266,6 +2308,16 @@ class _$_EvidenceCertainty extends _EvidenceCertainty {
       this.certaintySubcomponent})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_EvidenceCertainty.fromYaml(dynamic yaml) => yaml is String
+      ? _$_EvidenceCertainty.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_EvidenceCertainty.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_EvidenceCertainty.fromJson(Map<String, dynamic> json) =>
       _$_$_EvidenceCertaintyFromJson(json);
 
@@ -2355,6 +2407,16 @@ abstract class _EvidenceCertainty extends EvidenceCertainty {
           List<CodeableConcept> rating,
           List<EvidenceCertaintySubcomponent> certaintySubcomponent}) =
       _$_EvidenceCertainty;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _EvidenceCertainty.fromYaml(dynamic yaml) => yaml is String
+      ? _EvidenceCertainty.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _EvidenceCertainty.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _EvidenceCertainty.fromJson(Map<String, dynamic> json) =
       _$_EvidenceCertainty.fromJson;
@@ -2607,6 +2669,19 @@ class _$_EvidenceCertaintySubcomponent extends _EvidenceCertaintySubcomponent {
       this.rating})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_EvidenceCertaintySubcomponent.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_EvidenceCertaintySubcomponent
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_EvidenceCertaintySubcomponent
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_EvidenceCertaintySubcomponent.fromJson(
           Map<String, dynamic> json) =>
       _$_$_EvidenceCertaintySubcomponentFromJson(json);
@@ -2697,6 +2772,19 @@ abstract class _EvidenceCertaintySubcomponent
       Annotation note,
       List<CodeableConcept> type,
       List<CodeableConcept> rating}) = _$_EvidenceCertaintySubcomponent;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _EvidenceCertaintySubcomponent.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _EvidenceCertaintySubcomponent.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _EvidenceCertaintySubcomponent.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _EvidenceCertaintySubcomponent.fromJson(Map<String, dynamic> json) =
       _$_EvidenceCertaintySubcomponent.fromJson;
@@ -4012,6 +4100,16 @@ class _$_EvidenceVariable extends _EvidenceVariable {
       : assert(resourceType != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_EvidenceVariable.fromYaml(dynamic yaml) => yaml is String
+      ? _$_EvidenceVariable.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_EvidenceVariable.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_EvidenceVariable.fromJson(Map<String, dynamic> json) =>
       _$_$_EvidenceVariableFromJson(json);
 
@@ -4436,6 +4534,16 @@ abstract class _EvidenceVariable extends EvidenceVariable {
       @JsonKey(name: '_handling')
           Element handlingElement,
       List<EvidenceVariableCategory> category}) = _$_EvidenceVariable;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _EvidenceVariable.fromYaml(dynamic yaml) => yaml is String
+      ? _EvidenceVariable.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _EvidenceVariable.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _EvidenceVariable.fromJson(Map<String, dynamic> json) =
       _$_EvidenceVariable.fromJson;
@@ -5081,6 +5189,19 @@ class _$_EvidenceVariableCharacteristic
           this.groupMeasureElement})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_EvidenceVariableCharacteristic.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_EvidenceVariableCharacteristic
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_EvidenceVariableCharacteristic
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_EvidenceVariableCharacteristic.fromJson(
           Map<String, dynamic> json) =>
       _$_$_EvidenceVariableCharacteristicFromJson(json);
@@ -5246,6 +5367,19 @@ abstract class _EvidenceVariableCharacteristic
           EvidenceVariableCharacteristicGroupMeasure groupMeasure,
       @JsonKey(name: '_groupMeasure')
           Element groupMeasureElement}) = _$_EvidenceVariableCharacteristic;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _EvidenceVariableCharacteristic.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _EvidenceVariableCharacteristic.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _EvidenceVariableCharacteristic.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _EvidenceVariableCharacteristic.fromJson(Map<String, dynamic> json) =
       _$_EvidenceVariableCharacteristic.fromJson;
@@ -5530,6 +5664,19 @@ class _$_EvidenceVariableTimeFromStart extends _EvidenceVariableTimeFromStart {
       this.note})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_EvidenceVariableTimeFromStart.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _$_EvidenceVariableTimeFromStart
+              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _$_EvidenceVariableTimeFromStart
+                  .fromJson(jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory _$_EvidenceVariableTimeFromStart.fromJson(
           Map<String, dynamic> json) =>
       _$_$_EvidenceVariableTimeFromStartFromJson(json);
@@ -5620,6 +5767,19 @@ abstract class _EvidenceVariableTimeFromStart
       Quantity quantity,
       Range range,
       List<Annotation> note}) = _$_EvidenceVariableTimeFromStart;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _EvidenceVariableTimeFromStart.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? _EvidenceVariableTimeFromStart.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? _EvidenceVariableTimeFromStart.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory _EvidenceVariableTimeFromStart.fromJson(Map<String, dynamic> json) =
       _$_EvidenceVariableTimeFromStart.fromJson;
@@ -5897,6 +6057,17 @@ class _$_EvidenceVariableCategory extends _EvidenceVariableCategory {
       this.valueRange})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_EvidenceVariableCategory.fromYaml(dynamic yaml) => yaml is String
+      ? _$_EvidenceVariableCategory
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_EvidenceVariableCategory.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_EvidenceVariableCategory.fromJson(Map<String, dynamic> json) =>
       _$_$_EvidenceVariableCategoryFromJson(json);
 
@@ -5986,6 +6157,17 @@ abstract class _EvidenceVariableCategory extends EvidenceVariableCategory {
       CodeableConcept valueCodeableConcept,
       Quantity valueQuantity,
       Range valueRange}) = _$_EvidenceVariableCategory;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _EvidenceVariableCategory.fromYaml(dynamic yaml) => yaml is String
+      ? _EvidenceVariableCategory.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _EvidenceVariableCategory.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _EvidenceVariableCategory.fromJson(Map<String, dynamic> json) =
       _$_EvidenceVariableCategory.fromJson;

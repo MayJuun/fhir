@@ -1,4 +1,8 @@
+import 'dart:convert';
+
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:json2yaml/json2yaml.dart';
+import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../stu3.dart';
@@ -84,6 +88,16 @@ abstract class FhirExtension with _$FhirExtension {
     ParameterDefinition valueParameterDefinition,
     TriggerDefinition valueTriggerDefinition,
   }) = _FhirExtension;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory FhirExtension.fromYaml(dynamic yaml) => yaml is String
+      ? FhirExtension.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? FhirExtension.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory FhirExtension.fromJson(Map<String, dynamic> json) =>
       _$FhirExtensionFromJson(json);

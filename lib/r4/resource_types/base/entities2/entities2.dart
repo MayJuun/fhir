@@ -1,4 +1,8 @@
+import 'dart:convert';
+
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:json2yaml/json2yaml.dart';
+import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../r4.dart';
@@ -44,6 +48,17 @@ abstract class BiologicallyDerivedProduct
     List<BiologicallyDerivedProductStorage> storage,
   }) = _BiologicallyDerivedProduct;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory BiologicallyDerivedProduct.fromYaml(dynamic yaml) => yaml is String
+      ? BiologicallyDerivedProduct.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? BiologicallyDerivedProduct.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory BiologicallyDerivedProduct.fromJson(Map<String, dynamic> json) =>
       _$BiologicallyDerivedProductFromJson(json);
 }
@@ -62,6 +77,19 @@ abstract class BiologicallyDerivedProductCollection
     @JsonKey(name: '_collectedDateTime') Element collectedDateTimeElement,
     Period collectedPeriod,
   }) = _BiologicallyDerivedProductCollection;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory BiologicallyDerivedProductCollection.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? BiologicallyDerivedProductCollection.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? BiologicallyDerivedProductCollection.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory BiologicallyDerivedProductCollection.fromJson(
           Map<String, dynamic> json) =>
@@ -85,6 +113,19 @@ abstract class BiologicallyDerivedProductProcessing
     Period timePeriod,
   }) = _BiologicallyDerivedProductProcessing;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory BiologicallyDerivedProductProcessing.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? BiologicallyDerivedProductProcessing.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? BiologicallyDerivedProductProcessing.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory BiologicallyDerivedProductProcessing.fromJson(
           Map<String, dynamic> json) =>
       _$BiologicallyDerivedProductProcessingFromJson(json);
@@ -104,6 +145,19 @@ abstract class BiologicallyDerivedProductManipulation
     @JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
     Period timePeriod,
   }) = _BiologicallyDerivedProductManipulation;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory BiologicallyDerivedProductManipulation.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? BiologicallyDerivedProductManipulation.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? BiologicallyDerivedProductManipulation.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory BiologicallyDerivedProductManipulation.fromJson(
           Map<String, dynamic> json) =>
@@ -127,6 +181,19 @@ abstract class BiologicallyDerivedProductStorage
     @JsonKey(name: '_scale') Element scaleElement,
     Period duration,
   }) = _BiologicallyDerivedProductStorage;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory BiologicallyDerivedProductStorage.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? BiologicallyDerivedProductStorage.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? BiologicallyDerivedProductStorage.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory BiologicallyDerivedProductStorage.fromJson(
           Map<String, dynamic> json) =>
@@ -186,6 +253,16 @@ abstract class Device with Resource implements _$Device {
     Reference parent,
   }) = _Device;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Device.fromYaml(dynamic yaml) => yaml is String
+      ? Device.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Device.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory Device.fromJson(Map<String, dynamic> json) => _$DeviceFromJson(json);
 }
 
@@ -211,6 +288,16 @@ abstract class DeviceUdiCarrier implements _$DeviceUdiCarrier {
     @JsonKey(name: '_entryType') Element entryTypeElement,
   }) = _DeviceUdiCarrier;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory DeviceUdiCarrier.fromYaml(dynamic yaml) => yaml is String
+      ? DeviceUdiCarrier.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? DeviceUdiCarrier.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory DeviceUdiCarrier.fromJson(Map<String, dynamic> json) =>
       _$DeviceUdiCarrierFromJson(json);
 }
@@ -229,6 +316,16 @@ abstract class DeviceDeviceName implements _$DeviceDeviceName {
     @JsonKey(name: '_type') Element typeElement,
   }) = _DeviceDeviceName;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory DeviceDeviceName.fromYaml(dynamic yaml) => yaml is String
+      ? DeviceDeviceName.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? DeviceDeviceName.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory DeviceDeviceName.fromJson(Map<String, dynamic> json) =>
       _$DeviceDeviceNameFromJson(json);
 }
@@ -244,6 +341,16 @@ abstract class DeviceSpecialization implements _$DeviceSpecialization {
     String version,
     @JsonKey(name: '_version') Element versionElement,
   }) = _DeviceSpecialization;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory DeviceSpecialization.fromYaml(dynamic yaml) => yaml is String
+      ? DeviceSpecialization.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? DeviceSpecialization.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory DeviceSpecialization.fromJson(Map<String, dynamic> json) =>
       _$DeviceSpecializationFromJson(json);
@@ -262,6 +369,16 @@ abstract class DeviceVersion implements _$DeviceVersion {
     @JsonKey(name: '_value') Element valueElement,
   }) = _DeviceVersion;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory DeviceVersion.fromYaml(dynamic yaml) => yaml is String
+      ? DeviceVersion.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? DeviceVersion.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory DeviceVersion.fromJson(Map<String, dynamic> json) =>
       _$DeviceVersionFromJson(json);
 }
@@ -277,6 +394,16 @@ abstract class DeviceProperty implements _$DeviceProperty {
     List<Quantity> valueQuantity,
     List<CodeableConcept> valueCode,
   }) = _DeviceProperty;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory DeviceProperty.fromYaml(dynamic yaml) => yaml is String
+      ? DeviceProperty.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? DeviceProperty.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory DeviceProperty.fromJson(Map<String, dynamic> json) =>
       _$DevicePropertyFromJson(json);
@@ -315,6 +442,16 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
     List<DeviceMetricCalibration> calibration,
   }) = _DeviceMetric;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory DeviceMetric.fromYaml(dynamic yaml) => yaml is String
+      ? DeviceMetric.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? DeviceMetric.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory DeviceMetric.fromJson(Map<String, dynamic> json) =>
       _$DeviceMetricFromJson(json);
 }
@@ -335,6 +472,16 @@ abstract class DeviceMetricCalibration implements _$DeviceMetricCalibration {
     Instant time,
     @JsonKey(name: '_time') Element timeElement,
   }) = _DeviceMetricCalibration;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory DeviceMetricCalibration.fromYaml(dynamic yaml) => yaml is String
+      ? DeviceMetricCalibration.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? DeviceMetricCalibration.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>
       _$DeviceMetricCalibrationFromJson(json);
@@ -366,6 +513,16 @@ abstract class Substance with Resource implements _$Substance {
     List<SubstanceIngredient> ingredient,
   }) = _Substance;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Substance.fromYaml(dynamic yaml) => yaml is String
+      ? Substance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Substance.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory Substance.fromJson(Map<String, dynamic> json) =>
       _$SubstanceFromJson(json);
 }
@@ -383,6 +540,16 @@ abstract class SubstanceInstance implements _$SubstanceInstance {
     Quantity quantity,
   }) = _SubstanceInstance;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory SubstanceInstance.fromYaml(dynamic yaml) => yaml is String
+      ? SubstanceInstance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? SubstanceInstance.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory SubstanceInstance.fromJson(Map<String, dynamic> json) =>
       _$SubstanceInstanceFromJson(json);
 }
@@ -398,6 +565,16 @@ abstract class SubstanceIngredient implements _$SubstanceIngredient {
     CodeableConcept substanceCodeableConcept,
     Reference substanceReference,
   }) = _SubstanceIngredient;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory SubstanceIngredient.fromYaml(dynamic yaml) => yaml is String
+      ? SubstanceIngredient.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? SubstanceIngredient.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory SubstanceIngredient.fromJson(Map<String, dynamic> json) =>
       _$SubstanceIngredientFromJson(json);

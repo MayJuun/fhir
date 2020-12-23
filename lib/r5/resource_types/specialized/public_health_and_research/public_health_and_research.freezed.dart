@@ -768,6 +768,16 @@ class _$_ResearchStudy extends _ResearchStudy {
       : assert(resourceType != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ResearchStudy.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ResearchStudy.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ResearchStudy.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ResearchStudy.fromJson(Map<String, dynamic> json) =>
       _$_$_ResearchStudyFromJson(json);
 
@@ -1048,6 +1058,16 @@ abstract class _ResearchStudy extends ResearchStudy {
       List<Annotation> note,
       List<ResearchStudyArm> arm,
       List<ResearchStudyObjective> objective}) = _$_ResearchStudy;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ResearchStudy.fromYaml(dynamic yaml) => yaml is String
+      ? _ResearchStudy.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ResearchStudy.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ResearchStudy.fromJson(Map<String, dynamic> json) =
       _$_ResearchStudy.fromJson;
@@ -1371,6 +1391,16 @@ class _$_ResearchStudyArm extends _ResearchStudyArm {
       @JsonKey(name: '_description') this.descriptionElement})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ResearchStudyArm.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ResearchStudyArm.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ResearchStudyArm.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ResearchStudyArm.fromJson(Map<String, dynamic> json) =>
       _$_$_ResearchStudyArmFromJson(json);
 
@@ -1460,6 +1490,16 @@ abstract class _ResearchStudyArm extends ResearchStudyArm {
           String description,
           @JsonKey(name: '_description') Element descriptionElement}) =
       _$_ResearchStudyArm;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ResearchStudyArm.fromYaml(dynamic yaml) => yaml is String
+      ? _ResearchStudyArm.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ResearchStudyArm.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ResearchStudyArm.fromJson(Map<String, dynamic> json) =
       _$_ResearchStudyArm.fromJson;
@@ -1680,6 +1720,17 @@ class _$_ResearchStudyObjective extends _ResearchStudyObjective {
       this.type})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ResearchStudyObjective.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ResearchStudyObjective
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ResearchStudyObjective.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ResearchStudyObjective.fromJson(Map<String, dynamic> json) =>
       _$_$_ResearchStudyObjectiveFromJson(json);
 
@@ -1754,6 +1805,16 @@ abstract class _ResearchStudyObjective extends ResearchStudyObjective {
       String name,
       @JsonKey(name: '_name') Element nameElement,
       CodeableConcept type}) = _$_ResearchStudyObjective;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ResearchStudyObjective.fromYaml(dynamic yaml) => yaml is String
+      ? _ResearchStudyObjective.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ResearchStudyObjective.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ResearchStudyObjective.fromJson(Map<String, dynamic> json) =
       _$_ResearchStudyObjective.fromJson;
@@ -2328,6 +2389,16 @@ class _$_ResearchSubject extends _ResearchSubject {
         assert(individual != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ResearchSubject.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ResearchSubject.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ResearchSubject.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ResearchSubject.fromJson(Map<String, dynamic> json) =>
       _$_$_ResearchSubjectFromJson(json);
 
@@ -2531,6 +2602,16 @@ abstract class _ResearchSubject extends ResearchSubject {
       @JsonKey(name: '_actualArm')
           Element actualArmElement,
       Reference consent}) = _$_ResearchSubject;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ResearchSubject.fromYaml(dynamic yaml) => yaml is String
+      ? _ResearchSubject.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ResearchSubject.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ResearchSubject.fromJson(Map<String, dynamic> json) =
       _$_ResearchSubject.fromJson;
@@ -2863,6 +2944,17 @@ class _$_ResearchSubjectProgress extends _ResearchSubjectProgress {
       @JsonKey(name: '_startDate') this.startDateElement})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ResearchSubjectProgress.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ResearchSubjectProgress
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ResearchSubjectProgress.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ResearchSubjectProgress.fromJson(Map<String, dynamic> json) =>
       _$_$_ResearchSubjectProgressFromJson(json);
 
@@ -2958,6 +3050,17 @@ abstract class _ResearchSubjectProgress extends ResearchSubjectProgress {
           FhirDateTime startDate,
           @JsonKey(name: '_startDate') Element startDateElement}) =
       _$_ResearchSubjectProgress;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ResearchSubjectProgress.fromYaml(dynamic yaml) => yaml is String
+      ? _ResearchSubjectProgress.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ResearchSubjectProgress.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ResearchSubjectProgress.fromJson(Map<String, dynamic> json) =
       _$_ResearchSubjectProgress.fromJson;

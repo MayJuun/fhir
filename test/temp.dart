@@ -45,4 +45,5 @@ Patient fromYaml(YamlMap yamlString) =>
 //     ? $1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
 //     : yaml is YamlMap
 //         ? $1.fromJson(jsonDecode(jsonEncode(yaml)))
-//         : null;\n\nfactory $1.fromJson
+//         : null;\n\n    String toYamlString() => json2yaml(toJson());
+

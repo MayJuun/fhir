@@ -111,6 +111,16 @@ class _$_Tester extends _Tester {
       : assert(resourceType != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_Tester.fromYaml(dynamic yaml) => yaml is String
+      ? _$_Tester.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_Tester.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_Tester.fromJson(Map<String, dynamic> json) =>
       _$_$_TesterFromJson(json);
 
@@ -155,6 +165,16 @@ class _$_Tester extends _Tester {
 abstract class _Tester extends Tester {
   _Tester._() : super._();
   factory _Tester({String resourceType, Id id}) = _$_Tester;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _Tester.fromYaml(dynamic yaml) => yaml is String
+      ? _Tester.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _Tester.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _Tester.fromJson(Map<String, dynamic> json) = _$_Tester.fromJson;
 

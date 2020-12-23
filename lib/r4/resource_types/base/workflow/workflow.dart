@@ -1,4 +1,8 @@
+import 'dart:convert';
+
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:json2yaml/json2yaml.dart';
+import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../r4.dart';
@@ -56,6 +60,16 @@ abstract class Appointment with Resource implements _$Appointment {
     List<Period> requestedPeriod,
   }) = _Appointment;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Appointment.fromYaml(dynamic yaml) => yaml is String
+      ? Appointment.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Appointment.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory Appointment.fromJson(Map<String, dynamic> json) =>
       _$AppointmentFromJson(json);
 }
@@ -77,6 +91,16 @@ abstract class AppointmentParticipant implements _$AppointmentParticipant {
     @JsonKey(name: '_status') Element statusElement,
     Period period,
   }) = _AppointmentParticipant;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory AppointmentParticipant.fromYaml(dynamic yaml) => yaml is String
+      ? AppointmentParticipant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? AppointmentParticipant.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
       _$AppointmentParticipantFromJson(json);
@@ -113,6 +137,16 @@ abstract class AppointmentResponse
     @JsonKey(name: '_comment') Element commentElement,
   }) = _AppointmentResponse;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory AppointmentResponse.fromYaml(dynamic yaml) => yaml is String
+      ? AppointmentResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? AppointmentResponse.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory AppointmentResponse.fromJson(Map<String, dynamic> json) =>
       _$AppointmentResponseFromJson(json);
 }
@@ -143,6 +177,16 @@ abstract class Schedule with Resource implements _$Schedule {
     String comment,
     @JsonKey(name: '_comment') Element commentElement,
   }) = _Schedule;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Schedule.fromYaml(dynamic yaml) => yaml is String
+      ? Schedule.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Schedule.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory Schedule.fromJson(Map<String, dynamic> json) =>
       _$ScheduleFromJson(json);
@@ -180,6 +224,16 @@ abstract class Slot with Resource implements _$Slot {
     String comment,
     @JsonKey(name: '_comment') Element commentElement,
   }) = _Slot;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Slot.fromYaml(dynamic yaml) => yaml is String
+      ? Slot.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Slot.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory Slot.fromJson(Map<String, dynamic> json) => _$SlotFromJson(json);
 }
@@ -239,6 +293,16 @@ abstract class Task with Resource implements _$Task {
     List<TaskOutput> output,
   }) = _Task;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Task.fromYaml(dynamic yaml) => yaml is String
+      ? Task.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Task.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory Task.fromJson(Map<String, dynamic> json) => _$TaskFromJson(json);
 }
 
@@ -254,6 +318,16 @@ abstract class TaskRestriction implements _$TaskRestriction {
     Period period,
     List<Reference> recipient,
   }) = _TaskRestriction;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory TaskRestriction.fromYaml(dynamic yaml) => yaml is String
+      ? TaskRestriction.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? TaskRestriction.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory TaskRestriction.fromJson(Map<String, dynamic> json) =>
       _$TaskRestrictionFromJson(json);
@@ -338,6 +412,16 @@ abstract class TaskInput implements _$TaskInput {
     Meta valueMeta,
   }) = _TaskInput;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory TaskInput.fromYaml(dynamic yaml) => yaml is String
+      ? TaskInput.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? TaskInput.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory TaskInput.fromJson(Map<String, dynamic> json) =>
       _$TaskInputFromJson(json);
 }
@@ -421,6 +505,16 @@ abstract class TaskOutput implements _$TaskOutput {
     Meta valueMeta,
   }) = _TaskOutput;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory TaskOutput.fromYaml(dynamic yaml) => yaml is String
+      ? TaskOutput.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? TaskOutput.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory TaskOutput.fromJson(Map<String, dynamic> json) =>
       _$TaskOutputFromJson(json);
 }
@@ -463,6 +557,16 @@ abstract class VerificationResult
     List<VerificationResultValidator> validator,
   }) = _VerificationResult;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory VerificationResult.fromYaml(dynamic yaml) => yaml is String
+      ? VerificationResult.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? VerificationResult.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory VerificationResult.fromJson(Map<String, dynamic> json) =>
       _$VerificationResultFromJson(json);
 }
@@ -484,6 +588,19 @@ abstract class VerificationResultPrimarySource
     CodeableConcept canPushUpdates,
     List<CodeableConcept> pushTypeAvailable,
   }) = _VerificationResultPrimarySource;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory VerificationResultPrimarySource.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? VerificationResultPrimarySource.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? VerificationResultPrimarySource.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory VerificationResultPrimarySource.fromJson(Map<String, dynamic> json) =>
       _$VerificationResultPrimarySourceFromJson(json);
@@ -512,6 +629,17 @@ abstract class VerificationResultAttestation
     Signature sourceSignature,
   }) = _VerificationResultAttestation;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory VerificationResultAttestation.fromYaml(dynamic yaml) => yaml is String
+      ? VerificationResultAttestation.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? VerificationResultAttestation.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory VerificationResultAttestation.fromJson(Map<String, dynamic> json) =>
       _$VerificationResultAttestationFromJson(json);
 }
@@ -529,6 +657,17 @@ abstract class VerificationResultValidator
     @JsonKey(name: '_identityCertificate') Element identityCertificateElement,
     Signature attestationSignature,
   }) = _VerificationResultValidator;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory VerificationResultValidator.fromYaml(dynamic yaml) => yaml is String
+      ? VerificationResultValidator.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? VerificationResultValidator.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory VerificationResultValidator.fromJson(Map<String, dynamic> json) =>
       _$VerificationResultValidatorFromJson(json);

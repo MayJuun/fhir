@@ -528,6 +528,16 @@ class _$_ProcessRequest extends _ProcessRequest {
         assert(action != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ProcessRequest.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ProcessRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ProcessRequest.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ProcessRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_ProcessRequestFromJson(json);
 
@@ -735,6 +745,16 @@ abstract class _ProcessRequest extends ProcessRequest {
       List<String> exclude,
       Period period}) = _$_ProcessRequest;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ProcessRequest.fromYaml(dynamic yaml) => yaml is String
+      ? _ProcessRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ProcessRequest.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _ProcessRequest.fromJson(Map<String, dynamic> json) =
       _$_ProcessRequest.fromJson;
 
@@ -941,6 +961,16 @@ class _$_ProcessRequestItem extends _ProcessRequestItem {
       : assert(sequenceLinkId != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ProcessRequestItem.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ProcessRequestItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ProcessRequestItem.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ProcessRequestItem.fromJson(Map<String, dynamic> json) =>
       _$_$_ProcessRequestItemFromJson(json);
 
@@ -1003,6 +1033,16 @@ abstract class _ProcessRequestItem extends ProcessRequestItem {
           List<FhirExtension> modifierExtension,
           @required @JsonKey(required: true) Integer sequenceLinkId}) =
       _$_ProcessRequestItem;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ProcessRequestItem.fromYaml(dynamic yaml) => yaml is String
+      ? _ProcessRequestItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ProcessRequestItem.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ProcessRequestItem.fromJson(Map<String, dynamic> json) =
       _$_ProcessRequestItem.fromJson;
@@ -1509,6 +1549,16 @@ class _$_ProcessResponse extends _ProcessResponse {
       : assert(resourceType != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ProcessResponse.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ProcessResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ProcessResponse.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ProcessResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_ProcessResponseFromJson(json);
 
@@ -1691,6 +1741,16 @@ abstract class _ProcessResponse extends ProcessResponse {
       Coding form,
       List<ProcessResponseNotes> notes,
       List<Coding> error}) = _$_ProcessResponse;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ProcessResponse.fromYaml(dynamic yaml) => yaml is String
+      ? _ProcessResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ProcessResponse.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ProcessResponse.fromJson(Map<String, dynamic> json) =
       _$_ProcessResponse.fromJson;
@@ -1910,6 +1970,16 @@ class _$_ProcessResponseNotes extends _ProcessResponseNotes {
       this.text})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ProcessResponseNotes.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ProcessResponseNotes.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ProcessResponseNotes.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ProcessResponseNotes.fromJson(Map<String, dynamic> json) =>
       _$_$_ProcessResponseNotesFromJson(json);
 
@@ -1976,6 +2046,16 @@ abstract class _ProcessResponseNotes extends ProcessResponseNotes {
       List<FhirExtension> modifierExtension,
       Coding type,
       String text}) = _$_ProcessResponseNotes;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ProcessResponseNotes.fromYaml(dynamic yaml) => yaml is String
+      ? _ProcessResponseNotes.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ProcessResponseNotes.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ProcessResponseNotes.fromJson(Map<String, dynamic> json) =
       _$_ProcessResponseNotes.fromJson;
@@ -2556,6 +2636,16 @@ class _$_SupplyRequest extends _SupplyRequest {
       : assert(resourceType != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_SupplyRequest.fromYaml(dynamic yaml) => yaml is String
+      ? _$_SupplyRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_SupplyRequest.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_SupplyRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_SupplyRequestFromJson(json);
 
@@ -2752,6 +2842,16 @@ abstract class _SupplyRequest extends SupplyRequest {
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
       SupplyRequestWhen when}) = _$_SupplyRequest;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _SupplyRequest.fromYaml(dynamic yaml) => yaml is String
+      ? _SupplyRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _SupplyRequest.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _SupplyRequest.fromJson(Map<String, dynamic> json) =
       _$_SupplyRequest.fromJson;
@@ -2990,6 +3090,16 @@ class _$_SupplyRequestWhen extends _SupplyRequestWhen {
       this.schedule})
       : super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_SupplyRequestWhen.fromYaml(dynamic yaml) => yaml is String
+      ? _$_SupplyRequestWhen.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_SupplyRequestWhen.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_SupplyRequestWhen.fromJson(Map<String, dynamic> json) =>
       _$_$_SupplyRequestWhenFromJson(json);
 
@@ -3056,6 +3166,16 @@ abstract class _SupplyRequestWhen extends SupplyRequestWhen {
       List<FhirExtension> modifierExtension,
       CodeableConcept code,
       Timing schedule}) = _$_SupplyRequestWhen;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _SupplyRequestWhen.fromYaml(dynamic yaml) => yaml is String
+      ? _SupplyRequestWhen.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _SupplyRequestWhen.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _SupplyRequestWhen.fromJson(Map<String, dynamic> json) =
       _$_SupplyRequestWhen.fromJson;
@@ -3637,6 +3757,16 @@ class _$_SupplyDelivery extends _SupplyDelivery {
       : assert(resourceType != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_SupplyDelivery.fromYaml(dynamic yaml) => yaml is String
+      ? _$_SupplyDelivery.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_SupplyDelivery.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_SupplyDelivery.fromJson(Map<String, dynamic> json) =>
       _$_$_SupplyDeliveryFromJson(json);
 
@@ -3835,6 +3965,16 @@ abstract class _SupplyDelivery extends SupplyDelivery {
       FhirDateTime time,
       Reference destination,
       List<Reference> receiver}) = _$_SupplyDelivery;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _SupplyDelivery.fromYaml(dynamic yaml) => yaml is String
+      ? _SupplyDelivery.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _SupplyDelivery.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _SupplyDelivery.fromJson(Map<String, dynamic> json) =
       _$_SupplyDelivery.fromJson;

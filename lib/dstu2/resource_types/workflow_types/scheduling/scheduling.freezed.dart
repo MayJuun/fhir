@@ -702,6 +702,16 @@ class _$_Appointment extends _Appointment {
         assert(participant != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_Appointment.fromYaml(dynamic yaml) => yaml is String
+      ? _$_Appointment.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_Appointment.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_Appointment.fromJson(Map<String, dynamic> json) =>
       _$_$_AppointmentFromJson(json);
 
@@ -954,6 +964,16 @@ abstract class _Appointment extends Appointment {
       @required
       @JsonKey(required: true)
           List<AppointmentParticipant> participant}) = _$_Appointment;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _Appointment.fromYaml(dynamic yaml) => yaml is String
+      ? _Appointment.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _Appointment.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _Appointment.fromJson(Map<String, dynamic> json) =
       _$_Appointment.fromJson;
@@ -1306,6 +1326,17 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
       : assert(status != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_AppointmentParticipant.fromYaml(dynamic yaml) => yaml is String
+      ? _$_AppointmentParticipant
+          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_AppointmentParticipant.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
       _$_$_AppointmentParticipantFromJson(json);
 
@@ -1409,6 +1440,16 @@ abstract class _AppointmentParticipant extends AppointmentParticipant {
           ParticipantStatus status,
       @JsonKey(name: '_status')
           Element statusElement}) = _$_AppointmentParticipant;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _AppointmentParticipant.fromYaml(dynamic yaml) => yaml is String
+      ? _AppointmentParticipant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _AppointmentParticipant.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _AppointmentParticipant.fromJson(Map<String, dynamic> json) =
       _$_AppointmentParticipant.fromJson;
@@ -2004,6 +2045,16 @@ class _$_AppointmentResponse extends _AppointmentResponse {
         assert(participantStatus != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_AppointmentResponse.fromYaml(dynamic yaml) => yaml is String
+      ? _$_AppointmentResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_AppointmentResponse.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_AppointmentResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_AppointmentResponseFromJson(json);
 
@@ -2217,6 +2268,16 @@ abstract class _AppointmentResponse extends AppointmentResponse {
       String comment,
       @JsonKey(name: '_comment')
           Element commentElement}) = _$_AppointmentResponse;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _AppointmentResponse.fromYaml(dynamic yaml) => yaml is String
+      ? _AppointmentResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _AppointmentResponse.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _AppointmentResponse.fromJson(Map<String, dynamic> json) =
       _$_AppointmentResponse.fromJson;
@@ -2676,6 +2737,16 @@ class _$_Schedule extends _Schedule {
         assert(actor != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_Schedule.fromYaml(dynamic yaml) => yaml is String
+      ? _$_Schedule.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_Schedule.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_Schedule.fromJson(Map<String, dynamic> json) =>
       _$_$_ScheduleFromJson(json);
 
@@ -2828,6 +2899,16 @@ abstract class _Schedule extends Schedule {
       Period planningHorizon,
       String comment,
       @JsonKey(name: '_comment') Element commentElement}) = _$_Schedule;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _Schedule.fromYaml(dynamic yaml) => yaml is String
+      ? _Schedule.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _Schedule.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _Schedule.fromJson(Map<String, dynamic> json) = _$_Schedule.fromJson;
 
@@ -3440,6 +3521,16 @@ class _$_Slot extends _Slot {
         assert(end != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_Slot.fromYaml(dynamic yaml) => yaml is String
+      ? _$_Slot.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_Slot.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_Slot.fromJson(Map<String, dynamic> json) =>
       _$_$_SlotFromJson(json);
 
@@ -3654,6 +3745,16 @@ abstract class _Slot extends Slot {
       String comment,
       @JsonKey(name: '_comment')
           Element commentElement}) = _$_Slot;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _Slot.fromYaml(dynamic yaml) => yaml is String
+      ? _Slot.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _Slot.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _Slot.fromJson(Map<String, dynamic> json) = _$_Slot.fromJson;
 

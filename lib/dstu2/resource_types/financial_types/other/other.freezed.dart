@@ -618,6 +618,16 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
       : assert(resourceType != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_ExplanationOfBenefit.fromYaml(dynamic yaml) => yaml is String
+      ? _$_ExplanationOfBenefit.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_ExplanationOfBenefit.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =>
       _$_$_ExplanationOfBenefitFromJson(json);
 
@@ -831,6 +841,16 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
       Reference organization,
       Reference requestProvider,
       Reference requestOrganization}) = _$_ExplanationOfBenefit;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _ExplanationOfBenefit.fromYaml(dynamic yaml) => yaml is String
+      ? _ExplanationOfBenefit.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _ExplanationOfBenefit.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefit.fromJson;

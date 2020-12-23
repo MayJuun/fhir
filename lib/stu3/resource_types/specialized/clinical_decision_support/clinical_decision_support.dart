@@ -1,4 +1,8 @@
+import 'dart:convert';
+
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:json2yaml/json2yaml.dart';
+import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../stu3.dart';
@@ -41,6 +45,16 @@ abstract class GuidanceResponse with Resource implements _$GuidanceResponse {
     Reference result,
     List<DataRequirement> dataRequirement,
   }) = _GuidanceResponse;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory GuidanceResponse.fromYaml(dynamic yaml) => yaml is String
+      ? GuidanceResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? GuidanceResponse.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory GuidanceResponse.fromJson(Map<String, dynamic> json) =>
       _$GuidanceResponseFromJson(json);

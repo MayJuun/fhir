@@ -617,6 +617,16 @@ class _$_Coverage extends _Coverage {
       : assert(resourceType != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_Coverage.fromYaml(dynamic yaml) => yaml is String
+      ? _$_Coverage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_Coverage.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_Coverage.fromJson(Map<String, dynamic> json) =>
       _$_$_CoverageFromJson(json);
 
@@ -839,6 +849,16 @@ abstract class _Coverage extends Coverage {
       Identifier network,
       @JsonKey(name: '_network') Element networkElement,
       List<Reference> contract}) = _$_Coverage;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _Coverage.fromYaml(dynamic yaml) => yaml is String
+      ? _Coverage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _Coverage.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _Coverage.fromJson(Map<String, dynamic> json) = _$_Coverage.fromJson;
 
@@ -1369,6 +1389,16 @@ class _$_EligibilityRequest extends _EligibilityRequest {
       : assert(resourceType != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_EligibilityRequest.fromYaml(dynamic yaml) => yaml is String
+      ? _$_EligibilityRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_EligibilityRequest.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_EligibilityRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_EligibilityRequestFromJson(json);
 
@@ -1535,6 +1565,16 @@ abstract class _EligibilityRequest extends EligibilityRequest {
       Reference target,
       Reference provider,
       Reference organization}) = _$_EligibilityRequest;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _EligibilityRequest.fromYaml(dynamic yaml) => yaml is String
+      ? _EligibilityRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _EligibilityRequest.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _EligibilityRequest.fromJson(Map<String, dynamic> json) =
       _$_EligibilityRequest.fromJson;
@@ -2188,6 +2228,16 @@ class _$_EligibilityResponse extends _EligibilityResponse {
       : assert(resourceType != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_EligibilityResponse.fromYaml(dynamic yaml) => yaml is String
+      ? _$_EligibilityResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_EligibilityResponse.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_EligibilityResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_EligibilityResponseFromJson(json);
 
@@ -2399,6 +2449,16 @@ abstract class _EligibilityResponse extends EligibilityResponse {
       Reference organization,
       Reference requestProvider,
       Reference requestOrganization}) = _$_EligibilityResponse;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _EligibilityResponse.fromYaml(dynamic yaml) => yaml is String
+      ? _EligibilityResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _EligibilityResponse.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _EligibilityResponse.fromJson(Map<String, dynamic> json) =
       _$_EligibilityResponse.fromJson;
@@ -3002,6 +3062,16 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
         assert(relationship != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_EnrollmentRequest.fromYaml(dynamic yaml) => yaml is String
+      ? _$_EnrollmentRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_EnrollmentRequest.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_EnrollmentRequestFromJson(json);
 
@@ -3193,6 +3263,16 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
           @required @JsonKey(required: true) Reference coverage,
           @required @JsonKey(required: true) Coding relationship}) =
       _$_EnrollmentRequest;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _EnrollmentRequest.fromYaml(dynamic yaml) => yaml is String
+      ? _EnrollmentRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _EnrollmentRequest.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _EnrollmentRequest.fromJson(Map<String, dynamic> json) =
       _$_EnrollmentRequest.fromJson;
@@ -3855,6 +3935,16 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
       : assert(resourceType != null),
         super._();
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _$_EnrollmentResponse.fromYaml(dynamic yaml) => yaml is String
+      ? _$_EnrollmentResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _$_EnrollmentResponse.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory _$_EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_EnrollmentResponseFromJson(json);
 
@@ -4065,6 +4155,16 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
       Reference organization,
       Reference requestProvider,
       Reference requestOrganization}) = _$_EnrollmentResponse;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory _EnrollmentResponse.fromYaml(dynamic yaml) => yaml is String
+      ? _EnrollmentResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? _EnrollmentResponse.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory _EnrollmentResponse.fromJson(Map<String, dynamic> json) =
       _$_EnrollmentResponse.fromJson;

@@ -1,4 +1,8 @@
+import 'dart:convert';
+
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:json2yaml/json2yaml.dart';
+import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../r5.dart';
@@ -51,6 +55,16 @@ abstract class Communication with Resource implements _$Communication {
     List<Annotation> note,
   }) = _Communication;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Communication.fromYaml(dynamic yaml) => yaml is String
+      ? Communication.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Communication.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory Communication.fromJson(Map<String, dynamic> json) =>
       _$CommunicationFromJson(json);
 }
@@ -66,6 +80,16 @@ abstract class CommunicationPayload implements _$CommunicationPayload {
     Reference contentReference,
     CodeableConcept contentCodeableConcept,
   }) = _CommunicationPayload;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CommunicationPayload.fromYaml(dynamic yaml) => yaml is String
+      ? CommunicationPayload.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CommunicationPayload.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory CommunicationPayload.fromJson(Map<String, dynamic> json) =>
       _$CommunicationPayloadFromJson(json);
@@ -119,6 +143,16 @@ abstract class CommunicationRequest
     List<Annotation> note,
   }) = _CommunicationRequest;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CommunicationRequest.fromYaml(dynamic yaml) => yaml is String
+      ? CommunicationRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CommunicationRequest.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory CommunicationRequest.fromJson(Map<String, dynamic> json) =>
       _$CommunicationRequestFromJson(json);
 }
@@ -135,6 +169,17 @@ abstract class CommunicationRequestPayload
     Reference contentReference,
     CodeableConcept contentCodeableConcept,
   }) = _CommunicationRequestPayload;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CommunicationRequestPayload.fromYaml(dynamic yaml) => yaml is String
+      ? CommunicationRequestPayload.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CommunicationRequestPayload.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>
       _$CommunicationRequestPayloadFromJson(json);
@@ -189,6 +234,16 @@ abstract class DeviceRequest with Resource implements _$DeviceRequest {
     List<Reference> relevantHistory,
   }) = _DeviceRequest;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory DeviceRequest.fromYaml(dynamic yaml) => yaml is String
+      ? DeviceRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? DeviceRequest.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory DeviceRequest.fromJson(Map<String, dynamic> json) =>
       _$DeviceRequestFromJson(json);
 }
@@ -207,6 +262,16 @@ abstract class DeviceRequestParameter implements _$DeviceRequestParameter {
     Boolean valueBoolean,
     @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
   }) = _DeviceRequestParameter;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory DeviceRequestParameter.fromYaml(dynamic yaml) => yaml is String
+      ? DeviceRequestParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? DeviceRequestParameter.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory DeviceRequestParameter.fromJson(Map<String, dynamic> json) =>
       _$DeviceRequestParameterFromJson(json);
@@ -255,6 +320,16 @@ abstract class DeviceUseStatement
     List<Annotation> note,
   }) = _DeviceUseStatement;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory DeviceUseStatement.fromYaml(dynamic yaml) => yaml is String
+      ? DeviceUseStatement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? DeviceUseStatement.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
       _$DeviceUseStatementFromJson(json);
 }
@@ -297,6 +372,16 @@ abstract class GuidanceResponse with Resource implements _$GuidanceResponse {
     List<DataRequirement> dataRequirement,
   }) = _GuidanceResponse;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory GuidanceResponse.fromYaml(dynamic yaml) => yaml is String
+      ? GuidanceResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? GuidanceResponse.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory GuidanceResponse.fromJson(Map<String, dynamic> json) =>
       _$GuidanceResponseFromJson(json);
 }
@@ -334,6 +419,16 @@ abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
     List<Reference> receiver,
   }) = _SupplyDelivery;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory SupplyDelivery.fromYaml(dynamic yaml) => yaml is String
+      ? SupplyDelivery.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? SupplyDelivery.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory SupplyDelivery.fromJson(Map<String, dynamic> json) =>
       _$SupplyDeliveryFromJson(json);
 }
@@ -350,6 +445,17 @@ abstract class SupplyDeliverySuppliedItem
     CodeableConcept itemCodeableConcept,
     Reference itemReference,
   }) = _SupplyDeliverySuppliedItem;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory SupplyDeliverySuppliedItem.fromYaml(dynamic yaml) => yaml is String
+      ? SupplyDeliverySuppliedItem.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? SupplyDeliverySuppliedItem.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory SupplyDeliverySuppliedItem.fromJson(Map<String, dynamic> json) =>
       _$SupplyDeliverySuppliedItemFromJson(json);
@@ -394,6 +500,16 @@ abstract class SupplyRequest with Resource implements _$SupplyRequest {
     Reference deliverTo,
   }) = _SupplyRequest;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory SupplyRequest.fromYaml(dynamic yaml) => yaml is String
+      ? SupplyRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? SupplyRequest.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory SupplyRequest.fromJson(Map<String, dynamic> json) =>
       _$SupplyRequestFromJson(json);
 }
@@ -412,6 +528,16 @@ abstract class SupplyRequestParameter implements _$SupplyRequestParameter {
     Boolean valueBoolean,
     @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
   }) = _SupplyRequestParameter;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory SupplyRequestParameter.fromYaml(dynamic yaml) => yaml is String
+      ? SupplyRequestParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? SupplyRequestParameter.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory SupplyRequestParameter.fromJson(Map<String, dynamic> json) =>
       _$SupplyRequestParameterFromJson(json);
