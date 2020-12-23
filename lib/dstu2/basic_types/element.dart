@@ -12,6 +12,7 @@ part 'element.g.dart';
 
 @freezed
 abstract class Element with _$Element {
+  Element._();
   factory Element({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,

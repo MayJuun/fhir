@@ -182,6 +182,7 @@ abstract class ConformanceSoftware with _$ConformanceSoftware {
 
 @freezed
 abstract class ConformanceImplementation with _$ConformanceImplementation {
+  ConformanceImplementation._();
   factory ConformanceImplementation({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -207,6 +208,7 @@ abstract class ConformanceImplementation with _$ConformanceImplementation {
 
 @freezed
 abstract class ConformanceRest with _$ConformanceRest {
+  ConformanceRest._();
   factory ConformanceRest({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -243,6 +245,7 @@ abstract class ConformanceRest with _$ConformanceRest {
 
 @freezed
 abstract class ConformanceMessaging with _$ConformanceMessaging {
+  ConformanceMessaging._();
   factory ConformanceMessaging({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -270,6 +273,7 @@ abstract class ConformanceMessaging with _$ConformanceMessaging {
 
 @freezed
 abstract class ConformanceDocument with _$ConformanceDocument {
+  ConformanceDocument._();
   factory ConformanceDocument({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -298,6 +302,7 @@ abstract class ConformanceDocument with _$ConformanceDocument {
 
 @freezed
 abstract class ConformanceRestSecurity with _$ConformanceRestSecurity {
+  ConformanceRestSecurity._();
   factory ConformanceRestSecurity({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -325,6 +330,7 @@ abstract class ConformanceRestSecurity with _$ConformanceRestSecurity {
 
 @freezed
 abstract class ConformanceRestResource with _$ConformanceRestResource {
+  ConformanceRestResource._();
   factory ConformanceRestResource({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -369,6 +375,7 @@ abstract class ConformanceRestResource with _$ConformanceRestResource {
 @freezed
 abstract class ConformanceResourceInteraction
     with _$ConformanceResourceInteraction {
+      ConformanceResourceInteraction._();
   factory ConformanceResourceInteraction({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -398,6 +405,7 @@ abstract class ConformanceResourceInteraction
 
 @freezed
 abstract class ConformanceRestOperation with _$ConformanceRestOperation {
+  ConformanceRestOperation._();
   factory ConformanceRestOperation({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -425,6 +433,7 @@ abstract class ConformanceRestOperation with _$ConformanceRestOperation {
 @freezed
 abstract class ConformanceMessagingEndpoint
     with _$ConformanceMessagingEndpoint {
+      ConformanceMessagingEndpoint._();
   factory ConformanceMessagingEndpoint({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -451,6 +460,7 @@ abstract class ConformanceMessagingEndpoint
 
 @freezed
 abstract class ConformanceMessagingEvent with _$ConformanceMessagingEvent {
+  ConformanceMessagingEvent._();
   factory ConformanceMessagingEvent({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -485,6 +495,7 @@ abstract class ConformanceMessagingEvent with _$ConformanceMessagingEvent {
 @freezed
 abstract class ConformanceSecurityCertificate
     with _$ConformanceSecurityCertificate {
+      ConformanceSecurityCertificate._();
   factory ConformanceSecurityCertificate({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -513,6 +524,7 @@ abstract class ConformanceSecurityCertificate
 
 @freezed
 abstract class ConformanceRestInteraction with _$ConformanceRestInteraction {
+  ConformanceRestInteraction._();
   factory ConformanceRestInteraction({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -541,6 +553,7 @@ abstract class ConformanceRestInteraction with _$ConformanceRestInteraction {
 @freezed
 abstract class ConformanceResourceSearchParam
     with _$ConformanceResourceSearchParam {
+      ConformanceResourceSearchParam._();
   factory ConformanceResourceSearchParam({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -631,6 +644,7 @@ abstract class OperationDefinition
 
 @freezed
 abstract class OperationDefinitionContact with _$OperationDefinitionContact {
+  OperationDefinitionContact._();
   factory OperationDefinitionContact({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -657,6 +671,7 @@ abstract class OperationDefinitionContact with _$OperationDefinitionContact {
 @freezed
 abstract class OperationDefinitionParameter
     with _$OperationDefinitionParameter {
+      OperationDefinitionParameter._();
   factory OperationDefinitionParameter({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -693,6 +708,7 @@ abstract class OperationDefinitionParameter
 @freezed
 abstract class OperationDefinitionParameterBinding
     with _$OperationDefinitionParameterBinding {
+      OperationDefinitionParameterBinding._();
   factory OperationDefinitionParameterBinding({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -776,6 +792,7 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
 
 @freezed
 abstract class SearchParameterContact with _$SearchParameterContact {
+  SearchParameterContact._();
   factory SearchParameterContact({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,

@@ -1084,16 +1084,6 @@ class _$_StructureDefinition extends _StructureDefinition {
         assert(abstract_ != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_StructureDefinition.fromYaml(dynamic yaml) => yaml is String
-      ? _$_StructureDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_StructureDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_StructureDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_StructureDefinitionFromJson(json);
 
@@ -1466,16 +1456,6 @@ abstract class _StructureDefinition extends StructureDefinition {
       StructureDefinitionSnapshot snapshot,
       StructureDefinitionDifferential differential}) = _$_StructureDefinition;
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _StructureDefinition.fromYaml(dynamic yaml) => yaml is String
-      ? _StructureDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _StructureDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _StructureDefinition.fromJson(Map<String, dynamic> json) =
       _$_StructureDefinition.fromJson;
 
@@ -1759,17 +1739,6 @@ class _$_StructureDefinitionContact extends _StructureDefinitionContact {
       this.telecom})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_StructureDefinitionContact.fromYaml(dynamic yaml) => yaml is String
-      ? _$_StructureDefinitionContact
-          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_StructureDefinitionContact.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_StructureDefinitionContact.fromJson(Map<String, dynamic> json) =>
       _$_$_StructureDefinitionContactFromJson(json);
 
@@ -1836,17 +1805,6 @@ abstract class _StructureDefinitionContact extends StructureDefinitionContact {
       List<FhirExtension> modifierExtension,
       String name,
       List<ContactPoint> telecom}) = _$_StructureDefinitionContact;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _StructureDefinitionContact.fromYaml(dynamic yaml) => yaml is String
-      ? _StructureDefinitionContact.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _StructureDefinitionContact.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _StructureDefinitionContact.fromJson(Map<String, dynamic> json) =
       _$_StructureDefinitionContact.fromJson;
@@ -2168,17 +2126,6 @@ class _$_StructureDefinitionMapping extends _StructureDefinitionMapping {
       : assert(identity != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_StructureDefinitionMapping.fromYaml(dynamic yaml) => yaml is String
-      ? _$_StructureDefinitionMapping
-          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_StructureDefinitionMapping.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =>
       _$_$_StructureDefinitionMappingFromJson(json);
 
@@ -2301,17 +2248,6 @@ abstract class _StructureDefinitionMapping extends StructureDefinitionMapping {
           String comments,
           @JsonKey(name: '_comments') Element commentElement}) =
       _$_StructureDefinitionMapping;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _StructureDefinitionMapping.fromYaml(dynamic yaml) => yaml is String
-      ? _StructureDefinitionMapping.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _StructureDefinitionMapping.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =
       _$_StructureDefinitionMapping.fromJson;
@@ -2505,19 +2441,6 @@ class _$_StructureDefinitionSnapshot extends _StructureDefinitionSnapshot {
       : assert(element != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_StructureDefinitionSnapshot.fromYaml(dynamic yaml) =>
-      yaml is String
-          ? _$_StructureDefinitionSnapshot
-              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? _$_StructureDefinitionSnapshot
-                  .fromJson(jsonDecode(jsonEncode(yaml)))
-              : null;
-
   factory _$_StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =>
       _$_$_StructureDefinitionSnapshotFromJson(json);
 
@@ -2581,17 +2504,6 @@ abstract class _StructureDefinitionSnapshot
           List<FhirExtension> modifierExtension,
           @required @JsonKey(required: true) List<ElementDefinition> element}) =
       _$_StructureDefinitionSnapshot;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _StructureDefinitionSnapshot.fromYaml(dynamic yaml) => yaml is String
-      ? _StructureDefinitionSnapshot.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _StructureDefinitionSnapshot.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =
       _$_StructureDefinitionSnapshot.fromJson;
@@ -2766,19 +2678,6 @@ class _$_StructureDefinitionDifferential
       : assert(element != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_StructureDefinitionDifferential.fromYaml(dynamic yaml) =>
-      yaml is String
-          ? _$_StructureDefinitionDifferential
-              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? _$_StructureDefinitionDifferential
-                  .fromJson(jsonDecode(jsonEncode(yaml)))
-              : null;
-
   factory _$_StructureDefinitionDifferential.fromJson(
           Map<String, dynamic> json) =>
       _$_$_StructureDefinitionDifferentialFromJson(json);
@@ -2843,19 +2742,6 @@ abstract class _StructureDefinitionDifferential
           List<FhirExtension> modifierExtension,
           @required @JsonKey(required: true) List<ElementDefinition> element}) =
       _$_StructureDefinitionDifferential;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _StructureDefinitionDifferential.fromYaml(dynamic yaml) =>
-      yaml is String
-          ? _StructureDefinitionDifferential.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? _StructureDefinitionDifferential.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
 
   factory _StructureDefinitionDifferential.fromJson(Map<String, dynamic> json) =
       _$_StructureDefinitionDifferential.fromJson;
@@ -3296,16 +3182,6 @@ class _$_DataElement extends _DataElement {
         assert(element != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_DataElement.fromYaml(dynamic yaml) => yaml is String
-      ? _$_DataElement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_DataElement.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_DataElement.fromJson(Map<String, dynamic> json) =>
       _$_$_DataElementFromJson(json);
 
@@ -3502,16 +3378,6 @@ abstract class _DataElement extends DataElement {
       @required
       @JsonKey(required: true)
           List<ElementDefinition> element}) = _$_DataElement;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _DataElement.fromYaml(dynamic yaml) => yaml is String
-      ? _DataElement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _DataElement.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _DataElement.fromJson(Map<String, dynamic> json) =
       _$_DataElement.fromJson;
@@ -3723,16 +3589,6 @@ class _$_DataElementContact extends _DataElementContact {
       this.telecom})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_DataElementContact.fromYaml(dynamic yaml) => yaml is String
-      ? _$_DataElementContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_DataElementContact.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_DataElementContact.fromJson(Map<String, dynamic> json) =>
       _$_$_DataElementContactFromJson(json);
 
@@ -3798,16 +3654,6 @@ abstract class _DataElementContact extends DataElementContact {
       List<FhirExtension> modifierExtension,
       String name,
       List<ContactPoint> telecom}) = _$_DataElementContact;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _DataElementContact.fromYaml(dynamic yaml) => yaml is String
-      ? _DataElementContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _DataElementContact.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _DataElementContact.fromJson(Map<String, dynamic> json) =
       _$_DataElementContact.fromJson;
@@ -4125,16 +3971,6 @@ class _$_DataElementMapping extends _DataElementMapping {
       : assert(identity != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_DataElementMapping.fromYaml(dynamic yaml) => yaml is String
-      ? _$_DataElementMapping.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_DataElementMapping.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_DataElementMapping.fromJson(Map<String, dynamic> json) =>
       _$_$_DataElementMappingFromJson(json);
 
@@ -4256,16 +4092,6 @@ abstract class _DataElementMapping extends DataElementMapping {
           String comments,
           @JsonKey(name: '_comment') Element commentElement}) =
       _$_DataElementMapping;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _DataElementMapping.fromYaml(dynamic yaml) => yaml is String
-      ? _DataElementMapping.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _DataElementMapping.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _DataElementMapping.fromJson(Map<String, dynamic> json) =
       _$_DataElementMapping.fromJson;

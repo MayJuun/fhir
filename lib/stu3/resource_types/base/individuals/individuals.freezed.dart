@@ -535,16 +535,6 @@ class _$_Group extends _Group {
       : assert(resourceType != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_Group.fromYaml(dynamic yaml) => yaml is String
-      ? _$_Group.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_Group.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_Group.fromJson(Map<String, dynamic> json) =>
       _$_$_GroupFromJson(json);
 
@@ -752,16 +742,6 @@ abstract class _Group extends Group {
       @JsonKey(name: '_quantity') Element quantityElement,
       List<GroupCharacteristic> characteristic,
       List<GroupMember> member}) = _$_Group;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _Group.fromYaml(dynamic yaml) => yaml is String
-      ? _Group.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _Group.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _Group.fromJson(Map<String, dynamic> json) = _$_Group.fromJson;
 
@@ -1127,16 +1107,6 @@ class _$_GroupCharacteristic extends _GroupCharacteristic {
       : assert(code != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_GroupCharacteristic.fromYaml(dynamic yaml) => yaml is String
-      ? _$_GroupCharacteristic.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_GroupCharacteristic.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_GroupCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$_$_GroupCharacteristicFromJson(json);
 
@@ -1233,16 +1203,6 @@ abstract class _GroupCharacteristic extends GroupCharacteristic {
       Boolean exclude,
       @JsonKey(name: '_exclude') Element excludeElement,
       Period period}) = _$_GroupCharacteristic;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _GroupCharacteristic.fromYaml(dynamic yaml) => yaml is String
-      ? _GroupCharacteristic.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _GroupCharacteristic.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _GroupCharacteristic.fromJson(Map<String, dynamic> json) =
       _$_GroupCharacteristic.fromJson;
@@ -1448,16 +1408,6 @@ class _$_GroupMember extends _GroupMember {
       : assert(entity != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_GroupMember.fromYaml(dynamic yaml) => yaml is String
-      ? _$_GroupMember.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_GroupMember.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_GroupMember.fromJson(Map<String, dynamic> json) =>
       _$_$_GroupMemberFromJson(json);
 
@@ -1517,16 +1467,6 @@ abstract class _GroupMember extends GroupMember {
       Period period,
       Boolean inactive,
       @JsonKey(name: '_inactive') Element inactiveElement}) = _$_GroupMember;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _GroupMember.fromYaml(dynamic yaml) => yaml is String
-      ? _GroupMember.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _GroupMember.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _GroupMember.fromJson(Map<String, dynamic> json) =
       _$_GroupMember.fromJson;
@@ -2319,16 +2259,6 @@ class _$_Patient extends _Patient {
       : assert(resourceType != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_Patient.fromYaml(dynamic yaml) => yaml is String
-      ? _$_Patient.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_Patient.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_Patient.fromJson(Map<String, dynamic> json) =>
       _$_$_PatientFromJson(json);
 
@@ -2609,16 +2539,6 @@ abstract class _Patient extends Patient {
       List<Reference> generalPractitioner,
       Reference managingOrganization,
       List<PatientLink> link}) = _$_Patient;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _Patient.fromYaml(dynamic yaml) => yaml is String
-      ? _Patient.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _Patient.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _Patient.fromJson(Map<String, dynamic> json) = _$_Patient.fromJson;
 
@@ -2966,16 +2886,6 @@ class _$_PatientContact extends _PatientContact {
       this.period})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_PatientContact.fromYaml(dynamic yaml) => yaml is String
-      ? _$_PatientContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_PatientContact.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_PatientContact.fromJson(Map<String, dynamic> json) =>
       _$_$_PatientContactFromJson(json);
 
@@ -3062,16 +2972,6 @@ abstract class _PatientContact extends PatientContact {
       @JsonKey(name: '_gender') Element genderElement,
       Reference organization,
       Period period}) = _$_PatientContact;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _PatientContact.fromYaml(dynamic yaml) => yaml is String
-      ? _PatientContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _PatientContact.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _PatientContact.fromJson(Map<String, dynamic> json) =
       _$_PatientContact.fromJson;
@@ -3262,16 +3162,6 @@ class _$_PatientAnimal extends _PatientAnimal {
       : assert(species != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_PatientAnimal.fromYaml(dynamic yaml) => yaml is String
-      ? _$_PatientAnimal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_PatientAnimal.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_PatientAnimal.fromJson(Map<String, dynamic> json) =>
       _$_$_PatientAnimalFromJson(json);
 
@@ -3324,16 +3214,6 @@ abstract class _PatientAnimal extends PatientAnimal {
       {@required CodeableConcept species,
       CodeableConcept breed,
       CodeableConcept genderStatus}) = _$_PatientAnimal;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _PatientAnimal.fromYaml(dynamic yaml) => yaml is String
-      ? _PatientAnimal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _PatientAnimal.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _PatientAnimal.fromJson(Map<String, dynamic> json) =
       _$_PatientAnimal.fromJson;
@@ -3506,16 +3386,6 @@ class _$_PatientCommunication extends _PatientCommunication {
       : assert(language != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_PatientCommunication.fromYaml(dynamic yaml) => yaml is String
-      ? _$_PatientCommunication.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_PatientCommunication.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_PatientCommunication.fromJson(Map<String, dynamic> json) =>
       _$_$_PatientCommunicationFromJson(json);
 
@@ -3572,16 +3442,6 @@ abstract class _PatientCommunication extends PatientCommunication {
           Boolean preferred,
           @JsonKey(name: '_preferred') Element preferredElement}) =
       _$_PatientCommunication;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _PatientCommunication.fromYaml(dynamic yaml) => yaml is String
-      ? _PatientCommunication.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _PatientCommunication.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _PatientCommunication.fromJson(Map<String, dynamic> json) =
       _$_PatientCommunication.fromJson;
@@ -3749,16 +3609,6 @@ class _$_PatientLink extends _PatientLink {
       : assert(other != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_PatientLink.fromYaml(dynamic yaml) => yaml is String
-      ? _$_PatientLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_PatientLink.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_PatientLink.fromJson(Map<String, dynamic> json) =>
       _$_$_PatientLinkFromJson(json);
 
@@ -3812,16 +3662,6 @@ abstract class _PatientLink extends PatientLink {
       {@required Reference other,
       PatientLinkType type,
       @JsonKey(name: '_type') Element typeElement}) = _$_PatientLink;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _PatientLink.fromYaml(dynamic yaml) => yaml is String
-      ? _PatientLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _PatientLink.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _PatientLink.fromJson(Map<String, dynamic> json) =
       _$_PatientLink.fromJson;
@@ -4337,16 +4177,6 @@ class _$_Person extends _Person {
       : assert(resourceType != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_Person.fromYaml(dynamic yaml) => yaml is String
-      ? _$_Person.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_Person.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_Person.fromJson(Map<String, dynamic> json) =>
       _$_$_PersonFromJson(json);
 
@@ -4546,16 +4376,6 @@ abstract class _Person extends Person {
       Boolean active,
       @JsonKey(name: '_active') Element activeElement,
       List<PersonLink> link}) = _$_Person;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _Person.fromYaml(dynamic yaml) => yaml is String
-      ? _Person.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _Person.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _Person.fromJson(Map<String, dynamic> json) = _$_Person.fromJson;
 
@@ -4774,16 +4594,6 @@ class _$_PersonLink extends _PersonLink {
       : assert(target != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_PersonLink.fromYaml(dynamic yaml) => yaml is String
-      ? _$_PersonLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_PersonLink.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_PersonLink.fromJson(Map<String, dynamic> json) =>
       _$_$_PersonLinkFromJson(json);
 
@@ -4837,16 +4647,6 @@ abstract class _PersonLink extends PersonLink {
       {@required Reference target,
       PersonLinkAssurance assurance,
       @JsonKey(name: '_assurance') Element assuranceElement}) = _$_PersonLink;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _PersonLink.fromYaml(dynamic yaml) => yaml is String
-      ? _PersonLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _PersonLink.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _PersonLink.fromJson(Map<String, dynamic> json) =
       _$_PersonLink.fromJson;
@@ -5344,16 +5144,6 @@ class _$_Practitioner extends _Practitioner {
       : assert(resourceType != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_Practitioner.fromYaml(dynamic yaml) => yaml is String
-      ? _$_Practitioner.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_Practitioner.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_Practitioner.fromJson(Map<String, dynamic> json) =>
       _$_$_PractitionerFromJson(json);
 
@@ -5554,16 +5344,6 @@ abstract class _Practitioner extends Practitioner {
       List<Attachment> photo,
       List<PractitionerQualification> qualification,
       List<CodeableConcept> communication}) = _$_Practitioner;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _Practitioner.fromYaml(dynamic yaml) => yaml is String
-      ? _Practitioner.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _Practitioner.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _Practitioner.fromJson(Map<String, dynamic> json) =
       _$_Practitioner.fromJson;
@@ -5803,17 +5583,6 @@ class _$_PractitionerQualification extends _PractitionerQualification {
       : assert(code != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_PractitionerQualification.fromYaml(dynamic yaml) => yaml is String
-      ? _$_PractitionerQualification
-          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_PractitionerQualification.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_PractitionerQualification.fromJson(Map<String, dynamic> json) =>
       _$_$_PractitionerQualificationFromJson(json);
 
@@ -5873,17 +5642,6 @@ abstract class _PractitionerQualification extends PractitionerQualification {
       @required CodeableConcept code,
       Period period,
       Reference issuer}) = _$_PractitionerQualification;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _PractitionerQualification.fromYaml(dynamic yaml) => yaml is String
-      ? _PractitionerQualification.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _PractitionerQualification.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _PractitionerQualification.fromJson(Map<String, dynamic> json) =
       _$_PractitionerQualification.fromJson;
@@ -6480,16 +6238,6 @@ class _$_PractitionerRole extends _PractitionerRole {
       : assert(resourceType != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_PractitionerRole.fromYaml(dynamic yaml) => yaml is String
-      ? _$_PractitionerRole.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_PractitionerRole.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_PractitionerRole.fromJson(Map<String, dynamic> json) =>
       _$_$_PractitionerRoleFromJson(json);
 
@@ -6711,16 +6459,6 @@ abstract class _PractitionerRole extends PractitionerRole {
       @JsonKey(name: '_availabilityExceptions')
           Element availabilityExceptionsElement,
       List<Reference> endpoint}) = _$_PractitionerRole;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _PractitionerRole.fromYaml(dynamic yaml) => yaml is String
-      ? _PractitionerRole.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _PractitionerRole.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _PractitionerRole.fromJson(Map<String, dynamic> json) =
       _$_PractitionerRole.fromJson;
@@ -7039,19 +6777,6 @@ class _$_PractitionerRoleAvailableTime extends _PractitionerRoleAvailableTime {
       @JsonKey(name: '_availableEndTime') this.availableEndTimeElement})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_PractitionerRoleAvailableTime.fromYaml(dynamic yaml) =>
-      yaml is String
-          ? _$_PractitionerRoleAvailableTime
-              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? _$_PractitionerRoleAvailableTime
-                  .fromJson(jsonDecode(jsonEncode(yaml)))
-              : null;
-
   factory _$_PractitionerRoleAvailableTime.fromJson(
           Map<String, dynamic> json) =>
       _$_$_PractitionerRoleAvailableTimeFromJson(json);
@@ -7153,19 +6878,6 @@ abstract class _PractitionerRoleAvailableTime
       Time availableEndTime,
       @JsonKey(name: '_availableEndTime')
           Element availableEndTimeElement}) = _$_PractitionerRoleAvailableTime;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _PractitionerRoleAvailableTime.fromYaml(dynamic yaml) =>
-      yaml is String
-          ? _PractitionerRoleAvailableTime.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? _PractitionerRoleAvailableTime.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
 
   factory _PractitionerRoleAvailableTime.fromJson(Map<String, dynamic> json) =
       _$_PractitionerRoleAvailableTime.fromJson;
@@ -7358,19 +7070,6 @@ class _$_PractitionerRoleNotAvailable extends _PractitionerRoleNotAvailable {
       this.during})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_PractitionerRoleNotAvailable.fromYaml(dynamic yaml) =>
-      yaml is String
-          ? _$_PractitionerRoleNotAvailable
-              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? _$_PractitionerRoleNotAvailable
-                  .fromJson(jsonDecode(jsonEncode(yaml)))
-              : null;
-
   factory _$_PractitionerRoleNotAvailable.fromJson(Map<String, dynamic> json) =>
       _$_$_PractitionerRoleNotAvailableFromJson(json);
 
@@ -7426,17 +7125,6 @@ abstract class _PractitionerRoleNotAvailable
       {String description,
       @JsonKey(name: '_description') Element descriptionElement,
       Period during}) = _$_PractitionerRoleNotAvailable;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _PractitionerRoleNotAvailable.fromYaml(dynamic yaml) => yaml is String
-      ? _PractitionerRoleNotAvailable.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _PractitionerRoleNotAvailable.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _PractitionerRoleNotAvailable.fromJson(Map<String, dynamic> json) =
       _$_PractitionerRoleNotAvailable.fromJson;
@@ -7983,16 +7671,6 @@ class _$_RelatedPerson extends _RelatedPerson {
         assert(patient != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_RelatedPerson.fromYaml(dynamic yaml) => yaml is String
-      ? _$_RelatedPerson.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_RelatedPerson.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_RelatedPerson.fromJson(Map<String, dynamic> json) =>
       _$_$_RelatedPersonFromJson(json);
 
@@ -8199,16 +7877,6 @@ abstract class _RelatedPerson extends RelatedPerson {
       List<Address> address,
       List<Attachment> photo,
       Period period}) = _$_RelatedPerson;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _RelatedPerson.fromYaml(dynamic yaml) => yaml is String
-      ? _RelatedPerson.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _RelatedPerson.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _RelatedPerson.fromJson(Map<String, dynamic> json) =
       _$_RelatedPerson.fromJson;

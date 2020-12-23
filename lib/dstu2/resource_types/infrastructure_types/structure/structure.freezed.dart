@@ -674,16 +674,6 @@ class _$_Media extends _Media {
         assert(content != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_Media.fromYaml(dynamic yaml) => yaml is String
-      ? _$_Media.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_Media.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_Media.fromJson(Map<String, dynamic> json) =>
       _$_$_MediaFromJson(json);
 
@@ -924,16 +914,6 @@ abstract class _Media extends Media {
       @required
       @JsonKey(required: true)
           Attachment content}) = _$_Media;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _Media.fromYaml(dynamic yaml) => yaml is String
-      ? _Media.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _Media.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _Media.fromJson(Map<String, dynamic> json) = _$_Media.fromJson;
 
@@ -1274,16 +1254,6 @@ class _$_Binary extends _Binary {
       : assert(resourceType != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_Binary.fromYaml(dynamic yaml) => yaml is String
-      ? _$_Binary.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_Binary.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_Binary.fromJson(Map<String, dynamic> json) =>
       _$_$_BinaryFromJson(json);
 
@@ -1387,16 +1357,6 @@ abstract class _Binary extends Binary {
       Code contentType,
       @JsonKey(name: '_contentType') Element contentTypeElement,
       Base64Binary content}) = _$_Binary;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _Binary.fromYaml(dynamic yaml) => yaml is String
-      ? _Binary.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _Binary.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _Binary.fromJson(Map<String, dynamic> json) = _$_Binary.fromJson;
 
@@ -1786,16 +1746,6 @@ class _$_Bundle extends _Bundle {
         assert(type != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_Bundle.fromYaml(dynamic yaml) => yaml is String
-      ? _$_Bundle.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_Bundle.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_Bundle.fromJson(Map<String, dynamic> json) =>
       _$_$_BundleFromJson(json);
 
@@ -1932,16 +1882,6 @@ abstract class _Bundle extends Bundle {
       List<BundleLink> link,
       List<BundleEntry> entry,
       Signature signature}) = _$_Bundle;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _Bundle.fromYaml(dynamic yaml) => yaml is String
-      ? _Bundle.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _Bundle.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _Bundle.fromJson(Map<String, dynamic> json) = _$_Bundle.fromJson;
 
@@ -2205,16 +2145,6 @@ class _$_BundleLink extends _BundleLink {
         assert(url != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_BundleLink.fromYaml(dynamic yaml) => yaml is String
-      ? _$_BundleLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_BundleLink.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_BundleLink.fromJson(Map<String, dynamic> json) =>
       _$_$_BundleLinkFromJson(json);
 
@@ -2307,16 +2237,6 @@ abstract class _BundleLink extends BundleLink {
       @JsonKey(name: '_relation') Element relationElement,
       @required @JsonKey(required: true) FhirUri url,
       @JsonKey(name: '_url') Element urlElement}) = _$_BundleLink;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _BundleLink.fromYaml(dynamic yaml) => yaml is String
-      ? _BundleLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _BundleLink.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _BundleLink.fromJson(Map<String, dynamic> json) =
       _$_BundleLink.fromJson;
@@ -2626,16 +2546,6 @@ class _$_BundleEntry extends _BundleEntry {
       this.response})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_BundleEntry.fromYaml(dynamic yaml) => yaml is String
-      ? _$_BundleEntry.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_BundleEntry.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_BundleEntry.fromJson(Map<String, dynamic> json) =>
       _$_$_BundleEntryFromJson(json);
 
@@ -2745,16 +2655,6 @@ abstract class _BundleEntry extends BundleEntry {
       BundleEntrySearch search,
       BundleEntryRequest request,
       BundleEntryResponse response}) = _$_BundleEntry;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _BundleEntry.fromYaml(dynamic yaml) => yaml is String
-      ? _BundleEntry.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _BundleEntry.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _BundleEntry.fromJson(Map<String, dynamic> json) =
       _$_BundleEntry.fromJson;
@@ -3011,16 +2911,6 @@ class _$_BundleEntrySearch extends _BundleEntrySearch {
       @JsonKey(name: '_score') this.scoreElement})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_BundleEntrySearch.fromYaml(dynamic yaml) => yaml is String
-      ? _$_BundleEntrySearch.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_BundleEntrySearch.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_BundleEntrySearch.fromJson(Map<String, dynamic> json) =>
       _$_$_BundleEntrySearchFromJson(json);
 
@@ -3111,16 +3001,6 @@ abstract class _BundleEntrySearch extends BundleEntrySearch {
       @JsonKey(name: '_mode') Element modeElement,
       Decimal score,
       @JsonKey(name: '_score') Element scoreElement}) = _$_BundleEntrySearch;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _BundleEntrySearch.fromYaml(dynamic yaml) => yaml is String
-      ? _BundleEntrySearch.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _BundleEntrySearch.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _BundleEntrySearch.fromJson(Map<String, dynamic> json) =
       _$_BundleEntrySearch.fromJson;
@@ -3580,16 +3460,6 @@ class _$_BundleEntryRequest extends _BundleEntryRequest {
         assert(url != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_BundleEntryRequest.fromYaml(dynamic yaml) => yaml is String
-      ? _$_BundleEntryRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_BundleEntryRequest.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_BundleEntryRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_BundleEntryRequestFromJson(json);
 
@@ -3753,16 +3623,6 @@ abstract class _BundleEntryRequest extends BundleEntryRequest {
       String ifNoneExist,
       @JsonKey(name: '_ifNoneExist')
           Element ifNoneExistElement}) = _$_BundleEntryRequest;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _BundleEntryRequest.fromYaml(dynamic yaml) => yaml is String
-      ? _BundleEntryRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _BundleEntryRequest.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _BundleEntryRequest.fromJson(Map<String, dynamic> json) =
       _$_BundleEntryRequest.fromJson;
@@ -4117,16 +3977,6 @@ class _$_BundleEntryResponse extends _BundleEntryResponse {
       : assert(status != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_BundleEntryResponse.fromYaml(dynamic yaml) => yaml is String
-      ? _$_BundleEntryResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_BundleEntryResponse.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_BundleEntryResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_BundleEntryResponseFromJson(json);
 
@@ -4249,16 +4099,6 @@ abstract class _BundleEntryResponse extends BundleEntryResponse {
           Instant lastModified,
           @JsonKey(name: '_lastModified') Element lastModifiedElement}) =
       _$_BundleEntryResponse;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _BundleEntryResponse.fromYaml(dynamic yaml) => yaml is String
-      ? _BundleEntryResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _BundleEntryResponse.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _BundleEntryResponse.fromJson(Map<String, dynamic> json) =
       _$_BundleEntryResponse.fromJson;
@@ -4701,16 +4541,6 @@ class _$_Basic extends _Basic {
         assert(code != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_Basic.fromYaml(dynamic yaml) => yaml is String
-      ? _$_Basic.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_Basic.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_Basic.fromJson(Map<String, dynamic> json) =>
       _$_$_BasicFromJson(json);
 
@@ -4863,16 +4693,6 @@ abstract class _Basic extends Basic {
       Reference author,
       Date created,
       @JsonKey(name: '_created') Element createdElement}) = _$_Basic;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _Basic.fromYaml(dynamic yaml) => yaml is String
-      ? _Basic.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _Basic.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _Basic.fromJson(Map<String, dynamic> json) = _$_Basic.fromJson;
 

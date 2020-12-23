@@ -567,16 +567,6 @@ class _$_AuditEvent extends _AuditEvent {
         assert(source != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_AuditEvent.fromYaml(dynamic yaml) => yaml is String
-      ? _$_AuditEvent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_AuditEvent.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_AuditEvent.fromJson(Map<String, dynamic> json) =>
       _$_$_AuditEventFromJson(json);
 
@@ -796,16 +786,6 @@ abstract class _AuditEvent extends AuditEvent {
       @required
           AuditEventSource source,
       List<AuditEventEntity> entity}) = _$_AuditEvent;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _AuditEvent.fromYaml(dynamic yaml) => yaml is String
-      ? _AuditEvent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _AuditEvent.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _AuditEvent.fromJson(Map<String, dynamic> json) =
       _$_AuditEvent.fromJson;
@@ -1284,16 +1264,6 @@ class _$_AuditEventAgent extends _AuditEventAgent {
       this.purposeOfUse})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_AuditEventAgent.fromYaml(dynamic yaml) => yaml is String
-      ? _$_AuditEventAgent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_AuditEventAgent.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_AuditEventAgent.fromJson(Map<String, dynamic> json) =>
       _$_$_AuditEventAgentFromJson(json);
 
@@ -1449,16 +1419,6 @@ abstract class _AuditEventAgent extends AuditEventAgent {
       Coding media,
       AuditEventNetwork network,
       List<CodeableConcept> purposeOfUse}) = _$_AuditEventAgent;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _AuditEventAgent.fromYaml(dynamic yaml) => yaml is String
-      ? _AuditEventAgent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _AuditEventAgent.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _AuditEventAgent.fromJson(Map<String, dynamic> json) =
       _$_AuditEventAgent.fromJson;
@@ -1728,16 +1688,6 @@ class _$_AuditEventNetwork extends _AuditEventNetwork {
       @JsonKey(name: '_type') this.typeElement})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_AuditEventNetwork.fromYaml(dynamic yaml) => yaml is String
-      ? _$_AuditEventNetwork.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_AuditEventNetwork.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_AuditEventNetwork.fromJson(Map<String, dynamic> json) =>
       _$_$_AuditEventNetworkFromJson(json);
 
@@ -1825,16 +1775,6 @@ abstract class _AuditEventNetwork extends AuditEventNetwork {
           AuditEventNetworkType type,
       @JsonKey(name: '_type')
           Element typeElement}) = _$_AuditEventNetwork;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _AuditEventNetwork.fromYaml(dynamic yaml) => yaml is String
-      ? _AuditEventNetwork.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _AuditEventNetwork.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _AuditEventNetwork.fromJson(Map<String, dynamic> json) =
       _$_AuditEventNetwork.fromJson;
@@ -2064,16 +2004,6 @@ class _$_AuditEventSource extends _AuditEventSource {
       : assert(observer != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_AuditEventSource.fromYaml(dynamic yaml) => yaml is String
-      ? _$_AuditEventSource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_AuditEventSource.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_AuditEventSource.fromJson(Map<String, dynamic> json) =>
       _$_$_AuditEventSourceFromJson(json);
 
@@ -2154,16 +2084,6 @@ abstract class _AuditEventSource extends AuditEventSource {
       @JsonKey(name: '_site') Element siteElement,
       @required Reference observer,
       List<Coding> type}) = _$_AuditEventSource;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _AuditEventSource.fromYaml(dynamic yaml) => yaml is String
-      ? _AuditEventSource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _AuditEventSource.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _AuditEventSource.fromJson(Map<String, dynamic> json) =
       _$_AuditEventSource.fromJson;
@@ -2513,16 +2433,6 @@ class _$_AuditEventEntity extends _AuditEventEntity {
       this.detail})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_AuditEventEntity.fromYaml(dynamic yaml) => yaml is String
-      ? _$_AuditEventEntity.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_AuditEventEntity.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_AuditEventEntity.fromJson(Map<String, dynamic> json) =>
       _$_$_AuditEventEntityFromJson(json);
 
@@ -2642,16 +2552,6 @@ abstract class _AuditEventEntity extends AuditEventEntity {
       Base64Binary query,
       @JsonKey(name: '_query') Element queryElement,
       List<AuditEventDetail> detail}) = _$_AuditEventEntity;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _AuditEventEntity.fromYaml(dynamic yaml) => yaml is String
-      ? _AuditEventEntity.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _AuditEventEntity.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _AuditEventEntity.fromJson(Map<String, dynamic> json) =
       _$_AuditEventEntity.fromJson;
@@ -2940,16 +2840,6 @@ class _$_AuditEventDetail extends _AuditEventDetail {
       @JsonKey(name: '_valueBase64Binary') this.valueBase64BinaryElement})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_AuditEventDetail.fromYaml(dynamic yaml) => yaml is String
-      ? _$_AuditEventDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_AuditEventDetail.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_AuditEventDetail.fromJson(Map<String, dynamic> json) =>
       _$_$_AuditEventDetailFromJson(json);
 
@@ -3052,16 +2942,6 @@ abstract class _AuditEventDetail extends AuditEventDetail {
       Base64Binary valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary')
           Element valueBase64BinaryElement}) = _$_AuditEventDetail;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _AuditEventDetail.fromYaml(dynamic yaml) => yaml is String
-      ? _AuditEventDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _AuditEventDetail.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _AuditEventDetail.fromJson(Map<String, dynamic> json) =
       _$_AuditEventDetail.fromJson;
@@ -3671,16 +3551,6 @@ class _$_Consent extends _Consent {
         assert(category != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_Consent.fromYaml(dynamic yaml) => yaml is String
-      ? _$_Consent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_Consent.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_Consent.fromJson(Map<String, dynamic> json) =>
       _$_$_ConsentFromJson(json);
 
@@ -3903,16 +3773,6 @@ abstract class _Consent extends Consent {
       CodeableConcept policyRule,
       List<ConsentVerification> verification,
       ConsentProvision provision}) = _$_Consent;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _Consent.fromYaml(dynamic yaml) => yaml is String
-      ? _Consent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _Consent.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _Consent.fromJson(Map<String, dynamic> json) = _$_Consent.fromJson;
 
@@ -4189,16 +4049,6 @@ class _$_ConsentPolicy extends _ConsentPolicy {
       @JsonKey(name: '_uri') this.uriElement})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_ConsentPolicy.fromYaml(dynamic yaml) => yaml is String
-      ? _$_ConsentPolicy.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_ConsentPolicy.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_ConsentPolicy.fromJson(Map<String, dynamic> json) =>
       _$_$_ConsentPolicyFromJson(json);
 
@@ -4281,16 +4131,6 @@ abstract class _ConsentPolicy extends ConsentPolicy {
       @JsonKey(name: '_authority') Element authorityElement,
       FhirUri uri,
       @JsonKey(name: '_uri') Element uriElement}) = _$_ConsentPolicy;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _ConsentPolicy.fromYaml(dynamic yaml) => yaml is String
-      ? _ConsentPolicy.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _ConsentPolicy.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _ConsentPolicy.fromJson(Map<String, dynamic> json) =
       _$_ConsentPolicy.fromJson;
@@ -4604,16 +4444,6 @@ class _$_ConsentVerification extends _ConsentVerification {
       @JsonKey(name: '_verificationDate') this.verificationDateElement})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_ConsentVerification.fromYaml(dynamic yaml) => yaml is String
-      ? _$_ConsentVerification.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_ConsentVerification.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_ConsentVerification.fromJson(Map<String, dynamic> json) =>
       _$_$_ConsentVerificationFromJson(json);
 
@@ -4723,16 +4553,6 @@ abstract class _ConsentVerification extends ConsentVerification {
       List<FhirDateTime> verificationDate,
       @JsonKey(name: '_verificationDate')
           List<Element> verificationDateElement}) = _$_ConsentVerification;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _ConsentVerification.fromYaml(dynamic yaml) => yaml is String
-      ? _ConsentVerification.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _ConsentVerification.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _ConsentVerification.fromJson(Map<String, dynamic> json) =
       _$_ConsentVerification.fromJson;
@@ -5085,16 +4905,6 @@ class _$_ConsentProvision extends _ConsentProvision {
       this.provision})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_ConsentProvision.fromYaml(dynamic yaml) => yaml is String
-      ? _$_ConsentProvision.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_ConsentProvision.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_ConsentProvision.fromJson(Map<String, dynamic> json) =>
       _$_$_ConsentProvisionFromJson(json);
 
@@ -5232,16 +5042,6 @@ abstract class _ConsentProvision extends ConsentProvision {
       Period dataPeriod,
       List<ConsentData> data,
       List<ConsentProvision> provision}) = _$_ConsentProvision;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _ConsentProvision.fromYaml(dynamic yaml) => yaml is String
-      ? _ConsentProvision.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _ConsentProvision.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _ConsentProvision.fromJson(Map<String, dynamic> json) =
       _$_ConsentProvision.fromJson;
@@ -5465,16 +5265,6 @@ class _$_ConsentActor extends _ConsentActor {
         assert(reference != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_ConsentActor.fromYaml(dynamic yaml) => yaml is String
-      ? _$_ConsentActor.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_ConsentActor.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_ConsentActor.fromJson(Map<String, dynamic> json) =>
       _$_$_ConsentActorFromJson(json);
 
@@ -5541,16 +5331,6 @@ abstract class _ConsentActor extends ConsentActor {
       List<FhirExtension> modifierExtension,
       @required CodeableConcept role,
       @required Reference reference}) = _$_ConsentActor;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _ConsentActor.fromYaml(dynamic yaml) => yaml is String
-      ? _ConsentActor.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _ConsentActor.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _ConsentActor.fromJson(Map<String, dynamic> json) =
       _$_ConsentActor.fromJson;
@@ -5778,16 +5558,6 @@ class _$_ConsentData extends _ConsentData {
       : assert(reference != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_ConsentData.fromYaml(dynamic yaml) => yaml is String
-      ? _$_ConsentData.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_ConsentData.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_ConsentData.fromJson(Map<String, dynamic> json) =>
       _$_$_ConsentDataFromJson(json);
 
@@ -5868,16 +5638,6 @@ abstract class _ConsentData extends ConsentData {
           Element meaningElement,
       @required
           Reference reference}) = _$_ConsentData;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _ConsentData.fromYaml(dynamic yaml) => yaml is String
-      ? _ConsentData.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _ConsentData.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _ConsentData.fromJson(Map<String, dynamic> json) =
       _$_ConsentData.fromJson;
@@ -6423,16 +6183,6 @@ class _$_Permission extends _Permission {
       : assert(resourceType != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_Permission.fromYaml(dynamic yaml) => yaml is String
-      ? _$_Permission.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_Permission.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_Permission.fromJson(Map<String, dynamic> json) =>
       _$_$_PermissionFromJson(json);
 
@@ -6634,16 +6384,6 @@ abstract class _Permission extends Permission {
       List<PermissionProcessingActivity> processingActivity,
       PermissionJustification justification,
       List<CodeableConcept> usageLimitations}) = _$_Permission;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _Permission.fromYaml(dynamic yaml) => yaml is String
-      ? _Permission.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _Permission.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _Permission.fromJson(Map<String, dynamic> json) =
       _$_Permission.fromJson;
@@ -6883,19 +6623,6 @@ class _$_PermissionProcessingActivity extends _PermissionProcessingActivity {
       this.purpose})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_PermissionProcessingActivity.fromYaml(dynamic yaml) =>
-      yaml is String
-          ? _$_PermissionProcessingActivity
-              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? _$_PermissionProcessingActivity
-                  .fromJson(jsonDecode(jsonEncode(yaml)))
-              : null;
-
   factory _$_PermissionProcessingActivity.fromJson(Map<String, dynamic> json) =>
       _$_$_PermissionProcessingActivityFromJson(json);
 
@@ -6971,17 +6698,6 @@ abstract class _PermissionProcessingActivity
       List<Reference> partyReference,
       List<CodeableConcept> partyCodeableConcept,
       List<CodeableConcept> purpose}) = _$_PermissionProcessingActivity;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _PermissionProcessingActivity.fromYaml(dynamic yaml) => yaml is String
-      ? _PermissionProcessingActivity.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _PermissionProcessingActivity.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _PermissionProcessingActivity.fromJson(Map<String, dynamic> json) =
       _$_PermissionProcessingActivity.fromJson;
@@ -7163,17 +6879,6 @@ class _$_PermissionJustification extends _PermissionJustification {
       this.grounds})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_PermissionJustification.fromYaml(dynamic yaml) => yaml is String
-      ? _$_PermissionJustification
-          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_PermissionJustification.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_PermissionJustification.fromJson(Map<String, dynamic> json) =>
       _$_$_PermissionJustificationFromJson(json);
 
@@ -7241,17 +6946,6 @@ abstract class _PermissionJustification extends PermissionJustification {
       List<FhirExtension> modifierExtension,
       List<Reference> evidence,
       List<CodeableConcept> grounds}) = _$_PermissionJustification;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _PermissionJustification.fromYaml(dynamic yaml) => yaml is String
-      ? _PermissionJustification.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _PermissionJustification.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _PermissionJustification.fromJson(Map<String, dynamic> json) =
       _$_PermissionJustification.fromJson;
@@ -7794,16 +7488,6 @@ class _$_Provenance extends _Provenance {
         assert(agent != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_Provenance.fromYaml(dynamic yaml) => yaml is String
-      ? _$_Provenance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_Provenance.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_Provenance.fromJson(Map<String, dynamic> json) =>
       _$_$_ProvenanceFromJson(json);
 
@@ -8008,16 +7692,6 @@ abstract class _Provenance extends Provenance {
       @required List<ProvenanceAgent> agent,
       List<ProvenanceEntity> entity,
       List<Signature> signature}) = _$_Provenance;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _Provenance.fromYaml(dynamic yaml) => yaml is String
-      ? _Provenance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _Provenance.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _Provenance.fromJson(Map<String, dynamic> json) =
       _$_Provenance.fromJson;
@@ -8297,16 +7971,6 @@ class _$_ProvenanceAgent extends _ProvenanceAgent {
       : assert(who != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_ProvenanceAgent.fromYaml(dynamic yaml) => yaml is String
-      ? _$_ProvenanceAgent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_ProvenanceAgent.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_ProvenanceAgent.fromJson(Map<String, dynamic> json) =>
       _$_$_ProvenanceAgentFromJson(json);
 
@@ -8385,16 +8049,6 @@ abstract class _ProvenanceAgent extends ProvenanceAgent {
       List<CodeableConcept> role,
       @required Reference who,
       Reference onBehalfOf}) = _$_ProvenanceAgent;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _ProvenanceAgent.fromYaml(dynamic yaml) => yaml is String
-      ? _ProvenanceAgent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _ProvenanceAgent.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _ProvenanceAgent.fromJson(Map<String, dynamic> json) =
       _$_ProvenanceAgent.fromJson;
@@ -8632,16 +8286,6 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
       : assert(what != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_ProvenanceEntity.fromYaml(dynamic yaml) => yaml is String
-      ? _$_ProvenanceEntity.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_ProvenanceEntity.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
       _$_$_ProvenanceEntityFromJson(json);
 
@@ -8726,16 +8370,6 @@ abstract class _ProvenanceEntity extends ProvenanceEntity {
       @required
           Reference what,
       List<ProvenanceAgent> agent}) = _$_ProvenanceEntity;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _ProvenanceEntity.fromYaml(dynamic yaml) => yaml is String
-      ? _ProvenanceEntity.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _ProvenanceEntity.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _ProvenanceEntity.fromJson(Map<String, dynamic> json) =
       _$_ProvenanceEntity.fromJson;

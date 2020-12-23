@@ -956,16 +956,6 @@ class _$_ValueSet extends _ValueSet {
         assert(status != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_ValueSet.fromYaml(dynamic yaml) => yaml is String
-      ? _$_ValueSet.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_ValueSet.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_ValueSet.fromJson(Map<String, dynamic> json) =>
       _$_$_ValueSetFromJson(json);
 
@@ -1286,16 +1276,6 @@ abstract class _ValueSet extends ValueSet {
       ValueSetCompose compose,
       ValueSetExpansion expansion}) = _$_ValueSet;
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _ValueSet.fromYaml(dynamic yaml) => yaml is String
-      ? _ValueSet.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _ValueSet.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _ValueSet.fromJson(Map<String, dynamic> json) = _$_ValueSet.fromJson;
 
   @override
@@ -1570,16 +1550,6 @@ class _$_ValueSetContact extends _ValueSetContact {
       this.telecom})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_ValueSetContact.fromYaml(dynamic yaml) => yaml is String
-      ? _$_ValueSetContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_ValueSetContact.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_ValueSetContact.fromJson(Map<String, dynamic> json) =>
       _$_$_ValueSetContactFromJson(json);
 
@@ -1653,16 +1623,6 @@ abstract class _ValueSetContact extends ValueSetContact {
       @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       String name,
       List<ContactPoint> telecom}) = _$_ValueSetContact;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _ValueSetContact.fromYaml(dynamic yaml) => yaml is String
-      ? _ValueSetContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _ValueSetContact.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _ValueSetContact.fromJson(Map<String, dynamic> json) =
       _$_ValueSetContact.fromJson;
@@ -1978,16 +1938,6 @@ class _$_ValueSetCodeSystem extends _ValueSetCodeSystem {
         assert(concept != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_ValueSetCodeSystem.fromYaml(dynamic yaml) => yaml is String
-      ? _$_ValueSetCodeSystem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_ValueSetCodeSystem.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_ValueSetCodeSystem.fromJson(Map<String, dynamic> json) =>
       _$_$_ValueSetCodeSystemFromJson(json);
 
@@ -2110,16 +2060,6 @@ abstract class _ValueSetCodeSystem extends ValueSetCodeSystem {
       @required
       @JsonKey(required: true)
           List<ValueSetCodeSystemConcept> concept}) = _$_ValueSetCodeSystem;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _ValueSetCodeSystem.fromYaml(dynamic yaml) => yaml is String
-      ? _ValueSetCodeSystem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _ValueSetCodeSystem.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _ValueSetCodeSystem.fromJson(Map<String, dynamic> json) =
       _$_ValueSetCodeSystem.fromJson;
@@ -2434,17 +2374,6 @@ class _$_ValueSetCodeSystemConcept extends _ValueSetCodeSystemConcept {
       : assert(code != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_ValueSetCodeSystemConcept.fromYaml(dynamic yaml) => yaml is String
-      ? _$_ValueSetCodeSystemConcept
-          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_ValueSetCodeSystemConcept.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_ValueSetCodeSystemConcept.fromJson(Map<String, dynamic> json) =>
       _$_$_ValueSetCodeSystemConceptFromJson(json);
 
@@ -2566,17 +2495,6 @@ abstract class _ValueSetCodeSystemConcept extends ValueSetCodeSystemConcept {
       String definition,
       List<ValueSetConceptDesignation> designation,
       List<ValueSetCodeSystemConcept> concept}) = _$_ValueSetCodeSystemConcept;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _ValueSetCodeSystemConcept.fromYaml(dynamic yaml) => yaml is String
-      ? _ValueSetCodeSystemConcept.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _ValueSetCodeSystemConcept.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _ValueSetCodeSystemConcept.fromJson(Map<String, dynamic> json) =
       _$_ValueSetCodeSystemConcept.fromJson;
@@ -2852,17 +2770,6 @@ class _$_ValueSetConceptDesignation extends _ValueSetConceptDesignation {
       : assert(value != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_ValueSetConceptDesignation.fromYaml(dynamic yaml) => yaml is String
-      ? _$_ValueSetConceptDesignation
-          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_ValueSetConceptDesignation.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_ValueSetConceptDesignation.fromJson(Map<String, dynamic> json) =>
       _$_$_ValueSetConceptDesignationFromJson(json);
 
@@ -2954,17 +2861,6 @@ abstract class _ValueSetConceptDesignation extends ValueSetConceptDesignation {
           @required @JsonKey(required: true) String value,
           @JsonKey(name: '_value') Element valueElement}) =
       _$_ValueSetConceptDesignation;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _ValueSetConceptDesignation.fromYaml(dynamic yaml) => yaml is String
-      ? _ValueSetConceptDesignation.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _ValueSetConceptDesignation.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _ValueSetConceptDesignation.fromJson(Map<String, dynamic> json) =
       _$_ValueSetConceptDesignation.fromJson;
@@ -3179,16 +3075,6 @@ class _$_ValueSetCompose extends _ValueSetCompose {
       this.exclude})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_ValueSetCompose.fromYaml(dynamic yaml) => yaml is String
-      ? _$_ValueSetCompose.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_ValueSetCompose.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_ValueSetCompose.fromJson(Map<String, dynamic> json) =>
       _$_$_ValueSetComposeFromJson(json);
 
@@ -3271,16 +3157,6 @@ abstract class _ValueSetCompose extends ValueSetCompose {
       @JsonKey(name: 'import') List<FhirUri> import_,
       List<ValueSetComposeInclude> include,
       List<ValueSetComposeInclude> exclude}) = _$_ValueSetCompose;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _ValueSetCompose.fromYaml(dynamic yaml) => yaml is String
-      ? _ValueSetCompose.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _ValueSetCompose.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _ValueSetCompose.fromJson(Map<String, dynamic> json) =
       _$_ValueSetCompose.fromJson;
@@ -3561,17 +3437,6 @@ class _$_ValueSetComposeInclude extends _ValueSetComposeInclude {
       : assert(system != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_ValueSetComposeInclude.fromYaml(dynamic yaml) => yaml is String
-      ? _$_ValueSetComposeInclude
-          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_ValueSetComposeInclude.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_ValueSetComposeInclude.fromJson(Map<String, dynamic> json) =>
       _$_$_ValueSetComposeIncludeFromJson(json);
 
@@ -3677,16 +3542,6 @@ abstract class _ValueSetComposeInclude extends ValueSetComposeInclude {
       @JsonKey(name: '_version') Element versionElement,
       List<ValueSetIncludeConcept> concept,
       List<ValueSetIncludeFilter> filter}) = _$_ValueSetComposeInclude;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _ValueSetComposeInclude.fromYaml(dynamic yaml) => yaml is String
-      ? _ValueSetComposeInclude.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _ValueSetComposeInclude.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _ValueSetComposeInclude.fromJson(Map<String, dynamic> json) =
       _$_ValueSetComposeInclude.fromJson;
@@ -3959,17 +3814,6 @@ class _$_ValueSetIncludeConcept extends _ValueSetIncludeConcept {
       : assert(code != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_ValueSetIncludeConcept.fromYaml(dynamic yaml) => yaml is String
-      ? _$_ValueSetIncludeConcept
-          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_ValueSetIncludeConcept.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_ValueSetIncludeConcept.fromJson(Map<String, dynamic> json) =>
       _$_$_ValueSetIncludeConceptFromJson(json);
 
@@ -4070,16 +3914,6 @@ abstract class _ValueSetIncludeConcept extends ValueSetIncludeConcept {
           @JsonKey(name: '_display') Element displayElement,
           List<ValueSetConceptDesignation> designation}) =
       _$_ValueSetIncludeConcept;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _ValueSetIncludeConcept.fromYaml(dynamic yaml) => yaml is String
-      ? _ValueSetIncludeConcept.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _ValueSetIncludeConcept.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _ValueSetIncludeConcept.fromJson(Map<String, dynamic> json) =
       _$_ValueSetIncludeConcept.fromJson;
@@ -4398,17 +4232,6 @@ class _$_ValueSetIncludeFilter extends _ValueSetIncludeFilter {
         assert(value != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_ValueSetIncludeFilter.fromYaml(dynamic yaml) => yaml is String
-      ? _$_ValueSetIncludeFilter
-          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_ValueSetIncludeFilter.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_ValueSetIncludeFilter.fromJson(Map<String, dynamic> json) =>
       _$_$_ValueSetIncludeFilterFromJson(json);
 
@@ -4528,16 +4351,6 @@ abstract class _ValueSetIncludeFilter extends ValueSetIncludeFilter {
           Code value,
       @JsonKey(name: '_value')
           Element valueElement}) = _$_ValueSetIncludeFilter;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _ValueSetIncludeFilter.fromYaml(dynamic yaml) => yaml is String
-      ? _ValueSetIncludeFilter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _ValueSetIncludeFilter.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _ValueSetIncludeFilter.fromJson(Map<String, dynamic> json) =
       _$_ValueSetIncludeFilter.fromJson;
@@ -4910,16 +4723,6 @@ class _$_ValueSetExpansion extends _ValueSetExpansion {
         assert(timestamp != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_ValueSetExpansion.fromYaml(dynamic yaml) => yaml is String
-      ? _$_ValueSetExpansion.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_ValueSetExpansion.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_ValueSetExpansion.fromJson(Map<String, dynamic> json) =>
       _$_$_ValueSetExpansionFromJson(json);
 
@@ -5055,16 +4858,6 @@ abstract class _ValueSetExpansion extends ValueSetExpansion {
       @JsonKey(name: '_offset') Element offsetElement,
       List<ValueSetExpansionParameter> parameter,
       List<ValueSetExpansionContains> contains}) = _$_ValueSetExpansion;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _ValueSetExpansion.fromYaml(dynamic yaml) => yaml is String
-      ? _ValueSetExpansion.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _ValueSetExpansion.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _ValueSetExpansion.fromJson(Map<String, dynamic> json) =
       _$_ValueSetExpansion.fromJson;
@@ -5540,17 +5333,6 @@ class _$_ValueSetExpansionParameter extends _ValueSetExpansionParameter {
       : assert(name != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_ValueSetExpansionParameter.fromYaml(dynamic yaml) => yaml is String
-      ? _$_ValueSetExpansionParameter
-          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_ValueSetExpansionParameter.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_ValueSetExpansionParameter.fromJson(Map<String, dynamic> json) =>
       _$_$_ValueSetExpansionParameterFromJson(json);
 
@@ -5719,17 +5501,6 @@ abstract class _ValueSetExpansionParameter extends ValueSetExpansionParameter {
           Code valueCode,
           @JsonKey(name: '_valueCode') Element valueCodeElement}) =
       _$_ValueSetExpansionParameter;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _ValueSetExpansionParameter.fromYaml(dynamic yaml) => yaml is String
-      ? _ValueSetExpansionParameter.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _ValueSetExpansionParameter.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _ValueSetExpansionParameter.fromJson(Map<String, dynamic> json) =
       _$_ValueSetExpansionParameter.fromJson;
@@ -6138,17 +5909,6 @@ class _$_ValueSetExpansionContains extends _ValueSetExpansionContains {
       this.contains})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_ValueSetExpansionContains.fromYaml(dynamic yaml) => yaml is String
-      ? _$_ValueSetExpansionContains
-          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_ValueSetExpansionContains.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_ValueSetExpansionContains.fromJson(Map<String, dynamic> json) =>
       _$_$_ValueSetExpansionContainsFromJson(json);
 
@@ -6293,17 +6053,6 @@ abstract class _ValueSetExpansionContains extends ValueSetExpansionContains {
       String display,
       @JsonKey(name: '_display') Element displayElement,
       List<ValueSetExpansionContains> contains}) = _$_ValueSetExpansionContains;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _ValueSetExpansionContains.fromYaml(dynamic yaml) => yaml is String
-      ? _ValueSetExpansionContains.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _ValueSetExpansionContains.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _ValueSetExpansionContains.fromJson(Map<String, dynamic> json) =
       _$_ValueSetExpansionContains.fromJson;
@@ -7250,16 +6999,6 @@ class _$_ConceptMap extends _ConceptMap {
         assert(status != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_ConceptMap.fromYaml(dynamic yaml) => yaml is String
-      ? _$_ConceptMap.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_ConceptMap.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_ConceptMap.fromJson(Map<String, dynamic> json) =>
       _$_$_ConceptMapFromJson(json);
 
@@ -7568,16 +7307,6 @@ abstract class _ConceptMap extends ConceptMap {
       @JsonKey(name: '_date')
           Element dateElement}) = _$_ConceptMap;
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _ConceptMap.fromYaml(dynamic yaml) => yaml is String
-      ? _ConceptMap.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _ConceptMap.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _ConceptMap.fromJson(Map<String, dynamic> json) =
       _$_ConceptMap.fromJson;
 
@@ -7833,16 +7562,6 @@ class _$_ConceptMapContact extends _ConceptMapContact {
       this.telecom})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_ConceptMapContact.fromYaml(dynamic yaml) => yaml is String
-      ? _$_ConceptMapContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_ConceptMapContact.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_ConceptMapContact.fromJson(Map<String, dynamic> json) =>
       _$_$_ConceptMapContactFromJson(json);
 
@@ -7908,16 +7627,6 @@ abstract class _ConceptMapContact extends ConceptMapContact {
       List<FhirExtension> modifierExtension,
       String name,
       List<ContactPoint> telecom}) = _$_ConceptMapContact;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _ConceptMapContact.fromYaml(dynamic yaml) => yaml is String
-      ? _ConceptMapContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _ConceptMapContact.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _ConceptMapContact.fromJson(Map<String, dynamic> json) =
       _$_ConceptMapContact.fromJson;
@@ -8132,16 +7841,6 @@ class _$_ConceptMapElement extends _ConceptMapElement {
       this.target})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_ConceptMapElement.fromYaml(dynamic yaml) => yaml is String
-      ? _$_ConceptMapElement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_ConceptMapElement.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_ConceptMapElement.fromJson(Map<String, dynamic> json) =>
       _$_$_ConceptMapElementFromJson(json);
 
@@ -8222,16 +7921,6 @@ abstract class _ConceptMapElement extends ConceptMapElement {
       Code code,
       @JsonKey(name: '_code') Element codeElement,
       List<ConceptMapElementTarget> target}) = _$_ConceptMapElement;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _ConceptMapElement.fromYaml(dynamic yaml) => yaml is String
-      ? _ConceptMapElement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _ConceptMapElement.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _ConceptMapElement.fromJson(Map<String, dynamic> json) =
       _$_ConceptMapElement.fromJson;
@@ -8571,17 +8260,6 @@ class _$_ConceptMapElementTarget extends _ConceptMapElementTarget {
       : assert(equivalence != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_ConceptMapElementTarget.fromYaml(dynamic yaml) => yaml is String
-      ? _$_ConceptMapElementTarget
-          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_ConceptMapElementTarget.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_ConceptMapElementTarget.fromJson(Map<String, dynamic> json) =>
       _$_$_ConceptMapElementTargetFromJson(json);
 
@@ -8707,17 +8385,6 @@ abstract class _ConceptMapElementTarget extends ConceptMapElementTarget {
           Element commentsElement,
       List<ConceptMapTargetDependsOn> dependsOn,
       List<ConceptMapTargetDependsOn> product}) = _$_ConceptMapElementTarget;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _ConceptMapElementTarget.fromYaml(dynamic yaml) => yaml is String
-      ? _ConceptMapElementTarget.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _ConceptMapElementTarget.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _ConceptMapElementTarget.fromJson(Map<String, dynamic> json) =
       _$_ConceptMapElementTarget.fromJson;
@@ -8926,17 +8593,6 @@ class _$_ConceptMapTargetDependsOn extends _ConceptMapTargetDependsOn {
         assert(code != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_ConceptMapTargetDependsOn.fromYaml(dynamic yaml) => yaml is String
-      ? _$_ConceptMapTargetDependsOn
-          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_ConceptMapTargetDependsOn.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_ConceptMapTargetDependsOn.fromJson(Map<String, dynamic> json) =>
       _$_$_ConceptMapTargetDependsOnFromJson(json);
 
@@ -9016,17 +8672,6 @@ abstract class _ConceptMapTargetDependsOn extends ConceptMapTargetDependsOn {
           @required @JsonKey(required: true) FhirUri codeSystem,
           @required @JsonKey(required: true) String code}) =
       _$_ConceptMapTargetDependsOn;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _ConceptMapTargetDependsOn.fromYaml(dynamic yaml) => yaml is String
-      ? _ConceptMapTargetDependsOn.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _ConceptMapTargetDependsOn.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _ConceptMapTargetDependsOn.fromJson(Map<String, dynamic> json) =
       _$_ConceptMapTargetDependsOn.fromJson;
@@ -9811,16 +9456,6 @@ class _$_NamingSystem extends _NamingSystem {
         assert(uniqueId != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_NamingSystem.fromYaml(dynamic yaml) => yaml is String
-      ? _$_NamingSystem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_NamingSystem.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_NamingSystem.fromJson(Map<String, dynamic> json) =>
       _$_$_NamingSystemFromJson(json);
 
@@ -10095,16 +9730,6 @@ abstract class _NamingSystem extends NamingSystem {
           List<NamingSystemUniqueId> uniqueId,
       Reference replacedBy}) = _$_NamingSystem;
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _NamingSystem.fromYaml(dynamic yaml) => yaml is String
-      ? _NamingSystem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _NamingSystem.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _NamingSystem.fromJson(Map<String, dynamic> json) =
       _$_NamingSystem.fromJson;
 
@@ -10345,16 +9970,6 @@ class _$_NamingSystemContact extends _NamingSystemContact {
       this.telecom})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_NamingSystemContact.fromYaml(dynamic yaml) => yaml is String
-      ? _$_NamingSystemContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_NamingSystemContact.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_NamingSystemContact.fromJson(Map<String, dynamic> json) =>
       _$_$_NamingSystemContactFromJson(json);
 
@@ -10421,16 +10036,6 @@ abstract class _NamingSystemContact extends NamingSystemContact {
       List<FhirExtension> modifierExtension,
       String name,
       List<ContactPoint> telecom}) = _$_NamingSystemContact;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _NamingSystemContact.fromYaml(dynamic yaml) => yaml is String
-      ? _NamingSystemContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _NamingSystemContact.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _NamingSystemContact.fromJson(Map<String, dynamic> json) =
       _$_NamingSystemContact.fromJson;
@@ -10750,16 +10355,6 @@ class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
         assert(value != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_NamingSystemUniqueId.fromYaml(dynamic yaml) => yaml is String
-      ? _$_NamingSystemUniqueId.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_NamingSystemUniqueId.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =>
       _$_$_NamingSystemUniqueIdFromJson(json);
 
@@ -10873,16 +10468,6 @@ abstract class _NamingSystemUniqueId extends NamingSystemUniqueId {
       @JsonKey(name: '_preferred')
           Element preferredElement,
       Period period}) = _$_NamingSystemUniqueId;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _NamingSystemUniqueId.fromYaml(dynamic yaml) => yaml is String
-      ? _NamingSystemUniqueId.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _NamingSystemUniqueId.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =
       _$_NamingSystemUniqueId.fromJson;

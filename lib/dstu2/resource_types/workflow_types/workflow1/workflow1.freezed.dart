@@ -415,16 +415,6 @@ class _$_Order extends _Order {
         assert(detail != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_Order.fromYaml(dynamic yaml) => yaml is String
-      ? _$_Order.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_Order.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_Order.fromJson(Map<String, dynamic> json) =>
       _$_$_OrderFromJson(json);
 
@@ -578,16 +568,6 @@ abstract class _Order extends Order {
       Reference reasonReference,
       OrderWhen when,
       @required @JsonKey(required: true) List<Reference> detail}) = _$_Order;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _Order.fromYaml(dynamic yaml) => yaml is String
-      ? _Order.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _Order.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _Order.fromJson(Map<String, dynamic> json) = _$_Order.fromJson;
 
@@ -822,16 +802,6 @@ class _$_OrderWhen extends _OrderWhen {
       this.schedule})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_OrderWhen.fromYaml(dynamic yaml) => yaml is String
-      ? _$_OrderWhen.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_OrderWhen.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_OrderWhen.fromJson(Map<String, dynamic> json) =>
       _$_$_OrderWhenFromJson(json);
 
@@ -906,16 +876,6 @@ abstract class _OrderWhen extends OrderWhen {
       @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       CodeableConcept code,
       Timing schedule}) = _$_OrderWhen;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _OrderWhen.fromYaml(dynamic yaml) => yaml is String
-      ? _OrderWhen.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _OrderWhen.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _OrderWhen.fromJson(Map<String, dynamic> json) =
       _$_OrderWhen.fromJson;
@@ -1330,16 +1290,6 @@ class _$_OrderResponse extends _OrderResponse {
         assert(orderStatus != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_OrderResponse.fromYaml(dynamic yaml) => yaml is String
-      ? _$_OrderResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_OrderResponse.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_OrderResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_OrderResponseFromJson(json);
 
@@ -1497,16 +1447,6 @@ abstract class _OrderResponse extends OrderResponse {
           Element orderStatusElement,
       String description,
       List<Reference> fulfillment}) = _$_OrderResponse;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _OrderResponse.fromYaml(dynamic yaml) => yaml is String
-      ? _OrderResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _OrderResponse.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _OrderResponse.fromJson(Map<String, dynamic> json) =
       _$_OrderResponse.fromJson;
@@ -2221,16 +2161,6 @@ class _$_CommunicationRequest extends _CommunicationRequest {
       : assert(resourceType != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_CommunicationRequest.fromYaml(dynamic yaml) => yaml is String
-      ? _$_CommunicationRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_CommunicationRequest.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_CommunicationRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_CommunicationRequestFromJson(json);
 
@@ -2462,16 +2392,6 @@ abstract class _CommunicationRequest extends CommunicationRequest {
       CodeableConcept priority,
       @JsonKey(name: '_priority')
           Element priorityElement}) = _$_CommunicationRequest;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _CommunicationRequest.fromYaml(dynamic yaml) => yaml is String
-      ? _CommunicationRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _CommunicationRequest.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _CommunicationRequest.fromJson(Map<String, dynamic> json) =
       _$_CommunicationRequest.fromJson;
@@ -2778,19 +2698,6 @@ class _$_CommunicationRequestPayload extends _CommunicationRequestPayload {
       this.contentReference})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_CommunicationRequestPayload.fromYaml(dynamic yaml) =>
-      yaml is String
-          ? _$_CommunicationRequestPayload
-              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? _$_CommunicationRequestPayload
-                  .fromJson(jsonDecode(jsonEncode(yaml)))
-              : null;
-
   factory _$_CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>
       _$_$_CommunicationRequestPayloadFromJson(json);
 
@@ -2875,17 +2782,6 @@ abstract class _CommunicationRequestPayload
       @JsonKey(name: '_contentString') Element contentStringElement,
       Attachment contentAttachment,
       Reference contentReference}) = _$_CommunicationRequestPayload;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _CommunicationRequestPayload.fromYaml(dynamic yaml) => yaml is String
-      ? _CommunicationRequestPayload.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _CommunicationRequestPayload.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =
       _$_CommunicationRequestPayload.fromJson;
@@ -3597,16 +3493,6 @@ class _$_DeviceUseRequest extends _DeviceUseRequest {
         assert(subject != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_DeviceUseRequest.fromYaml(dynamic yaml) => yaml is String
-      ? _$_DeviceUseRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_DeviceUseRequest.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_DeviceUseRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_DeviceUseRequestFromJson(json);
 
@@ -3843,16 +3729,6 @@ abstract class _DeviceUseRequest extends DeviceUseRequest {
           DeviceUseRequestPriority priority,
       @JsonKey(name: '_priority')
           Element priorityElement}) = _$_DeviceUseRequest;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _DeviceUseRequest.fromYaml(dynamic yaml) => yaml is String
-      ? _DeviceUseRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _DeviceUseRequest.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _DeviceUseRequest.fromJson(Map<String, dynamic> json) =
       _$_DeviceUseRequest.fromJson;
@@ -4518,16 +4394,6 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
         assert(subject != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_DeviceUseStatement.fromYaml(dynamic yaml) => yaml is String
-      ? _$_DeviceUseStatement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_DeviceUseStatement.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
       _$_$_DeviceUseStatementFromJson(json);
 
@@ -4732,16 +4598,6 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
           FhirDateTime timingDateTime,
           @JsonKey(name: '_timingDateTime') Element timingDateTimeElement}) =
       _$_DeviceUseStatement;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _DeviceUseStatement.fromYaml(dynamic yaml) => yaml is String
-      ? _DeviceUseStatement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _DeviceUseStatement.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _DeviceUseStatement.fromJson(Map<String, dynamic> json) =
       _$_DeviceUseStatement.fromJson;

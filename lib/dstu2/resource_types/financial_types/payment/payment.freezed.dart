@@ -544,16 +544,6 @@ class _$_PaymentNotice extends _PaymentNotice {
         assert(paymentStatus != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_PaymentNotice.fromYaml(dynamic yaml) => yaml is String
-      ? _$_PaymentNotice.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_PaymentNotice.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_PaymentNotice.fromJson(Map<String, dynamic> json) =>
       _$_$_PaymentNoticeFromJson(json);
 
@@ -743,16 +733,6 @@ abstract class _PaymentNotice extends PaymentNotice {
           Reference response,
           @required @JsonKey(required: true) Coding paymentStatus}) =
       _$_PaymentNotice;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _PaymentNotice.fromYaml(dynamic yaml) => yaml is String
-      ? _PaymentNotice.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _PaymentNotice.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _PaymentNotice.fromJson(Map<String, dynamic> json) =
       _$_PaymentNotice.fromJson;
@@ -1526,17 +1506,6 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
         assert(total != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_PaymentReconciliation.fromYaml(dynamic yaml) => yaml is String
-      ? _$_PaymentReconciliation
-          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_PaymentReconciliation.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
       _$_$_PaymentReconciliationFromJson(json);
 
@@ -1778,16 +1747,6 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
       @JsonKey(required: true)
           Quantity total,
       List<PaymentReconciliationNote> note}) = _$_PaymentReconciliation;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _PaymentReconciliation.fromYaml(dynamic yaml) => yaml is String
-      ? _PaymentReconciliation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _PaymentReconciliation.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _PaymentReconciliation.fromJson(Map<String, dynamic> json) =
       _$_PaymentReconciliation.fromJson;
@@ -2180,19 +2139,6 @@ class _$_PaymentReconciliationDetail extends _PaymentReconciliationDetail {
       : assert(type != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_PaymentReconciliationDetail.fromYaml(dynamic yaml) =>
-      yaml is String
-          ? _$_PaymentReconciliationDetail
-              .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? _$_PaymentReconciliationDetail
-                  .fromJson(jsonDecode(jsonEncode(yaml)))
-              : null;
-
   factory _$_PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =>
       _$_$_PaymentReconciliationDetailFromJson(json);
 
@@ -2302,17 +2248,6 @@ abstract class _PaymentReconciliationDetail
       Date date,
       @JsonKey(name: '_date') Element dateElement,
       Quantity amount}) = _$_PaymentReconciliationDetail;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _PaymentReconciliationDetail.fromYaml(dynamic yaml) => yaml is String
-      ? _PaymentReconciliationDetail.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _PaymentReconciliationDetail.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =
       _$_PaymentReconciliationDetail.fromJson;
@@ -2567,17 +2502,6 @@ class _$_PaymentReconciliationNote extends _PaymentReconciliationNote {
       @JsonKey(name: '_text') this.textElement})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_PaymentReconciliationNote.fromYaml(dynamic yaml) => yaml is String
-      ? _$_PaymentReconciliationNote
-          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_PaymentReconciliationNote.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_PaymentReconciliationNote.fromJson(Map<String, dynamic> json) =>
       _$_$_PaymentReconciliationNoteFromJson(json);
 
@@ -2662,17 +2586,6 @@ abstract class _PaymentReconciliationNote extends PaymentReconciliationNote {
           String text,
           @JsonKey(name: '_text') Element textElement}) =
       _$_PaymentReconciliationNote;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _PaymentReconciliationNote.fromYaml(dynamic yaml) => yaml is String
-      ? _PaymentReconciliationNote.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _PaymentReconciliationNote.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _PaymentReconciliationNote.fromJson(Map<String, dynamic> json) =
       _$_PaymentReconciliationNote.fromJson;

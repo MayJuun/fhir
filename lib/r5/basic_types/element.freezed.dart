@@ -113,16 +113,6 @@ class __$ElementCopyWithImpl<$Res> extends _$ElementCopyWithImpl<$Res>
 class _$_Element implements _Element {
   _$_Element({this.id, @JsonKey(name: 'extension') this.extension_});
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_Element.fromYaml(dynamic yaml) => yaml is String
-      ? _$_Element.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_Element.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_Element.fromJson(Map<String, dynamic> json) =>
       _$_$_ElementFromJson(json);
 
@@ -168,16 +158,6 @@ abstract class _Element implements Element {
   factory _Element(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_}) = _$_Element;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _Element.fromYaml(dynamic yaml) => yaml is String
-      ? _Element.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _Element.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _Element.fromJson(Map<String, dynamic> json) = _$_Element.fromJson;
 

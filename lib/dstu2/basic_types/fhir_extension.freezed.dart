@@ -1186,7 +1186,7 @@ class __$FhirExtensionCopyWithImpl<$Res>
 @JsonSerializable()
 
 /// @nodoc
-class _$_FhirExtension implements _FhirExtension {
+class _$_FhirExtension extends _FhirExtension {
   _$_FhirExtension(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
@@ -1241,17 +1241,8 @@ class _$_FhirExtension implements _FhirExtension {
       this.valueTiming,
       this.valueReference,
       this.valueMeta})
-      : assert(url != null);
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_FhirExtension.fromYaml(dynamic yaml) => yaml is String
-      ? _$_FhirExtension.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_FhirExtension.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+      : assert(url != null),
+        super._();
 
   factory _$_FhirExtension.fromJson(Map<String, dynamic> json) =>
       _$_$_FhirExtensionFromJson(json);
@@ -1554,7 +1545,8 @@ class _$_FhirExtension implements _FhirExtension {
   }
 }
 
-abstract class _FhirExtension implements FhirExtension {
+abstract class _FhirExtension extends FhirExtension {
+  _FhirExtension._() : super._();
   factory _FhirExtension(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1609,16 +1601,6 @@ abstract class _FhirExtension implements FhirExtension {
       Timing valueTiming,
       Reference valueReference,
       Meta valueMeta}) = _$_FhirExtension;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _FhirExtension.fromYaml(dynamic yaml) => yaml is String
-      ? _FhirExtension.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _FhirExtension.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _FhirExtension.fromJson(Map<String, dynamic> json) =
       _$_FhirExtension.fromJson;

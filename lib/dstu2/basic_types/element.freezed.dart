@@ -127,21 +127,12 @@ class __$ElementCopyWithImpl<$Res> extends _$ElementCopyWithImpl<$Res>
 @JsonSerializable()
 
 /// @nodoc
-class _$_Element implements _Element {
+class _$_Element extends _Element {
   _$_Element(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
-      @JsonKey(name: 'fhir_comments') this.fhirComments});
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_Element.fromYaml(dynamic yaml) => yaml is String
-      ? _$_Element.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_Element.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+      @JsonKey(name: 'fhir_comments') this.fhirComments})
+      : super._();
 
   factory _$_Element.fromJson(Map<String, dynamic> json) =>
       _$_$_ElementFromJson(json);
@@ -191,21 +182,12 @@ class _$_Element implements _Element {
   }
 }
 
-abstract class _Element implements Element {
+abstract class _Element extends Element {
+  _Element._() : super._();
   factory _Element(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(name: 'fhir_comments') List<String> fhirComments}) = _$_Element;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _Element.fromYaml(dynamic yaml) => yaml is String
-      ? _Element.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _Element.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _Element.fromJson(Map<String, dynamic> json) = _$_Element.fromJson;
 

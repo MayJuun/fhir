@@ -148,16 +148,6 @@ class _$_ContactDetail extends _ContactDetail {
       {this.name, @JsonKey(name: '_name') this.nameElement, this.telecom})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_ContactDetail.fromYaml(dynamic yaml) => yaml is String
-      ? _$_ContactDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_ContactDetail.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_ContactDetail.fromJson(Map<String, dynamic> json) =>
       _$_$_ContactDetailFromJson(json);
 
@@ -210,16 +200,6 @@ abstract class _ContactDetail extends ContactDetail {
       {String name,
       @JsonKey(name: '_name') Element nameElement,
       List<ContactPoint> telecom}) = _$_ContactDetail;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _ContactDetail.fromYaml(dynamic yaml) => yaml is String
-      ? _ContactDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _ContactDetail.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _ContactDetail.fromJson(Map<String, dynamic> json) =
       _$_ContactDetail.fromJson;
@@ -411,16 +391,6 @@ class _$_Contributor extends _Contributor {
       this.contact})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_Contributor.fromYaml(dynamic yaml) => yaml is String
-      ? _$_Contributor.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_Contributor.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_Contributor.fromJson(Map<String, dynamic> json) =>
       _$_$_ContributorFromJson(json);
 
@@ -487,16 +457,6 @@ abstract class _Contributor extends Contributor {
       String name,
       @JsonKey(name: '_name') Element nameElement,
       List<ContactDetail> contact}) = _$_Contributor;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _Contributor.fromYaml(dynamic yaml) => yaml is String
-      ? _Contributor.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _Contributor.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _Contributor.fromJson(Map<String, dynamic> json) =
       _$_Contributor.fromJson;
@@ -805,16 +765,6 @@ class _$_RelatedArtifact extends _RelatedArtifact {
       this.resource})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_RelatedArtifact.fromYaml(dynamic yaml) => yaml is String
-      ? _$_RelatedArtifact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_RelatedArtifact.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_RelatedArtifact.fromJson(Map<String, dynamic> json) =>
       _$_$_RelatedArtifactFromJson(json);
 
@@ -919,16 +869,6 @@ abstract class _RelatedArtifact extends RelatedArtifact {
       @JsonKey(name: '_url') Element urlElement,
       Attachment document,
       Reference resource}) = _$_RelatedArtifact;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _RelatedArtifact.fromYaml(dynamic yaml) => yaml is String
-      ? _RelatedArtifact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _RelatedArtifact.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _RelatedArtifact.fromJson(Map<String, dynamic> json) =
       _$_RelatedArtifact.fromJson;
@@ -1156,16 +1096,6 @@ class _$_UsageContext extends _UsageContext {
       : assert(code != null),
         super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_UsageContext.fromYaml(dynamic yaml) => yaml is String
-      ? _$_UsageContext.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_UsageContext.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_UsageContext.fromJson(Map<String, dynamic> json) =>
       _$_$_UsageContextFromJson(json);
 
@@ -1225,16 +1155,6 @@ abstract class _UsageContext extends UsageContext {
       CodeableConcept valueCodeableConcept,
       Quantity valueQuantity,
       Range valueRange}) = _$_UsageContext;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _UsageContext.fromYaml(dynamic yaml) => yaml is String
-      ? _UsageContext.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _UsageContext.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _UsageContext.fromJson(Map<String, dynamic> json) =
       _$_UsageContext.fromJson;
@@ -1463,16 +1383,6 @@ class _$_DataRequirement extends _DataRequirement {
       this.dateFilter})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_DataRequirement.fromYaml(dynamic yaml) => yaml is String
-      ? _$_DataRequirement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_DataRequirement.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_DataRequirement.fromJson(Map<String, dynamic> json) =>
       _$_$_DataRequirementFromJson(json);
 
@@ -1563,16 +1473,6 @@ abstract class _DataRequirement extends DataRequirement {
       @JsonKey(name: '_mustSupport') List<Element> mustSupportElement,
       List<DataRequirementCodeFilter> codeFilter,
       List<DataRequirementDateFilter> dateFilter}) = _$_DataRequirement;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _DataRequirement.fromYaml(dynamic yaml) => yaml is String
-      ? _DataRequirement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _DataRequirement.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _DataRequirement.fromJson(Map<String, dynamic> json) =
       _$_DataRequirement.fromJson;
@@ -1856,17 +1756,6 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
       this.valueCodeableConcept})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_DataRequirementCodeFilter.fromYaml(dynamic yaml) => yaml is String
-      ? _$_DataRequirementCodeFilter
-          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_DataRequirementCodeFilter.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_DataRequirementCodeFilter.fromJson(Map<String, dynamic> json) =>
       _$_$_DataRequirementCodeFilterFromJson(json);
 
@@ -1967,17 +1856,6 @@ abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
           List<Coding> valueCoding,
           List<CodeableConcept> valueCodeableConcept}) =
       _$_DataRequirementCodeFilter;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _DataRequirementCodeFilter.fromYaml(dynamic yaml) => yaml is String
-      ? _DataRequirementCodeFilter.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _DataRequirementCodeFilter.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _DataRequirementCodeFilter.fromJson(Map<String, dynamic> json) =
       _$_DataRequirementCodeFilter.fromJson;
@@ -2233,17 +2111,6 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
       this.valueDuration})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_DataRequirementDateFilter.fromYaml(dynamic yaml) => yaml is String
-      ? _$_DataRequirementDateFilter
-          .fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_DataRequirementDateFilter.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_DataRequirementDateFilter.fromJson(Map<String, dynamic> json) =>
       _$_$_DataRequirementDateFilterFromJson(json);
 
@@ -2321,17 +2188,6 @@ abstract class _DataRequirementDateFilter extends DataRequirementDateFilter {
       @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
       Period valuePeriod,
       FhirDuration valueDuration}) = _$_DataRequirementDateFilter;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _DataRequirementDateFilter.fromYaml(dynamic yaml) => yaml is String
-      ? _DataRequirementDateFilter.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _DataRequirementDateFilter.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _DataRequirementDateFilter.fromJson(Map<String, dynamic> json) =
       _$_DataRequirementDateFilter.fromJson;
@@ -2693,16 +2549,6 @@ class _$_ParameterDefinition extends _ParameterDefinition {
       this.profile})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_ParameterDefinition.fromYaml(dynamic yaml) => yaml is String
-      ? _$_ParameterDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_ParameterDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_ParameterDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_ParameterDefinitionFromJson(json);
 
@@ -2827,16 +2673,6 @@ abstract class _ParameterDefinition extends ParameterDefinition {
       String type,
       @JsonKey(name: '_type') Element typeElement,
       Reference profile}) = _$_ParameterDefinition;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _ParameterDefinition.fromYaml(dynamic yaml) => yaml is String
-      ? _ParameterDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _ParameterDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _ParameterDefinition.fromJson(Map<String, dynamic> json) =
       _$_ParameterDefinition.fromJson;
@@ -3210,16 +3046,6 @@ class _$_TriggerDefinition extends _TriggerDefinition {
       this.eventData})
       : super._();
 
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _$_TriggerDefinition.fromYaml(dynamic yaml) => yaml is String
-      ? _$_TriggerDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _$_TriggerDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
   factory _$_TriggerDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_TriggerDefinitionFromJson(json);
 
@@ -3334,16 +3160,6 @@ abstract class _TriggerDefinition extends TriggerDefinition {
       FhirDateTime eventTimingDateTime,
       @JsonKey(name: '_eventTimingDateTime') Element eventTimingDateTimeElement,
       DataRequirement eventData}) = _$_TriggerDefinition;
-
-  String toYamlString() => json2yaml(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
-
-  factory _TriggerDefinition.fromYaml(dynamic yaml) => yaml is String
-      ? _TriggerDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? _TriggerDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
 
   factory _TriggerDefinition.fromJson(Map<String, dynamic> json) =
       _$_TriggerDefinition.fromJson;
