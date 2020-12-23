@@ -5,6 +5,10 @@ import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:json2yaml/json2yaml.dart';
+import 'package:yaml/yaml.dart';
+
 import '../../../../dstu2.dart';
 
 part 'operations_control.enums.dart';
@@ -375,7 +379,7 @@ abstract class ConformanceRestResource with _$ConformanceRestResource {
 @freezed
 abstract class ConformanceResourceInteraction
     with _$ConformanceResourceInteraction {
-      ConformanceResourceInteraction._();
+  ConformanceResourceInteraction._();
   factory ConformanceResourceInteraction({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -433,7 +437,7 @@ abstract class ConformanceRestOperation with _$ConformanceRestOperation {
 @freezed
 abstract class ConformanceMessagingEndpoint
     with _$ConformanceMessagingEndpoint {
-      ConformanceMessagingEndpoint._();
+  ConformanceMessagingEndpoint._();
   factory ConformanceMessagingEndpoint({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -495,7 +499,7 @@ abstract class ConformanceMessagingEvent with _$ConformanceMessagingEvent {
 @freezed
 abstract class ConformanceSecurityCertificate
     with _$ConformanceSecurityCertificate {
-      ConformanceSecurityCertificate._();
+  ConformanceSecurityCertificate._();
   factory ConformanceSecurityCertificate({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -553,7 +557,7 @@ abstract class ConformanceRestInteraction with _$ConformanceRestInteraction {
 @freezed
 abstract class ConformanceResourceSearchParam
     with _$ConformanceResourceSearchParam {
-      ConformanceResourceSearchParam._();
+  ConformanceResourceSearchParam._();
   factory ConformanceResourceSearchParam({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -671,7 +675,7 @@ abstract class OperationDefinitionContact with _$OperationDefinitionContact {
 @freezed
 abstract class OperationDefinitionParameter
     with _$OperationDefinitionParameter {
-      OperationDefinitionParameter._();
+  OperationDefinitionParameter._();
   factory OperationDefinitionParameter({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -708,7 +712,7 @@ abstract class OperationDefinitionParameter
 @freezed
 abstract class OperationDefinitionParameterBinding
     with _$OperationDefinitionParameterBinding {
-      OperationDefinitionParameterBinding._();
+  OperationDefinitionParameterBinding._();
   factory OperationDefinitionParameterBinding({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,

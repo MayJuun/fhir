@@ -5,6 +5,10 @@ import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:json2yaml/json2yaml.dart';
+import 'package:yaml/yaml.dart';
+
 import '../../../../stu3.dart';
 
 part 'diagnostics.enums.dart';
